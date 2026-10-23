@@ -1,0 +1,419 @@
+{
+ "article": "a0474",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bangladesh_Liberation_War",
+   "title": "Bangladesh Liberation War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:50.013Z",
+   "snapshot": "d23850b25d2ae451751af329220b763d03369d1562a638b92536d6ae7d076ab9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bangladesh",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:50.990Z",
+   "snapshot": "71c274fbd30d26b8140f2920bd4ff9991964476fa2a503322b26dcc7af44cc5a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bangladesch",
+   "title": "Bangladesch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:58:48.368Z",
+   "snapshot": "46d57e99d7d7205adbcca7d9f4695f04909f0cb8785577ce46fa62cdbb3cddc4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Eritrea",
+   "title": "Eritrea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:51.918Z",
+   "snapshot": "29a1aafd746f857211c2498de3dc6f01fb44e297db1b8114f3b7ddb186809873"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Timor-Leste",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:52.986Z",
+   "snapshot": "6433cb49c91af68ccb768a437de3df96a166d22a80dc8e8e2fa7191732965064"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ten-Day_War",
+   "title": "Ten-Day War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:53.848Z",
+   "snapshot": "1ff38635852ecaf112dbeefc77d14ae217c3421db2a5f42472201ca6355ee573"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Sozialistische_F%C3%B6derative_Republik_Jugoslawien",
+   "title": "Sozialistische Föderative Republik Jugoslawien",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:58:51.735Z",
+   "snapshot": "673fe28b42f075d309b2c8a7111dc10b0c93ce32ba45df307e9899dd2918cd89"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Kosovo",
+   "title": "Kosovo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:58:52.544Z",
+   "snapshot": "0d9e41490a358422a928b81a477f29867fa3a50df7657525f32f33f32cc17d0a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bangladesh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bangladesh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bangladesch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-202"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eritrea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eritrea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02368",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "East Timor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f02370",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Slovenia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jugoslawien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-273"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f14540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kosovo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-206"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Bangladesh Liberation War (Bengali: মুক্তিযুদ্ধ, pronounced [mukt̪iɟud̪d̪ʱo]), also known as the Bangladesh War of Independence, was an armed conflict sparked by the rise of the Bengali nationalist and self-determination movement in East Pakistan, which resulted in the independence of Bangladesh",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bangladesh” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bangladesh, officially the People's Republic of Bangladesh, is a country in South Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bangladesh” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bangladesch (bengalisch  IAST Bāṃlādeś [ˈbaŋlaˌd̪eʃ]; Zusammensetzung aus bangla ‚bengalisch‘ und desch ‚Land‘) ist ein Staat in Südasien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bangladesch” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eritrea, officially the State of Eritrea, is a country in the Horn of Africa region of East Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eritrea” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eritrea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Eritrea”, “Эритрея”) on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02368",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Timor-Leste, also known as East Timor, officially the Democratic Republic of Timor-Leste, is a country in Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “East Timor” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f02370",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Ten-Day War (Slovene: Desetdnevna vojna), or the Slovenian War of Independence (Slovene: Slovenska osamosvojitvena vojna), was a brief armed conflict that followed Slovenia's declaration of independence from Yugoslavia on 25 June 1991.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slovenia” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f12204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sozialistische Föderative Republik Jugoslawien",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jugoslawien” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:24:54.356Z",
+   "target": "f14540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Republik Kosovo, kurz der/das Kosovo (albanisch Kosovë/Kosova, serbisch Косово Kosovo), ist eine Republik in Südosteuropa auf dem westlichen Teil der Balkanhalbinsel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kosovo” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-392",
+ "image": "IMG20261007182403.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt die südamerikanische Wüste, in der es laut Wetteraufzeichnung noch nie geregnet hat, was sie zu einem der trockensten Orte der Erde macht?",
+   "de": "Wie heißt die südamerikanische Wüste, in der es laut Wetteraufzeichnung noch nie geregnet hat, was sie zu einem der trockensten Orte der Erde macht?",
+   "en": "What is the name of the South American desert where, according to weather records, it has never rained, making it one of the driest places on Earth?",
+   "reworked": false,
+   "answerDe": "Atacama",
+   "answerEn": "Atacama",
+   "timeline": {
+    "kind": "era",
+    "start": "-15000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": true,
+    "labelEn": "The central Atacama Desert has had a hyperarid climate for at least 15 million years",
+    "labelDe": "Die zentrale Atacama-Wüste hat seit mindestens 15 Millionen Jahren ein hyperarides Klima"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Atacama-W%C3%BCste",
+    "title": "Atacama-Wüste",
+    "lang": "de"
+   },
+   "notes": "The premise is overstated: Wikipedia says some places in the Atacama recorded no rain for decades (0.5 mm average per year), not that it never rained anywhere in it. The answer is unambiguous.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welchen Negativpreis vergibt die deutsche Journalistenvereinigung „Netzwerk Recherche”: Saure Gurke, Verschlossene Auster oder Stinkfrucht?",
+   "de": "Welchen Negativpreis vergibt die deutsche Journalistenvereinigung „Netzwerk Recherche“ an Auskunftsverweigerer in Politik und Wirtschaft?",
+   "en": "Which negative award does the German journalists' association “Netzwerk Recherche” give to those in politics and business who refuse to provide information?",
+   "reworked": true,
+   "answerDe": "Verschlossene Auster",
+   "answerEn": "Closed Oyster (Verschlossene Auster)",
+   "timeline": {
+    "kind": "founding",
+    "start": "2002",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The journalists' association Netzwerk Recherche first awards its negative prize, the Closed Oyster",
+    "labelDe": "Die Journalistenvereinigung Netzwerk Recherche verleiht ihren Negativpreis Verschlossene Auster zum ersten Mal"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Verschlossene_Auster",
+    "title": "Verschlossene Auster",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice card reworked to an open question; the clause about refusers of information comes from the prize's own description and disambiguates it from other media prizes.",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welcher ehemalige US-Vizepräsident gründete das „Climate Reality Project”, um die Menschen für den Klimawandel zu sensibilisieren?",
+   "de": "Welcher ehemalige US-Vizepräsident gründete das „Climate Reality Project”, um die Menschen für den Klimawandel zu sensibilisieren?",
+   "en": "Which former US Vice President founded the “Climate Reality Project” to raise people's awareness of climate change?",
+   "reworked": false,
+   "answerDe": "Al Gore",
+   "answerEn": "Al Gore",
+   "timeline": {
+    "kind": "founding",
+    "start": "2011-07",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Climate Reality Project is formed from two climate groups founded by Al Gore",
+    "labelDe": "Das Climate Reality Project entsteht aus zwei von Al Gore gegründeten Klimaschutzorganisationen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Climate_Reality_Project",
+    "title": "The Climate Reality Project",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 4,
+   "cardDe": "Alle Buchstaben des Wortes „Pepperoni“ befinden sich in der oberste Reihe einer Standard-Computertastatur. Richtig oder falsch?",
+   "de": "Welcher Buchstabe des Wortes „Pepperoni“ befindet sich nicht in der obersten Buchstabenreihe einer Standard-Computertastatur?",
+   "en": "Which letter of the word “Pepperoni” is not on the top letter row of a standard computer keyboard?",
+   "reworked": true,
+   "answerDe": "N",
+   "answerEn": "N",
+   "timeline": {
+    "kind": "creation",
+    "start": "1874",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The QWERTY layout, ancestor of the German QWERTZ keyboard, appears on the Sholes and Glidden typewriter",
+    "labelDe": "Die QWERTY-Belegung, Vorläuferin der deutschen QWERTZ-Tastatur, erscheint auf der Schreibmaschine von Sholes und Glidden"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Tastaturbelegung",
+    "title": "Tastaturbelegung",
+    "lang": "de"
+   },
+   "notes": "True/false card reworked; the card's statement is false. The top letter row is QWERTZUIOPÜ on German keyboards (QWERTYUIOP on US ones): P, E, R, O and I are on it, N is on the bottom row on both. The card misprints \"der oberste Reihe\"; kept verbatim in cardDe. The 1874 date is from the English QWERTY article.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches optische Disketten-Speicherformat war der Vorgänger von DVD und Blu-Ray-Disc?",
+   "de": "Welches optische Disketten-Speicherformat war der Vorgänger von DVD und Blu-Ray-Disc?",
+   "en": "Which optical disc storage format was the predecessor of the DVD and the Blu-ray Disc?",
+   "reworked": false,
+   "answerDe": "Compact Disc (CD)",
+   "answerEn": "Compact Disc (CD)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1982",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Philips and Sony launch the Compact Disc, the first digital audio medium",
+    "labelDe": "Philips und Sony bringen die Compact Disc als ersten digitalen Tonträger auf den Markt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Compact_Disc",
+    "title": "Compact Disc",
+    "lang": "de"
+   },
+   "notes": "The card's \"Disketten\" is loose wording: the CD is an optical disc, not a diskette. The English translation says \"optical disc\".",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Mit welcher Sportart verbindet man Catenaccio: Eiskunstlauf, Fußball oder Gewichtheben?",
+   "de": "Mit welcher Sportart verbindet man das Spielsystem Catenaccio?",
+   "en": "Which sport is the playing system Catenaccio associated with?",
+   "reworked": true,
+   "answerDe": "Fußball",
+   "answerEn": "Football (soccer)",
+   "timeline": {
+    "kind": "event",
+    "start": "1954",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nereo Rocco becomes the first coach in Italy to use the defensive Catenaccio system, at Calcio Padova",
+    "labelDe": "Nereo Rocco setzt als erster Trainer in Italien das defensive Catenaccio-System ein, bei Calcio Padova"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Catenaccio",
+    "title": "Catenaccio",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice card reworked to an open question.",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

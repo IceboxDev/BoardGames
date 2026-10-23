@@ -1,0 +1,420 @@
+{
+ "article": "a2676",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Museen_in_Deutschland",
+   "title": "Museen in Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:19.300Z",
+   "snapshot": "3741e587b4ce4c4291b83e33876064fd4cac0f273b441d4999595a094c92a304"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Deutsches_Museum",
+   "title": "Deutsches Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:22.114Z",
+   "snapshot": "158dede34538d436d2367026aa24b6c84bed20a898406463daf737f076ba1347"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Germanisches_Nationalmuseum",
+   "title": "Germanisches Nationalmuseum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:23.137Z",
+   "snapshot": "87729d923d211b8ae0a61a477d3c17ce9d42b41e8eef5a6a78f6fed541e8470d"
+  },
+  "s4": {
+   "url": "https://www.smb.museum/fileadmin/website/Institute/Institut_fuer_Museumsforschung/Publikationen/Materialien/mat72.pdf",
+   "title": "Statistische Gesamterhebung an den Museen der Bundesrepublik Deutschland für das Jahr 2017 (Materialien aus dem Institut für Museumsforschung, Heft 72)",
+   "publisher": "Institut für Museumsforschung, Staatliche Museen zu Berlin – Preußischer Kulturbesitz",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:53:03Z"
+  },
+  "s5": {
+   "url": "https://www.visitberlin.de/de/museen-berlin",
+   "title": "Museen in Berlin | visitBerlin.de",
+   "publisher": "visitBerlin (Berlin Tourismus & Kongress GmbH)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:28.714Z",
+   "snapshot": "21edbbb12e54eedd35b15601336ccf9583917192a982f4dacd205388ab54025b"
+  },
+  "s6": {
+   "url": "https://www.deutsches-museum.de/en/museum/about-us",
+   "title": "About us | Deutsches Museum",
+   "publisher": "Deutsches Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:28.933Z",
+   "snapshot": "9970886ed2b9b2dca144e2ddaa8243ab98cddbb96ef6724817050869a25117ce"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bayern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Deutsches Museum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Germanisches Nationalmuseum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:56.613Z",
+   "target": "f14530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bayern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bayern”, “Bavaria”, “Бавария”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.613Z",
+   "target": "f14532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kunsthalle mit 340.000 Besuchern, die Pinakothek der Moderne mit 328.311 Besuchern und das Residenzmuseum mit 314.026 Besuchern in München und die Alte Nationalgalerie in Berlin mit 316.000 Besuchern sowie 2019 das Dokumentationszentrum Reichsparteitagsgelände in Nürnberg mit 311.588 Besuchern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.613Z",
+   "target": "f14533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Deutsches Museum (German Museum, officially Deutsches Museum von Meisterwerken der Naturwissenschaft und Technik (English: German Museum of Masterpieces of Science and Technology)) in Munich, Germany, is the world's largest museum of science and technology, with about 125,000 exhibited objects",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsches Museum” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.613Z",
+   "target": "f14534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Germanisches Nationalmuseum is a museum in Nuremberg, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Germanisches Nationalmuseum” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:53:03Z",
+   "target": "f14530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anders als bei den Museen, von denen es in Bayern die meisten gibt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official museum statistics for 2017: Bavaria 1,264 museums (1,254 in 2016), the most of any state."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:53:06Z",
+   "target": "f14530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bayern Liste der Museen in Bayern 1.254 18.919.128 20.235.073 1.216 1.179",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Table row (2016): Bavaria 1,254 museums, ahead of Baden-Württemberg 1,140."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:53:08Z",
+   "target": "f14532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berlin: 173 Museen mit 15,8 Mio. Museumsbesuchen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official 2017 statistics: Berlin 173 museums; no other German city comes close (Hamburg ~100, Munich ~76 per the Wikipedia city list)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:53:10Z",
+   "target": "f14532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Museen in Berlin (175)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:53:12Z",
+   "target": "f14532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Berlin laden Sie rund 170 Museen zu einem Besuch ein.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:53:14Z",
+   "target": "f14533",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zu den meistbesuchten Museen zählen vier mit einer Besucherzahl von über einer Million Besuchern",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Rank 1 only for 2018 and only with its branch museums combined (1,445,888), barely ahead of Miniatur Wunderland (1,400,000) and Topographie des Terrors (1,380,000); \"the most visited\" is not a stable superlative, so the wording was softened to \"one of the most visited\" plus \"the largest science and technology museum\"."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:53:16Z",
+   "target": "f14533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Founded in 1903, it has one of the longest traditions of science and technology museums in the world and is, with 66.000 square metres of exhibition space, the largest.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:53:18Z",
+   "target": "f14534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The museum is Germany's largest museum of cultural history.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:42.058Z",
+   "target": "f14533",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zu den meistbesuchten Museen zählen vier mit einer Besucherzahl von über einer Million Besuchern",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:42.058Z",
+   "target": "f14534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The museum is Germany's largest museum of cultural history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:42.058Z",
+   "target": "f14532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Museen in Berlin | visitBerlin.de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Berlin” is on the snapshot of s5"
+  }
+ ]
+}

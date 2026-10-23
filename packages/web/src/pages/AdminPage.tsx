@@ -1,7 +1,7 @@
 import type { OnlineMode } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   ActivityDrawer,
   type AdminUser,
@@ -13,7 +13,7 @@ import {
   InactiveToggleRow,
   PreRegisterCard,
   PurchaseVoteCard,
-  QuiztopiaReportsCard,
+  QuizReportsCard,
   ResetLinkModal,
   SkillRatingsCard,
   UserRow,
@@ -28,7 +28,6 @@ import {
   PageShell,
   SegmentedControl,
 } from "../components/ui";
-import { adminReportsQuery } from "../games/quiztopia/api";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminFetchUnseenActivity, adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
@@ -43,6 +42,7 @@ import {
 } from "../lib/offline-availability";
 import { build42Days, startOfWeekMonday } from "../lib/offline-week";
 import { qk } from "../lib/query-keys";
+import { adminReportsQuery } from "../trainers/quiz/api";
 import {
   type Coverage,
   computeCoverage,
@@ -87,7 +87,7 @@ export default function AdminPage() {
   // The open Quiztopia reports, for the tab label — the queue itself loads in its tab.
   const openReports =
     useQuery({
-      queryKey: qk.adminQuiztopiaReports("open"),
+      queryKey: qk.adminQuizReports("open"),
       queryFn: adminReportsQuery("open"),
       staleTime: 60_000,
     }).data?.counts.open ?? 0;
@@ -395,7 +395,17 @@ export default function AdminPage() {
         )}
         {tab === "pre-register" && <PreRegisterCard />}
         {tab === "skills" && <SkillRatingsCard />}
-        {tab === "reports" && <QuiztopiaReportsCard />}
+        {tab === "reports" && (
+          <div className="flex flex-col gap-3">
+            <Link
+              to="/admin/quiz-desk"
+              className="self-end text-sm font-medium text-accent-300 transition-colors hover:text-accent-200"
+            >
+              Quiz desk: grades, backlog, retired, provenance →
+            </Link>
+            <QuizReportsCard />
+          </div>
+        )}
         {tab === "guests" && (
           <GuestPlayersCard
             guests={guests}

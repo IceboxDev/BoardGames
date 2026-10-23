@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-177",
+ "image": "IMG20261007180434.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wer den tiefstgelegenen Touristenort der Welt besuchen möchte, der reist ans Tote Meer. Richtig oder falsch?",
+   "de": "An welches Gewässer reist, wer den tiefstgelegenen Touristenort der Welt besuchen möchte?",
+   "en": "To which body of water do you travel if you want to visit the lowest-lying tourist resort in the world?",
+   "reworked": true,
+   "answerDe": "Totes Meer",
+   "answerEn": "Dead Sea",
+   "timeline": {
+    "kind": "event",
+    "start": "2025",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Dead Sea's surface lies about 440 m below sea level, its shores the lowest land on Earth",
+    "labelDe": "Die Oberfläche des Toten Meeres liegt rund 440 m unter dem Meeresspiegel, seine Ufer sind das tiefste Land der Erde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dead_Sea",
+    "title": "Dead Sea",
+    "lang": "en"
+   },
+   "notes": "Card's true/false answer: true. The Dead Sea's shores are the lowest land on Earth (about 440 m below sea level in 2025); resorts such as Ein Bokek lie there.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Was wurde in Hollywoodfilmen bis in die 1940er-Jahre hinein als Schneeersatz eingesetzt: Papierschnipsel, Cornflakes oder Reis?",
+   "de": "Welche Frühstücksflocken wurden in Hollywoodfilmen bis in die 1940er-Jahre hinein als Schneeersatz eingesetzt?",
+   "en": "Which breakfast flakes were used as a snow substitute in Hollywood films until the 1940s?",
+   "reworked": true,
+   "answerDe": "Cornflakes",
+   "answerEn": "Cornflakes",
+   "timeline": {
+    "kind": "creation",
+    "start": "1946",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "It's a Wonderful Life introduces a new 'chemical snow', replacing the cornflakes used for movie snow",
+    "labelDe": "Ist das Leben nicht schön? führt einen neuen „chemischen Schnee“ ein, der die als Filmschnee genutzten Cornflakes ablöst"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/It%27s_a_Wonderful_Life",
+    "title": "It's a Wonderful Life",
+    "lang": "en"
+   },
+   "notes": "Movie snow was usually untoasted cornflakes (often painted white), so loud underfoot that dialogue had to be redubbed, until RKO's Russell Shearman made a foamite-based snow for It's a Wonderful Life (1946).",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt der Krieg, der 1973 mit dem Friedensvertrag zwischen Ägypten und Israel beendet wurde?",
+   "de": "Wie heißt der Krieg zwischen Ägypten und Israel von 1973, auf den 1979 der Friedensvertrag zwischen beiden Ländern folgte?",
+   "en": "What is the name of the 1973 war between Egypt and Israel that was followed in 1979 by the peace treaty between the two countries?",
+   "reworked": true,
+   "answerDe": "Jom-Kippur-Krieg",
+   "answerEn": "Yom Kippur War",
+   "timeline": {
+    "kind": "event",
+    "start": "1973-10-06",
+    "end": "1973-10-25",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Yom Kippur War: Egypt and Syria attack Israel on the Sinai and the Golan Heights",
+    "labelDe": "Jom-Kippur-Krieg: Ägypten und Syrien greifen Israel auf dem Sinai und den Golanhöhen an"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Jom-Kippur-Krieg",
+    "title": "Jom-Kippur-Krieg",
+    "lang": "de"
+   },
+   "notes": "The card's premise is off: the war of 1973 ended with a ceasefire (UN Resolution 338); the Egyptian–Israeli peace treaty followed on 26 March 1979. Reworded to keep the fact correct.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Was für ein Tier ist Kaa in Rudyard Kiplings Werk Das Dschungelbuch?",
+   "de": "Was für ein Tier ist Kaa in Rudyard Kiplings Werk Das Dschungelbuch?",
+   "en": "What kind of animal is Kaa in Rudyard Kipling's The Jungle Book?",
+   "reworked": false,
+   "answerDe": "Eine Schlange (Python)",
+   "answerEn": "A snake (python)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1894",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rudyard Kipling's The Jungle Book is published, with the python Kaa",
+    "labelDe": "Rudyard Kiplings Das Dschungelbuch erscheint, mit der Pythonschlange Kaa"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kaa",
+    "title": "Kaa",
+    "lang": "en"
+   },
+   "notes": "Kaa is an Indian python; 'Schlange' alone is also accepted.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Lebenserwartung hat eine Termitenkönigin: 50 Stunden, 50 Monate oder 50 Jahre?",
+   "de": "Wie viele Jahre kann eine Termitenkönigin höchstens alt werden?",
+   "en": "Up to how many years can a termite queen live?",
+   "reworked": true,
+   "answerDe": "Bis zu 50 Jahre",
+   "answerEn": "Up to 50 years",
+   "timeline": {
+    "kind": "era",
+    "start": "-145000000",
+    "end": "-100500000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Early Cretaceous, from which many of the oldest unambiguous termite fossils date",
+    "labelDe": "Unterkreide, aus der viele der ältesten eindeutigen Termitenfossilien stammen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Termite",
+    "title": "Termite",
+    "lang": "en"
+   },
+   "notes": "Some termite queens reportedly live as long as 30 or 50 years; the card's answer is 50 years. Lifespan varies by species.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie wird ein Teambike genannt, das von sieben Personen gefahren wird, die im Kreis sitzen?",
+   "de": "Wie wird ein Teambike genannt, das von sieben Personen gefahren wird, die im Kreis sitzen?",
+   "en": "What is the name of a team bike ridden by seven people sitting in a circle?",
+   "reworked": false,
+   "answerDe": "ConferenceBike (Konferenzfahrrad)",
+   "answerEn": "ConferenceBike",
+   "timeline": {
+    "kind": "creation",
+    "start": "1989",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Eric Staller builds 'Octos', the first prototype of his circular multi-seat bike, forerunner of the ConferenceBike",
+    "labelDe": "Eric Staller baut „Octos“, den ersten Prototyp seines Mehrpersonenrads mit Sitzen im Kreis, Vorläufer des ConferenceBike"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/ConferenceBike",
+    "title": "ConferenceBike",
+    "lang": "de"
+   },
+   "notes": "ConferenceBike is the product name of a seven-person bike (riders face inwards in a circle, one steers).",
+   "domain": "technology",
+   "sub": "transport"
+  }
+ ]
+}

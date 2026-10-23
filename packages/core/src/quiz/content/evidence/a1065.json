@@ -1,0 +1,241 @@
+{
+ "article": "a1065",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Geiger_counter",
+   "title": "Geiger counter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:29.141Z",
+   "snapshot": "f40437fe37fac8319cb5738069921329e62ced405506262ee5e2112cbe76fc51"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cloud_chamber",
+   "title": "Cloud chamber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:30.080Z",
+   "snapshot": "eda39b0d23a786e9b403e5edc5133c5ab465c5b118a18b9cfd7729008abede9e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bubble_chamber",
+   "title": "Bubble chamber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:31.105Z",
+   "snapshot": "5680c5d51b3ededaeab4428516126ca49fee7930cb2dc552180c58823b3e91b7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Guido_Holzknecht",
+   "title": "Guido Holzknecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:32.047Z",
+   "snapshot": "747c0f92aace472c79b6c2f52853fd572300d055ca915dcbd52a9b6f9126aba3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Scintillation_counter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:33.153Z",
+   "snapshot": "3023392a2a2522b3cf7ad5357a278fa0fbd721c0abbb276b4da0120092273a5d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Geiger counter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cloud chamber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "bubble chamber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05325",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "dosimeter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25872",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ionising radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48; transcript ppm-149"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:27.334Z",
+   "target": "f05321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Geiger counter (, GY-gər; also known as a Geiger–Müller counter or G-M counter) is an electronic instrument for detecting and measuring ionizing radiation with the use of a Geiger–Müller tube.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geiger counter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:27.334Z",
+   "target": "f05322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A cloud chamber, also known as a Wilson chamber, is a particle detector used for visualizing the passage of ionizing radiation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cloud chamber” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:27.334Z",
+   "target": "f05324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A bubble chamber is a vessel filled with a superheated transparent liquid (most often liquid hydrogen) used to detect electrically charged particles moving through it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bubble chamber” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:27.334Z",
+   "target": "f05325",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1902 he devised a color dosimeter (referred to as a \"chromoradiometer\") for detecting and measuring X-rays.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dosimeter” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:27.334Z",
+   "target": "f25872",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ionization chamber, the simplest ionising radiation detector",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ionising radiation” is on the snapshot of s1"
+  }
+ ]
+}

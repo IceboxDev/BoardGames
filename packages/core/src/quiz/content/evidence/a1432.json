@@ -1,0 +1,242 @@
+{
+ "article": "a1432",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/El_Camino:_A_Breaking_Bad_Movie",
+   "title": "El Camino: A Breaking Bad Movie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:00.554Z",
+   "snapshot": "c0383463cf088f9f1fce1f062c8024d4db75fbf7fb7d2e339ad1572f1e0c4620"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Better_Call_Saul",
+   "title": "Better Call Saul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:01.496Z",
+   "snapshot": "46877057ebcfc15cecc598e5e6c0a075c01c054714542dac3f8ad9ea771159a4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Stranger_Things",
+   "title": "Stranger Things – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:26.103Z",
+   "snapshot": "e010438a399e2d53ca00455b32de2331b946ecbf13a5b97d21b605641efcbe9d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Game_of_Thrones",
+   "title": "Game of Thrones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:50.673Z",
+   "snapshot": "59680a6a47d0ae69a8afb360a07538bb64b6b5b91bae49380589c36c3e7e9cba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Money_Heist",
+   "title": "Money Heist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:02.555Z",
+   "snapshot": "4b49dd32b61e852e8ff52f010b69406dbda727ca5111f2cd76ebf3fab52fdfbb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breaking Bad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Better Call Saul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stranger Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Game of Thrones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Money Heist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:24.901Z",
+   "target": "f07156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "El Camino: A Breaking Bad Movie (or simply El Camino) is a 2019 American neo-Western and crime thriller film.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breaking Bad” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:24.901Z",
+   "target": "f07157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Better Call Saul is an American neo-noir legal crime drama television series created by Vince Gilligan and Peter Gould for AMC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Better Call Saul” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:24.901Z",
+   "target": "f07158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stranger Things is an American television series created by the Duffer Brothers for Netflix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stranger Things” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:24.901Z",
+   "target": "f07159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Game of Thrones is an American fantasy drama television series created by David Benioff and D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Game of Thrones” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:24.901Z",
+   "target": "f07160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Money Heist (Spanish: La casa de papel, [la ˈkasa ðe paˈpel], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Money Heist” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a0870",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Occupy_Wall_Street",
+   "title": "Occupy Wall Street – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:44.341Z",
+   "snapshot": "a9155d31f197e5560ef3884ead05c9e6f1f5fca40f6408b737a895fad1f265b4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Occupy_Wall_Street",
+   "title": "Occupy Wall Street",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:44.586Z",
+   "snapshot": "a9d2d5cefb8de1998fbefb27233313a70b6f46939df296ec68b6a807a84df465"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Black_Lives_Matter",
+   "title": "Black Lives Matter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:45.424Z",
+   "snapshot": "984860abc59b165623fa36dcf27034f16cface2138c6e750259f5325f680be2d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Yellow_vests_protests",
+   "title": "Yellow vests protests – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:46.248Z",
+   "snapshot": "1e934c404cd86d68967d7979492b1fa21466d7f069a9f79a4af7c3459b3dba81"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/MeToo_movement",
+   "title": "MeToo movement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:32.329Z",
+   "snapshot": "dde4cd3180cc383447a5fb4422f6d0f5a3206ed9d7ce9bdbf5e3d13c85da68c8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tea_Party_movement",
+   "title": "Tea Party movement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:47.414Z",
+   "snapshot": "75573b6047b9b95979ee3f678abe47a0c7e327422176e8ad949d87d927ff707b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Occupy Wall Street",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Occupy Wall Street",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-181"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Black Lives Matter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yellow Vests",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "#MeToo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tea Party movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:57.411Z",
+   "target": "f04346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Occupy Wall Street (O.W.S.) was a left-wing populist and progressive movement against economic inequality, capitalism, corporate greed, big finance, and the influence of money in politics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Occupy Wall Street” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:57.411Z",
+   "target": "f04346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Occupy Wall Street (englisch für „Besetzt die Wall Street“; abgekürzt auch OWS) war Ende 2011 die größte Protestbewegung in Nordamerika, die angeregt durch die sich rasch verbreitenden weltweiten Aufrufe im Internet im Zuge der Proteste in Spanien 2011/2012, des Arabischen Frühlings und der",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Occupy Wall Street” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:57.411Z",
+   "target": "f04347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Black Lives Matter (BLM) is a decentralized political and social movement that aims to highlight racism, discrimination and racial inequality experienced by Black people in the United States, and to promote anti-racism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Lives Matter” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:57.411Z",
+   "target": "f04348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "a way to combat climate change) and including many people motivated by economic difficulties due to low salaries and high energy prices, the yellow vests movement has called for redistributive economic policies like a wealth tax, increased pensions, a higher minimum wage, and reduced salaries for",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yellow Vests” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:57.411Z",
+   "target": "f04349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "#MeToo is a social movement and awareness campaign against sexual abuse, sexual harassment, and rape culture, in which survivors (led by the voices of women, especially public figures) share their experiences of sexual abuse or sexual harassment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “#MeToo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:57.411Z",
+   "target": "f04350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Tea Party movement was an American right-wing, fiscally conservative political movement within the Republican Party that began in 2007, catapulted into the mainstream by Congressman Ron Paul's 2008 presidential campaign.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tea Party movement” is on the snapshot of s6"
+  }
+ ]
+}

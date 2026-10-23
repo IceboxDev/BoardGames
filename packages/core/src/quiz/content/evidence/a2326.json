@@ -1,0 +1,297 @@
+{
+ "article": "a2326",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bunad",
+   "title": "Bunad",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:11.217Z",
+   "snapshot": "332d4c7d743e2794422450df3c6f68adcf1df1eeae98a794fb4d6242fc0e991c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dirndl",
+   "title": "Dirndl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:14.926Z",
+   "snapshot": "b6432e258c87133577d52e98aa6451e2404238329767d20560dde973c7ba46ed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kilt",
+   "title": "Kilt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:15.732Z",
+   "snapshot": "c18006fa6ad37c017141ba133cb7087e1ae3c91a029d8343d4fb2146e64f5efd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sari",
+   "title": "Sari – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:16.753Z",
+   "snapshot": "20c5a893c47d050350e13acac314df8d42b7d3ebc6458b0c45cd182379372e6c"
+  },
+  "s5": {
+   "url": "https://snl.no/bunad",
+   "title": "bunad – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:18.801Z",
+   "snapshot": "d2a916c16fa7ea52f96ee9e90b4a6ef4d43b5289c50bb440ee9790f319fd828c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Norwegische Nationaltracht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-258"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "dirndl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kilt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:57.072Z",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Norwegische Nationaltracht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Norwegische Nationaltracht”, “Norwegian national costume”, “норвежский национальный костюм”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:57.072Z",
+   "target": "f12061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A dirndl (German: [ˈdɪʁndl̩] ) is a dress which originated in German-speaking areas of the Alps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dirndl” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:57.072Z",
+   "target": "f12062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A kilt (Scottish Gaelic: fèileadh [ˈfeːləɣ]) is a garment resembling a wrap-around knee-length skirt, made of twill-woven worsted wool with heavy pleats at the sides and back and traditionally a tartan pattern.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kilt” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:57.072Z",
+   "target": "f12063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A sari (Hindi: [saːɽiː]; sometimes also saree, sharee, or sadi) is a draped cloth and women's garment in the Indian subcontinent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sari” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:51:15Z",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Viele Norweger tragen Bunad nicht nur bei folkloristischen Veranstaltungen, sondern vor allem zu festlichen Ereignissen wie Hochzeiten, Taufen, Konfirmationen sowie am Nationalfeiertag, dem 17. Mai.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:51:19Z",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bunad er et antrekk som brukes til fest- og høytid. Bunadene har ulik grad av historisk og lokal tilhørighet, og skillet mellom bunader og andre folkedrakter er ikke alltid åpenbart.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:22Z",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I 2024 ble bunadbruken i Norge innskrevet på UNESCOs representative liste over immateriell kulturarv.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:58:42.246Z",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Viele Norweger tragen Bunad nicht nur bei folkloristischen Veranstaltungen, sondern vor allem zu festlichen Ereignissen wie Hochzeiten, Taufen, Konfirmationen sowie am Nationalfeiertag, dem 17. Mai.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:42.246Z",
+   "target": "f12060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I 2024 ble bunadbruken i Norge innskrevet på UNESCOs representative liste over immateriell kulturarv.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  }
+ ]
+}

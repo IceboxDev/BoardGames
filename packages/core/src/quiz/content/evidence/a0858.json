@@ -1,0 +1,442 @@
+{
+ "article": "a0858",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Greenland",
+   "title": "Greenland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:26.884Z",
+   "snapshot": "071614d219f4139b0aa49855c79b7ca1f88af571b4d23a72115c24e8356fe429"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/S%C3%A1mi_National_Day",
+   "title": "Sámi National Day – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:53.188Z",
+   "snapshot": "996149fe85e07f65318b36a5b043099b0e2247722ddf429a799dc95330a79c59"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/M%C4%81ori_people",
+   "title": "Māori people – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:54.412Z",
+   "snapshot": "5cdec84adf05efcea42efd7845273ef618f5b9dbded3f48ab0d06c333f7c6da4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mabo_v_Queensland_(No_2)",
+   "title": "Mabo v Queensland (No 2) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:55.209Z",
+   "snapshot": "222af6c2acbbf1f377a629ae9c95cb1fb0108f56f87acce540a097aac18cfdf1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nibutani_Dam",
+   "title": "Nibutani Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:56.192Z",
+   "snapshot": "153af5857269bef967c35eed50ccd30692cf9e4761172772e45c7c7d396d0703"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Aboriginal_Australians",
+   "title": "Aboriginal Australians – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:13.568Z",
+   "snapshot": "e54ab8cb01036dbeafd3f2b71deb3eee6f1b406edb5f35d8b511ba00cfee75e0"
+  },
+  "s7": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/aborigine",
+   "title": "Aborigine – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:13.668Z",
+   "snapshot": "29bccdc7c6a241afa6c2a9705c2625ad88ebc2a688b8cefe6ebe8a2d4f419fed"
+  },
+  "s8": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/aborigine",
+   "title": "aborigine – Oxford Learner's Dictionaries",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:13.822Z",
+   "snapshot": "e2b2c47a8774ad751ef11d80cff1e53f8d7b23fcdc7a47d42693a8860a196e69"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Inuit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sami",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Maori",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aborigines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ainu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:55.769Z",
+   "target": "f04286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Most residents of Greenland are Inuit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inuit” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:55.769Z",
+   "target": "f04287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sámi National Day is an ethnic national day for the Sámi (Saami) people that falls on February 6, the date when the first Sámi congress was held in 1917 in Trondheim, Norway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sami” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:55.769Z",
+   "target": "f04288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Māori are the indigenous Polynesian people of mainland New Zealand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maori” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:55.769Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aborigines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Aborigines”, “Аборигены”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:55.769Z",
+   "target": "f04290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was completed in 1997, despite formal objections from the local Ainu people dating as early as 1987.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ainu” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:46:46Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aboriginal Australians are the various indigenous peoples of the Australian mainland and many of its islands, excluding the ethnically distinct people of the Torres Strait Islands.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:46:51Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a word for a member of one of the groups of people who were the first people to live in Australia, which was used officially in the past, but is now offensive",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23",
+   "note": "The former EN answer 'Aborigines' names the right people but the term is now considered offensive; EN answer changed to 'Aboriginal Australians', the old term accepted in notes"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:46:55Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a member of the group of people who were the original people living in a country",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:24.152Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aboriginal Australians are the various indigenous peoples of the Australian mainland and many of its islands, excluding the ethnically distinct people of the Torres Strait Islands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:24.152Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a word for a member of one of the groups of people who were the first people to live in Australia, which was used officially in the past, but is now offensive",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:24.152Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a member of the group of people who were the original people living in a country",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:24.152Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aboriginal Australians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“Aboriginal Australians”, “Aborigines”, “Аборигены”) on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:24.152Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aboriginal Australians are the various indigenous peoples of the Australian mainland and many of its islands, excluding the ethnically distinct people of the Torres Strait Islands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aboriginal Australians” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:24.152Z",
+   "target": "f04289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Aboriginal Australians have a wide variety of cultural practices and beliefs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aboriginal Australians” is on the snapshot of s8"
+  }
+ ]
+}

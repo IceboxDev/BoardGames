@@ -1,0 +1,375 @@
+{
+ "article": "a2347",
+ "sources": {
+  "s1": {
+   "url": "https://www.stuttgarter-zeitung.de/politik/politische-stimmung-im-iran-eine-krawatte-verraet-die-gesinnung-78902010.html",
+   "title": "Politische Stimmung im Iran: Eine Krawatte verrät die Gesinnung",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:26.001Z",
+   "snapshot": "7bfe17785b38f10c82f15d41ad67f09179847069b0dd1f04ec2b82a66f87485a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Neauphle-le-Ch%C3%A2teau",
+   "title": "Neauphle-le-Château – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:28.979Z",
+   "snapshot": "66020bc83c41eacaa10a2950f6c4e6c2bf5acd1e0d6396782f5250531877eeb1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1979_Iranian_Islamic_Republic_referendum",
+   "title": "1979 Iranian Islamic Republic referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:29.238Z",
+   "snapshot": "d5135d486c1f368696bd1acc33d25d971e701ef9604a5b841046291b8ebe50fe"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Iran_hostage_crisis",
+   "title": "Iran hostage crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:31.546Z",
+   "snapshot": "dcd4ab1c7b84ec47653e29677aa2e5baefd0a1bfb5062f542d3d35d29a396f70"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Necktie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:30.447Z",
+   "snapshot": "76c763c8ce3e6951c0e941249fdc25bf39e52749d7beb7ceb903e1ccfd00b9ad"
+  },
+  "s6": {
+   "url": "https://www.jimmycarterlibrary.gov/research/additional-resorces/hostage-crisis-in-iran",
+   "title": "Hostage Crisis in Iran",
+   "publisher": "Jimmy Carter Presidential Library and Museum (NARA)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:50.221Z",
+   "snapshot": "494d436234a0f9172c5fb23730f39fec0d96151a24c65ebd84e19e957c0b4e5e"
+  },
+  "s7": {
+   "url": "https://www.archives.gov/research/foreign-policy/iran-hostage-crisis",
+   "title": "444 Days: Selected Records Concerning the Iran Hostage Crisis 1979-1981",
+   "publisher": "U.S. National Archives",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:49.979Z",
+   "snapshot": "b97e7ab6e44eee6e9b7db90b4f907478fcfb8d57b99dd31ecabe0141e49ba2cd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iran",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-204"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neauphle-le-Château",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Islamic Republic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "444",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Operation Eagle Claw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:02.394Z",
+   "target": "f12223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Politische Stimmung im Iran: Eine Krawatte verrät die Gesinnung | stuttgarter-zeitung.de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:02.394Z",
+   "target": "f12224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neauphle-le-Château (French pronunciation: [nofl lə ʃɑto] ; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neauphle-le-Château” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:02.394Z",
+   "target": "f12225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A referendum on establishing an Islamic republic was held in Iran on 30 and 31 March 1979.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Islamic Republic” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:02.394Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "After 444 days, it came to an end with the signing of the Algiers Accords between the Iranian and American governments; Pahlavi had died in Cairo, Egypt, on July 27, 1980.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “444” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:02.394Z",
+   "target": "f12227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As Iran hostage crisis negotiations dragged out and did not secure the release of the remaining hostages, Carter approved Operation Eagle Claw on April 24, 1980.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Operation Eagle Claw” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:58:55Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This terrorist act triggered the most profound crisis of the Carter presidency and began a personal ordeal for Jimmy Carter and the American people that lasted 444 days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:58:57Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "444 Days: Selected Records Concerning the Iran Hostage Crisis 1979-1981",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:47.204Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This terrorist act triggered the most profound crisis of the Carter presidency and began a personal ordeal for Jimmy Carter and the American people that lasted 444 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:47.204Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "444 Days: Selected Records Concerning the Iran Hostage Crisis 1979-1981",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:47.204Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This terrorist act triggered the most profound crisis of the Carter presidency and began a personal ordeal for Jimmy Carter and the American people that lasted 444 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “444” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:47.204Z",
+   "target": "f12226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "444 Days: Selected Records Concerning the Iran Hostage Crisis 1979-1981 | National Archives",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “444” is on the snapshot of s7"
+  }
+ ]
+}

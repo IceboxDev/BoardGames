@@ -1,0 +1,350 @@
+{
+ "article": "a0247",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Lagerfeld",
+   "title": "Karl Lagerfeld – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:36.394Z",
+   "snapshot": "c62f70028bd0019f67b0239fab9c4f46292def9a062eab95d883f07f2ae5c552"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Karl_Lagerfeld",
+   "title": "Karl Lagerfeld",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:40:35.295Z",
+   "snapshot": "dd40ee09dab0c38ce5bb18a515201b92491f43226270f04da05128739a775824"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)",
+   "title": "iPhone (1st generation) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:37.488Z",
+   "snapshot": "36ee56d4cf726951680ed87f07af6984f7f6fcc35f8ddfb9a69a3c2236406ad6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+   "title": "Winston Churchill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:34.139Z",
+   "snapshot": "c3f6004da290616ff56dde74821f194a1515ed9053b769f2cbb6682cffcf443b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+   "title": "Margaret Thatcher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:38.642Z",
+   "snapshot": "87a766ce9acd8a37fb03deca095a90df6251e5e97930d56895d7c467a043afb9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Schmidt",
+   "title": "Helmut Schmidt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:39.615Z",
+   "snapshot": "3c1f7cc6d4e9754449891d30459073c5fe2363028e3dd1c44744d478df6a39b7"
+  },
+  "s7": {
+   "url": "https://www.thelocal.de/20130709/50767",
+   "title": "Ex-Chancellor 'hoards 38,000 cigarettes' (The Local)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:36.937Z",
+   "snapshot": "cf6fa01a5dc0a216cf6a9e90d44545ec79af72584a81fa8983956d020d2f179f"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Launer_London",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:40.417Z",
+   "snapshot": "cfc77a0561d40f03014ef7141ff7d8126c43452dfc408129339e581c6c19c97f"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Helmut_Schmidt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:40:38.038Z",
+   "snapshot": "072c1a66922932e589c312709493424b854ca3f211ea4a02838d18a252712ba0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Lagerfeld",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Lagerfeld",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-176"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Steve Jobs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Winston Churchill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Margaret Thatcher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f01235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-333"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1984, a year after his start at Chanel, Lagerfeld began his own eponymous \"Karl Lagerfeld\" brand with a focus on ready-to-wear clothing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Lagerfeld” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Lagerfeld wurde laut Geburtsanzeige seiner Eltern in den Hamburger Nachrichten am 10.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Lagerfeld” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 2000, Apple CEO Steve Jobs envisioned an Apple touchscreen product that the user could interact with directly with their fingers rather than using a stylus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steve Jobs” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In May 1945, Winston Churchill commissioned the Chiefs of Staff Committee to provide its thoughts on a possible military campaign against the USSR, code-named Operation Unthinkable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winston Churchill” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Her decision provoked a storm of protest from Labour and the press, leading to her being notoriously nicknamed \"Margaret Thatcher, Milk Snatcher\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margaret Thatcher” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Helmut Schmidt was the elder of two sons to Ludovica Koch (10 November 1890 – 29 November 1968) and Gustav Ludwig Schmidt (18 April 1888 – 26 March 1981) in Barmbek, a working-class district of Hamburg, in 1918.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:18.870Z",
+   "target": "f01235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Famous for his love of smoking, popular German ex-Chancellor Helmut Schmidt apparently has 38,000 menthol cigarettes stashed in his house.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s7"
+  }
+ ]
+}

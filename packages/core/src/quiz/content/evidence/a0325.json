@@ -1,0 +1,242 @@
+{
+ "article": "a0325",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ren%C3%A9_Marik",
+   "title": "René Marik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:10.701Z",
+   "snapshot": "76961e09d531fd8bee8fc93622d6dba259476ae451f7cf165033aeafdfc7eb6b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Hatzius",
+   "title": "Michael Hatzius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:11.683Z",
+   "snapshot": "971c39603b3a5b83c5a225d02ee2deafebe5a123739f36637c2901212e613daa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kermit_the_Frog",
+   "title": "Kermit the Frog – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:12.406Z",
+   "snapshot": "851704d7667a5c74f2afa8079f08ef245b7674678e3d1d38ff9a9d2f2f5b5595"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lamb_Chop_(puppet)",
+   "title": "Lamb Chop (puppet) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:13.295Z",
+   "snapshot": "b722b0e1b3636fb5e99bbeaeb1da1c8dc938553a21faad1fcabe242da78c348d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charlie_McCarthy",
+   "title": "Charlie McCarthy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:14.283Z",
+   "snapshot": "f0473153718e4d6142e3532eac50d8a6cad0132f4427ee0bb8405764836b39af"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01621",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Maulwurf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Echse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kermit the Frog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lamb Chop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01625",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charlie McCarthy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:30.230Z",
+   "target": "f01621",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mariks populärste Figur ist der Maulwurf Maulwurfn (mit Blindenbinde), der entweder der Barbiepuppe („de Barbe“) oder verschiedenen Figuren aus der Grimmschen Märchenwelt begegnet und dabei vor allem durch seine gutmütige Naivität sowie durch seine eingeschränkte Syntax und Sprechweise bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Maulwurf” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:30.230Z",
+   "target": "f01622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juni 1982 in Ost-Berlin) ist ein deutscher Puppenspieler und Schauspieler, der mit der Figur Die Echse bekannt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Echse” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:30.230Z",
+   "target": "f01623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kermit the Frog is a Muppet character created in 1955 and originally performed by Jim Henson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kermit the Frog” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:30.230Z",
+   "target": "f01624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lamb Chop is an anthropomorphic sheep sock puppet created by the puppeteer and ventriloquist Shari Lewis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lamb Chop” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:30.230Z",
+   "target": "f01625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charlie McCarthy was a dummy partner of American ventriloquist Edgar Bergen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlie McCarthy” is on the snapshot of s5"
+  }
+ ]
+}

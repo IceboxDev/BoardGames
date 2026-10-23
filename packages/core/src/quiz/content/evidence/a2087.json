@@ -1,0 +1,336 @@
+{
+ "article": "a2087",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ceylon_tea",
+   "title": "Ceylon tea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:35.780Z",
+   "snapshot": "a27f477305a798c99dd7a52a12507d0e2878bfacd7880775068be193f25757e1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Darjeeling_tea",
+   "title": "Darjeeling tea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:36.843Z",
+   "snapshot": "937668a1667f4f855419d76735f883af284d9301767351cb9f57a4f75d52ac80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rooibos",
+   "title": "Rooibos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:37.852Z",
+   "snapshot": "7f198e0469fab7083ca233593b5b62df3194afec1e98d621a5bd4c2a9a98e785"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pu'er_tea",
+   "title": "Pu'er tea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:38.870Z",
+   "snapshot": "36c35fe2d7b10e994788fed07cf464f0e3d4dc372ce8bde1a43b9395146141ed"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/History_of_tea_in_Japan",
+   "title": "History of tea in Japan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:40.009Z",
+   "snapshot": "d8e1961c8b53a1cf0eb4c705343571d5f1bb3c602c4afd899248f36859a789a2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Matcha",
+   "title": "Matcha",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:37.069Z",
+   "snapshot": "f2408ecea421508fa27c46eff64e0adb4df3b5c40d6c3f74fa512d4303f02b25"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Earl_Grey_(Tee)",
+   "title": "Earl Grey (Tee)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:38.029Z",
+   "snapshot": "3bc9f72887997677f3cd72ec591b1a11b9f1eb5f68befd56da27814b0e12289f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sri Lanka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Grüntee",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-025"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Earl Grey",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-119"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f10431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ceylon tea is both the brand of tea which is produced in Sri Lanka and a historic term describing black tea from that land.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sri Lanka” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f10432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sinensis that is grown and processed in Darjeeling district or Kalimpong district in West Bengal, India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f10433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "'red bush'), or Aspalathus linearis, is a broom-like member of the plant family Fabaceae that grows in South Africa's Fynbos biome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Africa” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f10434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pu'er or pu-erh is a variety of fermented tea traditionally produced in Yunnan Province, China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f10435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The history of tea in Japan began as early as the 8th century, when the first known references were made in Japanese records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f11018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Matcha (japanisch 抹茶 [ma.tɕa] für etwa „gemahlener Tee“) () ist ein zu Pulver vermahlener Grüntee, der in der japanischen Teezeremonie verwendet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grüntee” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:19.837Z",
+   "target": "f11019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Earl Grey ist die Bezeichnung einer Teemischung aus schwarzem Tee.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Earl Grey” is on the snapshot of s7"
+  }
+ ]
+}

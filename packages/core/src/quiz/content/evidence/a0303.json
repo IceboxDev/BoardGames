@@ -1,0 +1,242 @@
+{
+ "article": "a0303",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mondrian_Collection",
+   "title": "Mondrian Collection – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:15.136Z",
+   "snapshot": "edf42eae7afa0c0c16537513992f32282720c087678262b53ab4c3d5ef7def4d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Chanel_No._5",
+   "title": "Chanel No. 5 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:16.239Z",
+   "snapshot": "8d8c7e8047db99e63592187b7f894088aa82d7e619b81dc537e1776e41968509"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Christian_Dior",
+   "title": "Christian Dior – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:17.147Z",
+   "snapshot": "fc8f4075c7fc3d9254702056c927d891155eec91958ce58d414f8f7911a3b07e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lobster_dress",
+   "title": "Lobster dress – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:18.146Z",
+   "snapshot": "570d9d6a56a6f2d5a6765b4fe1a06e8bc2c830d57be84a02ba6d344300ac75c4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Black_Givenchy_dress_of_Audrey_Hepburn",
+   "title": "Black Givenchy dress of Audrey Hepburn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:19.128Z",
+   "snapshot": "2108fb22d5dfd156d6394456870dd93178bdb862dd984b9434469fb6cd107a57"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yves Saint Laurent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Coco Chanel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Dior",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elsa Schiaparelli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hubert de Givenchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:27.012Z",
+   "target": "f01511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Mondrian Collection was designed by French fashion designer Yves Saint Laurent (1936–2008) in 1965.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yves Saint Laurent” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:27.012Z",
+   "target": "f01512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Coco Chanel was the first face of the fragrance, appearing in the advertisement published by Harper's Bazaar in 1937.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coco Chanel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:27.012Z",
+   "target": "f01513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Ernest Dior (French: [kʁistjɑ̃ djɔʁ]; 21 January 1905 – 24 October 1957) was a French fashion designer and founder of one of the world's top fashion houses, Christian Dior SE.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Dior” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:27.012Z",
+   "target": "f01514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The lobster dress is a 1937 dress designed by Elsa Schiaparelli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elsa Schiaparelli” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:27.012Z",
+   "target": "f01515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The garment was originally designed by Hubert de Givenchy, with three existing copies preserved to date.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hubert de Givenchy” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,463 @@
+{
+ "article": "a1555",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen",
+   "title": "Das Lied der Deutschen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:47.516Z",
+   "archiveUrl": "https://web.archive.org/web/20261023064320/https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen",
+   "snapshot": "cec3d10b81b5dddf99b29c620d95121703a95b7ae4149c0751c8e301127a25f9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dutch_euro_coins",
+   "title": "Dutch euro coins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:05.969Z",
+   "snapshot": "8eac470962fca12ad8a70800b7f7b4bd4ad1434d596f07664a60a42ceb9d0870"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Finnish_euro_coins",
+   "title": "Finnish euro coins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:06.900Z",
+   "snapshot": "7592d141efb05ca382bf5d05fce8a984bc54f4328c8deee769c0950ae466bb93"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dievs,_sv%C4%93t%C4%AB_Latviju!",
+   "title": "Dievs, svētī Latviju! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:07.950Z",
+   "snapshot": "7ebb54052fa59acd7fabeef7a7a18327f4c857252ebfe438e288ce8ba4a11576"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lithuanian_euro_coins",
+   "title": "Lithuanian euro coins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:08.917Z",
+   "snapshot": "28fce314ade2d8a7938477367167159262a83817a792dc82ec87ae45483906ed"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Euro_coins",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:09.974Z",
+   "snapshot": "e746527c6e70cb545e3e98b92fbf2881d3e51b2c739c1f025864625de3ee0a28"
+  },
+  "s7": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/nl.en.html",
+   "title": "Netherlands – euro coins",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:37.212Z",
+   "snapshot": "6c76f8d201dbcc8a7707d65611de910fbdbaffd77ea283169898fff06ea6d34c"
+  },
+  "s8": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/fi.en.html",
+   "title": "Finland – euro coins",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:38.123Z",
+   "snapshot": "1ac493a8222dd0234b2fb2d6cd6c08a140bbf2f22597e45ba932782b3ec86984"
+  },
+  "s9": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/lt.en.html",
+   "title": "Lithuania – euro coins",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:39.114Z",
+   "snapshot": "cd6df6337e8891c1561fc8ec0c7878cd364c9dbc9203f40f2e8d4943ecef2394"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "EINIGKEIT UND RECHT UND FREIHEIT",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "God zij met ons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Suomi Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dievs svētī Latviju",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laisvė vienybė gerovė",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:43.551Z",
+   "target": "f07771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oktober 2016 eine 20-Euro-Gedenkmünze vom Bundesministerium der Finanzen herausgegeben, auf deren Vorderseite ein Porträt von Hoffmann von Fallersleben mit dem Text EINIGKEIT UND RECHT UND FREIHEIT zu sehen ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.551Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “EINIGKEIT UND RECHT UND FREIHEIT” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:43.551Z",
+   "target": "f07772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "God zij met ons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“God zij met ons”, “GOD ZIJ MET ONS”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:43.551Z",
+   "target": "f07773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Suomi Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Suomi Finland”, “SUOMI FINLAND”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:43.551Z",
+   "target": "f07774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Latvian 2 euro coins bear the inscription DIEVS SVĒTĪ LATVIJU around the edge.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.551Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dievs svētī Latviju” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:43.551Z",
+   "target": "f07775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laisvė vienybė gerovė",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Laisvė vienybė gerovė”, “LAISVĖ VIENYBĖ GEROVĖ”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:18:57Z",
+   "target": "f07772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Edge-lettering of the €2 coin, both series: GOD * ZIJ * MET * ONS * (God be with us).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:18:58Z",
+   "target": "f07772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The edge lettering features the words GOD ★ ZIJ ★ MET ★ ONS (God Be With Us).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:18:59Z",
+   "target": "f07773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Edge lettering of the €2 coin: SUOMI FINLAND ***, where the * represents a lion's head.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:19:00Z",
+   "target": "f07773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The edge reads SUOMI FINLAND (the name of the country in Finnish and Swedish, its two official languages) and contains three lion heads",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:19:02Z",
+   "target": "f07775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Edge-lettering of the €2 coin: LAISVĖ * VIENYBĖ * GEROVĖ * (Freedom * Unity * Well-Being *)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:19:03Z",
+   "target": "f07775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"LAISVĖ, VIENYBĖ, GEROVĖ\" \"Freedom, Unity, Prosperity\" in Lithuanian",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Text sits in the coin table caption."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:30.463Z",
+   "target": "f07772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Edge-lettering of the €2 coin, both series: GOD * ZIJ * MET * ONS * (God be with us).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:30.463Z",
+   "target": "f07773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Edge lettering of the €2 coin: SUOMI FINLAND ***, where the * represents a lion's head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:30.463Z",
+   "target": "f07775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Edge-lettering of the €2 coin: LAISVĖ * VIENYBĖ * GEROVĖ * (Freedom * Unity * Well-Being *)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:30.463Z",
+   "target": "f07773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Edge lettering of the €2 coin: SUOMI FINLAND ***, where the * represents a lion's head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Suomi Finland” is on the snapshot of s8"
+  }
+ ]
+}

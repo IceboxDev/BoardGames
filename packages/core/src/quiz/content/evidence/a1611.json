@@ -1,0 +1,413 @@
+{
+ "article": "a1611",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Rogers",
+   "title": "Richard Rogers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:50.467Z",
+   "snapshot": "aaaff1577218ed7b983cd2eef711a7c29800ed91e5bf4754d78545602834e304"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Reichstag_building",
+   "title": "Reichstag building – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:51.465Z",
+   "snapshot": "49a98a3b0e511c6b48d5520122189b178309555e339faa2549469381ba50b4a6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Shard",
+   "title": "The Shard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:40.189Z",
+   "snapshot": "51be75575dfa62150bb14bdfd26316417d1c2d8a16d1e871af6b26c05fa55f4f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Louvre_Pyramid",
+   "title": "Louvre Pyramid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:52.529Z",
+   "snapshot": "483a8bfdb303a1cba7630e40015d1bedaf34387e33a8392551de4aa2e526bae8"
+  },
+  "s5": {
+   "url": "https://gscinparis.com/frank-gehrys-experience-music-project-building-in-seattle-washington-now-mopop",
+   "title": "Frank Gehry’s “Experience Music Project” Building (Seattle, WA) v. the “Fondation Louis Vuitton” in Paris, France",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:52.291Z",
+   "snapshot": "2f0b15bf94adadbe7bbc1ec797573e015344c71dad5ff73ca5b9e59d4e564b9d"
+  },
+  "s6": {
+   "url": "https://www.pritzkerprize.com/laureates/1998",
+   "title": "Renzo Piano | The Pritzker Architecture Prize",
+   "publisher": "The Hyatt Foundation / Pritzker Prize",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:09.694Z",
+   "snapshot": "10415fcaf2b1d77512bf8ace165cea84be79638a6668268ae320b76d6eefc094"
+  },
+  "s7": {
+   "url": "https://www.pritzkerprize.com/laureates/2007",
+   "title": "Richard Rogers | The Pritzker Architecture Prize",
+   "publisher": "The Hyatt Foundation / Pritzker Prize",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:10.938Z",
+   "snapshot": "02659f749afce9f03dd86f00724f710079831a6bfc0b03059751415ee5120dda"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Centre Pompidou",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reichstag",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Shard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Louvre Pyramid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frank Gehry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-217"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:50.810Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Centre Pompidou",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Centre Pompidou”, “Центр Помпиду”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:50.810Z",
+   "target": "f08053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Reichstag (; German: [ˈraɪçsˌtaːk] ) is a historic legislative government building on Platz der Republik in Berlin that is the seat of the Bundestag parliament.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reichstag” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:50.810Z",
+   "target": "f08054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Shard, also referred to as the Shard London Bridge and formerly London Bridge Tower, is a 95-storey mixed-use development supertall pyramid-shaped skyscraper, designed by the Italian architect Renzo Piano, in Southwark, London, that forms part of The Shard Quarter development.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Shard” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:50.810Z",
+   "target": "f08055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Louvre Pyramid (French: Pyramide du Louvre) is a large glass-and-metal entrance way and skylight designed by the Chinese-American architect I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louvre Pyramid” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:50.810Z",
+   "target": "f14416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frank Gehry’s “Experience Music Project” Building (Seattle, WA) v.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank Gehry” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:01Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is perhaps best known for his controversial design of the Centre Georges Pompidou, located in the heart of Paris and completed in 1978. Conceived in collaboration with English architect, Richard Rogers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:51:05Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Richard Rogers (1933-2021) is best known for such pioneering buildings as the Centre Pompidou in Paris",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:09Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "His career leapt forward when he, Piano and Gianfranco Franchini won the design competition for the Pompidou Centre in July 1971",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:38.748Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is perhaps best known for his controversial design of the Centre Georges Pompidou, located in the heart of Paris and completed in 1978. Conceived in collaboration with English architect, Richard Rogers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:38.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:38.748Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Richard Rogers (1933-2021) is best known for such pioneering buildings as the Centre Pompidou in Paris",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:38.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:38.748Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "His career leapt forward when he, Piano and Gianfranco Franchini won the design competition for the Pompidou Centre in July 1971",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:38.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:38.748Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Centre Pompidou",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:38.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Centre Pompidou” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:38.748Z",
+   "target": "f08051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Richard Rogers (1933-2021) is best known for such pioneering buildings as the Centre Pompidou in Paris, the headquarters for Lloyd’s of London, the European Court of Human Rights in Strasbourg and the Millennium Dome in London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:38.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Centre Pompidou” is on the snapshot of s7"
+  }
+ ]
+}

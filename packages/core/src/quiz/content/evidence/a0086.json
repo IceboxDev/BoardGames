@@ -1,0 +1,336 @@
+{
+ "article": "a0086",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Junge_muss_an_die_frische_Luft_%E2%80%93_Meine_Kindheit_und_ich",
+   "title": "Der Junge muss an die frische Luft – Meine Kindheit und ich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:34.688Z",
+   "snapshot": "8482daa11fe3b8465ece0a2442c0ca627df8a2731683f52feea51b3c33c8ef95"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ich_bin_dann_mal_weg",
+   "title": "Ich bin dann mal weg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:35.676Z",
+   "snapshot": "6621d6db94c37241cded8ab33f6f334afc599dd92ec0428dbe4584a3ccb2f41e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_Junge_muss_an_die_frische_Luft_(Film)",
+   "title": "Der Junge muss an die frische Luft (Film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:36.676Z",
+   "snapshot": "762af4099d0ebdfd999412dec9bf60f6091021a9273a2d2adc2e11c4a8d707db"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Italian_Journey",
+   "title": "Italian Journey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:37.591Z",
+   "snapshot": "a250b13ada0aec0a1e2abfaf88c997f1ae2fd75a517f6e88c0b6fa89845447db"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Aus_meinem_Leben._Dichtung_und_Wahrheit",
+   "title": "Aus meinem Leben. Dichtung und Wahrheit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:38.059Z",
+   "snapshot": "9251403a86f991f5546e7cd0897055eae49c36c25afb30aa12dbd4730f9cdc70"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Joachim_Meyerhoff",
+   "title": "Joachim Meyerhoff – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:38.696Z",
+   "snapshot": "c4f89696b6b9afaa471a2d2b60da674e16bca069207e4aa69a2c13adb45c13ed"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Matthias_Brandt",
+   "title": "Matthias Brandt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:39.671Z",
+   "snapshot": "c4236d57ff1b6f85bbb3868cb612f96cb22565159152d19b20bab7f29988d356"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An die frische Luft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ich bin dann mal weg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Recklinghausen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Italian Journey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dichtung und Wahrheit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wann wird es endlich wieder so, wie es nie war",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-074"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Raumpatrouille",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; transcript tp-380"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f00426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Junge muss an die frische Luft – Meine Kindheit und ich",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “An die frische Luft” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f00427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ich bin dann mal weg – Meine Reise auf dem Jakobsweg ist ein 2006 als Buch erschienener Reisebericht des deutschen Entertainers Hape Kerkeling über dessen Pilgerreise nach Santiago de Compostela im Jahr 2001.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ich bin dann mal weg” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f00428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anfang der 1970er Jahre in der Ruhrgebietsstadt Recklinghausen: Die Familie des achtjährigen Hans-Peter (des späteren Hape) zieht vom Haus der Großeltern väterlicherseits im ländlichen Teil der Stadt in das Haus der Eltern der Mutter im Nordviertel, wo Hans-Peter aufwächst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Recklinghausen” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f00429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Italian Journey (in the German original: Italienische Reise [itaˈli̯eːnɪʃə ˈʁaɪzə]) is Johann Wolfgang von Goethe's report on his travels to Italy from 1786 to 1788 that was published in 1816 & 1817.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Italian Journey” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f00430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dichtung und Wahrheit ist ein zwischen 1808 und 1831 entstandenes Buch, in dem Johann Wolfgang von Goethe Erlebnisse aus seinem Leben aus den Jahren 1749 bis 1775 verarbeitet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dichtung und Wahrheit” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f12766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In Wann wird es endlich wieder so, wie es nie war, dem zweiten Teil seiner autobiografischen Romanreihe Alle Toten fliegen hoch beschreibt Meyerhoff seine Kindheit und Jugend dort.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wann wird es endlich wieder so, wie es nie war” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:48.142Z",
+   "target": "f12767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Im September 2016 erschien Brandts erstes Buch unter dem Titel Raumpatrouille, das autobiographische Erzählungen aus seiner Kindheit enthält.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raumpatrouille” is on the snapshot of s7"
+  }
+ ]
+}

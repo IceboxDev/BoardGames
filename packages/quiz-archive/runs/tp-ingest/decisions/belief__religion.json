@@ -1,0 +1,596 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "belief/religion",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-065",
+    "category": 1
+   },
+   "factId": "f00457"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-188",
+    "category": 1
+   },
+   "factId": "f06340"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-208",
+    "category": 3
+   },
+   "factId": "f10596"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-250",
+    "category": 3
+   },
+   "factId": "f10597"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1268",
+   "baseHash": "c28a62fb95b7",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-206",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Five Pillars of Islam",
+    "titleDe": "Die fünf Säulen des Islam",
+    "bodyEn": "Islam rests, according to a saying of the Prophet Muhammad recorded in the hadith collections, on five things. Sunni Muslims call them the five pillars (arkan al-Islam): the profession of faith, prayer, almsgiving, fasting and pilgrimage. Together they describe what a believer does rather than what he thinks, and they give the religion its visible rhythm of days, years and lifetimes.\n\nThe first pillar is the Shahada, the profession of faith: 'There is no god but God, and Muhammad is the messenger of God.' Saying it sincerely in front of witnesses is all that is required to become a Muslim. It is whispered into the ear of a newborn, repeated in every call to prayer and, ideally, spoken as a person's last words. One of its oldest dated monumental versions is the inscription in the Dome of the Rock in Jerusalem, completed in 692.\n\nThe second is salat, the ritual prayer. Five times a day – at dawn, midday, mid-afternoon, sunset and nightfall – Muslims wash, face the Kaaba in Mecca – the direction of prayer was changed from Jerusalem to Mecca in 623 – and perform a fixed sequence of standing, bowing and prostration while reciting verses of the Quran in Arabic. The first mosque built for communal prayer, the Quba Mosque near Medina, dates from Muhammad's arrival there in 622. On Fridays the midday prayer is held in congregation in the mosque with a sermon.\n\nThe third is zakat, the obligatory alms. Once a year every Muslim whose wealth exceeds a minimum threshold gives a fixed share of it – traditionally 2.5 per cent of savings and trading goods – to the poor, to debtors, travellers and other categories named in the Quran. The word means 'purification': giving away part of one's wealth purifies the rest. When Arab tribes withheld it after Muhammad's death, the first caliph Abu Bakr fought them in the Ridda Wars of 632–633.\n\nThe fourth is fasting (sawm) during Ramadan. Ramadan is the name of the ninth month of the Islamic lunar calendar, in which the Quran is believed to have first been revealed, according to tradition in 610. Each day the fast lasts from dawn to sunset: from the first light of dawn until the sun goes down, adults abstain from food, drink, smoking and sexual relations, while eating and drinking are allowed at night – so the fast never runs from sunset to sunrise, as is sometimes claimed. Because the lunar year is about eleven days shorter than the solar year, Ramadan moves through the seasons, and a summer fast in northern Europe can last more than eighteen hours. The month ends with Eid al-Fitr, the feast of breaking the fast, known in Turkish and German as the 'sugar feast'. Muslim tradition also remembers the month for the Battle of Badr, fought on 17 Ramadan (13 March 624).\n\nThe fifth is the Hajj, the pilgrimage to Mecca in the month of Dhu al-Hijja, which every Muslim who is physically and financially able must make once in a lifetime. Over five days the pilgrims, dressed in simple white cloth, circle the Kaaba, walk between the hills of Safa and Marwa, stand in prayer on the plain of Arafat and stone the pillars at Mina that represent the devil. Two to three million people take part each year, and the Hajj ends with Eid al-Adha, the feast of sacrifice. The first Hajj performed in the Islamic way was led by Abu Bakr in 631, and its rites follow the Farewell Pilgrimage that Muhammad made in 632.\n\n| Pillar | Arabic term | Practice |\n|---|---|---|\n| Faith | Shahada | the profession of faith |\n| Prayer | salat | five daily prayers |\n| Alms | zakat | 2.5 per cent of wealth per year |\n| Fasting | sawm | the month of Ramadan |\n| Pilgrimage | Hajj | journey to Mecca once in a lifetime |\n\nShia Muslims count the duties slightly differently, but the five practices are shared by the entire Muslim world.",
+    "bodyDe": "Der Islam ruht, einem in den Hadith-Sammlungen überlieferten Ausspruch des Propheten Mohammed zufolge, auf fünf Dingen. Sunnitische Muslime nennen sie die fünf Säulen (arkan al-Islam): Glaubensbekenntnis, Gebet, Almosen, Fasten und Pilgerfahrt. Zusammen beschreiben sie, was ein Gläubiger tut, nicht, was er denkt, und sie geben der Religion ihren sichtbaren Rhythmus aus Tagen, Jahren und Lebensläufen.\n\nDie erste Säule ist die Schahada, das Glaubensbekenntnis: „Es gibt keinen Gott außer Gott, und Mohammed ist der Gesandte Gottes.“ Es aufrichtig vor Zeugen zu sprechen ist alles, was nötig ist, um Muslim zu werden. Es wird dem Neugeborenen ins Ohr geflüstert, in jedem Gebetsruf wiederholt und idealerweise als letztes Wort eines Menschen gesprochen. Zu seinen ältesten datierten monumentalen Fassungen gehört die Inschrift im 692 vollendeten Felsendom in Jerusalem.\n\nDie zweite ist das Salat, das rituelle Gebet. Fünfmal am Tag – in der Morgendämmerung, mittags, am Nachmittag, bei Sonnenuntergang und in der Nacht – waschen sich Muslime, wenden sich zur Kaaba in Mekka – die Gebetsrichtung wurde 623 von Jerusalem nach Mekka geändert – und vollziehen eine feste Abfolge von Stehen, Verbeugen und Niederwerfen, während sie Koranverse auf Arabisch rezitieren. Die erste Moschee für das gemeinschaftliche Gebet, die Quba-Moschee bei Medina, geht auf Mohammeds Ankunft dort im Jahr 622 zurück. Am Freitag wird das Mittagsgebet gemeinsam in der Moschee mit einer Predigt gehalten.\n\nDie dritte ist die Zakat, die Pflichtabgabe. Einmal im Jahr gibt jeder Muslim, dessen Vermögen eine Mindestgrenze übersteigt, einen festen Anteil davon – traditionell 2,5 Prozent der Ersparnisse und Handelswaren – an Arme, Verschuldete, Reisende und andere im Koran genannte Gruppen. Das Wort bedeutet „Reinigung“: Wer einen Teil seines Vermögens abgibt, reinigt den Rest. Als arabische Stämme sie nach Mohammeds Tod verweigerten, bekämpfte der erste Kalif Abu Bakr sie in den Ridda-Kriegen von 632–633.\n\nDie vierte ist das Fasten (Saum) im Ramadan. Ramadan heißt der neunte Monat des islamischen Mondkalenders, in dem nach dem Glauben der Muslime der Koran zum ersten Mal offenbart wurde, der Überlieferung nach im Jahr 610. Gefastet wird an jedem Tag von der Morgendämmerung bis zum Sonnenuntergang: Vom ersten Licht des Tages, bis die Sonne untergeht, verzichten Erwachsene auf Essen, Trinken, Rauchen und Geschlechtsverkehr, während in der Nacht gegessen und getrunken werden darf – das Fasten dauert also nicht, wie manchmal behauptet, von Sonnenuntergang bis Sonnenaufgang. Weil das Mondjahr etwa elf Tage kürzer ist als das Sonnenjahr, wandert der Ramadan durch die Jahreszeiten, und ein Sommerfasten in Nordeuropa kann mehr als achtzehn Stunden dauern. Der Monat endet mit dem Eid al-Fitr, dem Fest des Fastenbrechens, im Türkischen und Deutschen als „Zuckerfest“ bekannt. Die muslimische Überlieferung verbindet den Monat auch mit der Schlacht von Badr am 17. Ramadan (13. März 624).\n\nDie fünfte ist der Hadsch, die Pilgerfahrt nach Mekka im Monat Dhu l-Hiddscha, die jeder Muslim, der körperlich und finanziell dazu in der Lage ist, einmal im Leben unternehmen muss. Über fünf Tage umrunden die Pilger in schlichtem weißem Tuch die Kaaba, gehen zwischen den Hügeln Safa und Marwa hin und her, stehen betend in der Ebene von Arafat und bewerfen die Säulen in Mina, die den Teufel darstellen, mit Steinen. Zwei bis drei Millionen Menschen nehmen jedes Jahr teil, und der Hadsch endet mit dem Eid al-Adha, dem Opferfest. Den ersten Hadsch nach islamischem Ritus führte 631 Abu Bakr an, und seine Riten folgen der Abschiedswallfahrt, die Mohammed 632 unternahm.\n\n| Säule | Arabischer Begriff | Praxis |\n|---|---|---|\n| Glaube | Schahada | das Glaubensbekenntnis |\n| Gebet | Salat | fünf tägliche Gebete |\n| Almosen | Zakat | 2,5 Prozent des Vermögens pro Jahr |\n| Fasten | Saum | der Monat Ramadan |\n| Pilgerfahrt | Hadsch | Reise nach Mekka einmal im Leben |\n\nSchiitische Muslime zählen die Pflichten etwas anders, doch die fünf Praktiken teilt die gesamte islamische Welt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1964",
+   "baseHash": "85a248e1eeec",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-307",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-304",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Hidden, Translated, Debated: How the Bible Got Its Shape",
+    "titleDe": "Verborgen, übersetzt, umstritten: Wie die Bibel ihre Gestalt bekam",
+    "bodyEn": "The Bible did not fall from heaven as a bound book – even though The Bible is today generally believed to be the best-selling book of all time, with estimates running to five billion copies and more. Much of it was originally written in Hebrew: the Old Testament almost entirely, with a few chapters of Daniel and Ezra in Aramaic, while the New Testament was composed in Greek. Its contents were argued over for centuries, and the writings that lost the argument have a name of their own: the Apocrypha, from the Greek apokryphos, „hidden“. In the narrow sense the word refers to Jewish books written roughly between 200 BC and the early Christian centuries – Tobit, Judith, the Wisdom of Solomon, Sirach, Baruch, the books of the Maccabees and additions to Esther and Daniel – which stood in the Greek Bible but not in the Hebrew one. The Catholic Church counts them as „deuterocanonical“ scripture; Martin Luther placed them in a separate section of his 1534 Bible with the famous verdict that they are „not held equal to Holy Scripture, yet useful and good to read“. In the wider sense the Apocrypha also include the Christian texts of the second to fourth centuries that never made it into the New Testament: the gospels of Thomas, Peter and Mary, the Acts of Paul, the Apocalypse of Peter. Many were known only from hostile quotations until a Coptic library was dug up at Nag Hammadi in Egypt in 1945.\n\nTwo years later another chance find rewrote the history of the text itself. In 1947 a Bedouin shepherd threw a stone into a cave near Qumran on the north-west shore of the Dead Sea and heard a jar break. The Dead Sea Scrolls, eventually recovered from eleven caves, comprise some 900 manuscripts, among them the complete Great Isaiah Scroll and fragments of every book of the Hebrew Bible except Esther. They are a thousand years older than the medieval Hebrew manuscripts previously available, and they also contain several of the Apocrypha in their original languages.\n\nLong before that, the Bible had crossed into Greek. According to the Letter of Aristeas, King Ptolemy II of Egypt invited 72 Jewish scholars to Alexandria in the 3rd century BC, and they completed the translation in 72 days; later tradition added that each had worked alone and all produced identical texts. The result, named after the round number seventy, is the Septuagint, the Bible of the Greek-speaking diaspora and of the early Church; the apostles quote it, not the Hebrew.\n\nThe West needed Latin. Around 382 Pope Damasus commissioned the scholar Jerome to revise the Old Latin versions, and Jerome, working in Bethlehem, went back to the Hebrew for the Old Testament. His Vulgate – the „common“ edition – became the standard text of Western Christianity for over a millennium, and the Council of Trent declared it the Church's authentic Bible on 8 April 1546.\n\nJudaism, meanwhile, was building a second canon of its own. The oral law was written down as the Mishnah around AD 200; the rabbis of Palestine and Babylonia then debated it for three centuries, and their discussions, the Gemara, together with the Mishnah form the Talmud. The Babylonian Talmud, completed around AD 500, runs to some 2,700 folio pages and remains the foundation of rabbinic Judaism.\n\n| Text | Language | Date | Status |\n|---|---|---|---|\n| Septuagint | Greek | 3rd–2nd century BC | Bible of the early Church |\n| Dead Sea Scrolls | Hebrew, Aramaic, Greek | c. 250 BC – AD 70 | oldest biblical manuscripts |\n| Apocrypha | Greek, Hebrew, Coptic | c. 200 BC – AD 400 | outside (or on the edge of) the canon |\n| Vulgate | Latin | c. 382–405 | Catholic standard text |\n| Talmud | Hebrew, Aramaic | c. AD 200–500 | rabbinic canon |",
+    "bodyDe": "Die Bibel ist nicht als gebundenes Buch vom Himmel gefallen – auch wenn Die Bibel heute allgemein als das meistverkaufte Buch aller Zeiten gilt, mit Schätzungen von fünf Milliarden Exemplaren und mehr. Ein Großteil von ihr war ursprünglich auf Hebräisch verfasst: das Alte Testament fast vollständig, mit einigen Kapiteln von Daniel und Esra auf Aramäisch, während das Neue Testament auf Griechisch geschrieben wurde. Über ihren Inhalt wurde jahrhundertelang gestritten, und die Schriften, die den Streit verloren, haben einen eigenen Namen: die Apokryphen, vom griechischen apokryphos, „verborgen“. Im engeren Sinn bezeichnet das Wort jüdische Bücher, die etwa zwischen 200 vor Christus und den ersten christlichen Jahrhunderten entstanden – Tobit, Judit, die Weisheit Salomos, Jesus Sirach, Baruch, die Makkabäerbücher und Zusätze zu Ester und Daniel –, die in der griechischen Bibel standen, aber nicht in der hebräischen. Die katholische Kirche zählt sie als „deuterokanonische“ Schriften zur Bibel; Martin Luther stellte sie in seiner Bibel von 1534 in einen eigenen Abschnitt mit dem berühmten Urteil, sie seien „der Heiligen Schrift nicht gleichgehalten und doch nützlich und gut zu lesen“. Im weiteren Sinn gehören zu den Apokryphen auch die christlichen Texte des zweiten bis vierten Jahrhunderts, die es nie ins Neue Testament schafften: die Evangelien nach Thomas, Petrus und Maria, die Paulusakten, die Petrusapokalypse. Viele waren nur aus feindseligen Zitaten bekannt, bis 1945 in Nag Hammadi in Ägypten eine koptische Bibliothek ausgegraben wurde.\n\nZwei Jahre später schrieb ein weiterer Zufallsfund die Geschichte des Textes selbst neu. 1947 warf ein Beduinenhirte einen Stein in eine Höhle bei Qumran am Nordwestufer des Toten Meeres und hörte einen Krug zerbrechen. Die Schriftrollen vom Toten Meer, schließlich aus elf Höhlen geborgen, umfassen rund 900 Handschriften, darunter die vollständige Große Jesajarolle und Fragmente jedes Buches der hebräischen Bibel außer Ester. Sie sind tausend Jahre älter als die mittelalterlichen hebräischen Handschriften, die man zuvor besaß, und enthalten auch mehrere der Apokryphen in ihren Originalsprachen.\n\nLange davor war die Bibel ins Griechische gewandert. Laut dem Aristeasbrief lud König Ptolemaios II. von Ägypten im 3. Jahrhundert vor Christus 72 jüdische Gelehrte nach Alexandria ein, und sie vollendeten die Übersetzung in 72 Tagen; spätere Überlieferung fügte hinzu, jeder habe allein gearbeitet und alle hätten identische Texte hervorgebracht. Das Ergebnis, nach der runden Zahl siebzig benannt, ist die Septuaginta, die Bibel der griechischsprachigen Diaspora und der frühen Kirche; die Apostel zitieren sie, nicht den hebräischen Text.\n\nDer Westen brauchte Latein. Um 382 beauftragte Papst Damasus den Gelehrten Hieronymus, die altlateinischen Fassungen zu überarbeiten, und Hieronymus, der in Betlehem arbeitete, griff für das Alte Testament auf das Hebräische zurück. Seine Vulgata – die „allgemein verbreitete“ Ausgabe – wurde für über ein Jahrtausend der Standardtext des westlichen Christentums, und das Konzil von Trient erklärte sie am 8. April 1546 zur authentischen Bibel der Kirche.\n\nDas Judentum baute unterdessen einen zweiten Kanon auf. Das mündliche Gesetz wurde um 200 nach Christus als Mischna niedergeschrieben; die Rabbinen Palästinas und Babyloniens diskutierten sie dann drei Jahrhunderte lang, und ihre Erörterungen, die Gemara, bilden zusammen mit der Mischna den Talmud. Der Babylonische Talmud, um 500 nach Christus abgeschlossen, umfasst rund 2.700 Folioseiten und ist bis heute das Fundament des rabbinischen Judentums.\n\n| Text | Sprache | Zeit | Status |\n|---|---|---|---|\n| Septuaginta | Griechisch | 3.–2. Jh. v. Chr. | Bibel der frühen Kirche |\n| Schriftrollen vom Toten Meer | Hebräisch, Aramäisch, Griechisch | ca. 250 v. Chr. – 70 n. Chr. | älteste Bibelhandschriften |\n| Apokryphen | Griechisch, Hebräisch, Koptisch | ca. 200 v. Chr. – 400 n. Chr. | außerhalb (oder am Rand) des Kanons |\n| Vulgata | Latein | ca. 382–405 | katholischer Standardtext |\n| Talmud | Hebräisch, Aramäisch | ca. 200–500 n. Chr. | rabbinischer Kanon |",
+    "notesEn": "The Dead Sea Scrolls are also called the Qumran scrolls (Qumran-Rollen); both names should be accepted.",
+    "notesDe": "Die Schriftrollen vom Toten Meer werden auch Qumran-Rollen genannt; beide Namen sollten gelten."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0092",
+   "baseHash": "52cfbcd324bf",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-400",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Creator, Preserver, Destroyer: The Gods of Hinduism",
+    "titleDe": "Schöpfer, Erhalter, Zerstörer: Die Götter des Hinduismus",
+    "bodyEn": "Hinduism is often described as a religion of 330 million gods, but behind the crowd of local deities stands a simple idea: the one absolute reality, Brahman, shows itself in many forms. The most important of these forms are gathered in the Trimurti, the „three-fold form“ of the divine. The idea took its classical shape in the Puranic period, between the 4th century and the 12th century AD, roughly from 300 to 1200. Brahma creates the world, Vishnu preserves it and Shiva destroys it so that it can be created anew. The three are not rivals but aspects of a single cosmic process, and in temple art they are sometimes shown as one body with three heads.\n\nOf the three, Brahma is the least worshipped. Tradition holds that he emerged from a lotus growing out of Vishnu's navel and that he has four faces, looking in every direction and reciting the four Vedas – the oldest scriptures of Hinduism, composed from around 1500 BC in the ancient South Asian language Sanskrit, in its oldest form, Vedic Sanskrit. Yet there are only a handful of temples dedicated to him – the best known, at Pushkar in Rajasthan, dates in its present form from the 14th century – because, according to legend, he was cursed after a lie, and because once creation is complete his work is done. Vishnu, by contrast, is present in the world through his ten avatars, among them Rama and Krishna, and Shiva is worshipped as the ascetic on Mount Kailash, as the cosmic dancer Nataraja and in the form of the linga.\n\nEach of the great gods has a family. Vishnu's consort is Lakshmi, the goddess of fortune, prosperity and beauty, who is invoked by merchants and households alike and whose festival, Diwali, lights up India every autumn. Coins and temple reliefs show that she was already revered in the 1st millennium BC. Shiva is married to Parvati, and their son is the most beloved figure of the whole pantheon: Ganesha, the elephant-headed god. Parvati created him from the dust of her body; Shiva, not knowing who he was, beheaded him, and then replaced the lost head with that of an elephant. Ganesha is the remover of obstacles, and no Hindu ceremony, journey or business venture begins without a prayer to him. One of the earliest images showing him with an elephant head comes from the 5th-century Bhumara temple in Madhya Pradesh. Brahma's consort is Sarasvati, the goddess of learning, music and the arts.\n\nThe epics add further heroes to the pantheon. In the „Ramayana“, whose core was composed roughly between 750 and 500 BC, the prince Rama, an avatar of Vishnu, sets out to rescue his wife Sita from the demon king Ravana of Lanka. His most faithful helper is Hanuman, the monkey god, who leaps across the sea to Lanka, sets the city ablaze with his burning tail and carries a whole mountain of healing herbs to the battlefield. Hanuman embodies strength, loyalty and selfless devotion, and his temples are found in almost every Indian village.\n\n| Deity | Role | Consort or family |\n|---|---|---|\n| Brahma | creator | Sarasvati |\n| Vishnu | preserver | Lakshmi |\n| Shiva | destroyer and renewer | Parvati; son Ganesha |\n| Ganesha | remover of obstacles | son of Shiva and Parvati |\n| Hanuman | devotee of Rama | – |\n\nTogether the Trimurti, their consorts and their servants form a cosmos in which creation, protection and destruction are simply different faces of the same divine reality.",
+    "bodyDe": "Der Hinduismus wird oft als Religion der 330 Millionen Götter beschrieben, doch hinter der Menge lokaler Gottheiten steht eine einfache Idee: Die eine absolute Wirklichkeit, Brahman, zeigt sich in vielen Gestalten. Die wichtigsten dieser Gestalten sind in der Trimurti versammelt, der „dreifachen Gestalt“ des Göttlichen. Ihre klassische Gestalt erhielt die Vorstellung in der Zeit der Puranas zwischen dem 4. Jahrhundert und dem 12. Jahrhundert n. Chr., also etwa von 300 bis 1200. Brahma erschafft die Welt, Vishnu erhält sie und Shiva zerstört sie, damit sie neu erschaffen werden kann. Die drei sind keine Rivalen, sondern Aspekte eines einzigen kosmischen Vorgangs, und in der Tempelkunst werden sie manchmal als ein Körper mit drei Köpfen dargestellt.\n\nVon den dreien wird Brahma am wenigsten verehrt. Die Überlieferung sagt, er sei aus einem Lotus hervorgegangen, der aus Vishnus Nabel wuchs, und er habe vier Gesichter, die in alle Richtungen blicken und die vier Veden rezitieren – die ältesten Schriften des Hinduismus, ab etwa 1500 v. Chr. in der uralten südasiatischen Sprache Sanskrit verfasst, in ihrer ältesten Form, dem vedischen Sanskrit. Doch nur eine Handvoll Tempel ist ihm geweiht – der bekannteste, in Pushkar in Rajasthan, stammt in seiner heutigen Form aus dem 14. Jahrhundert –, weil er der Legende nach für eine Lüge verflucht wurde und weil seine Arbeit getan ist, sobald die Schöpfung vollendet ist. Vishnu dagegen ist durch seine zehn Avatare in der Welt gegenwärtig, darunter Rama und Krishna, und Shiva wird als Asket auf dem Berg Kailash, als kosmischer Tänzer Nataraja und in Gestalt des Linga verehrt.\n\nJeder der großen Götter hat eine Familie. Vishnus Gemahlin ist Lakshmi, die Göttin des Glücks, des Wohlstands und der Schönheit, die von Kaufleuten wie von Haushalten angerufen wird und deren Fest, Diwali, jeden Herbst ganz Indien erleuchtet. Münzen und Tempelreliefs belegen, dass sie schon im 1. Jahrtausend v. Chr. verehrt wurde. Shiva ist mit Parvati verheiratet, und ihr Sohn ist die beliebteste Figur des gesamten Pantheons: Ganesha, der elefantenköpfige Gott. Parvati formte ihn aus dem Staub ihres Körpers; Shiva, der nicht wusste, wer er war, schlug ihm den Kopf ab und ersetzte den verlorenen Kopf dann durch den eines Elefanten. Ganesha ist der Beseitiger von Hindernissen, und keine hinduistische Zeremonie, Reise oder Geschäftsgründung beginnt ohne ein Gebet an ihn. Eines der frühesten Bildnisse, die ihn mit Elefantenkopf zeigen, stammt aus dem Bhumara-Tempel in Madhya Pradesh aus dem 5. Jahrhundert. Brahmas Gemahlin ist Sarasvati, die Göttin des Wissens, der Musik und der Künste.\n\nDie Epen fügen dem Pantheon weitere Helden hinzu. Im „Ramayana“, dessen Kern etwa zwischen 750 und 500 v. Chr. entstand, zieht der Prinz Rama, ein Avatar Vishnus, aus, um seine Frau Sita aus der Gewalt des Dämonenkönigs Ravana von Lanka zu befreien. Sein treuester Helfer ist Hanuman, der Affengott, der über das Meer nach Lanka springt, die Stadt mit seinem brennenden Schwanz in Brand setzt und einen ganzen Berg voller Heilkräuter auf das Schlachtfeld trägt. Hanuman verkörpert Stärke, Treue und selbstlose Hingabe, und seine Tempel finden sich in fast jedem indischen Dorf.\n\n| Gottheit | Rolle | Gemahlin oder Familie |\n|---|---|---|\n| Brahma | Schöpfer | Sarasvati |\n| Vishnu | Erhalter | Lakshmi |\n| Shiva | Zerstörer und Erneuerer | Parvati; Sohn Ganesha |\n| Ganesha | Beseitiger von Hindernissen | Sohn von Shiva und Parvati |\n| Hanuman | Diener Ramas | – |\n\nZusammen bilden die Trimurti, ihre Gemahlinnen und ihre Diener einen Kosmos, in dem Schöpfung, Schutz und Zerstörung nur verschiedene Gesichter derselben göttlichen Wirklichkeit sind.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1976",
+   "baseHash": "8101aefa97de",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-079",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Patron Saints and the Things Named After Them",
+    "titleDe": "Schutzheilige und die Dinge, die nach ihnen benannt sind",
+    "bodyEn": "Long before there were brand names, Europeans named institutions, holidays and objects after saints, and many of those names have outlived the faith that produced them. A few of them are hidden in words we use every day.\n\nThe clearest example is the German word Lazarett, meaning a military hospital. It goes back to Lazarus, the beggar \"covered with sores\" in Jesus's parable in the Gospel of Luke, whom the Middle Ages merged with Lazarus of Bethany, the man Jesus raised from the dead. As the patron saint of lepers and the sick he gave his name to the Order of Saint Lazarus, founded in Jerusalem in the twelfth century to run leper hospitals, and to the \"lazar houses\" of medieval Europe. When Venice opened the world's first quarantine station on the island of Santa Maria di Nazareth in 1423, its name blended with that of the saint into \"lazzaretto\", and plague hospitals across Europe became lazarettos. From the seventeenth century the German army used the word for its field hospitals, and the plague was forgotten while the name stayed.\n\nSaint Patrick, a Roman Briton kidnapped by Irish raiders who returned as a missionary in the fifth century, is the patron of Ireland. The day of his death, 17 March 461 according to tradition, became St Patrick's Day, now celebrated with parades from Dublin to Chicago, where the river is dyed green.\n\nSaint Barbara, an early Christian martyr of the 3rd century whose father locked her in a tower, is the patron of miners, artillerymen and everyone who works with explosives. Her feast on 4 December is the miners' great holiday in Germany, and on the same day people cut \"Barbara branches\" from cherry trees so that they blossom at Christmas.\n\nSaint Valentine, a Roman priest executed around 269, is the patron of lovers, though the link with romance appears only in the fourteenth century, when Chaucer wrote that birds choose their mates on his feast. Valentine's Day on 14 February has since become the most commercial saint's day in the world.\n\nSaint Christopher, according to legend a giant who carried the Christ child across a river, is the patron of travellers. Although the Catholic Church removed him from its universal calendar in 1969, the Christopher medal or plaque is still fixed to dashboards throughout Europe as protection against accidents.\n\nHonoratus of Amiens, a bishop of Amiens in northern France who died around 600, is the patron saint of bakers, confectioners and sweet makers. The French remember Saint Honoré every year on 16 May, and Parisian pastry cooks named the gâteau Saint-Honoré, a crown of choux puffs filled with cream, after him, just as the rue du Faubourg Saint-Honoré takes its name from a church dedicated to him.\n\n| Saint | Patron of | Named after him or her |\n|---|---|---|\n| Lazarus | the sick, lepers | lazaretto, Lazarett |\n| Saint Patrick | Ireland | St Patrick's Day |\n| Saint Barbara | miners, artillery | Barbara branches, Barbara Day |\n| Saint Valentine | lovers | Valentine's Day |\n| Saint Christopher | travellers | Christopher medal |\n| Honoratus of Amiens | bakers, confectioners | Saint-Honoré cake, rue Saint-Honoré |",
+    "bodyDe": "Lange bevor es Markennamen gab, benannten die Europäer Einrichtungen, Feiertage und Gegenstände nach Heiligen, und viele dieser Namen haben den Glauben überdauert, der sie hervorbrachte. Einige stecken in Wörtern, die wir täglich benutzen.\n\nDas klarste Beispiel ist das Wort Lazarett für ein Militärkrankenhaus. Es geht zurück auf Lazarus, den Bettler „voller Geschwüre“ aus Jesu Gleichnis im Lukasevangelium, den das Mittelalter mit Lazarus von Bethanien verschmolz, dem Mann, den Jesus von den Toten auferweckte. Als Schutzheiliger der Aussätzigen und Kranken gab er dem Lazarus-Orden seinen Namen, der im zwölften Jahrhundert in Jerusalem gegründet wurde, um Leprakrankenhäuser zu betreiben, und den „Lazarushäusern“ des mittelalterlichen Europa. Als Venedig 1423 auf der Insel Santa Maria di Nazareth die erste Quarantänestation der Welt eröffnete, verschmolz deren Name mit dem des Heiligen zu „Lazzaretto“, und die Pestkrankenhäuser in ganz Europa wurden zu Lazaretten. Ab dem siebzehnten Jahrhundert verwendeten die deutschen Heere das Wort für ihre Feldkrankenhäuser, und die Pest geriet in Vergessenheit, während der Name blieb.\n\nDer heilige Patrick, ein von irischen Räubern entführter Römer aus Britannien, der im fünften Jahrhundert als Missionar zurückkehrte, ist der Schutzheilige Irlands. Sein Todestag, der Überlieferung nach der 17. März 461, wurde zum St. Patrick's Day, der heute mit Paraden von Dublin bis Chicago gefeiert wird, wo man den Fluss grün färbt.\n\nDie heilige Barbara, eine frühchristliche Märtyrerin des 3. Jahrhunderts, die ihr Vater in einen Turm sperrte, ist die Schutzheilige der Bergleute, der Artilleristen und aller, die mit Sprengstoff arbeiten. Ihr Gedenktag am 4. Dezember ist in Deutschland der große Feiertag der Bergleute, und am selben Tag schneidet man „Barbarazweige“ von Kirschbäumen, damit sie zu Weihnachten blühen.\n\nDer heilige Valentin, ein um 269 hingerichteter römischer Priester, ist der Schutzheilige der Liebenden, wobei die Verbindung zur Romantik erst im vierzehnten Jahrhundert auftaucht, als Chaucer schrieb, die Vögel wählten an seinem Fest ihre Partner. Der Valentinstag am 14. Februar ist seither zum kommerziellsten Heiligentag der Welt geworden.\n\nDer heilige Christophorus, der Legende nach ein Riese, der das Christuskind über einen Fluss trug, ist der Schutzheilige der Reisenden. Obwohl die katholische Kirche ihn 1969 aus ihrem allgemeinen Kalender strich, wird die Christophorus-Medaille oder -Plakette in ganz Europa noch immer als Schutz vor Unfällen ans Armaturenbrett geheftet.\n\nHonoratus von Amiens, ein um 600 gestorbener Bischof von Amiens in Nordfrankreich, ist der Schutzpatron der Bäcker, Konditoren und Süßwarenhersteller. Die Franzosen gedenken des heiligen Honoré jedes Jahr am 16. Mai, und Pariser Konditoren benannten die Saint-Honoré-Torte, einen Kranz aus sahnegefüllten Windbeuteln, nach ihm, so wie die Rue du Faubourg Saint-Honoré ihren Namen einer ihm geweihten Kirche verdankt.\n\n| Heiliger | Schutzpatron von | Nach ihm oder ihr benannt |\n|---|---|---|\n| Lazarus | Kranken, Aussätzigen | Lazzaretto, Lazarett |\n| Patrick | Irland | St. Patrick's Day |\n| Barbara | Bergleuten, Artillerie | Barbarazweige, Barbaratag |\n| Valentin | Liebenden | Valentinstag |\n| Christophorus | Reisenden | Christophorus-Plakette |\n| Honoratus von Amiens | Bäckern, Konditoren | Saint-Honoré-Torte, Rue Saint-Honoré |",
+    "notesEn": "The word „Lazarett“ derives from Italian „lazzaretto“, whose origin also involves the Venetian quarantine island Santa Maria di Nazareth; the card expects the saint's name, Lazarus.",
+    "notesDe": "Das Wort „Lazarett“ stammt vom italienischen „lazzaretto“, in dessen Herkunft auch die venezianische Quarantäneinsel Santa Maria di Nazareth mitspielt; die Karte erwartet den Namen des Heiligen, Lazarus."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0884",
+   "baseHash": "89a29846089b",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-394",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Sevens, Fours and Fives: The Numbered Lists of Faith",
+    "titleDe": "Sieben, vier und fünf: Die Zahlenlisten des Glaubens",
+    "bodyEn": "The seven deadly sins are not listed anywhere in the Bible as a set, which is why theologians prefer to call them the seven capital vices, the roots from which other sins grow. The list began with the desert monk Evagrius Ponticus, who in the fourth century described eight 'evil thoughts' that tempt a hermit, and it was Pope Gregory the Great who around 590 reduced them to seven and put pride at the top. Thomas Aquinas systematised the list in the thirteenth century, Dante arranged the terraces of his Purgatory according to it, and Hieronymus Bosch painted it on a table top. In its traditional order the seven are pride (superbia), greed (avaritia), lust (luxuria), envy (invidia), gluttony (gula), wrath (ira) and sloth (acedia). Three are enough to answer the quiz card: pride, greed and envy. Each vice has a matching virtue, from humility to diligence, and together the two lists formed the backbone of medieval confession manuals.\n\nThe Christian tradition, and religion in general, is full of such numbered lists, which made teaching easy in ages when few people could read.\n\n- The four Evangelists are the authors traditionally credited with the four Gospels: Matthew, Mark and Luke, whose accounts are so similar that they are called the synoptic Gospels, and John, whose Gospel stands apart in structure and theology. Around 180 Irenaeus of Lyon insisted that there must be exactly four Gospels, no more and no fewer. In art the Evangelists appear as a man, a lion, an ox and an eagle.\n- The twelve apostles were the closest followers of Jesus. The inner circle of Peter, James and John witnessed the Transfiguration and the agony in Gethsemane, and James became the first apostle to die a martyr, executed under Herod Agrippa I in AD 44; the others were Andrew, Philip, Bartholomew, Matthew, Thomas, James the son of Alphaeus, Thaddaeus, Simon the Zealot and Judas Iscariot, replaced after the betrayal by Matthias.\n- The five pillars of Islam are the basic duties of every Muslim: profession of faith, prayer and fasting are the three most visible in daily life, alongside almsgiving and the pilgrimage to Mecca. The shahada, the profession that there is no god but God and Muhammad is his messenger, is the first pillar; the five daily prayers – by tradition reduced from fifty to five during Muhammad's Night Journey, around 621 –, the zakat tax, the fast of Ramadan – first commanded in 624, the second year after the Hijra – and the hajj complete the list.\n- The seven sacraments of the Catholic Church were listed as seven by the Council of Florence in 1439, a number the Council of Trent confirmed in the sixteenth century. Baptism, confirmation and Eucharist are the three sacraments of initiation; penance, anointing of the sick, holy orders and matrimony complete the seven. Most Protestant churches recognise only baptism and the Lord's Supper.\n- The chakras, the energy centres of Indian teaching, are counted along the spine from its base to the crown of the head. The most common system, especially in yoga, has 7 main chakras; older Buddhist texts name four or five, and the seven-chakra scheme reached the West in 1919 through Arthur Avalon's book \"The Serpent Power\".\n\nWhether it is seven vices or seven sacraments, seven chakras, four Gospels or five pillars, the numbers were never arbitrary: they gave believers a framework they could count on their fingers and carry in their memory long before catechisms were printed.",
+    "bodyDe": "Die sieben Todsünden stehen nirgends in der Bibel als Liste, weshalb Theologen sie lieber die sieben Hauptlaster nennen, die Wurzeln, aus denen andere Sünden wachsen. Die Liste begann mit dem Wüstenmönch Evagrius Ponticus, der im vierten Jahrhundert acht „böse Gedanken“ beschrieb, die einen Einsiedler versuchen, und es war Papst Gregor der Große, der sie um 590 auf sieben reduzierte und den Hochmut an die Spitze stellte. Thomas von Aquin systematisierte die Liste im dreizehnten Jahrhundert, Dante ordnete die Terrassen seines Läuterungsbergs nach ihr, und Hieronymus Bosch malte sie auf eine Tischplatte. In ihrer traditionellen Reihenfolge lauten die sieben: Hochmut (superbia), Habgier (avaritia), Wollust (luxuria), Neid (invidia), Völlerei (gula), Zorn (ira) und Trägheit (acedia). Drei genügen, um die Quizkarte zu beantworten: Hochmut, Habgier und Neid. Jedem Laster steht eine Tugend gegenüber, von der Demut bis zum Fleiß, und zusammen bildeten die beiden Listen das Rückgrat mittelalterlicher Beichtspiegel.\n\nDie christliche Tradition, und Religion überhaupt, ist voll solcher Zahlenlisten, die das Lehren in Zeiten erleichterten, in denen nur wenige lesen konnten.\n\n- Die vier Evangelisten sind die Autoren, denen die vier Evangelien traditionell zugeschrieben werden: Matthäus, Markus und Lukas, deren Berichte einander so ähnlich sind, dass man sie die synoptischen Evangelien nennt, und Johannes, dessen Evangelium in Aufbau und Theologie für sich steht. Um 180 bestand Irenäus von Lyon darauf, dass es genau vier Evangelien geben müsse, nicht mehr und nicht weniger. In der Kunst erscheinen die Evangelisten als Mensch, Löwe, Stier und Adler.\n- Die zwölf Apostel waren die engsten Gefährten Jesu. Der innere Kreis aus Petrus, Jakobus und Johannes wurde Zeuge der Verklärung und der Todesangst in Gethsemane, und Jakobus starb als erster Apostel den Märtyrertod, hingerichtet unter Herodes Agrippa I. im Jahr 44; die anderen waren Andreas, Philippus, Bartholomäus, Matthäus, Thomas, Jakobus der Sohn des Alphäus, Thaddäus, Simon der Zelot und Judas Iskariot, der nach dem Verrat durch Matthias ersetzt wurde.\n- Die fünf Säulen des Islam sind die Grundpflichten jedes Muslims: Glaubensbekenntnis, Gebet und Fasten sind die drei im Alltag sichtbarsten, neben dem Almosengeben und der Pilgerfahrt nach Mekka. Die Schahada, das Bekenntnis, dass es keinen Gott außer Gott gibt und Mohammed sein Gesandter ist, ist die erste Säule; die fünf täglichen Gebete – der Überlieferung nach bei Mohammeds Nachtreise um 621 von fünfzig auf fünf verringert –, die Zakat-Abgabe, das Fasten im Ramadan – erstmals 624, im zweiten Jahr nach der Hidschra, geboten – und der Haddsch vervollständigen die Liste.\n- Die sieben Sakramente der katholischen Kirche wurden 1439 vom Konzil von Florenz als sieben aufgezählt, eine Zahl, die das Konzil von Trient im sechzehnten Jahrhundert bestätigte. Taufe, Firmung und Eucharistie sind die drei Sakramente der Eingliederung; Buße, Krankensalbung, Weihe und Ehe vervollständigen die sieben. Die meisten protestantischen Kirchen erkennen nur Taufe und Abendmahl an.\n- Die Chakren, die Energiezentren der indischen Lehre, werden entlang der Wirbelsäule von ihrem Ansatz bis zum Scheitel gezählt. Das verbreitetste System, besonders im Yoga, kennt 7 Hauptchakren; ältere buddhistische Texte nennen vier oder fünf, und das Schema der sieben Chakren gelangte 1919 durch Arthur Avalons Buch „The Serpent Power“ in den Westen.\n\nOb sieben Laster oder sieben Sakramente, sieben Chakren, vier Evangelien oder fünf Säulen: Die Zahlen waren nie willkürlich. Sie gaben den Gläubigen ein Gerüst, das sie an den Fingern abzählen und im Gedächtnis tragen konnten, lange bevor Katechismen gedruckt wurden.",
+    "notesEn": "Open-list question: any three of the seven deadly sins count; the stated answer is the trio used in the article. The full list is pride, greed, lust, envy, gluttony, wrath and sloth. The same applies to the four sibling questions. Note that the seven deadly sins are not listed as such in the Bible.",
+    "notesDe": "Offene Listenfrage: Drei beliebige der sieben Todsünden zählen; die angegebene Antwort ist das im Artikel verwendete Trio. Die vollständige Liste lautet Hochmut, Habgier, Wollust, Neid, Völlerei, Zorn, Trägheit. Dasselbe gilt für die vier Geschwisterfragen. Die sieben Todsünden stehen übrigens nicht als Liste in der Bibel."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0776",
+   "baseHash": "e1106557f897",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-364",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-119",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Language and Signs of the Papacy",
+    "titleDe": "Die Sprache und Zeichen des Papsttums",
+    "bodyEn": "The Roman Catholic Church has been governed from Rome for nearly two thousand years. It traces the office back to Peter, the apostle whom tradition counts as the first Bishop of Rome and therefore the first pope – a belief resting on Jesus's words \"You are Peter, and on this rock I will build my church\" and on the tradition of his martyrdom in Rome, though historians regard the list of early popes as a later construction. The rituals of its highest office still speak Latin. Five expressions describe the moments at which the pope is chosen, presented, heard and obeyed.\n\nEverything begins with the conclave. When a pope dies or, as Benedict XVI did in 2013, resigns, the cardinals under eighty years of age are locked into the Sistine Chapel – the word comes from cum clave, \"with a key\" – and vote in secret until one candidate has a two-thirds majority. The custom of locking the electors in dates from Gregory X's bull \"Ubi periculum\" of 7 July 1274, issued after a three-year vacancy in Viterbo had exasperated the townspeople so much that they removed the roof of the palace to speed the cardinals along. Twice a day the ballots are burned in a stove whose chimney rises from the chapel roof: black smoke means no decision, while white smoke – the fumata bianca – is the sign by which the Vatican tells the world that a new pope has been elected; since 2005 the bells of St Peter's ring as well.\n\nThe announcement follows a formula unchanged for centuries. The senior cardinal deacon steps onto the central loggia of St Peter's Basilica and proclaims: \"Annuntio vobis gaudium magnum: Habemus Papam\" – \"I announce to you a great joy: we have a pope\" – before revealing the new pontiff's baptismal name and the name he has chosen for his reign. Habemus Papam has become shorthand for the whole spectacle; it even titled a film by Nanni Moretti about a pope who panics on the balcony. Most recently, on 8 May 2025, Cardinal Dominique Mamberti used it to announce the election of Robert Francis Prevost as Pope Leo XIV.\n\nOnce elected, the pope teaches. His most important letters are the encyclicals, so called from the Greek enkyklios, \"circular\", because they are sent round to all the bishops of the world. An encyclical is known by its opening Latin words: Leo XIII's \"Rerum novarum\" of 15 May 1891 founded modern Catholic social teaching, Paul VI's \"Humanae vitae\" of 1968 rejected artificial contraception, and Francis's \"Laudato si'\" of 2015 addressed climate change.\n\nVery rarely the pope defines a doctrine ex cathedra, \"from the chair\" – the chair being the cathedra of St Peter. Since the First Vatican Council's constitution \"Pastor aeternus\" of 18 July 1870 such definitions are held to be infallible, but the power has been used with extreme restraint: the only undisputed example since then is Pius XII's definition of the Assumption of Mary in 1950.\n\nThe most visible papal act, though, is a blessing. Urbi et orbi, \"to the city and to the world\", is the solemn benediction given from the loggia of St Peter's at Easter and Christmas, and by a new pope immediately after Habemus Papam. Broadcast worldwide since Pius XII, it grants a plenary indulgence to all who receive it in person or, since 1985, by radio or television. Rome, the urbs, and the orbis, the whole earth, are blessed in a single breath.\n\n| Term | Meaning | Occasion |\n|---|---|---|\n| conclave | \"with a key\" | election of a pope |\n| fumata bianca | \"white smoke\" | sign that a pope has been elected |\n| Habemus Papam | \"we have a pope\" | announcement of the election |\n| encyclical | \"circular letter\" | papal teaching to the whole Church |\n| ex cathedra | \"from the chair\" | infallible definition of doctrine |\n| Urbi et orbi | \"to the city and the world\" | solemn blessing at Easter and Christmas |\n\nFrom the locked chapel to the open balcony, these phrases and signs trace the arc of a pontificate that began, in the Church's own reckoning, with Peter.",
+    "bodyDe": "Die römisch-katholische Kirche wird seit fast zweitausend Jahren von Rom aus regiert. Sie führt das Amt auf Petrus zurück, den Apostel, den die Überlieferung als ersten Bischof von Rom und damit als ersten Papst zählt – ein Glaube, der sich auf Jesu Wort „Du bist Petrus, und auf diesen Felsen werde ich meine Kirche bauen“ und auf die Tradition seines Martyriums in Rom stützt, auch wenn Historiker die Liste der frühen Päpste für eine spätere Konstruktion halten. Die Rituale ihres höchsten Amtes sprechen noch immer Latein. Fünf Ausdrücke beschreiben die Momente, in denen der Papst gewählt, vorgestellt, gehört und befolgt wird.\n\nAlles beginnt mit dem Konklave. Stirbt ein Papst oder tritt er wie Benedikt XVI. 2013 zurück, werden die Kardinäle unter achtzig Jahren in der Sixtinischen Kapelle eingeschlossen – das Wort kommt von cum clave, „mit einem Schlüssel“ – und wählen geheim, bis ein Kandidat eine Zweidrittelmehrheit hat. Der Brauch, die Wähler einzusperren, geht auf die Bulle „Ubi periculum“ Gregors X. vom 7. Juli 1274 zurück, erlassen, nachdem eine dreijährige Sedisvakanz in Viterbo die Bürger so erzürnt hatte, dass sie das Dach des Palastes abdeckten, um die Kardinäle anzutreiben. Zweimal täglich werden die Stimmzettel in einem Ofen verbrannt, dessen Schornstein aus dem Dach der Kapelle ragt: Schwarzer Rauch bedeutet keine Entscheidung, weißer Rauch – die Fumata bianca – ist das Zeichen, mit dem der Vatikan der Welt signalisiert, dass ein neuer Papst gewählt wurde; seit 2005 läuten zudem die Glocken des Petersdoms.\n\nDie Verkündung folgt einer seit Jahrhunderten unveränderten Formel. Der ranghöchste Kardinaldiakon tritt auf die mittlere Loggia des Petersdoms und ruft: „Annuntio vobis gaudium magnum: Habemus Papam“ – „Ich verkünde euch eine große Freude: Wir haben einen Papst“ –, bevor er den Taufnamen des neuen Pontifex und den von ihm gewählten Papstnamen bekannt gibt. Habemus Papam ist zum Kürzel für das ganze Spektakel geworden; es gab sogar einem Film von Nanni Moretti über einen Papst, der auf dem Balkon in Panik gerät, den Titel. Zuletzt verkündete Kardinal Dominique Mamberti damit am 8. Mai 2025 die Wahl von Robert Francis Prevost zum Papst Leo XIV.\n\nEinmal gewählt, lehrt der Papst. Seine wichtigsten Schreiben sind die Enzykliken, so genannt nach dem griechischen enkyklios, „kreisförmig“, weil sie an alle Bischöfe der Welt herumgeschickt werden. Eine Enzyklika ist nach ihren lateinischen Anfangsworten benannt: Leo XIII. begründete am 15. Mai 1891 mit „Rerum novarum“ die moderne katholische Soziallehre, Paul VI. lehnte 1968 in „Humanae vitae“ künstliche Empfängnisverhütung ab, und Franziskus widmete sich 2015 in „Laudato si'“ dem Klimawandel.\n\nSehr selten definiert der Papst eine Lehre ex cathedra, „vom Lehrstuhl aus“ – gemeint ist die Kathedra des heiligen Petrus. Seit der Konstitution „Pastor aeternus“ des Ersten Vatikanischen Konzils vom 18. Juli 1870 gelten solche Definitionen als unfehlbar, doch die Vollmacht wurde mit äußerster Zurückhaltung genutzt: Das einzige unbestrittene Beispiel seither ist die Definition der Aufnahme Mariens in den Himmel durch Pius XII. im Jahr 1950.\n\nDer sichtbarste päpstliche Akt aber ist ein Segen. Urbi et orbi, „der Stadt und dem Erdkreis“, ist der feierliche Segen, der zu Ostern und Weihnachten von der Loggia des Petersdoms gespendet wird, und von einem neuen Papst unmittelbar nach dem Habemus Papam. Seit Pius XII. weltweit übertragen, gewährt er allen, die ihn persönlich oder – seit 1985 – über Radio und Fernsehen empfangen, einen vollkommenen Ablass. Rom, die urbs, und der orbis, die ganze Erde, werden in einem Atemzug gesegnet.\n\n| Begriff | Bedeutung | Anlass |\n|---|---|---|\n| Konklave | „mit einem Schlüssel“ | Wahl eines Papstes |\n| Fumata bianca | „weißer Rauch“ | Zeichen, dass ein Papst gewählt ist |\n| Habemus Papam | „wir haben einen Papst“ | Verkündung der Wahl |\n| Enzyklika | „Rundschreiben“ | päpstliche Lehre an die ganze Kirche |\n| ex cathedra | „vom Lehrstuhl aus“ | unfehlbare Lehrentscheidung |\n| Urbi et orbi | „der Stadt und dem Erdkreis“ | feierlicher Segen zu Ostern und Weihnachten |\n\nVon der verschlossenen Kapelle bis zum offenen Balkon zeichnen diese Wendungen und Zeichen den Bogen eines Pontifikats nach, der nach der Zählung der Kirche mit Petrus begann.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1892",
+   "baseHash": "ef71de6adf0b",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-334",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Flying Spaghetti Monster and Other Unusual Objects of Worship",
+    "titleDe": "Das Fliegende Spaghettimonster und andere ungewöhnliche Objekte der Verehrung",
+    "bodyEn": "In 2005 the Kansas State Board of Education was debating whether „intelligent design“ should be taught alongside evolution. Bobby Henderson, a 24-year-old physics graduate of Oregon State University, wrote the board an open letter demanding equal time for a third theory: that the universe was created by the Flying Spaghetti Monster, an invisible being made of spaghetti and meatballs – the food that gave the parody its name – who touches the world with „His Noodly Appendage“. The letter went viral, „The Gospel of the Flying Spaghetti Monster“ followed in 2006, and its adherents – the Pastafarians, a pun on Rastafarians – adopted the colander as sacred headgear, „R'amen“ as their closing prayer and pirates as the original holy people, arguing that global warming rose as the number of pirates declined. Pastafarianism is a satire of creationism and of religious privilege, and it has tested both: New Zealand allows Pastafarian celebrants to conduct weddings, whereas German courts denied the „Church of the Flying Spaghetti Monster“ in Templin the right to put up signs for its „noodle mass“ and the Dutch Council of State ruled in 2018 that it is not a religion.\n\nThe name it parodies belongs to a serious faith. Rastafari arose in Jamaica in the 1930s after Ras Tafari Makonnen was crowned Emperor Haile Selassie I of Ethiopia on 2 November 1930, an event that seemed to fulfil Marcus Garvey's call to „look to Africa, where a black king shall be crowned“. Rastas regard Haile Selassie as Jah, the living God, and the returned messiah; his visit to Jamaica on 21 April 1966 is celebrated as Grounation Day. Dreadlocks, the sacramental use of ganja and the music of Bob Marley carried the movement around the world.\n\nOlder than Pastafarianism among the joke religions is Discordianism, launched in 1963 with the „Principia Discordia“ by Greg Hill and Kerry Thornley under the pen names Malaclypse the Younger and Omar Khayyam Ravenhurst. Its goddess is Eris, the Greek deity of strife who started the Trojan War by tossing a golden apple inscribed „to the fairest“ into a wedding party. Discordians teach that chaos is as real as order and follow the Law of Fives; Robert Anton Wilson's „Illuminatus!“ trilogy spread the creed in the 1970s.\n\nThe Church of the SubGenius, founded in Dallas in 1979 by Ivan Stang and Philo Drummond, sells salvation for a fee. Its prophet is J. R. „Bob“ Dobbs, a grinning, pipe-smoking salesman lifted from 1950s clip art, who preaches the pursuit of „Slack“ and promised the arrival of alien rescuers on X-Day, 5 July 1998. When nothing happened, the church declared the calendar was upside down; the prophet Bob Dobbs is still awaited each July.\n\nThe gentlest of these faiths is Dudeism. In 2005 the journalist Oliver Benjamin founded the Church of the Latter-Day Dude in Thailand, inspired by the Dude – Jeffrey Lebowski, played by Jeff Bridges in the Coen brothers' film „The Big Lebowski“, which opened in the US on 6 March 1998. Blending Taoism with the Dude's philosophy of taking it easy, the church has ordained more than 600,000 „Dudeist priests“ online, some of whom legally officiate at weddings.\n\n| Movement | Founded | Object of veneration |\n|---|---|---|\n| Rastafari | 1930s | Haile Selassie |\n| Discordianism | 1963 | Eris |\n| Church of the SubGenius | 1979 | Bob Dobbs |\n| Pastafarianism | 2005 | the Flying Spaghetti Monster |\n| Dudeism | 2005 | the Dude |",
+    "bodyDe": "2005 debattierte die Schulbehörde von Kansas, ob „Intelligent Design“ neben der Evolution unterrichtet werden sollte. Bobby Henderson, ein 24-jähriger Physikabsolvent der Oregon State University, schrieb der Behörde einen offenen Brief und forderte gleich viel Unterrichtszeit für eine dritte Theorie: dass das Universum vom Fliegenden Spaghettimonster erschaffen wurde, einem unsichtbaren Wesen aus Spaghetti und Fleischbällchen – dem Lebensmittel, das der Parodie ihren Namen gab –, das die Welt mit seinem „nudeligen Anhängsel“ berührt. Der Brief ging viral, 2006 folgte „Das Evangelium des Fliegenden Spaghettimonsters“, und seine Anhänger – die Pastafari, ein Wortspiel mit Rastafari – erhoben das Nudelsieb zur heiligen Kopfbedeckung, „R'amen“ zum Gebetsschluss und Piraten zum ursprünglichen heiligen Volk, mit dem Argument, die Erderwärmung sei gestiegen, während die Zahl der Piraten sank. Das Fliegende Spaghettimonster ist eine Satire auf den Kreationismus und auf religiöse Privilegien, und es hat beides auf die Probe gestellt: Neuseeland erlaubt pastafarischen Zeremonienmeistern Trauungen, während deutsche Gerichte der „Kirche des Fliegenden Spaghettimonsters“ in Templin das Aufstellen von Hinweisschildern zur „Nudelmesse“ verwehrten und der niederländische Staatsrat 2018 entschied, dass es sich nicht um eine Religion handelt.\n\nDer parodierte Name gehört zu einem ernsthaften Glauben. Die Rastafari-Bewegung entstand in den 1930er-Jahren in Jamaika, nachdem Ras Tafari Makonnen am 2. November 1930 zum Kaiser Haile Selassie I. von Äthiopien gekrönt worden war – ein Ereignis, das Marcus Garveys Aufruf zu erfüllen schien, „nach Afrika zu schauen, wo ein schwarzer König gekrönt wird“. Rastas sehen in Haile Selassie Jah, den lebendigen Gott, und den wiedergekehrten Messias; sein Besuch in Jamaika am 21. April 1966 wird als Grounation Day gefeiert. Dreadlocks, der sakramentale Gebrauch von Ganja und die Musik von Bob Marley trugen die Bewegung um die Welt.\n\nÄlter als der Pastafarianismus ist unter den Spaßreligionen der Diskordianismus, 1963 mit der „Principia Discordia“ von Greg Hill und Kerry Thornley unter den Pseudonymen Malaclypse der Jüngere und Omar Khayyam Ravenhurst ins Leben gerufen. Seine Göttin ist Eris, die griechische Gottheit der Zwietracht, die den Trojanischen Krieg auslöste, indem sie einen goldenen Apfel mit der Aufschrift „der Schönsten“ in eine Hochzeitsgesellschaft warf. Diskordianer lehren, dass Chaos so real ist wie Ordnung, und folgen dem Gesetz der Fünf; Robert Anton Wilsons „Illuminatus!“-Trilogie verbreitete die Lehre in den 1970er-Jahren.\n\nDie Church of the SubGenius, 1979 in Dallas von Ivan Stang und Philo Drummond gegründet, verkauft Erlösung gegen Gebühr. Ihr Prophet ist J. R. „Bob“ Dobbs, ein grinsender, pfeiferauchender Vertreter aus der Clip-Art der 1950er-Jahre, der das Streben nach „Slack“ predigt und die Ankunft außerirdischer Retter am X-Day, dem 5. Juli 1998, versprach. Als nichts geschah, erklärte die Kirche, der Kalender stehe auf dem Kopf; der Prophet Bob Dobbs wird seither jeden Juli aufs Neue erwartet.\n\nDer sanfteste dieser Glauben ist der Dudeismus. 2005 gründete der Journalist Oliver Benjamin in Thailand die Church of the Latter-Day Dude, inspiriert vom Dude – Jeffrey Lebowski, gespielt von Jeff Bridges im Film „The Big Lebowski“ der Coen-Brüder, der am 6. März 1998 in die US-Kinos kam. Der Dude ist das Vorbild einer Lehre, die Taoismus mit seiner Philosophie des Gelassenbleibens verbindet; die Kirche hat online mehr als 600.000 „dudeistische Priester“ ordiniert, von denen einige rechtsgültig Trauungen vollziehen.\n\n| Bewegung | Gegründet | Objekt der Verehrung |\n|---|---|---|\n| Rastafari | 1930er-Jahre | Haile Selassie |\n| Diskordianismus | 1963 | Eris |\n| Church of the SubGenius | 1979 | Bob Dobbs |\n| Pastafarianismus | 2005 | das Fliegende Spaghettimonster |\n| Dudeismus | 2005 | der Dude |",
+    "notesEn": "The SubGenius prophet's full name is J. R. „Bob“ Dobbs.",
+    "notesDe": "Der vollständige Name des SubGenius-Propheten lautet J. R. „Bob“ Dobbs."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1784",
+   "baseHash": "4f105e8a6717",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-260",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Founders of the Great Religious Orders",
+    "titleDe": "Gründer der großen Orden",
+    "bodyEn": "Francis of Assisi was born around 1181 as Giovanni di Pietro di Bernardone, the son of a wealthy cloth merchant in the Umbrian hill town of Assisi. After a carefree youth, a spell as a prisoner of war and a long illness, he renounced his inheritance in 1206 – stripping naked in front of the bishop and his father – and set out to live the Gospel literally: without property, preaching to whoever would listen. A handful of companions joined him, and in 1209 Pope Innocent III gave oral approval to their simple rule, the beginning of the Order of Friars Minor, better known as the Franciscans. Francis received the stigmata on Mount La Verna in 1224, died in 1226 and was canonised only two years later. His \"Canticle of the Sun\", his sermon to the birds and the first Christmas crib at Greccio have made him the most beloved of medieval saints, and in 2013 the first pope to take his name was elected.\n\nFrancis belongs to a small group of founders whose orders shaped the Church for centuries.\n\nBenedict of Nursia (c. 480–547) withdrew from Rome to a cave at Subiaco and around 529 founded the monastery of Monte Cassino. His Rule, with its balance of prayer, work and study – \"ora et labora\" – became the foundation of Western monasticism; the Benedictines are the oldest order in the West. Its most famous medieval member was Hildegard of Bingen (1098–1179), the abbess, visionary, composer and naturalist who founded the convent of Rupertsberg near Bingen and lived her whole life in the Benedictine Order.\n\nSaint Dominic (1170–1221), a Castilian canon, encountered the Cathar heresy while travelling through southern France and concluded that only learned, poor, itinerant preachers could answer it. Pope Honorius III approved his Order of Preachers on 22 December 1216; the Dominicans went on to staff the universities and, later, the Inquisition.\n\nClare of Assisi (1194–1253), a noblewoman who fled her family to follow Francis in 1212, founded the women's branch of the movement at the church of San Damiano. The Poor Clares were the first female order whose rule, written by Clare herself, received papal approval.\n\nIgnatius of Loyola (1491–1556), a Basque soldier whose leg was shattered by a cannonball at Pamplona, turned to religion during his convalescence. With six companions he founded the Society of Jesus, approved by Paul III on 27 September 1540; the Jesuits became the schoolmasters and missionaries of the Counter-Reformation.\n\n| Founder | Order | Founded |\n|---|---|---|\n| Benedict of Nursia | Benedictines | c. 529 |\n| Francis of Assisi | Franciscans | 1209 |\n| Clare of Assisi | Poor Clares | 1212 |\n| Saint Dominic | Dominicans | 1216 |\n| Ignatius of Loyola | Jesuits | 1540 |",
+    "bodyDe": "Franz von Assisi wurde um 1181 als Giovanni di Pietro di Bernardone geboren, Sohn eines wohlhabenden Tuchhändlers in der umbrischen Bergstadt Assisi. Nach einer sorglosen Jugend, einer Zeit als Kriegsgefangener und einer langen Krankheit verzichtete er 1206 auf sein Erbe – er entkleidete sich vor dem Bischof und seinem Vater – und machte sich daran, das Evangelium wörtlich zu leben: ohne Besitz, predigend vor jedem, der zuhören wollte. Eine Handvoll Gefährten schloss sich ihm an, und 1209 billigte Papst Innozenz III. mündlich ihre einfache Regel, der Beginn des Ordens der Minderbrüder, besser bekannt als Franziskaner. Franz empfing 1224 auf dem Berg La Verna die Stigmata, starb 1226 und wurde nur zwei Jahre später heiliggesprochen. Sein „Sonnengesang“, seine Vogelpredigt und die erste Weihnachtskrippe in Greccio haben ihn zum beliebtesten Heiligen des Mittelalters gemacht, und 2013 wurde der erste Papst gewählt, der seinen Namen annahm.\n\nFranz gehört zu einer kleinen Gruppe von Gründern, deren Orden die Kirche über Jahrhunderte prägten.\n\nBenedikt von Nursia (um 480–547) zog sich aus Rom in eine Höhle bei Subiaco zurück und gründete um 529 das Kloster Montecassino. Seine Regel mit ihrem Gleichgewicht aus Gebet, Arbeit und Studium – „ora et labora“ – wurde zur Grundlage des abendländischen Mönchtums; die Benediktiner sind der älteste Orden des Westens. Ihr berühmtestes Mitglied im Mittelalter war Hildegard von Bingen (1098–1179), Äbtissin, Visionärin, Komponistin und Naturkundlerin, die das Kloster Rupertsberg bei Bingen gründete und ihr ganzes Leben dem Benediktinerorden angehörte.\n\nDominikus (1170–1221), ein kastilischer Kanoniker, begegnete auf Reisen durch Südfrankreich der Häresie der Katharer und kam zu dem Schluss, dass nur gelehrte, arme, wandernde Prediger ihr etwas entgegensetzen könnten. Papst Honorius III. bestätigte am 22. Dezember 1216 seinen Predigerorden; die Dominikaner besetzten fortan die Universitäten und später die Inquisition.\n\nKlara von Assisi (1194–1253), eine Adlige, die 1212 vor ihrer Familie floh, um Franz zu folgen, gründete an der Kirche San Damiano den weiblichen Zweig der Bewegung. Die Klarissen waren der erste Frauenorden, dessen von Klara selbst verfasste Regel päpstlich bestätigt wurde.\n\nIgnatius von Loyola (1491–1556), ein baskischer Soldat, dessen Bein bei Pamplona von einer Kanonenkugel zerschmettert wurde, wandte sich während seiner Genesung der Religion zu. Mit sechs Gefährten gründete er die Gesellschaft Jesu, die Paul III. am 27. September 1540 bestätigte; die Jesuiten wurden zu den Schulmeistern und Missionaren der Gegenreformation.\n\n| Gründer | Orden | Gründung |\n|---|---|---|\n| Benedikt von Nursia | Benediktiner | um 529 |\n| Franz von Assisi | Franziskaner | 1209 |\n| Klara von Assisi | Klarissen | 1212 |\n| Dominikus | Dominikaner | 1216 |\n| Ignatius von Loyola | Jesuiten | 1540 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2120",
+   "baseHash": "1566ebcc55db",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-150",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Names Behind the Titles: Five Religious Figures and Their Birth Names",
+    "titleDe": "Die Namen hinter den Titeln: fünf religiöse Gestalten und ihre Geburtsnamen",
+    "bodyEn": "Religious leaders are rarely known by the names their parents gave them. A monk takes a religious name, a pope chooses a papal one, and a founder is remembered by the honorific his followers bestowed. Behind each of the five titles below stands a person with an ordinary birth certificate.\n\n**Tenzin Gyatso** was born Lhamo Thondup on 6 July 1935 to a farming family in the village of Taktser in Amdo, north-eastern Tibet. At the age of two he was identified as the reincarnation of the 13th Dalai Lama after correctly picking out his predecessor’s possessions, and he was enthroned in Lhasa in 1940, taking the monastic name Tenzin Gyatso, under which he still signs his books and runs an official Facebook page. The title **Dalai Lama**, from the Mongolian for “ocean” and the Tibetan for “teacher”, has been carried by the heads of the Gelug school since the sixteenth century. After the failed uprising of 1959 he fled to Dharamsala in India, received the Nobel Peace Prize in 1989 and handed political leadership of the exile government to an elected prime minister in 2011.\n\n**Jorge Mario Bergoglio**, born in Buenos Aires in 1936 to Italian immigrants, worked briefly as a chemical technician and a nightclub bouncer before entering the Jesuit order. He became Archbishop of Buenos Aires in 1998 and a cardinal in 2001. Elected on 13 March 2013, he was the first pope from the Americas, the first Jesuit, and the first to take the name **Pope Francis**, after Francis of Assisi. He died on 21 April 2025.\n\n**Karol Wojtyła**, born in Wadowice in 1920, studied in a clandestine seminary during the German occupation of Poland, worked in a quarry, and wrote plays and poetry. As Archbishop of Kraków he took part in the Second Vatican Council; on 16 October 1978 he became the first non-Italian pope in 455 years. As **John Paul II** he served for almost 27 years, until his death on 2 April 2005, survived an assassination attempt in 1981, and is credited with helping to bring down communism in his homeland. He was canonised in 2014.\n\n**Anjezë Gonxhe Bojaxhiu** was born in 1910 in Skopje, then part of the Ottoman Empire, to an Albanian family. She joined the Sisters of Loreto in Ireland at 18, took the name Teresa after Thérèse of Lisieux, and taught in Calcutta for nearly twenty years before founding the Missionaries of Charity in 1950. As **Mother Teresa** she received the Nobel Peace Prize in 1979 and was canonised in 2016.\n\n**Siddhartha Gautama** was born a prince of the Shakya clan in Lumbini, in present-day Nepal (a UNESCO World Heritage Site since 1997), probably in the 5th century BC. Sheltered from suffering by his father, he left the palace at 29, practised extreme asceticism, and finally attained enlightenment under a fig tree at Bodh Gaya. From then on he was called **Buddha**, “the awakened one”, and taught the Middle Way for some 45 years.\n\n| Birth name | Better known as | Tradition |\n|---|---|---|\n| Siddhartha Gautama | Buddha | Buddhism |\n| Lhamo Thondup / Tenzin Gyatso | Dalai Lama | Tibetan Buddhism |\n| Karol Wojtyła | John Paul II | Roman Catholicism |\n| Anjezë Gonxhe Bojaxhiu | Mother Teresa | Roman Catholicism |\n| Jorge Mario Bergoglio | Pope Francis | Roman Catholicism |\n\nThe new name marks a threshold: in every tradition it signals that the person who crossed it no longer belongs entirely to himself.",
+    "bodyDe": "Religiöse Führer sind selten unter dem Namen bekannt, den ihre Eltern ihnen gaben. Ein Mönch nimmt einen Ordensnamen an, ein Papst wählt einen Papstnamen, und ein Religionsstifter bleibt unter dem Ehrentitel in Erinnerung, den seine Anhänger ihm verliehen. Hinter jedem der fünf folgenden Titel steht ein Mensch mit einer gewöhnlichen Geburtsurkunde.\n\n**Tenzin Gyatso** wurde am 6. Juli 1935 als Lhamo Dhondrub in eine Bauernfamilie im Dorf Taktser in Amdo im Nordosten Tibets geboren. Im Alter von zwei Jahren wurde er als Wiedergeburt des 13. Dalai Lama erkannt, nachdem er die Besitztümer seines Vorgängers richtig herausgesucht hatte, und 1940 in Lhasa inthronisiert, wobei er den Mönchsnamen Tenzin Gyatso annahm, unter dem er bis heute seine Bücher zeichnet und offiziell eine Facebook-Seite unterhält. Den Titel **Dalai Lama**, aus dem mongolischen Wort für „Ozean“ und dem tibetischen für „Lehrer“, tragen die Oberhäupter der Gelug-Schule seit dem 16. Jahrhundert. Nach dem gescheiterten Aufstand von 1959 floh er nach Dharamsala in Indien, erhielt 1989 den Friedensnobelpreis und übergab 2011 die politische Führung der Exilregierung an einen gewählten Premierminister.\n\n**Jorge Mario Bergoglio**, 1936 in Buenos Aires als Sohn italienischer Einwanderer geboren, arbeitete kurz als Chemietechniker und Türsteher, bevor er in den Jesuitenorden eintrat. 1998 wurde er Erzbischof von Buenos Aires, 2001 Kardinal. Am 13. März 2013 gewählt, war er der erste Papst aus Amerika, der erste Jesuit und der erste, der sich nach Franz von Assisi **Papst Franziskus** nannte. Er starb am 21. April 2025.\n\n**Karol Wojtyła**, 1920 in Wadowice geboren, studierte während der deutschen Besatzung Polens in einem geheimen Priesterseminar, arbeitete in einem Steinbruch und schrieb Theaterstücke und Gedichte. Als Erzbischof von Krakau nahm er am Zweiten Vatikanischen Konzil teil; am 16. Oktober 1978 wurde er der erste nichtitalienische Papst seit 455 Jahren. Als **Johannes Paul II.** amtierte er fast 27 Jahre, bis zu seinem Tod am 2. April 2005, überlebte 1981 ein Attentat und gilt als Mitwirkender am Sturz des Kommunismus in seiner Heimat. 2014 wurde er heiliggesprochen.\n\n**Anjezë Gonxhe Bojaxhiu** wurde 1910 in Skopje, damals Teil des Osmanischen Reiches, in eine albanische Familie geboren. Mit 18 trat sie in Irland den Loreto-Schwestern bei, nahm nach Thérèse von Lisieux den Namen Teresa an und unterrichtete fast zwanzig Jahre in Kalkutta, bevor sie 1950 die Missionarinnen der Nächstenliebe gründete. Als **Mutter Teresa** erhielt sie 1979 den Friedensnobelpreis und wurde 2016 heiliggesprochen.\n\n**Siddhartha Gautama** wurde als Prinz des Shakya-Geschlechts in Lumbini im heutigen Nepal (seit 1997 UNESCO-Welterbe) geboren, wahrscheinlich im 5. Jahrhundert v. Chr. Von seinem Vater vor allem Leid abgeschirmt, verließ er mit 29 den Palast, übte extreme Askese und erlangte schließlich unter einem Feigenbaum in Bodh Gaya die Erleuchtung. Von da an nannte man ihn **Buddha**, „der Erwachte“, und er lehrte rund 45 Jahre lang den Mittleren Weg.\n\n| Geburtsname | Besser bekannt als | Tradition |\n|---|---|---|\n| Siddhartha Gautama | Buddha | Buddhismus |\n| Lhamo Dhondrub / Tenzin Gyatso | Dalai Lama | Tibetischer Buddhismus |\n| Karol Wojtyła | Johannes Paul II. | Römischer Katholizismus |\n| Anjezë Gonxhe Bojaxhiu | Mutter Teresa | Römischer Katholizismus |\n| Jorge Mario Bergoglio | Papst Franziskus | Römischer Katholizismus |\n\nDer neue Name markiert eine Schwelle: In jeder Tradition zeigt er an, dass der Mensch, der sie überschritten hat, nicht mehr ganz sich selbst gehört.",
+    "notesEn": "Tenzin Gyatso is the 14th Dalai Lama; „Dalai Lama“ alone is the expected answer.",
+    "notesDe": "Tenzin Gyatso ist der 14. Dalai Lama; erwartete Antwort ist schlicht „Dalai Lama“."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-006",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-016",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "On which feast, kept on 2 February, are the candles for the coming year blessed in church?",
+      "de": "An welchem Fest am 2. Februar werden in der Kirche die Kerzen für das kommende Jahr geweiht?",
+      "answerEn": "Candlemas",
+      "answerDe": "Lichtmess",
+      "timeline": {
+       "kind": "event",
+       "start": "380",
+       "end": null,
+       "precision": "decade",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The pilgrim Egeria records the feast of the Purification (Candlemas) being celebrated in Jerusalem in the 380s",
+       "labelDe": "Die Pilgerin Egeria bezeugt in den 380er-Jahren die Feier des Festes der Reinigung (Lichtmess) in Jerusalem"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Candlemas",
+       "title": "Candlemas – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Since the 1969 reform, which feast ends the Christmas season in the Catholic Church?",
+      "de": "Mit welchem Fest endet seit der Reform von 1969 die Weihnachtszeit in der katholischen Kirche?",
+      "answerEn": "Baptism of the Lord",
+      "answerDe": "Taufe des Herrn",
+      "timeline": {
+       "kind": "event",
+       "start": "1969",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The reformed Roman calendar ends Christmastide with the feast of the Baptism of the Lord",
+       "labelDe": "Der erneuerte römische Kalender lässt die Weihnachtszeit mit dem Fest Taufe des Herrn enden"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Candlemas",
+       "title": "Candlemas – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Of which city in historical Lesser Armenia was Saint Blaise the bishop?",
+      "de": "Von welcher Stadt im historischen Kleinarmenien war der heilige Blasius Bischof?",
+      "answerEn": "Sebastea",
+      "answerDe": "Sebaste",
+      "timeline": {
+       "kind": "event",
+       "start": "316",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Martyrdom of Saint Blaise, bishop of Sebastea (today Sivas, Turkey)",
+       "labelDe": "Martyrium des heiligen Blasius, Bischof von Sebaste (heute Sivas, Türkei)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Saint_Blaise",
+       "title": "Saint Blaise – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "According to legend, on what was the child choking whom Saint Blaise saved?",
+      "de": "Woran drohte der Legende nach das Kind zu ersticken, das der heilige Blasius rettete?",
+      "answerEn": "fish bone",
+      "answerDe": "Fischgräte",
+      "timeline": {
+       "kind": "event",
+       "start": "316",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Saint Blaise, said to have cured a child choking on a fish bone, dies a martyr",
+       "labelDe": "Der heilige Blasius, der ein an einer Fischgräte erstickendes Kind geheilt haben soll, stirbt als Märtyrer"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Saint_Blaise",
+       "title": "Saint Blaise – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Candlemas and St Blaise: The Church's Early February",
+    "titleDe": "Lichtmess und Blasius: Der Februar im Kirchenjahr",
+    "notesEn": "Before 1969 the liturgical Christmas season proper ended on 13 January; the card means the wider Christmas cycle, which closed at Candlemas on 2 February. Sebastea is also spelled Sebaste.",
+    "notesDe": "Vor 1969 endete die liturgische Weihnachtszeit im engeren Sinn am 13. Januar; die Karte meint den Weihnachtsfestkreis, der an Lichtmess (2. Februar) schloss. Sebaste wird auch Sebastea geschrieben.",
+    "bodyEn": "For most people Christmas is over when the tree comes down in early January. For centuries the Catholic Church saw it differently: the Christmas cycle ran for forty days, and until 1969 it officially ended in February, at the feast kept on 2 February.\n\nThat feast is Candlemas. It recalls the day when Mary and Joseph brought the infant Jesus to the Temple in Jerusalem, forty days after his birth, as the Law of Moses required, and the old man Simeon greeted the child as \"a light for revelation to the Gentiles\". The pilgrim Egeria described it being celebrated in Jerusalem in the 380s \"with the greatest honour\", and from the mid-seventh century it spread to Rome. Its names reflect its meanings: the Purification of the Blessed Virgin Mary, the Presentation of the Lord, and – because worshippers bring the candles they will use for the rest of the year to church to be blessed – Candlemas, in German Lichtmess. In farming Europe it was also a day of reckoning: servants changed masters, rents fell due, and weather sayings predicted how long winter would last.\n\nThe liturgical reform of 1969 shortened the season. Christmas time now runs only to the Sunday after Epiphany, the feast of the Baptism of the Lord, and Candlemas falls in Ordinary Time – though many churches still leave their cribs standing until 2 February.\n\nThe very next day belongs to Saint Blaise. Blaise was bishop of Sebastea in historical Lesser Armenia, today Sivas in Turkey, and died a martyr around 316. According to legend, while he was being led away to prison a desperate mother brought him her only child, who was choking on a fish bone; Blaise prayed, and the boy was cured. He became one of the Fourteen Holy Helpers and the saint invoked against diseases of the throat.\n\nOut of that story grew the Blessing of St Blaise, given on his feast day, 3 February. The priest holds two candles, blessed the day before at Candlemas and crossed in the shape of an X, against the throat of each believer and prays that God may protect them from ailments of the throat and from every other evil. The blessing is first recorded in the sixth-century medical writings of Aëtius of Amida, and it is still given in Catholic parishes across Europe and America. Eastern churches keep the saint's day on 11 February.\n\n| Date | Feast | Custom |\n|---|---|---|\n| 2 February | Candlemas | candles blessed for the year; old end of the Christmas cycle |\n| 3 February | St Blaise | Blessing of St Blaise for the throat with two crossed candles |\n| Sunday after Epiphany | Baptism of the Lord | end of the Christmas season since 1969 |\n\nThe two feasts belong together: the light of Candlemas is carried into the next morning, and the candles of one day become the blessing of the other.",
+    "bodyDe": "Für die meisten Menschen ist Weihnachten vorbei, wenn Anfang Januar der Baum abgeschmückt wird. Die katholische Kirche sah das jahrhundertelang anders: Der Weihnachtsfestkreis dauerte vierzig Tage, und bis 1969 endete er offiziell im Februar, mit dem Fest am 2. Februar.\n\nDieses Fest ist Lichtmess. Es erinnert an den Tag, an dem Maria und Josef das Jesuskind vierzig Tage nach seiner Geburt, wie es das Gesetz des Mose verlangte, in den Tempel von Jerusalem brachten und der greise Simeon das Kind als „Licht, das die Heiden erleuchtet“ begrüßte. Die Pilgerin Egeria beschrieb in den 380er-Jahren, wie es in Jerusalem „mit größter Ehre“ gefeiert wurde, und ab der Mitte des siebten Jahrhunderts verbreitete es sich in Rom. Seine Namen spiegeln seine Bedeutungen: Mariä Reinigung, Darstellung des Herrn und – weil die Gläubigen die Kerzen, die sie das ganze Jahr über verwenden, zur Weihe in die Kirche bringen – Mariä Lichtmess, englisch Candlemas. Im bäuerlichen Europa war es auch ein Stichtag: Dienstboten wechselten die Herrschaft, Pachten wurden fällig, und Wetterregeln sagten voraus, wie lange der Winter noch dauert.\n\nDie Liturgiereform von 1969 kürzte die Zeit. Die Weihnachtszeit reicht heute nur noch bis zum Sonntag nach Epiphanie, dem Fest Taufe des Herrn, und Lichtmess fällt in die Zeit im Jahreskreis – auch wenn viele Kirchen ihre Krippen bis zum 2. Februar stehen lassen.\n\nDer unmittelbar folgende Tag gehört dem heiligen Blasius. Blasius war Bischof von Sebaste im historischen Kleinarmenien, dem heutigen Sivas in der Türkei, und starb um 316 als Märtyrer. Der Legende nach brachte ihm, als er ins Gefängnis abgeführt wurde, eine verzweifelte Mutter ihr einziges Kind, das an einer Fischgräte zu ersticken drohte; Blasius betete, und der Junge wurde geheilt. Er wurde einer der Vierzehn Nothelfer und der Heilige, den man gegen Halskrankheiten anruft.\n\nAus dieser Geschichte erwuchs der Blasiussegen, der an seinem Gedenktag, dem 3. Februar, gespendet wird. Der Priester hält zwei Kerzen, am Vortag an Lichtmess geweiht und zu einem X gekreuzt, an den Hals jedes Gläubigen und bittet, Gott möge ihn vor Halskrankheit und allem Bösen bewahren. Der Segen ist erstmals in den medizinischen Schriften des Aëtios von Amida aus dem sechsten Jahrhundert bezeugt und wird bis heute in katholischen Gemeinden in Europa und Amerika gespendet. Die Ostkirchen begehen den Tag des Heiligen am 11. Februar.\n\n| Datum | Fest | Brauch |\n|---|---|---|\n| 2. Februar | Lichtmess | Kerzenweihe für das Jahr; altes Ende des Weihnachtsfestkreises |\n| 3. Februar | Blasius | Blasiussegen für den Hals mit zwei gekreuzten Kerzen |\n| Sonntag nach Epiphanie | Taufe des Herrn | Ende der Weihnachtszeit seit 1969 |\n\nDie beiden Feste gehören zusammen: Das Licht von Lichtmess wird in den nächsten Morgen getragen, und die Kerzen des einen Tages werden zum Segen des anderen."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-024",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "In which German city's cathedral is the Holy Robe, said to be Christ's seamless tunic, kept?",
+      "de": "Im Dom welcher deutschen Stadt wird der Heilige Rock aufbewahrt, der als nahtloses Gewand Christi gilt?",
+      "answerEn": "Trier",
+      "answerDe": "Trier",
+      "timeline": {
+       "kind": "event",
+       "start": "1196",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Archbishop Johann I consecrates an altar containing the Holy Robe in Trier Cathedral",
+       "labelDe": "Erzbischof Johann I. weiht im Trierer Dom einen Altar, der den Heiligen Rock enthält"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Holy_Tunic",
+       "title": "Holy Tunic – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city's cathedral does the golden Shrine of the Three Kings stand?",
+      "de": "Im Dom welcher Stadt steht der goldene Dreikönigenschrein?",
+      "answerEn": "Cologne",
+      "answerDe": "Köln",
+      "timeline": {
+       "kind": "event",
+       "start": "1164",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Archbishop Rainald of Dassel brings the relics of the Magi from Milan to Cologne",
+       "labelDe": "Erzbischof Rainald von Dassel bringt die Reliquien der Heiligen Drei Könige von Mailand nach Köln"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Shrine_of_the_Three_Kings",
+       "title": "Shrine of the Three Kings – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Belgian city does the Basilica of the Holy Blood stand?",
+      "de": "In welcher belgischen Stadt steht die Heilig-Blut-Basilika?",
+      "answerEn": "Bruges",
+      "answerDe": "Brügge",
+      "timeline": {
+       "kind": "creation",
+       "start": "1134",
+       "end": "1157",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Basilica of the Holy Blood is built on the Burg square in Bruges",
+       "labelDe": "Die Heilig-Blut-Basilika wird am Burgplatz in Brügge erbaut"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Holy_Blood",
+       "title": "Basilica of the Holy Blood – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year did three laboratories radiocarbon-date the Shroud of Turin to the Middle Ages?",
+      "de": "In welchem Jahr datierten drei Labore das Turiner Grabtuch mit der Radiokarbonmethode ins Mittelalter?",
+      "answerEn": "1988",
+      "answerDe": "1988",
+      "timeline": {
+       "kind": "event",
+       "start": "1988",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Oxford, Arizona and Zurich radiocarbon-date the Shroud of Turin to AD 1260–1390",
+       "labelDe": "Oxford, Arizona und Zürich datieren das Turiner Grabtuch per Radiokarbonmethode auf 1260–1390"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Shroud_of_Turin",
+       "title": "Shroud of Turin – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Relics of Christendom: Shroud, Robe and Golden Shrines",
+    "titleDe": "Reliquien der Christenheit: Grabtuch, Rock und goldene Schreine",
+    "notesEn": "The Royal Chapel is the Chapel of the Holy Shroud (Cappella della Sacra Sindone), attached to Turin Cathedral, the Cathedral of St John the Baptist.",
+    "notesDe": "Die Königliche Kapelle ist die Cappella della Sacra Sindone (Kapelle des Heiligen Grabtuchs) am Turiner Dom, der Kathedrale San Giovanni Battista.",
+    "bodyEn": "In the Middle Ages a relic – a body part of a saint, or an object that had touched Christ – could make a city's fortune. Pilgrims came to pray, kings came to be crowned, and cathedrals were built around the treasure. Several of the most famous relics of Christendom still draw crowds today.\n\nThe best known is the Shroud of Turin, a linen cloth about 4.4 metres long bearing the faint image of a crucified man, venerated by many as the burial cloth of Jesus. It is first documented at Lirey in France in the 1350s, passed to the House of Savoy and survived a fire at Chambéry in 1532, when molten silver from its reliquary burned holes through the folded cloth. In 1578 Duke Emmanuel Philibert brought it to his new capital, Turin. From 1694 it was kept in the Royal Chapel of the Holy Shroud, Guarino Guarini's domed chapel between the royal palace and the Cathedral of St John the Baptist; the Savoys owned it until 1983, when the former king Umberto II left it to the Holy See. In 1988 laboratories in Oxford, Arizona and Zurich radiocarbon-dated samples to AD 1260–1390, a result that is still debated but has never been overturned.\n\nGermany's oldest cathedral guards another garment. The Holy Robe of Trier is said to be the seamless tunic for which the soldiers cast lots at the crucifixion, brought to Trier, according to legend, by the Empress Helena. Its documented history begins in 1196, when Archbishop Johann I consecrated an altar containing it; it is shown to pilgrims only rarely, most recently in 1996 and 2012.\n\nIn 1164 Archbishop Rainald of Dassel carried the relics of the Three Kings from conquered Milan to Cologne. To house them the goldsmith Nicholas of Verdun began the Shrine of the Three Kings around 1180, the largest reliquary of the Middle Ages, and the Gothic cathedral of Cologne was begun in 1248 as a setting worthy of it.\n\nBruges has its own treasure: a phial said to hold drops of Christ's blood, kept in the Basilica of the Holy Blood on the Burg square, built between 1134 and 1157. Tradition says Thierry of Alsace brought it back from the Second Crusade in 1150, though it more likely came from the sack of Constantinople in 1204. Every year on Ascension Day it is carried through the city in the Procession of the Holy Blood.\n\n| Relic | Kept in | Notable date |\n|---|---|---|\n| Shroud of Turin | Turin Cathedral, Royal Chapel | radiocarbon test 1988 |\n| Holy Robe | Trier Cathedral | first recorded 1196 |\n| Relics of the Magi | Cologne Cathedral | brought from Milan 1164 |\n| Holy Blood | Basilica of the Holy Blood, Bruges | basilica built 1134–1157 |\n\nWhether genuine or not, these relics shaped the map of medieval Europe: pilgrim roads, markets and some of its greatest churches grew up around them.",
+    "bodyDe": "Im Mittelalter konnte eine Reliquie – ein Körperteil eines Heiligen oder ein Gegenstand, der Christus berührt hatte – das Glück einer Stadt begründen. Pilger kamen zum Beten, Könige zur Krönung, und um den Schatz herum wurden Kathedralen gebaut. Mehrere der berühmtesten Reliquien der Christenheit ziehen noch heute Menschenmengen an.\n\nDie bekannteste ist das Turiner Grabtuch, ein etwa 4,4 Meter langes Leinentuch mit dem blassen Abbild eines Gekreuzigten, das viele als Grabtuch Jesu verehren. Erstmals bezeugt ist es in den 1350er-Jahren in Lirey in Frankreich; es ging an das Haus Savoyen über und überstand 1532 einen Brand in Chambéry, als geschmolzenes Silber seines Reliquiars Löcher in das gefaltete Tuch brannte. 1578 brachte Herzog Emanuel Philibert es in seine neue Hauptstadt Turin. Ab 1694 wurde es in der Königlichen Kapelle des Heiligen Grabtuchs aufbewahrt, Guarino Guarinis Kuppelkapelle zwischen dem Königspalast und der Kathedrale San Giovanni Battista, der Johannes-Kathedrale; die Savoyer besaßen es bis 1983, als der frühere König Umberto II. es dem Heiligen Stuhl vermachte. 1988 datierten Labore in Oxford, Arizona und Zürich Proben mit der Radiokarbonmethode auf 1260–1390 n. Chr. – ein Ergebnis, das bis heute umstritten ist, aber nie widerlegt wurde.\n\nDer älteste Dom Deutschlands hütet ein anderes Gewand. Der Heilige Rock in Trier soll das nahtlose Gewand sein, um das die Soldaten bei der Kreuzigung würfelten, der Legende nach von Kaiserin Helena nach Trier gebracht. Seine belegte Geschichte beginnt 1196, als Erzbischof Johann I. einen Altar weihte, der ihn enthielt; Pilgern wird er nur selten gezeigt, zuletzt 1996 und 2012.\n\n1164 brachte Erzbischof Rainald von Dassel die Reliquien der Heiligen Drei Könige aus dem eroberten Mailand nach Köln. Um sie aufzunehmen, begann der Goldschmied Nikolaus von Verdun um 1180 den Dreikönigenschrein, das größte Reliquiar des Mittelalters, und der gotische Kölner Dom wurde 1248 als würdiger Rahmen dafür begonnen.\n\nBrügge besitzt einen eigenen Schatz: ein Fläschchen, das Tropfen vom Blut Christi enthalten soll, aufbewahrt in der zwischen 1134 und 1157 erbauten Heilig-Blut-Basilika am Burgplatz. Der Überlieferung nach brachte Dietrich von Elsass es 1150 vom Zweiten Kreuzzug mit, wahrscheinlicher stammt es aus der Plünderung Konstantinopels 1204. Jedes Jahr an Christi Himmelfahrt wird es in der Heilig-Blut-Prozession durch die Stadt getragen.\n\n| Reliquie | Aufbewahrt in | Wichtiges Datum |\n|---|---|---|\n| Turiner Grabtuch | Turiner Dom, Königliche Kapelle | Radiokarbontest 1988 |\n| Heiliger Rock | Trierer Dom | erstmals bezeugt 1196 |\n| Reliquien der Drei Könige | Kölner Dom | 1164 aus Mailand gebracht |\n| Heiliges Blut | Heilig-Blut-Basilika, Brügge | Basilika erbaut 1134–1157 |\n\nOb echt oder nicht: Diese Reliquien prägten die Landkarte des mittelalterlichen Europa – Pilgerwege, Märkte und einige seiner größten Kirchen entstanden um sie herum."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-326",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "With which Italian journalist did John Paul II create the book \"Crossing the Threshold of Hope\"?",
+      "de": "Mit welchem italienischen Journalisten entstand das Buch „Die Schwelle der Hoffnung überschreiten“ von Johannes Paul II.?",
+      "answerEn": "Vittorio Messori",
+      "answerDe": "Vittorio Messori",
+      "timeline": {
+       "kind": "creation",
+       "start": "1994",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Crossing the Threshold of Hope, John Paul II's answers to Vittorio Messori's questions, is published",
+       "labelDe": "„Die Schwelle der Hoffnung überschreiten“, Johannes Pauls II. Antworten auf Vittorio Messoris Fragen, erscheint"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Crossing_the_Threshold_of_Hope",
+       "title": "Crossing the Threshold of Hope – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the title of John Paul II's first encyclical, published in 1979?",
+      "de": "Wie lautet der Titel der ersten Enzyklika von Johannes Paul II., erschienen 1979?",
+      "answerEn": "Redemptor hominis",
+      "answerDe": "Redemptor hominis",
+      "timeline": {
+       "kind": "event",
+       "start": "1979-03-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "John Paul II promulgates his first encyclical, Redemptor hominis",
+       "labelDe": "Johannes Paul II. veröffentlicht seine erste Enzyklika, Redemptor hominis"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Redemptor_hominis",
+       "title": "Redemptor hominis – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the title of Pope Francis's 2015 encyclical on care for our common home?",
+      "de": "Wie lautet der Titel der Enzyklika von Papst Franziskus aus dem Jahr 2015 über die Sorge für das gemeinsame Haus?",
+      "answerEn": "Laudato si'",
+      "answerDe": "Laudato si'",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-06-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Pope Francis's encyclical Laudato si' on the environment is published",
+       "labelDe": "Die Umwelt-Enzyklika Laudato si' von Papst Franziskus wird veröffentlicht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Laudato_si%27",
+       "title": "Laudato si' – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Under which title did Benedict XVI publish his three books on the life of Jesus between 2007 and 2012?",
+      "de": "Unter welchem Titel veröffentlichte Benedikt XVI. zwischen 2007 und 2012 seine drei Bücher über das Leben Jesu?",
+      "answerEn": "Jesus of Nazareth",
+      "answerDe": "Jesus von Nazareth",
+      "timeline": {
+       "kind": "creation",
+       "start": "2007",
+       "end": "2012",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Benedict XVI publishes his three books Jesus of Nazareth",
+       "labelDe": "Benedikt XVI. veröffentlicht seine drei Bücher Jesus von Nazareth"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Jesus_of_Nazareth_(book)",
+       "title": "Jesus of Nazareth (book) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Popes on the Bookshelf",
+    "titleDe": "Päpste im Bücherregal",
+    "notesEn": "Christianity Today (December 1994) reports that Alfred A. Knopf paid $8.5 million for the US rights to Crossing the Threshold of Hope; the card rounds to eight million.",
+    "notesDe": "Christianity Today (Dezember 1994) berichtet, Alfred A. Knopf habe 8,5 Millionen Dollar für die US-Rechte an „Die Schwelle der Hoffnung überschreiten“ gezahlt; die Karte rundet auf acht Millionen.",
+    "bodyEn": "Popes have always written – letters, decrees, sermons – but in the age of mass publishing some of them have also become bestselling authors, with the advances and print runs to match.\n\nThe most spectacular case is Pope John Paul II. In 1993 the Italian journalist Vittorio Messori was meant to interview him live on television for the fifteenth anniversary of his election. The broadcast was cancelled, but the pope later sent written answers to Messori's questions, and they became the book Crossing the Threshold of Hope, published in 1994 by Mondadori in Italy and by Alfred A. Knopf in the United States. Knopf was reported to have paid about eight million US dollars – 8.5 million, by Christianity Today's account – for the American rights, a record for a single volume at the time. The book was translated into some forty languages and had sold several million copies by 1998. Karol Wojtyła had been a writer long before: as a young man he wrote poetry and plays, among them The Jeweller's Shop.\n\nA pope's most authoritative writings, though, are his encyclicals, circular letters to the whole Church known by their opening Latin words. John Paul II's first, Redemptor hominis (\"The Redeemer of Man\"), appeared on 4 March 1979, less than five months after his election, and laid out the programme of his pontificate. Pope Francis's most widely read encyclical, Laudato si' (\"Praise be to you\"), published on 18 June 2015, borrowed its title from the Canticle of the Sun of Francis of Assisi and addressed the environment and climate change under the subtitle \"on care for our common home\".\n\nPope Benedict XVI, a professor of theology before he became a bishop, was the most prolific scholar of the modern popes. While in office he completed a three-part work on the life of Jesus, Jesus of Nazareth: the first book, covering Jesus's baptism to the Transfiguration, appeared in 2007, the second, on Holy Week, in 2011, and the third, on the infancy narratives, in 2012. He insisted it was not an act of the teaching office but a personal search, open to criticism like any other book.\n\n| Pope | Work | Year |\n|---|---|---|\n| John Paul II | Redemptor hominis | 1979 |\n| John Paul II (with Vittorio Messori) | Crossing the Threshold of Hope | 1994 |\n| Benedict XVI | Jesus of Nazareth | 2007–2012 |\n| Francis | Laudato si' | 2015 |\n\nFrom encyclicals to interview books, the papacy has learned to speak not only from the balcony of St Peter's but from the bestseller list.",
+    "bodyDe": "Päpste haben schon immer geschrieben – Briefe, Dekrete, Predigten –, doch im Zeitalter der Massenverlage sind einige von ihnen auch zu Bestsellerautoren geworden, mit entsprechenden Vorschüssen und Auflagen.\n\nDer spektakulärste Fall ist Papst Johannes Paul II. 1993 sollte ihn der italienische Journalist Vittorio Messori zum fünfzehnten Jahrestag seiner Wahl live im Fernsehen interviewen. Die Sendung fiel aus, doch der Papst schickte Messori später schriftliche Antworten auf seine Fragen, und daraus wurde das Buch „Die Schwelle der Hoffnung überschreiten“, 1994 in Italien bei Mondadori und in den USA bei Alfred A. Knopf erschienen. Knopf soll für die amerikanischen Rechte rund acht Millionen US-Dollar gezahlt haben – nach Angaben von Christianity Today 8,5 Millionen –, damals ein Rekord für einen einzelnen Band. Das Buch wurde in rund vierzig Sprachen übersetzt und hatte sich bis 1998 mehrere Millionen Mal verkauft. Karol Wojtyła war schon lange zuvor Schriftsteller gewesen: Als junger Mann schrieb er Gedichte und Theaterstücke, darunter „Der Laden des Goldschmieds“.\n\nDie verbindlichsten Schriften eines Papstes sind jedoch seine Enzykliken, Rundschreiben an die ganze Kirche, die nach ihren lateinischen Anfangsworten benannt werden. Die erste Johannes Pauls II., Redemptor hominis („Der Erlöser des Menschen“), erschien am 4. März 1979, weniger als fünf Monate nach seiner Wahl, und entwarf das Programm seines Pontifikats. Die meistgelesene Enzyklika von Papst Franziskus, Laudato si' („Gelobt seist du“), veröffentlicht am 18. Juni 2015, entlieh ihren Titel dem Sonnengesang des Franz von Assisi und widmete sich unter dem Untertitel „über die Sorge für das gemeinsame Haus“ der Umwelt und dem Klimawandel.\n\nPapst Benedikt XVI., vor seiner Bischofsweihe Theologieprofessor, war der produktivste Gelehrte unter den modernen Päpsten. Während seiner Amtszeit vollendete er ein dreiteiliges Werk über das Leben Jesu, Jesus von Nazareth: Das erste Buch, von der Taufe Jesu bis zur Verklärung, erschien 2007, das zweite, über die Karwoche, 2011 und das dritte, über die Kindheitsgeschichten, 2012. Er betonte, es sei kein Akt des Lehramts, sondern eine persönliche Suche, offen für Kritik wie jedes andere Buch.\n\n| Papst | Werk | Jahr |\n|---|---|---|\n| Johannes Paul II. | Redemptor hominis | 1979 |\n| Johannes Paul II. (mit Vittorio Messori) | Die Schwelle der Hoffnung überschreiten | 1994 |\n| Benedikt XVI. | Jesus von Nazareth | 2007–2012 |\n| Franziskus | Laudato si' | 2015 |\n\nVon Enzykliken bis zu Interviewbüchern hat das Papsttum gelernt, nicht nur vom Balkon des Petersdoms, sondern auch von der Bestsellerliste aus zu sprechen."
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-214",
+   "category": 1,
+   "domain": "belief",
+   "sub": "religion",
+   "why": "Its answer \"Ramadan\" repeats fact f06336 in a1268 (an article may not hold the same answer twice). Alias it to f06336 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

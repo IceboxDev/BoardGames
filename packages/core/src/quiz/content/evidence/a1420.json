@@ -1,0 +1,476 @@
+{
+ "article": "a1420",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(1978_TV_series)",
+   "title": "Battlestar Galactica (1978 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:10.384Z",
+   "snapshot": "7c078a5f9a7c216f2e12484a8612f5bb8dfc091f0a18e2fbd8f9a3520ac6711b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Q_Who",
+   "title": "Q Who – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:11.426Z",
+   "snapshot": "6a524507ffe2656a7021bd9187705d1b026e71d48a686b6e9d316d3f01f95b0f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dalek",
+   "title": "Dalek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:12.549Z",
+   "snapshot": "81edf00294b5764898b968355457df729adf62a6a27a27c520deca9bfa17695b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Terminator_3:_Rise_of_the_Machines",
+   "title": "Terminator 3: Rise of the Machines – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:13.312Z",
+   "snapshot": "6dc5af7234855b712492ff6d7ba380e23ae1d6bacf5f35030a0053fec4a2bf2f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Do_Androids_Dream_of_Electric_Sheep%3F",
+   "title": "Do Androids Dream of Electric Sheep? – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:14.445Z",
+   "snapshot": "56ff29c1e7e46297c875bb83f647f5c2d4a17fe1a7b8e6d51650a2c537062a89"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Blade_Runner",
+   "title": "Blade Runner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:12.744Z",
+   "snapshot": "e1753a8fc2b4051f2cb2ad9f45cd6375b44decb7d0ba3f575e30e6dd125b2fe6"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Rutger_Hauer",
+   "title": "Rutger Hauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:13.542Z",
+   "snapshot": "3de6c9b482980eb620c68ae6f552467027c8b4d424aad3a4be67c90d3fe575ad"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:10.291Z",
+   "snapshot": "b140e6e071cb9743ddd9040b96e6a49e620835d280a5ef32d1dd9761a0950363"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Blade_Runner",
+   "title": "Blade Runner – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:52.198Z",
+   "snapshot": "6b949f5495f0c4ea5b7e71ea713882bd3ae5a5ad7d73f97fb7710749a5381760"
+  },
+  "s10": {
+   "url": "https://www.rottentomatoes.com/m/blade_runner",
+   "title": "Blade Runner | Rotten Tomatoes",
+   "publisher": "Rotten Tomatoes",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:51.352Z",
+   "snapshot": "13110ac2330594fa8d74d15b91ab7ec2e5464663d3293d36d08a58152f8586a7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cylons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Borg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Daleks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Skynet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Replicants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blade Runner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-210"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rutger Hauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-378"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f07096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The series follows a group of humans fleeing the destruction of their homeworlds aboard the titular spacecraft, searching for a new home while being pursued by the Cylons, a fearsome society of robots intent on exterminating all humans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.890Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cylons” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f07097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Q Who\" marked the first appearance of the Borg, who were designed by Hurley and originally intended to appear in the first season episode \"The Neutral Zone\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.890Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Borg” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f07098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Daleks ( , DAH-leks) are a fictional extraterrestrial race who appear in the British science fiction television programme Doctor Who.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.890Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daleks” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f07099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In its plot, the malevolent artificial intelligence Skynet sends a T-X (Loken)—a highly advanced Terminator—back in time to ensure the rise of machines by killing top members of the future human resistance as John Connor's (Stahl) location is unknown.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.890Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skynet” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Replicants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Replicants”, “Replikanten”, “Репликанты”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f11280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blade Runner [bleɪd ˌrʌnɚ] ist ein am 25.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.890Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blade Runner” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:22.890Z",
+   "target": "f11281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rutger Hauer wuchs in Amsterdam als Sohn der Schauspiellehrer Arend und Teunke Hauer auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.890Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rutger Hauer” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:33:56Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "synthetic humans known as replicants are bio-engineered by the powerful Tyrell Corporation to work on space colonies",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:33:59Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "His assignment: eliminate four escaped Replicants from the colonies who have returned to Earth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:07.952Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "synthetic humans known as replicants are bio-engineered by the powerful Tyrell Corporation to work on space colonies",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:07.952Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "His assignment: eliminate four escaped Replicants from the colonies who have returned to Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:07.952Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The film is set in a dystopian future Los Angeles of 2019, in which synthetic humans known as replicants are bio-engineered by the powerful Tyrell Corporation to work on space colonies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Replicants” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:07.952Z",
+   "target": "f07100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "His assignment: eliminate four escaped Replicants from the colonies who have returned to Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:07.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Replicants” is on the snapshot of s10"
+  }
+ ]
+}

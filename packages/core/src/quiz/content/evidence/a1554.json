@@ -1,0 +1,289 @@
+{
+ "article": "a1554",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln",
+   "title": "Assassination of Abraham Lincoln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:01.060Z",
+   "snapshot": "f2e0bb20495f63f27e5223fef211fd7cd4d0396651692fc8a6662b3b5cb2b5ad"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_James_A._Garfield",
+   "title": "Assassination of James A. Garfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:02.032Z",
+   "snapshot": "58223906218ef927cb5d11a84c9715b27fcfa53890ab425eb3aadceda8e219b6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_William_McKinley",
+   "title": "Assassination of William McKinley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:53.432Z",
+   "snapshot": "98e60467694f0b4afead4ea2602cdc01071cdfeddad74b9825b046b46167eca7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Warren_Commission",
+   "title": "Warren Commission – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:03.013Z",
+   "snapshot": "e1bad5231fddf1d51b726a41cb4d05ee607ba44c7593df92ad87d629c9da8a2c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1968",
+   "title": "Civil Rights Act of 1968 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:04.093Z",
+   "snapshot": "48911234706f6ab1f4296a9e9ebc717d16c5bf43b02c09bdc9478aa64ab0d9ff"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/National_Civil_Rights_Museum",
+   "title": "National Civil Rights Museum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:04.964Z",
+   "snapshot": "aa3c7a97b030d7824eb82ef49992099f20c72b7c60100244f50142f6a2517b6b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James A. Garfield",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "William McKinley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John F. Kennedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Martin Luther King",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Martin Luther King",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-183"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:43.392Z",
+   "target": "f07766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On April 14, 1865, Abraham Lincoln, the 16th president of the United States, was shot in the head while attending a play at Ford's Theatre in Washington, D.C..",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Lincoln” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:43.392Z",
+   "target": "f07767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On July 2, 1881, at 9:30 AM, James A. Garfield, the 20th president of the United States, was shot at the Baltimore and Potomac Railroad Station in Washington, D.C., less than four months into his term as president.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James A. Garfield” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:43.392Z",
+   "target": "f07768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "William McKinley, the 25th president of the United States, was shot on the grounds of the Pan-American Exposition in the Temple of Music in Buffalo, New York, on September 6, 1901, six months into his second term.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William McKinley” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:43.392Z",
+   "target": "f07769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johnson through Executive Order 11130 on November 29, 1963, to investigate the assassination of United States president John F. Kennedy that had taken place on November 22, 1963.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John F. Kennedy” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:43.392Z",
+   "target": "f07770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Another impetus for the law's passage came from the 1966 Chicago Open Housing Movement, led by Martin Luther King Jr., James Bevel, and Al Raby.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Luther King” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:43.392Z",
+   "target": "f07770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The museum is built around the former Lorraine Motel, the site of the assassination of Martin Luther King Jr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Luther King” is on the snapshot of s6"
+  }
+ ]
+}

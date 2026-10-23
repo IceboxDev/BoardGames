@@ -1,0 +1,814 @@
+{
+ "article": "a0658",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Schengen_Area",
+   "title": "Schengen Area – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:20.105Z",
+   "snapshot": "7fd0f4dedd1cde659ec36c19e5c19d01d63806318f1e992d74c05e6954390d26"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Deutschland",
+   "title": "Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:17.524Z",
+   "snapshot": "7b7fb33669a16ffd6b093e38aee43006cfa6caf803d81f98e8ec5aa36db32446"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Geography_of_Austria",
+   "title": "Geography of Austria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:21.196Z",
+   "snapshot": "c201fdcadbd7e0144fb160884f9f4b94ba3bf604559c68b0b309b8eaa08f4075"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Borders_of_Poland",
+   "title": "Borders of Poland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:22.065Z",
+   "snapshot": "52e7922dca5abca1fc49782b0432c2b86c540b72b3bdb1f6672a1f7a72bc3a61"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Geography_of_Switzerland",
+   "title": "Geography of Switzerland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:23.098Z",
+   "snapshot": "d7f89114e3883fc6a99a70f48e0cfd7587d95c5ca046dcc042aab3647f276a18"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Russland",
+   "title": "Russland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:20.990Z",
+   "snapshot": "4dd23ac3df4def96555f50604aab7763f3c57eeed9874daf57fe07fc0f2c3e9c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Bayern",
+   "title": "Bayern",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:21.567Z",
+   "snapshot": "30108ec4de94e00dc3c16297ac6ff2cf487fce786f67cd3f94b127446dcf2a8d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Constance",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:24.114Z",
+   "snapshot": "fdf1530efe5ec582b4d29edf4726de192840ac736d76518ffdcfeaf86b025478"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Germany",
+   "title": "Germany – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:57.545Z",
+   "snapshot": "67fd89e6eedaea59041afb0b1169ce6d3eb76867c2346efb8968091db9e53c88"
+  },
+  "s10": {
+   "url": "https://www.worldatlas.com/articles/what-countries-border-germany.html",
+   "title": "Which Countries Border Germany? – WorldAtlas",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:56.196Z",
+   "snapshot": "cc79261689a69b4fec12bdc1657ec70c429ece4423b11fd1c8e8789afc43382c"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Austria",
+   "title": "Austria – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:58.576Z",
+   "snapshot": "58bcf21f169b523906a219932d4da53e2be1e9efc762feb84358d31bc5c5b56b"
+  },
+  "s12": {
+   "url": "https://www.worldatlas.com/maps/austria",
+   "title": "Austria Maps & Facts – WorldAtlas",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:57.738Z",
+   "snapshot": "0f69d889b877dc950c2df36c2b73bc1f810ffc3127510e332cac794482c841f7"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Poland",
+   "title": "Poland – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:59.583Z",
+   "snapshot": "192512527c97bf094cdbfb6d46c6bd9b066b006080a9dc63e3fb01c519d3f746"
+  },
+  "s14": {
+   "url": "https://www.worldatlas.com/maps/poland",
+   "title": "Poland Maps & Facts – WorldAtlas",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:58.765Z",
+   "snapshot": "4864d3710a752009ca1ed928dfa644c6c0878f136cd1f0ce227cf32f746f1f93"
+  },
+  "s15": {
+   "url": "https://en.wikipedia.org/wiki/Switzerland",
+   "title": "Switzerland – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:00.575Z",
+   "snapshot": "39f301657117a668d895d37501ee29bd0bdf0a652652ef0ecd38bada042cb84b"
+  },
+  "s16": {
+   "url": "https://www.bayern.de/der-freistaat/the-free-state-of-bavaria/",
+   "title": "The Free State of Bavaria – bayern.de",
+   "publisher": "Bavarian State Chancellery",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:58.714Z",
+   "snapshot": "e0893340d40857987c8445996be4769d33522261436e2ddd895c163ff9654826"
+  },
+  "s17": {
+   "url": "https://en.wikipedia.org/wiki/Bavaria",
+   "title": "Bavaria – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:01.591Z",
+   "snapshot": "e63c9288302d92cbfe6dd698bbe2c75d5d719a7d2ced172ec89e2b185644a4ab"
+  },
+  "s18": {
+   "url": "https://www.deutschland.de/en/topic/politics/germany-nine-neighbours-facts",
+   "title": "Germany and its neighbours: facts about the country’s nine neighbours",
+   "publisher": "deutschland.de (Frankfurter Societäts-Medien on behalf of the German Federal Foreign Office)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:58.888Z",
+   "snapshot": "cdd795bdf6d9b91461732c84bd7be749d100f9a4dde0053eefd5fac2a665aaf5"
+  },
+  "s19": {
+   "url": "https://www.eda.admin.ch/aboutswitzerland/en/home/umwelt/geografie.html",
+   "title": "Geography – Facts and Figures (aboutswitzerland)",
+   "publisher": "Swiss Federal Department of Foreign Affairs (Presence Switzerland)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:59.549Z",
+   "snapshot": "45af0e8e124f92e8e628b16d58414a3803ac04aee2b9bb3310c4b5634a0be2fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "9 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "9 Länder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-169"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "8 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "7 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "5 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Russland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-027"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "3 ausländische Staaten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript tp-219"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "9 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“9 countries”, “9 Länder”, “9 стран”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "9 Länder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“9 Länder”, “9 countries”, “9 стран”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f03287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "8 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“8 countries”, “8 Länder”, “8 стран”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f03288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "7 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“7 countries”, “7 Länder”, “7 стран”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f03289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "5 countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“5 countries”, “5 Länder”, “5 стран”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f11897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Russland (russisch  Rossija [rɐˈsʲijə]), amtlich Russische Föderation (russisch  Rossijskaja Federazija „Russländische Föderation“), ist ein Bundesstaat in Osteuropa und Nordasien, mit der Exklave Kaliningrad in Mitteleuropa.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russland” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:21.911Z",
+   "target": "f11898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "3 ausländische Staaten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“3 ausländische Staaten”, “3 foreign countries”, “3 иностранных государства”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:29:24Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Germany borders Denmark to the north; Poland and the Czech Republic to the east; Austria and Switzerland to the south; and France, Luxembourg, Belgium, and the Netherlands to the west.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:30:14Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Germany has the second-highest number of bordering countries in Europe, with its nine bordering countries only being exceeded by Russia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:30:24Z",
+   "target": "f03287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Austria is bordered by Germany to the northwest, the Czech Republic to the north, Slovakia to the northeast, Hungary to the east, Slovenia and Italy to the south, and Switzerland and Liechtenste",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:30:34Z",
+   "target": "f03287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Austria is bordered by 8 countries: by Czech Republic in the north; by Slovakia in the northeast; by Hungary in the east; by Slovenia in the south, by Italy in the southwest; by Switzerland and Liechtenstein in the west and by Germany in the northwest.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:30:39Z",
+   "target": "f03288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "borders Lithuania and Russia to the northeast; Belarus and Ukraine to the east; Slovakia and the Czech Republic to the south; and Germany to the west.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:30:45Z",
+   "target": "f03288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Poland is bordered by 7 nations: by Germany in the west; the Czech Republic in the southwest; Slovakia in the south; Ukraine in the southeast; Belarus in the east; Lithuania and Russia in the northeast.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:30:49Z",
+   "target": "f03289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "It is bordered by Germany to the north, France to the west, Austria and Liechtenstein to the east, and Italy to the south.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:30:58Z",
+   "target": "f11898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "the Czech Republic in the East as well as Austria and – along Lake Constance – Switzerland in the South",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:31:09Z",
+   "target": "f11898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s17",
+     "quote": "Bavaria shares international borders with Austria (Salzburg, Tyrol, Upper Austria and Vorarlberg) and the Czech Republic (Karlovy Vary, Plzeň and South Bohemian Regions), as well as with Switzerland (across Lake Constance to the Canton of St. Gallen).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:31:30Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s18",
+     "quote": "Germany borders nine countries along a total distance of around 3,750 kilometres.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T07:31:35Z",
+   "target": "f03289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s19",
+     "quote": "It shares its 1,935km-long border with five countries: Italy, France, Germany, Austria and the Principality of Liechtenstein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Germany borders Denmark to the north; Poland and the Czech Republic to the east; Austria and Switzerland to the south; and France, Luxembourg, Belgium, and the Netherlands to the west.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Germany has the second-highest number of bordering countries in Europe, with its nine bordering countries only being exceeded by Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Austria is bordered by Germany to the northwest, the Czech Republic to the north, Slovakia to the northeast, Hungary to the east, Slovenia and Italy to the south, and Switzerland and Liechtenste",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "borders Lithuania and Russia to the northeast; Belarus and Ukraine to the east; Slovakia and the Czech Republic to the south; and Germany to the west.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s13"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "It is bordered by Germany to the north, France to the west, Austria and Liechtenstein to the east, and Italy to the south.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s15"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f11898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "the Czech Republic in the East as well as Austria and – along Lake Constance – Switzerland in the South",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s16"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f11898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s17",
+     "quote": "Bavaria shares international borders with Austria (Salzburg, Tyrol, Upper Austria and Vorarlberg) and the Czech Republic (Karlovy Vary, Plzeň and South Bohemian Regions), as well as with Switzerland (across Lake Constance to the Canton of St. Gallen).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s17"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s18",
+     "quote": "Germany borders nine countries along a total distance of around 3,750 kilometres.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s18"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:50.336Z",
+   "target": "f03289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s19",
+     "quote": "It shares its 1,935km-long border with five countries: Italy, France, Germany, Austria and the Principality of Liechtenstein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:50.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s19"
+  }
+ ]
+}

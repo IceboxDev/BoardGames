@@ -1,0 +1,540 @@
+{
+ "article": "a1944",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Samuel_Morse",
+   "title": "Samuel Morse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:13.658Z",
+   "snapshot": "6edbe4297460dc2832e18d3984689126052c7cdb5901cd0325f5fa4a387334a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_Graham_Bell",
+   "title": "Alexander Graham Bell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:25.604Z",
+   "snapshot": "836ef9c3177cdb2548eb678c74985a47ed7e1c0b35c2172d87cc62b9292f3df3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Invention_of_the_telephone",
+   "title": "Invention of the telephone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:03.531Z",
+   "snapshot": "1b210a41d1df20739a4e94ceaee20ec5c1ab730f8b02024d5d05eca44aa699fa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89mile_Baudot",
+   "title": "Émile Baudot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:14.559Z",
+   "snapshot": "17764b47b60ec247323d60453e197b86ff87935a3ea9b10fb112c84647a98248"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Baudot_code",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:15.684Z",
+   "snapshot": "1c574ce14d196e45637097c1eed11548bc780eeb19d57423fd289dd12ac4bd4c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_Vail",
+   "title": "Alfred Vail – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:16.576Z",
+   "snapshot": "e4acbdc8ed7950e3f2f42a709c6f5349be3374e346cbff1cca8c860cdd8c0521"
+  },
+  "s7": {
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/samuel-f-b-morse/",
+   "title": "Scientist of the Day: Samuel F. B. Morse",
+   "publisher": "Linda Hall Library",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:33.865Z",
+   "snapshot": "ad65a04b2b836debec4b09469de840d1f407a9179139b88e51dee79b2624ea50"
+  },
+  "s8": {
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/alexander-graham-bell/",
+   "title": "Scientist of the Day: Alexander Graham Bell",
+   "publisher": "Linda Hall Library",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:35.069Z",
+   "snapshot": "1c6b1cb4ed48bc57705d44e86d63264f5534100e2543e7a73a48d4232c12a716"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Samuel Morse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexander Graham Bell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexander Graham Bell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-131"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Émile Baudot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Émile Baudot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f24544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "baud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f24545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alfred Vail",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f09716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The original patent went to the Breese side of the family after the death of Samuel Morse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samuel Morse” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexander Graham Bell ( ; born Alexander Bell; March 3, 1847 – August 2, 1922) was a  Scottish-born Canadian-American inventor, scientist, and engineer who is credited with patenting the first practical telephone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander Graham Bell” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Notable people included in this process were Antonio Meucci, Philipp Reis, Elisha Gray and Alexander Graham Bell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander Graham Bell” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f09719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jean-Maurice-Émile Baudot (French: [emil bodo]; 11 September 1845 – 28 March 1903) was a French telegraph engineer and inventor of the first means of digital communication Baudot code.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Émile Baudot” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f09719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Baudot code (French pronunciation: [bodo]) is an early character encoding for telegraphy invented by Émile Baudot in the 1870s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Émile Baudot” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f24544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The baud unit was named after him.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “baud” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:51.102Z",
+   "target": "f24545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alfred Vail and Samuel Morse collaborated in the invention of Morse code.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.102Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Vail” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:30:59Z",
+   "target": "f09716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was a co-developer and the namesake of Morse code in 1837 and helped to develop the commercial use of telegraphy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Superlative is soft: Cooke–Wheatstone needle telegraphs ran from 1837; Morse's was the recording (writing) telegraph with its own code."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:31:02Z",
+   "target": "f09716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Morse decided on the spot to devote himself to inventing a practical telegraph.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: 'The really clever part of Morse's system was the code' and the 1844 paper tape impressed with the Morse code message (a recording telegraph)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:31:03Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canadian-American inventor, scientist, and engineer who is credited with patenting the first practical telephone .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Priority disputes (Meucci, Gray) exist; the wording asks who is credited."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:31:06Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "when Bell’s lawyer submitted Bell’s U.S. patent application on Feb. 14, 1876, he beat Gray to the punch by only a few hours.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Page also notes the Gray accusations 'were never successful in court'."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:39:11Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canadian-American inventor, scientist, and engineer who is credited with patenting the first practical telephone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supersedes e17 (quote had a stray space). Priority disputes (Meucci, Gray) exist; the wording asks who is credited."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:40.914Z",
+   "target": "f09716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was a co-developer and the namesake of Morse code in 1837 and helped to develop the commercial use of telegraphy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:40.914Z",
+   "target": "f09716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Morse decided on the spot to devote himself to inventing a practical telegraph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:40.914Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "when Bell’s lawyer submitted Bell’s U.S. patent application on Feb. 14, 1876, he beat Gray to the punch by only a few hours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:40.914Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canadian-American inventor, scientist, and engineer who is credited with patenting the first practical telephone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:40.914Z",
+   "target": "f09718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Telephone transmitter used by Alexander Graham Bell for demonstration at the 1876 Philadelphia Centennial Exposition, National Museum of American History, Smithsonian Institution (americanhistory.si.edu)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alexander Graham Bell” is on the snapshot of s8"
+  }
+ ]
+}

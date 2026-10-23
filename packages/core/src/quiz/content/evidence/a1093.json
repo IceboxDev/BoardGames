@@ -1,0 +1,249 @@
+{
+ "article": "a1093",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/American_Pie_(song)",
+   "title": "American Pie (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:20.149Z",
+   "snapshot": "8b305e11fad97f60fccf92d5586b00490a211d8d6ea65613b35a3a33aa5c1a47"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Electric_Ladyland",
+   "title": "Electric Ladyland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:21.186Z",
+   "snapshot": "738d35f74d7b69dc6e4c7acc5e6320ddf7ac5008d0033eb1ef5484fa964361c8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Family_(The_Family_album)",
+   "title": "The Family (The Family album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:22.106Z",
+   "snapshot": "25c385c86f48294722227d56c3fcd00e59c0ec1b8beab777a6c3ea14e1a7b3b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/I_Will_Always_Love_You",
+   "title": "I Will Always Love You – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:23.151Z",
+   "snapshot": "5ac8955c90c7de602d12db36c099362a93d087f0e9c9f2b5f40c335b7e914ed2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/American_IV:_The_Man_Comes_Around",
+   "title": "American IV: The Man Comes Around – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:24.141Z",
+   "snapshot": "a69d8840cef1dd64ae9e75e2796b21aa0cce66d144ce27640ce92b592361c337"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nothing_Compares_2_U",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:25.156Z",
+   "snapshot": "444b56d36ccdc0aef85ac6e488b3303ff8fd0ab8a314168c9db90cb174ba47ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "American Pie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "All Along the Watchtower",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nothing Compares 2 U",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "I Will Always Love You",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hurt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:31.738Z",
+   "target": "f05461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"American Pie\" is a song by the American singer and songwriter Don McLean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “American Pie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:31.738Z",
+   "target": "f05462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Electric Ladyland includes a cover of Bob Dylan's \"All Along the Watchtower\", which became the Experience's best-selling single, reaching number six in the UK and number 20 in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “All Along the Watchtower” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:31.738Z",
+   "target": "f05463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The album features the first appearance of the ballad \"Nothing Compares 2 U\", which would become more widely known five years later when a cover by Sinéad O'Connor was released as a single.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nothing Compares 2 U” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:31.738Z",
+   "target": "f05464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"I Will Always Love You\" is a song written and originally recorded in 1973 by American singer-songwriter Dolly Parton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I Will Always Love You” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:31.738Z",
+   "target": "f05465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The video for \"Hurt,\" a song written by Trent Reznor of Nine Inch Nails and originally released in 1994, was nominated in seven categories at the 2003 MTV Video Music Awards and won the award for Best Cinematography.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hurt” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,380 @@
+{
+ "article": "a1619",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/William_Thompson_(viticulturist)",
+   "title": "William Thompson (viticulturist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:13.537Z",
+   "snapshot": "77054549bafcf963fb8df3ccc779e0e19fdc63959f463546c407e0d8f775ad66"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/currant",
+   "title": "currant – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/raisin",
+   "title": "raisin – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Rosine",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:10.843Z",
+   "snapshot": "5317bc12177f40ceef8abc90578646e61d8d0b9f3282703d8f060faab34ee207"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dried_cranberry",
+   "title": "Dried cranberry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:14.534Z",
+   "snapshot": "7b2b62f0fc9c7502a226fcb0dcc6240342b581f4e3658d75eb1cc19b258b3e72"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Goji",
+   "title": "Goji – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:15.555Z",
+   "snapshot": "eb04e561f3d5c710ffb09fa5903e087e743be900e898cf4de8db102c1441fc99"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=currant",
+   "title": "American Heritage Dictionary Entry: currant",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:11.202Z",
+   "snapshot": "beec4b462b89baa28f52dfccee203c30f5e305fbe634b6f2d79c99aa7ef1a0d1"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Zante_currant",
+   "title": "Zante currant - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:11.335Z",
+   "snapshot": "33066de56b68e136d14146580eadde87371d892ef10406bb67d7259043547ecd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sultana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "currant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "raisin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rosine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cranberry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "goji berry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:52.056Z",
+   "target": "f08091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "William Thompson (26 November 1816 - 19 October 1897) was an English-born viticulturist, credited with the introduction and popularization of the Sultana grape in the Central Valley of California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sultana” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:52.056Z",
+   "target": "f08093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rosinen (Plural von Rosine; bei Luther noch Rosin, über mittelhochdeutsch rosīn und mittelniederländisch/mittelniederdeutsch rosinīe von altfranzösisch raisin bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosine” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:52.056Z",
+   "target": "f08094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1989 after spending \"millions of dollars\" on raisin advertising, the California Raisin Advisory Board decried the similar name \"Craisin\", claiming that dried cranberries were \"just the skin of the cranberry, sugar infused, and it's very tart.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cranberry” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:52.056Z",
+   "target": "f08095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Goji (Chinese: 枸杞, romanized: gǒuqǐ), goji berry, or wolfberry,  is the fruit of either Lycium barbarum or Lycium chinense, two closely related species of boxthorn in the nightshade family, Solanaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “goji berry” is on the snapshot of s6"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:04Z",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A small seedless raisin of the Mediterranean region, used chiefly in baking.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:11Z",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "are raisins of the small, sweet, seedless grape cultivar Black Corinth (Vitis vinifera).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:39.793Z",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A small seedless raisin of the Mediterranean region, used chiefly in baking.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:39.793Z",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "are raisins of the small, sweet, seedless grape cultivar Black Corinth (Vitis vinifera).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:39.793Z",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "American Heritage Dictionary Entry: currant",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “currant” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:39.793Z",
+   "target": "f08092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Zante currant is one of the oldest known raisins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “currant” is on the snapshot of s8"
+  }
+ ]
+}

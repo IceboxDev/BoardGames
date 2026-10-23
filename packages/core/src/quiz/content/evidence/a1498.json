@@ -1,0 +1,470 @@
+{
+ "article": "a1498",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/SN_1054",
+   "title": "SN 1054 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:05.096Z",
+   "snapshot": "42292080a23b9de125a846db3a119a08006a79ddb775a5ee6511612529626c1a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Supernova",
+   "title": "Supernova",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:06.101Z",
+   "snapshot": "d169c5336ed1d926ecc89c41c29ee96ad0f00ae39a6337c4b10fd28b9a8a5e88"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fritz_Zwicky",
+   "title": "Fritz Zwicky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:09.073Z",
+   "snapshot": "9c63f5c43e48eadbd2ff0ff32fcae3be3aa5d77985a37fbf6821bd8dfd65ab70"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/PSR_B1919%2B21",
+   "title": "PSR B1919+21 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:07.923Z",
+   "snapshot": "e25f075bdf27c70e9df7fd420f658e793fae227606181e094a4044e6b0041adf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sirius",
+   "title": "Sirius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:16.000Z",
+   "snapshot": "c6b0b01a0afd15186ca367a76c26fa0e9ba6c689000ddd90fa0dffd28b0d5a11"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Event_Horizon_Telescope",
+   "title": "Event Horizon Telescope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:09.058Z",
+   "snapshot": "45a8b26fa4d8cdd7b04508217677268f291d43e87e094949fa185ac0a5cb2815"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Krebsnebel",
+   "title": "Krebsnebel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:06.392Z",
+   "snapshot": "06dc3e85b9254a77e168a170bc668a3f8beeaf89132549d627875b264d369003"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Spaghettification",
+   "title": "Spaghettification – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:09.900Z",
+   "snapshot": "1ebfd1fae6951eff40edfbada04eba0f519b734bbd67969fe60dfe9f62e90bba"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Pulsar",
+   "title": "Pulsar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:28.786Z",
+   "snapshot": "a813cacce83eb9c7c6121256b80090880314cbbebf6134226883d38be95548b1"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/White_dwarf",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:11.063Z",
+   "snapshot": "167cd24607b8021c4edd870bf6625652932499b30048191aa15743dd1a315dfd"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Neutron_star",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:12.097Z",
+   "snapshot": "aeadd546dc8c5698792ffd1e140926d9a1bc1034b97c963298a173b1c64806ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Supernova",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Supernova",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-139; transcript ppm-048"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neutron star",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pulsar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "White dwarf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Black hole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Krebsnebel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-275"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Black hole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 51; transcript tp-171"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Beams of electromagnetic radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s11",
+     "quote": "Beams of electromagnetic radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "pp-040/2, u08: Pulsars are highly magnetised rotating neutron stars (not black-hole remnants) whose polar beams sweep past Earth like a lighthouse."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f07486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "SN 1054, the Crab Supernova, is a supernova that was first observed on c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Supernova” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f07486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A supernova (pl.: supernovae) is a powerful and luminous explosion of a star.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Supernova” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f07487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "These consecutive articles introduce the notion of a supernova and a neutron star respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neutron star” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f07488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "PSR B1919+21 is a pulsar with a period of 1.3373 seconds and a pulse width of 0.04 seconds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pulsar” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f07489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sirius is a binary star consisting of a main-sequence star of spectral type A0 or A1, termed Sirius A, and a faint white dwarf companion of spectral type DA2, termed Sirius B.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “White dwarf” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f07490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The EHT project combines data from several very-long-baseline interferometry (VLBI) stations around Earth, which form a combined array with an angular resolution sufficient to observe objects the size of a supermassive black hole's event horizon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black hole” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f10856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Krebsnebel (seltener Krabbennebel, früher auch Crab-Nebel von englisch Crab Nebula, katalogisiert als M 1 und NGC 1952) im Sternbild Stier ist der Überrest der im Jahr 1054 beobachteten Supernova, in dem sich ein Pulsarwind-Nebel gebildet hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Krebsnebel” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f25207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The term was popularized by Stephen Hawking who described the flight of a fictional astronaut who, passing within a black hole's event horizon, is \"stretched like spaghetti\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black hole” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f25238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A pulsar (pulsating star, on the model of quasar) is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beams of electromagnetic radiation” is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:27:35.162Z",
+   "target": "f25238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Some neutron stars emit beams of electromagnetic radiation that make them detectable as pulsars, and the discovery of pulsars by Jocelyn Bell Burnell and Antony Hewish in 1967 was the first observational suggestion that neutron stars exist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beams of electromagnetic radiation” is on the snapshot of s11"
+  }
+ ]
+}

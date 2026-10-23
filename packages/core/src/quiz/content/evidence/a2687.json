@@ -1,0 +1,234 @@
+{
+ "article": "a2687",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Marie_Curie",
+   "title": "Marie Curie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:27.671Z",
+   "snapshot": "e1a6e3b302f8edb363cc4c4636771f31ce26a040060cbccb946ba3db7eea4ad2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+   "title": "Marie Curie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:15.982Z",
+   "snapshot": "059abc4b64a255bffc12c9af7b607c9c8770b60e11800b3d526972374f10b3dd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pierre_Curie",
+   "title": "Pierre Curie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:51.155Z",
+   "snapshot": "031fbb56464bb51c2562d07c318b27253ea66509e9a2f30dcb57c60bbc6303da"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ir%C3%A8ne_Joliot-Curie",
+   "title": "Irène Joliot-Curie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:52.252Z",
+   "snapshot": "4404836b69c9c57ad9e028f0a89d0eb4839e5b0e2bfa688bacbe244606b802ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14625",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marie Curie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-317"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Warsaw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Henri Becquerel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Irène Joliot-Curie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Panthéon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:57.875Z",
+   "target": "f14625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marie Curie ist die einzige Frau unter den fünf Personen, denen bisher mehrfach ein Nobelpreis verliehen wurde, und neben Linus Pauling die einzige Person, die Nobelpreise auf zwei unterschiedlichen Fachgebieten erhielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marie Curie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:57.875Z",
+   "target": "f14626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Curie was born in Warsaw, Russian Empire, where she studied at the clandestine Flying University and began her practical scientific training.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Warsaw” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:57.875Z",
+   "target": "f14627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1903, Pierre and Marie Curie, as well as Henri Becquerel, were awarded the Nobel Prize in Physics for their research on radioactivity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henri Becquerel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:57.875Z",
+   "target": "f14628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Irène Joliot-Curie (French: [iʁɛn ʒɔljo kyʁi] ; née Curie; 12 September 1897 – 17 March 1956) was a French chemist and physicist who received the 1935 Nobel Prize in Chemistry with her husband, Frédéric Joliot-Curie, for their discovery of induced radioactivity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Irène Joliot-Curie” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:57.875Z",
+   "target": "f14629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In April 1995, Pierre and Marie Curie were moved from their original resting place, a family cemetery, and enshrined in the crypt of the Panthéon in Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Panthéon” is on the snapshot of s3"
+  }
+ ]
+}

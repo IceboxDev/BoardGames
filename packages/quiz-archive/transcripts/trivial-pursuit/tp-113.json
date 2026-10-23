@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-113",
+ "image": "IMG20261007173707.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißen die beiden Länder, die auf der Insel Hispaniola liegen?",
+   "de": "Wie heißen die beiden Länder, die auf der Insel Hispaniola liegen?",
+   "en": "What are the two countries located on the island of Hispaniola?",
+   "reworked": false,
+   "answerDe": "Haiti und Dominikanische Republik",
+   "answerEn": "Haiti and the Dominican Republic",
+   "timeline": {
+    "kind": "event",
+    "start": "1844-02-27",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Dominican Republic declares independence from Haiti, splitting Hispaniola into two states",
+    "labelDe": "Die Dominikanische Republik erklärt die Unabhängigkeit von Haiti – Hispaniola ist seither zweigeteilt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hispaniola",
+    "title": "Hispaniola",
+    "lang": "de"
+   },
+   "notes": "The larger eastern part is the Dominican Republic, the smaller western part Haiti.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Ein Lied von Heino war das erste musikalische Werk, das von der Presse als „Schlager” bezeichnet wurde. Richtig oder falsch?",
+   "de": "Welches musikalische Werk wurde als erstes von der Presse als „Schlager” bezeichnet?",
+   "en": "Which piece of music was the first to be called a \"Schlager\" (hit) by the press?",
+   "reworked": true,
+   "answerDe": "An der schönen blauen Donau (Johann Strauss)",
+   "answerEn": "The Blue Danube (Johann Strauss II)",
+   "timeline": {
+    "kind": "event",
+    "start": "1867-02-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Wiener Fremdenblatt calls Strauss's waltz The Blue Danube \"ein entschiedener Schlager\"",
+    "labelDe": "Das Wiener Fremdenblatt nennt Strauss' Donauwalzer „ein entschiedener Schlager”"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schlager",
+    "title": "Schlager",
+    "lang": "de"
+   },
+   "notes": "True/false card (answer: falsch, not Heino) reworked. The first work-specific attestation of the word is the Wiener Fremdenblatt of 17 Feb 1867 on the premiere of the Blue Danube waltz.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wer gilt als Erfinder des Postwesens: die Römer, die Perser oder Familie von Thurn und Taxis?",
+   "de": "Welches antike Volk gilt als Erfinder des Postwesens mit berittenen Boten und Relaisstationen?",
+   "en": "Which ancient people are considered the inventors of the postal system, with mounted couriers and relay stations?",
+   "reworked": true,
+   "answerDe": "Die Perser",
+   "answerEn": "The Persians",
+   "timeline": {
+    "kind": "reign",
+    "start": "-559",
+    "end": "-530",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Reign of Cyrus the Great, who set up the Persian relay courier system",
+    "labelDe": "Herrschaft Kyros' des Großen, der das persische Relais-Botensystem einrichtete"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Geschichte_der_Post",
+    "title": "Geschichte der Post",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice card reworked; answer: die Perser. The source dates Cyrus to 550–529 BC; earlier courier services existed (e.g. Egypt), so 'inventor' is the card's framing.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 4,
+   "cardDe": "Laut einer Redensart kennt man jemanden erst, nachdem man was mit ihm gegessen hat: einen Scheffel Salz, einen Schock Kartoffeln oder ein Pfund Schmalz?",
+   "de": "Laut einer Redensart kennt man jemanden erst, nachdem man ein bestimmtes Maß von etwas mit ihm gegessen hat. Wovon?",
+   "en": "According to a saying, you only know someone once you have eaten a certain measure of something with them. Of what?",
+   "reworked": true,
+   "answerDe": "Einen Scheffel Salz",
+   "answerEn": "A bushel of salt",
+   "timeline": {
+    "kind": "creation",
+    "start": "-44",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Cicero's Laelius: many measures of salt must be eaten together before friendship is complete",
+    "labelDe": "Ciceros Laelius: Man müsse viele Scheffel Salz zusammen essen, ehe die Freundschaft vollkommen ist"
+   },
+   "source": {
+    "url": "https://www.dbnl.org/tekst/_taa006189301_01/_taa006189301_01_0073.php",
+    "title": "Taal en Letteren, Jaargang 3 (G. A. Nauta, 1893)",
+    "lang": "nl"
+   },
+   "notes": "Multiple-choice card reworked. German: „mit jemandem einen Scheffel Salz essen” = long close acquaintance; the source cites Goethe, Grimm's Wörterbuch VIII 1706, Aristotle and Cicero's Laelius (multos modios salis). Laelius dated c. 44 BC.",
+   "domain": "literature",
+   "sub": "language"
+  },
+  {
+   "category": 5,
+   "cardDe": "Solar Impulse 2, das erste solarbetriebene Flugzeug, beendete seine 16-monatige Weltumrundung mit einer Landung in welcher Hauptstadt?",
+   "de": "Solar Impulse 2, das erste solarbetriebene Flugzeug, beendete seine 16-monatige Weltumrundung mit einer Landung in welcher Hauptstadt?",
+   "en": "Solar Impulse 2, the first solar-powered aircraft, ended its 16-month round-the-world flight by landing in which capital?",
+   "reworked": false,
+   "answerDe": "Abu Dhabi",
+   "answerEn": "Abu Dhabi",
+   "timeline": {
+    "kind": "event",
+    "start": "2016-07-26",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Solar Impulse 2 lands in Abu Dhabi, completing the first solar-powered flight around the world",
+    "labelDe": "Solar Impulse 2 landet in Abu Dhabi und vollendet die erste solarbetriebene Weltumrundung"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Solar_Impulse",
+    "title": "Solar Impulse",
+    "lang": "de"
+   },
+   "notes": "The card's premise is loose: Solar Impulse 2 was the first solar aircraft to circle the globe, not the first solar-powered aircraft. Abu Dhabi is the capital of the UAE.",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 6,
+   "cardDe": "Um was kümmert sich auf dem Golfplatz der Greenkeeper: die Bar, den Rasen oder die Reparatur kaputter Schläger?",
+   "de": "Um was kümmert sich auf dem Golfplatz der Greenkeeper?",
+   "en": "What does the greenkeeper look after on a golf course?",
+   "reworked": true,
+   "answerDe": "Den Rasen",
+   "answerEn": "The turf (grass)",
+   "timeline": {
+    "kind": "event",
+    "start": "1864",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Old Tom Morris takes charge of the St Andrews links as Keeper of the Green",
+    "labelDe": "Old Tom Morris übernimmt als „Keeper of the Green” die Pflege der Links von St Andrews"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Greenkeeper",
+    "title": "Greenkeeper",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice card reworked; answer: den Rasen. Timeline from en.wikipedia 'Old Tom Morris' (Keeper of the Green at St Andrews from 1864).",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

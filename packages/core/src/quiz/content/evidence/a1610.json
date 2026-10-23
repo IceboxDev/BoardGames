@@ -1,0 +1,241 @@
+{
+ "article": "a1610",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rantanplan",
+   "title": "Rantanplan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:46.436Z",
+   "snapshot": "76a65df77d12b638f51b0dd987b141ad03336c7a86abfad8f651f1e71b5549ca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lucky_Luke",
+   "title": "Lucky Luke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:47.566Z",
+   "snapshot": "ed8bb7f3d7e3011a95c0eb954b24cd4d05789dacb3c7e24454b4720a5fb80864"
+  },
+  "s3": {
+   "url": "https://fr.wikipedia.org/wiki/Lucky_Luke",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:11:48.076Z",
+   "snapshot": "a0d8780ac9f27dbf937853f93adb5862cc89fd5bb592a16f37607c419eacc7f2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Snowy_(character)",
+   "title": "Snowy (character) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:48.423Z",
+   "snapshot": "2fc9099725e94ed9523ea099a7088a29a5b4521a1a3e2beb100611031e036482"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Snoopy",
+   "title": "Snoopy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:49.457Z",
+   "snapshot": "44a4a92cef966c33d6d00047a0be0728127b4616b4f100c267d09338dbc621a2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rantanplan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jolly Jumper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jolly Jumper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Snowy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Snoopy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:50.679Z",
+   "target": "f08046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rantanplan (French: [ʁɑ̃tɑ̃ˈplɑ̃]; alternatively spelled Ran-Tan-Plan and Ran Tan Plan) is a fictional hound dog created by a Belgian cartoonist Morris and French writer René Goscinny.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rantanplan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:50.679Z",
+   "target": "f08047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The series takes place in the American Old West, and starring the titular Lucky Luke, a street-smart gunslinger known as the \"man who shoots faster than his shadow\", and his intelligent horse Jolly Jumper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jolly Jumper” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:50.679Z",
+   "target": "f08047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "La série met en scène Lucky Luke, un cow-boy solitaire du Far West, surnommé \"l'homme qui tire plus vite que son ombre\", accompagné de son fidèle cheval Jolly Jumper.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jolly Jumper” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:50.679Z",
+   "target": "f08048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Snowy (French: Milou [milu]) is a fictional character in The Adventures of Tintin, the comics series by Belgian cartoonist Hergé.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snowy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:50.679Z",
+   "target": "f08050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Snoopy is one of the central characters in the comic strip Peanuts by American cartoonist Charles M.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snoopy” is on the snapshot of s5"
+  }
+ ]
+}

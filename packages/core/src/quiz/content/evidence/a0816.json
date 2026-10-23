@@ -1,0 +1,209 @@
+{
+ "article": "a0816",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sockenpuppe_(Netzkultur)",
+   "title": "Sockenpuppe (Netzkultur) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:15.410Z",
+   "snapshot": "b8de897ae237dfa0e921eceedcdfc81e928d9f4800ee44421e89fa9278b84457"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Astroturfing",
+   "title": "Astroturfing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:18.442Z",
+   "snapshot": "0183775964c351f166916abad8e80cb15f49e304bc846f0b648294ed2e5fe67a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1%25_rule",
+   "title": "1% rule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:09.262Z",
+   "snapshot": "e9e500be9a1e2795f24141c9cb627f63c7365c454f853fc6e7d2ac12a9470648"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spam_(Monty_Python_sketch)",
+   "title": "Spam (Monty Python sketch) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:19.333Z",
+   "snapshot": "bf05a8bcc6190e0defe2be04bb155ffdd61319bdc631328d4d4d9fcd6a8e7e5c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spamming",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:20.448Z",
+   "snapshot": "3e7e6f15ef67a0375f30277cc76353eee0f3e584923e82819bc2f4e2fd68b19e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Clickbait",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:03.140Z",
+   "snapshot": "303f20d0040274e0f356f0a66d8e5344a6f354b0408edfded7489da19c28cd18"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04076",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sockenpuppe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f24360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Astroturfing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "90–9–1 rule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vikings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:49.275Z",
+   "target": "f04076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Sockenpuppe (englisch sockpuppet, auch Fakeaccount, Zweitaccount, Multiaccount oder Doppelnick; Plural auch Mehrfachkonten) bezeichnet man im Netzjargon ein zusätzliches Benutzerkonto, das aus verschiedenen Gründen angelegt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sockenpuppe” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:49.275Z",
+   "target": "f24360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Astroturfing is the practice of hiding the sponsors of an orchestrated message or organization to make it appear as though it originates from, and is supported by, unsolicited grassroots participants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Astroturfing” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.275Z",
+   "target": "f24361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The 90-9-1 Rule for Participation Inequality in Social Media and Online Communities by Jakob Nielsen, October 8, 2006.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “90–9–1 rule” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.275Z",
+   "target": "f24362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At several points, a group of Vikings in the restaurant interrupts conversations by loudly singing about Spam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vikings” is on the snapshot of s4"
+  }
+ ]
+}

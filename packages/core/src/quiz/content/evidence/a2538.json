@@ -1,0 +1,234 @@
+{
+ "article": "a2538",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Doramad",
+   "title": "Doramad",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:08.966Z",
+   "snapshot": "3182feb3dad0013a8b0722ab12e97ff4af5fc5ab7f651adad1dcb9a7953d9afe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Radithor",
+   "title": "Radithor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:12.643Z",
+   "snapshot": "d73a94680175cc7d3ed0d98a893d4e22d10788ab6f4855cb3fc37750d3b8fa60"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Radium_Girls",
+   "title": "Radium Girls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:13.802Z",
+   "snapshot": "020af8e41d587d8694a0cbaf247c1fdd5d5fac0abd82ff111a101dd806c1b6f8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/J%C3%A1chymov",
+   "title": "Jáchymov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:14.698Z",
+   "snapshot": "71d015d3a4838280b084545b83c7bfa993535392116ea952e5ec4c7c5c7b9599"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thorium X",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-324"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eben Byers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "watch dials",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Undark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jáchymov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:35.931Z",
+   "target": "f13552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wolffenstein: Hautschädigungen nach externer Doramad (Thorium X-Degea)-Behandlung nebst Mitteilung eines Falles.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thorium X” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.931Z",
+   "target": "f13553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1932, the illness and death of business magnate Eben Byers was unambiguously linked to his fervent use of Radithor, leading to the collapse of the radium fad and the strengthening of regulatory control of pharmaceutical and radioactive products in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eben Byers” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.931Z",
+   "target": "f13554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Radium Girls were female factory workers who contracted radiation poisoning from painting radium dials – watch dials and hands with self-luminous paint.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “watch dials” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.931Z",
+   "target": "f13555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "From 1917 to 1926, the United States Radium Corporation (USRC), originally called the Radium Luminous Material Corporation, was engaged in the extraction and purification of radium from carnotite ore to produce luminous paints, which were marketed under the brand name \"Undark\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Undark” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.931Z",
+   "target": "f13556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jáchymov (Czech pronunciation: [ˈjaːxɪmof]; German: Sankt Joachimsthal or Joachimsthal) is a spa town in Karlovy Vary District in the Karlovy Vary Region of the Czech Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jáchymov” is on the snapshot of s4"
+  }
+ ]
+}

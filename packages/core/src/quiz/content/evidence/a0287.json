@@ -1,0 +1,401 @@
+{
+ "article": "a0287",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pilot_fish",
+   "title": "Pilot fish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:39.889Z",
+   "snapshot": "835669cde24fb51c3785778afde195b07e981ec9e568d82484e20107ba9f7c08"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Remora",
+   "title": "Remora – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:40.913Z",
+   "snapshot": "9fdf0f05b1dd3c831a306c460a7ce3bd66e2802587a56cd105bc7c7ebb1fb9f1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Labroides",
+   "title": "Labroides – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:41.920Z",
+   "snapshot": "ea431a7d028caf1d9d6168e6f4b41e04545c8cda6dffb2d8a0e1d3f07b6f049b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Oxpecker",
+   "title": "Oxpecker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:42.897Z",
+   "snapshot": "de8ff866d7b7e798686427f5956b0f90cf5e923a27c997f706782e2bbe91baeb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ocellaris_clownfish",
+   "title": "Ocellaris clownfish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:43.910Z",
+   "snapshot": "55502f96dd7e084ad78cf04cae99b6c52efaeceb219a1c2299e2ad30513966d8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Live_sharksucker",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:44.988Z",
+   "snapshot": "7a6a651ba1f06940a7383b65ef8676b5876d76c591a33bf677b9960797a4ecad"
+  },
+  "s7": {
+   "url": "https://www.fishbase.se/summary/Naucrates-ductor.html",
+   "title": "Naucrates ductor, Pilotfish – FishBase",
+   "publisher": "FishBase",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:02.964Z",
+   "snapshot": "a65c0047e05daebe0d05ffbbc775f96f641bd1c80da2c4f87de9a2789e0413a6"
+  },
+  "s8": {
+   "url": "https://australian.museum/learn/animals/fishes/pilotfish-naucrates-ductor/",
+   "title": "Pilotfish, Naucrates ductor – The Australian Museum",
+   "publisher": "Australian Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:04.323Z",
+   "snapshot": "22c19a4184907ec2d2e9bb77f142e1a9205b99a743226cd8ce463ad938df53d9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pilot fish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "remoras",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cleaner wrasses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "oxpeckers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "clownfish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.660Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The pilot fish  (Naucrates ductor) is a carnivorous fish of the trevally, or jackfish family, Carangidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pilot fish” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.660Z",
+   "target": "f01432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Remoras sometimes attach to small boats, and have been observed attaching to divers as well.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “remoras” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.660Z",
+   "target": "f01433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This genus is collectively known as cleaner wrasses, and its species are cleaner fish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cleaner wrasses” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:24.660Z",
+   "target": "f01434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The oxpeckers are two species of bird which make up the genus Buphagus, from Ancient Greek βοῦς (boûs), meaning \"ox\", and φάγος (phágos), meaning \"eater\", and family Buphagidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oxpeckers” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:24.660Z",
+   "target": "f01435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The ocellaris clownfish (Amphiprion ocellaris), also known as the false percula clownfish or common clownfish, is a marine fish belonging to the family Pomacentridae, which includes clownfishes and damselfishes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “clownfish” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:08:31Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oceanic species with a semi-obligate commensal relationship with sharks, rays, other bony fishes and turtles (Ref. 5217).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same summary: 'Feed on scraps of host's left over, parasites and excrement'. FishBase calls the relationship commensal; the card's 'because they clean parasites' is the popular explanation, the answer is unaffected."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:08:34Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Feed on scraps of host's left over, parasites and excrement",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:08:37Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The pilot fish's relationship with sharks is a mutualist one; the pilot fish gains protection from predators, while the shark gains freedom from parasites.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:08:40Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Adults are often found in inshore waters swimming alongside larger predatory fishes. They feed on scraps of the predators prey.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the escorting habit; does not mention parasites."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:44.658Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Feed on scraps of host's left over, parasites and excrement",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:44.658Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The pilot fish's relationship with sharks is a mutualist one; the pilot fish gains protection from predators, while the shark gains freedom from parasites.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:44.658Z",
+   "target": "f01431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Adults are often found in inshore waters swimming alongside larger predatory fishes. They feed on scraps of the predators prey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

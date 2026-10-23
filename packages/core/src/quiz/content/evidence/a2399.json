@@ -1,0 +1,330 @@
+{
+ "article": "a2399",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Britisch-Sansibarischer_Krieg",
+   "title": "Britisch-Sansibarischer Krieg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:54.204Z",
+   "snapshot": "b6d64ac1ef3bf805ec6c3f2891e126299e292f0be5dcfddf5dea8f72755e1836"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anglo-Zanzibar_War",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:57.296Z",
+   "snapshot": "ea1be014df1bfed2758df63af4e730dfb26c12564d88c6e80f0ad44516257e12"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Serbo-Bulgarian_War",
+   "title": "Serbo-Bulgarian War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:58.364Z",
+   "snapshot": "dd91bb48812c47c50e810f1d6114e59ce7cc38dd501fd9263966900e023090d2"
+  },
+  "s4": {
+   "url": "https://www.historic-uk.com/HistoryUK/HistoryofBritain/The-Shortest-War-in-History/",
+   "title": "The Shortest War in History – The Anglo Zanzibar War",
+   "publisher": "Historic UK",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:05.493Z",
+   "snapshot": "bbbdf839b2f9ed34d2f1f62e3bb021503533354a9160f0668fb988bc11f6e343"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Großbritannien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Great Britain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Khalid bin Barghash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harry Rawson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bulgaria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:14.116Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "August 1896 zwischen Großbritannien und dem Sultanat Sansibar geführt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.116Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Großbritannien” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:14.116Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Great Britain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Great Britain”, “Großbritannien”, “Великобритания”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:14.116Z",
+   "target": "f12549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The immediate cause of the war was the suspicious death of the pro-British Sultan Hamad bin Thuwaini on 25 August 1896 and the subsequent succession of Sultan Khalid bin Barghash.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.116Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Khalid bin Barghash” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:14.116Z",
+   "target": "f12550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Royal Navy contingent were under the command of Rear-Admiral Harry Rawson and the pro-Anglo Zanzibaris were commanded by Brigadier-General Lloyd Mathews of the Zanzibar army (who was also the First Minister of Zanzibar).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.116Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry Rawson” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:14.116Z",
+   "target": "f12551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Serbo-Bulgarian War or the Serbian–Bulgarian War (Bulgarian: Сръбско-българска война, Srăbsko-bălgarska voyna, Serbian: Српско-бугарски рат, Srpsko-bugarski rat),  a war between the Kingdom of Serbia and the Principality of Bulgaria, erupted on 14 November [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.116Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bulgaria” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:55:25Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The little known Anglo-Zanzibar War of 1896 is generally considered to be the shortest war in history, lasting for a grand total of 38 minutes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:55:28Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Anglo-Zanzibar War was a military conflict fought between the United Kingdom and the Sultanate of Zanzibar on 27 August 1896.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Durations of 38, 40 and 45 minutes are given; 38 is the most often quoted."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:57.381Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The little known Anglo-Zanzibar War of 1896 is generally considered to be the shortest war in history, lasting for a grand total of 38 minutes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:57.381Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Anglo-Zanzibar War was a military conflict fought between the United Kingdom and the Sultanate of Zanzibar on 27 August 1896.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:57.381Z",
+   "target": "f12548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Historic Allies and Enemies of Great Britain",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Great Britain” is on the snapshot of s4"
+  }
+ ]
+}

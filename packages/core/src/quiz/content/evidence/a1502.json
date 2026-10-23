@@ -1,0 +1,456 @@
+{
+ "article": "a1502",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Calvin_and_Hobbes",
+   "title": "Calvin and Hobbes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:15.588Z",
+   "snapshot": "0ab7e692e159726d343b320bcf21a38fff686d4bba5fd88359ce385e7ba6ff95"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Woodstock_(Peanuts)",
+   "title": "Woodstock (Peanuts) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:07.141Z",
+   "snapshot": "d2a1ca85fcc9e5b9017d02708f4ea12fa0ab1ab090748e71ce1ea80197f94574"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Garfield",
+   "title": "Garfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:16.541Z",
+   "snapshot": "a70e318da73fe5435063b536f8ffb063d689eda67776d6569687e6b39e5a3033"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tintin_in_the_Land_of_the_Soviets",
+   "title": "Tintin in the Land of the Soviets – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:17.548Z",
+   "snapshot": "6b07d103a9c4788fa9fa246d0298759a10d6dd71d824a2d26d098211ceb45c70"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Asterix",
+   "title": "Asterix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:18.567Z",
+   "snapshot": "b3cfb0a3b5d263f12bfa88c8b8b35fde52c2619a808325bdb5c05fe1850e1ed0"
+  },
+  "s6": {
+   "url": "https://www.gocomics.com/garfield/about",
+   "title": "About Garfield – GoComics",
+   "publisher": "Andrews McMeel Universal (GoComics)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:59:02Z"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tintin_(character)",
+   "title": "Tintin (character) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:15.473Z",
+   "snapshot": "85761be807e78c49a6612ae12f128b28ac4e7f95e46238788196d60a95fdea45"
+  },
+  "s8": {
+   "url": "https://www.tintin.com/en/characters/snowy",
+   "title": "Snowy – Tintin.com",
+   "publisher": "Tintinimaginatio (Moulinsart)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:14.078Z",
+   "snapshot": "509e99a0212f3812f2e3c799d130ba6085bb3f77dd3971246203d548fa9897f6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calvin and Hobbes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Snoopy and Woodstock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Garfield and Jon Arbuckle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tintin and Snowy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Asterix and Obelix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:35.633Z",
+   "target": "f07506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calvin and Hobbes is an American daily comic strip created by cartoonist Bill Watterson and syndicated from November 18, 1985, to December 31, 1995.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Calvin and Hobbes” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:35.633Z",
+   "target": "f07507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Both Snoopy and Woodstock were voiced by José Cuauhtémoc \"Bill\" Meléndez from 1972 to 2006.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snoopy and Woodstock” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:35.633Z",
+   "target": "f07508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Garfield and Jon Arbuckle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Garfield and Jon Arbuckle”, “Garfield und Jon Arbuckle”, “Гарфилд и Джон Арбакл”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:35.633Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tintin and Snowy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tintin and Snowy”, “Tim und Struppi”, “Тинтин и Милу”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:35.633Z",
+   "target": "f07510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Asterix (French: Astérix or Astérix le Gaulois [asteʁiks lə ɡolwa], \"Asterix the Gaul\"; also known as Asterix and Obelix in some adaptations or The Adventures of Asterix) is a French comic album series about a Gaulish village which, thanks to a magic potion that enhances strength, resists the forces",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asterix and Obelix” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:59:00Z",
+   "target": "f07508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it chronicles the life of the title character Garfield, a lazy, gluttonous, and sarcastic cat, along with a dim-witted dog named Odie and their human owner, Jon Arbuckle",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:59:02Z",
+   "target": "f07508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The bumbling, exasperated owner of Garfield and Odie.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:59:03Z",
+   "target": "f07508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This lasagna loving, mailman chasing, sarcastic cat is a classic that readers love.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:59:05Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tintin is depicted as a precocious, multitalented reporter who travels the world with his dog Snowy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:59:06Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Snowy is a rough-haired Fox Terrier of an atypical whiteness.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:21.451Z",
+   "target": "f07508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it chronicles the life of the title character Garfield, a lazy, gluttonous, and sarcastic cat, along with a dim-witted dog named Odie and their human owner, Jon Arbuckle",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:21.451Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tintin is depicted as a precocious, multitalented reporter who travels the world with his dog Snowy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:21.451Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Snowy is a rough-haired Fox Terrier of an atypical whiteness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:21.451Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hergé agreed, and an image of Tintin and Snowy first appeared in the youth supplement on 4 January 1929, in an advert for the upcoming series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tintin and Snowy” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:21.451Z",
+   "target": "f07509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tintin and Snowy are totally on the same wavelength even when they are in conversation\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tintin and Snowy” is on the snapshot of s8"
+  }
+ ]
+}

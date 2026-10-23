@@ -1,0 +1,242 @@
+{
+ "article": "a0446",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Scheherazade",
+   "title": "Scheherazade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:45.680Z",
+   "snapshot": "965c62673efbc4e23d603d9a2694bede70dcc6dcf107bcbae9be215baff6d9c6"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tausendundeine_Nacht",
+   "title": "Tausendundeine Nacht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:56:43.357Z",
+   "snapshot": "b5e571de2254b1878b14622d1a5b3ee8d8a6b1eff0826e426df876c7785a2bca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Harun_al-Rashid",
+   "title": "Harun al-Rashid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:46.772Z",
+   "snapshot": "6320df6fce4abb15c5d4fd8034e7541b7fe496d5810d0d483ff1df6a53ae943d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sinbad_the_Sailor",
+   "title": "Sinbad the Sailor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:47.814Z",
+   "snapshot": "03e2e90acee5b75f93d5253f1635fa8f6d8aa045a5d5b9885f68d0b72a4b2ae5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Aladdin",
+   "title": "Aladdin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:48.752Z",
+   "snapshot": "f237e6d02088d42f4eb4038964be051326b11b2cb4e375622c9ddef792051e49"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scheherazade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schahriyar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harun al-Rashid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sinbad the Sailor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aladdin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:49.302Z",
+   "target": "f02226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scheherazade ( also spelled Sheherazade, Shahrazad, or Šahrzād) is the legendary narrator and central framing character of One Thousand and One Nights (Arabic: أَلْفُ لَيْلَةٍ وَلَيْلَةٌ, romanized: Alf Laylah wa-Laylah), a collection of Middle Eastern, South Asian, and North African folktales",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scheherazade” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:49.302Z",
+   "target": "f02227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(→ Die Geschichte von König Schahriyar und Schahrasad, der Tochter seines Wesirs, ANE 1)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schahriyar” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:49.302Z",
+   "target": "f02228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "763 or 766 – 24 March 809), famously known as The Hārūn al-Rashīd, was the fifth of the Abbasid caliphs, reigning from September 786 until his death in March 809.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harun al-Rashid” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:49.302Z",
+   "target": "f02229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sinbad the Sailor (; Arabic: سندباد البحري, romanized: Sindibādu l-Bahriyy lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sinbad the Sailor” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:49.302Z",
+   "target": "f02230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aladdin ( ə-LAD-in; Arabic: علاء الدين, romanized: ʻAlāʼ ad-Dīn, IPA: [ʕalaːʔ adˈdiːn], ATU 561, 'Aladdin') is a Middle-Eastern folk tale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aladdin” is on the snapshot of s5"
+  }
+ ]
+}

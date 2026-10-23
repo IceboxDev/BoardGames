@@ -1,0 +1,346 @@
+{
+ "article": "a1066",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pioneer_11",
+   "title": "Pioneer 11 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:34.121Z",
+   "snapshot": "ae23ef32fc127fe99dfc9ec25e7ae9b42aa90620fe2e6de07567356975e4759d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Uranus",
+   "title": "Uranus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:10.379Z",
+   "snapshot": "f106d685cb71e13e95e9ea03286a5a393403545d65271f41d5e953449f4f2b59"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Discovery_of_Neptune",
+   "title": "Discovery of Neptune – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:35.267Z",
+   "snapshot": "7a7550aef7d41c3e72d4e6bf31e6b13d5dbf02ff51a52361c2bc26623887f2c9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mikhail_Lomonosov",
+   "title": "Mikhail Lomonosov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:36.185Z",
+   "snapshot": "3822dfe0d73fe7dc6e4bd3cb2c150c20291aff5110a706978a31877bea97afad"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Great_Red_Spot",
+   "title": "Great Red Spot",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:45.008Z",
+   "snapshot": "336e86aa1f9099be129c9cd33c1e3302e12081d0f77befacc1e9e54eb4947216"
+  },
+  "s6": {
+   "url": "https://science.nasa.gov/jupiter/facts/",
+   "title": "Jupiter Facts",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:37.159Z",
+   "snapshot": "2247105a03814af2acb6ffb9a419df56ceb00e5950401bb59294cf7f89ef42d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saturn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Uranus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neptune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Venus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A giant storm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 55; transcript ppm-102"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:27.418Z",
+   "target": "f05326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pioneer 11 (originally designated Pioneer G) is a NASA space probe launched in 1973 that completed the first mission to the planet Saturn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturn” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:27.418Z",
+   "target": "f05328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Uranus is the seventh planet from the Sun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uranus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:27.418Z",
+   "target": "f05329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The planet Neptune was mathematically predicted before it was directly observed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neptune” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:27.418Z",
+   "target": "f05330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Among his discoveries were the atmosphere of Venus, the law of conservation of mass in chemical reactions, the theoretical prediction of Antarctica, and the idea of coaxial rotors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:27.418Z",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A giant storm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“A giant storm”, “Ein riesiger Sturm”, “гигантский шторм”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:06:39Z",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:06:41Z",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "producing the largest anticyclonic storm in the Solar System",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:02.885Z",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:02.885Z",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "producing the largest anticyclonic storm in the Solar System",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:02.885Z",
+   "target": "f25565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “A giant storm” is on the snapshot of s6"
+  }
+ ]
+}

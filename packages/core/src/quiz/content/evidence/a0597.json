@@ -1,0 +1,422 @@
+{
+ "article": "a0597",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cholesterol",
+   "title": "Cholesterol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:10.445Z",
+   "snapshot": "7c037b68417357c4555f3ab200d28c2e06d828123910de6dbdc45349f54ca1ad"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Extracorporeal_shockwave_therapy",
+   "title": "Extracorporeal shockwave therapy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:11.329Z",
+   "snapshot": "44168200bc88f144adc6f10018abd34e4561abb61d52c15683bef6f69cc06b27"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Water_fluoridation",
+   "title": "Water fluoridation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:05.659Z",
+   "snapshot": "056a0633812c30900fea048f871366d321ade89d85a49a33448ebdb4c92f9534"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alpha_helix",
+   "title": "Alpha helix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:12.445Z",
+   "snapshot": "0b69a01650c02ea9bc6c1c981f5cfd3880c772b32eef4a872216735ad713a4fa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Keratin",
+   "title": "Keratin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:13.341Z",
+   "snapshot": "871793f55f7d0f4b00795661b4d8f78fd1c36e335e1d4f60b217c1de4eb19a10"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gout",
+   "title": "Gout – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:14.428Z",
+   "snapshot": "beffcfe2942f69331af46ad646715a2118c089adbb0f5ce6d25109c23efc9279"
+  },
+  "s7": {
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones/definition-facts",
+   "title": "Definition & Facts for Kidney Stones",
+   "publisher": "NIDDK (U.S. National Institutes of Health)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:21.365Z",
+   "snapshot": "fa93e11676c4dd499ea1a3676e3833dbe71a111e30565f335374ecf972f319df"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Kidney_stone_disease",
+   "title": "Kidney stone disease – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:21.845Z",
+   "snapshot": "6de00fa9ac515f0e338af66a517326bef60628608dd63c43c4cad330221e854a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cholesterol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "calcium oxalate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "hydroxyapatite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "keratin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "keratin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-058"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "uric acid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.248Z",
+   "target": "f02981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cholesterol is the principal sterol of all animals, distributed in body tissues, especially the brain and spinal cord, and in animal fats and oils.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cholesterol” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:12.248Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "calcium oxalate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“calcium oxalate”, “Calciumoxalat”, “оксалат кальция”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:12.248Z",
+   "target": "f02983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Europe and other regions, declining decay rates are attributed to topical fluorides and alternatives like salt fluoridation and nano-hydroxyapatite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hydroxyapatite” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:12.248Z",
+   "target": "f02984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taylor, Maurice Huggins and Bragg and collaborators to propose models of keratin that somewhat resemble the modern α-helix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “keratin” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:12.248Z",
+   "target": "f02984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Keratin () is one of a family of structural fibrous proteins also known as scleroproteins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “keratin” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:12.248Z",
+   "target": "f02985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gout is a form of inflammatory arthritis characterized by recurrent attacks of pain in a red, tender, hot, and swollen joint, caused by the deposition of needle-shaped crystals of the monosodium salt of uric acid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “uric acid” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:17:20Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Calcium stones, including calcium oxalate stones and calcium phosphate stones, are the most common types of kidney stones. Calcium oxalate stones are more common than calcium phosphate stones.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:24Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Calcium is one component of the most common type of human kidney stones, calcium oxalate.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:38.449Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Calcium stones, including calcium oxalate stones and calcium phosphate stones, are the most common types of kidney stones. Calcium oxalate stones are more common than calcium phosphate stones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:38.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:38.449Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Calcium is one component of the most common type of human kidney stones, calcium oxalate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:38.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:38.449Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Calcium stones, including calcium oxalate stones and calcium phosphate stones, are the most common types of kidney stones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:38.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “calcium oxalate” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:38.449Z",
+   "target": "f02982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Calculi are also classified by what they are made of, such as calcium oxalate, uric acid, struvite, or cystine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:38.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “calcium oxalate” is on the snapshot of s8"
+  }
+ ]
+}

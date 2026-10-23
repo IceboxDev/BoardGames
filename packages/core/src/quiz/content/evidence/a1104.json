@@ -1,0 +1,456 @@
+{
+ "article": "a1104",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Shellac",
+   "title": "Shellac – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:02.217Z",
+   "snapshot": "4ad8b8b138a88161ff074d9f5f7ec0c40a7a3ee34ecc0a9c7ac13d283c3b9c97"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Goodyear",
+   "title": "Charles Goodyear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:03.119Z",
+   "snapshot": "5c40005a7d444f4424209af53c87fde40ae02e10b725eb263f7b78081456414b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Silk",
+   "title": "Silk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:04.221Z",
+   "snapshot": "1b12dbd10b57c5f1a49e94804ca9c7c2ac5d27bfcf16910f06ccc1c97b8a1b22"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bone_china",
+   "title": "Bone china",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:05.113Z",
+   "snapshot": "72182740e37c48c27f159db1ebe10e6a0c1de234d8cd982f74d9055e71c65828"
+  },
+  "s5": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/shellac",
+   "title": "shellac – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:56.065Z",
+   "snapshot": "5e8a821d5873c857e4f51c69a17e15dc220e349ee269d1155cfba21a4aaae9b2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Natural_rubber",
+   "title": "Natural rubber – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:58.266Z",
+   "snapshot": "01e683b22317b78bf01c7d14e67a951baf5cfec3e8de8dc07aa061a1c4e4163e"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/rubber",
+   "title": "Rubber – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:56.745Z",
+   "snapshot": "e3caf13ba8a9bf75b277508ca3a470b8967be3370b624a531dd306df6332b7db"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/silk",
+   "title": "Silk – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:57.676Z",
+   "snapshot": "f94d7c40996b441055f68917d7f4cb9ea57f8fbfd6a35931dca6a1fba146eaa7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the secretions of the lac insect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the latex of the rubber tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the cocoons of the silkworm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bone ash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-159"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:33.398Z",
+   "target": "f05516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the secretions of the lac insect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the secretions of the lac insect”, “Ausscheidungen der Lackschildlaus”, “выделения лакового червеца”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:33.398Z",
+   "target": "f05517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the latex of the rubber tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the latex of the rubber tree”, “Milchsaft des Kautschukbaums”, “латекс каучукового дерева”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:33.398Z",
+   "target": "f05519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the cocoons of the silkworm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the cocoons of the silkworm”, “Kokons der Seidenraupe”, “коконы тутового шелкопряда”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:33.398Z",
+   "target": "f25958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bone china is a type of vitreous, translucent pottery, the raw materials for which include bone ash, feldspathic material and kaolin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bone ash” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:05:11Z",
+   "target": "f05516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a resin secreted by the female lac bug on trees in the forests of India and Thailand.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:05:12Z",
+   "target": "f05516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "a substance obtained from an insect that is melted into small thin pieces and used for making varnish",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:05:15Z",
+   "target": "f05517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Currently, rubber is harvested mainly in the form of the latex from the Pará rubber tree (Hevea brasiliensis) or others.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:05:17Z",
+   "target": "f05517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a cream to dark brown elastic material obtained by coagulating and drying the latex from certain plants, esp the tree Hevea brasiliensis",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:05:18Z",
+   "target": "f05519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The best-known silk is obtained from the cocoons of the larvae of the mulberry silkworm Bombyx mori",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:05:21Z",
+   "target": "f05519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the soft, lustrous fiber obtained as a filament from the cocoon of the silkworm.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:10.426Z",
+   "target": "f05516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a resin secreted by the female lac bug on trees in the forests of India and Thailand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:10.426Z",
+   "target": "f05516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "a substance obtained from an insect that is melted into small thin pieces and used for making varnish",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:10.426Z",
+   "target": "f05517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Currently, rubber is harvested mainly in the form of the latex from the Pará rubber tree (Hevea brasiliensis) or others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:10.426Z",
+   "target": "f05517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a cream to dark brown elastic material obtained by coagulating and drying the latex from certain plants, esp the tree Hevea brasiliensis",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:10.426Z",
+   "target": "f05519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The best-known silk is obtained from the cocoons of the larvae of the mulberry silkworm Bombyx mori",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:10.426Z",
+   "target": "f05519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the soft, lustrous fiber obtained as a filament from the cocoon of the silkworm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

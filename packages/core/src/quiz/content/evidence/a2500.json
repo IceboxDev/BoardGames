@@ -1,0 +1,265 @@
+{
+ "article": "a2500",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Koi",
+   "title": "Koi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:47.007Z",
+   "snapshot": "1123060e9b1eab088a39d0b399832ee8ae6988422a35a15cbb9584283826a75d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Koi",
+   "title": "Koi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:50.709Z",
+   "snapshot": "eb16bfbeb5823701b69d3655022b3f14bcb4bf3c7c10baf58b726fd1ff75230f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Goldfish",
+   "title": "Goldfish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:51.619Z",
+   "snapshot": "2f01ab6e8f5aadfbb7d39499421860d2784b445c0738d3a19012362a4d9162b5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Koi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nishikigoi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Niigata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Amur carp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:30.008Z",
+   "target": "f13265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Koi ist die japanische Bezeichnung für „Karpfen“ und meint außerhalb Japans in der Regel Nishikigoi (japanisch 錦鯉, wörtlich „Brokatkarpfen“), farbenprächtige Zierkarpfen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Koi” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:30.008Z",
+   "target": "f13266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Koi (Japanese: 鯉; Japanese: [koꜜi], literally 'carp'), or more specifically nishikigoi (錦鯉; Japanese: [ɲiɕi̥kiꜜɡoi], literally 'brocaded carp'), are colored varieties of carp (Cyprinus sp.) that are kept for decorative purposes in outdoor koi ponds or water gardens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nishikigoi” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:30.008Z",
+   "target": "f13267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "There are many varieties of ornamental koi, originating from breeding that began in Niigata, Japan, in the early 19th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Niigata” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:30.008Z",
+   "target": "f13268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Amur carp (Cyprinus rubrofuscus) is a member of the cyprinid family species complex native to East Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amur carp” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:30.008Z",
+   "target": "f13269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Various carp species were originally domesticated in China, where they were used primarily for consumption.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:30.008Z",
+   "target": "f13269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Native to China, the goldfish is a relatively small member of the genus Carassius (which also includes the Prussian carp and the crucian carp).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s3"
+  }
+ ]
+}

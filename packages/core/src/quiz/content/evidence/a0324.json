@@ -1,0 +1,289 @@
+{
+ "article": "a0324",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Napster",
+   "title": "Napster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:08.404Z",
+   "snapshot": "85b0ca8a72c56c2e2344a50c016ce93419072aac8f0a8f362f6007882c7f57f5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Megaupload",
+   "title": "Megaupload – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:10.510Z",
+   "snapshot": "70dee78a4f8d0d2fd1df0ebdf767c1b7dd1d5255eb69e38f018fb196c3fa1fc6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Pirate_Bay",
+   "title": "The Pirate Bay – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:10.515Z",
+   "snapshot": "41befcdd5401e2eef4e8c5b4db00d2d1a66d4c1b5787a4101a3758698a25350a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/LimeWire",
+   "title": "LimeWire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:11.412Z",
+   "snapshot": "5e4b1667153df2e121a805f341300236a0de2092d8a53d48fd52025f037d63f3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spotify",
+   "title": "Spotify – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:36.694Z",
+   "snapshot": "df0a38e9280cbf93c146fe7230394455619d22119aca6af1fca47a8c9ac15b53"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Spotify",
+   "title": "Spotify",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:12.236Z",
+   "snapshot": "2dab48ffedc9994a07814f31d8aacdbae250f9c9a783bced6e26fe5485071bb9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Napster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Megaupload",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Pirate Bay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "LimeWire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spotify",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Spotify",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-093"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:30.085Z",
+   "target": "f01616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Napster was a proprietary peer-to-peer file sharing application primarily associated with the distribution of digital audio files such as MP3s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Napster” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:30.085Z",
+   "target": "f01617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Megaupload Ltd was a Hong Kong–based online company established in 2005 that operated from 2005 to 2012 providing online services related to file storage and viewing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Megaupload” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:30.085Z",
+   "target": "f01618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Pirate Bay, commonly abbreviated as TPB, is a free searchable online index of movies, music, video games, pornography and software.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Pirate Bay” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:30.085Z",
+   "target": "f01619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "LimeWire is a free peer-to-peer file sharing client for Windows, Mac OS X, Linux, and Solaris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LimeWire” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:30.085Z",
+   "target": "f01620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spotify is a Swedish freemium music streaming service provider founded in April 2006 by Daniel Ek and Martin Lorentzon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spotify” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:30.085Z",
+   "target": "f01620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Spotify (aus englisch to spot  ‚entdecken‘ und to identify  ‚identifizieren‘) ist ein börsennotiertes Unternehmen mit Sitz in Luxemburg und operativer Hauptzentrale in Stockholm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spotify” is on the snapshot of s6"
+  }
+ ]
+}

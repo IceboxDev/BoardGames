@@ -1,0 +1,333 @@
+{
+ "article": "a1774",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Charta_der_Regional-_oder_Minderheitensprachen",
+   "title": "Europäische Charta der Regional- oder Minderheitensprachen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:21:35.789Z",
+   "snapshot": "8dea2c79c93ed2f4e7d34b9077ec04b78bb2e04dad4223cbfc5eb0c0dac8d8f5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sprachen_in_der_Schweiz",
+   "title": "Sprachen in der Schweiz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:21:37.595Z",
+   "snapshot": "25f16ba5c66f66bfccd8cf19bf9eb95ea1fe784f3d6b4f5e7f747b1e262fbb07"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Switzerland",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:38.551Z",
+   "snapshot": "3dc7de470deca11f2959a1332923de2a5539bb56a7dbba6ef30e1ebc21604931"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Luxembourg",
+   "title": "Languages of Luxembourg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:39.473Z",
+   "snapshot": "c3d8d95eed2096350b604904ee1935d7939eecb5de464a89ca46df940385ff45"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/R%C3%B6stigraben",
+   "title": "Röstigraben – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:40.389Z",
+   "snapshot": "0b9e2c35ca1a32e8a0850f998e360ed6a89275f647de30806388268dd2ab4e46"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/German-speaking_Community_of_Belgium",
+   "title": "German-speaking Community of Belgium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:41.417Z",
+   "snapshot": "f692c9957988e80cffd8c8acf13b95943548a843fdef395cc2d0f03b36fd9307"
+  },
+  "s7": {
+   "url": "https://www.minderheitensekretariat.de/",
+   "title": "Minderheitensekretariat",
+   "publisher": "Minderheitensekretariat der vier autochthonen nationalen Minderheiten und Volksgruppen Deutschlands",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:20.383Z",
+   "snapshot": "57a8b5846b34f695b1f0d67bc06430d70d3dcfd25f607f9ee3e5d1fd26947f29"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dänisch, Friesisch und Sorbisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Deutsch, Französisch, Italienisch und Rätoromanisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-262"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "German, French, Italian and Romansh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luxembourgish, French and German",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Röstigraben",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f21581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eupen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:20.307Z",
+   "target": "f08866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dänisch, Friesisch und Sorbisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dänisch, Friesisch und Sorbisch”, “Danish, Frisian and Sorbian”, “датский, фризский и лужицкий”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:20.307Z",
+   "target": "f08867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Landessprachen und damit die Schriftsprachen der alteingesessenen Bevölkerung der Schweiz sind Deutsch, Französisch, Italienisch und Rätoromanisch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.307Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsch, Französisch, Italienisch und Rätoromanisch” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:20.307Z",
+   "target": "f08867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "German, French, Italian and Romansh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“German, French, Italian and Romansh”, “Deutsch, Französisch, Italienisch und Rätoromanisch”, “немецкий, французский, итальянский и ретороманский”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:20.307Z",
+   "target": "f08869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Furthermore, this law recognizes the three languages of Luxembourg (Luxembourgish, French and German) as administrative languages.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.307Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luxembourgish, French and German” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:20.307Z",
+   "target": "f21580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Röstigraben (German pronunciation: [ˈrøːstiˌɡraːbən]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.307Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Röstigraben” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:20.307Z",
+   "target": "f21581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The community comprises nine municipalities in Liège Province, Wallonia, within the Eupen-Malmedy region in Eastern Belgium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.307Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eupen” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:42Z",
+   "target": "f08866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In Deutschland leben vier anerkannte autochthone, nationale Minderheiten und Volksgruppen: die dänische Minderheit, die friesische Volksgruppe, die deutschen Sinti und Roma und die Lausitzer Sorben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Romani (Sinti and Roma) and the regional language Low German are also recognised; the notes accept them."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:44:46Z",
+   "target": "f08866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Minderheitensprache in Brandenburg bzw. Sachsen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Table row for Sorbian (Lower/Upper) under Germany; the same table lists Danish and North/Sater Frisian."
+  }
+ ]
+}

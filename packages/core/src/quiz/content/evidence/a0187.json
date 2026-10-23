@@ -1,0 +1,242 @@
+{
+ "article": "a0187",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Merz",
+   "title": "Friedrich Merz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:18.804Z",
+   "snapshot": "af7526a9ea03e3fefe441ae4bf4e209b712b8a1e0806b4db397744ef205fe0c4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bundeskanzler_(Deutschland)",
+   "title": "Bundeskanzler (Deutschland)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:19.740Z",
+   "snapshot": "3905a02f7751cc7f15b84bf317d56eb37ae914e2a597074dfcf851a02d367d7a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Regierungskrise_in_Th%C3%BCringen_2020",
+   "title": "Regierungskrise in Thüringen 2020 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:23.150Z",
+   "snapshot": "ab24e52b867ea6a27e742931f8d7c62db99e83840eef79d2bff133736b34dea0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ursula_von_der_Leyen",
+   "title": "Ursula von der Leyen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:49.134Z",
+   "snapshot": "4b8e0ca7ecfdf58b8c59a5eeaa7d5715f9ba1f0594c59c8407fdbd3c7d1e64bf"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Pr%C3%A4sident_des_Bundesrates_(Deutschland)",
+   "title": "Präsident des Bundesrates (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:21.590Z",
+   "snapshot": "d89ef40104dfb4460fc9bb7b0a67830915431ecaeee05b4aa41c0ab0fb32aaeb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Bundestag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Bundestag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-371"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Landtag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The European Parliament",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Bundesrat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:06.870Z",
+   "target": "f00931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Daraufhin beschloss der Bundestag mit den Stimmen aller Abgeordneten und Fraktionen, von der Geschäftsordnung abzuweichen und einen zweiten Wahlgang am selben Tag durchzuführen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Bundestag” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:06.870Z",
+   "target": "f00931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vor Ablauf der Legislaturperiode kann der Bundeskanzler nur durch ein konstruktives Misstrauensvotum abgelöst werden, indem der Bundestag mit absoluter Mehrheit einen Nachfolger wählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Bundestag” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:06.870Z",
+   "target": "f00933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Landtag solle seine Selbstauflösung beschließen und zugleich Christine Lieberknecht (CDU) für die bis zu den Neuwahlen verbleibende Legislaturperiode zur Ministerpräsidentin wählen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Landtag” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:06.870Z",
+   "target": "f00934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "She was then elected by the European Parliament on 16 July; she took office on 1 December, becoming the first woman to hold the office.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The European Parliament” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:06.870Z",
+   "target": "f00935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nach Artikel 52 Absatz 1 des Grundgesetzes für die Bundesrepublik Deutschland wählt der Bundesrat seinen Präsidenten für die Dauer eines Jahres.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Bundesrat” is on the snapshot of s5"
+  }
+ ]
+}

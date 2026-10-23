@@ -176,7 +176,7 @@ describe("buildTree", () => {
     expect(movesAt(tree, "")).toEqual(["e4:played", "d4:played"]);
   });
 
-  it("counts a move reached by transposition as played", async () => {
+  it("counts a move reached by transposition as played, the game following from there", async () => {
     const games = [game("t1", "d4 Nf6 c4 e6"), game("t2", "c4 Nf6 d4 g6")];
     const tree = await buildTree(
       PositionIndex.build(games),
@@ -191,8 +191,32 @@ describe("buildTree", () => {
       node?.moves.filter((m) => m.source === "played").map((m) => [m.san, m.games, m.following]),
     ).toEqual([
       ["e6", 1, 1],
-      ["g6", 1, 0],
+      // t2 left at 1.c4 and came back by transposition: it follows again.
+      ["g6", 1, 1],
     ]);
+  });
+
+  it("grows a line your games reached by another move order, past where they left the tree", async () => {
+    const games = [
+      game("main", "e4 e5 Nf3 Nc6 Bb5"),
+      // Leaves at 2.Bb5 (the tree plays 2.Nf3), then reaches 1.e4 e5 2.Nf3 Nc6 3.Bb5 by
+      // another order and goes on with 3…a6 4.Ba4 Nf6.
+      game("transposed", "e4 Nc6 Bb5 e5 Nf3 a6 Ba4 Nf6"),
+    ];
+    const tree = await buildTree(
+      PositionIndex.build(games),
+      "w",
+      settings({ handpickMoves: 0 }),
+      null,
+      fakeProviders([], ["e2e4", "g1f3", "f1b5", "b5a4", ...PREFERRED]),
+    );
+    const ruy = tree.nodes[keyAfter("e4 e5 Nf3 Nc6 Bb5")];
+    expect(ruy?.moves.find((m) => m.san === "a6")?.following).toBe(1);
+    // Your answer to 3…a6 and the reply your game met there are built, on a game line.
+    expect(movesAt(tree, "e4 e5 Nf3 Nc6 Bb5 a6")).toEqual(["Ba4:engine"]);
+    const after = tree.nodes[keyAfter("e4 e5 Nf3 Nc6 Bb5 a6 Ba4")];
+    expect(after?.extension).toBeUndefined();
+    expect(after?.moves.find((m) => m.san === "Nf6")?.following).toBe(1);
   });
 
   it("changing a move prunes the old line", async () => {

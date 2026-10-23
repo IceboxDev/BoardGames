@@ -1,0 +1,412 @@
+{
+ "article": "a2038",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Serengeti_National_Park",
+   "title": "Serengeti National Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:34.287Z",
+   "snapshot": "8cc4ce44203511b13edeb1df497329a5f495814e46f8e3d0d454afa93f55f7e9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ngorongoro_Conservation_Area",
+   "title": "Ngorongoro Conservation Area – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:35.291Z",
+   "snapshot": "c4bd6c5addacb406821bb93c3da2886dd4301c71d359bf92abf21f474efa1214"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Kilimanjaro",
+   "title": "Mount Kilimanjaro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:36.392Z",
+   "snapshot": "ab5be4b306f9a9847a619ed99e578587e60f1596324426a44af735114dc3e316"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maasai_Mara",
+   "title": "Maasai Mara – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:37.364Z",
+   "snapshot": "bff9de1a3d05801c09ef948f2083b30d1f844f9f54ce62f45413912db584552e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kruger_National_Park",
+   "title": "Kruger National Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:38.363Z",
+   "snapshot": "5de4051d56bc4fa8f26854056a4cb463ae06404b26456e68980a42e2ae2d449d"
+  },
+  "s6": {
+   "url": "https://whc.unesco.org/en/list/403/",
+   "title": "Kilimanjaro National Park – UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:07:07Z"
+  },
+  "s7": {
+   "url": "https://sahistory.org.za/node/66068",
+   "title": "Kruger National Park – South African History Online",
+   "publisher": "South African History Online",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:11.129Z",
+   "snapshot": "2378be834d5f9aeb47280adb743eee89ad07ba8b3fd6c063d17306ae6dad94cb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Serengeti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ngorongoro Crater",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kilimanjaro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maasai Mara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kruger National Park",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:10.944Z",
+   "target": "f10186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Serengeti National Park is a large national park in northern Tanzania that stretches over 14,763 km2 (5,700 sq mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Serengeti” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:10.944Z",
+   "target": "f10187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The area is named after Ngorongoro Crater, a large volcanic caldera within the area.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ngorongoro Crater” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:10.944Z",
+   "target": "f10188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mount Kilimanjaro () is a large dormant stratovolcano in Tanzania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kilimanjaro” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:10.944Z",
+   "target": "f10189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maasai Mara, sometimes also spelt Masai Mara and locally known simply as the Mara, is a large national game reserve in Narok County, Kenya, contiguous with the Serengeti National Park in Tanzania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maasai Mara” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:10.944Z",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kruger National Park (Afrikaans: [ˈkry.(j)ər]) is a national park in South Africa covering an area of 19,623 km2 (7,576 sq mi) in the provinces of Limpopo and Mpumalanga in the country's northeast.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kruger National Park” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:07:07Z",
+   "target": "f10188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "At 5,895 m, Kilimanjaro is the highest point in Africa.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "The same page gives the date of inscription as 1987, matching the wording."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:07:10Z",
+   "target": "f10188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the highest mountain in Africa and the highest free-standing mountain above sea level in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:07:13Z",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "it became South Africa's first national park in 1926",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:07:14Z",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The KNP is the largest and oldest park administered by South African National Parks (SANParks).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:57.331Z",
+   "target": "f10188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the highest mountain in Africa and the highest free-standing mountain above sea level in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:57.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:57.331Z",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "it became South Africa's first national park in 1926",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:57.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:57.331Z",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The KNP is the largest and oldest park administered by South African National Parks (SANParks).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:57.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:57.331Z",
+   "target": "f10190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Kruger National Park | South African History Online",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:57.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kruger National Park” is on the snapshot of s7"
+  }
+ ]
+}

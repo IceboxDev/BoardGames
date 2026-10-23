@@ -1,0 +1,242 @@
+{
+ "article": "a0909",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Red_ribbon",
+   "title": "Red ribbon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:22.283Z",
+   "snapshot": "5a2f536c98709ec4ec138199273fc078c8027c1534fbd916770c4028db43589b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pink_ribbon",
+   "title": "Pink ribbon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:23.300Z",
+   "snapshot": "3aea7ec06ffefea842fb9da7d3278f81d00062b1c6d4dd3fa27f1b59ba1199f1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Emblems_of_the_International_Red_Cross_and_Red_Crescent_Movement",
+   "title": "Emblems of the International Red Cross and Red Crescent Movement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:24.403Z",
+   "snapshot": "ba18caaddcdcb970ea0ab2d148d4d88e426d405561bb97c11e13bafc4b2dd343"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rod_of_Asclepius",
+   "title": "Rod of Asclepius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:25.279Z",
+   "snapshot": "613b6895d6328bdb24a35d9bf1f046dd094b10c5bbcc51762e715e256c4315b0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Star_of_Life",
+   "title": "Star of Life – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:26.257Z",
+   "snapshot": "376a06533da8886b7df359351cc5a921cf369da839e30d572992a8935baea236"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "red ribbon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pink ribbon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Crescent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rod of Asclepius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Star of Life",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:03.311Z",
+   "target": "f04541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The red ribbon, as an awareness ribbon, is used as the symbol for the solidarity of people living with HIV/AIDS, and for the awareness and prevention of drug abuse and drunk driving.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red ribbon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:03.311Z",
+   "target": "f04542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The pink ribbon is an international symbol of breast cancer awareness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pink ribbon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:03.311Z",
+   "target": "f04543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emblems of the International Red Cross and Red Crescent Movement",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red Crescent” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:03.311Z",
+   "target": "f04544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Rod of Asclepius (⚕; , Ancient Greek: Ῥάβδος τοῦ Ἀσκληπιοῦ, Rhábdos toû Asklēpioû, sometimes also spelled Asklepios), also known as the Staff of Aesculapius, is a serpent-entwined rod wielded by the Greek god Asclepius, a deity in Greek mythology associated with healing and medicine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rod of Asclepius” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:03.311Z",
+   "target": "f04545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Star of Life is a symbol used to identify emergency medical services.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Star of Life” is on the snapshot of s5"
+  }
+ ]
+}

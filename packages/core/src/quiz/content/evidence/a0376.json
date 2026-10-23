@@ -1,0 +1,500 @@
+{
+ "article": "a0376",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)",
+   "title": "Gone with the Wind (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:48.090Z",
+   "snapshot": "50b7bae7de2c8388669d6981d272a28511398cf03843abd8e25d8b64cbbdb37b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Wizard_of_Oz",
+   "title": "The Wizard of Oz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:49.226Z",
+   "snapshot": "6c0da1da92f4ae428cd545a0455ec08bb39852727265f52cae81b31f784b8173"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:50.087Z",
+   "snapshot": "6c0da1da92f4ae428cd545a0455ec08bb39852727265f52cae81b31f784b8173"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jaws_(film)",
+   "title": "Jaws (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:51.144Z",
+   "snapshot": "b271e39469ae1dee4aa6db799dfbe51f6251008cc95d4d7bfe1a9d1aa8c3fb67"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Godfather",
+   "title": "The Godfather – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:25.310Z",
+   "snapshot": "45c0145f83fb312c311368ec0879a53231324353cbba5f8c1f065359c246eee3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jurassic_Park_(novel)",
+   "title": "Jurassic Park (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:51.965Z",
+   "snapshot": "cb6022dba4b1350b4a0a43cb1124123c616c856872c62b08707fb3aca1283e9c"
+  },
+  "s7": {
+   "url": "https://www.guinnessworldrecords.com/world-records/highest-box-office-film-gross-inflation-adjusted",
+   "title": "Highest-grossing film at the global box office (inflation-adjusted)",
+   "publisher": "Guinness World Records",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:42.960Z",
+   "snapshot": "b95c518ad0d108760a2b9196576b80953c2f4e3e073194f70a88a7bcff9f2a94"
+  },
+  "s8": {
+   "url": "https://www.boxofficemojo.com/chart/top_lifetime_gross_adjusted/?adjust_gross_to=2019",
+   "title": "Top Lifetime Adjusted Grosses",
+   "publisher": "Box Office Mojo",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:44.130Z",
+   "snapshot": "c781e49ca955240038f8d3fb0e12b495bc0fbc1d3b338171916bf45a5e3e7ef4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gone with the Wind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wizard of Oz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wizard of Oz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jaws",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-129"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Godfather",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Godfather",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f01880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jurassic Park",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gone with the Wind is a 1939 American epic historical romance film adapted from the 1936 novel by Margaret Mitchell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gone with the Wind” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f01877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wizard of Oz is a 1939 American musical fantasy film produced by Metro-Goldwyn-Mayer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Wizard of Oz” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f01877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wizard of Oz is a 1939 American musical fantasy film produced by Metro-Goldwyn-Mayer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Wizard of Oz” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f25100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jaws is a 1975 American  thriller film directed by Steven Spielberg, based on the 1974 novel by Peter Benchley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jaws” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f01879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The outsized success of The Godfather in 1972 had sparked a trend toward wider releases, but even that film had debuted in just five theaters, before going wide in its second weekend.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Godfather” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f01879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Godfather is a 1972 American epic gangster film directed by Francis Ford Coppola, who co-wrote the screenplay with Mario Puzo based on Puzo's best-selling 1969 novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Godfather” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:38.261Z",
+   "target": "f01880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jurassic Park is a 1990 science fiction novel written by Michael Crichton; it is a cautionary tale about genetic engineering that presents the collapse of a zoological park which showcases genetically recreated dinosaurs to illustrate the mathematical concept of chaos theory and its real-world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jurassic Park” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:40:32Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The highest grossing film at the global box office, when adjusted for inflation, is not Avatar, or indeed any of the big-budget superhero movies of the last 10 years, it is the 1939 historical epic Gone with the Wind.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:40:35Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Rank Title Adj. Lifetime Gross Lifetime Gross Est. Num Tickets Year 1 Gone with the Wind",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23",
+   "note": "domestic (US) adjusted ranking"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:40:37Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Guinness World Records arrived at a figure of $3.44 billion in 2014 making it the most successful film in cinema history.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:00.381Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The highest grossing film at the global box office, when adjusted for inflation, is not Avatar, or indeed any of the big-budget superhero movies of the last 10 years, it is the 1939 historical epic Gone with the Wind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:00.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:00.381Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Rank Title Adj. Lifetime Gross Lifetime Gross Est. Num Tickets Year 1 Gone with the Wind",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:00.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:00.381Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Guinness World Records arrived at a figure of $3.44 billion in 2014 making it the most successful film in cinema history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:00.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:00.381Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Although Gone with the Wind (USA 1939) took just US$393.4 million (then £88 million) at the international box office, in an inflation-adjusted list it comes top with a total gross of $3.44 billion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:00.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gone with the Wind” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:00.381Z",
+   "target": "f01876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1 Gone with the Wind $1,850,581,586 $200,882,193 202,286,200 1939",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:00.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gone with the Wind” is on the snapshot of s8"
+  }
+ ]
+}

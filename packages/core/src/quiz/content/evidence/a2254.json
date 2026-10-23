@@ -1,0 +1,384 @@
+{
+ "article": "a2254",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Axel_Hacke",
+   "title": "Axel Hacke",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:52.044Z",
+   "snapshot": "2b8d4de953a399f67fbec7f0b0dc0cb4d1666b368891e64eae641d80fd1990de"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Zeit",
+   "title": "Die Zeit",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:53.160Z",
+   "snapshot": "d4fce73e019813981ccf3a897e3fef1210f37bc25372c938bfa478c2de0f67b5"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wir_sind_Papst!",
+   "title": "Wir sind Papst!",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:53.939Z",
+   "snapshot": "c00c532204900f5d8865b601dd405c51fe39a6a120ee2910476a46cc306dcf75"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/S%C3%BCddeutsche_Zeitung",
+   "title": "Süddeutsche Zeitung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:58.034Z",
+   "snapshot": "5745d35e5c8b4af29776e65fc64e64e25e34b7d8b4564ed52857a4b7d22277bc"
+  },
+  "s5": {
+   "url": "https://www.t-online.de/unterhaltung/stars/id_89312716/genauer-bobachter-kuehlschraenke-und-maechtige-narren-axel-hacke-wird-65.html",
+   "title": "Genauer Beobachter: Kühlschränke und mächtige Narren – Axel Hacke wird 65",
+   "publisher": "t-online / dpa",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:43.538Z",
+   "snapshot": "5ea917a764eea9196ef8e2ca0d19a465951559c3079a4d8dd6a21f94178d0179"
+  },
+  "s6": {
+   "url": "https://www.zeit.de/1946/19/unser-wappen",
+   "title": "Unser Wappen",
+   "publisher": "DIE ZEIT",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:49:55Z",
+   "archiveUrl": "https://web.archive.org/web/20260815130317/https://www.zeit.de/1946/19/unser-wappen"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Süddeutsche Zeitung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bremen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-060"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wir sind Papst!",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-268"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gerd Bucerius",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Streiflicht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:43.819Z",
+   "target": "f11552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Süddeutsche Zeitung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Süddeutsche Zeitung”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:43.819Z",
+   "target": "f11553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bremen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bremen”, “Бремен”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:43.819Z",
+   "target": "f11554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "„Wir sind Papst!“ war eine Schlagzeile der Boulevardzeitung Bild am 20.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wir sind Papst!” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:43.819Z",
+   "target": "f11555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die ersten Herausgeber der Zeit waren Gerd Bucerius, Lovis H.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerd Bucerius” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:43.819Z",
+   "target": "f11557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neben der Glosse Streiflicht oben auf der Titelseite ist die „Seite 3“ ein besonderes Merkmal, in der eigenen Schreibweise DIE SEITE DREI.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Streiflicht” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:15:40Z",
+   "target": "f11552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bereits 1990 veröffentlichte Hacke im SZ-Magazin der Süddeutschen Zeitung (das im selben Jahr gegründet worden war) seine erste Kolumne Der kleine Erziehungsberater",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:15:43Z",
+   "target": "f11552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "wurde er mit dem Erscheinen des \"SZ-Magazins\" im Jahr 1990 durch seine wöchentlichen Kolumnen schnell einer wachsenden Fangemeinde bekannt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms his weekly SZ-Magazin columns from 1990; does not name the column"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:16:35Z",
+   "target": "f11553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "So zeigt die Titelzeile des Blattes seit ihrer 19. Ausgabe vom 27. Juni 1946 mit Erlaubnis des Bremer Bürgermeisters Wilhelm Kaisen stattdessen den Bremer Schlüssel und die goldene Krone des Bremer Stadtwappens.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:49:55Z",
+   "target": "f11553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "an Stelle des Hamburger Staatswappens findet er den Schlüssel der Stadt Bremen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "the paper's own notice in issue 19/1946; zeit.de blocks bots, read via the Wayback capture"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:29.895Z",
+   "target": "f11552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bereits 1990 veröffentlichte Hacke im SZ-Magazin der Süddeutschen Zeitung (das im selben Jahr gegründet worden war) seine erste Kolumne Der kleine Erziehungsberater",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:29.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:29.895Z",
+   "target": "f11552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "wurde er mit dem Erscheinen des \"SZ-Magazins\" im Jahr 1990 durch seine wöchentlichen Kolumnen schnell einer wachsenden Fangemeinde bekannt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:29.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:29.895Z",
+   "target": "f11553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "So zeigt die Titelzeile des Blattes seit ihrer 19. Ausgabe vom 27. Juni 1946 mit Erlaubnis des Bremer Bürgermeisters Wilhelm Kaisen stattdessen den Bremer Schlüssel und die goldene Krone des Bremer Stadtwappens.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:29.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  }
+ ]
+}

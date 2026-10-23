@@ -1,0 +1,242 @@
+{
+ "article": "a0736",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/67th_Academy_Awards",
+   "title": "67th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:24.142Z",
+   "snapshot": "0bf621f2cfd90dbb4cdfae9c90e8de44b8d4fa13f9105c481590a90ffc617a7c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pulp_Fiction",
+   "title": "Pulp Fiction – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:24.278Z",
+   "snapshot": "886ecfd15713f66fbe03be2314872b2f5ca8fbf6e28910b8cc1d5f3f8d7a4838"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Casablanca_(film)",
+   "title": "Casablanca (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:45.308Z",
+   "snapshot": "0c5b97e05913b1426fee3fa9679465fc10664b4c188fd81c4facb850ae4f52c9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:49.613Z",
+   "snapshot": "c7e5b70ff287673497568346202afdc472cd2b96dc2c59b1a233814c09a57fdc"
+  },
+  "s5": {
+   "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=casablanca",
+   "title": "Casablanca (1942) Movie Script",
+   "publisher": "Springfield! Springfield!",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:19.362Z",
+   "snapshot": "d14c2d4471dc23d560d54105747786b1efa80129501842d47c2ca89262790e17"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pulp Fiction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f21060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vincent Vega",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f21061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ezekiel 25:17",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "four times",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:36.497Z",
+   "target": "f03676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "and The Adventures of Priscilla, Queen of the Desert; Blue Sky, Bob's Birthday, Bullets Over Broadway, Burnt by the Sun, Franz Kafka's It's a Wonderful Life, Legends of the Fall, The Madness of King George, Maya Lin: A Strong Clear Vision, Pulp Fiction, A Time for Justice, and Trevor with one.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pulp Fiction” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:36.497Z",
+   "target": "f21060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Prelude to 'Vincent Vega and Marsellus Wallace's Wife'\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vincent Vega” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:36.497Z",
+   "target": "f21061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nick Fury, presumed dead, visits his own gravestone, on which, below Fury's name is inscribed \"The path of the righteous man ...\" Ezekiel 25:17.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ezekiel 25:17” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:36.497Z",
+   "target": "f21063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bogart's line \"Here's looking at you, kid\", said four times, was not in the draft screenplays, but has been attributed to a comment he made to Bergman as she played poker with her English coach and hairdresser between takes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “four times” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:42:21Z",
+   "target": "f21063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Here's looking at you, kid.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23",
+   "note": "the film transcript has the line exactly four times, every time Rick to Ilsa (two in the Paris flashback, one in the cafe, one at the airport)"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:54:05.755Z",
+   "target": "f21063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Here's looking at you, kid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:05.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  }
+ ]
+}

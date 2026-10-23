@@ -1,0 +1,195 @@
+{
+ "article": "a0832",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Thelma_%26_Louise",
+   "title": "Thelma & Louise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:13.467Z",
+   "snapshot": "eabb05d6fedf59908fb50ef7384f2f985e62ea03d0736730229ad96a333920eb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/71st_Academy_Awards",
+   "title": "71st Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:14.419Z",
+   "snapshot": "536d4a8bd159d9b3e39de9af7e4420f4db2848f8ce54100145c1f08957544601"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+   "title": "Titanic (1997 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:49.613Z",
+   "snapshot": "c7e5b70ff287673497568346202afdc472cd2b96dc2c59b1a233814c09a57fdc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kill_Bill_%E2%80%93_Volume_1",
+   "title": "Kill Bill – Volume 1",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:11.713Z",
+   "snapshot": "3c7f249a18b58d91dbdeb0ecf1d2589b2c1867bef4fd40f4a56a7196709b8c6b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ridley Scott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Steven Spielberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "James Cameron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kill Bill",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-194"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:51.639Z",
+   "target": "f04156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thelma & Louise is a 1991 American buddy comedy-drama film directed by Ridley Scott and written by Callie Khouri.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ridley Scott” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:51.639Z",
+   "target": "f04157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "After the In Memoriam segment was shown, host Goldberg and director Steven Spielberg eulogized film critic Gene Siskel and director Stanley Kubrick respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steven Spielberg” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:51.639Z",
+   "target": "f04158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Titanic is a 1997 American epic historical romance film written and directed by James Cameron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Cameron” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:51.639Z",
+   "target": "f11443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kill Bill – Volume 1 ist der erste Teil eines zweiteiligen Actionfilms mit Uma Thurman in der Hauptrolle.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kill Bill” is on the snapshot of s4"
+  }
+ ]
+}

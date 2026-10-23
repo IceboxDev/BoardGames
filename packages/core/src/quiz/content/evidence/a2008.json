@@ -1,0 +1,381 @@
+{
+ "article": "a2008",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Battleship_Potemkin",
+   "title": "Battleship Potemkin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:47.304Z",
+   "snapshot": "120b71d605e1a249751e5a7e3108cd9070e7d5fd3d520d31a7fe41ae82c24c24"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/USS_Indianapolis_(CA-35)",
+   "title": "USS Indianapolis (CA-35) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:48.473Z",
+   "snapshot": "092bd157d867d288d35399bdd516ddb85d4bcfb5fdcc3e3741704e354cac06bb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alien_(film)",
+   "title": "Alien (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:49.467Z",
+   "snapshot": "5bfe2af8121b5e3eccde080d34be664bc376be34c0401c1e53aecfab10e33485"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Alien_%E2%80%93_Das_unheimliche_Wesen_aus_einer_fremden_Welt",
+   "title": "Alien – Das unheimliche Wesen aus einer fremden Welt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:47.793Z",
+   "snapshot": "c81697147e4c23600cc03216ea1ac3bac1c975f7579927c3c030b47545c251d3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/20,000_Leagues_Under_the_Sea_(1954_film)",
+   "title": "20,000 Leagues Under the Sea (1954 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:50.334Z",
+   "snapshot": "0919343b6f7355abe75e1b149ac98fee120ca2a2b85a17d8e55ef476b5af449c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moby_Dick_(1956_film)",
+   "title": "Moby Dick (1956 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:51.339Z",
+   "snapshot": "35f01a22b2b8bdb7e38cce63aadb10a7896533683e847c8153ba0eb7533791d8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Jaws_(film)",
+   "title": "Jaws (film) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:18:57Z"
+  },
+  "s8": {
+   "url": "https://www.mentalfloss.com/article/589579/story-of-orca-ii-jaws-movie-stunt-boat",
+   "title": "The Bizarre Tale of the 'Orca II,' the Stunt Boat from 'Jaws'",
+   "publisher": "Mental Floss",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:03.268Z",
+   "snapshot": "aa53b7ed5cb3e0d2b41f0d08ec5813257d93b284c1e25c954a156bd04a6077ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Potemkin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Orca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nostromo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nostromo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-114"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nautilus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pequod",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:04.704Z",
+   "target": "f10036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Battleship Potemkin is a 1925 Soviet silent epic film produced by Mosfilm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Potemkin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:04.704Z",
+   "target": "f10037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Orca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Orca”, “Орка”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:04.704Z",
+   "target": "f10038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The commercial space tug Nostromo is returning to Earth with a seven-member crew in stasis: captain Dallas, executive officer Kane, warrant officer Ripley, navigator Lambert, science officer Ash, and engineers Parker and Brett, along with the ship's cat, Jones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nostromo” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:04.704Z",
+   "target": "f10038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Raumschlepper Nostromo befindet sich auf dem Rückweg zur Erde, als er ein Funksignal von einem weitab vom Heimatkurs liegenden, scheinbar unbewohnten Himmelskörper bei Zeta2 Reticuli auffängt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nostromo” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:04.704Z",
+   "target": "f10039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The vessel's captain introduces himself as Captain Nemo, master of the Nautilus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nautilus” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:04.704Z",
+   "target": "f10040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The next morning, the two of them hire onto a whaling ship named Pequod, which is commanded by grim Captain Ahab, who is obsessed with hunting and killing a legendary white-skinned whale named Moby Dick, who was responsible for severing Ahab's left leg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pequod” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:18:57Z",
+   "target": "f10037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the three head out to sea on Quint's boat, the Orca, to hunt for the shark.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:19:00Z",
+   "target": "f10037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Often, those scenes would be centered around the Orca, the fictitious shark-hunting boat manned by salty seaman Quint (Robert Shaw).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:52.182Z",
+   "target": "f10037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Often, those scenes would be centered around the Orca, the fictitious shark-hunting boat manned by salty seaman Quint (Robert Shaw).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:52.182Z",
+   "target": "f10037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Bizarre Tale of the ‘Orca II,’ the Stunt Boat from ‘Jaws’",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Orca” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,589 @@
+{
+ "article": "a2507",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Seeotter",
+   "title": "Seeotter",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:10.980Z",
+   "snapshot": "67a3f4925c796e351ed548e5197f3f93d1078937a6fb06fac3466076478ea945"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Delfine",
+   "title": "Delfine",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:12.096Z",
+   "snapshot": "fbaba9bba3723f8ff9320c6b59d946b0c6a74d297f206b65fa6136c7bdc43687"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/In_the_Heart_of_the_Sea_(film)",
+   "title": "In the Heart of the Sea (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:13.643Z",
+   "snapshot": "434dd9aa3cbae2c371fba3628f1f40d22e5612a0d39747d339ef6e667b29ee2e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sperm_whale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:14.750Z",
+   "snapshot": "6589cc0a9256e6504ef65f70fde8606479103b115ce8cc4364b2679a157ae4e8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Narwhal",
+   "title": "Narwhal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:15.718Z",
+   "snapshot": "ba87a2fed09cdf30382c4123325dddfd1439a298c68611d4ed5e8e2f1d2ec437"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sea_otter",
+   "title": "Sea otter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:16.729Z",
+   "snapshot": "15572877b63cf1a8c13b8daff2ec0fa1249d11748236a281178965bce70377e6"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Orca",
+   "title": "Orca",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:17.852Z",
+   "snapshot": "855d3db3b2b81ef1ba649c28580e90e63711015c1f3c6a8882c08f0e293d0eb5"
+  },
+  "s8": {
+   "url": "https://animaldiversity.org/accounts/Delphinidae/",
+   "title": "Delphinidae (oceanic dolphins)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:47.672Z",
+   "snapshot": "5eba615731d0df6a1d2e072adcdae4c07f2cdaa5163b557a6cc6861f4ee2a6a7"
+  },
+  "s9": {
+   "url": "https://animaldiversity.org/accounts/Enhydra_lutris/",
+   "title": "Enhydra lutris (sea otter)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:48.671Z",
+   "snapshot": "2ce38e21a8563525149798e68a28047664171d93fbae8280095f78fb621ba3e0"
+  },
+  "s10": {
+   "url": "https://www.fisheries.noaa.gov/species/killer-whale",
+   "title": "Killer Whale",
+   "publisher": "NOAA Fisheries",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:47.121Z",
+   "snapshot": "be6ab869d3acba98b0b982fe24a5a42db17e7a786b96612df40300eac2a5889b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seeotter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schulen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-205"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sperm whales",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-147"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sperm whales",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 60"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "narwhal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "spermaceti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Their dense fur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 66; transcript pp-023"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oceanic dolphins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-067"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f13317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Seeotter, Kalan oder Meerotter (Enhydra lutris) ist eine Raubtierart aus der Unterfamilie der Otter (Lutrinae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seeotter” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f13318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Diese sogenannten Schulen können sich an Stellen mit viel Nahrung vorübergehend zu Ansammlungen von über 1000 Tieren zusammenschließen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schulen” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f13319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sperm whales",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sperm whales”, “Pottwale”, “кашалотовые”) on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f13319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sperm whales can live 70 years or more.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sperm whales” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f13321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The narwhal (Monodon monoceros) is a species of toothed whale native to the Arctic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “narwhal” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f13323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sperm whales' heads are filled with a waxy substance called \"spermaceti\" (sperm oil), from which the whale derives its name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:31.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “spermaceti” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f25357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Their dense fur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Their dense fur”, “Ihr dichtes Fell”, “густой мех”) on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:31.315Z",
+   "target": "f25776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oceanic dolphins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Oceanic dolphins”, “Delfine”, “дельфиновые”) on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:19:20Z",
+   "target": "f13318",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Many oceanic dolphins are social, living in groups called pods that range in size, depending on the species.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23",
+   "note": "in English \"pods\" is the usual term (\"schools\" also used); notes accept both"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:19:24Z",
+   "target": "f25357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Because sea otters do not have any insulating fat, the fur is responsible for heat maintenance.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:19:27Z",
+   "target": "f25357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Unlike most other marine mammals, the sea otter has no blubber and relies on its exceptionally thick fur to keep warm.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:19:30Z",
+   "target": "f25776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The killer whale is the largest member of the dolphin family.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:19:33Z",
+   "target": "f25776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a toothed whale and the largest member of the oceanic dolphin family.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:14.879Z",
+   "target": "f13318",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Many oceanic dolphins are social, living in groups called pods that range in size, depending on the species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:14.879Z",
+   "target": "f25357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Because sea otters do not have any insulating fat, the fur is responsible for heat maintenance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:14.879Z",
+   "target": "f25357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Unlike most other marine mammals, the sea otter has no blubber and relies on its exceptionally thick fur to keep warm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:14.879Z",
+   "target": "f25776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The killer whale is the largest member of the dolphin family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:14.879Z",
+   "target": "f25776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a toothed whale and the largest member of the oceanic dolphin family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s7"
+  }
+ ]
+}

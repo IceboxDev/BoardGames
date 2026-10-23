@@ -1,0 +1,715 @@
+{
+ "article": "a0189",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lecithin",
+   "title": "Lecithin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:23.958Z",
+   "snapshot": "b3fbc7597fd1d97305648cb2c31f46436cdcf96ba57bdf1e563561a84010c7fb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stokes%27s_law",
+   "title": "Stokes's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:25.181Z",
+   "snapshot": "29a4525c3247908bbc821742df20a569318340e9a10d377cfd1208c902ce94a9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aerosol_spray_dispenser",
+   "title": "Aerosol spray dispenser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:25.964Z",
+   "snapshot": "14e4666db144b7b74bd9c6c213cc282278c6515e5d67afaf9491286c0ff81456"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Widget_(beer)",
+   "title": "Widget (beer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:26.984Z",
+   "snapshot": "323e36af023f879e686d68c69d37092541897234bcf147d0e78f082ef02d6693"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Svante_Arrhenius",
+   "title": "Svante Arrhenius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:28.064Z",
+   "snapshot": "82cf36f62f83655f6561c7d07f86e05525f570c4aa6931cf748a9d2b269d9a13"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Emulsion",
+   "title": "Emulsion",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:04.264Z",
+   "snapshot": "90783b6e5b7ee49f251bce3b02526348471bdb24df85c49d4c5956d398ff1aeb"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mayonnaise",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:05.176Z",
+   "snapshot": "bec45229c35dd57e476773b71da034f8db7542a35eca220b2f29be1e21158e89"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Brown_(botanist,_born_1773)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:02.241Z",
+   "snapshot": "510bcf207e7191cd35cb69ef5cfc6a4d775e9b404be91112d04a55c75d8cdc75"
+  },
+  "s9": {
+   "url": "https://openstax.org/books/chemistry-2e/pages/11-5-colloids",
+   "title": "11.5 Colloids – Chemistry 2e",
+   "publisher": "OpenStax (Rice University)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:27.289Z",
+   "snapshot": "33533f02adc3531676832b770ab114f3747d2561e05257fcec1a02cd9f681fb2"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Suspension_(chemistry)",
+   "title": "Suspension (chemistry) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:27.930Z",
+   "snapshot": "9054780f924e3fb0d7665a557ec87d9ecd671f0d935a8d11eb65ffa33dc4794d"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Foam",
+   "title": "Foam – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:29.058Z",
+   "snapshot": "a2a94aaf77f817ca7fe12620ec5d7e06f7d0b7673ea073a0679c7da38945e627"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "emulsion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "suspension",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "aerosol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "foam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "solution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Emulsification",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-104"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Emulsification",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 46"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "emulsion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“emulsion”, “Emulsion”, “эмульсия”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "suspension",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“suspension”, “Suspension”, “суспензия”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f00943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aerosol spray is a type of dispensing system which creates an aerosol mist of liquid particles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aerosol” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "foam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“foam”, “Schaum”, “пена”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f00945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arrhenius's explanation was that in forming a solution, the salt disassociates into charged particles that Michael Faraday had given the name ions many years earlier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “solution” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f25825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Whilst an emulsion roughly corresponds to a mixture of at least two immiscible liquids mixed together, by contrast emulsification is the process of dispersing two or more immiscible liquids together through the use of an emulsifier (e.g., lecithin in a mixture of oil and water).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emulsification” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:07.268Z",
+   "target": "f25825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Often, a long agitation process is required to achieve proper dispersal/emulsification, presenting one of the trickiest phases of the production process.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emulsification” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:50Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Oil spills in the ocean may be difficult to clean up, partly because wave action can cause the oil and water to form an emulsion.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:17:53Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An emulsion is a mixture of two or more liquids that are normally immiscible (unmixable or unblendable) owing to liquid-liquid phase separation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:17:57Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They are cloudy, and the suspended particles settle out after mixing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:18:01Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In chemistry, a suspension is a heterogeneous mixture of a fluid that contains solid particles sufficiently large for sedimentation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:18:05Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "foams, whipped cream, beaten egg whites",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Table 11.4: gas dispersed in liquid = foam"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:18:09Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Foam is a two-phase material system and a type of dispersed media, consisting of gas cells dispersed in a continuous liquid or solid phase to form a cellular structure.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Oil spills in the ocean may be difficult to clean up, partly because wave action can cause the oil and water to form an emulsion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An emulsion is a mixture of two or more liquids that are normally immiscible (unmixable or unblendable) owing to liquid-liquid phase separation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They are cloudy, and the suspended particles settle out after mixing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In chemistry, a suspension is a heterogeneous mixture of a fluid that contains solid particles sufficiently large for sedimentation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "foams, whipped cream, beaten egg whites",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Foam is a two-phase material system and a type of dispersed media, consisting of gas cells dispersed in a continuous liquid or solid phase to form a cellular structure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An emulsion is a mixture of two or more liquids that are normally immiscible (unmixable or unblendable) owing to liquid-liquid phase separation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “emulsion” is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "An emulsion may be prepared by shaking together or blending two immiscible liquids.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “emulsion” is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "As a child, you may have made suspensions such as mixtures of mud and water, flour and water, or a suspension of solid pigments in water, known as tempera paint.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “suspension” is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In chemistry, a suspension is a heterogeneous mixture of a fluid that contains solid particles sufficiently large for sedimentation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “suspension” is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "foam",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “foam” is on the snapshot of s9"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:52:26.035Z",
+   "target": "f00944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Foam is a two-phase material system and a type of dispersed media, consisting of gas cells dispersed in a continuous liquid or solid phase to form a cellular structure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “foam” is on the snapshot of s11"
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "article": "a0790",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Giotto_(spacecraft)",
+   "title": "Giotto (spacecraft) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:24.331Z",
+   "snapshot": "a90cbef5accf1ef5f1071cdb0a731844cddf1c31edcf8fd95e726983bfb6ff1d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Venera_9",
+   "title": "Venera 9 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:25.307Z",
+   "snapshot": "6be643b9b84ad7e59e9c06e705c2e1d933758ce0af6e4b84e5f550952a2ce25c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Venus",
+   "title": "Venus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:34.249Z",
+   "snapshot": "031c4c4ca8c4397931a9cd6528ee3b8e7d0e3a0d0fd5d90ecd7cb624dddd0346"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)",
+   "title": "Ceres (dwarf planet) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:26.484Z",
+   "snapshot": "76eb10773a2e0ce04f8fa886c05bf716cc7ef8ad5be44b534bebdd5bd6c31fc2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Venetia_Burney",
+   "title": "Venetia Burney – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:27.311Z",
+   "snapshot": "aed15472f7c6f6edb26de9a0a04096bc33ea6a03e31e6d8c999284fdb616f161"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:10.519Z",
+   "snapshot": "2caff9b4ebc855894732793f4c2b5cd8cfd34c41a6e2782aa86c20e48e4239bf"
+  },
+  "s7": {
+   "url": "https://science.nasa.gov/dwarf-planets/ceres/",
+   "title": "Ceres",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:38.840Z",
+   "snapshot": "174955fd7424dc79d9e5d259f1c143c8cd886c149dbe4c8564338daf96dfde95"
+  },
+  "s8": {
+   "url": "https://www.esa.int/Science_Exploration/Space_Science/Herschel/Herschel_discovers_water_vapour_around_dwarf_planet_Ceres",
+   "title": "Herschel discovers water vapour around dwarf planet Ceres",
+   "publisher": "European Space Agency",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:38.930Z",
+   "snapshot": "b16ccc69352d1accb8c81a4229dd598dfac19342d455136574c34573280d241d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Halley's Comet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c066"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Venus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Venus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-068"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ceres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pluto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:45.900Z",
+   "target": "f03946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The spacecraft flew by and studied Halley's Comet and in doing so became the first spacecraft to make close up observations of a comet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.900Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halley's Comet” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:45.900Z",
+   "target": "f03947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "'Venus-9'), manufacturer's designation: 4V-1 No.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.900Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:45.900Z",
+   "target": "f03947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Venus is the second planet from the Sun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.900Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:45.900Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ceres is a dwarf planet in the main asteroid belt between the orbits of Mars and Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.900Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ceres” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:45.900Z",
+   "target": "f03950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She is remembered as the first person to suggest the name Pluto for the dwarf planet discovered by Clyde Tombaugh in 1930.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.900Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pluto” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:22:13Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dwarf planet Ceres is the largest object in the asteroid belt between Mars and Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:22:14Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "With a diameter of 950 km, Ceres is the largest object in the asteroid belt, which lies between the orbits of Mars and Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:13.996Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dwarf planet Ceres is the largest object in the asteroid belt between Mars and Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:13.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:13.996Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "With a diameter of 950 km, Ceres is the largest object in the asteroid belt, which lies between the orbits of Mars and Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:13.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:13.996Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dwarf planet Ceres is the largest object in the asteroid belt between Mars and Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:13.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ceres” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:13.996Z",
+   "target": "f03949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "ESA - Herschel discovers water vapour around dwarf planet Ceres",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:13.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ceres” is on the snapshot of s8"
+  }
+ ]
+}

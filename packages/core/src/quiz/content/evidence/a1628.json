@@ -1,0 +1,414 @@
+{
+ "article": "a1628",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Church_of_Scientology",
+   "title": "Church of Scientology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:10.667Z",
+   "snapshot": "5fa7dd066ea0b431501191eb0cdd9029049adfc5a7ee488af79cd44ded6757e3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dianetics:_The_Modern_Science_of_Mental_Health",
+   "title": "Dianetics: The Modern Science of Mental Health – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:31.240Z",
+   "snapshot": "75f27ff9b85f4af7289f20c673a5e391b7365933949e1d2c319baecda8666cfc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/E-meter",
+   "title": "E-meter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:32.349Z",
+   "snapshot": "af1029a8fba10595908ca670c7e122e73702e6e3acfb7bcea2d9e7aae6697356"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Cruise",
+   "title": "Tom Cruise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:33.329Z",
+   "snapshot": "c9046b189d299cc64c3d782ddc121ccc98193f897e804e0db28575a782cbf9b6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Unification_Church",
+   "title": "Unification Church – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:34.451Z",
+   "snapshot": "ae9874535ef09d61f543bf316426647f13537ef095c62955f4f615c67c575635"
+  },
+  "s6": {
+   "url": "https://www.biography.com/celebrities/g44727306/scientology-celebrities/",
+   "title": "These 10 Celebrities Are Current or Former Scientologists – Biography.com",
+   "publisher": "Biography.com (A&E)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:15.314Z",
+   "snapshot": "8ed3a28814dd4bf39171969a45bb2d0308687b099243bfd4734931405a9cd454"
+  },
+  "s7": {
+   "url": "https://abcnews.go.com/Nightline/scientology/scientology-attracts-celebrities/story?id=8871475",
+   "title": "How Scientology Attracts Celebrities – ABC News",
+   "publisher": "ABC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:14.477Z",
+   "snapshot": "44251c2aab9d2654e4e6290eef9a68e98eb411efb2fa4478946460ecaf71348c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08136",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scientology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08137",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dianetics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08138",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "E-Meter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tom Cruise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Unification Church",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:53.957Z",
+   "target": "f08136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Church of Scientology was started in 1953 by L.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:53.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scientology” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:53.957Z",
+   "target": "f08137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dianetics: The Modern Science of Mental Health",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:53.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dianetics” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:53.957Z",
+   "target": "f08138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The E-meter (also electropsychometer and Hubbard Electrometer) is an electronic device used by the Church of Scientology during a counseling practice known as auditing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:53.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “E-Meter” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:53.957Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thomas Cruise Mapother IV ( ; born July 3, 1962), known professionally as Tom Cruise, is an American actor and film producer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:53.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Cruise” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:53.957Z",
+   "target": "f08140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Unification Church (Korean: 통일교; RR: Tongilgyo), officially the Family Federation for World Peace and Unification (FFWPU; 세계평화통일가정연합; Segyepyeonghwatong Ilgajeong Yeonhab), is an Abrahamic monotheistic new religious movement, whose members are called Unificationists or sometimes informally",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:53.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unification Church” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:04:29Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tom Cruise, the star of Top Gun: Maverick and Mission Impossible, is Scientology's most prominent member",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:04:31Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "And actor Tom Cruise is arguably the world's best-known celebrity Scientologist.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:04:34Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cruise was converted to Scientology by his first wife, Mimi Rogers, in 1986, and became an outspoken advocate for it in the 2000s.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:42.361Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tom Cruise, the star of Top Gun: Maverick and Mission Impossible, is Scientology's most prominent member",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:42.361Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "And actor Tom Cruise is arguably the world's best-known celebrity Scientologist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:42.361Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cruise was converted to Scientology by his first wife, Mimi Rogers, in 1986, and became an outspoken advocate for it in the 2000s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:42.361Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tom Cruise, the star of Top Gun: Maverick and Mission Impossible, is Scientology’s most prominent member, having joined during his marriage to Mimi Rogers in the late 1980s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tom Cruise” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:42.361Z",
+   "target": "f08139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "And actor Tom Cruise is arguably the world's best-known celebrity Scientologist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:42.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tom Cruise” is on the snapshot of s7"
+  }
+ ]
+}

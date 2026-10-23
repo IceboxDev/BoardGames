@@ -1,0 +1,291 @@
+{
+ "article": "a2322",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Icelandic_name",
+   "title": "Icelandic name",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:57.542Z",
+   "snapshot": "82a946ed7025ced118349b3ec68a1240b3e07c81921eba1af80ebb1b4db98738"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_naming_customs",
+   "title": "Spanish naming customs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:58.723Z",
+   "snapshot": "383ef4b9ba9daa9c45ce1373d29fc9e399907870a11045fad26f1475f005c3e4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chinese_name",
+   "title": "Chinese name",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:59.659Z",
+   "snapshot": "8f6f5fa47aa3e77ef042fe392e29133526cc69d776ceb0159bda86e7f8b5af53"
+  },
+  "s4": {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628",
+   "title": "Ley 20/2011, de 21 de julio, del Registro Civil",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "kind": "official",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T07:50:46Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iceland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-369"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "-dóttir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Icelandic Naming Committee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "two",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Evil spirits",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript ppm-053"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:56.355Z",
+   "target": "f12041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Icelandic names are names used by people from Iceland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iceland” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:56.355Z",
+   "target": "f12042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Generally, a person's last name indicates the first name of their father (patronymic) or in some cases mother (matronymic) in the genitive, followed by -son (\"son\"), -dóttir (\"daughter\") or -bur (\"child\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “-dóttir” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:56.355Z",
+   "target": "f12043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "First names not previously used in Iceland must be approved by the Icelandic Naming Committee.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Icelandic Naming Committee” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:56.355Z",
+   "target": "f12044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are composed of a given name (simple or composite) and two surnames (the first surname of each parent).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “two” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:56.355Z",
+   "target": "f25983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A traditional practice, now largely supplanted, was choosing deliberately unpleasant given names to ward off bad omens and evil spirits.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evil spirits” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:44Z",
+   "target": "f12044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "two surnames (the first surname of each parent). Traditionally, the first surname is the father's first surname, and the second is the mother's first surname.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:46Z",
+   "target": "f12044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Si la filiación está determinada por ambas líneas, los progenitores acordarán el orden de transmisión de su respectivo primer apellido, antes de la inscripción registral.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Spanish Civil Registry Act art. 49.2: each parent passes on their first surname, so a child with both lines of filiation bears two surnames."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:41.588Z",
+   "target": "f12044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "two surnames (the first surname of each parent). Traditionally, the first surname is the father's first surname, and the second is the mother's first surname.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  }
+ ]
+}

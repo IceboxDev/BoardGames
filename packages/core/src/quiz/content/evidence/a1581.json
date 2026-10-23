@@ -1,0 +1,249 @@
+{
+ "article": "a1581",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Scott_Sherrington",
+   "title": "Charles Scott Sherrington – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:52.017Z",
+   "snapshot": "337cc76ac90d945c46336cccb5e933c3ec73203ce361f857bed0b6a76dbfd6ca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dendrite",
+   "title": "Dendrite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:53.005Z",
+   "snapshot": "131e51834a8e86f48f769b2835450d6c2b883e8ae0d80529976358e65b50a418"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Myelin",
+   "title": "Myelin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:54.048Z",
+   "snapshot": "639b6dfbfe22eb13e409bf27d6a6437c7375a8400344efb726a761408da08d8c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Otto_Loewi",
+   "title": "Otto Loewi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:55.267Z",
+   "snapshot": "9b0b88c75b3e38e75ab64f71f1efcf4bd98554a87a7b4396145c2274ad986ffc"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Glutamins%C3%A4ure",
+   "title": "Glutaminsäure",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:09:52.220Z",
+   "snapshot": "543d8feb81ead3b2036efefc36448ea2881d9ba1f7a817861354111c6a09a419"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nerve_conduction_velocity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:55.983Z",
+   "snapshot": "16efbdbb4fd4152255bca8b0f282aba6bc25c84ae8e3939b80731e1d9334747b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "synapse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "dendrites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "myelin sheath",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "neurotransmitters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Glutamat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-327"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:46.802Z",
+   "target": "f07901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sherrington himself coined the word \"synapse\" to define the connection between two neurons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “synapse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:46.802Z",
+   "target": "f07903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A dendrite (from Greek δένδρον déndron, \"tree\") or dendron is a branched cytoplasmic process extending from a nerve cell; it propagates the electrochemical stimulation received from other neural cells to the cell body, or soma, of the neuron from which the dendrites project.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dendrites” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:46.802Z",
+   "target": "f07904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the PNS, myelin protein zero (MPZ or P0) has a similar role to that of PLP in the CNS in that it is involved in holding together the multiple concentric layers of glial cell membrane that constitute the myelin sheath.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “myelin sheath” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:46.802Z",
+   "target": "f07905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Otto Loewi (German: [ˈɔtoː ˈløːvi] ; 3 June 1873 – 25 December 1961) was a German-born pharmacologist and psychobiologist who discovered the role of acetylcholine as an endogenous neurotransmitter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neurotransmitter” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:46.802Z",
+   "target": "f13414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Biologie und Medizin wird die Glutaminsäure meist Glutamat genannt, da die Verbindung im Körper dissoziiert vorliegt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glutamat” is on the snapshot of s5"
+  }
+ ]
+}

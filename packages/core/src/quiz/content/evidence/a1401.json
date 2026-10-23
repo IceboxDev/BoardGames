@@ -1,0 +1,335 @@
+{
+ "article": "a1401",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Penicillin",
+   "title": "Penicillin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:18.880Z",
+   "snapshot": "9fd9de7532986fe7335d88204c7b980bd29cad7191cdfb5de1a39a8fdf3385b3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/John_Vane",
+   "title": "John Vane – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:10.265Z",
+   "snapshot": "3d381d78add6e51e8d87de91d6f9ec57c266a88443a720c1cd4800bb29b0b9ed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Quinine",
+   "title": "Quinine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:06.396Z",
+   "snapshot": "9c756658d50a84ffda147fc726ce4a5c4785d7e38d1569df58dd86a740dc90b4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Sert%C3%BCrner",
+   "title": "Friedrich Sertürner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:08.390Z",
+   "snapshot": "4bb937c490d3f57ceee1319ba99d62da179ba71b237da360e93628909b428575"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Streptomycin",
+   "title": "Streptomycin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:11.250Z",
+   "snapshot": "3016ecefab82753d4379009fdd508dc3c27ad695c3c762797d3ea87873938085"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Penicilline",
+   "title": "Penicilline",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:09.029Z",
+   "snapshot": "602d825e23fca0cc66a31e482ad6a77847a3dce35a0c2c42bf185db1dbadff43"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Penicillin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aspirin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Quinine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Morphine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Streptomycin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Schimmelpilze",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "Moulds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-222/5, u02: Penicillin is produced naturally by Penicillium moulds, not beetles; statement false."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f13523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Schimmelpilze",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f07001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A number of natural penicillins have been discovered, but only two purified compounds are in clinical use: penicillin G (intramuscular or intravenous use) and penicillin V (given by mouth).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penicillin” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f07002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sir John Robert Vane  (29 March 1927 – 19 November 2004) was a British pharmacologist who was instrumental in the understanding of how aspirin produces pain-relief and anti-inflammatory effects and his work led to new treatments for heart and blood vessel disease and introduction of ACE inhibitors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aspirin” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f07003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Quinine is an alkaloid used medically to treat malaria and babesiosis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quinine” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f07004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He is best known for his discovery of morphine, which he isolated from opium in 1804, and for conducting tests, including on himself, to evaluate its physiological effects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Morphine” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f07005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Streptomycin is an antibiotic medication used to treat a number of bacterial infections, including tuberculosis, Mycobacterium avium complex, endocarditis, brucellosis, Burkholderia infection, plague, tularemia, and rat bite fever.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Streptomycin” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f13523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Penicillins (P, PCN or PEN) are a group of β-lactam antibiotics originally obtained from Penicillium moulds, principally P.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moulds” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:19.626Z",
+   "target": "f13523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fleming war jedoch nicht der erste neuzeitliche Wissenschaftler, der entdeckte, dass Schimmelpilze Bakterienwachstum hemmen können: Schon 1870 hatte John Scott Burdon-Sanderson einen Zusammenhang zwischen Schimmelpilzen und Bakterienwachstum erkannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schimmelpilze” is on the snapshot of s6"
+  }
+ ]
+}

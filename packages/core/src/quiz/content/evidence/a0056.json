@@ -1,0 +1,242 @@
+{
+ "article": "a0056",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Shamanism",
+   "title": "Shamanism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:21.563Z",
+   "snapshot": "f277e9339a324a6f576084a90f5fdd30855cc9119c2d5dcc531c90a3f5a22e23"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mevlevi_Order",
+   "title": "Mevlevi Order – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:22.575Z",
+   "snapshot": "183911fd4425ae3580af622745eeec24075513914fff99aada1641194824aca3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Druid",
+   "title": "Druid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:23.587Z",
+   "snapshot": "766f61baa68c217c0c6db62b5f7db59c0831c4504bc737260e8523c17ca59ccd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pythia",
+   "title": "Pythia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:24.719Z",
+   "snapshot": "536a109ae3f337ec3ec08f50c5c360a71b8275996af6ffb9c15cc193cdc85000"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Guru_Gobind_Singh",
+   "title": "Guru Gobind Singh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:25.701Z",
+   "snapshot": "600f3411adc231420ea139f7e608fcf906f83cb189beaef9e739976635ca3377"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shaman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dervish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Druid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pythia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Guru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:43.903Z",
+   "target": "f00276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shamanism is a spiritual practice that involves a practitioner (shaman) interacting with the spirit world through altered states of consciousness, such as trance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shaman” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:43.903Z",
+   "target": "f00277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dervish is a common term for an initiate of the Sufi path; whirling is part of the formal sema ceremony and the participants are properly known as semazens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dervish” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:43.903Z",
+   "target": "f00278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A druid (Gaulish: druides, from Proto-Celtic *druwides, 'oak-knower' or '[priest with] strong insight') was a member of the learned class of the ancient Celtic peoples of Gaul and Britain, described by Greek and Roman writers as a priest, teacher, judge and custodian of religious and legal",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Druid” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:43.903Z",
+   "target": "f00279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pythia (; Ancient Greek: Πυθία [pyːˈtʰíaː]) was the title of the high priestess of the Temple of Apollo at Delphi in central Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pythia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:43.903Z",
+   "target": "f00280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Guru Gobind Singh (Punjabi pronunciation: [gʊɾuː goːbɪn̪d̪ᵊ sɪ́ŋgᵊ]; born Gobind Das; 22 December 1666 – 7 October 1708) was the tenth and last human Sikh Guru.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guru” is on the snapshot of s5"
+  }
+ ]
+}

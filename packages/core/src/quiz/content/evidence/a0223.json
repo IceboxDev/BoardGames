@@ -1,0 +1,242 @@
+{
+ "article": "a0223",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bisphenol_A",
+   "title": "Bisphenol A – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:37.041Z",
+   "snapshot": "8cdbb9e23bf0cd85dca0433fe7bd052d465c56a3de7bc576077e295656d283f3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/DDT",
+   "title": "DDT – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:37.932Z",
+   "snapshot": "9783a05b31247c9565a7b558d1b599ff1bafeef8c9e0acaecdfeda602a939a87"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Asbest",
+   "title": "Asbest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:36.774Z",
+   "snapshot": "c7136be4f8af9b746eeda1fef2b261827e863f8bea802ea74113e0766910f88d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Motorenbenzin",
+   "title": "Motorenbenzin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:36.932Z",
+   "snapshot": "9e81fdf534d21108512629a871bb07706d4eb9dff3e771d6d4f8084e14581f38"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+   "title": "Montreal Protocol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:04.153Z",
+   "snapshot": "54e6583ce3c0d7ad6ecefeedde76911e7b84bca7301a1732ccac0410f307e8ca"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bisphenol A",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "DDT",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Asbest",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "CFCs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:14.649Z",
+   "target": "f01111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bisphenol A (BPA) is a chemical compound primarily used in the manufacturing of various plastics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bisphenol A” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:14.649Z",
+   "target": "f01112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dichlorodiphenyltrichloroethane (DDT) is a colorless, tasteless, and almost odorless crystalline chemical compound, an organochloride.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DDT” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:14.649Z",
+   "target": "f01113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Asbest (AS) (altgriechisch ἄσβεστος asbestos, deutsch ‚unvergänglich‘; historisch auch als Bergflachs, Amiant, Federweiß oder Baumwollstein bezeichnet) ist eine Sammelbezeichnung für verschiedene natürlich vorkommende faserförmige kristallisierte Silikat-Minerale, die nach ihrer Aufbereitung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asbest” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:14.649Z",
+   "target": "f01114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blei: max.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blei” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:14.649Z",
+   "target": "f01115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Chlorofluorocarbons (CFCs) Phase-out Management Plan",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CFCs” is on the snapshot of s5"
+  }
+ ]
+}

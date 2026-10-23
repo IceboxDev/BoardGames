@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-393",
+ "image": "IMG20261007180343.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt der Fluss, der durch Erfurt fließt: Halle, Gera oder Suhl?",
+   "de": "Wie heißt der Fluss, der durch Erfurt fließt?",
+   "en": "What is the name of the river that flows through Erfurt?",
+   "reworked": true,
+   "answerDe": "Gera",
+   "answerEn": "Gera",
+   "timeline": {
+    "kind": "event",
+    "start": "742",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Erfurt, the city on the river Gera, is first mentioned in writing, in a letter by Boniface",
+    "labelDe": "Erfurt, die Stadt an der Gera, wird in einem Brief des Bonifatius erstmals urkundlich erwähnt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gera_(Fluss)",
+    "title": "Gera (Fluss)",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice card reworked to an open question (the options were Thuringian cities; the river shares its name with the city of Gera). The 742 date is from the German Erfurt article.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Lou Reed nahm das Album Lulu zusammen mit der finnischen Band Lordi auf. Richtig oder falsch?",
+   "de": "Mit welcher Band nahm Lou Reed das Album Lulu auf?",
+   "en": "With which band did Lou Reed record the album Lulu?",
+   "reworked": true,
+   "answerDe": "Metallica",
+   "answerEn": "Metallica",
+   "timeline": {
+    "kind": "creation",
+    "start": "2011-10-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Lou Reed and Metallica release their collaboration album Lulu",
+    "labelDe": "Lou Reed und Metallica veröffentlichen ihr gemeinsames Album Lulu"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Lulu_(Album)",
+    "title": "Lulu (Album)",
+    "lang": "de"
+   },
+   "notes": "True/false card reworked; the card's statement is false (Lulu was recorded with the US metal band Metallica, not Lordi). Album title is italic on the card.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Milchschokolade stammt aus Belgien. Richtig oder falsch?",
+   "de": "Welchem Schweizer gelang 1875 mit Kondensmilch der Durchbruch bei der Herstellung von Milchschokolade?",
+   "en": "Which Swiss man achieved the breakthrough in making milk chocolate with condensed milk in 1875?",
+   "reworked": true,
+   "answerDe": "Daniel Peter",
+   "answerEn": "Daniel Peter",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1875",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Swiss chocolatier Daniel Peter achieves the breakthrough in milk chocolate using condensed milk",
+    "labelDe": "Der Schweizer Daniel Peter schafft mit Kondensmilch den Durchbruch bei der Milchschokolade"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Milchschokolade",
+    "title": "Milchschokolade",
+    "lang": "de"
+   },
+   "notes": "True/false card reworked; the card's statement is false. Asking 'which country' would be ambiguous: German Wikipedia names an earlier milk chocolate made with donkey milk by Jordan & Timaeus in Dresden (1839), while the cow's-milk breakthrough came from the Swiss Daniel Peter (1875), so the open question asks for Peter.",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 4,
+   "cardDe": "Rhein II von Andreas Gursky wurde 2011 für umgerechnet 3,1 Millionen Euro verkauft und ist damit das teuerste Foto der Welt. Richtig oder falsch?",
+   "de": "Welches Foto von Andreas Gursky wurde 2011 für umgerechnet 3,1 Millionen Euro verkauft und war damit das bis dahin teuerste Foto der Welt?",
+   "en": "Which photograph by Andreas Gursky sold in 2011 for the equivalent of 3.1 million euros, making it the most expensive photograph in the world at the time?",
+   "reworked": true,
+   "answerDe": "Rhein II",
+   "answerEn": "Rhein II",
+   "timeline": {
+    "kind": "event",
+    "start": "2011-11-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Andreas Gursky's photograph Rhein II sells at Christie's New York for $4.3 million, a record for a photograph",
+    "labelDe": "Andreas Gurskys Foto Rhein II wird bei Christie's New York für 4,3 Millionen Dollar versteigert, ein Rekord für ein Foto"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Rhein_II",
+    "title": "Rhein II",
+    "lang": "en"
+   },
+   "notes": "True/false card reworked; the statement was true when printed. Dated premise: Rhein II held the record only until 2022, when Man Ray's Le Violon d'Ingres sold for more, so the open question says 'the most expensive at the time'. Sale price $4,338,500. Title is italic on the card.",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wofür steht das Akronym GPS?",
+   "de": "Wofür steht das Akronym GPS?",
+   "en": "What does the acronym GPS stand for?",
+   "reworked": false,
+   "answerDe": "Global Positioning System",
+   "answerEn": "Global Positioning System",
+   "timeline": {
+    "kind": "event",
+    "start": "1995-07-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The US satellite navigation system GPS is officially declared fully operational",
+    "labelDe": "Das US-Satellitennavigationssystem GPS wird offiziell in Betrieb genommen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Global_Positioning_System",
+    "title": "Global Positioning System",
+    "lang": "de"
+   },
+   "notes": "Officially NAVSTAR GPS. Full operational capability was reached in April 1995 and announced on 17 July 1995.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 6,
+   "cardDe": "Von welcher karibischen Insel stammt der Rumba?",
+   "de": "Von welcher karibischen Insel stammt der Rumba?",
+   "en": "Which Caribbean island does the rumba come from?",
+   "reworked": false,
+   "answerDe": "Kuba",
+   "answerEn": "Cuba",
+   "timeline": {
+    "kind": "era",
+    "start": "1880",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "By the late 19th century, 'rumba' names a complex of secular music and dance styles in Cuba",
+    "labelDe": "Ende des 19. Jahrhunderts bezeichnet „Rumba“ in Kuba eine Gruppe weltlicher Musik- und Tanzstile"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rumba",
+    "title": "Rumba",
+    "lang": "de"
+   },
+   "notes": "The card writes 'der Rumba' (German Wikipedia: 'die Rumba'); kept verbatim. Wikipedia: a couple dance of Cuban origin. The late-19th-century date is from the English Rumba article.",
+   "domain": "music-stage",
+   "sub": "theatre"
+  }
+ ]
+}

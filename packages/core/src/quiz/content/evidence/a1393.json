@@ -1,0 +1,288 @@
+{
+ "article": "a1393",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Eine_kleine_Nachtmusik",
+   "title": "Eine kleine Nachtmusik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:35.324Z",
+   "snapshot": "0b58e91a4dc570a56e72fbc9843b5b9885291bb194fa06905069abb02b8440ca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Serenade",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:36.258Z",
+   "snapshot": "338f4ff159288966c3a8b0343be4b9897792e47006eb48306d90842530509061"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aubade_(Poulenc)",
+   "title": "Aubade (Poulenc) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:37.285Z",
+   "snapshot": "957f27f1801ae2322afcbd985a1f5aaefa23dd885431fc29da43c44edeeca7a0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Divertimento_for_String_Orchestra_(Bart%C3%B3k)",
+   "title": "Divertimento for String Orchestra (Bartók) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:38.269Z",
+   "snapshot": "0f19bf9d9c55718a88725752f5d4d8a77653e287647fde671f583570c2ab24dd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/John_Field_(composer)",
+   "title": "John Field (composer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:39.242Z",
+   "snapshot": "fe0a17609521d172a5c46e78ab5303feb75fb3d6671c7beea1b672fb39ad431b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Symphony_No._2_(Beethoven)",
+   "title": "Symphony No. 2 (Beethoven) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:40.258Z",
+   "snapshot": "03811c052965daf3e1719284ded3ec2321e50a48b3af3d13a6b184abf1eca18f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Serenade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Serenade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06962",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aubade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06963",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Divertimento",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06964",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nocturne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06965",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Scherzo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:18.401Z",
+   "target": "f06961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The serenade was completed in Vienna on 10 August 1787, around the time when Mozart was working on the second act of his opera Don Giovanni.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Serenade” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:18.401Z",
+   "target": "f06961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In music, a serenade (; also sometimes called a serenata, from the Italian) is a musical composition or performance delivered in honour of someone or something.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Serenade” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:18.401Z",
+   "target": "f06962",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aubade (FP051a, and FP051b for the piano reduction), a choreographic concerto for piano and 18 instruments, is a work of Francis Poulenc premiered in 1929.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aubade” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:18.401Z",
+   "target": "f06963",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Divertimento for String Orchestra (Bartók)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Divertimento” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:18.401Z",
+   "target": "f06964",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He is widely credited as the inventor of the nocturne.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nocturne” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:18.401Z",
+   "target": "f06965",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Beethoven wrote the 2nd Symphony without a standard minuet; instead, a scherzo took its place, giving the composition even greater scope and energy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scherzo” is on the snapshot of s6"
+  }
+ ]
+}

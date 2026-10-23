@@ -1,0 +1,289 @@
+{
+ "article": "a0656",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Jung",
+   "title": "Carl Jung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:14.365Z",
+   "snapshot": "60ad5a4c48e5c323249387cd62fcc450ad2b315f5316b29ac3ea426021591498"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Interpretation_of_Dreams",
+   "title": "The Interpretation of Dreams – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:15.169Z",
+   "snapshot": "e04b1d5332a8f92481552a7d7ef146a12da7c2fca5087a428e5472dec24f11c0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_Adler",
+   "title": "Alfred Adler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:16.265Z",
+   "snapshot": "0953cc0051d10dd69cbadaac8936b70eaad174c9b0e59d54e3443cd16d16ae8e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
+   "title": "Man's Search for Meaning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:17.062Z",
+   "snapshot": "7b028b68143c3391ca98ca0a614c1f2260837a0beeedb91edbe99e61e1435aa7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Beyond_Good_and_Evil",
+   "title": "Beyond Good and Evil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:18.173Z",
+   "snapshot": "4c12f94c9065ca70c240609a87599bca99c36e7f9cca311d9e3ec781e560a7f1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Strukturmodell_der_Psyche",
+   "title": "Strukturmodell der Psyche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:15.467Z",
+   "snapshot": "03399d67de3b36e7b9edd2497fc7753950b300398c69e4182fb28afe142f034f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carl Gustav Jung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sigmund Freud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alfred Adler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Viktor Frankl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Friedrich Nietzsche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "das Es",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-104"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:21.202Z",
+   "target": "f03276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carl Gustav Jung ( YUUNG; Swiss Standard German: [ˈkarl ˈjʊŋ]; 26 July 1875 – 6 June 1961) was a Swiss psychiatrist, psychotherapist, and psychologist who founded the school of analytical psychology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Gustav Jung” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:21.202Z",
+   "target": "f03277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Interpretation of Dreams (German: Die Traumdeutung) is an 1899 book by Sigmund Freud, the founder of psychoanalysis, in which the author introduces his theory of the unconscious with respect to dream interpretation, and discusses what would later become the theory of the Oedipus complex.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sigmund Freud” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:21.202Z",
+   "target": "f03278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alfred Adler ( AD-lər; Austrian German: [ˈalfreːd ˈaːdlɐ]; February 7, 1870 – May 28, 1937) was an Austrian medical doctor, psychotherapist, and founder of the school of individual psychology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Adler” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:21.202Z",
+   "target": "f03279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saying Yes to Life nonetheless: A Psychologist Experiences the Concentration Camp') is a 1946 book by Viktor Frankl chronicling his experiences as a prisoner in Nazi concentration camps during World War II, and describing his psychotherapeutic method, which involved identifying a purpose to each",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Viktor Frankl” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:21.202Z",
+   "target": "f03280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Beyond Good and Evil: Prelude to a Philosophy of the Future (German: Jenseits von Gut und Böse: Vorspiel einer Philosophie der Zukunft) is a book by philosopher Friedrich Nietzsche that covers ideas in his previous work Thus Spoke Zarathustra but with a more polemical approach.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Nietzsche” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:21.202Z",
+   "target": "f10802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Es untergliedert die Psyche des Menschen in drei verschiedene Instanzen: Das Es, das Ich und das Über-Ich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “das Es” is on the snapshot of s6"
+  }
+ ]
+}

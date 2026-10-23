@@ -1,0 +1,242 @@
+{
+ "article": "a2452",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Salman_Rushdie",
+   "title": "Salman Rushdie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:01.384Z",
+   "snapshot": "5f455a7df49b323448c02f703f11772b1df9afaccc5e67ffbc5f3d59b9fef4e5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Midnight's_Children",
+   "title": "Midnight's Children – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:21.895Z",
+   "snapshot": "fad2c75206b42bc23fddd377115a6d50b5017d70ac881567120d1d2c47925d02"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Satanic_Verses",
+   "title": "The Satanic Verses – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:05.010Z",
+   "snapshot": "3eba39bbb26486def488db775f801f7240f7f3b03e5df43c88169c23234a9b3a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Stabbing_of_Salman_Rushdie",
+   "title": "Stabbing of Salman Rushdie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:06.117Z",
+   "snapshot": "67ec68669c2fbdeadbcd8f6fd4c2c32a83939eea426eb9b96337cb8223b95874"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Knife%3A_Meditations_After_an_Attempted_Murder",
+   "title": "Knife: Meditations After an Attempted Murder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:07.058Z",
+   "snapshot": "8eb7115ef019db260966c3e16e98d0044c5a2734e2e6ae84e22711abfb1d3153"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12909",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Salman Rushdie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12910",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Midnight's Children",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Satanic Verses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chautauqua Institution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Knife",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:22.122Z",
+   "target": "f12909",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sir Ahmed Salman Rushdie, CH, kurz Salman Rushdie ([sælˈmɑːn ˈrʊʃdi], Urdu سلمان رشدی, Salmān Ruschdī; * 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salman Rushdie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:22.122Z",
+   "target": "f12910",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Midnight's Children is the second novel by Indian-British writer Salman Rushdie, published in 1981 by Jonathan Cape with cover design by Bill Botten, about India's transition from British colonial rule to independence and partition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Midnight's Children” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:22.122Z",
+   "target": "f12911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Satanic Verses is the fourth novel by British–Indian writer Salman Rushdie.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Satanic Verses” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:22.122Z",
+   "target": "f12912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On August 12, 2022, Indian-born British-American novelist Salman Rushdie was stabbed multiple times by 24-year-old Hadi Matar as he was about to give a public lecture at the Chautauqua Institution in Chautauqua, New York, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chautauqua Institution” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:22.122Z",
+   "target": "f12913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Knife: Meditations After an Attempted Murder",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knife” is on the snapshot of s5"
+  }
+ ]
+}

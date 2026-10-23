@@ -1,0 +1,350 @@
+{
+ "article": "a1965",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/PH_meter",
+   "title": "pH meter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:30.712Z",
+   "snapshot": "ab099946bed77e30a453e50bc5c32f98a50940b5908797b0c257cd73e5b4d628"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gram",
+   "title": "Gram – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:31.651Z",
+   "snapshot": "01467247dc6a8083fefd9fcccebda7884c47d487ac24e1ce02d4a8a75ed12eba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pitch_drop_experiment",
+   "title": "Pitch drop experiment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:32.635Z",
+   "snapshot": "bfa01351c95d21b4c28296e94ed85feb03f0a806edc375b7fa656b941699e5ab"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Wasserh%C3%A4rte",
+   "title": "Wasserhärte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:30.464Z",
+   "snapshot": "c1cabbfecf67943928e9eda9f598197bd3da73618840d4ca10ec7590e586691e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Siemens_(unit)",
+   "title": "Siemens (unit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:33.584Z",
+   "snapshot": "a19eaf85953e4bbae9cf3277f6b96c4d0002a9ffe44b49fb758aba5bca3fa86e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Litmus",
+   "title": "Litmus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:34.575Z",
+   "snapshot": "ae3be3f5f9dce1f64672b26a08effe6268476c29893686ca8a5136ddc285235d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/PH",
+   "title": "PH",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:35.661Z",
+   "snapshot": "fd36981bf6da7919617ba94815da3874e9c2cdb77f571459692c641c46f19df7"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Swimming_pool_sanitation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:36.599Z",
+   "snapshot": "7bec5607a691318925a56fc9c5d452f19cd1c193624ed706efb4d9ee435386d3"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:37.922Z",
+   "snapshot": "666e65d57c0633bc32d87fffec94d3d5f58047ef66c7ab5806361abccc3cf435"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09821",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pH value",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09822",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "density",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09823",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "viscosity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wasserhärte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "electrical conductivity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Red",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-014"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Below 7",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 55; history entry seq 58; transcript ppm-141"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f09821",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Potentiometric pH meters measure the voltage between two electrodes and display the result converted into the corresponding pH value.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pH value” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f09822",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Originally defined in 1795 as \"the absolute weight of a volume of pure water equal to the cube of the hundredth part of a metre [1 cm3], and at the temperature of melting ice\", the defining temperature (0 °C) was later changed to the temperature of maximum density of water (approximately 4 °C).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “density” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f09823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The eighth drop fell on 28 November 2000, allowing experimenters to calculate the pitch as having a viscosity of approximately 230 billion times that of water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “viscosity” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f09824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Wasserhärte gibt an, wie hoch die Konzentration der Erdalkaliionen (v.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wasserhärte” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f09825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The related property, electrical conductivity, is measured in units of siemens per metre (S/m).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “electrical conductivity” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f25826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In an acidic medium, blue litmus paper turns red, while in a basic or alkaline medium, red litmus paper turns blue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:36:56.767Z",
+   "target": "f25827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Acidosis, defined by blood pH below 7.35, is the most common disorder of acid–base homeostasis and occurs when there is an excess of acid in the body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Below 7” is on the snapshot of s7"
+  }
+ ]
+}

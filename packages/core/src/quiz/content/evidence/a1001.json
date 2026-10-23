@@ -1,0 +1,361 @@
+{
+ "article": "a1001",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:31.363Z",
+   "snapshot": "b5d347a36acd4991120d6ae1593261a8dda3ac39df4cfc0326c3376828801b63"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/P%C3%A9tanque",
+   "title": "Pétanque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:36.122Z",
+   "snapshot": "133f7eb17cd29ae46ec261787a723b1a8b8be9ce78316f33236451228f694510"
+  },
+  "s3": {
+   "url": "https://fr.wikipedia.org/wiki/Jeu_proven%C3%A7al",
+   "title": "Jeu provençal – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:34:33.398Z",
+   "snapshot": "ee6b18b38b9243a79fbee1e9d52feaa2da2b932bebdcf6b3902a635a6eb73e4c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Southampton_Old_Bowling_Green",
+   "title": "Southampton Old Bowling Green – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:37.121Z",
+   "snapshot": "ce6e8c9ee2c67b72c8e1008fc6122fe2329226e1c7b9796b39b77d47a9a5c902"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Curling_at_the_Winter_Olympics",
+   "title": "Curling at the Winter Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:38.032Z",
+   "snapshot": "f5d06b3ecf50c353e9b0565603f6fc09ca282c1a88bcd68b53b99be029427dcd"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Boccia",
+   "title": "Boccia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:35.217Z",
+   "snapshot": "c614c3d50d1ddb794e3332a8a7d12423387217915cb61fdd9abf31ec57ab0064"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Curling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:04.652Z",
+   "snapshot": "5b596562b8c7623296f9c10d9b983910f883580dbaf7f9dfd4c103a17fdf1a14"
+  },
+  "s8": {
+   "url": "https://fipjp.org/images/pdf/reglements/REGLEMENT-OFFICIEL-SPORT-PETANQUE.pdf",
+   "title": "Règlement officiel pour le sport de pétanque",
+   "publisher": "Fédération Internationale de Pétanque et Jeu Provençal",
+   "kind": "official",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T10:47:05Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Boccia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pétanque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jeu provençal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bowls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Curling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Boccia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-338"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:18.138Z",
+   "target": "f05001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Cadenabbia am Comer See, wo er in den letzten zehn Jahren seines Lebens regelmäßig seinen Urlaub verbracht hatte, lernte er auch das Boccia-Spiel kennen, das ihn so sehr faszinierte, dass er sich in seinem Garten in Rhöndorf sowie im Park des Palais Schaumburg in Bonn eine Bahn dafür bauen ließ.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boccia” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:18.138Z",
+   "target": "f05002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pétanque (French: [petɑ̃k] , locally in Provence [peˈtãᵑkə]; Occitan: petanca [peˈtaŋkɔ] ; Spanish: petanca [peˈtaŋka]; Catalan: petanca [pəˈtaŋkə]) is a sport that falls into the category of boules sports (along with raffa, bocce, boule lyonnaise, lawn bowls, and crown green bowling).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pétanque” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:18.138Z",
+   "target": "f05003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Le jeu provençal (en provençal  : jue de bocho à la prouvençalo ou à la longo) appelé aussi la louche polonaise, les trois pas ou la longue, est un jeu de boules au cours duquel les parties se déroulent de manière mobile sur un terrain de quinze à vingt mètres, soit deux fois plus long que celui de",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jeu provençal” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:18.138Z",
+   "target": "f05004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The green adjoining the God's House Hospital had been established during the reign of Richard I the Lionheart for the recreational use of the Warden, and was first used for a game of bowls in 1299.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bowls” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:18.138Z",
+   "target": "f05005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Curling was included in the program of the inaugural Winter Olympic Games in 1924 in Chamonix although the results of that competition were not considered official by the International Olympic Committee until 2006.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Curling” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:18.138Z",
+   "target": "f13827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Boccia [ˈbɔʧa] ist die italienische Variante des Boule-Spiels, bei dem es darum geht, seine eigenen Kugeln möglichst nah an eine kleinere Zielkugel (Pallino) zu setzen (platzieren) bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.138Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boccia” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:02Z",
+   "target": "f05002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first pétanque tournament was organized by Ernest Pitiot and his brother Joseph Pitiot, in 1910 in La Ciotat.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:47:05Z",
+   "target": "f05002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Les pieds doivent être entièrement à l’intérieur du cercle",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23",
+   "note": "official rules: feet entirely inside the throwing circle; Article 2 requires metal boules"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:49.222Z",
+   "target": "f05002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first pétanque tournament was organized by Ernest Pitiot and his brother Joseph Pitiot, in 1910 in La Ciotat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:49.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  }
+ ]
+}

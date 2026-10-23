@@ -1,0 +1,195 @@
+{
+ "article": "a0745",
+ "sources": {
+  "s1": {
+   "url": "https://www.dwds.de/wb/Fundus",
+   "title": "Fundus – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:17:18.512Z",
+   "snapshot": "a527f1a158402e4dc26ce92e61d36c2c9d35247cecfe476c39e0d046ee406a03"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Souffleur",
+   "title": "Souffleur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:17:18.733Z",
+   "snapshot": "714729bbd7ed99cbdffd5682eb7c15ae34e3a48847d4efcde98789001a642b25"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bayreuth_Festspielhaus",
+   "title": "Bayreuth Festspielhaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:22.264Z",
+   "snapshot": "b2da1a92bed76c28ae55842a054eb817cbe0e0c5898e4f4569bfbe492dafbdd4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Statist",
+   "title": "Statist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:17:19.684Z",
+   "snapshot": "5e874bafb31064be647cbab67af7a51eae888aa27afdf9d498d063c90dbbc7a3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fundus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Souffleur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "orchestra pit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Statist",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:37.980Z",
+   "target": "f03721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fundus – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fundus” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:37.980Z",
+   "target": "f03722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ein Souffleur oder eine Souffleuse (von französisch souffler „flüstern, hauchen“, italienisch suggeritore „Einbläser“) bezeichnet im Theater eine Person, die während einer Aufführung die Rollen flüsternd mitliest, um den Darstellern Einsätze zu signalisieren und ihnen über „Hänger“ (vergessener",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Souffleur” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:37.980Z",
+   "target": "f03724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The double proscenium and the recessed orchestra pit create – in Wagner's term – a \"mystic gulf\" between the audience and the stage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “orchestra pit” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:37.980Z",
+   "target": "f03725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Statist (früher auch als Figurant bezeichnet) ist ein Schauspieler, dessen gespielte Figur am Rande oder im Hintergrund des Geschehens steht und nicht eigenmächtig oder individuell in die Handlung eingreift.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:37.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Statist” is on the snapshot of s4"
+  }
+ ]
+}

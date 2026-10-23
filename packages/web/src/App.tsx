@@ -102,6 +102,7 @@ const router = createBrowserRouter(
 
       <Route element={<AuthLayout mode="admin" />}>
         <Route path="/admin" lazy={page(() => import("./pages/AdminPage"))} />
+        <Route path="/admin/quiz-desk" lazy={page(() => import("./pages/QuizDeskPage"))} />
       </Route>
 
       {/* Game-night members: the directory and every player-scoped page.
@@ -131,7 +132,8 @@ const router = createBrowserRouter(
       <Route element={<AuthLayout mode="online" />}>
         <Route element={<Layout />}>
           <Route path="games" lazy={page(() => import("./components/GameMenu"))} />
-          {/* Quiz trainers beyond Quiztopia's own (reached from its hub). */}
+          {/* The trainers: every quiz game's questions, and World Geography. */}
+          <Route path="trainer/quiz/*" lazy={page(() => import("./trainers/quiz/QuizTrainer"))} />
           <Route
             path="trainer/geography/*"
             lazy={page(() => import("./trainers/geography/GeographyTrainer"))}
@@ -211,6 +213,10 @@ const router = createBrowserRouter(
             lazy={page(() => import("./pages/CodenamesPreview"))}
           />
           <Route path="dev/go-preview" lazy={page(() => import("./pages/GoPreview"))} />
+          <Route
+            path="dev/chess-map-preview"
+            lazy={page(() => import("./pages/ChessMapPreview"))}
+          />
           <Route path="dev/botc-online" lazy={page(() => import("./pages/BotcOnlinePreview"))} />
           <Route path="dev/senso-preview" lazy={page(() => import("./pages/SensoPreview"))} />
           <Route
@@ -233,6 +239,7 @@ const router = createBrowserRouter(
             path="dev/quiztopia-preview"
             lazy={page(() => import("./pages/QuiztopiaPreview"))}
           />
+          <Route path="dev/quiz-desk" lazy={page(() => import("./pages/QuizDeskPreview"))} />
           <Route path="dev/skill-preview" lazy={page(() => import("./pages/SkillPreview"))} />
           <Route
             path="dev/jaipur-preview"
@@ -284,7 +291,7 @@ export default function App() {
           shouldDehydrateQuery: (q) =>
             defaultShouldDehydrateQuery(q) &&
             q.queryKey[0] !== "greetings" &&
-            q.queryKey[0] !== "quiztopia" &&
+            q.queryKey[0] !== "quiz" &&
             q.queryKey[0] !== "geography" &&
             // Hint state must come from the server: a hint dismissed on another
             // device must not flash back from this browser's snapshot.
@@ -298,7 +305,7 @@ export default function App() {
           // whole-object PUT with no mutationFn bound. Trainer saves are
           // never replayed from disk.
           shouldDehydrateMutation: (m) =>
-            defaultShouldDehydrateMutation(m) && m.options.mutationKey?.[0] !== "quiztopia",
+            defaultShouldDehydrateMutation(m) && m.options.mutationKey?.[0] !== "quiz",
         },
       }}
     >

@@ -1,0 +1,454 @@
+{
+ "article": "a2401",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Joanne_K._Rowling",
+   "title": "Joanne K. Rowling",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:57.533Z",
+   "snapshot": "142d4a6f1378d3c9066fc0cd23710fb5a5ba94a38e71d66f61356b7154c25c1d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fantastic_Beasts_and_Where_to_Find_Them_(book)",
+   "title": "Fantastic Beasts and Where to Find Them (book)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:00.189Z",
+   "snapshot": "69b007b2e7b271132cc5ac5d0db601a4bf40993c60a10a26e200a0e4d3d833c6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/List_of_most_commonly_challenged_books_in_the_United_States",
+   "title": "List of most commonly challenged books in the United States",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:01.155Z",
+   "snapshot": "f905e112eaae7dedaea1dd43d137470ff5a6d43b2e2d667832ec6d5466071c64"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone",
+   "title": "Harry Potter and the Philosopher's Stone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:02.231Z",
+   "snapshot": "b7706f09cd9278383492a6fc403e93652bb0021cff4745bf669e28c548633201"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Quidditch_Through_the_Ages",
+   "title": "Quidditch Through the Ages – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:03.179Z",
+   "snapshot": "a10bde1528ad29f6197f935908ab761fffd51c8ec9726e115538e967a4a81f97"
+  },
+  "s6": {
+   "url": "https://www.ala.org/advocacy/bbooks/frequentlychallengedbooks/decade2009",
+   "title": "Top 100 Most Frequently Challenged Books: 2000-2009",
+   "publisher": "American Library Association, Office for Intellectual Freedom",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:05.969Z",
+   "snapshot": "45deb3286771b9e5be5be4bcaf6dcea00e658aabd1cd14bcd12b03f13d73276d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Religious_debates_over_the_Harry_Potter_series",
+   "title": "Religious debates over the Harry Potter series – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:07.126Z",
+   "snapshot": "af8e7a44545b8a43957950fe35af7059216b0e4a6b05af9b27832187935374f7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edinburgh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-349"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Newt Scamander",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-262"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harry Potter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; history entry seq 16; transcript tp-316"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bloomsbury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12574",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harry Potter and the Sorcerer's Stone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kennilworthy Whisp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Comic Relief",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ende 1993 zog Rowling zurück nach Großbritannien und ließ sich in der schottischen Hauptstadt Edinburgh nieder, wo ihre Schwester Dianne mit ihrem Mann wohnte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edinburgh” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rowling (under the pen name of the fictitious author Newt Scamander) about the magical creatures in the Harry Potter universe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Newt Scamander” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harry Potter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Harry Potter”, “Гарри Поттер”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The book was first published in the United Kingdom on 26 June 1997 by Bloomsbury.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bloomsbury” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was published in the United States the following year by Scholastic Corporation under the title Harry Potter and the Sorcerer's Stone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry Potter and the Sorcerer's Stone” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rowling using the pseudonym of Kennilworthy Whisp about Quidditch in the Harry Potter universe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kennilworthy Whisp” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:14.443Z",
+   "target": "f12576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The book benefits the BBC affiliated charity Comic Relief.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Comic Relief” is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:53:41Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harry Potter (series) by J.K. Rowling",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "First entry of ALA's ranked decade list 2000-2009."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:53:43Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "According to the American Library Association (ALA), as of 2006, they are the most challenged books of the 21st century.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:57.644Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harry Potter (series) by J.K. Rowling",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:57.644Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "According to the American Library Association (ALA), as of 2006, they are the most challenged books of the 21st century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:57.644Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harry Potter (series) by J.K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Harry Potter” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:57.644Z",
+   "target": "f12572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Religious debates over the Harry Potter series",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:57.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Harry Potter” is on the snapshot of s7"
+  }
+ ]
+}

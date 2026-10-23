@@ -1,0 +1,242 @@
+{
+ "article": "a1014",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kniefall_von_Warschau",
+   "title": "Kniefall von Warschau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:17.445Z",
+   "snapshot": "8601b06da1b94efc2c5a04e8e5f736cc3387c58927cc2be57ab4b05a5cced6df"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:24.350Z",
+   "snapshot": "71c85c667e0ca62b442ccc6d734a968afe959de78411c2d83ed0ea182b361fbf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mitterrand_and_Kohl_holding_hands_in_Verdun",
+   "title": "Mitterrand and Kohl holding hands in Verdun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:19.105Z",
+   "snapshot": "c7a0c2ccf6bd0fdf3eaa747008a3d008dc81b6c8f59922ceec9f26baedb2e0f1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Richard_von_Weizs%C3%A4cker",
+   "title": "Richard von Weizsäcker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:22.504Z",
+   "snapshot": "37d6ffde2cba66e5a82f8854733b049063663170b109985ea38bc3b6426d6d8b"
+  },
+  "s5": {
+   "url": "https://germanhistorydocs.org/en/a-new-germany-1990-2023/hans-dietrich-genschers-speech-on-the-balcony-of-the-west-german-embassy-in-prague-september-30-1989",
+   "title": "Hans-Dietrich Genscher's Speech on the Balcony of the West German Embassy in Prague – German History in Documents and Images",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:18.377Z",
+   "snapshot": "909c3cdf121cd823369f078005055e8ed25f0d99e60a104c7a488c525895bd34"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Willy Brandt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Helmut Kohl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard von Weizsäcker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans-Dietrich Genscher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:19.882Z",
+   "target": "f05066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der deutsche Bundeskanzler Willy Brandt besuchte die Stadt, um dort den Vertrag zu unterzeichnen, der das Verhältnis zwischen der Bundesrepublik und der Volksrepublik regeln sollte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.882Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:19.882Z",
+   "target": "f05067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Konrad Adenauer was born on 5 January 1876 in Cologne, Rhenish Prussia, as the third of five children of Johann Konrad Adenauer (1833–1906) and his wife Helene (née Scharfenberg; 1849–1919).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.882Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:19.882Z",
+   "target": "f05068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "French President François Mitterrand and West German Chancellor Helmut Kohl held hands during a 1984 Franco-German ceremony to honour the dead at the Douaumont Ossuary, near Verdun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.882Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:19.882Z",
+   "target": "f05069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard von Weizsäcker was born on 15 April 1920 in the New Palace in Stuttgart, the son of diplomat Ernst von Weizsäcker, a member of the Weizsäcker family, and his wife Marianne von Graevenitz, a daughter of Friedrich von Graevenitz (1861–1922), a General of the Infantry of the Kingdom of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.882Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard von Weizsäcker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:19.882Z",
+   "target": "f05070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans-Dietrich Genscher’s Speech on the Balcony of the West German Embassy in Prague (September 30, 1989) | German History in Documents and Images",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.882Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans-Dietrich Genscher” is on the snapshot of s5"
+  }
+ ]
+}

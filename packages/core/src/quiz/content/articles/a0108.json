@@ -1,0 +1,323 @@
+{
+ "id": "a0108",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "Locks, Keys and Serial Numbers: The Small Print of the Mobile Phone",
+ "titleDe": "Sperren, Schlüssel und Seriennummern: Das Kleingedruckte des Mobiltelefons",
+ "titleRu": "Блокировки, ключи и серийные номера: мелкий шрифт мобильного телефона",
+ "bodyEn": "Every mobile phone carries a handful of codes and locks that most users only notice when something goes wrong. Together they decide who may use the device, on which network, and how it talks to the world around it.\n\nThe oldest of these restrictions is the SIM lock, known in Germany as the SIM-Lock or Netlock. A phone with a SIM lock refuses to work with any SIM card other than the ones the seller allows — usually cards from a single network operator, sometimes only the very card sold with the handset. Operators introduced the mechanism in the 1990s to protect the subsidy on \"free\" phones bundled with 24-month contracts: a handset sold for one euro could not simply be moved to a cheaper competitor. In Germany the lock could be lifted free of charge once the contract period (usually 24 months) had ended, or earlier for a fee; since 2021, when Vodafone stopped locking its iPhones, no smartphones with a SIM lock have been sold there, and countries such as Canada and Finland ban the practice by law.\n\nWhile the SIM lock ties the phone to a card, the IMEI identifies the phone itself. The International Mobile Equipment Identity is a 15-digit serial number burned into the device at the factory; since 1 April 2004 the first eight digits, the Type Allocation Code, identify the manufacturer and model, the next six the individual unit, and the last is a check digit. Dialling *#06# displays it on almost any handset. Networks read the IMEI every time the phone registers, which is why a stolen phone can be blacklisted across an entire country even after the thief has inserted a new SIM card.\n\nTwo further codes protect the SIM card rather than the phone — the smart card that the Munich firm Giesecke & Devrient first produced in 1991 for Radiolinja, the Finnish operator on whose network the world's first GSM call was made on 1 July 1991. The PIN — the Personal Identification Number — is a four- to eight-digit secret number that must be entered each time the phone is switched on before the card will connect to the network. Three wrong entries block the card. It can then only be reopened with the PUK, the Personal Unblocking Key, an eight-digit code that the operator prints on the card's original packaging. Ten wrong PUK entries destroy the card permanently, and a new one has to be issued.\n\nFinally, Bluetooth governs how the phone communicates with headsets, car kits, speakers and smartwatches over distances of a few metres. The very first Bluetooth device, revealed in 1999, was just such a hands-free headset. Developed at Ericsson from 1994 and turned into an open standard by the Bluetooth Special Interest Group, founded in 1998, it uses the licence-free 2.4-gigahertz band and hops between frequencies 1,600 times a second to avoid interference. The name commemorates Harald Bluetooth (Harald Blåtand), the 10th-century Danish king (reigned c. 958–986) who united the Danish tribes into a single kingdom and also ruled Norway — just as the standard was meant to unite the telephone and computer industries — and the logo combines the runes for his initials H and B.\n\n| Term | Full form | What it does |\n|---|---|---|\n| SIM lock | subscriber identity module lock | ties the phone to one operator's SIM cards |\n| IMEI | International Mobile Equipment Identity | 15-digit serial number of the handset |\n| PIN | Personal Identification Number | unlocks the SIM at switch-on |\n| PUK | Personal Unblocking Key | reopens a SIM blocked by wrong PINs |\n| Bluetooth | (named after King Harald Bluetooth) | short-range radio to accessories |",
+ "bodyDe": "Jedes Mobiltelefon trägt eine Handvoll Codes und Sperren, die den meisten Nutzern erst auffallen, wenn etwas schiefgeht. Zusammen entscheiden sie darüber, wer das Gerät benutzen darf, in welchem Netz und wie es mit der Welt um sich herum kommuniziert.\n\nDie älteste dieser Einschränkungen ist der SIM-Lock, auch Netlock genannt. Ein Telefon mit SIM-Lock verweigert die Zusammenarbeit mit jeder anderen SIM-Karte als denen, die der Verkäufer zulässt — meist Karten eines einzigen Netzbetreibers, manchmal nur die eine Karte, die mit dem Gerät verkauft wurde. Die Betreiber führten den Mechanismus in den 1990er-Jahren ein, um die Subvention auf „kostenlose“ Telefone im Bündel mit 24-Monats-Verträgen zu schützen: Ein für einen Euro verkauftes Gerät konnte nicht einfach zu einem günstigeren Konkurrenten mitgenommen werden. In Deutschland ließ sich die Sperre nach Ablauf der Vertragslaufzeit (meist 24 Monate) kostenlos aufheben, früher gegen eine Gebühr; seit 2021, als Vodafone seine iPhones nicht mehr sperrte, werden dort keine Smartphones mit SIM-Lock mehr verkauft, und Länder wie Kanada und Finnland verbieten die Praxis gesetzlich.\n\nWährend der SIM-Lock das Telefon an eine Karte bindet, identifiziert die IMEI das Telefon selbst. Die International Mobile Equipment Identity ist eine 15-stellige Seriennummer, die ab Werk fest im Gerät gespeichert ist; seit dem 1. April 2004 kennzeichnen die ersten acht Ziffern, der Type Allocation Code, Hersteller und Modell, die nächsten sechs das einzelne Gerät, und die letzte ist eine Prüfziffer. Die Eingabe von *#06# zeigt sie auf fast jedem Gerät an. Die Netze lesen die IMEI bei jeder Anmeldung des Telefons aus, weshalb ein gestohlenes Telefon landesweit gesperrt werden kann, selbst nachdem der Dieb eine neue SIM-Karte eingelegt hat.\n\nZwei weitere Codes schützen die SIM-Karte statt des Telefons — die Chipkarte, die die Münchner Firma Giesecke & Devrient 1991 erstmals für Radiolinja herstellte, den finnischen Betreiber, über dessen Netz am 1. Juli 1991 das weltweit erste GSM-Gespräch geführt wurde. Die PIN — die Personal Identification Number — ist eine vier- bis achtstellige Geheimzahl, die bei jedem Einschalten eingegeben werden muss, bevor sich die Karte im Netz anmeldet. Drei Fehleingaben sperren die Karte. Sie lässt sich dann nur noch mit der PUK, dem Personal Unblocking Key, wieder öffnen, einem achtstelligen Code, den der Betreiber auf die Originalverpackung der Karte druckt. Zehn falsche PUK-Eingaben zerstören die Karte endgültig, und eine neue muss ausgestellt werden.\n\nSchließlich regelt Bluetooth, wie das Telefon über Entfernungen von wenigen Metern mit Headsets, Freisprechanlagen, Lautsprechern und Smartwatches kommuniziert. Das allererste Bluetooth-Gerät, 1999 vorgestellt, war genau so ein Freisprech-Headset. Ab 1994 bei Ericsson entwickelt und von der 1998 gegründeten Bluetooth Special Interest Group zum offenen Standard gemacht, nutzt es das lizenzfreie 2,4-Gigahertz-Band und wechselt 1.600-mal pro Sekunde die Frequenz, um Störungen zu vermeiden. Der Name erinnert an Harald Blauzahn (Harald Blåtand), den dänischen König des 10. Jahrhunderts (regierte um 958–986), der die dänischen Stämme zu einem Königreich vereinte und auch über Norwegen herrschte — so wie der Standard die Telefon- und Computerindustrie vereinen sollte —, und das Logo verbindet die Runen seiner Initialen H und B.\n\n| Begriff | Volle Form | Funktion |\n|---|---|---|\n| SIM-Lock | Subscriber-Identity-Module-Sperre | bindet das Telefon an die SIM-Karten eines Betreibers |\n| IMEI | International Mobile Equipment Identity | 15-stellige Seriennummer des Geräts |\n| PIN | Personal Identification Number | entsperrt die SIM beim Einschalten |\n| PUK | Personal Unblocking Key | öffnet eine durch falsche PINs gesperrte SIM |\n| Bluetooth | (benannt nach König Harald Blauzahn) | Kurzstreckenfunk zu Zubehör |",
+ "bodyRu": "Каждый мобильный телефон несёт в себе горсть кодов и блокировок, которые большинство пользователей замечают, только когда что-то идёт не так. Вместе они решают, кто может пользоваться устройством, в какой сети и как оно общается с окружающим миром.\n\nСтарейшее из этих ограничений – SIM-лок, в Германии известный также как Netlock. Если на телефоне стоит SIM-лок, он отказывается работать с любой SIM-картой, кроме разрешённых продавцом, – обычно это карты одного оператора связи, иногда только та самая карта, что продавалась вместе с аппаратом. Операторы ввели этот механизм в 1990-х годах, чтобы защитить субсидию на «бесплатные» телефоны, которые продавались вместе с 24-месячными контрактами: аппарат, проданный за один евро, нельзя было просто унести к более дешёвому конкуренту. В Германии блокировку можно было снять бесплатно по окончании срока контракта (обычно 24 месяца) или раньше за плату; с 2021 года, когда Vodafone перестала блокировать свои iPhone, смартфоны с SIM-локом там больше не продаются, а такие страны, как Канада и Финляндия, запрещают эту практику законом.\n\nЕсли SIM-лок привязывает телефон к карте, то IMEI идентифицирует сам телефон. International Mobile Equipment Identity – это 15-значный серийный номер, записанный в устройство на заводе; с 1 апреля 2004 года первые восемь цифр, Type Allocation Code, обозначают производителя и модель, следующие шесть – конкретный экземпляр, а последняя – контрольная цифра. Набор *#06# показывает его почти на любом аппарате. Сети считывают IMEI каждый раз, когда телефон регистрируется, поэтому украденный телефон можно заблокировать по всей стране даже после того, как вор вставил новую SIM-карту.\n\nЕщё два кода защищают не телефон, а SIM-карту – смарт-карту, которую мюнхенская фирма Giesecke & Devrient впервые изготовила в 1991 году для Radiolinja, финского оператора, в сети которого 1 июля 1991 года состоялся первый в мире GSM-звонок. PIN – Personal Identification Number – это секретный номер из четырёх–восьми цифр, который нужно вводить при каждом включении телефона, прежде чем карта подключится к сети. Три неверных ввода блокируют карту. После этого её можно разблокировать только с помощью кода, который называется PUK, – Personal Unblocking Key, восьмизначного кода, который оператор печатает на оригинальной упаковке карты. Десять неверных вводов PUK навсегда выводят карту из строя, и приходится выпускать новую.\n\nНаконец, Bluetooth определяет, как телефон общается с гарнитурами, автомобильными комплектами, колонками и умными часами на расстоянии нескольких метров. Самым первым устройством Bluetooth, представленным в 1999 году, была как раз гарнитура громкой связи. Разработанный в Ericsson с 1994 года и превращённый в открытый стандарт основанной в 1998 году группой Bluetooth Special Interest Group, он использует нелицензируемый диапазон 2,4 гигагерца и 1600 раз в секунду переключается между частотами, чтобы избежать помех. Название увековечивает Харальда Синезубого (Харальд Блотанн), датского короля X века (правил около 958–986), который объединил датские племена в единое королевство и правил также Норвегией, – так же как стандарт должен был объединить телефонную и компьютерную отрасли, – а логотип соединяет руны его инициалов H и B.\n\n| Термин | Полная форма | Что делает |\n|---|---|---|\n| SIM-лок | блокировка модуля идентификации абонента | привязывает телефон к SIM-картам одного оператора |\n| IMEI | International Mobile Equipment Identity | 15-значный серийный номер аппарата |\n| PIN | Personal Identification Number | разблокирует SIM при включении |\n| PUK | Personal Unblocking Key | разблокирует SIM, заблокированную неверными PIN |\n| Bluetooth | (назван в честь короля Харальда Синезубого) | связь малого радиуса с аксессуарами |",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1200_Harald_Bl%C3%A5tand_anagoria.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Harald_Bluetooth",
+   "width": 3117,
+   "height": 3912,
+   "alt": {
+    "en": "Medieval depiction of King Harald Bluetooth",
+    "de": "Mittelalterliche Darstellung von König Harald Blauzahn",
+    "ru": "Средневековое изображение короля Харальда Синезубого"
+   },
+   "caption": {
+    "en": "King Harald Bluetooth (Harald Blåtand), the 10th-century Danish king after whom the Bluetooth standard is named; its logo joins the runes for his initials H and B.",
+    "de": "König Harald Blauzahn (Harald Blåtand), der dänische König des 10. Jahrhunderts, nach dem der Bluetooth-Standard benannt ist; das Logo verbindet die Runen seiner Initialen H und B.",
+    "ru": "Король Харальд Синезубый (Харальд Блотанн), датский король X века, в честь которого назван стандарт Bluetooth; логотип соединяет руны его инициалов H и B."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/IMEI_number_of_Nokia_6030_20110805.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity",
+   "width": 591,
+   "height": 321,
+   "alt": {
+    "en": "IMEI shown on the screen of a Nokia phone",
+    "de": "Auf dem Display eines Nokia-Handys angezeigte IMEI",
+    "ru": "IMEI на экране телефона Nokia"
+   },
+   "caption": {
+    "en": "The IMEI of a Nokia 6030, displayed after dialling *#06#: the 15-digit serial number identifies the handset itself, whatever SIM card is inserted.",
+    "de": "Die IMEI eines Nokia 6030, angezeigt nach Eingabe von *#06#: Die 15-stellige Seriennummer identifiziert das Gerät selbst, egal welche SIM-Karte eingelegt ist.",
+    "ru": "IMEI телефона Nokia 6030, показанный после набора *#06#: 15-значный серийный номер идентифицирует сам аппарат, какая бы SIM-карта ни была вставлена."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/SIM-Karte_von_Telef%C3%B3nica_O2_Europe_-_Standard_und_Micro.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/SIM_card",
+   "width": 1808,
+   "height": 1104,
+   "alt": {
+    "en": "A SIM card in standard and micro size",
+    "de": "Eine SIM-Karte in Standard- und Micro-Größe",
+    "ru": "SIM-карта стандартного и микро-размера"
+   },
+   "caption": {
+    "en": "A SIM card, the smart card protected by the PIN and, after three wrong entries, unblocked only with the PUK.",
+    "de": "Eine SIM-Karte, die durch die PIN geschützte Chipkarte, die sich nach drei Fehleingaben nur noch mit der PUK entsperren lässt.",
+    "ru": "SIM-карта – смарт-карта, защищённая PIN-кодом, которую после трёх неверных вводов можно разблокировать только кодом PUK."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f00536",
+   "answerEn": "SIM lock",
+   "answerDe": "SIM-Lock",
+   "answerRu": "SIM-лок",
+   "spans": {
+    "en": [
+     326,
+     8
+    ],
+    "de": [
+     344,
+     8
+    ],
+    "ru": [
+     354,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "era",
+    "start": "1990",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Network operators introduce the SIM lock on subsidised phones",
+    "labelDe": "Netzbetreiber führen den SIM-Lock für subventionierte Handys ein",
+    "labelRu": "Операторы вводят SIM-лок для субсидированных телефонов"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/SIM-Lock",
+    "title": "SIM-Lock – Wikipedia",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w00536",
+     "en": "With what is the usability of a mobile phone restricted to particular SIM cards?",
+     "de": "Womit wird die Nutzbarkeit eines Mobilfunkgerätes auf bestimmte SIM-Karten eingeschränkt?",
+     "ru": "Чем ограничивают использование мобильного телефона определёнными SIM-картами?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c009",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f00537",
+   "answerEn": "IMEI",
+   "answerDe": "IMEI",
+   "answerRu": "IMEI",
+   "spans": {
+    "en": [
+     1060,
+     4
+    ],
+    "de": [
+     1214,
+     4
+    ],
+    "ru": [
+     1131,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2004-04-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The IMEI's Type Allocation Code is extended to eight digits",
+    "labelDe": "Der Type Allocation Code der IMEI wird auf acht Ziffern erweitert",
+    "labelRu": "Type Allocation Code в IMEI расширяется до восьми цифр"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity",
+    "title": "International Mobile Equipment Identity – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00537",
+     "en": "Which 15-digit serial number, shown by dialling *#06#, identifies a mobile phone uniquely worldwide?",
+     "de": "Womit wird ein Mobiltelefon weltweit eindeutig identifiziert (15-stellige Seriennummer, abrufbar über *#06#)?",
+     "ru": "Какой 15-значный серийный номер, который показывает набор *#06#, однозначно идентифицирует мобильный телефон во всём мире?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f00538",
+   "answerEn": "PIN",
+   "answerDe": "PIN",
+   "answerRu": "PIN",
+   "spans": {
+    "en": [
+     1856,
+     3
+    ],
+    "de": [
+     2063,
+     3
+    ],
+    "ru": [
+     1912,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Giesecke & Devrient make the first PIN-protected SIM cards",
+    "labelDe": "Giesecke & Devrient stellen die ersten PIN-geschützten SIM-Karten her",
+    "labelRu": "Giesecke & Devrient выпускают первые SIM-карты с защитой PIN-кодом"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/SIM_card",
+    "title": "SIM card – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00538",
+     "en": "Which secret number, usually four digits long, protects a SIM card against unauthorised use when the phone is switched on?",
+     "de": "Womit wird eine SIM-Karte beim Einschalten des Telefons gegen unbefugte Benutzung geschützt (meist vierstellige Geheimzahl)?",
+     "ru": "Какой секретный номер, обычно из четырёх цифр, защищает SIM-карту от несанкционированного использования при включении телефона?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f00539",
+   "answerEn": "PUK",
+   "answerDe": "PUK",
+   "answerRu": "PUK",
+   "spans": {
+    "en": [
+     2114,
+     3
+    ],
+    "de": [
+     2313,
+     3
+    ],
+    "ru": [
+     2199,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1991-07-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The world's first GSM call is made on Radiolinja's network in Finland",
+    "labelDe": "Über das Netz von Radiolinja in Finnland wird das weltweit erste GSM-Gespräch geführt",
+    "labelRu": "В сети Radiolinja в Финляндии состоялся первый в мире GSM-звонок"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/GSM",
+    "title": "GSM – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00539",
+     "en": "Which eight-digit code unblocks a SIM card that has been locked after three wrong entries of the secret number?",
+     "de": "Womit wird eine SIM-Karte wieder entsperrt, die nach dreimaliger Falscheingabe der Geheimzahl gesperrt wurde (achtstelliger Code)?",
+     "ru": "Каким восьмизначным кодом снова разблокируют SIM-карту, заблокированную после трёх неверных вводов секретного номера?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f00540",
+   "answerEn": "Bluetooth",
+   "answerDe": "Bluetooth",
+   "answerRu": "Bluetooth",
+   "spans": {
+    "en": [
+     2321,
+     9
+    ],
+    "de": [
+     2567,
+     9
+    ],
+    "ru": [
+     2410,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1999",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first Bluetooth device, a hands-free mobile headset, is revealed",
+    "labelDe": "Das erste Bluetooth-Gerät, ein Freisprech-Headset fürs Handy, wird vorgestellt",
+    "labelRu": "Представлено первое устройство Bluetooth – гарнитура громкой связи для мобильного телефона"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bluetooth",
+    "title": "Bluetooth – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00540",
+     "en": "Which short-range radio standard, named after a Danish king, connects a mobile phone wirelessly to a headset?",
+     "de": "Womit wird ein Mobiltelefon per Funk über kurze Distanz mit einem Headset verbunden (Standard, benannt nach einem dänischen König)?",
+     "ru": "Какой стандарт радиосвязи малого радиуса, названный в честь датского короля, без проводов соединяет мобильный телефон с гарнитурой?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-23",
+    "code": "duplicate",
+    "reason": "Off-topic duplicate: Bluetooth is not part of a phone's SIM and serial-number small print and is already asked in four other articles."
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/telecommunications",
+  "topic:technology/mobile-phones",
+  "audience:international"
+ ]
+}

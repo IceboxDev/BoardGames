@@ -1,0 +1,316 @@
+{
+ "article": "a0619",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%B6lner_Wurst",
+   "title": "Kölner Wurst – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:30.214Z",
+   "snapshot": "8e9a0b8dd58001c4a183990820f20aa86a9b5cbe00080cae83b67aea0b31f767"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:31.363Z",
+   "snapshot": "b5d347a36acd4991120d6ae1593261a8dda3ac39df4cfc0326c3376828801b63"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Willy_Brandt",
+   "title": "Willy Brandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:54.692Z",
+   "snapshot": "f4fb7dc4f06e79fffefe8edac9f15f7258ea978f7c9fbf805bf74dd68aafd9a3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/W%C3%A4hrungsreform_1948_(Westdeutschland)",
+   "title": "Währungsreform 1948 (Westdeutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:32.535Z",
+   "snapshot": "dea550724e59bfbe4438ac7498437de35eb59fc59fb2dd0896b3eb6cef5ff146"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Sturmflut_1962",
+   "title": "Sturmflut 1962 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:33.340Z",
+   "snapshot": "a5695f014815ef42231b7b91885f8dc19f8fb14270a6c9b65101d6ee67afc0b9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Kohl",
+   "title": "Helmut Kohl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:34.202Z",
+   "snapshot": "0f81dc8f3ddb164a87fcd625575eb18a73f4b0479c042201a42eff98ad38a1fd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willy Brandt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ludwig Erhard",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Helmut Kohl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-102/3, u07: False: the soy sausage ('Kölner Wurst') was invented by Konrad Adenauer in 1916 (patented in Britain), not Joschka Fischer."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Kölner Wurst war eine spezielle Wurst, die von Konrad Adenauer 1916 aufgrund der Fleischknappheit im Ersten Weltkrieg erfunden wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Konrad Adenauer wurde 1876 in Köln als Conrad Hermann Joseph Adenauer und drittes von fünf Kindern des Justizsekretärs am damaligen Appellationsgericht und späteren Kanzleirats Johann Konrad Adenauer (1833–1906) und dessen Ehefrau Helena Scharfenberg (1849–1919) geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willy Brandt (German: [ˈvɪliː ˈbʁant] ; born Herbert Ernst Karl Frahm; 18 December 1913 – 8 October 1992) was a German politician and statesman who was leader of the Social Democratic Party of Germany (SPD) from 1964 to 1987 and concurrently served as the chancellor of West Germany from 1969 to",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juli 1947 vom Wirtschaftsrat der Bizone gegründete Sonderstelle Geld und Kredit in Bad Homburg vor der Höhe vorbereitet worden, die unter Leitung von Ludwig Erhard stand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Erhard” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Bremen waren NATO-Streitkräfte bereits acht Stunden vor dem Zeitpunkt im Einsatz, zu dem Innensenator Helmut Schmidt die Leitung des Krisenstabes in Hamburg übernahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:15.147Z",
+   "target": "f03095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "As reported in the German press, he also gave his name to the Helmut Kohl Centre for European Studies (currently Centre for European Studies), which is the new political foundation of the European People's Party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s6"
+  }
+ ]
+}

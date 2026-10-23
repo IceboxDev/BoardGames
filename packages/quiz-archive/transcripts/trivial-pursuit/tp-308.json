@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-308",
+ "image": "IMG20261007181512.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welcher US-Bundesstaat hat die längste Küste?",
+   "de": "Welcher US-Bundesstaat hat die längste Küste?",
+   "en": "Which US state has the longest coastline?",
+   "reworked": false,
+   "answerDe": "Alaska",
+   "answerEn": "Alaska",
+   "timeline": {
+    "kind": "event",
+    "start": "1959-01-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alaska becomes the 49th US state",
+    "labelDe": "Alaska wird der 49. Bundesstaat der USA"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_coastline",
+    "title": "List of U.S. states and territories by coastline",
+    "lang": "en"
+   },
+   "notes": "Alaska: 6,640 mi general coastline, 33,904 mi tidal shoreline — first by both measures.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißen die Zwillinge in Beverly Hills 90210?",
+   "de": "Wie heißen die Zwillinge in Beverly Hills 90210?",
+   "en": "What are the names of the twins in Beverly Hills, 90210?",
+   "reworked": false,
+   "answerDe": "Brandon und Brenda Walsh",
+   "answerEn": "Brandon and Brenda Walsh",
+   "timeline": {
+    "kind": "creation",
+    "start": "1990-10-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "US TV series Beverly Hills, 90210 premieres on Fox",
+    "labelDe": "Die US-Fernsehserie „Beverly Hills, 90210“ startet auf Fox"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Beverly_Hills,_90210",
+    "title": "Beverly Hills, 90210",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Amerika ist nach einem italienischen Seefahrer benannt. Richtig oder falsch?",
+   "de": "Nach welchem italienischen Seefahrer ist Amerika benannt?",
+   "en": "After which Italian navigator is America named?",
+   "reworked": true,
+   "answerDe": "Amerigo Vespucci",
+   "answerEn": "Amerigo Vespucci",
+   "timeline": {
+    "kind": "event",
+    "start": "1507",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Cartographer Martin Waldseemüller names the new continent America after Amerigo Vespucci",
+    "labelDe": "Der Kartograf Martin Waldseemüller benennt den neuen Kontinent nach Amerigo Vespucci „Amerika“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Amerigo_Vespucci",
+    "title": "Amerigo Vespucci",
+    "lang": "de"
+   },
+   "notes": "Card statement is true; reworked into the open question. Named by Martin Waldseemüller in 1507.",
+   "domain": "history",
+   "sub": "early-modern"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt der Autor, der James Bond erschuf und Tschitti Tschitti Bäng Bäng schrieb?",
+   "de": "Wie heißt der Autor, der James Bond erschuf und Tschitti Tschitti Bäng Bäng schrieb?",
+   "en": "What is the name of the author who created James Bond and wrote Chitty-Chitty-Bang-Bang?",
+   "reworked": false,
+   "answerDe": "Ian Fleming",
+   "answerEn": "Ian Fleming",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1908-05-28",
+    "end": "1964-08-12",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ian Fleming, British author, creator of James Bond",
+    "labelDe": "Ian Fleming, britischer Schriftsteller, Schöpfer von James Bond"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Tschitti_Tschitti_B%C3%A4ng_B%C3%A4ng",
+    "title": "Tschitti Tschitti Bäng Bäng",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißt der Prozess, bei dem Lebensmittel erhitzt werden, um schädliche Mikroorganismen zu töten?",
+   "de": "Wie heißt der Prozess, bei dem Lebensmittel erhitzt werden, um schädliche Mikroorganismen zu töten?",
+   "en": "What is the process called in which food is heated to kill harmful microorganisms?",
+   "reworked": false,
+   "answerDe": "Pasteurisierung",
+   "answerEn": "Pasteurisation",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1864",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Louis Pasteur develops pasteurisation",
+    "labelDe": "Louis Pasteur entwickelt die Pasteurisierung"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Pasteurisierung",
+    "title": "Pasteurisierung",
+    "lang": "de"
+   },
+   "notes": "Expected answer pasteurisation (short heating below 100 °C); sterilisation also heats food to kill microbes but kills spores too.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wer sollte eine Eskimorolle beherrschen: Bodenturner, Kanuten oder Stabhochspringer?",
+   "de": "In welchem Boot richtet man sich mit der Eskimorolle nach dem Kentern wieder auf?",
+   "en": "In which kind of boat is the Eskimo roll used to right yourself after capsizing?",
+   "reworked": true,
+   "answerDe": "Kajak",
+   "answerEn": "Kayak",
+   "timeline": {
+    "kind": "event",
+    "start": "1927-07-30",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Austrian Edi Hans Pawlata becomes the first European to master the Eskimo roll",
+    "labelDe": "Der Österreicher Edi Hans Pawlata erlernt als erster Europäer die Eskimorolle"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Eskimorolle",
+    "title": "Eskimorolle",
+    "lang": "de"
+   },
+   "notes": "Card's multiple choice answer: Kanuten (canoeists). Some Canadian canoes can be rolled too, but the technique is chiefly the kayak's.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

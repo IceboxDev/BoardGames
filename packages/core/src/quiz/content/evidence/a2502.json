@@ -1,0 +1,300 @@
+{
+ "article": "a2502",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kraken",
+   "title": "Kraken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:52.812Z",
+   "snapshot": "400cebbcfbefd9f8e2430250f1b936f97332c03f72ef571f4c17f4457929b523"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Octopus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:37.259Z",
+   "snapshot": "70aaa3a193579b39e145e3ea19fd3d37116cfbc38c52645ab70654980f2eb10f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Blue-ringed_octopus",
+   "title": "Blue-ringed octopus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:56.628Z",
+   "snapshot": "fb6fd3cc56d7222af50ea98befaa8adf956372f98ea0bdd260d1ae51adf29ba7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mimic_octopus",
+   "title": "Mimic octopus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:57.797Z",
+   "snapshot": "b4cb91c14ae75dbfb0415022d00c2ea2f8330cced1eb6c9fa40ae0a77cae821d"
+  },
+  "s5": {
+   "url": "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+   "title": "Octopuses keep surprising us – here are eight examples how",
+   "publisher": "Natural History Museum, London",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:44.616Z",
+   "snapshot": "ae229566767fb3e7e6ec458f01aeda1980f26248ddfcef462e9e9d665d3b1d79"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Krake",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-314"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Octopus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "blue-ringed octopus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mimic octopus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "3",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-130"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:30.464Z",
+   "target": "f13276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In der Fachsprache ist der Name stets ein Maskulinum: der Krake.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Krake” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:30.464Z",
+   "target": "f13276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An octopus (pl.: octopuses or octopodes) is a soft-bodied, eight-limbed mollusc of the order Octopoda (, ok-TOP-ə-də).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Octopus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:30.464Z",
+   "target": "f13279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Southern blue-ringed octopus or lesser blue-ringed octopus (H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blue-ringed octopus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:30.464Z",
+   "target": "f13280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The mimic octopus (Thaumoctopus mimicus) is a species of octopus from the Indo-Pacific region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mimic octopus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:30.464Z",
+   "target": "f25721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "When it is resting after a meal, skin absorption can drop to 3%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “3” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:18:25Z",
+   "target": "f25721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Octopuses have blue blood, three hearts and a doughnut-shaped brain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:59:14.076Z",
+   "target": "f25721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Octopuses have blue blood, three hearts and a doughnut-shaped brain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:14.076Z",
+   "target": "f25721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “3” is on the snapshot of s5"
+  }
+ ]
+}

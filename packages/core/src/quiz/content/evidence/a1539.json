@@ -1,0 +1,296 @@
+{
+ "article": "a1539",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Neuschwanstein_Castle",
+   "title": "Neuschwanstein Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:30.022Z",
+   "snapshot": "f8a6ec6ddaf544d3a1e172f98cf7f34e47de84774a5aae077a47ebbcc37b6ca9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Herrenchiemsee",
+   "title": "Herrenchiemsee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:04.495Z",
+   "snapshot": "04a0abf1084bf0a903a2e840863be0bacf8d305513b40cdfc3b2c33a34334e63"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Linderhof_Palace",
+   "title": "Linderhof Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:09.952Z",
+   "snapshot": "580c4b521dec90d40148b1a54dda42eba661f240b0555fc31106003eaad38781"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hohenschwangau_Castle",
+   "title": "Hohenschwangau Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:10.891Z",
+   "snapshot": "dba09ae88fc21c230144ca9fd37f90029fbc4895879e0f064679e376301708bc"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Schloss_Hohenschwangau",
+   "title": "Schloss Hohenschwangau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:08.254Z",
+   "snapshot": "525a0f29862a98da590b4a22081e9aba01d058faf53ee501654b7c8f5d0e0dc9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Berg_Palace_(Bavaria)",
+   "title": "Berg Palace (Bavaria) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:11.939Z",
+   "snapshot": "2bfa0a45509ddeb6464401241fd861506cb08ea830f205c686b05852d4bbe26d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_II_of_Bavaria",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:13.044Z",
+   "snapshot": "209256ce437dfee51ecb5753f9623deacd43c14b07f3f4d9cc97512a5164b5d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neuschwanstein Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Herrenchiemsee Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Linderhof Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hohenschwangau Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Schloss Hohenschwangau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-228"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berg Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:41.050Z",
+   "target": "f07691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neuschwanstein Castle (German: Schloss Neuschwanstein, pronounced [ˈʃlɔs nɔʏˈʃvaːnʃtaɪn]; Southern Bavarian: Schloss Neischwanstoa; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neuschwanstein Castle” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:41.050Z",
+   "target": "f07692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "From 1878 onwards, he had the New Herrenchiemsee Palace (Neues Schloss) erected, based on the model of Versailles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herrenchiemsee Palace” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:41.050Z",
+   "target": "f07693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Linderhof Palace (German: Schloss Linderhof) is a schloss in Germany, 10 km west of the village of Ettal in southwest Bavaria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linderhof Palace” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:41.050Z",
+   "target": "f07694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hohenschwangau Castle (German: Schloss Hohenschwangau, pronounced [ˈʃlɔs ˈhoːənʃvaːnɡaʊ]) is a 19th-century palace in southern Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hohenschwangau Castle” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:41.050Z",
+   "target": "f07694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Schloss Hohenschwangau ist der Neugotik zuzuordnen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schloss Hohenschwangau” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:41.050Z",
+   "target": "f07695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berg Palace (German: Schloss Berg) is a manor house situated on the east bank of Lake Starnberg in the village of Berg in Upper Bavaria, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schloss Berg” is on the snapshot of s6"
+  }
+ ]
+}

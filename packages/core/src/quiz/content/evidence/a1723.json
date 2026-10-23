@@ -1,0 +1,427 @@
+{
+ "article": "a1723",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sperrklausel",
+   "title": "Sperrklausel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:29:14.311Z",
+   "snapshot": "b98e6ec4a163a6eb8301344bc1ab3efc5f721fe74b2e76626cf467fc08784a45"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Franz_von_Papen",
+   "title": "Franz von Papen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:09.549Z",
+   "snapshot": "042f4660e17b6890991c202e1046b35380ea351f635bd2e16fd79ecef44b22df"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ewigkeitsklausel",
+   "title": "Ewigkeitsklausel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:06.786Z",
+   "snapshot": "aa5ff2d2103a303936ba031339e4bec1481959f811ee0a7f2df5fa8bb7595701"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Socialist_Reich_Party",
+   "title": "Socialist Reich Party – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:10.370Z",
+   "snapshot": "c46deec853ce258e2bedf972424dded5d167ef1c3157ef6595713b080a6b94bc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Weimar_Constitution",
+   "title": "Weimar Constitution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:11.501Z",
+   "snapshot": "69dcf6cbbfffddeab1c8c0781f948c7472b30d422823010253a0dafb9cc30268"
+  },
+  "s6": {
+   "url": "https://www.gesetze-im-internet.de/gg/art_67.html",
+   "title": "Art 67 GG",
+   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:51.158Z",
+   "snapshot": "9545832b567a5d8c44dadebebe14b43503b38f07dcb8d08e98d2ac32c54939a3"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Konstruktives_Misstrauensvotum",
+   "title": "Misstrauensvotum – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T10:22:29Z"
+  },
+  "s8": {
+   "url": "https://www.gesetze-im-internet.de/gg/art_21.html",
+   "title": "Art 21 GG",
+   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:52.113Z",
+   "snapshot": "66a1610780a9adac73d20d5527ad718e2c1e6e3373530180ef2161e4c7801663"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Sozialistische_Reichspartei",
+   "title": "Sozialistische Reichspartei – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:51.743Z",
+   "snapshot": "792dbf5298f7995f91ffad804ffe88b0f85de99fdc37dfa689b3127c54e1f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fünf-Prozent-Hürde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "constructive vote of no confidence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ewigkeitsklausel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "party ban",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Article 48",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:12.132Z",
+   "target": "f08611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Einführung der Fünf-Prozent-Hürde wurde in der Bundesrepublik Deutschland damit begründet, dass das Fehlen einer Sperrklausel in der Weimarer Republik die Zersplitterung gefördert habe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.132Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fünf-Prozent-Hürde” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:12.132Z",
+   "target": "f08612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "constructive vote of no confidence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“constructive vote of no confidence”, “konstruktives Misstrauensvotum”, “конструктивный вотум недоверия”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:12.132Z",
+   "target": "f08613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Ewigkeitsklausel, auch Ewigkeitsgarantie oder seltener Ewigkeitsentscheidung genannt, ist im Rahmen der Bundesgesetzgebung Deutschlands eine Regelung in Art.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.132Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ewigkeitsklausel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:12.132Z",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "party ban",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“party ban”, “Parteiverbot”, “запрет партии”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:12.132Z",
+   "target": "f08615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Article 48 gave the president the power to take measures – including the use of armed force and/or the suspension of civil rights – to restore law and order in the event of a serious threat to public safety or security.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.132Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Article 48” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:22:27Z",
+   "target": "f08612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Bundestag kann dem Bundeskanzler das Mißtrauen nur dadurch aussprechen, daß er mit der Mehrheit seiner Mitglieder einen Nachfolger wählt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:22:29Z",
+   "target": "f08612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bei einem konstruktiven Misstrauensvotum wird hingegen gleichzeitig ein neuer Kandidat gewählt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:22:30Z",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Parteien, die nach ihren Zielen oder nach dem Verhalten ihrer Anhänger darauf ausgehen, die freiheitliche demokratische Grundordnung zu beeinträchtigen oder zu beseitigen oder den Bestand der Bundesrepublik Deutschland zu gefährden, sind verfassungswidrig.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:22:31Z",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Die SRP war 1952 die erste politische Partei, die in der Bundesrepublik Deutschland im Rahmen eines Parteiverbots-Verfahrens durch das Bundesverfassungsgericht verboten wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:59.394Z",
+   "target": "f08612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Bundestag kann dem Bundeskanzler das Mißtrauen nur dadurch aussprechen, daß er mit der Mehrheit seiner Mitglieder einen Nachfolger wählt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:59.394Z",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Parteien, die nach ihren Zielen oder nach dem Verhalten ihrer Anhänger darauf ausgehen, die freiheitliche demokratische Grundordnung zu beeinträchtigen oder zu beseitigen oder den Bestand der Bundesrepublik Deutschland zu gefährden, sind verfassungswidrig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:59.394Z",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Die SRP war 1952 die erste politische Partei, die in der Bundesrepublik Deutschland im Rahmen eines Parteiverbots-Verfahrens durch das Bundesverfassungsgericht verboten wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:59.394Z",
+   "target": "f08614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "1956 folgte mit dem KPD-Verbot das zweite und bislang letzte Parteiverbot.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Parteiverbot” is on the snapshot of s9"
+  }
+ ]
+}

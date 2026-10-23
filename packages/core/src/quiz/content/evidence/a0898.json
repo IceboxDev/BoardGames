@@ -1,0 +1,339 @@
+{
+ "article": "a0898",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Epicenter",
+   "title": "Epicenter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:40.247Z",
+   "snapshot": "d648c9dfe6f515d2a213d48f45beca9eddba8d6379eb85fcf8407fc7c1ace0fe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Deep-focus_earthquake",
+   "title": "Deep-focus earthquake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:41.271Z",
+   "snapshot": "e72996baaaf745e6c9587f1741078a5016ff1505a5017b9ea0fa34037621bb6c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Richter_scale",
+   "title": "Richter scale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:42.363Z",
+   "snapshot": "d949fe430787fb39237a746f2a7a32b986eade6397942695cda6bdb9d36a4658"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami",
+   "title": "2004 Indian Ocean earthquake and tsunami – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:43.494Z",
+   "snapshot": "05ff86572c3722372cdb963e690f8dbc420996a842c25f62653d8028dd68c016"
+  },
+  "s5": {
+   "url": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity",
+   "title": "Earthquake Magnitude, Energy Release, and Shaking Intensity",
+   "publisher": "U.S. Geological Survey",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:50.968Z",
+   "snapshot": "62315ee9ba6fffd7c0b6076a1e2f5be1c45a79a099046d49b39b83e044841e98"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "epicenter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075; transcript ppm-054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hypocenter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Richter scale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "tsunami",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "10",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-151"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:01.870Z",
+   "target": "f04486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The epicenter (), epicentre, or epicentrum in seismology is the point on the Earth's surface directly above a hypocenter or focus, the point where an earthquake or an underground explosion originates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “epicenter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:01.870Z",
+   "target": "f04487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A deep-focus earthquake in seismology is an earthquake with a hypocenter depth exceeding 300 km.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hypocenter” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:01.870Z",
+   "target": "f04488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Richter scale (), also called the Richter magnitude scale, Richter's magnitude scale, and the Gutenberg–Richter scale, is a measure of the strength of earthquakes, developed by Charles Richter in collaboration with Beno Gutenberg, and presented in Richter's landmark 1935 paper, where he called",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richter scale” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:01.870Z",
+   "target": "f04490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "2004 Indian Ocean earthquake and tsunami",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tsunami” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:01.870Z",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "{\\displaystyle M_{\\mathrm {L} }=\\log _{10}A-\\log _{10}A_{\\mathrm {0} }(\\delta )=\\log _{10}[A/A_{\\mathrm {0} }(\\delta )],\\ }",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “10” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:22:29Z",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "each whole number increase in magnitude represents a tenfold increase in measured amplitude as measured on a seismogram",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:22:31Z",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "each whole number increase in magnitude represents a tenfold increase in measured amplitude",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:31.160Z",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "each whole number increase in magnitude represents a tenfold increase in measured amplitude as measured on a seismogram",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:31.160Z",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "each whole number increase in magnitude represents a tenfold increase in measured amplitude",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:31.160Z",
+   "target": "f25578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "You would need ~14,000km fault length, with a seismogenic thickness averaging 40km (width of 100km), to slip and average of 30m to produce an Mw 10.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “10” is on the snapshot of s5"
+  }
+ ]
+}

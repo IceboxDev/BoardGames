@@ -1,0 +1,328 @@
+{
+ "article": "a0390",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Democratic_Kampuchea",
+   "title": "Democratic Kampuchea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:47.683Z",
+   "snapshot": "91c7e817200029efd65f22bb1d1db4e88829b98589fb3f176f4a8add4566905d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Adolf_Hitler",
+   "title": "Adolf Hitler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:48.720Z",
+   "snapshot": "12e92d5c026b431179318fca3d15bfa448cd990a1451814156bd0b73eb77f241"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Idi_Amin",
+   "title": "Idi Amin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:49.561Z",
+   "snapshot": "2e3198b52b154ffd5295d78e616c4de22a981683433bd85ea0ecad26e62b85ec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Stalin",
+   "title": "Joseph Stalin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:25.797Z",
+   "snapshot": "f27576ee8970ef12b750a6e75156933d67f316843fa42a5cce88814927f78cf6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Red_Terror_(Ethiopia)",
+   "title": "Red Terror (Ethiopia) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:50.467Z",
+   "snapshot": "d9ed173ee3f1bdbe0f989d533cb2faf80ac72fbcda4db11ca78eba101b5b9aa5"
+  },
+  "s6": {
+   "url": "https://www.cbsnews.com/news/guess-who-got-the-key-to-detroit/",
+   "title": "Guess Who Got The Key To Detroit? - CBS News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:47.843Z",
+   "snapshot": "0feb839098aa3ff6cbf3a8f61d846e509f64712100c14e0bf352369db8bd9c2c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pol Pot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adolf Hitler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Idi Amin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joseph Stalin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mengistu Haile Mariam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Meteorologist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-126"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Saddam Hussein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; history entry seq 40; transcript tp-266"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f01946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Democratic Kampuchea was the official name of the Cambodian state from 1975 to 1979, under the general secretaryship of Pol Pot and the Communist Party of Kampuchea (CPK), commonly known as the Khmer Rouge.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pol Pot” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f01947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adolf Hitler (20 April 1889 – 30 April 1945) was an Austrian-born  German politician who was dictator of Germany in the Nazi era from 1933 until his suicide in 1945.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolf Hitler” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f01948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Awon'go Idi Amin Dada Oumee (30 May 1928 – 16 August 2003) was a Ugandan military officer and dictator who served as the third president of Uganda from 1971 until his overthrow in 1979.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Idi Amin” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f01949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Widely considered to be one of the most significant figures of the 20th century, Joseph Stalin was the subject of a pervasive personality cult within the international Marxist–Leninist movement, for whom he was a champion of socialism and the working class.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Stalin” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f01950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Qey Shibir was based on the Red Terror of the Russian Civil War, and most visibly took place after Mengistu Haile Mariam became chairman of the Derg on 3 February 1977.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mengistu Haile Mariam” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f12522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "During October 1899, Stalin worked as a meteorologist at the Tiflis observatory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meteorologist” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:40.674Z",
+   "target": "f12523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Saddam Hussein donated hundreds of thousands of dollars to a Detroit church and received a key to the city more than two decades ago, soon after he became president of Iraq.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saddam Hussein” is on the snapshot of s6"
+  }
+ ]
+}

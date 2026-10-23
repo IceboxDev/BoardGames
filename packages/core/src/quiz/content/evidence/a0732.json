@@ -1,0 +1,429 @@
+{
+ "article": "a0732",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Super_Mario_World",
+   "title": "Super Mario World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:26.207Z",
+   "snapshot": "cfc6d934f5266ac55f6d76562e58dc6810ec4b51345b5e21643fcbb756c2abc2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Donkey_Kong_Country",
+   "title": "Donkey Kong Country – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:27.275Z",
+   "snapshot": "f144c77e85f3822b33e959dd51e293437004f101619d423d26a79235efe6a1d0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mario_Bros.",
+   "title": "Mario Bros. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:28.280Z",
+   "snapshot": "7a877ab220f3dac525e84749eec2a6e8c4da61c4981a60f9780ff8d28151dc8a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Luigi_(Computerspielfigur)",
+   "title": "Luigi (Computerspielfigur)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:16:25.387Z",
+   "snapshot": "9c5a3c4bf7e77c2e9437fe755a0cee3447759604fcb0cee18d84da75723988ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Super_Mario_Bros._Movie",
+   "title": "The Super Mario Bros. Movie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:29.306Z",
+   "snapshot": "6effa3932c412707b76f122c3b80ecbf407daa3bd36afc9dc0e60ef9f4a9fc36"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Princess_Peach",
+   "title": "Princess Peach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:30.313Z",
+   "snapshot": "cdef394b8f170bdd62c54b02829c5831b0ba9abf838916f736dd739ca97a0ee9"
+  },
+  "s7": {
+   "url": "https://www.mariowiki.com/Brick_Block",
+   "title": "Brick Block – Super Mario Wiki",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:28.212Z",
+   "snapshot": "ffa29228f4bf52f0122f8f5a2633ae62130237575c81a86c93ba899f1fa57591"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mario_(franchise)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:31.439Z",
+   "snapshot": "5602cdd1333c74d54fd34e1f5c4961d15bf78a2f32b3220331ba2d1385f61f93"
+  },
+  "s9": {
+   "url": "https://nintendowire.com/news/2015/09/10/shigeru-miyamoto-debunks-mario-myths/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:28.618Z",
+   "snapshot": "ebe95ebce230506a24c84e59c9e390daa38edc402549e55809a197647597c005"
+  },
+  "s10": {
+   "url": "https://soranews24.com/2015/09/17/8-things-we-learned-from-nintendos-qa-video-with-shigeru-miyamoto-%E3%80%90video%E3%80%91/amp/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:29.023Z",
+   "snapshot": "ccb27045ba46941c49eada7bfb4bb5800800918eb61e5c6d9dc123eb2220f129"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yoshi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Donkey Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luigi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luigi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-332"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bowser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Princess Peach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fist",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s10",
+     "quote": "Fist",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Fist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-196/2, u07: Shigeru Miyamoto answered in Nintendo's 2015 Super Mario 30th-anniversary Q&A that Mario breaks blocks with his fist, not his head (the sprite's raised fist)."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f14669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Fist",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s7"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f03656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Super Mario World introduces Yoshi, a rideable dinosaur who can eat enemies and spit some of them out as projectiles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yoshi” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f03657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Donkey Kong Country, known in Japan as Super Donkey Kong, is a 1994 platform game developed by Rare and published by Nintendo for the Super Nintendo Entertainment System (SNES).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donkey Kong” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f03658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Players control Italian twin brother plumbers Mario and Luigi as they exterminate turtle-like creatures, giant flies, and crabs emerging from the sewers of New York City by knocking them upside-down and kicking them away.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luigi” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f03658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schließlich entwickelte er 1983 das Jump ’n’ Run Mario Bros., in dem Luigi erstmals auftrat und ein spielbarer Charakter war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luigi” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f03659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "follows brothers Mario (Pratt) and Luigi (Day), two Italian-American plumbers who get separated after being transported to another world and become entangled in a war between the Mushroom Kingdom, led by Princess Peach (Taylor-Joy), and the Dark Lands, led by the King of the Koopas, Bowser (Black).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bowser” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f03660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Princess Peach (Japanese: ピーチ姫, Hepburn: Pīchi-hime; pronounced [piːtɕi̥ çime]) is a character in Nintendo's Mario franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Princess Peach” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f14669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Be sure to break those blocks with your fist and not your head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fist” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f14669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Or there’s the debate over whether Mario smashes blocks with his head or his fist when he jumps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fist” is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:25:35.405Z",
+   "target": "f14669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "2- Mario breaks blocks with his fist, not his head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.405Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fist” is on the snapshot of s10"
+  }
+ ]
+}

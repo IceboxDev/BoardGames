@@ -1,0 +1,249 @@
+{
+ "article": "a1237",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Georg_Schramm",
+   "title": "Georg Schramm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:05.269Z",
+   "snapshot": "f3349845b685f6ca9d22f5b0b66f8b46144c971faa65bb5e6bab1afea820759b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Frank-Markus_Barwasser",
+   "title": "Frank-Markus Barwasser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:06.227Z",
+   "snapshot": "7383b666a7db4e82ace2f3136cfff6503668b5a8a2df40dd02d6600e8f81ba75"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Uwe_Lyko",
+   "title": "Uwe Lyko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:06.071Z",
+   "snapshot": "b4b7ab0c63e87e123f20bb4472a16ddf371c7ded502aca4481bb8f5383fdb652"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Familie_Heinz_Becker",
+   "title": "Familie Heinz Becker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:07.214Z",
+   "snapshot": "31039e28bdd64926a37c5cc7ee4b28d5da229939153d9d213aa21b3f13dce125"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Horst_Schl%C3%A4mmer_%E2%80%93_Isch_kandidiere!",
+   "title": "Horst Schlämmer – Isch kandidiere! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:08.137Z",
+   "snapshot": "05581918e26a93b9f043a9490cb57eec9b6c554c7fae072dc2e8d468ee62a163"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Horst_Schl%C3%A4mmer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:09.161Z",
+   "snapshot": "daa6c034116867bb6062ebe19eaa5e1d2cd085fed529bb238dfba5d18919f006"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Georg Schramm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frank-Markus Barwasser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uwe Lyko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gerd Dudenhöffer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hape Kerkeling",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:52.816Z",
+   "target": "f06181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In den 1990er Jahren hatte Georg Schramm mehrere Auftritte in Dieter Hallervordens TV-Kabarettreihe Hallervordens Spott-Light.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Schramm” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:52.816Z",
+   "target": "f06182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frank-Markus Barwasser kam als viertes von fünf Kindern des späteren Direktor des Arbeitsgerichts Franz H.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank-Markus Barwasser” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:52.816Z",
+   "target": "f06183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Urbesetzung des Affentheaters bestand damals aus Susanne Betancor, Uwe Lyko, Kalle Mews und Martin Breuer sowie aus Sigi Domke.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uwe Lyko” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:52.816Z",
+   "target": "f06184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Familie Heinz Becker ist eine deutsche Comedy-Fernsehserie von Gerd Dudenhöffer, die in der Stadt Bexbach im östlichen Saarland spielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerd Dudenhöffer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:52.816Z",
+   "target": "f06185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Regie führte Angelo Colagrossi, der mit Hape Kerkeling zusammen das Drehbuch geschrieben hatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hape Kerkeling” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,342 @@
+{
+ "article": "a2661",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kfz-Kennzeichen_(Deutschland)",
+   "title": "Kfz-Kennzeichen (Deutschland)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:40.742Z",
+   "snapshot": "6a844302aeea9a402aa247d512173ab50b4c3fb33f2894370138b1ea4b02e93d"
+  },
+  "s2": {
+   "url": "https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/kfz-zulassung/elektroauto-kennzeichen/",
+   "title": "E-Kennzeichen für Elektroautos",
+   "publisher": "ADAC",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:21.630Z",
+   "snapshot": "030a9f9a71bf1cdf03c33716252143e05fc4a42c8e6dcac8eec6085df828774e"
+  },
+  "s3": {
+   "url": "https://www.bussgeldkatalog.org/eu-kennzeichen/",
+   "title": "Sind EU-Kennzeichen verpflichtend? Diese Regeln gelten",
+   "publisher": "bussgeldkatalog.org",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:22.189Z",
+   "snapshot": "d4bfc58223569f8c6e491ccbbc51f3a08e0df1ebbf0c249d03ff9acef972751e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grün",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buchstabe H",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buchstabe E",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berlin und Brandenburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:54.287Z",
+   "target": "f14412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "schwarz gerandetem Grund auf ein Kennzeichenschild aufzubringen (jedoch Kennzeichen für Probe-, Überführungs- und Werkstattfahrten: rot; steuerbefreite Fahrzeuge: grün), die in Leserichtung waagerecht, gut erkennbar, sauber und nicht umgedreht an der Fahrzeugaußenseite angebracht sein müssen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grün” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:54.287Z",
+   "target": "f14413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Januar 2018 wurde die Fahrzeug-Zulassungsverordnung dahingehend geändert, dass der Buchstabe H Teil des amtlichen Kennzeichens wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buchstabe H” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:54.287Z",
+   "target": "f14414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buchstabe E",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Buchstabe E”, “the letter E”, “буква E”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:54.287Z",
+   "target": "f14415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die heute gültigen Euro-Kennzeichen wurden zunächst 1994 von Berlin und Brandenburg, kurz darauf auch in Sachsen eingeführt, bevor sie im gesamten deutschen Staatsgebiet Verwendung fanden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin und Brandenburg” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T12:06:44Z",
+   "target": "f14414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "enthält im Anschluss an die Nummernkombination ein \"E\"",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:06:47Z",
+   "target": "f14414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "werden die neuen E-Nummernschilder, die es auch in Kombination mit einem Saisonkennzeichen gibt, von den Zulassungsstellen ausgegeben",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "The sentence begins 'Seit 26. September 2015'."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:06:51Z",
+   "target": "f14415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die heute gültigen Euro-Kennzeichen wurden zunächst 1994 von Berlin und Brandenburg",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:06:53Z",
+   "target": "f14415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutschland führte das EU-Kennzeichen testweise ab 1994 ein.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the 1994 start as a trial; it does not name the states. No independent page naming Berlin and Brandenburg could be fetched (search budget exhausted); the claim rests on de.wikipedia (and a Czech law-history article seen only in search results)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:40.115Z",
+   "target": "f14414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "enthält im Anschluss an die Nummernkombination ein \"E\"",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:40.115Z",
+   "target": "f14414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "werden die neuen E-Nummernschilder, die es auch in Kombination mit einem Saisonkennzeichen gibt, von den Zulassungsstellen ausgegeben",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:40.115Z",
+   "target": "f14415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die heute gültigen Euro-Kennzeichen wurden zunächst 1994 von Berlin und Brandenburg",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:40.115Z",
+   "target": "f14415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutschland führte das EU-Kennzeichen testweise ab 1994 ein.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  }
+ ]
+}

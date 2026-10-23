@@ -1,0 +1,520 @@
+{
+ "article": "a2630",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mina_Miller_Edison",
+   "title": "Mina Miller Edison",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:14.038Z",
+   "snapshot": "bba9ee7aefd98f59a41262863e9817adadfa7dcf5fb4b3130eb1f4aaa97167dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tattoo_machine",
+   "title": "Tattoo machine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:15.076Z",
+   "snapshot": "f3dcfe96ab472cfc97481534196303a8ab826b36927406b4d1113bfad09da3a5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Electric_pen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:16.046Z",
+   "snapshot": "81be475ef77f9d884080c290bb132c9663eb42bb127e9f2eb3352abafb3ec520"
+  },
+  "s4": {
+   "url": "https://www.nps.gov/edis/learn/historyculture/thomas-alva-edison-jr.htm",
+   "title": "Thomas Alva Edison Jr",
+   "publisher": "US National Park Service (Thomas Edison NHP)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:58.308Z",
+   "snapshot": "534cf107ee443feba0780a1e2faeafe5d240b28d018541bb1251040c3066b66f"
+  },
+  "s5": {
+   "url": "https://ethw.org/Thomas_Edison%27s_Children",
+   "title": "Thomas Edison's Children",
+   "publisher": "IEEE History Center (ETHW)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:58.636Z",
+   "snapshot": "70dfdf4256e6d1d088f0c101bf14ad8bf698523b95025066521fac1bffdf8d9f"
+  },
+  "s6": {
+   "url": "https://www.salon.com/2022/04/02/11-surprising-facts-about-thomas-edison_partner/",
+   "title": "11 surprising facts about Thomas Edison",
+   "publisher": "Salon (Mental Floss partner)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:58.548Z",
+   "snapshot": "1d3cd47fbad743ef7c80f5f2c7445d909c0d03d8411de7df6d96e4e18ec695d9"
+  },
+  "s7": {
+   "url": "https://patents.google.com/patent/US464801A/en",
+   "title": "US464801A – Tattooing-machine (S. F. O'Reilly, 1891)",
+   "publisher": "USPTO via Google Patents",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:58.592Z",
+   "snapshot": "ad8becfa6d8cb7692d765c810011c825df6c7a88891af31c7fbf470edb850b45"
+  },
+  "s8": {
+   "url": "https://www.inventionandtech.com/node/86289",
+   "title": "Invention & Technology: the electric pen and the tattoo machine",
+   "publisher": "Invention & Technology (American Heritage)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:59.559Z",
+   "snapshot": "1be7ce14599fa92c04a34d43dac8f3f01f8cd61d46c35651ce327be6d48c1a0a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thomas Edison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tattoo machine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-272"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mina Miller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dot and Dash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samuel O'Reilly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:49.143Z",
+   "target": "f14231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mina Miller Edison (born Mina Miller; July 6, 1865 – August 24, 1947) was an American community activist and the second wife of inventor and industrialist Thomas Edison.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Edison” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:49.143Z",
+   "target": "f14232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A tattoo machine (colloquially referred to as a tattoo gun) is a hand-held device generally used to create a tattoo, a permanent marking of the skin with indelible ink.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tattoo machine” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:49.143Z",
+   "target": "f14233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mina Miller Edison (born Mina Miller; July 6, 1865 – August 24, 1947) was an American community activist and the second wife of inventor and industrialist Thomas Edison.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mina Miller” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:49.143Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dot and Dash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dot and Dash”, “Dot und Dash”, “Дот и Дэш”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:49.143Z",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was originally intended to be used as a duplicating device, but in 1891, Samuel O'Reilly discovered that Edison's machine could be modified and used to introduce ink into the skin, and later patented a tube and needle system to provide an ink reservoir.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samuel O'Reilly” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:32:41Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Since his sister Marion was nicknamed \"Dot,\" he was nicknamed \"Dash.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:32:45Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edison affectionately called her “Dot,” a reference to Morse Code . Her younger brother, Thomas, Jr., was called “Dash.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "ETHW gives Marion's birth as 1872; the Edison Papers/Wikipedia give 18 Feb 1873"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:32:48Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "he called his two eldest children — Marion Edison and Thomas Edison, Jr. — Dot and Dash, respectively.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:32:52Z",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "residing at New York, in the county and State of New York, have invented new and useful Improvements in Tattooing-Machines",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "Patent US 464,801, filed 16 Jul 1891, granted 8 Dec 1891 to Samuel F. O'Reilly of New York"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:32:54Z",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It did, however, inspire an innovative New York City tattooist named Samuel F. O’Reilly to experiment with the high-speed perforation of human skin. By slightly modifying the electric pen, he was able to obtain a patent for a tattoo machine in 1891",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:48:27Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edison affectionately called her “Dot,” a reference to Morse Code. Her younger brother, Thomas, Jr., was called “Dash.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted as the crawler extracts the page (e12 had stray spaces)"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Since his sister Marion was nicknamed \"Dot,\" he was nicknamed \"Dash.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "he called his two eldest children — Marion Edison and Thomas Edison, Jr. — Dot and Dash, respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "residing at New York, in the county and State of New York, have invented new and useful Improvements in Tattooing-Machines",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It did, however, inspire an innovative New York City tattooist named Samuel F. O’Reilly to experiment with the high-speed perforation of human skin. By slightly modifying the electric pen, he was able to obtain a patent for a tattoo machine in 1891",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edison affectionately called her “Dot,” a reference to Morse Code. Her younger brother, Thomas, Jr., was called “Dash.”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "— Dot and Dash, respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dot and Dash” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:34.349Z",
+   "target": "f14235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Electric Elmer and Samuel O’Reilly became locked in a patent dispute, each claiming to have invented the new machine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Samuel O'Reilly” is on the snapshot of s8"
+  }
+ ]
+}

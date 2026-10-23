@@ -1,0 +1,588 @@
+{
+ "article": "a2185",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Peanut_butter",
+   "title": "Peanut butter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:47.283Z",
+   "snapshot": "0a483457e65166f40fb4c758bf11f5f44260247e20848def458d14767a3780cf"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Carrageen",
+   "title": "Carrageen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:45.014Z",
+   "snapshot": "1d40b5b0335b5bb1a82acbaa722719a7ef1b54efb12e0d7087924f55b6e7cbc1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/E-Nummer",
+   "title": "E-Nummer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:46.005Z",
+   "snapshot": "0dbfc24e2ae28e25135dc9a30df47134ca23312eb7c07f45f3f9bbf07d73f1b7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Fischst%C3%A4bchen",
+   "title": "Fischstäbchen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:47.042Z",
+   "snapshot": "05d4a3a3e107dc64d52187936073f3f4bfca1b053f4ed2f5123c31e40285fee5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fish_finger",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:48.181Z",
+   "snapshot": "7d7a3285c31d7865acd8972f0d209e2cd7ff85a587751f0ac259676fd5c8cbf2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Margarine",
+   "title": "Margarine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:49.308Z",
+   "snapshot": "ad09909f6e1c10a383edf31ed1e382d3110b4f7fe31d3ba76dfcec35794e9fa1"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Monosodium_glutamate",
+   "title": "Monosodium glutamate",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:50.184Z",
+   "snapshot": "96dae9ca62e9357ab69e9b9ab1488f7ea3be0631cdf3cf24848415d4eb1e4dd9"
+  },
+  "s8": {
+   "url": "https://patents.google.com/patent/US4139651A/en",
+   "title": "US4139651A - Method of removing citrus-fruit-pulp-segment membranes",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:47.452Z",
+   "snapshot": "f82801870445d60e56ce0d64773d171ebb3cf56185c7349e435b828310f5127d"
+  },
+  "s9": {
+   "url": "https://www.fao.org/4/y4765e/y4765e0a.htm",
+   "title": "A guide to the seaweed industry – Carrageenan",
+   "publisher": "FAO",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:14.520Z",
+   "snapshot": "cda26bb5301200c30583f030c58b59363e79079c009b34e0703a32ba84ba67e8"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Lye",
+   "title": "Lye",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:14.801Z",
+   "snapshot": "799a9c29243dc2f0bb8e066124768e02a0806c64d27c1ddbdefd9581fca5717b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Speiseeis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-055"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lebensmittelzusatzstoffe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-356"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Großbritannien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-375"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the United Kingdom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Napoleon III",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "umami",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Acid, then caustic soda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 66; transcript ppm-073"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In a 100 gram amount, smooth peanut butter supplies 597 calories and is composed of 51% fat, 22% protein, 22% carbohydrates (including 5% dietary fiber), and 1% water (table).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fat” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Speiseeis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Speiseeis”, “Ice cream”, “мороженое”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "E-Nummern werden von der Europäischen Union (EU) für Stoffe vergeben, die als Lebensmittelzusatzstoffe oder Futtermittelzusatzstoffe in der EU zugelassen sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lebensmittelzusatzstoffe” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Großbritannien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Großbritannien”, “the United Kingdom”, “Великобритания”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The term \"fish finger\" is first referenced in a recipe given in a popular British magazine in 1900, and the dish is often considered symbolic of the United Kingdom by British people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the United Kingdom” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "After the French Emperor Napoleon III issued a challenge to create a butter-substitute from beef tallow for the armed forces and lower classes, Hippolyte Mège-Mouriès invented margarine in 1869.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Napoleon III” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f11091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MSG is found naturally in some foods including tomatoes and cheese in this glutamic acid form, and is used in cooking as a flavor enhancer that intensifies the umami flavor of food, as naturally occurring glutamate does in foods such as stews and meat soups.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “umami” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:34.626Z",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Acid, then caustic soda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Acid, then caustic soda”, “Säure, dann Natronlauge”, “кислота, затем каустическая сода”) on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:33:19Z",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a similar amount added to ice cream also prevents whey separation that may be caused by other gums that were added to the ice cream to control texture and ice crystal growth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:33:24Z",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Milchprodukten, Milchshakes, Eiscreme und Desserts eingesetzt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:33:30Z",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "immersing the rinsed segments in an aqueous solution of caustic soda of a proper concentration for about 20 minutes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "background of the patent describes the conventional process: acid bath (~40 min), rinse, then caustic soda (~20 min)"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:33:34Z",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "immersing the separated segments in a sulphuric or hydrochloric acid solution of a proper concentration for about 40 minutes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:33:37Z",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Lyes are used to cure many types of food, including olives and cocoa (making them less bitter), canned mandarin oranges",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:21.715Z",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a similar amount added to ice cream also prevents whey separation that may be caused by other gums that were added to the ice cream to control texture and ice crystal growth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:21.715Z",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Milchprodukten, Milchshakes, Eiscreme und Desserts eingesetzt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:21.715Z",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "immersing the separated segments in a sulphuric or hydrochloric acid solution of a proper concentration for about 40 minutes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:21.715Z",
+   "target": "f25604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Lyes are used to cure many types of food, including olives and cocoa (making them less bitter), canned mandarin oranges",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:21.715Z",
+   "target": "f11087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "cheese will prevent separation of whey, and a similar amount added to ice cream",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ice cream” is on the snapshot of s9"
+  }
+ ]
+}

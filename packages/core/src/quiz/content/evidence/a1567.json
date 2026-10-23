@@ -1,0 +1,249 @@
+{
+ "article": "a1567",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tommy_Hilfiger_(company)",
+   "title": "Tommy Hilfiger (company) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:50.030Z",
+   "snapshot": "760ebd04cdfd3b968edd6979de3117e272fab1f9109635410a6ff11a4376e3a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ralph_Lauren_Corporation",
+   "title": "Ralph Lauren Corporation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:51.061Z",
+   "snapshot": "492ec772f05ef6d41be13403de208a274c78d83f4a4413d94a30c972222dd71f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Versace",
+   "title": "Versace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:52.007Z",
+   "snapshot": "17af4f87c4a92327a37007bb4a41b4200439d8e34b8bf6332b079a215f5ae805"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+   "title": "Coco Chanel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:53.175Z",
+   "snapshot": "38f2d2f7e5b850912ff61bf31ed0c99ff783cfc0870bf35de4b5cf0bc6c7a7cf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lacoste",
+   "title": "Lacoste – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:53.934Z",
+   "snapshot": "6f72cb2ec7ed6acf43a380f48f47d6bc125b5f58c1d1cb602e66febf86a39edc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Lacoste",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:54.910Z",
+   "snapshot": "f58fec3d8fe01d8ffadd92a0a442209f88d5760b7033f235b4aa5a05aab19f3e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tommy Hilfiger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ralph Lauren",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gianni Versace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Coco Chanel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "René Lacoste",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:44.777Z",
+   "target": "f07831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "( hil-FIG-ər), formerly known as Tommy Hilfiger Corporation and Tommy Hilfiger Inc., is a Dutch-based American clothing brand that manufactures apparel and licensed products such as footwear, accessories, fragrances and home furnishings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.777Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tommy Hilfiger” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:44.777Z",
+   "target": "f07832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ralph Lauren Corporation is a publicly traded American fashion and lifestyle brand founded in 1967 by American businessman Ralph Lauren in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.777Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ralph Lauren” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:44.777Z",
+   "target": "f07833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(Italian: [ˈdʒanni verˈsaːtʃe]), usually referred to as Versace ( vər-SAH-chay), is an Italian luxury elite fashion company founded by Gianni Versace in 1978.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.777Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gianni Versace” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:44.777Z",
+   "target": "f07834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Biographer Justine Picardie, in her 2010 study Coco Chanel: The Legend and the Life, suggests that the fashion designer's nephew, André Palasse, supposedly the only child of her sister Julia-Berthe who had committed suicide, was Chanel's child by Balsan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.777Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coco Chanel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:44.777Z",
+   "target": "f07835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "(; French: [lakɔst]) is a French designer fashion brand, founded in 1933 by tennis player René Lacoste, and entrepreneur André Gillier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.777Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Lacoste” is on the snapshot of s5"
+  }
+ ]
+}

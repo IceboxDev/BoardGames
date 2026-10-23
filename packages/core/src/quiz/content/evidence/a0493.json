@@ -1,0 +1,195 @@
+{
+ "article": "a0493",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Zimmer",
+   "title": "Hans Zimmer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:02.134Z",
+   "snapshot": "46b9a5992406ed4d58e426177692fd5d8a41f52fdcd044c86552e3356f55bf4c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/John_Williams",
+   "title": "John Williams – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:03.157Z",
+   "snapshot": "24d0eff479a583acc5cf1d4ada29f106ad4348ae592fe881b5d11a332add857e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Howard_Shore",
+   "title": "Howard Shore – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:04.108Z",
+   "snapshot": "d8085cca9bd2367722a4c21b445b20316fbcd5706b8b48f907f3455533a9861d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Klaus_Doldinger",
+   "title": "Klaus Doldinger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:00:01.478Z",
+   "snapshot": "b654046f54833c2c7decb7bc22b8113d1978cf8922ab81896de39a234c044372"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hans Zimmer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Williams",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Howard Shore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Klaus Doldinger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:57.750Z",
+   "target": "f02461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1980, Zimmer co-produced a single, \"History of the World, Part 1\", with, and for, UK punk band The Damned, which was also included on their 1980 LP release, The Black Album, and carried the description of his efforts as \"Over-Produced by Hans Zimmer.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Zimmer” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:57.750Z",
+   "target": "f02462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His career was chronicled in the Disney+ documentary Music by John Williams (2024).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Williams” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:57.750Z",
+   "target": "f02464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the musical director for Michaels' influential late-night NBC sketch comedy show Saturday Night Live, appearing in many musical sketches, including Howard Shore and His All-Nurse Band, and dressed as a beekeeper for a Dan Aykroyd/John Belushi performance of the Slim Harpo classic \"I'm a King Bee\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Howard Shore” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:57.750Z",
+   "target": "f02465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1962 gründete er das Klaus Doldinger Quartett, mit dem er im folgenden Jahr für das Philips-Label seine erste Platte, Doldinger – Jazz Made in Germany veröffentlichte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klaus Doldinger” is on the snapshot of s4"
+  }
+ ]
+}

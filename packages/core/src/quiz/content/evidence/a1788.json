@@ -1,0 +1,854 @@
+{
+ "article": "a1788",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_Graham_Bell",
+   "title": "Alexander Graham Bell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:25.604Z",
+   "snapshot": "836ef9c3177cdb2548eb678c74985a47ed7e1c0b35c2172d87cc62b9292f3df3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Philipp_Reis",
+   "title": "Philipp Reis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:37.942Z",
+   "snapshot": "4d3776602779488a5f74852a5a3a89131d31e6d5a707e39742f249a3b02ccebc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pearl_Street_Station",
+   "title": "Pearl Street Station – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:41.423Z",
+   "snapshot": "9b903b282bd9d250a9e26b2198726e5ee81b4f6692aaab45cd819ad41f681584"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Siemens",
+   "title": "Siemens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:38.955Z",
+   "snapshot": "d51d2b9b255eb7f247746f4594766504f785cf2cb5d35a556c042166dfddfeef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Guglielmo_Marconi",
+   "title": "Guglielmo Marconi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:42.552Z",
+   "snapshot": "08ae51e2eecb51f12c35079bb43ac4f46d5a556059d779b70226f58adc335cd4"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Erfindung_des_Telefons",
+   "title": "Erfindung des Telefons",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:40.196Z",
+   "snapshot": "0bce8363cccc995fc81be668dea24302d1caa1d211cf91317d171b42fc889652"
+  },
+  "s7": {
+   "url": "https://www.computerwoche.de/article/2635328/vom-fernsprecher-zum-handy.html",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:40.831Z",
+   "snapshot": "62575bd6ceaef30a68a517a2a04fbd0cc49050d2ad8c9b4187400e8a683f30a8"
+  },
+  "s8": {
+   "url": "https://ethw.org/Alexander_Graham_Bell",
+   "title": "Alexander Graham Bell – Engineering and Technology History Wiki",
+   "publisher": "IEEE History Center (ETHW)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:25.308Z",
+   "snapshot": "dffc752100d60b1c6f4461ab450d59f8d8006bf11b70879fb0a956630cf4e015"
+  },
+  "s9": {
+   "url": "https://www.physikalischer-verein.de/ueber-uns/unsere-geschichte",
+   "title": "Unsere Geschichte – Physikalischer Verein Frankfurt",
+   "publisher": "Physikalischer Verein Frankfurt am Main",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:25.437Z",
+   "snapshot": "1bfa0edd44c8486917fe25af6a1dcc02e79aec3f632c024f89fa6e42b846cff5"
+  },
+  "s10": {
+   "url": "https://ethw.org/Milestones:Pearl_Street_Station,_1882",
+   "title": "Milestones:Pearl Street Station, 1882 – ETHW",
+   "publisher": "IEEE History Center (ETHW)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:26.149Z",
+   "snapshot": "a17e3d6676194bee951ed448385e4fb77de576eb0f11c450b47dff2adc7e68dd"
+  },
+  "s11": {
+   "url": "https://www.siemens.com/global/en/company/about/history/company/1847-1865.html",
+   "title": "Company development | Siemens",
+   "publisher": "Siemens AG",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:26.225Z",
+   "snapshot": "a160b207a250a83cd7ccd353d26668648cfa55f914cbb3148568a233b64a7d0b"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Electric_locomotive",
+   "title": "Electric locomotive – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:25.818Z",
+   "snapshot": "02cc6ef5168d54544cf935d0730791c498d92f78a24e51ac3c3005fb0480cc6f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alexander Graham Bell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08937",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philipp Reis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Edison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Werner von Siemens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Guglielmo Marconi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Telefon",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Telefon",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Telefon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-356/3, u03): The sentence was spoken over Philipp Reis's telephone, not sent as a telegram. Sources disagree on which demonstration it was: de.wikipedia ties it to 26 Oct 1861, while dpa says 'according to legend, at a different demonstration'. So I dropped the year from the wording."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Telefon",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Telefon",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Telefon",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s7"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f08936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alexander Graham Bell ( ; born Alexander Bell; March 3, 1847 – August 2, 1922) was a  Scottish-born Canadian-American inventor, scientist, and engineer who is credited with patenting the first practical telephone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander Graham Bell” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f08937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philipp Reis kam als Sohn des Gelnhausener Bürgers und Bäckermeisters Karl Sigismund Reis (1807–1843) und der Marie Katharine geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philipp Reis” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f08938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pearl Street Station was Thomas Edison's first commercial power plant in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Edison” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1890 schied Werner von Siemens aus der Geschäftsführung aus, Inhaber waren nun Bruder Carl und die Söhne Arnold und Wilhelm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werner von Siemens” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f08940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1941, his body was exhumed and buried in the Mausoleum of Guglielmo Marconi, built by architect Marcello Piacentini at Villa Griffone in Pontecchio, where Marconi had carried out his first experiments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guglielmo Marconi” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daraufhin erschien im Jahresbericht 1860/61 des Vereins auf Seite 57 ein wissenschaftlicher Fachbericht von Reis zum Telefon: Ueber Telephonie durch den galvanischen Strom.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telefon” is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im Telefon von Reis erfolgte die Wandlung von Tönen zu Stromänderungen mittels des Prinzips des schallgesteuerten Widerstands bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telefon” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:28:23.011Z",
+   "target": "f14223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "150 Jahre Telefon: Vom Fernsprecher zum Handy | Computerwoche",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telefon” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:45:43Z",
+   "target": "f08936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "By the summer of 1877, the telephone had become a business. The first private lines, which typically connected a businessman’s home and his office, had been placed in service.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "ETHW also says Bell had little interest in being a businessman and left the Bell Telephone Company to Hubbard and Sanders — the 'major entrepreneur' framing is the card's; the answer stands"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:45:45Z",
+   "target": "f08936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Co-founder of Bell Telephone Company , Bell Canada and AT&T",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:45:47Z",
+   "target": "f08937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Es verwundert daher nicht, dass er seine neuste Erfindung – das sogenannte Telephon – am 26. Oktober 1861 im Verein vorstellt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:45:48Z",
+   "target": "f08937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reis nannte seine Erfindung Telephon – in Anlehnung an den Telegraphen .",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:45:49Z",
+   "target": "f08938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "On 4 September 1882, Edison’s direct current (dc) generating station at 257 Pearl Street, began supplying electricity to customers in the First District",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T10:45:51Z",
+   "target": "f08938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pearl Street Station was Thomas Edison's first commercial power plant in the United States.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T10:45:52Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Together with precision mechanic Johann Georg Halske, he established “Telegraphen-Bauanstalt von Siemens & Halske” to manufacture his new device.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T10:45:53Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "In 1879, Siemens & Halske presented the world’s first electric railway powered by an external electricity supply.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T10:45:55Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "zusammen mit dem Feinmechanikermeister Johann Georg Halske die Telegraphen Bau-Anstalt von Sieme",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T10:46:10Z",
+   "target": "f08939",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The first known electric locomotive was built in 1837 by chemist Robert Davidson of Aberdeen , and it was powered by galvanic cells (batteries).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "premise: the old wording called Siemens's 1879 Berlin machine 'the first electric locomotive'; it was the first electric railway powered by an external supply (Siemens AG). Wording and body corrected; answer Werner von Siemens unchanged"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T10:46:23Z",
+   "target": "f08939",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "In 1879, Siemens & Halske presented the world’s first electric railway powered by an external electricity supply.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "corrected premise: the reworded question now asks about the electric railway shown at the 1879 Berlin trade fair"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "By the summer of 1877, the telephone had become a business. The first private lines, which typically connected a businessman’s home and his office, had been placed in service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Es verwundert daher nicht, dass er seine neuste Erfindung – das sogenannte Telephon – am 26. Oktober 1861 im Verein vorstellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s9"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "On 4 September 1882, Edison’s direct current (dc) generating station at 257 Pearl Street, began supplying electricity to customers in the First District",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s10"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "In 1879, Siemens & Halske presented the world’s first electric railway powered by an external electricity supply.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s11"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "zusammen mit dem Feinmechanikermeister Johann Georg Halske die Telegraphen Bau-Anstalt von Sieme",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s4"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08939",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "In 1879, Siemens & Halske presented the world’s first electric railway powered by an external electricity supply.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e28 is on the snapshot of s11"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Alexander Graham Bell - Engineering and Technology History Wiki",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alexander Graham Bell” is on the snapshot of s8"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Als Kandidat kommt auf jeden Fall der in Gelnhausen geborene Philipp Reis in Frage.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Philipp Reis” is on the snapshot of s9"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Werner von Siemens laid the foundation for today’s Siemens AG in 1847 with his design for the pointer telegraph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Werner von Siemens” is on the snapshot of s11"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:57:10.939Z",
+   "target": "f08939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The first electric passenger train and first electric locomotive powered by a generator was presented by Werner von Siemens at Berlin in 1879.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Werner von Siemens” is on the snapshot of s12"
+  }
+ ]
+}

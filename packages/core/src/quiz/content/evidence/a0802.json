@@ -1,0 +1,354 @@
+{
+ "article": "a0802",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Calvados_(department)",
+   "title": "Calvados (department) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:16.420Z",
+   "snapshot": "9815096afe94fcb165897a79c1fecd1506238a11c31815f673287b39ad7382c2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Martell_(cognac)",
+   "title": "Martell (cognac) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:17.373Z",
+   "snapshot": "4e04fdb19b5b58144e10ab500f20ea406160f46bfaca885197135e95ae81e366"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ruinart_(Champagne)",
+   "title": "Ruinart (Champagne) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:18.310Z",
+   "snapshot": "c0d6c3bf698a06a9132a7ac9987422f8dc1961a874808675b8be0aee169fbfa4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Armagnac",
+   "title": "Armagnac – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:19.342Z",
+   "snapshot": "cb0a991d9147b5985ef957f5cffc2d08cb0692ad83dddeccdaa695b3edaf543c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Camembert",
+   "title": "Camembert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:20.327Z",
+   "snapshot": "93f7ae29218ad323cac95184b282d2c2ef1f4175be5f4152b7ed9eb9d178ee7a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Armagnac_(brandy)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:21.367Z",
+   "snapshot": "cb0a991d9147b5985ef957f5cffc2d08cb0692ad83dddeccdaa695b3edaf543c"
+  },
+  "s7": {
+   "url": "https://www.tourisme-gers.com/en/armagnac",
+   "title": "Armagnac – Tourisme Gers",
+   "publisher": "Comité Départemental du Tourisme du Gers",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:42.973Z",
+   "snapshot": "b7c692d2ed36e0a046c9aafacf059507ed7325c314eaa72e2821c1069c825558"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calvados",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cognac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Champagne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armagnac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Camembert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:47.335Z",
+   "target": "f04006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calvados (UK: , US: ; French: [kalvados] ) is a department in the Normandy region in northwestern France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.335Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Calvados” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:47.335Z",
+   "target": "f04007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Martell is a cognac house founded in 1715 by Jean Martell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.335Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cognac” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:47.335Z",
+   "target": "f04008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ruinart (pronounced [ʁɥinaːʁ]) is the oldest established champagne house, exclusively producing champagne since 1729.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.335Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Champagne” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:47.335Z",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armagnac (US: , French: [aʁmaɲak] ) is a brandy produced in the Armagnac region in Gascony, southwest France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.335Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Armagnac” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:47.335Z",
+   "target": "f04010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Camembert ( KAM-əm-bair, UK also  -⁠om-, French: [kamɑ̃bɛʁ] ) is a moist, soft, creamy, surface-ripened cow's milk cheese.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.335Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Camembert” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:37:48Z",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armagnac is the oldest brandy and one of the oldest liquors still produced by distillation in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:37:52Z",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Born more than seven hundred years ago, Armagnac is the oldest of the French brandies.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:15.381Z",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armagnac is the oldest brandy and one of the oldest liquors still produced by distillation in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:15.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:15.381Z",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Born more than seven hundred years ago, Armagnac is the oldest of the French brandies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:15.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:15.381Z",
+   "target": "f04009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Born more than seven hundred years ago, Armagnac is the oldest of the French brandies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:15.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Armagnac” is on the snapshot of s7"
+  }
+ ]
+}

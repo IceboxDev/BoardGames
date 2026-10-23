@@ -1,0 +1,466 @@
+{
+ "article": "a2759",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bullenhai",
+   "title": "Bullenhai",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:19:34.379Z",
+   "snapshot": "4f8d9bc2dc6e81ef673e7af23e92eac6969df25718ce0d2f5f47e87a8ea8d617"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hammerhead_shark",
+   "title": "Hammerhead shark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:38.143Z",
+   "snapshot": "d4d90750cc6038e7de569ce7fd5dab1cf84c4e873242adb158657c2fdd60e2c3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Greenland_shark",
+   "title": "Greenland shark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:55.753Z",
+   "snapshot": "fce768fb64b51b533fa3ea3585d1390a9518ff239864d13b00a9db4f9d115b83"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cookiecutter_shark",
+   "title": "Cookiecutter shark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:39.144Z",
+   "snapshot": "5efeb0d7c3384981283ff80fae98d0b606f113e093325d57155f328d04a2d2f4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pyjama_shark",
+   "title": "Pyjama shark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:40.042Z",
+   "snapshot": "5baebf23ca348ef253f27b8693384c16ddc89dba8d255342db308c5cfb83b0fd"
+  },
+  "s6": {
+   "url": "https://www.floridamuseum.ufl.edu/shark-attacks/yearly-worldwide-summary/",
+   "title": "Yearly Worldwide Shark Attack Summary",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:38.116Z",
+   "snapshot": "d158a3bf9d5c8056f11d8bc6537b10de3a1bdd1c5ee8b27ddb4be44351c72b53"
+  },
+  "s7": {
+   "url": "https://news.ufl.edu/2026/02/shark-bites/",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:38.701Z",
+   "snapshot": "1aacf76de7ccf093ee9cf85f1b9416666316965ffc47dd00e00cef006b3142df"
+  },
+  "s8": {
+   "url": "https://oceanservice.noaa.gov/facts/greenland-shark.html",
+   "title": "How long do Greenland sharks live?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:13.195Z",
+   "snapshot": "c0defa0c8169d6254dbe696c74401aa08f99e23d1140d3566f0f22e3fbd876ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bullenhai",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 2; transcript tp-299"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hammerhead shark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-396"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Greenland shark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; history entry seq 54"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cookiecutter shark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-063"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Long tendrils",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-030"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "About 8",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "About 8",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (ppm-117/1, u02): ISAF's 2025 report gives a five-year (2020–2024) average of 8 unprovoked fatalities a year but a ten-year average of 6, so “average year” was ambiguous; narrowed to the five-year average with an as-of date. (Card's ~5/yr is outdated; shark is still least likely to kill vs US vending machines/lightning.)"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:08.824Z",
+   "target": "f13272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Bullenhai oder Gemeine Grundhai – manchmal auch Stierhai oder Sambesihai genannt (Carcharhinus leucas) – ist ein Hai aus der Familie der Requiemhaie (Carcharhinidae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bullenhai” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:08.824Z",
+   "target": "f13273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hammerhead shark species vary in length and weight.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hammerhead shark” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:08.824Z",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Greenland shark (Somniosus microcephalus), also known as the grey shark or gurry shark, is a large shark of the family Somniosidae (\"sleeper sharks\"), closely related to the Pacific and southern sleeper sharks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greenland shark” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:08.824Z",
+   "target": "f25319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The cookiecutter shark (Isistius brasiliensis), also called the cigar shark, is a species of small squaliform shark in the family Dalatiidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cookiecutter shark” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:08.824Z",
+   "target": "f25744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The egg is contained in a tough, rectangular, dark brown capsule 9.5 cm (3.7 in) long and 4.5 cm (1.8 in) across, with long tendrils at the corners that enable the female to fasten the capsule to underwater structures such as algae stipes or gorgonians.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Long tendrils” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:10:10Z",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Greenland shark has the longest known lifespan of all vertebrates.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: oldest individual 392 ± 120 years, i.e. 272–512 (lead rounds to 272–510)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:10:11Z",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The largest shark they found, a 5-meter female, was between 272 and 512 years old according to their estimates.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:10:35Z",
+   "target": "f25745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This number is also in line with the most recent five-year annual global average of eight unprovoked fatalities per year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "2025 summary (published Feb 2026): 9 unprovoked fatalities in 2025; five-year (2020–2024) average 8; ten-year average 6."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:10:36Z",
+   "target": "f25745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nine of last year’s bites resulted in fatalities, compared to the 10-year average of six.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gives the ten-year average (6) rather than the five-year one (8); notes accept both."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:57.636Z",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Greenland shark has the longest known lifespan of all vertebrates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:57.636Z",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The largest shark they found, a 5-meter female, was between 272 and 512 years old according to their estimates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:57.636Z",
+   "target": "f25745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This number is also in line with the most recent five-year annual global average of eight unprovoked fatalities per year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:57.636Z",
+   "target": "f25745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nine of last year’s bites resulted in fatalities, compared to the 10-year average of six.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:57.636Z",
+   "target": "f13274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Scientists estimate the Greenland shark lives at least 250 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:57.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Greenland shark” is on the snapshot of s8"
+  }
+ ]
+}

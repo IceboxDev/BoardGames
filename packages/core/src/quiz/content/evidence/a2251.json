@@ -1,0 +1,242 @@
+{
+ "article": "a2251",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Robert_Gernhardt",
+   "title": "Robert Gernhardt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:40.493Z",
+   "snapshot": "74ae64012503e36172f74faa60c2bd0dce02441776ce04b3c16fb0e62d2eaebd"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Eulenspiegel_(Magazin)",
+   "title": "Eulenspiegel (Magazin)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:40.940Z",
+   "snapshot": "f0144609efbc91b6e76cd74d9708f9f8882988ace0e551528dd716c734a041d2"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Simplicissimus",
+   "title": "Simplicissimus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:42.113Z",
+   "snapshot": "d2eee9595714ecd241f5ca2af973fa70c8e9d4c3dfe39bbf452215a7b07917b3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pardon_(Zeitschrift)",
+   "title": "Pardon (Zeitschrift) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:42.928Z",
+   "snapshot": "79f11ea663bd80b7ba31570e0bee036a60c31aca546cac7385bae32c5f0b682f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Eulenspiegel_(Zeitschrift)",
+   "title": "Eulenspiegel (Zeitschrift) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:43.927Z",
+   "snapshot": "f0144609efbc91b6e76cd74d9708f9f8882988ace0e551528dd716c734a041d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Titanic",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-385"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eulenspiegel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-399"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Simplicissimus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pardon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frischer Wind",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:43.545Z",
+   "target": "f11534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Er war Redakteur der Zeitschrift Pardon sowie Mitbegründer der Neuen Frankfurter Schule und des Satiremagazins Titanic.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titanic” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:43.545Z",
+   "target": "f11535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Eulenspiegel ist ein monatlich erscheinendes Humor- und Satiremagazin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eulenspiegel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:43.545Z",
+   "target": "f11536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Simplicissimus (lateinisch „der Einfältigste“) war eine satirische Wochenzeitschrift, die vom 4.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simplicissimus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:43.545Z",
+   "target": "f11537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pardon war eine deutschsprachige literarisch-satirische Zeitschrift, die von 1962 bis 1982 erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pardon” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:43.545Z",
+   "target": "f11538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Zeitschrift ging aus dem Satireblatt Frischer Wind hervor, das seit dem 15.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frischer Wind” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a2180",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sojabohne",
+   "title": "Sojabohne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:31.373Z",
+   "snapshot": "12fa324bad76978c50babf7a56e9f726b3919a7123e541851b5c348dd8dbd64a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Miso",
+   "title": "Miso",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:32.398Z",
+   "snapshot": "1b9b18d8f2163095fb357d5bb9d8c3fa8f3a02d03871c36fb1d03ed68fce3474"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Tempeh",
+   "title": "Tempeh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:33.440Z",
+   "snapshot": "40cfbb5540b194be5e9e3de3a244b8f4e4d389f7e8b5b62574b1ef570cdc38e1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Edamame",
+   "title": "Edamame – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:31.168Z",
+   "snapshot": "7ad5fc86b66291631defed55bc9ca24cfd15b442452715e5d264adca20f52f71"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Soy_sauce",
+   "title": "Soy sauce – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:32.295Z",
+   "snapshot": "58fdf2a599056e9061204bf25302dac41fd740e8aca7bb21e62192e0437b2dcb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Natt%C5%8D",
+   "title": "Nattō – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:33.170Z",
+   "snapshot": "ad266dd20cb901ef52230a21dbeae88f9651026b9849ff2e41f5dee4509e6c12"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Daizu",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-228"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miso",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-230"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sojabohnen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-215"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "edamame",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "shōyu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "natto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:34.106Z",
+   "target": "f11051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "shōyu für Sojasauce, daizu für Sojabohnen) bezeichnet, ist eine Pflanzenart aus der Gattung Glycine in der Unterfamilie Schmetterlingsblütler (Faboideae) innerhalb der Familie der Hülsenfrüchtler (Leguminosae oder Fabaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daizu” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.106Z",
+   "target": "f11052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miso (japanisch みそ, Kanji , deutsch etwa ‚Quelle allen Geschmacks‘) ist eine ursprünglich japanische Paste, die hauptsächlich aus Sojabohnen mit veränderlichen Anteilen von Reis, Gerste, anderem Getreide oder Pseudogetreide, bestimmten Mikroorganismen und Speisesalz besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miso” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.106Z",
+   "target": "f11053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zur Herstellung werden gekochte Sojabohnen oder ein anderes Grundmaterial mit Rhizopus-Schimmelpilzen aus der Ordnung der Mucorales beimpft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sojabohnen” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.106Z",
+   "target": "f11054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edamame (枝豆; ) is an East Asian and Southeast Asia dish prepared with immature soybeans in their pods, which are boiled or steamed, and may be served with salt or other condiments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “edamame” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.106Z",
+   "target": "f11055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When practitioners of Buddhism came to Japan from China in the 7th century, they introduced vegetarianism and brought many soy-based products with them, such as soy sauce, which is known as shōyu (醤油) in Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “shōyu” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.106Z",
+   "target": "f11056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Natto (Japanese: 納豆, Hepburn: nattō) is a traditional Japanese food made from whole soybeans that have been fermented with Bacillus subtilis var.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “natto” is on the snapshot of s6"
+  }
+ ]
+}

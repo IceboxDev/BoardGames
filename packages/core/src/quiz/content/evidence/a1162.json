@@ -1,0 +1,476 @@
+{
+ "article": "a1162",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Neptune",
+   "title": "Neptune – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:09.241Z",
+   "snapshot": "e3c186f8465be96cd617040bc6e80a67478cb3e0f731996e512e4b5eaa9e2aab"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gas_giant",
+   "title": "Gas giant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:34.938Z",
+   "snapshot": "e94360c135dd07e78f7e696324fc66a6517806ae3e791ce0ccf99d245f4db4f0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mariner_10",
+   "title": "Mariner 10 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:35.956Z",
+   "snapshot": "b8257e2d69de166fe77adfa28fdc0ac618134a5057b27fdeada8a7bb5cb40031"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kirkwood_gap",
+   "title": "Kirkwood gap – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:36.879Z",
+   "snapshot": "c403c2c53c4372b27898e348dc1559d010d0b2335a8c9542b175efc577d2aae6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Asteroid_belt",
+   "title": "Asteroid belt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:37.901Z",
+   "snapshot": "7f160c8e2ed0341ed44d59937bc744b15551186ae8ff13e99c5a61cef2b950bd"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Asteroideng%C3%BCrtel",
+   "title": "Asteroidengürtel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:35.239Z",
+   "snapshot": "9d6c206a24072290aeadf0a0db24cae7d9e47b7a0300f5930f91d7dff59d9c81"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Moons_of_Jupiter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:38.896Z",
+   "snapshot": "26cb6a489c3753163d0e0e1df6072b200a6a06973313b76eaf1257b15d11db6b"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Moons_of_Saturn",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:36.699Z",
+   "snapshot": "ecb3624c1d51512b00d2ec4e516dcbb703b7635e09f8b56456b22c77662a4a29"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Venus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:34.249Z",
+   "snapshot": "031c4c4ca8c4397931a9cd6528ee3b8e7d0e3a0d0fd5d90ecd7cb624dddd0346"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Mariner_4",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:31.052Z",
+   "snapshot": "0e4966e9869da4730259c78451bdecfffb3aef83620cd9d990a2956082ac75a2"
+  },
+  "s11": {
+   "url": "https://science.nasa.gov/neptune/facts/",
+   "title": "Neptune: Facts",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:21.818Z",
+   "snapshot": "9c75913b45f72e478f44029ca512466c8039d7350f02ee7f03a642d7b0b00778"
+  },
+  "s12": {
+   "url": "https://science.nasa.gov/uranus/facts/",
+   "title": "Uranus: Facts",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:22.698Z",
+   "snapshot": "fd4521540b387d89a0652b189770362e837f2be6de58dcb188a6771132ddb583"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Ice_giant",
+   "title": "Ice giant – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:22.095Z",
+   "snapshot": "0c7066f72634e345fcfb7a9ad1c2e18b56a163b6b8287a3423f1472eb99642e2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uranus and Neptune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05807",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jupiter and Saturn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mercury and Venus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mars and Jupiter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mars and Jupiter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-075"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Asteroidengürtel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-210"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:42.164Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uranus and Neptune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Uranus and Neptune”, “Uranus und Neptun”, “Уран и Нептун”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:42.164Z",
+   "target": "f05807",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "There are two gas giants in the Solar System: Jupiter and Saturn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jupiter and Saturn” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:42.164Z",
+   "target": "f05808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mariner 10 was an American robotic space probe launched by NASA on 3 November 1973, to fly by the planets Mercury and Venus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mercury and Venus” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:42.164Z",
+   "target": "f05810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mars and Jupiter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mars and Jupiter”, “Mars und Jupiter”, “Марс и Юпитер”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:42.164Z",
+   "target": "f05810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "However, gravitational perturbations from Mars and Jupiter disrupted their accretion into a planet, imparting excess kinetic energy which shattered colliding planetesimals and most of the incipient protoplanets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mars and Jupiter” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:42.164Z",
+   "target": "f10855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Asteroidengürtel, Planetoidengürtel oder Hauptgürtel ist ein Bereich im Sonnensystem mit einer gehäuften Ansammlung von Asteroiden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asteroidengürtel” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:15:49Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Dark, cold, and whipped by supersonic winds, ice giant Neptune is more than 30 times as far from the Sun as Earth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:15:51Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The ice giant is surrounded by 13 faint rings and 28 small moons.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:15:54Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "There are two ice giants in the Solar System: Uranus and Neptune.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:20.736Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Dark, cold, and whipped by supersonic winds, ice giant Neptune is more than 30 times as far from the Sun as Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:20.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s11"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:20.736Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The ice giant is surrounded by 13 faint rings and 28 small moons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:20.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s12"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:20.736Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "There are two ice giants in the Solar System: Uranus and Neptune.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:20.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s13"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:20.736Z",
+   "target": "f05806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "There are two ice giants in the Solar System: Uranus and Neptune.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:20.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uranus and Neptune” is on the snapshot of s13"
+  }
+ ]
+}

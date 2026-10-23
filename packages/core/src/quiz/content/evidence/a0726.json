@@ -1,0 +1,420 @@
+{
+ "article": "a0726",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Libert%C3%A9,_%C3%A9galit%C3%A9,_fraternit%C3%A9",
+   "title": "Liberté, égalité, fraternité – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:58.275Z",
+   "snapshot": "5f2af76ae6da66a0f4ea23dd2872cc32274f60e4b26dbb9152addff1f9cb88d1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stamp_Act_1765",
+   "title": "Stamp Act 1765 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:59.427Z",
+   "snapshot": "c2d8849888588b75bd98407f564967df10d17bec317e987ab5c9faa41af7511e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wir_sind_das_Volk",
+   "title": "Wir sind das Volk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:15:56.421Z",
+   "snapshot": "84fda63620bdbc63848e2f8ac586e519bda7dddadc9f4835f287410594ea8fa1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tomb_of_Karl_Marx",
+   "title": "Tomb of Karl Marx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:00.264Z",
+   "snapshot": "6d93cc5c8a8e66c753b483ddaedf120ae8c938dba633ac1cd59ad83613aa1243"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Russian_Revolution",
+   "title": "Russian Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:01.457Z",
+   "snapshot": "34c111c269ebd00591badf1b8b91619b686b54108284056a347fb57081d9c3f3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Communist_Manifesto",
+   "title": "The Communist Manifesto – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:49:15Z"
+  },
+  "s7": {
+   "url": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/ch04.htm",
+   "title": "Manifesto of the Communist Party, Chapter IV",
+   "publisher": "Marxists Internet Archive",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:16.000Z",
+   "snapshot": "f32c0cd07a3d50f61bde0e806b843f07090f9320ac4b035fd07db723fba3c40a"
+  },
+  "s8": {
+   "url": "https://encyclopedia.1914-1918-online.net/article/revolutions_russian_empire",
+   "title": "Revolutions (Russian Empire) – 1914-1918-online",
+   "publisher": "1914-1918-online. International Encyclopedia of the First World War",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:22.678Z",
+   "snapshot": "bbd6898161b27290640d3862c70026d68150e86961f9d40d1cd5ca8554fafde4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Liberty, Equality, Fraternity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "No taxation without representation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wir sind das Volk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Workers of the world, unite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peace, Land and Bread",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:34.024Z",
+   "target": "f03626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Liberté, égalité, fraternité (French pronunciation: [libɛʁte eɡalite fʁatɛʁnite]; French for 'liberty, equality, fraternity', Latin: Libertas, aequalitas, fraternitas; Haitian Creole: Libète, egalite, fratènite), is the national motto of France and the Republic of Haiti, and is an example of a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:34.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liberty, Equality, Fraternity” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:34.024Z",
+   "target": "f03627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their slogan was \"No taxation without representation\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:34.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “No taxation without representation” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:34.024Z",
+   "target": "f03628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "„Wir sind das Volk“ ist eine politische Parole, die anfänglich während der Montagsdemonstrationen 1989/1990 in der DDR als Sprechchor gerufen wurde, um gegen die DDR-Regierung zu protestieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:34.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wir sind das Volk” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:34.024Z",
+   "target": "f03629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Workers of the world, unite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Workers of the world, unite”, “Proletarier aller Länder, vereinigt euch”, “Пролетарии всех стран, соединяйтесь”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:34.024Z",
+   "target": "f03630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peace, Land and Bread",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Peace, Land and Bread”, “Frieden, Land und Brot”, “Мир, земля и хлеб”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:15Z",
+   "target": "f03629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"A spectre is haunting Europe — the spectre of communism.\" and \"Workers of the world, unite!\" stand as two iconic lines that frame the text, marking its opening and its close",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:20Z",
+   "target": "f03629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The famous final phrase of the Manifesto, “Working Men of All Countries, Unite!”, in the original German is: “Proletarier aller Länder, vereinigt euch!”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Primary text (1888 English edition) with the German original of the closing line."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:49:23Z",
+   "target": "f03630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Bolsheviks won popularity with a program promising peace, land, and bread: an end to the war, land for the peasantry, and ending famine.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:49:26Z",
+   "target": "f03630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They adopted its slogans of peace, bread, land to the peasants and all power to the soviets",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Scholarly encyclopedia: the Bolsheviks adopted the slogans of peace, bread and land in 1917."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:03.620Z",
+   "target": "f03629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The famous final phrase of the Manifesto, “Working Men of All Countries, Unite!”, in the original German is: “Proletarier aller Länder, vereinigt euch!”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:03.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:03.620Z",
+   "target": "f03630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Bolsheviks won popularity with a program promising peace, land, and bread: an end to the war, land for the peasantry, and ending famine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:03.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:03.620Z",
+   "target": "f03630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They adopted its slogans of peace, bread, land to the peasants and all power to the soviets",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:03.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:03.620Z",
+   "target": "f03629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "“Workers of the World, Unite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:03.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Workers of the world, unite” is on the snapshot of s7"
+  }
+ ]
+}

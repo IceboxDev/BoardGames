@@ -1,0 +1,328 @@
+{
+ "article": "a2331",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sieben_Weltwunder",
+   "title": "Sieben Weltwunder",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:23.742Z",
+   "snapshot": "8bb1e77de456f77198b3a1cf15dbe12001f2eddad4d045cbabda08185cd45074"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World",
+   "title": "Seven Wonders of the Ancient World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:23.241Z",
+   "snapshot": "0b5d194f9f92d1411fb2fe17ae7f3073ea8f7391d2f545c455ff88e834967549"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mausolus",
+   "title": "Mausolus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:24.347Z",
+   "snapshot": "42d19c2ab48bc35a6d487c2a86028b40377db8d1ca68a45f5d45954c20bfce47"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
+   "title": "Giza pyramid complex",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:25.339Z",
+   "snapshot": "860d924969a17df760ee6fcf00edd8b46e1f932deb6e44761eed56e81cb375ec"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:11.674Z",
+   "snapshot": "6b5f43112dc5d28074634b456264fd30131dd15fedcd221619ad85768d5d4c0a"
+  },
+  "s6": {
+   "url": "https://www.pbs.org/wgbh/nova/pyramid/explore/builders.html",
+   "title": "Who Built the Pyramids? (NOVA interviews with Mark Lehner and Zahi Hawass)",
+   "publisher": "PBS NOVA (WGBH)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:40.909Z",
+   "snapshot": "9ece4fe26e3a21db5857e44f76408d3bf0f1412231ca10072b117cc6071f04bb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pyramiden von Gizeh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhodes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ephesus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mausolus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hanging Gardens of Babylon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paid laborers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-016"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:58.014Z",
+   "target": "f12117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heute existieren von diesen Weltwundern nur noch die Pyramiden von Gizeh.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pyramiden von Gizeh” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:58.014Z",
+   "target": "f12118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The seven traditional wonders established by the Octo Mundi Miracula are the Great Pyramid of Giza, the Colossus of Rhodes, the Lighthouse of Alexandria, the Mausoleum at Halicarnassus, the Temple of Artemis at Ephesus, the Statue of Zeus at Olympia, and the Hanging Gardens of Babylon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhodes” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:58.014Z",
+   "target": "f12119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The seven traditional wonders established by the Octo Mundi Miracula are the Great Pyramid of Giza, the Colossus of Rhodes, the Lighthouse of Alexandria, the Mausoleum at Halicarnassus, the Temple of Artemis at Ephesus, the Statue of Zeus at Olympia, and the Hanging Gardens of Babylon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ephesus” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:58.014Z",
+   "target": "f12120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mausolus (Ancient Greek: Μαύσωλος or Μαύσσωλλος, Carian: [𐊪𐊠]𐊲𐊸𐊫𐊦 Mauśoλ) was a ruler of Caria (377–353 BCE) and a satrap of the Achaemenid Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mausolus” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:58.014Z",
+   "target": "f12121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The seven traditional wonders established by the Octo Mundi Miracula are the Great Pyramid of Giza, the Colossus of Rhodes, the Lighthouse of Alexandria, the Mausoleum at Halicarnassus, the Temple of Artemis at Ephesus, the Statue of Zeus at Olympia, and the Hanging Gardens of Babylon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanging Gardens of Babylon” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:58.014Z",
+   "target": "f25630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tombs' proximity to the pyramids and the manner of burial supports the theory that they were paid laborers who took pride in their work and were not slaves, as was previously thought.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.014Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paid laborers” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:25Z",
+   "target": "f25630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "I really believe there were permanent workmen who were working for the king. They were paid by the king and these are the technicians who cut the stones",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Zahi Hawass, excavator of the workers' tombs; Mark Lehner in the same piece: 'Certainly they weren't slaves.'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:43.078Z",
+   "target": "f25630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "I really believe there were permanent workmen who were working for the king. They were paid by the king and these are the technicians who cut the stones",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:43.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  }
+ ]
+}

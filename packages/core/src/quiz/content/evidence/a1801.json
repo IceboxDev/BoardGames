@@ -1,0 +1,242 @@
+{
+ "article": "a1801",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Scooter_(band)",
+   "title": "Scooter (band) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:22.595Z",
+   "snapshot": "954be34667738582359d6aebf32dfd144a808b62bf5f5480602c095a802b7d7f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Marian_Gold",
+   "title": "Marian Gold – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:23.407Z",
+   "snapshot": "43baea2cfe0b5a035e0cdba0efe95c5fb54b4e49258860d0d0b9dc76834be3a5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Modern_Talking",
+   "title": "Modern Talking – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:24.415Z",
+   "snapshot": "6895f6ea87aa2a3e5ee4bcb3ed5bd6ddc03e235441a3b87b3618d51844bdd5bb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Power_(Snap!_song)",
+   "title": "The Power (Snap! song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:25.455Z",
+   "snapshot": "f89910e3a09de27290e8e49c45cd748c13bce720492498359856640ecf897600"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Maxi_Jazz",
+   "title": "Maxi Jazz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:26.406Z",
+   "snapshot": "70322925ab6d39cbbefdb454c854f53f8a9f836eeb13e21feea75cda886781ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scooter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alphaville",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Modern Talking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Snap!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Faithless",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:24.477Z",
+   "target": "f09001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scooter is a German happy hardcore, rave and techno music band founded in Hamburg in 1993.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scooter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:24.477Z",
+   "target": "f09002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marian Gold (born Hartwig Schierbaum; 26 May 1954) is a German singer-songwriter who gained fame as the lead singer of the German synth-pop band Alphaville, but also has recorded as a solo artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alphaville” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:24.477Z",
+   "target": "f09003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Modern Talking was a German pop duo consisting of arranger, songwriter and producer Dieter Bohlen and singer Thomas Anders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Modern Talking” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:24.477Z",
+   "target": "f09004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"The Power\" is a song by German Eurodance group Snap! featuring American rapper Turbo B and American singer Penny Ford, and released as the group's debut single on 3 January 1990 by Logic Records as the lead single from their debut studio album, World Power (1990), both written and produced by the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snap!” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:24.477Z",
+   "target": "f09005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He was the lead vocalist of British electronic band Faithless from 1995 to 2011 and 2015 to 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Faithless” is on the snapshot of s5"
+  }
+ ]
+}

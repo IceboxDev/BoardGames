@@ -1,0 +1,373 @@
+{
+ "article": "a0959",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chlorophyll",
+   "title": "Chlorophyll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:52.077Z",
+   "snapshot": "b5726a1a90b36d27cdcb1ee96dad621ef6bb80c9123a756373d4a96702858632"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carotene",
+   "title": "Carotene – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:38.213Z",
+   "snapshot": "cf8d71607d38cfa3b19836680e0143d6582200ea58c1bfeebd554a676aa9f8bc"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Lycopin",
+   "title": "Lycopin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:31:49.186Z",
+   "snapshot": "8d2283ba877a2e61e657f37e0751d641b1dfabc26a14c7f1496a8fb1a73199bd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Anthocyanin",
+   "title": "Anthocyanin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:53.096Z",
+   "snapshot": "2bdad4d911a8c63fff140dac8ad699ae867b980f9a05213028975fb505cc0ad9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Curcumin",
+   "title": "Curcumin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:53.957Z",
+   "snapshot": "084de6004658f1dc479a3ca4337a5a33da4467f99380928c99770d7c44ab517d"
+  },
+  "s6": {
+   "url": "https://bristol.ac.uk/news/2024/february-/blueberries.html",
+   "title": "Scientists reveal why blueberries are blue",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:51.528Z",
+   "snapshot": "e748355ef575dc70d4df2fd92930ae4570976c86ece20b7d3c27932268d0d4f2"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10849586/",
+   "title": "Self-assembled, disordered structural color from fruit wax bloom (Middleton et al. 2024, Science Advances)",
+   "publisher": "PubMed Central (NLM)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:50.680Z",
+   "snapshot": "84b95f139dc565f80892a13508ebf44fbd17e783bb36fb96dc7a366295acfe68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chlorophyll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c080"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beta-carotene",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lycopin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anthocyanins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Curcumin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A waxy coating",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52; transcript ppm-122"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:11.486Z",
+   "target": "f04791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chlorophyll is any of several related photochemical catalysts and green pigments found in cyanobacteria and in the chloroplasts of algae and plants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chlorophyll” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:11.486Z",
+   "target": "f04792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carotenes are found in plants in two primary forms designated by characters from the Greek alphabet: alpha-carotene (α-carotene) and beta-carotene (β-carotene).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beta-carotene” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:11.486Z",
+   "target": "f04793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lycopin, auch Lycopen oder Leukopin gehört zur Klasse der Carotinoide und wird in hohen Konzentrationen in Tomaten  – von deren wissenschaftlichem Namen Solanum lycopersicum auch die Bezeichnung des Stoffes herrührt – und Hagebutten gefunden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lycopin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:11.486Z",
+   "target": "f04794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anthocyanins (from Ancient Greek  ἄνθος (ánthos) 'flower' and  κυάνεος/κυανοῦς (kuáneos/kuanoûs) 'dark blue'), also called anthocyans, are water-soluble vacuolar pigments that, depending on their pH, may appear red, pink, purple, blue, or black.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anthocyanins” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:11.486Z",
+   "target": "f04795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Curcumin is a bright yellow chemical produced by the plant species Curcuma longa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Curcumin” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:11.486Z",
+   "target": "f25803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A waxy coating",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“A waxy coating”, “Eine Wachsschicht”, “Восковой налёт”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:16:07Z",
+   "target": "f25803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Their blue colour is instead provided by a layer of wax that surrounds the fruit which is made up of miniature structures that scatter blue and UV light.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:16:11Z",
+   "target": "f25803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "We investigate dark pigmented fruits with wax blooms, like blueberries, plums, and juniper cones, and find that a structural color mechanism is responsible for their appearance.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:41.275Z",
+   "target": "f25803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Their blue colour is instead provided by a layer of wax that surrounds the fruit which is made up of miniature structures that scatter blue and UV light.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:41.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:41.275Z",
+   "target": "f25803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "We investigate dark pigmented fruits with wax blooms, like blueberries, plums, and juniper cones, and find that a structural color mechanism is responsible for their appearance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:41.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

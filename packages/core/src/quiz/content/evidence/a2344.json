@@ -1,0 +1,234 @@
+{
+ "article": "a2344",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong",
+   "title": "Handover of Hong Kong",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:15.422Z",
+   "snapshot": "d22c1e28ecef64252d2da3d28a13312ac16f93c539116965f909266cca770939"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Handover_of_Macau",
+   "title": "Handover of Macau",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:29.577Z",
+   "snapshot": "4c55cfa5cc712ed32d33b27ac4f02e6f47e700cc14ed57eced71901218d97c98"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/One_country,_two_systems",
+   "title": "One country, two systems – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:16.627Z",
+   "snapshot": "272f04f43aefda7c68e10cc68ca2f50a62b3af151b22554833dd49bab0cd45e2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/HMY_Britannia",
+   "title": "HMY Britannia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:17.254Z",
+   "snapshot": "6c3d2c52dde714c460cd9061f7c7674c8625bc3508a519d2103362fb7be451e6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hong Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Portugal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-104"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chris Patten",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "One country, two systems",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Britannia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:01.706Z",
+   "target": "f12205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The handover of Hong Kong from the United Kingdom of Great Britain and Northern Ireland to the People's Republic of China occurred at midnight on 1 July 1997.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hong Kong” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:01.706Z",
+   "target": "f12206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Portugal's involvement in the region was formally recognised by the Qing dynasty in 1749.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Portugal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:01.706Z",
+   "target": "f12207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chris Patten became the last Governor of Hong Kong.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chris Patten” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:01.706Z",
+   "target": "f12208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"One country, two systems\" (1C2S) is a constitutional principle of the People's Republic of China (PRC) describing the governance of the special administrative regions of Hong Kong and Macau.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “One country, two systems” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:01.706Z",
+   "target": "f12209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Her Majesty's Yacht Britannia is the former royal yacht of the British monarchy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Britannia” is on the snapshot of s4"
+  }
+ ]
+}

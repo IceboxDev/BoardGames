@@ -1,0 +1,249 @@
+{
+ "article": "a2026",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/New_Orleans",
+   "title": "New Orleans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:48.584Z",
+   "snapshot": "3292d7bffd8710404731039e60c506c9265337e59c180564526e10dc1a5820d8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexandria",
+   "title": "Alexandria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:49.481Z",
+   "snapshot": "cfe6c7e8333a204d01269ec689ddacb9c4562c227b4b212dd090cc6aaa775f80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hanoi",
+   "title": "Hanoi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:50.424Z",
+   "snapshot": "4cd618f0bc31315e833d46f76178a29b7354a7ae4993060c1de555e3d89634fb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dhaka",
+   "title": "Dhaka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:51.521Z",
+   "snapshot": "5318d1319be1e51b699f171dbcfd655d675885fbcdb0f867c07bb9510a8b61f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rotterdam",
+   "title": "Rotterdam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:52.489Z",
+   "snapshot": "cbb82bb238de441cc40bdc8a4fbdca486a5a62ce1d31d0226b5e47c4de8cac7d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hurricane_Katrina",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:10.492Z",
+   "snapshot": "e317fa26c844d15c14afe121d372b2be89df16470b21951778140c42b44024a9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Orleans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hanoi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dhaka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rotterdam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:08.819Z",
+   "target": "f10126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Orleans (commonly known as NOLA or  The Big Easy, among other nicknames) is a consolidated city-parish located along the Mississippi River in the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Orleans” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:08.819Z",
+   "target": "f10127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandria is a major city in Egypt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexandria” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:08.819Z",
+   "target": "f10128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hanoi ( ha-NOY; Vietnamese: Hà Nội, pronounced [haː˨˩ noj˧˨ʔ] ) is the capital and second-most populous centrally-governed city of Vietnam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanoi” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:08.819Z",
+   "target": "f10129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dhaka (  DAH-kə or   DAK-ə; Bengali: ঢাকা, romanized: Ḍhākā, pronounced [ˈɖʱaka] ), formerly spelled as Dacca, is the capital and largest city of Bangladesh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dhaka” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:08.819Z",
+   "target": "f10130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rotterdam ( ROT-ər-dam, UK also  ROT-ər-DAM; Dutch: [ˌrɔtərˈdɑm] ) is the second-largest city in the Netherlands by population and the largest by area (319.4 km2).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotterdam” is on the snapshot of s5"
+  }
+ ]
+}

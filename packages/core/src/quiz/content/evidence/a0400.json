@@ -1,0 +1,235 @@
+{
+ "article": "a0400",
+ "sources": {
+  "s1": {
+   "url": "https://www.dictionary.com/browse/sitcom",
+   "title": "Sitcom – Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:25.234Z",
+   "snapshot": "138c4efdc4dd41c0c155481c72c9173ad57156c1dd8d09a2a037777c941e7eb2"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/sitcom",
+   "title": "sitcom – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Biographical_film",
+   "title": "Biographical film – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:28.457Z",
+   "snapshot": "71580ccdf085364fa96c68d1518837e2cdec17faa4ee1df0912763f5628c76e2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/It_Happened_One_Night",
+   "title": "It Happened One Night – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:29.450Z",
+   "snapshot": "d053a268de2b62836fc5ac7e998ac5b6e230160f6a337f70d3be2e1390ce5d7e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/HBO",
+   "title": "HBO – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:30.741Z",
+   "snapshot": "63e6fe35b6548653fdb6701f4816b8a7f17c98f94f9a44af8ccfcaf4231ade30"
+  },
+  "s6": {
+   "url": "https://www.dictionary.com/browse/biopic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:28.051Z",
+   "snapshot": "e2ef53bfe416d3ca28e8525d75ce8e746a191d85819695eaf0659b9d818e68ab"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/55th_Academy_Awards",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:31.480Z",
+   "snapshot": "32be0706fe5db88f0e3646864198ae49878a0b450e3b718ab781e1ee85d7da8c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Situation Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Situation Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c034"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Biographical Picture",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Romantic Comedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Home Box Office",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:42.816Z",
+   "target": "f01996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sitcom is short for “situation comedy.” It’s a funny TV show with a realistic setting, like an apartment full of wacky roommates or a restaurant where a regular cast of characters cracks jokes from week to week.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Situation Comedy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:42.816Z",
+   "target": "f01997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A biographical film, or biopic (, biographical picture), is a film that dramatizes the life of a real person or sometimes a group of people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biographical Picture” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:42.816Z",
+   "target": "f01998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "2008: AFI's 10 Top 10: Romantic Comedy – #3",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romantic Comedy” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:42.816Z",
+   "target": "f02000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Home Box Office (HBO) is an American premium television network and service, which is the flagship property of namesake parent Home Box Office, Inc., a subsidiary of Skydance Corporation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Home Box Office” is on the snapshot of s5"
+  }
+ ]
+}

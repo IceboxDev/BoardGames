@@ -1,0 +1,281 @@
+{
+ "article": "a0674",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Stranger_(Camus_novel)",
+   "title": "The Stranger (Camus novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:24.261Z",
+   "snapshot": "a125b953d8efb4bf20d15b69a0c4495f0e82e249e2f577d3e9cba30540fd95d5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Heart_of_Darkness",
+   "title": "Heart of Darkness – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:00.114Z",
+   "snapshot": "7a599dbd5326ee88218894a97a83b67a2708b2bbb6a6867b43c877377147c722"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Burmese_Days",
+   "title": "Burmese Days – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:25.257Z",
+   "snapshot": "c7c60d2fcae85b2498d425e787f66367d6920deb98ca45a6fa463de6dc8ccb6e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_Passage_to_India",
+   "title": "A Passage to India – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:26.206Z",
+   "snapshot": "0ac47e43da2643a5f4b880f5137817083cb2b16a27eae6b512f48c502fce2fae"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Plague_(novel)",
+   "title": "The Plague (novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:27.146Z",
+   "snapshot": "b4116ef5929474323e079cfc11f93e4497b37bf9a93c4d2c4413d8c01816353d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Algeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Congo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03368",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Burma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03369",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03369",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Plague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-182"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.406Z",
+   "target": "f03366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first of Camus's novels to be published, the story follows Meursault, an indifferent man in French Algeria, who, weeks after his mother's funeral, kills an unnamed Arab man in Algiers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Algeria” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.406Z",
+   "target": "f03367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Although Conrad does not name the river on which most of the narrative takes place, at the time of writing, the Congo Free State—the location of the large and economically important Congo River—was a private colony of Belgium's King Leopold II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Congo” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.406Z",
+   "target": "f03368",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Set in British Burma during the waning days of empire, when Burma was ruled from Delhi as part of British India, the novel serves as \"a portrait of the dark side of the British Raj.\" At the centre of the novel is John Flory, \"the lone and lacking individual trapped within a bigger system that is",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burma” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.406Z",
+   "target": "f03369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Set in British Burma during the waning days of empire, when Burma was ruled from Delhi as part of British India, the novel serves as \"a portrait of the dark side of the British Raj.\" At the centre of the novel is John Flory, \"the lone and lacking individual trapped within a bigger system that is",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:24.406Z",
+   "target": "f03369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Passage to India is a 1924 novel by English author E.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:24.406Z",
+   "target": "f12883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Plague (French: La Peste) is a 1947 absurdist novel by Albert Camus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Plague” is on the snapshot of s5"
+  }
+ ]
+}

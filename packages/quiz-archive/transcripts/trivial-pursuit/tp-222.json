@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-222",
+ "image": "IMG20261007173515.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Stadt fand die erste Schwulenparade statt?",
+   "de": "In welcher Stadt fand die erste Schwulenparade statt?",
+   "en": "In which city did the first gay pride parade take place?",
+   "reworked": false,
+   "answerDe": "New York",
+   "answerEn": "New York",
+   "timeline": {
+    "kind": "event",
+    "start": "1970-06-28",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Christopher Street Liberation Day march in New York, a year after the Stonewall riots",
+    "labelDe": "Erster Christopher Street Liberation Day in New York, ein Jahr nach den Stonewall-Unruhen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Christopher_Street_Day",
+    "title": "Christopher Street Day",
+    "lang": "de"
+   },
+   "notes": "Intended answer New York (Christopher Street Liberation Day, 28 June 1970). Strictly, Chicago Gay Liberation marched one day earlier, on 27 June 1970 (en.wikipedia Pride parade), so Chicago is also defensible.",
+   "domain": "society",
+   "sub": "society"
+  },
+  {
+   "category": 2,
+   "cardDe": "Zwei ABBA-Mitglieder haben Cameo-Auftritte in der Muscial-Verfilmung von Mamma Mia!. Richtig oder falsch?",
+   "de": "Welche zwei ABBA-Mitglieder haben Cameo-Auftritte in der Musical-Verfilmung von Mamma Mia!?",
+   "en": "Which two ABBA members make cameo appearances in the musical film adaptation of Mamma Mia!?",
+   "reworked": true,
+   "answerDe": "Benny Andersson und Björn Ulvaeus",
+   "answerEn": "Benny Andersson and Björn Ulvaeus",
+   "timeline": {
+    "kind": "creation",
+    "start": "2008",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Release of the film Mamma Mia!, with cameos by ABBA's Benny Andersson and Björn Ulvaeus",
+    "labelDe": "Kinostart von Mamma Mia!, mit Cameo-Auftritten der ABBA-Mitglieder Benny Andersson und Björn Ulvaeus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Mamma_Mia!_(Film)",
+    "title": "Mamma Mia! (Film)",
+    "lang": "de"
+   },
+   "notes": "Card statement is true. The card misprints 'Musical' as 'Muscial' (kept in cardDe, corrected in de).",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "In welchem weitverzweigten Tunnelsystem suchten während des Zweiten Weltkriegs 170.000 Londoner Schutz vor Luftangriffen?",
+   "de": "In welchem weitverzweigten Tunnelsystem suchten während des Zweiten Weltkriegs 170.000 Londoner Schutz vor Luftangriffen?",
+   "en": "In which extensive tunnel system did 170,000 Londoners seek shelter from air raids during the Second World War?",
+   "reworked": false,
+   "answerDe": "Londoner U-Bahn (Tube)",
+   "answerEn": "London Underground (the Tube)",
+   "timeline": {
+    "kind": "period",
+    "start": "1940-09",
+    "end": "1941-05",
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Blitz: Londoners shelter nightly in deep Underground stations",
+    "labelDe": "Der Blitz: Londoner suchen nachts Schutz in tief gelegenen U-Bahn-Stationen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/London_Underground",
+    "title": "London Underground",
+    "lang": "de"
+   },
+   "notes": "en.wikipedia The Blitz: about 150,000 people a night slept in the Underground in mid-September 1940; the card's 170,000 is a commonly quoted peak figure.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Maler wurde vom englischen als auch spanischen König zum Ritter geschlagen: Peter Paul Rubens, Rembrandt oder Jan Vermeer?",
+   "de": "Welcher flämische Maler wurde sowohl vom englischen als auch vom spanischen König zum Ritter geschlagen?",
+   "en": "Which Flemish painter was knighted by both the English and the Spanish king?",
+   "reworked": true,
+   "answerDe": "Peter Paul Rubens",
+   "answerEn": "Peter Paul Rubens",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1577-06-28",
+    "end": "1640-05-30",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Peter Paul Rubens, Flemish Baroque painter and diplomat",
+    "labelDe": "Peter Paul Rubens, flämischer Barockmaler und Diplomat"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+    "title": "Peter Paul Rubens",
+    "lang": "en"
+   },
+   "notes": "Multiple choice removed; 'flämische' added as a hint. Ennobled by Philip IV of Spain in 1624, knighted by Charles I of England in 1630; Philip IV confirmed the knighthood a few months later.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Das Antibiotikum Penizillin wird in seiner natürlichen Form von Käfern gebildet. Richtig oder falsch?",
+   "de": "Von welchen Organismen wird das Antibiotikum Penizillin in seiner natürlichen Form gebildet?",
+   "en": "Which organisms produce the antibiotic penicillin in its natural form?",
+   "reworked": true,
+   "answerDe": "Schimmelpilze (Penicillium)",
+   "answerEn": "Moulds (Penicillium)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1928",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alexander Fleming discovers the antibiotic effect of penicillin from the mould Penicillium",
+    "labelDe": "Alexander Fleming entdeckt die antibiotische Wirkung des Penicillins aus dem Schimmelpilz Penicillium"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Penicilline",
+    "title": "Penicilline",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: natural penicillins are made by moulds such as Penicillium chrysogenum, not beetles.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "Die Schuhe welches Luxusschuhdesigners haben eine rote Sohle als Markenzeichen?",
+   "de": "Die Schuhe welches Luxusschuhdesigners haben eine rote Sohle als Markenzeichen?",
+   "en": "The shoes of which luxury shoe designer have a red sole as their trademark?",
+   "reworked": false,
+   "answerDe": "Christian Louboutin",
+   "answerEn": "Christian Louboutin",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1964-01-07",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Christian Louboutin, French shoe designer known for red-soled high heels",
+    "labelDe": "Christian Louboutin, französischer Schuhdesigner, bekannt für High Heels mit roter Sohle"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Christian_Louboutin",
+    "title": "Christian Louboutin",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "art",
+   "sub": "design"
+  }
+ ]
+}

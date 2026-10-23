@@ -1,0 +1,355 @@
+{
+ "article": "a0422",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Akkusativ",
+   "title": "Akkusativ – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:53.772Z",
+   "snapshot": "355b870d96c9e192d246164c49e879513c38d88e34397b4f14f971ba5117f67f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Grammatical_case",
+   "title": "Grammatical case – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:04.936Z",
+   "snapshot": "7322e00c3576bab5b86ace2b497eef961006a854e10da6ab14703865e063b3ab"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Genitiv",
+   "title": "Genitiv – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:55.344Z",
+   "snapshot": "c4f73ca5d3f0f2445893bd86eb1979fbbae1eaec1885bcda96470bd1e32d6983"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/dative",
+   "title": "dative – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ablative_(Latin)",
+   "title": "Ablative (Latin) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:01.745Z",
+   "snapshot": "47b1047d4b8c6da07699db7aea8d9b0407a51461b490781a25413f7523818aae"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Dativ",
+   "title": "Dativ – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:02.619Z",
+   "snapshot": "6fca3715ce2b5b120a52488acef6c85f014b0a11f8731f68963054a36bfc4992"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Dativ",
+   "title": "Dativ – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:02.323Z",
+   "snapshot": "3c3ec47a817cd30d5dac2488a79fcceea3779b0843c725c65f47ca5524614f17"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Akkusativ",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nominative",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Genitiv",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dative",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ablative",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:46.107Z",
+   "target": "f02106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Akkusativ (lateinisch (cāsus) accūsātīvus, wörtlich ‚die Anklage betreffender Fall‘, von lat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Akkusativ” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:46.107Z",
+   "target": "f02107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For instance, in English, one says I see them and they see me: the nominative pronouns I / they represent the perceiver, and the accusative pronouns them/me represent the phenomenon perceived.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nominative” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:46.107Z",
+   "target": "f02108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Genitiv [ˈɡeːnitiːf] (auch [ˈɡɛnitiːf]), seltener Genetiv, veraltet Genitivus, Genetivus, von lateinisch [casus] genitivus/genetivus  ‚die Abstammung bezeichnend[er Fall]‘, auch Wes-Fall oder Wessen-Fall, veraltet Zeugefall, ist ein Kasus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Genitiv” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:46.107Z",
+   "target": "f02110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Latin grammar, the ablative case (cāsus ablātīvus) is one of the six noun cases.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ablative” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:30:20Z",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "lateinisch (casus) dativus = das Geben betreffend(er Fall), zu: dare, datum",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:30:31Z",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dativ m. ‘Wemfall’, dritter Fall der deutschen Deklination, unter Aufgabe der lat. Endung (Ende 17. Jh.) aus lat. (cāsus) datīvus, griech. dotikḗ ptṓsis (δοτικὴ πτῶσις), eigentlich ‘der zum Geben gehörige Fall’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:53:08.068Z",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "lateinisch (casus) dativus = das Geben betreffend(er Fall), zu: dare, datum",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:08.068Z",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dativ m. ‘Wemfall’, dritter Fall der deutschen Deklination, unter Aufgabe der lat. Endung (Ende 17. Jh.) aus lat. (cāsus) datīvus, griech. dotikḗ ptṓsis (δοτικὴ πτῶσις), eigentlich ‘der zum Geben gehörige Fall’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:08.068Z",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dativ ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dativ” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:08.068Z",
+   "target": "f02109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dativ – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dativ” is on the snapshot of s7"
+  }
+ ]
+}

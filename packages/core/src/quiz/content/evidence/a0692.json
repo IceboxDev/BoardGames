@@ -1,0 +1,502 @@
+{
+ "article": "a0692",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Romulus",
+   "title": "Romulus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:30.262Z",
+   "snapshot": "ba3b544a13754ed6ce3afbaafa868b34c94756c990cf9f0e12c15dbe404744c4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/May",
+   "title": "May – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:31.161Z",
+   "snapshot": "cdc3504cbf4fca694fdbc8bb2971b97f33420ade87dbb0b79e9c53c78ef878f7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/January",
+   "title": "January – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:32.130Z",
+   "snapshot": "b1b56335d5d35a180dd842800f2644585cec1c96ccbac1dcc60d84372cd74749"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Salii",
+   "title": "Salii – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:33.195Z",
+   "snapshot": "74a458cf897a1b4b6243ea4df7156c43795f17aeb99c85033c7059c5fa0a3ce8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Temple_of_Juno_Moneta",
+   "title": "Temple of Juno Moneta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:34.134Z",
+   "snapshot": "41c5fe4d3858833b9ca5b8a1cb85a69bf627d87bb0d3f29b07a9970b17e51ce6"
+  },
+  "s6": {
+   "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Macrobius/Saturnalia/1*.html",
+   "title": "Macrobius, Saturnalia, Liber Primus – LacusCurtius",
+   "publisher": "LacusCurtius (University of Chicago)",
+   "kind": "primary",
+   "lang": "la",
+   "retrievedAt": "2026-10-23T12:35:09.217Z",
+   "snapshot": "4b46616d5f3c34e9e85d39a810168ae7b52cd893aedce948c7f67a3f3f173cd0"
+  },
+  "s7": {
+   "url": "https://www.poetryintranslation.com/PITBR/Latin/OvidFastiBkFive.php",
+   "title": "Ovid, Fasti Book V (A. S. Kline translation) – Poetry in Translation",
+   "publisher": "Poetry in Translation (A. S. Kline)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:07.611Z",
+   "snapshot": "a339e183f5ce0826e16a7952a8a000b0b1234ee0b683a5513a82c0283a0fcea8"
+  },
+  "s8": {
+   "url": "https://www.livius.org/sources/content/livy/livy-periochae-46-50/",
+   "title": "Livy, Periochae 46-50 – Livius.org",
+   "publisher": "Livius.org (Jona Lendering)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:07.560Z",
+   "snapshot": "2f59f5abf3b97093c42788315eeea25eb3584a5e21e23884628e91539417077f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Maia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f20361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "153 BC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salii",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Moneta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:27.565Z",
+   "target": "f03456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "According to Roman mythology, Romulus and Remus were the sons of Rhea Silvia by the god Mars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mars” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:27.565Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "May (in Latin, Maius) was named for the Greek goddess Maia, who was identified with the Roman era goddess of fertility, Bona Dea, whose festival was held in May.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:27.565Z",
+   "target": "f20361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "By contrast, each specific calendar year was identified by the names of the two consuls, who entered office on March 15th until 153 BC, at which point they started entering office on January 1st.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “153 BC” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:27.565Z",
+   "target": "f20362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Salii, Salians, or Salian priests were the \"leaping priests\" of Mars in ancient Roman religion, supposed to have been introduced by King Numa Pompilius.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salii” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:27.565Z",
+   "target": "f20363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Temple of Juno Moneta (Latin: Templum Iunonis Monetæ) was an ancient Roman temple that stood on the Arx or the citadel on the Capitoline Hill overlooking the Roman Forum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moneta” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:06:32Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "May (in Latin, Maius) was named for the Greek goddess Maia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia also gives Ovid's alternative (maiores, 'elders'); the wording's 'generally said' covers this."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:06:34Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Contendunt alii Maiam Mercurii matrem mensi nomen dedisse",
+     "quoteLang": "la",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Macrobius 1.12.16–20 lists several derivations (maiores, Jupiter Maius, Maia wife of Vulcan, Maia mother of Mercury); the Maia derivation is the usual one but ancient authors disagreed."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:06:35Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "So I deduce that the elders (maiores) gave their own title To the month of May",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Ovid's Muse Polyhymnia derives May from the maiores, not Maia — the competing ancient etymology."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:06:38Z",
+   "target": "f20361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In the five hundred and ninety-eighth year after the founding of the city, the consuls began to enter upon their office on 1 January.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Livy's 598 AUC = 153 BC (Livy counts from 751 BC)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:06:39Z",
+   "target": "f20361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "who entered office on March 15th until 153 BC, at which point they started entering office on January 1st.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:06:50Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Contendunt alii Maiam Mercurii matrem mensi nomen dedisse",
+     "quoteLang": "la",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Resolution: ancient authors offered rival etymologies (Ovid: maiores), but the wording asks only for the usual derivation ('generally said'), which is Maia — confirmed by Wikipedia and Macrobius."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:56.023Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "May (in Latin, Maius) was named for the Greek goddess Maia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:56.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:56.023Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "So I deduce that the elders (maiores) gave their own title To the month of May",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:56.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:56.023Z",
+   "target": "f20361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In the five hundred and ninety-eighth year after the founding of the city, the consuls began to enter upon their office on 1 January.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:56.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:56.023Z",
+   "target": "f20361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "who entered office on March 15th until 153 BC, at which point they started entering office on January 1st.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:56.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:56.023Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Contendunt alii Maiam Mercurii matrem mensi nomen dedisse",
+     "quoteLang": "la",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:56.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:56.023Z",
+   "target": "f20360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "18 Cingius mensem nominatum putat a Maia, quam Vulcani dicit uxorem, argumentoque utitur, quod flamen",
+     "quoteLang": "la",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:56.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Maia” is on the snapshot of s6"
+  }
+ ]
+}

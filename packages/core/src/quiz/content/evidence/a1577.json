@@ -1,0 +1,242 @@
+{
+ "article": "a1577",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Strandpulling",
+   "title": "Strandpulling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:38.001Z",
+   "snapshot": "c8225187c70cb79691aca31bd8e7a3d497bfc0c95612f9bd3b47c20fc25939f6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dumbbell",
+   "title": "Dumbbell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:38.916Z",
+   "snapshot": "c1635c8795fbd6b5c597ea2b49ac6c815b3b8a4aa8cc8568ffdcd2f81f4cdeee"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kettlebell",
+   "title": "Kettlebell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:39.931Z",
+   "snapshot": "497aca790bc4a608cd7b92f873dc3fe09f16af5cbfd6a17003fd9b64e3b56463"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Indoor_rower",
+   "title": "Indoor rower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:40.909Z",
+   "snapshot": "2fb618aa4760f1ab05623bf455531b3a5a816017092ef34de016b48c61019044"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Treadmill",
+   "title": "Treadmill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:42.082Z",
+   "snapshot": "8b866ef345f0775141d7d40026627a91898f76412c7ea13869e7c4938c810bd7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "chest expander",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "dumbbell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kettlebell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "rowing machine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "treadmill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:46.289Z",
+   "target": "f07881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "term for the practice of stretching steel springs, rubber cables or latex tubing, as a form of exercise and as a competitive sport, using a \"chest expander\", with many specific movements designed to target different muscles and provide progressive resistance usually, but not always, to the upper",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chest expander” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:46.289Z",
+   "target": "f07882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The dumbbell, a type of free weight, is a piece of equipment used in weight training.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dumbbell” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:46.289Z",
+   "target": "f07883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In weight training, a kettlebell is a cast-iron or cast-steel ball with a handle attached to the top, resembling a cannonball with a handle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kettlebell” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:46.289Z",
+   "target": "f07884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An indoor rower, or rowing machine, is a machine used to simulate the action of watercraft rowing for the purpose of exercise or training for rowing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rowing machine” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:46.289Z",
+   "target": "f07885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A treadmill is a device generally used for walking, running, or climbing while staying in the same place.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “treadmill” is on the snapshot of s5"
+  }
+ ]
+}

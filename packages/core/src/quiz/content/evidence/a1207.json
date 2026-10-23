@@ -1,0 +1,376 @@
+{
+ "article": "a1207",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Claude_Juncker",
+   "title": "Jean-Claude Juncker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:22.203Z",
+   "snapshot": "4783e18aa454c2236eb77454ef59a91cd028c9fde241d737fbcff6c61bb22418"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jacques_Delors",
+   "title": "Jacques Delors – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:22.902Z",
+   "snapshot": "f34e199f3f04cbac85c36508701bc737d7ca8dd2c67f01fcae6b3a61810f1a18"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Romano_Prodi",
+   "title": "Romano Prodi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:24.011Z",
+   "snapshot": "261bc07dd5204b0bf9c930f046b67d49a4484eb1ce92198f227fe920264c9138"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Manuel_Barroso",
+   "title": "José Manuel Barroso – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:25.005Z",
+   "snapshot": "be22996c8d5241acc2069f429397de861695c9987436c2a8952cd52fbcdb0835"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ursula_von_der_Leyen",
+   "title": "Ursula von der Leyen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:49.134Z",
+   "snapshot": "4b8e0ca7ecfdf58b8c59a5eeaa7d5715f9ba1f0594c59c8407fdbd3c7d1e64bf"
+  },
+  "s6": {
+   "url": "https://euobserver.com/60134/eu-commission-has-first-ever-woman-president/",
+   "title": "EU commission has first-ever woman president",
+   "publisher": "EUobserver",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:38.484Z",
+   "snapshot": "e2817da9c00cbe19c4ac0645365a7b2545e2fdd41fd5ebe7c7c5fa0bea7206a0"
+  },
+  "s7": {
+   "url": "https://www.thelocal.de/20190716/germanys-von-der-leyen-elected-as-first-female-head-of-european-commission",
+   "title": "Germany's von der Leyen elected as first woman to lead European Commission",
+   "publisher": "The Local (AFP)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:39.528Z",
+   "snapshot": "b6b77e12c9041441a82745f50f6025825f2be0f10a54928ed543b21c188ebf98"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean-Claude Juncker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jacques Delors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Romano Prodi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "José Manuel Barroso",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ursula von der Leyen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:48.189Z",
+   "target": "f06031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean-Claude Juncker (born 9 December 1954) is a Luxembourgish politician who was prime minister of Luxembourg from 1995 to 2013 and president of the European Commission from 2014 to 2019.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Claude Juncker” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:48.189Z",
+   "target": "f06032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jacques Delors and the contradictory quest for a European social model in the Age of Reagan.\" Journal of Transatlantic Studies 16.3 (2018): 203–221.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacques Delors” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:48.189Z",
+   "target": "f06033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Romano Prodi (Italian: [roˈmaːno ˈprɔːdi] ; born 9 August 1939) is an Italian politician who served as President of the European Commission from 1999 to 2004 and twice as Prime Minister of Italy, from 1996 to 1998, and again from 2006 to 2008.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romano Prodi” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:48.189Z",
+   "target": "f06034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "President José Manuel Barroso – Official Media Gallery",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “José Manuel Barroso” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:48.189Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ursula von der Leyen joined the CDU in 1990, and became active in local politics in Lower Saxony in 1996, shortly after she had returned to Germany after living in California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ursula von der Leyen” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:26:31Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ursula von der Leyen becomes the first ever woman president of the European Commission",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:26:34Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "German defence minister Ursula von der Leyen was narrowly elected president of the European Commission on Tuesday",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:30.245Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ursula von der Leyen becomes the first ever woman president of the European Commission",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:30.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:30.245Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "German defence minister Ursula von der Leyen was narrowly elected president of the European Commission on Tuesday",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:30.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:30.245Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On Tuesday (16 July), the majority of MEPs at the Strasbourg plenary agreed to support Ursula von der Leyen, a long-standing German cabinet minister, for the presidency of the European Commission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:30.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ursula von der Leyen” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:30.245Z",
+   "target": "f06035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "German defence minister Ursula von der Leyen was narrowly elected president of the European Commission on Tuesday after winning over sceptical lawmakers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:30.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ursula von der Leyen” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a1893",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Blaise_Pascal",
+   "title": "Blaise Pascal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:22.572Z",
+   "snapshot": "80bccb6cfc1210440aa79eacef116455c6011b95336a701906e43ab8df1e074d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Evangelista_Torricelli",
+   "title": "Evangelista Torricelli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:42.603Z",
+   "snapshot": "944e2921efd56632d3e03dd4cf0b1e9fb511214a2ef1f1e1d4c68579d4b66690"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/James_Prescott_Joule",
+   "title": "James Prescott Joule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:02.890Z",
+   "snapshot": "ac022f02675554cb0ee354b8ddaea2098f3d0d77d54489485d1f25270a5408e4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/James_Watt",
+   "title": "James Watt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:27.957Z",
+   "snapshot": "e6ccdbeabbe47a97269b084ffc6ee4ee0dc8fdd85d29f9eb1e28edb5b33bc861"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pascal%27s_calculator",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:43.616Z",
+   "snapshot": "83e492b42ece21a83fe152cb5e56b08735d6c30afa37c1af5924efc0ee1f4e7e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pascal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "torr",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "joule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "watt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:40.380Z",
+   "target": "f09461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blaise Pascal (19 June 1623 – 19 August 1662) was a French mathematician, physicist, inventor, philosopher, and Catholic writer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pascal” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:40.380Z",
+   "target": "f09462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Evangelista Torricelli ( TORR-ee-CHEL-ee, Italian: [evandʒeˈlista torriˈtʃɛlli] ; 15 October 1608 – 25 October 1647) was an Italian physicist and mathematician, and a student of Benedetto Castelli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “torr” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:40.380Z",
+   "target": "f09464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "James Prescott Joule (; 24 December 1818 –  11 October 1889) was an English physicist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “joule” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:40.380Z",
+   "target": "f09465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James Watt (; 30 January 1736 (19 January 1736 OS) – 25 August 1819) was a Scottish inventor, engineer and chemist who improved on Thomas Newcomen's 1712 Newcomen steam engine with his Watt steam engine in 1776, which was fundamental to the changes brought by the Industrial Revolution in both his",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “watt” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1987",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Maastricht_Treaty",
+   "title": "Maastricht Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:05.203Z",
+   "snapshot": "9199c93551efef1ba0344439bba698e118d85940b5d533de1cd0a8867b554dd2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Rome",
+   "title": "Treaty of Rome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:17.048Z",
+   "snapshot": "3dac288a35d289e6e58f34115dbc8a04e55482abb60ee519d285b1bbce0b02e0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Amsterdam",
+   "title": "Treaty of Amsterdam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:51.267Z",
+   "snapshot": "5e2aba88bb5c8c52fcda20059302d7c0b006b4a3653a01a170277502c3580e78"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Nice",
+   "title": "Treaty of Nice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:52.209Z",
+   "snapshot": "30fe8795843f1ec778e67b5023b6680e212e86cd8313d2ec151b12856d153f42"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Lisbon",
+   "title": "Treaty of Lisbon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:38.631Z",
+   "snapshot": "29553fff1b4cd865feaa196d54880bc5f1941412f11e4204f804602da5ce82ea"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maastricht Treaty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Treaty of Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Treaty of Amsterdam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Treaty of Nice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Treaty of Lisbon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:00.783Z",
+   "target": "f09931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Treaty on European Union, commonly known as the Maastricht Treaty, is the foundation treaty of the European Union (EU).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maastricht Treaty” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:00.783Z",
+   "target": "f09932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Treaty of Rome, or EEC Treaty (officially the Treaty establishing the European Economic Community), brought about the creation of the European Economic Community (EEC), the best known of the European Communities (EC).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Rome” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:00.783Z",
+   "target": "f09933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Treaty of Amsterdam, officially the Treaty of Amsterdam amending the Treaty on European Union, the Treaties establishing the European Communities and certain related acts, was signed on 2 October 1997, and entered into force on 1 May 1999; it made substantial changes to the Maastricht Treaty,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Amsterdam” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:00.783Z",
+   "target": "f09934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Treaty of Nice reformed the institutional structure of the European Union to withstand eastward expansion, a task which was originally intended to have been done by the Amsterdam Treaty, but failed to be addressed at the time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Nice” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:00.783Z",
+   "target": "f09935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Treaty of Lisbon (initially known as the Reform Treaty) is a European agreement that amends the two treaties which form the constitutional basis of the European Union (EU).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Lisbon” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-185",
+ "image": "IMG20261007180929.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Durch welche Stadt fließt die Donau nicht: Belgrad, Straßburg oder Wien?",
+   "de": "Straßburg liegt nicht an der Donau. An welchem großen Strom liegt die Stadt?",
+   "en": "Strasbourg does not lie on the Danube. Which great river does the city lie on?",
+   "reworked": true,
+   "answerDe": "Rhein",
+   "answerEn": "Rhine",
+   "timeline": {
+    "kind": "founding",
+    "start": "-12",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Roman general Drusus founds Strasbourg (Argentoratum)",
+    "labelDe": "Der römische Feldherr Drusus gründet Straßburg (Argentoratum)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Stra%C3%9Fburg",
+    "title": "Straßburg",
+    "lang": "de"
+   },
+   "notes": "Card asks which of Belgrade, Strasbourg, Vienna is NOT on the Danube (Strasbourg); reworked to the positive fact. Its eastern districts and port border the Rhine, opposite Kehl.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welches ehemalige Spice Girl gründete 2008 erfolgreich ihr eigenes Modelabel?",
+   "de": "Welches ehemalige Spice Girl gründete 2008 erfolgreich ihr eigenes Modelabel?",
+   "en": "Which former Spice Girl successfully founded her own fashion label in 2008?",
+   "reworked": false,
+   "answerDe": "Victoria Beckham",
+   "answerEn": "Victoria Beckham",
+   "timeline": {
+    "kind": "founding",
+    "start": "2008-09",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Victoria Beckham launches her eponymous fashion label",
+    "labelDe": "Victoria Beckham gründet ihr gleichnamiges Modelabel"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Victoria_Beckham",
+    "title": "Victoria Beckham",
+    "lang": "en"
+   },
+   "notes": "'Beckham's eponymous label was launched in September 2008'; named UK designer brand of the year in 2011.",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 3,
+   "cardDe": "Der erste Mensch, dessen Name 3.000 v. Chr. schriftlich festgehalten wurde, war was von Beruf: Krieger, Autor oder Buchhalter?",
+   "de": "Kuschim gilt als der erste Mensch, dessen Name schriftlich festgehalten wurde. Welches Getreide verbuchte er laut den Tontafeln aus Uruk?",
+   "en": "Kushim is considered the first person whose name was recorded in writing. Which grain did he keep accounts of, according to the clay tablets from Uruk?",
+   "reworked": true,
+   "answerDe": "Gerste",
+   "answerEn": "barley",
+   "timeline": {
+    "kind": "period",
+    "start": "-3400",
+    "end": "-3000",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Uruk-period clay tablets naming Kushim, the earliest known personal name in writing",
+    "labelDe": "Tontafeln der Uruk-Zeit mit dem Namen Kuschim, dem ältesten schriftlich überlieferten Personennamen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kushim_(Uruk_period)",
+    "title": "Kushim (Uruk period)",
+    "lang": "en"
+   },
+   "notes": "Multiple choice removed; the card's answer is 'Buchhalter' (accountant). Wikipedia: Kushim (fl. c. 3200 BC) appears on Uruk-period tablets recording barley transactions and 'was responsible for the production and storage of barley'; it is uncertain whether the name is an individual, an office title or an institution.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 4,
+   "cardDe": "Als was verwendeten Tiroler Maler im Österreich des 18. Jahrhunderts Spinnweben: Pinsel, Leinwand oder Bilderrahmen?",
+   "de": "Als was verwendeten Tiroler Maler im Österreich des 18. Jahrhunderts Spinnweben?",
+   "en": "What did Tyrolean painters in 18th-century Austria use cobwebs as?",
+   "reworked": true,
+   "answerDe": "als Leinwand (Malgrund)",
+   "answerEn": "as a canvas",
+   "timeline": {
+    "kind": "era",
+    "start": "1701",
+    "end": "1830",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Cobweb painting flourishes in (South) Tyrol, 18th to early 19th century",
+    "labelDe": "Blüte der Spinnwebmalerei in (Süd-)Tirol, 18. bis frühes 19. Jahrhundert"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cobweb_painting",
+    "title": "Cobweb painting",
+    "lang": "en"
+   },
+   "notes": "Options removed. Cobweb (gossamer) painting: painting on canvases made from collected, layered spider and caterpillar webs, practised mainly in South Tyrol in the 18th and early 19th centuries; fewer than 100 survive.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Es gibt keinen Vogel mit Nasenlöchern. Richtig oder falsch?",
+   "de": "Vögel haben Nasenlöcher. Welcher Vogel trägt sie als einziger am Ende seines langen Schnabels?",
+   "en": "Birds do have nostrils. Which bird is the only one with its nostrils at the end of its long beak?",
+   "reworked": true,
+   "answerDe": "Kiwi",
+   "answerEn": "kiwi",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1813",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "George Shaw names the kiwi genus Apteryx",
+    "labelDe": "George Shaw benennt die Kiwi-Gattung Apteryx"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kiwi_(bird)",
+    "title": "Kiwi (bird)",
+    "lang": "en"
+   },
+   "notes": "Card statement is false (birds have nostrils); reworked to an open question on bird nostrils. Kiwi 'are the only birds with nostrils at the end of their long beaks' and use them to smell prey.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie viele Tennisbälle werden jährlich für die Wimbledon-Turniere bestellt: über 10.000, 30.000 oder 50.000?",
+   "de": "Wie viele Tennisbälle werden jährlich für die Wimbledon-Turniere bestellt?",
+   "en": "How many tennis balls are ordered each year for the Wimbledon Championships?",
+   "reworked": true,
+   "answerDe": "über 50.000",
+   "answerEn": "more than 50,000",
+   "timeline": {
+    "kind": "event",
+    "start": "1902",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Slazenger begins supplying the balls for Wimbledon",
+    "labelDe": "Slazenger liefert erstmals die Bälle für Wimbledon"
+   },
+   "source": {
+    "url": "https://web.archive.org/web/2017/http://2016.wimbledon.com/en_GB/atoz/faq_and_facts_and_figures.html",
+    "title": "Facts and Figures / FAQ – The Championships, Wimbledon (archived)",
+    "lang": "en"
+   },
+   "notes": "Options removed. Official Wimbledon facts page: '54,250 used during The Championships’ period'; other reports give about 54,000–55,000 per year, so accept any answer of roughly 50,000–55,000. Slazenger has supplied the balls since 1902 (en.wikipedia Wimbledon Championships).",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

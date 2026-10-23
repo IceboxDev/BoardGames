@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-348",
+ "image": "IMG20261007175201.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Stadt befindet sich der älteste Zoo der Welt: Berlin, London oder Wien?",
+   "de": "In welcher Stadt befindet sich der älteste noch bestehende Zoo der Welt?",
+   "en": "In which city is the world's oldest zoo still in existence?",
+   "reworked": true,
+   "answerDe": "Wien",
+   "answerEn": "Vienna",
+   "timeline": {
+    "kind": "founding",
+    "start": "1752-07-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tiergarten Schönbrunn in Vienna opens, the oldest zoo still in existence",
+    "labelDe": "Der Tiergarten Schönbrunn in Wien wird eröffnet, der älteste noch bestehende Zoo der Welt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn",
+    "title": "Tiergarten Schönbrunn",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice options removed. The zoo is the Tiergarten Schönbrunn, founded by the Habsburgs in 1752.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Schauspieler hat in Filmen Jay Gatsby, Howard Hughes und Romeo gespielt?",
+   "de": "Welcher Schauspieler hat in Filmen Jay Gatsby, Howard Hughes und Romeo gespielt?",
+   "en": "Which actor has played Jay Gatsby, Howard Hughes and Romeo in films?",
+   "reworked": false,
+   "answerDe": "Leonardo DiCaprio",
+   "answerEn": "Leonardo DiCaprio",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1974-11-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Leonardo DiCaprio, American actor (born 1974)",
+    "labelDe": "Leonardo DiCaprio, US-amerikanischer Schauspieler (geboren 1974)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Leonardo_DiCaprio",
+    "title": "Leonardo DiCaprio",
+    "lang": "de"
+   },
+   "notes": "Romeo + Julia (1996), Aviator (2004), Der große Gatsby (2013).",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Bereits im antiken Rom ging man zum Friseur, um sich die Haare färben zu lassen. Richtig oder falsch?",
+   "de": "Womit färbten sich die Römer der Antike die Haare?",
+   "en": "What did the ancient Romans use to dye their hair?",
+   "reworked": true,
+   "answerDe": "Mit in Essig getauchten Bleikämmen",
+   "answerEn": "Lead combs dipped in vinegar",
+   "timeline": {
+    "kind": "era",
+    "start": "-753",
+    "end": "476",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ancient Rome, from the legendary founding of the city to the end of the Western Roman Empire",
+    "labelDe": "Das antike Rom, von der sagenhaften Stadtgründung bis zum Ende des Weströmischen Reiches"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Haarf%C3%A4rbung",
+    "title": "Haarfärbung",
+    "lang": "de"
+   },
+   "notes": "True/false reworked into an open question on Roman hair dyeing; the fetched page confirms Romans dyed hair with lead combs dipped in vinegar, not the barber visit itself.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt die Stadt, die ihren Flughafen 2016 nach Altkanzler und Buchautor Helmut Schmidt benannte?",
+   "de": "Wie heißt die Stadt, die ihren Flughafen 2016 nach Altkanzler und Buchautor Helmut Schmidt benannte?",
+   "en": "Which city named its airport after former chancellor and author Helmut Schmidt in 2016?",
+   "reworked": false,
+   "answerDe": "Hamburg",
+   "answerEn": "Hamburg",
+   "timeline": {
+    "kind": "event",
+    "start": "2016-11-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hamburg Airport adds the name 'Hamburg Airport Helmut Schmidt'",
+    "labelDe": "Der Flughafen Hamburg erhält den Namenszusatz „Hamburg Airport Helmut Schmidt“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Flughafen_Hamburg",
+    "title": "Flughafen Hamburg",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welchen Vogel gibt es nicht: Kakadu, Kakala oder Kakapo?",
+   "de": "Welcher in Neuseeland heimische Vogel ist der einzige bekannte heute lebende flugunfähige Papagei?",
+   "en": "Which bird native to New Zealand is the only known living flightless parrot?",
+   "reworked": true,
+   "answerDe": "Kakapo",
+   "answerEn": "Kakapo",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1845",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "George Robert Gray scientifically describes the kakapo",
+    "labelDe": "George Robert Gray beschreibt den Kakapo wissenschaftlich"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Kakapo",
+    "title": "Kakapo",
+    "lang": "de"
+   },
+   "notes": "'Which does NOT exist' multiple choice reworked: the card's intended answer is the invented 'Kakala'; the question now asks about the kakapo, one of the real birds.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt der Ort, in dem das Hahnenkamm-Rennen ausgetragen wird, eines der schwierigsten im alpinen Ski-Weltcup?",
+   "de": "Wie heißt der Ort, in dem das Hahnenkamm-Rennen ausgetragen wird, eines der schwierigsten im alpinen Ski-Weltcup?",
+   "en": "In which town is the Hahnenkamm race held, one of the toughest in the Alpine Skiing World Cup?",
+   "reworked": false,
+   "answerDe": "Kitzbühel",
+   "answerEn": "Kitzbühel",
+   "timeline": {
+    "kind": "founding",
+    "start": "1931",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Hahnenkamm race held in Kitzbühel",
+    "labelDe": "Erstes Hahnenkamm-Rennen in Kitzbühel"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hahnenkammrennen",
+    "title": "Hahnenkammrennen",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

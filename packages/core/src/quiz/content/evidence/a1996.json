@@ -1,0 +1,242 @@
+{
+ "article": "a1996",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Monica_Bleibtreu",
+   "title": "Monica Bleibtreu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:13.218Z",
+   "snapshot": "add5e622a208d1255422f266a567a3c89061e63b35fb022e52b53b100943ee8c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Manns_%E2%80%93_Ein_Jahrhundertroman",
+   "title": "Die Manns – Ein Jahrhundertroman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:12.528Z",
+   "snapshot": "f25c4d55b3b6785f7cfd71ae087fd1f87d0e725e7431d744a54af224f24d7ef1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sophie_Rois",
+   "title": "Sophie Rois – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:14.268Z",
+   "snapshot": "0aa67eb81c5a3fd01e0fe3759042dcc6977c414552dad5ccbedd9d3deefc24e6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Veronica_Ferres",
+   "title": "Veronica Ferres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:15.232Z",
+   "snapshot": "466846487be7d89b6d890501e98b5343a7c78a7d0678bb65f140fea2057582b8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sebastian_Koch",
+   "title": "Sebastian Koch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:16.214Z",
+   "snapshot": "49acd5e8e92a012601690744b2680d1f0b80287abceb1e0daa8dca7d758ae7e5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Monica Bleibtreu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Armin Mueller-Stahl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sophie Rois",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Veronica Ferres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sebastian Koch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.596Z",
+   "target": "f09976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Monica Bleibtreu (German: [ˈmoːnika ˈblaɪptʁɔʏ] ; 4 May 1944 – 13 May 2009) was an Austrian-German actress and screenwriter, best known in the German-speaking world for her film, television and stage roles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monica Bleibtreu” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.596Z",
+   "target": "f09977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in Gold 2002 als Bester Film ausgezeichnet, außerdem erfolgten Einzelauszeichnungen an Heinrich Breloer (Buch/Regie), Horst Königstein (Buch), Gernot Roll (Kamera), Armin Mueller-Stahl, Monica Bleibtreu, Jürgen Hentsch, Veronica Ferres, Sophie Rois und Sebastian Koch (Darsteller).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Armin Mueller-Stahl” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.596Z",
+   "target": "f09978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sophie Rois (born 1961) is an Austrian actress who lives and works in Berlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sophie Rois” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:02.596Z",
+   "target": "f09979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 2023, Veronica Ferres is filming the American feature film Unholy Trinity directed by Richard Gray in Montana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Veronica Ferres” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:02.596Z",
+   "target": "f09980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sebastian Koch is a German television and film actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sebastian Koch” is on the snapshot of s5"
+  }
+ ]
+}

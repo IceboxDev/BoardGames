@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-103",
+ "image": "IMG20261022154332.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Archaeology",
+   "cardText": "[Archaeology] What is the oldest still-standing structure made by humans?\nA. The Great Pyramid of Giza\nB. The Megalithic Temples of Malta\nC. Göbekli Tepe\nAnswer: C. Göbekli Tepe dates back to a time close to the end of the last Ice Age when woolly mammoths were still roaming parts of the Earth.",
+   "de": "Welche jungsteinzeitliche Stätte im Südosten der Türkei, um 9500 v. Chr. gegen Ende der letzten Eiszeit erbaut, besitzt Steinpfeiler, die zu den ältesten bekannten Megalithen der Welt zählen?",
+   "en": "Which Neolithic site in south-eastern Turkey, built around 9500 BC near the end of the last Ice Age, holds stone pillars that are among the world's oldest known megaliths?",
+   "reworked": true,
+   "answerDe": "Göbekli Tepe",
+   "answerEn": "Göbekli Tepe",
+   "timeline": {
+    "kind": "creation",
+    "start": "-9500",
+    "end": null,
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Göbekli Tepe in Upper Mesopotamia is built, with some of the world's oldest known megaliths",
+    "labelDe": "Göbekli Tepe in Obermesopotamien wird errichtet, mit einigen der ältesten bekannten Megalithen der Welt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Göbekli_Tepe",
+    "title": "Göbekli Tepe",
+    "lang": "en"
+   },
+   "notes": "'Oldest still-standing structure made by humans' is a loose superlative (the site was deliberately buried, and claims vary); Wikipedia calls its pillars 'among the world's oldest known megaliths'. Reworked to that.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] If you could drive straight up from the Earth’s surface at highway speeds, how long would it take to reach space?\nA. About 1 hour\nB. About 10 hours\nC. About 100 hours\nAnswer: A. The Kármán line, located at an altitude of about 62 miles (100 kilometers), is commonly used to define the boundary between Earth’s atmosphere and outer space.",
+   "de": "In welcher Höhe liegt die Kármán-Linie, die gängige Grenze zum Weltraum, die man bei Autobahntempo senkrecht nach oben in etwa einer Stunde erreichen würde?",
+   "en": "At what altitude lies the Kármán line, commonly used as the boundary of space, so that driving straight up at highway speed would reach it in about an hour?",
+   "reworked": true,
+   "answerDe": "100 km (etwa 62 Meilen)",
+   "answerEn": "100 km (about 62 miles)",
+   "timeline": {
+    "kind": "event",
+    "start": "1960",
+    "end": null,
+    "precision": "decade",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The FAI establishes the Kármán line at 100 km as the boundary between aeronautics and astronautics",
+    "labelDe": "Die FAI legt die Kármán-Linie in 100 km Höhe als Grenze zwischen Luft- und Raumfahrt fest"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kármán_line",
+    "title": "Kármán line",
+    "lang": "en"
+   },
+   "notes": "Card's answer (about 1 hour) checks out: 100 km at ~100 km/h (62 mi at ~60 mph). The 100 km line is widely but not universally accepted (the US uses 50 miles).",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  }
+ ]
+}

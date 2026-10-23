@@ -1,0 +1,288 @@
+{
+ "article": "a2747",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bella_ciao",
+   "title": "Bella ciao",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:45.039Z",
+   "snapshot": "888a51ce011aff5bb165878952c7197854dd2c12a89eb80d46ea189c5453393c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Le_Chant_des_Partisans",
+   "title": "Le Chant des Partisans",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:45.983Z",
+   "snapshot": "28fb69d13cba067a99e910c953156b24019e965daf522761e58d647a02cdc153"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Peat_Bog_Soldiers",
+   "title": "Peat Bog Soldiers",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:46.979Z",
+   "snapshot": "6290fbd92cab03f5f617cf02500abb53956ada4c3ea0121b889d4aee9c00bfc1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Internationale",
+   "title": "The Internationale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:48.104Z",
+   "snapshot": "df36b10a608ad447e82b4683169e180a654d71a84773443f7a9ef5d4fd3c079a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/We_Shall_Overcome",
+   "title": "We Shall Overcome",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:49.108Z",
+   "snapshot": "72f46279697acc2593fa3a1f0f59df3c8e4d6efdc91dfebcd90b8b05c5753c41"
+  },
+  "s6": {
+   "url": "https://it.wikipedia.org/wiki/Bella_ciao",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T06:18:46.430Z",
+   "snapshot": "cc6d2cd61987415e952a1c326c42624ec0830336e299a0a664d479f09b1b0155"
+  },
+  "s7": {
+   "url": "https://www.ilpost.it/2021/06/07/bella-ciao-storia/",
+   "kind": "press",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T06:18:46.576Z",
+   "snapshot": "a57874d474a062648ed9581c71cb7b36357ae8112e01d5554aede087945a60ea"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Le Chant des Partisans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Börgermoor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Internationale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "civil rights movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Italian resistance",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Italian resistance",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Italian resistance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-032/1, u08: Bella ciao is the anthem of the Italian anti-fascist resistance, though there is little evidence that it was sung during the war. The body's origin claim (a mondine song, written in 1906) was wrong: research (Bermani) dates the rice-weeders' version after the war."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:07.186Z",
+   "target": "f25652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Italian resistance",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:07.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:07.186Z",
+   "target": "f25652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Bella ciao\" (Italian: [ˈbɛlla ˈtʃaːo]) is an anti-Nazi and anti-fascist Italian folk song dedicated to the partisans of the Italian resistance, who fought against the occupying troops of Nazi Germany and the collaborationist fascist forces during the liberation of Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Italian resistance” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:07.186Z",
+   "target": "f25653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anna Marly - Le chant des partisans on YouTube (by author)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Le Chant des Partisans” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:07.186Z",
+   "target": "f25654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Emslandlager (\"Emsland camps\") – as they were known – were for political opponents of the Third Reich, located outside of Börgermoor, now part of the commune Surwold, not far from Papenburg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Börgermoor” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:07.186Z",
+   "target": "f25655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"The Internationale\" is an international anthem that has been adopted as the anthem of various anarchist, communist, socialist, and social democratic movements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Internationale” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:07.186Z",
+   "target": "f25656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1959, the song began to be associated with the civil rights movement as a protest song, when Guy Carawan stepped in with his and Seeger's version as song leader at Highlander, which was then focused on nonviolent civil rights activism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “civil rights movement” is on the snapshot of s5"
+  }
+ ]
+}

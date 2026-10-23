@@ -1,0 +1,618 @@
+{
+ "article": "a0754",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sundarbans",
+   "title": "Sundarbans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:00.359Z",
+   "snapshot": "d2ef010ab541d8fef450d8915f68fabe21125f9ba093998f6bf1e96680a7b3ce"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Amazon_rainforest",
+   "title": "Amazon rainforest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:01.340Z",
+   "snapshot": "3e1842f2304fe465da601c38a168873f3d4489665747403900302e9d09c57e10"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
+   "title": "Great Barrier Reef – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:02.416Z",
+   "snapshot": "15b77ed2a10b4961d6a42fc08fc38260f5f11d345c1f66e980fb01c1c63838ae"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tunguska_event",
+   "title": "Tunguska event – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:03.470Z",
+   "snapshot": "45493cfacb54572d2148b9203446099dfed0256046258d8d870fddd278ae9096"
+  },
+  "s5": {
+   "url": "https://www.worldatlas.com/articles/the-smallest-forests-in-the-world.html",
+   "title": "The Smallest Forests in the World",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:01.169Z",
+   "snapshot": "cf98f3dfca13de968ea1476609b5bf561d3e619e3e0fabf3bb8b14c7dcc9df51"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pantanal",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:04.350Z",
+   "snapshot": "4d3c3f8ce3702dc6adea8f3623e1ab71d194dca6f87e7e388db2fc2bf76900f6"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/798/",
+   "title": "The Sundarbans",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:10:35Z"
+  },
+  "s8": {
+   "url": "https://education.nationalgeographic.org/resource/amazon-rainforest/",
+   "title": "The Amazon Rainforest",
+   "publisher": "National Geographic Society",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:25.760Z",
+   "snapshot": "bcda05d3a79001e0a161fc45485fdc3dac60d0a88c86a98b4f8d7be780f74a22"
+  },
+  "s9": {
+   "url": "https://whc.unesco.org/en/list/154/",
+   "title": "Great Barrier Reef",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:10:59Z"
+  },
+  "s10": {
+   "url": "https://ucmp.berkeley.edu/exhibits/biomes/forests.php",
+   "title": "The forest biome",
+   "publisher": "University of California Museum of Paleontology",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:26.643Z",
+   "snapshot": "bae2628a59eef609391c6bec4b29e2be8c30f41585ef8e06fb8e48afe8b71d77"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Taiga",
+   "title": "Taiga – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:11:12Z"
+  },
+  "s12": {
+   "url": "https://www.fao.org/3/ca9825en/ca9825en.pdf",
+   "title": "Global Forest Resources Assessment 2020: Main report",
+   "publisher": "FAO",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:11:16Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mangrove forest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "tropical rainforest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "coral reef",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "taiga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-147"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:39.853Z",
+   "target": "f03766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sundarbans is a mangrove forest area in the Ganges Delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:39.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mangrove forest” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:39.853Z",
+   "target": "f03767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Amazon rainforest, also called the Amazon jungle, Amazonia, or simply the Amazon, is a moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:39.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tropical rainforest” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:39.853Z",
+   "target": "f03768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres (1,400 mi) over an area of approximately 344,400 square kilometres (133,000 mi2).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:39.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coral reef” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:39.853Z",
+   "target": "f03769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This cataclysm occurred in a remote and sparsely populated region of the taiga, near the Podkamennaya Tunguska River after which it is named.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:39.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “taiga” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:39.853Z",
+   "target": "f14595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Australia”, “Australien”, “Австралия”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:35Z",
+   "target": "f03766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the largest contiguous mangrove forest in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:10:41Z",
+   "target": "f03766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sundarbans is a mangrove forest area in the Ganges Delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:10:46Z",
+   "target": "f03767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Amazon Basin supports the world’s largest rainforest, which accounts for more than half the total volume of rainforests in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:10:53Z",
+   "target": "f03767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "comprises the largest and most biodiverse tract of tropical rainforest in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:10:59Z",
+   "target": "f03768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Great Barrier Reef is a site of remarkable variety and beauty on the north-east coast of Australia. It contains the world’s largest collection of coral reefs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:11:04Z",
+   "target": "f03768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Great Barrier Reef is the world's largest coral reef system",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:11:08Z",
+   "target": "f03769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Boreal forests, or taiga, represent the largest terrestial biome.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:11:12Z",
+   "target": "f03769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The taiga, or boreal forest, is the world's largest land biome .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:11:16Z",
+   "target": "f03769",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "boreal (27 percent), temperate (16 percent) and subtropical",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "Boreal forest holds 27% of the world forest area (tropical 45%), so \"largest forest biome\" is not safe; wording reworded to the 17 million km² belt and body figure corrected from \"a third\" to \"more than a quarter\"."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:11:19Z",
+   "target": "f14595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "(15 percent) and Oceania (5 percent).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "Oceania has the smallest forest area of any region; Australia alone has ~17% forest cover, below every other inhabited continent."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:11:22Z",
+   "target": "f14595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Asia carries the smallest share of any region except Oceania, even though it is by far the largest continent.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:09.105Z",
+   "target": "f03767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Amazon Basin supports the world’s largest rainforest, which accounts for more than half the total volume of rainforests in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:09.105Z",
+   "target": "f03767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "comprises the largest and most biodiverse tract of tropical rainforest in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:09.105Z",
+   "target": "f03768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Great Barrier Reef is the world's largest coral reef system",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:09.105Z",
+   "target": "f03769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Boreal forests, or taiga, represent the largest terrestial biome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:09.105Z",
+   "target": "f14595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Asia carries the smallest share of any region except Oceania, even though it is by far the largest continent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s5"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:09.105Z",
+   "target": "f03769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "From left: taiga in Jasper National Park, Alberta, Canada; forest west of Stockholm, Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:09.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “taiga” is on the snapshot of s10"
+  }
+ ]
+}

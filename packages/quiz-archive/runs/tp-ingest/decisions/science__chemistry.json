@@ -1,0 +1,546 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "science/chemistry",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-049",
+    "category": 5
+   },
+   "factId": "f06764"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-071",
+    "category": 5
+   },
+   "factId": "f07061"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-219",
+    "category": 3
+   },
+   "factId": "f08408"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-340",
+    "category": 5
+   },
+   "factId": "f08143"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-377",
+    "category": 5
+   },
+   "factId": "f04904"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1797",
+   "baseHash": "43bf6e6260ab",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-006",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Firsts of the Synthetic Age",
+    "titleDe": "Die Ersten des synthetischen Zeitalters",
+    "bodyEn": "Modern materials science is a story of firsts: the first substance of a new kind that chemists made in the laboratory rather than found in nature. Each of the six milestones below was a laboratory accident or a deliberate research programme, and each spawned an entire industry.\n\nThe first synthetic fibre was nylon. Wallace Carothers and his team at DuPont in Delaware produced the polyamide 6.6 on 28 February 1935, and the company introduced it to the public at the 1939 New York World's Fair with the slogan that it was made \"from coal, water and air\", meaning that its raw materials were carbon from coal, hydrogen from water and nitrogen from the air. Nylon stockings went on sale nationwide on 15 May 1940 and sold four million pairs in a few days; during the war the same fibre went into parachutes and ropes.\n\nGermany reached a similar material almost simultaneously. On 29 January 1938 Paul Schlack at IG Farben's Aceta works in Berlin polymerised caprolactam into polyamide 6, which was marketed as Perlon. Because it avoided the DuPont patents it became the German counterpart to nylon, and after 1945 it was the fibre of the West German economic miracle, from stockings to fishing lines.\n\nThe same year brought an accidental first. On the morning of 6 April 1938 Roy Plunkett, a young chemist at DuPont's Jackson Laboratory in New Jersey, opened a cylinder of tetrafluoroethylene gas that he had been storing for refrigerant experiments and found that nothing came out: the gas had polymerised into a white, waxy powder. The new substance, polytetrafluoroethylene (PTFE), was almost completely inert and so slippery that hardly anything sticks to it. DuPont patented it in 1941 and registered the trade name Teflon in 1945; it sealed valves in the Manhattan Project long before it coated frying pans. The popular story that Teflon was invented for the American space programme is a myth – NASA merely used a material that already existed.\n\nFibres were not the first synthetics. That distinction belongs to a dye: in 1856 the eighteen-year-old William Henry Perkin, trying to synthesise quinine in his home laboratory in London, obtained a purple residue instead. He called it mauveine, patented it, and the first synthetic dye launched the whole synthetic organic chemical industry and made purple the colour of the decade.\n\nThe first fully synthetic plastic came half a century later. In 1907 the Belgian-American chemist Leo Baekeland heated phenol with formaldehyde under pressure and obtained a hard, heat-resistant resin that could be moulded, did not conduct electricity and did not soften again. He filed his patent on 13 July 1907 and named the material Bakelite; it became the material of telephones, radio cabinets and electrical fittings and the model for every thermosetting plastic since.\n\nThe last of the five is the strongest. In 1965 Stephanie Kwolek, a chemist at DuPont, produced a cloudy solution of a para-aramid polymer that spun into a fibre five times stronger than steel by weight. Marketed from 1971 as Kevlar, it became the material of bullet-proof vests, racing tyres, sails and fibre-optic cable reinforcement, and was the first of the aramid fibres.\n\n| Year | Material | Class | Inventor |\n|---|---|---|---|\n| 1856 | mauveine | first synthetic dye | William Henry Perkin |\n| 1907 | Bakelite | first fully synthetic plastic | Leo Baekeland |\n| 1935 | nylon | first synthetic fibre | Wallace Carothers |\n| 1938 | Perlon | first polyamide 6 fibre | Paul Schlack |\n| 1938 | Teflon (PTFE) | first fluoropolymer | Roy Plunkett |\n| 1965 | Kevlar | first aramid fibre | Stephanie Kwolek |\n\nBetween them these six substances dress, insulate, colour and protect the modern world, and every one of them began as a chemist's first.",
+    "bodyDe": "Die moderne Materialwissenschaft ist eine Geschichte von Ersten: der erste Stoff einer neuen Art, den Chemiker im Labor hergestellt statt in der Natur gefunden haben. Jeder der sechs folgenden Meilensteine war ein Laborzufall oder ein gezieltes Forschungsprogramm, und jeder brachte eine ganze Industrie hervor.\n\nDie erste synthetische Faser war Nylon. Wallace Carothers und sein Team bei DuPont in Delaware stellten das Polyamid 6.6 am 28. Februar 1935 her, und das Unternehmen präsentierte es der Öffentlichkeit auf der Weltausstellung 1939 in New York mit dem Slogan, es sei „aus Kohle, Wasser und Luft“ gemacht, womit gemeint war, dass seine Rohstoffe Kohlenstoff aus Kohle, Wasserstoff aus Wasser und Stickstoff aus der Luft waren. Nylonstrümpfe kamen am 15. Mai 1940 landesweit in den Handel und verkauften sich in wenigen Tagen vier Millionen Mal; im Krieg wanderte dieselbe Faser in Fallschirme und Seile.\n\nDeutschland erreichte fast gleichzeitig ein ähnliches Material. Am 29. Januar 1938 polymerisierte Paul Schlack im Aceta-Werk der IG Farben in Berlin Caprolactam zu Polyamid 6, das als Perlon vermarktet wurde. Weil es die DuPont-Patente umging, wurde es zum deutschen Gegenstück des Nylons, und nach 1945 war es die Faser des westdeutschen Wirtschaftswunders, von Strümpfen bis zu Angelschnüren.\n\nDasselbe Jahr brachte ein zufälliges Erstes. Am Morgen des 6. April 1938 öffnete Roy Plunkett, ein junger Chemiker im Jackson Laboratory von DuPont in New Jersey, eine Flasche Tetrafluorethylen-Gas, die er für Versuche mit Kältemitteln aufbewahrt hatte, und stellte fest, dass nichts herauskam: Das Gas war zu einem weißen, wachsartigen Pulver polymerisiert. Der neue Stoff, Polytetrafluorethylen (PTFE), war nahezu vollkommen reaktionsträge und so glatt, dass kaum etwas an ihm haftet. DuPont ließ ihn 1941 patentieren und 1945 den Markennamen Teflon eintragen; er dichtete Ventile im Manhattan-Projekt ab, lange bevor er Bratpfannen beschichtete. Die verbreitete Geschichte, Teflon sei für das amerikanische Raumfahrtprogramm erfunden worden, ist ein Mythos – die NASA nutzte lediglich einen Stoff, den es längst gab.\n\nFasern waren nicht die ersten Synthetika. Diese Auszeichnung gebührt einem Farbstoff: 1856 erhielt der achtzehnjährige William Henry Perkin beim Versuch, in seinem Heimlabor in London Chinin zu synthetisieren, stattdessen einen violetten Rückstand. Er nannte ihn Mauvein, ließ ihn patentieren, und der erste synthetische Farbstoff begründete die gesamte synthetisch-organische chemische Industrie und machte Violett zur Farbe des Jahrzehnts.\n\nDer erste vollsynthetische Kunststoff kam ein halbes Jahrhundert später. 1907 erhitzte der belgisch-amerikanische Chemiker Leo Baekeland Phenol mit Formaldehyd unter Druck und erhielt ein hartes, hitzebeständiges Harz, das sich formen ließ, keinen Strom leitete und nicht wieder weich wurde. Er meldete sein Patent am 13. Juli 1907 an und nannte den Stoff Bakelit; es wurde zum Material von Telefonen, Radiogehäusen und Elektroinstallationen und zum Vorbild jedes duroplastischen Kunststoffs seither.\n\nDas letzte der fünf ist das stärkste. 1965 stellte Stephanie Kwolek, Chemikerin bei DuPont, eine trübe Lösung eines Para-Aramid-Polymers her, die sich zu einer Faser spinnen ließ, die bezogen auf das Gewicht fünfmal stärker ist als Stahl. Ab 1971 als Kevlar vermarktet, wurde sie zum Material kugelsicherer Westen, Rennreifen, Segel und der Verstärkung von Glasfaserkabeln und war die erste der Aramidfasern.\n\n| Jahr | Material | Klasse | Erfinder |\n|---|---|---|---|\n| 1856 | Mauvein | erster synthetischer Farbstoff | William Henry Perkin |\n| 1907 | Bakelit | erster vollsynthetischer Kunststoff | Leo Baekeland |\n| 1935 | Nylon | erste synthetische Faser | Wallace Carothers |\n| 1938 | Perlon | erste Polyamid-6-Faser | Paul Schlack |\n| 1938 | Teflon (PTFE) | erstes Fluorpolymer | Roy Plunkett |\n| 1965 | Kevlar | erste Aramidfaser | Stephanie Kwolek |\n\nZusammen kleiden, isolieren, färben und schützen diese sechs Stoffe die moderne Welt, und jeder von ihnen begann als das Erste eines Chemikers.",
+    "notesEn": "The card says „Kohlenstoff“ (carbon); DuPont's 1939 slogan was that nylon was made from coal, water and air.",
+    "notesDe": "Die Karte sagt „Kohlenstoff“; DuPonts Slogan von 1939 lautete, Nylon werde aus Kohle, Wasser und Luft hergestellt."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0381",
+   "baseHash": "b6c9e2fd1e39",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-088",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "A Pinch of Prevention: Substances We Add to Water and Food",
+    "titleDe": "Eine Prise Vorsorge: Stoffe, die wir Wasser und Lebensmitteln zusetzen",
+    "bodyEn": "Some of the most important public-health measures of the last two centuries were not vaccines or drugs but small quantities of a chemical stirred into something people consume every day. Five additives, one of them now valued mainly for its taste, show how the idea developed.\n\nThe oldest is a bitter alkaloid from the bark of the South American cinchona tree. Quinine was the only effective treatment for malaria from the 17th century until the 1940s, and British officers in India took it daily as a preventive. Because the powder was intolerably bitter, they dissolved it in carbonated water with sugar and lime, and by 1858 the mixture was being sold commercially as tonic water. Modern tonic contains far less quinine than the medicinal dose, well under 100 milligrams per litre, but it is still the substance that gives the drink its characteristic bitterness and makes it fluoresce under ultraviolet light. Asked what quinine tastes like, the answer is simple: bitter – so reliably bitter that pharmacologists use it as the reference substance against which the bitterness of other compounds is measured, and the same note gives bitter lemon its bite.\n\nThe first deliberate fortification of a food came in Switzerland. Goitre, a swelling of the thyroid gland, and cretinism, a form of stunted development in children, were common in Alpine valleys whose soils and water lacked a particular element. From 1922 the canton of Appenzell Ausserrhoden added iodine to table salt, goitre all but vanished within a generation, and iodised salt is now standard in most of the world. The thyroid needs the element to make the hormones that regulate growth and metabolism.\n\nDrinking water has been treated with two additives. The first is a disinfectant. Chlorine, applied continuously to a public water supply for the first time in Jersey City in 1908, kills the bacteria responsible for cholera and typhoid, and its introduction is credited with the largest single fall in urban death rates ever recorded. The second protects the teeth. In 1931 the Alcoa chemist H. V. Churchill traced the mottled \"Colorado brown stain\" on teeth to fluoride in the water, and studies in the American Midwest in the 1930s showed that people whose water naturally contained about one part per million of fluoride had far fewer cavities, and on 25 January 1945 Grand Rapids, Michigan, became the first city to add it deliberately; many countries add it to salt or toothpaste instead.\n\nThe most recent addition targets the unborn. Neural tube defects such as spina bifida occur in the first weeks of pregnancy, often before a woman knows she is pregnant, and their frequency falls sharply if she has enough of a particular B vitamin. Since 1998 the United States and Canada have required wheat flour to be fortified with folic acid, and the incidence of the defects has dropped by roughly a third.\n\n| Additive | Added to | Purpose | First used |\n|---|---|---|---|\n| quinine | carbonated water | malaria prevention, now flavour | 1850s |\n| chlorine | drinking water | disinfection | 1908 |\n| iodine | table salt | prevention of goitre | 1922 |\n| fluoride | drinking water, salt, toothpaste | prevention of tooth decay | 1945 |\n| folic acid | flour | prevention of neural tube defects | 1998 |\n\nNone of these additives is noticeable at the concentrations used, with the one exception of the bitter tonic, and that is precisely the point: the safest medicine is the one nobody has to remember to take.",
+    "bodyDe": "Einige der wichtigsten Maßnahmen der öffentlichen Gesundheit der letzten zwei Jahrhunderte waren keine Impfstoffe oder Medikamente, sondern kleine Mengen einer Chemikalie, die in etwas gerührt wurden, das die Menschen täglich zu sich nehmen. Fünf Zusätze, von denen einer heute vor allem wegen seines Geschmacks geschätzt wird, zeigen, wie sich die Idee entwickelte.\n\nDer älteste ist ein bitteres Alkaloid aus der Rinde des südamerikanischen Chinarindenbaums. Chinin war vom 17. Jahrhundert bis in die 1940er-Jahre die einzige wirksame Behandlung der Malaria, und britische Offiziere in Indien nahmen es täglich zur Vorbeugung. Weil das Pulver unerträglich bitter war, lösten sie es in kohlensäurehaltigem Wasser mit Zucker und Limette, und ab 1858 wurde die Mischung als Tonic Water im Handel verkauft. Modernes Tonic enthält weit weniger Chinin als die medizinische Dosis, deutlich unter 100 Milligramm pro Liter, doch es ist immer noch der Stoff, der dem Getränk seine typische Bitterkeit verleiht und es unter ultraviolettem Licht fluoreszieren lässt. Fragt man, wie Chinin schmeckt, ist die Antwort einfach: bitter – so verlässlich bitter, dass Pharmakologen es als Vergleichssubstanz verwenden, an der die Bitterkeit anderer Stoffe gemessen wird, und dieselbe Note verleiht auch Bitter Lemon seinen herben Biss.\n\nDie erste gezielte Anreicherung eines Lebensmittels kam aus der Schweiz. Der Kropf, eine Vergrößerung der Schilddrüse, und der Kretinismus, eine Form gestörter Entwicklung bei Kindern, waren in Alpentälern verbreitet, deren Böden und Wasser ein bestimmtes Element fehlte. Ab 1922 setzte der Kanton Appenzell Ausserrhoden dem Speisesalz Jod zu, der Kropf verschwand innerhalb einer Generation fast vollständig, und jodiertes Salz ist heute in den meisten Teilen der Welt Standard. Die Schilddrüse braucht das Element, um die Hormone zu bilden, die Wachstum und Stoffwechsel steuern.\n\nTrinkwasser wurde mit zwei Zusätzen behandelt. Der erste ist ein Desinfektionsmittel. Chlor, 1908 in Jersey City erstmals dauerhaft einer öffentlichen Wasserversorgung zugesetzt, tötet die Bakterien, die Cholera und Typhus verursachen, und seiner Einführung wird der größte jemals verzeichnete Rückgang städtischer Sterberaten zugeschrieben. Der zweite schützt die Zähne. 1931 führte der Alcoa-Chemiker H. V. Churchill die fleckige „Colorado brown stain“ auf den Zähnen auf Fluorid im Wasser zurück, und Studien im Mittleren Westen der USA zeigten in den 1930er-Jahren, dass Menschen, deren Wasser von Natur aus etwa ein Milligramm Fluorid pro Liter enthielt, weit weniger Karies hatten, und ab dem 25. Januar 1945 setzte Grand Rapids in Michigan es als erste Stadt gezielt zu; viele Länder reichern stattdessen Salz oder Zahnpasta damit an.\n\nDer jüngste Zusatz zielt auf die Ungeborenen. Neuralrohrdefekte wie Spina bifida entstehen in den ersten Schwangerschaftswochen, oft bevor eine Frau von ihrer Schwangerschaft weiß, und ihre Häufigkeit sinkt deutlich, wenn sie genug von einem bestimmten B-Vitamin hat. Seit 1998 schreiben die USA und Kanada vor, Weizenmehl mit Folsäure anzureichern, und die Häufigkeit der Defekte ist um etwa ein Drittel gesunken.\n\n| Zusatz | Zugesetzt zu | Zweck | Erstmals |\n|---|---|---|---|\n| Chinin | kohlensäurehaltigem Wasser | Malariavorbeugung, heute Geschmack | 1850er |\n| Chlor | Trinkwasser | Desinfektion | 1908 |\n| Jod | Speisesalz | Kropfvorbeugung | 1922 |\n| Fluorid | Trinkwasser, Salz, Zahnpasta | Kariesvorbeugung | 1945 |\n| Folsäure | Mehl | Vorbeugung von Neuralrohrdefekten | 1998 |\n\nKeiner dieser Zusätze ist in den verwendeten Konzentrationen wahrnehmbar, mit der einen Ausnahme des bitteren Tonics, und genau das ist der Punkt: Die sicherste Medizin ist die, an die niemand denken muss.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1653",
+   "baseHash": "7fc4f5242832",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-130",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Records of the Periodic Table",
+    "titleDe": "Rekorde des Periodensystems",
+    "bodyEn": "The periodic table contains 118 known elements, and a few of them hold records that come up again and again in quizzes and chemistry lessons.\n\nThe lightest element is hydrogen: a single proton and, in its most common isotope, no neutron at all. It is also the most abundant element in the universe, making up about three quarters of all normal matter by mass and fuelling the stars. Henry Cavendish first recognised it as a distinct substance in 1766. Second on the list is helium, element 2, with two protons and usually two neutrons: it is the second-lightest element and also the second most abundant in the universe. It was found in the Sun before it was found on Earth – its yellow spectral line was observed during the solar eclipse of 18 August 1868. On Earth things look different. The most abundant element in the Earth's crust is oxygen, which accounts for roughly 46 per cent of the crust's mass, bound in silicates, oxides and water; silicon comes second with about 28 per cent, followed by aluminium and iron. Such figures go back to the American geochemist Frank W. Clarke, who estimated the crust's composition from rock analyses between 1889 and 1924. Oxygen itself was discovered in the 1770s, by Carl Wilhelm Scheele and – in an experiment on 1 August 1774 – by Joseph Priestley.\n\nAt the other end of the table, \"heaviest\" can mean several things. The heaviest element with at least one stable isotope – that is, one that does not decay radioactively – is lead, element 82. Its isotope lead-208 is the heaviest nuclide known to be stable, and three of the four natural decay chains of uranium and thorium end in lead. Bismuth, element 83, was long regarded as the heaviest stable element, but in 2003 French physicists measured the alpha decay of bismuth-209 with a half-life of about 19 quintillion years – a billion times the age of the universe, so for every practical purpose it is stable, yet strictly speaking it is radioactive. Everything from polonium (84) upward has no stable isotope at all.\n\nDensity is a different record. The densest element under normal conditions is osmium, discovered in London in 1803 by Smithson Tennant, a hard, bluish-white platinum metal with about 22.6 grams per cubic centimetre, narrowly ahead of its neighbour iridium and twice as dense as lead. Osmium is so brittle and its oxide so toxic that it is rarely used in bulk, but osmium-iridium alloys once tipped fountain pens and compass needles.\n\nThe element with the highest melting point is tungsten, which melts at 3,422 °C and boils at about 5,500 °C. It was first isolated as a metal in 1783 by the Spanish brothers José and Fausto Elhuyar. That is why light-bulb filaments were made of tungsten wire for a century and why it is used in rocket nozzles and welding electrodes; carbon does not melt at atmospheric pressure but sublimes at around 3,600 °C, so tungsten keeps the record among metals and among elements with a true melting point.\n\nA summary:\n\n| Record | Element | Symbol | Value |\n|---|---|---|---|\n| lightest | hydrogen | H | atomic mass 1.008 |\n| second-lightest | helium | He | atomic mass 4.003 |\n| most abundant in Earth's crust | oxygen | O | about 46 % by mass |\n| heaviest stable | lead | Pb | Z = 82, lead-208 |\n| densest | osmium | Os | 22.59 g/cm³ |\n| highest melting point | tungsten | W | 3,422 °C |\n\nThe list also includes the only metal that is liquid at room temperature, mercury, the most reactive metal, caesium, and the most electronegative element, fluorine – but the six above are the ones most worth remembering.",
+    "bodyDe": "Das Periodensystem enthält 118 bekannte Elemente, und einige von ihnen halten Rekorde, die in Quizfragen und im Chemieunterricht immer wieder auftauchen.\n\nDas leichteste Element ist Wasserstoff: ein einzelnes Proton und, im häufigsten Isotop, gar kein Neutron. Er ist zugleich das häufigste Element im Universum, macht etwa drei Viertel der gewöhnlichen Materie nach Masse aus und treibt die Sterne an. Henry Cavendish erkannte ihn 1766 als eigenständigen Stoff. An zweiter Stelle steht Helium, Element 2, mit zwei Protonen und meist zwei Neutronen: Es ist das zweitleichteste Element und zugleich das zweithäufigste im Universum. Man fand es in der Sonne, bevor man es auf der Erde fand – seine gelbe Spektrallinie wurde während der Sonnenfinsternis vom 18. August 1868 beobachtet. Auf der Erde sieht es anders aus. Das häufigste Element in der Erdkruste ist Sauerstoff, der rund 46 Prozent der Krustenmasse ausmacht, gebunden in Silikaten, Oxiden und Wasser; an zweiter Stelle folgt Silizium mit etwa 28 Prozent, dann Aluminium und Eisen. Solche Zahlen gehen auf den amerikanischen Geochemiker Frank W. Clarke zurück, der die Zusammensetzung der Kruste zwischen 1889 und 1924 aus Gesteinsanalysen ermittelte. Entdeckt wurde der Sauerstoff in den 1770er-Jahren von Carl Wilhelm Scheele und – in einem Versuch am 1. August 1774 – von Joseph Priestley.\n\nAm anderen Ende der Tabelle kann „am schwersten“ mehrerlei bedeuten. Das schwerste Element mit mindestens einem stabilen Isotop – also einem, das nicht radioaktiv zerfällt – ist Blei, Element 82. Sein Isotop Blei-208 ist das schwerste bekannte stabile Nuklid, und drei der vier natürlichen Zerfallsreihen von Uran und Thorium enden beim Blei. Bismut, Element 83, galt lange als das schwerste stabile Element, doch 2003 maßen französische Physiker den Alphazerfall von Bismut-209 mit einer Halbwertszeit von etwa 19 Trillionen Jahren – das Milliardenfache des Alters des Universums, also für jeden praktischen Zweck stabil, streng genommen aber radioaktiv. Ab Polonium (84) aufwärts hat kein Element mehr ein stabiles Isotop.\n\nDie Dichte ist ein anderer Rekord. Das dichteste Element unter Normalbedingungen ist Osmium, 1803 von Smithson Tennant in London entdeckt, ein hartes, bläulich-weißes Platinmetall mit etwa 22,6 Gramm pro Kubikzentimeter, knapp vor seinem Nachbarn Iridium und doppelt so dicht wie Blei. Osmium ist so spröde und sein Oxid so giftig, dass es kaum als Massivmetall verwendet wird, doch Osmium-Iridium-Legierungen bildeten einst die Spitzen von Füllfederhaltern und Kompassnadeln.\n\nDas Element mit dem höchsten Schmelzpunkt ist Wolfram, das bei 3422 °C schmilzt und bei rund 5500 °C siedet. Als Metall gewannen es 1783 erstmals die spanischen Brüder José und Fausto Elhuyar. Deshalb wurden Glühfäden ein Jahrhundert lang aus Wolframdraht gefertigt, und deshalb steckt es in Raketendüsen und Schweißelektroden; Kohlenstoff schmilzt bei Normaldruck nicht, sondern sublimiert bei etwa 3600 °C, sodass Wolfram den Rekord unter den Metallen und unter den Elementen mit echtem Schmelzpunkt hält.\n\nEine Zusammenfassung:\n\n| Rekord | Element | Symbol | Wert |\n|---|---|---|---|\n| leichtestes | Wasserstoff | H | Atommasse 1,008 |\n| zweitleichtestes | Helium | He | Atommasse 4,003 |\n| häufigstes in der Erdkruste | Sauerstoff | O | etwa 46 % der Masse |\n| schwerstes stabiles | Blei | Pb | Z = 82, Blei-208 |\n| dichtestes | Osmium | Os | 22,59 g/cm³ |\n| höchster Schmelzpunkt | Wolfram | W | 3422 °C |\n\nZur Liste gehören auch das einzige bei Raumtemperatur flüssige Metall, Quecksilber, das reaktivste Metall, Caesium, und das elektronegativste Element, Fluor – doch die sechs oben genannten sind die, die man sich am ehesten merken sollte.",
+    "notesEn": "Since 2003 lead (Pb-208) counts as the heaviest stable element; older sources name bismuth, whose isotope Bi-209 was then found to be extremely weakly radioactive (half-life about 1.9 × 10^19 years). Bismuth may be the intended answer if the question predates that finding.",
+    "notesDe": "Seit 2003 gilt Blei (Pb-208) als schwerstes stabiles Element; ältere Quellen nennen Bismut, dessen Isotop Bi-209 damals als äußerst schwach radioaktiv erkannt wurde (Halbwertszeit etwa 1,9 × 10^19 Jahre). „Bismut“ könnte die gemeinte Antwort sein, falls die Frage älter ist als dieser Befund."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0681",
+   "baseHash": "447fb35b6d1f",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-186",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "What Things Are Made Of: The Chief Constituents of Familiar Substances",
+    "titleDe": "Woraus die Dinge bestehen: Die Hauptbestandteile vertrauter Stoffe",
+    "bodyEn": "Ask what something is „made of“ and the chemist's answer is often simpler than expected: many familiar materials are dominated by a single compound or element, with everything else present only as a trace.\n\nNatural gas is the clearest case. The gas that heats homes and fires power stations consists mainly of methane, the simplest hydrocarbon, with one carbon atom bonded to four hydrogen atoms (CH4). Depending on the field, methane makes up between about 75 and 99 per cent of the mix; the rest is ethane, propane and butane, together with small amounts of nitrogen, carbon dioxide and hydrogen sulphide, which are removed before the gas enters the pipeline. Methane was discovered in November 1776 by Alessandro Volta, who collected the „inflammable air“ bubbling up from the marshes of Lake Maggiore. It is colourless and odourless, which is why suppliers add a sulphur compound with a smell of rotten eggs so that leaks can be noticed. Burned completely, it yields only carbon dioxide and water, which makes it the cleanest of the fossil fuels, but unburned methane is a powerful greenhouse gas, roughly 28 times as effective as carbon dioxide over a century.\n\nThe air we breathe is likewise dominated by one gas. Dry air is about 78 per cent nitrogen, 21 per cent oxygen and just under 1 per cent argon; carbon dioxide, for all its importance to the climate, accounts for only about 0.04 per cent. Nitrogen was identified in 1772 by the Scottish physician Daniel Rutherford, who called it „noxious air“ because a mouse could not live in it. It is so unreactive that it passes through our lungs unchanged, yet as a component of proteins and DNA it is indispensable to every living cell.\n\nLook upward and the proportions change. The Sun is about 73 per cent hydrogen and 25 per cent helium by mass, with all the heavier elements together making up the remaining 2 per cent. That stars are made mostly of hydrogen was first shown in 1925 by the astronomer Cecilia Payne in her doctoral thesis, a conclusion so surprising that astronomers took years to accept it. In its core, at some 15 million degrees, hydrogen nuclei fuse into helium, and the energy released in that reaction is the sunlight that reaches Earth eight minutes later.\n\nSome substances are pure by definition. Dry ice is simply frozen carbon dioxide, first described in 1835 by the French inventor Adrien-Jean-Pierre Thilorier. At normal pressure it does not melt but sublimes directly into gas at minus 78.5 degrees Celsius, which is why it is used to keep ice cream and vaccines cold in transit and to produce the low-lying fog on theatre stages.\n\nFinally, whole landscapes can be built from a single compound. Limestone consists chiefly of calcium carbonate (CaCO3), mostly in the form of the mineral calcite, laid down over millions of years from the shells and skeletons of marine organisms. The white chalk cliffs of Dover and Rügen, deposited in the Late Cretaceous sea between about 100 million and 66 million years ago, the karst caves of Slovenia and the marble of Carrara, which is limestone transformed by heat and pressure, are all essentially the same substance. Drop a little acid on it and it fizzes, releasing carbon dioxide, a test geologists still use in the field.\n\nEven a colour can come down to one compound. The main pigment in almost all white paint today is titanium dioxide (TiO2), a brilliantly white, opaque and chemically stable powder. First mass-produced in 1916, it displaced the poisonous lead white of the old masters and the weaker zinc white, and it is now estimated to account for about two-thirds of all pigment made worldwide, colouring not only paint but also paper, plastics, toothpaste and sunscreen.\n\n| Substance | Main constituent | Approximate share |\n|---|---|---|\n| Natural gas | Methane (CH4) | 75–99 % |\n| Air | Nitrogen (N2) | 78 % |\n| The Sun | Hydrogen | 73 % by mass |\n| Dry ice | Carbon dioxide (CO2) | 100 % |\n| Limestone | Calcium carbonate (CaCO3) | over 90 % |\n| White paint | Titanium dioxide (TiO2) | main pigment |",
+    "bodyDe": "Fragt man, woraus etwas „besteht“, fällt die Antwort des Chemikers oft einfacher aus als erwartet: Viele vertraute Materialien werden von einer einzigen Verbindung oder einem einzigen Element beherrscht, alles andere ist nur in Spuren vorhanden.\n\nErdgas ist der klarste Fall. Das Gas, das Wohnungen heizt und Kraftwerke befeuert, besteht hauptsächlich aus Methan, dem einfachsten Kohlenwasserstoff, bei dem ein Kohlenstoffatom an vier Wasserstoffatome gebunden ist (CH4). Je nach Lagerstätte macht Methan zwischen etwa 75 und 99 Prozent des Gemischs aus; der Rest sind Ethan, Propan und Butan sowie geringe Mengen Stickstoff, Kohlenstoffdioxid und Schwefelwasserstoff, die vor der Einspeisung in die Leitung entfernt werden. Entdeckt wurde Methan im November 1776 von Alessandro Volta, der die „brennbare Luft“ auffing, die aus den Sümpfen am Lago Maggiore aufstieg. Es ist farb- und geruchlos, weshalb die Versorger eine Schwefelverbindung mit dem Geruch fauler Eier zusetzen, damit Lecks bemerkt werden. Vollständig verbrannt liefert es nur Kohlenstoffdioxid und Wasser, was es zum saubersten der fossilen Brennstoffe macht; unverbranntes Methan ist jedoch ein starkes Treibhausgas, über ein Jahrhundert etwa 28-mal so wirksam wie Kohlenstoffdioxid.\n\nAuch die Luft, die wir atmen, wird von einem Gas beherrscht. Trockene Luft besteht zu etwa 78 Prozent aus Stickstoff, zu 21 Prozent aus Sauerstoff und zu knapp 1 Prozent aus Argon; Kohlenstoffdioxid macht bei aller Bedeutung für das Klima nur rund 0,04 Prozent aus. Stickstoff wurde 1772 von dem schottischen Arzt Daniel Rutherford identifiziert, der ihn „schädliche Luft“ nannte, weil eine Maus darin nicht leben konnte. Er ist so reaktionsträge, dass er unsere Lungen unverändert passiert, und doch ist er als Bestandteil von Proteinen und DNA für jede lebende Zelle unentbehrlich.\n\nBlickt man nach oben, ändern sich die Verhältnisse. Die Sonne besteht der Masse nach zu etwa 73 Prozent aus Wasserstoff und zu 25 Prozent aus Helium; alle schwereren Elemente zusammen machen die restlichen 2 Prozent aus. Dass Sterne überwiegend aus Wasserstoff bestehen, wies 1925 erstmals die Astronomin Cecilia Payne in ihrer Doktorarbeit nach – ein so überraschendes Ergebnis, dass die Fachwelt Jahre brauchte, um es zu akzeptieren. In ihrem Kern verschmelzen bei rund 15 Millionen Grad Wasserstoffkerne zu Helium, und die dabei freigesetzte Energie ist das Sonnenlicht, das acht Minuten später die Erde erreicht.\n\nManche Stoffe sind per Definition rein. Trockeneis ist nichts anderes als gefrorenes Kohlenstoffdioxid, erstmals 1835 von dem französischen Erfinder Adrien-Jean-Pierre Thilorier beschrieben. Bei normalem Druck schmilzt es nicht, sondern sublimiert bei minus 78,5 Grad Celsius direkt zu Gas – deshalb hält man damit Eiscreme und Impfstoffe auf dem Transport kühl und erzeugt den bodennahen Nebel auf Theaterbühnen.\n\nUnd schließlich können ganze Landschaften aus einer einzigen Verbindung aufgebaut sein. Kalkstein besteht überwiegend aus Calciumcarbonat (CaCO3), meist in Form des Minerals Calcit, das sich über Jahrmillionen aus den Schalen und Skeletten von Meeresorganismen abgelagert hat. Die weißen Kreidefelsen von Dover und Rügen, abgelagert im Meer der Oberkreide vor etwa 100 Millionen bis 66 Millionen Jahren, die Karsthöhlen Sloweniens und der Marmor von Carrara, der durch Hitze und Druck umgewandelter Kalkstein ist, sind im Kern derselbe Stoff. Träufelt man etwas Säure darauf, schäumt er auf und setzt Kohlenstoffdioxid frei – ein Test, den Geologen im Gelände noch heute anwenden.\n\nSogar eine Farbe kann sich auf eine einzige Verbindung zurückführen lassen. Das Hauptpigment fast jeder weißen Farbe ist heute Titandioxid (TiO2), ein strahlend weißes, deckendes und chemisch beständiges Pulver. Seit 1916 in großen Mengen hergestellt, verdrängte es das giftige Bleiweiß der alten Meister und das schwächere Zinkweiß, und heute macht es schätzungsweise rund zwei Drittel aller weltweit erzeugten Pigmente aus – es färbt nicht nur Wandfarbe, sondern auch Papier, Kunststoffe, Zahnpasta und Sonnencreme.\n\n| Stoff | Hauptbestandteil | Ungefährer Anteil |\n|---|---|---|\n| Erdgas | Methan (CH4) | 75–99 % |\n| Luft | Stickstoff (N2) | 78 % |\n| Sonne | Wasserstoff | 73 % der Masse |\n| Trockeneis | Kohlenstoffdioxid (CO2) | 100 % |\n| Kalkstein | Calciumcarbonat (CaCO3) | über 90 % |\n| Weiße Farbe | Titandioxid (TiO2) | Hauptpigment |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1545",
+   "baseHash": "09863e46fd1a",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-201",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Elements Named by Miners and Their Noses",
+    "titleDe": "Elemente, die Bergleute und ihre Nasen benannten",
+    "bodyEn": "Long before chemistry became a science, miners in the mountains of Central Europe were naming the substances they dug up, and several of those names survive on the periodic table.\n\nThe clearest case is zinc. When zinc-bearing ores were smelted in the lead furnaces of Carinthia, the volatile metal condensed on the cooler walls as jagged, tooth-like crusts. The miners of the Bleiberg district in the Carinthian Alps called them \"Zinken\", meaning prongs or spikes, and the physician Paracelsus, who grew up in Carinthia (born in Einsiedeln, raised in Villach), used the Latin form \"zincum\" around 1530. Zinc was not recognised as a distinct element until Andreas Marggraf isolated it in Berlin in 1746.\n\nTwo elements owe their names to the spirits that miners blamed for their misfortunes. In the silver mines of the Saxon Ore Mountains, a shiny ore that looked promising but yielded no silver and released poisonous arsenic fumes when roasted was said to have been bewitched by a Kobold (goblin) – \"Kobolde\" were the mischievous spirits of the mine, believed to steal the silver and leave worthless ore in its place; the Swedish chemist Georg Brandt showed in 1735 that the blue colour it gave to glass came from a new metal, and he named it cobalt after the creature. A similar story produced nickel. A reddish ore that resembled copper but contained none was cursed as \"Kupfernickel\" – the copper of Nickel, a mischievous demon – and when Axel Fredrik Cronstedt extracted a white metal from it in 1751, he kept the name.\n\nTungsten has two names, and the German one is a miner's complaint. In the tin mines of the Ore Mountains a heavy black mineral interfered with smelting, carrying away the tin as slag; the miners said it \"devoured tin like a wolf\", and Georgius Agricola recorded the Latin \"lupi spuma\", wolf's foam, in 1546. The mineral became wolframite and the metal, isolated by the Elhuyar brothers in 1783, is still Wolfram in German – hence the symbol W. Its highest melting point of all metals made it the stuff of light-bulb filaments: Sándor Just and Franjo Hanaman patented the tungsten filament lamp on 13 December 1904. The English name comes from the Swedish \"tung sten\", heavy stone.\n\nNot every name came from underground. Bromine was discovered in 1826 by Antoine-Jérôme Balard in the salt marshes of Montpellier (the German chemist Carl Jacob Löwig had isolated it independently a year earlier), and its penetrating, chlorine-like smell earned it a name from the Greek \"bromos\", stench.\n\n| Element | Symbol | Origin of the name |\n|---|---|---|\n| zinc | Zn | \"Zinken\", the spikes on furnace walls |\n| cobalt | Co | \"Kobold\", the goblin of the mine |\n| nickel | Ni | \"Kupfernickel\", the demon's false copper |\n| tungsten | W | \"wolf's foam\", the ore that ate the tin |\n| bromine | Br | Greek \"bromos\", stench |\n\nThe pattern is worth remembering: where a metal's name is German rather than Greek or Latin, it was usually named by the people who mined it long before anyone knew what it was.",
+    "bodyDe": "Lange bevor die Chemie eine Wissenschaft wurde, gaben Bergleute in den Gebirgen Mitteleuropas den Stoffen Namen, die sie zutage förderten, und mehrere dieser Namen überleben im Periodensystem.\n\nDer klarste Fall ist Zink. Wenn zinkhaltige Erze in den Bleiöfen Kärntens verhüttet wurden, schlug sich das flüchtige Metall an den kühleren Wänden als zackige, zahnartige Krusten nieder. Die Bergleute des Bleiberger Reviers in den Kärntner Alpen nannten sie „Zinken“, also Zacken oder Spitzen, und der Arzt Paracelsus, der in Kärnten aufwuchs (geboren in Einsiedeln, aufgewachsen in Villach), verwendete um 1530 die lateinische Form „zincum“. Als eigenständiges Element wurde Zink erst anerkannt, als Andreas Marggraf es 1746 in Berlin isolierte.\n\nZwei Elemente verdanken ihre Namen den Geistern, denen Bergleute die Schuld an ihrem Unglück gaben. In den Silbergruben des sächsischen Erzgebirges galt ein glänzendes Erz, das vielversprechend aussah, aber kein Silber lieferte und beim Rösten giftige Arsendämpfe freisetzte, als von „Kobolden“, den Berggeistern, verhext, die das Silber stahlen und wertloses Erz zurückließen; der schwedische Chemiker Georg Brandt zeigte 1735, dass die blaue Farbe, die es dem Glas verlieh, von einem neuen Metall stammte, und benannte es nach dem Kobold: Kobalt. Eine ähnliche Geschichte brachte das Nickel hervor. Ein rötliches Erz, das Kupfer ähnelte, aber keines enthielt, wurde als „Kupfernickel“ verwünscht – das Kupfer des Nickels, eines boshaften Dämons –, und als Axel Fredrik Cronstedt 1751 ein weißes Metall daraus gewann, behielt er den Namen bei.\n\nWolfram hat zwei Namen, und der deutsche ist eine Klage der Bergleute. In den Zinngruben des Erzgebirges störte ein schweres schwarzes Mineral das Schmelzen und riss das Zinn als Schlacke mit sich; die Bergleute sagten, es „fresse das Zinn wie ein Wolf“, und Georgius Agricola hielt 1546 das lateinische „lupi spuma“, Wolfsschaum, fest. Aus dem Mineral wurde der Wolframit, und das Metall, 1783 von den Brüdern Elhuyar isoliert, heißt im Deutschen noch immer Wolfram – daher das Symbol W. Sein höchster Schmelzpunkt aller Metalle machte es zum Stoff für Glühfäden: Am 13. Dezember 1904 erhielten Sándor Just und Franjo Hanaman das Patent auf die Glühlampe mit Wolframfaden. Der englische Name „tungsten“ kommt vom schwedischen „tung sten“, schwerer Stein.\n\nNicht jeder Name kam aus dem Bergwerk. Brom wurde 1826 von Antoine-Jérôme Balard in den Salzsümpfen von Montpellier entdeckt (der deutsche Chemiker Carl Jacob Löwig hatte es ein Jahr zuvor unabhängig davon isoliert), und sein durchdringender, chlorartiger Geruch brachte ihm einen Namen aus dem griechischen „bromos“, Gestank, ein.\n\n| Element | Symbol | Herkunft des Namens |\n|---|---|---|\n| Zink | Zn | „Zinken“, die Zacken an den Ofenwänden |\n| Kobalt | Co | „Kobold“, der Berggeist |\n| Nickel | Ni | „Kupfernickel“, das falsche Kupfer des Dämons |\n| Wolfram | W | „Wolfsschaum“, das Erz, das das Zinn fraß |\n| Brom | Br | griechisch „bromos“, Gestank |\n\nDas Muster ist merkenswert: Wo der Name eines Metalls deutsch statt griechisch oder lateinisch ist, wurde es meist von den Menschen benannt, die es abbauten, lange bevor jemand wusste, was es war.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1905",
+   "baseHash": "8a450bac1388",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-237",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Oxidation, Reduction and the Vocabulary of Chemical Reactions",
+    "titleDe": "Oxidation, Reduktion und das Vokabular der chemischen Reaktionen",
+    "bodyEn": "Chemistry has a small vocabulary of reaction types that every school pupil meets, and most of them are older than the theories that now explain them. Oxidation is the classic example. When Antoine Lavoisier and Louis-Bernard Guyton de Morveau coined the French term in 1787, it meant exactly what it says: a substance combining with oxygen, as iron does when it rusts (4 Fe + 3 O2 → 2 Fe2O3) or as carbon does when coal burns. Only in the twentieth century did chemists realise that the essential event is the loss of electrons – iron gives up electrons to become Fe3+, whether the taker is oxygen, chlorine or a dissolved copper ion. Today the definition is electron transfer, and the oxygen is an optional, if very common, partner.\n\nCombustion is simply oxidation at speed, and it explains the firefighter's rule of thumb. A fire needs three things at once – heat, fuel and oxygen – the so-called fire triangle. Remove any one side and the flames die: water cools away the heat, a fire blanket or foam cuts off the oxygen, and a firebreak takes away the fuel. It was Lavoisier's experiments in the 1770s that showed burning to be a combination with oxygen rather than the escape of a mysterious \"phlogiston\".\n\nElectrons that one substance loses must go somewhere, so every oxidation is coupled to a Reduction, the gain of electrons. The pair is called a redox reaction, a word first used in 1928, and the classroom mnemonic is \"OIL RIG\": Oxidation Is Loss, Reduction Is Gain. In a blast furnace carbon monoxide reduces iron ore to metallic iron; in a battery the same principle drives electrons through an external circuit; in our cells the reduction of oxygen to water is the final step of respiration.\n\nOther reaction names describe what happens to the partners rather than to their electrons. Neutralisation – the English word is recorded as early as 1747 – is the reaction of an acid with a base to give a salt and water: hydrochloric acid and sodium hydroxide produce common salt, HCl + NaOH → NaCl + H2O. It is the basis of titration in the laboratory, of antacid tablets in the pharmacy and of liming acidic fields in agriculture.\n\nHydrolysis – from the Greek for \"water\" and \"loosening\", a term recorded in English since 1879 – is the splitting of a compound by water. Digestion is a chain of hydrolyses: starch is cut into glucose, proteins into amino acids, fats into glycerol and fatty acids. Boiling fat with lye is the hydrolysis that makes soap, and the hydrolysis of ATP is the energy currency of every living cell.\n\nFinally, Electrolysis uses electric current to force a reaction that would not run on its own. In 1800, weeks after Volta announced his pile, William Nicholson and Anthony Carlisle split water into hydrogen and oxygen; Michael Faraday later gave the field its words – electrode, anode, cathode, ion – and its quantitative laws. Aluminium, chlorine and, increasingly, \"green\" hydrogen are all made this way.\n\n| Reaction type | What happens | Everyday example |\n|---|---|---|\n| Oxidation | substance loses electrons (often gains oxygen) | iron rusting, wood burning |\n| Combustion | rapid oxidation needing heat, fuel and oxygen | campfire |\n| Reduction | substance gains electrons | iron ore smelted in a blast furnace |\n| Neutralisation | acid + base → salt + water | antacid tablet against heartburn |\n| Hydrolysis | compound split by water | digestion of starch, soap making |\n| Electrolysis | decomposition by electric current | hydrogen from water, aluminium production |\n\nLearn these words and a surprising amount of everyday chemistry – from a rusty bicycle to a hydrogen car – becomes readable at a glance.",
+    "bodyDe": "Die Chemie besitzt ein kleines Vokabular an Reaktionstypen, dem jeder Schüler begegnet, und die meisten davon sind älter als die Theorien, die sie heute erklären. Die Oxidation ist das klassische Beispiel. Als Antoine Lavoisier und Louis-Bernard Guyton de Morveau den französischen Begriff 1787 prägten, bedeutete er genau das, was er sagt: Ein Stoff verbindet sich mit Sauerstoff, wie Eisen beim Rosten (4 Fe + 3 O2 → 2 Fe2O3) oder Kohlenstoff beim Verbrennen von Kohle. Erst im zwanzigsten Jahrhundert erkannten die Chemiker, dass der eigentliche Vorgang die Abgabe von Elektronen ist – Eisen gibt Elektronen ab und wird zu Fe3+, gleichgültig, ob der Empfänger Sauerstoff, Chlor oder ein gelöstes Kupferion ist. Heute lautet die Definition Elektronenübertragung, und der Sauerstoff ist ein optionaler, wenn auch sehr häufiger Partner.\n\nDie Verbrennung ist nichts anderes als eine schnelle Oxidation, und das erklärt die Faustregel der Feuerwehr. Ein Feuer braucht drei Dinge zugleich – Hitze, Brennstoff und Sauerstoff –, das sogenannte Verbrennungsdreieck. Fehlt eine Seite, erlischt die Flamme: Wasser kühlt die Hitze weg, eine Löschdecke oder Schaum schneidet den Sauerstoff ab, und eine Brandschneise entzieht den Brennstoff. Lavoisiers Versuche in den 1770er-Jahren zeigten, dass Verbrennen eine Verbindung mit Sauerstoff ist und nicht das Entweichen eines geheimnisvollen „Phlogistons“.\n\nElektronen, die ein Stoff verliert, müssen irgendwohin, deshalb ist jede Oxidation an eine Reduktion gekoppelt, die Aufnahme von Elektronen. Das Paar nennt man Redoxreaktion – ein Wort, das 1928 erstmals auftauchte –, und die Eselsbrücke im Klassenzimmer lautet „OIL RIG“: Oxidation Is Loss, Reduction Is Gain. Im Hochofen reduziert Kohlenmonoxid Eisenerz zu metallischem Eisen; in einer Batterie treibt dasselbe Prinzip Elektronen durch einen äußeren Stromkreis; in unseren Zellen ist die Reduktion von Sauerstoff zu Wasser der letzte Schritt der Atmung.\n\nAndere Reaktionsnamen beschreiben, was mit den Partnern geschieht, nicht mit ihren Elektronen. Die Neutralisation – das englische Wort ist schon 1747 belegt – ist die Reaktion einer Säure mit einer Base zu Salz und Wasser: Salzsäure und Natronlauge ergeben Kochsalz, HCl + NaOH → NaCl + H2O. Sie ist die Grundlage der Titration im Labor, der Antazida-Tabletten in der Apotheke und des Kalkens saurer Felder in der Landwirtschaft.\n\nDie Hydrolyse – aus dem Griechischen für „Wasser“ und „Lösung“, im Englischen seit 1879 belegt – ist die Spaltung einer Verbindung durch Wasser. Die Verdauung ist eine Kette von Hydrolysen: Stärke wird zu Glucose zerlegt, Eiweiße zu Aminosäuren, Fette zu Glycerin und Fettsäuren. Das Kochen von Fett mit Lauge ist die Hydrolyse, aus der Seife entsteht, und die Hydrolyse von ATP ist die Energiewährung jeder lebenden Zelle.\n\nDie Elektrolyse schließlich nutzt elektrischen Strom, um eine Reaktion zu erzwingen, die von selbst nicht abliefe. 1800, wenige Wochen nachdem Volta seine Säule vorgestellt hatte, spalteten William Nicholson und Anthony Carlisle Wasser in Wasserstoff und Sauerstoff; Michael Faraday gab dem Gebiet später seine Wörter – Elektrode, Anode, Kathode, Ion – und seine quantitativen Gesetze. Aluminium, Chlor und zunehmend „grüner“ Wasserstoff werden alle auf diese Weise hergestellt.\n\n| Reaktionstyp | Was geschieht | Beispiel aus dem Alltag |\n|---|---|---|\n| Oxidation | Stoff gibt Elektronen ab (nimmt oft Sauerstoff auf) | rostendes Eisen, brennendes Holz |\n| Verbrennung | schnelle Oxidation, die Hitze, Brennstoff und Sauerstoff braucht | Lagerfeuer |\n| Reduktion | Stoff nimmt Elektronen auf | Eisenerz im Hochofen |\n| Neutralisation | Säure + Base → Salz + Wasser | Antazida-Tablette gegen Sodbrennen |\n| Hydrolyse | Verbindung wird durch Wasser gespalten | Verdauung von Stärke, Seifensieden |\n| Elektrolyse | Zersetzung durch elektrischen Strom | Wasserstoff aus Wasser, Aluminiumherstellung |\n\nWer diese Wörter kennt, kann eine erstaunliche Menge Alltagschemie – vom rostigen Fahrrad bis zum Wasserstoffauto – auf einen Blick lesen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0729",
+   "baseHash": "7ea518dc4c66",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-311",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Two of a Kind: What Everyday Substances Are Made Of",
+    "titleDe": "Zwei von einer Sorte: Woraus alltägliche Stoffe bestehen",
+    "bodyEn": "Much of chemistry can be summed up in pairs. Many of the most familiar substances on Earth – and one beyond it – are essentially made of just two ingredients.\n\nThe air we breathe is the classic example. Dry air is about 78 per cent nitrogen and 21 per cent oxygen by volume; everything else, chiefly argon (0.93 per cent) and carbon dioxide (0.04 per cent), fits into the last one per cent. In 1895 Carl von Linde liquefied air and, by letting it warm slowly, separated it into its two main gases. Nitrogen and oxygen are therefore the answer to the schoolroom question, but their roles could hardly be more different. Oxygen, discovered independently by Carl Wilhelm Scheele and Joseph Priestley in the 1770s – Priestley's decisive experiment took place on 1 August 1774 – and named by Antoine Lavoisier, is the reactive partner: it drives combustion and the slow burning in our cells that we call respiration. Nitrogen is almost inert – its two atoms are held by a triple bond that takes lightning, a bacterium or the Haber-Bosch process to break – and it serves mainly to dilute the oxygen. Pure oxygen would make fires uncontrollable, and breathing it for long damages the lungs.\n\nWater is two elements as well: hydrogen and oxygen, in the ratio 2:1 that its formula H2O expresses. Henry Cavendish showed in experiments of 1781, published in 1784, that burning \"inflammable air\" produced water, and Lavoisier gave both gases their names, hydrogen meaning \"water-former\". The bent shape of the molecule and the hydrogen bonds between molecules explain most of water's peculiar behaviour, from the way ice floats to its high boiling point.\n\nLook up, and the same element dominates. The Sun is about 73 per cent hydrogen and 25 per cent helium by mass, with the remaining two per cent shared among oxygen, carbon, neon, iron and everything else. Hydrogen and helium are also the first two elements of the periodic table and the products of the Big Bang; helium was even detected in the Sun's spectrum during the eclipse of 18 August 1868, twenty-seven years before it was found on Earth, which is why it bears the name of the Greek sun god Helios.\n\nBack in the kitchen, table salt is the compound of a soft metal that bursts into flame in water and a poisonous green gas. Sodium, first isolated by Humphry Davy in 1807, and chlorine, first described by Carl Wilhelm Scheele in 1774, combined as sodium chloride, form the crystal lattice that makes every grain of salt a tiny cube. The body needs about one to two grams of sodium a day to carry nerve impulses and balance its fluids.\n\nAnd the first alloy that humans made deliberately gave its name to an age. Bronze is about 90 per cent copper and 10 per cent tin; copper and tin were melted together from around 3300 BC in Mesopotamia, the start of the Bronze Age that lasted until about 1200 BC, and produced a metal harder than either, suitable for swords, bells and statues. Because tin ore was rare, its trade routes, from Cornwall and Afghanistan to the Mediterranean, were the first long-distance commerce in raw materials.\n\nBronze's golden-looking cousin is brass. Its two main components are copper and zinc: at least half copper, usually about 60 to 70 per cent, with the rest mostly zinc. The Romans struck coins from it, and because it is easy to work, resists corrosion and has a warm gold colour, it is the metal of door handles, ships' fittings, cartridge cases and the whole \"brass section\" of the orchestra.\n\n| Substance | Made mainly of |\n|---|---|\n| Air | Nitrogen and oxygen |\n| Water | Hydrogen and oxygen |\n| The Sun | Hydrogen and helium |\n| Table salt | Sodium and chlorine |\n| Bronze | Copper and tin |\n| Brass | Copper and zinc |",
+    "bodyDe": "Ein großer Teil der Chemie lässt sich in Paaren zusammenfassen. Viele der vertrautesten Stoffe auf der Erde – und einer jenseits von ihr – bestehen im Wesentlichen aus nur zwei Zutaten.\n\nDie Luft, die wir atmen, ist das klassische Beispiel. Trockene Luft besteht zu etwa 78 Prozent aus Stickstoff und zu 21 Prozent aus Sauerstoff (Volumenanteile); alles andere, vor allem Argon (0,93 Prozent) und Kohlendioxid (0,04 Prozent), passt in das letzte Prozent. 1895 verflüssigte Carl von Linde Luft und trennte sie durch langsames Erwärmen in ihre beiden Hauptgase. Stickstoff und Sauerstoff sind also die Antwort auf die Schulfrage, doch ihre Rollen könnten kaum unterschiedlicher sein. Sauerstoff, in den 1770er-Jahren unabhängig voneinander von Carl Wilhelm Scheele und Joseph Priestley entdeckt – Priestleys entscheidendes Experiment fand am 1. August 1774 statt – und von Antoine Lavoisier benannt, ist der reaktive Partner: Er treibt die Verbrennung an und das langsame Verbrennen in unseren Zellen, das wir Atmung nennen. Stickstoff ist nahezu reaktionsträge – seine beiden Atome sind durch eine Dreifachbindung verbunden, die nur ein Blitz, ein Bakterium oder das Haber-Bosch-Verfahren aufbrechen kann – und dient hauptsächlich dazu, den Sauerstoff zu verdünnen. Reiner Sauerstoff würde Brände unkontrollierbar machen, und wer ihn länger einatmet, schädigt seine Lunge.\n\nAuch Wasser besteht aus zwei Elementen: Wasserstoff und Sauerstoff, im Verhältnis 2:1, das seine Formel H2O ausdrückt. Henry Cavendish zeigte in Versuchen von 1781, veröffentlicht 1784, dass beim Verbrennen von „brennbarer Luft“ Wasser entsteht, und Lavoisier gab beiden Gasen ihre Namen – Wasserstoff, der „Wasserbildner“. Die gewinkelte Form des Moleküls und die Wasserstoffbrücken zwischen den Molekülen erklären das meiste von Wassers eigentümlichem Verhalten, vom Schwimmen des Eises bis zum hohen Siedepunkt.\n\nBlickt man nach oben, dominiert dasselbe Element. Die Sonne besteht zu etwa 73 Prozent aus Wasserstoff und zu 25 Prozent aus Helium (Massenanteile); die restlichen zwei Prozent teilen sich Sauerstoff, Kohlenstoff, Neon, Eisen und alles Übrige. Wasserstoff und Helium sind zugleich die ersten beiden Elemente des Periodensystems und die Produkte des Urknalls; Helium wurde während der Sonnenfinsternis vom 18. August 1868 sogar im Spektrum der Sonne entdeckt, siebenundzwanzig Jahre bevor man es auf der Erde fand, weshalb es den Namen des griechischen Sonnengottes Helios trägt.\n\nZurück in der Küche: Kochsalz ist die Verbindung eines weichen Metalls, das in Wasser in Flammen aufgeht, mit einem giftigen grünen Gas. Natrium, 1807 erstmals von Humphry Davy isoliert, und Chlor, 1774 erstmals von Carl Wilhelm Scheele beschrieben, bilden als Natriumchlorid das Kristallgitter, das jedes Salzkorn zu einem winzigen Würfel macht. Der Körper braucht täglich etwa ein bis zwei Gramm Natrium, um Nervenimpulse zu leiten und den Flüssigkeitshaushalt zu regeln.\n\nUnd die erste Legierung, die Menschen bewusst herstellten, gab einem Zeitalter ihren Namen. Bronze besteht zu etwa 90 Prozent aus Kupfer und zu 10 Prozent aus Zinn; Kupfer und Zinn wurden ab etwa 3300 v. Chr. in Mesopotamien zusammengeschmolzen – der Beginn der Bronzezeit, die bis etwa 1200 v. Chr. dauerte – und ergaben ein Metall, das härter war als jedes der beiden – geeignet für Schwerter, Glocken und Statuen. Weil Zinnerz selten war, waren seine Handelswege von Cornwall und Afghanistan ans Mittelmeer der erste Fernhandel mit Rohstoffen.\n\nDer goldglänzende Verwandte der Bronze ist das Messing. Seine beiden Hauptbestandteile sind Kupfer und Zink: mindestens zur Hälfte Kupfer, meist etwa 60 bis 70 Prozent, der Rest überwiegend Zink. Die Römer prägten Münzen daraus, und weil es sich leicht bearbeiten lässt, korrosionsbeständig ist und eine warme Goldfarbe hat, ist es das Metall von Türklinken, Schiffsbeschlägen, Patronenhülsen und der Blechbläser im Orchester.\n\n| Stoff | Besteht hauptsächlich aus |\n|---|---|\n| Luft | Stickstoff und Sauerstoff |\n| Wasser | Wasserstoff und Sauerstoff |\n| Die Sonne | Wasserstoff und Helium |\n| Kochsalz | Natrium und Chlor |\n| Bronze | Kupfer und Zinn |\n| Messing | Kupfer und Zink |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-058",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-084",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-107",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Säure ist der wirksame Bestandteil von Essig und verleiht ihm seinen sauren Geschmack?",
+      "en": "Which acid is the active component of vinegar and gives it its sour taste?",
+      "answerDe": "Essigsäure",
+      "answerEn": "acetic acid",
+      "timeline": {
+       "kind": "creation",
+       "start": "-3000",
+       "end": null,
+       "precision": "millennium",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Vinegar, whose active component is acetic acid, is produced from the 3rd millennium BC",
+       "labelDe": "Essig, dessen wirksamer Bestandteil Essigsäure ist, wird seit dem 3. Jahrtausend v. Chr. hergestellt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Acetic_acid",
+       "title": "Acetic acid – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Gas setzt Backpulver in einem Teig frei, damit er aufgeht?",
+      "en": "Which gas does baking powder release into a dough or batter to make it rise?",
+      "answerDe": "Kohlenstoffdioxid",
+      "answerEn": "carbon dioxide",
+      "timeline": {
+       "kind": "creation",
+       "start": "1843",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "English chemist Alfred Bird develops his baking powder, which releases carbon dioxide when dampened",
+       "labelDe": "Der englische Chemiker Alfred Bird entwickelt sein Backpulver, das bei Feuchtigkeit Kohlenstoffdioxid freisetzt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Baking_powder",
+       "title": "Baking powder – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welchen Geschmacksverstärker gewann der japanische Chemiker Kikunae Ikeda 1908 erstmals aus Kombu-Seetang, um den Umami-Geschmack zu erzeugen?",
+      "en": "Which flavour enhancer did the Japanese chemist Kikunae Ikeda first extract from kombu seaweed in 1908 to produce the umami taste?",
+      "answerDe": "Mononatriumglutamat",
+      "answerEn": "monosodium glutamate",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1908",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Kikunae Ikeda extracts glutamate from kombu seaweed and names its taste umami",
+       "labelDe": "Kikunae Ikeda gewinnt Glutamat aus Kombu-Seetang und nennt dessen Geschmack umami"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Monosodium_glutamate",
+       "title": "Monosodium glutamate – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welchen Butterersatz erfand der französische Chemiker Hippolyte Mège-Mouriès 1869 aus Rindertalg?",
+      "en": "Which butter substitute did the French chemist Hippolyte Mège-Mouriès invent in 1869 from beef tallow?",
+      "answerDe": "Margarine",
+      "answerEn": "margarine",
+      "timeline": {
+       "kind": "creation",
+       "start": "1869",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Hippolyte Mège-Mouriès invents margarine in answer to a challenge from Napoleon III",
+       "labelDe": "Hippolyte Mège-Mouriès erfindet die Margarine auf eine Ausschreibung Napoleons III. hin"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Margarine",
+       "title": "Margarine – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Chemistry at the Stove: Browning, Mixing and Dissolving",
+    "titleDe": "Chemie am Herd: Bräunen, Mischen und Auflösen",
+    "bodyEn": "Every kitchen is a chemistry laboratory, and some of the most familiar things that happen at the stove are reactions that chemists only explained in the last two centuries.\n\nStart with browning. The crust of bread, the sear on a steak, roasted coffee and toasted nuts all owe their colour and much of their flavour to the Maillard reaction, named after the French physician and chemist Louis-Camille Maillard, who described it in 1912. It is a cascade of reactions in which amino acids, the building blocks of proteins, react with sugar – strictly speaking with reducing sugars such as glucose – at temperatures above about 140 °C, producing hundreds of brown pigments and aroma compounds. It is not the same as caramelisation, in which sugar browns on its own without any protein.\n\nMixing is the next problem. Oil and water refuse to blend, so mayonnaise, salad dressings and chocolate rely on emulsifiers. Molecules such as lecithin, found in egg yolk and soya beans and first isolated from egg yolk in 1845, have one end that is attracted to water and another that dissolves in oil (fat); they settle on the surface of tiny droplets and keep them suspended instead of letting them run together.\n\nAcids are the kitchen's solvents. The sour taste of vinegar comes from acetic acid, usually 4 to 8 per cent of the liquid, and vinegar has been made by letting wine and beer sour since the third millennium BC. It is strong enough to dissolve a pearl: pearls consist mostly of calcium carbonate, which acetic acid slowly turns into soluble calcium acetate and carbon dioxide. The Roman writer Pliny the Elder tells how Cleopatra won a wager with Mark Antony by dissolving a priceless pearl in a cup of vinegar and drinking it.\n\nGas makes cakes rise. Baking powder is a dry mixture of sodium bicarbonate and a weak acid; once it gets wet the two react and release carbon dioxide, whose bubbles expand in the oven. The English chemist Alfred Bird developed an early baking powder in 1843 because his wife was allergic to yeast and eggs.\n\nTwo later inventions came straight out of the laboratory. In 1869 the French chemist Hippolyte Mège-Mouriès answered Napoleon III's call for a cheap butter substitute for the army and the poor with margarine, first made from beef tallow; today it is made from vegetable oils. And in 1908 the Japanese chemist Kikunae Ikeda wanted to know why kombu broth tasted so savoury, extracted glutamate from the seaweed, named its taste umami and patented monosodium glutamate, which has been sold as a flavour enhancer ever since.\n\n| Kitchen phenomenon | Chemistry behind it |\n|---|---|\n| browning of bread and meat | Maillard reaction of amino acids with sugar |\n| mayonnaise | emulsifiers such as lecithin bind water and oil |\n| sour taste of vinegar | acetic acid, which can dissolve a pearl |\n| rising cake | baking powder releasing carbon dioxide |\n| butter substitute | margarine (1869) |\n| umami taste | monosodium glutamate (1908) |",
+    "bodyDe": "Jede Küche ist ein Chemielabor, und einige der vertrautesten Vorgänge am Herd sind Reaktionen, die Chemiker erst in den letzten zwei Jahrhunderten erklärt haben.\n\nAm Anfang steht das Bräunen. Die Brotkruste, die Röstaromen eines Steaks, gerösteter Kaffee und geröstete Nüsse verdanken ihre Farbe und einen Großteil ihres Geschmacks der Maillard-Reaktion, benannt nach dem französischen Arzt und Chemiker Louis-Camille Maillard, der sie 1912 beschrieb. Es ist eine Kaskade von Reaktionen, bei der Aminosäuren, die Bausteine der Eiweiße, mit Zucker reagieren – genau genommen mit reduzierenden Zuckern wie Glucose –, und zwar bei Temperaturen ab etwa 140 °C; dabei entstehen Hunderte brauner Farbstoffe und Aromastoffe. Sie ist nicht dasselbe wie die Karamellisierung, bei der Zucker ganz ohne Eiweiß bräunt.\n\nDas nächste Problem ist das Mischen. Öl und Wasser wollen sich nicht verbinden, deshalb sind Mayonnaise, Salatsoßen und Schokolade auf Emulgatoren angewiesen. Moleküle wie Lezithin, das in Eigelb und Sojabohnen vorkommt und 1845 erstmals aus Eigelb isoliert wurde, haben ein Ende, das sich zum Wasser hingezogen fühlt, und eines, das sich in Öl (Fett) löst; sie legen sich auf die Oberfläche winziger Tröpfchen und halten sie in der Schwebe, statt sie zusammenfließen zu lassen.\n\nSäuren sind die Lösungsmittel der Küche. Der saure Geschmack von Essig stammt von der Essigsäure, meist 4 bis 8 Prozent der Flüssigkeit, und Essig wird seit dem 3. Jahrtausend v. Chr. hergestellt, indem man Wein und Bier sauer werden lässt. Er ist stark genug, eine Perle aufzulösen: Perlen bestehen überwiegend aus Calciumcarbonat, das Essigsäure langsam in lösliches Calciumacetat und Kohlenstoffdioxid umwandelt. Der römische Schriftsteller Plinius der Ältere erzählt, wie Kleopatra eine Wette gegen Marcus Antonius gewann, indem sie eine unbezahlbare Perle in einem Becher Essig auflöste und austrank.\n\nGas lässt Kuchen aufgehen. Backpulver ist eine trockene Mischung aus Natriumhydrogencarbonat und einer schwachen Säure; sobald es feucht wird, reagieren die beiden und setzen Kohlenstoffdioxid frei, dessen Bläschen sich im Ofen ausdehnen. Der englische Chemiker Alfred Bird entwickelte 1843 ein frühes Backpulver, weil seine Frau gegen Hefe und Eier allergisch war.\n\nZwei spätere Erfindungen kamen direkt aus dem Labor. 1869 beantwortete der französische Chemiker Hippolyte Mège-Mouriès die Ausschreibung Napoleons III. nach einem billigen Butterersatz für Armee und Arme mit der Margarine, zuerst aus Rindertalg hergestellt; heute wird sie aus Pflanzenölen gemacht. Und 1908 wollte der japanische Chemiker Kikunae Ikeda wissen, warum Kombu-Brühe so herzhaft schmeckt, gewann Glutamat aus dem Seetang, nannte dessen Geschmack umami und ließ Mononatriumglutamat patentieren, das seitdem als Geschmacksverstärker verkauft wird.\n\n| Küchenphänomen | Chemie dahinter |\n|---|---|\n| Bräunen von Brot und Fleisch | Maillard-Reaktion von Aminosäuren mit Zucker |\n| Mayonnaise | Emulgatoren wie Lezithin verbinden Wasser und Öl |\n| saurer Geschmack von Essig | Essigsäure, die eine Perle auflösen kann |\n| aufgehender Kuchen | Backpulver setzt Kohlenstoffdioxid frei |\n| Butterersatz | Margarine (1869) |\n| Umami-Geschmack | Mononatriumglutamat (1908) |",
+    "notesEn": "The Maillard reaction strictly needs reducing sugars. Lemon juice would also dissolve a pearl; vinegar is the classic answer.",
+    "notesDe": "Die Maillard-Reaktion braucht genau genommen reduzierende Zucker. Auch Zitronensaft würde eine Perle auflösen; Essig ist die klassische Antwort."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-085",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches chemische Element mit der Ordnungszahl 108, 1984 an der GSI in Darmstadt erstmals erzeugt, ist nach dem lateinischen Namen des Bundeslandes Hessen benannt?",
+      "en": "Which chemical element with atomic number 108, first made at the GSI in Darmstadt in 1984, is named after the Latin name of the German state of Hesse?",
+      "answerDe": "Hassium",
+      "answerEn": "hassium",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1984",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A team at the GSI in Darmstadt led by Peter Armbruster and Gottfried Münzenberg synthesises element 108, hassium",
+       "labelDe": "Ein Team der GSI in Darmstadt um Peter Armbruster und Gottfried Münzenberg erzeugt Element 108, das Hassium"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hassium",
+       "title": "Hassium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches chemische Element, im Dezember 1949 entdeckt, ist nach der kalifornischen Stadt benannt, in deren Universitätslabor es erzeugt wurde?",
+      "en": "Which chemical element, discovered in December 1949, is named after the Californian city whose university laboratory produced it?",
+      "answerDe": "Berkelium",
+      "answerEn": "berkelium",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1949-12",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Berkelium, element 97, is discovered at the laboratory in Berkeley, California",
+       "labelDe": "Berkelium, Element 97, wird im Labor in Berkeley, Kalifornien, entdeckt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Berkelium",
+       "title": "Berkelium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches chemische Element mit der Ordnungszahl 105 ist nach der Stadt nördlich von Moskau benannt, in der das Vereinigte Institut für Kernforschung sitzt?",
+      "en": "Which chemical element with atomic number 105 is named after the town north of Moscow that is home to the Joint Institute for Nuclear Research?",
+      "answerDe": "Dubnium",
+      "answerEn": "dubnium",
+      "timeline": {
+       "kind": "event",
+       "start": "1997",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "IUPAC formally names element 105 dubnium, after the Russian town of Dubna",
+       "labelDe": "Die IUPAC benennt Element 105 offiziell nach der russischen Stadt Dubna: Dubnium"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Dubnium",
+       "title": "Dubnium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches chemische Element, von Dirk Coster und George de Hevesy in Zirkonerzen aufgespürt, ist nach dem lateinischen Namen Kopenhagens benannt?",
+      "en": "Which chemical element, tracked down by Dirk Coster and George de Hevesy in zirconium ores, is named after the Latin name for Copenhagen?",
+      "answerDe": "Hafnium",
+      "answerEn": "hafnium",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1923",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Dirk Coster and George de Hevesy discover hafnium, element 72, in Copenhagen",
+       "labelDe": "Dirk Coster und George de Hevesy entdecken in Kopenhagen das Hafnium, Element 72"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hafnium",
+       "title": "Hafnium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Elements Named After Cities and Regions",
+    "titleDe": "Nach Städten und Regionen benannte Elemente",
+    "bodyEn": "Most chemical elements carry names from Greek and Latin, from gods, planets or properties. A growing group, however, is named after the places where they were found or first made – and because the heaviest elements can only be produced in a handful of laboratories, several of those places are small towns that now sit permanently on the periodic table.\n\nGermany's contribution comes from Hesse. At the GSI Helmholtz Centre for Heavy Ion Research in Darmstadt, a team led by Peter Armbruster and Gottfried Münzenberg fired beams of medium-sized nuclei at heavy targets and, one atom at a time, created several new elements. Element 108, first made there in 1984, was named hassium after Hassia, the Latin name of the state of Hesse. Element 110 followed in November 1994 and was named darmstadtium after the city itself; its most stable known isotope survives for only about 14 seconds. The neighbouring element 111, roentgenium, honours a physicist rather than a place.\n\nThe American counterpart is Berkeley in California. Glenn Seaborg's group at the university's Radiation Laboratory discovered element 97 in December 1949 by bombarding americium with alpha particles, and named it berkelium after the city, just as the element above it in the table, terbium, is named after the Swedish village of Ytterby. Element 98 was named californium after the state and the university.\n\nAcross the Cold War divide, the Joint Institute for Nuclear Research in Dubna, a town on the Volga some 125 kilometres north of Moscow, claimed many of the same discoveries. The resulting naming dispute, nicknamed the \"Transfermium Wars\", lasted decades; only in 1997 did IUPAC settle it, naming element 105 dubnium after the Soviet and Russian research town.\n\nOlder discoveries honour cities in Latin. Element 72 was tracked down in zirconium ores in Copenhagen by the Dutch physicist Dirk Coster and the Hungarian chemist George de Hevesy, working at Niels Bohr's institute, and announced in 1923. They named it hafnium, after Hafnia, the Latin name of the city. Lutetium comes from Lutetia, the Roman name of Paris, and holmium from Holmia, Latin for Stockholm.\n\n| Element | Symbol | Atomic number | Named after |\n|---|---|---|---|\n| darmstadtium | Ds | 110 | the city of Darmstadt, Hesse |\n| hassium | Hs | 108 | the German state of Hesse (Hassia) |\n| dubnium | Db | 105 | the town of Dubna, Russia |\n| berkelium | Bk | 97 | the city of Berkeley, California |\n| hafnium | Hf | 72 | Copenhagen (Latin Hafnia) |\n\nReading these names is a lesson in the geography of physics: two of the five honour one German state, and every one marks a place where a team of scientists once saw something nobody had seen before.",
+    "bodyDe": "Die meisten chemischen Elemente tragen Namen aus dem Griechischen und Lateinischen, nach Göttern, Planeten oder Eigenschaften. Eine wachsende Gruppe ist jedoch nach den Orten benannt, an denen sie gefunden oder zum ersten Mal erzeugt wurden – und weil die schwersten Elemente nur in einer Handvoll Laboratorien hergestellt werden können, stehen dadurch einige kleine Städte für immer im Periodensystem.\n\nDeutschlands Beitrag kommt aus Hessen. Am GSI Helmholtzzentrum für Schwerionenforschung in Darmstadt schoss ein Team um Peter Armbruster und Gottfried Münzenberg Strahlen mittelschwerer Atomkerne auf schwere Ziele und erzeugte, Atom für Atom, mehrere neue Elemente. Element 108, dort 1984 zum ersten Mal hergestellt, erhielt den Namen Hassium nach Hassia, dem lateinischen Namen des Landes Hessen. Element 110 folgte im November 1994 und wurde nach der Stadt selbst Darmstadtium genannt; sein stabilstes bekanntes Isotop überlebt nur etwa 14 Sekunden. Das benachbarte Element 111, Roentgenium, ehrt einen Physiker statt eines Ortes.\n\nDas amerikanische Gegenstück ist Berkeley in Kalifornien. Glenn Seaborgs Gruppe am Radiation Laboratory der Universität entdeckte im Dezember 1949 Element 97, indem sie Americium mit Alphateilchen beschoss, und nannte es nach der Stadt Berkelium – so wie das darüberstehende Element Terbium nach dem schwedischen Dorf Ytterby benannt ist. Element 98 erhielt nach Bundesstaat und Universität den Namen Californium.\n\nJenseits der Front des Kalten Krieges beanspruchte das Vereinigte Institut für Kernforschung in Dubna, einer Stadt an der Wolga rund 125 Kilometer nördlich von Moskau, viele derselben Entdeckungen. Der daraus entstandene Namensstreit, die sogenannten „Transfermium-Kriege“, dauerte Jahrzehnte; erst 1997 legte die IUPAC ihn bei und benannte Element 105 nach der sowjetischen und russischen Forschungsstadt Dubnium.\n\nÄltere Entdeckungen ehren Städte auf Latein. Element 72 spürten der niederländische Physiker Dirk Coster und der ungarische Chemiker George de Hevesy am Institut von Niels Bohr in Kopenhagen in Zirkonerzen auf und gaben es 1923 bekannt. Sie nannten es Hafnium, nach Hafnia, dem lateinischen Namen der Stadt. Lutetium kommt von Lutetia, dem römischen Namen von Paris, und Holmium von Holmia, lateinisch für Stockholm.\n\n| Element | Symbol | Ordnungszahl | Benannt nach |\n|---|---|---|---|\n| Darmstadtium | Ds | 110 | der Stadt Darmstadt, Hessen |\n| Hassium | Hs | 108 | dem Land Hessen (Hassia) |\n| Dubnium | Db | 105 | der Stadt Dubna, Russland |\n| Berkelium | Bk | 97 | der Stadt Berkeley, Kalifornien |\n| Hafnium | Hf | 72 | Kopenhagen (lateinisch Hafnia) |\n\nDiese Namen zu lesen ist eine Lektion in der Geografie der Physik: Zwei der fünf ehren ein einziges deutsches Bundesland, und jeder markiert einen Ort, an dem ein Forscherteam einmal etwas sah, das noch niemand zuvor gesehen hatte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-165",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie nennt man das kleinste Teilchen eines Stoffes, das aus zwei oder mehr durch chemische Bindungen zusammengehaltenen Atomen besteht?",
+      "en": "What is the smallest particle of a substance called that consists of two or more atoms held together by chemical bonds?",
+      "answerDe": "Molekül",
+      "answerEn": "molecule",
+      "timeline": {
+       "kind": "event",
+       "start": "1811",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Amedeo Avogadro publishes his essay on the relative masses of the elementary molecules of bodies",
+       "labelDe": "Amedeo Avogadro veröffentlicht seinen Aufsatz über die relativen Massen der Elementarmoleküle der Körper"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Molecule",
+       "title": "Molecule – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie nennt man ein Atom oder Molekül, das eine elektrische Ladung trägt, weil es Elektronen aufgenommen oder abgegeben hat?",
+      "en": "What is an atom or molecule called that carries an electric charge because it has gained or lost electrons?",
+      "answerDe": "Ion",
+      "answerEn": "ion",
+      "timeline": {
+       "kind": "event",
+       "start": "1834",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Michael Faraday introduces the term \"ion\", on a suggestion by William Whewell",
+       "labelDe": "Michael Faraday führt auf Anregung von William Whewell den Begriff „Ion“ ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ion",
+       "title": "Ion – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie nennt man einen Stoff, der aus zwei oder mehr verschiedenen Elementen besteht, die in einem festen Verhältnis chemisch verbunden sind?",
+      "en": "What is a substance called that consists of two or more different elements chemically combined in a fixed ratio?",
+      "answerDe": "chemische Verbindung",
+      "answerEn": "chemical compound",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1797",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Joseph Proust states the law of definite proportions: a compound always contains its elements in a fixed ratio",
+       "labelDe": "Joseph Proust formuliert das Gesetz der konstanten Proportionen: Eine Verbindung enthält ihre Elemente stets im gleichen Verhältnis"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Law_of_definite_proportions",
+       "title": "Law of definite proportions – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie nennt man einen reinen Stoff, dessen Atome alle die gleiche Anzahl Protonen im Kern haben?",
+      "en": "What is a pure substance called whose atoms all have the same number of protons in their nucleus?",
+      "answerDe": "chemisches Element",
+      "answerEn": "chemical element",
+      "timeline": {
+       "kind": "event",
+       "start": "1789",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Antoine Lavoisier's Elements of Chemistry gives the first modern list of 33 elements",
+       "labelDe": "Antoine Lavoisiers „Traité élémentaire de chimie“ enthält die erste moderne Liste von 33 Elementen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Chemical_element",
+       "title": "Chemical element – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Atoms, Molecules and Ions: The Building Blocks of Matter",
+    "titleDe": "Atome, Moleküle und Ionen: Die Bausteine der Materie",
+    "bodyEn": "Chemistry begins with a handful of words for the building blocks of matter. They sound like school vocabulary, but each one was hard-won, and together they describe everything from a grain of salt to a strand of DNA.\n\nThe smallest unit of matter that still retains the properties of an element is the atom. The idea is ancient – the Greek philosophers Leucippus and Democritus imagined indivisible particles, \"atomos\" meaning \"uncuttable\" – but it became science only in the early nineteenth century, when John Dalton argued from 1805 onward that each element consists of its own kind of atom with a characteristic weight. We now know that the atom can be cut: it has a tiny nucleus of protons and neutrons surrounded by electrons. Split it, though, and what remains is no longer gold or oxygen.\n\nWhat, then, is an element? Since Antoine Lavoisier's Elements of Chemistry of 1789, which gave the first modern list of 33 elements, the chemical element has been defined as a pure substance that cannot be broken down into simpler ones by chemical means. Today the definition is sharper: all atoms of a chemical element have the same number of protons in their nucleus, the atomic number. Oxygen has eight, gold seventy-nine; 118 elements are known.\n\nAtoms rarely stay alone. Two or more of them held together by chemical bonds form a molecule, the smallest particle of a substance such as water (H2O) or carbon dioxide (CO2). The word was coined by the Italian scientist Amedeo Avogadro, whose 1811 essay argued that the smallest particles of gases need not be single atoms but can be several atoms joined together.\n\nWhen the atoms in a substance come from two or more different elements, chemically combined in a fixed ratio, the result is a chemical compound. Water is one – it always contains eight parts of oxygen to one of hydrogen by mass, whatever its source. That rule, the law of definite proportions, was stated by the French chemist Joseph Proust in 1797, and it showed that compounds are not mere mixtures.\n\nFinally, atoms and molecules can carry an electric charge. If they gain or lose electrons, they become an ion: positive cations and negative anions. The word, from the Greek for \"going\", was introduced in 1834 by Michael Faraday on a suggestion by William Whewell, for the particles he saw travelling through a solution towards the electrodes. Table salt is a lattice of sodium and chloride ions.\n\n| Term | What it is | Example |\n|---|---|---|\n| atom | smallest unit that keeps an element's properties | one oxygen atom |\n| chemical element | substance whose atoms share one atomic number | oxygen, gold |\n| molecule | two or more atoms joined by bonds | H2O, O2 |\n| chemical compound | different elements combined in a fixed ratio | water, carbon dioxide |\n| ion | atom or molecule with an electric charge | Na+, Cl− |",
+    "bodyDe": "Die Chemie beginnt mit einer Handvoll Wörter für die Bausteine der Materie. Sie klingen nach Schulvokabular, doch jedes wurde mühsam errungen, und zusammen beschreiben sie alles vom Salzkorn bis zum DNA-Strang.\n\nDie kleinste Einheit der Materie, in der die Eigenschaften eines Elements noch erhalten bleiben, ist das Atom. Die Idee ist alt – die griechischen Philosophen Leukipp und Demokrit stellten sich unteilbare Teilchen vor, „atomos“ bedeutet „unschneidbar“ –, doch zur Wissenschaft wurde sie erst im frühen 19. Jahrhundert, als John Dalton ab 1805 darlegte, dass jedes Element aus einer eigenen Atomsorte mit charakteristischem Gewicht besteht. Heute wissen wir, dass das Atom sehr wohl teilbar ist: Es hat einen winzigen Kern aus Protonen und Neutronen, umgeben von Elektronen. Spaltet man es aber, ist das, was übrig bleibt, kein Gold und kein Sauerstoff mehr.\n\nWas aber ist ein Element? Seit Antoine Lavoisiers „Traité élémentaire de chimie“ von 1789, das die erste moderne Liste von 33 Elementen enthielt, gilt ein chemisches Element als reiner Stoff, der sich mit chemischen Mitteln nicht in einfachere zerlegen lässt. Heute ist die Definition schärfer: Alle Atome eines chemischen Elements haben die gleiche Anzahl Protonen im Kern, die Ordnungszahl. Sauerstoff hat acht, Gold neunundsiebzig; 118 Elemente sind bekannt.\n\nAtome bleiben selten allein. Zwei oder mehr von ihnen, durch chemische Bindungen zusammengehalten, bilden ein Molekül, das kleinste Teilchen eines Stoffes wie Wasser (H2O) oder Kohlenstoffdioxid (CO2). Das Wort prägte der italienische Gelehrte Amedeo Avogadro, dessen Aufsatz von 1811 darlegte, dass die kleinsten Teilchen der Gase nicht einzelne Atome sein müssen, sondern aus mehreren verbundenen Atomen bestehen können.\n\nStammen die Atome eines Stoffes von zwei oder mehr verschiedenen Elementen, die in einem festen Verhältnis chemisch verbunden sind, entsteht eine chemische Verbindung. Wasser ist eine – es enthält, gleich woher es stammt, der Masse nach stets acht Teile Sauerstoff auf einen Teil Wasserstoff. Diese Regel, das Gesetz der konstanten Proportionen, formulierte der französische Chemiker Joseph Proust 1797, und sie zeigte, dass Verbindungen keine bloßen Gemische sind.\n\nSchließlich können Atome und Moleküle eine elektrische Ladung tragen. Nehmen sie Elektronen auf oder geben sie welche ab, werden sie zu einem Ion: positive Kationen und negative Anionen. Das Wort, griechisch für „gehend“, führte Michael Faraday 1834 auf Anregung von William Whewell ein, für die Teilchen, die er in einer Lösung zu den Elektroden wandern sah. Kochsalz ist ein Gitter aus Natrium- und Chlorid-Ionen.\n\n| Begriff | Was es ist | Beispiel |\n|---|---|---|\n| Atom | kleinste Einheit mit den Eigenschaften eines Elements | ein Sauerstoffatom |\n| chemisches Element | Stoff, dessen Atome eine Ordnungszahl teilen | Sauerstoff, Gold |\n| Molekül | zwei oder mehr durch Bindungen verbundene Atome | H2O, O2 |\n| chemische Verbindung | verschiedene Elemente in festem Verhältnis verbunden | Wasser, Kohlenstoffdioxid |\n| Ion | Atom oder Molekül mit elektrischer Ladung | Na+, Cl− |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

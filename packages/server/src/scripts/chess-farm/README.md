@@ -93,6 +93,30 @@ its code, so pull ws21's checkout when a migration lands.
 The worker is the user unit `chess-farm.service` (`~/.config/systemd/user/`; lingering is on):
 `systemctl --user start chess-farm`, logs with `journalctl --user -u chess-farm -f`.
 
+### The heavy lane (since 2026-10-22)
+
+A few searches blow up: nearly always a decided position (one side a queen or rook up), where
+Stockfish can't prune and each depth costs several times the last. Jobs of ±6 or more were
+5.7 % of the jobs and took 51 % of the farm's hours, some over 100 h on one lane. Results are
+never cut short; those jobs move to one lane with a whole core and most of the memory instead.
+
+- **Lanes:** `chess-farm@1…22` are pinned to CPUs 0–10 and 12–22 (drop-in `heavy-lane.conf`,
+  also on `boardgames-server`), with `OOMScoreAdjust=500` so a normal lane goes first if memory
+  runs out. `chess-farm-heavy.service` (`FARM_WORKER=ws21-heavy`, `~/chess-farm/heavy.env`:
+  `FARM_LANE=heavy`, `FARM_HASH_MB=23552`) owns core 11 (CPUs 11 + 23) and is never swapped (`MemorySwapMax=0`: ws21's swap is
+  zram, and a hash read at random from it crawls). Still one thread, so
+  still deterministic; its results name the hash in their engine label.
+- **Handing over:** a normal lane hands the heavy lane (1) a position of yours whose pre-pass is
+  ±7 or more (`HEAVY_SCREEN_CP`; 0.36 % of normal jobs, measured on the history) before its
+  deep search, and (2) any job it has spent `FARM_HANDOVER_HOURS` (12) on, counted over the
+  whole job — a your-move job is up to three d50 searches. The job's `error` carries
+  `heavyMark(estimate, why)` until it is done; normal lanes never claim it.
+- **Backlog:** least bad first (since 2026-10-22: worst-first would sit for months on one job
+  while quick ones wait), by the estimated normal-lane hours (`handoverEstimate`: hours so far
+  × 2 per depth still to go × deep searches left; a screened job 14 h). The heavy lane resumes
+  its own job first after a restart, and its claims never expire. The worst jobs may take months
+  and come last: `/api/chess-farm/status` counts `heavy.queued` / `heavy.running`.
+
 ## Calibrate before a big run
 
 ```bash
@@ -105,3 +129,13 @@ node calibrate.mjs positions.json --out calibration.json --policy policy.json \
 - the fitted depths, which go into `policy.json`
 
 Run it with ws21 otherwise idle; its numbers decide the run.
+
+## Seeing the farm from a laptop
+
+The farm reads and writes **production** (the ws21 farm API runs against the prod DB). A laptop dev
+server talks to staging, so its trainer neither feeds the farm nor sees new
+results. `sync-evals-to-staging.ts` copies prod's finished evaluations into
+staging and makes staging's job queue a copy of prod's (for the Home's ETAs):
+
+    pnpm --filter @boardgames/server exec tsx src/scripts/chess-farm/sync-evals-to-staging.ts
+

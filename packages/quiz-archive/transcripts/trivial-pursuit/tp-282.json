@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-282",
+ "image": "IMG20261007173908.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Die antike römische Stadt Pompeji wurde zerstört und zugleich konserviert, durch den Ausbruch welches Vulkans im Jahr 79 n. Chr.?",
+   "de": "Die antike römische Stadt Pompeji wurde zerstört und zugleich konserviert, durch den Ausbruch welches Vulkans im Jahr 79 n. Chr.?",
+   "en": "The ancient Roman city of Pompeii was both destroyed and preserved by the eruption of which volcano in AD 79?",
+   "reworked": false,
+   "answerDe": "der Vesuv",
+   "answerEn": "Mount Vesuvius",
+   "timeline": {
+    "kind": "event",
+    "start": "79",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Eruption of Mount Vesuvius buries Pompeii, Herculaneum and Stabiae under volcanic ash",
+    "labelDe": "Ausbruch des Vesuvs verschüttet Pompeji, Herculaneum und Stabiae unter Vulkanasche"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Pompeji",
+    "title": "Pompeji",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der britische Schauspieler, der in Filmen als Sherlock Holmes ermittelte und als Alan Turing Codes knackte?",
+   "de": "Wie heißt der britische Schauspieler, der in Filmen als Sherlock Holmes ermittelte und als Alan Turing Codes knackte?",
+   "en": "What is the name of the British actor who investigated as Sherlock Holmes on screen and cracked codes as Alan Turing?",
+   "reworked": false,
+   "answerDe": "Benedict Cumberbatch",
+   "answerEn": "Benedict Cumberbatch",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1976-07-19",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Benedict Cumberbatch, British actor (Sherlock, The Imitation Game)",
+    "labelDe": "Benedict Cumberbatch, britischer Schauspieler (Sherlock, The Imitation Game)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Benedict_Cumberbatch",
+    "title": "Benedict Cumberbatch",
+    "lang": "de"
+   },
+   "notes": "He played Sherlock Holmes in the BBC TV series Sherlock (incl. TV films) and Alan Turing in The Imitation Game (2014).",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welchen Nennwert gab es nicht auf DM-Münzen: 10, 20 oder 50?",
+   "de": "Welches war die Pfennig-Münze der D-Mark mit dem höchsten Nennwert?",
+   "en": "Which pfennig coin of the Deutsche Mark had the highest face value?",
+   "reworked": true,
+   "answerDe": "die 50-Pfennig-Münze",
+   "answerEn": "the 50-pfennig coin",
+   "timeline": {
+    "kind": "period",
+    "start": "1948-06-21",
+    "end": "2001-12-31",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Deutsche Mark as currency in (West) Germany",
+    "labelDe": "Die Deutsche Mark als Währung in (West-)Deutschland"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Deutsche_Mark",
+    "title": "Deutsche Mark",
+    "lang": "de"
+   },
+   "notes": "Reworked from a 'which is NOT' question: DM coins existed at 1, 2, 5, 10 and 50 Pfennig and 1, 2, 5 DM (plus 10-DM commemoratives); there was no 20 (the card's answer).",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welche Maltechnik verwendet wasserlösliche und zugleich deckende Farben?",
+   "de": "Welche Maltechnik verwendet wasserlösliche und zugleich deckende Farben?",
+   "en": "Which painting technique uses paints that are water-soluble and at the same time opaque?",
+   "reworked": false,
+   "answerDe": "Gouache",
+   "answerEn": "Gouache",
+   "timeline": {
+    "kind": "era",
+    "start": "1400",
+    "end": "1500",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Raphael, Titian and Dürer take up gouache for studies and designs (15th century)",
+    "labelDe": "Raffael, Tizian und Dürer nutzen Gouache für Studien und Entwürfe (15. Jahrhundert)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gouache",
+    "title": "Gouache",
+    "lang": "de"
+   },
+   "notes": "Gouache-like paints were already used in early medieval book illumination.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Der Stifter des Friedensnobelpreises, Alfred Nobel, machte sein Vermögen mit welcher Erfindung?",
+   "de": "Der Stifter des Friedensnobelpreises, Alfred Nobel, machte sein Vermögen mit welcher Erfindung?",
+   "en": "Alfred Nobel, founder of the Nobel Peace Prize, made his fortune with which invention?",
+   "reworked": false,
+   "answerDe": "Dynamit",
+   "answerEn": "Dynamite",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1867",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alfred Nobel patents dynamite",
+    "labelDe": "Alfred Nobel lässt das Dynamit patentieren"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Alfred_Nobel",
+    "title": "Alfred Nobel",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 6,
+   "cardDe": "Leinen ist ein Gewebe aus welcher Faser?",
+   "de": "Leinen ist ein Gewebe aus welcher Faser?",
+   "en": "Linen is a fabric made from which fibre?",
+   "reworked": false,
+   "answerDe": "Flachs",
+   "answerEn": "Flax",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-34000",
+    "end": "-29000",
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Oldest known (wild) flax fibres, found in Dzudzuana Cave, Georgia",
+    "labelDe": "Älteste bekannte (Wild-)Flachsfasern aus der Dzudzuana-Höhle in Georgien"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Flachsfaser",
+    "title": "Flachsfaser",
+    "lang": "de"
+   },
+   "notes": "The fibres were dated to 36,000–31,000 years before present.",
+   "domain": "nature",
+   "sub": "plants"
+  }
+ ]
+}

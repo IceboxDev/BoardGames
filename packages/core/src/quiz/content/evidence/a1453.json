@@ -1,0 +1,330 @@
+{
+ "article": "a1453",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%B6lner_Philharmonie",
+   "title": "Kölner Philharmonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:14.899Z",
+   "snapshot": "1be7cf2c76b65beeaf9c112d59ae6a31edad916f6844908533c4167858ef6381"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Elbphilharmonie",
+   "title": "Elbphilharmonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:52.459Z",
+   "snapshot": "6314f3d6b68355cfe6d10f3750f0774c4c3a77642f613d92b096a697e87ae8e1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gewandhausorchester",
+   "title": "Gewandhausorchester – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:15.642Z",
+   "snapshot": "a78b2f84b72606309e8ee891889a4d775b7695e73d8b610aeb54fca32bc8493f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Concertgebouw,_Amsterdam",
+   "title": "Concertgebouw, Amsterdam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:18.329Z",
+   "snapshot": "62a50921704637ed60f76050d2d63ca1fdb7b21a2fd69a7094fe41de3e84cc6b"
+  },
+  "s5": {
+   "url": "https://www.gewandhausorchester.de/orchester/",
+   "title": "Das Gewandhausorchester",
+   "publisher": "Gewandhaus zu Leipzig",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:00.749Z",
+   "snapshot": "bbb94945348cb167094832d58f0624ead2056e1371727f1311e461503f8046c0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gewandhaus_Orchestra",
+   "title": "Gewandhaus Orchestra – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:02.052Z",
+   "snapshot": "baf3134e5cdb660fbb47061661fc6295d031902d63266eda245f82512f8634aa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Philharmonie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elbphilharmonie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gewandhaus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Concertgebouw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:28.367Z",
+   "target": "f07261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Kölner Philharmonie ist ein 1986 eröffneter Konzertsaal im Gebäudekomplex des Museums Ludwig in Köln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philharmonie” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:28.367Z",
+   "target": "f07262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Elbphilharmonie (German pronunciation: [ˈɛlpfɪlhaʁmoˌniː] ; \"Elbe Philharmonic Hall\"), popularly nicknamed Elphi, is a concert hall in the HafenCity quarter of Hamburg, Germany, on the Grasbrook peninsula of the Elbe River.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elbphilharmonie” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:28.367Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "hat gegenwärtig drei verschiedene Verpflichtungen und drei regelmäßige Spielstätten in Leipzig: Es spielt als Konzertorchester im Gewandhaus, als Opernorchester im Opernhaus Leipzig sowie seit 1840 als Kirchenmusikorchester in den Leipziger Stadtkirchen, insbesondere in der",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gewandhaus” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:28.367Z",
+   "target": "f07265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Royal Concertgebouw (Dutch: het Koninklijk Concertgebouw, pronounced [ət ˈkoːnɪŋklə kɔnˈsɛrtxəˌbʌu]) is a concert hall in Amsterdam, Netherlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Concertgebouw” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:22:09Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Gewandhausorchester ist das älteste bürgerliche Sinfonieorchester der Welt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "The orchestra's own claim; German Wikipedia words it more cautiously ('im deutschsprachigen Raum')."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:22:16Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is often considered the world's oldest civic symphony orchestra",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:14.107Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Gewandhausorchester ist das älteste bürgerliche Sinfonieorchester der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:14.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:14.107Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is often considered the world's oldest civic symphony orchestra",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:14.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:14.107Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Gewandhausorchester | Gewandhaus Leipzig",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:14.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gewandhaus” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:14.107Z",
+   "target": "f07264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Leipzig Gewandhaus Orchestra (Gewandhausorchester; also previously known in German as the Gewandhausorchester Leipzig) is a German symphony orchestra based in Leipzig, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:14.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gewandhaus” is on the snapshot of s6"
+  }
+ ]
+}

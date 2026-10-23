@@ -1,0 +1,301 @@
+{
+ "article": "a2103",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Holstentor",
+   "title": "Holstentor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:20.420Z",
+   "snapshot": "a30ecd3860f7d87dfe7fd9edf3fb633754cd1f67fe09fe0cb16db46f4d222e52"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Burgtor",
+   "title": "Burgtor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:34.764Z",
+   "snapshot": "74572cbc7056938dda0775b26bbfc795c7b11ece4fb237b77963d1fb7b030ef2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Porta_Nigra",
+   "title": "Porta Nigra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:35.811Z",
+   "snapshot": "8a1f613146bcbfc4c2d3dd24b432e0a5f62a7653b6c5b3f9226b37a41997cf2d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Isartor",
+   "title": "Isartor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:36.793Z",
+   "snapshot": "03b669b01887d99e3e9fc78d6e92d02936bf1282c37bcfe3d43742189d5b45c5"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor",
+   "title": "Brandenburger Tor",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:07.615Z",
+   "snapshot": "9b601a50cbe31d5abf3423276c3044336b6fa1093fb58c1150bd684573de9ad7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Isartor",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:41:35.989Z",
+   "snapshot": "35989581d106ce8c4c3a55d53ce7a07163d0313cc8ba46770bda761208439415"
+  },
+  "s7": {
+   "url": "https://www.berlin.de/sehenswuerdigkeiten/3560266-3558930-brandenburger-tor.html",
+   "title": "Brandenburger Tor – berlin.de",
+   "publisher": "Land Berlin (berlin.de)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:37.857Z",
+   "snapshot": "01383df078fb7b2e1a230f685ce94c456434dba2241d9a191d7d658999ae0eeb"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+   "title": "Brandenburg Gate – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:12:36Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das Holstentor",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Burgtor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Porta Nigra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Isartor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "18. Jahrhundert",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-076"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:23.093Z",
+   "target": "f10511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Holstentor („Holstein-Tor“) ist ein Stadttor, das die Altstadt der Hansestadt Lübeck nach Westen begrenzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “das Holstentor” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:23.093Z",
+   "target": "f10512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Burgtor, built 1444 in late Gothic style, was the northern city gate of Hanseatic Lübeck, now in Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Burgtor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:23.093Z",
+   "target": "f10514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Porta Nigra (Latin for black gate), referred to by locals as the Porta, is a large Roman city gate in Trier, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Porta Nigra” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:23.093Z",
+   "target": "f10515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Isartor at the Isartorplatz in Munich is one of four main gates of the medieval city wall.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Isartor” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:23.093Z",
+   "target": "f10623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "18. Jahrhundert",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“18. Jahrhundert”, “18th century”, “XVIII век”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:12:34Z",
+   "target": "f10623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Es entstand in den Jahren 1788 bis 1791 nach Entwürfen von Carl Gotthard Langhans d.Ä., der sich stark an den Propyläen der Athener Akropolis orientierte.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:12:36Z",
+   "target": "f10623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is an 18th-century neoclassical monument in Berlin, Germany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

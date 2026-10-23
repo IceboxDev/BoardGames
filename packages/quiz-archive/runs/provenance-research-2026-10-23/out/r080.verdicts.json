@@ -1,0 +1,535 @@
+[
+ {
+  "fact": "f07496",
+  "article": "a1500",
+  "verdict": "fixed",
+  "confidence": "high",
+  "answer": "Minecraft",
+  "sources": [
+   "https://www.pcgamer.com/minecraft-has-sold-176-million-copies-may-be-the-best-selling-game-ever/",
+   "https://www.bbc.com/news/technology-67105983",
+   "https://en.wikipedia.org/wiki/List_of_best-selling_video_games"
+  ],
+  "why": "Minecraft is right; its rank behind or ahead of Tetris depends on counting, so the wording was narrowed.",
+  "changes": "w07496 reworded (cardText kept); body Tetris sentence and notes corrected; span re-placed"
+ },
+ {
+  "fact": "f13948",
+  "article": "a1500",
+  "verdict": "fixed",
+  "confidence": "medium",
+  "answer": "Brazil",
+  "sources": [
+   "https://www.polygon.com/2015/1/10/7524759/nintendo-brazil-wii-u-3ds-tariffs-taxes",
+   "https://en.wikipedia.org/wiki/Video_games_in_Brazil"
+  ],
+  "why": "Brazil's tax-driven games mark-up is well documented; the card's exact 70% was not found, so it is flagged as a rough estimate.",
+  "changes": "body: unsourced PS5 price replaced by Sony's 63% statement; 70% flagged; notes; reviewBy 2027-10-23"
+ },
+ {
+  "fact": "f07556",
+  "article": "a1512",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Fürth still had a DC grid, while Nuremberg already had AC",
+  "sources": [
+   "https://de.wikipedia.org/wiki/Max_Grundig",
+   "https://www.vde.com/de/geschichte/karte/bayern/grundig",
+   "https://www.siliconchip.com.au/Issue/SC/1990/June/How+to+recognise+AD-DC+sets"
+  ],
+  "why": "de.wikipedia and VDE both describe transformers burning out because of the Nuremberg (AC) / Fürth (DC) difference.",
+  "changes": ""
+ },
+ {
+  "fact": "f07557",
+  "article": "a1512",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "because AC can be stepped up with transformers and transmitted over long distances with low losses",
+  "sources": [
+   "https://en.wikipedia.org/wiki/War_of_the_currents",
+   "https://www.energy.gov/articles/war-currents-ac-vs-dc-power"
+  ],
+  "why": "Wikipedia and the US DOE give transformer voltage conversion for long-distance transmission as AC's advantage.",
+  "changes": ""
+ },
+ {
+  "fact": "f07558",
+  "article": "a1512",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "because they have no mains transformer",
+  "sources": [
+   "https://en.wikipedia.org/wiki/AC/DC_receiver_design",
+   "https://www.siliconchip.com.au/Issue/SC/1990/June/How+to+recognise+AD-DC+sets"
+  ],
+  "why": "Both say AC/DC sets have no mains transformer and so run on either supply.",
+  "changes": "source → AC/DC receiver design"
+ },
+ {
+  "fact": "f07559",
+  "article": "a1512",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "because finished radios required an Allied licence but kits did not",
+  "sources": [
+   "https://www.vde.com/de/geschichte/karte/bayern/grundig",
+   "https://de.wikipedia.org/wiki/Max_Grundig",
+   "https://www.radiomuseum.org/forum/grundig_w_heinzelmann.html"
+  ],
+  "why": "VDE: only sold as a kit because the occupying power still banned ready-made radios; Wikipedia: radio building required a permit.",
+  "changes": ""
+ },
+ {
+  "fact": "f07560",
+  "article": "a1512",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "because they draw their energy solely from the received radio wave",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Crystal_radio",
+   "https://www.samwallermuseum.ca/collections/feature/martian-special-crystal-radio/",
+   "https://www.sparkmuseum.org/heart-of-stone/"
+  ],
+  "why": "Two museums and Wikipedia say crystal sets run only on the received wave's energy.",
+  "changes": "source → Crystal radio"
+ },
+ {
+  "fact": "f07680",
+  "article": "a1536",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Nils Bohlin",
+  "sources": [
+   "https://lemelson.mit.edu/resources/nils-bohlin",
+   "https://patents.google.com/patent/US3043625A/en",
+   "https://en.wikipedia.org/wiki/Nils_Bohlin"
+  ],
+  "why": "Lemelson-MIT and the US patent (assigned to Volvo) name Bohlin as the inventor.",
+  "changes": ""
+ },
+ {
+  "fact": "f14374",
+  "article": "a1536",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Volvo",
+  "sources": [
+   "https://lemelson.mit.edu/resources/nils-bohlin",
+   "https://en.wikipedia.org/wiki/Seat_belt"
+  ],
+  "why": "Lemelson-MIT: Volvo was the first automaker to introduce the three-point belt (1959).",
+  "changes": ""
+ },
+ {
+  "fact": "f07736",
+  "article": "a1548",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Gatling gun",
+  "sources": [
+   "https://www.ncpedia.org/gatling-gun",
+   "https://en.wikipedia.org/wiki/Gatling_gun"
+  ],
+  "why": "NCpedia calls the Gatling 'the first successful machine gun'.",
+  "changes": ""
+ },
+ {
+  "fact": "f07738",
+  "article": "a1548",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Maxim gun",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Maxim_gun",
+   "https://www.ibiblio.org/hyperwar/USN/ref/MG/I/MG-3.html",
+   "https://sadefensejournal.com/the-swiss-mg11-maxim-machine-gun/"
+  ],
+  "why": "Wikipedia, Chinn's US Navy history and SADJ credit Maxim's 1884 gun as the first truly automatic machine gun.",
+  "changes": "source → Maxim gun"
+ },
+ {
+  "fact": "f07796",
+  "article": "a1560",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "thumbnail",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Thumbnail",
+   "https://dictionary.cambridge.org/dictionary/english/thumbnail",
+   "https://www.duden.de/rechtschreibung/Thumbnail"
+  ],
+  "why": "Dictionaries and Wikipedia define it as a small preview image.",
+  "changes": "source → Wikipedia Thumbnail"
+ },
+ {
+  "fact": "f07799",
+  "article": "a1560",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "screenshot",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Screenshot",
+   "https://dictionary.cambridge.org/dictionary/english/screenshot",
+   "https://www.duden.de/rechtschreibung/Screenshot"
+  ],
+  "why": "Standard definition; not actually time-sensitive.",
+  "changes": ""
+ },
+ {
+  "fact": "f07856",
+  "article": "a1572",
+  "verdict": "fixed",
+  "confidence": "medium",
+  "answer": "The Onion Routing",
+  "sources": [
+   "https://2019.www.torproject.org/docs/faq.html.en",
+   "https://support.torproject.org/about/why-is-it-called-tor/",
+   "https://en.wikipedia.org/wiki/Tor_(network)"
+  ],
+  "why": "The Tor Project derives the name from 'the onion routing'; 'The Onion Router' is the common expansion and is kept as accepted.",
+  "changes": "answer The Onion Router → The Onion Routing (EN/DE/RU); body sentence, table, notes"
+ },
+ {
+  "fact": "f07917",
+  "article": "a1584",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "interpreting",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Interpreter_(computing)",
+   "https://docs.python.org/3/tutorial/appetite.html"
+  ],
+  "why": "Standard definition, confirmed by Wikipedia and the Python docs.",
+  "changes": "source → Interpreter (computing)"
+ },
+ {
+  "fact": "f07920",
+  "article": "a1584",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "debugging",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Debugging",
+   "https://dictionary.cambridge.org/dictionary/english/debug"
+  ],
+  "why": "Standard definition.",
+  "changes": "source → Debugging; unsourced time-share claim in body softened"
+ },
+ {
+  "fact": "f07976",
+  "article": "a1596",
+  "verdict": "fixed",
+  "confidence": "high",
+  "answer": "Spinning Jenny",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Spinning_jenny",
+   "https://www.encyclopedia.com/people/science-and-technology/technology-biographies/james-hargreaves",
+   "https://en.wikipedia.org/wiki/Lewis_Paul"
+  ],
+  "why": "The answer is right, but the jenny was not the first spinning machine (Paul and Wyatt, 1738), so the premise was corrected.",
+  "changes": "w07976 reworded (cardText kept)"
+ },
+ {
+  "fact": "f24421",
+  "article": "a1644",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "72 hours",
+  "sources": [
+   "https://gdpr-info.eu/art-33-gdpr/",
+   "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation"
+  ],
+  "why": "GDPR Art. 33(1): not later than 72 hours.",
+  "changes": ""
+ },
+ {
+  "fact": "f08338",
+  "article": "a1668",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Baidu",
+  "sources": [
+   "https://gs.statcounter.com/search-engine-market-share/all/china",
+   "https://en.wikipedia.org/wiki/Baidu"
+  ],
+  "why": "Statcounter Sept 2026: Baidu 46.65%, still first; founders Li and Xu in 2000.",
+  "changes": "body dated 'as of 2026'; reviewBy 2027-10-23"
+ },
+ {
+  "fact": "f08396",
+  "article": "a1680",
+  "verdict": "confirmed",
+  "confidence": "medium",
+  "answer": "Beethoven's Ninth Symphony",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Compact_disc",
+   "https://dutchaudioclassics.nl/The-six-meetings-Philips-Sony-1979-1980-The-Start-of-Digital-Audio/"
+  ],
+  "why": "The Philips/Sony story names the Ninth; Immink calls it a myth, which the wording's 'supposedly' covers.",
+  "changes": ""
+ },
+ {
+  "fact": "f08398",
+  "article": "a1680",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "The Visitors",
+  "sources": [
+   "http://edition.cnn.com/2012/09/28/tech/innovation/compact-disc-turns-30/index.html",
+   "https://historyofinformation.com/detail.php?entryid=1189",
+   "https://www.soundandvision.com/content/flashback-1982-abba-cd-world%E2%80%99s-first"
+  ],
+  "why": "Three sources name The Visitors as the first CD pressed at the Langenhagen factory (the earlier test disc was Strauss's Alpine Symphony).",
+  "changes": "source → CNN"
+ },
+ {
+  "fact": "f08518",
+  "article": "a1704",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "RAM",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Random-access_memory",
+   "https://www.duden.de/rechtschreibung/Arbeitsspeicher"
+  ],
+  "why": "Standard definition.",
+  "changes": "source → Random-access memory"
+ },
+ {
+  "fact": "f08520",
+  "article": "a1704",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "power supply unit",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)",
+   "https://www.duden.de/rechtschreibung/Netzteil"
+  ],
+  "why": "Standard definition.",
+  "changes": "source → Power supply unit (computer)"
+ },
+ {
+  "fact": "f08640",
+  "article": "a1728",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "typewriter",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sholes_and_Glidden_typewriter",
+   "https://www.smithsonianmag.com/arts-culture/fact-of-fiction-the-legend-of-the-qwerty-keyboard-49863249/",
+   "https://www.encyclopedia.com/people/history/historians-miscellaneous-biographies/christopher-latham-sholes"
+  ],
+  "why": "Remington sold the Sholes and Glidden from 1874; called the first commercially successful typewriter.",
+  "changes": ""
+ },
+ {
+  "fact": "f25498",
+  "article": "a1728",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Sholes and Glidden typewriter",
+  "sources": [
+   "https://en.wikipedia.org/wiki/QWERTY",
+   "https://www.encyclopedia.com/people/history/historians-miscellaneous-biographies/christopher-latham-sholes"
+  ],
+  "why": "QWERTY is based on the layout of the Sholes and Glidden; the jam-prevention motive is disputed but not asked.",
+  "changes": ""
+ },
+ {
+  "fact": "f14376",
+  "article": "a1764",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Car manufacturing",
+  "sources": [
+   "https://de.wikipedia.org/wiki/Fahrzeugs%C3%A4ule",
+   "https://carbiketech.com/vehicle-body-nomenclature-car-pillar/"
+  ],
+  "why": "A/B/C pillars are car-body terms.",
+  "changes": ""
+ },
+ {
+  "fact": "f08936",
+  "article": "a1788",
+  "verdict": "confirmed",
+  "confidence": "medium",
+  "answer": "Alexander Graham Bell",
+  "sources": [
+   "https://ethw.org/Alexander_Graham_Bell",
+   "https://en.wikipedia.org/wiki/Alexander_Graham_Bell"
+  ],
+  "why": "The Bell Telephone Company (1877) commercialised the telephone first; Bell co-founded it but left the business side to Hubbard and Sanders.",
+  "changes": "body credits Bell and his backers; span re-placed"
+ },
+ {
+  "fact": "f08937",
+  "article": "a1788",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Philipp Reis",
+  "sources": [
+   "https://www.physikalischer-verein.de/ueber-uns/unsere-geschichte",
+   "https://de.wikipedia.org/wiki/Philipp_Reis"
+  ],
+  "why": "The Physikalischer Verein itself records Reis presenting his 'Telephon' there on 26 October 1861.",
+  "changes": ""
+ },
+ {
+  "fact": "f08938",
+  "article": "a1788",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Thomas Edison",
+  "sources": [
+   "https://ethw.org/Milestones:Pearl_Street_Station,_1882",
+   "https://en.wikipedia.org/wiki/Pearl_Street_Station"
+  ],
+  "why": "IEEE milestone and Wikipedia confirm Edison's Pearl Street station (4 Sept 1882) and his 1879 lamp.",
+  "changes": "w08938 reworded (superlatives removed)"
+ },
+ {
+  "fact": "f08939",
+  "article": "a1788",
+  "verdict": "fixed",
+  "confidence": "high",
+  "answer": "Werner von Siemens",
+  "sources": [
+   "https://www.siemens.com/global/en/company/about/history/company/1847-1865.html",
+   "https://de.wikipedia.org/wiki/Siemens",
+   "https://en.wikipedia.org/wiki/Electric_locomotive"
+  ],
+  "why": "Answer right; the 1879 exhibit was the first externally powered electric railway, not the first electric locomotive.",
+  "changes": "w08939 reworded; body: railway wording, founding date 'October 1847'"
+ },
+ {
+  "fact": "f24123",
+  "article": "a1800",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Taneli Armanto",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Snake_(1998_video_game)",
+   "https://www.engadget.com/2015/05/07/snake-rewind/"
+  ],
+  "why": "Wikipedia and Engadget name Armanto as the Nokia engineer who put Snake on the 6110.",
+  "changes": "source → Snake (1998 video game)"
+ },
+ {
+  "fact": "f24124",
+  "article": "a1800",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "ninety seconds",
+  "sources": [
+   "https://de.wikipedia.org/wiki/Moorhuhn_(Computerspielreihe)",
+   "https://medien-mittweida.de/project/moorhuhn/"
+  ],
+  "why": "Both give 90 seconds per round.",
+  "changes": ""
+ },
+ {
+  "fact": "f09058",
+  "article": "a1812",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Processing",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Central_processing_unit",
+   "https://dictionary.cambridge.org/dictionary/english/cpu"
+  ],
+  "why": "CPU = central processing unit.",
+  "changes": "source → Central processing unit"
+ },
+ {
+  "fact": "f09176",
+  "article": "a1836",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Pong",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pong",
+   "https://www.museumofplay.org/games/pong/"
+  ],
+  "why": "First commercially successful video game; the Strong museum says first to grab wide-scale public attention.",
+  "changes": ""
+ },
+ {
+  "fact": "f09179",
+  "article": "a1836",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Donkey Kong",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Donkey_Kong_(1981_video_game)",
+   "https://www.museumofplay.org/games/donkey-kong/"
+  ],
+  "why": "Mario's first appearance, initially called Jumpman.",
+  "changes": ""
+ },
+ {
+  "fact": "f09180",
+  "article": "a1836",
+  "verdict": "confirmed",
+  "confidence": "medium",
+  "answer": "Tetris",
+  "sources": [
+   "https://www.museumofplay.org/games/tetris/",
+   "https://en.wikipedia.org/wiki/Tetris"
+  ],
+  "why": "Pajitnov's 1984 Tetris is the founding falling-block game; 'first of its kind' is the card's framing.",
+  "changes": ""
+ },
+ {
+  "fact": "f09237",
+  "article": "a1848",
+  "verdict": "confirmed",
+  "confidence": "high",
+  "answer": "Atomkraftwerk",
+  "sources": [
+   "https://www.dwds.de/wb/AKW",
+   "https://de.wikipedia.org/wiki/AKW"
+  ],
+  "why": "DWDS gives Atomkraftwerk as the base form of AKW.",
+  "changes": "source → DWDS"
+ },
+ {
+  "fact": "f24429",
+  "article": "a1860",
+  "verdict": "fixed",
+  "confidence": "high",
+  "answer": "Intel 4004",
+  "sources": [
+   "https://www.intel.com/content/www/us/en/history/museum-story-of-intel-4004.html",
+   "https://en.wikipedia.org/wiki/Intel_4004",
+   "https://www.computerhistory.org/siliconengine/microprocessor-integrates-cpu-function-onto-a-single-chip/"
+  ],
+  "why": "The 4004 is the first commercially available / general-purpose microprocessor; 'first complete processor on one chip' is disputed by CHM's earlier examples.",
+  "changes": "w24429 reworded; body sentence narrowed"
+ },
+ {
+  "fact": "f24542",
+  "article": "a1872",
+  "verdict": "confirmed",
+  "confidence": "medium",
+  "answer": "Mary had a little lamb",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mary_Had_a_Little_Lamb",
+   "https://www.nps.gov/edis/learn/historyculture/origins-of-sound-recording-thomas-edison.htm"
+  ],
+  "why": "Wikipedia gives it as the first audio Edison recorded; NPS confirms it was the lab's standard test phrase in 1877.",
+  "changes": ""
+ },
+ {
+  "fact": "f24543",
+  "article": "a1872",
+  "verdict": "confirmed",
+  "confidence": "medium",
+  "answer": "Emperor Franz Joseph",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Valdemar_Poulsen"
+  ],
+  "why": "Wikipedia says Poulsen recorded Franz Joseph at the 1900 Exposition, believed to be the oldest surviving magnetic recording; no second independent source found once the search quota ran out.",
+  "changes": ""
+ }
+]

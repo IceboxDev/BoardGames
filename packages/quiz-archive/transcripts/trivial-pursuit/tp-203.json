@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-203",
+ "image": "IMG20261007182050.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Das Wort „Vulkan“ stammt vom Namen einer Insel ab, von der man im antiken Rom glaubte, sie sei der Schornstein ihres Feuergotts. Richtig oder falsch?",
+   "de": "Von welcher Insel, die man im antiken Rom für den Schornstein des Feuergotts hielt, stammt das Wort „Vulkan“ ab?",
+   "en": "Which island, believed in ancient Rome to be the chimney of the fire god, gave the word \"volcano\" its name?",
+   "reworked": true,
+   "answerDe": "Vulcano",
+   "answerEn": "Vulcano",
+   "timeline": {
+    "kind": "era",
+    "start": "-753",
+    "end": "476",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ancient Rome, whose people saw the Aeolian island of Vulcano as the forge of the fire god Vulcanus",
+    "labelDe": "Antikes Rom, in dem die Liparische Insel Vulcano als Schmiede des Feuergotts Vulcanus galt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Vulcano",
+    "title": "Vulcano",
+    "lang": "de"
+   },
+   "notes": "Card statement is true. Wikipedia calls the island the forge (Schmiede) of Vulcanus; the card says chimney.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welchen Beruf übte Arthur Conan Doyle, der Erfinder von Sherlock Holmes, ursprünglich aus: Polizist, Arzt oder Anwalt?",
+   "de": "Welchen Beruf übte Arthur Conan Doyle, der Erfinder von Sherlock Holmes, ursprünglich aus?",
+   "en": "What was the original profession of Arthur Conan Doyle, the creator of Sherlock Holmes?",
+   "reworked": true,
+   "answerDe": "Arzt",
+   "answerEn": "Doctor",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1859-05-22",
+    "end": "1930-07-07",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Arthur Conan Doyle, Scottish doctor and creator of Sherlock Holmes",
+    "labelDe": "Arthur Conan Doyle, schottischer Arzt und Erfinder von Sherlock Holmes"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "title": "Arthur Conan Doyle",
+    "lang": "de"
+   },
+   "notes": "He ran a medical practice in Southsea 1882–1890.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die ehemalige Teilung Berlins ist nachts auch heute noch aus dem Weltall erkennbar. Richtig oder falsch?",
+   "de": "Woran ist die ehemalige Teilung Berlins nachts auch heute noch aus dem Weltall erkennbar?",
+   "en": "By what can Berlin's former division still be recognised from space at night?",
+   "reworked": true,
+   "answerDe": "An der Farbe der Straßenbeleuchtung",
+   "answerEn": "By the colour of the street lighting",
+   "timeline": {
+    "kind": "event",
+    "start": "2012",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "ESA astronaut André Kuipers photographs Berlin at night from the ISS, showing East and West in different light colours",
+    "labelDe": "ESA-Astronaut André Kuipers fotografiert Berlin nachts von der ISS – Ost und West leuchten in unterschiedlichen Farben"
+   },
+   "source": {
+    "url": "https://www.yahoo.com/news/still-see-divide-between-west-161859862.html",
+    "title": "You can still see the divide between West and East Berlin from space",
+    "lang": "en"
+   },
+   "notes": "Card statement is true: the east mostly uses older sodium-vapour lamps (yellower light), the west fluorescent lamps (whiter light). The difference is slowly fading as lamps are replaced.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Die spanische Nationalhymne beginnt mit den Worten: „Nieder mit dem Feind!“. Richtig oder falsch?",
+   "de": "Wie heißt die spanische Nationalhymne, die offiziell gar keinen Text hat?",
+   "en": "What is the name of the Spanish national anthem, which officially has no lyrics at all?",
+   "reworked": true,
+   "answerDe": "Marcha Real",
+   "answerEn": "Marcha Real",
+   "timeline": {
+    "kind": "creation",
+    "start": "1761",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Marcha Real, Spain's wordless national anthem, first documented as the Marcha Granadera",
+    "labelDe": "Marcha Real, Spaniens textlose Nationalhymne, erstmals nachweisbar als Marcha Granadera"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Marcha_Real",
+    "title": "Marcha Real",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: the Marcha Real has never had official lyrics, so it begins with no words at all.",
+   "domain": "music-stage",
+   "sub": "classical"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wofür stehen die Buchtaben HTML?",
+   "de": "Wofür stehen die Buchtaben HTML?",
+   "en": "What do the letters HTML stand for?",
+   "reworked": false,
+   "answerDe": "Hypertext Markup Language",
+   "answerEn": "Hypertext Markup Language",
+   "timeline": {
+    "kind": "creation",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "\"HTML Tags\", the first public description of HTML by Tim Berners-Lee",
+    "labelDe": "„HTML Tags“, die erste öffentliche Beschreibung von HTML durch Tim Berners-Lee"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hypertext_Markup_Language",
+    "title": "Hypertext Markup Language",
+    "lang": "de"
+   },
+   "notes": "Card misprints „Buchstaben“ as „Buchtaben“; kept verbatim.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Bei welchem, meist auf unbefestigten Wegen ausgetragenen Radrennen, müssen die Fahrer ihre Räder tragen, um Hindernisse zu überwinden?",
+   "de": "Bei welchem, meist auf unbefestigten Wegen ausgetragenen Radrennen, müssen die Fahrer ihre Räder tragen, um Hindernisse zu überwinden?",
+   "en": "In which bike race, mostly held on unpaved paths, do riders have to carry their bikes to get over obstacles?",
+   "reworked": false,
+   "answerDe": "Cyclocross",
+   "answerEn": "Cyclocross",
+   "timeline": {
+    "kind": "event",
+    "start": "1903-01-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First documented cyclocross race, organised in France by Géo Lefèvre",
+    "labelDe": "Erstes dokumentiertes Querfeldeinrennen (Cyclocross), organisiert in Frankreich von Géo Lefèvre"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Cyclocross",
+    "title": "Cyclocross",
+    "lang": "de"
+   },
+   "notes": "Also accepted: Querfeldeinrennen / Radcross / Radquer.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

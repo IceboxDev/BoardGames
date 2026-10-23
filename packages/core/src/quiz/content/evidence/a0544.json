@@ -1,0 +1,242 @@
+{
+ "article": "a0544",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Back_to_the_Future",
+   "title": "Back to the Future – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:52.297Z",
+   "snapshot": "49b877d5ccb223c42d0264e50006d0755df418a315e418f6a0a71ac17ec301ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Christopher_Lloyd",
+   "title": "Christopher Lloyd – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:53.060Z",
+   "snapshot": "309135a9fb32143a1575a0eb55c34324eedd764041e7a0e13586771bb31cacf3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Family_Ties",
+   "title": "Family Ties – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:54.225Z",
+   "snapshot": "1dd1ef052d7244f7d215feabbbfab2498432d804e5b576bcaf0215d83938800b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Die_Hard",
+   "title": "Die Hard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:55.264Z",
+   "snapshot": "e799f3dc183772a75977865416ad44397efe6215a6b52aab0a32e066540691ee"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Zur%C3%BCck_in_die_Zukunft",
+   "title": "Zurück in die Zukunft",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:52.566Z",
+   "snapshot": "3eb1bafbd1ee29c88f7b52ed4580fb045888c89de933c6534002a8ac6b431f65"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marty McFly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dr. Emmett Brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alex P. Keaton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John McClane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zurück in die Zukunft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-157"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:04.704Z",
+   "target": "f02716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Set in 1985, it follows Marty McFly (Fox), a teenager accidentally sent back to 1955 in a time-traveling DeLorean automobile built by his eccentric scientist friend Emmett \"Doc\" Brown (Lloyd), where he inadvertently prevents his future parents from falling in love – threatening his own existence –",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marty McFly” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:04.704Z",
+   "target": "f02717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "That August, he reprised the role of Dr. Emmett Brown (from Back to the Future) as part of an advertising campaign for Garbarino, an Argentine appliance company, and also as part of Nike's \"Back For the Future\" campaign for the benefit of The Michael J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Emmett Brown” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:04.704Z",
+   "target": "f02718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Because of this, Young Republican Alex P. Keaton (portrayed by Michael J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alex P. Keaton” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:04.704Z",
+   "target": "f02720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Hard follows a New York City police detective, John McClane (Willis), who becomes entangled in a terrorist takeover of a Los Angeles skyscraper while visiting his estranged wife during a Christmas Eve party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John McClane” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:04.704Z",
+   "target": "f11283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zurück in die Zukunft (im englischen Original Back to the Future) ist der Name einer Science-Fiction-Film-Trilogie aus den Jahren 1985, 1989 und 1990.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zurück in die Zukunft” is on the snapshot of s5"
+  }
+ ]
+}

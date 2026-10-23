@@ -1,0 +1,401 @@
+{
+ "article": "a2505",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Massenaussterben",
+   "title": "Massenaussterben",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:04.070Z",
+   "snapshot": "74ad01b150eee1c470ddc2c37951870259bc55808eba14ec87c4c67da80eea94"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Extinction_event",
+   "title": "Extinction event – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:07.810Z",
+   "snapshot": "1adf503510b8f907d49c4e81988a854311d5e64d4bfcaf66eb97aedde9aee25f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chicxulub_crater",
+   "title": "Chicxulub crater – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:08.818Z",
+   "snapshot": "137ba6b181ef26772cae099e6608773a0a9467c91191796eb46b2379b2b9e816"
+  },
+  "s4": {
+   "url": "https://www.science.org/doi/10.1126/science.208.4448.1095",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  },
+  "s5": {
+   "url": "https://www.nationalgeographic.com/science/article/mass-extinction",
+   "title": "What are mass extinctions, and what causes them?",
+   "publisher": "National Geographic",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:46.604Z",
+   "snapshot": "b4745e620cd9c3b6c765742d1317161160fa18d03747ad5319e44a239f26ae2e"
+  },
+  "s6": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:17788674%20AND%20SRC:MED&resultType=core&format=json",
+   "title": "Mass extinctions in the marine fossil record (Science, 1982)",
+   "publisher": "Europe PMC (abstract)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:19:07Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "fünf Massenaussterben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-349"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Great Dying",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chicxulub",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "iridium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ordovician",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:30.820Z",
+   "target": "f13294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "fünf Massenaussterben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“fünf Massenaussterben”, “five mass extinctions”, “пять массовых вымираний”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:30.820Z",
+   "target": "f13295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The End Permian extinction, or the \"Great Dying\", occurred at the Permian–Triassic transition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.820Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Dying” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:30.820Z",
+   "target": "f13296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Chicxulub crater is an impact crater buried underneath the Yucatán Peninsula in Mexico.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.820Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chicxulub” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:30.820Z",
+   "target": "f13297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Alvarezes and colleagues reported that it contained an abnormally high concentration of iridium, a chemical element rare on Earth but common in asteroids.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.820Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “iridium” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:30.820Z",
+   "target": "f13298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Several events in the Cambrian and early Ordovician meet or exceed the \"Big Five\" in proportional severity, though overall diversity was rather low until the Great Ordovician Biodiversification Event (GOBE).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.820Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ordovician” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:19:01Z",
+   "target": "f13294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the last 500 million years, life has had to recover from five catastrophic blows.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:19:07Z",
+   "target": "f13294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A fifth extinction event in the Devonian stands out from the background but is not statistically significant in these data.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23",
+   "note": "Raup & Sepkoski found four statistically distinct events plus the Devonian; body corrected accordingly"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:19:12Z",
+   "target": "f13295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Some 252 million years ago, life on Earth faced the “Great Dying”: the Permian-Triassic extinction.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:16Z",
+   "target": "f13295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The End Permian extinction, or the \"Great Dying\", occurred at the Permian–Triassic transition.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:14.419Z",
+   "target": "f13294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the last 500 million years, life has had to recover from five catastrophic blows.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:14.419Z",
+   "target": "f13295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Some 252 million years ago, life on Earth faced the “Great Dying”: the Permian-Triassic extinction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:14.419Z",
+   "target": "f13294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Of the five mass extinctions, the Permian-Triassic is the only one that wiped out large numbers of insect species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “five mass extinctions” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:14.419Z",
+   "target": "f13295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Some 252 million years ago, life on Earth faced the “Great Dying”: the Permian-Triassic extinction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:14.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Great Dying” is on the snapshot of s5"
+  }
+ ]
+}

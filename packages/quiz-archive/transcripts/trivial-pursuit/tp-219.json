@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-219",
+ "image": "IMG20261007174124.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie viele Staaten grenzen an Bayern?",
+   "de": "An wie viele ausländische Staaten grenzt Bayern?",
+   "en": "How many foreign countries border Bavaria?",
+   "reworked": true,
+   "answerDe": "3",
+   "answerEn": "3",
+   "timeline": {
+    "kind": "event",
+    "start": "1993-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Czech Republic becomes independent, one of Bavaria's three foreign neighbours with Austria and Switzerland",
+    "labelDe": "Tschechien wird unabhängig – neben Österreich und der Schweiz einer der drei ausländischen Nachbarn Bayerns"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bayern",
+    "title": "Bayern",
+    "lang": "de"
+   },
+   "notes": "Clarified to foreign countries: Bavaria borders Czechia, Austria and (across Lake Constance) Switzerland; counting the German states Baden-Württemberg, Hesse, Thuringia and Saxony it would be 7.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "In welchem Land zahlen Kunden etwa 70 Prozent mehr für Videospiele als im Rest der Welt: Brasilien, Japan oder China?",
+   "de": "In welchem Land zahlen Kunden etwa 70 Prozent mehr für Videospiele als im Rest der Welt?",
+   "en": "In which country do customers pay about 70 percent more for video games than in the rest of the world?",
+   "reworked": true,
+   "answerDe": "Brasilien",
+   "answerEn": "Brazil",
+   "timeline": {
+    "kind": "event",
+    "start": "2015",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nintendo withdraws from the Brazilian market, citing high taxes on games and consoles",
+    "labelDe": "Nintendo zieht sich wegen hoher Steuern auf Spiele und Konsolen aus dem brasilianischen Markt zurück"
+   },
+   "source": {
+    "url": "https://allcorrectgames.com/insights/the-gaming-market-in-brazil/",
+    "title": "The Gaming Market in Brazil | Allcorrect",
+    "lang": "en"
+   },
+   "notes": "Multiple choice removed. The source confirms games and consoles in Brazil are heavily taxed and far pricier (PS5 ~USD 900 vs 499 in the US); the exact '70 percent more' figure was not found — DFC Intelligence says levies can make up over 70% of the price.",
+   "domain": "sport-games",
+   "sub": "games"
+  },
+  {
+   "category": 3,
+   "cardDe": "Das von Marie Curie entdeckte radioaktive Element Polonium ist nach ihrem Hund Polly benannt. Richtig oder falsch?",
+   "de": "Wonach ist das von Marie Curie entdeckte radioaktive Element Polonium benannt?",
+   "en": "What is the radioactive element polonium, discovered by Marie Curie, named after?",
+   "reworked": true,
+   "answerDe": "Polen",
+   "answerEn": "Poland",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1898",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Marie and Pierre Curie discover polonium and name it after Poland, Marie's homeland",
+    "labelDe": "Marie und Pierre Curie entdecken Polonium und benennen es nach Polen, Maries Heimat"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Polonium",
+    "title": "Polonium",
+    "lang": "de"
+   },
+   "notes": "Card statement is false (no dog): named after Poland, Marie Curie's homeland.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 4,
+   "cardDe": "Womit kreierte der Künstler Andy Brown 2002 ein Porträt von Königin Elisabeth II.: 90 Sandwiches, 600 Gläser Orangenmarmelade oder 1.000 Teebeutel?",
+   "de": "Womit kreierte der Künstler Andy Brown 2002 ein Porträt von Königin Elisabeth II.?",
+   "en": "What did the artist Andy Brown use to create a portrait of Queen Elizabeth II in 2002?",
+   "reworked": true,
+   "answerDe": "1.000 Teebeutel",
+   "answerEn": "1,000 tea bags",
+   "timeline": {
+    "kind": "creation",
+    "start": "2002",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Andy Brown makes his tea-bag portrait of Queen Elizabeth II for his Loughborough graduate show",
+    "labelDe": "Andy Brown fertigt für seine Abschlussausstellung in Loughborough sein Teebeutel-Porträt von Elisabeth II."
+   },
+   "source": {
+    "url": "https://artdependence.com/articles/a-question-in-trivial-pursuit-which-artist-created-a-portrait-of-queen-elisabeth-ii-using-1-000-teabags-answer-andy-brown/",
+    "title": "A question in Trivial Pursuit: which artist created a portrait of Queen Elisabeth II using 1,000 teabags? Answer: Andy Brown",
+    "lang": "en"
+   },
+   "notes": "Multiple choice removed. Korea Herald profile confirms the 2002 date (Loughborough graduate exhibition).",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißt der größere der beiden Knochen, die den Unterschenkel bilden?",
+   "de": "Wie heißt der größere der beiden Knochen, die den Unterschenkel bilden?",
+   "en": "What is the name of the larger of the two bones that form the lower leg?",
+   "reworked": false,
+   "answerDe": "Schienbein (Tibia)",
+   "answerEn": "Shinbone (tibia)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1543",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Andreas Vesalius publishes De humani corporis fabrica, the first accurate atlas of the human skeleton",
+    "labelDe": "Andreas Vesalius veröffentlicht De humani corporis fabrica, den ersten genauen Atlas des menschlichen Skeletts"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schienbein",
+    "title": "Schienbein",
+    "lang": "de"
+   },
+   "notes": "The other lower-leg bone is the fibula (Wadenbein). Timeline is a general anatomy milestone; the tibia itself has no date.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißen die drei Grand-Tours-Rennen des Profi-Radsports?",
+   "de": "Wie heißen die drei Grand-Tours-Rennen des Profi-Radsports?",
+   "en": "What are the three Grand Tour races of professional cycling called?",
+   "reworked": false,
+   "answerDe": "Tour de France, Giro d’Italia und Vuelta a España",
+   "answerEn": "Tour de France, Giro d'Italia and Vuelta a España",
+   "timeline": {
+    "kind": "period",
+    "start": "1903",
+    "end": "1935",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The three Grand Tours are founded: Tour de France 1903, Giro d'Italia 1909, Vuelta a España 1935",
+    "labelDe": "Gründung der drei Grand Tours: Tour de France 1903, Giro d’Italia 1909, Vuelta a España 1935"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Grand_Tour_(Radsport)",
+    "title": "Grand Tour (Radsport)",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

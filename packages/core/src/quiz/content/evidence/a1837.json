@@ -1,0 +1,242 @@
+{
+ "article": "a1837",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Uptown_Girl",
+   "title": "Uptown Girl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:19.357Z",
+   "snapshot": "697e641c8def0d14cd4a857f31608417d8f01fdc838a73a6acaf00fd65f3d080"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Billie_Jean",
+   "title": "Billie Jean – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:20.422Z",
+   "snapshot": "593858a4b1e46d2e7708776dfc6b4e888717386dba82f07e13b4b7ac1c774912"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Purple_Rain_(album)",
+   "title": "Purple Rain (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:21.477Z",
+   "snapshot": "0d98ded3c782eef370574846b1d08c8d941836d124abc72ef8b44210832b97e0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Born_in_the_U.S.A.",
+   "title": "Born in the U.S.A. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:22.641Z",
+   "snapshot": "387ab0b6e0a6c8e2d9849b57394f0e06020dd5a31e1b6a1294fefd49ce6f9c2a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/I_Just_Called_to_Say_I_Love_You",
+   "title": "I Just Called to Say I Love You – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:23.379Z",
+   "snapshot": "121e39b897351cc5d248d4ef613d6ad41732a6bc381143f0196e77dfaf8c1e98"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Billy Joel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Michael Jackson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Prince",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bruce Springsteen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stevie Wonder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:30.743Z",
+   "target": "f09181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Uptown Girl\" is a song written and performed by American musician Billy Joel from his ninth studio album, An Innocent Man (1983), released in September 1983 as the album's second single.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Billy Joel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:30.743Z",
+   "target": "f09182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Billie Jean\" is a song by the American singer Michael Jackson, released by Epic Records on January 2, 1983, as the second single from Jackson's sixth studio album, Thriller (1982).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Jackson” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:30.743Z",
+   "target": "f09183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Purple Rain is the sixth studio album by the American musician Prince, featuring his backing band the Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prince” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:30.743Z",
+   "target": "f09184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is the seventh studio album by the American singer-songwriter Bruce Springsteen, released on June 4, 1984, through Columbia Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruce Springsteen” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:30.743Z",
+   "target": "f09185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"I Just Called to Say I Love You\" is a ballad written, produced, and performed by American R&B singer and songwriter Stevie Wonder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stevie Wonder” is on the snapshot of s5"
+  }
+ ]
+}

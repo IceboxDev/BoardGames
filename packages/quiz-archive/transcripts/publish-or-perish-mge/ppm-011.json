@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-011",
+ "image": "IMG20261022153242.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Paleontology",
+   "cardText": "[Paleontology] Which came first, the chicken or the egg?\nA. They evolved simultaneously\nB. The egg\nC. The chicken\nAnswer: B. Researchers generally agree that the egg came first. This conclusion is based on evolutionary history, as birds evolved from dinosaurs that laid eggs long before the first chicken appeared. The first true chicken would have emerged from an egg laid by a bird that was not quite a chicken, making the egg the precursor to the chicken.",
+   "de": "Das Ei war lange vor dem Huhn da: Vor ungefähr wie vielen Millionen Jahren tauchte das erste hartschalige Amniotenei auf, das an Land gelegt werden konnte?",
+   "en": "The egg came long before the chicken: roughly how many million years ago did the first hard-shelled amniote egg, one that could be laid on land, appear?",
+   "reworked": true,
+   "answerDe": "Etwa 312 Millionen Jahre",
+   "answerEn": "About 312 million years",
+   "timeline": {
+    "kind": "event",
+    "start": "-312000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The first hard-shelled amniote egg, able to be laid on land, appears",
+    "labelDe": "Das erste hartschalige Amniotenei, das an Land gelegt werden kann, entsteht"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Chicken_or_the_egg",
+    "title": "Chicken or the egg",
+    "lang": "en"
+   },
+   "notes": "Binary card question reworked to the underlying fact. The card's 'egg first' holds for eggs in general; Wikipedia notes one argument (the hen-expressed shell protein OC-17) for the chicken preceding the first 'modern' chicken egg, so the verdict depends on the definition.",
+   "domain": "nature",
+   "sub": "ecology"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] What type of animal is a flying fox?\nA. Fox\nB. Bat\nC. Squirrel\nAnswer: B. Flying foxes primarily feed on fruit, nectar, and flowers. They play a crucial role in pollination and seed dispersal.",
+   "de": "Was für ein Tier ist ein Flughund (engl. „flying fox“), der sich von Früchten, Nektar und Blüten ernährt?",
+   "en": "What type of animal is a flying fox, which feeds on fruit, nectar and flowers?",
+   "reworked": true,
+   "answerDe": "Eine Fledermaus (Fledertier)",
+   "answerEn": "A bat",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1762",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Mathurin Jacques Brisson names the flying-fox genus Pteropus",
+    "labelDe": "Mathurin Jacques Brisson benennt die Flughund-Gattung Pteropus"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pteropus",
+    "title": "Pteropus",
+    "lang": "en"
+   },
+   "notes": "Card correct: Pteropus is a genus of large (mega)bats. German 'Flughund' is itself the name, so the German version cites the English name.",
+   "domain": "nature",
+   "sub": "mammals"
+  }
+ ]
+}

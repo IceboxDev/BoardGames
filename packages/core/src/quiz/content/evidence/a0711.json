@@ -1,0 +1,195 @@
+{
+ "article": "a0711",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Potala_Palace",
+   "title": "Potala Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:49.176Z",
+   "snapshot": "be2602984641daa37e94862907286642267481beba3e6161935d18984d20f631"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Apostolic_Palace",
+   "title": "Apostolic Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:50.202Z",
+   "snapshot": "de0de2fe9e84f2459e3178d8eb00d01363c3427bcfdf5d99e9be38a0a232091c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89lys%C3%A9e_Palace",
+   "title": "Élysée Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:51.291Z",
+   "snapshot": "ec68b4ef79b9f1b1d5b84176c22d18111e29ed3f113fbd3682430ff3d610fe5c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Topkap%C4%B1_Palace",
+   "title": "Topkapı Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:55.335Z",
+   "snapshot": "9cccfa6a3e8f6806466f8eb0dc0078c962ad54604dd542383a37ad91176f112d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dalai Lama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Élysée Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Topkapı Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:30.399Z",
+   "target": "f03551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Construction of the present structure was begun in 1645 at the order of the 5th Dalai Lama, advised by Konchog Chophel, the Thirty-fifth Ganden Tripa of the Gelug school.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dalai Lama” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:30.399Z",
+   "target": "f03552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Apostolic Palace is the official residence of the Pope, the head of the Catholic Church, located in Vatican City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pope” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:30.399Z",
+   "target": "f03553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Élysée Palace (French: Palais de l'Élysée, pronounced [palɛ d(ə) lelize]) is the official residence of the president of France in Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Élysée Palace” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:30.399Z",
+   "target": "f03554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Topkapı Palace or the Seraglio, is a large museum and library in the east of the Fatih district of Istanbul in Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Topkapı Palace” is on the snapshot of s4"
+  }
+ ]
+}

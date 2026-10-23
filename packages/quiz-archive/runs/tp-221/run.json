@@ -1,0 +1,36 @@
+{
+ "id": "tp-221",
+ "title": "Trivial Pursuit card 221: the missing photo, transcribed and merged",
+ "startedAt": "2026-10-23",
+ "endedAt": "2026-10-23",
+ "kind": "ingest",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded)"
+ ],
+ "brief": "repo scripts/quiz-ingest/TRANSCRIBE.md, MERGE.md",
+ "inputs": [
+  "photos/trivial-pursuit/tp-221"
+ ],
+ "outputs": [
+  "transcripts/trivial-pursuit/tp-221.json",
+  "bank (history 'tp-221-ingest' and the merge, refs 'trivial-pursuit/tp-221')"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/tp-221"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 14,
+  "bytes": 86135,
+  "byExt": {
+   ".json": 7,
+   ".md": 6,
+   ".tsv": 1
+  },
+  "cards": 1,
+  "printedQuestions": 6,
+  "historyEntries": 95
+ },
+ "notes": "Not archived: scratch/."
+}

@@ -1,0 +1,431 @@
+{
+ "article": "a2780",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/United_States_Treasury_security",
+   "title": "United States Treasury security",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:19.161Z",
+   "snapshot": "8164c82eabd04542405f9d5e501f1fa31370485334160487de073cfc3a605afc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Beneish_M-score",
+   "title": "Beneish M-score",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:20.080Z",
+   "snapshot": "c2a45da3e38a95bf22a7a72a485ef21d44e73cef6d3d4f6c7da2f7e98569c4a8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Altman_Z-score",
+   "title": "Altman Z-score",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:21.068Z",
+   "snapshot": "8a4bde63a66bd418e22fec99fc2d598980a38dad5931890fe454bdfa4f460045"
+  },
+  "s4": {
+   "url": "https://api.crossref.org/works/10.2469/faj.v55.n5.2296",
+   "title": "The Detection of Earnings Manipulation (Financial Analysts Journal, 1999) – Crossref record",
+   "publisher": "Crossref",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:42:44Z"
+  },
+  "s5": {
+   "url": "https://corporatefinanceinstitute.com/resources/financial-modeling/beneish-m-score-calculator/",
+   "title": "Beneish M Score Calculator",
+   "publisher": "Corporate Finance Institute",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:21.852Z",
+   "snapshot": "7e12a93e481eed41cbe21b093e2ae7c784efe5d2d66e60c6100d5d74f3e3e3f7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Earnings manipulation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-063"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Messod D. Beneish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25909",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Enron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25910",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Altman Z-score",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1929",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:12.590Z",
+   "target": "f25906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On December 13, 1929, the Treasury completed its first auction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auction” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:12.590Z",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Earnings manipulation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Earnings manipulation”, “Bilanzmanipulation”, “манипулирование прибылью”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:12.590Z",
+   "target": "f25908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Messod D. Beneish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Messod D. Beneish”, “Мессод Бенеиш”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:12.590Z",
+   "target": "f25909",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Enron Corporation was correctly identified 1998 as an earnings manipulator by students from Cornell University using M-score.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enron” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:12.590Z",
+   "target": "f25910",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Altman Z-score is a customized version of the discriminant analysis technique of R.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Altman Z-score” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:12.590Z",
+   "target": "f25911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1929, the US Treasury took inspiration from the procedure employed in the United Kingdom and shifted from the fixed-price subscription system to a system of auctioning where Treasury bills would be sold to the highest bidder until their demand was filled.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1929” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:42Z",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in order to check if it is likely (high probability) that the reported earnings of the company have been manipulated",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:44Z",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Detection of Earnings Manipulation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:42:46Z",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Beneish M Score calculator is used to determine whether or not the company has manipulated its reported earnings in its financial statements.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:42:47Z",
+   "target": "f25908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Messod D. Beneish is an associate professor at the Kelley School of Business, Indiana University.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23",
+   "note": "Crossref metadata: author Messod D. Beneish, Financial Analysts Journal, published September 1999."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:42:49Z",
+   "target": "f25908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(see Beneish 1999, Beneish, Lee, and Nichols 2013, and Beneish and Vorst 2020)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T13:00:01.315Z",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in order to check if it is likely (high probability) that the reported earnings of the company have been manipulated",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T13:00:01.315Z",
+   "target": "f25907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Beneish M Score calculator is used to determine whether or not the company has manipulated its reported earnings in its financial statements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T13:00:01.315Z",
+   "target": "f25908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(see Beneish 1999, Beneish, Lee, and Nichols 2013, and Beneish and Vorst 2020)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.315Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s2"
+  }
+ ]
+}

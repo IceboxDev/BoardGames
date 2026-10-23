@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-139",
+ "image": "IMG20261022154626.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Anthropology",
+   "cardText": "[Anthropology] Which of the following do we have direct evidence of Neanderthals using?\nA. Insects for dye\nB. Birch bark for chewing\nC. Clay for pottery\nAnswer: B. Teeth impressions from Neanderthals have been found on ancient pieces of birch bark tar. This tar contains antiseptic compounds, which likely helped Neanderthals relieve toothaches and maintain oral hygiene. The tar also served as a strong adhesive for tool-making.",
+   "de": "Welchen Stoff, durch Trockendestillation von Birkenrinde gewonnen, stellten Neandertaler schon vor 200.000 Jahren her und nutzten ihn als Klebstoff an ihren Steinwerkzeugen?",
+   "en": "What substance, made by dry distillation of birch bark, did Neanderthals produce as early as 200,000 years ago and use as an adhesive on their stone tools?",
+   "reworked": true,
+   "answerDe": "Birkenpech",
+   "answerEn": "Birch bark tar",
+   "timeline": {
+    "kind": "event",
+    "start": "-200000",
+    "end": null,
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Neanderthals are already making tar by dry distillation of birch bark",
+    "labelDe": "Neandertaler stellen bereits Teer durch Trockendestillation von Birkenrinde her"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Birch_bark_tar",
+    "title": "Birch bark tar",
+    "lang": "en"
+   },
+   "notes": "CARD ERROR: the chewed birch tar with tooth imprints (Kierikki, Finland, ~5,000 years; southern Denmark, ~5,700 years) was chewed by modern humans, not Neanderthals. The direct Neanderthal evidence is tar production and its use as an adhesive/hafting backing (Königsaue with a Neanderthal fingerprint, Campitello tools) — the card's last sentence. The open question asks that.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] How many bones do sharks have in their bodies?\nA. 0\nB. 52\nC. 212\nAnswer: A. Sharks have no bones; their skeletons are made of cartilage, which is lighter and more flexible than bone.",
+   "de": "Wie viele Knochen hat ein Hai in seinem Körper?",
+   "en": "How many bones does a shark have in its body?",
+   "reworked": true,
+   "answerDe": "0 (sein Skelett besteht aus Knorpel)",
+   "answerEn": "0 (its skeleton is cartilage)",
+   "timeline": {
+    "kind": "era",
+    "start": "-419000000",
+    "end": "-359000000",
+    "precision": "megayear",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Devonian Period, when the first shark-like cartilaginous fishes appear",
+    "labelDe": "Devon, in dem die ersten haiähnlichen Knorpelfische auftreten"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Shark",
+    "title": "Shark",
+    "lang": "en"
+   },
+   "notes": "Sharks are cartilaginous fishes whose skeletons are made of cartilage and connective tissue (Wikipedia). Reworked only by dropping the options.",
+   "domain": "nature",
+   "sub": "animals"
+  }
+ ]
+}

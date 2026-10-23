@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-110",
+ "image": "IMG20261007182544.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Stadt findet man das Anne-Frank-Haus und das Van-Gogh-Museum?",
+   "de": "In welcher Stadt findet man das Anne-Frank-Haus und das Van-Gogh-Museum?",
+   "en": "In which city can you find the Anne Frank House and the Van Gogh Museum?",
+   "reworked": false,
+   "answerDe": "Amsterdam",
+   "answerEn": "Amsterdam",
+   "timeline": {
+    "kind": "founding",
+    "start": "1960-05-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Anne Frank House at Prinsengracht 263 in Amsterdam opens as a museum",
+    "labelDe": "Das Anne-Frank-Haus an der Prinsengracht 263 in Amsterdam wird als Museum eröffnet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Anne-Frank-Haus",
+    "title": "Anne-Frank-Haus",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Was ist ein Markenzeichen der Gruppe Daft Punk: Roboterhelme, Moonboots oder Patronengürtel?",
+   "de": "Welche Kopfbedeckung ist ein Markenzeichen der Gruppe Daft Punk?",
+   "en": "What headgear is a trademark of the group Daft Punk?",
+   "reworked": true,
+   "answerDe": "Roboterhelme",
+   "answerEn": "Robot helmets",
+   "timeline": {
+    "kind": "period",
+    "start": "1999",
+    "end": "2021",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Daft Punk appear in public as robots with helmets, outfits and gloves",
+    "labelDe": "Daft Punk treten öffentlich als Roboter mit Helmen, Anzügen und Handschuhen auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Daft_Punk",
+    "title": "Daft Punk",
+    "lang": "en"
+   },
+   "notes": "Bangalter wore a silver helmet, Homem-Christo a gold one.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Gegen welche andere Stadt setzte sich Bonn 1949 bei der Wahl zur Hauptstadt der Bundesrepublik Deutschland durch: Berlin, Frankfurt am Main oder München?",
+   "de": "Gegen welche andere Stadt setzte sich Bonn 1949 bei der Wahl zur Hauptstadt der Bundesrepublik Deutschland durch?",
+   "en": "Which other city did Bonn beat in 1949 in the vote for the capital of the Federal Republic of Germany?",
+   "reworked": true,
+   "answerDe": "Frankfurt am Main",
+   "answerEn": "Frankfurt am Main",
+   "timeline": {
+    "kind": "event",
+    "start": "1949-05-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Parliamentary Council chooses Bonn over Frankfurt am Main as provisional seat of the federal bodies",
+    "labelDe": "Der Parlamentarische Rat wählt Bonn statt Frankfurt am Main zum vorläufigen Sitz der Bundesorgane"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hauptstadtfrage_der_Bundesrepublik_Deutschland",
+    "title": "Hauptstadtfrage der Bundesrepublik Deutschland",
+    "lang": "de"
+   },
+   "notes": "Secret ballot in the Parliamentary Council: 33 votes for Bonn, 29 for Frankfurt; Bonn became the provisional seat of the federal bodies.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Autor schrieb eine beliebte Geschichte über einen Piloten und einen Prinzen und war auf der französischen 50-Franc-Banknote abgebildet?",
+   "de": "Welcher Autor schrieb eine beliebte Geschichte über einen Piloten und einen Prinzen und war auf der französischen 50-Franc-Banknote abgebildet?",
+   "en": "Which author wrote a popular story about a pilot and a prince and was pictured on the French 50-franc banknote?",
+   "reworked": false,
+   "answerDe": "Antoine de Saint-Exupéry",
+   "answerEn": "Antoine de Saint-Exupéry",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1900-06-29",
+    "end": "1944-07-31",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of Antoine de Saint-Exupéry, French writer and pilot, author of The Little Prince",
+    "labelDe": "Leben von Antoine de Saint-Exupéry, französischer Schriftsteller und Pilot, Autor von „Der kleine Prinz“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Antoine_de_Saint-Exup%C3%A9ry",
+    "title": "Antoine de Saint-Exupéry",
+    "lang": "de"
+   },
+   "notes": "The story is Der kleine Prinz (The Little Prince). The 50-franc Saint-Exupéry note was printed 1992–1999 (fr.wikipedia: Billet de 50 francs Saint-Exupéry).",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie viele Halswirbel haben Giraffen im Vergleich zum Menschen: weniger, genauso viele oder mehr?",
+   "de": "Wie viele Halswirbel haben Giraffen?",
+   "en": "How many cervical vertebrae do giraffes have?",
+   "reworked": true,
+   "answerDe": "7",
+   "answerEn": "7",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1758",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Linnaeus scientifically describes the giraffe (Giraffa camelopardalis)",
+    "labelDe": "Linnaeus beschreibt die Giraffe (Giraffa camelopardalis) wissenschaftlich"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Giraffen",
+    "title": "Giraffen",
+    "lang": "de"
+   },
+   "notes": "Seven, the same number as humans and almost all mammals, but greatly elongated; the first thoracic vertebra resembles a cervical one, so the neck works functionally with eight.",
+   "domain": "nature",
+   "sub": "mammals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Die deutschsprachige Ausgabe des Playboy-Magazins wird in Zukunft auf die Abbildung nackter Frauen verzichten. Richtig oder falsch?",
+   "de": "Ab wann wollte die US-Ausgabe des Playboy-Magazins auf die Abbildung völlig nackter Frauen verzichten?",
+   "en": "From when did the US edition of Playboy magazine plan to stop showing fully nude women?",
+   "reworked": true,
+   "answerDe": "März 2016",
+   "answerEn": "March 2016",
+   "timeline": {
+    "kind": "event",
+    "start": "2015-10",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Playboy announces that from March 2016 its US magazine will no longer show fully nude women",
+    "labelDe": "Playboy kündigt an, ab März 2016 im US-Heft keine völlig nackten Frauen mehr zu zeigen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Playboy_(Magazin)",
+    "title": "Playboy (Magazin)",
+    "lang": "de"
+   },
+   "notes": "The card's statement is false: on 13 Oct 2015 Playboy Deutschland's editor-in-chief Florian Boitin said the German edition would keep its concept including nudity (Abendzeitung München). The US magazine brought nudity back with the March/April 2017 issue.",
+   "domain": "film-media",
+   "sub": "media"
+  }
+ ]
+}

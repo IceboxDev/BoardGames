@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-045",
+ "image": "IMG20261007182110.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welche Farbe kommt nicht in der Nationalflagge Jamaikas vor: Gelb, Grün oder Rot?",
+   "de": "Welche drei Farben hat die Nationalflagge Jamaikas?",
+   "en": "What three colours does the national flag of Jamaica have?",
+   "reworked": true,
+   "answerDe": "Schwarz, Grün und Gold",
+   "answerEn": "Black, green and gold",
+   "timeline": {
+    "kind": "creation",
+    "start": "1962-08-06",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Jamaica's national flag is officially adopted",
+    "labelDe": "Die Nationalflagge Jamaikas wird offiziell eingeführt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Flagge_Jamaikas",
+    "title": "Flagge Jamaikas – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Reworked from multiple choice (card answer: Rot). The gold saltire is usually shown as yellow, so 'Gelb' for gold is acceptable.",
+   "domain": "geography",
+   "sub": "peoples"
+  },
+  {
+   "category": 2,
+   "cardDe": "Die Rolling Stones wurden 1962 von einer Plattenfirma abgelehnt, weil Gitarrenbands „bald aus der Mode kommen“ würden. Richtig oder falsch?",
+   "de": "Welche Band wurde 1962 von einer Plattenfirma abgelehnt, weil Gitarrenbands „bald aus der Mode kommen“ würden?",
+   "en": "Which band was turned down by a record company in 1962 because guitar groups would \"soon go out of fashion\"?",
+   "reworked": true,
+   "answerDe": "The Beatles",
+   "answerEn": "The Beatles",
+   "timeline": {
+    "kind": "event",
+    "start": "1962-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Beatles audition for Decca Records in London, which later turns them down",
+    "labelDe": "Die Beatles spielen bei Decca Records in London vor, das sie später ablehnt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Beatles%27_Decca_audition",
+    "title": "The Beatles' Decca audition – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "Reworked from true/false; the card's statement is false (it was the Beatles, rejected by Decca: \"guitar groups are on the way out\"). The quote is attributed to Dick Rowe, who denied it.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die Mundharmonika wurde im 19. Jahrhundert als Hilfsmittel zum Stimmen von Klavieren und Orgeln erfunden. Richtig oder falsch?",
+   "de": "Wie nannte Christian Friedrich Ludwig Buschmann, der oft als Erfinder der Mundharmonika gilt, laut Überlieferung die kleine Stimmhilfe, die er 1821 gebaut haben soll?",
+   "en": "According to tradition, what did Christian Friedrich Ludwig Buschmann, often credited as the inventor of the harmonica, call the small tuning aid he is said to have built in 1821?",
+   "reworked": true,
+   "answerDe": "Aura",
+   "answerEn": "Aura",
+   "timeline": {
+    "kind": "creation",
+    "start": "1821",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Christian Friedrich Ludwig Buschmann is said to build the 'Aura', a tuning aid seen as a forerunner of the harmonica",
+    "labelDe": "Christian Friedrich Ludwig Buschmann soll die „Aura“ bauen, eine Stimmhilfe, die als Vorläufer der Mundharmonika gilt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Christian_Friedrich_Ludwig_Buschmann",
+    "title": "Christian Friedrich Ludwig Buschmann – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Reworked from true/false. The tuning-aid origin rests on oral tradition; Wikipedia (Mundharmonika) notes the inventor is disputed and others built similar instruments around 1820.",
+   "domain": "music-stage",
+   "sub": "instruments"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt das Land, in dem der Man-Booker-Literaturpreis vergeben wird?",
+   "de": "Wie heißt das Land, in dem der Man-Booker-Literaturpreis vergeben wird?",
+   "en": "What is the name of the country in which the Man Booker literary prize is awarded?",
+   "reworked": false,
+   "answerDe": "Vereinigtes Königreich",
+   "answerEn": "United Kingdom",
+   "timeline": {
+    "kind": "founding",
+    "start": "1969",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Booker Prize, Britain's leading literary award, is first awarded",
+    "labelDe": "Der Booker Prize, der wichtigste britische Literaturpreis, wird erstmals vergeben"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Booker_Prize",
+    "title": "Booker Prize – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Großbritannien / England also accepted. Called 'Man Booker Prize' during the Man Group sponsorship (2002–2019); now the Booker Prize.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welcher Wissenschaftler spricht mit seiner Synthesizerstimme auf dem Pink-Floyd-Album The Endless River aus dem Jahr 2014?",
+   "de": "Welcher Wissenschaftler spricht mit seiner Synthesizerstimme auf dem Pink-Floyd-Album The Endless River aus dem Jahr 2014?",
+   "en": "Which scientist speaks with his synthesised voice on the 2014 Pink Floyd album The Endless River?",
+   "reworked": false,
+   "answerDe": "Stephen Hawking",
+   "answerEn": "Stephen Hawking",
+   "timeline": {
+    "kind": "event",
+    "start": "2014-11",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pink Floyd release The Endless River, their final studio album",
+    "labelDe": "Pink Floyd veröffentlichen The Endless River, ihr letztes Studioalbum"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Endless_River",
+    "title": "The Endless River – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "On the track \"Talkin' Hawkin'\", a sample from a BT commercial.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches sind die fünf Farben der olympischen Ringe?",
+   "de": "Welches sind die fünf Farben der olympischen Ringe?",
+   "en": "What are the five colours of the Olympic rings?",
+   "reworked": false,
+   "answerDe": "Blau, Gelb, Schwarz, Grün und Rot",
+   "answerEn": "Blue, yellow, black, green and red",
+   "timeline": {
+    "kind": "creation",
+    "start": "1913",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pierre de Coubertin designs the Olympic rings",
+    "labelDe": "Pierre de Coubertin entwirft die olympischen Ringe"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Olympische_Ringe",
+    "title": "Olympische Ringe – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

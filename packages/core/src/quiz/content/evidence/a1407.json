@@ -1,0 +1,195 @@
+{
+ "article": "a1407",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Marc_Chagall",
+   "title": "Marc Chagall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:25.456Z",
+   "snapshot": "60b602b0e34e04fe665ce4267f9eb841ac54e7e7f4f871cd66964f3a469919fd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pablo_Picasso",
+   "title": "Pablo Picasso – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:30.563Z",
+   "snapshot": "74da4db21135c391786380a6df8dbfef545aeadae8e7d8094c4613d19d810b1a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Claude_Monet",
+   "title": "Claude Monet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:31.428Z",
+   "snapshot": "9cf98c4a58ca3876b2b3c4dff6268434513aea445e2eb00af642f85eb6fa12bd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Georgia_O'Keeffe",
+   "title": "Georgia O'Keeffe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:32.407Z",
+   "snapshot": "9c2a66ed7c7a8e183fd4626d50d39e58b089312cc0eb2d4f9f5afd5341be1540"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marc Chagall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pablo Picasso",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Claude Monet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07035",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georgia O’Keeffe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:20.698Z",
+   "target": "f07031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marc Chagall (born Moishe Shagal; 6 July [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marc Chagall” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:20.698Z",
+   "target": "f07032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He was among the first champions of Pablo Picasso, Georges Braque and the Cubism that they jointly developed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pablo Picasso” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:20.698Z",
+   "target": "f07033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oscar-Claude Monet (UK: , US: ; French: [klod mɔnɛ]; 14 November 1840 – 5 December 1926) was a French painter and founder of Impressionism who is seen as a key precursor to modernism, especially in his attempts to paint nature as he perceived it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claude Monet” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:20.698Z",
+   "target": "f07035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Her works are in the collections of several museums, and following her death, the Georgia O'Keeffe Museum was established in Santa Fe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georgia O’Keeffe” is on the snapshot of s4"
+  }
+ ]
+}

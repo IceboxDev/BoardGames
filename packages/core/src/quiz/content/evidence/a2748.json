@@ -1,0 +1,493 @@
+{
+ "article": "a2748",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Tale_of_Genji",
+   "title": "The Tale of Genji",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:50.178Z",
+   "snapshot": "9b2e8db367d4a0a8cc4b65233ebafd4ad27551e6c2c4828decaca54d80359372"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Murasaki_Shikibu",
+   "title": "Murasaki Shikibu",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:51.112Z",
+   "snapshot": "cd552679da0ec52f1aa5dae85c23481121167c12ca27e526bcd6ce66b4a31238"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hikaru_Genji",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:52.007Z",
+   "snapshot": "4087164eb275aa0e2f7d8134aa6ade9fffcb8ed21f3ffc9301c5095bd878746f"
+  },
+  "s4": {
+   "url": "https://www.worldhistory.org/Tale_of_Genji/",
+   "title": "Tale of Genji",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:10.089Z",
+   "snapshot": "d949dd60a6556341fae279f5b2da7942abd84297cc6522ac4a9f9a76723dd667"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Murasaki Shikibu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hikaru Genji",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "54",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arthur Waley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-070/1, u03: The Tale of Genji was written in Japan in the early 11th century. 'World's first novel' is a disputed label, but our wording and body say 'often called' and the notes explain the dispute."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Japan, The Tale of Genji has a stature similar to that of Shakespeare's works in English.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "973 in Heian-kyō, Japan, into the northern Fujiwara clan descending from Fujiwara no Yoshifusa, the first 9th century Fujiwara regent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Murasaki Shikibu (紫式部; [mɯ.ɾa.sa.kʲi ɕi̥.kiꜜ.bɯ, -ɕi̥ꜜ.kʲi-]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Murasaki Shikibu” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first section, chapters 1-33, center on the early life and amorous encounters of Hikaru Genji, or \"Shining Genji\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hikaru Genji” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The second section, chapters 34–41, tell of his old age and death, while the final section, chapters 42–54, shift to Genji's grandson, Niou, and supposed son, Kaoru.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “54” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:07.313Z",
+   "target": "f25662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arthur Waley translated an almost complete version which excludes only the 38th chapter (Suzumushi/The Bell Cricket) between 1925 and 1933.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Waley” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:29Z",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It consists of 54 chapters and 750,000 words",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:15:35Z",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first translation from the Japanese rather than from Waley, including all 54 chapters.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:15:44Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is Japan's oldest novel and possibly the first novel in world literature.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:15:53Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a classic work of Japanese literature said to have been written by the noblewoman, poet, and lady-in-waiting Murasaki Shikibu around the peak of the Heian period, in the early 11th century.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Country is uncontested; 'first novel' is the disputed part, which the wording hedges with 'often called'"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:54.773Z",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It consists of 54 chapters and 750,000 words",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:54.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:54.773Z",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first translation from the Japanese rather than from Waley, including all 54 chapters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:54.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:54.773Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is Japan's oldest novel and possibly the first novel in world literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:54.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:54.773Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a classic work of Japanese literature said to have been written by the noblewoman, poet, and lady-in-waiting Murasaki Shikibu around the peak of the Heian period, in the early 11th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:54.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:54.773Z",
+   "target": "f25658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 'Tale of the Genji' or Genji Monogatari, written in the 11th century CE by Murasaki Shikibu, a court lady, is Japan's oldest novel and possibly the first novel in world literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:54.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Japan” is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:54.773Z",
+   "target": "f25661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Japanese title Genji Monogatari may be translated as 'The Tale of Prince Genji.' It consists of 54 chapters and 750,000 words, although the final 13 chapters are regarded as a later addition by a minority of scholars principally because the story then no longer concerns Genji but his son Kaoru",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:54.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “54” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,415 @@
+{
+ "article": "a0253",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/+_(album)",
+   "title": "+ (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:22.622Z",
+   "snapshot": "73a61be2d5dccbfd6fcea33f22d2f7872260fc33425ec8539734d78400cfdb10"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/19_(Adele_album)",
+   "title": "19 (Adele album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:23.566Z",
+   "snapshot": "26fea286d3b5fedc27fe9f8282be685a667dd8ada8681a274aa76fe8618becf6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Adele_(S%C3%A4ngerin)",
+   "title": "Adele (Sängerin)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:41:20.924Z",
+   "snapshot": "116c4d8238723761a47f1fd53bf5fa9ad0ad3c1fdaf975e62c3a3968c4cdc30e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Back_to_Bedlam",
+   "title": "Back to Bedlam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:24.527Z",
+   "snapshot": "8c868e1fd0d1edbc58b02e91e5b75aa64b18585a008b5731c525d739d48bef31"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Divinely_Uninspired_to_a_Hellish_Extent",
+   "title": "Divinely Uninspired to a Hellish Extent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:25.549Z",
+   "snapshot": "70a3f5deb86fe32e053b2cfaa5e9a077179e4d7f9b4834cdf3b9d939dca1655a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Ed_Sheeran",
+   "title": "Ed Sheeran",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:41:22.849Z",
+   "snapshot": "2a616619b9612c5dab0e3235b7ae67e8ce9902e0c52411c0932cf028b967acef"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ed_Sheeran",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:26.569Z",
+   "snapshot": "b12f93640d89275db070f2d4a464bd1d7976a59eecb5f1ae585b9a6cfc78073d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Subtract_(album)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:27.555Z",
+   "snapshot": "a3ff625eafa8d45bbf50a7310b3df3de3cff0438961a84f2da61b1d1f9875a44"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Lewis_Capaldi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:28.532Z",
+   "snapshot": "40822083a4b7af478ab414879d26437f06a3e751b3ad3cef20dec947686c9cb1"
+  },
+  "s10": {
+   "url": "https://www.biography.com/musicians/ed-sheeran",
+   "title": "Ed Sheeran: Biography",
+   "publisher": "Biography.com (A&E)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:50.935Z",
+   "snapshot": "5ea11cf7c37140bc899a58f83dd7a3d588d9df1874009049f221648d8266454a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ed Sheeran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Adele",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-364"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James Blunt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lewis Capaldi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "England",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48; transcript tp-232"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:19.692Z",
+   "target": "f01261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "+ (Plus) is the debut studio album by the English singer-songwriter Ed Sheeran.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ed Sheeran” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:19.692Z",
+   "target": "f01262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "19 is the debut studio album by the English singer-songwriter Adele, released on 28 January 2008 by XL Recordings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adele” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:19.692Z",
+   "target": "f01262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Adele Laurie Blue Adkins MBE (* 5.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adele” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:19.692Z",
+   "target": "f01263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Back to Bedlam is the debut studio album by English singer-songwriter James Blunt, released on 11 October 2004 by Custard and Atlantic Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Blunt” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:19.692Z",
+   "target": "f01265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Divinely Uninspired to a Hellish Extent is the debut studio album by Scottish singer-songwriter Lewis Capaldi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lewis Capaldi” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:19.692Z",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "England",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“England”, “Англия”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:59Z",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Edward Christopher Sheeran was born on 17 February 1991 in Halifax, West Yorkshire.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:53:02Z",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ed Sheeran was born on February 17, 1991, in Halifax, West Yorkshire, in the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23",
+   "note": "Halifax, West Yorkshire is in England."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:38.380Z",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Edward Christopher Sheeran was born on 17 February 1991 in Halifax, West Yorkshire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:38.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:38.380Z",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ed Sheeran was born on February 17, 1991, in Halifax, West Yorkshire, in the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:38.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:38.380Z",
+   "target": "f13145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He won the awards for Best Live Act and Best Live Stage; the latter was in recognition for his performance at the 2014 V Festival in England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:38.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “England” is on the snapshot of s7"
+  }
+ ]
+}

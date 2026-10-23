@@ -1,0 +1,242 @@
+{
+ "article": "a1261",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_zerbrochne_Krug",
+   "title": "Der zerbrochne Krug – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:39.067Z",
+   "snapshot": "17a91e428c157563f960f5f3bef073666ccb97ca475c53806033546747f5b3df"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Minna_von_Barnhelm",
+   "title": "Minna von Barnhelm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:40.026Z",
+   "snapshot": "1cf0cd05d53f4e14136d54d2f4cffe39d816f054541a654cb0e02bda9f1eadfd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Leonce_und_Lena",
+   "title": "Leonce und Lena – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:40.917Z",
+   "snapshot": "167ef2a427e11ca9d7c4cb07fd054c481c5fd2adcbe0cb31689bb123cabafd21"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_Biberpelz",
+   "title": "Der Biberpelz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:42.121Z",
+   "snapshot": "2984ad8f76130243bd31f8dad3b14ff923fc247f087581647b927f607f62e9e1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%B6penickiade",
+   "title": "Köpenickiade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:42.878Z",
+   "snapshot": "240e213430fee84919a506b6905e02fa9251baf8c39b41afadf669d21893f9cb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der zerbrochne Krug",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Minna von Barnhelm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonce und Lena",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Biberpelz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Hauptmann von Köpenick",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:56.510Z",
+   "target": "f06301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der zerbrochne Krug ist ein Lustspiel von Heinrich von Kleist und eines seiner bekanntesten Werke.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der zerbrochne Krug” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:56.510Z",
+   "target": "f06302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Minna von Barnhelm oder das Soldatenglück ist ein Lustspiel in fünf Aufzügen von Gotthold Ephraim Lessing.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minna von Barnhelm” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:56.510Z",
+   "target": "f06303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonce und Lena ist das einzige Lustspiel von Georg Büchner.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonce und Lena” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:56.510Z",
+   "target": "f06304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Biberpelz (mit dem Untertitel: Eine Diebskomödie) ist ein 1892–1893 entstandenes sozialkritisches Drama und zugleich eine Milieustudie von Gerhart Hauptmann (1862–1946).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Biberpelz” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:56.510Z",
+   "target": "f06305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Vorfall wurde sofort weltbekannt und diente Carl Zuckmayers Komödie Der Hauptmann von Köpenick.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Hauptmann von Köpenick” is on the snapshot of s5"
+  }
+ ]
+}

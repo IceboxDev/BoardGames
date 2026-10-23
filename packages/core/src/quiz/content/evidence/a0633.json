@@ -1,0 +1,249 @@
+{
+ "article": "a0633",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Inguinal_hernia_surgery",
+   "title": "Inguinal hernia surgery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:35.129Z",
+   "snapshot": "783323a312d5897fc85d2d7b180b32a3e6c3b8140dd5e2f3d94c6be0e5a559e8"
+  },
+  "s2": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3021337/",
+   "title": "Laparoscopic Versus Open Umbilical Hernia Repair – PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:32.357Z",
+   "snapshot": "77b9f4619b8d59f43a7f86a222326f1b85da183acadf62d89a58d6edec6115f9"
+  },
+  "s3": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4663383/",
+   "title": "Evolution and advances in laparoscopic ventral and incisional hernia repair – PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:33.291Z",
+   "snapshot": "976090db767b0a5b448db7bfc679dae2aeb3724e7ede4370b04bf81c1e0b24fa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nissen_fundoplication",
+   "title": "Nissen fundoplication – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:36.042Z",
+   "snapshot": "161d3643719301ace4593d3123f9f1a19389d6bb9050b544a0c20ebdf747f552"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Lotheissen",
+   "title": "Georg Lotheissen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:37.032Z",
+   "snapshot": "417d35871775fc355619e8c7416bb1c28186f4878bd101357d72ea6577663e28"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Inguinal_hernia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:38.188Z",
+   "snapshot": "701bb87f4a963b488e39cec89e36cbcbfea1f633cc81d191b0f7615cadbb248c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Inguinal hernia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c053"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Umbilical hernia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Incisional hernia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hiatal hernia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Femoral hernia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:17.557Z",
+   "target": "f03161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Inguinal hernia surgery is an operation to repair a weakness in the abdominal wall that abnormally allows abdominal contents to slip into a narrow tube called the inguinal canal in the groin region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inguinal hernia” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:17.557Z",
+   "target": "f03162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Laparoscopic Versus Open Umbilical Hernia Repair - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Umbilical hernia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:17.557Z",
+   "target": "f03163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Evolution and advances in laparoscopic ventral and incisional hernia repair - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Incisional hernia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:17.557Z",
+   "target": "f03164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Nissen fundoplication, or laparoscopic Nissen fundoplication when performed via laparoscopic surgery, is a surgical procedure to treat gastroesophageal reflux disease (GERD) and hiatal hernia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hiatal hernia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:17.557Z",
+   "target": "f03165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This surgery involves operating for femoral hernia through the posterior wall of the inguinal canal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Femoral hernia” is on the snapshot of s5"
+  }
+ ]
+}

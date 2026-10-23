@@ -1,0 +1,852 @@
+{
+ "article": "a0602",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/evergreen",
+   "title": "evergreen – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/ZDF-Hitparade",
+   "title": "ZDF-Hitparade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:30.447Z",
+   "snapshot": "7fbfc8e116f15523e474060962a491cc957a0801299ad372ef0d988d7adb932b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Single_(music)",
+   "title": "Single (music) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:33.447Z",
+   "snapshot": "0b2ca007d656d36349d30ee357059f5e7f318ee00b2848c86e5b2eb83a9b77b3"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/cover",
+   "title": "cover – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/trailer",
+   "title": "trailer – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/evergreen",
+   "title": "evergreen – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:23.641Z",
+   "snapshot": "c982d59c0073b049837c44d565a7ae488c939a4c71d03a708102a617548dc7b6"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Evergreen",
+   "title": "Evergreen – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:24.259Z",
+   "snapshot": "d5b42b73dca984841237d90b596fdc4b1e659e3a44447d617cc63e14a966755a"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/hit",
+   "title": "hit – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:24.889Z",
+   "snapshot": "e7744c470b310905573feaf9834b634127ec0057e7bf51a08404850050dda739"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Hit",
+   "title": "Hit – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:25.066Z",
+   "snapshot": "30e027e7124957fff2fa5485c2f047649b0a3882309d6209170a26570ec16a8b"
+  },
+  "s10": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/cover",
+   "title": "cover – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:25.917Z",
+   "snapshot": "bfc5245f4a5ca96fd279625d51c0468e1f8a6097a530045b3d434ee8cb20340b"
+  },
+  "s11": {
+   "url": "https://www.duden.de/rechtschreibung/Cover",
+   "title": "Cover – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:25.654Z",
+   "snapshot": "fb6f2afe296295728a1d9bd79eb672b07774e1d46b91a20e5843d0a2c1a4db52"
+  },
+  "s12": {
+   "url": "https://www.duden.de/rechtschreibung/Coverversion",
+   "title": "Coverversion – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:27.233Z",
+   "snapshot": "1beb04b49f9ea739af23847b0c41204e35e231ebedd899f803a799943b1c8a69"
+  },
+  "s13": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/trailer",
+   "title": "trailer – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:26.695Z",
+   "snapshot": "dbe0d57394aa1d2725e905e623463d0e3d875310b8d2aa610b1cd9d0dd09d10f"
+  },
+  "s14": {
+   "url": "https://www.duden.de/rechtschreibung/Trailer",
+   "title": "Trailer – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:28.233Z",
+   "snapshot": "43c691f60d9c291e7e7746d0c461aaf2820f832b9f64a7df2aa742105a3d45ba"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Evergreen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Single",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Trailer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:12.748Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Hit”, “хит”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.748Z",
+   "target": "f03008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In music, a single is a type of release of a song recording of fewer tracks than an album (LP).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Single” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:51:07Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "always seeming fresh or remaining popular:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23",
+   "note": "second sense; first sense on the same page: 'An evergreen plant, bush, or tree has leaves for the whole year.'"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:51:11Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An evergreen plant, bush, or tree has leaves for the whole year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:51:15Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Musikstück, das lange Zeit beliebt bleibt und immer wieder gespielt wird",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:18Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "to touch something with sudden force:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:51:21Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a thing or person that is very popular or successful:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:24Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "englisch hit, eigentlich = Schlag, Treffer, Stoß",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:51:28Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "besonders erfolgreiches Musikstück, häufig gespielter Titel moderner Musik",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:51:31Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the stiff outside part of a book or magazine, usually made of thick paper or cardboard:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:51:34Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "to make a recording of a song or tune that has already been recorded by someone else:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:51:39Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titelseite, Titelbild, Titelblatt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:51:43Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "(in der Unterhaltungsmusik) Fassung eines älteren Titels mit [einem] anderen Interpreten",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:51:47Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "a box on wheels that is pulled by a car and is used for taking things from one place to another:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:51:52Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "an advertisement for a film or a television or radio programme, consisting of short parts taken from it:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:51:56Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "werbende Ankündigung eines Films, einer Fernsehserie o. Ä. durch einen Spot aus zusammengestellten Szenen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An evergreen plant, bush, or tree has leaves for the whole year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Musikstück, das lange Zeit beliebt bleibt und immer wieder gespielt wird",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a thing or person that is very popular or successful:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "besonders erfolgreiches Musikstück, häufig gespielter Titel moderner Musik",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "to make a recording of a song or tune that has already been recorded by someone else:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titelseite, Titelbild, Titelblatt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "(in der Unterhaltungsmusik) Fassung eines älteren Titels mit [einem] anderen Interpreten",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s12"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "an advertisement for a film or a television or radio programme, consisting of short parts taken from it:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s13"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "werbende Ankündigung eines Films, einer Fernsehserie o. Ä. durch einen Spot aus zusammengestellten Szenen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s14"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "EVERGREEN | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Evergreen” is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Evergreen ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Evergreen” is on the snapshot of s7"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "HIT | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hit” is on the snapshot of s8"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Hit ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hit” is on the snapshot of s9"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "COVER | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cover” is on the snapshot of s10"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Cover ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cover” is on the snapshot of s11"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "TRAILER | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Trailer” is on the snapshot of s13"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:53:39.106Z",
+   "target": "f03010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Trailer ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Trailer” is on the snapshot of s14"
+  }
+ ]
+}

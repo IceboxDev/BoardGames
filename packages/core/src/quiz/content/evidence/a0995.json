@@ -1,0 +1,461 @@
+{
+ "article": "a0995",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Plankton",
+   "title": "Plankton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:09.209Z",
+   "snapshot": "35e27c164b3e1d73d6172f54c19321983d13d769beb39fb4fd05c88a1fead6bd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nekton",
+   "title": "Nekton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:10.033Z",
+   "snapshot": "021209ff2e7c17fa8bf94d7e286d15c21101555ddcf2099d2b5babeea2bd8558"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Benthic_zone",
+   "title": "Benthic zone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:11.111Z",
+   "snapshot": "53383252fa9f0e094ee4f289832259e18a3b2a4ed367456a1f66c8e7908745ee"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ichthyostega",
+   "title": "Ichthyostega – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:12.019Z",
+   "snapshot": "56b865b3f5a9c0a08c957a1041f726b9e4af62fd97dd3ef6d403d6ff56aaaca5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Antarctic_krill",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:13.154Z",
+   "snapshot": "881e75b84710770ce046329bdf8e9cffcd8cdebd94bae4d504de01ad1a3ae68a"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Nekton",
+   "title": "Nekton – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:09.047Z",
+   "snapshot": "265b684c8f497755d4c1a13033782ce21921e47b9e401d19f1ebba47e54181e0"
+  },
+  "s7": {
+   "url": "https://archive.org/details/planktonstudienv00haecuoft",
+   "title": "Plankton-Studien (Haeckel), Internet Archive record",
+   "publisher": "Internet Archive (University of Toronto copy)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:09.387Z",
+   "snapshot": "3488220b36615c6749cfdbd23ae9766f97b5705279e4bb3be4da3c02fbbf7bfd"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Nekton",
+   "title": "Nekton – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:08.056Z",
+   "snapshot": "150be7cdfac090104e18f681e39ecd6373ff69fe734cfe772a87dbebfb9392da"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "plankton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "nekton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "benthos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "amphibians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:16.996Z",
+   "target": "f04971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Plankton (from the Greek planktos, meaning \"drifter\" or \"wanderer\") are organisms that drift in water (or air) but are unable to actively propel themselves against currents (or wind).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “plankton” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:16.996Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nekton or necton (from the Ancient Greek: νηκτόν, romanized: nekton, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nekton” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:16.996Z",
+   "target": "f04973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The benthic zone, from Ancient Greek  βένθος (bénthos) 'the depths of the ocean', is the ecological region at the lowest level of a body of water, such as a stream, river, lake, or ocean, including the sediment surface and some sub-surface layers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “benthos” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:16.996Z",
+   "target": "f04975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Likewise, while undoubtedly of amphibian build and habit, it is not a true member of the group in the narrow sense, as the first modern amphibians (members of the group Lissamphibia) appeared in the Triassic Period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “amphibians” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:16:16Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The term was proposed by German biologist Ernst Haeckel to differentiate between the active swimmers in a body of water , and the plankton that are passively carried along by the current.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:16:23Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gesamtheit der im Wasser lebenden, aktiv schwimmenden Tiere",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:30Z",
+   "target": "f04972",
+   "claim": "body-number",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Publication date 1890",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "Haeckel introduced \"Nekton\" in Plankton-Studien (Jena: G. Fischer, 1890), not 1891; body and timeline corrected to 1890."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:37Z",
+   "target": "f04972",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Terminus „Nekton“ wurde 1890 von Ernst Haeckel in seinem Buch Plankton-Studien eingeführt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the corrected year 1890."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:17:38Z",
+   "target": "f04972",
+   "claim": "body-number",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The term was first proposed and used by the German biologist Ernst Haeckel in 1891 in his article Plankton-Studien",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "Year conflict: Plankton-Studien came out as a separate book (Jena: G. Fischer) dated 1890 and in the Jenaische Zeitschrift volume dated 1891. The bank now gives the earlier date, 1890 (also de.wikipedia); 1891 is the journal date."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gesamtheit der im Wasser lebenden, aktiv schwimmenden Tiere",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "body-number",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Publication date 1890",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Terminus „Nekton“ wurde 1890 von Ernst Haeckel in seinem Buch Plankton-Studien eingeführt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "body-number",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The term was first proposed and used by the German biologist Ernst Haeckel in 1891 in his article Plankton-Studien",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nekton ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nekton” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "nekton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“nekton”, “Nekton”, “нектон”) on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:48.192Z",
+   "target": "f04972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Unter Nekton (zu altgriechisch νηκτόν nekton, deutsch ‚das Schwimmende‘, ‚die Schwimmkraft‘) versteht man die „Schwimmwelt“, d.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nekton” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1181",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Halma",
+   "title": "Halma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:46.853Z",
+   "snapshot": "09c97135a028943b42762c7b4f57d6ea8a4a852fecf5a4cefc386f2dfe603e00"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Landlord's_Game",
+   "title": "The Landlord's Game – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:47.852Z",
+   "snapshot": "aea55aa1e19968ad12a43af4245cb4b7ae7f3491f344f70a9e5f3de1a649d51e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Risk_(game)",
+   "title": "Risk (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:48.884Z",
+   "snapshot": "42ff97b7e8ff6c820eb57d8aed0bfe57fc0ea171431802d21ac5dc107f132945"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chinese_checkers",
+   "title": "Chinese checkers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:49.882Z",
+   "snapshot": "20d95351b2312f6ba55a7112b0b8b7758859e36b28063137b08b66e58704b0f2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/George_Howard_Monks",
+   "title": "George Howard Monks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:50.872Z",
+   "snapshot": "4c8d1c2cad0c3e6d41f0bdfb00f4f34659fcf395bb048d59f7f96eb8021aaa26"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Halma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Monopoly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Risk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chinese Checkers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thomas Hill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:44.695Z",
+   "target": "f05901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Halma (from Greek: ἅλμα, romanized: hálma, meaning “leap\") is a strategy board game invented in 1883 or 1884 by George Howard Monks, an American thoracic surgeon at Harvard Medical School.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halma” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:44.695Z",
+   "target": "f05902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A realty and taxation game intended to educate users about Georgism, it is the inspiration for the 1935 board game Monopoly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monopoly” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:44.695Z",
+   "target": "f05904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Risk is a strategy board game of diplomacy, conflict and conquest for two to six players.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Risk” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:44.695Z",
+   "target": "f24100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chinese checkers (US) or Chinese chequers (UK), known as Sternhalma in German, is a strategy board game of German origin that can be played by two, three, four, or six people, playing individually or with partners.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chinese Checkers” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:44.695Z",
+   "target": "f24101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Subsequently, he followed a 4-year internship in European medical centers during which he invented in 1883 the game Halma (ancient Greek for “jump”) derived from the British game Hoppity together with the mathematician Thomas Hill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Hill” is on the snapshot of s5"
+  }
+ ]
+}

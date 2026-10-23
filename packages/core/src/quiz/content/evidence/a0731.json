@@ -1,0 +1,256 @@
+{
+ "article": "a0731",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mint_julep",
+   "title": "Mint julep – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:20.204Z",
+   "snapshot": "7502db7d5d39de3a01e885b5d934663348373e5bb67b63378be7ba8a2a4f5bf3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pesto",
+   "title": "Pesto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:21.194Z",
+   "snapshot": "c4337cc1a1fd6df629908352fdae4358e8444b53fc6949d537c75d932cdd1cc8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Tale_of_Peter_Rabbit",
+   "title": "The Tale of Peter Rabbit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:22.212Z",
+   "snapshot": "e95395634fa8078e76bbcdb0c2a7ed3707c1bea30476882004b63d7f25d86dd5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hops",
+   "title": "Hops – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:23.286Z",
+   "snapshot": "a0543e54b865206ef565e798e7f884599575e93435e139711a0e21fbc7d61834"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gin",
+   "title": "Gin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:24.287Z",
+   "snapshot": "d9fdfe39d8da375afa6bfa11fbf414ead9c938bce85ec4be822fce5f0add83d5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moroccan_mint_tea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:25.216Z",
+   "snapshot": "5cc9baf1662648f074baa9c58444e1054a86e5d5d0a9af46b0687dad380d6ac7"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Echte_Kamille",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:16:22.539Z",
+   "snapshot": "903bfa82ee4329df28cf03302c53fdd131ca4a1f8dea874c7ed57af7ea4a6171"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Basil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chamomile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hops",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Juniper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:35.111Z",
+   "target": "f03651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mint julep is an alcoholic cocktail, consisting primarily of bourbon, sugar, water, crushed or shaved ice, and fresh mint.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mint” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:35.111Z",
+   "target": "f03652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pesto (Italian: [ˈpesto]), also known as pesto genovese, is an Italian paste traditionally made with leaves of Genovese basil, extra virgin olive oil, Parmesan (alternatively Grana Padano), pecorino sardo, pine nuts, and garlic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basil” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:35.111Z",
+   "target": "f03653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He escapes and returns home to his mother, who puts him to bed after offering him chamomile tea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chamomile” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:35.111Z",
+   "target": "f03654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hops are the green flowers (also called seed cones or strobiles) of the hop plant Humulus lupulus, a member of the Cannabaceae family of flowering plants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hops” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:35.111Z",
+   "target": "f03655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gin () is a distilled alcoholic drink flavoured with juniper berries and other botanical ingredients.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juniper” is on the snapshot of s5"
+  }
+ ]
+}

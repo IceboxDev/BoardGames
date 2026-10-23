@@ -1,0 +1,453 @@
+{
+ "article": "a0581",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Uno_(card_game)",
+   "title": "Uno (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:09.225Z",
+   "snapshot": "769ceed359083eaa2b610de7eaedb755b44b87ff743bcefc446644fd68b402ab"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Magic:_The_Gathering",
+   "title": "Magic: The Gathering – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:10.272Z",
+   "snapshot": "bd720061fc79b16cb0adc0dc30c0b4d011a98e3ace5c0564f37164bf320ea6cb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dominion_(card_game)",
+   "title": "Dominion (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:11.119Z",
+   "snapshot": "9c3f043bccfd9d3fd641086bd9e9e5f120018fa6e8ee630702feadce6be67268"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Exploding_Kittens",
+   "title": "Exploding Kittens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:12.096Z",
+   "snapshot": "78df6d20007b3dcbb10098fb566d87d845176d8c95a5cb067d69d7539525e42a"
+  },
+  "s5": {
+   "url": "https://www.museumofplay.org/toys/uno/",
+   "title": "Uno – National Toy Hall of Fame",
+   "publisher": "The Strong National Museum of Play",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:14.831Z",
+   "snapshot": "059509542a19ebd08c9ec63c2284e453ffb0ba1245e425a11928ba8e4235f948"
+  },
+  "s6": {
+   "url": "https://www.letsplayuno.com/",
+   "title": "UNO! – Official UNO mobile game",
+   "publisher": "Mattel163 (official UNO licensee)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:13.190Z",
+   "snapshot": "6a9128ebf6c40f1446cb08d8fcfb7cc551f3d9e069c91cd7b21e392468397103"
+  },
+  "s7": {
+   "url": "https://www.museumofplay.org/toys/magic-the-gathering/",
+   "title": "Magic: The Gathering – National Toy Hall of Fame",
+   "publisher": "The Strong National Museum of Play",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:14.885Z",
+   "snapshot": "e00d3ddf39ae0bb968d284659408301c9699884847e08dfaf1f712e56b5df8ab"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uno",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Magic: The Gathering",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dominion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Exploding Kittens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:09.984Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uno ( ; from Spanish and Italian for 'one'), stylized in all caps as UNO, is a proprietary American shedding-type card game originally developed in 1971 by Merle Robbins in Reading, Ohio, a suburb of Cincinnati, that housed International Inc., a gaming company acquired by Mattel on January 23, 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uno” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:09.984Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Magic: The Gathering (colloquially known as Magic or MTG) is a collectible, tabletop, and digital collectible card game created by Richard Garfield.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magic: The Gathering” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:09.984Z",
+   "target": "f02904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dominion is a card game created by Donald X.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dominion” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:09.984Z",
+   "target": "f02905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Exploding Kittens is a casual dedicated deck card game designed by Matthew Inman of The Oatmeal webcomic, Elan Lee and Shane Small, and first published in 2015.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exploding Kittens” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:41:34Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2017 Uno was officially branded the #1 selling card game in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:41:36Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "UNO!™ - The World’s #1 Card Game",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Publisher-side marketing claim; independent sales audits are not public."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:41:38Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Magic: The Gathering was unlike any previous card game when it was introduced in 1993. Inventor Richard Garfield loved games.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:41:39Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "As devoted players bought cards, saved cards, traded cards, and bought more cards, the collectible card game genre was born.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:41:41Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was released by Wizards of the Coast in 1993 as the company's first trading card game.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2017 Uno was officially branded the #1 selling card game in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "UNO!™ - The World’s #1 Card Game",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "As devoted players bought cards, saved cards, traded cards, and bought more cards, the collectible card game genre was born.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was released by Wizards of the Coast in 1993 as the company's first trading card game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Uno - The Strong National Museum of Play",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uno” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "UNO!™ – the Official UNO mobile game",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uno” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:35.558Z",
+   "target": "f02902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Magic: The Gathering | Toy Hall of Fame | The Strong",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Magic: The Gathering” is on the snapshot of s7"
+  }
+ ]
+}

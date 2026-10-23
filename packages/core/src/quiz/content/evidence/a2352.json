@@ -1,0 +1,358 @@
+{
+ "article": "a2352",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Vereinigte_Arabische_Emirate",
+   "title": "Vereinigte Arabische Emirate",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:37.626Z",
+   "snapshot": "e49cc812087175500b2339edd8094962ec4a33d0b2020fc5320bc46c8f52bec0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates",
+   "title": "United Arab Emirates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:35.603Z",
+   "snapshot": "ca993b7b0b6cf578c180f92fc4e04d68a30448cb2399580fe3440fc00c6a381b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Constitution_of_the_United_Arab_Emirates",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:41.262Z",
+   "snapshot": "585b0902095994062563f6bc2f8b8a7a7711612d29dc1ad3337942c900941c4d"
+  },
+  "s4": {
+   "url": "https://www.thenationalnews.com/uae/heritage/significant-dates-in-uae-history-1.357047/",
+   "title": "Significant dates in UAE history",
+   "publisher": "The National (Abu Dhabi)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:51.774Z",
+   "snapshot": "b05e686b8912f4fc452480503221e59ac2511f5cf4b330e57ccafe312d1d46c3"
+  },
+  "s5": {
+   "url": "https://gulfnews.com/uae/uae-federation-timeline-1.1096180",
+   "title": "UAE federation timeline",
+   "publisher": "Gulf News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:52.221Z",
+   "snapshot": "4d3796275c2c1c34a3af221854c44c98c1d769fd5dd00a61bb0f52cb73c6b1af"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sechs Emirate",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ras al-Khaimah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zayed bin Sultan Al Nahyan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Abu Dhabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bahrain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:02.906Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sechs Emirate",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sechs Emirate”, “Six emirates”, “Шесть эмиратов”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:02.906Z",
+   "target": "f12248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The United Arab Emirates is named after the seven emirates that formed a federation: the Emirate of Abu Dhabi, the Emirate of Dubai, the Emirate of Ajman, the Emirate of Sharjah, the Emirate of Ras Al Khaimah, the Emirate of Umm Al Quwain, and the Emirate of Fujairah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ras al-Khaimah” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:02.906Z",
+   "target": "f12249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zayed bin Sultan Al Nahyan, ruler of Abu Dhabi and the country's first president (1971–2004), oversaw rapid development of the Emirates by investing revenues from newly found oil into healthcare, education, and infrastructure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zayed bin Sultan Al Nahyan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:02.906Z",
+   "target": "f12250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is a federal semi-constitutional monarchy made up of seven emirates, with Abu Dhabi serving as its national capital.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abu Dhabi” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:02.906Z",
+   "target": "f12251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Originally intended to be part of the proposed Federation of Arab Emirates, Bahrain became independent in August, and Qatar in September 1971.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bahrain” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:59:35Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das heutige politische System gründet auf der Verfassung von 1971 (das siebte Emirat Ra’s al-Chaima kam 1972 dazu).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Seven emirates today, the seventh joined in 1972 → six in 1971."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:59:37Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "December 2 Formation of the United Arab Emirates in Dubai (with the exception of Ras Al Khaimah, which will join on February 10, 1972).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "All seven emirates except Ras Al Khaimah = six founding emirates."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:59:39Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On February 10, 1972, Ras Al Khaimah joined the Federation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:47.706Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das heutige politische System gründet auf der Verfassung von 1971 (das siebte Emirat Ra’s al-Chaima kam 1972 dazu).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:47.706Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "December 2 Formation of the United Arab Emirates in Dubai (with the exception of Ras Al Khaimah, which will join on February 10, 1972).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:47.706Z",
+   "target": "f12247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On February 10, 1972, Ras Al Khaimah joined the Federation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  }
+ ]
+}

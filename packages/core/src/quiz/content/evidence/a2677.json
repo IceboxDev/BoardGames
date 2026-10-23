@@ -1,0 +1,289 @@
+{
+ "article": "a2677",
+ "sources": {
+  "s1": {
+   "url": "https://www.konrad-adenauer.de/zitate/",
+   "title": "Zitate – Konrad Adenauer",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:21.737Z",
+   "snapshot": "bbd18deda9013d2a58e0e3e714024ec3927aae46b785dab415d633eca890f5c4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Rolf_Hochhuth",
+   "title": "Rolf Hochhuth",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:20.858Z",
+   "snapshot": "af109d5a1718d2553a0f1aa76526ae68f472e57799d15c787d84aa0d78bc7203"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Mehr_Demokratie_wagen",
+   "title": "Mehr Demokratie wagen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:23.855Z",
+   "snapshot": "397b9eae6dbf4dfcbc694ecd822bc6ec27b4ccd7e81e00472b4e9f4350c29960"
+  },
+  "s4": {
+   "url": "https://de.wikiquote.org/wiki/Helmut_Schmidt",
+   "title": "Helmut Schmidt – Wikiquote",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:22.236Z",
+   "snapshot": "6925ba50098d3f7530faa206f9321e45f591d1ea401750743568005afeb15928"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bl%C3%BChende_Landschaften",
+   "title": "Blühende Landschaften – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:38.200Z",
+   "snapshot": "5e9f89f1cbec2b31a887fb2ac77b700206b3290204c556efedda0aa873686e6b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wir_schaffen_das",
+   "title": "Wir schaffen das – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:45.410Z",
+   "snapshot": "3fad0143935da5059b27910ab567c862e45f6b8b515f9543d568cc94e5c8906b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-361"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ludwig Erhard",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-005"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willy Brandt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helmut Kohl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Angela Merkel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.707Z",
+   "target": "f14542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dieses Zitat von Konrad Adenauer vom 28.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.707Z",
+   "target": "f14543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Großes Aufsehen erregte wenige Wochen später eine Replik von Bundeskanzler Ludwig Erhard.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Erhard” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:56.707Z",
+   "target": "f14544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "„Wir wollen mehr Demokratie wagen“ sagte Willy Brandt, als erster Sozialdemokrat zum Bundeskanzler der Bundesrepublik Deutschland gewählt, in seiner Regierungserklärung vom 28.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:56.707Z",
+   "target": "f14545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aber jetzt müssen wir aufpassen, daß wir nicht die Ausländer diesen Fehler entgelten lassen.\" Helmut Schmidt als Bundeskanzler 1981 - Der Spiegel https://www.spiegel.de/spiegel/print/d-14351381.html",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:56.707Z",
+   "target": "f14546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Blühende Landschaften ist ein 1990 vom damaligen deutschen Bundeskanzler Helmut Kohl geprägtes Schlagwort, das eine ökonomische Zukunftsperspektive für die neuen Bundesländer beschreibt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:56.707Z",
+   "target": "f14547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "„Wir schaffen das!“ ist ein Ausspruch, den die damalige deutsche Bundeskanzlerin Angela Merkel in der Bundespressekonferenz am 31.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angela Merkel” is on the snapshot of s6"
+  }
+ ]
+}

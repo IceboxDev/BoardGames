@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-032",
+ "image": "IMG20261022010932.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which living bird is known for having the largest wingspan?\nA. Albatross B. Bald Eagle C. Condor\nAnswer: A. The wandering albatross has the largest wingspan of any living bird, typically ranging from 8.2 to 11.5 feet (2.51 to 3.5 meters).",
+   "de": "Welcher heute lebende Vogel hat die größte Flügelspannweite?",
+   "en": "Which living bird has the largest wingspan of any bird alive today?",
+   "reworked": true,
+   "answerDe": "Wanderalbatros",
+   "answerEn": "Wandering albatross",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1758",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Linnaeus first describes the wandering albatross as Diomedea exulans",
+    "labelDe": "Linné beschreibt den Wanderalbatros erstmals als Diomedea exulans"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Snowy_albatross",
+    "title": "Snowy albatross",
+    "lang": "en"
+   },
+   "notes": "Diomedea exulans; English Wikipedia now titles it 'snowy albatross' (also wandering albatross). Record wingspan up to about 3.7 m; the southern royal albatross comes close. Accept 'albatross'.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 2,
+   "discipline": "Epidemiology",
+   "cardText": "[Epidemiology] Which historical figure used a map with dots to mark cases to trace the source of a cholera outbreak to a contaminated water pump in London?\nA. Florence Nightingale\nB. John Snow\nC. Louis Pasteur\nAnswer: B. John Snow is often hailed as the father of modern epidemiology because of his innovative use of data visualization. His work dramatically reduced the spread of cholera and saved countless lives.",
+   "de": "Welcher Arzt verfolgte 1854 mit einer Karte, auf der Punkte die Erkrankten markierten, einen Cholera-Ausbruch im Londoner Stadtteil Soho bis zu einer verseuchten Wasserpumpe zurück?",
+   "en": "Which physician used a map with dots marking the cases to trace the 1854 cholera outbreak in London's Soho to a contaminated water pump?",
+   "reworked": true,
+   "answerDe": "John Snow",
+   "answerEn": "John Snow",
+   "timeline": {
+    "kind": "event",
+    "start": "1854-08-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Start of the Broad Street cholera outbreak in Soho, London, traced by John Snow to a public water pump",
+    "labelDe": "Beginn des Cholera-Ausbruchs in der Broad Street in Soho, London, den John Snow auf eine öffentliche Wasserpumpe zurückführte"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+    "title": "1854 Broad Street cholera outbreak",
+    "lang": "en"
+   },
+   "notes": "The pump stood on Broad Street (now Broadwick Street), Soho. John Snow (1813–1858), English physician.",
+   "domain": "science",
+   "sub": "medicine"
+  }
+ ]
+}

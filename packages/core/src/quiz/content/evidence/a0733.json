@@ -1,0 +1,249 @@
+{
+ "article": "a0733",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hair_(musical)",
+   "title": "Hair (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:32.610Z",
+   "snapshot": "d2373ffdda6617f67fe879ede55c39f0a337399c9b20bdb340ba992568fddfc7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cats_(musical)",
+   "title": "Cats (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:33.430Z",
+   "snapshot": "7a2a3bd99190e6aaeaf116bbfbbbbeed2da38f4ddf57ad1f29ba126d1d5e28af"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Evita_(musical)",
+   "title": "Evita (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:34.328Z",
+   "snapshot": "1939a0904d048538c45af45e2e20866dcf05eb4edfcfcf8310443338e59229be"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/West_Side_Story",
+   "title": "West Side Story – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:35.430Z",
+   "snapshot": "25ee58f1913805bba341b843169ccdafb0c718123284e1f8e6f007e73e8b91b7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Grease_(musical)",
+   "title": "Grease (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:36.434Z",
+   "snapshot": "da443e3274f74aa8ea9c984c38d2a9ce6d760a430fce37cdbd3ca7bed2130bf5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Memory_(Cats_song)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:37.209Z",
+   "snapshot": "2cfaf5f2bfff3d936aeceeb1dddb3d4693d724018cb91e0ecf28134c2812bfdd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-047"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Evita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "West Side Story",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:35.885Z",
+   "target": "f03661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hair: The American Tribal Love-Rock Musical is a rock musical with a book and lyrics by Gerome Ragni and James Rado and music by Galt MacDermot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hair” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:35.885Z",
+   "target": "f03662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cats is a sung-through musical with music by Andrew Lloyd Webber.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cats” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:35.885Z",
+   "target": "f03663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Evita is a sung-through musical with music by Andrew Lloyd Webber and lyrics by Tim Rice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evita” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:35.885Z",
+   "target": "f03664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "West Side Story is a musical conceived by Jerome Robbins with music by Leonard Bernstein, lyrics by Stephen Sondheim, and a book by Arthur Laurents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “West Side Story” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:35.885Z",
+   "target": "f03665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grease is a 1971 musical with music, lyrics, and a book by Jim Jacobs and Warren Casey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:35.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grease” is on the snapshot of s5"
+  }
+ ]
+}

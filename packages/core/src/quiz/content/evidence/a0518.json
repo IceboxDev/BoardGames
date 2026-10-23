@@ -1,0 +1,289 @@
+{
+ "article": "a0518",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Deutschland._Ein_Winterm%C3%A4rchen",
+   "title": "Deutschland. Ein Wintermärchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:51.550Z",
+   "snapshot": "c60dc9eebd56fc86279e48bd24d353d744512a9e2e9d54110212caac0753ac23"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Atta_Troll",
+   "title": "Atta Troll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:52.225Z",
+   "snapshot": "443ae9f11f35a545521b8bdde58ca84e6748170a2c8b51cbb78e0e967be6af5d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Buch_der_Lieder_(Heine)",
+   "title": "Buch der Lieder (Heine) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:53.173Z",
+   "snapshot": "e1bc30ef07a4eb051a856594a6e8eb0689860c7767a58f93b11fd3b46ea8a9c3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_schlesischen_Weber",
+   "title": "Die schlesischen Weber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:54.151Z",
+   "snapshot": "31c04318a9199cdf9f03d01a0f3b58d7da0bb79ea815d1175718ba37c3a97370"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Harzreise",
+   "title": "Die Harzreise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:55.595Z",
+   "snapshot": "663162cee0a829e78563b155f1a79605127e107ceac4225f5c957203903c7d15"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Heinrich_Heine",
+   "title": "Heinrich Heine",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:30:21.807Z",
+   "snapshot": "1c305a332149192f90b0283f26fef6117707ffecb4610cb459dca684abfe3dcc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deutschland. Ein Wintermärchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Atta Troll",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buch der Lieder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die schlesischen Weber",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Harzreise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Düsseldorf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-252"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:01.035Z",
+   "target": "f02586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deutschland. Ein Wintermärchen (1844) ist ein satirisches Versepos des deutschen Dichters Heinrich Heine (1797–1856).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutschland. Ein Wintermärchen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:01.035Z",
+   "target": "f02587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "und wie allen großen Werken der Deutschen, wie dem Kölner Dome, dem Schellingschen Gotte, der preußischen Konstitution usw., ging es auch dem »Atta Troll« – er ward nicht fertig.“ Im letzten Kapitel (Caput XXVII) schreibt Heine: „Ach, es ist vielleicht das letzte / Freie Waldlied der Romantik“,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atta Troll” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:01.035Z",
+   "target": "f02588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Buch der Lieder war Heinrich Heines erster großer Gedichtband, in dem er alle seine zu der Zeit bekannten Gedichte zusammenfasste.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buch der Lieder” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:01.035Z",
+   "target": "f02589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Gedicht Die schlesischen Weber (auch Weberlied) von Heinrich Heine ist beispielhaft für die politische Lyrik des Vormärz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die schlesischen Weber” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:01.035Z",
+   "target": "f02590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Harzreise ist der Titel des ersten Reiseberichts Heinrich Heines, den er als Göttinger Student nach einer Wanderung im Herbst 1824 verfasst hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Harzreise” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:01.035Z",
+   "target": "f12951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dezember 1797 als Harry Heine in Düsseldorf, Herzogtum Berg; † 17.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Düsseldorf” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0685",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Don_Giovanni",
+   "title": "Don Giovanni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:06.246Z",
+   "snapshot": "a7b00214d5d4a394a4bfcd20bc56d95e95d7d1d22f8510a228aacac48a462177"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Marriage_of_Figaro",
+   "title": "The Marriage of Figaro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:07.306Z",
+   "snapshot": "35ee161345a5d8f834d9de59666c0aa3da7cf3d40efd4dc09c9506c32a5da762"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cos%C3%AC_fan_tutte",
+   "title": "Così fan tutte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:08.215Z",
+   "snapshot": "1204f37df67034ef4319d877c2d30ae469dafed1754789932081f915ea72db3d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Die_Entf%C3%BChrung_aus_dem_Serail",
+   "title": "Die Entführung aus dem Serail – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:09.228Z",
+   "snapshot": "3415d19e2f514591668932e6b552224e88c2a70cf0d579ccb02e0e65c0f8535b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Magic_Flute",
+   "title": "The Magic Flute",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:32.110Z",
+   "snapshot": "bec17a966b9a136ae6b43ec286c742a8b56490dc2013a4a4aa81b5687dd664ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Don Giovanni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Marriage of Figaro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Così fan tutte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Abduction from the Seraglio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wolfgang Amadeus Mozart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-144"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:26.623Z",
+   "target": "f03421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Don Giovanni (Italian pronunciation: [ˈdɔn dʒoˈvanni]; K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Don Giovanni” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:26.623Z",
+   "target": "f03422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Marriage of Figaro (Italian: Le nozze di Figaro, pronounced [le ˈnɔttse di ˈfiːɡaro] ), K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Marriage of Figaro” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.623Z",
+   "target": "f03424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Così fan tutte, ossia La scuola degli amanti (Women are like that, or The School for Lovers), K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Così fan tutte” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.623Z",
+   "target": "f03425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "384; The Abduction from the Seraglio; also known as Il Seraglio) is a singspiel in three acts by Wolfgang Amadeus Mozart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Abduction from the Seraglio” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.623Z",
+   "target": "f25705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "620, is an opera in two acts by Wolfgang Amadeus Mozart to a German libretto by Emanuel Schikaneder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Amadeus Mozart” is on the snapshot of s5"
+  }
+ ]
+}

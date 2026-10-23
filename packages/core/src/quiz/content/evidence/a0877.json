@@ -1,0 +1,296 @@
+{
+ "article": "a0877",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Balalaika",
+   "title": "Balalaika – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:14.221Z",
+   "snapshot": "21fefe460a0a35f4999884bf452a758c56aae7f9244c297bb578dcaccec47cbf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ukulele",
+   "title": "Ukulele – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:15.261Z",
+   "snapshot": "7428ebbfc100389ac6637ae5785cdf33d25e176bec4ac30b06b9c76b8d65cb62"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bouzouki",
+   "title": "Bouzouki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:16.214Z",
+   "snapshot": "ed6ca1b8797d3f37121efc378f6732cc9111751297c9c4d4599f10524e4070a1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ravi_Shankar",
+   "title": "Ravi Shankar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:17.334Z",
+   "snapshot": "62693782bdf936060bf91db4e6ca02e191be337c889ef4dee865b5d16740d5ea"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Leier_(Zupfinstrument)",
+   "title": "Leier (Zupfinstrument)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:14.621Z",
+   "snapshot": "1f793813b92122fa987d4ed5e4208757bdd8f1e893ef2af09efb5626b70a4c07"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nokia_tune",
+   "title": "Nokia tune",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:18.204Z",
+   "snapshot": "625ab6936904c66658a8d0fcbbf6473655dbe785e03a48f164dabccc4d924848"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Lyre",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:19.388Z",
+   "snapshot": "6f5da4e24176ebec3d3c1b855262c2a66d8a1c829f3d0bd43b6364fc314ceb84"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Balalaika",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ukulele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bouzouki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zupfinstrumente",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-201"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Guitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-002"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:58.606Z",
+   "target": "f04381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The balalaika (Russian: балала́йка, pronounced [bəɫɐˈɫajkə])  is a Russian stringed musical instrument with a characteristic triangular wooden, hollow body, fretted neck, and three strings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Balalaika” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:58.606Z",
+   "target": "f04382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The ukulele ( YOO-kə-LAY-lee; Hawaiian: [ʔukulele]), also called a uke (informally), is a member of the lute (ancestor of the guitar) family of instruments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ukulele” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:58.606Z",
+   "target": "f04383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The bouzouki (, also US: ; Greek: μπουζούκι [buˈzuki]; plural.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bouzouki” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:58.606Z",
+   "target": "f04384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A sitar virtuoso, he was, together with sarod virtuoso Ali Akbar Khan, among the most prominent exponents of Hindustani classical music in the second half of the 20th century, and played a major role in bringing Indian classical music to international audiences.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sitar” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:58.606Z",
+   "target": "f13016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leiern und andere Zupfinstrumente gehören in allen Kulturen von der prähistorischen Zeit bis in die Gegenwart zur Begleitung von Liedern und damit zur Weitergabe von Erzählungen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zupfinstrumente” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:58.606Z",
+   "target": "f25317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Nokia tune is a phrase from a composition for solo guitar, Gran Vals, composed in 1902 by the Spanish classical guitarist and composer Francisco Tárrega.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guitar” is on the snapshot of s6"
+  }
+ ]
+}

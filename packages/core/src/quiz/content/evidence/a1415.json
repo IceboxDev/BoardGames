@@ -1,0 +1,410 @@
+{
+ "article": "a1415",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Colchicum_autumnale",
+   "title": "Colchicum autumnale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:58.284Z",
+   "snapshot": "588d2ac42a81b86de27d4a500cfa87f701df5e06ec45a1bac3a649ee77f538fb"
+  },
+  "s2": {
+   "url": "https://fr.wikipedia.org/wiki/Muguet_de_mai",
+   "title": "Muguet de mai – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:59:56.580Z",
+   "snapshot": "ab8fa741f1de59d10806945bf5b1ff6b1f5209c6f37544e2a45d292502ab0815"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Atropine",
+   "title": "Atropine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:19.249Z",
+   "snapshot": "cd92a1b91dd583a02c40695a96637f982602e5a19b287170444141bb87b1764b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Digitoxin",
+   "title": "Digitoxin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:59.399Z",
+   "snapshot": "c913a6fd4472b9dc5e0bd1b97ea4650c73c074d6ec9b6ced1456232f6f0d4a02"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Aconitine",
+   "title": "Aconitine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:00.377Z",
+   "snapshot": "494cc6bd7f34a10b2d4be60ce23d7e850828871a5b5429805dbbb13864f1914f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Atropa_belladonna",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:01.391Z",
+   "snapshot": "6e3f1dfaa469b227ea5cfa9626f0a4605bd40ca224e745bca1116e0710112291"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aconitum_napellus",
+   "title": "Aconitum napellus - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:51.034Z",
+   "snapshot": "5ba010551d9da7ed0d41c56ea30bc0f0011e489ddb65eaa80ceeedc7a7992f60"
+  },
+  "s8": {
+   "url": "https://www.giftpflanzen.com/aconitum_napellus.html",
+   "title": "Blauer Eisenhut (Aconitum napellus) im GIFTPFLANZEN.COMpendium - www.giftpflanzen.com",
+   "publisher": "GIFTPFLANZEN.COMpendium",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:50.244Z",
+   "snapshot": "ddb9fa831077b3ffef3abd3820b950bf9d33dea808014177824dcbd6dabf95cb"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Blauer_Eisenhut",
+   "title": "Blauer Eisenhut – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:11:03Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "autumn crocus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lily of the valley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "deadly nightshade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "foxglove",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "monkshood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:22.010Z",
+   "target": "f07071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Colchicum autumnale, commonly known as autumn crocus, meadow saffron, naked boys or naked ladies, is a toxic autumn-blooming flowering plant that resembles the true crocuses, but is a member of the plant family Colchicaceae, unlike the true crocuses, which belong to the family Iridaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “autumn crocus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:22.010Z",
+   "target": "f07072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sa dénomination lys des vallées se retrouve également dans son nom anglais « lily of the valley ».",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lily of the valley” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:22.010Z",
+   "target": "f07073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Atropine occurs naturally in a number of plants of the nightshade family, including deadly nightshade (Atropa belladonna), jimsonweed (Datura stramonium), mandrake (Mandragora officinarum) and angel's trumpet (Brugmansia).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deadly nightshade” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:22.010Z",
+   "target": "f07074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first description of the use of foxglove dates back to 1775.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “foxglove” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:22.010Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aconitine is an alkaloid toxin produced by various plant species belonging to the genus Aconitum (family Ranunculaceae), commonly known by the names wolfsbane and monkshood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monkshood” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:52Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is the most poisonous plant in all of Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:10:58Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Blaue Eisenhut steht unter Naturschutz und gilt als giftigste Pflanze Europas.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23",
+   "note": "The superlative is a common attribution (\"gilt als\"), not a measured ranking; hemlock, yew and deadly nightshade are also called among the most poisonous European plants."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:11:03Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Sie gilt als die giftigste Pflanzenart Europas.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:06.964Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is the most poisonous plant in all of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:06.964Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Blaue Eisenhut steht unter Naturschutz und gilt als giftigste Pflanze Europas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:06.964Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Aconitum napellus, monkshood, aconite, Venus' chariot or wolfsbane, is a species of highly toxic flowering plants in the genus Aconitum of the family Ranunculaceae, native and endemic to western and central Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “monkshood” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:06.964Z",
+   "target": "f07075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Blauer Eisenhut (Aconitum napellus) im GIFTPFLANZEN.COMpendium - www.giftpflanzen.com",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Blauer Eisenhut” is on the snapshot of s8"
+  }
+ ]
+}

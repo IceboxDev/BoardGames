@@ -1,0 +1,242 @@
+{
+ "article": "a0065",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Golden_goal",
+   "title": "Golden goal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:02.497Z",
+   "snapshot": "31b992ca9288eca679e392c3293c23befdcbe8e7d84e232e52eb965b48ba2c70"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Silver_Goal",
+   "title": "Silver Goal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:00.911Z",
+   "snapshot": "8b1bba522f21331b5606eeabda991dceec54728e584beb45ac6989557b9a2afd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Away_goals_rule",
+   "title": "Away goals rule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:03.587Z",
+   "snapshot": "c3fcd7091e219a0f7cdf21e5a2e31ba4028bf38caa36890c2bcf64e0592d3e87"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Back-pass_rule",
+   "title": "Back-pass rule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:04.497Z",
+   "snapshot": "cb75ef93fa9228438bacf8135af2438efb033079544004e623dd89282a4741bb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Karl_Wald",
+   "title": "Karl Wald",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:01.923Z",
+   "snapshot": "e58499627fa81b0124d9a15b59b422ac1a8124509d24d8044ded1ef7c63889eb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Golden Goal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Silver Goal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "away goals rule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "back-pass rule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Elfmeterschießen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-169"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:45.129Z",
+   "target": "f00321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The golden goal is a tie-breaking method used in association football, Australian rules football, bandy, field hockey, ice hockey, lacrosse, and rugby league to decide the winner of a match (typically a knock-out match) in which scores are tied at the end of regular time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golden Goal” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:45.129Z",
+   "target": "f00322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Silver Goal (deutsch Silbernes Tor) war eine Vorgehensweise zur Ermittlung eines Siegers beim Fußball.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Silver Goal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:45.129Z",
+   "target": "f00323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The away goals rule is a method of tiebreaking in association football and other sports when teams play each other twice, once at each team's home ground.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “away goals rule” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:45.129Z",
+   "target": "f00324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In association football, the back-pass rule prohibits the goalkeeper from handling the ball in most cases when it is kicked or thrown to them by a teammate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “back-pass rule” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:45.129Z",
+   "target": "f13889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ob die Europäische Fußball-Union (UEFA) sowie der Weltverband FIFA, der nach 47 Kommissionssitzungen und Sonderkonferenzen das Elfmeterschießen unter dem offiziellen Namen „Schüsse von der Strafstoßmarke zur Siegerermittlung“ einführte, auch auf Walds Idee hin ihre Regularien änderten, ist",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Elfmeterschießen” is on the snapshot of s5"
+  }
+ ]
+}

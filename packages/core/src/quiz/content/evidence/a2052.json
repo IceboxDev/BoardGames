@@ -1,0 +1,643 @@
+{
+ "article": "a2052",
+ "sources": {
+  "s1": {
+   "url": "https://www.bipm.org/en/committees/cg/cgpm/15-1975/resolution-10",
+   "title": "Resolution 10 of the 15th CGPM (1975): SI prefixes peta and exa – BIPM",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:19.757Z",
+   "snapshot": "d605bf6ac409cc9c81aa9e12707550dfe6c746c6af7708d9570219ce7c88bb89"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Byte",
+   "title": "Byte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:20.014Z",
+   "snapshot": "3d1e300b101995a77195ae165f89685a623de6d798d1b05fdd224c900139d32f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/History_of_IBM_magnetic_disk_drives",
+   "title": "History of IBM magnetic disk drives – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:23.320Z",
+   "snapshot": "94d3b8e7c4a7aedc968657e34791632661484fb70ca276b5888e35de0be761fc"
+  },
+  "s4": {
+   "url": "https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-4",
+   "title": "Resolution 4 of the 19th CGPM (1991): SI prefixes zetta, zepto, yotta and yocto – BIPM",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:20.599Z",
+   "snapshot": "0804d903556e21b6e1a45d0b53ed393c4850eb55494be53a1c275305e7316b35"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hertz",
+   "title": "Hertz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:23.486Z",
+   "snapshot": "1890b2db0e82e948c4f899483b3c8a1109172c8553911a392b87079519928d3c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Grace_Hopper",
+   "title": "Grace Hopper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:24.406Z",
+   "snapshot": "c2cab9e24624b13421c466e0dc41364584e2b5079fb51ac02df43fc35ad4e488"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Megapixel",
+   "title": "Megapixel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:21.498Z",
+   "snapshot": "15fd00a64422f86c231f47fcbff09bd4be67b8533f3d6bc8ea6f894f44047429"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Floating_Point_Operations_Per_Second",
+   "title": "Floating Point Operations Per Second",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:22.512Z",
+   "snapshot": "36bd102636081c488896bea89650ec2b2a5e2bbd5b9c94b59c0f6c22b978a76d"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Metric_prefix",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:25.402Z",
+   "snapshot": "663e5940e4ada8752cb645eef38845f5747b483e6ba377c63866ca079f048ac5"
+  },
+  "s10": {
+   "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+   "title": "Metric (SI) Prefixes – NIST",
+   "publisher": "NIST",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:05.319Z",
+   "snapshot": "d313b6867ec60149a474c40e28a7b855602605485189f4187dd6b7965d8727f2"
+  },
+  "s11": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/megapixel",
+   "title": "MEGAPIXEL – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:15.182Z",
+   "snapshot": "b63b45c14725bb9972f9f05ea3524f81e5f63c01be2945206db47e9442a49731"
+  },
+  "s12": {
+   "url": "https://www.energy.gov/science/doe-explainsexascale-computing",
+   "title": "DOE Explains...Exascale Computing",
+   "publisher": "U.S. Department of Energy",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:15.303Z",
+   "snapshot": "a2b45eceb65b47e64e43c14e3634e7252d1a998a7d1ee8a624f46a106087d02f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Petabyte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Petabyte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-336"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gigabyte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yottabyte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Terahertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nanosecond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1.000.000",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-014"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Rechengeschwindigkeit von Computern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-397"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f10256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Petabyte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Petabyte”, “петабайт”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f10256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Diskrepanz wächst also: Während der Größenunterschied zwischen Kibibyte und Kilobyte nur 2,4 % beträgt, ist ein Pebibyte schon 12,6 % mehr als ein Petabyte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.285Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Petabyte” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f10257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In February 1985, IBM announced a double density version – the Extended Capability Models of the 3380 (3380 E) having 5.04 gigabytes per 3380 unit, that is, two 1.26 gigabyte actuators on two hard disk assemblies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.285Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gigabyte” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f10258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yottabyte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Yottabyte”, “йоттабайт”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f10259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "For high frequencies, the unit is commonly expressed in multiples: kilohertz (kHz), megahertz (MHz), gigahertz (GHz), terahertz (THz).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.285Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Terahertz” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f10260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "She started handing out pieces of wire that were just under one foot long—11.8 inches (30 cm)—the distance that light travels in one nanosecond.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.285Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nanosecond” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f14154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1.000.000",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1.000.000”, “1,000,000”, “1 000 000”) on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:14.285Z",
+   "target": "f14155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Rechengeschwindigkeit von Computern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Rechengeschwindigkeit von Computern”, “Computer processing speed”, “производительность компьютеров”) on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:45:19Z",
+   "target": "f10258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "SI prefixes zetta, zepto, yotta and yocto",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "The resolution's table gives zetta = 10^21 and yotta = 10^24."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:45:21Z",
+   "target": "f10258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Two for forming multiples: zetta and yotta.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "NIST table: yotta Y 10^24 above zetta Z 10^21; ronna and quetta added above yotta in 2022."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:45:23Z",
+   "target": "f14154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Megapixel steht in Anlehnung an das SI-Präfix für eine Million Bildpunkte (Pixel).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:45:25Z",
+   "target": "f14154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "one million pixels (= small points that form part of the image on a computer screen)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:45:27Z",
+   "target": "f14155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "ist ein Maß für die Leistungsfähigkeit von Computern",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:45:29Z",
+   "target": "f14155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "One way scientists measure computer performance is in floating point operations per second (FLOPS).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:00.739Z",
+   "target": "f10258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "SI prefixes zetta, zepto, yotta and yocto",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:00.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:00.739Z",
+   "target": "f10258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Two for forming multiples: zetta and yotta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:00.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:00.739Z",
+   "target": "f14154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Megapixel steht in Anlehnung an das SI-Präfix für eine Million Bildpunkte (Pixel).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:00.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:00.739Z",
+   "target": "f14154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "one million pixels (= small points that form part of the image on a computer screen)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:00.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:00.739Z",
+   "target": "f14155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "ist ein Maß für die Leistungsfähigkeit von Computern",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:00.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:00.739Z",
+   "target": "f14155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "One way scientists measure computer performance is in floating point operations per second (FLOPS).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:00.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s12"
+  }
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "article": "a0182",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/aphrodisiac",
+   "title": "aphrodisiac – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pan_(god)",
+   "title": "Pan (god) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:07.480Z",
+   "snapshot": "081f5ba92c86de15fbcecd1337b3bc792461aaa4681198d8144f5a70d2eebc40"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Sert%C3%BCrner",
+   "title": "Friedrich Sertürner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:08.390Z",
+   "snapshot": "4bb937c490d3f57ceee1319ba99d62da179ba71b237da360e93628909b428575"
+  },
+  "s4": {
+   "url": "https://wordorigins.org/big-list-entries/hermetic-seal",
+   "title": "hermetic seal – Wordorigins.org",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:06.304Z",
+   "snapshot": "c88158d07c069135c224297138f438557dfe4335053da1a597b032de89cd9e10"
+  },
+  "s5": {
+   "url": "https://www.dictionary.com/browse/aphrodisiac",
+   "title": "Aphrodisiac – Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:24.295Z",
+   "snapshot": "528873824c38d2ba3fc439477c17e70fca421049221e6ee10cdab64a4de7a743"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Aphrodisiakum",
+   "title": "Aphrodisiakum – Rechtschreibung, Bedeutung, Definition, Herkunft",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:25.730Z",
+   "snapshot": "2acc474719987a7c8b23b3c7238a7f58d82382ebff98304859d4cdda1bdedc92"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aphrodisiac",
+   "title": "Aphrodisiac",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:25.061Z",
+   "snapshot": "33e422f8ff884bd5b90c55e0282498fa08b5a2e31d52cfb07dbeb297b4effc4d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "aphrodisiac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "panic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f22180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Morpheus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hermetic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:06.092Z",
+   "target": "f00908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Disturbed in his secluded afternoon naps, Pan's angry shout inspired panic (panikon deima) in lonely places.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.092Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “panic” is on the snapshot of s2"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:06.092Z",
+   "target": "f22180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He called the isolated alkaloid \"morphium\" after the Greek god of dreams, Morpheus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.092Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Morpheus” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:06.092Z",
+   "target": "f22181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A hermetic seal is an air-tight one, but why is it associated with Hermes, the Greek messenger god?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.092Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hermetic” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T08:03:49Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aphrodisiacs are named after Aphrodite, the Greek goddess of love.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:03:50Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mittel zur Anregung und Steigerung des Geschlechtstriebs und der Potenz",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Defines the German answer word; Herkunft: griechisch aphrodisiakós."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:03:52Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from aphrodisios 'pertaining to Aphrodite',[6][7] the Greek goddess of love.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:04:03Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from aphrodisios 'pertaining to Aphrodite'",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Re-quoted without footnote markers (the crawler reads Wikipedia's plain extract)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:52:25.145Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aphrodisiacs are named after Aphrodite, the Greek goddess of love.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:25.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:25.145Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mittel zur Anregung und Steigerung des Geschlechtstriebs und der Potenz",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:25.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:25.145Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from aphrodisios 'pertaining to Aphrodite'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:25.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:25.145Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "APHRODISIAC Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:25.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “aphrodisiac” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:25.145Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aphrodisiakum ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:25.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aphrodisiakum” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:25.145Z",
+   "target": "f00906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An aphrodisiac is a substance that increases libido, sexual desire, sexual attraction, sexual pleasure, or sexual behavior.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:25.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “aphrodisiac” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a1389",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Adrenaline",
+   "title": "Adrenaline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:31.312Z",
+   "snapshot": "819d9c8a7c516dcc3ff2fdd2ee477e5a56f3f51d07f9201e5464117e8c14b612"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Melatonin",
+   "title": "Melatonin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:32.258Z",
+   "snapshot": "f63c1105c596afc85a126c645b392bfd36eebb5b801ef33ec0fe1ccd1f365aa2"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Somatropin",
+   "title": "Somatropin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:18.537Z",
+   "snapshot": "bc711a4d34a791a784a1503f545d3a57940506cd42a365a646a7cfd2b41510fa"
+  },
+  "s4": {
+   "url": "https://eselsbruecken.woxikon.de/in-berlin-gaffen-alle",
+   "title": "In Berlin gaffen alle – Eselsbrücken (Woxikon)",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:19.268Z",
+   "snapshot": "b639ee2aabd53d6b905d35443db7c373996756e4586cba5f8e389f9e82bbee1a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Growth_hormone_therapy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:22.355Z",
+   "snapshot": "de83f478a3a3b14d6f3c4704bec748385696b5760e0affd74dcbc01f283ccfb2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "adrenal gland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pineal gland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hypophyse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Insulin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-093"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:18.036Z",
+   "target": "f06941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Adrenaline is synthesized in the chromaffin cells of the adrenal gland's adrenal medulla and a small number of neurons in the medulla oblongata in the brain through a metabolic pathway that converts the amino acids phenylalanine and tyrosine into a series of metabolic intermediates and, ultimately,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “adrenal gland” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:18.036Z",
+   "target": "f06944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lerner and colleagues stemmed from the isolation of a substance from the pineal gland of cows that could induce skin lightening in common frogs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pineal gland” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:18.036Z",
+   "target": "f06945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Somatotropin (auch somatotropes Hormon genannt) ist ein Proteohormon, das als Wachstumshormon im menschlichen und tierischen Organismus vorkommt und im Gehirn im Vorderlappen der Hypophyse gebildet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hypophyse” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:18.036Z",
+   "target": "f14622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Insulin – B-Zellen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Insulin” is on the snapshot of s4"
+  }
+ ]
+}

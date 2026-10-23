@@ -1,0 +1,256 @@
+{
+ "article": "a0679",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alfa_Romeo",
+   "title": "Alfa Romeo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:39.302Z",
+   "snapshot": "1c4a2e81fb9606dbe304d4303dfdfeede714e10c17e375bc868f518003e6b069"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lamborghini",
+   "title": "Lamborghini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:40.197Z",
+   "snapshot": "cc52daaefe3d808db082a4a293683c87d806065de16016cb87577af938ca6479"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Maserati",
+   "title": "Maserati – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:41.325Z",
+   "snapshot": "c1755b8ac16b047364922ca1ee5dedad6166815d1a5e990b18dc22649bc423dd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peugeot",
+   "title": "Peugeot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:42.389Z",
+   "snapshot": "a5e4c8f936af5d52cffd7682f986825b578c1f339c7c56bb697508812bf9a2e6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Maserati",
+   "title": "Maserati",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:40.468Z",
+   "snapshot": "37c622ba078c029043abc3bc4aefd1221ddd92c2324fd37a44db5dc95dc4d78f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ferrari",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:43.155Z",
+   "snapshot": "461da90b164f33b3256b7939c45fc3d569266e3ffcdc24e4aefbb0e186e8fc01"
+  },
+  "s7": {
+   "url": "https://fr.wikipedia.org/wiki/Peugeot",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:12:41.184Z",
+   "snapshot": "56369ed177fe7bbf850a4a483ab003a2629aaf8fb3b605db1094a1f684677e36"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alfa Romeo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lamborghini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Maserati",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peugeot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dreizack",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-049"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:25.687Z",
+   "target": "f03391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1920, the company's name was changed to Alfa Romeo, with the Torpedo 20–30 HP being the first vehicle to bear the new brand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.687Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfa Romeo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:25.687Z",
+   "target": "f03393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ferruccio Lamborghini (1916–1993), an Italian manufacturing magnate, founded Automobili Ferruccio Lamborghini S.p.A.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.687Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lamborghini” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:25.687Z",
+   "target": "f03394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Maserati brothers, Alfieri (1887–1932), Bindo (1883–1980), Carlo (1881–1910), Ettore (1894–1990), and Ernesto (1898–1975), were involved with automobiles from the beginning of the 20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.687Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maserati” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:25.687Z",
+   "target": "f03395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peugeot (UK:  , US:  ; French: [pøʒo] ) is a French automobile brand owned by Stellantis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.687Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peugeot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:25.687Z",
+   "target": "f13585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Markenzeichen ist ein Dreizack nach dem Vorbild des Neptunbrunnens in Bologna.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.687Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dreizack” is on the snapshot of s5"
+  }
+ ]
+}

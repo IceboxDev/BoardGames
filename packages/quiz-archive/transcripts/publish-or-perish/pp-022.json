@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-022",
+ "image": "IMG20261022010833.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardText": "[Astronomy] What color is the sunset on Mars?\nA. Red\nB. Blue\nC. Orange\nAnswer: B. Mars has blue sunsets due to the way its atmosphere scatters sunlight.",
+   "discipline": "Astronomy",
+   "de": "Welche Farbe hat der Sonnenuntergang auf dem Mars, weil seine staubige Atmosphäre das Sonnenlicht auf besondere Weise streut?",
+   "en": "What color is the sunset on Mars, because of the way its dusty atmosphere scatters sunlight?",
+   "reworked": true,
+   "answerDe": "Blau",
+   "answerEn": "Blue",
+   "timeline": {
+    "kind": "event",
+    "start": "2005-05",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "NASA's Spirit rover photographs a blue sunset over Gusev crater on Mars",
+    "labelDe": "NASAs Rover Spirit fotografiert einen blauen Sonnenuntergang über dem Gusev-Krater auf dem Mars"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sunset",
+    "title": "Sunset",
+    "lang": "en"
+   },
+   "notes": "Martian sunsets are typically blue around the Sun (dust scatters blue light forward), though some appear redder; the daytime sky is butterscotch.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "cardText": "[Agronomy] Which of the following crops are NOT part of the “Three Sisters” intercropping technique used by Native Americans?\nA. Wild rice\nB. Beans\nC. Squash\nAnswer: A. The “Three Sisters” refers to the intercropping of maize, beans, and squash, a companion planting method used by Native American tribes to enhance soil fertility and crop yields: Maize provides a structure for the beans to climb, beans fix nitrogen in the soil to benefit all three plants, and squash spreads along the ground, blocking sunlight to prevent weeds and retaining moisture in the soil.",
+   "discipline": "Agronomy",
+   "de": "Welche drei Nutzpflanzen werden bei der „Drei Schwestern“-Mischkultur der amerikanischen Ureinwohner zusammen angebaut?",
+   "en": "Which three crops are grown together in the “Three Sisters” intercropping technique of Native Americans?",
+   "reworked": true,
+   "answerDe": "Mais, Bohnen und Kürbis",
+   "answerEn": "Maize, beans and squash",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-8000",
+    "end": null,
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Squash, the first of the Three Sisters crops, is domesticated in Mesoamerica about 10,000 years ago",
+    "labelDe": "Der Kürbis, die erste der „Drei Schwestern“, wird vor etwa 10.000 Jahren in Mesoamerika domestiziert"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Three_Sisters_(agriculture)",
+    "title": "Three Sisters (agriculture)",
+    "lang": "en"
+   },
+   "notes": "Card asked which option is NOT one of the Three Sisters (wild rice); reworked to ask the three crops themselves. Some groups added sunflowers or Rocky Mountain beeplant as a \"fourth sister\".",
+   "domain": "nature",
+   "sub": "plants"
+  }
+ ]
+}

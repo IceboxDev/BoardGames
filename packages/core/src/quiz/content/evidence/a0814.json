@@ -1,0 +1,249 @@
+{
+ "article": "a0814",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Solar_eclipse_of_July_28,_1851",
+   "title": "Solar eclipse of July 28, 1851 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:08.351Z",
+   "snapshot": "ee6be3480d0ad440b291b59147e6a9739b3e76c11dcd315dfea579d231edd762"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fraunhofer_lines",
+   "title": "Fraunhofer lines – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:09.322Z",
+   "snapshot": "cdfea3310a6167b5648204de1fe1bb2c2357daaea882409e049c6e42f1c0e619"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chromosphere",
+   "title": "Chromosphere – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:10.323Z",
+   "snapshot": "b5af764d87c1786786e6f689cbc6e748848c4ab712a98ea401a2d54fd93ef667"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Solar_eclipse_of_August_11,_1999",
+   "title": "Solar eclipse of August 11, 1999 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:11.329Z",
+   "snapshot": "c62eb4318d9cf20853314976c49fd0ee60c269a764354c9fffe716960122d2f0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Solar_eclipse_of_October_14,_2023",
+   "title": "Solar eclipse of October 14, 2023 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:12.331Z",
+   "snapshot": "dfa98aeeca9f267ae0af17f24732b797c4013a84c04fbf7df078a9456b3d03e6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Photosphere",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:13.318Z",
+   "snapshot": "65bfa2d1f1423d549587fbe018fcde8ea029dea801a9e651b96790bc93a30ff4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Corona",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Photosphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chromosphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Umbra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "annular solar eclipse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:49.055Z",
+   "target": "f04066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sun's outer atmosphere, or corona, is normally invisible due to the brightness of the solar disc, but becomes visible from Earth during a total eclipse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Corona” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.055Z",
+   "target": "f04067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are dark absorption lines, seen in the optical spectrum of the Sun, and are formed when atoms in the solar atmosphere absorb light being emitted by the solar photosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Photosphere” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.055Z",
+   "target": "f04068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A chromosphere (\"sphere of color\", from the Ancient Greek words χρῶμα (khrôma) 'color' and σφαῖρα (sphaîra) 'sphere') is the second layer of a star's atmosphere, located above the photosphere and below the solar transition region and corona.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chromosphere” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:49.055Z",
+   "target": "f04069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The MiG-21, flying at 1600–1700 km/h (1000 to 1100 mph) (Mach 1.4-1.5) at an altitude of 13,000 metres (43,000 feet), was able to stay in the moon's umbra for 6 minutes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Umbra” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:49.055Z",
+   "target": "f04070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An annular solar eclipse occurred at the Moon’s descending node of orbit on Saturday, October 14, 2023, with a magnitude of 0.952.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “annular solar eclipse” is on the snapshot of s5"
+  }
+ ]
+}

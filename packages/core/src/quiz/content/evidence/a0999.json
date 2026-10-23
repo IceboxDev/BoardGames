@@ -1,0 +1,269 @@
+{
+ "article": "a0999",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Angkor_Wat",
+   "title": "Angkor Wat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:32.219Z",
+   "snapshot": "1b39fa7662aa07e39aaf20e358930eba28fd6f684311caf14fad3326e266b8d1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bayon",
+   "title": "Bayon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:27.125Z",
+   "snapshot": "1969bdf8b062aeb779d22128aa59dde2a8355401854998f93233daa58e91c876"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ta_Prohm",
+   "title": "Ta Prohm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:28.012Z",
+   "snapshot": "d3a522a4cd537187cc374731b9dcfcba670fe378f12cc4498cd158a3afd838db"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Borobudur",
+   "title": "Borobudur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:29.230Z",
+   "snapshot": "31bb1734bd8d2d8593ddc0c9328dd4ec30432053eae9028492b372004f0743dd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Prambanan",
+   "title": "Prambanan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:30.121Z",
+   "snapshot": "2038e2d064f7834dd53369e95038b60118b0c8f37cc0def2f7a8a17ae0f0166c"
+  },
+  "s6": {
+   "url": "https://whc.unesco.org/en/list/642/",
+   "title": "Prambanan Temple Compounds - UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:20:18Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angkor Wat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bayon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ta Prohm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Borobudur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prambanan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:17.827Z",
+   "target": "f04991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angkor Wat (; Khmer: អង្គរវត្ត, 'City/Capital of Temples') is a Theravada Buddhist temple complex, originally built as a Vaishnava Hindu temple, in Siem Reap, Cambodia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angkor Wat” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:17.827Z",
+   "target": "f04992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Bayon (Khmer: ប្រាសាទបាយ័ន, Prasat Bayoăn [praːsaːt baːjŏən];  BAI-on) is a richly decorated Theravada Buddhist temple of the Khmer Empire located at Angkor in Cambodia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bayon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:17.827Z",
+   "target": "f04993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ta Prohm (Khmer: ប្រាសាទតាព្រហ្ម, UNGEGN: Ta Prôhm, ALA-LC: Tā Brahm [taː prom]; \"Ancestor Brahma\") is the modern name of a temple near the city of Siem Reap, Cambodia,  approximately one kilometre east of Angkor Thom and on the southern edge of the East Baray.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ta Prohm” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:17.827Z",
+   "target": "f04994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Borobudur, also transcribed Barabudur (Indonesian: Candi Borobudur, Javanese: ꦕꦤ꧀ꦝꦶꦧꦫꦧꦸꦝꦸꦂ, romanized: Candhi Barabudhur), is a 9th-century Mahayana Buddhist temple in Magelang Regency, near the town of Muntilan, northwest of the city of Yogyakarta, in Central Java, Indonesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Borobudur” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:17.827Z",
+   "target": "f04995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prambanan (Indonesian: Candi Prambanan, Javanese: Rara Jonggrang, Hanacaraka: ꦫꦫꦗꦺꦴꦁꦒꦿꦁ) is a 9th-century Hindu temple compound in the Special Region of Yogyakarta, in southern Java, Indonesia, dedicated to the Trimūrti, the expression of God as the Creator (Brahma), the Preserver (Vishnu), and the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prambanan” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:20:18Z",
+   "target": "f04995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "this is the largest temple compound dedicated to Shiva in Indonesia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "UNESCO's superlative is 'largest temple compound dedicated to Shiva in Indonesia', i.e. the largest Hindu temple compound."
+  }
+ ]
+}

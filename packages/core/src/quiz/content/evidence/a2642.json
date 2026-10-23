@@ -1,0 +1,278 @@
+{
+ "article": "a2642",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Channel_Tunnel",
+   "title": "Channel Tunnel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:40.242Z",
+   "snapshot": "06a1225757e343dbcf05562c140335b86073c508d9e4dc97929b6bc46a114559"
+  },
+  "s2": {
+   "url": "https://web.archive.org/web/2016/https://www.telegraph.co.uk/culture/film/film-news/10777912/Paddington-Bear-13-things-you-didnt-know.html",
+   "title": "Paddington Bear: 13 things you didn't know",
+   "publisher": "The Daily Telegraph",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:07.988Z",
+   "snapshot": "1a8318c02a9cfd5ae2fa87e393fb808064b7c4a4dcf88fbd41933cb1f7815f0a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Channel Tunnel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; history entry seq 8; transcript tp-331"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Graham Fagg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paddington Bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Folkestone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1994",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:50.216Z",
+   "target": "f14297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Channel Tunnel (French: Tunnel sous la Manche), sometimes referred to as the Chunnel, is a 50.46-kilometre (31.35-mile) railway tunnel beneath the English Channel which connects Folkestone in the United Kingdom with Coquelles in northern France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Channel Tunnel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:50.216Z",
+   "target": "f14298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 1 December 1990, Englishman Graham Fagg and Frenchman Philippe Cozette broke through the service tunnel with the media watching.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Graham Fagg” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:50.216Z",
+   "target": "f14299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Paddington Bear soft toy was chosen by British tunnellers as the first item to pass through to their French counterparts when the two sides met.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paddington Bear” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:50.216Z",
+   "target": "f14300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Channel Tunnel (French: Tunnel sous la Manche), sometimes referred to as the Chunnel, is a 50.46-kilometre (31.35-mile) railway tunnel beneath the English Channel which connects Folkestone in the United Kingdom with Coquelles in northern France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Folkestone” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:50.216Z",
+   "target": "f14301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Opened in 1994, it remains the only fixed link between Great Britain and the European mainland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1994” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:48:41Z",
+   "target": "f14299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a Paddington Bear stuffed toy was chosen by English tunnellers as the first item to pass through the Channel Tunnel to their French counterparts when the two sides were linked up.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "the Telegraph misdates the link-up to 1994 (the service-tunnel breakthrough was 1 Dec 1990); the Paddington detail is the point"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:59:35.704Z",
+   "target": "f14299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a Paddington Bear stuffed toy was chosen by English tunnellers as the first item to pass through the Channel Tunnel to their French counterparts when the two sides were linked up.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:35.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:35.704Z",
+   "target": "f14299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paddington Bear: 13 things you didn't know - Telegraph",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:35.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paddington Bear” is on the snapshot of s2"
+  }
+ ]
+}

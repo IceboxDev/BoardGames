@@ -1,0 +1,487 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "technology/computing",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-040",
+    "category": 5
+   },
+   "factId": "f02097"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-021",
+    "category": 5
+   },
+   "factId": "f10019"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-101",
+    "category": 5
+   },
+   "factId": "f09180"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-132",
+    "category": 5
+   },
+   "factId": "f03960"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-305",
+    "category": 5
+   },
+   "factId": "f02159"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-336",
+    "category": 5
+   },
+   "factId": "f10256"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2052",
+   "baseHash": "4a971d4c33bf",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-014",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-397",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "From Kilo to Yotta: The Prefixes of Computing",
+    "titleDe": "Von Kilo bis Yotta: Die Vorsilben der Computertechnik",
+    "bodyEn": "Computers count in numbers so large and so small that ordinary words give out, and so the technical world borrows the prefixes of the International System of Units. Each step multiplies or divides by a thousand, and knowing the ladder by heart answers a whole family of quiz questions.\n\nGoing up, the ladder runs kilo (a thousand), mega (a million), giga (a billion), tera (a trillion), peta, exa, zetta and yotta, each a thousand times the last. The names are a mixed bag of Greek and Latin: kilo from chilioi, \"thousand\", mega from megas, \"great\", giga from gigas, \"giant\", tera from teras, \"monster\", while the later prefixes are numerals in disguise, peta and exa from penta and hexa (the fifth and sixth powers of a thousand), zetta and yotta from the Latin septem and octo. Peta and exa were added to the SI in 1975, zetta and yotta in 1991, and in 2022 the ladder was extended once more with ronna and quetta.\n\nApplied to bytes, that gives the sizes we live with. A Megabyte held a floppy disk's worth of text, a Gigabyte is a typical smartphone photo album, and a Terabyte is the hard disk in an ordinary laptop. As recently as 11 June 1980, when IBM introduced its 3380 disk storage unit, 2.52 gigabytes counted as a vast capacity for a mainframe. A Petabyte, a thousand terabytes, is the scale of a large data centre or of the tens of petabytes that the Large Hadron Collider records each year. An Exabyte is a billion gigabytes; the world's internet traffic passed one exabyte a month around 2004. A Zettabyte is a thousand of those, and market researchers estimated that humanity created about 64 zettabytes of data in 2020. The Yottabyte, a trillion terabytes, is still beyond any real storage system. A separate ladder of binary prefixes, kibi, mebi, gibi and tebi, exists for those who want 1,024 rather than 1,000 as the step.\n\nThe same prefixes measure frequency in hertz, the unit adopted together with the SI itself in 1960. Early home computers ran at a few Megahertz; the Pentium reached the Gigahertz mark in 2000, and today's processors clock at three to five gigahertz. Terahertz radiation, a thousand gigahertz, lies between microwaves and infrared light and is used in airport body scanners and in materials research.\n\nThe prefixes turn up in two more places in every quiz. A digital camera's resolution is quoted in megapixels, and since mega means a million, one megapixel is 1,000,000 pixels: a 12-megapixel phone sensor records twelve million picture points in every shot. At the other end of the scale, supercomputers are rated in FLOPS, floating-point operations per second, so a petaFLOPS is a unit of computer processing speed: 10^15, a thousand trillion calculations every second. IBM's Roadrunner at Los Alamos became the first machine to sustain one petaFLOPS in 2008; the fastest systems of the 2020s have climbed one rung higher, to exaFLOPS.\n\nGoing down, the ladder runs milli (a thousandth), micro (a millionth), nano (a billionth), pico and femto. A millisecond is the unit in which network ping times are measured, a microsecond the time a fast network switch needs to forward a packet, and a Nanosecond, a billionth of a second, is the scale on which a processor's transistors switch. The computing pioneer Grace Hopper (1906–1992) used to hand out pieces of wire 30 centimetres long, the distance light travels in one nanosecond, to explain to admirals why satellite links introduce delay.\n\n| Prefix | Factor | Example |\n|---|---|---|\n| kilo | 10^3 | Kilobyte |\n| mega | 10^6 | Megabyte, Megahertz |\n| giga | 10^9 | Gigabyte, Gigahertz |\n| tera | 10^12 | Terabyte, Terahertz |\n| peta | 10^15 | Petabyte |\n| exa | 10^18 | Exabyte |\n| zetta | 10^21 | Zettabyte |\n| yotta | 10^24 | Yottabyte |\n| milli / micro / nano | 10^-3 / 10^-6 / 10^-9 | Millisecond, Microsecond, Nanosecond |",
+    "bodyDe": "Computer rechnen in Zahlen, die so groß und so klein sind, dass gewöhnliche Wörter versagen, und so borgt sich die Technik die Vorsilben des Internationalen Einheitensystems. Jede Stufe multipliziert oder teilt durch tausend, und wer die Leiter auswendig kennt, beantwortet eine ganze Familie von Quizfragen.\n\nNach oben lautet die Leiter Kilo (tausend), Mega (eine Million), Giga (eine Milliarde), Tera (eine Billion), Peta, Exa, Zetta und Yotta, jede das Tausendfache der vorigen. Die Namen sind eine Mischung aus Griechisch und Latein: Kilo von chilioi, „tausend“, Mega von megas, „groß“, Giga von gigas, „Riese“, Tera von teras, „Ungeheuer“, während die späteren Vorsilben verkleidete Zahlwörter sind, Peta und Exa von penta und hexa (die fünfte und sechste Potenz von tausend), Zetta und Yotta vom lateinischen septem und octo. Peta und Exa kamen 1975 ins SI, Zetta und Yotta 1991, und 2022 wurde die Leiter um Ronna und Quetta noch einmal verlängert.\n\nAuf Bytes angewandt ergibt das die Größen, mit denen wir leben. Ein Megabyte fasste den Text einer Diskette, ein Gigabyte ist ein typisches Smartphone-Fotoalbum, und ein Terabyte ist die Festplatte eines gewöhnlichen Laptops. Noch als IBM am 11. Juni 1980 sein Plattenspeichersystem 3380 vorstellte, galten 2,52 Gigabyte als gewaltige Kapazität für einen Großrechner. Ein Petabyte, tausend Terabyte, ist die Größenordnung eines großen Rechenzentrums oder der Dutzenden Petabyte, die der Large Hadron Collider jedes Jahr aufzeichnet. Ein Exabyte ist eine Milliarde Gigabyte; der weltweite Internetverkehr überschritt um 2004 ein Exabyte pro Monat. Ein Zettabyte ist das Tausendfache davon, und Marktforscher schätzten, dass die Menschheit 2020 etwa 64 Zettabyte an Daten erzeugte. Das Yottabyte, eine Billion Terabyte, liegt noch jenseits jedes realen Speichersystems. Für alle, die 1024 statt 1000 als Schritt wollen, gibt es eine eigene Leiter binärer Vorsilben, Kibi, Mebi, Gibi und Tebi.\n\nDieselben Vorsilben messen Frequenzen in Hertz, der Einheit, die 1960 zusammen mit dem SI selbst eingeführt wurde. Frühe Heimcomputer liefen mit wenigen Megahertz; der Pentium erreichte im Jahr 2000 die Gigahertz-Marke, und heutige Prozessoren takten mit drei bis fünf Gigahertz. Terahertz-Strahlung, tausend Gigahertz, liegt zwischen Mikrowellen und Infrarotlicht und wird in Körperscannern an Flughäfen und in der Materialforschung eingesetzt.\n\nZwei weitere Stellen kommen in jedem Quiz vor. Die Auflösung einer Digitalkamera wird in Megapixeln angegeben, und da Mega eine Million bedeutet, hat ein Megapixel 1.000.000 Pixel: Ein 12-Megapixel-Sensor im Handy nimmt bei jeder Aufnahme zwölf Millionen Bildpunkte auf. Am anderen Ende der Skala werden Supercomputer in FLOPS gemessen, Gleitkommaoperationen pro Sekunde; ein PetaFLOPS ist also eine Maßeinheit für die Rechengeschwindigkeit von Computern: 10^15, eine Billiarde Rechenschritte in jeder Sekunde. IBMs Roadrunner in Los Alamos hielt 2008 als erster Rechner dauerhaft ein PetaFLOPS durch; die schnellsten Systeme der 2020er-Jahre sind eine Stufe höher bei ExaFLOPS angekommen.\n\nNach unten lautet die Leiter Milli (ein Tausendstel), Mikro (ein Millionstel), Nano (ein Milliardstel), Piko und Femto. Eine Millisekunde ist die Einheit, in der Ping-Zeiten im Netzwerk gemessen werden, eine Mikrosekunde die Zeit, die ein schneller Netzwerk-Switch zum Weiterleiten eines Pakets braucht, und eine Nanosekunde, ein Milliardstel einer Sekunde, ist die Größenordnung, in der die Transistoren eines Prozessors schalten. Die Computerpionierin Grace Hopper (1906–1992) verteilte 30 Zentimeter lange Drahtstücke, die Strecke, die das Licht in einer Nanosekunde zurücklegt, um Admirälen zu erklären, warum Satellitenverbindungen Verzögerungen verursachen.\n\n| Vorsilbe | Faktor | Beispiel |\n|---|---|---|\n| Kilo | 10^3 | Kilobyte |\n| Mega | 10^6 | Megabyte, Megahertz |\n| Giga | 10^9 | Gigabyte, Gigahertz |\n| Tera | 10^12 | Terabyte, Terahertz |\n| Peta | 10^15 | Petabyte |\n| Exa | 10^18 | Exabyte |\n| Zetta | 10^21 | Zettabyte |\n| Yotta | 10^24 | Yottabyte |\n| Milli / Mikro / Nano | 10^-3 / 10^-6 / 10^-9 | Millisekunde, Mikrosekunde, Nanosekunde |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0888",
+   "baseHash": "5245bbaaf697",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-183",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Alphabet Soup Inside Your Computer",
+    "titleDe": "Die Buchstabensuppe im Computer",
+    "bodyEn": "Open the case of any computer and you will find its components labelled with three-letter abbreviations. The most important of them is RAM, which stands for Random Access Memory. It is the machine's working memory: the place where the operating system, the programs you have opened and the data they are using are held while the processor works on them. 'Random access' means that any cell can be read or written directly and in the same amount of time, unlike a tape or a hard-disk platter that has to be wound or spun to the right position. RAM is fast but volatile, so everything in it vanishes when the power goes off, which is why an unsaved document is lost in a crash. Before chips, working memory was made of tiny magnetic cores, first installed in MIT's Whirlwind computer in 1953. Chip-based RAM became a commodity with Intel's 1103, the first commercially available DRAM chip, introduced in October 1970. A typical laptop today has 8 to 32 gigabytes of DDR5 memory, and the more you have, the more programs can stay open without the system swapping data to the much slower disk.\n\nThe other abbreviations describe the rest of the team.\n\n| Abbreviation | Stands for | Role |\n|---|---|---|\n| RAM | Random Access Memory | fast, volatile working memory |\n| ROM | Read-Only Memory | permanent memory holding the start-up firmware |\n| CPU | Central Processing Unit | the processor that executes instructions |\n| SSD | Solid State Drive | flash-based storage with no moving parts |\n| USB | Universal Serial Bus | the standard plug for peripherals and charging |\n\nROM, or Read-Only Memory, is the opposite of RAM: its contents are written at the factory or flashed once and survive without power. The BIOS or UEFI firmware that wakes a computer up and hands control to the operating system lives in ROM, as do the built-in programs of a washing machine or a games console. The first programmable ROM, which could be written once after manufacture, was invented by Wen Tsing Chow in 1956. The same R turns up on the shiny discs of the 1980s and 1990s: in CD-ROM, compact disc read-only memory, the R stands for Read, because the data were pressed into the disc at the factory and a drive could only read them, never change them.\n\nCPU stands for Central Processing Unit, the chip that actually computes; the first CPU on a single chip, Intel's 4004, was released on 15 November 1971. It fetches instructions from RAM, decodes them and executes them billions of times a second. Modern CPUs from Intel, AMD or Apple contain several cores, each a complete processor, so that many tasks can run in parallel.\n\nSSD is short for Solid State Drive. Where a hard disk drive (HDD) stores data magnetically on spinning platters read by a moving arm, an SSD keeps it in NAND flash chips with no moving parts. It is silent, shock-resistant and many times faster, which is why a computer with an SSD starts in seconds. The idea is older than flash: StorageTek's STC 4305 of 1978 replaced an IBM disk drive with semiconductor memory. SanDisk introduced the first flash-based SSD, holding 20 megabytes, in 1991.\n\nUSB, the Universal Serial Bus, was introduced in January 1996 by a group of companies led by Intel, where the engineer Ajay Bhatt is credited with the idea, to replace the tangle of serial, parallel and PS/2 ports on the back of a PC with one plug for everything. The reversible USB-C connector of 2014 now carries data, video and up to 240 watts of power, and since 2024 the European Union requires it on all new phones.\n\nKnow these five expansions and the spec sheet of any laptop turns from alphabet soup into plain language.",
+    "bodyDe": "Wer das Gehäuse eines beliebigen Computers öffnet, findet seine Bauteile mit dreibuchstabigen Abkürzungen beschriftet. Die wichtigste davon ist RAM, was für Random Access Memory steht. Es ist der Arbeitsspeicher der Maschine: der Ort, an dem das Betriebssystem, die geöffneten Programme und die Daten, die sie benutzen, gehalten werden, während der Prozessor mit ihnen arbeitet. „Random Access“, wahlfreier Zugriff, bedeutet, dass jede Zelle direkt und in derselben Zeit gelesen oder beschrieben werden kann, anders als bei einem Band oder einer Festplattenscheibe, die erst an die richtige Stelle gespult oder gedreht werden muss. RAM ist schnell, aber flüchtig, sodass alles darin verschwindet, wenn der Strom ausfällt, weshalb ein nicht gespeichertes Dokument bei einem Absturz verloren geht. Vor den Chips bestand der Arbeitsspeicher aus winzigen Magnetkernen, die 1953 erstmals im Whirlwind-Rechner des MIT eingebaut wurden. Zur Massenware wurde RAM auf Chips mit Intels 1103, dem ersten kommerziell erhältlichen DRAM-Chip, der im Oktober 1970 auf den Markt kam. Ein typischer Laptop hat heute 8 bis 32 Gigabyte DDR5-Speicher, und je mehr man hat, desto mehr Programme können offen bleiben, ohne dass das System Daten auf die viel langsamere Festplatte auslagert.\n\nDie anderen Abkürzungen beschreiben den Rest des Teams.\n\n| Abkürzung | Steht für | Aufgabe |\n|---|---|---|\n| RAM | Random Access Memory | schneller, flüchtiger Arbeitsspeicher |\n| ROM | Read-Only Memory | dauerhafter Speicher mit der Start-Firmware |\n| CPU | Central Processing Unit | der Prozessor, der Befehle ausführt |\n| SSD | Solid State Drive | Flash-Speicher ohne bewegliche Teile |\n| USB | Universal Serial Bus | der Standardstecker für Peripheriegeräte und zum Laden |\n\nROM, Read-Only Memory, ist das Gegenteil von RAM: Sein Inhalt wird in der Fabrik geschrieben oder einmal geflasht und übersteht auch Stromlosigkeit. Die BIOS- oder UEFI-Firmware, die einen Computer aufweckt und die Kontrolle an das Betriebssystem übergibt, liegt im ROM, ebenso die eingebauten Programme einer Waschmaschine oder einer Spielkonsole. Den ersten programmierbaren ROM, der nach der Herstellung einmal beschrieben werden konnte, erfand Wen Tsing Chow 1956. Dasselbe R findet sich auf den glänzenden Scheiben der 1980er- und 1990er-Jahre: In CD-ROM, Compact Disc Read-Only Memory, steht das R für Read, „lesen“, weil die Daten in der Fabrik in die Scheibe gepresst wurden und ein Laufwerk sie nur lesen, nie verändern konnte.\n\nCPU steht für Central Processing Unit, den Chip, der tatsächlich rechnet; die erste CPU auf einem einzigen Chip, Intels 4004, kam am 15. November 1971 heraus. Er holt Befehle aus dem RAM, dekodiert sie und führt sie milliardenfach pro Sekunde aus. Moderne CPUs von Intel, AMD oder Apple enthalten mehrere Kerne, jeder ein vollständiger Prozessor, sodass viele Aufgaben parallel laufen können.\n\nSSD ist die Kurzform von Solid State Drive. Während ein Festplattenlaufwerk (HDD) Daten magnetisch auf rotierenden Scheiben speichert, die von einem beweglichen Arm gelesen werden, hält eine SSD sie in NAND-Flash-Chips ohne bewegliche Teile. Sie ist lautlos, stoßfest und um ein Vielfaches schneller, weshalb ein Computer mit SSD in Sekunden startet. Die Idee ist älter als Flash: Die STC 4305 von StorageTek ersetzte 1978 ein IBM-Plattenlaufwerk durch Halbleiterspeicher. SanDisk stellte 1991 die erste Flash-SSD vor, mit 20 Megabyte Speicherplatz.\n\nUSB, der Universal Serial Bus, wurde im Januar 1996 von einer Gruppe von Unternehmen unter Führung von Intel eingeführt, wo dem Ingenieur Ajay Bhatt die Idee zugeschrieben wird, um das Gewirr aus seriellen, parallelen und PS/2-Anschlüssen auf der Rückseite eines PCs durch einen Stecker für alles zu ersetzen. Der beidseitig steckbare USB-C-Anschluss von 2014 überträgt heute Daten, Video und bis zu 240 Watt Leistung, und seit 2024 schreibt die Europäische Union ihn für alle neuen Handys vor.\n\nWer diese fünf Auflösungen kennt, für den wird das Datenblatt jedes Laptops von der Buchstabensuppe zur Klartextsprache.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2088",
+   "baseHash": "b47b1ca55695",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-268",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-320",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "DOS, BIOS, RAM: The Alphabet of the Personal Computer",
+    "titleDe": "DOS, BIOS, RAM: Das Alphabet des Personal Computers",
+    "bodyEn": "The personal computer arrived speaking in initials. Anyone who switched on an IBM PC in the 1980s met a screen full of three-letter abbreviations, and most of them are still with us, printed on the boxes of laptops and phones that have nothing else in common with that beige machine.\n\n**DOS** stands for **Disk Operating System**, the family of operating systems that loaded from a floppy disk and offered the user nothing but a blinking prompt and a command line. When IBM was preparing its first PC in 1980, it turned to Microsoft for software, and Microsoft, which had no operating system of its own, bought one. The product was 86-DOS, written by Tim Paterson at Seattle Computer Products and originally called QDOS, the “quick and dirty operating system”. Microsoft paid about 75,000 dollars for it, licensed it to IBM as PC DOS and sold it to every other manufacturer as MS-DOS. For more than a decade commands such as DIR, COPY and FORMAT C: were the first thing a PC user learned, and MS-DOS lived on underneath consumer Windows until Windows Me in 2000. IBM's first PC went on sale on 12 August 1981, so the first operating system installed on it was MS-DOS (sold as PC DOS). Windows itself began as a graphical shell on top of DOS: Windows 1.0 appeared on 20 November 1985, and Windows 10 followed on 29 July 2015, 30 years later, give or take a few months.\n\nBefore DOS could load, something had to wake the machine up. That was the **BIOS**, the **Basic Input/Output System**, a small program stored in a read-only chip on the motherboard that tests the hardware, finds a disk to boot from and provides the most elementary routines for the keyboard, screen and drives. Gary Kildall coined the term for his CP/M operating system in 1975, and the IBM PC's BIOS became so central to the machine that rival manufacturers had to reverse-engineer it in a clean room before they could sell compatible computers.\n\nTwo more abbreviations describe the hardware the BIOS tests. **RAM** is **Random Access Memory**, the working memory in which running programs and their data are held; it can be read and written in any order, hence “random access”, and it forgets everything when the power is switched off. The original IBM PC shipped with as little as 16 kilobytes of it; the first commercially available memory chip of the modern kind, Intel's 1103 DRAM, had appeared in October 1970 – but the company's very first product, in 1969, had already been a RAM: the 64-bit 3101. The **CPU**, the **Central Processing Unit**, is the processor that carries out the instructions of a program, and the chip in that first PC was an Intel 8088, introduced on 1 June 1979 and running at 4.77 megahertz, a distant ancestor of the multi-core processors in a modern laptop. The family line begins with the Intel 4004, the first commercial microprocessor, launched on 15 November 1971.\n\nThe youngest of the five abbreviations solved a problem that plagued every PC of the DOS era: the tangle of incompatible plugs for keyboards, mice, printers and modems. In January 1996 a group of companies led by Intel, whose engineer Ajay Bhatt is usually credited with the idea, published the specification of the **USB**, the **Universal Serial Bus**, a single connector and protocol for almost every peripheral. USB 2.0 raised the top speed to 480 megabits per second in April 2000, and the reversible USB-C plug of 2014 has since spread from computers to phones, cameras and even the charging cables of the European Union.\n\n| Abbreviation | Expansion | Introduced |\n|---|---|---|\n| DOS | Disk Operating System | 1981 (PC DOS 1.0) |\n| BIOS | Basic Input/Output System | 1975 (CP/M) |\n| RAM | Random Access Memory | 1960s |\n| CPU | Central Processing Unit | 1950s |\n| USB | Universal Serial Bus | 1996 |",
+    "bodyDe": "Der Personal Computer kam in Abkürzungen sprechend zur Welt. Wer in den 1980er-Jahren einen IBM PC einschaltete, sah einen Bildschirm voller Dreibuchstabenkürzel, und die meisten davon begleiten uns bis heute, gedruckt auf die Verpackungen von Laptops und Telefonen, die sonst nichts mit jener beigen Maschine gemein haben.\n\n**DOS** steht für **Disk Operating System**, jene Familie von Betriebssystemen, die von einer Diskette geladen wurden und dem Benutzer nichts als einen blinkenden Prompt und eine Kommandozeile boten. Als IBM 1980 seinen ersten PC vorbereitete, wandte sich das Unternehmen für die Software an Microsoft, und Microsoft, das kein eigenes Betriebssystem hatte, kaufte eines. Das Produkt war 86-DOS, geschrieben von Tim Paterson bei Seattle Computer Products und ursprünglich QDOS genannt, das „quick and dirty operating system“. Microsoft zahlte rund 75.000 Dollar dafür, lizenzierte es als PC DOS an IBM und verkaufte es als MS-DOS an alle anderen Hersteller. Über ein Jahrzehnt lang waren Befehle wie DIR, COPY und FORMAT C: das Erste, was ein PC-Benutzer lernte, und MS-DOS lebte unter den Verbraucher-Versionen von Windows bis zu Windows Me im Jahr 2000 weiter. IBMs erster PC kam am 12. August 1981 auf den Markt, und das erste darauf installierte Betriebssystem war damit MS-DOS (als PC DOS). Windows selbst begann als grafische Oberfläche auf DOS: Windows 1.0 erschien am 20. November 1985, Windows 10 folgte am 29. Juli 2015, knapp 30 Jahre später.\n\nBevor DOS laden konnte, musste etwas die Maschine wecken. Das war das **BIOS**, das **Basic Input/Output System**, ein kleines Programm in einem Nur-Lese-Chip auf der Hauptplatine, das die Hardware prüft, ein Laufwerk zum Starten sucht und die elementarsten Routinen für Tastatur, Bildschirm und Laufwerke bereitstellt. Gary Kildall prägte den Begriff 1975 für sein Betriebssystem CP/M, und das BIOS des IBM PC wurde so zentral für die Maschine, dass konkurrierende Hersteller es in einem Reinraum nachbauen mussten, bevor sie kompatible Computer verkaufen konnten.\n\nZwei weitere Abkürzungen beschreiben die Hardware, die das BIOS prüft. **RAM** ist der **Random Access Memory**, der Arbeitsspeicher, in dem laufende Programme und ihre Daten gehalten werden; er kann in beliebiger Reihenfolge gelesen und beschrieben werden, daher „random access“, und er vergisst alles, sobald der Strom abgeschaltet wird. Der ursprüngliche IBM PC wurde mit gerade einmal 16 Kilobyte davon ausgeliefert; der erste kommerziell erhältliche Speicherchip moderner Bauart, Intels DRAM 1103, war im Oktober 1970 erschienen – doch schon das allererste Produkt der Firma war 1969 ein RAM gewesen: der 64-Bit-Chip 3101. Die **CPU**, die **Central Processing Unit**, ist der Prozessor, der die Befehle eines Programms ausführt, und der Chip in jenem ersten PC war ein am 1. Juni 1979 vorgestellter Intel 8088 mit 4,77 Megahertz, ein ferner Vorfahr der Mehrkernprozessoren in einem modernen Laptop. Die Ahnenreihe beginnt mit dem Intel 4004, dem ersten kommerziellen Mikroprozessor, der am 15. November 1971 auf den Markt kam.\n\nDie jüngste der fünf Abkürzungen löste ein Problem, das jeden PC der DOS-Ära plagte: das Gewirr inkompatibler Stecker für Tastaturen, Mäuse, Drucker und Modems. Im Januar 1996 veröffentlichte eine Gruppe von Unternehmen unter Führung von Intel, dessen Ingenieur Ajay Bhatt gewöhnlich die Idee zugeschrieben wird, die Spezifikation des **USB**, des **Universal Serial Bus**, eines einzigen Steckers und Protokolls für fast jedes Peripheriegerät. USB 2.0 hob die Höchstgeschwindigkeit im April 2000 auf 480 Megabit pro Sekunde, und der beidseitig einsteckbare USB-C-Stecker von 2014 hat sich seither von Computern auf Telefone, Kameras und sogar die Ladekabel der Europäischen Union ausgebreitet.\n\n| Abkürzung | Bedeutung | Eingeführt |\n|---|---|---|\n| DOS | Disk Operating System | 1981 (PC DOS 1.0) |\n| BIOS | Basic Input/Output System | 1975 (CP/M) |\n| RAM | Random Access Memory | 1960er-Jahre |\n| CPU | Central Processing Unit | 1950er-Jahre |\n| USB | Universal Serial Bus | 1996 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1980",
+   "baseHash": "bf66a34c75fa",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-156",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Console Wars: The Machines and Their Makers",
+    "titleDe": "Konsolenkriege: Die Geräte und ihre Hersteller",
+    "bodyEn": "Every few years the video game industry reshuffles around a new generation of living-room hardware, and each generation has had its own set of names. Knowing which company makes which console is the first thing any quiz on the subject asks.\n\nMicrosoft is the newcomer among the three current manufacturers. Its Xbox, launched in North America on 15 November 2001, grew out of a project by four engineers who wanted a \"DirectX box\" to bring PC-style gaming to the television. The launch title \"Halo: Combat Evolved\" made the machine, and the online service Xbox Live, introduced on 15 November 2002, made console multiplayer mainstream. The line continued with the Xbox 360 (2005), the Xbox One (2013) and the Xbox Series X and Series S (2020); with the Game Pass subscription and the purchase of Activision Blizzard in 2023 Microsoft turned the brand into a platform that extends far beyond the box itself.\n\nSony's PlayStation is older and larger. The first model appeared in Japan on 3 December 1994, born out of a broken partnership with Nintendo over a CD add-on for the Super Nintendo. The PlayStation 2 of 2000 remains the best-selling console in history with about 160 million units, and the PlayStation 3, 4 and 5 followed in 2006, 2013 and 2020. Sony's strength has always been exclusive series such as Gran Turismo, Uncharted and God of War. The PlayStation 3 even found a second career outside the living room: in 2010 the research laboratory of the US Air Force linked 1,760 of the consoles into the Condor Cluster, a supercomputer used to analyse high-resolution satellite images.\n\nNintendo, the oldest of the three and a playing-card maker since 1889, prefers to change the rules rather than the horsepower. On 19 November 2006 it released the Wii, whose motion-sensing remote and bundled \"Wii Sports\" reached grandparents and bowling clubs and sold more than 100 million consoles. On 3 March 2017 it followed with the Nintendo Switch, a hybrid that is a tablet with detachable Joy-Con controllers on the go and a home console when slotted into its dock; it has passed 140 million units and became the home of \"The Legend of Zelda: Breath of the Wild\" and \"Animal Crossing\".\n\nThe company that did not survive the wars as a hardware maker is Sega. After the Mega Drive and the Saturn it released the Dreamcast, launched in Japan in November 1998 and in Europe on 14 October 1999. It was the first console with a built-in modem for online play and had superb games such as \"Shenmue\" and \"Soulcalibur\", but it could not compete with the coming PlayStation 2, and in early 2001 Sega discontinued it and became a software publisher for its former rivals.\n\n| Company | Console line | First launch | Notable feature |\n|---|---|---|---|\n| Microsoft | Xbox | 2001 | Xbox Live, Halo |\n| Sony | PlayStation | 1994 | best-selling console (PS2) |\n| Nintendo | Wii | 2006 | motion control |\n| Nintendo | Nintendo Switch | 2017 | hybrid handheld/home |\n| Sega | Dreamcast | 1998 | built-in modem, Sega's last console |",
+    "bodyDe": "Alle paar Jahre ordnet sich die Videospielbranche um eine neue Generation von Wohnzimmer-Hardware neu, und jede Generation hatte ihre eigenen Namen. Zu wissen, welches Unternehmen welche Konsole baut, ist das Erste, was jedes Quiz zu diesem Thema fragt.\n\nMicrosoft ist der Neuling unter den drei heutigen Herstellern. Seine Xbox, am 15. November 2001 in Nordamerika gestartet, entstand aus dem Projekt von vier Ingenieuren, die mit einer „DirectX-Box“ PC-artiges Spielen auf den Fernseher bringen wollten. Der Starttitel „Halo: Combat Evolved“ machte die Maschine, und der am 15. November 2002 eingeführte Onlinedienst Xbox Live machte Konsolen-Mehrspielerpartien zum Massenphänomen. Die Reihe wurde mit der Xbox 360 (2005), der Xbox One (2013) und der Xbox Series X und Series S (2020) fortgesetzt; mit dem Abonnement Game Pass und der Übernahme von Activision Blizzard 2023 machte Microsoft die Marke zu einer Plattform, die weit über das Gerät selbst hinausreicht.\n\nSonys PlayStation ist älter und größer. Das erste Modell erschien am 3. Dezember 1994 in Japan, hervorgegangen aus einer gescheiterten Partnerschaft mit Nintendo über ein CD-Zusatzgerät für das Super Nintendo. Die PlayStation 2 von 2000 ist mit rund 160 Millionen Einheiten bis heute die meistverkaufte Konsole der Geschichte, und die PlayStation 3, 4 und 5 folgten 2006, 2013 und 2020. Sonys Stärke waren immer exklusive Reihen wie Gran Turismo, Uncharted und God of War. Die PlayStation 3 fand sogar eine zweite Karriere jenseits des Wohnzimmers: 2010 verband das Forschungslabor der US Air Force 1.760 der Konsolen zum Condor Cluster, einem Supercomputer zur Analyse hochauflösender Satellitenbilder.\n\nNintendo, das älteste der drei Unternehmen und seit 1889 Spielkartenhersteller, ändert lieber die Regeln als die Rechenleistung. Am 19. November 2006 brachte es die Wii heraus, deren bewegungsempfindliche Fernbedienung und das beigelegte „Wii Sports“ Großeltern und Kegelklubs erreichten und mehr als 100 Millionen Konsolen verkauften. Am 3. März 2017 folgte die Nintendo Switch, ein Hybrid, der unterwegs ein Tablet mit abnehmbaren Joy-Con-Controllern und in der Dockingstation eine Heimkonsole ist; sie hat die Marke von 140 Millionen Einheiten überschritten und wurde zur Heimat von „The Legend of Zelda: Breath of the Wild“ und „Animal Crossing“.\n\nDas Unternehmen, das die Kriege als Hardwarehersteller nicht überlebte, ist Sega. Nach dem Mega Drive und dem Saturn brachte es die Dreamcast heraus, im November 1998 in Japan und am 14. Oktober 1999 in Europa gestartet. Sie war die erste Konsole mit eingebautem Modem für Onlinespiele und hatte hervorragende Spiele wie „Shenmue“ und „Soulcalibur“, konnte aber gegen die kommende PlayStation 2 nicht bestehen; Anfang 2001 stellte Sega sie ein und wurde Softwareverlag für seine früheren Rivalen.\n\n| Unternehmen | Konsolenreihe | Erster Start | Besonderheit |\n|---|---|---|---|\n| Microsoft | Xbox | 2001 | Xbox Live, Halo |\n| Sony | PlayStation | 1994 | meistverkaufte Konsole (PS2) |\n| Nintendo | Wii | 2006 | Bewegungssteuerung |\n| Nintendo | Nintendo Switch | 2017 | Hybrid aus Handheld und Heimkonsole |\n| Sega | Dreamcast | 1998 | eingebautes Modem, Segas letzte Konsole |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0552",
+   "baseHash": "d0712a671bdc",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-392",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Third Level: Where the German Keyboard Hides Its Special Characters",
+    "titleDe": "Die dritte Ebene: Wo die deutsche Tastatur ihre Sonderzeichen versteckt",
+    "bodyEn": "Anyone who learns to type on a German computer keyboard soon discovers that some of the most important characters of the internet age are not printed where an English-speaking user would look for them. The reason is the QWERTZ layout, standardised as DIN 2137, which had to find room for ä, ö, ü and ß and therefore pushed several symbols onto a third level reached with the AltGr key to the right of the space bar.\n\nThe letters themselves still follow the typewriter. The top letter row reads QWERTZUIOPÜ in Germany and QWERTYUIOP in the United States, an order inherited from the Sholes and Glidden typewriter of 1874. A favourite quiz test is to type a word with that row alone: “Pepperoni” almost works, because P, E, R, O and I all sit on the top row, but the N lives on the bottom row of both layouts and spoils it.\n\nThe most famous case is the at sign. On a US keyboard @ sits on the 2 key and is typed with Shift. On the German layout it lives on the letter Q: hold AltGr and press Q, and the @ appears. So the answer to the question “On which key is the @ found?” is Q (AltGr + Q), a fact that trips up every visitor who tries to log in to their e-mail on a German laptop.\n\nThe @ itself is much older than e-mail. Medieval scribes used it as an abbreviation, merchants used it to mean “at the price of”, and it survived on typewriters for exactly that purpose. In 1971 the engineer Ray Tomlinson chose it to separate the user name from the host name in the first network e-mail because it was the one symbol on his teletype that could not be part of a name. Germans call it the Klammeraffe, the “spider monkey”, because of its curled tail.\n\nThe euro sign followed the same route. The European Commission presented the symbol on 12 December 1996, but when the currency was introduced in 1999, keyboards had no key for it, so the € was placed on the third level of the letter E, giving E (AltGr + E). The choice was mnemonic: E for euro.\n\nProgrammers suffer most from the layout. The backslash, essential in Windows file paths and in almost every programming language, has no key of its own and is typed with ß (AltGr + ß), on the key to the right of the 0; IBM's Bob Bemer had proposed it for the new ASCII character set in September 1961. The vertical bar, the “pipe” that Unix users have typed dozens of times a day since Ken Thompson added pipes to Unix in 1973, sits on the key next to the left Shift, the one that also carries < and >, giving < (AltGr + <). The curly and square brackets are spread over the digits 7, 8, 9 and 0, the tilde over the + key. It is no accident that many German developers switch to a US layout for coding.\n\nOne third-level character exists mostly for scientists and engineers: the micro sign for the prefix “micro”, one millionth, adopted as a metric prefix in 1873, is on M (AltGr + M), so that µm, µs and µF can be typed without a symbol table.\n\n| Character | Name | German key combination |\n|---|---|---|\n| @ | at sign | Q (AltGr + Q) |\n| € | euro sign | E (AltGr + E) |\n| \\ | backslash | ß (AltGr + ß) |\n| \\| | vertical bar (pipe) | < (AltGr + <) |\n| µ | micro sign | M (AltGr + M) |\n\nThe AltGr key, short for “alternate graphic”, is thus the secret door of the German keyboard: hidden behind it are the characters that connect a German typist to the rest of the world.",
+    "bodyDe": "Wer auf einer deutschen Computertastatur tippen lernt, entdeckt bald, dass einige der wichtigsten Zeichen des Internetzeitalters nicht dort aufgedruckt sind, wo ein englischsprachiger Nutzer sie suchen würde. Der Grund ist das QWERTZ-Layout, genormt als DIN 2137, das Platz für ä, ö, ü und ß schaffen musste und deshalb mehrere Symbole auf eine dritte Ebene verschob, die man mit der AltGr-Taste rechts neben der Leertaste erreicht.\n\nDie Buchstaben selbst folgen noch immer der Schreibmaschine. Die oberste Buchstabenreihe lautet in Deutschland QWERTZUIOPÜ und in den Vereinigten Staaten QWERTYUIOP, eine Ordnung, die von der Schreibmaschine von Sholes und Glidden aus dem Jahr 1874 stammt. Ein beliebter Quiztest ist es, ein Wort nur mit dieser Reihe zu tippen: „Pepperoni“ klappt beinahe, denn P, E, R, O und I liegen alle in der obersten Reihe, doch das N sitzt auf beiden Belegungen in der untersten Reihe und verdirbt es.\n\nDer berühmteste Fall ist das At-Zeichen. Auf einer US-Tastatur sitzt das @ auf der Taste 2 und wird mit Shift getippt. Auf dem deutschen Layout wohnt es auf dem Buchstaben Q: AltGr gedrückt halten, Q drücken, und das @ erscheint. Die Antwort auf die Frage „Auf welcher Taste ist das @ zu finden?“ lautet also Q (AltGr + Q), eine Tatsache, die jeden Besucher stolpern lässt, der sich auf einem deutschen Laptop in seine E-Mails einloggen will.\n\nDas @ selbst ist viel älter als die E-Mail. Mittelalterliche Schreiber benutzten es als Abkürzung, Kaufleute im Sinne von „zum Preis von“, und in genau dieser Funktion überlebte es auf Schreibmaschinen. 1971 wählte der Ingenieur Ray Tomlinson es, um in der ersten Netzwerk-E-Mail den Benutzernamen vom Rechnernamen zu trennen, weil es das einzige Symbol auf seinem Fernschreiber war, das nicht Teil eines Namens sein konnte. Die Deutschen nennen es wegen seines geringelten Schwanzes Klammeraffe.\n\nDas Euro-Zeichen ging denselben Weg. Die Europäische Kommission stellte das Symbol am 12. Dezember 1996 vor, doch als die Währung 1999 eingeführt wurde, hatten Tastaturen keine Taste dafür, also wurde das € auf die dritte Ebene des Buchstabens E gelegt, was E (AltGr + E) ergibt. Die Wahl war eine Eselsbrücke: E wie Euro.\n\nProgrammierer leiden am meisten unter dem Layout. Der Backslash, unverzichtbar in Windows-Dateipfaden und in fast jeder Programmiersprache, hat keine eigene Taste und wird mit ß (AltGr + ß) getippt, auf der Taste rechts neben der 0; Bob Bemer von IBM hatte ihn im September 1961 für den neuen ASCII-Zeichensatz vorgeschlagen. Der senkrechte Strich, die „Pipe“, die Unix-Nutzer Dutzende Male am Tag tippen, seit Ken Thompson 1973 die Pipes in Unix einbaute, sitzt auf der Taste neben der linken Shift-Taste, die auch < und > trägt, also < (AltGr + <). Die geschweiften und eckigen Klammern sind über die Ziffern 7, 8, 9 und 0 verteilt, die Tilde über die Plus-Taste. Es ist kein Zufall, dass viele deutsche Entwickler zum Programmieren auf ein US-Layout wechseln.\n\nEin Zeichen der dritten Ebene existiert vor allem für Wissenschaftler und Ingenieure: Das Mikro-Zeichen für die Vorsilbe „Mikro“, ein Millionstel, seit 1873 ein metrischer Vorsatz, liegt auf M (AltGr + M), damit µm, µs und µF ohne Zeichentabelle getippt werden können.\n\n| Zeichen | Name | Deutsche Tastenkombination |\n|---|---|---|\n| @ | At-Zeichen | Q (AltGr + Q) |\n| € | Euro-Zeichen | E (AltGr + E) |\n| \\ | Backslash | ß (AltGr + ß) |\n| \\| | senkrechter Strich (Pipe) | < (AltGr + <) |\n| µ | Mikro-Zeichen | M (AltGr + M) |\n\nDie AltGr-Taste, kurz für „alternate graphic“, ist damit die Geheimtür der deutschen Tastatur: Hinter ihr verbergen sich die Zeichen, die einen deutschen Schreiber mit dem Rest der Welt verbinden.",
+    "notesEn": "Answer refers to the German QWERTZ layout (AltGr + Q), as the card is German; on a US layout the @ is Shift + 2.",
+    "notesDe": "Die Antwort bezieht sich auf das deutsche QWERTZ-Layout (AltGr + Q), da die Karte deutsch ist; auf einem US-Layout liegt das @ auf Shift + 2."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1896",
+   "baseHash": "024b73d85d46",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-392",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Punched Cards and the Storage Media of Early Computing",
+    "titleDe": "Lochkarten und die Datenträger der frühen Computertechnik",
+    "bodyEn": "The idea of storing instructions as holes in a stiff piece of card is older than the computer by more than a century, and it was born in the silk workshops of Lyon. In 1725 Basile Bouchon used a perforated paper roll to select the warp threads of a drawloom; his assistant Jean-Baptiste Falcon replaced the fragile roll with a chain of sturdier cards in 1728, and Jacques de Vaucanson built an automatic loom in 1745. It was Joseph-Marie Jacquard who combined these ideas in 1804 into a practical mechanism: a chain of punched cards, one per row of weft, controlled hooks that lifted the warp threads, so that a single weaver could produce brocade of any complexity. Napoleon declared the invention public property in 1806 and gave Jacquard a pension; by 1812 there were 11,000 Jacquard looms in France, and the silk weavers' riots against them made the mechanism notorious. Charles Babbage planned to programme his Analytical Engine with punched cards, and Ada Lovelace wrote that the engine „weaves algebraic patterns just as the Jacquard loom weaves flowers and leaves“. Herman Hollerith turned the card into a data medium for the US census of 1890; his company became IBM, whose 80-column card of 1928 fed computers into the 1970s.\n\nThe paper tape used by telegraphs was the second great pre-electronic medium. Charles Wheatstone introduced perforated tape for automatic telegraphy in 1857, and 5-bit teleprinter codes made punched tape the standard way of storing messages and, from the 1940s, programs. The British code-breaking machine Colossus read cipher tape at 5,000 characters per second, Konrad Zuse's Z3 took its instructions from punched 35 mm film, and the Teletype ASR-33 made 8-bit paper tape the medium of the minicomputer age. Its narrow strips were cheap, human-readable with practice and impossible to erase.\n\nMagnetic storage arrived with the first commercial computers. In 1951 the UNIVAC I of Remington Rand, the first of which the US Census Bureau accepted on 31 March, shipped with UNISERVO drives, the first tape drives on a commercial computer; their nickel-plated bronze reels held about 1.4 million characters each. IBM followed with the plastic-tape IBM 726 in 1952. Magnetic tapes have never gone away: LTO cartridges still hold the world's archives because they are cheap and durable.\n\nRandom access on the desktop came with the floppy disk. In 1971 IBM introduced an 8-inch flexible disk in a paper jacket, developed by a team under David Noble and Alan Shugart, initially as a read-only medium for loading microcode into the System/370. Shugart's own company shrank it to 5.25 inches in 1976, and Sony's 3.5-inch disk of 1981, holding 1.44 megabytes in its final form, became the icon that still serves as the „save“ button. Floppy disks were the standard medium of personal computers for two decades.\n\nOptical storage began as a music format. Philips and Sony jointly wrote the Red Book standard in 1980 and launched the compact disc in Japan in October 1982; the 12-centimetre disc, read by a laser, held 74 minutes of audio. The CD-ROM of 1985 turned the same discs into 650-megabyte data carriers, and compact discs distributed software and encyclopaedias until the internet made them obsolete. The Compact Disc (CD) was also the first of three generations of optical disc: the DVD, agreed in 1995 and on sale from 1996, packed several gigabytes onto a disc of the same size with a red laser of shorter wavelength, and the Blu-ray Disc of 2006 used a blue-violet laser to reach 25 gigabytes per layer.\n\n| Medium | Introduced | Milestone |\n|---|---|---|\n| punched cards | 1804 | Jacquard loom |\n| punched tape | 1857 | Wheatstone telegraph |\n| magnetic tapes | 1951 | UNIVAC I |\n| floppy disks | 1971 | IBM 8-inch disk |\n| compact discs | 1982 | Philips and Sony |",
+    "bodyDe": "Die Idee, Anweisungen als Löcher in einem steifen Kartonstück zu speichern, ist mehr als ein Jahrhundert älter als der Computer, und sie wurde in den Seidenwerkstätten von Lyon geboren. 1725 nutzte Basile Bouchon eine gelochte Papierrolle, um die Kettfäden eines Zugwebstuhls auszuwählen; sein Gehilfe Jean-Baptiste Falcon ersetzte die empfindliche Rolle 1728 durch eine Kette robusterer Karten, und Jacques de Vaucanson baute 1745 einen automatischen Webstuhl. Es war Joseph-Marie Jacquard, der diese Ideen 1804 zu einem praxistauglichen Mechanismus verband: Eine Kette von Lochkarten, eine pro Schussreihe, steuerte Haken, die die Kettfäden anhoben, sodass ein einzelner Weber Brokat beliebiger Komplexität herstellen konnte. Napoleon erklärte die Erfindung 1806 zum öffentlichen Eigentum und gewährte Jacquard eine Pension; 1812 gab es in Frankreich 11.000 Jacquard-Webstühle, und die Aufstände der Seidenweber gegen sie machten den Mechanismus berüchtigt. Charles Babbage plante, seine Analytical Engine mit Lochkarten zu programmieren, und Ada Lovelace schrieb, die Maschine „webt algebraische Muster, so wie der Jacquard-Webstuhl Blumen und Blätter webt“. Herman Hollerith machte die Karte für die US-Volkszählung von 1890 zum Datenträger; aus seiner Firma wurde IBM, deren 80-spaltige Karte von 1928 Computer bis in die 1970er-Jahre fütterte.\n\nDas Papierband der Telegrafen war das zweite große vorelektronische Medium. Charles Wheatstone führte 1857 gelochtes Band für die automatische Telegrafie ein, und die 5-Bit-Codes der Fernschreiber machten Lochstreifen zum Standard für die Speicherung von Nachrichten und ab den 1940er-Jahren von Programmen. Die britische Entschlüsselungsmaschine Colossus las Chiffrierband mit 5.000 Zeichen pro Sekunde, Konrad Zuses Z3 bezog ihre Befehle von gelochtem 35-mm-Film, und der Fernschreiber Teletype ASR-33 machte 8-Bit-Papierband zum Medium des Minicomputer-Zeitalters. Die schmalen Streifen waren billig, mit Übung lesbar und unmöglich zu löschen.\n\nMagnetische Speicher kamen mit den ersten kommerziellen Computern. 1951 wurde der UNIVAC I von Remington Rand – das erste Exemplar nahm das US Census Bureau am 31. März ab – mit UNISERVO-Laufwerken ausgeliefert, den ersten Bandlaufwerken an einem kommerziellen Computer; ihre vernickelten Bronzebänder fassten je etwa 1,4 Millionen Zeichen. IBM folgte 1952 mit dem Plastikband-Laufwerk IBM 726. Magnetbänder sind nie verschwunden: LTO-Kassetten bewahren bis heute die Archive der Welt, weil sie billig und haltbar sind.\n\nWahlfreier Zugriff auf dem Schreibtisch kam mit der Diskette. 1971 stellte IBM eine flexible 8-Zoll-Scheibe in einer Papierhülle vor, entwickelt von einem Team um David Noble und Alan Shugart, zunächst als Nur-Lese-Medium zum Laden von Mikrocode in das System/370. Shugarts eigene Firma verkleinerte sie 1976 auf 5,25 Zoll, und Sonys 3,5-Zoll-Diskette von 1981, die in ihrer endgültigen Form 1,44 Megabyte fasste, wurde zur Ikone, die noch heute als „Speichern“-Symbol dient. Disketten waren zwei Jahrzehnte lang das Standardmedium der Personal Computer.\n\nOptische Speicher begannen als Musikformat. Philips und Sony schrieben 1980 gemeinsam den Red-Book-Standard und brachten die Compact Disc im Oktober 1982 in Japan auf den Markt; die 12-Zentimeter-Scheibe, von einem Laser gelesen, fasste 74 Minuten Musik. Die CD-ROM von 1985 machte dieselben Scheiben zu Datenträgern mit 650 Megabyte, und Compact Discs verbreiteten Software und Enzyklopädien, bis das Internet sie überflüssig machte. Die Compact Disc (CD) war zugleich die erste von drei Generationen optischer Scheiben: Die DVD, 1995 vereinbart und ab 1996 im Handel, brachte mit einem roten Laser kürzerer Wellenlänge mehrere Gigabyte auf eine gleich große Scheibe, und die Blu-ray Disc von 2006 erreichte mit einem blauvioletten Laser 25 Gigabyte pro Schicht.\n\n| Medium | Eingeführt | Meilenstein |\n|---|---|---|\n| Lochkarten | 1804 | Jacquard-Webstuhl |\n| Lochstreifen | 1857 | Wheatstone-Telegraf |\n| Magnetbänder | 1951 | UNIVAC I |\n| Disketten | 1971 | IBM-8-Zoll-Diskette |\n| Compact Discs | 1982 | Philips und Sony |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1128",
+   "baseHash": "5270ebc038bc",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-146",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Where the Digital World Was Invented",
+    "titleDe": "Wo die digitale Welt erfunden wurde",
+    "bodyEn": "The technologies we use every day were rarely invented in garages. Most of them came out of research laboratories – some corporate, some academic, some publicly funded – whose names have become shorthand for a whole era of computing.\n\nThe best-known German example is mp3. In the 1980s a team at the Fraunhofer Institute for Integrated Circuits (IIS) in Erlangen, led by Karlheinz Brandenburg, worked on a way of shrinking digital audio to a fraction of its size without audible loss. The trick was psychoacoustics: the encoder discards sounds that the human ear would not perceive anyway. The method was standardised in 1992 as MPEG-1 Audio Layer III, and on 14 July 1995 the Erlangen team chose the file extension \".mp3\". Within a few years it had transformed the music industry, first through file sharing and then through portable players.\n\nThe web came from physics. In March 1989, Tim Berners-Lee, a British software engineer at CERN, the European laboratory for particle physics near Geneva, wrote a proposal for a hypertext system that would let scientists share documents across incompatible computers. By the end of 1990 he had written the first browser, the first server and the HTML language; on 30 April 1993 CERN placed the software in the public domain, which is why the World Wide Web belongs to everyone.\n\nThe operating system underneath most of that infrastructure is older. In 1969, Ken Thompson and Dennis Ritchie at Bell Labs in Murray Hill, New Jersey, the research arm of the American telephone monopoly, began writing Unix on a spare PDP-7 minicomputer after the company had withdrawn from the ambitious Multics project. Rewritten in Ritchie's new C language in 1973, Unix became the ancestor of Linux, macOS, Android and iOS.\n\nThe way we look at computers was invented in California. At Xerox PARC, the Palo Alto Research Center of the photocopier company, engineers built the Alto, the first machines of which were introduced on 1 March 1973: the first computer designed around a bitmapped screen, overlapping windows, icons and a mouse. Xerox never sold it in quantity, but a visit to PARC in 1979 famously inspired Steve Jobs, and the Alto's ideas reached the public through Apple: the Lisa of 1983 was the first of its computers to ship with a mouse but sold poorly, and with the Macintosh of 24 January 1984 Apple became the first manufacturer to make the computer mouse a mass-market product.\n\nGermany's connection to the internet also has a precise date and place. On 3 August 1984, Michael Rotert at the University of Karlsruhe (TH) received the first internet e-mail in the country, a welcome message from the American network CSNET. The connection, established by Werner Zorn's research group, made Karlsruhe the gateway through which German universities joined the global network.\n\n| Technology | Year | Laboratory or institution |\n|---|---|---|\n| mp3 | 1987–1992 | Fraunhofer Institute for Integrated Circuits (IIS), Erlangen |\n| World Wide Web | 1989 | CERN, Geneva |\n| Unix | 1969 | Bell Labs, New Jersey |\n| Alto (graphical user interface) | 1973 | Xerox PARC, Palo Alto |\n| first German internet e-mail | 1984 | University of Karlsruhe (TH) |\n\nFive laboratories, five inventions – and behind each of them a small team that was given the time and freedom to build something nobody had asked for yet.",
+    "bodyDe": "Die Technologien, die wir täglich nutzen, wurden selten in Garagen erfunden. Die meisten kamen aus Forschungslaboren – manche in Unternehmen, manche an Hochschulen, manche öffentlich finanziert –, deren Namen zum Kürzel für eine ganze Ära der Informatik geworden sind.\n\nDas bekannteste deutsche Beispiel ist mp3. In den 1980er-Jahren arbeitete ein Team am Fraunhofer-Institut für Integrierte Schaltungen (IIS) in Erlangen unter Leitung von Karlheinz Brandenburg an einem Verfahren, digitale Audiodaten ohne hörbaren Verlust auf einen Bruchteil ihrer Größe zu schrumpfen. Der Trick war die Psychoakustik: Der Encoder verwirft Klänge, die das menschliche Ohr ohnehin nicht wahrnehmen würde. Das Verfahren wurde 1992 als MPEG-1 Audio Layer III standardisiert, und am 14. Juli 1995 wählte das Erlanger Team die Dateiendung „.mp3“. Innerhalb weniger Jahre hatte es die Musikindustrie verwandelt, zuerst durch Tauschbörsen und dann durch tragbare Abspielgeräte.\n\nDas Web kam aus der Physik. Im März 1989 schrieb Tim Berners-Lee, ein britischer Softwareingenieur am CERN, dem europäischen Laboratorium für Teilchenphysik bei Genf, einen Vorschlag für ein Hypertextsystem, mit dem Wissenschaftler Dokumente über inkompatible Rechner hinweg teilen konnten. Bis Ende 1990 hatte er den ersten Browser, den ersten Server und die Sprache HTML geschrieben; am 30. April 1993 gab das CERN die Software zur freien Nutzung frei, weshalb das World Wide Web allen gehört.\n\nDas Betriebssystem unter dem größten Teil dieser Infrastruktur ist älter. 1969 begannen Ken Thompson und Dennis Ritchie in den Bell Labs in Murray Hill, New Jersey, dem Forschungsarm des amerikanischen Telefonmonopols, auf einem übrig gebliebenen PDP-7-Minicomputer Unix zu schreiben, nachdem sich das Unternehmen aus dem ehrgeizigen Projekt Multics zurückgezogen hatte. 1973 in Ritchies neuer Sprache C neu geschrieben, wurde Unix zum Vorfahren von Linux, macOS, Android und iOS.\n\nDie Art, wie wir Computer betrachten, wurde in Kalifornien erfunden. Am Xerox PARC, dem Palo Alto Research Center des Kopiererherstellers, bauten Ingenieure den Alto, dessen erste Exemplare am 1. März 1973 in Betrieb gingen: den ersten Computer, der um einen Rasterbildschirm, überlappende Fenster, Symbole und eine Maus herum entworfen war. Xerox verkaufte ihn nie in großer Stückzahl, doch ein Besuch am PARC im Jahr 1979 inspirierte bekanntlich Steve Jobs, und die Ideen des Alto erreichten die Öffentlichkeit über Apple: Die Lisa von 1983 war der erste Rechner der Firma mit Maus, verkaufte sich aber schlecht, und mit dem Macintosh vom 24. Januar 1984 machte Apple als erster Hersteller die Computermaus zum Massenprodukt.\n\nAuch Deutschlands Anschluss an das Internet hat ein genaues Datum und einen genauen Ort. Am 3. August 1984 empfing Michael Rotert an der Universität Karlsruhe (TH) die erste Internet-E-Mail des Landes, eine Willkommensnachricht aus dem amerikanischen Netz CSNET. Die von der Forschungsgruppe Werner Zorns hergestellte Verbindung machte Karlsruhe zum Tor, durch das die deutschen Hochschulen dem globalen Netz beitraten.\n\n| Technologie | Jahr | Labor oder Einrichtung |\n|---|---|---|\n| mp3 | 1987–1992 | Fraunhofer-Institut für Integrierte Schaltungen (IIS), Erlangen |\n| World Wide Web | 1989 | CERN, Genf |\n| Unix | 1969 | Bell Labs, New Jersey |\n| Alto (grafische Benutzeroberfläche) | 1973 | Xerox PARC, Palo Alto |\n| erste deutsche Internet-E-Mail | 1984 | Universität Karlsruhe (TH) |\n\nFünf Labore, fünf Erfindungen – und hinter jeder ein kleines Team, dem man die Zeit und die Freiheit gab, etwas zu bauen, wonach noch niemand gefragt hatte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-057",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-234",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-007",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-296",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-160",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-383",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-009",
+      "category": 5
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Seven Products, One Comeback: Apple from the Apple I to Siri",
+    "titleDe": "Sieben Produkte, ein Comeback: Apple vom Apple I bis Siri",
+    "bodyEn": "Few companies have had a history as dramatic as Apple's, and it can be told in seven products, each the answer to a favourite quiz question.\n\nIt began in July 1976 with the Apple I, a bare circuit board that Steve Wozniak designed and Steve Jobs sold, first to the Byte Shop in Mountain View. Its price was $666.66. Wozniak liked repeating digits, and the figure was simply a one-third markup on the 500-dollar wholesale price; nobody at the time was thinking of the number of the beast.\n\nEight years later Apple introduced the Macintosh, the computer that made the graphical interface and the mouse a mass product, with one of the most famous advertisements ever made. \"1984\", a dystopian minute in which an athlete hurls a sledgehammer into a giant screen showing Big Brother, was directed by Ridley Scott, fresh from \"Blade Runner\", and aired nationally during the Super Bowl on 22 January 1984.\n\nThe next chapter was a fall. After a power struggle with the chief executive John Sculley, Steve Jobs was pushed out of his own company in 1985. Without him Apple tried to invent the future anyway: in 1993 it launched the Newton MessagePad, a handheld \"personal digital assistant\" named after the 17th-century scientist Isaac Newton, whose apple tree had decorated the company's very first logo. Its handwriting recognition became a punchline, and the line was discontinued in 1998.\n\nBy then Jobs was back. Apple bought his company NeXT at the end of 1996, he returned in 1997, and in October 2001 he brought out the iPod, one of the first digital music players that ordinary people actually wanted, with \"1,000 songs in your pocket\".\n\nThe phone came next. The first iPhone went on sale in the United States on 29 June 2007, combining an iPod, a phone and an internet browser behind a single touch screen. The iPad followed in 2010, but the first generation had no camera at all; Apple added front and rear cameras with the iPad 2, which went on sale on 11 March 2011 and brought video calls to the tablet.\n\nThe last product of the Jobs era was a voice. Siri, a virtual assistant Apple had bought as a start-up, was unveiled with the iPhone 4S on 4 October 2011, the day before Jobs died. In June 2013 Apple presented it anew for iOS 7 with a more natural sound and, for the first time, the option of a male voice.\n\n| Product | Year | Remembered for |\n|---|---|---|\n| Apple I | 1976 | price of $666.66 |\n| Macintosh | 1984 | \"1984\" commercial by Ridley Scott |\n| Newton | 1993 | Apple's handheld before the iPod |\n| iPod | 2001 | Steve Jobs' comeback product |\n| iPhone | 2007 | the first iPhone |\n| iPad 2 | 2011 | first iPad with a camera |\n| Siri | 2011 / 2013 | male voice option from 2013 |",
+    "bodyDe": "Kaum ein Unternehmen hat eine so dramatische Geschichte wie Apple, und sie lässt sich in sieben Produkten erzählen, jedes die Antwort auf eine beliebte Quizfrage.\n\nSie begann im Juli 1976 mit dem Apple I, einer nackten Platine, die Steve Wozniak entwarf und Steve Jobs verkaufte, zuerst an den Byte Shop in Mountain View. Sein Preis betrug 666,66 Dollar. Wozniak mochte sich wiederholende Ziffern, und die Summe war schlicht ein Aufschlag von einem Drittel auf den Großhandelspreis von 500 Dollar; an die Zahl des Tieres dachte damals niemand.\n\nAcht Jahre später stellte Apple den Macintosh vor, den Rechner, der die grafische Oberfläche und die Maus zum Massenprodukt machte, und zwar mit einem der berühmtesten Werbespots aller Zeiten. „1984“, eine dystopische Minute, in der eine Athletin einen Vorschlaghammer in eine riesige Leinwand mit dem Großen Bruder schleudert, wurde von Ridley Scott gedreht, der gerade „Blade Runner“ abgeschlossen hatte, und lief am 22. Januar 1984 landesweit während des Super Bowl.\n\nDas nächste Kapitel war ein Absturz. Nach einem Machtkampf mit Vorstandschef John Sculley wurde Steve Jobs 1985 aus seiner eigenen Firma gedrängt. Ohne ihn versuchte Apple dennoch, die Zukunft zu erfinden: 1993 brachte es das Newton MessagePad heraus, einen „persönlichen digitalen Assistenten“ für die Hand, benannt nach dem Wissenschaftler Isaac Newton aus dem 17. Jahrhundert, dessen Apfelbaum schon das allererste Firmenlogo geziert hatte. Seine Handschrifterkennung wurde zur Pointe, und die Reihe wurde 1998 eingestellt.\n\nDa war Jobs schon zurück. Apple kaufte Ende 1996 seine Firma NeXT, er kehrte 1997 zurück, und im Oktober 2001 brachte er den iPod heraus, einen der ersten digitalen Musikplayer, den gewöhnliche Menschen wirklich haben wollten, mit „1.000 Songs in der Hosentasche“.\n\nDann kam das Telefon. Das erste iPhone kam am 29. Juni 2007 in den USA auf den Markt und vereinte iPod, Telefon und Internetbrowser hinter einem einzigen Touchscreen. 2010 folgte das iPad, doch die erste Generation hatte gar keine Kamera; Front- und Rückkamera bekam erst das iPad 2, das am 11. März 2011 in den Handel kam und Videotelefonate auf das Tablet brachte.\n\nDas letzte Produkt der Ära Jobs war eine Stimme. Siri, ein virtueller Assistent, den Apple als Start-up gekauft hatte, wurde am 4. Oktober 2011 mit dem iPhone 4S vorgestellt, einen Tag vor Jobs' Tod. Im Juni 2013 präsentierte Apple Siri für iOS 7 neu, mit natürlicherem Klang und erstmals mit der Option einer männlichen Stimme.\n\n| Produkt | Jahr | Bekannt für |\n|---|---|---|\n| Apple I | 1976 | Preis von 666,66 Dollar |\n| Macintosh | 1984 | Werbespot „1984“ von Ridley Scott |\n| Newton | 1993 | Apples Handgerät vor dem iPod |\n| iPod | 2001 | Comeback-Produkt von Steve Jobs |\n| iPhone | 2007 | das erste iPhone |\n| iPad 2 | 2011 | erstes iPad mit Kamera |\n| Siri | 2011 / 2013 | männliche Stimme ab 2013 |",
+    "notesEn": "The iPod (2001) was not the very first digital music player, hence the card's “one of the first”. Siri first launched in October 2011; the card's “relaunched in 2013” refers to the iOS 7 version announced in June 2013 with a male voice option.",
+    "notesDe": "Der iPod (2001) war nicht der allererste digitale Musikplayer, daher das „einen der ersten“ der Karte. Siri startete erstmals im Oktober 2011; das „wieder eingeführt“ der Karte meint die im Juni 2013 vorgestellte Version für iOS 7 mit wählbarer männlicher Stimme."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-212",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-080",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-225",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Motorola phone, on sale from 1984 for 3,995 dollars, was the first commercially available handheld mobile phone?",
+      "de": "Welches Motorola-Handy, ab 1984 für 3.995 Dollar erhältlich, war das erste kommerziell erhältliche Mobiltelefon für die Hand?",
+      "answerEn": "DynaTAC 8000X",
+      "answerDe": "DynaTAC 8000X",
+      "timeline": {
+       "kind": "event",
+       "start": "1984",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Motorola's DynaTAC 8000X goes on sale as the first commercial handheld mobile phone",
+       "labelDe": "Motorolas DynaTAC 8000X kommt als erstes kommerzielles Handy in den Handel"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Motorola_DynaTAC",
+       "title": "Motorola DynaTAC – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What does the name of the predictive text system T9, which guesses a word from one key press per letter, stand for?",
+      "de": "Wofür steht der Name des Texterkennungssystems T9, das ein Wort aus einem Tastendruck pro Buchstabe errät?",
+      "answerEn": "Text on 9 keys",
+      "answerDe": "Text on 9 keys",
+      "timeline": {
+       "kind": "event",
+       "start": "1998-04",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Samsung's Anycall SCH-600, the first mobile phone with T9 predictive text, is released in South Korea",
+       "labelDe": "Samsungs Anycall SCH-600, das erste Handy mit der Worterkennung T9, erscheint in Südkorea"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/T9_(predictive_text)",
+       "title": "T9 (predictive text) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Nokia mobile phone, announced in 2000 and sold about 126 million times, became famous as an almost indestructible “brick”?",
+      "de": "Welches Nokia-Handy, im Jahr 2000 vorgestellt und rund 126 Millionen Mal verkauft, wurde als nahezu unzerstörbarer „Knochen“ berühmt?",
+      "answerEn": "Nokia 3310",
+      "answerDe": "Nokia 3310",
+      "timeline": {
+       "kind": "event",
+       "start": "2000-09-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Nokia announces the 3310 mobile phone",
+       "labelDe": "Nokia stellt das Handy 3310 vor"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Nokia_3310",
+       "title": "Nokia 3310 – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Brick to Touch Screen: Milestones of the Mobile Phone",
+    "titleDe": "Vom Knochen zum Touchscreen: Meilensteine des Mobiltelefons",
+    "bodyEn": "The mobile phone went from a status symbol the size of a brick to a glass slab in every pocket in barely a quarter of a century, and the steps along the way are full of quiz material.\n\nThe first handheld mobile phone that anyone could buy was the Motorola DynaTAC 8000X. The Motorola engineer Martin Cooper had made the first call on a prototype on 3 April 1973; after the US regulator approved the phone in September 1983, it went on sale in 1984 for 3,995 dollars. It weighed almost a kilogram and offered about thirty minutes of talk per charge.\n\nFor the next two decades phones were typed on twelve keys, and the letters on them were inherited from the telephone: the push-button keypads that the Bell System introduced in 1963 kept the lettering of the old dials, so 2 carries ABC, 3 DEF, 4 GHI, 5 JKL, 6 MNO, 7 PQRS, 8 TUV and 9 WXYZ. Writing an SMS meant pressing 6 twice for an N, until predictive text arrived. T9, short for \"Text on 9 keys\", was developed by Tegic Communications in Seattle and appeared in a phone for the first time in Samsung's Anycall SCH-600 in 1998: one press per letter, and a dictionary guessed the word.\n\nThe champion of that era was the Nokia 3310, announced on 1 September 2000. With its replaceable covers, the game Snake II and a battery that lasted for days, it sold about 126 million units and earned a reputation as an indestructible brick that has outlived the phone itself.\n\nBusiness people preferred a different device. The Canadian company BlackBerry made the full hardware keyboard, typed with both thumbs, its trademark, and its push e-mail made the \"CrackBerry\" indispensable to managers and politicians. The iPhone of 2007 and Android's touch screens ended that world: on 28 September 2016 BlackBerry announced that it would stop designing smartphones itself, including its models with a real full keyboard, and leave the hardware to licence partners.\n\nThe touch-screen giants now use phones as advertising. At the Rio de Janeiro Summer Olympics in August 2016, Samsung, a worldwide Olympic sponsor, gave the athletes a special Olympic edition of its Galaxy S7 Edge, some 12,500 phones in all, as a souvenir of the Games.\n\n| Milestone | Year | Phone or company |\n|---|---|---|\n| first handheld mobile on sale | 1984 | Motorola DynaTAC 8000X |\n| keypad letters (6 = MNO) | 1963 | Bell System |\n| predictive text T9 | 1998 | Samsung Anycall SCH-600 |\n| best-selling \"brick\" | 2000 | Nokia 3310 |\n| end of its own keyboard phones | 2016 | BlackBerry |\n| phones for the Olympians | 2016 | Samsung |",
+    "bodyDe": "Das Mobiltelefon wurde in kaum einem Vierteljahrhundert vom Statussymbol in Ziegelsteingröße zur Glasscheibe in jeder Hosentasche, und die Stationen auf diesem Weg stecken voller Quizstoff.\n\nDas erste Handy, das jeder kaufen konnte, war das Motorola DynaTAC 8000X. Der Motorola-Ingenieur Martin Cooper hatte am 3. April 1973 mit einem Prototyp das erste Gespräch geführt; nachdem die US-Behörde das Gerät im September 1983 zugelassen hatte, kam es 1984 für 3.995 Dollar in den Handel. Es wog fast ein Kilogramm und bot pro Ladung rund dreißig Minuten Gesprächszeit.\n\nIn den folgenden zwei Jahrzehnten tippte man auf zwölf Tasten, und deren Buchstaben stammten vom Telefon: Die Tastenfelder, die das Bell System 1963 einführte, übernahmen die Beschriftung der alten Wählscheiben, sodass die 2 ABC trägt, die 3 DEF, die 4 GHI, die 5 JKL, die 6 MNO, die 7 PQRS, die 8 TUV und die 9 WXYZ. Eine SMS zu schreiben hieß, für ein N zweimal die 6 zu drücken, bis die Worterkennung kam. T9, kurz für „Text on 9 keys“, also „Text auf 9 Tasten“, wurde von Tegic Communications in Seattle entwickelt und steckte 1998 erstmals in einem Handy, Samsungs Anycall SCH-600: ein Druck pro Buchstabe, und ein Wörterbuch erriet das Wort.\n\nDer Champion dieser Ära war das Nokia 3310, vorgestellt am 1. September 2000. Mit austauschbaren Schalen, dem Spiel Snake II und einem Akku, der tagelang hielt, verkaufte es sich rund 126 Millionen Mal und erwarb den Ruf eines unzerstörbaren Knochens, der das Gerät selbst überlebt hat.\n\nGeschäftsleute bevorzugten ein anderes Gerät. Die kanadische Firma BlackBerry machte die echte Volltastatur, mit beiden Daumen bedient, zu ihrem Markenzeichen, und ihre Push-E-Mail machte die „CrackBerry“ für Manager und Politiker unverzichtbar. Das iPhone von 2007 und die Touchscreens von Android beendeten diese Welt: Am 28. September 2016 kündigte BlackBerry an, keine Smartphones mehr selbst zu entwickeln, auch nicht die Modelle mit echter Volltastatur, und die Hardware Lizenzpartnern zu überlassen.\n\nDie Touchscreen-Riesen nutzen Handys heute als Werbung. Bei den Olympischen Sommerspielen in Rio de Janeiro im August 2016 schenkte Samsung, weltweiter Olympia-Sponsor, den Athleten eine Olympia-Sonderedition seines Galaxy S7 Edge, insgesamt rund 12.500 Geräte, als Andenken an die Spiele.\n\n| Meilenstein | Jahr | Gerät oder Firma |\n|---|---|---|\n| erstes Handy im Handel | 1984 | Motorola DynaTAC 8000X |\n| Tastenbuchstaben (6 = MNO) | 1963 | Bell System |\n| Worterkennung T9 | 1998 | Samsung Anycall SCH-600 |\n| meistverkaufter „Knochen“ | 2000 | Nokia 3310 |\n| Ende der eigenen Tastaturhandys | 2016 | BlackBerry |\n| Handys für die Olympioniken | 2016 | Samsung |",
+    "notesEn": "BlackBerry's announcement of 28 September 2016 ended its own phone design altogether; licensed keyboard phones such as the KEYone (2017) followed under its brand. The figure of 12,500 phones for the Rio athletes is the card's.",
+    "notesDe": "Mit der Ankündigung vom 28. September 2016 gab BlackBerry die Entwicklung eigener Telefone ganz auf; lizenzierte Tastaturhandys wie das KEYone (2017) folgten unter seiner Marke. Die Zahl von 12.500 Handys für die Athleten in Rio stammt von der Karte."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-386",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the currency used inside Second Life, which can be exchanged for real money?",
+      "de": "Wie heißt die Währung, mit der in Second Life bezahlt wird und die sich in echtes Geld umtauschen lässt?",
+      "answerEn": "Linden Dollar",
+      "answerDe": "Linden Dollar",
+      "timeline": {
+       "kind": "event",
+       "start": "2003-06-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Second Life opens with its own in-world currency, the Linden Dollar",
+       "labelDe": "Second Life öffnet mit eigener Währung, dem Linden Dollar"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Second_Life",
+       "title": "Second Life – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Who founded Linden Lab, the San Francisco company behind Second Life, in 1999?",
+      "de": "Wer gründete 1999 Linden Lab, die Firma aus San Francisco hinter Second Life?",
+      "answerEn": "Philip Rosedale",
+      "answerDe": "Philip Rosedale",
+      "timeline": {
+       "kind": "founding",
+       "start": "1999",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Philip Rosedale founds Linden Lab in San Francisco",
+       "labelDe": "Philip Rosedale gründet Linden Lab in San Francisco"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Second_Life",
+       "title": "Second Life – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which 1992 novel by Neal Stephenson was the term “metaverse” coined?",
+      "de": "In welchem Roman von Neal Stephenson aus dem Jahr 1992 wurde der Begriff „Metaversum“ geprägt?",
+      "answerEn": "Snow Crash",
+      "answerDe": "Snow Crash",
+      "timeline": {
+       "kind": "creation",
+       "start": "1992-06",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Neal Stephenson's novel Snow Crash is published, coining the term “metaverse”",
+       "labelDe": "Neal Stephensons Roman Snow Crash erscheint und prägt den Begriff „Metaversum“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Snow_Crash",
+       "title": "Snow Crash – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of Lucasfilm's online virtual world for the Commodore 64, tested from 1986, which first called its users' figures avatars?",
+      "de": "Wie hieß die Online-Welt von Lucasfilm für den Commodore 64, ab 1986 getestet, die als erste die Figuren ihrer Nutzer Avatare nannte?",
+      "answerEn": "Habitat",
+      "answerDe": "Habitat",
+      "timeline": {
+       "kind": "event",
+       "start": "1986",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Lucasfilm's online world Habitat opens as a beta test on Quantum Link",
+       "labelDe": "Lucasfilms Online-Welt Habitat startet als Betatest bei Quantum Link"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+       "title": "Habitat (video game) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Second Lives: Virtual Worlds from Habitat to the Metaverse",
+    "titleDe": "Zweite Leben: Virtuelle Welten von Habitat bis zum Metaversum",
+    "bodyEn": "Long before anyone spoke of the metaverse, people were building second homes inside computers. The idea of a shared online world populated by digital stand-ins is almost forty years old, and its history runs through one novel and a handful of famous projects.\n\nThe pioneer was Habitat, developed by Lucasfilm Games and run on Quantum Link, the Commodore 64 online service that later became AOL. Its beta test opened in 1986, and its players moved cartoon figures through a world of streets and houses, traded with each other and even founded a church. Habitat was the first virtual environment to call those onscreen bodies avatars, after the Sanskrit word for a god's earthly incarnation.\n\nThe word that now names the whole dream came from science fiction. In his novel Snow Crash, published in June 1992, Neal Stephenson imagined the Metaverse, a virtual boulevard circling a black planet on which millions of people meet as avatars; the book's success popularised both terms.\n\nThe most famous attempt to build it followed eleven years later. Philip Rosedale, who had experimented with virtual worlds as a physics student, founded Linden Lab in San Francisco in 1999, and on 23 June 2003 the company opened Second Life. Unlike a game, it has no goal and no levels: almost everything in it, from clothes to islands and nightclubs, is designed by its users, who are called residents and are represented by avatars. Its economy runs on the Linden Dollar (L$), which can be bought and sold for real money. In the mid-2000s companies opened virtual branches there, universities held lectures and politicians held rallies, and a few residents made real fortunes trading virtual land.\n\nThe hype faded when social networks and smartphones drew people's attention elsewhere, but Second Life never closed, and it is often cited as the first example of a metaverse. When Facebook renamed its parent company Meta in 2021 to bet on virtual reality, commentators were quick to point out that Linden Lab had been there almost twenty years earlier.\n\n| World or work | Year | Creator |\n|---|---|---|\n| Habitat | 1986 | Lucasfilm Games |\n| Snow Crash | 1992 | Neal Stephenson |\n| Linden Lab | 1999 | Philip Rosedale |\n| Second Life | 2003 | Linden Lab |",
+    "bodyDe": "Lange bevor jemand vom Metaversum sprach, bauten sich Menschen zweite Wohnsitze im Computer. Die Idee einer gemeinsamen Online-Welt, bevölkert von digitalen Stellvertretern, ist fast vierzig Jahre alt, und ihre Geschichte führt über einen Roman und eine Handvoll berühmter Projekte.\n\nDer Pionier war Habitat, entwickelt von Lucasfilm Games und betrieben bei Quantum Link, dem Onlinedienst für den Commodore 64, aus dem später AOL wurde. Der Betatest begann 1986, und die Spieler bewegten Comicfiguren durch eine Welt aus Straßen und Häusern, handelten miteinander und gründeten sogar eine Kirche. Habitat war die erste virtuelle Umgebung, die diese Figuren auf dem Bildschirm Avatare nannte, nach dem Sanskritwort für die irdische Verkörperung eines Gottes.\n\nDas Wort, das heute den ganzen Traum benennt, kam aus der Science-Fiction. In seinem im Juni 1992 erschienenen Roman Snow Crash erfand Neal Stephenson das Metaversum (Metaverse), einen virtuellen Boulevard rund um einen schwarzen Planeten, auf dem sich Millionen Menschen als Avatare begegnen; der Erfolg des Buches machte beide Begriffe populär.\n\nDer berühmteste Versuch, es zu bauen, folgte elf Jahre später. Philip Rosedale, der schon als Physikstudent mit virtuellen Welten experimentiert hatte, gründete 1999 in San Francisco Linden Lab, und am 23. Juni 2003 öffnete die Firma Second Life. Anders als ein Spiel hat es kein Ziel und keine Level: Fast alles darin, von Kleidung über Inseln bis zu Nachtclubs, gestalten die Nutzer selbst, die „Residents“ heißen und durch Avatare vertreten sind. Seine Wirtschaft läuft mit dem Linden Dollar (L$), der sich gegen echtes Geld kaufen und verkaufen lässt. Mitte der 2000er-Jahre eröffneten Unternehmen dort virtuelle Filialen, Universitäten hielten Vorlesungen, Politiker Kundgebungen, und einige Bewohner verdienten mit dem Handel virtueller Grundstücke echte Vermögen.\n\nDer Hype verflog, als soziale Netzwerke und Smartphones die Aufmerksamkeit anderswohin lenkten, doch Second Life schloss nie und gilt oft als erstes Beispiel eines Metaversums. Als Facebook seinen Mutterkonzern 2021 in Meta umbenannte, um auf virtuelle Realität zu setzen, wiesen Kommentatoren rasch darauf hin, dass Linden Lab fast zwanzig Jahre früher dort gewesen war.\n\n| Welt oder Werk | Jahr | Schöpfer |\n|---|---|---|\n| Habitat | 1986 | Lucasfilm Games |\n| Snow Crash | 1992 | Neal Stephenson |\n| Linden Lab | 1999 | Philip Rosedale |\n| Second Life | 2003 | Linden Lab |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

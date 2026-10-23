@@ -1,0 +1,242 @@
+{
+ "article": "a1692",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Electroplating",
+   "title": "Electroplating – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:08.422Z",
+   "snapshot": "6f425d452e6ffee92f1a827fda8e104885407309e13c2aeb4d0c99719b39fe5c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hot-dip_galvanization",
+   "title": "Hot-dip galvanization – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:09.333Z",
+   "snapshot": "71a8dac5a7f483ae5699bfdf63869247d4dc69d71cb0f38a224254dd1382d762"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anodizing",
+   "title": "Anodizing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:10.358Z",
+   "snapshot": "78d88d47e9c5fdb2f6297c1630530bfe04338172c6104ec06c0fc7e6b444bdcd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Powder_coating",
+   "title": "Powder coating – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:11.334Z",
+   "snapshot": "7d2003d095f9f4c57b3835d1979eeaed0d4a2f54b3744c011a8631f5e4748d6c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sandblasting",
+   "title": "Sandblasting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:12.447Z",
+   "snapshot": "cf1a564ed3e10f949fdb1c35ce679aa2e34cfd26da96ed4711137b254bdf8a9a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electroplating",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hot-dip galvanizing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08458",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anodizing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08459",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Powder coating",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sandblasting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:06.630Z",
+   "target": "f08456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electroplating, also known as electrochemical deposition or electrodeposition, is a process for producing a metal coating on a solid substrate through the reduction of cations of that metal by means of a direct electric current.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Electroplating” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:06.630Z",
+   "target": "f08457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The process of hot-dip galvanizing results in a metallurgical bond between zinc and steel, with a series of distinct iron-zinc alloys.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hot-dip galvanizing” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:06.630Z",
+   "target": "f08458",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anodizing is an electrolytic passivation process used to increase the thickness of the natural oxide layer on the surface of metal parts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anodizing” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:06.630Z",
+   "target": "f08459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Powder coating is a type of coating that is applied as a free-flowing, dry powder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Powder coating” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:06.630Z",
+   "target": "f08460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sandblasting, sometimes known as abrasive blasting, is the operation of forcibly propelling a stream of abrasive material against a surface under high pressure to smooth a rough surface, roughen a smooth surface, shape a surface or remove surface contaminants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sandblasting” is on the snapshot of s5"
+  }
+ ]
+}

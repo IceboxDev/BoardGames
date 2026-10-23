@@ -1,0 +1,288 @@
+{
+ "article": "a1253",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1954_Tour_de_France",
+   "title": "1954 Tour de France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:06.710Z",
+   "snapshot": "ec6ce03e2fb0d7113b4ac00a463e95147c6546072ff7360fcfb684125f9c3505"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/2026_Tour_de_France",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:05.572Z",
+   "snapshot": "b3de90a6adb785a3c4b87aafbcfd3b0e3cb40d3c9a93e47805eb6f461de1a3ab"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1909_Giro_d%27Italia",
+   "title": "1909 Giro d'Italia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:06.449Z",
+   "snapshot": "36954c8c940c786871be0df63130f4aa997d39dc48fbe7e4384e4ed3e5c2bcd9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1877_Wimbledon_Championship",
+   "title": "1877 Wimbledon Championship – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:07.515Z",
+   "snapshot": "10b0e39b4d84570e0a916529168e0b0ffa32429f414d04b0a533b67807f1139a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1923_24_Hours_of_Le_Mans",
+   "title": "1923 24 Hours of Le Mans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:08.587Z",
+   "snapshot": "8ce235a762038ff1270cd5b387d02b855b5bca28640b9d35ed4c51d76886deb0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/1897_Boston_Marathon",
+   "title": "1897 Boston Marathon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:09.472Z",
+   "snapshot": "c4efb334c49255284e847bcf270ed82c4bd7a2b34a4d3bfc1c7c880020d2301e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tour de France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tour de France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Giro d'Italia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wimbledon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "24 Hours of Le Mans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Boston Marathon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:55.265Z",
+   "target": "f06261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 1954 Tour de France was the 41st edition of the Tour de France, taking place from 8 July to 1 August 1954.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tour de France” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:55.265Z",
+   "target": "f06261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 2026 Tour de France was the 113th edition of the Tour de France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tour de France” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:55.265Z",
+   "target": "f06262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The 1909 Giro d'Italia was the 1st edition of the Giro d'Italia, organized and sponsored by the Italian major sport newspaper La Gazzetta dello Sport.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giro d'Italia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:55.265Z",
+   "target": "f06263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 1877 Wimbledon Championship was a men's tennis tournament held at the All England Croquet and Lawn Tennis Club (AEC & LTC) in Wimbledon, London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wimbledon” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:55.265Z",
+   "target": "f06264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 1923 24 Hours of Le Mans, officially the 24 Hours Grand Prix of Endurance (French: Grand Prix d'Endurance de 24 Heures), was the inaugural Grand Prix of Endurance, and took place on 26 and 27 May 1923.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “24 Hours of Le Mans” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:55.265Z",
+   "target": "f06265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The 1897 Boston Marathon was the inaugural edition of the marathon race that became known as the Boston Marathon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boston Marathon” is on the snapshot of s6"
+  }
+ ]
+}

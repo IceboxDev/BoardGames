@@ -1,0 +1,242 @@
+{
+ "article": "a1205",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Caylus_(game)",
+   "title": "Caylus (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:12.924Z",
+   "snapshot": "3e474bb4549f6f6779acd3cca39e25c98d7945571e8dc7049b11a4b7c6c11107"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Clank!:_A_Deck-Building_Adventure",
+   "title": "Clank!: A Deck-Building Adventure – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:13.899Z",
+   "snapshot": "823f3a57fd48cfea35f77ae827d698143db57d287747551cdd27298cd13a4154"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carcassonne_(board_game)",
+   "title": "Carcassonne (board game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:20.409Z",
+   "snapshot": "387a59af573b7de01773f650a4551e07ddfe182eda33cbbfee36fc24ee9a6eac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/7_Wonders_(board_game)",
+   "title": "7 Wonders (board game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:15.001Z",
+   "snapshot": "55d6edd386f1446168114e09205f0ffc749cf4db462aeaeb4e98d79ab321373a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Modern_Art_(game)",
+   "title": "Modern Art (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:15.875Z",
+   "snapshot": "3ff740145fac6e257e945fd32c296a32eec5c8a3b7a4418b109339d47ac08280"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "worker placement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "deck-building",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tile placement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "card drafting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "auction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:47.834Z",
+   "target": "f06021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Each worker placement costs 1 denier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “worker placement” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.834Z",
+   "target": "f06022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Clank!: A Deck-Building Adventure is a 2016 board game published by Dire Wolf Digital, Renegade Game Studios and others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deck-building” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.834Z",
+   "target": "f06023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Players gain extra abilities by scoring an exact number of points, and tile placement rules are relaxed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tile placement” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:47.834Z",
+   "target": "f06024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Three decks of cards featuring images of historical civilizations, armed conflicts, and commercial activity are used in the card drafting game 7 Wonders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “card drafting” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:47.834Z",
+   "target": "f06025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Modern Art is an auction game designed by Reiner Knizia and first published in 1992 by Hans im Glück in German.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “auction” is on the snapshot of s5"
+  }
+ ]
+}

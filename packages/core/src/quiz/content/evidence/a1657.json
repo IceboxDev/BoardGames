@@ -1,0 +1,382 @@
+{
+ "article": "a1657",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Joy_Division",
+   "title": "Joy Division – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:11.370Z",
+   "snapshot": "f396443e9619527b020aec440c0eec480ff6e47a3449c19ccca9de01cf655980"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Fall_(Camus_novel)",
+   "title": "The Fall (Camus novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:12.276Z",
+   "snapshot": "dd0799f5154293fb5c62633abdecc2c4f9f51a14f5fd20e97c02eb0374ea9bb3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Fall_(band)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:13.410Z",
+   "snapshot": "de2314894ae1443504aa230312e44ecbdcd63a88ae1b89f1f7a7a715843d4183"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bauhaus",
+   "title": "Bauhaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:45.873Z",
+   "snapshot": "3c4a71c91a284426fff40bf09fdfbdafbb86c2e0698f979581ea222c320c0847"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gang_of_Four",
+   "title": "Gang of Four – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:14.320Z",
+   "snapshot": "b87bd8f5b5e7ebc1f36525c873bce046292a3961e7cf7823a1806a46b9a7bb90"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cabaret_Voltaire_(Zurich)",
+   "title": "Cabaret Voltaire (Zurich) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:15.259Z",
+   "snapshot": "b7dc2e90eab612c8afb2c75a0da065cb8068e9a99885d4ff7da4b4a387d05d74"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/The_Cure",
+   "title": "The Cure",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:16.481Z",
+   "snapshot": "0532318ff33b357633772a05fe51f13b39d32fe78ccd2aaace312a1a269f0112"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Pretty_in_Pink_(song)",
+   "title": "Pretty in Pink (song)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:17.283Z",
+   "snapshot": "79d1bc04d1bbabf8e64aa471bb85683e6bab01151d0bccce92dc67b4eaa48d51"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Joy Division",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c139"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Fall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Fall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bauhaus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gang of Four",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cabaret Voltaire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Cure",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-112"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13134",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Psychedelic Furs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-226"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f08281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Joy Division were  an English rock band formed in Salford in 1976.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joy Division” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f08282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Fall (French: La Chute) is a philosophical novel by Albert Camus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Fall” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f08282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Fall were an English post-punk band, formed in 1976 in Prestwich, Greater Manchester.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Fall” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f08283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Staatliches Bauhaus (German: [ˈʃtaːtlɪçəs ˈbaʊˌhaʊs] ), commonly known as the Bauhaus (German for 'building house'), was a German art school operational from 1919 to 1933 that combined crafts and the fine arts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bauhaus” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f08284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Gang of Four (simplified Chinese: 四人帮; traditional Chinese: 四人幫; pinyin: Sì rén bāng) was a Maoist political faction composed of four Chinese Communist Party (CCP) officials.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gang of Four” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f08285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cabaret Voltaire is the birthplace of the Dada art movement, founded in Zurich, Switzerland, in 1916.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cabaret Voltaire” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f13133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Cure are an English rock band formed in Crawley in 1976 by Robert Smith (vocals, guitar) and Lol Tolhurst (drums).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Cure” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:59.903Z",
+   "target": "f13134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "\"Pretty in Pink\" is a song by the English band the Psychedelic Furs, originally released in 1981 as a single from the band's second album, Talk Talk Talk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Psychedelic Furs” is on the snapshot of s8"
+  }
+ ]
+}

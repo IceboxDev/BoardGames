@@ -1,0 +1,84 @@
+{
+ "a0126": {
+  "kind": "edited",
+  "reason": "The sentence saying Kohl's 1982 election was the only successful constructive vote of no confidence now says 'to date (as of 2026)' in all three languages, because it is a time-sensitive claim.",
+  "sources": [
+   {
+    "url": "https://www.bundeskanzler.de/bk-de/kanzleramt/bundeskanzler-seit-1949/helmut-kohl"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Constructive_vote_of_no_confidence"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f00627": {
+  "kind": "marked",
+  "reason": "Time-sensitive ('only successful … to date'): set reviewBy for a yearly re-check.",
+  "sources": [
+   {
+    "url": "https://www.bundeskanzler.de/bk-de/kanzleramt/bundeskanzler-seit-1949/helmut-kohl"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ },
+ "a0139": {
+  "kind": "edited",
+  "reason": "Erdoğan and Putin are still in office, unlike the other three leaders in the article. Each of their paragraphs now ends with a dated 'as of 2026' sentence in EN/DE/RU. This also fixes the Russian past tense for Putin ('руководил'), which made his rule sound finished.",
+  "sources": [
+   {
+    "url": "https://freedomhouse.org/country/turkey/freedom-world/2025"
+   },
+   {
+    "url": "https://freedomhouse.org/country/russia/freedom-world/2025"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f00692": {
+  "kind": "marked",
+  "reason": "The present-tense wording ('repeatedly faces criticism') depends on Erdoğan still being in office: set reviewBy.",
+  "sources": [
+   {
+    "url": "https://freedomhouse.org/country/turkey/freedom-world/2025"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ },
+ "f00693": {
+  "kind": "marked",
+  "reason": "The present-tense wording ('repeatedly faces criticism') depends on Putin still being in office: set reviewBy.",
+  "sources": [
+   {
+    "url": "https://freedomhouse.org/country/russia/freedom-world/2025"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ },
+ "f00811": {
+  "kind": "marked",
+  "reason": "Germany's 0 % European-election threshold may end once the 2018 EU electoral act takes effect (2029 at the earliest): set reviewBy.",
+  "sources": [
+   {
+    "url": "https://www.bundeswahlleiterin.de/europawahlen/2024/informationen-waehler/wahlsystem.html"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ }
+}

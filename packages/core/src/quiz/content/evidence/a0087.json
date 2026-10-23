@@ -1,0 +1,289 @@
+{
+ "article": "a0087",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Monument_to_the_Battle_of_the_Nations",
+   "title": "Monument to the Battle of the Nations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:38.512Z",
+   "snapshot": "836cf052e86ade837dbc523184f27d1051ae8b2ad78f44d1425469068fcc901f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/V%C3%B6lkerschlachtdenkmal",
+   "title": "Völkerschlachtdenkmal",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:40.749Z",
+   "snapshot": "25bdb398c686ad801354ae8256348e947c74a14d99b575d436588851a4cf3528"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tear_down_this_wall!",
+   "title": "Tear down this wall! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:39.519Z",
+   "snapshot": "e172acdce69ed89a85dd4651e4615fbd2c868454cf499e615862cbf76e42b8b4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Niederwalddenkmal",
+   "title": "Niederwalddenkmal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:42.188Z",
+   "snapshot": "759ff8bea202efdad385ceb457c64bfa1368f9bf910a3fe1a5f5d6784e660b19"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bavaria_(Statue)",
+   "title": "Bavaria (Statue) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:42.788Z",
+   "snapshot": "50d8fe0ea7a0153924cf31274dcf1765808f5514f4c713f0bfa7219e1246615b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Kaiser-Wilhelm-Denkmal_am_Deutschen_Eck",
+   "title": "Kaiser-Wilhelm-Denkmal am Deutschen Eck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:43.791Z",
+   "snapshot": "3dd576949318237e9d58985ed11ab12684cc191c6c4b9af196eb679c81b6ade7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Völkerschlachtdenkmal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Völkerschlachtdenkmal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-076"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Brandenburg Gate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Niederwalddenkmal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Bavaria",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kaiser Wilhelm I.",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-072"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:48.219Z",
+   "target": "f00431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 18 October 1913 the Völkerschlachtdenkmal was inaugurated in the presence of about 100,000 people including the Emperor, and all the reigning sovereign rulers of the German states.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.219Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Völkerschlachtdenkmal” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:48.219Z",
+   "target": "f00431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Völkerschlachtdenkmal in Leipzig wurde 1898 bis 1913 von Bruno Schmitz im Monumentalstil errichtet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.219Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Völkerschlachtdenkmal” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:48.219Z",
+   "target": "f00432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On June 12, 1987, at the Brandenburg Gate, then-United States president Ronald Reagan delivered a speech commonly known by a key line from the middle part: \"Mr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.219Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Brandenburg Gate” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:48.219Z",
+   "target": "f00433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Niederwalddenkmal in Rüdesheim am Rhein wurde 1877–1883 von Johannes Schilling und Karl Weißbach im Monumentalstil errichtet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.219Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Niederwalddenkmal” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:48.219Z",
+   "target": "f00435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Bavaria ist eine kolossale Bronzestatue in München und gilt als bekannteste und zugleich monumentalste Darstellung der Bavaria, der personifizierten Allegorie Bayerns.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.219Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Bavaria” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:48.219Z",
+   "target": "f14448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Reiterstandbild vor einer Kolonnade stellt den ersten Deutschen Kaiser Wilhelm I. in Begleitung einer Viktoriafigur dar.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.219Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kaiser Wilhelm I.” is on the snapshot of s6"
+  }
+ ]
+}

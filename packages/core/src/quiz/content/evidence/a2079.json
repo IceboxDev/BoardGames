@@ -1,0 +1,375 @@
+{
+ "article": "a2079",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bicycle_Wheel",
+   "title": "Bicycle Wheel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:04.764Z",
+   "snapshot": "b6494fc59afeb92d55312d3941ec57d4dfe34c1d3c14b60ea5c08702ff2c3414"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sant'Ignazio,_Rome",
+   "title": "Sant'Ignazio, Rome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:05.743Z",
+   "snapshot": "ba7603409c8fff63e174c5cd9c20f9d0025fa8e444593f74c8619aba42812d8c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Still_Life_with_Chair_Caning",
+   "title": "Still Life with Chair Caning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:06.746Z",
+   "snapshot": "09ef182c5b03cb800546ce86bd6dfd7e2ea5016cead5da774fa965684931fc96"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Avant-garde",
+   "title": "Avant-garde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:07.851Z",
+   "snapshot": "5149785989b5883d755eebc05ca5e67f1e4720019b2e2f4b3a10ed8eb6409c3b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rubbing_(art)",
+   "title": "Rubbing (art) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:08.741Z",
+   "snapshot": "d0cb82f55ab171cb3a979df892ac1de2e7183bd6c7ad5ed688b313531cec90db"
+  },
+  "s6": {
+   "url": "https://www.tate.org.uk/art/art-terms/f/found-object",
+   "title": "Found object – Art Term | Tate",
+   "publisher": "Tate",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:26.526Z",
+   "snapshot": "c86a6bbf6dfd21be7dc5432b3a3da79dc10275df8be34c7387e3389fbf25e82e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Found_object",
+   "title": "Found object – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:27.443Z",
+   "snapshot": "a0dd89ececb8519dd78711cec11979e702e08b02652750c36dcd5e64a2739e06"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Objet trouvé",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Trompe-l'œil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Collage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Avant-garde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frottage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:18.655Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Objet trouvé",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Objet trouvé”, “objet trouvé”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:18.655Z",
+   "target": "f10392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "focus on the high altar at the rear of the broad eastern apse, the church's colored marbles, animated stucco figural relief, richly ornamented altars, extensive gilding, and bold trompe-l'œil paintings in the \"dome\" at its crossing and in the nave ceiling all produce a festive, sumptuous effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trompe-l'œil” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:18.655Z",
+   "target": "f10393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Still Life with Chair Caning is an ovular 1912 mixed-media collage work by Pablo Picasso (1881–1973), which is considered to be the first cubist collage as well as, by some, the first assemblage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Collage” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:18.655Z",
+   "target": "f10394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the arts and literature, the term avant-garde (from French meaning 'advance guard' or 'vanguard') identifies an experimental genre or work of art, and the artist who created it, which usually is aesthetically innovative, whilst initially being ideologically unacceptable to the artistic",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Avant-garde” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:18.655Z",
+   "target": "f10395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A rubbing (frottage) is a reproduction of the texture of a surface created by placing a piece of paper or similar material over the subject and then rubbing the paper with something to deposit marks, most commonly charcoal or pencil but also various forms of blotted and rolled ink, chalk, wax, and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frottage” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:12:32Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A found object is a natural or man-made object, or fragment of an object, that is found (or sometimes bought) by an artist and kept because of some intrinsic interest the artist sees in it",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:12:33Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A found object (a calque from the French objet trouvé), or found art,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:04.697Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A found object is a natural or man-made object, or fragment of an object, that is found (or sometimes bought) by an artist and kept because of some intrinsic interest the artist sees in it",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:04.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:04.697Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A found object (a calque from the French objet trouvé), or found art,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:04.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:04.697Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Found objects (sometimes referred to by the French term for found object ‘objet trouvé’) may be put on a shelf and treated as works of art in themselves, as well as providing inspiration for the artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:04.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Objet trouvé” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:04.697Z",
+   "target": "f10391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A found object (a calque from the French objet trouvé), or found art, is art created from undisguised, but often modified, items or products that are not normally considered materials from which art is made, often because they already have a non-art function.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:04.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Objet trouvé” is on the snapshot of s7"
+  }
+ ]
+}

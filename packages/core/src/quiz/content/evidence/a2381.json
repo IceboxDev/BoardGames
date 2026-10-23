@@ -1,0 +1,398 @@
+{
+ "article": "a2381",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hose",
+   "title": "Hose",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:02.032Z",
+   "snapshot": "d453b4f76a0e80e5a9894e973376bf56a7dd55d42a7f56bce4f7655dd2654871"
+  },
+  "s2": {
+   "url": "https://laviedesidees.fr/Le-droit-au-pantalon.html",
+   "title": "Le droit au pantalon – La Vie des idées",
+   "kind": "other",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:57:01.265Z",
+   "snapshot": "1c950d81926f9b98260c015410247eaa2fc57edfb50b3f826213a13fdd7ef044"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Women_and_trousers",
+   "title": "Women and trousers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:02.571Z",
+   "snapshot": "f762def8004ccf574bd698488fb9f909da6fec44bab056ac2aa65e64813a868f"
+  },
+  "s4": {
+   "url": "https://cths.fr/an/savant.php?id=121927",
+   "title": "DUBOIS Louis Nicolas Pierre Joseph – Annuaire prosopographique",
+   "publisher": "Comité des travaux historiques et scientifiques (CTHS)",
+   "kind": "reference",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:47:00.563Z",
+   "snapshot": "a08b2ecc65f8e21a525e736bf9940aeb4a431f42853cd499c5cda9afc2dfe39c"
+  },
+  "s5": {
+   "url": "https://fr.wikipedia.org/wiki/Louis_Nicolas_Dubois",
+   "title": "Louis Nicolas Dubois – Wikipédia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:47:02.091Z",
+   "snapshot": "52a08afbe40f9fb7051e4d2c36dd6003e0e1dcd082a28b9ba0f1f200781b24fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis-Nicolas Dubois",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosa Bonheur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "bloomers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Violette Morris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:09.728Z",
+   "target": "f12432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Ballett wurden die Röcke verkürzt, unter denen Trikot-Hosen sichtbar wurden, bekannt beispielsweise im französischen Cancan, der um 1900 von Paris ausgehend weltweit bekannt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:09.728Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis-Nicolas Dubois",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Louis-Nicolas Dubois”, “Луи-Николя Дюбуа”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:09.728Z",
+   "target": "f12434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the 1850s, painter Rosa Bonheur had to ask permission from the police to wear trousers, as this was her preferred attire to go to the sheep and cattle markets to study the animals she painted.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosa Bonheur” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:09.728Z",
+   "target": "f12435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This inspired a craze for the dress, which came to be known as bloomers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bloomers” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:09.728Z",
+   "target": "f12436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mais lorsque Violette Morris défend son droit à porter le pantalon lors d’un retentissant procès en 1930, l’ordonnance, que l’on croyait effectivement tombée en désuétude, retrouve son pouvoir liberticide et donne un argument de plus pour justifier l’exclusion de la championne, licenciée de la",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Violette Morris” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:49:47Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "En 1800 il devient le premier préfet de police (Seine), jusqu'en 1810",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23",
+   "note": "Dubois held the Paris police prefecture from March 1800 to 1810, so the police ordinance of 7 November 1800 was issued under him."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:49:48Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "il ne s’agit pas d’une loi mais d’une ordonnance de police de la Préfecture de police de Paris, et qu’elle n’est pas datée du 17 novembre mais du 7 novembre.",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:49:49Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Préfet de police de Paris depuis quelques mois, il décrète en 1800 une ordonnance visant à interdire le port du pantalon pour les femmes",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:53.739Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "En 1800 il devient le premier préfet de police (Seine), jusqu'en 1810",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:53.739Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "il ne s’agit pas d’une loi mais d’une ordonnance de police de la Préfecture de police de Paris, et qu’elle n’est pas datée du 17 novembre mais du 7 novembre.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:53.739Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Préfet de police de Paris depuis quelques mois, il décrète en 1800 une ordonnance visant à interdire le port du pantalon pour les femmes",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:53.739Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "- Académie d'agriculture de France - « Louis Nicolas Dubois », dans Robert et Cougny, Dictionnaire des parlementaires français, 1889",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Louis-Nicolas Dubois” is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:53.739Z",
+   "target": "f12433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Louis Nicolas Dubois fit ses études de droit à Paris et devint avocat au Parlement de Paris, puis procureur au Châtelet en 1783.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Louis-Nicolas Dubois” is on the snapshot of s5"
+  }
+ ]
+}

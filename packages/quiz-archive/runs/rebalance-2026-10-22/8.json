@@ -1,0 +1,1093 @@
+{
+ "subs": {
+  "nature": [
+   {
+    "slug": "mammals",
+    "en": "Mammals",
+    "de": "Säugetiere",
+    "ru": "Млекопитающие"
+   },
+   {
+    "slug": "animals",
+    "en": "Birds, Fish & Other Animals",
+    "de": "Vögel, Fische & andere Tiere",
+    "ru": "Птицы, рыбы и другие животные"
+   },
+   {
+    "slug": "plants",
+    "en": "Plants & Fungi",
+    "de": "Pflanzen & Pilze",
+    "ru": "Растения и грибы"
+   },
+   {
+    "slug": "trees",
+    "en": "Trees & Forests",
+    "de": "Bäume & Wälder",
+    "ru": "Деревья и леса"
+   },
+   {
+    "slug": "fruit-veg",
+    "en": "Fruit, Vegetables & Crops",
+    "de": "Obst, Gemüse & Nutzpflanzen",
+    "ru": "Фрукты, овощи и сельхозкультуры"
+   },
+   {
+    "slug": "herbs",
+    "en": "Herbs, Remedies & Poisons",
+    "de": "Kräuter, Heil- & Giftpflanzen",
+    "ru": "Травы, лекарственные и ядовитые растения"
+   }
+  ],
+  "earth-space": [
+   {
+    "slug": "astronomy",
+    "en": "Astronomy",
+    "de": "Astronomie",
+    "ru": "Астрономия"
+   },
+   {
+    "slug": "spaceflight",
+    "en": "Spaceflight & Astronauts",
+    "de": "Raumfahrt & Astronauten",
+    "ru": "Космические полёты и космонавты"
+   },
+   {
+    "slug": "geology",
+    "en": "Geology & Minerals",
+    "de": "Geologie & Mineralien",
+    "ru": "Геология и минералы"
+   },
+   {
+    "slug": "weather",
+    "en": "Weather & Climate",
+    "de": "Wetter & Klima",
+    "ru": "Погода и климат"
+   },
+   {
+    "slug": "oceans",
+    "en": "Oceans, Rivers & Landscapes",
+    "de": "Meere, Flüsse & Landschaften",
+    "ru": "Моря, реки и ландшафты"
+   },
+   {
+    "slug": "ecology",
+    "en": "Ecology & Evolution",
+    "de": "Ökologie & Evolution",
+    "ru": "Экология и эволюция"
+   }
+  ]
+ },
+ "assign": {
+  "a0011": {
+   "sub": "ecology"
+  },
+  "a0022": {
+   "sub": "astronomy"
+  },
+  "a0023": {
+   "sub": "mammals"
+  },
+  "a0035": {
+   "sub": "mammals"
+  },
+  "a0047": {
+   "sub": "mammals"
+  },
+  "a0058": {
+   "sub": "astronomy"
+  },
+  "a0059": {
+   "sub": "plants"
+  },
+  "a0071": {
+   "sub": "trees",
+   "reason": "Hedgerow Harvest: Five Wild Fruits and the Trees and Shrubs That Bear Them: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a0082": {
+   "sub": "spaceflight",
+   "reason": "Homes in Orbit: Five Space Stations: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a0083": {
+   "sub": "plants"
+  },
+  "a0095": {
+   "sub": "mammals"
+  },
+  "a0106": {
+   "sub": "geology"
+  },
+  "a0107": {
+   "sub": "animals"
+  },
+  "a0118": {
+   "sub": "geology"
+  },
+  "a0119": {
+   "sub": "plants"
+  },
+  "a0131": {
+   "sub": "animals"
+  },
+  "a0142": {
+   "sub": "astronomy"
+  },
+  "a0143": {
+   "sub": "mammals"
+  },
+  "a0154": {
+   "sub": "oceans"
+  },
+  "a0155": {
+   "sub": "mammals"
+  },
+  "a0167": {
+   "sub": "animals"
+  },
+  "a0179": {
+   "sub": "animals"
+  },
+  "a0191": {
+   "sub": "fruit-veg",
+   "reason": "What's in the Bottle: Spirits and Their Plants: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0203": {
+   "sub": "plants"
+  },
+  "a0215": {
+   "sub": "plants"
+  },
+  "a0239": {
+   "sub": "fruit-veg",
+   "reason": "Edible Seeds: From the Stone Pine to the Cacao Tree: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0251": {
+   "sub": "mammals"
+  },
+  "a0263": {
+   "sub": "ecology"
+  },
+  "a0275": {
+   "sub": "fruit-veg",
+   "reason": "One Crop, Two Ways to Grow It: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0287": {
+   "sub": "ecology"
+  },
+  "a0299": {
+   "sub": "animals"
+  },
+  "a0311": {
+   "sub": "herbs",
+   "reason": "Medicine From the Garden: Five Plants Behind Famous Remedies: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a0323": {
+   "sub": "animals"
+  },
+  "a0334": {
+   "sub": "weather"
+  },
+  "a0335": {
+   "sub": "ecology"
+  },
+  "a0346": {
+   "sub": "geology"
+  },
+  "a0347": {
+   "sub": "mammals"
+  },
+  "a0359": {
+   "sub": "plants"
+  },
+  "a0370": {
+   "sub": "geology"
+  },
+  "a0371": {
+   "sub": "fruit-veg",
+   "reason": "Materials That Grow on Plants: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0383": {
+   "sub": "animals"
+  },
+  "a0395": {
+   "sub": "animals"
+  },
+  "a0406": {
+   "sub": "astronomy"
+  },
+  "a0407": {
+   "sub": "herbs",
+   "reason": "Leaves, Sap and Stimulants: Plants That Humans Chew, Smoke and Brew: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a0419": {
+   "sub": "fruit-veg",
+   "reason": "Five Plant Families That Feed the World: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0430": {
+   "sub": "astronomy"
+  },
+  "a0431": {
+   "sub": "mammals"
+  },
+  "a0442": {
+   "sub": "weather"
+  },
+  "a0443": {
+   "sub": "mammals"
+  },
+  "a0455": {
+   "sub": "plants"
+  },
+  "a0465": {
+   "sub": "astronomy"
+  },
+  "a0466": {
+   "sub": "astronomy"
+  },
+  "a0491": {
+   "sub": "herbs",
+   "reason": "Plant Chemistry in the Human Body: Five Substances Worth Knowing: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a0503": {
+   "sub": "fruit-veg",
+   "reason": "The Grains That Feed the World: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0515": {
+   "sub": "mammals"
+  },
+  "a0527": {
+   "sub": "fruit-veg",
+   "reason": "Berries That Aren't and Nuts That Aren't: What Fruits Really Are: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0538": {
+   "sub": "astronomy"
+  },
+  "a0539": {
+   "sub": "fruit-veg",
+   "reason": "Two Parents, One Fruit: A Short Guide to Hybrid Fruits: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0551": {
+   "sub": "animals"
+  },
+  "a0563": {
+   "sub": "plants"
+  },
+  "a0574": {
+   "sub": "geology"
+  },
+  "a0575": {
+   "sub": "animals"
+  },
+  "a0587": {
+   "sub": "mammals"
+  },
+  "a0598": {
+   "sub": "geology"
+  },
+  "a0611": {
+   "sub": "mammals"
+  },
+  "a0623": {
+   "sub": "mammals"
+  },
+  "a0647": {
+   "sub": "trees",
+   "reason": "What Trees Bleed: Resin and Everything Made from It: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a0659": {
+   "sub": "mammals"
+  },
+  "a0670": {
+   "sub": "spaceflight",
+   "reason": "Robot Visitors to the Planets: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a0671": {
+   "sub": "mammals"
+  },
+  "a0682": {
+   "sub": "oceans"
+  },
+  "a0683": {
+   "sub": "herbs",
+   "reason": "Herbs Against the Dark: Protective Plants of Medieval Folk Belief: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a0694": {
+   "sub": "weather"
+  },
+  "a0695": {
+   "sub": "plants"
+  },
+  "a0706": {
+   "sub": "weather"
+  },
+  "a0707": {
+   "sub": "animals"
+  },
+  "a0718": {
+   "sub": "oceans"
+  },
+  "a0719": {
+   "sub": "ecology"
+  },
+  "a0730": {
+   "sub": "geology"
+  },
+  "a0731": {
+   "sub": "herbs",
+   "reason": "From Teapot to Cocktail Glass: Five Plants That Flavour What We Drink: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a0742": {
+   "sub": "weather"
+  },
+  "a0754": {
+   "sub": "ecology"
+  },
+  "a0767": {
+   "sub": "ecology"
+  },
+  "a0779": {
+   "sub": "animals"
+  },
+  "a0790": {
+   "sub": "astronomy"
+  },
+  "a0803": {
+   "sub": "trees",
+   "reason": "What Trees Bleed: Five Plant Products and Their Names: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a0814": {
+   "sub": "astronomy"
+  },
+  "a0815": {
+   "sub": "mammals"
+  },
+  "a0827": {
+   "sub": "animals"
+  },
+  "a0828": {
+   "sub": "spaceflight",
+   "reason": "Firsts in Orbit: The Pioneers of Human Spaceflight: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a0839": {
+   "sub": "fruit-veg",
+   "reason": "Marille, Ribisel, Holler: The Fruits of the Austrian Kitchen: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0850": {
+   "sub": "geology"
+  },
+  "a0851": {
+   "sub": "mammals"
+  },
+  "a0863": {
+   "sub": "trees",
+   "reason": "The Bread Tree and Its Neighbours: Conifers of Central Europe: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a0875": {
+   "sub": "animals"
+  },
+  "a0887": {
+   "sub": "ecology"
+  },
+  "a0898": {
+   "sub": "geology"
+  },
+  "a0899": {
+   "sub": "fruit-veg",
+   "reason": "One plant, many names: German folk names for garden greens: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0911": {
+   "sub": "animals"
+  },
+  "a0923": {
+   "sub": "ecology"
+  },
+  "a0934": {
+   "sub": "oceans"
+  },
+  "a0935": {
+   "sub": "fruit-veg",
+   "reason": "Red or Blue? The Colour Chemistry of the Vegetable Garden: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a0947": {
+   "sub": "animals"
+  },
+  "a0958": {
+   "sub": "astronomy"
+  },
+  "a0959": {
+   "sub": "plants"
+  },
+  "a0970": {
+   "sub": "astronomy"
+  },
+  "a0983": {
+   "sub": "mammals"
+  },
+  "a0995": {
+   "sub": "ecology"
+  },
+  "a1007": {
+   "sub": "fruit-veg",
+   "reason": "Paradise Apples and Earth Apples: The Austrian Names for Everyday Plants: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1019": {
+   "sub": "fruit-veg",
+   "reason": "One Species, Many Vegetables: The Cabbage Family: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1031": {
+   "sub": "animals"
+  },
+  "a1042": {
+   "sub": "spaceflight",
+   "reason": "Europeans in Orbit: Firsts and Records of ESA's Astronauts: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1043": {
+   "sub": "herbs",
+   "reason": "Kitchen Herbs and Their Folk Names: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1055": {
+   "sub": "mammals"
+  },
+  "a1066": {
+   "sub": "astronomy"
+  },
+  "a1067": {
+   "sub": "animals"
+  },
+  "a1079": {
+   "sub": "mammals"
+  },
+  "a1091": {
+   "sub": "plants"
+  },
+  "a1102": {
+   "sub": "weather"
+  },
+  "a1103": {
+   "sub": "fruit-veg",
+   "reason": "What's in a Name? The Hidden Histories of Five Fruits: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1114": {
+   "sub": "oceans"
+  },
+  "a1115": {
+   "sub": "animals"
+  },
+  "a1126": {
+   "sub": "astronomy"
+  },
+  "a1127": {
+   "sub": "herbs",
+   "reason": "What Herbs Are Called and Why: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1139": {
+   "sub": "animals"
+  },
+  "a1150": {
+   "sub": "astronomy"
+  },
+  "a1151": {
+   "sub": "fruit-veg",
+   "reason": "The Pomelo Family Tree: How Citrus Fruits Are Related: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1162": {
+   "sub": "astronomy"
+  },
+  "a1163": {
+   "sub": "ecology"
+  },
+  "a1174": {
+   "sub": "astronomy"
+  },
+  "a1175": {
+   "sub": "trees",
+   "reason": "Trees by Their Latin Names: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1187": {
+   "sub": "herbs",
+   "reason": "Calendula: The Marigold That Forecast the Weather: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1199": {
+   "sub": "mammals"
+  },
+  "a1210": {
+   "sub": "geology"
+  },
+  "a1211": {
+   "sub": "animals"
+  },
+  "a1212": {
+   "sub": "spaceflight",
+   "reason": "Firsts and Lasts in Human Spaceflight: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1223": {
+   "sub": "animals"
+  },
+  "a1247": {
+   "sub": "animals"
+  },
+  "a1258": {
+   "sub": "astronomy"
+  },
+  "a1282": {
+   "sub": "astronomy"
+  },
+  "a1283": {
+   "sub": "fruit-veg",
+   "reason": "Oil, Feed and Fuel: Five Crops That Do More Than Feed Us: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1295": {
+   "sub": "fruit-veg",
+   "reason": "Fruits of the Tropics: Dates, Bananas and Other Botanical Surprises: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1306": {
+   "sub": "weather"
+  },
+  "a1307": {
+   "sub": "animals"
+  },
+  "a1318": {
+   "sub": "weather"
+  },
+  "a1319": {
+   "sub": "mammals"
+  },
+  "a1331": {
+   "sub": "animals"
+  },
+  "a1342": {
+   "sub": "astronomy"
+  },
+  "a1343": {
+   "sub": "animals"
+  },
+  "a1354": {
+   "sub": "astronomy"
+  },
+  "a1355": {
+   "sub": "animals"
+  },
+  "a1367": {
+   "sub": "fruit-veg",
+   "reason": "Fruits That Need the Kitchen: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1379": {
+   "sub": "mammals"
+  },
+  "a1390": {
+   "sub": "oceans"
+  },
+  "a1391": {
+   "sub": "mammals"
+  },
+  "a1403": {
+   "sub": "trees",
+   "reason": "The Larch and Its Relatives: Genera of the Pine Family: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1414": {
+   "sub": "geology"
+  },
+  "a1415": {
+   "sub": "herbs",
+   "reason": "Beautiful but Deadly: Europe's Poisonous Plants and Their Harmless Look-alikes: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1427": {
+   "sub": "animals"
+  },
+  "a1451": {
+   "sub": "mammals"
+  },
+  "a1462": {
+   "sub": "oceans"
+  },
+  "a1463": {
+   "sub": "ecology"
+  },
+  "a1486": {
+   "sub": "astronomy"
+  },
+  "a1487": {
+   "sub": "plants"
+  },
+  "a1498": {
+   "sub": "astronomy"
+  },
+  "a1499": {
+   "sub": "trees",
+   "reason": "The Trees of Germany's Forests: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1510": {
+   "sub": "spaceflight",
+   "reason": "Messages and Missions: What Space Probes Are For: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1511": {
+   "sub": "plants"
+  },
+  "a1523": {
+   "sub": "fruit-veg",
+   "reason": "Bark, Buds and Stigmas: The Plant Parts We Harvest: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1546": {
+   "sub": "spaceflight",
+   "reason": "Rovers on Mars: Five Landings: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1559": {
+   "sub": "animals"
+  },
+  "a1570": {
+   "sub": "geology"
+  },
+  "a1583": {
+   "sub": "herbs",
+   "reason": "Kitchen-Cupboard Herbalism: Five Plants of the Home Remedy Tradition: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1594": {
+   "sub": "geology"
+  },
+  "a1595": {
+   "sub": "animals"
+  },
+  "a1606": {
+   "sub": "weather"
+  },
+  "a1607": {
+   "sub": "mammals"
+  },
+  "a1619": {
+   "sub": "fruit-veg",
+   "reason": "Sultanas, Currants and Cranberries: The World of Dried Berries: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1631": {
+   "sub": "trees",
+   "reason": "Trees That Tell Stories: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1642": {
+   "sub": "spaceflight",
+   "reason": "Launch Pads of the World: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1643": {
+   "sub": "fruit-veg",
+   "reason": "Nuts That Aren't Nuts: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1655": {
+   "sub": "animals"
+  },
+  "a1667": {
+   "sub": "trees",
+   "reason": "The Giants of California's National Parks: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1679": {
+   "sub": "mammals"
+  },
+  "a1690": {
+   "sub": "astronomy"
+  },
+  "a1691": {
+   "sub": "herbs",
+   "reason": "What the Herb Garden's Names Reveal: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1702": {
+   "sub": "astronomy"
+  },
+  "a1703": {
+   "sub": "animals"
+  },
+  "a1715": {
+   "sub": "plants"
+  },
+  "a1727": {
+   "sub": "trees",
+   "reason": "Deciduous Trees and Their Fruits: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1739": {
+   "sub": "mammals"
+  },
+  "a1751": {
+   "sub": "herbs",
+   "reason": "Poisonous Plants and Their Legends: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1763": {
+   "sub": "trees",
+   "reason": "What Grows in the Bark: Five Trees and Their Gifts: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1786": {
+   "sub": "spaceflight",
+   "reason": "The Space Shuttle Fleet: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1787": {
+   "sub": "ecology"
+  },
+  "a1798": {
+   "sub": "weather"
+  },
+  "a1799": {
+   "sub": "fruit-veg",
+   "reason": "Monkeys, Pigs and Flooded Fields: Unusual Harvests: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1811": {
+   "sub": "mammals"
+  },
+  "a1822": {
+   "sub": "astronomy"
+  },
+  "a1823": {
+   "sub": "ecology"
+  },
+  "a1835": {
+   "sub": "ecology"
+  },
+  "a1847": {
+   "sub": "trees",
+   "reason": "Rowan Berries and Conkers: The Fruits of Native Trees: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a1858": {
+   "sub": "oceans"
+  },
+  "a1859": {
+   "sub": "plants"
+  },
+  "a1870": {
+   "sub": "oceans"
+  },
+  "a1871": {
+   "sub": "herbs",
+   "reason": "The Nightshade Family: From the Potato to Deadly Nightshade: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1882": {
+   "sub": "spaceflight",
+   "reason": "Firsts in Orbit: From Gagarin to the First Paying Passenger: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1883": {
+   "sub": "mammals"
+  },
+  "a1895": {
+   "sub": "fruit-veg",
+   "reason": "The Mandarin Orange and Other Fruits With Curious Names: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1906": {
+   "sub": "geology"
+  },
+  "a1907": {
+   "sub": "fruit-veg",
+   "reason": "Where Our Food Comes From: The Hidden Kinships of Crop Plants: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a1919": {
+   "sub": "animals"
+  },
+  "a1930": {
+   "sub": "geology"
+  },
+  "a1931": {
+   "sub": "plants"
+  },
+  "a1942": {
+   "sub": "spaceflight",
+   "reason": "From Mercury to Artemis: America's Human Spaceflight Programmes: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a1943": {
+   "sub": "ecology"
+  },
+  "a1954": {
+   "sub": "weather"
+  },
+  "a1955": {
+   "sub": "herbs",
+   "reason": "Beautiful but Deadly: Poisonous Plants in the Garden: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1966": {
+   "sub": "geology"
+  },
+  "a1967": {
+   "sub": "mammals"
+  },
+  "a1979": {
+   "sub": "herbs",
+   "reason": "Medicinal Plants That Ended Up in the Kitchen: a herb / medicinal / poisonous-plant article — moved from Plants & Fungi to the new Herbs, Remedies & Poisons sub."
+  },
+  "a1990": {
+   "sub": "astronomy"
+  },
+  "a1991": {
+   "sub": "plants"
+  },
+  "a2003": {
+   "sub": "trees",
+   "reason": "Five Tree Genera and How to Tell Their Species Apart: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a2027": {
+   "sub": "trees",
+   "reason": "Plants Named After the Places Where They Grow Wild: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a2039": {
+   "sub": "plants"
+  },
+  "a2051": {
+   "sub": "trees",
+   "reason": "Trees on Flags, Coins and Coats of Arms: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a2063": {
+   "sub": "ecology"
+  },
+  "a2074": {
+   "sub": "spaceflight",
+   "reason": "Messengers to the Outer Planets and Beyond: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2075": {
+   "sub": "fruit-veg",
+   "reason": "Little Pumpkins and Cabbage Turnips: What Vegetable Names Reveal: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a2098": {
+   "sub": "geology"
+  },
+  "a2099": {
+   "sub": "animals"
+  },
+  "a2111": {
+   "sub": "mammals"
+  },
+  "a2122": {
+   "sub": "spaceflight",
+   "reason": "Firsts in Orbit: From Gagarin to the Two Germanys: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2123": {
+   "sub": "plants"
+  },
+  "a2152": {
+   "sub": "astronomy"
+  },
+  "a2153": {
+   "sub": "astronomy"
+  },
+  "a2154": {
+   "sub": "astronomy"
+  },
+  "a2155": {
+   "sub": "astronomy"
+  },
+  "a2156": {
+   "sub": "spaceflight",
+   "reason": "Tickets to Orbit: Space Tourism and Private Spaceflight: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2157": {
+   "sub": "spaceflight",
+   "reason": "Astronaut, Cosmonaut, Taikonaut: What Space Travellers Are Called: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2158": {
+   "sub": "spaceflight",
+   "reason": "Life Aboard the Space Station: Tortillas, Marathons and a Golf Shot: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2159": {
+   "sub": "spaceflight",
+   "reason": "The Race to the Moon: Curiosities from Both Sides: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2160": {
+   "sub": "spaceflight",
+   "reason": "Where Space Begins: The Kármán Line and the Highest Jumps: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2161": {
+   "sub": "spaceflight",
+   "reason": "Before Gagarin: Animals in Space: a human-spaceflight / space-probe article — moved from Astronomy & Spaceflight to the new Spaceflight & Astronauts sub."
+  },
+  "a2162": {
+   "sub": "geology"
+  },
+  "a2163": {
+   "sub": "geology"
+  },
+  "a2164": {
+   "sub": "geology"
+  },
+  "a2165": {
+   "sub": "weather"
+  },
+  "a2166": {
+   "sub": "weather"
+  },
+  "a2167": {
+   "sub": "weather"
+  },
+  "a2168": {
+   "sub": "weather"
+  },
+  "a2494": {
+   "sub": "animals"
+  },
+  "a2495": {
+   "sub": "animals"
+  },
+  "a2496": {
+   "sub": "animals"
+  },
+  "a2497": {
+   "sub": "animals"
+  },
+  "a2498": {
+   "sub": "animals"
+  },
+  "a2499": {
+   "sub": "animals"
+  },
+  "a2500": {
+   "sub": "animals"
+  },
+  "a2501": {
+   "sub": "animals"
+  },
+  "a2502": {
+   "sub": "animals"
+  },
+  "a2503": {
+   "sub": "animals"
+  },
+  "a2504": {
+   "sub": "animals"
+  },
+  "a2505": {
+   "sub": "ecology"
+  },
+  "a2506": {
+   "sub": "mammals"
+  },
+  "a2507": {
+   "sub": "mammals"
+  },
+  "a2508": {
+   "sub": "mammals"
+  },
+  "a2509": {
+   "sub": "mammals"
+  },
+  "a2510": {
+   "sub": "mammals"
+  },
+  "a2511": {
+   "sub": "mammals"
+  },
+  "a2512": {
+   "sub": "mammals"
+  },
+  "a2513": {
+   "sub": "mammals"
+  },
+  "a2514": {
+   "sub": "fruit-veg",
+   "reason": "Vanilla, Cacao and Coffee: The Botany of Tropical Luxuries: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a2515": {
+   "sub": "fruit-veg",
+   "reason": "Granny Smith, Lambada and Chioggia: The Named Varieties of Fruit and Vegetables: a food/crop-plant article (fruit, vegetables, grains, useful crops) — moved from Plants & Fungi to the new Fruit, Vegetables & Crops sub."
+  },
+  "a2516": {
+   "sub": "plants"
+  },
+  "a2517": {
+   "sub": "plants"
+  },
+  "a2518": {
+   "sub": "plants"
+  },
+  "a2519": {
+   "sub": "plants"
+  },
+  "a2668": {
+   "sub": "astronomy"
+  },
+  "a2683": {
+   "sub": "ecology"
+  },
+  "a2684": {
+   "sub": "mammals"
+  },
+  "a2685": {
+   "sub": "mammals"
+  },
+  "a2686": {
+   "sub": "trees",
+   "reason": "Oak, Banyan and Royal Palm: The National Trees of the World: a tree/forest article — moved from Plants & Fungi to the new Trees & Forests sub."
+  },
+  "a2698": {
+   "sub": "astronomy"
+  },
+  "a2699": {
+   "sub": "astronomy"
+  },
+  "a2700": {
+   "sub": "astronomy"
+  },
+  "a2701": {
+   "sub": "astronomy"
+  },
+  "a2702": {
+   "sub": "weather"
+  },
+  "a2709": {
+   "sub": "animals"
+  },
+  "a2710": {
+   "sub": "animals"
+  },
+  "a2711": {
+   "sub": "ecology"
+  },
+  "a2712": {
+   "sub": "ecology"
+  },
+  "a2713": {
+   "sub": "mammals"
+  },
+  "a2714": {
+   "sub": "plants"
+  },
+  "a2733": {
+   "sub": "astronomy"
+  },
+  "a2738": {
+   "sub": "astronomy"
+  },
+  "a2739": {
+   "sub": "geology"
+  },
+  "a2740": {
+   "sub": "geology"
+  },
+  "a2741": {
+   "sub": "oceans"
+  },
+  "a2758": {
+   "sub": "animals"
+  },
+  "a2759": {
+   "sub": "animals"
+  },
+  "a2760": {
+   "sub": "animals"
+  },
+  "a2761": {
+   "sub": "animals"
+  },
+  "a2762": {
+   "sub": "ecology"
+  },
+  "a2763": {
+   "sub": "ecology"
+  },
+  "a2764": {
+   "sub": "mammals"
+  },
+  "a2765": {
+   "sub": "mammals"
+  },
+  "a2766": {
+   "sub": "mammals"
+  },
+  "a2767": {
+   "sub": "mammals"
+  }
+ },
+ "outgoing": {
+  "a0646": {
+   "domain": "history",
+   "suggestedSub": "modern-history",
+   "reason": "Firsts of exploration (Tereshkova, Apollo 8, Amundsen at the South Pole, Lindbergh, Magellan–Elcano circumnavigation): an exploration-history article, only two of five facts are spaceflight."
+  }
+ }
+}

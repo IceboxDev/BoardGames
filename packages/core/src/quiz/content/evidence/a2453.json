@@ -1,0 +1,409 @@
+{
+ "article": "a2453",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Evelyn_Waugh",
+   "title": "Evelyn Waugh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:05.030Z",
+   "snapshot": "48c4be44b2763761bac5d5356899e0970b0f3949d731b4470cdde32307e5745f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Evelyn_Waugh",
+   "title": "Evelyn Waugh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:08.158Z",
+   "snapshot": "29ef6217f467ef8dff2379a4fbc9c9d497259e14d91eec34f559d00496061634"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Brideshead_Revisited",
+   "title": "Brideshead Revisited – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:08.975Z",
+   "snapshot": "ef117ae13a5989719a4eccd4d23c3886d90176a768c0e1ce3c635946dc35ca04"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Decline_and_Fall",
+   "title": "Decline and Fall",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:23.019Z",
+   "snapshot": "a2087af13a69730f33fdfde43a221354548736582e20466869a417e7c163bd16"
+  },
+  "s5": {
+   "url": "https://www.hachettebookgroup.com/titles/evelyn-waugh/decline-and-fall/9780316216319/",
+   "title": "Decline and Fall",
+   "publisher": "Hachette Book Group / Little, Brown (publisher)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:22.990Z",
+   "snapshot": "9fb880a9bbe895f48fcad2f8b2999ac209641679a76eae33a18b9247cba80b4a"
+  },
+  "s6": {
+   "url": "https://www.hachettebookgroup.com/titles/evelyn-waugh/decline-and-fall/9780316216357/",
+   "title": "Black Mischief",
+   "publisher": "Hachette Book Group / Little, Brown (publisher)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:23.868Z",
+   "snapshot": "f8aadc8762111baa157d1548a106167b760bc495dbf5cdf5ca834557038f84ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Evelyn Waugh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Decline and Fall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She-Evelyn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lust und Laster",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aloysius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:22.218Z",
+   "target": "f12914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Evelyn Waugh war der jüngere Sohn des Verlegers und Schriftstellers Arthur Waugh und seiner Ehefrau Catherine Charlotte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evelyn Waugh” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:22.218Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His most famous works include the early satires Decline and Fall (1928) and A Handful of Dust (1934), the novel Brideshead Revisited (1945), and the Second World War trilogy Sword of Honour (1952–1961).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Decline and Fall” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:22.218Z",
+   "target": "f12916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Among their friends, they quickly became known as \"He-Evelyn\" and \"She-Evelyn\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “She-Evelyn” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:22.218Z",
+   "target": "f12917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Noch während Waugh an dem Roman Lust und Laster (Vile Bodies) arbeitete, einer karikierenden Darstellung der englischen Partygesellschaft der 1920er Jahre, die 1930 erschien und ein großer Verkaufserfolg wurde, begann seine Ehefrau Affären mit anderen Männern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lust und Laster” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:22.218Z",
+   "target": "f12918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Also, his relationship with his teddy bear, Aloysius, was inspired by John Betjeman and his teddy bear Archibald Ormsby-Gore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aloysius” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:55:25Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Decline and Fall is the first novel by the English author Evelyn Waugh, first published in 1928.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:55:28Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "First published in 1928, Decline and Fall is a satirical novel following the unfortunate chronicles of Paul Pennyfeather after he is expelled the University of Oxford.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Publisher confirms 1928 and the Pennyfeather plot; its Black Mischief (1932) page calls that book Waugh's third novel, after Decline and Fall and Vile Bodies"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:55:32Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Evelyn Waugh’s third novel depicts the chaotic reign of an idealistic young emperor",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Indirect: Black Mischief (1932) is the third novel, so the 1928 Decline and Fall precedes it"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:05.057Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Decline and Fall is the first novel by the English author Evelyn Waugh, first published in 1928.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:05.057Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "First published in 1928, Decline and Fall is a satirical novel following the unfortunate chronicles of Paul Pennyfeather after he is expelled the University of Oxford.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:05.057Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Evelyn Waugh’s third novel depicts the chaotic reign of an idealistic young emperor",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:05.057Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Decline and Fall is the first novel by the English author Evelyn Waugh, first published in 1928.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Decline and Fall” is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:05.057Z",
+   "target": "f12915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Decline and Fall by Evelyn Waugh | Hachette Book Group",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Decline and Fall” is on the snapshot of s5"
+  }
+ ]
+}

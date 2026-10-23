@@ -1,0 +1,444 @@
+{
+ "article": "a1732",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Dark_Knight",
+   "title": "The Dark Knight – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:44.519Z",
+   "snapshot": "08764b927d4ae526c52d28b653633e0089d5aaa62a114a5626f897f872ab8e66"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Revenge_of_the_Sith",
+   "title": "Star Wars: Episode III – Revenge of the Sith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:45.583Z",
+   "snapshot": "d6e5316a60aefadb35d2257ab306984956cf2a0b79132281db7f55e88359c487"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_Dragon_(novel)",
+   "title": "Red Dragon (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:46.415Z",
+   "snapshot": "577ea1e3622c81c63497aec7131f4ae9b60944791d43f085447c4d7c6d66759c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/AFI%27s_100_Years...100_Heroes_%26_Villains",
+   "title": "AFI's 100 Years...100 Heroes & Villains – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:47.347Z",
+   "snapshot": "22f5979291b60315dad39f4d9fc8f94562c56e0c1391e1f3d78db8e78d894b73"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Terminator",
+   "title": "The Terminator – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:36.376Z",
+   "snapshot": "5d0a5ff90597c95624fa72ef8232f94b90c9fffa4d5e78295985ebef6a83aa26"
+  },
+  "s6": {
+   "url": "https://www.theguardian.com/film/2018/nov/12/douglas-rain-dies-2001-a-space-odyssey-hal-9000",
+   "title": "Douglas Rain, voice of HAL in 2001: A Space Odyssey, dies aged 90",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:56.426Z",
+   "snapshot": "3cc49b410fae26ab7842703c86df8eb42a0b373522a5a5440e33bb07b095a660"
+  },
+  "s7": {
+   "url": "https://www.hollywoodreporter.com/news/douglas-rain-dead-voice-hal-9000-2001-a-space-odyssey-was-90-1083429",
+   "title": "Douglas Rain, Voice of HAL 9000 in '2001: A Space Odyssey,' Dies at 90",
+   "publisher": "The Hollywood Reporter",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:58.571Z",
+   "snapshot": "8c458f2637467337b6708ca4ca494470d01b83bae12289e4252c1b7a43c09107"
+  },
+  "s8": {
+   "url": "https://www.afi.com/afis-100-years-100-heroes-villians/",
+   "title": "AFI's 100 Years...100 Heroes & Villains",
+   "publisher": "American Film Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:01.171Z",
+   "snapshot": "2ae46d5daed24bdf1d329d380783cabe67da66754c09a91fadb4c69945348794"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Joker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Darth Vader",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hannibal Lecter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "HAL 9000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Terminator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:13.454Z",
+   "target": "f08656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Their efforts are derailed by the Joker, an anarchistic mastermind who seeks to test how far Batman will go to save the city from chaos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Joker” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:13.454Z",
+   "target": "f08657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lucas began writing the script before production of Attack of the Clones ended, saying he wanted the end of the trilogy to be similar to a romantic tragedy, thus leading into Darth Vader's state at the beginning of the next film.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darth Vader” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:13.454Z",
+   "target": "f08658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hannibal Lecter, a brilliant psychiatrist and cannibalistic serial killer to whom Graham reluctantly turns for advice and with whom he has a dark past.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannibal Lecter” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:13.454Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "HAL 9000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“HAL 9000”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:13.454Z",
+   "target": "f08660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Terminator is a 1984 American science fiction action film directed by James Cameron, who co-wrote it with producer Gale Anne Hurd.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.454Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Terminator” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:34:46Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "‘I’m sorry Dave, I’m afraid I can’t do that’ ... HAL 9000 in 2001: A Space Odyssey.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:34:49Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "like when HAL famously says, “I am sorry, Dave, I am afraid I cannot do that”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23",
+   "note": "THR quotes the line without contractions; the film's line is 'I'm sorry, Dave. I'm afraid I can't do that.' Same speaker (HAL)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:34:52Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "13. HAL 9000 2001: A Space Odyssey (1968)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms HAL 9000 is a ranked film villain (No. 13)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:00.858Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "‘I’m sorry Dave, I’m afraid I can’t do that’ ... HAL 9000 in 2001: A Space Odyssey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:00.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:00.858Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "like when HAL famously says, “I am sorry, Dave, I am afraid I cannot do that”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:00.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:00.858Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "13. HAL 9000 2001: A Space Odyssey (1968)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:00.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:00.858Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "HAL 9000 in 2001: A Space Odyssey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:00.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “HAL 9000” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:00.858Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Douglas Rain Dead: Voice of HAL 9000 in '2001: A Space Odyssey' Was 90",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:00.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “HAL 9000” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:00.858Z",
+   "target": "f08659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Aboard are astronauts David Bowman and Frank Poole, plus three others in frozen hibernation, and a computer called HAL 9000.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:00.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “HAL 9000” is on the snapshot of s8"
+  }
+ ]
+}

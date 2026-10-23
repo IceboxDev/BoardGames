@@ -1,0 +1,242 @@
+{
+ "article": "a2043",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Le_Chat_Noir",
+   "title": "Le Chat Noir – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:49.299Z",
+   "snapshot": "03d1cd6f38a6347e94083599666bb8310f1552b958b5affd4217010f1cae54ff"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Moulin_Rouge",
+   "title": "Moulin Rouge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:50.446Z",
+   "snapshot": "dc19c2910c11191010f52a1613655b5965145767a929993505c2d12285e0bf28"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sarah_Bernhardt",
+   "title": "Sarah Bernhardt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:51.752Z",
+   "snapshot": "7c9749708056d548b09ec545ad327161ba92267abf4f6acf7118e8b0b074b19b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maison_de_l'Art_Nouveau",
+   "title": "Maison de l'Art Nouveau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:52.375Z",
+   "snapshot": "375611077e508647da7e982b849fb71cac6b779000231876b5880c6b6a5b52e9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Georg_Hirth",
+   "title": "Georg Hirth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:37:50.430Z",
+   "snapshot": "c58200a5e3e15b3ca248ec54b925ca19759a0d0d1ab4f1e15dd7bc7914633c73"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Le Chat Noir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Moulin Rouge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sarah Bernhardt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maison de l'Art Nouveau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jugend",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:11.825Z",
+   "target": "f10211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Le Chat Noir (French pronunciation: [lə ʃa nwaʁ]; French, 'The Black Cat') was a 19th century entertainment establishment in the bohemian Montmartre district of Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Le Chat Noir” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:11.825Z",
+   "target": "f10212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Moulin Rouge (, French: [mulɛ̃ ʁuʒ]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moulin Rouge” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:11.825Z",
+   "target": "f10213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sarah Bernhardt (French: [saʁa bɛʁnɑʁt]; born Henriette-Rosine Bernard; 22 October 1844 – 26 March 1923) was a French stage actress who starred in some of the most popular French plays of the late 19th and early 20th centuries, including La Dame aux Camélias by Alexandre Dumas fils, Ruy Blas by",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sarah Bernhardt” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:11.825Z",
+   "target": "f10214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Maison de l'Art Nouveau (\"House of New Art\"), abbreviated often as  L'Art Nouveau, and known also as Maison Bing for the owner, was a gallery opened on 26 December 1895, by Siegfried Bing at 22 rue de Provence, Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maison de l'Art Nouveau” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:11.825Z",
+   "target": "f10215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Im Jahr 1896 gründete er gemeinsam mit Fritz von Ostini die Zeitschrift Jugend mit dem Untertitel Münchner illustrierte Wochenschrift für Kunst und Leben als Sprachrohr für die damalige Münchner Kunst- und Literaturszene.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jugend” is on the snapshot of s5"
+  }
+ ]
+}

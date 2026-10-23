@@ -1,0 +1,249 @@
+{
+ "article": "a1034",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Laden",
+   "title": "Der Laden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:39.276Z",
+   "snapshot": "6feab7106aa994568c3f6063cc86def6a8a362ade50f3d858afc5190cbe440ac"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dog_Years_(novel)",
+   "title": "Dog Years (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:43.071Z",
+   "snapshot": "554f1f5c87311062b47b05b61b369c12cd2a0207c066fc010379e53d76101ada"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Buddenbrooks",
+   "title": "Buddenbrooks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:40.994Z",
+   "snapshot": "e1c770f14a507d0b3eea92b519bc729970213b9caa48794dfbe15e037ca6fbf4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kindheitsmuster",
+   "title": "Kindheitsmuster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:41.484Z",
+   "snapshot": "b1e4012b0922238258778b429e94c165905ef26e9defc836042cc11c2f6a64be"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/So_z%C3%A4rtlich_war_Suleyken",
+   "title": "So zärtlich war Suleyken – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:42.355Z",
+   "snapshot": "9694d69c3cf4a47de1a0438f0980291329167ce54cde5c2de1e9bfec45250335"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Buddenbrookhaus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:38:34.375Z",
+   "snapshot": "18324e9c0105135fe1e248d39889c11fdfb721e8e2972da87777b3629856f4f0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erwin Strittmatter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05167",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Günter Grass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05168",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Mann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Christa Wolf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Siegfried Lenz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:23.210Z",
+   "target": "f05166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Laden ist eine Romantrilogie von Erwin Strittmatter, die zwischen 1983 und 1992 erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.210Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erwin Strittmatter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:23.210Z",
+   "target": "f05167",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dog Years (German: Hundejahre) is a novel by Günter Grass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.210Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Grass” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:23.210Z",
+   "target": "f05168",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Mann erhielt 1929 für Buddenbrooks den Nobelpreis für Literatur.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.210Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Mann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:23.210Z",
+   "target": "f05169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kindheitsmuster ist ein 1976 erschienenes Werk der deutschen Schriftstellerin Christa Wolf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.210Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christa Wolf” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:23.210Z",
+   "target": "f05170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "So zärtlich war Suleyken (Masurische Geschichten) ist die erste Kurzgeschichtensammlung von Siegfried Lenz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.210Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Siegfried Lenz” is on the snapshot of s5"
+  }
+ ]
+}

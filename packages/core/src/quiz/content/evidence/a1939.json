@@ -1,0 +1,202 @@
+{
+ "article": "a1939",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hosni_Mubarak",
+   "title": "Hosni Mubarak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:50.919Z",
+   "snapshot": "65238a2f73f063eafe91d76c4a06913acddc1614b30af2df345605946d7a9d0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Zine_El_Abidine_Ben_Ali",
+   "title": "Zine El Abidine Ben Ali – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:51.665Z",
+   "snapshot": "2c98b1b3ef3ea951f593075004208a1fc0f2b9974c2b332b57c22d8a5ac7a5ef"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ali_Abdullah_Saleh",
+   "title": "Ali Abdullah Saleh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:52.720Z",
+   "snapshot": "4d35989f70aabb1cbc430645be73bd1d349cff2b4450a043511b8a78aef482ff"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mohamed_Morsi",
+   "title": "Mohamed Morsi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:53.611Z",
+   "snapshot": "362589b7f43e86ab381cccb9b1fb0f28eeaf173cfbc08ca65bf7b01c84d028f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mohamed_Bouazizi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:54.662Z",
+   "snapshot": "b688b4c9eec17c0dda80ed78730a7ed776774f346dd160d91beee6a3854c3113"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hosni Mubarak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zine el-Abidine Ben Ali",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ali Abdullah Saleh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mohamed Morsi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:50.104Z",
+   "target": "f09691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hosni Mubarak was born on 4 May 1928 in Kafr El-Meselha, Monufia Governorate, Egypt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hosni Mubarak” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:50.104Z",
+   "target": "f09692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zine El Abidine Ben Ali (Arabic: زَيْن الْعَابِدِين بْن عَلِيّ, romanized: Zayn al-ʿĀbidīn bin ʿAliyy, Tunisian Arabic: Zīn il-ʿĀbdīn bin ʿAlī; 3 September 1936 – 19 September 2019), commonly known as Ben Ali or Ezzine, was a Tunisian politician, military officer and dictator who served as the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zine el-Abidine Ben Ali” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:50.104Z",
+   "target": "f09694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ali Abdullah Saleh (21 March 1947 – 4 December 2017) was a Yemeni military officer and politician who served as the first president of the Republic of Yemen from the Yemeni unification in 1990 until his resignation in 2012, following the Yemeni revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ali Abdullah Saleh” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:50.104Z",
+   "target": "f09695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mohamed Mohamed Morsi Eissa Al-Ayyat (; Arabic: مُحَمَّد مُحَمَّد مُرْسِي عِيسَى العَيَّاط, romanized: Muḥammad Muḥammad Mursī ʿĪsā al-ʿAyyāṭ, IPA: [mæˈħæmmæd ˈmoɾsi ˈʕiːsæ (ʔe)l.ʕɑjˈjɑːtˤ]; 8 August 1951 – 17 June 2019) was an Egyptian politician, engineer, and professor who served as the fifth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mohamed Morsi” is on the snapshot of s4"
+  }
+ ]
+}

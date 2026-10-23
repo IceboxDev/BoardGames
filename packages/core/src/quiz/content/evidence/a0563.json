@@ -1,0 +1,423 @@
+{
+ "article": "a0563",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mistletoe",
+   "title": "Mistletoe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:03.151Z",
+   "snapshot": "e0ef18eecbd5086817de3eea1e9ed134f663c764535bb2773bffd827f161565f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Misteln",
+   "title": "Misteln",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:00.647Z",
+   "snapshot": "8b10fd9aaa9ce1ae50100efd457e49789f85b97c5b4ef1ca0d0da75c72069f97"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Holly_and_the_Ivy",
+   "title": "The Holly and the Ivy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:04.074Z",
+   "snapshot": "ff802882508cdc5bd7bbfd7919853b97b7e6bcc650279c06719195df316b5e4d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Poinsettie",
+   "title": "Poinsettie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:01.585Z",
+   "snapshot": "6a9c35c92433886266018725c6c028d557f45e9935113356b6ec83231c164e03"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Helleborus_niger",
+   "title": "Helleborus niger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:05.070Z",
+   "snapshot": "b1f0aa4c99d09dd5da1a5cdda57f7074b7077dc5b5e5f98f98cbf9b9080a1e4e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Abies_nordmanniana",
+   "title": "Abies nordmanniana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:06.115Z",
+   "snapshot": "53b0f3b20168fa6a8511c77eec4ece634cc6f28605b2e3117a2e8d2b36ef1c8d"
+  },
+  "s7": {
+   "url": "https://www.sdw.de/ueber-den-wald/waldwissen/weihnachtsbaum/",
+   "title": "Weihnachtsbaum",
+   "publisher": "Schutzgemeinschaft Deutscher Wald (SDW)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:05.660Z",
+   "snapshot": "aa06f34503bd40e53610b039d73b8db5f6d20ff266bc0d9b6e1ac8df9c823df7"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Nordmann-Tanne",
+   "title": "Nordmann-Tanne",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:05.633Z",
+   "snapshot": "ba69a7a2f746d075b71ae4a35df6da929f496ccf478d5a9eb3e4e22c47a0b1ea"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mistletoe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mistel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-122"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02812",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "holly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02813",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Weihnachtsstern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Christmas rose",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nordmann fir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:07.789Z",
+   "target": "f02811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mistletoe is the common name for obligate hemiparasitic plants in the order Santalales.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mistletoe” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:07.789Z",
+   "target": "f02811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mistel-Arten sind immergrüne oder schuppenblättrige Halbschmarotzer, die auf Bäumen oder Sträuchern wachsen, meist zweikeimblättrigen, wenige Arten auf Nadelhölzern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mistel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:07.789Z",
+   "target": "f02812",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"The Holly and the Ivy\" is a traditional British folk Christmas carol, listed as number 514 in the Roud Folk Song Index.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “holly” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:07.789Z",
+   "target": "f02813",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Weihnachtsstern (Euphorbia pulcherrima), auch Adventsstern, Christstern oder Poinsettie genannt, ist eine Pflanzenart aus der Gattung Wolfsmilch (Euphorbia) in der Familie der Wolfsmilchgewächse (Euphorbiaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weihnachtsstern” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:07.789Z",
+   "target": "f02814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helleborus niger, commonly called Christmas rose or black hellebore, is an evergreen perennial flowering plant in the buttercup family, Ranunculaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christmas rose” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:07.789Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abies nordmanniana, the Nordmann fir or Caucasian fir, is a fir indigenous to the mountains south and east of the Black Sea, in Turkey, Georgia and the Russian Caucasus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nordmann fir” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:15:25Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Nordmanntanne ist mit etwa 80 Prozent Marktanteil der am liebsten gekaufte Weihnachtsbaum in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:30Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Nordmanntanne ist heute die meistgenutzte Baumart als Weihnachtsbaum.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:32.057Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Nordmanntanne ist mit etwa 80 Prozent Marktanteil der am liebsten gekaufte Weihnachtsbaum in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:32.057Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Nordmanntanne ist heute die meistgenutzte Baumart als Weihnachtsbaum.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:32.057Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Nordmanntanne ist mit etwa 80 Prozent Marktanteil der am liebsten gekaufte Weihnachtsbaum in Deutschland.3 Sie löst damit die Blaufichte als beliebteste Art ab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nordmanntanne” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:32.057Z",
+   "target": "f02815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Nordmann-Tanne  (Abies nordmanniana), standardsprachlich Nordmanntanne, auch Nordmanns Tanne und Kaukasus-Tanne genannt, ist eine Pflanzenart aus der Gattung Tannen (Abies) in der Familie der Kieferngewächse (Pinaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nordmanntanne” is on the snapshot of s8"
+  }
+ ]
+}

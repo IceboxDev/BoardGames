@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-378",
+ "image": "IMG20261007175103.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt der US-amerikanische Ort, in dem sich 1937 das Hindenburg-Zeppelin-Unglück ereignete?",
+   "de": "Wie heißt der US-amerikanische Ort, in dem sich 1937 das Hindenburg-Zeppelin-Unglück ereignete?",
+   "en": "What is the name of the US town where the Hindenburg zeppelin disaster happened in 1937?",
+   "reworked": false,
+   "answerDe": "Lakehurst",
+   "answerEn": "Lakehurst",
+   "timeline": {
+    "kind": "event",
+    "start": "1937-05-06",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The zeppelin LZ 129 Hindenburg catches fire while landing at Lakehurst, New Jersey; 36 people die",
+    "labelDe": "Der Zeppelin LZ 129 „Hindenburg“ gerät bei der Landung in Lakehurst (New Jersey) in Brand; 36 Menschen sterben"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/LZ_129",
+    "title": "LZ 129",
+    "lang": "de"
+   },
+   "notes": "Lakehurst, New Jersey.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der legendäre niederländische Schauspieler, der den Replikanten Roy Batty im Scifi-Kultklassiker Blade Runner verkörpert?",
+   "de": "Wie heißt der legendäre niederländische Schauspieler, der den Replikanten Roy Batty im Scifi-Kultklassiker Blade Runner verkörpert?",
+   "en": "What is the name of the legendary Dutch actor who plays the replicant Roy Batty in the sci-fi cult classic Blade Runner?",
+   "reworked": false,
+   "answerDe": "Rutger Hauer",
+   "answerEn": "Rutger Hauer",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1944-01-23",
+    "end": "2019-07-19",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rutger Hauer, Dutch actor (Roy Batty in Blade Runner)",
+    "labelDe": "Rutger Hauer, niederländischer Schauspieler (Roy Batty in Blade Runner)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rutger_Hauer",
+    "title": "Rutger Hauer",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Schokolade wurde im Mittelalter als Fiebermedizin eingesetzt. Richtig oder falsch?",
+   "de": "Welcher spanische Eroberer brachte 1528 den Kakao nach Europa?",
+   "en": "Which Spanish conqueror brought cacao to Europe in 1528?",
+   "reworked": true,
+   "answerDe": "Hernán Cortés",
+   "answerEn": "Hernán Cortés",
+   "timeline": {
+    "kind": "event",
+    "start": "1528",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hernán Cortés brings cacao from Mexico to Europe",
+    "labelDe": "Hernán Cortés bringt den Kakao aus Mexiko nach Europa"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schokolade",
+    "title": "Schokolade",
+    "lang": "de"
+   },
+   "notes": "True/false reworked. The card's statement is false for Europe: cacao only reached Europe in the 16th century (Cortés, 1528), after the Middle Ages; chocolate was later sold in pharmacies as a tonic (early 19th century).",
+   "domain": "history",
+   "sub": "early-modern"
+  },
+  {
+   "category": 4,
+   "cardDe": "Zu DDR-Zeiten waren bundesdeutsche Verlage auf der Leipziger Buchmesse nicht zugelassen. Richtig oder falsch?",
+   "de": "Ab welchem Jahr waren westliche Verlage zu DDR-Zeiten auf der Leipziger Buchmesse vertreten?",
+   "en": "From which year were Western publishers represented at the Leipzig Book Fair during the GDR era?",
+   "reworked": true,
+   "answerDe": "1952",
+   "answerEn": "1952",
+   "timeline": {
+    "kind": "event",
+    "start": "1952",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Western publishers exhibit at the Leipzig Book Fair in the GDR for the first time",
+    "labelDe": "Westliche Verlage stellen erstmals auf der Leipziger Buchmesse in der DDR aus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Leipziger_Buchmesse",
+    "title": "Leipziger Buchmesse",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the statement is false — Western publishers attended from 1952 and the fair was a meeting point for East and West. Wikipedia says 'westliche Verlage' rather than naming West German firms specifically.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Die durchschnittliche Lebensdauer einer Stubenfliege beträgt 24 Stunden. Richtig oder falsch?",
+   "de": "Wie viele Tage lebt eine Stubenfliege nach dem Schlupf höchstens, je nach Temperatur und Nahrungsangebot?",
+   "en": "At most how many days does a housefly live after hatching, depending on temperature and food supply?",
+   "reworked": true,
+   "answerDe": "70",
+   "answerEn": "70",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1758",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Carl Linnaeus describes the housefly as Musca domestica",
+    "labelDe": "Carl von Linné beschreibt die Stubenfliege als Musca domestica"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Stubenfliege",
+    "title": "Stubenfliege",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the statement is false — a housefly lives 6 to 70 days after hatching, depending on temperature and food.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wo lief der Brite Tim Peake 2016 einen Marathon: auf dem Meeresboden, im Weltall oder auf einem Berggipfel?",
+   "de": "Wo lief der britische Astronaut Tim Peake am 24. April 2016 den London-Marathon mit?",
+   "en": "Where did British astronaut Tim Peake run the London Marathon on 24 April 2016?",
+   "reworked": true,
+   "answerDe": "auf der Internationalen Raumstation (ISS)",
+   "answerEn": "on the International Space Station (ISS)",
+   "timeline": {
+    "kind": "event",
+    "start": "2016-04-24",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tim Peake runs the London Marathon on a treadmill aboard the ISS",
+    "labelDe": "Tim Peake läuft den London-Marathon auf einem Laufband an Bord der ISS"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tim_Peake",
+    "title": "Tim Peake",
+    "lang": "en"
+   },
+   "notes": "Multiple choice reworked; answer 'im Weltall' — on the ISS treadmill, the first man to run a marathon from space (Sunita Williams ran the 2007 Boston Marathon there earlier).",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  }
+ ]
+}

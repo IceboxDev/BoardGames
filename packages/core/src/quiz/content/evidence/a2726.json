@@ -1,0 +1,289 @@
+{
+ "article": "a2726",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Participant_observation",
+   "title": "Participant observation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:57.354Z",
+   "snapshot": "a9d8cf4fc491712e5980c043c557f44b1c4f3f491fbc4cb0db3f4f6d572b46ad"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Looking-glass_self",
+   "title": "Looking-glass self",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:58.348Z",
+   "snapshot": "b8332617568e90acf43138db26722952a08b39b1f410f4b03eef96de10ff20d6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Socialization",
+   "title": "Socialization",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:59.390Z",
+   "snapshot": "52ffc1d30f4c61435068153a394ca836eec08cd4e9ecb35c8d5f149aab1a8bdb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Total_institution",
+   "title": "Total institution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:16:00.256Z",
+   "snapshot": "07035930cb374de0c152ef1c89e0b828f43814d7976e97115f0ab871c4ace8c1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bronis%C5%82aw_Malinowski",
+   "title": "Bronisław Malinowski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:16:01.371Z",
+   "snapshot": "ec811d50defe16c26edd83d61db678ec8d7819ad95f214f10afb234f65fffd29"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Self-fulfilling_prophecy",
+   "title": "Self-fulfilling prophecy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:16:02.444Z",
+   "snapshot": "209da369b99aed0c01c7b5a0d31139c256603f5b95a6b688d9ce45bc84834d3a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Participant observation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Horton Cooley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-048"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Socialization",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-050"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erving Goffman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bronisław Malinowski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Robert K. Merton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:04.152Z",
+   "target": "f25467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Participant observation is one type of data collection method by practitioner-scholars typically used in qualitative research and ethnography.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Participant observation” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:04.152Z",
+   "target": "f25468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The looking-glass self is a concept introduced by American sociologist Charles Horton Cooley in Human Nature and the Social Order (1902).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Horton Cooley” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:04.152Z",
+   "target": "f25469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In sociology, socialization (or socialisation) is the process through which individuals internalize the norms, customs, values and ideologies of their society.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Socialization” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:04.152Z",
+   "target": "f25471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The concept is mostly associated with the work of sociologist Erving Goffman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erving Goffman” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:04.152Z",
+   "target": "f25472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Works by Bronisław Malinowski at Project Gutenberg",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bronisław Malinowski” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:04.152Z",
+   "target": "f25473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(also known as the Thomas dictum): \"If men define situations as real, they are real in their consequences.\" Another American sociologist, Robert K. Merton, continued the research, and is credited with coining the term \"self-fulfilling prophecy\" and popularizing the idea that \"a belief or",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.152Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert K. Merton” is on the snapshot of s6"
+  }
+ ]
+}

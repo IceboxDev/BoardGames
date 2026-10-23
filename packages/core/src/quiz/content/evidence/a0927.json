@@ -1,0 +1,249 @@
+{
+ "article": "a0927",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/D%C3%BCrer%27s_Rhinoceros",
+   "title": "Dürer's Rhinoceros – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:41.390Z",
+   "snapshot": "3fae649f5ce84cdf1a1e12a654b28971c052dbe52ffcf0d75c1583b00706f9a5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Isenheim_Altarpiece",
+   "title": "Isenheim Altarpiece – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:42.309Z",
+   "snapshot": "28b1a7846f1479a88c429ba5f8f63519c8d4fa327c3b3a5b63b6bb0d4286bf5f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+   "title": "Lucas Cranach the Elder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:43.399Z",
+   "snapshot": "40c37d6a3284a0bfcc3d9acb4f41d96d5d6e9af6502e6b2108e79c59e7dc671c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
+   "title": "The Ambassadors (Holbein) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:09.102Z",
+   "snapshot": "7c05fee26741defd3c06e787b225a868e1c43503674013481372532acd1c8641"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Battle_of_Alexander_at_Issus",
+   "title": "The Battle of Alexander at Issus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:44.434Z",
+   "snapshot": "e97dc191e2ee8d2603e2af72e68c7f347916f2f22e9e835f560372bbb5d0afc8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Matthias_Gr%C3%BCnewald",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:45.305Z",
+   "snapshot": "2796ed7d24447ee5069196b692129d0215694efab42d19da31ef54d48bec6007"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Albrecht Dürer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Matthias Grünewald",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04633",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lucas Cranach the Elder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hans Holbein the Younger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Albrecht Altdorfer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:05.778Z",
+   "target": "f04631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dürer's Rhinoceros is the name commonly given to a woodcut executed by German artist Albrecht Dürer in 1515.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albrecht Dürer” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:05.778Z",
+   "target": "f04632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Isenheim Altarpiece is an altarpiece sculpted and painted by, respectively, the Germans Nikolaus Hagenauer and Matthias Grünewald in 1512–1516.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Matthias Grünewald” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:05.778Z",
+   "target": "f04633",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lucas Cranach the Elder (German: Lucas Cranach der Ältere [ˈluːkas ˈkʁaːnax deːɐ̯ ˈʔɛltəʁə]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lucas Cranach the Elder” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:05.778Z",
+   "target": "f04634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ambassadors is a 1533 painting by Hans Holbein the Younger.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Holbein the Younger” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:05.778Z",
+   "target": "f04635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Battle of Alexander at Issus (German: Alexanderschlacht) is a 1529 oil painting by the German artist Albrecht Altdorfer (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albrecht Altdorfer” is on the snapshot of s5"
+  }
+ ]
+}

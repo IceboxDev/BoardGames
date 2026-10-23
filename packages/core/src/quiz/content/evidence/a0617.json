@@ -1,0 +1,242 @@
+{
+ "article": "a0617",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1871_Scotland_versus_England_rugby_union_match",
+   "title": "1871 Scotland versus England rugby union match – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:27.018Z",
+   "snapshot": "5986e76dc894416dff2afce7af2a7b43e325333a4da5885c3f5b521e45f3f182"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Volleyball",
+   "title": "Volleyball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:18.401Z",
+   "snapshot": "b5f2554946cd34305d0e469f94cb5a5ffeb20b95a558015f16220c76a033aa5e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Volleyball",
+   "title": "Volleyball",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:24.770Z",
+   "snapshot": "94fa269a9b64673829bd1f534d57f3068188f7b88028e20d071e05a72303ede2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Walter_Clopton_Wingfield",
+   "title": "Walter Clopton Wingfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:28.041Z",
+   "snapshot": "1de62cdf6169188167fdb4d4bd396d2ddd0e5745d7fea3a03ebe337e88b55a08"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Football_Association",
+   "title": "The Football Association – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:29.122Z",
+   "snapshot": "324984460b604f87d38048373650c927d1c4b9e6187439fe95eb91904eb428e4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "rugby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c052"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "volleyball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Volleyball",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-167"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "tennis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "football",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:14.782Z",
+   "target": "f03081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1871 Scotland versus England rugby union match",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.782Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rugby” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:14.782Z",
+   "target": "f03083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Volleyball is a team sport in which two teams of six players are separated by a net.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.782Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “volleyball” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:14.782Z",
+   "target": "f03083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Volleyball () ist eine olympische Mannschaftssportart aus der Gruppe der Rückschlagspiele.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.782Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volleyball” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:14.782Z",
+   "target": "f03084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Major Walter Clopton Wingfield  (16 October 1833 – 18 April 1912) was a Welsh inventor and a British Army officer who was one of the pioneers of lawn tennis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.782Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tennis” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:14.782Z",
+   "target": "f03085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Football Association (the FA) is the governing body of association football in England and the Crown Dependencies of Jersey, Guernsey and the Isle of Man.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.782Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “football” is on the snapshot of s5"
+  }
+ ]
+}

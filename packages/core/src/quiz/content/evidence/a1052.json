@@ -1,0 +1,234 @@
+{
+ "article": "a1052",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Nietzsche",
+   "title": "Friedrich Nietzsche – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:40.808Z",
+   "snapshot": "58775c0514cfac266839c4b97444def1f10fd775a5e84b2ea32340a803f33d25"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sapere_aude",
+   "title": "Sapere aude – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:41.645Z",
+   "snapshot": "3e2e3d35c937b1c8e6abe506d946f1e50181f05290a5bef0d2ea66bea36608aa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Paul_Sartre",
+   "title": "Jean-Paul Sartre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:01.152Z",
+   "snapshot": "e11ae683de7248fae19f4a6972533c5d0a6a43c2017c1e46b343773382721b34"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Discourse_on_the_Method",
+   "title": "Discourse on the Method – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:28.102Z",
+   "snapshot": "2c6b71a0ba7c7bfdda08573812e1219d6644af25876a8251ba62be8c1c32ad03"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Nietzsche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Immanuel Kant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean-Paul Sartre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Horace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Discourse on the Method",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:25.489Z",
+   "target": "f05256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After the death of Franziska in 1897, Nietzsche lived in Weimar, where Elisabeth cared for him and allowed visitors, including Rudolf Steiner (who in 1895 had written Friedrich Nietzsche: A Fighter Against His Time, one of the first books praising Nietzsche), to meet her uncommunicative brother.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Nietzsche” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:25.489Z",
+   "target": "f05258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "through reason.\" Originally used in the Roman poet Horace's First Book of Letters (20 BC), the phrase Sapere aude became associated with the Age of Enlightenment during the 17th and 18th centuries after Immanuel Kant used it in his essay \"Answering the Question: What is Enlightenment?\" (1784).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:25.489Z",
+   "target": "f05260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean-Paul Sartre was born on 21 June 1905 in Paris, the only child of Jean-Baptiste Sartre, an officer of the French Navy, and Anne-Marie (Schweitzer).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Paul Sartre” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:25.489Z",
+   "target": "f20463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "also be loosely translated as \"Have courage to use your own reason\" or \"Dare to know things through reason.\" Originally used in the Roman poet Horace's First Book of Letters (20 BC), the phrase Sapere aude became associated with the Age of Enlightenment during the 17th and 18th centuries after",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horace” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:25.489Z",
+   "target": "f20464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth in the Sciences (French: Discours de la Méthode pour bien conduire sa raison, et chercher la vérité dans les sciences) is a philosophical and autobiographical treatise published by René Descartes in 1637.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Discourse on the Method” is on the snapshot of s4"
+  }
+ ]
+}

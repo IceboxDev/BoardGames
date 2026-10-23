@@ -1,0 +1,335 @@
+{
+ "article": "a1019",
+ "sources": {
+  "s1": {
+   "url": "https://it.wikipedia.org/wiki/Broccolo_romanesco",
+   "title": "Broccolo romanesco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T04:35:34.541Z",
+   "snapshot": "5f80cd39ef4959e2e9961eb0e2c04a9df18f79faf6b6c7f3c34c56c7fa251af3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Broccoli",
+   "title": "Broccoli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:38.056Z",
+   "snapshot": "a79d9319cf7b5eb9f8cdaf66c04ca43266d29e0eb56d1c28859cb3cbaf458b2f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Brussels_sprout",
+   "title": "Brussels sprout – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:39.077Z",
+   "snapshot": "ba0afaa1ca32a6ee1f018cec9b3b84073236e41bf8e28b1fbee5f6bd89e9d9be"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Rosenkohl",
+   "title": "Rosenkohl",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:36.487Z",
+   "snapshot": "6624e99c3e16224afb9344bc072a07b4a6cda683748ee7e7e1c2bd913ee93818"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kohlrabi",
+   "title": "Kohlrabi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:40.020Z",
+   "snapshot": "d9af8f4771e38aad5d830ae9665669d66759c0c3ba4cd73f286ce12465cd0e7e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Kale",
+   "title": "Kale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:41.037Z",
+   "snapshot": "bbd997fe404c9315a5264b14a9c0489d928674c9986acb0414a2c30523ffd683"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Gr%C3%BCnkohlessen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:38.251Z",
+   "snapshot": "043a770c69052f1c2df5a1065912d235e86ca4dc74a55dee805315d47c8b49e8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Romanesco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "broccoli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brussels sprouts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rosenkohl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-120"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "kohlrabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "kale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f05095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Grünkohl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 31"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Il broccolo romanesco è una cultivar di cavolo appartenente al gruppo botrytis.",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romanesco” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Broccoli is classified in the Italica cultivar group of the species Brassica oleracea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “broccoli” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Though native to the Mediterranean region with other cabbage species, Brussels sprouts first appeared in northern Europe during the 5th century; they were later cultivated in the 13th century near Brussels, Belgium, from which their name derives.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brussels sprouts” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rosenkohl (bundesdeutsches und Schweizer Hochdeutsch) bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosenkohl” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kohlrabi (German: [koːlˈʁaːbi] ; pronounced  in English; scientific name Brassica oleracea Gongylodes Group), also called German turnip or turnip cabbage, is a biennial vegetable, a low, stout cultivar of wild cabbage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kohlrabi” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kale (), also called leaf cabbage, belongs to a group of cabbage (Brassica oleracea) cultivars primarily grown for their edible leaves, but it is also used as an ornamental plant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kale” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:20.659Z",
+   "target": "f05095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Grünkohl (regional auch Braunkohl) wurde früher nach dem ersten Herbstfrost geerntet, die in ihm enthaltenen Bitterstoffe sind dann neutralisiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grünkohl” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,414 @@
+{
+ "article": "a2160",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%A1rm%C3%A1n-Linie",
+   "title": "Kármán-Linie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:08.183Z",
+   "snapshot": "892f7d2cb17a9a50629ba5143e3f01c75d2c2bacfe1dd8fcfa2ec1d1df11d33a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_line",
+   "title": "Kármán line",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:11.880Z",
+   "snapshot": "1fdf3c486246a93d6dc60ab3cbbdfdbc101138db576eb428647404d28f703ff6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_Bull_Stratos",
+   "title": "Red Bull Stratos",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:12.923Z",
+   "snapshot": "01fcffb0beaf5a1e203beb7868c47d3464d91d42ba493f42fb648af893dd1316"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Theodore_von_K%C3%A1rm%C3%A1n",
+   "title": "Theodore von Kármán – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:13.895Z",
+   "snapshot": "a1778ad045089ea45f33c63960f8bd865f5089437be63b8d9abc78ef017b84d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Kittinger",
+   "title": "Joseph Kittinger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:15.045Z",
+   "snapshot": "71be173b8eb26873747f57e6e9bfde67796733ff590c9fbad9e1e1a63a3e6e4b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Alan_Eustace",
+   "title": "Alan Eustace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:15.861Z",
+   "snapshot": "0a68a9656335b113fb2a2f15e962ba24363e70c595531d88f700f92dbc5907d1"
+  },
+  "s7": {
+   "url": "https://www.space.com/karman-line-where-does-space-begin",
+   "title": "Kármán line: Where does space begin? – Space.com",
+   "publisher": "Space.com",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:03.643Z",
+   "snapshot": "604d3ace944bb7f541095c17e4ef68f0535212ad08e14228ceb7993e12c6d8aa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "100 Kilometer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-276"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "100 kilometres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-103"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Felix Baumgartner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; history entry seq 14; transcript tp-141"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodore von Kármán",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Bull Stratos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Joseph Kittinger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alan Eustace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dafür wurden zahlreiche Berechnungen durchgeführt, die ergaben, dass die Grenze bei einer Höhe von etwa 100 Kilometer gesetzt werden kann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “100 Kilometer” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The international record-keeping body FAI (Fédération aéronautique internationale) defines the Kármán line at an altitude of 100 kilometres (54 nautical miles; 62 miles; 328,084 feet) above mean sea level.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “100 kilometres” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Bull Stratos, or the Red Bull Space Jump, was a high-altitude skydiving project involving Austrian skydiver Felix Baumgartner.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Felix Baumgartner” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodore von Kármán (Hungarian: (szőllőskislaki) Kármán Tódor [(søːløːʃkiʃlɒki) ˈkaːrmaːn ˈtoːdor], May 11, 1881 – May 6, 1963) was a Hungarian-American mathematician, aerospace engineer, and physicist who worked in aeronautics and astronautics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodore von Kármán” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Bull Stratos, or the Red Bull Space Jump, was a high-altitude skydiving project involving Austrian skydiver Felix Baumgartner.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red Bull Stratos” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Interview: Joseph Kittinger American Experience",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Kittinger” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:31.740Z",
+   "target": "f10921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Robert Alan Eustace (born December 19, 1956) is an American computer scientist who served as senior vice president of engineering and first senior vice president for knowledge at Google until retiring in 2015.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Eustace” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:10:27Z",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "defines the Kármán line at an altitude of 100 kilometres (54 nautical miles; 62 miles; 328,084 feet) above mean sea level",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:10:30Z",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Kármán line is a boundary 62 miles (100 kilometers) above mean sea level that borders Earth's atmosphere and the beginning of space.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "Some bodies (NASA/USAF/FAA astronaut wings) use 50 miles/80 km; the wording names the Kármán line, which is 100 km."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:18.474Z",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "defines the Kármán line at an altitude of 100 kilometres (54 nautical miles; 62 miles; 328,084 feet) above mean sea level",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:18.474Z",
+   "target": "f10916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Kármán line is a boundary 62 miles (100 kilometers) above mean sea level that borders Earth's atmosphere and the beginning of space.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  }
+ ]
+}

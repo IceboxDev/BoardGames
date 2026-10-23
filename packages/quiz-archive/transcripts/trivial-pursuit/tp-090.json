@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-090",
+ "image": "IMG20261007173919.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Das Musik- und Kulturfestival Roskilde findet jährlich in welchem skandinavischen Land statt?",
+   "de": "Das Musik- und Kulturfestival Roskilde findet jährlich in welchem skandinavischen Land statt?",
+   "en": "In which Scandinavian country does the Roskilde music and culture festival take place every year?",
+   "reworked": false,
+   "answerDe": "Dänemark",
+   "answerEn": "Denmark",
+   "timeline": {
+    "kind": "founding",
+    "start": "1971",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Roskilde Festival in Denmark",
+    "labelDe": "Erstes Roskilde-Festival in Dänemark"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Roskilde_Festival",
+    "title": "Roskilde Festival",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welche Frau erhielt als erste den Regie-Oscar?",
+   "de": "Welche Frau erhielt als erste den Regie-Oscar?",
+   "en": "Who was the first woman to win the Oscar for Best Director?",
+   "reworked": false,
+   "answerDe": "Kathryn Bigelow",
+   "answerEn": "Kathryn Bigelow",
+   "timeline": {
+    "kind": "event",
+    "start": "2010-03-07",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Kathryn Bigelow wins Best Director for The Hurt Locker at the 82nd Academy Awards",
+    "labelDe": "Kathryn Bigelow gewinnt bei der 82. Oscarverleihung den Regie-Oscar für The Hurt Locker"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kathryn_Bigelow",
+    "title": "Kathryn Bigelow",
+    "lang": "en"
+   },
+   "notes": "Ceremony date from en.wikipedia '82nd Academy Awards'.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Jeder deutsche Bundespräsident erhält automatisch zum Dienstantritt das Bundesverdienstkreuz. Richtig oder falsch?",
+   "de": "Welche höchste Stufe des Bundesverdienstkreuzes ist mit Amtsantritt dem deutschen Bundespräsidenten vorbehalten?",
+   "en": "Which highest class of the German Order of Merit is reserved for the German Federal President on taking office?",
+   "reworked": true,
+   "answerDe": "Die Sonderstufe des Großkreuzes",
+   "answerEn": "The Special Class of the Grand Cross",
+   "timeline": {
+    "kind": "founding",
+    "start": "1951-09-07",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Order of Merit of the Federal Republic of Germany is established",
+    "labelDe": "Der Verdienstorden der Bundesrepublik Deutschland wird gestiftet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Verdienstorden_der_Bundesrepublik_Deutschland",
+    "title": "Verdienstorden der Bundesrepublik Deutschland",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true: the president receives the Special Class of the Grand Cross on taking office (also reserved for heads of state).",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Gemälde ist in Frankreich als La Joconde bekannt: Mona Lisa, Der Schrei oder Guernica?",
+   "de": "Welches Gemälde ist in Frankreich als La Joconde bekannt?",
+   "en": "Which painting is known in France as La Joconde?",
+   "reworked": true,
+   "answerDe": "Mona Lisa",
+   "answerEn": "Mona Lisa",
+   "timeline": {
+    "kind": "creation",
+    "start": "1503",
+    "end": "1506",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Leonardo da Vinci paints the Mona Lisa",
+    "labelDe": "Leonardo da Vinci malt die Mona Lisa"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Mona_Lisa",
+    "title": "Mona Lisa",
+    "lang": "de"
+   },
+   "notes": "From the Italian La Gioconda, after the sitter Lisa del Giocondo.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Die Hygiene-Hypothese setzt voraus, dass Kinder, die im Schmutz spielen, weniger anfällig sind für Allergien und Asthma als andere Kinder. Richtig oder falsch?",
+   "de": "Wie heißt die Hypothese, nach der Kinder, die im Schmutz spielen, weniger anfällig für Allergien und Asthma sind als andere Kinder?",
+   "en": "What is the name of the hypothesis according to which children who play in dirt are less susceptible to allergies and asthma than other children?",
+   "reworked": true,
+   "answerDe": "Hygienehypothese",
+   "answerEn": "Hygiene hypothesis",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1989",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "David Strachan formulates the hygiene hypothesis on allergies",
+    "labelDe": "David Strachan formuliert die Hygienehypothese zu Allergien"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hygienehypothese",
+    "title": "Hygienehypothese",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true: early-childhood exposure to microorganisms is thought to protect against allergic disease.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches Feld folgt beim klassischen Monopoly-Spiel unmittelbar auf das Los-Feld: Schlossallee, Berliner Straße oder Badstraße?",
+   "de": "Welches Feld folgt beim klassischen deutschen Monopoly-Spiel unmittelbar auf das Los-Feld?",
+   "en": "Which square immediately follows GO in the classic German Monopoly game?",
+   "reworked": true,
+   "answerDe": "Badstraße",
+   "answerEn": "Badstraße",
+   "timeline": {
+    "kind": "creation",
+    "start": "1936",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Schmidt Spiele publishes the first German edition of Monopoly",
+    "labelDe": "Schmidt Spiele bringt die erste deutsche Ausgabe von Monopoly heraus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Monopoly",
+    "title": "Monopoly",
+    "lang": "de"
+   },
+   "notes": "Badstraße is the cheapest street (60 M); counterpart of Old Kent Road (UK) / Mediterranean Avenue (US).",
+   "domain": "sport-games",
+   "sub": "games"
+  }
+ ]
+}

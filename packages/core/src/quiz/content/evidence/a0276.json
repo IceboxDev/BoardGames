@@ -1,0 +1,375 @@
+{
+ "article": "a0276",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Computer_Space",
+   "title": "Computer Space – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:42.800Z",
+   "snapshot": "ac61a05b9629eba969c475db58d830154a64e820f1c035321c3db94cf4a2a22b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wolfenstein_3D",
+   "title": "Wolfenstein 3D – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:02.898Z",
+   "snapshot": "2aeffd384182ef8e11f4a346a4e7d263650256be59694ace9880d4346559c939"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Platformer",
+   "title": "Platformer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:04.022Z",
+   "snapshot": "79d80f15ddad0dc64e8558c459b0b4216dde5461520b26688cd6b5c8a557a676"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Game_%26_Watch",
+   "title": "Game & Watch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:02.049Z",
+   "snapshot": "29f53ddbe642e684e798ab860ad5ae380f7ae57a6d731646890299d5903372cc"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Electronic_Sports_League",
+   "title": "Electronic Sports League – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:01.156Z",
+   "snapshot": "b98f91b9bdb208ca689ded5f0f590db24f6367538418d2f05633e28cc30476f5"
+  },
+  "s6": {
+   "url": "https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html",
+   "title": "Nintendo History",
+   "publisher": "Nintendo of Europe",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:02.007Z",
+   "snapshot": "66f6ac7da3b7c0778e12575c17acfdb85f3ba5aab4920e8812b7ee0a5c2f700c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Handheld_game_console",
+   "title": "Handheld game console – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:04.804Z",
+   "snapshot": "60785d776ac6185553dba093f7befc2a7757a636a04347480abbaed780d9bbe6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arcade games",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "First-person shooters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Platformers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Handheld consoles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "E-Sport",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:23.148Z",
+   "target": "f01376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bushnell had previously worked during the summer at Lagoon Amusement Park in Utah as a manager of the games department overseeing the arcade games, and when he saw Spacewar!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arcade games” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:23.148Z",
+   "target": "f01377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "for Next Generation asserted that Wolfenstein 3D was \"still as addictive as it ever was\" but essentially agreed with Maximum, contending that anyone interested in first-person shooters would have either already played it on another platform or \"moved on\" to more advanced games in the genre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “First-person shooters” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:23.148Z",
+   "target": "f01378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1998, sales of platformers represented a 15% market share.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Platformers” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:23.148Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Handheld consoles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Handheld consoles”, “Handhelds”, “портативные консоли”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:23.148Z",
+   "target": "f01380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die ESL (ehemals ESPL, früher verwendete volle Bezeichnung Electronic Sports League) ist der Markenname des Kölner E-Sport-Unternehmens ESL Gaming, das wiederum einer Tochter des saudi-arabischen Staatsfonds Public Investment Fund gehört.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “E-Sport” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:47:00Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Game Boy was launched in Europe and established what would become an astronomical worldwide installed base for the Nintendo handheld console.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:47:02Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a small, portable self-contained video game console with a built-in screen, game controls and speakers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:43.435Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Game Boy was launched in Europe and established what would become an astronomical worldwide installed base for the Nintendo handheld console.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:43.435Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a small, portable self-contained video game console with a built-in screen, game controls and speakers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:43.435Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "These handhelds were accompanied by the launch of Monster Hunter 4 Ultimate and The Legend of Zelda: Majora’s Mask 3D – a full remaster of the fan-favourite Nintendo 64 game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Handhelds” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:43.435Z",
+   "target": "f01379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This list does not include dedicated consoles (such as LCD games and the Tamagotchi) except those before fourth generation, as no handheld consoles achieved this milestone before this generation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Handheld consoles” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1556",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Luther%27s_Small_Catechism",
+   "title": "Luther's Small Catechism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:06.311Z",
+   "snapshot": "dd8a0232d512aea683b303c0baa8ac504731f11f34412907078db35c144cb2bd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tridentine_Mass",
+   "title": "Tridentine Mass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:11.218Z",
+   "snapshot": "3c0c35f9b1e47e450a1ea30d31218b169294606db6cd8000abe10090e2f0ade6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Liturgy_of_the_Hours",
+   "title": "Liturgy of the Hours – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:12.064Z",
+   "snapshot": "66a7a995eb75f80cc4051593975e2166e7e3571a111c8fb0a8dfeb836bd5aa09"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lectionary",
+   "title": "Lectionary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:13.072Z",
+   "snapshot": "c646376804c987f194038e5c5a21d125303e0e1a2ea097c0218e6e52106c2f9a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Achtliederbuch",
+   "title": "Achtliederbuch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:08:10.202Z",
+   "snapshot": "6cb321cd02cf53e8e5ac8876a9d86f8c51deb0fea0e43e99f4e805072c58bcad"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "catechism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "missal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "breviary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "lectionary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gesangbuch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:43.625Z",
+   "target": "f07776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Luther's Small Catechism (German: Der Kleine Katechismus) is a catechism written by Martin Luther and published in 1529.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “catechism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:43.625Z",
+   "target": "f07777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "also commonly known as the Traditional Latin Mass (TLM), is the form of Mass in the Roman Rite celebrated according to editions of the Roman Missal derived from the missal promulgated by Pope Pius V in 1570 and revised by successive popes through the 1962 edition promulgated by Pope John",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “missal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:43.625Z",
+   "target": "f07778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Liturgy of the Hours (Latin: Liturgia Horarum), Divine Office (Latin: Divinum Officium), or Opus Dei (\"Work of God\") is a set of Catholic prayers comprising the canonical hours, often also referred to as the breviary, of the Latin Church.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “breviary” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:43.625Z",
+   "target": "f07779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A lectionary (Latin: lectionarium) is a book or listing that contains a collection of scripture readings appointed for Christian or Jewish worship on a given day or occasion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lectionary” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:43.625Z",
+   "target": "f07780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die schmale Flugschrift war noch kein planmäßig zusammengestelltes Gesangbuch für den Gemeindegebrauch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gesangbuch” is on the snapshot of s5"
+  }
+ ]
+}

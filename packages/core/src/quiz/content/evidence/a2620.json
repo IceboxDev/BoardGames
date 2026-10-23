@@ -1,0 +1,226 @@
+{
+ "article": "a2620",
+ "sources": {
+  "s1": {
+   "url": "https://lvnordrhein.de/schulsport/schulsportprogramm/bundesjugendspiele/leichtathletik-wettbewerb-in-den-bjs",
+   "title": "Leichtathletik-Wettbewerb in den Bundesjugendspielen (Grundschule)",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:40.658Z",
+   "snapshot": "f94ea697741150db8a3a53bce59341f74e9ec51494c9cbdbffd4133f5db23960"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bundesjugendspiele",
+   "title": "Bundesjugendspiele – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:40.925Z",
+   "snapshot": "ec6240a550e186773dc24ebdbc8adbc6bb1c05b02eefaac948d20440caebc624"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Carl_Diem",
+   "title": "Carl Diem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:41.937Z",
+   "snapshot": "aa0ae6fdc812e5d1bfbffee7b3d0dee153482095884f54c67470cb7183b6c1aa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ausdauernd laufen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-269"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ehrenurkunde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Diem",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1951",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Turnen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:47.981Z",
+   "target": "f14149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aus jedem Übungsblock („schnell laufen“, „weit/hoch springen“, „weit werfen/stoßen“ „ausdauernd laufen“) ist eine, der jeweiligen Klassenstufe angemessene Übung, anzubieten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ausdauernd laufen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:47.981Z",
+   "target": "f14150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wer eine bestimmte Mindestpunktzahl erreicht, erhält als Anerkennung für die Leistung eine Siegerurkunde, ab einer bestimmten höheren Punktegrenze eine Ehrenurkunde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ehrenurkunde” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:47.981Z",
+   "target": "f14151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Diem hinterließ 60.000 Briefe und 12.000 Seiten Tagebücher, die im Carl und Liselott Diem-Archiv an der Sporthochschule Köln zugänglich sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Diem” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:47.981Z",
+   "target": "f14152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In der Bundesrepublik wurden die Bundesjugendspiele im Jahr 1951 zunächst vom Bundesministerium des Innern (BMI), dann vom Bundesministerium für Jugend, Familie und Gesundheit (BMJFG, mittlerweile BMFSFJ, von 1969 fusioniert bis 1991 mit dem heutigen BMG) für Schüler zwischen 8 und 19 Jahren",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1951” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:47.981Z",
+   "target": "f14153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Von den Teilnehmern wird erwartet, dass sie in bestimmten Disziplinen (Leichtathletik, Turnen, Schwimmen) möglichst gute Leistungen erzielen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Turnen” is on the snapshot of s2"
+  }
+ ]
+}

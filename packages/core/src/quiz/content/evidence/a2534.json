@@ -1,0 +1,523 @@
+{
+ "article": "a2534",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Snellen-Haken",
+   "title": "Snellen-Haken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:54.873Z",
+   "snapshot": "a381e23f085d7bdd9f4e8c003f71618b0de6f6d014dcaa209c88f9517d92c396"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Prosopagnosie",
+   "title": "Prosopagnosie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:55.833Z",
+   "snapshot": "3cfd1fe7b16d466a324338b1a63ed878c455dfbd50f7d732b26fe9cdef659d07"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Anosmie",
+   "title": "Anosmie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:56.905Z",
+   "snapshot": "7e808090ad5ee094cd65110de4e756c20dc13224e314ce08bc0e56cc10e2c052"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ageusia",
+   "title": "Ageusia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:57.655Z",
+   "snapshot": "2b621816b3b835ab260155e843ec9e59e67f78c61322a3916abe31cd76756161"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Audiometry",
+   "title": "Audiometry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:58.757Z",
+   "snapshot": "bf4ad95af2a999c5759fdf79df67a76904b5860543a363a213d657bfc1750ce9"
+  },
+  "s6": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8440779/",
+   "title": "A reassessment and comparison of the Landolt C and tumbling E charts in managing amblyopia (Sci Rep 2021)",
+   "publisher": "Scientific Reports / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.261Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s7": {
+   "url": "https://www.nhs.uk/conditions/face-blindness/",
+   "title": "Prosopagnosia (face blindness)",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.059Z",
+   "snapshot": "693ce374a2f03692501d6cd3fcf649e0fb95460878763301d30238b73945ce61"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Prosopagnosia",
+   "title": "Prosopagnosia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.869Z",
+   "snapshot": "7ce4402c3c6a8dbc47038fe661a7e7410d7cddd76a2f683950a9ceb5fd5a2ad3"
+  },
+  "s9": {
+   "url": "https://www.nidcd.nih.gov/health/taste-disorders",
+   "title": "Taste Disorders",
+   "publisher": "National Institute on Deafness and Other Communication Disorders (NIH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.680Z",
+   "snapshot": "61d74c66a131f3834ad2ede6b7a2834094444f7e78f75738293fcbadef36a52a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sehsinn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gesichter erkennen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-082"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Geruchssinn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-189"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sense of taste",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "hearing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:35.477Z",
+   "target": "f13531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sehsinn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sehsinn”, “Sight”, “зрение”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.477Z",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gesichter erkennen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Gesichter erkennen”, “Recognise faces”, “узнавать лица”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.477Z",
+   "target": "f13533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Geruchssinn wird im Vergleich zu anderen Sinnen als nebensächlich empfunden, die Folgen seines Fehlens nicht zur Genüge zur Kenntnis genommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geruchssinn” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.477Z",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sense of taste",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sense of taste”, “Geschmackssinn”, “вкус”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.477Z",
+   "target": "f13535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Audiometry (from Latin  audīre 'to hear' and  metria 'to measure') is a branch of audiology and the science of measuring hearing acuity for variations in sound intensity and pitch and for tonal purity, involving thresholds and differing frequencies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hearing” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:13:55Z",
+   "target": "f13531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Visual acuity was separately tested in each eye using Landolt C and tumbling E charts in a random order.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:13:56Z",
+   "target": "f13531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anwendung findet er vor allem in der Augenheilkunde, um die Sehschärfe von Analphabeten oder Kleinkindern zu überprüfen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:13:57Z",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Prosopagnosia, also called face blindness, is a condition where you have difficulty recognising people's faces.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:13:58Z",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "as inability to recognize faces can be misinterpreted as lack of interest in others.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:13:59Z",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Some people can’t detect any tastes, which is called ageusia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:14:01Z",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is the loss of taste functions of the tongue, particularly the inability to detect sweetness, sourness, bitterness, salt",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anwendung findet er vor allem in der Augenheilkunde, um die Sehschärfe von Analphabeten oder Kleinkindern zu überprüfen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Prosopagnosia, also called face blindness, is a condition where you have difficulty recognising people's faces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "as inability to recognize faces can be misinterpreted as lack of interest in others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Some people can’t detect any tastes, which is called ageusia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is the loss of taste functions of the tongue, particularly the inability to detect sweetness, sourness, bitterness, salt",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "if you do not develop the ability to recognise faces – this is the most common type and may run in families",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Recognise faces” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:19.233Z",
+   "target": "f13534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Many of us take our sense of taste for granted, but a taste disorder can have a negative effect on your health and quality of life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sense of taste” is on the snapshot of s9"
+  }
+ ]
+}

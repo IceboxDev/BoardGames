@@ -1,0 +1,195 @@
+{
+ "article": "a0852",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/History_of_the_metric_system",
+   "title": "History of the metric system – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:33.620Z",
+   "snapshot": "d09abb1d6f8f75bdf05b885ac84dbb9afb99b231cfc0934d09f890ced7cf2c37"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Celsius",
+   "title": "Celsius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:34.400Z",
+   "snapshot": "2378021fd17df3e100f9e15545d85e519e0699d7bf31740a899bfb556e994929"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Imperial_units",
+   "title": "Imperial units – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:35.403Z",
+   "snapshot": "2c5f922424aafa9af615ad9ca7345b0292be1f3737d92a0995bc5fd5f03a74ac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paper_size",
+   "title": "Paper size – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:36.435Z",
+   "snapshot": "264b64de9a84f8e6311c77ba5dcf6d7ae06570a64fae7484c993ce9f8c9f1cb2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sweden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "United Kingdom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:54.949Z",
+   "target": "f04256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The system became the standard of France and Europe within half a century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:54.949Z",
+   "target": "f04257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His custom-made \"Linnaeus-thermometer\", for use in his greenhouses, was made by Daniel Ekström, Sweden's leading maker of scientific instruments at the time, whose workshop was located in the basement of the Stockholm observatory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sweden” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:54.949Z",
+   "target": "f04258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "By the late 20th century, most nations of the former empire had officially adopted the metric system as their main system of measurement, but imperial units are still used alongside metric units in the United Kingdom and in some other parts of the former empire, notably Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “United Kingdom” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:54.949Z",
+   "target": "f04259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Generalized to nothing less than four series, this system was introduced as a DIN standard (DIN 476) in Germany in 1922, replacing a vast variety of other paper formats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Germany” is on the snapshot of s4"
+  }
+ ]
+}

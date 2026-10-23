@@ -1,0 +1,475 @@
+{
+ "article": "a1592",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Back_to_Methuselah",
+   "title": "Back to Methuselah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:31.107Z",
+   "snapshot": "0ef342f190ecc189488bfa338cd769852aef2f29e8f4c0f55c10b4e7ed5a9eb8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Genesis_Apocryphon",
+   "title": "Genesis Apocryphon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:32.072Z",
+   "snapshot": "1882c4250b97f3e1a76b3b391a19bb423b3b0be9d7dc4180a347957aef9749ed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Enoch",
+   "title": "Book of Enoch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:33.157Z",
+   "snapshot": "db57f28069db71659187605d1d226a54537b15a883947afc17e8bd5a164bc059"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Semitic_languages",
+   "title": "Semitic languages – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:34.439Z",
+   "snapshot": "e8bace8f7652a04db3f74a5a55e75206bb74026ee6794004bb7aba2b18c02671"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ussher_chronology",
+   "title": "Ussher chronology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:34.923Z",
+   "snapshot": "46c75e4ab3e378c04e0fbd641118fc3c4a49ad4211a9a6b00ea7fefedf3ec70b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Seth",
+   "title": "Seth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:36.021Z",
+   "snapshot": "9b8b290c75cd786e141b494795ca7a75646811b827477dea877940cf1b7e4e68"
+  },
+  "s7": {
+   "url": "https://www.biblegateway.com/passage/?search=Genesis+4%3A25&version=NRSVUE",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:33.381Z",
+   "snapshot": "9aaf8c9dafeeda5cbf9fc26d730dfde060ca000c54ac205a4a451ff018630acf"
+  },
+  "s8": {
+   "url": "https://www.biblegateway.com/passage/?search=Genesis+6%3A10&version=NRSVUE",
+   "title": "Genesis 6:10 NRSVUE - Bible Gateway",
+   "publisher": "Bible Gateway (NRSVUE, National Council of Churches)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:58.810Z",
+   "snapshot": "6a033b722bad89a4ee45f3db7cfeaf9a3c43c279fcf032b86d676bfbc1d88afb"
+  },
+  "s9": {
+   "url": "https://www.biblegateway.com/passage/?search=Genesis+7%3A13&version=NRSVUE",
+   "title": "Genesis 7:13 NRSVUE - Bible Gateway",
+   "publisher": "Bible Gateway (NRSVUE, National Council of Churches)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:59.720Z",
+   "snapshot": "37cdf0b222cfb6fa89ef7231dc338a73000c048e22c3c47056af6e34dd9d9ece"
+  },
+  "s10": {
+   "url": "https://bible.usccb.org/bible/genesis/6",
+   "title": "Genesis, Chapter 6 – USCCB",
+   "publisher": "United States Conference of Catholic Bishops (NABRE)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:59.241Z",
+   "snapshot": "c2dc7ace959cdb074db696cd9431fbdb54dc8fa78c31ba6310b2ac2ed9fe4ca1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Methuselah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lamech",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Enoch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shem, Ham and Japheth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f07956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Back to Methuselah (A Metabiological Pentateuch) by George Bernard Shaw consists of a preface (The Infidel Half Century) and a series of five plays: In the Beginning: B.C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Methuselah” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f07957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Genesis Apocryphon (1Q20), also called the Tales of the Patriarchs or the Apocalypse of Lamech and labeled 1QapGen, is one of the original seven Dead Sea Scrolls discovered in 1946 by Bedouin shepherds in Cave 1 near Qumran, a small settlement in the northwest corner of the Dead Sea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lamech” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f07958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Book of Enoch (also 1 Enoch; Hebrew: סֵפֶר חֲנוֹךְ, romanized: Sēfer Ḥănōḵ; Ge'ez: መጽሐፈ ሄኖክ, romanized: Maṣḥafa Hēnok) is an ancient Jewish apocalyptic religious text from the Jewish people, ascribed by tradition to the patriarch Enoch who was the father of Methuselah and the great-grandfather",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enoch” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shem, Ham and Japheth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Shem, Ham and Japheth”, “Sem, Ham und Jafet”, “Сим, Хам и Иафет”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f07960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The date of 4000 BC as the creation of Adam was at least partially influenced by the widely held belief that the Earth was approximately 5600 years old (2000 from Adam to Abraham, 2000 from Abraham to the birth of Christ, and 1600 years from Christ to Ussher), corresponding to the six days of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adam” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f28402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seth is the third son of Adam and Eve in the Abrahamic religions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seth” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:48.091Z",
+   "target": "f28402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "25 Adam knew his wife again, and she bore a son and named him Seth,[a] for she said, “God has appointed for me another child instead of Abel, because Cain killed him.”(A)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.091Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seth” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:03:53Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "And Noah had three sons: Shem, Ham, and Japheth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:03:54Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "On the very same day Noah with his sons, Shem and Ham and Japheth, and Noah's wife and the three wives of his sons entered the ark",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:03:56Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Noah begot three sons: Shem, Ham, and Japheth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:35.701Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "And Noah had three sons: Shem, Ham, and Japheth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:35.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:35.701Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "On the very same day Noah with his sons, Shem and Ham and Japheth, and Noah's wife and the three wives of his sons entered the ark",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:35.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:35.701Z",
+   "target": "f07959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Noah begot three sons: Shem, Ham, and Japheth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:35.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  }
+ ]
+}

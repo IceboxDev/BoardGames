@@ -1,0 +1,401 @@
+{
+ "article": "a0565",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kabale_und_Liebe",
+   "title": "Kabale und Liebe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:06.829Z",
+   "snapshot": "2e13e41d2f4f3cdb1fa1e84a520c4c3ce471af276624d8d4a35726379c22a798"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/William_Tell_(opera)",
+   "title": "William Tell (opera) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:08.183Z",
+   "snapshot": "8679ec76adbde3b8d3032978092c3b4ca04a3006c1de717acb93dd71a919cd79"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_R%C3%A4uber",
+   "title": "Die Räuber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:07.539Z",
+   "snapshot": "9e7bba9a16b87e778fc1573451e8a40346e23e3808dee6999ea198ad263911ec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots",
+   "title": "Mary, Queen of Scots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:09.125Z",
+   "snapshot": "e8e8c9e53150b8ebda637434643526af3a14e87fb2f8f158be2033852a376b03"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Don_Karlos_(Schiller)",
+   "title": "Don Karlos (Schiller) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:08.464Z",
+   "snapshot": "046f7c0a7aee01b2a12603411b54e9ead702266a7118f5cbbd1b247288b72c64"
+  },
+  "s6": {
+   "url": "https://www.inhaltsangabe.de/schiller/maria-stuart/",
+   "title": "Maria Stuart – Inhaltsangabe",
+   "publisher": "inhaltsangabe.de",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:06.730Z",
+   "snapshot": "291f008d935a1242354f5da11f24d711ef3809792e961cb4a00691622a8b3eb4"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Maria_Stuart_(Drama)",
+   "title": "Maria Stuart (Drama) – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:48:25Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mary_Stuart_(Schiller_play)",
+   "title": "Mary Stuart (Schiller play) – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:06.807Z",
+   "snapshot": "a3ee45bcf7a00ecd17f1461ad334cde1ab029022edafeb9135e681be916452ff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02821",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kabale und Liebe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c048"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02822",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wilhelm Tell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02823",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Räuber",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maria Stuart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Don Karlos",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:07.980Z",
+   "target": "f02821",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kabale und Liebe ist ein Drama in fünf Akten von Friedrich Schiller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kabale und Liebe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:07.980Z",
+   "target": "f02822",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bis, based on Friedrich Schiller's play Wilhelm Tell, which, in turn, drew on the William Tell legend.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Tell” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:07.980Z",
+   "target": "f02823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Räuber ist das erste veröffentlichte Drama von Friedrich Schiller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Räuber” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:07.980Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maria Stuart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Maria Stuart”, “Мария Стюарт”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:07.980Z",
+   "target": "f02825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Don Karlos, Infant von Spanien (zeitgenössisch auch Dom Karlos) ist ein Drama von Friedrich Schiller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Don Karlos” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:21Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Stück spielt zu Beginn des Jahres 1587 in London und in Fotheringhay, wo Maria gefangen liegt, und umfasst die letzten drei Tage vor ihrer Hinrichtung.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:25Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Handlung des Stücks setzt 19 Jahre später, drei Tage vor Marias Hinrichtung, ein.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:30Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a verse play by Friedrich Schiller that depicts the last days of Mary, Queen of Scots.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:32.316Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Stück spielt zu Beginn des Jahres 1587 in London und in Fotheringhay, wo Maria gefangen liegt, und umfasst die letzten drei Tage vor ihrer Hinrichtung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:32.316Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a verse play by Friedrich Schiller that depicts the last days of Mary, Queen of Scots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:32.316Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "»Maria Stuart« ist eine Tragödie in fünf Akten des klassischen Dichters Friedrich Schiller (1759–1805).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Maria Stuart” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:32.316Z",
+   "target": "f02824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mary Stuart (German: Maria Stuart, German pronunciation: [maˈʁiːa ˈstjuːɐt] ) is a verse play by Friedrich Schiller that depicts the last days of Mary, Queen of Scots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Maria Stuart” is on the snapshot of s8"
+  }
+ ]
+}

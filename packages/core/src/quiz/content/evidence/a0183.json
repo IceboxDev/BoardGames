@@ -1,0 +1,242 @@
+{
+ "article": "a0183",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/George_Grosz",
+   "title": "George Grosz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:07.843Z",
+   "snapshot": "60c71a5757cffc690c5171341f4ed7e320d5aa07f9708814a05a39f073ddc803"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Metropolis_(Dix)",
+   "title": "Metropolis (Dix) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:09.400Z",
+   "snapshot": "93c23ce50d396709139d5a2faad6b630d435856d772d3e35ca296da4f9c73975"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Night_(Beckmann)",
+   "title": "The Night (Beckmann) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:10.398Z",
+   "snapshot": "d0ccf05ed8b328f73e826ff8affaa06583dfe05b800f8d7c926080eb167e6d72"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Triadisches_Ballett",
+   "title": "Triadisches Ballett – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:08.044Z",
+   "snapshot": "7378e159a6b52350e5edbdd83f5643741296bc886b4d20ba37365e8a22277697"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Erste_Internationale_Dada-Messe",
+   "title": "Erste Internationale Dada-Messe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:09.362Z",
+   "snapshot": "19214c3486e098c8e072fe8feb7d9faa4f99a0556a3d92c744967ea5e0489013"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Grosz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Otto Dix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Max Beckmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oskar Schlemmer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hannah Höch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:06.177Z",
+   "target": "f00911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Grosz’ sozial- und gesellschaftskritische Gemälde und Zeichnungen des Verismus, die überwiegend in den 1920er Jahren entstanden sind, werden der Neuen Sachlichkeit zugerechnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Grosz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:06.177Z",
+   "target": "f00912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Metropolis (German: Großstadt) is a triptych painting by the German artist Otto Dix, executed between 1927 and 1928.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Dix” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:06.177Z",
+   "target": "f00913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Night (German: Die Nacht) is an oil-on-canvas painting by the German artist Max Beckmann, created between 1918 and 1919.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Beckmann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:06.177Z",
+   "target": "f00914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Triadische Ballett ist ein experimentelles Ballett von Oskar Schlemmer.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oskar Schlemmer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:06.177Z",
+   "target": "f00915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mitglieder waren unter anderen die Künstler George Grosz, Hannah Höch und John Heartfield, sowie zeitweilig Franz Jung, Walter Mehring und Erwin Piscator.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannah Höch” is on the snapshot of s5"
+  }
+ ]
+}

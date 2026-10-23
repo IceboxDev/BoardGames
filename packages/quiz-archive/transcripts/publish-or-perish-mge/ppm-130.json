@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-130",
+ "image": "IMG20261022154555.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] How fast can the fastest lava flow?\nA. About 10 miles (16 kilometers) per hour\nB. About 40 miles (64 kilometers) per hour\nC. About 120 miles (193 kilometers) per hour\nAnswer: B. The fastest lava flows can reach speeds of up to 37-62 miles (60-100 kilometers) per hour under certain conditions, such as on steep slopes or when lava is very fluid. However, most lava flows move much more slowly, typically at speeds of less than 10 miles per hour.",
+   "de": "Der schnellste je gemessene Lavastrom raste im Januar 1977 mit bis zu etwa 100 km/h die Hänge hinab, nachdem der Lavasee welches afrikanischen Vulkans ausgelaufen war?",
+   "en": "The fastest lava flow on record raced down the slopes at up to about 100 km/h (60 mph) in January 1977, after the lava lake of which African volcano drained?",
+   "reworked": true,
+   "answerDe": "Nyiragongo",
+   "answerEn": "Mount Nyiragongo",
+   "timeline": {
+    "kind": "event",
+    "start": "1977-01-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nyiragongo’s lava lake drains in under an hour; the flow races downhill at up to 100 km/h",
+    "labelDe": "Der Lavasee des Nyiragongo läuft in unter einer Stunde aus; der Strom rast mit bis zu 100 km/h talwärts"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mount_Nyiragongo",
+    "title": "Mount Nyiragongo",
+    "lang": "en"
+   },
+   "notes": "A bare speed figure has no single short answer, so the question asks the record flow it rests on. Wikipedia (Lava) gives an exceptional 30–100 km/h (20–60 mph) at Nyiragongo and typical maxima of 10–48 km/h on steep slopes; the card's 'about 40 mph' sits inside that range, its explanation's 60–100 km/h matches.",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] How many hearts does an octopus have?\nA. 8 B. 2 C. 3\nAnswer: C. Octopuses have two hearts for pumping blood to the gills and one for the rest of the body.",
+   "de": "Wie viele Herzen hat ein Oktopus?",
+   "en": "How many hearts does an octopus have?",
+   "reworked": true,
+   "answerDe": "3",
+   "answerEn": "3",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1818",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "William Elford Leach names Octopoda, the order of the octopuses",
+    "labelDe": "William Elford Leach benennt die Octopoda, die Ordnung der Kraken"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Octopus",
+    "title": "Octopus",
+    "lang": "en"
+   },
+   "notes": "Open question kept, options dropped. Wikipedia: a systemic (main) heart plus two branchial (gill) hearts.",
+   "domain": "nature",
+   "sub": "animals"
+  }
+ ]
+}

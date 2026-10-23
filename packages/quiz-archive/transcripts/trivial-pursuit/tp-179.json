@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-179",
+ "image": "IMG20261007180238.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welcher italienische Vulkan gilt als der gefährlichste der Welt?",
+   "de": "Welcher italienische Vulkan gilt als der gefährlichste der Welt?",
+   "en": "Which Italian volcano is considered the most dangerous in the world?",
+   "reworked": false,
+   "answerDe": "Vesuv",
+   "answerEn": "Mount Vesuvius",
+   "timeline": {
+    "kind": "event",
+    "start": "79",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Eruption of Mount Vesuvius buries Pompeii and Herculaneum",
+    "labelDe": "Ausbruch des Vesuvs verschüttet Pompeji und Herculaneum"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mount_Vesuvius",
+    "title": "Mount Vesuvius",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: 'regarded as one of the most dangerous volcanoes in the world' (about 3 million people nearby). The Campi Flegrei are sometimes given the same title.",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "cardDe": "Elvis Presley schrieb alle seine Songs selbst. Richtig oder falsch?",
+   "de": "Elvis Presley schrieb seine Songs nicht selbst. Welches Songwriter-Duo schrieb für ihn unter anderem „Jailhouse Rock“?",
+   "en": "Elvis Presley did not write his own songs. Which songwriting duo wrote “Jailhouse Rock”, among others, for him?",
+   "reworked": true,
+   "answerDe": "Jerry Leiber und Mike Stoller",
+   "answerEn": "Jerry Leiber and Mike Stoller",
+   "timeline": {
+    "kind": "creation",
+    "start": "1957-04-30",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Elvis Presley records Leiber and Stoller's “Jailhouse Rock” in Los Angeles",
+    "labelDe": "Elvis Presley nimmt „Jailhouse Rock“ von Leiber und Stoller in Los Angeles auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Jailhouse_Rock_(song)",
+    "title": "Jailhouse Rock (song)",
+    "lang": "en"
+   },
+   "notes": "Card statement is false: Presley wrote almost none of his songs; he was credited as co-writer on some 1956–57 hits (e.g. 'Heartbreak Hotel') without contributing (Wikipedia, Elvis Presley).",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Was wurde 1810 mit dem ersten Münchner Oktoberfest gefeiert: ein Sieg über Napoleon, die Hochzeit des Thronerben oder eine Rekordernte?",
+   "de": "Was wurde 1810 mit dem ersten Münchner Oktoberfest gefeiert?",
+   "en": "What was celebrated with the first Munich Oktoberfest in 1810?",
+   "reworked": true,
+   "answerDe": "Die Hochzeit von Kronprinz Ludwig und Prinzessin Therese",
+   "answerEn": "The wedding of Crown Prince Ludwig and Princess Therese",
+   "timeline": {
+    "kind": "event",
+    "start": "1810-10-12",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Wedding of Crown Prince Ludwig of Bavaria and Therese of Saxe-Hildburghausen, origin of the Oktoberfest",
+    "labelDe": "Hochzeit von Kronprinz Ludwig von Bayern und Therese von Sachsen-Hildburghausen, Ursprung des Oktoberfests"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Oktoberfest",
+    "title": "Oktoberfest",
+    "lang": "de"
+   },
+   "notes": "The horse race of 17 October 1810, part of the wedding celebrations, is regarded as the first Oktoberfest.",
+   "domain": "everyday",
+   "sub": "holidays"
+  },
+  {
+   "category": 4,
+   "cardDe": "In welchem Film wird in einer Szene der Angriff einer Hubschrauberflotte musikalisch von Richard Wagners Ritt der Walküren begleitet?",
+   "de": "In welchem Film wird in einer Szene der Angriff einer Hubschrauberflotte musikalisch von Richard Wagners Ritt der Walküren begleitet?",
+   "en": "In which film is a helicopter fleet's attack accompanied in one scene by Richard Wagner's Ride of the Valkyries?",
+   "reworked": false,
+   "answerDe": "Apocalypse Now",
+   "answerEn": "Apocalypse Now",
+   "timeline": {
+    "kind": "creation",
+    "start": "1979",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Francis Ford Coppola's Vietnam War film Apocalypse Now premieres",
+    "labelDe": "Francis Ford Coppolas Vietnamkriegsfilm Apocalypse Now kommt heraus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Apocalypse_Now",
+    "title": "Apocalypse Now",
+    "lang": "de"
+   },
+   "notes": "'Hubschrauberflotte' is printed without the umlaut on the card; kept verbatim.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 5,
+   "cardDe": "Die Krater des Uranusmonds Umbriel sind alle nach bösen Geistern benannt. Richtig oder falsch?",
+   "de": "Nach welcher Art von mythologischen Gestalten sind die Krater des Uranusmonds Umbriel benannt?",
+   "en": "After what kind of mythological figures are the craters of Uranus's moon Umbriel named?",
+   "reworked": true,
+   "answerDe": "Böse oder dunkle Geister",
+   "answerEn": "Evil or dark spirits",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1851-10-24",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "William Lassell discovers Umbriel, a moon of Uranus",
+    "labelDe": "William Lassell entdeckt den Uranusmond Umbriel"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Umbriel",
+    "title": "Umbriel",
+    "lang": "en"
+   },
+   "notes": "Card statement is true: surface features on Umbriel are named for evil or dark spirits from various mythologies.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt ein Großevent für jüdische Sportler, der alle vier Jahre in Israel stattfindet: Leviade, Makkabiade oder Abramiade?",
+   "de": "Wie heißt ein Großevent für jüdische Sportler, der alle vier Jahre in Israel stattfindet?",
+   "en": "What is the name of a major event for Jewish athletes held in Israel every four years?",
+   "reworked": true,
+   "answerDe": "Makkabiade",
+   "answerEn": "Maccabiah Games",
+   "timeline": {
+    "kind": "event",
+    "start": "1932",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Maccabiah Games held in Tel Aviv",
+    "labelDe": "Erste Makkabiade in Tel Aviv"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Makkabiade",
+    "title": "Makkabiade",
+    "lang": "de"
+   },
+   "notes": "Held every four years since 1953.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

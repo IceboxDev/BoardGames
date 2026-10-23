@@ -1,0 +1,289 @@
+{
+ "article": "a2294",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Armstrong_New_Orleans_International_Airport",
+   "title": "Louis Armstrong New Orleans International Airport",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:00.452Z",
+   "snapshot": "55b61180295dd7a2b3802dac62ed01c6ff0a7d165aeda2df0f9adcd4e9664cfb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Clinton_National_Airport",
+   "title": "Clinton National Airport",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:01.470Z",
+   "snapshot": "7df7519f23ef39a3f3b7dbfcf81682cc471ae94fa007a332940b23a3e9291070"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Liverpool_John_Lennon_Airport",
+   "title": "Liverpool John Lennon Airport – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:02.605Z",
+   "snapshot": "3f177a0d39fe3846398da85da565afd9c21b5d2fa7ab1e9850453fc90f439006"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rome_Fiumicino_Airport",
+   "title": "Rome Fiumicino Airport – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:03.430Z",
+   "snapshot": "09cbaa115336fc4fc661fd9045002d5eb45a400665414784a6e8c532785d1c59"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/O%27Hare_International_Airport",
+   "title": "O%27Hare International Airport – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:04.876Z",
+   "snapshot": "0d0a9c82e462d93f70b091b0f39abed109a0088ee648101f40a97ffad7ca5396"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Flughafen_Hamburg",
+   "title": "Flughafen Hamburg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:04.566Z",
+   "snapshot": "2edfd05aa272752aa787812273d7a783dd0add105afc940c973d0e22313c7896"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Orleans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Little Rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-326"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liverpool",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Chicago",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hamburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-348"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:50.533Z",
+   "target": "f11849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Louis Armstrong New Orleans International Airport",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.533Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Orleans” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:50.533Z",
+   "target": "f11850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bill and Hillary Clinton National Airport (IATA: LIT, ICAO: KLIT, FAA LID: LIT), also known as Adams Field, is a joint civil-military airport on the east side of Little Rock, Arkansas, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.533Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Little Rock” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:50.533Z",
+   "target": "f11851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liverpool John Lennon Airport (IATA: LPL, ICAO: EGGP) is an international airport serving Liverpool, England, on the estuary of the River Mersey 7.5 miles (12 km) south-east of Liverpool city centre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.533Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liverpool” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:50.533Z",
+   "target": "f11853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rome Fiumicino Leonardo da Vinci International Airport (Italian: Aeroporto internazionale di Roma-Fiumicino \"Leonardo da Vinci\") (IATA: FCO, ICAO: LIRF) is an international airport in Fiumicino, Italy, serving Rome, its metropolitan area, Vatican City and the wider Lazio region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.533Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rome” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:50.533Z",
+   "target": "f11854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Chicago O'Hare International Airport (IATA: ORD, ICAO: KORD, FAA LID: ORD) is a primary international airport serving Chicago, Illinois, United States, located on the city's Northwest Side, approximately 17 miles (27 km) northwest of downtown.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.533Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chicago” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:50.533Z",
+   "target": "f14498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Flughafen Hamburg (IATA-Code: HAM, ICAO-Code: EDDH, Eigenbezeichnung Hamburg Airport, seit 2016 auch Hamburg Airport Helmut Schmidt, früher Flughafen Hamburg-Fuhlsbüttel) ist der internationale Verkehrsflughafen der Stadt Hamburg (mit einem kleinen Teil auf der Gemarkung der Stadt Norderstedt).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.533Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s6"
+  }
+ ]
+}

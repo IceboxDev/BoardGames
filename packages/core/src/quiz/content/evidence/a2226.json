@@ -1,0 +1,226 @@
+{
+ "article": "a2226",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Studio_Babelsberg",
+   "title": "Studio Babelsberg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:37.934Z",
+   "snapshot": "da605a2518769223a28b6958047e8d64257b62d616f88c7d0ae3b9f98ef987f1"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Filmuniversit%C3%A4t_Babelsberg_Konrad_Wolf",
+   "title": "Filmuniversität Babelsberg Konrad Wolf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:38.213Z",
+   "snapshot": "f7a1e530f23a2efaa34df2ce2ce8ffde52f440ef5093407a44224b94f7e2b1a4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Studio_Babelsberg",
+   "title": "Studio Babelsberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:40.732Z",
+   "snapshot": "a50a418eca8a3b1e90fbe10e49019a0bbfa09bea7f2ebe474cbd287dd5c1400c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11365",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marlene Dietrich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Filmuniversität Babelsberg Konrad Wolf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-281"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Urban Gad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11368",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "DEFA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11369",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kurt Maetzig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:39.847Z",
+   "target": "f11365",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1926 entstand für den Science-Fiction-Film Metropolis von Fritz Lang das größte Großatelier Europas, 5.400 Quadratmeter groß und 14 Meter hoch: die denkmalgeschützte Marlene-Dietrich-Halle, sogenannt seit den 1990er.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marlene Dietrich” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:39.847Z",
+   "target": "f11366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Filmuniversität Babelsberg Konrad Wolf (Eigenschreibweise: Filmuniversität Babelsberg KONRAD WOLF; amtlich: Hochschule für Film und Fernsehen Potsdam-Babelsberg) ist eine staatliche Kunst- und Filmhochschule mit Promotionsrecht in Potsdam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Filmuniversität Babelsberg Konrad Wolf” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:39.847Z",
+   "target": "f11367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first filming in Babelsberg began as early as February 1912 for The Dance of Death by Danish director Urban Gad.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Urban Gad” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:39.847Z",
+   "target": "f11368",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On May 17, 1946, the DEFA (Deutsche Film AG) was established in the Soviet occupation zone of Germany and Babelsberg Studio was made its headquarters the next year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DEFA” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:39.847Z",
+   "target": "f11369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erster Rektor der Hochschule war von 1954 bis 1964 Kurt Maetzig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Maetzig” is on the snapshot of s2"
+  }
+ ]
+}

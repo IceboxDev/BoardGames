@@ -1,0 +1,462 @@
+{
+ "article": "a1860",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/USB",
+   "title": "USB – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:49.534Z",
+   "snapshot": "c0468cc31e96018e4ebe19fb97763839c3c13873d1f3a0d0f4c195f09efbe551"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Universal_Serial_Bus",
+   "title": "Universal Serial Bus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:33.992Z",
+   "snapshot": "8935d2f3bc7140e8bf1aec91d25dab3f8e92850976baa5981721a05e6fa4ac25"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/HDMI",
+   "title": "HDMI – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:47.543Z",
+   "snapshot": "8e6b2897fc3dcdb4b3b6de51634e7f20b6ad014a7596abf5ebe927f0fcc7b9c7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ajay_Bhatt",
+   "title": "Ajay Bhatt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:05.377Z",
+   "snapshot": "12ca66c6bb9abdebc43d3953269620e6e2fba65c223a814a0934f2b65f013697"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dynamic_random-access_memory",
+   "title": "Dynamic random-access memory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:37.649Z",
+   "snapshot": "308ce49d0995955a16b24ba0b46440a63c4e2987d9eede3bc738f0fb3aa2a528"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Intel_4004",
+   "title": "Intel 4004 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:04.310Z",
+   "snapshot": "fd30d937e0ce35cef982768495344a353fc8ae3d56168c87dda2282befe31668"
+  },
+  "s7": {
+   "url": "https://www.intel.com/content/www/us/en/history/museum-story-of-intel-4004.html",
+   "title": "The Story of the Intel 4004 – Intel",
+   "publisher": "Intel Corporation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:55.266Z",
+   "snapshot": "e315677b4e2a5c0bd69117ac29fa30e7eee5192232517516f4b082b592186e15"
+  },
+  "s8": {
+   "url": "https://www.computerhistory.org/siliconengine/microprocessor-integrates-cpu-function-onto-a-single-chip/",
+   "title": "1971: Microprocessor Integrates CPU Function onto a Single Chip – Computer History Museum",
+   "publisher": "Computer History Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:55.598Z",
+   "snapshot": "77eb3c3fbcf3ceec63a549e0e5d19485476fd183c5c6cef2ee782b53d92aa7c3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Universal Serial Bus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Universal Serial Bus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-305"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "High-Definition Multimedia Interface",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ajay Bhatt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "capacitor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Intel 4004",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:35.503Z",
+   "target": "f09296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Universal Serial Bus (USB) is an industry standard, developed by USB Implementers Forum (USB-IF), for digital data transmission and power delivery between many types of electronics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Universal Serial Bus” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:35.503Z",
+   "target": "f09296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Universal Serial Bus (USB) [ˌjuːnɪˈvɜːsl ˈsɪɹiəl bʌs] ist ein bit-serielles Datenübertragungssystem zur Verbindung eines Computers mit externen Geräten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Universal Serial Bus” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:35.503Z",
+   "target": "f24426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "HDMI (High-Definition Multimedia Interface) is a brand of proprietary digital interface used to transmit high-quality video and audio signals between devices.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “High-Definition Multimedia Interface” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:35.503Z",
+   "target": "f24427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Intel commercial – Ajay Bhatt on YouTube",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ajay Bhatt” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:35.503Z",
+   "target": "f24428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A DRAM memory cell usually consists of a microscopic capacitor and a transistor, both typically based on metal–oxide–semiconductor (MOS) technology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “capacitor” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:35.503Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Intel 4004, released by the Intel Corporation on November 15, 1971, was the first in a long line of Intel central processing units (CPUs).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.503Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Intel 4004” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:06:47Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "That programmable chip, later known as the Intel 4004, became the first general-purpose microprocessor.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:06:51Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "released by the Intel Corporation on November 15, 1971,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:06:53Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ted Hoff and Stanley Mazor conceived Intel's first integrated CPU, the 4004 4-bit device, as a member of the MCS-4 Micro Computer Chip Set.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "CHM also lists earlier multi-chip or slice CPUs (Four-Phase AL-1 1969, Garrett MP944 1970); the wording was narrowed to 'first commercially available / general-purpose microprocessor'"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:24.728Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "That programmable chip, later known as the Intel 4004, became the first general-purpose microprocessor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:24.728Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "released by the Intel Corporation on November 15, 1971,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:24.728Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ted Hoff and Stanley Mazor conceived Intel's first integrated CPU, the 4004 4-bit device, as a member of the MCS-4 Micro Computer Chip Set.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:24.728Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He set out to create an alternative, and the project he launched would lead to one of the most important inventions in the history of information technology: the Intel 4004 programmable microprocessor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Intel 4004” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:24.728Z",
+   "target": "f24429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "\"The Intel 4004 Microprocessor: What Constituted Invention?\" IEEE Annals of the History of Computing, Vol.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Intel 4004” is on the snapshot of s8"
+  }
+ ]
+}

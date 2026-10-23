@@ -1,0 +1,289 @@
+{
+ "article": "a1545",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zinc",
+   "title": "Zinc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:30.055Z",
+   "snapshot": "7e7f6a5dc77321ff93a576abd94e599dd37d5f244f7e7a1d1709a94b80bfa97c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cobalt",
+   "title": "Cobalt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:31.089Z",
+   "snapshot": "829d04b34cb531e046b6a78f5c0c8070b628f24654512821bd21a85081b936ca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nickel",
+   "title": "Nickel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:31.906Z",
+   "snapshot": "15e1e9a926060718e4f7e38b2b192750f8b7e4ab56c48f9b3d7522eb0ddb2435"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Incandescent_light_bulb",
+   "title": "Incandescent light bulb – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:33.038Z",
+   "snapshot": "953b59de25cc9827cd91811a6d38fe40dc7846608c68b2de5691a430f01b4b8c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bromine",
+   "title": "Bromine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:33.972Z",
+   "snapshot": "bce69eb82d9e1299a0ed460949d1b3e139dd9515847b6c3bf5d4b6b68e803fd2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Cobalt",
+   "title": "Cobalt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:31.618Z",
+   "snapshot": "83de5ef264e7914859e954c157a2e3375550e59ec1bb7cb50fe123a57832a0ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "zinc",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cobalt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nickel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "tungsten",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bromine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kobold",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-201"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:41.889Z",
+   "target": "f07721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zinc is a chemical element; it has the symbol Zn and atomic number 30.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “zinc” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:41.889Z",
+   "target": "f07722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cobalt is a chemical element; it has symbol Co and atomic number 27.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cobalt” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:41.889Z",
+   "target": "f07723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nickel is a chemical element; it has symbol Ni and atomic number 28.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nickel” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:41.889Z",
+   "target": "f07724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Later he lived in the US, changed his name to Alexander de Lodyguine and applied for and obtained patents for incandescent lamps having chromium, iridium, rhodium, ruthenium, osmium, molybdenum and tungsten filaments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tungsten” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:41.889Z",
+   "target": "f07725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bromine is a chemical element; its symbol is Br and its atomic number is 35.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bromine” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:41.889Z",
+   "target": "f13474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Name Cobalt oder Kobalt leitet sich vom Berggeist Kobold ab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kobold” is on the snapshot of s6"
+  }
+ ]
+}

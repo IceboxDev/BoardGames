@@ -1,0 +1,242 @@
+{
+ "article": "a1994",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aether_(classical_element)",
+   "title": "Aether (classical element) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:09.198Z",
+   "snapshot": "c18f26f17685d4a06ff70af79c4b8c1b7a1339284e68c18d65754c95036e0d70"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Greek_Anthology",
+   "title": "Greek Anthology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:10.347Z",
+   "snapshot": "df7def7256e806a8cf85a62e8d74eeb081e358c8e810fc86ad9e93b7e9b8e433"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Theogony",
+   "title": "Theogony – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:18.535Z",
+   "snapshot": "4c3142af3ac451c1aadb60f3c49581e938616a92405983f730936036050f9570"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Utopia_(book)",
+   "title": "Utopia (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:13.370Z",
+   "snapshot": "897cae1a7d0e6143d1f2b1d260a9dccb76dc2217bf4a318ede999ca90fd5f882"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Enthusiasm",
+   "title": "Enthusiasm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:11.253Z",
+   "snapshot": "6fd3b01a6efd8e081e59f4aa243d720fafd19ec85bdd014e17f515eeacfc5c8c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Quintessence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anthology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chaos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Utopia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Enthusiasm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.391Z",
+   "target": "f09966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "According to ancient and medieval science, aether (; alternative spellings include æther, aither, and ether), also known as the fifth element or quintessence, is the material that fills the region of the universe beyond the terrestrial sphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quintessence” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.391Z",
+   "target": "f09967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Greek Anthology (Latin: Anthologia Graeca) is a collection of poems, mostly epigrams, that span the Classical and Byzantine periods of Greek literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anthology” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.391Z",
+   "target": "f09968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The initial state of the universe is chaos, a dark indefinite void considered a divine primordial condition from which everything else appeared.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chaos” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:02.391Z",
+   "target": "f09969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Utopia (Latin: Libellus vere aureus, nec minus salutaris quam festivus, de optimo rei publicae statu deque nova insula Utopia, \"A truly golden little book, not less beneficial than enjoyable, about how things should be in a state and about the new island Utopia\") is a work of fiction and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utopia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:02.391Z",
+   "target": "f09970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In modern usage, \"enthusiasm\" refers to intense enjoyment, interest, or approval expressed by a person.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enthusiasm” is on the snapshot of s5"
+  }
+ ]
+}

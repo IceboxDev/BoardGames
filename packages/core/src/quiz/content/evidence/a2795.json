@@ -1,0 +1,234 @@
+{
+ "article": "a2795",
+ "sources": {
+  "s1": {
+   "url": "https://bps.org.uk/research-digest/smiling-fighters-are-more-likely-lose",
+   "title": "Smiling fighters are more likely to lose",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:23.414Z",
+   "snapshot": "38e10b6fabeacb060d5afb30e57a6bb0982db3586bb96b6d2593c1f8d1b460ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Color_psychology",
+   "title": "Color psychology",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:27.339Z",
+   "snapshot": "6e70efb856988848788177bb67b2c508c1dff7ab2f58e53f06b1e1282f00c7a5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Winner_and_loser_effects",
+   "title": "Winner and loser effects",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:28.104Z",
+   "snapshot": "716e6072e4d8a08ac7ccd2ac4d78972734b943ab6a98a0c08d5f679f6824788c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Home_advantage",
+   "title": "Home advantage",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:29.557Z",
+   "snapshot": "e547ac6655b6e7e8987ec9c6959dbcf2f08fcb9b4d5a3eec5ef5d8233ba09422"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f26001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Smiling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f26002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Red",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f26003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winner effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f26004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Testosterone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f26005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Home advantage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:14.467Z",
+   "target": "f26001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Smiling fighters are more likely to lose | BPS",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Smiling” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:14.467Z",
+   "target": "f26002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In one experiment, Goldstein claims that a woman suffering from a cerebral disease was prone to frequently falling over and that wearing red significantly increased this.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:14.467Z",
+   "target": "f26003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The winner and loser effect is an aggression phenomenon in which the winner effect is the increased probability that an animal will win future aggressive interactions after experiencing previous wins, while the loser effect is the increased probability that an animal will lose future aggressive",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winner effect” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:14.467Z",
+   "target": "f26004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Testosterone is another compound whose concentration within the body are affected by winner and loser effects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Testosterone” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:14.467Z",
+   "target": "f26005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In team sports, the term home advantage – also called home ground, home field, home court, home ice or defender's advantage – describes the benefit that the home team is said to gain over the visiting team.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Home advantage” is on the snapshot of s4"
+  }
+ ]
+}

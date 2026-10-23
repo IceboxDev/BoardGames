@@ -1,0 +1,529 @@
+{
+ "article": "a1903",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bodo_Ramelow",
+   "title": "Bodo Ramelow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:29:13.905Z",
+   "snapshot": "eaae3057f59792beec649d32a5eaec926141a213840fc39ac58f8620277b333d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Willy_Brandt",
+   "title": "Willy Brandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:35.938Z",
+   "snapshot": "12f00dc6b7c219937696cac4b2b7b7c8cdf065b2e496f07df4f716fda141a654"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Holger_B%C3%B6rner",
+   "title": "Holger Börner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:29:14.788Z",
+   "snapshot": "b3857d46b281fd9de693b37e84ec8154adcefa98c52b6fa3ecddde356278efdf"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Thomas_Kemmerich",
+   "title": "Thomas Kemmerich",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:29:17.215Z",
+   "snapshot": "fb61d7e22d4157e779c2eea44758923d7fd99dc76ff1d2a1e3f25d4437b19114"
+  },
+  "s5": {
+   "url": "https://www.willy-brandt-biografie.de/",
+   "title": "Willy Brandt Biografie",
+   "publisher": "Bundeskanzler-Willy-Brandt-Stiftung",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:21.754Z",
+   "snapshot": "7047ea20311b0a72665905232975cf991825ccf79bb061c22b03e27777a7ea79"
+  },
+  "s6": {
+   "url": "https://www.hdg.de/lemo/biografie/willy-brandt.html",
+   "title": "LeMO Biografie: Willy Brandt",
+   "publisher": "Stiftung Haus der Geschichte / DHM (LeMO)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:50.959Z",
+   "snapshot": "0646b79e3e8a7bab7e86b3e427d7377a255ce9951b30dc7655562f6a50983d37"
+  },
+  "s7": {
+   "url": "https://www.berliner-zeitung.de/holger-boerner-starb-an-krebs-rot-gruener-gruendervater-ist-tot-li.7736",
+   "title": "Holger Börner starb an Krebs: Rot-grüner Gründervater ist tot – Berliner Zeitung",
+   "publisher": "Berliner Zeitung",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:17.434Z",
+   "snapshot": "6da756bd1a15d71a20139859fe856cd7683fe2616c7b46e913ec594d6787c474"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bodo Ramelow",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Willy Brandt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Holger Börner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thomas Kemmerich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dachlatte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:42.429Z",
+   "target": "f09511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bodo Ramelow [ˈboːdo ˈʁaməlo:] (* 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bodo Ramelow” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:42.429Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Willy Brandt wurde als Herbert Frahm am 18.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:42.429Z",
+   "target": "f09515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Holger Börner ist stets als direkt gewählter Abgeordneter des Wahlkreises Kassel in den Deutschen Bundestag eingezogen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holger Börner” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:42.429Z",
+   "target": "f23800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thomas Kemmerich auf abgeordnetenwatch.de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Kemmerich” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:42.429Z",
+   "target": "f23801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dachlatte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dachlatte”, “a roof batten”, “кровельная рейка”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:25:57Z",
+   "target": "f09511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der fünfte Ministerpräsident des Freistaates Thüringen und damit der einzige Ministerpräsident eines Bundeslandes, welcher der Partei Die Linke angehört.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:26:00Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1969 wird er der erste sozialdemokratische Bundeskanzler.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:26:02Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willy Brandt ist ein deutscher SPD-Politiker und von 1969 bis 1974 Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:26:04Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "war ein deutscher Politiker (SPD) und von 1969 bis 1974 der vierte Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:26:06Z",
+   "target": "f23801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Früher auf dem Bau hat man solche Dinge mit der Dachlatte erledigt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:26:08Z",
+   "target": "f23801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oft zitiert wurde sein Ausspruch gegenüber Straßenblockierern, früher auf dem Bau habe er solche Probleme mit der Dachlatte erledigt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "The paper adds that Börner later disputed the exact wording; Wikipedia records two versions — both with the Dachlatte."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f09511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der fünfte Ministerpräsident des Freistaates Thüringen und damit der einzige Ministerpräsident eines Bundeslandes, welcher der Partei Die Linke angehört.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1969 wird er der erste sozialdemokratische Bundeskanzler.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willy Brandt ist ein deutscher SPD-Politiker und von 1969 bis 1974 Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "war ein deutscher Politiker (SPD) und von 1969 bis 1974 der vierte Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f23801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oft zitiert wurde sein Ausspruch gegenüber Straßenblockierern, früher auf dem Bau habe er solche Probleme mit der Dachlatte erledigt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Willy Brandt Online-Biografie 1913-1992: Startseite",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f09514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Offizielles Porträt von Willy Brandt, Bundeskanzler der Bundesrepublik Deutschland von 1969-1974, entstanden 1980.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:33.958Z",
+   "target": "f23801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oft zitiert wurde sein Ausspruch gegenüber Straßenblockierern, früher auf dem Bau habe er solche Probleme mit der Dachlatte erledigt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:33.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dachlatte” is on the snapshot of s7"
+  }
+ ]
+}

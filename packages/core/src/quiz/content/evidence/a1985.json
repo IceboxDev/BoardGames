@@ -1,0 +1,256 @@
+{
+ "article": "a1985",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Elke_Heidenreich",
+   "title": "Elke Heidenreich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:59.412Z",
+   "snapshot": "ee7e426565e514e6ab733c30b4c0df5fdfa598b55065d3e19f7b0d9faf7b6d2d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ilka_Bessin",
+   "title": "Ilka Bessin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:47.980Z",
+   "snapshot": "311824600740f90a8a3bb64acf491ac01c2acd1a83cba3e1b470ae92d0e6609a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Else_Stratmann",
+   "title": "Else Stratmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:49.001Z",
+   "snapshot": "ee7e426565e514e6ab733c30b4c0df5fdfa598b55065d3e19f7b0d9faf7b6d2d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Uwe_Lyko",
+   "title": "Uwe Lyko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:06.071Z",
+   "snapshot": "b4b7ab0c63e87e123f20bb4472a16ddf371c7ded502aca4481bb8f5383fdb652"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Horst_Schl%C3%A4mmer",
+   "title": "Horst Schlämmer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:09.161Z",
+   "snapshot": "daa6c034116867bb6062ebe19eaa5e1d2cd085fed529bb238dfba5d18919f006"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wanne-Eickel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:50.675Z",
+   "snapshot": "dd3dd8dbd45cf461228be4a19a032812f878d03299ec598b8e0a46752f565528"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Gerd_Dudenh%C3%B6ffer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:50.915Z",
+   "snapshot": "e0b0ffe08115cbc53d3b2967454cb45b93733885a59380610038189dd066a5b7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Elke Heidenreich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ilka Bessin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wanne-Eickel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Herbert Knebel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Horst Schlämmer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:00.535Z",
+   "target": "f09921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Elke Heidenreich wurde in der nordhessischen Kleinstadt Korbach geboren und wuchs in Essen als Tochter des Kfz-Mechanikers und Tankstelleninhabers Karl Riegert auf; ihre Mutter Paula war Näherin für Kinovorhänge.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elke Heidenreich” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:00.535Z",
+   "target": "f09925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ilka Bessin wurde 1971 in Luckenwalde in der DDR als Tochter eines Fernfahrers und einer Näherin geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ilka Bessin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:00.535Z",
+   "target": "f24262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elke Heidenreich stellte die „schnoddrige Metzgersgattin aus Wanne-Eickel“, die aus Kleinbürgersicht über zeitgenössische Themen sowie insbesondere Gatten Willi und Tochter Inge schwadroniert, in über 4000 Beiträgen für das Radio auf WDR 2 und SWF 3, aber auch auf Kleinkunstbühnen, Sprechplatten und",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wanne-Eickel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:00.535Z",
+   "target": "f24263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lykos Alter Ego ist die Figur des renitenten Rentners Herbert Knebel aus Essen-Altenessen, die er auf der Bühne und in vielen Fernsehauftritten verkörpert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herbert Knebel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:00.535Z",
+   "target": "f24264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Horst Schlämmer ist eine 2005 von Hape Kerkeling entwickelte deutsche Kunst- und Comedyfigur, die als stellvertretender Chefredakteur des fiktiven Grevenbroicher Tagblatts auftritt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horst Schlämmer” is on the snapshot of s5"
+  }
+ ]
+}

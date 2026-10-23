@@ -1,0 +1,288 @@
+{
+ "article": "a1766",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bombing_of_Dresden",
+   "title": "Bombing of Dresden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:04.639Z",
+   "snapshot": "3563c045eac6ac7245b926930e511cd40ae0bc19e05c12bea9decb304f331cca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Catch-22",
+   "title": "Catch-22 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:17.426Z",
+   "snapshot": "c36b77190f6554a561b553cc55aa2ed27be213ce32662bb5a2031aa00ccf2887"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Heller",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:05.427Z",
+   "snapshot": "9581cc05cdf707bee6ea91a9011d4a69c9a2b27e6a02406b3544e60a8e2c605d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Naked_and_the_Dead",
+   "title": "The Naked and the Dead – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:06.653Z",
+   "snapshot": "0aacda82760e558fb523c68e5dcf21dfe59a4feb90124e9fca446112e498534d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/German_submarine_U-96_(1940)",
+   "title": "German submarine U-96 (1940) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:07.581Z",
+   "snapshot": "c9c41850539c88bb2e3993fabe05fb516f9168233dea7171121f182e661acd80"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/J._G._Ballard",
+   "title": "J. G. Ballard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:08.495Z",
+   "snapshot": "54874a6732f8e9a366400ec45f5a11b6117d3e40b55e4a865094a616858e5523"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Vonnegut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Heller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joseph Heller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 13"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Norman Mailer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lothar-Günther Buchheim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "J. G. Ballard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:18.776Z",
+   "target": "f08826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Vonnegut's novel Slaughterhouse-Five or The Children's Crusade: A Duty-Dance with Death (1969) used some elements from his experiences as a prisoner of war at Dresden during the bombing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Vonnegut” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:18.776Z",
+   "target": "f08827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Catch-22 is a satirical war novel by American author Joseph Heller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Heller” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:18.776Z",
+   "target": "f08827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joseph Heller (May 1, 1923 – December 12, 1999) was an American author of novels, short stories, plays, and screenplays.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Heller” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:18.776Z",
+   "target": "f08828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Naked and the Dead is a novel written by Norman Mailer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norman Mailer” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:18.776Z",
+   "target": "f08829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was made famous after the war in Lothar-Günther Buchheim's 1973 bestselling novel Das Boot and the 1981 Oscar-nominated film adaptation of the same name, both based on his experience on the submarine as a war correspondent in 1941.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lothar-Günther Buchheim” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:18.776Z",
+   "target": "f08830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "From the distinct nature of the literary fiction of J. G. Ballard arose the adjective Ballardian, defined as: \"resembling or suggestive of the conditions described in J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “J. G. Ballard” is on the snapshot of s6"
+  }
+ ]
+}

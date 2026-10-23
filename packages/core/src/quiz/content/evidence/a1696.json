@@ -1,0 +1,256 @@
+{
+ "article": "a1696",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Modern_Family",
+   "title": "Modern Family – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:22.398Z",
+   "snapshot": "84065e842b5d1c4046940fc613429ebdf8e1482cabd0f4bc7379b171c855e7bb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sons_of_Anarchy",
+   "title": "Sons of Anarchy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:46.447Z",
+   "snapshot": "fcaf8c5ca4950aa5eb17b08a49be461ecd5216ece6ad6be73e9102715fb22cd7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Good_Place",
+   "title": "The Good Place – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:23.465Z",
+   "snapshot": "60216f725600b23516c76b141859006ea7a41a40b49ff2d56cd43a6007bb4268"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bryan_Cranston",
+   "title": "Bryan Cranston – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:24.389Z",
+   "snapshot": "64ebdb92d366c8189e0ed7b657e7a79c35c953d8617885b68132f0cf4d519eef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jason_Bateman",
+   "title": "Jason Bateman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:25.430Z",
+   "snapshot": "9f57c0d093205e0065cc754855c4ce8690c7b6770af841cf3e40486569cbcb4a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Married..._with_Children",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:26.454Z",
+   "snapshot": "eb35bc7d4a1beb32991c59db65e21b2d90b6a603453ca0d7777bac4d128d0200"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Cheers",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:27.565Z",
+   "snapshot": "096acde1ef886a020deec36df2a7bd5277e2aac1fcca4c5c7400a212d4cc2ba7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Modern Family",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sons of Anarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Good Place",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bryan Cranston",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jason Bateman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:07.216Z",
+   "target": "f08476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Modern Family is an American television mockumentary sitcom created by Christopher Lloyd and Steven Levitan for ABC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Modern Family” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:07.216Z",
+   "target": "f08478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sons of Anarchy is an American action crime drama television series created by Kurt Sutter for FX.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sons of Anarchy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:07.216Z",
+   "target": "f08479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Good Place is an American fantasy-comedy television series created by Michael Schur for NBC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Good Place” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:07.216Z",
+   "target": "f21340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "David Rooney of The Hollywood Reporter wrote that \"the volcanic Bryan Cranston giving a gut-wrenching performance\" as Beale and that \"Cranston's magnetic presence has more than enough electricity to surge through the play's weak spots\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bryan Cranston” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:07.216Z",
+   "target": "f21341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jason Bateman",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.216Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jason Bateman” is on the snapshot of s5"
+  }
+ ]
+}

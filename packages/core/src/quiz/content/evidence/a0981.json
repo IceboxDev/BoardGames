@@ -1,0 +1,383 @@
+{
+ "article": "a0981",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Luigi_Galvani",
+   "title": "Luigi Galvani – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:17.042Z",
+   "snapshot": "85371516a00bdee5645a26e805808e6eb0df3adafe1bf2a9f6c2db21b4ef0185"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/X-ray_crystallography",
+   "title": "X-ray crystallography – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:18.224Z",
+   "snapshot": "0285aeeb44ae6bd21f37c2e0bbcc0c6b0f30a3c779ae9365aa37be8b49f3848c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nitrous_oxide",
+   "title": "Nitrous oxide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:19.118Z",
+   "snapshot": "a519b96a78cea4f32f0a35851da1bba0afd52b298a2616cd3d90625e85d828a6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Distickstoffmonoxid",
+   "title": "Distickstoffmonoxid",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:33:17.191Z",
+   "snapshot": "3e64fec576c169799fdadb330926a1c2a770aaec1d5a4eac09a4f5941170c33b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sodium_bicarbonate",
+   "title": "Sodium bicarbonate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:35.940Z",
+   "snapshot": "491faa96816300ce1c69f4169079790361df886119d94563344adfdb41239f3a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_C",
+   "title": "Vitamin C – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:20.201Z",
+   "snapshot": "1259681e97ac226db61dc8bef641c9ecaaa26d0854a58cd100ff339e48dcba70"
+  },
+  "s7": {
+   "url": "https://snl.no/galvanisk_element",
+   "title": "galvanisk element",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:00.793Z",
+   "snapshot": "9eedebbd002b58f62d8e63bc46c86cbaa8334d8c326a0ceff1fb52173ec74dec"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Galvanische_Zelle",
+   "title": "Galvanische Zelle",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:00.959Z",
+   "snapshot": "14ceafbc120f81c0ee36279f0c0ae00e53c6bb482e149dbbaf69c738117eab64"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "battery",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c082"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "table salt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "laughing gas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lachgas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-377"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "baking soda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vitamin C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-053"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:14.584Z",
+   "target": "f04901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "battery",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“battery”, “Batterie”, “батарейка”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:14.584Z",
+   "target": "f04903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first atomic-resolution structure to be \"solved\" (i.e., determined) in 1914 was that of table salt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “table salt” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:14.584Z",
+   "target": "f04904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nitrous oxide (dinitrogen oxide or dinitrogen monoxide), commonly known as laughing gas or nitrous, among others, is a chemical compound, an oxide of nitrogen with the formula N2O.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “laughing gas” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:14.584Z",
+   "target": "f04904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Distickstoffmonoxid, allgemein bekannt unter dem Trivialnamen Lachgas, ist eine chemische Verbindung mit der Summenformel N2O.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lachgas” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:14.584Z",
+   "target": "f04905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sodium bicarbonate (IUPAC name: sodium hydrogen carbonate), commonly known as baking soda or bicarbonate of soda, or saleratus, is a chemical compound with the chemical formula NaHCO3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “baking soda” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:14.584Z",
+   "target": "f25395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vitamin C or ascorbate is a water-soluble vitamin found in citrus and other fruits and vegetables.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vitamin C” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:19:26Z",
+   "target": "f04901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Galvanisk element er en type batteri der kjemisk energi omsettes til elektrisitet.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:30Z",
+   "target": "f04901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Primärzellen, umgangssprachlich auch als Batterie bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "Primary cell = galvanic cell of the first kind."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:45.136Z",
+   "target": "f04901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Primärzellen, umgangssprachlich auch als Batterie bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:45.136Z",
+   "target": "f04901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Nachweis zu frühesten galvanischen Zellen in der Antike ist umstritten; es konnte mit einem Nachbau der etwa 1800 Jahre alten Bagdad-Batterie eine elektrische Spannung erzeugt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Batterie” is on the snapshot of s8"
+  }
+ ]
+}

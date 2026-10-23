@@ -1,0 +1,242 @@
+{
+ "article": "a0207",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Degenerate_art",
+   "title": "Degenerate art – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:28.579Z",
+   "snapshot": "57873f5afae42ca7762402dbc53e09a9f55f313534ddfb84930f9a27a1356183"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gro%C3%9Fe_Deutsche_Kunstausstellung",
+   "title": "Große Deutsche Kunstausstellung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:29.588Z",
+   "snapshot": "87f948664fa88202b701a47aed311d3b78e17ca5028f34f5f31980e056df1d92"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Salon_des_Refus%C3%A9s",
+   "title": "Salon des Refusés – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:30.584Z",
+   "snapshot": "f9edb2d43e337e8844d7030abd0ef6f2031f9867382d116fd2a8dbd083a9da1a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Armory_Show",
+   "title": "Armory Show – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:03.721Z",
+   "snapshot": "8ffdff6b7528cfb684c5063382ca14fd521eff83af5d288011f2033043b1978b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Documenta_1",
+   "title": "documenta 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:35:28.803Z",
+   "snapshot": "506ca4bcaad006454c2c3363a98dc734b30b2d12c7d69b4fd20248c483330b6c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Degenerate Art",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Great German Art Exhibition",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Salon des Refusés",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armory Show",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01035",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "documenta",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:11.854Z",
+   "target": "f01031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Degenerate art (German: Entartete Kunst) was a term adopted in the 1920s by the Nazi Party in Germany to describe modern art.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Degenerate Art” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:11.854Z",
+   "target": "f01032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Große Deutsche Kunstausstellung (Great German Art Exhibition) was held a total of eight times from 1937 to 1944 in the purpose-built Haus der Deutschen Kunst in Munich.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great German Art Exhibition” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:11.854Z",
+   "target": "f01033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Salon des Refusés, French for \"exhibition of rejects\" (French pronunciation: [salɔ̃ de ʁəfyze]), is generally known as an exhibition of works rejected by the jury of the official Paris Salon, but the term is most famously used to refer to the Salon des Refusés of 1863.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salon des Refusés” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:11.854Z",
+   "target": "f01034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 1913 Armory Show, also known as the International Exhibition of Modern Art, was organized by the Association of American Painters and Sculptors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Armory Show” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:11.854Z",
+   "target": "f01035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ausstellungskatalog, documenta, kunst des XX.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “documenta” is on the snapshot of s5"
+  }
+ ]
+}

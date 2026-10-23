@@ -1,0 +1,318 @@
+{
+ "article": "a1840",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Twelve_Tasks_of_Asterix",
+   "title": "The Twelve Tasks of Asterix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:32.359Z",
+   "snapshot": "0bf2809369b71f56c0b5f97dcecbcc429be954b1c647241272072ff9450e967e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Asterix_erobert_Rom",
+   "title": "Asterix erobert Rom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:30.415Z",
+   "snapshot": "7ed7692e92e56ad0808758553a888b942edeabc56e2b3b279a465420f2a3e81b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Asterix_and_Cleopatra_(film)",
+   "title": "Asterix and Cleopatra (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:33.373Z",
+   "snapshot": "5af8009f17640b79e920aead6b387da81aed6fbc7cfd57b54092d76fe5d23688"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Asterix_the_Gaul_(film)",
+   "title": "Asterix the Gaul (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:34.467Z",
+   "snapshot": "4f10bf32ecba3cc2ecccc2c44c234550cce55029fc6f0f46ba3539f426f591ef"
+  },
+  "s5": {
+   "url": "https://www.egmont.de/pressemitteilungen/beim-teutates-kult-klassiker-asterix-erobert-rom-feiert-50-jubilaeum/",
+   "title": "Beim Teutates! Kult-Klassiker „Asterix erobert Rom“ feiert 50. Jubiläum",
+   "publisher": "Egmont Ehapa Media",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:51.248Z",
+   "snapshot": "ceb12b1509f819830f477a3dcae11f0866ac55eb9a8ecf81edae6f0af197110d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Permit A38",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Haus, das Verrückte macht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Getafix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Asterix erobert Rom",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-317"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:31.685Z",
+   "target": "f09196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was also referenced in the second expansion of The Witcher 3: Wild Hunt, Blood and Wine; there, Geralt has to retrieve Permit A38 from a Touissant office, and face unhelpful clerks and confusing architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Permit A38” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:31.685Z",
+   "target": "f09197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Haus, das Verrückte macht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Das Haus, das Verrückte macht”, “The Place That Sends You Mad”, “Дом, который сводит с ума”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:31.685Z",
+   "target": "f09198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After a heated argument with Julius Caesar over his lack of faith in the Egyptian people, Queen Cleopatra enters into a bet claiming she can have a magnificent palace constructed for him in Alexandria within three months.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “palace” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:31.685Z",
+   "target": "f09199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Once inside the Gaulish village, Minus goads Asterix into sharing the secret of the magic potion with him and convinces Getafix to let him try the potion for himself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Getafix” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:31.685Z",
+   "target": "f11234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Asterix erobert Rom (Originaltitel: Les Douze Travaux d’Astérix, wörtlich „Die zwölf Arbeiten des Asterix“) ist der dritte Asterix-Zeichentrickfilm aus dem Jahr 1976.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asterix erobert Rom” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:35:07Z",
+   "target": "f09197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "die Suche nach dem Passierschein A 38 im „Haus, das Verrückte macht“",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:35:10Z",
+   "target": "f09197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "aus der Präfekturverwaltung, dem „Haus, das Verrückte macht“",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:21.094Z",
+   "target": "f09197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "die Suche nach dem Passierschein A 38 im „Haus, das Verrückte macht“",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:21.094Z",
+   "target": "f09197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "aus der Präfekturverwaltung, dem „Haus, das Verrückte macht“",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  }
+ ]
+}

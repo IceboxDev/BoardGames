@@ -3,12 +3,16 @@
  * same position: `?side=w&line=e2e4.c7c5.c2c3&ply=2` — the colour whose tree
  * is open, the line of moves on the board, and how far along it you are (the
  * end when absent). Stepping back keeps the rest of the line for ▶.
+ * `?view=map|board|drill` (the front page when absent) and `?drill=<folder id>` say
+ * what the screen shows.
  */
 import { useCallback, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { type LineStep, type Position, START, walkLine } from "./model";
 
 const UCI = /^[a-h][1-8][a-h][1-8][qrbn]?$/;
+
+export type TrainerView = "home" | "map" | "board" | "drill";
 
 export interface TrainerPosition {
   readonly color: "w" | "b";
@@ -29,6 +33,18 @@ export interface TrainerPosition {
   readonly step: (delta: -1 | 1) => void;
   /** Open a saved line (or a colour's start) at its end. */
   readonly open: (color: "w" | "b", moves: readonly string[]) => void;
+  /** What the screen shows: the front page (default), the map of what you know, the board, or a drill. */
+  readonly view: TrainerView;
+  /** The drill's folder (`?drill`), null for all of the colour. */
+  readonly drillScope: string | null;
+  /**
+   * Switch the view in one write of the address, optionally with the drill's
+   * folder and a line to show (two separate writes in one tick lose the first).
+   */
+  readonly setView: (
+    view: TrainerView,
+    opts?: { readonly scope?: string | null; readonly moves?: readonly string[] },
+  ) => void;
 }
 
 export function useTrainerPosition(): TrainerPosition {
@@ -36,6 +52,10 @@ export function useTrainerPosition(): TrainerPosition {
   const color = params.get("side") === "b" ? "b" : "w";
   const raw = params.get("line") ?? "";
   const line = useMemo(() => walkLine(raw.split(".").filter((u) => UCI.test(u))), [raw]);
+  const viewParam = params.get("view");
+  const view: TrainerView =
+    viewParam === "map" || viewParam === "board" || viewParam === "drill" ? viewParam : "home";
+  const drillScope = params.get("drill");
   const plyParam = params.get("ply");
   const ply = Math.min(
     line.length,
@@ -117,6 +137,28 @@ export function useTrainerPosition(): TrainerPosition {
     [write],
   );
 
+  const setView = useCallback(
+    (v: TrainerView, opts: { scope?: string | null; moves?: readonly string[] } = {}) => {
+      setParams(
+        (prev) => {
+          const p = new URLSearchParams(prev);
+          if (v === "home") p.delete("view");
+          else p.set("view", v);
+          if (v === "drill" && opts.scope) p.set("drill", opts.scope);
+          else p.delete("drill");
+          if (opts.moves) {
+            if (opts.moves.length > 0) p.set("line", opts.moves.join("."));
+            else p.delete("line");
+            p.delete("ply");
+          }
+          return p;
+        },
+        { replace: true },
+      );
+    },
+    [setParams],
+  );
+
   const last = ply > 0 ? (line[ply - 1] ?? null) : null;
   return {
     color,
@@ -130,5 +172,8 @@ export function useTrainerPosition(): TrainerPosition {
     goTo,
     step,
     open,
+    view,
+    drillScope,
+    setView,
   };
 }

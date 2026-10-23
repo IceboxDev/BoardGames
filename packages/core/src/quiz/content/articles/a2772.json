@@ -1,0 +1,386 @@
+{
+ "id": "a2772",
+ "domain": "science",
+ "sub": "maths",
+ "titleEn": "Mean, Median and Mode: The Words That Describe Data",
+ "titleDe": "Mittelwert, Median und Modus: Die Wörter, die Daten beschreiben",
+ "titleRu": "Среднее, медиана и мода: слова, которыми описывают данные",
+ "bodyEn": "A list of a thousand measurements says little until it is summarised. Descriptive statistics has a small vocabulary for doing exactly that, and most of it was fixed in London around 1900 by one man.\n\nThe first question is where the middle lies. The arithmetic mean adds everything up and divides, but a single billionaire can drag it far from what is typical. The median avoids this: it is the middle value of the data once they are sorted, so half the values lie above it and half below, and raising the largest incomes in a country leaves its median income unchanged. Antoine Augustin Cournot first used the term in 1843, and Francis Galton made it common in English in 1881. The third measure of the centre is the mode, the value that appears most often in a set of data – the commonest shoe size in a shop, for example. A set with two such peaks is called bimodal.\n\nThe second question is how far the values scatter. The variance averages the squared distances from the mean; its square root, the standard deviation, is expressed in the same units as the data and is therefore easier to read. In a normal distribution about two thirds of all values lie within one standard deviation of the mean.\n\nShape comes next. Skewness measures how lopsided a distribution is: with positive skew the right tail is longer and the mean is pulled above the median. Kurtosis, based on the fourth moment, describes the tailedness of a distribution – how much of its variation comes from rare, extreme values. For decades textbooks explained it as \"peakedness\" or \"flatness\", but as the statistician Peter Westfall showed in 2014, that interpretation is wrong: kurtosis is about the tails and outliers, not the peak. A normal distribution has a kurtosis of 3; distributions with fatter tails, such as Student's t, are called leptokurtic, those with thinner tails, such as the uniform distribution, platykurtic.\n\nMuch of this language comes from Karl Pearson (1857–1936), founder of the world's first university statistics department at University College London. He first used the term \"standard deviation\" in writing in 1894, introduced \"mode\" in 1895 and set out the standard measure of kurtosis in 1905.\n\n| Term | Describes | Introduced |\n|---|---|---|\n| Median | middle of the sorted data | Cournot, 1843 |\n| Mode | most frequent value | Pearson, 1895 |\n| Standard deviation | spread, in the data's units | Pearson, 1894 |\n| Skewness | asymmetry | Pearson's coefficients, around 1900 |\n| Kurtosis | weight of the tails | Pearson, 1905 |",
+ "bodyDe": "Eine Liste von tausend Messwerten sagt wenig, bis man sie zusammenfasst. Die beschreibende Statistik hat dafür ein kleines Vokabular, und das meiste davon legte um 1900 in London ein einziger Mann fest.\n\nDie erste Frage ist, wo die Mitte liegt. Das arithmetische Mittel zählt alles zusammen und teilt, doch ein einziger Milliardär kann es weit vom Typischen wegziehen. Der Median vermeidet das: Er ist der mittlere Wert der Daten, sobald sie sortiert sind, sodass die Hälfte der Werte darüber und die Hälfte darunter liegt, und wenn die höchsten Einkommen eines Landes steigen, bleibt sein Medianeinkommen unverändert. Antoine Augustin Cournot verwendete den Begriff 1843 zuerst, Francis Galton machte ihn 1881 im Englischen gebräuchlich. Das dritte Lagemaß ist der Modus (auch Modalwert), der Wert, der in einem Datensatz am häufigsten vorkommt – etwa die gängigste Schuhgröße in einem Geschäft. Ein Datensatz mit zwei solchen Gipfeln heißt bimodal.\n\nDie zweite Frage ist, wie weit die Werte streuen. Die Varianz mittelt die quadrierten Abstände vom Mittelwert; ihre Quadratwurzel, die Standardabweichung, hat dieselbe Einheit wie die Daten und ist darum leichter zu deuten. In einer Normalverteilung liegen etwa zwei Drittel aller Werte innerhalb einer Standardabweichung um den Mittelwert.\n\nDann kommt die Form. Die Schiefe misst, wie einseitig eine Verteilung ist: Bei positiver Schiefe ist der rechte Ausläufer länger, und der Mittelwert wird über den Median gezogen. Die Kurtosis (Wölbung), die auf dem vierten Moment beruht, beschreibt die Randlastigkeit einer Verteilung – wie viel ihrer Streuung von seltenen, extremen Werten stammt. Jahrzehntelang erklärten Lehrbücher sie als „Gipfligkeit“ oder „Flachheit“, doch wie der Statistiker Peter Westfall 2014 zeigte, ist diese Deutung falsch: Die Kurtosis handelt von den Rändern und Ausreißern, nicht vom Gipfel. Eine Normalverteilung hat eine Kurtosis von 3; Verteilungen mit schwereren Rändern, etwa die Student-t-Verteilung, heißen leptokurtisch, solche mit leichteren, etwa die Gleichverteilung, platykurtisch.\n\nEin Großteil dieser Sprache stammt von Karl Pearson (1857–1936), dem Gründer des weltweit ersten universitären Statistikinstituts am University College London. Er verwendete den Begriff „Standardabweichung“ (standard deviation) 1894 erstmals schriftlich, führte 1895 den „Modus“ (mode) ein und legte 1905 das Standardmaß der Kurtosis vor.\n\n| Begriff | Beschreibt | Eingeführt |\n|---|---|---|\n| Median | Mitte der sortierten Daten | Cournot, 1843 |\n| Modus | häufigster Wert | Pearson, 1895 |\n| Standardabweichung | Streuung, in der Einheit der Daten | Pearson, 1894 |\n| Schiefe | Asymmetrie | Pearsons Koeffizienten, um 1900 |\n| Kurtosis | Gewicht der Ränder | Pearson, 1905 |",
+ "bodyRu": "Список из тысячи измерений мало что говорит, пока его не обобщить. У описательной статистики есть для этого небольшой словарь, и бо́льшую его часть около 1900 года в Лондоне закрепил один человек.\n\nПервый вопрос — где находится середина. Среднее арифметическое складывает всё и делит, но один-единственный миллиардер может увести его далеко от типичного значения. Этого избегает медиана: это срединное значение данных после их упорядочения, так что половина значений лежит выше неё, а половина — ниже, и рост самых высоких доходов в стране не меняет её медианный доход. Антуан Огюстен Курно впервые употребил этот термин в 1843 году, а Фрэнсис Гальтон сделал его общепринятым в английском языке в 1881 году. Третья мера центра — мода, значение, которое чаще всего встречается в наборе данных, — например, самый ходовой размер обуви в магазине. Набор с двумя такими пиками называют бимодальным.\n\nВторой вопрос — насколько широко разбросаны значения. Дисперсия усредняет квадраты расстояний от среднего; квадратный корень из неё, стандартное отклонение, выражается в тех же единицах, что и данные, и потому его легче истолковать. В нормальном распределении около двух третей всех значений лежат в пределах одного стандартного отклонения от среднего.\n\nДальше идёт форма. Асимметрия показывает, насколько распределение скошено: при положительной асимметрии правый хвост длиннее и среднее смещается выше медианы. Куртозис, основанный на четвёртом моменте, описывает тяжесть хвостов распределения — какая доля его разброса приходится на редкие экстремальные значения. Десятилетиями учебники объясняли его как «островершинность» или «плосковершинность», но, как показал в 2014 году статистик Питер Уэстфолл, такое толкование неверно: куртозис говорит о хвостах и выбросах, а не о вершине. У нормального распределения куртозис равен 3; распределение с более тяжёлыми хвостами, например распределение Стьюдента, — лептокуртическое, а с более лёгкими, например равномерное, — платикуртическое.\n\nАвтор значительной части этого языка — Карл Пирсон (1857–1936), основатель первой в мире университетской кафедры статистики в Университетском колледже Лондона. Он впервые употребил в печати термин «стандартное отклонение» в 1894 году, ввёл «моду» в 1895 году и в 1905 году предложил стандартную меру куртозиса.\n\n| Термин | Описывает | Введён |\n|---|---|---|\n| Медиана | середину упорядоченных данных | Курно, 1843 |\n| Мода | самое частое значение | Пирсон, 1895 |\n| Стандартное отклонение | разброс, в единицах данных | Пирсон, 1894 |\n| Асимметрия | несимметричность | коэффициенты Пирсона, около 1900 |\n| Куртозис | тяжесть хвостов | Пирсон, 1905 |",
+ "notesEn": "Kurtosis: the card explains it as \"flatness\"; per Wikipedia (Westfall 2014) it measures tailedness, not peakedness.",
+ "notesDe": "Kurtosis: Auch „Wölbung“ gilt. Die Karte erklärt sie als „Flachheit“; laut Wikipedia (Westfall 2014) misst sie die Randlastigkeit, nicht die Gipfligkeit.",
+ "notesRu": "Куртозис: ответ «эксцесс» тоже засчитывается. Карточка объясняет его как «плоскость» распределения; по Википедии (Уэстфолл, 2014), он измеряет тяжесть хвостов, а не островершинность.",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Karl_Pearson%2C_1910_%28cropped%29.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Karl_Pearson",
+   "width": 794,
+   "height": 680,
+   "alt": {
+    "en": "Portrait photograph of Karl Pearson in 1910",
+    "de": "Porträtfoto von Karl Pearson, 1910",
+    "ru": "Портретная фотография Карла Пирсона, 1910 год"
+   },
+   "caption": {
+    "en": "Karl Pearson in 1910. The founder of the world's first university statistics department coined or fixed much of the vocabulary here: standard deviation (1894), mode (1895) and the standard measure of kurtosis (1905).",
+    "de": "Karl Pearson im Jahr 1910. Der Gründer des weltweit ersten universitären Statistikinstituts prägte oder festigte einen Großteil dieses Vokabulars: Standardabweichung (1894), Modus (1895) und das Standardmaß der Kurtosis (1905).",
+    "ru": "Карл Пирсон в 1910 году. Основатель первой в мире университетской кафедры статистики ввёл или закрепил бо́льшую часть этого словаря: стандартное отклонение (1894), моду (1895) и стандартную меру куртозиса (1905)."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f25843",
+   "answerEn": "Kurtosis",
+   "answerDe": "Kurtosis",
+   "answerRu": "куртозис",
+   "spans": {
+    "en": [
+     1354,
+     8
+    ],
+    "de": [
+     1477,
+     8
+    ],
+    "ru": [
+     1408,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1905",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Karl Pearson introduces the standard measure of kurtosis",
+    "labelDe": "Karl Pearson führt das Standardmaß der Kurtosis ein",
+    "labelRu": "Карл Пирсон вводит стандартную меру куртозиса"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kurtosis",
+    "title": "Kurtosis",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25260",
+     "en": "Which statistical measure, based on the fourth moment, describes the tailedness of a distribution and was long — wrongly — explained as its peakedness or flatness?",
+     "de": "Welche auf dem vierten Moment beruhende statistische Kennzahl beschreibt die Randlastigkeit einer Verteilung und wurde lange – fälschlich – als deren Gipfligkeit oder Flachheit erklärt?",
+     "ru": "Какая статистическая характеристика, основанная на четвёртом моменте, описывает тяжесть хвостов распределения и долго — ошибочно — объяснялась как его островершинность или плосковершинность?",
+     "origin": "printed",
+     "printed": {
+      "source": "publish-or-perish-mge",
+      "card": "ppm-022",
+      "category": 2
+     },
+     "cardText": "[Mathematics] Which of the following describes the flatness of a distribution?\nA. Skewness\nB. Range\nC. Kurtosis\nAnswer: C. Kurtosis describes the flatness or peakedness of a distribution, indicating how data is distributed in the tails relative to the center. Skewness describes the asymmetry of a distribution."
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q287251",
+     "label": "kurtosis",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f25844",
+   "answerEn": "Mode",
+   "answerDe": "Modus",
+   "answerRu": "мода",
+   "spans": {
+    "en": [
+     717,
+     4
+    ],
+    "de": [
+     766,
+     5
+    ],
+    "ru": [
+     729,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1895",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Karl Pearson introduces the statistical term 'mode'",
+    "labelDe": "Karl Pearson führt den statistischen Begriff „Modus“ (mode) ein",
+    "labelRu": "Карл Пирсон вводит статистический термин «мода»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mode_(statistics)",
+    "title": "Mode (statistics)",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25261",
+     "en": "In statistics, what is the value that appears most often in a set of data called?",
+     "de": "Wie heißt in der Statistik der Wert, der in einem Datensatz am häufigsten vorkommt?",
+     "ru": "Как в статистике называется значение, которое чаще всего встречается в наборе данных?",
+     "origin": "printed",
+     "printed": {
+      "source": "publish-or-perish-mge",
+      "card": "ppm-062",
+      "category": 1
+     },
+     "cardText": "[Mathematics] In statistics, what is the “mode”?\nA. The middle value in a list of numbers\nB. The average of a list of numbers\nC. The most frequent number in a list\nAnswer: C."
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q188224",
+     "label": "mode",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f25845",
+   "answerEn": "Median",
+   "answerDe": "Median",
+   "answerRu": "медиана",
+   "spans": {
+    "en": [
+     364,
+     6
+    ],
+    "de": [
+     373,
+     6
+    ],
+    "ru": [
+     379,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1843",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Antoine Augustin Cournot first uses the term \"median\" (valeur médiane)",
+    "labelDe": "Antoine Augustin Cournot verwendet erstmals den Begriff „Median“ (valeur médiane)",
+    "labelRu": "Антуан Огюстен Курно впервые употребляет термин «медиана» (valeur médiane)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Median",
+    "title": "Median",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25262",
+     "en": "What is the middle value of a set of data called once the values are sorted, so that half lie above it and half below?",
+     "de": "Wie heißt der mittlere Wert eines Datensatzes, wenn die Werte sortiert sind, sodass die Hälfte darüber und die Hälfte darunter liegt?",
+     "ru": "Как называется срединное значение набора данных после их упорядочения, так что половина значений лежит выше него, а половина — ниже?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q226995",
+     "label": "median",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f25846",
+   "answerEn": "standard deviation",
+   "answerDe": "Standardabweichung",
+   "answerRu": "стандартное отклонение",
+   "spans": {
+    "en": [
+     1001,
+     18
+    ],
+    "de": [
+     1087,
+     18
+    ],
+    "ru": [
+     1028,
+     22
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1894",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Karl Pearson first uses the term \"standard deviation\" in writing",
+    "labelDe": "Karl Pearson verwendet den Begriff „Standardabweichung“ erstmals schriftlich",
+    "labelRu": "Карл Пирсон впервые употребляет в печати термин «стандартное отклонение»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Standard_deviation",
+    "title": "Standard deviation",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25263",
+     "en": "Which measure of spread is the square root of the variance and is expressed in the same units as the data?",
+     "de": "Welches Streuungsmaß ist die Quadratwurzel der Varianz und hat dieselbe Einheit wie die Daten?",
+     "ru": "Какая мера разброса равна квадратному корню из дисперсии и выражается в тех же единицах, что и данные?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q159375",
+     "label": "standard deviation",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f25848",
+   "answerEn": "Karl Pearson",
+   "answerDe": "Karl Pearson",
+   "answerRu": "Карл Пирсон",
+   "spans": {
+    "en": [
+     1931,
+     12
+    ],
+    "de": [
+     2111,
+     12
+    ],
+    "ru": [
+     2024,
+     11
+    ]
+   },
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1857-03-27",
+    "end": "1936-04-27",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of Karl Pearson, founder of mathematical statistics",
+    "labelDe": "Leben von Karl Pearson, Begründer der mathematischen Statistik",
+    "labelRu": "Жизнь Карла Пирсона, основателя математической статистики"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Karl_Pearson",
+    "title": "Karl Pearson",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25265",
+     "en": "Which British statistician first used the term \"standard deviation\" in writing in 1894 and introduced the term \"mode\" in 1895?",
+     "de": "Welcher britische Statistiker verwendete 1894 erstmals schriftlich den Begriff „Standardabweichung“ und führte 1895 den Begriff „Modus“ ein?",
+     "ru": "Какой британский статистик в 1894 году впервые употребил в печати термин «стандартное отклонение», а в 1895 году ввёл термин «мода»?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard",
+    "form:who"
+   ],
+   "entities": [
+    {
+     "qid": "Q310794",
+     "label": "Karl Pearson",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f25847",
+   "answerEn": "leptokurtic",
+   "answerDe": "leptokurtisch",
+   "answerRu": "лептокуртическое",
+   "spans": {
+    "en": [
+     1811,
+     11
+    ],
+    "de": [
+     1991,
+     13
+    ],
+    "ru": [
+     1905,
+     16
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1905",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Karl Pearson publishes the standard measure of kurtosis, by which leptokurtic distributions are defined",
+    "labelDe": "Karl Pearson veröffentlicht das Standardmaß der Kurtosis, an dem leptokurtische Verteilungen gemessen werden",
+    "labelRu": "Карл Пирсон публикует стандартную меру куртозиса, по которой определяются лептокуртические распределения"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kurtosis",
+    "title": "Kurtosis",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25264",
+     "en": "What is a distribution called whose tails are fatter than those of the normal distribution, such as Student's t-distribution?",
+     "de": "Wie nennt man eine Verteilung, deren Ränder schwerer sind als die der Normalverteilung, etwa die Student-t-Verteilung?",
+     "ru": "Как называется распределение с более тяжёлыми хвостами, чем у нормального, — например, распределение Стьюдента?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-23",
+    "code": "non-trivia",
+    "reason": "A forced technical follow-up to the kurtosis question beside it, asking for a jargon word few would enjoy."
+   }
+  }
+ ],
+ "tags": [
+  "topic:mathematics/statistics",
+  "audience:international"
+ ],
+ "entities": [
+  {
+   "qid": "Q380344",
+   "label": "descriptive statistics",
+   "role": "subject"
+  }
+ ]
+}

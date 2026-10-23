@@ -1,0 +1,289 @@
+{
+ "article": "a0443",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Yak",
+   "title": "Yak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:56:27.854Z",
+   "snapshot": "e7067991bc85f26f2c9810cf05e8a4729cc6242811c7994c3e3d61907a93015f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tibetan_antelope",
+   "title": "Tibetan antelope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:30.671Z",
+   "snapshot": "3d5b36c4477d3bf21a1aeab3ae3e900fbb7bc7adf2eb54c4ce9dbe11fe767f81"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kiang",
+   "title": "Kiang – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:31.755Z",
+   "snapshot": "947a2fd2bf6f8b6e2d77165ac19c38480263d0330552bc452d7af32a026e5a3b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Snow_leopard",
+   "title": "Snow leopard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:32.643Z",
+   "snapshot": "236f1a79e68be71a27ccd1fd9b81ce29f3401d21c5c0f8a4d248145b18c0d50c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Red_panda",
+   "title": "Red panda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:33.671Z",
+   "snapshot": "522e19b77b31d1dc1005629bf63453b1f7878261063a1acf804ad8bb4f52e2bc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lhasa_Apso",
+   "title": "Lhasa Apso",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:34.637Z",
+   "snapshot": "28a7886463aaec278e2e4298ea74bd00ec192c8f706350c7c640103f01150457"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yak",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c037"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chiru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kiang",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Snow leopard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Red panda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lhasa Apso",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-170"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:48.902Z",
+   "target": "f02211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der oder das Yak (Bos mutus), früher auch als Jak geschrieben, ist eine in Hochasien verbreitete Rinderart.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yak” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:48.902Z",
+   "target": "f02212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tibetan antelope or chiru (Pantholops hodgsonii) (Tibetan: གཙོད་, Wylie: gtsod, pronounced [tsǿ]; Chinese: 藏羚羊; pinyin: zànglíngyáng) is a medium-sized bovid native to the northeastern Tibetan Plateau.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chiru” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:48.902Z",
+   "target": "f02213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The kiang (Equus kiang) is the largest species of the Asinus subgenus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kiang” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:48.902Z",
+   "target": "f02214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The snow leopard (Panthera uncia) is a felid species in the genus Panthera.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snow leopard” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:48.902Z",
+   "target": "f02215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The red panda (Ailurus fulgens), also known as the lesser panda, is a small mammal native to the eastern Himalayas and southwestern China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red panda” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:48.902Z",
+   "target": "f13311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Lhasa Apso ( LAH-sə AP-soh) is a non-sporting dog breed originating in Tibet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lhasa Apso” is on the snapshot of s6"
+  }
+ ]
+}

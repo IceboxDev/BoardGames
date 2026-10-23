@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-059",
+ "image": "IMG20261022154017.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] Which country had the first recorded workers’ strike?\nA. Greece B. Egypt C. China\nAnswer: B. The first recorded workers’ strike took place in ancient Egypt around 1157 BCE, during the reign of Pharaoh Ramses III. Workers building royal tombs at Deir el-Medina went on strike because of delayed wage rations.",
+   "de": "In welcher antiken Hochkultur fand der erste überlieferte Arbeiterstreik statt, als Grabbauer in Deir el-Medina unter Ramses III. wegen verspäteter Lohnrationen die Arbeit niederlegten?",
+   "en": "In which ancient civilization did the first recorded workers' strike take place, when tomb builders at Deir el-Medina downed tools over late wage rations under Ramesses III?",
+   "reworked": true,
+   "answerDe": "Altes Ägypten",
+   "answerEn": "Ancient Egypt",
+   "timeline": {
+    "kind": "event",
+    "start": "-1158",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Tomb builders at Deir el-Medina strike over unpaid rations in year 29 of Ramesses III, the first recorded strike",
+    "labelDe": "Grabbauer in Deir el-Medina streiken im 29. Regierungsjahr Ramses’ III. wegen ausbleibender Rationen – der erste überlieferte Streik"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Strike_action",
+    "title": "Strike action",
+    "lang": "en"
+   },
+   "notes": "Confirmed: Egypt. The date differs by chronology: Wikipedia's Strike action article gives 14 November 1152 BCE, its Deir el-Medina strikes article c. 1158 BC (year 29 of Ramesses III); the card says around 1157 BCE.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Can bats see?\nA. Yes, they can see very well\nB. Yes, but they have very poor vision, practically blind\nC. No, they are blind\nAnswer: A. Despite the common misconception that bats are blind, they actually have eyes and can see. Many bat species have excellent night vision, which they use in conjunction with echolocation to navigate and hunt in the dark.",
+   "de": "Keine Fledermausart ist wirklich blind: Welchen Sinn, der auf den Echos ihrer eigenen Rufe beruht, nutzen viele Fledermäuse neben ihren Augen, um sich im Dunkeln zu orientieren und zu jagen?",
+   "en": "No bat species is truly blind: which sense, based on the echoes of their own calls, do many bats use alongside their eyesight to navigate and hunt in the dark?",
+   "reworked": true,
+   "answerDe": "Echoortung",
+   "answerEn": "Echolocation",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1938",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Donald Griffin and Robert Galambos first demonstrate echolocation in bats",
+    "labelDe": "Donald Griffin und Robert Galambos weisen erstmals die Echoortung bei Fledermäusen nach"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bat",
+    "title": "Bat",
+    "lang": "en"
+   },
+   "notes": "The card's yes/no question is reworked to the underlying fact. Its answer 'they can see very well' overstates it: no bat species is truly blind, megabats generally have good eyesight, but most microbats have small eyes and only low-light (mesopic) vision; most megabats do not echolocate. Timeline: Griffin/Galambos demonstration, term coined by 1944, perhaps 1938 (Animal echolocation article), hence decade precision.",
+   "domain": "nature",
+   "sub": "mammals"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0248",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pegasus",
+   "title": "Pegasus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:41.387Z",
+   "snapshot": "64e62d2d8b6dba91744cda0f76a5b63964315c4c2331664250ce0ac69685cdb6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Minotauromachy",
+   "title": "Minotauromachy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:42.400Z",
+   "snapshot": "73bf9c2c176038133ac14b8a46de831ef59f85a4493bf651bfab32bd997bd171"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cerberus",
+   "title": "Cerberus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:43.389Z",
+   "snapshot": "d40a507d1d0065944eaedfd6cca0f93c4effc1d92af051c190646c395c54fb85"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Temple_of_Zeus,_Olympia",
+   "title": "Temple of Zeus, Olympia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:44.443Z",
+   "snapshot": "a419a50c976d18eb4757f37aa9c240606685b99c48c494ff55457c2b1d0f46fe"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Achilleion_(Corfu)",
+   "title": "Achilleion (Corfu) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:45.407Z",
+   "snapshot": "5c23a9502192598ded892c32475e849d34512fd745ec4164384912eaab9ab4fd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pegasus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01237",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Minotaur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01238",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cerberus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01239",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heracles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Achilles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:19.098Z",
+   "target": "f01236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pegasus (Ancient Greek: Πήγασος, romanized: Pḗgasos; Latin: Pegasus, Pegasos) is a winged horse in Greek mythology, usually depicted as a white stallion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pegasus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:19.098Z",
+   "target": "f01237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The etching and resulting prints, literally entitled Minotaur Battle, feature many compositional aspects and themes seen often in Picasso’s art throughout the 1930s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minotaur” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:19.098Z",
+   "target": "f01238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Greek mythology, Cerberus (  or ; Ancient Greek: Κέρβερος Kérberos [ˈkerberos]), often referred to as the hound of Hades, is a multi-headed dog that guards the gates of the underworld to prevent the dead from leaving.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cerberus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:19.098Z",
+   "target": "f01239",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The metopes from the temple depict the twelve labours of Heracles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heracles” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:19.098Z",
+   "target": "f01240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The motif centers on the hero Achilles of Greek mythology, from which the name is derived.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Achilles” is on the snapshot of s5"
+  }
+ ]
+}

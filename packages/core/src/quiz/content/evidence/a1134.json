@@ -1,0 +1,465 @@
+{
+ "article": "a1134",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ernst_Th%C3%A4lmann",
+   "title": "Ernst Thälmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:48.735Z",
+   "snapshot": "69700e9d998e6d02270b52c924571fe9f5ba0e5edfa3c836e148120ed5cd8563"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Pionierorganisation_Ernst_Th%C3%A4lmann",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:50.191Z",
+   "snapshot": "9b664083addcc664bc9d47fa46d571f2793100085129c69b9917a677bca2f246"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Chemnitz",
+   "title": "Chemnitz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:50.905Z",
+   "snapshot": "8676e04125ed81ee66765c82b4ae4a6bbd01a3a2b1eecda9e6db858e00f38152"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pionierrepublik_Wilhelm_Pieck",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:51.549Z",
+   "snapshot": "7b92779f30f8c2a5192bd47c248e351e62d1d264b835310421aff99c59364c04"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tscheka",
+   "title": "Tscheka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:52.614Z",
+   "snapshot": "3e3b0d57636bd7339500a3b970c356aa8da38c320846241b3269f7b84377ba92"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wachregiment_Feliks_Dzierzynski",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:53.656Z",
+   "snapshot": "4aa2953a423137306ab1065ae5af6913cb87e3346c2e72c5b8f16a13bdb44a1c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Freie_Deutsche_Jugend",
+   "title": "Freie Deutsche Jugend – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:54.599Z",
+   "snapshot": "69d0afd380ff4271e542fcfffc2aea961bcc4dba93b25d96d0a289333ff3647a"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Wachregiment_%E2%80%9EFeliks_Dzierzynski%E2%80%9C",
+   "title": "Wachregiment „Feliks Dzierzynski“ – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:08.143Z",
+   "snapshot": "4aa2953a423137306ab1065ae5af6913cb87e3346c2e72c5b8f16a13bdb44a1c"
+  },
+  "s9": {
+   "url": "https://www.bundesarchiv.de/themen-entdecken/online-entdecken/themenbeitraege/das-wachregiment-des-mfs-feliks-e-dzierzynski/",
+   "title": "Das Wachregiment des MfS \"Feliks E. Dzierzynski\"",
+   "publisher": "Bundesarchiv",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:08.074Z",
+   "snapshot": "d49dbf17348a88a954449f4d035c5555b37e716f9519333e733709087fba873e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ernst Thälmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ernst Thälmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Marx",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wilhelm Pieck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wilhelm Pieck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Felix Dserschinski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Felix Dserschinski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 24"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f05670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Freie Deutsche Jugend",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "März 1927 beteiligte sich Ernst Thälmann an einer Demonstration in Berlin, wo er durch einen streifenden Säbelhieb über dem rechten Auge verletzt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Thälmann” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Pionierorganisation „Ernst Thälmann“, benannt nach dem ehemaligen Vorsitzenden der Kommunistischen Partei Deutschlands (KPD) Ernst Thälmann, war in der Deutschen Demokratischen Republik (DDR) die politische Massenorganisation für Kinder.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Thälmann” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chemnitz [ˈkʰɛmnɪt͡s]  (von 1953 bis 1990 Karl-Marx-Stadt) ist eine kreisfreie Stadt im Südwesten des Freistaates Sachsen und dessen drittgrößte Großstadt nach Leipzig und Dresden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juli 1952 eröffnete der damalige Präsident der DDR, Wilhelm Pieck, das Pionierlager am Werbellinsee.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Pieck” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Unter dem Namen Pionierrepublik Wilhelm Pieck war die Einrichtung bis 1989 das zentrale Pionierlager der Pionierorganisation Ernst Thälmann in der DDR.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Pieck” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Felix Dserschinski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Felix Dserschinski”, “Felix Dzerzhinsky”, “Феликс Дзержинский”) on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Felix Dserschinski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Felix Dserschinski”, “Felix Dzerzhinsky”, “Феликс Дзержинский”) on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:37.786Z",
+   "target": "f05670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Freie Deutsche Jugend (FDJ) ist ein kommunistischer Jugendverband.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Freie Deutsche Jugend” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:51:52Z",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ab 1967 war es nach Feliks Dzierżyński benannt, dem Gründer der sowjetrussischen Geheimpolizei Tscheka.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:51:56Z",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "erhielt 1967 den Namen des ersten sowjetischen Geheimdienstchefs Feliks Dzierżyński",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "The same page gives 11,000 members by 1989."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:15.694Z",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ab 1967 war es nach Feliks Dzierżyński benannt, dem Gründer der sowjetrussischen Geheimpolizei Tscheka.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:15.694Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:15.694Z",
+   "target": "f05669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "erhielt 1967 den Namen des ersten sowjetischen Geheimdienstchefs Feliks Dzierżyński",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:15.694Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  }
+ ]
+}

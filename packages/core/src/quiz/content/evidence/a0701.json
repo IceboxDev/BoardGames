@@ -1,0 +1,454 @@
+{
+ "article": "a0701",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pong",
+   "title": "Pong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:34.249Z",
+   "snapshot": "8ac2f1c9400fd5fd9f729bf1def3695d4f351f5d0262db07c03b0fbe87680a60"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tetris",
+   "title": "Tetris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:07.254Z",
+   "snapshot": "b64ff36b3a4d1849a9b66015e57e05fa597e1db0c74de8cb8f63b9cfcbeaf2ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Willis_Gibson",
+   "title": "Willis Gibson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:09.533Z",
+   "snapshot": "0b868ca2585bb0ef9fea7445b73bf20fb5a8c4adf5791544e94a798f6fda0657"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pac-Man",
+   "title": "Pac-Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:09.240Z",
+   "snapshot": "f1e8763b2f7afb4d144b9176a99a7b02e3a6d0f37d7f1267f965c909e434b466"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Super_Mario_Bros.",
+   "title": "Super Mario Bros. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:10.361Z",
+   "snapshot": "c2b2dc4680d39114cfa35123c91c4fcddd29f19507fb6dd5fdc4a4ed95bcda1b"
+  },
+  "s6": {
+   "url": "https://www.theguardian.com/technology/2024/jan/03/oklahoma-teen-beat-tetris-first-person-willis-gibson",
+   "title": "Oklahoma 13-year-old believed to be first person ever to beat Tetris",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:09.377Z",
+   "snapshot": "0996811b11baf8f3cd729516a1ef64f3ade75832f3d779ff55b566a14234d65e"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/newsbeat-67885320",
+   "title": "Teen becomes first to beat Tetris",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:09.551Z",
+   "snapshot": "b560048180a469de2e1caf367716ee2721e400652b254775c56370a5d46503e8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tetris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tetris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c059"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pac-Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Super Mario Bros.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f24080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Allan Alcorn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willis Gibson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f03504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pong is a 1972 sports video game developed and published by Atari, Inc.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pong” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f03501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tetris (Russian: Тетрис) is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer, in the mid-1980s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tetris” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f03501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willis Gibson (born January 27, 2010), also known online as Blue Scuti, is an American classic NES Tetris player from Stillwater, Oklahoma.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tetris” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f03502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pac-Man, originally titled Puck Man in Japan, is a 1980 maze video game developed and published by Namco for arcades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pac-Man” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f03505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Super Mario Bros. is a 1985 platform game developed and published by Nintendo for the Nintendo Entertainment System (NES).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Super Mario Bros.” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f24080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was created by Allan Alcorn as a training exercise assigned to him by Atari co-founder Nolan Bushnell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Allan Alcorn” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:28.841Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willis Gibson (born January 27, 2010), also known online as Blue Scuti, is an American classic NES Tetris player from Stillwater, Oklahoma.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willis Gibson” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:37:19Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A 13-year-old in Oklahoma is believed to be the first person ever to beat Tetris since the game’s release more than three decades ago.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:37:21Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Willis Gibson, 13, from Oklahoma, became the first human to beat the original version of the 80s puzzler",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:57.280Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A 13-year-old in Oklahoma is believed to be the first person ever to beat Tetris since the game’s release more than three decades ago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:57.280Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Willis Gibson, 13, from Oklahoma, became the first human to beat the original version of the 80s puzzler",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:57.280Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willis Gibson had become one of the US’s top competitive Tetris players since he started playing just two years ago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Willis Gibson” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:57.280Z",
+   "target": "f24081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Willis Gibson, 13, from Oklahoma, became the first human to beat the original version of the 80s puzzler - a feat many thought was impossible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Willis Gibson” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "article": "a1316",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jason_and_the_Argonauts_(film)",
+   "title": "Jason and the Argonauts (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:26.261Z",
+   "snapshot": "614e86bc670650fe9194309d84df52322e5639173d2c9f2d0894eb801b592364"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Parnassus",
+   "title": "The Parnassus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:27.420Z",
+   "snapshot": "59f99038e1e819c81a0de858643c02a0a4bf8f9fc2d6752aff9453bf79702fff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cyclopean_masonry",
+   "title": "Cyclopean masonry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:28.169Z",
+   "snapshot": "4a93ff671afb5d02c4ba8c405f572a4087c6cfb10e1bb69fd23574fe363274c4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Titan_(moon)",
+   "title": "Titan (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:37.656Z",
+   "snapshot": "3d7aaaf43f37a4ace0c62a5ddb19db6fa05b4a3359efd1e12e65b59f85682f57"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Argonauts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Muses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cyclopes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Titans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:05.436Z",
+   "target": "f06576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jason and the Argonauts (working title: Jason and the Golden Fleece) is a 1963 epic fantasy adventure film loosely based on the 3rd century BC Greek epic poem The Argonautica by Apollonius Rhodius.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Argonauts” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:05.436Z",
+   "target": "f06577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The fresco shows the mythological Mount Parnassus where Apollo dwells; he is in the centre playing an instrument (a contemporary lira da braccio rather than a classical lyre), surrounded by the nine muses, nine poets from antiquity, and nine contemporary poets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muses” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:05.436Z",
+   "target": "f06578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The term comes from the assumption of classical Greeks that only the mythical Cyclopes had the strength to move the enormous boulders that made up the walls of Mycenae and Tiryns.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cyclopes” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:05.436Z",
+   "target": "f06580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The name Titan comes from the Titans, a race of immortals in Greek mythology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titans” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,361 @@
+{
+ "id": "a2626",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "Worms, Viruses and Ransom: Famous Malware Attacks",
+ "titleDe": "Würmer, Viren und Lösegeld: Berühmte Angriffe mit Schadsoftware",
+ "titleRu": "Черви, вирусы и выкуп: знаменитые атаки вредоносных программ",
+ "bodyEn": "Computer viruses began as pranks and experiments; within a few decades they had become instruments of crime and of war. A handful of attacks stand out as turning points.\n\nThe first to make front pages was the Morris worm. On 2 November 1988 Robert Tappan Morris, a graduate student at Cornell, released a self-copying program from a computer at MIT, apparently to gauge the size of the internet. A flaw made it infect the same machines again and again, and within a day thousands of the connected computers had slowed to a halt. Morris became the first person convicted of a felony under the US Computer Fraud and Abuse Act of 1986 – and later a professor at MIT.\n\nStrictly speaking, a virus needs a host file and a user to pass it on, while a worm spreads across networks by itself. The ILOVEYOU worm of 4 May 2000 added a trick of the mind: an email with the subject \"ILOVEYOU\" and an attachment that looked like a love letter. It originated in the Philippines, where the former student Onel de Guzman had written it, and within days it had reached tens of millions of Windows computers worldwide. Because the Philippines had no law against writing malware at the time, he was never prosecuted.\n\nStuxnet, discovered in June 2010, showed that code could be a weapon. The worm – often loosely called a virus – was built to disrupt Iran's nuclear programme: it sought out the Siemens control systems of the uranium centrifuges at Natanz and made them spin out of control while showing the operators normal readings. It is widely attributed to the United States and Israel, though neither has officially admitted it.\n\nRansomware turned infection into a business. On 12 May 2017 WannaCry encrypted the files of more than 200,000 computers in some 150 countries and demanded payment in bitcoin; among the hardest-hit victims was Britain's National Health Service, where hospitals had to cancel operations and divert ambulances. Six weeks later, on 27 June 2017, NotPetya struck. Disguised as ransomware but built to destroy data, it spread through a hacked Ukrainian accounting program, and Ukraine was its main target, with around 80 percent of infections, before it spilled over to companies around the world, among them the shipping giant Maersk.\n\n| Year | Malware | Remembered for |\n|---|---|---|\n| 1988 | Morris worm | first worm to cripple the internet |\n| 2000 | ILOVEYOU | love-letter email from the Philippines |\n| 2010 | Stuxnet | sabotage of Iran's centrifuges |\n| 2017 | WannaCry | ransomware that hit the NHS |\n| 2017 | NotPetya | data destruction aimed at Ukraine |",
+ "bodyDe": "Computerviren begannen als Streiche und Experimente; binnen weniger Jahrzehnte waren sie zu Werkzeugen des Verbrechens und des Krieges geworden. Eine Handvoll Angriffe ragt als Wendepunkte heraus.\n\nAls Erster schaffte es der Morris-Wurm auf die Titelseiten. Am 2. November 1988 setzte Robert Tappan Morris, Doktorand an der Cornell University, von einem Rechner am MIT aus ein sich selbst kopierendes Programm frei, angeblich um die Größe des Internets zu messen. Ein Fehler ließ es dieselben Rechner immer wieder befallen, und binnen eines Tages waren Tausende der angeschlossenen Computer zum Stillstand gekommen. Morris wurde als Erster nach dem US-amerikanischen Computer Fraud and Abuse Act von 1986 wegen eines Verbrechens verurteilt – und später Professor am MIT.\n\nGenau genommen braucht ein Virus eine Wirtsdatei und einen Nutzer, der es weitergibt, während sich ein Wurm selbstständig über Netzwerke verbreitet. Der Wurm ILOVEYOU vom 4. Mai 2000 fügte einen psychologischen Trick hinzu: eine E-Mail mit dem Betreff „ILOVEYOU“ und einem Anhang, der wie ein Liebesbrief aussah. Er stammte von den Philippinen, wo ihn der ehemalige Student Onel de Guzman geschrieben hatte, und binnen Tagen hatte er weltweit zig Millionen Windows-Rechner erreicht. Weil es auf den Philippinen damals kein Gesetz gegen das Schreiben von Schadsoftware gab, wurde er nie angeklagt.\n\nStuxnet, im Juni 2010 entdeckt, zeigte, dass Code eine Waffe sein kann. Der Wurm – oft ungenau Virus genannt – sollte das Atomprogramm des Iran stören: Er suchte gezielt die Siemens-Steuerungen der Uranzentrifugen in Natans und ließ sie außer Kontrolle drehen, während er den Bedienern normale Messwerte vorspielte. Er wird allgemein den USA und Israel zugeschrieben, auch wenn keiner der beiden Staaten es offiziell eingeräumt hat.\n\nErpressungssoftware machte aus der Infektion ein Geschäft. Am 12. Mai 2017 verschlüsselte WannaCry die Dateien von mehr als 200.000 Rechnern in rund 150 Ländern und verlangte Zahlung in Bitcoin; zu den am schwersten getroffenen Opfern gehörte der britische National Health Service, dessen Krankenhäuser Operationen absagen und Rettungswagen umleiten mussten. Sechs Wochen später, am 27. Juni 2017, schlug NotPetya zu. Als Erpressungssoftware getarnt, aber zum Zerstören von Daten gebaut, verbreitete es sich über eine gehackte ukrainische Buchhaltungssoftware, und die Ukraine war mit rund 80 Prozent der Infektionen sein Hauptziel, bevor es auf Unternehmen in aller Welt übergriff, darunter die Reederei Maersk.\n\n| Jahr | Schadprogramm | Bekannt für |\n|---|---|---|\n| 1988 | Morris-Wurm | erster Wurm, der das Internet lahmlegte |\n| 2000 | ILOVEYOU | Liebesbrief-Mail von den Philippinen |\n| 2010 | Stuxnet | Sabotage der iranischen Zentrifugen |\n| 2017 | WannaCry | Erpressungssoftware, die den NHS traf |\n| 2017 | NotPetya | Datenzerstörung mit Ziel Ukraine |",
+ "bodyRu": "Компьютерные вирусы начинались как розыгрыши и эксперименты; за несколько десятилетий они превратились в орудия преступности и войны. Несколько атак выделяются как поворотные моменты.\n\nПервым на первые полосы газет попал червь Морриса. 2 ноября 1988 года Роберт Таппан Моррис, аспирант Корнеллского университета, выпустил с компьютера в MIT самокопирующуюся программу — по-видимому, чтобы оценить размеры интернета. Из-за ошибки она снова и снова заражала одни и те же машины, и за сутки тысячи подключённых компьютеров замедлились до полной остановки. Моррис стал первым человеком, осуждённым за тяжкое преступление по американскому Закону о компьютерном мошенничестве и злоупотреблениях 1986 года, — а позднее профессором MIT.\n\nСтрого говоря, вирусу нужны файл-носитель и пользователь, который его передаст, тогда как червь распространяется по сетям самостоятельно. Червь ILOVEYOU 4 мая 2000 года добавил психологическую уловку: письмо с темой «ILOVEYOU» и вложением, похожим на любовное послание. Его родиной были Филиппины, где его написал бывший студент Онел де Гусман, и за несколько дней он добрался до десятков миллионов компьютеров с Windows по всему миру. Поскольку на Филиппинах тогда не было закона против написания вредоносных программ, его так и не привлекли к ответственности.\n\nStuxnet, обнаруженный в июне 2010 года, показал, что код может быть оружием. Червь — его часто неточно называют вирусом — был создан, чтобы сорвать ядерную программу страны, которой был Иран: он целенаправленно искал системы управления Siemens урановых центрифуг в Натанзе и заставлял их вращаться вразнос, показывая операторам нормальные показания. Его принято приписывать США и Израилю, хотя ни одна из стран официально этого не признала.\n\nПрограммы-вымогатели превратили заражение в бизнес. 12 мая 2017 года WannaCry зашифровал файлы более чем 200 000 компьютеров примерно в 150 странах и потребовал выкуп в биткоинах; среди самых пострадавших оказалась британская Национальная служба здравоохранения (NHS), больницы которой были вынуждены отменять операции и перенаправлять машины скорой помощи. Шесть недель спустя, 27 июня 2017 года, ударил NotPetya. Замаскированный под вымогателя, но созданный для уничтожения данных, он распространялся через взломанную украинскую бухгалтерскую программу; его главной целью была Украина, на которую пришлось около 80 процентов заражений, прежде чем он перекинулся на компании по всему миру, в том числе на судоходного гиганта Maersk.\n\n| Год | Вредоносная программа | Чем запомнилась |\n|---|---|---|\n| 1988 | червь Морриса | первый червь, парализовавший интернет |\n| 2000 | ILOVEYOU | письмо-«признание» с Филиппин |\n| 2010 | Stuxnet | саботаж иранских центрифуг |\n| 2017 | WannaCry | вымогатель, ударивший по NHS |\n| 2017 | NotPetya | уничтожение данных с прицелом на Украину |",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Morris_Worm.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Morris_Worm.jpg",
+   "width": 450,
+   "height": 600,
+   "alt": {
+    "en": "Floppy disk with the source code of the Morris worm in a museum",
+    "de": "Diskette mit dem Quellcode des Morris-Wurms in einem Museum",
+    "ru": "Дискета с исходным кодом червя Морриса в музее"
+   },
+   "caption": {
+    "en": "A floppy disk holding the source code of the Morris worm of 1988, displayed at the Museum of Science in Boston.",
+    "de": "Eine Diskette mit dem Quellcode des Morris-Wurms von 1988, ausgestellt im Museum of Science in Boston.",
+    "ru": "Дискета с исходным кодом червя Морриса 1988 года, выставленная в Музее науки в Бостоне."
+   },
+   "credit": "Go Card USA, Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/en/1/18/Wana_Decrypt0r_screenshot.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+   "width": 600,
+   "height": 453,
+   "alt": {
+    "en": "WannaCry ransom note screen",
+    "de": "Lösegeldforderung von WannaCry auf dem Bildschirm",
+    "ru": "Экран с требованием выкупа WannaCry"
+   },
+   "caption": {
+    "en": "The ransom demand WannaCry showed on infected computers in May 2017, asking for payment in bitcoin.",
+    "de": "Die Lösegeldforderung, die WannaCry im Mai 2017 auf befallenen Rechnern anzeigte, mit der Forderung nach Bitcoin.",
+    "ru": "Требование выкупа в биткоинах, которое WannaCry выводил на заражённых компьютерах в мае 2017 года."
+   },
+   "credit": "Wikipedia"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f14206",
+   "answerEn": "Iran",
+   "answerDe": "Iran",
+   "answerRu": "Иран",
+   "spans": {
+    "en": [
+     1331,
+     4
+    ],
+    "de": [
+     1509,
+     4
+    ],
+    "ru": [
+     1479,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "2010-06-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Stuxnet computer worm, built to sabotage Iran's nuclear programme, is discovered",
+    "labelDe": "Der Computerwurm Stuxnet, gebaut zur Sabotage des iranischen Atomprogramms, wird entdeckt",
+    "labelRu": "Обнаружен компьютерный червь Stuxnet, созданный для саботажа ядерной программы Ирана"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Stuxnet",
+    "title": "Stuxnet",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14498",
+     "en": "Stuxnet is the name of a computer virus that in 2010 was meant to disrupt which country's nuclear programme?",
+     "de": "Stuxnet ist der Name eines Computervirus, der im Jahr 2010 das Atomprogramm welches Landes stören sollte?",
+     "ru": "Ядерную программу какой страны должен был сорвать в 2010 году компьютерный вирус Stuxnet?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-322",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "region:ir",
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q794",
+     "label": "Iran",
+     "role": "answer"
+    },
+    {
+     "qid": "Q53479",
+     "label": "Stuxnet",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f14207",
+   "answerEn": "Robert Tappan Morris",
+   "answerDe": "Robert Tappan Morris",
+   "answerRu": "Роберт Таппан Моррис",
+   "spans": {
+    "en": [
+     241,
+     20
+    ],
+    "de": [
+     285,
+     20
+    ],
+    "ru": [
+     255,
+     20
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1988-11-02",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Robert Tappan Morris releases the Morris worm from a computer at MIT",
+    "labelDe": "Robert Tappan Morris setzt von einem Rechner am MIT den Morris-Wurm frei",
+    "labelRu": "Роберт Таппан Моррис выпускает червя Морриса с компьютера в MIT"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Morris_worm",
+    "title": "Morris worm – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w14499",
+     "en": "Which Cornell graduate student released the worm of 2 November 1988 that crippled a large part of the early internet?",
+     "de": "Welcher Doktorand der Cornell University setzte am 2. November 1988 den Wurm frei, der einen großen Teil des frühen Internets lahmlegte?",
+     "ru": "Какой аспирант Корнеллского университета выпустил 2 ноября 1988 года червя, парализовавшего значительную часть раннего интернета?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "region:us",
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q92647",
+     "label": "Robert Tappan Morris",
+     "role": "answer"
+    },
+    {
+     "qid": "Q831351",
+     "label": "Morris worm",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f14208",
+   "answerEn": "Philippines",
+   "answerDe": "Philippinen",
+   "answerRu": "Филиппины",
+   "spans": {
+    "en": [
+     951,
+     11
+    ],
+    "de": [
+     1104,
+     11
+    ],
+    "ru": [
+     1017,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2000-05-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The ILOVEYOU worm, written in Manila, begins spreading by email",
+    "labelDe": "Der in Manila geschriebene Wurm ILOVEYOU beginnt, sich per E-Mail zu verbreiten",
+    "labelRu": "Червь ILOVEYOU, написанный в Маниле, начинает распространяться по электронной почте"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/ILOVEYOU",
+    "title": "ILOVEYOU – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w14500",
+     "en": "From which country did the ILOVEYOU worm, which spread by email in May 2000, originate?",
+     "de": "Aus welchem Land stammte der Computerwurm ILOVEYOU, der sich im Mai 2000 per E-Mail verbreitete?",
+     "ru": "Из какой страны происходил компьютерный червь ILOVEYOU, распространявшийся по электронной почте в мае 2000 года?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "region:ph",
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q928",
+     "label": "Philippines",
+     "role": "answer"
+    },
+    {
+     "qid": "Q856096",
+     "label": "ILOVEYOU",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f14209",
+   "answerEn": "National Health Service",
+   "answerDe": "National Health Service",
+   "answerRu": "Национальная служба здравоохранения",
+   "spans": {
+    "en": [
+     1835,
+     23
+    ],
+    "de": [
+     2061,
+     23
+    ],
+    "ru": [
+     1961,
+     35
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2017-05-12",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The WannaCry ransomware attack begins and hits Britain's National Health Service",
+    "labelDe": "Der Angriff der Erpressungssoftware WannaCry beginnt und trifft den britischen National Health Service",
+    "labelRu": "Начинается атака вымогателя WannaCry, ударившая по британской Национальной службе здравоохранения"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+    "title": "WannaCry ransomware attack – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w14501",
+     "en": "Which British health service was among the hardest-hit victims of the WannaCry ransomware attack in May 2017?",
+     "de": "Welcher britische Gesundheitsdienst gehörte im Mai 2017 zu den am schwersten getroffenen Opfern der Erpressungssoftware WannaCry?",
+     "ru": "Какая британская служба здравоохранения оказалась в мае 2017 года среди самых пострадавших от программы-вымогателя WannaCry?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "region:gb",
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q16251481",
+     "label": "National Health Service",
+     "role": "answer"
+    },
+    {
+     "qid": "Q29957041",
+     "label": "WannaCry ransomware attack",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f14210",
+   "answerEn": "Ukraine",
+   "answerDe": "Ukraine",
+   "answerRu": "Украина",
+   "spans": {
+    "en": [
+     2087,
+     7
+    ],
+    "de": [
+     2373,
+     7
+    ],
+    "ru": [
+     2314,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2017-06-27",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The NotPetya attack begins, aimed mainly at Ukraine",
+    "labelDe": "Der Angriff mit NotPetya beginnt, vor allem gegen die Ukraine gerichtet",
+    "labelRu": "Начинается атака NotPetya, направленная прежде всего против Украины"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/2017_Ukraine_ransomware_attacks",
+    "title": "2017 Ukraine ransomware attacks – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w14502",
+     "en": "Which country was the main target of the NotPetya malware attack of June 2017?",
+     "de": "Welches Land war das Hauptziel des Angriffs der Schadsoftware NotPetya im Juni 2017?",
+     "ru": "Какая страна была главной целью атаки вредоносной программы NotPetya в июне 2017 года?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "region:ua",
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q212",
+     "label": "Ukraine",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/security",
+  "audience:international"
+ ]
+}

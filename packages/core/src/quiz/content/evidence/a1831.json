@@ -1,0 +1,289 @@
+{
+ "article": "a1831",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Greyhound_Lines",
+   "title": "Greyhound Lines – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:04.969Z",
+   "snapshot": "fb792b629de6b91716883ebdb48bf375306e199361bfbe59ab59b02a13b93e8f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jaguar_Cars",
+   "title": "Jaguar Cars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:06.316Z",
+   "snapshot": "e9cc1fe2d73d7f8f15f8c08943bbeb98d991d987823eff014724c83cec379016"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Puma_(Sportartikelhersteller)",
+   "title": "Puma (Sportartikelhersteller) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:04.090Z",
+   "snapshot": "c38ad637425afb00d15b9b89397c9e6cff91dcee177109490f36b5989d322dde"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Caterpillar_Inc.",
+   "title": "Caterpillar Inc. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:06.018Z",
+   "snapshot": "64c62366633eaf07493504944cb665823a7351030cfa4d2024292ea9f0255769"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Penguin_Books",
+   "title": "Penguin Books – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:07.012Z",
+   "snapshot": "530c7af68242e80b9397a459fa79bbb5586a8fb4cfc52cf9e4020a528084b14f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hummel_International",
+   "title": "Hummel International",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:07.874Z",
+   "snapshot": "a600a978ee1bc3d223c4338f330dafcebab07f2c4d9a8d496c9fe020d32108d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greyhound",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jaguar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Puma",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Caterpillar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Penguin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hummel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-360"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:29.271Z",
+   "target": "f09151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greyhound Lines, Inc., is an American operator of intercity bus services.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.271Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greyhound” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:29.271Z",
+   "target": "f09152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jaguar (UK: , US: ) is a British sports car and luxury vehicle brand owned by Tata Motors, Operating under the merged division Jaguar Land Rover Limited (JLR).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.271Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jaguar” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:29.271Z",
+   "target": "f09153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Puma (Sportartikelhersteller)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.271Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Puma” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:29.271Z",
+   "target": "f09154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 2025, Caterpillar was ranked 64th on the Fortune 500 and 118th on the Forbes Global 2000.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.271Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Caterpillar” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:29.271Z",
+   "target": "f09155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Penguin Books Limited is a British publishing house that was co-founded in 1935 by Allen Lane with his brothers Richard and John.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.271Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penguin” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:29.271Z",
+   "target": "f13584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hummel International Sport & Leisure A/S, commonly known as Hummel (stylized hummel), is a German-founded Danish manufacturing company of sportswear brand based in Aarhus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.271Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hummel” is on the snapshot of s6"
+  }
+ ]
+}

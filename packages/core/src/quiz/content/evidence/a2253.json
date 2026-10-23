@@ -1,0 +1,280 @@
+{
+ "article": "a2253",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Playboy_(Magazin)",
+   "title": "Playboy (Magazin)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:50.927Z",
+   "snapshot": "0f4656910ec8edf3132f7269e7499046da29e5920412f2e9cbd53fe9d771a74a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rolling_Stone",
+   "title": "Rolling Stone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:49.422Z",
+   "snapshot": "3baf66065ca27660ef9968b37d76f9f38883b1757b268e8178fb6c78cb787c12"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bravo_(deutsche_Zeitschrift)",
+   "title": "Bravo (deutsche Zeitschrift)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:45.080Z",
+   "snapshot": "07f2c527780c91ff027be98bbc9553adb0fe4caf057d83c88e67df1a0341dd18"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Eustace_Tilley",
+   "title": "Eustace Tilley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:50.264Z",
+   "snapshot": "1e52e6cb31dce7cbf3cd08e393e4511b5e5fdcf048dccd018192dd02cdd3257a"
+  },
+  "s5": {
+   "url": "https://www.promiflash.de/news/2015/10/14/nach-umbruch-in-den-usa-deutscher-playboy-bleibt-ganz-nackt.html",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:50.295Z",
+   "snapshot": "d60621d1cc42c74b485e0d0720a87b0495d1e57cfaa4a6da975ddb2b51463b06"
+  },
+  "s6": {
+   "url": "https://www.vienna.at/schluss-mit-nackt-der-playboy-wird-zuechtig/4484659",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:50.798Z",
+   "snapshot": "956f7a5f91bc2766020ae86a75a4632d61f4668f9bbc817346fa3d3dbca85fbf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Lennon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-303"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marilyn Monroe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-374"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jann Wenner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eustace Tilley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "März 2016",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "März 2016",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "März 2016",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-110/6, u08: The statement is false: only the US Playboy dropped full nudity, from March 2016. German editor-in-chief Florian Boitin said the German edition would stay nude."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:43.685Z",
+   "target": "f11546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "März 2016",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:43.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:43.685Z",
+   "target": "f11546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Oktober 2015 wurde bekannt, dass ab März 2016 auch im Heft keine völlig nackten Frauen mehr abgebildet werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “März 2016” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:43.685Z",
+   "target": "f11547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first magazine was released in 1967 and featured John Lennon on the cover, and was then published every two weeks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Lennon” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:43.685Z",
+   "target": "f11548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Auf der ersten Titelseite war Marilyn Monroe abgebildet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marilyn Monroe” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:43.685Z",
+   "target": "f11550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was founded in San Francisco, California, in 1967 by Jann Wenner and the music critic Ralph J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jann Wenner” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:43.685Z",
+   "target": "f11551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eustace Tilley is a caricature that appeared on the cover of the first issue of The New Yorker in 1925 and has appeared on the cover in various forms of every anniversary issue of the magazine except 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eustace Tilley” is on the snapshot of s4"
+  }
+ ]
+}

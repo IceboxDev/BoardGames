@@ -1,0 +1,195 @@
+{
+ "article": "a0833",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hat-trick",
+   "title": "Hat-trick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:15.424Z",
+   "snapshot": "7b3e6c31ce436c52a4f509c08e65a595f6788008751370dc66f8e721e4ef26f4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Epsom_Derby",
+   "title": "Epsom Derby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:16.368Z",
+   "snapshot": "ab479ca22d08ab0bdae23185c633d973369c9ca3898feb174d3e29cc07ab684b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arrigo_Sacchi",
+   "title": "Arrigo Sacchi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:55.378Z",
+   "snapshot": "67d32dd6f1ef0c7f0a6d39927bdd648d919932a9e05c7011234130dd96861968"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Penalty_kick_(association_football)",
+   "title": "Penalty kick (association football) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:17.458Z",
+   "snapshot": "f1fed6a2f92dcefc7992a7f2b809af410cd7f82315f371b5410932692707ab0a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hat-trick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Derby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pressing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Foul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:51.750Z",
+   "target": "f04161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A hat-trick or hat trick is the achievement of a generally positive feat three times in a match, or another achievement based on the number three.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hat-trick” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:51.750Z",
+   "target": "f04163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Derby Stakes, more commonly known as the Derby and sometimes referred to as the Epsom Derby, is a Group 1 flat horse race in England open to three-year-old colts and fillies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Derby” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:51.750Z",
+   "target": "f04164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He is credited as an innovator, popularising high pressing from his teams, the offside trap, and a high defensive line with no more than 25 metres between defence and attack.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pressing” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:51.750Z",
+   "target": "f04165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The ball is placed on the penalty spot, regardless of where the foul occurred within the penalty area.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Foul” is on the snapshot of s4"
+  }
+ ]
+}

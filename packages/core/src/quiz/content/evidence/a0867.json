@@ -1,0 +1,368 @@
+{
+ "article": "a0867",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Villa_d%27Este",
+   "title": "Villa d'Este – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:37.405Z",
+   "snapshot": "a94ab0585f86468a58f63e53f711e434bf7b1aa5697c60fc985badfbd7744024"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Belvedere_(structure)",
+   "title": "Belvedere (structure) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:38.217Z",
+   "snapshot": "dcf51bb9fed98d21170b8e9382bfd5a9b0c079ad777b6984b237184cb91d7991"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palazzo_Medici_Riccardi",
+   "title": "Palazzo Medici Riccardi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:39.208Z",
+   "snapshot": "f9c05f52ae47777c5940381af92a2083d4ec40d4f1b42365b6d87027a650caa1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Loggia_dei_Lanzi",
+   "title": "Loggia dei Lanzi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:40.204Z",
+   "snapshot": "4ee9b73eb8df9b8de3ab94ead879307e8c0638652e0689f846745d5e5eac9ab7"
+  },
+  "s5": {
+   "url": "https://www.treccani.it/vocabolario/cortile/",
+   "title": "cortile - Vocabolario Treccani",
+   "publisher": "Istituto della Enciclopedia Italiana (Treccani)",
+   "kind": "reference",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:36:17.847Z",
+   "snapshot": "71a812bfcce6179b89777fad07b3c00a7fb7b93b452519be9a8b544cbd97ad29"
+  },
+  "s6": {
+   "url": "http://vocab.getty.edu/page/aat/300004095",
+   "title": "courtyards (uncovered spaces) (AAT) – Art & Architecture Thesaurus Full Record Display",
+   "publisher": "Getty Research Institute",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:19.314Z",
+   "snapshot": "dd5bef2fc0b365e41e9ae201e72dfe9fd6620e2d0bcec38bb53acf3c49a352e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pergola",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Belvedere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cortile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Loggia dei Lanzi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Michelozzo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:56.969Z",
+   "target": "f04331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The ceiling of the corridor is decorated with mosaics from the late 16th century, representing a pergola inhabited by colorful birds, making the corridor seem a part of the garden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pergola” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:56.969Z",
+   "target": "f04334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A belvedere ( BEL-və-deer; Italian for 'beautiful view') or belvidere is an architectural structure sited to take advantage of a fine or scenic view.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Belvedere” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:56.969Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cortile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cortile”, “Кортиле”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:56.969Z",
+   "target": "f20040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Loggia dei Lanzi, also called the Loggia della Signoria, is a building on the south corner of the Piazza della Signoria in Florence, Italy, adjoining the Uffizi Gallery (leading to the Arno), and diagonally to the east the Palazzo della Signoria, the political center of the city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loggia dei Lanzi” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:56.969Z",
+   "target": "f20041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The palace was designed by Michelozzo di Bartolomeo for Cosimo de' Medici, head of the Medici banking family, and was built between 1444 and 1484.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michelozzo” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:59:42Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Porzione di area scoperta compresa tra i corpi di fabbrica di un edificio e destinata a dare aria e luce agli ambienti interni",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:59:43Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uncovered areas, surrounded or partially surrounded by the walls of a building.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "AAT lists 'cortile' (Italian, plural cortili) as a term for this concept."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:25.961Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Porzione di area scoperta compresa tra i corpi di fabbrica di un edificio e destinata a dare aria e luce agli ambienti interni",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:25.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:25.961Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uncovered areas, surrounded or partially surrounded by the walls of a building.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:25.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:25.961Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cortile - Significato ed etimologia - Vocabolario - Treccani",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:25.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cortile” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:25.961Z",
+   "target": "f04335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "cortile (C,U,English,UF,U,N)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:25.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cortile” is on the snapshot of s6"
+  }
+ ]
+}

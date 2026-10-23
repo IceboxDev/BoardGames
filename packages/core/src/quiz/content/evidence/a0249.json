@@ -1,0 +1,249 @@
+{
+ "article": "a0249",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Turing_machine",
+   "title": "Turing machine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:46.570Z",
+   "snapshot": "66bdc6bf94acaf7729f25d21a1a626ddcb8cef6f83069e78a26e7a28cf833981"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/David_Hilbert",
+   "title": "David Hilbert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:03.648Z",
+   "snapshot": "8bd5e96ec41c2dce523be75bd2bb7f477b90c2d9974649154068deb497632385"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lisp_(programming_language)",
+   "title": "Lisp (programming language) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:04.614Z",
+   "snapshot": "57eace10e089ae1cbc55e851322258db76aa3aa63863366d1c6325b254729c56"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_Mathematical_Theory_of_Communication",
+   "title": "A Mathematical Theory of Communication – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:01.653Z",
+   "snapshot": "d34ffde15b814fdcf1a96e2d01acb9bcc3141dea745872d0f3122d99ef9da978"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bit",
+   "title": "Bit",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:02.522Z",
+   "snapshot": "26796a560d34c363ee6da58da124fef7df1313a9b19ce6d96fdaccf69a60ebf5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Euclid%27s_Elements",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:05.721Z",
+   "snapshot": "3edd7525af62181283bdf7a0d8c5d457f536f7fe62be56dc95ec7102fa7c6265"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Algorithm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Axiom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Recursion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-090"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:19.205Z",
+   "target": "f01241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Despite the model's simplicity, it is capable of implementing any computer algorithm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Algorithm” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:19.205Z",
+   "target": "f01242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The original monograph was quickly followed by a French translation, in which Hilbert added V.2, the Completeness Axiom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Axiom” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:19.205Z",
+   "target": "f01243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As one of the earliest programming languages, Lisp pioneered many ideas in computer science, including tree data structures, automatic storage management, dynamic typing, conditionals, higher-order functions, recursion, the self-hosting compiler, and the read–eval–print loop.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Recursion” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:19.205Z",
+   "target": "f01244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The paper also formally introduced the term \"bit\" and serves as its theoretical foundation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bit” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:19.205Z",
+   "target": "f01244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The bit is the most basic unit of information in computing and digital communication.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bit” is on the snapshot of s5"
+  }
+ ]
+}

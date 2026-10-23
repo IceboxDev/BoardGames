@@ -1,0 +1,365 @@
+{
+ "article": "a1448",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Xanthippe",
+   "title": "Xanthippe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:03.407Z",
+   "snapshot": "df8e73349896701c057e808eb9045175922b1da1b20b65b64259a235e354074c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anabasis_(Xenophon)",
+   "title": "Anabasis (Xenophon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:04.351Z",
+   "snapshot": "b15584e0fcacc1956929b2348fe01a10bb0f4b73d014e883f8c6517198ead07d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Diogenes",
+   "title": "Diogenes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:38.088Z",
+   "snapshot": "38794d263f32ea90dd69d220ad430299f4b50dfa72abbc17505d0808d1892ec2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Platonic_Academy",
+   "title": "Platonic Academy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:22.405Z",
+   "snapshot": "89c17df5fac07987a47c71d86137e74ab287f306e267abb6b10b31168dcd3c3e"
+  },
+  "s5": {
+   "url": "https://iep.utm.edu/plato/",
+   "title": "Plato – Internet Encyclopedia of Philosophy",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:32.531Z",
+   "snapshot": "fa80f854cc295b2b5795e9f734951a1154e0a5e3da95a5329500977ecc821235"
+  },
+  "s6": {
+   "url": "https://greekreporter.com/2023/10/26/plato-academy-athens-first-university-world/",
+   "title": "Plato's Academy: The World's First University – GreekReporter.com",
+   "publisher": "GreekReporter",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:03:14Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Xanthippe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07238",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Xenophon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Diogenes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Academy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anabasis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.732Z",
+   "target": "f07236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Xanthippe (; Ancient Greek: Ξανθίππη [ksantʰíppɛː]; fl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xanthippe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.732Z",
+   "target": "f07238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "'An Ascent') is the most famous work of the Ancient Greek professional soldier, philosopher and writer Xenophon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xenophon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.732Z",
+   "target": "f07240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Diogenes the Cynic (, dy-OJ-in-eez; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diogenes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:27.732Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Academy (Ancient Greek: Ἀκαδημία, romanized: Akadēmia) was founded by Plato in ca.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Academy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:27.732Z",
+   "target": "f20483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anabasis ( ə-NAB-ə-sis; Ancient Greek: Ἀνάβασις [anábasis]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anabasis” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:03:10Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The academy is regarded as the first institution of higher education in the West",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:03:12Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Plato returned to Athens and founded a school, known as the Academy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:03:14Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "was a famous school in ancient Athens founded by Plato in 387 BC, located on the northwestern outskirts of Athens, outside the city walls",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:13.320Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The academy is regarded as the first institution of higher education in the West",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:13.320Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Plato returned to Athens and founded a school, known as the Academy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:13.320Z",
+   "target": "f20482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Early Travels and the Founding of the Academy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Academy” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1146",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wars_of_the_Diadochi",
+   "title": "Wars of the Diadochi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:41.282Z",
+   "snapshot": "7b3179b76c57498f6afbbd1d74d2966205401b2e52abd2d663ce869b104c1785"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/War_of_the_Spanish_Succession",
+   "title": "War of the Spanish Succession – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:42.352Z",
+   "snapshot": "269d85bd0ccdaa0301238ab602c907aab94f836edaad50a7bda4a53aa56a2d0b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Charles_VI,_Holy_Roman_Emperor",
+   "title": "Charles VI, Holy Roman Emperor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:43.324Z",
+   "snapshot": "775e55272a5ffe9760923d6c823eb75bc949c4b69896e40385105d612f97ac0f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Augustus_II_the_Strong",
+   "title": "Augustus II the Strong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:44.236Z",
+   "snapshot": "3d0edb78c34bd5d3b63fcc19d7498a368eaa3f3d89ea108b713eeaa4b0b8dfee"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Edward_the_Confessor",
+   "title": "Edward the Confessor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:45.243Z",
+   "snapshot": "1ac3439461f23a97422c16ed08f9ba716008fb8c9268ff171ac777c47e4b5144"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alexander the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles II of Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emperor Charles VI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Augustus the Strong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edward the Confessor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:39.680Z",
+   "target": "f05726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "'War of the Crown Princes') or Wars of Alexander's Successors of 322–272 BC were a series of conflicts fought between the generals of Alexander the Great, known as the Diadochi, over who would rule his empire following his death.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander the Great” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:39.680Z",
+   "target": "f05727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The death of Charles II of Spain in November 1700 without children led to a succession crisis between Philip of Anjou, whose claim was supported by his grandfather, Louis XIV of France, and Archduke Charles of Austria, backed by the Grand Alliance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles II of Spain” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:39.680Z",
+   "target": "f05728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charles VI, Holy Roman Emperor\n\nCharles VI (German: Karl; Latin: Carolus; 1 October 1685 – 20 October 1740) was Holy Roman Emperor and ruler of the Austrian Habsburg monarchy from 1711 until his death, succeeding his elder brother, Joseph I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emperor Charles VI” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:39.680Z",
+   "target": "f05729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1936, Augustus was the subject of a Polish-German film Augustus the Strong directed by Paul Wegener.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augustus the Strong” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:39.680Z",
+   "target": "f05730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edward the Confessor (1003/1005 – 5 January 1066) was King of the English from 1042 until his death in 1066.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edward the Confessor” is on the snapshot of s5"
+  }
+ ]
+}

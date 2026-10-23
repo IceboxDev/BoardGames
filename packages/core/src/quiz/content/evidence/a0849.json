@@ -1,0 +1,289 @@
+{
+ "article": "a0849",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Toxoplasma_gondii",
+   "title": "Toxoplasma gondii – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:18.483Z",
+   "snapshot": "604a14cfac3e474ce0e24fa7badcf54e2256c9f36ac609f7a4ae7b31eb194ab9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Plague_of_Justinian",
+   "title": "Plague of Justinian – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:19.552Z",
+   "snapshot": "5bac0b88e65672ba26c3aef2c4c769ff60f0094f3699eb30f1531e76a3baebd5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rabies",
+   "title": "Rabies – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:20.619Z",
+   "snapshot": "eb2b57499b2f443c97c3a22417e64a810a82515be8629b196af3f0939c93c854"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Psittacosis",
+   "title": "Psittacosis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:21.434Z",
+   "snapshot": "2d97799c46ed12ebfeada4789e73a674430e082f83ec3118709bab28474f5960"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/David_Bruce_(microbiologist)",
+   "title": "David Bruce (microbiologist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:22.520Z",
+   "snapshot": "bf10895d8573688640c681d73454aa043a13fd92a9d73b08fbc2b8850c73a426"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Dreigliedriger_Hundebandwurm",
+   "title": "Dreigliedriger Hundebandwurm",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:19.746Z",
+   "snapshot": "a3e9ce3f5daef762a71aea40a098438bb39fa9fe70c9c35acfb4e2d2b9402206"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "toxoplasmosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "plague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "rabies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "psittacosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "brucellosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zystische Echinokokkose",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-102"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:54.468Z",
+   "target": "f04241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Toxoplasma gondii () is a species of parasitic alveolate that causes toxoplasmosis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “toxoplasmosis” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:54.468Z",
+   "target": "f04242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The plague of Justinian or Justinianic plague (AD 541–549) was an epidemic of plague that afflicted the entire Mediterranean Basin, Europe, and the Near East, especially the Sasanian Empire and the Byzantine Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “plague” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:54.468Z",
+   "target": "f04243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rabies is a viral disease that causes inflammation of the brain in humans and other mammals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rabies” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:54.468Z",
+   "target": "f04244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Psittacosis, also known as parrot fever or ornithosis, is a zoonotic infectious disease caused by the bacterium Chlamydia psittaci.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “psittacosis” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:54.468Z",
+   "target": "f04245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The bacterium, Brucella, and the disease it caused, brucellosis, along with the protozoan Trypanosoma brucei, are named in his honour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “brucellosis” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:54.468Z",
+   "target": "f13521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Weltweit ist die Folgeerkrankung der Zwischenwirte, die zystische Echinokokkose, auch in Zentralasien mit dem tibetischen Hochland, in Afrika, in Australien und in Mittel- und Südamerika endemisch, ebenso in Kanada und Alaska sowie in Arizona und New Mexico.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zystische Echinokokkose” is on the snapshot of s6"
+  }
+ ]
+}

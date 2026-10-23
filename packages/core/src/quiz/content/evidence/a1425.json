@@ -1,0 +1,287 @@
+{
+ "article": "a1425",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Unobtainium",
+   "title": "Unobtainium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:29.380Z",
+   "snapshot": "b5399dbe4e3532bf822e787e7bf0f3949ed3b9754a81f69912e824ba1e203cfa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kryptonite",
+   "title": "Kryptonite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:30.320Z",
+   "snapshot": "a2f557c0cfc2b1cb5c6ca579846e643ff76ac8f7544f9c7f1a92141e65d0b7a8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vibranium",
+   "title": "Vibranium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:31.349Z",
+   "snapshot": "1a54fa770f1e68701074c1cfdbf3de2320f09c4c7b16316f99c31be1149b3e72"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Adamantium",
+   "title": "Adamantium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:32.299Z",
+   "snapshot": "f8b49410c5481fcd2c99688c6a5ff4bed7b6ed5cd89adaa1bdc1447bfc2766f1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dilithium_(Star_Trek)",
+   "title": "Dilithium (Star Trek) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:33.297Z",
+   "snapshot": "22e638f41a1b5963a95184967d5cc18bacbe9462615b967712aeb02d13ec1ae7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:34.529Z",
+   "snapshot": "0cfb48f6b51648390f3498eecedc03ec2457ad9e88bbbab42758e1d41fdc889e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unobtainium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kryptonite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vibranium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adamantium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dilithium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-100"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dilithium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:23.695Z",
+   "target": "f07121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unobtainium (or unobtanium) is a term used in fiction, engineering, and common situations for a material ideal for a particular application but impractically difficult or impossible to obtain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unobtainium” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:23.695Z",
+   "target": "f07122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kryptonite is a fictional material that appears primarily in Superman stories published by DC Comics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kryptonite” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:23.695Z",
+   "target": "f07123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vibranium () is a fictional metal appearing in American comic books published by Marvel Comics, noted for its extraordinary abilities to absorb, store, and release large amounts of kinetic energy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vibranium” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:23.695Z",
+   "target": "f07124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adamantium is a fictional metal, most famously appearing as an alloy in American comic books published by Marvel Comics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adamantium” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:23.695Z",
+   "target": "f07125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the Star Trek fictional universe, dilithium is a fictional material that serves as a controlling agent in the matter–antimatter reactors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dilithium” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:23.695Z",
+   "target": "f07125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dilithium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dilithium”, “дилитий”) on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a0477",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Koch",
+   "title": "Robert Koch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:05.051Z",
+   "snapshot": "63f2c34a04695bb91e92db3c6cb4b91d296411e4d3ffd59617dba2a7ca63dbd8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_Fleming",
+   "title": "Alexander Fleming – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:02.079Z",
+   "snapshot": "2d6fded0016ebf9a8ceaeefb98558e28c9e31d0dcf1dde0d411e74a7566adda7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Landsteiner",
+   "title": "Karl Landsteiner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:02.956Z",
+   "snapshot": "bedf8b4c3f58497a22a28d978cdd20fe28bc4a3539369ca511208b9735b000c1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Arsphenamine",
+   "title": "Arsphenamine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:05.953Z",
+   "snapshot": "6c4309ad464bdb2c86343dd85beb2f3c65130384ca165fc2a7ac992ea1ab2954"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Emil_von_Behring",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:39.238Z",
+   "snapshot": "a504ae436667c26ea3cedf0219d05f3e935fed4baa4f951c1e2c87f2b457f0d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Robert Koch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexander Fleming",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Landsteiner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paul Ehrlich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:55.145Z",
+   "target": "f02381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinrich Hermann Robert Koch ( KOKH; German: [ˈʁoːbɛʁt kɔx] ; 11 December 1843 – 27 May 1910) was a German physician and microbiologist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Koch” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:55.145Z",
+   "target": "f02382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sir Alexander Fleming (6 August 1881 – 11 March 1955) was a Scottish physician and microbiologist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander Fleming” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:55.145Z",
+   "target": "f02383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Landsteiner  (German: [kaʁl ˈlantˌʃtaɪnɐ]; 14 June 1868 – 26 June 1943) was an Austrian-American biologist, physician, and immunologist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Landsteiner” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:55.145Z",
+   "target": "f02385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arsphenamine was first synthesized in 1907 in Paul Ehrlich's lab by Alfred Bertheim.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Ehrlich” is on the snapshot of s4"
+  }
+ ]
+}

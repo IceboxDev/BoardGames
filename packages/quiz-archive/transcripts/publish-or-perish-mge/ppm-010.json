@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-010",
+ "image": "IMG20261022153238.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] Which river is the longest in the world?\nA. Amazon\nB. Yangtze\nC. Nile\nAnswer: C.",
+   "de": "Welcher Fluss gilt meist als der längste der Welt?",
+   "en": "Which river is usually named the longest in the world?",
+   "reworked": true,
+   "answerDe": "Nil",
+   "answerEn": "Nile",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1858",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "John Hanning Speke reaches Lake Victoria, which he identifies as the source of the Nile",
+    "labelDe": "John Hanning Speke erreicht den Victoriasee, den er als Quelle des Nils ausmacht"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Nile",
+    "title": "Nile",
+    "lang": "en"
+   },
+   "notes": "Wikipedia gives the Nile ~7,088 km as the longest river but notes the title is somewhat controversial (some measurements favour the Amazon); hence 'usually'.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "discipline": "Psychology",
+   "cardText": "[Psychology] Which type of learning is illustrated by the example, “A child feels hungry when they hear the sound of the lunch bell at school”?\nA. Operant conditioning\nB. Observational learning\nC. Classical conditioning\nAnswer: C. Classical conditioning refers to the type of learning where two stimuli are repeatedly paired; a response that is at first elicited by the second stimulus is eventually elicited by the first alone. It was first described by Ivan Pavlov, a Russian physiologist known primarily for his work in classical conditioning with dogs.",
+   "de": "Welche Lernform, zuerst von Iwan Pawlow an Hunden beschrieben, zeigt ein Kind, das beim Klingeln der Mittagsglocke in der Schule Hunger bekommt?",
+   "en": "Which type of learning, first described by Ivan Pavlov with his dogs, is shown by a child who feels hungry on hearing the school lunch bell?",
+   "reworked": true,
+   "answerDe": "Klassische Konditionierung",
+   "answerEn": "Classical conditioning",
+   "timeline": {
+    "kind": "creation",
+    "start": "1897",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ivan Pavlov publishes his experiments on conditioned reflexes in dogs",
+    "labelDe": "Iwan Pawlow veröffentlicht seine Experimente zu bedingten Reflexen bei Hunden"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Classical_conditioning",
+    "title": "Classical conditioning",
+    "lang": "en"
+   },
+   "notes": "Card correct.",
+   "domain": "science",
+   "sub": "biology"
+  }
+ ]
+}

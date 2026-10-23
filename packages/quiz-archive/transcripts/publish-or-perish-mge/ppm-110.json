@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-110",
+ "image": "IMG20261022154422.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Physics",
+   "cardText": "[Physics] Why do magnets lose their magnetism when heated?\nA. The magnetic domains become misaligned\nB. The magnetic field becomes orthogonal\nC. The magnet expands too much\nAnswer: A. Magnets lose their magnetism when heated because the magnetic domains within the material become misaligned. Heating a magnet can cause the thermal energy to disrupt the alignment of these domains, resulting in the loss of magnetism.",
+   "de": "Was geschieht beim Erhitzen eines Magneten mit der Ausrichtung seiner magnetischen Domänen, sodass er seinen Magnetismus verliert?",
+   "en": "When a magnet is heated, what happens to the alignment of its magnetic domains that makes it lose its magnetism?",
+   "reworked": true,
+   "answerDe": "Sie gerät durcheinander (die Domänen werden ungeordnet)",
+   "answerEn": "It is disrupted (the domains become disordered)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1895",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pierre Curie shows that magnetism is lost at a critical temperature, now called the Curie point",
+    "labelDe": "Pierre Curie zeigt, dass Magnetismus bei einer kritischen Temperatur verloren geht, dem heutigen Curie-Punkt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Curie_temperature",
+    "title": "Curie temperature",
+    "lang": "en"
+   },
+   "notes": "Wikipedia (Curie temperature): higher thermal energy has a randomizing effect on aligned magnetic domains; above the Curie point permanent magnetism is lost. Strictly it is the atomic moments' order that breaks down, but the card's answer is the standard textbook explanation.",
+   "domain": "science",
+   "sub": "physics"
+  },
+  {
+   "category": 2,
+   "discipline": "History",
+   "cardText": "[History] Who was the first female Prime Minister of the United Kingdom?\nA. Margaret Thatcher\nB. Theresa May\nC. Indira Gandhi\nAnswer: A.",
+   "de": "Wer war die erste Premierministerin des Vereinigten Königreichs?",
+   "en": "Who was the first female Prime Minister of the United Kingdom?",
+   "reworked": true,
+   "answerDe": "Margaret Thatcher",
+   "answerEn": "Margaret Thatcher",
+   "timeline": {
+    "kind": "period",
+    "start": "1979-05-04",
+    "end": "1990-11-28",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Margaret Thatcher serves as Prime Minister of the United Kingdom, the first woman in the office",
+    "labelDe": "Margaret Thatcher ist Premierministerin des Vereinigten Königreichs, als erste Frau in diesem Amt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+    "title": "Margaret Thatcher",
+    "lang": "en"
+   },
+   "notes": "Options removed; the question is already open.",
+   "domain": "society",
+   "sub": "politics"
+  }
+ ]
+}

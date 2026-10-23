@@ -1,0 +1,511 @@
+{
+ "article": "a1029",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/placebo",
+   "title": "placebo – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nocebo",
+   "title": "Nocebo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:21.160Z",
+   "snapshot": "47e0f6a2660ced6898d2f0ce982f97369cb382e33bd5cb6283e0c525bca58be5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Antibiotic",
+   "title": "Antibiotic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:22.294Z",
+   "snapshot": "54b1b345a0bb470bdf3cc9bae205df5e2704a9f7bbaeaf693e5eea39545f5f8c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pain_ladder",
+   "title": "Pain ladder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:23.044Z",
+   "snapshot": "b4c4065e50ae4d20067f7152e4620fc54cf5e2c6f0b0fe4cecf1a8387b53e815"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Rhinoplastik",
+   "title": "Rhinoplastik",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:20.457Z",
+   "snapshot": "f3a0df645e7f2dfa5ed0f6e17b90304d09fce8167b247cf8087847eb348cc613"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Gelotologie",
+   "title": "Gelotologie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:21.436Z",
+   "snapshot": "fcb50fb91d96e632edd796f47e9c3acc4c00ae201da52f47f13d358c2aa58d7a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Placebo",
+   "title": "Placebo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:48.407Z",
+   "snapshot": "1003cb5e941e6c479ac35bd3198bd62819090d6164be23ab7efe3c6a410ae66f"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1115150",
+   "title": "Please, please me (BMJ 1999;318:716)",
+   "publisher": "BMJ / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:18.392Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s9": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:10787112&resultType=core&format=json",
+   "title": "Placebo effect in the acute treatment of migraine: subcutaneous placebos are better than oral placebos (de Craen et al., J Neurol 2000)",
+   "publisher": "Europe PMC (Journal of Neurology)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:14:33Z"
+  },
+  "s10": {
+   "url": "https://medicalresearch.com/?p=16223",
+   "title": "Topical and Injected Placebos More Effective Than Pills",
+   "publisher": "MedicalResearch.com (interview with R. Bannuru on Annals of Internal Medicine 2015 meta-analysis)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:25.601Z",
+   "snapshot": "62ea2a4fecf6e6c870f28edb6c0b7f18d0c20e39770ec5d79ceb4d96b4458f97"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "placebo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "nocebo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "antibiotic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "analgesic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nasenkorrektur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; history entry seq 32; transcript tp-379"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gelotologie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-372"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The injection",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-046"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:22.723Z",
+   "target": "f05142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A nocebo effect is said to occur when a patient's expectations for a treatment cause the treatment to have a worse effect than it otherwise would have.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nocebo” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:22.723Z",
+   "target": "f05143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An antibiotic is a type of antimicrobial substance which is active against bacteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “antibiotic” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:22.723Z",
+   "target": "f05144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Pain ladder\", or analgesic ladder, was created by the World Health Organization (WHO) as a guideline for the use of drugs in the management of pain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “analgesic” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:22.723Z",
+   "target": "f13529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Rhinoplastik (abgeleitet von altgriechisch ῥίς rhīs „Nase“, und griechisch plattein „bilden, formen, gestalten“), auch Nasenplastik oder Nasenkorrektur, wird die operative Korrektur der äußeren menschlichen Nase bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nasenkorrektur” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:22.723Z",
+   "target": "f13530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Begründer der Gelotologie ist der Psychiater William F.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.723Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gelotologie” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:22.723Z",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The injection",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The injection”, “Die Injektion”, “Инъекция”) on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:19Z",
+   "target": "f05141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The standard etymology is that placebo is the first person future indicative of the Latin word placeo, I please—that is, placebo=I shall please.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:14:24Z",
+   "target": "f05141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Latin term placebo means [I] shall be pleasing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:14:29Z",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Capsules appear to be more influential than pills, and injections are even stronger than capsules.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:14:33Z",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These findings indicate that subcutaneous administration enhances the placebo effect of acute treatment of migraine.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23",
+   "note": "meta-analysis of 22 sumatriptan trials: subcutaneous placebo 32.4% vs oral placebo 25.7% relief"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:14:38Z",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Placebo injections and topical placebos were both found to be more effective than orally administered placebos for reducing knee osteoarthritis pain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:56.781Z",
+   "target": "f05141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Latin term placebo means [I] shall be pleasing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:56.781Z",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Capsules appear to be more influential than pills, and injections are even stronger than capsules.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:56.781Z",
+   "target": "f25852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Placebo injections and topical placebos were both found to be more effective than orally administered placebos for reducing knee osteoarthritis pain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:56.781Z",
+   "target": "f05141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A placebo ( pluh-SEE-boh) is a medicine or treatment intended to appear genuine to its recipient, but which has no pharmaceutical effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “placebo” is on the snapshot of s7"
+  }
+ ]
+}

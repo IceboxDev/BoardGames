@@ -1,0 +1,195 @@
+{
+ "article": "a1734",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sponti",
+   "title": "Sponti – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:51.626Z",
+   "snapshot": "9280266c7c963d3525a069116e7d99e4a773fd291c969d604a4cbe9f0f937fa5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kommune_I",
+   "title": "Kommune I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:52.680Z",
+   "snapshot": "4f091b36030cff1ee971f38eaf9bcea3d6668f2a8b5eaed43da9343b3a6b5862"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Marsch_durch_die_Institutionen",
+   "title": "Marsch durch die Institutionen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:53.602Z",
+   "snapshot": "15c29af532c9d2a48eadf2c8bb49c90f0f877501597971c8f3bcebfb90e2850c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Au%C3%9Ferparlamentarische_Opposition",
+   "title": "Außerparlamentarische Opposition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:36.159Z",
+   "snapshot": "0d5c3f923d3ebd97a54928145fecca9670ff54fe4faf07f0329a85d2e5c3bf7d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sponti-Sprüche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kommune 1",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der lange Marsch durch die Institutionen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Außerparlamentarische Opposition",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:13.807Z",
+   "target": "f08666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sehr beliebt waren die sogenannten „Sponti-Sprüche“, die – aus der Sponti-Szene selbst oder von Publizisten erfunden und ihnen zugeschrieben – zu Hunderten in den Medien verbreitet wurden, z.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sponti-Sprüche” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:13.807Z",
+   "target": "f08667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Kommune I (auch: Kommune 1; K1) war eine politisch motivierte Wohngemeinschaft in West-Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kommune 1” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:13.807Z",
+   "target": "f08668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Josef Horchem: Extremisten in einer selbstbewußten Demokratie: [Rote-Armee-Fraktion; Rechtsextremismus; Der lange Marsch durch die Institutionen].",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der lange Marsch durch die Institutionen” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:13.807Z",
+   "target": "f08670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Außerparlamentarische Opposition (kurz APO) beschreibt eine Opposition (lateinisch oppositio ‚Entgegensetzung‘), die außerhalb des Parlamentes stattfindet, weil sie entweder durch die im Parlament vertretenen oder sonstigen Parteien (noch) kein Sprachrohr hat oder auch nicht haben will.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Außerparlamentarische Opposition” is on the snapshot of s4"
+  }
+ ]
+}

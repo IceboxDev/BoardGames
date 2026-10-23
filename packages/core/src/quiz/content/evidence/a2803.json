@@ -1,0 +1,647 @@
+{
+ "article": "a2803",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tarot",
+   "title": "Tarot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:53.148Z",
+   "snapshot": "4f067b4cd2557e993e2a271ff1cf1c40e819dec896cce27571c179276d03fbf3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Visconti-Sforza_tarot_deck",
+   "title": "Visconti-Sforza tarot deck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:54.116Z",
+   "snapshot": "9f938fbe78f2ec44a94b171d1736ea565b4b901328f5c85b0e2f20eb0d0a5d0c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Antoine_Court_de_G%C3%A9belin",
+   "title": "Antoine Court de Gébelin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:55.122Z",
+   "snapshot": "d245490ecee2956d33703cb5062741f1eb6cdd3fefb20f8bb6104138a362ad69"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pamela_Colman_Smith",
+   "title": "Pamela Colman Smith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:56.216Z",
+   "snapshot": "6b77722ce787f56f7922ae999f31d8a4e0df79143d04e2298e25a7067f90d0c6"
+  },
+  "s5": {
+   "url": "https://library.yale.edu/news/cards-library-partners-work-together-solve-mysteries-rare-tarot-deck",
+   "title": "In the cards: Library partners work together to solve mysteries of rare tarot deck",
+   "publisher": "Yale University Library",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:32.818Z",
+   "snapshot": "c494338ab6982eda5d8b39ac85feba6e62431a248ee101d311584343ce2123a8"
+  },
+  "s6": {
+   "url": "https://whitney.org/exhibitions/dawn-of-a-new-age/art?section=21",
+   "title": "At the Dawn of a New Age: Art & Artists",
+   "publisher": "Whitney Museum of American Art",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:33.503Z",
+   "snapshot": "e8a1e3c7d8ac5758050d2c78b123aa8bd2021c05b495489474019f6fbca3a983"
+  },
+  "s7": {
+   "url": "https://www.smithsonianmag.com/smart-news/see-visions-of-the-past-and-future-in-this-new-york-city-exhibition-on-the-renaissance-roots-of-tarot-cards-180988940/",
+   "title": "See Visions of the Past and Future in This New York City Exhibition on the Renaissance Roots of Tarot Cards",
+   "publisher": "Smithsonian Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:33.365Z",
+   "snapshot": "acb4b61f7714a923b9af190f781d74e8b0d8b087beb16e061e352eefdf12c2b4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "78",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 2"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Milan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Milan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 4"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f28706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Egypt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pamela Colman Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:15.268Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Tarocco Piemontese consists of the four suits of swords, batons, cups and coins, each headed by a king, queen, cavalier and jack, followed by the pip cards for a total of 78 cards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:15.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “78” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:15.268Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tarot cards, then known as tarocchi (Italian), first appeared in Ferrara and Milan in northern Italy, with the Fool and 21 trumps (then called trionfi) being added to the standard Italian pack of four suits: batons, coins, cups and swords.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:15.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milan” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:15.268Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They were commissioned by Filippo Maria Visconti, Duke of Milan, and by his successor and son-in-law Francesco Sforza.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:15.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:15.268Z",
+   "target": "f28706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Antoine Court, who named himself Antoine Court de Gébelin (Nîmes, 25 January 1725 – Paris, 10 May 1784), was a Protestant pastor, born in Nîmes, who initiated the interpretation of the Tarot as an arcane repository of timeless esoteric wisdom with imagined origins in Ancient Egypt in 1781.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:15.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Egypt” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:15.268Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pamela Colman Smith (16 February 1878 – 16 September 1951), nicknamed \"Pixie\", was a British artist, illustrator, writer, publisher, and occultist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:15.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pamela Colman Smith” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:56:49Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A typical complete tarocchi deck contained 78 cards with trump ( trionfi ) cards, face (or court) cards and pip (or numeral) cards in four suits",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:56:51Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1909, Pamela Colman Smith was commissioned to design a set of seventy-eight tarot cards by A. E. Waite",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:56:52Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "named for the Italian aristocrats who commissioned and owned them: Filippo Maria Visconti, duke of Milan, and Francesco Sforza",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:56:54Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They’re named for the wealthy Viscontis and Sforzas of Milan, the two Renaissance noble families who commissioned the cards in the 15th century",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:56:55Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1909, Pamela Colman Smith was commissioned to design a set of seventy-eight tarot cards by A. E. Waite",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:56:57Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Conceived by British mystic Arthur Edward Waite and manufactured by publisher William Rider & Son , the deck was illustrated by artist Pamela Colman Smith .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:38:38Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A typical complete tarocchi deck contained 78 cards with trump (trionfi) cards, face (or court) cards and pip (or numeral) cards in four suits",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted to match the page text exactly"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:38:55Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Conceived by British mystic Arthur Edward Waite and manufactured by publisher William Rider & Son, the deck was illustrated by artist Pamela Colman Smith.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted to match the page text exactly"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1909, Pamela Colman Smith was commissioned to design a set of seventy-eight tarot cards by A. E. Waite",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "named for the Italian aristocrats who commissioned and owned them: Filippo Maria Visconti, duke of Milan, and Francesco Sforza",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They’re named for the wealthy Viscontis and Sforzas of Milan, the two Renaissance noble families who commissioned the cards in the 15th century",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1909, Pamela Colman Smith was commissioned to design a set of seventy-eight tarot cards by A. E. Waite",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A typical complete tarocchi deck contained 78 cards with trump (trionfi) cards, face (or court) cards and pip (or numeral) cards in four suits",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Conceived by British mystic Arthur Edward Waite and manufactured by publisher William Rider & Son, the deck was illustrated by artist Pamela Colman Smith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "(The cards began to be used for fortune telling only in the 18th century.) A typical complete tarocchi deck contained 78 cards with trump (trionfi) cards, face (or court) cards and pip (or numeral) cards in four suits: batons, cups, swords, and coins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “78” is on the snapshot of s5"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tarot cards, 78 cards, 4 11/16 × 2 11/16 in.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “78” is on the snapshot of s6"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The third deck, which has the fewest surviving cards, is the Brambilla deck at the Pinacoteca di Brera in Milan, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Milan” is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They’re named for the wealthy Viscontis and Sforzas of Milan, the two Renaissance noble families who commissioned the cards in the 15th century to commemorate a marriage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Milan” is on the snapshot of s7"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pamela Colman Smith, Rider-Waite-Smith Tarot Deck, 1909 (printed c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pamela Colman Smith” is on the snapshot of s6"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T13:00:03.943Z",
+   "target": "f28707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Fool from Rider-Waite-Smith Tarot (Deck “C”), Pamela Colman Smith, ca.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pamela Colman Smith” is on the snapshot of s7"
+  }
+ ]
+}

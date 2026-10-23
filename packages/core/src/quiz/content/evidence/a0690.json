@@ -1,0 +1,249 @@
+{
+ "article": "a0690",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/William_Wallace",
+   "title": "William Wallace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:21.235Z",
+   "snapshot": "f54d9615791ba6a319db53ce1f59355fee397dc99404b0a7a9ef5786cf7eaf28"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Bannockburn",
+   "title": "Battle of Bannockburn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:22.153Z",
+   "snapshot": "268ed12384165b70d8df58be6a21ec6dd5216b76e1ea15ea8f0191c22733ec8b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Edward_I",
+   "title": "Edward I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:23.802Z",
+   "snapshot": "ae4956cecba89f1d55ee7b80da789e7bdb69c0632de444028b7818e5e40ef4f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_Balliol",
+   "title": "John Balliol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:24.127Z",
+   "snapshot": "da678d263dda672beaa186b619a4664d3415c7d496dd6afa366b6f6af281895c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Stirling_Bridge",
+   "title": "Battle of Stirling Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:25.142Z",
+   "snapshot": "e8fef0d88ab0a948e59b421b4b54c2972933a0da7ae5f6b5bfa4b0783568eb50"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/National_Wallace_Monument",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:26.120Z",
+   "snapshot": "d8af842b5e8d6c70d089eeb9f7715b3ce9b4c71ccbb8a867fa5f79f08099f4cb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "William Wallace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robert the Bruce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edward I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Balliol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Andrew Moray",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:27.222Z",
+   "target": "f03446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sir William Wallace (Scottish Gaelic: Uilleam Uallas, pronounced [ˈɯʎam ˈuəl̪ˠəs̪]; Norman French: William le Waleys; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Wallace” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:27.222Z",
+   "target": "f03447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Battle of Bannockburn (Scottish Gaelic: Blàr Allt nam Bànag or Blàr Allt a' Bhonnaich) was fought on 23–24 June 1314, between the army of Robert the Bruce, King of Scots, and the army of King Edward II of England, during the First War of Scottish Independence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert the Bruce” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:27.222Z",
+   "target": "f03448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edward I (17/18 June 1239 – 7 July 1307), also known as Edward Longshanks and the Hammer of the Scots (Latin: Malleus Scotorum), was King of England from 1272 to 1307.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edward I” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:27.222Z",
+   "target": "f03449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Balliol's son Edward Balliol would later exert a claim to the Scottish throne against the Bruce claim during the minority of Robert's son David.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Balliol” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:27.222Z",
+   "target": "f03450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On 11 September 1297, the forces of Andrew Moray and William Wallace defeated the combined English forces of John de Warenne, 6th Earl of Surrey, and Hugh de Cressingham near Stirling, on the River Forth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andrew Moray” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1918",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Copenhagen",
+   "title": "Copenhagen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:22.773Z",
+   "snapshot": "76fe418791d80b44ce8d69635ed24f4d13771e7f204afff2ce9758545c2d83ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue)",
+   "title": "The Little Mermaid (statue)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:52.672Z",
+   "snapshot": "5fa1757ea2f44831443c8ddbbadd3f4f085eef803fedf17f8e7ba448dfd3848d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ellis_Island",
+   "title": "Ellis Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:23.722Z",
+   "snapshot": "fb59b4c4bd8aa82f563e2634c72beeb4449f93a50d4cec01f401dc01b5cf139a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+   "title": "Sydney Opera House – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:26.864Z",
+   "snapshot": "497a6954eb184144f19b9922d947fe54c385387355d920b2520221ad57737f2d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Merlion",
+   "title": "Merlion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:24.649Z",
+   "snapshot": "47e83b153d10c34b006c6d3924cda9130c30bb2191aef63379d55c07a3b6c4ae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Copenhagen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Copenhagen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-383"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "New York",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sydney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Singapore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:45.053Z",
+   "target": "f09586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Copenhagen (Danish: København [kʰøpm̩ˈhɑwˀn] ) is the capital and most populous city of Denmark, with an urban population of 1.4 million.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Copenhagen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:45.053Z",
+   "target": "f09586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The sculpture is displayed on a rock by the waterside at the Langelinie promenade in Copenhagen, Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Copenhagen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:45.053Z",
+   "target": "f09587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ellis Island is an island in New York Harbor, within the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New York” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:45.053Z",
+   "target": "f09588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sydney” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:45.053Z",
+   "target": "f09589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Merlion ( ) is the official mascot of Singapore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Singapore” is on the snapshot of s5"
+  }
+ ]
+}

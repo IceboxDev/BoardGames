@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-039",
+ "image": "IMG20261022153516.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] Which of the following functions is primarily controlled by the brain stem?\nA. Voluntary movements\nB. Breathing\nC. Cognition\nAnswer: B. In 1945, a chicken named Mike lived for 18 months after his head was cut off. Mike survived because a significant part of his brain stem, or its equivalence that controls basic life functions, remained intact.",
+   "de": "Welcher Teil des Gehirns, der Atmung und Herzschlag regelt, blieb beim kopflosen Huhn Mike weitgehend erhalten und ließ es nach seiner Enthauptung noch 18 Monate leben?",
+   "en": "Which part of the brain, which regulates breathing and heart rate, stayed largely intact in Mike the Headless Chicken and let him live for 18 months after his beheading?",
+   "reworked": true,
+   "answerDe": "Hirnstamm",
+   "answerEn": "Brain stem",
+   "timeline": {
+    "kind": "event",
+    "start": "1945-09-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Farmer Lloyd Olsen beheads Mike the chicken in Fruita, Colorado; Mike survives for 18 months",
+    "labelDe": "Farmer Lloyd Olsen köpft in Fruita, Colorado, das Huhn Mike, das danach noch 18 Monate lebt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken",
+    "title": "Mike the Headless Chicken",
+    "lang": "en"
+   },
+   "notes": "Reworked to ask the brain part (the card's options-free form “what does the brain stem control?” has several answers: breathing, heart rate). Brainstem article: regulates heart and respiratory function.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] What characteristic does a platypus exhibit under ultraviolet light?\nA. Its fur changes color continuously\nB. It glows\nC. The fur becomes semi-transparent\nAnswer: B. According to recent findings, the fur of a platypus glows with a blue-green fluorescence under ultraviolet light.",
+   "de": "In welcher Farbe leuchtet das Fell eines Schnabeltiers unter ultraviolettem Licht?",
+   "en": "What colour does the fur of a platypus glow under ultraviolet light?",
+   "reworked": true,
+   "answerDe": "Blaugrün (Cyan)",
+   "answerEn": "Blue-green (cyan)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "2020-10-15",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Paula Spaeth Anich and colleagues report biofluorescence in the platypus",
+    "labelDe": "Paula Spaeth Anich und Kollegen berichten über Biofluoreszenz beim Schnabeltier"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Platypus",
+    "title": "Platypus",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: glows cyan and green under UV light (Anich et al., Mammalia, 2020).",
+   "domain": "nature",
+   "sub": "mammals"
+  }
+ ]
+}

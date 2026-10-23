@@ -1,0 +1,264 @@
+{
+ "article": "a2216",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Transformers_(Film)",
+   "title": "Transformers (Film)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:15.787Z",
+   "snapshot": "f31afe7345d276b34fe9da9bb7ddf17c8e9a443e7a8890168a74da19ca43bb26"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Transformers_(film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:17.822Z",
+   "snapshot": "f0a4c1b5fd89fe1dc5188d2e9850013e7fac5bda79738b5952114c18070b7167"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bumblebee_(Transformers)",
+   "title": "Bumblebee (Transformers)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:18.757Z",
+   "snapshot": "758da018d875b552135e3702ad929b1fa383aa89de454abe2d395a55169126df"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shia LaBeouf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shia LaBeouf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 5"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chevrolet Camaro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-187"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hasbro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Optimus Prime",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Volkswagen Beetle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:38.128Z",
+   "target": "f11299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Film entstand unter Regie von Michael Bay, die menschlichen Hauptrollen werden von Shia LaBeouf und Megan Fox verkörpert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shia LaBeouf” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:38.128Z",
+   "target": "f11299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The film stars Shia LaBeouf as Sam Witwicky, a teenager who gets caught up in a war between the heroic Autobots and the evil Decepticons, two factions of shape-shifting alien robots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shia LaBeouf” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:38.128Z",
+   "target": "f11300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The live-action film versions of Bumblebee are instead depicted as transforming into a yellow Chevrolet Camaro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chevrolet Camaro” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:38.128Z",
+   "target": "f11302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Transformers is a 2007 American science fiction action film based on Hasbro's toy line of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hasbro” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:38.128Z",
+   "target": "f11303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tyrese Gibson, Josh Duhamel, Anthony Anderson, Megan Fox, Rachael Taylor, John Turturro, and Jon Voight also star, while Peter Cullen and Hugo Weaving voice Optimus Prime and Megatron, respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Optimus Prime” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:38.128Z",
+   "target": "f11304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the original line of toys and in the animated series, Bumblebee can transform into a small yellow Volkswagen Beetle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volkswagen Beetle” is on the snapshot of s3"
+  }
+ ]
+}

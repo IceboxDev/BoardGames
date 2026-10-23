@@ -1,0 +1,355 @@
+{
+ "article": "a1321",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Antigone_(Sophocles_play)",
+   "title": "Antigone (Sophocles play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:38.332Z",
+   "snapshot": "4c5aeae0c3356dc97fc289077e3a6cee61e7c93d4c6447958a8861dfffc02ec9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Oedipus_Rex",
+   "title": "Oedipus Rex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:39.197Z",
+   "snapshot": "a0aaa89d988e61d2f903c28716f3e3a5b7be8d5a00e53a47f4db1f9336a30714"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aeschylus",
+   "title": "Aeschylus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:40.260Z",
+   "snapshot": "72568b568148d5184282464ae3739d4176e3d5f1f46b004bf3d1cd3f647cfc2b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Bacchae",
+   "title": "The Bacchae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:41.256Z",
+   "snapshot": "7cd2a07297ea2974653bf68621d134e13b86252472802955638f1a5e4072a618"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Red_carpet",
+   "title": "Red carpet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:42.157Z",
+   "snapshot": "27ece788ecc5b46629aed21b1324371c552ee3c621afbfaf34ca790fd3d6e099"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Theatre_of_Dionysus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:30.464Z",
+   "snapshot": "4420a92b6173a1959e058b6bd64bc216a02eaafb34d9812b56a831872af921a3"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/culture/story/20160222-where-does-the-red-carpet-come-from",
+   "title": "Where does the red carpet come from?",
+   "publisher": "BBC Culture",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:24.263Z",
+   "snapshot": "0f39689d4cea6565ebe7d690333962d4d92b165055e8b928f0446b6091d66a3e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Antigone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oedipus Rex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Agamemnon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Bacchae",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the red carpet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-184"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:05.910Z",
+   "target": "f06601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Antigone ( ann-TIG-ə-nee; Ancient Greek: Ἀντιγόνη) is an Athenian tragedy written by Sophocles in either 442 or 440 BC and first performed at the Festival of Dionysus of the same year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antigone” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:05.910Z",
+   "target": "f06602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oedipus Rex, also known by its Greek title, Oedipus Tyrannus (Ancient Greek: Οἰδίπους Τύραννος, pronounced [oidípuːs týrannos]), or Oedipus the King, is an Athenian tragedy written by Sophocles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oedipus Rex” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:05.910Z",
+   "target": "f06604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Only seven tragedies attributed to him have survived intact: The Persians, Seven Against Thebes, The Suppliants, the trilogy known as The Oresteia (the three tragedies Agamemnon, The Libation Bearers and The Eumenides), and Prometheus Bound (whose authorship is disputed).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agamemnon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:05.910Z",
+   "target": "f06605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Bacchae (; Ancient Greek: Βάκχαι, Bakkhai; also known as The Bacchantes ) is an ancient Greek tragedy, written by the Athenian playwright Euripides during his final years in Macedonia, at the court of Archelaus I of Macedon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Bacchae” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:05.910Z",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "By the late 1920s the red carpet had become synonymous with Hollywood and film premieres.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the red carpet” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:14Z",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In its earliest known incarnation the red carpet was not intended for ordinary folk. A path of dark red tapestries was rolled out in ancient Greece, in the Aeschylus play Agamemnon",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "In the play the path is of crimson/purple-dyed tapestries; it is conventionally cited as the first red carpet."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:20Z",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The earliest known reference to walking a red carpet in literature is in the play Agamemnon by Aeschylus, written in 458 BC.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:49.570Z",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In its earliest known incarnation the red carpet was not intended for ordinary folk. A path of dark red tapestries was rolled out in ancient Greece, in the Aeschylus play Agamemnon",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:49.570Z",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The earliest known reference to walking a red carpet in literature is in the play Agamemnon by Aeschylus, written in 458 BC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:49.570Z",
+   "target": "f14592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In its earliest known incarnation the red carpet was not intended for ordinary folk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the red carpet” is on the snapshot of s7"
+  }
+ ]
+}

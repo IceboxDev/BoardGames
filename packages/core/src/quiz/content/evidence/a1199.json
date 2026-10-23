@@ -1,0 +1,693 @@
+{
+ "article": "a1199",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Giant_panda",
+   "title": "Giant panda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:10.669Z",
+   "snapshot": "e73f0ff1ceef7cba3a28fa03033278cd3d5e5b565ae0455dd552b716664bb83a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Polar_bear",
+   "title": "Polar bear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:06.414Z",
+   "snapshot": "c07b37bc00e0a8edcbf6671b1346b6a9e820532b54efc969f0f1ccc3b95e951b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spectacled_bear",
+   "title": "Spectacled bear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:47.954Z",
+   "snapshot": "bc94d96177fbedc753dbba9f6b8773fa2c80311cffe8175e79e990ab8d6b93df"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sun_bear",
+   "title": "Sun bear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:48.977Z",
+   "snapshot": "e8b6c5d7892b69c0045114a03a17117c0fabd8a25920e9eb369de124cf13a702"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sloth_bear",
+   "title": "Sloth bear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:50.001Z",
+   "snapshot": "30bfa4aad52b585cf48cb0534f88ec91c34a3ccb17361b4eaea0c1eede7d4ec7"
+  },
+  "s6": {
+   "url": "https://www.fws.gov/species/polar-bear-ursus-maritimus",
+   "title": "Polar Bear (Ursus maritimus) – U.S. Fish & Wildlife Service",
+   "publisher": "U.S. Fish & Wildlife Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:30.306Z",
+   "snapshot": "ade1e1f1bb8a659618f0bd3a7323c094aeeec3109cc5b5f5859ea605b27d9d9a"
+  },
+  "s7": {
+   "url": "https://animals.sandiegozoo.org/animals/polar-bear",
+   "title": "Polar Bear – San Diego Zoo Animals & Plants",
+   "publisher": "San Diego Zoo Wildlife Alliance",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:30.555Z",
+   "snapshot": "ec8b9d905971a0eb5d8efa77380e742a12b501976bfcc4125ad7c05236372014"
+  },
+  "s8": {
+   "url": "https://animaldiversity.org/accounts/Tremarctos_ornatus/",
+   "title": "Tremarctos ornatus – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:35.505Z",
+   "snapshot": "2837b26c7c1166ed5e3c0fbc0fceb5a16f2fae73b909aeb77dc79dc1b2e45797"
+  },
+  "s9": {
+   "url": "https://animaldiversity.org/accounts/Helarctos_malayanus/",
+   "title": "Helarctos malayanus – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:36.177Z",
+   "snapshot": "8fbd9d6dfffcf33a69a35e5592e6f5578c56075c9d7e6401e2901d3160564683"
+  },
+  "s10": {
+   "url": "https://animals.sandiegozoo.org/animals/sun-bear",
+   "title": "Sun Bear – San Diego Zoo Animals & Plants",
+   "publisher": "San Diego Zoo Wildlife Alliance",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:35.953Z",
+   "snapshot": "4376a4ffa87da64633df58d9830a0eb851cd8edce46c6305a475d712979209dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "giant panda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "polar bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "spectacled bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sun bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "sloth bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:47.072Z",
+   "target": "f05991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The giant panda (Ailuropoda melanoleuca), also known as the panda bear or simply panda, is a bear species endemic to China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “giant panda” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.072Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The polar bear (Ursus maritimus) is a large bear native to the Arctic and nearby areas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “polar bear” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.072Z",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The spectacled bear (Tremarctos ornatus), also known as the Andean bear, is a species of bear native to the Andes Mountains in northern and western South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “spectacled bear” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:47.072Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The sun bear (Helarctos malayanus) is a bear species in the family Ursidae found in the tropical forests of Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sun bear” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:47.072Z",
+   "target": "f05995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The sloth bear (Melursus ursinus), also known as the Indian bear, is a myrmecophagous bear species native to the Indian subcontinent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sloth bear” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:05Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The polar bear (Ursus maritimus) is the largest of the extant bear species and is classified as a marine mammal.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:14Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The polar bear is the largest extant species of bear and land carnivore by body mass",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "some Kodiak brown bears rival it; 'considered' in the wording covers this"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:15:20Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Both polar bears and brown bears are big and are the largest land carnivores.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "shares the title with large brown bears"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:25Z",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tremarctos ornatus is the only species of bear native to South America.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:15:32Z",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the only living species of bear native to South America",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:15:37Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Sun bears are the smallest bears in the family Ursidae .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:15:43Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Sun bears are the smallest of the world's eight bear species, about half the size of American black bears.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:15:49Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the only species in the genus Helarctos and the smallest bear species",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The polar bear (Ursus maritimus) is the largest of the extant bear species and is classified as a marine mammal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The polar bear is the largest extant species of bear and land carnivore by body mass",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Both polar bears and brown bears are big and are the largest land carnivores.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tremarctos ornatus is the only species of bear native to South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the only living species of bear native to South America",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Sun bears are the smallest bears in the family Ursidae .",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Sun bears are the smallest of the world's eight bear species, about half the size of American black bears.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the only species in the genus Helarctos and the smallest bear species",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Polar Bear (Ursus maritimus) | U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polar bear” is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Polar Bear | San Diego Zoo Animals & Plants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polar bear” is on the snapshot of s7"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tremarctos ornatus (spectacled bear) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “spectacled bear” is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Helarctos malayanus (sun bear) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sun bear” is on the snapshot of s9"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:29.142Z",
+   "target": "f05994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Sun Bear | San Diego Zoo Animals & Plants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sun bear” is on the snapshot of s10"
+  }
+ ]
+}

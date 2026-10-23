@@ -1,0 +1,242 @@
+{
+ "article": "a2751",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Etymology_of_tea",
+   "title": "Etymology of tea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:02.121Z",
+   "snapshot": "4617b9621d8495cb98c78c2be9fab7c3394685e8550ee281bbeda9c0c5fff1dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lo_mein",
+   "title": "Lo mein",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:02.989Z",
+   "snapshot": "085c4e1230da607f1f1bd71ef78b7dbccdc12c7e7e530cea33477fb47132d0cc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dim_sum",
+   "title": "Dim sum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:04.096Z",
+   "snapshot": "f6ce9060d17b772dbc161176bd9c13c921ed191a1817af80a87ded8f919c5904"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Wonton",
+   "title": "Wonton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:04.988Z",
+   "snapshot": "92fbfb96c997e4c0c8d242590c2b496df23daa43f6988917d582bfa154d5cd68"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ketchup",
+   "title": "Ketchup – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:05.987Z",
+   "snapshot": "d8410b26bbcdf43aa0c08994fc1b5797812ddc2603d77dc4c2ac033384462ab6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stirred noodles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-123"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "touch the heart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cloud swallow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "brine of pickled fish or shellfish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:07.748Z",
+   "target": "f25675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The etymology of the various words for tea reflects the history of transmission of tea drinking culture and trade from China to countries around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tea” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:07.748Z",
+   "target": "f25676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The term lo mein comes from the Cantonese 撈麵, meaning \"stirred noodles\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stirred noodles” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:07.748Z",
+   "target": "f25678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The second is \"dim sum\", which translates literally to \"touch the heart\", the term used to designate the small food items that accompanied the tea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “touch the heart” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:07.748Z",
+   "target": "f25679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In Cantonese, they are called wantan (simplified Chinese: 云吞; traditional Chinese: 雲吞; Jyutping: wan4 tan1; Cantonese Yale: wàhn tān), which means \"cloud swallow\" because when they are cooked, the dumplings float in the broth like small clouds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cloud swallow” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:07.748Z",
+   "target": "f25680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Both pronunciations of the same word (膎汁, kôe-chiap / kê-chiap) come from the Quanzhou dialect, Amoy dialect, and Zhangzhou dialect of Hokkien, respectively, where it meant the brine of pickled fish or shellfish (膎, 'pickled food' (usually seafood) + 汁, 'juice').",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “brine of pickled fish or shellfish” is on the snapshot of s5"
+  }
+ ]
+}

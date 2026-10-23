@@ -1,0 +1,527 @@
+{
+ "article": "a2011",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Deutsche_Eurom%C3%BCnzen",
+   "title": "Deutsche Euromünzen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:58.916Z",
+   "snapshot": "a346ee99d596dbf77fbd924be3788849a5d79048cf53d3064b844fe12ebf670c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Griechische_Eurom%C3%BCnzen",
+   "title": "Griechische Euromünzen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:04.603Z",
+   "snapshot": "6bd8749489eab4dbcf4083adee74bd610f5a17c60c8ede3057fde4df249ed2c0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Holstentor",
+   "title": "Holstentor",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:20.420Z",
+   "snapshot": "a30ecd3860f7d87dfe7fd9edf3fb633754cd1f67fe09fe0cb16db46f4d222e52"
+  },
+  "s4": {
+   "url": "https://www.gesetze-im-internet.de/eurom_nzbek/BJNR313300001.html",
+   "title": "Bekanntmachung über die Gestaltung der nationalen Münzseiten der deutschen Euro-Münzen",
+   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:03.513Z",
+   "snapshot": "c493ed3d9e71e5adc0a4c79304ea66588a7c6c3d57dcd3315cccc4296a424f0d"
+  },
+  "s5": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/de.de.html",
+   "title": "Deutschland – Euro-Münzen – EZB",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:03.575Z",
+   "snapshot": "7076947adf2cf2831614d9fd18e8ba17755c3e4409770eb69464751d5f704d24"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/German_euro_coins",
+   "title": "German euro coins – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:26:52Z"
+  },
+  "s7": {
+   "url": "https://www.ecb.europa.eu/euro/coins/html/gr.en.html",
+   "title": "Greece – Euro coins – ECB",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:05.032Z",
+   "snapshot": "5b699dc015c58a24d58df6070fc99e92fe4d012436a43638199310b601c3f999"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eichenzweig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "5 Blätter und 2 Eicheln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-103"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eule",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-304"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "das Lübecker Holstentor",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-280"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:05.574Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eichenzweig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Eichenzweig”, “oak twig”, “дубовая ветвь”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:05.574Z",
+   "target": "f14630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "5 Blätter und 2 Eicheln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“5 Blätter und 2 Eicheln”, “5 leaves and 2 acorns”, “5 листьев и 2 жёлудя”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:05.574Z",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eule",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Eule”, “owl”, “сова”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:05.574Z",
+   "target": "f14632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Lübecker Holstentor kann darüber hinaus mit einer modellbauerischen Besonderheit aufwarten: Es beherbergt nämlich das älteste Buddelschiff der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:05.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “das Lübecker Holstentor” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:26:48Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Auf den kleinen Münzwerten 1, 2 und 5 Cent wird ein Eichenzweig mit seinem hohen Erinnerungswert an die deutschen Pfennig-Münzen abgebildet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:26:50Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1-, 2- und 5-Cent-Münzen: Der Eichenzweig erinnert an ein Motiv auf den früheren deutschen Pfennigmünzen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:26:52Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "German oak twig which was also featured on the former pfennig.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:26:53Z",
+   "target": "f14630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1-, 2- und 5-Cent-Münzen: Der Eichenzweig erinnert an ein Motiv auf den früheren deutschen Pfennigmünzen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Count verified by inspecting the ECB's official image of the German 5-cent coin (https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_5cent.jpg): the twig carries 5 leaves and 2 acorns. No text source states the count."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:26:55Z",
+   "target": "f14630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Eichenzweig füllt die Münzseite harmonisch aus.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "The official design notice describes the oak twig but not its count; the count (5 leaves, 2 acorns) was checked on the ECB's official coin image."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:26:56Z",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The image of the owl featured in this design was copied from an ancient Athenian 4-drachma coin (fifth century BC).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:26:57Z",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Abgebildet sind der Steinkauz und ein Olivenzweig",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Auf den kleinen Münzwerten 1, 2 und 5 Cent wird ein Eichenzweig mit seinem hohen Erinnerungswert an die deutschen Pfennig-Münzen abgebildet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1-, 2- und 5-Cent-Münzen: Der Eichenzweig erinnert an ein Motiv auf den früheren deutschen Pfennigmünzen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f14630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1-, 2- und 5-Cent-Münzen: Der Eichenzweig erinnert an ein Motiv auf den früheren deutschen Pfennigmünzen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f14630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Eichenzweig füllt die Münzseite harmonisch aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The image of the owl featured in this design was copied from an ancient Athenian 4-drachma coin (fifth century BC).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Abgebildet sind der Steinkauz und ein Olivenzweig",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Auf den kleinen Münzwerten 1, 2 und 5 Cent wird ein Eichenzweig mit seinem hohen Erinnerungswert an die deutschen Pfennig-Münzen abgebildet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eichenzweig” is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f10051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1-, 2- und 5-Cent-Münzen: Der Eichenzweig erinnert an ein Motiv auf den früheren deutschen Pfennigmünzen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eichenzweig” is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:52.983Z",
+   "target": "f14631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The image of the owl featured in this design was copied from an ancient Athenian 4-drachma coin (fifth century BC).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:52.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “owl” is on the snapshot of s7"
+  }
+ ]
+}

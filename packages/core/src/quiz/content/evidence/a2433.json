@@ -1,0 +1,330 @@
+{
+ "article": "a2433",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Herr_Lehmann",
+   "title": "Herr Lehmann",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:00.762Z",
+   "snapshot": "c054c0726ef56e88f972e98c7b545067bf20110bd83cfbaadb40634f383bfbe3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Neue_Vahr_S%C3%BCd",
+   "title": "Neue Vahr Süd – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:01.803Z",
+   "snapshot": "5e53fc27231de6e0e575883339633b8691cb6d6361e0b0c39ad50150fc3899b0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sven_Regener",
+   "title": "Sven Regener – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:03.151Z",
+   "snapshot": "925d615dff2867ef95ec0faf99126e7864825fbd3e15fb40d7c8c9d2acf63bce"
+  },
+  "s4": {
+   "url": "https://www.perlentaucher.de/buch/sven-regener/herr-lehmann.html",
+   "title": "Sven Regener: Herr Lehmann – Perlentaucher",
+   "publisher": "Perlentaucher (review digest: Süddeutsche Zeitung)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:13.440Z",
+   "snapshot": "d3889da367831898a571f0a1b6cbc0b5e007e3d8405d956eb00c185e724fc603"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12782",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Einfall",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-399"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12783",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bremen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-065"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12784",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Element of Crime",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12785",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frank",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mauerfall",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leander Haußmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:19.481Z",
+   "target": "f12782",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zwei Mal noch trifft er sie zufällig am selben Tag: am Nachmittag im Prinzenbad und am Abend erneut im „Einfall“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Einfall” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:19.481Z",
+   "target": "f12783",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ex-Organisierte teilen, und Punks im Ostertorsteinweg in Bremen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bremen” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:19.481Z",
+   "target": "f12784",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bekannt geworden ist er zunächst durch die Band Element of Crime, später mit seinem Roman Herr Lehmann und dem Drehbuch zum gleichnamigen Film sowie mit den weiteren Romanen der „Lehmann-Serie“, Neue Vahr Süd, Der kleine Bruder, Magical Mystery, Wiener Straße, Glitterschnitter und Frankie und",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Element of Crime” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:19.481Z",
+   "target": "f12785",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An einem Sonntagmorgen macht sich der betrunkene und kurz vor seinem dreißigsten Geburtstag stehende Barmann Frank Lehmann – von Freunden und Bekannten nur mehr „Herr Lehmann“ genannt – nach seiner Arbeitsschicht auf den Heimweg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:19.481Z",
+   "target": "f12786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mauerfall",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mauerfall”, “fall of the Berlin Wall”, “падение Берлинской стены”) on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:19.481Z",
+   "target": "f12787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Jahr 2003 erschien eine Verfilmung des Romans unter der Regie von Leander Haußmann und mit Christian Ulmen in der Rolle des titelgebenden Protagonisten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leander Haußmann” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:07:48Z",
+   "target": "f12786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Geschichte endet mit dem Fall der Berliner Mauer am 9. November 1989, von dem „Herr Lehmann“ in der Kneipe erfährt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:07:51Z",
+   "target": "f12786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Weniger gefällt Bartels da schon das effekthascherische Hinschreiben auf den 9. November 1989.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "SZ reviewer criticises the novel's build-up towards 9 November 1989 (the night the Wall opened)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:02.624Z",
+   "target": "f12786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Geschichte endet mit dem Fall der Berliner Mauer am 9. November 1989, von dem „Herr Lehmann“ in der Kneipe erfährt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  }
+ ]
+}

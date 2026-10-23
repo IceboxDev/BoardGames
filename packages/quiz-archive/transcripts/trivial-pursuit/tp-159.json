@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-159",
+ "image": "IMG20261007180606.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher mexikanischen Stadt wurde der Caesar-Salat erfunden?",
+   "de": "In welcher mexikanischen Stadt wurde der Caesar-Salat erfunden?",
+   "en": "In which Mexican city was the Caesar salad invented?",
+   "reworked": false,
+   "answerDe": "Tijuana",
+   "answerEn": "Tijuana",
+   "timeline": {
+    "kind": "creation",
+    "start": "1924-07-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Caesar Cardini creates the Caesar salad at his restaurant Caesar's in Tijuana",
+    "labelDe": "Caesar Cardini kreiert den Caesar Salad in seinem Restaurant Caesar's in Tijuana"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Caesar_salad",
+    "title": "Caesar salad",
+    "lang": "en"
+   },
+   "notes": "The date 4 July 1924 is the traditional account of the invention (Cardini's daughter's story).",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 2,
+   "cardDe": "Im Durchschnitt werden täglich rund 20 Prozent aller Google-Suchanfragen zum ersten Mal gestellt. Richtig oder falsch?",
+   "de": "Wie viel Prozent aller Google-Suchanfragen sind laut Google jeden Tag solche, die Google noch nie zuvor gesehen hat?",
+   "en": "According to Google, what percentage of all Google searches each day are ones it has never seen before?",
+   "reworked": true,
+   "answerDe": "15 Prozent",
+   "answerEn": "15 percent",
+   "timeline": {
+    "kind": "founding",
+    "start": "1998-09-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Google is incorporated by Larry Page and Sergey Brin",
+    "labelDe": "Larry Page und Sergey Brin gründen das Unternehmen Google"
+   },
+   "source": {
+    "url": "https://www.google.com/search/howsearchworks/our-approach/",
+    "title": "Our Approach - How Google Search Works",
+    "lang": "en"
+   },
+   "notes": "Google states \"Every day, fifteen percent of searches are ones we haven't seen before.\" The card's 20 percent is therefore false per Google's own figure. Timeline: Google's incorporation (en.wikipedia Google).",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 3,
+   "cardDe": "Bundesdeutsche Frauen mussten bis 1977 die Zustimmung ihrer Ehemänner vorlegen, wenn sie allein in einem Hotel übernachten wollten. Richtig oder falsch?",
+   "de": "Bis zu welchem Jahr durften Ehefrauen in der Bundesrepublik laut Gesetz nur dann berufstätig sein, wenn dies mit ihren Pflichten in Ehe und Familie vereinbar war?",
+   "en": "Until what year were married women in West Germany legally allowed to work only if it was compatible with their duties in marriage and family?",
+   "reworked": true,
+   "answerDe": "1977",
+   "answerEn": "1977",
+   "timeline": {
+    "kind": "event",
+    "start": "1977-07-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "West Germany's first marriage and family law reform takes effect, replacing the housewife-marriage model",
+    "labelDe": "Das Erste Gesetz zur Reform des Ehe- und Familienrechts tritt in Kraft und ersetzt das Leitbild der Hausfrauenehe"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Erstes_Gesetz_zur_Reform_des_Ehe-_und_Familienrechts",
+    "title": "Erstes Gesetz zur Reform des Ehe- und Familienrechts",
+    "lang": "de"
+   },
+   "notes": "The card's hotel claim could not be confirmed on any fetched source, so the question was reworked to the documented 1977 change: the 1. EheRG (in force mostly from 1 July 1977) replaced the 'Hausfrauenehe' model, under which a wife could work only if compatible with her marital and family duties.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher extravagante Künstler führte gelegentlich seinen Hummer an der Leine aus: Oscar Wilde, Pablo Picasso oder Freddie Mercury?",
+   "de": "Welcher extravagante französische Dichter führte seinen Hummer an einem blauen Seidenband im Pariser Palais-Royal spazieren?",
+   "en": "Which extravagant French poet walked his lobster on a blue silk ribbon in the Palais-Royal in Paris?",
+   "reworked": true,
+   "answerDe": "Gérard de Nerval",
+   "answerEn": "Gérard de Nerval",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1808-05-22",
+    "end": "1855-01-26",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gérard de Nerval, French Romantic poet",
+    "labelDe": "Gérard de Nerval, französischer Dichter der Romantik"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/G%C3%A9rard_de_Nerval",
+    "title": "Gérard de Nerval",
+    "lang": "en"
+   },
+   "notes": "The famous lobster on a leash (named Thibault) belonged to Gérard de Nerval, who is none of the card's three options; the card's options appear to be wrong, so the question was reworked to the documented fact.",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 5,
+   "cardDe": "Von Viren befallenes und verkümmertes Getreide wird vom Bauern Runzelkorn genannt. Richtig oder falsch?",
+   "de": "In welchem Bereich bezeichnet „Runzelkorn“ einen Fehler, der bei der Entwicklung von Filmen auftreten kann?",
+   "en": "In which field does \"Runzelkorn\" (reticulation) denote a defect that can occur when developing film?",
+   "reworked": true,
+   "answerDe": "Fotografie",
+   "answerEn": "Photography",
+   "timeline": {
+    "kind": "creation",
+    "start": "1871-09-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Richard Leach Maddox publishes the gelatin dry-plate process; reticulation forms in such gelatin layers",
+    "labelDe": "Richard Leach Maddox veröffentlicht das Gelatine-Trockenverfahren; in solchen Gelatineschichten entsteht Runzelkorn"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Runzelkorn",
+    "title": "Runzelkorn",
+    "lang": "de"
+   },
+   "notes": "The card's statement is false: Runzelkorn is a film-development defect (fine cracks in the gelatin layer from temperature differences between baths), not diseased grain. Timeline date from de.wikipedia 'Trockenes Gelatineverfahren'.",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt ein Hirsch ohne Geweih in der Jägersprache: Mönch, Priester oder Abt?",
+   "de": "Wie heißt ein Hirsch ohne Geweih in der Jägersprache?",
+   "en": "In German hunters' jargon, what is a stag without antlers called?",
+   "reworked": true,
+   "answerDe": "Mönch",
+   "answerEn": "Mönch (\"monk\")",
+   "timeline": {
+    "kind": "era",
+    "start": "1100",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": true,
+    "labelEn": "German hunters' language develops as the guild jargon of professional huntsmen from the 12th century",
+    "labelDe": "Die Jägersprache entwickelt sich ab dem 12. Jahrhundert als Zunftsprache der Berufsjäger"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/J%C3%A4gersprache",
+    "title": "Jägersprache",
+    "lang": "de"
+   },
+   "notes": "Jägersprache lists 'Mönch: geweihloser Hirsch' and 'Plattkopf oder Mönch: Rothirsch ohne Trophäe'; Plattkopf is also accepted.",
+   "domain": "literature",
+   "sub": "language"
+  }
+ ]
+}

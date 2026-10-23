@@ -1,0 +1,242 @@
+{
+ "article": "a0174",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+   "title": "Watergate scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:05.491Z",
+   "snapshot": "825a84f25028ee0f080513265225c311360dc6d4ceab901e5467d8c422b1c1ea"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Texas_School_Book_Depository",
+   "title": "Texas School Book Depository – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:06.262Z",
+   "snapshot": "6ecfb719a96246bf33d143ca2119a6ae31f5767ee2079e3a9106ddaad1329b83"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lorraine_Motel",
+   "title": "Lorraine Motel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:07.491Z",
+   "snapshot": "aa3c7a97b030d7824eb82ef49992099f20c72b7c60100244f50142f6a2517b6b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ambassador_Hotel_(Los_Angeles)",
+   "title": "Ambassador Hotel (Los Angeles) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:08.373Z",
+   "snapshot": "3ce4c9e91cf98dad6a59da731378a2ec6a6c3014a4c5002938a354ac5d7d36a2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/January_6_United_States_Capitol_attack",
+   "title": "January 6 United States Capitol attack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:09.488Z",
+   "snapshot": "88f82dd6c253fef78cf7742d4aa662dddee202e092333681eb516e4b1170c9e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Watergate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Texas School Book Depository",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lorraine Motel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ambassador Hotel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Capitol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:04.743Z",
+   "target": "f00866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Watergate scandal, also simply called Watergate, was a political scandal in the United States involving the administration of President Richard Nixon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Watergate” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:04.743Z",
+   "target": "f00867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Texas School Book Depository, later known as the Dallas County Administration Building and now \"The Sixth Floor Museum\", is a seven-floor building facing Dealey Plaza in Dallas, Texas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Texas School Book Depository” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:04.743Z",
+   "target": "f00868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The museum is built around the former Lorraine Motel, the site of the assassination of Martin Luther King Jr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lorraine Motel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:04.743Z",
+   "target": "f00869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ambassador Hotel was a high-end, luxury hotel in Los Angeles, California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ambassador Hotel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:04.743Z",
+   "target": "f00870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "January 6 United States Capitol attack",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Capitol” is on the snapshot of s5"
+  }
+ ]
+}

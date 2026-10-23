@@ -1,0 +1,392 @@
+{
+ "article": "a1872",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Emil_Berliner",
+   "title": "Emil Berliner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:17.693Z",
+   "snapshot": "3c568311b9b960ce90f6c87b586f7acdbd4c18f17342cad585e9059d0225931b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Graphophone",
+   "title": "Graphophone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:21.501Z",
+   "snapshot": "58268b347fe6f02ad1d6f52d19a796a2cb823bf6accfde984a47f5eb14cf057e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Valdemar_Poulsen",
+   "title": "Valdemar Poulsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:22.493Z",
+   "snapshot": "b0a025d6bd9e5c2cc7413116912ca06a04de25af22af537968701cda7deee4e2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mary_Had_a_Little_Lamb",
+   "title": "Mary Had a Little Lamb – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:30.441Z",
+   "snapshot": "f16a0609f5ad998cde7a7b26420ec72fddcb551ed79648be74cc289f913e500f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Phonograph",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:27.459Z",
+   "snapshot": "3b0bcb343e11c85e4241c088c6993d44a142a940adea5ea787aa9394cf914d43"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Walkman",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:36.937Z",
+   "snapshot": "09ed6c47d3f8e2a95b377cebbc1a413cbf8ae519ce3cce9e5b11008ebd99126d"
+  },
+  "s7": {
+   "url": "https://www.nps.gov/edis/learn/historyculture/origins-of-sound-recording-thomas-edison.htm",
+   "title": "Origins of Sound Recording: Thomas Edison – Thomas Edison National Historical Park",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:00.777Z",
+   "snapshot": "0ec7e820620a8a259c0e10497a5a1834a64214f8fee2c8f28a498e9791efcea4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grammophon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "graphophone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "telegraphone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mary had a little lamb",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emperor Franz Joseph",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:37.510Z",
+   "target": "f09356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bestandteil des Patents war auch ein Aufnahme- und Abspielgerät, das ursprüngliche Grammophon.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grammophon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:37.510Z",
+   "target": "f09358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Graphophone was the name and trademark of an improved version of the phonograph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “graphophone” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:37.510Z",
+   "target": "f09359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Valdemar Poulsen (23 November 1869 – 23 July 1942) was a Danish engineer and inventor who developed a magnetic wire recorder called the telegraphone in 1898.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “telegraphone” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:37.510Z",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Mary Had a Little Lamb\" is an English-language nursery rhyme of nineteenth-century American origin, first published by American writer Sarah Josepha Hale in 1830.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mary had a little lamb” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:37.510Z",
+   "target": "f24543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ten-second video of the 1900 recording of the Austro-Hungarian emperor Franz Joseph on YouTube.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emperor Franz Joseph” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:07:01Z",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The rhyme was the first audio recorded by Thomas Edison on his newly invented phonograph in 1877.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:07:03Z",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "delivered one of our favorite stereotyped sentences used in experimenting on the telephone “Mary had a little lamb” whilst I pulled the paper through.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "NPS (Batchelor's account) shows the rhyme was the lab's standard test phrase in the 1877 paper-strip experiments that preceded the tinfoil machine"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:07:05Z",
+   "target": "f24543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "recorded the voice of Emperor Franz Josef of Austria which is believed to be the oldest surviving magnetic audio recording.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:26.753Z",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The rhyme was the first audio recorded by Thomas Edison on his newly invented phonograph in 1877.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:26.753Z",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "delivered one of our favorite stereotyped sentences used in experimenting on the telephone “Mary had a little lamb” whilst I pulled the paper through.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:26.753Z",
+   "target": "f24543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "recorded the voice of Emperor Franz Josef of Austria which is believed to be the oldest surviving magnetic audio recording.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:26.753Z",
+   "target": "f24542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Edison sat down and, putting his mouth to the mouthpiece, delivered one of our favorite stereotyped sentences used in experimenting on the telephone “Mary had a little lamb” whilst I pulled the paper through.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:26.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mary had a little lamb” is on the snapshot of s7"
+  }
+ ]
+}

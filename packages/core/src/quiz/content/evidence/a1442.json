@@ -1,0 +1,412 @@
+{
+ "article": "a1442",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Victor_Hugo",
+   "title": "Victor Hugo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:13.807Z",
+   "snapshot": "86e8e77cf22a56e974a847269d9a6029043efc725f8bdfbc3819071786c48c77"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexandre_Dumas",
+   "title": "Alexandre Dumas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:40.380Z",
+   "snapshot": "892f72e516509408124fa40c9aba5327ed3f25b5931a33502ceb43c498288fe2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Honor%C3%A9_de_Balzac",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:41.497Z",
+   "snapshot": "324d73f832c8fc593e5914455b9df9f8cbe480744950cbd79109b2fee64395b5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gustave_Flaubert",
+   "title": "Gustave Flaubert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:42.440Z",
+   "snapshot": "ef61e3cd7a6536f455c85f9d801c475571aad97ab4fdbcbdc10987e2054dd18a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Madame_Bovary",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:43.402Z",
+   "snapshot": "43f22f46ddbbc946b792827824b6744bf96575c3ebf07e87c8d5eac93cae3432"
+  },
+  "s6": {
+   "url": "https://t5k.org/curios/page.php/823.html",
+   "title": "823 – Prime Curios!",
+   "publisher": "PrimePages (University of Tennessee at Martin)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:58.429Z",
+   "snapshot": "be1250e02efaa6382ae647ba47c3626ac7b4da8d9f3d9e930a0d6be91d2578f5"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/cache/epub/17518/pg17518.txt",
+   "title": "Les misérables Tome IV – Victor Hugo – Project Gutenberg",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:39:59.470Z",
+   "snapshot": "125ad3af45acd5ab0bc7b99b56e6420c7e47573b283a8527db20ba925b2d5934"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Victor Hugo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandre Dumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexandre Dumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gustave Flaubert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gustave Flaubert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Honoré de Balzac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:26.869Z",
+   "target": "f07206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hugo later titled himself as a viscount, and it was as \"Vicomte Victor Hugo\" that he was appointed a peer of France on 13 April 1845.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Victor Hugo” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:26.869Z",
+   "target": "f07207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandre Dumas (born Alexandre Davy de la Pailleterie; 24 July 1802 – 5 December 1870), also known as Alexandre Dumas père, was a French novelist and playwright.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexandre Dumas” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:26.869Z",
+   "target": "f07207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexandre Dumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Alexandre Dumas”, “Александр Дюма”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:26.869Z",
+   "target": "f07208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gustave Flaubert (UK:  FLOH-bair, US:  floh-BAIR; French: [ɡystav flobɛʁ]; 12 December 1821 – 8 May 1880) was a French novelist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustave Flaubert” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:26.869Z",
+   "target": "f07208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Madame Bovary: Provincial Manners (French: Madame Bovary : Mœurs de province, pronounced [madam bɔvaʁi mœʁ(s) də pʁɔvɛ̃s]), commonly known as simply Madame Bovary,  is the debut novel of French writer Gustave Flaubert, originally published in 1856 and 1857.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustave Flaubert” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:26.869Z",
+   "target": "f07210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Honoré de Balzac ( BAL-zak, also US:  BAWL-; French: [ɔnɔʁe d(ə) balzak]; born Honoré Balzac; 20 May 1799 – 18 August 1850) was a French novelist and playwright.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Honoré de Balzac” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:58:20Z",
+   "target": "f07206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Victor Hugo's Les Misérables contains one of the longest sentences (823 words without a period) in the French language.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:58:22Z",
+   "target": "f07206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Fils d'un père auquel l'histoire accordera certainement les circonstances atténuantes, mais aussi digne d'estime que ce père avait été digne de blâme;",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23",
+   "note": "the long sentence itself (Tome IV, livre 1, ch. 3 'Louis-Philippe') in Hugo's text"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:58:24Z",
+   "target": "f07206",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Louis-Philippe sera classé parmi les hommes éminents de son siècle",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23",
+   "note": "own count of this sentence in this edition: 760 space-separated words, ~809 if elisions (l', d') count separately; '823' is the usual cited figure, exact count depends on edition/rule"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:12.356Z",
+   "target": "f07206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Victor Hugo's Les Misérables contains one of the longest sentences (823 words without a period) in the French language.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:12.356Z",
+   "target": "f07206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Fils d'un père auquel l'histoire accordera certainement les circonstances atténuantes, mais aussi digne d'estime que ce père avait été digne de blâme;",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:12.356Z",
+   "target": "f07206",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Louis-Philippe sera classé parmi les hommes éminents de son siècle",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  }
+ ]
+}

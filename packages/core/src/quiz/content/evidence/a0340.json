@@ -1,0 +1,433 @@
+{
+ "article": "a0340",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Matrix",
+   "title": "The Matrix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:16.601Z",
+   "snapshot": "48cb3a3fa4bf5c31782845fd6a64a6e821aed4b099e04a854be716a1ebdbd145"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jurassic_Park",
+   "title": "Jurassic Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:01.843Z",
+   "snapshot": "161ce269455888dd66984b33cb328ffc638e4f7a9d4b48370f24d36e4e0364f9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Toy_Story",
+   "title": "Toy Story – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:14.809Z",
+   "snapshot": "7631928a9ab2efa8d9ddf7c8462609e20c86e2792f3056a0fab825b2a69a1e90"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/64th_Academy_Awards",
+   "title": "64th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:17.330Z",
+   "snapshot": "e1b210028d3041a198a2c60a597fa1b092638e638973c9a929f44bce9c8d7e5d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Avatar_(2009_film)",
+   "title": "Avatar (2009 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:18.569Z",
+   "snapshot": "4d2ab3109c4e47f55991cbdefa971e73052326f574750837cbe7e58238b92701"
+  },
+  "s6": {
+   "url": "https://www.pixar.com/our-story",
+   "title": "Our Story",
+   "publisher": "Pixar Animation Studios",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:24.299Z",
+   "snapshot": "2d19ebcce244985835b400981fd9ac6d9fdd8a109d175cd853d2e430ebffbed7"
+  },
+  "s7": {
+   "url": "https://www.oscars.org/oscars/ceremonies/1996",
+   "title": "The 68th Academy Awards | 1996",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:24.234Z",
+   "snapshot": "d4820e8e44ea31acfd0e83480d07c8000d60fd7cb72420ef62e3054b4820c917"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Matrix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jurassic Park",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Toy Story",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Terminator 2",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Avatar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:32.384Z",
+   "target": "f01696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Matrix is a 1999 science fiction–action film written and directed by the Wachowskis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Matrix” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:32.384Z",
+   "target": "f01697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jurassic Park is a 1993 American science fiction film directed by Steven Spielberg and written by Michael Crichton and David Koepp, based on Crichton's 1990 novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jurassic Park” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:32.384Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Toy Story is a 1995 American animated adventure comedy film directed by John Lasseter, and written by Joss Whedon, Andrew Stanton, Joel Cohen, and Alec Sokolow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toy Story” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:32.384Z",
+   "target": "f01699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Other winners included Terminator 2: Judgment Day with four awards, Beauty and the Beast, Bugsy, and JFK with two, and City Slickers, Deadly Deception: General Electric, Nuclear Weapons and Our Environment, The Fisher King, In the Shadow of the Stars, Manipulation, Mediterraneo, Session Man, and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Terminator 2” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:32.384Z",
+   "target": "f01700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Avatar is a 2009 epic science fiction film written and directed by James Cameron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Avatar” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:40:10Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1995 Toy Story, the world's first computer animated feature film, is released in theaters on November 22.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:40:13Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "for his \"inspired leadership of the Pixar Toy Story Team resulting in the first feature-length computer animated film.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:40:16Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first entirely computer-animated feature film, as well as the first feature film produced by Pixar Animation Studios for Walt Disney Pictures",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:40:18Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Special Achievement Award Winner Toy Story",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23",
+   "note": "official listing of the special award; its citation (first feature-length computer-animated film) is quoted on pixar.com"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:52.491Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "for his \"inspired leadership of the Pixar Toy Story Team resulting in the first feature-length computer animated film.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:52.491Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first entirely computer-animated feature film, as well as the first feature film produced by Pixar Animation Studios for Walt Disney Pictures",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:52.491Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Special Achievement Award Winner Toy Story",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:52.491Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pixar begins work on the project that will become Toy Story, while continuing to produce commercials and other short materials, including spots for public television.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Toy Story” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:52.491Z",
+   "target": "f01698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "You've Got A Friend In Me in \"Toy Story\" Music and Lyric by Randy Newman",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Toy Story” is on the snapshot of s7"
+  }
+ ]
+}

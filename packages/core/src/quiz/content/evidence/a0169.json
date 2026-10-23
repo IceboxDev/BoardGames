@@ -1,0 +1,242 @@
+{
+ "article": "a0169",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Symphony_No._9_(Beethoven)",
+   "title": "Symphony No. 9 (Beethoven) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:23.186Z",
+   "snapshot": "5ef5ef9027ee37ca768370672a2c7a0f01ca5e7341cf036d2605e4d293df5c4f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Erlk%C3%B6nig_(Schubert)",
+   "title": "Erlkönig (Schubert) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:24.261Z",
+   "snapshot": "1b6d671ae6e29194270881f191a61bb3cff7c87d9b9013d1a14a8906b77090a3"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Heinrich_Heine",
+   "title": "Heinrich Heine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:30:21.807Z",
+   "snapshot": "1c305a332149192f90b0283f26fef6117707ffecb4610cb459dca684abfe3dcc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Carmina_Burana_(Orff)",
+   "title": "Carmina Burana (Orff) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:25.265Z",
+   "snapshot": "df9cc05857e9efd7943d6ede46773f383217d16224490b634ac85945d093f95b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Four_Last_Songs",
+   "title": "Four Last Songs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:26.171Z",
+   "snapshot": "f327fffa27759ae58bd8e8a2584bd30f39378548dbd4452b9bc38a69937ea5fa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00841",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ode to Joy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00842",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erlkönig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00843",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heinrich Heine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00844",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carmina Burana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hermann Hesse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:03.790Z",
+   "target": "f00841",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The final (4th) movement of the symphony, commonly known as the Ode to Joy, features four vocal soloists and a chorus in the parallel key of D major.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ode to Joy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:03.790Z",
+   "target": "f00842",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A technically challenging piece for both performers and accompanists, \"Erlkönig\" has been popular and acclaimed since its premiere in 1821, and has been described as one of the \"commanding compositions of the century\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erlkönig” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:03.790Z",
+   "target": "f00843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Von da an nannte er sich Heinrich Heine.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Heine” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:03.790Z",
+   "target": "f00844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carmina Burana is a cantata composed in 1935 and 1936 by Carl Orff, based on 24 poems from the medieval collection Carmina Burana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carmina Burana” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:03.790Z",
+   "target": "f00845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Strauss had also recently been given a copy of the complete poems of Hermann Hesse and was strongly inspired by them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermann Hesse” is on the snapshot of s5"
+  }
+ ]
+}

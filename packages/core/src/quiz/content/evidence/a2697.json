@@ -1,0 +1,402 @@
+{
+ "article": "a2697",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dharma",
+   "title": "Dharma",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:21.305Z",
+   "snapshot": "bea0c3bd998954de67f4845606d33e2beae954f83ba0081e9a7f5bbb6e11f1e0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sa%E1%B9%83s%C4%81ra",
+   "title": "Saṃsāra",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:22.294Z",
+   "snapshot": "52f383c4a3bed29931f0703a5bc6e38ee3ad98911dd74a05fc0480c8acf5ed0a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Moksha",
+   "title": "Moksha",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:23.270Z",
+   "snapshot": "d1ed0e624dbf255f5ab90a1ab987d28937b52671836b0303285d79654c0587ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/%C4%80tman_(Hinduism)",
+   "title": "Ātman (Hinduism)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:24.315Z",
+   "snapshot": "fc30fafbd0e85163978efbad0879570483b7a5b0a7f21f8edc48ab0e34a1cc4b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ahimsa",
+   "title": "Ahimsa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:25.208Z",
+   "snapshot": "6bd6c6d8883c60739da5ca8074ed1696d5c8f4c774b974dcccaf3003d956b78c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Yoga",
+   "title": "Yoga",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:26.647Z",
+   "snapshot": "67bbf5dec519d29b8f20dc3c8543c0b1ab93f70083c536eddb5b644eb58dacf0"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Om",
+   "title": "Om – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:27.305Z",
+   "snapshot": "f3688e1dc07f7f2c9fe5618214c977bc02a6f39b5edd9528d803d2fc675b6a68"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mandukya_Upanishad",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:28.283Z",
+   "snapshot": "1cf34961fbef266c4e2665a3d06b88431c7e8b1d5f35b2de385cb02b44606283"
+  },
+  "s9": {
+   "url": "https://commons.wikimedia.org/wiki/File:BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:25.434Z",
+   "snapshot": "1ce6dc13f379330681f61a0789c441febd2db349214bbd2d68728c26a6be53ac",
+   "cloneOf": "wikipedia.org"
+  },
+  "s10": {
+   "url": "https://www.etymonline.com/search?q=yoga",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dharma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samsara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moksha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Atman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ahimsa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Om",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 50"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Om",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 50"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To yoke",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s10",
+     "quote": "To yoke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-024/1, u04: The card's \"religious origin of yoga = Hinduism\" is contested: yoga grew up in Vedic, Jain and Buddhist circles alike. The bank asks the settled etymology instead (yuj = \"to yoke\"). The notes accept \"to join/unite/harness\" too, and the body says yoga is practised in all three traditions."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f25230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dharma (; Sanskrit: धर्म, pronounced [dʱɐrmɐ] ) is a key concept in various Indian-origin religions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dharma” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f25231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saṃsāra (Devanagari: संसार) is a Sanskrit word that means \"wandering\" as well as \"world,\" wherein the term connotes \"cyclic change\" or, less formally, \"running around in circles.\" In the context of Indian religions and philosophies, saṃsāra is the concept of all beings experiencing an ongoing cycle",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samsara” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f25232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moksha (, UK also ; Sanskrit: मोक्ष, mokṣa), also called vimoksha, vimukti, and mukti, is a term in Jainism, Buddhism, Hinduism, and Sikhism for freedom, liberation, or release from 'impurities' (klesa) such as ignorance (avidhya) and 'earthly desires', and from saṃsāra, the cycle of death and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moksha” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f25233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ātman (; Sanskrit: आत्मन्) in Hinduism is the true, innermost essence or self of a living being, conceived as eternal and unchanging.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atman” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f25234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ahimsa (Sanskrit: अहिंसा, IAST: ahiṃsā; IPA: [ɐ́.ɦĩ.sɑː]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ahimsa” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f25548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "According to Jones and Ryan, \"The word yoga is derived from the root yuj, \"to yoke\", probably because the early practice concentrated on restraining or \"yoking in\" the senses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “To yoke” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f28324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Om (or Aum; ; Sanskrit: ॐ, ओं, ओम्, romanized: Oṃ, ISO 15919: Ōṁ) is a polysemous symbol representing a sacred sound, seed syllable, mantra, and invocation in Buddhism, Hinduism, Jainism and Sikhism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Om” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:58.709Z",
+   "target": "f28324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "We are told [in Mandukya Upanishad] how, \"the syllable Om is verily all that exists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Om” is on the snapshot of s8"
+  }
+ ]
+}

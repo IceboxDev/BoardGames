@@ -1,0 +1,195 @@
+{
+ "article": "a0647",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Birch_bark_tar",
+   "title": "Birch bark tar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:40.038Z",
+   "snapshot": "64abd8e2115ac51965f4c75b20b0c344be07e8303deb5f3c7c62e8784037c19a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Turpentine",
+   "title": "Turpentine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:41.061Z",
+   "snapshot": "41130dcbb6dc0d4c176e45a7ed326e6d6fc0a118bb23d0b7944e3d57901216a6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rosin",
+   "title": "Rosin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:42.059Z",
+   "snapshot": "9d47fd39b4094dc8db0e2afc13db76633fa0552e57e104e0aa2cb1979d2b7b2e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Frankincense",
+   "title": "Frankincense – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:43.075Z",
+   "snapshot": "7bca495f8932ef49b7f58f605d2c115123c33dd658be037feb5d0c16522d9e24"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pitch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Turpentine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frankincense",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:20.343Z",
+   "target": "f03231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Birch bark tar (sometimes referred to as birch bark pitch) is a substance that is synthesized by dry distillation of birch tree bark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pitch” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:20.343Z",
+   "target": "f03232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Turpentine (which is also called spirit of turpentine, oil of turpentine, terebenthine, terebenthene, terebinthine and, colloquially, turps) is a fluid obtainable by the distillation of resin harvested from living trees, mainly pines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Turpentine” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:20.343Z",
+   "target": "f03233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosin (), also known as colophony or Greek pitch (Latin: pix graeca), is a resinous material obtained from pine trees and other plants, mostly conifers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosin” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:20.343Z",
+   "target": "f03235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frankincense, also known as olibanum (), is an aromatic resin used in incense and perfume, obtained from trees of the genus Boswellia in the family Burseraceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frankincense” is on the snapshot of s4"
+  }
+ ]
+}

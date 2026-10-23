@@ -1,0 +1,289 @@
+{
+ "article": "a1177",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Third_Man",
+   "title": "The Third Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:26.974Z",
+   "snapshot": "68385ce6db04fc1fac76576924c7a6a4edfe52e290da88fa6f81f3f523975fb4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/History_of_the_mandolin",
+   "title": "History of the mandolin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:27.980Z",
+   "snapshot": "1b115e50cb65ef4e1ad2a617dbec00f01ad7bf5688bbdb9889b4e5976433e5f2"
+  },
+  "s3": {
+   "url": "https://commons.wikimedia.org/wiki/File:Mandolin_MET_DP234545.jpg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:25.916Z",
+   "snapshot": "96af37a2ecdf5c794814506251143801c999299e937c82b86e6d39867dd1f3df",
+   "cloneOf": "wikipedia.org"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Banjo",
+   "title": "Banjo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:29.046Z",
+   "snapshot": "9253d19b47f1b59adac8ee20676edc4072714e71db5c545b7768dec1283dd448"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Banjo",
+   "title": "Banjo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:26.131Z",
+   "snapshot": "ec98248caa9185ef742087df9398c9177b0f9c3e15e469362f021fff8f7615eb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/John_Dowland",
+   "title": "John Dowland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:29.962Z",
+   "snapshot": "ad75d848ece66be98364c51177602b4d2badb2cdd7bfe2d38d2a6e394df76992"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "zither",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mandolin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "mandolin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 13"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "banjo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Banjo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-016"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "lute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:44.347Z",
+   "target": "f05881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zither player Anton Karas composed and performed the film's score.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “zither” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:44.347Z",
+   "target": "f05882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The mandolin is a modern member of the lute family, dating back to Italy in the 18th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mandolin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:44.347Z",
+   "target": "f05882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "File:Mandolin MET DP234545.jpg - Wikimedia Commons",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mandolin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:44.347Z",
+   "target": "f05883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The banjo is a stringed instrument with a thin membrane stretched over a frame or cavity to form a resonator.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “banjo” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:44.347Z",
+   "target": "f05883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Banjo ist ein Zupfinstrument.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Banjo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:44.347Z",
+   "target": "f05885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Much of Dowland's music is for his own instrument, the lute.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lute” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a0522",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+   "title": "Berlin Wall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:11.416Z",
+   "snapshot": "ddfc507696701de7d2b7313c169aded7a233eedfcd5af28e9ff5add13eb75b26"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Flucht_aus_der_Sowjetischen_Besatzungszone_und_der_DDR",
+   "title": "Flucht aus der Sowjetischen Besatzungszone und der DDR – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:02:08.400Z",
+   "snapshot": "0eeb043e0dd0db57e4630e78fecf1debc8f195ae2d9a5d0c1ec9e8c9d1ea4900"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Arbeiter-und-Bauern-Staat",
+   "title": "Arbeiter-und-Bauern-Staat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:02:09.216Z",
+   "snapshot": "9bfe625855f620b0d2a7fb7d3c83e162f3cce5a33a09920e8a24686b3c2c06f8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Iron_Curtain",
+   "title": "Iron Curtain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:12.206Z",
+   "snapshot": "b04ca45694751d12f205340facf08375a4f4582919406b35a7f4810a914c0389"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Volkseigener_Betrieb",
+   "title": "Volkseigener Betrieb – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:02:10.213Z",
+   "snapshot": "e93e86fe93aa5fc77f33f52be8b76566c18377c41d93b50b83441d57359adab1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Republikflucht",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:02:11.318Z",
+   "snapshot": "a49787436893edb765733659ee1507cb4a318be7bb96eabe7c7aee771a125dab"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anti-Fascist Protection Rampart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Republikflucht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arbeiter-und-Bauern-Staat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Iron Curtain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Volkseigener Betrieb",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:01.714Z",
+   "target": "f02606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The authorities officially referred to the Berlin Wall as the Anti-Fascist Protection Rampart (Antifaschistischer Schutzwall, pronounced [antifaˌʃɪstɪʃɐ ˈʃʊtsval] ).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.714Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anti-Fascist Protection Rampart” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:01.714Z",
+   "target": "f02607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Flucht aus der Sowjetischen Besatzungszone und der DDR – im Sprachgebrauch der DDR „Republikflucht“ – war das Verlassen der DDR oder ihres Vorläufers, der Sowjetischen Besatzungszone (SBZ), oder Ost-Berlins ohne Genehmigung der Behörden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.714Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Republikflucht” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:01.714Z",
+   "target": "f02608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ein Arbeiter-und-Bauern-Staat ist nach leninistischer bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.714Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arbeiter-und-Bauern-Staat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:01.714Z",
+   "target": "f02609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Iron Curtain was the political and physical boundary that divided Europe from the end of World War II in 1945 until the end of the Cold War in 1990/1991.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.714Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iron Curtain” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:01.714Z",
+   "target": "f02610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Literatur von und über Volkseigener Betrieb im Katalog der Deutschen Nationalbibliothek",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.714Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volkseigener Betrieb” is on the snapshot of s5"
+  }
+ ]
+}

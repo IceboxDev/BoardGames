@@ -1,0 +1,526 @@
+{
+ "article": "a0468",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Shrapnel",
+   "title": "Henry Shrapnel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:23.883Z",
+   "snapshot": "3098ec6cc96d985a25407354c8c9b2e937d3c5e78942faa5c7f0ccaff394b4fe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dynamite",
+   "title": "Dynamite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:24.824Z",
+   "snapshot": "a3b874605b1090e8d972c840059070043ff58902c1559f28b57a3813071aa035"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gatling_gun",
+   "title": "Gatling gun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:25.896Z",
+   "snapshot": "df0be68b7164b0375a91f4ebef717e5ddd95949e7a2cb6ece04eb754a7da306a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hiram_Maxim",
+   "title": "Hiram Maxim – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:26.890Z",
+   "snapshot": "c9c5e9e0a9fdfd49a9227475cb65364b878465cf5e94b959f04edba9b7b24bc0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Samuel_Colt",
+   "title": "Samuel Colt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:27.947Z",
+   "snapshot": "2e97062358c73abe93f7a049b89e963c2c80586c7adab21ba08eae07c0428f6b"
+  },
+  "s6": {
+   "url": "https://www.ncpedia.org/biography/gatling-richard-jordan",
+   "title": "Gatling, Richard Jordan – NCpedia",
+   "publisher": "NCpedia (State Library of North Carolina)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:21.512Z",
+   "snapshot": "12c3d4d5d28f460fbe02296237091997da9708833705f60532f96479a6b4437f"
+  },
+  "s7": {
+   "url": "https://patents.google.com/patent/US36836A/en",
+   "title": "US36836A – Improvement in revolving battery-guns",
+   "publisher": "US Patent Office (via Google Patents)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:20.585Z",
+   "snapshot": "b8ea8be82a11a9941ad5a9b5ec5a36b8b9c0caca71fe482f3350a37e96bc8ba3"
+  },
+  "s8": {
+   "url": "https://www.ibiblio.org/hyperwar/USN/ref/MG/I/MG-3.html",
+   "title": "The Machine Gun, Vol. I, Part III, Chapter 1: Maxim Machine Guns",
+   "publisher": "George M. Chinn / US Navy Bureau of Ordnance (1951), via HyperWar",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:21.452Z",
+   "snapshot": "1309a01bd342bcb732abb579aa5d0645171854af945a04ab1070b5d8a5192d6a"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Maxim_gun",
+   "title": "Maxim gun – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:22.132Z",
+   "snapshot": "9d6f99b1e26bfa5e417c1efd0794164ea5b0f5bbd57c5c3c82e78f6e8e0cbdd9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henry Shrapnel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alfred Nobel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Richard Gatling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hiram Maxim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Samuel Colt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:53.113Z",
+   "target": "f02336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henry Shrapnel was born at Midway Manor in Bradford-on-Avon, Wiltshire, England, the ninth child of Zachariah Shrapnel and his wife Lydia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Shrapnel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:53.113Z",
+   "target": "f02337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was invented by Swedish chemist Alfred Nobel in 1866 and patented the following year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Nobel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:53.113Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Richard Gatling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Richard Gatling”, “Ричард Гатлинг”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:53.113Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Blackpool ride's name is now usually abbreviated to the \"Flying Machine\" or \"Flying Machines\", although the full name, \"Sir Hiram Maxim's Captive Flying Machines\", is given at the ride entrance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hiram Maxim” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:53.113Z",
+   "target": "f02340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Samuel Colt (; July 19, 1814 – January 10, 1862) was an American inventor, industrialist, and businessman who established Colt's Patent Fire-Arms Manufacturing Company and made the mass production of revolvers commercially viable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samuel Colt” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:20Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gatling attended both Indiana Medical College and Ohio Medical College and received a diploma as a physician in 1850",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:39:22Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first gun was tested and patented in 1862.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:39:25Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Specification forming part of Letters Patent No. 36,836, dated November 4, 1862.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23",
+   "note": "patent of RICHARD J. GATLING, of Indianapolis, for 'Improvement in revolving battery-guns'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:39:28Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hiram Stevens Maxim, who was for the first time to combine the words \"automatic\" and \"machine gun.\" He accomplished this by using the power of the recoil forces",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:30Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In the spring of 1884 he had progressed to a point where his experiments resulted in a finished product.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:39:33Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Maxim gun is a recoil-operated machine gun invented in 1884 by Hiram Maxim. It was the first fully automatic machine gun.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first gun was tested and patented in 1862.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Specification forming part of Letters Patent No. 36,836, dated November 4, 1862.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In the spring of 1884 he had progressed to a point where his experiments resulted in a finished product.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Maxim gun is a recoil-operated machine gun invented in 1884 by Hiram Maxim. It was the first fully automatic machine gun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Richard Gatling had a brief formal education at Buckhorn, a local common school.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Richard Gatling” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Driven out of France, the ancestors of Hiram Maxim fled to Canterbury, England; then emigrated to Plymouth County, Mass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hiram Maxim” is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:15.727Z",
+   "target": "f02339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Maxim gun is a recoil-operated machine gun invented in 1884 by Hiram Maxim.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hiram Maxim” is on the snapshot of s9"
+  }
+ ]
+}

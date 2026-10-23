@@ -1,0 +1,467 @@
+{
+ "article": "a0926",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Stupid_White_Men",
+   "title": "Stupid White Men – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:38.304Z",
+   "snapshot": "9f5b490660121687ee6ce621983ae965e110e69c45858923014c71aa0d2f880d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ich_bin_dann_mal_weg",
+   "title": "Ich bin dann mal weg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:35.676Z",
+   "snapshot": "6621d6db94c37241cded8ab33f6f334afc599dd92ec0428dbe4584a3ccb2f41e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Feuchtgebiete",
+   "title": "Feuchtgebiete – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:35.718Z",
+   "snapshot": "370dbe966fde1fba7db7c2e2b8a0244c78bb84033f6e830045bd4b6c54ea7eb3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Deutschland_schafft_sich_ab",
+   "title": "Deutschland schafft sich ab – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:37.248Z",
+   "snapshot": "92f03a4910e15ca8c3bcf95ece6a164e0d08579f753c209fe129b49539dc2b3c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dreams_from_My_Father",
+   "title": "Dreams from My Father – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:39.393Z",
+   "snapshot": "7768a021a9ba11b8e46eba8be061831450e7cffd9e994ff5d39adc05fa8e8191"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Stupid_White_Men",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:37.491Z",
+   "snapshot": "17964a236609841a814a6ae89cf3214a075a52adef8a15e3df9d3e19a7304dcb"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Wetlands_(novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:40.316Z",
+   "snapshot": "7efd23366cba0ccc00f0cea75693ff183823141a17a0d3dee2b444fa04d66724"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Charlotte_Roche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:38.501Z",
+   "snapshot": "844f6b727ec7c1e84e9da826b5cd1e2f91562fa86175e535a91d3bde5383ca7a"
+  },
+  "s9": {
+   "url": "https://www.theguardian.com/books/2008/may/25/news.germany",
+   "title": "Wetlands – The Guardian (25 May 2008)",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:38.007Z",
+   "snapshot": "4c21f3631f8a60e2b43f4ff6b6532e9d8ba154a1a936c1cb33c2f2467dedc9ff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michael Moore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hape Kerkeling",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charlotte Roche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thilo Sarrazin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Barack Obama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:05.661Z",
+   "target": "f04626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a book by American filmmaker Michael Moore published in 2001.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Moore” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:05.661Z",
+   "target": "f04627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ich bin dann mal weg – Meine Reise auf dem Jakobsweg ist ein 2006 als Buch erschienener Reisebericht des deutschen Entertainers Hape Kerkeling über dessen Pilgerreise nach Santiago de Compostela im Jahr 2001.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hape Kerkeling” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:05.661Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Feuchtgebiete ist der erste Roman von Charlotte Roche.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlotte Roche” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:05.661Z",
+   "target": "f04629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Deutschland schafft sich ab ist der Titel eines 2010 erschienenen Buches von Thilo Sarrazin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thilo Sarrazin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:05.661Z",
+   "target": "f04630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dreams from My Father: A Story of Race and Inheritance (1995) is a memoir by Barack Obama that explores the events of his early years in Honolulu and Chicago until his entry into Harvard Law School in 1988.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barack Obama” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:03:21Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wetlands, which has beaten Khaled Hosseini's A Thousand Splendid Suns and Ken Follett's latest to the top of Amazon's international sales list, has sparked a frenzy among major British publishers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the narrowed premise (Amazon's international list), not 'world's best-selling novel' outright."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:03:24Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Partly autobiographical, it was first published in German in 2008 by M. DuMont Schauberg and was the world's best-selling novel in March 2008.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia's source (The Economist, 3 April 2008) qualifies this as best-selling at Amazon.com."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:03:25Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Buch fand ein großes Medienecho und stieg kurz nach Veröffentlichung im März 2008 auf Platz eins der Spiegel-Bestsellerliste.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:03:35Z",
+   "target": "a0926:body",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wetlands, which has beaten Khaled Hosseini's A Thousand Splendid Suns and Ken Follett's latest to the top of Amazon's international sales list",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23",
+   "note": "Refutes the unqualified premise 'world's best-selling novel in March 2008' (old wording w04628 and body): the sources say Amazon's international/worldwide list. Body and wording now say 'on Amazon worldwide'."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:35.209Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wetlands, which has beaten Khaled Hosseini's A Thousand Splendid Suns and Ken Follett's latest to the top of Amazon's international sales list, has sparked a frenzy among major British publishers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:35.209Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Partly autobiographical, it was first published in German in 2008 by M. DuMont Schauberg and was the world's best-selling novel in March 2008.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:35.209Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Buch fand ein großes Medienecho und stieg kurz nach Veröffentlichung im März 2008 auf Platz eins der Spiegel-Bestsellerliste.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:35.209Z",
+   "target": "a0926:body",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wetlands, which has beaten Khaled Hosseini's A Thousand Splendid Suns and Ken Follett's latest to the top of Amazon's international sales list",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:35.209Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Wetlands (German: Feuchtgebiete) is Charlotte Roche's debut novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Charlotte Roche” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:35.209Z",
+   "target": "f04628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The controversial novel by British-born Charlotte Roche (above) has sold more than 500,000 copies in Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Charlotte Roche” is on the snapshot of s9"
+  }
+ ]
+}

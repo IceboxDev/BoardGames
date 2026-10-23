@@ -1,0 +1,242 @@
+{
+ "article": "a1678",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/David_Livingstone",
+   "title": "David Livingstone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:03.188Z",
+   "snapshot": "e02eba8cb6714a42087615e05fc1c29bd0bca556fd3d6f2fe79b45fba48a91ec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Morton_Stanley",
+   "title": "Henry Morton Stanley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:32.657Z",
+   "snapshot": "0f2e42eba0394742257e43142278f65421a381a8e329ff85ccb376cea612eb61"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/John_Hanning_Speke",
+   "title": "John Hanning Speke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:33.369Z",
+   "snapshot": "40ea705eddd086986b4f75e4a7dd8db456da71a4d8629116a895a07e6a0b95b2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Francis_Burton",
+   "title": "Richard Francis Burton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:34.499Z",
+   "snapshot": "4084cf9b79c4e64a2652cf54308533375f98a54738f8fb64dd650356ce1a4f4d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mungo_Park_(explorer)",
+   "title": "Mungo Park (explorer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:35.442Z",
+   "snapshot": "95204589c11136bb09f537e9df8f27955edc2e11a0234e2055007ced9f14d1e4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "David Livingstone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Henry Morton Stanley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Hanning Speke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard Francis Burton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mungo Park",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:04.260Z",
+   "target": "f08386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "David Livingstone (; 19 March 1813 – 1 May 1873) was a Scottish doctor, Congregationalist, pioneer Christian missionary with the London Missionary Society, and an explorer in Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Livingstone” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:04.260Z",
+   "target": "f08387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sir Henry Morton Stanley (born John Rowlands; 28 January 1841 – 10 May 1904) was a Welsh-American explorer, journalist, soldier, colonial administrator, author, and politician famous for his exploration of Central Africa and search for missionary and explorer David Livingstone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Morton Stanley” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:04.260Z",
+   "target": "f08388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Hanning Speke (4 May 1827 – 15 September 1864) was an English explorer and army officer who made three exploratory expeditions to Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Hanning Speke” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:04.260Z",
+   "target": "f08389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sir Richard Francis Burton (19 March 1821 – 20 October 1890) was a British explorer, army officer, writer and scholar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Francis Burton” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:04.260Z",
+   "target": "f08390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mungo Park (10 September 1771 – 1806) was a Scottish explorer of West Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mungo Park” is on the snapshot of s5"
+  }
+ ]
+}

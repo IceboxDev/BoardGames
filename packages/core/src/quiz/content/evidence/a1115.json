@@ -1,0 +1,540 @@
+{
+ "article": "a1115",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Beluga_(sturgeon)",
+   "title": "Beluga (sturgeon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:40.195Z",
+   "snapshot": "0738f91b7a8ce580dff0dd62e7b0241eadf7324b3b6fb23d669ec0756841415a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Russian_sturgeon",
+   "title": "Russian sturgeon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:41.091Z",
+   "snapshot": "9a020457e8a0ebe17bb7cc08384c63b7d3b30d567c80be6b79d69fc362993055"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Starry_sturgeon",
+   "title": "Starry sturgeon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:42.169Z",
+   "snapshot": "5090c6820667eb230f7b504d4efc1c016d591a070a4d992331b133b789ec6c82"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/White_sturgeon",
+   "title": "White sturgeon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:43.115Z",
+   "snapshot": "d36ff7f9388184708eff1f852b77ab3dc8966d520c2e5472beed77b84b3ebdd4"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/St%C3%B6re",
+   "title": "Störe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:40.491Z",
+   "snapshot": "570ce6962c5bde0a4c188644b3eda2603cae77233a7b28b29a2aca4a4bd50e67"
+  },
+  "s6": {
+   "url": "https://animaldiversity.org/accounts/Acipenser_transmontanus/",
+   "title": "Acipenser transmontanus – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:01.448Z",
+   "snapshot": "f91d2ed7999071481aec070369330ac6b48b2f73a7aefc448ebef1c841e72078"
+  },
+  "s7": {
+   "url": "https://wdfw.wa.gov/species-habitats/species/acipenser-transmontanus",
+   "title": "White sturgeon – Washington Department of Fish & Wildlife",
+   "publisher": "Washington Department of Fish & Wildlife",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:01.802Z",
+   "snapshot": "f89215116f76a7a4753d7e23da4c9aba40a488d855d08ceb3b0297dea722f5d2"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Caviar",
+   "title": "Caviar – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:01.740Z",
+   "snapshot": "b3c094a3fe9f7bfb0eb2229cedee7c0b6a6d7ec9741178d779b8eb961e570b40"
+  },
+  "s9": {
+   "url": "https://animaldiversity.org/accounts/Huso_huso/",
+   "title": "Huso huso (Beluga) – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:02.338Z",
+   "snapshot": "54ef18b01806f63da05ccf693ca0946a0c185b50311290ce21c97b82b12b79f9"
+  },
+  "s10": {
+   "url": "https://www.fishbase.se/summary/Huso-huso.html",
+   "title": "Huso huso, Beluga – FishBase",
+   "publisher": "FishBase",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:03.014Z",
+   "snapshot": "4bc2d512389c5b2fc8a9bf140df01b46bff73534d5de560ce63fac8fde0e75c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beluga sturgeon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Russian sturgeon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "stellate sturgeon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "white sturgeon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13253",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Knochenplatten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-366"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:35.160Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The beluga (), also known as the beluga sturgeon or great sturgeon (Huso huso), is a species of sturgeon, which are anadromous fish of the family Acipenseridae of the order  Acipenseriformes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beluga sturgeon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:35.160Z",
+   "target": "f05572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Russian sturgeon (Huso gueldenstaedtii), also known as the diamond sturgeon or Danube sturgeon, is a species of fish in the family Acipenseridae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russian sturgeon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:35.160Z",
+   "target": "f05573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The starry sturgeon (Huso stellatus), also known as the stellate sturgeon or sevruga (Drakul, Persian: اوزون برون, and Turkish: Uzun Burun, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “stellate sturgeon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:35.160Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "White sturgeon (Sinosturio transmontanus) is a species of sturgeon in the family Acipenseridae of the order Acipenseriformes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “white sturgeon” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:35.160Z",
+   "target": "f13253",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Während im Grundbauplan der Störartigen die Rumpfbeschuppung stark reduziert ist, weist der schwere, langgestreckte Körper der Acipenseriden fünf Längsreihen gebuckelter Knochenplatten (Scuta) auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knochenplatten” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:59Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "White Sturgeons are the largest freshwater fish in North America.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:08:01Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "White sturgeon can grow to more than 10 feet in length and weigh hundreds of pounds.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports size and Pacific-coast range; no explicit continental superlative"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:08:37Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Traditionally, the term caviar refers only to roe from wild sturgeon in the Caspian Sea and Black Sea (beluga, ossetra and sevruga caviars).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "Russian/Caspian caviar comes from several sturgeons; the article notes already accept the Russian sturgeon (osetra) alongside the classic answer beluga"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:08:40Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Due to the incredible value of the roe of this species known commercially as beluga caviar - the most expensive food item in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "classic answer; alternatives (Russian sturgeon/osetra, sevruga) listed in notes"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:08:43Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Fisheries are based almost entirely on the value of the caviar",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "White Sturgeons are the largest freshwater fish in North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "White sturgeon can grow to more than 10 feet in length and weigh hundreds of pounds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Traditionally, the term caviar refers only to roe from wild sturgeon in the Caspian Sea and Black Sea (beluga, ossetra and sevruga caviars).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Due to the incredible value of the roe of this species known commercially as beluga caviar - the most expensive food item in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Fisheries are based almost entirely on the value of the caviar",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The lone congener of the beluga sturgeon, the kaluga (",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Beluga sturgeon” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The White Sturgeon is found on the Pacific slope of North America from the Aleutian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “white sturgeon” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:12.937Z",
+   "target": "f05575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "White sturgeon | Washington Department of Fish & Wildlife",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.937Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “white sturgeon” is on the snapshot of s7"
+  }
+ ]
+}

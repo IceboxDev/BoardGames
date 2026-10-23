@@ -1,35 +1,58 @@
 /**
- * The opening trainer's one screen: your folders on the left, the board in
- * the middle, the move explorer on the right. Moves on the board are free —
- * explore anything; where it's your move in your tree, ★ makes the move you
- * just played yours and the tree regrows from there. Both colours' trees build
- * in the background as soon as the screen opens.
+ * The opening trainer's one screen: your folders on the left, and in the
+ * middle one of three views (`?view`):
+ *   map    (default) what you know: the open folder's subfolders as blocks,
+ *          sized by your moves and shaded by how many you've learnt
+ *          (`AtlasMap`), the selected folder beside it (`FolderPanel`);
+ *   board  the board and the move explorer. Moves are free — explore
+ *          anything; where it's your move in your tree, ★ makes the move you
+ *          just played yours and the tree regrows from there;
+ *   drill  a spaced-repetition session of your moves (`DrillSession`).
+ * Both colours' trees build in the background as soon as the screen opens.
  */
-import { FIXED_CHOICES } from "@boardgames/core/games/chess/trainer/folders";
+import { emptyLearning, learnable } from "@boardgames/core/games/chess/trainer/drill";
+import {
+  fixedChoices,
+  TRAINER_FOLDERS,
+  type TrainerFolder,
+} from "@boardgames/core/games/chess/trainer/folders";
 import {
   type RepertoireTree,
   type UserChoice,
   withChoice,
 } from "@boardgames/core/games/chess/trainer/tree";
 import type { LichessLink } from "@boardgames/core/protocol";
-import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import GameScreen from "../../../../components/game-layout/GameScreen";
+import { Button, SegmentedControl } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { EvalBar } from "../../analysis/EvalBar";
 import type { Score } from "../../analysis/grade";
 import ChessBoard, { type BoardArrow } from "../../components/board/ChessBoard";
 import { useSquareFit } from "../../logic/board-view";
+import { useDrill } from "../drill/useDrill";
+import { useDrillSession } from "../drill/useDrillSession";
 import { TrainerProviders } from "../engine-provider";
-import { legalUcis } from "../tree-nav";
+import { legalUcis, routeTo } from "../tree-nav";
 import type { ImportState } from "../useLichessImport";
 import type { TreeBuild } from "../useTreeBuild";
-import { BuildStatus } from "./BuildStatus";
+import { AtlasMap } from "./AtlasMap";
+import { BoardTools, ChoiceCard } from "./BoardTools";
 import { ConnectionBar } from "./ConnectionBar";
+import { DrillBoard, DrillRail } from "./DrillSession";
 import { ExplorerRail } from "./ExplorerRail";
+import { FolderPanel } from "./FolderPanel";
 import { FolderRail } from "./FolderRail";
+import { currentFolder, flatten, type Placed, splitName } from "./folder-tree";
+import { MapTrail } from "./MapTrail";
 import { KIND_OF } from "./markers";
 import { lineValue, START, walkLine } from "./model";
-import { TrainerActions } from "./TrainerActions";
+import { TrainerHome } from "./TrainerHome";
+import { useBoardKeys } from "./useBoardKeys";
+import { useFarmQueue } from "./useFarmQueue";
+import { useFolderGames } from "./useFolderGames";
+import { useFolderLearning } from "./useFolderLearning";
+import { useFolderPopularity } from "./useFolderPopularity";
 import { usePositionEval } from "./usePositionEval";
 import { useTrainerPosition } from "./useTrainerPosition";
 
@@ -73,7 +96,7 @@ export function BoardScreen({ builds, link, token, importer, notice }: Props) {
   const last = pos.last;
   // Moves fixed in code (1.e4, 2.Nf3) aren't changed from the board.
   const fixedAt = (moves: readonly { uci: string }[]) =>
-    FIXED_CHOICES[pos.color].some((f) => f.moves.join(" ") === moves.map((m) => m.uci).join(" "));
+    fixedChoices(pos.color).some((f) => f.moves.join(" ") === moves.map((m) => m.uci).join(" "));
   const fixedHere = fixedAt(pos.line.slice(0, pos.ply));
   const makeMine =
     tree &&
@@ -152,6 +175,283 @@ export function BoardScreen({ builds, link, token, importer, notice }: Props) {
   const settledB = useSettledTree(builds.b);
   const trees = useMemo(() => ({ w: settledW, b: settledB }), [settledW, settledB]);
 
+  // ── What you know: the drill schedule summed over the folders ──
+  const schedule = useDrill(pos.color);
+  const allFolders = useMemo(() => flatten(TRAINER_FOLDERS[pos.color]), [pos.color]);
+  // Your games per folder: the rail and the map list the same folders by it.
+  const folderGames = useFolderGames(allFolders, build?.folderCounts ?? null);
+  const learning = useFolderLearning(
+    pos.color,
+    trees[pos.color],
+    schedule.states,
+    schedule.today,
+    folderGames.counts,
+  );
+  const byId = useMemo(() => new Map(learning.all.map((p) => [p.folder.id, p])), [learning.all]);
+  const here = useMemo(
+    () => currentFolder(learning.all, pos.line.slice(0, pos.ply), learning.owner),
+    [learning.all, learning.owner, pos.line, pos.ply],
+  );
+  // A folder is on the map when it has moves of yours or games of yours (the rail's rule).
+  const hasContent = (f: TrainerFolder) => {
+    const l = learning.byFolder.get(f.id);
+    return (
+      (!!l && learnable(l) + l.pending + l.unasked > 0) || (folderGames.counts?.get(f.id) ?? 0) > 0
+    );
+  };
+  // The map shows the rail's level: the folder you're in when it has
+  // subfolders, else its parent's (one folder there is one big block).
+  const levelOf = (open: Placed | null) =>
+    learning.all.filter((p) => (open ? p.parents.at(-1) === open.folder : p.parents.length === 0));
+  const mapOpen = here?.folder.children.some(hasContent)
+    ? here
+    : here
+      ? (learning.all.find((p) => p.folder === here.parents.at(-1)) ?? null)
+      : null;
+  const level = levelOf(mapOpen);
+  const mapParent = mapOpen
+    ? (learning.all.find((p) => p.folder === mapOpen.parents.at(-1)) ?? null)
+    : null;
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  // The small folders' block opened up, for one level (a new level closes it).
+  const levelId = mapOpen?.folder.id ?? "all";
+  const [smallAt, setSmallAt] = useState<string | null>(null);
+  const showSmall = smallAt === levelId;
+  const selected = level.find((p) => p.folder.id === selectedId) ?? null;
+  const panel = selected ?? mapOpen;
+  const panelTitle = panel ? splitName(panel.folder.name).label : "All openings";
+  const panelLearning = panel
+    ? (learning.byFolder.get(panel.folder.id) ?? emptyLearning())
+    : learning.total;
+  const panelCards = useMemo(() => learning.cardsIn(panel?.folder.id ?? null), [learning, panel]);
+  // The deepest folders with something in them: the front page's units.
+  const leaves = learning.all.filter(
+    (p) => hasContent(p.folder) && !p.folder.children.some(hasContent),
+  );
+  // Where the Home's folders stand at the farm, for its "back from the farm" line.
+  const homeWaiting = useMemo(
+    () => leaves.flatMap((p) => learning.waitingIn.get(p.folder.id) ?? []),
+    [leaves, learning.waitingIn],
+  );
+  const farmWaiting = useMemo(
+    () => (pos.view === "home" ? [homeWaiting] : []),
+    [pos.view, homeWaiting],
+  );
+  const farmQueue = useFarmQueue(pos.color, farmWaiting);
+  const popularity = useFolderPopularity(
+    useMemo(() => [...new Set([...level, ...leaves])], [level, leaves]),
+    providers,
+    trees[pos.color],
+  );
+  const folderOf = (key: string) => {
+    const id = learning.owner.get(key);
+    const p = id ? byId.get(id) : undefined;
+    return p ? splitName(p.folder.name).label : "Your openings";
+  };
+
+  // ── The drill: one session per visit to the view ──
+  const ownerOf = useCallback((key: string) => learning.owner.get(key), [learning.owner]);
+  const drillPlaced = pos.drillScope ? (byId.get(pos.drillScope) ?? null) : null;
+  const drillCards = useMemo(
+    () => learning.cardsIn(drillPlaced?.folder.id ?? null),
+    [learning, drillPlaced],
+  );
+  const [sessionNo, setSessionNo] = useState(0);
+  // Where "Back" and "End session" return to.
+  const [drillFrom, setDrillFrom] = useState<"home" | "map" | "board">("home");
+  const session = useDrillSession(
+    drillCards,
+    schedule,
+    pos.view === "drill" ? `${pos.color}:${pos.drillScope ?? "all"}:${sessionNo}` : null,
+    ownerOf,
+    pos.drillScope !== null,
+  );
+  // The current card's line through the tree, and its node.
+  const drillTree = trees[pos.color];
+  const drillKey = session.current?.card.key ?? null;
+  const drillRoute = useMemo(
+    () => (drillTree && drillKey ? routeTo(drillTree, drillKey) : null),
+    [drillTree, drillKey],
+  );
+  const startDrill = (folderId: string | null) => {
+    setSessionNo((n) => n + 1);
+    if (pos.view !== "drill") setDrillFrom(pos.view);
+    pos.setView("drill", { scope: folderId });
+  };
+  /** A folder on the map: its parent's level, with it selected. */
+  const showOnMap = (p: Placed) => {
+    setSelectedId(p.folder.id);
+    pos.setView("map", { moves: p.parents.at(-1)?.moves ?? [] });
+  };
+  const scopeId = pos.view === "board" ? (here?.folder.id ?? null) : (panel?.folder.id ?? null);
+  const scopeDue = scopeId ? (learning.byFolder.get(scopeId)?.due ?? 0) : learning.total.due;
+
+  const flip = useCallback(() => setOrientation((o) => (o === "w" ? "b" : "w")), []);
+  useBoardKeys(pos.view === "board", pos.step, flip);
+
+  const viewSwitch = (
+    <div className="flex h-10 shrink-0 items-center justify-between gap-3">
+      <SegmentedControl
+        aria-label="View"
+        options={[
+          { value: "home", label: "Home" },
+          { value: "map", label: "Map" },
+          { value: "board", label: "Board" },
+        ]}
+        value={pos.view === "drill" ? drillFrom : pos.view}
+        onChange={(v) => pos.setView(v)}
+      />
+      {pos.view === "map" && (
+        <MapTrail
+          parent={
+            showSmall
+              ? mapOpen
+                ? splitName(mapOpen.folder.name).label
+                : "All openings"
+              : mapOpen
+                ? mapParent
+                  ? splitName(mapParent.folder.name).label
+                  : "All openings"
+                : null
+          }
+          current={
+            showSmall
+              ? "Rare Replies"
+              : mapOpen
+                ? splitName(mapOpen.folder.name).label
+                : "All openings"
+          }
+          onUp={() => {
+            if (showSmall) {
+              setSmallAt(null);
+              return;
+            }
+            if (!mapOpen) return;
+            setSelectedId(mapOpen.folder.id);
+            pos.open(pos.color, mapParent ? mapParent.folder.moves : []);
+          }}
+        />
+      )}
+      {pos.view === "drill" ? (
+        <Button variant="ghost" size="sm" onClick={() => pos.setView(drillFrom)}>
+          Back
+        </Button>
+      ) : (
+        // On the map and home the folder panel has the drill; the board's rail doesn't.
+        pos.view === "board" && (
+          <div className="flex items-center gap-2">
+            <BoardTools ply={pos.ply} length={pos.line.length} onGoTo={pos.goTo} onFlip={flip} />
+            {scopeId && (
+              <Button
+                variant="primary"
+                size="sm"
+                disabled={learning.cardsIn(scopeId).length === 0}
+                onClick={() => startDrill(scopeId)}
+              >
+                {scopeDue > 0 ? `Drill · ${scopeDue} due` : "Drill"}
+              </Button>
+            )}
+          </div>
+        )
+      )}
+    </div>
+  );
+
+  const board = (
+    <div className="flex items-center gap-2">
+      {size > 0 && (
+        <div className="flex flex-col items-center gap-1" style={{ height: size }}>
+          <EvalBar score={score} orientation={orientation} height={size - 22} />
+          <span
+            className={cn(
+              "font-mono text-3xs leading-none tabular-nums",
+              (evaluation?.depth ?? 0) >= 50 ? "text-emerald-300" : "text-fg-muted",
+            )}
+            title={
+              evaluation ? `Depth ${evaluation.depth} · ${evaluation.source}` : "No evaluation yet"
+            }
+          >
+            {evaluation ? `d${evaluation.depth}` : evalLoading ? "…" : "—"}
+          </span>
+        </div>
+      )}
+      <div style={{ width: size, height: size }}>
+        {size > 0 && (
+          <ChessBoard
+            className="size-full overflow-hidden rounded-card-md shadow-lg"
+            fen={pos.here.fen}
+            orientation={orientation}
+            moves={moves}
+            onMove={pos.play}
+            keyboard={false}
+            lastMove={last?.uci ?? null}
+            arrows={arrows}
+            aria-label={`Opening board, ${pos.here.fen.split(" ")[1] === "b" ? "Black" : "White"} to move`}
+          />
+        )}
+      </div>
+    </div>
+  );
+
+  const sidebar =
+    pos.view === "home" ? undefined : pos.view === "board" ? (
+      <ExplorerRail
+        fen={pos.here.fen}
+        node={node}
+        tree={tree}
+        line={pos.line}
+        ply={pos.ply}
+        onPlay={pos.play}
+        onGoTo={pos.goTo}
+        onPlayLine={pos.playLine}
+        evaluation={evaluation}
+        evalLoading={evalLoading}
+        color={pos.color}
+        positionStats={build?.positionStats ?? null}
+        providers={providers}
+        transposition={build?.transposition ?? null}
+        footer={<ChoiceCard makeMine={makeMine} engineBest={engineBest} busy={busy} />}
+      />
+    ) : pos.view === "drill" ? (
+      <DrillRail
+        session={session}
+        schedule={schedule}
+        scope={drillPlaced ? splitName(drillPlaced.folder.name).label : "All your moves"}
+        scopeLearning={
+          drillPlaced
+            ? (learning.byFolder.get(drillPlaced.folder.id) ?? emptyLearning())
+            : learning.total
+        }
+        node={drillKey ? (drillTree?.nodes[drillKey] ?? null) : null}
+        route={drillRoute}
+      />
+    ) : (
+      <FolderPanel
+        title={panelTitle}
+        learning={panelLearning}
+        cards={panelCards}
+        states={schedule.states}
+        tree={trees[pos.color]}
+        farm={build?.farm ?? null}
+        onDrill={() => startDrill(panel?.folder.id ?? null)}
+        onBoard={panel ? () => pos.setView("board", { moves: panel.folder.moves }) : null}
+        onOpen={
+          selected && selected.folder.children.length > 0
+            ? () => {
+                pos.open(pos.color, selected.folder.moves);
+                setSelectedId(null);
+              }
+            : null
+        }
+        onShowLine={(key) => {
+          const t = trees[pos.color];
+          const route = t ? routeTo(t, key) : null;
+          if (!route) return;
+          pos.setView("board", { moves: route.map((r) => r.uci) });
+        }}
+      />
+    );
+
   return (
     <GameScreen
       leftSidebarLabel="Folders"
@@ -163,85 +463,74 @@ export function BoardScreen({ builds, link, token, importer, notice }: Props) {
           onColor={pos.setColor}
           moves={pos.line.slice(0, pos.ply)}
           onOpen={pos.open}
-          folderCounts={build?.folderCounts ?? null}
-          status={
-            <>
-              {notice}
-              <BuildStatus build={build} />
-            </>
-          }
+          folderGames={folderGames}
+          learning={learning.byFolder}
+          build={build}
+          notice={notice}
           footer={<ConnectionBar link={link} token={token} importer={importer} builds={builds} />}
         />
       }
-      sidebarTitle="Analysis"
+      sidebarTitle={pos.view === "board" ? "Analysis" : pos.view === "drill" ? "Session" : "Folder"}
       sidebarWidth="explorer"
-      sidebar={
-        <ExplorerRail
-          fen={pos.here.fen}
-          node={node}
-          tree={tree}
-          line={pos.line}
-          ply={pos.ply}
-          onPlay={pos.play}
-          onGoTo={pos.goTo}
-          onPlayLine={pos.playLine}
-          evaluation={evaluation}
-          evalLoading={evalLoading}
-          color={pos.color}
-          positionStats={build?.positionStats ?? null}
-          providers={providers}
-          transposition={build?.transposition ?? null}
-        />
-      }
-      actionBar={
-        <TrainerActions
-          ply={pos.ply}
-          length={pos.line.length}
-          onGoTo={pos.goTo}
-          onStep={pos.step}
-          onFlip={() => setOrientation((o) => (o === "w" ? "b" : "w"))}
-          makeMine={makeMine}
-          engineBest={engineBest}
-          busy={busy}
-        />
-      }
+      sidebar={sidebar}
     >
-      <div ref={fitRef} className="flex min-h-0 flex-1 items-center justify-center">
-        <div className="flex items-center gap-2">
-          {size > 0 && (
-            <div className="flex flex-col items-center gap-1" style={{ height: size }}>
-              <EvalBar score={score} orientation={orientation} height={size - 22} />
-              <span
-                className={cn(
-                  "font-mono text-3xs leading-none tabular-nums",
-                  (evaluation?.depth ?? 0) >= 50 ? "text-emerald-300" : "text-fg-muted",
-                )}
-                title={
-                  evaluation
-                    ? `Depth ${evaluation.depth} · ${evaluation.source}`
-                    : "No evaluation yet"
-                }
-              >
-                {evaluation ? `d${evaluation.depth}` : evalLoading ? "…" : "—"}
-              </span>
-            </div>
-          )}
-          <div style={{ width: size, height: size }}>
-            {size > 0 && (
-              <ChessBoard
-                className="size-full overflow-hidden rounded-card-md shadow-lg"
-                fen={pos.here.fen}
-                orientation={orientation}
-                moves={moves}
-                onMove={pos.play}
-                keyboard={false}
-                lastMove={last?.uci ?? null}
-                arrows={arrows}
-                aria-label={`Opening board, ${pos.here.fen.split(" ")[1] === "b" ? "Black" : "White"} to move`}
-              />
-            )}
-          </div>
-        </div>
+      {viewSwitch}
+      {/* One container in every view: the board measures it once, when it first mounts. */}
+      <div
+        ref={fitRef}
+        className={cn(
+          "flex min-h-0 flex-1",
+          pos.view === "board" || pos.view === "drill" ? "items-center justify-center" : "flex-col",
+        )}
+      >
+        {pos.view === "home" ? (
+          <TrainerHome
+            color={pos.color}
+            folders={leaves.map((p) => ({
+              placed: p,
+              l: learning.byFolder.get(p.folder.id) ?? emptyLearning(),
+              games: popularity.get(p.folder.id)?.games ?? null,
+            }))}
+            overview={schedule.overview}
+            onDrill={(id) => startDrill(id)}
+            onShowMap={showOnMap}
+            onShowBoard={(p) => pos.setView("board", { moves: p.folder.moves })}
+            waitingIn={learning.waitingIn}
+            farmQueue={farmQueue}
+            loading={
+              // A tree on its way (stored, or building with lichess connected), or
+              // the schedule still loading: never "nothing to study" meanwhile.
+              (!!build && !!token && !trees[pos.color]) || (!schedule.states && !schedule.error)
+            }
+          />
+        ) : pos.view === "map" ? (
+          <AtlasMap
+            folders={level}
+            learning={learning.byFolder}
+            games={folderGames.counts}
+            blocked={learning.blocked}
+            popularity={popularity}
+            selected={selected?.folder.id ?? null}
+            onSelect={setSelectedId}
+            onOpen={(p) => {
+              pos.open(pos.color, p.folder.moves);
+              setSelectedId(null);
+            }}
+            showSmall={showSmall}
+            onShowSmall={() => setSmallAt(levelId)}
+          />
+        ) : pos.view === "board" ? (
+          board
+        ) : (
+          <DrillBoard
+            session={session}
+            color={pos.color}
+            size={Math.max(0, size - 72)}
+            route={drillRoute}
+            folderOf={folderOf}
+            loading={!schedule.states && !schedule.error}
+          />
+        )}
       </div>
     </GameScreen>
   );
@@ -271,7 +560,8 @@ function useAutoBuild(builds: Record<Color, TreeBuild | null>, canBuild: boolean
 }
 
 /**
- * Your moves fixed in code (`FIXED_CHOICES`, e.g. 1.e4 as White): set on the
+ * Your moves fixed in code (`fixedChoices`: 1.e4 as White, and your moves into the
+ * farm's folders such as 3.Bb5 into the Ruy Lopez): set on the
  * tree once it exists and the build is idle, then rebuilt from there.
  */
 function useFixedChoices(builds: Record<Color, TreeBuild | null>) {
@@ -281,7 +571,7 @@ function useFixedChoices(builds: Record<Color, TreeBuild | null>) {
       const tree = b?.tree;
       if (!b || !tree || b.phase !== "idle" || !b.providers) continue;
       let next = tree;
-      for (const fixed of FIXED_CHOICES[c]) {
+      for (const fixed of fixedChoices(c)) {
         const key = walkLine(fixed.moves).at(-1)?.key ?? START.key;
         const node = next.nodes[key];
         if (!node || node.side !== "user") continue;

@@ -1,0 +1,289 @@
+{
+ "article": "a1786",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster",
+   "title": "Space Shuttle Challenger disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:15.675Z",
+   "snapshot": "873f9a973e31765dc1f3d750f68b9dd9861bd07132cbc769ad8192416b1ed270"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster",
+   "title": "Space Shuttle Columbia disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:31.675Z",
+   "snapshot": "1c1905480c06418ca774a0be3b0f406ed84c5e67eb8d886e62cacfc0d98e93b8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/STS-31",
+   "title": "STS-31 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:32.415Z",
+   "snapshot": "2b6db30155948e7fe43d289f80f86d5300aee544b97b87da8530fd3fd6eb221e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/STS-49",
+   "title": "STS-49 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:33.411Z",
+   "snapshot": "e80a669d2605191015b0044003fc0014afb93c5f7df9ed87a6124a8dc21dfd9e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/STS-135",
+   "title": "STS-135 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:34.652Z",
+   "snapshot": "5734d1cf2961679c88328ed573db342b55f4079430f6f80e442e3e74971f48b9"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Enterprise_(Raumf%C3%A4hre)",
+   "title": "Enterprise (Raumfähre)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:31.982Z",
+   "snapshot": "81dd6bc31f7e93247bddc4dfa6db67c8ff8732930b5b7466e84532495e2d519f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Challenger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Columbia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Discovery",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Endeavour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Atlantis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Enterprise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-360"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:22.458Z",
+   "target": "f08926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On January 28, 1986, Space Shuttle Challenger broke apart 73 seconds into its flight, killing all seven crew members.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Challenger” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:22.458Z",
+   "target": "f08927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On February 1, 2003, Space Shuttle Columbia disintegrated as it re-entered the atmosphere over Texas and Louisiana, killing all seven astronauts on board.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Columbia” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:22.458Z",
+   "target": "f08928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "STS-31 was the 35th mission of NASA's Space Shuttle program and the tenth flight of the Space Shuttle Discovery.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Discovery” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:22.458Z",
+   "target": "f08929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "STS-49 was NASA's maiden flight of the Space Shuttle Endeavour, which launched on May 7, 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Endeavour” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:22.458Z",
+   "target": "f08930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was Atlantis's 33rd and final mission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atlantis” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:22.458Z",
+   "target": "f10889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Enterprise (englisch für Unternehmen, Unternehmung) ist ein Prototyp für die Raumfähren aus dem Space-Shuttle-Programm der US-Raumfahrtbehörde NASA.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enterprise” is on the snapshot of s6"
+  }
+ ]
+}

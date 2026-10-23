@@ -1,0 +1,428 @@
+{
+ "article": "a1584",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A-0_System",
+   "title": "A-0 System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:01.942Z",
+   "snapshot": "1ae8573141aa2858e6b6aa20abff67e646f4d9643b61efab6d84ff3ab58bffed"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Altair_BASIC",
+   "title": "Altair BASIC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:02.911Z",
+   "snapshot": "1ce51d8ae12bd4cfdd66177b50f5192e3c646761a18b39c5c7a0b80c6a66ddf2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Library_(computing)",
+   "title": "Library (computing) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:03.946Z",
+   "snapshot": "85cc9b623307732c58699ee63a4b6246ca7d18b95138af317f376e0c9ee7ed2e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/LR_parser",
+   "title": "LR parser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:05.138Z",
+   "snapshot": "c76552eb2acea4cd7d60235cbaa67acba67b0aa407fe4ad2b8e38492b095d01b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+   "title": "Bug (engineering) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:36.286Z",
+   "snapshot": "87f751fa5d1e835ee581f17d843ccb91cf65394328887b41d1b1683f38cdac3d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Interpreter_(computing)",
+   "title": "Interpreter (computing) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:53.536Z",
+   "snapshot": "f70ef2b08eea8ca1938abdae796f961248d89fbd655d205478c6c64119b0ec1c"
+  },
+  "s7": {
+   "url": "https://docs.python.org/3/tutorial/appetite.html",
+   "title": "1. Whetting Your Appetite – Python documentation",
+   "publisher": "Python Software Foundation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:53.348Z",
+   "snapshot": "a79d60068abc0f95fc7286f514075d1ffd3febdc0a23b99f40ef076c93f4c991"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Debugging",
+   "title": "Debugging – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:54.624Z",
+   "snapshot": "8bedf3802e490e9dd8020347a74163f7c44cfeeca977749b09105463cf16336d"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/debug",
+   "title": "DEBUG | English meaning – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:53.902Z",
+   "snapshot": "b57331310ad8cd1b4636c45f38d608ae6ba8730e89ad3a66837a22c373a070b4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "compiling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "interpreting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "linking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "parsing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "debugging",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:47.080Z",
+   "target": "f07916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Compiling Routines\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “compiling” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.080Z",
+   "target": "f07917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "interpreting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“interpreting”, “Interpretieren”, “интерпретация”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.080Z",
+   "target": "f07918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The linking (or binding) process resolves references known as symbols (or links) by searching for them in various locations including configured libraries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “linking” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:47.080Z",
+   "target": "f07919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "But by convention, the LR name stands for the form of parsing invented by Donald Knuth, and excludes the earlier, less powerful precedence methods (for example Operator-precedence parser).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “parsing” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:47.080Z",
+   "target": "f07920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "debugging",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“debugging”, “Debugging”, “отладка”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:38:51Z",
+   "target": "f07917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In computing , an interpreter is software that executes source code without first compiling it to machine code .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:38:52Z",
+   "target": "f07917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Python is an interpreted language, which can save you considerable time during program development because no compilation and linking is necessary.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:38:53Z",
+   "target": "f07920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "debugging is the process of finding the root cause , workarounds , and possible fixes for bugs .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:38:55Z",
+   "target": "f07920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "to remove bugs (= mistakes ) from a computer program",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:34.534Z",
+   "target": "f07917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Python is an interpreted language, which can save you considerable time during program development because no compilation and linking is necessary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:34.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:34.534Z",
+   "target": "f07917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A hybrid environment may translate the bytecode to machine code via just-in-time compilation, as in the case of .NET and Java, instead of interpreting the bytecode directly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:34.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “interpreting” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:34.534Z",
+   "target": "f07920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In engineering, debugging is the process of finding the root cause, workarounds, and possible fixes for bugs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:34.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “debugging” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:34.534Z",
+   "target": "f07920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "He spent weeks debugging the program.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:34.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “debugging” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,420 @@
+{
+ "article": "a0099",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Renaissance",
+   "title": "Renaissance – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:24.166Z",
+   "snapshot": "32b748298911d117e9a0889c64c24110b07ee8267304d8e2cb49a9b071789805"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Baroque",
+   "title": "Baroque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:25.017Z",
+   "snapshot": "361eccbb194f87ab42bbabcb8274a339404e4726fe171497cd1b95d21232c131"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chartres_Cathedral",
+   "title": "Chartres Cathedral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:26.158Z",
+   "snapshot": "6ae8007bd8e1e4d0a1f1e22e0a5454dcc668916cc894c124252829ac8443f1dd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Gotik",
+   "title": "Gotik",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:24.505Z",
+   "snapshot": "9509d83fe367454bb20cc419680361f353c6fbc38cb294c37275d90e6db50d93"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Romanesque_architecture",
+   "title": "Romanesque architecture – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:27.117Z",
+   "snapshot": "7ad00ef9102c400e754ec447e3a4340361f9f36a986ccdf42957619684290f23"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Panth%C3%A9on",
+   "title": "Panthéon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:28.013Z",
+   "snapshot": "8bf28d838c6be30c48b9ef6341d5369e2f1b12cb4a689035566186c03e4fc0e5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Gothic_architecture",
+   "title": "Gothic architecture",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:29.262Z",
+   "snapshot": "4edbb33e7e42fa62c501033a0865eaac3d594622d3c31f39601c1f9b1fd812a8"
+  },
+  "s8": {
+   "url": "https://art.scholastic.com/pages/topics/art-on-demand/periods-and-styles-in-western-art/gothic.html",
+   "title": "Gothic – Periods and Styles in Western Art",
+   "publisher": "Scholastic Art",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:47.292Z",
+   "snapshot": "38a74f9a14911dfaaeb7efaf97f63b46417bc1d15c5f042e1bce679c14db977f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Renaissance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Baroque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gothic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gotik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-077"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Romanesque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Neoclassicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pointed arches and ribbed vaults",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-077"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f00491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Renaissance (UK:  rin-AY-sənss, US:   REN-ə-sahnss, \"rebirth\") was a European period of history and cultural movement taking place at the end of the Late Middle Ages and the beginning of the early modern era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Renaissance” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f00492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Baroque (UK:  bə-ROK, US:  bə-ROHK, French: [baʁɔk]) is a Western style of architecture, music, dance, painting, sculpture, poetry, and other arts that flourished from the early 1600s until the 1750s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baroque” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f00493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is one of the best-known and most influential examples of High Gothic and Classic Gothic architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gothic” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f00493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Gotik war eine Epoche der europäischen Architektur und Kunst des Mittelalters, die sich in ihren verschiedenen nationalen Ausprägungen der Früh-, Hoch- und Spätgotik zeitlich etwa von der Mitte des 12.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gotik” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f00494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Romanesque architecture is an architectural style of medieval Europe that was predominant in the 11th and 12th centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romanesque” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f00495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The architecture of the Panthéon is an early example of Neoclassicism, surmounted by a dome that owes some of its character to Bramante's Tempietto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neoclassicism” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:50.067Z",
+   "target": "f25217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pointed arches and ribbed vaults",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pointed arches and ribbed vaults”, “Spitzbögen und Rippengewölbe”, “стрельчатые арки и нервюрные своды”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:59:34Z",
+   "target": "f25217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The style is characterised by pointed arches, rib vaults, flying buttresses and large, traceried stained glass windows.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:00:17Z",
+   "target": "f25217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Three architectural features are typical of the Gothic. These are the pointed arch, the ribbed vault, and the flying buttress.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:09.306Z",
+   "target": "f25217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The style is characterised by pointed arches, rib vaults, flying buttresses and large, traceried stained glass windows.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:09.306Z",
+   "target": "f25217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Three architectural features are typical of the Gothic. These are the pointed arch, the ribbed vault, and the flying buttress.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  }
+ ]
+}

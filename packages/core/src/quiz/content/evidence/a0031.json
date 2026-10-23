@@ -1,0 +1,600 @@
+{
+ "article": "a0031",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Winfried_Kretschmann",
+   "title": "Winfried Kretschmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:13.447Z",
+   "snapshot": "d8452a9db9156d627bf4882160f86ec54baf59d90e631f66657e0909ca156e35"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Joschka_Fischer",
+   "title": "Joschka Fischer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:14.550Z",
+   "snapshot": "f32ccf2d672796763b7edc7e9e2ff5ed8957081ca04d301cd6a5271a1baf348f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Angela_Merkel",
+   "title": "Angela Merkel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:16.202Z",
+   "snapshot": "711a8596c9a9297b3d46fe2d835ee0da15499eb5c979cf3d27e4493f51221abe"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Joschka_Fischer",
+   "title": "Joschka Fischer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:12.988Z",
+   "snapshot": "f54e57aa339c8e7d10be40c94a713f6083e042c8c2743feb43649f2e140d8a11"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bodo_Ramelow",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:16.450Z",
+   "snapshot": "a8891449ec0b650a1032f889fe142e381a3e9c75ed68b7d6303ba10e935735ad"
+  },
+  "s6": {
+   "url": "https://www.landtagswahl-bw.de/landtagswahl2011",
+   "title": "Landtagswahl 2011 in Baden-Württemberg",
+   "publisher": "Landeszentrale für politische Bildung Baden-Württemberg",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:24.045Z",
+   "snapshot": "181cf6e277213fad71f1c7b5ea0899bc30f148c3bd07c168e93570dc80273208"
+  },
+  "s7": {
+   "url": "https://www.spiegel.de/international/germany/first-green-state-governor-i-want-a-quiet-revolution-a-763512.html",
+   "title": "First Green State Governor: 'I Want a Quiet Revolution'",
+   "publisher": "DER SPIEGEL",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:23.778Z",
+   "snapshot": "55600a8bdcb94961b9f132b3af4015b4666f75af6db9f4d0516fb8a3b5c05cb4"
+  },
+  "s8": {
+   "url": "https://www.hdg.de/lemo/biografie/joschka-fischer.html",
+   "title": "Joschka Fischer – LeMO Biografie",
+   "publisher": "Stiftung Haus der Geschichte der Bundesrepublik Deutschland",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:23.934Z",
+   "snapshot": "149921cd306d2506a64e83a99145777a055f47c98cd392d4e5c24a6fb31616df"
+  },
+  "s9": {
+   "url": "https://www.hdg.de/lemo/biografie/angela-merkel.html",
+   "title": "Angela Merkel – LeMO Biografie",
+   "publisher": "Stiftung Haus der Geschichte der Bundesrepublik Deutschland",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:24.845Z",
+   "snapshot": "e95d50236e6b5cf87869144ec99cdf24b8bfe5cdcf23b21b28e41b3f852d7608"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winfried Kretschmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joschka Fischer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Angela Merkel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nike",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-335"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:39.969Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winfried Kretschmann (German: [ˈvɪnfʁiːt ˈkʁɛtʃman]; born 17 May 1948) is a German politician who served as Minister-President of Baden-Württemberg from 2011 to 2026.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winfried Kretschmann” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:39.969Z",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Visa Affair 2005, Fischer was a popular politician, \"loved by an entire nation.\" Writing in Der Spiegel, journalist Charles Hawley opined that since 1998, \"Joschka Fischer's popularity has been virtually unassailable: The icon of the environmentally minded Green Party could, it seemed, do no wrong.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joschka Fischer” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:39.969Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The third Cabinet of Angela Merkel was sworn in on 17 December 2013.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angela Merkel” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:39.969Z",
+   "target": "f14640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heute sind Fischers weiße Nike-Turnschuhe im Deutschen Ledermuseum in Offenbach ausgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nike” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:18:36Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "am 12. Mai hat der Landtag Winfried Kretschmann zum ersten grünen Ministerpräsidenten gewählt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:18:40Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mit Winfried Kretschmann stellen sie auch noch den ersten grünen Ministerpräsidenten eines Bundeslandes.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:18:45Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "you have just become governor of Baden-Württemberg, the first-ever state governor from the Green Party in Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:18:52Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "becoming the first ever Green Minister-President of any German state",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:18:59Z",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Damit ist er bundesweit das erste Kabinettsmitglied der Grünen. Seine Vereidigung am 12. Dezember 1985 in Turnschuhen, Jeans und Sportsakko sorgt für Aufsehen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:05Z",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fischer caused a stir when he appeared at his oath of office ceremony wearing trainers. These trainers are now part of the shoe collection at the German Leather and Shoe Museum in Offenbach, Hesse.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:19:11Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "22. November: Merkel wird mit 397 der 611 gültigen Stimmen zur Kanzlerin der Bundesrepublik Deutschland gewählt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:19:15Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Merkel ist die erste Kanzlerin Deutschlands",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:19:19Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She was the first woman to be elected chancellor, and the first chancellor of the reunified Germany to have been raised in the former East Germany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mit Winfried Kretschmann stellen sie auch noch den ersten grünen Ministerpräsidenten eines Bundeslandes.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "you have just become governor of Baden-Württemberg, the first-ever state governor from the Green Party in Germany",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "becoming the first ever Green Minister-President of any German state",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Damit ist er bundesweit das erste Kabinettsmitglied der Grünen. Seine Vereidigung am 12. Dezember 1985 in Turnschuhen, Jeans und Sportsakko sorgt für Aufsehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fischer caused a stir when he appeared at his oath of office ceremony wearing trainers. These trainers are now part of the shoe collection at the German Leather and Shoe Museum in Offenbach, Hesse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Merkel ist die erste Kanzlerin Deutschlands",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She was the first woman to be elected chancellor, and the first chancellor of the reunified Germany to have been raised in the former East Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s3"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mit Winfried Kretschmann stellen sie auch noch den ersten grünen Ministerpräsidenten eines Bundeslandes.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Winfried Kretschmann” is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bundesaußenminister Joschka Fischer im NATO-Hauptquartier, 1998.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Joschka Fischer” is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:51:55.387Z",
+   "target": "f00154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Offizielles Porträt von Angela Merkel, Bundeskanzlerin der Bundesrepublik Deutschland (seit 2005).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Angela Merkel” is on the snapshot of s9"
+  }
+ ]
+}

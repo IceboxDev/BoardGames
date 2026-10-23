@@ -1,0 +1,242 @@
+{
+ "article": "a2673",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hallstatt_(China)",
+   "title": "Hallstatt (China)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:08.461Z",
+   "snapshot": "34fe458a3a6fb672654885b82d889d91c3986edcd1ecaec6d8f4bd4fa3786923"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Huis_Ten_Bosch_(theme_park)",
+   "title": "Huis Ten Bosch (theme park) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:12.110Z",
+   "snapshot": "ac4dcebd0ac567e9c4e0972bc0601f6769e11c69af06bde02f7fcb439445861f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Parthenon_(Nashville)",
+   "title": "Parthenon (Nashville) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:13.126Z",
+   "snapshot": "5b503a36900d42ea1021d757ef4d927444e16c1c881e57ee2a0aa5a36593d575"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Portmeirion",
+   "title": "Portmeirion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:14.141Z",
+   "snapshot": "8611cb582f8ea53f34eb3a4461e579ed272794511af9eb5bfb1abaa1c292787f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Paris_Las_Vegas",
+   "title": "Paris Las Vegas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:15.104Z",
+   "snapshot": "548b11d987ee67c0a4539c8119d3942ac932fc30b0ccd8629433bf98334b35ca"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "China",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-296"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nashville",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Portmeirion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Las Vegas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.474Z",
+   "target": "f14512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "China“ auszuarbeiten und zu unterzeichnen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.474Z",
+   "target": "f14513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Huis Ten Bosch (Japanese: ハウステンボス, Hepburn: Hausu Ten Bosu) is a theme park in Sasebo, Nagasaki, Japan, which recreates the Netherlands and displays life-sized copies of old Dutch buildings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Netherlands” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.474Z",
+   "target": "f14514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Parthenon in Centennial Park, Nashville, Tennessee, United States, is a full-scale replica of the original Parthenon in Athens, Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nashville” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:56.474Z",
+   "target": "f14515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Portmeirion (; Welsh pronunciation: [pɔrtˈmei̯rjɔn])  is a folly  Italianate style tourist village in Gwynedd, North Wales.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Portmeirion” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:56.474Z",
+   "target": "f14516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paris Las Vegas is a casino hotel on the Las Vegas Strip in Paradise, Nevada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Las Vegas” is on the snapshot of s5"
+  }
+ ]
+}

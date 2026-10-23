@@ -1,0 +1,242 @@
+{
+ "article": "a2665",
+ "sources": {
+  "s1": {
+   "url": "https://www.royal.uk/official-photographs-released-queens-90th-birthday?page=20",
+   "title": "Official photographs released for The Queen's 90th birthday",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:43.451Z",
+   "snapshot": "0f70b3bffc086e12726e4575b84c6d5be3049081375c9fe25e3e44e5ecd9cf31"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cecil_Beaton",
+   "title": "Cecil Beaton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:48.226Z",
+   "snapshot": "c973d086e4e0bca73fc4f3180d129b456e2b650b209af07f76665913325165eb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pietro_Annigoni",
+   "title": "Pietro Annigoni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:48.579Z",
+   "snapshot": "35462ac34a7f6ce526183ac5edb8065aa375614d8f95bf119ee0b4c6447526a2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lucian_Freud",
+   "title": "Lucian Freud – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:49.194Z",
+   "snapshot": "139dc1455ce4943d39295845ad086eba5b69c5a3f3567055ab8b737054918d9c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Arnold_Machin",
+   "title": "Arnold Machin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:50.607Z",
+   "snapshot": "2b5de78e3fa508a3cb0c148efb215cae4bcfc0149ce884b7f8a77c360f86a16c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Annie Leibovitz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-354"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cecil Beaton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pietro Annigoni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lucian Freud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arnold Machin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:55.417Z",
+   "target": "f14449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A sequence of three official photographs of Her Majesty The Queen, by the renowned portrait photographer Annie Leibovitz, will be released today, 21st April, to mark Her Majesty's 90th Birthday.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Annie Leibovitz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:55.417Z",
+   "target": "f14450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cecil Beaton was educated at Heath Mount School (where he was bullied by Evelyn Waugh) and St Cyprian's School, Eastbourne, where his artistic talent was quickly recognised.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cecil Beaton” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:55.417Z",
+   "target": "f14451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pietro Annigoni (7 June 1910 – 28 October 1988) was an Italian artist, portrait painter, fresco painter and medallist, best known for his painted portraits of Queen Elizabeth II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pietro Annigoni” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:55.417Z",
+   "target": "f14452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Robert Hughes's contribution is excerpted from his \"On Lucian Freud\", listed below.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lucian Freud” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:55.417Z",
+   "target": "f14453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arnold Machin OBE RA FRSS (; 30 September 1911 – 9 March 1999) was a British artist, sculptor, and coin and postage stamp designer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arnold Machin” is on the snapshot of s5"
+  }
+ ]
+}

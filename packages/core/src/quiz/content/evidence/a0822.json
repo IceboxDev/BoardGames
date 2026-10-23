@@ -1,0 +1,334 @@
+{
+ "article": "a0822",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Strasbourg",
+   "title": "Battle of Strasbourg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:41.523Z",
+   "snapshot": "b5c8500e73340c8f2c7a31497449025a33e8b4e3756f9c0833e1798fe6785518"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Clovis_I",
+   "title": "Clovis I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:42.372Z",
+   "snapshot": "10cd650d3da8d61a2dc4b0aec150a57da28edeff00deec163e41229f7a83d7f0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anglo-Saxon_settlement_of_Britain",
+   "title": "Anglo-Saxon settlement of Britain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:43.585Z",
+   "snapshot": "3608d9e217c691a645bdf36245752e1c6e1f8d2516dd66e0ce837242d9d0c2e0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Baiuvarii",
+   "title": "Baiuvarii – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:44.429Z",
+   "snapshot": "a054001b375b9051f7f85b35cf8a78c9a800ebd253719fd5d237c1cc1937e7b8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lombards",
+   "title": "Lombards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:45.821Z",
+   "snapshot": "33fddbad8e1be014e6a2d75c33eac7d64188448d9f253db42652db072676aa1e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Alemanni",
+   "title": "Alemanni – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:49:29Z"
+  },
+  "s7": {
+   "url": "https://austria-forum.org/af/AEIOU/Alemannen",
+   "title": "Alemannen – AEIOU Österreich-Lexikon",
+   "publisher": "Austria-Forum (AEIOU)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:57.756Z",
+   "snapshot": "3bbaf0df3e53bf5de6c521db4778e0cdd8021bcb81762c0b17467f322d4a2fff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alemanni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Franks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Saxons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Baiuvarii",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lombards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:50.019Z",
+   "target": "f04106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alemanni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Alemanni”, “Alemannen”, “алеманны”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:50.019Z",
+   "target": "f04107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "466 – 27 November 511) was the first Frankish king to unite the Franks, changing the form of leadership from a group of petty kings to rule by a single king, and ensuring that the kingship was passed down to his heirs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franks” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:50.019Z",
+   "target": "f04108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gildas reports that a major conflict was triggered some generations before him, after a group of foreign Saxons was invited to settle in Britain by the Roman leadership in return for defending against raids from the Picts and Scots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saxons” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:50.019Z",
+   "target": "f04109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Baiuvarii, Baiovari or early Bavarians were a Germanic people who are first mentioned in contemporary records starting in the 6th century, soon after the end of the Western Roman Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baiuvarii” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:50.019Z",
+   "target": "f04110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Lombards, Longobards or Langobards (Latin: Langobardi) were a Germanic people who conquered most of the Italian Peninsula between 568 and 774 AD.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lombards” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:29Z",
+   "target": "f04106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The area settled by the Alemanni corresponds roughly to the area where Alemannic German dialects remain spoken, including German Swabia and Baden, French Alsace, German-speaking Switzerland, Liechtenstein and Austrian Vorarlberg.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:33Z",
+   "target": "f04106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Westgermanischer Stamm, im 2.-3. Jahrhundert am römischen Limes zwischen Rhein und Donau ansässig, breiteten sich um 500 nach Süden (Schweiz, Vorarlberg) aus, wurden seit 600 unter fränkischem Einfluss christianisiert und bildeten seit dem 10. Jahrhundert das Herzogtum Schwaben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:18.135Z",
+   "target": "f04106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Westgermanischer Stamm, im 2.-3. Jahrhundert am römischen Limes zwischen Rhein und Donau ansässig, breiteten sich um 500 nach Süden (Schweiz, Vorarlberg) aus, wurden seit 600 unter fränkischem Einfluss christianisiert und bildeten seit dem 10. Jahrhundert das Herzogtum Schwaben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:18.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:18.135Z",
+   "target": "f04106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Alemannen | AEIOU Österreich-Lexikon im Austria-Forum",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:18.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alemannen” is on the snapshot of s7"
+  }
+ ]
+}

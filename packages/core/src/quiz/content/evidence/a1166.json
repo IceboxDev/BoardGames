@@ -1,0 +1,288 @@
+{
+ "article": "a1166",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hans_Kohlhase",
+   "title": "Hans Kohlhase – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:48.236Z",
+   "snapshot": "e2754c46e9b40dece8a5fe045dec12592f64ed5937af2e56d22471ab9305513c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Kohlhaas",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:49.209Z",
+   "snapshot": "359d4159593101444be689622620ffa8cdffed2a33e8dd014afd28e5d3f8ad0b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_zerbrochene_Krug_(1937)",
+   "title": "Der zerbrochene Krug (1937) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:50.190Z",
+   "snapshot": "08b5c6b07c6e46df841d6fd0668117fca35134ca1f1398ddcb5e77e1574fe3d7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Penthesilea_(Kleist)",
+   "title": "Penthesilea (Kleist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:51.333Z",
+   "snapshot": "5ccb7c307a938e972d696014d3db3e8ea7900dab82544352d9c4742fab2d2270"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Das_K%C3%A4thchen_von_Heilbronn",
+   "title": "Das Käthchen von Heilbronn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:52.114Z",
+   "snapshot": "9aeaac0b97496eca9b3ebfce703d37e702c414f3ff515f883e467cc9ff034c6f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Prinz_Friedrich_von_Homburg_oder_die_Schlacht_bei_Fehrbellin",
+   "title": "Prinz Friedrich von Homburg oder die Schlacht bei Fehrbellin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:53.161Z",
+   "snapshot": "0c1ff0590bd3a611f4713484a315c88323f1808fb21847e94fea96bc4e167cd5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michael Kohlhaas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Michael Kohlhaas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dorfrichter Adam",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Penthesilea",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Käthchen von Heilbronn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prinz Friedrich von Homburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:42.656Z",
+   "target": "f05826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sein Leben war Vorbild für Heinrich von Kleists Novelle Michael Kohlhaas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Kohlhaas” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:42.656Z",
+   "target": "f05826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Michael Kohlhaas ist eine Novelle von Heinrich von Kleist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Kohlhaas” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:42.656Z",
+   "target": "f05827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zusammen mit Licht sei sie der Spur des vermutlichen Teufels gefolgt, die direkt zu Dorfrichter Adam geführt habe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dorfrichter Adam” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:42.656Z",
+   "target": "f05828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Penthesilea ist ein Drama von Heinrich von Kleist aus dem Jahre 1808.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penthesilea” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:42.656Z",
+   "target": "f05829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Käthchen von Heilbronn oder Die Feuerprobe (1807–1808) ist ein großes historisches Ritterschauspiel in fünf Akten von Heinrich von Kleist (1777–1811).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Käthchen von Heilbronn” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:42.656Z",
+   "target": "f05830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prinz Friedrich von Homburg oder die Schlacht bei Fehrbellin",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prinz Friedrich von Homburg” is on the snapshot of s6"
+  }
+ ]
+}

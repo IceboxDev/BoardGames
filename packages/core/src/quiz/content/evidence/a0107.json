@@ -1,0 +1,623 @@
+{
+ "article": "a0107",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mallard",
+   "title": "Mallard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:05.031Z",
+   "snapshot": "40c5923c37982bf341a737c26d03032da1747abedd72bf6bad42796eec2d2c00"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Western_honey_bee",
+   "title": "Western honey bee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:06.189Z",
+   "snapshot": "994aadaf9d32b7625aec163d2dcc778ae53af2e54059a8c61b9f538751011ea0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Skunks",
+   "title": "Skunks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:03.447Z",
+   "snapshot": "3bac9f9e6acb1fcb554b3ad75edfa5237b3402489de3b6842c91f07c5962445e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spider",
+   "title": "Spider – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:07.192Z",
+   "snapshot": "b16ace1fd59272d703467f4a693a873e3d03bb39a8f03909f181f922ece744f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Oscar_Riddle",
+   "title": "Oscar Riddle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:08.469Z",
+   "snapshot": "b2a427dfe23cedb1e4e68907a0e6c2bd2f389c1b06681208b5b189fad9d0066e"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/cache/epub/24583/pg24583-images.html",
+   "title": "Langstroth on the Hive and the Honey-Bee (1853)",
+   "publisher": "Project Gutenberg (L. L. Langstroth)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:49.793Z",
+   "snapshot": "226358c00988e83eb18896273da33d737a82b312541d2db2d091e4b852251512"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Beeswax",
+   "title": "Beeswax",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:49.258Z",
+   "snapshot": "fb2690e3826bf7e4443d04ce530577dd37dcab92e4f59777f237af0786d57d87"
+  },
+  "s8": {
+   "url": "https://australian.museum/learn/animals/spiders/spider-webs/",
+   "title": "Spider webs",
+   "publisher": "Australian Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:50.914Z",
+   "snapshot": "889b32d4ed3487763971eacd625be6f01f0f03ce5b47d5484ad47bdffc2296c4"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Spider_silk",
+   "title": "Spider silk",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:50.362Z",
+   "snapshot": "b2be23c1112988b42652fb3895ab870d39d98fde9ed50ac9ab93a574a9fee719"
+  },
+  "s10": {
+   "url": "https://www.dictionary.com/browse/uropygial-gland",
+   "title": "uropygial gland",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:50.337Z",
+   "snapshot": "3c903be7458641590690f3ed0034e3d6d7662bb79c9f4bb190ee81f54bd1e65e"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Uropygial_gland",
+   "title": "Uropygial gland",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:51.273Z",
+   "snapshot": "72fa3e5655c69b55722b8e8d02bfe5c41bf13f5a15558a2ef762e1f373fef5a0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "uropygial gland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wax glands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Analdrüsen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "silk glands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "crop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:52.277Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "uropygial gland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“uropygial gland”, “Bürzeldrüse”, “копчиковая железа”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:52.277Z",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wax glands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“wax glands”, “Wachsdrüsen”, “восковые железы”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:52.277Z",
+   "target": "f00533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ein charakteristisches Merkmal für alle Vertreter der Skunks sind die ausgeprägten, paarigen Analdrüsen, die ein streng riechendes Sekret absondern, das bis zu 6 Meter weit verspritzt werden kann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Analdrüsen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:52.277Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "silk glands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“silk glands”, “Spinndrüsen”, “паутинные железы”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:52.277Z",
+   "target": "f00535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Also around 1932 Riddle was earliest to show that the prolactin protein induces the secretion of crop milk in pigeons and other birds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “crop” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:17Z",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it is formed in small wax pouches on their abdomen, and comes out in the shape of very delicate scales.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "Langstroth calls the wax-secreting organs 'wax pouches'"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:22Z",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The wax is formed into scales by eight wax-producing glands in the abdominal segments of worker bees",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:47Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This recycling process is very efficient as it returns the silk protein to the silk glands to make new silk.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:53Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The gland's visible, or external, part is termed the spinneret.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:09Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a gland opening on the back at the base of the tail in most birds that secretes an oily fluid used by the bird in preening its feathers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:13:12Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The uropygial gland is strongly developed in many waterbirds, such as ducks, petrels, pelicans and in the osprey",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia notes the gland's exact share in waterproofing (vs. feather structure) is debated"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it is formed in small wax pouches on their abdomen, and comes out in the shape of very delicate scales.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The wax is formed into scales by eight wax-producing glands in the abdominal segments of worker bees",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This recycling process is very efficient as it returns the silk protein to the silk glands to make new silk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The gland's visible, or external, part is termed the spinneret.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a gland opening on the back at the base of the tail in most birds that secretes an oily fluid used by the bird in preening its feathers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The uropygial gland is strongly developed in many waterbirds, such as ducks, petrels, pelicans and in the osprey",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "UROPYGIAL GLAND Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “uropygial gland” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The uropygial gland, informally known as the preen gland or the oil gland, is a bilobed sebaceous gland possessed by the majority of birds used to distribute the gland's oil through the plumage by means of preening.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “uropygial gland” is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The sizes of these wax glands depend on the age of the worker, and after many daily flights, these glands gradually begin to atrophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “wax glands” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This recycling process is very efficient as it returns the silk protein to the silk glands to make new silk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “silk glands” is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:11.209Z",
+   "target": "f00534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The fibre is pulled through (possibly multiple) silk glands of multiple types.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:11.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “silk glands” is on the snapshot of s9"
+  }
+ ]
+}

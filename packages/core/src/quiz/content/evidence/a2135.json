@@ -1,0 +1,691 @@
+{
+ "article": "a2135",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Mona_Lisa",
+   "title": "Mona Lisa",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:13.262Z",
+   "snapshot": "8e7d07732dadce8a86a4508a40050e3a8168eed47745526a4690ddea8dd64ae6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+   "title": "Mona Lisa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:13.234Z",
+   "snapshot": "8f0eecded01e26559593552a75f5b854367ab0aaa47769f84cbf14bc69d592d9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Personal_life_of_Leonardo_da_Vinci",
+   "title": "Personal life of Leonardo da Vinci",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:33.977Z",
+   "snapshot": "eeb9f9cbe517eaa4add48099560b787c6bde97edfcbd3e43583e8a3896e33c27"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lisa_del_Giocondo",
+   "title": "Lisa del Giocondo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:34.950Z",
+   "snapshot": "31cefc73b440d5976d7329bcdd26e1a4035c4f1161894731a4003f3a929393aa"
+  },
+  "s5": {
+   "url": "https://abcnews.go.com/Technology/story?id=3746629",
+   "title": "Brow-Raising 'Mona Lisa' Discovery",
+   "publisher": "ABC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:52.456Z",
+   "snapshot": "338873b93901705b70aaf9f252c1fc632a817ef9b1cec9e1bc81dfa9c3161216"
+  },
+  "s6": {
+   "url": "https://www.foxnews.com/story/french-inventor-says-mona-lisa-once-had-eyebrows-lashes",
+   "title": "French Inventor Says 'Mona Lisa' Once Had Eyebrows, Lashes",
+   "publisher": "Fox News (Associated Press)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:53.377Z",
+   "snapshot": "5455158a55da59470b39d4fea5a558fa901439374cf062e2a6b39c94cc931f80"
+  },
+  "s7": {
+   "url": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+   "title": "From the 'Mona Lisa' to 'The Wedding Feast at Cana' - The Salle des États",
+   "publisher": "Musée du Louvre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:53.204Z",
+   "snapshot": "508ef06396ac83be5198d98ca699618158847c0ec89527675e361125e14dcf08"
+  },
+  "s8": {
+   "url": "https://www.scmp.com/news/world/europe/article/3296639/mona-lisa-get-own-room-louvre-museum-undergoes-major-renovation",
+   "title": "Mona Lisa to get own room as Louvre museum undergoes major renovation",
+   "publisher": "South China Morning Post (Associated Press)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:01:01Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mona Lisa",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eyebrows and eyelashes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-164"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonardo da Vinci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-213"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lisa Gherardini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "poplar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Francis I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Salle des États",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Faded away",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 64; transcript pp-082"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mona Lisa ist ein weltberühmtes Ölgemälde von Leonardo da Vinci aus der Hochphase der italienischen Renaissance Anfang des 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mona Lisa” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eyebrows and eyelashes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Eyebrows and eyelashes”, “Augenbrauen und Wimpern”, “брови и ресницы”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Italian polymath Leonardo da Vinci (1452–1519) left thousands of pages of writings and drawings but rarely made any references to his personal life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonardo da Vinci” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Portrait of Lisa Gherardini, wife of Francesco del Giocondo\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lisa Gherardini” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is painted in oil on a white poplar panel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “poplar” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "King Francis I of France acquired the Mona Lisa after Leonardo's death in 1519, and it later became the property of the French Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francis I” is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 6 April 2005‍—‍‌following a period of curatorial maintenance, recording, and analysis‍—‍‌the painting was moved to a new location within the museum's Salle des États.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salle des États” is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:28.095Z",
+   "target": "f25222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Faded away",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Faded away”, “Verblasst”, “поблёкли”) on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:00:46Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 2007, French engineer Pascal Cotte announced that his ultra-high resolution scans of the painting provide evidence that Mona Lisa was originally painted with eyelashes and eyebrows",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:00:48Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cotte discovered that the \"Mona Lisa's\" eyebrows and eyelashes were originally painted on the piece.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:00:50Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The world's most famous painting originally included both brows and lashes, according to Cotte, who said his 240-megapixel scans reveal traces of Mona Lisa's left brow",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:00:52Z",
+   "target": "f25222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "but that these had gradually disappeared over time, perhaps as a result of overcleaning",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:00:54Z",
+   "target": "f25222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "They disappeared either because of a botched attempt to clean the painting or because the paint's oil and pigment faded over time.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Cause given as fading or over-cleaning; the answer 'faded away' matches the card's option C."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:00:56Z",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the painting was moved to a new location within the museum's Salle des États",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:00:58Z",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is therefore housed in the Louvre’s largest room, the Salle des États",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Still true as of 2026; a separate room for the painting is planned under 'Louvre New Renaissance' (target c. 2031)."
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:01:01Z",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "will include a new entrance near the River Seine, to be opened by 2031",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Context for time-sensitivity: Jan 2025 announcement that the Mona Lisa will get a room of its own; it still hangs in the Salle des États until then."
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 2007, French engineer Pascal Cotte announced that his ultra-high resolution scans of the painting provide evidence that Mona Lisa was originally painted with eyelashes and eyebrows",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s2"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cotte discovered that the \"Mona Lisa's\" eyebrows and eyelashes were originally painted on the piece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The world's most famous painting originally included both brows and lashes, according to Cotte, who said his 240-megapixel scans reveal traces of Mona Lisa's left brow",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f25222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "but that these had gradually disappeared over time, perhaps as a result of overcleaning",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s2"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f25222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "They disappeared either because of a botched attempt to clean the painting or because the paint's oil and pigment faded over time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s5"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the painting was moved to a new location within the museum's Salle des États",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s2"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f10718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the process of photographing and scanning the images, Cotte discovered that the \"Mona Lisa's\" eyebrows and eyelashes were originally painted on the piece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eyebrows and eyelashes” is on the snapshot of s5"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:58:14.424Z",
+   "target": "f10723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "From the 'Mona Lisa' to 'The Wedding Feast at Cana' - The Salle des États",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:14.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Salle des États” is on the snapshot of s7"
+  }
+ ]
+}

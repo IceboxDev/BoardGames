@@ -1,0 +1,414 @@
+{
+ "article": "a0050",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Becoming_(book)",
+   "title": "Becoming (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:50.458Z",
+   "snapshot": "df6e259fb17a7485006325fd51b2a84ce593d2882dde229429e18ae57406e532"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/A_Promised_Land",
+   "title": "A Promised Land – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:51.489Z",
+   "snapshot": "d22cb34e8e5fe968b167256bedba374c9e8b265218ad22c631d84124347bb236"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spare_(memoir)",
+   "title": "Spare (memoir) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:52.606Z",
+   "snapshot": "5ec8b5b62ba2ab62883c13d2af817505620b73c61b49df7beec206b836b9b556"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Long_Walk_to_Freedom",
+   "title": "Long Walk to Freedom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:53.484Z",
+   "snapshot": "c9c9b1261bbc18bd1a89eaee1a0f2772f98af58c8017efc5360ae8cf8222a31d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/I_Am_Malala",
+   "title": "I Am Malala – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:54.503Z",
+   "snapshot": "f8ed7aa9a01c2c2db40d18d2044d9a6a858107f6d8a8a2547e010edf670184b4"
+  },
+  "s6": {
+   "url": "https://www.guinnessworldrecords.com/news/2023/1/prince-harrys-spare-becomes-fastest-selling-non-fiction-book-ever-732915",
+   "title": "Prince Harry's Spare becomes fastest-selling non-fiction book ever",
+   "publisher": "Guinness World Records",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:30.839Z",
+   "snapshot": "a493141562c850359db5c8188b1ea1f738b22142c1e561c578d4e04c19280e9d"
+  },
+  "s7": {
+   "url": "https://www.theguardian.com/books/2023/jan/17/prince-harry-spare-is-fastest-selling-non-fiction-book",
+   "title": "Prince Harry's Spare is fastest-selling nonfiction book since UK records began",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:30.802Z",
+   "snapshot": "3d3cbbb261a80cd3f03f7047d310d3309fd406bd51ceabf34f84805170d6e891"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michelle Obama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Barack Obama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Prince Harry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nelson Mandela",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Malala Yousafzai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:42.768Z",
+   "target": "f00246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Becoming is the first memoir by former First Lady of the United States Michelle Obama, published on November 13, 2018.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michelle Obama” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:42.768Z",
+   "target": "f00247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Promised Land is a memoir by Barack Obama, the 44th president of the United States from 2009 to 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barack Obama” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:42.768Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spare is a memoir by Prince Harry, Duke of Sussex, which was released in 2023.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prince Harry” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:42.768Z",
+   "target": "f00249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Long Walk to Freedom is an autobiography by  Nelson Mandela, South Africa's first democratically elected President, and it was first published in 1994 by Little Brown & Co.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nelson Mandela” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:42.768Z",
+   "target": "f00250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I Am Malala: The Story of the Girl Who Stood Up for Education and was Shot by the Taliban is an autobiographical book by Malala Yousafzai, co-written with Christina Lamb.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malala Yousafzai” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:02:26Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prince Harry’s controversial, tell-all memoir Spare has become the fastest-selling non-fiction book of all time, after shifting 1.43 million copies during its first day on sale in the UK, US, and Canada.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:02:28Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Prince Harry’s Spare has sold almost half a million copies in the UK in its first week on sale, making it the fastest-selling nonfiction book since records began.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:02:29Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "making it the country's fastest-selling non-fiction book ever.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:58.304Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prince Harry’s controversial, tell-all memoir Spare has become the fastest-selling non-fiction book of all time, after shifting 1.43 million copies during its first day on sale in the UK, US, and Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:58.304Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Prince Harry’s Spare has sold almost half a million copies in the UK in its first week on sale, making it the fastest-selling nonfiction book since records began.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:58.304Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "making it the country's fastest-selling non-fiction book ever.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:58.304Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prince Harry’s Spare becomes fastest-selling non-fiction book ever | Guinness World Records",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Prince Harry” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:58.304Z",
+   "target": "f00248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Prince Harry’s Spare is fastest-selling nonfiction book since UK records began | Books | The Guardian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Prince Harry” is on the snapshot of s7"
+  }
+ ]
+}

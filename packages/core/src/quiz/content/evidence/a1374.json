@@ -1,0 +1,267 @@
+{
+ "article": "a1374",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Jurte",
+   "title": "Jurte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:37.879Z",
+   "snapshot": "6514cf5f3f0d26a65e5231ea4d517c9e70d9022bbffcd1bcac4ce12253bee379"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nanook_of_the_North",
+   "title": "Nanook of the North – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:40.233Z",
+   "snapshot": "8cbcf1a277d81c89cd95c6cf5b02c7e6c1ba4a2e5f2ca5e9acfc228e56194b3c"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/wigwam",
+   "title": "wigwam – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alberobello",
+   "title": "Alberobello – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:41.262Z",
+   "snapshot": "bda9b81c0422d638cfdb80aae464f40ca181aec42b7a6b2507c684ffb800f94b"
+  },
+  "s5": {
+   "url": "https://www.thecanadianencyclopedia.ca/en/article/wigwam",
+   "title": "Wigwam – The Canadian Encyclopedia",
+   "publisher": "Historica Canada",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:45:50Z"
+  },
+  "s6": {
+   "url": "https://www.dictionary.com/browse/wigwam",
+   "title": "wigwam – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:43.337Z",
+   "snapshot": "e70d7f582b2e8afbaf5642246aa9cbb8e84ef047c91b29a41129efcfa6d4ad44"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jurte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "igloo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "wigwam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "trullo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:15.600Z",
+   "target": "f06866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Jurte (türkisch Yurt  ‚Heim‘) ist das traditionelle Zelt der Nomaden in Zentralasien, besonders verbreitet in der Mongolei, Kirgisistan  und in Kasachstan.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jurte” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:15.600Z",
+   "target": "f06868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The audience sees Nanook, often with his family, hunt a walrus, build an igloo, go about his day, and perform other tasks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “igloo” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:15.600Z",
+   "target": "f06870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It has 10,237 inhabitants (2022) and is famous for its unique trullo buildings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “trullo” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:45:50Z",
+   "target": "f06869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A wigwam was a type of house used mainly by Algonquian peoples but also other Indigenous peoples in the eastern half of North America in precolonial days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:54Z",
+   "target": "f06869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A wigwam is a dome-shaped shelter, covered in bark or hides, built and used by Native Americans.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:56:00.704Z",
+   "target": "f06869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A wigwam is a dome-shaped shelter, covered in bark or hides, built and used by Native Americans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:00.704Z",
+   "target": "f06869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "WIGWAM Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “wigwam” is on the snapshot of s6"
+  }
+ ]
+}

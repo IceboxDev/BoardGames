@@ -1,0 +1,256 @@
+{
+ "article": "a0410",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude",
+   "title": "One Hundred Years of Solitude – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:10.528Z",
+   "snapshot": "8ed752ddb7fa9401b79a027be2755e867b912a72d1804f6c4e466d055a526004"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Canto_General",
+   "title": "Canto General – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:11.481Z",
+   "snapshot": "f73902d9ff34a789f65d928eacdb4f392cafe629a8df680a113093eb141bf196"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mario_Vargas_Llosa",
+   "title": "Mario Vargas Llosa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:12.703Z",
+   "snapshot": "9ef0b88ce161953e1429e141a6522ba98dfdf663d51985b673491e7255739685"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Octavio_Paz",
+   "title": "Octavio Paz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:13.466Z",
+   "snapshot": "808da5f58916312c48ba01495ee6eb578906ad05672c3e91906392b6ffd356e2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Saramago",
+   "title": "José Saramago – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:14.556Z",
+   "snapshot": "6384cc4968f38a7ef0cfdfa8b4c5c7857176f704e2e4e0ef353b3d648aec229f"
+  },
+  "s6": {
+   "url": "https://es.wikipedia.org/wiki/Piedra_de_sol_(poema)",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T03:54:11.773Z",
+   "snapshot": "b3beb6fb2b82e706c9cd5ef2fb3ecc8bdb29d998b04b058b683592f61b8f9f6b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pablo_Neruda",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:15.717Z",
+   "snapshot": "f41fdeadbd04da06373dfb90629f72b694493840b26f01274b658c013ce9ed5f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gabriel García Márquez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pablo Neruda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mario Vargas Llosa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Octavio Paz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "José Saramago",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:44.318Z",
+   "target": "f02046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Years of Solitude (Spanish: Cien años de soledad, Latin American Spanish: [sjen ˈaɲos ðe soleˈðað]) is a 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictitious town of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gabriel García Márquez” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:44.318Z",
+   "target": "f02047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canto General is Pablo Neruda's tenth book of poems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pablo Neruda” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:44.318Z",
+   "target": "f02048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mario Vargas Llosa was born to a middle-class family on 28 March 1936, in the southern Peruvian provincial city of Arequipa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mario Vargas Llosa” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:44.318Z",
+   "target": "f02049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Octavio Paz Lozano (March 31, 1914 – April 19, 1998) was a Mexican philosopher, poet, and diplomat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Octavio Paz” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:44.318Z",
+   "target": "f02050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2007, Saramago founded his namesake foundation, José Saramago Foundation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “José Saramago” is on the snapshot of s5"
+  }
+ ]
+}

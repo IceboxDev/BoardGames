@@ -1,0 +1,459 @@
+{
+ "article": "a2063",
+ "sources": {
+  "s1": {
+   "url": "https://www.nature.com/articles/438575a",
+   "title": "Fruit bats as reservoirs of Ebola virus – Nature",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:55.033Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tollwut",
+   "title": "Tollwut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:56.627Z",
+   "snapshot": "ac4a0d4258bb80eae7e8781b47e44e2f0832f0be7d5571205bc1151064e5e5f2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Puumala_virus",
+   "title": "Puumala virus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:58.737Z",
+   "snapshot": "d4304c2e609144eca1d70897696076a4f37275a8b14de8bad8b9379d23842f17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/MERS",
+   "title": "MERS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:59.881Z",
+   "snapshot": "7a4ef6eab1b668ed42d916006d97b13a3707a447c0bf623ab708da45d37ab804"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Influenza_A_virus",
+   "title": "Influenza A virus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:00.855Z",
+   "snapshot": "222c4d7cc2710b180b1aa0f9d1fc1ac32c0e0e4a2970f12ff827611fdfa89b75"
+  },
+  "s6": {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease",
+   "title": "Ebola disease – Fact sheet",
+   "publisher": "World Health Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:19.585Z",
+   "snapshot": "75ffda02fa7934a4ab1e931e6deb6e28b10afadb01841e2722f2834c624c1ac1"
+  },
+  "s7": {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/middle-east-respiratory-syndrome-coronavirus-(mers-cov)",
+   "title": "Middle East respiratory syndrome coronavirus (MERS-CoV) – Fact sheet",
+   "publisher": "World Health Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:20.591Z",
+   "snapshot": "8dd4809558d3f08aa6a9679e824aee8839ee98d9570e9f4d6606ff1d570e0124"
+  },
+  "s8": {
+   "url": "https://www.cdc.gov/mers/about/index.html",
+   "title": "About Middle East Respiratory Syndrome (MERS)",
+   "publisher": "CDC",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:20.880Z",
+   "snapshot": "1a327f8cf5d6a081eda978295d79b82cf1dc2b219becb73cdc35496d17544d7e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fruit bats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Füchse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bank voles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dromedaries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Waterfowl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:16.085Z",
+   "target": "f10311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fruit bats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Fruit bats”, “Flughunde”, “Крыланы”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:16.085Z",
+   "target": "f10312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dabei ist jedoch zu beachten, dass viele verstädterte Wildtiere wie Füchse und Waschbären diese ohnehin nicht mehr aufweisen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Füchse” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:16.085Z",
+   "target": "f10313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "PUUV was discovered in 1980 after being extracted from bank voles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bank voles” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:16.085Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dromedaries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dromedaries”, “Dromedare”, “Дромедары”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:16.085Z",
+   "target": "f10315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The predominant natural reservoir of influenza viruses is thought to be wild waterfowl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.085Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Waterfowl” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:29:20Z",
+   "target": "f10311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is thought that fruit bats of the Pteropodidae family are natural hosts of the Orthoebolavirus.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:29:22Z",
+   "target": "f10311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "We find evidence of asymptomatic infection by Ebola virus in three species of fruit bat, indicating that these animals may be acting as a reservoir for this deadly virus.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:29:23Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MERS-CoV is a zoonotic virus and dromedary camels are the primary reservoir.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:29:25Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The virus can spread from camels to people through direct physical contact.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:02.407Z",
+   "target": "f10311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is thought that fruit bats of the Pteropodidae family are natural hosts of the Orthoebolavirus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:02.407Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MERS-CoV is a zoonotic virus and dromedary camels are the primary reservoir.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:02.407Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The virus can spread from camels to people through direct physical contact.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:02.407Z",
+   "target": "f10311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is thought that fruit bats of the Pteropodidae family are natural hosts of the Orthoebolavirus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Fruit bats” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:02.407Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Infected dromedaries do not get sick, therefore diagnosis in animals relies on laboratory testing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dromedaries” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:02.407Z",
+   "target": "f10314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The MERS-CoV virus is mostly found in camels (dromedaries), and direct physical contact with camels can lead to transmission to humans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dromedaries” is on the snapshot of s8"
+  }
+ ]
+}

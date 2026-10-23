@@ -1,0 +1,503 @@
+{
+ "article": "a0201",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Titan_submersible_implosion",
+   "title": "Titan submersible implosion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:31.430Z",
+   "snapshot": "2a2b63bda866f92eac2cf34b1cee72b5f83d2f86e7c793e8d2fd5d68589a7551"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Barometer",
+   "title": "Barometer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:03.354Z",
+   "snapshot": "89615617c0e2bf9069dfc84cf7e5a334c8b6933ded1b055af299b355ebda12c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pascal%27s_law",
+   "title": "Pascal's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:04.348Z",
+   "snapshot": "a6e61467a2913ec0aa715dceb2880d588e7faa22f290f5e485c66c7dde8ad5a0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cavitation",
+   "title": "Cavitation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:01.466Z",
+   "snapshot": "5ad0f93390317c943a38d727d760827da6a1cc67ea3f1c26f25189df7f492e79"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Boiling_point",
+   "title": "Boiling point",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:02.432Z",
+   "snapshot": "d73ffac77ff68012922bcbab1ef545682a0a15cd9bc789e97162d9fe4e24c225"
+  },
+  "s6": {
+   "url": "https://engineerfix.com/does-pointing-a-fan-out-the-window-work-2/",
+   "title": "Does Pointing a Fan Out the Window Work?",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:01.993Z",
+   "snapshot": "68ae69af3b02862f3cd29ef9a22e81a364e3981da87363b206edd069c17f04db"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Schuyler_Skaats_Wheeler",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:05.328Z",
+   "snapshot": "1c3073c2a513728800e260a69313b49408fbad5d9b98ec89e823e444640f6ef9"
+  },
+  "s8": {
+   "url": "https://www.engineeringtoolbox.com/boiling-points-water-altitude-d_1344.html",
+   "title": "Water - Boiling Points vs. Altitude",
+   "publisher": "The Engineering ToolBox",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:34.169Z",
+   "snapshot": "1389b49ebfc559dd5aa8877be89eaab0790b0f0eadff73577d2f969d49399555"
+  },
+  "s9": {
+   "url": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/community/schools-childcare/ventilation.html",
+   "title": "Ventilation in Schools and Childcare Programs",
+   "publisher": "US Centers for Disease Control and Prevention (archive)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:35.858Z",
+   "snapshot": "17f66693b1dba6e822f8fc659e2c72ce992b0b22c1611c11eb3f4fa4b656836a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "implosion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "barometer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "pascal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cavitation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "about 71 °C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-278"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Out of the room",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-114"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Out of the room",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 57"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f01001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The search area was informed by the United States Navy's (USN) sonar detection of an acoustic signature consistent with an implosion around the time communications with the submersible ceased, suggesting the pressure hull had imploded while Titan was descending, resulting in the instant death of all",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “implosion” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f01003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A barometer is a scientific instrument that is used to measure air pressure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “barometer” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f01004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pascal's law (also Pascal's principle or the principle of transmission of fluid-pressure) is a principle in fluid mechanics that states that a pressure change at any point in a confined incompressible fluid is transmitted throughout the fluid such that the same change occurs everywhere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pascal” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f01005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cavitation in fluid mechanics and engineering normally is the phenomenon in which the static pressure of a liquid reduces to below the liquid's vapor pressure, leading to the formation of small vapor-filled cavities in the liquid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cavitation” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f13563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "about 71 °C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“about 71 °C”, “etwa 71 °C”, “около 71 °C”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Out of the room",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Out of the room”, “Aus dem Raum hinaus”, “из комнаты наружу”) on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:09.693Z",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Out of the room",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Out of the room”, “Aus dem Raum hinaus”, “из комнаты наружу”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:36:26Z",
+   "target": "f13563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "on top of Mount Everest , at 8,848 m (29,029 ft ) elevation, the pressure is about 34 kPa (255 Torr ) [ 9 ] and the boiling point of water is 71 °C (160 °F) .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:36:35Z",
+   "target": "f13563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "According the table above the boiling point of water is aprox. 72",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "standard-atmosphere table gives ~72 °C at 8848 m; the real summit pressure (~34 kPa) gives ~71 °C — both 'about 71'"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:39:51Z",
+   "target": "f13563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "on top of Mount Everest, at 8,848 m (29,029 ft) elevation, the pressure is about 34 kPa (255 Torr)[9] and the boiling point of water is 71 °C (160 °F).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted to match the page text exactly"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:43:51Z",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Safely secure fans in a window to blow potentially contaminated air out and pull new air in through other open windows and doors.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "official guidance recommends exhaust; physics of 'in' vs 'out' depends on room openings, so the printed answer is the conventional best practice"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:43:55Z",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "By creating negative pressure, the fan ensures the contaminated air is expelled directly outside, rather than being circulated or pushed into other areas of the home.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:28.648Z",
+   "target": "f13563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "According the table above the boiling point of water is aprox. 72",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:28.648Z",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Safely secure fans in a window to blow potentially contaminated air out and pull new air in through other open windows and doors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:28.648Z",
+   "target": "f25875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "By creating negative pressure, the fan ensures the contaminated air is expelled directly outside, rather than being circulated or pushed into other areas of the home.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  }
+ ]
+}

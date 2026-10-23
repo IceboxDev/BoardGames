@@ -1,0 +1,605 @@
+{
+ "article": "a0609",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Oxygen",
+   "title": "Oxygen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:56.422Z",
+   "snapshot": "f6dc865a0e3b10c2f582679d8377e3345c4bb67ce65b54c6c4200baeba2b46c2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Abundance_of_elements_in_Earth%27s_crust",
+   "title": "Abundance of elements in Earth's crust",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:57.355Z",
+   "snapshot": "f70862c20804a295c6be3b7fae832a1469bb3aa8e2a3d30564fb3a432867a81f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Silicon",
+   "title": "Silicon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:58.172Z",
+   "snapshot": "92a3d2bd7e79a5d0c41527e853d886866f15a24fccc0ff4bf0baffef193c661a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aluminium",
+   "title": "Aluminium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:58.492Z",
+   "snapshot": "65ed110b48aba4f756d755cc5456a8ae63c15df0ecc1b8e6bc01c693a250e799"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Composition_of_the_human_body",
+   "title": "Composition of the human body",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:59.381Z",
+   "snapshot": "82c291b9eebe8c86e4e7df51c38dc2cb01fbcfc8cf84285d3777a455346169f4"
+  },
+  "s6": {
+   "url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/elabund.html",
+   "title": "Abundances of the Elements in the Earth's Crust",
+   "publisher": "HyperPhysics (Georgia State University)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:30.268Z",
+   "snapshot": "5a549bd29f9035c420b8d38196c2a428b3912b56c43bffe0d2044227b62a67fa"
+  },
+  "s7": {
+   "url": "https://openstax.org/books/biology-2e/pages/2-1-atoms-isotopes-ions-and-molecules-the-building-blocks",
+   "title": "2.1 Atoms, Isotopes, Ions, and Molecules – Biology 2e",
+   "publisher": "OpenStax (Rice University)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:30.118Z",
+   "snapshot": "d5c51b4d2f4c89a1c7a130cdb38194e18bd5156b69cbc3d2a1d6343adb77c78d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "oxygen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "oxygen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-097"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "silicon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "aluminium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "carbon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; transcript tp-284"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:13.518Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oxygen is a chemical element; it has the symbol O and its atomic number is 8.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oxygen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:13.518Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "oxygen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“oxygen”, “Sauerstoff”, “кислород”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:13.518Z",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Silicon (, SILL-ih-kən) is a chemical element; it has symbol Si and atomic number 14.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “silicon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:13.518Z",
+   "target": "f03043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aluminium (the Commonwealth and preferred IUPAC name) or aluminum (North American English) is a chemical element; it has symbol Al and atomic number 13.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aluminium” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:13.518Z",
+   "target": "f14623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "About 99% of the mass of the human body is made up of six elements: oxygen, carbon, hydrogen, nitrogen, calcium, and phosphorus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carbon” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:18:22Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oxygen 46.6 Silicon 27.7 Aluminum 8.1",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:18:26Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oxygen is the most abundant element in Earth's crust, making up almost half of the Earth's crust",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:18:30Z",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oxygen 46.6 Silicon 27.7 Aluminum 8.1",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:18:35Z",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "making silicon the second most abundant element in the Earth's crust (about 28% by mass), after oxygen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:18:39Z",
+   "target": "f03043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oxygen 46.6 Silicon 27.7 Aluminum 8.1 Iron 5.0",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "aluminium is the first metal in the ranking (silicon is a metalloid)"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:18:44Z",
+   "target": "f03043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the Earth's crust, aluminium is the most abundant metallic element (8.23% by mass)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:18:50Z",
+   "target": "f14623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oxygen (O) 65% 21% 46% Carbon (C) 18% trace trace Hydrogen (H) 10%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:18:59Z",
+   "target": "f14623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "About 99% of the mass of the human body is made up of six elements: oxygen, carbon, hydrogen, nitrogen, calcium, and phosphorus.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "listed in order of mass; the page's table gives O ≈ 65 %, C ≈ 18 %"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oxygen 46.6 Silicon 27.7 Aluminum 8.1",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oxygen is the most abundant element in Earth's crust, making up almost half of the Earth's crust",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oxygen 46.6 Silicon 27.7 Aluminum 8.1",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "making silicon the second most abundant element in the Earth's crust (about 28% by mass), after oxygen",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oxygen 46.6 Silicon 27.7 Aluminum 8.1 Iron 5.0",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the Earth's crust, aluminium is the most abundant metallic element (8.23% by mass)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f14623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oxygen (O) 65% 21% 46% Carbon (C) 18% trace trace Hydrogen (H) 10%",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Given the abundance of oxygen and silicon in the crust, it should not be surprising that the most abundant minerals in the earth's crust are the silicates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “oxygen” is on the snapshot of s6"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f03042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Given the abundance of oxygen and silicon in the crust, it should not be surprising that the most abundant minerals in the earth's crust are the silicates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “silicon” is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:40.154Z",
+   "target": "f14623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Some elements follow the English term for the element, such as C for carbon and Ca for calcium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “carbon” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,281 @@
+{
+ "article": "a2173",
+ "sources": {
+  "s1": {
+   "url": "https://www.berliner-kurier.de/panorama/einhorn-schokolade-von-ritter-sport-feiert-comeback-li.10127598",
+   "title": "Einhorn-Schokolade von Ritter Sport feiert Comeback",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:05.208Z",
+   "snapshot": "ea51f2a55b7709be9b5b83279901aaec1fa2df5a6b74ed8c6ae0263f897be6fe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Steiner_(singer)",
+   "title": "Peter Steiner (singer)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:08.903Z",
+   "snapshot": "c4b154cf3de9983522e1f0a2a2e211bfe0ee7751088a12d36703313786b5dd63"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Milka",
+   "title": "Milka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:09.937Z",
+   "snapshot": "0e0e85cd97697860cf90e9651a8b4c7913bb8509be89c8d66fef54eae4e60a17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Toblerone",
+   "title": "Toblerone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:10.955Z",
+   "snapshot": "f8d4563021eb528a91414c7555579e7f2cad3647dccec0cf26d2ca935827ba25"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bahlsen",
+   "title": "Bahlsen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:08.251Z",
+   "snapshot": "161ff1ca36e7d65ffc5578d6363e59053b147e526d10b5711aa24b284f6de9e6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Einhorn-Schokolade",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-322"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Milka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-388"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Suchard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11011",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "lilac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Matterhorn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hannover",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-254"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.560Z",
+   "target": "f11007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Einhorn-Schokolade von Ritter Sport feiert Comeback",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Einhorn-Schokolade” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.560Z",
+   "target": "f11008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Steiner appeared in commercials for \"Milka\" (a milk chocolate producer), where he played a man who is an old mountain dweller, but who is \"cool\" anyway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milka” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.560Z",
+   "target": "f11010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Originally made in Switzerland in 1901 by Suchard, it has been produced in Lörrach, Germany, since 1901.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Suchard” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.560Z",
+   "target": "f11011",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first \"Milka\" chocolate was packaged in the distinctive lilac-colored packaging.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lilac” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:33.560Z",
+   "target": "f11012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Following the shift away from exclusively Swiss production, the labels were changed to say \"created in Switzerland\" rather than \"made in Switzerland\", and the graphic logo was changed to less resemble the Swiss peak Matterhorn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Matterhorn” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:33.560Z",
+   "target": "f14476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "KG ist ein deutsches Familienunternehmen der Backwarenbranche mit Sitz in Hannover.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannover” is on the snapshot of s5"
+  }
+ ]
+}

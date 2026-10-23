@@ -1,0 +1,289 @@
+{
+ "article": "a1590",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Popper_(Jugendkultur)",
+   "title": "Popper (Jugendkultur) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:10:23.301Z",
+   "snapshot": "4bb0a39ef811e6bf2c123f9b883303386dc17294e470def56231c5383679f2d7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bill_Grundy",
+   "title": "Bill Grundy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:26.295Z",
+   "snapshot": "d1671b3062efa8e1476b653c90058de290f134df5bc8a0f13222c92f1287704d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mods_and_rockers",
+   "title": "Mods and rockers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:26.947Z",
+   "snapshot": "82af9c49a309ccd931c7a6033698ca983fad17f3eccca27f9c6c9a4ef670043c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grunge",
+   "title": "Grunge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:22.793Z",
+   "snapshot": "740e39fd21ce70527b4aa8258bca14e2cec1eb740ac1a854610177142b53bde6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Grunge",
+   "title": "Grunge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:10:24.270Z",
+   "snapshot": "44ad15dc5e3081dd36268824732a4c1e4606c12c2ea770a6594bcf72fd749b8f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Yuppie",
+   "title": "Yuppie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:10:25.277Z",
+   "snapshot": "77b89a70c24a1ba47fd09517e94e4bd68f44aae78150e82448d75fdec7dd8752"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Popper",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Punk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grunge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grunge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-256"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1980er-Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-016"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.829Z",
+   "target": "f07946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Popper waren die Mitglieder einer deutschen Jugendkultur der ersten Hälfte der 1980er Jahre.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Popper” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.829Z",
+   "target": "f07947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The interview effectively destroyed Grundy's career, elevated the Sex Pistols to notoriety, and signalled the arrival of mainstream punk rock.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Punk” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:47.829Z",
+   "target": "f07949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mods and rockers were two conflicting British youth subcultures of the late 1950s to mid 1960s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mods” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:47.829Z",
+   "target": "f07950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grunge (originally known as the Seattle Sound) is an alternative rock genre and subculture that emerged during the mid-1980s in the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grunge” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:47.829Z",
+   "target": "f07950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grunge (englisch für ‚Schmuddel‘, ‚Dreck‘) ist ein Genre der Rockmusik und eine im Zusammenhang damit entstandene Subkultur.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grunge” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:47.829Z",
+   "target": "f13723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der sogenannte „Markenwahn“ entstand Mitte der 1980er Jahre.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1980er-Jahre” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "a2135": {
+  "kind": "edited",
+  "reason": "Time-sensitive: the body now says the Mona Lisa still hangs in the Salle des États as of 2026, and that the 'Louvre New Renaissance' plan announced in January 2025 gives it a room of its own by about 2031.",
+  "sources": [
+   {
+    "url": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana"
+   },
+   {
+    "url": "https://www.scmp.com/news/world/europe/article/3296639/mona-lisa-get-own-room-louvre-museum-undergoes-major-renovation"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f10723": {
+  "kind": "marked",
+  "reason": "Answer depends on where the painting hangs, which is planned to change (own room by c. 2031); reviewBy set a year out.",
+  "sources": [
+   {
+    "url": "https://www.scmp.com/news/world/europe/article/3296639/mona-lisa-get-own-room-louvre-museum-undergoes-major-renovation"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ },
+ "a2136": {
+  "kind": "edited",
+  "reason": "The German sentence read 'aus 1.000 Teebeuteln', so the answer '1.000 Teebeutel' sat inside an inflected word; reworded so the answer stands as written.",
+  "sources": [
+   {
+    "url": "https://artdependence.com/articles/a-question-in-trivial-pursuit-which-artist-created-a-portrait-of-queen-elisabeth-ii-using-1-000-teabags-answer-andy-brown/"
+   }
+  ],
+  "fields": [
+   "bodyDe"
+  ]
+ },
+ "f10725": {
+  "kind": "marked",
+  "reason": "German span moved onto the reworded sentence that states '1.000 Teebeutel' as a whole word.",
+  "sources": [
+   {
+    "url": "https://artdependence.com/articles/a-question-in-trivial-pursuit-which-artist-created-a-portrait-of-queen-elisabeth-ii-using-1-000-teabags-answer-andy-brown/"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "a2797": {
+  "kind": "corrected",
+  "reason": "'The oldest known statue in the world' is stated as fact, but Museum Ulm and the scholarly literature count the Lion-man among the oldest figurative artworks (the Hohle Fels Venus is of similar age); the body now says that and notes it is often called the oldest known statue.",
+  "sources": [
+   {
+    "url": "https://bawue.museum-digital.de/object/2497"
+   },
+   {
+    "url": "https://www.spektrum.de/news/begabte-schwaben/696154"
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/1527/"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "w27600": {
+  "kind": "reworded",
+  "reason": "Clue narrowed from the disputed superlative 'regarded as the oldest known statue' to 'counted among the oldest figurative works of art in the world', which every source supports; the answer (Lion-man) is unchanged.",
+  "sources": [
+   {
+    "url": "https://bawue.museum-digital.de/object/2497"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Lion-man_of_Hohlenstein-Stadel"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "a0224": {
+  "kind": "corrected",
+  "reason": "St. Augustine is the oldest continuously inhabited European-founded city only in the contiguous United States (San Juan, Puerto Rico, founded 1521, is older); the body now says so.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/St._Augustine,_Florida"
+   },
+   {
+    "url": "https://www.floridamuseum.ufl.edu/staugustine/"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "w01117": {
+  "kind": "reworded",
+  "reason": "Superlative narrowed to 'in the contiguous United States' (US-Festland / континентальная территория США) so the clue is true; answer Florida unchanged.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/St._Augustine,_Florida"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "a0416": {
+  "kind": "edited",
+  "reason": "Not all ancient Lives of Homer say he died of grief over the lice riddle (the Contest of Homer and Hesiod has him slip in the mud soon after); 'the Lives claim' softened to 'some of the Lives claim'.",
+  "sources": [
+   {
+    "url": "https://www.gutenberg.org/files/348/348-h/348-h.htm"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ios"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ }
+}

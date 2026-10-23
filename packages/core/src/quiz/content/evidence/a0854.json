@@ -1,0 +1,335 @@
+{
+ "article": "a0854",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heinz_Erhardt",
+   "title": "Heinz Erhardt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:42.433Z",
+   "snapshot": "dc0725f0366ab504f9e2be8ff8dc0d27f1db3b8e5f697f6227bd6ed46153bb95"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wilhelm_Busch",
+   "title": "Wilhelm Busch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:43.722Z",
+   "snapshot": "db68b538e61d2bb28d37dd78375c3c0a28707bad740dd3e72504708d12c39f11"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Christian_Morgenstern",
+   "title": "Christian Morgenstern – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:44.427Z",
+   "snapshot": "d8e0e898a6eb9e46466d6c31732202e06fea0f23b0aae326797904511db03861"
+  },
+  "s4": {
+   "url": "https://falschzitate.blogspot.com/2018/01/es-gibt-nichts-gutes-auer-man-tut-es.html",
+   "title": "ZITATFORSCHUNG: „Es gibt nichts Gutes, außer man tut es.“",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:41.721Z",
+   "snapshot": "59ef6a3ef846715ba97b2e3771140f7e877d070c8effac75d1a0de887fa8f781"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Erich_K%C3%A4stner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:42.097Z",
+   "snapshot": "1ff1819be00c95aed6e90a8306f848e1794637524f1233e38748d7c479eada0a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Die_Lore-Ley",
+   "title": "Die Lore-Ley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:43.074Z",
+   "snapshot": "aa3482be8d4e8ad8676f7e9262a412c12c02a75e8070256f81d8f8c49fd1de85"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Lichtung_(Gedicht)",
+   "title": "Lichtung (Gedicht)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:44.159Z",
+   "snapshot": "7ade79a803097c4bc146066b10dd8d738e25dc73187645abf09e17c57e35a727"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinz Erhardt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wilhelm Busch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Morgenstern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erich Kästner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Erich Kästner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Heinrich Heine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ernst Jandl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-007"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f04266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinz Erhardt (German: [haɪnts ˈeːɐ̯haʁt]; 20 February 1909 – 5 June 1979) was a German comedian, musician, entertainer, actor and poet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinz Erhardt” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f04267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Heinrich Christian Wilhelm Busch (14 April 1832 – 9 January 1908) was a German humorist, poet, illustrator, and painter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Busch” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f04268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Morgenstern was also an acclaimed translator, rendering into German various prominent works from Norwegian and French, including the dramas and poems of Henrik Ibsen, Knut Hamsun, Bjørnstjerne Bjørnson and August Strindberg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Morgenstern” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f04269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das irrtümlich manchmal Kurt Tucholsky, Marie von Ebner-Eschenbach oder Seneca zugeschriebene Zitat hat der deutsche Kinderbuchautor und Lyriker Erich Kästner 1950 in einem Epigramm mit dem Titel \"Moral\" geprägt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erich Kästner” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f04269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Erich Kästner wurde in Dresden geboren, evangelisch getauft und 1913 in der Dreikönigskirche konfirmiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erich Kästner” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f04270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lied von der Loreley ist ein Gedicht von Heinrich Heine aus dem Jahre 1824, das in einer Liedfassung Friedrich Silchers (1837) anhaltende Verbreitung fand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Heine” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:55.218Z",
+   "target": "f12950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "lichtung ist ein Gedicht des österreichischen Lyrikers Ernst Jandl, in dem die Fragestellung, ob man die Richtungen links und rechts verwechseln könne, mit einer Vertauschung der Buchstaben l und r kombiniert wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Jandl” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,591 @@
+{
+ "article": "a1414",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Continental_drift",
+   "title": "Continental drift – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:53.367Z",
+   "snapshot": "87b892eb8106dd9f35446fc2c57e4803db5f7b8a6978f6bc390c0e20544c2901"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Inge_Lehmann",
+   "title": "Inge Lehmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:54.287Z",
+   "snapshot": "bab694ae7ce35c633da2f611e8febd8b41000306f9599829d4811293316b40b6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Seismologie",
+   "title": "Seismologie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:51.796Z",
+   "snapshot": "baf374f5a182b186cb18b3fb81651b726d9af5b5cea157333a8750627df37723"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1883_eruption_of_Krakatoa",
+   "title": "1883 eruption of Krakatoa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:55.404Z",
+   "snapshot": "4bdb986c145b34cca914997bb90693dd805ca1581a12a4181e8344b600acf12c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/De_Natura_Fossilium",
+   "title": "De Natura Fossilium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:56.280Z",
+   "snapshot": "1fbfc0e9113973af363a388a50500e2c8c518c93643709727043756ac6e2f726"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ice_core",
+   "title": "Ice core – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:57.355Z",
+   "snapshot": "7c3f58d8f00ec775240098eae10960532c4dcccec0aac4423928a5f1711d08e7"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Bodenkunde",
+   "title": "Bodenkunde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:54.466Z",
+   "snapshot": "c1b5fecdd4913e896f261a75e1136a23a194c0dc6fe67bdbbf50a9c93e2a5aaf"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Petrologie",
+   "title": "Petrologie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:55.466Z",
+   "snapshot": "614f45ed747577f4a0a97b86f56f431b8adc36bbb1d4ae5dec00cf383b5ee811"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Spel%C3%A4ologie",
+   "title": "Speläologie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:56.533Z",
+   "snapshot": "de4d3fbd59f723e99c46fdc2c426d3f92e99f78a2153c2203eaf917de9b7ccd1"
+  },
+  "s10": {
+   "url": "https://www.dictionary.com/browse/volcanology",
+   "title": "volcanology – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:50.060Z",
+   "snapshot": "1741ef9ffcc6f2843d918d555d924addefe1b91f82146e4a9225f21b33e49942"
+  },
+  "s11": {
+   "url": "https://www.dwds.de/wb/Vulkanologie",
+   "title": "Vulkanologie – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:49.837Z",
+   "snapshot": "38ee380cb3ee2edc81d0c76dfa36ba9c15c799d60fa9779c4c96cd3484673dca"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Volcanology",
+   "title": "Volcanology – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:50.038Z",
+   "snapshot": "bcbed3591c652f5b24f57329bcc212eaa4a441bd205f780a713d0060c9091116"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tectonics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "seismology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Seismologie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-052"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "volcanology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "mineralogy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "glaciology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bodenkunde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-134"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f10932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Gesteine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-343"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f10933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Höhlen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52; transcript tp-367"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f07066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "However, continental drift has subsequently been extensively validated and is incorporated into the science of plate tectonics, which studies the movement of the continents as they ride on plates of the Earth's lithosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tectonics” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f07067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lehmann is considered to be a pioneer among women and scientists in seismology research.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “seismology” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f07067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Seismologie (altgriechisch σεισμός seismós „(Erd-)Erschütterung, Erdbeben“ und -logie) ist die Lehre von Erdbeben und der Ausbreitung seismischer Wellen in Festkörpern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seismologie” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "volcanology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“volcanology”, “Vulkanologie”, “вулканология”) on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f07069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This text along with Agricola's other works including De Re Metallica compose the earliest comprehensive \"scientific\" approach to mineralogy, mining, and geological science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mineralogy” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f07070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The International Geophysical Year (1957–1958) saw increased glaciology research around the world, with one of the high priority research targets being deep cores in polar regions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “glaciology” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f10931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Bodenkunde, Bodenwissenschaft oder Pedologie (von altgriechisch πέδον pédon „Boden“ und -logie), seltener Edaphologie (altgriechisch ἔδαφος edaphos „Erdboden“), ist eine Wissenschaft, die sich mit der Bodenentstehung aus dem Gesteins-Untergrund, der Bodenentwicklung, den Bodenpartikeln, den",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bodenkunde” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f10932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Petrologie oder Gesteinskunde ist die Lehre von der Entstehung, den Eigenschaften und der Nutzung der Gesteine.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gesteine” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:27:21.880Z",
+   "target": "f10933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ziel der Speläologie ist die Erforschung (und der Schutz) von Höhlen und Karsterscheinungen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.880Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Höhlen” is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:18:24Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the scientific study of volcanoes and volcanic phenomena.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:18:26Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Die Wissenschaft vom Vulkanismus, die Vulkanologie , ist als eigene Disziplin noch jung.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23",
+   "note": "corpus example quoting Die Zeit, 25.06.1971"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:18:28Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Volcanology (also spelled vulcanology ) is the study of volcanoes , lava , magma , and related geological , geophysical and geochemical phenomena ( volcanism ).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:06.808Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the scientific study of volcanoes and volcanic phenomena.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:06.808Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "VOLCANOLOGY Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “volcanology” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:06.808Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Vulkanologie – Schreibung, Definition, Bedeutung, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vulkanologie” is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:06.808Z",
+   "target": "f07068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Volcanology (also spelled vulcanology) is the study of volcanoes, lava, magma, and related geological, geophysical and geochemical phenomena (volcanism).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “volcanology” is on the snapshot of s12"
+  }
+ ]
+}

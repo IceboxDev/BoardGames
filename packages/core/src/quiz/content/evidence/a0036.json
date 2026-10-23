@@ -1,0 +1,360 @@
+{
+ "article": "a0036",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Netflix",
+   "title": "Netflix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:34.687Z",
+   "snapshot": "a3cc9a750ec5a99ffab82d4582e759ce0b194bce49fd1d40c3dd91af03c3835b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Me_at_the_zoo",
+   "title": "Me at the zoo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:35.462Z",
+   "snapshot": "9ac2659cfcc06064484d543e8dceb4af5bc721324f8828554520c2bbb2ec4932"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spotify",
+   "title": "Spotify – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:36.694Z",
+   "snapshot": "df0a38e9280cbf93c146fe7230394455619d22119aca6af1fca47a8c9ac15b53"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/EBay",
+   "title": "EBay",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:36.894Z",
+   "snapshot": "a417d85a47963ad4ffc6b52438471c0b7e0011e8513e3bd36e3ca6393c87b69a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Uber",
+   "title": "Uber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:37.552Z",
+   "snapshot": "7d38573654881af103bbcff454d99ad754f6243a6095baa541281d17e2472982"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/EBay",
+   "title": "eBay",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:57:51Z"
+  },
+  "s7": {
+   "url": "https://nationalmedals.org/laureate/ebay-inc/",
+   "title": "eBay Inc. – National Science and Technology Medals Foundation",
+   "publisher": "National Science and Technology Medals Foundation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:27.222Z",
+   "snapshot": "df0b92adaafa083ab54beaf64a44514785fcb131fa890c0c1f05ff63dbe77f2b"
+  },
+  "s8": {
+   "url": "https://www.webdesignmuseum.org/web-design-history/ebay-1995",
+   "title": "eBay 1995 – Web Design Museum",
+   "publisher": "Web Design Museum",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:57:54Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Netflix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003; transcript tp-075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "YouTube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spotify",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ein kaputter Laserpointer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-290"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Uber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-072"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:40.370Z",
+   "target": "f00176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Netflix is an American subscription video on-demand over-the-top streaming media service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Netflix” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.370Z",
+   "target": "f00179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Me at the zoo\" is a YouTube video uploaded on April 23, 2005, recognized as the first video uploaded to the platform.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “YouTube” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.370Z",
+   "target": "f00180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spotify is a Swedish freemium music streaming service provider founded in April 2006 by Daniel Ek and Martin Lorentzon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spotify” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.370Z",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ein kaputter Laserpointer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ein kaputter Laserpointer”, “A broken laser pointer”, “сломанная лазерная указка”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.370Z",
+   "target": "f13573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2009, Garrett Camp, a co-founder of StumbleUpon, came up with the idea to create Uber to make it easier and cheaper to procure direct transportation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uber” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:57:51Z",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "making its first sale when a broken laser pointer got auctioned for $14.83",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:57:52Z",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the first item he sold was a broken laser pointer for $14.83",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:57:54Z",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The first item Pierre Omidyar allegedly sold on the portal was his own broken laser pointer for $ 14.83.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:55.977Z",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the first item he sold was a broken laser pointer for $14.83",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:55.977Z",
+   "target": "f13572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The site, originally called AuctionWeb, began as part of a larger personal site for Omidyar, the site’s programmer, and the first item he sold was a broken laser pointer for $14.83.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “A broken laser pointer” is on the snapshot of s7"
+  }
+ ]
+}

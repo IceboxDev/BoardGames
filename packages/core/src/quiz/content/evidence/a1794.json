@@ -1,0 +1,336 @@
+{
+ "article": "a1794",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Window_tax",
+   "title": "Window tax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:02.401Z",
+   "snapshot": "5c56e05261a2cd13194675579e70721852e51d2d771448c383f1a5fb43074d99"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Beard_tax",
+   "title": "Beard tax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:03.410Z",
+   "snapshot": "b4cc4d000a3768265188a9bbbc334d729f4eea6ff71962bc3c6ca781f3b57ef7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tea_Act",
+   "title": "Tea Act – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:04.490Z",
+   "snapshot": "4a1fe9f45d4ea002bb3585941f98a3b638249dd826fa90ae235cccedd9965e59"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Duty_on_Hair_Powder_Act_1795",
+   "title": "Duty on Hair Powder Act 1795 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:05.492Z",
+   "snapshot": "09f59a6d6d523e483282caa089f57e74b0561d9e5580db6e4504ff498a990321"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Salt_March",
+   "title": "Salt March – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:34.071Z",
+   "snapshot": "6f5e5dd8c9efca5f567b72d4237737a7148c72077330d0a14f910aa9be3bca1d"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bartsteuer",
+   "title": "Bartsteuer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:23:02.596Z",
+   "snapshot": "7e14cc83f860f099d254a7ec9e1ee2e64ec14873fd8ea4a5ad88ef3b0a98b034"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Brick_tax",
+   "title": "Brick tax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:06.416Z",
+   "snapshot": "feac27ee3fec60903f294d9aacf4504eb33574a7566be5650d11660549fe0405"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Window tax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beard tax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tea tax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hair powder tax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Salt tax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Russland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-174"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Brick tax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f08966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Window tax was a property tax based on the number of windows in a house.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Window tax” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f08967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A beard tax is a governmental policy that requires men to pay for the privilege of wearing a beard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beard tax” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f08968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The markups imposed by these merchants, combined with the tea tax imposed by the Townshend Acts of 1767 created a profitable opportunity for American merchants to import and distribute tea purchased from the Dutch in transactions and shipments that violated the Navigation Acts and were treated by",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tea tax” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f08969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "According to author Jenny Uglow, those who chose to pay the guinea hair powder tax were nicknamed \"guinea-pigs\" by reformist Whigs who chose instead to cut their hair short (the \"French\" cut) and go without a wig as an expression of solidarity with the French.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hair powder tax” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f08970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The satyagraha against the salt tax continued for almost a year, ending with Gandhi's release from jail and negotiations with Viceroy Lord Irwin at the Second Round Table Conference.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salt tax” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f12257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "in Russland erhobene Abgabe für vorwiegend Altgläubige, die entgegen des Zaren Willen ihren Bart behalten wollten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russland” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:23.896Z",
+   "target": "f28009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The brick tax was a property tax introduced in Great Britain in 1784, during the reign of King George III, to help pay for the wars in the American Colonies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brick tax” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2556",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bundesverfassungsgericht",
+   "title": "Bundesverfassungsgericht",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:04.398Z",
+   "snapshot": "3e7683a0375ddfa25a4aa285e8478e03ed3586806dda821a323bb44052c6fa12"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bundesverwaltungsgericht_(Deutschland)",
+   "title": "Bundesverwaltungsgericht (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:04.866Z",
+   "snapshot": "a0263d9bee50f296147deda975880bca2de41f21c713fd26a1706b617a7791d8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bundesarbeitsgericht",
+   "title": "Bundesarbeitsgericht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:06.850Z",
+   "snapshot": "be6a811ce2a2fd6e4c6d018664a647d9824c325f62da2753a8b8720afe50bc5c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Bundessozialgericht",
+   "title": "Bundessozialgericht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:06.878Z",
+   "snapshot": "4e9bef0bdd442f7993a888ee851cc1d21a5347d11949d16c3a439f94c6048306"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bundesfinanzhof",
+   "title": "Bundesfinanzhof – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:07.963Z",
+   "snapshot": "e6dd80aad2b3f923087e7f3434de8cd53937aec977a55e65974a1a3a445c28d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karlsruhe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-226"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Leipzig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Erfurt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kassel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "München",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:38.076Z",
+   "target": "f13670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andererseits ist das Gericht mit Sitz in Karlsruhe (§ 1 Absatz 2 BVerfGG) höchstes Gremium der Rechtsprechung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karlsruhe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:38.076Z",
+   "target": "f13671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Es hat seinen Sitz im Gebäude des ehemaligen Reichsgerichtes in Leipzig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipzig” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:38.076Z",
+   "target": "f13672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Bundesarbeitsgericht (BAG) ist das letztinstanzliche Gericht der deutschen Arbeitsgerichtsbarkeit und damit einer der fünf obersten Gerichtshöfe der Bundesrepublik Deutschland mit Sitz in Erfurt (§ 40 Abs.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erfurt” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:38.076Z",
+   "target": "f13673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Als Kassel als Bundeshauptstadt der Bundesrepublik in Betracht kam, sollte in dem Gebäude das Parlament und das Kanzleramt eingerichtet werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kassel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:38.076Z",
+   "target": "f13674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Bundesfinanzhof (BFH) mit Sitz in München ist das oberste Gericht für Steuer- und Zollsachen und als solches neben dem Bundesgerichtshof, dem Bundesverwaltungsgericht, dem Bundesarbeitsgericht und dem Bundessozialgericht einer der fünf obersten Gerichtshöfe der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “München” is on the snapshot of s5"
+  }
+ ]
+}

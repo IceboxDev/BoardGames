@@ -1,0 +1,374 @@
+{
+ "article": "a0582",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rudi-Dutschke-Stra%C3%9Fe",
+   "title": "Rudi-Dutschke-Straße – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:10.548Z",
+   "snapshot": "8d1e376afb9388c4897852e42d98dd61225220bb1e3ea9ab95342274417c81e3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Stauffenbergstra%C3%9Fe",
+   "title": "Stauffenbergstraße – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:11.968Z",
+   "snapshot": "8a1800135732879290c555b7916aa1b95f91d056378459ed9db023cb9258b505"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Karl-Marx-Allee",
+   "title": "Karl-Marx-Allee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:13.472Z",
+   "snapshot": "92a19270344fa1895b84eafbb7111bbfb9e0ead65beaf86a96dd997b6dd28af7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Theodor-Heuss-Platz",
+   "title": "Theodor-Heuss-Platz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:13.535Z",
+   "snapshot": "32851300ea17c93d6432b8d519188d7377338904beef9ed1acd1add4edefeb2c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/John-F.-Kennedy-Platz_(Berlin)",
+   "title": "John-F.-Kennedy-Platz (Berlin) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:14.549Z",
+   "snapshot": "520c3cb9078b50642a49cc1ad2cfa34e0ed38f9482d84d03ce2407b700f40d59"
+  },
+  "s6": {
+   "url": "https://berlin.kauperts.de/Strassen/Stauffenbergstrasse-10785-Berlin",
+   "title": "Stauffenbergstraße in Berlin – Kauperts Straßenführer",
+   "publisher": "Kauperts Straßenführer durch Berlin",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:14.540Z",
+   "snapshot": "01c51bac057c7288fedabf0aedf1d1aaef3b56ee1a3504ca307e0aa5473fa1f0"
+  },
+  "s7": {
+   "url": "https://www.gdw-berlin.de/en/german-resistance-memorial-center/site-of-remembrance",
+   "title": "Site of Remembrance – The Bendler Block",
+   "publisher": "Gedenkstätte Deutscher Widerstand (German Resistance Memorial Center)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:13.825Z",
+   "snapshot": "8d272b14dcd1a938568dde120af71d68714f7c559c2bfbce6209a69c95e7d4ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rudi Dutschke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Claus von Stauffenberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Marx",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02909",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodor Heuss",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02910",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John F. Kennedy",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:10.075Z",
+   "target": "f02906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Rudi-Dutschke-Straße ist eine Straße im Berliner Ortsteil Kreuzberg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.075Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudi Dutschke” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:10.075Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Claus von Stauffenberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Claus von Stauffenberg”, “Клаус фон Штауффенберг”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:10.075Z",
+   "target": "f02908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Karl-Marx-Allee ist eine nach dem Philosophen und Gesellschaftstheoretiker Karl Marx benannte Straße in den Berliner Ortsteilen Mitte und Friedrichshain.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.075Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:10.075Z",
+   "target": "f02909",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Theodor-Heuss-Platz (von den Anwohnern Theo genannt) ist ein öffentlicher Platz im Berliner Ortsteil Westend des Bezirks Charlottenburg-Wilmersdorf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.075Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodor Heuss” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:10.075Z",
+   "target": "f02910",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der John-F.-Kennedy-Platz ist ein Platz im Berliner Ortsteil Schöneberg vor dem Rathaus Schöneberg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.075Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John F. Kennedy” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:41:27Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Name geht auf Schenk von Stauffenberg, Claus Philipp Maria Graf zurück und besteht seit 20.7.1955. Frühere Namen: Bendlerstraße (1837-1955).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:41:31Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Umbenennung in Stauffenbergstraße am 20. Juli 1955 markiert eine tiefgreifende Zäsur",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:41:34Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The east wing was at Bendlerstrasse 14 (today called Stauffenbergstrasse).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the Bendlerstraße became Stauffenbergstraße; the 1955 date comes from the other sources."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:35.664Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Name geht auf Schenk von Stauffenberg, Claus Philipp Maria Graf zurück und besteht seit 20.7.1955. Frühere Namen: Bendlerstraße (1837-1955).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:35.664Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Umbenennung in Stauffenbergstraße am 20. Juli 1955 markiert eine tiefgreifende Zäsur",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:35.664Z",
+   "target": "f02907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The east wing was at Bendlerstrasse 14 (today called Stauffenbergstrasse).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  }
+ ]
+}

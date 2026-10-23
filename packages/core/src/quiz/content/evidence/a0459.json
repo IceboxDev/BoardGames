@@ -1,0 +1,514 @@
+{
+ "article": "a0459",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Louvre",
+   "title": "Louvre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:38.787Z",
+   "snapshot": "7c57ff063adb6afb3c520b83a1008092137a4c9ce9709da9e7f51542a12fabff"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hermitage_Museum",
+   "title": "Hermitage Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:33.706Z",
+   "snapshot": "ca1ba7dfc9d33c5b03aed8654c9acac09826838a30240024a227796de6e4bbe9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hermitage_cats",
+   "title": "Hermitage cats – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:43.843Z",
+   "snapshot": "42f63735bfa5894ba097595c8a6a4b620856c12c525c501f31ededcbcce7bb29"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Eremitage_(Sankt_Petersburg)",
+   "title": "Eremitage (Sankt Petersburg)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:41.180Z",
+   "snapshot": "0d5d94394104c8a2a76571a3b65bae414a3f5244755fef60f6e9bdc2aab36049"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum",
+   "title": "Solomon R. Guggenheim Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:44.992Z",
+   "snapshot": "a4573048f1618c27e78894040acc5bea5df43e45ba62e56f45ba80c23f122fa5"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum",
+   "title": "Solomon R. Guggenheim Museum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:42.141Z",
+   "snapshot": "02bf421487118a2bfb2be7bb56b17ff611331cea2e3e1ad2b7f72176305ae7f2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Museo_del_Prado",
+   "title": "Museo del Prado – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:35.667Z",
+   "snapshot": "74f64c52d648df1fe89f375844806c5c20d613c2aa8faa29ec1fea2c7f55923a"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Rijksmuseum",
+   "title": "Rijksmuseum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:37.671Z",
+   "snapshot": "52605059a525fe148ccbf6904416269d55c20308cc8ca4abfbc45d631ba1cf80"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/The_Night_Watch",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:45.905Z",
+   "snapshot": "c7f0916959ff84217c051109aa348a2a99e6c676a0730dfb5ade3fc15011a4c7"
+  },
+  "s10": {
+   "url": "https://www.theartnewspaper.com/2026/03/31/exclusive-the-worlds-100-most-visited-museums-in-2025-new-museums-a-big-hit-with-visitors",
+   "title": "The world's 100 most visited museums in 2025",
+   "publisher": "The Art Newspaper",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:19.233Z",
+   "snapshot": "4ab47da926b4ee8b60ef35a738dd95cb72655a135223bb688e58a00b620c458a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Louvre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hermitage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hermitage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Eremitage",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-354"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Guggenheim Museum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Guggenheim-Museum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-119"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f20020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Juan de Villanueva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f20021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Pierre Cuypers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Louvre (French: Musée du Louvre [myze dy luvʁ] ) is a national art museum in Paris, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Louvre” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f02293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hermitage is a federal state property.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hermitage” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f25001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hermitage cats (Russian: Эрмитажные коты) are a colony of working cats residing in the Hermitage Museum in Saint Petersburg, Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hermitage” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f25001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Eremitage sowohl als Gebäudekomplex als auch als eigenständige Kunstsammlung wurde von der russischen Kaiserin Katharina der Großen gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Eremitage” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f02294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Guggenheim Museum SoHo, designed by Arata Isozaki, opened in June 1992 at the corner of Broadway and Prince Street in SoHo, Manhattan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Guggenheim Museum” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f02294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Guggenheim-Museum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Das Guggenheim-Museum”, “The Guggenheim Museum”, “Музей Гуггенхайма”) on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f20020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The building that is now the home of the Museo Nacional del Prado was designed in 1785 by architect of the Enlightenment in Spain Juan de Villanueva on the orders of Charles III to house the Natural History Cabinet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juan de Villanueva” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:51.796Z",
+   "target": "f20021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The current main building was designed by Pierre Cuypers and first opened in 1885.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pierre Cuypers” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:08:33Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "None of that has stopped it keeping its place on top of our survey, however. The Louvre actually gained visitors from the previous year, counting more than 9 million people in 2025.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Annual survey of art museums, March 2026."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:08:35Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It received 9.0 million visitors in 2025.[10] It is ranked as the most-visited art museum, and most-visited museum of any category.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:08:45Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is ranked as the most-visited art museum, and most-visited museum of any category.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Replaces the previous quote that contained a footnote marker."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:14.272Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "None of that has stopped it keeping its place on top of our survey, however. The Louvre actually gained visitors from the previous year, counting more than 9 million people in 2025.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:14.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:14.272Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is ranked as the most-visited art museum, and most-visited museum of any category.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:14.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:14.272Z",
+   "target": "f02291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "A museum’s success can collapse it, like the Louvre, with some rooms becoming oversaturated.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:14.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Louvre” is on the snapshot of s10"
+  }
+ ]
+}

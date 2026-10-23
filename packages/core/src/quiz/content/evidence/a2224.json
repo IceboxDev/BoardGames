@@ -1,0 +1,289 @@
+{
+ "article": "a2224",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/James_Bond_(ornithologist)",
+   "title": "James Bond (ornithologist)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:32.687Z",
+   "snapshot": "285dee4d812203c51beafbb98a30452524818d8c555fecf5b5374b91c3a114dd"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/James_Bond_007_%E2%80%93_Die_Welt_ist_nicht_genug",
+   "title": "James Bond 007 – Die Welt ist nicht genug",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:30.251Z",
+   "snapshot": "1a29df373be5133f40aafa35c694f0cb46943d81704cb994fa31bdcec1500049"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gert_Fr%C3%B6be",
+   "title": "Gert Fröbe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:31.091Z",
+   "snapshot": "aef5127ef30cd42b921a674a5e5489acba02d72338bfec8f3d9ae7fb23d82f60"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dr._Evil",
+   "title": "Dr. Evil",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:33.700Z",
+   "snapshot": "41d7737759b97f08a811cffe72a3230a0a9f723a9ee272d74853d187ac087482"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/SPECTRE",
+   "title": "SPECTRE – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:34.999Z",
+   "snapshot": "7839903f5a7073bd4ea3d1c9df07ab39e3131df93cdc6ed71ce227f4d4c2eed8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Goldeneye_(estate)",
+   "title": "Goldeneye (estate) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:35.316Z",
+   "snapshot": "10913cc28d0906f1a8f582e5547800754429d9bc3bc3df8146e1415182a721a7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ornithologist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Welt ist nicht genug",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-254"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gert Fröbe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-259"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Austin Powers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-117"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SPECTRE",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Goldeneye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:39.547Z",
+   "target": "f11353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "James Bond (January 4, 1900 – February 14, 1989) was an American ornithologist and expert on the birds of the Caribbean, having written the definitive book on the subject: Birds of the West Indies, first published in 1936.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ornithologist” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:39.547Z",
+   "target": "f11354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Bond 007 – Die Welt ist nicht genug (Originaltitel: The World Is Not Enough) ist der 1999 gedrehte 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Welt ist nicht genug” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:39.547Z",
+   "target": "f11355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gert Fröbe war der Sohn des Seilermeisters, Lederhändlers und Schusters Otto Johannes Fröbe (1886–1947) und dessen Frau Helene Alma (1884–1972), geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gert Fröbe” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:39.547Z",
+   "target": "f11356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Evil is a fictional character portrayed by Mike Myers in the Austin Powers film series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Austin Powers” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:39.547Z",
+   "target": "f11357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SPECTRE (\"Special Executive for Counter-intelligence, Terrorism, Revenge and Extortion\") is a fictional organisation featured in the James Bond novels by Ian Fleming, as well as films and video games based in the same universe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “SPECTRE” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:39.547Z",
+   "target": "f11358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Goldeneye is the original name of novelist Ian Fleming's estate on Oracabessa Bay on the northern coastline of Jamaica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Goldeneye” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2209",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Heidi_(Anime)",
+   "title": "Heidi (Anime)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:02.504Z",
+   "snapshot": "adeecbbb18a5f6674571cfe9228bc8d02c3bdec48ec98c683623461f9b1ee5a3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ken_Sugimori",
+   "title": "Ken Sugimori",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:03.054Z",
+   "snapshot": "2b3947ba87d345402217071ffc940a36c3f920d5a6ca1d7f768e6a058be414ce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Isao_Takahata",
+   "title": "Isao Takahata – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:04.306Z",
+   "snapshot": "bcf6048c9557602b61c88c982b1b5a0684fe9af4d9bdd5fb1d5ccacbf5388281"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Johanna_Spyri",
+   "title": "Johanna Spyri – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:05.239Z",
+   "snapshot": "b405dc66e89a5767d3d3ebdab6879105d1d94f56771c3d81231fa37ba81fc336"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Biene_Maja_(Zeichentrickserie)",
+   "title": "Die Biene Maja (Anime) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:03.512Z",
+   "snapshot": "58b833e3cb204dc738bb78182703c714c0b79ddb241894ca9f411b5e2aad2b3c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-321"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pokémon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-056"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Isao Takahata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johanna Spyri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Biene Maja",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:36.736Z",
+   "target": "f11242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Serie ist ein wichtiger Teil der Rezeptionsgeschichte von Heidi in Japan.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:36.736Z",
+   "target": "f11243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unter anderem entwarf er das Charakterdesign der Hauptfiguren der Fernsehserie Pokémon sowie der Pokémon-Figuren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pokémon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.736Z",
+   "target": "f11244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Isao Takahata (高畑 勲, Takahata Isao; October 29, 1935 – April 5, 2018) was a Japanese director, screenwriter and producer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isao Takahata” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.736Z",
+   "target": "f11245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johanna Spyri (Swiss Standard German: [joˈhana ˈʃpiːri]; née Heusser [ˈhɔʏsər]; 12 June 1827 – 7 July 1901) was a Swiss author of novels, notably children's stories.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johanna Spyri” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.736Z",
+   "target": "f11246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Verfilmung der Romane Biene Maja von Waldemar Bonsels wird, da sie vorrangig in Japan entstand, auch als Anime angesehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.736Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biene Maja” is on the snapshot of s5"
+  }
+ ]
+}

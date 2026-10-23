@@ -1,0 +1,426 @@
+{
+ "article": "a0672",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/George_Washington_Gale_Ferris_Jr.",
+   "title": "George Washington Gale Ferris Jr. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:15.092Z",
+   "snapshot": "5b0eb18c8ea6a81d5dcd1c4eab213b1a84cfd151077e50779624925ffa7e002a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Crystal_Palace",
+   "title": "The Crystal Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:16.319Z",
+   "snapshot": "7f8a0c625598cd2204acab2ba35ba1cfb76cc2d39ab3a8cdf7089c581aad4d90"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Atomium",
+   "title": "Atomium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:17.203Z",
+   "snapshot": "8cd42b9098951062d84d9957fac64610a3015098bfadec3720f9650e04fa039a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ferris_Wheel_(1893)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:38.426Z",
+   "snapshot": "d24120c943a93cec9fc7e22be095a9327a77da7ab37d48c85c5e5a45be5b2186"
+  },
+  "s5": {
+   "url": "https://www.architecture.org/news/evolving-chicago/chicagos-ferris-wheel-story/",
+   "title": "Chicago's Ferris Wheel Story",
+   "publisher": "Chicago Architecture Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:05.478Z",
+   "snapshot": "8ea53280a1b60a6e4dd97477c3f8a52ef75a9e1d44eadd97dea6d7faca2cacc1"
+  },
+  "s6": {
+   "url": "https://navypier.org/support-the-pier/articles/history-of-the-centennial-wheel-at-navy-pier/",
+   "title": "History of the Centennial Wheel at Navy Pier",
+   "publisher": "Navy Pier",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:04.979Z",
+   "snapshot": "5f1c661653f887295a96b0543f7c43af465de2eeb05a6b68c5a74abcdf68d20d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferris wheel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Crystal Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Atomium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Paxton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "André Waterkeyn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:24.215Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He is mostly known for creating the original Ferris Wheel for the 1893 Chicago World's Columbian Exposition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferris wheel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.215Z",
+   "target": "f03358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Crystal Palace was a cast iron and plate glass structure, originally built in Hyde Park, London, to house the Great Exhibition of 1851.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crystal Palace” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.215Z",
+   "target": "f03359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Atomium ( ə-TOH-mee-əm, French: [atɔmjɔm], Dutch: [aːˈtoːmijəm]) is a landmark modernist building in Brussels, Belgium, originally constructed as the centrepiece of the 1958 Brussels World's Fair (Expo 58).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atomium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.215Z",
+   "target": "f24500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Designed by Joseph Paxton, the Great Exhibition building was 1,851 feet (564 m) long, with an interior height of 128 feet (39 m), and was three times the size of St Paul's Cathedral.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Paxton” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.215Z",
+   "target": "f24501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Designed by the engineer André Waterkeyn and the architects André and Jean Polak as a tribute to scientific progress, as well as to symbolise Belgian engineering skills at the time, it is located on the Heysel/Heizel Plateau in Laeken (northern part of the City of Brussels), where the exhibition",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “André Waterkeyn” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:37:01Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the original wheel, which originated in Chicago during the World’s Fair of 1893",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:37:02Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first Ferris wheel came to Chicago during the World’s Columbian Exposition of 1893.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:37:04Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The completed wheel rotated on a 71-ton, 45.5-foot-long (13.9 m) axle that was at that time the world's largest hollow forging.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the article's axle superlative; earlier wooden pleasure wheels existed, hence 'in its modern form'."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:53.090Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the original wheel, which originated in Chicago during the World’s Fair of 1893",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:53.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:53.090Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first Ferris wheel came to Chicago during the World’s Columbian Exposition of 1893.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:53.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:53.090Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The completed wheel rotated on a 71-ton, 45.5-foot-long (13.9 m) axle that was at that time the world's largest hollow forging.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:53.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:53.090Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The original Ferris Wheel, sometimes also referred to as the Chicago Wheel, was designed and built by George Washington Gale Ferris Jr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:53.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ferris wheel” is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:53.090Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Chicago’s Ferris wheel story | Chicago Architecture Center",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:53.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ferris wheel” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:53.090Z",
+   "target": "f03356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Have you ever wondered about the origin of the Ferris Wheel or how the current Wheel got to Navy Pier?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:53.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ferris wheel” is on the snapshot of s6"
+  }
+ ]
+}

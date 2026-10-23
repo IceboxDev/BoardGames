@@ -1,0 +1,256 @@
+{
+ "article": "a1444",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ennio_Morricone",
+   "title": "Ennio Morricone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:49.566Z",
+   "snapshot": "40f85b43c0e019f26f34a5c2dc783c4f1d66e415b554679939fc4b71f841c37d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Spiel_mir_das_Lied_vom_Tod",
+   "title": "Spiel mir das Lied vom Tod",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:01:46.654Z",
+   "snapshot": "f2776e3e1ebf53fba35ae2bdba052609e0692d6513115f907caa7909da223f82"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Magnificent_Seven",
+   "title": "The Magnificent Seven – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:50.439Z",
+   "snapshot": "0145e210b39b5608c21858c36e6dc5882985ca39e9b31c435e2a02f4eb19c6b4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bernard_Herrmann",
+   "title": "Bernard Herrmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:51.450Z",
+   "snapshot": "e6a3c85fed52041c90303f886a3f792dafd7773e25bf46086055099c84659854"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Pink_Panther_(1963_film)",
+   "title": "The Pink Panther (1963 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:52.328Z",
+   "snapshot": "09ed8197aafa2d7e5a9057103f73a2d720966d15c740ea848fa2c4d2563dff23"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Mancini",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:53.412Z",
+   "snapshot": "f55feb6e211bd09ebdaa0e47e4a3e2eef3ae94b28a2fdfb663a2232f43d628ab"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/John_Williams",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:03.157Z",
+   "snapshot": "24d0eff479a583acc5cf1d4ada29f106ad4348ae592fe881b5d11a332add857e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ennio Morricone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ennio Morricone",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-326"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elmer Bernstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bernard Herrmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Henry Mancini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.261Z",
+   "target": "f07216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ennio Morricone (10 November 1928 – 6 July 2020) was an Italian composer, orchestrator, conductor, trumpeter, and pianist who wrote music in a wide range of styles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ennio Morricone” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.261Z",
+   "target": "f07216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ganze Passagen inszenierte er zum Rhythmus der Musik, die der Komponist Ennio Morricone schon vor Beginn der Dreharbeiten fertiggestellt hatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ennio Morricone” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.261Z",
+   "target": "f07217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elmer Bernstein's film score was nominated for an Academy Award for Best Original Score and is listed on the American Film Institute's list of the top 25 American film scores.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elmer Bernstein” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:27.261Z",
+   "target": "f07219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bernard Herrmann (born Maximillian Herman; June 29, 1911 – December 24, 1975) was an American composer and conductor best known for his work in film scoring.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bernard Herrmann” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:27.261Z",
+   "target": "f07220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The song was composed by Henry Mancini, with English lyrics by Johnny Mercer and Italian lyrics by Franco Migliacci.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Mancini” is on the snapshot of s5"
+  }
+ ]
+}

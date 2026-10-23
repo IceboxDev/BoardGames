@@ -1,0 +1,669 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "geography/cities",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-007",
+    "category": 1
+   },
+   "factId": "f02850"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-061",
+    "category": 1
+   },
+   "factId": "f02832"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-066",
+    "category": 1
+   },
+   "factId": "f00854"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-079",
+    "category": 1
+   },
+   "factId": "f07091"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-354",
+    "category": 1
+   },
+   "factId": "f02293"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2086",
+   "baseHash": "22776e5c9040",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-127",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "La Paz and the Capitals of Extremes",
+    "titleDe": "La Paz und die Hauptstädte der Extreme",
+    "bodyEn": "Most capital cities were chosen for rivers, harbours or the convenience of kings. A few of them, by accident of geography, hold records that geography teachers love to quote, and the most breathtaking of these, quite literally, is **La Paz**.\n\nThe Bolivian city lies in a canyon of the Altiplano at roughly 3,600 metres above sea level, with its poorer districts climbing the slopes to more than 4,000 metres and the neighbouring city of El Alto, where the airport is, higher still. Visitors arriving by plane are advised to spend their first day doing very little, and coca tea is served in hotel lobbies against altitude sickness. Strictly speaking La Paz is not Bolivia's capital at all: the constitution names Sucre, which keeps the supreme court. But since the Federal War of 1898–1899 the government and the parliament have sat in La Paz, which makes it the highest seat of government in the world. Its cable-car network, Mi Teleférico, opened in 2014, is the longest urban system of its kind and doubles as the city's answer to the underground.\n\nAt the other end of the scale lies **Baku**. The capital of Azerbaijan sits on the shore of the Caspian Sea, whose surface is about 28 metres below the level of the world's oceans, and is therefore the lowest-lying national capital on Earth. The oil that made the city rich seeps from the same depression – an exploratory well drilled nearby at Bibi-Heybat in 1846 is often counted as the start of the modern oil era – and the Flame Towers that dominate its skyline are a monument to it.\n\nLatitude produces its own champions. **Reykjavík**, chartered as a trading town on 18 August 1786 and lying at just over 64 degrees north, is the northernmost capital of a sovereign state; in midwinter the sun rises after eleven in the morning and sets before four, and in June it barely sets at all. Its southern counterpart is **Wellington**, capital of New Zealand since 1865, at 41 degrees south the southernmost capital of a sovereign state and famous for the gales that funnel through the Cook Strait. Both cities are small by the standards of national capitals and both were chosen for their harbours rather than their climate.\n\nEurope's mountains offer one more record. **Andorra la Vella**, capital of the Pyrenean co-principality of Andorra, lies at 1,023 metres and is the highest capital city in Europe, higher than Madrid, which at 667 metres is the highest capital of a European Union member state. It has been the principality's main town since the paréage of 1278. Drop the requirement of being a capital and the Alps win: Davos, in the Swiss canton of Grisons, lies at about 1,560 metres and markets itself as the highest town in Europe – a claim that depends on what one counts as a town, but one that the resort of Thomas Mann's \"Magic Mountain\" and the World Economic Forum has made its own.\n\n| City | Country | Record | Figure |\n|---|---|---|---|\n| La Paz | Bolivia | highest seat of government | about 3,600 m |\n| Andorra la Vella | Andorra | highest capital in Europe | 1,023 m |\n| Davos | Switzerland | highest town in Europe (not a capital) | about 1,560 m |\n| Baku | Azerbaijan | lowest-lying capital | about 28 m below sea level |\n| Reykjavík | Iceland | northernmost capital | 64° N |\n| Wellington | New Zealand | southernmost capital | 41° S |\n\nEach of these cities has learned to live with its extreme, and each has turned it into a point of pride, from Reykjavík's midnight sun to the thin, cold air that greets every arrival in La Paz.",
+    "bodyDe": "Die meisten Hauptstädte wurden wegen ihrer Flüsse, ihrer Häfen oder der Bequemlichkeit von Königen gewählt. Einige von ihnen halten durch einen Zufall der Geografie Rekorde, die Erdkundelehrer gern zitieren, und der im wahrsten Sinne atemberaubendste davon gehört **La Paz**.\n\nDie bolivianische Stadt liegt in einer Schlucht des Altiplano auf rund 3600 Metern über dem Meeresspiegel, wobei ihre ärmeren Viertel die Hänge bis über 4000 Meter hinaufklettern und die Nachbarstadt El Alto mit dem Flughafen noch höher liegt. Wer mit dem Flugzeug ankommt, sollte am ersten Tag möglichst wenig unternehmen, und in den Hotelhallen wird Cocatee gegen die Höhenkrankheit gereicht. Genau genommen ist La Paz gar nicht die Hauptstadt Boliviens: Die Verfassung nennt Sucre, wo der Oberste Gerichtshof geblieben ist. Doch seit dem Bürgerkrieg von 1898/1899 haben Regierung und Parlament ihren Sitz in La Paz, was die Stadt zum höchstgelegenen Regierungssitz der Welt macht. Ihr Seilbahnnetz Mi Teleférico, 2014 eröffnet, ist das längste städtische System seiner Art und ersetzt zugleich die U-Bahn.\n\nAm anderen Ende der Skala liegt **Baku**. Die Hauptstadt Aserbaidschans liegt am Ufer des Kaspischen Meeres, dessen Oberfläche etwa 28 Meter unter dem Niveau der Weltmeere liegt, und ist damit die am tiefsten gelegene Hauptstadt der Erde. Das Erdöl, das die Stadt reich gemacht hat, quillt aus derselben Senke – eine 1846 im nahen Bibi-Heybat niedergebrachte Probebohrung gilt oft als Beginn des modernen Ölzeitalters –, und die Flame Towers, die ihre Silhouette beherrschen, sind ihm ein Denkmal.\n\nDer Breitengrad bringt eigene Champions hervor. **Reykjavík**, am 18. August 1786 als Handelsort gegründet und auf knapp über 64 Grad Nord gelegen, ist die nördlichste Hauptstadt eines souveränen Staates; mitten im Winter geht die Sonne nach elf Uhr vormittags auf und vor vier Uhr unter, und im Juni geht sie kaum unter. Ihr südliches Gegenstück ist **Wellington**, seit 1865 die Hauptstadt Neuseelands, auf 41 Grad Süd die südlichste Hauptstadt eines souveränen Staates und berühmt für die Stürme, die durch die Cookstraße fegen. Beide Städte sind für Hauptstädte klein, und beide wurden wegen ihrer Häfen und nicht wegen ihres Klimas gewählt.\n\nEuropas Gebirge bieten noch einen Rekord. **Andorra la Vella**, die Hauptstadt des Pyrenäen-Kofürstentums Andorra, liegt auf 1023 Metern und ist die höchstgelegene Hauptstadt Europas, höher als Madrid, das mit 667 Metern die höchstgelegene Hauptstadt eines Mitgliedstaats der Europäischen Union ist. Seit dem Paréage von 1278 ist sie der Hauptort des Fürstentums. Verzichtet man auf den Hauptstadttitel, gewinnen die Alpen: Davos im Schweizer Kanton Graubünden liegt auf rund 1560 Metern und wirbt damit, die höchstgelegene Stadt Europas zu sein – ein Anspruch, der davon abhängt, was man als Stadt zählt, den sich der Kurort aus Thomas Manns „Zauberberg“ und Gastgeber des Weltwirtschaftsforums aber zu eigen gemacht hat.\n\n| Stadt | Land | Rekord | Wert |\n|---|---|---|---|\n| La Paz | Bolivien | höchstgelegener Regierungssitz | rund 3600 m |\n| Andorra la Vella | Andorra | höchstgelegene Hauptstadt Europas | 1023 m |\n| Davos | Schweiz | höchstgelegene Stadt Europas (keine Hauptstadt) | rund 1560 m |\n| Baku | Aserbaidschan | am tiefsten gelegene Hauptstadt | rund 28 m unter dem Meeresspiegel |\n| Reykjavík | Island | nördlichste Hauptstadt | 64° N |\n| Wellington | Neuseeland | südlichste Hauptstadt | 41° S |\n\nJede dieser Städte hat gelernt, mit ihrem Extrem zu leben, und jede hat es zu einem Grund für Stolz gemacht, von Reykjavíks Mitternachtssonne bis zur dünnen, kalten Luft, die jeden Ankömmling in La Paz empfängt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-319",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-302",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What was Tokyo called until it was renamed in 1868?",
+      "de": "Wie hieß Tokio, bis es 1868 umbenannt wurde?",
+      "answerEn": "Edo",
+      "answerDe": "Edo",
+      "timeline": {
+       "kind": "event",
+       "start": "1868",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Edo is renamed Tokyo after the fall of the Tokugawa shogunate",
+       "labelDe": "Edo wird nach dem Sturz des Tokugawa-Shogunats in Tokio umbenannt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Edo",
+       "title": "Edo – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which market replaced Tsukiji in 2018 as Tokyo's wholesale fish market?",
+      "de": "Welcher Markt löste 2018 Tsukiji als Großhandels-Fischmarkt Tokios ab?",
+      "answerEn": "Toyosu Market",
+      "answerDe": "Toyosu-Markt",
+      "timeline": {
+       "kind": "founding",
+       "start": "2018-10-11",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Tokyo's Toyosu Market opens, replacing the Tsukiji fish market",
+       "labelDe": "Tokios Toyosu-Markt eröffnet und ersetzt den Fischmarkt Tsukiji"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Toyosu_Market",
+       "title": "Toyosu Market – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the Tokyo intersection that is often called the busiest pedestrian crossing in the world?",
+      "de": "Wie heißt die Kreuzung in Tokio, die oft als belebteste Fußgängerkreuzung der Welt bezeichnet wird?",
+      "answerEn": "Shibuya Crossing",
+      "answerDe": "Shibuya-Kreuzung",
+      "timeline": {
+       "kind": "creation",
+       "start": "1973",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Shibuya Crossing in Tokyo is inaugurated",
+       "labelDe": "Die Shibuya-Kreuzung in Tokio wird eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Shibuya_Crossing",
+       "title": "Shibuya Crossing – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the 634-metre broadcasting tower that opened in Tokyo in 2012?",
+      "de": "Wie heißt der 634 Meter hohe Sendeturm, der 2012 in Tokio eröffnet wurde?",
+      "answerEn": "Tokyo Skytree",
+      "answerDe": "Tokyo Skytree",
+      "timeline": {
+       "kind": "creation",
+       "start": "2012-05-22",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Tokyo Skytree opens to the public",
+       "labelDe": "Der Tokyo Skytree wird für die Öffentlichkeit geöffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tokyo_Skytree",
+       "title": "Tokyo Skytree – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Tokyo: The World's Largest City",
+    "titleDe": "Tokio: Die größte Stadt der Welt",
+    "bodyEn": "Few cities have reinvented themselves as often as **Tokyo**, and none has grown larger. Counted together with Yokohama and the surrounding prefectures, the Tokyo metropolitan region is home to well over 35 million people – more than any other urban area on Earth, although the ranking depends on where one draws the city's edge.\n\nThe city began as a fishing village called **Edo**, which became the seat of the Tokugawa shoguns in 1603. While the emperor stayed in Kyoto, Edo grew into one of the largest cities of the pre-industrial world. When the shogunate fell in 1868 the emperor moved in, and the city was renamed Tokyo, \"eastern capital\".\n\nIts appetite is as large as its population. For decades the Tsukiji market by Tokyo Bay was the largest fish market in the world, famous for its dawn tuna auctions. On 11 October 2018 its trade moved to the new **Toyosu Market** a little further out on reclaimed land, which on opening became the largest wholesale fish market in the world; the old outer market of Tsukiji survives as a tourist attraction.\n\nTokyo's neighbourhoods each have a speciality. **Akihabara**, in Chiyoda ward, became a market for radios and black-market goods after the Second World War and, as its shops filled with washing machines and televisions in the 1950s, earned the nickname \"Electric Town\". When home computers arrived in the 1980s it drew a new crowd of enthusiasts, and today it is the centre of otaku culture, with anime and manga shops, arcades and maid cafés.\n\nFurther west lies the **Shibuya Crossing**, inaugurated in 1973 in front of Shibuya Station and often called the busiest pedestrian crossing in the world: when the lights change, up to 3,000 people stream across from every direction at once.\n\nAbove it all rises the **Tokyo Skytree**, a 634-metre broadcasting tower that opened on 22 May 2012. Guinness World Records certified it as the tallest free-standing tower in the world, and it remains Japan's tallest structure.\n\n| Place | What it is | Since |\n|---|---|---|\n| Edo | the city's name before 1868 | 1603 shogunate seat |\n| Toyosu Market | largest wholesale fish market | 2018 |\n| Akihabara | \"Electric Town\", otaku district | after 1945 |\n| Shibuya Crossing | busiest pedestrian crossing | 1973 |\n| Tokyo Skytree | tallest tower in the world | 2012 |\n\nFrom Edo's shoguns to Akihabara's arcades, Tokyo has never stopped rebuilding itself.",
+    "bodyDe": "Kaum eine Stadt hat sich so oft neu erfunden wie **Tokio**, und keine ist größer geworden. Zusammen mit Yokohama und den umliegenden Präfekturen gerechnet, leben in der Metropolregion Tokio weit über 35 Millionen Menschen – mehr als in jedem anderen Ballungsraum der Erde, wobei die Rangfolge davon abhängt, wo man die Grenze der Stadt zieht.\n\nDie Stadt begann als Fischerdorf namens **Edo**, das 1603 Sitz der Tokugawa-Shogune wurde. Während der Kaiser in Kyoto blieb, wuchs Edo zu einer der größten Städte der vorindustriellen Welt heran. Als das Shogunat 1868 stürzte, zog der Kaiser ein, und die Stadt wurde in Tokio umbenannt, „östliche Hauptstadt“.\n\nIhr Appetit ist so groß wie ihre Bevölkerung. Jahrzehntelang war der Tsukiji-Markt an der Bucht von Tokio der größte Fischmarkt der Welt, berühmt für seine Thunfischauktionen im Morgengrauen. Am 11. Oktober 2018 zog der Handel auf den neuen **Toyosu-Markt** auf aufgeschüttetem Land etwas weiter draußen, der bei seiner Eröffnung zum größten Großhandels-Fischmarkt der Welt wurde; der alte äußere Markt von Tsukiji lebt als Touristenattraktion weiter.\n\nJedes Viertel Tokios hat seine Spezialität. **Akihabara** im Bezirk Chiyoda wurde nach dem Zweiten Weltkrieg ein Markt für Radios und Schwarzmarktware und erhielt, als sich seine Läden in den 1950er-Jahren mit Waschmaschinen und Fernsehern füllten, den Spitznamen „Electric Town“. Mit den Heimcomputern der 1980er-Jahre kam ein neues Publikum von Technikbegeisterten, und heute ist das Viertel das Zentrum der Otaku-Kultur mit Anime- und Mangaläden, Spielhallen und Maid-Cafés.\n\nWeiter westlich liegt die **Shibuya-Kreuzung**, 1973 vor dem Bahnhof Shibuya eröffnet und oft als belebteste Fußgängerkreuzung der Welt bezeichnet: Springt die Ampel um, strömen bis zu 3000 Menschen gleichzeitig aus allen Richtungen über die Straße.\n\nÜber allem erhebt sich der **Tokyo Skytree**, ein 634 Meter hoher Sendeturm, der am 22. Mai 2012 eröffnet wurde. Guinness World Records bestätigte ihn als höchsten frei stehenden Turm der Welt, und er ist bis heute das höchste Bauwerk Japans.\n\n| Ort | Was es ist | Seit |\n|---|---|---|\n| Edo | Name der Stadt vor 1868 | 1603 Sitz des Shogunats |\n| Toyosu-Markt | größter Großhandels-Fischmarkt | 2018 |\n| Akihabara | „Electric Town“, Otaku-Viertel | nach 1945 |\n| Shibuya-Kreuzung | belebteste Fußgängerkreuzung | 1973 |\n| Tokyo Skytree | höchster Turm der Welt | 2012 |\n\nVon den Shogunen in Edo bis zu den Spielhallen von Akihabara hat Tokio nie aufgehört, sich neu zu bauen.",
+    "notesEn": "The over-35-million figure is for the Tokyo–Yokohama metropolitan region, not the city proper; rankings of the largest city depend on how a city is delimited.",
+    "notesDe": "Die Zahl von über 35 Millionen gilt für die Metropolregion Tokio–Yokohama, nicht für die Stadt selbst; Ranglisten der größten Stadt hängen davon ab, wie man eine Stadt abgrenzt."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-085",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-289",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Swiss architecture firm designed the Beijing National Stadium, the \"Bird's Nest\"?",
+      "de": "Welches Schweizer Architekturbüro entwarf das Pekinger Nationalstadion, das „Vogelnest“?",
+      "answerEn": "Herzog & de Meuron",
+      "answerDe": "Herzog & de Meuron",
+      "timeline": {
+       "kind": "creation",
+       "start": "2008-06-28",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Beijing National Stadium (\"Bird's Nest\") opens",
+       "labelDe": "Das Pekinger Nationalstadion („Vogelnest“) wird eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Beijing_National_Stadium",
+       "title": "Beijing National Stadium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Chinese metropolis is Thames Town, a new town built in the style of an English market town?",
+      "de": "In welcher chinesischen Metropole liegt Thames Town, eine im Stil einer englischen Marktstadt gebaute Neustadt?",
+      "answerEn": "Shanghai",
+      "answerDe": "Shanghai",
+      "timeline": {
+       "kind": "creation",
+       "start": "2006",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Thames Town, an English-style new town in Songjiang, Shanghai, is completed",
+       "labelDe": "Thames Town, eine Neustadt im englischen Stil in Songjiang (Shanghai), wird fertiggestellt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Thames_Town",
+       "title": "Thames Town – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Near which Chinese city was Tianducheng built, a copy of Paris with its own 108-metre Eiffel Tower?",
+      "de": "Bei welcher chinesischen Stadt wurde Tianducheng gebaut, eine Kopie von Paris mit eigenem 108 Meter hohem Eiffelturm?",
+      "answerEn": "Hangzhou",
+      "answerDe": "Hangzhou",
+      "timeline": {
+       "kind": "creation",
+       "start": "2007",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Construction begins on Tianducheng, a replica of Paris near Hangzhou",
+       "labelDe": "Baubeginn von Tianducheng, einem Nachbau von Paris bei Hangzhou"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tianducheng",
+       "title": "Tianducheng – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Bird's Nest and Copycat Towns: China's New Cities",
+    "titleDe": "Vogelnest und Kopierstädte: Chinas neue Städte",
+    "bodyEn": "No country has built as many cities, as fast, as **China** in the past forty years, and its building boom has produced records, showpieces and some of the strangest copies in the world.\n\nIts capital has also produced a record nobody wanted. On 14 August 2010 coal trucks heading towards **Beijing** from Inner Mongolia, slowed by roadworks on National Highway 110 and the Beijing–Tibet expressway, backed up into a jam about 100 kilometres long. Drivers were stuck for days, villagers sold them noodles and water at inflated prices, and it took some twelve days before the queue finally cleared.\n\nTwo years earlier the same city had shown off its most famous new building. The Beijing National Stadium, built for the 2008 Olympic Games and opened on 28 June 2008, is known around the world as the \"Bird's Nest\" for its lattice of twisted steel beams. It was designed by the Swiss architects **Herzog & de Meuron** with the artist Ai Weiwei as consultant, holds about 80,000 spectators, and hosted the opening and closing ceremonies again at the Winter Olympics of 2022.\n\nElsewhere in the country, developers took a different route to fame: they copied Europe. In Songjiang, a new district about 30 kilometres from the centre of **Shanghai**, Thames Town was completed in 2006 as an English market town, with cobbled streets, Victorian terraces, red telephone boxes and a church modelled on one in Bristol. Near **Hangzhou** in Zhejiang province, Tianducheng, begun around 2007, imitates Paris, complete with a 108-metre Eiffel Tower and Haussmann-style boulevards.\n\nThe most famous copy is an Austrian village. In 2012 a replica of Hallstatt, the lakeside village of the Salzkammergut and a UNESCO World Heritage Site, opened in Boluo County near Huizhou in Guangdong province. Its developer had sent architects to measure the original without telling the villagers, and Hallstatt's mayor, after some initial irritation, travelled to China to attend the opening ceremony.\n\n| Place | City | What it is | Year |\n|---|---|---|---|\n| Bird's Nest | Beijing | Olympic stadium by Herzog & de Meuron | 2008 |\n| Thames Town | Shanghai | copy of an English market town | 2006 |\n| Tianducheng | Hangzhou | copy of Paris | from 2007 |\n| Hallstatt See | Huizhou | copy of the Austrian village | 2012 |\n\nBetween the traffic jams and the copies, the cities of modern China are still being invented.",
+    "bodyDe": "Kein Land hat in den vergangenen vierzig Jahren so viele Städte so schnell gebaut wie **China**, und sein Bauboom hat Rekorde, Prestigebauten und einige der seltsamsten Kopien der Welt hervorgebracht.\n\nSeine Hauptstadt hat auch einen Rekord aufgestellt, den niemand wollte. Am 14. August 2010 stauten sich Kohlelaster, die aus der Inneren Mongolei in Richtung **Peking** fuhren, wegen Bauarbeiten auf der Nationalstraße 110 und der Schnellstraße Peking–Tibet auf rund 100 Kilometern Länge. Die Fahrer saßen tagelang fest, Dorfbewohner verkauften ihnen Nudeln und Wasser zu überhöhten Preisen, und es dauerte etwa zwölf Tage, bis sich die Schlange endlich auflöste.\n\nZwei Jahre zuvor hatte dieselbe Stadt ihr berühmtestes neues Bauwerk vorgeführt. Das Pekinger Nationalstadion, für die Olympischen Spiele 2008 gebaut und am 28. Juni 2008 eröffnet, ist wegen seines Geflechts aus verdrehten Stahlträgern in aller Welt als „Vogelnest“ bekannt. Entworfen haben es die Schweizer Architekten **Herzog & de Meuron** mit dem Künstler Ai Weiwei als Berater; es fasst rund 80.000 Zuschauer und war bei den Winterspielen 2022 erneut Schauplatz der Eröffnungs- und Schlussfeier.\n\nAnderswo im Land suchten Bauträger den Ruhm auf anderem Weg: Sie kopierten Europa. In Songjiang, einem neuen Bezirk etwa 30 Kilometer vom Zentrum **Shanghais** entfernt, wurde 2006 Thames Town als englische Marktstadt fertiggestellt, mit Kopfsteinpflaster, viktorianischen Reihenhäusern, roten Telefonzellen und einer Kirche nach einem Vorbild in Bristol. Bei **Hangzhou** in der Provinz Zhejiang ahmt das um 2007 begonnene Tianducheng Paris nach, samt 108 Meter hohem Eiffelturm und Boulevards im Haussmann-Stil.\n\nDie berühmteste Kopie ist ein österreichisches Dorf. 2012 wurde im Kreis Boluo bei Huizhou in der Provinz Guangdong ein Nachbau von Hallstatt eröffnet, dem Seeort im Salzkammergut und UNESCO-Welterbe. Der Bauträger hatte Architekten geschickt, die das Original vermaßen, ohne die Einwohner zu fragen, und Hallstatts Bürgermeister reiste nach anfänglichem Ärger selbst nach China, um an der Eröffnungsfeier teilzunehmen.\n\n| Ort | Stadt | Was es ist | Jahr |\n|---|---|---|---|\n| Vogelnest | Peking | Olympiastadion von Herzog & de Meuron | 2008 |\n| Thames Town | Shanghai | Kopie einer englischen Marktstadt | 2006 |\n| Tianducheng | Hangzhou | Kopie von Paris | ab 2007 |\n| Hallstatt See | Huizhou | Kopie des österreichischen Dorfes | 2012 |\n\nZwischen Staus und Kopien werden die Städte des modernen China noch immer erfunden.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-198",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "On which island in Abu Dhabi do the Ferrari World theme park and the Formula One circuit stand?",
+      "de": "Auf welcher Insel in Abu Dhabi stehen der Themenpark Ferrari World und die Formel-1-Rennstrecke?",
+      "answerEn": "Yas Island",
+      "answerDe": "Yas Island",
+      "timeline": {
+       "kind": "founding",
+       "start": "2010-11-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ferrari World opens on Yas Island, Abu Dhabi",
+       "labelDe": "Ferrari World eröffnet auf Yas Island in Abu Dhabi"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ferrari_World",
+       "title": "Ferrari World – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the largest mosque in the United Arab Emirates, inaugurated in Abu Dhabi in 2007?",
+      "de": "Wie heißt die größte Moschee der Vereinigten Arabischen Emirate, die 2007 in Abu Dhabi eingeweiht wurde?",
+      "answerEn": "Sheikh Zayed Grand Mosque",
+      "answerDe": "Scheich-Zayid-Moschee",
+      "timeline": {
+       "kind": "creation",
+       "start": "2007-12",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Sheikh Zayed Grand Mosque in Abu Dhabi is inaugurated",
+       "labelDe": "Die Scheich-Zayid-Moschee in Abu Dhabi wird eingeweiht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sheikh_Zayed_Grand_Mosque",
+       "title": "Sheikh Zayed Grand Mosque – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the artificial island off Dubai that is shaped like a palm tree?",
+      "de": "Wie heißt die künstliche Insel vor Dubai, die die Form einer Palme hat?",
+      "answerEn": "Palm Jumeirah",
+      "answerDe": "Palm Jumeirah",
+      "timeline": {
+       "kind": "creation",
+       "start": "2001-06",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Construction of the Palm Jumeirah begins off Dubai",
+       "labelDe": "Vor Dubai beginnt der Bau von Palm Jumeirah"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Palm_Jumeirah",
+       "title": "Palm Jumeirah – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Qatari city was the final of the 2022 FIFA World Cup played?",
+      "de": "In welcher katarischen Stadt wurde das Finale der FIFA-Weltmeisterschaft 2022 ausgetragen?",
+      "answerEn": "Lusail",
+      "answerDe": "Lusail",
+      "timeline": {
+       "kind": "event",
+       "start": "2022-12-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Argentina beat France in the World Cup final at Lusail Stadium",
+       "labelDe": "Argentinien besiegt Frankreich im WM-Finale im Lusail-Stadion"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Lusail_Stadium",
+       "title": "Lusail Stadium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Gulf Cities of Superlatives",
+    "titleDe": "Golfstädte der Superlative",
+    "bodyEn": "Fifty years ago most of the cities on the southern shore of the Persian Gulf were pearling and fishing towns. Oil and gas money has since turned them into a showroom of superlatives.\n\n**Abu Dhabi**, the capital of the United Arab Emirates, has put much of its effort into culture and leisure. On Yas Island it opened Ferrari World on 4 November 2010, a mostly indoor theme park under a vast red roof where visitors can feel what it is like to drive a Formula One car; its Formula Rossa held the record as the world's fastest roller coaster for more than a decade. **Yas Island** also hosts the Yas Marina Circuit, home of the Abu Dhabi Grand Prix. The city's spiritual landmark is the white-marble **Sheikh Zayed Grand Mosque**, inaugurated in December 2007: the largest mosque in the UAE, with room for more than 40,000 worshippers and a hand-knotted carpet often called the largest in the world.\n\nNeighbouring Dubai prefers height and spectacle. The Burj Khalifa, at 828 metres the tallest building in the world since 2010, rises from its centre, and off its coast lies the **Palm Jumeirah**, an artificial island shaped like a palm tree when seen from the air, with a trunk, fronds and a protective outer crescent. Work began in June 2001, the first residents moved in during 2006, and dozens of hotels now line the crescent.\n\nQatar chose football. For the 2022 FIFA World Cup it built a whole new city north of Doha, **Lusail**, whose stadium of nearly 89,000 seats staged the final on 18 December 2022, when Argentina beat France on penalties.\n\n| City | Landmark | Opened |\n|---|---|---|\n| Abu Dhabi | Sheikh Zayed Grand Mosque | 2007 |\n| Abu Dhabi | Ferrari World, Yas Island | 2010 |\n| Dubai | Palm Jumeirah | from 2006 |\n| Dubai | Burj Khalifa | 2010 |\n| Lusail | Lusail Stadium, World Cup final | 2022 |\n\nWhat links them is the ambition to be remembered for something other than oil, before the oil runs out.",
+    "bodyDe": "Vor fünfzig Jahren waren die meisten Städte am Südufer des Persischen Golfs Perlentaucher- und Fischerorte. Öl- und Gasgeld hat sie seither in einen Schauraum der Superlative verwandelt.\n\n**Abu Dhabi**, die Hauptstadt der Vereinigten Arabischen Emirate, hat viel Mühe auf Kultur und Freizeit verwandt. Auf der Insel Yas eröffnete am 4. November 2010 Ferrari World, ein überwiegend überdachter Themenpark unter einem riesigen roten Dach, in dem Besucher erleben können, wie es sich anfühlt, einen Formel-1-Wagen zu fahren; seine Formula Rossa hielt über ein Jahrzehnt lang den Rekord als schnellste Achterbahn der Welt. **Yas Island** beherbergt auch den Yas Marina Circuit, Austragungsort des Großen Preises von Abu Dhabi. Das geistliche Wahrzeichen der Stadt ist die **Scheich-Zayid-Moschee** aus weißem Marmor, im Dezember 2007 eingeweiht: die größte Moschee der VAE, mit Platz für mehr als 40.000 Gläubige und einem handgeknüpften Teppich, der oft als größter der Welt bezeichnet wird.\n\nDas benachbarte Dubai setzt auf Höhe und Spektakel. Der Burj Khalifa, mit 828 Metern seit 2010 das höchste Gebäude der Welt, ragt aus seinem Zentrum auf, und vor seiner Küste liegt **Palm Jumeirah**, eine künstliche Insel, die aus der Luft wie eine Palme aussieht, mit Stamm, Wedeln und einem schützenden äußeren Halbmond. Die Arbeiten begannen im Juni 2001, 2006 zogen die ersten Bewohner ein, und heute säumen Dutzende Hotels den Halbmond.\n\nKatar entschied sich für den Fußball. Für die FIFA-Weltmeisterschaft 2022 baute es nördlich von Doha eine ganz neue Stadt, **Lusail**, in deren Stadion mit fast 89.000 Plätzen am 18. Dezember 2022 das Finale stattfand, in dem Argentinien Frankreich im Elfmeterschießen besiegte.\n\n| Stadt | Wahrzeichen | Eröffnet |\n|---|---|---|\n| Abu Dhabi | Scheich-Zayid-Moschee | 2007 |\n| Abu Dhabi | Ferrari World, Yas Island | 2010 |\n| Dubai | Palm Jumeirah | ab 2006 |\n| Dubai | Burj Khalifa | 2010 |\n| Lusail | Lusail-Stadion, WM-Finale | 2022 |\n\nWas sie verbindet, ist der Ehrgeiz, für etwas anderes als Öl in Erinnerung zu bleiben, bevor das Öl versiegt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-023",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-253",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which capital city lies on the north bank of the Congo River, directly opposite Kinshasa?",
+      "de": "Welche Hauptstadt liegt am Nordufer des Kongo, direkt gegenüber von Kinshasa?",
+      "answerEn": "Brazzaville",
+      "answerDe": "Brazzaville",
+      "timeline": {
+       "kind": "founding",
+       "start": "1880",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Pierre Savorgnan de Brazza founds Brazzaville on the Congo River",
+       "labelDe": "Pierre Savorgnan de Brazza gründet Brazzaville am Kongo"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Brazzaville",
+       "title": "Brazzaville – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the South African rapid rail system that links Johannesburg, Pretoria and O. R. Tambo airport?",
+      "de": "Wie heißt das südafrikanische Schnellbahnsystem, das Johannesburg, Pretoria und den Flughafen O. R. Tambo verbindet?",
+      "answerEn": "Gautrain",
+      "answerDe": "Gautrain",
+      "timeline": {
+       "kind": "founding",
+       "start": "2010-06-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first section of the Gautrain opens between Sandton and O. R. Tambo airport",
+       "labelDe": "Der erste Abschnitt des Gautrain zwischen Sandton und dem Flughafen O. R. Tambo wird eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Gautrain",
+       "title": "Gautrain – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which capital opened the first light rail system in East and Sub-Saharan Africa in 2015?",
+      "de": "Welche Hauptstadt eröffnete 2015 die erste Stadtbahn Ost- und Subsahara-Afrikas?",
+      "answerEn": "Addis Ababa",
+      "answerDe": "Addis Abeba",
+      "timeline": {
+       "kind": "founding",
+       "start": "2015-09-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Addis Ababa Light Rail opens its first line",
+       "labelDe": "Die Stadtbahn von Addis Abeba eröffnet ihre erste Linie"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Addis_Ababa_Light_Rail",
+       "title": "Addis Ababa Light Rail – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Nigerian city opened the first stations of its Blue Line rail system in 2023?",
+      "de": "Welche nigerianische Stadt eröffnete 2023 die ersten Stationen ihrer Bahnlinie Blue Line?",
+      "answerEn": "Lagos",
+      "answerDe": "Lagos",
+      "timeline": {
+       "kind": "founding",
+       "start": "2023-09-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Lagos Rail Mass Transit Blue Line opens its first five stations",
+       "labelDe": "Die Blue Line des Lagos Rail Mass Transit eröffnet ihre ersten fünf Stationen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Lagos_Rail_Mass_Transit",
+       "title": "Lagos Rail Mass Transit – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Africa's Megacities on the Move",
+    "titleDe": "Afrikas Megastädte in Bewegung",
+    "bodyEn": "**Africa** is the fastest-urbanising continent on Earth, and its largest cities have long outgrown the transport built for them. Two of them illustrate the scale.\n\nKinshasa, capital of the Democratic Republic of the Congo, was called Léopoldville after the Belgian king until 1966. With well over 15 million inhabitants it is the largest French-speaking city in the world – larger by now than Paris itself – even though most people speak Lingala on the street. It lies on the south bank of the Congo River, and directly opposite, on the north bank, lies **Brazzaville**, founded in 1880 by the explorer Pierre Savorgnan de Brazza and today capital of the Republic of the Congo. Nowhere else do two national capitals face each other across a river within sight.\n\nFor a long time underground railways were a North African affair. Cairo opened Africa's first metro line on 27 September 1987, running from Helwan to Ramses Square, and Algiers, after decades of delays, opened its metro on 1 November 2011. As of 2016, **Egypt and Algeria** were therefore the only countries on the continent with an underground metro network.\n\nSouth of the Sahara, cities have turned to light rail and suburban trains instead. South Africa opened the first section of the **Gautrain** on 8 June 2010, just before the football World Cup; it links Johannesburg, Pretoria and O. R. Tambo International Airport. On 20 September 2015 **Addis Ababa** opened the first light rail in East and Sub-Saharan Africa, built by a Chinese contractor. And in Nigeria, **Lagos**, one of the largest cities on the continent, opened the first stations of its Blue Line on 4 September 2023 and the Red Line a year later.\n\n| City | Country | System | Opened |\n|---|---|---|---|\n| Cairo | Egypt | metro | 1987 |\n| Johannesburg – Pretoria | South Africa | Gautrain | 2010 |\n| Algiers | Algeria | metro | 2011 |\n| Addis Ababa | Ethiopia | light rail | 2015 |\n| Lagos | Nigeria | Blue Line | 2023 |\n\nKinshasa itself still has no metro, and its traffic is legendary – a reminder of how far the continent's rail building still has to go.",
+    "bodyDe": "**Afrika** ist der Kontinent mit der schnellsten Verstädterung der Erde, und seine größten Städte sind dem für sie gebauten Verkehr längst entwachsen. Zwei von ihnen zeigen die Größenordnung.\n\nKinshasa, die Hauptstadt der Demokratischen Republik Kongo, hieß bis 1966 nach dem belgischen König Léopoldville. Mit weit über 15 Millionen Einwohnern ist sie die größte französischsprachige Stadt der Welt – inzwischen größer als Paris selbst –, auch wenn auf der Straße meist Lingala gesprochen wird. Sie liegt am Südufer des Kongo, und direkt gegenüber am Nordufer liegt **Brazzaville**, 1880 vom Forschungsreisenden Pierre Savorgnan de Brazza gegründet und heute Hauptstadt der Republik Kongo. Nirgendwo sonst stehen sich zwei Hauptstädte in Sichtweite an einem Fluss gegenüber.\n\nLange waren U-Bahnen eine nordafrikanische Angelegenheit. Kairo eröffnete am 27. September 1987 die erste Metrolinie Afrikas von Heluan zum Ramses-Platz, und Algier eröffnete nach Jahrzehnten der Verzögerung am 1. November 2011 seine Metro. Mit Stand 2016 waren daher **Ägypten und Algerien** die einzigen Länder des Kontinents mit einem U-Bahnnetz.\n\nSüdlich der Sahara setzen die Städte stattdessen auf Stadtbahnen und Vorortzüge. Südafrika eröffnete am 8. Juni 2010, kurz vor der Fußball-Weltmeisterschaft, den ersten Abschnitt des **Gautrain**, der Johannesburg, Pretoria und den Flughafen O. R. Tambo verbindet. Am 20. September 2015 eröffnete **Addis Abeba** die erste Stadtbahn Ost- und Subsahara-Afrikas, gebaut von einem chinesischen Unternehmen. Und in Nigeria eröffnete **Lagos**, eine der größten Städte des Kontinents, am 4. September 2023 die ersten Stationen seiner Blue Line und ein Jahr später die Red Line.\n\n| Stadt | Land | System | Eröffnet |\n|---|---|---|---|\n| Kairo | Ägypten | Metro | 1987 |\n| Johannesburg – Pretoria | Südafrika | Gautrain | 2010 |\n| Algier | Algerien | Metro | 2011 |\n| Addis Abeba | Äthiopien | Stadtbahn | 2015 |\n| Lagos | Nigeria | Blue Line | 2023 |\n\nKinshasa selbst hat noch immer keine Metro, und sein Verkehr ist legendär – eine Erinnerung daran, wie weit der Bahnbau des Kontinents noch zu gehen hat.",
+    "notesEn": "Kinshasa is the city behind the question about the capital with the most French speakers; the printed card's 'outside Paris' is a dated hedge, as Kinshasa is now larger than Paris. The 'only Egypt and Algeria' fact is dated 2016; Lagos has since opened rapid transit.",
+    "notesDe": "Hinter der Frage nach der Hauptstadt mit den meisten Französischsprachigen steht Kinshasa; das „außerhalb von Paris“ der Karte ist überholt, denn Kinshasa ist inzwischen größer als Paris. Die Angabe „nur Ägypten und Algerien“ gilt für 2016; Lagos hat inzwischen ein Schnellbahnsystem eröffnet."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-364",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the 170-metre tower in Pyongyang that was completed in 1982 for Kim Il Sung's 70th birthday?",
+      "de": "Wie heißt der 170 Meter hohe Turm in Pjöngjang, der 1982 zum 70. Geburtstag Kim Il Sungs fertiggestellt wurde?",
+      "answerEn": "Juche Tower",
+      "answerDe": "Juche-Turm",
+      "timeline": {
+       "kind": "creation",
+       "start": "1982-04-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Juche Tower in Pyongyang is completed for Kim Il Sung's 70th birthday",
+       "labelDe": "Der Juche-Turm in Pjöngjang wird zum 70. Geburtstag Kim Il Sungs fertiggestellt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Juche_Tower",
+       "title": "Juche Tower – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Pyongyang stadium, opened in 1989, is the home of the Arirang mass games?",
+      "de": "Welches Stadion in Pjöngjang, 1989 eröffnet, ist Schauplatz der Arirang-Massenspiele?",
+      "answerEn": "Rungrado 1st of May Stadium",
+      "answerDe": "Stadion Erster Mai",
+      "timeline": {
+       "kind": "founding",
+       "start": "1989-05-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Rungrado 1st of May Stadium opens in Pyongyang",
+       "labelDe": "Das Stadion Erster Mai (Rungrado) in Pjöngjang wird eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Rungrado_1st_of_May_Stadium",
+       "title": "Rungrado 1st of May Stadium – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the unfinished 105-storey pyramid-shaped hotel in Pyongyang?",
+      "de": "Wie heißt das unvollendete pyramidenförmige Hotel mit 105 Stockwerken in Pjöngjang?",
+      "answerEn": "Ryugyong Hotel",
+      "answerDe": "Ryugyong-Hotel",
+      "timeline": {
+       "kind": "creation",
+       "start": "1987-08-28",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Construction of the Ryugyong Hotel in Pyongyang begins",
+       "labelDe": "In Pjöngjang beginnt der Bau des Ryugyong-Hotels"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ryugyong_Hotel",
+       "title": "Ryugyong Hotel – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Pyongyang building are the embalmed bodies of Kim Il Sung and Kim Jong Il displayed?",
+      "de": "In welchem Gebäude in Pjöngjang sind die einbalsamierten Leichname von Kim Il Sung und Kim Jong Il aufgebahrt?",
+      "answerEn": "Kumsusan Palace of the Sun",
+      "answerDe": "Kumsusan-Sonnenpalast",
+      "timeline": {
+       "kind": "founding",
+       "start": "1995-07-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Kim Il Sung's former residence opens as his mausoleum, the Kumsusan Memorial Palace",
+       "labelDe": "Kim Il Sungs früherer Amtssitz wird als sein Mausoleum, der Kumsusan-Gedenkpalast, eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Kumsusan_Palace_of_the_Sun",
+       "title": "Kumsusan Palace of the Sun – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Pyongyang: A Capital of Monuments",
+    "titleDe": "Pjöngjang: Eine Hauptstadt der Monumente",
+    "bodyEn": "North Korea's capital, Pyongyang, was flattened by bombing during the Korean War and rebuilt from the 1950s as a stage set for the state's ideology. Its monuments are meant to impress visitors – and to honour the Kim dynasty.\n\nThe most curious of them lies about 150 kilometres north of the city, in the Myohyang mountains. The **International Friendship Exhibition**, opened on 26 August 1978, is a museum of state gifts presented to Kim Il Sung and Kim Jong Il by foreign leaders and admirers. Its windowless halls in traditional style, with more than 150 rooms, hold somewhere between 60,000 and 220,000 objects: an armoured car from Stalin, an armoured railway carriage from Mao Zedong, a stuffed bear's head from Ceaușescu, a crocodile-skin suitcase from Fidel Castro, and a basketball signed by Michael Jordan that the US Secretary of State Madeleine Albright brought in 2000.\n\nIn the city itself, the **Juche Tower** on the bank of the Taedong River was completed on 15 April 1982 for Kim Il Sung's 70th birthday. It is 170 metres tall including its red glass torch, and its granite spire is said to contain 25,550 blocks – one for each day of the leader's first seventy years.\n\nSeven years later, on 1 May 1989, the **Rungrado 1st of May Stadium** opened on an island in the same river, originally for 150,000 spectators; with about 114,000 seats after a remodel, it is still one of the largest stadiums in the world and the home of the Arirang mass games, in which tens of thousands of performers form pictures with coloured cards.\n\nNot every project was finished. Work on the **Ryugyong Hotel**, a 330-metre pyramid of 105 storeys, began on 28 August 1987 and stopped in 1992 when money ran out; its glass skin was completed in 2011, but the interior remains empty, and foreign media nicknamed it the \"Hotel of Doom\".\n\nThe most solemn site is the **Kumsusan Palace of the Sun**. Built in 1976 as Kim Il Sung's official residence, it was turned into his mausoleum after his death and opened on 8 July 1995; since 2012 the embalmed bodies of both Kim Il Sung and Kim Jong Il lie in state there.\n\n| Monument | Opened | Purpose |\n|---|---|---|\n| International Friendship Exhibition | 1978 | museum of state gifts |\n| Juche Tower | 1982 | Kim Il Sung's 70th birthday |\n| Ryugyong Hotel | begun 1987 | unfinished hotel |\n| Rungrado 1st of May Stadium | 1989 | mass games |\n| Kumsusan Palace of the Sun | 1995 | mausoleum |\n\nFew capitals are so completely a monument to their rulers.",
+    "bodyDe": "Nordkoreas Hauptstadt Pjöngjang wurde im Koreakrieg durch Bomben dem Erdboden gleichgemacht und ab den 1950er-Jahren als Bühnenbild für die Staatsideologie wieder aufgebaut. Ihre Monumente sollen Besucher beeindrucken – und die Kim-Dynastie ehren.\n\nDas kurioseste von ihnen liegt etwa 150 Kilometer nördlich der Stadt im Myohyang-Gebirge. Die **Internationale Freundschaftsausstellung**, am 26. August 1978 eröffnet, ist ein Museum für Staatsgeschenke, die Kim Il Sung und Kim Jong Il von ausländischen Staatsführern und Bewunderern überreicht wurden. Ihre fensterlosen Hallen im traditionellen Stil mit mehr als 150 Räumen bergen zwischen 60.000 und 220.000 Objekte: einen Panzerwagen von Stalin, einen gepanzerten Eisenbahnwaggon von Mao Zedong, einen ausgestopften Bärenkopf von Ceaușescu, einen Koffer aus Krokodilleder von Fidel Castro und einen von Michael Jordan signierten Basketball, den US-Außenministerin Madeleine Albright im Jahr 2000 mitbrachte.\n\nIn der Stadt selbst wurde der **Juche-Turm** am Ufer des Taedong am 15. April 1982 zum 70. Geburtstag Kim Il Sungs fertiggestellt. Er ist samt seiner roten Glasfackel 170 Meter hoch, und seine Granitspitze soll aus 25.550 Blöcken bestehen – einem für jeden Tag der ersten siebzig Lebensjahre des Führers.\n\nSieben Jahre später, am 1. Mai 1989, wurde auf einer Insel im selben Fluss das **Stadion Erster Mai** (Rungrado) eröffnet, ursprünglich für 150.000 Zuschauer; mit rund 114.000 Plätzen nach einem Umbau ist es noch immer eines der größten Stadien der Welt und Schauplatz der Arirang-Massenspiele, bei denen Zehntausende Mitwirkende mit farbigen Karten Bilder formen.\n\nNicht jedes Projekt wurde vollendet. Der Bau des **Ryugyong-Hotels**, einer 330 Meter hohen Pyramide mit 105 Stockwerken, begann am 28. August 1987 und stockte 1992, als das Geld ausging; die Glasfassade wurde 2011 fertig, doch das Innere steht leer, und ausländische Medien tauften es „Hotel des Untergangs“.\n\nDer feierlichste Ort ist der **Kumsusan-Sonnenpalast**. 1976 als Amtssitz Kim Il Sungs erbaut, wurde er nach dessen Tod zu seinem Mausoleum umgestaltet und am 8. Juli 1995 eröffnet; seit 2012 liegen dort die einbalsamierten Leichname von Kim Il Sung und Kim Jong Il aufgebahrt.\n\n| Monument | Eröffnet | Zweck |\n|---|---|---|\n| Internationale Freundschaftsausstellung | 1978 | Museum für Staatsgeschenke |\n| Juche-Turm | 1982 | 70. Geburtstag Kim Il Sungs |\n| Ryugyong-Hotel | Baubeginn 1987 | unvollendetes Hotel |\n| Stadion Erster Mai | 1989 | Massenspiele |\n| Kumsusan-Sonnenpalast | 1995 | Mausoleum |\n\nKaum eine Hauptstadt ist so vollständig ein Denkmal ihrer Herrscher.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-032",
+   "category": 1,
+   "domain": "art",
+   "sub": "architecture",
+   "why": "The gold on the Dome of the Rock is a building's material, not a city fact; its home is a0171 \"Five Landmarks of Islamic Architecture\" or a2019 \"Domes of the Islamic World\" (art/architecture), where f00852 / f10095 ask for the building's name rather than its metal."
+  },
+  {
+   "card": "tp-249",
+   "category": 1,
+   "domain": "art",
+   "sub": "architecture",
+   "why": "Sticky-rice mortar in the Great Wall of China is a construction technique of a monument, not a city topic; it belongs with the art/architecture articles on great structures."
+  },
+  {
+   "card": "tp-029",
+   "category": 1,
+   "domain": "geography",
+   "sub": "cities",
+   "why": "Its answer \"Kolkata\" repeats fact f00170 in a0034 (an article may not hold the same answer twice). Alias it to f00170 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-163",
+   "category": 1,
+   "domain": "geography",
+   "sub": "cities",
+   "why": "Its answer \"Singapore\" repeats fact f00167 in a0034 (an article may not hold the same answer twice). Alias it to f00167 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-395",
+   "category": 1,
+   "domain": "geography",
+   "sub": "cities",
+   "why": "Its answer \"Shanghai\" repeats fact f00168 in a0034 (an article may not hold the same answer twice). Alias it to f00168 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-397",
+   "category": 1,
+   "domain": "geography",
+   "sub": "cities",
+   "why": "Its answer \"Tokyo\" repeats fact f11899 in a2298 (an article may not hold the same answer twice). Alias it to f11899 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-296",
+   "category": 1,
+   "domain": "geography",
+   "sub": "cities",
+   "why": "Its answer \"China\" repeats fact f11907 in a2299 (an article may not hold the same answer twice). Alias it to f11907 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

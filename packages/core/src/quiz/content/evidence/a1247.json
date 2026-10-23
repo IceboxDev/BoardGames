@@ -1,0 +1,288 @@
+{
+ "article": "a1247",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Greater_flamingo",
+   "title": "Greater flamingo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:40.416Z",
+   "snapshot": "09893b8a3dfe16a03fe70c7be04ef9702f0b855d4724d2e4f2fe87baba3f0434"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cormorant_fishing",
+   "title": "Cormorant fishing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:41.427Z",
+   "snapshot": "4c5f523b754f21c0e8eed9873f32261d5d216e17e0b48e90d32b7705e177b2ba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ode_to_a_Nightingale",
+   "title": "Ode to a Nightingale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:42.517Z",
+   "snapshot": "6d2f2cc3b5e4e4cc4e3e8c8a443b1cec7b6e656ebb7cc86a2209d7a0e465a370"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Common_pheasant",
+   "title": "Common pheasant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:43.527Z",
+   "snapshot": "b0e1dd1d9c00804e2180fcb6304a21b5f682d4ece1c738b96824a61b89b9623e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sentinel_species",
+   "title": "Sentinel species – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:44.423Z",
+   "snapshot": "1795add3f9f2fd63dc8d991f3ed8fe3986810d820067c835bde051a6d73eeb43"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Domestic_canary",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:45.660Z",
+   "snapshot": "86f5e2c1efa075a044b0f2b40743dc567db31882d310e9407ecda281dcf3bb63"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "flamingo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cormorant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nightingale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pheasant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "canary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "canary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:54.489Z",
+   "target": "f06231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The greater flamingo (Phoenicopterus roseus) is the largest and most widespread species of the flamingo family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flamingo” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:54.489Z",
+   "target": "f06232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cormorant fishing is a traditional fishing technique in which fishermen use trained cormorants to catch fish in rivers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cormorant” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:54.489Z",
+   "target": "f06233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Ode to a Nightingale\" is a poem by John Keats, one of his 1819 odes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nightingale” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:54.489Z",
+   "target": "f06234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The common pheasant (Phasianus colchicus), ring-necked pheasant, or blue-headed pheasant, is a bird in the pheasant family (Phasianidae).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pheasant” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:54.489Z",
+   "target": "f06235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The classic example is the \"canary in a coal mine\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “canary” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:54.489Z",
+   "target": "f06235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The domestic canary (Serinus canaria forma domestica), often simply known as the canary, is a domesticated form and subspecies of the wild canary, a small songbird in the finch family originating in the Macaronesian Islands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “canary” is on the snapshot of s6"
+  }
+ ]
+}

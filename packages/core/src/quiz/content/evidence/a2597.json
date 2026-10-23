@@ -1,0 +1,366 @@
+{
+ "article": "a2597",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rallye_Dakar",
+   "title": "Rallye Dakar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:26.448Z",
+   "snapshot": "f0600e6f809c5425cb5ddbc233316ad1f110723c01e0beb3275dc451cea3c1db"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Allg%C3%A4u-Orient-Rallye",
+   "title": "Allgäu-Orient-Rallye",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:27.197Z",
+   "snapshot": "8e9a2875015aec45b44b6ddc36b6efd33f07cd62ec7ab4a8e421f85495f190c4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Valentino_Rossi",
+   "title": "Valentino Rossi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:30.732Z",
+   "snapshot": "634bc126587e25b4ad06a155e02da231fecb261620323ab2d2978f24cd20cf0f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Isle_of_Man_TT",
+   "title": "Isle of Man TT – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:29.298Z",
+   "snapshot": "bff8207cf4dceeb2a6973fa36401c677b5741d68c8d4e41f3727edbb48924537"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Rally",
+   "title": "Monte Carlo Rally – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:30.015Z",
+   "snapshot": "0d8e336126d0be5c285d88e0b416f35e1acd77f19d5aad2a2d2772acec44e041"
+  },
+  "s6": {
+   "url": "https://www.boxrepsol.com/en/rally-en/historic-dakar-races/",
+   "title": "Historic Dakar races",
+   "publisher": "Repsol",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:28.709Z",
+   "snapshot": "cca307dd5b74bd0f3d19eb69cc3009bedf18387fd4465f0114a02f4bf607faa2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rallye Dakar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ein Kamel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-302"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MotoGP",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-364"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Isle of Man TT",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Monte Carlo Rally",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:45.665Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Rallye Dakar (früherer Name Rallye Paris–Dakar) ist ein Rallye-Raid-Wettbewerb, der als die bedeutendste Langstrecken- und Wüstenrallye der Welt gilt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rallye Dakar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:45.665Z",
+   "target": "f13990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Gewinner der Veranstaltung erhielt als Hauptpreis ein Kamel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ein Kamel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:45.665Z",
+   "target": "f13991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MotoGP-Klasse) mindestens 100 Podestplatzierungen errang.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MotoGP” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:45.665Z",
+   "target": "f13992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Isle of Man TT (Tourist Trophy) races are an annual motorcycle racing event held on the Isle of Man in May and June of mostly every year since its inaugural race in 1907.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isle of Man TT” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:45.665Z",
+   "target": "f13993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Monte Carlo Rally or Rallye Monte-Carlo (officially Rallye Automobile Monte-Carlo) is a rallying event organized each year by the Automobile Club de Monaco.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.665Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monte Carlo Rally” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:45:39Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "those that have been the stage of what is likely the toughest competition in the world of motor sports",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:45:42Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Though the special segments added up to slightly more than half the entire distance, the entire course covered a distance of 15,000 km.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23",
+   "note": "1986 edition; recent Saudi editions run c. 7,900 km, so 'over 9,000 km' holds for many editions, not all"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:45:44Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der als die bedeutendste Langstrecken- und Wüstenrallye der Welt gilt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:30.228Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Though the special segments added up to slightly more than half the entire distance, the entire course covered a distance of 15,000 km.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:30.228Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der als die bedeutendste Langstrecken- und Wüstenrallye der Welt gilt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:30.228Z",
+   "target": "f13989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Over the course of 39 years, the famed Dakar Rally has taken riders across many different countries and been witness to all manner of exciting situations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dakar Rally” is on the snapshot of s6"
+  }
+ ]
+}

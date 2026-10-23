@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-075",
+ "image": "IMG20261022011346.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] In terms of pH, what is ammonia (NH₃)?\nA. Acidic\nB. Basic\nC. Neutral\nAnswer: B. Ammonia is a basic substance. When dissolved in water, it forms ammonium hydroxide, which is a weak base with a pH greater than 7.",
+   "de": "Ammoniak (NH₃) bildet in Wasser gelöst welche schwache Base mit einem pH-Wert über 7?",
+   "en": "Ammonia (NH₃) dissolved in water forms which weak base, with a pH greater than 7?",
+   "reworked": true,
+   "answerDe": "Ammoniumhydroxid",
+   "answerEn": "Ammonium hydroxide",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1773",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Joseph Priestley isolates ammonia gas, calling it 'alkaline air'",
+    "labelDe": "Joseph Priestley isoliert gasförmiges Ammoniak und nennt es „alkalische Luft“"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ammonia_solution",
+    "title": "Ammonia solution",
+    "lang": "en"
+   },
+   "notes": "Acidic/basic/neutral MC turned into the explanation's fact. Ammonia solution = ammonia water = ammonium hydroxide; a 1 M solution has pH ≈ 11.6. Strictly only ~0.4% exists as NH4+ / OH− (no isolable NH4OH). Timeline from the Ammonia article.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 2,
+   "discipline": "Physics",
+   "cardText": "[Physics] What is “dark matter”?\nA. A theoretical substance that emits light so faintly that always appears as dark in observations\nB. A type of matter that does not emit or interact with electromagnetic radiation\nC. The matter found in the core of stars\nAnswer: B. Because dark matter is difficult to observe, researchers can only infer its presence through its gravitational effects on other more directly observable matters.",
+   "de": "Wie heißt die hypothetische Form von Materie, die keine elektromagnetische Strahlung aussendet oder mit ihr wechselwirkt und nur über ihre Gravitationswirkung erschlossen wird?",
+   "en": "What is the name for the hypothetical form of matter that does not emit or interact with electromagnetic radiation and is inferred only from its gravitational effects?",
+   "reworked": true,
+   "answerDe": "Dunkle Materie",
+   "answerEn": "Dark matter",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1933",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Fritz Zwicky infers unseen 'dark matter' from galaxy motions in the Coma Cluster",
+    "labelDe": "Fritz Zwicky erschließt aus Galaxienbewegungen im Coma-Haufen unsichtbare „Dunkle Materie“"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dark_matter",
+    "title": "Dark matter",
+    "lang": "en"
+   },
+   "notes": "Definition question reversed so the answer is the term.",
+   "domain": "science",
+   "sub": "physics"
+  }
+ ]
+}

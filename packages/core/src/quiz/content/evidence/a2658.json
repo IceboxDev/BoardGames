@@ -1,0 +1,473 @@
+{
+ "article": "a2658",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Erlk%C3%B6nig_(Auto)",
+   "title": "Erlkönig (Auto)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:31.767Z",
+   "snapshot": "f77b250bec70eeb1ad2e7152ef926fc48b8a2877d4e905cea96bf30cf9ce0b84"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Buick_Y-Job",
+   "title": "Buick Y-Job – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:35.107Z",
+   "snapshot": "291cd11bcc364128cf2cea61b28827b902a4c96fc6e56d9b960c18aaae5fbd03"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Crash_test_dummy",
+   "title": "Crash test dummy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:36.220Z",
+   "snapshot": "bab6d6d54ef77f380e5aa5575fdcaefe56ed240a110e2fd407daec0c74955ba1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Facelift_(automotive)",
+   "title": "Facelift (automotive) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:37.131Z",
+   "snapshot": "73a62e7d1cb76efdf88efa6f5a21105ef6ce240625ea7ee51791e364f9faf8c4"
+  },
+  "s5": {
+   "url": "https://www.audrainautomuseum.org/styling-the-future/1938-buick-y-job",
+   "title": "1938 Buick Y-Job",
+   "publisher": "Audrain Automobile Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:20.312Z",
+   "snapshot": "3d29a9b5cb615b24c26e033637a33e4a179f85a118dc4e0b915d77ced377d99e"
+  },
+  "s6": {
+   "url": "https://www.cardesignnews.com/concept-car-of-the-week-buick-y-job-1938/38043.article",
+   "title": "Concept Car of the Week: Buick ‘Y’ Job (1938)",
+   "publisher": "Car Design News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:20.515Z",
+   "snapshot": "0d5de96096ac6ec1db8aca1eb1ea5605192ed5ee0b6a9340b974994af257ec47"
+  },
+  "s7": {
+   "url": "https://www.humaneticsgroup.com/about-us/history",
+   "title": "History | Humanetics",
+   "publisher": "Humanetics Group",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:21.061Z",
+   "snapshot": "58bc4ba6e0003488cf0ce4fdbd4b82e74a8d53956fb9e2d82ff1eb69a66bc292"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erlkönig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Concept car",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Crash test dummy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Facelift",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:53.644Z",
+   "target": "f14398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Erlkönig ist ein getarnter Prototyp eines Fahrzeugs.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erlkönig” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:53.644Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was the auto industry's first concept car, a model intended to show new technology or designs but not be mass-produced for sale to consumers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Concept car” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:53.644Z",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A crash test dummy, or simply dummy, is a full-scale anthropomorphic test device (ATD) that simulates the dimensions, weight proportions and articulation of the human body during a traffic collision.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crash test dummy” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:53.644Z",
+   "target": "f14401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An automotive facelift, also known as mid-cycle refresh (MCR), minor model change, minor model update, or life cycle impulse, is a change to a vehicle's styling during its production run including (to highly variable degree) new sheetmetal, interior design elements or mechanical changes, allowing a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Facelift” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:48:25Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "he created the 1938 Buick Y-Job, which was considered to be the world’s first concept car.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:48:27Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Designed by the legendary Harley Earl, the Buick Y-Job was the first ever concept car.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:48:29Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a model intended to show new technology or designs but not be mass-produced for sale to consumers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:48:31Z",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1949: Alderson Research Labs and Sierra Engineering create the first crash-test dummy, Sierra Sam, to test aircraft ejection seats, aviation helmets and p",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Humanetics is the successor maker of crash test dummies."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:48:33Z",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was created by Samuel W. Alderson at his Alderson Research Labs (ARL) and Sierra Engineering Co. to test aircraft ejection seats",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "he created the 1938 Buick Y-Job, which was considered to be the world’s first concept car.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Designed by the legendary Harley Earl, the Buick Y-Job was the first ever concept car.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a model intended to show new technology or designs but not be mass-produced for sale to consumers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1949: Alderson Research Labs and Sierra Engineering create the first crash-test dummy, Sierra Sam, to test aircraft ejection seats, aviation helmets and p",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was created by Samuel W. Alderson at his Alderson Research Labs (ARL) and Sierra Engineering Co. to test aircraft ejection seats",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Coined the “Dream Car”, he used this vision when he created the 1938 Buick Y-Job, which was considered to be the world’s first concept car.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Concept car” is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Concept Car of the Week: Buick ‘Y’ Job (1938) | Article | Car Design News",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Concept car” is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:39.450Z",
+   "target": "f14400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Later, Alderson would continue to develop and refine the concept as applied to automotive testing, leading to the familiar crash test dummy models still in use today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Crash test dummy” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "article": "a2767",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Grizzly_bear",
+   "title": "Grizzly bear",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:09.065Z",
+   "snapshot": "615e50d56d4e52e7d3fc3748e8c32218b705502bbd47af7ecd39d951fe3f706f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/African_wild_dog",
+   "title": "African wild dog",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:05.020Z",
+   "snapshot": "b024f7603295f8f106fe2b11009baad6508166167c57425b0f6e582836cf7e22"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bonobo",
+   "title": "Bonobo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:10.202Z",
+   "snapshot": "8358ee87eba09bae735ba7dffe198e20818c7e19a8ba2ccd1c05973d9ca0b497"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Prairie_vole",
+   "title": "Prairie vole – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:11.036Z",
+   "snapshot": "078d70051db0cbae5807893459367b25b1193fb0918627fb2cf8de6e64490e81"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Naked_mole-rat",
+   "title": "Naked mole-rat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:12.159Z",
+   "snapshot": "334dd5d248abb5832ae755e39e6cb57b829e0a89a847cd010f34a4fe94ca1189"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/African_bush_elephant",
+   "title": "African bush elephant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:08.592Z",
+   "snapshot": "82836f4523eca913ce8a862b00b8b779ce85daf061fff089cb587f882b40f21f"
+  },
+  "s7": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1098/rspb.2017.0347&resultType=core&format=json",
+   "title": "Sneeze to leave: African wild dogs use variable quorum thresholds facilitated by sneezes (Proc. R. Soc. B 2017, abstract)",
+   "publisher": "Europe PMC / Proceedings of the Royal Society B",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:13:41Z"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5597819/",
+   "title": "Sneeze to leave (full text)",
+   "publisher": "Proceedings of the Royal Society B (via PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:19.160Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "solitary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript ppm-014"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sneezing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript ppm-023"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The bonobo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-120"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Prairie vole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Naked mole-rat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "matriarch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:10.357Z",
+   "target": "f25794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Except for females with cubs, grizzlies are normally solitary, active animals, but in coastal areas, grizzlies gather around streams, lakes, rivers, and ponds during the salmon spawn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “solitary” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:10.357Z",
+   "target": "f25795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sneezing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sneezing”, “Niesen”, “чихание”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:10.357Z",
+   "target": "f25796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The bonobo (; Pan paniscus), also historically called the pygmy chimpanzee, is the smallest species of great ape and one of the two making up the genus Pan (the other being the chimpanzee, Pan troglodytes).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The bonobo” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:10.357Z",
+   "target": "f25797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The prairie vole (Microtus ochrogaster) is a small vole found in central North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prairie vole” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:10.357Z",
+   "target": "f25798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The naked mole-rat (Heterocephalus glaber), also known as the sand puppy, is a burrowing rodent native to the Horn of Africa and parts of Kenya, notably in Somali regions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Naked mole-rat” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:10.357Z",
+   "target": "f25799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The family unit is led by a matriarch who at times also leads the kinship group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “matriarch” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:41Z",
+   "target": "f25795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Our findings illustrate how specific behavioural mechanisms (here, sneezing) allow for negotiation (in effect, voting) that shapes decision-making in a wild, socially complex animal society.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:45Z",
+   "target": "f25795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "We show that the probability of rally success (i.e. group departure) is predicted by a minimum number of audible rapid nasal exhalations (sneezes), within the rally.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:50Z",
+   "target": "f25795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Populations in the Okavango Delta have been observed 'rallying' before setting out to hunt.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:59.562Z",
+   "target": "f25795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Populations in the Okavango Delta have been observed 'rallying' before setting out to hunt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  }
+ ]
+}

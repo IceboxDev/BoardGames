@@ -1,0 +1,249 @@
+{
+ "article": "a2321",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mumbai",
+   "title": "Mumbai",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:26.545Z",
+   "snapshot": "242e6600fe2b931212c763f61331dbf5cdf87dd0d812dbd254b01b5c923d601f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Liverpool",
+   "title": "Liverpool – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:54.862Z",
+   "snapshot": "a7bb5fde087e0bc23b4be47a1bed1f7a81add4322912072ef03cacd7ba29f15e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Manchester",
+   "title": "Manchester – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:55.724Z",
+   "snapshot": "65cee474b1988e19fdbe4aa1ffc6eac69c002e04a91f63eafb36ba0844ca1907"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monaco",
+   "title": "Monaco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:43.728Z",
+   "snapshot": "fc28820bef8e933767cf4d86e2bddfd73bd34bd6ce6df77490ab7c1a7e9371d5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Glasgow",
+   "title": "Glasgow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:56.763Z",
+   "snapshot": "aeb5ce4827537dfb69b58540fd1f222130b4d551fffb99583e763172248ee25d"
+  },
+  "s6": {
+   "url": "https://en.wiktionary.org/wiki/Liverpudlian",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:55.010Z",
+   "snapshot": "14448cedfa859a39d60fff09141b95dd9c3f9a29df7adfe98c69678364b0486c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mumbaikar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-357"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Liverpudlians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mancunians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monégasques",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Glaswegians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:56.033Z",
+   "target": "f12036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A resident of Mumbai is called Mumbaikar (pronounced [ˈmumbəikəɾ]) in Marathi, in which the suffix -kar means a 'resident of'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mumbaikar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:56.033Z",
+   "target": "f12037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Residents of Liverpool are formally known as Liverpudlians but are more often called Scousers in reference to scouse, a local stew made popular by sailors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liverpudlians” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:56.033Z",
+   "target": "f12038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The name Manchester originates from Mamucium, the Latin name for the city, or its variant Mancunio; its citizens are still referred to as Mancunians.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mancunians” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:56.033Z",
+   "target": "f12039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "By 1869, the casino was making such a vast sum of money that the principality could afford to end tax collection from the Monegasques—a masterstroke that was to attract affluent residents from all over Europe in a policy that still exists today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monégasques” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:56.033Z",
+   "target": "f12040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A huge part of the economic life of Glasgow was once located in Springburn, where the Saracen Foundry, engineering works of firms like Charles Tennant and locomotive workshops employed many Glaswegians.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glaswegians” is on the snapshot of s5"
+  }
+ ]
+}

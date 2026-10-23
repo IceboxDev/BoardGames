@@ -1,0 +1,375 @@
+{
+ "article": "a0721",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/DJ_Kool_Herc",
+   "title": "DJ Kool Herc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:34.335Z",
+   "snapshot": "e85ed57e1700e4b008963ad63625fb77121175acf9a9931ccd996ba6508b2a8e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Disc_jockey",
+   "title": "Disc jockey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:35.286Z",
+   "snapshot": "e41cbc03d89c7a5d28ee180b64adb162814bae80ae9cc90f2461609d00995dbc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Extended_play",
+   "title": "Extended play – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:36.281Z",
+   "snapshot": "ff157ac152708ab64343ebfae7bf44889222482f6b46849f7cec133f4b23eda2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rhythm_and_blues",
+   "title": "Rhythm and blues – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:37.316Z",
+   "snapshot": "e3c22275ba323a93d83d1005b87d7f643bc0f498c53c223ac4e86055fbb59be6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/MTV",
+   "title": "MTV – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:38.396Z",
+   "snapshot": "65039e3d8a80c007c0b7afff3b7417d09b4650383bb9a3217e905b95cfa40625"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rapping",
+   "title": "Rapping – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:15.534Z",
+   "snapshot": "03828e1c248060d1da4b4c2c511418f3bc62315c1cf8748e507263efbb82d40d"
+  },
+  "s7": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/mc",
+   "title": "MC – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:15.701Z",
+   "snapshot": "46b6a26b14194fa03988d1a972999c1208fa7aca9972890ad4e6a0b41f246449"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Master of Ceremonies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Disc jockey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Extended Play",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rhythm and Blues",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Music Television",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:33.005Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Master of Ceremonies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Master of Ceremonies”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:33.005Z",
+   "target": "f03602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A disc jockey, more commonly abbreviated as DJ, is a person who plays recorded music for an audience.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Disc jockey” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:33.005Z",
+   "target": "f03603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An extended play (EP) is a musical recording that contains more tracks than a single but fewer than an album.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Extended Play” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:33.005Z",
+   "target": "f03604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rhythm and blues, frequently abbreviated as R&B or R'n'B, is a genre of popular music that originated within African American communities in the 1940s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhythm and Blues” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:33.005Z",
+   "target": "f03605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "MTV (originally an initialism of Music Television) is an American cable television channel and the flagship namesake property of the MTV Entertainment Group, a sub-division of the Skydance TV General Entertainment Group, division of Skydance Corporation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Music Television” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:55:34Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the term emcee, MC or M.C., derived from \"master of ceremonies\", became an alternative title for a rapper, and for their role within hip-hop music and culture",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:55:37Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for master of ceremonies",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:02.823Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the term emcee, MC or M.C., derived from \"master of ceremonies\", became an alternative title for a rapper, and for their role within hip-hop music and culture",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:02.823Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for master of ceremonies",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:02.823Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The early rapping of hip-hop developed out of DJ and master of ceremonies' announcements made over the microphone at parties, and later into more complex raps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Master of Ceremonies” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:02.823Z",
+   "target": "f03601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for master of ceremonies:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Master of Ceremonies” is on the snapshot of s7"
+  }
+ ]
+}

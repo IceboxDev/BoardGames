@@ -1,0 +1,308 @@
+{
+ "id": "a0960",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "How Devices Find Each Other on a Network",
+ "titleDe": "Wie sich Geräte in einem Netzwerk finden",
+ "titleRu": "Как устройства находят друг друга в сети",
+ "bodyEn": "When a laptop joins a café's Wi-Fi and loads a web page a few seconds later, a chain of numbers and names has quietly been assembled in the background. Each link in that chain has its own identifier, and understanding five of them explains most of how the Internet works.\n\nThe central one is the IP address. Every device connected to a network that uses the Internet Protocol, from a phone to a web server, is assigned an IP address so that data packets can be routed to it. In the older IPv4 scheme, in use since 1983, it is a 32-bit number written as four groups, such as 192.168.0.1, which allows roughly 4.3 billion addresses; because those ran out, the newer IPv6 uses 128-bit addresses written in hexadecimal. An IP address can be public, visible to the whole Internet, or private, valid only inside a home or office network.\n\nBeneath the IP address lies the MAC address, short for media access control. It is a 48-bit hardware identifier burned into every network adapter by its manufacturer, a scheme inherited from the Ethernet standard published on 30 September 1980, and written as six pairs of hexadecimal digits, such as 00:1A:2B:3C:4D:5E. While IP addresses change from network to network, the MAC address stays with the device and is used by switches and Wi-Fi routers to deliver frames within the local network.\n\nA device usually does not choose its own IP address. When it joins a network it broadcasts a request, and a server running DHCP, the Dynamic Host Configuration Protocol, answers by leasing it an address for a limited time, together with the addresses of the gateway and the DNS servers. The protocol was first defined in October 1993. Home routers all contain a small DHCP server, which is why nobody has to type addresses by hand.\n\nAn address identifies a machine, but a machine may be running a web server, a mail server and a game at the same time. To sort incoming packets, each service listens on a port number, a value between 0 and 65535 that travels alongside the IP address in every packet. Official assignments of port numbers were first proposed by Jon Postel in May 1972, and some numbers are standardised: web traffic uses port 80 for HTTP and 443 for HTTPS, e-mail delivery uses 25, and secure remote logins use 22.\n\nFinally, humans do not type numbers at all. They use a URL, a uniform resource locator such as https://www.example.com/index.html, which names the protocol, the server and the path of a document on the World Wide Web. Tim Berners-Lee and the IETF defined the format in 1994. The Domain Name System translates the server name inside the URL into an IP address, and the browser then connects to port 443 of that address.\n\n| Identifier | Identifies | Example | Assigned by |\n|---|---|---|---|\n| IP address | A device on a network | 192.168.0.1 | Network administrator or DHCP |\n| MAC address | A network adapter | 00:1A:2B:3C:4D:5E | The manufacturer |\n| DHCP | The protocol that hands out IP addresses | Lease of 24 hours | Router or server |\n| Port number | A service on a device | 443 for HTTPS | Standards and applications |\n| URL | A resource on the web | https://www.example.com/ | The website owner |\n\nEvery web page you open passes through all five of these in under a second.",
+ "bodyDe": "Wenn ein Laptop sich in das WLAN eines Cafés einbucht und wenige Sekunden später eine Webseite lädt, ist im Hintergrund still eine Kette aus Nummern und Namen zusammengesetzt worden. Jedes Glied dieser Kette hat seine eigene Kennung, und wer fünf davon versteht, versteht den Großteil der Funktionsweise des Internets.\n\nDie zentrale Kennung ist die IP-Adresse. Jedem Gerät, das an ein Netz mit dem Internet Protocol angebunden ist, vom Telefon bis zum Webserver, wird eine IP-Adresse zugewiesen, damit Datenpakete zu ihm geleitet werden können. Im älteren, seit 1983 genutzten IPv4-Schema ist sie eine 32-Bit-Zahl, geschrieben als vier Gruppen wie 192.168.0.1, was rund 4,3 Milliarden Adressen erlaubt; weil diese knapp wurden, verwendet das neuere IPv6 128-Bit-Adressen in hexadezimaler Schreibweise. Eine IP-Adresse kann öffentlich sein, für das gesamte Internet sichtbar, oder privat, nur innerhalb eines Heim- oder Büronetzes gültig.\n\nUnter der IP-Adresse liegt die MAC-Adresse, kurz für Media Access Control. Sie ist eine 48-Bit-Hardwarekennung, die der Hersteller in jeden Netzwerkadapter einbrennt – ein Schema aus dem am 30. September 1980 veröffentlichten Ethernet-Standard –, und wird als sechs Paare hexadezimaler Ziffern geschrieben, etwa 00:1A:2B:3C:4D:5E. Während IP-Adressen von Netz zu Netz wechseln, bleibt die MAC-Adresse beim Gerät und wird von Switches und WLAN-Routern genutzt, um Frames innerhalb des lokalen Netzes zuzustellen.\n\nEin Gerät wählt seine IP-Adresse normalerweise nicht selbst. Wenn es sich in ein Netz einbucht, sendet es eine Anfrage an alle, und ein Server, auf dem DHCP läuft, das Dynamic Host Configuration Protocol, antwortet, indem er ihm für begrenzte Zeit eine Adresse überlässt, zusammen mit den Adressen des Gateways und der DNS-Server. Das Protokoll wurde erstmals im Oktober 1993 definiert. Jeder Heimrouter enthält einen kleinen DHCP-Server, weshalb niemand Adressen von Hand eintippen muss.\n\nEine Adresse identifiziert eine Maschine, doch auf einer Maschine können gleichzeitig ein Webserver, ein Mailserver und ein Spiel laufen. Um eingehende Pakete zu sortieren, lauscht jeder Dienst auf einer Portnummer, einem Wert zwischen 0 und 65535, der in jedem Paket neben der IP-Adresse mitreist. Offizielle Zuweisungen von Portnummern schlug Jon Postel erstmals im Mai 1972 vor, und einige Nummern sind standardisiert: Webverkehr nutzt Port 80 für HTTP und 443 für HTTPS, die E-Mail-Zustellung 25 und sichere Fernzugriffe 22.\n\nUnd schließlich tippen Menschen überhaupt keine Nummern. Sie verwenden eine URL, einen Uniform Resource Locator wie https://www.example.com/index.html, der das Protokoll, den Server und den Pfad eines Dokuments im World Wide Web benennt. Tim Berners-Lee und die IETF definierten das Format 1994. Das Domain Name System übersetzt den Servernamen in der URL in eine IP-Adresse, und der Browser verbindet sich dann mit Port 443 dieser Adresse.\n\n| Kennung | Identifiziert | Beispiel | Vergeben von |\n|---|---|---|---|\n| IP-Adresse | Ein Gerät im Netz | 192.168.0.1 | Netzadministrator oder DHCP |\n| MAC-Adresse | Einen Netzwerkadapter | 00:1A:2B:3C:4D:5E | Hersteller |\n| DHCP | Das Protokoll, das IP-Adressen vergibt | Lease über 24 Stunden | Router oder Server |\n| Portnummer | Einen Dienst auf einem Gerät | 443 für HTTPS | Standards und Anwendungen |\n| URL | Eine Ressource im Web | https://www.example.com/ | Betreiber der Website |\n\nJede Webseite, die Sie öffnen, durchläuft alle fünf in weniger als einer Sekunde.",
+ "bodyRu": "Когда ноутбук подключается к Wi-Fi в кафе и через несколько секунд загружает веб-страницу, в фоновом режиме незаметно собирается цепочка чисел и имён. У каждого звена этой цепочки свой идентификатор, и пять из них объясняют бо́льшую часть того, как работает интернет.\n\nЦентральный из них – IP-адрес. Каждому устройству, подключённому к сети, использующей Internet Protocol, – от телефона до веб-сервера – присваивается IP-адрес, чтобы к нему можно было направлять пакеты данных. В более старой схеме IPv4, используемой с 1983 года, это 32-битное число, записываемое четырьмя группами, например 192.168.0.1, что даёт около 4,3 миллиарда адресов; поскольку они закончились, более новый IPv6 использует 128-битные адреса в шестнадцатеричной записи. IP-адрес может быть публичным, видимым всему интернету, или частным, действующим только внутри домашней или офисной сети.\n\nПод IP-адресом лежит MAC-адрес – сокращение от media access control, управление доступом к среде. Это 48-битный аппаратный идентификатор, который производитель зашивает в каждый сетевой адаптер, – схема, унаследованная от стандарта Ethernet, опубликованного 30 сентября 1980 года, – и записываемый шестью парами шестнадцатеричных цифр, например 00:1A:2B:3C:4D:5E. Если IP-адреса меняются от сети к сети, то MAC-адрес остаётся с устройством, и его используют коммутаторы и Wi-Fi-роутеры, чтобы доставлять кадры внутри локальной сети.\n\nОбычно устройство не выбирает себе IP-адрес само. Подключаясь к сети, оно рассылает широковещательный запрос, и сервер, на котором работает DHCP, Dynamic Host Configuration Protocol, отвечает, выдавая ему адрес в аренду на ограниченное время вместе с адресами шлюза и DNS-серверов. Впервые протокол был описан в октябре 1993 года. В каждом домашнем роутере есть небольшой DHCP-сервер, поэтому никому не приходится вводить адреса вручную.\n\nАдрес обозначает машину, но на одной машине могут одновременно работать веб-сервер, почтовый сервер и игра. Чтобы сортировать входящие пакеты, каждая служба прослушивает свой номер порта – значение от 0 до 65535, которое путешествует в каждом пакете рядом с IP-адресом. Официальное закрепление номеров портов впервые предложил Джон Постел в мае 1972 года, и некоторые номера стандартизированы: веб-трафик использует порт 80 для HTTP и 443 для HTTPS, доставка электронной почты – 25, а защищённый удалённый вход – 22.\n\nНаконец, люди вообще не набирают чисел. Они пользуются URL – uniform resource locator, единообразным указателем ресурса, например https://www.example.com/index.html, – который называет протокол, сервер и путь к документу во Всемирной паутине. Тим Бернерс-Ли и IETF определили этот формат в 1994 году. Система доменных имён переводит имя сервера из URL в IP-адрес, после чего браузер подключается к порту 443 этого адреса.\n\n| Идентификатор | Что обозначает | Пример | Кем назначается |\n|---|---|---|---|\n| IP-адрес | устройство в сети | 192.168.0.1 | администратор сети или DHCP |\n| MAC-адрес | сетевой адаптер | 00:1A:2B:3C:4D:5E | производитель |\n| DHCP | протокол, раздающий IP-адреса | аренда на 24 часа | роутер или сервер |\n| Номер порта | служба на устройстве | 443 для HTTPS | стандарты и приложения |\n| URL | ресурс в вебе | https://www.example.com/ | владелец сайта |\n\nКаждая открываемая вами веб-страница проходит через все пять менее чем за секунду.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Network_card.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Network_interface_controller",
+   "width": 1444,
+   "height": 1071,
+   "alt": {
+    "en": "An Ethernet network interface card",
+    "de": "Eine Ethernet-Netzwerkkarte",
+    "ru": "Сетевая карта Ethernet"
+   },
+   "caption": {
+    "en": "A network interface card: its manufacturer gives every such adapter a 48-bit MAC address that stays with the device from network to network.",
+    "de": "Eine Netzwerkkarte: Der Hersteller gibt jedem solchen Adapter eine 48-Bit-MAC-Adresse, die das Gerät von Netz zu Netz behält.",
+    "ru": "Сетевая карта: производитель присваивает каждому такому адаптеру 48-битный MAC-адрес, который остаётся с устройством при переходе из сети в сеть."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/IPv4_Packet-en.svg/960px-IPv4_Packet-en.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/IPv4",
+   "width": 936,
+   "height": 427,
+   "alt": {
+    "en": "Diagram of an IPv4 packet header",
+    "de": "Schema eines IPv4-Paketkopfs",
+    "ru": "Схема заголовка пакета IPv4"
+   },
+   "caption": {
+    "en": "The header of an IPv4 packet: every packet carries a 32-bit source and destination IP address so that routers can deliver it.",
+    "de": "Der Kopf eines IPv4-Pakets: Jedes Paket trägt eine 32-Bit-Absender- und -Ziel-IP-Adresse, damit Router es zustellen können.",
+    "ru": "Заголовок пакета IPv4: каждый пакет несёт 32-битные IP-адреса отправителя и получателя, чтобы маршрутизаторы могли его доставить."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f04796",
+   "answerEn": "IP address",
+   "answerDe": "IP-Adresse",
+   "answerRu": "IP-адрес",
+   "spans": {
+    "en": [
+     422,
+     10
+    ],
+    "de": [
+     473,
+     10
+    ],
+    "ru": [
+     419,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1983",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The ARPANET adopts IPv4 and its 32-bit IP addresses",
+    "labelDe": "Das ARPANET führt IPv4 mit seinen 32-Bit-IP-Adressen ein",
+    "labelRu": "ARPANET переходит на IPv4 с его 32-битными IP-адресами"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/IP_address",
+    "title": "IP address – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04796",
+     "en": "Which number is assigned to devices that are connected to a computer network such as the Internet?",
+     "de": "Welche Nummer wird Geräten zugewiesen, die an ein Computernetz wie das Internet angebunden sind?",
+     "ru": "Какой номер присваивается устройствам, подключённым к компьютерной сети, например к интернету?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c080",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f04797",
+   "answerEn": "MAC address",
+   "answerDe": "MAC-Adresse",
+   "answerRu": "MAC-адрес",
+   "spans": {
+    "en": [
+     865,
+     11
+    ],
+    "de": [
+     970,
+     11
+    ],
+    "ru": [
+     890,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1980-09-30",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The DIX Ethernet standard with 48-bit hardware (MAC) addresses is published",
+    "labelDe": "Der DIX-Ethernet-Standard mit 48-Bit-Hardwareadressen (MAC) erscheint",
+    "labelRu": "Опубликован стандарт Ethernet DIX с 48-битными аппаратными (MAC) адресами"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ethernet",
+    "title": "Ethernet – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04797",
+     "en": "Which globally unique hardware identifier is permanently assigned to every network adapter by its manufacturer?",
+     "de": "Welche weltweit eindeutige Hardware-Kennung wird jedem Netzwerkadapter vom Hersteller fest zugewiesen?",
+     "ru": "Какой глобально уникальный аппаратный идентификатор производитель навсегда присваивает каждому сетевому адаптеру?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f04798",
+   "answerEn": "Port number",
+   "answerDe": "Portnummer",
+   "answerRu": "номер порта",
+   "spans": {
+    "en": [
+     1933,
+     11
+    ],
+    "de": [
+     2146,
+     10
+    ],
+    "ru": [
+     2017,
+     11
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1972-05",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Jon Postel proposes official port-number assignments (RFC 349)",
+    "labelDe": "Jon Postel schlägt offizielle Portnummer-Zuweisungen vor (RFC 349)",
+    "labelRu": "Джон Постел предлагает официальное закрепление номеров портов (RFC 349)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Port_(computer_networking)",
+    "title": "Port (computer networking) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04798",
+     "en": "Which number between 0 and 65535 is used together with the IP address to direct data packets to the right service on a computer?",
+     "de": "Welche Nummer zwischen 0 und 65535 wird zusammen mit der IP-Adresse verwendet, um Datenpakete dem richtigen Dienst auf einem Rechner zuzuordnen?",
+     "ru": "Какой номер от 0 до 65535 используется вместе с IP-адресом, чтобы направлять пакеты данных нужной службе на компьютере?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f04799",
+   "answerEn": "DHCP",
+   "answerDe": "DHCP",
+   "answerRu": "DHCP",
+   "spans": {
+    "en": [
+     1452,
+     4
+    ],
+    "de": [
+     1604,
+     4
+    ],
+    "ru": [
+     1543,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1993-10",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "DHCP is first defined in RFC 1531",
+    "labelDe": "DHCP wird erstmals in RFC 1531 definiert",
+    "labelRu": "DHCP впервые описан в RFC 1531"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol",
+    "title": "Dynamic Host Configuration Protocol – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04799",
+     "en": "Which protocol automatically assigns an IP address to devices when they join a network?",
+     "de": "Welches Protokoll weist Geräten beim Einbuchen in ein Netz automatisch eine IP-Adresse zu?",
+     "ru": "Какой протокол автоматически назначает устройствам IP-адрес при подключении к сети?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q11166",
+     "label": "Dynamic Host Configuration Protocol",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04800",
+   "answerEn": "URL",
+   "answerDe": "URL",
+   "answerRu": "URL",
+   "spans": {
+    "en": [
+     2315,
+     3
+    ],
+    "de": [
+     2548,
+     3
+    ],
+    "ru": [
+     2415,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tim Berners-Lee and the IETF define the URL in RFC 1738",
+    "labelDe": "Tim Berners-Lee und die IETF definieren die URL in RFC 1738",
+    "labelRu": "Тим Бернерс-Ли и IETF определяют URL в RFC 1738"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/URL",
+    "title": "URL – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04800",
+     "en": "Which address uniquely identifies the location of a resource on the World Wide Web, for example a web page?",
+     "de": "Welche Adresse bezeichnet eindeutig den Speicherort einer Ressource im World Wide Web, zum Beispiel einer Webseite?",
+     "ru": "Какой адрес однозначно указывает местоположение ресурса во Всемирной паутине, например веб-страницы?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/internet/networking",
+  "audience:international"
+ ]
+}

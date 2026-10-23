@@ -1,0 +1,288 @@
+{
+ "article": "a0788",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Judah_Loew_ben_Bezalel",
+   "title": "Judah Loew ben Bezalel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:15.392Z",
+   "snapshot": "12cdb11e45b6c03f0a0d3ace47edc3fa0d31fb37c135aa9546ce2972ed53fc09"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Dybbuk",
+   "title": "The Dybbuk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:16.447Z",
+   "snapshot": "3e53ab0253ff540f91981b193f31b28cbe8fd158ef82a287d567f2aaa85927d5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alphabet_of_Sirach",
+   "title": "Alphabet of Sirach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:17.368Z",
+   "snapshot": "4d02c5f0c03d9aafc931371687a6a47af484be3c6d811c5d422e228be4e60764"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Zohar",
+   "title": "Zohar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:18.594Z",
+   "snapshot": "04ba09fbafc0d057c8bb8494aca3a98646dd57e610fc6ab75d226638e79f5ecf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Deuteronomy",
+   "title": "Book of Deuteronomy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:19.387Z",
+   "snapshot": "9c600528e93c91052868efd46a7aff33f9be42bd64bf5b8b9f5aa1017e11aaca"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mezuzah",
+   "title": "Mezuzah",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:20.440Z",
+   "snapshot": "d8f110fdadfafbbdc48df48c2d730af6bff22f9b6821f365c99bdb45d769002a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Golem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c066"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03937",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dybbuk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lilith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kabbalah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mezuzah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mezuzah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-019"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:45.584Z",
+   "target": "f03936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He is also the subject of a later legend that he created the Golem of Prague, an animate being fashioned from clay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golem” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:45.584Z",
+   "target": "f03937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Dybbuk, or Between Two Worlds (Russian: Меж двух миров [Дибук], trans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dybbuk” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:45.584Z",
+   "target": "f03938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The book is known for having the first depiction of Lilith as a singular mythological figure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lilith” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:45.584Z",
+   "target": "f03939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "adopted by the Talmud, that it would not contain the names of rabbis who lived at a later period than that of ben Yochai; he claims that if the Kabbalah were a revealed doctrine, there would have been no divergence of opinion among the Kabbalists concerning the mystic interpretation of the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kabbalah” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:45.584Z",
+   "target": "f03940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mezuzah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mezuzah”, “Mesusa”, “мезуза”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:45.584Z",
+   "target": "f03940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A mezuzah (Hebrew: מְזוּזָה 'doorpost'; plural: מְזוּזוֹת mezuzot) is a piece of parchment inscribed with specific Hebrew verses from the Torah, which Jews affix in a small case to the doorposts of their homes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mezuzah” is on the snapshot of s6"
+  }
+ ]
+}

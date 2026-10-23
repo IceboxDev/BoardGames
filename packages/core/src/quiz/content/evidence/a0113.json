@@ -1,0 +1,423 @@
+{
+ "article": "a0113",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jigsaw_puzzle",
+   "title": "Jigsaw puzzle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:30.050Z",
+   "snapshot": "e386de249406a7960c56d35308ef86f0ff3d29b66ea9cb25ff4c65761df70cc3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rubik%27s_Cube",
+   "title": "Rubik's Cube – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:31.071Z",
+   "snapshot": "eae67fe0964958393fcc88edfa6c4f0d1e882cf6d828990c2c0107ab17bdad2a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Scrabble",
+   "title": "Scrabble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:32.067Z",
+   "snapshot": "9b028f36d4f2935cc310085ccafa22c7c73414fe34367c420c0de997d039f1b1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trivial_Pursuit",
+   "title": "Trivial Pursuit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:33.054Z",
+   "snapshot": "e92fb1b7cc5919cfe52c4ba62e89157b05c2b9d9494e7627a0e516b2cf4c574a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Zauberw%C3%BCrfel",
+   "title": "Zauberwürfel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:30.307Z",
+   "snapshot": "727427ac025d00693543f3e509dc55296780c7a1f117012e58b008e19a62f4f9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:34.050Z",
+   "snapshot": "b955dcee980b959eed1329fd754c4f3b7c1c6fdd9ad86ce1ce5c609b43b909f1"
+  },
+  "s7": {
+   "url": "https://www.cube20.org/",
+   "title": "God's Number is 20",
+   "publisher": "cube20.org (Rokicki, Kociemba, Davidson, Dethridge)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:51.689Z",
+   "snapshot": "df50aeb72c7ee70ab391f838cb86f8141d133f8088304fd03d113ab1d0ba0ddf"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/God%27s_algorithm",
+   "title": "God's algorithm",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:53.264Z",
+   "snapshot": "eaea244c4b7d5a802e208fb2b8e605ff86ef6e644845d425328bf2df1dfb34d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "jigsaw puzzle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rubik's Cube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Scrabble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Trivial Pursuit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "20 Züge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-034"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "20 moves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:53.437Z",
+   "target": "f00561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A jigsaw puzzle (with context, sometimes just jigsaw or just puzzle) is a tiling puzzle that requires the assembly of often irregularly shaped, interlocking, and mosaicked pieces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “jigsaw puzzle” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:53.437Z",
+   "target": "f00562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Rubik's Cube (Hungarian: Rubik-kocka) is a 3D combination puzzle invented in 1974 by Hungarian sculptor and professor of architecture Ernő Rubik.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rubik's Cube” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:53.437Z",
+   "target": "f00563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Scrabble is a word game in which two to four players score points by placing tiles, each bearing a single letter, onto a game board divided into a 15×15 grid of squares.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scrabble” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:53.437Z",
+   "target": "f00565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Trivial Pursuit is a Canadian board game in which winning is determined by a player's ability to answer trivia and popular culture questions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trivial Pursuit” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:53.437Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Er ging außerdem davon aus, dass nie mehr als 20 Züge erforderlich sind, jedoch konnte er das nicht beweisen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “20 Züge” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:53.437Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "By the same token, it is estimated that there is approximately 1 configuration which needs 20 moves to be solved optimally in every 90 billion random scrambles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.437Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “20 moves” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:00:30Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Every position of Rubik's Cube™ can be solved in twenty moves or less.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Half-turn metric; in the quarter-turn metric God's number is 26 (same page)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:00:32Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tom Rokicki proved in 2010 that no configuration requires more than 20 moves.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:12.453Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Every position of Rubik's Cube™ can be solved in twenty moves or less.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:12.453Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tom Rokicki proved in 2010 that no configuration requires more than 20 moves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:12.453Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Superflip, the first position proven to require 20 moves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “20 moves” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:12.453Z",
+   "target": "f13943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "While it had been known since 1995 that 20 was a lower bound on the number of moves for the solution in the worst case, Tom Rokicki proved in 2010 that no configuration requires more than 20 moves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “20 moves” is on the snapshot of s8"
+  }
+ ]
+}

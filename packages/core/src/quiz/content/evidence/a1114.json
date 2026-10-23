@@ -1,0 +1,394 @@
+{
+ "article": "a1114",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aral_Sea",
+   "title": "Aral Sea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:36.308Z",
+   "snapshot": "1b6aeb3483831daa7f49269d689ab86eebb6466c56ecab33455cb2ba2932a604"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Aralsee",
+   "title": "Aralsee",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:33.615Z",
+   "snapshot": "e913999235e811b194375f2bfb35919b2a12285f460d5761cd222b84becfde48"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Chad",
+   "title": "Lake Chad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:37.166Z",
+   "snapshot": "6e2ac3a629270c475d76037b1c9e6ec161c86660d3fdc9fa61089a8fc5a3c955"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dead_Sea",
+   "title": "Dead Sea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:07.431Z",
+   "snapshot": "9ab7ad4313bc0fc145531f119061599fdca461ea37132b8b249cc0a4a4660621"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Urmia",
+   "title": "Lake Urmia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:38.103Z",
+   "snapshot": "2968f36b0d364c64eb66bc32cccb8694bf7a3d74259ddaa832b9defaeb9d7fec"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Poop%C3%B3",
+   "title": "Lake Poopó – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:39.110Z",
+   "snapshot": "2bdb352ba1c32a0bd07b24df4b7ef63c36c3beb78b9b9614717e8c5d0a380375"
+  },
+  "s7": {
+   "url": "https://www.aljazeera.com/news/2015/8/28/the-dead-sea-is-dying-2",
+   "title": "The Dead Sea is dying",
+   "publisher": "Al Jazeera",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:01.085Z",
+   "snapshot": "65f20901ef4a103a11800bd6edcf83f53d6888fb4747a73be43e0053a6d4ea06"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aral Sea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aralsee",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-286"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lake Chad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dead Sea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lake Urmia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lake Poopó",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:35.040Z",
+   "target": "f05566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Aral Sea is an endorheic salt lake lying between Kazakhstan to the north and Uzbekistan to the south, which began shrinking in the 1960s and had largely dried up into desert by 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aral Sea” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:35.040Z",
+   "target": "f05566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Aralsee (sprich Áralsee; kasachisch Арал теңізі Aral teñizi; usbekisch Orol dengizi; russisch Аральское море Aralskoje more; im Altertum Oxiana) war ein großer, abflussloser Salzsee in Zentralasien  (Kasachstan und Usbekistan).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aralsee” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:35.040Z",
+   "target": "f05567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lake Chad (Arabic: بحيرة تشاد, Kanuri: Sádǝ, French: Lac Tchad) is an endorheic freshwater lake located at the junction of four countries: Nigeria, Niger, Chad, and Cameroon, in western and central Africa respectively, with a catchment area in excess of 1,000,000 km2 (390,000 sq mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Chad” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:35.040Z",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Dead Sea (Arabic: اَلْبَحْر الْمَيِّت, romanized: al-Baḥr al-Mayyit; or اَلْبَحْر الْمَيْت, al-Baḥr al-Mayt; Hebrew: יַם הַמֶּלַח, romanized: Yam hamMelaḥ), also known by other names, is a landlocked salt lake bordered by Jordan to the east, the West Bank to the west and Israel to the southwest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dead Sea” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:35.040Z",
+   "target": "f05569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lake Urmia is an endorheic salt lake in Iran.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Urmia” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:35.040Z",
+   "target": "f05570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lake Poopó (Spanish: Lago Poopó Spanish: [ˈlaɣo po.oˈpo]) was a large saline lake in a shallow depression in the Altiplano in Oruro Department, Bolivia, at an altitude of approximately 3,700 m (12,100 ft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:35.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Poopó” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:07:01Z",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "making its shores the lowest land-based elevation on Earth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:07:04Z",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Its water level is dropping by roughly one metre each year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:12.783Z",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "making its shores the lowest land-based elevation on Earth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:12.783Z",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Its water level is dropping by roughly one metre each year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:12.783Z",
+   "target": "f05568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Dead Sea is dying | Environment News | Al Jazeera",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:12.783Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dead Sea” is on the snapshot of s7"
+  }
+ ]
+}

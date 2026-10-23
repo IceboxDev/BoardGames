@@ -1,0 +1,354 @@
+{
+ "article": "a0859",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Doctor_Zhivago_(novel)",
+   "title": "Doctor Zhivago (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:57.249Z",
+   "snapshot": "a17d76119902eac509be2c074bdd4072b621555b0af632bbd90cb9673105842b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Thaw_(novel)",
+   "title": "The Thaw (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:58.227Z",
+   "snapshot": "06c980bb7120ebdfcecbb998b3e24a60c610edd547879c70d145d7fc9aa9c9b5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/New_Economic_Policy",
+   "title": "New Economic Policy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:59.311Z",
+   "snapshot": "9785e04246a14f00bdf628795c8b4cd10f5eff9e825b836f0b678e1b2dcad49c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Moscow_(1970)",
+   "title": "Treaty of Moscow (1970) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:00.212Z",
+   "snapshot": "c8a704d1644010eaac37577df4cae0d2ea8f63a27ca7cd24fc6a569e3171876b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Glasnost",
+   "title": "Glasnost – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:49:53Z"
+  },
+  "s6": {
+   "url": "https://www.hdg.de/lemo/kapitel/deutsche-einheit/wandel-im-osten/glasnost-und-perestroika.html",
+   "title": "LeMO Kapitel: Glasnost und Perestroika",
+   "publisher": "Haus der Geschichte (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:13.756Z",
+   "snapshot": "6190d73b18e25639c8973d97bb00f3a971ee70585675a0e204b6642d16e2b7f5"
+  },
+  "s7": {
+   "url": "https://www.loc.gov/exhibits/archives/intn.html",
+   "title": "Revelations from the Russian Archives: Internal Workings of the Soviet System",
+   "publisher": "Library of Congress",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:14.081Z",
+   "snapshot": "ab8ba635d22e3e9c03ba4396e3d55c50f992adea424c1cb0b6bcfae095baf0d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Glasnost",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thaw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "New Economic Policy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ostpolitik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:55.883Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Glasnost",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Glasnost”, “гласность”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:55.883Z",
+   "target": "f04293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Thaw (Russian: Оттепель, romanized: Ottepel) is a short novel by Ilya Ehrenburg first published in the spring 1954 issue of Novy Mir.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thaw” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:55.883Z",
+   "target": "f04294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The New Economic Policy (NEP) (Russian: новая экономическая политика (НЭП), romanized: novaya ekonomicheskaya politika) was an economic policy of the Soviet Union proposed by Vladimir Lenin in 1921 as a temporary expedient.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Economic Policy” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:55.883Z",
+   "target": "f04295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the 1970s, West German Chancellor Willy Brandt's Ostpolitik was a policy that \"abandoned, at least for the time being, its claims with respect to German self-determination and reunification, recognising de facto the existence of the German Democratic Republic (GDR) and the Oder–Neisse line\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ostpolitik” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:49:53Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is a concept relating to openness and transparency. It has several general and specific meanings, including a policy of maximum openness in the activities of state institutions and freedom of information",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:49:57Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Glasnost (Offenheit) und Perestroika (Umgestaltung) beschreiben die Zielrichtung der Reformen von Michail Gorbatschow",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:02Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A prime mover of change was Mikhail Gorbachev, whose policy of glasnost' allowed freedom of expression",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:24.314Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Glasnost (Offenheit) und Perestroika (Umgestaltung) beschreiben die Zielrichtung der Reformen von Michail Gorbatschow",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:24.314Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A prime mover of change was Mikhail Gorbachev, whose policy of glasnost' allowed freedom of expression",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:24.314Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LeMO Kapitel: Glasnost und Perestroika",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Glasnost” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:24.314Z",
+   "target": "f04291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "his policy of glasnost' in 1986, challenging the foundations of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:24.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Glasnost” is on the snapshot of s7"
+  }
+ ]
+}

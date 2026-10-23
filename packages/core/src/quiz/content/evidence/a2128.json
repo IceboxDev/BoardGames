@@ -1,0 +1,281 @@
+{
+ "article": "a2128",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Arne_Jacobsen",
+   "title": "Arne Jacobsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:59.373Z",
+   "snapshot": "7cf40785190022c4c70d672614db419ea59cf99eb6abbfe8ee2c5a8741ba1429"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ei_(Sessel)",
+   "title": "Ei (Sessel)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:00.160Z",
+   "snapshot": "25250086ce377f1371a089c0dce21c011f607f77e308a08fbae9ad81434864f7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Eames_Lounge_Chair",
+   "title": "Eames Lounge Chair",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:02.847Z",
+   "snapshot": "5ea9f47de65d67408fc12ae4deaca54564ba40df0c72bf8abdce14a2ec07142e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Panton_Chair",
+   "title": "Panton Chair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:03.876Z",
+   "snapshot": "fc217f8932904458db177c04a0372e5b1ddc7f0d93f9fef1ef8d06163f9b7400"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fritz_Hansen_(company)",
+   "title": "Fritz Hansen (company) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:04.827Z",
+   "snapshot": "e583ca1c19cb41e7c9d5667ecd5cbd55cf7d00a6d9061ab38f13c476a0b7639a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arne Jacobsen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-357"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chairs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-116"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Herman Miller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Verner Panton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fritz Hansen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:27.474Z",
+   "target": "f10665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arne Jacobsen wuchs in gutbürgerlichen Verhältnissen auf, der Vater war Kaufmann, die Mutter ehemals Bankangestellte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arne Jacobsen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.474Z",
+   "target": "f10666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Ei (Ægget), auch als Egg Chair bezeichnet, ist ein 1958 vom dänischen Architekten und Designer Arne Jacobsen entwickelter Sessel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ei” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.474Z",
+   "target": "f10667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "three, changed to two in second-series models, while the \"domes of silence\" (glides/feet) on the chair base originally had thinner screws attaching them to the aluminum base than those on later chairs, and the zipper around the cushions, either brown or black on early models, was later black only.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chairs” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.474Z",
+   "target": "f10668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Eames Lounge Chair and Ottoman is a lounge chair and ottoman manufactured and sold by American furniture company Herman Miller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herman Miller” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:27.474Z",
+   "target": "f10669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Panton Chair (Danish: Pantonstolen) is an S-shaped plastic chair created by the Danish designer Verner Panton in the 1960s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verner Panton” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:27.474Z",
+   "target": "f10670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fritz Hansen, also known as Republic of Fritz Hansen, is a Danish furniture design company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fritz Hansen” is on the snapshot of s5"
+  }
+ ]
+}

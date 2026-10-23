@@ -64,6 +64,9 @@ export default function GameMenu() {
         <span className="text-2xs font-semibold uppercase tracking-label text-fg-muted">
           Trainers
         </span>
+        <Button variant="secondary" size="sm" onClick={() => navigate("/trainer/quiz")}>
+          Quiz
+        </Button>
         <Button variant="secondary" size="sm" onClick={() => navigate("/trainer/geography")}>
           World Geography
         </Button>

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-121",
+ "image": "IMG20261022154515.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] Between which two countries was the first known peace treaty signed?\nA. Egypt and Greece\nB. Egypt and Hittite Empire\nC. Macedonia and Persia\nAnswer: B. The Treaty of Kadesh was signed between the Egyptian Pharaoh Ramses II and the Hittite King Hattusili III around 1259 BCE. A copy of the Treaty of Kadesh is displayed on a wall at the United Nations Headquarters in New York City, symbolizing its importance as a historical milestone in diplomacy and peacekeeping.",
+   "de": "Mit welchem Reich schloss Ägypten unter Ramses II. um 1259 v. Chr. den ältesten erhaltenen Friedensvertrag?",
+   "en": "Egypt under Ramesses II made the oldest known surviving peace treaty, around 1259 BC, with which empire?",
+   "reworked": true,
+   "answerDe": "Das Hethiterreich",
+   "answerEn": "The Hittite Empire",
+   "timeline": {
+    "kind": "event",
+    "start": "-1259",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ramesses II of Egypt and Hattusili III of the Hittites conclude their peace treaty",
+    "labelDe": "Ramses II. von Ägypten und der Hethiterkönig Ḫattušili III. schließen ihren Friedensvertrag"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Egyptian–Hittite_peace_treaty",
+    "title": "Egyptian–Hittite peace treaty",
+    "lang": "en"
+   },
+   "notes": "Card overstates: Wikipedia calls it the oldest known SURVIVING peace treaty; the older Ebla–Abarsal treaty may be the earliest recorded diplomatic treaty. 'Treaty of Kadesh' is a popular name for the Egyptian–Hittite peace treaty (also 'Eternal Treaty'); the UN-headquarters copy and c. 1259 BC are confirmed.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] Which of the following species lived during the Jurassic period?\nA. Tyrannosaurus rex\nB. Stegosaurus\nC. Woolly Mammoth\nAnswer: B.",
+   "de": "In welchem Erdzeitalter lebte der Plattendinosaurier Stegosaurus?",
+   "en": "During which geological period did the plated dinosaur Stegosaurus live?",
+   "reworked": true,
+   "answerDe": "Der Oberjura",
+   "answerEn": "The Late Jurassic",
+   "timeline": {
+    "kind": "period",
+    "start": "-155000000",
+    "end": "-145000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Stegosaurus lives in North America and Europe during the Late Jurassic",
+    "labelDe": "Stegosaurus lebt im Oberjura in Nordamerika und Europa"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Stegosaurus",
+    "title": "Stegosaurus",
+    "lang": "en"
+   },
+   "notes": "Reworked from 'which of the following' to the underlying fact. Fossil range Kimmeridgian–Tithonian, c. 155–145 million years ago (Wikipedia). 'Jurassic' alone is also acceptable.",
+   "domain": "earth-space",
+   "sub": "geology"
+  }
+ ]
+}

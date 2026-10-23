@@ -1,0 +1,640 @@
+{
+ "article": "a1344",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Utility_frequency",
+   "title": "Utility frequency – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:00.295Z",
+   "snapshot": "7a361e1e9636f9f37012f9f64b3d7a6b130a8139f5fdcc864c100b01b2ea0902"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mains_electricity",
+   "title": "Mains electricity – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:01.321Z",
+   "snapshot": "f7dadec909c40aa106516ec2057c1d191fae6e748c5462eb43146337bc434c05"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bahnstrom",
+   "title": "Bahnstrom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:59.491Z",
+   "snapshot": "8797e87624a21006da19192a49a31c91929f42e18afeff376d3de796f04f4663"
+  },
+  "s4": {
+   "url": "https://www.swissgrid.ch/en/home/operation/regulation/frequency.html",
+   "title": "Frequency",
+   "publisher": "Swissgrid (Swiss transmission system operator)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:17:47Z"
+  },
+  "s5": {
+   "url": "https://www.netztransparenz.de/de-de/Regelenergie",
+   "title": "Regelenergie",
+   "publisher": "Netztransparenz.de (German transmission system operators)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:17:49Z"
+  },
+  "s6": {
+   "url": "https://www.nist.gov/node/1190221",
+   "title": "Time Error Correction and the Electric Power Grid",
+   "publisher": "NIST",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:30.938Z",
+   "snapshot": "31bb9585d3510433a1a6b5cb8e2c2c5d1c7971abea04b191854d91b86e14d2a1"
+  },
+  "s7": {
+   "url": "https://spectrum.ieee.org/power-system-experiment-in-us-means-clocks-will-speed-up",
+   "title": "Power System Experiment in U.S. Means Clocks Will Speed Up",
+   "publisher": "IEEE Spectrum",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:30.844Z",
+   "snapshot": "dd4c6ae03f35fdaefe0dafc41dc0fee970ffd98cc092d2638935d41cf91885c3"
+  },
+  "s8": {
+   "url": "https://www.swissgrid.ch/de/home/operation/regulation/frequency.html",
+   "title": "Frequenz",
+   "publisher": "Swissgrid (Swiss transmission system operator)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:17:54Z"
+  },
+  "s9": {
+   "url": "https://www.verivox.de/strom/themen/230-volt/",
+   "title": "Warum kommen aus der Steckdose 230 Volt?",
+   "publisher": "Verivox",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:31.025Z",
+   "snapshot": "76abaaf409fad2bd80d6914ae239f0836e3879c715f1af3edb135668400b663b"
+  },
+  "s10": {
+   "url": "https://1komma5.com/de/strommarkt/netzspannung-deutschland/",
+   "title": "Netzspannung in Deutschland einfach erklärt",
+   "publisher": "1KOMMA5°",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:31.319Z",
+   "snapshot": "0de16c7145705cb59bd4ade3afadf2f8432a98b1fb57d1e58f6883afcd163150"
+  },
+  "s11": {
+   "url": "https://de.wikipedia.org/wiki/Netzspannung",
+   "title": "Netzspannung – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:31.220Z",
+   "snapshot": "3fb4a1d04942e765d051579571ecbaeb77a49ddf823759bd344a909db9fe49e0"
+  },
+  "s12": {
+   "url": "https://www.dbenergie.de/dbenergie-de/bahnstrom",
+   "title": "16,7-Hz-Bahnstrom",
+   "publisher": "DB Energie GmbH",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:31.466Z",
+   "snapshot": "2abb86c030ab4fa5e516e6e6d8a5b650709862b52a26d7ef85b635eca69cee60"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "50 hertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "60 hertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "230 volts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "16,7 Hertz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:11.119Z",
+   "target": "f06716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "50 hertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“50 hertz”, “50 Hertz”, “50 герц”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:11.119Z",
+   "target": "f06717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "60 hertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“60 hertz”, “60 Hertz”, “60 герц”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:11.119Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In much of the world, a voltage (nominally) of 230 volts and frequency of 50 Hz is used.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “230 volts” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:11.119Z",
+   "target": "f06719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "16,7 Hertz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“16,7 Hertz”, “16.7 hertz”, “16,7 герца”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:17:47Z",
+   "target": "f06716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The grid time is a time measurement which is based on the standard grid frequency of 50 Hertz in Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:17:49Z",
+   "target": "f06716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Übertragungsnetzbetreiber sind dazu verpflichtet, die Frequenz des Stromnetzes konstant bei 50 Hertz zu halten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:50Z",
+   "target": "f06716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In much of the world, a voltage (nominally) of 230 volts and frequency of 50 Hz is used.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:52Z",
+   "target": "f06717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Power systems in the U.S. operate at a nominal 60 Hz, but in actual operation they accumulate significant phase error.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:53Z",
+   "target": "f06717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The U.S. electric grid operates at 60 Hz (and much of the rest of the world at 50), right?",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:17:54Z",
+   "target": "f06717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In Nordamerika und Teilen von Japan kommt dagegen eine Standardfrequenz von 60 Hertz zum Einsatz.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:17:56Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Heutzutage beträgt die Netzspannung in Deutschland 230 Volt. Das war jedoch nicht immer so.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:17:57Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Die Netzspannung in Deutschland beträgt 230 Volt, während in den USA nur 120 Volt aus der Steckdose fließen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:17:58Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Effektivwert der sinusförmigen Wechselspannung zwischen Außenleiter und Neutralleiter 230 V ± 10 %.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:17:59Z",
+   "target": "f06719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "DB Energie ist kompetenter Lösungsanbieter für 16,7-Hz-Bahnstrom.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:18:00Z",
+   "target": "f06719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "die Frequenz von 16,7 Hz ändert sich dabei nicht.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In much of the world, a voltage (nominally) of 230 volts and frequency of 50 Hz is used.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The U.S. electric grid operates at 60 Hz (and much of the rest of the world at 50), right?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Heutzutage beträgt die Netzspannung in Deutschland 230 Volt. Das war jedoch nicht immer so.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Die Netzspannung in Deutschland beträgt 230 Volt, während in den USA nur 120 Volt aus der Steckdose fließen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Effektivwert der sinusförmigen Wechselspannung zwischen Außenleiter und Neutralleiter 230 V ± 10 %.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "DB Energie ist kompetenter Lösungsanbieter für 16,7-Hz-Bahnstrom.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s12"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "die Frequenz von 16,7 Hz ändert sich dabei nicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Warum kommen aus der Steckdose 230 Volt?",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “230 Volt” is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:54.979Z",
+   "target": "f06718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Netzspannung in Deutschland erklärt: Warum 230 Volt?",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “230 Volt” is on the snapshot of s10"
+  }
+ ]
+}

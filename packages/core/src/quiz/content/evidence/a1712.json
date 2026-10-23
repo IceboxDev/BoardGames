@@ -1,0 +1,442 @@
+{
+ "article": "a1712",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Vorsokratiker",
+   "title": "Vorsokratiker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:22.653Z",
+   "snapshot": "5d1fa326e47c5f34e62ff941b12e456edd51f5c6c7bc249fdaeaf82dbf2f81aa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/De_Constantia",
+   "title": "De Constantia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:26.331Z",
+   "snapshot": "df85530c1c3b2220696dfacea1068d18441260134e79a0e44d80c6fd7cbb3722"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Villa_of_the_Papyri",
+   "title": "Villa of the Papyri – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:27.426Z",
+   "snapshot": "d4dfd6794f82a87f7c1e56c05fe708a9e3a3648befc40186d684a4634fa70a53"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Crates_of_Thebes",
+   "title": "Crates of Thebes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:28.335Z",
+   "snapshot": "c9532b1d3d7fe44692437ca81bade65993196dc922ed8daf81feec974fbd2268"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Peripatetic_school",
+   "title": "Peripatetic school – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:29.310Z",
+   "snapshot": "413a33cd10db4968f40d2b66495b48862ed141c93403bf2d234b48a398dfedf9"
+  },
+  "s6": {
+   "url": "https://plato.stanford.edu/entries/stoicism/",
+   "title": "Stoicism (Stanford Encyclopedia of Philosophy)",
+   "publisher": "Stanford Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:50.619Z",
+   "snapshot": "8f9253890eab2d55bce1a84f9bc975aef3a2b767c709badd563a88f1c9401ced"
+  },
+  "s7": {
+   "url": "https://iep.utm.edu/stoicism/",
+   "title": "Stoicism – Internet Encyclopedia of Philosophy",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:58.402Z",
+   "snapshot": "bf19dba275395520cf85fdfe56d382b72824c65d7601fe2ed5b1f3ad7425bcae"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/stoic",
+   "title": "STOIC Definition & Meaning – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:50.028Z",
+   "snapshot": "6f0a71d835ad87ba7cd0f24438a195c4dbfabf25537ae5e82f85e91a0d27bf00"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vorsokratiker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stoics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Epicureans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08559",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cynics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peripatetics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:10.104Z",
+   "target": "f08556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Vorsokratiker werden seit der deutschen Romantik diejenigen griechischen Philosophen der Antike bezeichnet, die vor Sokrates (469–399 v.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vorsokratiker” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:10.104Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stoics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stoics”, “Stoiker”, “стоики”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:10.104Z",
+   "target": "f08558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Although his prose work is detailed in the strung-out, non-periodic style typical of Hellenistic Greek prose before the revival of the Attic style after Cicero, Philodemus surpassed the average literary standard to which most epicureans aspired.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epicureans” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:10.104Z",
+   "target": "f08559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This jest would later be the cause of much satire, as in book 4 of Athenaeus' Deipnosophistae where a group of Cynics sit down for a meal and are served course after course of lentil soup.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cynics” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:10.104Z",
+   "target": "f08560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Whereas the earlier Peripatetics had sought to extend and develop Aristotle's works, from the time of Andronicus the school concentrated on preserving and defending his work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peripatetics” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:04:15Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Stoic school was founded around 300 BCE by Zeno of Citium",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:04:17Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Stoicism originated as a Hellenistic philosophy, founded in Athens by Zeno of Citium (modern day Cyprus), c. 300 B.C.E.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:04:19Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "of or relating to the school of philosophy founded by Zeno, who taught that people should be free from passion",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:56.869Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Stoic school was founded around 300 BCE by Zeno of Citium",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:56.869Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Stoicism originated as a Hellenistic philosophy, founded in Athens by Zeno of Citium (modern day Cyprus), c. 300 B.C.E.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:56.869Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "of or relating to the school of philosophy founded by Zeno, who taught that people should be free from passion",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:56.869Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "extant sources for Stoic doctrine, and the Stoics’ subsequent",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stoics” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:56.869Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The name comes from the Stoa Poikile, or painted porch, an open market in Athens where the original Stoics used to meet and teach philosophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stoics” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:56.869Z",
+   "target": "f08557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Often stoical characterized by a calm, austere fortitude befitting the Stoics, especially in the face of trouble or loss; not giving in to one’s emotions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stoics” is on the snapshot of s8"
+  }
+ ]
+}

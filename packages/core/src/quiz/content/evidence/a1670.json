@@ -1,0 +1,378 @@
+{
+ "article": "a1670",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ingeborg_Bachmann",
+   "title": "Ingeborg Bachmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:04.412Z",
+   "snapshot": "0bbdba72bf50239e961fcfba563eff59254c4dd19627407d11351aaaa99ef978"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Georg-B%C3%BCchner-Preis",
+   "title": "Georg-Büchner-Preis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:01.572Z",
+   "snapshot": "7c7078d52fda73c81827bc62cf838f0c84b98ac97e7acbd2544ebf9cf7f5f338"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Heinrich-Heine-Preis_(Stadt_D%C3%BCsseldorf)",
+   "title": "Heinrich-Heine-Preis (Stadt Düsseldorf) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:02.521Z",
+   "snapshot": "cd01624764ba19e6fee33b424c431724fc78d95beda61cb1d2b8d6f4f65bc282"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nelly_Sachs",
+   "title": "Nelly Sachs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:29.094Z",
+   "snapshot": "950000a3ea1e7bd00f581a6dbae52d19e41f71d6b2065f19371e409533d84a80"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Kafka",
+   "title": "Franz Kafka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:05.528Z",
+   "snapshot": "de8dd5a3074e5ee82854a94d08b963fbd58437e31c9ed24ca1b457ddec46c77b"
+  },
+  "s6": {
+   "url": "https://www.deutscheakademie.de/de/auszeichnungen/georg-buechner-preis",
+   "title": "Georg-Büchner-Preis",
+   "publisher": "Deutsche Akademie für Sprache und Dichtung",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:22.555Z",
+   "snapshot": "e025d0ff87c181880c69526bf60f49f5d490f2bc5dbfa583248bc6a4d6cd0d76"
+  },
+  "s7": {
+   "url": "https://orf.at/stories/3435707/",
+   "title": "Georg-Büchner-Preis für Christine Wunnicke",
+   "publisher": "ORF",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:22.614Z",
+   "snapshot": "80938f12377d5ac887c56069d2ad04dc010dc1015cd88f20b988a0420cedb258"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ingeborg Bachmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Georg Büchner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heinrich Heine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nelly Sachs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franz Kafka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:02.558Z",
+   "target": "f08346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ingeborg Bachmann (Austrian German: [ˈɪŋəbɔrɡ ˈbaxman]; 25 June 1926 – 17 October 1973) was an Austrian poet and author.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ingeborg Bachmann” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:02.558Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Georg-Büchner-Preis, auch Büchner-Preis genannt, gilt als der renommierteste Literaturpreis im deutschen Sprachraum.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Büchner” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:02.558Z",
+   "target": "f08348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heinrich-Heine-Preis (Stadt Düsseldorf)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Heine” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:02.558Z",
+   "target": "f08349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nelly Sachs (German: [ˈnɛli ˈzaks] ; 10 December 1891 – 12 May 1970) was a German–Swedish poet and playwright.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nelly Sachs” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:02.558Z",
+   "target": "f08350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franz Kafka (3 July 1883 – 3 June 1924) was a German-language Jewish  writer from Prague.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Kafka” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:31Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Am 15. März 1951 wurde er auf Beschluss der bisherigen Beteiligten in einen Literaturpreis umgewandelt und wird seitdem von der Deutschen Akademie für Sprache und Dichtung vergeben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Awarding body: literary prize since 1951, named after Georg Büchner."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:44:35Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der seit 1951 vergebene und mit 50.000 Euro dotierte Preis zählt zu den wichtigsten literarischen Auszeichnungen im deutschsprachigen Raum.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Press says 'among the most important'; de.wikipedia says 'renommierteste'."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:49.121Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Am 15. März 1951 wurde er auf Beschluss der bisherigen Beteiligten in einen Literaturpreis umgewandelt und wird seitdem von der Deutschen Akademie für Sprache und Dichtung vergeben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:49.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:49.121Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der seit 1951 vergebene und mit 50.000 Euro dotierte Preis zählt zu den wichtigsten literarischen Auszeichnungen im deutschsprachigen Raum.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:49.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:49.121Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Georg-Büchner-Preis / Deutsche Akademie für Sprache und Dichtung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:49.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Georg Büchner” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:49.121Z",
+   "target": "f08347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Georg-Büchner-Preis für Christine Wunnicke - news.ORF.at",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:49.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Georg Büchner” is on the snapshot of s7"
+  }
+ ]
+}

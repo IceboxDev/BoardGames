@@ -1,0 +1,249 @@
+{
+ "article": "a2000",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses_and_blood_transfusions",
+   "title": "Jehovah's Witnesses and blood transfusions – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:24.307Z",
+   "snapshot": "14870547fffc4b308e9356450dd2c2ec53ef5c292f5b21eaa987f9536ec71e04"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Amish",
+   "title": "Amish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:25.211Z",
+   "snapshot": "717cdce7111cd26b5eaadabf9d3063409ce05ff85ff4f8d17539982327bb8167"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Quakers",
+   "title": "Quakers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:32.344Z",
+   "snapshot": "e82d170912de610a3075f43bcc92dcd1aefa5acd320ed15ace979b20b62b592e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Salvation_Army",
+   "title": "Salvation Army – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:26.409Z",
+   "snapshot": "f302276f275f97ea2f88d09f56359da80ec1c3939b95f237e5dce93b9b778417"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Mormon",
+   "title": "Book of Mormon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:17.381Z",
+   "snapshot": "e663518713ca4d14afade2aede082c04b758dd4a9217d9067c797fc3de0685ee"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:11.700Z",
+   "snapshot": "79b69f92e20e18345887ff22667037f31b1da08299e67bb7ddd5f656b055040e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jehovah's Witnesses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Amish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Quakers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salvation Army",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mormons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:03.244Z",
+   "target": "f09996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jehovah's Witnesses believe that the Bible prohibits Christians from accepting transfusion of another person's whole blood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jehovah's Witnesses” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:03.244Z",
+   "target": "f09997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Amish ( , also  or ; Pennsylvania German: Amisch), formally the Old Order Amish, are a group of traditionalist Anabaptist Christian church fellowships with Swiss and Alsatian origins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amish” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:03.244Z",
+   "target": "f09998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Quakers are people who belong to the Religious Society of Friends, originally known as simply the Society of Friends, a historically Protestant Christian set of denominations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quakers” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:03.244Z",
+   "target": "f09999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Salvation Army is a Methodist Christian church and an international charitable organisation aligned with the Wesleyan-Holiness movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salvation Army” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:03.244Z",
+   "target": "f10000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "During the movement's first years, observers identified converts with the new scripture they propounded, nicknaming them \"Mormons\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mormons” is on the snapshot of s5"
+  }
+ ]
+}

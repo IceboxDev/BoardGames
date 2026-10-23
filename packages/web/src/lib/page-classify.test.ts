@@ -17,6 +17,7 @@ describe("classifyRoute", () => {
     expect(at("/settings")).toEqual({ page: "appearance" });
     expect(at("/admin")).toEqual({ page: "admin", detail: "users" });
     expect(at("/admin?tab=vote")).toEqual({ page: "admin", detail: "vote" });
+    expect(at("/admin/quiz-desk?tab=backlog")).toEqual({ page: "admin", detail: "quiz-desk" });
   });
 
   it("logs a profile visit itself, and each profile sub-page", () => {
@@ -47,29 +48,23 @@ describe("classifyRoute", () => {
     expect(at("/play/arcs/tournament")).toEqual({ page: "play-tournament", detail: "arcs" });
   });
 
-  it("reads Quiztopia's solo shell as its trainer", () => {
-    expect(at("/play/quiztopia/solo")).toEqual({ page: "trainer", detail: "quiztopia" });
-    expect(at("/play/quiztopia/solo/study?category=3")).toEqual({
+  it("logs the quiz trainer, not Quiztopia's redirecting solo shell", () => {
+    expect(at("/trainer/quiz")).toEqual({ page: "trainer", detail: "quiz" });
+    expect(at("/trainer/quiz/study?domain=history")).toEqual({
       page: "trainer-study",
-      detail: "quiztopia",
+      detail: "quiz",
     });
-    expect(at("/play/quiztopia/solo/wiki/history/c12")).toEqual({
+    expect(at("/trainer/quiz/wiki/article/a0012")).toEqual({
       page: "trainer-wiki",
-      detail: "quiztopia",
+      detail: "quiz",
     });
-    expect(at("/play/quiztopia/solo/wiki/reports")).toEqual({
-      page: "trainer-wiki",
-      detail: "quiztopia",
-    });
-    expect(at("/play/quiztopia/solo/wiki/journal")).toEqual({
-      page: "trainer-wiki",
-      detail: "quiztopia",
-    });
-    expect(at("/play/quiztopia/solo/timeline")).toEqual({
-      page: "trainer-timeline",
-      detail: "quiztopia",
-    });
+    expect(at("/trainer/quiz/wiki/reports")).toEqual({ page: "trainer-wiki", detail: "quiz" });
+    expect(at("/trainer/quiz/wiki/journal")).toEqual({ page: "trainer-wiki", detail: "quiz" });
+    expect(at("/trainer/quiz/timeline")).toEqual({ page: "trainer-timeline", detail: "quiz" });
+    expect(at("/play/quiztopia/solo")).toBeNull();
+    expect(at("/play/quiztopia/solo/wiki/history/c12")).toBeNull();
     // The table game is still the game.
+    expect(at("/play/quiztopia")).toEqual({ page: "play", detail: "quiztopia" });
     expect(at("/play/quiztopia/mp/lobby/AB12")).toEqual({
       page: "play-lobby",
       detail: "quiztopia",

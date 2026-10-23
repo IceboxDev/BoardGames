@@ -1,0 +1,816 @@
+{
+ "article": "a0417",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Plutonium",
+   "title": "Plutonium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:35.713Z",
+   "snapshot": "9b90b34f8e099291afe04252890f86a414122338e1c6f7eb45abf63ab9981fdc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Neptunium",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:36.708Z",
+   "snapshot": "f76193cdda9157c6ebcd22d850703d9a7681b92005b6c2fb8aae106abca2cee1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Europium",
+   "title": "Europium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:37.572Z",
+   "snapshot": "0b3a7e096f05cff3bb68a35b2e888bea3cbbe3b2932e3090ebe53854f5a30171"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Polonium",
+   "title": "Polonium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:38.502Z",
+   "snapshot": "0c461b717d462082ed56073a8bd4d32ce0b4b620167c84b6fdd45bbc8fc1d769"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Einsteinium",
+   "title": "Einsteinium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:39.620Z",
+   "snapshot": "5a3b0a4337fba64507804694bbf49298359ba303c28e8937ca9e30d3621aa736"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ytterby",
+   "title": "Ytterby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:40.520Z",
+   "snapshot": "c8762c3280b351ad468647c8e24f2b6e5f83107a210c596e06f0219ba8dac728"
+  },
+  "s7": {
+   "url": "https://www.chemicool.com/elements/europium.html",
+   "title": "Europium Element Facts",
+   "publisher": "Chemicool",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:57.216Z",
+   "snapshot": "ad72bd03f95f7f70ae8dfa876f99fd83a86da7770658441f216a60e6b23c8c0c"
+  },
+  "s8": {
+   "url": "https://www.chemicool.com/elements/americium.html",
+   "title": "Americium Element Facts",
+   "publisher": "Chemicool",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:58.131Z",
+   "snapshot": "a5c5efcbbe6ab93b0c86f47e1a08aadb641858a1bc94326050c36913e7dfa002"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Americium",
+   "title": "Americium – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:58.610Z",
+   "snapshot": "6de9848a2ac604c2334586eb6f85e761926efa5a83aa4d5a739b49a1db5a91d2"
+  },
+  "s10": {
+   "url": "https://www.chemicool.com/elements/polonium.html",
+   "title": "Polonium Element Facts",
+   "publisher": "Chemicool",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:59.131Z",
+   "snapshot": "130785a084e0fd9081127b4c3556bedd31cc7dd5d47072af07ffb9e78bfa814a"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Germanium",
+   "title": "Germanium – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:07:40Z"
+  },
+  "s12": {
+   "url": "https://www.chemicool.com/elements/curium.html",
+   "title": "Curium Element Facts",
+   "publisher": "Chemicool",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:00.173Z",
+   "snapshot": "9ca1a00fd109c5d8fea94802c4a55fc9a1c12c2542eb1114faa883392c653638"
+  },
+  "s13": {
+   "url": "https://www.chemicool.com/elements/einsteinium.html",
+   "title": "Einsteinium Element Facts",
+   "publisher": "Chemicool",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:01.176Z",
+   "snapshot": "fb954ddc48371be21005b967934dca461166afab3891ee7e495095084352ab6f"
+  },
+  "s14": {
+   "url": "https://en.wikipedia.org/wiki/Curium",
+   "title": "Curium – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:07:47Z"
+  },
+  "s15": {
+   "url": "https://www.chemicool.com/elements/ytterbium.html",
+   "title": "Ytterbium Element Facts",
+   "publisher": "Chemicool",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:02.171Z",
+   "snapshot": "d2c5eec4101807ecdd7364a2003f5b07f9a7ee076a58dafe129ccba5549479fe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uranium and plutonium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Uranium and plutonium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Europium and americium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Germanium and polonium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Curium and einsteinium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yttrium and ytterbium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:45.235Z",
+   "target": "f02081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uranium and plutonium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Uranium and plutonium”, “Uran und Plutonium”, “уран и плутоний”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:45.235Z",
+   "target": "f02081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "However, a neptunium atomic bomb has never been built because uranium and plutonium have lower critical masses than 235Np and 237Np, and 236Np is difficult to purify as it is not found in quantity in spent nuclear fuel and is nearly impossible to separate in any significant quantities from 237Np.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uranium and plutonium” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:45.235Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Europium and americium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Europium and americium”, “Europium und Americium”, “европий и америций”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:45.235Z",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Germanium and polonium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Germanium and polonium”, “Germanium und Polonium”, “германий и полоний”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:45.235Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Curium and einsteinium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Curium and einsteinium”, “Curium und Einsteinium”, “кюрий и эйнштейний”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:45.235Z",
+   "target": "f02085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yttrium and ytterbium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Yttrium and ytterbium”, “Yttrium und Ytterbium”, “иттрий и иттербий”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:07:28Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He named the new element after the continent of Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:07:30Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The element was named after America, because it is located below Europium (element 63) in the periodic table, which was named after Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:07:33Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "located under the lanthanide element europium and was thus named after the Americas by analogy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:07:35Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1901 he obtained material sufficiently pure to establish the element conclusively and named it europium, after Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:07:37Z",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In accordance with the Curies’ wishes, polonium is named after Poland, where Marie Curie was born and grew up.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:07:40Z",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Winkler named the element after Germany, his country of birth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:07:42Z",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Polonium was named after Marie Skłodowska-Curie's homeland of Poland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:07:44Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The element is named after Marie and Pierre Curie, who pioneered work on radioactivity and discovered radium and polonium.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:07:45Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The element is named after Albert Einstein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T08:07:47Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "The element was named after Marie Curie and her husband Pierre Curie",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T08:07:50Z",
+   "target": "f02085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "The element is named after Ytterby, a village in Sweden. Four elements are named after this town, the others being yttrium, terbium, and erbium.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T08:07:52Z",
+   "target": "f02085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the chemical elements yttrium (Y), terbium (Tb), erbium (Er), and ytterbium (Yb) are all named after Ytterby",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T08:08:01Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "einsteinium (symbol E) after Albert Einstein",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He named the new element after the continent of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The element was named after America, because it is located below Europium (element 63) in the periodic table, which was named after Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "located under the lanthanide element europium and was thus named after the Americas by analogy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1901 he obtained material sufficiently pure to establish the element conclusively and named it europium, after Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In accordance with the Curies’ wishes, polonium is named after Poland, where Marie Curie was born and grew up.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Polonium was named after Marie Skłodowska-Curie's homeland of Poland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s4"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The element is named after Marie and Pierre Curie, who pioneered work on radioactivity and discovered radium and polonium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s12"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The element is named after Albert Einstein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s13"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "The element is named after Ytterby, a village in Sweden. Four elements are named after this town, the others being yttrium, terbium, and erbium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s15"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the chemical elements yttrium (Y), terbium (Tb), erbium (Er), and ytterbium (Yb) are all named after Ytterby",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s6"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:07.166Z",
+   "target": "f02084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "einsteinium (symbol E) after Albert Einstein",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s5"
+  }
+ ]
+}

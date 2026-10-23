@@ -1,0 +1,335 @@
+{
+ "article": "a1376",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Limbo",
+   "title": "Limbo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:42.351Z",
+   "snapshot": "7c929b12b1b65b8c00b4f42c5df0a34f80b6f3c63a6496c56c296d18b51d3975"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Purgatory",
+   "title": "Purgatory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:43.434Z",
+   "snapshot": "671998cbe961b176673027cc859c819249cf29ab58df57ead388845f642bb2bf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Elysium",
+   "title": "Elysium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:44.218Z",
+   "snapshot": "a07d1c73c9adbded1269d56522082e647821997e410a8b614d6d586f8b223445"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Valhalla",
+   "title": "Valhalla – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:45.360Z",
+   "snapshot": "acffa826bc10a223608812a95a41e8f4e47c6beb702161ad7397697771f7f34a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tartarus",
+   "title": "Tartarus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:26.147Z",
+   "snapshot": "095c6df30723e68ca02998ab6de6b04b69f1d575df6ea1bd501f84b73f29a675"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hel_(location)",
+   "title": "Hel (location) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:46.238Z",
+   "snapshot": "b78ab314a9b6a15db2d6d3cee364fc46accb7aa20ae8ee050b72c6ee83199908"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hel_(mythological_being)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:47.355Z",
+   "snapshot": "c56b34930d1ebaa1074e494e9a671c0606a1f24e058ffecdae5cb047504e2819"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "limbo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "purgatory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06878",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elysium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Valhalla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tartarus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 32"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f06876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The unofficial term Limbo  (from Latin  limbus 'edge, boundary', referring to the edge of Hell) is the afterlife condition, in medieval Catholic theology, of those who die in original sin without being assigned to the Hell of the Damned.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “limbo” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f06877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Purgatory (Latin: purgatorium, borrowed into English via Anglo-Norman and Old French) is a belief in Catholic theology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “purgatory” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f06878",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elysium ( or  ih-LIZ(H)-ee-əm), otherwise known as the Elysian Fields (Ancient Greek: Ἠλύσιον πεδίον, Ēlýsion pedíon), Elysian Plains or Elysian Realm, is a conception of the afterlife that developed over time and was maintained by some Greek religious and philosophical sects and cults.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elysium” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f06879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In Norse mythology, Valhalla ( val-HAL-ə, US also  vahl-HAH-lə; Old Norse: Valhǫll [ˈwɑlhɒlː], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valhalla” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f06880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Greek mythology, Tartarus (; Ancient Greek: Τάρταρος, romanized: Tártaros) is the deep abyss that is used as a dungeon of torment and suffering for the wicked and as the prison for the Titans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tartarus” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f28507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hel (Old Norse: [ˈhel]) is an afterlife location in Norse mythology and paganism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hel” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:16.090Z",
+   "target": "f28507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hel (Old Norse) is a female being in Norse mythology who is said to preside over an underworld realm of the same name, where she receives a portion of the dead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hel” is on the snapshot of s7"
+  }
+ ]
+}

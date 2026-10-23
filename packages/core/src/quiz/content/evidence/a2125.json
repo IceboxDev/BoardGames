@@ -1,0 +1,300 @@
+{
+ "article": "a2125",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Taupe",
+   "title": "Taupe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:53.813Z",
+   "snapshot": "40b01d9a16aa9f312fcdbe5f05c4be612ce7ca46e20aa9b47179ec87cad1dd64"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Batik",
+   "title": "Batik",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:50.984Z",
+   "snapshot": "0d669a1c970031f7bb16f7f98861f4ca331972f632536582ad3375e8f01c08de"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Batik",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:54.975Z",
+   "snapshot": "58635f7d47080e8856746e10e9f4f73f0b10cb18fedebd96ae52878c97ef4f36"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Denim",
+   "title": "Denim – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:55.883Z",
+   "snapshot": "b1d2b433f299d4c5ba841b16f9db1e9d3529467db6acfe59956b02b63c6ac16f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jeans",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:44.687Z",
+   "snapshot": "627f12d0c3d5f2f8ea9800413d8c44dc2f5205ee03e60808d3f15393a49fba7b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Shibori",
+   "title": "Shibori – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:56.886Z",
+   "snapshot": "665869369ff265587d7f3aabdc685ce44105a275ddef0d71c6c292db735ca9d4"
+  },
+  "s7": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/taupe_2",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:54.014Z",
+   "snapshot": "af38d8c4fbf0dbdc267f0a58aaf061276a425d79bdf9db31fc734ef011e21d6b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Batik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-356"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "batik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "indigo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "indigo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Shibori",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grey-brown",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Grey-brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-039/6, u06: Taupe (French 'mole') is a dark grey-brown, not a pale violet."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:27.127Z",
+   "target": "f10648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a grey-brown colourTopics Colours and Shapesc2",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.127Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grey-brown” is on the snapshot of s7"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.127Z",
+   "target": "f10649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Batik ist ein ursprünglich aus Java stammendes Textilfärbeverfahren in Reservetechnik, bei dem Muster und Verzierungen in Handarbeit mit flüssigem Wachs mit einem als Tjanting bezeichneten Werkzeug auf das Gewebe (Baumwolle, Leinen, Seide etc.) aufgezeichnet, und daher bei dem darauf folgenden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.127Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Batik” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.127Z",
+   "target": "f10649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Batik is a dyeing technique using wax resist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.127Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “batik” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.127Z",
+   "target": "f10650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Denim is available in a range of colors, but the most common type of denim is indigo denim in which the warp threads are dyed while the weft threads are left white.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.127Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “indigo” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:27.127Z",
+   "target": "f10650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Indigo dyed cotton textiles have been produced and traded from India for millennia, the textiles becoming known, in the 18th century, as ‘blue goods’ in English, or ‘guinée’ in French, and were a core trade good of the Indian Ocean, and Atlantic slave trades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.127Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “indigo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:27.127Z",
+   "target": "f10651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Shibori (しぼり/絞り, from the verb root shiboru – \"to wring, squeeze or press\") is a Japanese manual tie-dyeing technique, which produces a number of different patterns on fabric.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.127Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shibori” is on the snapshot of s6"
+  }
+ ]
+}

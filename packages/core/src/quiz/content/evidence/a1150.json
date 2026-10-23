@@ -1,0 +1,448 @@
+{
+ "article": "a1150",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Venera_4",
+   "title": "Venera 4 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:55.200Z",
+   "snapshot": "7facd71103549c2b691513f31a7dedeb3388d73716bccef267cb06621a70c6aa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Jupiter",
+   "title": "Atmosphere of Jupiter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:56.377Z",
+   "snapshot": "5de3631458a87e7c442a39ae969d4e88a2e38c39908f1115ceb9430e1895e70a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/John_William_Strutt,_3rd_Baron_Rayleigh",
+   "title": "John William Strutt, 3rd Baron Rayleigh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:57.249Z",
+   "snapshot": "c76103b0bc50daa28375ea86d4ab706b533f2f840aa7de85c0e3d88dbe970598"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rupert_Wildt",
+   "title": "Rupert Wildt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:58.169Z",
+   "snapshot": "d32c004b248f5a596ad73c9296d6bc1a3a111ac44f757cbdca7513ac13b970e8"
+  },
+  "s5": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+   "title": "Venus Fact Sheet",
+   "publisher": "NASA Goddard Space Flight Center (NSSDCA)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:17.103Z",
+   "snapshot": "bf41236cf7691b9d421f3b90ce42cecd5921e5e3dc6c7249ece7f69d1bf559b9"
+  },
+  "s6": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+   "title": "Jupiter Fact Sheet",
+   "publisher": "NASA Goddard Space Flight Center (NSSDCA)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:17.554Z",
+   "snapshot": "bf16e975db274ffedb7b60df86ad3928f72c81c5802f0c995a689ab9a9c240d4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Venus",
+   "title": "Atmosphere of Venus – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:15:32Z"
+  },
+  "s8": {
+   "url": "https://science.nasa.gov/venus/venus-facts/",
+   "title": "Venus: Facts",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:17.442Z",
+   "snapshot": "92d6d8aa9c74f4cb1d12acc15f231414ee8a80c884552a1155060873c25c730d"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Jupiter",
+   "title": "Jupiter – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:15:37Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hydrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "argon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05750",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "methane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:40.247Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Venera 4 provided the first chemical analysis of the Venusian atmosphere, showing it to be primarily carbon dioxide with a few percents of nitrogen and below one percent of oxygen and water vapor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carbon dioxide” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.247Z",
+   "target": "f05748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is mostly made of molecular hydrogen and helium in roughly solar proportions; other chemical compounds are present only in small amounts and include methane, ammonia, hydrogen sulfide, and water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hydrogen” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.247Z",
+   "target": "f05749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John William Strutt, 3rd Baron Rayleigh ( RAY-lee; 12 November 1842 – 30 June 1919), was a British physicist and hereditary peer who received the Nobel Prize in Physics in 1904 for his discovery of argon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “argon” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.247Z",
+   "target": "f05750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1932 he studied the spectra of Jupiter, and other outer planets, and identified certain absorption bands as belonging to the hydrogen-rich compounds of methane and ammonia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “methane” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:07:17Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Major: 96.5% Carbon Dioxide (CO2), 3.5% Nitrogen (N2)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:07:20Z",
+   "target": "f05748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Major: Molecular hydrogen (H2) - 89.8% (2.0%); Helium (He) - 10.2% (2.0%)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:15:32Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Carbon dioxide 96.5 % Nitrogen 3.5 %",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:15:34Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The atmosphere is mostly carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:15:37Z",
+   "target": "f05748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "By volume, the upper atmosphere is about 90% hydrogen and 10% helium.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:18.200Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Major: 96.5% Carbon Dioxide (CO2), 3.5% Nitrogen (N2)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:18.200Z",
+   "target": "f05748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Major: Molecular hydrogen (H2) - 89.8% (2.0%); Helium (He) - 10.2% (2.0%)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:18.200Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The atmosphere is mostly carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:18.200Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Major: 96.5% Carbon Dioxide (CO2), 3.5% Nitrogen (N2)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “carbon dioxide” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:18.200Z",
+   "target": "f05746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The atmosphere is mostly carbon dioxide — the same gas drives the greenhouse effect on both Venus and Earth — with dense clouds composed of sulfuric acid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “carbon dioxide” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:18.200Z",
+   "target": "f05748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Major: Molecular hydrogen (H2) - 89.8% (2.0%); Helium (He) - 10.2% (2.0%)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “hydrogen” is on the snapshot of s6"
+  }
+ ]
+}

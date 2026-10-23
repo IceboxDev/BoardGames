@@ -1,0 +1,469 @@
+{
+ "article": "a2291",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/D%C3%BCrkheimer_Riesenfass",
+   "title": "Dürkheimer Riesenfass",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:48.874Z",
+   "snapshot": "a06b8610be1958570bc1aea44fd5c810aa9a1a4b26045a22d7638a638fa5ef37"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/M%C3%B6rsenbroicher_Ei",
+   "title": "Mörsenbroicher Ei",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:49.480Z",
+   "snapshot": "fa7eb60677a2e25a22ad51b27b22b5fca238a84712af12aa83731a1ada578f56"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Erstes_Deutsches_Bananenmuseum",
+   "title": "Erstes Deutsches Bananenmuseum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:50.828Z",
+   "snapshot": "7ed7db08aab857e84fcb32f42a7d315ee13fff1539b6513211e9072cca0f518e"
+  },
+  "s4": {
+   "url": "https://www.handelsblatt.com/arts_und_style/maggikalypse-koeln-stinkt-nach-suppe/8331668.html",
+   "title": "„Maggikalypse“: Köln stinkt nach Suppe",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:48.419Z",
+   "snapshot": "7f1f60cbe3726eaf5385d0e02d6fc43808334d9845069ff6aedb711fcec61bd4"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/D%C3%BCrkheimer_Wurstmarkt",
+   "title": "Dürkheimer Wurstmarkt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:52.262Z",
+   "snapshot": "f0bed3aad4e8b0e8ca66d24c9bb6394530aebd5d234f1f09ad8868cd7f4b5d51"
+  },
+  "s6": {
+   "url": "https://www.rheinpfalz.de/lokal/bad-duerkheim_artikel,-neuer-fass-p%C3%A4chter-legt-sofort-los-_arid,5590445.html",
+   "title": "Neuer Fass-Pächter legt sofort los",
+   "publisher": "Die Rheinpfalz",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:58.271Z",
+   "snapshot": "fc6986f914deff1319e1a53ff870ff6e9c41dbb41889e243a252a83b5e205439"
+  },
+  "s7": {
+   "url": "https://www.tageskarte.io/tourismus/detail/bad-duerkheim-groesstes-weinfest-der-welt-beginnt.html",
+   "title": "Bad Dürkheim: Größtes Weinfest der Welt beginnt",
+   "publisher": "Tageskarte (dpa)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:58.323Z",
+   "snapshot": "902a5632ddfd459677ca7f7579a8f546861b2eb5005107105cf6d028c082e006"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Restaurant",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "eine Straßenkreuzung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-372"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sierksdorf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-264"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Köln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; history entry seq 24; transcript tp-358"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dürkheimer Wurstmarkt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:49.465Z",
+   "target": "f11828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Restaurant",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ein Restaurant”, “A restaurant”, “ресторан”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:49.465Z",
+   "target": "f11829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "eine Straßenkreuzung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“eine Straßenkreuzung”, “a road junction”, “перекрёсток”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:49.465Z",
+   "target": "f11830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Erste Deutsche Bananenmuseum war von 1991 bis 2018 ein privates Museum in Sierksdorf im Kreis Ostholstein.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.465Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sierksdorf” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:49.465Z",
+   "target": "f11831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "„Maggikalypse“: Köln stinkt nach Suppe",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.465Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Köln” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:49.465Z",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Dürkheimer Wurstmarkt ist ein Volksfest in der rheinland-pfälzischen Kur- und Kreisstadt Bad Dürkheim an der Deutschen Weinstraße.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.465Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dürkheimer Wurstmarkt” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:24:11Z",
+   "target": "f11828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Allerdings dient es nicht der Aufbewahrung von Flüssigkeit, sondern ist als Gaststätte eingerichtet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:24:13Z",
+   "target": "f11828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ben Gaxherri wird ab dem kommenden Jahr das Restaurant im Dürkheimer Riesenfass führen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:24:55Z",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auf diesen findet alljährlich am zweiten und dritten Septemberwochenende der Dürkheimer Wurstmarkt statt, der mit über 600.000 Besuchern als das größte Weinfest der Welt gilt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:24:57Z",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die neuntägige Feier ist der pfälzischen Kommune zufolge das größte Weinfest der Welt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Superlative is a self-description by the town; the wording says regarded as."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:25:42Z",
+   "target": "f11829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wird im Volksmund eine der größten niveaugleichen Straßenkreuzungen Deutschlands bezeichnet, die nördlich an den Innenstadtbereich von Düsseldorf grenzt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:34.647Z",
+   "target": "f11828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Allerdings dient es nicht der Aufbewahrung von Flüssigkeit, sondern ist als Gaststätte eingerichtet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.647Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:34.647Z",
+   "target": "f11828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ben Gaxherri wird ab dem kommenden Jahr das Restaurant im Dürkheimer Riesenfass führen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.647Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:34.647Z",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auf diesen findet alljährlich am zweiten und dritten Septemberwochenende der Dürkheimer Wurstmarkt statt, der mit über 600.000 Besuchern als das größte Weinfest der Welt gilt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.647Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:34.647Z",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die neuntägige Feier ist der pfälzischen Kommune zufolge das größte Weinfest der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.647Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:34.647Z",
+   "target": "f11829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wird im Volksmund eine der größten niveaugleichen Straßenkreuzungen Deutschlands bezeichnet, die nördlich an den Innenstadtbereich von Düsseldorf grenzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.647Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:34.647Z",
+   "target": "f11832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auf diesen findet alljährlich am zweiten und dritten Septemberwochenende der Dürkheimer Wurstmarkt statt, der mit über 600.000 Besuchern als das größte Weinfest der Welt gilt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.647Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dürkheimer Wurstmarkt” is on the snapshot of s1"
+  }
+ ]
+}

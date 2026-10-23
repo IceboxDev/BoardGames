@@ -1,0 +1,372 @@
+{
+ "article": "a1721",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
+   "title": "Scuderia Ferrari – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:59.504Z",
+   "snapshot": "ccea18e94a3c0df3bc2161b1992cd485d7a389782c4b4afde11c9289ea63ba18"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mercedes-AMG_Petronas_F1_Team",
+   "title": "Mercedes-AMG Petronas F1 Team – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:00.468Z",
+   "snapshot": "2db1d482dcf58d9f009f8f4fc5d8b3f6e3c05e78d774351c5d7ec3a7a5a7c569"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing",
+   "title": "Red Bull Racing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:01.614Z",
+   "snapshot": "d5e610125c8e39f328c2f2fedbfbcda4d4aedf8fa612b150967027cb1ec2f6b2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Williams_Racing",
+   "title": "Williams Racing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:02.507Z",
+   "snapshot": "67ee652ed13c4f412994c74a2f068eee916fd8c7b0745b88c8e2458f3c8a154b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/McLaren_MP4/4",
+   "title": "McLaren MP4/4 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:03.348Z",
+   "snapshot": "733b319fafc511151d21ab3e32f58f16d3731ffc2280cd3a199aaed314cfb0f7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/List_of_Formula_One_World_Constructors%27_Champions",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:04.433Z",
+   "snapshot": "6d0927a4df758366ea9950892dcb3336b05bfe659195e56dfb72945afc90f5b2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/2023_Formula_One_World_Championship",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:05.557Z",
+   "snapshot": "fd0bf7aabe337642777eb71163ee1e0cfa7291a5ec611822fac51016f780531d"
+  },
+  "s8": {
+   "url": "https://www.formula1.com/en/teams/ferrari",
+   "title": "Ferrari – F1 Racing Team",
+   "publisher": "Formula 1 (FOM)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:51.016Z",
+   "snapshot": "97b726ef2ff22a1948d9aaea1b707d8526323f1531bce837a96ab0c3dc28cf43"
+  },
+  "s9": {
+   "url": "https://www.espn.com/f1/story/_/id/46332070/mclaren-wins-back-back-f1-constructors-title",
+   "title": "McLaren win back-to-back F1 constructors' championship; 10th overall",
+   "publisher": "ESPN",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:51.364Z",
+   "snapshot": "91d7db66c0892f7b17b7b72fa012408f8cb9c7360baa2b1bfd752a9a7809b9f6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferrari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mercedes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Bull Racing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Williams",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "McLaren",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:11.617Z",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferrari S.p.A, competing as Scuderia Ferrari HP (; Italian: [skudeˈriːa ferˈraːri]), is the racing division of luxury Italian auto manufacturer Ferrari and the racing team that competes in Formula One racing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferrari” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:11.617Z",
+   "target": "f08602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mercedes-Benz, a German automotive brand of the Mercedes-Benz Group, has been involved in Formula One as both team owner and engine manufacturer for various periods since 1954.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mercedes” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:11.617Z",
+   "target": "f08603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Bull Racing Limited, currently competing as Oracle Red Bull Racing and also known simply as Red Bull or RBR, is a Formula One racing team, competing under an Austrian racing licence and based in England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red Bull Racing” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:11.617Z",
+   "target": "f08604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Williams Grand Prix Engineering Limited, competing in 2026 as Atlassian Williams F1 Team, is a British Formula One team and constructor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Williams” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:11.617Z",
+   "target": "f08605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The McLaren MP4/4, also known as the McLaren-Honda MP4/4, was one of the most successful and dominant Formula One car designs of all time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “McLaren” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:58Z",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "securing their status as the most successful and decorated team in F1 history",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23",
+   "note": "The same official team page lists 'World Championships 16' (constructors' titles), the most of any team; McLaren is next with 10 (ESPN, Oct 2025)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:40:00Z",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "McLaren won their 10th constructors' championship.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the ranking: the nearest challenger, McLaren, has 10 titles to Ferrari's 16 (as of the 2025 season)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:59.008Z",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "securing their status as the most successful and decorated team in F1 history",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:59.008Z",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ferrari – F1 Racing Team – Leclerc, Hamilton",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ferrari” is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:59.008Z",
+   "target": "f08601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Rafael Câmara to Haas: How F1's next rookie could shake up Ferrari's future",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.008Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ferrari” is on the snapshot of s9"
+  }
+ ]
+}

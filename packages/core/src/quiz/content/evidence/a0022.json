@@ -1,0 +1,504 @@
+{
+ "article": "a0022",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Stephen_Hawking",
+   "title": "Stephen Hawking – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:25.644Z",
+   "snapshot": "c4c6afe41ffc07bc937e09dc53b5c1ebbf825c5e4874b7e1c1fda3103d29d1d7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Sagan",
+   "title": "Carl Sagan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:26.673Z",
+   "snapshot": "35e10f99bdd0bf871257cced4455866f16d6de77012fd05b481ba5602863f42c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Edwin_Hubble",
+   "title": "Edwin Hubble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:27.537Z",
+   "snapshot": "129354ded3a0fe33dc177e94ac95b2468c21f7d78c8412d52110c2858fbdb0a5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fred_Hoyle",
+   "title": "Fred Hoyle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:28.566Z",
+   "snapshot": "e0c12bdeb8c7ec549121ea3cb1314937dc56ff4d5b81bf77c8c7246b56af48c8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Georges_Lema%C3%AEtre",
+   "title": "Georges Lemaître – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:29.566Z",
+   "snapshot": "14c289ef1fa4fbf9ca3691d0d06fa12546378e3eca46061b04bfdbabac9fd7b7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Universum",
+   "title": "Universum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:15:26.879Z",
+   "snapshot": "7b42ea54e304d5e2967c73182a77d74f0bf11fe28af015d1f00856912750d856"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hubble%27s_law",
+   "title": "Hubble's law",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:30.454Z",
+   "snapshot": "6e7999b9a60b23f66e4d08eb186bd9b62cd4b3a9c118f174c6d9b2ae0aca40e3"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/A_Brief_History_of_Time",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:31.452Z",
+   "snapshot": "eabe464db76633a5140ca6e3d7faeec377801423d8ad369e8b9f24023d17d9ea"
+  },
+  "s9": {
+   "url": "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_reveals_an_almost_perfect_Universe",
+   "title": "Planck reveals an almost perfect Universe",
+   "publisher": "European Space Agency",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.641Z",
+   "snapshot": "ba999dfa94622f231217a95589c1508b00cbcfffb687ad36889c3f0a6d51f894"
+  },
+  "s10": {
+   "url": "https://www.mpg.de/7044245/Planck_universe",
+   "title": "Planck reveals an almost perfect Universe",
+   "publisher": "Max-Planck-Gesellschaft",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:21.182Z",
+   "snapshot": "eb2b92ba7cc80159fb28a2c16637847ec4f096003a6ddf1e74fad706a3579670"
+  },
+  "s11": {
+   "url": "https://science.nasa.gov/universe/overview/",
+   "title": "Universe Overview",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.994Z",
+   "snapshot": "7d45f4f86e53332c2c824dfead8a478f493feff49785267520a76a009fcf7489"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stephen Hawking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Sagan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edwin Hubble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fred Hoyle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Georges Lemaître",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 58"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "13,8 Milliarden Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-358"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Redshift",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-098"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f00106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A six-part television series Stephen Hawking's Universe and a companion book appeared in 1997; as Hawking insisted, the focus was entirely on science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stephen Hawking” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f00107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1993, engineers at Apple Computer code-named the Power Macintosh 7100 \"Carl Sagan\" in the hope that Apple would make \"billions and billions\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Sagan” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f00108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edwin Hubble Highway, the stretch of Interstate 44 passing through his birthplace of Marshfield, Missouri;",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edwin Hubble” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f00109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sir Fred Hoyle (24 June 1915 – 20 August 2001) was an English astronomer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fred Hoyle” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f00110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Later, in December 2022, VRT recovered in its archives a lost 20-minute interview with Georges Lemaître in 1964, \"a gem\", says cosmologist Thomas Hertog.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georges Lemaître” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "13,8 Milliarden Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“13,8 Milliarden Jahre”, “13.8 billion years”, “13,8 миллиарда лет”) on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:38.394Z",
+   "target": "f25241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A galaxy's recessional velocity is typically determined by measuring its redshift, a shift in the frequency of light emitted by the galaxy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Redshift” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:57:57Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The data imply that the age of the Universe is 13.82 billion years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "2013 Planck release; the final 2018 analysis gives 13.787 billion years — both round to 13.8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:57:58Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The data imply that the age of the Universe is 13.82 billion years. However, because the precision of Planck’s map is so high",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:58:00Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Around 13.8 billion years ago, the universe expanded faster than the speed of light for a fraction of a second, a period called cosmic inflation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:53.997Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The data imply that the age of the Universe is 13.82 billion years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:53.997Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The data imply that the age of the Universe is 13.82 billion years. However, because the precision of Planck’s map is so high",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:53.997Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Around 13.8 billion years ago, the universe expanded faster than the speed of light for a fraction of a second, a period called cosmic inflation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:53.997Z",
+   "target": "f10859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Around 13.8 billion years ago, the universe expanded faster than the speed of light for a fraction of a second, a period called cosmic inflation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “13.8 billion years” is on the snapshot of s11"
+  }
+ ]
+}

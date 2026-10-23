@@ -1,0 +1,242 @@
+{
+ "article": "a0281",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Anno_Domini_(Spiel)",
+   "title": "Anno Domini (Spiel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:19.183Z",
+   "snapshot": "f5db7a81f3376ccfa4fe10a282ece6cd6b313aa327901eba69e71f8cb568314f"
+  },
+  "s2": {
+   "url": "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Henry",
+   "title": "Frédéric Henry — Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T03:44:17.506Z",
+   "snapshot": "f9499843fcaefce07feb4f328b4869d1a4498eb1b7753ae31fc8fab36e5ecb4d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kakerlakenpoker",
+   "title": "Kakerlakenpoker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:20.206Z",
+   "snapshot": "729f3803a8184b98ea386022bc67b6329dcb534888662e3faf608fe32b7f0e37"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/6_nimmt!",
+   "title": "6 nimmt! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:17.806Z",
+   "snapshot": "894aa1f9e39860a77a702ffcb3ab764c07ee8e1d15e601e35a57cf6e0ca2ed4e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bohnanza",
+   "title": "Bohnanza – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:21.183Z",
+   "snapshot": "b305e51df38d3445dfc9de3003ec01064bd4abd444a4c53e617983c41b2c1594"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anno Domini",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Timeline",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kakerlakenpoker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "6 nimmt!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bohnanza",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:23.876Z",
+   "target": "f01401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anno Domini ist ein Wissens- und Bluffspiel in Form eines Kartenspiels von Urs Hostettler.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anno Domini” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:23.876Z",
+   "target": "f01402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Timeline, 2010, Hazgaard Editions",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Timeline” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:23.876Z",
+   "target": "f01403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kakerlakenpoker ist ein Karten- und Bluffspiel von Jacques Zeimet, das 2004 bei Drei Magier Spiele erschienen ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kakerlakenpoker” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:23.876Z",
+   "target": "f01404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "6 nimmt! / Take 5 / Beat the Heat is a card game for 2–10 players designed by Wolfgang Kramer in 1994 and published by Amigo Spiele and Hasbro .",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “6 nimmt!” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:23.876Z",
+   "target": "f01405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bohnanza ist ein Kartenspiel für ursprünglich drei bis fünf Personen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bohnanza” is on the snapshot of s5"
+  }
+ ]
+}

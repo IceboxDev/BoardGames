@@ -1,0 +1,415 @@
+{
+ "article": "a2411",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Superman_vs._Muhammad_Ali",
+   "title": "Superman vs. Muhammad Ali",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:19.186Z",
+   "snapshot": "6c5f456e69fa849117d4829d2fc76677059513a8108c3ec353187335f1004b65"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/The_Flash",
+   "title": "The Flash",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:17.090Z",
+   "snapshot": "24783394bd5486a8719c67d6b39ade56a331d7be72ed1315858254d0a54df9c1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Superman",
+   "title": "Superman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:20.453Z",
+   "snapshot": "350299dd4c72d4ac19890867123a6a79135acf53e0478b9ac11ad883cadf4333"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Flash_(DC_Comics_character)",
+   "title": "Flash (DC Comics character) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:21.303Z",
+   "snapshot": "356efada3840a6d78b2245a63bf23d1011830c4c3d05259c22b24f722fa454a3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wally_West",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:22.305Z",
+   "snapshot": "d21a338e278ef2c1abfeed89dbf61a83fdf87aa21b05f3a062e167499b554669"
+  },
+  "s6": {
+   "url": "https://www.lambiek.net/artists/f/fox_gardner.htm",
+   "title": "Gardner Fox – Lambiek Comiclopedia",
+   "publisher": "Lambiek Comiclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:09.117Z",
+   "snapshot": "51d9391ecc40b90c473077de1dd175291832da5c8f7194c71d7683c3fc3d28e5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Jay_Garrick",
+   "title": "Jay Garrick – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:09.965Z",
+   "snapshot": "04530cfe2dd06685dfdf69350e78795cb083fdeb99de9b8d44ddfcc5f017fa8a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Superman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-210"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Roter Blitz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; history entry seq 16; transcript tp-307"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12633",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kal-El",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jerry Siegel and Joe Shuster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barry Allen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jay Garrick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:16.202Z",
+   "target": "f12631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 72-page book features Superman teaming up with the heavyweight boxing champion Muhammad Ali to defeat an alien invasion of Earth, a story in which they are required to compete in a boxing match (without Superman's superpowers).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Superman” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:16.202Z",
+   "target": "f12632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Flash (im deutschen Sprachraum früher auch Blitzmann, Zack, Blitz oder Roter Blitz) ist die Hauptfigur einer US-amerikanischen Comicserie von DC Comics.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roter Blitz” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:16.202Z",
+   "target": "f12633",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Superman was born Kal-El, on the fictional planet Krypton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kal-El” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:16.202Z",
+   "target": "f12634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jerry Siegel and Joe Shuster met in 1932 while attending Glenville High School in Cleveland and bonded over their admiration of fiction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jerry Siegel and Joe Shuster” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:16.202Z",
+   "target": "f12635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "of \"the Speed Force\"– have assumed the mantle of the Flash in DC's history: college athlete Jay Garrick (1940–1951, 1961–2011, 2017–present), forensic scientist Barry Allen (1956–1985, 2008–present), Barry's nephew Wally West (1986–2011, 2016–present), and Barry's grandson Bart Allen (2006–2007).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barry Allen” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:16.202Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "characters –each of whom somehow gained the power of \"the Speed Force\"– have assumed the mantle of the Flash in DC's history: college athlete Jay Garrick (1940–1951, 1961–2011, 2017–present), forensic scientist Barry Allen (1956–1985, 2008–present), Barry's nephew Wally West (1986–2011,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jay Garrick” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:00:30Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The character is a college student named Jason Peter Garrick, who suffers a serious lab accident when he accidentally inhales hard water vapors.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same paragraph: debut in Flash Comics #1 (January 1940), co-created with Harry Lampert."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:00:31Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He is the first character known as the Flash.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:59.519Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The character is a college student named Jason Peter Garrick, who suffers a serious lab accident when he accidentally inhales hard water vapors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.519Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:59.519Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He is the first character known as the Flash.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.519Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:59.519Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The story was a crossover between the old Flash character, Jay Garrick (created by Fox and Harry Lampert) and the then-current Flash character Barry Allen (created by Robert Kanigher and Carmine Infantino).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.519Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jay Garrick” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:59.519Z",
+   "target": "f12636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In the original Golden Age comics, Jay Garrick gained his speed-enhancing abilities by inhaling hard water vapor during a lab experiment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.519Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jay Garrick” is on the snapshot of s7"
+  }
+ ]
+}

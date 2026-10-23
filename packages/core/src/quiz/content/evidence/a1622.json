@@ -1,0 +1,202 @@
+{
+ "article": "a1622",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Heinrich_von_Kleist",
+   "title": "Heinrich von Kleist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:18.924Z",
+   "snapshot": "884a0ac08d9abac264fe3a6766c77bc71dc47aaa6cfc57c4198a78085c0693f8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Henriette_Vogel",
+   "title": "Henriette Vogel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:20.035Z",
+   "snapshot": "6a94781baac14d95851aaa2456151bc62258810b6a71562d84c5d969886c00de"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Kohlhaas",
+   "title": "Michael Kohlhaas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:49.209Z",
+   "snapshot": "359d4159593101444be689622620ffa8cdffed2a33e8dd014afd28e5d3f8ad0b"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_zerbrochne_Krug",
+   "title": "Der zerbrochne Krug – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:39.067Z",
+   "snapshot": "17a91e428c157563f960f5f3bef073666ccb97ca475c53806033546747f5b3df"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Prinz_Friedrich_von_Homburg_oder_die_Schlacht_bei_Fehrbellin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:53.161Z",
+   "snapshot": "0c1ff0590bd3a611f4713484a315c88323f1808fb21847e94fea96bc4e167cd5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinrich von Kleist",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript c136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Henriette Vogel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Michael Kohlhaas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der zerbrochne Krug",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:52.582Z",
+   "target": "f08106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinrich von Kleist stand als „Außenseiter im literarischen Leben seiner Zeit […] jenseits der etablierten Lager“ und der Literaturepochen der Weimarer Klassik und der Romantik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich von Kleist” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:52.582Z",
+   "target": "f08107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Henriette Vogel lernte Heinrich von Kleist vermutlich 1809 durch dessen Freund Adam Müller, einen Mitschüler ihres Mannes Louis Vogel im Gymnasium zum Grauen Kloster in Berlin, kennen und schloss, da sie beide Ähnlichkeiten beieinander fanden, bald Freundschaft mit ihm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henriette Vogel” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:52.582Z",
+   "target": "f08108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Michael Kohlhaas ist eine Novelle von Heinrich von Kleist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Kohlhaas” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:52.582Z",
+   "target": "f08109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der zerbrochne Krug ist ein Lustspiel von Heinrich von Kleist und eines seiner bekanntesten Werke.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der zerbrochne Krug” is on the snapshot of s4"
+  }
+ ]
+}

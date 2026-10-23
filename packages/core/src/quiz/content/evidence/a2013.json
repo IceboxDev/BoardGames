@@ -1,0 +1,279 @@
+{
+ "article": "a2013",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hauptkirche_Sankt_Jacobi",
+   "title": "Hauptkirche Sankt Jacobi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:00.189Z",
+   "snapshot": "777df6daf5240603bbd4323c1499947fc9f23eb16a0b2d875a1b86feea31f05a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ether_Dome",
+   "title": "Ether Dome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:02.398Z",
+   "snapshot": "30ac2f73a96774be20f847f640c6787d7d09d9d9cea71353b302a04192a83da9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Edward_Jenner",
+   "title": "Edward Jenner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:38.466Z",
+   "snapshot": "b66f0371f0a7ffd14993a64a8b03c4c4e706fc02898157e707ceed3ea071336f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/W%C3%B6hler_synthesis",
+   "title": "Wöhler synthesis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:03.256Z",
+   "snapshot": "27b8aa0605cec2d46625e6efd73c70c3bebcc1173d76e943a047b5901e53db70"
+  },
+  "s5": {
+   "url": "https://hekint.org/?p=2830",
+   "title": "What November may bring: The first 37 days of surgical anesthesia",
+   "publisher": "Hektoen International",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:04.317Z",
+   "snapshot": "12bb4ae2854cca3c24c21a4f3b21fba5da34e437a3e1b4a087415f2321158a80"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blitzableiter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ether anaesthesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "smallpox vaccination",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "urea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:06.035Z",
+   "target": "f10061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jacobi auf Anregung von Johann Albert Heinrich Reimarus mit dem ersten Blitzableiter in Deutschland versehen, der durch Mathias Andreas Mettlerkamp ausgeführt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blitzableiter” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:06.035Z",
+   "target": "f10063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ether anaesthesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ether anaesthesia”, “Äthernarkose”, “эфирный наркоз”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:06.035Z",
+   "target": "f10064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This connection can be seen today; many present-day vaccinations include animal parts from cows, rabbits and chicken eggs, which can be attributed to the work of Jenner and his cowpox/smallpox vaccination.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “smallpox vaccination” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:06.035Z",
+   "target": "f10065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Wöhler synthesis is the conversion of ammonium cyanate into urea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “urea” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:28:46Z",
+   "target": "f10063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The event is often described as the first public ether anesthetic because it took place before an audience of physicians and medical students",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:28:48Z",
+   "target": "f10063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was the site of the first public demonstration of the use of inhaled ether as a surgical anesthetic on October 16, 1846, otherwise known as Ether Day",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:57:53.283Z",
+   "target": "f10063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The event is often described as the first public ether anesthetic because it took place before an audience of physicians and medical students",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:53.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:53.283Z",
+   "target": "f10063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was the site of the first public demonstration of the use of inhaled ether as a surgical anesthetic on October 16, 1846, otherwise known as Ether Day",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:53.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s2"
+  }
+ ]
+}

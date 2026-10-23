@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-170",
+ "image": "IMG20261007180034.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In der EU leben mehr Menschen als in China. Richtig oder falsch?",
+   "de": "Rund wie viele Millionen Menschen leben in der Europäischen Union?",
+   "en": "Roughly how many million people live in the European Union?",
+   "reworked": true,
+   "answerDe": "Rund 450 Millionen",
+   "answerEn": "About 450 million",
+   "timeline": {
+    "kind": "event",
+    "start": "2023-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Eurostat counts 448.4 million inhabitants in the European Union",
+    "labelDe": "Eurostat zählt 448,4 Millionen Einwohner in der Europäischen Union"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Europäische_Union",
+    "title": "Europäische Union",
+    "lang": "de"
+   },
+   "notes": "The card's statement is false: China has about 1.4 billion inhabitants, roughly three times the EU's ~450 million (448.4 million on 1 Jan 2023).",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welche bekannte Knetfigur sagte einmal zu ihrem vierbeinigen Freund: „Jeder weiß, dass der Mond aus Käse ist.“?",
+   "de": "Welche bekannte Knetfigur sagte einmal zu ihrem vierbeinigen Freund: „Jeder weiß, dass der Mond aus Käse ist.“?",
+   "en": "Which famous clay-animation character once said to his four-legged friend: “Everybody knows the moon's made of cheese.”?",
+   "reworked": false,
+   "answerDe": "Wallace (aus Wallace & Gromit)",
+   "answerEn": "Wallace (of Wallace & Gromit)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1989-11-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nick Park's Wallace & Gromit short A Grand Day Out, in which they fly to the cheese moon, is released",
+    "labelDe": "Nick Parks Wallace-&-Gromit-Kurzfilm „A Grand Day Out“, in dem sie zum Käsemond fliegen, erscheint"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/A_Grand_Day_Out",
+    "title": "A Grand Day Out",
+    "lang": "en"
+   },
+   "notes": "The four-legged friend is his dog Gromit.",
+   "domain": "film-media",
+   "sub": "animation"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welcher kleine, robuste und aus Tibet stammende Hund wurde früher in buddhistischen Klöstern als Wachhund eingesetzt?",
+   "de": "Welcher kleine, robuste und aus Tibet stammende Hund wurde früher in buddhistischen Klöstern als Wachhund eingesetzt?",
+   "en": "Which small, sturdy dog from Tibet was formerly used as a watchdog in Buddhist monasteries?",
+   "reworked": false,
+   "answerDe": "Lhasa Apso",
+   "answerEn": "Lhasa Apso",
+   "timeline": {
+    "kind": "event",
+    "start": "1935",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The American Kennel Club officially accepts the Tibetan Lhasa Apso as a breed",
+    "labelDe": "Der American Kennel Club erkennt den tibetischen Lhasa Apso offiziell als Rasse an"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lhasa_Apso",
+    "title": "Lhasa Apso",
+    "lang": "en"
+   },
+   "notes": "Historically a sentinel at Tibetan palaces and monasteries.",
+   "domain": "nature",
+   "sub": "mammals"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Shakespeare-Stück enthält keine Szene, in der ein Geist auftritt: Hamlet, Macbeth oder Romeo und Julia?",
+   "de": "In welchem Shakespeare-Stück erscheint dem Titelhelden der Geist seines ermordeten Vaters?",
+   "en": "In which Shakespeare play does the ghost of the title hero's murdered father appear to him?",
+   "reworked": true,
+   "answerDe": "Hamlet",
+   "answerEn": "Hamlet",
+   "timeline": {
+    "kind": "creation",
+    "start": "1599",
+    "end": "1601",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "William Shakespeare writes the tragedy Hamlet",
+    "labelDe": "William Shakespeare schreibt die Tragödie Hamlet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hamlet",
+    "title": "Hamlet",
+    "lang": "en"
+   },
+   "notes": "Reworked from a 'which has no ghost' choice (card answer: Romeo und Julia; Macbeth has Banquo's ghost) into the positive ghost fact; the Ghost appears four times in Hamlet.",
+   "domain": "literature",
+   "sub": "poetry"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Wissenschaftlerin war die erste, die den von ihr zu erforschenden Subjekten Namen gab, anstatt der sonst üblichen Zahlen?",
+   "de": "Welche Wissenschaftlerin war die erste, die den von ihr zu erforschenden Subjekten Namen gab, anstatt der sonst üblichen Zahlen?",
+   "en": "Which scientist was the first to give the subjects she studied names instead of the usual numbers?",
+   "reworked": false,
+   "answerDe": "Jane Goodall",
+   "answerEn": "Jane Goodall",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1934-04-03",
+    "end": "2025-10-01",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of Jane Goodall, British primatologist who studied the chimpanzees of Gombe",
+    "labelDe": "Leben von Jane Goodall, britische Primatenforscherin, die die Schimpansen von Gombe erforschte"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Jane_Goodall",
+    "title": "Jane Goodall",
+    "lang": "en"
+   },
+   "notes": "She named the Gombe chimpanzees (e.g. David Greybeard) when numbering was near-universal; 'the first' is the card's framing.",
+   "domain": "nature",
+   "sub": "mammals"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welcher Sportart kann man mit einem Acid Drop in eine Halfpipe springen?",
+   "de": "In welcher Sportart kann man mit einem Acid Drop in eine Halfpipe springen?",
+   "en": "In which sport can you jump into a halfpipe with an acid drop?",
+   "reworked": false,
+   "answerDe": "Skateboarding",
+   "answerEn": "Skateboarding",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1961-06-12",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Life of Duane Peters, skateboarder credited with inventing the acid drop",
+    "labelDe": "Leben von Duane Peters, Skateboarder, dem die Erfindung des Acid Drop zugeschrieben wird"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Duane_Peters",
+    "title": "Duane Peters",
+    "lang": "en"
+   },
+   "notes": "Duane Peters is credited with inventing the acid drop into a pool/bowl.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a0295",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Landtagswahl_in_K%C3%A4rnten_1999",
+   "title": "Landtagswahl in Kärnten 1999 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:45:24.382Z",
+   "snapshot": "b05b8113eda2861c2018205186b7bed1a01856ad18dfc079a67630cc59fe7369"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wolfgang_Sch%C3%BCssel",
+   "title": "Wolfgang Schüssel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:28.090Z",
+   "snapshot": "c6cd3a02cc7ab84f9143bd14a258fd340796ce225c31f6b49fc31f3161627e0f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Vranitzky",
+   "title": "Franz Vranitzky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:29.029Z",
+   "snapshot": "3e294f780a18860200dbc2a0ca08f14f0a1535cfc7a4a410bd0d31759d3f7fb0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Heinz-Christian_Strache",
+   "title": "Heinz-Christian Strache – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:30.037Z",
+   "snapshot": "330d0c3ec3e1938bbf5e4d36487174966d561952ca3790e2f7cddc22af2c70f1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Klestil",
+   "title": "Thomas Klestil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:31.034Z",
+   "snapshot": "77d458dde0ae4f0fe4417445bc01c73e9d15d6a03e0099615ab2a68f78bb10e3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/1999_Austrian_legislative_election",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:32.112Z",
+   "snapshot": "0a3fa32e1bf0d4b2b0a89ab01985df31ad5daf00d50b311182adbc56ce0be530"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jörg Haider",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wolfgang Schüssel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Vranitzky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heinz-Christian Strache",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thomas Klestil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:25.608Z",
+   "target": "f01471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nach dem Erfolg der FPÖ bei der Landtagswahl 1999 wurde erneut Jörg Haider zum Landeshauptmann gewählt, der dieses Amt bereits von 1989 bis 1991 innehatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jörg Haider” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:25.608Z",
+   "target": "f01472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wolfgang Schüssel (German pronunciation: [ˈvɔlfɡaŋ ˈʃʏsl̩]; born 7 June 1945) is a retired Austrian politician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Schüssel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:25.608Z",
+   "target": "f01473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Vranitzky (German: [fʁants vʁaˈnɪtski]; born 4 October 1937) is an Austrian politician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Vranitzky” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:25.608Z",
+   "target": "f01474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heinz-Christian Strache (Austrian German: [haɪnts ˈkrɪsti̯a(ː)n ˈʃtraxɛ]; born 12 June 1969) is  an Austrian politician and dental technician who served as Vice-Chancellor of Austria from 2017 to 2019 before resigning owing to his involvement in the Ibiza affair.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinz-Christian Strache” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:25.608Z",
+   "target": "f01475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thomas Klestil (German pronunciation: [ˈtoːmas ˈklɛstɪl] ; 4 November 1932 – 6 July 2004) was an Austrian diplomat and politician who served as the president of Austria from 1992 until his death in 2004.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Klestil” is on the snapshot of s5"
+  }
+ ]
+}

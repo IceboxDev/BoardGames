@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "typeRoots": ["../../packages/core/node_modules/@types"],
+    "types": ["node"],
+    "resolveJsonModule": true
+  },
+  "include": ["*.ts"]
+}

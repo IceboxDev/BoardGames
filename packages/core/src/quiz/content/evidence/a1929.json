@@ -1,0 +1,391 @@
+{
+ "article": "a1929",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Liver_transplantation",
+   "title": "Liver transplantation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:15.585Z",
+   "snapshot": "aedd53b07a9bc18aca5716e601b80bf7b283a907699c7a96c9b91d13f039a037"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cardiac_muscle",
+   "title": "Cardiac muscle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:11.636Z",
+   "snapshot": "4455129fd047f623135a61d03614202dc0c5cdf106155491964a26ed4575168a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kidney_transplantation",
+   "title": "Kidney transplantation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:12.715Z",
+   "snapshot": "36357ae4c9366f373eaa0c41276fc25096cf7010377a983417f241b4c36ffb79"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Joel_D._Cooper",
+   "title": "Joel D. Cooper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:13.604Z",
+   "snapshot": "a7fe205ca12cc1d1f7a49aaa0d806cd7ca7d4ca06646e10104ed0c9f6ce0e888"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Niere",
+   "title": "Niere",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:31:10.844Z",
+   "snapshot": "84eb1d7eee232a37d03849c0e126db86606c53a50768478e01365cbc5fb05d02"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Glomerulus_(kidney)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:14.536Z",
+   "snapshot": "3fe55f980d5c22fa05b0501aeb496ce8988121dd5e3a5fbc801b7a6f44a5c9b8"
+  },
+  "s7": {
+   "url": "https://www.informedhealth.org/in-brief-copy_1844.html",
+   "title": "How does the urinary system work?",
+   "publisher": "IQWiG (Institute for Quality and Efficiency in Health Care)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:28.288Z",
+   "snapshot": "ef21d7556614c982b5f060839b128673366cbab3063310395790b42ead6ef867"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "liver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "heart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kidney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "lung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "rund 300 Mal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-342"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "about 300 times",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:47.632Z",
+   "target": "f09641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Liver transplantation or hepatic transplantation is the replacement of a diseased liver with the healthy liver from another person (allograft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “liver” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:47.632Z",
+   "target": "f09642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cardiac muscle (also called heart muscle or myocardium) is one of three types of vertebrate muscle tissues, the others being skeletal muscle and smooth muscle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “heart” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:47.632Z",
+   "target": "f09643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kidney transplant or renal transplant is the organ transplant of a kidney into a patient with end-stage kidney disease (ESRD).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kidney” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:47.632Z",
+   "target": "f09644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cooper, FACS, is a thoracic surgeon known for having completed the first successful lung transplant and the first successful double lung transplant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lung” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:47.632Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "rund 300 Mal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“rund 300 Mal”, “about 300 times”, “около 300 раз”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:47.632Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "about 300 times",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“about 300 times”, “rund 300 Mal”, “около 300 раз”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:28:29Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Every day, all of the blood in your body (between five and six liters) passes through the kidneys about 300 times.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:28:32Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was etwa dem 300fachen des Blutvolumens des Körpers entspricht",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:38.493Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Every day, all of the blood in your body (between five and six liters) passes through the kidneys about 300 times.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:38.493Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was etwa dem 300fachen des Blutvolumens des Körpers entspricht",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:38.493Z",
+   "target": "f13440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Every day, all of the blood in your body (between five and six liters) passes through the kidneys about 300 times.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “about 300 times” is on the snapshot of s7"
+  }
+ ]
+}

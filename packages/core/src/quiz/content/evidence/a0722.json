@@ -1,0 +1,249 @@
+{
+ "article": "a0722",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities",
+   "title": "The Man Without Qualities – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:03.886Z",
+   "snapshot": "ed158ab30bdead76015815b264aac1f6272adcf0f2721abae493d4a495c3860b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/United_States_v._One_Book_Called_Ulysses",
+   "title": "United States v. One Book Called Ulysses – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:39.277Z",
+   "snapshot": "5fba9637976f56ee2125d1a14ba568fdb89f58b0c9a5a934e60f63d83288810e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ulysses_(novel)",
+   "title": "Ulysses (novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:46.809Z",
+   "snapshot": "97a73abec465c8c8bde6ec79044a2686929ffb9f3a63e7ee34e0911158573698"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz",
+   "title": "Berlin Alexanderplatz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:40.191Z",
+   "snapshot": "a8689ebe10b4110e008d8d548c3081713e614f11668c3d6f6dfecd2276d93aba"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Radetzkymarsch_(Roman)",
+   "title": "Radetzkymarsch (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:15:37.552Z",
+   "snapshot": "5b92128bfd309d2b3f04be0b1ffb2182e458ab8895d50e5dbfb3fa56af5a2b1f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:50.743Z",
+   "snapshot": "95845dbdd5ceb091fd65475790d31536726ed17c32eff367e5f749fc3827eb4b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Man Without Qualities",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ulysses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ulysses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-221"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berlin Alexanderplatz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Radetzkymarsch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:33.244Z",
+   "target": "f03606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Man Without Qualities (German: Der Mann ohne Eigenschaften; 1930–1943) is an unfinished modernist novel in three volumes and various drafts by the Austrian writer Robert Musil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Man Without Qualities” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:33.244Z",
+   "target": "f03608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "One Book Entitled Ulysses by James Joyce (Random House, Inc., Claimant), 72 F.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ulysses” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:33.244Z",
+   "target": "f03608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ulysses is a modernist novel by the Irish writer James Joyce.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ulysses” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:33.244Z",
+   "target": "f03609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berlin Alexanderplatz (German: [bɛʁˈliːn ʔalɛkˈsandɐˌplats]) is a 1929 novel by Alfred Döblin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin Alexanderplatz” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:33.244Z",
+   "target": "f03610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Radetzkymarsch ist der Titel eines 1932 publizierten historischen Romans von Joseph Roth.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Radetzkymarsch” is on the snapshot of s5"
+  }
+ ]
+}

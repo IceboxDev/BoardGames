@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "facets": [
+    {
+      "id": "topic",
+      "labels": {
+        "en": "Topic",
+        "de": "Thema",
+        "ru": "Тема"
+      },
+      "description": "What the article or question is about, as a slash path from broad to narrow (topic:music/opera/verdi). Free paths of lower-case slugs; reuse existing paths before inventing new ones.",
+      "hierarchical": true,
+      "open": "path"
+    },
+    {
+      "id": "region",
+      "labels": {
+        "en": "Region",
+        "de": "Region",
+        "ru": "Регион"
+      },
+      "description": "Where it happens or belongs: an ISO 3166-1 alpha-2 country code in lower case (region:de, region:fr), a continent, or world.",
+      "open": "iso-3166-1",
+      "values": [
+        {
+          "id": "africa",
+          "en": "Africa",
+          "de": "Afrika",
+          "ru": "Африка"
+        },
+        {
+          "id": "asia",
+          "en": "Asia",
+          "de": "Asien",
+          "ru": "Азия"
+        },
+        {
+          "id": "europe",
+          "en": "Europe",
+          "de": "Europa",
+          "ru": "Европа"
+        },
+        {
+          "id": "north-america",
+          "en": "North America",
+          "de": "Nordamerika",
+          "ru": "Северная Америка"
+        },
+        {
+          "id": "south-america",
+          "en": "South America",
+          "de": "Südamerika",
+          "ru": "Южная Америка"
+        },
+        {
+          "id": "oceania",
+          "en": "Oceania",
+          "de": "Ozeanien",
+          "ru": "Океания"
+        },
+        {
+          "id": "antarctica",
+          "en": "Antarctica",
+          "de": "Antarktis",
+          "ru": "Антарктида"
+        },
+        {
+          "id": "world",
+          "en": "World",
+          "de": "Welt",
+          "ru": "Мир"
+        }
+      ]
+    },
+    {
+      "id": "era",
+      "labels": {
+        "en": "Era",
+        "de": "Epoche",
+        "ru": "Эпоха"
+      },
+      "description": "Derived from the timeline event's start: era:m2/c19 (the 1800s), era:m1-bc/c5-bc, era:deep-time before 10,000 BC. Never stored.",
+      "mode": "derived",
+      "hierarchical": true,
+      "open": "path",
+      "values": [
+        {
+          "id": "deep-time",
+          "en": "Deep time",
+          "de": "Tiefenzeit",
+          "ru": "Глубокое время"
+        }
+      ]
+    },
+    {
+      "id": "form",
+      "labels": {
+        "en": "Question form",
+        "de": "Frageform",
+        "ru": "Форма вопроса"
+      },
+      "description": "How the question asks. Derived from the wording's interrogative; store one only to correct the guess.",
+      "mode": "both",
+      "single": true,
+      "values": [
+        {
+          "id": "who",
+          "en": "Who",
+          "de": "Wer",
+          "ru": "Кто"
+        },
+        {
+          "id": "what",
+          "en": "What",
+          "de": "Was",
+          "ru": "Что"
+        },
+        {
+          "id": "when",
+          "en": "When",
+          "de": "Wann",
+          "ru": "Когда"
+        },
+        {
+          "id": "where",
+          "en": "Where",
+          "de": "Wo",
+          "ru": "Где"
+        },
+        {
+          "id": "how-many",
+          "en": "How many",
+          "de": "Wie viele",
+          "ru": "Сколько"
+        },
+        {
+          "id": "which-not",
+          "en": "Which … not",
+          "de": "Welche … nicht",
+          "ru": "Какой … не"
+        },
+        {
+          "id": "definition",
+          "en": "Definition",
+          "de": "Definition",
+          "ru": "Определение"
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "labels": {
+        "en": "Answer type",
+        "de": "Antworttyp",
+        "ru": "Тип ответа"
+      },
+      "description": "What kind of thing the answer is. date and number are derived from the answer's shape; the rest are stored.",
+      "mode": "both",
+      "single": true,
+      "values": [
+        {
+          "id": "person",
+          "en": "Person",
+          "de": "Person",
+          "ru": "Человек"
+        },
+        {
+          "id": "place",
+          "en": "Place",
+          "de": "Ort",
+          "ru": "Место"
+        },
+        {
+          "id": "work",
+          "en": "Work",
+          "de": "Werk",
+          "ru": "Произведение"
+        },
+        {
+          "id": "date",
+          "en": "Date",
+          "de": "Datum",
+          "ru": "Дата"
+        },
+        {
+          "id": "number",
+          "en": "Number",
+          "de": "Zahl",
+          "ru": "Число"
+        },
+        {
+          "id": "term",
+          "en": "Term",
+          "de": "Begriff",
+          "ru": "Термин"
+        },
+        {
+          "id": "organisation",
+          "en": "Organisation",
+          "de": "Organisation",
+          "ru": "Организация"
+        },
+        {
+          "id": "taxon",
+          "en": "Taxon",
+          "de": "Taxon",
+          "ru": "Таксон"
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "labels": {
+        "en": "Audience",
+        "de": "Zielgruppe",
+        "ru": "Аудитория"
+      },
+      "description": "de-specific: needs a German-speaking background (German TV, Bundesliga, school canon); international otherwise.",
+      "single": true,
+      "values": [
+        {
+          "id": "de-specific",
+          "en": "German-specific",
+          "de": "Deutschlandspezifisch",
+          "ru": "Специфично для Германии"
+        },
+        {
+          "id": "international",
+          "en": "International",
+          "de": "International",
+          "ru": "Международный"
+        }
+      ]
+    },
+    {
+      "id": "risk",
+      "labels": {
+        "en": "Risk",
+        "de": "Risiko",
+        "ru": "Риск"
+      },
+      "description": "Why the answer may be or become wrong. time-sensitive is also derived (\"current\", \"as of\", \"bis heute\", a reviewBy date).",
+      "mode": "both",
+      "values": [
+        {
+          "id": "number",
+          "en": "Exact number",
+          "de": "Genaue Zahl",
+          "ru": "Точное число"
+        },
+        {
+          "id": "superlative",
+          "en": "Superlative",
+          "de": "Superlativ",
+          "ru": "Превосходная степень"
+        },
+        {
+          "id": "time-sensitive",
+          "en": "Time-sensitive",
+          "de": "Zeitabhängig",
+          "ru": "Зависит от времени"
+        },
+        {
+          "id": "contested",
+          "en": "Contested",
+          "de": "Umstritten",
+          "ru": "Спорный"
+        },
+        {
+          "id": "which-not",
+          "en": "Which … not",
+          "de": "Welche … nicht",
+          "ru": "Какой … не"
+        }
+      ]
+    },
+    {
+      "id": "difficulty",
+      "labels": {
+        "en": "Difficulty",
+        "de": "Schwierigkeit",
+        "ru": "Сложность"
+      },
+      "single": true,
+      "values": [
+        {
+          "id": "easy",
+          "en": "Easy",
+          "de": "Leicht",
+          "ru": "Лёгкий"
+        },
+        {
+          "id": "medium",
+          "en": "Medium",
+          "de": "Mittel",
+          "ru": "Средний"
+        },
+        {
+          "id": "hard",
+          "en": "Hard",
+          "de": "Schwer",
+          "ru": "Сложный"
+        }
+      ]
+    },
+    {
+      "id": "source",
+      "labels": {
+        "en": "Printed by",
+        "de": "Gedruckt von",
+        "ru": "Издано в"
+      },
+      "description": "The games that print the question. Derived from the printed wordings; never stored.",
+      "mode": "derived",
+      "values": [
+        {
+          "id": "quiztopia",
+          "en": "Quiztopia",
+          "de": "Quiztopia",
+          "ru": "Quiztopia"
+        },
+        {
+          "id": "trivial-pursuit",
+          "en": "Trivial Pursuit",
+          "de": "Trivial Pursuit",
+          "ru": "Trivial Pursuit"
+        },
+        {
+          "id": "publish-or-perish",
+          "en": "Publish or Perish",
+          "de": "Publish or Perish",
+          "ru": "Publish or Perish"
+        },
+        {
+          "id": "publish-or-perish-mge",
+          "en": "Publish or Perish: MGE",
+          "de": "Publish or Perish: MGE",
+          "ru": "Publish or Perish: MGE"
+        }
+      ]
+    },
+    {
+      "id": "printed",
+      "labels": {
+        "en": "Printed",
+        "de": "Gedruckt",
+        "ru": "Издано"
+      },
+      "description": "yes when a game prints the question (an article: any of its questions). Derived; never stored.",
+      "mode": "derived",
+      "single": true,
+      "values": [
+        {
+          "id": "yes",
+          "en": "Printed",
+          "de": "Gedruckt",
+          "ru": "Издано"
+        },
+        {
+          "id": "no",
+          "en": "Homebrew",
+          "de": "Eigene Frage",
+          "ru": "Собственный вопрос"
+        }
+      ]
+    }
+  ]
+}

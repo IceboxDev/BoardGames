@@ -1,0 +1,489 @@
+{
+ "article": "a2018",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bonze",
+   "title": "Bonze – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:16.938Z",
+   "snapshot": "d6a2b8e3d2efa736e4292aa2c3ff90679bff458cb5c7297383fc1aa952316256"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Business_magnate",
+   "title": "Business magnate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:20.316Z",
+   "snapshot": "07d50195e93abf2b78712e3fb8c5b65b6b4109906e1d43d805c1814b271c9cfb"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/pasha",
+   "title": "pasha – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/guru",
+   "title": "guru – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Imperial_examination",
+   "title": "Imperial examination – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:21.556Z",
+   "snapshot": "8697d355595ee030e9932579fcd55f9f34bdf0b98995af32daf717afb543fb5a"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Pascha",
+   "title": "Pascha – DWDS",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS, Pfeifer etymology)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:04.445Z",
+   "snapshot": "bda717469a4ab278562ba0b23b18c36cc28be64a6889d680c767bef041eb655a"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Pascha_Titel",
+   "title": "Pascha – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:05.590Z",
+   "snapshot": "df01f9738090169c47f36fec98c4b9ee3efc558d102e1cb3f56a6fc132f4d922"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Guru",
+   "title": "Guru – DWDS",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:05.418Z",
+   "snapshot": "62a223ec87c153700afa21e06b2fc00f1c37a0ee67d94b3e0a7daeadbf95707e"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Guru",
+   "title": "Guru – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:06.117Z",
+   "snapshot": "97fe46fbeb80eb3a84447b650dd987867c6b8280a76ad3b9ab87b458f9dda6b0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bonze",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tycoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pasha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Guru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mandarin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:07.175Z",
+   "target": "f10086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der umgangssprachliche, abwertende Ausdruck Bonze wird als Fremdbezeichnung für reiche oder einflussreiche Personen in Gesellschaft, Wirtschaft oder Politik verwendet, zum Beispiel Geschäftsführer großer Unternehmen oder Funktionäre von Parteien (vgl.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bonze” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:07.175Z",
+   "target": "f10087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A business magnate, also known as an industrialist or tycoon, is a person who is a powerful entrepreneur and investor who controls, through personal enterprise ownership or a dominant shareholding position, a firm or industry whose goods or services are widely consumed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tycoon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:07.175Z",
+   "target": "f10090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mandarin square",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mandarin” is on the snapshot of s5"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:35Z",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pascha m. Titel höchster osmanischer Amtspersonen (18. Jh.), ‘anspruchsvoll und herrschsüchtig auftretender Mensch’ (19. Jh.)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:45:37Z",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mann, der Frauen als dem Mann untergeordnet ansieht und sich von ihnen gern bedienen, verwöhnen lässt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden marks this sense 'abwertend'; the other sense is the historical title of high Ottoman officers."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:45:41Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Person, die auf einem bestimmten (Fach-)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Full DWDS sense: 'umgangssprachlich, gelegentlich abwertend Person, die auf einem bestimmten (Fach-)Gebiet ein (selbsternannter) Experte ist'."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:45:44Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Übernahme (in Reiseberichten 18. Jh.) von Hindi gurū, aus aind. gurú ‘schwer, gewichtig, ehrwürdig’.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:45:48Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "die Gurus der freien Marktwirtschaft",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden lists this as the figurative use; main sense: religious teacher in Hinduism, from Sanskrit guru 'weighty, venerable'."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pascha m. Titel höchster osmanischer Amtspersonen (18. Jh.), ‘anspruchsvoll und herrschsüchtig auftretender Mensch’ (19. Jh.)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mann, der Frauen als dem Mann untergeordnet ansieht und sich von ihnen gern bedienen, verwöhnen lässt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Übernahme (in Reiseberichten 18. Jh.) von Hindi gurū, aus aind. gurú ‘schwer, gewichtig, ehrwürdig’.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "die Gurus der freien Marktwirtschaft",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pascha – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pascha” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pascha ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pascha” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Guru – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Guru” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:54.119Z",
+   "target": "f10089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Guru ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:54.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Guru” is on the snapshot of s9"
+  }
+ ]
+}

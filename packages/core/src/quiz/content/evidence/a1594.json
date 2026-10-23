@@ -1,0 +1,335 @@
+{
+ "article": "a1594",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jurassic",
+   "title": "Jurassic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:42.167Z",
+   "snapshot": "578b541fc786d57225a70dbbfdb99928f05f76e323d4b3892b6f10e37b0f4ef8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Eifelkalkmulden",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:10:39.299Z",
+   "snapshot": "0a9bddc19ba7bcce82f0ea621fbddd0266bc77595789e39502d204ef1a7a67eb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Strasbourg_Cathedral",
+   "title": "Strasbourg Cathedral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:43.154Z",
+   "snapshot": "65a5906aad56530c75b3e1833a98c6a970b7a28d2fd3d7898928e2ddbab01a42"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Montserrat_(mountain)",
+   "title": "Montserrat (mountain) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:43.943Z",
+   "snapshot": "c164c94ddbf0c7922b12abbfdae8c548bdcbb55fdcbbf4bfd7aa26ad6e19c8c1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Zechstein",
+   "title": "Zechstein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:44.957Z",
+   "snapshot": "af3619b98336eab2eac999370246b3f070a043ea27c2b48b27475386e3f2a452"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cretaceous",
+   "title": "Cretaceous – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:46.066Z",
+   "snapshot": "36449f5055cdc7a227d2206cf638de3befdc0c27710fc3f9790a8c62c83b44c9"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Igneous_rock",
+   "title": "Igneous rock",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:47.052Z",
+   "snapshot": "35b8b3b10fb48dfb13e4662dc847d56d851e7504bb1b9c59515fc1c38de0193e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Limestone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kalkstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sandstone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Conglomerate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rock salt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chalk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Igneous rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-064"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f07966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Jurassic constitutes the second and middle period of the Mesozoic Era as well as the eighth period of the Phanerozoic Eon and is named after the Jura Mountains, where limestone strata from the period were first identified.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Limestone” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f07966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neben dem Kalkstein waren Bodenschätze wie Eisenerze und Blei-Zink-Erze Voraussetzungen für die industrielle Entwicklung der Eifel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kalkstein” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f07967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The reddish-brown sandstone from the Vosges mountains gives the cathedral its distinctive colour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sandstone” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f07968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The mountain is composed of strikingly pink conglomerate, a form of sedimentary rock.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Conglomerate” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f07969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The lithologies found are halite (\"rock salt\"), anhydrite, dolomite and shale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rock salt” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f07970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The name is derived from the Latin creta, 'chalk', which is abundant in deposits from the latter half of the period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chalk” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:48.355Z",
+   "target": "f25266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Igneous rock (igneous from Latin  igneus 'fiery'), or magmatic rock, is one of the three main rock types, the others being sedimentary and metamorphic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Igneous rock” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,428 @@
+{
+ "article": "a0302",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Berlin-Alexanderplatz_(1931_film)",
+   "title": "Berlin-Alexanderplatz (1931 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:10.150Z",
+   "snapshot": "3f801364394194c6fc82770fbe73d87769cd6f6a8b6dfc280ae69fbdd972ecd2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Magic_Mountain",
+   "title": "The Magic Mountain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:11.215Z",
+   "snapshot": "0d610ab4853fc9bd9eb09431ff3d9d24963a49ff27ab107cc803da636d632205"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Steppenwolf_(novel)",
+   "title": "Steppenwolf (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:12.134Z",
+   "snapshot": "5ab080159d61a73ab7ba1c09b01797f60c578b44d19ddb5e1cd584ac3d45c6f8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Trial_(1962_film)",
+   "title": "The Trial (1962 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:13.165Z",
+   "snapshot": "3f8a68d71df9fd09b7170d011aac05aa0fcdceb5b8850aa7e62f68a9d84b56bd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Little_Man,_What_Now%3F_(novel)",
+   "title": "Little Man, What Now? (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:14.132Z",
+   "snapshot": "535ea4baa21fb2e1f35262461977e12f1ce40e3aff465969894cb31e20fc359a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Jeder_stirbt_f%C3%BCr_sich_allein_(Roman)",
+   "title": "Jeder stirbt für sich allein (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:12.464Z",
+   "snapshot": "493b5f4d789115ff4753192ff488ffbfbf97f8c5f3353ccef2c384d5fd7c9e26"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Berlin_Alexanderplatz_(Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:13.602Z",
+   "snapshot": "a67097d9490056669abee84d180bf3607882482c69dfa095f84b6a88be7215f4"
+  },
+  "s8": {
+   "url": "https://oe1.orf.at/artikel/271027/Jeder-stirbt-fuer-sich-allein",
+   "title": "Jeder stirbt für sich allein – Ö1 (ORF)",
+   "publisher": "ORF Ö1",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:14.884Z",
+   "snapshot": "ad2ebfca19007c896ede3d4234ed49c3097b40952d062fea908b65ca93722d22"
+  },
+  "s9": {
+   "url": "http://www.complete-review.com/reviews/deutsch/fallada.htm",
+   "title": "Every Man Dies Alone – The Complete Review",
+   "publisher": "The Complete Review",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:15.790Z",
+   "snapshot": "885c5381552b7f5af3d933603f6d5a1b2e23a1ee12ee5e0f95c8b69a493a24ea"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berlin Alexanderplatz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Magic Mountain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Steppenwolf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Trial",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Little Man, What Now?",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "4 Wochen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-342"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:26.939Z",
+   "target": "f01506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berlin-Alexanderplatz or The Story of Franz Biberkopf (German: Die Geschichte vom Franz Biberkopf) is a 1931 German drama film directed by Phil Jutzi and starring Heinrich George, Maria Bard and  Margarete Schlegel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin Alexanderplatz” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:26.939Z",
+   "target": "f01507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Magic Mountain (German: Der Zauberberg, pronounced [deːɐ̯ ˈtsaʊbɐˌbɛʁk] ) is a German novel written by Thomas Mann, published in November 1924 about a young and aspiring engineer Hans Castorp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Magic Mountain” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:26.939Z",
+   "target": "f01508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Steppenwolf (originally Der Steppenwolf) is the tenth novel by German-Swiss author Hermann Hesse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steppenwolf” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:26.939Z",
+   "target": "f01509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Trial (French: Le Procès) is a 1962 drama film written and directed by Orson Welles, based on the 1925 posthumously published novel of the same name by Franz Kafka.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Trial” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:26.939Z",
+   "target": "f01510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Little Man, What Now? (German title: Kleiner Mann – was nun?) is a novel by Hans Fallada, which although first published in June 1932, is set between 1930 and November 1932.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Little Man, What Now?” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:26.939Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "4 Wochen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“4 Wochen”, “4 weeks”, “4 недели”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:18Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fallada schrieb den Roman Ende 1946 in knapp vier Wochen; am 5. Februar 1947 starb er.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:00:24Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fallada begann sich mit dem Thema zu beschäftigen und verfasste im Herbst 1946 innerhalb von vier Wochen den 866 Typoskriptseiten umfassenden Roman.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:00:26Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the endpapers claim: \"Fallada wrote the book in 24 days\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23",
+   "note": "24 days ≈ just under four weeks; consistent with the card's '4 weeks' option."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:47.451Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fallada schrieb den Roman Ende 1946 in knapp vier Wochen; am 5. Februar 1947 starb er.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:47.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:47.451Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fallada begann sich mit dem Thema zu beschäftigen und verfasste im Herbst 1946 innerhalb von vier Wochen den 866 Typoskriptseiten umfassenden Roman.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:47.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:47.451Z",
+   "target": "f12775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the endpapers claim: \"Fallada wrote the book in 24 days\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:47.451Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  }
+ ]
+}

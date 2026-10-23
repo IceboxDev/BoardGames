@@ -1,0 +1,576 @@
+{
+ "article": "a2088",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/IBM_Personal_Computer",
+   "title": "IBM Personal Computer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:40.859Z",
+   "snapshot": "9780b5d3fd2874bfc1e3ac0217f276a453cf8b15e778b5f6ed6ff259f965e77c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/BIOS",
+   "title": "BIOS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:41.945Z",
+   "snapshot": "2fab33f6f6d20f053d5b10abad737eae8a15d4ada827c05a6f8ab0714a6de09a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/PC_DOS",
+   "title": "PC DOS",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:39.369Z",
+   "snapshot": "944c7887c0ac90c92a309241955bdbdf2ff9e74e3ff5ef167ef6ab0eb6b7753d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Microsoft_Windows",
+   "title": "Microsoft Windows",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:40.278Z",
+   "snapshot": "52a5254d8aa8cb47547b07592669a38726cf3bfd5a1e5b844ce5defe10d7ad75"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Disk_operating_system",
+   "title": "Disk operating system – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:33.991Z",
+   "snapshot": "bbcd448164e2edbb2c36f20de664f1517d1a2cb678ac15d71bf7b61cb8a72aa3"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/dos",
+   "title": "DOS – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:34.263Z",
+   "snapshot": "0a15ca9e3377c89564ad5adeaf806c78b0bfa22df0a8428931b09c4e6ffede12"
+  },
+  "s7": {
+   "url": "https://www.ibm.com/history/personal-computer",
+   "title": "The IBM PC – IBM Heritage",
+   "publisher": "IBM",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:34.465Z",
+   "snapshot": "49d938033ddb1ff0ddf497ca848fc1efaa3619c7fa393938a1f586ec621a7565"
+  },
+  "s8": {
+   "url": "https://www.computinghistory.org.uk/det/5406/Microsoft-releases-Windows-1-0/",
+   "title": "Microsoft releases Windows 1.0",
+   "publisher": "Centre for Computing History",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:35.268Z",
+   "snapshot": "4d2188d629af1a03a207275c700163417930974211cb8a634d2ce4439ed1cb7d"
+  },
+  "s9": {
+   "url": "https://blogs.windows.com/windowsexperience/2015/06/01/hello-world-windows-10-available-on-july-29/",
+   "title": "Hello World: Windows 10 Available on July 29",
+   "publisher": "Microsoft (Windows Experience Blog)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:35.235Z",
+   "snapshot": "e812c724bc96a7178330e39394086acd15934f122024c9689c36a544f0ceff39"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Windows_10",
+   "title": "Windows 10 – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:35.517Z",
+   "snapshot": "a2a2868b583893333ba0619b0e792fd58ff08573aea967832cca02189fd6b967"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Disk Operating System",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Basic Input/Output System",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MS-DOS",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; history entry seq 18; transcript tp-268"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "30 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; history entry seq 25; transcript tp-320"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:19.968Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Disk Operating System",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Disk Operating System”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:19.968Z",
+   "target": "f10437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In computing, BIOS or the Basic Input/Output System is a type of firmware used to provide runtime services for operating systems and programs and to perform hardware initialization during the booting process (power-on startup).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.968Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basic Input/Output System” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:19.968Z",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "PC DOS, teils auch IBM DOS, ist eine von IBM von den 1980ern bis in die frühen 2000er vertriebene Markenversion von MS-DOS, das von Microsoft für den Einsatz auf IBM-PC-kompatiblen Computern lizenziert wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:19.968Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MS-DOS” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:19.968Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "30 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“30 Jahre”, “30 years”, “30 лет”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:47:48Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A disk operating system (DOS) is a computer operating system that requires a hard disk (HDD), floppy disk, solid-state drive (SSD), or other direct-access storage device as secondary storage.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:47:51Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "abbreviation for disk operating system: a type of operating system for computers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:47:53Z",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Microsoft provided the OS, which would later become known as MS-DOS.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:47:55Z",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "CP/M-86 was not available for six months after the PC's release[77] and received extremely few orders once it was,[78] and p-System was also not available at release.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "PC DOS (IBM's MS-DOS) was the only announced OS available at launch; ROM BASIC also shipped."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:57Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "on 20th November 1985 Microsoft finally releases Windows version 1.0.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Windows 1.0: 20 Nov 1985; Windows 10: 29 Jul 2015 → 29 years 8 months, about 30 years."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:47:59Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "On July 29, you can get Windows 10 for PCs and tablets by taking advantage of the free upgrade offer,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Microsoft's announcement, 1 June 2015."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:48:01Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "it was released to manufacturing on July 15, 2015, became generally available on July 29, 2015,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A disk operating system (DOS) is a computer operating system that requires a hard disk (HDD), floppy disk, solid-state drive (SSD), or other direct-access storage device as secondary storage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "abbreviation for disk operating system: a type of operating system for computers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Microsoft provided the OS, which would later become known as MS-DOS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "on 20th November 1985 Microsoft finally releases Windows version 1.0.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "On July 29, you can get Windows 10 for PCs and tablets by taking advantage of the free upgrade offer,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f14158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "it was released to manufacturing on July 15, 2015, became generally available on July 29, 2015,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A disk operating system (DOS) is a computer operating system that requires a hard disk (HDD), floppy disk, solid-state drive (SSD), or other direct-access storage device as secondary storage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Disk Operating System” is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f10436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "abbreviation for disk operating system: a type of operating system for computers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Disk Operating System” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mion recommended Digital Research’s CP/M and Microsoft’s MS-DOS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “MS-DOS” is on the snapshot of s1"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:07.341Z",
+   "target": "f14157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Microsoft provided the OS, which would later become known as MS-DOS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:07.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “MS-DOS” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,209 @@
+{
+ "article": "a2798",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Milutin_Milankovi%C4%87",
+   "title": "Milutin Milanković",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:35.274Z",
+   "snapshot": "80c2578acd57bc31743852cc1200ac178fecc6b4bd3437930f814346c7a2304a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Younger_Dryas",
+   "title": "Younger Dryas",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:36.224Z",
+   "snapshot": "00ec11c69a8025cd02fc98944d2aafb64af0f41584fb964bd14967666009ed89"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Snowball_Earth",
+   "title": "Snowball Earth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:37.311Z",
+   "snapshot": "3e612a09e34d7f8f58a6ce244ef22cdb3d6fb1528f858112c6b79c6a61c64f7c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Little_Ice_Age",
+   "title": "Little Ice Age",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:38.346Z",
+   "snapshot": "f118214782e5ed9fa7932b3cf1c2771c008804e96e9e17737986010b63e812d9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Hunters_in_the_Snow",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:39.092Z",
+   "snapshot": "3d8cdb5c9ef9c286e8bf8a43f8490651241af818274e59566a53036e604f12d5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Milankovitch_cycles",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:40.225Z",
+   "snapshot": "35bf97f25087f8719b54537a23194b4ffcf377bf6c9b3f848c5ea7344c9335a7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f28604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Milutin Milanković",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 2"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f28605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Younger Dryas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f28606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snowball Earth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f28607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Little Ice Age",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:14.713Z",
+   "target": "f28604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Milutin Milanković (sometimes anglicised as Milutin Milankovitch; Serbian Cyrillic: Милутин Миланковић, pronounced [milǔtin milǎːnkoʋitɕ]; 28 May 1879 – 12 December 1958) was a Serbian mathematician, astronomer, climatologist, geophysicist, civil engineer, university professor, popularizer of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milutin Milanković” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:14.713Z",
+   "target": "f28605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Younger Dryas (YD, Greenland Stadial GS-1) was the final climatic phase of the Last Glacial Period that occurred from around 12,900 to 11,700 years Before Present (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Younger Dryas” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:14.713Z",
+   "target": "f28606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Snowball Earth is a geohistorical hypothesis proposing that during one or more of Earth's icehouse climates, the planet's surface was nearly entirely frozen, with little or no liquid water exposed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snowball Earth” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:14.713Z",
+   "target": "f28607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Little Ice Age (LIA) was a period of regional cooling, particularly pronounced in the North Atlantic region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Little Ice Age” is on the snapshot of s4"
+  }
+ ]
+}

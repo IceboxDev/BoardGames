@@ -1,0 +1,242 @@
+{
+ "article": "a2191",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wei%C3%9Fwurst",
+   "title": "Weißwurst",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:07.398Z",
+   "snapshot": "4c0b29630864b6a66e8692fdb8916b357055412cc733391107273439c4807ef2"
+  },
+  "s2": {
+   "url": "https://fr.wikipedia.org/wiki/Charcuterie",
+   "title": "Charcuterie",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:47:06.443Z",
+   "snapshot": "4c125bfb3d3f17b7af8f215bc0828c3db959ad40ae0407ba1fffb03a8a9a65d1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Salumeria",
+   "title": "Salumeria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:08.196Z",
+   "snapshot": "f2195baf2eba6c8b17d9f7b41f542e9a590bab6345a2fcecc1b1fe3cc28ae711"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jam%C3%B3n_ib%C3%A9rico",
+   "title": "Jamón ibérico – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:09.210Z",
+   "snapshot": "bacaf759609d1aae7080f42fdee5b3df4f7d70d6149da2df7d146231b597ef78"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bratwurst",
+   "title": "Bratwurst – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:10.220Z",
+   "snapshot": "9bf51363f8c60aaad7972c634dd56eee49dba8e33b73a5867b607790b8730723"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zuzeln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-231"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charcuterie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-233"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Salumeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jamón ibérico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11134",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thüringer Rostbratwurst",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:34.981Z",
+   "target": "f11130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "So fand er einen Stich aus dem Jahr 1814, der Münchner in einem Bockkeller beim „Zuzeln“ von Weißwürsten zeigt, und konnte in einem alten Metzgerhandbuch einen Eintrag recherchieren, der besagt, „dass die Weißwurst dasselbe ist, wie die Maibockwurst, nur weniger scharf gewürzt und mit geringerem",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zuzeln” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:34.981Z",
+   "target": "f11131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Une charcuterie est une préparation alimentaire à base de viande et d'abats, crues ou cuites, de divers types.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charcuterie” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.981Z",
+   "target": "f11132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A salumeria is a food producer and retail store that produces salumi and other food products.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salumeria” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.981Z",
+   "target": "f11133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jamón ibérico (Spanish: [xaˈmon iˈβeɾiko]; Spanish for \"Iberian ham\"), known in Portuguese as presunto ibérico (Portuguese: [pɾɨˈzũtu iˈβɛɾiku]), is a variety of jamón or presunto, a type of cured leg of pork (primarily Black Iberian pigs) produced in Spain and Portugal, in the Iberian Peninsula.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jamón ibérico” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.981Z",
+   "target": "f11134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Its size is similar to the Thüringer Rostbratwurst, but its ingredients include white wine from the region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thüringer Rostbratwurst” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a1854",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Arno_Funke",
+   "title": "Arno Funke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:12.493Z",
+   "snapshot": "0b5d067937a9b7428670e218ca5f4fc7493578a8fc80bfeb5affbb9f4dbe8ab1"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hauptmann_von_K%C3%B6penick",
+   "title": "Hauptmann von Köpenick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:10.029Z",
+   "snapshot": "c195c046bc51139a0bc9a9ae8f52d13d4a133d36025850a1c27a59a776f6d1ed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Peter_K%C3%BCrten",
+   "title": "Peter Kürten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:13.458Z",
+   "snapshot": "e78f0ec0567b5059bce710a12f095317b3c96ae140d3fc64bc99980ae583ae5f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dear_Boss_letter",
+   "title": "Dear Boss letter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:14.457Z",
+   "snapshot": "61d68fc7bdba9cc1153a12b730e7970b6839f0395650ca9f5c575699e4cddad9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ted_Kaczynski",
+   "title": "Ted Kaczynski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:15.496Z",
+   "snapshot": "3f50c494346295706ab087abd698f3a3f7ff54feb0d82131cdd9d6a6a3212e07"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Arno_Funke",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:13.130Z",
+   "snapshot": "c50356cec03860c601d7791e64d3e6f2aa608ed5456b37e06263f7cbb09a5bd0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dagobert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hauptmann von Köpenick",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vampire of Düsseldorf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jack the Ripper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Unabomber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:34.567Z",
+   "target": "f09266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arno Funke (born 14 March 1950), alias Dagobert, is a German author, former bomber and  extortionist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.567Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dagobert” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:34.567Z",
+   "target": "f09267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Er wurde als Hochstapler unter dem Namen Hauptmann von Köpenick bekannt durch seine spektakuläre Besetzung des Rathauses der Stadt Cöpenick bei Berlin, in das er am 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.567Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hauptmann von Köpenick” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:34.567Z",
+   "target": "f09268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Peter Kürten (German: [ˈpeːtɐ ˈkʏʁtn̩]; 26 May 1883 – 2 July 1931) was a German serial killer, known as The Vampire of Düsseldorf and the Düsseldorf Monster, who committed a series of murders and sexual assaults between February and November 1929 in the city of Düsseldorf.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.567Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vampire of Düsseldorf” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:34.567Z",
+   "target": "f09269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The \"Dear Boss\" letter was a message allegedly written by the notorious unidentified Victorian serial killer known as Jack the Ripper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.567Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack the Ripper” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:34.567Z",
+   "target": "f09270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Theodore John Kaczynski (  kə-ZIN-skee; May 22, 1942 – June 10, 2023), also known as the Unabomber (  YOU-na-bom-ər), was an American mathematician and domestic terrorist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.567Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unabomber” is on the snapshot of s5"
+  }
+ ]
+}

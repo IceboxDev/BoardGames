@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-063",
+ "image": "IMG20261022154033.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] What type of reaction releases energy into its surroundings?\nA. Endothermic reaction\nB. Exothermic reaction\nC. Neutral reaction\nAnswer: B.",
+   "de": "Wie nennt man eine Reaktion, die Energie, meist als Wärme, an ihre Umgebung abgibt?",
+   "en": "What type of reaction releases energy, usually as heat, into its surroundings?",
+   "reworked": true,
+   "answerDe": "Exotherme Reaktion",
+   "answerEn": "Exothermic reaction",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1800",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "French chemist Marcellin Berthelot coins the term 'exothermic' in the 19th century",
+    "labelDe": "Der französische Chemiker Marcellin Berthelot prägt im 19. Jahrhundert den Begriff „exotherm“"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Exothermic_process",
+    "title": "Exothermic process",
+    "lang": "en"
+   },
+   "notes": "Confirmed. Only the options are dropped; the question was already open.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 2,
+   "discipline": "Finance",
+   "cardText": "[Finance] What is the Beneish Model used for?\nA. Assessing the creditworthiness of individuals\nB. Predicting stock market trends\nC. Detecting fraud and earnings manipulation\nAnswer: C. The Beneish Model uses a company’s financial statements to identify the likelihood of earnings manipulation. It is known for its effectiveness in flagging accounting irregularities and has been used to detect fraud in notable cases, such as the Enron scandal.",
+   "de": "Was soll das Beneish-Modell (M-Score) anhand der Finanzkennzahlen eines Unternehmens aufdecken?",
+   "en": "What does the Beneish model (M-score) use a company's financial ratios to detect?",
+   "reworked": true,
+   "answerDe": "Bilanzmanipulation",
+   "answerEn": "Earnings manipulation",
+   "timeline": {
+    "kind": "creation",
+    "start": "1999",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Messod D. Beneish publishes his model for detecting earnings manipulation",
+    "labelDe": "Messod D. Beneish veröffentlicht sein Modell zur Erkennung von Bilanzmanipulation"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Beneish_M-score",
+    "title": "Beneish M-score",
+    "lang": "en"
+   },
+   "notes": "Confirmed: a statistical model using eight financial ratios to judge whether reported earnings are likely manipulated. Enron was flagged in 1998 by Cornell students using the M-score, as the card says.",
+   "domain": "society",
+   "sub": "business"
+  }
+ ]
+}

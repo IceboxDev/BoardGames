@@ -1,0 +1,242 @@
+{
+ "article": "a1482",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Slobodan_Milo%C5%A1evi%C4%87",
+   "title": "Slobodan Milošević – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:07.101Z",
+   "snapshot": "008b482c508a80b4730781dc6e0d08102590edbe262d8d7895cba83f1a61868d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ratko_Mladi%C4%87",
+   "title": "Ratko Mladić – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:08.130Z",
+   "snapshot": "a8b1ee36ca021dc98d80ad920b8b4c37098aa18c0486b2e8ecf67ee6a8f09d61"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Radovan_Karad%C5%BEi%C4%87",
+   "title": "Radovan Karadžić – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:08.955Z",
+   "snapshot": "20143030e893bb357ad53eef6d4f41ce576cf596aea3079d30ebdcacc70386d2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Storm",
+   "title": "Operation Storm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:10.598Z",
+   "snapshot": "17b07dfb663bbd020432d023e9de23da9d97133f7bd0018fbdb884869062840f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Franjo_Tu%C4%91man",
+   "title": "Franjo Tuđman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:11.285Z",
+   "snapshot": "7e4f5abe1cfb27bccb9c5b0336eac449d5d8345e8b78276f2a29911a272fca8e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Slobodan Milošević",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ratko Mladić",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Radovan Karadžić",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ante Gotovina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franjo Tuđman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:32.543Z",
+   "target": "f07406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Slobodan Milošević (Serbian Cyrillic: Слободан Милошевић, pronounced [slobǒdan milǒːʃevitɕ] , 20 August 1941 – 11 March 2006) was a Yugoslav and Serbian politician who was the president of Serbia between 1989 and 1997 and president of the Federal Republic of Yugoslavia from 1997 until his overthrow",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slobodan Milošević” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:32.543Z",
+   "target": "f07407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ratko Mladić (Serbian Cyrillic: Ратко Младић, pronounced [râtko mlǎːdit͡ɕ]; 12 March 1942 – 27 August 2026) was a Bosnian Serb military officer who led the Army of Republika Srpska (VRS) during the Yugoslav Wars with the rank of colonel general.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ratko Mladić” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:32.543Z",
+   "target": "f07408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Radovan Karadžić (Serbian Cyrillic: Радован Караџић, pronounced [râdovaːn kâradʒitɕ]; born 19 June 1945) is a Bosnian Serb former politician who served as the president of Republika Srpska during the Bosnian War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Radovan Karadžić” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:32.543Z",
+   "target": "f07409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The HV Split Corps, located in the far south of the theatre of operations and commanded by Lieutenant General Ante Gotovina, was assigned the Storm-4 plan, which was the primary component of Operation Storm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ante Gotovina” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:32.543Z",
+   "target": "f07410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franjo Tuđman (14 May 1922 – 10 December 1999) was a Croatian politician and historian who became the first president of Croatia, from 1990 until his death in 1999.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franjo Tuđman” is on the snapshot of s5"
+  }
+ ]
+}

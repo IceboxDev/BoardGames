@@ -1,0 +1,389 @@
+{
+ "article": "a2380",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Albert_Einstein",
+   "title": "Albert Einstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:46.962Z",
+   "snapshot": "be2e8046c62b4fd92fa1d47337e508ae516e149ee826a8a2f0715aeb023c130d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mileva_Mari%C4%87",
+   "title": "Mileva Marić",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:01.070Z",
+   "snapshot": "6e4fc3a99b6b949e30a20262eb9fd9d0b6942e1784d6581d07e62a9cf77ae660"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+   "title": "Albert Einstein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:51.891Z",
+   "snapshot": "a6f2048f2fd48427b0b0ee1924ffbf08c6f3c0380b7465159b29c00c191d8a45"
+  },
+  "s4": {
+   "url": "https://www.jewishvirtuallibrary.org/offering-the-presidency-of-israel-to-albert-einstein",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s5": {
+   "url": "https://www.history.com/articles/albert-einstein-presidency-israel",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:00.687Z",
+   "snapshot": "2808896fd5f67228b3d06c8d15dbd040aef9f2b74d663caf950d7a341061b781"
+  },
+  "s6": {
+   "url": "https://einstein-website.de/aarau/",
+   "title": "Albert Einstein in Aarau",
+   "publisher": "einstein-website.de (Kurt Schäfer)",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:01.485Z",
+   "snapshot": "45dec261202a776339d95d9fa6bd0698f51f8e4ef6f1551d5705e806ca2eb786"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Französisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-374"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Albert Einstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-124"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Israel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-223"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aarau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mileva Marić",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Institute for Advanced Study",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Israel",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "Israel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-223/3, u04: Statement false: after Weizmann's death in Nov 1952, Ben-Gurion's government (via Abba Eban) offered Einstein the presidency of Israel; he declined."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:09.311Z",
+   "target": "f12425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die schlechteste Note war eine Drei in Französisch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Französisch” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:09.311Z",
+   "target": "f12426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Albert Einstein war ihr Kommilitone am Eidgenössischen Polytechnikum in Zürich und ihr späterer Ehemann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Einstein” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:09.311Z",
+   "target": "f12427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der von Abraham Einstein ererbte Wohlstand erlaubte Hermann Einstein um 1870 den Kauf der Teilhaberschaft der Bettfedernfabrik Israel & Levi im Haus Weinhof 19 in Ulm und damit den Besitz der Hälfte dieses Hauses.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Israel” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:09.311Z",
+   "target": "f12428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the advice of the polytechnic's principal, he completed his secondary education at the Argovian cantonal school (a gymnasium) in Aarau, Switzerland, graduating in 1896.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aarau” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:09.311Z",
+   "target": "f12429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The five other polytechnic school freshmen following the same course as Einstein included just one woman, a twenty year old Serbian, Mileva Marić.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mileva Marić” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:09.311Z",
+   "target": "f12430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After being widowed, Einstein was briefly in a relationship with Margarita Konenkova, thought by some to be a Russian spy; her husband, the Russian sculptor Sergei Konenkov, created the bronze bust of Einstein at the Institute for Advanced Study at Princeton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.311Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Institute for Advanced Study” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:41:52Z",
+   "target": "f12425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die schlechteste Note war eine Drei in Französisch.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:41:56Z",
+   "target": "f12425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Französisch: Aufsatz „Mes projets d‘ avenir“ („Meine Pläne für die Zukunft“)\nPrüfer: Dr. Jakob Hunziker; Note: „3-4“",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Matura written exams 1896: French essay graded 3-4, his lowest exam mark (all others 5-6); the certificate itself (shown only as an image there) has French 3."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:53.351Z",
+   "target": "f12425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Französisch: Aufsatz „Mes projets d‘ avenir“ („Meine Pläne für die Zukunft“)\nPrüfer: Dr. Jakob Hunziker; Note: „3-4“",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:53.351Z",
+   "target": "f12425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oktober 1895 findet sich der Hinweis, dass Einstein große Lücken in den Fächern Französisch und Chemie hat und dass es erforderlich ist, diese Fächer nachzuarbeiten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Französisch” is on the snapshot of s6"
+  }
+ ]
+}

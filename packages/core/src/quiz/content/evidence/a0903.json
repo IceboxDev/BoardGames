@@ -1,0 +1,242 @@
+{
+ "article": "a0903",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cubism",
+   "title": "Cubism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:00.376Z",
+   "snapshot": "2530dae80eefe795e151d75b5a26d6f1095a3ef3fe86ac0f86c1f79ef0b2a610"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Andr%C3%A9_Derain",
+   "title": "André Derain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:01.260Z",
+   "snapshot": "14308e6b052c50414f9c2fe2bd5a58b1f6bff3436cfcbb00d98092e648b8d841"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pointillism",
+   "title": "Pointillism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:02.272Z",
+   "snapshot": "7a1b76077e4e548d1b4b873a8524199a0514b913b7d380be93377b233f597ce9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hugo_Ball",
+   "title": "Hugo Ball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:03.245Z",
+   "snapshot": "a3ea4bcfd198515e63dfdf781631ebeb753791ec9bed6632fd8e65b3e2a03188"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Surrealist_Manifesto",
+   "title": "Surrealist Manifesto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:04.251Z",
+   "snapshot": "45c869674bc69e72308a9c5230a32db79a332f29f13ac8a4e762591ff0c7310f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cubism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fauvism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pointillism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dadaism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Surrealism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:02.428Z",
+   "target": "f04511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cubism is an early-20th-century avant-garde art movement which began in Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cubism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:02.428Z",
+   "target": "f04512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "André Derain (; French: [ɑ̃dʁe dəʁɛ̃]; 17 June 1880 – 8 September 1954) was a French artist, painter, sculptor and co-founder, with Henri Matisse, of Fauvism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fauvism” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:02.428Z",
+   "target": "f04513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pointillism (, also US: ) is a technique of painting in which small, distinct dots of color are applied in patterns to form an image.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pointillism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:02.428Z",
+   "target": "f04514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The meaning, however, resides in its meaninglessness, reflecting the chief principle behind Dadaism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dadaism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:02.428Z",
+   "target": "f04515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Goll and Breton's conflicting beliefs led to a quarrel at the Comédie des Champs-Élysées over the rights to the term surrealism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Surrealism” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,374 @@
+{
+ "article": "a2535",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Akupunktur",
+   "title": "Akupunktur",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:57.965Z",
+   "snapshot": "a83b5d8c0f4413856cf8783db3aa000d4a1c9e2d126326365c9fb0fce49cc924"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hom%C3%B6opathie",
+   "title": "Homöopathie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:01.597Z",
+   "snapshot": "8de8ecf1c4fd3ca5d40083f798d1f17aec2614329dcc8f26b9808a9d5941fe77"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Apitherapie",
+   "title": "Apitherapie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:59.894Z",
+   "snapshot": "ca2654725c018f8fc47dd8b46e6aebb21fbb00ea2d7994316535889cc363b657"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Samuel_Hahnemann",
+   "title": "Samuel Hahnemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:59.666Z",
+   "snapshot": "b8f195543120910b57481068562448c90bfa7f811eaa54b18489d80f6e45dea8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ayurveda",
+   "title": "Ayurveda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:01.053Z",
+   "snapshot": "a60ec90bae8d1f56a6bfe018ca98100f502486e52f4858c775f0e50173e402ca"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sebastian_Kneipp",
+   "title": "Sebastian Kneipp – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:01.658Z",
+   "snapshot": "66393e0f06c502f3e3517267180b8fb377d149b3759550da98f1bfb44d837a99"
+  },
+  "s7": {
+   "url": "https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth",
+   "title": "Ayurvedic Medicine: In Depth",
+   "publisher": "National Center for Complementary and Integrative Health (NIH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.902Z",
+   "snapshot": "b3c9d6720b0d4bff1dcf7e3020ded209e6ac5fb9a47117430aa68c3fe0733130"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Akupunktur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-240"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Homöopathie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-271"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bienenprodukte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-396"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Samuel Hahnemann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "water",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.604Z",
+   "target": "f13536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Akupunktur (von lateinisch acus ‚Nadel‘, und punctura ‚Stechen‘, von pungere ‚stechen‘; chinesisch 針灸 / 针灸, Pinyin zhēnjiǔ, Jyutping zam1gau3) ist eine Behandlungsmethode der traditionellen chinesischen Medizin (TCM), bei der kleine Nadeln an bestimmten Punkten des Körpers in die Haut",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.604Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Akupunktur” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.604Z",
+   "target": "f13537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Als Homöopathie [ˌhomøopaˈtiː] (von altgriechisch ὁμοῖος homóios, deutsch ‚gleich‘ und πάθος páthos, deutsch ‚Leid‘) wird eine pseudowissenschaftliche Behandlungsmethode aus dem Bereich der Alternativmedizin bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.604Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Homöopathie” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.604Z",
+   "target": "f13538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "θεραπεία therapeia Dienen; die Pflege der Kranken) wird die pseudomedizinische Verwendung der Bienenprodukte, hauptsächlich Propolis, Bienengift, Honig und die Bienenluft bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.604Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bienenprodukte” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.604Z",
+   "target": "f13539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Christian Friedrich Samuel Hahnemann ( HAH-nə-mən, German: [ˈzaːmueːl ˈhaːnəman]; 10 April 1755 – 2 July 1843) was a German medical doctor, best known for creating the pseudoscientific system of alternative medicine called homeopathy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.604Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samuel Hahnemann” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:35.604Z",
+   "target": "f13540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is heavily practised throughout India and Nepal, where as much as 80% of the population report using Ayurveda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.604Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:35.604Z",
+   "target": "f13541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He is most commonly associated with the \"Kneipp Cure\" form of hydrotherapy (often called \"Kneipp therapy\" or \"Kneippism\"), the application of water through various methods, temperatures, and pressures, which he claimed to have therapeutic or healing effects, thus building several hospitals in Bad",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.604Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “water” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:14:21Z",
+   "target": "f13540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ayurvedic medicine is one of the world’s oldest medical systems and remains one of India’s traditional health care systems.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:14:22Z",
+   "target": "f13540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is heavily practised throughout India and Nepal, where as much as 80% of the population report using Ayurveda.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:19.366Z",
+   "target": "f13540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ayurvedic medicine is one of the world’s oldest medical systems and remains one of India’s traditional health care systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:19.366Z",
+   "target": "f13540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ayurvedic medicine is one of the world’s oldest medical systems and remains one of India’s traditional health care systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “India” is on the snapshot of s7"
+  }
+ ]
+}

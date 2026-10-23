@@ -1,0 +1,601 @@
+{
+ "article": "a1226",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Abitur",
+   "title": "Abitur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:25.580Z",
+   "snapshot": "497a1e9c065f88cbb0f0a3333b1754b93b109494e645fafb1fcb5a52b1df0dbb"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/university",
+   "title": "university – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Doctorate",
+   "title": "Doctorate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:27.109Z",
+   "snapshot": "a4bca0987e7d890faa45db969753bb786ba5b9c7a9df4d55eb3933d7e2eef89f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Seminary",
+   "title": "Seminary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:27.891Z",
+   "snapshot": "075949563ae66395e2c18509f3e82720f8718e145c895b4952b20d51871a86b2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Authentica_habita",
+   "title": "Authentica habita – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:28.895Z",
+   "snapshot": "58b693bc5f22e9c25a6421460c28498ced268c8971faed25835021def0a3fd10"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Universität",
+   "title": "Universität – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:47.448Z",
+   "snapshot": "ed06ac24f78a166be8b038bb1a11807f8111cf69e6fa8df27757e9e2a369cf69"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/university",
+   "title": "university – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:47.996Z",
+   "snapshot": "35a3f52cdab189988544fb92af424c03f8e7036da5a42473d49b551784eaf432"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Seminar",
+   "title": "Seminar – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:48.452Z",
+   "snapshot": "9e18c83593ea5baf6cfceec9bbb6efa1309324b312992ef15a6ec00aebb69dd4"
+  },
+  "s9": {
+   "url": "https://www.dictionary.com/browse/seminar",
+   "title": "seminar – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:48.916Z",
+   "snapshot": "959b48bc4507fbaaf433322e53a7604de828adad1f753c2b3daa4d1ca2201313"
+  },
+  "s10": {
+   "url": "https://www.dwds.de/wb/Student",
+   "title": "Student – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:49.449Z",
+   "snapshot": "00313f985d36f7f4defd1fca9db51deb78d07228fae39d0396f45a6fdbaf182b"
+  },
+  "s11": {
+   "url": "https://www.dictionary.com/browse/student",
+   "title": "student – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:49.526Z",
+   "snapshot": "6e057c9b592b6bf04bc34bb342ebd4927c2a51d9825ba0b97c5f67686179d09e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abitur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "University",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Doctor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Seminar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Student",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:51.367Z",
+   "target": "f06126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Abitur (von lateinisch abiturus, Partizip Futur von abire ‚weggehen‘: ‚derjenige, der weggehen wird‘), umgangssprachlich oft zu „Abi“ verkürzt, bezeichnet den höchsten Schulabschluss in der Bundesrepublik Deutschland und damit verbunden eine allgemeine Hochschulreife (Zeugnis der Reife, lat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abitur” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:51.367Z",
+   "target": "f06128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A doctorate (from Latin doctor, meaning \"teacher\") or doctoral degree is a postgraduate academic degree awarded by universities and some other educational institutions, derived from the ancient formalism licentia docendi (\"licence to teach\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doctor” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:51.367Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Seminar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Seminar”, “семинар”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:51.367Z",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Student",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Student”, “студент”) on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:44:28Z",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zugrunde liegt lat. ūniversitās (Genitiv ūniversitātis) ‘Gesamtheit, das Ganze, Welt(all)’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:32Z",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Medieval Latin ūniversitās, Late Latin: guild, corporation, Latin: totality",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:44:36Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Im 16. Jh. wird lat. sēminārium ‘Pflanzschule, Baumschule’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:40Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Latin seminarium originally referred to a plant nursery, a place of great growth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:44:44Z",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "zu studēre lat ‘betreiben, streben, trachten, Partei nehmen, begünstigen, sich ernstlich um etw. bemühen, sich wissenschaftlich beschäftigen’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:44:48Z",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The underlying idea of student, then, is about striving—for new knowledge and abilities.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zugrunde liegt lat. ūniversitās (Genitiv ūniversitātis) ‘Gesamtheit, das Ganze, Welt(all)’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Medieval Latin ūniversitās, Late Latin: guild, corporation, Latin: totality",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Im 16. Jh. wird lat. sēminārium ‘Pflanzschule, Baumschule’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Latin seminarium originally referred to a plant nursery, a place of great growth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The underlying idea of student, then, is about striving—for new knowledge and abilities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s11"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Universität – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Universität” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "UNIVERSITY Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “University” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Seminar – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Seminar” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "SEMINAR Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Seminar” is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Student – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Student” is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:33.649Z",
+   "target": "f06130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "STUDENT Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:33.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Student” is on the snapshot of s11"
+  }
+ ]
+}

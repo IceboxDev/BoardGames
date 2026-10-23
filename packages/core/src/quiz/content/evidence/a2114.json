@@ -1,0 +1,242 @@
+{
+ "article": "a2114",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_House_of_the_Spirits",
+   "title": "The House of the Spirits – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:18.886Z",
+   "snapshot": "f809d5f9dc28b0a0e8d862bad909c1ac9bb2c3a1e4f18ba58bd923caf72ecbcc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1950_Nobel_Prize_in_Literature",
+   "title": "1950 Nobel Prize in Literature – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:19.794Z",
+   "snapshot": "15122c77d7ae8c16ca4a1334d063d4adede3e85c3c27af6a4ae18de94d8eff8c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gore_Vidal",
+   "title": "Gore Vidal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:21.019Z",
+   "snapshot": "a9e1bcc235a271f782d630a9d94963ca1cd39ff9b9d849ddb1e74b489ef6d658"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lolita",
+   "title": "Lolita – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:55.178Z",
+   "snapshot": "4896ce6681a57327888c9938069ceb34487dbc7d32e9fe027df9c2d435d1daf4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Three_Musketeers",
+   "title": "The Three Musketeers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:10.073Z",
+   "snapshot": "00c3143447cc27c6ea681f126088a396bbf0cdba1d8131ad842cad5d3ca63988"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Isabel Allende",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertrand Russell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gore Vidal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vladimir Nabokov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alexandre Dumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:24.796Z",
+   "target": "f10566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The House of the Spirits (Spanish: La casa de los espíritus, 1982) is the debut novel of Isabel Allende.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isabel Allende” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:24.796Z",
+   "target": "f10567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 1950 Nobel Prize in Literature was awarded to the British philosopher Bertrand Russell (1872–1970) \"in recognition of his varied and significant writings in which he champions humanitarian ideals and freedom of thought.\" He is the third philosopher to become a recipient of the prize after the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertrand Russell” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:24.796Z",
+   "target": "f10568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eugene Luther Gore Vidal ( vih-DAHL; born Eugene Louis Vidal, October 3, 1925 – July 31, 2012) was an American writer and public intellectual known for his cynical epigrammatic wit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gore Vidal” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:24.796Z",
+   "target": "f10569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lolita is a 1955 novel written by the Russian and American novelist Vladimir Nabokov.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vladimir Nabokov” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:24.796Z",
+   "target": "f10570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Three Musketeers (French: Les Trois Mousquetaires) is a French historical adventure novel written and published in 1844 by French author Alexandre Dumas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexandre Dumas” is on the snapshot of s5"
+  }
+ ]
+}

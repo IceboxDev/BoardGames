@@ -1,0 +1,295 @@
+{
+ "article": "a0105",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss",
+   "title": "Carl Friedrich Gauss – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:56.176Z",
+   "snapshot": "6eeb77d5ea9da44190134c3d135c71e9c7724d1db87729d0d59c295e2f477706"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
+   "title": "Gottfried Wilhelm Leibniz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:53.458Z",
+   "snapshot": "f85b7d3a4a1ccae85bddb2a3b1d4a54bb4c382cf0d27da97184a314c988f9a4f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Leonhard_Euler",
+   "title": "Leonhard Euler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:57.175Z",
+   "snapshot": "1d857cdb9358145014ab8e44a21a50f67b3daedd3987d8392941f6706ed12dc3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bernhard_Riemann",
+   "title": "Bernhard Riemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:58.041Z",
+   "snapshot": "c9136736ae5a065a8d084a02920865d9628df0c2132f519a1ae66050d40802c3"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hilbertsche_Probleme",
+   "title": "Hilbertsche Probleme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:55.695Z",
+   "snapshot": "7b7f21ed50c4fa7c4a33f79a36bb6d9ca303b3772ebdf5ab1888621815d6fca2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hilbert%27s_problems",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:59.072Z",
+   "snapshot": "c9925fb92c7d94e4785950c87e9a75fa869b09193865aca77d3d27f01584c2e0"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Carl_Friedrich_Gau%C3%9F",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:57.171Z",
+   "snapshot": "a3e9090914a8d13cbaee7b6404ea0e330c70e73ccdbd0d5008121f73f5987bff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carl Friedrich Gauss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gottfried Wilhelm Leibniz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonhard Euler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bernhard Riemann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Hilbert",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "David Hilbert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:51.657Z",
+   "target": "f00521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johann Carl Friedrich Gauss ( ; German: Gauß; 30 April 1777 – 23 February 1855) was a German polymath active as a mathematician, astronomer, geodesist, and physicist, who contributed to many fields in mathematics and science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Friedrich Gauss” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:51.657Z",
+   "target": "f00522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gottfried Wilhelm Leibniz (gelegentlich auch Leibnitz, lateinisch Leibnitius, fälschlich von Leibniz, * 21.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gottfried Wilhelm Leibniz” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:51.657Z",
+   "target": "f00523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonhard Euler ( OY-lər; 15 April 1707 – 18 September 1783) was a Swiss polymath who was active as a mathematician, physicist, astronomer, logician, geographer, music theorist and engineer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonhard Euler” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:51.657Z",
+   "target": "f00524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georg Friedrich Bernhard Riemann (; German: [ˈɡeːɔʁk ˈfʁiːdʁɪç ˈbɛʁnhaʁt ˈʁiːman] ; 17 September 1826 – 20 July 1866) was a German mathematician who made profound contributions to analysis, number theory, and differential geometry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bernhard Riemann” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:51.657Z",
+   "target": "f00525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sie wurden von dem deutschen Mathematiker David Hilbert am 8.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Hilbert” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:51.657Z",
+   "target": "f00525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hilbert's problems are 23 problems in mathematics published by German mathematician David Hilbert in 1900.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Hilbert” is on the snapshot of s6"
+  }
+ ]
+}

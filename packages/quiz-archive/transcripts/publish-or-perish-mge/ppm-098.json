@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-098",
+ "image": "IMG20261022154311.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Botany",
+   "cardText": "[Botany] What is the oldest viable seed on record?\nA. Wheat seed from an ancient Egyptian tomb\nB. Lotus seed from a Chinese lakebed\nC. Date palm seed from Masada, Israel\nAnswer: C. A date palm seed discovered at the ancient fortress of Masada was successfully germinated after nearly 2,000 years. This remarkable achievement demonstrated the incredible longevity of seeds under the right conditions.",
+   "de": "Von welcher Pflanze stammte der rund 2000 Jahre alte Samen aus der antiken Festung Masada, den israelische Forscher 2005 zum Keimen brachten?",
+   "en": "From which plant was the roughly 2,000-year-old seed, found at the ancient fortress of Masada, that Israeli scientists germinated in 2005?",
+   "reworked": true,
+   "answerDe": "Die (Judäische) Dattelpalme",
+   "answerEn": "The (Judean) date palm",
+   "timeline": {
+    "kind": "event",
+    "start": "2005",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Israeli scientists germinate a 2,000-year-old Judean date palm seed from Masada; the sapling is named Methuselah",
+    "labelDe": "Israelische Forscher bringen einen 2000 Jahre alten Samen der Judäischen Dattelpalme aus Masada zum Keimen; der Setzling heißt Methusalem"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Judean_date_palm",
+    "title": "Judean date palm",
+    "lang": "en"
+   },
+   "notes": "Card overstates: Wikipedia calls it the oldest seed germinated with human assistance; Silene stenophylla plants were regenerated (2012) from ~32,000-year-old fruit tissue in Siberian permafrost, so 'oldest viable seed' is debatable. Question asks the plant instead.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] Where is the largest temperate rainforest in the world?\nA. Alaska, U.S.A.\nB. Hokkaido, Japan\nC. Yunnan, China\nAnswer: A. Tongass National Forest in Alaska is the largest temperate rainforest in the world.",
+   "de": "In welchem US-Bundesstaat liegt der Tongass National Forest, der oft als größter gemäßigter Regenwald der Welt bezeichnet wird?",
+   "en": "In which U.S. state is the Tongass National Forest, often called the world's largest temperate rainforest?",
+   "reworked": true,
+   "answerDe": "Alaska",
+   "answerEn": "Alaska",
+   "timeline": {
+    "kind": "founding",
+    "start": "1907-09-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Theodore Roosevelt proclaims the Tongass National Forest in Southeast Alaska",
+    "labelDe": "Theodore Roosevelt ruft den Tongass National Forest im Südosten Alaskas aus"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tongass_National_Forest",
+    "title": "Tongass National Forest",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: the largest US national forest, mostly temperate rainforest, 'one of the biggest intact temperate rainforests'; the 'world's largest' claim is common but loose (the whole Pacific coastal temperate rainforest belt is larger).",
+   "domain": "geography",
+   "sub": "physical"
+  }
+ ]
+}

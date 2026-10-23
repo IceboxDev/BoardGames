@@ -1,0 +1,409 @@
+{
+ "article": "a0213",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Absinthe",
+   "title": "Absinthe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:25.924Z",
+   "snapshot": "a39fcdbd67d5f18714a02275096392dae7a500e84246a765bdbfa851f9ed4891"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Weinbrand",
+   "title": "Weinbrand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:22.922Z",
+   "snapshot": "22e69c7c6e2dd585ec642c675078329c3cecda08e7a594807bd8422780c3c65d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Calvados",
+   "title": "Calvados – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:13.077Z",
+   "snapshot": "d30dea8b89a65e47af64accf8ed90894e7e224f23fb770364abdb6961bcdb96d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sherry",
+   "title": "Sherry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:26.816Z",
+   "snapshot": "42194a5c5ba44b910772f268c4eeb2f3bbfce6f44a3e0ac588adb02fa453a7e3"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bierbrand",
+   "title": "Bierbrand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:24.055Z",
+   "snapshot": "570d2d46f71205445246fa170d5019fe7ba7d573df30757e8d15dfa36c3a6c0d"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Absinth",
+   "title": "Absinth",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:36.847Z",
+   "snapshot": "5d98b8bf377957d6898eaa33526fc0061e33341bfefbe5c7aa0af47482c79d15"
+  },
+  "s7": {
+   "url": "https://www.wormwoodsociety.org/faqs/",
+   "title": "FAQ – Wormwood Society",
+   "publisher": "Wormwood Society",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:37.260Z",
+   "snapshot": "1c7c71baeacd0832c38b3792ad9138d755ddea1a0e9241e9f1880ac3c6e9e3bc"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Calvados_(brandy)",
+   "title": "Calvados (brandy)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:06:51Z"
+  },
+  "s9": {
+   "url": "https://en.normandie-tourisme.fr/lifestyle-well-being/gastronomy/drinks-spirits-of-normandy/",
+   "title": "Drinks & Spirits of Normandy",
+   "publisher": "Normandie Tourisme (Normandy regional tourist board)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:37.410Z",
+   "snapshot": "a8332674885df0674e8625b997ea261dcb6ab8cfc900445bd2711df1bcd9055f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wine spirit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cider",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "White wine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:12.847Z",
+   "target": "f01061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wine spirit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Wine spirit”, “Weingeist”, “Винный спирт”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:12.847Z",
+   "target": "f01062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Destillate aus Wein gehören zu den ältesten Spirituosen der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wein” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:12.847Z",
+   "target": "f01063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cider",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cider”, “Apfelwein”, “Сидр”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:12.847Z",
+   "target": "f01064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The must is then fermented in stainless steel vats until the end of November, producing a dry white wine with 11–12 per cent alcohol content.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “White wine” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:12.847Z",
+   "target": "f01065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Bierbrand oder Eau de vie de bière darf eine Spirituose bezeichnet werden, die ausschließlich durch unmittelbare Destillation von frischem Bier gewonnen wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bier” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:06:47Z",
+   "target": "f01061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bei der Herstellung werden Wermut, Anis und Fenchel in Neutralalkohol oder Weinalkohol mazeriert (eingeweicht) und anschließend destilliert .",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Base is neutral alcohol or wine alcohol; notes accept wine / wine alcohol / neutral spirit."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:06:49Z",
+   "target": "f01061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First, the required herbs and botanicals are infused or “macerated” in high-proof neutral spirits for a specified time",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the neutral-spirit base (accepted alternative in the notes); wine spirit is the classic French/Swiss base."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:06:51Z",
+   "target": "f01063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Calvados is distilled from cider made from specially grown and selected apples",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:06:53Z",
+   "target": "f01063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "He marvelled at the process of distilling cider, captivated by the transformation of this humble drink into a refined brandy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:31.582Z",
+   "target": "f01061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First, the required herbs and botanicals are infused or “macerated” in high-proof neutral spirits for a specified time",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:31.582Z",
+   "target": "f01063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "He marvelled at the process of distilling cider, captivated by the transformation of this humble drink into a refined brandy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:31.582Z",
+   "target": "f01063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "From cider and pommeau to calvados, poiré, and Bénédictine, our experts have uncovered the captivating stories behind these iconic drinks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cider” is on the snapshot of s9"
+  }
+ ]
+}

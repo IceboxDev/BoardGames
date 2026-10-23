@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-073",
+ "image": "IMG20261022011337.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Art History",
+   "cardText": "[Art History] Which artist painted the “Last Supper”?\nA. Leonardo da Vinci\nB. Michelangelo\nC. Raphael\nAnswer: A. Leonardo da Vinci was also ambidextrous. He frequently wrote in mirror script, a reversed form of writing that can only be read correctly when reflected in a mirror.",
+   "de": "Welcher Künstler malte das Wandgemälde „Das Abendmahl“ in Santa Maria delle Grazie in Mailand?",
+   "en": "Which artist painted the Last Supper mural in Milan's Santa Maria delle Grazie?",
+   "reworked": true,
+   "answerDe": "Leonardo da Vinci",
+   "answerEn": "Leonardo da Vinci",
+   "timeline": {
+    "kind": "creation",
+    "start": "1495",
+    "end": "1498",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Leonardo da Vinci paints The Last Supper in Santa Maria delle Grazie, Milan (c. 1495–1498)",
+    "labelDe": "Leonardo da Vinci malt „Das Abendmahl“ in Santa Maria delle Grazie, Mailand (um 1495–1498)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+    "title": "The Last Supper (Leonardo)",
+    "lang": "en"
+   },
+   "notes": "Options dropped; location added to point at the famous mural.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 2,
+   "discipline": "Cultural Studies",
+   "cardText": "[Cultural Studies] Which of the following countries has a tradition of eating 12 grapes at the stroke of midnight on New Year’s Eve?\nA. New Zealand\nB. Italy\nC. Spain\nAnswer: C. In Spain, it is a tradition to eat 12 grapes at the stroke of midnight on New Year’s Eve, one for each chime of the clock.",
+   "de": "In welchem Land ist es Tradition, um Mitternacht an Silvester zwölf Weintrauben zu essen, eine bei jedem Glockenschlag?",
+   "en": "In which country is it a tradition to eat 12 grapes at the stroke of midnight on New Year's Eve, one for each chime of the clock?",
+   "reworked": true,
+   "answerDe": "Spanien",
+   "answerEn": "Spain",
+   "timeline": {
+    "kind": "event",
+    "start": "1909",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alicante vine growers popularise the Twelve Grapes New Year's custom in Spain",
+    "labelDe": "Winzer aus Alicante machen den Silvesterbrauch der zwölf Trauben in Spanien populär"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Twelve_Grapes",
+    "title": "Twelve Grapes",
+    "lang": "en"
+   },
+   "notes": "Attested since at least 1895, greatly popularised in 1909.",
+   "domain": "everyday",
+   "sub": "holidays"
+  }
+ ]
+}

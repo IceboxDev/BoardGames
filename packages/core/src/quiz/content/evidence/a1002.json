@@ -1,0 +1,242 @@
+{
+ "article": "a1002",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Adoptivkaiser",
+   "title": "Adoptivkaiser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:36.357Z",
+   "snapshot": "b4a74fc3de40d4c1164a25f708b1b80a10431640d1e1fbfa2ed41a844b28a4ec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Julio-Claudian_dynasty",
+   "title": "Julio-Claudian dynasty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:39.195Z",
+   "snapshot": "d45e9555659f3e44ce3efa49655a0e7d2daf5884b68aad9ef905156cb12a2064"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flavian_dynasty",
+   "title": "Flavian dynasty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:40.298Z",
+   "snapshot": "9ca905f6157d5a0ed5faa5d90b66c227794204cff204c33285960b05d330d8cf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Year_of_the_Four_Emperors",
+   "title": "Year of the Four Emperors – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:41.158Z",
+   "snapshot": "9e67ce5b8696319515b0ec0695a25e7675c6f5e3861a7f6117843267adcdee58"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tetrarchy",
+   "title": "Tetrarchy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:42.151Z",
+   "snapshot": "0d4c3e2d3a8e7a3edb170dd3a8f5a39422a16b282b5260ab31373e095c8aa2e7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Adoptivkaiser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Julio-Claudian dynasty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flavians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Year of the Four Emperors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tetrarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:18.277Z",
+   "target": "f05006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Adoptivkaiser im Sinne des gängigen historischen Begriffs waren Nerva, der allerdings nicht adoptiert, sondern vom Senat gewählt wurde, Trajan, Hadrian, Antoninus Pius, Mark Aurel und Lucius Verus, die sämtlich nicht als leibliche Söhne ihrer Vorgänger zur Herrschaft gelangten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adoptivkaiser” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:18.277Z",
+   "target": "f05007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Julio-Claudian dynasty comprised the first five Roman emperors: Augustus, Tiberius, Caligula, Claudius, and Nero.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Julio-Claudian dynasty” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:18.277Z",
+   "target": "f05008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Flavians rose to power during the civil war of 69 AD, known as the Year of the Four Emperors; after Galba and Otho died in quick succession, Vitellius became emperor in mid 69.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flavians” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:18.277Z",
+   "target": "f05009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Year of the Four Emperors, AD 69, was the first civil war of the Roman Empire, during which four emperors ruled in succession, Galba, Otho, Vitellius, and Vespasian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Year of the Four Emperors” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:18.277Z",
+   "target": "f05010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Tetrarchy was the system instituted by Roman emperor Diocletian to govern the ancient Roman Empire by dividing it between two emperors, the augusti, and their junior colleagues and designated successors, the caesares.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tetrarchy” is on the snapshot of s5"
+  }
+ ]
+}

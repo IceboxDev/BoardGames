@@ -1,0 +1,381 @@
+{
+ "article": "a0969",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tu_Youyou",
+   "title": "Tu Youyou – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:25.024Z",
+   "snapshot": "a9f7cac2962a26e65499a5d4e1ae3ea057f69d7fd3fc885fe16daeaa10b18bbc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/African_trypanosomiasis",
+   "title": "African trypanosomiasis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:26.098Z",
+   "snapshot": "b286b867625c837ef4ec3cad11d729adf779ccddcca2cfdaccd5bad9b5272fd9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lyme_disease",
+   "title": "Lyme disease – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:27.120Z",
+   "snapshot": "b4e7ee156d1cf5f2e53b526bd273aa8aedf0cd755f196f3ada16efe2af1f3c2f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dengue_fever",
+   "title": "Dengue fever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:27.992Z",
+   "snapshot": "8c2e29f954beaa4eb750ef5b0f30b6c6debc4e87d61bc15d6f835125f909f40c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Yellow_fever_vaccine",
+   "title": "Yellow fever vaccine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:29.017Z",
+   "snapshot": "2e1b85a4ed0442e7df323d0cb2dcd8cd0783b66af8f7f6fa38c0def9248bf24f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Zika-Virus",
+   "title": "Zika-Virus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:26.419Z",
+   "snapshot": "772eeccba7310327a772015cc743c6db357a4bc9b1a5bda4535271e35c28d27c"
+  },
+  "s7": {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:26.831Z",
+   "snapshot": "745fc2d39da805c8d888dcae0dafffab89d88d8fdb859e0b1aa5775a5c05ba9a"
+  },
+  "s8": {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/zika-virus",
+   "title": "Zika virus",
+   "publisher": "World Health Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:55.558Z",
+   "snapshot": "e62bc1b4b40fef3deff4a1dc04d9a71e2923ac8cfc9303b645ac23fb3a11c118"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04841",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Malaria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04842",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sleeping sickness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04843",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lyme disease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04844",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dengue fever",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yellow fever",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Überträger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; history entry seq 38; transcript tp-315"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:12.735Z",
+   "target": "f04841",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She discovered artemisinin and dihydroartemisinin, used to treat malaria; these discoveries were a breakthrough in twentieth-century tropical medicine, saving millions of lives in South China, Southeast Asia, Africa, and South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malaria” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:12.735Z",
+   "target": "f04842",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Human African trypanosomiasis (HAT) is also known as sleeping sickness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sleeping sickness” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:12.735Z",
+   "target": "f04843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lyme disease, also known as Lyme borreliosis, is a tick-borne disease caused by species of Borrelia bacteria, transmitted by blood-feeding ticks in the genus Ixodes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lyme disease” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:12.735Z",
+   "target": "f04844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dengue fever is a mosquito-borne disease caused by dengue virus, prevalent in tropical and subtropical areas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dengue fever” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:12.735Z",
+   "target": "f04845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yellow fever vaccine  is a vaccine that protects against yellow fever.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yellow fever” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:12.735Z",
+   "target": "f13525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Überträger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Überträger”, “Carriers”, “переносчики”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:19:19Z",
+   "target": "f13525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Zika virus is primarily transmitted by Aedes mosquitoes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "Mosquitoes are the vectors (carriers) of Zika."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:23Z",
+   "target": "f13525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "durch Stechmücken der Art Aedes aegypti",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:43.179Z",
+   "target": "f13525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Zika virus is primarily transmitted by Aedes mosquitoes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:43.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:43.179Z",
+   "target": "f13525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "durch Stechmücken der Art Aedes aegypti",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:43.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  }
+ ]
+}

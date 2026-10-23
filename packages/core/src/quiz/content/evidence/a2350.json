@@ -1,0 +1,179 @@
+{
+ "article": "a2350",
+ "sources": {
+  "s1": {
+   "url": "https://council.nyc.gov/press/2009/03/11/1215/",
+   "title": "New York City Council press release, 11 March 2009",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:34.190Z",
+   "snapshot": "c04f6a7751742cda8c3e25f7cbbf977e5f3c84c48f9153f3237550a188caa495"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bed_bug",
+   "title": "Bed bug – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:37.347Z",
+   "snapshot": "e2d3f545b40c91e1910d8149264f93a6be50c83a3f9e93a1fe2b2c6f4fdaf3f9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12237",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bed bug",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-295"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12238",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cimex lectularius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cimicidae",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:02.581Z",
+   "target": "f12237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Council Votes to Create Bed Bug Advisory Board to Combat City’s Bed Bug Epidemic; Also Votes to Protect City’s Consumers by Requiring Debt Collectors to Get Licenses from DCA",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bed bug” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:02.581Z",
+   "target": "f12238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bed bug bites are caused primarily by two species of insects: Cimex lectularius (the common bed bug) and Cimex hemipterus, found primarily in the tropics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cimex lectularius” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:02.581Z",
+   "target": "f12240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bed bugs are insects from the family Cimicidae, primarily from the genus Cimex, which are parasites that feed on blood, usually at night.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cimicidae” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:02.581Z",
+   "target": "f12241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the middle of 2023, reports emerged of a bed bug infestation spread in the capital city of Paris, when it was first seen in cinemas, then it expanded to homes, trains, schools and even hospitals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s2"
+  }
+ ]
+}

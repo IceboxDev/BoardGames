@@ -1,0 +1,399 @@
+{
+ "article": "a2724",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Job_performance",
+   "title": "Job performance",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:45.356Z",
+   "snapshot": "a2a865c5904ad417ac993d812b816e431232805f37b985f0537cd6a3ba3fbe8b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hawthorne_effect",
+   "title": "Hawthorne effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:46.364Z",
+   "snapshot": "c51e6e95db0f731afaf70abf371bc35617b95c97711025f0813ea58f694bf23a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs",
+   "title": "Maslow's hierarchy of needs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:47.361Z",
+   "snapshot": "a210701870ad8cf6057e282428a5fa5af0b0f27a349212152e101e5498aac74d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Parkinson%27s_law",
+   "title": "Parkinson's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:48.256Z",
+   "snapshot": "976c6a892a429acdbedadb90e484c36383b688fae83807a8f4fe52cb0deed8b4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Peter_principle",
+   "title": "Peter principle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:49.371Z",
+   "snapshot": "5dd9e80142233c1063a884306eed7509cbd32adac17138bd2cd092b86cc4af7f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hawthorne_Works",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:50.258Z",
+   "snapshot": "325ccb57dccd5228050ddbcb18159597fc1a9cd65ff83ccf36c21e30365a1762"
+  },
+  "s7": {
+   "url": "https://www.siop.org/tip-article/is-cognitive-ability-the-best-predictor-of-job-performance",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s8": {
+   "url": "https://www.humrro.org/blog/is-cognitive-ability-the-best-predictor-of-job-performance-new-research-says-its-time-to-think-again/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:47.945Z",
+   "snapshot": "db7148d39d4c732bfb7eb37aad33e8b863425982cc3a13577abad9039e7e92b8"
+  },
+  "s9": {
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=34968080&rettype=abstract&retmode=text",
+   "title": "Revisiting meta-analytic estimates of validity in personnel selection (Sackett et al., J Appl Psychol 2022) – PubMed abstract",
+   "publisher": "U.S. National Library of Medicine (PubMed)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:52.854Z",
+   "snapshot": "f792659e14ca0d7e59b924d59e1413d0ef0a651369e2f464f5d145f4222ebdca"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hawthorne effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Abraham Maslow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Parkinson's law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter principle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "general mental ability",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "general mental ability",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "general mental ability",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "pp-025/1, u04: Schmidt & Hunter (1998) ranked GMA first. Sackett et al. (2022, J Appl Psych 107:2040) cut its validity to about .31 and put structured interviews (about .42) first. The bank wording names the classic meta-analyses, and the body and notes already give the 2022 revision."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:03.618Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "general mental ability",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:03.618Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:03.618Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A meta-analysis of selection methods in personnel psychology found that general mental ability was the best overall predictor of job performance and training performance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.618Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “general mental ability” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:03.618Z",
+   "target": "f25453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hawthorne effect is a type of behavioral reactivity in which individuals modify an aspect of their behavior in response to their awareness of being observed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.618Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hawthorne effect” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:03.618Z",
+   "target": "f25454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Maslow's hierarchy of needs is a conceptualization of the needs (or goals) that motivate human behaviour, which was proposed in 1943 by the American psychologist Abraham Maslow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.618Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Maslow” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:03.618Z",
+   "target": "f25455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Parkinson's Law is the title of a satirical essay by the naval historian C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.618Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parkinson's law” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:03.618Z",
+   "target": "f25456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Peter principle is a concept in management developed by Laurence J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.618Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter principle” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:42:36Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A meta-analysis of selection methods in personnel psychology found that general mental ability was the best overall predictor of job performance and training performance.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:37Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Structured interviews emerged as the top-ranked selection procedure.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23",
+   "note": "Contests GMA as the top predictor today; the wording is scoped to the classic meta-analyses (Schmidt & Hunter 1998), which this 2022 re-analysis revisits. Body and notes now say so."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:44:48Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "While intelligence (general mental ability) is the strongest known predictor of job performance",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23",
+   "note": "Resolves the Sackett 2022 contest for this wording: the question asks what the CLASSIC meta-analyses (Schmidt & Hunter 1998) found, which is general mental ability; the body and notes already report that Sackett et al. (2022) later ranked structured interviews first."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:51.084Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Structured interviews emerged as the top-ranked selection procedure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.084Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:51.084Z",
+   "target": "f25452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "While intelligence (general mental ability) is the strongest known predictor of job performance",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.084Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  }
+ ]
+}

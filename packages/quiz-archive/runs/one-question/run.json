@@ -1,0 +1,34 @@
+{
+ "id": "one-question",
+ "title": "One question, one fact: classify same/different wordings, then split and restore",
+ "startedAt": "2026-10-21",
+ "endedAt": "2026-10-21",
+ "kind": "split",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (6 classifiers, 3 split workers)"
+ ],
+ "brief": "CLASSIFY.md",
+ "inputs": [
+  "bank (facts with several wordings or a shared answer)"
+ ],
+ "outputs": [
+  "bank: split/restored facts (history 'one-question split worker N')"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/one-question"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 21,
+  "bytes": 956919,
+  "byExt": {
+   ".json": 4,
+   ".jsonl": 6,
+   ".md": 2,
+   ".txt": 9
+  },
+  "historyEntries": 364
+ },
+ "notes": "classify-N.txt = classifier inputs, verdicts-N.jsonl = same/different verdicts, plan.json + split-N.txt = split worker items (brief SPLIT.md), reasons-N.json = the changelog reasons."
+}

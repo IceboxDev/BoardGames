@@ -1,0 +1,249 @@
+{
+ "article": "a1842",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:31.363Z",
+   "snapshot": "b5d347a36acd4991120d6ae1593261a8dda3ac39df4cfc0326c3376828801b63"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Willy_Brandt",
+   "title": "Willy Brandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:35.938Z",
+   "snapshot": "12f00dc6b7c219937696cac4b2b7b7c8cdf065b2e496f07df4f716fda141a654"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hans-Jochen_Vogel",
+   "title": "Hans-Jochen Vogel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:37.220Z",
+   "snapshot": "d4b014b75bcb0ee3a699f1babf44541de4fa6852967326f1ab3b382b74d68180"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Klaus_von_Dohnanyi",
+   "title": "Klaus von Dohnanyi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:37.722Z",
+   "snapshot": "fbd6b6ec904367c1bd2b681694b86e3df94a90aa877e9a395ea88e7c9e6e09ec"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gustav_Heinemann",
+   "title": "Gustav Heinemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:39.357Z",
+   "snapshot": "ccdf0bf11dad1fce5f4b40c49a3044b21c4132c14246fa9ce98e006f15510b6c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Rathaus_Sch%C3%B6neberg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:39.749Z",
+   "snapshot": "2b24ebb79aded0f55d4c46bc3ec4814b1eded9fe5b72ec7fcf20c0c1fa0bb019"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Köln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "München",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hamburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Essen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:31.979Z",
+   "target": "f09206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bereits im Kaiserreich und in der Weimarer Republik absolvierte der Jurist und Angehörige der katholischen Zentrumspartei eine politische Karriere: Er war von 1917 bis 1933 Oberbürgermeister von Köln, gehörte dem preußischen Herrenhaus an und war Präsident des preußischen Staatsrats.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Köln” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:31.979Z",
+   "target": "f09207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vor seiner Zeit als Bundeskanzler war Brandt von 1957 bis 1966 in West-Berlin Regierender Bürgermeister und anschließend, während der ersten Großen Koalition bis 1969, Außenminister und Vizekanzler im Kabinett Kiesinger.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:31.979Z",
+   "target": "f09208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Juli 2020 in München) war ein deutscher Politiker (SPD).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “München” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:31.979Z",
+   "target": "f09209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juni 1928 in Hamburg) ist ein deutscher Jurist und Politiker (SPD).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:31.979Z",
+   "target": "f09210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Juli 1976 in Essen) war ein deutscher Politiker.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.979Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Essen” is on the snapshot of s5"
+  }
+ ]
+}

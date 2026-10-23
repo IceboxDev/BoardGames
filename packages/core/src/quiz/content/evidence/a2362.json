@@ -1,0 +1,387 @@
+{
+ "article": "a2362",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/D%C3%A4nische_Monarchie",
+   "title": "Dänische Monarchie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:07.845Z",
+   "snapshot": "991dab8e3c1053d81ad4651319c30fe1ccfba89cadfd38ce4149b61768fd860e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Haithabu",
+   "title": "Haithabu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:08.774Z",
+   "snapshot": "5b1491123e9bd71328d42dc078b42ba6d4d66d894dae4c90656589ba761537a6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jelling_stones",
+   "title": "Jelling stones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:11.255Z",
+   "snapshot": "88c81a798c4d2f420c04026a755dc9fb6b45337d723db18db4e55653948f9ba6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hedeby",
+   "title": "Hedeby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:12.356Z",
+   "snapshot": "735b74144fe36eb588127e66f8ce1868bd5fc7a0491c02d7ff60091f4df7ce43"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Birka",
+   "title": "Birka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:13.358Z",
+   "snapshot": "c2df61451b0eb91c433223fabb628b71e1d3b0ca4d7336bc9ece688f4618c22a"
+  },
+  "s6": {
+   "url": "https://www.kongehuset.dk/en/the-monarchy-in-denmark/history",
+   "title": "The history of the Danish Monarchy",
+   "publisher": "The Danish Royal House (kongehuset.dk)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:53.112Z",
+   "snapshot": "3ec671dd95c974e6595c6cd38f5b6fca073ae475a00fc0303878c51e8e3e1175"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dänemark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Haithabu",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-234"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gorm the Old",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harald Bluetooth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Danevirke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Birka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:05.117Z",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Monarchie des Königreichs Dänemark (dänisch Kongeriget Danmark) ist eine verfassungsmäßige Institution und ein historisches Amt des Königreichs Dänemark, das sowohl Dänemark selbst als auch die autonomen Gebiete der Färöer und Grönlands umfasst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dänemark” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:05.117Z",
+   "target": "f12313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Haithabu (dänisch Hedeby) war eine bedeutende Siedlung dänischer bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haithabu” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:05.117Z",
+   "target": "f12314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The older of the two Jelling stones was raised by King Gorm the Old in memory of his wife Thyra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gorm the Old” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:05.117Z",
+   "target": "f12315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The larger of the two stones was raised by King Gorm's son, Harald Bluetooth, in memory of his parents, celebrating his conquest of Denmark and Norway, and his conversion of the Danes to Christianity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harald Bluetooth” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:05.117Z",
+   "target": "f12316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Because of its historical importance during the Viking Age and exceptional preservation, Hedeby and the nearby defensive earthworks of the Danevirke were inscribed on the UNESCO World Heritage List in 2018.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danevirke” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:05.117Z",
+   "target": "f12317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Birka  (Birca in medieval sources), on the island of Björkö (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Birka” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:02:08Z",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Danish Monarchy can be traced back to Gorm the Old (d. 958).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gorm the Old was a Viking-Age king of Jelling."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:02:10Z",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die erste schriftliche Erwähnung des Königreiches Dänemark erfolgte im 10. Jahrhundert auf den Runensteinen von Jelling unter den Wikingerkönigen Gorm dem Alten und Harald Blauzahn.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:49.501Z",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Danish Monarchy can be traced back to Gorm the Old (d. 958).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:49.501Z",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die erste schriftliche Erwähnung des Königreiches Dänemark erfolgte im 10. Jahrhundert auf den Runensteinen von Jelling unter den Wikingerkönigen Gorm dem Alten und Harald Blauzahn.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:49.501Z",
+   "target": "f12312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "That same year, Duke Christian of Oldenborg was chosen to be the King of Denmark and took the name Christian I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Denmark” is on the snapshot of s6"
+  }
+ ]
+}

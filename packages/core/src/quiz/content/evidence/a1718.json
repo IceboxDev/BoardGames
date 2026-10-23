@@ -1,0 +1,353 @@
+{
+ "article": "a1718",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+   "title": "The Hunger Games (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:48.472Z",
+   "snapshot": "16ba38c3c87214af019a6428a7cec90aa4b0662e9f5983d9496b6e7ce2116434"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Twilight_(Meyer_novel)",
+   "title": "Twilight (Meyer novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:49.481Z",
+   "snapshot": "00c5d0944f2da7dfbbd23710031fdb80841e44fd3f97b69210d3d6f9ea6777a0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Divergent_(novel)",
+   "title": "Divergent (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:50.447Z",
+   "snapshot": "1c4e5ba90813071e169cf29ccb138968cf9f2f91025c7277c44313bc2fe019d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Northern_Lights_(Pullman_novel)",
+   "title": "Northern Lights (Pullman novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:51.443Z",
+   "snapshot": "2ba7de1805033e50e607d5e337c27fd1f820eb1ea48d7dc34f7f0c1963c4ba27"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tintenherz_(Roman)",
+   "title": "Tintenherz (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:48.661Z",
+   "snapshot": "c368ef6395d6f0060e55c02c343d265256103c950fcdba5ef3fe722d56a9105f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tintenwelt-Tetralogie",
+   "title": "Tintenwelt-Tetralogie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:49.790Z",
+   "snapshot": "14dea62cda4f2d6bb4e994087c45ece370dc6b38dc999cdcf7e507459b458aa4"
+  },
+  "s7": {
+   "url": "https://www.harpercollins.com/products/divergent-veronica-roth",
+   "title": "Divergent – Veronica Roth",
+   "publisher": "HarperCollins",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:44:56Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Katniss Everdeen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bella Swan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tris Prior",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lyra Belacqua",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Meggie Folchart",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tintenblut",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-267"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:11.117Z",
+   "target": "f08586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is written in the perspective of 16-year-old Katniss Everdeen, who lives in the future, post-apocalyptic nation of Panem in North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Katniss Everdeen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:11.117Z",
+   "target": "f08587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bella Swan, an introverted seventeen-year-old girl, moves from Phoenix, Arizona, to Forks, Washington, on the Olympic Peninsula to live with her father, the town's police chief, after her mother begins life on the road with her new husband, a minor-league baseball player.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bella Swan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:11.117Z",
+   "target": "f08588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tris Prior",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tris Prior”, “Трис Прайор”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:11.117Z",
+   "target": "f08589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Set in a parallel universe, it follows the journey of Lyra Belacqua to the Arctic in search of her missing friend, Roger Parslow, and Lord Asriel, who has been conducting experiments with a mysterious substance known as \"Dust\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lyra Belacqua” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:11.117Z",
+   "target": "f08590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Meggie Folchart ist ein zwölfjähriges Mädchen, das allein mit seinem Vater Mortimer aufwächst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meggie Folchart” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:11.117Z",
+   "target": "f12569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "2005 folgte der zweite Teil unter dem Titel Tintenblut.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tintenblut” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:56Z",
+   "target": "f08588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "But the newly christened Tris also has a secret",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Publisher's blurb: heroine Beatrice Prior, newly christened Tris."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:45:02Z",
+   "target": "f08588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the story, Beatrice Prior joins the ranks of the Dauntless faction and explores her new identity as \"Tris\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:57.789Z",
+   "target": "f08588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the story, Beatrice Prior joins the ranks of the Dauntless faction and explores her new identity as \"Tris\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.789Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  }
+ ]
+}

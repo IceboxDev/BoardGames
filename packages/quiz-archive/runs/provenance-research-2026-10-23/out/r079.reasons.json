@@ -1,0 +1,135 @@
+{
+ "a1428": {
+  "kind": "corrected",
+  "reason": "The London Eye is no longer Europe's tallest Ferris wheel: the 140-metre Sun of Moscow (VDNKh) overtook its 135 m in September 2022, though the London Eye's 120 m wheel is still larger in diameter. The body now says it held the European record for more than two decades until 2022, adds the Sun of Moscow to the text and table, adds notes explaining this, and marks Ain Dubai's world title as 'as of 2026' (it reopened on 26 December 2024 and is still the tallest).",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sun_of_Moscow"
+   },
+   {
+    "url": "https://en.moscow-sun.ru/"
+   },
+   {
+    "url": "https://www.londoneye.com/about-us/history/"
+   },
+   {
+    "url": "https://www.aindubai.com/en"
+   },
+   {
+    "url": "https://www.thenationalnews.com/lifestyle/things-to-do/2024/12/26/ain-dubai-reopens-tickets/"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu",
+   "notesEn",
+   "notesDe",
+   "notesRu"
+  ]
+ },
+ "w07136": {
+  "kind": "reworded",
+  "reason": "The card asked which 135 m wheel 'is the tallest in Europe'. That has been outdated since the 140 m Sun of Moscow opened in 2022. The question now asks which wheel, opened in 2000, was Europe's tallest until 2022. The card's own words stay in cardText.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sun_of_Moscow"
+   },
+   {
+    "url": "https://en.moscow-sun.ru/"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru",
+   "cardText"
+  ]
+ },
+ "f07136": {
+  "kind": "marked",
+  "reason": "Spans moved to the rewritten sentence that gives the answer ('For more than two decades Europe's record holder was the London Eye').",
+  "sources": [
+   {
+    "url": "https://www.londoneye.com/about-us/history/"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f07140": [
+  {
+   "kind": "edited",
+   "reason": "'Tallest in the world' is time-sensitive. The body now says 'as of 2026', and reviewBy is set one year out.",
+   "sources": [
+    {
+     "url": "https://www.aindubai.com/en"
+    }
+   ],
+   "fields": [
+    "reviewBy"
+   ]
+  },
+  {
+   "kind": "marked",
+   "reason": "Span offsets moved because text earlier in the body was edited; same answer, same sentence.",
+   "sources": [],
+   "fields": [
+    "spans"
+   ]
+  }
+ ],
+ "a1080": {
+  "kind": "corrected",
+  "reason": "Updated Arm's shipment figure: Arm's official history (2026) says its technology has shipped in more than 350 billion chips, not 250 billion. The figure is now dated 'as of 2026'.",
+  "sources": [
+   {
+    "url": "https://newsroom.arm.com/blog/arm-official-history"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "a1164": {
+  "kind": "corrected",
+  "reason": "MySQL's own history page says the public contest chose the dolphin's NAME (Sakila, submitted by a developer from Eswatini), not the dolphin logo itself, and it gives no year. The unsupported '2001' and 'selected in a contest' wording were removed.",
+  "sources": [
+   {
+    "url": "https://dev.mysql.com/doc/refman/8.4/en/history.html"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f07137": {
+  "kind": "marked",
+  "reason": "Span offsets moved because text earlier in the body was edited; same answer, same sentence.",
+  "sources": [],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f07138": {
+  "kind": "marked",
+  "reason": "Span offsets moved because text earlier in the body was edited; same answer, same sentence.",
+  "sources": [],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f07139": {
+  "kind": "marked",
+  "reason": "Span offsets moved because text earlier in the body was edited; same answer, same sentence.",
+  "sources": [],
+  "fields": [
+   "spans"
+  ]
+ }
+}

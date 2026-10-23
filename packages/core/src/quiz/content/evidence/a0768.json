@@ -1,0 +1,195 @@
+{
+ "article": "a0768",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/TL%3BDR",
+   "title": "TL;DR – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:03.300Z",
+   "snapshot": "d2ba80369a54ff59708736551cc520f641ba258f50d2b11e4477067e3016b631"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/LOL",
+   "title": "LOL – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:04.358Z",
+   "snapshot": "030684120dedfaf6a31e426a6c881ee49b017b9010284b82437f54d4102bcf8a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/TPB_AFK",
+   "title": "TPB AFK – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:05.293Z",
+   "snapshot": "38d276d69e6f70368c24449bf27e3955cb381f5f387d50a15d6c0f69a1d9c26d"
+  },
+  "s4": {
+   "url": "https://en.wiktionary.org/wiki/IMHO",
+   "title": "IMHO – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:02.920Z",
+   "snapshot": "c95d2b8e467d667fc4e7c2d9a3207981da8ae77fe017c1a4f386a78fdb449ba4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "too long; didn't read",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "laughing out loud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "away from keyboard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "in my humble opinion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:42.564Z",
+   "target": "f03836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "TL;DR or tl;dr, short for \"too long; didn't read\", is Internet slang, often used to introduce a summary of an online post or news article.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “too long; didn't read” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:42.564Z",
+   "target": "f03837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "LOL, or lol, is an acronym for \"laughing out loud\", and a popular element of Internet slang, which can be used to indicate amusement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “laughing out loud” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:42.564Z",
+   "target": "f03838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "TPB AFK: The Pirate Bay Away From Keyboard is a 2013 Swedish documentary film directed and produced by Simon Klose.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “away from keyboard” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:42.564Z",
+   "target": "f03839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "(Internet slang, text messaging) Initialism of in my humble opinion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.564Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “in my humble opinion” is on the snapshot of s4"
+  }
+ ]
+}

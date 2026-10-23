@@ -1,0 +1,256 @@
+{
+ "article": "a1522",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Greenland",
+   "title": "Greenland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:26.884Z",
+   "snapshot": "071614d219f4139b0aa49855c79b7ca1f88af571b4d23a72115c24e8356fe429"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Svalbard_Treaty",
+   "title": "Svalbard Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:17.871Z",
+   "snapshot": "74d7dbed8c27c10c544544e448253fb183cff6b20db5a966955fa1d8846c90dc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/%C3%85land_crisis",
+   "title": "Åland crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:18.885Z",
+   "snapshot": "6c12fb79602ea7518066d9686566277313da04382b00547c6fab1f4b0ce824eb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Easter_Island",
+   "title": "Easter Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:49.853Z",
+   "snapshot": "5a59099d281fcd649784f4fc9ff35c47fe2dfcef50c0b0feebd63ce35d594ca0"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tasmanien",
+   "title": "Tasmanien",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:16.234Z",
+   "snapshot": "28818e05b02667b922425721e5b12f23434a8c9560a753db9c4b59765f283c51"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Madeira",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:09.156Z",
+   "snapshot": "442e06e0b17e49609fcba6898d52aba1453809799147559789ed5c187ed29520"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Longyearbyen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:19.963Z",
+   "snapshot": "835a865f20949f39c4ebc8f4ef863bf905a45635105c3827323180ddecc01d39"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Denmark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Norway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-140"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Australien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-152"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:38.713Z",
+   "target": "f07606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greenland is an autonomous territory of the Kingdom of Denmark and is the largest of the kingdom's three constituent parts by land area, the others being Denmark proper and the Faroe Islands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Denmark” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:38.713Z",
+   "target": "f07607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Svalbard Treaty (originally the Spitsbergen Treaty) recognises the sovereignty of Norway over the Arctic archipelago of Svalbard, at the time called Spitsbergen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norway” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:38.713Z",
+   "target": "f07608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "'Åland question') was a territorial dispute between Sweden and Finland over the Åland Islands after World War I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Finland” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:38.713Z",
+   "target": "f07610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Easter Island (Spanish: Isla de Pascua, [ˈisla ðe ˈpaskwa]; Rapa Nui: Rapa Nui, [ˈɾapa ˈnu.i]) is an island and special territory of Chile in the southeastern Pacific Ocean, at the southeasternmost point of the Polynesian Triangle in Oceania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chile” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:38.713Z",
+   "target": "f14518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tasmanien (englisch Tasmania, in der rekonstruierten Aborigines-Sprache palawa kani lutruwita und im australischen Englisch häufig Tassie; bis Ende 1855 Van-Diemens-Land) ist eine zu Australien gehörende Insel am östlichen Rand des Indischen Ozeans.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australien” is on the snapshot of s5"
+  }
+ ]
+}

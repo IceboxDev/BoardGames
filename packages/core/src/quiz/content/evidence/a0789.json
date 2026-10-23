@@ -1,0 +1,195 @@
+{
+ "article": "a0789",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hildegard_of_Bingen",
+   "title": "Hildegard of Bingen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:21.528Z",
+   "snapshot": "f74a552323bf50b11d7f700047dd2e186367e3743110fae349c818008226a697"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hippocrates",
+   "title": "Hippocrates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:14.855Z",
+   "snapshot": "904e037cb05283f94990c6fcb154912f3f4a78dcfb7ee1b4f50e956b2f3410c3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Albertus_Magnus",
+   "title": "Albertus Magnus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:22.470Z",
+   "snapshot": "aa5db1c5b7c77e20fa0ff3cd9a1e7f39331a6b45add05b72bc5c13f99b4d0c21"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paracelsus",
+   "title": "Paracelsus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:23.396Z",
+   "snapshot": "60eaba431ca8b7deec3f1b2ad8617a4787dd90fa5a000073900dccefa7255c17"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hildegard von Bingen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c066"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03942",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hippocrates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albertus Magnus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paracelsus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:45.721Z",
+   "target": "f03941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hildegard of Bingen (German: Hildegard von Bingen, pronounced [ˈhɪldəɡaʁt fɔn ˈbɪŋən]; Latin: Hildegardis Bingensis; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hildegard von Bingen” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:45.721Z",
+   "target": "f03942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hippocrates of Kos (; Ancient Greek: Ἱπποκράτης ὁ Κῷος, romanized: Hippokrátēs ho Kôios; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hippocrates” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:45.721Z",
+   "target": "f03944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It seems likely that Albertus Magnus was born sometime before 1200, given well-attested evidence that he was aged over 80 on his death in 1280.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albertus Magnus” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:45.721Z",
+   "target": "f03945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theophrastus Bombast von Hohenheim (10 November 1493 – 24 September 1541), known as Paracelsus, was a Swiss physician, alchemist, lay theologian, and philosopher of the German Renaissance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paracelsus” is on the snapshot of s4"
+  }
+ ]
+}

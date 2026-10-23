@@ -1,0 +1,242 @@
+{
+ "article": "a1681",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cyrano_de_Bergerac_(play)",
+   "title": "Cyrano de Bergerac (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:40.450Z",
+   "snapshot": "af9d6f75a804e84e259865253a8636ddb04180344ab1c8b7bf7b82515fd5e0b2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Faust_(1960_film)",
+   "title": "Faust (1960 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:41.275Z",
+   "snapshot": "827b7a30b9f25c705ae4dfa4b8e43f317b0a49abcd31c104369869ab2f7c25f6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wilhelm_Tell_(Schiller)",
+   "title": "Wilhelm Tell (Schiller) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:03.929Z",
+   "snapshot": "db2fb00e869c1d243e4da8c2b3d1723b67c6a6f508fa5ff9ae076549cdff3126"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peer_Gynt",
+   "title": "Peer Gynt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:42.405Z",
+   "snapshot": "b1be7c6054e6496a5b5bac07e17587f7b5d4be0afc32ed9c6a7345ee66f0dd80"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Mutter_Courage_und_ihre_Kinder",
+   "title": "Mutter Courage und ihre Kinder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:40.683Z",
+   "snapshot": "ec9f9c0a831f24afa34c5cb60658ca595a538bb8d93474d45ac15fb036085bba"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cyrano de Bergerac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Faust",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wilhelm Tell",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peer Gynt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mutter Courage und ihre Kinder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:04.892Z",
+   "target": "f08401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cyrano de Bergerac ( SIRR-ə-noh də BUR-zhə-rak, – BAIR-, French: [siʁano d(ə) bɛʁʒəʁak]) is a French play written in 1897 by Edmond Rostand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cyrano de Bergerac” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:04.892Z",
+   "target": "f08402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Faust is a 1960 West German theatrical film directed by Peter Gorski.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Faust” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:04.892Z",
+   "target": "f08403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wilhelm Tell ist das letzte fertiggestellte Drama von Friedrich von Schiller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Tell” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:04.892Z",
+   "target": "f08404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peer Gynt ( peer GHINT, Norwegian: [peːr ˈjʏnt, - ˈɡʏnt]) is a five-act play in verse written in 1867 by the Norwegian dramatist Henrik Ibsen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peer Gynt” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:04.892Z",
+   "target": "f08405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mutter Courage und ihre Kinder ist ein Drama von Bertolt Brecht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:04.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mutter Courage und ihre Kinder” is on the snapshot of s5"
+  }
+ ]
+}

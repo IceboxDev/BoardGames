@@ -1,0 +1,256 @@
+{
+ "article": "a2017",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_Weill",
+   "title": "Kurt Weill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:14.361Z",
+   "snapshot": "6a30b86228e36a7f797f3acabe86ddbf87b74dd980bce6a853e7a340fb663933"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Paul_Dessau",
+   "title": "Paul Dessau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:15.257Z",
+   "snapshot": "7f327d900e6cb84887601bb01d8c8aefc29076ac8165a9e800043a07777b59eb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Decision_(play)",
+   "title": "The Decision (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:16.427Z",
+   "snapshot": "e19da0c5a363c2af964175df637482ce1fc511a8e2126f3fa978ad18d67e1e07"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Porgy_and_Bess",
+   "title": "Porgy and Bess – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:13.649Z",
+   "snapshot": "bf324510242877a1bfbd5a71aed2aeb5c54b53a1a589c35f476b5810e81fc299"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gay_Divorce",
+   "title": "Gay Divorce – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:17.283Z",
+   "snapshot": "9ffcc9260cd9a26b866486f701b2907c24616ec0cdc1c33682e13e9f9e100394"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/September_Song",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:18.307Z",
+   "snapshot": "24d66393f434f4a0a1b29a9dd5c3127636d85a168a76315c28a450b9a0d2572b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Speak_Low",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:19.246Z",
+   "snapshot": "b779ee5785733fa62a472c807eb1122a3534a58213cc5120b9bad437339a9fc9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Weill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Dessau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hanns Eisler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "George Gershwin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cole Porter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:06.991Z",
+   "target": "f10081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She took great care to support Weill's work, and after his death she took it upon herself to increase awareness of his music, forming the Kurt Weill Foundation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Weill” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:06.991Z",
+   "target": "f10082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Dessau (19 December 1894 – 28 June 1979) was a German composer and conductor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Dessau” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:06.991Z",
+   "target": "f10083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Created in collaboration with composer Hanns Eisler and director Slatan Dudow, it consists of eight sections in prose and unrhymed, free verse, with six major songs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanns Eisler” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:06.991Z",
+   "target": "f10084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Porgy and Bess ( PORG-ee) is an English-language opera by American composer George Gershwin, with a libretto written by author DuBose Heyward and lyricist Ira Gershwin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Gershwin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:06.991Z",
+   "target": "f10085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gay Divorce is a musical with music and lyrics by Cole Porter and book by Dwight Taylor, adapted by Kenneth Webb and Samuel Hoffenstein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cole Porter” is on the snapshot of s5"
+  }
+ ]
+}

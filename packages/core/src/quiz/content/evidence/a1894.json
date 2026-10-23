@@ -1,0 +1,242 @@
+{
+ "article": "a1894",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Leif_Erikson",
+   "title": "Leif Erikson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:44.582Z",
+   "snapshot": "c0230d321f9e6f36d59415acf0b5e1b4e714e067d3d11abb04e3b56e2eeb9ff0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bartolomeu_Dias",
+   "title": "Bartolomeu Dias – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:07.451Z",
+   "snapshot": "cfff754f9355b4b57fdc984ef939c12657b540b1b673f030751c4f38c90b84aa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vasco_da_Gama",
+   "title": "Vasco da Gama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:08.563Z",
+   "snapshot": "447515d698b600cb0873c85b3ffef46f5f12036308b8d6dcd7ac1c1022182616"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_Cabot",
+   "title": "John Cabot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:45.574Z",
+   "snapshot": "b78c6fcf436271b03ee9886a331b34efd4e1dc52663bec5fa8f55e9a21bc9d6c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/History_of_Antarctica",
+   "title": "History of Antarctica",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:46.731Z",
+   "snapshot": "85208e39496607c9b74f102534181fed46293d7cb62916014014f49e345b8626"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leif Erikson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bartolomeu Dias",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vasco da Gama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Cabot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "James Cook",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-001"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:40.528Z",
+   "target": "f09466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leif Erikson, also known as Leif the Lucky (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leif Erikson” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:40.528Z",
+   "target": "f09467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Bartolomeu Dias Museum Complex (also spelled \"Bartholomeu\"), located at Mossel Bay, features an exhibition displaying the history of early European sea voyagers who discovered sea routes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bartolomeu Dias” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:40.528Z",
+   "target": "f09468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vasco da Gama ( VAS-koo də GA(H)M-ə, European Portuguese: [ˈvaʃku ðɐ ˈɣɐmɐ]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vasco da Gama” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:40.528Z",
+   "target": "f09470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1499), traditionally known in English as John Cabot (English: ), was an Italian navigator and explorer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Cabot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:40.528Z",
+   "target": "f12259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1773, James Cook and his crew crossed the Antarctic Circle for the first time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Cook” is on the snapshot of s5"
+  }
+ ]
+}

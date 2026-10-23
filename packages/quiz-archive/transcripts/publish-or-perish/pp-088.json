@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-088",
+ "image": "IMG20261022011447.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Computer Science",
+   "cardText": "[Computer Science] Why is a computer bug called a “bug”?\nA. The term was borrowed from aviation engineering\nB. Because an actual insect caused an issue in an early computer\nC. It was named after a popular comic strip character\nAnswer: B. In 1947, a moth was found to cause a malfunction in an early computer. It was logged as a “bug.” The logbook with the moth taped to it is now housed in a museum.",
+   "en": "Which insect, found trapped in a relay of the Harvard Mark II computer in 1947, was taped into the logbook as the “first actual case of bug being found”?",
+   "de": "Welches Insekt, das 1947 in einem Relais des Computers Harvard Mark II gefunden wurde, klebte man als „first actual case of bug being found“ ins Logbuch?",
+   "reworked": true,
+   "answerEn": "A moth",
+   "answerDe": "Eine Motte",
+   "timeline": {
+    "kind": "event",
+    "start": "1947",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Operators of the Harvard Mark II find a moth in a relay and tape it into the logbook",
+    "labelDe": "Bediener des Harvard Mark II finden eine Motte in einem Relais und kleben sie ins Logbuch"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+    "title": "Bug (engineering)",
+    "lang": "en"
+   },
+   "notes": "The card is wrong about the etymology: 'bug' for a technical fault was engineering jargon since at least the 1870s (Edison, 1878); the 1947 moth only made the existing term famous — hence the 'first actual case of bug'. Open question asks the moth fact. The logbook is in the Smithsonian's National Museum of American History.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 2,
+   "discipline": "Engineering and Inventions",
+   "cardText": "[Engineering and Inventions] What was the first mammal to be cloned from an adult somatic cell?\nA. A sheep B. A mouse C. A guinea pig\nAnswer: A. Dolly the sheep, cloned in 1996, was the first mammal to be cloned from an adult somatic cell.",
+   "en": "What was the name of the sheep, born in 1996, that was the first mammal cloned from an adult somatic cell?",
+   "de": "Wie hieß das 1996 geborene Schaf, das als erstes Säugetier aus einer adulten Körperzelle geklont wurde?",
+   "reworked": true,
+   "answerEn": "Dolly",
+   "answerDe": "Dolly",
+   "timeline": {
+    "kind": "event",
+    "start": "1996-07-05",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Birth of Dolly the sheep, the first mammal cloned from an adult somatic cell",
+    "labelDe": "Geburt des Schafs Dolly, des ersten aus einer adulten Körperzelle geklonten Säugetiers"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dolly_(sheep)",
+    "title": "Dolly (sheep)",
+    "lang": "en"
+   },
+   "notes": "Card answer (a sheep) confirmed; the open question asks for the sheep's name. Cloned at the Roslin Institute, Scotland, by somatic cell nuclear transfer.",
+   "domain": "science",
+   "sub": "biology"
+  }
+ ]
+}

@@ -1,0 +1,462 @@
+{
+ "article": "a1513",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Anna_Pavlova",
+   "title": "Anna Pavlova – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:51.948Z",
+   "snapshot": "5db1f60eddfc249c8fa4934c48df1a011af759209cf2e4a3340047753c34b178"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vaslav_Nijinsky",
+   "title": "Vaslav Nijinsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:53.105Z",
+   "snapshot": "184ea539105815e7fa648ede747cb606c34f4a955d19741d50d1190abbc313c4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Margot_Fonteyn",
+   "title": "Margot Fonteyn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:53.934Z",
+   "snapshot": "97128db133130e1af31b103a0d38f4996c26a7c0d7f64ce6c60145ab86747cd0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rudolf_Nureyev",
+   "title": "Rudolf Nureyev – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:55.038Z",
+   "snapshot": "96d40e9256953e30c2ffdd706c1f9643fdc419012485c41be0b03dbc7d359196"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Maya_Plisetskaya",
+   "title": "Maya Plisetskaya – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:55.970Z",
+   "snapshot": "28fea4194a8f46dcb1a66e588179815114423444b596b1d35b287316cb20e4ff"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Mikhail_Baryshnikov",
+   "title": "Mikhail Baryshnikov",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:53.347Z",
+   "snapshot": "d0bcf8c2c0abdba818f96cc622b86d059f4b0b47503251cb1d2914fa07bd6767"
+  },
+  "s7": {
+   "url": "https://news.bbc.co.uk/2/hi/entertainment/1209460.stm",
+   "title": "Pavlova's ashes stay in London",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:20.982Z",
+   "snapshot": "d88dc373067a29aa2b51726a1e63e5e6a5c2086e6354cf47e0c156cb4717a960"
+  },
+  "s8": {
+   "url": "https://ria.ru/20160212/1372581176.html",
+   "title": "Анна Павлова – биография",
+   "publisher": "РИА Новости",
+   "kind": "press",
+   "lang": "ru",
+   "retrievedAt": "2026-10-23T12:40:22.922Z",
+   "snapshot": "582ee7da55884339cc7b7d557ede3f34a9c0f785f6addfda754838ca42103328"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anna Pavlova",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vaslav Nijinsky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Margot Fonteyn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rudolf Nureyev",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Maya Plisetskaya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mikhail Baryshnikov",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-053"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:37.457Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The house was featured in the film Anna Pavlova.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anna Pavlova” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:37.457Z",
+   "target": "f07562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vaslav Nijinsky was born in 1889 or 1890 in Kiev, Russian Empire (now Ukraine), as Wacław Niżyński, to ethnic Polish parents, touring dancers Tomasz Niżyński (born 7 March 1862) and Eleanora Bereda (born 28 December 1856).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vaslav Nijinsky” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:37.457Z",
+   "target": "f07563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dame Margaret Evelyn de Arias DBE (née Hookham; 18 May 1919 – 21 February 1991), known by the stage name Margot Fonteyn (), was an English ballerina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margot Fonteyn” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:37.457Z",
+   "target": "f07564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In March 1992, living with advanced AIDS, he visited Kazan and appeared as a conductor in front of the audience at Musa Cälil Tatar Academic Opera and Ballet Theatre, which now presents the Rudolf Nureyev Festival in Tatarstan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudolf Nureyev” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:37.457Z",
+   "target": "f07565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1991, she published her autobiography, I, Maya Plisetskaya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maya Plisetskaya” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:37.457Z",
+   "target": "f13181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mikhail Baryshnikov",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Baryshnikov” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:11:35Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Plans to return the remains of the legendary Russian ballerina, Anna Pavlova, to Russia have been cancelled.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "'Most famous' is evaluative; Pavlova is the standard answer."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:11:37Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "родилась 12 февраля (31 января по старому стилю) 1881 года в Петербурге",
+     "quoteLang": "ru",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:11:39Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anna Matveyevna Pavlova was born in the Preobrazhensky Regiment hospital in 1881, Saint Petersburg",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:23.659Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Plans to return the remains of the legendary Russian ballerina, Anna Pavlova, to Russia have been cancelled.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:23.659Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "родилась 12 февраля (31 января по старому стилю) 1881 года в Петербурге",
+     "quoteLang": "ru",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:23.659Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anna Matveyevna Pavlova was born in the Preobrazhensky Regiment hospital in 1881, Saint Petersburg",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:23.659Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Plans to return the remains of the legendary Russian ballerina, Anna Pavlova, to Russia have been cancelled.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Anna Pavlova” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:23.659Z",
+   "target": "f07561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "© РИА Новости | Перейти в медиабанкПервая исполнительница «Умирающего лебедя» балерина Анна Павлова",
+     "quoteLang": "ru",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Анна Павлова” is on the snapshot of s8"
+  }
+ ]
+}

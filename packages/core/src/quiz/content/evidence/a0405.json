@@ -1,0 +1,242 @@
+{
+ "article": "a0405",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Bunsen",
+   "title": "Robert Bunsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:50.474Z",
+   "snapshot": "811d45de736c160dbfb4643e21e10dedfcf4e854ea3850896172ff09ae45f721"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dmitri_Mendeleev",
+   "title": "Dmitri Mendeleev – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:51.576Z",
+   "snapshot": "027d676d246fb7647673b754223687c546d63d7acf270129d84e3352686d3e50"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Justus_von_Liebig",
+   "title": "Justus von Liebig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:52.773Z",
+   "snapshot": "d0c6d8797b89355f7d58e3a99c96fbc77cb2756b50f7219a25155c28c1b40696"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Erlenmeyer_flask",
+   "title": "Erlenmeyer flask – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:53.467Z",
+   "snapshot": "8c5ab2f2b5de66d16d9b75a2ed70ea4249dfd82b9f62ba5e777874e046b9c7c5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Haber_process",
+   "title": "Haber process – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:54.711Z",
+   "snapshot": "64cb68bce1253482aef46aa08df28efa3e9e45fa39befabb4bb6df00107d1c90"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Robert Bunsen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dmitri Mendeleev",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Justus von Liebig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Emil Erlenmeyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fritz Haber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:43.627Z",
+   "target": "f02021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1877, Robert Bunsen together with Gustav Robert Kirchhoff were the first recipients of the prestigious Davy Medal \"for their researches and discoveries in spectrum analysis\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Bunsen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:43.627Z",
+   "target": "f02022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dmitri Mendeleev is often referred to as the Father of the Periodic Table.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dmitri Mendeleev” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:43.627Z",
+   "target": "f02023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1953, the third General Assembly of the International Scientific Centre of Fertilizers (CIEC), founded in 1932, was organized in Darmstadt to honor Justus von Liebig on the 150th anniversary of his birth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Justus von Liebig” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:43.627Z",
+   "target": "f02024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is named after the German chemist Emil Erlenmeyer (1825–1909), who invented it in 1860.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emil Erlenmeyer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:43.627Z",
+   "target": "f02025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Haber Process was first created by the German Chemist Fritz Haber, then developed after a few years by Carl Bosch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fritz Haber” is on the snapshot of s5"
+  }
+ ]
+}

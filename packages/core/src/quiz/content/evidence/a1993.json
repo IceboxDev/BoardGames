@@ -1,0 +1,195 @@
+{
+ "article": "a1993",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Go_Your_Own_Way",
+   "title": "Go Your Own Way – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:05.463Z",
+   "snapshot": "3b9a4bd573ec5545d229c5fc05e0b32db9842f0625a2cba7f7df2b030b774ebe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bohemian_Rhapsody",
+   "title": "Bohemian Rhapsody – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:06.434Z",
+   "snapshot": "82a518674055c5a5fde8c81278c0d1ddb09c540e3fe5aa0fa8441c5e33fd904f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sultans_of_Swing",
+   "title": "Sultans of Swing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:07.202Z",
+   "snapshot": "90297e00f60611606def51325867c5064044dfcd2e2458f75cc672e5049b7885"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Africa_(song)",
+   "title": "Africa (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:08.322Z",
+   "snapshot": "e13938bd86769b4e0ad2398e706ef2a3d1e1ab138b4018ccf05782ee203f1877"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fleetwood Mac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09963",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Queen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09964",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dire Straits",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09965",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Toto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:02.233Z",
+   "target": "f09961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Go Your Own Way\" is a song by the British-American rock band Fleetwood Mac from their eleventh studio album, Rumours (1977).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fleetwood Mac” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.233Z",
+   "target": "f09963",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Bohemian Rhapsody\" is a song by British rock band Queen from their fourth studio album, A Night at the Opera.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Queen” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.233Z",
+   "target": "f09964",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Sultans of Swing\" is a song by the British rock band Dire Straits, written by the lead vocalist and guitarist Mark Knopfler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dire Straits” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.233Z",
+   "target": "f09965",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Africa\" is a song by American rock band Toto, the tenth and final track on their fourth studio album, Toto IV (1982).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toto” is on the snapshot of s4"
+  }
+ ]
+}

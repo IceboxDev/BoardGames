@@ -1,0 +1,289 @@
+{
+ "article": "a0331",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill",
+   "title": "Deepwater Horizon oil spill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:36.634Z",
+   "snapshot": "ca3c15dad55890114c25dd63943adf683f5bbf55a577b690ea85a30f65a98fe9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill",
+   "title": "Exxon Valdez oil spill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:37.414Z",
+   "snapshot": "eb69ad8018b232f861c6e4fffb355d053eddcfcef5933092b73306bd25c9e8d6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Piper_Alpha",
+   "title": "Piper Alpha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:38.483Z",
+   "snapshot": "049c7f261d36f22eacdbc403d4a37a9529ffc976db886eb0d305a4813915d202"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ixtoc_I_oil_spill",
+   "title": "Ixtoc I oil spill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:39.305Z",
+   "snapshot": "d6bcd4a408b00209e8b35190ee47c74fa14dfc79dd86929bae628f5791f34997"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Prestige_oil_spill",
+   "title": "Prestige oil spill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:40.384Z",
+   "snapshot": "2d1905aabd4524df48c07e282eb1e0e721665be3cb0fdde5344a7887c110bd62"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Torrey_Canyon_oil_spill",
+   "title": "Torrey Canyon oil spill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:41.300Z",
+   "snapshot": "81fca6bf1d9c97537e73794d0151d0925afe13662680e3ee28ee67e1f2c7e00d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deepwater Horizon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Exxon Valdez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Piper Alpha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ixtoc I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prestige",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Torrey Canyon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:31.094Z",
+   "target": "f01651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beginning on 20 April 2010, an explosion on the Deepwater Horizon oil platform caused an oil spill and an environmental disaster off the coast of the United States in the Gulf of Mexico, on the BP-operated Macondo Prospect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deepwater Horizon” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:31.094Z",
+   "target": "f01652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Exxon Valdez oil spill was a major environmental disaster that occurred in Alaska's Prince William Sound on March 24, 1989.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exxon Valdez” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:31.094Z",
+   "target": "f01653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Piper Alpha was an oil platform located in the North Sea about 120 miles (190 km) north-east of Aberdeen, Scotland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Piper Alpha” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:31.094Z",
+   "target": "f01654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ixtoc I was an exploratory oil well  being drilled by the semi-submersible drilling rig Sedco 135 in the Bay of Campeche of the Gulf of Mexico, about 100 km (62 mi) northwest of Ciudad del Carmen, Campeche in waters 50 m (164 ft) deep.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ixtoc I” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:31.094Z",
+   "target": "f01655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Prestige oil spill occurred off the coast of Galicia, Spain, in November 2002, caused by the sinking of the 26-year-old, structurally deficient oil tanker MV Prestige, carrying 77,000 tonnes of heavy fuel oil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prestige” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:31.094Z",
+   "target": "f28004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Torrey Canyon oil spill was one of the world's most serious oil spills.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.094Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Torrey Canyon” is on the snapshot of s6"
+  }
+ ]
+}

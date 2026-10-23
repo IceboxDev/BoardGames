@@ -1,0 +1,209 @@
+{
+ "article": "a1345",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carmen_(1983_film)",
+   "title": "Carmen (1983 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:02.204Z",
+   "snapshot": "fe033b99573f151e06c882ee100a0a135865b8bf53a2b418cf1e715e7754b791"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aida",
+   "title": "Aida – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:11.352Z",
+   "snapshot": "097defbc65bf10623d06aeec042705ca91b4a91763642f5a4a5fde620e12735e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Magic_Flute_(1975_film)",
+   "title": "The Magic Flute (1975 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:03.266Z",
+   "snapshot": "77d6f82f4dcf544d9b09487b2013774cb8672ea35f6a00412eca48f2d015e5de"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/La_Traviata_(1982_film)",
+   "title": "La Traviata (1982 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:04.189Z",
+   "snapshot": "195120dec73de0c0b4a450c09999d6f1ae379e65a192c0c4debbef75b55446d1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/La_Traviata_(1982)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:01.523Z",
+   "snapshot": "c5fa21c6066d064851a3b9983f565b4d74adffa0442d01af798acd8fddf85c5e"
+  },
+  "s6": {
+   "url": "https://fr.wikipedia.org/wiki/Carmen_(film,_1983)",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:56:01.779Z",
+   "snapshot": "f6bc29890a68668215fb5dbf979647b8834d8643bb1802a353c81277fb347f07"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carmen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aida",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Magic Flute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La traviata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:11.245Z",
+   "target": "f06721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carmen is a 1983 Spanish romantic musical drama film and an adaptation of Prosper Mérimée's novel Carmen, incorporating music from Georges Bizet's opera of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carmen” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:11.245Z",
+   "target": "f06722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aida (or Aïda, Italian: [aˈiːda]) is a tragic opera in four acts by Giuseppe Verdi to an Italian libretto by Antonio Ghislanzoni.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aida” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:11.245Z",
+   "target": "f06724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Magic Flute (Swedish: Trollflöjten) is Ingmar Bergman's 1975 film version of Wolfgang Amadeus Mozart's opera Die Zauberflöte.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Magic Flute” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:11.245Z",
+   "target": "f06725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La Traviata is a 1982 Italian film written, designed, and directed by Franco Zeffirelli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.245Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La traviata” is on the snapshot of s4"
+  }
+ ]
+}

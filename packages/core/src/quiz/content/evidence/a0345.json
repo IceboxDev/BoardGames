@@ -1,0 +1,380 @@
+{
+ "article": "a0345",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+   "title": "Louis Pasteur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:37.527Z",
+   "snapshot": "2995df16f14ff38d6708a09ec1fb4c57840f677fa1a6b4e04def699868ea842d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Edward_Jenner",
+   "title": "Edward Jenner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:38.466Z",
+   "snapshot": "b66f0371f0a7ffd14993a64a8b03c4c4e706fc02898157e707ceed3ea071336f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Emil_von_Behring",
+   "title": "Emil von Behring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:22.414Z",
+   "snapshot": "99162b8a30c5dde15361089a21c7dbd722ab2a50a870e9dc3a15fd5fee90079c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jonas_Salk",
+   "title": "Jonas Salk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:39.454Z",
+   "snapshot": "a18abfa48bcbc76ad66f96d5a3f7b89b3e91c649e8a3b1d7453601845fa9fbb8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Smallpox_vaccine",
+   "title": "Smallpox vaccine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:40.517Z",
+   "snapshot": "02222cc83329454566ec03298ade5c291a391c1e7be4e17d5b5ac356f2238434"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Variolation",
+   "title": "Variolation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:41.438Z",
+   "snapshot": "0cfe0af9429c6906840e649ac6ed0e89a1882258f7a1e3ed6864c2646e691f7b"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Emil_von_Behring",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:39.238Z",
+   "snapshot": "a504ae436667c26ea3cedf0219d05f3e935fed4baa4f951c1e2c87f2b457f0d8"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13632842/",
+   "title": "Variolation Techniques, Medical Explanations, and Dissemination in Late Imperial China",
+   "publisher": "Emerging Infectious Diseases (via PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:25.511Z",
+   "snapshot": "72df046577a0053eab59f2d69e65b2eec9a1d8ed7657b385af9ee758a1d5f72a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Louis Pasteur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Edward Jenner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emil von Behring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jonas Salk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Smallpox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-058"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blown up the nostrils",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 49; transcript ppm-076"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:33.700Z",
+   "target": "f01721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Louis Pasteur (; French: [lwi pastœʁ] ; 27 December 1822 – 28 September 1895) was a French chemist, pharmacist, and microbiologist renowned for his discoveries of the principles of vaccination, microbial fermentation, and pasteurization, the last of which was named after him.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.700Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Pasteur” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:33.700Z",
+   "target": "f01722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Edward Jenner (17 May 1749 – 26 January 1823) was an English physician and scientist who pioneered the concept of vaccines and created the smallpox vaccine, the world's first vaccine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.700Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edward Jenner” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:33.700Z",
+   "target": "f01724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emil von Behring (German: [ˈeːmiːl fɔn ˈbeːʁɪŋ] ; Emil Adolf von Behring: born Emil Adolf Behring; 15 March 1854 – 31 March 1917) was a German physiologist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.700Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emil von Behring” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:33.700Z",
+   "target": "f01725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jonas Edward Salk (; born Jonas Salk; October 28, 1914 – June 23, 1995) was an American virologist and medical researcher who developed one of the first successful polio vaccines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.700Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jonas Salk” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:33.700Z",
+   "target": "f25850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The smallpox vaccine is used to prevent smallpox infection caused by the variola virus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.700Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Smallpox” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:33.700Z",
+   "target": "f25851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blown up the nostrils",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Blown up the nostrils”, “In die Nase geblasen”, “Вдували в нос”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:19:40Z",
+   "target": "f25851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "For the dry inoculum method, powdered scabs were blown into the nostrils through a specially designed silver or bamboo tube",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:44Z",
+   "target": "f25851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "They implemented a method of \"nasal insufflation\" administered by blowing powdered smallpox material, usually scabs, up the nostrils.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:53.827Z",
+   "target": "f25851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "For the dry inoculum method, powdered scabs were blown into the nostrils through a specially designed silver or bamboo tube",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:53.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:53.827Z",
+   "target": "f25851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "They implemented a method of \"nasal insufflation\" administered by blowing powdered smallpox material, usually scabs, up the nostrils.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:53.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  }
+ ]
+}

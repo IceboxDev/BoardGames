@@ -1,0 +1,242 @@
+{
+ "article": "a0260",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Discipline_and_Punish",
+   "title": "Discipline and Punish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:12.733Z",
+   "snapshot": "ccd39ac44b4bd93100baad5b7817444a3b16a1630e9171edf78465c748a28396"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Being_and_Nothingness",
+   "title": "Being and Nothingness – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:13.865Z",
+   "snapshot": "6ad07b2c5624a41b3c8c54641b17fa9e2ea631499a6fb86167ba1078bdec366f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Albert_Camus",
+   "title": "Albert Camus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:14.739Z",
+   "snapshot": "cad16d7e55dc662ff47a6c689640dabe6d4facb60a936d87da3a0d58d2a3f063"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Second_Sex",
+   "title": "The Second Sex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:15.770Z",
+   "snapshot": "db5c490c94ea2f67a3d1ca5c6ffee009ee059d9ccdd4554608041258a92362de"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Of_Grammatology",
+   "title": "Of Grammatology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:16.680Z",
+   "snapshot": "5a6fea4fb49610cfe5ad70d22bcfc8ddcbf83e239a3c16ae2ee14576bf8d70ad"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michel Foucault",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jean-Paul Sartre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert Camus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Simone de Beauvoir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jacques Derrida",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:20.607Z",
+   "target": "f01296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Discipline and Punish: The Birth of the Prison (French: Surveiller et punir – Naissance de la prison) is a 1975 book by  French philosopher Michel Foucault.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michel Foucault” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:20.607Z",
+   "target": "f01297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Being and Nothingness: An Essay on Phenomenological Ontology (French: L'Être et le néant : Essai d'ontologie phénoménologique), sometimes published with the subtitle A Phenomenological Essay on Ontology, is a 1943 book by the philosopher Jean-Paul Sartre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Paul Sartre” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:20.607Z",
+   "target": "f01298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert Camus ( kam-OO; French: [albɛʁ kamy] ; 7 November 1913 – 4 January 1960) was a French philosopher, writer, and political activist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Camus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:20.607Z",
+   "target": "f01299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Second Sex (French: Le Deuxième Sexe) is a 1949 book by the French existentialist philosopher Simone de Beauvoir, in which the author discusses the treatment of women in the present society as well as throughout all of history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simone de Beauvoir” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:20.607Z",
+   "target": "f01300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Of Grammatology (French: De la grammatologie) is a 1967 book by the French philosopher Jacques Derrida.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacques Derrida” is on the snapshot of s5"
+  }
+ ]
+}

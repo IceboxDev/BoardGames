@@ -1,0 +1,242 @@
+{
+ "article": "a1844",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Mandrake",
+   "title": "The Mandrake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:43.492Z",
+   "snapshot": "4a37edcf2d25a187fd5be79cc89fbc78e722c034a20996bfaabf9c0c1705524b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ritual_of_oak_and_mistletoe",
+   "title": "Ritual of oak and mistletoe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:44.377Z",
+   "snapshot": "c316e2f529f51325a620ace1469e0f5f008b613d27f95dd2313bde4b0ae43d2c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dracula",
+   "title": "Dracula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:00.271Z",
+   "snapshot": "fffef36ee57bca9e899b486ee402de559f5a081a8f7fb94fd7ce01a44134ac38"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Echtes_Johanniskraut",
+   "title": "Echtes Johanniskraut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:41.839Z",
+   "snapshot": "c69ea98c7e791baf849d611a6bb2beb6bf60a9d22cb5a050fec2df3c971a9573"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Yggdrasil",
+   "title": "Yggdrasil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:45.437Z",
+   "snapshot": "5d5ba97f4e643a791faa9b68369561c15c5431e34f075c27d1dd2c0e9b42ea5a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mandrake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mistletoe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "garlic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johanniskraut",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:32.522Z",
+   "target": "f09216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Mandrake (Italian: La Mandragola [la manˈdraːɡola]) is a satirical play by Italian Renaissance philosopher Niccolò Machiavelli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mandrake” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:32.522Z",
+   "target": "f09217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The ritual of oak and mistletoe is a Celtic religious ceremony, in which white-clad druids climbed a sacred oak, cut down the mistletoe growing on it, sacrificed two white bulls and used the mistletoe to make an elixir to cure infertility and the effects of poison.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mistletoe” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:32.522Z",
+   "target": "f09218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lucy is given fresh blood and placed in a room filled with garlic flowers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “garlic” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:32.522Z",
+   "target": "f09219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Echte Johanniskraut (Hypericum perforatum), auch Echt-Johanniskraut, Gewöhnliches Johanniskraut, Durchlöchertes Johanniskraut, Tüpfel-Johanniskraut oder Tüpfel-Hartheu, meist kurz Johanniskraut oder Johanneskraut (älter auch Joanniskraut) genannt, ist eine Pflanzenart aus der Gattung der",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johanniskraut” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:32.522Z",
+   "target": "f09220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In both sources, Yggdrasil is an immense ash tree that is central to the cosmos and considered very holy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ash” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,525 @@
+{
+ "article": "a2600",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Halse",
+   "title": "Halse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:36.234Z",
+   "snapshot": "1f10fc75b57a01c4f97d4b83eab50b9fc119139bfb108e84db4a58286acbc2cc"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Spinnaker",
+   "title": "Spinnaker",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:37.215Z",
+   "snapshot": "b3ca95774472e64f15dacd83075f676a224b018a2dcf2d30c44ef75f03465c54"
+  },
+  "s3": {
+   "url": "https://www.yachting.com/en-gb/news/albert-einstein-the-passionate-sailor",
+   "title": "Albert Einstein the passionate sailor",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:35.677Z",
+   "snapshot": "6bb32d438f23257e5d0db47471b617d550c7963a82921dbb9c73685c9f2855b4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/America%27s_Cup",
+   "title": "America's Cup – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:36.104Z",
+   "snapshot": "8489a271c0bf86102b94a488d6c166c573f6c37f5aa97b945265c40da0fc933b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ellen_MacArthur",
+   "title": "Ellen MacArthur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:37.025Z",
+   "snapshot": "ca40ade09c141af28c22efccba24b409ea6c4e7cb4b9bdc4a0031d5fec9a551c"
+  },
+  "s6": {
+   "url": "https://www.history.com/this-day-in-history/august-22/u-s-wins-first-americas-cup",
+   "title": "U.S. wins first America’s Cup",
+   "publisher": "HISTORY.com (A&E)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:29.893Z",
+   "snapshot": "9ebfc9b5cc60fbfe4c0e5150d1c35513c4910d8c5b4ea374be9c6275425659b9"
+  },
+  "s7": {
+   "url": "https://www.yacht.de/en/regatta/americas-cup/america-s-cup-160-years-of-fighting-for-the-cup/",
+   "title": "America's Cup: 160 years of fighting for the cup",
+   "publisher": "YACHT (Delius Klasing)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:30.035Z",
+   "snapshot": "6b1c37a776fd2fb768ab6d66e23cbc17a8cf7bfe3a819d4c09cc50ab85d8cb58"
+  },
+  "s8": {
+   "url": "https://www.nationalgeographic.com/adventure/article/ellen-macarthur-2005",
+   "title": "Adventurers of the Year 2005: Ellen MacArthur",
+   "publisher": "National Geographic",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:30.882Z",
+   "snapshot": "bc1f9bea19ba08b26e7a917d693ecfda194873a73833a6e178cd41a46fad0ac2"
+  },
+  "s9": {
+   "url": "https://www.offalyexpress.ie/national/on-this-day-in-2005-dame-ellen-macarthur-sets-new-round-world-sailing-record-7227843",
+   "title": "On this day in 2005: Dame Ellen MacArthur sets new round-world sailing record",
+   "publisher": "Offaly Express (PA Media)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:31:47Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Halse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vorsegel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-284"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert Einstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-245"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "America's Cup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ellen MacArthur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:46.019Z",
+   "target": "f14006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Halse bezeichnet ein Manöver beim Segeln, bei dem ein Fahrzeug mit dem Heck durch den Wind geht und die Segel anschließend auf der anderen Schiffsseite geführt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:46.019Z",
+   "target": "f14007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Spinnaker [ˈʃpɪnakɐ] oder kurz Spi ist ein besonders großes, bauchig geschnittenes Vorsegel aus leichtem Tuch, das vor dem Wind und auf Raumschotskurs zur Vergrößerung der Segelfläche eingesetzt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vorsegel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:46.019Z",
+   "target": "f14008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Famous sailors: physicist Albert Einstein",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Einstein” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:46.019Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The America's Cup is a sailing competition and the oldest international competition still operating in any sport.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “America's Cup” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:46.019Z",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Following her retirement from professional sailing on 2 September 2010, MacArthur announced the launch of the Ellen MacArthur Foundation, a charity that works with business and education to promote a circular economy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.019Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ellen MacArthur” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:31:15Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Today, the “America’s Cup” is the world’s oldest continually contested sporting trophy and represents the pinnacle of international sailing yacht competition.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:31:18Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the birth of the oldest sporting event in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:31:20Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The America's Cup is the oldest competition in international sport, and the fourth oldest continuous sporting trophy of any kind.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:31:46Z",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "She had been at sea for 71 days, 14 hours, 18 minutes, and 33 seconds",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:31:47Z",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Yachtswoman Dame Ellen MacArthur smashed the record for the fastest single-handed circumnavigation of the globe on this day in 2005.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:31:48Z",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On 7 February 2005, she broke the world record for the fastest solo circumnavigation of the globe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Today, the “America’s Cup” is the world’s oldest continually contested sporting trophy and represents the pinnacle of international sailing yacht competition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the birth of the oldest sporting event in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The America's Cup is the oldest competition in international sport, and the fourth oldest continuous sporting trophy of any kind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "She had been at sea for 71 days, 14 hours, 18 minutes, and 33 seconds",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "wins first America’s Cup | August 22, 1851 | HISTORY",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “America's Cup” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "America's Cup: 160 years of fighting for the cup | YACHT",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “America's Cup” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:30.620Z",
+   "target": "f14010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ellen MacArthur, Adventurers of the Year 2005 -- National Geographic",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ellen MacArthur” is on the snapshot of s8"
+  }
+ ]
+}

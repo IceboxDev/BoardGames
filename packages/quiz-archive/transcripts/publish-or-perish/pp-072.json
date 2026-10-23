@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-072",
+ "image": "IMG20261022011333.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Physics",
+   "cardText": "[Physics] Which one of the following is the hottest?\nA. A lightning bolt\nB. The Sun’s surface\nC. The Earth’s core\nAnswer: A. A lightning bolt can reach temperatures of up to about 50,000 °F (about 27,000 °C). In contrast, the surface of the Sun and the Earth’s core are both around 10,000 °F (about 5,537 °C). However, the Sun’s core is far hotter, with temperatures reaching approximately 27,000,000 °F (about 15,000,000 °C).",
+   "de": "Welche Temperatur kann die Luft in einem Blitzkanal ungefähr erreichen – ein Vielfaches der Temperatur der Sonnenoberfläche?",
+   "en": "Roughly what temperature can the air in a lightning bolt reach — several times hotter than the surface of the Sun?",
+   "reworked": true,
+   "answerDe": "Etwa 30.000 °C",
+   "answerEn": "About 30,000 °C",
+   "timeline": {
+    "kind": "event",
+    "start": "1752",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Benjamin Franklin proposes the kite experiment, showing that lightning is electricity",
+    "labelDe": "Benjamin Franklin schlägt das Drachenexperiment vor, das zeigt, dass Blitze elektrischer Natur sind"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lightning",
+    "title": "Lightning",
+    "lang": "en"
+   },
+   "notes": "Comparative MC turned into the underlying fact. Wikipedia/NOAA: the air heats to about 30,000 °C; return-stroke plasma may exceed 50,000 °F (~27,800 °C) — the card's ~27,000 °C is in the same range. Accept roughly 27,000–30,000 °C.",
+   "domain": "science",
+   "sub": "physics"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] Which of the following holds the most of the world’s freshwater?\nA. Atmosphere\nB. Lakes and rivers\nC. Glaciers and ice caps\nAnswer: C. Glaciers and ice caps hold about 70% of the world’s freshwater.",
+   "de": "Wo ist der größte Teil des Süßwassers der Erde gespeichert – etwa 70 Prozent davon?",
+   "en": "Where is most of the world's freshwater stored — about 70% of it?",
+   "reworked": true,
+   "answerDe": "In Gletschern und Eiskappen",
+   "answerEn": "In glaciers and ice caps",
+   "timeline": {
+    "kind": "creation",
+    "start": "1993",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Peter Gleick's 'Water in Crisis' publishes the classic estimate of Earth's water distribution",
+    "labelDe": "Peter Gleicks „Water in Crisis“ veröffentlicht die klassische Schätzung der Wasserverteilung der Erde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Water_distribution_on_Earth",
+    "title": "Water distribution on Earth",
+    "lang": "en"
+   },
+   "notes": "Wikipedia table (after Gleick 1993): glaciers and permanent snow hold 68.7% of fresh water (ice and snow total 69.6%).",
+   "domain": "earth-space",
+   "sub": "oceans"
+  }
+ ]
+}

@@ -1,0 +1,708 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "sport-games/olympics",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-003",
+    "category": 6
+   },
+   "factId": "f04702"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-021",
+    "category": 6
+   },
+   "factId": "f04702"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-237",
+    "category": 6
+   },
+   "factId": "f04702"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-050",
+    "category": 6
+   },
+   "factId": "f03563"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-079",
+    "category": 6
+   },
+   "factId": "f03562"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-162",
+    "category": 6
+   },
+   "factId": "f00741"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1493",
+   "baseHash": "2edf372ec01a",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-092",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Judo and the Martial Arts of East Asia",
+    "titleDe": "Judo und die Kampfkünste Ostasiens",
+    "bodyEn": "Judo, „the gentle way“, was created in 1882 when the 21-year-old educator Jigorō Kanō (1860–1938) opened his Kōdōkan school in a Tokyo temple. Kanō had studied several schools of jūjutsu, the unarmed combat system of the samurai, and distilled from them a method that could be practised safely at full speed: dangerous strikes were removed, throws (nage-waza), holds, chokes and arm locks (katame-waza) were kept, and free sparring (randori) became the heart of training. The name says it all: jū means yielding or gentle, dō means way. Two principles govern the art – seiryoku zen'yō, maximum efficiency with minimum effort, and jita kyōei, mutual welfare and benefit. Kanō also introduced the dan grades and the black belt, the model for the belt systems that most other martial arts later copied.\n\nJudo spread quickly. It was taught to the Japanese police, reached Europe before the First World War and became the first Asian martial art in the Olympic programme, at the Tokyo Games of 1964; women's judo followed in Barcelona in 1992. The first World Championships were held in Tokyo in 1956. The International Judo Federation, founded in 1951, today counts roughly 200 national federations, and Judo is estimated to be the most widely practised martial art in the world, with tens of millions of active judoka. Its best-known practitioner in politics is Vladimir Putin, who took up sambo and judo at the age of twelve and co-authored a judo textbook, published in English in 2004 as „Judo: History, Theory, Practice“. A contest is won by ippon, a perfect throw, hold or submission – Kanō's answer to the question of how a fight can be decided without anyone being injured.\n\nJapan and its neighbours produced a whole family of related arts:\n\n| Art | Origin | Meaning of the name | Olympic |\n|---|---|---|---|\n| Judo | Japan, 1882 | gentle way | since 1964 |\n| Karate | Okinawa | empty hand | 2020 only |\n| Taekwondo | Korea, 1950s | way of foot and fist | since 2000 |\n| Aikido | Japan, 1920s–40s | way of harmonising energy | no |\n| Kendo | Japan | way of the sword | no |\n\nKarate developed on the island of Okinawa, where Chinese boxing merged with local fighting methods. The characters originally meant „Chinese hand“; the master Gichin Funakoshi, who demonstrated the art in Tokyo in 1922 and founded the Shōtōkan school, changed them to „empty hand“. Karate appeared in the Olympic programme only once, at the Tokyo Games of 2020.\n\nTaekwondo has its roots in Korea, where it is the national sport, codified in the 1950s from older Korean kicking arts and the Japanese karate that Korean masters had learned; the name means roughly „the way of the foot and the fist“. After demonstration events in Seoul in 1988 and Barcelona in 1992 it became a full Olympic sport in Sydney in 2000.\n\nAikido was developed by Morihei Ueshiba (1883–1969) from Daitō-ryū Aiki-jūjutsu and named in 1942. It redirects an attacker's momentum into throws and joint locks and has no competitions in its traditional form, since Ueshiba conceived it as a path of self-cultivation.\n\nKendo, „the way of the sword“, is the modern descendant of samurai swordsmanship. Practitioners fence with the shinai, a sword made of four bamboo slats, and wear the bōgu armour of helmet, gloves and breastplate; the All Japan Kendo Federation was founded in 1952.",
+    "bodyDe": "Judo, „der sanfte Weg“, entstand 1882, als der 21-jährige Pädagoge Jigorō Kanō (1860–1938) in einem Tokioter Tempel seine Schule Kōdōkan eröffnete. Kanō hatte mehrere Schulen des Jūjutsu studiert, des waffenlosen Kampfsystems der Samurai, und destillierte daraus eine Methode, die sich gefahrlos mit voller Geschwindigkeit üben ließ: Gefährliche Schläge wurden gestrichen, Würfe (Nage-waza), Haltegriffe, Würge- und Hebeltechniken (Katame-waza) blieben erhalten, und das freie Üben (Randori) wurde zum Herzstück des Trainings. Der Name sagt alles: jū bedeutet nachgiebig oder sanft, dō bedeutet Weg. Zwei Prinzipien bestimmen die Kunst – seiryoku zen'yō, größtmögliche Wirkung bei geringstem Kraftaufwand, und jita kyōei, gegenseitiges Wohlergehen. Kanō führte auch die Dan-Grade und den schwarzen Gürtel ein, Vorbild der Gürtelsysteme, die die meisten anderen Kampfkünste später übernahmen.\n\nJudo verbreitete sich rasch. Es wurde der japanischen Polizei gelehrt, erreichte Europa noch vor dem Ersten Weltkrieg und wurde bei den Spielen von Tokio 1964 als erste asiatische Kampfkunst ins olympische Programm aufgenommen; das Frauenjudo folgte 1992 in Barcelona. Die ersten Weltmeisterschaften fanden 1956 in Tokio statt. Die 1951 gegründete Internationale Judo-Föderation zählt heute rund 200 nationale Verbände, und Judo gilt mit mehreren zehn Millionen aktiven Judoka als die am weitesten verbreitete Kampfsportart der Welt. Ihr bekanntester Anhänger in der Politik ist Wladimir Putin, der mit zwölf Jahren mit Sambo und Judo begann und Mitautor eines Judo-Lehrbuchs ist, das 2004 auf Englisch als „Judo: History, Theory, Practice“ erschien. Ein Kampf wird durch Ippon gewonnen, einen perfekten Wurf, Haltegriff oder eine Aufgabe – Kanōs Antwort auf die Frage, wie ein Kampf entschieden werden kann, ohne dass jemand verletzt wird.\n\nJapan und seine Nachbarn brachten eine ganze Familie verwandter Künste hervor:\n\n| Kunst | Ursprung | Bedeutung des Namens | Olympisch |\n|---|---|---|---|\n| Judo | Japan, 1882 | sanfter Weg | seit 1964 |\n| Karate | Okinawa | leere Hand | nur 2020 |\n| Taekwondo | Korea, 1950er | Weg des Fußes und der Faust | seit 2000 |\n| Aikido | Japan, 1920er–40er | Weg der Harmonie der Energie | nein |\n| Kendo | Japan | Weg des Schwertes | nein |\n\nKarate entwickelte sich auf der Insel Okinawa, wo chinesisches Boxen mit örtlichen Kampfmethoden verschmolz. Die Schriftzeichen bedeuteten ursprünglich „chinesische Hand“; der Meister Gichin Funakoshi, der die Kunst 1922 in Tokio vorführte und die Schule Shōtōkan gründete, änderte sie in „leere Hand“. Karate stand nur ein einziges Mal im olympischen Programm, bei den Spielen von Tokio 2020.\n\nTaekwondo hat seine Wurzeln in Korea, wo es Nationalsport ist, in den 1950er Jahren aus älteren koreanischen Trittkünsten und dem japanischen Karate kodifiziert, das koreanische Meister gelernt hatten; der Name bedeutet etwa „Weg des Fußes und der Faust“. Nach Demonstrationswettbewerben in Seoul 1988 und Barcelona 1992 wurde es in Sydney 2000 vollwertige olympische Sportart.\n\nAikido wurde von Morihei Ueshiba (1883–1969) aus dem Daitō-ryū Aiki-Jūjutsu entwickelt und 1942 so benannt. Es lenkt die Bewegungsenergie eines Angreifers in Würfe und Hebel um und kennt in seiner traditionellen Form keine Wettkämpfe, da Ueshiba es als Weg der Selbstvervollkommnung verstand.\n\nKendo, „der Weg des Schwertes“, ist der moderne Nachfahre der Schwertkunst der Samurai. Die Übenden fechten mit dem Shinai, einem Schwert aus vier Bambuslatten, und tragen die Rüstung Bōgu aus Helm, Handschuhen und Brustpanzer; der Gesamtjapanische Kendo-Verband wurde 1952 gegründet.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1733",
+   "baseHash": "6563ce5b79b6",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-175",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-208",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Asia's Fighting Arts and the Bodies That Practise Them",
+    "titleDe": "Asiens Kampfkünste und die Körper, die sie formen",
+    "bodyEn": "Every combat sport shapes the body of its athletes, but few do so as visibly as the martial arts of East and South-East Asia. From the gigantic wrestlers of Japan to the whip-fast kickers of Korea, each discipline demands a different physique and leaves a different mark on those who practise it.\n\nSumo wrestlers, known in Japanese as rikishi, are the most extreme case; their professional sport has been run since 28 December 1925 by the Japan Sumo Association. Fights in the 4.55-metre clay ring last only seconds, and since there are no weight classes, mass is an advantage: the average wrestler in the top division weighs around 160 kilograms. The weight is built deliberately with a daily regime of morning training on an empty stomach – wrestlers traditionally skip breakfast altogether – then an enormous lunch of chankonabe stew and rice, and a long nap afterwards. The cost is well documented. Sumo wrestlers suffer far more than the general population from arthritis in the knees and hips, from high blood pressure, type 2 diabetes and heart disease, and their life expectancy is roughly ten years below that of the average Japanese man.\n\nWrestlers of a very different build compete on the steppes of Mongolia, where bökh – „firmness“ – is one of the three manly skills alongside horsemanship and archery. Its roots may be the oldest of any sport here: cave paintings in Bayankhongor Province, about 9,000 years old, show two men grappling in front of spectators. Genghis Khan valued wrestling as military training, and today thousands of wrestlers meet at the Naadam festival every July. They wear the zodog, a tight jacket open at the chest, and lose as soon as a knee, an elbow or the back touches the ground.\n\nKendoka, the practitioners of kendo, follow a very different tradition. Kendo, the „way of the sword“, descends from the fencing schools of the samurai; the sporting form, earlier called gekiken („hitting sword“), took the name kendō in 1920. Fighters wear a set of protective armour called bōgu, consisting of a helmet (men), gauntlets (kote), a breastplate (dō) and a hip guard (tare), and score points with clean strikes of the bamboo shinai to the head, wrist, torso or throat, each accompanied by a loud shout. Armour and bamboo swords entered sword training in the Shōtoku era (1711–1715), an innovation credited to the swordsman Naganuma Shirōzaemon Kunisato. The All Japan Kendo Federation was founded in 1952, and the sport has around two million practitioners in Japan.\n\nTaekwondo fighters are the Olympic representatives of Korea's national sport. The name, adopted in 1955, means roughly „the way of foot and fist“, and the emphasis is unmistakable: spinning, jumping and head-height kicks dominate, and electronic scoring vests, used at the Olympics since 2012, register the kicks. The World Taekwondo Federation, founded in Seoul on 28 May 1973, steered the sport towards the Games: taekwondo was a demonstration sport at Seoul in 1988 and became a full Olympic discipline at Sydney in 2000.\n\nMuay Thai fighters practise the national sport of Thailand, nicknamed the „art of eight limbs“ because fists, elbows, knees and shins are all legitimate weapons. Bouts at Bangkok's Lumpinee stadium and the Rajadamnern stadium, opened on 23 December 1945, open with the wai khru ram muay, a ritual dance honouring the fighter's teacher, and are accompanied by live music that speeds up as the rounds progress.\n\nJudoka, finally, are the pupils of Jigoro Kano, who founded judo in 1882 by removing the most dangerous techniques from jujutsu and turning it into an educational system. Kano introduced the coloured belt grades that most martial arts later copied. Judo became an Olympic sport for men at the Tokyo Games of 1964, when the Dutchman Anton Geesink shocked the host nation by winning the open category on 23 October 1964; women's judo followed in 1992. Competitors are divided into seven weight classes each for men and women.\n\n| Discipline | Country of origin | Practitioners | Olympic since |\n|---|---|---|---|\n| Sumo | Japan | Rikishi | not Olympic |\n| Bökh | Mongolia | Bökhchuud | not Olympic |\n| Kendo | Japan | Kendoka | not Olympic |\n| Taekwondo | Korea | Taekwondo fighters | 2000 |\n| Muay Thai | Thailand | Nak muay | not Olympic |\n| Judo | Japan | Judoka | 1964 |",
+    "bodyDe": "Jeder Kampfsport formt den Körper seiner Athleten, aber wenige tun es so sichtbar wie die Kampfkünste Ost- und Südostasiens. Von den gigantischen Ringern Japans bis zu den peitschenschnellen Tretern Koreas verlangt jede Disziplin einen anderen Körperbau und hinterlässt bei denen, die sie ausüben, andere Spuren.\n\nSumo-Ringer, auf Japanisch Rikishi genannt, sind der extremste Fall; ihr Profisport wird seit dem 28. Dezember 1925 von der Japan Sumo Association organisiert. Die Kämpfe im 4,55 Meter großen Lehmring dauern nur Sekunden, und da es keine Gewichtsklassen gibt, ist Masse ein Vorteil: Der durchschnittliche Ringer der obersten Liga wiegt rund 160 Kilogramm. Das Gewicht wird gezielt aufgebaut, mit einem täglichen Programm aus Morgentraining auf leeren Magen – das Frühstück lassen die Ringer traditionell ganz aus –, danach einem riesigen Mittagessen aus Chankonabe-Eintopf und Reis und einem langen Schlaf danach. Der Preis ist gut dokumentiert. Sumo-Ringer leiden weit häufiger als die Allgemeinbevölkerung an Arthrose in Knien und Hüften, an Bluthochdruck, Typ-2-Diabetes und Herzkrankheiten, und ihre Lebenserwartung liegt rund zehn Jahre unter der des durchschnittlichen japanischen Mannes.\n\nRinger von ganz anderem Körperbau kämpfen in den Steppen der Mongolei, wo Bökh – „Festigkeit“ – neben Reiten und Bogenschießen zu den drei männlichen Künsten zählt. Seine Wurzeln reichen vielleicht am weitesten zurück: Höhlenmalereien in der Provinz Bajanchongor, rund 9.000 Jahre alt, zeigen zwei Männer im Ringkampf vor Zuschauern. Dschingis Khan schätzte das Ringen als militärisches Training, und heute treffen sich jeden Juli Tausende Ringer beim Naadam-Fest. Sie tragen den Zodog, eine enge, vorn offene Jacke, und verlieren, sobald Knie, Ellbogen oder Rücken den Boden berühren.\n\nKendoka, die Ausübenden des Kendo, folgen einer ganz anderen Tradition. Kendo, der „Weg des Schwertes“, stammt von den Fechtschulen der Samurai ab; die sportliche Form, zuvor Gekiken („schlagendes Schwert“) genannt, erhielt 1920 den Namen Kendō. Die Kämpfer tragen einen Rüstungssatz namens Bōgu, bestehend aus Helm (Men), Handschuhen (Kote), Brustpanzer (Dō) und Hüftschutz (Tare), und erzielen Punkte mit sauberen Treffern des Bambusschwerts Shinai auf Kopf, Handgelenk, Rumpf oder Kehle, jeder von einem lauten Kampfschrei begleitet. Rüstung und Bambusschwert hielten in der Shōtoku-Ära (1711–1715) Einzug in das Schwerttraining, eine Neuerung, die dem Schwertmeister Naganuma Shirōzaemon Kunisato zugeschrieben wird. Der Alljapanische Kendo-Verband wurde 1952 gegründet, und der Sport hat in Japan rund zwei Millionen Ausübende.\n\nTaekwondo-Kämpfer sind die olympischen Vertreter des koreanischen Nationalsports. Der 1955 eingeführte Name bedeutet ungefähr „der Weg von Fuß und Faust“, und der Schwerpunkt ist unverkennbar: Dreh-, Sprung- und Kopfhöhentritte dominieren, und elektronische Trefferwesten, bei Olympia seit 2012 im Einsatz, registrieren die Tritte. Die am 28. Mai 1973 in Seoul gegründete World Taekwondo Federation führte den Sport zu Olympia: Taekwondo war 1988 in Seoul Demonstrationssportart und wurde 2000 in Sydney zur vollwertigen olympischen Disziplin.\n\nMuay-Thai-Kämpfer betreiben den Nationalsport Thailands, der wegen der Fäuste, Ellbogen, Knie und Schienbeine als legitime Waffen die „Kunst der acht Gliedmaßen“ genannt wird. Kämpfe im Bangkoker Lumpinee-Stadion und im am 23. Dezember 1945 eröffneten Rajadamnern-Stadion beginnen mit dem Wai Khru Ram Muay, einem rituellen Tanz zu Ehren des Lehrers, und werden von Livemusik begleitet, die mit jeder Runde schneller wird.\n\nJudoka schließlich sind die Schüler von Jigoro Kano, der das Judo 1882 begründete, indem er die gefährlichsten Techniken aus dem Jiu-Jitsu entfernte und daraus ein Erziehungssystem machte. Kano führte die farbigen Gürtelgrade ein, die die meisten Kampfkünste später übernahmen. Judo wurde bei den Spielen in Tokio 1964 olympisch für Männer, als der Niederländer Anton Geesink das Gastgeberland am 23. Oktober 1964 mit dem Sieg in der offenen Klasse schockierte; das Frauenjudo folgte 1992. Die Wettkämpfer werden bei Männern und Frauen in je sieben Gewichtsklassen eingeteilt.\n\n| Disziplin | Herkunftsland | Ausübende | Olympisch seit |\n|---|---|---|---|\n| Sumo | Japan | Rikishi | nicht olympisch |\n| Bökh | Mongolei | Bökhchuud | nicht olympisch |\n| Kendo | Japan | Kendoka | nicht olympisch |\n| Taekwondo | Korea | Taekwondo-Kämpfer | 2000 |\n| Muay Thai | Thailand | Nak Muay | nicht olympisch |\n| Judo | Japan | Judoka | 1964 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0989",
+   "baseHash": "0a736646d78e",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-329",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Germany's Sporting Icons and the Sports That Made Them",
+    "titleDe": "Deutschlands Sportikonen und die Sportarten, die sie groß machten",
+    "bodyEn": "Every generation of Germans has a few athletes whose names are known even to people who never watch sport. Each of them is welded to one discipline, and in one famous case the discipline that ended a career was not the one that made it.\n\nMichael Schumacher is the most successful driver in the history of Formula One. Born in Hürth near Cologne in 1969, he won his first two world titles with Benetton in 1994 and 1995, then joined Ferrari and, after four years of rebuilding the team, took five championships in a row from 2000 to 2004. Seven titles, 91 race wins and a reputation for ruthless fitness and precision made him the face of German motorsport. He retired for good in 2012 after a comeback with Mercedes. On 29 December 2013, less than a year later, he was skiing off-piste with his son in Méribel in the French Alps when he fell and struck his head on a rock. Although he was wearing a helmet, he suffered a severe traumatic brain injury, spent months in a medically induced coma and has not appeared in public since; his family has kept the details of his condition private.\n\nA decade before Schumacher's first title, tennis had produced Germany's first modern sporting superstar. Boris Becker, an unseeded 17-year-old from Leimen, won Wimbledon on 7 July 1985 with a serve-and-volley game and a habit of diving across the grass, and remains the youngest men's champion in the tournament's history. Together with Steffi Graf he triggered a tennis boom that filled German clubs for years.\n\nCycling, a racing sport since James Moore won what is regarded as the first cycle race at Saint-Cloud near Paris in 1868, had its German moment in 1997. Jan Ullrich, a 23-year-old from Rostock riding for Team Telekom, won the Tour de France, which finished on 27 July 1997, by more than nine minutes, the first German ever to wear the yellow jersey into Paris. He finished second five more times, usually behind Lance Armstrong, before doping allegations overshadowed his career.\n\nBasketball's German hero played his whole career in one city. Dirk Nowitzki, a seven-foot forward from Würzburg, joined the Dallas Mavericks in 1998 and stayed for 21 seasons. In 2011 he carried the team past Miami's star trio to the NBA championship, clinched on 12 June, and was named Finals MVP, the first European to win the award. His one-legged fadeaway jump shot is still imitated in gyms around the world.\n\nThe surest measure of such fame is the vote for Germany's Sportsman of the Year, held by sports journalists since 1947 and organised by the Internationale Sport-Korrespondenz. Nowitzki won it in 2011, a year after Sebastian Vettel. Between 2005 and 2015 one sport provided the male winner more often than any other: athletics, thanks to the discus thrower Robert Harting, who was voted Sportsman of the Year three times in a row from 2012 to 2014. Every other sport in that span – Nordic combined, biathlon, gymnastics, weightlifting, swimming, motorsport, basketball and triathlon – won only once.\n\n| Athlete | Sport | Defining achievement |\n|---|---|---|\n| Michael Schumacher | Formula One | seven world titles, 1994–2004 |\n| Boris Becker | tennis | Wimbledon champion at 17, 1985 |\n| Jan Ullrich | cycling | Tour de France winner, 1997 |\n| Dirk Nowitzki | basketball | NBA champion and Finals MVP, 2011 |\n| Michael Schumacher | skiing | injured in a fall at Méribel, 2013 |\n| Robert Harting | athletics | Sportsman of the Year 2012–2014 |",
+    "bodyDe": "Jede Generation von Deutschen hat ein paar Athleten, deren Namen selbst Menschen kennen, die nie Sport schauen. Jeder von ihnen ist mit einer Disziplin verschweißt, und in einem berühmten Fall war die Disziplin, die eine Karriere beendete, nicht diejenige, die sie begründet hatte.\n\nMichael Schumacher ist der erfolgreichste Fahrer in der Geschichte der Formel 1. Geboren 1969 in Hürth bei Köln, gewann er seine ersten beiden Weltmeistertitel 1994 und 1995 mit Benetton, wechselte dann zu Ferrari und holte, nach vier Jahren des Aufbaus, von 2000 bis 2004 fünf Titel in Folge. Sieben Weltmeisterschaften, 91 Grand-Prix-Siege und der Ruf gnadenloser Fitness und Präzision machten ihn zum Gesicht des deutschen Motorsports. Nach einem Comeback mit Mercedes trat er 2012 endgültig zurück. Am 29. Dezember 2013, kaum ein Jahr später, war er mit seinem Sohn in Méribel in den französischen Alpen abseits der Piste beim Skifahren, als er stürzte und mit dem Kopf auf einen Felsen aufschlug. Obwohl er einen Helm trug, erlitt er ein schweres Schädel-Hirn-Trauma, lag monatelang im künstlichen Koma und ist seither nicht mehr öffentlich aufgetreten; seine Familie hält die Einzelheiten seines Zustands unter Verschluss.\n\nEin Jahrzehnt vor Schumachers erstem Titel hatte das Tennis Deutschlands ersten modernen Sportsuperstar hervorgebracht. Boris Becker, ein ungesetzter 17-Jähriger aus Leimen, gewann am 7. Juli 1985 Wimbledon mit einem Serve-and-Volley-Spiel und der Angewohnheit, sich über den Rasen zu werfen, und ist bis heute der jüngste Herrensieger in der Geschichte des Turniers. Zusammen mit Steffi Graf löste er einen Tennisboom aus, der die deutschen Vereine jahrelang füllte.\n\nDer Radsport, ein Wettkampfsport, seit James Moore 1868 in Saint-Cloud bei Paris das als erstes Radrennen geltende Rennen gewann, hatte seinen deutschen Moment 1997. Jan Ullrich, ein 23-Jähriger aus Rostock im Team Telekom, gewann die am 27. Juli 1997 beendete Tour de France mit mehr als neun Minuten Vorsprung, als erster Deutscher überhaupt im Gelben Trikot bis nach Paris. Er wurde noch fünfmal Zweiter, meist hinter Lance Armstrong, bevor Dopingvorwürfe seine Karriere überschatteten.\n\nDer deutsche Held des Basketball spielte seine ganze Karriere in einer Stadt. Dirk Nowitzki, ein 2,13 Meter großer Forward aus Würzburg, kam 1998 zu den Dallas Mavericks und blieb 21 Saisons. 2011 trug er das Team am Startrio von Miami vorbei zur NBA-Meisterschaft, entschieden am 12. Juni, und wurde zum MVP der Finalserie gewählt, als erster Europäer überhaupt. Sein einbeiniger Fadeaway-Sprungwurf wird bis heute in Hallen auf der ganzen Welt nachgeahmt.\n\nDer sicherste Gradmesser solcher Berühmtheit ist die Wahl zum deutschen „Sportler des Jahres“, die Sportjournalisten seit 1947 abhalten und die von der Internationalen Sport-Korrespondenz veranstaltet wird. Nowitzki gewann sie 2011, ein Jahr nach Sebastian Vettel. Zwischen 2005 und 2015 stellte eine Sportart den Sieger bei den Männern häufiger als jede andere: die Leichtathletik, dank des Diskuswerfers Robert Harting, der von 2012 bis 2014 dreimal in Folge zum Sportler des Jahres gewählt wurde. Jede andere Sportart in diesem Zeitraum – Nordische Kombination, Biathlon, Turnen, Gewichtheben, Schwimmen, Motorsport, Basketball und Triathlon – gewann nur einmal.\n\n| Athlet | Sportart | Prägende Leistung |\n|---|---|---|\n| Michael Schumacher | Formel 1 | sieben Weltmeistertitel, 1994–2004 |\n| Boris Becker | Tennis | Wimbledonsieger mit 17, 1985 |\n| Jan Ullrich | Radsport | Sieger der Tour de France, 1997 |\n| Dirk Nowitzki | Basketball | NBA-Meister und Finals-MVP, 2011 |\n| Michael Schumacher | Skifahren | Sturz in Méribel, 2013 |\n| Robert Harting | Leichtathletik | Sportler des Jahres 2012–2014 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-390",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-294",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which trainer discovered the teenage Mike Tyson in the Catskills and became his legal guardian?",
+      "de": "Welcher Trainer entdeckte den jugendlichen Mike Tyson in den Catskills und wurde sein Vormund?",
+      "answerEn": "Cus D'Amato",
+      "answerDe": "Cus D'Amato",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1908",
+       "end": "1985",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Cus D'Amato, boxing trainer and guardian of Mike Tyson",
+       "labelDe": "Cus D'Amato, Boxtrainer und Vormund von Mike Tyson"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+       "title": "Mike Tyson – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Against which champion did Mike Tyson win his first heavyweight title, the WBC belt, in November 1986?",
+      "de": "Gegen welchen Weltmeister gewann Mike Tyson im November 1986 seinen ersten Schwergewichtstitel, den WBC-Gürtel?",
+      "answerEn": "Trevor Berbick",
+      "answerDe": "Trevor Berbick",
+      "timeline": {
+       "kind": "event",
+       "start": "1986-11-22",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Mike Tyson stops Trevor Berbick in round two to win the WBC heavyweight title",
+       "labelDe": "Mike Tyson besiegt Trevor Berbick in der zweiten Runde und wird WBC-Weltmeister im Schwergewicht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+       "title": "Mike Tyson – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which outsider knocked out Mike Tyson in Tokyo in 1990 and took his undisputed heavyweight title?",
+      "de": "Welcher Außenseiter schlug Mike Tyson 1990 in Tokio k. o. und nahm ihm den unumstrittenen Schwergewichtstitel ab?",
+      "answerEn": "Buster Douglas",
+      "answerDe": "Buster Douglas",
+      "timeline": {
+       "kind": "event",
+       "start": "1990-02-11",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Buster Douglas knocks out Mike Tyson in the tenth round in Tokyo",
+       "labelDe": "Buster Douglas schlägt Mike Tyson in Tokio in der zehnten Runde k. o."
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+       "title": "Mike Tyson – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which British heavyweight champion knocked out Mike Tyson in Memphis in 2002?",
+      "de": "Welcher britische Schwergewichtsweltmeister schlug Mike Tyson 2002 in Memphis k. o.?",
+      "answerEn": "Lennox Lewis",
+      "answerDe": "Lennox Lewis",
+      "timeline": {
+       "kind": "event",
+       "start": "2002-06-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Lennox Lewis knocks out Mike Tyson in the eighth round in Memphis",
+       "labelDe": "Lennox Lewis schlägt Mike Tyson in Memphis in der achten Runde k. o."
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+       "title": "Mike Tyson – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Iron Mike: The Rise and Fall of Mike Tyson",
+    "titleDe": "Iron Mike: Aufstieg und Fall des Mike Tyson",
+    "bodyEn": "Few athletes have been feared, admired and pitied as much as Mike Tyson. Born on 30 June 1966 in Brooklyn and raised in the rough neighbourhood of Brownsville, he was a teenager with a record of petty crime when a reform-school counsellor took him to the veteran trainer Cus D'Amato in Catskill, upstate New York. D'Amato saw a future champion, taught him the peek-a-boo style – hands high, head constantly moving – and became his legal guardian after Tyson's mother died when he was sixteen. D'Amato died in November 1985, eight months after Tyson's first professional fight, and never saw the title his pupil won.\n\nThat title came quickly. On 22 November 1986 in Las Vegas, Tyson stopped Trevor Berbick in the second round to take the WBC belt at the age of twenty, the youngest heavyweight champion in history, and within a year he had unified all three major titles. For three years he flattened every challenger, many of them inside a round.\n\nThe fall was just as sudden. On 11 February 1990 in Tokyo, the 42-to-1 outsider Buster Douglas knocked him out in the tenth round in one of the greatest upsets in sport. A rape conviction in 1992 sent Tyson to prison for three years. He regained two titles after his release but lost the WBA belt to Evander Holyfield in 1996, and in their rematch on 28 June 1997 at the MGM Grand in Las Vegas he bit a piece off Holyfield's right ear in the third round – and bit the other ear too – and was disqualified. His licence was revoked for a year.\n\nIn February 2003, shortly before a fight with Clifford Etienne, Tyson had his face tattooed: tribal spirals inspired by Māori designs, framing his left eye. The tattoo became as famous as his punches. His last world title fight came on 8 June 2002 in Memphis, where Lennox Lewis knocked him out in the eighth round; Tyson retired in 2005 and later reinvented himself as an actor, a one-man stage show and a podcaster.\n\n| Date | Opponent | What happened |\n|---|---|---|\n| 22 Nov 1986 | Trevor Berbick | youngest heavyweight champion |\n| 11 Feb 1990 | Buster Douglas | knocked out in Tokyo |\n| 28 Jun 1997 | Evander Holyfield | disqualified for biting the ear |\n| 8 Jun 2002 | Lennox Lewis | knocked out in Memphis |\n\nHis career record, 50 wins and 6 defeats, tells only half the story.",
+    "bodyDe": "Kaum ein Athlet wurde so gefürchtet, bewundert und bemitleidet wie Mike Tyson. Geboren am 30. Juni 1966 in Brooklyn und aufgewachsen im rauen Viertel Brownsville, war er ein Jugendlicher mit einer Liste kleiner Straftaten, als ihn ein Betreuer der Besserungsanstalt zum erfahrenen Trainer Cus D'Amato nach Catskill im Norden des Staates New York brachte. D'Amato sah in ihm einen künftigen Weltmeister, brachte ihm den Peek-a-Boo-Stil bei – Fäuste hoch, Kopf ständig in Bewegung – und wurde sein Vormund, nachdem Tysons Mutter gestorben war, als er sechzehn war. D'Amato starb im November 1985, acht Monate nach Tysons erstem Profikampf, und erlebte den Titel seines Schützlings nicht mehr.\n\nDieser Titel kam schnell. Am 22. November 1986 in Las Vegas besiegte Tyson Trevor Berbick in der zweiten Runde und holte mit zwanzig Jahren den WBC-Gürtel, als jüngster Schwergewichtsweltmeister der Geschichte; binnen eines Jahres vereinte er alle drei großen Titel. Drei Jahre lang streckte er jeden Herausforderer nieder, viele davon in der ersten Runde.\n\nDer Absturz kam ebenso plötzlich. Am 11. Februar 1990 in Tokio schlug ihn der krasse Außenseiter Buster Douglas, Quote 42 zu 1, in der zehnten Runde k. o. – eine der größten Sensationen des Sports. Eine Verurteilung wegen Vergewaltigung brachte Tyson 1992 für drei Jahre ins Gefängnis. Nach seiner Entlassung gewann er zwei Titel zurück, verlor den WBA-Gürtel aber 1996 an Evander Holyfield, und im Rückkampf am 28. Juni 1997 im MGM Grand in Las Vegas biss er Holyfield in der dritten Runde ein Stück vom rechten Ohr ab – und biss auch ins andere Ohr – und wurde disqualifiziert. Seine Lizenz wurde ihm für ein Jahr entzogen.\n\nIm Februar 2003, kurz vor einem Kampf gegen Clifford Etienne, ließ sich Tyson das Gesicht tätowieren: tribalistische Spiralen nach Vorbildern der Māori, die sein linkes Auge einrahmen – das Tattoo sitzt links. Es wurde so berühmt wie seine Schläge. Seinen letzten WM-Kampf bestritt er am 8. Juni 2002 in Memphis, wo ihn Lennox Lewis in der achten Runde k. o. schlug; 2005 trat Tyson zurück und erfand sich später als Schauspieler, mit einer Ein-Mann-Bühnenshow und als Podcaster neu.\n\n| Datum | Gegner | Was geschah |\n|---|---|---|\n| 22. Nov. 1986 | Trevor Berbick | jüngster Schwergewichtsweltmeister |\n| 11. Feb. 1990 | Buster Douglas | k. o. in Tokio |\n| 28. Juni 1997 | Evander Holyfield | disqualifiziert wegen des Ohrbisses |\n| 8. Juni 2002 | Lennox Lewis | k. o. in Memphis |\n\nSeine Kampfbilanz, 50 Siege und 6 Niederlagen, erzählt nur die halbe Geschichte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-213",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which promoter staged the 1921 fight between Jack Dempsey and Georges Carpentier, boxing's first million-dollar gate?",
+      "de": "Welcher Promoter veranstaltete 1921 den Kampf zwischen Jack Dempsey und Georges Carpentier, die erste Millionen-Dollar-Einnahme des Boxens?",
+      "answerEn": "Tex Rickard",
+      "answerDe": "Tex Rickard",
+      "timeline": {
+       "kind": "event",
+       "start": "1921-07-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Tex Rickard's Dempsey–Carpentier fight takes boxing's first million-dollar gate",
+       "labelDe": "Tex Rickards Kampf Dempsey gegen Carpentier bringt die erste Millionen-Dollar-Einnahme des Boxens"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Jack_Dempsey_vs._Georges_Carpentier",
+       "title": "Jack Dempsey vs. Georges Carpentier – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which New Jersey city was the 1921 fight between Jack Dempsey and Georges Carpentier held, at Boyle's Thirty Acres?",
+      "de": "In welcher Stadt in New Jersey fand 1921 der Kampf zwischen Jack Dempsey und Georges Carpentier statt, auf Boyle's Thirty Acres?",
+      "answerEn": "Jersey City",
+      "answerDe": "Jersey City",
+      "timeline": {
+       "kind": "event",
+       "start": "1921-07-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Dempsey and Carpentier fight at Boyle's Thirty Acres in Jersey City",
+       "labelDe": "Dempsey und Carpentier boxen auf Boyle's Thirty Acres in Jersey City"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Jack_Dempsey_vs._Georges_Carpentier",
+       "title": "Jack Dempsey vs. Georges Carpentier – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "To which boxer did Jack Dempsey lose his world heavyweight title in Philadelphia in 1926?",
+      "de": "An welchen Boxer verlor Jack Dempsey 1926 in Philadelphia seinen Weltmeistertitel im Schwergewicht?",
+      "answerEn": "Gene Tunney",
+      "answerDe": "Gene Tunney",
+      "timeline": {
+       "kind": "event",
+       "start": "1926-09-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Gene Tunney outpoints Jack Dempsey in Philadelphia to become heavyweight champion",
+       "labelDe": "Gene Tunney besiegt Jack Dempsey in Philadelphia nach Punkten und wird Schwergewichtsweltmeister"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Long_Count_Fight",
+       "title": "The Long Count Fight – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "By what name is the 1927 rematch between Jack Dempsey and Gene Tunney known, after the referee's delayed count in round seven?",
+      "de": "Unter welchem Namen ist der Rückkampf zwischen Jack Dempsey und Gene Tunney von 1927 bekannt, nach dem verzögerten Anzählen in der siebten Runde?",
+      "answerEn": "Long Count",
+      "answerDe": "Long Count",
+      "timeline": {
+       "kind": "event",
+       "start": "1927-09-22",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The \"Long Count\" rematch between Tunney and Dempsey at Soldier Field, Chicago",
+       "labelDe": "Der Rückkampf Tunney gegen Dempsey, der „Long Count“, im Soldier Field in Chicago"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Long_Count_Fight",
+       "title": "The Long Count Fight – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Manassa Mauler and the Million-Dollar Gate",
+    "titleDe": "Der Manassa Mauler und die Millionen-Dollar-Kasse",
+    "bodyEn": "In the 1920s, the decade that turned sport into mass entertainment, no athlete drew bigger crowds than Jack Dempsey, the heavyweight champion from Manassa, Colorado. He had won the title in 1919 by battering Jess Willard, and his ferocious, crouching style made him a star. What turned him into a phenomenon was a promoter: Tex Rickard, who understood that a fight could be sold as a story.\n\nRickard's masterpiece was Jack Dempsey vs. Georges Carpentier on 2 July 1921. Carpentier, the elegant French war hero nicknamed \"the Orchid Man\", was cast as the gentleman against the brawling American who had been accused of dodging the draft. Rickard built a wooden stadium for 80,000 paying spectators at Boyle's Thirty Acres in Jersey City, New Jersey, and took $1,789,238 – boxing's first million-dollar gate. The fight itself was short: Dempsey knocked Carpentier out in the fourth round.\n\nIt also made broadcasting history. A temporary RCA station, WJY, transmitted from a railway terminal in Hoboken, with J. Andrew White describing the action, and the commentary was relayed to venues in 61 cities. It was the first world title fight carried over radio, and it showed the young industry that sport could fill the airwaves.\n\nDempsey's reign ended in the rain at Philadelphia on 23 September 1926, when the former marine Gene Tunney outboxed him over ten rounds before more than 120,000 spectators. The rematch on 22 September 1927 at Soldier Field in Chicago became the most argued-about fight in history, the Long Count. In the seventh round Dempsey floored Tunney but failed to go to a neutral corner, so the referee delayed the count; Tunney had about thirteen seconds to recover, got up and won on points.\n\n| Date | Fight | Place |\n|---|---|---|\n| 2 July 1921 | Dempsey vs. Carpentier | Jersey City |\n| 23 Sept 1926 | Tunney vs. Dempsey | Philadelphia |\n| 22 Sept 1927 | the Long Count | Chicago |\n\nDempsey never fought for the title again, but he remained one of the most popular men in America.",
+    "bodyDe": "In den 1920er Jahren, dem Jahrzehnt, das den Sport zur Massenunterhaltung machte, zog kein Athlet größere Menschenmengen an als Jack Dempsey, der Schwergewichtsweltmeister aus Manassa in Colorado. Er hatte den Titel 1919 gewonnen, indem er Jess Willard zusammenschlug, und sein wilder, geduckter Stil machte ihn zum Star. Zum Phänomen wurde er durch einen Promoter: Tex Rickard, der begriff, dass sich ein Kampf als Geschichte verkaufen ließ.\n\nRickards Meisterstück war der Kampf Jack Dempsey gegen Georges Carpentier am 2. Juli 1921. Carpentier, der elegante französische Kriegsheld mit dem Spitznamen „Orchid Man“, wurde als Gentleman gegen den rauflustigen Amerikaner inszeniert, dem man vorwarf, sich vor dem Kriegsdienst gedrückt zu haben. Rickard ließ auf Boyle's Thirty Acres in Jersey City, New Jersey, ein Holzstadion für 80.000 zahlende Zuschauer errichten und nahm 1.789.238 Dollar ein – die erste Millionen-Dollar-Kasse des Boxens. Der Kampf selbst war kurz: Dempsey schlug Carpentier in der vierten Runde k. o.\n\nEr schrieb auch Rundfunkgeschichte. Ein provisorischer Sender der RCA, WJY, sendete von einem Bahnhof in Hoboken, J. Andrew White schilderte das Geschehen, und der Kommentar wurde an Veranstaltungsorte in 61 Städten weitergeleitet. Es war der erste Weltmeisterschaftskampf, der live im Radio übertragen wurde, und er zeigte der jungen Branche, dass Sport den Äther füllen konnte.\n\nDempseys Regentschaft endete am 23. September 1926 im Regen von Philadelphia, als der frühere Marineinfanterist Gene Tunney ihn vor mehr als 120.000 Zuschauern über zehn Runden auspunktete. Der Rückkampf am 22. September 1927 im Soldier Field in Chicago wurde zum umstrittensten Kampf der Geschichte, dem Long Count („langes Anzählen“). In der siebten Runde schickte Dempsey Tunney zu Boden, ging aber nicht in die neutrale Ecke, sodass der Ringrichter verspätet zu zählen begann; Tunney hatte etwa dreizehn Sekunden zur Erholung, stand auf und gewann nach Punkten.\n\n| Datum | Kampf | Ort |\n|---|---|---|\n| 2. Juli 1921 | Dempsey gegen Carpentier | Jersey City |\n| 23. Sept. 1926 | Tunney gegen Dempsey | Philadelphia |\n| 22. Sept. 1927 | der Long Count | Chicago |\n\nDempsey kämpfte nie wieder um den Titel, blieb aber einer der beliebtesten Männer Amerikas.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-254",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which of the Klitschko brothers won the Olympic super-heavyweight gold medal in Atlanta in 1996?",
+      "de": "Welcher der Klitschko-Brüder gewann 1996 in Atlanta olympisches Gold im Superschwergewicht?",
+      "answerEn": "Wladimir",
+      "answerDe": "Wladimir",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1976-03-25",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Wladimir Klitschko, Ukrainian heavyweight champion",
+       "labelDe": "Wladimir Klitschko, ukrainischer Schwergewichtsweltmeister"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Wladimir_Klitschko",
+       "title": "Wladimir Klitschko – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Of which city has Vitali Klitschko been mayor since 2014?",
+      "de": "Von welcher Stadt ist Vitali Klitschko seit 2014 Bürgermeister?",
+      "answerEn": "Kyiv",
+      "answerDe": "Kiew",
+      "timeline": {
+       "kind": "event",
+       "start": "2014-06-05",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Vitali Klitschko takes office as mayor of Kyiv",
+       "labelDe": "Vitali Klitschko tritt sein Amt als Bürgermeister von Kiew an"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Vitali_Klitschko",
+       "title": "Vitali Klitschko – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which British boxer took Wladimir Klitschko's heavyweight titles on points in Düsseldorf in 2015?",
+      "de": "Welcher britische Boxer nahm Wladimir Klitschko 2015 in Düsseldorf nach Punkten die Schwergewichtstitel ab?",
+      "answerEn": "Tyson Fury",
+      "answerDe": "Tyson Fury",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-11-28",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Tyson Fury outpoints Wladimir Klitschko in Düsseldorf",
+       "labelDe": "Tyson Fury besiegt Wladimir Klitschko in Düsseldorf nach Punkten"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Wladimir_Klitschko_vs._Tyson_Fury",
+       "title": "Wladimir Klitschko vs. Tyson Fury – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which British boxer stopped Wladimir Klitschko in the eleventh round at Wembley Stadium in 2017, in Klitschko's last fight?",
+      "de": "Welcher britische Boxer besiegte Wladimir Klitschko 2017 im Wembley-Stadion in der elften Runde, in Klitschkos letztem Kampf?",
+      "answerEn": "Anthony Joshua",
+      "answerDe": "Anthony Joshua",
+      "timeline": {
+       "kind": "event",
+       "start": "2017-04-29",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Anthony Joshua stops Wladimir Klitschko at Wembley before 90,000 spectators",
+       "labelDe": "Anthony Joshua besiegt Wladimir Klitschko in Wembley vor 90.000 Zuschauern"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Anthony_Joshua_vs._Wladimir_Klitschko",
+       "title": "Anthony Joshua vs. Wladimir Klitschko – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Dr. Ironfist and Dr. Steelhammer: The Klitschko Brothers",
+    "titleDe": "Dr. Eisenfaust und Dr. Stahlhammer: Die Klitschko-Brüder",
+    "bodyEn": "For more than a decade the heavyweight division belonged to one family. The Ukrainian brothers Vitali and Wladimir Klitschko, sons of a Soviet air force officer, both stood about two metres tall, both earned doctorates in sports science – hence the nicknames \"Dr. Ironfist\" and \"Dr. Steelhammer\" – and both fought their professional careers out of Hamburg, which made them stars of German television. They promised their mother never to fight each other, and they never did.\n\nThe elder brother is Vitali, born on 19 July 1971 in Belovodskoye in Soviet Kyrgyzstan. A former kickboxing champion, he turned professional in 1996 and won the WBO title in 1999, then the WBC title in 2004. His most famous night was a defeat: in 2003 he was ahead on the cards against Lennox Lewis when a deep cut over his eye forced the fight to be stopped. He retired as WBC champion in 2013 and moved into politics; after founding the party UDAR in 2010 he was elected mayor of Kyiv and took office on 5 June 2014.\n\nWladimir, born on 25 March 1976 in Semipalatinsk in Kazakhstan, won the super-heavyweight gold medal at the 1996 Olympic Games in Atlanta and became the more dominant professional. From 2006 to 2015 he was unbeaten, collected the IBF, WBO, WBA and IBO belts and defended his titles more than twenty times. His reign ended on 28 November 2015 in Düsseldorf, where Tyson Fury outpointed him. On 29 April 2017, before 90,000 spectators at Wembley Stadium, he lost a thrilling fight to Anthony Joshua in the eleventh round; it was his last, and he retired that August.\n\n| Brother | Born | Nickname | Peak |\n|---|---|---|---|\n| Vitali | 1971 | Dr. Ironfist | WBC champion 2008–2013, mayor of Kyiv |\n| Wladimir | 1976 | Dr. Steelhammer | Olympic champion 1996, unified champion 2006–2015 |\n\nBetween them the brothers held world titles for most of the years from 1999 to 2015.",
+    "bodyDe": "Mehr als ein Jahrzehnt lang gehörte das Schwergewicht einer Familie. Die ukrainischen Brüder Vitali und Wladimir Klitschko, Söhne eines sowjetischen Luftwaffenoffiziers, maßen beide rund zwei Meter, promovierten beide in Sportwissenschaft – daher die Spitznamen „Dr. Eisenfaust“ und „Dr. Stahlhammer“ – und boxten als Profis beide von Hamburg aus, was sie zu Stars des deutschen Fernsehens machte. Sie versprachen ihrer Mutter, nie gegeneinander anzutreten, und taten es nie.\n\nDer ältere Bruder ist Vitali, geboren am 19. Juli 1971 in Belowodskoje im sowjetischen Kirgisistan. Der frühere Kickbox-Weltmeister wurde 1996 Profi und gewann 1999 den WBO-Titel, 2004 den WBC-Titel. Sein berühmtester Abend war eine Niederlage: 2003 lag er gegen Lennox Lewis nach Punkten vorn, als ein tiefer Cut über dem Auge zum Abbruch führte. 2013 trat er als WBC-Weltmeister zurück und ging in die Politik; nachdem er 2010 die Partei UDAR gegründet hatte, wurde er zum Bürgermeister von Kiew gewählt und trat das Amt am 5. Juni 2014 an.\n\nWladimir, geboren am 25. März 1976 in Semipalatinsk in Kasachstan, gewann bei den Olympischen Spielen 1996 in Atlanta Gold im Superschwergewicht und wurde der dominantere Profi. Von 2006 bis 2015 blieb er ungeschlagen, sammelte die Gürtel der IBF, WBO, WBA und IBO und verteidigte seine Titel mehr als zwanzigmal. Seine Regentschaft endete am 28. November 2015 in Düsseldorf, wo ihn Tyson Fury nach Punkten besiegte. Am 29. April 2017 verlor er vor 90.000 Zuschauern im Wembley-Stadion einen packenden Kampf gegen Anthony Joshua in der elften Runde; es war sein letzter, im August trat er zurück.\n\n| Bruder | Geboren | Spitzname | Höhepunkt |\n|---|---|---|---|\n| Vitali | 1971 | Dr. Eisenfaust | WBC-Weltmeister 2008–2013, Bürgermeister von Kiew |\n| Wladimir | 1976 | Dr. Stahlhammer | Olympiasieger 1996, vereinigter Weltmeister 2006–2015 |\n\nZusammen hielten die Brüder in den meisten Jahren zwischen 1999 und 2015 Weltmeistertitel.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-326",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "At which Olympic Games was boxing contested for the first time?",
+      "de": "Bei welchen Olympischen Spielen wurde erstmals geboxt?",
+      "answerEn": "St. Louis 1904",
+      "answerDe": "St. Louis 1904",
+      "timeline": {
+       "kind": "event",
+       "start": "1904-09-21",
+       "end": "1904-09-22",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Boxing makes its Olympic debut in St. Louis, with only American boxers",
+       "labelDe": "Boxen feiert in St. Louis olympische Premiere, nur mit amerikanischen Boxern"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Boxing_at_the_1904_Summer_Olympics",
+       "title": "Boxing at the 1904 Summer Olympics – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "At which Olympic Games did women box for medals for the first time?",
+      "de": "Bei welchen Olympischen Spielen boxten Frauen erstmals um Medaillen?",
+      "answerEn": "London 2012",
+      "answerDe": "London 2012",
+      "timeline": {
+       "kind": "event",
+       "start": "2012",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Women's boxing enters the Olympic programme with three weight classes",
+       "labelDe": "Frauenboxen kommt mit drei Gewichtsklassen ins olympische Programm"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Boxing_at_the_Summer_Olympics",
+       "title": "Boxing at the Summer Olympics – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "At which Olympic Games did the 18-year-old Cassius Clay win the light-heavyweight gold medal?",
+      "de": "Bei welchen Olympischen Spielen gewann der 18-jährige Cassius Clay Gold im Halbschwergewicht?",
+      "answerEn": "Rome 1960",
+      "answerDe": "Rom 1960",
+      "timeline": {
+       "kind": "event",
+       "start": "1960-09-05",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Cassius Clay beats Zbigniew Pietrzykowski in the Olympic light-heavyweight final",
+       "labelDe": "Cassius Clay besiegt Zbigniew Pietrzykowski im olympischen Finale des Halbschwergewichts"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Boxing_at_the_1960_Summer_Olympics_%E2%80%93_Light_heavyweight",
+       "title": "Boxing at the 1960 Summer Olympics – Light heavyweight – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Cuban boxer won the Olympic heavyweight title in 1972, 1976 and 1980?",
+      "de": "Welcher kubanische Boxer wurde 1972, 1976 und 1980 Olympiasieger im Schwergewicht?",
+      "answerEn": "Teófilo Stevenson",
+      "answerDe": "Teófilo Stevenson",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1952-03-29",
+       "end": "2012-06-11",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Teófilo Stevenson, Cuban three-time Olympic heavyweight champion",
+       "labelDe": "Teófilo Stevenson, kubanischer dreifacher Olympiasieger im Schwergewicht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Te%C3%B3filo_Stevenson",
+       "title": "Teófilo Stevenson – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Gloves at the Games: A Short History of Olympic Boxing",
+    "titleDe": "Handschuhe bei Olympia: Eine kurze Geschichte des olympischen Boxens",
+    "bodyEn": "Boxing was a sport of the ancient Olympics, but it joined the modern Games only at St. Louis 1904. On 21 and 22 September 1904, eighteen boxers fought for medals in seven weight classes – and since every one of them was American, the United States won them all. Boxing skipped Stockholm in 1912, where it was banned by Swedish law, and has been part of every Summer Games since 1920.\n\nFor most of the twentieth century Olympic boxing was the great amateur showcase and the springboard to professional fame. The 18-year-old Cassius Clay won the light-heavyweight gold medal at Rome 1960, beating Poland's Zbigniew Pietrzykowski in the final on 5 September, and went on to become Muhammad Ali. Cuba, whose government banned professional sport, built the strongest amateur team of all: Teófilo Stevenson won the heavyweight title in Munich in 1972, Montreal in 1976 and Moscow in 1980, and famously turned down millions of dollars to fight Ali as a professional. Only he, László Papp and Félix Savón have won three Olympic boxing titles.\n\nThe modern era brought three great changes. Women's boxing entered the programme at London 2012 with three weight classes, and the American Claressa Shields won the first middleweight title. Four years later, at Rio de Janeiro 2016, professional boxers were allowed to compete for the first time, after the world federation AIBA opened Olympic qualification to professionals; few took up the offer, and none of them won a medal. The same Games also dropped headguards for men.\n\n| Games | Milestone |\n|---|---|\n| St. Louis 1904 | first Olympic boxing tournament |\n| Rome 1960 | Cassius Clay wins light-heavyweight gold |\n| Moscow 1980 | Teófilo Stevenson's third heavyweight title |\n| London 2012 | first women's events |\n| Rio de Janeiro 2016 | professionals admitted, men without headguards |\n\nThe rules have changed many times, but the medal still counts for more than any amateur belt.",
+    "bodyDe": "Boxen war ein Sport der antiken Olympischen Spiele, kam aber erst in St. Louis 1904 zu den Spielen der Neuzeit. Am 21. und 22. September 1904 kämpften achtzehn Boxer in sieben Gewichtsklassen um Medaillen – und da alle Amerikaner waren, gewannen die Vereinigten Staaten sämtliche. In Stockholm 1912, wo das schwedische Gesetz das Boxen verbot, fehlte der Sport; seit 1920 gehört er zu allen Sommerspielen.\n\nDen größten Teil des 20. Jahrhunderts war das olympische Boxen die große Bühne der Amateure und das Sprungbrett zum Profiruhm. Der 18-jährige Cassius Clay gewann in Rom 1960 Gold im Halbschwergewicht, im Finale am 5. September gegen den Polen Zbigniew Pietrzykowski, und wurde später zu Muhammad Ali. Kuba, dessen Regierung den Profisport verbot, stellte die stärkste Amateurmannschaft überhaupt: Teófilo Stevenson wurde 1972 in München, 1976 in Montreal und 1980 in Moskau Olympiasieger im Schwergewicht und lehnte berühmterweise Millionen von Dollar für einen Profikampf gegen Ali ab. Nur er, László Papp und Félix Savón haben drei olympische Boxtitel gewonnen.\n\nDie Moderne brachte drei große Veränderungen. Das Frauenboxen kam in London 2012 mit drei Gewichtsklassen ins Programm, und die Amerikanerin Claressa Shields gewann den ersten Titel im Mittelgewicht. Vier Jahre später, in Rio de Janeiro 2016, durften erstmals auch Profis antreten, nachdem der Weltverband AIBA die olympische Qualifikation für Berufsboxer geöffnet hatte; nur wenige nahmen das Angebot an, und keiner von ihnen gewann eine Medaille. Bei denselben Spielen entfiel für die Männer der Kopfschutz.\n\n| Spiele | Meilenstein |\n|---|---|\n| St. Louis 1904 | erstes olympisches Boxturnier |\n| Rom 1960 | Cassius Clay gewinnt Gold im Halbschwergewicht |\n| Moskau 1980 | Teófilo Stevensons dritter Titel im Schwergewicht |\n| London 2012 | erste Wettbewerbe der Frauen |\n| Rio de Janeiro 2016 | Profis zugelassen, Männer ohne Kopfschutz |\n\nDie Regeln haben sich oft geändert, aber die Medaille zählt noch immer mehr als jeder Amateurgürtel.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-216",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-229",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-152",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which French naval officer developed the Méthode Naturelle of physical training?",
+      "de": "Welcher französische Marineoffizier entwickelte die Méthode Naturelle des Körpertrainings?",
+      "answerEn": "Georges Hébert",
+      "answerDe": "Georges Hébert",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1875-04-27",
+       "end": "1957-08-02",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Georges Hébert, French physical educator and creator of the Méthode Naturelle",
+       "labelDe": "Georges Hébert, französischer Sportpädagoge und Schöpfer der Méthode Naturelle"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Georges_H%C3%A9bert",
+       "title": "Georges Hébert – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Frenchman, born in 1973 and trained by his father Raymond, is regarded as the founder of parkour?",
+      "de": "Welcher 1973 geborene Franzose, von seinem Vater Raymond ausgebildet, gilt als Begründer des Parkour?",
+      "answerEn": "David Belle",
+      "answerDe": "David Belle",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1973-04-29",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "David Belle, French founder of parkour",
+       "labelDe": "David Belle, französischer Begründer des Parkour"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/David_Belle",
+       "title": "David Belle – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which University of Minnesota student led a crowd in a cheer in 1898 and is regarded as the first cheerleader?",
+      "de": "Welcher Student der University of Minnesota führte 1898 die Zuschauer beim Anfeuern an und gilt als erster Cheerleader?",
+      "answerEn": "Johnny Campbell",
+      "answerDe": "Johnny Campbell",
+      "timeline": {
+       "kind": "event",
+       "start": "1898-11-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Johnny Campbell leads the first organised cheer at the University of Minnesota",
+       "labelDe": "Johnny Campbell leitet an der University of Minnesota das erste organisierte Anfeuern"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Cheerleading",
+       "title": "Cheerleading – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "At which Olympic Games did sport climbing make its debut?",
+      "de": "Bei welchen Olympischen Spielen feierte das Sportklettern seine Premiere?",
+      "answerEn": "Tokyo 2020",
+      "answerDe": "Tokio 2020",
+      "timeline": {
+       "kind": "event",
+       "start": "2021-08-03",
+       "end": "2021-08-06",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Sport climbing makes its Olympic debut at the Tokyo Games, held in 2021",
+       "labelDe": "Sportklettern feiert bei den 2021 ausgetragenen Spielen von Tokio olympische Premiere"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sport_climbing_at_the_2020_Summer_Olympics",
+       "title": "Sport climbing at the 2020 Summer Olympics – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Boulders, Rooftops and Sidelines: Three Sports and Their Unexpected Beginnings",
+    "titleDe": "Felsblöcke, Dächer und Spielfeldränder: Drei Sportarten und ihre unerwarteten Anfänge",
+    "bodyEn": "Some of the most visible sports of today began far from any stadium – on boulders in the forest, in the training yards of the French navy, and in the stands of an American football game.\n\nBouldering is climbing in its purest form: short, hard routes on rocks or walls only a few metres high, without rope or harness, with a crash pad below instead of a belay. Climbers have practised on boulders for over a century, but in the 1970s bouldering became a discipline of its own, and today indoor bouldering halls are among the fastest-growing gyms in Europe. Sport climbing made its Olympic debut at Tokyo 2020, held from 3 to 6 August 2021, in a much-criticised combined format of lead, speed and bouldering; for Paris 2024 speed climbing got its own medals.\n\nParkour, the art of moving through a city by running, jumping, vaulting and climbing over whatever stands in the way, has a military ancestor. The French naval officer Georges Hébert (1875–1957), impressed by the strength and agility of the peoples he met on his voyages, developed the Méthode Naturelle, a training system built on natural movements – walking, running, jumping, climbing, balancing, throwing, swimming – and on obstacle courses. Raymond Belle learned the method in the French army and passed it on to his son David Belle, born in 1973, who with his friends in the Paris suburb of Lisses turned it into the urban discipline of parkour in the late 1980s. Films such as \"District B13\" made it world-famous.\n\nCheerleading, now dominated by women, began as a purely male activity. On 2 November 1898, at a University of Minnesota football game against Northwestern, the student Johnny Campbell stood up in front of the crowd and led it in a cheer – the birth of organised cheerleading. For years only men were allowed to be cheerleaders, and leading the cheers was a mark of status on campus. Minnesota admitted women in 1923, and they took over the sidelines in the 1940s, when many male students went to war.\n\n| Sport | Origin | Key figure |\n|---|---|---|\n| Bouldering | discipline of its own from the 1970s | Olympic since Tokyo 2020 |\n| Parkour | Méthode Naturelle, late 1980s | Georges Hébert, David Belle |\n| Cheerleading | Minnesota, 1898 | Johnny Campbell |\n\nAll three still carry traces of where they came from: the rock, the obstacle course and the crowd.",
+    "bodyDe": "Einige der heute sichtbarsten Sportarten begannen fern jedes Stadions – an Felsblöcken im Wald, auf den Übungsplätzen der französischen Marine und auf den Tribünen eines amerikanischen Footballspiels.\n\nBouldern ist Klettern in seiner reinsten Form: kurze, schwere Routen an Felsen oder Wänden von nur wenigen Metern Höhe, ohne Seil und Gurt, mit einer Sturzmatte statt einer Sicherung. Kletterer üben seit über einem Jahrhundert an Felsblöcken, doch in den 1970er Jahren wurde das Bouldern zu einer eigenen Disziplin, und heute gehören Boulderhallen zu den am schnellsten wachsenden Sportstätten Europas. Das Sportklettern feierte in Tokio 2020 olympische Premiere, ausgetragen vom 3. bis 6. August 2021, in einem viel kritisierten Kombinationsformat aus Lead, Speed und Bouldern; für Paris 2024 bekam das Speedklettern eigene Medaillen.\n\nParkour, die Kunst, sich durch eine Stadt zu bewegen, indem man über alles, was im Weg steht, rennt, springt, flankt und klettert, hat einen militärischen Vorfahren. Der französische Marineoffizier Georges Hébert (1875–1957), beeindruckt von der Kraft und Gewandtheit der Völker, denen er auf seinen Reisen begegnete, entwickelte die Méthode Naturelle, ein Trainingssystem aus natürlichen Bewegungen – Gehen, Laufen, Springen, Klettern, Balancieren, Werfen, Schwimmen – und Hindernisparcours. Raymond Belle lernte die Methode in der französischen Armee und gab sie an seinen 1973 geborenen Sohn David Belle weiter, der mit seinen Freunden im Pariser Vorort Lisses daraus Ende der 1980er Jahre die urbane Disziplin Parkour machte. Filme wie „Ghettogangz – Die Hölle vor Paris“ („District B13“) machten sie weltberühmt.\n\nCheerleading, heute von Frauen dominiert, begann als reine Männersache. Am 2. November 1898 stellte sich bei einem Footballspiel der University of Minnesota gegen Northwestern der Student Johnny Campbell vor die Zuschauer und leitete sie beim Anfeuern an – die Geburtsstunde des organisierten Cheerleadings. Jahrelang durften nur Männer Cheerleader sein, und das Anführen der Anfeuerungsrufe galt auf dem Campus als Auszeichnung. Minnesota ließ 1923 Frauen zu, und in den 1940er Jahren, als viele männliche Studenten in den Krieg zogen, übernahmen sie die Spielfeldränder.\n\n| Sportart | Ursprung | Schlüsselfigur |\n|---|---|---|\n| Bouldern | eigene Disziplin seit den 1970ern | olympisch seit Tokio 2020 |\n| Parkour | Méthode Naturelle, Ende der 1980er | Georges Hébert, David Belle |\n| Cheerleading | Minnesota, 1898 | Johnny Campbell |\n\nAlle drei tragen noch Spuren ihrer Herkunft: den Fels, den Hindernisparcours und die Zuschauermenge.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-183",
+   "category": 4,
+   "domain": "sport-games",
+   "sub": "olympics",
+   "why": "Its answer \"Judo\" repeats fact f07461 in a1493 (an article may not hold the same answer twice). Alias it to f07461 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

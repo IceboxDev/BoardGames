@@ -1,0 +1,242 @@
+{
+ "article": "a2547",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Honest_Company",
+   "title": "The Honest Company",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:44.677Z",
+   "snapshot": "c5afbf6d7fce152196e47424ccac35a830875ed796ef0b03568dfe6d37bdf7cc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fenty_Beauty",
+   "title": "Fenty Beauty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:45.680Z",
+   "snapshot": "70f347d0525361349534d086c463801bdef563280e14a91468c1db64b8db0163"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Casamigos",
+   "title": "Casamigos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:46.666Z",
+   "snapshot": "1c53160e77d6bab2895687391496fb2c01cdf0b28fd7922b37a8edf271c62172"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Skims",
+   "title": "Skims – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:47.682Z",
+   "snapshot": "646eb1bed1d100a11033b3c2487db71e5c6efdae3e7ce78a5cc3fb232b78e6f6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mint_Mobile",
+   "title": "Mint Mobile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:48.674Z",
+   "snapshot": "96d308f2897b8af693718e1461b5b49f8ac7721ee89b9e5c032eca52f76b1ad5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jessica Alba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-359"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13621",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rihanna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George Clooney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kim Kardashian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ryan Reynolds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:37.063Z",
+   "target": "f13620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is an American digital-first consumer goods company, based in Los Angeles and founded by actress Jessica Alba (listed in company records by her married name, Jessica Warren), Christopher Gavigan, and Brian Lee.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jessica Alba” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:37.063Z",
+   "target": "f13621",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fenty Beauty LLC (stylized as FEИTY BEAUTY) is a cosmetics brand by singer Rihanna and luxury goods conglomerate LVMH, launched on September 8, 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rihanna” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:37.063Z",
+   "target": "f13622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Casamigos, often Casamigos Tequila, is an American tequila company  founded by George Clooney, Rande Gerber and Mike Meldman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Clooney” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:37.063Z",
+   "target": "f13623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "SKIMS is an American shapewear and clothing brand co-founded by Kim Kardashian and Jens Grede.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kim Kardashian” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:37.063Z",
+   "target": "f13624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In November 2019, the corporate spin-off of Mint Mobile from Ultra Mobile was completed and Ryan Reynolds acquired 25% ownership in the company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ryan Reynolds” is on the snapshot of s5"
+  }
+ ]
+}

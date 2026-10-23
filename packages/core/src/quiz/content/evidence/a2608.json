@@ -1,0 +1,226 @@
+{
+ "article": "a2608",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Evander_Holyfield",
+   "title": "Evander Holyfield",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:58.383Z",
+   "snapshot": "65bcd2fdd463494a78dbc1c654cb634c432557165081ac7e21bc4567d7c4dd82"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mike_Tyson%27s_tattoos",
+   "title": "Mike Tyson's tattoos",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:02.106Z",
+   "snapshot": "6d11d6cdb731648fe594e39b11ac389f922f4a12f5c1e8bdd150d7229b1bc6ee"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+   "title": "Mike Tyson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:38.331Z",
+   "snapshot": "81f87e2954fccf743c97939cfdcb0bffbd466729582744cc9d122b90f9c66cf2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Evander Holyfield",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-390"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Left",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-294"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cus D'Amato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buster Douglas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lennox Lewis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:46.558Z",
+   "target": "f14060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dezember 2008 trat Evander Holyfield gegen den WBA-Weltmeister Nikolai Walujew an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evander Holyfield” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:46.558Z",
+   "target": "f14061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tyson got prison tattoos of both men on his biceps: A portrait of Mao, captioned with \"Mao\" in all-caps, on the right; a portrait of Ashe beneath the words \"Days of Grace\" on the left.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Left” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:46.558Z",
+   "target": "f14062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stewart noted that Tyson could bench press more than his weight, and through Stewart, Tyson met boxing manager and trainer Cus D'Amato.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cus D'Amato” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:46.558Z",
+   "target": "f14064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1990, Tyson lost the undisputed heavyweight championship when he was knocked out by underdog Buster Douglas, making it one of the biggest upsets in boxing history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buster Douglas” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:46.558Z",
+   "target": "f14065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 2002, Tyson fought for the world heavyweight title, losing by knockout to Lennox Lewis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lennox Lewis” is on the snapshot of s3"
+  }
+ ]
+}

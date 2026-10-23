@@ -1,0 +1,267 @@
+{
+ "article": "a1435",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/J._Edgar_Hoover",
+   "title": "J. Edgar Hoover – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:13.515Z",
+   "snapshot": "7be7f8cae5291f0a750d4113a813e6bddc48dba896d9e626ef2c83d3a3ec84dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_McCarthy",
+   "title": "Joseph McCarthy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:14.500Z",
+   "snapshot": "85f5cce917fdba45d9bd9007baa5817bf41bff667b78168bbf9145c61271f21d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Allen_Dulles",
+   "title": "Allen Dulles – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:15.486Z",
+   "snapshot": "b218f7ddcf33144c44dcff7f55f41512e7d03f63e9678244de9f90746ab10248"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Robert_F._Kennedy",
+   "title": "Robert F. Kennedy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:16.536Z",
+   "snapshot": "bbea37c0892df5eb16ec6c1a784f0de2f71531f86bea236f92331103bbcb3334"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Director_of_the_Federal_Bureau_of_Investigation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:17.326Z",
+   "snapshot": "39452ec6afca409ff61608a7e8167c686d33030ae7317d503af550fb89b17853"
+  },
+  "s6": {
+   "url": "https://www.fbi.gov/history/directors/j-edgar-hoover",
+   "title": "J. Edgar Hoover, May 10, 1924 - May 2, 1972",
+   "publisher": "Federal Bureau of Investigation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:18:53Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "J. Edgar Hoover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph McCarthy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Allen Dulles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Robert F. Kennedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:25.399Z",
+   "target": "f07171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An example of J. Edgar Hoover approving wiretaps is the Nixon wiretaps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “J. Edgar Hoover” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:25.399Z",
+   "target": "f07172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Costello, Hero by Theodore Sturgeon was described by journalist Paul Williams as \"the all-time great story about Senator Joseph McCarthy, who he was and how he did what he did.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph McCarthy” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:25.399Z",
+   "target": "f07173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Allen Dulles is depicted as plotting a coup to overthrow the government of France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Allen Dulles” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:25.399Z",
+   "target": "f07175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The New York Times editorialized, \"there is nothing illegal about the possible nomination of Robert F. Kennedy of Massachusetts as Senator from New York, but there is plenty of cynical about it, ...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.399Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert F. Kennedy” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:18:52Z",
+   "target": "f07171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the first director of the Federal Bureau of Investigation (FBI)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:18:53Z",
+   "target": "f07171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On May 10, 1924, Attorney General Harlan Fiske Stone appointed the 29-year-old Hoover acting director of the Bureau, and by the end of the year Mr. Hoover was named Director.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "FBI: Hoover led the Bureau continuously 1924–1972, so he was its director when it became the FBI in 1935."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:10.496Z",
+   "target": "f07171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the first director of the Federal Bureau of Investigation (FBI)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.496Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  }
+ ]
+}

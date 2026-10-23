@@ -1,0 +1,494 @@
+{
+ "article": "a1850",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Michel_aus_L%C3%B6nneberga",
+   "title": "Michel aus Lönneberga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:56.559Z",
+   "snapshot": "f4e4d87d4e71d1835de4a3631107b0f3313e5e015e4c69dc970b8dc5ec0823be"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Pippi_Langstrumpf",
+   "title": "Pippi Langstrumpf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:15.790Z",
+   "snapshot": "76ba975971fdec808df00399bb208b8e509bacb3429e5f20bdcdb0abcfb7b90d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Karlsson_vom_Dach",
+   "title": "Karlsson vom Dach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:57.582Z",
+   "snapshot": "b9c57170def3174a906abce73da4352272cb1bba465de49cfdf2d22b8c6365db"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Tim_und_Struppi",
+   "title": "Tim und Struppi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:59.260Z",
+   "snapshot": "bcd622abc444a61c37453c930b78c7d71bfad4f57958f7d67b4d95550098177e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Pu_der_B%C3%A4r",
+   "title": "Pu der Bär – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:59.722Z",
+   "snapshot": "847d726d5f4f88bc01eb733fc51c701eaec81b09c74e84f56a40aa264545e26d"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Harry_Rowohlt",
+   "title": "Harry Rowohlt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:01.209Z",
+   "snapshot": "264a2f75b7194536457da7aa777f1cd013e86970f859ea77c2a790487336682e"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Wo_ist_Walter?",
+   "title": "Wo ist Walter?",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:01.565Z",
+   "snapshot": "7e167061da9c215cb0775cdca887ee818653a196b6f963f9e15448f44c695949"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Where's_Wally%3F",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:59.529Z",
+   "snapshot": "aaabcaf85ce15d109faf48fa0b7a1aa8ed2cba38a5f9faa62744362617bc8e9e"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Wo_ist_Walter%3F",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:26:02.640Z",
+   "snapshot": "7e167061da9c215cb0775cdca887ee818653a196b6f963f9e15448f44c695949"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pippi Langstrumpf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karlsson vom Dach",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tim",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pu der Bär",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emil",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-066"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harry Rowohlt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-358"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Wally",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-241"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wally",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Wally",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-241/4, u02: He is Wally in Britain, Waldo in North America, Walter in Germany, Charlie in France; statement false."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wally",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e9 is on the snapshot of s8"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wally",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e9 is on the snapshot of s9"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f09246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michel aus Lönneberga (schwedisch Emil i Lönneberga) ist eine Kinderbuch-Romanfigur von Astrid Lindgren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michel” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f09247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pippi Langstrumpf (mit vollem Namen Pippilotta Viktualia Rollgardina Pfefferminz Efraimstochter Langstrumpf, auf Schwedisch Pippilotta Viktualia Rullgardina Krusmynta Efraimsdotter Långstrump) ist die zentrale Figur einer dreibändigen Kinderbuch-Reihe der schwedischen Schriftstellerin Astrid",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pippi Langstrumpf” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f09248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karlsson vom Dach ist eine Kinderbuch-Romanfigur der Schwedin Astrid Lindgren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karlsson vom Dach” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f09249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tim und Struppi (im französischsprachigen Original Les aventures de Tintin) ist eine der bekanntesten und bedeutendsten europäischen Comicserien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tim” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f09250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pu der Bär (englisch Winnie-the-Pooh) ist der Name einer literarischen Figur und eines Kinderbuchs des Autors Alan Alexander Milne.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pu der Bär” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michel aus Lönneberga (schwedisch Emil i Lönneberga) ist eine Kinderbuch-Romanfigur von Astrid Lindgren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emil” is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harry Rowohlt wuchs an verschiedenen Orten auf, besuchte das Walddörfer-Gymnasium in Hamburg und machte dort sein Abitur.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry Rowohlt” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "(Originaltitel: Where’s Wally?) ist eine Kinderbuchreihe/Comic des Briten Martin Handford.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wally” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Readers are challenged to find a character named Wally and his friends hidden throughout the pages.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wally” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:28:33.934Z",
+   "target": "f12567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "(Originaltitel: Where’s Wally?) ist eine Kinderbuchreihe/Comic des Briten Martin Handford.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wally” is on the snapshot of s9"
+  }
+ ]
+}

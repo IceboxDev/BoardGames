@@ -1,0 +1,289 @@
+{
+ "article": "a2397",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/African_National_Congress",
+   "title": "African National Congress",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:45.683Z",
+   "snapshot": "f615c43681cbc50008c20e65939ffe071dda0f78c7f88b156db6276d3594355c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nelson_Mandela",
+   "title": "Nelson Mandela",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:54:19.696Z",
+   "snapshot": "a2e817152c2d74143614039e126f09e62768810437f0f3cd561347c1037dafa7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sharpeville_massacre",
+   "title": "Sharpeville massacre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:49.164Z",
+   "snapshot": "e87ab8d31ca23211181dee7c60ef44e222a4cf7e212d0f9c1105f22bf8f4bb5f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/UMkhonto_weSizwe",
+   "title": "uMkhonto weSizwe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:50.295Z",
+   "snapshot": "8d3a26f7b2460e6b107e216f66f0ad17f1fa88b4ac21accf958c0c983e97aa16"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Soweto_uprising",
+   "title": "Soweto uprising – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:51.202Z",
+   "snapshot": "6397c86e3322c79a03b4630e60926968b530e1a02692e15f957a35c9f823695c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/F._W._de_Klerk",
+   "title": "F. W. de Klerk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:52.288Z",
+   "snapshot": "cee8b7026c0fe2177cff824ed665b62a9a3e01201e6f217f2359815b8de8d4dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "African National Congress",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-328"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nelson Mandela",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-026"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sharpeville",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Umkhonto we Sizwe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Soweto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "F. W. de Klerk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:13.713Z",
+   "target": "f12535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der African National Congress (kurz ANC), deutsch Afrikanischer Nationalkongress, ist eine 1912 gegründete südafrikanische Organisation.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “African National Congress” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:13.713Z",
+   "target": "f12536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im Oktober setzten die Behörden auch Nelson Mandela auf diese Liste.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nelson Mandela” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:13.713Z",
+   "target": "f12537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sharpeville massacre occurred on 21 March 1960, when police opened fire on a crowd of people who had assembled outside the police station in the township of Sharpeville in the then Transvaal Province of the then Union of South Africa (today part of Gauteng) to protest against the apartheid",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sharpeville” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:13.713Z",
+   "target": "f12538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1984, musician Prince Far I's album Umkhonto we Sizwe (Spear of the Nation) was released (posthumously) in an act of solidarity with the uMkhonto weSizwe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Umkhonto we Sizwe” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:13.713Z",
+   "target": "f12539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Soweto uprising, also known as the Soweto riots or the Soweto rebellion, was a series of demonstrations and protests led by black school children in South Africa during apartheid that began on the morning of 16 June 1976.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Soweto” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:13.713Z",
+   "target": "f12540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "F. W. de Klerk was born on 18 March 1936, into a rich political family in Mayfair, a suburb of Johannesburg, Transvaal Province, Union of South Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.713Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “F. W. de Klerk” is on the snapshot of s6"
+  }
+ ]
+}

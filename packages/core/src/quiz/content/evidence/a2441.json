@@ -1,0 +1,585 @@
+{
+ "article": "a2441",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tschitti_Tschitti_B%C3%A4ng_B%C3%A4ng",
+   "title": "Tschitti Tschitti Bäng Bäng",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:25.133Z",
+   "snapshot": "4044e68e804cad81d802d9c89465fa9258f64a67f8c5961c8758450bc9646dbe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Hunt_for_Red_October",
+   "title": "The Hunt for Red October",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:26.078Z",
+   "snapshot": "3506dd5482e0dbf9ccf09aabc78757cd5793909678a2a09e1e06ab1cd5243107"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gone_Girl_(film)",
+   "title": "Gone Girl (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:27.124Z",
+   "snapshot": "1ee02bb6d1c9d0d01d168b93763ed066a8c36a18df203a7db7e0c911f6400e8e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/George_Smiley",
+   "title": "George Smiley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:28.075Z",
+   "snapshot": "ab26f8e3128a4c174767d230a600276a7c01a38bc8e1dd3ba249de065b3459ba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Bourne_Identity_(novel)",
+   "title": "The Bourne Identity (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:28.960Z",
+   "snapshot": "6588a6f2179b6fbdeb83cbf02769f2275865def1c8c9b373f04ff6ed34b89282"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Day_of_the_Jackal",
+   "title": "The Day of the Jackal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:30.025Z",
+   "snapshot": "5b50753c63c729aa9a9879f6c44eee02c39e6bb1e6989f99a5c229c08345579f"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Rosamund_Pike",
+   "title": "Rosamund Pike",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:27.718Z",
+   "snapshot": "5e61f9a2d32f81969d0a3ed84f4e27d0af4c92c5ebd6c70dec2f1e954cbfb304"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Ian_Fleming",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:31.155Z",
+   "snapshot": "daaee3dc2919dc7fbe894dfb22751c2043f98ec6cc659e87fbd7886c61439b0b"
+  },
+  "s9": {
+   "url": "https://www.rottentomatoes.com/m/die_another_day",
+   "title": "Die Another Day",
+   "publisher": "Rotten Tomatoes",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:20.494Z",
+   "snapshot": "8fac7de0ef41d625066746ebea1433338011b8cb37c41c5d10172a6580dd5391"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Rosamund_Pike",
+   "title": "Rosamund Pike",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:20.603Z",
+   "snapshot": "352236d051fa30c78ba0c718b5edcfbb04cf8f84edb35fb5db11cf0ecb2f90bb"
+  },
+  "s11": {
+   "url": "https://www.rottentomatoes.com/m/gone_girl",
+   "title": "Gone Girl",
+   "publisher": "Rotten Tomatoes",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:21.828Z",
+   "snapshot": "be2288bee2faef5c7e40aa4f2a3bd43198bee22d9441da30a5255f6ba55f681d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ian Fleming",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-308"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hunt for Red October",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-336"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gone Girl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-100"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "George Smiley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12841",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jason Bourne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12842",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Charles de Gaulle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12843",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jack Ryan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rosamund Pike",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 64; transcript tp-221"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tschitti Tschitti Bäng Bäng (englisch Chitty Chitty Bang Bang) ist der Titel eines Kinderbuchs des englischen Schriftstellers Ian Fleming, der das Buch für seinen Sohn Caspar (1952–1975) verfasste.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ian Fleming” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hunt for Red October is the debut novel by American author Tom Clancy, first published on October 1, 1984, by the Naval Institute Press.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hunt for Red October” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gone Girl is a 2014 American psychological thriller film directed by David Fincher and written by Gillian Flynn, based on her 2012 novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gone Girl” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "George Smiley OBE is a fictional character created by John le Carré.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Smiley” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12841",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Bourne Identity is a 1980 spy fiction thriller novel by Robert Ludlum that tells the story of Jason Bourne, a man with remarkable survival abilities who has retrograde amnesia, and must seek to discover his true identity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jason Bourne” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12842",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Day of the Jackal is a 1971 political thriller novel by English author Frederick Forsyth about a professional assassin who is contracted by the OAS, a French dissident paramilitary organisation, to kill Charles de Gaulle, the president of France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles de Gaulle” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f12843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "with his country's cutting-edge ballistic missile submarine Red October, and marks the first appearance of Clancy's most popular fictional character, Jack Ryan, an analyst working for the Central Intelligence Agency, as he must prove his theory that Ramius plans to defect to the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Ryan” is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:20.654Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rosamund Pike ist die einzige Tochter der beiden Opernsänger Caroline und Julian Pike.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosamund Pike” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:53:34Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Pierce Brosnan James Bond Halle Berry Jinx Toby Stephens Gustav Graves Rosamund Pike Miranda Frost",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Cast list: Pike as Miranda Frost opposite Brosnan's Bond"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:53:38Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "before her professional debut as Bond girl Miranda Frost in Die Another Day (2002).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:53:47Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "bringing the best out of stars Ben Affleck and Rosamund Pike.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Pike starred in Gone Girl"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:03.891Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Pierce Brosnan James Bond Halle Berry Jinx Toby Stephens Gustav Graves Rosamund Pike Miranda Frost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:03.891Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "before her professional debut as Bond girl Miranda Frost in Die Another Day (2002).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:03.891Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "bringing the best out of stars Ben Affleck and Rosamund Pike.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:03.891Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Rosamund Pike",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rosamund Pike” is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:03.891Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Rosamund Pike",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rosamund Pike” is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:03.891Z",
+   "target": "f26015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rosamund Pike” is on the snapshot of s11"
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+{
+ "article": "a0792",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Spirit_level",
+   "title": "Spirit level – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:34.367Z",
+   "snapshot": "8a027419c189dc5fc3dc2162b3711b0d0322b2425bf3f025d5866bbdee67add0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Crane_(machine)",
+   "title": "Crane (machine) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:36.883Z",
+   "snapshot": "672a894ff5d2ba3e79d0a733277f075655796770ff60d9604775d343562b5376"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Target_drone",
+   "title": "Target drone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:35.390Z",
+   "snapshot": "4d42f029f6f1c10690c85401ba4003363bc4cd339636a7ce34ba8e57966437fc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Harald_Bluetooth",
+   "title": "Harald Bluetooth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:36.301Z",
+   "snapshot": "844443f93cf29b263b9dac8fa8e11d5215910307e30b9c4e59fd2dec67ec37dd"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bluetooth",
+   "title": "Bluetooth",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:20:33.862Z",
+   "snapshot": "1f48cfec53970a33cff59aec0bc05fa3ccff798ee8fb20e1cf2744ed83161ac8"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Libelle",
+   "title": "Libelle – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:39.820Z",
+   "snapshot": "beafe92f60b7aa60a360136e6b9327735b50b6bf776192553db37503831dcdd4"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Libelle_(Messtechnik)",
+   "title": "Libelle (Messtechnik) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:40.049Z",
+   "snapshot": "f2dd340190f51bd51db2fba024712e4ed80443751e4b9602f8e3a0dfcc449020"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dragonfly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c066"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Crane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "drone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harald Bluetooth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harald Blauzahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-132"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:46.194Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dragonfly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dragonfly”, “Libelle”, “стрекоза”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:46.194Z",
+   "target": "f03957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A crane is a machine used to move materials both vertically and horizontally, utilizing a system of a boom, hoist, wire ropes or chains, and sheaves for lifting and relocating heavy objects within the swing of its boom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crane” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:46.194Z",
+   "target": "f03959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A target drone is an unmanned aerial vehicle, generally remote controlled, usually used in the training of anti-aircraft crews.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “drone” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:46.194Z",
+   "target": "f03960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Clac Harald appears to be a conflation of Harald Bluetooth with the legendary or semi-legendary Harald Klak, son of Halfdan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harald Bluetooth” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:46.194Z",
+   "target": "f03960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Name „Bluetooth“ leitet sich vom dänischen König Harald Blauzahn (dänisch Harald Blåtand, englisch Harold Bluetooth) ab, der Teile von Norwegen und Dänemark unter seiner Herrschaft vereinte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harald Blauzahn” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:41:09Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[fachsprachlich] in Wasserwaagen oder an anderen Messinstrumenten befindlicher kleiner, mit einer leicht beweglichen Flüssigkeit gefüllter Glaszylinder",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same entry, sense 1 = the insect (dragonfly); etymology: Libellula (zool. Latin) < libella '(small) level' — the insect is named after the level, not the reverse; wording reworded to 'shares its name'."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:41:11Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "der den Namen Libelle für das heute so genannte Insekt vorschlägt und es mit einem Gerät vergleicht, das Architekten benutzen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Insect and vial share the name Libelle; Rondelet (1558) named the insect by comparison with the device."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:14.292Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[fachsprachlich] in Wasserwaagen oder an anderen Messinstrumenten befindlicher kleiner, mit einer leicht beweglichen Flüssigkeit gefüllter Glaszylinder",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:14.292Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "der den Namen Libelle für das heute so genannte Insekt vorschlägt und es mit einem Gerät vergleicht, das Architekten benutzen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:14.292Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Libelle – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Libelle” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:14.292Z",
+   "target": "f03956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Damit war das Prinzip der heutigen Libelle gefunden – der Grundstein für einfaches Ausrichten von Gegenständen war gelegt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Libelle” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,748 @@
+{
+ "article": "a0120",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Concorde",
+   "title": "Concorde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:10.422Z",
+   "snapshot": "fe86c0aedcb023a8d75f8cdc2024eab8680e7661d8a498eda85dea5535776163"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tupolev_Tu-144",
+   "title": "Tupolev Tu-144 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:11.156Z",
+   "snapshot": "9f01586fcabb8c1ec5aafd40a24bc4f15e571b1693cc2dee09bc90e285e39571"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bell_X-1",
+   "title": "Bell X-1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:12.067Z",
+   "snapshot": "6e8080903a1325eb554567f27dd53f677ddab667b5c97cdc24e18d647f7d24f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/De_Havilland_Comet",
+   "title": "De Havilland Comet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:13.215Z",
+   "snapshot": "767346e56237f3275bfcd51de49d2e9ddea44ea67da951c9c7b5f1b5996af6cc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Boeing_747",
+   "title": "Boeing 747 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:14.185Z",
+   "snapshot": "bc8096e702aa89a244e171ff11ecb4633b63d171f16e2c2a321b058636b6c7fb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Concorde",
+   "title": "Concorde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:23:11.897Z",
+   "snapshot": "aeaebc6074044d061877c6cc41406201063360889225a5d6b552c30276e6b57b"
+  },
+  "s7": {
+   "url": "https://sinsheim.technik-museum.de/en/tupolev-tu-144",
+   "title": "Tupolev Tu-144 – Technik Museum Sinsheim",
+   "publisher": "Technik Museum Sinsheim",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:54.148Z",
+   "snapshot": "2335bb4fb08207a0e2050b4f944ab931198c73e200cad221bc4148edc77dabe1"
+  },
+  "s8": {
+   "url": "https://airandspace.si.edu/collection-objects/bell-x-1-glamorous-glennis/nasm_A19510007000",
+   "title": "Bell X-1 \"Glamorous Glennis\" – National Air and Space Museum",
+   "publisher": "Smithsonian National Air and Space Museum",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:53.603Z",
+   "snapshot": "37b7e3d3224591e3035369092924d89a47eea3aa266474e7887444e29394892b"
+  },
+  "s9": {
+   "url": "https://www.rafmuseum.org.uk/research/collections/de-havilland-comet-1xb/",
+   "title": "de Havilland Comet 1XB – RAF Museum",
+   "publisher": "Royal Air Force Museum",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:55.003Z",
+   "snapshot": "b0b3aa710a4dccb5cc1cc7921da3cf77c3a9bed15b6b97a2b97e66785bc3ed22"
+  },
+  "s10": {
+   "url": "https://aeroreport.de/en/good-to-know/boeing-747-queen-of-the-skies",
+   "title": "Boeing 747 – Queen of the Skies",
+   "publisher": "AEROREPORT (MTU Aero Engines)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:55.078Z",
+   "snapshot": "a5b821f6e1cce05d4ff9eeb4051147fabf846bf541e096f7bedd2fd98a266d8c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Concorde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tupolev Tu-144",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bell X-1",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "De Havilland Comet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Boeing 747",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Air France und British Airways",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-086"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "metal fatigue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; history entry seq 45"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f00596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Concorde ( KONG-kord, French: [kɔ̃kɔʁd] ) is a retired Anglo-French supersonic airliner jointly developed and manufactured by Sud Aviation and the British Aircraft Corporation (BAC).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Concorde” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tupolev Tu-144 (Russian: Tyполев Ту-144; NATO reporting name: Charger) is a Soviet supersonic passenger airliner designed by Tupolev that operated commercially from 1975 to 1983, including 1977–1978 passenger service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tupolev Tu-144” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Bell X-1 (Bell Model 44) is a rocket engine–powered aircraft, designated originally as the XS-1, and was a joint National Advisory Committee for Aeronautics–U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bell X-1” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Dan-Air de Havilland Comet crash in Spain's Montseny range on 3 July 1970 was attributed to navigational errors by air traffic control and pilots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “De Havilland Comet” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Boeing 747 is a long-range wide-body airliner designed and manufactured by Boeing Commercial Airplanes in the United States between 1968 and 2023.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boeing 747” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f14315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Aérospatiale-BAC Concorde, kurz Concorde (französisch für Eintracht, Einigkeit; englisch concord), war das erste Überschall-Passagierflugzeug im Linienflugdienst: Es wurde von Air France und British Airways von 1976 bis 2003 betrieben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Air France und British Airways” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:54.998Z",
+   "target": "f28209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Two of these were found to be caused by structural failure resulting from metal fatigue in the airframe, a phenomenon not fully understood at the time; the other was due to overstressing of the airframe during flight through severe weather.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “metal fatigue” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:24Z",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In fact, the Soviet Tu-144 took off for the first time on December 31, 1968 – beating its Western counterpart into the air.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:39:26Z",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tu-144 was the world's first commercial supersonic transport aircraft with its prototype",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:39:29Z",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On October 14, 1947, the Bell X-1 became the first airplane to fly faster than the speed of sound.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:39:31Z",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was the first piloted airplane to exceed the speed of sound in level flight",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:39:34Z",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The first flight of the Comet, the world’s first jet powered airliner, took place on 27 July 1949.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:39:36Z",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The world's first commercial jet airliner",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:39:39Z",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "At the beginning of 1970, the first Boeing 747s were delivered to major U.S. customers and first operators Pan Am and TWA.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:39:42Z",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 747 was the first airplane called a \"Jumbo Jet\" as the first wide-body airliner.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In fact, the Soviet Tu-144 took off for the first time on December 31, 1968 – beating its Western counterpart into the air.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tu-144 was the world's first commercial supersonic transport aircraft with its prototype",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On October 14, 1947, the Bell X-1 became the first airplane to fly faster than the speed of sound.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was the first piloted airplane to exceed the speed of sound in level flight",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The first flight of the Comet, the world’s first jet powered airliner, took place on 27 July 1949.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The world's first commercial jet airliner",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s4"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "At the beginning of 1970, the first Boeing 747s were delivered to major U.S. customers and first operators Pan Am and TWA.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 747 was the first airplane called a \"Jumbo Jet\" as the first wide-body airliner.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s5"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Due to its distinctive shape and its movable canards, the Tupolev Tu-144 was nicknamed “Concordski” in reference to its Western rival, the Concorde.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tupolev Tu-144” is on the snapshot of s7"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bell X-1 Glamorous Glennis | National Air and Space Museum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bell X-1” is on the snapshot of s8"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "de Havilland Comet 1XB - RAF Museum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “De Havilland Comet” is on the snapshot of s9"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:52:13.595Z",
+   "target": "f00600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Boeing 747: Queen of the Skies | MTU AEROREPORT",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Boeing 747” is on the snapshot of s10"
+  }
+ ]
+}

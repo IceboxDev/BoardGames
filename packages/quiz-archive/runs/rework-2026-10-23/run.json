@@ -1,0 +1,34 @@
+{
+ "id": "rework-2026-10-23",
+ "title": "Fact-count rework: every category 10x8, 10x7, 30x6, 120x5, 30x4",
+ "startedAt": "2026-10-23",
+ "endedAt": "2026-10-23",
+ "kind": "rework",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (18 units: 14 categories, belief A-C, new-1/2, dedupe)",
+  "Owner: Mantas Kandratavičius (decisions, pauses, rulings)"
+ ],
+ "brief": "REWORK.md",
+ "inputs": [
+  "out/<unit>.quota.json"
+ ],
+ "outputs": [
+  "out/<unit>.reasons.json + moves.json (history 'fact-count-rework')"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/rework"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 57,
+  "bytes": 521955,
+  "byExt": {
+   ".json": 56,
+   ".md": 1
+  },
+  "units": 18,
+  "historyEntries": 1119
+ },
+ "notes": "scratch-*/ (fetched page text, per-unit scripts) not archived."
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2456",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_h%C3%A4%C3%9Fliche_Amerikaner",
+   "title": "Der häßliche Amerikaner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:12.280Z",
+   "snapshot": "96c3c9fbb6e7e4a876224c1bcc5ed792d4a2750684fb6d7053c85b2e81c45622"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Stepford_Wives",
+   "title": "The Stepford Wives – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:16.064Z",
+   "snapshot": "3171dbf8ba5c3c0cdce7c7710017fc64366d83969b3de6b3b0a21ebf5cb80202"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cyberspace",
+   "title": "Cyberspace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:16.992Z",
+   "snapshot": "03ba224f691a155b34403995317e8ced0f22e57c2724c46c48a6cbcf9b1cb226"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Metaverse",
+   "title": "Metaverse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:18.099Z",
+   "snapshot": "52e3c0ae8d2ef35f50607980c5b0d4d33515ca718588aa20753a9560f06f39fc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Generation_X%3A_Tales_for_an_Accelerated_Culture",
+   "title": "Generation X: Tales for an Accelerated Culture – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:19.012Z",
+   "snapshot": "40d1fd684b52dd693bf65df4755e4805247e5ea7be63700bdb35e30cdb2641c2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der häßliche Amerikaner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-266"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Stepford Wives",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cyberspace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Metaverse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Generation X",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:22.712Z",
+   "target": "f12929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der häßliche Amerikaner (amerikanischer Originaltitel: The Ugly American) ist ein 1958 in den Vereinigten Staaten erschienener politischer Roman von Eugene Burdick und William Lederer.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der häßliche Amerikaner” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:22.712Z",
+   "target": "f12930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Stepford Wives is a 1972 satirical \"feminist horror\" novel by Ira Levin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Stepford Wives” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:22.712Z",
+   "target": "f12931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cyberspace is an interconnected digital environment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cyberspace” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:22.712Z",
+   "target": "f12932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A metaverse is a virtual world in which users interact while represented by avatars, typically in a 3D display, with the experience focused on social and economic connection.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metaverse” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:22.712Z",
+   "target": "f12933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Generation X: Tales for an Accelerated Culture",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Generation X” is on the snapshot of s5"
+  }
+ ]
+}

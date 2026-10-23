@@ -14,8 +14,8 @@ import {
 import { createRng } from "@boardgames/core/lib/rng";
 import QuiztopiaBoard from "../games/quiztopia/components/board/QuiztopiaBoard";
 import QuiztopiaGameOver from "../games/quiztopia/components/game-over/QuiztopiaGameOver";
-import TimelinePreview from "../games/quiztopia/components/timeline/TimelinePreview";
-import TrainerPreview from "../games/quiztopia/components/trainer/TrainerPreview";
+import TimelinePreview from "../trainers/quiz/components/timeline/TimelinePreview";
+import TrainerPreview from "../trainers/quiz/components/trainer/TrainerPreview";
 
 // Dev-only Quiztopia preview — the real board / game-over screen fed a
 // state built by walking the actual engine through a scripted game (the

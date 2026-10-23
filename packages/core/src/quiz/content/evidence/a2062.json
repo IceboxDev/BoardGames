@@ -1,0 +1,315 @@
+{
+ "article": "a2062",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Powell_Geographic_Expedition_of_1869",
+   "title": "Powell Geographic Expedition of 1869 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:53.714Z",
+   "snapshot": "f08411ce5b34a04ba11e004d47b71789a28088f3e28ffd89e6f29926f5e06538"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Three_Gorges_Dam",
+   "title": "Three Gorges Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:18.408Z",
+   "snapshot": "410cbb6224a9021f194fdc49c8286efb8808992c2ab9eff2a4016b9510d1dc0f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Iron_Gate_I_Hydroelectric_Power_Station",
+   "title": "Iron Gate I Hydroelectric Power Station – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:54.719Z",
+   "snapshot": "8686193d5ca07b12bad70a45c7424818b2dbfc919e72c8925d42c77ed4619412"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kariba_Dam",
+   "title": "Kariba Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:55.761Z",
+   "snapshot": "8a5a1c92c14cbcce6a706a0915324ae7238e6c3bf4aececef0c5673fe48336fd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hells_Canyon",
+   "title": "Hells Canyon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:56.732Z",
+   "snapshot": "e892b3d2b9ee2099ae3e5c96e27357feaa402ee5b3464c22a5de2f1d37d1381e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Three_Gorges",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:57.740Z",
+   "snapshot": "806c08d1c465d93353cc85bcb55270e5b58b7d7bf4c30687e01e2f7fd4f77fad"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12130896/",
+   "title": "Cave records reveal recent origin of North America’s deepest canyon (PNAS 2025)",
+   "publisher": "Proceedings of the National Academy of Sciences",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:19.484Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Colorado River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yangtze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Danube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Zambezi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Snake River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:16.001Z",
+   "target": "f10306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "he published a written account of the first expedition (interspersed with elements from the second) called Report on the Exploration of the Colorado River of the West and Its Tributaries, which was revised and reissued in 1895 as The Exploration of the Colorado River and Its Canyons and has since",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colorado River” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:16.001Z",
+   "target": "f10307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Three Gorges Dam, officially known as Yangtze River Three Gorges Water Conservancy Project is a hydroelectric gravity dam that spans the Yangtze River near Sandouping in Yiling District, Yichang, Hubei province, central China, downstream of the Three Gorges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yangtze” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:16.001Z",
+   "target": "f10308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Iron Gate I Hydroelectric Power Station (Romanian: Porțile de Fier I, Serbian: Ђердап I/Đerdap I) is the largest dam on the Danube river and one of the largest hydro power plants in Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danube” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:16.001Z",
+   "target": "f10309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Kariba Dam is a double curvature concrete arch dam in the Kariba Gorge of the Zambezi river basin between Zambia and Zimbabwe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zambezi” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:16.001Z",
+   "target": "f10310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The canyon was carved by the waters of the Snake River, which flows more than one mile (1.6 km) below the canyon's west rim on the Oregon side and 7,400 feet (2,260 m) below the peaks of Idaho's Seven Devils Mountains to the east.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snake River” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:07:42Z",
+   "target": "f10310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is North America's deepest river gorge at 7,993 feet (2,436 m)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:07:43Z",
+   "target": "f10310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hells Canyon, North America’s deepest gorge (600 m deeper than the Grand Canyon)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "Morriss et al., PNAS 122(21) 2025."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:02.305Z",
+   "target": "f10310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is North America's deepest river gorge at 7,993 feet (2,436 m)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  }
+ ]
+}

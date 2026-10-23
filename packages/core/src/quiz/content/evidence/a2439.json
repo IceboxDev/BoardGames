@@ -1,0 +1,536 @@
+{
+ "article": "a2439",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/J._K._Rowling",
+   "title": "J. K. Rowling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:20.172Z",
+   "snapshot": "33fc1f428939a58f1c7f9edcab24e67cd61619a8b3e2558ad736494089ed6235"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Der_Ruf_des_Kuckucks",
+   "title": "Der Ruf des Kuckucks",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:19.562Z",
+   "snapshot": "e06ab7d9d02ac7cbabaa47b612160e9c42a37ecd8fba646276ea3fc5bba88614"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cormoran_Strike",
+   "title": "Cormoran Strike – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:20.959Z",
+   "snapshot": "ee7f24e1066d7f6179d35d6150c16fcae1b5d0506d26eeb1f4ce19ab1285c3b7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Casual_Vacancy",
+   "title": "The Casual Vacancy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:22.078Z",
+   "snapshot": "e7d536c8ade75715e5541efee8433911f10ddda59f4dab28a2c697f2a1a10ce6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Calling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:23.078Z",
+   "snapshot": "16eed1676794328a6230460cd473c72bc1c0d3ef87ffb75b65af2f6a704b0663"
+  },
+  "s6": {
+   "url": "https://www.jkrowling.com/about/",
+   "title": "About – J.K. Rowling",
+   "publisher": "J.K. Rowling (official site)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:18.313Z",
+   "snapshot": "642955497d76b59867d308dff38fa1bb1bc40846c2ea1450902f618e409a8a4f"
+  },
+  "s7": {
+   "url": "https://robert-galbraith.com/about/",
+   "title": "About Robert Galbraith (AKA J.K. Rowling)",
+   "publisher": "Robert Galbraith (official site)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:19.333Z",
+   "snapshot": "e84ebd9b7efc8eae0627e1f0e4f88f7a524a3a4c19d07bdcf48db130c6c0ff35"
+  },
+  "s8": {
+   "url": "https://www.hachettebookgroup.com/titles/j-k-rowling/the-casual-vacancy/9780316228589/",
+   "title": "The Casual Vacancy",
+   "publisher": "Hachette Book Group (publisher)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:19.686Z",
+   "snapshot": "b8f2cc4fc2fe3bc2f7e709a5fd9d95fc10ea8f49e4b52dd5e7f68b3810e98cd1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amnesty International",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "J. K. Rowling",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-320"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cormoran Strike",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robin Ellacott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Casual Vacancy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Porto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:20.361Z",
+   "target": "f12824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "While she was working in temporary jobs in London, Amnesty International hired her to document human rights issues in French-speaking Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amnesty International” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:20.361Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "J. K. Rowling",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“J. K. Rowling”, “Дж. К. Роулинг”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:20.361Z",
+   "target": "f12826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cormoran Strike is a series of crime fiction novels written by British author J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cormoran Strike” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:20.361Z",
+   "target": "f12827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The story chronicles the cases of the fictional private detective Cormoran Strike and his business partner Robin Ellacott.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robin Ellacott” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:20.361Z",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Casual Vacancy is a novel written by British author J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Casual Vacancy” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:20.361Z",
+   "target": "f12829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "With the end of the relationship with her boyfriend, and \"being made redundant from an office job in Manchester\", Rowling moved to Porto, Portugal, in November 1991 to teach night classes in English as a foreign language, writing during the day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Porto” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:30Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first of these, The Cuckoo’s Calling, was published in 2013, at first without its author’s true identity being known.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:51:35Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Cuckoo's Calling is a crime fiction novel written by British author J. K. Rowling, published under the pseudonym Robert Galbraith.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:51:41Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "About Robert Galbraith (AKA J.K. Rowling)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:51:46Z",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A big novel about a small town, The Casual Vacancy is J.K. Rowling’s first novel for adults.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:51:53Z",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was Rowling's first publication since the Harry Potter series, her first novel apart from that series, and her first for adult readership.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first of these, The Cuckoo’s Calling, was published in 2013, at first without its author’s true identity being known.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Cuckoo's Calling is a crime fiction novel written by British author J. K. Rowling, published under the pseudonym Robert Galbraith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "About Robert Galbraith (AKA J.K. Rowling)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A big novel about a small town, The Casual Vacancy is J.K. Rowling’s first novel for adults.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was Rowling's first publication since the Harry Potter series, her first novel apart from that series, and her first for adult readership.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Cuckoo's Calling is a crime fiction novel written by British author J. K. Rowling, published under the pseudonym Robert Galbraith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “J. K. Rowling” is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:03.559Z",
+   "target": "f12828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A big novel about a small town, The Casual Vacancy is J.K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Casual Vacancy” is on the snapshot of s8"
+  }
+ ]
+}

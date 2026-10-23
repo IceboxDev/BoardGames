@@ -1,0 +1,831 @@
+{
+ "subs": {
+  "digital": [
+   {
+    "slug": "computing",
+    "en": "Computers & Programming",
+    "de": "Computer & Programmierung",
+    "ru": "Компьютеры и программирование"
+   },
+   {
+    "slug": "tech-terms",
+    "en": "Tech Words & Acronyms",
+    "de": "Technikbegriffe & Abkürzungen",
+    "ru": "Технические термины и аббревиатуры"
+   },
+   {
+    "slug": "internet",
+    "en": "Internet & Online Life",
+    "de": "Internet & Online-Leben",
+    "ru": "Интернет и жизнь онлайн"
+   },
+   {
+    "slug": "tech-industry",
+    "en": "Tech Industry & Video Games",
+    "de": "Tech-Branche & Videospiele",
+    "ru": "IT-индустрия и видеоигры"
+   },
+   {
+    "slug": "media",
+    "en": "Press & Broadcasting",
+    "de": "Presse & Rundfunk",
+    "ru": "Пресса и вещание"
+   }
+  ],
+  "technology": [
+   {
+    "slug": "inventions",
+    "en": "Inventions & Engineering",
+    "de": "Erfindungen & Ingenieurwesen",
+    "ru": "Изобретения и инженерия"
+   },
+   {
+    "slug": "electronics",
+    "en": "Electricity & Electronics",
+    "de": "Elektrizität & Elektronik",
+    "ru": "Электричество и электроника"
+   },
+   {
+    "slug": "transport",
+    "en": "Transport & Vehicles",
+    "de": "Verkehr & Fahrzeuge",
+    "ru": "Транспорт"
+   }
+  ]
+ },
+ "assign": {
+  "a0007": {
+   "sub": "transport"
+  },
+  "a0012": {
+   "sub": "inventions"
+  },
+  "a0024": {
+   "sub": "tech-industry",
+   "reason": "\"Worlds for Sale: The Companies Behind the Games Everyone Plays\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a0048": {
+   "sub": "transport"
+  },
+  "a0072": {
+   "sub": "computing"
+  },
+  "a0084": {
+   "sub": "tech-terms",
+   "reason": "\"Five English Words That Explain Modern Technology\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0096": {
+   "sub": "computing"
+  },
+  "a0108": {
+   "sub": "computing"
+  },
+  "a0120": {
+   "sub": "transport"
+  },
+  "a0132": {
+   "sub": "inventions"
+  },
+  "a0144": {
+   "sub": "computing"
+  },
+  "a0156": {
+   "sub": "computing"
+  },
+  "a0168": {
+   "sub": "inventions"
+  },
+  "a0180": {
+   "sub": "internet",
+   "reason": "\"What the Acronyms of the Internet Age Really Say\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0192": {
+   "sub": "computing"
+  },
+  "a0216": {
+   "sub": "tech-terms",
+   "reason": "\"What the Letters in Your Phone's Status Bar Mean\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0228": {
+   "sub": "tech-terms",
+   "reason": "\"Borrowed Words: Where Computing Got Its Vocabulary\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0240": {
+   "sub": "inventions"
+  },
+  "a0249": {
+   "sub": "computing"
+  },
+  "a0252": {
+   "sub": "internet",
+   "reason": "\"Decoding the Email Header\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0264": {
+   "sub": "inventions"
+  },
+  "a0276": {
+   "sub": "tech-industry",
+   "reason": "\"From the Coin Slot to the Stadium: A Vocabulary of Video Games\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a0288": {
+   "sub": "internet",
+   "reason": "\"A Field Guide to the People of the Net\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0300": {
+   "sub": "tech-terms",
+   "reason": "\"Behind the Letters: Five Abbreviations Every Device Depends On\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0312": {
+   "sub": "internet",
+   "reason": "\"Trolls, Lurkers and Sock Puppets: A Short Glossary of Online Life\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0324": {
+   "sub": "internet",
+   "reason": "\"From Napster to Spotify: The File-Sharing Wars\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0336": {
+   "sub": "tech-terms",
+   "reason": "\"Who Rates, Guards and Registers: Germany's Technology Gatekeepers\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0348": {
+   "sub": "transport"
+  },
+  "a0372": {
+   "sub": "transport"
+  },
+  "a0384": {
+   "sub": "internet",
+   "reason": "\"The Snowden Files: Names Behind the Surveillance State\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0396": {
+   "sub": "inventions"
+  },
+  "a0400": {
+   "sub": "media"
+  },
+  "a0408": {
+   "sub": "internet",
+   "reason": "\"Nomophobia and Its Cousins: The Fears of the Digital Age\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0420": {
+   "sub": "tech-industry",
+   "reason": "\"Garages and Dorm Rooms: The Founding Stories of Five Tech Giants\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a0432": {
+   "sub": "tech-terms",
+   "reason": "\"The Alphabet Soup Behind Everyday Computing\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0444": {
+   "sub": "tech-terms",
+   "reason": "\"Latin on the Desktop\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0456": {
+   "sub": "electronics",
+   "reason": "\"PAL, SECAM, NTSC: How Analogue Television Learned to Show Colour\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a0468": {
+   "sub": "inventions"
+  },
+  "a0471": {
+   "sub": "inventions"
+  },
+  "a0480": {
+   "sub": "tech-terms",
+   "reason": "\"Three Letters That Run the World: The Standards Behind the Abbreviations\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0504": {
+   "sub": "tech-terms",
+   "reason": "\"Packed Words: Portmanteaus of the Computer Age\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0516": {
+   "sub": "transport"
+  },
+  "a0534": {
+   "sub": "media"
+  },
+  "a0540": {
+   "sub": "inventions"
+  },
+  "a0552": {
+   "sub": "computing"
+  },
+  "a0576": {
+   "sub": "inventions"
+  },
+  "a0600": {
+   "sub": "internet",
+   "reason": "\"Hackers Who Made Headlines: Five Groups and Their Famous Stunts\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0606": {
+   "sub": "media"
+  },
+  "a0612": {
+   "sub": "electronics",
+   "reason": "\"From Hi-Fi to Bluetooth: How We Learned to Listen\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a0636": {
+   "sub": "inventions"
+  },
+  "a0648": {
+   "sub": "transport"
+  },
+  "a0672": {
+   "sub": "inventions"
+  },
+  "a0684": {
+   "sub": "internet",
+   "reason": "\"Inside the Bubble: How Personalisation Shapes What We See Online\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0696": {
+   "sub": "inventions"
+  },
+  "a0708": {
+   "sub": "inventions"
+  },
+  "a0720": {
+   "sub": "inventions"
+  },
+  "a0744": {
+   "sub": "transport"
+  },
+  "a0756": {
+   "sub": "internet",
+   "reason": "\"Feuds, Trolls and Hashtags: The Vocabulary of Twitter\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0768": {
+   "sub": "internet",
+   "reason": "\"TL;DR: A Short Guide to Internet Abbreviations\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0780": {
+   "sub": "tech-terms",
+   "reason": "\"Spelling Out the Living Room: Five Everyday Tech Abbreviations\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0792": {
+   "sub": "inventions"
+  },
+  "a0804": {
+   "sub": "transport"
+  },
+  "a0816": {
+   "sub": "internet",
+   "reason": "\"Sock Puppets, Trolls and Lurkers: A Field Guide to Internet Jargon\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0840": {
+   "sub": "internet",
+   "reason": "\"The Browser Wars: From Netscape Navigator to Google Chrome\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0864": {
+   "sub": "computing"
+  },
+  "a0888": {
+   "sub": "tech-terms",
+   "reason": "\"The Alphabet Soup Inside Your Computer\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0912": {
+   "sub": "inventions"
+  },
+  "a0924": {
+   "sub": "tech-terms",
+   "reason": "\"Behind the Letters: Five Abbreviations Every Phone User Knows\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0936": {
+   "sub": "tech-terms",
+   "reason": "\"What the Letters Stand For: Five Acronyms of Everyday Technology\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a0948": {
+   "sub": "computing"
+  },
+  "a0960": {
+   "sub": "internet",
+   "reason": "\"How Devices Find Each Other on a Network\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0972": {
+   "sub": "internet",
+   "reason": "\"Alphabet Soup: The Acronyms Behind Your Internet Connection\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a0996": {
+   "sub": "computing"
+  },
+  "a1008": {
+   "sub": "internet",
+   "reason": "\"Fathers of the Network: Five Inventions That Made the Connected World\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1012": {
+   "sub": "media"
+  },
+  "a1020": {
+   "sub": "internet",
+   "reason": "\"Fifteen Years That Built the Social Web\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1032": {
+   "sub": "tech-industry",
+   "reason": "\"From CeBIT to CES: The Great Technology Fairs\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1044": {
+   "sub": "inventions"
+  },
+  "a1056": {
+   "sub": "internet",
+   "reason": "\"Whose Data Is It? The Great Data Scandals of the 2010s\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1068": {
+   "sub": "inventions"
+  },
+  "a1080": {
+   "sub": "tech-industry",
+   "reason": "\"Made in Europe: The Tech Companies the Continent Actually Produced\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1092": {
+   "sub": "tech-industry",
+   "reason": "\"Founders of the Social Web\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1116": {
+   "sub": "tech-industry",
+   "reason": "\"Before They Were Famous: Five Tech Names That Changed\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1120": {
+   "sub": "media"
+  },
+  "a1128": {
+   "sub": "internet",
+   "reason": "\"Where the Digital World Was Invented\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1140": {
+   "sub": "internet",
+   "reason": "\"Who Runs the Internet? DENIC, ICANN and Friends\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1152": {
+   "sub": "inventions"
+  },
+  "a1156": {
+   "sub": "media"
+  },
+  "a1164": {
+   "sub": "tech-industry",
+   "reason": "\"Mountains, Penguins and Bitten Fruit: The Stories Behind Tech Logos\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1176": {
+   "sub": "computing"
+  },
+  "a1188": {
+   "sub": "computing"
+  },
+  "a1200": {
+   "sub": "tech-terms",
+   "reason": "\"From the Lap to the Cloud: What Computer Names Reveal\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1224": {
+   "sub": "tech-terms",
+   "reason": "\"Bluetooth, Pascal, Linux: Technologies Named After People\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1236": {
+   "sub": "computing"
+  },
+  "a1260": {
+   "sub": "computing"
+  },
+  "a1272": {
+   "sub": "tech-industry",
+   "reason": "\"Hellgates and Space Marines: Milestones of the First-Person Shooter\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1308": {
+   "sub": "tech-terms",
+   "reason": "\"Borrowed Words: How Everyday Terms Became Computer Jargon\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1320": {
+   "sub": "tech-terms",
+   "reason": "\"Boots, Horses and Tinned Meat: Where Computer Words Come From\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1356": {
+   "sub": "transport"
+  },
+  "a1380": {
+   "sub": "tech-industry",
+   "reason": "\"Valley, Roundabout, Wadi: How One Nickname Conquered the Tech World\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1392": {
+   "sub": "tech-industry",
+   "reason": "\"Building Worlds on a Desktop\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1404": {
+   "sub": "internet",
+   "reason": "\"Cookies, Cache and Bookmarks: What Your Browser Remembers\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1416": {
+   "sub": "inventions"
+  },
+  "a1428": {
+   "sub": "inventions"
+  },
+  "a1452": {
+   "sub": "transport"
+  },
+  "a1464": {
+   "sub": "transport"
+  },
+  "a1476": {
+   "sub": "internet",
+   "reason": "\"One Person, One Website: The Founders Behind the Web's Landmarks\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1488": {
+   "sub": "tech-industry",
+   "reason": "\"Nineteen Billion for a Messenger: The Great Tech Acquisitions\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1512": {
+   "sub": "electronics",
+   "reason": "\"Why Radios Broke: Max Grundig and the Age of Mains Current\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1524": {
+   "sub": "inventions"
+  },
+  "a1536": {
+   "sub": "transport"
+  },
+  "a1548": {
+   "sub": "inventions"
+  },
+  "a1560": {
+   "sub": "computing"
+  },
+  "a1572": {
+   "sub": "internet",
+   "reason": "\"Onions, Tunnels and Padlocks: The Alphabet of Online Privacy\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1584": {
+   "sub": "computing"
+  },
+  "a1596": {
+   "sub": "inventions"
+  },
+  "a1608": {
+   "sub": "transport"
+  },
+  "a1620": {
+   "sub": "electronics",
+   "reason": "\"Makers of Light: Lasers, Masers, LEDs and Their Relatives\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1632": {
+   "sub": "electronics",
+   "reason": "\"The Transistor: The Switch That Built the Modern World\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1644": {
+   "sub": "internet",
+   "reason": "\"Behind the Acronyms\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a1656": {
+   "sub": "tech-industry",
+   "reason": "\"Founders in the Spotlight: The Tech Bosses Behind the Headlines\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1668": {
+   "sub": "tech-industry",
+   "reason": "\"The Founders of Online Commerce\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1680": {
+   "sub": "electronics",
+   "reason": "\"The Compact Disc and the Legend of Beethoven's Ninth\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1704": {
+   "sub": "computing"
+  },
+  "a1728": {
+   "sub": "electronics",
+   "reason": "\"Machines of the Telegraph Age\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1752": {
+   "sub": "computing"
+  },
+  "a1764": {
+   "sub": "transport"
+  },
+  "a1776": {
+   "sub": "tech-industry",
+   "reason": "\"The Founders Who Built the Tech Age\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1788": {
+   "sub": "electronics",
+   "reason": "\"From Reis to Bell: Bringing Inventions to Market\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1812": {
+   "sub": "tech-terms",
+   "reason": "\"Spelling Out the Gadget: What LED, LCD, CPU, RAM and USB Really Mean\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1836": {
+   "sub": "tech-industry",
+   "reason": "\"From a Bar in Sunnyvale to Every Pocket: The Games That Made an Industry\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1848": {
+   "sub": "inventions"
+  },
+  "a1860": {
+   "sub": "tech-terms",
+   "reason": "\"Alphabet Soup: What the Abbreviations on Your Computer Actually Mean\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1872": {
+   "sub": "electronics",
+   "reason": "\"From the Phonograph to the Walkman: How Sound Learned to Travel\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1896": {
+   "sub": "computing"
+  },
+  "a1908": {
+   "sub": "media",
+   "reason": "How US news moved online (Drudge, HuffPost, Breitbart, BuzzFeed, Politico) — news outlets, moved from Computers to Press & Broadcasting."
+  },
+  "a1920": {
+   "sub": "computing"
+  },
+  "a1932": {
+   "sub": "tech-industry",
+   "reason": "\"PayPal and the Mafia It Bred\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1944": {
+   "sub": "electronics",
+   "reason": "\"Dots, Dashes and Voices: The Inventors of Electric Communication\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a1951": {
+   "sub": "inventions"
+  },
+  "a1956": {
+   "sub": "tech-terms",
+   "reason": "\"Words That Built the Machine Age: Robot, Cybernetics, Cyborg, AI and Bug\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a1980": {
+   "sub": "tech-industry",
+   "reason": "\"Console Wars: The Machines and Their Makers\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a1992": {
+   "sub": "tech-industry",
+   "reason": "\"Software Fortunes: The Tech Founders at the Top of the Forbes List\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a2004": {
+   "sub": "computing"
+  },
+  "a2016": {
+   "sub": "tech-terms",
+   "reason": "\"ABC, NATO, RADAR: What the Acronyms Stand For\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a2028": {
+   "sub": "inventions"
+  },
+  "a2040": {
+   "sub": "electronics",
+   "reason": "\"Taming the Spark: Pioneers of Electricity from the Lightning Rod to the Telephone\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2052": {
+   "sub": "computing"
+  },
+  "a2064": {
+   "sub": "electronics",
+   "reason": "\"From Fleming's Valve to the Magnetron: A Short History of the Electron Tube\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2088": {
+   "sub": "tech-terms",
+   "reason": "\"DOS, BIOS, RAM: The Alphabet of the Personal Computer\" — moved from Computing to the new Tech Words & Acronyms sub."
+  },
+  "a2100": {
+   "sub": "transport"
+  },
+  "a2112": {
+   "sub": "tech-industry",
+   "reason": "\"How the Web's Giants Got Their Names\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a2124": {
+   "sub": "inventions"
+  },
+  "a2249": {
+   "sub": "media"
+  },
+  "a2250": {
+   "sub": "media"
+  },
+  "a2251": {
+   "sub": "media"
+  },
+  "a2252": {
+   "sub": "media"
+  },
+  "a2253": {
+   "sub": "media"
+  },
+  "a2254": {
+   "sub": "media"
+  },
+  "a2255": {
+   "sub": "media"
+  },
+  "a2256": {
+   "sub": "media"
+  },
+  "a2257": {
+   "sub": "internet",
+   "reason": "\"Firsts of the Internet: The Website, the Video, the Tweet\" — internet culture, moved from Press to the new Internet & Online Life sub (Media no longer covers the internet)."
+  },
+  "a2258": {
+   "sub": "internet",
+   "reason": "\"Rise and Fall of the Social Networks\" — internet culture, moved from Press to the new Internet & Online Life sub (Media no longer covers the internet)."
+  },
+  "a2259": {
+   "sub": "internet",
+   "reason": "\"Gossip Goes Online: TMZ, Perez Hilton and the Celebrity Web\" — internet culture, moved from Press to the new Internet & Online Life sub (Media no longer covers the internet)."
+  },
+  "a2260": {
+   "sub": "internet",
+   "reason": "\"Internet Animal Stars: From Grumpy Cat to Pizza Rat\" — internet culture, moved from Press to the new Internet & Online Life sub (Media no longer covers the internet)."
+  },
+  "a2261": {
+   "sub": "internet",
+   "reason": "\"LOL, FOMO, #TBT: The Shorthand of the Internet\" — internet culture, moved from Press to the new Internet & Online Life sub (Media no longer covers the internet)."
+  },
+  "a2262": {
+   "sub": "internet",
+   "reason": "\"The Webby Awards: The Internet's Oscars in Five Words\" — internet culture, moved from Press to the new Internet & Online Life sub (Media no longer covers the internet)."
+  },
+  "a2263": {
+   "sub": "media"
+  },
+  "a2621": {
+   "sub": "tech-industry",
+   "reason": "\"Seven Products, One Comeback: Apple from the Apple I to Siri\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a2622": {
+   "sub": "computing"
+  },
+  "a2623": {
+   "sub": "tech-industry",
+   "reason": "\"Second Lives: Virtual Worlds from Habitat to the Metaverse\" — moved from Computing to the new Tech Industry & Video Games sub."
+  },
+  "a2624": {
+   "sub": "internet",
+   "reason": "\"Firsts of the Connected World\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a2625": {
+   "sub": "internet",
+   "reason": "\"From Archie to Google: A Short History of Searching the Net\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a2626": {
+   "sub": "internet",
+   "reason": "\"Worms, Viruses and Ransom: Famous Malware Attacks\" — moved from Computing to the new Internet & Online Life sub."
+  },
+  "a2629": {
+   "sub": "electronics",
+   "reason": "\"Hello from the Pavement: The First Mobile Phone Call\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2630": {
+   "sub": "electronics",
+   "reason": "\"Dots, Dashes and Tattoos: Curiosities from Edison's Life\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2631": {
+   "sub": "inventions"
+  },
+  "a2632": {
+   "sub": "inventions"
+  },
+  "a2633": {
+   "sub": "electronics",
+   "reason": "\"Yellow, Red and Magenta: The Rise and Fall of the Telephone Box\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2634": {
+   "sub": "inventions"
+  },
+  "a2635": {
+   "sub": "inventions"
+  },
+  "a2636": {
+   "sub": "inventions"
+  },
+  "a2637": {
+   "sub": "inventions"
+  },
+  "a2638": {
+   "sub": "inventions"
+  },
+  "a2639": {
+   "sub": "inventions"
+  },
+  "a2640": {
+   "sub": "inventions"
+  },
+  "a2641": {
+   "sub": "inventions"
+  },
+  "a2642": {
+   "sub": "inventions"
+  },
+  "a2643": {
+   "sub": "electronics",
+   "reason": "\"Betamax, VHS, Video 2000: The Great Format Wars\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2644": {
+   "sub": "electronics",
+   "reason": "\"The War of the Currents and the Elephant That Was Not Edison's\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2645": {
+   "sub": "transport"
+  },
+  "a2646": {
+   "sub": "transport"
+  },
+  "a2647": {
+   "sub": "transport"
+  },
+  "a2648": {
+   "sub": "transport"
+  },
+  "a2649": {
+   "sub": "transport"
+  },
+  "a2650": {
+   "sub": "transport"
+  },
+  "a2651": {
+   "sub": "transport"
+  },
+  "a2652": {
+   "sub": "transport"
+  },
+  "a2653": {
+   "sub": "transport"
+  },
+  "a2654": {
+   "sub": "transport"
+  },
+  "a2655": {
+   "sub": "transport"
+  },
+  "a2656": {
+   "sub": "transport"
+  },
+  "a2657": {
+   "sub": "transport"
+  },
+  "a2658": {
+   "sub": "transport"
+  },
+  "a2659": {
+   "sub": "transport"
+  },
+  "a2660": {
+   "sub": "transport"
+  },
+  "a2661": {
+   "sub": "transport"
+  },
+  "a2696": {
+   "sub": "inventions"
+  },
+  "a2731": {
+   "sub": "electronics",
+   "reason": "\"Liquid Crystals: How the Flat Screen Learned to Make Pictures\" — moved from Inventions to the new Electricity & Electronics sub."
+  },
+  "a2732": {
+   "sub": "inventions"
+  },
+  "a2789": {
+   "sub": "inventions"
+  },
+  "a2790": {
+   "sub": "inventions"
+  },
+  "a2791": {
+   "sub": "transport"
+  },
+  "a2792": {
+   "sub": "transport"
+  },
+  "a2796": {
+   "sub": "transport"
+  }
+ },
+ "outgoing": {
+  "a0052": {
+   "domain": "film-media",
+   "suggestedSub": "film",
+   "reason": "About Michael Crichton's novels adapted as films (Westworld, Jurassic Park) — a film topic, not press or broadcasting."
+  },
+  "a0136": {
+   "domain": "film-media",
+   "suggestedSub": "film",
+   "reason": "Famous Oscar-ceremony moments (Benigni, Palance) — belongs with Film, not Press & Broadcasting."
+  },
+  "a0204": {
+   "domain": "film-media",
+   "suggestedSub": "animation",
+   "reason": "The computer-animation studios (Pixar, DreamWorks, Blue Sky, Illumination) and their first films — an Animation topic."
+  },
+  "a0060": {
+   "domain": "technology",
+   "suggestedSub": "electronics",
+   "reason": "Radar, sonar, lidar, laser and thermography as measuring methods — sensing technology, not computing."
+  },
+  "a2076": {
+   "domain": "earth-space",
+   "suggestedSub": "astronomy",
+   "reason": "The first satellites (Sputnik, Explorer, Telstar, Astérix, Azur) — spaceflight history."
+  },
+  "a1332": {
+   "domain": "digital",
+   "suggestedSub": "internet",
+   "reason": "Facebook, Google, ARPANET, Mosaic and Spacewar and the universities they started at — digital/internet history, not general inventions."
+  }
+ }
+}

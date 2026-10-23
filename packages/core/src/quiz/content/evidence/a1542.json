@@ -1,0 +1,242 @@
+{
+ "article": "a1542",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Madame_de_Pompadour",
+   "title": "Madame de Pompadour – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:19.991Z",
+   "snapshot": "734931c1315e3b445dc39bd2327aac2dd401038c58aeba431a5fdee306e8caaf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Madame_du_Barry",
+   "title": "Madame du Barry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:21.052Z",
+   "snapshot": "3177f1d947ce867359109f00b3c716a5645488f059411d6287da2288d674d980"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_d%27Aubign%C3%A9,_Marquise_de_Maintenon",
+   "title": "Françoise d'Aubigné, Marquise de Maintenon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:21.958Z",
+   "snapshot": "da4908df737d8c7b302f0b9d091abbbd841c4bb175720e9e0db78a6dc0b1ca77"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Affair_of_the_Poisons",
+   "title": "Affair of the Poisons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:22.889Z",
+   "snapshot": "46300e802908ee63ecf02a79fdb5c5e570b4955a244c0f306d8c2274b277c56d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_I_of_Bavaria",
+   "title": "Ludwig I of Bavaria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:23.953Z",
+   "snapshot": "abd21ff07b12c5763295515078eb2e03bcb3deebb837c4381ad1ccd8fad1dacf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Madame de Pompadour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Madame du Barry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madame de Maintenon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Madame de Montespan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lola Montez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:41.453Z",
+   "target": "f07706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jeanne Antoinette Poisson, Marquise de Pompadour (, French: [pɔ̃paduʁ] ; 29 December 1721 – 15 April 1764), commonly known as Madame de Pompadour, was a member of the French court.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madame de Pompadour” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:41.453Z",
+   "target": "f07707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An anecdote recounts that the king said to the Duc de Noailles that Madame du Barry introduced him to new pleasures; \"Sire\" – answered the duke – \"that's because your Majesty has never been in a brothel.\" While Jeanne was known for her good nature and support of artists, she grew increasingly",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madame du Barry” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:41.453Z",
+   "target": "f07708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Françoise d'Aubigné (27 November 1635 – 15 April 1719), known first as Madame Scarron and subsequently as Madame de Maintenon (French: [madam də mɛ̃t(ə)nɔ̃] ), was a French noblewoman and the second wife of King Louis XIV from 1683 until his death in 1715.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madame de Maintenon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:41.453Z",
+   "target": "f07709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "These included Olympia Mancini, the Countess of Soissons, her sister, the Duchess of Bouillon, François Henri de Montmorency, Duke of Luxembourg and, most importantly, the King's mistress, Madame de Montespan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madame de Montespan” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:41.453Z",
+   "target": "f07710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Ultramontanes' regime only ended due to their demands against the naturalization of Ludwig I's Irish-born mistress Eliza Gilbert (better known by her stage name Lola Montez).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lola Montez” is on the snapshot of s5"
+  }
+ ]
+}

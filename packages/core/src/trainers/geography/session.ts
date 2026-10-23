@@ -1,4 +1,4 @@
-import { hashSeed } from "../../games/quiztopia/ids.ts";
+import { hashSeed } from "../../lib/rng.ts";
 import { isLeech, type SrsState, seededShuffle } from "../srs.ts";
 import { cardId, type GeoCatalog, parseCardId, type Stage } from "./catalog.ts";
 import type { ContinentId, Place } from "./content-types.ts";

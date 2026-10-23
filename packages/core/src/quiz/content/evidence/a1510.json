@@ -1,0 +1,622 @@
+{
+ "article": "a1510",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Voyager_Golden_Record",
+   "title": "Voyager Golden Record – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:43.909Z",
+   "snapshot": "10f320e6d63953badb20d400cdfaa0862bfde83dd7510aedb777ad3d2eda2691"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens",
+   "title": "Cassini–Huygens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:07.297Z",
+   "snapshot": "dc4ed0ad0329ba2a789bef99d4fb86baa7dc1f529bfa7e4f80e6802720c96e08"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/New_Horizons",
+   "title": "New Horizons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:45.035Z",
+   "snapshot": "c9293d35c269dede073a06fc7dd51d192ac275712dec2a924ffc475b604c9309"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/New_Horizons",
+   "title": "New Horizons",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:43.339Z",
+   "snapshot": "7096eb0b2cb7b07a9970b6952ea4262a7f870fb31788e37f7638abc327a24cef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kepler_space_telescope",
+   "title": "Kepler space telescope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:46.049Z",
+   "snapshot": "aa49d445cd3d49fbc74db03f72d28111c25a361427da21f62f07e088ddfb1619"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Philae_(Raumsonde)",
+   "title": "Philae (Raumsonde)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:43.654Z",
+   "snapshot": "52461b2b5982da2e98336bd93b23858b964689564aad189809dee8e684dd9063"
+  },
+  "s7": {
+   "url": "https://blogs.esa.int/rosetta/2014/10/23/the-perfume-of-67pc-g/",
+   "title": "The perfume of 67P/C-G",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:43.805Z",
+   "snapshot": "c47d9d03856de5cdb8493d6dc01ebcf056c50e9cb222c40b9d1e90ab6b4abc36"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Huygens_(spacecraft)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:32.583Z",
+   "snapshot": "a0a12b03394a6536eecc2ae0d8b3e8929bc3e8180b35e94cb4262e9afb8cda9b"
+  },
+  "s9": {
+   "url": "https://newatlas.com/rosetta-smell/34416/",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:45.693Z",
+   "snapshot": "d8bd309096e9c6b49ebc636a220c4a518257d4f7cbee9abbcacdac0613a3f507"
+  },
+  "s10": {
+   "url": "https://www.malaymail.com/news/life/2014/10/23/comets-actually-smell-like-rotten-eggs-and-horse-pee/769183",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s11": {
+   "url": "https://science.nasa.gov/mission/voyager/voyager-golden-record-overview/",
+   "title": "Voyager Golden Record Overview",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:18.101Z",
+   "snapshot": "677b17e527cbd38e2c5a79b2b83279fa4b0dae3dc0316c37d2fcfef625ebe640"
+  },
+  "s12": {
+   "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/",
+   "title": "Voyager Golden Record Contents",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:19.052Z",
+   "snapshot": "58fdaa5d2304b6f4728cf5c5b2c21e9315629f5f1a831b0c5bea6996d1524c01"
+  },
+  "s13": {
+   "url": "https://science.nasa.gov/mission/new-horizons/",
+   "title": "New Horizons",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:20.046Z",
+   "snapshot": "88bf969315fd6df93a86f28c97759bc24288b511c3f39ccb534bcc184920b057"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a message to extraterrestrial civilisations about Earth and humanity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "exploring Saturn and its moons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the first flyby of Pluto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "der erste Vorbeiflug am Pluto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-051"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the search for exoplanets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10891",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Philae",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-082"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rotten eggs",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Rotten eggs",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s10",
+     "quote": "Rotten eggs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "pp-030/2, u06: ROSINA's 'perfume of 67P': rotten eggs from hydrogen sulphide, horse stable from ammonia (the card's 'urine' is the same ammonia), bitter almonds from HCN. Body matches ESA."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f25240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rotten eggs",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:36.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s7"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a message to extraterrestrial civilisations about Earth and humanity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“a message to extraterrestrial civilisations about Earth and humanity”, “eine Botschaft an außerirdische Zivilisationen über die Erde und die Menschheit”, “послание внеземным цивилизациям о Земле и человечестве”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f07547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On June 30, 2014, NASA celebrated ten years of Cassini exploring Saturn and its moons, highlighting the discovery of water activity on Enceladus among other findings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “exploring Saturn and its moons” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the first flyby of Pluto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the first flyby of Pluto”, “der erste Vorbeiflug am Pluto”, “первый пролёт мимо Плутона”) on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "der erste Vorbeiflug am Pluto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“der erste Vorbeiflug am Pluto”, “the first flyby of Pluto”, “первый пролёт мимо Плутона”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f07550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A newer NASA mission, TESS, launched in 2018, is continuing the search for exoplanets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the search for exoplanets” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f10891",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Philae ist die erste Raumsonde, die nach zwei Kontakten auf dem Kometen;/Tschurjumow-Gerassimenko landete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philae” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f25240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "As the Kathrin Altwegg, principal investigator for ROSINA, put it: “The perfume of 67P/C-G is quite strong, with the odour of rotten eggs (hydrogen sulphide), horse stable (ammonia), and the pungent, suffocating odour of formaldehyde.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotten eggs” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:36.942Z",
+   "target": "f25240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Rosetta discovers comet smells like rotten eggs and horse poo",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotten eggs” is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:19:02Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "NASA placed a more ambitious message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:19:05Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The spacecraft will be encountered and the record played only if there are advanced spacefaring civilizations in interstellar space.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:19:08Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "are intended for any intelligent extraterrestrial life form who may find them.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:19:11Z",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "NASA's New Horizons spacecraft was the first spacecraft to explore Pluto up close, flying by the dwarf planet and its moons on July 14, 2015.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:19:14Z",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it became the first spacecraft to perform a flyby study and capture high-resolution photographs of Pluto and its moons during its encounter.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:22.929Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "NASA placed a more ambitious message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.929Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:22.929Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The spacecraft will be encountered and the record played only if there are advanced spacefaring civilizations in interstellar space.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.929Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s12"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:22.929Z",
+   "target": "f07546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "are intended for any intelligent extraterrestrial life form who may find them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.929Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s1"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:22.929Z",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "NASA's New Horizons spacecraft was the first spacecraft to explore Pluto up close, flying by the dwarf planet and its moons on July 14, 2015.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.929Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s13"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:22.929Z",
+   "target": "f07549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it became the first spacecraft to perform a flyby study and capture high-resolution photographs of Pluto and its moons during its encounter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.929Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s3"
+  }
+ ]
+}

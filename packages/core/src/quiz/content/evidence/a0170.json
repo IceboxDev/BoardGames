@@ -1,0 +1,448 @@
+{
+ "article": "a0170",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/El_Dorado",
+   "title": "El Dorado – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:27.278Z",
+   "snapshot": "dcdf6813fe2c97ebc54321af0e549e6dd03921fcd865c1e2a44c508dac13bb5c"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/dolce%20far%20niente",
+   "title": "dolce far niente – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/siesta",
+   "title": "siesta – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hygge",
+   "title": "Hygge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:28.191Z",
+   "snapshot": "c11e88b8dbd6037937d576bb861e708770ce521c29ca1cf607adc53a4bf5b6c0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Glasnost",
+   "title": "Glasnost – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:29.172Z",
+   "snapshot": "da9e8eeb9eb2c4c48e97ca47a5df1cc01e58c9c878fb1c1697cf93eb0648e3d7"
+  },
+  "s6": {
+   "url": "https://www.treccani.it/vocabolario/dolce1/",
+   "title": "dolce – Vocabolario Treccani",
+   "publisher": "Istituto della Enciclopedia Italiana (Treccani)",
+   "kind": "reference",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:31:20.580Z",
+   "snapshot": "9cc74426c6cdd745e592107368250247816c81fbf3ea020af8c2ba277be7fcc3"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Dolcefarniente",
+   "title": "Dolcefarniente – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:20.749Z",
+   "snapshot": "60a03059185e59a484862efb3c25ed0abf82c45d96554bb2cd9b8b6d4008332a"
+  },
+  "s8": {
+   "url": "https://ahdictionary.com/word/search.html?q=siesta",
+   "title": "siesta – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary (HarperCollins)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:21.367Z",
+   "snapshot": "abda11f93849d86c5846ab97a46c8f2205db3ab9775ba64c742fddc405da233d"
+  },
+  "s9": {
+   "url": "https://www.dwds.de/wb/Siesta",
+   "title": "Siesta – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW), Etymologisches Wörterbuch (Pfeifer)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:21.829Z",
+   "snapshot": "81d460eece817edfcb1fccd7f83ed5a5527532c66f0f0e144042eed97b8bd9cc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "El Dorado",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "dolce far niente",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "siesta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hygge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "glasnost",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:03.963Z",
+   "target": "f00846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "El Dorado (Spanish: [el doˈɾaðo]) is a mythical city of gold supposedly located somewhere in South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Dorado” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:03.963Z",
+   "target": "f00849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hygge (, H(Y)OO-gə; Danish: [ˈhykə]; Norwegian: [ˈhŷɡːə]) is a word in Danish and Norwegian that describes a cozy, contented mood evoked by comfort and conviviality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hygge” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:03.963Z",
+   "target": "f00850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Glasnost ( GLAZ-nost; Russian: гласность, IPA: [ˈɡlasnəsʲtʲ] ) is a concept relating to openness and transparency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “glasnost” is on the snapshot of s5"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:41:11Z",
+   "target": "f00847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "il d. far niente, espressione proverbiale per indicare uno stato di ozio felice e spensierato",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:41:14Z",
+   "target": "f00847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Herkunft Italienisch Bedeutung eWDG 1967 süßes Nichtstun",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:41:17Z",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "[Spanish, from Latin sexta (hōra), sixth (hour), midday, feminine of sextus, sixth; see SEXT1.]",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:41:20Z",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Übernahme (17. Jh.) von gleichbed. span. siesta, aus lat. (hora) sexta ‘sechste (Stunde)’ nach Tagesanbruch.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "il d. far niente, espressione proverbiale per indicare uno stato di ozio felice e spensierato",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Herkunft Italienisch Bedeutung eWDG 1967 süßes Nichtstun",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "[Spanish, from Latin sexta (hōra), sixth (hour), midday, feminine of sextus, sixth; see SEXT1.]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Übernahme (17. Jh.) von gleichbed. span. siesta, aus lat. (hora) sexta ‘sechste (Stunde)’ nach Tagesanbruch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "(das) dolce far niente geh., ital.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dolce far niente” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "American Heritage Dictionary Entry: siesta",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “siesta” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:23.351Z",
+   "target": "f00848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Siesta – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Siesta” is on the snapshot of s9"
+  }
+ ]
+}

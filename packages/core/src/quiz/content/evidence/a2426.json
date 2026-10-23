@@ -1,0 +1,375 @@
+{
+ "article": "a2426",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bernstein",
+   "title": "Bernstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:04.639Z",
+   "snapshot": "0c4e16d05b66be09988554d9176a0c84196525b4bdfb75962b7342b680ec868e"
+  },
+  "s2": {
+   "url": "https://en.wiktionary.org/wiki/margarita",
+   "title": "margarita",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:47.766Z",
+   "snapshot": "12d8418c5ea24c044a46327c3f5b55ed9ae48052ca6e19d8cb6fe6203ec1c4fb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amethyst",
+   "title": "Amethyst – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:06.911Z",
+   "snapshot": "4f7996261aeb709405948425f9bf082f2be4fc1fb440713c9bce98294172a9df"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Diamond",
+   "title": "Diamond – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:59.175Z",
+   "snapshot": "46aa206f65734fc446335399086b5f35664d1dee020c12a9203a16381833aef7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Crystal",
+   "title": "Crystal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:49.336Z",
+   "snapshot": "a3f096b4119ef43ac13ce99bb0f19c8a1d405ec9faf55f36e21328450e4dd31e"
+  },
+  "s6": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057:entry=a)me/qustos",
+   "title": "Henry George Liddell, Robert Scott, A Greek-English Lexicon: ἀμέθυστος",
+   "publisher": "Perseus Digital Library, Tufts University",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:12.965Z",
+   "snapshot": "76913b9e2c4545714fafd764da089bc7b6a2e4a7c451647e63174aa4bce9f1f2"
+  },
+  "s7": {
+   "url": "https://en.wiktionary.org/wiki/%E1%BC%80%CE%BC%CE%AD%CE%B8%CF%85%CF%83%CF%84%CE%BF%CF%82",
+   "title": "ἀμέθυστος – Wiktionary",
+   "publisher": "Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:12.785Z",
+   "snapshot": "7d1ef5953a25e2af90af78232b855bbef8781d2cdafc302f1ab2f7f1345f3362"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "bernen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-186"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pearl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-070"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "not intoxicated",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "unbreakable",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:18.858Z",
+   "target": "f12736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die deutsche Bezeichnung Bernstein (in Preußen früher auch Börnstein genannt) ist eine frühneuhochdeutsche Entlehnung von mittelniederdeutsch bern(e)stein (von bernen „brennen“) und auf die auffällige Brennbarkeit dieses „(Edel-)Steins“ zurückzuführen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bernen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:18.858Z",
+   "target": "f12737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "And the twelve gates were twelve pearls: every several gate was of one pearl: […]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pearl” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:18.858Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "not intoxicated",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“not intoxicated”, “nicht berauscht”, “не пьяный”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:18.858Z",
+   "target": "f12739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The name diamond is derived from Ancient Greek: ἀδάμας (adámas), 'proper, unalterable, unbreakable, untamed', from ἀ- (a-), 'not' + δαμάω (damáō), 'to overpower, tame'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “unbreakable” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:18.858Z",
+   "target": "f12740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The word crystal derives from the Ancient Greek word κρύσταλλος (krustallos), meaning both \"ice\" and \"rock crystal\", from κρύος (kruos), \"icy cold, frost\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ice” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:25Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "not drunken, without drunkenness",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "LSJ gloss of ἀμέθυστος; \"not intoxicated\" = \"not drunken\"."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:51:28Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "a reference to the belief that the stone protected its owner from drunkenness",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:31Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The exact semantic development of the \"stone\" sense is uncertain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wiktionary derives ἀμέθυστος from ἀ- \"not\" + μέθυστος \"drunken\" and notes the stone sense is uncertain (Beekes: named for its light colour); the literal meaning \"not drunken/intoxicated\" stands."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:02.119Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "not drunken, without drunkenness",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:02.119Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "a reference to the belief that the stone protected its owner from drunkenness",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:02.119Z",
+   "target": "f12738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The exact semantic development of the \"stone\" sense is uncertain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  }
+ ]
+}

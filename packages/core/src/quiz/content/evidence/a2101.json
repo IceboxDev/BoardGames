@@ -1,0 +1,242 @@
+{
+ "article": "a2101",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tutti_Frutti_(song)",
+   "title": "Tutti Frutti (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:30.809Z",
+   "snapshot": "84652c8c67f947da6ecd41179b48b6b9f6e77e7a3c6316a478ecbb379633de26"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Johnny_B._Goode",
+   "title": "Johnny B. Goode – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:31.820Z",
+   "snapshot": "4c637da21e14010563604d33feacec81cbca06a0e5e74afc489891ee5e195894"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Suede_Shoes",
+   "title": "Blue Suede Shoes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:32.804Z",
+   "snapshot": "d6480d6e954de6c512af03a012a988569e7d62e23e089352dfc4da28ba07d3d2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Folsom_Prison_Blues",
+   "title": "Folsom Prison Blues – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:33.843Z",
+   "snapshot": "de7faebe5946279d441f4fd63c8cf938387cbc632a360e4ff57b8e9b3a2bebf8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Blowin'_in_the_Wind",
+   "title": "Blowin' in the Wind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:41.660Z",
+   "snapshot": "6da874a12c8db5e9582235633cab0bd0709e12a2fa6978d69b8b4b7a145c6116"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Little Richard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chuck Berry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Perkins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johnny Cash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bob Dylan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:22.859Z",
+   "target": "f10501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Tutti Frutti\" (Italian for \"all fruits\") is a song written by Little Richard and Dorothy LaBostrie, recorded in 1955, which was Richard's first major hit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Little Richard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:22.859Z",
+   "target": "f10502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Goode\" is a song by American musician Chuck Berry, written and sung by Berry in 1958.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chuck Berry” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:22.859Z",
+   "target": "f10503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Blue Suede Shoes\" is a rock and roll standard written and first recorded by American singer, songwriter and guitarist Carl Perkins in 1955.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Perkins” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:22.859Z",
+   "target": "f10504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Folsom Prison Blues\" is a song by American singer-songwriter Johnny Cash, based on material composed by Gordon Jenkins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnny Cash” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:22.859Z",
+   "target": "f10505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Blowin' in the Wind\" is a song written by Bob Dylan in 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bob Dylan” is on the snapshot of s5"
+  }
+ ]
+}

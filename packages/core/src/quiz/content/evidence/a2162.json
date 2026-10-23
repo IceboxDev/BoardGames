@@ -1,0 +1,592 @@
+{
+ "article": "a2162",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lava",
+   "title": "Lava",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:23.016Z",
+   "snapshot": "213436764d993085c543ca42d5c3fc250972a5b9ed98c019898ef8359704e409"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Vesuvius",
+   "title": "Mount Vesuvius",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:24.004Z",
+   "snapshot": "441839ae16b1fe2f10426928d4ce784a6be979fc51c3274566be3c7b42b4c225"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Maar",
+   "title": "Maar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:21.196Z",
+   "snapshot": "938e4bde9c249e38471f49f57f2d65936fece83d9a133af40066ca149ad4b43a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pazifischer_Feuerring",
+   "title": "Pazifischer Feuerring",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:22.172Z",
+   "snapshot": "b1b67dc7179df9b394d8ab92eb77978b001014c60026abe7a621bd55695a4a92"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Caldera",
+   "title": "Caldera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:24.918Z",
+   "snapshot": "d57eb20533be4b04141352359097e6af49843d70ed584ddd0963d36551e042b5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pyroclastic_flow",
+   "title": "Pyroclastic flow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:25.986Z",
+   "snapshot": "be86596a2fa9bce9012417bd0bd1579c7db35562f0244dbdbf009a8b4ec759d5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pliny_the_Younger",
+   "title": "Pliny the Younger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:27.015Z",
+   "snapshot": "74f828da60d981dc9eaf3252e53cc9f5d1e3ea75c51396dba708696d1ebef6de"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
+   "title": "1815 eruption of Mount Tambora – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:27.982Z",
+   "snapshot": "804619e0e8496fa143735026aa5fbc5899ba515dbfab3a4812986a8e1081fb33"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Pulvermaar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:25.086Z",
+   "snapshot": "64d55877b5faa0f8c7c007066491cd15863ce44ff22958fed39195704e77f8ee"
+  },
+  "s10": {
+   "url": "https://www.livescience.com/27871-mount-vesuvius-pompeii.html",
+   "title": "Mount Vesuvius & Pompeii: Facts & History",
+   "publisher": "Live Science",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:04.129Z",
+   "snapshot": "6e7b2e1988402c484ef09001341139e4fccc5278deb9cad8bfc107085048acf2"
+  },
+  "s11": {
+   "url": "https://www.volcanodiscovery.com/vesuvius.html",
+   "title": "Vesuvius Volcano, Italy: Facts & Information",
+   "publisher": "VolcanoDiscovery",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:04.082Z",
+   "snapshot": "07c0edded5b6c9d100a6031a7ccc9a6505235e68f0fd7e9fa5bb81a51a22c792"
+  },
+  "s12": {
+   "url": "https://geology.com/volcanoes/vesuvius/",
+   "title": "Mount Vesuvius, Italy",
+   "publisher": "Geology.com",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:04.660Z",
+   "snapshot": "e1f596705464318a853e3be132a942a68fc6b49269e35effa50bbb23759761be"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lava",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-026; transcript ppm-128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mount Vesuvius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-179"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Maar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-204"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10937",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pazifischer Feuerring",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-176"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "caldera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "pyroclastic flow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pliny the Younger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f10941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mount Tambora",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lava is magma that has been expelled from the interior of a terrestrial planet (such as Earth) or a moon onto its surface.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lava” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mount Vesuvius ( və-SOO-vee-əs) is a somma–stratovolcano located on the Gulf of Naples in Campania, Italy, about 9 km (5.6 mi) east of Naples and a short distance from the shore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Vesuvius” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ein Maar (lateinisch mare  ‚Meer‘) ist eine schüssel- oder trichterförmige Mulde vulkanischen Ursprungs, die in eine vorvulkanische Landfläche eingesenkt ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maar” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Als Pazifischer Feuerring (auch zirkumpazifischer Feuergürtel oder zirkumpazifischer Feuerring) wird ein Vulkangürtel bezeichnet, der den Pazifischen Ozean von drei Seiten umgibt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pazifischer Feuerring” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A caldera ( kawl-DERR-ə, kal-) is a large cauldron-like hollow that forms shortly after the emptying of a magma chamber in a volcanic eruption.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “caldera” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A pyroclastic flow, more broadly known as a pyroclastic density current, is a fast-moving current of hot gas and volcanic matter (collectively known as tephra) that flows along the ground away from a volcano.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pyroclastic flow” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "113), better known in English as Pliny the Younger ( PLIN-ee), was a lawyer, author, and magistrate of Ancient Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pliny the Younger” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:31.942Z",
+   "target": "f10941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In April 1815, Mount Tambora, a volcano on the island of Sumbawa in present-day Indonesia (then part of the Dutch East Indies), erupted in what is now considered the most powerful volcanic eruption in recorded human history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Tambora” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:05:02Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mount Vesuvius is considered to be one of the most dangerous volcanoes in the world because of its proximity to the city of Naples and the surrounding towns on the nearby slopes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "a characterisation, not a measurement; Campi Flegrei is sometimes given the same title (article notes say so)"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:05:03Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Vesuvius (\"Vesuvio\" in Italian) is probably not only the most famous, but also one, if not the most dangerous volcano on Earth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:05:04Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "which makes Vesuvius an especially dangerous and unpredictable volcano",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:18.752Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mount Vesuvius is considered to be one of the most dangerous volcanoes in the world because of its proximity to the city of Naples and the surrounding towns on the nearby slopes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.752Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:18.752Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Vesuvius (\"Vesuvio\" in Italian) is probably not only the most famous, but also one, if not the most dangerous volcano on Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.752Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:18.752Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "which makes Vesuvius an especially dangerous and unpredictable volcano",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.752Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:18.752Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mount Vesuvius & Pompeii: Facts & History | Live Science",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.752Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mount Vesuvius” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:18.752Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Gasparini (1993): Mount Vesuvius: 2000 years of volcanological observations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.752Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mount Vesuvius” is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:18.752Z",
+   "target": "f10935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Mount Vesuvius, Italy: Map, Facts, Eruption Pictures, Pompeii",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.752Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mount Vesuvius” is on the snapshot of s12"
+  }
+ ]
+}

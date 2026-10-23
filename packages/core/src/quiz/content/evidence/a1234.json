@@ -1,0 +1,397 @@
+{
+ "article": "a1234",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Year_of_Africa",
+   "title": "Year of Africa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:57.899Z",
+   "snapshot": "e5092ce1aa9f35f3bd3e01b6de3297cb1dc1a3ecfac18cdbe5a7a6d5eab0ddb5"
+  },
+  "s2": {
+   "url": "https://library.law.fsu.edu/Digital-Collections/LimitsinSeas/pdf/ibs071.pdf",
+   "title": "International Boundary Study No. 71: Kenya – Tanzania Boundary (US Department of State, 1966)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Suez_Canal",
+   "title": "Suez Canal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:38.179Z",
+   "snapshot": "ffa3b15c5e1c638333917b1b8f70d1c496b42c6efc67263408927bcf047d6a52"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Tana",
+   "title": "Lake Tana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:58.926Z",
+   "snapshot": "3d415504b46a77326be791c290517f48d60ecc390a633aa458661feb5cdd6092"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Victoria",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:00.035Z",
+   "snapshot": "7eccae3aff937e8de162f2ae561ae53e7dfea6004e36f24d9dfda36fb6bfa9d2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Congo_River",
+   "title": "Congo River – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:51.873Z",
+   "snapshot": "a7ee83c033ccaea07cbe4f8c0d3530ddf8a1918d1c39dc332816921bcbcd30f1"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Niger_River",
+   "title": "Niger River – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:52.854Z",
+   "snapshot": "4114c5da2fc1c19547858dcfb8f1cb760690ad1859ad036b04da48fa688ab905"
+  },
+  "s8": {
+   "url": "https://www.worldatlas.com/articles/the-longest-rivers-in-africa.html",
+   "title": "10 Longest Rivers In Africa",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:53.017Z",
+   "snapshot": "9d8e158227458a21ead2e7e4bfec2cff3641ae518f6ff8d72be7e657968476b1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Congo and Niger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kenya and Tanzania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mediterranean Sea and Red Sea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lake Tana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:52.597Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Congo and Niger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Congo and Niger”, “Kongo und Niger”, “Конго и Нигер”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:52.597Z",
+   "target": "f06170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As the canal has no sea surge gates, the ports at the ends would be subject to the sudden impact of tsunamis from the Mediterranean Sea and Red Sea, according to a 2012 article in the Journal of Coastal Research.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.597Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mediterranean Sea and Red Sea” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:52.597Z",
+   "target": "f21640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lake Tana (Amharic: ጣና ሐይቅ, romanized: T’ana ḥāyik’i; previously transcribed Tsana) is the largest lake in Ethiopia and a source of the Blue Nile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.597Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Tana” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:16:24Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Democratic Republic of the Congo and the Republic of the Congo are named after it",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:16:26Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the third-longest river in Africa, exceeded by the Nile, and the Congo River",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:16:27Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nile River - 6,650 km Congo River - 4,700 km Niger River - 4,180 km",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:16:29Z",
+   "target": "f06169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The lake's area is divided among three countries: Tanzania occupies 49%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:16:31Z",
+   "target": "f06169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eastward from the tripoint in Lake Victoria, the boundary traverses the lake for 12 miles",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:34.918Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Democratic Republic of the Congo and the Republic of the Congo are named after it",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:34.918Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the third-longest river in Africa, exceeded by the Nile, and the Congo River",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:34.918Z",
+   "target": "f06166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nile River - 6,650 km Congo River - 4,700 km Niger River - 4,180 km",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:34.918Z",
+   "target": "f06169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The lake's area is divided among three countries: Tanzania occupies 49%",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:34.918Z",
+   "target": "f06169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1966, train ferry services between Kenya and Tanzania were established with the introduction of MV Uhuru and MV Umoja.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kenya and Tanzania” is on the snapshot of s5"
+  }
+ ]
+}

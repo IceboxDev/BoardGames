@@ -1,0 +1,242 @@
+{
+ "article": "a1827",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Banksy",
+   "title": "Banksy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:46.069Z",
+   "snapshot": "538945cbd3343b22d2d8bccafa555ff965eaa39cab1fbfc6a63550195237beaa"
+  },
+  "s2": {
+   "url": "https://fr.wikipedia.org/wiki/Invader_(artiste)",
+   "title": "Invader (artiste) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:24:46.533Z",
+   "snapshot": "8f5f4d30a9cfc73092ec3f33ad3a3fb63939fa716357ad240cacaaa29946db51"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Banksy",
+   "title": "Banksy",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:33:36.363Z",
+   "snapshot": "5824357f8db6603b89b000d63507789b067390a0c0adb429ab12b6f51bfb8696"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dismaland",
+   "title": "Dismaland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:09.009Z",
+   "snapshot": "2d0f71c791aea0dd35251a569d293df4654a25b8555103a1fc0222e1b24efbc8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Faces_Places_(film)",
+   "title": "Faces Places – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:46.867Z",
+   "snapshot": "f14df1ed0e77521279d70ca4fe94b929275a30472df2ca6f8039af823192d4d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Banksy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Invader",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Street-Art",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-253"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dismaland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Agnès Varda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:28.838Z",
+   "target": "f09131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Banksy is a pseudonymous England-based street artist, political activist, and film director.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.838Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Banksy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:28.838Z",
+   "target": "f09135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Invader est un artiste de rue et mosaïste français, né le 2 mai 1969 à Paris.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.838Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Invader” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:28.838Z",
+   "target": "f10744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Exit Through the Gift Shop von Banksy ist ein Dokumentarfilm aus dem Jahr 2010, in dem es um den französischen Street-Art-Künstler und Filmemacher Thierry Guetta geht, der einen Dokumentarfilm über seinen Cousin „Invader“, einen Graffiti-Künstler, dreht und dadurch Banksy kennenlernt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.838Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Street-Art” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:28.838Z",
+   "target": "f20260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dismaland was a temporary art project organised by street artist Banksy in the seaside resort of Weston-super-Mare in Somerset, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.838Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dismaland” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:28.838Z",
+   "target": "f20261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Faces Places (French: Visages Villages) is a 2017 French documentary film directed by filmmaker Agnès Varda and artist JR.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.838Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agnès Varda” is on the snapshot of s5"
+  }
+ ]
+}

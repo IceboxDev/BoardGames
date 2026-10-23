@@ -1,0 +1,334 @@
+{
+ "article": "a0196",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fight_Club",
+   "title": "Fight Club – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:02.420Z",
+   "snapshot": "198ce8882da97252238d8c3d15d88b2ea2759433225df363cdff8c9687d4797a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/AFI%27s_100_Years...100_Movies",
+   "title": "AFI's 100 Years...100 Movies – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:03.192Z",
+   "snapshot": "851d5b76c856724978fbb99b32a7e7ff61a3c747ed0131f189e7c82b052e51f7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Humphrey_Bogart",
+   "title": "Humphrey Bogart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:06.321Z",
+   "snapshot": "8f81c6813bb4222bc1db8229a9f200bc2049c195dd23dac6921bb431d03acc77"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio",
+   "title": "Leonardo DiCaprio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:07.437Z",
+   "snapshot": "14c70d9b1d708f334d915e323ccc271cab1dd8774d87c16c24fd29a94f9a9c73"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
+   "title": "The Empire Strikes Back – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:08.412Z",
+   "snapshot": "8a161061311c0cbc70166d44b85f1e9769d408e0d4757eaeb7ee3bc904c3f5b5"
+  },
+  "s6": {
+   "url": "https://www.afi.com/afis-100-years-100-movie-quotes/",
+   "title": "AFI's 100 Years...100 Movie Quotes",
+   "publisher": "American Film Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:36.984Z",
+   "snapshot": "92de4b6ce1318ec72b6fcd540f7f2de5f8fc4bd45972c92db6a27e93f312e0aa"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/AFI%27s_100_Years...100_Movie_Quotes",
+   "title": "AFI's 100 Years...100 Movie Quotes – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:38:13Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fight Club",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Godfather",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Casablanca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Titanic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Empire Strikes Back",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:08.487Z",
+   "target": "f00976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fight Club is a 1999 American film directed by David Fincher starring Brad Pitt, Edward Norton, and Helena Bonham Carter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:08.487Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fight Club” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:08.487Z",
+   "target": "f00977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Godfather",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Godfather”, “Der Pate”, “Крёстный отец”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:08.487Z",
+   "target": "f00978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He was Oscar-nominated for playing a nightclub owner in the romantic drama Casablanca (1942) and as an unstable captain in the military drama The Caine Mutiny (1954).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:08.487Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Casablanca” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:08.487Z",
+   "target": "f00979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DiCaprio achieved international stardom with the star-crossed romances Romeo + Juliet (1996) and Titanic (1997).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:08.487Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titanic” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:08.487Z",
+   "target": "f00980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Empire Strikes Back (also known as Star Wars: Episode V – The Empire Strikes Back) is a 1980 American epic space opera film directed by Irvin Kershner from a screenplay by Leigh Brackett and Lawrence Kasdan, based on a story by George Lucas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:08.487Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Empire Strikes Back” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:38:09Z",
+   "target": "f00977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "2. \"I'm gonna make him an offer he can't refuse.\" The Godfather (1972)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:38:13Z",
+   "target": "f00977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2 \"I'm gonna make him an offer he can't refuse.\" Vito Corleone Marlon Brando The Godfather 1972",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:27.374Z",
+   "target": "f00977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "2. \"I'm gonna make him an offer he can't refuse.\" The Godfather (1972)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:27.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:27.374Z",
+   "target": "f00977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Godfather (1972)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:27.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Godfather” is on the snapshot of s6"
+  }
+ ]
+}

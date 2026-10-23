@@ -1,0 +1,295 @@
+{
+ "article": "a1392",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Maxis",
+   "title": "Maxis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:29.288Z",
+   "snapshot": "7cadd8c9b0f2dc9696a14eef16a6ef78ba5bc140588398a393280b1ff751d82c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Sims_(video_game)",
+   "title": "The Sims (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:30.348Z",
+   "snapshot": "f0ac020d73c87aaf4bea1c525f51488de12bc4360f090ef4e4451153bfecbcb2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spore_(2008_video_game)",
+   "title": "Spore (2008 video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:31.461Z",
+   "snapshot": "e98e19aa18ddefe1d1c142cc0cf7f635a48075fc12e4fe9bae7a5341a93346da"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Settlers_(1993_video_game)",
+   "title": "The Settlers (1993 video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:32.360Z",
+   "snapshot": "305fcb452b5ecf3cce2675d2392620411eae1ebfacb80d4fe295b7d153e450f9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Settlers",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:33.559Z",
+   "snapshot": "ef76b3771c77e2812872356ec433b76973a77d410e8ff1a49dd6c0cd5c6e6a51"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Civilization_(video_game)",
+   "title": "Civilization (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:34.359Z",
+   "snapshot": "3bdff6c43fe5f962c6245db98eb3e70a6c7ce5b3eba95b7a608de0478d81cc52"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/SimCity_(1989_video_game)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:47.529Z",
+   "snapshot": "37190622d96a76a293d5d88af0c0894e50adf913b8970cf7ad11f8291bd8ff2c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "SimCity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sims",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Settlers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Settlers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Civilization",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:18.280Z",
+   "target": "f06956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maxis is best known for its simulation games, including The Sims, Spore, and SimCity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “SimCity” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:18.280Z",
+   "target": "f06957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sims is a 2000 social simulation video game developed by Maxis and published by Electronic Arts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sims” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:18.280Z",
+   "target": "f06958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spore is a 2008 god game developed by Maxis and published by Electronic Arts for Windows and Mac OS X.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spore” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:18.280Z",
+   "target": "f06959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Settlers (German: Die Siedler) is a 1993 city-building video game with real-time strategy elements for Amiga and MS-DOS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Settlers” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:18.280Z",
+   "target": "f06959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Settlers (German: Die Siedler) is a city-building and real-time strategy video game series created by Volker Wertich in 1993.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Settlers” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:18.280Z",
+   "target": "f06960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sid Meier's Civilization is a 1991 turn-based strategy 4X video game developed and published by MicroProse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Civilization” is on the snapshot of s6"
+  }
+ ]
+}

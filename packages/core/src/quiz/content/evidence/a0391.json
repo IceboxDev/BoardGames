@@ -1,0 +1,289 @@
+{
+ "article": "a0391",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Boris_Yeltsin",
+   "title": "Boris Yeltsin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:51.665Z",
+   "snapshot": "e67e82b8445a49c3ae490d7d304b37c5f2f1b103df15eb39fb908d39cc362fcc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pope_Benedict_XVI",
+   "title": "Pope Benedict XVI – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:52.652Z",
+   "snapshot": "a8d2b5c42f8303b7658ce6ad65c37c9e054cf0062c585313e38eda6869bbdbe8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Nixon",
+   "title": "Richard Nixon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:53.757Z",
+   "snapshot": "c3eb5c6eabc6468363a528a721b865a179d92a785f5eb0697880376571d0a6ec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+   "title": "Margaret Thatcher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:38.642Z",
+   "snapshot": "87a766ce9acd8a37fb03deca095a90df6251e5e97930d56895d7c467a043afb9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Margaret_Thatcher",
+   "title": "Margaret Thatcher",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:52:52.103Z",
+   "snapshot": "6077aad3f62fe0d124f739733a0e978fdd7d56f7ba4d7541946968af0c4722d1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Willy_Brandt",
+   "title": "Willy Brandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:54.692Z",
+   "snapshot": "f4fb7dc4f06e79fffefe8edac9f15f7258ea978f7c9fbf805bf74dd68aafd9a3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Boris Yeltsin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Benedict XVI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Richard Nixon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Margaret Thatcher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Margaret Thatcher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-258"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willy Brandt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:41.252Z",
+   "target": "f01951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Boris Yeltsin initially prioritized relations with the West, paying little attention to relations with China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.252Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boris Yeltsin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:41.252Z",
+   "target": "f01952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pope Benedict XVI (born Joseph Alois Ratzinger; 16 April 1927 – 31 December 2022) was the head of the Catholic Church and sovereign of the Vatican City from 2005 until his resignation in 2013.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.252Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benedict XVI” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:41.252Z",
+   "target": "f01953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1978, Nixon published his memoirs, RN: The Memoirs of Richard Nixon, the first of nine books he was to author in his retirement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.252Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Nixon” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:41.252Z",
+   "target": "f01954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Her decision provoked a storm of protest from Labour and the press, leading to her being notoriously nicknamed \"Margaret Thatcher, Milk Snatcher\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.252Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margaret Thatcher” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:41.252Z",
+   "target": "f01954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Margaret Thatcher wurde als Margaret Hilda Roberts am 13.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.252Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margaret Thatcher” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:41.252Z",
+   "target": "f01955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willy Brandt (German: [ˈvɪliː ˈbʁant] ; born Herbert Ernst Karl Frahm; 18 December 1913 – 8 October 1992) was a German politician and statesman who was leader of the Social Democratic Party of Germany (SPD) from 1964 to 1987 and concurrently served as the chancellor of West Germany from 1969 to",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.252Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s6"
+  }
+ ]
+}

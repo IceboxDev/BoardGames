@@ -1,0 +1,396 @@
+{
+ "article": "a0130",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Orange_Free_State",
+   "title": "Orange Free State – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:19.209Z",
+   "snapshot": "f32827cd067bf164eef272bba62d7d9a640a915f297b9b812187639523e85b80"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Afrikaans",
+   "title": "Afrikaans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:20.188Z",
+   "snapshot": "a4b3119f0b3febc7128d1681276a017035ac11a3d491a81818586f72446f17b0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Great_Trek",
+   "title": "Great Trek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:21.073Z",
+   "snapshot": "ccb42cbdbd697bce3fe471a7e92aa53c99281383a7bb034e23d644d1518c6b37"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Second_Boer_War",
+   "title": "Second Boer War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:22.326Z",
+   "snapshot": "f53e7e8f4a675f01b51ca310e9d97eb779bcfe2fe3b423e18668440e48822fd6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Geschichte_S%C3%BCdafrikas",
+   "title": "Geschichte Südafrikas",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:24:19.915Z",
+   "snapshot": "d3f295a1d64a8c11cdf1eb352af2d37b2c87b4e5430278d4e3e91130ec92fed1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Shaka",
+   "title": "Shaka",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:24:20.496Z",
+   "snapshot": "d40ecf038fac04539dd1ee47f35597b8bcbf662529709f5270907fcfce5f130d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Kimberley,_Northern_Cape",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:23.168Z",
+   "snapshot": "488022d98d13b34274c05e26bc36ebe9f5cb53307e9dfff9447e135e2711e6d2"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Shaka",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:24.175Z",
+   "snapshot": "57ffae443deca3a65e0f0c62ec05cccb081d44f8daa74eb8975572720104f789"
+  },
+  "s9": {
+   "url": "https://www.nam.ac.uk/explore/boer-war",
+   "title": "Boer War",
+   "publisher": "National Army Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:01.886Z",
+   "snapshot": "c3f9fef887331a67342e398d720464442a5e5d53dc247383f5ad9679bad88609"
+  },
+  "s10": {
+   "url": "https://www.sahistory.org.za/article/second-anglo-boer-war-1899-1902",
+   "title": "Second Anglo-Boer War 1899-1902",
+   "publisher": "South African History Online",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:02.271Z",
+   "snapshot": "bb6539904458a9d370aee4ced2b87b780de4257cd899921fca9be63fb03987a5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Boers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Afrikaans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Trek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Boer Wars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Südafrika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-375"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Shaka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-031"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:57.033Z",
+   "target": "f00646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1824 farmers of Dutch, French Huguenot and German descent known as Trekboers (later named Boers by the English) emerged from the Cape Colony, seeking pasture for their flocks and to escape British governmental oversight, settling in the country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boers” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:57.033Z",
+   "target": "f00647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Afrikaans is a West Germanic language spoken in South Africa, Namibia, and to a lesser extent Botswana, Zambia, Zimbabwe, and also in Argentina, where a group in Sarmiento speaks a Patagonian dialect, and among the South African diaspora (particularly in Australia, New Zealand, North America and the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afrikaans” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:57.033Z",
+   "target": "f00648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Great Trek (Afrikaans: Die Groot Trek, Dutch: De Grote Trek) was a northward migration of Dutch-speaking settlers who travelled by wagon trains from the Cape Colony into the interior of modern South Africa from 1836 onwards, seeking to live beyond the Cape's British colonial administration.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Trek” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:57.033Z",
+   "target": "f00649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Boer Wars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Boer Wars”, “Burenkriege”, “англо-бурские войны”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:57.033Z",
+   "target": "f12518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Südafrika gilt als eine Wiege der Menschheit, die ältesten Fossilfunde von unmittelbaren Vorfahren der Gattung Homo (Hominini) werden auf ein Alter von etwa 3,5 bis 4 Millionen Jahren datiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Südafrika” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:57.033Z",
+   "target": "f12519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Shaka (* um 1787 in der Nähe des heutigen Ortes Melmoth im späteren Natal; † 22.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shaka” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:33:40Z",
+   "target": "f00649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The origins of the Boer War lay in Britain's desire to unite, or confederate, the British South African territories of the Cape Colony and Natal with the Boer republics of the Orange Free State and the South African Republic (also known as the Transvaal).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:33:44Z",
+   "target": "f00649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "After the First Anglo-Boer War the British government did not give up its ambition for unifying South Africa under Imperial British rule.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:15.472Z",
+   "target": "f00649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The origins of the Boer War lay in Britain's desire to unite, or confederate, the British South African territories of the Cape Colony and Natal with the Boer republics of the Orange Free State and the South African Republic (also known as the Transvaal).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:15.472Z",
+   "target": "f00649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "After the First Anglo-Boer War the British government did not give up its ambition for unifying South Africa under Imperial British rule.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  }
+ ]
+}

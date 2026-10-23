@@ -1,0 +1,265 @@
+{
+ "article": "a2272",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Oscar_selfie",
+   "title": "Oscar selfie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:48.219Z",
+   "snapshot": "d73630074cb1f40c27c8f3ab797e48adb60cf369ffc443fb7615d0dc4be50afe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Selfish_(book)",
+   "title": "Selfish (book)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:49.285Z",
+   "snapshot": "c9bcaa5085079c0b9ea71cddbe8cdf61f5a0b3da95654673b239446ece85d91d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Emily_Ratajkowski",
+   "title": "Emily Ratajkowski",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:46.402Z",
+   "snapshot": "1a82bdde0c5d73d26994111e698b38d3af2041c3bea2d67318654dfe1d337431"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ellen DeGeneres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kim Kardashian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-229"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emily Ratajkowski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-151"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bradley Cooper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Barack Obama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kanye West",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:46.823Z",
+   "target": "f11676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The host of the ceremony, Ellen DeGeneres, urged viewers of the ceremony to make a tweet with the picture the most re-tweeted tweet in history, which was accomplished before the broadcast was over at over 2 million retweets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ellen DeGeneres” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:46.823Z",
+   "target": "f11677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Selfish is a coffee table book written by television personality Kim Kardashian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kim Kardashian” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:46.823Z",
+   "target": "f11678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emily Ratajkowski wurde als Tochter des US-amerikanischen Malers John David Ratajkowski, dessen Vorfahren aus Polen kamen, und der US-amerikanischen Professorin und Schriftstellerin Kathleen Balgley geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emily Ratajkowski” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:46.823Z",
+   "target": "f11679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Oscar selfie is the popular name of a selfie taken by actor Bradley Cooper at the 86th Academy Awards in 2014, featuring a variety of celebrities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bradley Cooper” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:46.823Z",
+   "target": "f11681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As of March 2014, the tweet had 2.7 million retweets and 1.4 million likes, becoming the most retweeted tweet of all time, surpassing a tweet from Barack Obama celebrating his win in the 2012 United States presidential election with 778,000 retweets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barack Obama” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:46.823Z",
+   "target": "f11682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The photobook was announced in August 2014; the idea to assemble a book from selfies first came to Kardashian when she was thinking of what to give to her husband Kanye West as a Valentine's Day gift.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kanye West” is on the snapshot of s2"
+  }
+ ]
+}

@@ -1,0 +1,459 @@
+{
+ "article": "a2492",
+ "sources": {
+  "s1": {
+   "url": "https://theatrecrafts.com/pages/home/venues/london-palace-theatre/",
+   "title": "London Palace Theatre – Theatrecrafts",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:21.782Z",
+   "snapshot": "7dd4df836cac1b266d02166dff66e7b3bb2ba53fead4e1484f770f20733acb99"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sarah_Bernhardt",
+   "title": "Sarah Bernhardt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:22.025Z",
+   "snapshot": "04be7140ef57f04f5129700fd405c6a9606417be5339b6f6e0623e7eef301da2"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Harry_Potter_und_das_verwunschene_Kind",
+   "title": "Harry Potter und das verwunschene Kind",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:23.230Z",
+   "snapshot": "1d9828b4dfa0a2d885613bed8ba61c6724c7d62f66b55d69c5e1a6b82d4f7719"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Scottish_Play",
+   "title": "The Scottish Play",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:25.594Z",
+   "snapshot": "b4a3f641159d85a9b3678e6cb8fc0bbc9c7ed80848ece95b1da8688b2cb8e804"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sarah_Bernhardt",
+   "title": "Sarah Bernhardt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:51.752Z",
+   "snapshot": "7c9749708056d548b09ec545ad327161ba92267abf4f6acf7118e8b0b074b19b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Cursed_Child",
+   "title": "Harry Potter and the Cursed Child",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:26.639Z",
+   "snapshot": "dea5657f515a2174d8cef7cfefb7fc6b710a0f35b5e35bc3bd75651614d1d241"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/cache/epub/9100/pg9100.txt",
+   "title": "My Double Life: The Memoirs of Sarah Bernhardt",
+   "publisher": "Project Gutenberg (Sarah Bernhardt, memoirs)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:39.288Z",
+   "snapshot": "709007a2d1b04078d390e8172f07c246dfbda9acf6bd3a668204be7b077c0855"
+  },
+  "s8": {
+   "url": "https://www.thejewishmuseum.org/exhibitions/sarah-bernhardt-the-art-of-high-drama",
+   "title": "Sarah Bernhardt: The Art of High Drama",
+   "publisher": "The Jewish Museum, New York",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:40.890Z",
+   "snapshot": "0c5a46e086097507b58f17bad7214119fb85373d629f08bdf9cdf4f1641652e6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "two seats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "einen Sarg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-145"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harry Potter und das verwunschene Kind",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-339"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Macbeth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hamlet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jack Thorne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.732Z",
+   "target": "f13208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Until the phenomenal sell-out success of Harry Potter and the Cursed Child, the theatre had two seats permanently bolted open so the theatre ghosts always had somewhere to sit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “two seats” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.732Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "einen Sarg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“einen Sarg”, “A coffin”, “гроб”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.732Z",
+   "target": "f13210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harry Potter und das verwunschene Kind (Originaltitel: Harry Potter and the Cursed Child) ist ein Theaterstück von Jack Thorne, das auf einer Geschichte von Thorne, Joanne K.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry Potter und das verwunschene Kind” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.732Z",
+   "target": "f13211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Scottish Play and the Bard's play are euphemisms for the William Shakespeare play Macbeth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macbeth” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:28.732Z",
+   "target": "f13212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She played female and male roles, including Shakespeare's Hamlet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamlet” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:28.732Z",
+   "target": "f13213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harry Potter and the Cursed Child is a play written by Jack Thorne from an original story by Thorne, J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.732Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Thorne” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:02:36Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "window was my coffin, where I frequently installed myself to study my",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "her own memoirs: 'In front of the window was my coffin, where I frequently installed myself to study my parts.'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:02:38Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She kept a satin-lined coffin in her bedroom, and occasionally slept in it or lay in it to study her roles",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:02:40Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "an infamous publicity photograph of Bernhardt posing in her coffin (c. 1880)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:02:41Z",
+   "target": "f13208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the theatre had two seats permanently bolted open so the theatre ghosts always had somewhere to sit. These seats were not usuable by the public.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:11.584Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "window was my coffin, where I frequently installed myself to study my",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:11.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:11.584Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She kept a satin-lined coffin in her bedroom, and occasionally slept in it or lay in it to study her roles",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:11.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:11.584Z",
+   "target": "f13209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "an infamous publicity photograph of Bernhardt posing in her coffin (c. 1880)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:11.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:11.584Z",
+   "target": "f13208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the theatre had two seats permanently bolted open so the theatre ghosts always had somewhere to sit. These seats were not usuable by the public.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:11.584Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  }
+ ]
+}

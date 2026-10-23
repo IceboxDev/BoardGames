@@ -1,0 +1,222 @@
+{
+ "w09010": {
+  "kind": "reworded",
+  "reason": "Not every book edition carries an ISBN, so 'uniquely identified every book edition worldwide' overstated it; the question now asks for the 13-digit number used worldwide since 2007 to identify a particular edition.",
+  "sources": [
+   {
+    "url": "https://www.isbn-international.org/content/what-isbn/10"
+   },
+   {
+    "url": "https://www.loc.gov/catdir/cpso/13digit.html"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "f09067": {
+  "kind": "edited",
+  "reason": "The cited source was the Teleprompter article, which doesn't define the theatre souffleur; now cites the DWDS dictionary entry for Souffleur.",
+  "sources": [
+   {
+    "url": "https://www.dwds.de/wb/Souffleur"
+   }
+  ],
+  "fields": [
+   "source"
+  ]
+ },
+ "f09069": {
+  "kind": "edited",
+  "reason": "The cited source was a biography of one publisher's editor (Moritz Heimann); now cites the DWDS dictionary entry for Lektor, which defines the job.",
+  "sources": [
+   {
+    "url": "https://www.dwds.de/wb/Lektor"
+   }
+  ],
+  "fields": [
+   "source"
+  ]
+ },
+ "f10506": {
+  "kind": "marked",
+  "reason": "The question says the publisher is 'still active today'; set a review date to recheck that.",
+  "sources": [
+   {
+    "url": "https://www.reclam.de/verlag/verlagsgeschichte"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ },
+ "a2412": {
+  "kind": "corrected",
+  "reason": "The Urzeitkrebse count depends on what you count: Wikipedia gives 20 issues for the original run, while the collectors' YpsFanpage counts 23 including the 2006 and post-2012 issues. The sentence now says they were the most frequent gimmick, with twenty times in the original series and more after the revivals.",
+  "sources": [
+   {
+    "url": "https://de.wikipedia.org/wiki/Yps"
+   },
+   {
+    "url": "https://www.ypsfanpage.de/gimmicks/top20.php"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "w12794": {
+  "kind": "reworded",
+  "reason": "The exact count is disputed (20 vs 23), so it was dropped from the question; the answer is the same either way.",
+  "sources": [
+   {
+    "url": "https://de.wikipedia.org/wiki/Yps"
+   },
+   {
+    "url": "https://www.ypsfanpage.de/gimmicks/top20.php"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "f12639": [
+  {
+   "kind": "edited",
+   "reason": "Notes give both counts (20 per Wikipedia for the original run, 23 per a fan site that includes the revivals).",
+   "sources": [
+    {
+     "url": "https://www.ypsfanpage.de/gimmicks/top20.php"
+    }
+   ],
+   "fields": [
+    "notesEn",
+    "notesDe",
+    "notesRu"
+   ]
+  },
+  {
+   "kind": "marked",
+   "reason": "Spans moved onto the rewritten sentence that gives the answer.",
+   "sources": [],
+   "fields": [
+    "spans"
+   ]
+  }
+ ],
+ "f12638": {
+  "kind": "marked",
+  "reason": "Spans moved to follow the edit made earlier in the body; the marked word is unchanged.",
+  "sources": [],
+  "fields": [
+   "spans"
+  ]
+ },
+ "a2436": {
+  "kind": "corrected",
+  "reason": "The Booker Prize Foundation says the prize was supported by Bukhman Philanthropies from 2026 and that the 2027 award is the first to be named the Bukhman International Booker Prize, with £100,000 from that prize on. The body had said the award was 'renamed in 2026'.",
+  "sources": [
+   {
+    "url": "https://thebookerprizes.com/international-booker-prize/the-international-booker-prize-and-its-history"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f12803": [
+  {
+   "kind": "marked",
+   "reason": "The prize money and naming changed with the 2027 prize; recheck the author/translator split after it.",
+   "sources": [
+    {
+     "url": "https://thebookerprizes.com/international-booker-prize/the-international-booker-prize-and-its-history"
+    }
+   ],
+   "fields": [
+    "reviewBy"
+   ]
+  },
+  {
+   "kind": "marked",
+   "reason": "Spans moved to follow the edited sentence.",
+   "sources": [],
+   "fields": [
+    "spans"
+   ]
+  }
+ ],
+ "w12974": {
+  "kind": "reworded",
+  "reason": "Guinness World Records lists Christie as the best-selling FICTION writer (about 2 billion copies); 'most copies sold in the history of the book' claimed more than any source does (Shakespeare and religious texts compete). The question is narrowed, and the card's own words are kept in cardText.",
+  "sources": [
+   {
+    "url": "https://www.guinnessworldrecords.com/world-records/67383-best-selling-author-for-fiction"
+   },
+   {
+    "url": "https://www.agathachristie.com/about-christie"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru",
+   "cardText"
+  ]
+ },
+ "w12975": {
+  "kind": "reworded",
+  "reason": "That Christie wrote Murder on the Orient Express at Istanbul's Pera Palace is only a tradition. Neither her official biography nor her Autobiography says so, and she began the novel at the Baron Hotel in Aleppo. The question now says 'according to a long-standing tradition'; the card's words are kept in cardText.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Pera_Palace_Hotel"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru",
+   "cardText"
+  ]
+ },
+ "a2437": {
+  "kind": "edited",
+  "reason": "Whether The Mousetrap is the longest-running play can change, so the sentence now says 'as of 2026' (the official site and Wikipedia confirm its record and its 30,000+ performances).",
+  "sources": [
+   {
+    "url": "https://www.the-mousetrap.co.uk/about/"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/The_Mousetrap"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f12815": {
+  "kind": "marked",
+  "reason": "Time-sensitive record; review date set.",
+  "sources": [
+   {
+    "url": "https://www.the-mousetrap.co.uk/about/"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ }
+}

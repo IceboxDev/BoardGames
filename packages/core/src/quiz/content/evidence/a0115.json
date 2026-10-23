@@ -1,0 +1,382 @@
+{
+ "article": "a0115",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Execution_of_Saddam_Hussein",
+   "title": "Execution of Saddam Hussein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:39.059Z",
+   "snapshot": "2bcba888e5f1dabb9b9f5fb7702074814445c3f8f5bf1e61b171c6d5ad0c87c4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nicolae_Ceau%C8%99escu",
+   "title": "Nicolae Ceaușescu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:40.180Z",
+   "snapshot": "d0fd22d890dc485848eb4d000fb96be835688c93d8dc7a12b15e9647af896212"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Killing_of_Muammar_Gaddafi",
+   "title": "Killing of Muammar Gaddafi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:40.937Z",
+   "snapshot": "73564708404d682e70ef09e1352aa9e818f352e596f63a43d471fed091d45f85"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Arrest_and_trial_of_Augusto_Pinochet",
+   "title": "Arrest and trial of Augusto Pinochet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Trial_of_Saddam_Hussein",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:43.072Z",
+   "snapshot": "da7d73571f760a661bdfd78baadbd000c7c9ec7d1a171668bb5e354d5b170623"
+  },
+  "s6": {
+   "url": "https://www.icj.org/resource/crimen-contra-la-humanidad-pinochet-ante-la-justicia/",
+   "title": "Crimen contra la humanidad: Pinochet ante la justicia",
+   "publisher": "International Commission of Jurists",
+   "kind": "official",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T12:30:51.613Z",
+   "snapshot": "2adad96d85d6545fb703ffb9c7ddb3b3d40776023f8f608321d82eb7015dddef"
+  },
+  "s7": {
+   "url": "https://lab.org.uk/pinochets-1998-arrest-in-london/",
+   "title": "Pinochet's 1998 arrest in London",
+   "publisher": "Latin America Bureau",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:51.916Z",
+   "snapshot": "0194a3e34548f415671a3988fc34884a31481135db9452b03aad0cd17209db30"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Indictment_and_arrest_of_Augusto_Pinochet",
+   "title": "Indictment and arrest of Augusto Pinochet – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:54.359Z",
+   "snapshot": "74864c03d6d5588eee436502869e91d4b2d9e3edc2d9d74326aa2072630bf5ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saddam Hussein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nicolae Ceaușescu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Muammar Gaddafi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Augusto Pinochet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:54.168Z",
+   "target": "f00571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saddam Hussein, the former president of Iraq, was executed on 30 December 2006.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saddam Hussein” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:54.168Z",
+   "target": "f00572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "According to the information recorded in his autobiography, Nicolae Ceaușescu was born on 26 January 1918.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicolae Ceaușescu” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:54.168Z",
+   "target": "f00573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Muammar Gaddafi, a former leader of Libya, was murdered by the National Transitional Council (NTC) on 20 October 2011 after the Battle of Sirte.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muammar Gaddafi” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T10:13:42Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "el 16 de Octubre de 1998 Pinochet fue arrestado en Londres a solicitud de un Juez de la Audiencia Nacional de España, el Sr. Baltasar Garzón",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:13:44Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the night of his London arrest on 16 October 1998, according to Judge Baltasar Garzón",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:13:45Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "While in London, he was arrested on 16 October 1998 under an international arrest warrant issued by judge Baltasar Garzón of Spain",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:52:12.868Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "el 16 de Octubre de 1998 Pinochet fue arrestado en Londres a solicitud de un Juez de la Audiencia Nacional de España, el Sr. Baltasar Garzón",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:52:12.868Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the night of his London arrest on 16 October 1998, according to Judge Baltasar Garzón",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:12.868Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "While in London, he was arrested on 16 October 1998 under an international arrest warrant issued by judge Baltasar Garzón of Spain",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s8"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:12.868Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ello ha sido así desde el momento en que el General Augusto Pinochet derrocó al Gobierno democrático que dirigía el Dr.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Augusto Pinochet” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:12.868Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It’s Garzón’s fault, f***ing Communist.’ These were the first words of General Augusto Pinochet to British police on the night of his London arrest on 16 October 1998, according to Judge Baltasar Garzón.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Augusto Pinochet” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:12.868Z",
+   "target": "f00575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Indictment and arrest of Augusto Pinochet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Augusto Pinochet” is on the snapshot of s8"
+  }
+ ]
+}

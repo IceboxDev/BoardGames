@@ -1,0 +1,529 @@
+{
+ "article": "a1296",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dry_cleaning",
+   "title": "Dry cleaning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:01.252Z",
+   "snapshot": "01fec0c99b1c5c2aa510c5d2766854199446b6a2a5dac54f943430eb042029fa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bleach",
+   "title": "Bleach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:02.085Z",
+   "snapshot": "3a051a0e0280c30a290c19f69eccfbd2c20e3f9e72d45a505607773d666fcf4a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Clothes_dryer",
+   "title": "Clothes dryer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:03.204Z",
+   "snapshot": "690e5f33887d416068de78553b63cc4f89c2ba104c8e5a33ab97e0a8167900a6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Textilpflegesymbol",
+   "title": "Textilpflegesymbol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:00.303Z",
+   "snapshot": "6e5a17f7fd399f83715754a1ebb39b4fbcafe7f67c938dd0b9d3a4e9af71588c"
+  },
+  "s5": {
+   "url": "https://www.cleanipedia.com/gb/clothing-care/what-do-the-washing-symbols-on-wash-care-labels-mean",
+   "title": "What do the washing symbols on wash care labels mean? – Cleanipedia",
+   "publisher": "Cleanipedia (Unilever)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:18.138Z",
+   "snapshot": "60143f65495451be73b4b03a53a5d3f36700ec37220a3139e7a78b339ae32dee"
+  },
+  "s6": {
+   "url": "https://www.bluewin.ch/en/people/this-is-what-the-symbols-on-the-label-in-your-clothes-stand-for-li.2449121",
+   "title": "This is what the symbols on the label in your clothes stand for – blue News",
+   "publisher": "blue News (Swisscom)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:18.300Z",
+   "snapshot": "c10dbc6018a339ebcb65dea34259ed290cfca31a5af3e86affdfdb2b5ef90c48"
+  },
+  "s7": {
+   "url": "https://www.clevercare.info/en/care-symbols",
+   "title": "Care symbols – clevercare.info (GINETEX)",
+   "publisher": "GINETEX",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:19.093Z",
+   "snapshot": "e6a20daecccef77e632fb178689f4e68cf55e61c2555ff7a79d9c38d6d6a3e2d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dry-clean",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "bleach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tumble-dry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "waschen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:01.987Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dry-clean",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“dry-clean”, “chemisch reinigen”, “Сдавать в химчистку”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:01.987Z",
+   "target": "f06477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bleach is the generic name for any chemical product that is used industrially or domestically to remove color from (i.e.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.987Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bleach” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:01.987Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tumble-dry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“tumble-dry”, “im Wäschetrockner trocknen”, “Сушить в барабане”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:01.987Z",
+   "target": "f06480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Textilpflegesymbol,  Pflegesymbol oder umgangssprachlich Waschsymbol ist ein Piktogramm zur Kennzeichnung der vom Hersteller empfohlenen Art der Behandlung von Textilien in Bezug auf das Waschen, Bleichen, Trocknen, Bügeln und die Professionelle Reinigung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.987Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “waschen” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:14:12Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If your garment has a circle with an X through it, it means you should not dry clean it.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:14:13Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The crossed-out circle indicates that dry cleaning is not suitable for the garment.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:14:14Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "No professional dry-cleaning allowed. Do not use stain removers which contain solvents.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "GINETEX's official care-symbol list: the crossed-out circle = 'Do not dry-clean'."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:14:16Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When the standard tumble dry symbol has an X through it, this means you shouldn’t tumble try the garment.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:14:17Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Kreis im Quadrat erlaubt das maschinelle Trocknen im Wäschetrockner. Ein Punkt verlangt die Trocknung mit reduzierter Temperatur, zwei stehen für normale Temperatur. Das diagonal durchkreuzte Zeichen bedeutet, dass der Artikel keine maschinelle Trocknung verträgt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:14:19Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Articles unsuitable for tumble drying.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If your garment has a circle with an X through it, it means you should not dry clean it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The crossed-out circle indicates that dry cleaning is not suitable for the garment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "No professional dry-cleaning allowed. Do not use stain removers which contain solvents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When the standard tumble dry symbol has an X through it, this means you shouldn’t tumble try the garment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Kreis im Quadrat erlaubt das maschinelle Trocknen im Wäschetrockner. Ein Punkt verlangt die Trocknung mit reduzierter Temperatur, zwei stehen für normale Temperatur. Das diagonal durchkreuzte Zeichen bedeutet, dass der Artikel keine maschinelle Trocknung verträgt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Articles unsuitable for tumble drying.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A plain circle: This means the item of clothing is suitable for dry cleaning or is dry clean only.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “dry-clean” is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Do not dry-clean",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “dry-clean” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A circle inside a square: This is the basic tumble dry symbol and means you can safely tumble dry the garment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tumble-dry” is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:45.310Z",
+   "target": "f06479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Do not tumble dry",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tumble-dry” is on the snapshot of s7"
+  }
+ ]
+}

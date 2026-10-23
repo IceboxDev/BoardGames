@@ -1,0 +1,416 @@
+{
+ "article": "a1588",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Bang_Theory",
+   "title": "The Big Bang Theory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:17.393Z",
+   "snapshot": "1d9f047b2d9cc0df12668486413e4e896491a8ffa79af76dad57d2927663e070"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Bang_Theory_season_5",
+   "title": "The Big Bang Theory season 5 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:17.999Z",
+   "snapshot": "c2470efe736dcc68a025e1f421f42954d2de5f733b9133f08f61c4d3d0dc5fed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Bang_Theory_season_6",
+   "title": "The Big Bang Theory season 6 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:18.942Z",
+   "snapshot": "6b97552125a1cd9af76b26178678c9980646d1bf577e6e047a838f4de6b3f086"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Bang_Theory_season_11",
+   "title": "The Big Bang Theory season 11 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:19.943Z",
+   "snapshot": "dd3e7bdef14a0b4732de4661e7ac9486abddd32b95e31bbe0fd7c436fafd32c6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Penny_(The_Big_Bang_Theory)",
+   "title": "Penny (The Big Bang Theory)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:21.081Z",
+   "snapshot": "1b259aaf264891addefa09389c197eeb4cf544175f8f146f6b2b8d6085a85f18"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Raj_Koothrappali",
+   "title": "Raj Koothrappali – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:57.653Z",
+   "snapshot": "d9d09009c06724322615aa273c37051cc75be15d8aac662dcd1ec38bb7240aae"
+  },
+  "s7": {
+   "url": "https://tvtropes.org/pmwiki/pmwiki.php/Series/TheBigBangTheory",
+   "title": "The Big Bang Theory (Series) – TV Tropes",
+   "publisher": "TV Tropes",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:19:02Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Amy_Farrah_Fowler",
+   "title": "Amy Farrah Fowler – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:58.572Z",
+   "snapshot": "52a0723f31a7ecaf8ea84facfd3b46689226444fb1d2dd07bb178e889b649fd6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sheldon Cooper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Howard Wolowitz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rajesh Koothrappali",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amy Farrah Fowler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Penny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-098"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:47.509Z",
+   "target": "f07936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The show originally centered on five characters living in Pasadena, California: Leonard Hofstadter (Johnny Galecki) and Sheldon Cooper (Jim Parsons), both physicists at the California Institute of Technology, who share an apartment; Penny (Kaley Cuoco), a waitress and aspiring actress who lives",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.509Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sheldon Cooper” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.509Z",
+   "target": "f07938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The season finale depicts Howard Wolowitz traveling to the International Space Station (ISS) on board a Soyuz rocket.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.509Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Howard Wolowitz” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.509Z",
+   "target": "f07939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rajesh Koothrappali",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Rajesh Koothrappali”, “Раджеш Кутраппали”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:47.509Z",
+   "target": "f07940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amy Farrah Fowler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Amy Farrah Fowler”, “Эми Фара Фаулер”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:47.509Z",
+   "target": "f11610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Penelope \"Penny\" Hofstadter is a fictional character from the 2007–2019 American CBS sitcom The Big Bang Theory, portrayed by actress Kaley Cuoco.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.509Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penny” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:55Z",
+   "target": "f07939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rajesh, who is normally called Raj or just by his surname Koothrappali, is from New Delhi, India.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:18:59Z",
+   "target": "f07939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He had selective mutism, which did not allow him to talk to women outside of his family unless he was under the influence of alcohol (or medication), until the season 6 finale.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:19:02Z",
+   "target": "f07939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dr. Rajesh \"Raj\" Koothrappali (Kunal Nayyar), an astrophysicist who suffers from crippling mutism whenever women are around (unless he's drunk).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:19:04Z",
+   "target": "f07940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Amy is a neuroscientist who is the love interest of Sheldon Cooper (Jim Parsons) and subsequent wife in the series.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:19:08Z",
+   "target": "f07940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dr. Amy Farrah Fowler (played by Mayim Bialik) a neurobiologist and Distaff Counterpart to Sheldon",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:35.083Z",
+   "target": "f07939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He had selective mutism, which did not allow him to talk to women outside of his family unless he was under the influence of alcohol (or medication), until the season 6 finale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:35.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:35.083Z",
+   "target": "f07940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Amy is a neuroscientist who is the love interest of Sheldon Cooper (Jim Parsons) and subsequent wife in the series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:35.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:35.083Z",
+   "target": "f07940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Alan Sepinwall of Uproxx, praised the additions of Amy and Bernadette to the cast, writing that \"With Amy Farrah Fowler and Bernadette Rostenkowski promoted to semi-permanent status, because of this the show is now able to spend large chunks of each episode focusing only on the women, and in the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:35.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Amy Farrah Fowler” is on the snapshot of s8"
+  }
+ ]
+}

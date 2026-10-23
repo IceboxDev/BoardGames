@@ -1,0 +1,249 @@
+{
+ "article": "a2709",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Clownfish",
+   "title": "Clownfish",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:21.397Z",
+   "snapshot": "7d33c5cda3152bb7e47f2ac58273678a7ad918b5dc4a091058f481d708e9ef4e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Damselfish",
+   "title": "Damselfish",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:22.218Z",
+   "snapshot": "a6275568a54244d251ca0f874f961b4ce4e73e8572117a720b889dea0f7d8d60"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sequential_hermaphroditism",
+   "title": "Sequential hermaphroditism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:23.378Z",
+   "snapshot": "95b2e2bf4f88a24d85b1cf8b34b84da7b235f166f85df6971ce9e04130045d9b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Garibaldi_(fish)",
+   "title": "Garibaldi (fish) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:24.226Z",
+   "snapshot": "ab9905e968ff91c9960cb63e09c9a8ffc30d4b7a458019f7dcef098a54cbab0e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sergeant_major_(fish)",
+   "title": "Sergeant major (fish) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:25.232Z",
+   "snapshot": "aebce855574b3f518841a349b7cfc7fa9a803252a12aaa788cc3ea9a7e41b1a4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pomacentridae",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:26.248Z",
+   "snapshot": "034caf5d4482e4047a2ec1b15edd29da0088d297d688121dff198a4b88d48c2c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Clownfish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Damselfish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-083"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "protandry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Garibaldi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sergeant major",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:01.135Z",
+   "target": "f25332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Clownfish or anemonefishes (genus Amphiprion) are saltwater fish found in the warm and tropical waters of the Pacific Ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clownfish” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:01.135Z",
+   "target": "f25333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Damselfish are fish within the subfamilies Abudefdufinae, Chrominae, Lepidozyginae, Pomacentrinae, and Stegastinae within the family Pomacentridae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Damselfish” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:01.135Z",
+   "target": "f25335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In animals, the different types of change are male to female (protandry or protandrous hermaphroditism), female to male (protogyny or protogynous hermaphroditism), and bidirectional (serial or bidirectional hermaphroditism).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “protandry” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:01.135Z",
+   "target": "f25336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Garibaldi (Hypsypops rubicundus), known historically as the Catalina goldfish and marine goldfish and now commonly as the Garibaldi damselfish, is a species of bright orange fish in the damselfish family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Garibaldi” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:01.135Z",
+   "target": "f25337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The sergeant major or píntano (Abudefduf saxatilis) is a species of damselfish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sergeant major” is on the snapshot of s5"
+  }
+ ]
+}

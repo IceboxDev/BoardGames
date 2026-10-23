@@ -1,0 +1,242 @@
+{
+ "article": "a1056",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cambridge_Analytica",
+   "title": "Cambridge Analytica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:59.852Z",
+   "snapshot": "367ddf261e52cce79b513b813c3d10960b8019501d244ab6e05e218e14affddb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/2017_Equifax_data_breach",
+   "title": "2017 Equifax data breach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:00.681Z",
+   "snapshot": "92e4960a6b056d8437d0092b0fc390688d62d2b3102c11f22d437161c7a46d5b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Yahoo_data_breaches",
+   "title": "Yahoo data breaches – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:01.613Z",
+   "snapshot": "17aaa9ed8adc5d1e1e8f105aa214ef36ba70da8e9a534dcda416b1aa7f4c1a67"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pegasus_Project_(investigation)",
+   "title": "Pegasus Project (investigation) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:02.695Z",
+   "snapshot": "25c13e3dd5a03205d0f0d9ee8643a7f99ad261b9b36758c91cb908d87fad1233"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Marriott_International",
+   "title": "Marriott International – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:03.683Z",
+   "snapshot": "ddca4c90aebade9e591bff9b9284029dbfeaf2976f756a028f04a0f8362038a4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cambridge Analytica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Equifax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Yahoo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "NSO Group",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Marriott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:26.239Z",
+   "target": "f05276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "(CA), previously known as SCL USA, was a British political consulting firm that came to prominence through the Facebook–Cambridge Analytica data scandal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cambridge Analytica” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:26.239Z",
+   "target": "f05277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Between May and July 2017, American credit bureau Equifax was breached.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Equifax” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:26.239Z",
+   "target": "f05278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 2013 and 2014, Yahoo, an American web services company, experienced two of the largest data breaches in history—yet despite being aware, the company did not disclose them publicly until September 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yahoo” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:26.239Z",
+   "target": "f05279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Pegasus Project is an international investigative journalism initiative that revealed governments' espionage on journalists, opposition politicians, activists, business people and others using the private Pegasus spyware developed by the Israeli technology and cyber-arms company NSO Group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NSO Group” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:26.239Z",
+   "target": "f05280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Headquartered in Bethesda, Maryland, the company is the successor to the hospitality division of the Marriott Corporation, which was founded by J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marriott” is on the snapshot of s5"
+  }
+ ]
+}

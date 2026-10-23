@@ -1,0 +1,361 @@
+{
+ "article": "a1848",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Auslegungsst%C3%B6rfall",
+   "title": "Auslegungsstörfall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:50.827Z",
+   "snapshot": "8b58a9f3f4a4d69e565c31b02d189e5e8ab6d9985faa2644b7b24bea6f9014a2"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kernkraftwerk_Kahl",
+   "title": "Kernkraftwerk Kahl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:52.197Z",
+   "snapshot": "dbf80bd0ddd956309e662955b9155a61e3ce29f5bed0827234849228bd976727"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Antiblockiersystem",
+   "title": "Antiblockiersystem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:52.657Z",
+   "snapshot": "4a80a921f5a052589caa6aa3295809aec00355cc1516d0658cd5e590138b17dd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kernkraftwerk",
+   "title": "Kernkraftwerk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:54.679Z",
+   "snapshot": "612a55fa859fbd9a035cbcbd50e80a0c84cc83ab75ac3a39395ce45d57efdb0b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/T%C3%9CV",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:54.654Z",
+   "snapshot": "7c26f54ba256df4e71c174a7876c5e8d09db3786a53ef59facfc9ef92b8a0b73"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/USB",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:57.533Z",
+   "snapshot": "8935d2f3bc7140e8bf1aec91d25dab3f8e92850976baa5981721a05e6fa4ac25"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/AKW",
+   "title": "AKW – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (Berlin-Brandenburgische Akademie der Wissenschaften)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:51.954Z",
+   "snapshot": "f1d69d680548d74e373cc3fd31375e91937a9f7cce5875974369dd58344edca2"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/AKW",
+   "title": "AKW – Wikipedia (Begriffsklärung)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:52.235Z",
+   "snapshot": "d60179e0b348b366ef8a293b99ad6dc76ee9fc61d082ba32beb8d827b97ecc4d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Größter anzunehmender Unfall",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154; transcript tp-070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Atomkraftwerk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Antiblockiersystem",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Super-GAU",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kernkraftwerk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:33.370Z",
+   "target": "f09236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Diese Bezeichnung, Abkürzung für größter anzunehmender Unfall, geht zurück auf das in der Frühzeit der Kernenergienutzung in den USA entwickelte Konzept des maximum credible accident.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Größter anzunehmender Unfall” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:33.370Z",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Atomkraftwerk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Atomkraftwerk”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:33.370Z",
+   "target": "f09240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Antiblockiersystem (ABS) ist ein technisches System für mehr Fahrsicherheit und weniger Verschleiß an den Laufflächen der Reifen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antiblockiersystem” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:33.370Z",
+   "target": "f24540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bei auslegungsüberschreitenden Störfällen wird häufig von einem Super-GAU gesprochen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Super-GAU” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:33.370Z",
+   "target": "f24541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Kernkraftwerk oder Atomkraftwerk ist ein Wärmekraftwerk, in dem mittels kontrollierter Kernspaltung Strom erzeugt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:33.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kernkraftwerk” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:06:22Z",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Grundform Atomkraftwerk",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:06:25Z",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Atomkraftwerk, siehe Kernkraftwerk",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:22.681Z",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Atomkraftwerk, siehe Kernkraftwerk",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:22.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:22.681Z",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Synonym zu Atomkraftwerk",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:22.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Atomkraftwerk” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:22.681Z",
+   "target": "f09237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Atomkraftwerk, siehe Kernkraftwerk",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:22.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Atomkraftwerk” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,382 @@
+{
+ "article": "a2210",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Peppa_Wutz",
+   "title": "Peppa Wutz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:04.511Z",
+   "snapshot": "3d734cffbcf82de2b2ba11faaf302438399febf3a2237840ee0b6b74983be5f2"
+  },
+  "s2": {
+   "url": "https://veenpers.nl/010906oo3.htm",
+   "title": "Alfred Jodocus Kwak – Eine kleine Ente als UNICEF-Botschafter (OÖ Nachrichten, 1 Sep 2006)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-20"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Als_die_Tiere_den_Wald_verlie%C3%9Fen_(Fernsehserie)",
+   "title": "Als die Tiere den Wald verließen (Fernsehserie)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:05.538Z",
+   "snapshot": "6ce5fe3fac08285ea07f75f5ee63b5ede0fabef305b1c1882ee0e97891dfeafb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peppa_Pig",
+   "title": "Peppa Pig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:06.340Z",
+   "snapshot": "742a863b0b5c6ba56aea1a9429f728c74c3f8aa8ce25972d16c38d1279d641b0"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Alfred_J._Kwak",
+   "title": "Alfred J. Kwak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:06.916Z",
+   "snapshot": "16a5da73593f37a3762ec345e0c4b2a6487d97b7ad665dbacdc2f1243506cc2b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Animals_of_Farthing_Wood_(TV_series)",
+   "title": "The Animals of Farthing Wood (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:07.198Z",
+   "snapshot": "cfaea1a8657b96de1b2b622ecd09c03a6fd246bc11c2848f220733157eca8368"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Krtek",
+   "title": "Krtek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:08.241Z",
+   "snapshot": "c522795be1a86392210f33f4d50429a0ed7870a39e75996f6cdbc07cd9408ec4"
+  },
+  "s8": {
+   "url": "http://veenpers.nl/010906oo3.htm",
+   "title": "Alfred Jodocus Kwak – Eine kleine Ente als UNICEF-Botschafter (OÖ Nachrichten, 1 Sep 2006)",
+   "publisher": "Oberösterreichische Nachrichten (via veenpers.nl)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:21.175Z",
+   "snapshot": "4f96394449ec38877e7e5ae715f347856b9ef5cb3b8c3459d6672896beeaacd0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Peppa Wutz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alfred J. Kwak",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-158"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "der Fuchs",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-283"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neville Astley and Mark Baker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Herman van Veen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11253",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Colin Dann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zdeněk Miler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.801Z",
+   "target": "f11248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Peppa Wutz (im englischen Original: Peppa Pig) ist eine britische Zeichentrick-Fernsehserie für Kinder.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peppa Wutz” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.801Z",
+   "target": "f11250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Fuchs wird Anführer der Reise.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “der Fuchs” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.801Z",
+   "target": "f11251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peppa Pig is a British preschool animated children's television series created by Neville Astley and Mark Baker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neville Astley and Mark Baker” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:36.801Z",
+   "target": "f11252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kwak ist eine Zeichentrickserie nach der Musikfabel Alfred Jodocus Kwak des niederländischen Liederkomponisten Herman van Veen, die 1989 bis 1990 in Zusammenarbeit von VARA (Niederlande), ZDF (Deutschland), TV Tokyo (Japan) und TVE (Spanien) entstand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herman van Veen” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:36.801Z",
+   "target": "f11253",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Animals of Farthing Wood is a British animated series commissioned by the European Broadcasting Union between 1993 and 1995, and is based on the series of books written by English author Colin Dann.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colin Dann” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:36.801Z",
+   "target": "f11254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Little Mole (Czech: Krtek, Krteček) is a series of cartoons as well as the name of their title character, an anthropomorphic mole, created by Czech animator Zdeněk Miler between 1957 and 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zdeněk Miler” is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:41Z",
+   "target": "f11249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Seit 2003 ist die Comicfigur offizieller UNICEF-Botschafter",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:23.816Z",
+   "target": "f11249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Seit 2003 ist die Comicfigur offizieller UNICEF-Botschafter",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:23.816Z",
+   "target": "f11249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "International bekannt wurde die kleine, gelbe Ente durch die Zeichentrickserie \"Alfred J. Kwak\", deren 52 Episoden 1989 bis 1991 entstanden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alfred J. Kwak” is on the snapshot of s8"
+  }
+ ]
+}

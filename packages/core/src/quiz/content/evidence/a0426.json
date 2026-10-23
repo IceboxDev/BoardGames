@@ -1,0 +1,288 @@
+{
+ "article": "a0426",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vladimir_Lenin",
+   "title": "Vladimir Lenin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:10.891Z",
+   "snapshot": "60674281f315cafc6d740b618479c7db6d293378ecf91eb74c8562cea2796a64"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Helena",
+   "title": "Saint Helena – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:11.816Z",
+   "snapshot": "3f15310ff2ba433e2759e1eafdc931041c88eeb1028bde25f39f5e5904b73cc2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hauteville_House",
+   "title": "Hauteville House – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:12.693Z",
+   "snapshot": "baf902cdbb7d7646c0e9d73d68a7362fbfe783a1384b282acbae0eecb08239e9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Victor_Hugo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:13.807Z",
+   "snapshot": "86e8e77cf22a56e974a847269d9a6029043efc725f8bdfbc3819071786c48c77"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/14th_Dalai_Lama",
+   "title": "14th Dalai Lama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:15.087Z",
+   "snapshot": "92b5b2c270d960f3cbf0dd4e933ea482bf06b7734c119348c86059781e9ef555"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Das_Kapital",
+   "title": "Das Kapital – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:15.888Z",
+   "snapshot": "49dfbb1aa934bc1b8b2eef802a07dd50b64dbcec2255be4b869c4be4a7dca9e7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "St. Helena",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Guernsey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Guernsey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "England",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:46.558Z",
+   "target": "f02126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hoping to cement connections between his Social-Democrats and Emancipation of Labour, a group of Russian Marxists based in Switzerland, Lenin visited the country to meet group members Plekhanov and Pavel Axelrod.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Switzerland” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:46.558Z",
+   "target": "f02127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The difference between the total population of the Administrative Districts and that recorded in the 2016 Census arises because the census included 183 people on board the RMS St. Helena and 13 people who were on yachts in the harbour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St. Helena” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:46.558Z",
+   "target": "f02128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Victor Hugo arrived in Guernsey in October 1855.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guernsey” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:46.558Z",
+   "target": "f02128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dedicated to the channel island of Guernsey, where Hugo spent 15 years of exile, the novel tells of a man who attempts to win the approval of his beloved's father by rescuing his ship, intentionally marooned by its captain who hopes to escape with a treasure of money it is transporting, through an",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guernsey” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:46.558Z",
+   "target": "f02129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He served as the resident spiritual and temporal leader of Tibet before 1959, and subsequently led the Tibetan government in exile represented by the Central Tibetan Administration in Dharamshala, India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:46.558Z",
+   "target": "f02130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Expropriation of the agricultural population from the land: Marx details the enclosure of common lands, the dissolution of feudal bands of retainers, and the forcible eviction of peasants, particularly in England from the late 15th to the 19th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “England” is on the snapshot of s6"
+  }
+ ]
+}

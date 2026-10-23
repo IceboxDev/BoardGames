@@ -1,0 +1,242 @@
+{
+ "article": "a0433",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A_Love_Supreme",
+   "title": "A Love Supreme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:37.686Z",
+   "snapshot": "93caae9f20c41b6600be203e86a753d07232965aa0f28f2ab0258d1b0b3fbb31"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kind_of_Blue",
+   "title": "Kind of Blue – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:38.712Z",
+   "snapshot": "1d81cbb9344d076359ae5c47d63d574bd08b1b4387cce03b27493e4274547bfc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Time_Out_(album)",
+   "title": "Time Out (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:39.613Z",
+   "snapshot": "9cf05eae20059ddd494f5df37b53be10e947a5609c26b6f95d7b79a31f0204aa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pithecanthropus_Erectus_(album)",
+   "title": "Pithecanthropus Erectus (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:40.654Z",
+   "snapshot": "2491da6f75807e1b5b348197a4033858fbebd7e1ca242589f410123835015de8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Brilliant_Corners",
+   "title": "Brilliant Corners – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:41.646Z",
+   "snapshot": "66232cd3e5ba946954252d509dd8bb0f1ac983f1d257f3bb8c77370b61fe62cb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "John Coltrane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c037"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miles Davis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dave Brubeck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles Mingus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thelonious Monk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:47.490Z",
+   "target": "f02161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Love Supreme is an album by the American jazz saxophonist and composer John Coltrane.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.490Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Coltrane” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:47.490Z",
+   "target": "f02162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kind of Blue is a studio album by the American jazz musician Miles Davis, released on August 17, 1959, through Columbia Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.490Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miles Davis” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:47.490Z",
+   "target": "f02163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Time Out (Dave Brubeck Quartet album), 1959",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.490Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dave Brubeck” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:47.490Z",
+   "target": "f02164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pithecanthropus Erectus is a studio album by the jazz composer and bassist Charles Mingus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.490Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Mingus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:47.490Z",
+   "target": "f02165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Brilliant Corners is a 1957 studio album by the American jazz pianist Thelonious Monk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.490Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thelonious Monk” is on the snapshot of s5"
+  }
+ ]
+}

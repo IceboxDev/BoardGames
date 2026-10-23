@@ -1,0 +1,442 @@
+{
+ "article": "a2523",
+ "sources": {
+  "s1": {
+   "url": "https://it.wikipedia.org/wiki/Museo_di_storia_naturale_dell%27Universit%C3%A0_di_Pisa",
+   "title": "Museo di storia naturale dell'Università di Pisa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T06:04:05.140Z",
+   "snapshot": "838263c5f3c1f916e2a81b773301e942c56faa2bffe16cabef50c0cd890c527b"
+  },
+  "s2": {
+   "url": "https://blog.biodiversitylibrary.org/2013/07/taxidermy-artistry-of-preserving-bodies",
+   "title": "Taxidermy: The Artistry of Preserving Bodies",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:05.367Z",
+   "snapshot": "d26fcddf7a8f7b6034912147d8d8c1dffbb6388c6dfb52c5ca177c0a356d07c6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cabinet_of_curiosities",
+   "title": "Cabinet of curiosities",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:17.441Z",
+   "snapshot": "c15f4bb950f6bec704c33d5b6ef8521f1b7044cfc9be50cf8a94df244c767ed0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ole_Worm",
+   "title": "Ole Worm",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:19.779Z",
+   "snapshot": "730073c61c87e1592cd54ff0c234c6d5a8739e17f733f6e89764a8725c6cab56"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Sloane",
+   "title": "Hans Sloane",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:17.755Z",
+   "snapshot": "3c0fc69a32e2b79e58c1198ace070e61bdf754377bdf093ecb1d0d1125f7dc5f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Natural_history_museum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:18.623Z",
+   "snapshot": "ccae88df61d57748362300a697b64b4b056e8b543e61ef7c8c1d3f19d91b36d4"
+  },
+  "s7": {
+   "url": "https://www.visittuscany.com/en/attractions/natural-history-museum-of-pisa",
+   "title": "Natural History Museum of Pisa",
+   "publisher": "Visit Tuscany (Regione Toscana)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:55.353Z",
+   "snapshot": "d774523919e4c3c0ec2f72b69bd5538453aa5270db772fc8bc3c4e58b3d0b507"
+  },
+  "s8": {
+   "url": "https://brunelleschi.imss.fi.it/itineraries/place/MuseoBotanicoUniversitaStudiPisa.html",
+   "title": "Museo Botanico dell'Università degli Studi di Pisa",
+   "publisher": "Museo Galileo – Institute and Museum of the History of Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:55.316Z",
+   "snapshot": "15df381d0c6b37825053cf8f6f68a4769af1a02dc3d6d19eea7b7b53a655b269"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pisa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Taxidermy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-270"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wunderkammer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ole Worm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans Sloane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:33.652Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Museo di storia naturale dell'Università di Pisa",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pisa” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:33.652Z",
+   "target": "f13447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Taxidermy: The Artistry of Preserving Bodies – Biodiversity Heritage Library",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taxidermy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.652Z",
+   "target": "f13448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cabinets of curiosities (German: Kunstkammer [ˈkʊnstˌkamɐ] and Kunstkabinett [ˈkʊnstkabiˌnɛt]), also known as wonder-rooms (German: Wunderkammer [ˈvʊndɐˌkamɐ] ), were encyclopedic collections of objects whose categorical boundaries were, in Renaissance Europe, yet to be defined.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wunderkammer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.652Z",
+   "target": "f13449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ole Worm (13 May 1588 – 31 August 1654), who often went by the Latinized form of his name Olaus Wormius, was a Danish physician, natural historian and antiquary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ole Worm” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.652Z",
+   "target": "f13450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sir Hans Sloane, 1st Baronet (16 April 1660 – 11 January 1753) was an Anglo-Irish physician, naturalist, and collector.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Sloane” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:56Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Natural History Museum of the University of Pisa is one of the oldest in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Says 'one of the oldest', not 'the oldest'; the card's superlative is the popular framing."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:14:01Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "was instituted at Pisa's Botanical Gardens around 1591 at the initiative of Grand Duke Ferdinand I de' Medici",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the 1591 founding that predates other surviving natural history museums."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:05Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fondato nel 1591 , è una delle istituzioni museali più antiche del mondo",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:45Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fondato nel 1591, è una delle istituzioni museali più antiche del mondo",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supersedes e13 (quote spacing fixed)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:17.556Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Natural History Museum of the University of Pisa is one of the oldest in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.556Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:17.556Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "was instituted at Pisa's Botanical Gardens around 1591 at the initiative of Grand Duke Ferdinand I de' Medici",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.556Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:17.556Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fondato nel 1591, è una delle istituzioni museali più antiche del mondo",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.556Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:17.556Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Natural History Museum of the University of Pisa | Visit Tuscany",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.556Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pisa” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:17.556Z",
+   "target": "f13446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Museo Botanico dell'Università degli Studi di Pisa",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.556Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pisa” is on the snapshot of s8"
+  }
+ ]
+}

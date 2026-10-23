@@ -1,0 +1,35 @@
+{
+ "id": "pop-enrich",
+ "title": "Publish or Perish: enrich the merged articles, card errata",
+ "startedAt": "2026-10-22",
+ "endedAt": "2026-10-22",
+ "kind": "enrich",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (enrich-agent)"
+ ],
+ "brief": "repo scripts/quiz-ingest/ENRICH.md",
+ "inputs": [
+  "enrich-notes.md, enrich-ids.txt, enrich-batches.txt"
+ ],
+ "outputs": [
+  "enrich-report/*.md + reasons(.orig).json",
+  "errata.md (every PoP card error and how the bank words it now)"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/publish-or-perish"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 66,
+  "bytes": 877186,
+  "byExt": {
+   ".json": 40,
+   ".md": 22,
+   ".py": 1,
+   ".sh": 1,
+   ".txt": 2
+  }
+ },
+ "notes": "History author 'enrich-agent' (4,710 entries on 2026-10-22) covers this run and mge-enrich together. tools/fill_reasons.py + logbatch.sh logged each batch."
+}

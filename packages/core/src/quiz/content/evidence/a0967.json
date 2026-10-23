@@ -1,0 +1,242 @@
+{
+ "article": "a0967",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Puma_(brand)",
+   "title": "Puma (brand) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:19.104Z",
+   "snapshot": "56b983d8b8261f6555efe870c27d978e7c3afd907771a97e6b4f866679c1951e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Aldi",
+   "title": "Aldi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:17.487Z",
+   "snapshot": "8ae800eb8cfb3ccdb33db90b8e39c774995cacb31076377774a73a61b327657a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hewlett-Packard",
+   "title": "Hewlett-Packard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:20.229Z",
+   "snapshot": "9399f90f3f88775e5b8c76b995ee3d42e7172eef2b0477612e9bcc728e124e97"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Procter_%26_Gamble",
+   "title": "Procter & Gamble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:21.098Z",
+   "snapshot": "df240d7ff2057401b5b0978529f8f2333f1e7e9b51f6dc9eb2d3819cb801bb31"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Adolf_Dassler",
+   "title": "Adolf Dassler",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:19.086Z",
+   "snapshot": "6400e966937bec20bf16bf070805dc0e38e3958acafd3811eeafd20eab186051"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Puma and Adidas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aldi Nord und Aldi Süd",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hewlett-Packard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Procter & Gamble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adolf und Rudolf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-257"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:12.469Z",
+   "target": "f04831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Puma and Adidas entered a fierce and bitter rivalry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Puma and Adidas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:12.469Z",
+   "target": "f04832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die beiden Unternehmensgruppen Aldi-Nord und Aldi-Süd sind rechtlich vollkommen selbständige Konzerne, haben jedoch eine gemeinsame Vergangenheit zwischen 1913 und 1961.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aldi Nord und Aldi Süd” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:12.469Z",
+   "target": "f04833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hewlett-Packard Company, commonly shortened to Hewlett-Packard ( HEW-lit PAK-ərd) or HP, was an American multinational information technology company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hewlett-Packard” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:12.469Z",
+   "target": "f04834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Procter & Gamble Company (P&G) is an American multinational consumer goods corporation incorporated and headquartered in Cincinnati, Ohio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Procter & Gamble” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:12.469Z",
+   "target": "f13579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adolf und Rudolf Dassler sollen jahrzehntelang bis zum Tod kein Wort miteinander gesprochen haben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolf und Rudolf” is on the snapshot of s5"
+  }
+ ]
+}

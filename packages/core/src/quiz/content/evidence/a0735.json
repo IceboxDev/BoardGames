@@ -1,0 +1,249 @@
+{
+ "article": "a0735",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+   "title": "Leonardo da Vinci – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:41.245Z",
+   "snapshot": "19ef9bcc0a3c1ff2e1f8001d74da9264e6b7de51236fce3679a2d47f75bb77c5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_School_of_Athens",
+   "title": "The School of Athens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:42.497Z",
+   "snapshot": "0e4f5e17e4c20f6affa5c16f860c54d97fbc4857230d5954e5f970470d1e9849"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Young_Hare",
+   "title": "Young Hare – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:43.248Z",
+   "snapshot": "55b13ac351595c82c7a5afc69529d1c56dd99ff9475598c0a5fc3672850eb72b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Renaissance_art",
+   "title": "Renaissance art",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:44.377Z",
+   "snapshot": "bd045674f5cfba34bf0cfa2a78fee5b81c0bd654cb4ad885b742d74a11ad083e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
+   "title": "Sistine Chapel ceiling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:55.138Z",
+   "snapshot": "80ad4bc5f4b1003ccd35bdcdb66d5bd872e7b79c8281365276a14e16802d4853"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Birth_of_Venus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:48.645Z",
+   "snapshot": "d327f23a01c71a5f3b71f3654b40aec5ed105bbf864fb4ca8ed5b98d339f1732"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leonardo da Vinci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raphael",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albrecht Dürer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humanism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-002"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Sistine Chapel ceiling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-056"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:36.259Z",
+   "target": "f03671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leonardo da Vinci, properly named Leonardo di ser Piero da Vinci (\"Leonardo, son of ser Piero from Vinci\"), was born on 15 April 1452 in, or close to, the Tuscan hill town of Vinci, about 35 kilometres (22 miles) from Florence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonardo da Vinci” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:36.259Z",
+   "target": "f03674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The School of Athens (Italian: Scuola di Atene) is a fresco by the Italian Renaissance artist Raphael.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raphael” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:36.259Z",
+   "target": "f03675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Young Hare (German: Feldhase) is a 1502 watercolour and bodycolour painting by the German artist Albrecht Dürer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albrecht Dürer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:36.259Z",
+   "target": "f25522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The rebirth of classical antiquity and Renaissance humanism also resulted in many mythological and history paintings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Humanism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:36.259Z",
+   "target": "f25523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Sistine Chapel ceiling (Italian: Soffitto della Cappella Sistina), painted in fresco by Michelangelo between 1508 and 1512, is a cornerstone work of High Renaissance art.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sistine Chapel ceiling” is on the snapshot of s5"
+  }
+ ]
+}

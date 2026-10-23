@@ -1,0 +1,242 @@
+{
+ "article": "a0406",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Crux",
+   "title": "Crux – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:55.589Z",
+   "snapshot": "8b09fe04deddd071bd2c33ab07997539b3357b4eb4f7ba1cc0b6650e7f774d38"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ursa_Minor",
+   "title": "Ursa Minor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:56.581Z",
+   "snapshot": "ae56e543a8955cda717c9bc00cfd49668a821fe7596f849b9afe11f4d69627e4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Canis_Major",
+   "title": "Canis Major – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:57.586Z",
+   "snapshot": "c5c3e63ba985cbc1fed56bb98bb818c7dd870cd33a4df0dc28fcc626ae004def"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Orion_Nebula",
+   "title": "Orion Nebula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:58.598Z",
+   "snapshot": "e37c7b984cc44402a7674e7907ccd48dce60e861d58b9b6ead9859b492c634c0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Proxima_Centauri_b",
+   "title": "Proxima Centauri b – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:59.587Z",
+   "snapshot": "b0ca76ed78d2ed6386a1a63445bc0f2b666e308c33cef5a73fd2c124ff7bd316"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Southern Cross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02027",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ursa Minor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Canis Major",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02029",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Orion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Centaurus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:43.765Z",
+   "target": "f02026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crux ( KRUKS) is a constellation of the southern sky that is centred on four bright stars in a cross-shaped asterism commonly known as the Southern Cross.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Southern Cross” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:43.765Z",
+   "target": "f02027",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ursa Minor (Latin for 'Lesser Bear', contrasting with Ursa Major), also known as the Little Bear, is a constellation located in the far northern sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ursa Minor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:43.765Z",
+   "target": "f02028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Canis Major is a constellation in the southern celestial hemisphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canis Major” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:43.765Z",
+   "target": "f02029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Orion Nebula (also known as Messier 42, M42, or NGC 1976) is a diffuse nebula in the Milky Way situated south of Orion's Belt in the constellation of Orion, and is known as the middle \"star\" in the \"sword\" of Orion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orion” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:43.765Z",
+   "target": "f02030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Proxima Centauri b, also referred to as Proxima b, or Alpha Centauri Cb, is an exoplanet orbiting within the habitable zone of the red dwarf star Proxima Centauri in the constellation Centaurus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Centaurus” is on the snapshot of s5"
+  }
+ ]
+}

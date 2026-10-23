@@ -1,0 +1,423 @@
+{
+ "article": "a0250",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Atat%C3%BCrk_Dam",
+   "title": "Atatürk Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:06.569Z",
+   "snapshot": "6467b9b8984c8268181f8632ac26777aba8f191b115482ac084c5f8ea290e3ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rhine_Falls",
+   "title": "Rhine Falls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:07.592Z",
+   "snapshot": "7c8b8d1a16eb418a893b20c3045e4d8815a0549fef0c0d330a2254daf31c90c6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Donauquelle",
+   "title": "Donauquelle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:41:04.820Z",
+   "snapshot": "e6c81fc84037daad12b5ccc4c2a9ae241438b033c783020da243c732c9dbfa90"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grand_Ethiopian_Renaissance_Dam",
+   "title": "Grand Ethiopian Renaissance Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:08.689Z",
+   "snapshot": "87ec000d95a0321dde6e95dcf92c980677fa9b93fff2e2a78309b9e06fa246e1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mismi",
+   "title": "Mismi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:09.544Z",
+   "snapshot": "2d598835776a07c04b87d067c3d570c68e96449d1fad4de6a5bf9a076aafd7a7"
+  },
+  "s6": {
+   "url": "https://www.worldatlas.com/rivers/danube-river.html",
+   "title": "Danube River",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:44.709Z",
+   "snapshot": "29db22c2f45c923a54a6b7b912018ddab1c71edc658951669cea043029e0c515"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Danube",
+   "title": "Danube - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:45.005Z",
+   "snapshot": "8ab2703069326efbd4443163cd050b8388f130d8f197f284ad73ea1eb88c0b24"
+  },
+  "s8": {
+   "url": "https://www.donaueschingen.de/donauquelle",
+   "title": "Tourist-Information | Donauquellstadt Donaueschingen",
+   "publisher": "Stadt Donaueschingen",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:45.368Z",
+   "snapshot": "15da46102d5c99ac08e834d716248ed31543d0447352c2cae71665e45ac479f3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Turkey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ethiopia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:19.318Z",
+   "target": "f01246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Atatürk Dam (Turkish: Atatürk Barajı), originally the Karababa Dam, is the fourth largest dam in the world and it is a zoned rock-fill dam with a central core on the Euphrates River on the border of Adıyaman Province and Şanlıurfa Province in the Southeastern Anatolia Region of Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Turkey” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:19.318Z",
+   "target": "f01247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Rhine Falls (German: Rheinfall [ˈraɪnfal]  / Swiss German: Rhyfall [ˈriːfal], a singular noun) is a waterfall on the High Rhine in Switzerland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Switzerland” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:19.318Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Deutschland”, “Germany”, “Германия”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:19.318Z",
+   "target": "f01249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ye-Ītyōppyā Hidāsē Gidib, Tigrinya: ግድብ ሕዳሰ ኢትዮጵያ, Oromo: Hidha Guddicha Haaromsa Itoophiyaa), formerly known as the Millennium Dam and sometimes referred to as the Hidase Dam (Amharic: ሕዳሴ ግድብ, romanized: Hidāsē Gidib, Oromo: Hidha Hidāsē), is a gravity dam on the Blue Nile River in Ethiopia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ethiopia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:19.318Z",
+   "target": "f01250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mismi is a 5,597-metre (18,363 ft) mountain peak of volcanic origin in the Chila mountain range in the Andes of Peru.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:19.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peru” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:40:47Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "sourcing from the confluence of Brigach and Breg rivers, close to the German town of Donaueschingen in the Black Forest region of Germany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:40:50Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "it originates in the town of Donaueschingen, in the Black Forest of Germany, at the confluence of the rivers Brigach and Breg.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:40:52Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Quelle befindet sich in Donaueschingen im Schlosspark zwischen Stadtkirche Sankt Johann und dem Fürstlich Fürstenbergischen Schloss.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "Donaueschingen, Baden-Württemberg, Germany"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:37.943Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "sourcing from the confluence of Brigach and Breg rivers, close to the German town of Donaueschingen in the Black Forest region of Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:37.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:37.943Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "it originates in the town of Donaueschingen, in the Black Forest of Germany, at the confluence of the rivers Brigach and Breg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:37.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:37.943Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Quelle befindet sich in Donaueschingen im Schlosspark zwischen Stadtkirche Sankt Johann und dem Fürstlich Fürstenbergischen Schloss.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:37.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:37.943Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It flows for 2,850km, sourcing from the confluence of Brigach and Breg rivers, close to the German town of Donaueschingen in the Black Forest region of Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:37.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Germany” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:37.943Z",
+   "target": "f01248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It flows through Central and Southeastern Europe, from the Black Forest of Germany south through the Danube Delta in Romania into the Black Sea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:37.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Germany” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "article": "a2666",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Runzelkorn",
+   "title": "Runzelkorn",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:48.445Z",
+   "snapshot": "0914e851d44a60a2030d5fc91e40b1c8407aff6b93d9af21f6229da8f12845e6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sabattier_effect",
+   "title": "Sabattier effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:51.143Z",
+   "snapshot": "70c3e38936f4aa38a95f8944e7bbf095eb35827e16c5ccd83e70e7ff54a40b09"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Solarization_(photography)",
+   "title": "Solarization (photography) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:52.122Z",
+   "snapshot": "5830d35db5d09d9b0cf44de198c2447f21c6550e98da0fa44bd68b00313ca28c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Callier_effect",
+   "title": "Callier effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:53.107Z",
+   "snapshot": "dc91c290b241360d287cb1b7f120c282a0a843ecc5e3cd3c1eabfe8b31bc6e1a"
+  },
+  "s5": {
+   "url": "https://fotolaborforum.fotoimpex.de/d/2923-runzelkorn?locale=en",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:50.810Z",
+   "snapshot": "1924a69c79f94d7fd1a597064366bf1c03b5d4e3cb6b2945c02fa2327952b909"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sabattier effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "solarisation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Callier effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fotografie",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "Fotografie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-159/5, u04: Statement false: Runzelkorn (reticulation) is a fault in film processing: the gelatin cracks after big temperature changes between baths. I found no farming use of the word in Duden, Wiktionary or anywhere else."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:55.471Z",
+   "target": "f14454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fotografie",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:55.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:55.471Z",
+   "target": "f14454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Runzelkorn ist ein Effekt in der Fotografie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fotografie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:55.471Z",
+   "target": "f14455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sabattier effect, also known as pseudo-solarization (or pseudo-solarisation) is a phenomenon in photography in which the image recorded on a negative or on a photographic print is wholly or partially reversed in tone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sabattier effect” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:55.471Z",
+   "target": "f14456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pseudo-Solarisation (or Pseudo-Solarization) is a phenomenon in photography in which the image recorded on a negative or on a photographic print is wholly or partially reversed in tone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “solarisation” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:55.471Z",
+   "target": "f14457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Callier effect is the variation in contrast of images produced by a photographic film with different manners of illumination.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Callier effect” is on the snapshot of s4"
+  }
+ ]
+}

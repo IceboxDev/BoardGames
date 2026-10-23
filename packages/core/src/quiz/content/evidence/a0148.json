@@ -1,0 +1,263 @@
+{
+ "article": "a0148",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ally_McBeal",
+   "title": "Ally McBeal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:03.874Z",
+   "snapshot": "b2536c4f3cfe291d872f9921d16682c9a7f2c77c2f7061cbb78188cd17bbf377"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Monk_(TV_series)",
+   "title": "Monk (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:04.827Z",
+   "snapshot": "1237ef297ee6c9851702c55e3c51a849907fb53fb1957d714cfbb2814bbaa983"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/House_(TV_series)",
+   "title": "House (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:02.022Z",
+   "snapshot": "9a30631c1e006ed714595f8a85bbd334ec803494047921c6f2af8a9610912440"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Frasier",
+   "title": "Frasier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:41.993Z",
+   "snapshot": "63871c669153a7064b63acda2bed4c30521ead747d04826eef04eb712ea84ab0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Murphy_Brown",
+   "title": "Murphy Brown – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:02.935Z",
+   "snapshot": "8a40fa8db1161863ecf8020fc752e6195485406d60de7eaea7204095eb577996"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Adrian_Monk",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:05.804Z",
+   "snapshot": "ff0436571f52d8b22bbb0c567a591b6f18c8b9402f009d0cadf106e99cdf1cba"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hugh_Laurie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:06.882Z",
+   "snapshot": "fe1e3cab31342a6ecdc8320a11668b8d3a1bbdeb14278945c7ca1a5981c4a180"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Frasier_(2023_TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:07.771Z",
+   "snapshot": "c73716cdde9452623bea3b0b10619fb47987009ec689d26b824374bc26eb3f21"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ally McBeal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adrian Monk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gregory House",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frasier Crane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Murphy Brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:00.520Z",
+   "target": "f00736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ally McBeal is an American legal comedy-drama television series created by David E.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ally McBeal” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:00.520Z",
+   "target": "f00737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It follows Adrian Monk (Tony Shalhoub), a private detective with obsessive–compulsive disorder (OCD) and multiple phobias, and his assistants Sharona Fleming (Bitty Schram) and Natalie Teeger (Traylor Howard).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adrian Monk” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:00.520Z",
+   "target": "f00738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gregory House (Hugh Laurie), an unconventional and misanthropic medical genius who, despite his dependence on pain medication, leads a team of diagnosticians at the fictional Princeton–Plainsboro Teaching Hospital (PPTH) in New Jersey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gregory House” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:00.520Z",
+   "target": "f00739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It continues the story of Frasier Crane (Kelsey Grammer), a psychiatrist who returns to his hometown, Seattle, as a radio show host.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frasier Crane” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:00.520Z",
+   "target": "f00740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Murphy Brown is an American television sitcom created by Diane English that premiered on November 14, 1988, on CBS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Murphy Brown” is on the snapshot of s5"
+  }
+ ]
+}

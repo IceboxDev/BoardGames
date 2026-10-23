@@ -1,0 +1,387 @@
+{
+ "article": "a0914",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gaius_Maecenas",
+   "title": "Gaius Maecenas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:43.369Z",
+   "snapshot": "d71f094757054f3bffbec3a1a3822f44e22a64964a78a2ccda760106a0228341"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pyrrhus_of_Epirus",
+   "title": "Pyrrhus of Epirus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:44.390Z",
+   "snapshot": "b966fe966032e35532179afec22b2193b5e2618f1bde1e5ae6dc11e7861ed9c6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sadomasochism",
+   "title": "Sadomasochism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:45.479Z",
+   "snapshot": "7de33b413461aa3a0df37c397f0accf27f60bcc23ca9879808e9f5592dd3500e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Boycott",
+   "title": "Charles Boycott – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:07.177Z",
+   "snapshot": "9504593d3b5205509a727b6d05fa447d298784b1cfad4d487717197db2959950"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Philippika",
+   "title": "Philippika",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:42.506Z",
+   "snapshot": "532e9427a79e99ec1020231e21aaa99f506eefa1a2743b2846a2e5a62e3c27d0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Philippic",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:46.283Z",
+   "snapshot": "1d8025eb3c4be930fb60b2dc50f876a856e93dc097f22aabe9fb024a00eebe6c"
+  },
+  "s7": {
+   "url": "https://www.vocabulary.com/dictionary/philippic",
+   "title": "Philippic – Vocabulary.com",
+   "publisher": "Vocabulary.com (IXL Learning)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:36.047Z",
+   "snapshot": "9b3adee257a5d2b0836e469f36026d34ad6abcb4fb4c5c140eaccd70bcfb32eb"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Philippika",
+   "title": "Philippika – DWDS",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:35.663Z",
+   "snapshot": "6ae496ef2d63bc88c721cc468fae2a23851afd0d597286fe4eba665f56d0c270"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maecenas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pyrrhic victory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sadism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "boycott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Strafrede",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "a tirade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-010/3, u03: A philippic is a bitter attack speech, named after Demosthenes' speeches against Philip II. It is the opposite of praise."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:03.760Z",
+   "target": "f04566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gaius Cilnius Maecenas ([ˈɡaːiʊs̠ ˈkɪɫ̪niʊs̠ mae̯ˈkeːnaːs̠] 13 April 68 BC – 8 BC) was a friend and political advisor to Octavian (who later reigned as emperor Augustus).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maecenas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:03.760Z",
+   "target": "f04568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Several of his victorious battles caused him unacceptably heavy losses, from which the phrase \"Pyrrhic victory\" was coined.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pyrrhic victory” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:03.760Z",
+   "target": "f04569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sadism ( ) and masochism (), known collectively as sadomasochism (  SAY-doh-MASS-ə-kiz-əm) or S&M, is the derivation of pleasure from acts of respectively inflicting or receiving pain or humiliation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sadism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:03.760Z",
+   "target": "f04570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Captain Charles Cunningham Boycott (12 March 1832 – 19 June 1897) was an English land agent whose ostracism by his local community in Ireland gave the English language the term boycott.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “boycott” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:42:49Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A philippic is a bitter rant against someone or something.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:42:53Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "veraltend heftige, leidenschaftliche Strafrede",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:42:56Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A philippic (/fɪˈlɪpɪk/) is a fiery, damning speech, or tirade, delivered to condemn a particular political actor.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:33.171Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A philippic is a bitter rant against someone or something.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:33.171Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "veraltend heftige, leidenschaftliche Strafrede",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:33.171Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A philippic (/fɪˈlɪpɪk/) is a fiery, damning speech, or tirade, delivered to condemn a particular political actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:33.171Z",
+   "target": "f12717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "veraltend heftige, leidenschaftliche Strafrede",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Strafrede” is on the snapshot of s8"
+  }
+ ]
+}

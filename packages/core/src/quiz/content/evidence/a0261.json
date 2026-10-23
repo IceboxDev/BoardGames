@@ -1,0 +1,242 @@
+{
+ "article": "a0261",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/First_observation_of_gravitational_waves",
+   "title": "First observation of gravitational waves – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:17.761Z",
+   "snapshot": "0b638a533aa16c2babd8e5b1abb21b8c02a2f736e230b116aa9d297d84c842fa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Higgs_boson",
+   "title": "Higgs boson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:18.991Z",
+   "snapshot": "b47d31311c9d22ed5bb337b880f56d4685582b8c70311935afb2cf931b91152d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cowan%E2%80%93Reines_neutrino_experiment",
+   "title": "Cowan–Reines neutrino experiment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:19.681Z",
+   "snapshot": "f18189f2bb17facb8e5ca31464f4fc1006e9953d2bffcf6ef98aca063cbb10ee"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate",
+   "title": "Bose–Einstein condensate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:20.814Z",
+   "snapshot": "26635c916f9757b5ef8964aef534003a09b217e13d609cdc502e2df1855cd4a9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Positron",
+   "title": "Positron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:21.757Z",
+   "snapshot": "ddba5847d229715cfa61d61092b2603f3aac280798cd497f5b19f92a2f5d1684"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "gravitational waves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Higgs boson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "neutrino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bose–Einstein condensate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "positron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:20.757Z",
+   "target": "f01301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first direct observation of gravitational waves was made on 14 September 2015 and was announced by the LIGO and Virgo collaborations on 11 February 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gravitational waves” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:20.757Z",
+   "target": "f01302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Higgs boson, sometimes called the Higgs particle, is an elementary particle in the Standard Model of particle physics produced by the quantum excitation of the Higgs field, one of the fields in particle physics theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Higgs boson” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:20.757Z",
+   "target": "f01303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Cowan–Reines neutrino experiment was conducted by physicists Clyde Cowan and Frederick Reines in 1956.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “neutrino” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:20.757Z",
+   "target": "f01304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In condensed matter physics, a Bose–Einstein condensate (BEC) is a state of matter that is typically formed when a gas of bosons at very low densities is cooled to temperatures very close to absolute zero, i.e.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bose–Einstein condensate” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:20.757Z",
+   "target": "f01305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The positron or antielectron is the particle with an electric charge of +1e, a spin of 1/2 ħ (the same as the electron), and the same mass as an electron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “positron” is on the snapshot of s5"
+  }
+ ]
+}

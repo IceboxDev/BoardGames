@@ -1,0 +1,202 @@
+{
+ "article": "a0230",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Buddenbrooks",
+   "title": "Buddenbrooks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:35.143Z",
+   "snapshot": "0b8e778f6ac8156ee2eaa75b5bb5094e78f975ea43637ffd3e828f5d50e97533"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Thomas_Mann",
+   "title": "Thomas Mann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:38:32.681Z",
+   "snapshot": "f14a205ad6c4764ae2e4f45ed035552670bacbf5f91fdc9b35a2d70407c3cd39"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Free_City_of_Danzig",
+   "title": "Free City of Danzig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:36.236Z",
+   "snapshot": "a1b3d6964ebb13c5bb0df06f8889bea64ef665913dd3e070264d4bed304b2455"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Alexanderplatz",
+   "title": "Alexanderplatz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:38:33.610Z",
+   "snapshot": "d08788cbb8825a143a44ef7885a437c804defdc7ae8bfe53fb09f5f6ccd74988"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Buddenbrookhaus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:38:34.375Z",
+   "snapshot": "18324e9c0105135fe1e248d39889c11fdfb721e8e2972da87777b3629856f4f0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lübeck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "München",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Danzig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:15.803Z",
+   "target": "f01146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mann drew deeply from the history of his own family, the Mann family of Lübeck, and their milieu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lübeck” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:15.803Z",
+   "target": "f01148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1894 verließ er als Obersekundaner vorzeitig das Katharineum zu Lübeck und ging nach München, wohin die Mutter schon ein Jahr zuvor mit den Geschwistern gezogen war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “München” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:15.803Z",
+   "target": "f01149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Free City of Danzig (German: Freie Stadt Danzig; Polish: Wolne Miasto Gdańsk) was a city-state under the protection and oversight of the League of Nations between 1920 and 1939, consisting of the Baltic Sea port of Danzig (now Gdańsk, Poland) and nearly 200 other small localities in the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danzig” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:15.803Z",
+   "target": "f01150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Alexanderplatz ist ein Platz am nordöstlichen Rand der historischen Mitte von Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s4"
+  }
+ ]
+}

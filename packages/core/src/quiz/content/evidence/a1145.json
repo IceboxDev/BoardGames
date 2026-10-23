@@ -1,0 +1,242 @@
+{
+ "article": "a1145",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Boule",
+   "title": "Boule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:43:35.389Z",
+   "snapshot": "36d6786237c77d6d17c2783fe421874b67dfe10cae9ebbe3d4312e4ce598942a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/History_of_golf",
+   "title": "History of golf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:39.524Z",
+   "snapshot": "ed60a1dfea28dcc2f751fc7102f5e15c546aa48c68bfca80b9adcc64c0a47dba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tennis_Court_Oath",
+   "title": "Tennis Court Oath – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:40.150Z",
+   "snapshot": "05fc83baf2c5a79d5f1ebde8ab2ce5966e0cf301f7b2ab2dc20944323210f38b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/P%C3%A9tanque",
+   "title": "Pétanque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:36.122Z",
+   "snapshot": "133f7eb17cd29ae46ec261787a723b1a8b8be9ce78316f33236451228f694510"
+  },
+  "s5": {
+   "url": "https://es.wikipedia.org/wiki/Tejo_(deporte)",
+   "title": "Tejo (deporte)",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T04:43:37.379Z",
+   "snapshot": "f8c820f4bd59a84f41953f9af0fe92aff545b4324beefebaf5f457991303d8e4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Boule",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "golf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "jeu de paume",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pétanque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Colombia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-094"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:39.582Z",
+   "target": "f05721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mit Boule (, von französisch la boule „die Kugel“, „der Ball“) oder dem Boule-Spiel werden verschiedene Kugelspielarten bezeichnet (franz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boule” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:39.582Z",
+   "target": "f05722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The origins of golf are unclear and much debated.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “golf” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:39.582Z",
+   "target": "f05723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tennis Court Oath (French: Serment du Jeu de Paume, pronounced [sɛʁmɑ̃ dy ʒø də pom]) was taken on 20 June 1789 by the members of the French Third Estate in the hall of an indoor tennis court in the grounds of Versailles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “jeu de paume” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:39.582Z",
+   "target": "f05725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pétanque (French: [petɑ̃k] , locally in Provence [peˈtãᵑkə]; Occitan: petanca [peˈtaŋkɔ] ; Spanish: petanca [peˈtaŋka]; Catalan: petanca [pəˈtaŋkə]) is a sport that falls into the category of boules sports (along with raffa, bocce, boule lyonnaise, lawn bowls, and crown green bowling).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pétanque” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:39.582Z",
+   "target": "f13949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Es autóctono de la región andina de Colombia y practicado en varios países, en especial en Suramérica.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colombia” is on the snapshot of s5"
+  }
+ ]
+}

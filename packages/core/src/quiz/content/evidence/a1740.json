@@ -1,0 +1,333 @@
+{
+ "article": "a1740",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nuclear_and_radiation_accidents_and_incidents",
+   "title": "Nuclear and radiation accidents and incidents – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:16.597Z",
+   "snapshot": "92415dbe09261449c48cce479411c3888e8d21376cad1f11faeff3a4e92eb4bb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Chernobyl_disaster",
+   "title": "Chernobyl disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:17.634Z",
+   "snapshot": "842dc08ddadbf370afdee794bd2e0f7cba1dc94daaee4f62c1450b6594807caa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fukushima_nuclear_accident",
+   "title": "Fukushima nuclear accident – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:18.542Z",
+   "snapshot": "79817a29543f1142583073952e7787181ccfd2d76d5cdaac2c967e5e37f71428"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Three_Mile_Island_accident",
+   "title": "Three Mile Island accident – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:19.596Z",
+   "snapshot": "625347832b20cc858bd4362f2a028e963a06972004aa554ce807ca2534633d1f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/International_Nuclear_and_Radiological_Event_Scale",
+   "title": "International Nuclear and Radiological Event Scale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:20.388Z",
+   "snapshot": "6ce4d8fc5aaf5c8f49afa78fc6e261a91491b532b28266e5a61f2cc682e43754"
+  },
+  "s6": {
+   "url": "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/safety-of-nuclear-power-reactors",
+   "title": "Safety of Nuclear Power Reactors",
+   "publisher": "World Nuclear Association",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:02.767Z",
+   "snapshot": "466d224a352e23666b03d61497adceb5bf7b8cc6c31f4a1399c9b4381c04007e"
+  },
+  "s7": {
+   "url": "https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html",
+   "title": "Backgrounder on the Three Mile Island Accident",
+   "publisher": "U.S. Nuclear Regulatory Commission",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:03.259Z",
+   "snapshot": "bf2957735154b100205286bb5b38cb55b06a2b4f6a65a3954b031f1f13421585"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chernobyl, Fukushima and Three Mile Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1986",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pennsylvania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "INES",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:15.136Z",
+   "target": "f08696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chernobyl, Fukushima and Three Mile Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Chernobyl, Fukushima and Three Mile Island”, “Tschernobyl, Fukushima und Harrisburg”, “Чернобыль, Фукусима и Три-Майл-Айленд”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:15.136Z",
+   "target": "f08697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 26 April 1986, reactor 4 of the Chernobyl Nuclear Power Plant, located near Pripyat in the Ukrainian SSR of the Soviet Union, exploded.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1986” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:15.136Z",
+   "target": "f08698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 11 March 2011, a major nuclear accident started at the Fukushima Daiichi Nuclear Power Plant in Ōkuma, Fukushima, Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:15.136Z",
+   "target": "f08699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Three Mile Island accident was a partial nuclear meltdown of the Unit 2 reactor (TMI-2) of the Three Mile Island Nuclear Generating Station, located on the Susquehanna River in Londonderry Township, Dauphin County, near Harrisburg, Pennsylvania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pennsylvania” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:15.136Z",
+   "target": "f08700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The International Nuclear and Radiological Event Scale (INES) was introduced in 1990 by the International Atomic Energy Agency (IAEA) in order to enable prompt communication of safety and significant information in case of nuclear accidents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “INES” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:27Z",
+   "target": "f08696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "there have been only three significant accidents at nuclear power plants: Three Mile Island (USA 1979) where the reactor was severely damaged but radiation was contained and there were no adverse health or environmental consequences. Chernobyl (Ukraine 1986)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:21:29Z",
+   "target": "f08696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A combination of equipment malfunctions, design-related problems and worker errors led to TMI-2’s partial meltdown and very small off site releases of radioactivity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:21:31Z",
+   "target": "f08696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "There have been two major reactor accidents in the history of civil nuclear power – Chernobyl and Fukushima Daiichi .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:02.626Z",
+   "target": "f08696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A combination of equipment malfunctions, design-related problems and worker errors led to TMI-2’s partial meltdown and very small off site releases of radioactivity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:02.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

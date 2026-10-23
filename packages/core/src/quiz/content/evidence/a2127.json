@@ -1,0 +1,350 @@
+{
+ "article": "a2127",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Chanel-Kost%C3%BCm",
+   "title": "Chanel-Kostüm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:58.448Z",
+   "snapshot": "45b575a62010b7118b06e0e2921530034f6588cda703f5ef70608d0f39a455a2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Coco_Chanel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:53.175Z",
+   "snapshot": "38f2d2f7e5b850912ff61bf31ed0c99ff783cfc0870bf35de4b5cf0bc6c7a7cf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chanel_No._5",
+   "title": "Chanel No. 5",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:16.239Z",
+   "snapshot": "8d8c7e8047db99e63592187b7f894088aa82d7e619b81dc537e1776e41968509"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ernest_Beaux",
+   "title": "Ernest Beaux – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:01.932Z",
+   "snapshot": "d40fff749dfee0a753b24a4bc684a29b608b38e7fdb4aeb3bbdfd13ece9c6741"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Coco Chanel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Coco Chanel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Five",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-381"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gabrielle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aubazine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ernest Beaux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rue Cambon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Ursprünge des Kostüms liegen in einem Modell mit einer kurzen Cardigan-Jacke, das Coco Chanel bereits 1925 aus englischem Tweed entworfen hatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coco Chanel” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Biographer Justine Picardie, in her 2010 study Coco Chanel: The Legend and the Life, suggests that the fashion designer's nephew, André Palasse, supposedly the only child of her sister Julia-Berthe who had committed suicide, was Chanel's child by Balsan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coco Chanel” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "From her earliest days there, the number five had potent associations for her.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Five” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gabrielle Bonheur \"Coco\" Chanel ( shə-NEL; French: [ɡabʁijɛl bɔnœʁ kɔko ʃanɛl] ; 19 August 1883 – 10 January 1971) was a French fashion designer and businesswoman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gabrielle” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Her father sent his two sons to work as farm labourers and sent his three daughters to the convent of Aubazine, which ran an orphanage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aubazine” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ernest Beaux (French pronunciation: [ɛʁnɛst bo]; 7 December [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernest Beaux” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:27.278Z",
+   "target": "f10664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She became a licensed milliner in 1910 and opened a boutique at 21 rue Cambon, Paris, named Chanel Modes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.278Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rue Cambon” is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:12:37Z",
+   "target": "f10660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "For Chanel, the number five was especially esteemed as signifying the pure embodiment of a thing, its spirit, its mystic meaning.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23",
+   "note": "chanel.com answers 403 to scripted fetches; no second independent source reached this run"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:13.709Z",
+   "target": "f10660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "For Chanel, the number five was especially esteemed as signifying the pure embodiment of a thing, its spirit, its mystic meaning.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  }
+ ]
+}

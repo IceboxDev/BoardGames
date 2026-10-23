@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-088",
+ "image": "IMG20261007182843.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Land hat die längste Küste?",
+   "de": "Welches Land hat die längste Küste?",
+   "en": "Which country has the longest coastline?",
+   "reworked": false,
+   "answerDe": "Kanada",
+   "answerEn": "Canada",
+   "timeline": {
+    "kind": "founding",
+    "start": "1867-07-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Canadian Confederation: the Dominion of Canada is formed",
+    "labelDe": "Kanadische Konföderation: Das Dominion Kanada entsteht"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Geography_of_Canada",
+    "title": "Geography of Canada",
+    "lang": "en"
+   },
+   "notes": "Statistics Canada gives 243,042 km, the world's longest coastline. Timeline: Confederation date (common knowledge, not on the source page).",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Von welchem Berliner Gebäude wurde am 29. Oktober 1923 die erste offizielle deutsche Radiosendung ausgestrahlt: Voxhaus, Phoenixhaus oder Kabelhaus?",
+   "de": "Von welchem Berliner Gebäude wurde am 29. Oktober 1923 die erste offizielle deutsche Radiosendung ausgestrahlt?",
+   "en": "From which Berlin building was the first official German radio broadcast transmitted on 29 October 1923?",
+   "reworked": true,
+   "answerDe": "Voxhaus",
+   "answerEn": "Vox-Haus",
+   "timeline": {
+    "kind": "event",
+    "start": "1923-10-29",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First official German entertainment radio broadcast from the Vox-Haus in Berlin",
+    "labelDe": "Erste offizielle deutsche Unterhaltungsrundfunksendung aus dem Vox-Haus in Berlin"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Funk-Stunde_Berlin",
+    "title": "Funk-Stunde Berlin",
+    "lang": "de"
+   },
+   "notes": "Opening words: „Achtung, Achtung! Hier ist die Sendestelle Berlin im Voxhaus auf Welle 400 Meter.“",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die älteste Porzellanmanufaktur Europas befindet sich im französischen Sèvres. Richtig oder falsch?",
+   "de": "In welcher Stadt befindet sich die älteste Porzellanmanufaktur Europas?",
+   "en": "In which town is Europe's oldest porcelain manufactory located?",
+   "reworked": true,
+   "answerDe": "Meißen",
+   "answerEn": "Meissen",
+   "timeline": {
+    "kind": "founding",
+    "start": "1710",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Founding of the royal porcelain manufactory at Meissen, Saxony",
+    "labelDe": "Gründung der Königlichen Porzellan-Manufaktur in Meißen, Sachsen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Meissener_Porzellan",
+    "title": "Meissener Porzellan",
+    "lang": "de"
+   },
+   "notes": "The card's statement (Sèvres) is false; Meissen (founded 1710) is the oldest.",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 4,
+   "cardDe": "Ein Jamais-vu ist das Gegenteil eines Déjà-vu. Richtig oder falsch?",
+   "de": "Wie nennt man das Gegenteil eines Déjà-vu, bei dem eigentlich Bekanntes plötzlich völlig fremd erscheint?",
+   "en": "What is the opposite of a déjà vu called, in which something actually familiar suddenly seems completely strange?",
+   "reworked": true,
+   "answerDe": "Jamais-vu",
+   "answerEn": "Jamais vu",
+   "timeline": {
+    "kind": "creation",
+    "start": "1876",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The French philosopher Émile Boirac first uses the term déjà vu",
+    "labelDe": "Der französische Philosoph Émile Boirac verwendet erstmals den Begriff Déjà-vu"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Jamais-vu",
+    "title": "Jamais-vu",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true. Timeline dates the coinage of 'déjà vu' (en.wikipedia 'Déjà vu'); jamais vu has no clear date of its own.",
+   "domain": "literature",
+   "sub": "language"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Schriftfarbe wird nicht für deutsche Kfz-Kennzeichen verwendet: Rot, Blau oder Grün?",
+   "de": "In welcher Schriftfarbe sind in Deutschland die Kfz-Kennzeichen steuerbefreiter Fahrzeuge gedruckt?",
+   "en": "In Germany, what colour is the lettering on the number plates of tax-exempt vehicles?",
+   "reworked": true,
+   "answerDe": "Grün",
+   "answerEn": "Green",
+   "timeline": {
+    "kind": "event",
+    "start": "1956",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "West German number plates switch to black lettering on a white background (DIN plates)",
+    "labelDe": "Westdeutsche Kfz-Kennzeichen werden einheitlich schwarz auf weißem Grund (DIN-Kennzeichen)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Kfz-Kennzeichen_(Deutschland)",
+    "title": "Kfz-Kennzeichen (Deutschland)",
+    "lang": "de"
+   },
+   "notes": "Card's answer: blue is not used (red = short-term/dealer plates, green = tax-exempt vehicles). Reworked to the green plates.",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie schmeckt Chinin: sauer, salzig oder bitter?",
+   "de": "Wie schmeckt Chinin?",
+   "en": "What does quinine taste like?",
+   "reworked": true,
+   "answerDe": "Bitter",
+   "answerEn": "Bitter",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1820",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pelletier and Caventou isolate quinine from cinchona bark",
+    "labelDe": "Pelletier und Caventou isolieren Chinin aus der Chinarinde"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Chinin",
+    "title": "Chinin",
+    "lang": "de"
+   },
+   "notes": "Used as the bitter agent in tonic water and bitter lemon.",
+   "domain": "science",
+   "sub": "chemistry"
+  }
+ ]
+}

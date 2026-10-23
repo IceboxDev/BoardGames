@@ -1,0 +1,426 @@
+{
+ "article": "a2155",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Light_pollution",
+   "title": "Light pollution",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:54.114Z",
+   "snapshot": "a84b4f8501e5c13c9c5338b2b3ef0c104e95103a1ed0160ac2902234a4e65c8d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bortle_scale",
+   "title": "Bortle scale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:54.859Z",
+   "snapshot": "b278a34ae2a6b5356d006cf1f706e00e3ede6066ee7a0e1e666a9f8e6c585924"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/DarkSky_International",
+   "title": "DarkSky International – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:55.902Z",
+   "snapshot": "1057b4a528d4afd848efae06700ab6ea62b735ddc2205f7240c7978b63d944d3"
+  },
+  "s4": {
+   "url": "https://www.nps.gov/waca/learn/news/flagstaff-international-dark-sky-parks.htm",
+   "title": "Flagstaff National Monuments Named International Dark Sky Parks – National Park Service",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:00.771Z",
+   "snapshot": "5c56d81ca344c794b81739d7fd61ed05e6fdb749827febf472f5a22a55152721"
+  },
+  "s5": {
+   "url": "https://www.hcn.org/issues/issue-216/stargazers-defend-darkness-in-arizona/",
+   "title": "Stargazers defend darkness in Arizona – High Country News",
+   "publisher": "High Country News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:02.505Z",
+   "snapshot": "c66b6623cc31a7fad299a46c77e5f3483179edca298cbff1db4f1e94a63a01e8"
+  },
+  "s6": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4928945/",
+   "title": "The new world atlas of artificial night sky brightness (Falchi et al., Science Advances 2016)",
+   "publisher": "Science Advances (AAAS)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:01.671Z",
+   "snapshot": "58ce15e31c5f626dfaac77a7d48ac207313bdf00186882f8c1a0f8439e456d1a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Light pollution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-198"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bortle scale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flagstaff",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "International Dark-Sky Association",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Singapore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:31.117Z",
+   "target": "f10880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Light pollution is the alteration of the natural patterns of light and dark in ecosystems, resulting from the unnecessary and inefficient use of artificial lighting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Light pollution” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:31.117Z",
+   "target": "f10881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Bortle dark-sky scale (usually referred to as simply the Bortle scale) is a nine-level numeric scale that measures the night sky's brightness of a particular location.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bortle scale” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:31.117Z",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flagstaff, Arizona, United States, designated 2001",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flagstaff” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:31.117Z",
+   "target": "f10883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "DarkSky International, formerly the International Dark-Sky Association (IDA), is a United States–based nonprofit organization incorporated in 1988 by founders David Crawford, a professional astronomer, and Tim Hunter, a physician and amateur astronomer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “International Dark-Sky Association” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:31.117Z",
+   "target": "f10884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Singapore was found to be the most light-polluted country in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Singapore” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:19Z",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 2001 Flagstaff became the first International Dark Sky City",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "The title was \"International Dark Sky City\" in 2001; the category is now called Dark Sky Community. Wording/body updated to say so."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:21Z",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Flagstaff becomes the first “International Dark-Sky City”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:25Z",
+   "target": "f10884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the most light-polluted country is Singapore, where the entire population lives under skies so bright that the eye cannot fully dark-adapt to night vision",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:09:28Z",
+   "target": "f10884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Singapore was found to be the most light-polluted country in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:17.701Z",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 2001 Flagstaff became the first International Dark Sky City",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:17.701Z",
+   "target": "f10884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the most light-polluted country is Singapore, where the entire population lives under skies so bright that the eye cannot fully dark-adapt to night vision",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:17.701Z",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flagstaff Area National Monuments Awarded International Dark Sky Park Designation - Walnut Canyon National Monument (U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Flagstaff” is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:17.701Z",
+   "target": "f10882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "GLARE: The Flagstaff Texaco station emits a dimglow from recessed fixtures.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Flagstaff” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:17.701Z",
+   "target": "f10884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On the other side, the most light-polluted country is Singapore, where the entire population lives under skies so bright that the eye cannot fully dark-adapt to night vision.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.701Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Singapore” is on the snapshot of s6"
+  }
+ ]
+}

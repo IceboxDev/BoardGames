@@ -1,0 +1,364 @@
+{
+ "article": "a1762",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Union_Jack",
+   "title": "Union Jack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:47.599Z",
+   "snapshot": "e8c0fc44094770a039d740858a609c0b75ea65087d8b7b6e5b00d7598e4bb60a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_the_United_States",
+   "title": "Flag of the United States – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:21.991Z",
+   "snapshot": "503f4999222bf85b2f9779ad95a010bd931c0e369693d550ad39a1eb643daad4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_France",
+   "title": "Flag of France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:48.371Z",
+   "snapshot": "31244a7645d71de66e2af5b249861187e7dabf57272d7aee3f0a1c8ef8166802"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Act_on_National_Flag_and_Anthem",
+   "title": "Act on National Flag and Anthem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:50.517Z",
+   "snapshot": "f7e585aa5119214d4799b43c96b5566f9a935b76bdd8698d4cbda8415104dbf9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dannebrog",
+   "title": "Dannebrog",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:50.502Z",
+   "snapshot": "775fb1a3e954732c4bc15e896d9b0f714a57f7a1ba49f741d150aedaf1b81afb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_Denmark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:51.455Z",
+   "snapshot": "775fb1a3e954732c4bc15e896d9b0f714a57f7a1ba49f741d150aedaf1b81afb"
+  },
+  "s7": {
+   "url": "https://www.guinnessworldrecords.com/world-records/oldest-continuously-used-national-flag",
+   "title": "Oldest continuously used national flag",
+   "publisher": "Guinness World Records",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:13.267Z",
+   "snapshot": "fdb6bd09c560a935af1e1dca46cc2e8c5f037cd78ab608021687556f3a7ac7c4"
+  },
+  "s8": {
+   "url": "https://da.wikipedia.org/wiki/Dannebrog",
+   "title": "Dannebrog – Wikipedia, den frie encyklopædi",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:42:13.456Z",
+   "snapshot": "b39bdc488f845e028178757322526366b623fc9438a0675b20da81b7ac0f595f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Union Jack",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c147"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08807",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stars and Stripes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08809",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tricolour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hinomaru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Denmark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-147"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:18.202Z",
+   "target": "f08806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Union Jack or Union Flag is the national flag of the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Union Jack” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:18.202Z",
+   "target": "f08807",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Well-known nicknames for the flag include \"the Stars and Stripes\", \"Old Glory\", \"the Star-Spangled Banner\", and \"the Red, White and Blue\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stars and Stripes” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:18.202Z",
+   "target": "f08809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The national flag of France (French: Drapeau national de la France) is a tricolour featuring three vertical bands coloured blue (hoist side), white, and red.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tricolour” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:18.202Z",
+   "target": "f08810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The nisshōki (日章旗) flag, commonly referred to as the hinomaru (日の丸), had represented Japan unofficially since 1870; \"Kimigayo\" (君が代) had been used as Japan's de facto anthem since 1880.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hinomaru” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:18.202Z",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "'Red cloth') is the flag of the Kingdom of Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Denmark” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:35Z",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The oldest continuously used national flag is that of Denmark.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Guinness addresses the Scottish Saltire counter-claim and, citing the Flag Institute, judges the balance of evidence to favour Denmark."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:44:38Z",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Dannebrog, verdens ældste nationalflag, der stadig er i brug.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:05.784Z",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The oldest continuously used national flag is that of Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.784Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:05.784Z",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The oldest continuously used national flag is that of Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.784Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Denmark” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:05.784Z",
+   "target": "f12007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Janus Møller Jensen: Denmark and the Crusades, 1400-1650.",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.784Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Denmark” is on the snapshot of s8"
+  }
+ ]
+}

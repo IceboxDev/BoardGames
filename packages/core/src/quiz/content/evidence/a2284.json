@@ -1,0 +1,347 @@
+{
+ "article": "a2284",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Moulin_Rouge",
+   "title": "Moulin Rouge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:25.868Z",
+   "snapshot": "d819570dfcfb7ce977f161a7b22254f46e7544b52eb974ecff059e683ae65ad8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Eiffelturm",
+   "title": "Eiffelturm",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:26.773Z",
+   "snapshot": "7941521b7c91eae9f0bfc39cee7a109b22d6979e19158621808d5b8014f54c56"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Marie_Curie",
+   "title": "Marie Curie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:27.671Z",
+   "snapshot": "e1a6e3b302f8edb363cc4c4636771f31ce26a040060cbccb946ba3db7eea4ad2"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Flughafen_Paris-Charles-de-Gaulle",
+   "title": "Flughafen Paris-Charles-de-Gaulle",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:28.631Z",
+   "snapshot": "100bb28ccdda37957b18cda8669b032f0d26fa18f2a713bbfca3dba028a39dbb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris",
+   "title": "Sacré-Cœur, Paris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:26.186Z",
+   "snapshot": "9592c19a2e8274e4d2f9caebc4f9be068ab8f9d7b7df9d1bcc3ac4d88e33cfdb"
+  },
+  "s6": {
+   "url": "https://www.france.fr/en/paris/article/eiffel-tower",
+   "title": "Eiffel Tower, the Iron Lady",
+   "publisher": "France.fr (Atout France, French tourism agency)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:52.414Z",
+   "snapshot": "411ef8b300a10fe729351aaf57eb5211b3e551ff0d1997c37e7420f05f63a4dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Moulin Rouge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eiffelturm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-014"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-137"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flughafen Paris-Charles-de-Gaulle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-285"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sacré-Cœur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:48.206Z",
+   "target": "f11777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Moulin Rouge [mu.lɛ̃ ʁuʒ] (deutsch: Rote Mühle) ist ein Varieté im Pariser Stadtviertel Montmartre an der Place Blanche (Adresse Boulevard de Clichy Nr.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moulin Rouge” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:48.206Z",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Eiffelturm (französisch Tour Eiffel, [tuʁ‿ɛˈfɛl] ) ist ein 330 Meter hoher Eisenfachwerkturm in Paris.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eiffelturm” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:48.206Z",
+   "target": "f11779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Da Frauen dort nicht zum Studium zugelassen wurden, zog sie nach Paris und begann Ende 1891 ein Studium an der Sorbonne, das sie mit Lizenziaten in Physik und Mathematik beendete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:48.206Z",
+   "target": "f11780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Flughafen Paris-Charles-de-Gaulle (IATA-Code: CDG, ICAO-Code: LFPG, auch Roissy) ist vor Paris-Orly der größte internationale Verkehrsflughafen der französischen Hauptstadt Paris sowie mit 72,0 Millionen Passagieren im Jahr 2025 nach London Heathrow und Istanbul der drittgrößte",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flughafen Paris-Charles-de-Gaulle” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:48.206Z",
+   "target": "f11781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Basilica of the Sacred Heart of Montmartre (French: Basilique du Sacré-Cœur de Montmartre), commonly known as Sacré-Cœur Basilica (French: Basilique du Sacré-Cœur) or simply Sacré-Cœur (French: Sacré-Cœur, pronounced [sakre kœr]), is a Catholic church and minor basilica in Paris dedicated to the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sacré-Cœur” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:52Z",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Iron Lady remains the most visited monument in the world throughout time.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:54Z",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "der den Spitznamen la dame de fer (deutsch: die eiserne Dame) erhielt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:33.359Z",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Iron Lady remains the most visited monument in the world throughout time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:33.359Z",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "der den Spitznamen la dame de fer (deutsch: die eiserne Dame) erhielt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:33.359Z",
+   "target": "f11778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "World icon and quintessential symbol of Paris and of France, the Eiffel Tower dazzles her visitors from all over the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eiffel Tower” is on the snapshot of s6"
+  }
+ ]
+}

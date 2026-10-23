@@ -1,0 +1,249 @@
+{
+ "article": "a2115",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sebasti%C3%A3o_Salgado",
+   "title": "Sebastião Salgado – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:21.893Z",
+   "snapshot": "1400b98b452d90caf978e8b0b2995a4b4a9bbe979c362ed037e3d07234290cd7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/War_Photographer",
+   "title": "War Photographer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:22.797Z",
+   "snapshot": "089fa57d8125cba4b4fbc52e87964416cf0c111c6c17b89111f1d531e54d8d52"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vivian_Maier",
+   "title": "Vivian Maier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:23.897Z",
+   "snapshot": "5f190465a516e06262031aba50e20222fe015b96c4d09abfb20143d39ab27b09"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Newton",
+   "title": "Helmut Newton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:24.787Z",
+   "snapshot": "f51dddbb6c00d2df156d3445523337f80bb9fb2888f1e1dacfb2917ad21cda59"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Annie_Leibovitz",
+   "title": "Annie Leibovitz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:25.889Z",
+   "snapshot": "ec0afa5f9d00fc72346d5fcff64b031d3894cd971b172f8f496e2baec95b2b22"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/James_Nachtwey",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:26.824Z",
+   "snapshot": "36c1231e947a0d43c3877422dbc934266aa191e1f42393ecfd50880ff589fa45"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sebastião Salgado",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Nachtwey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vivian Maier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10574",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helmut Newton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Annie Leibovitz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:24.975Z",
+   "target": "f10571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sebastião Salgado was born on 8 February 1944, in Aimorés, in the Brazilian state of Minas Gerais.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sebastião Salgado” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:24.975Z",
+   "target": "f10572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "War Photographer is a documentary by Christian Frei about the photographer James Nachtwey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Nachtwey” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:24.975Z",
+   "target": "f10573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Her life and work have been the subject of books, music and documentary films, including the film Finding Vivian Maier (2013), which premiered at the Toronto International Film Festival, and was nominated for the Academy Award for Best Documentary Feature at the 87th Academy Awards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vivian Maier” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:24.975Z",
+   "target": "f10574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helmut Newton (né Neustädter; 31 October 1920 – 23 January 2004) was a German-Australian photographer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Newton” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:24.975Z",
+   "target": "f10575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The retrospective was based on her book, Annie Leibovitz: A Photographer's Life, 1990–2005 and included many of her professional (celebrity) photographs and numerous personal photographs of her family, children, and partner Susan Sontag.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Annie Leibovitz” is on the snapshot of s5"
+  }
+ ]
+}

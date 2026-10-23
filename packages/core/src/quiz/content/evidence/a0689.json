@@ -1,0 +1,642 @@
+{
+ "article": "a0689",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Skat_(card_game)",
+   "title": "Skat (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:06.667Z",
+   "snapshot": "b6a25ef28d2a1c74237df8db432488bdcddc12364e34de0b872f6446ba0ff836"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Skat",
+   "title": "Skat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:09.202Z",
+   "snapshot": "5c562c051a84473cad566dde83a1628ddf13414de5166672a452f0e79cfc64a8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Geschichte_des_Skatspiels",
+   "title": "Geschichte des Skatspiels – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:18.531Z",
+   "snapshot": "d2309a323819582c80d813341de4f8a169d17413589862154f8f96413ae40835"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Deutscher_Skatverband",
+   "title": "Deutscher Skatverband – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:19.458Z",
+   "snapshot": "46ad27a2234e0b06b19d001756fecdcda4a551c5fc37afd04c969ab6361a416c"
+  },
+  "s5": {
+   "url": "https://www.pagat.com/schafk/skat.html",
+   "title": "Skat – Card Game Rules (pagat.com)",
+   "publisher": "pagat.com (John McLeod)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:07.675Z",
+   "snapshot": "30b4ea88607958bc45846974d2c206f868d070c6a5458355661f43bf7f8f9570"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Null",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schneider",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schwarz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Handspiel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:27.070Z",
+   "target": "f03441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A central aspect of the game is the three coexisting varieties called \"suit\", \"grand\" and \"null\" games, that differ in suit order, scoring and even overall goal to achieve.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grand” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:27.070Z",
+   "target": "f03442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bei Null gibt es keine „Spitzen“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Null” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:27.070Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schneider",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Schneider”, “шнайдер”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:27.070Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schwarz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Schwarz”, “шварц”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:27.070Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Handspiel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Handspiel”, “Hand game”, “хэнд”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:45:40Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If the declarer's opponents take 30 points or fewer in tricks, they are Schneider .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:45:42Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "2 = Schneider (Gegenpartei oder Solist bekommen nur 30 oder weniger Augen)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:45:44Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If they take no tricks at all, they are Schwarz .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:45:45Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "3 = Schwarz (Gegenpartei oder Solist bekommt keinen Stich )",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:45:47Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If you don't look at the skat you are playing a hand game",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:45:48Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bei einem Handspiel bleibt der Skat bis zum Ende des Spiels verdeckt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:47:59Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If the declarer's opponents take 30 points or fewer in tricks, they are Schneider.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:48:01Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If they take no tricks at all, they are Schwarz.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:48:02Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "3 = Schwarz (Gegenpartei oder Solist bekommt keinen Stich)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "2 = Schneider (Gegenpartei oder Solist bekommen nur 30 oder weniger Augen)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If you don't look at the skat you are playing a hand game",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bei einem Handspiel bleibt der Skat bis zum Ende des Spiels verdeckt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If the declarer's opponents take 30 points or fewer in tricks, they are Schneider.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If they take no tricks at all, they are Schwarz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "3 = Schwarz (Gegenpartei oder Solist bekommt keinen Stich)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s2"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "2 = Schneider (Gegenpartei oder Solist bekommen nur 30 oder weniger Augen)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schneider” is on the snapshot of s2"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If you are declarer in a Suit Hand or Grand Hand game, you can increase the value of the game by announcing Schneider (undertaking to win at least 90 card points), or Schwarz (undertaking to win all the tricks), or Open (Ouvert) (undertaking to win all the tricks with your cards exposed).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schneider” is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "3 = Schwarz (Gegenpartei oder Solist bekommt keinen Stich)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwarz” is on the snapshot of s2"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If you are declarer in a Suit Hand or Grand Hand game, you can increase the value of the game by announcing Schneider (undertaking to win at least 90 card points), or Schwarz (undertaking to win all the tricks), or Open (Ouvert) (undertaking to win all the tricks with your cards exposed).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwarz” is on the snapshot of s5"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bei einem Handspiel bleibt der Skat bis zum Ende des Spiels verdeckt und wird im Fall eines Farbspiels oder Grand bei Spielwertberechnung berücksichtigt und bei der Augenzählung zu den Stichen des Alleinspielers ebenso wie die gedrückten Karten bei einem gewöhnlichen Spiel hinzugezählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Handspiel” is on the snapshot of s2"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:55.356Z",
+   "target": "f03445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If you don't look at the skat you are playing a hand game, and again there are",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hand game” is on the snapshot of s5"
+  }
+ ]
+}

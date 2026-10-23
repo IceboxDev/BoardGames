@@ -1,0 +1,362 @@
+{
+ "article": "a1811",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Capon",
+   "title": "Capon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:03.447Z",
+   "snapshot": "67cb2727e17721a4b1509e4e15ab92e019a6d64eb512b4c9d62285b22abea412"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cattle",
+   "title": "Cattle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:04.514Z",
+   "snapshot": "310d87f1a128c51fa58a3650bc736b57b3d45626826d153daf81a6f8f6b96323"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wether_(ruminant)",
+   "title": "Wether (ruminant) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:05.495Z",
+   "snapshot": "603a8ec1d6d7f8fe06445c6bb2d86691934fa17ee6ac21d3a887801db11d421e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bresse_chicken",
+   "title": "Bresse chicken – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:12.905Z",
+   "snapshot": "6e8b187a6d6f572e6ae251068d1ea02502ff947b085e77441243d5775e735bcd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Heifer_International",
+   "title": "Heifer International – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:13.908Z",
+   "snapshot": "3fea5d3be351855aab17afe73b52c6937fd1835dccaef4a1a259e0e2f178f60e"
+  },
+  "s6": {
+   "url": "https://en.wiktionary.org/wiki/gelding",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:02.926Z",
+   "snapshot": "c2e2d8f22fc4e61d5c0d721d7d6b1ec797054f689023b2b2f05cb22f89c6545b"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=ox",
+   "title": "ox – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:39.543Z",
+   "snapshot": "fcd731b81c6b1e83608d77e3e064d1711c8644fd58268d775430859250d0f16e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Ox",
+   "title": "Ox – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:39.590Z",
+   "snapshot": "03a195ac2a9157b82897c4376a2e2eec6928322e37d2dc0efef3b663a460c669"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Capon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "an ox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "bellwether",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bresse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Heifer International",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:26.236Z",
+   "target": "f09051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A capon (from Latin: cāpō, genitive cāpōnis) is a male chicken that has been castrated or neutered, either physically or chemically, to improve the quality of its flesh for food, and, in some countries like Spain, fattened by forced feeding.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Capon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:26.236Z",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "an ox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“an ox”, “Ochse”, “вол”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:26.236Z",
+   "target": "f23000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The related term bellwether originated somewhat later, in the 15th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bellwether” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:26.236Z",
+   "target": "f23001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The poulet de Bresse or volaille de Bresse is a French chicken product which has both appellation d'origine contrôlée and European Union protected designation of origin status, as Volaille de Bresse / Poulet de Bresse / Poularde de Bresse / Chapon de Bresse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bresse” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:26.236Z",
+   "target": "f23002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Heifer International (also known as Heifer Project International) is a nonprofit organization based in Little Rock, Arkansas, that works to address poverty and food insecurity in developing regions by distributing livestock and providing agricultural training to families in need.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heifer International” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:33Z",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An adult castrated bull of the genus Bos, especially B. taurus, used chiefly as a draft animal.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:07:35Z",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Oxen are commonly castrated adult male cattle, because castration inhibits testosterone and aggression",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:14.182Z",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An adult castrated bull of the genus Bos, especially B. taurus, used chiefly as a draft animal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:14.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:14.182Z",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Oxen are commonly castrated adult male cattle, because castration inhibits testosterone and aggression",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:14.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:14.182Z",
+   "target": "f09052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "An ox (pl.: oxen), also known as a steer or bullock (in British, Australian, and Indian English), is a large bovine, trained and used as a draft animal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:14.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “an ox” is on the snapshot of s8"
+  }
+ ]
+}

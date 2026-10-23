@@ -1,0 +1,287 @@
+{
+ "article": "a1109",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Backgammon",
+   "title": "Backgammon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:19.190Z",
+   "snapshot": "5213d156419e57dc7b07bd5a4179a2d7469fb1273cdf50979eb8482c6802f4a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Scachs_d%27amor",
+   "title": "Scachs d'amor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:20.160Z",
+   "snapshot": "832338ba7ac7949e27a4c2e35665416bba939ace044a440829ae61253b7696bd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+   "title": "AlphaGo versus Lee Sedol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:21.221Z",
+   "snapshot": "5cb529ef89b9f71c00d523a7e203d8a836309e002972e211c9ff0eb9e5eb9a97"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Go_(game)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:22.499Z",
+   "snapshot": "53d58abf68b1b24eece90081b65c9df1acefda3f195ea3b9566682eb027117bb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Monopoly_(game)",
+   "title": "Monopoly (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:20.493Z",
+   "snapshot": "1e96f963cbc6c8c28b982d842194fd7856099617a60a98a5a6d31c96f2fa1f05"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Catan",
+   "title": "Catan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:01.408Z",
+   "snapshot": "9a26392b2d36ed52d5115cf07c97eda50bef3908e188b2d9ed66638f32339e68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "backgammon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "chess",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the game of Go",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the game of Go",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Monopoly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Catan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:34.086Z",
+   "target": "f05541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Backgammon is a two-player board game played with counters and dice on tables boards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “backgammon” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:34.086Z",
+   "target": "f05542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scachs d'amor (Valencian: [esˈkagz ðaˈmoɾ], meaning \"Chess of Love\"), whose complete title is Hobra intitulada scachs d'amor feta per don Francí de Castellví e Narcis Vinyoles e mossén Fenollar, is the name of a poem written by Francesc de Castellví, Bernat Fenollar, and Narcís Vinyoles, published",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chess” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:34.086Z",
+   "target": "f05543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the game of Go",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the game of Go”, “das Go-Spiel”, “игра го”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:34.086Z",
+   "target": "f05543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "When he moved to New York, Lasker founded the New York Go Club together with (amongst others) Arthur Smith, who had learned of the game in Japan while touring the East and had published the book The Game of Go in 1908.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the game of Go” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:34.086Z",
+   "target": "f05544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Monopoly is a multiplayer economics-themed board game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monopoly” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:34.086Z",
+   "target": "f05545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Catan (), previously known as The Settlers of Catan or simply Settlers, is a multiplayer board game designed by Klaus Teuber.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catan” is on the snapshot of s6"
+  }
+ ]
+}

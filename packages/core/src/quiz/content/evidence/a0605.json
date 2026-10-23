@@ -1,0 +1,384 @@
+{
+ "article": "a0605",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Ludwig_Jahn",
+   "title": "Friedrich Ludwig Jahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:39.163Z",
+   "snapshot": "5d36a2b0a14a468c2b4d951b36f65db9cf0bba377045e7153b7ff5b19070ca80"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Johann_Christoph_Friedrich_GutsMuths",
+   "title": "Johann Christoph Friedrich GutsMuths – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:42.363Z",
+   "snapshot": "93159ce7103ebf39e0f1fe8202dda4edb4c68a6312e5cab567b1dc4ce38fc370"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pehr_Henrik_Ling",
+   "title": "Pehr Henrik Ling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:43.380Z",
+   "snapshot": "5566c0e29fd31d3d57b156e5bb81c1f4335ca06e91ad0fe73f63638c77e6565f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/International_Olympic_Committee",
+   "title": "International Olympic Committee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:44.622Z",
+   "snapshot": "b5aeb7d786e631c7eb7a48c7373ecb955bfb2b0612a5483d6fbe5f0f715909ed"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/James_Naismith",
+   "title": "James Naismith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:22.277Z",
+   "snapshot": "7c531102663ebf05154dae958fc9549670d3acd528f27e7ea5137022f946c106"
+  },
+  "s6": {
+   "url": "https://jahn-museum.de/friedrich-ludwig-jahn/",
+   "title": "Friedrich Ludwig Jahn – Friedrich-Ludwig-Jahn-Museum Freyburg",
+   "publisher": "Friedrich-Ludwig-Jahn-Museum",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:27.033Z",
+   "snapshot": "b3016a3ae56e5dd311d3054c4f6b643e9ac83751f7487ec94c9015e3d0aa07be"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Ludwig Jahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johann Christoph Friedrich GutsMuths",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pehr Henrik Ling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pierre de Coubertin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "James Naismith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:13.033Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Ludwig Jahn, Sohn des evangelischen Pfarrers Alexander Friedrich Jahn (1742–1811) und dessen Frau, der Pfarrerstochter Dorothea Sofia, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Ludwig Jahn” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:13.033Z",
+   "target": "f03022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johann Christoph Friedrich GutsMuths, also called Guts Muth or Gutsmuths (9 August 1759 – 21 May 1839), was a teacher and educator in Germany, and is especially known for his role in the development of physical education.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Christoph Friedrich GutsMuths” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:13.033Z",
+   "target": "f03023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pehr Henrik Ling (15 November 1776 – 3 May 1839) pioneered the teaching of physical education and gymnastics in Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pehr Henrik Ling” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:13.033Z",
+   "target": "f03024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Founded in 1894 by Pierre de Coubertin and Demetrios Vikelas, it is based in Lausanne, Switzerland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pierre de Coubertin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:13.033Z",
+   "target": "f03025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "James Naismith ( NAY-smith; November 6, 1861 – November 28, 1939) was a Canadian-American physical educator, physician, Christian chaplain, and sports coach, best known as the inventor of the game of basketball.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.033Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Naismith” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:43:58Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Am 18. Juni eröffnet Jahn den ersten öffentlichen Turnplatz in der Berliner Hasenheide und initiiert damit die deutsche Turnbewegung",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Museum gives 18 June 1811; de.wikipedia gives 19 June 1811 — the year and place agree."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:44:00Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Hasenheide war der erste deutsche Turnplatz , der mit Geräten nach dem Vorbild von GutsMuths ausgestattet wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:44:02Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Am 19. Juni 1811 begann er am Treffpunkt der Schüler- und Freundesgruppe mit dem öffentlichen Turnen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:47:55Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Hasenheide war der erste deutsche Turnplatz, der mit Geräten nach dem Vorbild von GutsMuths ausgestattet wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:39.443Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Am 18. Juni eröffnet Jahn den ersten öffentlichen Turnplatz in der Berliner Hasenheide und initiiert damit die deutsche Turnbewegung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:39.443Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Hasenheide war der erste deutsche Turnplatz, der mit Geräten nach dem Vorbild von GutsMuths ausgestattet wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:39.443Z",
+   "target": "f03021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Friedrich Ludwig Jahn – Friedrich-Ludwig-Jahn-Museum",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Friedrich Ludwig Jahn” is on the snapshot of s6"
+  }
+ ]
+}

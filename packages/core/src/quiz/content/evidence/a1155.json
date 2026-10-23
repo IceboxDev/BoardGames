@@ -1,0 +1,417 @@
+{
+ "article": "a1155",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tomb_of_Tutankhamun",
+   "title": "Tomb of Tutankhamun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:12.439Z",
+   "snapshot": "f96ea9e15a2062b9801285ed52a5dd56c53bf64b3743a24095661ce0823adb14"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tomb_of_Nefertari",
+   "title": "Tomb of Nefertari – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:13.222Z",
+   "snapshot": "1c449128f9b8165072e51a8de558c6bec0c26ab334f50a404bac9a81d5cef058"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Karnak",
+   "title": "Karnak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:14.292Z",
+   "snapshot": "f08f80580f74f3f985875e377de1c67b4721259059e77ec3d1ab22041257c97d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Abu_Simbel",
+   "title": "Abu Simbel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:15.293Z",
+   "snapshot": "9fe9553b4e94921412c03385aaf268439f5b9e39343e27971c074309e1640b77"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Cheops-Pyramide",
+   "title": "Cheops-Pyramide",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:13.036Z",
+   "snapshot": "c19367f15bfef5c815d14bad58cf61144e4010324c8aeffd92480d0ee2e46774"
+  },
+  "s6": {
+   "url": "https://thebanmappingproject.com/articles/tomb-numbering-systems-valley-kings",
+   "title": "Tomb Numbering Systems in the Valley of the Kings | Theban Mapping Project",
+   "publisher": "Theban Mapping Project (American University in Cairo)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:21:08Z"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/87/",
+   "title": "Ancient Thebes with its Necropolis - UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:21:10Z"
+  },
+  "s8": {
+   "url": "https://thebanmappingproject.com/valley-kings",
+   "title": "Valley of the Kings | Theban Mapping Project",
+   "publisher": "Theban Mapping Project (American University in Cairo)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:21:12Z"
+  },
+  "s9": {
+   "url": "https://www.mentalfloss.com/culture/architecture/7-surprising-buildings-were-once-worlds-tallest",
+   "title": "7 Surprising Buildings That Were Once the World's Tallest | Mental Floss",
+   "publisher": "Mental Floss",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:18.371Z",
+   "snapshot": "d99bd3cdbe863790d4fdfcf0d49aff8fb503b7567172d107a6fc70c79acd102b"
+  },
+  "s10": {
+   "url": "https://www.guinnessworldrecords.com/world-records/tallest-pyramid",
+   "title": "Tallest pyramid | Guinness World Records",
+   "publisher": "Guinness World Records",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:18.654Z",
+   "snapshot": "25198c89a9062085be72960a1af752a2391a59c9e4faa253710eb901743e8347"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Valley of the Kings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Valley of the Queens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luxor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abu Simbel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cheops-Pyramide",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-387"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.903Z",
+   "target": "f05771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1332–1323 BC), a pharaoh of the Eighteenth Dynasty of ancient Egypt, is located in the Valley of the Kings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valley of the Kings” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.903Z",
+   "target": "f05772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "QV66 is the tomb of Nefertari, the Great Wife of Pharaoh Ramesses II, in Egypt's Valley of the Queens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valley of the Queens” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.903Z",
+   "target": "f05773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Karnak Temple Complex, commonly known as Karnak (), comprises a vast mix of temples, pylons, chapels, and other buildings near Luxor, Egypt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luxor” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:40.903Z",
+   "target": "f05775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel (Arabic: أبو سمبل), Aswan Governorate, Upper Egypt, near the border with Sudan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abu Simbel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:40.903Z",
+   "target": "f10636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Cheops-Pyramide ([ˈkeːɔps]) ist die älteste und größte der drei Pyramiden von Gizeh und wird deshalb auch als „Große Pyramide“ bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cheops-Pyramide” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:08Z",
+   "target": "f05771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The present numbering system for the sixty-five tombs in the Valley of the Kings was first established by John Gardiner Wilkinson in 1827",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "65 numbered tombs (KV65 announced 2019); body and printed wording updated from 64."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:21:10Z",
+   "target": "f05771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the necropolises of the Valley of the Kings and the Valley of the Queens",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:21:12Z",
+   "target": "f05771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "62 Tutankhamen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "TMP tomb list: KV62 = Tutankhamun."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:21:15Z",
+   "target": "f10636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "breaking its run as the world’s tallest building after a staggering 3800 years",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "About 3,800 years (until Lincoln Cathedral's spire, 1311); the card's 'around 4,000 years' is a round figure, as the body explains."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:21:18Z",
+   "target": "f10636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The pyramid of Khufu at Giza, Egypt, is the world's tallest.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:18.885Z",
+   "target": "f10636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "breaking its run as the world’s tallest building after a staggering 3800 years",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:18.885Z",
+   "target": "f10636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The pyramid of Khufu at Giza, Egypt, is the world's tallest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  }
+ ]
+}

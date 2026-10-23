@@ -1,0 +1,381 @@
+{
+ "article": "a1099",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Philips",
+   "title": "Philips – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:43.308Z",
+   "snapshot": "2299b480dd8316a2cd12fceb4357cf32249486b8e72f063c483cc336f5c8d5d4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nokia",
+   "title": "Nokia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:26.305Z",
+   "snapshot": "41eb431b000b2175288b2e24df6545d9fc63fcce7f685853b1080931f1d79b85"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nintendo",
+   "title": "Nintendo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:44.185Z",
+   "snapshot": "b4aa1000f21cd3d2948af93098516c9246bb9247577b453c4245fcf3d346892a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Toyota_Industries",
+   "title": "Toyota Industries – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:45.147Z",
+   "snapshot": "6dede58f18294ab0e54a987f98852999c82fc5c41931f32d0416517159bf7f63"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lamborghini_Trattori",
+   "title": "Lamborghini Trattori – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:46.066Z",
+   "snapshot": "b93e5acaeae52f9dcc8753f0e3cd2272eb9154fc5ba6f39ff024e73432443b5d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Emsa_(company)",
+   "title": "Emsa (company)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:47.194Z",
+   "snapshot": "4613d23e1c9f5d92885fc4ae908215b4cf54ebc8d61ad9d302c89b96afcfe4d2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Sakichi_Toyoda",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:48.116Z",
+   "snapshot": "faa95f5d1a7b304955e7e7f977a0512ec43ff1bd98f70617d3c44aade1e6c8f7"
+  },
+  "s8": {
+   "url": "https://blf.fi/artikel.php?id=4296",
+   "title": "Idestam, Fredrik – Biografiskt lexikon för Finland",
+   "publisher": "Svenska litteratursällskapet i Finland (BLF)",
+   "kind": "scholarly",
+   "lang": "sv",
+   "retrievedAt": "2026-10-23T12:37:53.077Z",
+   "snapshot": "173c4245dd5e1ca9522e887e6898f87baf5d8888b58657a6dae4c1fd103a8e4a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "light bulbs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "paper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "playing cards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "looms",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "tractors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Emsa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-096"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:32.646Z",
+   "target": "f05491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The company was founded in Eindhoven in 1891 by Gerard Philips and his father Frederik Philips to manufacture incandescent light bulbs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “light bulbs” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:32.646Z",
+   "target": "f05492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "paper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“paper”, “Papier”, “бумага”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:32.646Z",
+   "target": "f05493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The history of Nintendo began when craftsman Fusajiro Yamauchi founded the company in 1889 to produce handmade hanafuda playing cards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “playing cards” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:32.646Z",
+   "target": "f05494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Originally, and still actively (as of 2026), a manufacturer of automatic looms, it is the company from which Toyota Motor Corporation developed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “looms” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:32.646Z",
+   "target": "f05495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The company designs and builds tractors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tractors” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:32.646Z",
+   "target": "f13576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Emsa GmbH is a medium-sized (SME) German manufacturer of consumer goods, kitchen utensils, garden equipment and garden accessories.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emsa” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:18:32Z",
+   "target": "f05492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nokia's history dates from 1865, when mining engineer Fredrik Idestam established a pulp mill on the shores of the Tammerkoski rapids near the town of Tampere",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:18:35Z",
+   "target": "f05492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Idestam byggde sitt andra sliperi i Nokia 1868.",
+     "quoteLang": "sv",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "a sliperi is a groundwood (wood-pulp) mill; the article says Idestam later also founded a cellulose and paper mill"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:08.977Z",
+   "target": "f05492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nokia's history dates from 1865, when mining engineer Fredrik Idestam established a pulp mill on the shores of the Tammerkoski rapids near the town of Tampere",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:08.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:08.977Z",
+   "target": "f05492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Idestam byggde sitt andra sliperi i Nokia 1868.",
+     "quoteLang": "sv",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:08.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

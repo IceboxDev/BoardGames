@@ -1,0 +1,335 @@
+{
+ "article": "a2141",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Horusauge",
+   "title": "Horusauge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:53.133Z",
+   "snapshot": "e52e816568752b95cc1242de7eda7575821a697e9b3662dd3234a09bee962b50"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Set_(deity)",
+   "title": "Set (deity) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:56.986Z",
+   "snapshot": "fbe71967949d227f2fd3083955b649f99000082f263aaf0c61203a27bac4f19a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anubis",
+   "title": "Anubis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:58.049Z",
+   "snapshot": "a264198c459c67f3417e117c92fe8ead18a7fa8b998673aee10e27b2686c7ec7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Thot",
+   "title": "Thot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:55.027Z",
+   "snapshot": "720533238d1cbe20aa97f606c99d1ec246f133dca058d9ded420d2f599d592b0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bastet",
+   "title": "Bastet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:58.858Z",
+   "snapshot": "1f313e0dc86315c0b897e79d59743edca7bc6592bc2c61b39c460305effc25f9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sobek",
+   "title": "Sobek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:59.888Z",
+   "snapshot": "976e1acf6aa0095efe928212f819c184a5e20db51f645881a341214cff6929d3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Temple_of_Kom_Ombo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:00.840Z",
+   "snapshot": "cc7f2dacdc225f436aa6d424dd2430184d9658d2051c6523a57d1a059f46d145"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Horus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-218"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Seth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10782",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anubis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10783",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thot",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10784",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bastet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sobek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sobek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f10780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Horusauge, auch Udjat-Auge oder Udzat-Auge (von udjat „das heile, das unversehrte Auge“, bezogen auf das Auge des Himmelsfalken und Schöpfergottes Horus) ist ein altägyptisches Sinnbild des Himmels- und Lichtgottes Horus und eine ägyptische Hieroglyphe mit magischer Bedeutung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horus” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f10781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Set (; Egyptological: Sutekh - swtẖ ~ stẖ or: Seth ) is a god of deserts, storms, disorder, violence, and foreigners in ancient Egyptian religion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seth” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f10782",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anubis ( ; Ancient Greek: Ἄνουβις), also known as Inpu, Inpw, Jnpw, or Anpu in Ancient Egyptian (Coptic: ⲁⲛⲟⲩⲡ, romanized: Anoup), is the god of funerary rites, protector of graves, and guide to the underworld in ancient Egyptian religion, usually depicted as a canine or a man with a canine head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anubis” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f10783",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thot, eigentlich Djehuti (auch Tehut, Tahuti, altgriechisch Θοθ Thoth, koptisch Ⲑⲱⲟⲩⲧ Thōut, arabisch تُحوت Tuhūt), ist in der ägyptischen Mythologie der ibisköpfige oder paviangestaltige Gott des Mondes, der Magie, der Wissenschaft, der Schreiber, der Weisheit und des Kalenders.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thot” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f10784",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bastet or Bast (Ancient Egyptian: bꜣstt), also known as Ubasti or Bubastis, is a goddess of ancient Egyptian religion worshipped as early as the Second Dynasty (2890 BCE).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bastet” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f28503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sobek (Coptic: Ⲥⲟⲩⲕ, romanized: Souk), also known as Suchus (Ancient Greek: Σοῦχος, romanized: Soûchos), was an ancient Egyptian deity with a complex history and nature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sobek” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:28.835Z",
+   "target": "f28503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The southern half of the temple was dedicated to the crocodile god Sobek, god of fertility and creator of the world with Hathor and Khonsu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sobek” is on the snapshot of s7"
+  }
+ ]
+}

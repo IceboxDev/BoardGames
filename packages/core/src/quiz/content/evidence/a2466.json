@@ -1,0 +1,494 @@
+{
+ "article": "a2466",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Karneval_der_Tiere",
+   "title": "Karneval der Tiere",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:38.360Z",
+   "snapshot": "d8114099957331c53f5eb61455969f8290c56e85738b94edf564cdc457be4d03"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Schweigt_stille,_plaudert_nicht",
+   "title": "Schweigt stille, plaudert nicht",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:39.364Z",
+   "snapshot": "69f93ee4ea30986da6ff198858396c331fe82fce9c6701dcb4e0ffa1b63975b6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/ORGAN%C2%B2/ASLSP",
+   "title": "ORGAN²/ASLSP",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:40.387Z",
+   "snapshot": "a276a86ded5b822aa67abf32aad09e6f13c090a0e593bef9d861067ccdcce236"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alma_Mater_(Pope_Benedict_XVI_album)",
+   "title": "Alma Mater (Pope Benedict XVI album)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:41.055Z",
+   "snapshot": "301c74a7c05ccb19f31b99f24378d543e75189f3b13c349926a200a33c6bb8bf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Carnival_of_the_Animals",
+   "title": "The Carnival of the Animals – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:42.097Z",
+   "snapshot": "cb6f2fd39174a1b28ca5263964513bbf2cd08b384f0c3b1a678894e87e5d3b7a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/As_Slow_as_Possible",
+   "title": "As Slow as Possible – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:43.104Z",
+   "snapshot": "cecd5e155d283596a08fffc7446d64c08fcfc2b2379656a67994239a7d22f0c3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/4%E2%80%B233%E2%80%B3",
+   "title": "4′33″ – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:44.098Z",
+   "snapshot": "b51eb55464636a510365ffde53834ed2e8d012e839592b4c69d4ff525e076673"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Symphony_No._45_(Haydn)",
+   "title": "Symphony No. 45 (Haydn) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:45.048Z",
+   "snapshot": "2d3477e5d6cede7dc3bb1f1ba1de7db889ba62733a2330e12b119de22b8b051c"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Haydn",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:46.190Z",
+   "snapshot": "77799d4054ba8ee5527f184ed32fd0d9f089ce1a3a231d0ebb27dfa454a99387"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kaffee",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-223"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Orgel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-346"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pope Benedict XVI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-340"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Swan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Halberstadt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "4′33″",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f27703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Farewell Symphony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f27703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Farewell Symphony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 52"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f12993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Camille Saint-Saëns",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "Camille Saint-Saëns",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-008/4, u02: The Carnival of the Animals (1886) is by Saint-Saëns; Orwell wrote Animal Farm; statement false."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Camille Saint-Saëns",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Camille Saint-Saëns",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Karneval der Tiere (Le Carnaval des animaux) ist eine Suite für Kammerorchester des französischen Komponisten Camille Saint-Saëns aus dem Jahr 1886.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Camille Saint-Saëns” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Carnival of the Animals (French: Le Carnaval des animaux) is a humorous musical suite of 14 movements, including \"The Swan\", by the French composer Camille Saint-Saëns.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Camille Saint-Saëns” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wie schmeckt der Coffee süße – Johann Sebastian Bachs Kaffee-Kantate in ihrer Zeit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kaffee” is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ORGAN²/ASLSP ist ein Musikstück für Orgel von John Cage aus dem Jahr 1987.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orgel” is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alma Mater  is a Christmas album by Pope Benedict XVI, released on 29 November 2009 by Geffen Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pope Benedict XVI” is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Carnival of the Animals (French: Le Carnaval des animaux) is a humorous musical suite of 14 movements, including \"The Swan\", by the French composer Camille Saint-Saëns.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Swan” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Burchardi church in Halberstadt in 2001 began a performance that is due to end in 2640.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halberstadt” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f12999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "4′33″ is a modernist composition by American experimental composer John Cage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4′33″” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f27703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "According to James Webster, this choice was unusual; indeed the Farewell Symphony is apparently the only known 18th-century symphony ever written in this key.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.632Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Farewell Symphony” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:30:24.632Z",
+   "target": "f27703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Farewell Symphony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Farewell Symphony”, “Abschiedssinfonie”, “Прощальная симфония”) on the snapshot of s9"
+  }
+ ]
+}

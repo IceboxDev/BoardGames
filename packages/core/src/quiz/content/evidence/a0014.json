@@ -1,0 +1,401 @@
+{
+ "article": "a0014",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mrs_Dalloway",
+   "title": "Mrs Dalloway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:45.418Z",
+   "snapshot": "d1783ee680e616bc6ac823648a930f10ec9027b0522971b3ebf329882128b8c1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ulysses_(novel)",
+   "title": "Ulysses (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:46.809Z",
+   "snapshot": "97a73abec465c8c8bde6ec79044a2686929ffb9f3a63e7ee34e0911158573698"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/William_Faulkner",
+   "title": "William Faulkner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:47.599Z",
+   "snapshot": "230f4bc49e708bcfe26027c0654ac9b90a79a0a7925f07b8a4fcb4f52987a984"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Prix_Goncourt",
+   "title": "Prix Goncourt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:48.455Z",
+   "snapshot": "4c627e687b0b8e2486c354a5e913c48f5cb5d2a5684c6a7caad95f62f33aebf3"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Lieutenant_Gustl",
+   "title": "Lieutenant Gustl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:14:45.952Z",
+   "snapshot": "2d0a3589cbdbd89d3a317db68b860103eff70ca8513ae1551b8608ae92258a4a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stream_of_consciousness",
+   "title": "Stream of consciousness",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:49.536Z",
+   "snapshot": "043f96954eeb3b36081b5013e58e12abb7250f3fd1d06d8902583a50778b3938"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:50.743Z",
+   "snapshot": "95845dbdd5ceb091fd65475790d31536726ed17c32eff367e5f749fc3827eb4b"
+  },
+  "s8": {
+   "url": "https://librivox.org/leutnant-gustl-by-arthur-schnitzler/",
+   "title": "Leutnant Gustl by Arthur Schnitzler",
+   "publisher": "LibriVox",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:20.046Z",
+   "snapshot": "1c1d22608a4a212e1d64ead7f153e25677e53f2699b4e324680999b53e14f64b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Virginia Woolf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Joyce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "William Faulkner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marcel Proust",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arthur Schnitzler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Stream of consciousness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-119"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:37.224Z",
+   "target": "f00066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mrs Dalloway is a novel by Virginia Woolf published on 14 May 1925.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.224Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virginia Woolf” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:37.224Z",
+   "target": "f00067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ulysses is a modernist novel by the Irish writer James Joyce.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.224Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Joyce” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:37.224Z",
+   "target": "f00068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "not be difficult to find a dedication for the money part of it commensurate with the purpose and significance of its origin.\" He donated part of his Nobel money \"to establish a fund to support and encourage new fiction writers\", eventually resulting in the William Faulkner Foundation (1960–1970).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.224Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Faulkner” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:37.224Z",
+   "target": "f00069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Notable winners of the prize include Marcel Proust (In Search of Lost Time), Simone de Beauvoir (The Mandarins), André Malraux (Man's Fate) and Marguerite Duras (The Lover).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.224Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marcel Proust” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:37.224Z",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lieutenant Gustl (in späteren Ausgaben infolge der Orthographischen Konferenz von 1901 angepasste Titelschreibung Leutnant Gustl) ist eine Novelle von Arthur Schnitzler.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.224Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Schnitzler” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:37.224Z",
+   "target": "f25701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In literary criticism, stream of consciousness is a narrative mode or method that attempts \"to depict the multitudinous thoughts and feelings which pass through the mind\" of a narrator.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.224Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stream of consciousness” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:59:49Z",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Text ist fast gänzlich als innerer Monolog gestaltet, was als Neuheit in der deutschsprachigen Literaturgeschichte gewürdigt wird",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:59:51Z",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Leutnant Gustl ist wohl die bekannteste Novelle des Wiener Autors Arthur Schnitzler. Der fast durchgehende innere Monolog Gustls stellte eine Neuerung in der deutschsprachigen Literatur dieser Zeit dar.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:52.969Z",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Text ist fast gänzlich als innerer Monolog gestaltet, was als Neuheit in der deutschsprachigen Literaturgeschichte gewürdigt wird",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:52.969Z",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Leutnant Gustl ist wohl die bekannteste Novelle des Wiener Autors Arthur Schnitzler. Der fast durchgehende innere Monolog Gustls stellte eine Neuerung in der deutschsprachigen Literatur dieser Zeit dar.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:52.969Z",
+   "target": "f00070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Leutnant Gustl ist wohl die bekannteste Novelle des Wiener Autors Arthur Schnitzler.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:52.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Arthur Schnitzler” is on the snapshot of s8"
+  }
+ ]
+}

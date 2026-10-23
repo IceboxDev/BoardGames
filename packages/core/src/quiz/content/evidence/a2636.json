@@ -1,0 +1,273 @@
+{
+ "article": "a2636",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Klebezettel",
+   "title": "Klebezettel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:28.349Z",
+   "snapshot": "bfc7c5c097609d4d2ba4e4935bf74e9b26f122d4dda15b8cbdba08df1a5a179d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Selfie-Stick",
+   "title": "Selfie-Stick",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:29.397Z",
+   "snapshot": "3a0c8d47daac4205fa23fbec861b78328bd4f6c4d11511f57ce7a9d1f8cddc28"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Post-it_note",
+   "title": "Post-it note – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:18.058Z",
+   "snapshot": "49bfd034c492ade8356c24977f15b347ad16f82aca1f563aef699de8101adb41"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Selfie_stick",
+   "title": "Selfie stick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:31.077Z",
+   "snapshot": "2500bffd787763a3382a59bf10d4dd219fbd4d14f828164779b46d4fa9df6a16"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Post-it",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-252"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Selfie-Stick",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-136"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spencer Silver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "3M",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "canary yellow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Minolta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:49.828Z",
+   "target": "f14265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Klebezettel, ein Haftzettel oder eine Haftnotiz, auch als Post-it oder Haftie bekannt, ist ein kleiner Zettel, der an der Rückseite einen mit Haftklebstoff beschichteten Streifen besitzt, mit dem man ihn an einem anderen (glatten) Gegenstand festkleben, von dort rückstandsfrei wieder lösen und",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Post-it” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:49.828Z",
+   "target": "f14266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ein Selfie-Stick (auch Selfie-Stange oder Selfie-Stab) ist eine zumeist teleskopierbare Stange, die als Armverlängerung für den Fotografen dient.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Selfie-Stick” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:49.828Z",
+   "target": "f14267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1968, Spencer Silver, a scientist at 3M in the United States, attempted to develop a super-strong adhesive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spencer Silver” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:49.828Z",
+   "target": "f14268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Post-it's signature adhesive was discovered accidentally by a scientist at 3M.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “3M” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:49.828Z",
+   "target": "f14269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The original notes' canary yellow color was chosen by chance, from the color of the scrap paper available at the lab next door to the Post-it team.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “canary yellow” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:49.828Z",
+   "target": "f14270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 1983 Minolta Disc-7 camera had a convex mirror on its front to allow the composition of self-portraits, and its packaging showed the camera mounted on a stick while used for such a purpose.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minolta” is on the snapshot of s4"
+  }
+ ]
+}

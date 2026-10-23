@@ -1,0 +1,242 @@
+{
+ "article": "a2670",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Lughnasadh",
+   "title": "Lughnasadh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:57.394Z",
+   "snapshot": "a555a9c6a1ef0829d6e6b876b9c1dff640a5524337dd5e55d03007748fc49c40"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Samhain",
+   "title": "Samhain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:01.214Z",
+   "snapshot": "6d0f2731f0075ebfa4f981f509e5b3a28e4e7627d7c1541ba467069118a0123b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Beltane",
+   "title": "Beltane – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:02.452Z",
+   "snapshot": "06d59fb4a60fcccc4c747e4c658316d5f53d158e161685b9020d88e7e4495439"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Imbolc",
+   "title": "Imbolc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:03.213Z",
+   "snapshot": "3da593f53a79585796c8c6e8ea882d70d640147763b10815b8fd42941acd442a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tailtiu",
+   "title": "Tailtiu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:04.158Z",
+   "snapshot": "785191858059a12e1f1b5412f07800a91c368d4b0359f462489b64b36e791e68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lughnasadh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samhain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beltane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brigid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tailtiu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.135Z",
+   "target": "f14484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lughnasadh ['Luɣnasað] (Altirisch, „Tod des Lugh“, „Tötung des Lugh“) auch Lugnásad, Lughnasa, heutige neuirische Form Lúnasa, angloirisch Lammas; auch Brón Trogain („Trauer um Trogain“), ist das dritte der vier großen irischen Feste und wird beginnend am Vorabend in der Nacht zum 1.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lughnasadh” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.135Z",
+   "target": "f14485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samhain ( SAH-win,  SOW-in; Irish: [ˈsˠəunʲ]; Scottish Gaelic: [ˈs̪ãũ.ɪɲ]) or Sauin (Manx: [ˈsoːɪnʲ]) is a Gaelic festival on 1 November marking the end of the harvest season in autumn and beginning of winter or the \"darker half\" of the year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samhain” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.135Z",
+   "target": "f14486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bealtaine (Irish pronunciation: [ˈbʲal̪ˠt̪ˠənʲə]) or Beltane ( BEL-tayn) is the Gaelic May Day festival, marking the beginning of summer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beltane” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:56.135Z",
+   "target": "f14487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Imbolc or Imbolg (Irish pronunciation: [ə ˈmˠɔlˠəɡ]), also called Saint Brigid's Day (Irish: Lá Fhéile Bríde; Scottish Gaelic: Là Fhèill Brìghde; Manx: Laa'l Breeshey), is a Gaelic traditional festival on 1 February.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brigid” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:56.135Z",
+   "target": "f14488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tailtiu or Tailltiu (Old Irish pronunciation: [ˈt̪al̠ʲt̠ʲu]; modern spelling: Tailte) is a presumed goddess from Irish mythology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tailtiu” is on the snapshot of s5"
+  }
+ ]
+}

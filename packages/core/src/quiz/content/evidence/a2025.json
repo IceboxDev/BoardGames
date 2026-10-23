@@ -1,0 +1,422 @@
+{
+ "article": "a2025",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nova_Methodus_pro_Maximis_et_Minimis",
+   "title": "Nova Methodus pro Maximis et Minimis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:44.381Z",
+   "snapshot": "d113e0493a454b4a4114d2919d5932962eab78141fddb848da5cf46bc2be12dd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Fincke",
+   "title": "Thomas Fincke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:49.843Z",
+   "snapshot": "bd8027c713833c22e2b61f3807a8754dc5f00f824cb22782c85dfde2a32dabe8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hipparchus",
+   "title": "Hipparchus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:45.442Z",
+   "snapshot": "020eb0bd9a7d34b57f4b08d7a1db22757fba520243bc2dd9868cbb2c9cd528d7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thales%27s_theorem",
+   "title": "Thales's theorem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:46.431Z",
+   "snapshot": "c94bcd734b87d2c6553865d7a9548817ad2dd79ca86c7923097269cbdae77c24"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Measurement_of_a_Circle",
+   "title": "Measurement of a Circle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:47.275Z",
+   "snapshot": "86765b958cf5b589345bc0a2c73c4c4f1a756a33aa8b2e79b41c53ce57eec0c6"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Mengendiagramm",
+   "title": "Mengendiagramm",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:44.626Z",
+   "snapshot": "523ba9ea091ba84d2d60b1b7273f19c4a6f951c7725e5848a1df5c7c4f0f7f17"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tangent_lines_to_circles",
+   "title": "Tangent lines to circles – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:05.864Z",
+   "snapshot": "6557f2bd19aafed5224626264eacf7f1a0d8a833c93f01b1d808dd10b1f50de6"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/tangent",
+   "title": "TANGENT – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:05.917Z",
+   "snapshot": "2c9b68e5fbf29cc1db24a9b8bdaa4e0776938ea0a526b8409149f5f872ffd20f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tangent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "secant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "chord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "diameter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "radius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kreis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-111"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:08.570Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tangent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“tangent”, “Tangente”, “касательная”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:08.570Z",
+   "target": "f10122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fincke's lasting achievement is found in his book Geometria rotundi (1583), in which he introduced the modern names of the trigonometric functions tangent and secant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “secant” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:08.570Z",
+   "target": "f10123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He tabulated values for the chord function, which for a central angle in a circle gives the length of the straight line segment between the points where the angle intersects the circle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chord” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:08.570Z",
+   "target": "f10124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In geometry, Thales's theorem states that if A, B, and C are distinct points on a circle where the line AC is a diameter, the angle ∠ ABC is a right angle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diameter” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:08.570Z",
+   "target": "f10125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The area of any circle is equal to a right-angled triangle in which one of the sides about the right angle is equal to the radius, and the other to the circumference of the circle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “radius” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:08.570Z",
+   "target": "f13499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In einem Johnston-Diagramm wird ein Kreis (eine Menge) P als Menge der Sachverhalte interpretiert, unter denen eine Aussage P wahr ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kreis” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:28:51Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a tangent line to a circle is a line that touches the circle at exactly one point",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:28:57Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a straight line that touches but does not cut into a curve",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:55.199Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a tangent line to a circle is a line that touches the circle at exactly one point",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:55.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:55.199Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a straight line that touches but does not cut into a curve",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:55.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:55.199Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In Euclidean plane geometry, a tangent line to a circle is a line that touches the circle at exactly one point, never entering the circle's interior.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:55.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tangent” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:55.199Z",
+   "target": "f10121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "TANGENT | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:55.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tangent” is on the snapshot of s8"
+  }
+ ]
+}

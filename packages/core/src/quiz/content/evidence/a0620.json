@@ -1,0 +1,885 @@
+{
+ "article": "a0620",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Diogenes_and_Alexander",
+   "title": "Diogenes and Alexander – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:35.007Z",
+   "snapshot": "ed43de4ed8abafcb2df96ae94ae3625166c4cf647fe9d1644950eabbc4057cd6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_the_Great",
+   "title": "Alexander the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:36.215Z",
+   "snapshot": "2ff6081478731dacf149ee2b9592ed19f0ef911c87eac743181e8bb2fc70e103"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Diogenes_Laertius",
+   "title": "Diogenes Laërtius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:37.122Z",
+   "snapshot": "48c7900c30a620ef2b83fb047bb566d381269c65cd8806afdc501918b91d45df"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/cosmopolite",
+   "title": "cosmopolite – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Diogenes",
+   "title": "Diogenes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:38.088Z",
+   "snapshot": "38794d263f32ea90dd69d220ad430299f4b50dfa72abbc17505d0808d1892ec2"
+  },
+  "s6": {
+   "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_VI",
+   "title": "Lives of the Eminent Philosophers/Book VI – Wikisource",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:35.611Z",
+   "snapshot": "c812df3936f60e3a1f8442c8e8dd908a9b6afa494a18f16f5a51850afdc810fe"
+  },
+  "s7": {
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Alexander*/3.html",
+   "title": "Plutarch, Life of Alexander (Loeb, Perrin) – LacusCurtius",
+   "publisher": "LacusCurtius (University of Chicago)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:35.482Z",
+   "snapshot": "45749e333588cce2d0924ea74f3131d1b5fb3325b9a80ee7819418c446a9126f"
+  },
+  "s8": {
+   "url": "https://iep.utm.edu/diogenes-of-sinope/",
+   "title": "Diogenes of Sinope – Internet Encyclopedia of Philosophy",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:35.125Z",
+   "snapshot": "81f8a233c056d452bc1afc5671bfd2bbb8af3d8935ff4d8e2a6f6b263aa4ce1a"
+  },
+  "s9": {
+   "url": "https://plato.stanford.edu/entries/cosmopolitanism/",
+   "title": "Cosmopolitanism – Stanford Encyclopedia of Philosophy",
+   "publisher": "Stanford Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:35.822Z",
+   "snapshot": "3ae1a7dc04c2e63a139ce2136acf4d396b5bb35b53ea614a8651ff4be0cc8d9d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stand out of my sunlight",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c052"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "If I were not Alexander, I should like to be Diogenes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "I am looking for a human being",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "I am a citizen of the world",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Here is Plato's man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "his cup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "his cup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:15.486Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stand out of my sunlight",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stand out of my sunlight”, “Geh mir aus der Sonne”, “Отойди, не заслоняй мне солнце”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:15.486Z",
+   "target": "f03097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "If I were not Alexander, I should like to be Diogenes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“If I were not Alexander, I should like to be Diogenes”, “Wäre ich nicht Alexander, so möchte ich Diogenes sein”, “Если бы я не был Александром, я хотел бы быть Диогеном”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:15.486Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "I am looking for a human being",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“I am looking for a human being”, “Ich suche einen Menschen”, “Ищу человека”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:15.486Z",
+   "target": "f03100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When Plato defined man as a \"featherless biped\", Diogenes \"plucked the feathers from a cock, brought it to Plato's school, and said, 'Here is Plato's man.'\" Plato subsequently amended the definition to include \"broad, flat nails\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:15.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Here is Plato's man” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:15.486Z",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "his cup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“his cup”, “seinen Becher”, “чашка”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:15.486Z",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "his cup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“his cup”, “seinen Becher”, “чашка”) on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:04:15Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"Yes,\" said Diogenes, \"stand a little out of my sun.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:04:17Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To which he replied, \"Stand out of my light.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Diogenes Laertius VI.38; same reply, 'light' for 'sun/sunlight'."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:04:19Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diogenes replied, \"Yes, that you should stand a little out of my sun\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:04:22Z",
+   "target": "f03097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"But verily, if I were not Alexander, I would be Diogenes.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:04:24Z",
+   "target": "f03097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"But truly, if I were not Alexander, I wish I were Diogenes.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:04:27Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He lit a lamp in broad daylight and said, as he went about, \"I am looking for a man.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Greek anthrōpon = human being; 'man' in Hicks."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:04:30Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "lit a lamp in broad daylight and said, as he went about, ‘I am searching for a human being’",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:04:32Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diogenes was also known to wander the marketplace by day with a lit lamp, saying \"I am looking for a man\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:04:34Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Asked where he came from, he said, \"I am a citizen of the world.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:04:36Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "when he was asked where he came from, he replied, ‘I am a citizen of the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:04:37Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When asked about his origin, he responded with a single word: kosmopolitēs (\"I am a citizen of the world\").",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T07:04:38Z",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One day, observing a child drinking out of his hands, he cast away the cup from his wallet with the words, \"A child has beaten me in plainness of living.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T07:04:40Z",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "One day, he famously discarded his drinking cup after watching a boy drink water from the hollow of his hands",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"Yes,\" said Diogenes, \"stand a little out of my sun.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To which he replied, \"Stand out of my light.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diogenes replied, \"Yes, that you should stand a little out of my sun\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"But verily, if I were not Alexander, I would be Diogenes.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"But truly, if I were not Alexander, I wish I were Diogenes.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s1"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He lit a lamp in broad daylight and said, as he went about, \"I am looking for a man.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "lit a lamp in broad daylight and said, as he went about, ‘I am searching for a human being’",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s8"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diogenes was also known to wander the marketplace by day with a lit lamp, saying \"I am looking for a man\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s5"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Asked where he came from, he said, \"I am a citizen of the world.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s6"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "when he was asked where he came from, he replied, ‘I am a citizen of the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s9"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When asked about his origin, he responded with a single word: kosmopolitēs (\"I am a citizen of the world\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s5"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One day, observing a child drinking out of his hands, he cast away the cup from his wallet with the words, \"A child has beaten me in plainness of living.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s6"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f28409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "One day, he famously discarded his drinking cup after watching a boy drink water from the hollow of his hands",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s5"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "When asked about his origin, he responded with a single word: kosmopolitēs (\"I am a citizen of the world\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “I am a citizen of the world” is on the snapshot of s5"
+  },
+  {
+   "id": "e41",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On being asked what he had gained from philosophy, he replied, \"This at least, if nothing else – to be prepared for every fortune.\" Asked where he came from, he said, \"I am a citizen of the world.\"[37] Certain parents were sacrificing to the gods, that a son might be born to them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “I am a citizen of the world” is on the snapshot of s6"
+  },
+  {
+   "id": "e42",
+   "at": "2026-10-23T12:53:42.100Z",
+   "target": "f03099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "‘I am a citizen of the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:42.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “I am a citizen of the world” is on the snapshot of s9"
+  }
+ ]
+}

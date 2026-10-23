@@ -1,0 +1,510 @@
+{
+ "article": "a0368",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Democritus",
+   "title": "Democritus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:11.964Z",
+   "snapshot": "bc14f32830003cd040ebbe411cecc641d55eedd50140c2a8110ef52fed90f0b2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/An_Enquiry_Concerning_Human_Understanding",
+   "title": "An Enquiry Concerning Human Understanding – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:12.948Z",
+   "snapshot": "b29045c27efc4384406dc0623fb553452614809fb5f1cafa87b418e67c0e49d1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Meditations_on_First_Philosophy",
+   "title": "Meditations on First Philosophy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:13.939Z",
+   "snapshot": "c99ffcff40cbb1f0d6ed3fc64b95a59df7d6689744dcde51a5c5fbba4e185e6f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mind%E2%80%93body_dualism",
+   "title": "Mind–body dualism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:15.088Z",
+   "snapshot": "b23e97cba07dbab124a43c9295b3359b995b5383757736b067b4326d62c0120d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Born_rule",
+   "title": "Born rule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:15.956Z",
+   "snapshot": "f62b3c4468c3a6eddde7ca58695c0fb9eb97afdf65c34f931f9f9311117ecb67"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Materialism",
+   "title": "Materialism",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:38.162Z",
+   "snapshot": "432b708e1e2b57ab30a5eef82a06831754fdfdb907d340b0daad91d0ce04568d"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Materialismus",
+   "title": "Materialismus",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:37.278Z",
+   "snapshot": "8187231b9e2c3d001b585837fb717e11027ea38752f569031c8b83b9929de36b"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Indeterminism",
+   "title": "Indeterminism",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:39.168Z",
+   "snapshot": "e04efee351a51c8d6e979edf82c1be87cbbbd19f21622a34ef48ca688f2107a8"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Indeterminismus",
+   "title": "Indeterminismus",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:38.419Z",
+   "snapshot": "0638a60cc36e5501067b216a553bdd6df1dc250586c058a26e19928bc26f603e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "materialism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "empiricism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dualism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "dualism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-061"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "indeterminism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:37.063Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "materialism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“materialism”, “Materialismus”, “материализм”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:37.063Z",
+   "target": "f01837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Writing within the tradition of empiricism, he argues that impressions are the source of all ideas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “empiricism” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:37.063Z",
+   "target": "f01838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Proof of the body being distinct from the mind (mind–body dualism)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dualism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:37.063Z",
+   "target": "f01838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In philosophy of mind, mind–body dualism denotes either that mental phenomena are non-physical, or that the mind and body are distinct and separable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dualism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:37.063Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "indeterminism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“indeterminism”, “Indeterminismus”, “индетерминизм”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:11:47Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It contrasts with monistic idealism, which treats consciousness as fundamental",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:11:49Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "philosophische Lehre, die alles Wirkliche als Materie interpretiert oder von ihr ableitet",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden lists Idealismus as the opposite (Gegenwort) of this sense."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:51Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is the opposite of determinism and related to chance.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:11:53Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Lehrmeinung, nach der ein Geschehen nicht oder nur bedingt durch Kausalität oder Naturgeschehen bestimmt ist",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden lists Determinismus as the opposite."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It contrasts with monistic idealism, which treats consciousness as fundamental",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "philosophische Lehre, die alles Wirkliche als Materie interpretiert oder von ihr ableitet",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is the opposite of determinism and related to chance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Lehrmeinung, nach der ein Geschehen nicht oder nur bedingt durch Kausalität oder Naturgeschehen bestimmt ist",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In philosophy and metaphysics, materialism is a form of monism holding that matter is the fundamental substance of nature, so that all things, including mind and consciousness, arise from material interactions and depend on physical processes, including those of the human brain and nervous system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “materialism” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Materialismus ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Materialismus” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Indeterminism is the idea that events (or certain events, or events of certain types) are not caused, or are not caused deterministically.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “indeterminism” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:58.642Z",
+   "target": "f01839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Indeterminismus ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:58.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Indeterminismus” is on the snapshot of s9"
+  }
+ ]
+}

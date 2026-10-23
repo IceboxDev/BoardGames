@@ -1,0 +1,856 @@
+{
+ "article": "a0485",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Javelin_throw",
+   "title": "Javelin throw – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:24.573Z",
+   "snapshot": "ac6a30234d93f654cfc96b1c98103c288d1eb5e1609bb50b314a34ead15dd16e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pole_vault",
+   "title": "Pole vault – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:30.947Z",
+   "snapshot": "841c06ab68e15f1668891f5f48ac7dbc2ee6414c60f41db878ecc1edeb1f5f25"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gymnastics_at_the_1952_Summer_Olympics",
+   "title": "Gymnastics at the 1952 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:31.978Z",
+   "snapshot": "a7549e788b5d8780331b6ecb163f6a74d15688bfab30b9b2f7b86c5541cfcc3f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ger%C3%A4tturnen",
+   "title": "Gerätturnen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:29.724Z",
+   "snapshot": "2f81407dbbf915c00ec6d9ed05fbe9fa8bcb09d6d85917d56fc1f6635830bf1b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Steffi_Graf",
+   "title": "Steffi Graf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:32.951Z",
+   "snapshot": "b664a24dab808d3811da6440ef67efdcb6613dc3ee9e56c37d2d41d788f0f10f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Track_and_field",
+   "title": "Track and field – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:56.625Z",
+   "snapshot": "6041fccc030aefe88c8027c5ef2cd124aef39b8000f7f92008deef687e2d4565"
+  },
+  "s7": {
+   "url": "https://worldathletics.org/disciplines/throws",
+   "title": "Throws – World Athletics",
+   "publisher": "World Athletics",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:27.296Z",
+   "snapshot": "ad7c2f15964ec73b1290b26b47c5aa0fb3c5d63f30a1667ee8b70c07e2c1634a"
+  },
+  "s8": {
+   "url": "https://www.thepapare.com/evolution-of-throwing-events/",
+   "title": "The inception and evolution of throwing events",
+   "publisher": "ThePapare.com",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:27.991Z",
+   "snapshot": "16fd7b1afc2dfb280fc96a51f95a81c79e5577e90b0eb74e1ba7ba6226f86c5c"
+  },
+  "s9": {
+   "url": "https://cits.wa.gov.au/sport-and-recreation/sports-dimensions-guide/athletics---jumping-events",
+   "title": "Athletics jumping events – Sports dimensions guide",
+   "publisher": "Government of Western Australia (DLGSC)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:33:34Z"
+  },
+  "s10": {
+   "url": "https://www.topendsports.com/sport/list/athletics-pole-vault.htm",
+   "title": "Pole Vault (Athletics)",
+   "publisher": "Topend Sports",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:28.526Z",
+   "snapshot": "79a718e0b11628530a9c95194631c476c0d1277a72729819e967ad3a626a6c61"
+  },
+  "s11": {
+   "url": "https://www.europeangymnastics.com/discipline/womens-artistic-gymnastics/intro",
+   "title": "Introduction to Women's Artistic Gymnastics",
+   "publisher": "European Gymnastics",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:30.301Z",
+   "snapshot": "2432584d4ad59da2ddf36b2cc8dd72bfb0d2273bf4ccdd64bd8f34b38d0aad8d"
+  },
+  "s12": {
+   "url": "https://www.nbcolympics.com/news/gymnastics-101-apparatus-guide",
+   "title": "Olympics Gymnastics Apparatus Guide",
+   "publisher": "NBC Olympics",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:30.032Z",
+   "snapshot": "b53ec56af2b8dce81b32673874d5b60363da325b948c02159cc6bb199b00df76"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Artistic_gymnastics",
+   "title": "Artistic gymnastics – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:29.360Z",
+   "snapshot": "cffa4dda69586319b70b4cd389f044f71df7e9679afdcfc7dac5c99776980e0c"
+  },
+  "s14": {
+   "url": "https://en.wikipedia.org/wiki/Grand_Slam_(tennis)",
+   "title": "Grand Slam (tennis) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:30.196Z",
+   "snapshot": "7ed0efc286b96f8f2e027fe12e0de2968bce5bd93cf04e9152739cc9a3f874b6"
+  },
+  "s15": {
+   "url": "https://blog.ticketmaster.com/tennis-grand-slams/",
+   "title": "Game, Set, Grand Slam: The Biggest Tennis Tournaments Around The World",
+   "publisher": "Ticketmaster",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:29.582Z",
+   "snapshot": "84edf0fc86ab5a454ebfe83559adcf37ac105a4b4c19016f3046b59a373396be"
+  },
+  "s16": {
+   "url": "https://worldathletics.org/disciplines/jumps",
+   "title": "Jumps – World Athletics",
+   "publisher": "World Athletics",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:29.765Z",
+   "snapshot": "aa386b5115cfdf54c5f38a8e139b4614d0640fbf61f33b9f31b4b5fe45876dd4"
+  },
+  "s17": {
+   "url": "https://www.gymnastics.sport/site/pages/disciplines/app-wag.php",
+   "title": "Women's Artistic Apparatus – World Gymnastics (FIG)",
+   "publisher": "Fédération Internationale de Gymnastique",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:30.346Z",
+   "snapshot": "b0b121c963fce3d5a3239fdc29a369fa5cc1a08860fdf16982aee1e97dad47c0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "shot, discus, javelin and hammer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "long jump, triple jump, high jump and pole vault",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vault, uneven bars, balance beam and floor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sprung, Stufenbarren, Schwebebalken und Boden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-013"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Australian Open, French Open, Wimbledon and US Open",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:56.217Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "shot, discus, javelin and hammer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“shot, discus, javelin and hammer”, “Kugel, Diskus, Speer und Hammer”, “ядро, диск, копьё и молот”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:56.217Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "long jump, triple jump, high jump and pole vault",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“long jump, triple jump, high jump and pole vault”, “Weitsprung, Dreisprung, Hochsprung und Stabhochsprung”, “прыжок в длину, тройной прыжок, прыжок в высоту и прыжок с шестом”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:56.217Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vault, uneven bars, balance beam and floor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“vault, uneven bars, balance beam and floor”, “Sprung, Stufenbarren, Schwebebalken und Boden”, “опорный прыжок, брусья разной высоты, бревно и вольные упражнения”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:56.217Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sprung, Stufenbarren, Schwebebalken und Boden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sprung, Stufenbarren, Schwebebalken und Boden”, “vault, uneven bars, balance beam and floor”, “опорный прыжок, брусья разной высоты, бревно и вольные упражнения”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:56.217Z",
+   "target": "f02425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Australian Open, French Open, Wimbledon and US Open",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Australian Open, French Open, Wimbledon and US Open”, “Australian Open, French Open, Wimbledon und US Open”, “Открытый чемпионат Австралии, Открытый чемпионат Франции, Уимблдон и Открытый чемпионат США”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:33:26Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "while the most common throwing events are shot put , javelin , discus , and hammer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:33:28Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Select from Throws Shot Put Shot Put Discus Throw Hammer Throw Javelin Throw",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "The governing body lists exactly four throwing disciplines."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:33:31Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The first time that all 4 throwing events took place was at the 1908 Olympics in London",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:33:34Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The jumping events are long jump, triple jump, high jump and pole vault.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:33:38Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This event is one of the four major jumping events in athletics, the other three are high jump",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:33:41Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Regular jumping events include the long jump , triple jump , high jump , and pole vault",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:33:44Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "You will see women compete on four apparatus: vault, uneven bars, beam and floor.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:33:46Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "For the women, there are four apparatuses used during a gymnastics competition: vault, uneven bars, beam and floor.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:33:49Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "was introduced at the 1950 World Championships and at the 1952 Summer Olympics",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:33:52Z",
+   "target": "f02425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "The individual Grand Slam tournaments consist of the four majors: Australian Open, French Open, Wimbledon, and the US Open.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:33:54Z",
+   "target": "f02425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "compete in the four most prestigious tournaments every year — the Australian Open, Roland Garros (French Open), Wimbledon and the US Open.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:47:39Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "while the most common throwing events are shot put, javelin, discus, and hammer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T10:47:40Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Select from Throws Shot Put Discus Throw Hammer Throw Javelin Throw",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "The governing body lists exactly four throwing disciplines."
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T10:47:41Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "Select from Jumps High Jump Pole Vault Long Jump Triple Jump",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "The governing body lists exactly four jumping disciplines."
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T10:47:43Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Regular jumping events include the long jump, triple jump, high jump, and pole vault",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T10:47:44Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s17",
+     "quote": "Floor Exercises is the only event set to music",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "FIG's women's apparatus page introduces vault, uneven bars, balance beam and floor exercise."
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The first time that all 4 throwing events took place was at the 1908 Olympics in London",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This event is one of the four major jumping events in athletics, the other three are high jump",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "You will see women compete on four apparatus: vault, uneven bars, beam and floor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "was introduced at the 1950 World Championships and at the 1952 Summer Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s13"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "The individual Grand Slam tournaments consist of the four majors: Australian Open, French Open, Wimbledon, and the US Open.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s14"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "compete in the four most prestigious tournaments every year — the Australian Open, Roland Garros (French Open), Wimbledon and the US Open.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s15"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "while the most common throwing events are shot put, javelin, discus, and hammer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s6"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Select from Throws Shot Put Discus Throw Hammer Throw Javelin Throw",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s7"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "Select from Jumps High Jump Pole Vault Long Jump Triple Jump",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s16"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Regular jumping events include the long jump, triple jump, high jump, and pole vault",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s6"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:53:18.692Z",
+   "target": "f02424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s17",
+     "quote": "Floor Exercises is the only event set to music",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:18.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s17"
+  }
+ ]
+}

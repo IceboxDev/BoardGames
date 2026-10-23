@@ -1,0 +1,195 @@
+{
+ "article": "a1698",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kosovo_Protection_Corps",
+   "title": "Kosovo Protection Corps – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:33.398Z",
+   "snapshot": "198149f282f4aa1019a6e90d3c095a4d3085dce60b332462c685ff65622c08d9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/ETA_(separatist_group)",
+   "title": "ETA (separatist group) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:44.193Z",
+   "snapshot": "845c6567dfb94340566d870ed5b1d6fd8b999f7e2a15b7bc85674d424164094a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Provisional_Irish_Republican_Army",
+   "title": "Provisional Irish Republican Army – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:34.391Z",
+   "snapshot": "d2e08ed88a90c890649329dcff5119c8a9dc48c40dccec96ad60e967ccff36b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Palestine_Liberation_Organization",
+   "title": "Palestine Liberation Organization – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:35.642Z",
+   "snapshot": "043802606caf1466d8b64e3372389e5c52c24c2bddb71dfd8aa588813123075c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "KLA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ETA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "IRA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "PLO",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:07.633Z",
+   "target": "f08486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Immediately after the end of the Kosovo War in June 1999 and the dislocation of NATO forces in Kosovo, emerged the need for the definition of the KLA role in accordance with the new situation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “KLA” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:07.633Z",
+   "target": "f08487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ETA, an acronym for Euskadi Ta Askatasuna ('Basque Homeland and Liberty' or 'Basque Country and Freedom' in Basque), was an armed Basque nationalist and separatist organization active in Spain and France between 1959 and 2018.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ETA” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:07.633Z",
+   "target": "f08488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Provisional Irish Republican Army (Provisional IRA), officially known as the Irish Republican Army (IRA; Irish: Óglaigh na hÉireann) and informally known as the Provos, was an Irish republican paramilitary force that sought to end British rule in Northern Ireland, facilitate Irish reunification",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IRA” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:07.633Z",
+   "target": "f08489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Palestine Liberation Organization (PLO; Arabic: منظمة التحرير الفلسطينية, romanized: ) is a Palestinian nationalist coalition that is internationally recognized as the official representative of the Palestinian people in the occupied Palestinian territories.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PLO” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,681 @@
+{
+ "article": "a1604",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dome_of_the_Rock",
+   "title": "Dome of the Rock – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:31.275Z",
+   "snapshot": "0f9356c2afc847606c37a86c1856f42ce4798d8a28c9f37950c4bc9da83110b1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Western_Wall",
+   "title": "Western Wall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:15.324Z",
+   "snapshot": "25ddf6dcb6cc84f576e54db39f04ec312d30681a565dfadb92425c3e8da33cd7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Prophet%27s_Mosque",
+   "title": "Prophet's Mosque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:23.162Z",
+   "snapshot": "897893f268fd7478b3e2ef906a04fe3c935c690f5cd3649ba1f19a81bc4b2f7a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Al-Aqsa",
+   "title": "Al-Aqsa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:24.304Z",
+   "snapshot": "356aa80ce9facd23ca4d80822d6a2c705c13984c33bf3811ad1ef0a9463a759d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Qibla",
+   "title": "Qibla",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:14.194Z",
+   "snapshot": "cbc69594f203e0e1aeddd3648ef609035b604d64288a3c6430bcd3daf5a3801d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cave_of_the_Patriarchs",
+   "title": "Cave of the Patriarchs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:25.024Z",
+   "snapshot": "2204871cc1fead63c9ddd37e7dcace33382c0a0fed9124dba884b04cb511774f"
+  },
+  "s7": {
+   "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%89%D0%B5%D1%80%D0%B0_%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%B0%D1%80%D1%85%D0%BE%D0%B2",
+   "kind": "encyclopedia",
+   "lang": "ru",
+   "retrievedAt": "2026-10-23T05:11:22.306Z",
+   "snapshot": "a1a881f15e1f3c5bb28d6c68c9758645f59c92b0f6096f2c86e6968cd0d82f5f"
+  },
+  "s8": {
+   "url": "https://whc.unesco.org/en/list/148/",
+   "title": "Old City of Jerusalem and its Walls – UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:06:14Z"
+  },
+  "s9": {
+   "url": "https://www.al-monitor.com/originals/2023/01/al-aqsa-mosque-compound-jerusalems-flashpoint-holy-site",
+   "title": "Al-Aqsa mosque compound: Jerusalem's flashpoint holy site – Al-Monitor (AFP)",
+   "publisher": "Al-Monitor / AFP",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:07.257Z",
+   "snapshot": "b36d8500dd24abbee70ce6816c98a35ff944938b5ec70fc500f44369a45e314b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dome of the Rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Western Wall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 61"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Prophet's Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "al-Aqsa Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "qibla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mecca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-096"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dome of the Rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-065"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hebron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 70"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f28301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Хеврон",
+     "quoteLang": "ru",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 70"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Dome of the Rock (Arabic: قبة الصخرة, romanized: Qubbat aṣ-Ṣaḫra) is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount in the Old City of Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dome of the Rock” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f08017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Western Wall (Hebrew: הַכּוֹתֶל הַמַּעֲרָבִי, romanized: HaKotel HaMa'aravi lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Western Wall” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f08020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Prophet's Mosque (Arabic: ٱلْمَسْجِد ٱلنَّبَوِي, romanized: al-Masjid al-Nabawī, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prophet's Mosque” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The compound's main congregational mosque or prayer hall is variously known as Al-Aqsa Mosque, Qibli Mosque or al-Jāmiʿ al-Aqṣā, while in some sources it is also known as al-Masjid al-Aqṣā; the wider compound is sometimes known as Al-Aqsa Mosque compound to distinguish the two.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “al-Aqsa Mosque” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f20603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "According to Islamic tradition, the Kaaba is believed to be a sacred site built by prophets Abraham and Ishmael, and that its use as the qibla was ordained by God in several verses of the Quran revealed to Muhammad in the second Hijri year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “qibla” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f25228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "'direction') is the direction towards the Kaaba in the Sacred Mosque in Mecca, which is used by Muslims in various religious contexts, particularly the direction of prayer for the salah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mecca” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f25545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Dome of the Rock (Arabic: قبة الصخرة, romanized: Qubbat aṣ-Ṣaḫra) is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount in the Old City of Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dome of the Rock” is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f28301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "and to Muslims as the Ibrahami Mosque (Arabic: المسجد الإبراهيمي, romanized: al-Masjid al-ʾibrāhīmī), or Sanctuary of Ibrahim (Arabic: الحرم الإبراهيمي, romanized: ), is a series of caves situated in the heart of the Old City of Hebron in the West Bank, 30 kilometres (19 mi) south of Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hebron” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:27:49.724Z",
+   "target": "f28301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "23 сентября 2002 года около пещеры Махпела в результате обстрела был смертельно ранен раввин Шломо Шапира, прибывший с сыновьями в Хеврон отметить праздник Суккот.",
+     "quoteLang": "ru",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Хеврон” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:06:14Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Among its 220 historic monuments, the Dome of the Rock stands out: built in the 7th century",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the narrowed wording (most famous shrine)"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:06:15Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount in the Old City of Jerusalem",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:06:17Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the compound houses the Al-Aqsa mosque and the Dome of the Rock, a famous golden-topped shrine. Believed to be where the Prophet Mohammed ascended to heaven on a winged horse, it is the third-holiest site in Islam",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "the card's \"most important holy site\" is the whole al-Aqsa compound (al-Haram al-Sharif), which contains the Dome of the Rock; wording narrowed to \"most famous shrine\", alternatives in notes"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:06:19Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It includes the Dome of the Rock, many mosques and prayer halls, madrasas, zawiyas, khalwas and other domes and religious structures, as well as the four encircling minarets. It is considered the third holiest site in Islam.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "the third holiest site is the compound, which includes the Dome of the Rock"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:06:20Z",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is considered the third holiest site in Islam. The compound's main congregational mosque or prayer hall is variously known as Al-Aqsa Mosque, Qibli Mosque or al-Jāmiʿ al-Aqṣā",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "wording now names the mosque as the compound's main prayer hall"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:06:22Z",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Known to Muslims as Al-Haram al-Sharif (the Noble Sanctuary), the compound houses the Al-Aqsa mosque and the Dome of the Rock",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T07:06:37Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "As a holy city for Judaism, Christianity and Islam, Jerusalem has always been of great symbolic importance. Among its 220 historic monuments, the Dome of the Rock stands out",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "after the fix: the narrowed wording (Jerusalem's most famous Muslim shrine) is confirmed; the \"most important site\" reading stays contested (al-Aqsa compound accepted in notes)"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:37.518Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount in the Old City of Jerusalem",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s1"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:37.518Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the compound houses the Al-Aqsa mosque and the Dome of the Rock, a famous golden-topped shrine. Believed to be where the Prophet Mohammed ascended to heaven on a winged horse, it is the third-holiest site in Islam",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:37.518Z",
+   "target": "f08016",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It includes the Dome of the Rock, many mosques and prayer halls, madrasas, zawiyas, khalwas and other domes and religious structures, as well as the four encircling minarets. It is considered the third holiest site in Islam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s4"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:37.518Z",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is considered the third holiest site in Islam. The compound's main congregational mosque or prayer hall is variously known as Al-Aqsa Mosque, Qibli Mosque or al-Jāmiʿ al-Aqṣā",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s4"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:37.518Z",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Known to Muslims as Al-Haram al-Sharif (the Noble Sanctuary), the compound houses the Al-Aqsa mosque and the Dome of the Rock",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s9"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:56:37.518Z",
+   "target": "f20602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Al-Aqsa mosque compound: Jerusalem's flashpoint holy site - AL-MONITOR: The Middle Eastʼs leading independent news source since 2012",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “al-Aqsa Mosque” is on the snapshot of s9"
+  }
+ ]
+}

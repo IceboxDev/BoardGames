@@ -1,0 +1,242 @@
+{
+ "article": "a0438",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ritter_zum_feurigen_Kreuz",
+   "title": "Ritter zum feurigen Kreuz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:59.904Z",
+   "snapshot": "2fac11d2c4290d0ac703d1a1b580c5f77f0386397076aea84d742416ec6f5322"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Organisation_Consul",
+   "title": "Organisation Consul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:02.671Z",
+   "snapshot": "91b375188caacac1ff436b296ddbf7315b09682420344b9d7d8d77c394991ee3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Thule_Society",
+   "title": "Thule Society – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:03.653Z",
+   "snapshot": "7c51942d007e4f484231d1d92d4427a1c2475fb078cd1f1a6edeeef2df4c7de9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/German_Workers'_Party",
+   "title": "German Workers' Party – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:04.648Z",
+   "snapshot": "08aad3a953da67e16be93ec8a539d254bab4b5da47e5e594d04da87dc062dfa4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Reichsbanner_Schwarz-Rot-Gold",
+   "title": "Reichsbanner Schwarz-Rot-Gold – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:05.630Z",
+   "snapshot": "b06c363d0bddf68e2102828e5e774314f7ca6d9529fc8cd57e96a770c4d7e129"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ku-Klux-Klan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c037"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Organisation Consul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thule Society",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "German Workers' Party",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reichsbanner Schwarz-Rot-Gold",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:48.164Z",
+   "target": "f02186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Ritter zum feurigen Kreuz, auch Orden der Ritter des Feurigen Kreuzes, Orden der Ritter vom feurigen Kreuz, war eine Geheimorganisation während der Weimarer Republik, die dem US-amerikanischen Ku-Klux-Klan nachempfunden war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ku-Klux-Klan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:48.164Z",
+   "target": "f02187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Organisation Consul (O.C.) was a German ultra-nationalist and antisemitic militant organization that operated in the Weimar Republic from 1920 to 1922.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Organisation Consul” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:48.164Z",
+   "target": "f02188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Thule Society (; German: Thule-Gesellschaft), originally the Studiengruppe für germanisches Altertum ('Study Group for Germanic Antiquity'), was a German occultist and Völkisch group founded in Munich shortly after World War I, named after a mythical northern country in Greek legend.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thule Society” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:48.164Z",
+   "target": "f02189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The German Workers' Party (German: Deutsche Arbeiterpartei, DAP) was an obscure far-right political party established in the Weimar Republic after World War I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “German Workers' Party” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:48.164Z",
+   "target": "f02190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Reichsbanner Schwarz-Rot-Gold (German: [ˈʁaɪçsˌbanɐ ˈʃvaʁts ˈʁoːt ˈɡɔlt], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reichsbanner Schwarz-Rot-Gold” is on the snapshot of s5"
+  }
+ ]
+}

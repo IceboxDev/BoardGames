@@ -1,0 +1,366 @@
+{
+ "article": "a1984",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Mini_Playback_Show",
+   "title": "Mini Playback Show – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:43.922Z",
+   "snapshot": "12bd00583b343fd2b48bede45486d933294a4a3cbd729effab35dbc3537004a0"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/L%C3%B6wenzahn_(Fernsehsendung)",
+   "title": "Löwenzahn (Fernsehsendung) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:01.680Z",
+   "snapshot": "d1cb4b966f49fa57ad59af1ea1dd68e5d5e740670baa1825f77bbc50979d58e3"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Peter_Lustig",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:44.929Z",
+   "snapshot": "af009ff8c8a2bffaa5c7d34d66266f9883aa8eb262e5a69939deaf0a5b33dbb4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/1,_2_oder_3",
+   "title": "1, 2 oder 3 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:46.022Z",
+   "snapshot": "50f52e90b2eeb29aadfd6364e152577b3bd0f6959086082bff2479a0e046cfc2"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Wissen_macht_Ah!",
+   "title": "Wissen macht Ah! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:46.914Z",
+   "snapshot": "ac792849c1e8aec2ac836ecf95b6807173481774c9d7124b8e2c73073147f3b7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Willi_wills_wissen",
+   "title": "Willi wills wissen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:04.582Z",
+   "snapshot": "f4025c3046bf29259122cb5c8f24a78e65bf7133501dc95c66330c72ce38903a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mini Playback Show",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Löwenzahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Löwenzahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1, 2 oder 3",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1, 2 oder 3",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 51; transcript tp-263"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wissen macht Ah!",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f09920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willi wills wissen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Peter Lustig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-342"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f09916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Mini Playback Show ist eine Unterhaltungsshow, die vom 31.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mini Playback Show” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f09917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Löwenzahn ist eine Fernsehserie des ZDF mit dem Ziel unterhaltsamer Wissensvermittlung für Kinder und Erwachsene.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Löwenzahn” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f09917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bekannt wurde er vor allem als Hauptdarsteller und Autor der ZDF-Serie Löwenzahn sowie deren Ableger mittendrin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Löwenzahn” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f09918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1, 2 oder 3 ist eine Quizshow für Kinder, die in ZDFtivi und KiKA (bis 2006 auch SF, bis 2025 auch ORF 1) ausgestrahlt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1, 2 oder 3” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f25110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1, 2 oder 3 ist eine Quizshow für Kinder, die in ZDFtivi und KiKA (bis 2006 auch SF, bis 2025 auch ORF 1) ausgestrahlt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1, 2 oder 3” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f09919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wissen macht Ah! ist eine deutsche Fernsehsendung des WDR.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wissen macht Ah!” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f09920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willi wills wissen war eine auf Sachthemen und alltägliche Begebenheiten ausgerichtete Kindersendung, die von Willi Weitzel moderiert und von „megaherz film und fernsehen“ im Auftrag des Bayerischen Rundfunks mit dem FWU produziert wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willi wills wissen” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:00.375Z",
+   "target": "f11740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Peter Lustig wuchs in Breslau und Hamburg-Bergedorf auf und besuchte die Grundschule in Wohltorf und die Realschule in Wentorf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Lustig” is on the snapshot of s3"
+  }
+ ]
+}

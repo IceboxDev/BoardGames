@@ -1,0 +1,195 @@
+{
+ "article": "a0568",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Manta_Manta",
+   "title": "Manta Manta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:16.280Z",
+   "snapshot": "d2a0066bb344f2a925dbac7a9cfb5065a70531ca3eaee9e0fdef3dba2857cd60"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Das_Boot_(Film)",
+   "title": "Das Boot (Film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:18.581Z",
+   "snapshot": "fcd830e0225527a033ae076acf8a6587a53f39bc45d07a701e6377856a392771"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ulrich_M%C3%BChe",
+   "title": "Ulrich Mühe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:18.377Z",
+   "snapshot": "6189b6f0676890753b99239b5178352e5ae9dd6614049778fb71ffbe4e12c30e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Franka_Potente",
+   "title": "Franka Potente – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:19.239Z",
+   "snapshot": "c51ea012b91dc80a479e999ca198a26c8d563c4a9c54f047396900f0377abe08"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Til Schweiger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c048"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jürgen Prochnow",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ulrich Mühe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Franka Potente",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:08.471Z",
+   "target": "f02836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schauspieler wie Til Schweiger, Tina Ruland und Michael Kessler begannen mit diesem Film ihre Karrieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:08.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Til Schweiger” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:08.471Z",
+   "target": "f02837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Otto Sander und Jürgen Prochnow waren schon länger auch im Filmgeschäft bekannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:08.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jürgen Prochnow” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:08.471Z",
+   "target": "f02839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ulrich Mühe war der Sohn des Kürschnermeisters Hans-Günther Mühe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:08.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ulrich Mühe” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:08.471Z",
+   "target": "f02840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Franka Potente wuchs als das ältere von zwei Kindern eines Lehrers und einer medizinisch-technischen Assistentin in Dülmen auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:08.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franka Potente” is on the snapshot of s4"
+  }
+ ]
+}

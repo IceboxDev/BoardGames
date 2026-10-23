@@ -1,0 +1,302 @@
+{
+ "article": "a1760",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Begriffsschrift",
+   "title": "Begriffsschrift – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:39.466Z",
+   "snapshot": "d4b9ee1f652a3c6590425de954fbb449afeba677920870c8bd93c43bfba99ff8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nicomachean_Ethics",
+   "title": "Nicomachean Ethics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:40.618Z",
+   "snapshot": "ed804609ea03a675d28358bc08cf869aea3b0599f769298a4c4d9a8cc88ac01a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Andronicus_of_Rhodes",
+   "title": "Andronicus of Rhodes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:41.410Z",
+   "snapshot": "db32c644be1015cb12f386aba0eb9a5ebc22cba6ddfd06ca1c78d3bbaf99eea2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Metaphysics",
+   "title": "Metaphysics",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:42.561Z",
+   "snapshot": "32262a1e6c979cbe10fb3869e9564e95dd577c1379cc2c16b6e5a52366860574"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_Gottlieb_Baumgarten",
+   "title": "Alexander Gottlieb Baumgarten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:44.061Z",
+   "snapshot": "29da314d5540577db8da3376bc6ba7fd91358d6a76644431c31ec1e00eaa13ca"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gettier_problem",
+   "title": "Gettier problem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:43.564Z",
+   "snapshot": "5c5e90113da63f442747ca57106ab41044230c7573ecee6666e6791824e67057"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/James_Frederick_Ferrier",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:42.970Z",
+   "snapshot": "a02c4e13cf2f8a4aa6d623897eede23ebed3d0501c420c0617156e12bc55ca15"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/History_of_logic",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:44.411Z",
+   "snapshot": "a8a11aa69138fce78cf8fe066baf11e2c1ab12d8ba882c6f96595ec5cb475a56"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Logic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c147"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ethics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Metaphysics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Metaphysics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-115"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alexander Gottlieb Baumgarten",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Edmund Gettier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:17.959Z",
+   "target": "f08796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Begriffsschrift (German for, roughly, 'concept-writing') is a book on logic by Gottlob Frege, published in 1879, and the formal system set out in that book.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.959Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Logic” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:17.959Z",
+   "target": "f08797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Nicomachean Ethics (; Ancient Greek: Ἠθικὰ Νικομάχεια, Ēthika Nikomacheia) is Aristotle's best-known work on ethics: the philosophical study of the good for human life, that which is the goal or end at which all our actions aim.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.959Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ethics” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:17.959Z",
+   "target": "f08800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Metaphysics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Metaphysics”, “Metaphysik”, “Метафизика”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:17.959Z",
+   "target": "f08800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Metaphysics is the branch of philosophy that examines the basic nature or most fundamental structure of reality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.959Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metaphysics” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:17.959Z",
+   "target": "f20500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alexander Gottlieb Baumgarten (; German: [ˈbaʊmˌgaʁtn̩]; 17 July 1714 – 27 May 1762) was a German philosopher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.959Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander Gottlieb Baumgarten” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:17.959Z",
+   "target": "f20501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Attributed to American philosopher Edmund Gettier, Gettier-type counterexamples (called \"Gettier-cases\") challenge the long-held notion of knowledge as justified true belief (JTB).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.959Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edmund Gettier” is on the snapshot of s6"
+  }
+ ]
+}

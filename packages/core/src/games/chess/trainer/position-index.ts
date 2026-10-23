@@ -146,6 +146,26 @@ export class PositionIndex {
     return out;
   }
 
+  private byGame: Float64Array[] | null = null;
+
+  /**
+   * One game's positions as hashes (`hashKey` of each `positionKey`), by ply:
+   * where the game stood before each of its indexed moves. Built for all games
+   * on first use, from the index itself.
+   */
+  hashesOf(game: number): Float64Array {
+    if (!this.byGame) {
+      const byGame = this.games.map((g) => new Float64Array(Math.min(g.moves.length, MAX_PLIES)));
+      for (let i = 0; i < this.refs.length; i++) {
+        const ref = this.refs[i] ?? 0;
+        const arr = byGame[ref >>> PLY_BITS];
+        if (arr) arr[ref & ((1 << PLY_BITS) - 1)] = this.hashes[i] ?? 0;
+      }
+      this.byGame = byGame;
+    }
+    return this.byGame[game] ?? new Float64Array(0);
+  }
+
   /** The moves played from this position across all games, most played first. */
   movesFrom(key: string): MoveStat[] {
     const stats = new Map<string, { games: number; score: number }>();

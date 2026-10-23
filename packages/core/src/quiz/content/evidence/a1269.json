@@ -1,0 +1,342 @@
+{
+ "article": "a1269",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_D",
+   "title": "Vitamin D – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:03.231Z",
+   "snapshot": "174e718e6572ae1a17f96d923a130ddaf69e8dd8490aa7bed8d9d56f9e9018da"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Scurvy",
+   "title": "Scurvy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:35.533Z",
+   "snapshot": "5210ce7dc342a128c94fcf221846b8d402d5b8e9d2e68b22fed0ac98095649a7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_K",
+   "title": "Vitamin K – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:04.141Z",
+   "snapshot": "7e567d47a949fcb3eceac6aac636b0c95fb28684901c8d2d704802ea62ed3232"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_A",
+   "title": "Vitamin A – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:05.063Z",
+   "snapshot": "35a726efd61ad55701f2c5a8ab096d6b27f23c47d2477e7df5143509f00f591c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_B12",
+   "title": "Vitamin B12 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:06.147Z",
+   "snapshot": "919a971b1ea34a37a68c9bd5a10b15bf0d21093979d595713175855f0d9ba682"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_C",
+   "title": "Vitamin C",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:20.201Z",
+   "snapshot": "1259681e97ac226db61dc8bef641c9ecaaa26d0854a58cd100ff339e48dcba70"
+  },
+  "s7": {
+   "url": "https://lpi.oregonstate.edu/mic/vitamins/vitamin-C",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:04.128Z",
+   "snapshot": "187e910cee9670abbe28341bbaa667ce34c6321f39065cf3efa8e43e2ab8e38c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "vitamin D",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "vitamin C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vitamin K",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "vitamin A",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "vitamin B12",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Collagen",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Collagen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (pp-079/2, u04): Collagen is right and our open wording asks only about it. But the card's option A is partly true too: vitamin C is a cofactor of dopamine beta-monooxygenase (noradrenaline) and of the enzyme that amidates peptide hormones. Added a note saying so."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f25400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Collagen",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s7"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f06341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vitamin D is a group of structurally related, fat-soluble compounds responsible for increasing intestinal absorption of calcium, along with numerous other biological functions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin D” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f06342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scurvy or scorbutus is a deficiency disease (state of malnutrition) resulting from a lack of vitamin C (ascorbic acid).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin C” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f06343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vitamin K is a family of structurally similar, fat-soluble vitamers found in foods and marketed as dietary supplements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin K” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f06344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vitamin A is a fat-soluble vitamin that is an essential nutrient.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin A” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f06345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Vitamin B12, also known as cobalamin or extrinsic factor, is a water-soluble vitamin involved in metabolism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin B12” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f25400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is an essential nutrient involved in the repair of tissue, the formation of collagen, and the enzymatic production of certain neurotransmitters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Collagen” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:57.685Z",
+   "target": "f25400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Vitamin C is an essential cofactor in numerous enzymatic reactions, e.g., in the biosynthesis of collagen, carnitine, and neuropeptides, and in the regulation of gene expression.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.685Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Collagen” is on the snapshot of s7"
+  }
+ ]
+}

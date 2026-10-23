@@ -1,0 +1,334 @@
+{
+ "article": "a0521",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Manolete",
+   "title": "Manolete – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:07.011Z",
+   "snapshot": "621f7e12c903272ca8427d651b181139228048035a6229d1da47f5a5925499d7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Picador",
+   "title": "Picador – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:08.060Z",
+   "snapshot": "31a6a7b8fdcad4504971a13750858832a364f4186b62b3e5cf548c607535682c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/La_Tauromaquia",
+   "title": "La Tauromaquia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:09.007Z",
+   "snapshot": "78885e7140b352bb1f2e6329a9c0b227c89af44e858902a50a2720e716a016d8"
+  },
+  "s4": {
+   "url": "https://es.wikipedia.org/wiki/Francisco_Romero_(torero)",
+   "title": "Francisco Romero (torero) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T04:02:06.332Z",
+   "snapshot": "17b19330540dc879f857e64620e282d8e398d13c4d6e1b374239373267e74020"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spanish-style_bullfighting",
+   "title": "Spanish-style bullfighting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:10.246Z",
+   "snapshot": "408d35f5efac631cb80ef2aac3e37d62a82f878a9b1953075e46ef6f016ae476"
+  },
+  "s6": {
+   "url": "https://dle.rae.es/banderillero",
+   "title": "banderillero – Diccionario de la lengua española",
+   "publisher": "Real Academia Española",
+   "kind": "reference",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T07:32:29Z"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Banderillero",
+   "title": "Banderillero – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:47.555Z",
+   "snapshot": "42b3a8b33790933d36e29dbbb9b0be20900e611375dfd78ddf9f27500e2a25ae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Matador",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Picador",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Banderillero",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Muleta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Capote",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:01.624Z",
+   "target": "f02601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Manolete died on 29 August 1947, following a fatal goring that occurred in his appearance alongside the up-and-coming matador Luis Miguel Dominguín in the town of Linares.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Matador” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:01.624Z",
+   "target": "f02602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A picador (Spanish pronunciation: [pikaˈðoɾ]; pl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Picador” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:01.624Z",
+   "target": "f02603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Banderillero",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Banderillero”, “Бандерильеро”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:01.624Z",
+   "target": "f02604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fundador de una dinastía taurina fundamental para la historia de la tauromaquia, se le atribuyen importantes aportaciones en un periodo clave en el que se definió la lidia moderna a pie, como fue el uso de la muleta y del estoque para matar al toro frente a frente.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muleta” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:01.624Z",
+   "target": "f02605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The bull then enters the ring to be tested for aggressiveness by the matador and banderilleros with the magenta and gold capote (dress cape).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Capote” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:32:29Z",
+   "target": "f02603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Torero que pone banderillas.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:32:33Z",
+   "target": "f02603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Stierkämpfer, der den Stier mit den Banderillas reizt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:25.073Z",
+   "target": "f02603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Stierkämpfer, der den Stier mit den Banderillas reizt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:25.073Z",
+   "target": "f02603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Banderillero ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Banderillero” is on the snapshot of s7"
+  }
+ ]
+}

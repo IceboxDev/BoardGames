@@ -1,0 +1,295 @@
+{
+ "article": "a2241",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jack_Nicholson",
+   "title": "Jack Nicholson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:53.609Z",
+   "snapshot": "33ece943305813ff51ce0ea4e3e73be4b55ddc1603edb3995e1138f45ca61f04"
+  },
+  "s2": {
+   "url": "https://www.biography.com/actors/jack-nicholson",
+   "title": "Jack Nicholson – Biography",
+   "publisher": "Biography.com (A&E)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:36.753Z",
+   "snapshot": "614ecf95d9d6592038bfe8e0f8920b0d6b7778d0ad804fce05a7aea2a8474f68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She was his mother",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "One Flew Over the Cuckoo's Nest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jack Torrance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Joker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Easy Rider",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:42.492Z",
+   "target": "f11481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She was his mother",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“She was his mother”, “Sie war seine Mutter”, “Она была его матерью”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:42.492Z",
+   "target": "f11482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nicholson won Academy Awards for Best Actor for playing Randle McMurphy in One Flew Over the Cuckoo's Nest (1975) and an author with OCD in As Good as It Gets (1997), as well as for Best Supporting Actor for playing an aging playboy in Terms of Endearment (1983).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “One Flew Over the Cuckoo's Nest” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:42.492Z",
+   "target": "f11483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Although he garnered no Academy Award for Stanley Kubrick's adaptation of Stephen King's The Shining (1980), his role in the film as writer Jack Torrance remains one of his more significant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Torrance” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:42.492Z",
+   "target": "f11484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He impressed me in one scene after another; the movie is composed largely of first takes with him.\" In Tim Burton's 1989 superhero film Batman, Nicholson portrayed the Joker opposite Michael Keaton as the title character.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Joker” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:42.492Z",
+   "target": "f11485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He received further Oscar nominations for Easy Rider (1969), Five Easy Pieces (1970), The Last Detail (1973), Chinatown (1974), Reds (1981), Prizzi's Honor (1985), Ironweed (1987), A Few Good Men (1992), and About Schmidt (2002).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Easy Rider” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:42:10Z",
+   "target": "f11481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1974, Time magazine researchers learned, and informed Nicholson, that his \"sister\", June, was actually his mother",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "born 22 April 1937, so 37 in (mid/late) 1974"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:42:15Z",
+   "target": "f11481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in 1974, a TIME magazine reporter researching a cover story on Nicholson discovered some shocking information: June was in fact Nicholson's mother",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:28.720Z",
+   "target": "f11481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1974, Time magazine researchers learned, and informed Nicholson, that his \"sister\", June, was actually his mother",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:28.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:28.720Z",
+   "target": "f11481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in 1974, a TIME magazine reporter researching a cover story on Nicholson discovered some shocking information: June was in fact Nicholson's mother",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:28.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  }
+ ]
+}

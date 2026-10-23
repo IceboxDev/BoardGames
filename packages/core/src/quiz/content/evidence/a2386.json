@@ -1,0 +1,289 @@
+{
+ "article": "a2386",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bletchley_Park",
+   "title": "Bletchley Park",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:07.865Z",
+   "snapshot": "060fe4bf0ad3d89e2eba3a4570b24775f325134d505ba5175efef2844b0afe15"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Black_Chamber",
+   "title": "Black Chamber",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:08.159Z",
+   "snapshot": "83abc0e8db7b5d68c2fc58a58893fff40f0fcc4e1b52175cc69d151d56d96d12"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Room_40",
+   "title": "Room 40 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:09.326Z",
+   "snapshot": "17d4247cbc7ea3480485475972706a6d497cdc4ce13065f14feaf95e7b46ae4f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marian_Rejewski",
+   "title": "Marian Rejewski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:10.344Z",
+   "snapshot": "1010fdf817e9b5cf161a80ef28f83b6d9d844d34f1bf79df4859cbe17593a365"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Code_talker",
+   "title": "Code talker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:11.278Z",
+   "snapshot": "8fd97248b597bc2651804d168ef8279e6a9add5dae0d942f827931f39cf6fadc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Type_B_Cipher_Machine",
+   "title": "Type B Cipher Machine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:12.233Z",
+   "snapshot": "8ffb5db9af941fe669d23ded696c97210f434bbb7982464745f9fca56b882996"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bletchley Park",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-138"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Black Chamber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; history entry seq 11; transcript tp-032"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Room 40",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marian Rejewski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Navajo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Purple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:11.207Z",
+   "target": "f12464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bletchley Park (Abkürzung B.P.) ist ein Landsitz in der englischen Stadt Bletchley in der Grafschaft Buckinghamshire und liegt etwa 70 km nordwestlich von London.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.207Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bletchley Park” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:11.207Z",
+   "target": "f12465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Black Chamber, officially the Cable and Telegraph Section and also known as the Cipher Bureau, was the first peacetime cryptanalytic organization in the United States, operating from 1917 to 1929.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.207Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Chamber” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:11.207Z",
+   "target": "f12466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was estimated that during the war Room 40 decrypted around 15,000 intercepted German communications from Wireless and telegraph traffic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.207Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Room 40” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:11.207Z",
+   "target": "f12467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marian Rejewski was born 16 August 1905 in Bromberg in the Prussian Province of Posen (now Bydgoszcz, Poland) to Józef and Matylda, née Thoms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.207Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marian Rejewski” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:11.207Z",
+   "target": "f12468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Type one codes were formally developed based on the languages of the Comanche, Hopi, Meskwaki, and Navajo peoples.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.207Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Navajo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:11.207Z",
+   "target": "f12469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The \"System 97 Typewriter for European Characters\" (九七式欧文印字機 kyūnana-shiki ōbun injiki) or \"Type B Cipher Machine\", codenamed Purple by the United States, was an encryption machine used by the Japanese Foreign Office from February 1939 to the end of World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.207Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Purple” is on the snapshot of s6"
+  }
+ ]
+}

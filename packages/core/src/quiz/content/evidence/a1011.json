@@ -1,0 +1,336 @@
+{
+ "article": "a1011",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hieronymus_Bosch",
+   "title": "Hieronymus Bosch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:09.172Z",
+   "snapshot": "33bc6ee1a340abefda60927af9ab3f7f467d9b20b1bae2f7b40a1500298cd41b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jan_van_Eyck",
+   "title": "Jan van Eyck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:10.151Z",
+   "snapshot": "5de0c82ba1e17c90d576a8da9a094ff8ce9aec440fe011224109df575dcf5621"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Tower_of_Babel_(Bruegel)",
+   "title": "The Tower of Babel (Bruegel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:45.503Z",
+   "snapshot": "048a3eae0a31c504e94099784559b1cfe4b51d53fe3c3939c19e8c1c0e0a919b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(D%C3%BCrer,_Munich)",
+   "title": "Self-Portrait (Dürer, Munich) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:11.028Z",
+   "snapshot": "63d3d77024ac45f8df8cb1b8422c8d698a8a895f0136f2f09d603908dbe6b2aa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Descent_from_the_Cross_(van_der_Weyden)",
+   "title": "The Descent from the Cross (van der Weyden) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:12.121Z",
+   "snapshot": "12a1b989ca42865d59b249eb114b086ec09f34dbf952a26222507340b4b62f00"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Der_Garten_der_L%C3%BCste_(Bosch)",
+   "title": "Der Garten der Lüste (Bosch)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:09.478Z",
+   "snapshot": "1b6104d852ec1720b029065ad2ab1a89c33c867e20836ccb991855ea28af0897"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+   "title": "Peter Paul Rubens",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:13.167Z",
+   "snapshot": "4d6d56fbf3736b1cc6faa5296445b9b5b4d8a4810d68a2373064a5e77799f805"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hieronymus Bosch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jan van Eyck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pieter Bruegel the Elder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Albrecht Dürer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rogier van der Weyden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Garten der Lüste",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-155"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Peter Paul Rubens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-222"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f05051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hieronymus Bosch (; Dutch: [ɦijeːˈroːnimʏz ˈbɔs] ; born Jheronimus van Aken [jeːˈroːnimʏs fɑn ˈaːkə(n)]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hieronymus Bosch” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f05052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jan van Eyck ( van EYEK; Dutch: [ˈjɑɱ vɑn ˈɛik]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jan van Eyck” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f05053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tower of Babel was the subject of two surviving paintings and one lost painting by Dutch and Flemish Renaissance painter Pieter Bruegel the Elder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pieter Bruegel the Elder” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f05054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Self-Portrait (or Self-Portrait at Twenty-Eight) is a panel painting by the German Renaissance artist Albrecht Dürer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albrecht Dürer” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f05055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Descent from the Cross (or Deposition of Christ, or Descent of Christ from the Cross, or in Flemish Kruisafneming) is a panel painting by the Flemish artist Rogier van der Weyden created c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rogier van der Weyden” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f10706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Garten der Lüste ist ein vielfach rezipiertes Werk des niederländischen Malers Hieronymus Bosch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Garten der Lüste” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:19.426Z",
+   "target": "f10707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sir Peter Paul Rubens ( ROO-bənz; Dutch: [ˈpeːtər pʌul ˈrybəns]; 28 June 1577 – 30 May 1640) was a Flemish artist and diplomat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Paul Rubens” is on the snapshot of s7"
+  }
+ ]
+}

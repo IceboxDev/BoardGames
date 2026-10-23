@@ -1,0 +1,616 @@
+{
+ "article": "a1500",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A_Minecraft_Movie",
+   "title": "A Minecraft Movie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:12.988Z",
+   "snapshot": "3426517d6405b93841a4861f25ce860bac441f05e6a20a07c167c3b34f95d906"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mojang_Studios",
+   "title": "Mojang Studios – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:41.438Z",
+   "snapshot": "cfb216cb40476b17a175d4b3b1e00227641670e51d3fa2cc802c78805e62196c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+   "title": "Grand Theft Auto V – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:14.080Z",
+   "snapshot": "d6ce98d2449b2f7616777e4878b9918febedb539e38bd12299ed53eedfce3eb0"
+  },
+  "s4": {
+   "url": "https://allcorrectgames.com/insights/the-gaming-market-in-brazil/",
+   "title": "The Gaming Market in Brazil | Allcorrect",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:13.202Z",
+   "snapshot": "593ae7310bce6a611b92eaa8920e4ef3aded975a9c2541b8f5b7e1fc4ab465f4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Minecraft",
+   "title": "Minecraft – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:09:36Z"
+  },
+  "s6": {
+   "url": "https://www.pcgamer.com/minecraft-has-sold-176-million-copies-may-be-the-best-selling-game-ever/",
+   "title": "Minecraft has sold 176 million copies, may be the best-selling game ever – PC Gamer",
+   "publisher": "PC Gamer",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:13.237Z",
+   "snapshot": "537c89f595c3f95fb32e6909ec2c9f30aaad0feed72b364a9df62408dcf920cd"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/technology-67105983",
+   "title": "Minecraft becomes first video game to hit 300m sales – BBC News",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:13.469Z",
+   "snapshot": "228e7c4ba43c40b0daf0f185c53866875da9ccaac2d36dec6d933a1ee288cd81"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+   "title": "List of best-selling video games – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:13.376Z",
+   "snapshot": "f36c0ba8a9748cf7277e0f32b19372eb24f0ac788361ff0c744a1acafb81df56"
+  },
+  "s9": {
+   "url": "https://www.polygon.com/2015/1/10/7524759/nintendo-brazil-wii-u-3ds-tariffs-taxes",
+   "title": "Nintendo ends console and game distribution in Brazil, citing high taxes – Polygon",
+   "publisher": "Polygon",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:14.209Z",
+   "snapshot": "09f552e359ad670b53fa031b2388156282b08820635c8361a873c77395e0b826"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Video_games_in_Brazil",
+   "title": "Video games in Brazil – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:14.485Z",
+   "snapshot": "851aad5d6facbfdca4dd3a1ea692fb5720d48809efbb0c85c5b9ed8d1eed28cd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Minecraft",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mojang",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Microsoft",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grand Theft Auto V",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brazil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-219"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:35.466Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Minecraft Movie is a 2025 adventure comedy film based on the 2011 video game Minecraft developed and published by Mojang Studios.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minecraft” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:35.466Z",
+   "target": "f07498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mojang AB, trading as Mojang Studios, is a Swedish video game developer and a studio of Xbox based in Stockholm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mojang” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:35.466Z",
+   "target": "f07499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With a desire to move on from the game, Persson offered to sell his share in Mojang, and the company was acquired by Microsoft for its Microsoft Studios (later Xbox Game Studios) unit in November 2014.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Microsoft” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:35.466Z",
+   "target": "f07500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grand Theft Auto V” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:35.466Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Gaming Market in Brazil | Allcorrect",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brazil” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:09:36Z",
+   "target": "f07496",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In May 2019, on the tenth anniversary of the game's release, total sales surpassed 176 million copies, making Minecraft the best-selling video game of all time.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "premise of the old wording ('in 2019 second after Tetris') depends on how Tetris is counted; wording narrowed to 'second only to Tetris on lists that count all Tetris versions'"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:09:37Z",
+   "target": "f07496",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It's impossible to say for sure because nobody's willing to say exactly how many copies Tetris has sold, with estimated figures varying from 170 million to 425 million—depending who's doing the counting and which of the many versions available count as real Tetris.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the narrowed wording"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:09:38Z",
+   "target": "f07496",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tetris has sold at least 425 million units on mobile devices alone, having had multiple versions of the game released on iOS and Android since 2008, and some lists consider it to be the best-selling game for this reason.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:09:39Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Microsoft took the opportunity of Minecraft's 10th anniversary to announce their new AR game Minecraft Earth , and also casually mention that Mojang's voxel-em-up has now sold 176 million copies .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:09:40Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Reliable sources are split as to whether the title of best-selling video game should belong to Tetris",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:09:42Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "When the PS4 launched in Brazil, Sony explained that 63 percent of the console's price tag was attributable to fees and taxes applied to the importing of the console.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports Brazil's extreme games mark-up; the card's 'about 70 percent' figure itself was not found in any source and is flagged as a rough estimate in body and notes"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:09:43Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "which was a result of Brazil's heavy taxes and import fees on foreign electronics.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f07496",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It's impossible to say for sure because nobody's willing to say exactly how many copies Tetris has sold, with estimated figures varying from 170 million to 425 million—depending who's doing the counting and which of the many versions available count as real Tetris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f07496",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tetris has sold at least 425 million units on mobile devices alone, having had multiple versions of the game released on iOS and Android since 2008, and some lists consider it to be the best-selling game for this reason.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Reliable sources are split as to whether the title of best-selling video game should belong to Tetris",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "When the PS4 launched in Brazil, Sony explained that 63 percent of the console's price tag was attributable to fees and taxes applied to the importing of the console.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "which was a result of Brazil's heavy taxes and import fees on foreign electronics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Minecraft has sold 176 million copies, may be the best-selling game ever | PC Gamer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Minecraft” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Minecraft becomes first video game to hit 300m sales",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Minecraft” is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f07496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Reliable sources are split as to whether the title of best-selling video game should belong to Tetris, a 1988 multi-platform puzzle video game created by Alexey Pajitnov, or to Minecraft, a 2011 multi-platform sandbox game created by Markus Persson and developed by Mojang Studios.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Minecraft” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Nintendo ends console and game distribution in Brazil, citing high taxes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Brazil” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:21.253Z",
+   "target": "f13948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Brazil is the 9th-largest video game market in the world as of 2023, and the largest in Latin America, with a revenue of 2.6 billion US dollars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Brazil” is on the snapshot of s10"
+  }
+ ]
+}

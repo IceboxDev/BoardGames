@@ -1,0 +1,290 @@
+{
+ "id": "a1404",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "Cookies, Cache and Bookmarks: What Your Browser Remembers",
+ "titleDe": "Cookies, Cache und Lesezeichen: Was sich der Browser merkt",
+ "titleRu": "Cookie, кэш и закладки: что запоминает браузер",
+ "bodyEn": "Every time you visit a website your browser quietly stores a few things on your computer. The best known of them are Cookies.\n\nCookies are small data packets, text files of at most a few kilobytes, that a website sends to the browser and that the browser sends back with every later request to the same site. They were invented in June 1994 by Lou Montulli at Netscape so that an online shop could remember what was in a customer's basket; the name comes from the „magic cookie“, an old programming term for a token passed between programs. The first standard for them, RFC 2109, followed in February 1997. Session cookies vanish when the browser is closed; persistent cookies keep you logged in, remember your language and, in the case of third-party cookies set by advertising networks, follow you from site to site. That tracking is why European law since 2009 requires the consent banners that now greet visitors to almost every site.\n\nCookies are not the only thing the browser keeps. The Cache is a temporary store on the hard disk in which the browser saves images, style sheets, scripts and whole pages it has already downloaded, so that they load instantly the next time. Clearing the cache forces the browser to fetch everything afresh and is the classic first step when a page looks broken. The idea is older than the Web: IBM's System/360 Model 85 of 1968 was the first computer with a cache in front of its main memory.\n\nBookmarks, called „favourites“ in Microsoft's browsers and „hotlists“ in the Mosaic browser of 1993, are the addresses a user deliberately saves in order to find a page again; the history, by contrast, is the automatic list of every page visited, which the browser records so that half-remembered pages can be found and so that visited links turn purple.\n\nWhat the browser bookmarks is a URL, a Uniform Resource Locator: the address that begins with „http://“ or „https://“ and names the server and the path of a page. It was specified in December 1994 in RFC 1738, co-written by Tim Berners-Lee, who had invented the World Wide Web at CERN a few years earlier. In January 2005 RFC 3986 laid down the generic syntax that URLs still follow.\n\nFinally, what the browser actually receives from the server is a document written in HTML, the HyperText Markup Language, also Berners-Lee's creation, first publicly described in his document „HTML Tags“ in late 1991. HTML describes the structure of a page, its headings, paragraphs, links and images, in tags; style sheets (CSS) then say how the page should look, and scripts (JavaScript) make it interactive.\n\n| Term | What it is | Where it lives |\n|---|---|---|\n| Cookies | small data packets sent by a site | on the user's computer |\n| Cache | copies of downloaded files | browser storage |\n| Bookmarks | saved page addresses | browser |\n| URL | address of a page | address bar |\n| HTML | markup language of the page | the page itself |",
+ "bodyDe": "Jedes Mal, wenn man eine Internetseite besucht, speichert der Browser still und leise ein paar Dinge auf dem Rechner. Die bekanntesten davon sind Cookies.\n\nCookies sind kleine Datenpakete, Textdateien von höchstens wenigen Kilobyte, die eine Internetseite an den Browser sendet und die der Browser bei jeder späteren Anfrage an dieselbe Seite zurückschickt. Erfunden wurden sie im Juni 1994 von Lou Montulli bei Netscape, damit ein Online-Shop sich merken konnte, was im Warenkorb eines Kunden lag; der Name stammt vom „magic cookie“, einem alten Programmierbegriff für eine Marke, die zwischen Programmen weitergereicht wird. Der erste Standard dafür, RFC 2109, folgte im Februar 1997. Sitzungscookies verschwinden, wenn der Browser geschlossen wird; dauerhafte Cookies halten die Anmeldung aufrecht, merken sich die Sprache und folgen einem, im Fall der von Werbenetzwerken gesetzten Drittanbieter-Cookies, von Seite zu Seite. Dieses Tracking ist der Grund, warum das europäische Recht seit 2009 die Einwilligungsbanner verlangt, die heute Besucher fast jeder Seite begrüßen.\n\nCookies sind nicht das Einzige, was der Browser behält. Der Cache ist ein Zwischenspeicher auf der Festplatte, in dem der Browser Bilder, Stylesheets, Skripte und ganze Seiten ablegt, die er bereits heruntergeladen hat, damit sie beim nächsten Mal sofort laden. Den Cache zu leeren zwingt den Browser, alles neu zu holen, und ist der klassische erste Schritt, wenn eine Seite kaputt aussieht. Die Idee ist älter als das Web: IBMs System/360 Model 85 von 1968 war der erste Computer mit einem Cache vor dem Hauptspeicher.\n\nLesezeichen, in den Browsern von Microsoft „Favoriten“ und im Browser Mosaic von 1993 „Hotlists“ genannt, sind die Adressen, die ein Nutzer absichtlich speichert, um eine Seite wiederzufinden; der Verlauf dagegen ist die automatische Liste aller besuchten Seiten, die der Browser aufzeichnet, damit halb vergessene Seiten wiedergefunden werden können und besuchte Links violett erscheinen.\n\nWas der Browser als Lesezeichen speichert, ist eine URL, ein Uniform Resource Locator: die Adresse, die mit „http://“ oder „https://“ beginnt und den Server und den Pfad einer Seite benennt. Sie wurde im Dezember 1994 im RFC 1738 spezifiziert, den Tim Berners-Lee mitverfasste, der wenige Jahre zuvor am CERN das World Wide Web erfunden hatte. Im Januar 2005 legte RFC 3986 die allgemeine Syntax fest, der URLs bis heute folgen.\n\nWas der Browser schließlich tatsächlich vom Server empfängt, ist ein Dokument in HTML, der HyperText Markup Language, ebenfalls eine Schöpfung von Berners-Lee, erstmals öffentlich beschrieben in seinem Dokument „HTML Tags“ Ende 1991. HTML beschreibt die Struktur einer Seite, ihre Überschriften, Absätze, Links und Bilder, in Tags; Stylesheets (CSS) legen dann fest, wie die Seite aussehen soll, und Skripte (JavaScript) machen sie interaktiv.\n\n| Begriff | Was es ist | Wo es liegt |\n|---|---|---|\n| Cookies | kleine Datenpakete, von einer Seite gesendet | auf dem Rechner des Nutzers |\n| Cache | Kopien heruntergeladener Dateien | Browserspeicher |\n| Lesezeichen | gespeicherte Seitenadressen | Browser |\n| URL | Adresse einer Seite | Adressleiste |\n| HTML | Auszeichnungssprache der Seite | die Seite selbst |",
+ "bodyRu": "Каждый раз, когда вы заходите на сайт, браузер незаметно сохраняет на вашем компьютере кое-что. Самые известные из этих вещей — cookie.\n\nCookie — это небольшие пакеты данных, текстовые файлы размером не более нескольких килобайт, которые сайт отправляет браузеру и которые браузер возвращает с каждым последующим запросом к тому же сайту. Их изобрёл в июне 1994 года Лу Монтулли в Netscape, чтобы интернет-магазин мог запомнить, что лежит в корзине покупателя; название происходит от «magic cookie» — старого программистского термина для маркера, передаваемого между программами. Первый стандарт для них, RFC 2109, появился в феврале 1997 года. Сеансовые cookie исчезают при закрытии браузера; постоянные cookie сохраняют вход в систему, запоминают язык, а сторонние cookie рекламных сетей следят за пользователем от сайта к сайту. Из-за этого отслеживания европейское право с 2009 года требует баннеров согласия, которые теперь встречают посетителей почти на каждом сайте.\n\nCookie — не единственное, что хранит браузер. Кэш — это временное хранилище на диске, куда браузер складывает уже загруженные изображения, таблицы стилей, скрипты и целые страницы, чтобы в следующий раз они открывались мгновенно. Очистка кэша заставляет браузер загрузить всё заново и служит классическим первым шагом, когда страница выглядит сломанной. Идея старше Всемирной паутины: IBM System/360 Model 85 1968 года стала первым компьютером с кэшем перед основной памятью.\n\nЗакладки, которые в браузерах Microsoft называются «избранным», а в браузере Mosaic 1993 года назывались «hotlists», — это адреса, которые пользователь сохраняет намеренно, чтобы снова найти страницу; история же — автоматический список всех посещённых страниц, который браузер ведёт, чтобы можно было найти полузабытые страницы и чтобы посещённые ссылки становились фиолетовыми.\n\nВ закладках браузер сохраняет URL, Uniform Resource Locator («единообразный указатель ресурса»): адрес, начинающийся с «http://» или «https://» и называющий сервер и путь к странице. Он был описан в декабре 1994 года в RFC 1738, одним из авторов которого был Тим Бернерс-Ли, за несколько лет до того изобретший Всемирную паутину в ЦЕРН. В январе 2005 года RFC 3986 закрепил общий синтаксис, которому URL следуют до сих пор.\n\nНаконец, то, что браузер на самом деле получает от сервера, — это документ на языке HTML, HyperText Markup Language («язык гипертекстовой разметки»), тоже детище Бернерса-Ли, впервые публично описанный в его документе «HTML Tags» в конце 1991 года. HTML описывает структуру страницы — её заголовки, абзацы, ссылки и изображения — с помощью тегов; таблицы стилей (CSS) затем задают, как страница должна выглядеть, а скрипты (JavaScript) делают её интерактивной.\n\n| Термин | Что это | Где хранится |\n|---|---|---|\n| Cookie | небольшие пакеты данных от сайта | на компьютере пользователя |\n| Кэш | копии загруженных файлов | хранилище браузера |\n| Закладки | сохранённые адреса страниц | браузер |\n| URL | адрес страницы | адресная строка |\n| HTML | язык разметки страницы | сама страница |",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/NCSA_Mosaic_Browser_Screenshot.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Mosaic_(web_browser)",
+   "width": 772,
+   "height": 668,
+   "alt": {
+    "en": "Screenshot of the NCSA Mosaic web browser",
+    "de": "Bildschirmfoto des Webbrowsers NCSA Mosaic",
+    "ru": "Снимок экрана веб-браузера NCSA Mosaic"
+   },
+   "caption": {
+    "en": "NCSA Mosaic, the 1993 browser that saved favourite pages in \"hotlists\", the forerunners of today's bookmarks.",
+    "de": "NCSA Mosaic, der Browser von 1993, der Lieblingsseiten in „Hotlists“ speicherte, den Vorläufern heutiger Lesezeichen.",
+    "ru": "NCSA Mosaic — браузер 1993 года, сохранявший любимые страницы в «hotlists» — предшественниках нынешних закладок."
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "f07016",
+   "answerEn": "Cookies",
+   "answerDe": "Cookies",
+   "answerRu": "cookie",
+   "spans": {
+    "en": [
+     127,
+     7
+    ],
+    "de": [
+     156,
+     7
+    ],
+    "ru": [
+     137,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1997-02",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RFC 2109 sets the first standard for HTTP cookies",
+    "labelDe": "RFC 2109 legt den ersten Standard für HTTP-Cookies fest",
+    "labelRu": "RFC 2109 устанавливает первый стандарт HTTP cookie"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HTTP_cookie",
+    "title": "HTTP cookie – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07016",
+     "en": "Which small data packets contain information that is stored on the computer while browsing websites?",
+     "de": "Welche kleinen Datenpakete enthalten Informationen, die beim Browsen von Internetseiten auf dem Rechner gespeichert werden?",
+     "ru": "Какие небольшие пакеты данных содержат информацию, сохраняемую на компьютере при просмотре сайтов?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c117",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f07017",
+   "answerEn": "Cache",
+   "answerDe": "Cache",
+   "answerRu": "кэш",
+   "spans": {
+    "en": [
+     994,
+     5
+    ],
+    "de": [
+     1139,
+     5
+    ],
+    "ru": [
+     1021,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1968",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "IBM's System/360 Model 85 is the first computer with a memory cache",
+    "labelDe": "IBMs System/360 Model 85 ist der erste Computer mit Speicher-Cache",
+    "labelRu": "IBM System/360 Model 85 становится первым компьютером с кэш-памятью"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/CPU_cache",
+    "title": "CPU cache – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07017",
+     "en": "Which temporary store of the browser keeps images and files from visited websites so that they load faster on the next visit?",
+     "de": "Welcher Zwischenspeicher des Browsers bewahrt Bilder und Dateien besuchter Internetseiten auf, damit sie beim nächsten Besuch schneller laden?",
+     "ru": "Какое временное хранилище браузера сохраняет изображения и файлы посещённых сайтов, чтобы при следующем посещении они загружались быстрее?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f07018",
+   "answerEn": "Bookmarks",
+   "answerDe": "Lesezeichen",
+   "answerRu": "закладки",
+   "spans": {
+    "en": [
+     1434,
+     9
+    ],
+    "de": [
+     1601,
+     11
+    ],
+    "ru": [
+     1452,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1993",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Mosaic browser lets users save favourite pages in „hotlists“",
+    "labelDe": "Der Browser Mosaic lässt Nutzer Lieblingsseiten in „Hotlists“ speichern",
+    "labelRu": "Браузер Mosaic позволяет сохранять любимые страницы в «hotlists»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bookmark_(World_Wide_Web)",
+    "title": "Bookmark (World Wide Web) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07018",
+     "en": "Which saved website addresses does a user create in the browser in order to find the pages again quickly later?",
+     "de": "Welche gespeicherten Adressen von Internetseiten legt der Nutzer im Browser an, um sie später schnell wiederzufinden?",
+     "ru": "Какие сохранённые адреса сайтов пользователь создаёт в браузере, чтобы позже быстро находить эти страницы?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f07019",
+   "answerEn": "URL",
+   "answerDe": "URL",
+   "answerRu": "URL",
+   "spans": {
+    "en": [
+     1822,
+     3
+    ],
+    "de": [
+     2044,
+     3
+    ],
+    "ru": [
+     1862,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2005-01",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RFC 3986 fixes the generic syntax of URIs and URLs",
+    "labelDe": "RFC 3986 legt die allgemeine Syntax von URIs und URLs fest",
+    "labelRu": "RFC 3986 закрепляет общий синтаксис URI и URL"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Uniform_Resource_Identifier",
+    "title": "Uniform Resource Identifier – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07019",
+     "en": "Which address beginning with „http“ or „https“ designates the location of a web page?",
+     "de": "Welche mit „http“ oder „https“ beginnende Adresse bezeichnet den Speicherort einer Internetseite?",
+     "ru": "Какой адрес, начинающийся с «http» или «https», указывает местонахождение веб-страницы?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f07020",
+   "answerEn": "HTML",
+   "answerDe": "HTML",
+   "answerRu": "HTML",
+   "spans": {
+    "en": [
+     2260,
+     4
+    ],
+    "de": [
+     2503,
+     4
+    ],
+    "ru": [
+     2341,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tim Berners-Lee first describes HTML publicly in „HTML Tags“",
+    "labelDe": "Tim Berners-Lee beschreibt HTML erstmals öffentlich in „HTML Tags“",
+    "labelRu": "Тим Бернерс-Ли впервые публично описывает HTML в «HTML Tags»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HTML",
+    "title": "HTML – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07020",
+     "en": "Which markup language describes the structure of web pages?",
+     "de": "Welche Auszeichnungssprache beschreibt die Struktur von Internetseiten?",
+     "ru": "Какой язык разметки описывает структуру веб-страниц?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q8811",
+     "label": "HTML",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/internet/browsers",
+  "audience:international"
+ ]
+}

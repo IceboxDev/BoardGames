@@ -1,0 +1,249 @@
+{
+ "article": "a1669",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/42nd_Annual_Grammy_Awards",
+   "title": "42nd Annual Grammy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:58.380Z",
+   "snapshot": "d2ff47a2e97b404e5da054504827e25dd5f622c78a42782a1da3432d1ab7226c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Unplugged_(Eric_Clapton_album)",
+   "title": "Unplugged (Eric Clapton album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:59.268Z",
+   "snapshot": "edabad837cb984307c8c97946707bf111c208de7010801cf346edf54104830a1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Smooth_(song)",
+   "title": "Smooth (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:00.316Z",
+   "snapshot": "89fb2e91310954ede880444ed037813555a763f8d8c6ddbf6c9d87befd0e02af"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maria_Maria",
+   "title": "Maria Maria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:01.317Z",
+   "snapshot": "84b7671b9d376f65febdca84a5f8ea0b6441b9cb9702c5eda92e450f1957325b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Game_of_Love_(Santana_song)",
+   "title": "The Game of Love (Santana song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:02.340Z",
+   "snapshot": "67e4a6e062a46c5fceceeca67f4d935425530b35a5b64683aefef3b106f7684d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Smooth_(Santana_song)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:03.293Z",
+   "snapshot": "89fb2e91310954ede880444ed037813555a763f8d8c6ddbf6c9d87befd0e02af"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carlos Santana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eric Clapton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rob Thomas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wyclef Jean",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Michelle Branch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:02.466Z",
+   "target": "f08341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carlos Santana, Clive Davis, Stephen M.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carlos Santana” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:02.466Z",
+   "target": "f08342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unplugged is a 1992 live album by the English guitarist Eric Clapton, recorded at Bray Studios in Windsor, England, in front of an audience for the MTV Unplugged TV series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eric Clapton” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:02.466Z",
+   "target": "f08343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Smooth\" is a song performed by American rock band Santana and Rob Thomas of Matchbox Twenty, who sings the lead vocals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rob Thomas” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:02.466Z",
+   "target": "f08344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The song was written by Wyclef Jean, Jerry \"Wonda\" Duplessis, Carlos Santana, Karl Perazzo, and Raul Rekow, while Jean and Duplessis produced it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wyclef Jean” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:02.466Z",
+   "target": "f08345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The vocal performance on the song is by Michelle Branch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.466Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michelle Branch” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,479 @@
+{
+ "article": "a1348",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)",
+   "title": "Firefly (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:09.430Z",
+   "snapshot": "880baaae662759042c8141111d586990cceea56efc3c19f5410db672cfea988f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)",
+   "title": "Battlestar Galactica (2004 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:10.291Z",
+   "snapshot": "b140e6e071cb9743ddd9040b96e6a49e620835d280a5ef32d1dd9761a0950363"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica",
+   "title": "Battlestar Galactica",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:11.356Z",
+   "snapshot": "23d73e30e39094a94b3be144f6b3993dba5edba33392385db57e4379b7aae21b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Babylon_5",
+   "title": "Babylon 5 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:12.402Z",
+   "snapshot": "28c3f6e2abd6e06ab21ddbe9ce7704623c23b5b020f90c61bd3c620a17d21a07"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Farscape",
+   "title": "Farscape – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:13.512Z",
+   "snapshot": "d5f433ff70c9061597974f6963c9da328834347ab77901e3f0b42027afc26b41"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Expanse_(TV_series)",
+   "title": "The Expanse (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:14.650Z",
+   "snapshot": "58475ebdecacecb7ba9d3c639147f47edb032bba22b552bcd18520a106bb383a"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Raumpatrouille_%E2%80%93_Die_phantastischen_Abenteuer_des_Raumschiffes_Orion",
+   "title": "Raumpatrouille – Die phantastischen Abenteuer des Raumschiffes Orion",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:11.741Z",
+   "snapshot": "8fa67002b5585416ad60b32e5378066978e1a8c878c745403e80b76742f27938"
+  },
+  "s8": {
+   "url": "https://www.fernsehserien.de/raumpatrouille",
+   "title": "Raumpatrouille",
+   "publisher": "fernsehserien.de",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:31.288Z",
+   "snapshot": "d4aa41b4bc4239622f74d7b551ad916d60d954b8f8af568798cc079e15e6312e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Firefly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Battlestar Galactica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Battlestar Galactica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-141"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Babylon 5",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Farscape",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Expanse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "7 Folgen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; history entry seq 44; transcript tp-023"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Earth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 51; transcript tp-082"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f06736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Firefly is a 2002 American space Western drama television series, created by writer and director Joss Whedon, under his Mutant Enemy Productions label.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Firefly” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f06737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Battlestar Galactica is an American military science fiction television series, and part of the Battlestar Galactica franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Battlestar Galactica” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f06737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Battlestar Galactica is an American science fiction media franchise created by Glen A.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Battlestar Galactica” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f06738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Babylon 5 is an American space opera television series created by writer and producer J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Babylon 5” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f06739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Farscape is a science fiction television series conceived by Rockne S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Farscape” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f06740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Expanse is an American science fiction television series developed by Mark Fergus and Hawk Ostby for the Syfy network; it is based on the series of novels of the same name by James S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Expanse” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "7 Folgen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“7 Folgen”, “7 episodes”, “7 серий”) on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:11.826Z",
+   "target": "f11616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Under the leadership of Commander Adama, the Galactica and the pilots of \"Viper fighters\" lead a fugitive fleet of survivors in search of the fabled thirteenth colony known as Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Earth” is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:33:36Z",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Abenteuer Science-Fiction 7 Folgen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:33:40Z",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sie wurde ab dem 17. September 1966 vierzehntäglich samstagabends nach der Tagesschau von der ARD in sieben Teilen ausgestrahlt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:55.561Z",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Abenteuer Science-Fiction 7 Folgen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.561Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:55.561Z",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sie wurde ab dem 17. September 1966 vierzehntäglich samstagabends nach der Tagesschau von der ARD in sieben Teilen ausgestrahlt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.561Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:55.561Z",
+   "target": "f11615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "7 Folgen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.561Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “7 Folgen” is on the snapshot of s8"
+  }
+ ]
+}

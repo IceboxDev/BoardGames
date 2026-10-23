@@ -1,0 +1,446 @@
+{
+ "article": "a0300",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/War_of_the_currents",
+   "title": "War of the currents – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:02.287Z",
+   "snapshot": "3c15218b7bebd8a294be0855943efea1609cdccc6a40f5b37489ed2003fae4fc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nick_Holonyak",
+   "title": "Nick Holonyak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:03.133Z",
+   "snapshot": "442b701c33e20de576d30a4639942cddf7f5731e1daa3b85c783b3ad0bf89a32"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Leuchtdiode",
+   "title": "Leuchtdiode – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:03.560Z",
+   "snapshot": "9dbfc44f68c3b7e663f37a1255d087b18b10450d50c64ad8ea469efa31f75ded"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+   "title": "Light-emitting diode",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:06.301Z",
+   "snapshot": "f9ae82c5c74df933f981cfe73cdbcc84be6924194c161be4fe5e0ff92534c955"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Liquid-crystal_display",
+   "title": "Liquid-crystal display – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:07.344Z",
+   "snapshot": "1d38ce79360c1ceb91343ec029f3be32bd94105ca947de4e2e6720b065b64320"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+   "title": "Global Positioning System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:08.364Z",
+   "snapshot": "942396bc54578cac7e977ee832ba16b7d34fdb7b1b051c95dfc303a746dc3390"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Global_Positioning_System",
+   "title": "Global Positioning System",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:05.548Z",
+   "snapshot": "ba1baf2e593a0d0dfa5ee01627d44f7b6e8c46d56acedb2a96747beae72ef01e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/USB4",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:09.140Z",
+   "snapshot": "d59cd0c8de932240664290333dbd555723e2201a27c3a293f32e911b7a5232be"
+  },
+  "s9": {
+   "url": "https://www.energy.gov/articles/war-currents-ac-vs-dc-power",
+   "title": "The War of the Currents: AC vs. DC Power",
+   "publisher": "U.S. Department of Energy",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:14.593Z",
+   "snapshot": "bc6ff752556cb8939374f8702209fa4573d14662806d193f5d1bd2f467ac84f0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alternating Current/Direct Current",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Light-Emitting Diode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leuchtdiode",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-065"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Light-Emitting Diode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-076"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Liquid Crystal Display",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Global Positioning System",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f01500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Global Positioning System",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-393"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alternating Current/Direct Current",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Alternating Current/Direct Current”, “Wechselstrom/Gleichstrom”, “переменный ток/постоянный ток”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The GaAs0.60P0.40 laser diode worked at low temperatures, but the device still functioned as a light-emitting diode at room temperature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Light-Emitting Diode” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eine Leuchtdiode (kurz LED von englisch light-emitting diode, deutsch ‚lichtemittierende Diode‘, auch Lumineszenz-Diode) ist ein Halbleiter-Bauelement, das Licht ausstrahlt, wenn elektrischer Strom in Durchlassrichtung fließt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leuchtdiode” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A light-emitting diode (LED) is an electronic component that uses a semiconductor to emit light when current flows through it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Light-Emitting Diode” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A liquid-crystal display (LCD) is a flat-panel display or other electronically modulated optical device that uses the light-modulating properties of liquid crystals combined with polarizers to display information.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liquid Crystal Display” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Global Positioning System (GPS) is a satellite-based hyperbolic navigation system owned by the United States Space Force and operated by Mission Delta 31.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Global Positioning System” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:26.517Z",
+   "target": "f01500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das Global Positioning System (GPS; deutsch Globales Positionsbestimmungssystem), offiziell NAVSTAR GPS, ist ein globales Navigationssatellitensystem zur Positionsbestimmung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Global Positioning System” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:47:23Z",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "During the early years of electricity, direct current (shorthanded as DC) was the standard in the U.S.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: 'Tesla believed that alternating current (or AC) was the solution'."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:47:25Z",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "arc lamp street lighting running on high-voltage alternating current (AC), and large-scale low-voltage direct current (DC) indoor incandescent lighting",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:47:32Z",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tesla believed that alternating current (or AC) was the",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:47.032Z",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "arc lamp street lighting running on high-voltage alternating current (AC), and large-scale low-voltage direct current (DC) indoor incandescent lighting",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:47.032Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:47.032Z",
+   "target": "f01496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tesla believed that alternating current (or AC) was the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:47.032Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  }
+ ]
+}

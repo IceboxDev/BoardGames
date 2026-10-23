@@ -1,13 +1,13 @@
-import { deckCardRefs } from "@boardgames/core/games/quiztopia/ids";
+import { SETS_PER_CARD, VIRTUAL_PER_CARD } from "@boardgames/core/games/quiztopia/ids";
 import { type QuiztopiaConfig, quiztopiaManifest } from "@boardgames/core/games/quiztopia/manifest";
 import { BUILDING_COUNT } from "@boardgames/core/games/quiztopia/types";
 import { QUIZTOPIA_DIFFICULTIES } from "@boardgames/core/history/coop-challenge";
 import { configOrDefaults } from "@boardgames/core/machines/manifest";
-import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
+import type { QuizLanguage } from "@boardgames/core/protocol";
 import { Badge, FieldGroup, SegmentedControl, Surface } from "../../components/ui";
+import { CONTENT_META } from "../../trainers/quiz/content";
 import type { LobbyConfigProps } from "../types";
 import { Skyline } from "./components/common/Skyline";
-import { CARD_IDS } from "./content";
 import { DIFFICULTY_SHORT, tierFacts } from "./logic/copy";
 
 // The four table options a host sets before Start — the manifest's config:
@@ -16,8 +16,8 @@ import { DIFFICULTY_SHORT, tierFacts } from "./logic/copy";
 
 export type QuiztopiaLobbyValue = QuiztopiaConfig;
 
-const ORIGINAL_COUNT = CARD_IDS.length;
-const EXTENDED_COUNT = deckCardRefs(CARD_IDS, "extended").length;
+const ORIGINAL_COUNT = Math.floor((CONTENT_META.counts.printed.quiztopia ?? 0) / SETS_PER_CARD);
+const EXTENDED_COUNT = ORIGINAL_COUNT * (1 + VIRTUAL_PER_CARD);
 
 // Which buildings the preview darkens for n players. A fixed spread (not the
 // engine's shuffle) so the picture is stable while the host flips options.
@@ -30,7 +30,7 @@ export function readLobbyValue(value: unknown): QuiztopiaLobbyValue {
 /** The wire object for a room language choice ("both" = no default). */
 export function withLanguage(
   value: QuiztopiaLobbyValue,
-  language: QuiztopiaLanguage,
+  language: QuizLanguage,
 ): QuiztopiaLobbyValue {
   const { language: _drop, ...rest } = value;
   return language === "both" ? rest : { ...rest, language };
@@ -53,7 +53,7 @@ export default function QuiztopiaLobbyConfig({
   // Solo rules: the engine forces Expert off at one player, so the control
   // shows what will actually be played.
   const mode: "standard" | "expert" = cfg.expert && !solo ? "expert" : "standard";
-  const language: QuiztopiaLanguage = cfg.language ?? "both";
+  const language: QuizLanguage = cfg.language ?? "both";
   const darkCount = Math.min(playerCount, 6) + 2;
   const disabled = !isHost;
 

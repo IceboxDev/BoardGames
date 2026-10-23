@@ -1,0 +1,242 @@
+{
+ "article": "a1460",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zou_Yan",
+   "title": "Zou Yan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:43.446Z",
+   "snapshot": "913b84400779d061e53145dbe043e311a94db120f3b95d3b9cc353d61637e57c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tao_Te_Ching",
+   "title": "Tao Te Ching – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:44.684Z",
+   "snapshot": "fe4faf70110cec19571dc4cd1e030a9508d7ee7066864646c5b4b581da36e2a0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wu_wei",
+   "title": "Wu wei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:45.773Z",
+   "snapshot": "6a58909252dcab9c6b6f2f77a063aacbbb5cae884f6afa00d19cda9307a504b2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Qigong",
+   "title": "Qigong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:46.357Z",
+   "snapshot": "e219e807b7a92a0d95aee960d893b5d135f2747a83166651b89b7a8567f4b49a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Taijitu",
+   "title": "Taijitu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:19.234Z",
+   "snapshot": "acafaa02d10dffafb3ca24fa54111e10ff37d44cd017b84bb71b1bbea46c813b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yin and Yang",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dao",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wu wei",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "„Qi“",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Taijitu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:29.421Z",
+   "target": "f07296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was best known as the representative thinker of the Yin and Yang School (or School of Naturalists) during the Hundred Schools of Thought era in Chinese philosophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yin and Yang” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:29.421Z",
+   "target": "f07297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tao Te Ching or Dào Dé Jīng, (traditional Chinese: 道德經; simplified Chinese: 道德经; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dao” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:29.421Z",
+   "target": "f07298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wu wei (traditional Chinese: 無為; simplified Chinese: 无为; pinyin: wúwéi; Jyutping: mou4-wai4) is a concept from ancient Chinese philosophy that literally means not-acting or non-doing, variously interpreted and translated as actionlessness, inaction, or effortless action.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wu wei” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:29.421Z",
+   "target": "f07299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Qigong (Pinyin), ch'i kung (Wade-Giles), and chi gung (Yale) are romanizations of two Chinese words \"qì\" (氣) and \"gōng\" (功).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “„Qi“” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:29.421Z",
+   "target": "f07300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Chinese philosophy, a taijitu (Chinese: 太極圖; pinyin: tàijítú; Wade–Giles: tʻai⁴chi²tʻu²) is a symbol or diagram (圖; tú) representing taiji (太極; tàijí; 'utmost extreme') in both its monist (wuji) and its dualist (yin and yang) forms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taijitu” is on the snapshot of s5"
+  }
+ ]
+}

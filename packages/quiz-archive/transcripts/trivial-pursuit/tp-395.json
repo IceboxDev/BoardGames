@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-395",
+ "image": "IMG20261007182752.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welche Stadt hat das längste U-Bahnstreckennetz der Welt: London, Schanghai oder New York?",
+   "de": "Welche Stadt hatte das längste U-Bahnstreckennetz der Welt, bis Peking sie im Dezember 2023 überholte?",
+   "en": "Which city had the world's longest metro network until Beijing overtook it in December 2023?",
+   "reworked": true,
+   "answerDe": "Schanghai",
+   "answerEn": "Shanghai",
+   "timeline": {
+    "kind": "event",
+    "start": "2023-12",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Beijing Subway overtakes the Shanghai Metro as the world's longest metro system by route length",
+    "labelDe": "Die Pekinger U-Bahn überholt die Schanghaier Metro als längstes U-Bahn-Netz der Welt nach Streckenlänge"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Beijing_Subway",
+    "title": "Beijing Subway",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice card reworked. Dated premise: Shanghai (the card's intended answer among London, Shanghai and New York) was the longest until December 2023; Beijing is now the longest (909 km vs Shanghai's 808 km per Wikipedia), so the open question is framed in the past.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt das musikalische Verwandlungsgenie, das den „Thin White Duke“ zu einer seiner Kunstfiguren machte?",
+   "de": "Wie heißt das musikalische Verwandlungsgenie, das den „Thin White Duke“ zu einer seiner Kunstfiguren machte?",
+   "en": "Who is the musical master of transformation who made the “Thin White Duke” one of his stage personas?",
+   "reworked": false,
+   "answerDe": "David Bowie",
+   "answerEn": "David Bowie",
+   "timeline": {
+    "kind": "period",
+    "start": "1974",
+    "end": "1976",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "David Bowie appears as his persona the Thin White Duke, tied to the album Station to Station",
+    "labelDe": "David Bowie tritt als seine Kunstfigur Thin White Duke auf, verbunden mit dem Album Station to Station"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Thin_White_Duke",
+    "title": "The Thin White Duke",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "In welchem Jahrhundert wurden mit der Gutenbergpresse bewegliche Lettern im Druck eingeführt, was die Massenkommunikation ermöglichte?",
+   "de": "In welchem Jahrhundert wurden mit der Gutenbergpresse bewegliche Lettern im Druck eingeführt, was die Massenkommunikation ermöglichte?",
+   "en": "In which century were movable type introduced to printing with the Gutenberg press, making mass communication possible?",
+   "reworked": false,
+   "answerDe": "15. Jahrhundert",
+   "answerEn": "15th century",
+   "timeline": {
+    "kind": "creation",
+    "start": "1450",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Johannes Gutenberg begins printing with movable metal type in Mainz",
+    "labelDe": "Johannes Gutenberg beginnt in Mainz mit beweglichen Metalllettern zu drucken"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Johannes_Gutenberg",
+    "title": "Johannes Gutenberg",
+    "lang": "de"
+   },
+   "notes": "Movable type was already in use in East Asia earlier; the card means its introduction in Europe by Gutenberg (from about 1450).",
+   "domain": "history",
+   "sub": "medieval"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie alt wurde das deutsche Jugendmagazin Bravo im Jahr 2016?",
+   "de": "Wie alt wurde das deutsche Jugendmagazin Bravo im Jahr 2016?",
+   "en": "How old did the German youth magazine Bravo turn in 2016?",
+   "reworked": false,
+   "answerDe": "60 Jahre",
+   "answerEn": "60 years",
+   "timeline": {
+    "kind": "founding",
+    "start": "1956",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The German youth magazine Bravo is first published",
+    "labelDe": "Die deutsche Jugendzeitschrift Bravo erscheint zum ersten Mal"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bravo_(deutsche_Zeitschrift)",
+    "title": "Bravo (deutsche Zeitschrift)",
+    "lang": "de"
+   },
+   "notes": "Bravo has appeared since 1956. Title is italic on the card.",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wo liegen die limbischen Gebiete: im Gehirn, kurz vor Feuerland oder im Orionnebel?",
+   "de": "In welchem Organ liegen die limbischen Gebiete?",
+   "en": "In which organ are the limbic areas located?",
+   "reworked": true,
+   "answerDe": "Gehirn",
+   "answerEn": "Brain",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1878",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "French anatomist Paul Broca defines the limbic lobe of the brain",
+    "labelDe": "Der französische Anatom Paul Broca beschreibt den limbischen Lappen des Gehirns"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Limbisches_System",
+    "title": "Limbisches System",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice card reworked to an open question. The 1878 date is from the English Limbic system article.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Gegen mögliche Bisse von welchem mysteriösen schottischen Ungeheuer wurden 100 Triathleten im Jahr 2005 für eine Million Pfund pro Person versichert?",
+   "de": "Gegen mögliche Bisse von welchem mysteriösen schottischen Ungeheuer wurden 100 Triathleten im Jahr 2005 für eine Million Pfund pro Person versichert?",
+   "en": "Against possible bites from which mysterious Scottish monster were 100 triathletes insured for one million pounds each in 2005?",
+   "reworked": false,
+   "answerDe": "Ungeheuer von Loch Ness",
+   "answerEn": "Loch Ness Monster",
+   "timeline": {
+    "kind": "event",
+    "start": "2005",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Swimmers in the Visit Scotland Adventure Triathlon at Loch Ness are insured against attacks by the Loch Ness Monster",
+    "labelDe": "Schwimmer des Visit Scotland Adventure Triathlon am Loch Ness werden gegen Angriffe des Ungeheuers von Loch Ness versichert"
+   },
+   "source": {
+    "url": "https://www.dailycardinal.com/article/2005/09/news-of-the-weird",
+    "title": "News of the weird (The Daily Cardinal, September 2005)",
+    "lang": "en"
+   },
+   "notes": "The Visit Scotland Adventure Triathlon (July 2005) bought cover from the insurer NIG worth up to £1 million (about $1.8 million) per competitor for injuries proven to come from the monster. Also called Nessie.",
+   "domain": "belief",
+   "sub": "mythology"
+  }
+ ]
+}

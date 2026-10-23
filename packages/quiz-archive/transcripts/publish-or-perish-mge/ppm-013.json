@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-013",
+ "image": "IMG20261022153250.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Ecology",
+   "cardText": "[Ecology] What is “biomagnification”?\nA. The increase in the size of living organisms\nB. The process through which biodiversity increases over time in nature\nC. The increase in concentration of a substance in living organisms as it moves up the food chain\nAnswer: C.",
+   "de": "Wie heißt die Zunahme der Konzentration eines Stoffes wie DDT in Lebewesen auf jeweils höheren Stufen einer Nahrungskette?",
+   "en": "What is the term for the increase in concentration of a substance, such as DDT, in organisms at successively higher levels of a food chain?",
+   "reworked": true,
+   "answerDe": "Biomagnifikation",
+   "answerEn": "Biomagnification",
+   "timeline": {
+    "kind": "event",
+    "start": "1972-12-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The US ban on DDT, a pesticide known to biomagnify, takes effect",
+    "labelDe": "Das US-Verbot von DDT, einem sich in Nahrungsketten anreichernden Pestizid, tritt in Kraft"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Biomagnification",
+    "title": "Biomagnification",
+    "lang": "en"
+   },
+   "notes": "Card correct. Timeline: EPA 'DDT Ban Takes Effect' (1972-12-31), cited in the article.",
+   "domain": "nature",
+   "sub": "ecology"
+  },
+  {
+   "category": 2,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] What is a teratoma?\nA. A malignant tumor that only affects bone tissue\nB. A benign tumor made up of a single type of tissue\nC. Tumors of cells of more than one tissue type\nAnswer: C. Teratomas can contain a variety of tissue types, including hair, teeth, and even remnants of eyes and brains.",
+   "de": "Wie heißt ein Tumor aus mehreren Gewebearten, der Haare, Zähne oder sogar Knochen enthalten kann?",
+   "en": "What is the name of a tumour made up of several types of tissue, which can contain hair, teeth or even bone?",
+   "reworked": true,
+   "answerDe": "Teratom",
+   "answerEn": "Teratoma",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1659",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Johannes Scultetus records the first well-documented teratoma, an ovarian dermoid cyst",
+    "labelDe": "Johannes Scultetus beschreibt das erste gut dokumentierte Teratom, eine Dermoidzyste des Eierstocks"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Teratoma",
+    "title": "Teratoma",
+    "lang": "en"
+   },
+   "notes": "Card correct. Timeline (Scultetus 1659) from StatPearls via web search, not the source page; the term itself is usually credited to Virchow (1863).",
+   "domain": "science",
+   "sub": "medicine"
+  }
+ ]
+}

@@ -1,0 +1,375 @@
+{
+ "article": "a0500",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pierre-Joseph_Proudhon",
+   "title": "Pierre-Joseph Proudhon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:29.469Z",
+   "snapshot": "e97b0d58fb1539bfcbd811f6ff568dec712d6fcc911b614728fa0f85df3081ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Critique_of_Hegel%27s_Philosophy_of_Right",
+   "title": "Critique of Hegel's Philosophy of Right – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:29.997Z",
+   "snapshot": "cb3fd5dc6a6e501fe7b176b15186b0bc6a17813e1058740eb2647eede6f1709e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Is_God_Dead%3F",
+   "title": "Is God Dead? – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:30.991Z",
+   "snapshot": "ac5a7337f3bc5428f539403f00f7cec556d23fbfa1af625bcf486fe6e0f39d2d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Declaration_of_the_Rights_of_Man_and_of_the_Citizen",
+   "title": "Declaration of the Rights of Man and of the Citizen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:32.068Z",
+   "snapshot": "3ae8c57a4de41dbd4c3fe440f9c2c716a7c308d681e77733f597d2668fb156b8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/No_Exit",
+   "title": "No Exit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:32.988Z",
+   "snapshot": "7a002dbab142e658ec41f435fb5676c134740d4e8463a604a27754d5145e6fd5"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/files/46333/46333-h/46333-h.htm",
+   "title": "The Social Contract & Discourses (G. D. H. Cole translation) – Project Gutenberg",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:39.211Z",
+   "snapshot": "4d9397a6f90f07147ab2a81d99e109f71a9398b7a018dc231f051b51b7ba3516"
+  },
+  "s7": {
+   "url": "https://plato.stanford.edu/entries/rousseau/",
+   "title": "Jean Jacques Rousseau – Stanford Encyclopedia of Philosophy",
+   "publisher": "Stanford Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:39.454Z",
+   "snapshot": "8cf88f3ef5d7ba0fe3f21802f9f0ec503ce5b9aac2d0277729511b15e9c49eab"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "theft",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "opium of the people",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "chains",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "other people",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:58.654Z",
+   "target": "f02496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "His best-known assertion is that \"property is theft!\", contained in his first major work, What Is Property?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “theft” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:58.654Z",
+   "target": "f02497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Opium of the people, a phrase coined in this work",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “opium of the people” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:58.654Z",
+   "target": "f02498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Is God Dead?\" was an April 8, 1966, cover story for the news magazine Time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dead” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:58.654Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "chains",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“chains”, “Ketten”, “оковах”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:58.654Z",
+   "target": "f02500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is the source of Sartre's especially famous phrase \"L'enfer, c'est les autres\" or \"Hell is other people\", a reference to Sartre's ideas about the look and the perpetual ontological struggle of being caused to see oneself as an object from the view of another consciousness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “other people” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:57:20Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the opening chapter of the Social Contract, \"Man is born free, and everywhere he is in chains.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:57:22Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The opening words of The Social Contract themselves refer to freedom, with the famous saying that “Man is born free, but is everywhere in chains”.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:21.532Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the opening chapter of the Social Contract, \"Man is born free, and everywhere he is in chains.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:21.532Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The opening words of The Social Contract themselves refer to freedom, with the famous saying that “Man is born free, but is everywhere in chains”.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:21.532Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "who is born free, rightly come to be everywhere in chains?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “chains” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:21.532Z",
+   "target": "f02499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "declares that he can make this subjection “in chains”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “chains” is on the snapshot of s7"
+  }
+ ]
+}

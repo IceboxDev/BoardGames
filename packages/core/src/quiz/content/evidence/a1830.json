@@ -1,0 +1,242 @@
+{
+ "article": "a1830",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/World_Youth_Day_2005",
+   "title": "World Youth Day 2005 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:59.868Z",
+   "snapshot": "022f04893fca0530730f0d5e5186c9f070b0de3fec707872e3418a24bb11d150"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/World_Youth_Day_2002",
+   "title": "World Youth Day 2002 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:00.896Z",
+   "snapshot": "012d63808a2eba980bf73db7612ca5897f7351397a550f37e2b466e334af5363"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/World_Youth_Day_2008",
+   "title": "World Youth Day 2008 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:03.101Z",
+   "snapshot": "85c97ab9bce39f748f8c336af1189877727263da70ca90034d897d0bca0ab61f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/World_Youth_Day_2011",
+   "title": "World Youth Day 2011 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:02.949Z",
+   "snapshot": "75aea3f7ce665d5033bdb10b2aea26e4342ab1820a359e5ea42a41a2f45695fd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/World_Youth_Day_2013",
+   "title": "World Youth Day 2013 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:03.874Z",
+   "snapshot": "d03baa71df5c1c9c05bc355909ed5ce22232903323737191506ac48ee3380adf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cologne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Toronto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sydney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Madrid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rio de Janeiro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:29.162Z",
+   "target": "f09146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Weltjugendtag) was a Catholic youth festival that started on 16 August and continued until 21 August 2005 in Cologne, Germany, commemorating the 20th anniversary of the first World Youth Day held in 1985.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cologne” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:29.162Z",
+   "target": "f09147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 17th World Youth Day 2002 (French: Journées mondiales de la jeunesse 2002)  was a Catholic youth festival held July 23 to 28, 2002, in Toronto, Ontario, Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toronto” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:29.162Z",
+   "target": "f09148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "World Youth Day 2008 was a Catholic youth festival that started on 15 July and continued until 20 July 2008 in Sydney, Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sydney” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:29.162Z",
+   "target": "f09149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "World Youth Day 2011 (Spanish: Jornada Mundial de la Juventud 2011) was the 2011 occurrence of World Youth Day, a  Catholic event held from 16–21 August 2011 in Madrid, Spain focused on youth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madrid” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:29.162Z",
+   "target": "f09150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The host city of World Youth Day 2013 was Rio de Janeiro, Brazil, as announced by Pope Benedict XVI at the end of the closing Mass of World Youth Day 2011 in Madrid, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio de Janeiro” is on the snapshot of s5"
+  }
+ ]
+}

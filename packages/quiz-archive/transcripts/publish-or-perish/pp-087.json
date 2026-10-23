@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-087",
+ "image": "IMG20261022011443.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Music",
+   "cardText": "[Music] What is the term for the speed or pace of a given piece of music?\nA. Rhythm B. Tempo C. Melody\nAnswer: B.",
+   "en": "What is the musical term for the speed or pace of a given piece of music, measured in beats per minute?",
+   "de": "Wie heißt in der Musik der Fachbegriff für die Geschwindigkeit eines Musikstücks, gemessen in Schlägen pro Minute?",
+   "reworked": true,
+   "answerEn": "Tempo",
+   "answerDe": "Tempo",
+   "timeline": {
+    "kind": "creation",
+    "start": "1815-12-05",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Johann Maelzel patents the metronome, which made exact tempo markings in beats per minute possible",
+    "labelDe": "Johann Mälzel lässt das Metronom patentieren, das genaue Tempoangaben in Schlägen pro Minute ermöglichte"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tempo",
+    "title": "Tempo",
+    "lang": "en"
+   },
+   "notes": "Card answer confirmed. Timeline: Maelzel's English metronome patent is dated 5 December 1815 (Wikipedia, Metronome).",
+   "domain": "music-stage",
+   "sub": "instruments"
+  },
+  {
+   "category": 2,
+   "discipline": "Mathematics",
+   "cardText": "[Mathematics] Why do most current mathematics frameworks have a definition for imaginary numbers but NOT for division by zero?\nA. Division by zero cannot be integrated into most existing systems\nB. It results in a unique number\nC. Different schools of scholars disagree on the definition of division by zero\nAnswer: A. While imaginary numbers help solve equations that cannot be solved using only real numbers, division by zero creates contradictions in the rules of arithmetic, making it incompatible with most frameworks. However, frameworks such as extended complex plane and projective geometry allow division by zero.",
+   "en": "Division by zero is undefined in ordinary arithmetic, but in which extension of the complex numbers, modelled by the Riemann sphere, is a nonzero number divided by zero defined as infinity?",
+   "de": "Division durch null ist in der gewöhnlichen Arithmetik nicht definiert – in welcher Erweiterung der komplexen Zahlen, veranschaulicht durch die Riemannsche Zahlenkugel, ist eine von null verschiedene Zahl geteilt durch null als unendlich definiert?",
+   "reworked": true,
+   "answerEn": "The extended complex plane",
+   "answerDe": "Die erweiterte komplexe Ebene",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1857",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bernhard Riemann introduces the Riemann sphere, the model of the extended complex plane",
+    "labelDe": "Bernhard Riemann führt die Riemannsche Zahlenkugel ein, das Modell der erweiterten komplexen Ebene"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Riemann_sphere",
+    "title": "Riemann sphere",
+    "lang": "en"
+   },
+   "notes": "The card's 'why' question only works among its options, so the open question asks the concrete fact from its explanation: on the Riemann sphere / extended complex plane z/0 = ∞ for nonzero z (0/0 stays undefined). 'Riemann sphere' or 'extended complex numbers' also acceptable.",
+   "domain": "science",
+   "sub": "maths"
+  }
+ ]
+}

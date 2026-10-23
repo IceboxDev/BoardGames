@@ -1,0 +1,328 @@
+{
+ "article": "a1377",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Creutzfeldt%E2%80%93Jakob_disease",
+   "title": "Creutzfeldt–Jakob disease – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:48.436Z",
+   "snapshot": "3ad0f18e57c2d9411107b472b184909b4c534ab4e04c0ae2506ee512d0fbe0b4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/George_G._Glenner",
+   "title": "George G. Glenner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:49.455Z",
+   "snapshot": "d95eb3553a7c202b16c3817daa0a9bcbc4e2b843e746487f60731267d4ffc0b9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Levodopa",
+   "title": "Levodopa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:50.382Z",
+   "snapshot": "aa37cd396b55fdcbd44baed8fd784fb37e45c6d84a388c185f34c542d4c777a2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Huntington's_disease",
+   "title": "Huntington's disease – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:51.446Z",
+   "snapshot": "ab0ccd67c5f38d6f6223334c2269ab69437a795d7943f0ff300b8b5068a38a76"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Blutspende",
+   "title": "Blutspende",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:49.658Z",
+   "snapshot": "7b1e994a27bfb975516238b00f2cbb278c8a452d6d5a05b3f6de51021cb9cc4e"
+  },
+  "s6": {
+   "url": "https://www.blutspenden.de/blut-und-plasmaspende/rueckstellung-und-ausschluss/",
+   "title": "Rückstellung und Ausschluss von der Blut- und Plasmaspende",
+   "publisher": "BIÖG (Bundesinstitut für Öffentliche Gesundheit)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:43.562Z",
+   "snapshot": "d73f1383fa3a0a1d2a69ee329ea20173e69399b37d73da27e723c48bb7a0bcf4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Creutzfeldt-Jakob disease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alzheimer's disease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Parkinson's disease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Huntington's disease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Variante der Creutzfeldt-Jakob-Krankheit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; history entry seq 32; transcript tp-251"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:16.246Z",
+   "target": "f06881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Creutzfeldt–Jakob disease (CJD) is an incurable, terminal, neurodegenerative disease belonging to the transmissible spongiform encephalopathy (TSE) group, also known as prion diseases.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Creutzfeldt-Jakob disease” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:16.246Z",
+   "target": "f06882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Geiger Glenner (September 17, 1927 – July 12, 1995) was an American physician and research pathologist whose work helped shape understanding of Alzheimer's disease research in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alzheimer's disease” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:16.246Z",
+   "target": "f06883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Levodopa, also known as L-DOPA, is a dopaminergic medication which is used in the treatment of Parkinson's disease (PD) and certain other conditions like dopamine-responsive dystonia and restless legs syndrome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parkinson's disease” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:16.246Z",
+   "target": "f06884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Signs and symptoms of Huntington's disease most commonly become noticeable between the ages of 30 and 50 years, but they can begin at any age and present as a triad of motor, cognitive, and psychiatric symptoms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Huntington's disease” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:16.246Z",
+   "target": "f13524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Variante der Creutzfeldt-Jakob-Krankheit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Variante der Creutzfeldt-Jakob-Krankheit”, “variant Creutzfeldt-Jakob disease”, “вариантная болезнь Крейтцфельдта — Якоба”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:18:23Z",
+   "target": "f13524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aufenthalt im Vereinigten Königreich zwischen 1980 und 1996 von über sechs Monaten",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23",
+   "note": "same list: 'Durch diese Maßnahmen soll eine theoretisch mögliche Übertragung der Creutzfeldt-Jakob-Krankheit durch Transfusionen ausgeschlossen werden.' Current DRK/BIÖG pages no longer itemise country rules, so the rule's currency could not be confirmed from an official page"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:18:25Z",
+   "target": "f13524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine bekannte Erkrankung aus dieser Gruppe ist die Creutzfeldt-Jakob-Krankheit. Besteht das Risiko, dass eine Person eine solche Erkrankung übertragen könnte, darf sie kein Blut spenden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23",
+   "note": "official: TSE/CJD transmission risk excludes donors; does not itemise the UK 1980–1996 criterion"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:01.260Z",
+   "target": "f13524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aufenthalt im Vereinigten Königreich zwischen 1980 und 1996 von über sechs Monaten",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:01.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:01.260Z",
+   "target": "f13524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine bekannte Erkrankung aus dieser Gruppe ist die Creutzfeldt-Jakob-Krankheit. Besteht das Risiko, dass eine Person eine solche Erkrankung übertragen könnte, darf sie kein Blut spenden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:01.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

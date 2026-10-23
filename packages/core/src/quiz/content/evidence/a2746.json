@@ -1,0 +1,380 @@
+{
+ "article": "a2746",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Balance_of_power_(international_relations)",
+   "title": "Balance of power (international relations)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:43.204Z",
+   "snapshot": "0703cc39a06c4cc6a3bea5005e1850752ab94da80835c1c106e8f712b3d05434"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peace_of_Utrecht",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:44.083Z",
+   "snapshot": "4bd84d78ef94559cfd66dc52ab399e14698d3016ef36da27d889ab7008b0c392"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/War_of_the_Spanish_Succession",
+   "title": "War of the Spanish Succession",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:42.352Z",
+   "snapshot": "269d85bd0ccdaa0301238ab602c907aab94f836edaad50a7bda4a53aa56a2d0b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Balance of power",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Balance of power",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 16; history entry seq 18"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peace of Utrecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "War of the Spanish Succession",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "War of the Spanish Succession",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gibraltar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Asiento",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; history entry seq 30"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Canning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Canning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 31; history entry seq 33"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Balance of power (international relations)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Balance of power” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "allowed Philip V (grandson of King Louis XIV of France) to keep the Spanish throne in return for permanently renouncing his claim to the French throne, along with other necessary guarantees that would ensure that France and Spain should not merge, thus preserving the balance of power in Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Balance of power” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Peace of Utrecht was a series of peace treaties signed by the belligerents in the War of the Spanish Succession, in the Dutch city of Utrecht between April 1713 and February 1715.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peace of Utrecht” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Peace of Utrecht was a series of peace treaties signed by the belligerents in the War of the Spanish Succession, in the Dutch city of Utrecht between April 1713 and February 1715.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “War of the Spanish Succession” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The War of the Spanish Succession, 1701 to 1714, was a European great power conflict.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “War of the Spanish Succession” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Article X, Spain ceded the strategic ports of Gibraltar and Menorca.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gibraltar” is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The British emerged from the treaty with the Asiento de Negros, which referred to the monopoly contract granted by the Spanish government to other European nations to supply slaves to Spain's colonies in the Americas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asiento” is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1826, George Canning \"called the new world into existence to redress the balance of the old\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.957Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Canning” is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:31:06.957Z",
+   "target": "f25644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Canning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“George Canning”, “Джордж Каннинг”) on the snapshot of s2"
+  }
+ ]
+}

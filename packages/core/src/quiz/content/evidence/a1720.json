@@ -1,0 +1,459 @@
+{
+ "article": "a1720",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Truman_Show",
+   "title": "The Truman Show – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:55.452Z",
+   "snapshot": "f8c3ecac2d15dbca4a11e9f29d148e2baf3915ddbfeadad635722080bb980c53"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Apollo_13_(film)",
+   "title": "Apollo 13 (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:56.506Z",
+   "snapshot": "865b82ee4b58b49325002626250f9a36eeaec284e0fbe95bddbdbd49db41ec3f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Houston,_we_have_a_problem",
+   "title": "Houston, we have a problem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:57.365Z",
+   "snapshot": "32dcd1dffd3b8beae2939cde0de2e2cdd9107ee2b174d2500c32318af854f0fd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Godfather",
+   "title": "The Godfather – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:25.310Z",
+   "snapshot": "45c0145f83fb312c311368ec0879a53231324353cbba5f8c1f065359c246eee3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/56th_Golden_Globe_Awards",
+   "title": "56th Golden Globe Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:58.336Z",
+   "snapshot": "a10d0e32082b770bbcb8a56c598abdd09836d1cdfb1a64f7c1cec0db7d82a278"
+  },
+  "s6": {
+   "url": "https://www.afi.com/afis-100-years-100-movie-quotes/",
+   "title": "AFI's 100 Years...100 Movie Quotes",
+   "publisher": "American Film Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:36.984Z",
+   "snapshot": "92de4b6ce1318ec72b6fcd540f7f2de5f8fc4bd45972c92db6a27e93f312e0aa"
+  },
+  "s7": {
+   "url": "https://goldenglobes.com/person/jim-carrey/",
+   "title": "Jim Carrey - Golden Globes",
+   "publisher": "Golden Globes",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:50.770Z",
+   "snapshot": "2093f3675be1eca12279d7a196ab5cf5122a4fcf492cdad42c1391bdf53afefd"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Jim_Carrey",
+   "title": "Jim Carrey – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:51.055Z",
+   "snapshot": "7b58bfa53225d61accd1d36d9699f0b0f0fd093e7abf1243165debe19509a941"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Truman Show",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Apollo 13",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f21120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jack Swigert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "a horse's head",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jim Carrey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:11.352Z",
+   "target": "f08596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Truman Show is a 1998 American comedy-drama film directed by Peter Weir, and written and co-produced by Andrew Niccol.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Truman Show” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:11.352Z",
+   "target": "f08600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Apollo 13 is a 1995 American docudrama film directed by Ron Howard and starring Tom Hanks, Kevin Bacon, Bill Paxton, Gary Sinise, Ed Harris and Kathleen Quinlan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apollo 13” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:11.352Z",
+   "target": "f21120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After an explosion occurred on board the spacecraft en route to the Moon around 56 hours into the mission, Jack Swigert, the command module pilot, reported to Mission Control Center in Houston, Texas: \"Okay, Houston ...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Swigert” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:11.352Z",
+   "target": "f21121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "a horse's head",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“a horse's head”, “Pferdekopf”, “конская голова”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:11.352Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jim Carrey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Jim Carrey”, “Джим Керри”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:34:30Z",
+   "target": "f21121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Woltz wakes to find the severed head of his prized $600,000 racehorse Khartoum in his bed with him",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:34:35Z",
+   "target": "f21121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One morning a short time later, Woltz discovers the severed, bloody head of Khartoum in his bed, prompting him to scream in terror.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:34:39Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1999 Winner Best Performance by an Actor in a Motion Picture - Drama The Truman Show",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:43Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "His critically acclaimed performances include the title role in The Truman Show (1998) and Andy Kaufman in Man on the Moon (1999), winning Golden Globe Awards for each film.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:58.317Z",
+   "target": "f21121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Woltz wakes to find the severed head of his prized $600,000 racehorse Khartoum in his bed with him",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:58.317Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:58.317Z",
+   "target": "f21121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One morning a short time later, Woltz discovers the severed, bloody head of Khartoum in his bed, prompting him to scream in terror.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:58.317Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:58.317Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1999 Winner Best Performance by an Actor in a Motion Picture - Drama The Truman Show",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:58.317Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:58.317Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "His critically acclaimed performances include the title role in The Truman Show (1998) and Andy Kaufman in Man on the Moon (1999), winning Golden Globe Awards for each film.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:58.317Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:58.317Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Lea el perfil de Jim Carrey por Paz Mata.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:58.317Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jim Carrey” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:58.317Z",
+   "target": "f21122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Despite reviews being mixed, Rene Rodriquez of The Miami Herald stated, \"Yes Man is fine as far as Jim Carrey comedies go, but it's even better as a love story that just happens to make you laugh.\" The film earned $225 million at the box office worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:58.317Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jim Carrey” is on the snapshot of s8"
+  }
+ ]
+}

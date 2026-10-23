@@ -1,0 +1,209 @@
+{
+ "article": "a1749",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dry_ice",
+   "title": "Dry ice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:54.513Z",
+   "snapshot": "6e961bb38123cb403c1fe9aa6daeff4b96b28537650ac54440a11ff451ef19a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nitrous_oxide",
+   "title": "Nitrous oxide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:19.118Z",
+   "snapshot": "a519b96a78cea4f32f0a35851da1bba0afd52b298a2616cd3d90625e85d828a6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Quartz_clock",
+   "title": "Quartz clock – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:55.435Z",
+   "snapshot": "7efbc8dad4507819b38a1c4679559b6cf744c798b79e731cb9e65b2d15732fa0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ammonia_solution",
+   "title": "Ammonia solution",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:56.356Z",
+   "snapshot": "6998f19a2bee7647dd2b5d1f625af2542e85c41302814e6692bfae89709a4350"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Seawater",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:57.483Z",
+   "snapshot": "65a214531bb9b3bc1e16538e1469b135e19f1424c597d68fde6498e2a57d32ce"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ammonia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:58.594Z",
+   "snapshot": "8ec331eb499ab766ec56bcf20b1ee7a9b1f3184a444a921c2ba3ff35a2dd86cf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "nitrous oxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "silicon dioxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ammonium hydroxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-075"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:16.457Z",
+   "target": "f08741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dry ice is the solid form of carbon dioxide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carbon dioxide” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:16.457Z",
+   "target": "f08744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nitrous oxide (dinitrogen oxide or dinitrogen monoxide), commonly known as laughing gas or nitrous, among others, is a chemical compound, an oxide of nitrogen with the formula N2O.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nitrous oxide” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:16.457Z",
+   "target": "f08745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chemically, quartz is a specific form of a compound called silicon dioxide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “silicon dioxide” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:16.457Z",
+   "target": "f25396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alternatively, it is known as ammonia water, ammonium hydroxide, ammoniacal liquor, ammonia liquor, liquid ammonia, aqua ammonia, aqueous ammonia, or (inaccurately, nevertheless commonly referred to as) simply ammonia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ammonium hydroxide” is on the snapshot of s4"
+  }
+ ]
+}

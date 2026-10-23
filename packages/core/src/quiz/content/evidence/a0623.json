@@ -1,0 +1,592 @@
+{
+ "article": "a0623",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Amphiperatherium",
+   "title": "Amphiperatherium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:51.081Z",
+   "snapshot": "edd76cd0ae0db42ed49905afb2402eaebf47723e933703504d7c4149cedc67b0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/William_Hay_Caldwell",
+   "title": "William Hay Caldwell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:52.001Z",
+   "snapshot": "8a1cf61eba4f003511bdfe68fdb0b1eaf422d9ad1a338768079eed0d1061c5dc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bat",
+   "title": "Bat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:53.198Z",
+   "snapshot": "e2c834ae60de4c15ed95fbd137ef0b936e4d8c810b639886f9f06ce99dc7caf5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rodent",
+   "title": "Rodent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:54.246Z",
+   "snapshot": "5b380123692cd626a70e9dd2931d7146b2f23321fa8e117f79e4c172b4560a2a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kurzschnabeligel",
+   "title": "Kurzschnabeligel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:51.294Z",
+   "snapshot": "f6c81ec83d995998a6d86dc5917986e205845a9ae849660a6c43cfe0eb27c22a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Marsupial",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:16.264Z",
+   "snapshot": "e3bf5f4f0ee6fdb1409e0d85d3507a1be0563647c0c91e7cb341fabc56434c92"
+  },
+  "s7": {
+   "url": "https://animaldiversity.org/accounts/Metatheria/",
+   "title": "Metatheria (marsupials)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:39.248Z",
+   "snapshot": "ee7b3ca3b856fa25ac6103ec882df0ac691de13d0b827fbd6d218c6832ed19d5"
+  },
+  "s8": {
+   "url": "https://animaldiversity.org/accounts/Ailurops_ursinus/",
+   "title": "Ailurops ursinus (bear cuscus)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:39.798Z",
+   "snapshot": "bad30b248e6585d54135dc98679b6b300f0209175bf3b2b744683ed445e7d52a"
+  },
+  "s9": {
+   "url": "https://animaldiversity.org/accounts/Chiroptera/",
+   "title": "Chiroptera (bats)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:40.914Z",
+   "snapshot": "e2196737adc8fb044ba3da0c9b68f7e33b5da69f959dfac99f791ae79a1860c1"
+  },
+  "s10": {
+   "url": "https://animaldiversity.org/accounts/Rodentia/",
+   "title": "Rodentia (rodents)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:41.797Z",
+   "snapshot": "2497d91077d487735ed1249af535409a0f98998e08f363516230135a438ad25d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "marsupials",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c052"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "monotremes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "bats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "rodents",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Australien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-229"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:16.035Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amphiperatherium is an extinct genus of metatherian mammal, closely related to marsupials.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “marsupials” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:16.035Z",
+   "target": "f03112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mindful of the high cost per word, Caldwell tersely and now famously wired the British Association for the Advancement of Science meeting in Montreal: \"Monotremes oviparous, ovum meroblastic\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monotremes” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:16.035Z",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bats (order Chiroptera ) are winged mammals, the only mammals capable of true and sustained flight.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bats” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:16.035Z",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rodents (from Latin rodens 'gnawing') are a group of mammals belonging to the order Rodentia ( roh-DEN-shə or roh-DEN-chə) characterized by a single pair of continuously growing incisors in each of the upper and lower jaws.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rodents” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:16.035Z",
+   "target": "f13305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "aculeatus) im Südosten Australiens (Küstenregionen, Berghänge des südlichen Queensland, New South Wales, Victoria und South Australia)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australia” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:52Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A few fossil marsupials are known from Europe, Africa, and Asia, but this group was never well established on those continents.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:57Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "They are natively found in Australasia, Wallacea, and the Americas.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:17:01Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is found only on Sulawesi and the Talaut Islands of Indonesia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23",
+   "note": "Strict premise check: a few marsupials (cuscuses, possums) are native to Sulawesi, the Moluccas and Timor, islands east of the Wallace Line that are geographically Asian; none lives on the Asian mainland or in Europe. Monotremes are also absent from Eurasia, so the wording now names the Australia/Americas range."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:04Z",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "No mammals other than bats have true wings and flight.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:08Z",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "are winged mammals, the only mammals capable of true and sustained flight",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:17:12Z",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:17:15Z",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rodents make up about 40% of all mammal species.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A few fossil marsupials are known from Europe, Africa, and Asia, but this group was never well established on those continents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "They are natively found in Australasia, Wallacea, and the Americas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03111",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is found only on Sulawesi and the Talaut Islands of Indonesia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "No mammals other than bats have true wings and flight.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "are winged mammals, the only mammals capable of true and sustained flight",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rodents make up about 40% of all mammal species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Chiroptera (bats) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “bats” is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:43.261Z",
+   "target": "f03115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Rodentia (rodents) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.261Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “rodents” is on the snapshot of s10"
+  }
+ ]
+}

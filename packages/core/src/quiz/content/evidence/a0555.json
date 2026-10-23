@@ -1,0 +1,375 @@
+{
+ "article": "a0555",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chichen_Itza",
+   "title": "Chichen Itza – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:28.120Z",
+   "snapshot": "04b7849897dd39ff35a631878cfd6d46e1d0c55be3d9f97f20a90d93815bc5f6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Machu_Picchu",
+   "title": "Machu Picchu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:29.184Z",
+   "snapshot": "0dfc21a83d526e6590219524e11c7a6050b1220c22663aac8437f80e301dbcf9"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Machu_Picchu",
+   "title": "Machu Picchu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:28.284Z",
+   "snapshot": "3ffc76d1fd27fc58cb9fd6b2379c7527a826ced9ff5b3eae5cf729d37d3ceb76"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Templo_Mayor",
+   "title": "Templo Mayor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:30.162Z",
+   "snapshot": "7f900632767ff66513e086001015cf04f49728d1ae9b075a4884497151316921"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tenochtitlan",
+   "title": "Tenochtitlan",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:29.378Z",
+   "snapshot": "91a093370bc689a724eff49383a6922403bb461da9d86ad8e10c448146c74f57"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Olmecs",
+   "title": "Olmecs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:31.178Z",
+   "snapshot": "948d7ba4b16d73587e4c811dbf907907d91a59daf5952df3cb0b321182f9beca"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Angkor_Wat",
+   "title": "Angkor Wat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:32.219Z",
+   "snapshot": "1b39fa7662aa07e39aaf20e358930eba28fd6f684311caf14fad3326e266b8d1"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Olmec_colossal_heads",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:33.093Z",
+   "snapshot": "4099d2db5e4c7e3a39ed5651a873eeb6842ae2540c4c5aac58a253b43c0615ff"
+  },
+  "s9": {
+   "url": "https://whc.unesco.org/en/list/274/",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047; transcript ppm-097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Inka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-189"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aztecs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Azteken",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-020"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Olmecs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Khmer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f02772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Inca",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Inca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-189/1, u10: False: Machu Picchu was built by the Inca around 1450, probably as an estate of Pachacuti, not by the Maya."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Inca",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chichen Itza was a large pre-Columbian city built by the Maya people of the Terminal Classic period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maya” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern  Peru  on a mountain ridge at  2,430 meters (7,970 ft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inca” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Inka erbauten die Stadt im 15.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inka” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The seventh temple was first mentioned by the conquistadors in 1519, and the temple was last altered by the Aztecs in 1520.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aztecs” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jahrhunderts die Hauptstadt des Reiches der Azteken, bis sie von den spanischen Konquistadoren erobert und zerstört wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Azteken” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Olmecs () or Olmec were an early major Mesoamerican civilization, flourishing in the modern-day Mexican states of Veracruz and Tabasco from roughly 1200 to 400 BC during Mesoamerica's formative period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Olmecs” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:06.283Z",
+   "target": "f02775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Angkor Wat (; Khmer: អង្គរវត្ត, 'City/Capital of Temples') is a Theravada Buddhist temple complex, originally built as a Vaishnava Hindu temple, in Siem Reap, Cambodia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Khmer” is on the snapshot of s7"
+  }
+ ]
+}

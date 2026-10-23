@@ -1,0 +1,442 @@
+{
+ "article": "a2345",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jelly_bean",
+   "title": "Jelly bean",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:18.290Z",
+   "snapshot": "9f8898101d76c1397f13f1fa5f23b6f2d837f5ef86b21eb1c15b8b686adf322e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Read_my_lips:_no_new_taxes",
+   "title": "Read my lips: no new taxes",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:19.352Z",
+   "snapshot": "be753d895d364200855550eb3858a8b718454e36e2c87f02035e293409b8626a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Second_inauguration_of_Bill_Clinton",
+   "title": "Second inauguration of Bill Clinton",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:20.339Z",
+   "snapshot": "ecaebed14d18a6ef0ad6c12050363e0f0c25ba2df09a501fde38ae9a1fea39ee"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Gefangenenlager_der_Guantanamo_Bay_Naval_Base",
+   "title": "Gefangenenlager der Guantanamo Bay Naval Base",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:18.597Z",
+   "snapshot": "088f4dbf8215e0f386dbda9412df8e974bc49e2c3dc4ac69f4cf6bb533067f8f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations",
+   "title": "Cuba–United States relations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:21.434Z",
+   "snapshot": "f323ddf355c09c2fee994a139f950fd8c6e537e390c85e031552f3cbd6da604f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Socks_(cat)",
+   "title": "Socks (cat) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:22.282Z",
+   "snapshot": "a686bd6d0456d223417091889df59696cc350064a704846e8a9a69081bf8c42e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bo_(dog)",
+   "title": "Bo (dog) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:23.228Z",
+   "snapshot": "6560aeb0653690739c867fc7f4ddbcd0a5ad6f798d0cbb6bc721e0a131f98d04"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Jelly_Belly",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:24.333Z",
+   "snapshot": "d696dd1c3133d09bdae8dce7283e576c5425811a5957f18404992e4e9641158a"
+  },
+  "s9": {
+   "url": "https://www.reaganlibrary.gov/jelly-bellyr-jelly-beans-and-ronald-reagan",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:22.345Z",
+   "snapshot": "106154b19401a36e71073420c805743b676814de201d4af551b66cb268a1237d"
+  },
+  "s10": {
+   "url": "https://www.reaganfoundation.org/ronald-reagan/jelly-beans",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:22.794Z",
+   "snapshot": "06ca042e58805fe48f3cf8134fb45a277a555e87ed23baff6db8861ba1c80ea6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jelly beans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George H. W. Bush",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-274"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bill Clinton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-020"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Guantánamo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-385"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "United States and Cuba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-057"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Socks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jelly beans",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s10",
+     "quote": "Jelly beans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-115/3, u09: Reagan offered Jelly Belly jelly beans (favourite flavour liquorice, as beans), not liquorice sticks; 3.5 short tons were ordered for the 1981 inauguration."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jelly beans",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e8 is on the snapshot of s9"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jelly beans are small, sometimes medium sized bean-shaped sugar candies with soft candy shells and thick gel interiors (see gelatin and jelly).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jelly beans” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jelly Belly® Jelly Beans and Ronald Reagan | Ronald Reagan",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jelly beans” is on the snapshot of s9"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "President Reagan and his love of Jelly Beans | The Ronald Reagan Presidential Foundation & Institute",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jelly beans” is on the snapshot of s10"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Read my lips: no new taxes\" is a phrase spoken by American presidential candidate George H. W. Bush at the 1988 Republican National Convention in New Orleans as he accepted the nomination on August 18.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George H. W. Bush” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The second inauguration of Bill Clinton as president of the United States was held on Monday, January 20, 1997, at the West Front of the United States Capitol Building in Washington, D.C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bill Clinton” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gefangenenlager der Guantanamo Bay Naval Base",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guantánamo” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The United States and Cuba signed another Treaty of Relations in 1934.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “United States and Cuba” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Socks was first adopted by the Clinton family in 1991 after he jumped into the arms of Chelsea Clinton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Socks” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:30:01.884Z",
+   "target": "f12217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bo (October 9, 2008 – May 8, 2021) was a pet dog of the Obama family, the first family of the United States from 2009 until 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bo” is on the snapshot of s7"
+  }
+ ]
+}

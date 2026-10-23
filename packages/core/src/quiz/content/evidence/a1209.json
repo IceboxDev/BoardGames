@@ -1,0 +1,242 @@
+{
+ "article": "a1209",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Annus_mirabilis_papers",
+   "title": "Annus mirabilis papers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:30.882Z",
+   "snapshot": "9f27ec6fef42158b5fcaf644e3dd8c3cc002c0a319d84b5e72decff8bbbde609"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence",
+   "title": "Mass–energy equivalence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:32.117Z",
+   "snapshot": "9bf7677cbbb7c3712f097db189681aab3e530d24a25c0d85c4eef1a43b34249c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Conservation_of_energy",
+   "title": "Conservation of energy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:22.382Z",
+   "snapshot": "0a58b212fa6fdde7430caa06e77d44e0dc6075adca24e356f4bb638281d08c9f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Noether%27s_theorem",
+   "title": "Noether's theorem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:33.311Z",
+   "snapshot": "b809f63e2ba5cc1cf4e5a7203c26035a6a25015aa698b4f98ee491eee3d5fac5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rudolf_Clausius",
+   "title": "Rudolf Clausius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:33.909Z",
+   "snapshot": "99d1837ef1791c2e85a3cbdadc407ccfdc25a62952d1ed925df43828c342ea03"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "speed of light",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "energy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "momentum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "entropy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:48.629Z",
+   "target": "f06041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The third paper introduced Einstein's special theory of relativity, which proclaims the constancy of the speed of light",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.629Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “speed of light” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:48.629Z",
+   "target": "f06042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In physics, mass–energy equivalence is the relationship between mass and energy in a system's rest frame.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.629Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mass” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:48.629Z",
+   "target": "f06043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The law of conservation of energy states that the total energy of an isolated system remains constant; it is said to be conserved over time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.629Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “energy” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:48.629Z",
+   "target": "f06044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "physical system behaves the same regardless of how it is oriented in space (that is, it is invariant), its Lagrangian is symmetric under continuous rotation: from this symmetry, Noether's theorem dictates that the angular momentum of the system be conserved, as a consequence of its laws of motion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.629Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “momentum” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:48.629Z",
+   "target": "f06045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1865 he introduced the concept of entropy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.629Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “entropy” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a0067",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Renaissance_(French_political_party)",
+   "title": "Renaissance (French political party) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:10.753Z",
+   "snapshot": "f47859580744d6d3d1e5437fa075e25ceeeab8b7932ec7e32c48a89286438f6d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alternative_for_Germany",
+   "title": "Alternative for Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:11.747Z",
+   "snapshot": "eb161d753a2bd60ff1f51b9c3fe157aef6d7a7d7101215b7877bf7b4e056e025"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2018_Italian_general_election",
+   "title": "2018 Italian general election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:12.612Z",
+   "snapshot": "25191d9176d01fc64cb6bb65b9f333920662b83b91fe9703aa4373b117d1175e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Podemos_(Spanish_political_party)",
+   "title": "Podemos (Spanish political party) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:13.510Z",
+   "snapshot": "cbfb42d322efa7e9d5d1f0f4fa5139ea526a1cc06c5cc377355d074bc2c022cc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Forza_Italia_(1994)",
+   "title": "Forza Italia (1994) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:14.603Z",
+   "snapshot": "ea4826035ba9f0b8d9c6ce2b0997e6c58932e402f7342e966db6def67c8cbbad"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Die_PARTEI",
+   "title": "Die PARTEI",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:16.618Z",
+   "snapshot": "2417918a5cd7e27fbe2e2e69876737aa3946c4766307331789944359ba3df806"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "En Marche!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alternative for Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Five Star Movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Podemos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Forza Italia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Titanic",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-339"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:45.391Z",
+   "target": "f00331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "En Marche! was established on 6 April 2016 in Amiens by Emmanuel Macron, then aged 38, with the help of political advisor Ismaël Emelien.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “En Marche!” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:45.391Z",
+   "target": "f00332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alternative for Germany (German: Alternative für Deutschland, AfD [aːʔɛfˈdeː] ) is a far-right, right-wing populist,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alternative for Germany” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:45.391Z",
+   "target": "f00333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "No party or coalition gained an absolute majority in the parliament, even though the centre-right coalition won a plurality of seats as a coalition, and the Five Star Movement (M5S) won a plurality of seats as an individual party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Five Star Movement” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:45.391Z",
+   "target": "f00334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Podemos (Spanish political party)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Podemos” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:45.391Z",
+   "target": "f00335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In November 2008, the national council of the party, presided by Alfredo Biondi, voted to merge Forza Italia into The People of Freedom (PdL), Berlusconi's new political vehicle, whose official foundation took place in March 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Forza Italia” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:45.391Z",
+   "target": "f13695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie wurde 2004 von Redakteuren der Titanic gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titanic” is on the snapshot of s6"
+  }
+ ]
+}

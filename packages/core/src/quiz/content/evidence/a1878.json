@@ -1,0 +1,241 @@
+{
+ "article": "a1878",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Subbotnik",
+   "title": "Subbotnik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:41.469Z",
+   "snapshot": "3dec6c5c58da190582d771103a49a93df2975829ffe69a1607de997c08562560"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dacha",
+   "title": "Dacha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:42.482Z",
+   "snapshot": "680e9767f9505d425066083ec644dcb33b2e659ea32985177e96ed0a1a54fbe3"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Datsche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:39.712Z",
+   "snapshot": "07ff3bb102dbfe298e3e545657ddd0afb57caea203d3d9c72a51e2cd3fa43dc6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kombinat",
+   "title": "Kombinat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:40.709Z",
+   "snapshot": "3841d8e41f1e0b9e6ada762f67b875792362859549b0f1b81173a15ae0155c5f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Glasnost",
+   "title": "Glasnost – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:41.751Z",
+   "snapshot": "6936a52d671435190ea139f5617db2b82bb7c9b8fdf76d5512bec046aee8a631"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Subbotnik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "dacha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Datsche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kombinat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Glasnost",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:38.277Z",
+   "target": "f09386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Subbotnik and voskresnik (from Russian: суббо́та, IPA: [sʊˈbotə] 'Saturday' and воскресе́нье, IPA: [vəskrʲɪˈsʲenʲjɪ] 'Sunday') were days of volunteer unpaid work on weekends after the October Revolution, though the word itself is derived from суббо́та (subbota for Saturday) and the common Russian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Subbotnik” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:38.277Z",
+   "target": "f09387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A dacha (Russian: дача, IPA: [ˈdatɕə] ) is a seasonal or year-round second home, often located in the exurbs of post-Soviet countries, including Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dacha” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:38.277Z",
+   "target": "f09387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eine Datsche (eingedeutscht aus russisch да́ча datscha ) ist ein Grundstück mit einem Garten- oder Wochenendhaus, das der Freizeit und der Erholung dient und Hobbygärtnerei ermöglicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Datsche” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:38.277Z",
+   "target": "f09388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In der Zentralverwaltungswirtschaft der DDR war ein Kombinat eine konzernartige, also horizontal und vertikal integrierte Gruppe von Volkseigenen Betrieben (VEB) mit ähnlichem Produktionsprofil.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kombinat” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:38.277Z",
+   "target": "f09390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Glasnost (russisch гла́сность ) bezeichnet als Schlagwort die ein Jahr nach seinem Amtsantritt im März 1985 von Generalsekretär Michail Gorbatschow in der Sowjetunion eingeleitete Politik einer größeren Transparenz und Offenheit der Staatsführung gegenüber der Bevölkerung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glasnost” is on the snapshot of s5"
+  }
+ ]
+}

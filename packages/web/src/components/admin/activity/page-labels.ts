@@ -25,6 +25,8 @@ const ADMIN_TAB_NAMES: Readonly<Record<string, string>> = {
   "pre-register": "Pre-register",
   skills: "Skill ratings",
   guests: "Guests",
+  reports: "Reports",
+  "quiz-desk": "Quiz desk",
 };
 
 /** A greeting card being shown: "Saw the group spotlight about Melanie". */

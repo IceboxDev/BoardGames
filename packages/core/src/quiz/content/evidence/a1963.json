@@ -1,0 +1,195 @@
+{
+ "article": "a1963",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carles_Puigdemont",
+   "title": "Carles Puigdemont – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:24.711Z",
+   "snapshot": "a24b2f6356678cb7d8982e54a77f18adb724eae952896161c56c655747a44a7d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1995_Quebec_referendum",
+   "title": "1995 Quebec referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:25.790Z",
+   "snapshot": "44b486146187f7289616cf8c0e30f127477ef0f21074122013682eb51c96e96e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War",
+   "title": "South Sudanese Civil War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:27.251Z",
+   "snapshot": "924594af8e85c11b7c53d9d506eb6d83c2090c082d09474be019feb01e23fc12"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2006_Montenegrin_independence_referendum",
+   "title": "2006 Montenegrin independence referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:27.605Z",
+   "snapshot": "dd0bf3791cf0c3f6cab103d378f11070c840ffb4442c6f8c32b2cff618abb4fe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catalonia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09813",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Québec",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Sudan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Montenegro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:55.996Z",
+   "target": "f09811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He has been the President of Together for Catalonia (Junts) since 2024, having previously held the office from 2020 to 2022.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:55.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catalonia” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:55.996Z",
+   "target": "f09813",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 1995 Quebec referendum was the second referendum to ask voters in the predominantly French-speaking Canadian province of Quebec whether Quebec should proclaim sovereignty and become an independent country, with the condition precedent of offering a political and economic agreement to Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:55.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Québec” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:55.996Z",
+   "target": "f09814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The South Sudanese Civil War was a multi-sided civil war in South Sudan fought from 2013 to 2018 between government and opposition forces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:55.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Sudan” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:55.996Z",
+   "target": "f09815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An independence referendum was held in Montenegro on 21 May 2006.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:55.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montenegro” is on the snapshot of s4"
+  }
+ ]
+}

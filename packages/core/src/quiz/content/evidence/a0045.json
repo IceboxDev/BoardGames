@@ -1,0 +1,335 @@
+{
+ "article": "a0045",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heinrich_Hertz",
+   "title": "Heinrich Hertz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:18.465Z",
+   "snapshot": "c8c461cb9ee2625e16da070b4db8572b443e4ccedb7ffd617e5616f98ace21fe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+   "title": "Philosophiæ Naturalis Principia Mathematica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:19.686Z",
+   "snapshot": "13e68e98920299a2af24aba8a15aa86fdf5e7795e40a92e377c9a529198e691e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ohm's_law",
+   "title": "Ohm's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:20.468Z",
+   "snapshot": "1fc8dbd144dd7a03ba0cfff4e15148095771a7523b3639e8ae80ff33f0e2f65f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pascaline",
+   "title": "Pascaline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:21.663Z",
+   "snapshot": "83e492b42ece21a83fe152cb5e56b08735d6c30afa37c1af5924efc0ee1f4e7e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Blaise_Pascal",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:22.572Z",
+   "snapshot": "80bccb6cfc1210440aa79eacef116455c6011b95336a701906e43ab8df1e074d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hertz",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:23.486Z",
+   "snapshot": "1890b2db0e82e948c4f899483b3c8a1109172c8553911a392b87079519928d3c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Ohm",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:24.482Z",
+   "snapshot": "7db6cfd066182196a6e4ef85c6955dbf16b9964b4964bd6228499d38a9c6ee10"
+  },
+  "s8": {
+   "url": "https://nationalmaglab.org/magnet-academy/history-of-electricity-magnetism/pioneers/georg-ohm/",
+   "title": "Georg Ohm",
+   "publisher": "National High Magnetic Field Laboratory",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:27.726Z",
+   "snapshot": "11bc8623f892a51e97ca1931b4816d57d358f7d79d440276dc7d52bd557e067f"
+  },
+  "s9": {
+   "url": "https://www.sizes.com/units/ohm.htm",
+   "title": "ohm",
+   "publisher": "Sizes.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:16:10Z"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Ohm",
+   "title": "Ohm – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:16:14Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinrich Hertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Isaac Newton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georg Simon Ohm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blaise Pascal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:41.682Z",
+   "target": "f00221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Philipp Lenard, a student of Heinrich Hertz, further researched this \"ray effect\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Hertz” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:41.682Z",
+   "target": "f00223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philosophiæ Naturalis Principia Mathematica (English: The Mathematical Principles of Natural Philosophy), often called simply the Principia (), is a book by Sir Isaac Newton that expounds Newton's laws of motion and his law of universal gravitation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isaac Newton” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:41.682Z",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georg Simon Ohm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Georg Simon Ohm”, “Георг Симон Ом”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:41.682Z",
+   "target": "f00225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Pascaline (also known as the arithmetic machine or Pascal's calculator) is a mechanical calculator invented by Blaise Pascal in 1642.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blaise Pascal” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:16:06Z",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In addition to Ohm’s law, his name is associated with the international unit of electrical resistance.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:16:10Z",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The ohm is named for Georg Simon Ohm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "sizes.com gives Ohm's birth year as 1787; he was born in 1789"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:14Z",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It is named after German physicist Georg Ohm (1789–1854).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:51:57.061Z",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In addition to Ohm’s law, his name is associated with the international unit of electrical resistance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:51:57.061Z",
+   "target": "f00224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Georg Simon Ohm had humble roots and struggled financially throughout most of his life, but the German physicist is well known today for his formulation of a law, termed Ohm's law, describing the mathematical relationship between electrical current, resistance and voltage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Georg Simon Ohm” is on the snapshot of s8"
+  }
+ ]
+}

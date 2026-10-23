@@ -1,0 +1,399 @@
+{
+ "id": "a0972",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "Alphabet Soup: The Acronyms Behind Your Internet Connection",
+ "titleDe": "Buchstabensuppe: Die Abkürzungen hinter Ihrer Internetverbindung",
+ "titleRu": "Буквенный суп: аббревиатуры, стоящие за вашим подключением к интернету",
+ "bodyEn": "Anyone who has set up a home router has met a wall of capital letters. Networking is a field built from acronyms, and most of them are simply compressed descriptions that make perfect sense once they are spelled out. Following the path of a web page from the telephone socket to the screen introduces the most important.\n\nThe connection begins at the wall. In most European homes broadband arrives over the ordinary copper telephone line using DSL, which stands for Digital Subscriber Line. Developed in the late 1980s – AT&T Bell Labs filed a patent on the basic concept in 1988, and Bellcore engineers created the asymmetric variant – DSL sends data in frequency bands above those used for voice, so that telephone and internet can share one cable; the common asymmetric variant, ADSL, gives more bandwidth for downloading than for uploading. Fibre and cable are gradually replacing it, but tens of millions of DSL lines are still in use.\n\nInside the house the router distributes the connection over WLAN – Wireless Local Area Network – a local network that uses radio waves in the 2.4 and 5 gigahertz bands instead of Ethernet cables. German speakers say WLAN where the rest of the world says Wi-Fi, a brand name created in 1999 by the Wi-Fi Alliance for products certified to the IEEE 802.11 standards; the two terms describe the same technology. The first 802.11 standard, published in 1997, managed 2 megabits per second; today's Wi-Fi 7 reaches a theoretical 23 gigabits in a single band.\n\n| Acronym | Full form | Function |\n|---|---|---|\n| DSL | Digital Subscriber Line | broadband over the telephone line |\n| WLAN | Wireless Local Area Network | wireless home or office network |\n| VPN | Virtual Private Network | encrypted tunnel across a public network |\n| URL | Uniform Resource Locator | address of a resource on the web |\n| HTTP | Hypertext Transfer Protocol | protocol for requesting and delivering web pages |\n| IP | Internet Protocol | addressing and routing of data packets |\n| VoIP | Voice over IP | telephone calls over the internet |\n\nMany users add a layer of privacy with a VPN, a Virtual Private Network. It creates an encrypted tunnel between the user's device and a server elsewhere, so that the local network operator or a café's Wi-Fi cannot read the traffic and the outside world sees only the server's address. Companies use VPNs to connect home workers to the office network; private users often use them to avoid geo-blocking. One of the first widely used VPN protocols, Microsoft's PPTP, was published as an open specification in July 1999.\n\nEvery device along the way, from the router to the server at the other end, is identified by an IP address, and the letters IP stand for Internet Protocol. Specified in its version 4 as RFC 791 in September 1981, the Internet Protocol defines how data is cut into packets and how each packet carries a sender and a destination address – a 32-bit number usually written as four values such as 192.168.0.1; because those four billion addresses have run out, the newer IPv6 uses 128 bits. The same packets can carry a voice: with VoIP, Voice over IP, you can make phone calls over the internet, and most German landlines now run on it as well.\n\nOnce the connection exists, the browser needs to know what to fetch. Every page and image on the web has an address called a URL, a Uniform Resource Locator, such as https://www.example.org/index.html. Tim Berners-Lee designed the scheme in 1990 at CERN, and it packs three pieces of information into one string: the protocol to use, the server's name and the path of the resource on that server. The format was standardised in 1994 as RFC 1738.\n\nThe protocol named at the start of most URLs is HTTP, the Hypertext Transfer Protocol, also created by Berners-Lee, who documented its first version, HTTP/0.9, in 1991. It is a simple conversation: the browser sends a request such as “GET /index.html”, and the server answers with a status code – 200 for success, the notorious 404 for “not found” – followed by the page itself. HTTPS is the same conversation wrapped in encryption, which is why browsers show a padlock beside it.",
+ "bodyDe": "Wer je einen Heimrouter eingerichtet hat, ist auf eine Wand aus Großbuchstaben gestoßen. Die Netzwerktechnik ist ein Feld aus Abkürzungen, und die meisten davon sind einfach komprimierte Beschreibungen, die vollkommen einleuchten, sobald man sie ausschreibt. Wer den Weg einer Webseite von der Telefondose bis zum Bildschirm verfolgt, lernt die wichtigsten kennen.\n\nDie Verbindung beginnt an der Wand. In den meisten europäischen Haushalten kommt das Breitband über die gewöhnliche Kupfer-Telefonleitung per DSL, was für Digital Subscriber Line steht. Ende der 1980er-Jahre entwickelt – AT&T Bell Labs meldete 1988 ein Patent auf das Grundprinzip an, und Ingenieure von Bellcore schufen die asymmetrische Variante – sendet DSL Daten in Frequenzbändern oberhalb derer, die für die Sprache genutzt werden, sodass Telefon und Internet sich ein Kabel teilen können; die verbreitete asymmetrische Variante ADSL bietet mehr Bandbreite zum Herunterladen als zum Hochladen. Glasfaser und Kabel verdrängen sie allmählich, doch Dutzende Millionen DSL-Anschlüsse sind noch in Betrieb.\n\nIm Haus verteilt der Router die Verbindung per WLAN – Wireless Local Area Network –, ein lokales Netz, das statt Ethernet-Kabeln Funkwellen in den Bändern um 2,4 und 5 Gigahertz nutzt. Im Deutschen sagt man WLAN, wo der Rest der Welt Wi-Fi sagt, ein Markenname, den die Wi-Fi Alliance 1999 für Produkte schuf, die nach den IEEE-802.11-Standards zertifiziert sind; beide Begriffe beschreiben dieselbe Technik. Der erste 802.11-Standard, 1997 veröffentlicht, schaffte 2 Megabit pro Sekunde; das heutige Wi-Fi 7 erreicht in einem einzigen Band theoretisch 23 Gigabit.\n\n| Abkürzung | Ausgeschrieben | Funktion |\n|---|---|---|\n| DSL | Digital Subscriber Line | Breitband über die Telefonleitung |\n| WLAN | Wireless Local Area Network | drahtloses Heim- oder Büronetz |\n| VPN | Virtual Private Network | verschlüsselter Tunnel durch ein öffentliches Netz |\n| URL | Uniform Resource Locator | Adresse einer Ressource im Web |\n| HTTP | Hypertext Transfer Protocol | Protokoll zum Anfordern und Ausliefern von Webseiten |\n| IP | Internet Protocol | Adressierung und Weiterleitung von Datenpaketen |\n| VoIP | Voice over IP | Telefonieren über das Internet |\n\nViele Nutzer fügen mit einem VPN, einem Virtual Private Network, eine Schicht Privatsphäre hinzu. Es baut einen verschlüsselten Tunnel zwischen dem Gerät des Nutzers und einem Server anderswo auf, sodass weder der Betreiber des lokalen Netzes noch das Café-WLAN den Datenverkehr mitlesen können und die Außenwelt nur die Adresse des Servers sieht. Unternehmen verbinden damit Heimarbeiter mit dem Firmennetz; Privatnutzer umgehen damit häufig Geoblocking. Eines der ersten weit verbreiteten VPN-Protokolle, Microsofts PPTP, wurde im Juli 1999 als offene Spezifikation veröffentlicht.\n\nJedes Gerät auf dem Weg, vom Router bis zum Server am anderen Ende, wird über eine IP-Adresse angesprochen, und die Buchstaben IP stehen für Internet Protocol. In seiner Version 4 im September 1981 als RFC 791 festgelegt, bestimmt das Internet Protocol, wie Daten in Pakete zerlegt werden und wie jedes Paket eine Absender- und eine Zieladresse trägt – eine 32-Bit-Zahl, meist als vier Werte wie 192.168.0.1 geschrieben; weil diese vier Milliarden Adressen erschöpft sind, nutzt das neuere IPv6 128 Bit. Dieselben Pakete können auch eine Stimme tragen: Mit VoIP, Voice over IP, kann man über das Internet telefonieren, und auch die meisten deutschen Festnetzanschlüsse laufen inzwischen darüber.\n\nSteht die Verbindung, muss der Browser wissen, was er holen soll. Jede Seite und jedes Bild im Web hat eine Adresse namens URL, Uniform Resource Locator, etwa https://www.example.org/index.html. Tim Berners-Lee entwarf das Schema 1990 am CERN, und es packt drei Informationen in eine einzige Zeichenkette: das zu verwendende Protokoll, den Namen des Servers und den Pfad der Ressource auf diesem Server. Standardisiert wurde das Format 1994 als RFC 1738.\n\nDas Protokoll am Anfang der meisten URLs ist HTTP, das Hypertext Transfer Protocol, ebenfalls von Berners-Lee geschaffen, der die erste Version, HTTP/0.9, 1991 dokumentierte. Es ist ein einfaches Gespräch: Der Browser schickt eine Anfrage wie „GET /index.html“, und der Server antwortet mit einem Statuscode – 200 für Erfolg, die berüchtigte 404 für „nicht gefunden“ – gefolgt von der Seite selbst. HTTPS ist dasselbe Gespräch in Verschlüsselung verpackt, weshalb Browser daneben ein Schloss anzeigen.",
+ "bodyRu": "Каждый, кто настраивал домашний роутер, натыкался на стену заглавных букв. Сетевые технологии – область, построенная из аббревиатур, и большинство из них – просто сжатые описания, которые становятся совершенно понятны, если их расшифровать. Проследив путь веб-страницы от телефонной розетки до экрана, можно познакомиться с самыми важными.\n\nПодключение начинается у стены. В большинстве европейских домов широкополосный доступ приходит по обычной медной телефонной линии с помощью DSL, что означает Digital Subscriber Line, цифровая абонентская линия. Разработанная в конце 1980-х годов – в 1988 году AT&T Bell Labs подала заявку на патент базовой концепции, а инженеры Bellcore создали асимметричный вариант, – DSL передаёт данные в частотных диапазонах выше тех, что используются для голоса, так что телефон и интернет могут делить один кабель; распространённый асимметричный вариант, ADSL, даёт больше пропускной способности на скачивание, чем на отдачу. Оптоволокно и кабельные сети постепенно её вытесняют, но десятки миллионов линий DSL всё ещё работают.\n\nВнутри дома роутер раздаёт подключение по WLAN – Wireless Local Area Network, беспроводной локальной сети, которая вместо кабелей Ethernet использует радиоволны в диапазонах 2,4 и 5 гигагерц. Немецкоязычные говорят WLAN там, где остальной мир говорит Wi-Fi, – это торговая марка, созданная в 1999 году объединением Wi-Fi Alliance для продуктов, сертифицированных по стандартам IEEE 802.11; оба термина описывают одну и ту же технологию. Первый стандарт 802.11, опубликованный в 1997 году, давал 2 мегабита в секунду; сегодняшний Wi-Fi 7 теоретически достигает 23 гигабит в одном диапазоне.\n\n| Аббревиатура | Расшифровка | Назначение |\n|---|---|---|\n| DSL | Digital Subscriber Line | широкополосный доступ по телефонной линии |\n| WLAN | Wireless Local Area Network | беспроводная домашняя или офисная сеть |\n| VPN | Virtual Private Network | зашифрованный туннель через публичную сеть |\n| URL | Uniform Resource Locator | адрес ресурса в вебе |\n| HTTP | Hypertext Transfer Protocol | протокол запроса и доставки веб-страниц |\n| IP | Internet Protocol | адресация и маршрутизация пакетов данных |\n| VoIP | Voice over IP | телефонные звонки через интернет |\n\nМногие пользователи добавляют слой конфиденциальности с помощью VPN, Virtual Private Network, виртуальной частной сети. Она создаёт зашифрованный туннель между устройством пользователя и сервером где-то в другом месте, так что ни оператор локальной сети, ни Wi-Fi в кафе не могут прочитать трафик, а внешний мир видит только адрес сервера. Компании используют VPN, чтобы подключать надомных сотрудников к офисной сети; частные пользователи часто применяют их, чтобы обойти геоблокировку. Один из первых широко распространённых VPN-протоколов, PPTP от Microsoft, был опубликован как открытая спецификация в июле 1999 года.\n\nКаждое устройство на этом пути, от роутера до сервера на другом конце, обозначается IP-адресом, а буквы IP означают Internet Protocol. Описанный в версии 4 как RFC 791 в сентябре 1981 года, Internet Protocol определяет, как данные разрезаются на пакеты и как каждый пакет несёт адрес отправителя и получателя – 32-битное число, обычно записываемое четырьмя значениями, например 192.168.0.1; поскольку эти четыре миллиарда адресов закончились, более новый IPv6 использует 128 бит. Те же пакеты могут нести и голос: с VoIP, Voice over IP, можно звонить по телефону через интернет, и большинство немецких стационарных телефонов теперь тоже работает на этой технологии.\n\nКогда соединение установлено, браузеру нужно знать, что загружать. У каждой страницы и каждого изображения в вебе есть адрес, называемый URL, Uniform Resource Locator, например https://www.example.org/index.html. Тим Бернерс-Ли придумал эту схему в 1990 году в ЦЕРН, и она упаковывает в одну строку три сведения: используемый протокол, имя сервера и путь к ресурсу на этом сервере. Формат был стандартизирован в 1994 году как RFC 1738.\n\nПротокол, указанный в начале большинства URL, – это HTTP, Hypertext Transfer Protocol, тоже созданный Бернерсом-Ли, который описал его первую версию, HTTP/0.9, в 1991 году. Это простой разговор: браузер отправляет запрос вроде «GET /index.html», а сервер отвечает кодом состояния – 200 при успехе, печально известный 404 для «не найдено» – и затем самой страницей. HTTPS – тот же разговор, завёрнутый в шифрование, поэтому браузеры показывают рядом с ним замочек.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Virtual_Private_Network_overview.svg/1920px-Virtual_Private_Network_overview.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Virtual_private_network",
+   "width": 1488,
+   "height": 1052,
+   "alt": {
+    "en": "Diagram of a virtual private network",
+    "de": "Schema eines virtuellen privaten Netzes",
+    "ru": "Схема виртуальной частной сети"
+   },
+   "caption": {
+    "en": "How a VPN works: encrypted tunnels across the public internet join home workers and branch offices to a company's private network.",
+    "de": "So funktioniert ein VPN: Verschlüsselte Tunnel durch das öffentliche Internet verbinden Heimarbeiter und Zweigstellen mit dem privaten Netz eines Unternehmens.",
+    "ru": "Как работает VPN: зашифрованные туннели через публичный интернет соединяют надомных сотрудников и филиалы с частной сетью компании."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/ADSL_router_with_Wi-Fi_%28802.11_b-g%29.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Asymmetric_digital_subscriber_line",
+   "width": 3427,
+   "height": 3427,
+   "alt": {
+    "en": "An ADSL router with Wi-Fi antenna",
+    "de": "Ein ADSL-Router mit WLAN-Antenne",
+    "ru": "ADSL-роутер с антенной Wi-Fi"
+   },
+   "caption": {
+    "en": "A home router that brings DSL in over the telephone line and hands it out over WLAN – two of the acronyms on the path from the wall socket to the screen.",
+    "de": "Ein Heimrouter, der DSL über die Telefonleitung hereinholt und per WLAN verteilt – zwei der Abkürzungen auf dem Weg von der Wanddose zum Bildschirm.",
+    "ru": "Домашний роутер, который получает DSL по телефонной линии и раздаёт его по WLAN, – две аббревиатуры на пути от розетки до экрана."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f04856",
+   "answerEn": "Wireless Local Area Network",
+   "answerDe": "Wireless Local Area Network",
+   "answerRu": "Wireless Local Area Network",
+   "spans": {
+    "en": [
+     1009,
+     27
+    ],
+    "de": [
+     1129,
+     27
+    ],
+    "ru": [
+     1111,
+     27
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "1999",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Wi-Fi Alliance is formed to hold the „Wi-Fi“ trademark for wireless LANs",
+    "labelDe": "Die Wi-Fi Alliance wird gegründet und hält die Marke „Wi-Fi“ für Funknetze",
+    "labelRu": "Образовано объединение Wi-Fi Alliance, владеющее маркой «Wi-Fi» для беспроводных сетей"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Wi-Fi",
+    "title": "Wi-Fi – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04856",
+     "en": "What does the abbreviation WLAN stand for?",
+     "de": "Wofür steht die Abkürzung WLAN?",
+     "ru": "Что означает аббревиатура WLAN?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c081",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f04857",
+   "answerEn": "Digital Subscriber Line",
+   "answerDe": "Digital Subscriber Line",
+   "answerRu": "Digital Subscriber Line",
+   "spans": {
+    "en": [
+     466,
+     23
+    ],
+    "de": [
+     521,
+     23
+    ],
+    "ru": [
+     499,
+     23
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1988",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "AT&T Bell Labs files a patent on the basic DSL concept",
+    "labelDe": "AT&T Bell Labs meldet ein Patent auf das DSL-Grundprinzip an",
+    "labelRu": "AT&T Bell Labs подаёт заявку на патент базовой концепции DSL"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Digital_subscriber_line",
+    "title": "Digital subscriber line – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04857",
+     "en": "What does the abbreviation DSL stand for?",
+     "de": "Wofür steht die Abkürzung DSL?",
+     "ru": "Что означает аббревиатура DSL?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f04858",
+   "answerEn": "Virtual Private Network",
+   "answerDe": "Virtual Private Network",
+   "answerRu": "Virtual Private Network",
+   "spans": {
+    "en": [
+     2104,
+     23
+    ],
+    "de": [
+     2264,
+     23
+    ],
+    "ru": [
+     2287,
+     23
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1999-07",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Microsoft's VPN protocol PPTP is published as RFC 2637",
+    "labelDe": "Microsofts VPN-Protokoll PPTP erscheint als RFC 2637",
+    "labelRu": "VPN-протокол PPTP от Microsoft публикуется как RFC 2637"
+   },
+   "source": {
+    "url": "https://dictionary.cambridge.org/dictionary/english/vpn",
+    "title": "VPN – Cambridge Dictionary",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04858",
+     "en": "What does the abbreviation VPN stand for?",
+     "de": "Wofür steht die Abkürzung VPN?",
+     "ru": "Что означает аббревиатура VPN?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f04860",
+   "answerEn": "Hypertext Transfer Protocol",
+   "answerDe": "Hypertext Transfer Protocol",
+   "answerRu": "Hypertext Transfer Protocol",
+   "spans": {
+    "en": [
+     3722,
+     27
+    ],
+    "de": [
+     4017,
+     27
+    ],
+    "ru": [
+     4003,
+     27
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tim Berners-Lee documents the first version of HTTP (0.9)",
+    "labelDe": "Tim Berners-Lee dokumentiert die erste HTTP-Version (0.9)",
+    "labelRu": "Тим Бернерс-Ли описывает первую версию HTTP (0.9)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HTTP",
+    "title": "HTTP – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04860",
+     "en": "What does the abbreviation HTTP stand for?",
+     "de": "Wofür steht die Abkürzung HTTP?",
+     "ru": "Что означает аббревиатура HTTP?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f14189",
+   "answerEn": "Internet Protocol",
+   "answerDe": "Internet Protocol",
+   "answerRu": "Internet Protocol",
+   "spans": {
+    "en": [
+     2712,
+     17
+    ],
+    "de": [
+     2950,
+     17
+    ],
+    "ru": [
+     2957,
+     17
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1981-09",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RFC 791 specifies the Internet Protocol version 4, which defines 32-bit IP addresses",
+    "labelDe": "RFC 791 spezifiziert das Internet Protocol Version 4 mit seinen 32-Bit-IP-Adressen",
+    "labelRu": "RFC 791 описывает Internet Protocol версии 4 с 32-битными IP-адресами"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Internet_Protocol",
+    "title": "Internet Protocol",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14481",
+     "en": "What does the abbreviation IP stand for in a computer's IP address?",
+     "de": "Wofür steht die Abkürzung IP in der IP-Adresse eines Computers?",
+     "ru": "Что означает аббревиатура IP в IP-адресе компьютера?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-269",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f14190",
+   "answerEn": "Make phone calls",
+   "answerDe": "Telefonieren",
+   "answerRu": "звонить по телефону",
+   "spans": {
+    "en": [
+     3131,
+     16
+    ],
+    "de": [
+     3414,
+     12
+    ],
+    "ru": [
+     3384,
+     19
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1995",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A Windows program by the Israeli company VocalTec brings internet telephony to home computers",
+    "labelDe": "Ein Windows-Programm der israelischen Firma VocalTec ermöglicht Internettelefonie am Heimcomputer",
+    "labelRu": "Windows-программа израильской компании VocalTec приносит интернет-телефонию на домашние компьютеры"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/IP-Telefonie",
+    "title": "IP-Telefonie",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14482",
+     "en": "What can you do over the internet with VoIP?",
+     "de": "Was kann man mit VoIP per Internet tun?",
+     "ru": "Что можно делать через интернет с помощью VoIP?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-267",
+      "category": 6
+     },
+     "cardText": "Mit VoIP kann man per Internet was: fernsehen, telefonieren oder Filme streamen?"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f04859",
+   "answerEn": "Uniform Resource Locator",
+   "answerDe": "Uniform Resource Locator",
+   "timeline": {
+    "kind": "event",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The URL is standardised in RFC 1738",
+    "labelDe": "Die URL wird in RFC 1738 standardisiert"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/URL",
+    "title": "URL – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04859",
+     "en": "What does the abbreviation URL stand for?",
+     "de": "Wofür steht die Abkürzung URL?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f00899; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f00899"
+    ]
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/internet/networking",
+  "topic:language/abbreviations",
+  "audience:international"
+ ]
+}

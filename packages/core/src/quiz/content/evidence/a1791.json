@@ -1,0 +1,422 @@
+{
+ "article": "a1791",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Toteninsel",
+   "title": "Die Toteninsel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:47.745Z",
+   "snapshot": "fbe14c9cdc627d8907b7613fb7de9425183ee6de3a31275204cdc85875b99f71"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Marcantonio_Raimondi",
+   "title": "Marcantonio Raimondi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:51.458Z",
+   "snapshot": "3546ec90d382362d093e3400996b6f90f638433c8f8e6a984e0b0dfc5f302061"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pentimento:_A_Book_of_Portraits",
+   "title": "Pentimento: A Book of Portraits – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:52.409Z",
+   "snapshot": "6f3ca257379f3265435183bcdb0cf2f6d7cceb22c4dd076f2c5d143a09b9cc92"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Washington_Principles_on_Nazi-Confiscated_Art",
+   "title": "Washington Principles on Nazi-Confiscated Art – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:53.436Z",
+   "snapshot": "03ebe50ca0d1df539010f664c1586fa21b8a57ceb5de2a1a7aa0b4e7a19b716f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Provenienzforschung",
+   "title": "Provenienzforschung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:22:51.627Z",
+   "snapshot": "0edbc25eca538a17d405f0f9f85bdd755a6be0722f5cdd904e198ed389a68942"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Replik",
+   "title": "Replik – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:26.363Z",
+   "snapshot": "6fbb0805c48e2cee2cf0de8fad093b9046b18171a57218b7879e62310e2498a6"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Replik",
+   "title": "Replik – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:26.527Z",
+   "snapshot": "19cc6972b0c551b4c464de9fd200d264b8893e80fab2f05e2236c1b61f0567b8"
+  },
+  "s8": {
+   "url": "https://www.wissen.de/lexikon/replik-kunst",
+   "title": "Replik (Kunst) – wissen.de Lexikon",
+   "publisher": "wissen.de (Bertelsmann/Wissen Media)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:26.678Z",
+   "snapshot": "195ae95275216ad7de91f9e3e0330842bb42afc334db78c81ff6584ec4a43d6b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Replik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Copy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pentimento",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Provenance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kunstwerke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-049"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:23.419Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Replik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Replik”, “Replica”, “реплика”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:23.419Z",
+   "target": "f08952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "However Dürer's woodcuts had raised the standard of the medium considerably, and since Marcantonio continued to copy a large number of both Dürer's engravings and woodcuts, he must have found it profitable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Copy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:23.419Z",
+   "target": "f08953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pentimento: A Book of Portraits is a 1973 book by American writer Lillian Hellman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pentimento” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:23.419Z",
+   "target": "f08955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In establishing that a work of art had been confiscated by the Nazis and not subsequently restituted, consideration should be given to unavoidable gaps or ambiguities in the provenance in light of the passage of time and the circumstances of the Holocaust era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Provenance” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:23.419Z",
+   "target": "f14431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Unterzeichnerstaaten, auch Deutschland, haben sich unter anderem verpflichtet, Kunstwerke, die während der Zeit des Nationalsozialismus beschlagnahmt wurden, in ihren Beständen ausfindig zu machen, deren rechtmäßige Eigentümer zu suchen und eine „gerechte und faire Lösung“ zu finden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.419Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kunstwerke” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:22Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nachbildung eines Originals [die der Künstler selbst angefertigt hat]",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:10:25Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "genaue Wiederholung eines Kunstwerkes durch den Künstler selbst",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:29Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "genaue Kopie eines Kunstwerks durch den Künstler selbst.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:11.402Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nachbildung eines Originals [die der Künstler selbst angefertigt hat]",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:11.402Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "genaue Wiederholung eines Kunstwerkes durch den Künstler selbst",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:11.402Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "genaue Kopie eines Kunstwerks durch den Künstler selbst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:11.402Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Replik ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Replik” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:11.402Z",
+   "target": "f08951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Replik – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Replik” is on the snapshot of s7"
+  }
+ ]
+}

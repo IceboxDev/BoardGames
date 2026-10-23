@@ -1,0 +1,442 @@
+{
+ "article": "a0553",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Well-Tempered_Clavier",
+   "title": "The Well-Tempered Clavier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:24.159Z",
+   "snapshot": "4bf5018f418e62592b3ed3687664592f06f78fd9aa338d759e26476e8525d988"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gregorian_chant",
+   "title": "Gregorian chant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:25.288Z",
+   "snapshot": "7bca555a125504606445b178969bdf125091c19af5f71b01413cf2d886f2c215"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Baroque_music",
+   "title": "Baroque music – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:26.169Z",
+   "snapshot": "73a9110b6b01a3d2a4da8746ea24dd24af0d9372ac23102d2988986d64be648b"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Heterophonie",
+   "title": "Heterophonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:25.233Z",
+   "snapshot": "3a6d487448057b0e7aea85078baf8e677346ffff3c9bd8122f98432136fe8838"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sumer_is_icumen_in",
+   "title": "Sumer is icumen in – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:27.069Z",
+   "snapshot": "c3231cecfc1abad96633b17eea9b35b2f0f0f2dbc4c6e7c7985f2749b326a53f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Polyphony",
+   "title": "Polyphony – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:03.791Z",
+   "snapshot": "c9541aa0cf382bfbee0f7195ceb5bd8042201ee737b80277d1d49952e618d7d4"
+  },
+  "s7": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/polyphony",
+   "title": "polyphony noun – Oxford Advanced Learner's Dictionary",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:03.874Z",
+   "snapshot": "c60133166aa4798e6ab5eac633d102a9decff5594ad418a2728dfa5b1e828eec"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/polyphony",
+   "title": "Polyphony – Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:03.925Z",
+   "snapshot": "eb159d73a9de6de975de52e79ff3dcf034ae1bb9ca7020a1c79fdde06e2a6263"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "polyphony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02762",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "monophony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "homophony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heterophonie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "canon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:06.061Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "polyphony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“polyphony”, “Polyphonie”, “полифония”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:06.061Z",
+   "target": "f02762",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Some practising researchers favour a closer look at non-Western (liturgical) traditions, in such cultures where the tradition of modal monophony was never abandoned.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monophony” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:06.061Z",
+   "target": "f02763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Homophony – music with one melodic voice and rhythmically similar (and subordinate) chordal accompaniment (this and monody are contrasted with the typical Renaissance texture, polyphony)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “homophony” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:06.061Z",
+   "target": "f02764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heterophonie (von altgriechisch ἕτερος héteros, deutsch ‚anders, verschieden‘ und φωνή phonē ‚Klang‘) ist eine Musizierform zwischen Einstimmigkeit und einer ansatzweisen Mehrstimmigkeit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heterophonie” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:06.061Z",
+   "target": "f02765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Sumer is icumen in\" is the incipit of a medieval English round or rota of the mid-13th century; it is also known variously as the Summer Canon and the Cuckoo Song.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “canon” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:06:47Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "consisting of two or more simultaneous lines of independent melody",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:06:50Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from Greek poluphōnia, from polu- ‘many’ + phōnē ‘sound’",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:06:54Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "polyphony is from the Greek word polyphōnía variety of tones",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:30.516Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "consisting of two or more simultaneous lines of independent melody",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:30.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:30.516Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from Greek poluphōnia, from polu- ‘many’ + phōnē ‘sound’",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:30.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:30.516Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "polyphony is from the Greek word polyphōnía variety of tones",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:30.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:30.516Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Polyphony ( pə-LIF-ə-nee) is a type of musical texture consisting of two or more simultaneous lines of independent melody, as opposed to a musical texture with just one voice (monophony) or a texture with one dominant melodic voice accompanied by chords (homophony).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:30.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polyphony” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:30.516Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "polyphony noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:30.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polyphony” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:30.516Z",
+   "target": "f02761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "POLYPHONY Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:30.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polyphony” is on the snapshot of s8"
+  }
+ ]
+}

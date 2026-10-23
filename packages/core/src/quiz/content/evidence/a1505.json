@@ -1,0 +1,242 @@
+{
+ "article": "a1505",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dominion_(card_game)",
+   "title": "Dominion (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:11.119Z",
+   "snapshot": "9c3f043bccfd9d3fd641086bd9e9e5f120018fa6e8ee630702feadce6be67268"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Siedler_von_Catan:_H%C3%A4ndler_%26_Barbaren",
+   "title": "Die Siedler von Catan: Händler & Barbaren – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:28.310Z",
+   "snapshot": "9ec1a6160c3347843fdeb96268ddfbce011f183bfba9ee8905d49c8f228f18ab"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carcassonne_(board_game)",
+   "title": "Carcassonne (board game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:20.409Z",
+   "snapshot": "387a59af573b7de01773f650a4551e07ddfe182eda33cbbfee36fc24ee9a6eac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ticket_to_Ride_(board_game)",
+   "title": "Ticket to Ride (board game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:19.248Z",
+   "snapshot": "fc11edc98e15d6461a6a27ba49727881f93d0d4d884a4081b9c1a5ead04aefa7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pandemic_(board_game)",
+   "title": "Pandemic (board game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:10.861Z",
+   "snapshot": "8e04d0c6113148aacbc9cbce63539f4f85fec0e44d449451733bcbc6f9a2646d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dominion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Catan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carcassonne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ticket to Ride",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pandemic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:36.064Z",
+   "target": "f07521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dominion is a card game created by Donald X.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dominion” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:36.064Z",
+   "target": "f07522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Siedler von Catan: Händler & Barbaren",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catan” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:36.064Z",
+   "target": "f07523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carcassonne () is a tile-based Eurogame for two to five players, designed by Klaus-Jürgen Wrede and published in 2000 by Hans im Glück in German and by Rio Grande Games (until 2012) and Z-Man Games (currently) in English.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carcassonne” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:36.064Z",
+   "target": "f07524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ticket to Ride is a series of turn-based strategy railway-themed Eurogames designed by Alan R.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ticket to Ride” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:36.064Z",
+   "target": "f07525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pandemic is a cooperative board game designed by Matt Leacock and first published by Z-Man Games in the United States in 2008.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.064Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandemic” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1770",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Golden_Bull_of_1356",
+   "title": "Golden Bull of 1356 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:22.381Z",
+   "snapshot": "9adbb9b6efe721513a940060a3894d9f1e84237b49773166b8230878b3e9def7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peace_of_Augsburg",
+   "title": "Peace of Augsburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:23.375Z",
+   "snapshot": "b942944cec4c54abfc880931305bc0497b95e3caad489610873131ac1856d987"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/German_mediatisation",
+   "title": "German mediatisation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:24.731Z",
+   "snapshot": "56e492a038f457ebced62f14a0bdce3cc4008d67b75f8e377b12917549bda239"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Charles_IV,_Holy_Roman_Emperor",
+   "title": "Charles IV, Holy Roman Emperor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:25.549Z",
+   "snapshot": "d81dc9cb20fca7818e9e1766549835f005a16b89428b119c883fe7b553c86a88"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Investiture_Controversy",
+   "title": "Investiture Controversy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:26.529Z",
+   "snapshot": "11c3f5eee54d54dde68c97d73710502f21fecdd6a7355600cd22163eb6fa6aa8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Golden Bull",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peace of Augsburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Reichsdeputationshauptschluss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles IV",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Investiture Controversy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:19.527Z",
+   "target": "f08846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Golden Bull of 1356, was a decree issued by the Imperial Diet at Nuremberg and Metz (Diet of Metz, 1356/57) headed by the  Emperor Charles IV which fixed, for a period of more than four hundred years, important aspects of the constitutional structure of the Holy Roman Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golden Bull” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:19.527Z",
+   "target": "f08848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Peace of Augsburg (German: Augsburger Frieden), also called the Augsburg Settlement, was a treaty between Charles V, Holy Roman Emperor and the Schmalkaldic League, signed on 25 September 1555 in the German city of Augsburg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peace of Augsburg” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:19.527Z",
+   "target": "f08850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Final Recess of the Imperial Deputation (German: Reichsdeputationshauptschluss) of 25 February 1803 is commonly referred to as the Imperial law that brought about the territorial restructuring of the Empire by subsuming the church states and imperial cities to larger secular imperial estates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reichsdeputationshauptschluss” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:19.527Z",
+   "target": "f21880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles IV (German: Karl IV.; Czech: Karel IV.; Latin: Carolus IV; also known as Charles of Luxembourg German: Karl von Luxemburg; Czech: Karel Lucemburský; Latin: Carolus Luxemburgensis; Luxembourgish: Karel vu Lëtzebuerg; born Wenceslaus German: Wenzel; Czech: Václav; 14 May 1316 – 29 November",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles IV” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:19.527Z",
+   "target": "f21881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Investiture Controversy or Investiture Contest (Latin: Controversia de Investitura, German: Investiturstreit, pronounced [ɪnvɛstiˈtuːɐ̯ˌʃtʁaɪt] ) was a conflict between the Church and the state in medieval Europe over the ability to choose and install bishops (investiture), abbots of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Investiture Controversy” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1530",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Reconquista",
+   "title": "Reconquista – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:34.510Z",
+   "snapshot": "33b5bac082f02a501fdd37a07c1b0822578c8353405d36f547065d9a522ffdd4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Al-Andalus",
+   "title": "Al-Andalus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:41.345Z",
+   "snapshot": "0df1a16c98b42dc144aba77cbc85f627d6888ffb9776961d92021cd7975aecb5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alhambra_Decree",
+   "title": "Alhambra Decree – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:41.937Z",
+   "snapshot": "134b69acfb248e48ade631244009efba53c1e0f8fabcbfa72819c1917a57f481"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_Inquisition",
+   "title": "Spanish Inquisition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:43.030Z",
+   "snapshot": "9e6ad95ae0af6b74c4092c279c37afd5f85184de1495b19503e7fe5d41fd00ee"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Expulsion_of_the_Moriscos",
+   "title": "Expulsion of the Moriscos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:43.881Z",
+   "snapshot": "5e53939f1146b0a5194e6502b3c0c086683e6fc7a8fb3406d77253896ee729fa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Reconquista",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "al-Andalus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alhambra Decree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Spanish Inquisition",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Moriscos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:39.726Z",
+   "target": "f07646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Reconquista (Spanish and Portuguese for 'reconquest') or the fall of al-Andalus was a series of military campaigns by northern Iberian Christian polities against Muslim-ruled al-Andalus, which had been part of the Visigothic Kingdom before the Muslim Conquest of 711.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reconquista” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:39.726Z",
+   "target": "f07647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Al-Andalus (Arabic: الأَنْدَلُس, romanised: al-ʾAndalus) refers to the various Muslim ruled territories on the Iberian Peninsula that existed between 711 and 1492.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “al-Andalus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:39.726Z",
+   "target": "f07648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Alhambra Decree (also known as the Edict of Expulsion; Spanish: Decreto de la Alhambra, Edicto de Granada) was an edict issued on 31 March 1492 by the joint Catholic Monarchs of Spain, Isabella I of Castile and Ferdinand II of Aragon, ordering the expulsion of unconverted Jews from the Crowns of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alhambra Decree” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:39.726Z",
+   "target": "f07649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Spanish Inquisition later expanded to other territories under the Spanish Crown – Navarre, Southern Italy, including Sicily and Sardinia, and Central and South America, with tribunals in Lima, Peru, Mexico City and Cartagena (present-day Colombia).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spanish Inquisition” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:39.726Z",
+   "target": "f07650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Expulsion of the Moriscos (Spanish: Expulsión de los moriscos) was decreed by King Philip III of Spain on April 9, 1609.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moriscos” is on the snapshot of s5"
+  }
+ ]
+}

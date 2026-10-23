@@ -13,15 +13,24 @@
  * board goes there, play into one and the rail follows — by the position, not
  * the move order, so a line that transposes into another folder moves there.
  */
+import {
+  analysedUpToDate,
+  type Learning,
+  learnable,
+} from "@boardgames/core/games/chess/trainer/drill";
 import { TRAINER_FOLDERS, type TrainerFolder } from "@boardgames/core/games/chess/trainer/folders";
 import type { RepertoireTree } from "@boardgames/core/games/chess/trainer/tree";
-import { type ReactNode, useEffect, useMemo, useState } from "react";
+import { type ReactNode, useMemo } from "react";
 import { ChevronRightIcon, FolderIcon, FolderOpenIcon } from "../../../../components/icons";
 import { Button, SegmentedControl } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
-import { isLeaf, keyAfter, reachableFrom } from "../tree-nav";
+import { isLeaf, nextKeys } from "../tree-nav";
+import type { TreeBuild } from "../useTreeBuild";
+import { BuildProgressRule, BuildStatusText } from "./BuildStatus";
+import { currentFolder, flatten, type Placed, splitName, usePositionOwners } from "./folder-tree";
 import { compact } from "./format";
-import { type LineStep, START, walkLine } from "./model";
+import type { LineStep } from "./model";
+import type { FolderGames } from "./useFolderGames";
 
 type Color = "w" | "b";
 
@@ -32,48 +41,16 @@ interface FolderRailProps {
   /** The moves on the board up to the shown position. */
   readonly moves: readonly LineStep[];
   readonly onOpen: (color: Color, moves: readonly string[]) => void;
-  /** Folder ownership of your games, from the build worker (null before it's ready). */
-  readonly folderCounts:
-    | ((
-        folders: readonly { fen: string; moves: readonly string[] }[],
-      ) => Promise<{ owned: number[]; transposed: number[] }>)
-    | null;
-  /** A slim build/index status, under the colour switch. */
-  readonly status?: ReactNode;
+  /** Your games per folder (`useFolderGames`, shared with the map). */
+  readonly folderGames: FolderGames;
+  /** How much of each folder you know (`useFolderLearning`). */
+  readonly learning?: ReadonlyMap<string, Learning>;
+  /** The open colour's build: its status takes the header's count while it runs. */
+  readonly build?: TreeBuild | null;
+  /** Errors to show above the folders (connection, loading). */
+  readonly notice?: ReactNode;
   /** The lichess connection, at the bottom. */
   readonly footer?: ReactNode;
-}
-
-interface Placed {
-  readonly folder: TrainerFolder;
-  /** Folders from the top down to (not including) this one. */
-  readonly parents: readonly TrainerFolder[];
-  readonly fen: string;
-  readonly key: string;
-}
-
-function flatten(
-  folders: readonly TrainerFolder[],
-  parents: readonly TrainerFolder[] = [],
-): Placed[] {
-  return folders.flatMap((f) => {
-    const end = walkLine(f.moves).at(-1) ?? START;
-    return [
-      { folder: f, parents, fen: end.fen, key: end.key },
-      ...flatten(f.children, [...parents, f]),
-    ];
-  });
-}
-
-const deepestFirst = (all: readonly Placed[]): Placed[] =>
-  [...all].sort((a, b) => b.folder.moves.length - a.folder.moves.length);
-
-/** "1…c5 Sicilian" → move "1…c5", name "Sicilian". */
-function splitName(name: string): { move: string; label: string } {
-  const at = name.indexOf(" ");
-  return at < 0
-    ? { move: name, label: name }
-    : { move: name.slice(0, at), label: name.slice(at + 1) };
 }
 
 export function FolderRail({
@@ -82,13 +59,15 @@ export function FolderRail({
   onColor,
   moves,
   onOpen,
-  folderCounts,
-  status,
+  folderGames,
+  learning,
+  build = null,
+  notice,
   footer,
 }: FolderRailProps) {
   const folders = TRAINER_FOLDERS[color];
   const all = useMemo(() => flatten(folders), [folders]);
-  const { counts: games, transposed, total: totalGames } = useFolderCounts(all, folderCounts);
+  const { counts: games, transposed, total: totalGames } = folderGames;
   const owner = usePositionOwners(all, trees[color]);
   const { counts: lines, total: totalLines } = useLineCounts(
     all,
@@ -107,21 +86,8 @@ export function FolderRail({
           .sort((a, b) => size(b)[0] - size(a)[0] || size(b)[1] - size(a)[1])
       : list;
 
-  // Where the board is: back from the shown position, the first position that
-  // is a folder's own (by any move order) or that the tree files under one.
-  const current = useMemo(() => {
-    const byId = new Map(all.map((p) => [p.folder.id, p]));
-    const atKey = new Map<string, Placed>();
-    for (const p of deepestFirst(all)) if (!atKey.has(p.key)) atKey.set(p.key, p);
-    const keys = [START.key, ...moves.map((m) => m.key)];
-    for (let i = keys.length - 1; i >= 0; i--) {
-      const key = keys[i] as string;
-      const id = owner.get(key);
-      const at = atKey.get(key) ?? (id ? byId.get(id) : undefined);
-      if (at) return at;
-    }
-    return null;
-  }, [all, moves, owner]);
+  // Where the board is (`folder-tree.ts:currentFolder`).
+  const current = useMemo(() => currentFolder(all, moves, owner), [all, moves, owner]);
   // The open folder: the one you're in when it has subfolders, else its parent.
   const open =
     current && arrange(current.folder.children).length > 0
@@ -146,10 +112,11 @@ export function FolderRail({
         value={color}
         onChange={onColor}
       />
-      {/* One tight block, the same at every level: the build status, the way
-          down (each step goes back up to it) and the open folder's header. */}
+      {/* One tight block, the same at every level: the way down (each step goes
+          back up to it) and the open folder's header, whose count gives way to
+          the build's status while one runs and whose rule fills as progress. */}
       <div className="flex shrink-0 flex-col">
-        {status}
+        {notice}
         <nav
           aria-label="Folder path"
           className="-ml-1.5 flex h-7 items-center gap-0.5 overflow-hidden text-2xs"
@@ -170,22 +137,30 @@ export function FolderRail({
             </span>
           ))}
         </nav>
-        <div className="flex h-9 items-center gap-2 border-b border-line-soft">
+        <div className="flex h-9 items-center gap-2">
           <span
             className="min-w-0 flex-1 truncate font-bold text-fg-strong"
             title={open?.folder.note}
           >
             {open ? splitName(open.folder.name).label : "All openings"}
           </span>
-          {openLines !== null && (
-            <span
-              className="shrink-0 text-2xs text-fg-muted tabular-nums"
-              title={openGames !== null ? `${openGames.toLocaleString()} of your games` : undefined}
-            >
-              {openLines.toLocaleString()} lines
-            </span>
-          )}
+          <BuildStatusText
+            build={build}
+            fallback={
+              openLines !== null && (
+                <span
+                  className="shrink-0 text-2xs text-fg-muted tabular-nums"
+                  title={
+                    openGames !== null ? `${openGames.toLocaleString()} of your games` : undefined
+                  }
+                >
+                  {openLines.toLocaleString()} lines
+                </span>
+              )
+            }
+          />
         </div>
+        <BuildProgressRule build={build} />
       </div>
 
       <div className="-mx-2 min-h-0 flex-1 overflow-y-auto px-2">
@@ -204,6 +179,7 @@ export function FolderRail({
                   games={games?.get(f.id) ?? null}
                   transposed={transposed?.get(f.id) ?? 0}
                   parentCount={openLines}
+                  learning={learning?.get(f.id) ?? null}
                   here={current?.folder.id === f.id}
                   hasChildren={arrange(f.children).length > 0}
                   onOpen={() => onOpen(color, f.moves)}
@@ -252,9 +228,12 @@ function FolderRow({
   parentCount,
   here,
   hasChildren,
+  learning,
   onOpen,
 }: {
   folder: TrainerFolder;
+  /** Your moves here: learnt, learning, new, still being analysed. */
+  learning: Learning | null;
   /** Lines: where your games end up in this folder's tree (at least one per game; grows as the farm works). */
   count: number | null;
   games: number | null;
@@ -267,6 +246,8 @@ function FolderRow({
 }) {
   const { move, label } = splitName(folder.name);
   const share = count !== null && parentCount ? count / parentCount : null;
+  const cards = learning ? learnable(learning) : 0;
+  const learnSize = learning ? cards + learning.pending : 0;
   return (
     <Button
       variant="ghost"
@@ -279,6 +260,9 @@ function FolderRow({
           ? `${count.toLocaleString()} lines (where your games end up in the tree; each game is at least one)`
           : "",
         games !== null ? `${games.toLocaleString()} of your games` : "",
+        learning && cards > 0
+          ? `${learning.learnt} of ${cards} of your moves learnt, ${learning.due} due`
+          : "",
         transposed > 0
           ? `${transposed.toLocaleString()} of them by transposition (another move order)`
           : "",
@@ -299,18 +283,63 @@ function FolderRow({
           <span className={cn("truncate text-sm", here ? "text-fg-strong" : "text-fg-primary")}>
             {label}
           </span>
+          {learning && analysedUpToDate(learning) && (
+            <span
+              className="shrink-0 font-bold text-3xs text-emerald-300"
+              title="Every move of yours on your game lines is analysed"
+            >
+              ✓
+            </span>
+          )}
+          {learning && learning.pendingLines > 0 && (
+            <span
+              className="shrink-0 text-3xs text-fg-muted"
+              title={`${learning.pendingLines} of your moves here are still being analysed`}
+            >
+              ⟳
+            </span>
+          )}
+          {learning && learning.due > 0 && (
+            <span
+              className="shrink-0 rounded-full bg-amber-300 px-1.5 font-bold text-3xs text-surface-950 leading-4"
+              title={`${learning.due} reviews due today`}
+            >
+              {learning.due}
+            </span>
+          )}
         </span>
         <span className="flex items-center gap-2">
           <span className="w-11 shrink-0 font-mono text-3xs text-fg-muted">
             {move === label ? "" : move}
           </span>
-          {share !== null && (
-            <span className="h-0.5 flex-1 overflow-hidden rounded-full bg-fill">
+          {learning && learnSize > 0 ? (
+            // Your moves here: learnt, learning, new, then the part still being analysed.
+            <span
+              className="flex h-1 flex-1 overflow-hidden rounded-full bg-fill"
+              title={`${learning.learnt} of ${cards} of your moves learnt`}
+            >
               <span
-                className="block h-full rounded-full bg-accent-400/60"
-                style={{ width: `${Math.max(3, share * 100)}%` }}
+                className="bg-accent-400"
+                style={{ width: `${(learning.learnt / learnSize) * 100}%` }}
+              />
+              <span
+                className="bg-accent-400/45"
+                style={{ width: `${(learning.learning / learnSize) * 100}%` }}
+              />
+              <span
+                className="bg-fill-strong"
+                style={{ width: `${(learning.fresh / learnSize) * 100}%` }}
               />
             </span>
+          ) : (
+            share !== null && (
+              <span className="h-0.5 flex-1 overflow-hidden rounded-full bg-fill">
+                <span
+                  className="block h-full rounded-full bg-accent-400/60"
+                  style={{ width: `${Math.max(3, share * 100)}%` }}
+                />
+              </span>
+            )
           )}
         </span>
       </span>
@@ -322,67 +351,6 @@ function FolderRow({
       </span>
     </Button>
   );
-}
-
-/**
- * Each folder's games: the ones it owns itself (the most specific folder a
- * game reaches, by any move order) plus its subfolders'. `total` is every
- * game of yours in this colour.
- */
-function useFolderCounts(
-  all: readonly Placed[],
-  load: FolderRailProps["folderCounts"],
-): {
-  counts: Map<string, number> | null;
-  transposed: Map<string, number> | null;
-  total: number | null;
-} {
-  const [state, setState] = useState<{
-    counts: Map<string, number>;
-    transposed: Map<string, number>;
-    total: number;
-  } | null>(null);
-  useEffect(() => {
-    setState(null);
-    if (!load) return;
-    let live = true;
-    // The start position first: games reaching no folder stay there.
-    const request = [
-      { fen: START.fen, moves: [] as string[] },
-      ...all.map((p) => ({ fen: p.fen, moves: [...p.folder.moves] })),
-    ];
-    load(request)
-      .then(({ owned, transposed }) => {
-        if (!live) return;
-        const counts = new Map<string, number>();
-        const trans = new Map<string, number>();
-        const sum = (f: TrainerFolder): [number, number] => {
-          const i = all.findIndex((p) => p.folder === f) + 1;
-          let n = owned[i] ?? 0;
-          let t = transposed[i] ?? 0;
-          for (const c of f.children) {
-            const [cn, ct] = sum(c);
-            n += cn;
-            t += ct;
-          }
-          counts.set(f.id, n);
-          trans.set(f.id, t);
-          return [n, t];
-        };
-        let total = owned[0] ?? 0;
-        for (const top of all.filter((p) => p.parents.length === 0)) total += sum(top.folder)[0];
-        setState({ counts, transposed: trans, total });
-      })
-      .catch(() => {});
-    return () => {
-      live = false;
-    };
-  }, [all, load]);
-  return {
-    counts: state?.counts ?? null,
-    transposed: state?.transposed ?? null,
-    total: state?.total ?? null,
-  };
 }
 
 /**
@@ -402,25 +370,6 @@ function useFolderCounts(
  * folder that reaches it (the games' sole-owner rule) and subfolders add up;
  * a folder the tree hasn't reached yet shows its games, one line each.
  */
-/**
- * Which folder each tree position belongs to: the deepest folder that reaches
- * it through the tree, by any move order (the games' sole-owner rule).
- */
-function usePositionOwners(
-  all: readonly Placed[],
-  tree: RepertoireTree | null,
-): ReadonlyMap<string, string> {
-  return useMemo(() => {
-    const owner = new Map<string, string>();
-    if (!tree) return owner;
-    // Deepest folders first: they claim their positions before their parents can.
-    for (const p of deepestFirst(all))
-      for (const key of reachableFrom(tree, [p.key]))
-        if (!owner.has(key)) owner.set(key, p.folder.id);
-    return owner;
-  }, [all, tree]);
-}
-
 function useLineCounts(
   all: readonly Placed[],
   tree: RepertoireTree | null,
@@ -453,9 +402,7 @@ function useLineCounts(
     const chain = (id: string | undefined): string[] =>
       id ? [id, ...chain(parentOf.get(id))] : [];
     for (const [key, id] of owner) {
-      const node = tree.nodes[key];
-      for (const m of node?.moves ?? []) {
-        const next = node ? keyAfter(node.fen, m.uci) : null;
+      for (const next of nextKeys(tree, key)) {
         const to = next ? owner.get(next) : undefined;
         if (!to || to === id) continue;
         const toChain = chain(to);

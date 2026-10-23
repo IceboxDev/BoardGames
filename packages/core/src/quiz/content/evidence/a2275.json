@@ -1,0 +1,273 @@
+{
+ "article": "a2275",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/I'm_a_Celebrity...Get_Me_Out_of_Here!_(Australian_TV_series)",
+   "title": "I'm a Celebrity...Get Me Out of Here! (Australian TV series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:58.297Z",
+   "snapshot": "caa93c9cefd8406a126794d8469f7af4dd198f97b69a1db6142d39da77d11128"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Olivia_Jones",
+   "title": "Olivia Jones",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:55.535Z",
+   "snapshot": "093e205d9090445378a76897f54c5209b96564f1f5f5f99ce3c77ce864b3aee4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Robert_Geiss",
+   "title": "Robert Geiss",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:56.479Z",
+   "snapshot": "7bdbea9e844e3f603b2dabf236cd56af3284a566274bd9ba2ee3da80bda940f2"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ich_bin_ein_Star_%E2%80%93_Holt_mich_hier_raus!",
+   "title": "Ich bin ein Star – Holt mich hier raus! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:57.840Z",
+   "snapshot": "1a8a07827742b6e076a1ab18971949654e31556e89ca59a2ea9862d19528bb68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "South Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Olivia Jones",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-093"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monaco",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-085"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Costa Cordalis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11712",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sonja Zietlow",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "RTL II",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:47.111Z",
+   "target": "f11708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The series is set in Kruger National Park, South Africa, and was originally hosted by Julia Morris and Chris Brown, until 2023, when Robert Irwin took over Brown’s hosting duties.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Africa” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:47.111Z",
+   "target": "f11709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Olivia Jones ist eine Travestie-Kunstfigur von Oliver Knöbel (* 21.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Olivia Jones” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:47.111Z",
+   "target": "f11710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aus steuerlichen Gründen verlegte er seinen Hauptwohnsitz nach Monaco.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monaco” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:47.111Z",
+   "target": "f11711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Costa Cordalis wurde vom Publikum im Finale zum ersten Dschungelkönig gewählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Costa Cordalis” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:47.111Z",
+   "target": "f11712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bis zu Staffel 6 (2012) moderierten Sonja Zietlow und Dirk Bach.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sonja Zietlow” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:47.111Z",
+   "target": "f11714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Seit Oktober 2015 ist er mit seiner Firma Geiss TV GmbH Produzent der Sendung, für die er (Stand: 2017) von RTL II etwa 2,5 Millionen Euro pro Staffel verlangt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.111Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “RTL II” is on the snapshot of s3"
+  }
+ ]
+}

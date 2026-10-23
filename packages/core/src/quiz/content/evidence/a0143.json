@@ -1,0 +1,415 @@
+{
+ "article": "a0143",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heck_cattle",
+   "title": "Heck cattle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:14.360Z",
+   "snapshot": "d139530c140e7d2bbc4e201a21de73dd95a4c8e5ac8893caa57873c37633c85f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tarpan",
+   "title": "Tarpan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:15.442Z",
+   "snapshot": "3a6da74b18131cac769da51fed791c1c38dfe1981b74aa03229b009b9d35a15a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bonn%E2%80%93Oberkassel_dog",
+   "title": "Bonn–Oberkassel dog – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:16.326Z",
+   "snapshot": "243eef0cee18dc7a4317d029f583f49c0c25b70ebbf49f993bcba2760eadf7a1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pig",
+   "title": "Pig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:17.444Z",
+   "snapshot": "76cd2a702d97452179e211b37cdf4e7fc833a79647e97e681becb9138f043e35"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wild_yak",
+   "title": "Wild yak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:18.344Z",
+   "snapshot": "d071b0ec67d1f1de3be6938364488960b8df6e399a719aa18f78510bbb06a65c"
+  },
+  "s6": {
+   "url": "https://theplosblog.plos.org/2016/05/dont-call-me-tarpan/",
+   "title": "Don't call me tarpan",
+   "publisher": "PLOS Blogs",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:11.829Z",
+   "snapshot": "f1f31aefc86bfc3b2e18fe0e39a3a637ee93188a602e5a90cda17a8c95a740fd"
+  },
+  "s7": {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8550961/",
+   "title": "The origins and spread of domestic horses from the Western Eurasian steppes (Librado et al., Nature 2021)",
+   "publisher": "Nature / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:11.279Z",
+   "snapshot": "718960fee610c28dee134a78543a0f19ef65a78b18277570d13c43314ec33d3b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aurochs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tarpan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00713",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wolf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wild boar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wild yak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:59.593Z",
+   "target": "f00711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was bred in the 1920s by Heinz and Lutz Heck in an attempt to breed back the extinct aurochs (Bos primigenius).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aurochs” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:59.593Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The tarpan (Equus ferus ferus) was a free-ranging horse population of the western Eurasian steppe which was first documented in the 18th century and went extinct in the early 20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tarpan” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:59.593Z",
+   "target": "f00713",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was around 7.5 months old at death, 40–50 cm (16–20 in) tall at the shoulder, and weighed 13–18 kg (29–40 lb), suggesting a slender build similar to West Asian wolves (such as the Indian wolf) or some modern sighthounds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolf” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:59.593Z",
+   "target": "f00714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Some authorities consider it a subspecies of Sus scrofa (the wild boar or Eurasian boar); other authorities consider it a distinct species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wild boar” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:59.593Z",
+   "target": "f00715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The wild yak (Bos mutus) is a large, wild bovine native to the Himalayas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wild yak” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:14:00Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "pointing instead to an extinct species of European wild horses (Equus ferus) of which the horses known as tarpans may have been the last surviving population.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:14:04Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The last captive tarpan died in 1909 in a zoo in the Russian empire.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:08Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The tarpan and modern Przewalski’s horses do not descend from the same ancestral population as modern domestic horses.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the article's caveat: the old view that the tarpan was the ancestor of the domestic horse is refuted by ancient DNA; the wording only says it was 'long regarded' as such"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:18.290Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "pointing instead to an extinct species of European wild horses (Equus ferus) of which the horses known as tarpans may have been the last surviving population.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:18.290Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The last captive tarpan died in 1909 in a zoo in the Russian empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:18.290Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The tarpan and modern Przewalski’s horses do not descend from the same ancestral population as modern domestic horses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:18.290Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Don’t Call Me Tarpan - The Official PLOS Blog",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tarpan” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:18.290Z",
+   "target": "f00712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "c, LOCATOR20 predictions of the geographic region where the ancestors of DOM2, tarpan and modern Przewalski’s horses lived.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tarpan” is on the snapshot of s7"
+  }
+ ]
+}

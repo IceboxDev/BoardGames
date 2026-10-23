@@ -1,0 +1,249 @@
+{
+ "article": "a0204",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Toy_Story",
+   "title": "Toy Story – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:14.809Z",
+   "snapshot": "7631928a9ab2efa8d9ddf7c8462609e20c86e2792f3056a0fab825b2a69a1e90"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/DreamWorks_Animation",
+   "title": "DreamWorks Animation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:56.564Z",
+   "snapshot": "4620be375fff5b0122e3c2599f369ed95ad2d50ec24a4bba1f791bf0b16c6628"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Sky_Studios",
+   "title": "Blue Sky Studios – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:15.655Z",
+   "snapshot": "177417ffb4d46b322b7bcaf123379147663c086ec298b5b6435277044d228e0b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Illumination_(company)",
+   "title": "Illumination (company) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:16.601Z",
+   "snapshot": "294fe5ad099b6f0eb9011f6ced3cbbc8bd2730749223ab6e2fdbb1040c89cda0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+   "title": "Frozen (2013 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:17.806Z",
+   "snapshot": "cff68ef50b447f4bc11f8f2eff0146deab093abf91e1ab425d238b08ab7f64b8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ice_Age_(franchise)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:18.672Z",
+   "snapshot": "13bfb970c8dc55086516756d5d0160e3180a755f22f682db5ece3567ef83effe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pixar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "DreamWorks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Blue Sky Studios",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Illumination",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Walt Disney Animation Studios",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:10.643Z",
+   "target": "f01016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first entirely computer-animated feature film, as well as the first feature film produced by Pixar Animation Studios for Walt Disney Pictures, it stars the voices of Tom Hanks, Tim Allen, Annie Potts, John Ratzenberger, Don Rickles, Wallace Shawn, and Jim Varney.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pixar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:10.643Z",
+   "target": "f01017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(DWA, also known as DreamWorks Animation Studios or simply DreamWorks) is an American animation studio, owned by Comcast's NBCUniversal as part of Universal Filmed Entertainment Group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DreamWorks” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:10.643Z",
+   "target": "f01018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Blue Sky Studios became a subsidiary of 20th Century Animation in 1997 through its VIFX division's majority-stake acquisition of the studio and became the principal animation studio of 20th Century Fox from 2002 until its acquisition by the Walt Disney Company, as part of their acquisition of 21st",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue Sky Studios” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:10.643Z",
+   "target": "f01019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Illumination (formerly known as Illumination Entertainment) is an American animation studio founded by producer Chris Meledandri in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Illumination” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:10.643Z",
+   "target": "f01020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frozen is a 2013 American animated musical fantasy film produced by Walt Disney Animation Studios, loosely inspired by Hans Christian Andersen's 1844 fairy tale \"The Snow Queen\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walt Disney Animation Studios” is on the snapshot of s5"
+  }
+ ]
+}

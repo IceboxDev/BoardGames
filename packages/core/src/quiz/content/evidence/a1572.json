@@ -1,0 +1,435 @@
+{
+ "article": "a1572",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tor_(network)",
+   "title": "Tor (network) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:22.647Z",
+   "snapshot": "ec28a76f42a7ad2d979fab6523475f36632b3bdbbf2422fdfaba0966d39a4e78"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pretty_Good_Privacy",
+   "title": "Pretty Good Privacy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:13.994Z",
+   "snapshot": "c64c3fb9b0602af442ad15f7ea608679dcbe8a0d9d78e871d3461900f88f455b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/HTTPS",
+   "title": "HTTPS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:15.126Z",
+   "snapshot": "753c79e3ea1e6aab16056cc9088c73bef8da70001ac2b8178705d41bae899a2a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+   "title": "Transport Layer Security – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:16.247Z",
+   "snapshot": "2385539299c690941717139bfae9a02f230ccdc7471040d7c1e21808c0ec5e64"
+  },
+  "s5": {
+   "url": "https://www.usenix.org/legacy/publications/library/proceedings/sec04/tech/dingledine.html",
+   "title": "Tor: The Second-Generation Onion Router – USENIX Security '04 abstract",
+   "publisher": "USENIX Association",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:48.313Z",
+   "snapshot": "cdf95823606edcbe1bfa5cd84657c2d016d97fb664f299f5a050d9f31185e2f1"
+  },
+  "s6": {
+   "url": "https://2019.www.torproject.org/docs/faq.html.en",
+   "title": "Tor Project: FAQ (2019 site)",
+   "publisher": "The Tor Project",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:48.182Z",
+   "snapshot": "8336e236807f057f233b93aa53acf8b7dfeab80784c8fe326b18291000819cf7"
+  },
+  "s7": {
+   "url": "https://support.torproject.org/about/why-is-it-called-tor/",
+   "title": "Why is it called Tor? – Tor Project Support",
+   "publisher": "The Tor Project",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:48.881Z",
+   "snapshot": "6549ad704a25fff3e2cf1df9b78748b7fcb69ac764e7c5b68a1c9fdd0fb47a33"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Onion Router",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pretty Good Privacy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hypertext Transfer Protocol Secure",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Transport Layer Security",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:45.527Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Onion Router",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Onion Router”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:45.527Z",
+   "target": "f07858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pretty Good Privacy (PGP) is an encryption program that provides cryptographic privacy and authentication for data communication.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pretty Good Privacy” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:45.527Z",
+   "target": "f07859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hypertext Transfer Protocol Secure” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:45.527Z",
+   "target": "f07860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Transport Layer Security (TLS) is a cryptographic protocol designed to provide secured communications over a computer network, such as the Internet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.527Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Transport Layer Security” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T12:09:31Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tor: The Second-Generation Onion Router Roger Dingledine and Nick Mathewson, The Free Haven Project; Paul Syverson, Naval Research Lab",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "the designers' own 2004 paper title uses 'Onion Router', which is why 'The Onion Router' is the common expansion; kept as an accepted alternative in the notes"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:09:33Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Why is it called Tor? Because Tor is the onion routing network.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer corrected to 'The Onion Routing'"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:09:34Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Note: even though it originally came from an acronym, Tor is not spelled \"TOR\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:09:35Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "then called The Onion Routing project (which was later given the acronym \"Tor\"), was launched on 20 September 2002.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tor: The Second-Generation Onion Router Roger Dingledine and Nick Mathewson, The Free Haven Project; Paul Syverson, Naval Research Lab",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Why is it called Tor? Because Tor is the onion routing network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Note: even though it originally came from an acronym, Tor is not spelled \"TOR\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "then called The Onion Routing project (which was later given the acronym \"Tor\"), was launched on 20 September 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The alpha version of Tor, developed by Syverson and computer scientists Roger Dingledine and Nick Mathewson and then called The Onion Routing project (which was later given the acronym \"Tor\"), was launched on 20 September 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Onion Routing” is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Because Tor is the onion routing network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Onion Routing” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:32.603Z",
+   "target": "f07856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tor is the onion routing network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Onion Routing” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2167",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/CO2-Bilanz",
+   "title": "CO2-Bilanz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:44.925Z",
+   "snapshot": "047860885f43292ae02cc036919a601a480dd15d8ef3104b76d736ca7a111d03"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kyoto_Protocol",
+   "title": "Kyoto Protocol",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:48.123Z",
+   "snapshot": "9799f3bbca122c25b1cb51ad653d3c61691d58edb19165c4acf0f3eaf4738090"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Paris_Agreement",
+   "title": "Paris Agreement",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:49.050Z",
+   "snapshot": "33d277cd0b7881142a9a8fa6aaaea12de58aa087672264667d88d47d60168836"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Keeling_Curve",
+   "title": "Keeling Curve",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:49.970Z",
+   "snapshot": "2a0db818d6e605af0c667dc5bc1c0972a188ca4663064ba0ed98182dd01e631f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change",
+   "title": "Intergovernmental Panel on Climate Change",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:51.013Z",
+   "snapshot": "53cd1db5273410e455abd2f1a3f6cd68245987ff7b35f323b77b335553a7310a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "CO₂-Fußabdruck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-249"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kyoto Protocol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paris Agreement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Keeling Curve",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "IPCC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:32.773Z",
+   "target": "f10971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die CO2-Bilanz (Kohlenstoffdioxidbilanz, Kohlendioxidbilanz, CO2-Fußabdruck, auch Klimabilanz oder Treibhausgasbilanz, engl.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CO₂-Fußabdruck” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:32.773Z",
+   "target": "f10972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Kyoto Protocol (Japanese: 京都議定書, Hepburn: Kyōto Giteisho) was an international treaty which extended the 1992 United Nations Framework Convention on Climate Change (UNFCCC) that commits state parties to reduce greenhouse gas emissions, based on the scientific consensus that global warming is",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kyoto Protocol” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:32.773Z",
+   "target": "f10973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Paris Agreement (also called the Paris Accords or Paris Climate Accords) is an international treaty on climate change that was signed in 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris Agreement” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:32.773Z",
+   "target": "f10974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Keeling Curve is a graph of the annual variation and overall accumulation of carbon dioxide in the Earth's atmosphere based on continuous measurements taken at the Mauna Loa Observatory on the island of Hawaii from 1958 to the present day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Keeling Curve” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:32.773Z",
+   "target": "f10975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Intergovernmental Panel on Climate Change (IPCC) is an intergovernmental body of the United Nations (UN).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IPCC” is on the snapshot of s5"
+  }
+ ]
+}

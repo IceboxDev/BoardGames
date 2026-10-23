@@ -1,0 +1,612 @@
+{
+ "article": "a0778",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sumer",
+   "title": "Sumer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:27.334Z",
+   "snapshot": "8e35eab9ecb56cf01ebbf7e83999f5b75acf2512eee38abd6eaf45404a44b663"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Khartoum",
+   "title": "Khartoum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:37.415Z",
+   "snapshot": "8cc1b8a0e35e70d7fe809445ca71b05893e3746443eafa8c2d8237f4f66a3b83"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kaiser-Wilhelm-Denkmal_am_Deutschen_Eck",
+   "title": "Kaiser-Wilhelm-Denkmal am Deutschen Eck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:43.791Z",
+   "snapshot": "3dd576949318237e9d58985ed11ab12684cc191c6c4b9af196eb679c81b6ade7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Siege_of_Belgrade_(1456)",
+   "title": "Siege of Belgrade (1456) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:38.405Z",
+   "snapshot": "d9fd795d8471009768d51525db224c54e1e60008b73dce6a3252f5f30e55cb30"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sundarbans",
+   "title": "Sundarbans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:00.359Z",
+   "snapshot": "d2ef010ab541d8fef450d8915f68fabe21125f9ba093998f6bf1e96680a7b3ce"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ganges_Delta",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:39.399Z",
+   "snapshot": "318339e94b87bef457c7c2c638e5235428d84b6149f8a733576bec1d6ead6573"
+  },
+  "s7": {
+   "url": "https://www.worldhistory.org/Mesopotamia/",
+   "title": "Mesopotamia: The Beginning of Beginnings",
+   "publisher": "World History Encyclopedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:35.282Z",
+   "snapshot": "54dca1071cb428a912db5e0a9b957da9c358df6aaf2c8422d21bed0c6b455794"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mesopotamia",
+   "title": "Mesopotamia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:22:04Z"
+  },
+  "s9": {
+   "url": "https://www.worldatlas.com/rivers/nile-river.html",
+   "title": "Nile River",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:35.528Z",
+   "snapshot": "c120cfd0b6a164623f2d558426692712c3c90e440d0696775e177a29cd05099f"
+  },
+  "s10": {
+   "url": "https://www.visit-koblenz.de/en/sights/deutsches-eck",
+   "title": "The Deutsches Eck | Where Father Rhine Meets Mother Moselle",
+   "publisher": "Koblenz-Touristik",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:35.491Z",
+   "snapshot": "8936cc8657b3db56fe1f35501551e1fdfa932c278b158dcb024b4a6fa3046b10"
+  },
+  "s11": {
+   "url": "https://whc.unesco.org/en/list/798/",
+   "title": "The Sundarbans",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:22:11Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Euphrates and Tigris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "White Nile and Blue Nile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhein und Mosel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Danube and Sava",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ganges and Brahmaputra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ganges and Brahmaputra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:43.899Z",
+   "target": "f03886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Euphrates and Tigris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Euphrates and Tigris”, “Euphrat und Tigris”, “Евфрат и Тигр”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:43.899Z",
+   "target": "f03887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "White Nile and Blue Nile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“White Nile and Blue Nile”, “Weißer Nil und Blauer Nil”, “Белый Нил и Голубой Нил”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:43.899Z",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhein und Mosel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Rhein und Mosel”, “Rhine and Moselle”, “Рейн и Мозель”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:43.899Z",
+   "target": "f03889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "They considered Belgrade, a strategically positioned fortress city at the confluence of the Danube and Sava river, as a crucial gateway for their advance northward.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danube and Sava” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:43.899Z",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ganges and Brahmaputra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ganges and Brahmaputra”, “Ganges und Brahmaputra”, “Ганг и Брахмапутра”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:43.899Z",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ganges and Brahmaputra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ganges and Brahmaputra”, “Ganges und Brahmaputra”, “Ганг и Брахмапутра”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:22:03Z",
+   "target": "f03886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The \"two rivers\" of the name refer to the Tigris and the Euphrates",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:22:04Z",
+   "target": "f03886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a historical region of West Asia situated within the Tigris–Euphrates river system",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:22:06Z",
+   "target": "f03887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Khartoum is located at the confluence of the White Nile",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:22:07Z",
+   "target": "f03887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The river then continues to Khartoum, where it joins the White Nile to form the Nile River.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Said of the Blue Nile."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:22:08Z",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The settlement of the Teutonic Order at the confluence of the Rhine and Moselle rivers in 1216 gave this historically significant place its name \"Deutsches Eck\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:22:09Z",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "auf einer neugeschaffenen Landzunge am Zusammenfluss von Mosel und Rhein im Monumentalstil errichtet",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:22:11Z",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "As part of the world’s largest delta, formed from sediments deposited by three great rivers; the Ganges, Brahmaputra and Meghna",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "UNESCO names the Meghna as a third river; the delta is usually called the Ganges–Brahmaputra Delta."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:22:12Z",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is the world's largest river delta",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The \"two rivers\" of the name refer to the Tigris and the Euphrates",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Khartoum is located at the confluence of the White Nile",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The river then continues to Khartoum, where it joins the White Nile to form the Nile River.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The settlement of the Teutonic Order at the confluence of the Rhine and Moselle rivers in 1216 gave this historically significant place its name \"Deutsches Eck\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "auf einer neugeschaffenen Landzunge am Zusammenfluss von Mosel und Rhein im Monumentalstil errichtet",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is the world's largest river delta",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s6"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:12.188Z",
+   "target": "f03888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The settlement of the Teutonic Order at the confluence of the Rhine and Moselle rivers in 1216 gave this historically significant place its name \"Deutsches Eck\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:12.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rhine and Moselle” is on the snapshot of s10"
+  }
+ ]
+}

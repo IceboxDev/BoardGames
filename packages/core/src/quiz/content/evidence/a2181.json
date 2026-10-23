@@ -1,0 +1,449 @@
+{
+ "article": "a2181",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sashimi",
+   "title": "Sashimi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:34.316Z",
+   "snapshot": "30b12d5d83457fd44c4b40b2d0aa5a3597d1661e57c29aba695dc921ce8e7ffb"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Yakitori",
+   "title": "Yakitori",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:35.525Z",
+   "snapshot": "6c198bd25992a7d9aaca44d46378d086bb6125817e42742f972459cc8e3fa47f"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gl%C3%BCckskeks",
+   "title": "Glückskeks",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:36.296Z",
+   "snapshot": "0946412ae52838652ab05cc2e83ec47568f8c7a5e9fa19707752385dd3eea098"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Instant_noodle",
+   "title": "Instant noodle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:34.292Z",
+   "snapshot": "46e0a03dbca888618bb3e95603d38bca763f995ed98f810fdf280ba81cf9f9c8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Okonomiyaki",
+   "title": "Okonomiyaki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:35.182Z",
+   "snapshot": "f2c25a6919bd42efa6e694b23025cb141b05259c9ed3734e2ea4d8322b40cecf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tempura",
+   "title": "Tempura",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:36.259Z",
+   "snapshot": "c43f85915ac74dff01f221e49344fef0f13dfa3f14de48a15ecc75f14f2ebc61"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Poke_(dish)",
+   "title": "Poke (dish)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:37.195Z",
+   "snapshot": "7eada841487a02a9da0aa39a801cc19081716e96dc2174f9ae0baab437f3605e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Yakitori",
+   "title": "Yakitori – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:13.775Z",
+   "snapshot": "c9c06ac60b5331a4fc57554c15854113512eedbc31ee7c343e3e48bb3a05a500"
+  },
+  "s9": {
+   "url": "https://www.japan-guide.com/e/e2035.html",
+   "title": "Japanese dishes",
+   "publisher": "japan-guide.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:13.824Z",
+   "snapshot": "56c26b756b3f2a95375e0d1cd130523aa384649fba98d6dea79a2d624c47c416"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sashimi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-236"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hühnerfleisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-209"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Japan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-022"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ramen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "okonomiyaki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Portugal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-005"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "To slice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 57; transcript pp-093"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f11057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Handel wird Fisch von entsprechender Güte, wie er für die Zubereitung erforderlich ist, als Sashimi oder Sashimi-Qualität bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sashimi” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hühnerfleisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Hühnerfleisch”, “Chicken”, “курица”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f11059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Allerdings stammen die Glückskekse ursprünglich nicht aus China, sondern aus Japan.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f11061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Instant noodles, or instant ramen, is a type of food consisting of noodles sold in a precooked and dried block with flavoring powder and/or seasoning oil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ramen” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f11062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Okonomiyaki (Japanese: お好み焼き; pronounced [okonomʲijakʲi] ) is a Japanese teppanyaki savory pancake dish consisting of wheat flour batter and other ingredients (mixed, or as toppings) cooked on a teppan (flat griddle).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “okonomiyaki” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f25275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "There is still today a dish in Portugal very similar to tempura called peixinhos da horta, \"garden fishes\", which consists of green beans dipped in a batter and fried.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Portugal” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:34.213Z",
+   "target": "f25276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Poke or poké (, Hawaiian: [poke]) is a dish of diced raw fish (poke being Hawaiian for 'to slice' or 'cut crosswise into pieces') tossed in sauce and served either as an appetizer or a main course.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “To slice” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:47:20Z",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Japanese type of grilled chicken",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:47:23Z",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Yakitori are skewered grilled chicken pieces seasoned with salt or sauce.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:21.194Z",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Yakitori are skewered grilled chicken pieces seasoned with salt or sauce.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:21.194Z",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "'grilled bird') is chicken cooked on a skewer over a charcoal fire and seasoned with tare sauce or salt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Chicken” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:21.194Z",
+   "target": "f11058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Some of the most popular varieties are gyudon (stewed beef), katsudon (tonkatsu), tendon (tempura), oyakodon (chicken and egg), tekkadon (maguro) and kaisendon (raw seafood).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Chicken” is on the snapshot of s9"
+  }
+ ]
+}

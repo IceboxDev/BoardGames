@@ -1,0 +1,373 @@
+{
+ "article": "a1867",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dutch_guilder",
+   "title": "Dutch guilder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:03.580Z",
+   "snapshot": "e7aa8023ca889b171649a05660ebed1f995270c4b43cf1f3a8722e03c54ab0eb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Austrian_schilling",
+   "title": "Austrian schilling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:04.471Z",
+   "snapshot": "47a0110bb527e215b66f9e1decf88890d51cc8979a6f18c4aa95cc1b2a318ddb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Portuguese_escudo",
+   "title": "Portuguese escudo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:05.513Z",
+   "snapshot": "71be77010d8f995ee110145a160cd2123d7d2e4278bce50bd2773569d57abbbe"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Modern_drachma",
+   "title": "Modern drachma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:06.488Z",
+   "snapshot": "797b2810619f7f78491e50ab6e0d600ffaf08cd76677f4f25ab6d2506de589a5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_peseta",
+   "title": "Spanish peseta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:07.462Z",
+   "snapshot": "061829d89ab988001bf95f2ddd35fccf5655fc9ae57afc13ec72ebf24a0616c2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Shilling",
+   "title": "Shilling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:08.600Z",
+   "snapshot": "457cd51c09486a7fab18a995b416550d3d5c23a9e6a155662cb47e25328e7bba"
+  },
+  "s7": {
+   "url": "https://www.centralbank.go.ke/currency/",
+   "title": "Currency – Central Bank of Kenya",
+   "publisher": "Central Bank of Kenya",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:00.639Z",
+   "snapshot": "387e477ddbf87f9438db469472be3fd7b0ef5ff85cf93602f60f01c2721f1961"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "guilder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "schilling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "escudo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "drachma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "peseta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-157"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:36.711Z",
+   "target": "f09331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The guilder (Dutch: gulden, pronounced [ˈɣʏldə(n)] ) or florin was the currency of the Netherlands from 1434 until 2002, when it was replaced by the euro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “guilder” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:36.711Z",
+   "target": "f09332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The schilling (German pronunciation: [ˈʃɪliŋ] ) was a currency of Austria from 1925 to 1938 and from 1945 to 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “schilling” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:36.711Z",
+   "target": "f09333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Portuguese escudo (Portuguese: escudo português, pronounced [(i)ʃˈkudu puɾtuˈɣeʃ]) was the currency of Portugal replacing the real on 22 May 1911 and was in use until the introduction of the euro on 1 January 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “escudo” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:36.711Z",
+   "target": "f09334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The drachma (Greek: δραχμή [ðraxˈmi]) was the official currency of modern Greece from 1832 until the launch of the euro in 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “drachma” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:36.711Z",
+   "target": "f09335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The peseta (, Spanish: [peˈseta]) was the currency of Spain between 1868 and 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “peseta” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:36.711Z",
+   "target": "f13578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Africa”, “Afrika”, “Африка”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:24:10Z",
+   "target": "f13578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "five East African countries have a shilling as their unit of account. These are the Kenyan shilling, the Tanzanian shilling, the Ugandan shilling, the Somali shilling and the (de facto[1]) Somaliland shilling.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:24:11Z",
+   "target": "f13578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This then became the advent of the shilling in Kenya.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:25.821Z",
+   "target": "f13578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This then became the advent of the shilling in Kenya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:25.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:25.821Z",
+   "target": "f13578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The British chartered company, the Imperial British East Africa Company (IBEA), got the concession to trade in the area referred to as Kenya today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:25.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Africa” is on the snapshot of s7"
+  }
+ ]
+}

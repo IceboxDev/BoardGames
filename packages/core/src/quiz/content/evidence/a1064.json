@@ -1,0 +1,242 @@
+{
+ "article": "a1064",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Requiem_(Mozart)",
+   "title": "Requiem (Mozart) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:25.168Z",
+   "snapshot": "a1c27e6d037667dbd41c9d6428ce6644534ab73ac443b34e4b5f75bf609002a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/St_Matthew_Passion",
+   "title": "St Matthew Passion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:26.245Z",
+   "snapshot": "446d9ad9aa782913b60f41b0f42cbdd7659f22de82299309dc4916f412973ba6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Magnificat_(Bach)",
+   "title": "Magnificat (Bach) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:27.418Z",
+   "snapshot": "0df8ed8908bbc78f266dbe92686bd9fd9d2f7936b1b07f69b5c4550734984ac2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Te_Deum_(Charpentier)",
+   "title": "Te Deum (Charpentier) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:28.031Z",
+   "snapshot": "d56c7083591da052d99cf14dda26014d935a27a1f4d3286e00659a21bd5c9e42"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gregorian_chant",
+   "title": "Gregorian chant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:25.288Z",
+   "snapshot": "7bca555a125504606445b178969bdf125091c19af5f71b01413cf2d886f2c215"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Requiem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Passion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Magnificat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Te Deum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gregorian chant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:27.204Z",
+   "target": "f05316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "626, is a Requiem Mass by Wolfgang Amadeus Mozart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Requiem” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:27.204Z",
+   "target": "f05317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The St Matthew Passion (German: Matthäuspassion), BWV 244, is a Passion, a sacred oratorio written by Johann Sebastian Bach in 1727 for solo voices, double choir and double orchestra, with libretto in German by Picander.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Passion” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:27.204Z",
+   "target": "f05318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johann Sebastian Bach's Magnificat, BWV 243, is a musical setting of the biblical canticle Magnificat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magnificat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:27.204Z",
+   "target": "f05319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marc-Antoine Charpentier composed six Te Deum settings, but only four of them have survived (H.145, H.146, H.147, H.148).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Te Deum” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:27.204Z",
+   "target": "f05320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gregorian chant is the central tradition of Western plainchant, a form of monophonic, unaccompanied sacred song in Latin (and occasionally Greek) of the Roman Catholic Church.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gregorian chant” is on the snapshot of s5"
+  }
+ ]
+}

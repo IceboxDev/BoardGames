@@ -1,0 +1,474 @@
+{
+ "article": "a2428",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit",
+   "title": "Buchstabenhäufigkeit",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:49.746Z",
+   "snapshot": "2f05a6eaab7209a50b2a528e114f628eff294d2490708cdf97d0b8874216b296"
+  },
+  "s2": {
+   "url": "https://de.wiktionary.org/wiki/Knie",
+   "title": "Knie (Wiktionary)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:49.093Z",
+   "snapshot": "645aaa63f43a16a41dee79ceb28d42350e93f567ed5ce50a0f7a2f2d9edbcadc"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gro%C3%9Fes_%C3%9F",
+   "title": "Großes ß – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:50.755Z",
+   "snapshot": "88fe22164e5688f9cca9eb28e5d457d86fbb559e729dd6e78796eb488b810a14"
+  },
+  "s4": {
+   "url": "https://www.sttmedia.com/characterfrequency-german",
+   "title": "Alphabet and Character Frequency: German (Deutsch)",
+   "publisher": "Stefan Trost Media",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:13.000Z",
+   "snapshot": "90376507653b48041f2f442f46543bd4f3627d3d96be6114c55fbec63d0cb6b1"
+  },
+  "s5": {
+   "url": "http://www.ids-mannheim.de/fileadmin/kl/derewo/DeReChar-v-uni-030-a-l-2018-02-28-1.0.html",
+   "title": "Zeichenhäufigkeitsliste DeReChar-v-uni-030-a-l-2018-02-28-1.0",
+   "publisher": "Leibniz-Institut für Deutsche Sprache (IDS), Mannheim",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:13.173Z",
+   "snapshot": "7b6d1527d534aef456b61c01a143b8619a0461803adeb7629dad85da9154934e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das E",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Knie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-333"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das Q",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das N",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12750",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "das ß",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:19.098Z",
+   "target": "f12746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Häufige Buchstaben wie das E oder das I müssen hinreichend trainiert werden, um eine möglichst hohe Anschlagszahl und eine gute Schreibsicherheit zu erzielen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “das E” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:19.098Z",
+   "target": "f12747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hörbeispiele: Knie (Info), Knie (Info), Plural: Knie (Info)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knie” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:19.098Z",
+   "target": "f12748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das Q",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“das Q”, “the letter Q”, “буква Q”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:19.098Z",
+   "target": "f12749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das N",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“das N”, “the letter N”, “буква N”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:19.098Z",
+   "target": "f12750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Im maschinenlesbaren Abschnitt wird dagegen das ß durch SS ersetzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “das ß” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:35Z",
+   "target": "f12746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Accordingly, the letters E, N and I are the most frequent letters in the German language.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:51:40Z",
+   "target": "f12749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Accordingly, the letters E, N and I are the most frequent letters in the German language.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:44Z",
+   "target": "f12748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "X 0.05 % Y 0.05 % Q 0.02 %",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "End of the frequency-sorted list (counted over 7.4 million characters): Q is last at 0.02 %."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:51:48Z",
+   "target": "f12746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0.131127084345 23552726179 e LATIN LETTER E",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "DeReKo corpus character list: e has the highest relative frequency of all letters (0.131 of all characters counted), n is next (0.079)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:51:52Z",
+   "target": "f12749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0.079144291562 14215704079 n LATIN LETTER N",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "DeReKo corpus character list: n (0.079) is second only to e (0.131); next are i (0.064) and r (0.063)."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:51:56Z",
+   "target": "f12748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0.000231762899 41628685 q LATIN LETTER Q",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "DeReKo corpus character list: q has the lowest relative frequency of the 26 letters and ß (0.00023, i.e. about 0.02 %; x 0.00042, y 0.00088)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:02.348Z",
+   "target": "f12746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Accordingly, the letters E, N and I are the most frequent letters in the German language.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:02.348Z",
+   "target": "f12749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Accordingly, the letters E, N and I are the most frequent letters in the German language.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:02.348Z",
+   "target": "f12748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "X 0.05 % Y 0.05 % Q 0.02 %",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:02.348Z",
+   "target": "f12746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0.131127084345 23552726179 e LATIN LETTER E",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:02.348Z",
+   "target": "f12749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0.079144291562 14215704079 n LATIN LETTER N",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:02.348Z",
+   "target": "f12748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0.000231762899 41628685 q LATIN LETTER Q",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  }
+ ]
+}

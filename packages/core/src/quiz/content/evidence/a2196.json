@@ -1,0 +1,407 @@
+{
+ "article": "a2196",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Mardi_Gras",
+   "title": "Mardi Gras",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:21.500Z",
+   "snapshot": "8e553db27e1da1fbfa6acbdb69e5f9a2c06e7166539b6f3f7e8cbf33bf70ab9a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Basler_Fasnacht",
+   "title": "Basler Fasnacht",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:22.478Z",
+   "snapshot": "b51128806b8fafc81a3d1b5916aa9e5ca96ccf1a474a20c3e33e5a0e0305ef02"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Aschermittwoch",
+   "title": "Aschermittwoch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:23.473Z",
+   "snapshot": "8f7846b4dcc5b9a7ae9923cc78f17eabc8c830682f501b31e7960657bc43976c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sambadrome_Marqu%C3%AAs_de_Sapuca%C3%AD",
+   "title": "Sambadrome Marquês de Sapucaí – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:25.224Z",
+   "snapshot": "c6695fe2507c2913daf81dcabec4c1137ed00f9f4c11ada6205291e709491e21"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rosenmontag",
+   "title": "Rosenmontag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:26.222Z",
+   "snapshot": "ddc641975958ac0628cc3b4dfb2833242817055b839462842728602d22bf20f7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Rosenmontagszug",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:24.691Z",
+   "snapshot": "6801a240b7682e13e1d82d2828e9ca745197c543f5557e092cfb68aaf3f502bd"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mardi_Gras_in_New_Orleans",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:27.338Z",
+   "snapshot": "c567eba33ad9a087518b9f03bcc610928c07335d82794029192942ef836f2bc9"
+  },
+  "s8": {
+   "url": "https://www.basel.com/en/carnival-in-basel",
+   "title": "Carnival in Basel",
+   "publisher": "Basel Tourismus",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:54:55Z"
+  },
+  "s9": {
+   "url": "https://www.swissinfo.ch/eng/culture/basel-s-fasnacht/4363566",
+   "title": "Basel's Fasnacht",
+   "publisher": "SWI swissinfo.ch",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:19.303Z",
+   "snapshot": "f614932b5ff2506f98ecd6dd61f564f1ab69ca526312b87c0626d8ba2229cdee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mardi Gras",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fasnacht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-224"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aschermittwoch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rio de Janeiro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "4 Uhr",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rose Monday",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rosenmontag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f11157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mardi Gras ([mɑrdiɡrɑː]; deutsch Fetter Dienstag; italienisch Martedì Grasso; englisch Fat Tuesday) ist die französische Bezeichnung für den Karnevalsdienstag, den letzten Tag des – vor allem in katholisch bevölkerten Gebieten – gefeierten Karnevals vor dem Aschermittwoch, dem Beginn der österlichen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mardi Gras” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f11158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Basler Fasnacht, lokal auch die drei scheenschte Dääg (die «drei schönsten Tage») genannt, ist die grösste Fasnacht der Schweiz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fasnacht” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f11159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mit dem Aschermittwoch (lateinisch Feria quarta cinerum, ‚vierter Tag (= Mittwoch) der Asche‘ oder Dies cinerum, ‚Tag der Asche‘, auch Asche(r)tag) beginnt in der Westkirche seit dem Pontifikat Gregors des Großen die vierzigtägige Fastenzeit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aschermittwoch” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f11160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sambadrome Marquês de Sapucaí is a purpose-built parade area built for the Rio Carnival in Rio de Janeiro, Brazil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio de Janeiro” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f11161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie beginnt am Montag nach Aschermittwoch um 4 Uhr morgens mit dem Morgestraich, dauert exakt 72 Stunden und endet also am Donnerstagmorgen wiederum um 4 Uhr mit dem Ändstraich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4 Uhr” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f28407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rosenmontag (German: [ˌʁoːzn̩ˈmoːntaːk] ; English: Rose-Monday) is the highlight of the German Karneval (carnival), and takes place on the Shrove Monday before Ash Wednesday, the beginning of Lent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rose Monday” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:35.361Z",
+   "target": "f28407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Karnevalsumzüge finden überwiegend zwischen Karnevalssamstag und -dienstag statt, viele der größten Züge dabei traditionell am Rosenmontag.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.361Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosenmontag” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:54:55Z",
+   "target": "f11161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Carnival in Basel starts at 4.00 am on the Monday after Ash Wednesday.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:54:56Z",
+   "target": "f11161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At four o'clock on Monday morning Basel's annual carnival - the biggest in Switzerland - kicked off with the traditional Morgestraich",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:22.481Z",
+   "target": "f11161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At four o'clock on Monday morning Basel's annual carnival - the biggest in Switzerland - kicked off with the traditional Morgestraich",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  }
+ ]
+}

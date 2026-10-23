@@ -1,0 +1,202 @@
+{
+ "article": "a0361",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Maria_Callas",
+   "title": "Maria Callas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:40.157Z",
+   "snapshot": "2a682a338b0cc9f7c79c7c89bf9e63ecf8cef38f05f4faeac3ed661f334ec91b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Farinelli",
+   "title": "Farinelli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:42.437Z",
+   "snapshot": "2c7f5017dee73e85775c45c252946061745f47ac18adc778c8edc100e921dbd2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tina_Turner",
+   "title": "Tina Turner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:42.061Z",
+   "snapshot": "81e627f89f9c8e392c8581468873680e0d4b6afb02c01e317925adb83ebfff93"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Udo_J%C3%BCrgens",
+   "title": "Udo Jürgens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:39.293Z",
+   "snapshot": "26eead9b13da3f3c01fa310fad300cab364980973ea5b26535c52eba40b79c2e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lady_Gaga",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:41.706Z",
+   "snapshot": "f7f4f44121a7fd86171bb780d27689b1858a55c4b1eb8adcfddc985dac844b85"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maria Callas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Farinelli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tina Turner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Udo Jürgens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-037"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:36.043Z",
+   "target": "f01801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maria Callas (born Maria Anna Cecilia Sophia Kalogeropoulos; December 2, 1923 – September 16, 1977) was an American and Greek soprano, and one of the most renowned and influential opera singers of the 20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maria Callas” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:36.043Z",
+   "target": "f01802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carlo Maria Michelangelo Nicola Broschi (Italian: [ˈkarlo ˈbrɔski]), who performed under the stage name Farinelli (Italian: [fariˈnɛlli]; 24 January 1705 – 16 September 1782), was an Italian castrato singer, composer, and musician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Farinelli” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:36.043Z",
+   "target": "f01804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tina Turner (born Anna Mae Bullock; November 26, 1939 – May 24, 2023) was a singer, songwriter, actress and author.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tina Turner” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:36.043Z",
+   "target": "f25210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nach dem Krieg ließen sich seine Eltern auf Gut Schloss Ottmanach in Kärnten nieder, das der Großvater von Udo Jürgens seinen fünf Söhnen geschenkt hatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Udo Jürgens” is on the snapshot of s4"
+  }
+ ]
+}

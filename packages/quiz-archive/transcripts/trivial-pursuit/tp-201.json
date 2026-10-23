@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-201",
+ "image": "IMG20261007180154.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Land erklärte, dass es versucht, bis zum Jahr 2050 all seine Ratten, Wiesel und Beutelratten auszurotten?",
+   "de": "Welches Land erklärte, dass es versucht, bis zum Jahr 2050 all seine Ratten, Wiesel und Beutelratten auszurotten?",
+   "en": "Which country declared that it is trying to eradicate all its rats, weasels and possums by the year 2050?",
+   "reworked": false,
+   "answerDe": "Neuseeland",
+   "answerEn": "New Zealand",
+   "timeline": {
+    "kind": "event",
+    "start": "2016",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "New Zealand's government launches Predator Free 2050 to eradicate introduced predators",
+    "labelDe": "Neuseelands Regierung startet „Predator Free 2050“ zur Ausrottung eingeschleppter Raubtiere"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Predator_Free_2050",
+    "title": "Predator Free 2050",
+    "lang": "en"
+   },
+   "notes": "The plan targets introduced predators: possums (Fuchskusu, the card's 'Beutelratten'), rats, stoats (mustelids, the card's 'Wiesel') and feral cats. Announced by PM John Key in 2016.",
+   "domain": "nature",
+   "sub": "ecology"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Fernsehserie, in der Ariana Grande zum ersten Mal auf dem Bildschirm erschien?",
+   "de": "Wie heißt die Fernsehserie, in der Ariana Grande zum ersten Mal auf dem Bildschirm erschien?",
+   "en": "What is the name of the TV series in which Ariana Grande first appeared on screen?",
+   "reworked": false,
+   "answerDe": "Victorious",
+   "answerEn": "Victorious",
+   "timeline": {
+    "kind": "event",
+    "start": "2010-03-27",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Nickelodeon sitcom Victorious premieres, with Ariana Grande as Cat Valentine",
+    "labelDe": "Die Nickelodeon-Sitcom „Victorious“ startet, mit Ariana Grande als Cat Valentine"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ariana_Grande",
+    "title": "Ariana Grande",
+    "lang": "en"
+   },
+   "notes": "Before that she was on stage in the Broadway musical '13' (2008). Victorious ran 2010–2013 (premiere date from en.wikipedia 'Victorious').",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Der Name des Elements Kobalt leitet sich vom Wort „Kobold” ab. Richtig oder falsch?",
+   "de": "Von welchem Fabelwesen leitet sich der Name des chemischen Elements Kobalt ab?",
+   "en": "From which mythical creature is the name of the chemical element cobalt derived?",
+   "reworked": true,
+   "answerDe": "Kobold",
+   "answerEn": "Kobold (goblin)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1735",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Georg Brandt isolates an unknown metal he calls 'cobalt regulus': the element cobalt",
+    "labelDe": "Georg Brandt gewinnt ein unbekanntes Metall, das er „cobalt regulus“ nennt: das Element Cobalt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Cobalt",
+    "title": "Cobalt",
+    "lang": "de"
+   },
+   "notes": "Card statement is true. Miners searching for silver thought cobalt ores worthless and believed a Kobold (mountain spirit) had stolen the silver and left them the ore.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 4,
+   "cardDe": "Was für ein Musikinstrument ist die Leier: ein Schlag-, Tasten- oder Zupfinstrument?",
+   "de": "Zu welcher nach der Spielweise benannten Gruppe von Saiteninstrumenten gehört die Leier?",
+   "en": "To which group of string instruments, named after the way they are played, does the lyre belong?",
+   "reworked": true,
+   "answerDe": "Zupfinstrumente",
+   "answerEn": "Plucked string instruments",
+   "timeline": {
+    "kind": "creation",
+    "start": "-2700",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The lyre originates among the Sumerians in Mesopotamia",
+    "labelDe": "Die Leier entsteht bei den Sumerern in Mesopotamien"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Leier_(Zupfinstrument)",
+    "title": "Leier (Zupfinstrument)",
+    "lang": "de"
+   },
+   "notes": "Reworked from multiple choice (card answer: Zupfinstrument). Not to be confused with the Drehleier (hurdy-gurdy), a bowed instrument. Lyres are plucked with the fingers or a plectrum.",
+   "domain": "music-stage",
+   "sub": "instruments"
+  },
+  {
+   "category": 5,
+   "cardDe": "Arabica und Robusta sind Sorten welcher Pflanzenart?",
+   "de": "Arabica und Robusta sind Sorten welcher Pflanzenart?",
+   "en": "Arabica and Robusta are varieties of which plant?",
+   "reworked": false,
+   "answerDe": "Kaffee",
+   "answerEn": "Coffee",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1753",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Carl Linnaeus establishes the coffee genus Coffea in Species Plantarum",
+    "labelDe": "Carl von Linné stellt die Kaffee-Gattung Coffea in „Species Plantarum“ auf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Kaffee_(Pflanze)",
+    "title": "Kaffee (Pflanze)",
+    "lang": "de"
+   },
+   "notes": "Strictly two species of the genus Coffea: Coffea arabica and Coffea canephora (syn. C. robusta), not varieties of one species.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt die Zubereitungsmethode, bei der Speisen in einem vakuumierten Plastikbeutel, der in nicht allzu heißem Wasser liegt, gegart werden?",
+   "de": "Wie heißt die Zubereitungsmethode, bei der Speisen in einem vakuumierten Plastikbeutel, der in nicht allzu heißem Wasser liegt, gegart werden?",
+   "en": "What is the name of the cooking method in which food is cooked in a vacuum-sealed plastic bag lying in not-too-hot water?",
+   "reworked": false,
+   "answerDe": "Sous-vide",
+   "answerEn": "Sous-vide",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1974",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "French chef Georges Pralus at the Troisgros restaurant pioneers sous-vide cooking with foie gras",
+    "labelDe": "Der französische Koch Georges Pralus im Restaurant Troisgros entwickelt das Sous-vide-Garen mit Foie gras"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Vakuumgaren",
+    "title": "Vakuumgaren",
+    "lang": "de"
+   },
+   "notes": "Also called Vakuumgaren in German (French sous vide = 'under vacuum'); cooking below 100 °C.",
+   "domain": "everyday",
+   "sub": "food"
+  }
+ ]
+}

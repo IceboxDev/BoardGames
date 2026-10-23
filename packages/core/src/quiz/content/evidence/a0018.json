@@ -1,0 +1,242 @@
+{
+ "article": "a0018",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Grigori_Rasputin",
+   "title": "Grigori Rasputin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:06.456Z",
+   "snapshot": "ad5bf8da9bc4ea0765ceabbba331afd35e7a6769d615cb5a3657c84f223764a9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexandra_Feodorovna_(Alix_of_Hesse)",
+   "title": "Alexandra Feodorovna (Alix of Hesse) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:07.670Z",
+   "snapshot": "23260093b2680503e9497e7484519a0bae77d3076f2d56565237f192f089c52e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Felix_Yusupov",
+   "title": "Felix Yusupov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:08.564Z",
+   "snapshot": "8f65c72a77e36df8340e912a8b7443ae941b7a30088c71ce5ffd1020a6346ee7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alexei_Nikolaevich,_Tsarevich_of_Russia",
+   "title": "Alexei Nikolaevich, Tsarevich of Russia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:09.555Z",
+   "snapshot": "6c240fc832298b9ef39d7f026650f24ab185bf20f0ffd742a9dd3655b2de2706"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Murder_of_the_Romanov_family",
+   "title": "Murder of the Romanov family – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:10.633Z",
+   "snapshot": "54cab63e240e46f6e89ed1d259f4918d3cfc59f472ec9235ffd1c7d42a3c32e9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grigori Rasputin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandra Feodorovna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Felix Yusupov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alexei",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yekaterinburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:37.864Z",
+   "target": "f00086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rasputin and the Empress (1932), a film directed by Richard Boleslawski and Charles Brabin starring Lionel Barrymore as Grigori Rasputin, Ralph Morgan as the Czar, Ethel Barrymore as the Czarina and John Barrymore as Prince Paul Chegodireff.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grigori Rasputin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:37.864Z",
+   "target": "f00087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandra Feodorovna (Russian: Александра Фёдоровна, romanized: Aleksandra Fyodorovna; born Princess Alix of Hesse and by Rhine; 6 June 1872 – 17 July 1918) was the last empress of Russia as the consort of Nicholas II from their marriage on 26 November [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexandra Feodorovna” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:37.864Z",
+   "target": "f00088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Early November 1916, Felix Yusupov approached the lawyer Vasily Maklakov for advice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Felix Yusupov” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:37.864Z",
+   "target": "f00089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alexei Nikolaevich, Tsarevich of Russia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexei” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:37.864Z",
+   "target": "f00090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "former Emperor Nicholas II of Russia, Empress Alexandra, and their children, Olga, Tatiana, Maria, Anastasia, and Alexei–were shot and stabbed to death by Bolshevik revolutionaries under Yakov Yurovsky on the orders of the Ural Regional Soviet in Yekaterinburg on the night of 16–17 July 1918.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yekaterinburg” is on the snapshot of s5"
+  }
+ ]
+}

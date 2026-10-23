@@ -1,0 +1,605 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "art/painting",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-061",
+    "category": 4
+   },
+   "factId": "f05592"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-388",
+    "category": 4
+   },
+   "factId": "f07935"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1995",
+   "baseHash": "f7ed92fc206e",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-009",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-237",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Vocabulary of Pictures: Terms Every Museum Visitor Meets",
+    "titleDe": "Das Vokabular der Bilder: Begriffe, denen jeder Museumsbesucher begegnet",
+    "bodyEn": "Walk through any picture gallery and you will hear a small technical vocabulary, much of it borrowed from French, Italian and Greek. Framers, restorers and art historians use these words precisely, and knowing a handful of them makes wall labels and catalogue entries far easier to read.\n\nStart at the outside of a framed work on paper. Between the glass and the drawing there is usually a window cut from thick, acid-free cardboard. This border is called the mat (passe-partout) – \"mat\" or \"matboard\" in American usage, \"mount\" in Britain, and \"Passepartout\" in German, from the French for \"passes everywhere\", because one such window can serve pictures of many sizes. It keeps the glass off the paper, hides the ragged edges of the sheet and gives the eye a calm margin. Framers speak of a double mat when two windows of different colours are layered. Its forerunners, decorative mounts for prints and drawings, go back to the 16th century.\n\nAn oil painting has no mat, but it has a hidden skeleton. The canvas is pulled taut around a wooden frame and fixed with tacks or staples. This construction is the stretcher, in German a \"Keilrahmen\", literally a wedge frame: small wooden wedges are tapped into the corner joints to tighten a canvas that has slackened with age or humidity. The wedged stretcher is first recorded as a novelty in 1757, in Antoine-Joseph Pernety's dictionary of painting; when a painting is restretched today, this frame is often replaced as well. Canvas and binder, incidentally, come from the same plant: traditional linen canvas is woven from the stem fibres of flax, and the linseed oil that binds the pigments of an oil painting is pressed from its seeds – a classic oil painting is, in a sense, flax on flax.\n\nLook closely at the surface of a painting from the seventeenth century and you will see a web of tiny cracks running through the paint. This pattern is called craquelure, from the French \"craqueler\", to crackle. It forms because the paint and ground layers become brittle as they dry over decades while the canvas or wooden panel underneath keeps moving. Restorers read the craquelure as a fingerprint: its shape helps them date a picture, tell canvas from panel and unmask forgeries, whose artificial cracks rarely look right. Chinese potters of the Song dynasty (960–1279) even produced such crackle deliberately as a decorative glaze.\n\nMedieval and Renaissance altarpieces were often built as folding objects. A triptych consists of a central panel and two hinged wings that can be closed over it; the outer sides of the wings were painted too, often more soberly, so the altar showed one picture on ordinary days and another on feast days. Hieronymus Bosch's \"Garden of Earthly Delights\", painted between about 1490 and 1510, and Rogier van der Weyden's altarpieces are famous examples. A work with more panels is a polyptych; one with two is a diptych.\n\nOn those altarpieces the saints wear another piece of the vocabulary. The radiant disc or ring of light around the head of a holy figure is called a nimbus, Latin for \"cloud\" – in everyday English simply a halo, in German a \"Heiligenschein\" or \"Gloriole\". The motif is older than Christianity: Roman emperors and sun gods such as Helios were shown with rays around their heads, and Christian art adopted it from late antiquity onwards. A glow surrounding the entire body is called an aureole, an almond-shaped one a mandorla.\n\nFinally, the technique that Michelangelo used to cover the ceiling of the Sistine Chapel between 1508 and 1512. A fresco, from the Italian \"fresco\", fresh, is painted onto lime plaster while it is still wet. The pigments, mixed only with water, are drawn into the plaster as it sets and become part of the wall, which is why frescoes survive for centuries. Because the plaster dries within hours, the painter can only cover a \"giornata\", a day's portion, at a time; painting on dry plaster, called \"a secco\", is far less durable. The method was written down in the 1390s by the Florentine painter Cennino Cennini in his handbook \"Il libro dell'arte\".\n\n| Term | Origin | Meaning |\n|---|---|---|\n| Mat (passe-partout) | French | cardboard window between picture and frame |\n| Stretcher | English | wooden frame that holds the canvas |\n| Craquelure | French | network of age cracks |\n| Triptych | Greek | three-part folding altarpiece |\n| Nimbus | Latin | halo around the head of a holy figure |\n| Fresco | Italian | painting on wet plaster |",
+    "bodyDe": "Wer durch eine Gemäldegalerie geht, hört ein kleines Fachvokabular, das größtenteils aus dem Französischen, Italienischen und Griechischen entlehnt ist. Einrahmer, Restauratoren und Kunsthistoriker verwenden diese Wörter präzise, und wer einige davon kennt, liest Wandtexte und Katalogeinträge deutlich leichter.\n\nBeginnen wir außen bei einem gerahmten Werk auf Papier. Zwischen Glas und Zeichnung sitzt meist ein Fenster, das aus dickem, säurefreiem Karton geschnitten ist. Diese Umrahmung heißt Passepartout, nach dem französischen Ausdruck für „passt überall“, weil ein solches Fenster Bildern vieler Größen dienen kann; im Amerikanischen sagt man „mat“, im Britischen „mount“. Es hält das Glas vom Papier fern, verbirgt die unregelmäßigen Ränder des Blattes und gibt dem Auge einen ruhigen Rand. Einrahmer sprechen von einem doppelten Passepartout, wenn zwei Fenster in verschiedenen Farben übereinanderliegen. Seine Vorläufer, schmückende Montierungen für Grafiken, reichen bis ins 16. Jahrhundert zurück.\n\nEin Ölgemälde hat kein Passepartout, aber ein verborgenes Skelett. Die Leinwand wird straff um einen Holzrahmen gezogen und mit Nägeln oder Klammern befestigt. Diese Konstruktion ist der Keilrahmen: In die Eckverbindungen werden kleine Holzkeile geklopft, um eine Leinwand nachzuspannen, die durch Alter oder Feuchtigkeit schlaff geworden ist. Der Keilrahmen wird 1757 im Malereiwörterbuch von Antoine-Joseph Pernety erstmals als Neuheit erwähnt; wird ein Gemälde heute neu aufgespannt, ersetzt man oft auch diesen Rahmen. Leinwand und Bindemittel stammen übrigens von derselben Pflanze: Die klassische Leinwand wird aus den Stängelfasern von Flachs (Gemeiner Lein) gewebt, und das Leinöl, das die Pigmente eines Ölgemäldes bindet, wird aus seinen Samen gepresst – ein klassisches Ölbild ist also gewissermaßen Lein auf Lein.\n\nWer die Oberfläche eines Gemäldes aus dem 17. Jahrhundert genau betrachtet, sieht ein Netz winziger Risse, das die Farbe durchzieht. Dieses Muster nennt man Krakelee, vom französischen „craqueler“, knistern oder rissig werden. Es entsteht, weil Farb- und Grundierungsschichten beim Trocknen über Jahrzehnte spröde werden, während sich die Leinwand oder die Holztafel darunter weiter bewegt. Restauratoren lesen das Krakelee wie einen Fingerabdruck: Seine Form hilft, ein Bild zu datieren, Leinwand von Tafel zu unterscheiden und Fälschungen zu entlarven, deren künstliche Risse selten echt aussehen. Chinesische Töpfer der Song-Dynastie (960–1279) erzeugten solche Risse sogar absichtlich als dekorative Glasur.\n\nAltarbilder des Mittelalters und der Renaissance wurden oft als klappbare Objekte gebaut. Ein Triptychon besteht aus einer Mitteltafel und zwei angelenkten Flügeln, die sich darüber schließen lassen; die Außenseiten der Flügel waren ebenfalls bemalt, meist schlichter, sodass der Altar an gewöhnlichen Tagen ein Bild zeigte und an Festtagen ein anderes. Hieronymus Boschs „Garten der Lüste“, gemalt etwa zwischen 1490 und 1510, und die Altäre Rogier van der Weydens sind berühmte Beispiele. Ein Werk mit mehr Tafeln ist ein Polyptychon, eines mit zwei ein Diptychon.\n\nAuf diesen Altären tragen die Heiligen ein weiteres Stück Fachvokabular. Der Strahlenkranz um das Haupt einer heiligen Figur heißt Nimbus, lateinisch für „Wolke“ – umgangssprachlich Heiligenschein oder Gloriole. Das Motiv ist älter als das Christentum: Römische Kaiser und Sonnengötter wie Helios wurden mit Strahlen um den Kopf dargestellt, und die christliche Kunst übernahm es seit der Spätantike. Ein Lichtschein, der den ganzen Körper umgibt, heißt Aureole, ein mandelförmiger Mandorla.\n\nUnd schließlich die Technik, mit der Michelangelo zwischen 1508 und 1512 die Decke der Sixtinischen Kapelle bemalte. Ein Fresko, vom italienischen „fresco“, frisch, wird auf Kalkputz gemalt, solange dieser noch feucht ist. Die nur mit Wasser angerührten Pigmente werden beim Abbinden in den Putz hineingezogen und werden Teil der Wand – deshalb überdauern Fresken Jahrhunderte. Weil der Putz binnen Stunden trocknet, kann der Maler jeweils nur eine „Giornata“, ein Tagwerk, bearbeiten; Malerei auf trockenem Putz, „a secco“ genannt, ist weit weniger haltbar. Aufgeschrieben hat das Verfahren in den 1390er-Jahren der Florentiner Maler Cennino Cennini in seinem Handbuch „Il libro dell'arte“.\n\n| Begriff | Herkunft | Bedeutung |\n|---|---|---|\n| Passepartout | Französisch | Kartonfenster zwischen Bild und Rahmen |\n| Keilrahmen | Deutsch | Holzrahmen, der die Leinwand hält |\n| Krakelee | Französisch | Netz von Altersrissen |\n| Triptychon | Griechisch | dreiteiliger Klappaltar |\n| Nimbus | Lateinisch | Strahlenkranz um das Haupt einer heiligen Figur |\n| Fresko | Italienisch | Malerei auf feuchtem Putz |",
+    "notesEn": "English has no single term: \"mat\" (US), \"mount\" (UK) and \"passe-partout\" are all used.",
+    "notesDe": "„Krakelee“ wird im Deutschen auch „Craquelé“ geschrieben."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1011",
+   "baseHash": "1413abb4ecb6",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-155",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-222",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Bosch, Bruegel and the Painters of the North",
+    "titleDe": "Bosch, Bruegel und die Maler des Nordens",
+    "bodyEn": "While Leonardo and Michelangelo were reinventing the human figure in Florence and Rome, a different Renaissance was unfolding in the Low Countries and Germany. Its painters worked in oil rather than fresco, delighted in microscopic detail, and looked at the world with a mixture of piety, satire and wonder.\n\nThe pioneer was Jan van Eyck (c. 1390–1441), court painter to the Duke of Burgundy, who perfected oil painting to such a degree that later writers credited him with inventing it. His Ghent Altarpiece (1432) and the double portrait known as „The Arnolfini Portrait“ (1434), a Bruges merchant and his wife in a room reflected in a convex mirror, still astonish with their rendering of light on fur, brass and glass. His younger contemporary Rogier van der Weyden (c. 1399–1464), city painter of Brussels, brought emotion to the same precision: his „Descent from the Cross“ (c. 1435), painted for a crossbowmen's guild in Leuven and now in the Prado, shows ten life-size figures compressed into a shallow gilded box, with the fainting Mary echoing the pose of her dead son.\n\nAround 1500 the most startling imagination in Europe belonged to Hieronymus Bosch (c. 1450–1516), who spent his whole life in the Dutch town of 's-Hertogenbosch, from which he took his name. His Last Judgement triptych in Vienna (now dated to after 1482) and his most famous triptych, „The Garden of Earthly Delights“ in Madrid's Museo del Prado, teem with hybrid monsters, giant fruits, knife-eared demons and sinners tortured with musical instruments; nobody has ever fully decoded them, which is part of their appeal. Such visions earned him the nickname „the Devil's painter“, and five centuries later the crime writer Michael Connelly named his Los Angeles detective, Hieronymus „Harry“ Bosch, after him. In the same year, 1500, in Nuremberg, Albrecht Dürer (1471–1528) painted his „Self-Portrait with Fur-Trimmed Robe“, presenting himself frontally, Christ-like, with an inscription saying that he had painted himself „with undying colours“ at the age of 28. Dürer had travelled to Venice and brought Italian theory north; his engravings spread the Renaissance across Europe faster than any painting could.\n\nThe tradition culminated in Pieter Bruegel the Elder (c. 1525–1569). Often called „Peasant Bruegel“, he was in fact a learned Antwerp townsman whose „Tower of Babel“ (1563) turns the biblical story into a colossal, slightly tilted Roman Colosseum swarming with tiny workers, and whose „Hunters in the Snow“ (1565) invented the winter landscape as a genre. Bruegel's debt to Bosch is obvious in works such as „Dulle Griet“ and „The Triumph of Death“, but where Bosch preaches, Bruegel observes.\n\nA generation later the Flemish tradition reached its Baroque climax in Antwerp with Peter Paul Rubens (1577–1640). Painter, scholar and diplomat, he negotiated between his commissions for peace between Spain and England, and both crowns rewarded him: Philip IV of Spain ennobled him in 1624, Charles I of England knighted him in 1630, and Philip confirmed the knighthood soon afterwards, making Rubens one of the very few painters knighted by two kings. His fleshy, swirling altarpieces, such as „The Elevation of the Cross“ in Antwerp Cathedral, carried the Northern love of surface into an age of movement.\n\n| Painter | Key work | Year |\n|---|---|---|\n| Jan van Eyck | The Arnolfini Portrait | 1434 |\n| Rogier van der Weyden | The Descent from the Cross | c. 1435 |\n| Hieronymus Bosch | The Last Judgement triptych | c. 1500 |\n| Albrecht Dürer | Self-Portrait with Fur-Trimmed Robe | 1500 |\n| Pieter Bruegel the Elder | The Tower of Babel | 1563 |\n| Peter Paul Rubens | The Elevation of the Cross | 1610–1611 |\n\nTogether they show that the Northern Renaissance was not a pale reflection of Italy but a parallel revolution with its own obsessions: surfaces, symbols and the crowded, comic, terrifying life of ordinary people.",
+    "bodyDe": "Während Leonardo und Michelangelo in Florenz und Rom die menschliche Figur neu erfanden, entfaltete sich in den Niederlanden und in Deutschland eine andere Renaissance. Ihre Maler arbeiteten in Öl statt in Fresko, schwelgten in mikroskopischen Details und betrachteten die Welt mit einer Mischung aus Frömmigkeit, Satire und Staunen.\n\nDer Wegbereiter war Jan van Eyck (um 1390–1441), Hofmaler des Herzogs von Burgund, der die Ölmalerei so weit perfektionierte, dass spätere Autoren ihm ihre Erfindung zuschrieben. Sein Genter Altar (1432) und das Doppelporträt, das als „Die Arnolfini-Hochzeit“ bekannt ist (1434) – ein Brügger Kaufmann und seine Frau in einem Zimmer, das sich in einem Konvexspiegel spiegelt –, verblüffen bis heute durch die Wiedergabe des Lichts auf Pelz, Messing und Glas. Sein jüngerer Zeitgenosse Rogier van der Weyden (um 1399–1464), Stadtmaler von Brüssel, verband dieselbe Präzision mit Gefühl: Seine „Kreuzabnahme“ (um 1435), gemalt für eine Armbrustschützengilde in Löwen und heute im Prado, zeigt zehn lebensgroße Figuren, zusammengedrängt in einen flachen vergoldeten Kasten, wobei die ohnmächtige Maria die Haltung ihres toten Sohnes wiederholt.\n\nUm 1500 besaß die erstaunlichste Phantasie Europas Hieronymus Bosch (um 1450–1516), der sein ganzes Leben in der niederländischen Stadt 's-Hertogenbosch verbrachte, von der er seinen Namen nahm. Sein Weltgerichtstriptychon in Wien (heute auf die Zeit nach 1482 datiert) und sein berühmtestes Triptychon „Der Garten der Lüste“ im Madrider Museo del Prado wimmeln von Mischwesen, Riesenfrüchten, Dämonen mit Messerohren und Sündern, die mit Musikinstrumenten gefoltert werden; niemand hat sie je vollständig entschlüsselt, und das gehört zu ihrem Reiz. Solche Visionen trugen ihm den Beinamen „Teufelsmaler“ ein, und fünf Jahrhunderte später benannte der Krimiautor Michael Connelly seinen Ermittler aus Los Angeles, Hieronymus „Harry“ Bosch, nach ihm. Im selben Jahr 1500 malte in Nürnberg Albrecht Dürer (1471–1528) sein „Selbstbildnis im Pelzrock“, in dem er sich frontal, christusgleich darstellte, mit einer Inschrift, er habe sich „mit unvergänglichen Farben“ im Alter von 28 Jahren gemalt. Dürer war nach Venedig gereist und hatte die italienische Theorie in den Norden gebracht; seine Kupferstiche verbreiteten die Renaissance schneller über Europa, als es ein Gemälde je vermocht hätte.\n\nDen Höhepunkt der Tradition bildete Pieter Bruegel der Ältere (um 1525–1569). Oft „Bauern-Bruegel“ genannt, war er in Wahrheit ein gelehrter Antwerpener Bürger, dessen „Turmbau zu Babel“ (1563) die biblische Geschichte in ein kolossales, leicht schiefes römisches Kolosseum verwandelt, auf dem winzige Arbeiter wimmeln, und dessen „Jäger im Schnee“ (1565) die Winterlandschaft als Gattung erfand. Bruegels Schuld gegenüber Bosch ist in Werken wie „Dulle Griet“ und „Der Triumph des Todes“ offensichtlich, doch wo Bosch predigt, beobachtet Bruegel.\n\nEine Generation später erreichte die flämische Tradition in Antwerpen ihren barocken Höhepunkt mit Peter Paul Rubens (1577–1640). Maler, Gelehrter und Diplomat, verhandelte er zwischen seinen Aufträgen über den Frieden zwischen Spanien und England, und beide Kronen belohnten ihn: Philipp IV. von Spanien erhob ihn 1624 in den Adelsstand, Karl I. von England schlug ihn 1630 zum Ritter, und Philipp bestätigte die Ritterwürde kurz darauf – damit gehört Rubens zu den ganz wenigen Malern, die von zwei Königen zum Ritter geschlagen wurden. Seine fülligen, bewegten Altarbilder wie die „Kreuzaufrichtung“ in der Antwerpener Kathedrale trugen die nordische Liebe zur Oberfläche in ein Zeitalter der Bewegung.\n\n| Maler | Hauptwerk | Jahr |\n|---|---|---|\n| Jan van Eyck | Die Arnolfini-Hochzeit | 1434 |\n| Rogier van der Weyden | Kreuzabnahme | um 1435 |\n| Hieronymus Bosch | Weltgerichtstriptychon | um 1500 |\n| Albrecht Dürer | Selbstbildnis im Pelzrock | 1500 |\n| Pieter Bruegel der Ältere | Der Turmbau zu Babel | 1563 |\n| Peter Paul Rubens | Die Kreuzaufrichtung | 1610–1611 |\n\nZusammen zeigen sie, dass die Renaissance des Nordens kein blasser Abglanz Italiens war, sondern eine parallele Revolution mit eigenen Obsessionen: Oberflächen, Symbole und das gedrängte, komische, erschreckende Leben der einfachen Leute.",
+    "notesEn": "The Vienna Last Judgement triptych is now dated to after 1482; older literature places it around 1500.",
+    "notesDe": "Das Wiener Weltgerichtstriptychon wird heute auf die Zeit nach 1482 datiert; ältere Literatur setzt es um 1500 an."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1107",
+   "baseHash": "d0ec9f98d055",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-195",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-205",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-191",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Stolen, Slashed, Shredded: When Famous Paintings Made the News",
+    "titleDe": "Gestohlen, zerschnitten, geschreddert: Wenn berühmte Gemälde Schlagzeilen machen",
+    "bodyEn": "Museums and auction houses like to present art as timeless, but paintings have biographies of their own, and some of the most famous moments in art history are things that happened to a picture rather than in it.\n\nThe most theatrical episode of recent years belongs to Banksy. On 5 October 2018 his spray-painted „Girl with Balloon“ was the last lot of the evening at Sotheby's in London and was knocked down for £1,042,000, about 1.2 million euros. Seconds after the hammer fell, an alarm sounded inside the ornate frame and the canvas began to slide through a hidden shredder that the artist had built into it years earlier. It shredded itself only halfway before the mechanism stopped, leaving the balloon intact and the girl in ribbons. The buyer kept the work, Banksy's authentication body renamed it „Love is in the Bin“, and in October 2021 the same piece sold again for £18.6 million.\n\nThe oldest and most famous case is the „Mona Lisa“. On 21 August 1911 Leonardo's portrait vanished from the Louvre. It was stolen by Vincenzo Peruggia, an Italian glazier who had worked in the museum, hid overnight in a cupboard and walked out with the panel under his smock. The painting was missing for more than two years, during which its empty hooks drew larger crowds than the picture ever had, until Peruggia tried to sell it to a Florentine dealer in December 1913. In the first weeks of the hunt the police suspected the avant-garde: the poet Guillaume Apollinaire was arrested, and the young Pablo Picasso, who had once bought statuettes stolen from the Louvre, was questioned before both men were cleared.\n\nRembrandt's „The Night Watch“ has been attacked three times. The worst came on 14 September 1975, when an unemployed schoolteacher pulled a bread knife from his pocket in the Rijksmuseum. It was slashed with a knife twelve times, and one strip of canvas was cut away entirely; restorers worked for months to repair the damage, and the scars are still faintly visible. In 1990 a visitor sprayed the painting with acid, and since 2019 it has been undergoing a public restoration inside a glass chamber.\n\nSometimes the news is simply embarrassing. In 1961 Henri Matisse's paper cut-out „Le Bateau“ hung upside down in the Museum of Modern Art (New York) for 47 days before a visitor, the stockbroker Genevieve Habert, noticed the mistake; the thousands who had walked past it, the museum's own staff included, had seen nothing wrong.\n\nMoney made the headlines in 2017. Leonardo's „Salvator Mundi“, a painting that had been bought for £45 at a sale in 1958 and whose attribution is still debated, was offered at Christie's in New York on 15 November. It sold for 450 million dollars including fees, the highest price ever paid for a work of art at auction; the buyer was later identified as a Saudi prince bidding on behalf of Crown Prince Mohammed bin Salman.\n\nThe latest entry is a protest rather than a crime against art. On 14 October 2022 two members of Just Stop Oil walked up to Vincent van Gogh's „Sunflowers“ in London's National Gallery. Climate activists threw tomato soup at it and glued their hands to the wall; because the picture is glazed, only the frame was slightly damaged, and it was back on display the same day. The action started a wave of similar protests in museums across Europe.",
+    "bodyDe": "Museen und Auktionshäuser präsentieren Kunst gern als zeitlos, doch Gemälde haben eigene Biografien, und einige der berühmtesten Momente der Kunstgeschichte sind Dinge, die einem Bild passiert sind – und nicht darin.\n\nDie theatralischste Episode der letzten Jahre gehört Banksy. Am 5. Oktober 2018 war sein gesprühtes „Girl with Balloon“ das letzte Los des Abends bei Sotheby's in London und wurde für 1.042.000 Pfund, rund 1,2 Millionen Euro, zugeschlagen. Sekunden nach dem Hammerschlag ertönte ein Alarm im verzierten Rahmen, und die Leinwand begann durch einen versteckten Schredder zu gleiten, den der Künstler Jahre zuvor eingebaut hatte. Es schredderte sich selbst nur zur Hälfte, bevor der Mechanismus stoppte; der Ballon blieb intakt, das Mädchen hing in Streifen. Die Käuferin behielt das Werk, Banksys Echtheitsstelle benannte es in „Love is in the Bin“ um, und im Oktober 2021 wurde dasselbe Stück erneut verkauft – für 18,6 Millionen Pfund.\n\nDer älteste und berühmteste Fall ist die „Mona Lisa“. Am 21. August 1911 verschwand Leonardos Porträt aus dem Louvre. Sie wurde gestohlen von Vincenzo Peruggia, einem italienischen Glaser, der im Museum gearbeitet hatte, sich über Nacht in einem Schrank versteckte und mit der Tafel unter dem Kittel hinausspazierte. Mehr als zwei Jahre blieb das Gemälde verschwunden, und die leeren Haken zogen größere Menschenmengen an als je das Bild, bis Peruggia im Dezember 1913 versuchte, es einem Florentiner Händler zu verkaufen. In den ersten Wochen der Fahndung geriet die Avantgarde unter Verdacht: Der Dichter Guillaume Apollinaire wurde verhaftet, und der junge Pablo Picasso, der einst aus dem Louvre gestohlene Statuetten gekauft hatte, wurde verhört, bevor beide entlastet wurden.\n\nRembrandts „Die Nachtwache“ wurde dreimal angegriffen. Der schlimmste Angriff kam am 14. September 1975, als ein arbeitsloser Lehrer im Rijksmuseum ein Brotmesser aus der Tasche zog. Sie wurde mit einem Messer zerschnitten, zwölf Schnitte, und ein Streifen Leinwand wurde ganz herausgetrennt; die Restauratoren arbeiteten monatelang, und die Narben sind bis heute schwach zu sehen. 1990 besprühte ein Besucher das Gemälde mit Säure, und seit 2019 wird es in einer gläsernen Kammer öffentlich restauriert.\n\nManchmal ist die Nachricht einfach peinlich. 1961 hing Henri Matisses Scherenschnitt „Le Bateau“ im Museum of Modern Art (New York) 47 Tage lang kopfüber, bis eine Besucherin, die Börsenmaklerin Genevieve Habert, den Fehler bemerkte; die Tausenden, die daran vorbeigegangen waren, das Personal des Hauses eingeschlossen, hatten nichts bemerkt.\n\n2017 machte das Geld die Schlagzeilen. Leonardos „Salvator Mundi“, ein Gemälde, das 1958 bei einer Auktion für 45 Pfund den Besitzer gewechselt hatte und dessen Zuschreibung bis heute umstritten ist, kam am 15. November bei Christie's in New York unter den Hammer. Es wurde für 450 Millionen Dollar versteigert, inklusive Gebühren der höchste Preis, der je für ein Kunstwerk auf einer Auktion gezahlt wurde; als Käufer wurde später ein saudischer Prinz identifiziert, der im Auftrag von Kronprinz Mohammed bin Salman bot.\n\nDer jüngste Eintrag ist eher ein Protest als ein Verbrechen gegen die Kunst. Am 14. Oktober 2022 traten zwei Mitglieder von Just Stop Oil vor Vincent van Goghs „Sonnenblumen“ in der Londoner National Gallery. Klimaaktivisten bewarfen es mit Tomatensuppe und klebten ihre Hände an die Wand; weil das Bild verglast ist, wurde nur der Rahmen leicht beschädigt, und es hing noch am selben Tag wieder. Die Aktion löste eine Welle ähnlicher Proteste in Museen in ganz Europa aus.",
+    "notesEn": "The card writes „Girl with a Balloon“; the work's actual title is „Girl with Balloon“ (renamed „Love is in the Bin“ after the shredding).",
+    "notesDe": "Die Karte schreibt „Girl with a Balloon“; der tatsächliche Titel des Werks lautet „Girl with Balloon“ (nach dem Schreddern in „Love is in the Bin“ umbenannt)."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1119",
+   "baseHash": "fa10e3ce851f",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-282",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-117",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "From Sfumato to Gouache: Ways to Put Paint on a Picture",
+    "titleDe": "Vom Sfumato zur Gouache: Arten, Farbe aufs Bild zu bringen",
+    "bodyEn": "Art history is full of terms that describe not what a picture shows but how the paint got onto the canvas. Seven of them, most borrowed from Italian, French and English, mark decisive turns in the history of painting.\n\nThe oldest is sfumato, from the Italian \"sfumare\", \"to evaporate like smoke\". Leonardo da Vinci perfected the method around 1500: instead of drawing firm outlines, he built up flesh and shadow from dozens of almost transparent glazes, so that contours dissolve into soft, smoky transitions. The famous smile of the Mona Lisa, painted from about 1503 to 1506, owes its ambiguity to sfumato – the corners of the mouth are never sharply defined.\n\nImpasto, also Italian, means \"paste\" or \"dough\"; English has used the word for thickly laid-on paint since 1784. Here the paint is applied so thickly, with brush or palette knife, that its ridges and furrows remain visible and catch the light. Rembrandt used impasto for jewellery and lace, Vincent van Gogh for whole skies and wheat fields, as in \"The Starry Night\", painted in June 1889; in his late work the paint stands up from the canvas like relief.\n\nAt the opposite extreme from thick oil stands gouache, a French word from the Italian \"guazzo\", a puddle. Like watercolour it is a water-based paint, but it carries more pigment and often a white filler, so that it is water-soluble and at the same time opaque: it covers what lies beneath instead of letting the paper shine through. Gouache-like paints were already used in medieval book illumination, Dürer used opaque watercolour for studies such as his Young Hare, and in the twentieth century poster designers and Henri Matisse, who coloured the paper for his cut-outs with it, made it a modern medium.\n\nPointillism was developed in the 1880s by Georges Seurat and Paul Signac. Rather than mixing colours on the palette, the painter sets down many small dots of pure colour side by side and leaves the mixing to the eye of the viewer. Seurat liked to set complementary colours side by side – pairs that sit directly opposite each other on the colour wheel, such as red and green or blue and orange – because each makes the other glow more intensely; the idea went back to Goethe's colour circle of 1809 and to the chemist Michel-Eugène Chevreul's law of simultaneous contrast. Seurat's \"A Sunday Afternoon on the Island of La Grande Jatte\" (1884–1886) is the monumental demonstration of the method, which critics of the late 1880s mockingly named after the French \"point\", dot. In 1899 Signac set out its theory in the book \"From Eugène Delacroix to Neo-Impressionism\".\n\nThe twentieth century added two English terms from New York. Action painting was coined by the critic Harold Rosenberg in his essay \"The American Action Painters\" in the December 1952 issue of ARTnews for Jackson Pollock, Willem de Kooning and Franz Kline. Pollock laid his canvases on the floor and dripped, poured and flung paint from sticks and hardened brushes; the finished picture is not a composition planned in advance but the record of a spontaneous act of painting, a \"document\" of the painter's movements. Color field painting, the term used by Clement Greenberg for Mark Rothko (1903–1970), Barnett Newman and Clyfford Still, is the quiet counterpart: large, flat expanses of colour with almost no gesture, meant to envelop the viewer and evoke contemplation rather than energy.\n\n| Term | Language | Key artist | What it describes |\n|---|---|---|---|\n| sfumato | Italian | Leonardo da Vinci | soft, smoky transitions instead of outlines |\n| impasto | Italian | Rembrandt, van Gogh | thickly applied, visibly textured paint |\n| gouache | French | Henri Matisse | water-soluble, opaque paint |\n| pointillism | French | Georges Seurat | dots of pure colour mixed by the eye |\n| action painting | English | Jackson Pollock | the picture as record of a spontaneous act |\n| color field painting | English | Mark Rothko, Barnett Newman | large, flat fields of colour |\n\nThese terms are more than jargon. Each names a moment when painters decided that the way paint is handled – smoky, thick, dotted, flung or spread flat – could carry as much meaning as the subject itself.",
+    "bodyDe": "Die Kunstgeschichte ist voller Begriffe, die nicht beschreiben, was ein Bild zeigt, sondern wie die Farbe auf die Leinwand kam. Sieben von ihnen, meist entlehnt aus dem Italienischen, Französischen und Englischen, markieren entscheidende Wendepunkte in der Geschichte der Malerei.\n\nDer älteste ist Sfumato, vom italienischen „sfumare“, „wie Rauch verfliegen“. Leonardo da Vinci perfektionierte die Methode um 1500: Statt feste Umrisse zu zeichnen, baute er Haut und Schatten aus Dutzenden fast durchsichtiger Lasuren auf, sodass Konturen in weichen, rauchigen Übergängen verschwimmen. Das berühmte Lächeln der Mona Lisa, gemalt etwa von 1503 bis 1506, verdankt seine Vieldeutigkeit dem Sfumato – die Mundwinkel sind nie scharf definiert.\n\nImpasto, ebenfalls italienisch, bedeutet „Paste“ oder „Teig“; im Englischen ist das Wort für dick aufgetragene Farbe seit 1784 belegt. Hier wird die Farbe mit Pinsel oder Spachtel so dick aufgetragen, dass ihre Grate und Furchen sichtbar bleiben und das Licht einfangen. Rembrandt verwendete Impasto für Schmuck und Spitze, Vincent van Gogh für ganze Himmel und Weizenfelder, etwa in der im Juni 1889 gemalten „Sternennacht“; in seinem Spätwerk steht die Farbe wie ein Relief von der Leinwand ab.\n\nAm anderen Ende, weit weg vom dicken Öl, steht die Gouache, ein französisches Wort vom italienischen „guazzo“, Pfütze. Wie das Aquarell ist sie eine Wasserfarbe, enthält aber mehr Pigment und oft einen weißen Füllstoff, sodass sie wasserlöslich und zugleich deckend ist: Sie überdeckt den Untergrund, statt das Papier durchscheinen zu lassen. Gouacheähnliche Farben verwendete schon die mittelalterliche Buchmalerei, Dürer nutzte deckende Wasserfarben für Studien wie seinen Feldhasen, und im 20. Jahrhundert machten Plakatgestalter und Henri Matisse, der damit das Papier für seine Scherenschnitte färbte, sie zu einem modernen Medium.\n\nDer Pointillismus wurde in den 1880er-Jahren von Georges Seurat und Paul Signac entwickelt. Statt die Farben auf der Palette zu mischen, setzt der Maler viele kleine Punkte reiner Farbe nebeneinander und überlässt das Mischen dem Auge des Betrachters. Seurat setzte gern Komplementärfarben nebeneinander – Farbpaare, die sich im Farbkreis direkt gegenüberliegen, etwa Rot und Grün oder Blau und Orange –, weil jede die andere stärker leuchten lässt; die Idee ging auf Goethes Farbkreis von 1809 und auf das Gesetz des Simultankontrasts des Chemikers Michel-Eugène Chevreul zurück. Seurats „Ein Sonntagnachmittag auf der Insel La Grande Jatte“ (1884–1886) ist die monumentale Demonstration der Methode, die Kritiker Ende der 1880er-Jahre spöttisch nach dem französischen „point“, Punkt, benannten. 1899 legte Signac ihre Theorie in der Schrift „D’Eugène Delacroix au néo-impressionnisme“ dar.\n\nDas 20. Jahrhundert fügte zwei englische Begriffe aus New York hinzu. Action Painting prägte der Kritiker Harold Rosenberg in seinem Essay „The American Action Painters“ in der Dezemberausgabe 1952 von ARTnews für Jackson Pollock, Willem de Kooning und Franz Kline. Pollock legte seine Leinwände auf den Boden und ließ Farbe von Stöcken und verhärteten Pinseln tropfen, goss und schleuderte sie; das fertige Bild ist keine im Voraus geplante Komposition, sondern das Dokument eines spontanen Malvorgangs, eine Aufzeichnung der Bewegungen des Malers. Color Field Painting, der von Clement Greenberg für Mark Rothko (1903–1970), Barnett Newman und Clyfford Still verwendete Begriff, ist das stille Gegenstück: große, flächige Farbfelder fast ohne Geste, die den Betrachter umhüllen und eher Kontemplation als Energie hervorrufen sollen.\n\n| Begriff | Sprache | Wichtigster Künstler | Was er beschreibt |\n|---|---|---|---|\n| Sfumato | Italienisch | Leonardo da Vinci | weiche, rauchige Übergänge statt Umrisse |\n| Impasto | Italienisch | Rembrandt, van Gogh | dick aufgetragene, sichtbar strukturierte Farbe |\n| Gouache | Französisch | Henri Matisse | wasserlösliche, deckende Farbe |\n| Pointillismus | Französisch | Georges Seurat | Punkte reiner Farbe, vom Auge gemischt |\n| Action Painting | Englisch | Jackson Pollock | das Bild als Dokument eines spontanen Vorgangs |\n| Color Field Painting | Englisch | Mark Rothko, Barnett Newman | große, flächige Farbfelder |\n\nDiese Begriffe sind mehr als Fachjargon. Jeder benennt einen Moment, in dem Maler entschieden, dass die Art, wie Farbe behandelt wird – rauchig, dick, gepunktet, geschleudert oder flächig ausgebreitet –, ebenso viel Bedeutung tragen kann wie das Motiv selbst.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0063",
+   "baseHash": "7eb6e9b552cb",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-163",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Counting Heads: How Many People Are in Five Famous Paintings",
+    "titleDe": "Köpfe zählen: Wie viele Menschen auf fünf berühmten Gemälden zu sehen sind",
+    "bodyEn": "One of the simplest questions you can ask about a painting is also one of the most revealing: how many people are in it? The number tells you a great deal about the mood the artist wanted. A crowd is a story; a couple is a relationship; a single figure is an interior life. Five of the most reproduced pictures in Western art make the point.\n\nEdward Hopper's \"Nighthawks\" (completed on 21 January 1942, Art Institute of Chicago) is the classic image of urban loneliness. Through the curved plate-glass window of a late-night diner we see a counter with **3** customers sitting at it: a man and a woman side by side, and a solitary man seen from behind. Behind the counter a fourth figure, the counterman in white, bends to his work, so four people are visible in total, but only the three customers are seated. No door leads into the diner from the street, which is part of what makes the scene feel sealed off from the empty city outside.\n\nLeonardo da Vinci's \"The Last Supper\" (1495–1498), painted on the refectory wall of Santa Maria delle Grazie in Milan, is the opposite: a crowded table caught at a single dramatic moment. Jesus sits in the centre and the twelve apostles are grouped in four clusters of three, reacting to the words \"one of you will betray me\". That makes **13** people at the table, with Judas clutching his bag of silver in the group to Jesus's right. The badly decayed mural was restored from 1978 to 1999 under Pinin Brambilla Barcilon.\n\nGrant Wood's \"American Gothic\" (1930) needs only **2** figures: a stern farmer holding a pitchfork and the woman beside him, posed in front of a white farmhouse with a Gothic-arched window in Eldon, Iowa. Wood's models were his dentist and his sister Nan. Viewers long took the pair for a farmer and his wife, but in 1941 Wood explained that the woman beside the farmer is his daughter, and the picture has been parodied more often than almost any other American painting.\n\nPablo Picasso's \"Les Demoiselles d'Avignon\" (1907, Museum of Modern Art, New York) confronts the viewer with **5** women, the prostitutes of a brothel in Barcelona's Carrer d'Avinyó. The canvas was first shown publicly in July 1916 at the Salon d'Antin in Paris, where the poet André Salmon gave it its present title; in 1924 Picasso sold it to the couturier Jacques Doucet for 25,000 francs. Their angular, mask-like faces, two of them influenced by African and Iberian sculpture, broke with every convention of the female nude and opened the road to Cubism.\n\nAt the other end of the scale stands Jan Vermeer's \"The Milkmaid\" (c. 1658, Rijksmuseum, Amsterdam). The whole canvas is given to **1** person, a kitchen maid pouring milk from a jug into a bowl beside a window. The stillness of the scene, the crusty bread and the light on the plaster wall have made this quiet single figure one of the most beloved paintings in the Netherlands.\n\n| Painting | Artist | Year | People |\n|---|---|---|---|\n| The Milkmaid | Jan Vermeer | c. 1658 | 1 |\n| American Gothic | Grant Wood | 1930 | 2 |\n| Nighthawks (seated at the counter) | Edward Hopper | 1942 | 3 |\n| Les Demoiselles d'Avignon | Pablo Picasso | 1907 | 5 |\n| The Last Supper | Leonardo da Vinci | 1495–1498 | 13 |",
+    "bodyDe": "Eine der einfachsten Fragen, die man einem Gemälde stellen kann, ist zugleich eine der aufschlussreichsten: Wie viele Menschen sind darauf zu sehen? Die Zahl verrät viel über die Stimmung, die der Künstler wollte. Eine Menge ist eine Geschichte; ein Paar ist eine Beziehung; eine einzelne Figur ist ein Innenleben. Fünf der meistreproduzierten Bilder der westlichen Kunst belegen das.\n\nEdward Hoppers „Nachtschwärmer“ („Nighthawks“, vollendet am 21. Januar 1942, Art Institute of Chicago) ist das klassische Bild städtischer Einsamkeit. Durch das gebogene Schaufenster eines nächtlichen Diners sehen wir eine Bar, an der **3** Gäste sitzen: ein Mann und eine Frau nebeneinander sowie ein einzelner Mann, von hinten gesehen. Hinter dem Tresen beugt sich eine vierte Figur, der Barmann in Weiß, über seine Arbeit – insgesamt sind also vier Menschen zu sehen, aber nur die drei Gäste sitzen. Keine Tür führt von der Straße in das Lokal, was dazu beiträgt, dass die Szene von der leeren Stadt draußen wie abgeriegelt wirkt.\n\nLeonardo da Vincis „Das Abendmahl“ (1495–1498), gemalt auf die Refektoriumswand von Santa Maria delle Grazie in Mailand, ist das Gegenteil: eine volle Tafel, in einem einzigen dramatischen Augenblick festgehalten. Jesus sitzt in der Mitte, und die zwölf Apostel sind in vier Dreiergruppen angeordnet, die auf die Worte „Einer von euch wird mich verraten“ reagieren. Damit sitzen **13** Personen an der Tafel, wobei Judas in der Gruppe rechts von Jesus seinen Beutel mit Silberlingen umklammert. Das stark verfallene Wandbild wurde von 1978 bis 1999 unter Pinin Brambilla Barcilon restauriert.\n\nGrant Woods „American Gothic“ (1930) braucht nur **2** Figuren: einen strengen Farmer mit Mistgabel und die Frau neben ihm, aufgestellt vor einem weißen Farmhaus mit gotischem Spitzbogenfenster in Eldon, Iowa. Woods Modelle waren sein Zahnarzt und seine Schwester Nan. Lange hielt man das Paar für einen Farmer und seine Frau, doch Wood erklärte 1941, die Frau neben dem Farmer sei seine Tochter, und das Bild wurde häufiger parodiert als fast jedes andere amerikanische Gemälde.\n\nPablo Picassos „Les Demoiselles d'Avignon“ (1907, Museum of Modern Art, New York) konfrontiert den Betrachter mit **5** Frauen, den Prostituierten eines Bordells in der Barceloneser Carrer d'Avinyó. Öffentlich gezeigt wurde das Bild erstmals im Juli 1916 im Pariser Salon d'Antin, wo der Dichter André Salmon ihm seinen heutigen Titel gab; 1924 verkaufte Picasso es für 25.000 Francs an den Modeschöpfer Jacques Doucet. Ihre kantigen, maskenhaften Gesichter, zwei davon von afrikanischer und iberischer Skulptur beeinflusst, brachen mit jeder Konvention des weiblichen Akts und öffneten den Weg zum Kubismus.\n\nAm anderen Ende der Skala steht Jan Vermeers „Dienstmagd mit Milchkrug“ (um 1658, Rijksmuseum, Amsterdam). Die ganze Leinwand gehört **1** Person, einer Küchenmagd, die neben einem Fenster Milch aus einem Krug in eine Schüssel gießt. Die Stille der Szene, das krustige Brot und das Licht auf der verputzten Wand haben diese ruhige Einzelfigur zu einem der beliebtesten Gemälde der Niederlande gemacht.\n\n| Gemälde | Künstler | Jahr | Personen |\n|---|---|---|---|\n| Dienstmagd mit Milchkrug | Jan Vermeer | um 1658 | 1 |\n| American Gothic | Grant Wood | 1930 | 2 |\n| Nachtschwärmer (an der Bar sitzend) | Edward Hopper | 1942 | 3 |\n| Les Demoiselles d'Avignon | Pablo Picasso | 1907 | 5 |\n| Das Abendmahl | Leonardo da Vinci | 1495–1498 | 13 |",
+    "notesEn": "The question asks how many people are sitting at the counter. Three customers sit at it; the counterman, a fourth figure, stands behind it, so the answer is 3, and the article notes that four people are visible in total.",
+    "notesDe": "Gefragt ist, wie viele Menschen an der Bar sitzen. Drei Gäste sitzen am Tresen; der Barmann, eine vierte Figur, steht dahinter. Die Antwort lautet daher 3; der Artikel erwähnt, dass insgesamt vier Menschen zu sehen sind."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1935",
+   "baseHash": "426bf612b538",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-101",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-279",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Romantic Painters and Their Signature Pictures",
+    "titleDe": "Romantische Maler und ihre Schlüsselbilder",
+    "bodyEn": "Romanticism, the movement that swept European art in the decades around 1800, replaced the calm order of Classicism with feeling, nature and the sublime. Many of its painters are remembered today for one canvas above all others.\n\nIn Germany the towering figure is Caspar David Friedrich (1774–1840). Born in Greifswald on the Baltic coast and based in Dresden, he painted solitary figures seen from behind, contemplating vast landscapes. Around 1818, shortly after his honeymoon, he produced \"Kreidefelsen auf Rügen\" (\"Chalk Cliffs on Rügen\"): three figures peer over the dazzling white cliffs of the island towards a boundless sea. Together with \"Der Wanderer über dem Nebelmeer\" it is the picture most people associate with early German Romanticism; today it hangs in the Museum Oskar Reinhart in Winterthur. Friedrich died in Dresden in 1840 and lies buried in the city's Trinitatisfriedhof.\n\nFriedrich's closest ally in the movement was Philipp Otto Runge (1777–1810), a Hamburg painter and colour theorist who died at only 33. His unfinished cycle \"Die Tageszeiten\" (The Times of Day) tried to turn morning, day, evening and night into a symbolic language of flowers, light and children, and his double portrait \"Die Hülsenbeckschen Kinder\" is one of the first paintings to show children at eye level, as active beings rather than miniature adults.\n\nThe movement's ties to literature ran deep. Ludwig Emil Grimm (1790–1863), the younger brother of the fairy-tale collectors Jacob and Wilhelm Grimm, was no philologist but a painter and etcher: he taught at the Kassel academy, drew the portraits of his brothers that everyone knows, and illustrated editions of their Children's and Household Tales.\n\nEngland produced two very different Romantic landscape painters. John Constable (1776–1837) devoted his life to the fields of his native Suffolk. \"The Hay Wain\" (1821), a cart standing in the shallows of the River Stour beside Willy Lott's cottage, was received coolly in London but caused a sensation at the Paris Salon of 1824. His rival J. M. W. Turner, by contrast, dissolved his scenes in light and storm.\n\nIn France, Romanticism meant drama on a grand scale. Théodore Géricault (1791–1824) spent months interviewing survivors and studying corpses in the morgue before finishing \"The Raft of the Medusa\" (1819), a monumental depiction of the wreck of the frigate Méduse, whose castaways had drifted for thirteen days. His younger friend Eugène Delacroix (1798–1863) answered with \"Liberty Leading the People\" (1830), in which a bare-breasted allegory of Liberty, holding the tricolour, strides over the barricades of the July Revolution. Both paintings hang in the Louvre.\n\n| Painter | Country | Signature work | Year |\n|---|---|---|---|\n| Caspar David Friedrich | Germany | Chalk Cliffs on Rügen | c. 1818 |\n| Philipp Otto Runge | Germany | The Times of Day / The Hülsenbeck Children | 1803–1809 |\n| John Constable | England | The Hay Wain | 1821 |\n| Théodore Géricault | France | The Raft of the Medusa | 1819 |\n| Eugène Delacroix | France | Liberty Leading the People | 1830 |\n\nDifferent as they were, all of them believed that a landscape or a scene could carry as much emotion as a face – the conviction that still defines Romantic painting.",
+    "bodyDe": "Die Romantik, die in den Jahrzehnten um 1800 die europäische Kunst erfasste, ersetzte die ruhige Ordnung des Klassizismus durch Gefühl, Natur und das Erhabene. Viele ihrer Maler werden heute vor allem mit einem einzigen Bild verbunden.\n\nIn Deutschland überragt Caspar David Friedrich (1774–1840) alle anderen. Geboren in Greifswald an der Ostsee und in Dresden ansässig, malte er einsame Rückenfiguren, die weite Landschaften betrachten. Um 1818, kurz nach seiner Hochzeitsreise, schuf er die „Kreidefelsen auf Rügen“: Drei Figuren blicken über die blendend weißen Klippen der Insel auf ein grenzenloses Meer. Zusammen mit dem „Wanderer über dem Nebelmeer“ ist es das Bild, das die meisten Menschen mit der deutschen Frühromantik verbinden; heute hängt es im Museum Oskar Reinhart in Winterthur. Friedrich starb 1840 in Dresden und ist auf dem dortigen Trinitatisfriedhof begraben.\n\nFriedrichs engster Verbündeter in der Bewegung war Philipp Otto Runge (1777–1810), ein Hamburger Maler und Farbtheoretiker, der mit nur 33 Jahren starb. Sein unvollendeter Zyklus „Die Tageszeiten“ versuchte, Morgen, Tag, Abend und Nacht in eine symbolische Sprache aus Blumen, Licht und Kindern zu übersetzen, und sein Doppelporträt „Die Hülsenbeckschen Kinder“ gehört zu den ersten Gemälden, die Kinder auf Augenhöhe zeigen – als handelnde Wesen statt als kleine Erwachsene.\n\nDie Verbindungen der Bewegung zur Literatur waren eng. Ludwig Emil Grimm (1790–1863), der jüngere Bruder der Märchensammler Jacob und Wilhelm Grimm, war kein Philologe, sondern Maler und Radierer: Er lehrte an der Kasseler Akademie, zeichnete die bekannten Porträts seiner Brüder und illustrierte Ausgaben ihrer Kinder- und Hausmärchen.\n\nEngland brachte zwei sehr verschiedene romantische Landschaftsmaler hervor. John Constable (1776–1837) widmete sein Leben den Feldern seiner Heimat Suffolk. „The Hay Wain“ („Der Heuwagen“, 1821), ein Karren im seichten Wasser des Flusses Stour neben Willy Lotts Cottage, wurde in London kühl aufgenommen, sorgte aber im Pariser Salon von 1824 für Aufsehen. Sein Rivale J. M. W. Turner hingegen löste seine Szenen in Licht und Sturm auf.\n\nIn Frankreich bedeutete Romantik Drama im großen Maßstab. Théodore Géricault (1791–1824) befragte monatelang Überlebende und studierte Leichen im Leichenschauhaus, bevor er „Das Floß der Medusa“ (1819) vollendete, eine monumentale Darstellung des Untergangs der Fregatte Méduse, deren Schiffbrüchige dreizehn Tage lang getrieben waren. Sein jüngerer Freund Eugène Delacroix (1798–1863) antwortete mit „Die Freiheit führt das Volk“ (1830), in dem eine barbusige Allegorie der Freiheit mit der Trikolore über die Barrikaden der Julirevolution schreitet. Beide Gemälde hängen im Louvre.\n\n| Maler | Land | Schlüsselwerk | Jahr |\n|---|---|---|---|\n| Caspar David Friedrich | Deutschland | Kreidefelsen auf Rügen | um 1818 |\n| Philipp Otto Runge | Deutschland | Die Tageszeiten / Die Hülsenbeckschen Kinder | 1803–1809 |\n| John Constable | England | Der Heuwagen | 1821 |\n| Théodore Géricault | Frankreich | Das Floß der Medusa | 1819 |\n| Eugène Delacroix | Frankreich | Die Freiheit führt das Volk | 1830 |\n\nSo unterschiedlich sie waren – alle glaubten, dass eine Landschaft oder eine Szene ebenso viel Gefühl tragen kann wie ein Gesicht. Diese Überzeugung prägt die romantische Malerei bis heute.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0879",
+   "baseHash": "f3bfd9ce50f1",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-096",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Paintings that Named a Movement",
+    "titleDe": "Die Bilder, die einer Stilrichtung den Namen gaben",
+    "bodyEn": "On 15 April 1874 a group of painters who had been rejected by the official Paris Salon opened their own exhibition in the former studio of the photographer Nadar on the Boulevard des Capucines. Among the works on show was a small, hastily brushed harbour view of Le Havre at dawn, painted two years earlier by Claude Monet. Asked for a title for the catalogue, he is said to have replied that it could hardly be called a view of Le Havre, so it should simply be called 'Impression'. The critic Louis Leroy seized on the word in the satirical magazine Le Charivari and mocked the whole group as 'impressionists', and the painters, in defiance, adopted the label. Impression, Sunrise thus gave Impressionism its name, and the movement became the first great chapter of modern art. The painting itself, now in the Musée Marmottan Monet in Paris, was stolen in 1985 and recovered in 1990.\n\nSeveral later movements were likewise crystallised by a single canvas.\n\n| Painting | Painter | Year | Movement |\n|---|---|---|---|\n| Impression, Sunrise | Claude Monet | 1872 | Impressionism |\n| A Sunday Afternoon on the Island of La Grande Jatte | Georges Seurat | 1884–86 | Pointillism |\n| The Scream | Edvard Munch | 1893 | Expressionism |\n| Les Demoiselles d'Avignon | Pablo Picasso | 1907 | Cubism |\n| The Persistence of Memory | Salvador Dalí | 1931 | Surrealism |\n\nGeorges Seurat took the Impressionists' interest in light and colour and turned it into a scientific method. In A Sunday Afternoon on the Island of La Grande Jatte, a monumental canvas of Parisians relaxing on the Seine painted between May 1884 and May 1886, he built every form from thousands of tiny dots of pure colour, trusting the viewer's eye to mix them. Critics called the technique pointillism; Seurat himself preferred 'divisionism'.\n\nEdvard Munch painted The Scream in 1893 after an evening walk in Kristiania, today's Oslo, during which, as he wrote, he felt 'an infinite scream passing through nature'. The blood-red sky, the swirling fjord and the skull-like figure with its hands on its cheeks made the picture the emblem of Expressionism, the art of inner feeling rather than outer appearance. Some scientists have suggested that the colours he remembered go back to the spectacular red twilights seen across Europe in 1883–84, after the eruption of Krakatoa in Indonesia filled the upper atmosphere with ash – a popular theory, though far from proven, since the picture was painted a decade later.\n\nIn 1907 Pablo Picasso shocked even his friends with Les Demoiselles d'Avignon, five angular nudes whose faces borrow from Iberian sculpture and African masks. The picture broke with the single viewpoint that had ruled European painting since the Renaissance and opened the way to Cubism, which Picasso developed with Georges Braque over the following years. Kept in the studio for almost a decade, the canvas was first shown to the public at the Salon d'Antin in Paris from 16 to 31 July 1916.\n\nIn 1931 Salvador Dalí gave Surrealism its most famous image with The Persistence of Memory, the small painting of soft pocket watches melting over a branch and over a strange sleeping creature in a Catalan landscape. Dalí described his method as 'paranoiac-critical', a way of turning dreams and obsessions into meticulously realistic paintings. The picture was first exhibited at the Julien Levy Gallery in New York in 1932 and has hung in the Museum of Modern Art since 1934.\n\nMonet's harbour sketch, Seurat's dots, Munch's scream, Picasso's masks and Dalí's clocks: five canvases, five movements, and a shorthand history of modern art.",
+    "bodyDe": "Am 15. April 1874 eröffnete eine Gruppe von Malern, die vom offiziellen Pariser Salon abgelehnt worden waren, im ehemaligen Atelier des Fotografen Nadar am Boulevard des Capucines ihre eigene Ausstellung. Unter den gezeigten Werken war eine kleine, flüchtig gepinselte Hafenansicht von Le Havre im Morgengrauen, zwei Jahre zuvor von Claude Monet gemalt. Nach einem Titel für den Katalog gefragt, soll er geantwortet haben, man könne das Bild kaum eine Ansicht von Le Havre nennen, also solle es einfach „Impression“ heißen. Der Kritiker Louis Leroy griff das Wort in der Satirezeitschrift Le Charivari auf und verspottete die ganze Gruppe als „Impressionisten“, und die Maler übernahmen das Etikett aus Trotz. „Impression, Sonnenaufgang“ gab so dem Impressionismus seinen Namen, und die Bewegung wurde zum ersten großen Kapitel der modernen Kunst. Das Bild selbst, heute im Musée Marmottan Monet in Paris, wurde 1985 gestohlen und 1990 wiedergefunden.\n\nAuch mehrere spätere Bewegungen kristallisierten sich an einer einzigen Leinwand.\n\n| Gemälde | Maler | Jahr | Stilrichtung |\n|---|---|---|---|\n| Impression, Sonnenaufgang | Claude Monet | 1872 | Impressionismus |\n| Ein Sonntagnachmittag auf der Insel La Grande Jatte | Georges Seurat | 1884–86 | Pointillismus |\n| Der Schrei | Edvard Munch | 1893 | Expressionismus |\n| Les Demoiselles d'Avignon | Pablo Picasso | 1907 | Kubismus |\n| Die Beständigkeit der Erinnerung | Salvador Dalí | 1931 | Surrealismus |\n\nGeorges Seurat nahm das Interesse der Impressionisten an Licht und Farbe und machte daraus eine wissenschaftliche Methode. In „Ein Sonntagnachmittag auf der Insel La Grande Jatte“, einer zwischen Mai 1884 und Mai 1886 gemalten monumentalen Leinwand mit Parisern, die sich an der Seine entspannen, baute er jede Form aus Tausenden winziger Punkte reiner Farbe auf und vertraute darauf, dass das Auge des Betrachters sie mischt. Kritiker nannten die Technik Pointillismus; Seurat selbst bevorzugte „Divisionismus“.\n\nEdvard Munch malte „Der Schrei“ 1893 nach einem Abendspaziergang in Kristiania, dem heutigen Oslo, bei dem er, wie er schrieb, „einen unendlichen Schrei durch die Natur gehen“ fühlte. Der blutrote Himmel, der wirbelnde Fjord und die schädelartige Figur mit den Händen an den Wangen machten das Bild zum Sinnbild des Expressionismus, der Kunst des inneren Gefühls statt der äußeren Erscheinung. Manche Wissenschaftler vermuten, die Farben, an die er sich erinnerte, gingen auf die spektakulären roten Dämmerungen zurück, die 1883–84 nach dem Ausbruch des Krakatau in Indonesien über ganz Europa zu sehen waren, als Asche die obere Atmosphäre füllte – eine beliebte, aber keineswegs bewiesene Theorie, denn das Bild entstand ein Jahrzehnt später.\n\n1907 schockierte Pablo Picasso selbst seine Freunde mit „Les Demoiselles d'Avignon“, fünf kantigen Akten, deren Gesichter iberischen Skulpturen und afrikanischen Masken entlehnt sind. Das Bild brach mit dem einen Blickpunkt, der die europäische Malerei seit der Renaissance beherrscht hatte, und öffnete den Weg zum Kubismus, den Picasso in den folgenden Jahren gemeinsam mit Georges Braque entwickelte. Fast ein Jahrzehnt blieb die Leinwand im Atelier; öffentlich gezeigt wurde sie erstmals vom 16. bis 31. Juli 1916 im Pariser Salon d'Antin.\n\n1931 gab Salvador Dalí dem Surrealismus sein berühmtestes Bild mit „Die Beständigkeit der Erinnerung“, dem kleinen Gemälde weicher Taschenuhren, die über einem Ast und über einem seltsamen schlafenden Wesen in einer katalanischen Landschaft zerfließen. Dalí beschrieb seine Methode als „paranoisch-kritisch“, eine Art, Träume und Obsessionen in akribisch realistische Bilder zu verwandeln. Erstmals ausgestellt wurde das Bild 1932 in der New Yorker Julien Levy Gallery; seit 1934 hängt es im Museum of Modern Art.\n\nMonets Hafenskizze, Seurats Punkte, Munchs Schrei, Picassos Masken und Dalís Uhren: fünf Leinwände, fünf Bewegungen und eine Kurzgeschichte der modernen Kunst.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-090",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-164",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-213",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the maiden name of Lisa del Giocondo, the Florentine woman traditionally identified as the sitter of the Mona Lisa?",
+      "de": "Wie lautete der Mädchenname von Lisa del Giocondo, der Florentinerin, die traditionell als Modell der Mona Lisa gilt?",
+      "answerEn": "Lisa Gherardini",
+      "answerDe": "Lisa Gherardini",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1479-06-15",
+       "end": "1542-07-14",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Lisa Gherardini, wife of Francesco del Giocondo and presumed sitter of the Mona Lisa",
+       "labelDe": "Lisa Gherardini, Ehefrau von Francesco del Giocondo und mutmaßliches Modell der Mona Lisa"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Lisa_del_Giocondo",
+       "title": "Lisa del Giocondo – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "On a panel of which kind of wood did Leonardo da Vinci paint the Mona Lisa?",
+      "de": "Auf eine Tafel aus welchem Holz malte Leonardo da Vinci die Mona Lisa?",
+      "answerEn": "poplar",
+      "answerDe": "Pappel",
+      "timeline": {
+       "kind": "creation",
+       "start": "1503",
+       "end": "1506",
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Leonardo paints the Mona Lisa in oil on a poplar panel",
+       "labelDe": "Leonardo malt die Mona Lisa in Öl auf eine Pappelholztafel"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+       "title": "Mona Lisa – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which French king acquired the Mona Lisa after Leonardo da Vinci's death?",
+      "de": "Welcher französische König erwarb die Mona Lisa nach dem Tod Leonardo da Vincis?",
+      "answerEn": "Francis I",
+      "answerDe": "Franz I.",
+      "timeline": {
+       "kind": "event",
+       "start": "1519",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "King Francis I of France acquires the Mona Lisa after Leonardo's death",
+       "labelDe": "König Franz I. von Frankreich erwirbt die Mona Lisa nach Leonardos Tod"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+       "title": "Mona Lisa – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which room of the Louvre has the Mona Lisa hung since 2005?",
+      "de": "In welchem Saal des Louvre hängt die Mona Lisa seit 2005?",
+      "answerEn": "Salle des États",
+      "answerDe": "Salle des États",
+      "timeline": {
+       "kind": "event",
+       "start": "2005-04-06",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Mona Lisa moves to the renovated Salle des États in the Louvre",
+       "labelDe": "Die Mona Lisa zieht in die renovierte Salle des États des Louvre um"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+       "title": "Mona Lisa – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Mona Lisa: Leonardo's Most Famous Portrait",
+    "titleDe": "Mona Lisa: Leonardos berühmtestes Porträt",
+    "bodyEn": "No painting in the world draws more visitors than a portrait of a Florentine merchant's wife, barely 77 by 53 centimetres. Leonardo da Vinci (1452–1519) began it in Florence around 1503 and kept working on it for years, carrying it with him to Milan, Rome and finally France.\n\nThe sitter is traditionally identified as Lisa Gherardini, born in Florence in 1479, who married the silk merchant Francesco del Giocondo. From her married name come the picture's other titles: in Italy it is La Gioconda, and in France, where it has spent five centuries, it is known as La Joconde. The English name, Mona Lisa, simply means \"Madonna Lisa\" – \"my lady Lisa\".\n\nLeonardo did not paint on canvas but in oil on a thin panel of poplar, the usual support in Italy at the time. Over the centuries the wood has warped, and a crack running down from the top edge is watched closely by the Louvre's conservators. The famous smile and the hazy landscape behind the sitter come from his sfumato technique, dozens of almost transparent layers of paint.\n\nSomething is missing from her face. The Mona Lisa today has neither eyebrows nor eyelashes, which led to centuries of speculation about Renaissance fashions for plucking. In 2007, however, the French engineer Pascal Cotte announced that ultra-high-resolution scans showed traces of both: eyebrows and eyelashes had once been painted and probably vanished through over-zealous cleaning. Giorgio Vasari, writing in 1550, had already praised the eyebrows as true to life.\n\nLeonardo himself was famous for more than his art. Vasari describes a handsome, elegant man of extraordinary physical strength, who could bend the ring of an iron door knocker or a horseshoe with his bare hands as if it were lead. In 1516 the old master moved to France at the invitation of King Francis I, who acquired the Mona Lisa after Leonardo's death in 1519. It hung in the royal palaces of Fontainebleau and Versailles before the French Revolution brought it to the Louvre.\n\nThere it became a celebrity, above all after it was stolen in 1911 and missing for more than two years. Since 6 April 2005 the Mona Lisa has hung alone on a free-standing wall in the Salle des États, the largest room of the Louvre, behind bulletproof glass – and opposite Veronese's huge \"Wedding at Cana\", which most of the crowds never turn around to see.\n\n| Fact | Detail |\n|---|---|\n| Painter | Leonardo da Vinci |\n| Painted | from c. 1503 |\n| Support | oil on poplar panel |\n| Sitter | Lisa Gherardini (Lisa del Giocondo) |\n| Lost features | eyebrows and eyelashes |\n| Home | Louvre, Salle des États |",
+    "bodyDe": "Kein Gemälde der Welt zieht mehr Besucher an als das Porträt einer Florentiner Kaufmannsfrau, kaum 77 mal 53 Zentimeter groß. Leonardo da Vinci (1452–1519) begann es um 1503 in Florenz und arbeitete jahrelang daran weiter; er nahm es mit nach Mailand, Rom und schließlich nach Frankreich.\n\nAls Modell gilt traditionell Lisa Gherardini, 1479 in Florenz geboren, die den Seidenhändler Francesco del Giocondo heiratete. Von ihrem Ehenamen stammen die anderen Titel des Bildes: In Italien heißt es La Gioconda, und in Frankreich, wo es seit fünf Jahrhunderten ist, kennt man es als La Joconde. Der Name Mona Lisa bedeutet schlicht „Madonna Lisa“ – „meine Herrin Lisa“.\n\nLeonardo malte nicht auf Leinwand, sondern in Öl auf eine dünne Tafel aus Pappel, damals der übliche Bildträger in Italien. Im Lauf der Jahrhunderte hat sich das Holz verzogen, und ein Riss, der von der Oberkante nach unten läuft, wird von den Restauratoren des Louvre genau beobachtet. Das berühmte Lächeln und die dunstige Landschaft hinter der Dargestellten verdanken sich seiner Sfumato-Technik, Dutzenden fast durchsichtiger Farbschichten.\n\nIn ihrem Gesicht fehlt etwas. Die Mona Lisa hat heute weder Augenbrauen noch Wimpern, was jahrhundertelang Spekulationen über eine Renaissance-Mode des Zupfens nährte. 2007 gab der französische Ingenieur Pascal Cotte jedoch bekannt, dass hochauflösende Scans Spuren von beidem zeigten: Augenbrauen und Wimpern waren einst gemalt und verschwanden wahrscheinlich durch allzu eifriges Reinigen. Schon Giorgio Vasari hatte 1550 die Augenbrauen als lebensecht gelobt.\n\nLeonardo selbst war nicht nur für seine Kunst berühmt. Vasari beschreibt einen schönen, eleganten Mann von außerordentlicher Körperkraft, der den Ring eines eisernen Türklopfers oder ein Hufeisen mit bloßen Händen verbiegen konnte, als wäre es aus Blei. 1516 zog der alte Meister auf Einladung von König Franz I. nach Frankreich, der die Mona Lisa nach Leonardos Tod 1519 erwarb. Sie hing in den königlichen Schlössern von Fontainebleau und Versailles, bevor die Französische Revolution sie in den Louvre brachte.\n\nDort wurde sie zum Star, vor allem nachdem sie 1911 gestohlen worden und mehr als zwei Jahre verschwunden war. Seit dem 6. April 2005 hängt die Mona Lisa allein an einer frei stehenden Wand in der Salle des États, dem größten Saal des Louvre, hinter Panzerglas – gegenüber Veroneses riesiger „Hochzeit zu Kana“, nach der sich die meisten Besucher nie umdrehen.\n\n| Merkmal | Angabe |\n|---|---|\n| Maler | Leonardo da Vinci |\n| Entstehung | ab etwa 1503 |\n| Bildträger | Öl auf Pappelholz |\n| Modell | Lisa Gherardini (Lisa del Giocondo) |\n| Verlorene Züge | Augenbrauen und Wimpern |\n| Ort | Louvre, Salle des États |",
+    "notesEn": "The identification of the sitter as Lisa Gherardini is traditional and widely accepted, but not beyond doubt. Cotte's 2007 findings on the eyebrows and eyelashes come from his own multispectral scans.",
+    "notesDe": "Die Identifizierung des Modells als Lisa Gherardini ist traditionell und weithin anerkannt, aber nicht zweifelsfrei. Cottes Befund von 2007 zu Augenbrauen und Wimpern beruht auf seinen eigenen Multispektralscans."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-185",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-219",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-351",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What material did Chris Ofili attach to his painting \"The Holy Virgin Mary\" (1996), which caused an uproar in New York in 1999?",
+      "de": "Welches Material brachte Chris Ofili auf seinem Gemälde „The Holy Virgin Mary“ (1996) an, das 1999 in New York für einen Aufruhr sorgte?",
+      "answerEn": "elephant dung",
+      "answerDe": "Elefantendung",
+      "timeline": {
+       "kind": "creation",
+       "start": "1996",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Chris Ofili paints The Holy Virgin Mary, with elephant dung on the canvas",
+       "labelDe": "Chris Ofili malt The Holy Virgin Mary, mit Elefantendung auf der Leinwand"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Chris_Ofili",
+       "title": "Chris Ofili – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the small aluminium sculpture by Paul Van Hoeydonck that the Apollo 15 crew left on the Moon in 1971?",
+      "de": "Wie heißt die kleine Aluminiumskulptur von Paul Van Hoeydonck, die die Besatzung von Apollo 15 im Jahr 1971 auf dem Mond zurückließ?",
+      "answerEn": "Fallen Astronaut",
+      "answerDe": "Fallen Astronaut",
+      "timeline": {
+       "kind": "event",
+       "start": "1971-08-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Apollo 15's crew leaves the sculpture Fallen Astronaut on the Moon",
+       "labelDe": "Die Besatzung von Apollo 15 lässt die Skulptur Fallen Astronaut auf dem Mond zurück"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fallen_Astronaut",
+       "title": "Fallen Astronaut – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Italian painter composed portrait heads out of fruit, vegetables, flowers and fish?",
+      "de": "Welcher italienische Maler setzte Porträtköpfe aus Obst, Gemüse, Blumen und Fischen zusammen?",
+      "answerEn": "Giuseppe Arcimboldo",
+      "answerDe": "Giuseppe Arcimboldo",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1527-04-05",
+       "end": "1593-07-11",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Giuseppe Arcimboldo, painter of portrait heads made of fruit and vegetables",
+       "labelDe": "Giuseppe Arcimboldo, Maler von Porträtköpfen aus Obst und Gemüse"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Giuseppe_Arcimboldo",
+       "title": "Giuseppe Arcimboldo – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which illustrator, famous for his Saturday Evening Post covers, painted astronauts for NASA's art programme?",
+      "de": "Welcher Illustrator, berühmt für seine Titelbilder der Saturday Evening Post, malte Astronauten für das Kunstprogramm der NASA?",
+      "answerEn": "Norman Rockwell",
+      "answerDe": "Norman Rockwell",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1894",
+       "end": "1978",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Norman Rockwell, American illustrator and painter",
+       "labelDe": "Norman Rockwell, amerikanischer Illustrator und Maler"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/NASA_Art_Program",
+       "title": "NASA Art Program – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Cobwebs, Tea Bags and the Moon: Curiosities of Art",
+    "titleDe": "Spinnweben, Teebeutel und der Mond: Kuriositäten der Kunst",
+    "bodyEn": "Most paintings are made with oil or watercolour on canvas, wood or paper. But art history keeps a cabinet of curiosities: pictures made from things nobody expected, and art in places nobody expected it.\n\nFew materials are as fragile as the one used by a handful of painters in the Tyrol in the eighteenth and early nineteenth centuries. They collected the webs of spiders and caterpillars, layered them, stretched the gossamer on a frame and used it as a canvas, painting tiny, translucent miniatures of saints and landscapes in watercolour. Cobweb painting was practised mainly in South Tyrol, and fewer than a hundred such pictures survive.\n\nFood has always tempted artists. The Milanese painter Giuseppe Arcimboldo (1527–1593), court painter to the Habsburg emperors in Vienna and Prague, composed portrait heads out of fruit, vegetables, flowers, fish and books; his \"Vertumnus\" turns Emperor Rudolf II into a heap of pears, grapes and pumpkins. Four centuries later the British artist Andy Brown made a portrait of Queen Elizabeth II in 2002 from 1,000 tea bags, stained in different shades and arranged like the pixels of a photograph.\n\nOther materials were chosen to provoke. Chris Ofili, born in Manchester in 1968, attached balls of elephant dung to his canvases. When his \"The Holy Virgin Mary\" (1996), a Black Madonna, was shown in the \"Sensation\" exhibition at the Brooklyn Museum in 1999, New York's mayor Rudy Giuliani called it sick and tried to cut the museum's funding – a dispute that ended up in court.\n\nArt has even left the Earth. In 1962 NASA founded an art programme, inviting painters to record launches and astronauts; among those commissioned over the years were Norman Rockwell, famous for his Saturday Evening Post covers, Robert Rauschenberg and Andy Warhol. And on 2 August 1971 the crew of Apollo 15 placed a small aluminium figure by the Belgian artist Paul Van Hoeydonck on the lunar surface beside a plaque listing astronauts and cosmonauts who had died: \"Fallen Astronaut\" is still the only artwork on the Moon.\n\n| Curiosity | Artist | Date |\n|---|---|---|\n| Painting on cobwebs | Tyrolean painters | 18th–19th century |\n| Heads made of fruit and vegetables | Giuseppe Arcimboldo | 16th century |\n| Portrait of the Queen in tea bags | Andy Brown | 2002 |\n| Madonna with elephant dung | Chris Ofili | 1996 |\n| NASA art programme | Norman Rockwell and others | since 1962 |\n| Sculpture on the Moon | Paul Van Hoeydonck | 1971 |",
+    "bodyDe": "Die meisten Gemälde entstehen mit Öl- oder Wasserfarbe auf Leinwand, Holz oder Papier. Doch die Kunstgeschichte führt ein Kuriositätenkabinett: Bilder aus Dingen, mit denen niemand rechnete, und Kunst an Orten, an denen niemand sie erwartete.\n\nKaum ein Material ist so zerbrechlich wie das, das eine Handvoll Maler in Tirol im 18. und frühen 19. Jahrhundert verwendete. Sie sammelten die Gespinste von Spinnen und Raupen, legten sie in Schichten übereinander, spannten das Gewebe auf einen Rahmen und nutzten es als Leinwand (Malgrund), auf den sie winzige, durchscheinende Miniaturen von Heiligen und Landschaften in Wasserfarben malten. Die Spinnwebmalerei wurde vor allem in Südtirol betrieben, und weniger als hundert solcher Bilder sind erhalten.\n\nEssbares hat Künstler schon immer gereizt. Der Mailänder Maler Giuseppe Arcimboldo (1527–1593), Hofmaler der Habsburgerkaiser in Wien und Prag, setzte Porträtköpfe aus Obst, Gemüse, Blumen, Fischen und Büchern zusammen; sein „Vertumnus“ verwandelt Kaiser Rudolf II. in einen Haufen aus Birnen, Trauben und Kürbissen. Vier Jahrhunderte später schuf der britische Künstler Andy Brown 2002 ein Porträt von Königin Elisabeth II. aus 1.000 Teebeuteln, in verschiedenen Tönen gefärbt und wie die Pixel eines Fotos angeordnet.\n\nAndere Materialien wurden gewählt, um zu provozieren. Chris Ofili, 1968 in Manchester geboren, brachte Kugeln aus Elefantendung auf seinen Leinwänden an. Als seine „The Holy Virgin Mary“ (1996), eine Schwarze Madonna, 1999 in der Ausstellung „Sensation“ im Brooklyn Museum gezeigt wurde, nannte New Yorks Bürgermeister Rudy Giuliani sie krank und wollte dem Museum die Zuschüsse streichen – ein Streit, der vor Gericht endete.\n\nDie Kunst hat sogar die Erde verlassen. 1962 gründete die NASA ein Kunstprogramm und lud Maler ein, Starts und Astronauten festzuhalten; zu den im Lauf der Jahre Beauftragten gehörten Norman Rockwell, berühmt für seine Titelbilder der Saturday Evening Post, Robert Rauschenberg und Andy Warhol. Und am 2. August 1971 stellte die Besatzung von Apollo 15 eine kleine Aluminiumfigur des belgischen Künstlers Paul Van Hoeydonck neben eine Gedenktafel für verstorbene Astronauten und Kosmonauten auf die Mondoberfläche: „Fallen Astronaut“ ist bis heute das einzige Kunstwerk auf dem Mond.\n\n| Kuriosität | Künstler | Zeit |\n|---|---|---|\n| Malerei auf Spinnweben | Tiroler Maler | 18.–19. Jahrhundert |\n| Köpfe aus Obst und Gemüse | Giuseppe Arcimboldo | 16. Jahrhundert |\n| Porträt der Königin aus Teebeuteln | Andy Brown | 2002 |\n| Madonna mit Elefantendung | Chris Ofili | 1996 |\n| Kunstprogramm der NASA | Norman Rockwell und andere | seit 1962 |\n| Skulptur auf dem Mond | Paul Van Hoeydonck | 1971 |",
+    "notesEn": "The card claimed NASA has given artists grants since 2003; its art programme in fact dates from 1962.",
+    "notesDe": "Die Karte behauptete, die NASA vergebe seit 2003 Stipendien an Künstler; ihr Kunstprogramm besteht tatsächlich seit 1962."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-075",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-322",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What are the thin, stick-like figures crowding L. S. Lowry's industrial street scenes popularly called in English?",
+      "de": "Wie werden die dünnen, strichartigen Figuren in L. S. Lowrys Industrieszenen im Englischen volkstümlich genannt?",
+      "answerEn": "matchstick men",
+      "answerDe": "Matchstick Men",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1887-11-01",
+       "end": "1976-02-23",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "L. S. Lowry, painter of the 'matchstick men' of northern England",
+       "labelDe": "L. S. Lowry, Maler der „Matchstick Men“ Nordenglands"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/L._S._Lowry",
+       "title": "L. S. Lowry – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the official title of James McNeill Whistler's 1871 portrait of his mother?",
+      "de": "Wie lautet der offizielle Titel von James McNeill Whistlers Porträt seiner Mutter von 1871?",
+      "answerEn": "Arrangement in Grey and Black No. 1",
+      "answerDe": "Arrangement in Grau und Schwarz Nr. 1",
+      "timeline": {
+       "kind": "creation",
+       "start": "1871",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Whistler paints Arrangement in Grey and Black No. 1, the portrait of his mother",
+       "labelDe": "Whistler malt Arrangement in Grau und Schwarz Nr. 1, das Porträt seiner Mutter"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Whistler%27s_Mother",
+       "title": "Whistler's Mother – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of Thomas Gainsborough's full-length portrait of a youth in a blue satin costume, painted around 1770?",
+      "de": "Wie heißt Thomas Gainsboroughs um 1770 gemaltes ganzfiguriges Porträt eines Jungen in blauem Satinkostüm?",
+      "answerEn": "The Blue Boy",
+      "answerDe": "The Blue Boy",
+      "timeline": {
+       "kind": "creation",
+       "start": "1770",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Thomas Gainsborough paints The Blue Boy",
+       "labelDe": "Thomas Gainsborough malt The Blue Boy"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Blue_Boy",
+       "title": "The Blue Boy – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "To which city did John Singer Sargent move in 1886, after the scandal over his portrait Madame X had dried up his Paris commissions?",
+      "de": "In welche Stadt zog John Singer Sargent 1886, nachdem der Skandal um sein Porträt Madame X seine Pariser Aufträge versiegen ließ?",
+      "answerEn": "London",
+      "answerDe": "London",
+      "timeline": {
+       "kind": "event",
+       "start": "1886",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "John Singer Sargent settles in London",
+       "labelDe": "John Singer Sargent lässt sich in London nieder"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/John_Singer_Sargent",
+       "title": "John Singer Sargent – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Matchstick Men and Madame X: Painters of Britain and America",
+    "titleDe": "Matchstick Men und Madame X: Maler aus Großbritannien und Amerika",
+    "bodyEn": "British and American painting has produced a gallery of pictures that are better known than their painters' full names – and painters whose initials became a brand.\n\nAround 1770 Thomas Gainsborough (1727–1788), the most fashionable portraitist of Georgian England, painted a full-length portrait of a youth in a shimmering blue satin costume of the seventeenth century, a homage to Anthony van Dyck. \"The Blue Boy\" became one of the most famous English paintings; when the American railway magnate Henry E. Huntington bought it in 1921, crowds queued at the National Gallery in London to say goodbye before it left for California.\n\nTwo Americans who made their careers in Europe gave the nineteenth century its best-known portraits. James McNeill Whistler (1834–1903) painted his mother in 1871, seated in profile in a black dress against a grey wall. He insisted that the picture was about tone and composition, not sentiment, and gave it the official title \"Arrangement in Grey and Black No. 1\"; the world calls it \"Whistler's Mother\", and it hangs in the Musée d'Orsay in Paris.\n\nJohn Singer Sargent (1856–1925), born in Florence to American parents, was the rising star of Paris when he painted the Louisiana-born socialite Virginie Amélie Gautreau, wife of the banker Pierre Gautreau, in a black satin dress with her shoulders bare. Shown at the Salon of 1884 as \"Madame X\", the portrait caused a scandal – in its first version one jewelled strap had slipped from her shoulder. Sargent repainted the strap, but his French commissions dried up, and in 1886 he settled in London, where he became the leading society painter of the Edwardian age. He sold \"Madame X\" to the Metropolitan Museum of Art in New York in 1916.\n\nFar from the salons, Laurence Stephen Lowry (1887–1976), who signed his work L. S. Lowry, painted the mills, chimneys and terraced streets of industrial Lancashire around his home in Pendlebury. He worked for decades as a rent collector and painted in the evenings; his crowds of thin, hurrying figures are popularly known as \"matchstick men\", a phrase that became a number-one hit in the 1978 song \"Matchstalk Men and Matchstalk Cats and Dogs\". Lowry turned down more honours than any other British artist, a knighthood among them.\n\n| Painting or motif | Painter | Year |\n|---|---|---|\n| The Blue Boy | Thomas Gainsborough | c. 1770 |\n| Arrangement in Grey and Black No. 1 | James McNeill Whistler | 1871 |\n| Madame X | John Singer Sargent | 1884 |\n| Matchstick men | L. S. Lowry | 20th century |",
+    "bodyDe": "Die britische und amerikanische Malerei hat eine Galerie von Bildern hervorgebracht, die bekannter sind als die vollen Namen ihrer Maler – und Maler, deren Initialen zur Marke wurden.\n\nUm 1770 malte Thomas Gainsborough (1727–1788), der gefragteste Porträtist im georgianischen England, das ganzfigurige Bildnis eines Jungen in einem schimmernden blauen Satinkostüm des 17. Jahrhunderts, eine Hommage an Anthonis van Dyck. „The Blue Boy“ („Der blaue Knabe“) wurde zu einem der berühmtesten englischen Gemälde; als der amerikanische Eisenbahnmagnat Henry E. Huntington es 1921 kaufte, standen die Menschen in der Londoner National Gallery Schlange, um sich zu verabschieden, bevor es nach Kalifornien ging.\n\nZwei Amerikaner, die ihre Karriere in Europa machten, schufen die bekanntesten Porträts des 19. Jahrhunderts. James McNeill Whistler (1834–1903) malte 1871 seine Mutter, im Profil sitzend, in schwarzem Kleid vor einer grauen Wand. Er bestand darauf, dass es im Bild um Ton und Komposition gehe, nicht um Gefühl, und gab ihm den offiziellen Titel „Arrangement in Grau und Schwarz Nr. 1“ („Arrangement in Grey and Black No. 1“); die Welt nennt es „Whistlers Mutter“, und es hängt im Pariser Musée d'Orsay.\n\nJohn Singer Sargent (1856–1925), in Florenz als Sohn amerikanischer Eltern geboren, war der aufsteigende Stern von Paris, als er die aus Louisiana stammende Salondame Virginie Amélie Gautreau, Ehefrau des Bankiers Pierre Gautreau, in einem schwarzen Satinkleid mit nackten Schultern malte. Im Salon von 1884 als „Madame X“ gezeigt, löste das Porträt einen Skandal aus – in der ersten Fassung war ein juwelenbesetzter Träger von ihrer Schulter gerutscht. Sargent malte den Träger um, doch seine französischen Aufträge versiegten, und 1886 ließ er sich in London nieder, wo er zum führenden Gesellschaftsmaler der edwardianischen Zeit wurde. „Madame X“ verkaufte er 1916 an das Metropolitan Museum of Art in New York.\n\nFern der Salons malte Laurence Stephen Lowry (1887–1976), der seine Werke mit L. S. Lowry signierte, die Fabriken, Schornsteine und Reihenhausstraßen des industriellen Lancashire rund um seinen Wohnort Pendlebury. Jahrzehntelang arbeitete er als Mieteneintreiber und malte abends; seine Mengen dünner, eilender Figuren sind volkstümlich als „Matchstick Men“ (Streichholzmännchen) bekannt, ein Ausdruck, der 1978 mit dem Lied „Matchstalk Men and Matchstalk Cats and Dogs“ zum Nummer-eins-Hit wurde. Lowry lehnte mehr Ehrungen ab als jeder andere britische Künstler, darunter den Ritterschlag.\n\n| Gemälde oder Motiv | Maler | Jahr |\n|---|---|---|\n| The Blue Boy | Thomas Gainsborough | um 1770 |\n| Arrangement in Grau und Schwarz Nr. 1 | James McNeill Whistler | 1871 |\n| Madame X | John Singer Sargent | 1884 |\n| Matchstick Men | L. S. Lowry | 20. Jahrhundert |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-049",
+   "category": 4,
+   "domain": "art",
+   "sub": "design",
+   "why": "Provenance research is art-world vocabulary, not painting; its natural home is a1791 \"Replica, Copy, Provenance: The Vocabulary of the Art World\" (art/design), where f08955 asks the inverse question (the term) rather than this one."
+  },
+  {
+   "card": "tp-057",
+   "category": 4,
+   "domain": "art",
+   "sub": "painting",
+   "why": "Its answer \"Hieronymus Bosch\" repeats fact f05051 in a1011 (an article may not hold the same answer twice). Alias it to f05051 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-160",
+   "category": 4,
+   "domain": "art",
+   "sub": "painting",
+   "why": "Its answer \"Michelangelo\" repeats fact f03672 in a0735 (an article may not hold the same answer twice). Alias it to f03672 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-245",
+   "category": 4,
+   "domain": "art",
+   "sub": "painting",
+   "why": "Its answer \"Titian\" repeats fact f10151 in a2031 (an article may not hold the same answer twice). Alias it to f10151 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

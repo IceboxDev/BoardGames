@@ -1,0 +1,249 @@
+{
+ "article": "a1388",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ouroboros",
+   "title": "Ouroboros – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:18.345Z",
+   "snapshot": "8980c72699d11c11750857ff2fc0107f245e0dc5248d4b608ece0bb943bf703e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Zohar",
+   "title": "Zohar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:18.594Z",
+   "snapshot": "04ba09fbafc0d057c8bb8494aca3a98646dd57e610fc6ab75d226638e79f5ecf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Taijitu",
+   "title": "Taijitu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:19.234Z",
+   "snapshot": "acafaa02d10dffafb3ca24fa54111e10ff37d44cd017b84bb71b1bbea46c813b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Zodiac",
+   "title": "Zodiac – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:52.049Z",
+   "snapshot": "ea5da1c4e6322a1764b6ee3c565bd2110dec0b58aeb3ac294c3c3c953ced9d54"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/James_Anderson_(Freemason)",
+   "title": "James Anderson (Freemason) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:20.244Z",
+   "snapshot": "aa29248ebe9bc80a2da4ec949b5870a0ed30aaba1bc259c632c4e9178d00f645"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Kabbalah",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:21.452Z",
+   "snapshot": "9cd7883feb785f6496dbe05ed96dbc7b35604b4a62743dbe4422cf34cb65f58f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "alchemy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06937",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kabbalah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Taoism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "astrology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Freemasonry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:17.950Z",
+   "target": "f06936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was adopted as a symbol in Gnosticism, Hermeticism, and alchemy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “alchemy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:17.950Z",
+   "target": "f06937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "adopted by the Talmud, that it would not contain the names of rabbis who lived at a later period than that of ben Yochai; he claims that if the Kabbalah were a revealed doctrine, there would have been no divergence of opinion among the Kabbalists concerning the mystic interpretation of the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kabbalah” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:17.950Z",
+   "target": "f06938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "His brief text synthesized aspects of Chinese Buddhism and Taoism with metaphysical discussions in the Yijing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taoism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:17.950Z",
+   "target": "f06939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In Western astrology, and formerly astronomy, the time of each sign is associated with different attributes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “astrology” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:17.950Z",
+   "target": "f06940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anderson is best known for his association with Freemasonry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Freemasonry” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a0855",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Amalienburg",
+   "title": "Amalienburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:45.433Z",
+   "snapshot": "ca42ce61fbf551e06f5e2fcd2304b3556166628a4a028f0735710e658c89e938"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Basilica_of_Saint-Denis",
+   "title": "Basilica of Saint-Denis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:46.589Z",
+   "snapshot": "d91b6d27e3b5d0be6498ace0e08bbc08b44ceffd9c8bdede89763c283c473c39"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/International_Exhibition_of_Modern_Decorative_and_Industrial_Arts",
+   "title": "International Exhibition of Modern Decorative and Industrial Arts – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:44.924Z",
+   "snapshot": "7f966b688feb03e4be1a7e8ab1362c48a899d411d2c6f66644315e7df4abc9a7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Baroque",
+   "title": "Baroque",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:25.017Z",
+   "snapshot": "361eccbb194f87ab42bbabcb8274a339404e4726fe171497cd1b95d21232c131"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rococo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:36.548Z",
+   "snapshot": "5d8bf38a400a5dd5cab5ddb459fdc80197be0ba1a8d579f0e0169b3e8b5594a9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rococo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gothic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Art Deco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Baroque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; transcript ppm-079"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:55.378Z",
+   "target": "f04271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was designed by François de Cuvilliés in Rococo style and constructed between 1734 and 1739 for Elector Karl Albrecht and later Holy Roman Emperor Charles VII and his wife, Maria Amalia of Austria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rococo” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:55.378Z",
+   "target": "f04273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The building is of singular importance historically and architecturally because its choir, completed in 1144, is widely considered the first structure to employ all of the elements of Gothic architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gothic” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:55.378Z",
+   "target": "f04275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The modern style presented at the exposition later became known as \"Art Deco\", after the exposition's name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Art Deco” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:55.378Z",
+   "target": "f25525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Baroque (UK:  bə-ROK, US:  bə-ROHK, French: [baʁɔk]) is a Western style of architecture, music, dance, painting, sculpture, poetry, and other arts that flourished from the early 1600s until the 1750s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:55.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baroque” is on the snapshot of s4"
+  }
+ ]
+}

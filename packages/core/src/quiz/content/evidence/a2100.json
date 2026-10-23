@@ -1,0 +1,669 @@
+{
+ "article": "a2100",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Titanic",
+   "title": "Titanic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:13.749Z",
+   "snapshot": "36043a706303124561cb6a1bfc8d683bd7eeb1ed1ebafcc2ce31e3a4aff8ce3f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/HMS_Victory",
+   "title": "HMS Victory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:26.252Z",
+   "snapshot": "b88fa02d9fc5df7afc81dcb5fdfefd611faac8357af7f75d85eb6a0e8f9920ce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/USS_Enterprise_(CVN-65)",
+   "title": "USS Enterprise (CVN-65) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:26.981Z",
+   "snapshot": "daa5838d9f6a67e34f19d347c32b245c672889c38e39f30c203a7dadae8f48f4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Scuttling_of_the_German_fleet_at_Scapa_Flow",
+   "title": "Scuttling of the German fleet at Scapa Flow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:27.887Z",
+   "snapshot": "5096764b9c68599fdcb5a73e605b95029468ce6ff996dd874d6d651ce39098f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/MS_Selandia",
+   "title": "MS Selandia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:28.779Z",
+   "snapshot": "c30c1bc3823c1aad9ba7b07bef3013d3681496004278946101ca62b80517e2ed"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/MS_Deutschland_(1998)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:29.796Z",
+   "snapshot": "695a6af96951bd5264fa3bb8bb7889c867e1907a4cafd970dbafba7f634e239c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ship_prefix",
+   "title": "Ship prefix – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:36.408Z",
+   "snapshot": "9d0bb49fdfdd429b15c3633f17fbb5b6a0cc7b22bc74c74f14997932c89458ce"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/hms",
+   "title": "HMS – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:35.831Z",
+   "snapshot": "1732746108d51572b37fa904abe1da0733476d93452311db7d96d95616f722a2"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/uss",
+   "title": "USS – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:36.719Z",
+   "snapshot": "35b06825300a39bd28287c810d5234dfa028d20361a8f700423a157fd8e642e9"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/His_Majesty%27s_Ship",
+   "title": "His Majesty's Ship – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:37.405Z",
+   "snapshot": "f3f4759a124a5636c3b926c8b412d29baf605dd1b73229856d552a530d6011d3"
+  },
+  "s11": {
+   "url": "https://www.rtvslo.si/prva-svetovna-vojna/avstro-ogrska-vojna-mornarica-razvoj-bojnih-ladij/345241",
+   "title": "Avstro-ogrska vojna mornarica: razvoj bojnih ladij",
+   "publisher": "RTV Slovenija",
+   "kind": "press",
+   "lang": "sl",
+   "retrievedAt": "2026-10-23T12:44:37.081Z",
+   "snapshot": "b17e1d287591c202f8f2778ca8a9a09c1b7d6a8decdb094c3167815d18fa907f"
+  },
+  "s12": {
+   "url": "https://www.naval-encyclopedia.com/ww1/kaiserliche-marine.php",
+   "title": "Kaiserliche Marine (1871–1918)",
+   "publisher": "Naval Encyclopedia",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:37.230Z",
+   "snapshot": "dac07e981394f9490977a0804d324288bade520de58c03ae03dbfd29876bf62f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Royal Mail Ship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His Majesty's Ship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "United States Ship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Seiner Majestät Schiff",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "motor ship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:22.671Z",
+   "target": "f10496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Under the designation of Royal Mail Ship (RMS), Titanic carried mail under contract with the Royal Mail (and also for the United States Post Office Department).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Royal Mail Ship” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:22.671Z",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His Majesty's Ship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“His Majesty's Ship”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:22.671Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "United States Ship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“United States Ship”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:22.671Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Seiner Majestät Schiff",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Seiner Majestät Schiff”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:22.671Z",
+   "target": "f10500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Selandia (after the Latin name for the Danish island of Sjælland) was the name of three ships of the Danish East Asiatic Company, the best known of which, the first MS Selandia of 1912, was the most advanced ocean-going diesel motor ship of her time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “motor ship” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:49:27Z",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "which has usually used the prefix \"HMS\", standing for \"His/Her Majesty's Ship\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:49:28Z",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "abbreviation for His Majesty's Ship, used when a king is ruling, or Her Majesty's Ship, used when a queen is ruling",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:49:29Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "which made \"United States Ship\" (USS) the standard signifier for USN ships on active commissioned service.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:49:31Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for United States Ship: used before the names of ships in the US navy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:49:32Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "German for 'His Majesty's Ship'",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Section Germany: 'Seiner Majestät Schiff … abbreviated to S.M.S. or SMS', used by the Prussian, Imperial German and Austro-Hungarian navies."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:49:33Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "kar je v nemškem jeziku predstavljalo okrajšavo za »Seiner Majestät Schiff«",
+     "quoteLang": "sl",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "About the Austro-Hungarian navy's SMS prefix (same expansion as the Imperial German Navy)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:49:34Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "German ships names were preceded by the title “SMS” for “Seiner Majestät Schiffe”, equivalent to the British “HMS”.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gives the plural 'Schiffe'; the standard singular form is 'Seiner Majestät Schiff'."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "which has usually used the prefix \"HMS\", standing for \"His/Her Majesty's Ship\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "abbreviation for His Majesty's Ship, used when a king is ruling, or Her Majesty's Ship, used when a queen is ruling",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "which made \"United States Ship\" (USS) the standard signifier for USN ships on active commissioned service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for United States Ship: used before the names of ships in the US navy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "German for 'His Majesty's Ship'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "kar je v nemškem jeziku predstavljalo okrajšavo za »Seiner Majestät Schiff«",
+     "quoteLang": "sl",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "German ships names were preceded by the title “SMS” for “Seiner Majestät Schiffe”, equivalent to the British “HMS”.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s12"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "abbreviation for His Majesty's Ship, used when a king is ruling, or Her Majesty's Ship, used when a queen is ruling: used before the names of ships in the British navy:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “His Majesty's Ship” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "549 of 1907, which made \"United States Ship\" (USS) the standard signifier for USN ships on active commissioned service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “United States Ship” is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for United States Ship: used before the names of ships in the US navy:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “United States Ship” is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Seiner Majestät Schiff (pronounced [ˈzaɪnɐ majɛsˈtɛːt ʃɪf]; German for 'His Majesty's Ship'; abbreviated to S.M.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Seiner Majestät Schiff” is on the snapshot of s10"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:09.331Z",
+   "target": "f10499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "SMS Viribus Unitis), kar je v nemškem jeziku predstavljalo okrajšavo za »Seiner Majestät Schiff« in v slovenščini pomeni »ladja Njegovega veličanstva«.",
+     "quoteLang": "sl",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:09.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Seiner Majestät Schiff” is on the snapshot of s11"
+  }
+ ]
+}

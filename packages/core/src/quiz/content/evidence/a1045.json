@@ -1,0 +1,328 @@
+{
+ "article": "a1045",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Augsburger_Puppenkiste",
+   "title": "Augsburger Puppenkiste – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:13.756Z",
+   "snapshot": "205227cbb62a9300d78657fb2519bdf17d91b9fa878ec07653b2e09e1518af83"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Salzburger_Marionettentheater",
+   "title": "Salzburger Marionettentheater – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:14.741Z",
+   "snapshot": "bb2f1e50fdf711edbd075a2b6733c75827fca49c737c5dca9bedeff0e093ed98"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Burgtheater",
+   "title": "Burgtheater – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:14.388Z",
+   "snapshot": "e487bde9ee201b557885bf941ce026d1c38c455eb4e5d82c993dd84bc5094983"
+  },
+  "s4": {
+   "url": "https://www.visit-luebeck.com/poi/luebeck-water-marionette-theater",
+   "title": "Lübeck Water Marionette Theater",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:15.040Z",
+   "snapshot": "dcaefd064a7a99213c293fd71438c96ab52050bd835d8d59941229c56ccc5ace"
+  },
+  "s5": {
+   "url": "https://www.luebeck-tourismus.de/altstadt/poi/luebecker-wasser-marionetten-theater",
+   "title": "Lübecker Wasser Marionetten Theater",
+   "publisher": "Lübeck und Travemünde Marketing",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:30.327Z",
+   "snapshot": "f5aaee23fecc02b404cd1bcdf7cbcc1770af1ca3859f48852fda017c952a47f2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Lübeck",
+   "title": "Lübeck – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:30.572Z",
+   "snapshot": "51d25f5e564b8bdd3183f94c58e971ebac00f4dd940606c805e9e070444d39c1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Augsburger Puppenkiste",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Salzburger Marionettentheater",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Burgtheater",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In a water tank",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-345"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:24.517Z",
+   "target": "f05221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Augsburger Puppenkiste ist ein Marionettentheater in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augsburger Puppenkiste” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:24.517Z",
+   "target": "f05222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Salzburger Marionettentheater ist ein seit 1913 bestehendes Figurentheater, das seinen Sitz seit 1971 in der Schwarzstraße 24 in Salzburg hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salzburger Marionettentheater” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:24.517Z",
+   "target": "f05224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Burgtheater ist ein Schauspielhaus an der Ringstraße in der österreichischen Hauptstadt Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.517Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burgtheater” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:24.517Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In a water tank",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“In a water tank”, “In einem Wasserbecken”, “в бассейне с водой”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:05:00Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The audience sits under the water surface and experiences the action from here without getting wet themselves.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:05:02Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "spielen Künstler:innen in speziellen Theateraquarien mit den eigens entworfenen Wasser Marionetten",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same publisher as the English page; 'Theateraquarien' = theatre tanks."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:05:03Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "das Lübecker Unterwassermarionettentheater",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Independent mention of the underwater marionette theatre among Lübeck's stages."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:59.933Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The audience sits under the water surface and experiences the action from here without getting wet themselves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:59.933Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:59.933Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "spielen Künstler:innen in speziellen Theateraquarien mit den eigens entworfenen Wasser Marionetten",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:59.933Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:59.933Z",
+   "target": "f13185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "das Lübecker Unterwassermarionettentheater",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:59.933Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  }
+ ]
+}

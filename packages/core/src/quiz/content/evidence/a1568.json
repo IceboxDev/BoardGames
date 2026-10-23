@@ -1,0 +1,288 @@
+{
+ "article": "a1568",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Yom_Kippur_War",
+   "title": "Yom Kippur War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:56.359Z",
+   "snapshot": "43120a1082c653e715f07847ee5299c5b15b0052471b81cc58fc19aa96e94160"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sarajevo_Haggadah",
+   "title": "Sarajevo Haggadah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:56.921Z",
+   "snapshot": "e693a5b3fac606e9e6c37f4fb1dfbf2fce8317ccef2f58f37eae2c560d790f16"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rosh_Hashanah",
+   "title": "Rosh Hashanah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:58.040Z",
+   "snapshot": "7f5ed72d14ab2f6e742098f0999ff55e073cc0de69556339e645faa0441a3d4d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Shofar",
+   "title": "Shofar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:58.995Z",
+   "snapshot": "3d1c2e6b2c00271470621c250bfaf8be52a4f549254dc581622fd2bef0ee6915"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Shlomo_Goren",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:00.084Z",
+   "snapshot": "819a5308fd3dd9779d576de14a0386fcda352e0d511d4b8bc5d517bac8d0a77a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Passover_Seder",
+   "title": "Passover Seder",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:01.104Z",
+   "snapshot": "46c9630c7a2314c6ea09a96f5c9d3e29a3e8b81db23812909a336781f98b931e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yom Kippur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Passover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosh Hashanah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "shofar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "shofar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 19"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:44.956Z",
+   "target": "f07836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Yom Kippur War, also known as the 1973 Arab–Israeli War, the fourth Arab–Israeli War, the October War, or the Ramadan War (6–25 October 1973), was fought between Israel and a coalition of Arab states led by Egypt and Syria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yom Kippur” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:44.956Z",
+   "target": "f07837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sarajevo Haggadah is an illuminated manuscript that contains the illustrated traditional text of the Passover Haggadah which accompanies the Passover Seder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Passover” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:44.956Z",
+   "target": "f07838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosh Hashanah (pronounced [ˌʁoʃ haʃaˈna]; Hebrew: רֹאשׁ הַשָּׁנָה, romanized: rôš haššānāh, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosh Hashanah” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:44.956Z",
+   "target": "f20600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A shofar ( shoh-FAR; from שׁוֹפָר, pronounced [ʃoˈfar] ) is an ancient musical horn, typically a ram's horn, used for Jewish ritual purposes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “shofar” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:44.956Z",
+   "target": "f20600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Shortly afterwards, blowing a shofar and carrying a Torah scroll, he held the first Jewish prayer session at the Western Wall since 1948.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “shofar” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:44.956Z",
+   "target": "f20601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Passover Seder is a ritual feast at the beginning of the Jewish holiday of Passover.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seder” is on the snapshot of s6"
+  }
+ ]
+}

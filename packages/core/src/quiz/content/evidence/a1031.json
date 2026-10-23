@@ -1,0 +1,452 @@
+{
+ "article": "a1031",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/European_eel",
+   "title": "European eel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:30.056Z",
+   "snapshot": "5dc34265e4267798979abbdd29b73f1f0301cb1c8b9cc8408fe41b9b90cce651"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fugu",
+   "title": "Fugu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:31.176Z",
+   "snapshot": "ddf5219983dfad6787f280d281139fa499391edb3a91108d20d30c09b1d49dd8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Fugu",
+   "title": "Fugu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:29.290Z",
+   "snapshot": "8fbf4ee92c57cb3f1143c4391b42f3d0d9637ec8f6c30569509e7cec577aee7a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lesser_weever",
+   "title": "Lesser weever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:32.041Z",
+   "snapshot": "9e7999b945b5fd02b6dfef8d612233d2c645b4a65a004d1e1d755feec6938915"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Red_lionfish",
+   "title": "Red lionfish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:33.138Z",
+   "snapshot": "7f86bc7fc3f67f643bd5d7de36d9f93339089c1850fa367dcc559416ede64da5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stonefish",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:34.075Z",
+   "snapshot": "ccd1d4e66f4aeff870466527df36ab44a4f06cb1e6bf7db1ec9ff3aa25ab1dbf"
+  },
+  "s7": {
+   "url": "https://www.fishbase.se/summary/1364",
+   "title": "Echiichthys vipera, Lesser weever – FishBase",
+   "publisher": "FishBase",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:20.993Z",
+   "snapshot": "5f36acba13fcdf3b3c53c934dcbccac4c2a26073cf7abe5fc554d7003c4096c7"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Petermännchen",
+   "title": "Petermännchen – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:19.884Z",
+   "snapshot": "d5b7205fe903bc877c9d3db06d6615cdaa19fcee5745e9d228137118937a8b67"
+  },
+  "s9": {
+   "url": "http://www.glaucus.org.uk/weever2.htm",
+   "title": "Beware the Weever fish! – Andy Horton, British Marine Life Study Society",
+   "publisher": "British Marine Life Study Society (glaucus.org.uk)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:20.088Z",
+   "snapshot": "b8892c246154a2a996d5da23c79f46f156471e88988f05c1197523bbc1bc48d0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "eel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pufferfish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kugelfisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-191"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "weever",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "lionfish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:22.984Z",
+   "target": "f05151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The European eel (Anguilla anguilla) is a species of eel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “eel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:22.984Z",
+   "target": "f05152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pronounced [po̞ɡʌ̹]) or bok (복, pronounced [po̞k̚]) in Korean, and hétún (河豚; 河魨, pronounced [xɤ˧˥ tʰu̯ən˧˥]) in Standard Modern Chinese refers to pufferfish, normally of the genus Takifugu, Lagocephalus, or Sphoeroides, or a porcupinefish of the genus Diodon, or a dish prepared from these fish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pufferfish” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:22.984Z",
+   "target": "f05152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fugu (japanisch 河豚) ist eine – besonders in Japan – beliebte, asiatische Spezialität, die aus Kugelfisch besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kugelfisch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:22.984Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The lesser weever (Echiichthys vipera) is a venomous weever of the family Trachinidae, in the order Perciformes, and the class Actinopterygii.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “weever” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:22.984Z",
+   "target": "f05155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The red lionfish (Pterois volitans) is a venomous coral reef fish in the family Scorpaenidae, order Scorpaeniformes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lionfish” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:56:47Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Considered as the most dangerous of the European weevers, both for its poison and for its frequent occurrence very near to beaches",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports weevers as Europe's dangerous venomous sand-burying fish; FishBase ranks within weevers, not all European fish"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:56:49Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Sie zählen zu den gefährlichsten europäischen Gifttieren.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "superlative softened: 'among the most dangerous'"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:56:51Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "which lie half buried in sand and have venomous dorsal and opercular spines",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:57.375Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Considered as the most dangerous of the European weevers, both for its poison and for its frequent occurrence very near to beaches",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:57.375Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Sie zählen zu den gefährlichsten europäischen Gifttieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:57.375Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "which lie half buried in sand and have venomous dorsal and opercular spines",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:57.375Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Echiichthys vipera, Lesser weever : fisheries, gamefish",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “weever” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:57.375Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Petermännchen (Trachinidae) sind eine Familie von Fischen aus der Ordnung der Barschartigen (Perciformes), die überwiegend im östlichen Atlantik, im Mittelmeer und im Schwarzen Meer verbreitet sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Petermännchen” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:57.375Z",
+   "target": "f05154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "have on record after someone being stung by a Weever occurred as long ago",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “weever” is on the snapshot of s9"
+  }
+ ]
+}

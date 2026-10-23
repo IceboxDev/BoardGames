@@ -1,0 +1,410 @@
+{
+ "article": "a2720",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/VO2_max",
+   "title": "VO2 max",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:23.365Z",
+   "snapshot": "0f8ae3025029622da58fb7a8174862c48100b006f90e9edde6e48782f77fa771"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Archibald_Hill",
+   "title": "Archibald Hill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:24.353Z",
+   "snapshot": "e2564b2e8e447399963e81dfd40c923ed53e907d363469237e25062b42ec2d8f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Heart_rate",
+   "title": "Heart rate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:25.403Z",
+   "snapshot": "d83fe97e488faa5e30569a3c1a238c1ec9c6799b42b353835a1cb8a35b8605bb"
+  },
+  "s4": {
+   "url": "https://www.nobelprize.org/prizes/medicine/1922/summary/",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:22.465Z",
+   "snapshot": "02163d82c021cb4267e9281e054c80906826b11ed494d58ca7d337ba6d99971a"
+  },
+  "s5": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13491073/",
+   "title": "Low VO2peak: An Underappreciated Metric in Predicting Future Chronic Disease, Cardiovascular Events, and Heightened Mortality (2026)",
+   "publisher": "PMC (peer-reviewed review)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:50.261Z",
+   "snapshot": "89fd03219e2be41a9fd13724273f346985e9c8270961fc058a78329e3b13fe7a"
+  },
+  "s6": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8362801/",
+   "title": "HR Max Prediction Based on Age, Body Composition, Fitness Level, Testing Modality and Sex in Physically Active Population (Front Physiol 2021)",
+   "publisher": "Frontiers in Physiology / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:51.238Z",
+   "snapshot": "67be019663f07c0655cd8fd5f138a3974acba215af759de0651038dd1df0a791"
+  },
+  "s7": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:11153730%20AND%20SRC:MED&resultType=core&format=xml",
+   "title": "Age-predicted maximal heart rate revisited (Tanaka, Monahan & Seals, JACC 2001) – Europe PMC record",
+   "publisher": "Europe PMC (EMBL-EBI)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:50.356Z",
+   "snapshot": "c32a9219f4605c90dad9cece9c06868cd2227901244535fc3b94a596da756314"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "VO2 max",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript pp-031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Archibald Vivian Hill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "millilitres per kilogram per minute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "220 minus age",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:03.073Z",
+   "target": "f25419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "V̇O2 max (also maximal oxygen consumption, maximal oxygen uptake or maximal aerobic capacity) is the maximum rate of oxygen consumption attainable during physical exertion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “VO2 max” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:03.073Z",
+   "target": "f25420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Archibald Vivian Hill (26 September 1886 – 3 June 1977), better known to friends and colleagues as A.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archibald Vivian Hill” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:03.073Z",
+   "target": "f25422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "millilitres per kilogram per minute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“millilitres per kilogram per minute”, “Milliliter pro Kilogramm und Minute”, “миллилитры на килограмм в минуту”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:03.073Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "220 minus age",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“220 minus age”, “220 minus Lebensalter”, “220 минус возраст”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:22:24Z",
+   "target": "f25422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "when expressed in milliliters of oxygen per kilogram of body weight per minute (mL/kg/min)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:22:26Z",
+   "target": "f25422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "as a relative rate in (for example) millilitres of oxygen per kilogram of the body mass per minute (e.g., mL/(kg·min)).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:22:27Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The most simple and widely used is the 220-age formula, the origin of which is unclear, but first appeared in scientific writing in a review by Fox and Haskell (1970)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:22:28Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The age-predicted HRmax equation (i.e., 220 - age) is commonly used as a basis for prescribing exercise programs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:22:30Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it is widely thought to have been devised in 1970 by Dr. William Haskell and Dr. Samuel Fox.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Some authors date the formal publication to Fox, Naughton & Haskell 1971 (PMC12408077); the wording's 'widely attributed ... 1970' stands."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:50.442Z",
+   "target": "f25422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "when expressed in milliliters of oxygen per kilogram of body weight per minute (mL/kg/min)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:50.442Z",
+   "target": "f25422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "as a relative rate in (for example) millilitres of oxygen per kilogram of the body mass per minute (e.g., mL/(kg·min)).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:50.442Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The most simple and widely used is the 220-age formula, the origin of which is unclear, but first appeared in scientific writing in a review by Fox and Haskell (1970)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:50.442Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The age-predicted HRmax equation (i.e., 220 - age) is commonly used as a basis for prescribing exercise programs",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:50.442Z",
+   "target": "f25423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it is widely thought to have been devised in 1970 by Dr. William Haskell and Dr. Samuel Fox.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  }
+ ]
+}

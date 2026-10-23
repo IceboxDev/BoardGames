@@ -1,0 +1,456 @@
+{
+ "article": "a0181",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Urfaust",
+   "title": "Urfaust – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:02.660Z",
+   "snapshot": "a8658c4606939c10233fc0996d36a169cb4e2dd283585b5ed8378bd7544cd9ee"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Susanna_Margaretha_Brandt",
+   "title": "Susanna Margaretha Brandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:03.629Z",
+   "snapshot": "59ef35fdd159285dcceb69cd60f94998abd320ed589fc256337ae9f23c4e2ffe"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Fauststoff",
+   "title": "Fauststoff – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:05.097Z",
+   "snapshot": "ce2f259ee0895b2bf110d1c2b7290d4f550430af0882df5f2b20d758698f1e21"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Faust_(opera)",
+   "title": "Faust (opera) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:06.391Z",
+   "snapshot": "2d01dc4325dd21fd9063b00a76cf3bc1c0c812ef4fcf2cb492215331ebd3a9ab"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gustaf_Gr%C3%BCndgens",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:05.683Z",
+   "snapshot": "38b57d50fbc96804be0d4e2054feb0268b25edd5e2d5eb01d5ae40354b16cedb"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/cache/epub/2229/pg2229-images.html",
+   "title": "Faust: Der Tragödie erster Teil by Johann Wolfgang von Goethe",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:24.791Z",
+   "snapshot": "809b125546e3f221ba49c16544d860aaff282861230120426b7ef5922966ef46"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Gretchenfrage",
+   "title": "Gretchenfrage – Rechtschreibung, Bedeutung, Definition, Herkunft",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:24.672Z",
+   "snapshot": "a928dbe8585cb1f60d85dcee0c1e69e2cf7fd52c720efcabf0a93430e667ef00"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Gretchenfrage",
+   "title": "Gretchenfrage",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:03:12Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nun sag, wie hast du's mit der Religion?",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Margarete",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mephistopheles",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wagner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Valentin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:06.001Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nun sag, wie hast du's mit der Religion?",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Nun sag, wie hast du's mit der Religion?”, “Now tell me, how do you feel about religion?”, “Скажи, как ты относишься к религии?”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:06.001Z",
+   "target": "f00902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Margarete",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Margarete”, “Маргарита”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:06.001Z",
+   "target": "f00903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Fauststoff, genannt auch Faust-Sage, die Geschichte des Doktor Johann Faust und seines Pakts mit Mephistopheles, gehört zu den am weitesten verbreiteten Stoffen in der europäischen Literatur seit dem 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mephistopheles” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:06.001Z",
+   "target": "f00904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Alexander von Reichlin-Meldegg: Die deutschen Volksbücher von Johann Faust, dem Schwarzkünstler, und Christoph Wagner, dem Famulus ....",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wagner” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:06.001Z",
+   "target": "f00905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1864, when the opera was given at the same venue in English, Gounod took a theme from the prelude to the opera and wrote a new aria for the star baritone Charles Santley in the role of Valentin, 'Even bravest heart may swell' (with words by Henry Chorley).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valentin” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:03:07Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MARGARETE.\nNun sag, wie hast du’s mit der Religion?\nDu bist ein herzlich guter Mann,",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:03:10Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "nach der von Gretchen an Faust gerichteten Frage „Nun sag, wie hast du 's mit der Religion?“, Goethe, Faust I, 3415",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:03:12Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Darin stellt die Figur Margarete, genannt Gretchen, der Hauptfigur Heinrich Faust die Frage:",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:03:16Z",
+   "target": "f00902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(Zu Gretchen.)\nWie steht es denn mit Ihrem Herzen?\nMARGARETE.\nWas meint der Herr damit?",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "The stage direction calls her Gretchen and the speaker label Margarete – one character."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:03:19Z",
+   "target": "f00902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Margarete, auch Gretchen genannt, ist ein junges Mädchen im Alter von ungefähr 14 Jahren, welches vom älteren Wissenschaftler Faust umworben wird.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:24.826Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MARGARETE.\nNun sag, wie hast du’s mit der Religion?\nDu bist ein herzlich guter Mann,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:24.826Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "nach der von Gretchen an Faust gerichteten Frage „Nun sag, wie hast du 's mit der Religion?“, Goethe, Faust I, 3415",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:24.826Z",
+   "target": "f00902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(Zu Gretchen.)\nWie steht es denn mit Ihrem Herzen?\nMARGARETE.\nWas meint der Herr damit?",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:24.826Z",
+   "target": "f00901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nun sag, wie hast du’s mit der Religion?",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nun sag, wie hast du's mit der Religion?” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:24.826Z",
+   "target": "f00902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MARGARETE (ihre Zöpfe flechtend und aufbindend.)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Margarete” is on the snapshot of s6"
+  }
+ ]
+}

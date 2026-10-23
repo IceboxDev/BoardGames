@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-089",
+ "image": "IMG20261022011451.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Philosophy",
+   "cardText": "[Philosophy] What is the primary focus of “eschatology”?\nA. The nature of God\nB. Death and the afterlife\nC. The origins of religious texts\nAnswer: B.",
+   "en": "What is the name of the branch of theology concerned with the “last things” — death, the afterlife and the end of the world?",
+   "de": "Wie heißt der Zweig der Theologie, der sich mit den „letzten Dingen“ befasst – Tod, Jenseits und Ende der Welt?",
+   "reworked": true,
+   "answerEn": "Eschatology",
+   "answerDe": "Eschatologie",
+   "timeline": {
+    "kind": "event",
+    "start": "1844",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The word 'eschatology' first appears in English",
+    "labelDe": "Das Wort „eschatology“ taucht erstmals im Englischen auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Eschatology",
+    "title": "Eschatology",
+    "lang": "en"
+   },
+   "notes": "Reworked to ask for the term. The card's 'death and the afterlife' is narrow: eschatology concerns the end of the present age, human history or the world, which in Christian theology includes death, the afterlife, judgment, heaven and hell. The English word dates from around 1844.",
+   "domain": "belief",
+   "sub": "religion"
+  },
+  {
+   "category": 2,
+   "discipline": "Physics",
+   "cardText": "[Physics] If you heat a gas to infinitely high temperatures, what is the distribution of the atoms' energy states?\nA. Most atoms are in low-energy states\nB. Most atoms are in high-energy states\nC. Atoms are evenly distributed across all energy states\nAnswer: C. According to the Boltzmann distribution, the energy levels of the atoms in a gas are equally populated at infinitely high temperatures. This means that each energy state has the same number of atoms, leading to a state of maximum entropy or disorder.",
+   "en": "According to the Boltzmann distribution, how are atoms distributed over the available energy states as the temperature approaches infinity?",
+   "de": "Wie verteilen sich Atome laut der Boltzmann-Verteilung auf die verfügbaren Energiezustände, wenn die Temperatur gegen unendlich geht?",
+   "reworked": true,
+   "answerEn": "Evenly across all states",
+   "answerDe": "Gleichmäßig auf alle Zustände",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1868",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ludwig Boltzmann first formulates the Boltzmann distribution",
+    "labelDe": "Ludwig Boltzmann formuliert erstmals die Boltzmann-Verteilung"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Negative_temperature",
+    "title": "Negative temperature",
+    "lang": "en"
+   },
+   "notes": "Confirmed for systems with a limited number of energy states: as T rises, the populations of lower and higher states approach equality (P ∝ e^(−E/kT) → 1). For a real gas's unbounded translational states this is an idealised limit. The card's 'energy levels equally populated' should strictly be 'states' (degenerate levels hold more).",
+   "domain": "science",
+   "sub": "physics"
+  }
+ ]
+}

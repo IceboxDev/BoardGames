@@ -1,0 +1,309 @@
+{
+ "article": "a1782",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Augusto_Pinochet",
+   "title": "Augusto Pinochet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:08.578Z",
+   "snapshot": "7510e9d1d170ee1dae24a5940ad14648ead85c7dcc19dc299df1e314714e0ab9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cuban_Revolution",
+   "title": "Cuban Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:09.497Z",
+   "snapshot": "5bb12a88de11448cbf6e6cc02adaebbd973e4902302e53847da884ea7d28c471"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1969_Libyan_revolution",
+   "title": "1969 Libyan revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:10.592Z",
+   "snapshot": "69e1582c197324ceef83559ed42b40e53586c1974e8bfe74c46de331f59135aa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1976_Argentine_coup_d%27%C3%A9tat",
+   "title": "1976 Argentine coup d'état – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:11.611Z",
+   "snapshot": "d3f5776967efd153abb40b6b25170f424609bf257fbec76b62351c4fe25d8a80"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Mohammad_Mossadegh",
+   "title": "Mohammad Mossadegh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:34.659Z",
+   "snapshot": "11d2b04925ff84129d0dacb7dff453c71e08181475659430a67b19fa930733eb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mohammad_Mosaddegh",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:12.550Z",
+   "snapshot": "4497ae92eca45babc1d287372ef760f6c0a8a5443e1009a7a354acebee0d09c6"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Salvador_Allende",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:13.582Z",
+   "snapshot": "0dc2071d48c6a393bc8dae21ff64c0c87deea8a9a1f47fa339dd6a255941626f"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/National_Reorganization_Process",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:14.627Z",
+   "snapshot": "663bead410d944392ca32beb578f78c643af76d6911fb08d7899d610e8d71cb9"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Iranian_Revolution",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:15.705Z",
+   "snapshot": "09e6d02b01541c596d23ee1dd55f25538d6ffc6746eb56dc52dc261587d8dff7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Augusto Pinochet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fidel Castro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Muammar Gaddafi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08909",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jorge Rafael Videla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Iran",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-233"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 40"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:21.481Z",
+   "target": "f08906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was the son and namesake of Augusto Pinochet Vera (1891–1944), a descendant of an 18th-century French Breton immigrant from Lamballe and Avelina Ugarte Martínez (1895–1986), a woman of Basque heritage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augusto Pinochet” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:21.481Z",
+   "target": "f08907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Among those who opposed the coup was Fidel Castro, then a young lawyer, who initially tried to challenge the takeover through legal means in the Cuban courts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fidel Castro” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:21.481Z",
+   "target": "f08908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Free Officers movement was led by Colonel Muammar Gaddafi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muammar Gaddafi” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:21.481Z",
+   "target": "f08909",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A military junta was installed to replace her; this was headed by Lieutenant General Jorge Rafael Videla, Admiral Emilio Eduardo Massera, and Brigadier-General Orlando Ramón Agosti.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jorge Rafael Videla” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:21.481Z",
+   "target": "f12528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nach seiner Rückkehr nach Iran arbeitete er wieder als Finanzbeamter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:21.481Z",
+   "target": "f12528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mohammad Mosaddegh (16 June 1882 – 5 March 1967) was an Iranian politician, author and lawyer who served as the prime minister of Iran from 1951 to 1953, elected by the 16th Majlis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:21.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+{
+ "article": "a2342",
+ "sources": {
+  "s1": {
+   "url": "https://www.yahoo.com/news/still-see-divide-between-west-161859862.html",
+   "title": "You can still see the divide between West and East Berlin from space",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:05.210Z",
+   "snapshot": "2748fb4b3cce91b4e758f9d4350b71753b0e2817de2e3fac8ce1d0475cba1029"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ampelm%C3%A4nnchen",
+   "title": "Ampelmännchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:08.325Z",
+   "snapshot": "5b15db1d452a97951721f32b42ea237f4396f004b3aae79ea3cb1d63ec4f231b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tr%C3%A4nenpalast",
+   "title": "Tränenpalast – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:09.232Z",
+   "snapshot": "ac7cd0574d838d0c53a37cca09ae02a5b12564582e30d8f242ab71686774c93e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/East_Side_Gallery",
+   "title": "East Side Gallery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:10.302Z",
+   "snapshot": "9cced779bc3826b9bd5612ff4e8248663a69f9c92ce4c15640ab5fe494d2864d"
+  },
+  "s5": {
+   "url": "https://www.mcgill.ca/oss/article/did-you-know-technology/you-can-see-division-east-and-west-berlin-space",
+   "title": "You Can Still See the Division of East and West Berlin from Space",
+   "publisher": "McGill University Office for Science and Society",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:49.782Z",
+   "snapshot": "90ce9b2a2eb8c76e8cfc90e9bc37f993e8195868fb754181be739772c97c07e1"
+  },
+  "s6": {
+   "url": "https://www.aljazeera.com/news/2019/11/4/in-berlin-quirky-reminders-linger-from-east-west-divide",
+   "title": "In Berlin, quirky reminders linger from East-West divide",
+   "publisher": "Al Jazeera (AFP)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:49.549Z",
+   "snapshot": "00a0adf4c0e88e54378b193babb5c72843067f7fe68eb30ab19d2f86a522ec1d"
+  },
+  "s7": {
+   "url": "https://www.esa.int/ESA_Multimedia/Images/2022/10/Berlin_at_night_A_decade_of_changes_in_street_lighting",
+   "title": "Berlin at night – A decade of changes in street lighting",
+   "publisher": "European Space Agency",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:49.690Z",
+   "snapshot": "dab3583230a5426110b1b593d2232a9eef75070033332b0edfad07487ab61f35"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "By the colour of the street lighting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-203"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ampelmännchen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palace of Tears",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "East Side Gallery",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:01.543Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "By the colour of the street lighting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“By the colour of the street lighting”, “An der Farbe der Straßenbeleuchtung”, “По цвету уличного освещения”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:01.543Z",
+   "target": "f12192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ampelmännchen (German: [ˈampl̩ˌmɛnçən] ; literally 'little traffic light man', diminutive of Ampelmann [ampl̩ˈman] ) is the symbol shown on pedestrian signals in Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ampelmännchen” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:01.543Z",
+   "target": "f12193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tränenpalast (English: \"Palace of Tears\") is a former border crossing point between East and West Berlin, at Berlin Friedrichstraße  station, which was in operation between 1962 and 1989.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palace of Tears” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:01.543Z",
+   "target": "f12195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The East Side Gallery memorial in Berlin-Friedrichshain is a permanent open-air gallery on the longest surviving section of the Berlin Wall in Mühlenstraße between the Berlin Ostbahnhof and the Oberbaumbrücke along the Spree.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “East Side Gallery” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:58:29Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "What used to be East Berlin still utilizes nearly 40,000 sodium-vapour lamps, which appear orange, while what used to be West Berlin has upgraded to mercury vapour, fluorescent or LED lamps that appear white.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Written 2018."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:58:31Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seen from above, street lights in the former East Berlin appear slightly more orange while those in the western part of the city are a harsher yellow.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "2019; a city spokesman attributes the difference more to fittings and shades than to lamp types."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:58:34Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seen from space, the city's lights show a stark contrast, with orange lights in the east and white lights in the west.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "2019."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:58:37Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Over the last two decades astronauts are witnessing from space how cities shine whiter at night as new street lighting technologies were introduced.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "2022 ISS images (2012 vs 2022) show Berlin's lighting changing (whitening); supports that the contrast is fading — time-sensitive."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:46.649Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "What used to be East Berlin still utilizes nearly 40,000 sodium-vapour lamps, which appear orange, while what used to be West Berlin has upgraded to mercury vapour, fluorescent or LED lamps that appear white.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:46.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:46.649Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seen from above, street lights in the former East Berlin appear slightly more orange while those in the western part of the city are a harsher yellow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:46.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:46.649Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seen from space, the city's lights show a stark contrast, with orange lights in the east and white lights in the west.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:46.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:46.649Z",
+   "target": "f12191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Over the last two decades astronauts are witnessing from space how cities shine whiter at night as new street lighting technologies were introduced.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:46.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

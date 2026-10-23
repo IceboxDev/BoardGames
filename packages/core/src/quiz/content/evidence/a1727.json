@@ -1,0 +1,400 @@
+{
+ "article": "a1727",
+ "sources": {
+  "s1": {
+   "url": "https://www.sciencedaily.com/releases/2009/06/090611142356.htm",
+   "title": "Maple Seeds And Animals Exploit The Same Trick To Fly – ScienceDaily",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:18.887Z",
+   "snapshot": "2f04091105230986daf70cc91582631be37088e0bd7aa3691275d38b376c7e24"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anne_Frank_tree",
+   "title": "Anne Frank tree – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:21.431Z",
+   "snapshot": "347719f04f6f62e0c8ec644d26dd80543ebc81f859b79adf78aa6e194d29fe27"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Baum_des_Jahres",
+   "title": "Baum des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:19.645Z",
+   "snapshot": "5c84ff340c66046b09c473a8d27ee30cb310b781a1c8bef86021d2ef061600ee"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/London_plane",
+   "title": "London plane – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:22.359Z",
+   "snapshot": "2c084040e9121d77fe16b94d56e91fba08f7931384a85a0cf14d5e4c488bc619"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Deciduous",
+   "title": "Deciduous",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:23.374Z",
+   "snapshot": "43553344580790eaf53a6e1c86a82b0e1f2c84d3dc857d5fadab6035c028b096"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Glossopteris",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:24.503Z",
+   "snapshot": "3f7497394fdcad58769c2198b4616e00e8d7647d3adaf48db827dba906c6b3cb"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=beechnut",
+   "title": "beechnut – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:55.953Z",
+   "snapshot": "a18098467bbade0cf4b114ef2f9c5a7241b14cf0f1bb722b389ae755cad667f2"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Beech",
+   "title": "Beech – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:56.959Z",
+   "snapshot": "1749a423aeeaf0944e248aec474e50f528e181c9a6f34427cb114224a5691eff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "maple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08633",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "horse chestnut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "plane tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25368",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "their leaves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-007"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:12.644Z",
+   "target": "f08631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maple Seeds And Animals Exploit The Same Trick To Fly | ScienceDaily",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “maple” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:12.644Z",
+   "target": "f08633",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Anne Frank tree (Dutch: Anne Frankboom or, incorrectly, Anne Frank boom) was a horse-chestnut tree (Aesculus hippocastanum) in the city center of Amsterdam that was featured in Anne Frank's The Diary of a Young Girl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “horse chestnut” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:12.644Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Buche”, “beech”, “бук”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:12.644Z",
+   "target": "f08635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aiton described this variety with a two-word Latin diagnosis, \"foliis transversis\", and called it the Spanish plane tree.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “plane tree” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:12.644Z",
+   "target": "f25368",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In botany and horticulture, deciduous plants, including trees, shrubs and herbaceous perennials, are those that lose all of their leaves for part of the year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “their leaves” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:13Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The small, three-sided nut of a beech tree.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:07:15Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The fruit of the beech tree is an edible nut, known as beech mast.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:07:18Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The fruit is a three-angled nut, with two in a spiny dehiscent cupule.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:59.911Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The small, three-sided nut of a beech tree.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:59.911Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The fruit is a three-angled nut, with two in a spiny dehiscent cupule.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:59.911Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The small, three-sided nut of a beech tree.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “beech” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:59.911Z",
+   "target": "f08634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Beech (genus Fagus) is a genus of deciduous trees in the family Fagaceae, native to subtropical (accessory forest element) and temperate (as dominant element of mesophytic forests) Eurasia and North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “beech” is on the snapshot of s8"
+  }
+ ]
+}

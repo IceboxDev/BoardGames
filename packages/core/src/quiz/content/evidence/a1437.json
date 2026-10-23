@@ -1,0 +1,493 @@
+{
+ "article": "a1437",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Arthroscopy",
+   "title": "Arthroscopy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:23.327Z",
+   "snapshot": "2b1f53b30b67b6fdc4e5f67f82e98d5becabf99f9df31b64fd871abbc6e8731c"
+  },
+  "s2": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080522/",
+   "title": "Management of rotator cuff tears – Key historical landmarks (PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:20.934Z",
+   "snapshot": "40060adc0cf66ca42c1c78f3e1c1f8bbfe69c981f96a53a30dff43f297dc4d0d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bandscheibenvorfall",
+   "title": "Bandscheibenvorfall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:01:21.335Z",
+   "snapshot": "5800d1539596fb8f8d3186923933e5914031badb83480f09c77c5cf6663dea81"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Simmonds%27_test",
+   "title": "Simmonds' test – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:24.349Z",
+   "snapshot": "b29e58610a1d2f72c3cdfdfb484d3b811b4e2481ee7a165a533dc7488008886a"
+  },
+  "s5": {
+   "url": "https://orthoinfo.aaos.org/en/diseases--conditions/meniscus-tears/",
+   "title": "Meniscus Tears - OrthoInfo",
+   "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:57.320Z",
+   "snapshot": "41bef112d281209cea41b98f1a732b79b467fbbd90159e84698c29dfd934132d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Meniscus_(anatomy)",
+   "title": "Meniscus (anatomy) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:58.022Z",
+   "snapshot": "39111d98f10cf1e946ddb576712cc76deb41f2101f9cfa0d8e67ac4622a931c5"
+  },
+  "s7": {
+   "url": "https://medlineplus.gov/ency/article/000442.htm",
+   "title": "Herniated disk: MedlinePlus Medical Encyclopedia",
+   "publisher": "MedlinePlus (U.S. National Library of Medicine)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:56.158Z",
+   "snapshot": "085978636285858f4f6e82e3215f13660e68db25df97cd3d20fbb2e16079d47d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Intervertebral_disc",
+   "title": "Intervertebral disc – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:59.025Z",
+   "snapshot": "e1f637d6fcdcdc080de2764b2b1c2cfa10a0b6a1d7550e729e39ed14dda1c5a0"
+  },
+  "s9": {
+   "url": "https://orthoinfo.aaos.org/en/diseases--conditions/achilles-tendinitis/",
+   "title": "Achilles Tendinitis - OrthoInfo",
+   "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:57.722Z",
+   "snapshot": "345f5a9beaeb3749ecb808b61fa31ca89f0a6fc56459ec766427e3d4e1535950"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Achilles_tendon",
+   "title": "Achilles tendon – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:20:45Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the knee joint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the shoulder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zwischen den Wirbeln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At the heel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:25.782Z",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the knee joint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“In the knee joint”, “Im Kniegelenk”, “В коленном суставе”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:25.782Z",
+   "target": "f07182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With regards to acute complete supraspinatus tears, he noted that these presented as an immediate sharp pain, usually following a fall, with loss of power in elevation of the arm and typically no symptoms in the shoulder prior to the accident.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.782Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “In the shoulder” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:25.782Z",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zwischen den Wirbeln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Zwischen den Wirbeln”, “Between the vertebrae”, “Между позвонками”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:25.782Z",
+   "target": "f07184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At the heel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“At the heel”, “An der Ferse”, “В области пятки”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:20:38Z",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Two wedge-shaped pieces of fibrocartilage act as shock absorbers between the femur and tibia. These are the menisci.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:20:40Z",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "serving to disperse friction and absorb weight in the knee joint between the lower leg (tibia) and the thigh (femur)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:20:41Z",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The spinal bones are separated by disks. These disks cushion the spinal column and put space between your vertebrae.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:20:42Z",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "lies between adjacent vertebrae in the vertebral column",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:20:44Z",
+   "target": "f07184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Achilles tendon is the largest tendon in the body. It connects the calf muscles to the heel bone",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:20:45Z",
+   "target": "f07184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It serves to attach the plantaris, gastrocnemius (calf) and soleus muscles to the calcaneus (heel) bone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Two wedge-shaped pieces of fibrocartilage act as shock absorbers between the femur and tibia. These are the menisci.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "serving to disperse friction and absorb weight in the knee joint between the lower leg (tibia) and the thigh (femur)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The spinal bones are separated by disks. These disks cushion the spinal column and put space between your vertebrae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "lies between adjacent vertebrae in the vertebral column",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Achilles tendon is the largest tendon in the body. It connects the calf muscles to the heel bone",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The menisci of the knee are two pads of fibrocartilaginous tissue covering about 70% of the articular surface, serving to disperse friction and absorb weight in the knee joint between the lower leg (tibia) and the thigh (femur).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “In the knee joint” is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:10.873Z",
+   "target": "f07183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The disks allow movement between the vertebrae, which lets you bend and reach.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:10.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Between the vertebrae” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,431 @@
+{
+ "article": "a2654",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Area_Licensing_Scheme",
+   "title": "Singapore Area Licensing Scheme",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:18.121Z",
+   "snapshot": "a8a20fbe02774ca376fc9745e1beebdbbeec3f8cfa14d7b2549af4fa5633f463"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/London_congestion_charge",
+   "title": "London congestion charge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:19.338Z",
+   "snapshot": "328c78613c698565f684ac906556b80e912a1f83242719dd714630bebffc9641"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Stockholm_congestion_tax",
+   "title": "Stockholm congestion tax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:21.146Z",
+   "snapshot": "cf9464e2cfe24480bf8b9e0541aed014adca2ab1455cd9e6d5888aa7d32b4147"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Parking_meter",
+   "title": "Parking meter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:21.172Z",
+   "snapshot": "ae779194c28b4d39a054c84534b582aefa21a62e05e2e3be88cc8c0e95ff64b4"
+  },
+  "s5": {
+   "url": "https://www.ifo.de/DocDL/dicereport305-forum3.pdf",
+   "title": "Road Pricing in Singapore (CESifo DICE Report 3/2005)",
+   "publisher": "ifo Institute / CESifo",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:42:50Z"
+  },
+  "s6": {
+   "url": "https://www.okhistory.org/publications/enc/entry?entry=PA015",
+   "title": "Parking Meter | The Encyclopedia of Oklahoma History and Culture",
+   "publisher": "Oklahoma Historical Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:18.619Z",
+   "snapshot": "ef9e72dadb6896f7ec1407d451ae2fe6fc8e0456d34899fb8b09fb1e67b031ef"
+  },
+  "s7": {
+   "url": "https://www.history.com/this-day-in-history/july-16/worlds-first-parking-meter-installed",
+   "title": "World's first parking meter installed",
+   "publisher": "HISTORY.com (A&E Networks)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:18.036Z",
+   "snapshot": "f2420eb065019ec30eff4dfa088812bec3841c3d02570a395acea899dde381c9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Singapore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "London",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stockholm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oklahoma City",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:52.764Z",
+   "target": "f14377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Singapore Area Licensing Scheme (ALS) was a road pricing scheme introduced in Singapore from 1975 to 1998 that charged drivers who were entering downtown Singapore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Singapore” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:52.764Z",
+   "target": "f14378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The London congestion charge is a fee charged on most cars and motor vehicles being driven within the Congestion Charge Zone (CCZ) in Central London between 7:00 am and 6:00 pm Monday to Friday, and between 12:00 noon and 6:00 pm Saturday and Sunday.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:52.764Z",
+   "target": "f14379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Stockholm congestion tax (Swedish: Trängselskatt i Stockholm), also referred to as the Stockholm congestion charge, is a congestion pricing system implemented as a tax levied on most vehicles entering and exiting central Stockholm, Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stockholm” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:52.764Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "They began working on the parking meter in 1933 at the request of Oklahoma City, Oklahoma lawyer and newspaper publisher Carl C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oklahoma City” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:42:50Z",
+   "target": "f14377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Indeed, the practical application of road pricing started in Singapore in June 1975.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:42:52Z",
+   "target": "f14377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This was the first urban traffic congestion pricing scheme to be successfully implemented in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:42:53Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On July 16, 1935, 175 meters were installed and tested on fourteen blocks in Oklahoma City",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:42:55Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is installed on the southeast corner of what was then First Street and Robinson Avenue in Oklahoma City, Oklahoma on July 16, 1935.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:58Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The world's first installed parking meter was in Oklahoma City on July 16, 1935.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:38.560Z",
+   "target": "f14377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This was the first urban traffic congestion pricing scheme to be successfully implemented in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:38.560Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On July 16, 1935, 175 meters were installed and tested on fourteen blocks in Oklahoma City",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:38.560Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is installed on the southeast corner of what was then First Street and Robinson Avenue in Oklahoma City, Oklahoma on July 16, 1935.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:38.560Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The world's first installed parking meter was in Oklahoma City on July 16, 1935.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:38.560Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Magee arrived in Oklahoma City from New Mexico in 1927.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Oklahoma City” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:38.560Z",
+   "target": "f14380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1, is installed on the southeast corner of what was then First Street and Robinson Avenue in Oklahoma City, Oklahoma on July 16, 1935.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Oklahoma City” is on the snapshot of s7"
+  }
+ ]
+}

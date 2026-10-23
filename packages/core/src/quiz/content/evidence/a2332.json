@@ -1,0 +1,333 @@
+{
+ "article": "a2332",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Olympische_Spiele_der_Antike",
+   "title": "Olympische Spiele der Antike",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:24.837Z",
+   "snapshot": "20aaacaf9f685a07034fac36d47ffde93f2d7d3dea648f0ad4f60dc4353ba844"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Coroebus_of_Elis",
+   "title": "Coroebus of Elis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:26.269Z",
+   "snapshot": "6778602055627d3d25ed2425c69fbb69a0f110eb619eff0ed6a2e11cd9d8837f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+   "title": "Ancient Olympic Games – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:20.116Z",
+   "snapshot": "219890f21923419a45c3b5462a9c285dd941afcaaa13b2a112c08e1e90abebfb"
+  },
+  "s4": {
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Athenaeus/9B*.html",
+   "title": "Athenaeus, The Deipnosophists, Book IX (Loeb translation, C. B. Gulick)",
+   "publisher": "LacusCurtius (Bill Thayer, University of Chicago)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:42.308Z",
+   "snapshot": "3dae2f17f2fc008e67382f3acdf4b0886ce6dd603a4fc3a09f10b33eca587e28"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Griechenland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-343"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cook",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-014"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "stadion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "olive wreath",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Theodosius I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:58.101Z",
+   "target": "f12122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Spiele in Olympia waren das älteste der Sportfeste im alten Griechenland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Griechenland” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:58.101Z",
+   "target": "f12123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "776 BC) was a Greek cook, baker, and athlete from Elis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cook” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:58.101Z",
+   "target": "f12124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Coroebus of Elis (Ancient Greek: Κόροιβος Ἠλεῖος, Kóroibos Ēleîos; Latin: Coroebus Eleus fl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elis” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:58.101Z",
+   "target": "f12125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "These Olympiads were referred to based on the winner of their stadion sprint, e.g., \"the third year of the eighteenth Olympiad when Ladas of Argos won the stadion\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “stadion” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:58.101Z",
+   "target": "f12126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He crowned the victor with an olive wreath (which thus became a peace symbol), which also explains the four-year interval, bringing the games around every fifth year (counting inclusively).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “olive wreath” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:58.101Z",
+   "target": "f12127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Their last recorded celebration was in AD 393, under the emperor Theodosius I, but archaeological evidence indicates that some games were still held after this date.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:58.101Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodosius I” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:16Z",
+   "target": "f12123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "And yet, even the first man to tie on the wreath of victory at the Olympic contest, Coroebus of Elis, was a cook",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Athenaeus 9.382b, the ancient source for Coroebus' profession (Greek mageiros; 'baker' appears in some modern retellings)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:43.196Z",
+   "target": "f12123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "And yet, even the first man to tie on the wreath of victory at the Olympic contest, Coroebus of Elis, was a cook",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:43.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:43.196Z",
+   "target": "f12123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Take Poseidippus, for example, in Dancing-girls.⁠5 There a cook has these words to say to his pupils: 'My pupil Leucon, and all you fellow-assistants!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:43.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cook” is on the snapshot of s4"
+  }
+ ]
+}

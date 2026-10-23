@@ -1,0 +1,195 @@
+{
+ "article": "a1110",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/New_Deal",
+   "title": "New Deal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:22.503Z",
+   "snapshot": "a7a804803bfec18776b8cb52307faf00eb7446a6d11ad535ecb7c623a8fb5b26"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Great_Society",
+   "title": "Great Society – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:23.209Z",
+   "snapshot": "ca3eec6950a3b69ea70f45e617cc724c896abd5e45eb08ac90318b078985a70b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Marshall_Plan",
+   "title": "Marshall Plan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:22.379Z",
+   "snapshot": "277c36de4d259408f9115f95a54a21de413939dab53e292840e2bdc1591c69c3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Agenda_2010",
+   "title": "Agenda 2010 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:20.314Z",
+   "snapshot": "d8a95f25c470d5278f84856b323c2d419cf9c63d2151a9cef236307435ef608e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Deal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Great Society",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marshall Plan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Agenda 2010",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:34.353Z",
+   "target": "f05546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The New Deal was a series of economic, social, and political reforms in response to the Great Depression in the United States under the first and second administrations of President Franklin D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Deal” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:34.353Z",
+   "target": "f05547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Great Society was an initiative involving a series of domestic programs enacted by President Lyndon B.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Society” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:34.353Z",
+   "target": "f05548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Marshall Plan (officially the European Recovery Program, ERP) was an American initiative enacted in 1948 to provide foreign aid to Western Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marshall Plan” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:34.353Z",
+   "target": "f05550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Agenda 2010 ist ein Konzept zur Reform des deutschen Sozialsystems und Arbeitsmarktes, das von 2003 bis 2005 von der aus SPD und Bündnis 90/Die Grünen gebildeten Bundesregierung (Kabinett Schröder II) weitgehend umgesetzt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agenda 2010” is on the snapshot of s4"
+  }
+ ]
+}

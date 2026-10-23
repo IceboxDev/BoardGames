@@ -1,0 +1,242 @@
+{
+ "article": "a1941",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_A",
+   "title": "Vitamin A – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:05.063Z",
+   "snapshot": "35a726efd61ad55701f2c5a8ab096d6b27f23c47d2477e7df5143509f00f591c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pernicious_anemia",
+   "title": "Pernicious anemia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:58.699Z",
+   "snapshot": "1176bfbf3cb3bfb762bab16dd8fe8e0ad21a2ce30dcf59dfa775d2f06856b819"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_C",
+   "title": "Vitamin C – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:20.201Z",
+   "snapshot": "1259681e97ac226db61dc8bef641c9ecaaa26d0854a58cd100ff339e48dcba70"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_D",
+   "title": "Vitamin D – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:03.231Z",
+   "snapshot": "174e718e6572ae1a17f96d923a130ddaf69e8dd8490aa7bed8d9d56f9e9018da"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Heinrich_Otto_Wieland",
+   "title": "Heinrich Otto Wieland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:59.576Z",
+   "snapshot": "930a1ec24038a99ff6ae6e6280ec0b18932699116193d24d5237502b21273287"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "fat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "intrinsic factor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vitamin C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "vitamin D",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bile acids",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:50.398Z",
+   "target": "f09701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vitamin A is a fat-soluble vitamin that is an essential nutrient.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fat” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:50.398Z",
+   "target": "f09702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pernicious anemia refers to a type of vitamin B12 deficiency anemia that results from lack of intrinsic factor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “intrinsic factor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:50.398Z",
+   "target": "f09703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vitamin C or ascorbate is a water-soluble vitamin found in citrus and other fruits and vegetables.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin C” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:50.398Z",
+   "target": "f09704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vitamin D is a group of structurally related, fat-soluble compounds responsible for increasing intestinal absorption of calcium, along with numerous other biological functions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin D” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:50.398Z",
+   "target": "f09705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He won the 1927 Nobel Prize in Chemistry for his research into the bile acids.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bile acids” is on the snapshot of s5"
+  }
+ ]
+}

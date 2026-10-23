@@ -1,0 +1,663 @@
+{
+ "article": "a2732",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chainsaw",
+   "title": "Chainsaw – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bubble_Wrap_(brand)",
+   "title": "Bubble Wrap (brand)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:40.310Z",
+   "snapshot": "6f88b1dad7f687deccf4b88a4f8bcdcfdb8be188b570be43a43caeee67a253ac"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Play-Doh",
+   "title": "Play-Doh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:40.897Z",
+   "snapshot": "ebf8c4fbd53945908a0ec610008f0c3d9e616e1161704d6267277822e8b8496a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kleenex",
+   "title": "Kleenex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:41.995Z",
+   "snapshot": "4f21d10b864cfc4600a88092f33f8faa31f48a625ad19c5fced91644f06b5120"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coca-Cola",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:43.129Z",
+   "snapshot": "bbed86f590a24fe3e645a2ea7b5b32bfccfa256ade9e7ac0f9e9d50cb2cca358"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sildenafil",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:43.991Z",
+   "snapshot": "bf932b7ca0c73fd0c5ae89531b4dd43afa9ed0a98902ba04687bbb23f416aa8f"
+  },
+  "s7": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:15209147%20AND%20SRC:MED&resultType=core&format=json",
+   "title": "Skippen et al., The chain saw – a Scottish invention, Scottish Medical Journal 49(2), 2004 (Europe PMC record)",
+   "publisher": "Scottish Medical Journal (via Europe PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:11:37Z"
+  },
+  "s8": {
+   "url": "https://www.nbcnews.com/id/wbna35046691",
+   "title": "Bubble Wrap turns 50 (AP)",
+   "publisher": "NBC News / Associated Press",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:05.068Z",
+   "snapshot": "105d9ccaa44f974e4c8c05d45e86dee1a18b259316c61aafaeb8f8d40f0d6142"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Assisting in difficult childbirths",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript pp-011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Textured wallpaper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-023"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "wallpaper cleaner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cold cream remover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cold cream remover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "cold cream remover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "patent medicine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "patent medicine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 31"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "patent medicine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 31"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23",
+   "target": "f25509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "angina pectoris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23",
+   "target": "f25509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "angina pectoris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 34"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23",
+   "target": "f25509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "angina pectoris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 34"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Textured wallpaper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Textured wallpaper”, “Strukturtapete”, “Фактурные обои”) on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The product was first manufactured in Cincinnati, Ohio, as a wallpaper cleaner in the 1930s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wallpaper cleaner” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A further modification of the original crepe paper made it thinner and softer, and the resultant 1924 product was called \"Kleenex\" and marketed as a cold cream remover.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cold cream remover” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cold cream remover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cold cream remover”, “Abschminktuch”, “Средство для снятия кольдкрема”) on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "cold cream remover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cold cream remover”, “Abschminktuch”, “Средство для снятия кольдкрема”) on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "patent medicine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“patent medicine”, “Patentmedizin”, “Патентованное лекарство”) on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Originally marketed as a temperance drink and intended as a patent medicine, Coca-Cola was invented in the late 19th century by John Stith Pemberton in Atlanta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “patent medicine” is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "patent medicine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“patent medicine”, “Patentmedizin”, “Патентованное лекарство”) on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "angina pectoris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“angina pectoris”, “Angina Pectoris”, “Стенокардия”) on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "angina pectoris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“angina pectoris”, “Angina Pectoris”, “Стенокардия”) on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T06:31:04.844Z",
+   "target": "f25509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It was initially studied for use in hypertension (high blood pressure) and angina pectoris (a symptom of ischaemic heart disease).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “angina pectoris” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:11:37Z",
+   "target": "f25504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "was pioneered in the late 18th Century by two Scottish docors, John Aitken and James Jeffray, for symphysiotomy and excision of diseased bone respectively",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Peer-reviewed history (PMID 15209147); symphysiotomy is the childbirth operation (cutting the pubic symphysis to widen the birth canal). 'docors' is the record's own typo."
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:11:38Z",
+   "target": "f25504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "by two Scottish doctors, John Aitken and James Jeffray , for symphysiotomy and excision of diseased bone, respectively",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:11:39Z",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a New York City designer approached inventors Marc Chavannes and Al Fielding in the late 1950s with a proposal for creating textured wallpaper",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Quotes Sealed Air's communications director: 'The product once envisioned as a new type of wallpaper turns 50 this month'."
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:11:40Z",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fielding and Chavannes sealed two shower curtains together, creating a smattering of air bubbles, which they originally tried to sell as wallpaper",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:11:47Z",
+   "target": "f25504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "for symphysiotomy and excision of diseased bone, respectively",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same sentence as e25, shorter quote avoiding markup spacing."
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:59:52.383Z",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a New York City designer approached inventors Marc Chavannes and Al Fielding in the late 1950s with a proposal for creating textured wallpaper",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:52.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:59:52.383Z",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fielding and Chavannes sealed two shower curtains together, creating a smattering of air bubbles, which they originally tried to sell as wallpaper",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:52.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e27 is on the snapshot of s2"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:59:52.383Z",
+   "target": "f25505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "According to Aurichio, a New York City designer approached inventors Marc Chavannes and Al Fielding in the late 1950s with a proposal for creating textured wallpaper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:52.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Textured wallpaper” is on the snapshot of s8"
+  }
+ ]
+}

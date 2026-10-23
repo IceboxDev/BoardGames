@@ -1,0 +1,287 @@
+{
+ "article": "a1736",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Roman_diocese",
+   "title": "Roman diocese – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:59.421Z",
+   "snapshot": "dc7ce2a06850a539c90d53c55f709e72ecff9333008cdc8e2c91828e364f142d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Roman_Catholic_Archdiocese_of_Berlin",
+   "title": "Roman Catholic Archdiocese of Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:00.483Z",
+   "snapshot": "3b223658bb9e80d380af5694574a4ee70b66e3e695882adba9c9afa1924d8875"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tametsi",
+   "title": "Tametsi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:01.365Z",
+   "snapshot": "96646716b1e691e42011dd2f677741e219edac89285874c7fb875bfa63b1dcaf"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/R%C3%B6misch-katholische_Kirche_in_Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:59.746Z",
+   "snapshot": "890c5f0fc1c10edc9d3b155431c8f88faba9f5bbdc457c37d1556e3fd0335dd7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Deanery",
+   "title": "Deanery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:02.388Z",
+   "snapshot": "c4534f7738da2417f25596efe00a850d6ae53ea276ac7f620324ff8e6816f0fa"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cluny_Abbey",
+   "title": "Cluny Abbey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:03.517Z",
+   "snapshot": "5f4c1a50cedfaf0f29c77deecde10c50ae78ef4e1dc003518bfca4c63fe3085d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Diocese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Archdiocese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Parish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pfarrei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Deanery",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:14.257Z",
+   "target": "f08676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the Late Roman Empire, usually dated AD 284 to 641, the regional governance district known as the Roman or civil diocese was made up of a grouping of provinces each headed by a vicarius, the vicars being the representatives of praetorian prefects (who governed directly the dioceses they were",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diocese” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:14.257Z",
+   "target": "f08677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Archdiocese of Berlin (Latin: Archidioecesis Berolinensis) is a Latin Church ecclesiastical territory or archdiocese of the Catholic Church in Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archdiocese” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:14.257Z",
+   "target": "f08678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "To be considered valid, the marriage required the presence of the parish priest or his deputy authorized by him or the ordinary, and the presence of two or three witnesses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parish” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:14.257Z",
+   "target": "f08678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pfarrei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pfarrei”, “Parish”, “приход”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:14.257Z",
+   "target": "f08679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A deanery (or decanate) is an ecclesiastical entity in the Catholic Church, the Eastern Orthodox Church, the Evangelical-Lutheran Churches (such as the Evangelical Church in Germany and the Church of Norway), and the Anglican Communion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deanery” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:14.257Z",
+   "target": "f08680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cluny Abbey (French: [klyni]; French: Abbaye de Cluny, formerly also Cluni or Clugny; Latin: Abbatia Cluniacensis) is a former Benedictine monastery in Cluny, Saône-et-Loire, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abbey” is on the snapshot of s6"
+  }
+ ]
+}

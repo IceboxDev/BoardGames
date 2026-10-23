@@ -1,0 +1,508 @@
+{
+ "article": "a0016",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
+   "title": "My Neighbor Totoro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:54.564Z",
+   "snapshot": "7afba8ee93822adc9adfd35efc133627360507de655d3c22a656d1c441060602"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pixar",
+   "title": "Pixar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:55.662Z",
+   "snapshot": "ed2a03cf24684026e4966611586c3fcd0bae07bf5967090b9eba3b0a9c1befa3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/DreamWorks_Animation",
+   "title": "DreamWorks Animation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:56.564Z",
+   "snapshot": "4620be375fff5b0122e3c2599f369ed95ad2d50ec24a4bba1f791bf0b16c6628"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_Grand_Day_Out",
+   "title": "A Grand Day Out – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:57.432Z",
+   "snapshot": "108b7616dfc830fd0c0fdd37c7f6860068c2ca5c2d3d1121b59eee7e53e5d423"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Toei_Animation",
+   "title": "Toei Animation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:58.473Z",
+   "snapshot": "22a5592e4419d2dc152a66fde661a36fbb6b129be40acba522b7e1100368ccc4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Spirited_Away",
+   "title": "Spirited Away",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:59.602Z",
+   "snapshot": "79ae7c298d3ffc328270b26b948898bbcbcf7148427fa6b0eba3b73ab2f82dbd"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aardman_Animations",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:00.573Z",
+   "snapshot": "abd6ae967b03b9b6a4c2a05524f68455b73a90e0d89526a730219eeeed3797fb"
+  },
+  "s8": {
+   "url": "https://www.oscars.org/oscars/ceremonies/2003",
+   "title": "The 75th Academy Awards | 2003",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.075Z",
+   "snapshot": "78370f45af24d645343c845406cace4fe1268b06ff41e20072c66682b1eb0ce4"
+  },
+  "s9": {
+   "url": "https://www.hollywoodreporter.com/movies/movie-news/spirited-away-film-oscars-records-history-1235052088/",
+   "title": "'Spirited Away' Broke Records and Made Oscar History",
+   "publisher": "The Hollywood Reporter",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.848Z",
+   "snapshot": "c6f394b3d178379d406f1ef79a078e32afef4534f1881e846aeaeb37e6fa7f60"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00076",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Studio Ghibli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00077",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pixar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00078",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "DreamWorks Animation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00079",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aardman Animations",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Toei Animation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Spirited Away",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-242"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wallace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; history entry seq 43; transcript tp-170"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f00076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "My Neighbor Totoro is a 1988 Japanese animated fantasy film written and directed by Hayao Miyazaki and animated by Studio Ghibli for Tokuma Shoten.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Studio Ghibli” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f00077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pixar (), doing business as Pixar Animation Studios, is an American animation studio based in Emeryville, California, known for its critically and commercially successful computer-animated feature films.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pixar” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f00078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(DWA, also known as DreamWorks Animation Studios or simply DreamWorks) is an American animation studio, owned by Comcast's NBCUniversal as part of Universal Filmed Entertainment Group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DreamWorks Animation” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f00079",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Produced at the National Film and Television School in Beaconsfield and Aardman Animations in Bristol, it is the first installment in the Wallace & Gromit series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aardman Animations” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f00080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Toei Animation is headquartered in Nakano, Tokyo with its studios in Higashiōizumi, Nerima, Tokyo which also houses the Toei Animation Museum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toei Animation” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Spirited Away is a 2001 Japanese animated fantasy film written and directed by Hayao Miyazaki.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spirited Away” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:37.504Z",
+   "target": "f11230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Produced at the National Film and Television School in Beaconsfield and Aardman Animations in Bristol, it is the first installment in the Wallace & Gromit series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:37.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wallace” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:47:03Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Animated Feature Spirited Away Hayao Miyazaki, presented by Cameron Diaz",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "Japanese animation had not won an Oscar before (the feature category began in 2002; the first Japanese animated short winner was La Maison en Petits Cubes, 2009 ceremony)"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:47:07Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "became the first hand-drawn, non-English-language animated film to win the Academy Award for Best Animated Feature at the 75th Academy Awards",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:47:10Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At the 75th Academy Awards, Hayao Miyazaki's Spirited Away won best animated feature in the second year of the category's existence",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:53.222Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Animated Feature Spirited Away Hayao Miyazaki, presented by Cameron Diaz",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:53.222Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "became the first hand-drawn, non-English-language animated film to win the Academy Award for Best Animated Feature at the 75th Academy Awards",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:53.222Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At the 75th Academy Awards, Hayao Miyazaki's Spirited Away won best animated feature in the second year of the category's existence",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:53.222Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Spirited Away",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Spirited Away” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:51:53.222Z",
+   "target": "f11229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "'Spirited Away' Broke Records and Made Oscar History",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Spirited Away” is on the snapshot of s9"
+  }
+ ]
+}

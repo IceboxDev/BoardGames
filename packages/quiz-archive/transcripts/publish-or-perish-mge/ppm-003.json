@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-003",
+ "image": "IMG20261022153146.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Music",
+   "cardText": "[Music] What musical period is Ludwig van Beethoven associated with?\nA. Medieval B. Baroque C. Classical\nAnswer: C.",
+   "de": "Von welcher Musikepoche aus trieb Ludwig van Beethoven den Übergang zur Romantik voran?",
+   "en": "Ludwig van Beethoven drove the transition to the Romantic era from which musical period?",
+   "reworked": true,
+   "answerDe": "Klassik",
+   "answerEn": "Classical period",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1770",
+    "end": "1827",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ludwig van Beethoven, German composer (baptised 17 December 1770, died 26 March 1827)",
+    "labelDe": "Ludwig van Beethoven, deutscher Komponist (getauft 17. Dezember 1770, gestorben 26. März 1827)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+    "title": "Ludwig van Beethoven",
+    "lang": "en"
+   },
+   "notes": "Reworded because Beethoven is also associated with Romanticism: Wikipedia calls his style a key driver of the transition from Classical to Romantic music. Birth date unknown (baptised 1770-12-17), so start at year precision.",
+   "domain": "music-stage",
+   "sub": "classical"
+  },
+  {
+   "category": 2,
+   "discipline": "Physics",
+   "cardText": "[Physics] Imagine you’re in a dark living room with only a lit candle in the center. If you move a piece of paper with a small triangle cutout from the wall toward the candle, what will the image on the wall look like when the paper is halfway between the candle and the wall?\nA. A triangle\nB. A circle\nC. The candle flame\nAnswer: C. This is an example of the pinhole effect. As the paper moves closer to the candle, the image projected on the wall transitions from the shape of the cutout to the shape of the light source, which is the candle flame.",
+   "de": "In einem dunklen Raum hält man ein Blatt Papier mit einem kleinen Loch auf halbem Weg zwischen eine brennende Kerze und die Wand: Wovon erscheint ein Bild an der Wand?",
+   "en": "In a dark room, a sheet of paper with a small hole is held halfway between a lit candle and the wall: an image of what appears on the wall?",
+   "reworked": true,
+   "answerDe": "Von der Kerzenflamme (auf dem Kopf stehend)",
+   "answerEn": "The candle flame (upside down)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-400",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Chinese text Mozi gives one of the earliest written records of a pinhole image",
+    "labelDe": "Der chinesische Text Mozi enthält eine der frühesten schriftlichen Beschreibungen eines Lochkamerabildes"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Camera_obscura",
+    "title": "Camera obscura",
+    "lang": "en"
+   },
+   "notes": "Pinhole (camera obscura) effect: a small hole projects an inverted image of the light source; a wide hole projects its own shape (Wikipedia). The card's explanation omits that the flame image is upside down. 'Triangle cutout' generalised to 'small hole' since the shape doesn't matter once it is small.",
+   "domain": "science",
+   "sub": "physics"
+  }
+ ]
+}

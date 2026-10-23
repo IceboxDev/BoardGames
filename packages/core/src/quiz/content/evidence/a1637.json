@@ -1,0 +1,375 @@
+{
+ "article": "a1637",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zumba",
+   "title": "Zumba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:01.327Z",
+   "snapshot": "3867cb0dc5e432c070662747d033821263dd14bc692ce701ac386a54d319f042"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Johnny_G",
+   "title": "Johnny G – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:02.221Z",
+   "snapshot": "ba927a67ecc1387995094eafbccdd808df09867c61cd3414c27c89e6f488f3e2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/CrossFit",
+   "title": "CrossFit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:03.338Z",
+   "snapshot": "1a939c6a218359e95648ed36eb8c018d0d9c08715950208d10a851611d767f76"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Pilates",
+   "title": "Joseph Pilates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:04.297Z",
+   "snapshot": "8bff62d59683d01063fe3af981f1cfdbe44db80449eb2db8063a693f0dad78a2"
+  },
+  "s5": {
+   "url": "https://inquirer.com/philly/living/20130619_Bokwa_fitness__easy_as_A-B-C__1-2-3.html",
+   "title": "Bokwa fitness: easy as A-B-C, 1-2-3 – The Philadelphia Inquirer",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:02.150Z",
+   "snapshot": "34a909bfc8e4413e6b69906c49529697390ef1a2de5620b9b5878d90ab4d90c6"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tough_Mudder",
+   "title": "Tough Mudder",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:02.316Z",
+   "snapshot": "576437b916d3a274bd99f67b9e3edf49d497205dac955faca81b655052676057"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Step-Aerobic",
+   "title": "Step-Aerobic",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:03.301Z",
+   "snapshot": "49cd29806c33e088986e09688c889fe628a9b1985266da74982ac62212af72d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zumba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zumba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 62; transcript tp-098"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spinning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "CrossFit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pilates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bokwa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-061"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tough Mudder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-304"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14683",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Step-Aerobic",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 51; transcript tp-235"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f08181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zumba is an aerobic fitness workout method created in Cali,  Colombia that combines cardio and Latin-inspired dance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zumba” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f25004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zumba is an aerobic fitness workout method created in Cali,  Colombia that combines cardio and Latin-inspired dance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zumba” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f08183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jonathan Goldberg (born 1956 in Johannesburg, South Africa), known as Johnny G, is a South African cyclist, and developer of the indoor cycling program called Spinning.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spinning” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f08182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "CrossFit is a branded fitness regimen that involves constantly varied functional movements performed at high intensity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CrossFit” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f08184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joseph Hubertus Pilates (December 9, 1883 – October 9, 1967) was a German physical trainer, writer, and inventor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pilates” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f14123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bokwa fitness, easy as A-B-C, 1-2-3",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bokwa” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f14124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tough Mudder (amerikanische Aussprache: ['tɐfˌmʌdɹ]) ist ein US-amerikanischer Betreiber von Extrem-Hindernisläufen, bei denen Einzelteilnehmer oder Teams versuchen, einen ca.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tough Mudder” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:55.811Z",
+   "target": "f14683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Step-Aerobic, auch bekannt als Step-Training, ist eine Form der Aerobic-Übung, bei der das Betreten und Verlassen einer kleinen Plattform erfolgt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Step-Aerobic” is on the snapshot of s7"
+  }
+ ]
+}

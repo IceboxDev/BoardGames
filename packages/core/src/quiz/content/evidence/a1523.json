@@ -1,0 +1,474 @@
+{
+ "article": "a1523",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Whistler_Tree",
+   "title": "Whistler Tree – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:20.829Z",
+   "snapshot": "a5b5d850760b2d730a71acadaf1b3216ba3436fc06529bc115c354813515d5c1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Saffron",
+   "title": "Saffron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:26.906Z",
+   "snapshot": "8cd63e257ed2a5a525e39e405f5f150bf989f9eff5dbf2ab4b7c1bf62bea67b5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Caper",
+   "title": "Caper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:21.865Z",
+   "snapshot": "38d5fedb2b43f6bcf9d73bb9613c99cfc11e559197f7e096b9e658ded8f8a6c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cotton_gin",
+   "title": "Cotton gin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:22.837Z",
+   "snapshot": "bd5dcb58a8ec823dec031ec38aa4eab163719a7b5fe30a4c87bba132ceb08c0b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ingwer",
+   "title": "Ingwer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:20.235Z",
+   "snapshot": "05ec9db48c405deca5844a2bad8227e6cf4f15b1377fe3539a55151ef734a726"
+  },
+  "s6": {
+   "url": "https://ahdictionary.com/word/search.html?q=cork+oak",
+   "title": "American Heritage Dictionary Entry: cork oak",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:23.435Z",
+   "snapshot": "29029476c5123b48463d788f07eb461ee76bf09f2d604c9cccc4db164777c748"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Cork_(material)",
+   "title": "Cork (material) - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:12:48Z"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12457153/",
+   "title": "Genome-wide evolution and function analysis of ALOG gene family in cotton - PMC",
+   "publisher": "PubMed Central (NLM)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:23.527Z",
+   "snapshot": "6842847ce8ccba3f473bff92b2cad9f55db6fd508d894804a1533e2e17125413"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Cotton",
+   "title": "Cotton - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:24.596Z",
+   "snapshot": "f3217628790bbfca8b1c4d3ba520698f41f23e7f0cb6b40a3f7fa6466eed4d7c"
+  },
+  "s10": {
+   "url": "https://ahdictionary.com/word/search.html?q=cotton",
+   "title": "American Heritage Dictionary Entry: cotton",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:24.230Z",
+   "snapshot": "73027c3c21559dd2ea07983f7804c59697b6152e1ac549d0f0d7ed8e381efb9f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "bark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "stigmas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "flower buds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "seed hairs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rhizom",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:38.871Z",
+   "target": "f07611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "bark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“bark”, “Rinde”, “кора”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:38.871Z",
+   "target": "f07612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The grading depends largely on the ratio of dark red stigmas to yellow styles, with higher concentrations of red parts yielding premium-grade products.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “stigmas” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:38.871Z",
+   "target": "f07613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The plant is best known for the edible flower buds (capers), used as a seasoning or garnish, and the fruit (caper berries), both of which are usually consumed salted or pickled.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flower buds” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:38.871Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "seed hairs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“seed hairs”, “Samenhaare”, “семенные волоски”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:38.871Z",
+   "target": "f07615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der unterirdische Hauptspross des Ingwers, das Ingwer-Rhizom (auch Ingwerwurzelstock genannt), wird als (ebenfalls Ingwer genanntes) Küchengewürz oder Arzneidroge verwendet; die pharmazeutische Bezeichnung für das Ingwer-Rhizom lautet Zingiberis rhizoma.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhizom” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:43Z",
+   "target": "f07611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Commercial cork is produced by periodically stripping the bark from these trees.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:48Z",
+   "target": "f07611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is the phellem layer of bark tissue which is harvested for commercial use primarily from Quercus suber (the cork oak)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:54Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The development of cotton fibers begins with a single cell protrusion on the ovule epidermis, and then differentiates into elongated and thickened seed trichome",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:58Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants of the genus Gossypium",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:02Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Any of various shrubby plants of the genus Gossypium, having showy flowers and grown for the soft white downy fibers surrounding oil-rich seeds.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:25.027Z",
+   "target": "f07611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Commercial cork is produced by periodically stripping the bark from these trees.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.027Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:25.027Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The development of cotton fibers begins with a single cell protrusion on the ovule epidermis, and then differentiates into elongated and thickened seed trichome",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.027Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:25.027Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants of the genus Gossypium",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.027Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:25.027Z",
+   "target": "f07614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Any of various shrubby plants of the genus Gossypium, having showy flowers and grown for the soft white downy fibers surrounding oil-rich seeds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.027Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:25.027Z",
+   "target": "f07611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A western Mediterranean evergreen oak tree (Quercus suber) having thick bark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.027Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “bark” is on the snapshot of s6"
+  }
+ ]
+}

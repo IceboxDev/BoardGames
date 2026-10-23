@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-022",
+ "image": "IMG20261022153334.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Religious Studies",
+   "cardText": "[Religious Studies] What is the meaning of Jihad in Islam?\nA. War\nB. Faith\nC. Struggle\nAnswer: C. The Five Pillars of Islam are Shahada (faith), Salah (prayer), Zakat (charity), Sawm (fasting during Ramadan), and Hajj (pilgrimage to Mecca). Jihad can refer to personal spiritual growth, meritorious struggle against sin, or, in some interpretations, physical struggle or defense.",
+   "de": "Was bedeutet das arabische Wort „Dschihad“ wörtlich?",
+   "en": "What does the Arabic word “jihad” literally mean?",
+   "reworked": true,
+   "answerDe": "Anstrengung (Kampf, Bemühen)",
+   "answerEn": "Struggle (striving)",
+   "timeline": {
+    "kind": "period",
+    "start": "610",
+    "end": "632",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Quran is revealed to Muhammad, according to Islamic tradition",
+    "labelDe": "Nach islamischer Überlieferung wird Mohammed der Koran offenbart"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Jihad",
+    "title": "Jihad",
+    "lang": "en"
+   },
+   "notes": "Card confirmed: jihad means 'exerting', 'striving' or 'struggling', particularly with a praiseworthy aim. The card's list of the Five Pillars is correct but beside the point — jihad is not one of them. Timeline (610–632 revelation) is general knowledge, not from the source page.",
+   "domain": "belief",
+   "sub": "religion"
+  },
+  {
+   "category": 2,
+   "discipline": "Mathematics",
+   "cardText": "[Mathematics] Which of the following describes the flatness of a distribution?\nA. Skewness\nB. Range\nC. Kurtosis\nAnswer: C. Kurtosis describes the flatness or peakedness of a distribution, indicating how data is distributed in the tails relative to the center. Skewness describes the asymmetry of a distribution.",
+   "de": "Welche auf dem vierten Moment beruhende statistische Kennzahl beschreibt die Randlastigkeit einer Verteilung und wurde lange – fälschlich – als deren Gipfligkeit oder Flachheit erklärt?",
+   "en": "Which statistical measure, based on the fourth moment, describes the tailedness of a distribution and was long — wrongly — explained as its peakedness or flatness?",
+   "reworked": true,
+   "answerDe": "Kurtosis (Wölbung)",
+   "answerEn": "Kurtosis",
+   "timeline": {
+    "kind": "creation",
+    "start": "1905",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Karl Pearson introduces the standard measure of kurtosis",
+    "labelDe": "Karl Pearson führt das Standardmaß der Kurtosis ein"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kurtosis",
+    "title": "Kurtosis",
+    "lang": "en"
+   },
+   "notes": "Card's explanation is outdated: Wikipedia (citing Westfall 2014) says kurtosis relates to the tails/outliers, not the peak, and calling it 'peakedness' or 'flatness' is incorrect. The answer kurtosis is still the intended measure; the question is phrased honestly.",
+   "domain": "science",
+   "sub": "maths"
+  }
+ ]
+}

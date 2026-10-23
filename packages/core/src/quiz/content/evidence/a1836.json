@@ -1,0 +1,605 @@
+{
+ "article": "a1836",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pong",
+   "title": "Pong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:34.249Z",
+   "snapshot": "8ac2f1c9400fd5fd9f729bf1def3695d4f351f5d0262db07c03b0fbe87680a60"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Space_Invaders",
+   "title": "Space Invaders – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:31.129Z",
+   "snapshot": "68f7d42c26b0aeb55ce605184f315d8a5d793b9a996d7d10b2a0806d48142eaa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Universal_City_Studios,_Inc._v._Nintendo_Co.,_Ltd.",
+   "title": "Universal City Studios, Inc. v. Nintendo Co., Ltd. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:18.380Z",
+   "snapshot": "77f0f22fa0bf873b10680882824267d27c9f344f6d95b082da5a03abe49d7568"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Donkey_Kong_(1981_video_game)",
+   "title": "Donkey Kong (1981 video game)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:32.208Z",
+   "snapshot": "3e905aa5a316f53bcbd6e71e090c0629285d7409e67fd14a3c7d4c6803d35c90"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tetris",
+   "title": "Tetris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:07.254Z",
+   "snapshot": "b64ff36b3a4d1849a9b66015e57e05fa597e1db0c74de8cb8f63b9cfcbeaf2ae"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tetris",
+   "title": "Tetris",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:16.285Z",
+   "snapshot": "26b3a3b595d12bd641532cdccc7da366bb767515d6940cd87aa08b9bfba285ee"
+  },
+  "s7": {
+   "url": "https://www.museumofplay.org/games/pong/",
+   "title": "Pong – The Strong National Museum of Play",
+   "publisher": "The Strong National Museum of Play",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:50.865Z",
+   "snapshot": "8e89264b9faac307f6b3293d1a23b8121e16ab42104cc191bfd5422c7f43f973"
+  },
+  "s8": {
+   "url": "https://www.museumofplay.org/games/donkey-kong/",
+   "title": "Donkey Kong – The Strong National Museum of Play",
+   "publisher": "The Strong National Museum of Play",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:51.045Z",
+   "snapshot": "8727280d8850f7909d7b21f9e208c3021906c787b8493de05a4b8c54a4c4aae8"
+  },
+  "s9": {
+   "url": "https://www.museumofplay.org/games/tetris/",
+   "title": "Tetris – The Strong National Museum of Play",
+   "publisher": "The Strong National Museum of Play",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:51.312Z",
+   "snapshot": "d4ce1283e7330a8bef4f8a03163f8639a1d64138528ab8a286591286c04ec4e8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f24424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andy Capp's Tavern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tomohiro Nishikado",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Donkey Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Donkey Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-300"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tetris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tetris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-101"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pong is a 1972 sports video game developed and published by Atari, Inc.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pong” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f24424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In August 1972, Bushnell and Alcorn installed the Pong prototype at a local bar, Andy Capp's Tavern.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andy Capp's Tavern” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f24425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Designer Tomohiro Nishikado drew inspiration from video games such as Gun Fight and Breakout, electro-mechanical target shooting games, and science fiction narratives such as the novel The War of the Worlds, the anime Space Battleship Yamato, and the film Star Wars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tomohiro Nishikado” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In their complaint, Universal Studios alleged that Nintendo's video game Donkey Kong was a trademark infringement of King Kong, the plot and characters of which Universal claimed as their own.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donkey Kong” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Donkey Kong is a 1981 platform game developed and published by Nintendo for arcades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donkey Kong” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tetris (Russian: Тетрис) is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer, in the mid-1980s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tetris” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:30.531Z",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tetris (russisch Тетрис) ist ein puzzleartiges Computerspiel des russischen Programmierers Alexei Paschitnow, der die erste spielbare Version am 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tetris” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:06:27Z",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pong was the first commercially successful video game,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:06:30Z",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pong was the first game to grab wide-scale public attention. Its success launched Atari into a preeminent role in the video game industry.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:06:33Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the first game in the Donkey Kong series and Mario's first appearance in a video game.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:06:37Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Initially called Jumpman for his signature leaping move, Nintendo of America employees named him Mario after the owner of their warehouse.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:06:44Z",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tetris emerged from the pleasure Alexey Pajitnov, a programmer from the Soviet Union, experienced trying to solve pentominoes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pong was the first commercially successful video game,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pong was the first game to grab wide-scale public attention. Its success launched Atari into a preeminent role in the video game industry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the first game in the Donkey Kong series and Mario's first appearance in a video game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Initially called Jumpman for his signature leaping move, Nintendo of America employees named him Mario after the owner of their warehouse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tetris emerged from the pleasure Alexey Pajitnov, a programmer from the Soviet Union, experienced trying to solve pentominoes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pong - The Strong National Museum of Play",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pong” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Donkey Kong - The Strong National Museum of Play",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Donkey Kong” is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:57:19.841Z",
+   "target": "f09180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tetris - The Strong National Museum of Play",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tetris” is on the snapshot of s9"
+  }
+ ]
+}

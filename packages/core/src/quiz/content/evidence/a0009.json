@@ -1,0 +1,504 @@
+{
+ "article": "a0009",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Herd_immunity",
+   "title": "Herd immunity – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:21.509Z",
+   "snapshot": "76e7ad86c86bfc9010669f75cbb110cb3ef32f865f961a7bc1ac68de4a5cab59"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Emil_von_Behring",
+   "title": "Emil von Behring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:22.414Z",
+   "snapshot": "99162b8a30c5dde15361089a21c7dbd722ab2a50a870e9dc3a15fd5fee90079c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Immunity_(medicine)",
+   "title": "Immunity (medicine) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:23.517Z",
+   "snapshot": "559b9744e57f5724c45b11ef2cd8af5de279fa3dcdaac46f368de0a088f33a62"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/James_Phipps",
+   "title": "James Phipps – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:24.414Z",
+   "snapshot": "c00082845d5c78fb909a6b121f7192cd5e6840b54306898818344632c54cf041"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Measles_vaccine",
+   "title": "Measles vaccine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:25.527Z",
+   "snapshot": "83609dd03f85f4fa7df87bb168106b6afb9ca9d8846b17e5e57c3d2ee28dd4ad"
+  },
+  "s6": {
+   "url": "https://www.who.int/news-room/questions-and-answers/item/herd-immunity-lockdowns-and-covid-19",
+   "title": "Coronavirus disease (COVID-19): Herd immunity, lockdowns and COVID-19",
+   "publisher": "World Health Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:16.063Z",
+   "snapshot": "512b5614132c0e113a05fe72881a8239aef94e24d76317061babf9c847cb2510"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4165321/",
+   "title": "Maternal antibodies: clinical significance, mechanism of interference with immune responses, and possible vaccination strategies",
+   "publisher": "Frontiers in Immunology (via PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:16.319Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Passive_immunity",
+   "title": "Passive immunity – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:16.667Z",
+   "snapshot": "3c5fc9910b5280c6d4049d0942f68a3c8552e727dbd953fa4a4be84427c18f2e"
+  },
+  "s9": {
+   "url": "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-13-measles.html",
+   "title": "Pinkbook: Measles",
+   "publisher": "U.S. Centers for Disease Control and Prevention",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:17.160Z",
+   "snapshot": "082c419394d9837b3bc53f329192f15f1e08549bfc035e8d1869e7d9a830a134"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "vaccination of a large part of the population",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "maternal antibodies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "memory cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cowpox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "attenuated pathogens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:36.747Z",
+   "target": "f00041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "vaccination of a large part of the population",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“vaccination of a large part of the population”, “Impfung eines Großteils der Bevölkerung”, “вакцинация значительной части населения”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:36.747Z",
+   "target": "f00042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "maternal antibodies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“maternal antibodies”, “mütterliche Antikörper”, “материнские антитела”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:36.747Z",
+   "target": "f00043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Throughout the lifetime of an animal, these memory cells will \"remember\" each specific pathogen encountered, and can mount a strong secondary response if the pathogen is detected again.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “memory cells” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:36.747Z",
+   "target": "f00044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James Phipps (1788 – 1853) was the first person given the experimental cowpox vaccine by Edward Jenner.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cowpox” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:36.747Z",
+   "target": "f00045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "attenuated pathogens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“attenuated pathogens”, “abgeschwächte Erreger”, “ослабленные возбудители”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:01Z",
+   "target": "f00041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "WHO supports achieving 'herd immunity' through vaccination, not by allowing a disease to spread through any segment of the population",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "WHO also notes immunity from previous infection; wording narrowed to the recommended route"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:06Z",
+   "target": "f00041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Herd immunity created via vaccination has contributed to the reduction of many diseases.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:15:14Z",
+   "target": "f00042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Maternal antibodies are transferred from mother to child and protect neonates and infants during the time of maturation of their immune system.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:20Z",
+   "target": "f00042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Passive immunity can occur naturally, when maternal antibodies are transferred to the fetus through the placenta",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:15:25Z",
+   "target": "f00045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1963, both an inactivated (\"killed\") and a live, attenuated (Edmonston B strain) measles vaccine were licensed for use in the United States.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:15:30Z",
+   "target": "f00045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Measles vaccine is a live attenuated vaccine that protects against becoming infected with measles.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:51.253Z",
+   "target": "f00041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "WHO supports achieving 'herd immunity' through vaccination, not by allowing a disease to spread through any segment of the population",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:51.253Z",
+   "target": "f00041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Herd immunity created via vaccination has contributed to the reduction of many diseases.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:51.253Z",
+   "target": "f00042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Passive immunity can occur naturally, when maternal antibodies are transferred to the fetus through the placenta",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:51.253Z",
+   "target": "f00045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1963, both an inactivated (\"killed\") and a live, attenuated (Edmonston B strain) measles vaccine were licensed for use in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:51.253Z",
+   "target": "f00045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Measles vaccine is a live attenuated vaccine that protects against becoming infected with measles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:51:51.253Z",
+   "target": "f00042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Passive immunity can occur naturally, when maternal antibodies are transferred to the fetus through the placenta, and it can also be induced artificially, when high levels of antibodies specific to a pathogen or toxin (obtained from humans, horses, or other animals) are transferred to non-immune",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “maternal antibodies” is on the snapshot of s8"
+  }
+ ]
+}

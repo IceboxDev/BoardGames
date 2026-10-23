@@ -1,0 +1,399 @@
+{
+ "article": "a2773",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Teratoma",
+   "title": "Teratoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:40.154Z",
+   "snapshot": "c69109f1774901ddc528e00986239685f87e5ff3e3885c101d89b8aa824dbf48"
+  },
+  "s2": {
+   "url": "https://cancerquest.org/node/6226",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:37.672Z",
+   "snapshot": "dcefbe1f854961012bbf11684769829730e054903e24afe7637c34433f473200"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carcinoma",
+   "title": "Carcinoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:41.092Z",
+   "snapshot": "0fabd273b90c80b09f97a75a70f4d6c00c0be8245c0c59c129f07ccba20a0526"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lipoma",
+   "title": "Lipoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:42.075Z",
+   "snapshot": "d988d4a3988d1ab43bbb55ae6a1b25ec0353669e1236eea6c5a9169409805525"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Metastasis",
+   "title": "Metastasis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:43.091Z",
+   "snapshot": "b648ae881ffb3fc67ed5dcbdc9b84503c2600241c8c8ab763643cac83dec7730"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/History_of_cancer",
+   "title": "History of cancer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:44.071Z",
+   "snapshot": "7f343406e42c021afad489869e0911071a3234e6963f5f382da1dd43dfdc962f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hippocrates",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:14.855Z",
+   "snapshot": "904e037cb05283f94990c6fcb154912f3f4a78dcfb7ee1b4f50e956b2f3410c3"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12184562/",
+   "title": "A Giant Lipoma Presenting With Neurological Symptoms: A Rare Clinical Presentation (2025)",
+   "publisher": "Cureus / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:20.201Z",
+   "snapshot": "4c13af3fa73a99f2ad9e416ba386e952cab2c5ebe4c7753c5385f24c8b066a98"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Teratoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Teratoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 15; history entry seq 17"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "carcinoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "lipoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "metastasis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "oncology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:11.608Z",
+   "target": "f25855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A teratoma is a tumor made up of several types of tissue, such as hair, muscle, teeth, or bone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Teratoma” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:11.608Z",
+   "target": "f25855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Teratoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Teratoma”, “Teratom”, “тератома”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:11.608Z",
+   "target": "f25856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carcinoma is a malignancy that develops from epithelial cells.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carcinoma” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:11.608Z",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A lipoma is a benign tumor made of fat tissue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lipoma” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:11.608Z",
+   "target": "f25858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Metastasis is the spread of a pathogenic agent from an initial or primary site to a different or secondary site within the host's body; the term is typically used when referring to metastasis by a cancerous tumor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “metastasis” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:11.608Z",
+   "target": "f25859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The history of cancer describes the development of the field of oncology and its role in the history of medicine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oncology” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:23:14Z",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A lipoma is the most common benign soft tissue tumour.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:23:15Z",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "They are the most common noncancerous soft-tissue tumor.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T13:00:00.499Z",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A lipoma is the most common benign soft tissue tumour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:00.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T13:00:00.499Z",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "They are the most common noncancerous soft-tissue tumor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:00.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T13:00:00.499Z",
+   "target": "f25857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A Giant Lipoma Presenting With Neurological Symptoms: A Rare Clinical Presentation - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:00.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “lipoma” is on the snapshot of s8"
+  }
+ ]
+}

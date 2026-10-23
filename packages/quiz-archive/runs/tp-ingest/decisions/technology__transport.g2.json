@@ -1,0 +1,1037 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "technology/transport",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-052",
+    "category": 6
+   },
+   "factId": "f01761"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-077",
+    "category": 3
+   },
+   "factId": "f03815"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-098",
+    "category": 5
+   },
+   "factId": "f00035"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-257",
+    "category": 5
+   },
+   "factId": "f08818"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0007",
+   "baseHash": "75dc3725ba5c",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-139",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Five Cars That Changed the Car Business",
+    "titleDe": "Fünf Autos, die das Autogeschäft veränderten",
+    "bodyEn": "The history of the automobile industry can be told through a handful of models that each forced the whole business to change course. Some did so by selling in unprecedented numbers, one by introducing a new technology, and one by failing a test in front of the world's press.\n\nThe first was the Ford Model T. Henry Ford had been building it since 1908, but the decisive moment came on 7 October 1913, when his Highland Park plant in Michigan introduced the moving assembly line. The time needed to build a car fell from more than twelve hours to about ninety minutes, the price of a Model T fell to under 300 dollars, and by 1927 more than fifteen million had been sold. Americans nicknamed it the \"Tin Lizzie\", and in 1999 an international jury voted it the most influential car of the 20th century in the Car of the Century competition, ahead of the Mini, the Citroën DS and the Beetle. Ford's system of standardised parts, high wages and low prices became the model for mass production in every industry.\n\nGermany's equivalent was the Volkswagen Beetle. Designed by Ferdinand Porsche in the 1930s as a \"people's car\", it went into serious production only after the war under British military administration in Wolfsburg. Its construction was famously simple: the body sat on a flat platform chassis and was held to it by just 18 bolts, so that the two could be separated in any workshop. Rugged, cheap and endlessly reliable, it became the symbol of the West German economic miracle and, from the 1950s, one of the country's most important exports. When the last one left the plant in Puebla, Mexico, in 2003, more than 21.5 million had been built, for decades the highest total of any single car model.\n\nBy the early 1970s the Beetle's rear-engined design was hopelessly outdated, and Volkswagen was close to collapse. Its salvation was the Volkswagen Golf, launched in May 1974 with a front-mounted, water-cooled engine, front-wheel drive and a crisp hatchback body by Giorgetto Giugiaro. It defined the compact-car class so completely that in Europe such cars are still called the \"Golf class\", and it has been Germany's best-selling car in almost every year since.\n\nMercedes-Benz entered the same market in 1997 with the Mercedes-Benz A-Class, a tall, short compact car with a clever sandwich floor. On 21 October 1997, weeks after the launch, the Swedish motoring magazine Teknikens Värld performed its standard evasive manoeuvre, a sudden swerve around an imaginary elk, and the new car rolled onto its side at 60 km/h. The \"Elchtest\" became a global news story and a public-relations disaster for a brand built on safety. Mercedes halted deliveries, revised the suspension and fitted the Electronic Stability Program as standard equipment, the first time ESP had been offered on a small car. The episode ended up accelerating the spread of stability control across the whole industry.\n\nThe same year brought a quieter revolution from Japan. The Toyota Prius, launched in December 1997, was the first mass-produced car to combine a petrol engine with an electric motor and a battery. Initially sold only in Japan, it reached world markets in 2000 and became the emblem of environmentally conscious motoring, selling millions before electric cars caught up.\n\n| Car | Launched | Why it matters |\n|---|---|---|\n| Ford Model T | 1908 (assembly line 1913) | Invented mass production |\n| Volkswagen Beetle | 1938 | Over 21 million built |\n| Volkswagen Golf | 1974 | Defined the compact class |\n| Mercedes-Benz A-Class | 1997 | Failed the moose test; ESP for all |\n| Toyota Prius | 1997 | First mass-market hybrid |\n\nEach of the five is a business story as much as an engineering one: a bet on how people would want to buy, drive and pay for their cars.",
+    "bodyDe": "Die Geschichte der Automobilindustrie lässt sich anhand einer Handvoll Modelle erzählen, die jeweils die gesamte Branche zu einem Kurswechsel zwangen. Einige taten das durch nie dagewesene Verkaufszahlen, eines durch die Einführung einer neuen Technik und eines, indem es vor der Weltpresse einen Test nicht bestand.\n\nDas erste war das Ford Modell T. Henry Ford baute es seit 1908, doch der entscheidende Moment kam am 7. Oktober 1913, als sein Werk in Highland Park in Michigan das Fließband einführte. Die Bauzeit eines Autos sank von mehr als zwölf Stunden auf etwa neunzig Minuten, der Preis eines Modell T fiel unter 300 Dollar, und bis 1927 waren mehr als fünfzehn Millionen verkauft. Die Amerikaner nannten es „Tin Lizzie“ (Blechliesel), und 1999 kürte eine internationale Jury es im Wettbewerb um das Auto des Jahrhunderts zum einflussreichsten Auto des 20. Jahrhunderts, vor dem Mini, dem Citroën DS und dem Käfer. Fords System aus genormten Teilen, hohen Löhnen und niedrigen Preisen wurde zum Vorbild der Massenproduktion in jeder Industrie.\n\nDeutschlands Gegenstück war der VW Käfer. In den 1930er Jahren von Ferdinand Porsche als „Volkswagen“ entworfen, ging er erst nach dem Krieg unter britischer Militärverwaltung in Wolfsburg in ernsthafte Produktion. Seine Konstruktion war berühmt einfach: Die Karosserie saß auf einem flachen Plattformrahmen und war mit nur 18 Schrauben daran befestigt, sodass sich beide in jeder Werkstatt voneinander trennen ließen. Robust, billig und unendlich zuverlässig, wurde er zum Symbol des westdeutschen Wirtschaftswunders und ab den 1950er Jahren zu einem der wichtigsten Exportgüter des Landes. Als 2003 der letzte im Werk Puebla in Mexiko vom Band lief, waren mehr als 21,5 Millionen gebaut, jahrzehntelang die höchste Stückzahl eines einzelnen Automodells.\n\nAnfang der 1970er Jahre war die Heckmotor-Konstruktion des Käfers hoffnungslos veraltet, und Volkswagen stand kurz vor dem Zusammenbruch. Die Rettung war der VW Golf, der im Mai 1974 mit vorn eingebautem, wassergekühltem Motor, Frontantrieb und einer klaren Schrägheckkarosserie von Giorgetto Giugiaro auf den Markt kam. Er definierte die Kompaktklasse so vollständig, dass solche Autos in Europa bis heute „Golfklasse“ genannt werden, und er war seither in fast jedem Jahr das meistverkaufte Auto Deutschlands.\n\nMercedes-Benz stieg 1997 mit der Mercedes-Benz A-Klasse in denselben Markt ein, einem hohen, kurzen Kompaktwagen mit einem raffinierten Sandwichboden. Am 21. Oktober 1997, wenige Wochen nach dem Start, führte die schwedische Autozeitschrift Teknikens Värld ihr übliches Ausweichmanöver durch, einen plötzlichen Schlenker um einen imaginären Elch, und der neue Wagen kippte bei 60 km/h auf die Seite. Der „Elchtest“ wurde zur weltweiten Nachricht und zu einem PR-Desaster für eine Marke, die auf Sicherheit gebaut war. Mercedes stoppte die Auslieferung, überarbeitete das Fahrwerk und baute das Elektronische Stabilitätsprogramm serienmäßig ein, das erste Mal, dass ESP in einem Kleinwagen angeboten wurde. Die Episode beschleunigte am Ende die Verbreitung der Stabilitätskontrolle in der gesamten Industrie.\n\nDasselbe Jahr brachte eine leisere Revolution aus Japan. Der Toyota Prius, im Dezember 1997 eingeführt, war das erste in Großserie gebaute Auto, das einen Benzinmotor mit einem Elektromotor und einer Batterie kombinierte. Zunächst nur in Japan verkauft, erreichte er 2000 die Weltmärkte und wurde zum Sinnbild umweltbewussten Autofahrens, mit Millionen verkauften Exemplaren, bevor Elektroautos aufholten.\n\n| Auto | Markteinführung | Warum es zählt |\n|---|---|---|\n| Ford Modell T | 1908 (Fließband 1913) | Erfand die Massenproduktion |\n| VW Käfer | 1938 | Über 21 Millionen gebaut |\n| VW Golf | 1974 | Definierte die Kompaktklasse |\n| Mercedes-Benz A-Klasse | 1997 | Fiel beim Elchtest durch; ESP für alle |\n| Toyota Prius | 1997 | Erster Großserien-Hybrid |\n\nJedes der fünf ist ebenso eine Wirtschafts- wie eine Technikgeschichte: eine Wette darauf, wie die Menschen ihre Autos kaufen, fahren und bezahlen wollen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0648",
+   "baseHash": "421682de58bf",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-053",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-362",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "From the Laufmaschine to the Motor Car: Seventy Years of Inventions on Wheels",
+    "titleDe": "Von der Laufmaschine zum Motorwagen: Siebzig Jahre Erfindungen auf Rädern",
+    "bodyEn": "The bicycle owes its existence to a volcano. When Mount Tambora erupted in Indonesia in 1815, its ash cooled the globe and 1816 became the „year without a summer“ in Europe: harvests failed, the price of oats soared, and horses – the engines of every coach and cab – starved or were slaughtered. The Baden forester and inventor Karl Freiherr von Drais (1785–1851) responded in 1817 with a two-wheeled, steerable vehicle that a rider pushed along with his feet: the Laufmaschine (draisine). On 12 June 1817 he rode it from Mannheim to the Schwetzingen relay house and back, about fourteen kilometres, in less than an hour – faster than the mail coach. It had no pedals and was soon banned from pavements, but it established the principle that a person can balance on two wheels in line.\n\nPedals were added in France in the 1860s, and the search for speed then produced the high-wheeler with its enormous front wheel. The decisive step came in 1885, when John Kemp Starley of Coventry introduced the Rover Safety Bicycle: two wheels of roughly equal size, a diamond frame and a chain drive to the rear wheel. It was the layout every bicycle has used since, and the Polish word for bicycle, „rower“, still recalls it.\n\nComfort arrived three years later. In 1888 the Belfast veterinary surgeon John Boyd Dunlop (1840–1921), trying to make his young son's tricycle run more smoothly over cobbles, wrapped inflated rubber tubes around its wheels and patented the pneumatic tyre; the patent was granted on 7 December 1888. Within a few years every racing cyclist had switched to it, and it made the motor car practical.\n\nThe motor itself was being fitted to the same frames at the same time. In 1885 Gottlieb Daimler and Wilhelm Maybach mounted their small, fast-running petrol engine in a wooden two-wheeler to test it and patented the design on 29 August 1885; the Reitwagen, or „riding car“, which Daimler's son Paul drove through Cannstatt in November 1885, is regarded as the first motorcycle. In Mannheim, meanwhile – the city where Drais had started – Carl Benz was building a three-wheeled vehicle around his own engine. The Benz Patent-Motorwagen, patented on 29 January 1886, is considered the first practical automobile. Its inventor hesitated to show it in public, so in August 1888 Bertha Benz, his wife and financial partner, took the car without telling him and drove it with her two teenage sons 106 kilometres from Mannheim to her home town of Pforzheim, buying fuel at a pharmacy on the way – the first successful long-distance journey in the history of the automobile. In 1926 Benz & Cie. merged with the Daimler-Motoren-Gesellschaft, and the name of the inventor of the automobile lives on in the brand Mercedes-Benz.\n\n| Year | Invention | Inventor |\n|---|---|---|\n| 1817 | Laufmaschine (draisine) | Karl Freiherr von Drais |\n| 1885 | Rover Safety Bicycle | John Kemp Starley |\n| 1885 | Reitwagen | Gottlieb Daimler and Wilhelm Maybach |\n| 1886 | Benz Patent-Motorwagen | Carl Benz |\n| 1888 | Pneumatic tyre | John Boyd Dunlop |\n| 1888 | First long-distance car journey | Bertha Benz |\n\nIn seventy years, then, a reaction to expensive horse feed had turned into a machine that made the horse redundant – and the story begins and ends in the same city on the Rhine, Mannheim.",
+    "bodyDe": "Das Fahrrad verdankt seine Existenz einem Vulkan. Als 1815 in Indonesien der Tambora ausbrach, kühlte seine Asche den Globus ab, und 1816 wurde in Europa zum „Jahr ohne Sommer“: Die Ernten fielen aus, der Haferpreis schoss in die Höhe, und die Pferde – die Motoren jeder Kutsche und Droschke – verhungerten oder wurden geschlachtet. Der badische Forstmann und Erfinder Karl Freiherr von Drais (1785–1851) antwortete 1817 mit einem zweirädrigen, lenkbaren Fahrzeug, das der Fahrer mit den Füßen vom Boden abstieß: die Laufmaschine (Draisine). Am 12. Juni 1817 fuhr er damit von Mannheim zum Schwetzinger Relaishaus und zurück, etwa vierzehn Kilometer, in weniger als einer Stunde – schneller als die Postkutsche. Sie hatte keine Pedale und wurde bald von den Gehwegen verbannt, aber sie begründete das Prinzip, dass ein Mensch auf zwei hintereinander laufenden Rädern balancieren kann.\n\nPedale kamen in den 1860er-Jahren in Frankreich hinzu, und die Suche nach Geschwindigkeit brachte dann das Hochrad mit seinem riesigen Vorderrad hervor. Der entscheidende Schritt folgte 1885, als John Kemp Starley aus Coventry das Rover Safety Bicycle vorstellte: zwei etwa gleich große Räder, ein Diamantrahmen und ein Kettenantrieb auf das Hinterrad. Es war die Bauform, die seither jedes Fahrrad verwendet, und das polnische Wort für Fahrrad, „rower“, erinnert noch heute daran.\n\nDer Komfort kam drei Jahre später. 1888 wickelte der in Belfast praktizierende Tierarzt John Boyd Dunlop (1840–1921), der das Dreirad seines kleinen Sohnes sanfter über das Kopfsteinpflaster rollen lassen wollte, aufgepumpte Gummischläuche um dessen Räder und ließ den Luftreifen patentieren; das Patent wurde am 7. Dezember 1888 erteilt. Innerhalb weniger Jahre war jeder Radrennfahrer umgestiegen, und er machte das Automobil praxistauglich.\n\nDer Motor selbst wurde zur gleichen Zeit in dieselben Rahmen gebaut. 1885 montierten Gottlieb Daimler und Wilhelm Maybach ihren kleinen, schnelllaufenden Benzinmotor in ein hölzernes Zweirad, um ihn zu erproben, und ließen die Konstruktion am 29. August 1885 patentieren; der Reitwagen, den Daimlers Sohn Paul im November 1885 durch Cannstatt fuhr, gilt als das erste Motorrad. In Mannheim unterdessen – der Stadt, in der Drais begonnen hatte – baute Carl Benz ein dreirädriges Fahrzeug um seinen eigenen Motor. Der Benz Patent-Motorwagen, patentiert am 29. Januar 1886, gilt als das erste praxistaugliche Automobil. Sein Erfinder zögerte, ihn öffentlich vorzuführen, und so nahm Bertha Benz, seine Frau und Geldgeberin, im August 1888 den Wagen, ohne ihm etwas zu sagen, und fuhr mit ihren beiden halbwüchsigen Söhnen 106 Kilometer von Mannheim in ihre Heimatstadt Pforzheim, wobei sie unterwegs in einer Apotheke Benzin kaufte – die erste erfolgreiche Fernfahrt in der Geschichte des Automobils. 1926 fusionierte Benz & Cie. mit der Daimler-Motoren-Gesellschaft, und der Name des Erfinders des Automobils lebt in der Marke Mercedes-Benz fort.\n\n| Jahr | Erfindung | Erfinder |\n|---|---|---|\n| 1817 | Laufmaschine (Draisine) | Karl Freiherr von Drais |\n| 1885 | Rover Safety Bicycle | John Kemp Starley |\n| 1885 | Reitwagen | Gottlieb Daimler und Wilhelm Maybach |\n| 1886 | Benz Patent-Motorwagen | Carl Benz |\n| 1888 | Luftreifen | John Boyd Dunlop |\n| 1888 | Erste Fernfahrt mit dem Auto | Bertha Benz |\n\nIn siebzig Jahren war aus der Reaktion auf teures Pferdefutter also eine Maschine geworden, die das Pferd überflüssig machte – und die Geschichte beginnt und endet in derselben Stadt am Rhein, Mannheim.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1608",
+   "baseHash": "a1cfb2f527f6",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-062",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-091",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-329",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Winds, Moons and Castles: What Car Names Mean",
+    "titleDe": "Winde, Monde und Burgen: Was Autonamen bedeuten",
+    "bodyEn": "Car makers spend fortunes on names, and the best ones carry a second meaning that sticks in the mind. Nowhere is that more true than in Germany, where two of the most famous names in automotive history come from the East and a whole family from Wolfsburg is named after the wind.\n\nThe Trabant, built by VEB Sachsenring in Zwickau from 1957 to 1991, was the people's car of the German Democratic Republic: a two-stroke, two-cylinder small car with a body of Duroplast, a resin reinforced with cotton waste, that citizens waited more than a decade to receive. Its name is the German word for a satellite or companion – a Trabant is a moon orbiting a planet – and it was chosen in 1957, the year in which the Soviet Union launched Sputnik, the first artificial satellite, into orbit. The Trabant's sister from Eisenach was the Wartburg, a larger and slightly more comfortable car built from 1956 to 1991 and named after the castle above the town, where from May 1521 to March 1522 Martin Luther, hidden as \"Junker Jörg\", translated the New Testament into German. From 1967 the Wartburg 353 was also built with right-hand drive for Great Britain, where more than 20,000 were sold under the name Wartburg Knight.\n\nIn the West, a family nickname could do the same job. In Dingolfing in Lower Bavaria the agricultural-machinery maker Hans Glas launched a tiny two-stroke car in 1955 and named it after \"Goggo\", the pet name of his grandson: the Goggomobil became one of the best-loved small cars of the economic miracle, and around 280,000 were built.\n\nIn West Germany, Volkswagen moved away from the Beetle in the 1970s with a series of models named after winds. The Passat of 1973 takes its name from the trade wind, the steady tropical easterly that carried sailing ships across the Atlantic. The Golf of 1974, which became Europe's best-selling car, is named after the Gulf Stream (Golfstrom) – a Golf in German is a large bay of the sea, and the word is unrelated to the sport, although the club-and-ball association was cheerfully accepted by the marketing department. The Scirocco (1974) is the hot Mediterranean wind, the Jetta (1979) the jet stream, and the Bora (1998) the cold wind of the Adriatic. The smallest of the family broke the pattern: the Polo, launched in 1975, is named after the equestrian sport in which riders strike a ball with long mallets, and it started a second series of sport names that later included the Derby.\n\n| Car | Manufacturer | Built from | Name meaning |\n|---|---|---|---|\n| Trabant | Sachsenring, Zwickau | 1957 | Satellite, moon |\n| Wartburg | AWE, Eisenach | 1956 | Castle above Eisenach |\n| Passat | Volkswagen | 1973 | Trade wind |\n| Golf | Volkswagen | 1974 | Gulf (Gulf Stream) |\n| Polo | Volkswagen | 1975 | Equestrian ball sport |\n\nEven two letters can carry a meaning: the \"GT\" in badges such as GTI, GTS or GTE stands for the Italian Gran Turismo, a fast car built for comfortable long-distance touring, a label made famous by Ferrari and Lancia in the 1950s.\n\nThe habit continues. Ford's Fiesta is a party, Opel's Corsa an Italian race, the Fiat Panda a bear and the Nissan Qashqai a nomadic people in Iran – proof that engineers may build the car, but it is the name that has to carry it around the world.",
+    "bodyDe": "Autohersteller geben Vermögen für Namen aus, und die besten tragen eine zweite Bedeutung, die im Gedächtnis bleibt. Nirgends gilt das mehr als in Deutschland, wo zwei der berühmtesten Namen der Automobilgeschichte aus dem Osten stammen und eine ganze Familie aus Wolfsburg nach dem Wind benannt ist.\n\nDer Trabant, von 1957 bis 1991 vom VEB Sachsenring in Zwickau gebaut, war das Volksauto der DDR: ein Kleinwagen mit Zweitakt-Zweizylindermotor und einer Karosserie aus Duroplast, einem mit Baumwollabfällen verstärkten Harz, auf den die Bürger mehr als ein Jahrzehnt warteten. Sein Name ist das deutsche Wort für einen Satelliten oder Begleiter – ein Trabant ist ein Mond, der einen Planeten umkreist – und wurde 1957 gewählt, in dem Jahr, in dem die Sowjetunion mit Sputnik den ersten künstlichen Satelliten in die Umlaufbahn schoss. Die Schwester des Trabant aus Eisenach war der Wartburg, ein größerer und etwas komfortablerer Wagen, von 1956 bis 1991 gebaut und nach der Burg über der Stadt benannt, auf der Martin Luther von Mai 1521 bis März 1522 als „Junker Jörg“ versteckt das Neue Testament ins Deutsche übersetzte. Ab 1967 wurde der Wartburg 353 auch mit Rechtslenkung für Großbritannien gebaut, wo mehr als 20.000 Stück unter dem Namen Wartburg Knight verkauft wurden.\n\nIm Westen konnte auch ein Kosename aus der Familie diese Aufgabe erfüllen. Im niederbayerischen Dingolfing brachte der Landmaschinenhersteller Hans Glas 1955 einen winzigen Zweitaktwagen heraus und benannte ihn nach „Goggo“, dem Spitznamen seines Enkels: Das Goggomobil wurde zu einem der beliebtesten Kleinwagen des Wirtschaftswunders, und es wurden rund 280.000 Stück gebaut.\n\nIn Westdeutschland verabschiedete sich Volkswagen in den 1970er-Jahren mit einer Reihe von Modellen, die nach Winden benannt sind, vom Käfer. Der Passat von 1973 trägt den Namen des Passatwindes, des beständigen tropischen Ostwindes, der die Segelschiffe über den Atlantik trug. Der Golf von 1974, der zum meistverkauften Auto Europas wurde, ist nach dem Golfstrom benannt – ein Golf ist im Deutschen eine große Meeresbucht, und das Wort hat mit dem Sport nichts zu tun, auch wenn die Marketingabteilung die Assoziation mit Schläger und Ball gern in Kauf nahm. Der Scirocco (1974) ist der heiße Mittelmeerwind, der Jetta (1979) der Jetstream und der Bora (1998) der kalte Wind der Adria. Der Kleinste der Familie durchbrach das Muster: Der Polo, 1975 eingeführt, ist nach der Reitsportart benannt, bei der die Reiter einen Ball mit langen Schlägern treiben, und er begründete eine zweite Namensreihe aus dem Sport, zu der später der Derby gehörte.\n\n| Auto | Hersteller | Gebaut ab | Bedeutung des Namens |\n|---|---|---|---|\n| Trabant | Sachsenring, Zwickau | 1957 | Satellit, Mond |\n| Wartburg | AWE, Eisenach | 1956 | Burg über Eisenach |\n| Passat | Volkswagen | 1973 | Passatwind |\n| Golf | Volkswagen | 1974 | Meeresbucht (Golfstrom) |\n| Polo | Volkswagen | 1975 | Reitsport mit Ball |\n\nSelbst zwei Buchstaben können eine Bedeutung tragen: Das „GT“ in Typenbezeichnungen wie GTI, GTS oder GTE steht für das italienische Gran Turismo, einen schnellen Wagen für bequeme lange Reisen – ein Etikett, das Ferrari und Lancia in den 1950er-Jahren berühmt machten.\n\nDie Gewohnheit hält an. Fords Fiesta ist ein Fest, Opels Corsa ein italienisches Rennen, der Fiat Panda ein Bär und der Nissan Qashqai ein Nomadenvolk im Iran – ein Beweis dafür, dass Ingenieure zwar das Auto bauen, es aber der Name ist, der es um die Welt tragen muss.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1536",
+   "baseHash": "ed647382b4d7",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-097",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Rolling on Air: The Inventors Behind the Modern Wheel",
+    "titleDe": "Auf Luft gerollt: Die Erfinder hinter dem modernen Rad",
+    "bodyEn": "The modern road vehicle is an accumulation of patents, and the story of who \"really\" invented each part is rarely simple. The pneumatic tyre is the classic case. In 1845 the Scottish engineer Robert William Thomson patented an \"aerial wheel\" – a rubberised canvas tube inside a leather casing, inflated with air – and demonstrated it on horse-drawn carriages in London's Regent's Park. It worked, but rubber was expensive, there were no bicycles or cars to put it on, and the patent lapsed without any commercial success. Forty years later, in Belfast, the Scottish veterinary surgeon John Boyd Dunlop knew nothing of Thomson's work when he wrapped the wheels of his ten-year-old son's tricycle in inflated rubber tubes to make it more comfortable on cobbled streets. He patented the idea on 7 December 1888, a racing cyclist won with the new tyres in 1889, and the Pneumatic Tyre Company was founded the same year. Thomson's earlier patent was rediscovered in 1890 and Dunlop's own patent was declared invalid – but by then his name was on the product, and it is John Boyd Dunlop whom the world remembers as the inventor of the pneumatic tyre.\n\nNone of this would have been possible without usable rubber. Natural latex is sticky in summer and brittle in winter. In 1839 the American Charles Goodyear, after years of ruinous experiments, accidentally dropped a mixture of rubber and sulphur on a hot stove and found it had turned into a stable, elastic material. Vulcanisation, patented on 15 June 1844, made rubber tyres, hoses and seals possible; Goodyear himself died in debt in 1860, and the tyre company that bears his name, founded in 1898, had no connection with him.\n\nThe vehicle that first needed such tyres was the bicycle, and its ancestor was German. In 1817 Karl Drais, a forestry official in Mannheim, built the Laufmaschine, first ridden on 12 June 1817, or \"running machine\", a two-wheeled wooden frame that the rider pushed along with his feet – the first steerable two-wheeler and the origin of the word draisine. Pedals came only in the 1860s, but the balance principle was his.\n\nThe motor car followed sixty-nine years later. On 29 January 1886 Carl Benz (1844–1929) applied for German Reich patent no. 37435, granted that November, for his \"vehicle with gas engine operation\", a three-wheeler with a single-cylinder four-stroke engine, which is why he – rather than Gottlieb Daimler, who was fitting engines to carriages at the same time in Cannstatt – is regarded as the inventor of the automobile. His wife Bertha's unauthorised 106-kilometre drive to Pforzheim in 1888 was its first long-distance test.\n\nThe last of the five inventions was about surviving the other four. The Swedish engineer Nils Bohlin, who had designed ejector seats for Saab, joined Volvo in 1958 and within a year produced the three-point seat belt, a single strap across lap and shoulder that could be fastened with one hand. Volvo became the first car maker to fit three-point belts to the front seats as standard, from 1959, and deliberately left the patent open for every other manufacturer to use. Volvo estimates that it has saved more than a million lives.\n\n| Invention | Inventor | Year |\n|---|---|---|\n| Laufmaschine (draisine) | Karl Drais | 1817 |\n| Vulcanised rubber | Charles Goodyear | 1839 |\n| Motor car | Carl Benz | 1886 |\n| Pneumatic tyre | John Boyd Dunlop | 1888 |\n| Three-point seat belt | Nils Bohlin | 1959 |",
+    "bodyDe": "Das moderne Straßenfahrzeug ist eine Anhäufung von Patenten, und die Geschichte, wer welches Teil „wirklich“ erfunden hat, ist selten einfach. Der Luftreifen ist der klassische Fall. 1845 patentierte der schottische Ingenieur Robert William Thomson ein „aerial wheel“ – einen gummierten Leinwandschlauch in einer Lederhülle, mit Luft gefüllt – und führte es an Pferdekutschen im Londoner Regent's Park vor. Es funktionierte, doch Gummi war teuer, es gab weder Fahrräder noch Autos, an die man es hätte montieren können, und das Patent lief ohne kommerziellen Erfolg aus. Vierzig Jahre später wusste der schottische Tierarzt John Boyd Dunlop in Belfast nichts von Thomsons Arbeit, als er die Räder des Dreirads seines zehnjährigen Sohnes mit aufgepumpten Gummischläuchen umwickelte, um die Fahrt über das Kopfsteinpflaster bequemer zu machen. Er ließ die Idee am 7. Dezember 1888 patentieren, ein Radrennfahrer siegte 1889 mit den neuen Reifen, und noch im selben Jahr wurde die Pneumatic Tyre Company gegründet. Thomsons früheres Patent wurde 1890 wiederentdeckt und Dunlops eigenes für ungültig erklärt – doch da stand sein Name schon auf dem Produkt, und so ist es John Boyd Dunlop, den die Welt als Erfinder des Luftreifens in Erinnerung behält.\n\nNichts davon wäre ohne brauchbaren Gummi möglich gewesen. Naturlatex ist im Sommer klebrig und im Winter spröde. 1839 ließ der Amerikaner Charles Goodyear nach Jahren ruinöser Experimente versehentlich eine Mischung aus Kautschuk und Schwefel auf einen heißen Ofen fallen und stellte fest, dass sie sich in ein stabiles, elastisches Material verwandelt hatte. Die am 15. Juni 1844 patentierte Vulkanisation machte Gummireifen, Schläuche und Dichtungen möglich; Goodyear selbst starb 1860 verschuldet, und der Reifenkonzern, der seinen Namen trägt, wurde erst 1898 gegründet und hatte keine Verbindung zu ihm.\n\nDas Fahrzeug, das solche Reifen als Erstes brauchte, war das Fahrrad, und sein Vorfahr war deutsch. 1817 baute Karl Drais, Forstbeamter in Mannheim, die Laufmaschine, mit der er am 12. Juni 1817 erstmals fuhr, ein hölzernes Zweirad, das der Fahrer mit den Füßen vom Boden abstieß – das erste lenkbare Zweirad und der Ursprung des Wortes Draisine. Pedale kamen erst in den 1860er-Jahren hinzu, aber das Balanceprinzip stammte von ihm.\n\nDas Automobil folgte neunundsechzig Jahre später. Am 29. Januar 1886 meldete Carl Benz (1844–1929) sein „Fahrzeug mit Gasmotorenbetrieb“ zum Patent an und erhielt dafür im November das Deutsche Reichspatent Nr. 37435, ein Dreirad mit einem Einzylinder-Viertaktmotor – weshalb er und nicht Gottlieb Daimler, der zur selben Zeit in Cannstatt Kutschen mit Motoren ausrüstete, als Erfinder des Automobils gilt. Die unerlaubte 106-Kilometer-Fahrt seiner Frau Bertha nach Pforzheim 1888 war seine erste Fernfahrt.\n\nDie letzte der fünf Erfindungen diente dazu, die anderen vier zu überleben. Der schwedische Ingenieur Nils Bohlin, der bei Saab Schleudersitze entworfen hatte, kam 1958 zu Volvo und entwickelte binnen eines Jahres den Dreipunktgurt, einen einzigen Gurt über Schoß und Schulter, der sich mit einer Hand schließen ließ. Volvo stattete als erster Autohersteller ab 1959 die Vordersitze serienmäßig mit Dreipunktgurten aus und gab das Patent bewusst für alle anderen Hersteller frei. Nach Schätzung von Volvo hat er mehr als eine Million Menschenleben gerettet.\n\n| Erfindung | Erfinder | Jahr |\n|---|---|---|\n| Laufmaschine (Draisine) | Karl Drais | 1817 |\n| Vulkanisierter Gummi | Charles Goodyear | 1839 |\n| Automobil | Carl Benz | 1886 |\n| Luftreifen | John Boyd Dunlop | 1888 |\n| Dreipunkt-Sicherheitsgurt | Nils Bohlin | 1959 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1464",
+   "baseHash": "39c3af1fc2b8",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-266",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Click, Fine, Sensor: Five Decades of Car-Safety Rules in Germany",
+    "titleDe": "Klick, Bußgeld, Sensor: Fünf Jahrzehnte Verkehrssicherheitsregeln in Deutschland",
+    "bodyEn": "The three-point seat belt was invented by the Volvo engineer Nils Bohlin in 1959, and Volvo gave the patent away so that every manufacturer could use it. Persuading drivers to wear it took far longer. In West Germany the belt became a legal issue only in the 1970s, a decade in which the annual death toll on the roads peaked at more than 21,000 in 1970. From 1 January 1974 all new cars had to be fitted with belts on the front seats, and from 1 January 1976 wearing them became compulsory. The rule provoked heated protest; opponents spoke of a \"belt dictatorship\" and warned of drivers trapped in burning cars, and because no fine was attached, roughly half of all drivers simply ignored it.\n\nThat changed in the 1980s. On 1 August 1984 the government introduced a fine of 40 marks for unbelted drivers and extended the wearing requirement to the rear seats. Almost overnight, compliance jumped from around 60 to over 90 percent, and the number of deaths among car occupants fell by more than a fifth within a year. East Germany introduced its own belt requirement in 1980, so after reunification the rule applied nationwide. The 1980s also brought a second line of defence into German cars. General Motors had offered an airbag in the Oldsmobile Toronado in 1973, the first American production car with a passenger airbag; Mercedes-Benz made the Airbag available in the S-Class from 1981. Unlike the belt, it was never made compulsory by law – it became standard because customers and crash tests demanded it.\n\nThe 1990s turned attention to the smallest passengers. Since 1 April 1993 children under twelve years old and shorter than 150 centimetres must be secured in an approved child seat or booster; a belt designed for an adult can cause serious abdominal injuries in a small body. The same decade also saw the blood-alcohol limit lowered from 0.8 to 0.5 per mille in 1998.\n\nThe 2000s brought a new distraction into the car. Mobile phones had spread so quickly that on 1 February 2001 Germany banned drivers from holding a phone while the engine was running; hands-free kits remained permitted. The fine was initially 30 euros and has since risen to 100 euros and a point in the Flensburg register, with higher penalties if the call endangers others.\n\nIn the 2010s regulation moved from the driver to the machine. The electronic stability programme, or ESP, developed by Bosch and first fitted to the Mercedes-Benz S-Class in 1995, brakes individual wheels to stop a skidding car from spinning. Under an EU regulation it became mandatory for all new vehicle types from November 2011 and for every newly registered car from 1 November 2014. Since then the list has kept growing: tyre-pressure monitors, the automatic emergency call eCall in 2018, and from 2024 lane-keeping assistants and intelligent speed assistance.\n\n| Decade | Rule | Date |\n|---|---|---|\n| 1970s | Belts mandatory on front seats (1974); wearing compulsory (1976) | 1 January 1976 |\n| 1980s | Fine for non-use; belts compulsory on rear seats | 1 August 1984 |\n| 1990s | Child seats compulsory for children under 12 | 1 April 1993 |\n| 2000s | Hand-held mobile phones banned at the wheel | 1 February 2001 |\n| 2010s | ESP mandatory for all new cars in the EU | 1 November 2014 |\n\nEach rule was resisted at first and is taken for granted now, which is perhaps the best evidence that it worked: German road deaths, over 21,000 in 1970, have fallen below 3,000 a year.",
+    "bodyDe": "Der Dreipunktgurt wurde 1959 vom Volvo-Ingenieur Nils Bohlin erfunden, und Volvo gab das Patent frei, damit jeder Hersteller ihn nutzen konnte. Die Fahrer zum Anlegen zu bewegen, dauerte weit länger. In Westdeutschland wurde der Gurt erst in den 1970er-Jahren zur Rechtsfrage, einem Jahrzehnt, in dem die jährliche Zahl der Verkehrstoten 1970 mit mehr als 21 000 ihren Höchststand erreichte. Ab dem 1. Januar 1974 mussten alle Neuwagen auf den Vordersitzen mit Gurten ausgestattet sein, und ab dem 1. Januar 1976 wurde das Anlegen zur Pflicht. Die Regel löste heftigen Protest aus; Gegner sprachen von einer „Gurtdiktatur“ und warnten vor Fahrern, die in brennenden Autos gefangen seien, und weil kein Bußgeld drohte, ignorierte rund die Hälfte aller Fahrer sie einfach.\n\nDas änderte sich in den 1980er-Jahren. Am 1. August 1984 führte die Regierung ein Bußgeld von 40 Mark für nicht angeschnallte Fahrer ein und dehnte die Anlegepflicht auf die Rücksitze aus. Fast über Nacht stieg die Anschnallquote von rund 60 auf über 90 Prozent, und die Zahl der getöteten Pkw-Insassen sank innerhalb eines Jahres um mehr als ein Fünftel. Die DDR führte 1980 ihre eigene Gurtpflicht ein, sodass die Regel nach der Wiedervereinigung bundesweit galt. Die 1980er-Jahre brachten zudem eine zweite Schutzlinie in deutsche Autos. General Motors hatte 1973 im Oldsmobile Toronado als erstem amerikanischen Serienwagen einen Beifahrer-Airbag angeboten; Mercedes-Benz lieferte den Airbag ab 1981 in der S-Klasse. Anders als der Gurt wurde er nie gesetzlich vorgeschrieben – er setzte sich durch, weil Kunden und Crashtests ihn verlangten.\n\nDie 1990er-Jahre richteten die Aufmerksamkeit auf die kleinsten Passagiere. Seit dem 1. April 1993 müssen Kinder unter zwölf Jahren, die kleiner als 150 Zentimeter sind, in einem zugelassenen Kindersitz oder auf einer Sitzerhöhung gesichert werden; ein für Erwachsene konzipierter Gurt kann bei einem kleinen Körper schwere Bauchverletzungen verursachen. Im selben Jahrzehnt wurde 1998 auch die Promillegrenze von 0,8 auf 0,5 gesenkt.\n\nDie 2000er-Jahre brachten eine neue Ablenkung ins Auto. Mobiltelefone hatten sich so schnell verbreitet, dass Deutschland am 1. Februar 2001 Fahrern verbot, bei laufendem Motor ein Handy in der Hand zu halten; Freisprechanlagen blieben erlaubt. Das Bußgeld betrug zunächst 30 Euro und ist seither auf 100 Euro und einen Punkt in Flensburg gestiegen, mit höheren Strafen, wenn das Telefonat andere gefährdet.\n\nIn den 2010er-Jahren wanderte die Regulierung vom Fahrer zur Maschine. Das elektronische Stabilitätsprogramm ESP, von Bosch entwickelt und 1995 erstmals in der Mercedes-Benz S-Klasse verbaut, bremst einzelne Räder ab, um ein schleuderndes Auto am Drehen zu hindern. Durch eine EU-Verordnung wurde es ab November 2011 für alle neuen Fahrzeugtypen und ab dem 1. November 2014 für jeden neu zugelassenen Pkw zur Pflicht. Seither ist die Liste weiter gewachsen: Reifendruckkontrolle, der automatische Notruf eCall 2018 und ab 2024 Spurhalteassistenten und intelligente Geschwindigkeitsassistenten.\n\n| Jahrzehnt | Regel | Datum |\n|---|---|---|\n| 1970er-Jahre | Gurte vorn Pflicht (1974); Anlegepflicht (1976) | 1. Januar 1976 |\n| 1980er-Jahre | Bußgeld für Gurtmuffel; Gurtpflicht auf den Rücksitzen | 1. August 1984 |\n| 1990er-Jahre | Kindersitzpflicht für Kinder unter 12 | 1. April 1993 |\n| 2000er-Jahre | Handy in der Hand am Steuer verboten | 1. Februar 2001 |\n| 2010er-Jahre | ESP für alle Neuwagen in der EU Pflicht | 1. November 2014 |\n\nJede Regel stieß zunächst auf Widerstand und gilt heute als selbstverständlich, was vielleicht der beste Beweis dafür ist, dass sie gewirkt hat: Die Zahl der Verkehrstoten in Deutschland, 1970 über 21 000, ist auf unter 3000 im Jahr gesunken.",
+    "notesEn": "Belts had to be fitted in new cars from 1 January 1974; wearing them became compulsory on 1 January 1976 (fine only from 1984). Either date gives the 1970s.",
+    "notesDe": "Ab dem 1. Januar 1974 mussten Neuwagen mit Gurten ausgestattet sein; das Anlegen wurde am 1. Januar 1976 Pflicht (Bußgeld erst ab 1984). Beide Daten ergeben die 1970er-Jahre."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1764",
+   "baseHash": "a93b3aa007f4",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-188",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Under the Skin of a Car: Five Components Explained",
+    "titleDe": "Unter dem Blech: Fünf Bauteile des Autos erklärt",
+    "bodyEn": "A modern car contains around 30,000 parts, but a handful of them do the work that drivers actually feel: the surge of power, the clean exhaust, the smooth gear change, the steady line through a corner. Five components explain most of it.\n\nThe most visible is the Spoiler. At speed a car body behaves like a crude wing and tends to lift, which reduces the tyres' grip on the road. A Spoiler „spoils“ that airflow: a lip on the boot lid or a blade on the roof breaks up the low-pressure zone behind the car and presses the rear axle down, while a front splitter does the same at the nose. Racing cars take it to extremes with full wings that generate downforce equal to their own weight; on road cars the ducktail of the 1973 Porsche 911 Carrera RS was one of the first to make a real difference to stability and road grip.\n\nHidden in the exhaust pipe is the Catalytic converter. Inside a stainless-steel canister a ceramic honeycomb coated with platinum, palladium and rhodium turns carbon monoxide into carbon dioxide, unburnt hydrocarbons into water and nitrogen oxides into nitrogen – all without being used up itself, which is what „catalytic“ means. Mandatory in the United States from 1975, it arrived in Germany with unleaded petrol in the mid-1980s and is the reason a busy city street no longer smells the way it did in 1970.\n\nThe Turbocharger recycles energy that would otherwise leave through the tailpipe. Hot exhaust gas spins a turbine at up to 250,000 revolutions per minute; on the same shaft a compressor forces extra air into the cylinders, so more fuel can be burned and a small engine performs like a large one. The Swiss engineer Alfred Büchi patented the idea in November 1905, the Oldsmobile Jetfire and the Chevrolet Corvair Monza Spyder of 1962 were the first production cars to use it, and today almost every petrol and diesel engine has one.\n\nThe Clutch is the handshake between engine and gearbox. Pressing the pedal separates a friction disc from the flywheel, so that the engine keeps turning while the gears are changed; releasing it lets the plates slip briefly and then lock together. Automatic and dual-clutch transmissions hide the process, but the principle is unchanged since Daimler's Stahlradwagen of 1889 combined a friction clutch with a gearbox.\n\nThe Differential solves a problem most drivers never think about. In a corner the outer wheel travels further than the inner one, so if both were fixed to a single shaft one of them would have to skid. The Differential – a set of bevel gears in the axle, patented by the French watchmaker Onésiphore Pecqueur in 1827 – splits the drive so that each wheel can turn at its own speed; limited-slip versions stop the power draining away to a spinning wheel on ice.\n\nEven the bodyshell has its own vocabulary. In car manufacturing, the roof supports between the windows are called pillars and are lettered from front to back: the A-pillars frame the windscreen, the B-pillars stand between the front and rear doors, and the C-pillars hold the rear window, with a D-pillar added on estate cars. From the late 1940s American carmakers left out the B-pillar on two-door hardtops for a more open look.\n\n| Component | Job | Where |\n|---|---|---|\n| Spoiler | Manages airflow, adds road grip | Bodywork |\n| Catalytic converter | Cleans exhaust gases | Exhaust system |\n| Turbocharger | Compresses intake air | Engine |\n| Clutch | Connects and disconnects the engine | Between engine and gearbox |\n| Differential | Lets wheels turn at different speeds | Driven axle |\n\nEach of the five was once an exotic option; today they are the ordinary anatomy of the car in the driveway.",
+    "bodyDe": "Ein modernes Auto besteht aus rund 30.000 Teilen, doch nur eine Handvoll davon leistet die Arbeit, die Fahrer wirklich spüren: den Schub beim Beschleunigen, das saubere Abgas, den weichen Gangwechsel, die ruhige Linie durch die Kurve. Fünf Bauteile erklären das meiste davon.\n\nDas sichtbarste ist der Spoiler. Bei hoher Geschwindigkeit verhält sich eine Karosserie wie ein grober Flügel und neigt zum Abheben, was den Grip der Reifen verringert. Ein Spoiler „verdirbt“ (englisch: to spoil) diese Luftströmung: Eine Kante auf dem Kofferraumdeckel oder eine Klinge auf dem Dach löst die Unterdruckzone hinter dem Wagen auf und drückt die Hinterachse nach unten, während ein Frontsplitter dasselbe an der Nase bewirkt. Rennwagen treiben das mit ganzen Flügeln auf die Spitze, die einen Abtrieb in Höhe ihres Eigengewichts erzeugen; bei Straßenautos war der Entenbürzel des Porsche 911 Carrera RS von 1973 einer der ersten, der Stabilität und Bodenhaftung spürbar verbesserte.\n\nIm Auspuffrohr verborgen sitzt der Katalysator. In einer Edelstahlhülle verwandelt ein mit Platin, Palladium und Rhodium beschichteter Keramikwabenkörper Kohlenmonoxid in Kohlendioxid, unverbrannte Kohlenwasserstoffe in Wasser und Stickoxide in Stickstoff – ohne selbst verbraucht zu werden, was „katalytisch“ eben bedeutet. In den Vereinigten Staaten seit 1975 Pflicht, kam er in Deutschland Mitte der 1980er-Jahre zusammen mit dem bleifreien Benzin und ist der Grund, warum eine befahrene Straße heute nicht mehr so riecht wie 1970.\n\nDer Turbolader nutzt Energie, die sonst durch den Auspuff entweichen würde. Heißes Abgas treibt eine Turbine mit bis zu 250.000 Umdrehungen pro Minute an; auf derselben Welle presst ein Verdichter zusätzliche Luft in die Zylinder, sodass mehr Kraftstoff verbrannt werden kann und ein kleiner Motor wie ein großer arbeitet. Der Schweizer Ingenieur Alfred Büchi ließ die Idee im November 1905 patentieren, der Oldsmobile Jetfire und der Chevrolet Corvair Monza Spyder von 1962 waren die ersten Serienwagen damit, und heute hat fast jeder Benzin- und Dieselmotor einen.\n\nDie Kupplung ist der Händedruck zwischen Motor und Getriebe. Wer das Pedal tritt, trennt eine Reibscheibe vom Schwungrad, sodass der Motor weiterläuft, während die Gänge gewechselt werden; beim Loslassen rutschen die Scheiben kurz und greifen dann ineinander. Automatik- und Doppelkupplungsgetriebe verbergen den Vorgang, aber das Prinzip ist unverändert, seit Daimlers Stahlradwagen von 1889 eine Reibungskupplung mit einem Getriebe verband.\n\nDas Differenzial löst ein Problem, über das die meisten Fahrer nie nachdenken. In der Kurve legt das äußere Rad einen längeren Weg zurück als das innere; säßen beide fest auf einer Welle, müsste eines von ihnen radieren. Das Differenzial – ein Satz Kegelräder in der Achse, 1827 vom französischen Uhrmacher Onésiphore Pecqueur patentiert – teilt den Antrieb so auf, dass jedes Rad mit eigener Drehzahl laufen kann; Sperrdifferenziale verhindern, dass die Kraft auf Eis in ein durchdrehendes Rad abfließt.\n\nSelbst die Karosserie hat ihr eigenes Vokabular. Im Automobilbau heißen die Dachstützen zwischen den Fenstern Säulen und werden von vorn nach hinten mit Buchstaben bezeichnet: Die A-Säulen rahmen die Windschutzscheibe ein, die B-Säulen stehen zwischen Vorder- und Hintertüren, und die C-Säulen tragen die Heckscheibe; Kombis haben zusätzlich eine D-Säule. Ab den späten 1940er-Jahren ließen amerikanische Hersteller bei zweitürigen Hardtops die B-Säule weg, um den Wagen offener wirken zu lassen.\n\n| Bauteil | Aufgabe | Wo |\n|---|---|---|\n| Spoiler | Lenkt die Luftströmung, erhöht die Bodenhaftung | Karosserie |\n| Katalysator | Reinigt die Abgase | Abgasanlage |\n| Turbolader | Verdichtet die Ansaugluft | Motor |\n| Kupplung | Verbindet und trennt den Motor | Zwischen Motor und Getriebe |\n| Differenzial | Lässt Räder verschieden schnell drehen | Antriebsachse |\n\nJedes der fünf war einmal eine exotische Sonderausstattung; heute gehören sie zur ganz gewöhnlichen Anatomie des Autos in der Einfahrt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-044",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which European capital introduced a congestion charge for driving into its city centre on 17 February 2003?",
+      "de": "Welche europäische Hauptstadt führte am 17. Februar 2003 eine Gebühr für die Einfahrt in ihr Stadtzentrum ein?",
+      "answerEn": "London",
+      "answerDe": "London",
+      "timeline": {
+       "kind": "event",
+       "start": "2003-02-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "London's congestion charge for the central zone takes effect",
+       "labelDe": "Die Londoner City-Maut für die Innenstadtzone tritt in Kraft"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/London_congestion_charge",
+       "title": "London congestion charge – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Scandinavian capital made its congestion tax permanent on 1 August 2007 after a seven-month trial in 2006?",
+      "de": "Welche skandinavische Hauptstadt führte ihre City-Maut nach einem siebenmonatigen Versuch 2006 am 1. August 2007 dauerhaft ein?",
+      "answerEn": "Stockholm",
+      "answerDe": "Stockholm",
+      "timeline": {
+       "kind": "event",
+       "start": "2007-08-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Stockholm's congestion tax becomes permanent after the 2006 trial",
+       "labelDe": "Die Stockholmer City-Maut wird nach dem Versuch von 2006 dauerhaft eingeführt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Stockholm_congestion_tax",
+       "title": "Stockholm congestion tax – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which US city was the world's first parking meter installed on 16 July 1935?",
+      "de": "In welcher US-Stadt wurde am 16. Juli 1935 die erste Parkuhr der Welt aufgestellt?",
+      "answerEn": "Oklahoma City",
+      "answerDe": "Oklahoma City",
+      "timeline": {
+       "kind": "event",
+       "start": "1935-07-16",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The world's first parking meter goes into service in Oklahoma City",
+       "labelDe": "Die erste Parkuhr der Welt geht in Oklahoma City in Betrieb"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Parking_meter",
+       "title": "Parking meter – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which US city was the first electric traffic light installed, at the corner of East 105th Street and Euclid Avenue, in August 1914?",
+      "de": "In welcher US-Stadt wurde im August 1914 an der Ecke East 105th Street und Euclid Avenue die erste elektrische Verkehrsampel aufgestellt?",
+      "answerEn": "Cleveland",
+      "answerDe": "Cleveland",
+      "timeline": {
+       "kind": "event",
+       "start": "1914-08",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first electric traffic light is installed at East 105th Street and Euclid Avenue in Cleveland",
+       "labelDe": "An der Ecke East 105th Street und Euclid Avenue in Cleveland wird die erste elektrische Ampel aufgestellt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Traffic_light",
+       "title": "Traffic light – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Lights, Meters and Tolls: The Cities That Tamed Traffic First",
+    "titleDe": "Ampeln, Parkuhren und Maut: Die Städte, die den Verkehr zuerst zähmten",
+    "bodyEn": "Every big city sooner or later discovers that its streets are a scarce resource. The tools used to ration them – signals, meters and tolls – each had to be tried out somewhere first, and the places that dared are still remembered for it.\n\nThe oldest is the traffic signal. In December 1868 a semaphore with red and green gas lamps for use at night was set up outside the Houses of Parliament in London and worked by a police constable with a lever. It exploded a few weeks later, injuring its operator, and the idea was shelved for decades. The electric version arrived in the United States: in August 1914 the American Traffic Signal Company installed red and green lights at the corner of East 105th Street and Euclid Avenue in Cleveland, Ohio, based on a design that the Salt Lake City policeman Lester Wire had developed in 1912.\n\nParking came next. Carl C. Magee, a lawyer and newspaper publisher in Oklahoma City, asked two engineering professors at Oklahoma State University to build a coin-operated timer for kerbside spaces. Their meter, nicknamed the \"Black Maria\", went into service on 16 July 1935, making Oklahoma City the first city in the world with parking meters; within a few years they had spread across America and Europe.\n\nThe boldest idea was to make drivers pay simply for entering the centre. Singapore did it first: on 2 June 1975 its Area Licensing Scheme required every car entering the business district during the morning rush hour to display a paper licence bought in advance, and traffic in the zone fell sharply. In 1998 the city replaced the paper permits with Electronic Road Pricing, which deducts the fee automatically from a card in the car.\n\nEurope followed a generation later. London introduced its congestion charge on 17 February 2003 – initially five pounds a day for driving into the central zone on weekdays, enforced by cameras that read number plates. Stockholm tested a congestion tax in a seven-month trial between 3 January and 31 July 2006, let its citizens vote on it in a referendum, and made it permanent on 1 August 2007.\n\n| City | First | Year |\n|---|---|---|\n| London | Traffic signal (gas-lit); congestion charge | 1868; 2003 |\n| Cleveland | Electric traffic light | 1914 |\n| Oklahoma City | Parking meter | 1935 |\n| Singapore | Urban congestion charge | 1975 |\n| Stockholm | Congestion tax made permanent after a trial | 2007 |\n\nEach measure was mocked at first and copied soon afterwards. The parking meter and the traffic light are now so ordinary that it is hard to picture a city without them, and the congestion charge may be heading the same way.",
+    "bodyDe": "Jede Großstadt entdeckt früher oder später, dass ihre Straßen ein knappes Gut sind. Die Werkzeuge, mit denen man sie zuteilt – Signale, Parkuhren und Gebühren –, mussten jeweils irgendwo zuerst ausprobiert werden, und die Orte, die es wagten, sind bis heute dafür bekannt.\n\nDas älteste ist das Verkehrssignal. Im Dezember 1868 wurde vor dem Parlamentsgebäude in London ein Signalmast mit roten und grünen Gaslampen für die Nacht aufgestellt, den ein Polizist mit einem Hebel bediente. Wenige Wochen später explodierte er, verletzte seinen Bediener, und die Idee ruhte jahrzehntelang. Die elektrische Variante kam in den Vereinigten Staaten: Im August 1914 installierte die American Traffic Signal Company an der Ecke East 105th Street und Euclid Avenue in Cleveland, Ohio, rote und grüne Lichter, nach einem Entwurf, den der Polizist Lester Wire aus Salt Lake City 1912 entwickelt hatte.\n\nDanach kam das Parken. Carl C. Magee, Anwalt und Zeitungsverleger in Oklahoma City, bat zwei Ingenieurprofessoren der Oklahoma State University, eine münzbetriebene Uhr für Parkplätze am Straßenrand zu bauen. Ihre Parkuhr, „Black Maria“ genannt, ging am 16. Juli 1935 in Betrieb und machte Oklahoma City zur ersten Stadt der Welt mit Parkuhren; binnen weniger Jahre hatten sie sich in Amerika und Europa verbreitet.\n\nDie kühnste Idee war, Autofahrer allein für die Einfahrt ins Zentrum zahlen zu lassen. Singapur tat es zuerst: Ab dem 2. Juni 1975 musste nach dem Area Licensing Scheme jedes Auto, das während des morgendlichen Berufsverkehrs ins Geschäftsviertel fuhr, eine im Voraus gekaufte Papiervignette zeigen, und der Verkehr in der Zone ging deutlich zurück. 1998 ersetzte die Stadt die Papierscheine durch das Electronic Road Pricing, das die Gebühr automatisch von einer Karte im Auto abbucht.\n\nEuropa folgte eine Generation später. London führte am 17. Februar 2003 seine City-Maut ein – anfangs fünf Pfund pro Tag für die Fahrt in die Innenstadtzone an Werktagen, überwacht von Kameras, die die Nummernschilder lesen. Stockholm erprobte eine Staugebühr in einem siebenmonatigen Versuch vom 3. Januar bis 31. Juli 2006, ließ die Bürger in einem Referendum darüber abstimmen und führte sie am 1. August 2007 dauerhaft ein.\n\n| Stadt | Erste | Jahr |\n|---|---|---|\n| London | Verkehrssignal (mit Gaslicht); City-Maut | 1868; 2003 |\n| Cleveland | Elektrische Ampel | 1914 |\n| Oklahoma City | Parkuhr | 1935 |\n| Singapur | Städtische City-Maut | 1975 |\n| Stockholm | Staugebühr nach Versuch dauerhaft eingeführt | 2007 |\n\nJede Maßnahme wurde zunächst verspottet und bald darauf kopiert. Parkuhr und Ampel sind heute so alltäglich, dass man sich eine Stadt ohne sie kaum vorstellen kann, und die City-Maut könnte denselben Weg gehen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-146",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-338",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which bird's name did the Simson KR 51 scooter, built in Suhl from 1964 to 1986, bear?",
+      "de": "Welchen Vogelnamen trug der Simson-Motorroller KR 51, der von 1964 bis 1986 in Suhl gebaut wurde?",
+      "answerEn": "Schwalbe (swallow)",
+      "answerDe": "Schwalbe",
+      "timeline": {
+       "kind": "period",
+       "start": "1964",
+       "end": "1986",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Simson builds the KR 51 \"Schwalbe\" scooter in Suhl",
+       "labelDe": "Simson baut in Suhl den Motorroller KR 51 „Schwalbe“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Simson_Schwalbe",
+       "title": "Simson Schwalbe – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Saxon town were the MZ motorcycles of the GDR built?",
+      "de": "In welcher sächsischen Stadt wurden die MZ-Motorräder der DDR gebaut?",
+      "answerEn": "Zschopau",
+      "answerDe": "Zschopau",
+      "timeline": {
+       "kind": "event",
+       "start": "1956",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The motorcycles of VEB Motorradwerk Zschopau are sold under the name MZ",
+       "labelDe": "Die Motorräder des VEB Motorradwerk Zschopau tragen den Namen MZ"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Motorradwerk_Zschopau",
+       "title": "Motorradwerk Zschopau – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the GDR van built in Karl-Marx-Stadt from 1961 with a three-cylinder two-stroke engine from the Wartburg?",
+      "de": "Wie hieß der Kleintransporter der DDR, der ab 1961 in Karl-Marx-Stadt mit einem Wartburg-Dreizylinder-Zweitaktmotor gebaut wurde?",
+      "answerEn": "Barkas B 1000",
+      "answerDe": "Barkas B 1000",
+      "timeline": {
+       "kind": "period",
+       "start": "1961",
+       "end": "1990",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "VEB Barkas-Werke build the Barkas B 1000 van in Karl-Marx-Stadt",
+       "labelDe": "Der VEB Barkas-Werke baut in Karl-Marx-Stadt den Kleintransporter Barkas B 1000"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Barkas_B_1000",
+       "title": "Barkas B 1000 – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which town in Brandenburg was the GDR's IFA W50 lorry built from 1965 to 1990?",
+      "de": "In welcher brandenburgischen Stadt wurde der DDR-Lastwagen IFA W50 von 1965 bis 1990 gebaut?",
+      "answerEn": "Ludwigsfelde",
+      "answerDe": "Ludwigsfelde",
+      "timeline": {
+       "kind": "period",
+       "start": "1965",
+       "end": "1990",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The IFA W50 lorry is built at the Automobilwerke Ludwigsfelde",
+       "labelDe": "Der Lkw IFA W50 wird in den Automobilwerken Ludwigsfelde gebaut"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/IFA_W50",
+       "title": "IFA W50 – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Trabi, Schwalbe and W50: The Vehicles of the GDR",
+    "titleDe": "Trabi, Schwalbe und W50: Die Fahrzeuge der DDR",
+    "bodyEn": "East Germany built almost everything that moved on its roads itself, in a handful of nationalised factories that turned out the same models, barely changed, for decades. Waiting lists were long, spare parts scarce, and owners learned to repair their vehicles with whatever was at hand – which is one reason so many of them are still running.\n\nThe most famous is the Trabant, built by VEB Sachsenring in Zwickau. Its pre-series appeared in November 1957, and production ended on 30 April 1991; in between, about 3.1 million cars of the Trabant series left the works – 3,096,099 according to the production figures. That sounds a lot, but the West German Volkswagen Beetle passed 21.5 million. The \"Trabi\" had a two-stroke engine and a steel frame clad in panels of Duroplast, a plastic reinforced with cotton waste, and families waited more than ten years for one.\n\nTwo wheels were quicker to get. In Suhl in Thuringia, Simson built the mopeds of the so-called bird series, launched in 1964: the Spatz (sparrow, SR 4-1), the Star (starling, SR 4-2), the Sperber (sparrowhawk, SR 4-3) and, from 1972 to 1975, the SR 4-4 Habicht (goshawk). The best loved was the scooter of the family, the KR 51 Schwalbe (swallow), built from 1964 to 1986 and still a cult object today. Heavier motorcycles came from the Erzgebirge: the former DKW works in Zschopau became VEB Motorradwerk Zschopau, and from 1956 its machines carried the initials MZ. Robust two-strokes from Zschopau won the International Six Days Trial several times and were exported all over the world.\n\nFor goods there were the products of the IFA combine. In Karl-Marx-Stadt (today Chemnitz) the VEB Barkas-Werke built the Barkas B 1000 from 1961 to 1990, a forward-control van driven by the Wartburg's three-cylinder two-stroke engine, which served as minibus, ambulance and police car. The workhorse of the heavy roads was the IFA W50, built at the Automobilwerke Ludwigsfelde south of Berlin from 1965 to 1990; 571,789 were made, many of them for export.\n\n| Vehicle | Type | Built in | Years |\n|---|---|---|---|\n| Trabant | Small car | Zwickau | 1957–1991 |\n| Simson SR 4-4 Habicht | Moped | Suhl | 1972–1975 |\n| Simson KR 51 Schwalbe | Scooter | Suhl | 1964–1986 |\n| MZ motorcycles | Motorcycles | Zschopau | from 1956 |\n| Barkas B 1000 | Van | Karl-Marx-Stadt | 1961–1990 |\n| IFA W50 | Lorry | Ludwigsfelde | 1965–1990 |\n\nAfter reunification most of these factories closed or were taken over within a few years, but the vehicles became collectors' items, and a well-kept Schwalbe is still a common, much-loved sight on German roads.",
+    "bodyDe": "Die DDR baute fast alles, was auf ihren Straßen fuhr, selbst – in einer Handvoll volkseigener Betriebe, die jahrzehntelang dieselben, kaum veränderten Modelle herstellten. Die Wartelisten waren lang, Ersatzteile knapp, und die Besitzer lernten, ihre Fahrzeuge mit allem zu reparieren, was gerade zur Hand war – ein Grund, warum so viele von ihnen noch heute fahren.\n\nDas berühmteste ist der Trabant, gebaut vom VEB Sachsenring in Zwickau. Seine Nullserie erschien im November 1957, die Produktion endete am 30. April 1991; dazwischen verließen rund 3,1 Millionen Fahrzeuge der Trabant-Baureihe das Werk – laut Produktionsstatistik 3.096.099. Das klingt nach viel, doch der westdeutsche VW Käfer überschritt 21,5 Millionen. Der „Trabi“ hatte einen Zweitaktmotor und einen Stahlrahmen, der mit Platten aus Duroplast verkleidet war, einem mit Baumwollabfällen verstärkten Kunststoff, und Familien warteten mehr als zehn Jahre auf einen.\n\nZwei Räder bekam man schneller. Im thüringischen Suhl baute Simson die Kleinkrafträder der sogenannten Vogelserie, die 1964 begann: den Spatz (SR 4-1), den Star (SR 4-2), den Sperber (SR 4-3) und von 1972 bis 1975 den SR 4-4 Habicht. Am beliebtesten war der Roller der Familie, die KR 51 Schwalbe, von 1964 bis 1986 gebaut und bis heute Kult. Schwerere Motorräder kamen aus dem Erzgebirge: Das ehemalige DKW-Werk in Zschopau wurde zum VEB Motorradwerk Zschopau, und ab 1956 trugen seine Maschinen die Initialen MZ. Robuste Zweitakter aus Zschopau gewannen mehrfach die Internationale Sechstagefahrt und wurden in alle Welt exportiert.\n\nFür Güter gab es die Erzeugnisse des IFA-Kombinats. In Karl-Marx-Stadt (heute Chemnitz) baute der VEB Barkas-Werke von 1961 bis 1990 den Barkas B 1000, einen Frontlenker-Transporter mit dem Dreizylinder-Zweitaktmotor des Wartburg, der als Kleinbus, Krankenwagen und Polizeiauto diente. Das Arbeitstier der Fernstraßen war der IFA W50, von 1965 bis 1990 in den Automobilwerken Ludwigsfelde südlich von Berlin gebaut; 571.789 Stück entstanden, viele davon für den Export.\n\n| Fahrzeug | Art | Gebaut in | Jahre |\n|---|---|---|---|\n| Trabant | Kleinwagen | Zwickau | 1957–1991 |\n| Simson SR 4-4 Habicht | Kleinkraftrad | Suhl | 1972–1975 |\n| Simson KR 51 Schwalbe | Motorroller | Suhl | 1964–1986 |\n| MZ-Motorräder | Motorräder | Zschopau | ab 1956 |\n| Barkas B 1000 | Transporter | Karl-Marx-Stadt | 1961–1990 |\n| IFA W50 | Lastwagen | Ludwigsfelde | 1965–1990 |\n\nNach der Wiedervereinigung schlossen die meisten dieser Werke innerhalb weniger Jahre oder wurden übernommen, doch die Fahrzeuge wurden zu Sammlerstücken, und eine gepflegte Schwalbe ist auf deutschen Straßen bis heute ein vertrauter, geliebter Anblick.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-177",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "What is a bicycle called on which two or more riders sit one behind the other and pedal together?",
+      "de": "Wie heißt ein Fahrrad, auf dem zwei oder mehr Personen hintereinander sitzen und gemeinsam treten?",
+      "answerEn": "Tandem",
+      "answerDe": "Tandem",
+      "timeline": {
+       "kind": "creation",
+       "start": "1880",
+       "end": null,
+       "precision": "decade",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Patents for tandem bicycles appear in the mid-1880s",
+       "labelDe": "Patente für Tandemfahrräder tauchen Mitte der 1880er-Jahre auf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tandem_bicycle",
+       "title": "Tandem bicycle – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the high-wheeled bicycle of the 1870s and 1880s, with a huge front wheel and a tiny rear wheel, called in English after two British coins?",
+      "de": "Wie heißt im Deutschen das Fahrrad der 1870er- und 1880er-Jahre mit riesigem Vorderrad und winzigem Hinterrad?",
+      "answerEn": "Penny-farthing",
+      "answerDe": "Hochrad",
+      "timeline": {
+       "kind": "creation",
+       "start": "1871",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "James Starley's all-metal Ariel high-wheeler goes into mass production",
+       "labelDe": "James Starleys Ganzmetall-Hochrad Ariel geht in Serie"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Penny-farthing",
+       "title": "Penny-farthing – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is a bicycle called on which the rider pedals in a laid-back, reclining position?",
+      "de": "Wie heißt ein Fahrrad, auf dem der Fahrer in zurückgelehnter, liegender Haltung tritt?",
+      "answerEn": "Recumbent bicycle",
+      "answerDe": "Liegerad",
+      "timeline": {
+       "kind": "event",
+       "start": "1934-04-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The UCI's new definition of a racing bicycle bars recumbents from its races",
+       "labelDe": "Die neue Rennrad-Definition der UCI schließt Liegeräder von ihren Rennen aus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Recumbent_bicycle",
+       "title": "Recumbent bicycle – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the nickname of a fixed-gear bicycle, which has no freewheel, so that the pedals turn whenever the rear wheel turns?",
+      "de": "Wie lautet der Spitzname eines Fahrrads mit starrem Gang ohne Freilauf, bei dem sich die Pedale immer mitdrehen, wenn sich das Hinterrad dreht?",
+      "answerEn": "Fixie",
+      "answerDe": "Fixie",
+      "timeline": {
+       "kind": "era",
+       "start": "2000",
+       "end": null,
+       "precision": "decade",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Fixed-gear bikes become an urban subculture, born among New York bicycle messengers",
+       "labelDe": "Fahrräder mit starrem Gang werden zur städtischen Subkultur, entstanden unter New Yorker Fahrradkurieren"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fixed-gear_bicycle",
+       "title": "Fixed-gear bicycle – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Seven in a Circle: Bicycles That Break the Mould",
+    "titleDe": "Sieben im Kreis: Fahrräder, die aus der Reihe tanzen",
+    "bodyEn": "Since John Kemp Starley's safety bicycle of 1885, almost every bicycle has had the same shape: two wheels of equal size, a diamond frame, a chain to the rear wheel and one rider. Yet cyclists have never stopped experimenting, and some of the variations have become classics in their own right.\n\nThe oldest is the bicycle that came before the safety: the high-wheeler of the 1870s and 1880s. Because the pedals were fixed directly to the front hub, a bigger wheel meant more speed, and front wheels grew to 1.5 metres. After James Starley's all-metal Ariel went into mass production in 1871, the type dominated racing for two decades. In English it is called the penny-farthing, because from the side it looks like a large penny coin leading a small farthing; in German it is simply the Hochrad. A fall over the handlebars – a \"header\" – was a constant danger, and by 1893 no more were being made.\n\nRiding together is almost as old. A tandem, on which two or more riders sit one behind the other, appears in patents from the mid-1880s. The front rider, the captain, steers and pedals; the rear rider, the stoker, only pedals. Because two riders push a frame that has hardly more air resistance than one, a tandem is faster on the flat than a single bicycle.\n\nThe recumbent bicycle lays the rider back in a seat with the pedals out in front. It is more comfortable and far more aerodynamic – so much so that on 7 July 1933 Francis Faure broke the world hour record on a Vélo-Velocar. The upright-bicycle industry protested, and from 1 April 1934 the UCI's new definition of a racing bicycle shut recumbents out of its races, where they remain banned today.\n\nThe fixed-gear bicycle goes the other way, stripping everything off: it has no freewheel, so the pedals turn whenever the rear wheel does, and riders brake by resisting the pedals. Long used on velodromes, it became a street fashion among New York bicycle messengers in the 2000s and, under the nickname fixie, an international urban subculture.\n\nThe most sociable machine of all is the ConferenceBike, conceived by the American artist Eric Staller, whose first prototype, \"Octos\", was built in 1989. Seven people sit in a circle facing inwards and pedal together while one of them steers with a steering wheel; series production began in 2002, and the bikes are used for team outings, sightseeing tours and advertising.\n\n| Bicycle | Riders | Distinctive feature |\n|---|---|---|\n| Penny-farthing | 1 | Huge front wheel, pedals on the hub |\n| Tandem | 2 or more | Riders one behind the other |\n| Recumbent bicycle | 1 | Reclined seating; banned from UCI races since 1934 |\n| Fixie | 1 | No freewheel |\n| ConferenceBike | 7 | Riders sit in a circle facing inwards |\n\nEach of them gives up something of the safety bicycle's perfect compromise to gain something else: speed, comfort, simplicity or company.",
+    "bodyDe": "Seit John Kemp Starleys Safety Bicycle von 1885 hat fast jedes Fahrrad dieselbe Form: zwei gleich große Räder, einen Diamantrahmen, eine Kette zum Hinterrad und einen Fahrer. Doch Radfahrer haben nie aufgehört zu experimentieren, und manche der Abwandlungen sind selbst zu Klassikern geworden.\n\nDie älteste ist das Fahrrad, das vor dem Safety kam: das Hochrad der 1870er- und 1880er-Jahre. Weil die Pedale direkt an der Vorderradnabe saßen, bedeutete ein größeres Rad mehr Tempo, und die Vorderräder wuchsen auf 1,5 Meter. Nachdem James Starleys Ganzmetallmodell Ariel 1871 in Serie gegangen war, beherrschte die Bauart zwei Jahrzehnte lang den Rennsport. Im Englischen heißt das Hochrad Penny-Farthing, weil es von der Seite aussieht wie eine große Penny-Münze, die einem kleinen Farthing vorausrollt. Ein Sturz über den Lenker war eine ständige Gefahr, und 1893 wurden keine mehr gebaut.\n\nDas gemeinsame Fahren ist fast ebenso alt. Ein Tandem, auf dem zwei oder mehr Personen hintereinander sitzen, taucht ab Mitte der 1880er-Jahre in Patenten auf. Der vordere Fahrer, der Captain, lenkt und tritt; der hintere, der Stoker, tritt nur. Weil zwei Fahrer einen Rahmen antreiben, der kaum mehr Luftwiderstand hat als ein einzelner, ist ein Tandem in der Ebene schneller als ein normales Fahrrad.\n\nDas Liegerad lehnt den Fahrer in einem Sitz zurück, die Pedale liegen vorn. Es ist bequemer und viel aerodynamischer – so sehr, dass Francis Faure am 7. Juli 1933 auf einem Vélo-Velocar den Stundenweltrekord brach. Die Industrie der aufrechten Räder protestierte, und ab dem 1. April 1934 schloss die neue Rennrad-Definition der UCI Liegeräder von ihren Rennen aus, wo sie bis heute verboten sind.\n\nDas Fahrrad mit starrem Gang geht den umgekehrten Weg und lässt alles weg: Es hat keinen Freilauf, die Pedale drehen sich also immer mit dem Hinterrad, und gebremst wird, indem man gegen die Pedale hält. Lange auf der Radrennbahn zu Hause, wurde es in den 2000er-Jahren unter New Yorker Fahrradkurieren zur Straßenmode und unter dem Spitznamen Fixie zu einer internationalen städtischen Subkultur.\n\nDas geselligste Gefährt von allen ist das ConferenceBike (Konferenzfahrrad), erdacht vom amerikanischen Künstler Eric Staller, dessen erster Prototyp „Octos“ 1989 entstand. Sieben Personen sitzen im Kreis mit Blick nach innen und treten gemeinsam, während eine von ihnen mit einem Lenkrad steuert; die Serienfertigung begann 2002, und die Räder werden für Teamausflüge, Stadtrundfahrten und Werbung eingesetzt.\n\n| Fahrrad | Fahrer | Besonderheit |\n|---|---|---|\n| Hochrad | 1 | Riesiges Vorderrad, Pedale an der Nabe |\n| Tandem | 2 oder mehr | Fahrer hintereinander |\n| Liegerad | 1 | Liegende Sitzposition; seit 1934 bei UCI-Rennen verboten |\n| Fixie | 1 | Kein Freilauf |\n| ConferenceBike | 7 | Fahrer sitzen im Kreis mit Blick nach innen |\n\nJedes von ihnen gibt etwas vom perfekten Kompromiss des Safety Bicycle auf, um etwas anderes zu gewinnen: Tempo, Komfort, Einfachheit oder Gesellschaft.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-363",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Japanese company has been the world's largest motorcycle manufacturer since 1959?",
+      "de": "Welches japanische Unternehmen ist seit 1959 der größte Motorradhersteller der Welt?",
+      "answerEn": "Honda",
+      "answerDe": "Honda",
+      "timeline": {
+       "kind": "founding",
+       "start": "1948-09-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Soichiro Honda's company Honda Motor Co. is incorporated",
+       "labelDe": "Soichiro Hondas Firma Honda Motor Co. wird als Gesellschaft gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Honda",
+       "title": "Honda – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Italian company has built the Vespa scooter since 1946?",
+      "de": "Welches italienische Unternehmen baut seit 1946 den Motorroller Vespa?",
+      "answerEn": "Piaggio",
+      "answerDe": "Piaggio",
+      "timeline": {
+       "kind": "creation",
+       "start": "1946",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Piaggio launches the Vespa scooter",
+       "labelDe": "Piaggio bringt den Motorroller Vespa heraus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Vespa",
+       "title": "Vespa – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Bavarian company built its first motorcycle, the R 32 with a boxer engine and shaft drive, in 1923?",
+      "de": "Welches bayerische Unternehmen baute 1923 mit der R 32, mit Boxermotor und Kardanantrieb, sein erstes Motorrad?",
+      "answerEn": "BMW",
+      "answerDe": "BMW",
+      "timeline": {
+       "kind": "creation",
+       "start": "1923",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "BMW begins production of the R 32, its first motorcycle",
+       "labelDe": "BMW beginnt mit der Produktion der R 32, seines ersten Motorrads"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/BMW_R32",
+       "title": "BMW R32 – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which motorcycle maker from Bologna, known for its desmodromic V-twin engines, has belonged to Audi since 2012?",
+      "de": "Welcher Motorradhersteller aus Bologna, bekannt für seine desmodromischen V2-Motoren, gehört seit 2012 zu Audi?",
+      "answerEn": "Ducati",
+      "answerDe": "Ducati",
+      "timeline": {
+       "kind": "founding",
+       "start": "1926-07-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Cavalieri Ducati brothers found Ducati in Bologna",
+       "labelDe": "Die Brüder Cavalieri Ducati gründen Ducati in Bologna"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ducati",
+       "title": "Ducati – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Wasps, Boxers and V-Twins: Five Great Motorcycle Makers",
+    "titleDe": "Wespen, Boxer und V2: Fünf große Motorradhersteller",
+    "bodyEn": "Hardly any other machine is bound up as closely with the identity of its maker as the motorcycle. Riders do not just buy a bike; they buy a sound, a shape and a story – and five companies on three continents have shaped those stories more than any others.\n\nThe most American of them is Harley-Davidson, founded in Milwaukee, Wisconsin, in 1903 by William S. Harley and the Davidson brothers Arthur, Walter and William. Its heavy cruisers with their big V-twin engines became icons of freedom, and the company was so proud of their uneven, thumping exhaust note that on 1 February 1994 it applied to register the sound as a trademark. Nine competitors objected that their own single-crankpin V-twins sounded just the same; after years of litigation Harley-Davidson dropped the application in June 2000.\n\nThe largest is Japanese. Soichiro Honda started by fitting small engines to bicycles after the war, incorporated Honda Motor Co. in 1948, and has been the world's largest motorcycle manufacturer since 1959; its Super Cub step-through is the best-selling motor vehicle ever built.\n\nItaly contributed style. In 1946 the aircraft firm Piaggio in Pontedera presented a scooter with a pressed-steel body, a covered engine and a floor to rest the feet on. When Enrico Piaggio first saw the prototype he supposedly exclaimed \"Sembra una vespa!\" – \"It looks like a wasp!\" – and the Vespa has carried that name ever since. In Bologna, meanwhile, the Ducati brothers, who had founded their company in 1926 to make radio components, turned to motorcycles after the war. Ducati became famous for racing successes and for desmodromic valve gear, in which a cam closes the valves instead of springs, in its 90-degree V-twins; since 2012 it has belonged to Audi through Lamborghini.\n\nGermany's best-known motorcycle comes from an aircraft-engine maker. In 1923 BMW built its first motorcycle, the R 32, with a horizontally opposed \"boxer\" twin and shaft drive instead of a chain – a layout that BMW still uses today.\n\n| Maker | Home | Founded / first bike | Known for |\n|---|---|---|---|\n| Harley-Davidson | Milwaukee, USA | 1903 | V-twin cruisers and their sound |\n| Honda | Japan | 1948 | World's largest maker since 1959 |\n| Piaggio | Pontedera, Italy | Vespa 1946 | The Vespa scooter |\n| Ducati | Bologna, Italy | 1926 | Desmodromic V-twins |\n| BMW | Munich, Germany | R 32, 1923 | Boxer engine, shaft drive |\n\nTogether they cover almost everything a motorcycle can be: a cruiser, a commuter, a fashion statement, a racing machine and a long-distance tourer.",
+    "bodyDe": "Kaum eine andere Maschine ist so eng mit der Identität ihres Herstellers verbunden wie das Motorrad. Wer eines kauft, kauft nicht nur ein Fahrzeug, sondern einen Klang, eine Form und eine Geschichte – und fünf Unternehmen auf drei Kontinenten haben diese Geschichten mehr geprägt als alle anderen.\n\nDas amerikanischste von ihnen ist Harley-Davidson, 1903 in Milwaukee, Wisconsin, von William S. Harley und den Davidson-Brüdern Arthur, Walter und William gegründet. Seine schweren Cruiser mit großen V2-Motoren wurden zu Ikonen der Freiheit, und die Firma war auf ihren unregelmäßig stampfenden Auspuffklang so stolz, dass sie am 1. Februar 1994 beantragte, den Sound als Marke eintragen zu lassen. Neun Konkurrenten wandten ein, ihre eigenen V2-Motoren mit nur einem Hubzapfen klängen genauso; nach jahrelangem Rechtsstreit zog Harley-Davidson den Antrag im Juni 2000 zurück.\n\nDas größte ist japanisch. Soichiro Honda begann nach dem Krieg damit, kleine Motoren an Fahrräder zu bauen, gründete 1948 die Honda Motor Co. und ist seit 1959 der größte Motorradhersteller der Welt; sein Super Cub mit Durchstiegsrahmen ist das meistverkaufte Kraftfahrzeug, das je gebaut wurde.\n\nItalien steuerte den Stil bei. 1946 stellte die Flugzeugfirma Piaggio in Pontedera einen Roller mit selbsttragender Stahlblechkarosserie, verkleidetem Motor und einem Trittbrett für die Füße vor. Als Enrico Piaggio den Prototyp zum ersten Mal sah, soll er „Sembra una vespa!“ gerufen haben – „Sieht aus wie eine Wespe!“ –, und seither trägt die Vespa diesen Namen. In Bologna wandten sich unterdessen die Brüder Ducati, die ihr Unternehmen 1926 zur Herstellung von Radiobauteilen gegründet hatten, nach dem Krieg dem Motorrad zu. Ducati wurde berühmt durch Rennerfolge und durch die desmodromische Ventilsteuerung seiner 90-Grad-V2-Motoren, bei der ein Nocken die Ventile schließt statt einer Feder; seit 2012 gehört die Firma über Lamborghini zu Audi.\n\nDas bekannteste deutsche Motorrad stammt von einem Flugmotorenhersteller. 1923 baute BMW mit der R 32 sein erstes Motorrad, mit einem Zweizylinder-Boxermotor und Kardanantrieb statt einer Kette – eine Bauweise, die BMW bis heute verwendet.\n\n| Hersteller | Heimat | Gegründet / erstes Motorrad | Bekannt für |\n|---|---|---|---|\n| Harley-Davidson | Milwaukee, USA | 1903 | V2-Cruiser und ihr Klang |\n| Honda | Japan | 1948 | Größter Hersteller der Welt seit 1959 |\n| Piaggio | Pontedera, Italien | Vespa 1946 | Den Motorroller Vespa |\n| Ducati | Bologna, Italien | 1926 | Desmodromische V2-Motoren |\n| BMW | München, Deutschland | R 32, 1923 | Boxermotor, Kardanantrieb |\n\nZusammen decken sie fast alles ab, was ein Motorrad sein kann: Cruiser, Pendlerfahrzeug, Modeaccessoire, Rennmaschine und Langstreckentourer.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-095",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "What is a prototype car called that is shown at motor shows to present new styling or technology without being built in series – the first being the 1938 Buick Y-Job?",
+      "de": "Wie nennt man ein Versuchsauto, das auf Automessen neues Design oder neue Technik zeigt, ohne in Serie zu gehen – das erste war 1938 der Buick Y-Job?",
+      "answerEn": "Concept car",
+      "answerDe": "Konzeptfahrzeug",
+      "timeline": {
+       "kind": "creation",
+       "start": "1938",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Harley Earl's Buick Y-Job, regarded as the car industry's first concept car",
+       "labelDe": "Harley Earls Buick Y-Job, das als erstes Konzeptfahrzeug der Autoindustrie gilt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Buick_Y-Job",
+       "title": "Buick Y-Job – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the human-shaped test device called that sits in a car during crash tests – the first, \"Sierra Sam\", having been built in 1949?",
+      "de": "Wie heißt die menschenähnliche Messpuppe, die bei Crashtests im Auto sitzt – die erste, „Sierra Sam“, entstand 1949?",
+      "answerEn": "Crash test dummy",
+      "answerDe": "Crashtest-Dummy",
+      "timeline": {
+       "kind": "creation",
+       "start": "1949",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Samuel W. Alderson builds \"Sierra Sam\", the first crash test dummy",
+       "labelDe": "Samuel W. Alderson baut „Sierra Sam“, den ersten Crashtest-Dummy"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Crash_test_dummy",
+       "title": "Crash test dummy – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the mid-cycle styling update of a car model called, usually introduced about three years after its launch?",
+      "de": "Wie nennt man die optische Überarbeitung eines Automodells in der Mitte seiner Bauzeit, meist rund drei Jahre nach der Markteinführung?",
+      "answerEn": "Facelift",
+      "answerDe": "Facelift",
+      "timeline": {
+       "kind": "event",
+       "start": "2008",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ford renames the Five Hundred as the Taurus as part of a facelift",
+       "labelDe": "Ford benennt den Five Hundred im Zuge eines Facelifts in Taurus um"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Facelift_(automotive)",
+       "title": "Facelift (automotive) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Erlkönig, Dummy, Facelift: The Car Industry's Own Words",
+    "titleDe": "Erlkönig, Dummy, Facelift: Die Sprache der Autoindustrie",
+    "bodyEn": "Every trade has its jargon, and the car industry, which spends years developing a model in secret and then sells it for as many again, has more than most. Four words follow a new car from the first sketch to the middle of its life.\n\nIt often begins with a concept car: a one-off prototype built to show new styling or technology at a motor show and to test how the public reacts, without any promise that it will go into production. The first is generally said to be the Buick Y-Job of 1938, designed by Harley Earl at General Motors, whose long, low body and hidden headlights anticipated American car design of the following two decades.\n\nOnce a real model is under development, it has to be tested on public roads – and kept secret from competitors and photographers. In German such disguised test cars are called Erlkönige, after Goethe's ballad of the Erlking (Erlkönig), the ghostly figure that haunts a father riding through the night. The term was coined in the early 1950s by Heinz-Ulrich Wieselmann, editor-in-chief of the magazine auto motor und sport, and his deputy Werner Oswald: from issue 15 of 19 July 1952, the magazine printed spy photos of prototypes, each with a short verse in the style of Goethe's poem, and the first was a disguised Mercedes-Benz 180. Today Erlkönige wear padded covers, plastic panels and swirling camouflage foils that break up their lines, and the disguise is removed piece by piece as the launch approaches.\n\nBefore a model goes on sale it must also survive the crash test, and the passenger in the driver's seat is a crash test dummy. The first, \"Sierra Sam\", was built in 1949 by Samuel W. Alderson to test aircraft ejection seats for the US Air Force; the Hybrid III family that appeared in 1976 became the standard of the car industry, packed with sensors that record the forces acting on head, chest and legs.\n\nA model typically stays in production for six to eight years. Around halfway, usually about three years after launch, it receives a facelift – in German also called Modellpflege: new headlights and bumpers, a revised interior, sometimes new engines, but the same basic body and platform. Occasionally a facelift goes further; in 2008 Ford even gave its Five Hundred a new name, Taurus, along with its new face.\n\n| Term | Meaning | First / origin |\n|---|---|---|\n| Concept car | Show prototype, not for sale | Buick Y-Job, 1938 |\n| Erlkönig | Camouflaged test car | auto motor und sport, 1952 |\n| Crash test dummy | Human-shaped measuring device | \"Sierra Sam\", 1949 |\n| Facelift | Mid-cycle update | about three years after launch |\n\nThe words have spread far beyond the factories: anyone who reads a motoring magazine soon learns to recognise an Erlkönig under its foil, and to wait for the facelift before buying.",
+    "bodyDe": "Jede Branche hat ihren Jargon, und die Autoindustrie, die ein Modell jahrelang im Geheimen entwickelt und es dann ebenso lange verkauft, hat mehr davon als die meisten. Vier Wörter begleiten ein neues Auto von der ersten Skizze bis zur Mitte seines Lebens.\n\nOft beginnt es mit einem Konzeptfahrzeug, auch Studie genannt: einem Einzelstück, das auf einer Automesse neues Design oder neue Technik zeigt und die Reaktion des Publikums testet, ohne jedes Versprechen, je in Serie zu gehen. Als erstes gilt allgemein der Buick Y-Job von 1938, entworfen von Harley Earl bei General Motors, dessen lange, flache Karosserie mit versteckten Scheinwerfern das amerikanische Autodesign der folgenden zwei Jahrzehnte vorwegnahm.\n\nIst ein echtes Modell in der Entwicklung, muss es auf öffentlichen Straßen erprobt – und vor Konkurrenten und Fotografen geheim gehalten werden. Solche getarnten Versuchswagen heißen im Deutschen Erlkönige, nach Goethes Ballade vom Erlkönig, der gespenstischen Gestalt, die einen Vater auf seinem nächtlichen Ritt verfolgt. Den Begriff prägten Anfang der 1950er-Jahre Heinz-Ulrich Wieselmann, Chefredakteur der Zeitschrift auto motor und sport, und sein Stellvertreter Werner Oswald: Ab Heft 15 vom 19. Juli 1952 druckte das Blatt Spionagefotos von Prototypen, jeweils mit einem kurzen Vers im Stil von Goethes Gedicht, und der erste war ein getarnter Mercedes-Benz 180. Heute tragen Erlkönige gepolsterte Abdeckungen, Kunststoffverkleidungen und wirbelnde Tarnfolien, die ihre Linien auflösen, und die Tarnung fällt Stück für Stück, je näher die Markteinführung rückt.\n\nBevor ein Modell in den Handel kommt, muss es auch den Crashtest überstehen, und auf dem Fahrersitz sitzt ein Crashtest-Dummy. Der erste, „Sierra Sam“, wurde 1949 von Samuel W. Alderson gebaut, um für die US-Luftwaffe Schleudersitze zu testen; die 1976 erschienene Hybrid-III-Familie wurde zum Standard der Autoindustrie, vollgepackt mit Sensoren, die die Kräfte auf Kopf, Brust und Beine aufzeichnen.\n\nEin Modell wird in der Regel sechs bis acht Jahre lang gebaut. Etwa zur Halbzeit, meist rund drei Jahre nach der Markteinführung, bekommt es ein Facelift – auf Deutsch auch Modellpflege genannt: neue Scheinwerfer und Stoßfänger, ein überarbeiteter Innenraum, manchmal neue Motoren, aber dieselbe Grundkarosserie und Plattform. Gelegentlich geht ein Facelift weiter; 2008 gab Ford seinem Five Hundred mit dem neuen Gesicht sogar einen neuen Namen, Taurus.\n\n| Begriff | Bedeutung | Erstes / Ursprung |\n|---|---|---|\n| Konzeptfahrzeug | Messe-Prototyp, nicht zu kaufen | Buick Y-Job, 1938 |\n| Erlkönig | Getarnter Versuchswagen | auto motor und sport, 1952 |\n| Crashtest-Dummy | Menschenähnliche Messpuppe | „Sierra Sam“, 1949 |\n| Facelift | Überarbeitung zur Halbzeit | rund drei Jahre nach dem Start |\n\nDie Wörter haben sich weit über die Werkshallen hinaus verbreitet: Wer eine Autozeitschrift liest, lernt bald, einen Erlkönig unter seiner Folie zu erkennen – und mit dem Kauf bis zum Facelift zu warten.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-092",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "Which big cat's name does the Bundeswehr's main battle tank bear, whose second generation was first handed over to the troops in 1979?",
+      "de": "Welchen Raubkatzennamen trägt der Kampfpanzer der Bundeswehr, dessen zweite Generation 1979 erstmals an die Truppe übergeben wurde?",
+      "answerEn": "Leopard",
+      "answerDe": "Leopard",
+      "timeline": {
+       "kind": "event",
+       "start": "1979-10-25",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first series-built Leopard 2 is handed over to Panzerlehrbrigade 9 in Munster",
+       "labelDe": "Der erste Serien-Leopard 2 wird an die Panzerlehrbrigade 9 in Munster übergeben"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Leopard_2",
+       "title": "Leopard 2 – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which big cat's name does the Bundeswehr infantry fighting vehicle bear that the army formally accepted in 2015 as successor to the Marder?",
+      "de": "Welchen Raubkatzennamen trägt der Schützenpanzer der Bundeswehr, den das Heer 2015 als Nachfolger des Marder offiziell abnahm?",
+      "answerEn": "Puma",
+      "answerDe": "Puma",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-04-13",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The German Army declares the Puma infantry fighting vehicle accepted for service",
+       "labelDe": "Das Heer erklärt die Abnahme des Schützenpanzers Puma"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Sch%C3%BCtzenpanzer_Puma",
+       "title": "Schützenpanzer Puma – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which animal's name does the Bundeswehr's wheeled armoured personnel carrier Transportpanzer 1, built by Thyssen-Henschel, bear?",
+      "de": "Welchen Tiernamen trägt der von Thyssen-Henschel gebaute Radpanzer Transportpanzer 1 der Bundeswehr?",
+      "answerEn": "Fuchs (fox)",
+      "answerDe": "Fuchs",
+      "timeline": {
+       "kind": "period",
+       "start": "1979",
+       "end": "1993",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Thyssen-Henschel builds the Transportpanzer 1 Fuchs for the Bundeswehr",
+       "labelDe": "Thyssen-Henschel baut den Transportpanzer 1 Fuchs für die Bundeswehr"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/TPz_Fuchs",
+       "title": "TPz Fuchs – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which small predator's name does the Bundeswehr's light tracked weapons carrier for paratroopers bear, two of which fit inside a CH-53 helicopter?",
+      "de": "Welchen Namen eines kleinen Raubtiers trägt der leichte Kettenwaffenträger der Fallschirmjäger, von dem zwei in einen CH-53-Hubschrauber passen?",
+      "answerEn": "Wiesel (weasel)",
+      "answerDe": "Wiesel",
+      "timeline": {
+       "kind": "period",
+       "start": "1990",
+       "end": "1992",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Wiesel weapons carrier is delivered to the Bundeswehr",
+       "labelDe": "Der Waffenträger Wiesel wird an die Bundeswehr ausgeliefert"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Wiesel_(Waffentr%C3%A4ger)",
+       "title": "Wiesel (Waffenträger) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Leopard, Fuchs, Elefant: The Animal Names of the Bundeswehr's Vehicles",
+    "titleDe": "Leopard, Fuchs, Elefant: Die Tiernamen der Bundeswehrfahrzeuge",
+    "bodyEn": "Officially, the vehicles of the German armed forces have dry designations such as \"Transportpanzer 1\" or \"SLT 50-2\". In everyday use, though, almost all of them are known by animal names, a tradition that goes back to the Wehrmacht's Tiger and Panther and that the Bundeswehr continued from its first own designs. The animal usually says something about the vehicle: big cats for the fighters, small predators for the light and nimble, and the largest land animal for the heaviest lorries.\n\nAt the top stands the main battle tank, the Leopard. The Leopard 1 entered service in 1965; its successor, the Leopard 2 built by Krauss-Maffei, was first handed over to Panzerlehrbrigade 9 in Munster on 25 October 1979 and has since become the most widely exported Western tank. The panzergrenadiers who accompany it rode for decades in the Marder (marten); its successor, the Puma, with an unmanned, remotely operated turret, was formally accepted by the army on 13 April 2015 after a long and troubled development.\n\nWheeled vehicles have names too. The Transportpanzer 1, built by Thyssen-Henschel in Kassel from 1979, is known as the Fuchs (fox); early versions could swim, and it carries infantry, engineers and NBC reconnaissance teams. For the paratroopers, Porsche developed the Wiesel (weasel), a tiny tracked weapons carrier so light that a CH-53 helicopter can carry two of them inside; it was delivered between 1990 and 1992.\n\nTanks, however, cannot drive long distances on public roads, and so the Bundeswehr needs heavy-load transporters (Schwerlasttransporter, SLT) to carry them. The first of these tractor units, the Faun SLT 50-2, was delivered from April 1976 and named Elefant (Elephant); it can carry 52 tonnes. With the heavier Leopard 2 came the SLT 56 Franziska in 1989 – the only member of the family with a woman's name – and in 2012 the Rheinmetall MAN SLT 2 Mammut, which tows 70 tonnes on its trailer.\n\n| Vehicle | Animal | In service from |\n|---|---|---|\n| Leopard 2 main battle tank | Leopard | 1979 |\n| Transportpanzer 1 | Fuchs (fox) | 1979 |\n| Wiesel weapons carrier | Wiesel (weasel) | 1990 |\n| Puma infantry fighting vehicle | Puma | 2015 |\n| SLT 50-2 heavy-load transporter | Elefant (Elephant) | 1976 |\n| SLT 2 heavy-load transporter | Mammut (mammoth) | 2012 |\n\nThe names are informal, but they have stuck so well that the official designations are hardly ever used outside the procurement office.",
+    "bodyDe": "Offiziell tragen die Fahrzeuge der Bundeswehr nüchterne Bezeichnungen wie „Transportpanzer 1“ oder „SLT 50-2“. Im Alltag aber sind fast alle unter Tiernamen bekannt, eine Tradition, die auf Tiger und Panther der Wehrmacht zurückgeht und die die Bundeswehr seit ihren ersten eigenen Konstruktionen fortführt. Das Tier sagt meist etwas über das Fahrzeug: Raubkatzen für die Kämpfer, kleine Raubtiere für die Leichten und Wendigen und das größte Landtier für die schwersten Lastwagen.\n\nAn der Spitze steht der Kampfpanzer, der Leopard. Der Leopard 1 wurde 1965 eingeführt; sein Nachfolger, der von Krauss-Maffei gebaute Leopard 2, wurde am 25. Oktober 1979 erstmals an die Panzerlehrbrigade 9 in Munster übergeben und ist seither der meistexportierte westliche Kampfpanzer. Die Panzergrenadiere, die ihn begleiten, fuhren jahrzehntelang im Marder; sein Nachfolger, der Puma mit unbemanntem, ferngesteuertem Turm, wurde nach einer langen und schwierigen Entwicklung am 13. April 2015 vom Heer offiziell abgenommen.\n\nAuch Radfahrzeuge haben Namen. Der Transportpanzer 1, ab 1979 von Thyssen-Henschel in Kassel gebaut, heißt Fuchs; frühe Versionen waren schwimmfähig, und er transportiert Infanterie, Pioniere und ABC-Spürtrupps. Für die Fallschirmjäger entwickelte Porsche den Wiesel, einen winzigen Kettenwaffenträger, so leicht, dass ein CH-53-Hubschrauber zwei davon im Laderaum tragen kann; er wurde von 1990 bis 1992 ausgeliefert.\n\nPanzer können aber keine langen Strecken auf öffentlichen Straßen fahren, und deshalb braucht die Bundeswehr Schwerlasttransporter (SLT), um sie zu befördern. Die erste dieser Zugmaschinen, der Faun SLT 50-2, wurde ab April 1976 ausgeliefert und Elefant getauft; er kann 52 Tonnen tragen. Mit dem schwereren Leopard 2 kam 1989 der SLT 56 Franziska – das einzige Mitglied der Familie mit einem Frauennamen – und 2012 der SLT 2 Mammut von Rheinmetall MAN, der 70 Tonnen auf seinem Auflieger zieht.\n\n| Fahrzeug | Tier | Im Dienst ab |\n|---|---|---|\n| Kampfpanzer Leopard 2 | Leopard | 1979 |\n| Transportpanzer 1 | Fuchs | 1979 |\n| Waffenträger Wiesel | Wiesel | 1990 |\n| Schützenpanzer Puma | Puma | 2015 |\n| Schwerlasttransporter SLT 50-2 | Elefant | 1976 |\n| Schwerlasttransporter SLT 2 | Mammut | 2012 |\n\nDie Namen sind inoffiziell, haben sich aber so gut eingebürgert, dass die amtlichen Bezeichnungen außerhalb der Beschaffungsämter kaum je verwendet werden.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-318",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "How many levels of driving automation does the SAE J3016 classification, first published in 2014, define?",
+      "de": "Wie viele Stufen der Fahrautomatisierung definiert die 2014 erstmals veröffentlichte Klassifikation SAE J3016?",
+      "answerEn": "Six",
+      "answerDe": "Sechs",
+      "timeline": {
+       "kind": "creation",
+       "start": "2014",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "SAE International publishes the J3016 classification of driving automation",
+       "labelDe": "SAE International veröffentlicht die Klassifikation J3016 für das automatisierte Fahren"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Self-driving_car",
+       "title": "Self-driving car – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is SAE level 5, the highest level of driving automation, at which no driver is needed at all, called?",
+      "de": "Wie heißt die SAE-Stufe 5, die höchste Stufe der Fahrautomatisierung, bei der überhaupt kein Fahrer mehr nötig ist?",
+      "answerEn": "Full automation",
+      "answerDe": "Vollautomatisierung",
+      "timeline": {
+       "kind": "creation",
+       "start": "2014",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "SAE J3016 defines level 5, full automation, as the highest level",
+       "labelDe": "SAE J3016 definiert die Stufe 5, die Vollautomatisierung, als höchste Stufe"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Autonomes_Fahren",
+       "title": "Autonomes Fahren – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which US state did Google receive the first licence to test an autonomous car on public roads in May 2012?",
+      "de": "In welchem US-Bundesstaat erhielt Google im Mai 2012 die erste Zulassung, ein autonomes Auto auf öffentlichen Straßen zu testen?",
+      "answerEn": "Nevada",
+      "answerDe": "Nevada",
+      "timeline": {
+       "kind": "event",
+       "start": "2012-05",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Google receives the first US licence to test an autonomous car on public roads, in Nevada",
+       "labelDe": "Google erhält in Nevada die erste US-Zulassung für Tests eines autonomen Autos auf öffentlichen Straßen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Autonomes_Fahren",
+       "title": "Autonomes Fahren – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Alphabet company became the first in October 2020 to offer the public robotaxi rides without a safety driver?",
+      "de": "Welches Alphabet-Unternehmen bot im Oktober 2020 als erstes der Öffentlichkeit Robotaxi-Fahrten ohne Sicherheitsfahrer an?",
+      "answerEn": "Waymo",
+      "answerDe": "Waymo",
+      "timeline": {
+       "kind": "event",
+       "start": "2020-10",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Waymo opens driverless robotaxi rides without safety drivers to the public in Phoenix",
+       "labelDe": "Waymo öffnet in Phoenix fahrerlose Robotaxi-Fahrten ohne Sicherheitsfahrer für die Öffentlichkeit"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Waymo",
+       "title": "Waymo – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Nobody at the Wheel: The Levels of Driving Automation",
+    "titleDe": "Niemand am Steuer: Die Stufen des automatisierten Fahrens",
+    "bodyEn": "The dream of a car that drives itself is almost as old as the car. In the 1950s engineers promised motorways with buried guide cables and \"foolproof electronic control\"; what finally made it possible was the combination of cameras, radar, laser scanners and fast computers that arrived in the 2000s. To bring order into the many claims, the engineering association SAE International published a classification in 2014, the standard J3016, which divides driving automation into six levels, numbered 0 to 5.\n\nAt level 0 the driver does everything, perhaps helped by warnings. Level 1 adds a single assistant, such as adaptive cruise control or lane keeping; at level 2, partial automation, the car steers, accelerates and brakes by itself, but the driver must watch the road at all times and keep their hands ready. Level 3, conditional automation, is the real break: in defined situations, such as a traffic jam on the motorway, the driver may turn away and only has to take over when the system asks. At level 4, high automation, the car copes alone within a limited area or set of conditions. Level 5, full automation, is the goal: no driver is needed at all, the car works without steering wheel or pedals, and its human occupants only set the destination – so the number of people needed to drive it is 0.\n\nTesting moved onto public roads early. Google began its self-driving project on 17 January 2009, and in May 2012 it received the first US licence to test an autonomous car on public roads, in Nevada – on condition that a person sat behind the wheel, ready to intervene. The project was spun out in 2016 as Waymo, part of Google's parent company Alphabet. In October 2020 Waymo became the first company to open rides without safety drivers to the public, in the suburbs of Phoenix, Arizona; robotaxis without anyone at the wheel have since appeared in several American and Chinese cities.\n\n| Level | Name | Who drives? |\n|---|---|---|\n| 0 | No automation | The driver |\n| 1 | Driver assistance | The driver, with one assistant |\n| 2 | Partial automation | The car, supervised at all times |\n| 3 | Conditional automation | The car, driver on standby |\n| 4 | High automation | The car, within limits |\n| 5 | Full automation | The car alone |\n\nMost cars on sale today stop at level 2. The difficult part of the remaining way is not the technology alone but the questions it raises – about liability, about rare situations no programmer foresaw, and about how much people are willing to trust a machine.",
+    "bodyDe": "Der Traum vom Auto, das selbst fährt, ist fast so alt wie das Auto. In den 1950er-Jahren versprachen Ingenieure Autobahnen mit im Boden verlegten Leitkabeln und eine „narrensichere elektronische Steuerung“; möglich wurde es schließlich durch die Kombination aus Kameras, Radar, Laserscannern und schnellen Computern, die in den 2000er-Jahren aufkam. Um Ordnung in die vielen Versprechen zu bringen, veröffentlichte der Ingenieursverband SAE International 2014 eine Klassifikation, die Norm J3016, die das automatisierte Fahren in sechs Stufen einteilt, nummeriert von 0 bis 5.\n\nAuf Stufe 0 macht der Fahrer alles, allenfalls unterstützt durch Warnungen. Stufe 1 fügt einen einzelnen Assistenten hinzu, etwa einen Abstandsregeltempomat oder Spurhalteassistenten; auf Stufe 2, der Teilautomatisierung, lenkt, beschleunigt und bremst das Auto selbst, doch der Fahrer muss die Straße ständig beobachten und jederzeit eingreifen können. Stufe 3, das bedingt automatisierte Fahren, ist der eigentliche Bruch: In festgelegten Situationen, etwa im Stau auf der Autobahn, darf sich der Fahrer abwenden und muss erst übernehmen, wenn das System ihn auffordert. Auf Stufe 4, der Hochautomatisierung, kommt das Auto innerhalb eines begrenzten Gebiets oder unter bestimmten Bedingungen allein zurecht. Stufe 5, die Vollautomatisierung, ist das Ziel: Es ist überhaupt kein Fahrer mehr nötig, das Auto funktioniert ohne Lenkrad und Pedale, und die Insassen geben nur noch das Ziel vor – die Zahl der Menschen, die zum Fahren gebraucht werden, ist also 0.\n\nDie Erprobung zog früh auf öffentliche Straßen. Google begann sein Projekt für selbstfahrende Autos am 17. Januar 2009 und erhielt im Mai 2012 in Nevada die erste US-Zulassung, ein autonomes Auto auf öffentlichen Straßen zu testen – unter der Bedingung, dass eine Person hinter dem Steuer saß, die notfalls eingreifen konnte. 2016 wurde das Projekt als Waymo ausgegliedert, ein Teil von Googles Mutterkonzern Alphabet. Im Oktober 2020 öffnete Waymo als erstes Unternehmen Fahrten ohne Sicherheitsfahrer für die Öffentlichkeit, in den Vororten von Phoenix, Arizona; Robotaxis ohne jemanden am Steuer sind seither in mehreren amerikanischen und chinesischen Städten unterwegs.\n\n| Stufe | Name | Wer fährt? |\n|---|---|---|\n| 0 | Keine Automatisierung | Der Fahrer |\n| 1 | Assistiertes Fahren | Der Fahrer, mit einem Assistenten |\n| 2 | Teilautomatisierung | Das Auto, ständig überwacht |\n| 3 | Bedingte Automatisierung | Das Auto, Fahrer in Bereitschaft |\n| 4 | Hochautomatisierung | Das Auto, in Grenzen |\n| 5 | Vollautomatisierung | Das Auto allein |\n\nDie meisten heute verkauften Autos enden bei Stufe 2. Das Schwierige am restlichen Weg ist nicht allein die Technik, sondern die Fragen, die sie aufwirft – nach der Haftung, nach seltenen Situationen, die kein Programmierer vorhergesehen hat, und danach, wie sehr Menschen bereit sind, einer Maschine zu vertrauen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-088",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which letter at the end of a German number plate marks a historic vehicle that first took to the road at least 30 years ago?",
+      "de": "Welcher Buchstabe am Ende eines deutschen Kfz-Kennzeichens kennzeichnet ein historisches Fahrzeug, das vor mindestens 30 Jahren erstmals in Verkehr kam?",
+      "answerEn": "H",
+      "answerDe": "H",
+      "timeline": {
+       "kind": "event",
+       "start": "1997-07-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first H plate for a historic vehicle is issued in Germany",
+       "labelDe": "In Deutschland wird das erste H-Kennzeichen für ein historisches Fahrzeug zugeteilt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Kfz-Kennzeichen_(Deutschland)",
+       "title": "Kfz-Kennzeichen (Deutschland) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which letter at the end of a German number plate has marked electric vehicles since 26 September 2015?",
+      "de": "Welcher Buchstabe am Ende eines deutschen Kfz-Kennzeichens kennzeichnet seit dem 26. September 2015 Elektrofahrzeuge?",
+      "answerEn": "E",
+      "answerDe": "E",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-09-26",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "German registration offices begin issuing E plates for electric vehicles",
+       "labelDe": "Die deutschen Zulassungsstellen beginnen, E-Kennzeichen für Elektrofahrzeuge auszugeben"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Kfz-Kennzeichen_(Deutschland)",
+       "title": "Kfz-Kennzeichen (Deutschland) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which two German federal states were the first Euro number plates with the blue EU strip issued in 1994?",
+      "de": "In welchen beiden Bundesländern wurden 1994 die ersten Euro-Kennzeichen mit dem blauen EU-Streifen ausgegeben?",
+      "answerEn": "Berlin and Brandenburg",
+      "answerDe": "Berlin und Brandenburg",
+      "timeline": {
+       "kind": "event",
+       "start": "1994",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first Euro number plates are issued in Berlin and Brandenburg",
+       "labelDe": "In Berlin und Brandenburg werden die ersten Euro-Kennzeichen ausgegeben"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Kfz-Kennzeichen_(Deutschland)",
+       "title": "Kfz-Kennzeichen (Deutschland) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Green, Red, H and E: Reading a German Number Plate",
+    "titleDe": "Grün, Rot, H und E: Wie man ein deutsches Kennzeichen liest",
+    "bodyEn": "A German number plate tells a practised eye a good deal more than the car's registration. The letters before the first hyphen name the district where the vehicle is registered – B for Berlin, M for Munich, HH for the Hanseatic City of Hamburg – and the two round stickers between them show the registration seal of the district and, on the rear plate, the date of the next roadworthiness test.\n\nSince 1956 West German plates have shown black lettering on a white background. The modern version is the Euro plate: a narrower typeface, the tamper-resistant FE font, and a blue strip on the left with the twelve yellow stars of the EU and the country code D. The first Euro plates were issued in 1994 in Berlin and Brandenburg, with Saxony following soon after; from early 1995 they were available everywhere, and since 1 November 2000 every newly registered vehicle has had to carry one.\n\nColour is the next clue. Most plates are black on white, but vehicles exempt from motor-vehicle tax – farm tractors, vehicles of aid organisations or fairground showmen's trucks – carry plates with green lettering, issued only when the customs office has approved the exemption. Red lettering marks plates for test drives, transfers and workshop journeys: those beginning with 06 go to manufacturers, workshops and dealers, those with 05 to testing organisations, and the red 07 plates allow vintage cars to be driven to rallies and events. Private individuals never receive red plates for everyday driving.\n\nFinally, a single letter at the end can say something about the vehicle itself. An H stands for historisch: it may be given to a vehicle that first took to the road at least 30 years ago and is kept in largely original condition, and it brings a flat-rate tax and exemption from low-emission zones. The first H plate was issued on 1 July 1997. Since 26 September 2015, under the Electric Mobility Act, an E at the end has marked electric and plug-in hybrid vehicles, which may be given privileges such as free parking or the use of bus lanes.\n\n| Feature | Meaning | Since |\n|---|---|---|\n| Black on white | Normal registration | 1956 |\n| Blue EU strip | Euro plate | 1994 (compulsory 2000) |\n| Green lettering | Tax-exempt vehicle | – |\n| Red lettering | Test, transfer and dealer plates | – |\n| H at the end | Historic vehicle, at least 30 years old | 1997 |\n| E at the end | Electric vehicle | 2015 |\n\nRead together, the plate becomes a short biography of the car: where it lives, whether it pays tax, how old it is and what drives it.",
+    "bodyDe": "Ein deutsches Kfz-Kennzeichen verrät einem geübten Auge weit mehr als nur die Zulassung. Die Buchstaben vor dem ersten Bindestrich nennen den Bezirk, in dem das Fahrzeug zugelassen ist – B für Berlin, M für München, HH für die Hansestadt Hamburg –, und die beiden runden Plaketten dazwischen zeigen das Dienstsiegel der Zulassungsbehörde und hinten den Termin der nächsten Hauptuntersuchung.\n\nSeit 1956 tragen westdeutsche Kennzeichen schwarze Schrift auf weißem Grund. Die moderne Form ist das Euro-Kennzeichen: eine schmalere, fälschungserschwerende Schrift, die FE-Schrift, und links ein blauer Streifen mit den zwölf gelben Sternen der EU und der Länderkennung D. Die ersten Euro-Kennzeichen wurden 1994 in Berlin und Brandenburg ausgegeben, Sachsen folgte kurz darauf; ab Anfang 1995 gab es sie überall, und seit dem 1. November 2000 muss jedes neu zugelassene Fahrzeug eines tragen.\n\nDie Farbe ist der nächste Hinweis. Die meisten Kennzeichen sind schwarz auf weiß, doch von der Kfz-Steuer befreite Fahrzeuge – landwirtschaftliche Zugmaschinen, Fahrzeuge von Hilfsorganisationen oder Schaustellerwagen – tragen Kennzeichen mit Schrift in Grün, die nur ausgegeben werden, wenn das Hauptzollamt die Steuerbefreiung genehmigt hat. Rote Schrift kennzeichnet Nummern für Probe-, Überführungs- und Werkstattfahrten: Die mit 06 erhalten Hersteller, Werkstätten und Händler, die mit 05 Prüforganisationen, und die roten 07er-Kennzeichen erlauben Oldtimern Fahrten zu Rallyes und Veranstaltungen. Privatpersonen erhalten für den Alltag nie rote Kennzeichen.\n\nSchließlich kann ein einzelner Buchstabe am Ende etwas über das Fahrzeug selbst sagen. Ein H steht für historisch: Es kann ein Fahrzeug erhalten, das vor mindestens 30 Jahren erstmals in Verkehr kam und weitgehend im Originalzustand erhalten ist, und es bringt eine pauschale Steuer und freie Fahrt in Umweltzonen. Das erste H-Kennzeichen wurde am 1. Juli 1997 zugeteilt. Seit dem 26. September 2015 kennzeichnet nach dem Elektromobilitätsgesetz ein E am Ende Elektro- und Plug-in-Hybridfahrzeuge, denen Vorrechte wie kostenloses Parken oder die Nutzung von Busspuren eingeräumt werden können.\n\n| Merkmal | Bedeutung | Seit |\n|---|---|---|\n| Schwarz auf Weiß | Normale Zulassung | 1956 |\n| Blauer EU-Streifen | Euro-Kennzeichen | 1994 (Pflicht 2000) |\n| Grüne Schrift | Steuerbefreites Fahrzeug | – |\n| Rote Schrift | Probe-, Überführungs- und Händlerkennzeichen | – |\n| H am Ende | Historisches Fahrzeug, mindestens 30 Jahre alt | 1997 |\n| E am Ende | Elektrofahrzeug | 2015 |\n\nZusammen gelesen wird das Kennzeichen zu einer kurzen Biografie des Autos: wo es zu Hause ist, ob es Steuern zahlt, wie alt es ist und was es antreibt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

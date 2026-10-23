@@ -1,0 +1,256 @@
+{
+ "article": "a1470",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/October_Revolution",
+   "title": "October Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:29.623Z",
+   "snapshot": "45858bcaed7be7ca28097ebae6f775670d5e4dab9d0f63ad0999924d95343150"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bastille",
+   "title": "Bastille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:33.682Z",
+   "snapshot": "cff5583949aca3b08bc8d08f63eabe57f6d696122bde950c0a624af4365526de"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sturm_auf_die_Bastille",
+   "title": "Sturm auf die Bastille",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:26.696Z",
+   "snapshot": "c7d86a327fa8fff234ff5b6b30b286a8efe10666fb6a6085789caa67737fbaac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Raising_a_Flag_over_the_Reichstag",
+   "title": "Raising a Flag over the Reichstag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:30.391Z",
+   "snapshot": "16136053091594ab59f9786624ce83ee139a0850a253d376a0ab8edbb044b561"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Iran_hostage_crisis",
+   "title": "Iran hostage crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:31.546Z",
+   "snapshot": "dcd4ab1c7b84ec47653e29677aa2e5baefd0a1bfb5062f542d3d35d29a396f70"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/October:_Ten_Days_That_Shook_the_World",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:32.376Z",
+   "snapshot": "425f9c9e0565b858f0b1f160bcfce08e9d5818155c9b5094ee0918f094380cac"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/January_6_United_States_Capitol_attack",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:09.488Z",
+   "snapshot": "88f82dd6c253fef78cf7742d4aa662dddee202e092333681eb516e4b1170c9e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winter Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bastille",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bastille",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-103"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Reichstag",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "US embassy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:30.829Z",
+   "target": "f07346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "8 November], they captured the Winter Palace — the seat of the Provisional government located in Petrograd, then capital of Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winter Palace” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:30.829Z",
+   "target": "f07347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Bastille (, French: [bastij] ) was a medieval fortress in Paris, known as the Bastille Saint-Antoine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bastille” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:30.829Z",
+   "target": "f07347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Sturm auf die Bastille (französisch La prise de la Bastille  ‚die Einnahme der Bastille‘) am 14.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bastille” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:30.829Z",
+   "target": "f07348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Raising a Flag over the Reichstag (Russian: Знамя Победы над Рейхстагом, romanized: Znamya Pobedy nad Reykhstagom) is a World War II photograph that symbolizes the Soviet Union's victory over Nazi Germany during the Battle in Berlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reichstag” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:30.829Z",
+   "target": "f07349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Internal situation in Iran; Attack on British Embassy; Hostage-taking at US Embassy; Freezing of Iranian Assets; US Mission to release hostages; Relations with US & UK following hostage taking at US Embassy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “US embassy” is on the snapshot of s5"
+  }
+ ]
+}

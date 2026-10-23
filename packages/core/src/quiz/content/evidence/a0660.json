@@ -1,0 +1,500 @@
+{
+ "article": "a0660",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Billy_Mitchell_(gamer)",
+   "title": "Billy Mitchell (gamer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:31.676Z",
+   "snapshot": "566d3e58e6f90ab311e441c729b0870fd07484482c9b8b8d704845fcc3f58967"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Space_Invaders",
+   "title": "Space Invaders – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:31.129Z",
+   "snapshot": "68f7d42c26b0aeb55ce605184f315d8a5d793b9a996d7d10b2a0806d48142eaa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Donkey_Kong_(1981_video_game)",
+   "title": "Donkey Kong (1981 video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:32.208Z",
+   "snapshot": "3e905aa5a316f53bcbd6e71e090c0629285d7409e67fd14a3c7d4c6803d35c90"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ghosts_(Pac-Man)",
+   "title": "Ghosts (Pac-Man)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:33.123Z",
+   "snapshot": "43fcc15d898a40901dfa3d96d5c6167cb25288ab83a2600fb40dfcd33cf0656a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pong",
+   "title": "Pong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:34.249Z",
+   "snapshot": "8ac2f1c9400fd5fd9f729bf1def3695d4f351f5d0262db07c03b0fbe87680a60"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tennis_for_Two",
+   "title": "Tennis for Two",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:35.086Z",
+   "snapshot": "4ac1a21ec9111670fc825093d8f1f310d42f46f18ed30539b0750c557e676b49"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tetris_(Game_Boy_video_game)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:36.099Z",
+   "snapshot": "7697ccbc205afac5a7fa57f8acb7cbe072b9070f7049a6292f0d32ed2b5b4a17"
+  },
+  "s8": {
+   "url": "https://www.bnl.gov/about/history/firstvideo.php",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:34.071Z",
+   "snapshot": "10bbd5503b476a4e3c93512167c5df88d6e1ba275a15871195ee44a34130ae22"
+  },
+  "s9": {
+   "url": "https://www.museumofplay.org/games/pac-man/",
+   "title": "Pac-Man – The Strong National Museum of Play",
+   "publisher": "The Strong National Museum of Play",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:00.808Z",
+   "snapshot": "21cbe5f7dc8f1c40f011d6b7ed59f2924603b8c248d8761f66565a87d0b03f05"
+  },
+  "s10": {
+   "url": "https://kotaku.com/pac-man-ghosts-are-smarter-than-you-think-1683857357",
+   "title": "Pac-Man Ghosts Are Smarter Than You Think",
+   "publisher": "Kotaku",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:00.039Z",
+   "snapshot": "6fa394e7957c5dd6d4434e218c9a2ec8da7f366df545703701d0703453bea6a8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pac-Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Space Invaders",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Donkey Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blinky, Pinky, Inky and Clyde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-143"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tennis for Two",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Tennis for Two",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-044/2, u10: Our wording already says 'often called the first video game' and the body notes earlier computer games (OXO 1952); BNL and Wikipedia call it the first under some definitions, the first made purely for entertainment."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f25950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tennis for Two",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s8"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f25950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tennis for Two",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f03296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1999, Mitchell said he was the first person to attain a perfect score of 3,333,360 points on the arcade game Pac-Man.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pac-Man” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f03297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Space Invaders is a 1978 fixed shooter video game developed and published by Taito for arcades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Space Invaders” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f03298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Donkey Kong is a 1981 platform game developed and published by Nintendo for arcades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donkey Kong” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blinky, Pinky, Inky and Clyde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Blinky, Pinky, Inky and Clyde”, “Blinky, Pinky, Inky und Clyde”, “Блинки, Пинки, Инки и Клайд”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f03299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pong is a 1972 sports video game developed and published by Atari, Inc.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pong” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f25950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tennis for Two (also known as Computer Tennis) is a 1958 sports video game designed by the American physicist William Higinbotham at the Brookhaven National Laboratory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tennis for Two” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:22.649Z",
+   "target": "f25950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Before 'Pong,' There Was 'Tennis for Two'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.649Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tennis for Two” is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:36:34Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "evading Pinky, Blinky, Inky, and Clyde",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:36:35Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In short, the four—Blinky, Inky, Pinky, and Clyde—were all programmed to use unique strategies in conjunction with one another",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:36:37Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blinky, Pinky, Inky, and Clyde, collectively known as the Ghost Gang, are a quartet of colorful ghost characters from the Pac-Man video game franchise.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:51.349Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "evading Pinky, Blinky, Inky, and Clyde",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:51.349Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In short, the four—Blinky, Inky, Pinky, and Clyde—were all programmed to use unique strategies in conjunction with one another",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:51.349Z",
+   "target": "f13944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blinky, Pinky, Inky, and Clyde, collectively known as the Ghost Gang, are a quartet of colorful ghost characters from the Pac-Man video game franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  }
+ ]
+}

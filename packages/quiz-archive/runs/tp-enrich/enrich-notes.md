@@ -1,0 +1,581 @@
+# Known problems per article (grep your ids)
+
+- a0051: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0459: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0651: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0867: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1299: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1815: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1875: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1899: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2019: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0123: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0423: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1827: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1887: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0692: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1040: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1172: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1196: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1526: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0428: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0512: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0908: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1052: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1436: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1448: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1616: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1760: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1868: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1952: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2048: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2060: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1568: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1604: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1486: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1690: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0370: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1870: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0706: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1954: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1259: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1547: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1325: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2092: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0304: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0616: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0736: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1144: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1216: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1720: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2044: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2261: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0472: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1072: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1168: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1264: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1372: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1696: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1960: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2308: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1450: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1774: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1234: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1582: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2014: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1422: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1494: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1770: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0895: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1074: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1654: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2034: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1634: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1790: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0182: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1706: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1862: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2090: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1250: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1586: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1694: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0373: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1201: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1645: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0541: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1825: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1873: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1811: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0695: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1103: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1751: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1847: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1859: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1895: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2051: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0297: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1917: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1845: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0069: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1497: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1281: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1857: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0549: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0705: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1881: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0475: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0979: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1387: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1687: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1795: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2083: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0607: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0955: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1015: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1087: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1447: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1903: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0305: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0533: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1121: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1457: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1757: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0245: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0329: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0701: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1181: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1517: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1800: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1913: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1925: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1961: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0749: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1445: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1493: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1553: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1985: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a2093: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0180: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0432: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0480: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0816: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0924: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1176: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1224: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1308: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1320: only 2 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1488: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1644: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1836: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1860: only 1 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0672: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a0720: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1416: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1848: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1872: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1944: only 3 fact(s) — top it up to 4–5 facts with new generated facts (see ENRICH.md "Top-up").
+- a1191 f10625: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a1263 f10621: answer "Power station (Bankside Power Station)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2127 f10660: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a2133 f10693: answer "iPhone (Apple)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2134 f10700: answer "Socks (cardinals' socks)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0063 f00311: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a0063 f00312: one/two-character answer "13" — make the answer a quotable phrase (e.g. „13“ or "the letter 13") so its span lands on the right place.
+- a0063 f00313: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a0063 f00314: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a0063 f00315: one/two-character answer "1" — make the answer a quotable phrase (e.g. „1“ or "the letter 1") so its span lands on the right place.
+- a0627 f03134: one/two-character answer "JR" — make the answer a quotable phrase (e.g. „JR“ or "the letter JR") so its span lands on the right place.
+- a0819 f10741: answer "Ursa Major (the Big Dipper)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1107 f10710: answer "Museum of Modern Art (New York)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1179 f10739: answer "Ultramarine blue (International Klein Blue)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1995 f09971: answer "Mat (passe-partout)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0087 f00431: answer "the Völkerschlachtdenkmal (Monument to the Battle of the Nations)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2138 f10758: answer "An astronaut ("Fallen Astronaut")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2143 f10791: answer "A belt (of wolf skin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2144 f10800: one/two-character answer "Ys" — make the answer a quotable phrase (e.g. „Ys“ or "the letter Ys") so its span lands on the right place.
+- a1460 f07299: one/two-character answer "Qi" — make the answer a quotable phrase (e.g. „Qi“ or "the letter Qi") so its span lands on the right place.
+- a0608 f03036: one/two-character answer "40" — make the answer a quotable phrase (e.g. „40“ or "the letter 40") so its span lands on the right place.
+- a0608 f03037: one/two-character answer "12" — make the answer a quotable phrase (e.g. „12“ or "the letter 12") so its span lands on the right place.
+- a0608 f03038: one/two-character answer "10" — make the answer a quotable phrase (e.g. „10“ or "the letter 10") so its span lands on the right place.
+- a0608 f03039: one/two-character answer "30" — make the answer a quotable phrase (e.g. „30“ or "the letter 30") so its span lands on the right place.
+- a0608 f03040: one/two-character answer "27" — make the answer a quotable phrase (e.g. „27“ or "the letter 27") so its span lands on the right place.
+- a0728 f14461: one/two-character answer "39" — make the answer a quotable phrase (e.g. „39“ or "the letter 39") so its span lands on the right place.
+- a0884 f10808: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a1160 f05796: one/two-character answer "95" — make the answer a quotable phrase (e.g. „95“ or "the letter 95") so its span lands on the right place.
+- a1160 f05797: one/two-character answer "28" — make the answer a quotable phrase (e.g. „28“ or "the letter 28") so its span lands on the right place.
+- a1160 f05798: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a1160 f05799: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a1160 f05800: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a1988 f09936: answer "Curate (Kaplan)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2149 f10835: answer "Waving cats (Winkekatzen)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0058 f00288: one/two-character answer "Io" — make the answer a quotable phrase (e.g. „Io“ or "the letter Io") so its span lands on the right place.
+- a0430 f10852: answer "Mercury, Venus, Earth, Mars (any three)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2122 f10887: one/two-character answer "1" — make the answer a quotable phrase (e.g. „1“ or "the letter 1") so its span lands on the right place.
+- a2153 f10872: answer "about 6 sextillion tonnes (6 × 10²¹ t)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2156 f10893: answer "International Space Station (ISS)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2156 f10894: answer "Dragon (SpaceX)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2158 f10904: answer "on the International Space Station (ISS)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2159 f10908: answer "Postal covers (insurance covers)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2159 f10910: one/two-character answer "0" — make the answer a quotable phrase (e.g. „0“ or "the letter 0") so its span lands on the right place.
+- a2159 f10913: one/two-character answer "N1" — make the answer a quotable phrase (e.g. „N1“ or "the letter N1") so its span lands on the right place.
+- a1414 f10933: answer "Caves (cave research)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2164 f10950: answer "about 12,700 (12,713.5 km)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2170 f10991: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a2171 f10996: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a2172 f11003: answer "Unruly (frizzy) hair" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0494 f02466: answer "Baiser (meringue)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0791 f03951: answer "Chili pepper (Capsicum annuum)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0791 f03952: answer "Crocus (Crocus sativus)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0791 f03953: answer "Cinnamon tree (Cinnamomum verum)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0791 f03954: answer "Orchid (Vanilla planifolia)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0791 f03955: answer "Pepper vine (Piper nigrum)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1271 f11102: answer "maize (corn)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1478 f11063: answer "Plum butter (plum jam)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1775 f11021: answer "Hops, malt, yeast and water (any three)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2182 f11066: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a2183 f11074: answer "Tanzbär ("Dancing Bear")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2184 f11085: answer "Milch and Kakao (milk and cocoa)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2186 f11092: one/two-character answer "11" — make the answer a quotable phrase (e.g. „11“ or "the letter 11") so its span lands on the right place.
+- a2187 f11105: answer "Nappieren (napping, coating with sauce)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2188 f11112: answer "Pasta (small pasta rings)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2191 f11130: answer "Zuzeln (sucking the filling out of the skin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0354 f11150: answer "Oktoberfest (Blumenau)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2197 f11164: answer "Father Christmas (Weihnachtsmann)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2202 f11197: answer "Hexenstich (herringbone stitch)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2206 f11219: answer "Dyrehavsbakken (Bakken)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0016 f11230: answer "Wallace (of Wallace & Gromit)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2208 f11236: answer "Members of his own family (his parents and sisters)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0124 f00616: one/two-character answer "8" — make the answer a quotable phrase (e.g. „8“ or "the letter 8") so its span lands on the right place.
+- a0124 f00617: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a0124 f00618: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a0124 f00619: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a0124 f00620: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a0352 f11345: answer "Wir können auch anders … (No More Mr. Nice Guy)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0880 f11466: answer "Hannah Chaplin, Charlie's mother (her own grandmother)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1192 f05960: one/two-character answer "M" — make the answer a quotable phrase (e.g. „M“ or "the letter M") so its span lands on the right place.
+- a1552 f11279: one/two-character answer "0" — make the answer a quotable phrase (e.g. „0“ or "the letter 0") so its span lands on the right place.
+- a1708 f08539: answer "(I've Had) The Time of My Life" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2227 f11371: one/two-character answer "1" — make the answer a quotable phrase (e.g. „1“ or "the letter 1") so its span lands on the right place.
+- a2247 f11513: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a2247 f11515: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a2248 f11520: one/two-character answer "48" — make the answer a quotable phrase (e.g. „48“ or "the letter 48") so its span lands on the right place.
+- a0052 f00258: one/two-character answer "ER" — make the answer a quotable phrase (e.g. „ER“ or "the letter ER") so its span lands on the right place.
+- a1012 f05056: answer "PKS (later Sat.1)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1120 f05596: answer "Sender Freies Berlin (SFB) and Ostdeutscher Rundfunk Brandenburg (ORB)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1120 f05597: answer "Süddeutscher Rundfunk (SDR) and Südwestfunk (SWF)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1120 f05599: answer "Sky Television and British Satellite Broadcasting (BSB)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2249 f11525: answer "RIAS (Radio in the American Sector)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2254 f11554: answer "“We are Pope!” („Wir sind Papst!“)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2256 f11564: answer "Closed Oyster (Verschlossene Auster)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2260 f11590: answer "Rat ("Pizza Rat")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2262 f11600: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a0256 f01278: one/two-character answer "ER" — make the answer a quotable phrase (e.g. „ER“ or "the letter ER") so its span lands on the right place.
+- a0268 f11735: answer "Unser Sandmännchen (The Little Sandman)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0940 f11738: answer "Schätzen Sie mal! (Take a Guess!)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1348 f11615: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a1480 f11741: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a1528 f07636: one/two-character answer "24" — make the answer a quotable phrase (e.g. „24“ or "the letter 24") so its span lands on the right place.
+- a1660 f08300: answer "How to Sell Drugs Online (Fast)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1960 f11707: answer "Komaglotzen (binge-watching)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2265 f11626: one/two-character answer "14" — make the answer a quotable phrase (e.g. „14“ or "the letter 14") so its span lands on the right place.
+- a2265 f11627: answer "Large Hadron Collider (LHC) at CERN" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2276 f11717: answer "Der Tatortreiniger (The Crime Scene Cleaner)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2278 f11728: answer "German Television Award (Deutscher Fernsehpreis)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2278 f11729: answer "Türkisch für Anfänger (Turkish for Beginners)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2279 f11743: answer "Raabigramme ("Raabigrams")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2279 f11744: answer "Each other (Joko vs. Klaas)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2281 f11756: answer "West Germany (Federal Republic of Germany)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2282 f11763: answer "Beatrix (Queen of the Netherlands)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2288 f11811: answer "Rope makers (Reepschläger)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2288 f11812: answer "Dom (Hamburger Dom)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2289 f11815: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a2289 f11816: answer "Nothing (free of charge)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2290 f11822: answer "Storkow (Mark)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2290 f11824: answer "Bad (spa)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2292 f11837: answer "3.41 km² (843 acres)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2292 f11840: answer "6 p.m. (on 31 December)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0658 f03286: one/two-character answer "9" — make the answer a quotable phrase (e.g. „9“ or "the letter 9") so its span lands on the right place.
+- a0658 f03287: one/two-character answer "8" — make the answer a quotable phrase (e.g. „8“ or "the letter 8") so its span lands on the right place.
+- a0658 f03288: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a0658 f03289: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a0658 f03290: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a0658 f11898: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a1222 f11932: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a1366 f11931: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a1618 f11934: one/two-character answer "1" — make the answer a quotable phrase (e.g. „1“ or "the letter 1") so its span lands on the right place.
+- a2305 f11919: answer "2 (Bolivia and Paraguay)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2308 f11943: one/two-character answer "8" — make the answer a quotable phrase (e.g. „8“ or "the letter 8") so its span lands on the right place.
+- a0454 f12006: one/two-character answer "12" — make the answer a quotable phrase (e.g. „12“ or "the letter 12") so its span lands on the right place.
+- a2318 f12019: answer "Sisserou parrot (imperial amazon)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2320 f12030: answer "a rearing silver horse (the Westphalian horse)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2325 f12054: answer "Arabic, Chinese, English, French, Russian, Spanish (any four)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0094 f12082: answer "Harz (resin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0946 f12072: one/two-character answer "1" — make the answer a quotable phrase (e.g. „1“ or "the letter 1") so its span lands on the right place.
+- a1810 f09046: one/two-character answer "K2" — make the answer a quotable phrase (e.g. „K2“ or "the letter K2") so its span lands on the right place.
+- a2110 f12081: answer "Yellow River (Huang He)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0198 f00986: answer "Zapatistas (EZLN)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0198 f00989: answer "Sandinistas (FSLN)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2336 f12154: one/two-character answer "12" — make the answer a quotable phrase (e.g. „12“ or "the letter 12") so its span lands on the right place.
+- a2338 f12164: answer "Lady Diana Spencer (Princess Diana)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2345 f12217: one/two-character answer "Bo" — make the answer a quotable phrase (e.g. „Bo“ or "the letter Bo") so its span lands on the right place.
+- a2352 f12247: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a0210 f12262: answer "Parliament (the House of Lords)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0296 f12263: answer "Old Fritz (der Alte Fritz)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1650 f12305: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a1722 f12306: answer "Donar (Thor)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2363 f12321: answer "Sucking bags (Lutschbeutel)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0654 f03268: one/two-character answer "GI" — make the answer a quotable phrase (e.g. „GI“ or "the letter GI") so its span lands on the right place.
+- a0714 f12520: answer "Physician (doctor)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2367 f12345: one/two-character answer "59" — make the answer a quotable phrase (e.g. „59“ or "the letter 59") so its span lands on the right place.
+- a2368 f12354: answer "Stadion der Weltjugend (Stadium of World Youth)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2374 f12393: one/two-character answer "70" — make the answer a quotable phrase (e.g. „70“ or "the letter 70") so its span lands on the right place.
+- a2386 f12465: answer "Black Chamber (Cipher Bureau)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2387 f12470: answer "London Underground (the Tube)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2393 f12504: one/two-character answer "42" — make the answer a quotable phrase (e.g. „42“ or "the letter 42") so its span lands on the right place.
+- a2404 f12588: answer "A snake (python)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2409 f12621: answer "Numalfix (French: Changélédix)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2411 f12632: answer "Roter Blitz ("Red Lightning")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2421 f12696: answer "San Fermín festival (Pamplona)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2423 f12706: answer "Natty Bumppo (“Hawkeye”)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2424 f12712: answer "Alexandre Dumas (père)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0482 f02406: answer "durch die Lappen gehen (to slip through one's fingers)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0482 f02407: answer "auf den Busch klopfen (to sound someone out)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0482 f02408: answer "ins Garn gehen (to fall into the trap)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0482 f02409: answer "jemandem auf die Schliche kommen (to get wise to someone's tricks)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0482 f02410: answer "auf der Strecke bleiben (to fall by the wayside)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0782 f12720: answer "Verhältniswort (relation word)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0914 f12717: answer "A tirade (scathing attack speech)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1154 f05767: one/two-character answer "24" — make the answer a quotable phrase (e.g. „24“ or "the letter 24") so its span lands on the right place.
+- a1154 f05769: one/two-character answer "Pi" — make the answer a quotable phrase (e.g. „Pi“ or "the letter Pi") so its span lands on the right place.
+- a1370 f12718: answer "Genesis (the first book of Moses)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1562 f12726: answer "Pale yellow to light greyish brown (dun)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1982 f12725: answer "Mangel (a mangle)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2425 f12731: answer "Muskel (muscle)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2426 f12736: answer "bernen (“to burn”)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2428 f12746: one/two-character answer "E" — make the answer a quotable phrase (e.g. „E“ or "the letter E") so its span lands on the right place.
+- a2428 f12747: answer "Knee (German “Knie”)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2428 f12748: one/two-character answer "Q" — make the answer a quotable phrase (e.g. „Q“ or "the letter Q") so its span lands on the right place.
+- a2428 f12749: one/two-character answer "N" — make the answer a quotable phrase (e.g. „N“ or "the letter N") so its span lands on the right place.
+- a2428 f12750: one/two-character answer "ß" — make the answer a quotable phrase (e.g. „ß“ or "the letter ß") so its span lands on the right place.
+- a2429 f12751: answer "Flugabwehrkanone (anti-aircraft gun)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0002 f00006: one/two-character answer "42" — make the answer a quotable phrase (e.g. „42“ or "the letter 42") so its span lands on the right place.
+- a0086 f12766: answer "Wann wird es endlich wieder so, wie es nie war ("When Will It Finally Be the Way It Never Was")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0086 f12767: answer "Raumpatrouille ("Space Patrol")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0566 f02827: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a0566 f02828: one/two-character answer "13" — make the answer a quotable phrase (e.g. „13“ or "the letter 13") so its span lands on the right place.
+- a0566 f02829: one/two-character answer "80" — make the answer a quotable phrase (e.g. „80“ or "the letter 80") so its span lands on the right place.
+- a1958 f09790: one/two-character answer "We" — make the answer a quotable phrase (e.g. „We“ or "the letter We") so its span lands on the right place.
+- a1958 f12846: one/two-character answer "13" — make the answer a quotable phrase (e.g. „13“ or "the letter 13") so its span lands on the right place.
+- a2440 f12830: answer "As artistic director (theatre director)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2678 f14558: answer "Faust, Part One (Goethe)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2461 f12961: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a0649 f12986: answer "War and Peace (Prokofiev)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2468 f13006: answer "Der Wildschütz (The Poacher)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0409 f13012: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a0193 f00962: answer "(I Can't Get No) Satisfaction" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0337 f13135: one/two-character answer "U2" — make the answer a quotable phrase (e.g. „U2“ or "the letter U2") so its span lands on the right place.
+- a1165 f05823: answer "(Everything I Do) I Do It for You" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1165 f05824: answer "(I've Had) The Time of My Life" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1309 f13139: answer "Naomi Campbell, Linda Evangelista, Christy Turlington, Tatjana Patitz and Cindy Crawford (any three)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1705 f13032: answer "The Blue Danube (Johann Strauss II)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1705 f13033: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a2471 f13043: answer "DKP (German Communist Party)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2474 f13064: answer "Ein bißchen Frieden (A Little Peace)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2481 f13113: answer "Apostrophe (')" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2482 f13116: answer "In space (on the International Space Station)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1501 f07505: answer "Kom(m)ödchen" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1753 f08763: answer "Elisabeth (Sisi)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2490 f13197: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a2492 f13208: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a1115 f13253: answer "Bony plates (scutes)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1595 f13219: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a2497 f13243: one/two-character answer "70" — make the answer a quotable phrase (e.g. „70“ or "the letter 70") so its span lands on the right place.
+- a2497 f13245: one/two-character answer "17" — make the answer a quotable phrase (e.g. „17“ or "the letter 17") so its span lands on the right place.
+- a2498 f13255: answer "a bird (hummingbird)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2503 f13281: answer "Microscopic adhesive hairs (setae / spatulae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2505 f13294: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a0251 f01251: answer "Opossums (Didelphis)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0671 f03351: answer "dry-nosed primates (Haplorhini)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0671 f03352: answer "wet-nosed primates (Strepsirrhini)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0671 f03353: answer "great apes (Hominidae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0851 f13303: answer "Sea cows (Sirenia)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1055 f13306: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a1055 f13308: answer "Pigs (Old World pigs)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1379 f14605: answer "Mönch ("monk")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1451 f07251: answer "Caudata (salamanders and newts)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1451 f07252: answer "Anura (frogs and toads)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1451 f07253: answer "Chiroptera (bats)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1451 f07254: answer "Monotremata (monotremes)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1451 f07255: answer "Proboscidea (elephants)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1811 f09052: one/two-character answer "Ox" — make the answer a quotable phrase (e.g. „Ox“ or "the letter Ox") so its span lands on the right place.
+- a2507 f13318: answer "Schools (pods)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2508 f13327: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a0419 f02091: answer "Grasses (Poaceae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0419 f02092: answer "Legumes (Fabaceae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0419 f02093: answer "Nightshades (Solanaceae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0419 f02094: answer "Crucifers (Brassicaceae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0419 f02095: answer "Rose family (Rosaceae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0419 f13362: answer "Phasin (phytohaemagglutinin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0527 f13359: answer "Pepo (a hard-rinded berry)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0527 f13360: answer "Leaf stalk (petiole)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1403 f07011: answer "Larch (Larix)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1403 f07012: answer "Fir (Abies)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1403 f07013: answer "Spruce (Picea)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1403 f07014: answer "Pine (Pinus)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1403 f07015: answer "Cedar (Cedrus)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2003 f10011: answer "Firs (Abies)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2003 f10012: answer "Pines (Pinus)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2003 f10013: answer "Spruces (Picea)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2003 f10014: answer "Oaks (Quercus)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2003 f10015: answer "Maples (Acer)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2514 f13366: answer "Biting midges (Ceratopogonidae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2515 f13371: answer "Fruit (fruit varieties and fruit growing)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2516 f13383: answer "Dark honey fungus (Armillaria ostoyae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2516 f13384: answer "a (deadly poisonous) mushroom" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0357 f13432: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a0585 f13408: answer "Cerebrum, diencephalon, cerebellum, brainstem (any three)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0873 f04361: answer "On the foot (the toes)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0873 f04362: answer "On the knee (the kneecap)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0873 f04363: answer "At the shoulder (the shoulder blade)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0873 f04364: answer "In the thigh (the thighbone)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0873 f04365: answer "In the forearm (the ulna)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1077 f05381: answer "platelets (thrombocytes)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1077 f05382: answer "red blood cells (erythrocytes)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1077 f05383: answer "white blood cells (leukocytes)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1125 f05621: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a1125 f05622: one/two-character answer "12" — make the answer a quotable phrase (e.g. „12“ or "the letter 12") so its span lands on the right place.
+- a1125 f05623: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a1125 f05625: one/two-character answer "27" — make the answer a quotable phrase (e.g. „27“ or "the letter 27") so its span lands on the right place.
+- a1293 f13416: answer "Shinbone (tibia)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1593 f13433: answer "The B vitamins (vitamin B9)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1545 f13474: answer "Kobold (goblin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1605 f08021: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a1605 f08022: one/two-character answer "1" — make the answer a quotable phrase (e.g. „1“ or "the letter 1") so its span lands on the right place.
+- a1605 f08023: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a1605 f08024: one/two-character answer "8" — make the answer a quotable phrase (e.g. „8“ or "the letter 8") so its span lands on the right place.
+- a1605 f08025: one/two-character answer "10" — make the answer a quotable phrase (e.g. „10“ or "the letter 10") so its span lands on the right place.
+- a2528 f13479: answer "Oil (fat)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0876 f13496: answer "A unit of weight (mass)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1521 f13498: one/two-character answer "8" — make the answer a quotable phrase (e.g. „8“ or "the letter 8") so its span lands on the right place.
+- a2025 f13499: answer "Circle (overlapping circles)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2532 f13508: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a2532 f13511: one/two-character answer "12" — make the answer a quotable phrase (e.g. „12“ or "the letter 12") so its span lands on the right place.
+- a0717 f03581: one/two-character answer "30" — make the answer a quotable phrase (e.g. „30“ or "the letter 30") so its span lands on the right place.
+- a0717 f03582: one/two-character answer "25" — make the answer a quotable phrase (e.g. „25“ or "the letter 25") so its span lands on the right place.
+- a0717 f03584: one/two-character answer "35" — make the answer a quotable phrase (e.g. „35“ or "the letter 35") so its span lands on the right place.
+- a0717 f03585: one/two-character answer "40" — make the answer a quotable phrase (e.g. „40“ or "the letter 40") so its span lands on the right place.
+- a0969 f13525: answer "Carriers (vectors)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1029 f13529: answer "nose job (nasal correction)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1281 f06401: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a1281 f06404: one/two-character answer "38" — make the answer a quotable phrase (e.g. „38“ or "the letter 38") so its span lands on the right place.
+- a1401 f13523: answer "Moulds (Penicillium)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1569 f07841: answer "acetylsalicylic acid (aspirin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1833 f09161: answer "Electroencephalography (EEG)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1833 f09162: answer "Electrocardiography (ECG)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1833 f09163: answer "Electromyography (EMG)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1833 f09164: answer "Magnetic resonance imaging (MRI)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2538 f13552: answer "Thorium X (radium-224)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2061 f10301: one/two-character answer "32" — make the answer a quotable phrase (e.g. „32“ or "the letter 32") so its span lands on the right place.
+- a0360 f01798: one/two-character answer "Z3" — make the answer a quotable phrase (e.g. „Z3“ or "the letter Z3") so its span lands on the right place.
+- a0967 f13579: answer "Adolf (“Adi”) and Rudolf" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2543 f13598: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a1626 f08126: one/two-character answer "15" — make the answer a quotable phrase (e.g. „15“ or "the letter 15") so its span lands on the right place.
+- a1626 f08127: one/two-character answer "14" — make the answer a quotable phrase (e.g. „14“ or "the letter 14") so its span lands on the right place.
+- a1626 f08128: one/two-character answer "21" — make the answer a quotable phrase (e.g. „21“ or "the letter 21") so its span lands on the right place.
+- a2552 f13648: answer "The Road Traffic Regulations (StVO)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2554 f13659: answer "Höherer Dienst (higher service)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2554 f13660: answer "Kehrbezirk (sweeping district)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2558 f13682: one/two-character answer "18" — make the answer a quotable phrase (e.g. „18“ or "the letter 18") so its span lands on the right place.
+- a0634 f13697: answer "The British monarch (King Charles III)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0634 f13698: one/two-character answer "52" — make the answer a quotable phrase (e.g. „52“ or "the letter 52") so its span lands on the right place.
+- a1075 f13688: answer "Theodore Roosevelt, Woodrow Wilson, Jimmy Carter, Barack Obama (any two)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1123 f05614: answer "the federal eagle (Bundesadler)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1975 f13686: answer "0 (none)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2559 f13701: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a2559 f13702: one/two-character answer "24" — make the answer a quotable phrase (e.g. „24“ or "the letter 24") so its span lands on the right place.
+- a2563 f13726: answer "Head wobble (Indian head bobble)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2563 f13727: answer "Glückauf ("Glück auf!")" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2566 f13743: answer "Catherine, Princess of Wales (Kate Middleton)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2567 f13748: answer "Myers–Briggs Type Indicator (MBTI)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0209 f13826: one/two-character answer "16" — make the answer a quotable phrase (e.g. „16“ or "the letter 16") so its span lands on the right place.
+- a0389 f13808: answer "Hockey (field hockey)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0929 f13828: one/two-character answer "41" — make the answer a quotable phrase (e.g. „41“ or "the letter 41") so its span lands on the right place.
+- a1085 f13800: answer "Air resistance (drag)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1085 f13802: answer "The turf (grass)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1385 f13831: one/two-character answer "14" — make the answer a quotable phrase (e.g. „14“ or "the letter 14") so its span lands on the right place.
+- a1673 f08361: one/two-character answer "14" — make the answer a quotable phrase (e.g. „14“ or "the letter 14") so its span lands on the right place.
+- a1673 f08362: one/two-character answer "5" — make the answer a quotable phrase (e.g. „5“ or "the letter 5") so its span lands on the right place.
+- a1673 f08363: one/two-character answer "6" — make the answer a quotable phrase (e.g. „6“ or "the letter 6") so its span lands on the right place.
+- a1673 f08364: one/two-character answer "15" — make the answer a quotable phrase (e.g. „15“ or "the letter 15") so its span lands on the right place.
+- a1673 f08365: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a2569 f13766: one/two-character answer "17" — make the answer a quotable phrase (e.g. „17“ or "the letter 17") so its span lands on the right place.
+- a2571 f13776: one/two-character answer "32" — make the answer a quotable phrase (e.g. „32“ or "the letter 32") so its span lands on the right place.
+- a2571 f13777: one/two-character answer "4" — make the answer a quotable phrase (e.g. „4“ or "the letter 4") so its span lands on the right place.
+- a2574 f13795: answer "Cow (cattle)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0593 f13883: answer "Swiss bolt (Riegel / verrou)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0593 f13884: answer "Football (soccer)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1589 f07941: answer "Borussia Dortmund and Borussia Mönchengladbach (5 titles each)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1781 f13853: one/two-character answer "8" — make the answer a quotable phrase (e.g. „8“ or "the letter 8") so its span lands on the right place.
+- a2586 f13907: answer "Fohlenelf (the Foals)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2587 f13910: answer "9.15 metres (10 yards)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2587 f14706: answer "Grasses (Poaceae)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2588 f13916: answer "Espanyol (RCD Espanyol, Barcelona)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2589 f13923: one/two-character answer "55" — make the answer a quotable phrase (e.g. „55“ or "the letter 55") so its span lands on the right place.
+- a2590 f13926: answer "Aus der Tiefe des Raumes (From the Depths of Space)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0101 f13938: one/two-character answer "37" — make the answer a quotable phrase (e.g. „37“ or "the letter 37") so its span lands on the right place.
+- a0113 f13943: one/two-character answer "20" — make the answer a quotable phrase (e.g. „20“ or "the letter 20") so its span lands on the right place.
+- a0257 f14670: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a0893 f04461: one/two-character answer "81" — make the answer a quotable phrase (e.g. „81“ or "the letter 81") so its span lands on the right place.
+- a0893 f04462: one/two-character answer "64" — make the answer a quotable phrase (e.g. „64“ or "the letter 64") so its span lands on the right place.
+- a0893 f04463: one/two-character answer "40" — make the answer a quotable phrase (e.g. „40“ or "the letter 40") so its span lands on the right place.
+- a1109 f05543: one/two-character answer "Go" — make the answer a quotable phrase (e.g. „Go“ or "the letter Go") so its span lands on the right place.
+- a1541 f07701: one/two-character answer "18" — make the answer a quotable phrase (e.g. „18“ or "the letter 18") so its span lands on the right place.
+- a1541 f07702: one/two-character answer "10" — make the answer a quotable phrase (e.g. „10“ or "the letter 10") so its span lands on the right place.
+- a1541 f07703: one/two-character answer "9" — make the answer a quotable phrase (e.g. „9“ or "the letter 9") so its span lands on the right place.
+- a1541 f07704: one/two-character answer "16" — make the answer a quotable phrase (e.g. „16“ or "the letter 16") so its span lands on the right place.
+- a1541 f07705: one/two-character answer "20" — make the answer a quotable phrase (e.g. „20“ or "the letter 20") so its span lands on the right place.
+- a2592 f13951: answer "Bridge (contract bridge)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2593 f13956: answer "Royal flush, straight flush, four of a kind, full house, flush (also straight, three of a kind, two pair, one pair, high card)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1901 f13980: one/two-character answer "7" — make the answer a quotable phrase (e.g. „7“ or "the letter 7") so its span lands on the right place.
+- a2598 f13996: answer "Lanterne rouge (red lantern)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2598 f13997: one/two-character answer "25" — make the answer a quotable phrase (e.g. „25“ or "the letter 25") so its span lands on the right place.
+- a2600 f14006: answer "Gybe (jibe)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2605 f14040: answer "Kölner Haie (Cologne Sharks)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0953 f14088: one/two-character answer "3" — make the answer a quotable phrase (e.g. „3“ or "the letter 3") so its span lands on the right place.
+- a1889 f09441: answer "International Olympic Committee (IOC)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1889 f09445: answer "German Football Association (DFB)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2614 f14105: one/two-character answer "2" — make the answer a quotable phrase (e.g. „2“ or "the letter 2") so its span lands on the right place.
+- a2620 f14149: answer "Endurance running (“ausdauernd laufen”)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0060 f00296: answer "With light (laser)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0156 f00777: one/two-character answer "C#" — make the answer a quotable phrase (e.g. „C#“ or "the letter C#") so its span lands on the right place.
+- a0216 f01076: answer "E (EDGE), 3G, H+, LTE and 5G" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0384 f14696: answer "NSA (National Security Agency)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0504 f14192: answer "Weblog (blog)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0552 f02756: answer "Q (AltGr + Q)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0552 f02757: answer "E (AltGr + E)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0552 f02758: answer "ß (AltGr + ß)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0552 f02759: answer "< (AltGr + <)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0552 f02760: answer "M (AltGr + M)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0552 f14160: one/two-character answer "N" — make the answer a quotable phrase (e.g. „N“ or "the letter N") so its span lands on the right place.
+- a1020 f14188: answer "WeChat (Weixin)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1128 f05636: answer "Fraunhofer Institute for Integrated Circuits (IIS)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1128 f05640: answer "University of Karlsruhe (TH)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1236 f06176: one/two-character answer "Go" — make the answer a quotable phrase (e.g. „Go“ or "the letter Go") so its span lands on the right place.
+- a1896 f14161: answer "Compact Disc (CD)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2088 f14157: answer "MS-DOS (sold as PC DOS)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2088 f14158: one/two-character answer "30" — make the answer a quotable phrase (e.g. „30“ or "the letter 30") so its span lands on the right place.
+- a0792 f03959: answer "Drone (male honeybee)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1848 f09236: answer "Größter anzunehmender Unfall (maximum credible accident)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1848 f09237: answer "Atomkraftwerk (nuclear power plant)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a1848 f09240: answer "Antiblockiersystem (anti-lock braking system)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2629 f14226: answer "About 800 grams (794 g)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2631 f14237: answer "A three-barrelled hunting rifle (drilling)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2632 f14242: one/two-character answer "45" — make the answer a quotable phrase (e.g. „45“ or "the letter 45") so its span lands on the right place.
+- a2636 f14265: answer "Sticky note (Post-it Note)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2636 f14268: one/two-character answer "3M" — make the answer a quotable phrase (e.g. „3M“ or "the letter 3M") so its span lands on the right place.
+- a2696 f14701: one/two-character answer "21" — make the answer a quotable phrase (e.g. „21“ or "the letter 21") so its span lands on the right place.
+- a2696 f14703: one/two-character answer "42" — make the answer a quotable phrase (e.g. „42“ or "the letter 42") so its span lands on the right place.
+- a0007 f14368: one/two-character answer "18" — make the answer a quotable phrase (e.g. „18“ or "the letter 18") so its span lands on the right place.
+- a0048 f14314: answer "about 40 km/h (22 knots)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a0648 f03236: answer "Laufmaschine (draisine)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2648 f14336: answer "Ferro di prua (ferro)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2652 f14358: answer "The M62 diesel locomotive (DR class 120)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2653 f14363: answer "the drone (multicopter)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2655 f14382: answer "Habicht (goshawk)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2655 f14384: answer "Schwalbe (swallow)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2658 f14398: answer "Erlking (Erlkönig)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2659 f14402: answer "Elefant (Elephant)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2659 f14405: answer "Fuchs (fox)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2659 f14406: answer "Wiesel (weasel)" carries a parenthetical — move grading hints to notes, keep a clean answer.
+- a2660 f14407: one/two-character answer "0" — make the answer a quotable phrase (e.g. „0“ or "the letter 0") so its span lands on the right place.
+- a2661 f14413: one/two-character answer "H" — make the answer a quotable phrase (e.g. „H“ or "the letter H") so its span lands on the right place.
+- a2661 f14414: one/two-character answer "E" — make the answer a quotable phrase (e.g. „E“ or "the letter E") so its span lands on the right place.
+
+## Hand-collected issues
+- a2644: the Topsy wording ("inventor who executed an elephant") states a myth — Edison had nothing to do with Topsy's 1903 death. Rework the wording into the real fact (keep cardText), fix answer if needed.
+- a2541: the illuminated-ad wording says "beginning of the 20th century"; Berlin's Spittelmarkt sign was 1896 (end of the 19th). Fix the wording.
+- a1480, a1984: they disagree on when Peter Lustig stopped presenting Löwenzahn (2005 vs 2006) — verify and make both agree.
+- a0815, a2512: giant anteater insects per day "about 30,000" vs "up to 35,000" — verify and reconcile.
+- Verify with a fetched source (recent claims taken from Wikipedia; may be vandalism): Kevin Keegan's death 20 July 2026 (a0089); Georg Baselitz's death 30 April 2026 (a1395, a1443); Valentino Garavani's death 19 January 2026 (a1692, a2130, a2597); Günther Uecker's death June 2025 (a2055); Pope Francis's death 21 April 2025 (a0391, a1472, a1830, a2120, a2147, a2296); 2026 Ig Nobel ceremony in Zurich (a1021, a2540); Lüdemann's games corrected to 1,200 on 14 Sep 2026 (a2605); German heat record 41.8 °C at Drewitz 27 June 2026 and a 2026 study disputing Death Valley's 56.7 °C (a2168). Remove or soften anything you cannot confirm.
+- a1984: Peter Lustig presented Löwenzahn until end of 2005 (not 2006) — align with a1480 (batch 066 finding).
+- a0815: anteater daily ant intake should read 'around 35,000' (en.wiki), align with a2512.

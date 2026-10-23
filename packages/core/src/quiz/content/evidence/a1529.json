@@ -1,0 +1,701 @@
+{
+ "article": "a1529",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fencing",
+   "title": "Fencing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:39.065Z",
+   "snapshot": "72d21092cf53d26d23694e132ca4a3a73282b6d650e7a5f9669b933627e71081"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fencing_at_the_1924_Summer_Olympics",
+   "title": "Fencing at the 1924 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:38.867Z",
+   "snapshot": "34a52af71a8b0043fe587e34a2a6bd10c1a5515b565f45ab2ae977d150d0012a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/World_Fencing_Championships",
+   "title": "World Fencing Championships – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:40.002Z",
+   "snapshot": "65c1f8b520e53eef5f9555b647631d9e696200f15d00a12e8b41277576452e57"
+  },
+  "s4": {
+   "url": "https://static.fie.org/uploads/40/204126-Technical%20rules%20August%202026%20ang.pdf",
+   "title": "Technical Rules (August 2026), English version",
+   "publisher": "Fédération Internationale d’Escrime (FIE)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:10:57Z"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/en%20garde",
+   "title": "en garde – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:24.359Z",
+   "snapshot": "bd15c95e34a149ab14513dd75e5a0fe5addaba2199850b887a640590c4b34398"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Glossary_of_fencing",
+   "title": "Glossary of fencing – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:26.618Z",
+   "snapshot": "22d520b4de2a18275d7b8953591ca0315cfe774dad7852f17c0db4a722f3765d"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/touche",
+   "title": "touché – Dictionary.com (Collins English Dictionary)",
+   "publisher": "Dictionary.com / HarperCollins",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:24.500Z",
+   "snapshot": "3325647cb602649f586755cc9e71b289ffbd8d4463e5a61fb8c32cf89bee8a8a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "En garde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prêts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Allez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Halt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Touché",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:39.561Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "En garde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“En garde”, “Ангард”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:39.561Z",
+   "target": "f07642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prêts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Prêts”, “Прэ”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:39.561Z",
+   "target": "f07643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Allez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Allez”, “Алле”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:39.561Z",
+   "target": "f07644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Touches are scored only with the tip; hits with the side of the blade do not register on the electronic scoring apparatus (and do not halt the action).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.561Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halt” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:39.561Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Touché",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Touché”, “Туше”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:10:57Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Competitors come on guard when the Referee gives the order ‘On guard!’",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "English text of t.22: \"On guard!\" renders the French command \"En garde!\""
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:10:58Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kommando, mit dem die Fechter aufgefordert werden, Fechtstellung einzunehmen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:11:00Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Full commencing phrase is En garde! Prêts? Allez!",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:11:01Z",
+   "target": "f07642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Referee asks, ‘Are you ready?’",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "English text of t.22: \"Are you ready?\" renders the French \"Prêts?\" / \"Êtes-vous prêts?\""
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:11:02Z",
+   "target": "f07642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Full commencing phrase is En garde! Prêts? Allez!",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:11:03Z",
+   "target": "f07643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The start of the bout is signalled by the word ‘Play!’.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "English text of t.23: \"Play!\" renders the French \"Allez!\""
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:11:05Z",
+   "target": "f07643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Command used to commence action between fencers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:11:06Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "an acknowledgment that a scoring hit has been made in a fencing competition",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:11:07Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is used to acknowledge a hit, called out by the fencer who is hit.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:11:08Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Foil was automated in 1956, sabre in 1988.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "body detail: electric scoring dates (épée 1933)"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kommando, mit dem die Fechter aufgefordert werden, Fechtstellung einzunehmen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Full commencing phrase is En garde! Prêts? Allez!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Full commencing phrase is En garde! Prêts? Allez!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Command used to commence action between fencers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "an acknowledgment that a scoring hit has been made in a fencing competition",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is used to acknowledge a hit, called out by the fencer who is hit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Foil was automated in 1956, sabre in 1988.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s1"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "en garde – Schreibung, Definition, Bedeutung, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “En garde” is on the snapshot of s5"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Land on the heel, and then bring the back foot up to en garde stance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “En garde” is on the snapshot of s6"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(For two female fencers, prêts becomes prêtes.)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Prêts” is on the snapshot of s6"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Allez!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Allez” is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The phrase pas de touche (French pronunciation: [pɑ də tuʃ]; English: 'no touch') indicates that the hit should not be counted.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Touché” is on the snapshot of s6"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:56:25.798Z",
+   "target": "f07645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "TOUCHÉ Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Touché” is on the snapshot of s7"
+  }
+ ]
+}

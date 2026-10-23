@@ -1,0 +1,249 @@
+{
+ "article": "a0763",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lego",
+   "title": "Lego – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:41.384Z",
+   "snapshot": "998c58cc157c50e3cb9323d3da04e158e3445734507c6cc2656e2d2489b1c82d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Adidas",
+   "title": "Adidas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:16.800Z",
+   "snapshot": "4ea419a17de5b0b24e74ecdd7cfd91680e5e09c8d05ca26450a2a27abbbd889f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/History_of_Google",
+   "title": "History of Google – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:11.481Z",
+   "snapshot": "6941988533496806337ed11c4299fdabba61809a92cc1174e6e2f384bd06a758"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Volvo_Cars",
+   "title": "Volvo Cars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:42.427Z",
+   "snapshot": "0b16d7854b8b9f67e9715e2a51b30db6eb99b687899807e661f44c2b5a3985d8"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Volvo_Car_Corporation",
+   "title": "Volvo Car Corporation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:40.266Z",
+   "snapshot": "0c68589c862a19b06bc2f8976bf83424ca1295db053f2d3054c9a2e9b4e81a79"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Volvo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:43.371Z",
+   "snapshot": "67d7240ba4647eedb4dddd61ca82518cd4c66c7c7ee70c41febaf3c701bbea1a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lego",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03812",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adidas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Google",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Volvo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Volvo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-077"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:41.643Z",
+   "target": "f03811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lego ( , LEG-oh; Danish: [ˈle̝ːko]) is a brand of plastic construction toys manufactured by the Lego Group, a privately held company based in Billund, Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lego” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:41.643Z",
+   "target": "f03812",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adidas AG (German pronunciation: [ˈadiˌdas] ; styled as adidas since 1949) is a German multinational athletic apparel and footwear corporation headquartered in Herzogenaurach, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adidas” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:41.643Z",
+   "target": "f03814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Google was officially launched in 1998 by Larry Page and Sergey Brin to market Google Search, which has become the most used web-based search engine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Google” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:41.643Z",
+   "target": "f03815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Volvo Car AB (Swedish: [ˈvɔlːvʊ kɑːr oːˈbeː]), trading as Volvo Cars (Swedish: Volvo personvagnar, pronounced [ˈvɔlːvʊ pæˈʂuːnˌvɑŋːnar]; styled VOLVO in the company's logo), is a Swedish multinational manufacturer of luxury vehicles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volvo” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:41.643Z",
+   "target": "f03815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Volvo Car Corporation ist ein börsennotierter schwedischer Automobilhersteller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.643Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volvo” is on the snapshot of s5"
+  }
+ ]
+}

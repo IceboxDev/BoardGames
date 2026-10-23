@@ -1,0 +1,249 @@
+{
+ "article": "a0238",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alster",
+   "title": "Alster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:36.241Z",
+   "snapshot": "d0cbfe80c4211f8e47d968fd43b3684d886920075db42234709f66c8772bc2cf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Glienicke_Bridge",
+   "title": "Glienicke Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:37.176Z",
+   "snapshot": "907dbc22686acdc25f6b4a472bd534c70d7d2ffe7783d67e41597c8e4c7e2403"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Saale",
+   "title": "Saale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:39:35.317Z",
+   "snapshot": "2ebed1abd7c66a2c3991bfb09fc2e840558ff4cfb588476eafc31cc111e636a5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Moselle",
+   "title": "Moselle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:38.299Z",
+   "snapshot": "ebac18dd91c5f9542e7b45b065125d2aa98410530dce75483a3f0d0885e0dcff"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_Canal",
+   "title": "Ludwig Canal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:39.204Z",
+   "snapshot": "72b87178e07ac3a6d5662f6fc3256e14335a9ad1f463d0777f7af0dffd973613"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Elbe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:40.348Z",
+   "snapshot": "0736f51675efea91eaec35ea4064c78ed00b9be48a24bfa8b31b24a42292baa9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Havel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Saale",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moselle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Main",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:17.416Z",
+   "target": "f01186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Alster (German pronunciation: [ˈalstɐ] ) is a river in Northern Germany, a right tributary of the Elbe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.416Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alster” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:17.416Z",
+   "target": "f01187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Glienicke Bridge (German: Glienicker Brücke, ) is a bridge across the Havel River in Germany, connecting the Wannsee district of Berlin with the Brandenburg capital, Potsdam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.416Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Havel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:17.416Z",
+   "target": "f01188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Saale oder Sächsische Saale, früher auch Thüringische Saale oder (seltener) Vogtländische Saale, ist ein Fluss in Bayern, Thüringen und Sachsen-Anhalt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.416Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saale” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:17.416Z",
+   "target": "f01189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Moselle ( moh-ZEL, French: [mɔzɛl] ; German: Mosel [ˈmoːzl̩] ; Luxembourgish: Musel [ˈmuzəl] ) is a river that rises in the Vosges mountains and flows through north-eastern France and Luxembourg to western Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.416Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moselle” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:17.416Z",
+   "target": "f01190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Ludwig Canal (German: Ludwig-Donau-Main-Kanal or Ludwigskanal), is an abandoned canal in Southern Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.416Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Main” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,679 @@
+{
+ "article": "a0096",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Blockchain",
+   "title": "Blockchain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:08.142Z",
+   "snapshot": "d6a63f284174c18c66d6f3852cbaf6dc0de3e15b4efe4ecb7d4abbe4af8553de"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bitcoin",
+   "title": "Bitcoin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:09.056Z",
+   "snapshot": "d51c3c651c5337085190159413401e106e3615cb84a1efa297e338d1aa9e22ad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
+   "title": "Satoshi Nakamoto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:09.940Z",
+   "snapshot": "dc1f0f6f867889c336d2d85083e6698069f67eaf00bf0cb34dcdc495a84a1749"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cryptocurrency_wallet",
+   "title": "Cryptocurrency wallet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:10.932Z",
+   "snapshot": "87d4aa857166ae3f8b47a82493a95b26f8c02ce6bd7b1df315e0fe6eb317b40c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ethereum",
+   "title": "Ethereum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:11.940Z",
+   "snapshot": "64885c50a386bdf9b0baa4fea6b4a46a5619f230d3660e237a1a197b69f0420b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bitcoin",
+   "title": "Bitcoin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:09.298Z",
+   "snapshot": "56b4530f1057979838d6072bfc477952602124597f54ff577ef01ea4bde4521a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bitcoin_Pizza_Day",
+   "title": "Bitcoin Pizza Day – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:13.049Z",
+   "snapshot": "a54bcce6c3b066e3e30c0f6022093c97890e2cd7f6e735741bc73a4d86ff4a8e"
+  },
+  "s8": {
+   "url": "https://www.guinnessworldrecords.com/world-records/696240-first-commercial-bitcoin-transaction",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:10.150Z",
+   "snapshot": "9a856bb8f5bb66cd5b17ddcea0e05a90c9e9c7d29a339db777f03ff47d479f63"
+  },
+  "s9": {
+   "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+   "title": "Bitcoin P2P e-cash paper (Cryptography mailing list, 31 Oct 2008)",
+   "publisher": "metzdowd.com Cryptography mailing list archive",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:46.087Z",
+   "snapshot": "b1a5d56b4c0481cd70c7d20dd2162f4a8d287e1a8adb812bb1b1d932c8e2d832"
+  },
+  "s10": {
+   "url": "https://bitcoin.org/en/bitcoin-paper",
+   "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+   "publisher": "bitcoin.org",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:46.051Z",
+   "snapshot": "ec486bc526fdb76bee0e5dfbfc5e3916c8b23327f34f33ce695388dfd4db11e8"
+  },
+  "s11": {
+   "url": "https://bitcoin.org/en/faq",
+   "title": "Frequently Asked Questions – Bitcoin",
+   "publisher": "bitcoin.org",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:47.049Z",
+   "snapshot": "4505a9b63f6380ea677a37bd1a6c88f1c68b9c6ca1a8294ce9dccc54952c04e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "blockchain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mining",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Satoshi Nakamoto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "wallet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "smart contracts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bitcoin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-007"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "two pizzas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; history entry seq 41"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "two pizzas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 40; history entry seq 41"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f00476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A blockchain is a distributed ledger with growing lists of records (blocks) that are securely linked together via cryptographic hashes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blockchain” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f00477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Consensus between nodes about the content of the blockchain is achieved using a computationally intensive process based on proof of work, called mining, which is performed by purpose-built computers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mining” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 2024, the film Money Electric: The Bitcoin Mystery devotes attention to Back as a Satoshi Nakamoto candidate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Satoshi Nakamoto” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f00479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A cryptocurrency wallet is a device, physical medium, program or an online service which stores the public and/or private keys for cryptocurrency transactions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wallet” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f00480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ERC-20) and non-fungible tokens (NFTs) with a variety of properties, and to create smart contracts that can receive, hold and send those assets in accordance with the contract's immutable code and a transaction's input data.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “smart contracts” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bitcoin ist die erste und am Weltmarkt stärkste Kryptowährung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bitcoin” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f28207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Laszlo Hanyecz, a programmer in Jacksonville, Florida, posted on the Bitcointalk forum offering 10,000 of his mined bitcoins in exchange for two pizzas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “two pizzas” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:49.544Z",
+   "target": "f28207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A fellow user took Hanyecz up on the offer, paying $25 to order the two pizzas and receiving 10,000 bitcoins (then worth around $41) in return.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:49.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “two pizzas” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:37:26Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "I've been working on a new electronic cash system that's fully peer-to-peer, with no trusted third party.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "The announcement of the white paper, posted under the name Satoshi Nakamoto (message header)."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:37:27Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Satoshi Nakamoto's original paper is still recommended reading for anyone studying how Bitcoin works.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:37:29Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nakamoto's true identity is unknown.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Time-sensitive premise (identity still unknown) — body now says 'as of 2026', reviewBy set."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:37:31Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:37:33Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The first Bitcoin specification and proof of concept was published in 2009 in a cryptography mailing list by Satoshi Nakamoto.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:37:36Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Bitcoin-Netzwerk entstand am 3. Januar 2009 mit der Schöpfung der ersten 50 Bitcoin",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "I've been working on a new electronic cash system that's fully peer-to-peer, with no trusted third party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Satoshi Nakamoto's original paper is still recommended reading for anyone studying how Bitcoin works.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nakamoto's true identity is unknown.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The first Bitcoin specification and proof of concept was published in 2009 in a cryptography mailing list by Satoshi Nakamoto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s11"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Bitcoin-Netzwerk entstand am 3. Januar 2009 mit der Schöpfung der ersten 50 Bitcoin",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Satoshi Nakamoto",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Satoshi Nakamoto” is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f00478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Satoshi Nakamoto's original paper is still recommended reading for anyone studying how Bitcoin works.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Satoshi Nakamoto” is on the snapshot of s10"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:52:08.811Z",
+   "target": "f14181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Keep Bitcoin.org independent and available worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:08.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bitcoin” is on the snapshot of s11"
+  }
+ ]
+}

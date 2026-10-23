@@ -1,0 +1,468 @@
+{
+ "article": "a0892",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Stephen_Hillenburg",
+   "title": "Stephen Hillenburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:11.377Z",
+   "snapshot": "87ffc228a30ea341956ce918ab28c34defb808017ac09e3d0a5f3ad9ae16ec41"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Simpsons",
+   "title": "The Simpsons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:12.498Z",
+   "snapshot": "10dcd805e9a2bc3ed821539843afe0a01b2cdc855c2f9cf515d618bd990e4657"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/South_Park",
+   "title": "South Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:13.280Z",
+   "snapshot": "8a099c5ac9ca15155b04c16b10fe6421f61b67bdbc85bc2758b7dd80ae7f78da"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Family_Guy",
+   "title": "Family Guy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:14.274Z",
+   "snapshot": "35a02bd9a6a346fc90d10d8e7bed1afabcdd63df6096f47f62cf80ca5246a8fb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Powerpuff_Girls",
+   "title": "The Powerpuff Girls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:15.267Z",
+   "snapshot": "6440c405708c304752b1c393c9da137f391122ca3aed34e4140373876955671d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Fourth_Grade_(South_Park)",
+   "title": "Fourth Grade (South Park)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:16.595Z",
+   "snapshot": "eb718d3bfba7e0b0f48afcd3cb35a3edb74ea068f198f3fbf529af501f34bd89"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/1%25_(South_Park)",
+   "title": "1% (South Park)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:17.304Z",
+   "snapshot": "7f9babbfb206a9516e67e12b2121ba9ee44a36acf18302a91404ca6b9eb0c43c"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Quahog_(Family_Guy)",
+   "title": "Quahog (Family Guy)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:18.259Z",
+   "snapshot": "0983347eb215579238c9f83e411c86e871831252377f1e84256953ba286db042"
+  },
+  "s9": {
+   "url": "https://www.popmatters.com/south-park-4-dvd-2496225106.html",
+   "title": "South Park: The Complete Fourth Season",
+   "publisher": "PopMatters",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:30.516Z",
+   "snapshot": "ac16b5141e8b9ee744f59228cdbe7b164615b847026034c4c9d5b2257becd1b6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "SpongeBob SquarePants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Simpsons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04458",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Park",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04459",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Family Guy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Powerpuff Girls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Season 4",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-235"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Marc Jacobs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; history entry seq 40; transcript tp-277"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Quahog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48; transcript tp-274"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f04456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He is best known for creating the animated television series SpongeBob SquarePants for Nickelodeon in 1999.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “SpongeBob SquarePants” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f04457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Simpsons is an American animated sitcom created by Matt Groening and developed by Groening, James L.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Simpsons” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f04458",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Park is an American  animated sitcom created by Trey Parker and Matt Stone for Comedy Central.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Park” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f04459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Family Guy is an American  animated sitcom created by Seth MacFarlane for the Fox Broadcasting Company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Family Guy” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f04460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Powerpuff Girls is an American animated superhero television series created by Craig McCracken for Cartoon Network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Powerpuff Girls” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f11231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Season 4",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Season 4”, “4. Staffel”, “4-й сезон”) on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f11232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The episode included Marc Jacobs as one of Cartman's dolls because Jacobs has a real life tattoo of Cartman's Clyde Frog and Rumpertumskin dolls.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marc Jacobs” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:00.901Z",
+   "target": "f11233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Quahog (  K(W)OH-hog) is a fictional city in the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quahog” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:26:50Z",
+   "target": "f11231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"Fourth Grade\" is the eleventh episode of the fourth season of the animated television series South Park",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:26:52Z",
+   "target": "f11231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the boys’ new fourth grade teacher, for instance, is named Miss Choksondik",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23",
+   "note": "Review of the Season 4 DVD set: the move to fourth grade (new teacher Ms. Choksondik) happens in Season 4."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:30.015Z",
+   "target": "f11231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"Fourth Grade\" is the eleventh episode of the fourth season of the animated television series South Park",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:30.015Z",
+   "target": "f11231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the boys’ new fourth grade teacher, for instance, is named Miss Choksondik",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  }
+ ]
+}

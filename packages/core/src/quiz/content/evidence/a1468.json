@@ -1,0 +1,202 @@
+{
+ "article": "a1468",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gute_Zeiten,_schlechte_Zeiten",
+   "title": "Gute Zeiten, schlechte Zeiten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:33:51.774Z",
+   "snapshot": "efa784a33a97c011ea0905b78f92e6b8d1215d73b63c509c1abb2ad0236ef7f8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Unter_uns",
+   "title": "Unter uns – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:19.866Z",
+   "snapshot": "a0e2e9fec15a7492f06cc2ad2cea69e4c11536e2d0c237cc2a05c972addad7f1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Verbotene_Liebe",
+   "title": "Verbotene Liebe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:21.027Z",
+   "snapshot": "d42dd77be549052a0f0421ff7a9a6276b788c30a18c06a5f2c1755ce84bfde15"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Alles_was_z%C3%A4hlt",
+   "title": "Alles was zählt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:21.864Z",
+   "snapshot": "e153a93da86372f1bc0acb1be0310642dc30c21e024db203359843d808005631"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Alexandra_Neldel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:22.762Z",
+   "snapshot": "6ac0ceb3f9bdb9600fbd1b3030b807ba5ec9c88d9f8053755b94abb1434d9bc1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gute Zeiten, schlechte Zeiten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unter uns",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Verbotene Liebe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alles was zählt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:30.445Z",
+   "target": "f07336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gute Zeiten, schlechte Zeiten (Akronym: GZSZ) ist eine von der UFA Serial Drama produzierte Seifenoper.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.445Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gute Zeiten, schlechte Zeiten” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:30.445Z",
+   "target": "f07338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unter uns (Akronym: UU) ist eine deutsche Seifenoper.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.445Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unter uns” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:30.445Z",
+   "target": "f07339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Verbotene Liebe ist eine deutsche Seifenoper, die vom 2.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.445Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verbotene Liebe” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:30.445Z",
+   "target": "f07340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alles was zählt (Akronym: AWZ) ist nach Gute Zeiten, schlechte Zeiten und Unter uns die dritte Seifenoper von RTL.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.445Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alles was zählt” is on the snapshot of s4"
+  }
+ ]
+}

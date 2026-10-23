@@ -1,0 +1,289 @@
+{
+ "article": "a0269",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pandemic_(board_game)",
+   "title": "Pandemic (board game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:10.861Z",
+   "snapshot": "8e04d0c6113148aacbc9cbce63539f4f85fec0e44d449451733bcbc6f9a2646d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Legacy_game",
+   "title": "Legacy game – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:01.431Z",
+   "snapshot": "0cf7d2f0226bd411cc0744af9cb26082540149e459f8d9ca4d2eb6e37a29b4af"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Forbidden_Island_(game)",
+   "title": "Forbidden Island (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:11.779Z",
+   "snapshot": "ffb52ebdd252ddde8d4d666e78b63449ed0d04230c9f361678c14eac1e08d6ef"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Flash_Point:_Fire_Rescue",
+   "title": "Flash Point: Fire Rescue – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:12.795Z",
+   "snapshot": "05dc801ef6d7060475878d41ef9a348a74d2c547ca26def9bad032ba76e0b294"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Legenden_von_Andor",
+   "title": "Die Legenden von Andor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:11.142Z",
+   "snapshot": "26d5a374ce1238322269e669db03ae670c6ce7c825e4c681385e9ad2e6a6b0e8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hanabi_(card_game)",
+   "title": "Hanabi (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:13.804Z",
+   "snapshot": "7c86147dbfd199f95e013d73caef5ecfec2d6193e320125f0f71743ac7ae0ff8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pandemic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pandemic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c023"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Forbidden Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flash Point: Fire Rescue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Legenden von Andor",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hanabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:22.089Z",
+   "target": "f01341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pandemic is a cooperative board game designed by Matt Leacock and first published by Z-Man Games in the United States in 2008.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandemic” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:22.089Z",
+   "target": "f01341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daviau followed up with an award-winning Pandemic variant, Pandemic Legacy: Season 1, which was released in 2015 to positive reviews and praised as a leap forward in modern board game design.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandemic” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:22.089Z",
+   "target": "f01342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Forbidden Island is a cooperative board game developed by Matt Leacock and published by Gamewright Games in 2010.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Forbidden Island” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:22.089Z",
+   "target": "f01343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flash Point: Fire Rescue is a thematic cooperative board game designed by Kevin Lanzing with the help of firefighters that was released in November 2011.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flash Point: Fire Rescue” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:22.089Z",
+   "target": "f01344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Legenden von Andor ist das erste Brettspiel von Michael Menzel, der auch die Illustrationen vornahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Legenden von Andor” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:22.089Z",
+   "target": "f01345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hanabi (from Japanese 花火, fireworks) is a cooperative card game created by French game designer Antoine Bauza and published in 2010.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanabi” is on the snapshot of s6"
+  }
+ ]
+}

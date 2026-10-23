@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-379",
+ "image": "IMG20261007174823.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Küstenland ist an drei Seiten fast komplett von Indien umschlossen?",
+   "de": "Welches Küstenland ist an drei Seiten fast komplett von Indien umschlossen?",
+   "en": "Which coastal country is almost completely enclosed by India on three sides?",
+   "reworked": false,
+   "answerDe": "Bangladesch",
+   "answerEn": "Bangladesh",
+   "timeline": {
+    "kind": "founding",
+    "start": "1971-03-26",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bangladesh declares independence from Pakistan",
+    "labelDe": "Bangladesch erklärt seine Unabhängigkeit von Pakistan"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bangladesch",
+    "title": "Bangladesch",
+    "lang": "de"
+   },
+   "notes": "Bangladesh borders the Bay of Bengal to the south and Myanmar to the south-east; otherwise it is enclosed by Indian states.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welchen Nachnamen hatten die vier Brüder und Filmindustriepioniere Sam, Harry, Albert und Jack?",
+   "de": "Welchen Nachnamen hatten die vier Brüder und Filmindustriepioniere Sam, Harry, Albert und Jack?",
+   "en": "What surname did the four brothers and film-industry pioneers Sam, Harry, Albert and Jack share?",
+   "reworked": false,
+   "answerDe": "Warner",
+   "answerEn": "Warner",
+   "timeline": {
+    "kind": "founding",
+    "start": "1923-04-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Harry, Albert, Sam and Jack Warner found Warner Brothers Pictures in Hollywood",
+    "labelDe": "Harry, Albert, Sam und Jack Warner gründen Warner Brothers Pictures in Hollywood"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Warner_Bros._Entertainment",
+    "title": "Warner Bros. Entertainment",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wann wurde die Hängematte erfunden: vor rund 100, 500 oder 1.000 Jahren?",
+   "de": "Auf welches indigene Volk der Karibik geht das Wort „hamáka“ zurück, von dem sich die Bezeichnung Hängematte ableitet?",
+   "en": "To which indigenous Caribbean people does the word “hamáka”, from which the German word Hängematte derives, go back?",
+   "reworked": true,
+   "answerDe": "die Taíno",
+   "answerEn": "the Taíno",
+   "timeline": {
+    "kind": "event",
+    "start": "1492",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Columbus records the Taíno sleeping nets as “hamaca”",
+    "labelDe": "Kolumbus verzeichnet die Schlafnetze der Taíno als „hamaca“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/H%C3%A4ngematte",
+    "title": "Hängematte",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked. The card's intended answer is presumably 'vor rund 1.000 Jahren', but no fetched page dates the invention; German Wikipedia only says hammocks were in use in Latin America before the Europeans arrived and that the word comes from the Taíno 'hamáka' (recorded by Columbus in 1492). The question was moved to that verifiable fact.",
+   "domain": "literature",
+   "sub": "language"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welche Krimiautorin veranstaltet einmal im Jahr in einem abgelegenen Dorf ein Literaturseminar: Liza Marklund, Minette Walters oder Donna Leon?",
+   "de": "In welchem kleinen Dorf bei Piteå in Nordschweden wurde die Krimiautorin Liza Marklund geboren?",
+   "en": "In which small village near Piteå in northern Sweden was the crime writer Liza Marklund born?",
+   "reworked": true,
+   "answerDe": "Pålmark",
+   "answerEn": "Pålmark",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1962-09-09",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Liza Marklund, Swedish journalist and crime writer, born in Pålmark near Piteå",
+    "labelDe": "Liza Marklund, schwedische Journalistin und Krimiautorin, geboren in Pålmark bei Piteå"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Liza_Marklund",
+    "title": "Liza Marklund",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked. No fetched page confirms which of the three authors runs an annual literature seminar in a remote village, so the question was moved to a verifiable fact about one of the named authors and a remote village (Marklund grew up in Pålmark). Treat as a replacement question.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welchen anderen Begriff verwenden Mediziner für die Rhinoplastik?",
+   "de": "Welchen anderen Begriff verwenden Mediziner für die Rhinoplastik?",
+   "en": "What other term do doctors use for rhinoplasty?",
+   "reworked": false,
+   "answerDe": "Nasenkorrektur",
+   "answerEn": "nose job (nasal correction)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-400",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Nose reconstruction with forehead skin (the 'Indian method') is practised in India from about 400 BC",
+    "labelDe": "Nasenrekonstruktion mit Stirnhaut („Indische Nasenplastik“) wird in Indien ab etwa 400 v. Chr. durchgeführt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rhinoplastik",
+    "title": "Rhinoplastik",
+    "lang": "de"
+   },
+   "notes": "German Wikipedia gives both 'Nasenplastik' and 'Nasenkorrektur'; either is accepted.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "Einen Golden Slam im Tennis zu erspielen ist alle sechs Jahre möglich. Richtig oder falsch?",
+   "de": "Alle wie viele Jahre ist es im Tennis möglich, einen Golden Slam – alle vier Grand-Slam-Turniere plus Olympiasieg in einem Jahr – zu erspielen?",
+   "en": "Every how many years is it possible in tennis to achieve a Golden Slam – all four Grand Slam tournaments plus Olympic gold in one year?",
+   "reworked": true,
+   "answerDe": "4",
+   "answerEn": "4",
+   "timeline": {
+    "kind": "event",
+    "start": "1988",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Steffi Graf achieves the only calendar-year Golden Slam in tennis",
+    "labelDe": "Steffi Graf gelingt der bislang einzige Golden Slam im Tennis innerhalb eines Kalenderjahres"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Golden_Slam",
+    "title": "Golden Slam",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the statement is false — a Golden Slam requires Olympic gold, and the Olympics are held every four years (Wikipedia lists the only earlier possible years as 1908, 1912, 1920 and 1924).",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

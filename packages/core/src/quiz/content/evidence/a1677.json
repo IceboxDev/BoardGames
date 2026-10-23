@@ -1,0 +1,289 @@
+{
+ "article": "a1677",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Foucault_pendulum",
+   "title": "Foucault pendulum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:27.362Z",
+   "snapshot": "d08b01945c0c16d44adb5f220ae636e243f9264dd4d9ac32982ada4e81a3fa58"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Brownian_motion",
+   "title": "Brownian motion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:28.509Z",
+   "snapshot": "5a7e3cbd28a4cf1663f8a553f6864c06674b26b56de59bd8de4ec401132db247"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Magdeburg_hemispheres",
+   "title": "Magdeburg hemispheres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:29.398Z",
+   "snapshot": "1eccc5a3d1284f938be81b8e09dc9fdda4e37598cd489aad34e9e4d637497caf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Double-slit_experiment",
+   "title": "Double-slit experiment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:30.391Z",
+   "snapshot": "7096ee3b9a7d27d1c2841b1cdd58b0ef04128c134ce37bfe2f80cd29853ea2c1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coriolis_force",
+   "title": "Coriolis force – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:31.496Z",
+   "snapshot": "a43cbabdb64b022d430d303a2e14528ac37105f88998e6420bb2593d288f7e17"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Corioliskraft",
+   "title": "Corioliskraft",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:30.244Z",
+   "snapshot": "7e015842d805221f9e5cef6ce0cad94bf7df26845c79c4e976af9509223ed11a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Earth's rotation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brownian motion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "air pressure",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "interference",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Coriolis force",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Corioliskraft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-340"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:03.995Z",
+   "target": "f08381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Foucault pendulum or Foucault's pendulum is a simple device named after French physicist Léon Foucault, conceived as an experiment to demonstrate the Earth's rotation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.995Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Earth's rotation” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:03.995Z",
+   "target": "f08383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brownian motion is the random motion of particles suspended in a medium (a liquid or a gas).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.995Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brownian motion” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:03.995Z",
+   "target": "f08384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The hemispheres became popular in physics lectures as an illustration of the strength of air pressure, and are still used in education.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.995Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “air pressure” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:03.995Z",
+   "target": "f08385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The experiment belongs to a general class of \"double path\" experiments, in which two diffracted waves reconverge, creating an interference pattern.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.995Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “interference” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:03.995Z",
+   "target": "f25211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In physics, the Coriolis force is a pseudo-force that acts on objects in motion within a frame of reference that rotates with respect to an inertial frame.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.995Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coriolis force” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:03.995Z",
+   "target": "f25211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Corioliskraft ([kɔri'joːliskʁaft] , früher auch [kɔrjoˈliːskraft]) ist eine der drei Trägheitskräfte der klassischen Mechanik, die in einem rotierenden Bezugssystem auftreten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.995Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Corioliskraft” is on the snapshot of s6"
+  }
+ ]
+}

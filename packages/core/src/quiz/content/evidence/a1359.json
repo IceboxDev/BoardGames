@@ -1,0 +1,242 @@
+{
+ "article": "a1359",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec",
+   "title": "Henri de Toulouse-Lautrec – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:44.312Z",
+   "snapshot": "64854ad49c61779a041af5461b4cb80fb0be206ec4bd7a3f463d0944a5b4cbcd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jules_Ch%C3%A9ret",
+   "title": "Jules Chéret – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:45.249Z",
+   "snapshot": "a692afa1b715e1fb00ae9db89486f615512353fd2239f0f3155724a726388b04"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alphonse_Mucha",
+   "title": "Alphonse Mucha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:46.315Z",
+   "snapshot": "df75042f7f075ce2e50054f0a01121af017e181385383470d05d191f3857aa30"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Th%C3%A9ophile_Steinlen",
+   "title": "Théophile Steinlen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:47.299Z",
+   "snapshot": "f28fbb4b6cf0db2bec947090a9dbf075d80b9e327ad2bfdc11e85a0be869a76d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Leonetto_Cappiello",
+   "title": "Leonetto Cappiello – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:48.209Z",
+   "snapshot": "5e4c84bd246de26fb5c443505b3178b31e2d60f6ac439ea1ef88903af4ac94b4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henri de Toulouse-Lautrec",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jules Chéret",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alphonse Mucha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Théophile Steinlen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leonetto Cappiello",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:13.646Z",
+   "target": "f06791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "de Toulouse-Lautrec-Montfa was born at Demoiselles d'Imbert du Bosc (his great-aunts) home at rue de l'École Mage (presently 14, rue Henri de Toulouse Lautrec), Albi, in the south of France, the firstborn child of Count Alphonse de Toulouse-Lautrec Montfa (1838–1913) and Adèle Zoë Tapié de",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henri de Toulouse-Lautrec” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:13.646Z",
+   "target": "f06792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jules Chéret (31 May 1836 – 23 September 1932) was a French painter and lithographer who became  a master of Belle Époque poster art.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jules Chéret” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:13.646Z",
+   "target": "f06793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alfons Maria Mucha (Czech: [ˈalfons ˈmuxa] ; 24 July 1860 – 14 July 1939), known in English as Alphonse Mucha, was a Czech painter, illustrator, and graphic artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alphonse Mucha” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:13.646Z",
+   "target": "f06794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Théophile Steinlen died in 1923 in Paris and was buried in the Cimetière Saint-Vincent in Montmartre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Théophile Steinlen” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:13.646Z",
+   "target": "f06795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leonetto Cappiello (9 April 1875 – 2 February 1942) was an Italian-born French poster artist, painter, and caricaturist who mainly lived and worked in Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonetto Cappiello” is on the snapshot of s5"
+  }
+ ]
+}

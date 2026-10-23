@@ -1,0 +1,611 @@
+{
+ "article": "a1174",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Proxima_Centauri",
+   "title": "Proxima Centauri – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:14.980Z",
+   "snapshot": "5ddaa1f67598aca94ec588f08e7f7171edbbadb01f7a62c7ef3c87c3cb80df47"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sirius",
+   "title": "Sirius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:16.000Z",
+   "snapshot": "c6b0b01a0afd15186ca367a76c26fa0e9ba6c689000ddd90fa0dffd28b0d5a11"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sirius",
+   "title": "Sirius",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:13.231Z",
+   "snapshot": "57312ce7dbceabdeffabaae49089dead452fb584d28dedd4be0964e7195c25ac"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sirius_Black",
+   "title": "Sirius Black",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:17.019Z",
+   "snapshot": "67f375e492c6d14bd7db2d0a7cabb850a498e5bb5f68b17810c8a202ed988bb3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Betelgeuse",
+   "title": "Betelgeuse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:18.246Z",
+   "snapshot": "100c3de8cae617fedf60231f0691c7181be31041b4e2ef3f3c2f05f52ab19a6f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Vega",
+   "title": "Vega – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:18.968Z",
+   "snapshot": "029e79a336913a98b458979aa31f230baa1a108439ef7403842717f6030b7823"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Polarstern",
+   "title": "Polarstern",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:16.165Z",
+   "snapshot": "f1be6cdbf6254e8c85717cf94ce7d93b01f1e30d2de7547087c4f788d89f8f5e"
+  },
+  "s8": {
+   "url": "https://chandra.harvard.edu/photo/2004/proxima/",
+   "title": "Proxima Centauri: The Nearest Star to the Sun",
+   "publisher": "NASA Chandra X-ray Center (Smithsonian Astrophysical Observatory)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:29.255Z",
+   "snapshot": "a4c336bf71b5371f2afc1434eaf00c24c3484eaefae36a388d8563de0dfc044e"
+  },
+  "s9": {
+   "url": "https://earthsky.org/tonight/sirius-future-south-pole-star/",
+   "title": "Sirius is a future southern Pole Star",
+   "publisher": "EarthSky",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:29.680Z",
+   "snapshot": "81ad02487aaf6575a2cf8b6cbc26ac24cbea147d4b9d3bc67b247f14ba360702"
+  },
+  "s10": {
+   "url": "https://www.constellation-guide.com/vega/",
+   "title": "Vega – Constellation Guide",
+   "publisher": "Constellation Guide",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:29.954Z",
+   "snapshot": "d40df4284e77c15240d89ba738afd540fd8535911b9a59a3c03e176dfd07b242"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Proxima Centauri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sirius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-071"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sirius",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-241"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sirius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-302"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Betelgeuse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vega",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nordstern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-312"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Proxima Centauri is the nearest star to Earth after the Sun, located 4.25 light-years (1.3 parsecs) away in the southern constellation of Centaurus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Proxima Centauri” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sirius is the brightest star in the night sky, located in the southern constellation of Canis Major.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sirius” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sirius, Bayer-Bezeichnung α Canis Majoris (Alpha Canis Majoris, α CMa), auch Hundsstern, früher auch Aschere oder Canicula genannt, ist ein Doppelsternsystem des Sternbildes „Großer Hund“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sirius” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sirius Black is a fictional character in the Harry Potter series of novels by J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sirius” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f05868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Betelgeuse is a red supergiant star in the equatorial constellation of Orion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Betelgeuse” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f05869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vega is the brightest star in the northern constellation of Lyra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vega” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:43.899Z",
+   "target": "f10858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Polarstern, auch Nordstern oder α Ursae Minoris (α UMi) genannt, ist der hellste Stern im Sternbild Kleiner Bär (auch Kleiner Wagen oder Ursa Minor genannt).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nordstern” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:15:57Z",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Proxima Centauri: The Nearest Star to the Sun",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:16:00Z",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Among the known stars, Proxima Centauri has been the closest star to the Sun for about 32,000 years",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:16:02Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "it’s the brightest star in the sky",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:16:05Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sirius is the brightest star in the night sky, located in the southern constellation of Canis Major.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:16:07Z",
+   "target": "f05869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Vega, Alpha Lyrae, is the brightest star in Lyra constellation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:16:10Z",
+   "target": "f05869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vega is the brightest star in the northern constellation of Lyra.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Proxima Centauri: The Nearest Star to the Sun",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Among the known stars, Proxima Centauri has been the closest star to the Sun for about 32,000 years",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "it’s the brightest star in the sky",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Vega, Alpha Lyrae, is the brightest star in Lyra constellation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Chandra :: Photo Album :: Proxima Centauri :: 09 Nov 04",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Proxima Centauri” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "EarthSky | Sirius is a future southern Pole Star",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sirius” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:25.106Z",
+   "target": "f05869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Vega, Alpha Lyrae, is the brightest star in Lyra constellation and the fifth brightest star in the sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vega” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,524 @@
+{
+ "article": "a1938",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Ebert",
+   "title": "Friedrich Ebert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:20.055Z",
+   "snapshot": "b375d260c18ab2ba59ebdbce1e45f44fc0ed3c3edb39a0aaa9f829bcead131b9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Philipp_Scheidemann",
+   "title": "Philipp Scheidemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:26.098Z",
+   "snapshot": "028586c15d4b84fed0972449478b91b410034b44144e9f1de8216423ad460109"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gustav_Stresemann",
+   "title": "Gustav Stresemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:47.605Z",
+   "snapshot": "09dcf493190d22abe37a631b56dbad283313fdbf5349b72f1c2f17c767a8b671"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Walther_Rathenau",
+   "title": "Walther Rathenau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:49.776Z",
+   "snapshot": "e708ea0015c324c19cf56103204ee29a9bd1bb5d23af4c1c55a912ccb38958b2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_von_Schleicher",
+   "title": "Kurt von Schleicher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:49.926Z",
+   "snapshot": "84fd4e34a2c4be350c3f7251c92375fc8b0dc6700d82ceee1723d31ac4efce8c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Reichspr%C3%A4sident",
+   "title": "Reichspräsident – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:29.626Z",
+   "snapshot": "a33a9630d293fa38577586b5e30dcf46fa7c614b8971be7846450d79a5fd019b"
+  },
+  "s7": {
+   "url": "https://www.dhm.de/lemo/biografie/friedrich-ebert",
+   "title": "Friedrich Ebert – LeMO Biografie",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:29.687Z",
+   "snapshot": "d945e33cb14ca79af5a773bba24082fd75be10a03f3131cb9fef86944046f545"
+  },
+  "s8": {
+   "url": "https://www.dhm.de/lemo/biografie/paul-hindenburg",
+   "title": "Paul von Hindenburg – LeMO Biografie",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:30.598Z",
+   "snapshot": "df43bc0b30056ad6a0b528c80332954badeaab50030afe48db14dc3fafcd581d"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Ausrufung_der_Republik_in_Deutschland",
+   "title": "Ausrufung der Republik in Deutschland – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:30.423Z",
+   "snapshot": "bc8fcea936000672f5ab6fe2ee5771e7681c910ba7732efb935f31babd1a4a9e"
+  },
+  "s10": {
+   "url": "https://www.dhm.de/lemo/biografie/philipp-scheidemann",
+   "title": "Philipp Scheidemann – LeMO Biografie",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:31.605Z",
+   "snapshot": "5cc340d6cfc0ac00329b3b7480318c27b37b892d9ecdc39021467af7026a5ae1"
+  },
+  "s11": {
+   "url": "https://www.dhm.de/lemo/biografie/karl-liebknecht",
+   "title": "Karl Liebknecht – LeMO Biografie",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:32.657Z",
+   "snapshot": "415996b5bdaed5d1e44128846eea2cd4d96ff3a81391c6bf141660ec82577589"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Ebert and Paul von Hindenburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philipp Scheidemann and Karl Liebknecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gustav Stresemann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walther Rathenau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kurt von Schleicher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:49.858Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Ebert and Paul von Hindenburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Friedrich Ebert and Paul von Hindenburg”, “Friedrich Ebert und Paul von Hindenburg”, “Фридрих Эберт и Пауль фон Гинденбург”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:49.858Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philipp Scheidemann and Karl Liebknecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Philipp Scheidemann and Karl Liebknecht”, “Philipp Scheidemann und Karl Liebknecht”, “Филипп Шейдеман и Карл Либкнехт”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:49.858Z",
+   "target": "f09688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Gustav Stresemann and the Ruhr Occupation: the Making of a Statesman.\" European Studies Review 2.1 (1972): pp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustav Stresemann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:49.858Z",
+   "target": "f09689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walther Rathenau (German: [ˈvaltɐ ˈʁaːtənaʊ]; 29 September 1867 – 24 June 1922) was a German industrialist, writer and politician who served as foreign minister of Germany from February 1922 until his assassination in June 1922.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walther Rathenau” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:49.858Z",
+   "target": "f09690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kurt Von Schleicher — The Soldier And Politics In The Run-Up To National Socialism: A Case Study Of Civil-Military Relations (2015).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.858Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt von Schleicher” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:42:12Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Sozialdemokrat Friedrich Ebert wurde in der Reichspräsidentenwahl 1919 von der Weimarer Nationalversammlung gewählt, sein parteiloser Nachfolger Paul von Hindenburg in den beiden Reichspräsidentenwahlen (Wahl 1925 und Wahl 1932).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:42:17Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "11. Februar: Die Nationalversammlung wählt Ebert zum vorläufigen Reichspräsidenten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Ebert's half of the answer."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:42:22Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Rechtsparteien drängen den parteilosen Hindenburg, bei der Reichspräsidentenwahl im zweiten Wahlgang zu kandidieren. Er wird mit einer relativen Mehrheit vor dem Kandidaten des Zentrums Wilhelm Marx gewählt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Hindenburg's half of the answer (elected 1925, re-elected 1932)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:42:27Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Die Ausrufung der Republik in Deutschland geschah am 9. November 1918 in Berlin gleich zweimal: durch den MSPD-Politiker Philipp Scheidemann am Reichstagsgebäude unter bürgerlich-demokratischen und durch den Führer des Spartakusbundes Karl Liebknecht am Berliner Schloss",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:42:32Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Er ruft vom Reichstag die \"deutsche Republik\" aus. Etwa zwei Stunden später verkündet Karl Liebknecht die \"freie sozialistische Republik\".",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:42:35Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "9. November: Am Berliner Schloss ruft er die \"freie sozialistische Republik\" aus. Philipp Scheidemann hatte zwei Stunden zuvor die \"deutsche Republik\" vom Reichstag aus proklamiert.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:39.912Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Sozialdemokrat Friedrich Ebert wurde in der Reichspräsidentenwahl 1919 von der Weimarer Nationalversammlung gewählt, sein parteiloser Nachfolger Paul von Hindenburg in den beiden Reichspräsidentenwahlen (Wahl 1925 und Wahl 1932).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:39.912Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "11. Februar: Die Nationalversammlung wählt Ebert zum vorläufigen Reichspräsidenten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:39.912Z",
+   "target": "f09686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Rechtsparteien drängen den parteilosen Hindenburg, bei der Reichspräsidentenwahl im zweiten Wahlgang zu kandidieren. Er wird mit einer relativen Mehrheit vor dem Kandidaten des Zentrums Wilhelm Marx gewählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:39.912Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Die Ausrufung der Republik in Deutschland geschah am 9. November 1918 in Berlin gleich zweimal: durch den MSPD-Politiker Philipp Scheidemann am Reichstagsgebäude unter bürgerlich-demokratischen und durch den Führer des Spartakusbundes Karl Liebknecht am Berliner Schloss",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:39.912Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Er ruft vom Reichstag die \"deutsche Republik\" aus. Etwa zwei Stunden später verkündet Karl Liebknecht die \"freie sozialistische Republik\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:39.912Z",
+   "target": "f09687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "9. November: Am Berliner Schloss ruft er die \"freie sozialistische Republik\" aus. Philipp Scheidemann hatte zwei Stunden zuvor die \"deutsche Republik\" vom Reichstag aus proklamiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-120",
+ "image": "IMG20261022154511.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Theater",
+   "cardText": "[Theater] In which country did theater originate?\nA. India  B. Greece  C. China\nAnswer: B. The earliest recorded theatrical performances were part of festivals honoring Dionysus, the Greek god of wine and fertility. However, earlier ritual performances that occurred in Egypt and other parts of Africa also contained theatrical components.",
+   "de": "Zu Ehren welches griechischen Gottes wurde das athenische Fest gefeiert, bei dem das westliche Theater institutionalisiert wurde?",
+   "en": "In honour of which Greek god was the Athenian festival held at which Western theatre was institutionalised?",
+   "reworked": true,
+   "answerDe": "Dionysos",
+   "answerEn": "Dionysus",
+   "timeline": {
+    "kind": "event",
+    "start": "-532",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Thespis, the earliest recorded actor, wins the first theatrical contest in Athens",
+    "labelDe": "Thespis, der früheste überlieferte Schauspieler, gewinnt den ersten Theaterwettbewerb in Athen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Theatre_of_ancient_Greece",
+    "title": "Theatre of ancient Greece",
+    "lang": "en"
+   },
+   "notes": "'Which country did theatre originate in' is contested (Sanskrit drama, Egyptian ritual performance, as the card itself admits), so the question asks the verifiable fact: theatre was institutionalised in Athens at the Dionysia honouring Dionysus; tragedy c. 532 BC with Thespis.",
+   "domain": "music-stage",
+   "sub": "theatre"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which of the following animals is known for using sexual behavior to resolve conflicts?\nA. Meerkats  B. Bonobos  C. Panda\nAnswer: B. This behavior earns bonobos the nickname “Make Love, Not War” apes. These interactions occur between bonobos of all ages and genders, highlighting the integral role of sex in their social structure.",
+   "de": "Welcher Menschenaffe ist dafür bekannt, Konflikte durch sexuelles Verhalten zu lösen, was ihm den Spitznamen „Make love, not war“-Art eingebracht hat?",
+   "en": "Which ape is known for using sexual behaviour to resolve conflicts, earning it the nickname of the 'make love, not war' species?",
+   "reworked": true,
+   "answerDe": "Der Bonobo",
+   "answerEn": "The bonobo",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1929",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ernst Schwarz describes the bonobo (Pan paniscus) as a distinct taxon",
+    "labelDe": "Ernst Schwarz beschreibt den Bonobo (Pan paniscus) als eigenes Taxon"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bonobo",
+    "title": "Bonobo",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: sex serves bonobos as greeting, bonding, conflict resolution and post-conflict reconciliation; cites NPR's 'The Make Love, Not War Species'. A 2024 study found bonobos more aggressive than their peaceful reputation suggests.",
+   "domain": "nature",
+   "sub": "mammals"
+  }
+ ]
+}

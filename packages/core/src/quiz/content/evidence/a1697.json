@@ -1,0 +1,289 @@
+{
+ "article": "a1697",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lance_Armstrong",
+   "title": "Lance Armstrong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:28.461Z",
+   "snapshot": "000f4cf16975df5fe1f570c75182b06ffcadb7a220652e18f14678529c65bc3c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Athletics_at_the_1988_Summer_Olympics_%E2%80%93_Men%27s_100_metres",
+   "title": "Athletics at the 1988 Summer Olympics – Men's 100 metres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:29.301Z",
+   "snapshot": "57614de32b8d61d7b071783387d55cfa3d68e300d067a25dee95e2de8b52fc23"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Floyd_Landis",
+   "title": "Floyd Landis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:31.538Z",
+   "snapshot": "2cf5e4e7ce65a08b3b08db72601037d6508f6e843995b382fcc2e3389173fac7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marion_Jones",
+   "title": "Marion Jones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:31.350Z",
+   "snapshot": "42499ae71253fc832f5cc9cc5ffde78b41467b929ca29fe2d3e11ba0e9d9330d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Alberto_Contador",
+   "title": "Alberto Contador – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:32.532Z",
+   "snapshot": "de79a2467af78899fba0be956948c1508ad43e022a876308bf51c8e8bea1a9ac"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Coffein",
+   "title": "Coffein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:16:29.606Z",
+   "snapshot": "5be97ab10f8dfef916890c2cf949492379fb180ef6e0bd3fa7fa2c97b6f52420"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lance Armstrong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ben Johnson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Floyd Landis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marion Jones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alberto Contador",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "2004",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-120"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:07.414Z",
+   "target": "f08481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After recovering, Armstrong founded the Lance Armstrong Foundation (now the Livestrong Foundation) to assist other cancer survivors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lance Armstrong” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:07.414Z",
+   "target": "f08482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The men's 100 meters at the 1988 Summer Olympics in Seoul, South Korea saw world champion Ben Johnson of Canada defeat defending Olympic champion Carl Lewis of the United States in a world record time of 9.79, breaking his own record of 9.83 that he had set at the 1987 World Championships in Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ben Johnson” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:07.414Z",
+   "target": "f08483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Floyd Landis (born October 14, 1975) is an American former professional road racing cyclist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Floyd Landis” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:07.414Z",
+   "target": "f08484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marion Lois Jones (born October 12, 1975), married Marion Jones-Thompson, is an American former world champion track-and-field athlete and former professional basketball player.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marion Jones” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:07.414Z",
+   "target": "f08485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alberto Contador Velasco (Spanish pronunciation: [alˈβeɾto kontaˈðoɾ βeˈlasko]; born 6 December 1982) is a Spanish former professional cyclist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alberto Contador” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:07.414Z",
+   "target": "f14125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Coffein stand von 1984 bis 2004 auf der Dopingliste des Internationalen Olympischen Komitees, allerdings waren die Grenzwerte so hoch, dass Sportler durchaus Kaffee zum Frühstück trinken konnten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2004” is on the snapshot of s6"
+  }
+ ]
+}

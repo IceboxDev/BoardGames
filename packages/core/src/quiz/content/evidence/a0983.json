@@ -1,0 +1,242 @@
+{
+ "article": "a0983",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cashmere_wool",
+   "title": "Cashmere wool – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:26.107Z",
+   "snapshot": "088e81bab8f5b3ec79629661f8be58d4dcb1953d2aa4e82d3a21695546cd895e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mohair",
+   "title": "Mohair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:27.080Z",
+   "snapshot": "e2047995c542e344d1e375eda8b670e96203d946600d9771a67cc8ba316a1bc4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Angora_rabbit",
+   "title": "Angora rabbit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:27.986Z",
+   "snapshot": "bdab760954f219f37ed98ddd9e597df4366ee339435e6dcad98da024f7b258ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Qiviut",
+   "title": "Qiviut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:29.129Z",
+   "snapshot": "34a38e5b7c7afd04c9d45bf41c796df890eb2989a56f1e19e00224cef9da3cf4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Shahtoosh",
+   "title": "Shahtoosh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:30.010Z",
+   "snapshot": "d8053e7d260aff556008e7758eaea89a9bfaca542cf24f5380903c09e9d83206"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cashmere goat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c082"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Angora goat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Angora rabbit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "muskox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tibetan antelope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:14.948Z",
+   "target": "f04911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "such wool product is the fine (dehaired) undercoat fibers produced by a cashmere goat (Capra hircus laniger);",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cashmere goat” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:14.948Z",
+   "target": "f04912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mohair (pronounced ) is a fabric or yarn made from the hair of the Angora goat (not Angora wool from the fur of the Angora rabbit).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angora goat” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:14.948Z",
+   "target": "f04913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Angora rabbit (Turkish: Ankara tavşanı) is one of the oldest groups of domestic rabbit breeds, which is bred for the long fibers of its coat, known as Angora wool.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angora rabbit” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:14.948Z",
+   "target": "f04914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Qiviuq [sg] or qiviut [pl] ( KIV-ee-ət; Inuktitut syllabics: ᕿᕕᐅᖅ; Inuinnaqtun: qiviuq; Inupiaq: qiviu or qiviuq (sometimes spelled qiveut)) is the inner wool of the muskox.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “muskox” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:14.948Z",
+   "target": "f04915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Shahtoosh (; from Persian شاهتوش 'wool king') is an Indian wool obtained from fur of the chiru, a Tibetan antelope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tibetan antelope” is on the snapshot of s5"
+  }
+ ]
+}

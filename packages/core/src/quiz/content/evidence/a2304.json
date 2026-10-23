@@ -1,0 +1,421 @@
+{
+ "article": "a2304",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Monaco",
+   "title": "Monaco",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:40.357Z",
+   "snapshot": "6dc531e2935438eeb7936a561c97781d97f5728cf1d48f4f7553fb5119784224"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gibraltar",
+   "title": "Gibraltar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:42.053Z",
+   "snapshot": "916aa17e21593def04a50ea3d0cc7be37676e08e0e2a03f56bcd3331a44b75a1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Monaco",
+   "title": "Monaco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:43.728Z",
+   "snapshot": "fc28820bef8e933767cf4d86e2bddfd73bd34bd6ce6df77490ab7c1a7e9371d5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monte_Carlo",
+   "title": "Monte Carlo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:44.494Z",
+   "snapshot": "dd2c581152021ecadeb3c342d83adec3e079ce82601ef073afee225ad5036547"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gibraltar",
+   "title": "Gibraltar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:45.726Z",
+   "snapshot": "f061581649a4fd85428cbf6e9955acdd916976c7ef52523df8642d4075239671"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Utrecht",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:46.593Z",
+   "snapshot": "4bd84d78ef94559cfd66dc52ab399e14698d3016ef36da27d889ab7008b0c392"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_Western_Europe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:47.486Z",
+   "snapshot": "a1d35caa4bd9018f52d84513abf28bdf5e6923e88875664e745e947f7331e44b"
+  },
+  "s8": {
+   "url": "https://snl.no/Monaco",
+   "title": "Monaco",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:03.660Z",
+   "snapshot": "3f3195a21f8eb396fd0c41f120226df8a8c9c68b44f1fd4f9886b6ceb1c2bb48"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Monaco",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gibraltar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-100"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grimaldi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monte Carlo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Utrecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Utrecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:52.026Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Monaco (deutsch [moˈnako] , französisch [mɔnaˈko] , italienisch [ˈmɔnako]) (amtlich Fürstentum Monaco, monegassisch Principatu de Mu̍negu, französisch ) ist ein am Mittelmeer liegender Stadtstaat in Südeuropa, dessen Staatsoberhaupt seit April 2005 Fürst Albert II.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monaco” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:52.026Z",
+   "target": "f11913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gibraltar (deutsch [ɡiˈbʁaltaʁ], englisch [dʒɪˈbɹɒltə], spanisch [xiβɾalˈtaɾ]) ist ein britisches Überseegebiet an der Südspitze der Iberischen Halbinsel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gibraltar” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:52.026Z",
+   "target": "f11914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The House of Grimaldi has ruled Monaco, with brief interruptions, since 1297.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grimaldi” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:52.026Z",
+   "target": "f11915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monte Carlo ( MON-tee KAR-loh; Italian: [ˈmonte ˈkarlo]; French: Monte-Carlo [mɔ̃te kaʁlo] or colloquially Monte-Carl [mɔ̃te kaʁl]; Monégasque: Munte Carlu, Ligurian: [ˈmuŋte ˈkaɾlu]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monte Carlo” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:52.026Z",
+   "target": "f11916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1704, Anglo-Dutch forces captured Gibraltar from Spain during the War of the Spanish Succession, and it was ceded to Great Britain in perpetuity under the Treaty of Utrecht in 1713.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utrecht” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:52.026Z",
+   "target": "f11916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Peace of Utrecht was a series of peace treaties signed by the belligerents in the War of the Spanish Succession, in the Dutch city of Utrecht between April 1713 and February 1715.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utrecht” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:40:57Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monaco is the second smallest sovereign state in the world, after Vatican City, as well as the most densely populated. It also has the world's shortest national coastline of any non-landlocked nation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:41:11Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Monaco er verdens nest minste land etter Vatikanstaten og verdens minste land med en kystlinje.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "SNL gives the coastline as 4.9 km (Wikipedia 3.83 km) — either way the shortest of any coastal country (next: Bosnia and Herzegovina, ~20 km)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:37.284Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monaco is the second smallest sovereign state in the world, after Vatican City, as well as the most densely populated. It also has the world's shortest national coastline of any non-landlocked nation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.284Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:37.284Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Monaco er verdens nest minste land etter Vatikanstaten og verdens minste land med en kystlinje.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.284Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:37.284Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monaco, officially the Principality of Monaco, is a sovereign city-state and microstate in Western Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.284Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Monaco” is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:37.284Z",
+   "target": "f11912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Monaco – les om historie, språk, politikk – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.284Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Monaco” is on the snapshot of s8"
+  }
+ ]
+}

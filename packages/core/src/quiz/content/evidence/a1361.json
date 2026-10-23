@@ -1,0 +1,383 @@
+{
+ "article": "a1361",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bud_Spencer",
+   "title": "Bud Spencer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:34.380Z",
+   "snapshot": "ec7ff5d9c7a9d4ebafbe4e2477bf0e9cf11fc22ac20979bc11a8034403bb8f50"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Modern_pentathlon_at_the_1912_Summer_Olympics",
+   "title": "Modern pentathlon at the 1912 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:54.376Z",
+   "snapshot": "e915a5a366873e04a91dcf6fd144a360d0360a9225c9b49c31cd90a4ec659931"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Weightlifting_at_the_1948_Summer_Olympics_%E2%80%93_Men%27s_82.5_kg",
+   "title": "Weightlifting at the 1948 Summer Olympics – Men's 82.5 kg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:55.207Z",
+   "snapshot": "54fa9a9900ea8a6b6ae45f860c83821caecddda45789696fc45538e4f2bd2c0e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Anne,_Princess_Royal",
+   "title": "Anne, Princess Royal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:56.486Z",
+   "snapshot": "2987b8bbd6f49a9eec7d08e6f1c82eb0bb0a87796729d4eb9273dffad9d1b84e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Albert_II,_Prince_of_Monaco",
+   "title": "Albert II, Prince of Monaco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:57.375Z",
+   "snapshot": "f6bed8b78453655d7804f074e1ecde34ee7e760295eb8f7ddacc2215fd7ff71c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+   "title": "Alan Turing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:14.400Z",
+   "snapshot": "a5b57b2051ea6bbba5a5417f1371c01b6a7630915a535c98febff8a94d9b8ca0"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Moderner_F%C3%BCnfkampf",
+   "title": "Moderner Fünfkampf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:55.408Z",
+   "snapshot": "42457945bd679034ab39c9ed10f841a1a9e6f42409fdc21f91bb37345c3012b9"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Kunstwettbewerbe_bei_den_Olympischen_Spielen",
+   "title": "Kunstwettbewerbe bei den Olympischen Spielen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:56.469Z",
+   "snapshot": "60a439dcc262070d7ec7f227305ae47bf47f5827717c47859b6e44234e9ec26c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Swimming",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Modern pentathlon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Weightlifting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Equestrian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bobsleigh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alan Turing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-149"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Reiten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; history entry seq 43; transcript tp-132"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1948",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 51; transcript tp-341"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f06801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He played several sports and showed an aptitude for swimming, winning prizes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Swimming” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f06802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Modern pentathlon at the 1912 Summer Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Modern pentathlon” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f06803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Weightlifting at the 1948 Summer Olympics – Men's 82.5 kg",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weightlifting” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f06804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A distinguished equestrian, she won one gold medal at the 1971 and two silver medals at the 1975 European Eventing Championships.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Equestrian” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f06805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He is an Olympian, having competed in bobsleigh at multiple Winter Olympic Games from 1988 until his retirement in 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bobsleigh” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f14091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Alan Turing law refers to part of a 2017 UK law that retroactively pardoned men cautioned or convicted under the criminalisation of homosexual acts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Turing” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f14092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Disziplin Reiten hingegen erfordert einen ausgeprägten Gleichgewichtssinn, Einfühlungsvermögen und Feingefühl im Umgang mit dem Partner Pferd.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reiten” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:13.969Z",
+   "target": "f14093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kunstwettbewerbe bei den Olympischen Spielen wurden von 1912 bis 1948 ausgetragen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.969Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1948” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "article": "a2784",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Politics_of_Cambodia",
+   "title": "Politics of Cambodia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:38.186Z",
+   "snapshot": "e5622ff01fc07930777b5d76581f9fed28c446ea38f759a70ca23c3b865aac67"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Communist_state",
+   "title": "Communist state",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:39.193Z",
+   "snapshot": "69b0c98eaf8b6581e1c430f4718749b976c54cfe0b4d7bd796fca2440043c90f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%95i_M%E1%BB%9Bi",
+   "title": "Đổi Mới",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:40.171Z",
+   "snapshot": "daae8706904d96f092a2bfaa7b9c9771ff3c7dc199b475746106e101f0c24221"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lao_People%27s_Revolutionary_Party",
+   "title": "Lao People's Revolutionary Party",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:42.499Z",
+   "snapshot": "3a2c4a6a9abbec660f6d011baa90c8afdac1f1a2da9b352ad72582337475407e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Norodom_Sihamoni",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:42.679Z",
+   "snapshot": "1209f04caa84c2198a9a3819b5a92acf3d51bdaa26d2eead6f936bb47a667038"
+  },
+  "s6": {
+   "url": "https://worldpopulationreview.com/country-rankings/communist-countries",
+   "title": "Communist Countries 2025",
+   "publisher": "World Population Review",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:20.982Z",
+   "snapshot": "0e48a605182beb1ae7dc4ac374f43af535cf955bf81663e10ced10de33416df5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "constitutional monarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "five",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Đổi Mới",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lao People's Revolutionary Party",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cambodian People's Party",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:13.205Z",
+   "target": "f25928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The politics of Cambodia are defined within the framework of a constitutional monarchy, in which the king serves as the head of state, and the prime minister is the head of government.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “constitutional monarchy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:13.205Z",
+   "target": "f25929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "determination of the Soviet power to achieve the transition to socialism, and not that the existing economic system is recognised as a socialist order.\" The introduction of the first five-year plan in the Soviet Union got many communists to believe that the withering away of the state was imminent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “five” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:13.205Z",
+   "target": "f25930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Đổi Mới (IPA: [ɗo᷉i mɤ̂ːi]; transl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Đổi Mới” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:13.205Z",
+   "target": "f25931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lao People's Revolutionary Party (LPRP) is the founding and sole ruling party of the Lao People's Democratic Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lao People's Revolutionary Party” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:13.205Z",
+   "target": "f25932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In practice, Cambodia is an authoritarian state, as power is centralized in the hands of the Cambodian People's Party (CPP) under leader Hun Manet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cambodian People's Party” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:42:57Z",
+   "target": "f25929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "None of the surviving communist states (China, Cuba, Laos, North Korea and Vietnam)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:42:59Z",
+   "target": "f25929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "As of 2025, the remaining Communist countries include China, Cuba, Laos, North Korea, and Vietnam",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T13:00:01.885Z",
+   "target": "f25929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "None of the surviving communist states (China, Cuba, Laos, North Korea and Vietnam)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T13:00:01.885Z",
+   "target": "f25929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "As of 2025, the remaining Communist countries include China, Cuba, Laos, North Korea, and Vietnam",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:01.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

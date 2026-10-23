@@ -1,0 +1,513 @@
+{
+ "article": "a1875",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1992_Windsor_Castle_fire",
+   "title": "1992 Windsor Castle fire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:32.581Z",
+   "snapshot": "1075cbdaf02aa0c0118f0a4e5cd84813e05cf89825d154a68f1abd98d33c3a51"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Prague_Castle",
+   "title": "Prague Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:33.493Z",
+   "snapshot": "0e5b3df98e66d18dc8ac711da698b71815234c7e820f01549139544e820680e5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Malbork_Castle",
+   "title": "Malbork Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:34.476Z",
+   "snapshot": "2972d96e7a258c26d562b3a9b97c1677e93bb0ff91a04ccd91a6074fb82ffd9e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/St_George%27s_Chapel,_Windsor_Castle",
+   "title": "St George's Chapel, Windsor Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:35.617Z",
+   "snapshot": "1101b2f76323a690dee60f693321276840c996d735c887f38ecf1534f74e44ff"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bo%C5%99ivoj_I_of_Bohemia",
+   "title": "Bořivoj I of Bohemia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:36.484Z",
+   "snapshot": "dd748088afa2ea7f09b20c8af0c0b79aa4b8e2ebf9315908b779046fd0d7b5eb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Neuschwanstein_Castle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:30.022Z",
+   "snapshot": "f8a6ec6ddaf544d3a1e172f98cf7f34e47de84774a5aae077a47ebbcc37b6ca9"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Windsor_Castle",
+   "title": "Windsor Castle – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:01.256Z",
+   "snapshot": "5b93d1aaa1ab16cd31da937e6ed2d35a35e2c4379e9412735edc4bb95f80dd26"
+  },
+  "s8": {
+   "url": "https://www.royal.uk/royal-residences-windsor-castle",
+   "title": "Royal Residences: Windsor Castle",
+   "publisher": "The Royal Household (royal.uk)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:01.223Z",
+   "snapshot": "1ae343a4d0f3d0aa303d8f0f3735d8d92112a5645eae1c32ef2d1b6c6425d5c7"
+  },
+  "s9": {
+   "url": "https://www.hrad.cz/en/prague-castle-for-visitors",
+   "title": "Prague Castle for visitors",
+   "publisher": "Prague Castle Administration (hrad.cz)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:10:39Z"
+  },
+  "s10": {
+   "url": "https://whc.unesco.org/en/list/847",
+   "title": "Castle of the Teutonic Order in Malbork – UNESCO World Heritage Centre",
+   "publisher": "UNESCO",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:10:45Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Windsor Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prague Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Malbork Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St George's Chapel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bořivoj",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:38.020Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 20 November 1992, a major fire broke out in Windsor Castle, the largest inhabited castle in the world and one of the official residences of the British monarch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Windsor Castle” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:38.020Z",
+   "target": "f09372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prague Castle (Czech: Pražský hrad; [ˈpraʃskiː ˈɦrat]) is a castle complex in Prague, Czech Republic serving as the official residence and workplace of the president of the Czech Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prague Castle” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:38.020Z",
+   "target": "f09373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Castle of the Teutonic Order in Malbork, commonly known as Malbork Castle (Polish: Zamek w Malborku; German: Ordensburg Marienburg), is a Brick Gothic castle complex located in the town of Malbork, Poland, built in the 13th and significantly expanded in the 14th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malbork Castle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:38.020Z",
+   "target": "f20102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St George's Chapel, formally titled The King's Free Chapel of the College of St George, Windsor Castle, at Windsor Castle in England is a castle chapel built in the late-medieval Perpendicular Gothic style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St George's Chapel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:38.020Z",
+   "target": "f20103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bořivoj I (Czech pronunciation: [ˈbor̝ɪvoj], Latin: Borzivogius, c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bořivoj” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:36Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In terms of population, Windsor Castle is the largest inhabited castle in the world and the longest-occupied palace in Europe, but it also remains a functioning royal home.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:10:37Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A Royal home and fortress for over 900 years, Windsor Castle, the largest occupied castle in the world, remains a working palace today.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:39Z",
+   "target": "f09372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "According to the Guinness Book of World Records, Prague Castle is the largest coherent castle complex in the world, with an area of almost 70,000 m².",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:10:41Z",
+   "target": "f09372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "According to the Guinness Book of Records, Prague Castle is the largest ancient castle in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23",
+   "note": "Guinness wording here is 'largest ancient castle'; the castle's own site says 'largest coherent castle complex' — same record"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:10:43Z",
+   "target": "f09373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the largest castle in the world measured by land area and a UNESCO World Heritage Site.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:10:45Z",
+   "target": "f09373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This 13th-century fortified monastery belonging to the Teutonic Order was substantially enlarged and embellished after 1309, when the seat of the Grand Master moved here from Venice.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the Teutonic Order headquarters; the 'largest by area' superlative itself is stated by Wikipedia, not UNESCO (UNESCO gives 18 ha)"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:27.190Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In terms of population, Windsor Castle is the largest inhabited castle in the world and the longest-occupied palace in Europe, but it also remains a functioning royal home.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:27.190Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A Royal home and fortress for over 900 years, Windsor Castle, the largest occupied castle in the world, remains a working palace today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:27.190Z",
+   "target": "f09372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "According to the Guinness Book of Records, Prague Castle is the largest ancient castle in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:27.190Z",
+   "target": "f09373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the largest castle in the world measured by land area and a UNESCO World Heritage Site.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:27.190Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Windsor Castle is a royal residence at Windsor in the English county of Berkshire, about 25 miles (40 km) west of central London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Windsor Castle” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:27.190Z",
+   "target": "f09371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Royal Residences: Windsor Castle | The Royal Family",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Windsor Castle” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "article": "a0387",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zwinger_(Dresden)",
+   "title": "Zwinger (Dresden) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:30.438Z",
+   "snapshot": "e833db16e277661ecf1d1ff2d8ad4381c621f8b602531d7e614e2a0b62d763ca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kremlin",
+   "title": "Kremlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:31.539Z",
+   "snapshot": "d092e7be436193378e3cd8b80060a9c0ad3a646fa68bd0f5f314766e472eedf4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flavian_Palace",
+   "title": "Flavian Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:32.443Z",
+   "snapshot": "19ace936b37fdd429fae456b1d4b08ada0721622980072deed2d6f23342ee91e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bastille",
+   "title": "Bastille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:33.682Z",
+   "snapshot": "cff5583949aca3b08bc8d08f63eabe57f6d696122bde950c0a624af4365526de"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/White_Tower_(Tower_of_London)",
+   "title": "White Tower (Tower of London) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:34.535Z",
+   "snapshot": "dc539bcc0428613bc91068962e0cb4b1797fd07959a44e5f6f2da3f85f8ee737"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tower_of_London",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:35.860Z",
+   "snapshot": "864c7b1e08e3438abdbe34f2be4a48690a84a557bd4121367f774edba1400968"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Moscow_Kremlin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:36.450Z",
+   "snapshot": "d092e7be436193378e3cd8b80060a9c0ad3a646fa68bd0f5f314766e472eedf4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zwinger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kremlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palatine Hill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bastille",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tower of London",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:39.866Z",
+   "target": "f01931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Zwinger (German: Dresdner Zwinger, IPA: [ˈdʁeːzdnɐ ˈt͡svɪŋɐ]) is a palatial complex with gardens in Dresden, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zwinger” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:39.866Z",
+   "target": "f01932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Moscow Kremlin, commonly known as the Kremlin, is a fortified complex (kremlin) in Moscow, Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kremlin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:39.866Z",
+   "target": "f01933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Flavian Palace, commonly known as the Domus Flavia, forms part of the extensive Palace of Domitian on the Palatine Hill in Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palatine Hill” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:39.866Z",
+   "target": "f01934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Bastille (, French: [bastij] ) was a medieval fortress in Paris, known as the Bastille Saint-Antoine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bastille” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:39.866Z",
+   "target": "f01935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The White Tower is a former royal residence, the old keep, at the Tower of London in England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tower of London” is on the snapshot of s5"
+  }
+ ]
+}

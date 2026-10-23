@@ -1,0 +1,614 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "technology/computing",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-008",
+    "category": 5
+   },
+   "factId": "f05576"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-081",
+    "category": 5
+   },
+   "factId": "f00419"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-203",
+    "category": 5
+   },
+   "factId": "f02157"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-223",
+    "category": 5
+   },
+   "factId": "f00417"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-231",
+    "category": 5
+   },
+   "factId": "f00416"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-274",
+    "category": 5
+   },
+   "factId": "f05100"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-281",
+    "category": 5
+   },
+   "factId": "f05937"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-370",
+    "category": 5
+   },
+   "factId": "f10556"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0096",
+   "baseHash": "22696f8ccd6b",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-007",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "A Ledger without a Bank: How Bitcoin and the Blockchain Work",
+    "titleDe": "Ein Kassenbuch ohne Bank: Wie Bitcoin und die Blockchain funktionieren",
+    "bodyEn": "On 31 October 2008, in the middle of the global financial crisis, a nine-page paper appeared on a cryptography mailing list under the title „Bitcoin: A Peer-to-Peer Electronic Cash System“. Its author signed as Satoshi Nakamoto, a name that has never been matched to a real person or group; whoever it was stopped communicating in 2011 and left behind roughly a million untouched bitcoins. The paper solved a problem that had defeated digital-cash projects for two decades: how to let strangers transfer money over the internet without a bank or any other trusted middleman to prevent the same coin being spent twice.\n\nThe answer is the blockchain, a decentralised database that is copied to thousands of computers around the world. Transactions are gathered into blocks; each block contains a cryptographic hash of the previous one, so that the blocks form a chain in which no entry can be altered without changing every block that follows. Because every participant holds the same copy and checks every new block, there is no central server to hack, switch off or corrupt. The first block, the „genesis block“, was mined by Nakamoto on 3 January 2009 and contains a newspaper headline about bank bailouts. The idea of linking records with cryptographic hashes was older: Stuart Haber and W. Scott Stornetta had described such a chain of blocks in 1991.\n\nNew blocks are added through mining. Computers all over the world compete to find a number that, hashed together with the block's contents, produces a result below a certain target – a lottery that can only be won by trying trillions of guesses. The winner appends the block, roughly every ten minutes, and receives newly created bitcoins as a reward. This „proof of work“ makes rewriting history prohibitively expensive, but it also consumes as much electricity as a medium-sized country. The reward halves every 210,000 blocks, so that no more than 21 million bitcoins will ever exist.\n\nOwning bitcoin means owning a private key – a secret number that authorises transfers from an address. Keys are stored in a wallet, which may be an app on a phone, a small hardware device or simply a piece of paper. The first wallet program, released by Nakamoto in January 2009, was simply called „Bitcoin“. The blockchain itself is public; the wallet is what makes it yours, and a lost key means coins that are locked forever.\n\nEthereum, proposed by Vitalik Buterin and launched on 30 July 2015, extended the idea from money to programs. Its blockchain runs smart contracts: pieces of code that execute automatically when their conditions are met – releasing a payment on a delivery date, say, or settling a bet on the outcome of a match – without any party being able to interfere. The term was coined by the computer scientist Nick Szabo in the 1990s, but it took a blockchain to make it practical.\n\n| Term | Meaning |\n|---|---|\n| blockchain | tamper-proof, decentralised chain of transaction blocks |\n| mining | proof-of-work competition that creates new blocks |\n| Satoshi Nakamoto | pseudonymous author of the Bitcoin white paper |\n| wallet | software or device holding the private keys |\n| smart contracts | self-executing programs on a blockchain |",
+    "bodyDe": "Am 31. Oktober 2008, mitten in der globalen Finanzkrise, erschien auf einer Kryptografie-Mailingliste ein neunseitiges Papier mit dem Titel „Bitcoin: A Peer-to-Peer Electronic Cash System“. Sein Autor zeichnete als Satoshi Nakamoto, ein Name, der nie einer realen Person oder Gruppe zugeordnet werden konnte; wer immer es war, stellte 2011 jede Kommunikation ein und hinterließ rund eine Million unangetastete Bitcoins. Das Papier löste ein Problem, an dem digitale Bargeldprojekte zwei Jahrzehnte lang gescheitert waren: wie Fremde über das Internet Geld übertragen können, ohne dass eine Bank oder ein anderer vertrauenswürdiger Mittelsmann verhindert, dass dieselbe Münze zweimal ausgegeben wird.\n\nDie Antwort ist die Blockchain, eine dezentrale Datenbank, die auf Tausende von Computern rund um die Welt kopiert wird. Transaktionen werden zu Blöcken zusammengefasst; jeder Block enthält einen kryptografischen Hash des vorherigen, sodass die Blöcke eine Kette bilden, in der kein Eintrag verändert werden kann, ohne jeden nachfolgenden Block zu ändern. Weil jeder Teilnehmer dieselbe Kopie hält und jeden neuen Block prüft, gibt es keinen zentralen Server, den man hacken, abschalten oder manipulieren könnte. Der erste Block, der „Genesis-Block“, wurde am 3. Januar 2009 von Nakamoto geschürft und enthält eine Zeitungsschlagzeile über Bankenrettungen. Die Idee, Einträge über kryptografische Hashes zu verketten, war älter: Stuart Haber und W. Scott Stornetta hatten eine solche Blockkette bereits 1991 beschrieben.\n\nNeue Blöcke werden durch Mining angefügt. Computer auf der ganzen Welt wetteifern darum, eine Zahl zu finden, die zusammen mit dem Inhalt des Blocks gehasht ein Ergebnis unter einem bestimmten Zielwert liefert – eine Lotterie, die nur durch Billionen von Versuchen gewonnen werden kann. Der Gewinner hängt den Block an, etwa alle zehn Minuten, und erhält als Belohnung neu erzeugte Bitcoins. Dieser „Proof of Work“ macht das Umschreiben der Geschichte unerschwinglich teuer, verbraucht aber auch so viel Strom wie ein mittelgroßes Land. Die Belohnung halbiert sich alle 210.000 Blöcke, sodass niemals mehr als 21 Millionen Bitcoins existieren werden.\n\nBitcoin zu besitzen heißt, einen privaten Schlüssel zu besitzen – eine geheime Zahl, die Überweisungen von einer Adresse autorisiert. Schlüssel werden in einer Wallet aufbewahrt, die eine App auf dem Handy, ein kleines Hardwaregerät oder schlicht ein Stück Papier sein kann. Das erste Wallet-Programm, das Nakamoto im Januar 2009 veröffentlichte, hieß schlicht „Bitcoin“. Die Blockchain selbst ist öffentlich; die Wallet ist das, was sie zu deiner macht, und ein verlorener Schlüssel bedeutet Münzen, die für immer gesperrt sind.\n\nEthereum, von Vitalik Buterin erdacht und am 30. Juli 2015 gestartet, erweiterte die Idee vom Geld auf Programme. Seine Blockchain führt Smart Contracts aus: Codestücke, die automatisch ausgeführt werden, wenn ihre Bedingungen erfüllt sind – etwa eine Zahlung am Liefertermin freigeben oder eine Wette über den Ausgang eines Spiels abrechnen –, ohne dass eine Partei eingreifen könnte. Der Begriff wurde in den 1990er-Jahren vom Informatiker Nick Szabo geprägt, aber erst eine Blockchain machte ihn praktikabel.\n\n| Begriff | Bedeutung |\n|---|---|\n| Blockchain | fälschungssichere, dezentrale Kette von Transaktionsblöcken |\n| Mining | Proof-of-Work-Wettbewerb, der neue Blöcke erzeugt |\n| Satoshi Nakamoto | pseudonymer Autor des Bitcoin-Whitepapers |\n| Wallet | Software oder Gerät, das die privaten Schlüssel verwahrt |\n| Smart Contracts | selbstausführende Programme auf einer Blockchain |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1008",
+   "baseHash": "60175182c3e4",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-194",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-386",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Fathers of the Network: Five Inventions That Made the Connected World",
+    "titleDe": "Väter des Netzes: Fünf Erfindungen, die die vernetzte Welt schufen",
+    "bodyEn": "The digital world we take for granted was not invented once. It was assembled, over roughly thirty years, out of a handful of ideas that each had an identifiable author, and it is worth keeping them apart, because the terms are constantly confused.\n\nThe foundation is the Internet itself, the network of networks. In 1973 and 1974 Vint Cerf and Bob Kahn, working for the American defence research agency ARPA, designed a way for computers on completely different networks to exchange packets of data as if they were on one. Their Transmission Control Protocol and Internet Protocol, together TCP/IP, were switched on across the ARPANET on 1 January 1983, a date often taken as the birthday of the Internet. Cerf and Kahn received the Turing Award for it in 2004 and are routinely called the fathers of the Internet.\n\nBefore there was anything to browse, there was something to send. In 1971 the programmer Ray Tomlinson, working on the ARPANET at the firm Bolt Beranek and Newman, wrote the first program that could deliver a message from a user on one machine to a user on another. He needed a character to separate the person from the computer and chose the little-used @ sign on his teletype keyboard, so that addresses read \"user at host\". Tomlinson could not later remember what the first email said; he suspected it was something like QWERTYUIOP.\n\nThe invention most people mean when they say \"the Internet\" is younger. In March 1989 Tim Berners-Lee, a British physicist and computer scientist at CERN in Geneva, proposed a system for linking documents across the laboratory's many incompatible computers. By the end of 1990 he had written the three components that still define it: HTML, the language of pages; HTTP, the protocol that fetches them; and the URL, the address that names them, along with the first browser and the first server. He called it the World Wide Web and, crucially, persuaded CERN in 1993 to release it royalty-free, which is why it spread everywhere within a few years. The Web runs on top of the Internet; it is not the same thing.\n\nTwo of the tools with which we reach the Web have fathers of their own. On 9 December 1968 the American engineer Douglas Engelbart gave a ninety-minute presentation in San Francisco that has since been called \"the mother of all demos\", showing video conferencing, hypertext, collaborative editing and a small wooden box on wheels that moved a pointer on the screen. That box was the computer mouse, patented by Engelbart and built by his colleague Bill English at the Stanford Research Institute.\n\nAnd on 25 August 1991 a 21-year-old Finnish student, Linus Torvalds, posted to a newsgroup that he was writing a free operating system as a hobby, \"nothing big and professional\". The kernel he released, Linux, combined with the GNU tools of Richard Stallman's Free Software Foundation, now runs most of the servers on the Internet, every Android phone and all of the world's top 500 supercomputers.\n\n| Invention | Father(s) | Year |\n|---|---|---|\n| computer mouse | Douglas Engelbart | 1968 |\n| email | Ray Tomlinson | 1971 |\n| TCP/IP | Vint Cerf, Bob Kahn | 1974 / 1983 |\n| World Wide Web | Tim Berners-Lee | 1989–1991 |\n| Linux | Linus Torvalds | 1991 |\n\nNone of these five inventors patented their central idea for profit, and that generosity, more than any single technology, is what made the connected world possible.",
+    "bodyDe": "Die digitale Welt, die wir für selbstverständlich halten, wurde nicht ein einziges Mal erfunden. Sie wurde über etwa dreißig Jahre hinweg aus einer Handvoll Ideen zusammengesetzt, von denen jede einen benennbaren Urheber hat – und es lohnt sich, sie auseinanderzuhalten, denn die Begriffe werden ständig verwechselt.\n\nDas Fundament ist das Internet selbst, das Netz der Netze. 1973 und 1974 entwarfen Vint Cerf und Bob Kahn, die für die amerikanische Verteidigungsforschungsbehörde ARPA arbeiteten, ein Verfahren, mit dem Computer in völlig verschiedenen Netzen Datenpakete austauschen konnten, als wären sie in einem einzigen. Ihr Transmission Control Protocol und Internet Protocol, zusammen TCP/IP, wurden am 1. Januar 1983 im gesamten ARPANET eingeschaltet – ein Datum, das oft als Geburtstag des Internets gilt. Cerf und Kahn erhielten dafür 2004 den Turing Award und werden regelmäßig als Väter des Internets bezeichnet.\n\nBevor es etwas zu browsen gab, gab es etwas zu verschicken. 1971 schrieb der Programmierer Ray Tomlinson, der bei der Firma Bolt Beranek and Newman am ARPANET arbeitete, das erste Programm, das eine Nachricht von einem Nutzer auf einem Rechner an einen Nutzer auf einem anderen zustellen konnte. Er brauchte ein Zeichen, um die Person vom Computer zu trennen, und wählte das wenig benutzte @-Zeichen auf seiner Fernschreibertastatur, sodass Adressen als „Nutzer bei Rechner“ zu lesen waren. Tomlinson konnte sich später nicht mehr erinnern, was in der ersten E-Mail stand; er vermutete etwas wie QWERTYUIOP.\n\nDie Erfindung, die die meisten meinen, wenn sie „das Internet“ sagen, ist jünger. Im März 1989 schlug Tim Berners-Lee, ein britischer Physiker und Informatiker am CERN in Genf, ein System vor, um Dokumente über die vielen inkompatiblen Computer des Labors hinweg zu verknüpfen. Bis Ende 1990 hatte er die drei Bestandteile geschrieben, die es bis heute ausmachen: HTML, die Sprache der Seiten; HTTP, das Protokoll, das sie abruft; und die URL, die Adresse, die sie benennt – dazu den ersten Browser und den ersten Server. Er nannte es World Wide Web und überzeugte das CERN 1993 – das war entscheidend –, es lizenzfrei freizugeben, weshalb es sich binnen weniger Jahre überall verbreitete. Das Web läuft auf dem Internet; es ist nicht dasselbe.\n\nZwei der Werkzeuge, mit denen wir das Web erreichen, haben eigene Väter. Am 9. Dezember 1968 hielt der amerikanische Ingenieur Douglas Engelbart in San Francisco eine neunzigminütige Präsentation, die seither „die Mutter aller Demos“ genannt wird: Er zeigte Videokonferenzen, Hypertext, gemeinsames Bearbeiten von Texten und ein kleines Holzkästchen auf Rädern, das einen Zeiger auf dem Bildschirm bewegte. Dieses Kästchen war die Computermaus, von Engelbart patentiert und von seinem Kollegen Bill English am Stanford Research Institute gebaut.\n\nUnd am 25. August 1991 schrieb ein 21-jähriger finnischer Student, Linus Torvalds, in eine Newsgroup, er arbeite als Hobby an einem freien Betriebssystem, „nichts Großes und Professionelles“. Der Kern, den er veröffentlichte, Linux, läuft heute – kombiniert mit den GNU-Werkzeugen von Richard Stallmans Free Software Foundation – auf den meisten Servern des Internets, auf jedem Android-Telefon und auf allen 500 schnellsten Supercomputern der Welt.\n\n| Erfindung | Vater/Väter | Jahr |\n|---|---|---|\n| Computermaus | Douglas Engelbart | 1968 |\n| E-Mail | Ray Tomlinson | 1971 |\n| TCP/IP | Vint Cerf, Bob Kahn | 1974 / 1983 |\n| World Wide Web | Tim Berners-Lee | 1989–1991 |\n| Linux | Linus Torvalds | 1991 |\n\nKeiner dieser fünf Erfinder ließ seine zentrale Idee gewinnbringend patentieren – und diese Großzügigkeit, mehr als jede einzelne Technologie, hat die vernetzte Welt möglich gemacht.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1092",
+   "baseHash": "c778a20d2c35",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-178",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-216",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-227",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Founders of the Social Web",
+    "titleDe": "Die Gründer des sozialen Netzes",
+    "bodyEn": "The internet of the early 2000s was built by small groups of friends in rented rooms, and the names on the founding documents have become as familiar as the logos. The company in the original question started as a side project inside a failing one. In 2006 the podcasting start-up Odeo, run by Evan Williams and Noah Glass, was being overtaken by Apple's iTunes, and during a brainstorming session the engineer Jack Dorsey proposed a service for sending short status messages by text message to a group of friends. Glass came up with the name, Biz Stone helped build the prototype, and the first message, „just setting up my twttr“, was sent on 21 March 2006 by Dorsey himself – the first tweet, the name that stuck for every publicly readable short message on the service. Twitter was spun out as its own company the following year, its 140-character limit was inherited from the length of an SMS (in November 2017 it was doubled to 280 characters), and by the 2010s it had become the medium in which news broke. Elon Musk bought it in 2022 and renamed it X in 2023.\n\nThe founders' habit of starting in a garage is older. Larry Page and Sergey Brin met as doctoral students at Stanford in 1995 and built a search engine, first called BackRub, that ranked pages by the links pointing to them. They incorporated Google on 4 September 1998 in the garage of Susan Wojcicki in Menlo Park; the name is a misspelling of „googol“, the number 1 followed by 100 zeros. Since 2015 the company has been a subsidiary of the holding Alphabet.\n\nFacebook began in a Harvard dormitory. Mark Zuckerberg launched „Thefacebook“ on 4 February 2004 with his roommates Dustin Moskovitz and Chris Hughes, the programmer Andrew McCollum and the business student Eduardo Saverin, who put up the first money. It was restricted to Harvard students, then to other universities, and opened to everyone aged 13 and over on 26 September 2006. The company changed its name to Meta in 2021. Its origin story also ended up in court: the Harvard twins Cameron and Tyler Winklevoss, who had asked Zuckerberg in 2003 to program their own campus network, later called ConnectU, sued him in 2004 for allegedly stealing their idea. In 2008 they settled with Mark Zuckerberg's company for a package worth about 65 million dollars, a dispute later retold in the film „The Social Network“.\n\nYouTube was founded by three former PayPal employees, Steve Chen, Chad Hurley and Jawed Karim, on 14 February 2005; the story goes that they could not find a way to share videos of a dinner party. The first clip, „Me at the zoo“, shows Karim in front of the elephants in San Diego. Google bought YouTube for 1.65 billion dollars in November 2006, only eighteen months later.\n\nInstagram was the smallest team of all. Kevin Systrom and Mike Krieger, two Stanford graduates, launched the photo-sharing app for the iPhone on 6 October 2010 after stripping down a location-based check-in service called Burbn to its most popular feature, the filtered photo. It reached a million users in two months and was bought by Facebook for one billion dollars in April 2012, when it still had thirteen employees.\n\n| Company | Founded | Founders |\n|---|---|---|\n| Google | 1998 | Larry Page, Sergey Brin |\n| Facebook | 2004 | Mark Zuckerberg, Eduardo Saverin, Dustin Moskovitz, Chris Hughes, Andrew McCollum |\n| YouTube | 2005 | Steve Chen, Chad Hurley, Jawed Karim |\n| Twitter | 2006 | Jack Dorsey, Noah Glass, Biz Stone, Evan Williams |\n| Instagram | 2010 | Kevin Systrom, Mike Krieger |\n\nFive companies, twelve years and fewer than twenty founders: between them they defined how a generation searches, shares and argues online.",
+    "bodyDe": "Das Internet der frühen 2000er-Jahre wurde von kleinen Gruppen von Freunden in gemieteten Zimmern gebaut, und die Namen auf den Gründungsurkunden sind so vertraut geworden wie die Logos. Das Unternehmen der ursprünglichen Frage begann als Nebenprojekt in einem scheiternden. 2006 wurde das Podcasting-Start-up Odeo, geführt von Evan Williams und Noah Glass, von Apples iTunes überholt, und bei einer Ideensitzung schlug der Programmierer Jack Dorsey einen Dienst vor, mit dem man kurze Statusmeldungen per SMS an eine Gruppe von Freunden schicken konnte. Glass erfand den Namen, Biz Stone half beim Bau des Prototyps, und die erste Nachricht, „just setting up my twttr“, wurde am 21. März 2006 von Dorsey selbst verschickt – der erste Tweet, wie seither jede öffentlich lesbare Kurznachricht des Dienstes heißt. Twitter wurde im folgenden Jahr als eigenes Unternehmen ausgegliedert, seine Grenze von 140 Zeichen stammte von der Länge einer SMS (im November 2017 wurde sie auf 280 Zeichen verdoppelt), und in den 2010er-Jahren war es zu dem Medium geworden, in dem Nachrichten zuerst bekannt wurden. Elon Musk kaufte es 2022 und benannte es 2023 in X um.\n\nDie Gewohnheit der Gründer, in einer Garage anzufangen, ist älter. Larry Page und Sergey Brin lernten sich 1995 als Doktoranden in Stanford kennen und bauten eine Suchmaschine, zunächst BackRub genannt, die Seiten nach den auf sie verweisenden Links bewertete. Am 4. September 1998 gründeten sie Google in der Garage von Susan Wojcicki in Menlo Park; der Name ist eine Falschschreibung von „Googol“, der Zahl 1 mit 100 Nullen. Seit 2015 ist das Unternehmen eine Tochter der Holding Alphabet.\n\nFacebook begann in einem Wohnheim in Harvard. Mark Zuckerberg startete „Thefacebook“ am 4. Februar 2004 mit seinen Zimmergenossen Dustin Moskovitz und Chris Hughes, dem Programmierer Andrew McCollum und dem Wirtschaftsstudenten Eduardo Saverin, der das erste Geld beisteuerte. Es war zunächst auf Harvard-Studenten beschränkt, dann auf andere Universitäten, und öffnete sich am 26. September 2006 für alle ab 13 Jahren. 2021 benannte sich das Unternehmen in Meta um. Seine Gründungsgeschichte landete auch vor Gericht: Die Harvard-Zwillinge Cameron und Tyler Winklevoss, die Zuckerberg 2003 gebeten hatten, ihr eigenes Campus-Netzwerk zu programmieren, das spätere ConnectU, verklagten ihn 2004, weil er ihre Idee gestohlen haben soll. 2008 einigten sie sich mit dem Unternehmen von Mark Zuckerberg auf ein Paket im Wert von rund 65 Millionen Dollar – ein Streit, den später der Film „The Social Network“ nacherzählte.\n\nYouTube wurde am 14. Februar 2005 von drei ehemaligen PayPal-Mitarbeitern gegründet, Steve Chen, Chad Hurley und Jawed Karim; der Legende nach fanden sie keinen Weg, Videos von einer Dinnerparty zu teilen. Der erste Clip, „Me at the zoo“, zeigt Karim vor den Elefanten in San Diego. Google kaufte YouTube im November 2006 für 1,65 Milliarden Dollar, nur achtzehn Monate später.\n\nInstagram war das kleinste Team von allen. Kevin Systrom und Mike Krieger, zwei Stanford-Absolventen, brachten die Foto-App für das iPhone am 6. Oktober 2010 heraus, nachdem sie einen ortsbasierten Check-in-Dienst namens Burbn auf seine beliebteste Funktion reduziert hatten, das gefilterte Foto. Sie erreichte in zwei Monaten eine Million Nutzer und wurde im April 2012 für eine Milliarde Dollar von Facebook gekauft, als sie noch dreizehn Mitarbeiter hatte.\n\n| Unternehmen | Gegründet | Gründer |\n|---|---|---|\n| Google | 1998 | Larry Page, Sergey Brin |\n| Facebook | 2004 | Mark Zuckerberg, Eduardo Saverin, Dustin Moskovitz, Chris Hughes, Andrew McCollum |\n| YouTube | 2005 | Steve Chen, Chad Hurley, Jawed Karim |\n| Twitter | 2006 | Jack Dorsey, Noah Glass, Biz Stone, Evan Williams |\n| Instagram | 2010 | Kevin Systrom, Mike Krieger |\n\nFünf Unternehmen, zwölf Jahre und weniger als zwanzig Gründer: Zusammen haben sie bestimmt, wie eine Generation online sucht, teilt und streitet.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1020",
+   "baseHash": "60a9ed57ded1",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-140",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-163",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Fifteen Years That Built the Social Web",
+    "titleDe": "Fünfzehn Jahre, die das soziale Netz bauten",
+    "bodyEn": "The websites that billions of people open every day were, almost without exception, founded within a single decade – and by very small groups of people. The oldest of them started as a side project. On 9 March 2000 the internet entrepreneur Jimmy Wales and the philosophy graduate Larry Sanger launched Nupedia, a free online encyclopedia whose articles were written by experts and passed through a seven-stage peer review. It was rigorous and hopelessly slow: after a year it had published only about two dozen articles. Sanger proposed a faster feeder site built on „wiki“ software, which lets any visitor edit a page directly, and on 15 January 2001 Wikipedia went online. Within a year it had 20,000 articles; the German edition, among the first in other languages, followed in March 2001, and Nupedia was quietly shut down in 2003. Today Wikipedia has more than 60 million articles in over 300 languages, is run by the non-profit Wikimedia Foundation and remains the only site among the world's most visited to carry no advertising.\n\nThe social web followed in quick succession. On 4 February 2004 the Harvard student Mark Zuckerberg, with Eduardo Saverin, Dustin Moskovitz and Chris Hughes, launched „Thefacebook“ from his dormitory; it opened to other universities, then to everyone over 13 in 2006, and by 2012 Facebook had a billion users. On 14 February 2005 three former PayPal employees, Chad Hurley (born 1977), Steve Chen and Jawed Karim, registered the domain of YouTube; Karim's 19-second clip „Me at the zoo“, uploaded on 23 April 2005, was the first video, and Google bought the company for 1.65 billion dollars in November 2006. Twitter followed in 2006. On 28 April 2009 Kickstarter, founded by Perry Chen, Yancey Strickler and Charles Adler, opened in New York as an internet community for funding creative projects: backers pledge money to films, games or gadgets and receive rewards if the goal is reached. In 2011 the Chinese internet company Tencent released WeChat (Weixin), a messaging app that grew into China's largest social networking platform, combining chat, a social feed and payments, and passed a billion monthly users in 2018. And on 6 October 2010 Kevin Systrom and Mike Krieger released Instagram, a photo-sharing app for the iPhone with square pictures and retro filters; it gained a million users in two months and was bought by Facebook for about a billion dollars in April 2012, when it still had thirteen employees.\n\n| Platform | Founded | Founders |\n|---|---|---|\n| Nupedia | March 2000 | Jimmy Wales, Larry Sanger |\n| Wikipedia | 15 January 2001 | Jimmy Wales, Larry Sanger |\n| Facebook | 4 February 2004 | Mark Zuckerberg and co-founders |\n| YouTube | February 2005 | Chad Hurley, Steve Chen, Jawed Karim |\n| Kickstarter | 28 April 2009 | Perry Chen, Yancey Strickler, Charles Adler |\n| Instagram | 6 October 2010 | Kevin Systrom, Mike Krieger |\n| WeChat | 2011 | Tencent |\n\nWhat unites these stories is how little the founders foresaw. Wales and Sanger thought the wiki was a scaffold for the „real“ encyclopedia; Zuckerberg built a directory for one campus; the YouTube founders were trying to build a video dating site. Each platform found its purpose through its users – which, in the case of Wikipedia, is the whole idea.",
+    "bodyDe": "Die Websites, die Milliarden Menschen täglich öffnen, wurden fast ausnahmslos innerhalb eines einzigen Jahrzehnts gegründet – und von sehr kleinen Gruppen von Menschen. Die älteste von ihnen begann als Nebenprojekt. Am 9. März 2000 starteten der Internetunternehmer Jimmy Wales und der Philosophieabsolvent Larry Sanger Nupedia, eine freie Online-Enzyklopädie, deren Artikel von Experten geschrieben wurden und ein siebenstufiges Begutachtungsverfahren durchliefen. Sie war gründlich und hoffnungslos langsam: Nach einem Jahr hatte sie nur etwa zwei Dutzend Artikel veröffentlicht. Sanger schlug eine schnellere Zulieferseite auf Basis der „Wiki“-Software vor, die jedem Besucher erlaubt, eine Seite direkt zu bearbeiten, und am 15. Januar 2001 ging Wikipedia online. Binnen eines Jahres hatte sie 20.000 Artikel; die deutsche Ausgabe, eine der ersten in einer anderen Sprache, folgte im März 2001, und Nupedia wurde 2003 still eingestellt. Heute hat Wikipedia mehr als 60 Millionen Artikel in über 300 Sprachen, wird von der gemeinnützigen Wikimedia Foundation betrieben und bleibt die einzige der meistbesuchten Websites der Welt ohne Werbung.\n\nDas soziale Netz folgte in rascher Folge. Am 4. Februar 2004 startete der Harvard-Student Mark Zuckerberg mit Eduardo Saverin, Dustin Moskovitz und Chris Hughes aus seinem Wohnheim „Thefacebook“; es öffnete sich anderen Universitäten, 2006 dann allen über 13 Jahren, und 2012 hatte Facebook eine Milliarde Nutzer. Am 14. Februar 2005 registrierten drei ehemalige PayPal-Mitarbeiter, Chad Hurley (geboren 1977), Steve Chen und Jawed Karim, die Domain von YouTube; Karims 19-Sekunden-Clip „Me at the zoo“, hochgeladen am 23. April 2005, war das erste Video, und Google kaufte das Unternehmen im November 2006 für 1,65 Milliarden Dollar. Twitter folgte 2006. Am 28. April 2009 ging in New York Kickstarter an den Start, gegründet von Perry Chen, Yancey Strickler und Charles Adler: eine Internet-Community zur Finanzierung kreativer Projekte, bei der Unterstützer Filmen, Spielen oder technischen Geräten Geld zusagen und Gegenleistungen erhalten, wenn das Ziel erreicht wird. 2011 veröffentlichte der chinesische Internetkonzern Tencent WeChat (Weixin), eine Messenger-App, die zu Chinas größter Social-Networking-Plattform heranwuchs, Chat, sozialen Feed und Bezahlen vereint und 2018 die Marke von einer Milliarde monatlichen Nutzern überschritt. Und am 6. Oktober 2010 veröffentlichten Kevin Systrom und Mike Krieger Instagram, eine Foto-App für das iPhone mit quadratischen Bildern und Retro-Filtern; sie gewann in zwei Monaten eine Million Nutzer und wurde im April 2012 für rund eine Milliarde Dollar von Facebook gekauft, als sie noch dreizehn Mitarbeiter hatte.\n\n| Plattform | Gegründet | Gründer |\n|---|---|---|\n| Nupedia | März 2000 | Jimmy Wales, Larry Sanger |\n| Wikipedia | 15. Januar 2001 | Jimmy Wales, Larry Sanger |\n| Facebook | 4. Februar 2004 | Mark Zuckerberg und Mitgründer |\n| YouTube | Februar 2005 | Chad Hurley, Steve Chen, Jawed Karim |\n| Kickstarter | 28. April 2009 | Perry Chen, Yancey Strickler, Charles Adler |\n| Instagram | 6. Oktober 2010 | Kevin Systrom, Mike Krieger |\n| WeChat | 2011 | Tencent |\n\nWas diese Geschichten verbindet, ist, wie wenig die Gründer vorhersahen. Wales und Sanger hielten das Wiki für ein Gerüst für die „echte“ Enzyklopädie; Zuckerberg baute ein Verzeichnis für einen einzigen Campus; die YouTube-Gründer wollten eine Video-Dating-Seite bauen. Jede Plattform fand ihren Zweck durch ihre Nutzer – was im Fall von Wikipedia die ganze Idee ist.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0972",
+   "baseHash": "ed46ad219636",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-269",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-267",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Alphabet Soup: The Acronyms Behind Your Internet Connection",
+    "titleDe": "Buchstabensuppe: Die Abkürzungen hinter Ihrer Internetverbindung",
+    "bodyEn": "Anyone who has set up a home router has met a wall of capital letters. Networking is a field built from acronyms, and most of them are simply compressed descriptions that make perfect sense once they are spelled out. Following the path of a web page from the telephone socket to the screen introduces the most important.\n\nThe connection begins at the wall. In most European homes broadband arrives over the ordinary copper telephone line using DSL, which stands for Digital Subscriber Line. Developed in the late 1980s – AT&T Bell Labs filed a patent on the basic concept in 1988, and Bellcore engineers created the asymmetric variant – DSL sends data in frequency bands above those used for voice, so that telephone and internet can share one cable; the common asymmetric variant, ADSL, gives more bandwidth for downloading than for uploading. Fibre and cable are gradually replacing it, but tens of millions of DSL lines are still in use.\n\nInside the house the router distributes the connection over WLAN – Wireless Local Area Network – a local network that uses radio waves in the 2.4 and 5 gigahertz bands instead of Ethernet cables. German speakers say WLAN where the rest of the world says Wi-Fi, a brand name created in 1999 by the Wi-Fi Alliance for products certified to the IEEE 802.11 standards; the two terms describe the same technology. The first 802.11 standard, published on 18 November 1997, managed 2 megabits per second; today's Wi-Fi 7 exceeds 40 gigabits.\n\n| Acronym | Full form | Function |\n|---|---|---|\n| DSL | Digital Subscriber Line | broadband over the telephone line |\n| WLAN | Wireless Local Area Network | wireless home or office network |\n| VPN | Virtual Private Network | encrypted tunnel across a public network |\n| URL | Uniform Resource Locator | address of a resource on the web |\n| HTTP | Hypertext Transfer Protocol | protocol for requesting and delivering web pages |\n| IP | Internet Protocol | addressing and routing of data packets |\n| VoIP | Voice over IP | telephone calls over the internet |\n\nMany users add a layer of privacy with a VPN, a Virtual Private Network. It creates an encrypted tunnel between the user's device and a server elsewhere, so that the local network operator or a café's Wi-Fi cannot read the traffic and the outside world sees only the server's address. Companies use VPNs to connect home workers to the office network; private users often use them to avoid geo-blocking. One of the first widely used VPN protocols, Microsoft's PPTP, was published as an open specification in July 1999.\n\nEvery device along the way, from the router to the server at the other end, is identified by an IP address, and the letters IP stand for Internet Protocol. Specified in its version 4 as RFC 791 in September 1981, the Internet Protocol defines how data is cut into packets and how each packet carries a sender and a destination address – a 32-bit number usually written as four values such as 192.168.0.1; because those four billion addresses have run out, the newer IPv6 uses 128 bits. The same packets can carry a voice: with VoIP, Voice over IP, you can make phone calls over the internet, and most German landlines now run on it as well.\n\nOnce the connection exists, the browser needs to know what to fetch. Every page and image on the web has an address called a URL, a Uniform Resource Locator, such as https://www.example.org/index.html. Tim Berners-Lee designed the scheme in 1990 at CERN, and it packs three pieces of information into one string: the protocol to use, the server's name and the path of the resource on that server. The format was standardised in 1994 as RFC 1738.\n\nThe protocol named at the start of most URLs is HTTP, the Hypertext Transfer Protocol, also created by Berners-Lee, who documented its first version, HTTP/0.9, in 1991. It is a simple conversation: the browser sends a request such as “GET /index.html”, and the server answers with a status code – 200 for success, the notorious 404 for “not found” – followed by the page itself. HTTPS is the same conversation wrapped in encryption, which is why browsers show a padlock beside it.",
+    "bodyDe": "Wer je einen Heimrouter eingerichtet hat, ist auf eine Wand aus Großbuchstaben gestoßen. Die Netzwerktechnik ist ein Feld aus Abkürzungen, und die meisten davon sind einfach komprimierte Beschreibungen, die vollkommen einleuchten, sobald man sie ausschreibt. Wer den Weg einer Webseite von der Telefondose bis zum Bildschirm verfolgt, lernt die wichtigsten kennen.\n\nDie Verbindung beginnt an der Wand. In den meisten europäischen Haushalten kommt das Breitband über die gewöhnliche Kupfer-Telefonleitung per DSL, was für Digital Subscriber Line steht. Ende der 1980er-Jahre entwickelt – AT&T Bell Labs meldete 1988 ein Patent auf das Grundprinzip an, und Ingenieure von Bellcore schufen die asymmetrische Variante – sendet DSL Daten in Frequenzbändern oberhalb derer, die für die Sprache genutzt werden, sodass Telefon und Internet sich ein Kabel teilen können; die verbreitete asymmetrische Variante ADSL bietet mehr Bandbreite zum Herunterladen als zum Hochladen. Glasfaser und Kabel verdrängen sie allmählich, doch Dutzende Millionen DSL-Anschlüsse sind noch in Betrieb.\n\nIm Haus verteilt der Router die Verbindung per WLAN – Wireless Local Area Network –, ein lokales Netz, das statt Ethernet-Kabeln Funkwellen in den Bändern um 2,4 und 5 Gigahertz nutzt. Im Deutschen sagt man WLAN, wo der Rest der Welt Wi-Fi sagt, ein Markenname, den die Wi-Fi Alliance 1999 für Produkte schuf, die nach den IEEE-802.11-Standards zertifiziert sind; beide Begriffe beschreiben dieselbe Technik. Der erste 802.11-Standard, veröffentlicht am 18. November 1997, schaffte 2 Megabit pro Sekunde; das heutige Wi-Fi 7 übertrifft 40 Gigabit.\n\n| Abkürzung | Ausgeschrieben | Funktion |\n|---|---|---|\n| DSL | Digital Subscriber Line | Breitband über die Telefonleitung |\n| WLAN | Wireless Local Area Network | drahtloses Heim- oder Büronetz |\n| VPN | Virtual Private Network | verschlüsselter Tunnel durch ein öffentliches Netz |\n| URL | Uniform Resource Locator | Adresse einer Ressource im Web |\n| HTTP | Hypertext Transfer Protocol | Protokoll zum Anfordern und Ausliefern von Webseiten |\n| IP | Internet Protocol | Adressierung und Weiterleitung von Datenpaketen |\n| VoIP | Voice over IP | Telefonieren über das Internet |\n\nViele Nutzer fügen mit einem VPN, einem Virtual Private Network, eine Schicht Privatsphäre hinzu. Es baut einen verschlüsselten Tunnel zwischen dem Gerät des Nutzers und einem Server anderswo auf, sodass weder der Betreiber des lokalen Netzes noch das Café-WLAN den Datenverkehr mitlesen können und die Außenwelt nur die Adresse des Servers sieht. Unternehmen verbinden damit Heimarbeiter mit dem Firmennetz; Privatnutzer umgehen damit häufig Geoblocking. Eines der ersten weit verbreiteten VPN-Protokolle, Microsofts PPTP, wurde im Juli 1999 als offene Spezifikation veröffentlicht.\n\nJedes Gerät auf dem Weg, vom Router bis zum Server am anderen Ende, wird über eine IP-Adresse angesprochen, und die Buchstaben IP stehen für Internet Protocol. In seiner Version 4 im September 1981 als RFC 791 festgelegt, bestimmt das Internet Protocol, wie Daten in Pakete zerlegt werden und wie jedes Paket eine Absender- und eine Zieladresse trägt – eine 32-Bit-Zahl, meist als vier Werte wie 192.168.0.1 geschrieben; weil diese vier Milliarden Adressen erschöpft sind, nutzt das neuere IPv6 128 Bit. Dieselben Pakete können auch eine Stimme tragen: Mit VoIP, Voice over IP, kann man über das Internet telefonieren, und auch die meisten deutschen Festnetzanschlüsse laufen inzwischen darüber.\n\nSteht die Verbindung, muss der Browser wissen, was er holen soll. Jede Seite und jedes Bild im Web hat eine Adresse namens URL, Uniform Resource Locator, etwa https://www.example.org/index.html. Tim Berners-Lee entwarf das Schema 1990 am CERN, und es packt drei Informationen in eine einzige Zeichenkette: das zu verwendende Protokoll, den Namen des Servers und den Pfad der Ressource auf diesem Server. Standardisiert wurde das Format 1994 als RFC 1738.\n\nDas Protokoll am Anfang der meisten URLs ist HTTP, das Hypertext Transfer Protocol, ebenfalls von Berners-Lee geschaffen, der die erste Version, HTTP/0.9, 1991 dokumentierte. Es ist ein einfaches Gespräch: Der Browser schickt eine Anfrage wie „GET /index.html“, und der Server antwortet mit einem Statuscode – 200 für Erfolg, die berüchtigte 404 für „nicht gefunden“ – gefolgt von der Seite selbst. HTTPS ist dasselbe Gespräch in Verschlüsselung verpackt, weshalb Browser daneben ein Schloss anzeigen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1140",
+   "baseHash": "9c0086fce5dd",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-271",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Who Runs the Internet? DENIC, ICANN and Friends",
+    "titleDe": "Wer betreibt das Internet? DENIC, ICANN und Co.",
+    "bodyEn": "The internet has no owner and no government, but it does have administrators. A handful of organisations, most of them non-profit and little known outside the industry, keep the address system working so that a name typed into a browser reliably leads to the right computer.\n\nAt the top of the system stands ICANN, the Internet Corporation for Assigned Names and Numbers, founded on 30 September 1998 in California. Its task is the global coordination of domain names and IP addresses: ICANN decides which top-level domains exist (.com, .org, .de, .berlin and many hundreds more), oversees the root servers of the Domain Name System and, through its IANA function, allocates blocks of IP addresses to the regional registries. ICANN itself does not register a single domain; it delegates each top-level domain to a registry.\n\nFor Germany's country domain that registry is DENIC eG, based in Frankfurt am Main. Founded on 17 December 1996 as a cooperative (eingetragene Genossenschaft, hence 'eG') of internet providers, its task is the administration of .de domains: it maintains the central database of all names under .de, runs the name servers that answer queries for them, and sets the rules for who may register what. With more than 17 million registered names, .de is one of the largest country-code domains in the world, second only to China's .cn among country codes. It was not always meant to be alone: the GDR had been assigned the top-level domain .dd, but it was never delegated in the public Domain Name System – it was used only internally in an isolated university network – and it became obsolete with reunification in 1990, leaving .de for the whole country. DENIC does not sell domains to end customers either; registration goes through its member companies and providers, from web hosters to telecoms firms.\n\nThe technical machinery both organisations serve is the Domain Name System, DNS, the 'telephone book of the internet' devised by Paul Mockapetris and specified in November 1983. Its job is the translation of domain names into IP addresses: when you type denic.de, a chain of name servers - root, .de, denic - answers with the numerical address that your computer actually needs to connect. Without DNS, every website would have to be remembered as a string of numbers.\n\nWhat appears on the page once the connection is made is the concern of the W3C, the World Wide Web Consortium, founded by web inventor Tim Berners-Lee at MIT on 1 October 1994. It is responsible for the standardisation of web technologies such as HTML and CSS, so that a page written once displays the same in every browser.\n\nAnd in Germany one more authority watches over the whole: the BSI, the Federal Office for Information Security (Bundesamt für Sicherheit in der Informationstechnik) in Bonn, founded on 1 January 1991, whose responsibility is IT security in Germany - from certifying encryption products and protecting the federal government's networks to warning the public about vulnerabilities and attacks.\n\n| Organisation | Responsible for |\n|---|---|\n| DENIC eG | The administration of .de domains |\n| ICANN | The global coordination of domain names and IP addresses |\n| DNS | The translation of domain names into IP addresses |\n| W3C | The standardisation of web technologies such as HTML and CSS |\n| BSI | IT security in Germany |\n\nNone of these bodies makes headlines, which is precisely the point: the address system of the internet works so quietly that most users have never heard of the organisations that keep it running.",
+    "bodyDe": "Das Internet hat keinen Eigentümer und keine Regierung, aber es hat Verwalter. Eine Handvoll Organisationen, die meisten gemeinnützig und außerhalb der Branche wenig bekannt, halten das Adresssystem am Laufen, damit ein in den Browser getippter Name zuverlässig zum richtigen Rechner führt.\n\nAn der Spitze des Systems steht die ICANN, die Internet Corporation for Assigned Names and Numbers, am 30. September 1998 in Kalifornien gegründet. Ihre Aufgabe ist die weltweite Koordination von Domainnamen und IP-Adressen: Die ICANN entscheidet, welche Top-Level-Domains es gibt (.com, .org, .de, .berlin und viele Hundert mehr), beaufsichtigt die Root-Server des Domain Name System und weist über ihre IANA-Funktion den regionalen Registries Blöcke von IP-Adressen zu. Die ICANN selbst registriert keine einzige Domain; sie delegiert jede Top-Level-Domain an eine Registry.\n\nFür Deutschlands Länderdomain ist diese Registry die DENIC eG mit Sitz in Frankfurt am Main. Am 17. Dezember 1996 als eingetragene Genossenschaft (daher „eG“) von Internetanbietern gegründet, ist ihre Aufgabe die Verwaltung der .de-Domains: Sie führt die zentrale Datenbank aller Namen unter .de, betreibt die Nameserver, die Anfragen zu ihnen beantworten, und legt die Regeln fest, wer was registrieren darf. Mit mehr als 17 Millionen registrierten Namen ist .de eine der größten Länderdomains der Welt, unter den Ländercodes nur von Chinas .cn übertroffen. Allein sollte sie nicht immer sein: Für die DDR war die Top-Level-Domain .dd vorgesehen, doch sie wurde nie im öffentlichen Domain Name System delegiert – genutzt wurde sie nur intern in einem abgeschotteten Hochschulnetz – und mit der Wiedervereinigung 1990 wurde sie hinfällig, sodass .de für das ganze Land blieb. Auch die DENIC verkauft keine Domains an Endkunden; die Registrierung läuft über ihre Mitgliedsunternehmen und Provider, vom Webhoster bis zum Telekommunikationskonzern.\n\nDie technische Maschinerie, der beide Organisationen dienen, ist das Domain Name System, DNS, das „Telefonbuch des Internets“, das Paul Mockapetris entwarf und das im November 1983 spezifiziert wurde. Seine Aufgabe ist die Übersetzung von Domainnamen in IP-Adressen: Tippt man denic.de ein, antwortet eine Kette von Nameservern – Root, .de, denic – mit der numerischen Adresse, die der Rechner tatsächlich für die Verbindung braucht. Ohne DNS müsste man sich jede Website als Zahlenfolge merken.\n\nWas auf der Seite erscheint, sobald die Verbindung steht, ist Sache des W3C, des World Wide Web Consortium, das der Web-Erfinder Tim Berners-Lee am 1. Oktober 1994 am MIT gründete. Es ist zuständig für die Standardisierung von Webtechnologien wie HTML und CSS, damit eine einmal geschriebene Seite in jedem Browser gleich angezeigt wird.\n\nUnd in Deutschland wacht noch eine Behörde über das Ganze: das BSI, das Bundesamt für Sicherheit in der Informationstechnik in Bonn, gegründet am 1. Januar 1991, dessen Zuständigkeit die IT-Sicherheit in Deutschland ist – von der Zertifizierung von Verschlüsselungsprodukten und dem Schutz der Netze der Bundesverwaltung bis zu Warnungen an die Öffentlichkeit vor Sicherheitslücken und Angriffen.\n\n| Organisation | Zuständig für |\n|---|---|\n| DENIC eG | Die Verwaltung der .de-Domains |\n| ICANN | Die weltweite Koordination von Domainnamen und IP-Adressen |\n| DNS | Die Übersetzung von Domainnamen in IP-Adressen |\n| W3C | Die Standardisierung von Webtechnologien wie HTML und CSS |\n| BSI | Die IT-Sicherheit in Deutschland |\n\nKeine dieser Stellen macht Schlagzeilen, und genau das ist der Punkt: Das Adresssystem des Internets funktioniert so leise, dass die meisten Nutzer noch nie von den Organisationen gehört haben, die es am Laufen halten.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0504",
+   "baseHash": "9152f7b759ac",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-206",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Packed Words: Portmanteaus of the Computer Age",
+    "titleDe": "Gepackte Wörter: Kofferwörter des Computerzeitalters",
+    "bodyEn": "Lewis Carroll coined the term in \"Through the Looking-Glass\": a portmanteau word, Humpty Dumpty explains, is like the two-compartment travelling bag of the same name — \"two meanings packed up into one word\". Computing, which has needed thousands of new words in eighty years, has produced more of them than any other field. Six of the most common are so familiar that most users no longer notice the seam.\n\nThe German word for a computer file is one of the youngest. \"Datei\" was coined in the 1960s for the punched-card and magnetic-tape era, when a file really was a stack of records, and it is a blend of Daten and Kartei — \"data\" and \"card index\". The word is a rare case of a German computing term that did not simply borrow the English one; \"file\" survives only in loanwords and in the menus of untranslated software.\n\nA modem is a modulator and demodulator in one box. To send digital bits over an analogue telephone line the device modulates them onto an audible carrier tone, and at the other end a second modem demodulates the tone back into bits. Mass production began in 1958 for the SAGE air-defence system, and the first commercial version, Bell's 101 of 1959, managed 110 bits per second; the screeching handshake of a 56k dial-up modem was the sound of the 1990s internet.\n\nA pixel is a picture and element fused together — in the abbreviated form \"pix\" that American journalists had used for \"pictures\" since the 1930s. The word appeared in 1965 in papers by Frederic Billingsley of the Jet Propulsion Laboratory, who needed a term for the dots of the images sent back from the Ranger and Mariner spacecraft. The thing itself is older than the word: Russell Kirsch made the first digitally scanned image, of his baby son, in 1957. Its sibling \"voxel\" (volume element) followed for three-dimensional scans.\n\nThe bit is the oldest of the six. The statistician John Tukey proposed the contraction of binary and digit in a Bell Labs memo of 9 January 1947, rejecting \"bigit\" and \"binit\", and Claude Shannon put it into print a year later in \"A Mathematical Theory of Communication\", where it became the unit of information itself. The byte, eight bits, was named at IBM in 1956 — deliberately misspelt so that it would not be mistyped as \"bit\".\n\nThe podcast shows how quickly a brand can dissolve into a common noun. The journalist Ben Hammersley suggested the word in \"The Guardian\" in February 2004, packing iPod and broadcast together to describe the audio shows that people were downloading to Apple's music player via RSS feeds. Apple itself never owned the term, most podcasts were never played on an iPod, and the iPod has been discontinued — but the word won the New Oxford American Dictionary's Word of the Year in 2005 and outlived the device.\n\nThe blog took the same road from the other direction. In December 1997 the American writer Jorn Barger called his website, a daily log of the links he found while surfing, a weblog – a log of the web. In 1999 the designer Peter Merholz jokingly split the word into \"we blog\" in the sidebar of his own site, and the clipped form stuck: the weblog (blog) became so common that \"to blog\" and \"blogger\" followed, and today the short form has all but replaced the original.\n\n| Portmanteau | Packed from | Coined |\n|---|---|---|\n| Datei | Daten and Kartei | 1960s, Germany |\n| Modem | modulator and demodulator | 1950s, Bell Labs |\n| Pixel | picture and element | 1965, F. Billingsley (JPL) |\n| Bit | binary and digit | 1947, John Tukey |\n| Podcast | iPod and broadcast | 2004, Ben Hammersley |\n| Weblog (blog) | web and log | 1997, Jorn Barger |",
+    "bodyDe": "Lewis Carroll prägte den Begriff in „Alice hinter den Spiegeln“: Ein Portmanteau-Wort, erklärt Humpty Dumpty, sei wie die gleichnamige zweiteilige Reisetasche – „zwei Bedeutungen, in ein Wort gepackt“. Die Informatik, die in achtzig Jahren Tausende neuer Wörter gebraucht hat, hat mehr davon hervorgebracht als jedes andere Fach. Sechs der häufigsten sind so vertraut, dass die meisten Nutzer die Naht nicht mehr bemerken.\n\nDas deutsche Wort für eine Computerdatei ist eines der jüngsten. „Datei“ wurde in den 1960er-Jahren für die Ära der Lochkarten und Magnetbänder geprägt, als eine Datei tatsächlich ein Stapel von Datensätzen war, und es ist eine Verschmelzung aus Daten und Kartei. Das Wort ist der seltene Fall eines deutschen Computerbegriffs, der nicht einfach den englischen übernahm; „File“ überlebt nur in Lehnwörtern und in den Menüs unübersetzter Software.\n\nEin Modem ist Modulator und Demodulator in einem Gehäuse. Um digitale Bits über eine analoge Telefonleitung zu schicken, moduliert das Gerät sie auf einen hörbaren Trägerton, und am anderen Ende demoduliert ein zweites Modem den Ton zurück in Bits. Die Serienfertigung begann 1958 für das Luftverteidigungssystem SAGE, und die erste kommerzielle Version, Bells Modell 101 von 1959, schaffte 110 Bit pro Sekunde; das kreischende Handshake eines 56k-Wählmodems war der Klang des Internets der 1990er-Jahre.\n\nEin Pixel ist eine Verschmelzung aus Picture und Element – in der verkürzten Form „pix“, die amerikanische Journalisten seit den 1930er-Jahren für „pictures“ benutzten. Das Wort tauchte 1965 in Aufsätzen von Frederic Billingsley vom Jet Propulsion Laboratory auf, der einen Begriff für die Punkte der Bilder brauchte, die die Raumsonden Ranger und Mariner zur Erde funkten. Die Sache ist älter als das Wort: Russell Kirsch erstellte 1957 das erste digital gescannte Bild, von seinem kleinen Sohn. Sein Geschwisterwort „Voxel“ (volume element) folgte für dreidimensionale Scans.\n\nDas Bit ist das älteste der sechs. Der Statistiker John Tukey schlug die Zusammenziehung von Binary und Digit in einem Bell-Labs-Memo vom 9. Januar 1947 vor und verwarf „bigit“ und „binit“; Claude Shannon druckte es ein Jahr später in „A Mathematical Theory of Communication“, wo es zur Einheit der Information selbst wurde. Das Byte, acht Bit, wurde 1956 bei IBM benannt – absichtlich falsch geschrieben, damit es nicht versehentlich zu „bit“ vertippt würde.\n\nDer Podcast zeigt, wie schnell sich eine Marke in ein Gattungswort auflösen kann. Der Journalist Ben Hammersley schlug das Wort im Februar 2004 im „Guardian“ vor und packte iPod und Broadcast zusammen, um die Audiosendungen zu beschreiben, die die Leute per RSS-Feed auf Apples Musikspieler luden. Apple selbst hat den Begriff nie besessen, die meisten Podcasts wurden nie auf einem iPod abgespielt, und der iPod ist inzwischen eingestellt – doch das Wort wurde 2005 vom New Oxford American Dictionary zum Wort des Jahres gekürt und hat das Gerät überlebt.\n\nDas Blog ging denselben Weg aus der anderen Richtung. Im Dezember 1997 nannte der amerikanische Autor Jorn Barger seine Website, ein tägliches Protokoll der Links, die er beim Surfen gefunden hatte, ein Weblog – ein Logbuch des Webs. 1999 zerlegte der Designer Peter Merholz das Wort in der Seitenleiste seiner eigenen Website scherzhaft in „we blog“, und die Kurzform setzte sich durch: Das Weblog (Blog) wurde so alltäglich, dass „bloggen“ und „Blogger“ folgten, und heute hat die Kurzform das Original fast verdrängt.\n\n| Kofferwort | Gepackt aus | Geprägt |\n|---|---|---|\n| Datei | Daten und Kartei | 1960er-Jahre, Deutschland |\n| Modem | Modulator und Demodulator | 1950er-Jahre, Bell Labs |\n| Pixel | Picture und Element | 1965, F. Billingsley (JPL) |\n| Bit | Binary und Digit | 1947, John Tukey |\n| Podcast | iPod und Broadcast | 2004, Ben Hammersley |\n| Weblog (Blog) | Web und Log | 1997, Jorn Barger |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-363",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-151",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-171",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Domain, registriert am 15. März 1985, gilt als erste .com-Domain der Welt?",
+      "en": "Which domain, registered on 15 March 1985, is regarded as the first .com domain in the world?",
+      "answerDe": "symbolics.com",
+      "answerEn": "symbolics.com",
+      "timeline": {
+       "kind": "event",
+       "start": "1985-03-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The computer maker Symbolics registers symbolics.com, the first .com domain",
+       "labelDe": "Der Computerhersteller Symbolics registriert symbolics.com, die erste .com-Domain"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Symbolics",
+       "title": "Symbolics – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welcher Webadresse veröffentlichte Tim Berners-Lee im Dezember 1990 am CERN die erste Website?",
+      "en": "Under which web address did Tim Berners-Lee publish the first website at CERN in December 1990?",
+      "answerDe": "info.cern.ch",
+      "answerEn": "info.cern.ch",
+      "timeline": {
+       "kind": "creation",
+       "start": "1990-12-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Tim Berners-Lee publishes the first website at CERN",
+       "labelDe": "Tim Berners-Lee veröffentlicht am CERN die erste Website"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Info.cern.ch",
+       "title": "info.cern.ch – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Telekommunikationsunternehmen bezahlte das am häufigsten genannte erste Werbebanner, das am 27. Oktober 1994 auf der Website von HotWired erschien?",
+      "en": "Which telecommunications company paid for the first widely cited banner ad, shown on the HotWired website on 27 October 1994?",
+      "answerDe": "AT&T",
+      "answerEn": "AT&T",
+      "timeline": {
+       "kind": "event",
+       "start": "1994-10-27",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "HotWired shows the first widely cited web banner ad, paid for by AT&T",
+       "labelDe": "HotWired zeigt das am häufigsten genannte erste Werbebanner, bezahlt von AT&T"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Web_banner",
+       "title": "Web banner – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher japanische Designer schuf 1999 den ersten Emoji-Satz für das mobile Internet i-mode von NTT DoCoMo?",
+      "en": "Which Japanese designer created the first emoji set for NTT DoCoMo's i-mode mobile internet in 1999?",
+      "answerDe": "Shigetaka Kurita",
+      "answerEn": "Shigetaka Kurita",
+      "timeline": {
+       "kind": "creation",
+       "start": "1999",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Shigetaka Kurita designs 176 emoji for NTT DoCoMo's i-mode",
+       "labelDe": "Shigetaka Kurita entwirft 176 Emoji für i-mode von NTT DoCoMo"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Emoji",
+       "title": "Emoji – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Firsts of the Connected World",
+    "titleDe": "Premieren der vernetzten Welt",
+    "bodyEn": "Every technology that now feels ordinary had a first time, and the firsts of the internet age are often charmingly modest. Many of them were never meant for the public at all.\n\nThe word came before the thing most people know. In December 1974 Vint Cerf, Yogen Dalal and Carl Sunshine wrote RFC 675, the specification of the Transmission Control Program, and used \"Internet\" as a short form of \"internetwork\" – a network of networks. The word had turned up earlier in other senses, but 1974 is when it took on its modern meaning; the general public only heard it two decades later.\n\nCommerce began with a name. On 15 March 1985 the Massachusetts computer maker Symbolics registered symbolics.com, regarded as the first .com domain in the world. The company is long gone, but the address is still registered and kept today as a piece of internet history.\n\nThe web itself began on a single machine. On 20 December 1990 Tim Berners-Lee published the first website at CERN near Geneva under the address info.cern.ch, served from a NeXT computer that carried a handwritten label warning colleagues not to switch it off. Its pages explained the World Wide Web project itself: what hypertext was, how to set up a server, how to find documents. CERN restored the site in 2013.\n\nThe first webcam was born of laziness. In 1991 researchers at the University of Cambridge Computer Laboratory pointed a camera at the shared pot in the Trojan Room, so that colleagues on other floors could see whether there was any coffee left before making the trip. What the world's first webcam showed was therefore a coffee machine; Quentin Stafford-Fraser and Paul Jardetzky wrote the software, the picture went onto the web in November 1993, and when the camera was switched off on 22 August 2001 the pot was sold in an online auction.\n\nThe mobile phone received its first text message as a Christmas card. On 3 December 1992 the engineer Neil Papworth typed \"Merry Christmas\" on a computer and sent it to the phone of the Vodafone director Richard Jarvis, who was at an office party; phones could not yet send a reply.\n\nAdvertising arrived with a dare. On 27 October 1994 the online magazine HotWired showed a banner paid for by AT&T that asked \"Have you ever clicked your mouse right here? You will.\" – the most widely cited first banner ad on the web.\n\nAnd the picture language of the smartphone began in Japan. In 1999 the designer Shigetaka Kurita drew 176 small pictograms, 12 by 12 pixels each, for NTT DoCoMo's i-mode mobile internet: the first emoji set. The Museum of Modern Art in New York added the originals to its collection in 2016.\n\n| Year | First | Who |\n|---|---|---|\n| 1974 | \"Internet\" as a short form | Cerf, Dalal, Sunshine |\n| 1985 | symbolics.com | Symbolics |\n| 1990 | info.cern.ch | Tim Berners-Lee |\n| 1991 | Trojan Room webcam | Stafford-Fraser, Jardetzky |\n| 1992 | SMS \"Merry Christmas\" | Neil Papworth |\n| 1994 | banner ad | AT&T on HotWired |\n| 1999 | emoji | Shigetaka Kurita |",
+    "bodyDe": "Jede Technik, die heute alltäglich wirkt, hatte ein erstes Mal, und die Premieren des Internetzeitalters sind oft rührend bescheiden. Viele waren überhaupt nicht für die Öffentlichkeit gedacht.\n\nDas Wort kam vor der Sache, die die meisten kennen. Im Dezember 1974 schrieben Vint Cerf, Yogen Dalal und Carl Sunshine RFC 675, die Spezifikation des Transmission Control Program, und verwendeten „Internet“ als Kurzform von „Internetwork“ – ein Netz aus Netzen. Das Wort war schon früher in anderen Bedeutungen aufgetaucht, doch 1974 erhielt es seinen heutigen Sinn; die breite Öffentlichkeit hörte es erst zwei Jahrzehnte später.\n\nDer Handel begann mit einem Namen. Am 15. März 1985 registrierte der Computerhersteller Symbolics aus Massachusetts die Domain symbolics.com, die als erste .com-Domain der Welt gilt. Die Firma gibt es längst nicht mehr, doch die Adresse ist bis heute registriert und wird als Stück Internetgeschichte gepflegt.\n\nDas Web selbst begann auf einem einzigen Rechner. Am 20. Dezember 1990 veröffentlichte Tim Berners-Lee am CERN bei Genf die erste Website unter der Adresse info.cern.ch, ausgeliefert von einem NeXT-Computer mit einem handgeschriebenen Zettel, der die Kollegen warnte, ihn nicht auszuschalten. Ihre Seiten erklärten das World-Wide-Web-Projekt selbst: was Hypertext ist, wie man einen Server einrichtet, wie man Dokumente findet. 2013 stellte das CERN die Seite wieder her.\n\nDie erste Webcam entsprang der Bequemlichkeit. 1991 richteten Forscher des Computerlabors der Universität Cambridge eine Kamera auf die gemeinsame Kanne im Trojan Room, damit Kollegen in anderen Stockwerken sehen konnten, ob noch Kaffee da war, bevor sie sich auf den Weg machten. Die erste Webcam der Welt zeigte also eine Kaffeemaschine; Quentin Stafford-Fraser und Paul Jardetzky schrieben die Software, im November 1993 kam das Bild ins Web, und als die Kamera am 22. August 2001 abgeschaltet wurde, wurde die Kanne in einer Online-Auktion versteigert.\n\nDas Mobiltelefon erhielt seine erste Kurznachricht als Weihnachtsgruß. Am 3. Dezember 1992 tippte der Ingenieur Neil Papworth „Merry Christmas“ in einen Computer und schickte es an das Handy des Vodafone-Managers Richard Jarvis, der gerade auf einer Firmenfeier war; antworten konnten Handys damals noch nicht.\n\nDie Werbung kam mit einer Herausforderung. Am 27. Oktober 1994 zeigte das Onlinemagazin HotWired ein von AT&T bezahltes Banner mit der Frage „Have you ever clicked your mouse right here? You will.“ – das am häufigsten genannte erste Werbebanner des Webs.\n\nUnd die Bildsprache des Smartphones begann in Japan. 1999 zeichnete der Designer Shigetaka Kurita 176 kleine Piktogramme von je 12 mal 12 Pixeln für das mobile Internet i-mode von NTT DoCoMo: den ersten Emoji-Satz. Das Museum of Modern Art in New York nahm die Originale 2016 in seine Sammlung auf.\n\n| Jahr | Premiere | Wer |\n|---|---|---|\n| 1974 | „Internet“ als Kurzform | Cerf, Dalal, Sunshine |\n| 1985 | symbolics.com | Symbolics |\n| 1990 | info.cern.ch | Tim Berners-Lee |\n| 1991 | Webcam im Trojan Room | Stafford-Fraser, Jardetzky |\n| 1992 | SMS „Merry Christmas“ | Neil Papworth |\n| 1994 | Werbebanner | AT&T auf HotWired |\n| 1999 | Emoji | Shigetaka Kurita |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-197",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-159",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Suchmaschine, entwickelt von Forschern der Digital Equipment Corporation, ging am 15. Dezember 1995 online?",
+      "en": "Which search engine, developed by researchers at Digital Equipment Corporation, went online on 15 December 1995?",
+      "answerDe": "AltaVista",
+      "answerEn": "AltaVista",
+      "timeline": {
+       "kind": "founding",
+       "start": "1995-12-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "AltaVista, developed at Digital Equipment Corporation, goes online",
+       "labelDe": "AltaVista, entwickelt bei der Digital Equipment Corporation, geht online"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/AltaVista",
+       "title": "AltaVista – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Diener aus den Romanen von P. G. Wodehouse gab einer 1996 in Berkeley gegründeten Frage-Suchmaschine seinen Namen?",
+      "en": "Which valet from P. G. Wodehouse's novels gave his name to a question-answering search engine founded in Berkeley in 1996?",
+      "answerDe": "Jeeves",
+      "answerEn": "Jeeves",
+      "timeline": {
+       "kind": "founding",
+       "start": "1996",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ask Jeeves, the search engine with a butler mascot, is founded in Berkeley",
+       "labelDe": "Ask Jeeves, die Suchmaschine mit dem Butler-Maskottchen, wird in Berkeley gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ask.com",
+       "title": "Ask.com – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Suchmaschine, im Jahr 2000 von Robin Li und Eric Xu in Peking gegründet, beherrscht den chinesischen Suchmarkt?",
+      "en": "Which search engine, founded in Beijing in 2000 by Robin Li and Eric Xu, dominates the Chinese search market?",
+      "answerDe": "Baidu",
+      "answerEn": "Baidu",
+      "timeline": {
+       "kind": "founding",
+       "start": "2000-01-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Robin Li and Eric Xu found Baidu in Beijing",
+       "labelDe": "Robin Li und Eric Xu gründen Baidu in Peking"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Baidu",
+       "title": "Baidu – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welchem Namen startete Microsoft seine Suchmaschine Live Search am 3. Juni 2009 neu?",
+      "en": "Under which name did Microsoft relaunch its search engine Live Search on 3 June 2009?",
+      "answerDe": "Bing",
+      "answerEn": "Bing",
+      "timeline": {
+       "kind": "founding",
+       "start": "2009-06-03",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Microsoft replaces Live Search with Bing",
+       "labelDe": "Microsoft ersetzt Live Search durch Bing"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Microsoft_Bing",
+       "title": "Microsoft Bing – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Archie to Google: A Short History of Searching the Net",
+    "titleDe": "Von Archie bis Google: Eine kurze Geschichte der Suche im Netz",
+    "bodyEn": "Before anyone could search the web, people searched archives. In 1990 Alan Emtage, a student at McGill University in Montreal, wrote a program that regularly collected the file lists of public FTP servers and let users search them by file name. He called it Archie – \"archive\" without the v – and it is generally considered the first internet search engine. The first search engines for the web itself, such as W3Catalog and ALIWEB, followed in 1993.\n\nThe mid-1990s produced a crowd of competitors. On 15 December 1995 AltaVista went online, developed by researchers at Digital Equipment Corporation in Palo Alto partly to show off the power of the company's Alpha servers. It was among the first to index the full text of a large part of the web, and for a few years it was the search engine of choice. Ask Jeeves, founded in Berkeley in 1996, promised that users could simply type a question in plain English; its mascot was a butler named after Jeeves, the unflappable valet in P. G. Wodehouse's novels. The butler was dropped in 2006, when the service became Ask.com.\n\nGoogle, incorporated on 4 September 1998, overtook them all by ranking pages according to the links pointing to them. Its scale is hard to picture, and yet its queries never stop being new: according to Google, 15 percent of the searches it sees every day are ones it has never seen before – questions that nobody has typed in exactly that form.\n\nNot every market fell to Google. In China, Robin Li and Eric Xu founded Baidu in Beijing on 18 January 2000; its name comes from a Song-dynasty poem about searching for someone \"hundreds and thousands of times\", and the company holds a dominant position in the Chinese search market. Microsoft, after years of renaming MSN Search and Windows Live Search, relaunched its engine as Bing on 3 June 2009; it powers the search in Windows and, through partnerships, in many other services.\n\n| Search engine | Launched | Behind it |\n|---|---|---|\n| Archie | 1990 | Alan Emtage, McGill University |\n| AltaVista | 1995 | Digital Equipment Corporation |\n| Ask Jeeves | 1996 | Garrett Gruener, David Warthen |\n| Google | 1998 | Larry Page, Sergey Brin |\n| Baidu | 2000 | Robin Li, Eric Xu |\n| Bing | 2009 | Microsoft |\n\nMore than three decades after Archie the basic promise is unchanged: type a few words, and a machine that has read more than any person could points you to what you were looking for.",
+    "bodyDe": "Bevor man das Web durchsuchen konnte, durchsuchte man Archive. 1990 schrieb Alan Emtage, Student an der McGill University in Montreal, ein Programm, das regelmäßig die Dateilisten öffentlicher FTP-Server sammelte und sie nach Dateinamen durchsuchbar machte. Er nannte es Archie – „archive“ ohne das v –, und es gilt allgemein als erste Internet-Suchmaschine. Die ersten Suchmaschinen für das Web selbst, etwa W3Catalog und ALIWEB, folgten 1993.\n\nDie Mitte der 1990er-Jahre brachte eine ganze Schar von Konkurrenten hervor. Am 15. Dezember 1995 ging AltaVista online, entwickelt von Forschern der Digital Equipment Corporation in Palo Alto, auch um die Leistung der hauseigenen Alpha-Server vorzuführen. Sie gehörte zu den ersten, die den Volltext eines großen Teils des Webs erfassten, und war einige Jahre lang die Suchmaschine der Wahl. Ask Jeeves, 1996 in Berkeley gegründet, versprach, man könne einfach eine Frage in normalem Englisch eintippen; das Maskottchen war ein Butler, benannt nach Jeeves, dem unerschütterlichen Diener aus den Romanen von P. G. Wodehouse. 2006 wurde der Butler abgeschafft, als der Dienst zu Ask.com wurde.\n\nGoogle, am 4. September 1998 gegründet, überholte sie alle, indem es Seiten nach den auf sie verweisenden Links bewertete. Seine Größe ist kaum vorstellbar, und doch hören seine Anfragen nie auf, neu zu sein: Laut Google sind jeden Tag 15 Prozent der Suchanfragen solche, die es noch nie zuvor gesehen hat – Fragen, die niemand je in genau dieser Form eingetippt hat.\n\nNicht jeder Markt fiel an Google. In China gründeten Robin Li und Eric Xu am 18. Januar 2000 in Peking Baidu; der Name stammt aus einem Gedicht der Song-Dynastie über die Suche nach einem Menschen „hunderte und tausende Male“, und das Unternehmen hat eine beherrschende Stellung auf dem chinesischen Suchmarkt. Microsoft startete seine Suchmaschine nach Jahren der Umbenennungen von MSN Search und Windows Live Search am 3. Juni 2009 neu als Bing; sie liefert die Suche in Windows und über Partnerschaften in vielen anderen Diensten.\n\n| Suchmaschine | Gestartet | Dahinter |\n|---|---|---|\n| Archie | 1990 | Alan Emtage, McGill University |\n| AltaVista | 1995 | Digital Equipment Corporation |\n| Ask Jeeves | 1996 | Garrett Gruener, David Warthen |\n| Google | 1998 | Larry Page, Sergey Brin |\n| Baidu | 2000 | Robin Li, Eric Xu |\n| Bing | 2009 | Microsoft |\n\nMehr als drei Jahrzehnte nach Archie ist das Grundversprechen unverändert: Man tippt ein paar Wörter ein, und eine Maschine, die mehr gelesen hat, als ein Mensch je könnte, zeigt einem, wonach man gesucht hat.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-322",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Doktorand der Cornell University setzte am 2. November 1988 den Wurm frei, der einen großen Teil des frühen Internets lahmlegte?",
+      "en": "Which Cornell graduate student released the worm of 2 November 1988 that crippled a large part of the early internet?",
+      "answerDe": "Robert Tappan Morris",
+      "answerEn": "Robert Tappan Morris",
+      "timeline": {
+       "kind": "event",
+       "start": "1988-11-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Robert Tappan Morris releases the Morris worm from a computer at MIT",
+       "labelDe": "Robert Tappan Morris setzt von einem Rechner am MIT den Morris-Wurm frei"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Morris_worm",
+       "title": "Morris worm – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Aus welchem Land stammte der Computerwurm ILOVEYOU, der sich im Mai 2000 per E-Mail verbreitete?",
+      "en": "From which country did the ILOVEYOU worm, which spread by email in May 2000, originate?",
+      "answerDe": "Philippinen",
+      "answerEn": "Philippines",
+      "timeline": {
+       "kind": "event",
+       "start": "2000-05-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The ILOVEYOU worm, written in Manila, begins spreading by email",
+       "labelDe": "Der in Manila geschriebene Wurm ILOVEYOU beginnt, sich per E-Mail zu verbreiten"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/ILOVEYOU",
+       "title": "ILOVEYOU – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher britische Gesundheitsdienst gehörte im Mai 2017 zu den am schwersten getroffenen Opfern der Erpressungssoftware WannaCry?",
+      "en": "Which British health service was among the hardest-hit victims of the WannaCry ransomware attack in May 2017?",
+      "answerDe": "National Health Service",
+      "answerEn": "National Health Service",
+      "timeline": {
+       "kind": "event",
+       "start": "2017-05-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The WannaCry ransomware attack begins and hits Britain's National Health Service",
+       "labelDe": "Der Angriff der Erpressungssoftware WannaCry beginnt und trifft den britischen National Health Service"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+       "title": "WannaCry ransomware attack – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Land war das Hauptziel des Angriffs der Schadsoftware NotPetya im Juni 2017?",
+      "en": "Which country was the main target of the NotPetya malware attack of June 2017?",
+      "answerDe": "Ukraine",
+      "answerEn": "Ukraine",
+      "timeline": {
+       "kind": "event",
+       "start": "2017-06-27",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The NotPetya attack begins, aimed mainly at Ukraine",
+       "labelDe": "Der Angriff mit NotPetya beginnt, vor allem gegen die Ukraine gerichtet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/2017_Ukraine_ransomware_attacks",
+       "title": "2017 Ukraine ransomware attacks – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Worms, Viruses and Ransom: Famous Malware Attacks",
+    "titleDe": "Würmer, Viren und Lösegeld: Berühmte Angriffe mit Schadsoftware",
+    "bodyEn": "Computer viruses began as pranks and experiments; within a few decades they had become instruments of crime and of war. A handful of attacks stand out as turning points.\n\nThe first to make front pages was the Morris worm. On 2 November 1988 Robert Tappan Morris, a graduate student at Cornell, released a self-copying program from a computer at MIT, apparently to gauge the size of the internet. A flaw made it infect the same machines again and again, and within a day thousands of the connected computers had slowed to a halt. Morris became the first person convicted of a felony under the US Computer Fraud and Abuse Act of 1986 – and later a professor at MIT.\n\nStrictly speaking, a virus needs a host file and a user to pass it on, while a worm spreads across networks by itself. The ILOVEYOU worm of 4 May 2000 added a trick of the mind: an email with the subject \"ILOVEYOU\" and an attachment that looked like a love letter. It originated in the Philippines, where the former student Onel de Guzman had written it, and within days it had reached tens of millions of Windows computers worldwide. Because the Philippines had no law against writing malware at the time, he was never prosecuted.\n\nStuxnet, discovered in June 2010, showed that code could be a weapon. The worm – often loosely called a virus – was built to disrupt Iran's nuclear programme: it sought out the Siemens control systems of the uranium centrifuges at Natanz and made them spin out of control while showing the operators normal readings. It is widely attributed to the United States and Israel, though neither has officially admitted it.\n\nRansomware turned infection into a business. On 12 May 2017 WannaCry encrypted the files of more than 200,000 computers in some 150 countries and demanded payment in bitcoin; among the hardest-hit victims was Britain's National Health Service, where hospitals had to cancel operations and divert ambulances. Six weeks later, on 27 June 2017, NotPetya struck. Disguised as ransomware but built to destroy data, it spread through a hacked Ukrainian accounting program, and Ukraine was its main target, with around 80 percent of infections, before it spilled over to companies around the world, among them the shipping giant Maersk.\n\n| Year | Malware | Remembered for |\n|---|---|---|\n| 1988 | Morris worm | first worm to cripple the internet |\n| 2000 | ILOVEYOU | love-letter email from the Philippines |\n| 2010 | Stuxnet | sabotage of Iran's centrifuges |\n| 2017 | WannaCry | ransomware that hit the NHS |\n| 2017 | NotPetya | data destruction aimed at Ukraine |",
+    "bodyDe": "Computerviren begannen als Streiche und Experimente; binnen weniger Jahrzehnte waren sie zu Werkzeugen des Verbrechens und des Krieges geworden. Eine Handvoll Angriffe ragt als Wendepunkte heraus.\n\nAls Erster schaffte es der Morris-Wurm auf die Titelseiten. Am 2. November 1988 setzte Robert Tappan Morris, Doktorand an der Cornell University, von einem Rechner am MIT aus ein sich selbst kopierendes Programm frei, angeblich um die Größe des Internets zu messen. Ein Fehler ließ es dieselben Rechner immer wieder befallen, und binnen eines Tages waren Tausende der angeschlossenen Computer zum Stillstand gekommen. Morris wurde als Erster nach dem US-amerikanischen Computer Fraud and Abuse Act von 1986 wegen eines Verbrechens verurteilt – und später Professor am MIT.\n\nGenau genommen braucht ein Virus eine Wirtsdatei und einen Nutzer, der es weitergibt, während sich ein Wurm selbstständig über Netzwerke verbreitet. Der Wurm ILOVEYOU vom 4. Mai 2000 fügte einen psychologischen Trick hinzu: eine E-Mail mit dem Betreff „ILOVEYOU“ und einem Anhang, der wie ein Liebesbrief aussah. Er stammte von den Philippinen, wo ihn der ehemalige Student Onel de Guzman geschrieben hatte, und binnen Tagen hatte er weltweit zig Millionen Windows-Rechner erreicht. Weil es auf den Philippinen damals kein Gesetz gegen das Schreiben von Schadsoftware gab, wurde er nie angeklagt.\n\nStuxnet, im Juni 2010 entdeckt, zeigte, dass Code eine Waffe sein kann. Der Wurm – oft ungenau Virus genannt – sollte Irans Atomprogramm stören: Er suchte gezielt die Siemens-Steuerungen der Uranzentrifugen in Natans und ließ sie außer Kontrolle drehen, während er den Bedienern normale Messwerte vorspielte. Er wird allgemein den USA und Israel zugeschrieben, auch wenn keiner der beiden Staaten es offiziell eingeräumt hat.\n\nErpressungssoftware machte aus der Infektion ein Geschäft. Am 12. Mai 2017 verschlüsselte WannaCry die Dateien von mehr als 200.000 Rechnern in rund 150 Ländern und verlangte Zahlung in Bitcoin; zu den am schwersten getroffenen Opfern gehörte der britische National Health Service, dessen Krankenhäuser Operationen absagen und Rettungswagen umleiten mussten. Sechs Wochen später, am 27. Juni 2017, schlug NotPetya zu. Als Erpressungssoftware getarnt, aber zum Zerstören von Daten gebaut, verbreitete es sich über eine gehackte ukrainische Buchhaltungssoftware, und die Ukraine war mit rund 80 Prozent der Infektionen sein Hauptziel, bevor es auf Unternehmen in aller Welt übergriff, darunter die Reederei Maersk.\n\n| Jahr | Schadprogramm | Bekannt für |\n|---|---|---|\n| 1988 | Morris-Wurm | erster Wurm, der das Internet lahmlegte |\n| 2000 | ILOVEYOU | Liebesbrief-Mail von den Philippinen |\n| 2010 | Stuxnet | Sabotage der iranischen Zentrifugen |\n| 2017 | WannaCry | Erpressungssoftware, die den NHS traf |\n| 2017 | NotPetya | Datenzerstörung mit Ziel Ukraine |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-182",
+   "category": 6,
+   "domain": "technology",
+   "sub": "computing",
+   "why": "Its answer \"PayPal\" repeats fact f09656 in a1932 (an article may not hold the same answer twice). Alias it to f09656 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

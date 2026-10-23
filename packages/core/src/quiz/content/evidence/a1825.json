@@ -1,0 +1,256 @@
+{
+ "article": "a1825",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Django_As%C3%BCl",
+   "title": "Django Asül – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:40.715Z",
+   "snapshot": "12f6b580d409e8dadde17eff4b1487a483a34be57fbf3a1d0615dd5298171629"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Fast_wia_im_richtigen_Leben",
+   "title": "Fast wia im richtigen Leben – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:41.686Z",
+   "snapshot": "be82c6d29aacf1a22aa0f936f4f34bdb69c8bc92e09c3e5b18ed97658a56730b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Scheibenwischer_(Kabarett)",
+   "title": "Scheibenwischer (Kabarett) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:42.685Z",
+   "snapshot": "04b3d99cc3418709590dfef24d63d5d63971d4df50abb266cdafd0af82d59ae5"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Neues_aus_der_Anstalt",
+   "title": "Neues aus der Anstalt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:06.571Z",
+   "snapshot": "97345f405e569684a7bdfe03a8742064b3bedef68d9addf530695aaaf5d19530"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Georg_Schramm",
+   "title": "Georg Schramm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:05.269Z",
+   "snapshot": "f3349845b685f6ca9d22f5b0b66f8b46144c971faa65bb5e6bab1afea820759b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/7_Tage,_7_K%C3%B6pfe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:43.676Z",
+   "snapshot": "c11dfe4d5f023b3fb335f4724a3b6f785b71653378da49139259367395409cda"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Dieter_Hildebrandt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:04.085Z",
+   "snapshot": "1934c96ba32bb598d1798efe05fb28604a971fe210a6bde57b3773085f4b7a73"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Django Asül",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gerhard Polt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f22800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Scheibenwischer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neues aus der Anstalt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f22802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lothar Dombrowski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:28.661Z",
+   "target": "f09121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Django Asül wuchs in der niederbayerischen Marktgemeinde Hengersberg als Sohn türkischer Einwanderer auf, die in einer Fabrik arbeiteten und eigentlich nach wenigen Jahren in die Türkei zurückkehren wollten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Django Asül” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:28.661Z",
+   "target": "f09122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fast wia im richtigen Leben  ist eine Fernsehserie in Sketchform von Hanns Christian Müller und Gerhard Polt, der sich hiermit erstmals einer breiten Öffentlichkeit als scharf beobachtender Humorist präsentierte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhard Polt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:28.661Z",
+   "target": "f22800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Scheibenwischer war eine von Dieter Hildebrandt begründete deutsche Kabarettsendung, die von der ARD im Ersten Deutschen Fernsehen („Das Erste“) ausgestrahlt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scheibenwischer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:28.661Z",
+   "target": "f22801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neues aus der Anstalt war eine politische Kabarettsendung, die vom deutschen Fernsehsender ZDF über 62 Folgen produziert und ausgestrahlt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neues aus der Anstalt” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:28.661Z",
+   "target": "f22802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lothar Dombrowski, ein renitenter altpreußischer Rentner (benannt nach einem ehemaligen Tagesschausprecher),",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lothar Dombrowski” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "article": "a0675",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Blaue_Reiter",
+   "title": "Der Blaue Reiter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:25.951Z",
+   "snapshot": "61f06bbf4db85c23aa2f131a62cc03d4307b8bd653cea9c57d26f96a86d0d0d3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Secession_Building",
+   "title": "Secession Building – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:28.170Z",
+   "snapshot": "f4609181aea48925b3d3d3611d851ce7aa6ff24f6045540d9e5069816501a3ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/De_Stijl",
+   "title": "De Stijl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:47.832Z",
+   "snapshot": "19ce3bb50cb02aa48c927e3f9b5e34a44ffb6b7905f01c6f61bcfbf516e3e029"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Briefmarken-Jahrgang_2002_der_Bundesrepublik_Deutschland",
+   "title": "Briefmarken-Jahrgang 2002 der Bundesrepublik Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:26.160Z",
+   "snapshot": "660e27de952188669c65100d36fbbbcf311e325b319845db96f913d36381a8ef"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%BCnstlerkolonie_Worpswede",
+   "title": "Künstlerkolonie Worpswede",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:27.157Z",
+   "snapshot": "6064f2e46c4e51f359a157ef7a8544dd8d807b085d51b12fddf365ec4b2e537d"
+  },
+  "s6": {
+   "url": "https://www.stampworld.com/en/stamps/Germany/Postage%20stamps/?year=2002",
+   "title": "Germany 2002 postage stamps – StampWorld",
+   "publisher": "StampWorld",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:18:48Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Blaue Reiter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vienna Secession",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "De Stijl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lyonel Feininger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-240"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Worpswede",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-376"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:24.514Z",
+   "target": "f03371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Blaue Reiter ist eine Bezeichnung von Wassily Kandinsky und Franz Marc für ihre Ausstellungs- und Publikationstätigkeit, bei der beide Künstler in dem erstmals Mitte Mai 1912 herausgegebenen gleichnamigen Almanach als alleinige Herausgeber fungierten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Blaue Reiter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.514Z",
+   "target": "f03374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was completed in 1898 by Joseph Maria Olbrich as an architectural manifesto for the Vienna Secession, a group of rebel artists that seceded from the long-established fine art institution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna Secession” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.514Z",
+   "target": "f03375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "De Stijl (, Dutch: [də ˈstɛil]; 'The Style') was a Dutch art movement founded in 1917 by a group of artists and architects based in Leiden (Theo van Doesburg, J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “De Stijl” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.514Z",
+   "target": "f10742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lyonel Feininger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Lyonel Feininger”, “Лионель Файнингер”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.514Z",
+   "target": "f10743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Künstlerkolonie Worpswede ist eine Lebens- und Arbeitsgemeinschaft von Künstlern in der Gemeinde Worpswede in Niedersachsen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Worpswede” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:48Z",
+   "target": "f10742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Painting by Lyonel Feininger",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Catalogue entry: issued 5 December 2002, Mi 2164, 55 cent, 130 million printed."
+  }
+ ]
+}

@@ -1,0 +1,288 @@
+{
+ "article": "a0796",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/La_Strada",
+   "title": "La Strada – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:52.441Z",
+   "snapshot": "bb4640e4419f62939583e9dc5d3c255ad64eb50dc3dfbe6fd505575c5aaa0e83"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bicycle_Thieves",
+   "title": "Bicycle Thieves – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:53.403Z",
+   "snapshot": "3cdfe211b408403da267bd193faa407d8783d484b1bea3364d9c99f7a6ec623b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rome,_Open_City",
+   "title": "Rome, Open City – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:54.334Z",
+   "snapshot": "9a9fcf204575d24e25a71a0f498c6011ed8a733e88b0305eef6b569db5b94489"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Leopard_(1963_film)",
+   "title": "The Leopard (1963 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:55.441Z",
+   "snapshot": "01dba3f78cce5748ab0fd0b2b6a7d21a88712b69c9e1baf2fe2ee6a3b0237323"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_the_West",
+   "title": "Once Upon a Time in the West – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:56.486Z",
+   "snapshot": "78fb46ffcb36b777ce40e4f8ba25a1cc71df8f51d5aa1316bbd683da1387c4d8"
+  },
+  "s6": {
+   "url": "https://it.wikipedia.org/wiki/C%27era_una_volta_il_West",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T04:20:53.851Z",
+   "snapshot": "6400dcd7a10bf67f90066f50cb342be75516b775e31cb417f6f6525b89242b13"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Federico Fellini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vittorio De Sica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Roberto Rossellini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luchino Visconti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sergio Leone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sergio Leone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:46.763Z",
+   "target": "f03976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La Strada (English: \"The Road\") is a 1954 Italian road tragedy film directed by Federico Fellini and co-written by Fellini, Tullio Pinelli and Ennio Flaiano.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Federico Fellini” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:46.763Z",
+   "target": "f03977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bicycle Thieves (Italian: Ladri di biciclette), also known as The Bicycle Thief, is a 1948 Italian neorealist drama film directed by Vittorio De Sica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vittorio De Sica” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:46.763Z",
+   "target": "f03978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rome, Open City (Italian: Roma città aperta), also released as Open City, is a 1945 Italian neorealist war drama film directed by Roberto Rossellini and co-written by Sergio Amidei, Celeste Negarville and Federico Fellini.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roberto Rossellini” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:46.763Z",
+   "target": "f03979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "'The Serval' [il ˌɡattoˈpardo]) is a 1963 epic historical drama film directed by Luchino Visconti.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luchino Visconti” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:46.763Z",
+   "target": "f03980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Once Upon a Time in the West (Italian: C'era una volta il West) is a 1968 epic spaghetti Western film directed by Sergio Leone from a screenplay he co-wrote with Sergio Donati.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sergio Leone” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:46.763Z",
+   "target": "f03980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "C'era una volta il West è un film del 1968 diretto da Sergio Leone.",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sergio Leone” is on the snapshot of s6"
+  }
+ ]
+}

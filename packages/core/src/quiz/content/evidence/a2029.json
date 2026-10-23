@@ -1,0 +1,335 @@
+{
+ "article": "a2029",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lee_Strasberg",
+   "title": "Lee Strasberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:31.110Z",
+   "snapshot": "9a3f8cada4df60086727c0cc1fb8504edc1871d4b5bc184dde899153331989b4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Method_acting",
+   "title": "Method acting",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:02.285Z",
+   "snapshot": "52e8bc5af5467a273405a45530d86ea0aef2fb9d28a3c3019f44d8c0b75bb57f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Moscow_Art_Theatre",
+   "title": "Moscow Art Theatre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:26.482Z",
+   "snapshot": "4c431e7da756299d9afeb1e2c139a308af2034eb839a2f27367bde5485b5d4f4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sanford_Meisner",
+   "title": "Sanford Meisner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:03.296Z",
+   "snapshot": "e9a3ac126b22e9090d8e2567d8c478fafaf84e43a2d3147b04c25a376cc37fc9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Distancing_effect",
+   "title": "Distancing effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:04.349Z",
+   "snapshot": "0c107517467d7be29c6ddff56b46988b73bb59ffb58eba40f339d9234ca943e2"
+  },
+  "s6": {
+   "url": "https://strasberg.edu/about/history/",
+   "title": "History | The Lee Strasberg Theatre & Film Institute",
+   "publisher": "The Lee Strasberg Theatre & Film Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:09.470Z",
+   "snapshot": "048129983fa7e0bb362c0322a8179ca8aa1c48c2ceb3828cc4e5a39cb08ff22b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Stanislavski%27s_system",
+   "title": "Stanislavski's system – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:08.883Z",
+   "snapshot": "cfdf6f77677c5af56a72c952ee30a6a8c394cdebef3bad953dd0568f6a3626e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Method Acting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Method Acting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-029"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stanislavski system",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Meisner technique",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "alienation effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:09.404Z",
+   "target": "f10141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Although other highly regarded teachers also developed versions of \"The Method\", Lee Strasberg is considered to be the \"father of method acting in America\", according to author Mel Gussow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Method Acting” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:09.404Z",
+   "target": "f10141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Method acting, known as the Method, is a group of rehearsal techniques that seek to encourage sincere and expressive performances through identifying with, understanding, and experiencing a character's inner motivation and emotions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Method Acting” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:09.404Z",
+   "target": "f10142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stanislavski system",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stanislavski system”, “Stanislawski-System”, “система Станиславского”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:09.404Z",
+   "target": "f10143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sanford Meisner (August 31, 1905 – February 2, 1997) was an American actor and acting teacher who developed an approach to acting instruction known as the Meisner technique.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meisner technique” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:09.404Z",
+   "target": "f10145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The distancing effect, also translated as alienation effect (German: Verfremdungseffekt or V-Effekt), is a concept in performing arts credited to German playwright Bertolt Brecht.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “alienation effect” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:09Z",
+   "target": "f10142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "taking Stanislavsky’s “system” and building what would eventually be called “The Method.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:12Z",
+   "target": "f10142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Strasberg developed the earliest of Stanislavski's techniques into what came to be known as \"Method acting\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:55.964Z",
+   "target": "f10142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "taking Stanislavsky’s “system” and building what would eventually be called “The Method.”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:55.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:55.964Z",
+   "target": "f10142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Strasberg developed the earliest of Stanislavski's techniques into what came to be known as \"Method acting\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:55.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

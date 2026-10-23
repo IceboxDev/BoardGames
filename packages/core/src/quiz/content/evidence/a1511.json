@@ -1,0 +1,374 @@
+{
+ "article": "a1511",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lagotto_Romagnolo",
+   "title": "Lagotto Romagnolo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:46.859Z",
+   "snapshot": "c2e1f6d781e0c0dab994a74f54f3ae4a608ecb34591ea5b7f22b9d3e41f50261"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Boletus_edulis",
+   "title": "Boletus edulis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:47.940Z",
+   "snapshot": "af931fedbd1354f6607d0e3bcd92369aad8796b8ca3620833d8a9a65c64fa50b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cantharellus_cibarius",
+   "title": "Cantharellus cibarius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:48.822Z",
+   "snapshot": "48769ff43ba0f4ced0e6136d60b41785c33e54b6405e417e8e32d66117d41f95"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Amanita_phalloides",
+   "title": "Amanita phalloides – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:49.920Z",
+   "snapshot": "0f7529d7ba39cd03e4d68d03fa78b6be1f486fd0143a253bdd7f9d65dc015ad3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Amanita_muscaria",
+   "title": "Amanita muscaria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:14.149Z",
+   "snapshot": "2df004f1a20195eac326fb47d7287b4dc20e65ce6b02abc6340ffae8456d01bf"
+  },
+  "s6": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868946/",
+   "title": "Mushroom Poisoning - PMC",
+   "publisher": "PubMed Central (NLM)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:18.862Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s7": {
+   "url": "https://www.cdc.gov/mmwr/volumes/66/wr/mm6621a1.htm",
+   "title": "Amanita phalloides Mushroom Poisonings — Northern California, December 2016  | MMWR",
+   "publisher": "Centers for Disease Control and Prevention",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:20.442Z",
+   "snapshot": "2b7c3aae3d167f46f5b4dd1fd7fdf64b4440a1e2ab4640fd65d87cd7153d3fc9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "truffles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "porcini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "chanterelle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "death cap",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "fly agaric",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:37.188Z",
+   "target": "f07551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After the drainage of large areas of wetland habitat in its area of origin in the nineteenth and twentieth centuries, it came to be more often used to hunt for truffles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “truffles” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:37.188Z",
+   "target": "f07552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "porcini), means porcine; fungo porcino, in Italian, echoes the term suilli, literally \"hog mushrooms\", a term used by the Ancient Romans and still in use in southern Italian terms for this species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “porcini” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:37.188Z",
+   "target": "f07553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cantharellus cibarius (Latin: cantharellus, \"chanterelle\"; cibarius, \"culinary\") is the golden chanterelle, the type species of the chanterelle genus Cantharellus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chanterelle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:37.188Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amanita phalloides ( AM-ə-NY-tə fə-LOY-deez), commonly known as the death cap, is a deadly poisonous basidiomycete fungus and mushroom, one of many in the genus Amanita.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “death cap” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:37.188Z",
+   "target": "f07555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Amanita muscaria, commonly known as the fly agaric or fly amanita or simply red toadstool, is a basidiomycete fungus of the genus Amanita.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fly agaric” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:27Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ninety percent of all fatal cases of mushroom poisoning are caused by Amanita phalloides",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:33Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ingestion of Amanita phalloides is responsible for a majority of mushroom-related deaths worldwide.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:38Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It has been involved in the majority of human deaths from mushroom poisoning",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:23.214Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ingestion of Amanita phalloides is responsible for a majority of mushroom-related deaths worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:23.214Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It has been involved in the majority of human deaths from mushroom poisoning",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:23.214Z",
+   "target": "f07554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Amanita phalloides, colloquially known as the “death cap,” belongs to the Phalloideae section of the Amanita family of mushrooms and is responsible for most deaths following ingestion of foraged mushrooms worldwide (1).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:23.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “death cap” is on the snapshot of s7"
+  }
+ ]
+}

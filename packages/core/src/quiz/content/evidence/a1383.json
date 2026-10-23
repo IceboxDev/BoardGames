@@ -1,0 +1,342 @@
+{
+ "article": "a1383",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Mosque,_Istanbul",
+   "title": "Blue Mosque, Istanbul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:39.433Z",
+   "snapshot": "0721d718b1f32cf00a1d16d5047db29232ad57852db1178c97ed277fb7b5f72e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/S%C3%BCleymaniye_Mosque",
+   "title": "Süleymaniye Mosque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:41.434Z",
+   "snapshot": "931a650598f7f543013f3d87a398fedb3676526d46351540a4f9575ea7999719"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Selimiye_Mosque,_Edirne",
+   "title": "Selimiye Mosque, Edirne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:08.341Z",
+   "snapshot": "2f62bf2bdde10f995309f3fa9faee255bad51447baead43da220d0e37dff601b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Topkap%C4%B1_Palace",
+   "title": "Topkapı Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:55.335Z",
+   "snapshot": "9cccfa6a3e8f6806466f8eb0dc0078c962ad54604dd542383a37ad91176f112d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Yerebatan-Zisterne",
+   "title": "Yerebatan-Zisterne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:05.510Z",
+   "snapshot": "e4ad3193811bfbf1bda419431582f244577ec4b9b9f90e7b1441b8484376ff55"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hagia_Sophia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:38.579Z",
+   "snapshot": "905106db3b562669f84bdfd97b73e5c255d2d9d4407aded7a6ac91b2de4c387d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Basilica_Cistern",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:40.327Z",
+   "snapshot": "65e8dc5e4f96634deebf47094d9af50515d1db76458e5a4a24d4b8732cbd2e2c"
+  },
+  "s8": {
+   "url": "https://snl.no/Mimar_Sinan",
+   "title": "Mimar Sinan – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "nb",
+   "retrievedAt": "2026-10-23T12:39:44.118Z",
+   "snapshot": "35154c946496e3040f25523a75a8c176959dd886ed11dbff9fac7d95b17e25ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blue Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Süleymaniye Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Selimiye Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Topkapi Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cisterna Basilica",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:17.190Z",
+   "target": "f06911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sultan Ahmed Mosque (Turkish: Sultanahmet Camii), popularly known as the Blue Mosque, is an Ottoman-era historical imperial mosque located in Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue Mosque” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:17.190Z",
+   "target": "f06912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Süleymaniye Mosque (Turkish: Süleymaniye Camii, pronounced [sylejˈmaːnije]) is an Ottoman imperial mosque located on the Third Hill of Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Süleymaniye Mosque” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:17.190Z",
+   "target": "f06913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Selimiye Mosque (Turkish: Selimiye Camii) is an Ottoman imperial mosque, located in the city of Edirne (formerly Adrianople), Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Selimiye Mosque” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:17.190Z",
+   "target": "f06914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Suleiman's wife and Haseki sultan of the Ottoman Empire at that time, Hurrem Sultan, decided to permanently shift Ottoman Imperial Harem to Topkapi palace after a great fire destroyed the Old Palace in 1541 and thereby to increase her authority and influence upon the Ottoman Empire's state as",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Topkapi Palace” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:17.190Z",
+   "target": "f06915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Yerebatan-Zisterne (türk.: Yerebatan Sarnıcı, auch Yerebatan Sarayı), oft auch Cisterna Basilica oder  Versunkener Palast genannt, ist eine spätantike Zisterne westlich der Hagia Sophia in Istanbul, dem byzantinischen Konstantinopel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cisterna Basilica” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:51Z",
+   "target": "f06912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the largest Ottoman-era mosque in the city.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:54Z",
+   "target": "f06912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hans mest kjente arbeid er den enorme Suleimans moské (Süleymaniye Camii) i Istanbul (oppført 1550-1557).",
+     "quoteLang": "nb",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms Sinan as architect and Suleiman as patron; the size ranking rests on the first source (the 2019 Çamlıca Mosque is larger but not Ottoman)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:02.139Z",
+   "target": "f06912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the largest Ottoman-era mosque in the city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:02.139Z",
+   "target": "f06912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hans mest kjente arbeid er den enorme Suleimans moské (Süleymaniye Camii) i Istanbul (oppført 1550-1557).",
+     "quoteLang": "nb",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  }
+ ]
+}

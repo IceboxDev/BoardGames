@@ -1,0 +1,306 @@
+{
+ "article": "a2718",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy",
+   "title": "Cognitive behavioral therapy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:14.507Z",
+   "snapshot": "a42f1aae59abaad3189403d520166bdd2a0857e223ef1d43fff6ebe8d59775b6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aaron_Beck",
+   "title": "Aaron Beck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:15.339Z",
+   "snapshot": "aae07971561e803a328505be43e3e1cf3c86682aa868537dbe954ec3675d0fda"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Albert_Ellis",
+   "title": "Albert Ellis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:16.370Z",
+   "snapshot": "d6abc937be5b1a54ac0be0a305709e3c3adad58509d44b5e954689e941c3a66d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dialectical_behavior_therapy",
+   "title": "Dialectical behavior therapy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:17.363Z",
+   "snapshot": "0998a368f96185adf7a8358c92d14c2f6631f8b266d0c02b982fd027d3043796"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eye_movement_desensitization_and_reprocessing",
+   "title": "Eye movement desensitization and reprocessing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:18.282Z",
+   "snapshot": "6336259c27748881dff4eff80c57ba6b28f77000f9034a9eca1a9ddf1a42ec65"
+  },
+  "s6": {
+   "url": "https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/",
+   "title": "Cognitive behavioural therapy (CBT) – Overview",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:46.762Z",
+   "snapshot": "14c157c8082f072c21f03d38f214825c40c2592ea62bfaec6b16ca6cfe4101d0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dysfunctional thoughts and behaviors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aaron Beck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert Ellis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "dialectical behavior therapy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "EMDR",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:02.874Z",
+   "target": "f25409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dysfunctional thoughts and behaviors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dysfunctional thoughts and behaviors”, “Dysfunktionale Gedanken und Verhaltensweisen”, “дисфункциональные мысли и поведение”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:02.874Z",
+   "target": "f25410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aaron Beck",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aaron Beck” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:02.874Z",
+   "target": "f25411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert Ellis (September 27, 1913 – July 24, 2007) was an American psychologist and psychotherapist who founded rational emotive behavior therapy (REBT).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Ellis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:02.874Z",
+   "target": "f25412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dialectical behavior therapy (DBT) is an evidence-based psychotherapy that began with efforts to treat personality disorders and interpersonal conflicts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dialectical behavior therapy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:02.874Z",
+   "target": "f25413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eye movement desensitization and reprocessing (EMDR) is a form of psychotherapy designed to treat post-traumatic stress disorder (PTSD).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “EMDR” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:20:25Z",
+   "target": "f25409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cognitive behavioural therapy (CBT) is a type of talking therapy where a therapist helps you to change how you think and act.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:20:26Z",
+   "target": "f25409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "CBT focuses on challenging and changing these cognitive distortions (thoughts, beliefs, and attitudes) and their associated behaviors",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:50.189Z",
+   "target": "f25409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "CBT focuses on challenging and changing these cognitive distortions (thoughts, beliefs, and attitudes) and their associated behaviors",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  }
+ ]
+}

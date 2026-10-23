@@ -1,0 +1,587 @@
+{
+ "article": "a0815",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Koala",
+   "title": "Koala – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:14.448Z",
+   "snapshot": "e37c7141d116a6dd0e5acca47ad5187367c895344a7fc6288dcae84b2cdddcfb"
+  },
+  "s2": {
+   "url": "https://www.smithsonianmag.com/history/how-america-fell-love-giant-panda-180956692/",
+   "title": "How America Fell in Love With the Giant Panda – Smithsonian Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Numbat",
+   "title": "Numbat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:15.432Z",
+   "snapshot": "c8fea77aba6776fcc0c676e9c569d108f7b3c597c9aa4946a45d52231799f762"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Giant_anteater",
+   "title": "Giant anteater – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:16.448Z",
+   "snapshot": "cb5d58a8d09c7acbf970653541391f5e868b00f100ad669a1bc09c713b81cba8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Panda_diplomacy",
+   "title": "Panda diplomacy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:17.418Z",
+   "snapshot": "13e380de7fa1391bc5b2afe07b0147cb3e309015274fdb7a7d65b85e157c4c60"
+  },
+  "s6": {
+   "url": "https://nationalzoo.si.edu/animals/giant-panda",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:14.959Z",
+   "snapshot": "0b06bfe60361bbff48f761e32fb87b9939dc3870dd334fd8f025c19a3c25fadd"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Giant_panda",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:10.669Z",
+   "snapshot": "e73f0ff1ceef7cba3a28fa03033278cd3d5e5b565ae0455dd552b716664bb83a"
+  },
+  "s8": {
+   "url": "https://animaldiversity.org/accounts/Ailuropoda_melanoleuca/",
+   "title": "Ailuropoda melanoleuca (giant panda)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:56.102Z",
+   "snapshot": "e3008f072ef3fa7c30320ce3c1e3e18a522df90b8e61b3d6ecfadb7140ff693b"
+  },
+  "s9": {
+   "url": "https://www.theguardian.com/us-news/2023/nov/08/pandas-smithsonian-national-zoo-return-china",
+   "title": "Pandas leave Smithsonian National Zoo to return to China",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:56.284Z",
+   "snapshot": "d6b650b6ee34352ae4068353b9ce88b05a2aa3c7a197fc9540828627613bb12f"
+  },
+  "s10": {
+   "url": "https://www.nbcnews.com/news/latino/last-panda-latin-america-mexico-decide-happens-rcna57921",
+   "title": "The last panda in Latin America? Mexico to decide what happens next",
+   "publisher": "NBC News (AP)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:57.132Z",
+   "snapshot": "39664be0bc738f442f533bd3d76d19dac0089faa58518689caa33116f5d745a8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Koala",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Giant panda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Numbat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giant anteater",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-034"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:49.164Z",
+   "target": "f04071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The koala (Phascolarctos cinereus), sometimes inaccurately called the koala bear, is an arboreal herbivorous marsupial native to Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Koala” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.164Z",
+   "target": "f04073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The numbat (; binomen: Myrmecobius fasciatus), also known as the noombat or walpurti, is an insectivorous marsupial.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Numbat” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.164Z",
+   "target": "f04074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The giant anteater (Myrmecophaga tridactyla) is a large insectivorous mammal native to Central and South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giant anteater” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:49.164Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Panda diplomacy (Chinese: 熊猫外交) is the practice of sending giant pandas from mainland China to other countries as a tool of diplomacy and wildlife conservation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.164Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:12:26Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bamboo, the main source of pandas' diet (over 99%)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:31Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is mostly herbivorous with a diet consisting almost entirely of bamboo and bamboo shoots .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:37Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Many people find these chunky, lumbering animals to be cute, but giant pandas can be as dangerous as any other bear.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:41Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Although China shifted from panda gifts to a policy of high-priced loans in 1984, Mexico has retained ownership of the locally born pandas since their lineage traces to gifted pandas.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:47Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Xin Xin is the last living panda not owned by China.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:12:52Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "any cub born to Mei and Tian would be sent to a breeding center in one of the panda reserves in China sometime after the cub turned two years old.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:12:57Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "had been in the United States on loan from China for more than two decades as part of a research agreement set to expire early next month.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:13:00Z",
+   "target": "f13302",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mexico’s Chapultepec Zoo is one of only two zoos that houses pandas without the direct supervision of the Chinese government.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "The other is Taipei Zoo, whose pandas were a 2008 gift from the PRC (Beijing calls it a domestic transfer); so \"one exception in Mexico\" is not clear-cut. Wording narrowed to \"almost all\"."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bamboo, the main source of pandas' diet (over 99%)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Many people find these chunky, lumbering animals to be cute, but giant pandas can be as dangerous as any other bear.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Xin Xin is the last living panda not owned by China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "any cub born to Mei and Tian would be sent to a breeding center in one of the panda reserves in China sometime after the cub turned two years old.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f13302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "had been in the United States on loan from China for more than two decades as part of a research agreement set to expire early next month.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f13302",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mexico’s Chapultepec Zoo is one of only two zoos that houses pandas without the direct supervision of the Chinese government.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Giant panda | Smithsonian's National Zoo and Conservation Biology Institute",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Giant panda” is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The giant panda (Ailuropoda melanoleuca), also known as the panda bear or simply panda, is a bear species endemic to China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Giant panda” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:17.400Z",
+   "target": "f04072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ailuropoda melanoleuca (giant panda) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Giant panda” is on the snapshot of s8"
+  }
+ ]
+}

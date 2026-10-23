@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-042",
+ "image": "IMG20261007174724.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Durch welches Land geht der Äquator: Chile, Ecuador oder Peru?",
+   "de": "Welcher südamerikanische Staat ist nach dem Äquator benannt, der durch sein Staatsgebiet verläuft?",
+   "en": "Which South American country is named after the equator, which runs through its territory?",
+   "reworked": true,
+   "answerDe": "Ecuador",
+   "answerEn": "Ecuador",
+   "timeline": {
+    "kind": "founding",
+    "start": "1830",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ecuador leaves Gran Colombia and becomes an independent state",
+    "labelDe": "Ecuador löst sich von Großkolumbien und wird ein eigenständiger Staat"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Ecuador",
+    "title": "Ecuador – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Reworked from multiple choice; asking only 'which country does the equator cross' would be ambiguous (also Colombia, Brazil, etc.).",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welches Land strahlte 1937 die erste Fernsehkochsendung der Welt aus: Kanada, Großbritannien oder die Schweiz?",
+   "de": "Welches Land strahlte 1937 die erste Fernsehkochsendung der Welt aus?",
+   "en": "Which country broadcast the world's first television cooking show in 1937?",
+   "reworked": true,
+   "answerDe": "Großbritannien",
+   "answerEn": "Great Britain",
+   "timeline": {
+    "kind": "event",
+    "start": "1937",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The BBC airs Cook's Night Out with Marcel Boulestin, the first TV cooking show",
+    "labelDe": "Die BBC sendet Cook's Night Out mit Marcel Boulestin, die erste Fernsehkochsendung"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cook%27s_Night_Out",
+    "title": "Cook's Night Out – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "BBC Television, Cook's Night Out (1937) with Marcel Boulestin.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die Suffragetten kämpften Anfang des 20. Jahrhunderts in Großbritannien für das Recht, Waffen tragen zu dürfen. Richtig oder falsch?",
+   "de": "Für welches Recht kämpften die Suffragetten Anfang des 20. Jahrhunderts in Großbritannien?",
+   "en": "What right did the suffragettes fight for in Britain at the beginning of the 20th century?",
+   "reworked": true,
+   "answerDe": "das Frauenwahlrecht",
+   "answerEn": "Women's right to vote",
+   "timeline": {
+    "kind": "period",
+    "start": "1903",
+    "end": "1918",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "British suffragette movement, from the founding of the WSPU to votes for women over 30",
+    "labelDe": "Britische Suffragettenbewegung, von der Gründung der WSPU bis zum Wahlrecht für Frauen ab 30"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Suffragetten",
+    "title": "Suffragetten – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "The card's statement is false (answer: falsch): they fought for the vote, not the right to bear arms.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie nannte die Künstlerin Louise Bourgeois ihre gigantische Stahlspinne, die 2007 vor der Tate Modern in London aufgestellt wurde?",
+   "de": "Wie nannte die Künstlerin Louise Bourgeois ihre gigantische Stahlspinne, die 2007 vor der Tate Modern in London aufgestellt wurde?",
+   "en": "What did the artist Louise Bourgeois call her gigantic steel spider, which was set up outside Tate Modern in London in 2007?",
+   "reworked": false,
+   "answerDe": "Maman",
+   "answerEn": "Maman",
+   "timeline": {
+    "kind": "creation",
+    "start": "1999",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Louise Bourgeois creates the giant spider sculpture Maman",
+    "labelDe": "Louise Bourgeois schafft die riesige Spinnenskulptur Maman"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Maman_(sculpture)",
+    "title": "Maman (sculpture) – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "Maman was made in 1999 for Bourgeois's inaugural Unilever Series commission in Tate Modern's Turbine Hall (2000); the card's 2007 date (display outside the gallery) was not confirmed on the source.",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 5,
+   "cardDe": "In welcher Einheit wird die Lichtstärke gemessen: Lumen, Lux oder Candela?",
+   "de": "In welcher Einheit wird die Lichtstärke gemessen?",
+   "en": "In which unit is luminous intensity measured?",
+   "reworked": true,
+   "answerDe": "Candela",
+   "answerEn": "Candela",
+   "timeline": {
+    "kind": "creation",
+    "start": "1948",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The name candela is introduced for the unit of luminous intensity",
+    "labelDe": "Die Bezeichnung Candela für die Einheit der Lichtstärke wird eingeführt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Candela",
+    "title": "Candela – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Reworked from multiple choice. Lumen = luminous flux, lux = illuminance.",
+   "domain": "science",
+   "sub": "maths"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches über 9.000 Kilometer lange Offroad-Rennen für Motorräder und Autos ist einer der härtesten Wettkämpfe der Welt?",
+   "de": "Welches über 9.000 Kilometer lange Offroad-Rennen für Motorräder und Autos ist einer der härtesten Wettkämpfe der Welt?",
+   "en": "Which off-road race for motorcycles and cars, over 9,000 kilometres long, is one of the toughest competitions in the world?",
+   "reworked": false,
+   "answerDe": "Rallye Dakar",
+   "answerEn": "Dakar Rally",
+   "timeline": {
+    "kind": "event",
+    "start": "1978-12-26",
+    "end": "1979-01-14",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first Dakar Rally runs from Paris to Dakar",
+    "labelDe": "Die erste Rallye Dakar führt von Paris nach Dakar"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rallye_Dakar",
+    "title": "Rallye Dakar – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Length varies by edition; recent editions are shorter (e.g. ~5,600 km in 2019), so 'over 9,000 km' is dated.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

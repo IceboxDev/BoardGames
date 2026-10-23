@@ -1,0 +1,202 @@
+{
+ "article": "a0559",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wolfgang_Clement",
+   "title": "Wolfgang Clement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:46.256Z",
+   "snapshot": "9166760bc1fb2bb3df1b16207e080e3a3f52cac77113ba09d6990f12a984be68"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gerhard_Schr%C3%B6der",
+   "title": "Gerhard Schröder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:25.122Z",
+   "snapshot": "238c36863fff273a9a0e4e4e1dc30d2655f11b4caa3aa645fd3f55854dc62b0e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Werner_M%C3%BCller_(Politiker,_1946)",
+   "title": "Werner Müller (Politiker, 1946) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:47.272Z",
+   "snapshot": "19ecf36a5922f9f1ea346ae3ccd1c6382720e72da34fb9d050e9aebc975d1241"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sigmar_Gabriel",
+   "title": "Sigmar Gabriel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:49.164Z",
+   "snapshot": "f72e4b41ca9d0d96d91343ac960f01ea8736b4b9110ab0e3ff098ed24088bcfa"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ronald_Pofalla",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:47.629Z",
+   "snapshot": "9c9a69a033c889b4528c49fea2c1c54573b78162943b2269f2a02da70d88105b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wolfgang Clement",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gerhard Schröder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Werner Müller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sigmar Gabriel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:07.148Z",
+   "target": "f02791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wolfgang Clement wurde 1940 als Sohn des Maurers und späteren Bauingenieurs Josef Clement (1902–1965) und dessen Frau Paula, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Clement” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:07.148Z",
+   "target": "f02792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gerhard Schröder wurde 1944 als zweites Kind der Eheleute Gunhild Erika Lauterbach (1913–2012) und Fritz Werner Schröder (1912–1944) auf einem Bauernhof im lippischen Mossenberg (heute Blomberg) geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhard Schröder” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:07.148Z",
+   "target": "f02793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Werner Müller war seit seinem Studium in Mannheim mit mehrjähriger Unterbrechung Mitglied der K.D.St.V.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werner Müller” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:07.148Z",
+   "target": "f02795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sigmar Gabriel attended school in Goslar, and served as a soldier in the German Air Force from 1979 to 1981.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sigmar Gabriel” is on the snapshot of s4"
+  }
+ ]
+}

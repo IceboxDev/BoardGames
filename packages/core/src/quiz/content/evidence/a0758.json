@@ -1,0 +1,289 @@
+{
+ "article": "a0758",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Politics_and_the_English_Language",
+   "title": "Politics and the English Language – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:15.274Z",
+   "snapshot": "863bed336bacdb10bba38df68679f4a5bb9b7ae156cdf5baeeb78a252b5a1ca5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Oxymoron",
+   "title": "Oxymoron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:28.425Z",
+   "snapshot": "39449f6ca5d16366913b697e98c75e03a3347cf3b3a7202266f78972c699bb79"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Threatening_the_president_of_the_United_States",
+   "title": "Threatening the president of the United States – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:16.500Z",
+   "snapshot": "7d13f66499942e2aa3a95449d69ddd6b77ef1a58836c63db63ad25f71828884f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Metaphors_We_Live_By",
+   "title": "Metaphors We Live By – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:17.257Z",
+   "snapshot": "f28255e1595fb3726b03efbc5fe3927ce2236b7e39fb4508a7bab1ca0cd053d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hildebrandslied",
+   "title": "Hildebrandslied – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:18.470Z",
+   "snapshot": "61fee14ce558e6118eaeb3dc488053a75234b6f3093c153d84c6f2d2620eaeb4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Simile",
+   "title": "Simile",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:19.278Z",
+   "snapshot": "b4fbef241a4c6764c531b59e0ed0862a23b70b7972217528cc0a784fdb46e6bf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "euphemism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "oxymoron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "hyperbole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "metaphor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "alliteration",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "simile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-099"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:40.471Z",
+   "target": "f03786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thus political language has to consist largely of euphemism, question-begging and sheer cloudy vagueness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “euphemism” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:40.471Z",
+   "target": "f03787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An oxymoron (plurals: oxymorons and oxymora) is a figure of speech that juxtaposes concepts with opposite meanings within a word or in a phrase that is a self-contradiction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oxymoron” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:40.471Z",
+   "target": "f03788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "705 (1969), the United States Supreme Court ruled that mere political hyperbole must be distinguished from true threats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hyperbole” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:40.471Z",
+   "target": "f03789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The book suggests metaphor is a tool that enables people to use what they know about their direct physical and social experiences to understand more abstract things like work, time, mental activity and feelings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “metaphor” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:40.471Z",
+   "target": "f03790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In several places, the absence of alliteration linking the two halves of a line suggests missing text, so ll.10a and 11b, which follow each other in the manuscript (fıreo ın folche • eddo welıhhes cnuosles du sis, \"who his father was in the host •  or what family you belong to\"), do not make a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “alliteration” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:40.471Z",
+   "target": "f25304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A simile () is a type of figure of speech that directly compares two unrelated things, using wording to explicitly make the comparison (often, with a grammatical structure of the type \"x is like y\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “simile” is on the snapshot of s6"
+  }
+ ]
+}

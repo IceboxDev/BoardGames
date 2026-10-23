@@ -1,0 +1,242 @@
+{
+ "article": "a0242",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Siddhartha_(novel)",
+   "title": "Siddhartha (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:12.410Z",
+   "snapshot": "7f8f0451996aa3c9444d223de697a0706066e7aa30817accceee363dd69dc0c8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Mann",
+   "title": "Thomas Mann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:13.384Z",
+   "snapshot": "10ed38707a0deb26f85c96b40ab0f946a5d95873efe72c3a7aa253aed7be5871"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/G%C3%BCnter_Grass",
+   "title": "Günter Grass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:14.500Z",
+   "snapshot": "f73d6cebe414ed44319a1f75b064ab5069e9ca568066028ead514cba46550557"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Clown_(novel)",
+   "title": "The Clown (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:15.426Z",
+   "snapshot": "5c6a158dd454ae4d61794f9008e17c839102f96fddde4cb3a88b6a0e7632782c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Silesian_weavers'_uprising",
+   "title": "Silesian weavers' uprising – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:16.411Z",
+   "snapshot": "89da1c4bdd9af385a1b5a2e20a0f39f4b2c66c6f363ccfa2a8700f539815080c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hermann Hesse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Mann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Günter Grass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heinrich Böll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gerhart Hauptmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:18.228Z",
+   "target": "f01206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eine indische Dichtung; German: [ziˈdaʁta] ) is a 1922 novel by Hermann Hesse that deals with the spiritual journey of self-discovery of a man named Siddhartha during the time of the Gautama Buddha.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermann Hesse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:18.228Z",
+   "target": "f01207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Thomas Mann (6 June 1875 – 12 August 1955) was a German novelist, short story writer, social critic, philanthropist, essayist, and the 1929 Nobel Prize in Literature laureate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Mann” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:18.228Z",
+   "target": "f01208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Representatives of the city of Bremen joined to establish the Günter Grass Foundation with the aim of establishing a centralized collection of his numerous works, especially his many personal readings, videos and films.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Grass” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:18.228Z",
+   "target": "f01209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Views of a clown\") is a 1963 novel by West German writer Heinrich Böll.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Böll” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:18.228Z",
+   "target": "f01210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This uprising, on the eve of the revolution of 1848, was closely observed by German society and treated by several artists, among them Heinrich Heine (with his 1844 poem Die schlesischen Weber) and Gerhart Hauptmann (with his 1892 play The Weavers).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhart Hauptmann” is on the snapshot of s5"
+  }
+ ]
+}

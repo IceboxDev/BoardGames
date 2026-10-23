@@ -1,0 +1,327 @@
+{
+ "article": "a0625",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+   "title": "Romeo and Juliet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:59.211Z",
+   "snapshot": "287c8d3af681bdcdc3c41ee811b6fdaff395b1983f0d43f2f033c1d39b44e774"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Luigi_Da_Porto",
+   "title": "Luigi Da Porto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:00.009Z",
+   "snapshot": "9a7af46b50b1f001830fe9d8a7a4584c8fdc27577ac9f300e52725cbfc3805fc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mercutio",
+   "title": "Mercutio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:01.042Z",
+   "snapshot": "92f114be417bd99182f8d3515b923ec767702ee67a59e43bd0ccbe7b503a01f1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet_(1968_film)",
+   "title": "Romeo and Juliet (1968 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:02.014Z",
+   "snapshot": "4a04527f10f26fd8210d5898b1459873a86da131118cbf4bd8247ba5df988a69"
+  },
+  "s5": {
+   "url": "https://www.gutenberg.org/cache/epub/1513/pg1513.txt",
+   "title": "Romeo and Juliet by William Shakespeare (Project Gutenberg eBook #1513)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:40.511Z",
+   "snapshot": "a929062e6761abf53da17fc3b300eb123ead37e098aeba013046a669f7a6f25e"
+  },
+  "s6": {
+   "url": "https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/shakespeares-plays/romeo-and-juliet/",
+   "title": "Romeo and Juliet – Shakespeare Birthplace Trust",
+   "publisher": "Shakespeare Birthplace Trust",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:41.146Z",
+   "snapshot": "6b143b023469122e49e8447cb4a2ed4e2d5408c957d6f0b198f4d15a3a5d6efb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Montague and Capulet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c053"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Verona and Mantua",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mercutio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tybalt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friar Laurence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:16.187Z",
+   "target": "f03121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The play, set in Verona, Italy, begins with a street brawl between Montague and Capulet servants who, like the masters they serve, are sworn enemies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.187Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montague and Capulet” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:16.187Z",
+   "target": "f03122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Verona and Mantua",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Verona and Mantua”, “Verona und Mantua”, “Верона и Мантуя”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:16.187Z",
+   "target": "f03123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mercutio ( mur-KEW-shee-oh; Italian: Mercuzio [merˈkuttsjo]) is a fictional character in William Shakespeare's 1597 tragedy Romeo and Juliet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.187Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mercutio” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:16.187Z",
+   "target": "f03124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "That afternoon, Juliet's cousin Tybalt, furious that Romeo had attended his family's ball, insults him and challenges him to a brawl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.187Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tybalt” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:16.187Z",
+   "target": "f03125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "With the help of Friar Laurence, who hopes to reconcile the two families through their children's union, they are secretly married the next day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.187Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friar Laurence” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:44Z",
+   "target": "f03122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SCENE. During the greater part of the Play in Verona; once, in the Fifth Act, at Mantua.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:47Z",
+   "target": "f03122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Romeo buys poison from an Apothecary in Mantua. He returns to Verona and goes to the tomb",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:43.510Z",
+   "target": "f03122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SCENE. During the greater part of the Play in Verona; once, in the Fifth Act, at Mantua.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:43.510Z",
+   "target": "f03122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Romeo buys poison from an Apothecary in Mantua. He returns to Verona and goes to the tomb",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

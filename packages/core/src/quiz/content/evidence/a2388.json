@@ -1,0 +1,622 @@
+{
+ "article": "a2388",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Schlacht_von_Stalingrad",
+   "title": "Schlacht von Stalingrad",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:15.603Z",
+   "snapshot": "94949b6b510877e2ca4d2d920cd76c8bf868d9b6a18c4ec7c445449b88e66379"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Britain",
+   "title": "Battle of Britain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:19.736Z",
+   "snapshot": "306abfaed7e15ba296a3c13ad5d97a6f30debe70b6d3c5f15588bfef491f2f8c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Barbarossa",
+   "title": "Operation Barbarossa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:27.769Z",
+   "snapshot": "b76285975670df6cae24fe02c6088b6d0ebdf4538719d59e05881943fc00dedb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein",
+   "title": "Second Battle of El Alamein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:20.410Z",
+   "snapshot": "7a6cc9bbf4eeadf1d348ac1ce906987f2cd57ddd0aef3d376bdb2f380ca16631"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Normandy_landings",
+   "title": "Normandy landings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:37.479Z",
+   "snapshot": "a8fef9b32c45ff68c97fa7a858f7b580f0792fb679950b40a539ec9c1b3380e5"
+  },
+  "s6": {
+   "url": "https://www.iwm.org.uk/history/what-you-need-to-know-about-the-battle-of-stalingrad",
+   "title": "What You Need To Know About The Battle of Stalingrad",
+   "publisher": "Imperial War Museums",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:46:17Z"
+  },
+  "s7": {
+   "url": "https://www.iwm.org.uk/history/8-things-you-need-to-know-about-the-battle-of-britain",
+   "title": "8 Things You Need To Know About The Battle of Britain",
+   "publisher": "Imperial War Museums",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:46:26Z"
+  },
+  "s8": {
+   "url": "https://www.iwm.org.uk/history/operation-barbarossa-and-germanys-failure-in-the-soviet-union",
+   "title": "Operation Barbarossa And Germany's Failure In The Soviet Union",
+   "publisher": "Imperial War Museums",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:46:40Z"
+  },
+  "s9": {
+   "url": "https://www.nam.ac.uk/explore/battle-alamein",
+   "title": "Second Battle of El Alamein",
+   "publisher": "National Army Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:03.712Z",
+   "snapshot": "3f933dbd7d6cf33c1b9bfab9981537e86189b89b9248c9d60bf09960b46b05d3"
+  },
+  "s10": {
+   "url": "https://www.nam.ac.uk/explore/d-day",
+   "title": "D-Day",
+   "publisher": "National Army Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:04.664Z",
+   "snapshot": "e2cd19612290eab305d9f0fffb5988684dcfc186f56bc1cab19e95290f325b18"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1943",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1940",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1941",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1942",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1944",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:11.827Z",
+   "target": "f12477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Armee und verbündeter Truppen im Winter 1942/1943 gilt als psychologischer Wendepunkt des im Juni 1941 vom Deutschen Reich begonnenen Deutsch-Sowjetischen Krieges.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1943” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:11.827Z",
+   "target": "f12478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It takes its name from the speech given by Prime Minister Winston Churchill to the House of Commons on 18 June 1940: \"What General Weygand called the 'Battle of France' is over.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1940” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:11.827Z",
+   "target": "f12479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Operation Barbarossa was the invasion of the Soviet Union by Nazi Germany and several of its European Axis allies starting on Sunday, 22 June 1941, during World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1941” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:11.827Z",
+   "target": "f12480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Second Battle of El Alamein (23 October – 4 November 1942) was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1942” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:11.827Z",
+   "target": "f12481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Normandy landings were the landing operations and associated airborne operations on 6 June 1944 of the Allied invasion of Normandy in Operation Overlord during the Second World War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1944” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:46:17Z",
+   "target": "f12477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Forbidden to break out by Hitler, the Sixth Army endured until February 1943, when its exhausted remnants surrendered.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:46:22Z",
+   "target": "f12477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nach hohen Verlusten durch Kampf, Kälte und Hunger kapitulierten die Reste der 6. Armee im Februar 1943.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:46:26Z",
+   "target": "f12478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Battle of Britain was a major air campaign fought largely over southern England in the summer and autumn of 1940.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:46:31Z",
+   "target": "f12478",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ultimately, the Luftwaffe was defeated by Fighter Command, forcing Adolf Hitler to abandon his invasion plans.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:46:35Z",
+   "target": "f12478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The British officially recognise the battle's duration as being from 10 July until 31 October 1940",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:46:40Z",
+   "target": "f12479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "was launched on 22 June 1941. Over three and a half million German and other Axis troops attacked along a 1,800-mile front.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:46:43Z",
+   "target": "f12479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was the invasion of the Soviet Union by Nazi Germany and several of its European Axis allies starting on Sunday, 22 June 1941, during World War II.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:46:48Z",
+   "target": "f12480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fought near the western frontier of Egypt between 23 October and 4 November 1942, El Alamein was the climax and turning point of the North African campaign in the Second World War (1939-45).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:46:53Z",
+   "target": "f12480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Second Battle of El Alamein (23 October – 4 November 1942) was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:46:57Z",
+   "target": "f12481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "D-Day, 6 June 1944, marked the start of the Allied invasion of Normandy, the greatest amphibious operation in history.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:47:00Z",
+   "target": "f12481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Normandy landings were the landing operations and associated airborne operations on 6 June 1944 of the Allied invasion of Normandy in Operation Overlord during the Second World War.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nach hohen Verlusten durch Kampf, Kälte und Hunger kapitulierten die Reste der 6. Armee im Februar 1943.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The British officially recognise the battle's duration as being from 10 July until 31 October 1940",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was the invasion of the Soviet Union by Nazi Germany and several of its European Axis allies starting on Sunday, 22 June 1941, during World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s3"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fought near the western frontier of Egypt between 23 October and 4 November 1942, El Alamein was the climax and turning point of the North African campaign in the Second World War (1939-45).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "D-Day, 6 June 1944, marked the start of the Allied invasion of Normandy, the greatest amphibious operation in history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fought near the western frontier of Egypt between 23 October and 4 November 1942, El Alamein was the climax and turning point of the North African campaign in the Second World War (1939-45).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1942” is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:55.386Z",
+   "target": "f12481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "D-Day, 6 June 1944, marked the start of the Allied invasion of Normandy, the greatest amphibious operation in history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:55.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1944” is on the snapshot of s10"
+  }
+ ]
+}

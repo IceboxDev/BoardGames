@@ -1,0 +1,383 @@
+{
+ "article": "a2339",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/10_Downing_Street",
+   "title": "10 Downing Street",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:52.474Z",
+   "snapshot": "6d68ee24f4c27ec5b8688248e832296f1c9ebeb57ff166707a34a6b0d1363567"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/MI6",
+   "title": "MI6",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:53.361Z",
+   "snapshot": "4fc391388832d1361278b92c1570032bc7d61de8645f94872852d89d2c84ca27"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/EU-Austritt_des_Vereinigten_K%C3%B6nigreichs",
+   "title": "EU-Austritt des Vereinigten Königreichs",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:51.019Z",
+   "snapshot": "37b9934688e6adcf00d36f3cf8084fac8340b2916501f1e4f21acbce921694ef"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Downing_Street_mortar_attack",
+   "title": "Downing Street mortar attack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:54.236Z",
+   "snapshot": "a836d9914eefdde01ce250ec8c1512ec8e4716d6994be134ff94b67e752d7bc3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Secret_Intelligence_Service",
+   "title": "Secret Intelligence Service – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:55.484Z",
+   "snapshot": "4fc391388832d1361278b92c1570032bc7d61de8645f94872852d89d2c84ca27"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Larry_(cat)",
+   "title": "Larry (cat) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:56.313Z",
+   "snapshot": "b53f9b37701b3a39b95166a50523de6a1cf957e973e1fdb80fe770f8853571d7"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/2016_United_Kingdom_European_Union_membership_referendum",
+   "title": "2016 United Kingdom European Union membership referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:02.331Z",
+   "snapshot": "1336cd01e1c2473f597909fbdd4559e1d4e17062cc62ac2cad4051927a7007da"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Chequers",
+   "title": "Chequers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:57.404Z",
+   "snapshot": "82a925e3ada39dbba73057a4547914fb7002e2a4749113ae8c241e43ab0e2a52"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Steel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-314"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1994",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-386"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Europäische Union",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-025"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Major",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"C\"",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Larry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2016",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28011",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Chequers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 50"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The new foundation was made of steel-reinforced concrete with pilings sunk 6 to 18 feet (1.8 to 5.5 m).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steel” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The existence of SIS was not officially acknowledged until 1994.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1994” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "März 2017 den Austritt aus der EU und aus EURATOM gemäß Artikel 50 des Vertrags über die Europäische Union durch schriftliche Mitteilung an den Europäischen Rat rechtlich wirksam in die Wege, wodurch eine zwei Jahre dauernde Verhandlungsphase begann, die im Jahr 2019 noch dreimal verlängert wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Europäische Union” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The goal was to assassinate Prime Minister John Major and his war cabinet, who were meeting to discuss the Gulf War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Major” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SIS is one of the British intelligence agencies and the chief of the Secret Intelligence Service (known as \"C\") is directly accountable to the foreign secretary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “\"C\"” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Larry was born as a stray cat around January 2007 and later came into the possession of Battersea Dogs & Cats Home.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Larry” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f12178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2016 United Kingdom European Union membership referendum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2016” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:00.692Z",
+   "target": "f28011",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Chequers or Chequers Court ( CHEK-ərz) is the country house of the prime minister of the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:00.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chequers” is on the snapshot of s8"
+  }
+ ]
+}

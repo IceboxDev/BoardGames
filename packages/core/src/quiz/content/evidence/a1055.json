@@ -1,0 +1,535 @@
+{
+ "article": "a1055",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Artiodactyla",
+   "title": "Artiodactyla – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:57.724Z",
+   "snapshot": "16f554fb2c7d5d11795892ded527588a11d6d8f0853cc60c66c76814cfdeb3fe"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carnivora",
+   "title": "Carnivora – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:58.723Z",
+   "snapshot": "b9dbed5ef8ad0e3ac632d87f27a3c98dfb0cba00a9c3a145c64b79ed11d9a883"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rodent",
+   "title": "Rodent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:54.246Z",
+   "snapshot": "5b380123692cd626a70e9dd2931d7146b2f23321fa8e117f79e4c172b4560a2a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Hausrind",
+   "title": "Hausrind",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:57.211Z",
+   "snapshot": "e258a345202d0df8f6ecc1797bdcde61d2c24ecfd523ac7218198e76add30564"
+  },
+  "s5": {
+   "url": "https://a-z-animals.com/articles/why-baby-camels-are-born-without-humps/",
+   "title": "Why Baby Camels Are Born Without Humps",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:57.338Z",
+   "snapshot": "b2714de6026032dc9adfd887d047eac9839fd59aae9a8e29cfc1c6d07934c65b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Nabelschweine",
+   "title": "Nabelschweine",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:58.027Z",
+   "snapshot": "68b239adb41bb23a7e11a99c54627bdb007b6da3ebe0a75022df5dba934418ec"
+  },
+  "s7": {
+   "url": "https://animaldiversity.org/accounts/Bos_taurus/",
+   "title": "Bos taurus – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:35.724Z",
+   "snapshot": "114a674dcca62680c9e751e635a3cb8839589ebebdc7df428c72264f80a23a8f"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Ruminant",
+   "title": "Ruminant – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:57:30Z"
+  },
+  "s9": {
+   "url": "https://animals.sandiegozoo.org/animals/camel",
+   "title": "Camel – San Diego Zoo Animals & Plants",
+   "publisher": "San Diego Zoo Wildlife Alliance",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:35.749Z",
+   "snapshot": "5ee90d7d9e0c098bbe11248a818f4a75760a1adbb17c5b8fd89bded2c1c6e1fb"
+  },
+  "s10": {
+   "url": "https://animaldiversity.org/accounts/Camelus_dromedarius/",
+   "title": "Camelus dromedarius – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:36.395Z",
+   "snapshot": "c5ba0ba48987b23e0cbdab6e491dac41997437ba40f8c1192d7ff7eb8743280c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Even-toed ungulates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carnivora",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rodents",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "vier Mägen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-261"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the hump",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-230"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Schweine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; transcript tp-238"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:26.088Z",
+   "target": "f05271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Some researchers use \"even-toed ungulates\" to exclude cetaceans and only include terrestrial artiodactyls, making the term paraphyletic in nature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Even-toed ungulates” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:26.088Z",
+   "target": "f05273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carnivora ( kar-NIV-ər-ə) is an order of placental mammals specialised primarily in eating flesh, whose members are formally referred to as carnivorans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carnivora” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:26.088Z",
+   "target": "f05274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rodents (from Latin rodens 'gnawing') are a group of mammals belonging to the order Rodentia ( roh-DEN-shə or roh-DEN-chə) characterized by a single pair of continuously growing incisors in each of the upper and lower jaws.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rodents” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:26.088Z",
+   "target": "f13306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Nahrung durchläuft vier Mägen (Pansen, Netzmagen, Blättermagen, Labmagen).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vier Mägen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:26.088Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the hump",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the hump”, “der Höcker”, “горб”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:26.088Z",
+   "target": "f13308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Nabelschweine, neuweltlichen Schweine oder Pekaris (Tayassuidae) bilden eine mit den Echten oder altweltlichen Schweinen eng verwandte Familie der Paarhufer.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schweine” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:57:27Z",
+   "target": "f13306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Cows have a four chambered stomach",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "strictly one stomach with four chambers; the bank's answer and body say so"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:57:30Z",
+   "target": "f13306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "ruminants' stomachs have four compartments:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:57:32Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The calf has no humps but small peaks of hide, each topped with a tassel of curly hair to indicate where the humps will form.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:57:35Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "hump is composed of fat bound together by fibrous tissue, acting as food storage in",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the hump is a fat store"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:57:38Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "a newborn baby camel is born with a flattish back",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:01.671Z",
+   "target": "f13306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Cows have a four chambered stomach",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:01.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:01.671Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The calf has no humps but small peaks of hide, each topped with a tassel of curly hair to indicate where the humps will form.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:01.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:01.671Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "hump is composed of fat bound together by fibrous tissue, acting as food storage in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:01.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:01.671Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "a newborn baby camel is born with a flattish back",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:01.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:01.671Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The size of the hump can change, depending on the amount of food the camel eats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:01.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the hump” is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:01.671Z",
+   "target": "f13307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The\nhump is composed of fat bound together by fibrous tissue, acting as food storage in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:01.671Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the hump” is on the snapshot of s10"
+  }
+ ]
+}

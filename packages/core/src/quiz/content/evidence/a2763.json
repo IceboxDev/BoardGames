@@ -1,0 +1,429 @@
+{
+ "article": "a2763",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chicken_or_the_egg",
+   "title": "Chicken or the egg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:54.027Z",
+   "snapshot": "18c26a36f74b06d570d3b94a6a0c251a15c57a5ceca05292a352a01bfff648ff"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dinosaur",
+   "title": "Dinosaur",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:55.303Z",
+   "snapshot": "0d73fb32a95d922c7a70801780ec9f46ff7000dd3d040ab1ac84baa92df5d84d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amniote",
+   "title": "Amniote",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:56.126Z",
+   "snapshot": "1b6e7855e254a2771e3085b16c46fd740c532ac2bc1a896cd244689f51a7d24f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sinosauropteryx",
+   "title": "Sinosauropteryx",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:57.134Z",
+   "snapshot": "9aca1d32f93f21debab91776e18cce061487cb633a412ac8276c717756a28acc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Owen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:58.146Z",
+   "snapshot": "e5fb538bdfc9fe50b6a3f9f2d4df060f6f3932d275d6059ac4e3aae0ef104888"
+  },
+  "s6": {
+   "url": "https://whc.unesco.org/en/list/1285/",
+   "title": "Joggins Fossil Cliffs",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:12:25Z"
+  },
+  "s7": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22earliest%20amniote%20tracks%22&resultType=core&format=json",
+   "title": "Earliest amniote tracks recalibrate the timeline of tetrapod evolution (Nature 2025, abstract)",
+   "publisher": "Europe PMC / Nature",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:12:30Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About 312 million years",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript ppm-011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reptiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript ppm-084"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amniotes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Richard Owen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Theropods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sinosauropteryx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:09.580Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About 312 million years",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 312 million years”, “Etwa 312 Millionen Jahre”, “Около 312 миллионов лет”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:09.580Z",
+   "target": "f25765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dinosaurs are a diverse group of warmblooded reptiles of the clade Dinosauria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reptiles” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:09.580Z",
+   "target": "f25766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amniotes are tetrapod vertebrate animals belonging to the clade Amniota, a large group that comprises the vast majority of living terrestrial and semiaquatic vertebrates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amniotes” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:09.580Z",
+   "target": "f25767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first dinosaur fossils were recognized in the early 19th century, with the name \"dinosaur\" (meaning \"terrible lizard\") being coined by Sir Richard Owen in 1842 to refer to these \"great fossil lizards\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Owen” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:09.580Z",
+   "target": "f25768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The fossil record shows that birds are feathered dinosaurs, having evolved from earlier theropods during the Late Jurassic epoch, and are the only dinosaur lineage known to have survived the Cretaceous–Paleogene extinction event approximately 66 mya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theropods” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:09.580Z",
+   "target": "f25769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sinosauropteryx (meaning \"Chinese reptilian wing\") is an extinct genus of coelurosaurian theropod dinosaurs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sinosauropteryx” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:25Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The site bears witness to the first reptiles in Earth history, which are the earliest representatives of the amniotes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Joggins = Carboniferous ('Coal Age') site"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:30Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The known fossil record of crown-group amniotes begins in the late Carboniferous with the sauropsid trackmaker Notalacerta",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same paper's Australian tracks are early Carboniferous (Tournaisian): still Carboniferous"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:12:35Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the earliest known crown group amniotes known from body fossils are the sauropsid Hylonomus and the synapsid Asaphestera, both of which are from Nova Scotia during the Bashkirian age of the Late Carboniferous around 318 million years ago.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:12:40Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "appeared around 312 million years ago.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Old answer 'about 312 million years' rests on Benton & Donoghue 2007's minimum date; body fossils are now dated ~318 Ma and Snowy Plains tracks ~355 Ma, and early amniote eggs need not have been hard-shelled. Fact reworded to ask the period (Carboniferous)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:10:02Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "have been described as the “coal age Galápagos” due to their wealth of fossils from the Carboniferous period",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the corrected answer (Carboniferous); resolves the contest on the old 312-million-year figure"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:58.770Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the earliest known crown group amniotes known from body fossils are the sauropsid Hylonomus and the synapsid Asaphestera, both of which are from Nova Scotia during the Bashkirian age of the Late Carboniferous around 318 million years ago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:58.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:58.770Z",
+   "target": "f25764",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "appeared around 312 million years ago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:58.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  }
+ ]
+}

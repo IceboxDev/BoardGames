@@ -1,0 +1,484 @@
+{
+ "article": "a1533",
+ "sources": {
+  "s1": {
+   "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Girard_Albert/",
+   "title": "Albert Girard – MacTutor History of Mathematics",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:45.160Z",
+   "snapshot": "859bad090386b03234d94476764fd82ae447dd3bed50ecfaed506d0ccf726bfd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Trigonometric_functions",
+   "title": "Trigonometric functions – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:49.222Z",
+   "snapshot": "4aff301afb2417586d9ec19cc19b09f615d6b98e8f0235724a2a19cc26696ffc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Fincke",
+   "title": "Thomas Fincke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:49.843Z",
+   "snapshot": "bd8027c713833c22e2b61f3807a8754dc5f00f824cb22782c85dfde2a32dabe8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Joachim_Rheticus",
+   "title": "Georg Joachim Rheticus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:51.048Z",
+   "snapshot": "fa82bd161bd8c9b30de2df96608696cafacb5f576cc642c24d7a53f1cfbc70dc"
+  },
+  "s5": {
+   "url": "https://proofwiki.org/wiki/Tangent_is_Sine_divided_by_Cosine",
+   "title": "Tangent is Sine divided by Cosine – ProofWiki",
+   "publisher": "ProofWiki",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:25.111Z",
+   "snapshot": "34e7a7ac2771641d58d86ea168223f3b7f980bd1f4e4690ce69b5bb586f8fab1"
+  },
+  "s6": {
+   "url": "https://proofwiki.org/wiki/Cosecant_is_Reciprocal_of_Sine",
+   "title": "Cosecant is Reciprocal of Sine – ProofWiki",
+   "publisher": "ProofWiki",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:25.842Z",
+   "snapshot": "e7c64bcf626f1e36bb25f735ccdc110b76c1b9058d6343e44e89f7cb05bdef95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tangent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cotangent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "secant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cosecant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:40.144Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tangent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“tangent”, “Tangens”, “тангенс”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:40.144Z",
+   "target": "f07662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their reciprocals are respectively the cosecant, the secant, and the cotangent functions, which are less commonly used.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cotangent” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:40.144Z",
+   "target": "f07663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fincke's lasting achievement is found in his book Geometria rotundi (1583), in which he introduced the modern names of the trigonometric functions tangent and secant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “secant” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:40.144Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cosecant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cosecant”, “Kosekans”, “косеканс”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:40.144Z",
+   "target": "f07665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The trigonometric functions most commonly used in modern mathematics are the sine, the cosine, and the tangent functions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sine” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:22:42Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tangent is Sine divided by Cosine",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:22:52Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The other four trigonometric functions (tan, cot, sec, csc) can be defined as quotients and reciprocals of sin and cos",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23",
+   "note": "tan = sin/cos is the quotient meant here."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:26:17Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cosecant is Reciprocal of Sine",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:26:22Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their reciprocals are respectively the cosecant, the secant, and the cotangent functions",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23",
+   "note": "Reciprocals of sine, cosine and tangent respectively."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tangent is Sine divided by Cosine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The other four trigonometric functions (tan, cot, sec, csc) can be defined as quotients and reciprocals of sin and cos",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cosecant is Reciprocal of Sine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their reciprocals are respectively the cosecant, the secant, and the cotangent functions",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The trigonometric functions most commonly used in modern mathematics are the sine, the cosine, and the tangent functions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tangent” is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tangent is Sine divided by Cosine - ProofWiki",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tangent” is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their reciprocals are respectively the cosecant, the secant, and the cotangent functions, which are less commonly used.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “cosecant” is on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:26.400Z",
+   "target": "f07664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cosecant is Reciprocal of Sine - ProofWiki",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “cosecant” is on the snapshot of s6"
+  }
+ ]
+}

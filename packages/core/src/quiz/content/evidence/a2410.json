@@ -1,0 +1,390 @@
+{
+ "article": "a2410",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/X-Men",
+   "title": "X-Men",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:18.720Z",
+   "snapshot": "ebc1c9186ed8029c6c49b3ac0c6b3490d047d57c3a5177eb8db3d3318b52f4a2"
+  },
+  "s2": {
+   "url": "https://www.theguardian.com/books/2018/nov/12/stan-lee-obituary",
+   "title": "Stan Lee obituary",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:08.695Z",
+   "snapshot": "a51975785faa590fdd7626af3a6f47a335d360b87795deeb022dbab19a98ff76"
+  },
+  "s3": {
+   "url": "https://kirbymuseum.org/biography/",
+   "title": "Jack Kirby biography – Jack Kirby Museum & Research Center",
+   "publisher": "Jack Kirby Museum & Research Center",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:11.149Z",
+   "snapshot": "4e3d1f2bc0b9e7623d754240904aa18d5c389d83087cd2f7038d225401b6d67a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/X-Mansion",
+   "title": "X-Mansion – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:08.876Z",
+   "snapshot": "773ce626153bc796e9a70dba7f4ef308c608337d2200686a65e2d107b6105aaf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "X-Men",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-273"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stan Lee and Jack Kirby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charles Xavier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Xavier's School for Gifted Youngsters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:15.942Z",
+   "target": "f12626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The X-Men are a superhero team in American comic books published by Marvel Comics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “X-Men” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:15.942Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stan Lee and Jack Kirby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stan Lee and Jack Kirby”, “Stan Lee und Jack Kirby”, “Стэн Ли и Джек Кирби”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:15.942Z",
+   "target": "f12628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In most iterations of the team, they are led by their founder, Charles Xavier / Professor X, a powerful telepath who runs a school for mutant children out of his mansion in Westchester, New York, which secretly is also the headquarters of the X-Men.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Xavier” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:15.942Z",
+   "target": "f12630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Xavier's School for Gifted Youngsters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Xavier's School for Gifted Youngsters”, “Школа Ксавьера для одарённых подростков”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:59:53Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His most popular creations in 1963, however, were the X-Men, a group of mutants brought together by Professor Xavier for mutual protection",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Lee as writer-creator of the X-Men (1963)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:59:55Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Avengers and the X-Men were introduced, and with these, as with the other books, Kirby drew the first issues",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Kirby drew the first X-Men issues."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:59:57Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Created by writer/editor Stan Lee and artist/co-plotter Jack Kirby, the team first appeared in The X-Men #1 (September 1963).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:00:00Z",
+   "target": "f12630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Xavier's School for Gifted Youngsters/Jean Grey School for Higher Learning",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Infobox: former base."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:00:02Z",
+   "target": "f12630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "formerly the Xavier School for Gifted Youngsters",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same family; spells it 'Xavier School' without the possessive; marvel.com (which would be primary) blocks automated fetches."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:59.229Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His most popular creations in 1963, however, were the X-Men, a group of mutants brought together by Professor Xavier for mutual protection",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:59.229Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Avengers and the X-Men were introduced, and with these, as with the other books, Kirby drew the first issues",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:59.229Z",
+   "target": "f12627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Created by writer/editor Stan Lee and artist/co-plotter Jack Kirby, the team first appeared in The X-Men #1 (September 1963).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:59.229Z",
+   "target": "f12630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "formerly the Xavier School for Gifted Youngsters",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:59.229Z",
+   "target": "f12630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As Xavier's School for Gifted Youngsters, the X-Mansion was the training site of the first two generations of teenage X-Men:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Xavier's School for Gifted Youngsters” is on the snapshot of s4"
+  }
+ ]
+}

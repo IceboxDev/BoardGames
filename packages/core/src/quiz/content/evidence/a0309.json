@@ -1,0 +1,242 @@
+{
+ "article": "a0309",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen",
+   "title": "Wilhelm Röntgen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:43.171Z",
+   "snapshot": "e1ca02dd0e7fa997d956af2e55dc2237977953744a01480eba98a75a7fac0159"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Electrocardiography",
+   "title": "Electrocardiography – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:44.332Z",
+   "snapshot": "30dc2cf79ad7159e11a1b9a2c86dec06c3b67cf9c10eae8b047af8e02db303c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Berger",
+   "title": "Hans Berger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:45.165Z",
+   "snapshot": "54cf67e624302710113efecc5f689df6161074accfe3f410d30c58300cc088e6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Godfrey_Hounsfield",
+   "title": "Godfrey Hounsfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:46.209Z",
+   "snapshot": "c795d5c3d5249f1c8d5845a118f862308a7060e08425b3a833c1688f4810fb81"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Paul_Lauterbur",
+   "title": "Paul Lauterbur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:47.139Z",
+   "snapshot": "313b99168c6d8beb75487e1388ee94a98794ec4d2874098e9eb4b578502d6a34"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wilhelm Conrad Röntgen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Willem Einthoven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Berger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Godfrey Hounsfield",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul Lauterbur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:27.770Z",
+   "target": "f01541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wilhelm Conrad Röntgen (27 March 1845 – 10 February 1923) was a German experimental physicist who produced and detected electromagnetic radiation in a wavelength range known as X-rays (known as Röntgen rays in many languages).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Conrad Röntgen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:27.770Z",
+   "target": "f01542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Willem Einthoven's 1903 string galvanometer enabled precise measurement of these signals, revolutionizing cardiography.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willem Einthoven” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:27.770Z",
+   "target": "f01543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Berger (21 May 1873 – 1 June 1941) was a German psychiatrist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Berger” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:27.770Z",
+   "target": "f01544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Godfrey Hounsfield",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Godfrey Hounsfield” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:27.770Z",
+   "target": "f01545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul Lauterbur and the Invention of MRI, Boston: MIT Press, 2013.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.770Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Lauterbur” is on the snapshot of s5"
+  }
+ ]
+}

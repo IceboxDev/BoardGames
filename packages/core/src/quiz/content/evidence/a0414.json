@@ -1,0 +1,242 @@
+{
+ "article": "a0414",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Berlin-Gropiusstadt",
+   "title": "Berlin-Gropiusstadt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:22.738Z",
+   "snapshot": "28b4b5e10f2daf1142aa25a8e844884f65945bd3553f80198aa155c078cba107"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/German_Instrument_of_Surrender",
+   "title": "German Instrument of Surrender – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:26.589Z",
+   "snapshot": "721c7c301b8051f8cf0db9ae76bf9efaba518c1e66d560ebddc0c2e1295f0d29"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/House_of_the_Wannsee_Conference",
+   "title": "House of the Wannsee Conference – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:27.659Z",
+   "snapshot": "a1a0968c4187a28584079c453d4d590f6bc2f7c9ac34c7fc67ed6e1654ab57fd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Stasi",
+   "title": "Stasi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:28.659Z",
+   "snapshot": "eaa704c08661e4a5c6b59b1712786c06e093547d4ff40b2b49d760696f7cffb1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Olympiastadion_(Berlin)",
+   "title": "Olympiastadion (Berlin) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:29.587Z",
+   "snapshot": "891af6eeea0b6b0e0bc71992ba4f308f68a936dca5d8748be38ebbf60789964d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gropiusstadt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karlshorst",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wannsee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lichtenberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Westend",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:44.872Z",
+   "target": "f02066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Gropiusstadt ist ein Ortsteil im Bezirk Neukölln in Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gropiusstadt” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:44.872Z",
+   "target": "f02067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The document was signed at the seat of the Soviet Military Administration in Germany (Karlshorst, Berlin) by representatives from the German Oberkommando der Wehrmacht (OKW), the Allied Expeditionary Force represented by the British, and the Supreme High Command of the Soviet Red Army, with further",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karlshorst” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:44.872Z",
+   "target": "f02068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wannsee Conference (German: Wannseekonferenz, German pronunciation: [ˈvanzeːkɔnfeˌʁɛnt͡s] ) was a meeting of senior government officials of Nazi Germany and Schutzstaffel (SS) leaders, held in the Berlin suburb of Wannsee on 20 January 1942.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wannsee” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:44.872Z",
+   "target": "f02069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Stasi had its headquarters in East Berlin, with an extensive complex in Berlin-Lichtenberg and several smaller facilities throughout the city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lichtenberg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:44.872Z",
+   "target": "f02070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With the bus line 143 visitors can reach the underground station Neu-Westend.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Westend” is on the snapshot of s5"
+  }
+ ]
+}

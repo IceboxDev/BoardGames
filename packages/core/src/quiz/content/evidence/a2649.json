@@ -1,0 +1,631 @@
+{
+ "article": "a2649",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Eurotunnel",
+   "title": "Eurotunnel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:57.596Z",
+   "snapshot": "b09e7644716023336ebb913ad420a428648431749d0e3a237d6b5870cae23320"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Orient-Express",
+   "title": "Orient-Express",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:59.224Z",
+   "snapshot": "765fb9ebd4f23e1a4f2421c99488c8f7c62214d55c16537424bbbfb414bbfe3a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Belmond_Royal_Scotsman",
+   "title": "Belmond Royal Scotsman",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:01.094Z",
+   "snapshot": "5303fa1c12a934e346a0537cee99c5c3acb52487bcb0845826dfe59d8888abdf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Eurostar",
+   "title": "Eurostar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:02.278Z",
+   "snapshot": "dbad0fb906b6ffdbcb41d382edf0caa0f4e6d069cab6726f8687f10b695afb33"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Georges_Nagelmackers",
+   "title": "Georges Nagelmackers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:03.081Z",
+   "snapshot": "3812497959bb1728b5dfc421ef2c6a1f2496306392b5e2637b99d886b602290e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Glacier_Express",
+   "title": "Glacier Express – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:04.086Z",
+   "snapshot": "7425b35769b930ca79f5a3a5467a417996d1351ca9f7296be0f99adec99dd32d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express",
+   "title": "Murder on the Orient Express – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:05.191Z",
+   "snapshot": "1c0f2298d760299cef874c45e2a3af349718e0e18f80535f42b5c2818bee099a"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/LNER_Class_A3_4472_Flying_Scotsman",
+   "title": "LNER Class A3 4472 Flying Scotsman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:06.295Z",
+   "snapshot": "fc0d4c893f0aafe7d060b27f2796c81cbc0fcfddfa818309de6d2a7e0274c969"
+  },
+  "s9": {
+   "url": "https://www.smithsonianmag.com/smart-news/flying-scotsman-made-train-history-when-speedometer-hit-100-180961257/",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s10": {
+   "url": "https://www.eurostar.com/fr-fr/voyage/experience-eurostar/le-tunnel-sous-la-manche",
+   "title": "Le tunnel sous la Manche",
+   "publisher": "Eurostar",
+   "kind": "official",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:49:15.365Z",
+   "snapshot": "8c94be2c609eb37b630a623ffe6b0b8bc5f126ceeafbcbe655c7e6a616703f82"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Channel_Tunnel",
+   "title": "Channel Tunnel – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:33:09Z"
+  },
+  "s12": {
+   "url": "https://www.belmond.com/trains/europe/scotland/belmond-royal-scotsman/",
+   "title": "Royal Scotsman | Belmond Train",
+   "publisher": "Belmond",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:14.539Z",
+   "snapshot": "e1e38c035893185d8f91a0694fa6bb8d02465311c2c8d1fe44d4fab4c1149178"
+  },
+  "s13": {
+   "url": "https://www.railwaymuseum.org.uk/objects-and-stories/history-flying-scotsman",
+   "title": "The history of Flying Scotsman",
+   "publisher": "National Railway Museum (Science Museum Group)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:14.766Z",
+   "snapshot": "72d8b476d48ee9e70c3155b83678cb9af5252cea6666cf49a2916159867800fc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "rund 50 km",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-037"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Konstantinopel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-040"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "a luxury train",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-182"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eurostar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Georges Nagelmackers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Glacier Express",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Murder on the Orient Express",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Flying Scotsman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52; history entry seq 53"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Flying Scotsman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 52; history entry seq 53"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "rund 50 km",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“rund 50 km”, “about 50 km”, “около 50 км”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juni 1883 von Paris in Richtung Konstantinopel (seit 1930 Istanbul) verkehrte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:51.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konstantinopel” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "a luxury train",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“a luxury train”, “ein Luxuszug”, “роскошный поезд”) on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eurostar is an international high-speed rail service in Western Europe, connecting Belgium, France, Germany, the Netherlands, and the United Kingdom through the Channel Tunnel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:51.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eurostar” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Born into a family of bankers with interests in railways and close links to the court of King Leopold II of Belgium, Georges Nagelmackers trained as a civil engineer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:51.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georges Nagelmackers” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Glacier Express is a named train in Switzerland, running as a Panorama Express (PE), which directly connects railway stations of the two major mountain resorts of Zermatt and St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:51.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glacier Express” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f14347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Murder on the Orient Express is a mystery novel with a closed circle of suspects, written by English writer Agatha Christie and featuring the Belgian detective Hercule Poirot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:51.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Murder on the Orient Express” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:51.660Z",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "4472 Flying Scotsman is an LNER Class A3 4-6-2 \"Pacific\" type steam locomotive built in 1923 for the London and North Eastern Railway (LNER) at Doncaster Works to a design by Sir Nigel Gresley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:51.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flying Scotsman” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:33:08Z",
+   "target": "f14341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "50.45 km (31.5 miles), dont 37.9 km (23.5 miles) sous la Manche",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Eurostar, which runs passenger trains through the tunnel: 50.45 km, i.e. about 50 km."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:33:09Z",
+   "target": "f14341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "is a 50.46-kilometre (31.35-mile) railway tunnel beneath the English Channel which connects Folkestone in the United Kingdom with Coquelles in northern France",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:33:11Z",
+   "target": "f14343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Welcome aboard the Royal Scotsman, a unique luxury sleeper train exploring the Scottish Highlands.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:33:13Z",
+   "target": "f14343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Belmond Royal Scotsman is a Scottish overnight luxury train, started in 1985 by GS&WR (Great Scottish and Western Railway Co.), and run since 2005 by Belmond Ltd.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:33:15Z",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "In 1934, Scotsman was clocked at 100mph on a special test run—officially the first locomotive in the UK to reach that speed.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "The museum that owns the locomotive. Its key facts also say 'Officially the first locomotive to reach 100mph'. GWR City of Truro's 1904 claim was never officially verified."
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T10:33:17Z",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "became the first steam locomotive to be officially recorded reaching 100 mph",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:37.396Z",
+   "target": "f14341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "50.45 km (31.5 miles), dont 37.9 km (23.5 miles) sous la Manche",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:37.396Z",
+   "target": "f14343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Belmond Royal Scotsman is a Scottish overnight luxury train, started in 1985 by GS&WR (Great Scottish and Western Railway Co.), and run since 2005 by Belmond Ltd.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:37.396Z",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "In 1934, Scotsman was clocked at 100mph on a special test run—officially the first locomotive in the UK to reach that speed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s13"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:37.396Z",
+   "target": "f28206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The history of Flying Scotsman | National Railway Museum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Flying Scotsman” is on the snapshot of s13"
+  }
+ ]
+}

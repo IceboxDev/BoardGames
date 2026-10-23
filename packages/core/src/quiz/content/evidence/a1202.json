@@ -1,0 +1,306 @@
+{
+ "article": "a1202",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zorba_the_Greek_(film)",
+   "title": "Zorba the Greek (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:58.884Z",
+   "snapshot": "583aac3812e92300cdde9bc6d6cbc313731fb1f1cd6aa53369c700503b8fbacb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Doctor_Zhivago_(film)",
+   "title": "Doctor Zhivago (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:59.911Z",
+   "snapshot": "d14a7a1ecc5c32e71a0d534727794180b6edf3679b854d5b33a3587869b0d6c2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Name_of_the_Rose_(film)",
+   "title": "The Name of the Rose (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:00.893Z",
+   "snapshot": "b59c51dbc2a7cffa4261c8495780b4a44163a42751efa9df39c22a9354c3d035"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Das_Foucaultsche_Pendel",
+   "title": "Das Foucaultsche Pendel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:58.289Z",
+   "snapshot": "fa849fc023c145e70786ba2dc91ef946a56c6795b9d7070aa19ee836efa918e1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Foucault%27s_Pendulum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:01.996Z",
+   "snapshot": "8c431cdd131c0eda245c3db3100b77333d0fd413f19dadec662a7eb939b69311"
+  },
+  "s6": {
+   "url": "https://www.lanavediteseo.eu/item/il-pendolo-di-foucault/",
+   "title": "Il pendolo di Foucault – La nave di Teseo",
+   "publisher": "La nave di Teseo",
+   "kind": "official",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:38:40.000Z",
+   "snapshot": "b9bbac3fd531ea17769445d01906f71698a6a5ae0b01d76571e081f15f4048fe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zorba the Greek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Doctor Zhivago",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Name of the Rose",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Foucaultsches Pendel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-039"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:47.453Z",
+   "target": "f06006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zorba the Greek (Greek: Αλέξης Ζορμπάς, Alexis Zorbas) is a 1964 drama film written, produced, edited, and directed by Greek Cypriot filmmaker Michael Cacoyannis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zorba the Greek” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:47.453Z",
+   "target": "f06007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Doctor Zhivago () is a 1965 epic historical romance film directed by David Lean with a screenplay by Robert Bolt, based on the 1957 novel by Boris Pasternak.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doctor Zhivago” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.453Z",
+   "target": "f06010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Name of the Rose is a 1986 historical mystery film directed by Jean-Jacques Annaud, based on the 1980 novel of the same title by Umberto Eco.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.453Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Name of the Rose” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.453Z",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Foucaultsches Pendel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Foucaultsches Pendel”, “Foucault pendulum”, “маятник Фуко”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:56:35Z",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The pendulum of the title refers to an actual pendulum designed by French physicist Léon Foucault to demonstrate Earth's rotation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:56:37Z",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "un museo parigino dove è esposto il pendolo di Foucault",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:55:29.595Z",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The pendulum of the title refers to an actual pendulum designed by French physicist Léon Foucault to demonstrate Earth's rotation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:29.595Z",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "un museo parigino dove è esposto il pendolo di Foucault",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:29.595Z",
+   "target": "f12881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Plan eventually becomes an intricate web of conspiracy theories about the Templars and their goal to reshape the world using \"telluric currents\", whose focal point can be determined using the Foucault pendulum and a unique map.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Foucault pendulum” is on the snapshot of s5"
+  }
+ ]
+}

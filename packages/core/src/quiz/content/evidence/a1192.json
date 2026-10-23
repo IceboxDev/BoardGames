@@ -1,0 +1,289 @@
+{
+ "article": "a1192",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Metropolis_(1927_film)",
+   "title": "Metropolis (1927 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:32.169Z",
+   "snapshot": "879702380e0ec4471079b1245901fc47b9a6b0f022dbc58590d67a13236a8efa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Die_Nibelungen",
+   "title": "Die Nibelungen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:25.933Z",
+   "snapshot": "b09e2c2023cf916b0388c8a25dd890ff5e63993da03443b3064830780b89368d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Woman_in_the_Moon",
+   "title": "Woman in the Moon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:26.870Z",
+   "snapshot": "268cf590329917e0650d98a45b9d1ad2b0ba2c2a79beca2b028b1d8798b38770"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dr._Mabuse_the_Gambler",
+   "title": "Dr. Mabuse the Gambler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:27.972Z",
+   "snapshot": "dab651d0f670ad07677875bfd5a357781cc3743effa8b3d34fc0af3682bdf312"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/M_(1931_film)",
+   "title": "M (1931 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:29.008Z",
+   "snapshot": "35c632c694757433d5d354e3f293987b1cc1b29a1754828a3b25057efb994530"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Fritz_Lang",
+   "title": "Fritz Lang",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:26.240Z",
+   "snapshot": "1978a45e9ae832b077c547def7e78d382fa367d3be67573e72fe653277274d2c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Metropolis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Nibelungen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Woman in the Moon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dr. Mabuse, the Gambler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "“M”",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fritz Lang",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-286"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:46.262Z",
+   "target": "f05956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Metropolis is a 1927 German expressionist science-fiction silent film directed by Fritz Lang and written by Thea von Harbou in collaboration with Lang, based on von Harbou's 1925 novel of the same name (which was written as a treatment).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metropolis” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:46.262Z",
+   "target": "f05957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Nibelungen (\"The Nibelungs\") is a two-part German series of silent fantasy films created by Austrian director Fritz Lang in 1924, consisting of Die Nibelungen: Siegfried and Die Nibelungen: Kriemhild's Revenge.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Nibelungen” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:46.262Z",
+   "target": "f05958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Woman in the Moon (German: Frau im Mond) is a German science fiction silent film that premiered 15 October 1929 at the UFA-Palast am Zoo cinema in Berlin to an audience of 2,000.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Woman in the Moon” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:46.262Z",
+   "target": "f05959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mabuse the Gambler (German: Dr. Mabuse, der Spieler) is the first film in the Dr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Mabuse, der Spieler” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:46.262Z",
+   "target": "f05960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As the two exit onto the street, the man chalks the letter \"M\" (for Mörder, \"murderer\") onto his palm, pretends to trip, and bumps into Beckert, marking the back of his overcoat with the letter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: ““M”” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:46.262Z",
+   "target": "f11344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fritz Lang hat über seine Wiener Jugend- und Studentenjahre, seine Familie und Vorfahren bewusst wenig berichtet, vielmehr das wenige Bekannte bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fritz Lang” is on the snapshot of s6"
+  }
+ ]
+}

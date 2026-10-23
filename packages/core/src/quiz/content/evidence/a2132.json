@@ -1,0 +1,242 @@
+{
+ "article": "a2132",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Krawatte",
+   "title": "Krawatte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:19.295Z",
+   "snapshot": "621e42b2d4a2e33c8be86a95347ecddce0460fd5351faf24415c5524eadb1744"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Marlene-Hose",
+   "title": "Marlene-Hose",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:20.459Z",
+   "snapshot": "b5a1de6da3265811f1b30bd92b54400728419dfaefb6897eb3c8417595a0c2bc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Panama_hat",
+   "title": "Panama hat",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:22.860Z",
+   "snapshot": "41ae48352d4ade4b6f5be53ffcef69d013c798558ed8d9fdd058e6e1cd449cf0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cardigan_(sweater)",
+   "title": "Cardigan (sweater) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:23.841Z",
+   "snapshot": "b49e21ca07db2bd27d4094633d187a2197d4873eb7e1b0e7846e011b88023c7c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jules_L%C3%A9otard",
+   "title": "Jules Léotard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:24.823Z",
+   "snapshot": "bd6403a149eadc16da79be56a1eacb7391581fcc3f02d92d4c5e5507c897f73e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kroaten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-249"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marlene Dietrich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-285"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ecuador",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-183"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Earl of Cardigan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jules Léotard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:27.904Z",
+   "target": "f10688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dieser Bestandteil der Uniform der Kroaten zog angeblich die Aufmerksamkeit des Königs auf sich, der die Cravate anschließend übernahm und innerhalb des Adels verbreitete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.904Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kroaten” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:27.904Z",
+   "target": "f10689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marlene-Hose, auch Marlene-Dietrich-Hose, ist ein Fachbegriff aus der Mode und bezeichnet eine aus der Herrenmode entlehnte, weite, geradefallende Anzughose aus besonders weichen Wollstoffen und einer großen Fußweite bis 54 cm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.904Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marlene Dietrich” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.904Z",
+   "target": "f10690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Although commonly called \"Panama hat\" in English, the hat has its origin in Ecuador.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.904Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ecuador” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.904Z",
+   "target": "f10691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The cardigan was named after James Brudenell, 7th Earl of Cardigan, a British Army major general who led the Charge of the Light Brigade at the Battle of Balaclava during the Crimean War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.904Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Earl of Cardigan” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.904Z",
+   "target": "f10692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jules Léotard (French: [leɔtaʁ]; 1 August 1838 – 16 August 1870) was a French acrobatic performer and aerialist who developed the art of trapeze.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.904Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jules Léotard” is on the snapshot of s5"
+  }
+ ]
+}

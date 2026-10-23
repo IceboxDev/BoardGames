@@ -1,0 +1,681 @@
+{
+ "article": "a2351",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Benazir_Bhutto",
+   "title": "Benazir Bhutto",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:34.572Z",
+   "snapshot": "2018c963e0222deed74187377d73c140f31469e7ff0990a677e4f96f21ffaf0a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Boris_Nikolajewitsch_Jelzin",
+   "title": "Boris Nikolajewitsch Jelzin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:35.413Z",
+   "snapshot": "477e2722a99c27b97e72ae91d92bbdb56e3d6ffc828bba2457be0b50d076495f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Corazon_Aquino",
+   "title": "Corazon Aquino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:38.366Z",
+   "snapshot": "18ad6b4d493c43d388e83449a898c884096dc070353abdfad5c1acfa20f2c796"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Patricio_Aylwin",
+   "title": "Patricio Aylwin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:39.252Z",
+   "snapshot": "9f430938db34526aa3416155b2baa88bc91ab2f52554ac664f72cbe9a95a5af6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Violeta_Chamorro",
+   "title": "Violeta Chamorro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:40.345Z",
+   "snapshot": "5e8da28fbfe242aa59d1b643b67ae91abe6493431066f0becb15467789fef742"
+  },
+  "s6": {
+   "url": "http://news.bbc.co.uk/2/hi/south_asia/2228796.stm",
+   "title": "Obituary: Benazir Bhutto",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:51.235Z",
+   "snapshot": "addfdd3e990ec4b1d59fb7baa7d95e9c0b6dc067cbe77b84fa32485747dfa284"
+  },
+  "s7": {
+   "url": "https://www.dhm.de/lemo/biografie/boris-jelzin",
+   "title": "LeMO Biografie Boris Nikolajewitsch Jelzin",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:51.498Z",
+   "snapshot": "c99b50687c3529a6fbcc13d7eb4b928e4c089160300501a9e1fd864d68374ce0"
+  },
+  "s8": {
+   "url": "https://www.theguardian.com/world/2009/aug/01/corazon-aquino-obituary",
+   "title": "Corazon Aquino (obituary)",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:51.526Z",
+   "snapshot": "bb75e2a9a5619240fedc21570ae8ba6d5c0746877da07b67e7df1681a5889af7"
+  },
+  "s9": {
+   "url": "https://www.theguardian.com/world/2025/jun/15/violeta-chamorro-obituary",
+   "title": "Violeta Chamorro obituary",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:52.520Z",
+   "snapshot": "db915faab1ebb226661558051e47c5505771aaea5a0da5499fc6a1ad14bd2b2c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benazir Bhutto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Boris Jelzin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-259"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Corazon Aquino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Patricio Aylwin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Violeta Chamorro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:02.708Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benazir Bhutto (Urdu بینظیر بھٹو [beːnəziːr bʱʊʈːoː]; * 21.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benazir Bhutto” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:02.708Z",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Boris Jelzin kam als ältester Sohn von Klawdja Wassiljewna, geborene Starygin, und Nikolaj Ignatjewitsch Jelzin im Dorf Butka im Ural zur Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boris Jelzin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:02.708Z",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Corazon Aquino was fluent in French, Japanese, Spanish, and English aside from her native Tagalog and Kapampangan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Corazon Aquino” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:02.708Z",
+   "target": "f12245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Patricio Aylwin Azócar  (Latin American Spanish pronunciation: [paˈtɾisjo ˈelwin aˈsokaɾ] ; 26 November 1918 – 19 April 2016) was a Chilean politician, lawyer, author, professor and former senator who was the 30th president of Chile from 1990 to 1994.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Patricio Aylwin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:02.708Z",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Violeta Chamorro's years in power began a period of significant economic and social decline for Nicaragua.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Violeta Chamorro” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:42:11Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "She was twice prime minister of Pakistan, from 1988 to 1990, and from 1993 to 1996.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23",
+   "note": "Bhutto is the only woman ever to have been Pakistan's prime minister, so 'first' is safe."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:42:13Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "After Gen Zia died in an explosion on board his aircraft in 1988, she became one of the first democratically elected female prime ministers in an Islamic country.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:15Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Am 2. Dezember wurde sie als erste Regierungschefin in der islamischen Welt vereidigt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:17Z",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "12. Juni: Jelzin wird als erster Präsident der sowjetischen Teilrepublik Russland direkt gewählt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:42:19Z",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Am 12. Juni 1991 wurde Jelzin bei den ersten russischen Präsidentschaftswahlen zum Präsidenten der Russischen Teilrepublik",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:42:21Z",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "First female president of the Philippines who led the 'people power' revolt against Ferdinand Marcos",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:42:23Z",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first female president in Philippine history, Aquino was the most prominent figure of the 1986 People Power Revolution",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:42:25Z",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "she beat Ortega handsomely and became the first elected female president in Latin American history.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:42:27Z",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She was the first elected female head of state in the Americas",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "After Gen Zia died in an explosion on board his aircraft in 1988, she became one of the first democratically elected female prime ministers in an Islamic country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Am 2. Dezember wurde sie als erste Regierungschefin in der islamischen Welt vereidigt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "12. Juni: Jelzin wird als erster Präsident der sowjetischen Teilrepublik Russland direkt gewählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Am 12. Juni 1991 wurde Jelzin bei den ersten russischen Präsidentschaftswahlen zum Präsidenten der Russischen Teilrepublik",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "First female president of the Philippines who led the 'people power' revolt against Ferdinand Marcos",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first female president in Philippine history, Aquino was the most prominent figure of the 1986 People Power Revolution",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "she beat Ortega handsomely and became the first elected female president in Latin American history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She was the first elected female head of state in the Americas",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "BBC NEWS | South Asia | Obituary: Benazir Bhutto",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Benazir Bhutto” is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Foto von Boris Jelzin, Präsident der Russischen Föderation (1991-1999), während eines Deutschlandbesuches.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Boris Jelzin” is on the snapshot of s7"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Corazon Aquino | Philippines | The Guardian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Corazon Aquino” is on the snapshot of s8"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:58:47.492Z",
+   "target": "f12246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Violeta Chamorro obituary | Nicaragua | The Guardian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Violeta Chamorro” is on the snapshot of s9"
+  }
+ ]
+}

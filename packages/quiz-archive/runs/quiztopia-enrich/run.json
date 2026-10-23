@@ -1,0 +1,38 @@
+{
+ "id": "quiztopia-enrich",
+ "title": "Quiztopia: article enrichment, URL checks and two dedupe passes (ws21)",
+ "startedAt": "2026-09-24",
+ "endedAt": "2026-09-25",
+ "kind": "enrich",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded)",
+  "Owner: Mantas Kandratavičius (decisions, pauses, rulings)"
+ ],
+ "brief": "tools/ENRICH_INSTRUCTIONS.md",
+ "inputs": [
+  "transcripts/quiztopia (baseline commit 843e30b of ws21's quiz-cards/json git repo)"
+ ],
+ "outputs": [
+  "transcripts/quiztopia (ws21 json HEAD 2f17ea6 'coordinator fact fixes', 2026-09-25)"
+ ],
+ "archivedFrom": [
+  "ws21:~/Downloads/quiz-cards/{enrich-report/,qa_changes.tsv,tools/}",
+  "ws21:~/Downloads/quiz-cards/json/.git (git log --stat)"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 189,
+  "bytes": 2931081,
+  "byExt": {
+   ".json": 4,
+   ".md": 178,
+   ".py": 5,
+   ".tsv": 1,
+   ".txt": 1
+  },
+  "cards": 177,
+  "enrichReports": 177
+ },
+ "notes": "Per-card enrich reports (enrich-report/IMG*.md; photo-to-card.json maps names to cNNN), qa_changes.tsv (every Q/A text change), dedupe worklists and checkers. json-git-log.txt is git log --stat of ws21's json repo (baseline -> before dedupe -> dedupe pass 1 -> pass 2 -> coordinator fixes); the repo itself stays on ws21. scratch/ (98 MB: fetched pages *.raw, per-card edit scripts) not archived."
+}

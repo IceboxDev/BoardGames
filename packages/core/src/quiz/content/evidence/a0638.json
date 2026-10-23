@@ -1,0 +1,242 @@
+{
+ "article": "a0638",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/O_Captain!_My_Captain!",
+   "title": "O Captain! My Captain! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:55.159Z",
+   "snapshot": "beb1b0900caf5b32abd77472fe60945f3ce7b59d04d69ba60bb0c1e00356b003"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/John_Keats",
+   "title": "John Keats – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:56.174Z",
+   "snapshot": "929c67c80a348ebb57345795f490e218c59e8560440423b7708fdbb0d40177d4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Hallam",
+   "title": "Arthur Hallam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:57.041Z",
+   "snapshot": "8790b10e0fa2a0197d75152e8e95fa005a09406a2022d8bcf6125f7d9747f417"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paula_Modersohn-Becker",
+   "title": "Paula Modersohn-Becker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:46.414Z",
+   "snapshot": "34217de990bc6a10910d585c89e56f5bb508f3ca7f86e7b56a4632aa932adafc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/W._B._Yeats",
+   "title": "W. B. Yeats – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:58.152Z",
+   "snapshot": "e65ee9af3aba8e8e72777ec5941d799b52f3d12b52234d9ea45034c6c384ef8e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Keats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Henry Hallam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paula Modersohn-Becker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Butler Yeats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:18.591Z",
+   "target": "f03186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Although they never met, Whitman saw Abraham Lincoln several times between 1861 and 1865, sometimes at close quarters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Lincoln” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:18.591Z",
+   "target": "f03187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Keats (31 October 1795 – 23 February 1821) was an English poet of the second generation of Romantic poets, along with Lord Byron and Percy Bysshe Shelley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Keats” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:18.591Z",
+   "target": "f03188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Henry Hallam (1 February 1811 – 15 September 1833) was an English poet, best known as the subject of a major work, In Memoriam, by his close friend and fellow poet Alfred Tennyson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Henry Hallam” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:18.591Z",
+   "target": "f03189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paula Modersohn-Becker (8 February 1876 – 20 November 1907) was a German Expressionist painter and draftswoman of the late 19th and early 20th centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paula Modersohn-Becker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:18.591Z",
+   "target": "f03190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Butler Yeats ( YAYTS; 13 June 1865 – 28 January 1939) was an Irish poet, dramatist, writer and literary critic who was one of the foremost figures of 20th-century literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Butler Yeats” is on the snapshot of s5"
+  }
+ ]
+}

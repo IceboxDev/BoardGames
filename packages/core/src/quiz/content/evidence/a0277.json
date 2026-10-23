@@ -1,0 +1,336 @@
+{
+ "article": "a0277",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Astral_Weeks",
+   "title": "Astral Weeks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:05.031Z",
+   "snapshot": "7aadd65257e49c76cc02d011452d0bee14dfbd95c532d7f73dae2000c638fa30"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Blue_(Joni_Mitchell_album)",
+   "title": "Blue (Joni Mitchell album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:06.012Z",
+   "snapshot": "7fe18a329a2a6196c1f1819ba1de8dfc3af8becfe58e6fca1f590f8d61b68674"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Five_Leaves_Left",
+   "title": "Five Leaves Left – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:06.997Z",
+   "snapshot": "9045649e5de161e84694347a4fe71dbe810f7950e895294da18718a57bda3ac2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Songs_of_Leonard_Cohen",
+   "title": "Songs of Leonard Cohen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:07.918Z",
+   "snapshot": "921a5025ff37bd4bbae9428010647faaf9494764e0c8f84560344105a1964cd6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/So_Long,_Marianne",
+   "title": "So Long, Marianne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:05.188Z",
+   "snapshot": "03ab496bb4cb0984118658355147c1e686ec15066c54ade4318ad7faf14e31c1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Blood_on_the_Tracks",
+   "title": "Blood on the Tracks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:08.942Z",
+   "snapshot": "5d9a7fad08e1a5230efe4f350c527fd5b7f97bd58d7b13c7510c49514d74e430"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/You_Want_It_Darker_(Album)",
+   "title": "You Want It Darker (Album)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:06.280Z",
+   "snapshot": "792967bf513490d70e23f12eae1814b2d074ddfc62a8caca3118f76286050bf6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Van Morrison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joni Mitchell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nick Drake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Leonard Cohen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leonard Cohen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-012"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bob Dylan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "You Want It Darker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-320"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f01381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Astral Weeks is the second studio album by Northern Irish singer-songwriter Van Morrison.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Van Morrison” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f01382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blue is the fourth studio album by the Canadian singer-songwriter Joni Mitchell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joni Mitchell” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f01383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Five Leaves Left is the debut studio album by English folk musician Nick Drake.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nick Drake” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f01384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Songs of Leonard Cohen is the debut studio album by Canadian singer-songwriter Leonard Cohen, released on December 27, 1967, on Columbia Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonard Cohen” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f01384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "So Long, Marianne ist ein Folksong des kanadischen Singer-Songwriters Leonard Cohen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonard Cohen” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f01385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blood on the Tracks is the fifteenth studio album by the American singer-songwriter Bob Dylan, released on January 20, 1975, by Columbia Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bob Dylan” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:23.270Z",
+   "target": "f13040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "You Want It Darker (englisch für „Du willst es dunkler“) ist das 14.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “You Want It Darker” is on the snapshot of s7"
+  }
+ ]
+}

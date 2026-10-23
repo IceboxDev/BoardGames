@@ -1,0 +1,403 @@
+{
+ "article": "a2412",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Yps",
+   "title": "Yps",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:20.256Z",
+   "snapshot": "eb2db9da3b3424bbc1bd7fb4556f638c02cafc49d6fdb3330638fbc2712c734c"
+  },
+  "s2": {
+   "url": "https://retroport.de/retro-kult-yps-gimmicks/",
+   "title": "Retro-Kult: Yps-Gimmicks – Retroport",
+   "publisher": "Retroport",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:09.430Z",
+   "snapshot": "de36f10fc246dfa0c7ee53806bb557e331f05df76f3d8a17e24e4656b9f3aba1"
+  },
+  "s3": {
+   "url": "https://www.ypsfanpage.de/gimmicks/top20.php",
+   "title": "YPS Fanpage: Gimmicks: Top20",
+   "publisher": "YpsFanpage.de",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:09.590Z",
+   "snapshot": "f550573262aea1b2c07daec7bb922e57dcdb792e80012d6d5ee975079f4c994e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ein Schleuderkatapult",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-334"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Känguru",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Urzeitkrebse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pif Gadget",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gruner + Jahr",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:16.390Z",
+   "target": "f12637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ein Schleuderkatapult",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ein Schleuderkatapult”, “a slingshot catapult”, “катапульта”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:16.390Z",
+   "target": "f12638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In diesen Heften kam das namensgebende Känguru Yps noch nicht vor, ebenso fehlte die Reihe Yinni und Yan, die ab der regulären Ausgabe 1 bis kurz vor der Einstellung der Reihe fast immer vertreten war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Känguru” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:16.390Z",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aus Pif Gadget wurden für Yps zahlreiche Gimmicks (beispielsweise die „Urzeitkrebse“) und Comics (zum Beispiel Pif und Herkules) übernommen, jedoch von Anfang an durch eigene Comics deutscher Zeichner ergänzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Urzeitkrebse” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:16.390Z",
+   "target": "f12640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Konzept von Yps basierte auf dem französischen Heft Pif Gadget, das ursprünglich unter dem Namen Vaillant, le jeune patriote (‚Vaillant, der junge Patriot‘) eine Jugendzeitschrift der kommunistischen Partei Frankreichs war, die zuerst während des Zweiten Weltkriegs im Untergrund erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pif Gadget” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:16.390Z",
+   "target": "f12641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vor dem Start der Reihe brachte der Hamburger Verlag Gruner + Jahr im Sommer 1975 nur in Hessen fünf Testausgaben heraus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gruner + Jahr” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:01:42Z",
+   "target": "f12637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "YPS 1 Das Schleuder-Katapult",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Collector's issue-by-issue gimmick list; issue 1 dated 13.10.1975."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:01:44Z",
+   "target": "f12637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Gimmick in Heft 1 war ein kleines Schleuder-Katapult aus Kunststoff, mit dem Papierkügelchen verschossen werden konnten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "A pilot issue before no. 1 had a capsule gimmick; the body says so."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:01:46Z",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die insgesamt 20-mal als Beilage zum Heft erschienen, gefolgt vom Yps Abenteuerzelt, das 15-mal Gimmick war.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Most frequent gimmick; 20 times per Wikipedia (original run), more in the revivals."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:01:49Z",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Platz 1 Die Urzeitkrebse 23x",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Agrees Urzeitkrebse were the most frequent gimmick but counts 23 (apparently incl. 2006/2012+ issues); the exact count was dropped from the question."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:59.712Z",
+   "target": "f12637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "YPS 1 Das Schleuder-Katapult",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:59.712Z",
+   "target": "f12637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Gimmick in Heft 1 war ein kleines Schleuder-Katapult aus Kunststoff, mit dem Papierkügelchen verschossen werden konnten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:59.712Z",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die insgesamt 20-mal als Beilage zum Heft erschienen, gefolgt vom Yps Abenteuerzelt, das 15-mal Gimmick war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:59.712Z",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Platz 1 Die Urzeitkrebse 23x",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:59.712Z",
+   "target": "f12639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Urzeitkrebse",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Urzeitkrebse” is on the snapshot of s3"
+  }
+ ]
+}

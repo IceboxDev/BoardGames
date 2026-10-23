@@ -1,0 +1,420 @@
+{
+ "article": "a1411",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Albrecht",
+   "title": "Karl Albrecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:44.277Z",
+   "snapshot": "6d4b41b946953eff54ef4644a610509b21d1870a2b7a41424e5bbec603d80d81"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hans_Riegel",
+   "title": "Hans Riegel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:41.479Z",
+   "snapshot": "81a0292d0709385cfa0cfbd4a4678e5f1a66a5842f71c4f116bde96a8622ea0c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Haribo",
+   "title": "Haribo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:42.600Z",
+   "snapshot": "71577f49e1af4a856ba412cb9480af083e51025049fd3e48bfc2b8291724587b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Adolf_Dassler",
+   "title": "Adolf Dassler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:45.393Z",
+   "snapshot": "866719e07a986a3dcf69ed31aefdfb32d5760607269d391416c0b74dad1df3d6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Edeka",
+   "title": "Edeka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:10.947Z",
+   "snapshot": "13aa3f0e6bdd499d7c3ada66cb7696e438979d3985ea511410f6d4b8093e70b5"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/BASF",
+   "title": "BASF",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:43.780Z",
+   "snapshot": "795804cc50b38d138bafe6067467cf87be9383fae4a01645046e54da214b0359"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aldi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:17.794Z",
+   "snapshot": "f844b6aa2e11089f181bd74bd4c45f87d4e48aa6eaf7de02687cff80c08de4db"
+  },
+  "s8": {
+   "url": "https://www.yumda.com/de/news/1183196/111-jahre-aldi-von-backwaren-zum-discount-pionier.html",
+   "title": "111 Jahre ALDI: Von Backwaren zum Discount-Pionier (ALDI Nord press release)",
+   "publisher": "ALDI Nord",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:50.089Z",
+   "snapshot": "bbd7646a886847f0f41d2c2c470e020e6f8c9738e9caa07727823c1f8db4686b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Albrecht-Diskont",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans Riegel Bonn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Riegel Bonn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-337"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adi Dassler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Einkaufsgenossenschaft der Kolonialwarenhändler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Anilin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-040"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:21.369Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Albrecht-Diskont",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Albrecht-Diskont”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:21.369Z",
+   "target": "f07053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dezember 1920 als Firma Haribo (Hans Riegel Bonn) ins Bonner Handelsregister eintragen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.369Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Riegel Bonn” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:21.369Z",
+   "target": "f07053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Unternehmensbezeichnung ist ein Akronym und ist von den beiden ersten Buchstaben seines Vor- und Nachnamens sowie den ersten beiden Buchstaben des Standortes abgeleitet (Hans Riegel Bonn).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.369Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Riegel Bonn” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:21.369Z",
+   "target": "f07054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the course of the appeal proceedings, Rudolf Dassler inserted statements that claimed that Adi Dassler had organized the production of weapons himself and for his own profit and that Rudolf would have resisted the change in production if he were present.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.369Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adi Dassler” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:21.369Z",
+   "target": "f07055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Edeka-Gruppe (Eigenschreibweise EDEKA; ehemals Abkürzung für Einkaufsgenossenschaft der Kolonialwarenhändler im Halleschen Torbezirk zu Berlin) ist ein genossenschaftlich organisierter kooperativer Unternehmensverbund im deutschen Einzelhandel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.369Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Einkaufsgenossenschaft der Kolonialwarenhändler” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:21.369Z",
+   "target": "f13571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Unternehmen hat seinen Ursprung in der 1865 in Mannheim gegründeten Badische Anilin- & Soda-Fabrik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.369Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anilin” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:14:26Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1962, they introduced the name Aldi—short for Albrecht-Diskont, which translates into English as Albrecht Discount, which became their formal corporate name in 1975.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:14:28Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ab 1962 führen die Brüder ihre Diskontläden unter dem Namen, der heutzutage weltbekannt ist: ALDI, die Abkürzung für Albrecht Diskont.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:06.347Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1962, they introduced the name Aldi—short for Albrecht-Diskont, which translates into English as Albrecht Discount, which became their formal corporate name in 1975.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:06.347Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ab 1962 führen die Brüder ihre Diskontläden unter dem Namen, der heutzutage weltbekannt ist: ALDI, die Abkürzung für Albrecht Diskont.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:06.347Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1962, they introduced the name Aldi (a syllabic abbreviation for \"Albrecht Diskont\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Albrecht-Diskont” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:06.347Z",
+   "target": "f07051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ab 1962 führen die Brüder ihre Diskontläden unter dem Namen, der heutzutage weltbekannt ist: ALDI, die Abkürzung für Albrecht Diskont.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.347Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Albrecht-Diskont” is on the snapshot of s8"
+  }
+ ]
+}

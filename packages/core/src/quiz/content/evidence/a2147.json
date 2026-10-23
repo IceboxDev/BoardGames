@@ -1,0 +1,369 @@
+{
+ "article": "a2147",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Crossing_the_Threshold_of_Hope",
+   "title": "Crossing the Threshold of Hope",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:26.864Z",
+   "snapshot": "0494d61fd8227a5f555bb75c201acdb5f437056f38be4fb5e324850c8565848f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Redemptor_hominis",
+   "title": "Redemptor hominis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:27.858Z",
+   "snapshot": "b7ca03de82d21cc268284ff3887341d088b581e4af9681a722f486e846d50e3c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Laudato_si%27",
+   "title": "Laudato si' – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:29.293Z",
+   "snapshot": "fa944c3b7b9ce42940e8973bbec24c670ea2413eb95ae1d63401417754f9e20d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jesus_of_Nazareth_(book)",
+   "title": "Jesus of Nazareth (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:29.891Z",
+   "snapshot": "3dc2e0e9ca22d92d535da1bc2a2c3f8a906900d21b7c5e805cd59e9c421a9309"
+  },
+  "s5": {
+   "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_04031979_redemptor-hominis.html",
+   "title": "Redemptor hominis (4 March 1979) – John Paul II",
+   "publisher": "Holy See (vatican.va)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:57.075Z",
+   "snapshot": "1cc5d6d92d3017dd8695a9746254d00783b6950b8e9f8731d0aec479bcb47658"
+  },
+  "s6": {
+   "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals.index.html",
+   "title": "Encyclicals – John Paul II",
+   "publisher": "Holy See (vatican.va)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:57.911Z",
+   "snapshot": "4dafc4fc217dc254e138fea82b78e036ea89f960ca3c106fa2972608f553da57"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pope John Paul II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-326"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vittorio Messori",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Redemptor hominis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Laudato si'",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jesus of Nazareth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:29.810Z",
+   "target": "f10825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crossing the Threshold of Hope was written in 1994 by Pope John Paul II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:29.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pope John Paul II” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:29.810Z",
+   "target": "f10826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The contents presented in Crossing the Threshold of Hope were originally intended to be broadcast as a live television interview with Vittorio Messori, an Italian journalist and writer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:29.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vittorio Messori” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:29.810Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Redemptor hominis (Latin: The Redeemer of Man) is the name of the first encyclical written by Pope John Paul II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:29.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Redemptor hominis” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:29.810Z",
+   "target": "f10828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Laudato si' ('Praise Be to You') is the second encyclical of Pope Francis, subtitled \"on care for our common home.\" In it, the Pope criticizes consumerism and irresponsible economic development, laments environmental degradation and global warming, and calls all people of the world to take \"swift",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:29.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laudato si'” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:29.810Z",
+   "target": "f10829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jesus of Nazareth (1956), British television serial of 1956",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:29.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jesus of Nazareth” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:12Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Given at Rome, at Saint Peter's, on the fourth of March, the First Sunday of Lent, in the year 1979, the first year of my Pontificate.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:15Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Redemptor Hominis (4 March 1979)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23",
+   "note": "The Holy See's list of John Paul II's 14 encyclicals ends (earliest) with Redemptor Hominis; the next is Dives in Misericordia (30 November 1980)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:16.051Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Given at Rome, at Saint Peter's, on the fourth of March, the First Sunday of Lent, in the year 1979, the first year of my Pontificate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.051Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:16.051Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Redemptor Hominis (4 March 1979)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.051Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:16.051Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Redemptor Hominis (4 March 1979)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.051Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Redemptor hominis” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:16.051Z",
+   "target": "f10827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Redemptor Hominis (4 March 1979)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.051Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Redemptor hominis” is on the snapshot of s6"
+  }
+ ]
+}

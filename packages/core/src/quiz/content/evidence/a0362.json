@@ -1,0 +1,414 @@
+{
+ "article": "a0362",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Karzer",
+   "title": "Karzer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:42.865Z",
+   "snapshot": "18870a2c57bd1e304e636b08333eb311fd0cf43fb9c79035e915b43b192acd0f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Aula_der_Georg-August-Universit%C3%A4t",
+   "title": "Aula der Georg-August-Universität – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:40.386Z",
+   "snapshot": "b4b4706e5946accf0fd77b61e0cc11742a27ee32ae6432fe3a061cdda77b1e3c"
+  },
+  "s3": {
+   "url": "https://www.dwds.de/wb/Katheder",
+   "title": "Katheder – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:40.482Z",
+   "snapshot": "ccf44db953a60c899e1874049adc37180ea78f729be5f846388be3022de49832"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jakob_Schmid",
+   "title": "Jakob Schmid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:43.842Z",
+   "snapshot": "ccb0634a76ff47ed2e205aa5291f17d4226dc79c2f14aed420f4e2abec3d2217"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/Pedell",
+   "title": "Pedell – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:35.736Z",
+   "snapshot": "e14efc3a2b18b4c0ecc9a8b722bc0d6b4eef4ef48e56b6cd8c0ffe0413cb74fa"
+  },
+  "s6": {
+   "url": "https://www.duden.de/rechtschreibung/Pedell",
+   "title": "Pedell – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:36.316Z",
+   "snapshot": "ba7fae214a5faffafa4d56975956f30f09897c13e9911b9b64526f767ac94bc5"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Pedell",
+   "title": "Pedell – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:36.341Z",
+   "snapshot": "91984ab04c39317567649a96fae1e1ebde37cb41ff4b0766f8e576df8a80c6cc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karzer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01807",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aula",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Katheder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pedell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:36.188Z",
+   "target": "f01806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Karzer was a designated lock-up or detention room to incarcerate students as a punishment, within the jurisdiction of some institutions of learning in Germany and German-language universities abroad.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karzer” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:36.188Z",
+   "target": "f01807",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aula der Georg-August-Universität",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aula” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:36.188Z",
+   "target": "f01808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Katheder – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Katheder” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:36.188Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pedell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pedell”, “Педель”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:20:23Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pedell m. ‘Hausmeister einer (Hoch)schule’, spätmhd. pedel(le), bedelle, frühnhd. bedell, pedell ‘Gerichtsbote (einer Universität), Universitätsbote, -diener’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:20:26Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hausmeister einer Schule oder Hochschule",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:20:29Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Er war Gerichtsdiener[3] und für die Ordnung und Einhaltung der Universitätsgesetze zuständig.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:20:38Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ein Pedell ist eine organisatorische Hilfskraft bei öffentlichen Institutionen, wie Gerichten, Schulen und insbesondere an Universitäten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23",
+   "note": "supersedes e11 (its quote carried a footnote marker)"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:57.775Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pedell m. ‘Hausmeister einer (Hoch)schule’, spätmhd. pedel(le), bedelle, frühnhd. bedell, pedell ‘Gerichtsbote (einer Universität), Universitätsbote, -diener’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:57.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:57.775Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hausmeister einer Schule oder Hochschule",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:57.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:57.775Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ein Pedell ist eine organisatorische Hilfskraft bei öffentlichen Institutionen, wie Gerichten, Schulen und insbesondere an Universitäten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:57.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:57.775Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pedell – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:57.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pedell” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:57.775Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pedell ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:57.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pedell” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:57.775Z",
+   "target": "f01809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ein Pedell ist eine organisatorische Hilfskraft bei öffentlichen Institutionen, wie Gerichten, Schulen und insbesondere an Universitäten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:57.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pedell” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,303 @@
+{
+ "article": "a2706",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh",
+   "title": "Epic of Gilgamesh",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:09.401Z",
+   "snapshot": "8fccc4375689656229421f576333721900ecebad212420a0eff1433c3cd83827"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gilgamesh_flood_myth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:10.197Z",
+   "snapshot": "8a1ed34b891f42b6501481b4d0e853536d0278603db17c8c9270728ac9750f5e"
+  },
+  "s3": {
+   "url": "https://www.worldhistory.org/gilgamesh/",
+   "title": "Gilgamesh",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:40.850Z",
+   "snapshot": "0489ece4cc56fe3c03afde1edd4a6db63ad02672c23394bdaaf2552d2e4476d6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Epic of Gilgamesh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Utnapishtim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sîn-lēqi-unninni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a serpent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:00.763Z",
+   "target": "f25298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Epic of Gilgamesh () is an epic from ancient Mesopotamia that is the world's oldest surviving example of narrative literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epic of Gilgamesh” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:00.763Z",
+   "target": "f25299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Finally, he meets Utnapishtim and his wife, the only humans to survive the flood triggered by the gods (cf.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utnapishtim” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:00.763Z",
+   "target": "f25300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The later Standard Babylonian version compiled by Sîn-lēqi-unninni dates to somewhere between the 13th and 10th centuries BCE and bears the incipit Sha naqba īmuru (\"He Who Saw the Deep(s)\", lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sîn-lēqi-unninni” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:00.763Z",
+   "target": "f25301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Late in the following decade, the British Museum hired George Smith to study them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Smith” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:00.763Z",
+   "target": "f25302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "When Gilgamesh stops to bathe, it is stolen by a serpent, who sheds its skin as it departs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.763Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “a serpent” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:50Z",
+   "target": "f25298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Epic of Gilgamesh () is an epic from ancient Mesopotamia that is the world's oldest surviving example of narrative literature.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:57Z",
+   "target": "f25298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the great Babylonian poem that predates Homer's Iliad and Odyssey by 1500 years and, therefore, stands as the oldest piece of epic world literature.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Older non-narrative texts (e.g. the Kesh Temple Hymn, Instructions of Shuruppak) exist, which is why the wording says 'narrative literature' and 'regarded as'"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:48.253Z",
+   "target": "f25298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the great Babylonian poem that predates Homer's Iliad and Odyssey by 1500 years and, therefore, stands as the oldest piece of epic world literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:48.253Z",
+   "target": "f25298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gilgamesh is the semi-mythic King of Uruk, best known as the hero of The Epic of Gilgamesh (circa 2100 to circa 1200 BCE), the great Babylonian poem that predates Homer's Iliad and Odyssey by 1500 years and, therefore, stands as the oldest piece of epic world literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Epic of Gilgamesh” is on the snapshot of s3"
+  }
+ ]
+}

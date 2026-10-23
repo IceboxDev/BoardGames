@@ -1,0 +1,242 @@
+{
+ "article": "a0556",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/ER_(TV_series)",
+   "title": "ER (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:02.574Z",
+   "snapshot": "16568e0c2db43251f2a61d8a413b863392553e2db69674fb04a33cc2b0c9f514"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Fresh_Prince_of_Bel-Air",
+   "title": "The Fresh Prince of Bel-Air – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:34.063Z",
+   "snapshot": "e4e1a3cf9d16d52a07fb3242ce4010b2d5b85ea521dbf3123fa132063ce6829f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/21_Jump_Street",
+   "title": "21 Jump Street – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:35.069Z",
+   "snapshot": "24ed25494a03c98b084e17bbf0ea2b3e910e4258d823f17699b8cd1c51da158e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Moonlighting_(TV_series)",
+   "title": "Moonlighting (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:36.211Z",
+   "snapshot": "1bae8cbf2646273ae854d4cd1d5b5c35396670036eb4becbe34d2578c4d6ab4a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jennifer_Aniston",
+   "title": "Jennifer Aniston – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:37.170Z",
+   "snapshot": "f945f7bd2fb148d1ac418ebb83e92f90e7b48a7c2e9d2dab62578d8b44e9663a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Clooney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Will Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johnny Depp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bruce Willis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jennifer Aniston",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:06.481Z",
+   "target": "f02776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mark Greene, George Clooney as Dr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Clooney” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:06.481Z",
+   "target": "f02777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The series stars Will Smith as a fictionalized version of himself, a street-smart teenager born and raised in West Philadelphia who is sent to live with his wealthy uncle and aunt in Bel-Air, Los Angeles, where his lifestyle often clashes with that of his upper-class relatives.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Will Smith” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:06.481Z",
+   "target": "f02778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The series provided a spark to Johnny Depp's acting career, gaining him national recognition as a teen idol.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnny Depp” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:06.481Z",
+   "target": "f02779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Starring Cybill Shepherd and Bruce Willis as private detectives, Allyce Beasley as their quirky receptionist, and Curtis Armstrong as a temporary worker (and later junior detective), the show was a mixture of drama, comedy, mystery, and romance, and was considered to be one of the first successful",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruce Willis” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:06.481Z",
+   "target": "f02780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "declared it her breakthrough: After languishing in a series of overlooked movies that ranged from the entertaining Office Space to the disposable Picture Perfect, Jennifer Aniston has at last decisively broken with her Friends image in an independent film of satiric fire and emotional turmoil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jennifer Aniston” is on the snapshot of s5"
+  }
+ ]
+}

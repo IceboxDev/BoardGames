@@ -1,0 +1,517 @@
+{
+ "article": "a0900",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sam_%26_Max",
+   "title": "Sam & Max – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:45.371Z",
+   "snapshot": "bbb062b188de31402fed86c3a506930e4ce0899f3fa6efdb62c0a38fc21330d5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Return_to_Monkey_Island",
+   "title": "Return to Monkey Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:46.347Z",
+   "snapshot": "a50a97d83c67542d54ec32ed93d131c0685ad6c4e04570c60bf2f6e14e0be8ec"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Maniac_Mansion",
+   "title": "Maniac Mansion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:47.276Z",
+   "snapshot": "ed74e803e1fe1d38d65ac65fa37dec5cbb15b305883cfc9f24b544d69b07003f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grim_Fandango",
+   "title": "Grim Fandango – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:48.382Z",
+   "snapshot": "1dbad771de786dbd304d809641145eb1a93365287e7fb3006a4e957682283440"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Broken_Sword:_The_Shadow_of_the_Templars",
+   "title": "Broken Sword: The Shadow of the Templars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:49.486Z",
+   "snapshot": "aaeea6d04fcb7a580016ba9a59670464a4ff698dbc8be8bb7ed6194db2bd0132"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Deponia",
+   "title": "Deponia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:46.598Z",
+   "snapshot": "c06b5f7d27858f0c46bca881386fea214cec841300246dd2e037b28f6de287dd"
+  },
+  "s7": {
+   "url": "http://www.ign.com/articles/2016/03/21/day-of-the-tentacle-remastered-review",
+   "title": "Day of the Tentacle Remastered Review",
+   "publisher": "IGN",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:32.554Z",
+   "snapshot": "d25639503982b89938cad3496369d576c4209edb332393a4679b1957000712e1"
+  },
+  "s8": {
+   "url": "https://www.eurogamer.net/articles/2016-03-21-day-of-the-tentacle-remastered-review",
+   "title": "Day of the Tentacle Remastered review",
+   "publisher": "Eurogamer",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:31.838Z",
+   "snapshot": "66199302dce14c65ad9633fa00ed84dc018a76214be1a563d091b8eb19340f47"
+  },
+  "s9": {
+   "url": "http://store.steampowered.com/app/57640/",
+   "title": "Broken Sword: Director's Cut on Steam",
+   "publisher": "Revolution Software (Steam store page)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:32.511Z",
+   "snapshot": "148717902ab62520b546e99724da73ff7676e557bd308e385abb8503b90574a2"
+  },
+  "s10": {
+   "url": "https://www.gog.com/en/game/broken_sword_directors_cut",
+   "title": "Broken Sword: Director's Cut on GOG.com",
+   "publisher": "GOG.com",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:33.692Z",
+   "snapshot": "a664ae8e7e8a17a2e16114fb83098fd50bbb18dc378dbc98eefd8c24005c41f9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sam & Max",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guybrush Threepwood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bernard, Hoagie and Laverne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Manny Calavera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nico Collard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chaos auf Deponia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-281"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:02.130Z",
+   "target": "f04496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sam & Max is an American media franchise about Sam and Max, a pair of anthropomorphic vigilante private investigators.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sam & Max” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:02.130Z",
+   "target": "f04497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The story follows series protagonist Guybrush Threepwood as he searches for the real secret of Monkey Island.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guybrush Threepwood” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:02.130Z",
+   "target": "f04498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bernard, Hoagie and Laverne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bernard, Hoagie and Laverne”, “Bernard, Hoagie und Laverne”, “Бернард, Хоги и Лаверна”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:02.130Z",
+   "target": "f04499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 2005, The Guardian characterized the game as \"the last genuine classic to come from LucasArts, the company that helped define adventure games, Tim Schafer's noir-pastiche follows skull-faced Manny Calavera through a bureaucratic parody of the Land of the Dead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manny Calavera” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:02.130Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nico Collard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Nico Collard”, “Нико Коллар”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:02.130Z",
+   "target": "f13945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Nachfolger und zweite Teil Chaos auf Deponia erschien im Oktober 2012.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chaos auf Deponia” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:46:15Z",
+   "target": "f04498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nerdy Bernard, Hoagie the wisecracking roadie, and the weirdo Laverne all seem in on the joke",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:46:17Z",
+   "target": "f04498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Dumb but resourceful roadie Hoagie ends up 200 years in the past",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same paragraph: 'Geeky Bernard stays in the present' and 'psychotic medical student Laverne ends up 200 years in the future'."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:46:34Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "pitches sassy journalist Nico Collard, and intrepid American George Stobbart into a mysterious journey of intrigue and jeopardy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Publisher's own product description."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:46:36Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "rather than placing George Stobbart under your control, actually gives you control over Nico Collard instead",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:31.520Z",
+   "target": "f04498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nerdy Bernard, Hoagie the wisecracking roadie, and the weirdo Laverne all seem in on the joke",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:31.520Z",
+   "target": "f04498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Dumb but resourceful roadie Hoagie ends up 200 years in the past",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:31.520Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "pitches sassy journalist Nico Collard, and intrepid American George Stobbart into a mysterious journey of intrigue and jeopardy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:31.520Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "rather than placing George Stobbart under your control, actually gives you control over Nico Collard instead",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:31.520Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "One of the all-time classic adventures, multi award winning \"Broken Sword: Director's Cut\" pitches sassy journalist Nico Collard, and intrepid American George Stobbart into a mysterious journey of intrigue and jeopardy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nico Collard” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:31.520Z",
+   "target": "f04500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The first thing you notice when you start a new game, is a completely new opening scene, one that rather than placing George Stobbart under your control, actually gives you control over Nico Collard instead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nico Collard” is on the snapshot of s10"
+  }
+ ]
+}

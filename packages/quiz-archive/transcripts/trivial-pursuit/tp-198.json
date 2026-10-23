@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-198",
+ "image": "IMG20261007181839.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Stadt wurde das erste Mal mit einem Handy telefoniert?",
+   "de": "In welcher Stadt wurde das erste Mal mit einem Handy telefoniert?",
+   "en": "In which city was the first call made on a mobile phone?",
+   "reworked": false,
+   "answerDe": "New York",
+   "answerEn": "New York City",
+   "timeline": {
+    "kind": "event",
+    "start": "1973-04-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Motorola's Martin Cooper makes the first public handheld mobile phone call on a Manhattan street",
+    "labelDe": "Martin Cooper von Motorola führt auf einer Straße in Manhattan das erste öffentliche Gespräch mit einem Handy"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Martin_Cooper_(inventor)",
+    "title": "Martin Cooper (inventor)",
+    "lang": "en"
+   },
+   "notes": "Cooper called Joel Engel of Bell Labs from Sixth Avenue in Midtown Manhattan.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Film inspirierte die Gruppe Daft Punk zu ihren Helmen?",
+   "de": "Welcher Film inspirierte die Gruppe Daft Punk zu ihren Helmen?",
+   "en": "Which film inspired the group Daft Punk's helmets?",
+   "reworked": false,
+   "answerDe": "Phantom im Paradies (Phantom of the Paradise)",
+   "answerEn": "Phantom of the Paradise",
+   "timeline": {
+    "kind": "creation",
+    "start": "1974-10-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Brian De Palma's rock musical Phantom of the Paradise is released",
+    "labelDe": "Brian De Palmas Rockmusical Phantom im Paradies kommt in die Kinos"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Daft_Punk",
+    "title": "Daft Punk",
+    "lang": "en"
+   },
+   "notes": "Thomas Bangalter called the 1974 film, whose main character wears a mask, 'the foundation for a lot of what we're about artistically'.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Es gibt keinen Nobelpreis für Musik. Richtig oder falsch?",
+   "de": "Es gibt keinen Nobelpreis für Musik. Welcher schwedische Preis, 1989 von ABBA-Manager Stig Anderson gestiftet, wird deshalb oft „Nobelpreis der Musik“ genannt?",
+   "en": "There is no Nobel Prize for music. Which Swedish award, founded in 1989 by ABBA manager Stig Anderson, is therefore often called the 'Nobel Prize of music'?",
+   "reworked": true,
+   "answerDe": "Polar Music Prize",
+   "answerEn": "Polar Music Prize",
+   "timeline": {
+    "kind": "founding",
+    "start": "1989",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "ABBA manager Stig Anderson founds the Polar Music Prize; it is first awarded in 1992",
+    "labelDe": "ABBA-Manager Stig Anderson stiftet den Polar Music Prize; er wird erstmals 1992 verliehen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Polar_Music_Prize",
+    "title": "Polar Music Prize",
+    "lang": "en"
+   },
+   "notes": "Card statement is true: the Nobel Prizes cover physics, chemistry, medicine, literature and peace (plus the economics prize), none for music.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wo steht die größte mechanische Orgel der Welt: in der Mailänder Scala, in der New Yorker Metropolitan Opera oder Opernhaus in Sydney?",
+   "de": "In welchem Opernhaus steht die größte mechanische Orgel der Welt?",
+   "en": "In which opera house is the world's largest mechanical organ?",
+   "reworked": true,
+   "answerDe": "Opernhaus Sydney",
+   "answerEn": "Sydney Opera House",
+   "timeline": {
+    "kind": "creation",
+    "start": "1979",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Grand Organ of the Sydney Opera House, the largest tracker-action organ ever built, is completed",
+    "labelDe": "Die Grand Organ des Opernhauses Sydney, die größte je gebaute mechanische Orgel, wird fertiggestellt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House_Grand_Organ",
+    "title": "Sydney Opera House Grand Organ",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice options removed. Built by Ronald Sharp; about 10,000 pipes. The card omits 'im' before 'Opernhaus' (sic).",
+   "domain": "music-stage",
+   "sub": "instruments"
+  },
+  {
+   "category": 5,
+   "cardDe": "Aufgrund welcher Art von Verschmutzung kann ein Drittel der Menschheit die Milchstraße nicht mehr sehen?",
+   "de": "Aufgrund welcher Art von Verschmutzung kann ein Drittel der Menschheit die Milchstraße nicht mehr sehen?",
+   "en": "Because of what kind of pollution can a third of humanity no longer see the Milky Way?",
+   "reworked": false,
+   "answerDe": "Lichtverschmutzung",
+   "answerEn": "Light pollution",
+   "timeline": {
+    "kind": "event",
+    "start": "2016-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The New World Atlas of Artificial Night Sky Brightness finds a third of humanity can no longer see the Milky Way",
+    "labelDe": "Der neue Weltatlas der künstlichen Himmelshelligkeit zeigt: Ein Drittel der Menschheit kann die Milchstraße nicht mehr sehen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Light_pollution",
+    "title": "Light pollution",
+    "lang": "en"
+   },
+   "notes": "Falchi et al., Science Advances, June 2016.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welcher arabischen Hauptstadt gibt es „Ferrari World“, einen Rennwagen-Themenpark, der den Nervenkitzel beim Fahren eines Formel-1-Wagens erlebbar macht?",
+   "de": "In welcher arabischen Hauptstadt gibt es „Ferrari World“, einen Rennwagen-Themenpark, der den Nervenkitzel beim Fahren eines Formel-1-Wagens erlebbar macht?",
+   "en": "In which Arab capital is 'Ferrari World', a racing-car theme park that lets visitors experience the thrill of driving a Formula One car?",
+   "reworked": false,
+   "answerDe": "Abu Dhabi",
+   "answerEn": "Abu Dhabi",
+   "timeline": {
+    "kind": "founding",
+    "start": "2010-11-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ferrari World Abu Dhabi opens on Yas Island",
+    "labelDe": "Ferrari World Abu Dhabi eröffnet auf der Insel Yas"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ferrari_World",
+    "title": "Ferrari World",
+    "lang": "en"
+   },
+   "notes": "Abu Dhabi is the capital of the United Arab Emirates.",
+   "domain": "geography",
+   "sub": "cities"
+  }
+ ]
+}

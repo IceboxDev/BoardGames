@@ -1,0 +1,335 @@
+{
+ "article": "a0104",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon",
+   "title": "Mask of Agamemnon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:49.927Z",
+   "snapshot": "b3ecba88006dac6be7c2230d53c0748496e4980f41afa9c9f777d2ac98b08c79"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Schatz_des_Priamos",
+   "title": "Schatz des Priamos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:21:47.673Z",
+   "snapshot": "5093532427d2613d2f318b601f7979c4df432190e09cd2bde87167cf9dd725a1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wellington_Monument,_London",
+   "title": "Wellington Monument, London – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:50.932Z",
+   "snapshot": "96d8341534cae316f53c95c9c0378c8cb684507811e7ebcc444ecf7c59dabedb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trojan_War",
+   "title": "Trojan War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:52.166Z",
+   "snapshot": "c334392804b8a33e6eb21a57b63b7a5b785d2940a8645aed701de81441e4d2a9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Trojan_Horse",
+   "title": "Trojan Horse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:52.930Z",
+   "snapshot": "f391dd1119a5f79ad6d031e1877b4249cd57bd0813f17790365262de48ee4a43"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Aeneas",
+   "title": "Aeneas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:54.145Z",
+   "snapshot": "dd74d8f22b21d038522e3c6018e6eb1af55bb27dca7a9fd34c6abc338cb0ed7e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aeneas,_Anchises,_and_Ascanius",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:54.942Z",
+   "snapshot": "e2f118890f552f9d8b0de40eb26c45529f58e5db2262d09282b5475b14cb8692"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Agamemnon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Priamos",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Achilles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00520",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Odysseus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aeneas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Aeneas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 31"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f00516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Mask of Agamemnon is a gold funerary mask which was discovered at the Bronze Age site of Mycenae in southern Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agamemnon” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f00517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Schatz des Priamos (auch Gold von Troja, Priamosschatz oder Schatz A) ist ein Depotfund, den Heinrich Schliemann während seiner Ausgrabungen in Troja entdeckte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Priamos” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f00518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wellington Monument is a statue representing Achilles erected as a memorial to Arthur Wellesley, 1st Duke of Wellington, and his victories in the Peninsular War and the latter stages of the Napoleonic Wars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Achilles” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f00519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The war was waged by the Achaeans (Greeks) against the city of Troy after Paris of Troy took Helen from her husband Menelaus, king of Sparta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helen” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f00520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is described at length in the Aeneid, in which Virgil recounts how, after a fruitless ten-year siege, the Greeks constructed a huge wooden horse at the behest of Odysseus, and hid a select force of men inside, including Odysseus himself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Odysseus” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f28500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aeneas ( in-EE-əs; Classical Latin: [ae̯ˈneːaːs]; from Ancient Greek: Αἰνείας, romanized: Aineías) was a Trojan hero in Greco-Roman mythology, the son of the Trojan prince Anchises and the Greek goddess Aphrodite (equivalent to the Roman Venus).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aeneas” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:51.352Z",
+   "target": "f28500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Aeneas, Anchises, and Ascanius is a sculpture by the Italian artist Gian Lorenzo Bernini created c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:51.352Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aeneas” is on the snapshot of s7"
+  }
+ ]
+}

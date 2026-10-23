@@ -1,0 +1,242 @@
+{
+ "article": "a0883",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2014_Scottish_independence_referendum",
+   "title": "2014 Scottish independence referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:38.632Z",
+   "snapshot": "8ab115282413e06ea5bf91df0466cd2ae4325682bc466a81ea998c4d340573b0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1980_Quebec_referendum",
+   "title": "1980 Quebec referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:39.329Z",
+   "snapshot": "2e98ff103844dd263644ba804561d53b2c039c37a59ad7efed20ae128e4cf773"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Montenegro",
+   "title": "Montenegro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:40.453Z",
+   "snapshot": "42bd42fb55015b6973b7222debf88bb39169a77d179a43823be4b00254daefb3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Comprehensive_Peace_Agreement",
+   "title": "Comprehensive Peace Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:41.241Z",
+   "snapshot": "f612d4e1be059b8e1af862c2e8857ae9e44ed504438879bd858f05d6fa6d8a55"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/S%C3%BCdsudan",
+   "title": "Südsudan",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:40.652Z",
+   "snapshot": "e324824057fea3314a3ce020235f0e4be48297ea5542e91132f41d42a77e2258"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scotland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Quebec",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Montenegro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "South Sudan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Südsudan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-288"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:59.724Z",
+   "target": "f04411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A referendum on Scottish independence from the United Kingdom was held in Scotland on 18 September 2014.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scotland” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:59.724Z",
+   "target": "f04413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 1980 Quebec independence referendum was the first referendum in Quebec on the place of Quebec within Canada and whether Quebec should pursue a path toward sovereignty.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quebec” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:59.724Z",
+   "target": "f04414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Montenegro is a country in Southeastern Europe, on the Balkan Peninsula.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montenegro” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:59.724Z",
+   "target": "f04415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A referendum was held from 9 to 15 January 2011 to determine if South Sudan should declare its independence from Sudan, with 98.83% of the population voting for independence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Sudan” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:59.724Z",
+   "target": "f04415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Südsudan (englisch South Sudan, in amtlicher Langform Republic of South Sudan (RoSS); deutsch Republik Südsudan) ist ein Binnenstaat in Ostafrika.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Südsudan” is on the snapshot of s5"
+  }
+ ]
+}

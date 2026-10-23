@@ -1,0 +1,318 @@
+{
+ "article": "a0475",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/KiK",
+   "title": "KiK – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:58:54.083Z",
+   "snapshot": "4ddb7a0850f127b4ff711b4d890001ef4a4a8a4609f474c27b0e08ccd392dac7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Rewe_Group",
+   "title": "Rewe Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:58:54.310Z",
+   "snapshot": "e5eedaef24046276b428c6beebf855a5b12fcbffc62fbbc847a9fe171ad26d56"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/IKEA",
+   "title": "IKEA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:18.943Z",
+   "snapshot": "58d88bbc29850d4097dee2d758b8ce0fa4ddc50fc017cebe584c0451bcaaeef7"
+  },
+  "s4": {
+   "url": "https://sv.wikipedia.org/wiki/Gillis_Lundgren",
+   "title": "Gillis Lundgren – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "sv",
+   "retrievedAt": "2026-10-23T03:58:53.179Z",
+   "snapshot": "2f1be181169cdfff07a3c396192e31d13dfd6e8302aa1a252c4e9ae65f2d0810"
+  },
+  "s5": {
+   "url": "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/meet-ingvar-kamprad/",
+   "title": "Ingvar Kamprad’s long road to success – IKEA Museum",
+   "publisher": "IKEA Museum (Inter IKEA Systems)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:23.415Z",
+   "snapshot": "7dd485351ca9079ed1395324376839c24c26a1cc10cc656a9b3ba4d53e4a4515"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kunde ist König",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Revisionsverband der Westkauf-Genossenschaften",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ingvar Kamprad Elmtaryd Agunnaryd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stefan Heinig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gillis Lundgren",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:54.817Z",
+   "target": "f02371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "KiK ist ein Akronym für „Kunde ist König“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kunde ist König” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:54.817Z",
+   "target": "f02374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rewe ist ein Akronym aus Revisionsverband der Westkauf-Genossenschaften.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Revisionsverband der Westkauf-Genossenschaften” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:54.817Z",
+   "target": "f02375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ingvar Kamprad Elmtaryd Agunnaryd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ingvar Kamprad Elmtaryd Agunnaryd”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:54.817Z",
+   "target": "f23540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "KiK Textilien und Non-Food GmbH (Eigenschreibweise: KiK) ist ein deutscher Textil- und Non-Food-Discounter mit Sitz in Bönen, der im Jahr 1994 von Stefan Heinig zusammen mit der Unternehmensgruppe Tengelmann gegründet wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stefan Heinig” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:54.817Z",
+   "target": "f23541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gillis Lundgren studerade på Malmö tekniska institut, innan han började arbeta som formgivare.",
+     "quoteLang": "sv",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:54.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gillis Lundgren” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:13:04Z",
+   "target": "f02375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "And so it was that on 28 July 1943, the trading company IKEA was registered – Ingvar Kamprad Elmtaryd Agunnaryd.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:13:05Z",
+   "target": "f02375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The brand name is an acronym of the initials of the names of Ingvar Kamprad , the founder, Elmtaryd , the family farm where Kamprad was born, and Agunnaryd , Kamprad's hometown in Småland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:17.265Z",
+   "target": "f02375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "And so it was that on 28 July 1943, the trading company IKEA was registered – Ingvar Kamprad Elmtaryd Agunnaryd.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:17.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:17.265Z",
+   "target": "f02375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "And so it was that on 28 July 1943, the trading company IKEA was registered – Ingvar Kamprad Elmtaryd Agunnaryd.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:17.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ingvar Kamprad Elmtaryd Agunnaryd” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,671 @@
+{
+ "article": "a0918",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gulf_War",
+   "title": "Gulf War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:23.561Z",
+   "snapshot": "274e049d7fd2156ad335352614c59ff5ce97db8ace4b918bea209fbb79607f80"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War",
+   "title": "Iran–Iraq War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:01.672Z",
+   "snapshot": "458e958ba0aa11bdf0b848a02236ac718374276a6cacb69d889d5904b4f2e78d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Invasion_of_Poland",
+   "title": "Invasion of Poland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:02.413Z",
+   "snapshot": "7aace742ed8a37920965329b9849a664f8933646caa0d69635e3ee02e50b2b6d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Winter_War",
+   "title": "Winter War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:03.544Z",
+   "snapshot": "21635e5cf6021139a560cbf71ddd6aeb27140f15b2440344463b426eebb022f8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_83",
+   "title": "United Nations Security Council Resolution 83 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:04.293Z",
+   "snapshot": "20c6d0c5fdc8a21b19d743f1bd22ac2b7767ddfe4ef9cbf6cbd6bf69a4d39fcc"
+  },
+  "s6": {
+   "url": "https://history.state.gov/milestones/1989-1992/gulf-war",
+   "title": "The Gulf War, 1991",
+   "publisher": "U.S. Department of State, Office of the Historian",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:36.096Z",
+   "snapshot": "c5ef06678876f82aff8d3c2474fb1b053bc18d161e340095e3b36763b19f333d"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/magazine-34353349",
+   "title": "Iran-Iraq war: Why Iranians remember it so differently – BBC News",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:35.957Z",
+   "snapshot": "de96f86dcfa591fb7e8a47b6441c36289cedc38a58702b2f40c24cf3868fe9d3"
+  },
+  "s8": {
+   "url": "https://encyclopedia.ushmm.org/content/en/article/invasion-of-poland-fall-1939",
+   "title": "Invasion of Poland, Fall 1939 – Holocaust Encyclopedia",
+   "publisher": "United States Holocaust Memorial Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:35.864Z",
+   "snapshot": "8dac8794837acea16f71217545f4d9891a5be85a5566b2103fa6bb1941bfb02e"
+  },
+  "s9": {
+   "url": "https://www.warhistoryonline.com/war-articles/winter-war-finland.html",
+   "title": "The Winter War – When the Finns Humiliated the Russians",
+   "publisher": "War History Online",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:36.389Z",
+   "snapshot": "f36007b05cd18f7d3da0871db30add1c51d13ee2e1e9fe7e07fd481641827abf"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Korean_War",
+   "title": "Korean War – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:50:34Z"
+  },
+  "s11": {
+   "url": "https://www.archives.gov/education/lessons/korean-conflict",
+   "title": "The United States Enters the Korean Conflict",
+   "publisher": "U.S. National Archives",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:36.151Z",
+   "snapshot": "d32f7375e487e680444643cfc9028af13e470574ca3482e4643fe1fc3f2cb8c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iraq invaded Kuwait",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iraq invaded Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Germany invaded Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Soviet Union invaded Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "North Korea invaded South Korea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:04.418Z",
+   "target": "f04586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iraq invaded Kuwait",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Iraq invaded Kuwait”, “Der Irak überfiel Kuwait”, “Ирак напал на Кувейт”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:04.418Z",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iraq invaded Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Iraq invaded Iran”, “Der Irak überfiel den Iran”, “Ирак напал на Иран”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:04.418Z",
+   "target": "f04588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Germany invaded Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Germany invaded Poland”, “Deutschland überfiel Polen”, “Германия напала на Польшу”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:04.418Z",
+   "target": "f04589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Soviet Union invaded Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Soviet Union invaded Finland”, “Die Sowjetunion überfiel Finnland”, “Советский Союз напал на Финляндию”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:04.418Z",
+   "target": "f04590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "North Korea invaded South Korea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“North Korea invaded South Korea”, “Nordkorea überfiel Südkorea”, “Северная Корея напала на Южную Корею”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:11Z",
+   "target": "f04586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in response to Saddam Hussein invading neighboring Kuwait on 2 August 1990",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:13Z",
+   "target": "f04586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "But on August 2, 1990, a force of one hundred thousand Iraqi troops invaded Kuwait and overran the country in a matter of hours.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:50:16Z",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iraq launched a full-scale invasion of Iran on 22 September 1980.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:50:19Z",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The attack, on 22 September 1980, sparked the Iran-Iraq War, which did not end for eight years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:50:22Z",
+   "target": "f04588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The invasion began on 1 September 1939 when Germany marched into Poland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:50:25Z",
+   "target": "f04588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "German troops invaded Poland on September 1, 1939, triggering World War II.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:50:27Z",
+   "target": "f04589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It began with a Soviet invasion of Finland on 30 November 1939, three months after the outbreak of World War II",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:50:30Z",
+   "target": "f04589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "following the alleged shelling of Russian troops by Finnish soldiers, the Soviet Union launched an invasion on Finland.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Article dates the invasion to November 30th, 1939."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:50:34Z",
+   "target": "f04590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "On 25 June 1950, North Korea launched an invasion of South Korea.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:50:37Z",
+   "target": "f04590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "On June 25, 1950, North Korean troops coordinated an attack at several strategic points along the 38th parallel and headed south toward Seoul.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in response to Saddam Hussein invading neighboring Kuwait on 2 August 1990",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "But on August 2, 1990, a force of one hundred thousand Iraqi troops invaded Kuwait and overran the country in a matter of hours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iraq launched a full-scale invasion of Iran on 22 September 1980.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The attack, on 22 September 1980, sparked the Iran-Iraq War, which did not end for eight years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The invasion began on 1 September 1939 when Germany marched into Poland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It began with a Soviet invasion of Finland on 30 November 1939, three months after the outbreak of World War II",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "following the alleged shelling of Russian troops by Finnish soldiers, the Soviet Union launched an invasion on Finland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "On June 25, 1950, North Korean troops coordinated an attack at several strategic points along the 38th parallel and headed south toward Seoul.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Thirty-five years ago this week, Iraq invaded Iran and what has been described as the 20th Century's longest conventional war began.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Iraq invaded Iran” is on the snapshot of s7"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:54:33.764Z",
+   "target": "f04588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On September 1, 1939, Germany invaded Poland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:33.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Germany invaded Poland” is on the snapshot of s8"
+  }
+ ]
+}

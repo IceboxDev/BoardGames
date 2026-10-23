@@ -1,0 +1,556 @@
+{
+ "article": "a1792",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/How_I_Met_Your_Mother",
+   "title": "How I Met Your Mother – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:54.763Z",
+   "snapshot": "904d6a4444856582cfd2ead674418d5f322d43e5eda248661880ad8b3ee74c4d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Friends",
+   "title": "Friends – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:55.640Z",
+   "snapshot": "f10ff5729184f569334ea10256a9d048a214c9aa84206a14742db0a368e02f33"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Seinfeld",
+   "title": "Seinfeld – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:56.604Z",
+   "snapshot": "a767e4e00802be802c71f2b3b735405f1d76b47a51e9cd219fde5c4c42e01603"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/My_Musical",
+   "title": "My Musical – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:57.506Z",
+   "snapshot": "9e1ec9fdfcd8232cfa61d8ab291ca19087b2a0ad7955ba0472f441984be0fa68"
+  },
+  "s5": {
+   "url": "https://www.rottentomatoes.com/tv/how_i_met_your_mother",
+   "title": "How I Met Your Mother | Rotten Tomatoes",
+   "publisher": "Rotten Tomatoes",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:26.929Z",
+   "snapshot": "3cb89cbfb979e98a3925cb8063fba8cb7d99893c7bb59ea3b9ebdefec4323cd5"
+  },
+  "s6": {
+   "url": "https://www.rottentomatoes.com/tv/friends",
+   "title": "Friends | Rotten Tomatoes",
+   "publisher": "Rotten Tomatoes",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:28.554Z",
+   "snapshot": "3667321dc20b0c18c82faaea1a74708640ae42d2b37e35b719f7ebffab8b70a3"
+  },
+  "s7": {
+   "url": "https://www.rottentomatoes.com/tv/seinfeld",
+   "title": "Seinfeld | Rotten Tomatoes",
+   "publisher": "Rotten Tomatoes",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:29.647Z",
+   "snapshot": "0d831dc514062893e957524fedfaef3e2782faa5a119a91444e10eaa98485c12"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Scrubs_(2001_TV_series)",
+   "title": "Scrubs (2001 TV series)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:27:17Z"
+  },
+  "s9": {
+   "url": "https://www.rottentomatoes.com/tv/scrubs",
+   "title": "Scrubs | Rotten Tomatoes",
+   "publisher": "Rotten Tomatoes",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:29.840Z",
+   "snapshot": "c4bae4752cbaad2b6476e10f84807562c05081dd5c3635d0a58f0991db19526c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ted, Marshall and Barney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rachel, Monica and Phoebe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jerry, George and Elaine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "J.D., Turk and Elliot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:23.571Z",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ted, Marshall and Barney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ted, Marshall and Barney”, “Ted, Marshall und Barney”, “Тед, Маршалл и Барни”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:23.571Z",
+   "target": "f08957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rachel, Monica and Phoebe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Rachel, Monica and Phoebe”, “Rachel, Monica und Phoebe”, “Рэйчел, Моника и Фиби”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:23.571Z",
+   "target": "f08959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jerry, George and Elaine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Jerry, George and Elaine”, “Jerry, George und Elaine”, “Джерри, Джордж и Элейн”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:23.571Z",
+   "target": "f08960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "J.D., Turk and Elliot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“J.D., Turk and Elliot”, “J.D., Turk und Elliot”, “Джей Ди, Терк и Эллиот”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:26:58Z",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "These include the long-standing couple Marshall Eriksen (Jason Segel), a law student, and Lily Aldrin (Alyson Hannigan)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:27:00Z",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ted has fallen in love. It all started when his best friend, Marshall, drops the bombshell that he plans to propose to longtime girlfriend Lily",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:27:03Z",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helping him in the quest is Barney, a friend with endless -- often outrageous -- opinions",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:27:06Z",
+   "target": "f08957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first season introduces the six main characters who live in New York City: Rachel Green, a waitress; professional chef Monica Geller",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:27:09Z",
+   "target": "f08957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jennifer Aniston Rachel Green Courteney Cox Monica Geller Bing Lisa Kudrow Phoebe Buffay",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "cast list of the series page"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:27:12Z",
+   "target": "f08959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "focuses on his personal life with his three friends: best friend George Costanza (Jason Alexander), ex-girlfriend Elaine Benes (Julia Louis-Dreyfus)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:27:15Z",
+   "target": "f08959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Four single friends -- comic Jerry Seinfeld, bungling George Costanza, frustrated working gal Elaine Benes and eccentric neighbor Cosmo Kramer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:27:17Z",
+   "target": "f08960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The first season introduces John Michael \"J.D.\" Dorian and his best friend Christopher Turk in their first year out of medical school as interns at Sacred Heart Hospital.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:27:19Z",
+   "target": "f08960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Sarah Chalke as Elliot Reid (seasons 1–8, recurring season 9), another intern and later private-practice physician.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:27:23Z",
+   "target": "f08960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "where J.D., Turk, Kelso, and acerbic Dr. Cox are the instructors. J.D. continues to romance Elliot",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "These include the long-standing couple Marshall Eriksen (Jason Segel), a law student, and Lily Aldrin (Alyson Hannigan)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helping him in the quest is Barney, a friend with endless -- often outrageous -- opinions",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first season introduces the six main characters who live in New York City: Rachel Green, a waitress; professional chef Monica Geller",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jennifer Aniston Rachel Green Courteney Cox Monica Geller Bing Lisa Kudrow Phoebe Buffay",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "focuses on his personal life with his three friends: best friend George Costanza (Jason Alexander), ex-girlfriend Elaine Benes (Julia Louis-Dreyfus)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Four single friends -- comic Jerry Seinfeld, bungling George Costanza, frustrated working gal Elaine Benes and eccentric neighbor Cosmo Kramer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:11.543Z",
+   "target": "f08960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "where J.D., Turk, Kelso, and acerbic Dr. Cox are the instructors. J.D. continues to romance Elliot",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:11.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "article": "a0049",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Macarena",
+   "title": "Macarena – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:45.710Z",
+   "snapshot": "79b7c4612d92b2f71df5df33a447caffeab394dfe904705d80440030f76c5e20"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lambada_(song)",
+   "title": "Lambada (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:46.476Z",
+   "snapshot": "6b400ef918d5ab34fd13dcef54b9f4774fae26951a3a0c86955c841502c0c4af"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gangnam_Style",
+   "title": "Gangnam Style – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:47.725Z",
+   "snapshot": "2c61e7fd7b6cb2d4af32c8e4f9fce59aeb0e3ffc90dad5fa9bc10d6342b9d0c5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Twist_(song)",
+   "title": "The Twist (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:48.470Z",
+   "snapshot": "508cb9e872bdf0c38ba3537fec5d1a62ddd3f8777547e61e5437c0d76fd6302f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Saturday_Night_(Whigfield_song)",
+   "title": "Saturday Night (Whigfield song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:49.471Z",
+   "snapshot": "515010af668bdc1a4126e37a48c3be465ddb0f970f7a4584349cf5a4f9806e9e"
+  },
+  "s6": {
+   "url": "https://www.billboard.com/music/music-news/psys-gangnam-style-video-hits-1-billion-views-unprecedented-milestone-1483733/",
+   "title": "PSY's 'Gangnam Style' Video Hits 1 Billion Views, Unprecedented Milestone",
+   "publisher": "Billboard",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:30.522Z",
+   "snapshot": "c23bbd25ea96a79e58fa0ad5bef748099380b267ee3c446582e3f5ffba5d5717"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Macarena",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lambada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gangnam Style",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Twist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Saturday Night",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:42.677Z",
+   "target": "f00241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Macarena\" is a song by  Spanish pop duo Los del Río, originally recorded for their 1993 album A mí me gusta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macarena” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:42.677Z",
+   "target": "f00242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Lambada\", also known as \"Chorando Se Foi (Lambada)\" or \"Llorando se fue (Lambada)\" (both meaning \"crying, he/she went away\" in Portuguese and Spanish, respectively), is a song by French-Brazilian pop group Kaoma.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lambada” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:42.677Z",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Gangnam Style\" (Korean: 강남스타일; pronounced [kaŋnam sɯtʰa.iɭ]) is a K-pop song by South Korean singer Psy, released on July 15, 2012, by YG Entertainment as the lead single of his sixth studio album, Psy 6 (Six Rules), Part 1.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gangnam Style” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:42.677Z",
+   "target": "f00244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"The Twist\" is an American song written and originally released in 1958 by Hank Ballard and the Midnighters as a B-side to \"Teardrops on Your Letter\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Twist” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:42.677Z",
+   "target": "f00245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Saturday Night\" is a song by Italian Eurodance project Whigfield, fronted by Danish-born Sannie Charlotte Carlson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturday Night” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:21:56Z",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "has just become the first video in the history of the Internet to reach and surpass one billion views.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:22:06Z",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On December 21, 2012, \"Gangnam Style\" became the first YouTube video to reach a billion views.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:51:58.208Z",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "has just become the first video in the history of the Internet to reach and surpass one billion views.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:58.208Z",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On December 21, 2012, \"Gangnam Style\" became the first YouTube video to reach a billion views.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:58.208Z",
+   "target": "f00243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "PSY's 'Gangnam Style' Video Hits 1 Billion Views, Unprecedented Milestone",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:58.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gangnam Style” is on the snapshot of s6"
+  }
+ ]
+}

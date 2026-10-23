@@ -1,0 +1,242 @@
+{
+ "article": "a1206",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Charlie_Hebdo_shooting",
+   "title": "Charlie Hebdo shooting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:17.121Z",
+   "snapshot": "3f66f9ab55c72e9bd43e6f22faf74582a6db1747745d4de7eabdac614f9e167c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/November_2015_Paris_attacks",
+   "title": "November 2015 Paris attacks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:18.136Z",
+   "snapshot": "c5535a2f014bd619056b4a864c7c414ed1ba3d6e449ad22036497c30e64dc029"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2016_Nice_truck_attack",
+   "title": "2016 Nice truck attack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:19.033Z",
+   "snapshot": "13a95e95292290e50a84c7dbce7b9104a354716467e286a274e7c7f2b93ea5a3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2016_Berlin_truck_attack",
+   "title": "2016 Berlin truck attack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:19.907Z",
+   "snapshot": "e932c1fd5922275441a04fab03ee89897faf90ed0d20ace6bab6f8d63e75a90b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Boston_Marathon_bombing",
+   "title": "Boston Marathon bombing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:21.141Z",
+   "snapshot": "be06eada2e89d16cdc6ef903b3521f74dc27092172b45039e88846003e30b07d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charlie Hebdo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06027",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bataclan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Promenade des Anglais",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06029",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Breitscheidplatz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Boston Marathon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:47.983Z",
+   "target": "f06026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in Paris, France, the employees of the French satirical weekly magazine Charlie Hebdo were targeted in a terrorist shooting attack by two French-born Algerian Muslim brothers, Saïd and Chérif Kouachi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlie Hebdo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.983Z",
+   "target": "f06027",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A third group carried out another mass shooting and took hostages at an Eagles of Death Metal concert attended by 1,500 people in the Bataclan theatre, leading to a stand-off with police.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bataclan” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.983Z",
+   "target": "f06028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the evening of 14 July 2016, a 19-tonne cargo truck was deliberately driven into crowds of people celebrating Bastille Day on the Promenade des Anglais in Nice, France, resulting in the deaths of 86 people and injuring 458 others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Promenade des Anglais” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:47.983Z",
+   "target": "f06029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 19 December 2016, a truck was deliberately driven into the Christmas market next to the Kaiser Wilhelm Memorial Church at Breitscheidplatz in Berlin, leaving 12 people dead and 56 others injured.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breitscheidplatz” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:47.983Z",
+   "target": "f06030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Boston Marathon bombing, sometimes referred to as simply the Boston bombing, was an Islamist domestic terrorist attack that took place during the 117th annual Boston Marathon on April 15, 2013.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boston Marathon” is on the snapshot of s5"
+  }
+ ]
+}

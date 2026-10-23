@@ -1,0 +1,249 @@
+{
+ "article": "a1087",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Castro",
+   "title": "Raúl Castro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:55.176Z",
+   "snapshot": "15b415c11814d49c2ab4c544a28f617ce9d75c6cb129e865d588f3a52ebf5b3e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Miguel_D%C3%ADaz-Canel",
+   "title": "Miguel Díaz-Canel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:56.043Z",
+   "snapshot": "78e3a3cba93452b588f3929859513da226aa82d247ca121024e845c3092e7b1c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2000_Russian_presidential_election",
+   "title": "2000 Russian presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:57.072Z",
+   "snapshot": "5edefe7de47948ad6cc96e225feeca9db7f63814cf7f94e28b4886ef1e9d4a06"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kim_Jong_Un",
+   "title": "Kim Jong Un – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:17.396Z",
+   "snapshot": "0b292239a95af140412b320c801b560d33d9d53ea3569f5367bd0a2448023b2a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Vladimir_Putin",
+   "title": "Vladimir Putin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:58.937Z",
+   "snapshot": "31a51e971101cc54a965d1ddf666a4ce544fed1aeeadd88dbfff7516dccce5a7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nicol%C3%A1s_Maduro",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:19.437Z",
+   "snapshot": "a689b77ef9bdedd284a2501d052a135ad13653af712d7ba8e3cbd1a60b6a1803"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Raúl Castro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miguel Díaz-Canel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vladimir Putin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Great Successor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "prime minister",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:30.757Z",
+   "target": "f05431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 26 June 1958, Raúl Castro's rebels kidnapped ten Americans and two Canadians from the property of Moa Bay Mining Company (an American company) on the north coast of Oriente Province.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raúl Castro” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:30.757Z",
+   "target": "f05432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miguel Díaz-Canel Bermúdez (Latin American Spanish: [miˈɣel ˈdi.as kaˈnel]; born 20 April 1960) is a Cuban politician and engineer who has served as the 8th first secretary of the Communist Party of Cuba and the leader of Cuba since 2021.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miguel Díaz-Canel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:30.757Z",
+   "target": "f05435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Incumbent prime minister and acting president Vladimir Putin, who had succeeded Boris Yeltsin after his resignation on 31 December 1999, sought a four-year term in his own right and won in the first round.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vladimir Putin” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:30.757Z",
+   "target": "f23764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Following his father's death in 2011, state television announced Kim as the \"great successor to the revolutionary cause\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Successor” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:30.757Z",
+   "target": "f23765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Putin also served as Prime Minister of Russia from 1999 to 2000 and again from 2008 to 2012.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “prime minister” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0378",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tal_der_Ahnungslosen",
+   "title": "Tal der Ahnungslosen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:54.125Z",
+   "snapshot": "d6196c0bc9e77ca92f897db54c3328eb1267f17660b141441aeef26f70ac90e9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Intershop_(Handel)",
+   "title": "Intershop (Handel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:55.138Z",
+   "snapshot": "60a01c38c41a8cd6210b30065ae63718fec5fce6d02ea76c55bb4bd7e48729c8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ministerium_f%C3%BCr_Staatssicherheit",
+   "title": "Ministerium für Staatssicherheit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:56.478Z",
+   "snapshot": "db4f3670dbdeb1d38e2150e96d94f8c423832397891122536e9a102cac69ec2c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Trabant_(Pkw)",
+   "title": "Trabant (Pkw) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:58.025Z",
+   "snapshot": "67272dfcf497556b754e6de05dfb714a3a1e7fd0d86d5848d8d1f63d02179b72"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Polyamide",
+   "title": "Polyamide",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:58.255Z",
+   "snapshot": "8fa95c97244386c8df11922a1e77de1f8eefc9a96fd9b38a6c00d47118452171"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tal der Ahnungslosen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Intershop",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stasi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rennpappe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dederon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-013"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:38.758Z",
+   "target": "f01886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tal der Ahnungslosen lautete der sarkastische DDR-Ausdruck für solche Gebiete, in denen Westfernsehen und der westliche UKW-Rundfunk nur schwer oder gar nicht zu empfangen waren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tal der Ahnungslosen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:38.758Z",
+   "target": "f01888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Intershop war eine Einzelhandelskette in der DDR, deren Waren nur mit konvertierbaren Währungen (vgl.: Devisen), später auch mit Forumschecks, jedoch nicht mit Mark der DDR bezahlt werden konnten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Intershop” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:38.758Z",
+   "target": "f01889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Ministerium für Staatssicherheit (MfS), Kurzwort „Stasi“, wurde am 8.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stasi” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:38.758Z",
+   "target": "f01890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Begriff „Rennpappe“ wurde zu dieser Zeit ausschließlich für im Motorsport eingesetzte Trabant-Fahrzeuge verwendet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rennpappe” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:38.758Z",
+   "target": "f12149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dederon, Markenname für PA 6-Fasern aus der DDR",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dederon” is on the snapshot of s5"
+  }
+ ]
+}

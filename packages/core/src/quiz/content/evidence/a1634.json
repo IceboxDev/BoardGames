@@ -1,0 +1,362 @@
+{
+ "article": "a1634",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Divine_Comedy",
+   "title": "Divine Comedy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:31.669Z",
+   "snapshot": "4500e6de13f31476cd7777ac9e72bc5750ed59d2ba48e81e79d8f296acf7db3b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+   "title": "Romeo and Juliet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:59.211Z",
+   "snapshot": "287c8d3af681bdcdc3c41ee811b6fdaff395b1983f0d43f2f033c1d39b44e774"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ulysses_(novel)",
+   "title": "Ulysses (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:46.809Z",
+   "snapshot": "97a73abec465c8c8bde6ec79044a2686929ffb9f3a63e7ee34e0911158573698"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Magic_Mountain",
+   "title": "The Magic Mountain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:11.215Z",
+   "snapshot": "0d610ab4853fc9bd9eb09431ff3d9d24963a49ff27ab107cc803da636d632205"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/221B_Baker_Street",
+   "title": "221B Baker Street",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:55.286Z",
+   "snapshot": "0827ea72c8d705ccb7e12f9f5c05fc5f3b429013b65509d3f5898dd747feab15"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Inferno_(Dante)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:01.971Z",
+   "snapshot": "ddc541af2e6dcbe511f35e34c30e9e9f4aa0bf10c74a7a7f65ad16de47ebc874"
+  },
+  "s7": {
+   "url": "https://www.fischerverlage.de/buch/thomas-mann-der-zauberberg-9783596904167",
+   "title": "Der Zauberberg – S. Fischer Verlage",
+   "publisher": "S. Fischer Verlag",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:16.426Z",
+   "snapshot": "13a3bfdb00e12136c379807c530806454e37dfb92de999e9bbf95a5237632cf8"
+  },
+  "s8": {
+   "url": "https://www.gutenberg.org/ebooks/65661",
+   "title": "Der Zauberberg. Erster Band by Thomas Mann – Project Gutenberg",
+   "publisher": "Project Gutenberg",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:15.528Z",
+   "snapshot": "302fd938b162ed80f9791c9864ce967e82e47d5cc40f5112bf03b87380bf1b23"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08167",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Verona",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f22160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "16 June 1904",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "seven years",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sherlock Holmes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-152"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:55.088Z",
+   "target": "f08166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It describes Dante's travels through Hell, Purgatory, and Heaven.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hell” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:55.088Z",
+   "target": "f08167",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The play, set in Verona, Italy, begins with a street brawl between Montague and Capulet servants who, like the masters they serve, are sworn enemies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verona” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:55.088Z",
+   "target": "f22160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ulysses chronicles the experiences of three Dubliners over the course of a single day, 16 June 1904 (which its fans now celebrate annually as Bloomsday).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “16 June 1904” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:55.088Z",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Castorp eventually remains at the sanatorium for seven years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “seven years” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:55.088Z",
+   "target": "f25657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "221B Baker Street is the London address of the fictional detective Sherlock Holmes, created by author Sir Arthur Conan Doyle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sherlock Holmes” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:59:08Z",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Castorp, who planned to stay at the sanatorium for three weeks, does not leave the Berghof for seven years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:59:10Z",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hans Castorps geplanter Kurzbesuch in Davos wird zum siebenjährigen Aufenthalt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:59:12Z",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "planning to stay three weeks",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the planned three-week visit"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:43.188Z",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Castorp, who planned to stay at the sanatorium for three weeks, does not leave the Berghof for seven years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:43.188Z",
+   "target": "f22161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "planning to stay three weeks",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  }
+ ]
+}

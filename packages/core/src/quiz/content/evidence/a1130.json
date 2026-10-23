@@ -1,0 +1,314 @@
+{
+ "article": "a1130",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Castle_(novel)",
+   "title": "The Castle (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:37.276Z",
+   "snapshot": "60597edb951e8b894dfe1ac74827719c8009581ffa4d4c848dbda9437e8ee31e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Metamorphosis",
+   "title": "The Metamorphosis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:38.346Z",
+   "snapshot": "4a358119f79a4d5af7dbb74b6886b24bb77b5d06e72b20489263f3321fd8432f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amerika_(novel)",
+   "title": "Amerika (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:39.220Z",
+   "snapshot": "a45ca2434c8bd79df13c9b3fd4f9c3387176c2e73fcd1250da306b5f40b97373"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Max_Brod",
+   "title": "Max Brod – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:40.151Z",
+   "snapshot": "2cfc73de9db5037897dc097d821f8ce56ddba1248504c4f0fc3c64c35354ea70"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Kafka",
+   "title": "Franz Kafka – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:55:57Z"
+  },
+  "s6": {
+   "url": "https://standardebooks.org/ebooks/franz-kafka/the-castle/willa-muir_edwin-muir/text/introduction",
+   "title": "The Castle – Introductory Note (Edwin Muir) – Standard Ebooks",
+   "publisher": "Standard Ebooks (Edwin Muir, 1930)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:07.887Z",
+   "snapshot": "f7ef4fcad03d856db750dc95c46721589a6f752d164bd8c87b5e563a70f5948b"
+  },
+  "s7": {
+   "url": "https://www.flavorwire.com/49202/original-of-laura-and-other-unfinished-novels",
+   "title": "The Original of Laura and 8 Other Unfinished Novels – Flavorwire",
+   "publisher": "Flavorwire",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:08.111Z",
+   "snapshot": "fd4b1c45be718303358ef90c7874f17a9a93842af91446efb480bc8151369370"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "None of them",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Metamorphosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amerika",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Brod",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:37.162Z",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "None of them",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“None of them”, “Keinen”, “Ни одного”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:37.162Z",
+   "target": "f05647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Metamorphosis (German: Die Verwandlung, pronounced [dɪ fɛɐ̯ˈvantlʊŋ]), also translated as The Transformation, is a novella by Franz Kafka published in 1915.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Metamorphosis” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:37.162Z",
+   "target": "f05649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amerika (German working title Der Verschollene, \"The Missing\"), also known as The Man Who Disappeared (Amerika), Amerika: The Missing Person and Lost in America, is the incomplete first novel by Franz Kafka (1883–1924), written between 1911 and 1914 and published posthumously in 1927.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amerika” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:37.162Z",
+   "target": "f05650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Brod (Hebrew: מקס ברוד; 27 May 1884 – 20 December 1968) was an Israeli author, music critic, composer, and journalist, born as a German-speaking Czech.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Brod” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:55:57Z",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "From 1924 to 1927, Brod arranged for the publication of Kafka's three unfinished novels",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:55:59Z",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "three long unfinished novels, America, The Trial and The Castle",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:56:00Z",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "he left all three of his novels incomplete",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:15.174Z",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "three long unfinished novels, America, The Trial and The Castle",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:15.174Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:15.174Z",
+   "target": "f05646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "he left all three of his novels incomplete",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:15.174Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  }
+ ]
+}

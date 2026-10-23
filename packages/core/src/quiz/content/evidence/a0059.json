@@ -1,0 +1,256 @@
+{
+ "article": "a0059",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tulip",
+   "title": "Tulip – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:39.614Z",
+   "snapshot": "b9c1c4bdfb18f0caa154e9710e6ba88365ef39ffd49e425e2ad3e487fbaa14c4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Orchid",
+   "title": "Orchid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:40.596Z",
+   "snapshot": "33cefedd0ebc41a71bd4fdef5cc015e2bf900d344a0021c837847e3867ccc6ed"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Frank_Neuhauser",
+   "title": "Frank Neuhauser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:41.491Z",
+   "snapshot": "de16bd431afc8cca1d4f294f7f441603f72af19ba4ac3faa1bdb4f70d74a9f95"
+  },
+  "s4": {
+   "url": "https://en.wiktionary.org/wiki/dandelion",
+   "title": "dandelion – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:39.095Z",
+   "snapshot": "1c8607c6d26bd5b82c2f8a3c80067da7ffccad6a70a30c4ac294fa70f997af51"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Order_of_the_Chrysanthemum",
+   "title": "Order of the Chrysanthemum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:42.505Z",
+   "snapshot": "38f856ff0728e9911fd7c8878a460b07a36980f3aed228620d8f277ae1d7fe9f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ogier_Ghiselin_de_Busbecq",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:43.476Z",
+   "snapshot": "2b225bead840fdbdda1cb92200f618245cda8f61ab64ebb745236cd9d34e9db4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Chrysanthemum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:44.563Z",
+   "snapshot": "60493fc8811e47804c2a678a76fdfc745c75b57d8cc7655814e647f7c9f1419e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tulip",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Orchid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gladiolus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dandelion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Chrysanthemum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:44.483Z",
+   "target": "f00291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The tulip is a member of the lily family, Liliaceae, along with 14 other genera, where it is most closely related to Amana, Erythronium, and Gagea in the tribe Lilieae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tulip” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:44.483Z",
+   "target": "f00292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The world's richest diversity of orchid genera and species is in the tropics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orchid” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:44.483Z",
+   "target": "f00293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Frank Louis Neuhauser (September 29, 1913 – March 11, 2011) was an American patent lawyer and spelling bee champion, who won the first National Spelling Bee (now known as the Scripps National Spelling Bee) in 1925 by successfully spelling the word \"gladiolus\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gladiolus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:44.483Z",
+   "target": "f00294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "dandelion - Wiktionary, the free dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dandelion” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:44.483Z",
+   "target": "f00295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Supreme Order of the Chrysanthemum (大勲位菊花章, Dai-kun'i kikka-shō) is Japan's highest order.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chrysanthemum” is on the snapshot of s5"
+  }
+ ]
+}

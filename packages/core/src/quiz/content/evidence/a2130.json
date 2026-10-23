@@ -1,0 +1,334 @@
+{
+ "article": "a2130",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Thierry_Mugler",
+   "title": "Thierry Mugler",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:09.949Z",
+   "snapshot": "c8c79b388e57c3bbb25ff34f5741fd05e4e1babd537a22475bf56f1bd16ed676"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Thierry_Mugler",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:12.914Z",
+   "snapshot": "ff63d57e4f9da07f5ad4a6caa53945689ed2bec249f2a29dd847cb5c62373ba4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Armani",
+   "title": "Armani",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:13.924Z",
+   "snapshot": "6fb1ea54b146013bb67ccc64c7833e29fae2f98888e748991aa8ecc708136ee9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Halston",
+   "title": "Halston – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:14.844Z",
+   "snapshot": "bde8f550c05d3a6bf673624765af0ee403d3a3742f37b240c9afef03c9d0e58f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ralph_Lauren",
+   "title": "Ralph Lauren – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:15.835Z",
+   "snapshot": "22c6e4528ccfbad4bb977dae2435e9443b5ef2ca05f514d45b1f159c3614735b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Valentino_Garavani",
+   "title": "Valentino Garavani – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:16.835Z",
+   "snapshot": "716238c2c0824b487cb2004017b4bbcd13168d9fea3e02df20764d0c8f4975f4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Valentino_(fashion_designer)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:18.007Z",
+   "snapshot": "716238c2c0824b487cb2004017b4bbcd13168d9fea3e02df20764d0c8f4975f4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Manfred",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Manfred",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dubai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-350"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Roy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lifshitz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Garavani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Garavani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 31"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Manfred Thierry Mugler [tjɛʁi myɡˈlɛʁ] (* 21.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manfred” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Manfred Thierry Mugler (French pronunciation: [manfʁɛd tjɛʁi myɡlɛʁ]; 21 December 1948 – 23 January 2022) was a French fashion designer, creative director and creative adviser of Mugler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manfred” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first Armani Hotel opened on 27 April 2010 in the Burj Khalifa in Dubai, United Arab Emirates, occupying the lower 39 floors of the tower.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dubai” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Roy Halston Frowick (April 23, 1932 – March 26, 1990), known mononymously as Halston, was an American fashion designer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roy” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ralph Lauren ( LOR-ən; né Lifshitz; born October 14, 1939) is an American fashion designer, philanthropist, and billionaire businessman, best known for founding the brand Ralph Lauren, a global multibillion-dollar enterprise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lifshitz” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Valentino Clemente Ludovico Garavani (Italian: [valenˈtiːno ɡaraˈvaːni]; 11 May 1932 – 19 January 2026), known mononymously as Valentino, was an Italian fashion designer who founded Valentino S.p.A., a luxury fashion house, in 1960 and served as its creative director until 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Garavani” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:27.667Z",
+   "target": "f10682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Valentino Clemente Ludovico Garavani (Italian: [valenˈtiːno ɡaraˈvaːni]; 11 May 1932 – 19 January 2026), known mononymously as Valentino, was an Italian fashion designer who founded Valentino S.p.A., a luxury fashion house, in 1960 and served as its creative director until 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Garavani” is on the snapshot of s7"
+  }
+ ]
+}

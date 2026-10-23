@@ -1,0 +1,362 @@
+{
+ "article": "a1436",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Discourse_on_Inequality",
+   "title": "Discourse on Inequality – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:18.328Z",
+   "snapshot": "79e6e71cdc74c1f13e3d3ce83b74a41044792cffe9059269a786b63a74935661"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Hobbes",
+   "title": "Thomas Hobbes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:19.436Z",
+   "snapshot": "c73f39fdf2184fd20ea41fba3f1caf60c79ba6cb4111e73d277737b02ae326c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Two_Treatises_of_Government",
+   "title": "Two Treatises of Government – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:20.604Z",
+   "snapshot": "2d9f18686cc53878b2bfc89f60875bc55218128f2a8471705b1d1cfed4fb4256"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Social_contract",
+   "title": "Social contract",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:21.422Z",
+   "snapshot": "3f4836acd2a673b3daa441248157035384dbb6b1416285c8e148bac0dcd38186"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Spirit_of_Law",
+   "title": "The Spirit of Law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:18.950Z",
+   "snapshot": "1a974b258b92ca25ded6e73127338e34933e2c0de24a8f06ef3881e53bb88991"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/General_will",
+   "title": "General will – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:22.313Z",
+   "snapshot": "3f4962bde629194d45eed3e67bc634bab6113340936c2e4a76331e297610dfcd"
+  },
+  "s7": {
+   "url": "https://iep.utm.edu/soc-cont/",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:20.145Z",
+   "snapshot": "b3fe8c1ecc4a9a665bbbba14cf4564f34cf86df4f18b11474e74f998315e01d3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean-Jacques Rousseau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Hobbes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Locke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-100"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the separation of powers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the general will",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "John Locke",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "John Locke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (ppm-100/2, u09): The card's question fits both Locke and Hobbes (IEP: Hobbes gave the theory its first full exposition, Locke and Rousseau followed). Our wording was already narrowed to Locke via the Two Treatises and life/liberty/property; added a note explaining the card's ambiguity."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "John Locke",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s7"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Locke",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Discourse on the Origin and Basis of Inequality Among Men (French: Discours sur l'origine et les fondements de l'inégalité parmi les hommes), also commonly known as The Second Discourse, is a 1755 treatise by philosopher Jean-Jacques Rousseau, on the topic of social inequality and its origins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Jacques Rousseau” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Hobbes ( HOBZ; 5 April 1588 – 4 December 1679) was an English philosopher and political theorist, best known for his 1651 book Leviathan, in which he expounds an influential formulation of social contract theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Hobbes” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Latter Is an Essay Concerning The True Original, Extent, and End of Civil Government) is English philosopher John Locke's principal work of political philosophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Locke” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Locke believed that individuals in a state of nature would be bound morally, by the Law of Nature, in which man has the \"power...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Locke” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f07178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "After Hobbes, John Locke and Jean-Jacques Rousseau are the best known proponents of this enormously influential theory, which has been one of the most dominant theories within moral and political theory throughout the history of the modern West.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Locke” is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f20480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Liberty and the separation of powers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the separation of powers” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:25.633Z",
+   "target": "f20481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In political philosophy, the general will (French: volonté générale) is the will of the people as a whole.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:25.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the general will” is on the snapshot of s6"
+  }
+ ]
+}

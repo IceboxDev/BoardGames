@@ -1,0 +1,242 @@
+{
+ "article": "a1148",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cassandra",
+   "title": "Cassandra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:49.263Z",
+   "snapshot": "dafe4b64c6bc04786f08cd9e29d30fa3d65158875f98868c754a642be133103c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Trojan_War",
+   "title": "Trojan War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:52.166Z",
+   "snapshot": "c334392804b8a33e6eb21a57b63b7a5b785d2940a8645aed701de81441e4d2a9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Iliad",
+   "title": "Iliad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:23.418Z",
+   "snapshot": "641e4586df0024c75fda3bfc3bb35cbb1be0efb0c58feb25af9b4b9dc7c634f6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Trojan_Women",
+   "title": "The Trojan Women – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:50.284Z",
+   "snapshot": "eeb1ea7d60b413df2e7728ae3afd0f3565fd25b048e622a24d413d12aebbed77"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Laoco%C3%B6n_and_His_Sons",
+   "title": "Laocoön and His Sons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:51.311Z",
+   "snapshot": "022edaa7021ef0da11c1e3b07c49e9dab1c0ee8e4ed970bfc97531ea2c97a4c4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cassandra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hector",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hecuba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Laocoön",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.029Z",
+   "target": "f05736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Greek mythology, Cassandra, also spelled Kassandra or Casandra, (; Ancient Greek: Κασ(σ)άνδρα, pronounced [kas:ándra], or referred to as Alexandra; Ἀλεξάνδρα) was a Trojan priestess dedicated to the god Apollo and fated by him to utter true prophecies, but never to be believed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cassandra” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.029Z",
+   "target": "f05737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The war was waged by the Achaeans (Greeks) against the city of Troy after Paris of Troy took Helen from her husband Menelaus, king of Sparta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.029Z",
+   "target": "f05738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In particular, it traces the anger (μῆνις) of Achilles, a celebrated warrior, from a fierce quarrel between him and King Agamemnon, to the death of the Trojan prince Hector.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hector” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:40.029Z",
+   "target": "f05739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hecuba, another tragedy by Euripides, similarly deals with the experiences of women left behind by war and was more popular in antiquity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hecuba” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:40.029Z",
+   "target": "f05740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The statue of Laocoön and His Sons, also called the Laocoön Group (Italian: Gruppo del Laocoonte), has been one of the most famous ancient sculptures since it was excavated in Rome in 1506 and put on public display in the Vatican Museums, where it remains today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laocoön” is on the snapshot of s5"
+  }
+ ]
+}

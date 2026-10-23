@@ -6,10 +6,12 @@
 
 import { START_FEN } from "@boardgames/core/games/chess/engine/fen";
 import {
+  EvalQueueResponseSchema,
   EvalRequestResponseSchema,
   FarmClaimResponseSchema,
   FarmEnqueueResponseSchema,
   FarmGamesPageSchema,
+  FarmStatusSchema,
   type PositionEval,
 } from "@boardgames/core/protocol";
 import { type Client, createClient } from "@libsql/client";
@@ -276,6 +278,61 @@ describe("chess analysis farm", () => {
     expect((await claim("aws-1", 1, [], ["user"], "deep"))[0]?.fen).toBe(START_FEN);
   });
 
+  it("gives the heavy lane only handed-over jobs, least bad first, and keeps them there", async () => {
+    await ask([
+      { fen: START_FEN, kind: "user", reach: 9 },
+      { fen: AFTER_E4, kind: "user", reach: 5 },
+      { fen: AFTER_D4, kind: "user", reach: 1 },
+    ]);
+    const heavyClaim = async (worker = "ws21-heavy") =>
+      FarmClaimResponseSchema.parse(
+        await (await post("/api/chess-farm/claim", { worker, max: 1, lane: "heavy" })).json(),
+      ).jobs;
+    const handOver = async (worker: string, id: number | undefined, estHours: number) =>
+      (
+        await post("/api/chess-farm/fail", {
+          worker,
+          id,
+          error: "handed over",
+          retry: true,
+          heavy: { estHours, why: `${worker} at d40/50 after 12.0 h` },
+        })
+      ).status;
+    expect(await heavyClaim()).toHaveLength(0);
+    const [a, b] = await claim("ws21-1", 2);
+    expect(await handOver("ws21-1", a?.id, 20)).toBe(200);
+    expect(await handOver("ws21-1", b?.id, 900)).toBe(200);
+    // Normal lanes see only the third job, never the handed-over two (attempts not counted).
+    expect((await claim("ws21-2", 8)).map((j) => j.fen)).toEqual([AFTER_D4]);
+    const [first] = await heavyClaim();
+    expect([first?.fen, first?.attempts]).toEqual([a?.fen, 1]);
+    // A restarted heavy worker takes its own job back first; a stop keeps the marker.
+    expect((await heavyClaim())[0]?.id).toBe(first?.id);
+    const stop = { worker: "ws21-heavy", id: first?.id, error: "worker stopped", retry: true };
+    expect((await post("/api/chess-farm/fail", { ...stop, released: true })).status).toBe(200);
+    expect(await claim("ws21-3", 8, [], undefined, "deep")).toHaveLength(0);
+    const status = FarmStatusSchema.parse(
+      await (
+        await app().request("/api/chess-farm/status", {
+          headers: { authorization: `Bearer ${TOKEN}` },
+        })
+      ).json(),
+    );
+    expect(status.heavy).toEqual({ queued: 2, running: 0 });
+    expect((await heavyClaim())[0]?.id).toBe(first?.id);
+    // Even a failure keeps it on the heavy lane; only a stored result ends it there.
+    expect((await post("/api/chess-farm/fail", stop)).status).toBe(200);
+    const [again] = await heavyClaim();
+    expect(again?.id).toBe(first?.id);
+    const done = await post("/api/chess-farm/complete", {
+      worker: "ws21-heavy",
+      id: again?.id,
+      result: result(String(again?.fen), "e2e4"),
+    });
+    expect(done.status).toBe(200);
+    expect((await heavyClaim())[0]?.id).toBe(b?.id);
+  });
+
   it("stores Stockfish's best, not a near-equal move a worker picked", async () => {
     await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
     const [job] = await claim();
@@ -390,5 +447,28 @@ describe("chess analysis farm", () => {
     // A restarted fleet worker takes back only its own kind.
     expect((await claim("aws-1", 8, undefined, ["user"])).length).toBe(0);
     expect((await claim("aws-1", 8, undefined, ["opp"])).length).toBe(2);
+  });
+
+  it("says where waiting positions stand in the queue, in the order the farm claims them", async () => {
+    await ask([
+      { fen: AFTER_E4, kind: "user", reach: 3 },
+      { fen: AFTER_D4, kind: "user", reach: 40 },
+      { fen: START_FEN, kind: "user", reach: 9 },
+    ]);
+    // The most reached goes first: 1.d4, then the start, then 1.e4.
+    expect((await claim("ws21", 1)).map((j) => j.fen)).toEqual([AFTER_D4]);
+    const res = await post("/api/trainers/chess/evals/queue", {
+      items: [
+        { fen: AFTER_E4, kind: "user" },
+        { fen: AFTER_D4, kind: "user" },
+        { fen: START_FEN, kind: "user" },
+        { fen: AFTER_E4, kind: "opp" },
+      ],
+    });
+    const body = EvalQueueResponseSchema.parse(await res.json());
+    expect(body.places[AFTER_D4]).toEqual({ status: "running", ahead: 0 });
+    expect(body.places[START_FEN]).toEqual({ status: "queued", ahead: 0 });
+    expect(body.places[AFTER_E4]).toEqual({ status: "queued", ahead: 1 });
+    expect(body.lanes).toBe(1);
   });
 });

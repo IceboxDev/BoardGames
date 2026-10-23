@@ -1,0 +1,242 @@
+{
+ "article": "a1915",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Lithuania",
+   "title": "Adoption of the euro in Lithuania – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:07.580Z",
+   "snapshot": "91fe91b87be7a465e0bf485c8a9da2a06c699e14a1aad3662b9f972f0da7f0cc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Estonian_kroon",
+   "title": "Estonian kroon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:08.506Z",
+   "snapshot": "d2646ed47e4306d70cc867aefa4a5a08be040ecfaec625e923d617871d1f9443"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Latvia",
+   "title": "Adoption of the euro in Latvia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:09.559Z",
+   "snapshot": "00258966147d41995330b7f4440295940a28a1607f6097299a77abf5ae5a05b2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Slovak_koruna",
+   "title": "Slovak koruna – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:10.537Z",
+   "snapshot": "e5214d8f8cad78fd5e9870ff6561a5f06142db41868198e9dd148c404031b1e0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Croatia",
+   "title": "Adoption of the euro in Croatia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:11.516Z",
+   "snapshot": "d841b49752bcd26e3654156485b76fb811fd3a4db9b4f2b6a4e5c395324f3f21"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lithuania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Estonia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Latvia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09574",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Slovakia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Croatia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:44.585Z",
+   "target": "f09571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lithuania, as an EU member state, joined the eurozone by adopting the euro on 1 January 2015.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lithuania” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:44.585Z",
+   "target": "f09572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The kroon (sign: KR; code: EEK) was the official currency of Estonia for two periods in history: 1928–1940 and 1992–2011.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Estonia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:44.585Z",
+   "target": "f09573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Latvia replaced its previous currency, the lats, with the euro on 1 January 2014, after a European Union (EU) assessment in June 2013 asserted that the country had met all convergence criteria necessary for euro adoption.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Latvia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:44.585Z",
+   "target": "f09574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Slovak koruna or Slovak crown (Slovak: slovenská koruna, literally meaning Slovak crown) was the currency of Slovakia between 8 February 1993 and 31 December 2008, and could be used for cash payment until 16 January 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slovakia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:44.585Z",
+   "target": "f09575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Croatia adopted the euro as its currency on 1 January 2023, becoming the 20th member state of the eurozone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Croatia” is on the snapshot of s5"
+  }
+ ]
+}

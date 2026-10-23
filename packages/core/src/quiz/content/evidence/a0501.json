@@ -1,0 +1,242 @@
+{
+ "article": "a0501",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Scarlet_fever",
+   "title": "Scarlet fever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:34.240Z",
+   "snapshot": "f1ad08cfb1ab25dd1add9b26bb0a54af09906921252ada8d12fb793ae21f4c5e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pertussis_vaccine",
+   "title": "Pertussis vaccine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:34.963Z",
+   "snapshot": "e49f56b95ad2ef78c1f62c750684179529250c1fc6d04c2bdcd6182fba8f2d52"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mycobacterium_tuberculosis",
+   "title": "Mycobacterium tuberculosis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:36.074Z",
+   "snapshot": "1751cf5a39245c89edcbf3bfcc4b9ae660b73f4e0022ce1a0bf5ca37e90bf163"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vibrio_cholerae",
+   "title": "Vibrio cholerae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:37.082Z",
+   "snapshot": "c9935bb7a731023651e066895dc502ff1c1c8928b1ff72acb63ab1a48c4cbb44"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Clostridium_tetani",
+   "title": "Clostridium tetani – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:37.991Z",
+   "snapshot": "fae69723199d598a0bab75315a1465a78d6028f627d448099da23236bd2fc070"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "streptococci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bordetella pertussis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mycobacterium tuberculosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vibrio cholerae",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Clostridium tetani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:58.761Z",
+   "target": "f02501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nonsuppurative complications: These complications arise from certain subtypes of group A streptococci that cause an autoimmune response in the body through what has been termed molecular mimicry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.761Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “streptococci” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:58.761Z",
+   "target": "f02502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It included whole-cell killed Bordetella pertussis bacteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.761Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bordetella pertussis” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:58.761Z",
+   "target": "f02503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Analysis of Mycobacterium tuberculosis via scanning electron microscope shows the bacteria are 2.71±1.05 μm in length with an average diameter of 0.345±0.029 μm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.761Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mycobacterium tuberculosis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:58.761Z",
+   "target": "f02504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vibrio cholerae is a species of Gram-negative, facultative anaerobe and comma-shaped bacteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.761Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vibrio cholerae” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:58.761Z",
+   "target": "f02505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Clostridium tetani is a common soil bacterium and the causative agent of tetanus, a  disease that afflicts up to 400,000 people each year, mainly newborns.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.761Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clostridium tetani” is on the snapshot of s5"
+  }
+ ]
+}

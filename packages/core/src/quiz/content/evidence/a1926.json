@@ -1,0 +1,242 @@
+{
+ "article": "a1926",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Message_to_the_Grass_Roots",
+   "title": "Message to the Grass Roots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:55.575Z",
+   "snapshot": "4dd8749b7c8194ac7fb4299b229ce2c100a5cbecfb001fc5c6cf30577a4d1327"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rosa_Parks",
+   "title": "Rosa Parks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:23.673Z",
+   "snapshot": "4e9634f3f1caffa1da2647144e9cf11c92f0fcb9512a340c5e0692814cd2581e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bayard_Rustin",
+   "title": "Bayard Rustin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:56.726Z",
+   "snapshot": "77322e19e936febff26fd7f2bde9bb68729564c6942769fef9bd0015d20e6dd8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_Lewis",
+   "title": "John Lewis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:57.770Z",
+   "snapshot": "0cfe858e34ae36997729bd946cc52ea7881657b987cb24f532a626894fd7eb13"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Stokely_Carmichael",
+   "title": "Stokely Carmichael – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:58.791Z",
+   "snapshot": "fcb18b500a3a5195fb2275b5ba31a8de047325529dc185055907072f0aa24eee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Malcolm X",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rosa Parks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bayard Rustin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Lewis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stokely Carmichael",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:46.624Z",
+   "target": "f09626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Message to the Grass Roots\" is a public speech delivered by black civil rights activist Malcolm X.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malcolm X” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:46.624Z",
+   "target": "f09627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rosa Parks was born Rosa Louise McCauley on February 4, 1913, in Tuskegee, Alabama.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosa Parks” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:46.624Z",
+   "target": "f09628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bayard Rustin ( BY-ərd; March 17, 1912 – August 24, 1987) was an American political activist and prominent leader in social movements for civil rights, socialism, nonviolence, and gay rights.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bayard Rustin” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:46.624Z",
+   "target": "f09629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At the great Washington March of 1963, the chairman of the Student Nonviolent Coordinating Committee (SNCC), John Lewis, speaking to the same enormous crowd that [next] heard King's \"I Have a Dream\" speech, was prepared to ask the right question: 'Which side is the federal government on?' That",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Lewis” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:46.624Z",
+   "target": "f09630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SNCC officially ended its relationship with Carmichael in August 1968; in a statement, Philip Hutchings wrote: \"It has been apparent for some time that SNCC and Stokely Carmichael were moving in different directions.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stokely Carmichael” is on the snapshot of s5"
+  }
+ ]
+}

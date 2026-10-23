@@ -1,0 +1,242 @@
+{
+ "article": "a0453",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hippocrates",
+   "title": "Hippocrates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:14.855Z",
+   "snapshot": "904e037cb05283f94990c6fcb154912f3f4a78dcfb7ee1b4f50e956b2f3410c3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Galen",
+   "title": "Galen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:15.910Z",
+   "snapshot": "2376d3ad4599093175645f6582261c8abe64b637e2e1f91f080a1f3bf0d528fa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Avicenna",
+   "title": "Avicenna – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:16.811Z",
+   "snapshot": "b580d082a944c64c70a6897ec78f4c89db9e11405ecd9fbff043abb8ab1f7fad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/De_Humani_Corporis_Fabrica_Libri_Septem",
+   "title": "De Humani Corporis Fabrica Libri Septem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:17.872Z",
+   "snapshot": "d8171bab1e1f84a0967d822d23964afabf6a9836bc4f5dceacf16d652fd19686"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/William_Harvey",
+   "title": "William Harvey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:18.912Z",
+   "snapshot": "eafe15e845aaff2698c4bff7ad010875a1b4c11c5af7819a6b5726844f9f7bd9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hippocrates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Galen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Avicenna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Andreas Vesalius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Harvey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:50.357Z",
+   "target": "f02261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hippocrates of Kos (; Ancient Greek: Ἱπποκράτης ὁ Κῷος, romanized: Hippokrátēs ho Kôios; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hippocrates” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:50.357Z",
+   "target": "f02262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "216 CE), often anglicized as Galen () or Galen of Pergamon, was a Roman and Greek physician, surgeon, and philosopher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:50.357Z",
+   "target": "f02263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "980 – 22 June 1037), commonly known in the West as Avicenna, was a preeminent philosopher and physician of the Muslim world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Avicenna” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:50.357Z",
+   "target": "f02264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "De Humani Corporis Fabrica Libri Septem (Latin, \"On the Fabric of the Human Body in Seven Books\") is a set of books on human anatomy written by Andreas Vesalius (1514–1564) and published in 1543.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andreas Vesalius” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:50.357Z",
+   "target": "f02265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Harvey (1 April 1578 – 3 June 1657) was an English physician who made influential contributions to anatomy and physiology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Harvey” is on the snapshot of s5"
+  }
+ ]
+}

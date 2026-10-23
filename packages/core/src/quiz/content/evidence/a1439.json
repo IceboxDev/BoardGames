@@ -1,0 +1,242 @@
+{
+ "article": "a1439",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Yeast",
+   "title": "Yeast – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:28.450Z",
+   "snapshot": "5b08f0f36c0d7694ac64dcb6b3cac19f99e9cdac83aa2b0544e2ddc907ae857b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lactobacillus_delbrueckii_subsp._bulgaricus",
+   "title": "Lactobacillus delbrueckii subsp. bulgaricus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:29.343Z",
+   "snapshot": "77fddcd818e7f5c831d2dc773973384f050510f98d829cecf88c0aa9d1b36fe5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Acetobacter",
+   "title": "Acetobacter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:30.331Z",
+   "snapshot": "45c84452cff5bd58a8652e31d55dad7d756f9519c013e2af31506e5dce302c93"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Roquefort",
+   "title": "Roquefort – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:31.355Z",
+   "snapshot": "550c4c05b8934cfe75629d8c7c72a8c765063ab267cb7eb89232849546e30d42"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Aspergillus_oryzae",
+   "title": "Aspergillus oryzae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:32.322Z",
+   "snapshot": "b73eb4d808fa696d53d59299d967bd16fb18f69d5907b1f483d4de9e1bd126d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yeast",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lactic acid bacteria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Acetic acid bacteria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Penicillium roqueforti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aspergillus oryzae",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:26.316Z",
+   "target": "f07191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A yeast is any species of fungus that grows primarily in a unicellular form and reproduces via budding or fission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yeast” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:26.316Z",
+   "target": "f07192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is defined as homofermentive lactic  acid bacteria due to lactic acid being the single end product of its carbohydrate digestion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lactic acid bacteria” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:26.316Z",
+   "target": "f07193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Acetobacter is a genus of acetic acid bacteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Acetic acid bacteria” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:26.316Z",
+   "target": "f07194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "When he returned a few months later, the mold (Penicillium roqueforti) had transformed his plain cheese into Roquefort.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penicillium roqueforti” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:26.316Z",
+   "target": "f07195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aspergillus oryzae, also known as kōji mold (Japanese: ニホンコウジカビ (日本麹黴), Hepburn: nihon kōji kabi), is a mold used in East Asia to saccharify rice, sweet potato, and barley in the making of alcoholic beverages such as sake and shōchū, and also to ferment soybeans for making soy sauce and miso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aspergillus oryzae” is on the snapshot of s5"
+  }
+ ]
+}

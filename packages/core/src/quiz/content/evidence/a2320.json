@@ -1,0 +1,327 @@
+{
+ "article": "a2320",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wappen_Nordrhein-Westfalens",
+   "title": "Wappen Nordrhein-Westfalens",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:47.924Z",
+   "snapshot": "9f65bc74fcc2994b92dfeb1893324b96659ddcdbb6fcd24c3ab1c102a6ac3d4c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nauen",
+   "title": "Nauen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:49.481Z",
+   "snapshot": "11d60afeec7288ba276c3e712c3c46c6e2cac0bea00ec4c89e443ea77564631d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wappen_Brandenburgs",
+   "title": "Wappen Brandenburgs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:49.816Z",
+   "snapshot": "644a181c464d2a2bc82a937db1dc3e489882ab8eab6bae7ce13e8af7642c104a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Brandenburg",
+   "title": "Coat of arms of Brandenburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:51.528Z",
+   "snapshot": "342b73cd65c5c9521005956739161bd45c22da9645b88735a0f33b4d5fdf42b6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Thuringia",
+   "title": "Coat of arms of Thuringia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:52.516Z",
+   "snapshot": "a615510ae30907451bcec5af2890c400aea1f29f33004c787a1703127fe4c572"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Munich",
+   "title": "Coat of arms of Munich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:53.538Z",
+   "snapshot": "81b158398f5d48392ec2611d233f63b25b4f7e5bb7829d2d58ec93bbd80a6237"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Wappen_Th%C3%BCringens",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:50.839Z",
+   "snapshot": "238467e63d8827339f926ce2131e9f0120d89fed2de437ba3478eae84ceea130"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Teupitz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:52.312Z",
+   "snapshot": "f3b4b7e8f7e2979ec3cd57373a6bdf8b245961b47c75bd91937b8f91ee6efc57"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Westfalenross",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-229"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "roter Adler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "red eagle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "lion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "monk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karpfen",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Karpfen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-374/1, u02: Nauen's arms: “In Silber ein schrägrechtsgestellter blauer Karpfen” (carp since 1720, a pike before); statement false."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:55.753Z",
+   "target": "f12031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Karpfen",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:55.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s8"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:55.753Z",
+   "target": "f12030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das Westfalenross (mit aufgeworfenem Schweif).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Westfalenross” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:55.753Z",
+   "target": "f12032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "einen nach rechts blickenden, mit goldenen Kleestengeln auf den Flügeln gezierten und gold bewehrten roten Adler […].“ Das Wappentier wird auch Brandenburgischer, Märkischer oder Roter Adler genannt und ist auf vielen Gemeindewappen auf dem Gebiet der ehemaligen Mark Brandenburg abgebildet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “roter Adler” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:55.753Z",
+   "target": "f12032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The German state of Brandenburg has a coat of arms depicting a red eagle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red eagle” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:55.753Z",
+   "target": "f12033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Like the 1949 coat of arms of Hesse it is based on the Ludovingian lion barry, also known as the \"lion of Hesse\", with the addition of eight mullets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lion” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:55.753Z",
+   "target": "f12034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The coat of arms of Munich (Münchner Wappen) depicts a young monk dressed in black holding a red book.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.753Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monk” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:49:54Z",
+   "target": "f12031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ursprünglich einen Hecht, zeigt es ab 1720 einen Karpfen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

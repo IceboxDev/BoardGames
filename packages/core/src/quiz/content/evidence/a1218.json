@@ -1,0 +1,289 @@
+{
+ "article": "a1218",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre",
+   "title": "1989 Tiananmen Square protests and massacre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:57.372Z",
+   "snapshot": "9d54385638a254d9fb13fb5fdca878607ef579479812f5988abba68402d6335b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tian%E2%80%99anmen-Massaker",
+   "title": "Tian’anmen-Massaker",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:54.818Z",
+   "snapshot": "6fb96a06df17f41d7aa033e58505add1ebdf71ad455c978e4a48a78d8234de38"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Monday_demonstrations_in_East_Germany",
+   "title": "Monday demonstrations in East Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:12.332Z",
+   "snapshot": "009c482922753c42a925fda6fd3222ee4e293377fdd758b4dafdf06d30461352"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Malta_Summit",
+   "title": "Malta Summit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:57.952Z",
+   "snapshot": "5536c3463451027d3f6cc63f71ea3e4eea336b52b38b04535c6da8d1cef72e92"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Velvet_Revolution",
+   "title": "Velvet Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:33.389Z",
+   "snapshot": "cfbf043fdcefcfaea0371d9c18735ae4b1ebd477051641c54ec7e811197c8da5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Solidarity_(Polish_trade_union)",
+   "title": "Solidarity (Polish trade union) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:08.336Z",
+   "snapshot": "55bb73af8d102d65321e5d26e6bc0b34e47d9c5d2db233f1e0fda5feb6a8ef99"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tiananmen Square",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c102"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Platz des Himmlischen Friedens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-009"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leipzig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Malta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gdańsk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:49.803Z",
+   "target": "f06086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1989 Tiananmen Square protests and massacre",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tiananmen Square” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:49.803Z",
+   "target": "f06086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chinas Verteidigungsminister rechtfertigte das blutige Niederschlagen der Proteste auf dem Platz des Himmlischen Friedens als richtige Entscheidung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Platz des Himmlischen Friedens” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:49.803Z",
+   "target": "f06087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The demonstrations began in Leipzig on 4 September 1989, starting the Peaceful Revolution in the GDR: the fall of the Berlin Wall, the collapse of the government, and German reunification.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipzig” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:49.803Z",
+   "target": "f06088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Malta Summit was a meeting between United States president George H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malta” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:49.803Z",
+   "target": "f06089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On 17 November 1989 (International Students' Day), riot police suppressed a student demonstration in Prague.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prague” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:49.803Z",
+   "target": "f06090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "full name Independent Self-Governing Trade Union \"Solidarity\" (Niezależny Samorządny Związek Zawodowy „Solidarność” [ɲɛzaˈlɛʐnɨ samɔˈʐɔndnɨ ˈzvjɔ̃zɛɡ zavɔˈdɔvɨ sɔliˈdarnɔɕt͡ɕ], abbreviated NSZZ „Solidarność”), is a Polish trade union founded in August 1980 at the Lenin Shipyard in Gdańsk, Poland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gdańsk” is on the snapshot of s6"
+  }
+ ]
+}

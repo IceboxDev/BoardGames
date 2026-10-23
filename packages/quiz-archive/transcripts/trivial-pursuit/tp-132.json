@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-132",
+ "image": "IMG20261007174605.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Land hat die meisten Amtssprachen: die Schweiz, Simbabwe oder Südafrika?",
+   "de": "Welches Land im südlichen Afrika hat seit seiner Verfassungsänderung von 2013 16 gleichberechtigte Amtssprachen?",
+   "en": "Which country in southern Africa has had 16 equal official languages since its 2013 constitutional amendment?",
+   "reworked": true,
+   "answerDe": "Simbabwe",
+   "answerEn": "Zimbabwe",
+   "timeline": {
+    "kind": "event",
+    "start": "2013",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Zimbabwe's new constitution recognises 16 official languages",
+    "labelDe": "Simbabwes neue Verfassung erkennt 16 Amtssprachen an"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Simbabwe",
+    "title": "Simbabwe",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked. Zimbabwe 16, South Africa 11 (12 since sign language was added in 2023), Switzerland 4.",
+   "domain": "geography",
+   "sub": "peoples"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die britische Band, die 1992 den Hit I’m Too Sexy hatte?",
+   "de": "Wie heißt die britische Band, die 1992 den Hit I’m Too Sexy hatte?",
+   "en": "What is the name of the British band that had the 1992 hit I'm Too Sexy?",
+   "reworked": false,
+   "answerDe": "Right Said Fred",
+   "answerEn": "Right Said Fred",
+   "timeline": {
+    "kind": "creation",
+    "start": "1991-07-15",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Right Said Fred release their debut single \"I'm Too Sexy\"",
+    "labelDe": "Right Said Fred veröffentlichen ihre Debütsingle „I’m Too Sexy“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Right_Said_Fred",
+    "title": "Right Said Fred",
+    "lang": "de"
+   },
+   "notes": "Released July 1991 and a UK hit in 1991; it topped the charts in the USA and Austria in 1992. The mark after \"Band\" on the photo looks like a semicolon but is read as a comma (likely a speck).",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Der britische Monarch ist gleichzeitig das kanadische Staatsoberhaupt. Richtig oder falsch?",
+   "de": "Wer ist das Staatsoberhaupt Kanadas?",
+   "en": "Who is Canada's head of state?",
+   "reworked": true,
+   "answerDe": "Der britische Monarch (König Charles III.)",
+   "answerEn": "The British monarch (King Charles III)",
+   "timeline": {
+    "kind": "reign",
+    "start": "2022-09-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Charles III, King of the United Kingdom and of Canada",
+    "labelDe": "Charles III., König des Vereinigten Königreichs und Kanadas"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Kanada",
+    "title": "Kanada",
+    "lang": "de"
+   },
+   "notes": "True/false reworked. The card's answer is \"richtig\": Canada is a constitutional monarchy whose head of state is the British monarch, currently Charles III.",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Künstler war kein Surrealist: Salvador Dalí, Joan Miró oder Claude Monet?",
+   "de": "Welcher Stilrichtung wird die mittlere Schaffensperiode des Malers Claude Monet zugeordnet?",
+   "en": "Which art movement is the middle creative period of the painter Claude Monet assigned to?",
+   "reworked": true,
+   "answerDe": "Impressionismus",
+   "answerEn": "Impressionism",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1840-11-14",
+    "end": "1926-12-05",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Claude Monet, French painter and leading Impressionist",
+    "labelDe": "Claude Monet, französischer Maler und führender Impressionist"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Claude_Monet",
+    "title": "Claude Monet",
+    "lang": "de"
+   },
+   "notes": "Multiple choice (\"kein\") reworked: the card's answer is Claude Monet, an Impressionist rather than a Surrealist like Dalí and Miró.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Die Funktechnik Bluetooth ist nach dem dänischen Wikingerkönig Harald Blauzahn aus dem 10. Jahrhundert benannt. Richtig oder falsch?",
+   "de": "Nach welchem dänischen Wikingerkönig aus dem 10. Jahrhundert ist die Funktechnik Bluetooth benannt?",
+   "en": "Which 10th-century Danish Viking king is the wireless technology Bluetooth named after?",
+   "reworked": true,
+   "answerDe": "Harald Blauzahn",
+   "answerEn": "Harald Bluetooth",
+   "timeline": {
+    "kind": "reign",
+    "start": "0958",
+    "end": "0986",
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Harald Bluetooth, King of Denmark (c. 958/964 – 985/986)",
+    "labelDe": "Harald Blauzahn, König von Dänemark (ca. 958/964 – 985/986)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bluetooth",
+    "title": "Bluetooth",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the card's statement is true. The logo combines the runes for H and B, Harald's initials.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches ist keine Disziplin des Modernen Fünfkampfs: Fechten, Reiten oder Speerwerfen?",
+   "de": "Welche Disziplin des Modernen Fünfkampfs wird nach den Olympischen Spielen 2024 durch einen Hindernisparcours ersetzt?",
+   "en": "Which discipline of the modern pentathlon is being replaced by an obstacle course after the 2024 Olympic Games?",
+   "reworked": true,
+   "answerDe": "Reiten",
+   "answerEn": "Riding",
+   "timeline": {
+    "kind": "event",
+    "start": "2024",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Show jumping's last Olympic modern pentathlon before obstacle racing replaces it",
+    "labelDe": "Springreiten zum letzten Mal im olympischen Modernen Fünfkampf, danach ersetzt durch den Hindernisparcours"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Moderner_Fünfkampf",
+    "title": "Moderner Fünfkampf",
+    "lang": "de"
+   },
+   "notes": "Multiple choice (\"keine\") reworked: the card's answer is Speerwerfen (javelin), which is not part of the modern pentathlon (fencing, swimming, riding, running and shooting). Riding = show jumping (Springreiten).",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

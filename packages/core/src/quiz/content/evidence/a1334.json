@@ -1,0 +1,392 @@
+{
+ "article": "a1334",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels",
+   "title": "Gulliver's Travels – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:26.434Z",
+   "snapshot": "b2a50ea58bc2f2a8df1a5aa77af3d197625ecf0539adf58b31b52ea7ff874af9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Houyhnhnm",
+   "title": "Houyhnhnm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:27.220Z",
+   "snapshot": "f0645b8474260d9cc76444277ab38af0239f34f887b04bdf938c2f8673e29934"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Yahoo",
+   "title": "Yahoo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:53.570Z",
+   "snapshot": "18b77afa67165d053d5f2fba63f5d1f137c01ec9844cc49df73ecaa64fed68dd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Castle_in_the_Sky",
+   "title": "Castle in the Sky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:28.405Z",
+   "snapshot": "36eeb38b49e37916158fa164c02bd86eb233855c569f4019898765b5fadb8bdf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Laputa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:29.169Z",
+   "snapshot": "ca5e8364ee65b72f8b463a4237b8f2a322acdb55d1de0260a40d5a5d014730af"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Yahoo_(Gulliver%27s_Travels)",
+   "title": "Yahoo (Gulliver's Travels) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:28.169Z",
+   "snapshot": "e116f33786d975cf9293c1f8c2bdebcc507fe99e00bf0f27904de62297482778"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/cache/epub/829/pg829-images.html",
+   "title": "Gulliver's Travels by Jonathan Swift – Project Gutenberg",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:28.139Z",
+   "snapshot": "73470fb0c26947a046ed748593b0fd0b7ae477507aa3efbefc56be023c06982b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lilliputians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brobdingnag",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Houyhnhnms",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Yahoos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Laputa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:08.697Z",
+   "target": "f06666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "At first, the Lilliputians are hospitable to Gulliver, but they are also wary of the threat that his size poses to them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lilliputians” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:08.697Z",
+   "target": "f06667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Lilliput, he encounters tiny people engaged in petty political disputes; in Brobdingnag, he is a small man among giants who criticise European customs; in Laputa, he meets impractical intellectuals disconnected from reality; and in the land of the Houyhnhnms, he finds rational horses living",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brobdingnag” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:08.697Z",
+   "target": "f06668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Houyhnhnms are a fictional race of intelligent horses described in the last part of Jonathan Swift's satirical 1726 novel Gulliver's Travels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Houyhnhnms” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:08.697Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Yahoos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Yahoos”, “еху”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:08.697Z",
+   "target": "f06670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Castle in the Sky, also known as Laputa: Castle in the Sky, is a 1986 Japanese animated fantasy adventure film written and directed by Hayao Miyazaki.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laputa” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:57:55Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yahoos are legendary human beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:57:57Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Yahoos draw home the sheaves in carriages",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:57:59Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "taking a fancy to use the service of the Yahoos",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:52.686Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yahoos are legendary human beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:52.686Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "taking a fancy to use the service of the Yahoos",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:52.686Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yahoos are legendary human beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yahoos” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:52.686Z",
+   "target": "f06669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Yahoos, who now are said to govern the herd; especially at a time when I",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yahoos” is on the snapshot of s7"
+  }
+ ]
+}

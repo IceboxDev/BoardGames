@@ -1,0 +1,336 @@
+{
+ "article": "a0171",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kaaba",
+   "title": "Kaaba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:30.284Z",
+   "snapshot": "5957deaaf66c6db47adc212fc3b01b6bea1b03621e5ef40029658f3623e90fcb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dome_of_the_Rock",
+   "title": "Dome of the Rock – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:31.275Z",
+   "snapshot": "0f9356c2afc847606c37a86c1856f42ce4798d8a28c9f37950c4bc9da83110b1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ahmed_I",
+   "title": "Ahmed I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:32.282Z",
+   "snapshot": "67f30b15afc69e89d89ca5a4422df261bdcb50dad54f7a31cafa52fd3dd158a8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Taj_Mahal",
+   "title": "Taj Mahal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:33.169Z",
+   "snapshot": "55ebe389f9a11eb44cfa7ddf3e136ee56f132901271e998fe0dcb19e779ea917"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Taj_Mahal",
+   "title": "Taj Mahal",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:30:30.523Z",
+   "snapshot": "1999b32a81baed20d780f26a9f3065fd6a14c99459f771b3ed72f598758ad59e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mosque%E2%80%93Cathedral_of_C%C3%B3rdoba",
+   "title": "Mosque–Cathedral of Córdoba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:34.358Z",
+   "snapshot": "584a4a9d0c4161959fe73145e16181382b85bdaa6a7dc55578c6931a419b389d"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Felsendom",
+   "title": "Felsendom",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:30:32.373Z",
+   "snapshot": "c42ef5187d6d86173785787c59da33b5b169345ec56901cebf693929a01d1bd2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kaaba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dome of the Rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Blue Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taj Mahal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Taj Mahal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-200; transcript tp-066"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mezquita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Gold",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-032"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f00851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Kaaba (Arabic: الكعبة, romanized: al-Kaʿba, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kaaba” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f00852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Dome of the Rock (Arabic: قبة الصخرة, romanized: Qubbat aṣ-Ṣaḫra) is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount in the Old City of Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dome of the Rock” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f00853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He is also well known for his construction of the Blue Mosque, one of the most famous mosques in Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue Mosque” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f00854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Taj Mahal ( TAHJ mə-HAHL, TAHZH -⁠; Hindustani: [t̪ɑːd͡ʒ ˈmɛɦ(ɛ)l]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taj Mahal” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f00854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Taj Mahal,  auch Tadsch Mahal (persisch: تاج محل, DMG tāǧ maḥall) ist ein im Jahre 1648 fertiggestelltes Mausoleum (Grabgebäude) am Südufer des Flusses Yamuna am Stadtrand von Agra im indischen Bundesstaat Uttar Pradesh.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taj Mahal” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f00855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Mosque–Cathedral of Córdoba (Spanish: Mezquita-Catedral de Córdoba [meθˈkita kateˈðɾal de ˈkoɾðoβa]) is the cathedral of the Roman Catholic Diocese of Córdoba in the Spanish region of Andalusia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mezquita” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:04.128Z",
+   "target": "f14419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1993 ließ König Hussein diese durch gold-galvanisierte Platten ersetzen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.128Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gold” is on the snapshot of s7"
+  }
+ ]
+}

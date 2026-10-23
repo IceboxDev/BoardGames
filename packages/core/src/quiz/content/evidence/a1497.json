@@ -1,0 +1,209 @@
+{
+ "article": "a1497",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Newton_(unit)",
+   "title": "Newton (unit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:59.897Z",
+   "snapshot": "ae112245163354932f3b347b655f04cc98639264e44a597fab40bf703de102cc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Joule",
+   "title": "Joule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:00.860Z",
+   "snapshot": "90793252dc404e16c51921f10ecde36db5080f249ac5209c3b549fd7badd7d16"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kilowatt-hour",
+   "title": "Kilowatt-hour – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:01.908Z",
+   "snapshot": "9a5c6edc1cc92acb0a8c6115bd889c2bdfbca637f21a130fe8dca383c6ca2875"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Blaise_Pascal",
+   "title": "Blaise Pascal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:22.572Z",
+   "snapshot": "80bccb6cfc1210440aa79eacef116455c6011b95336a701906e43ab8df1e074d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/James_Prescott_Joule",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:02.890Z",
+   "snapshot": "ac022f02675554cb0ee354b8ddaea2098f3d0d77d54489485d1f25270a5408e4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Horsepower",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:03.979Z",
+   "snapshot": "05f24014e2c919aa447e5ad36f83659bbabd054fb531dac7e125192cb3afb118"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Newton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kilowatt-hour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Puy de Dôme",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:34.980Z",
+   "target": "f07481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The newton (symbol: N) is the unit of force in the International System of Units (SI).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Newton” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:34.980Z",
+   "target": "f07485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The joule ( JOOL, or  JOWL; symbol: J) is the unit of energy in the International System of Units (SI).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joule” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:34.980Z",
+   "target": "f23340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A kilowatt-hour (unit symbol: kW⋅h or kW h; commonly written as kWh) is a non-SI unit of energy equal to 3.6 megajoules (MJ) in SI units, which is the energy delivered by one kilowatt of power for one hour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kilowatt-hour” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:34.980Z",
+   "target": "f23341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He lived near the Puy de Dôme mountain, 4,790 feet (1,460 m) tall, but his health was poor, so he could not climb it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Puy de Dôme” is on the snapshot of s4"
+  }
+ ]
+}

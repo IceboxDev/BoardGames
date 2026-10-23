@@ -1,0 +1,296 @@
+{
+ "article": "a1252",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Lion_King",
+   "title": "The Lion King – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:59.661Z",
+   "snapshot": "26cee67feee3632d4ee7d6b0c069b3563de866796d4ff9fd05ae0000e5758603"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kiss_Me,_Kate",
+   "title": "Kiss Me, Kate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:00.417Z",
+   "snapshot": "f96d07d48472deab5a285d4d3d5b4a1e520b50501018b831c1d4c24f88219d42"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/10_Dinge,_die_ich_an_Dir_hasse",
+   "title": "10 Dinge, die ich an Dir hasse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:57.704Z",
+   "snapshot": "e4c2f4bc030752f49f96db3ffdbf83fb1dd00740708599361c5393b0dd72c38c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/West_Side_Story_(1961_film)",
+   "title": "West Side Story (1961 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:01.517Z",
+   "snapshot": "e2005f607a3bb50a62c0d597fe4bba60354653227f1b160cad7c2bd17bcb524f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ran_(film)",
+   "title": "Ran (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:02.558Z",
+   "snapshot": "5867922e05b6eb1c9a3d02605bc2ac18c43087f61d8dd241410c631591ef8e95"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Tempest",
+   "title": "The Tempest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:02.315Z",
+   "snapshot": "9fb5942ea0f1562603331f29cf9a6faf7430b30c781e75a9278c7b43df816c2c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Forbidden_Planet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:03.556Z",
+   "snapshot": "594a09b064041a38516db637e979a0175b94196df55dadbea4f3e006aca90cb5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hamlet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Taming of the Shrew",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Widerspenstigen Zähmung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-389"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Romeo and Juliet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "King Lear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Tempest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:55.114Z",
+   "target": "f06256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Lion King's plot draws inspiration from several sources, notably Bambi (1942), William Shakespeare's play Hamlet, as well as the Bible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamlet” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:55.114Z",
+   "target": "f06257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The story involves the production of a musical version of William Shakespeare's The Taming of the Shrew and the conflict on and off-stage between Fred Graham, the show's director, producer, and star, and his leading lady, his ex-wife Lilli Vanessi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Taming of the Shrew” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:55.114Z",
+   "target": "f06257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "10 Dinge, die ich an Dir hasse ist eine US-amerikanische Liebeskomödie des Regisseurs Gil Junger aus dem Jahr 1999, die auf William Shakespeares Theaterstück Der Widerspenstigen Zähmung basiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Widerspenstigen Zähmung” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:55.114Z",
+   "target": "f06258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The film is an adaptation of the 1957 Broadway musical of the same title, which in turn was inspired by Shakespeare's play Romeo and Juliet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romeo and Juliet” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:55.114Z",
+   "target": "f06259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The plot derives from William Shakespeare's King Lear and includes segments based on legends of the daimyō Mōri Motonari.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “King Lear” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:55.114Z",
+   "target": "f06260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Tempest is a play by William Shakespeare, probably written in 1610–1611, and thought to be one of the last plays he wrote alone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tempest” is on the snapshot of s6"
+  }
+ ]
+}

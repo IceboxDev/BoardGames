@@ -1,0 +1,445 @@
+{
+ "article": "a1493",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/World_Judo_Championships",
+   "title": "World Judo Championships – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:45.190Z",
+   "snapshot": "345e65d6cfd97fb2676ca55253d74afabd267e6f18296f6737516182acbbcc7d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Morihei_Ueshiba",
+   "title": "Morihei Ueshiba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:46.037Z",
+   "snapshot": "4b90ac28bbc0082eb3177aebe1e8d62850c7c10ca95b5b670d4341dae05d18d8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Taekwondo",
+   "title": "Taekwondo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:47.260Z",
+   "snapshot": "fb8650c6838c0c7dc8bf4c8e3a674399b8b7f81cea1d9eb72fe2a8aac21df446"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kan%C5%8D_Jigor%C5%8D",
+   "title": "Kanō Jigorō – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:47.000Z",
+   "snapshot": "bcf93ce74f0f2545eb99781b6df5ad4fa452a619b63c61282647be1475b9b519"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ippon",
+   "title": "Ippon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:47.890Z",
+   "snapshot": "fea363314e1e1f5ddebabd9bffda8810180964f9c5fe9f989de1234aca7572ec"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Judo",
+   "title": "Judo – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:12.605Z",
+   "snapshot": "d4805e3ef5c73b6b95d1c94fa354afa5e4646cb61f667eeaa0bbc0b9ac7f6aed"
+  },
+  "s7": {
+   "url": "https://www.ijf.org/history",
+   "title": "History – International Judo Federation",
+   "publisher": "International Judo Federation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:13.195Z",
+   "snapshot": "2cee15586fa291efd9a523bfcba370a592717c36b2eab4188af4b6ddf0f9d75a"
+  },
+  "s8": {
+   "url": "http://kodokanjudoinstitute.org/en/doctrine/history/",
+   "title": "History of Kodokan Judo – Kodokan Judo Institute",
+   "publisher": "Kodokan Judo Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:13.265Z",
+   "snapshot": "dea67de28c749448f6a030023d1e528335e7cc8aef88d27486e5fc462fe3e3bf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Judo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aikido",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Korea",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-092"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jigorō Kanō",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ippon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:34.268Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The World Judo Championships are the highest level of international judo competition, next to the quadrennial judo events at the Summer Olympic Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Judo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:34.268Z",
+   "target": "f07464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Morihei Ueshiba (植芝 盛平, Ueshiba Morihei; December 14, 1883 – April 26, 1969) was a Japanese martial artist and founder of the martial art of aikido.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aikido” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:34.268Z",
+   "target": "f14056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Korea bestanden ältere Kampftraditionen wie Subak und Taekgyeon.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Korea” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:34.268Z",
+   "target": "f24242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kanō Jigorō\n\nKanō Jigorō (嘉納 治五郎; 10 December 1860 – 4 May 1938) was a Japanese judoka, educator, politician, and the founder of judo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jigorō Kanō” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:34.268Z",
+   "target": "f24243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"one full point\") is the highest score a fighter can achieve in a Japanese martial arts ippon-wazari contest, usually kendo, judo, karate or jujitsu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.268Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ippon” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:07:41Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(aus japan. jū ‘sanft’ und dō ‘Weg’)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the \"gentle way\" etymology"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:07:43Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The International Judo Federation today brings together more than 200 national federations and 5 continental unions.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports \"practised in more than 150 countries\"; \"most widespread martial art\" is the card’s own superlative"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:07:44Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Today, the International Judo Federation includes representatives from about 204 countries and regions (as of 2020)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:20.135Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(aus japan. jū ‘sanft’ und dō ‘Weg’)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:20.135Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The International Judo Federation today brings together more than 200 national federations and 5 continental unions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:20.135Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Today, the International Judo Federation includes representatives from about 204 countries and regions (as of 2020)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:20.135Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Judo – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Judo” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:20.135Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In May 1882 Jigoro Kano was inspired by traditional forms of combat to create a method of physical, intellectual and moral education, which he named judo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Judo” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:20.135Z",
+   "target": "f07461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "History of Kodokan Judo | Kodokan Judo Institute",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Judo” is on the snapshot of s8"
+  }
+ ]
+}

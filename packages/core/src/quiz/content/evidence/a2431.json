@@ -1,0 +1,361 @@
+{
+ "article": "a2431",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Abrogans",
+   "title": "Abrogans",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:33.450Z",
+   "snapshot": "35695b78fcda01e29cc65a230c6c48c58f90620a5b88b9a164a93d3444f6a019"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hildebrandslied",
+   "title": "Hildebrandslied – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:58.245Z",
+   "snapshot": "d462f4af83d4b0938e40bd9e3133b43da923b378ecdd590ab5ad24f41c766215"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Merseburger_Zauberspr%C3%BCche",
+   "title": "Merseburger Zaubersprüche – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:59.147Z",
+   "snapshot": "fa0ef108027ee9d33106d2ad95c208d060dac948f5efbc18b6a5b98fbea9f6fd"
+  },
+  "s4": {
+   "url": "https://www.e-codices.unifr.ch/en/list/one/csg/0911",
+   "title": "Cod. Sang. 911 – Abrogans – e-codices",
+   "publisher": "e-codices – Virtual Manuscript Library of Switzerland (University of Fribourg)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:13.228Z",
+   "snapshot": "97167d63c05697ee805070b2f3f7a2a090ce94fc0fa141874145507ee7be9b85"
+  },
+  "s5": {
+   "url": "https://www.stiftsbezirk.ch/de/abrogans",
+   "title": "Stiftsbezirk St. Gallen - Abrogans",
+   "publisher": "Stiftsbezirk St. Gallen (Stiftsbibliothek)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:13.565Z",
+   "snapshot": "018c1e4c3cdd5e2f23bd069ef3ab63e6304b2a4100a7ce3fad37ada35b6f255f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abrogans",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-178"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12762",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hildebrandslied",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Merseburger Zaubersprüche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "St. Gallen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Freising",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:19.320Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Abrogans, genauer Abrogans deutsch, auch Codex Abrogans, wird ein lateinisch-althochdeutsches Glossar bezeichnet, dessen in der Stiftsbibliothek St.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abrogans” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:19.320Z",
+   "target": "f12762",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wegen seines Alters und seiner Einzigartigkeit ist das Hildebrandslied ein zentrales Forschungsobjekt germanistisch-mediävistischer Sprach- und Literaturwissenschaft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hildebrandslied” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:19.320Z",
+   "target": "f12763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Als Merseburger Zaubersprüche (MZ) werden zwei althochdeutsche Sprüche zur Befreiung Gefangener und gegen Fußverrenkung bezeichnet, die nach dem Ort ihrer Auffindung in der Bibliothek des Domkapitels zu Merseburg benannt sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merseburger Zaubersprüche” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:19.320Z",
+   "target": "f12764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Abrogans, genauer Abrogans deutsch, auch Codex Abrogans, wird ein lateinisch-althochdeutsches Glossar bezeichnet, dessen in der Stiftsbibliothek St. Gallen aufbewahrte Abschrift (Codex Sangallensis 911) als das älteste erhaltene Buch in deutscher Sprache gilt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St. Gallen” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:19.320Z",
+   "target": "f12765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Verschiedentlich werden der Südtiroler Geistliche Arbeo von Freising († 783 oder 784) oder der Benediktinermönch Kero als Verfasser genannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Freising” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:36Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The oldest book in the German language, the so-called \"Abrogans\" manuscript from around 790",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:42Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der St.Galler Abrogans ist das älteste überlieferte deutsche Buch mit der ältesten Version des Vaterunsers",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Holding library of the manuscript (Cod. Sang. 911)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:02.518Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The oldest book in the German language, the so-called \"Abrogans\" manuscript from around 790",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:02.518Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der St.Galler Abrogans ist das älteste überlieferte deutsche Buch mit der ältesten Version des Vaterunsers",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:02.518Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gallen, Switzerland, Stiftsbibliothek, Abrogans - Vocabularius (Keronis) et Alia – Document Overview – e-codices – Virtual Manuscript Library of Switzerland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Abrogans” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:02.518Z",
+   "target": "f12761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Abrogans, um 790 (Stiftsbibliothek St.Gallen, Cod.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:02.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Abrogans” is on the snapshot of s5"
+  }
+ ]
+}

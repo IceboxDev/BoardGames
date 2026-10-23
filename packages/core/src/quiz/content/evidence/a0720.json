@@ -1,0 +1,529 @@
+{
+ "article": "a0720",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Samuel_Colt",
+   "title": "Samuel Colt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:27.947Z",
+   "snapshot": "2e97062358c73abe93f7a049b89e963c2c80586c7adab21ba08eae07c0428f6b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/John_Browning",
+   "title": "John Browning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:29.930Z",
+   "snapshot": "22e31a92fb34e8237e991e07dd1340ad6b20e4f0a735d341060ef063eab7803c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mikhail_Kalashnikov",
+   "title": "Mikhail Kalashnikov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:30.279Z",
+   "snapshot": "1e9776ad09e83b842832fe3886032c54b35cdb17e3d895282e9f717796600c54"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/M1911_pistol",
+   "title": "M1911 pistol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:31.287Z",
+   "snapshot": "244467f5132a3ac0309479cb9ddfff03bf9d2a6d4f5df53aff1eab57603c49db"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Omdurman",
+   "title": "Battle of Omdurman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:32.285Z",
+   "snapshot": "b43c16623a88eda2f854a9819ba8c0426e34820859def5231292117b9f870aa1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/AK-47",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:33.406Z",
+   "snapshot": "b0468ed374fc3a89b048f8bc46a13f3ca4e24d1073105bbb55fe8bebfef7502e"
+  },
+  "s7": {
+   "url": "https://patents.google.com/patent/US984519",
+   "title": "US984519A – Firearm (J. M. Browning, patented Feb. 14, 1911)",
+   "publisher": "Google Patents (US Patent Office record)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:15.172Z",
+   "snapshot": "a16c9175f3c9def5ba243b338c0231168acbedb6243530fb1c5a1a199146fabc"
+  },
+  "s8": {
+   "url": "http://news.bbc.co.uk/2/hi/europe/8353427.stm",
+   "title": "Kalashnikov inventor turns 90",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:15.092Z",
+   "snapshot": "b24da6ab7aa8faf9938abbf84be98c9877a0395c1703336a02019c756ea7e7f3"
+  },
+  "s9": {
+   "url": "https://www.theguardian.com/world/2017/sep/19/30ft-high-statue-of-mikhail-kalashnikov-unveiled-in-moscow",
+   "title": "30ft-high statue of Mikhail Kalashnikov unveiled in Moscow",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:15.424Z",
+   "snapshot": "85930bd26978eb1c147017d4a9e453d883b5326ae4e99782b80ee9d0591d4fd3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Samuel Colt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Moses Browning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mikhail Kalashnikov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Colt M1911",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Omdurman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:32.801Z",
+   "target": "f03596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Samuel Colt (; July 19, 1814 – January 10, 1862) was an American inventor, industrialist, and businessman who established Colt's Patent Fire-Arms Manufacturing Company and made the mass production of revolvers commercially viable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:32.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samuel Colt” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:32.801Z",
+   "target": "f03599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Moses Browning (January 23, 1855 – November 26, 1926) was an American firearm designer who developed many varieties of military and civilian firearms, cartridges, and gun mechanisms, many of which are still in use around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:32.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Moses Browning” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:32.801Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "From 1949, Mikhail Kalashnikov lived and worked in Izhevsk, Udmurtia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:32.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Kalashnikov” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:32.801Z",
+   "target": "f24502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Colt M1911 (also known as 1911, Colt 1911, Colt .45, or Colt Government in the case of Colt-produced models) is a single-action, recoil-operated, semi-automatic pistol chambered primarily for the .45 ACP cartridge.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:32.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colt M1911” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:32.801Z",
+   "target": "f24503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Battle of Omdurman,  also known as the Battle of Karary, was fought during the Anglo-Egyptian conquest of Sudan between a British–Egyptian expeditionary force commanded by British Commander-in-Chief (sirdar) major general Horatio Herbert Kitchener and a Sudanese army of the Mahdist State, led by",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:32.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Omdurman” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:38Z",
+   "target": "f03599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Inventor John M Browning",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "US Patent 984,519 (14 Feb 1911) is the M1911 pistol's patent, inventor John M. Browning."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:39:41Z",
+   "target": "f03599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Browning's most successful designs include the M1911 pistol, the water-cooled M1917, the air-cooled M1919, and heavy M2 machine guns, the M1918 Browning Automatic Rifle",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "128 firearm patents per the same page; 'most prolific' is the usual description, WP itself says 'one of the most successful'."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:39:44Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mr Kalashnikov is the inventor of the AK-47 assault rifle, beloved of guerrillas around the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:39:46Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Guards at the unveiling ceremony of a statue of Mikhail Kalashnikov, the Russian inventor of the fabled AK-47 assault rifle, in Moscow.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:48Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The World Bank estimates that out of the 500 million total firearms available worldwide, 100 million are of the Kalashnikov family",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the most-produced premise."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Inventor John M Browning",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Browning's most successful designs include the M1911 pistol, the water-cooled M1917, the air-cooled M1919, and heavy M2 machine guns, the M1918 Browning Automatic Rifle",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mr Kalashnikov is the inventor of the AK-47 assault rifle, beloved of guerrillas around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Guards at the unveiling ceremony of a statue of Mikhail Kalashnikov, the Russian inventor of the fabled AK-47 assault rifle, in Moscow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The World Bank estimates that out of the 500 million total firearms available worldwide, 100 million are of the Kalashnikov family",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Developed in the Soviet Union by Russian small-arms designer Mikhail Kalashnikov, it is the originating firearm of the Kalashnikov (or \"AK\") family of rifles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mikhail Kalashnikov” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "President Dimitry Medvedev hands Mikhail Kalashnikov the prestigious Hero of Russia award",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mikhail Kalashnikov” is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:02.578Z",
+   "target": "f03600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "30ft-high statue of Mikhail Kalashnikov unveiled in Moscow | Russia | The Guardian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:02.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mikhail Kalashnikov” is on the snapshot of s9"
+  }
+ ]
+}

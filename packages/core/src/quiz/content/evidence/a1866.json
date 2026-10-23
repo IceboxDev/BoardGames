@@ -1,0 +1,242 @@
+{
+ "article": "a1866",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Buffalo_Bill",
+   "title": "Buffalo Bill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:58.756Z",
+   "snapshot": "e57dc00329e873361a9f083e11dd69164b19a5d63043a76b038a3bbcb25e1e6b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Billy_the_Kid",
+   "title": "Billy the Kid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:59.614Z",
+   "snapshot": "8983f149a4cdb2dc1ee6ab65e693c4538037834c19e86ca27c5449491b42cb1e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Calamity_Jane",
+   "title": "Calamity Jane – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:00.597Z",
+   "snapshot": "b282cc589293a57a781156ab508beee3e47c8f5ce5e42a11efbbd87316932ec0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Wild_Bill_Hickok",
+   "title": "Wild Bill Hickok – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:01.624Z",
+   "snapshot": "fb8486ce2f8b29efa18dd381ccbfec8b8480bda9ae039c7aa9280aad605d5e1c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Annie_Oakley",
+   "title": "Annie Oakley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:02.515Z",
+   "snapshot": "92249ef6984c3838c99b1f5c727f3ceb7a748f2eb4329a897134dd7aea6eef27"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buffalo Bill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Billy the Kid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Calamity Jane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wild Bill Hickok",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Annie Oakley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:36.547Z",
+   "target": "f09326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "William Frederick Cody (February 26, 1846 – January 10, 1917), better known as Buffalo Bill, was an American soldier, bison hunter, colonizer, and showman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buffalo Bill” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:36.547Z",
+   "target": "f09327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bonney, better known as Billy the Kid, was an American outlaw and gunfighter of the Old West who was linked to nine murders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Billy the Kid” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:36.547Z",
+   "target": "f09328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Martha Jane Canary (May 1, 1852 – August 1, 1903), better known as Calamity Jane, was an American frontierswoman, sharpshooter and storyteller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Calamity Jane” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:36.547Z",
+   "target": "f09329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1923 - Paramount Pictures' Western silent film Wild Bill Hickok (released on November 18, 1923) was directed by Clifford Smith and stars William S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wild Bill Hickok” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:36.547Z",
+   "target": "f09330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Annie Oakley (born Phoebe Ann Mosey; August 13, 1860 – November 3, 1926) was an American exhibition/trick shooter and folk heroine who starred in Buffalo Bill's Wild West.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Annie Oakley” is on the snapshot of s5"
+  }
+ ]
+}

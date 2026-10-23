@@ -1,0 +1,242 @@
+{
+ "article": "a0835",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/NATO_bombing_of_Yugoslavia",
+   "title": "NATO bombing of Yugoslavia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:18.609Z",
+   "snapshot": "fae8782e2aa568a7e8d65f7abd6bbce150370249f91f3855584607a7ee5601a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/George_H._W._Bush",
+   "title": "George H. W. Bush – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:19.477Z",
+   "snapshot": "2a018f833e56f4b9f92733d10f4267f1963d7d73f80d75838327e2c0f2c8aae7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2003_invasion_of_Iraq",
+   "title": "2003 invasion of Iraq – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:08.114Z",
+   "snapshot": "5c646924e54dd47f3ff4925e6aca72db688d5fc485a93e7ea821335bc7b3870d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/United_States_invasion_of_Grenada",
+   "title": "United States invasion of Grenada – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:20.549Z",
+   "snapshot": "d43cc78952f68d860a2eec2fbce1c9491318ecd088303bc8cbc77555f5cfc67d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Presidency_of_Barack_Obama",
+   "title": "Presidency of Barack Obama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:21.518Z",
+   "snapshot": "03ed31cf5969b09d2211a3d1e0eeb9bb05d4b760219f33b931749fe4c63a04a9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bill Clinton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George H. W. Bush",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George W. Bush",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ronald Reagan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Barack Obama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:52.086Z",
+   "target": "f04171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Yugoslav capitulation occurred on the same day that US President Bill Clinton held a widely publicised meeting with his four service chiefs to discuss options for a ground-force deployment in case the air war failed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bill Clinton” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:52.086Z",
+   "target": "f04172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Portions of his letters and his diary were later published as The China Diary of George H. W. Bush and All the Best, George Bush.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George H. W. Bush” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:52.086Z",
+   "target": "f04173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "According to US president George W. Bush and UK prime minister Tony Blair, the coalition aimed to disarm Iraq of weapons of mass destruction (WMDs)—nuclear, chemical, and biological weapons—and \"free the Iraqi people\" by deposing president Saddam Hussein, in turn ending his \"support for terrorism\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George W. Bush” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:52.086Z",
+   "target": "f04174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "President Ronald Reagan was asked if he was concerned by the lopsided 108–9 vote in the UN General Assembly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ronald Reagan” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:52.086Z",
+   "target": "f04175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Barack Obama's tenure as the 44th president of the United States began with his first inauguration on January 20, 2009, and ended on January 20, 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barack Obama” is on the snapshot of s5"
+  }
+ ]
+}

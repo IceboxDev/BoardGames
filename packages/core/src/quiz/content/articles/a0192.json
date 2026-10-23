@@ -1,0 +1,347 @@
+{
+ "id": "a0192",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "Codes That Carry Information",
+ "titleDe": "Codes, die Informationen tragen",
+ "titleRu": "Коды, которые несут информацию",
+ "bodyEn": "A code, in the technical sense, is a rule for turning information into signs that can be stored or transmitted. The best codes are the ones you stop noticing; several of them pass through your hands every day.\n\nThe most fundamental is binary code, in which every piece of information is represented by sequences of just two symbols, written 0 and 1. As early as 1605 Francis Bacon had devised a cipher that wrote every letter as a group of five a's and b's. Gottfried Wilhelm Leibniz described binary arithmetic in 1703 and was delighted to find it foreshadowed in the Chinese I Ching, but the idea became practical only when engineers realised that “on” and “off” – a switch closed or open, a voltage high or low, a magnetic patch pointing one way or the other – are exactly two states. Konrad Zuse's Z3, presented on 12 May 1941, was the first working binary computer, and Claude Shannon popularised the name of the unit: the bit, or binary digit, a word coined by his colleague John Tukey. Eight bits make a byte, and everything a modern computer handles, from a spreadsheet to a film, is at bottom a very long string of them.\n\nAn older two-symbol system belongs to the telegraph. Morse code, developed by Samuel Morse and Alfred Vail in the 1830s and 1840s, represents each letter and digit as a sequence of dots and dashes – short and long signals separated by pauses. The first public message, “What hath God wrought”, travelled from Washington to Baltimore on 24 May 1844. The international version, adopted by the International Telegraph Convention in Paris on 17 May 1865, gave the world its most famous distress signal, three dots, three dashes, three dots, adopted as SOS in 1906 simply because it is easy to recognise.\n\nFor computers to exchange text they needed to agree on which pattern of bits stands for which letter. That agreement is ASCII, the American Standard Code for Information Interchange, published in 1963. It uses seven bits, giving 128 codes: 33 of them are control characters such as line feed and bell, the rest are the digits, the upper- and lower-case Latin alphabet and punctuation. In ASCII the letter A is 65 and a space is 32, values that still lie underneath almost every text file on earth.\n\nASCII's limitation – no ä, no é, no Cyrillic, no Chinese – led to a proliferation of incompatible extensions, and finally to Unicode. First published in 1991, Unicode assigns a unique number, or code point, to every character of every writing system in use, from Latin and Arabic to Ethiopic, cuneiform and emoji – more than 150,000 characters in the 2024 edition. The encoding UTF-8, devised by Ken Thompson and Rob Pike in 1992, packs those code points into bytes in a way that keeps plain ASCII unchanged, which is why it now carries the overwhelming majority of the web.\n\nCodes can be printed as well as transmitted. The QR code (“quick response”) was invented in 1994 by Masahiro Hara at the Japanese company Denso Wave to track car parts for Toyota. It stores data in a square grid of black and white modules – up to 7,089 digits – with three large squares in the corners so that a camera can find and orient it from any angle, and Reed–Solomon error correction that allows up to 30 per cent of the pattern to be damaged. In June 2000 it became the international standard ISO/IEC 18004. Denso Wave waived its patent rights, and once smartphones had cameras the code was everywhere, from boarding passes to restaurant menus.\n\n| Code | Introduced | Symbols | Typical use |\n|---|---|---|---|\n| binary code | 1703 / 1941 | 0 and 1 | all digital data |\n| Morse code | 1844 | dot and dash | telegraphy, radio |\n| ASCII | 1963 | 7-bit patterns | text in computers |\n| Unicode | 1991 | code points | all writing systems |\n| QR code | 1994 | black and white modules | scannable labels |\n\nUnderneath the four later systems, of course, lies the first: every dot, character and module ends up as zeros and ones.",
+ "bodyDe": "Ein Code im technischen Sinn ist eine Regel, mit der Informationen in Zeichen verwandelt werden, die sich speichern oder übertragen lassen. Die besten Codes sind die, die man nicht mehr bemerkt; mehrere von ihnen gehen einem jeden Tag durch die Hände.\n\nDer grundlegendste ist der Binärcode, in dem jede Information durch Sequenzen von nur zwei Symbolen dargestellt wird, geschrieben als 0 und 1. Schon 1605 hatte Francis Bacon eine Chiffre erdacht, die jeden Buchstaben als Gruppe aus fünf a und b schrieb. Gottfried Wilhelm Leibniz beschrieb 1703 die binäre Arithmetik und freute sich, sie im chinesischen I Ging vorweggenommen zu finden, doch praktisch wurde die Idee erst, als Ingenieure erkannten, dass „an“ und „aus“ – ein Schalter geschlossen oder offen, eine Spannung hoch oder niedrig, ein magnetischer Fleck in die eine oder andere Richtung – genau zwei Zustände sind. Konrad Zuses Z3, am 12. Mai 1941 vorgestellt, war der erste funktionierende Binärrechner, und Claude Shannon machte den Namen der Einheit populär: das Bit, die Binärziffer, ein Wort, das sein Kollege John Tukey geprägt hatte. Acht Bit ergeben ein Byte, und alles, was ein moderner Computer verarbeitet, von der Tabelle bis zum Film, ist im Grunde eine sehr lange Kette davon.\n\nEin älteres Zwei-Symbol-System gehört zur Telegrafie. Der Morsecode, in den 1830er und 1840er Jahren von Samuel Morse und Alfred Vail entwickelt, stellt jeden Buchstaben und jede Ziffer als Folge von Punkten und Strichen dar – kurze und lange Signale, durch Pausen getrennt. Die erste öffentliche Nachricht, „What hath God wrought“, ging am 24. Mai 1844 von Washington nach Baltimore. Die internationale Fassung, am 17. Mai 1865 von der Internationalen Telegraphenkonvention in Paris übernommen, bescherte der Welt ihr berühmtestes Notsignal, drei Punkte, drei Striche, drei Punkte, 1906 als SOS festgelegt, einfach weil es leicht zu erkennen ist.\n\nDamit Computer Text austauschen können, mussten sie sich einigen, welches Bitmuster für welchen Buchstaben steht. Diese Einigung ist ASCII, der American Standard Code for Information Interchange, veröffentlicht 1963. Er verwendet sieben Bit und ergibt damit 128 Codes: 33 davon sind Steuerzeichen wie Zeilenvorschub und Klingel, der Rest sind die Ziffern, das lateinische Alphabet in Groß- und Kleinbuchstaben und Satzzeichen. In ASCII ist der Buchstabe A die 65 und ein Leerzeichen die 32, Werte, die noch heute unter fast jeder Textdatei der Erde liegen.\n\nDie Beschränkung von ASCII – kein ä, kein é, kein Kyrillisch, kein Chinesisch – führte zu einer Flut inkompatibler Erweiterungen und schließlich zu Unicode. Erstmals 1991 veröffentlicht, weist Unicode jedem Zeichen jedes gebräuchlichen Schriftsystems eine eindeutige Nummer zu, den Codepunkt, von Latein und Arabisch über Äthiopisch und Keilschrift bis zu Emojis – mehr als 150.000 Zeichen in der Ausgabe von 2024. Die Kodierung UTF-8, 1992 von Ken Thompson und Rob Pike entworfen, packt diese Codepunkte so in Bytes, dass reines ASCII unverändert bleibt, weshalb sie heute den überwältigenden Großteil des Webs trägt.\n\nCodes lassen sich nicht nur übertragen, sondern auch drucken. Der QR-Code („quick response“) wurde 1994 von Masahiro Hara bei der japanischen Firma Denso Wave erfunden, um Autoteile für Toyota zu verfolgen. Er speichert Daten in einem quadratischen Raster aus schwarzen und weißen Modulen – bis zu 7.089 Ziffern –, mit drei großen Quadraten in den Ecken, damit eine Kamera ihn aus jedem Winkel finden und ausrichten kann, und mit einer Reed-Solomon-Fehlerkorrektur, die es erlaubt, dass bis zu 30 Prozent des Musters beschädigt sind. Im Juni 2000 wurde er als ISO/IEC 18004 internationaler Standard. Denso Wave verzichtete auf seine Patentrechte, und sobald Smartphones Kameras hatten, war der Code überall, von Bordkarten bis zu Speisekarten.\n\n| Code | Eingeführt | Symbole | Typische Verwendung |\n|---|---|---|---|\n| Binärcode | 1703 / 1941 | 0 und 1 | alle digitalen Daten |\n| Morsecode | 1844 | Punkt und Strich | Telegrafie, Funk |\n| ASCII | 1963 | 7-Bit-Muster | Text in Computern |\n| Unicode | 1991 | Codepunkte | alle Schriftsysteme |\n| QR-Code | 1994 | schwarze und weiße Module | scannbare Etiketten |\n\nUnter den vier späteren Systemen liegt natürlich das erste: Jeder Punkt, jedes Zeichen und jedes Modul endet als Nullen und Einsen.",
+ "bodyRu": "Код в техническом смысле — это правило, по которому информация превращается в знаки, которые можно хранить или передавать. Лучшие коды — те, которых уже не замечаешь; несколько из них ежедневно проходят через ваши руки.\n\nСамый фундаментальный из них — двоичный код, в котором любая информация представлена последовательностями всего из двух символов, записываемых как 0 и 1. Ещё в 1605 году Фрэнсис Бэкон придумал шифр, записывавший каждую букву группой из пяти букв a и b. Готфрид Вильгельм Лейбниц описал двоичную арифметику в 1703 году и с радостью обнаружил её предвосхищение в китайской «Книге перемен», но практической идея стала лишь тогда, когда инженеры поняли, что «включено» и «выключено» — замкнутый или разомкнутый выключатель, высокое или низкое напряжение, магнитный участок, направленный в одну или другую сторону, — это ровно два состояния. Z3 Конрада Цузе, представленная 12 мая 1941 года, стала первым работающим двоичным компьютером, а Клод Шеннон популяризировал название единицы информации: бит, или двоичная цифра, — слово, придуманное его коллегой Джоном Тьюки. Восемь бит составляют байт, и всё, с чем работает современный компьютер, от электронной таблицы до фильма, в основе своей — очень длинная цепочка битов.\n\nБолее старая система из двух символов принадлежит телеграфу. Азбука Морзе, разработанная Сэмюэлом Морзе и Альфредом Вейлем в 1830–1840-х годах, представляет каждую букву и цифру последовательностью точек и тире — коротких и длинных сигналов, разделённых паузами. Первое публичное сообщение, «What hath God wrought» («Чудны дела Твои, Господи»), прошло из Вашингтона в Балтимор 24 мая 1844 года. Международный вариант, принятый Международной телеграфной конвенцией в Париже 17 мая 1865 года, подарил миру самый знаменитый сигнал бедствия — три точки, три тире, три точки, — утверждённый как SOS в 1906 году просто потому, что его легко распознать.\n\nЧтобы компьютеры могли обмениваться текстом, им нужно было договориться, какой набор битов обозначает какую букву. Такой договорённостью стал ASCII, Американский стандартный код для обмена информацией, опубликованный в 1963 году. Он использует семь бит, что даёт 128 кодов: 33 из них — управляющие символы, такие как перевод строки и звонок, остальные — цифры, латинский алфавит в верхнем и нижнем регистре и знаки препинания. В ASCII буква A — это 65, а пробел — 32; эти значения до сих пор лежат в основе почти каждого текстового файла на Земле.\n\nОграниченность ASCII — ни ä, ни é, ни кириллицы, ни китайских иероглифов — привела к множеству несовместимых расширений и в конце концов к Юникоду. Впервые опубликованный в 1991 году, Юникод присваивает уникальный номер, или кодовую точку, каждому символу каждой используемой письменности, от латиницы и арабского письма до эфиопского письма, клинописи и эмодзи, — в издании 2024 года их более 150 000. Кодировка UTF-8, разработанная Кеном Томпсоном и Робом Пайком в 1992 году, упаковывает эти кодовые точки в байты так, что обычный ASCII остаётся неизменным, поэтому сегодня она несёт подавляющую часть веба.\n\nКоды можно не только передавать, но и печатать. QR-код («quick response» — «быстрый отклик») изобрёл в 1994 году Масахиро Хара в японской компании Denso Wave, чтобы отслеживать автозапчасти для Toyota. Он хранит данные в квадратной сетке из чёрных и белых модулей — до 7089 цифр — с тремя большими квадратами в углах, чтобы камера могла найти и сориентировать его под любым углом, и с коррекцией ошибок Рида — Соломона, которая позволяет повредить до 30 процентов рисунка. В июне 2000 года он стал международным стандартом ISO/IEC 18004. Denso Wave отказалась от своих патентных прав, и как только у смартфонов появились камеры, код оказался повсюду — от посадочных талонов до ресторанных меню.\n\n| Код | Введён | Символы | Типичное применение |\n|---|---|---|---|\n| двоичный код | 1703 / 1941 | 0 и 1 | все цифровые данные |\n| азбука Морзе | 1844 | точка и тире | телеграф, радио |\n| ASCII | 1963 | 7-битные комбинации | текст в компьютерах |\n| Юникод | 1991 | кодовые точки | все письменности |\n| QR-код | 1994 | чёрные и белые модули | сканируемые метки |\n\nА под четырьмя более поздними системами, разумеется, лежит первая: каждая точка, каждый символ и каждый модуль в итоге превращаются в нули и единицы.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/USASCII_code_chart.svg/3840px-USASCII_code_chart.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/ASCII",
+   "width": 5491,
+   "height": 3746,
+   "alt": {
+    "en": "The US-ASCII code chart",
+    "de": "Die US-ASCII-Codetabelle",
+    "ru": "Таблица кодов US-ASCII"
+   },
+   "caption": {
+    "en": "The ASCII chart of 1963: 128 seven-bit codes, from the control characters in the first columns to digits, letters and punctuation.",
+    "de": "Die ASCII-Tabelle von 1963: 128 Sieben-Bit-Codes, von den Steuerzeichen in den ersten Spalten bis zu Ziffern, Buchstaben und Satzzeichen.",
+    "ru": "Таблица ASCII 1963 года: 128 семибитных кодов — от управляющих символов в первых столбцах до цифр, букв и знаков препинания."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/330px-QR_code_for_mobile_English_Wikipedia.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/QR_code",
+   "width": 296,
+   "height": 296,
+   "alt": {
+    "en": "A QR code",
+    "de": "Ein QR-Code",
+    "ru": "QR-код"
+   },
+   "caption": {
+    "en": "A QR code linking to the mobile English Wikipedia: the three large corner squares let a camera find and orient the black-and-white grid.",
+    "de": "Ein QR-Code, der zur mobilen englischen Wikipedia führt: Die drei großen Eckquadrate lassen eine Kamera das schwarz-weiße Raster finden und ausrichten.",
+    "ru": "QR-код со ссылкой на мобильную английскую Википедию: три больших квадрата в углах позволяют камере найти и сориентировать чёрно-белую сетку."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Morsetaste.jpg/3840px-Morsetaste.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Morse_code",
+   "width": 5472,
+   "height": 3648,
+   "alt": {
+    "en": "A Morse telegraph key",
+    "de": "Eine Morsetaste",
+    "ru": "Телеграфный ключ для азбуки Морзе"
+   },
+   "caption": {
+    "en": "A telegraph key: pressing it briefly or for longer sends the dots and dashes of Morse code.",
+    "de": "Eine Morsetaste: Kurzes oder längeres Drücken sendet die Punkte und Striche des Morsecodes.",
+    "ru": "Телеграфный ключ: короткое или долгое нажатие передаёт точки и тире азбуки Морзе."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f00956",
+   "answerEn": "binary code",
+   "answerDe": "Binärcode",
+   "answerRu": "двоичный код",
+   "spans": {
+    "en": [
+     235,
+     11
+    ],
+    "de": [
+     280,
+     9
+    ],
+    "ru": [
+     252,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1605",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Francis Bacon devises his cipher, writing every letter with just two symbols",
+    "labelDe": "Francis Bacon erfindet seine Chiffre, die jeden Buchstaben mit nur zwei Zeichen schreibt",
+    "labelRu": "Фрэнсис Бэкон придумывает шифр, записывающий каждую букву всего двумя знаками"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bacon%27s_cipher",
+    "title": "Bacon's cipher – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00956",
+     "en": "In which code is information represented by sequences of only two different symbols?",
+     "de": "In welchem Code werden Informationen durch Sequenzen von nur zwei verschiedenen Symbolen dargestellt?",
+     "ru": "В каком коде информация представлена последовательностями всего из двух разных символов?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c016",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f00957",
+   "answerEn": "Morse code",
+   "answerDe": "Morsecode",
+   "answerRu": "азбука Морзе",
+   "spans": {
+    "en": [
+     1184,
+     10
+    ],
+    "de": [
+     1313,
+     9
+    ],
+    "ru": [
+     1301,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1865-05-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The International Telegraph Convention in Paris adopts the international Morse code",
+    "labelDe": "Die Internationale Telegraphenkonvention in Paris übernimmt das internationale Morsealphabet",
+    "labelRu": "Международная телеграфная конвенция в Париже принимает международную азбуку Морзе"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Morse_code",
+    "title": "Morse code – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00957",
+     "en": "In which code are letters and digits represented by sequences of short and long signals (dots and dashes)?",
+     "de": "In welchem Code werden Buchstaben und Ziffern durch Folgen von kurzen und langen Signalen (Punkten und Strichen) dargestellt?",
+     "ru": "В каком коде буквы и цифры представлены последовательностями коротких и длинных сигналов (точек и тире)?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q79897",
+     "label": "Morse code",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f00958",
+   "answerEn": "ASCII",
+   "answerDe": "ASCII",
+   "answerRu": "ASCII",
+   "spans": {
+    "en": [
+     1852,
+     5
+    ],
+    "de": [
+     2037,
+     5
+    ],
+    "ru": [
+     2030,
+     5
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1963",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The ASCII character code is published",
+    "labelDe": "Der Zeichencode ASCII wird veröffentlicht",
+    "labelRu": "Опубликован код символов ASCII"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/ASCII",
+    "title": "ASCII – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00958",
+     "en": "In which character code, introduced in 1963, are 128 characters represented with 7 bits each?",
+     "de": "In welchem 1963 eingeführten Zeichencode werden 128 Zeichen mit jeweils 7 Bit dargestellt?",
+     "ru": "В каком коде символов, введённом в 1963 году, 128 символов представлены 7 битами каждый?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q8815",
+     "label": "ASCII",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f00959",
+   "answerEn": "QR code",
+   "answerDe": "QR-Code",
+   "answerRu": "QR-код",
+   "spans": {
+    "en": [
+     2856,
+     7
+    ],
+    "de": [
+     3148,
+     7
+    ],
+    "ru": [
+     3096,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2000-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The QR code becomes the international standard ISO/IEC 18004",
+    "labelDe": "Der QR-Code wird als ISO/IEC 18004 internationaler Standard",
+    "labelRu": "QR-код становится международным стандартом ISO/IEC 18004"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/QR_code",
+    "title": "QR code – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00959",
+     "en": "In which two-dimensional code is information represented in a square matrix of black and white modules that can be scanned with a smartphone?",
+     "de": "In welchem zweidimensionalen Code werden Informationen in einer quadratischen Matrix aus schwarzen und weißen Modulen dargestellt, die sich mit dem Smartphone scannen lässt?",
+     "ru": "В каком двумерном коде информация представлена квадратной матрицей из чёрных и белых модулей, которую можно отсканировать смартфоном?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q12203",
+     "label": "QR code",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f00960",
+   "answerEn": "Unicode",
+   "answerDe": "Unicode",
+   "answerRu": "Юникод",
+   "spans": {
+    "en": [
+     2390,
+     7
+    ],
+    "de": [
+     2655,
+     7
+    ],
+    "ru": [
+     2621,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first version of the Unicode standard is published",
+    "labelDe": "Die erste Version des Unicode-Standards erscheint",
+    "labelRu": "Опубликована первая версия стандарта Юникод"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Unicode",
+    "title": "Unicode – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00960",
+     "en": "In which character encoding standard are the characters of practically all the world's writing systems represented by unique numbers (code points)?",
+     "de": "In welchem Zeichenkodierungsstandard werden die Schriftzeichen praktisch aller Schriftsysteme der Welt durch eindeutige Nummern (Codepunkte) dargestellt?",
+     "ru": "В каком стандарте кодирования символы практически всех письменностей мира представлены уникальными номерами (кодовыми точками)?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q8819",
+     "label": "The Unicode Standard",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing",
+  "topic:language/codes",
+  "audience:international"
+ ]
+}

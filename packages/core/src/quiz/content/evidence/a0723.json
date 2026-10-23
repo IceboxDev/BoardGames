@@ -1,0 +1,316 @@
+{
+ "article": "a0723",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alhambra",
+   "title": "Alhambra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:41.221Z",
+   "snapshot": "b5db0effbb1fd3a5905156659e8ec289cb39ab5fc1794686e2fd7729b9aefa2d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mosque%E2%80%93Cathedral_of_C%C3%B3rdoba",
+   "title": "Mosque–Cathedral of Córdoba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:34.358Z",
+   "snapshot": "584a4a9d0c4161959fe73145e16181382b85bdaa6a7dc55578c6931a419b389d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alc%C3%A1zar_of_Seville",
+   "title": "Alcázar of Seville – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:42.221Z",
+   "snapshot": "12bc42f4b7d7d5cea479daa540d17f679a6b66518099744eebfb8ba77123c1c8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Giralda",
+   "title": "Giralda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:43.242Z",
+   "snapshot": "008576b24acf0bcf43c0e0da195f51554e4fb5e516ad639f494338cc61709065"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Generalife",
+   "title": "Generalife – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:44.177Z",
+   "snapshot": "a3272c4e5ea9fce667beefbf61b0cc724a60b7776176cd39b9981130ab99f9d3"
+  },
+  "s6": {
+   "url": "https://www.alcazarsevilla.org/",
+   "title": "Real Alcázar de Sevilla",
+   "publisher": "Real Alcázar de Sevilla (Patronato)",
+   "kind": "official",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T12:35:15.955Z",
+   "snapshot": "16e9d0c2749eff6ab9ebc7ca7b99de832bcc5d0d5826b03dc106aa132f7b0526"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/383/",
+   "title": "Cathedral, Alcázar and Archivo de Indias in Seville - UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:19:01Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alhambra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c061"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mezquita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alcázar of Seville",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giralda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Generalife",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:33.458Z",
+   "target": "f03611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Alhambra (, Spanish: [aˈlambɾa]; Arabic: الْحَمْرَاء, romanized: al-ḥamrāʼ ) is a palace and fortress complex located in Granada, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alhambra” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:33.458Z",
+   "target": "f03612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Mosque–Cathedral of Córdoba (Spanish: Mezquita-Catedral de Córdoba [meθˈkita kateˈðɾal de ˈkoɾðoβa]) is the cathedral of the Roman Catholic Diocese of Córdoba in the Spanish region of Andalusia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mezquita” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:33.458Z",
+   "target": "f03613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Alcázar of Seville, officially called Royal Alcázar of Seville (Spanish: Real Alcázar de Sevilla or Reales Alcázares de Sevilla), is a historic royal palace in Seville, Spain and one of the official residences of the Spanish royal family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alcázar of Seville” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:33.458Z",
+   "target": "f03614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Giralda (Spanish: La Giralda [la xiˈɾalda]) is the bell tower of Seville Cathedral in Seville, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giralda” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:33.458Z",
+   "target": "f03615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Generalife (Spanish pronunciation: [xe.ne.ɾa.ˈli.fe]; Arabic: جَنَّة الْعَرِيف, romanized: Jannat al-‘Arīf) was a summer palace and country estate of the Nasrid rulers of the Emirate of Granada in Al-Andalus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:33.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Generalife” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:58Z",
+   "target": "f03613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bienvenido al Palacio Real más Antiguo de Europa en Uso.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official site: the oldest royal palace in Europe still in use (upper floors are the royal family's Seville residence)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:19:01Z",
+   "target": "f03613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The cathedral and the Alcázar – dating from the Reconquest of 1248 to the 16th century and imbued with Moorish influences",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:03.158Z",
+   "target": "f03613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Home - Real Alcázar de Sevilla - Official Web of The Real Alcázar of Seville",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:03.158Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alcázar of Seville” is on the snapshot of s6"
+  }
+ ]
+}

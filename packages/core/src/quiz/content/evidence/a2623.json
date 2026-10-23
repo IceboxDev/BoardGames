@@ -1,0 +1,487 @@
+{
+ "article": "a2623",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Second_Life",
+   "title": "Second Life",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:09:55.338Z",
+   "snapshot": "6a47d9e25e11f1839f39a9c475d732416c70bfd2a040ca325302a7bc94f43e29"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Second_Life",
+   "title": "Second Life – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:56.252Z",
+   "snapshot": "19a78a23020ab18fd02d694158f2f9b65f106674cc5108eff448c14327577723"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Snow_Crash",
+   "title": "Snow Crash – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:57.153Z",
+   "snapshot": "39d1bd63939738b484a3983620e36fa9298b889088c17c7538bb5d35f3d59a4e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+   "title": "Habitat (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:25.026Z",
+   "snapshot": "76243e9cb0730efa7becd659fed610d79b8a758f8baa4b3c8088983d6e7e6e2f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Philip_Rosedale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:58.267Z",
+   "snapshot": "c06084cba8a85291fae907f19e939076cc8874b4d5cc60041db27469deea634a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Metaverse",
+   "title": "Metaverse – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:13:32Z"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/technology-59180273",
+   "title": "Second Life: The original metaverse? (BBC News)",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:55.183Z",
+   "snapshot": "98fe53ae3c2052c9f19c3a3d7a25ff0b5445ba430f122f418066c2a6b2ee2085"
+  },
+  "s8": {
+   "url": "https://web.stanford.edu/class/history34q/readings/Virtual_Worlds/LucasfilmHabitat.html",
+   "title": "The Lessons of Lucasfilm's Habitat (Morningstar & Farmer, 1990)",
+   "publisher": "Chip Morningstar and F. Randall Farmer (Stanford course reader copy)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:55.560Z",
+   "snapshot": "bdac877d250e31017bb699370d32d3be77e22fc3e732ce1a5f12505bae7ed8ed"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Avatar_(computing)",
+   "title": "Avatar (computing) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:13:36Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Second Life",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-386"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Linden Dollar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philip Rosedale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snow Crash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Habitat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:48.346Z",
+   "target": "f14176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Second Life (deutsch: zweites Leben, abgekürzt „SL“) ist eine von Benutzern gestaltete virtuelle Welt (Metaversum), in der Menschen durch Avatare interagieren, spielen, Handel betreiben und anderweitig kommunizieren können.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Second Life” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:48.346Z",
+   "target": "f14177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Second Life also has its own virtual currency, the Linden Dollar (L$), which is exchangeable with real world currency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linden Dollar” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:48.346Z",
+   "target": "f14178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philip Rosedale formed Linden Lab in 1999 with the intention of developing computer hardware to allow people to become immersed in a virtual world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philip Rosedale” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:48.346Z",
+   "target": "f14179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snow Crash is a 1992 science fiction novel by Neal Stephenson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snow Crash” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:48.346Z",
+   "target": "f14180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Habitat is a massively multiplayer online role-playing game (MMORPG) developed by LucasArts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Habitat” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:13:32Z",
+   "target": "f14179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The term metaverse originated in the 1992 science fiction novel Snow Crash as a portmanteau of \"meta\" and \"universe\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:13:33Z",
+   "target": "f14179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term metaverse was coined in the 1990s in a science-fiction novel, Snow Crash,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:13:34Z",
+   "target": "f14180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The players are represent by animated figures that we call \"Avatars\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Habitat's designers' own paper. The 'first' claim is softened: Ultima IV (1985) already called the player's character the Avatar; wording and body reworded."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:13:36Z",
+   "target": "f14180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Other early uses of the term include Lucasfilm and Chip Morningstar's",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: the on-screen sense was 'coined in 1985 by Richard Garriott for the computer game Ultima IV' — so Habitat was an early, not the first, use."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:13:47Z",
+   "target": "f14180",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The use of the term avatar for the on-screen representation of the user was coined in 1985 by Richard Garriott for the computer game Ultima IV: Quest of the Avatar.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Refutes the old wording/body premise that Habitat was the FIRST to call users' figures avatars; premise reworded."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:13:48Z",
+   "target": "f14180",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The players are represent by animated figures that we call \"Avatars\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the reworded premise: Habitat called its users' figures avatars (an early use, not the first)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:33.436Z",
+   "target": "f14179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term metaverse was coined in the 1990s in a science-fiction novel, Snow Crash,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:33.436Z",
+   "target": "f14180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The players are represent by animated figures that we call \"Avatars\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:33.436Z",
+   "target": "f14180",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The players are represent by animated figures that we call \"Avatars\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:33.436Z",
+   "target": "f14179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term metaverse was coined in the 1990s in a science-fiction novel, Snow Crash, where it served as a virtual-reality successor to the internet, where people live large portions of their lives in virtual environments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Snow Crash” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:33.436Z",
+   "target": "f14180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Lessons of Lucasfilm's Habitat",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.436Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Habitat” is on the snapshot of s8"
+  }
+ ]
+}

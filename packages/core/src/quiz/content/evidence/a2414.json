@@ -1,0 +1,421 @@
+{
+ "article": "a2414",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Grimms_M%C3%A4rchen",
+   "title": "Grimms Märchen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:23.505Z",
+   "snapshot": "b0e323ec7558ce2daec35ef33a6458f7f04bcc6a68bbdd5b4252c06abf0c7066"
+  },
+  "s2": {
+   "url": "https://es.wikipedia.org/wiki/Final_feliz",
+   "title": "Final feliz",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:58:24.143Z",
+   "snapshot": "1ae8cf17b83d22ce22b655a02aa2464df9b9f47c27205c288a5101c4e14223a3"
+  },
+  "s3": {
+   "url": "https://www.visithcandersen.dk/a-great-journalist.htm",
+   "title": "A great journalist who wanted to be a journalist (Jens Kruuse)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:24.324Z",
+   "snapshot": "8e6b38683272268236ebef1b6ed38c4fc5da46a58c6b49385339994d8776a57b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Brothers_Grimm",
+   "title": "Brothers Grimm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:27.438Z",
+   "snapshot": "a5f4d629f5a48e0570bc5800a0124dfc0745e28e2d16b36dd350ad52271a2a36"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue)",
+   "title": "The Little Mermaid (statue) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:52.672Z",
+   "snapshot": "5fa1757ea2f44831443c8ddbbadd3f4f085eef803fedf17f8e7ba448dfd3848d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Christian_Andersen",
+   "title": "Hans Christian Andersen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:28.408Z",
+   "snapshot": "ed9b59b24e619ea17eb21dcfacea0b774591af496cfea4eabbed71ad0467ca28"
+  },
+  "s7": {
+   "url": "https://es.wikipedia.org/wiki/Saturnino_Calleja",
+   "title": "Saturnino Calleja – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:58:25.476Z",
+   "snapshot": "e0daede307b754e3f83609c6926e99541e9676d96347eb78c0adba2d45f7665d"
+  },
+  "s8": {
+   "url": "https://www.spanishdict.com/translate/fueron%20felices%20y%20comieron%20perdices",
+   "title": "Fueron felices y comieron perdices – SpanishDictionary.com",
+   "publisher": "SpanishDictionary.com",
+   "kind": "reference",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T12:47:09.854Z",
+   "snapshot": "04fd67d0408bf7cc54d6bcf6bb16e39454582f7c81d4874728d4d92013586e5a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grimms Märchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; history entry seq 8; transcript tp-078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "partridges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-086"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Christian Andersen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-172"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hanau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Little Mermaid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Odense",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Saturnino Calleja",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grimms Märchen nennt man volkstümlich die berühmte Sammlung Kinder- und Hausmärchen, in der Forschungsliteratur auch als KHM abgekürzt, die Jacob und Wilhelm Grimm als Brüder Grimm von 1812 bis 1858 herausgaben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grimms Märchen” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "partridges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“partridges”, “Rebhühner”, “куропатки”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Christian Andersen, the brilliant writer with the sure eye, was one of the most travelled men of his time, and perhaps the best travel reporter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Christian Andersen” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Born in Hanau and raised in Steinau, they were educated in Kassel and at the University of Marburg, where they developed a lasting interest in medieval literature and German cultural history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanau” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Little Mermaid (Danish: Den lille Havfrue) is a bronze statue by Edvard Eriksen, depicting a mermaid becoming human.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Little Mermaid” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Andersen was born in Odense, Denmark, on 2 April 1805.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Odense” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:16.575Z",
+   "target": "f12653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Saturnino Calleja Fernández (Burgos, 11 de febrero de 1853-Madrid, 7 de julio de 1915) fue un editor, pedagogo, escritor y traductor español, fundador de la Editorial Calleja, autor de libros de educación primaria y de lecturas infantiles.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturnino Calleja” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:02:37Z",
+   "target": "f12648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "En español es frecuente la fórmula rimada «fueron felices y comieron perdices [y a mí no me dieron porque no quisieron]», original de los cuentos de Calleja.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:02:39Z",
+   "target": "f12648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Termina el cuento, papá. ¿Qué les pasó al rey y la reina? - Bueno, fueron felices y comieron perdices.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Dictionary entry: the phrase = 'they lived happily ever after', illustrated as a story ending."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:59.884Z",
+   "target": "f12648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "En español es frecuente la fórmula rimada «fueron felices y comieron perdices [y a mí no me dieron porque no quisieron]», original de los cuentos de Calleja.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:59.884Z",
+   "target": "f12648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Termina el cuento, papá. ¿Qué les pasó al rey y la reina? - Bueno, fueron felices y comieron perdices.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:59.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "a2263": {
+  "kind": "corrected",
+  "reason": "The bodies called Rocket Beans TV \"Germany's first 24-hour internet TV channel\". No source we could read (Wikipedia, DWDL, heise, BR PULS, Welt, Gamestar) says it was the first; they describe it as a 24-hour internet/streaming channel launched on Twitch on 15 January 2015 (the founders themselves called it the \"biggest German live-streaming channel\"). The unverifiable \"first\" was dropped in all three languages.",
+  "sources": [
+   {
+    "url": "https://www.dwdl.de/nachrichten/48966/rocket_beans_wollen_livestreamingsender_starten/"
+   },
+   {
+    "url": "https://www.br.de/puls/themen/netz/rocket-beans-tv-interview-etienne-garde-100.html"
+   },
+   {
+    "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f11605": {
+  "kind": "corrected",
+  "reason": "Timeline labels repeated the unverified claim that Rocket Beans TV was Germany's first 24-hour internet channel; now they say it was a 24-hour internet channel starting on Twitch.",
+  "sources": [
+   {
+    "url": "https://www.dwdl.de/nachrichten/48966/rocket_beans_wollen_livestreamingsender_starten/"
+   }
+  ],
+  "fields": [
+   "timeline"
+  ]
+ },
+ "w11680": {
+  "kind": "reworded",
+  "reason": "The Trivial Pursuit card asks for \"the first 24-hour internet channel in Germany\"; that premise could not be confirmed by any source, so the question now identifies the channel by what is verifiable (24-hour internet channel, live on Twitch in January 2015, founded by ex-GIGA Games/Game One presenters). The card's words stay in cardText.",
+  "sources": [
+   {
+    "url": "https://www.dwdl.de/nachrichten/48966/rocket_beans_wollen_livestreamingsender_starten/"
+   },
+   {
+    "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru",
+   "cardText"
+  ]
+ },
+ "a2596": {
+  "kind": "corrected",
+  "reason": "The Düren men's record (22.52 m, 2017) was credited to \"Thomas Steinhauer\", but the City of Düren's own page names the 2017 record setter both \"Thomas Steinhauer\" (intro) and \"Tobias Steinhauer, Brügg (Schweiz)\" (2017 results). The ambiguous first name was dropped (\"Steinhauer, a spitter from Brügg in Switzerland\"), and the record is now dated \"as of 2026\" since it can be broken at any Annakirmes.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f11224": {
+  "kind": "corrected",
+  "reason": "Timeline labels named \"Thomas Steinhauer\"; the official Düren page also gives \"Tobias Steinhauer\" for the 2017 record, so the labels now say \"a Swiss competitor, Steinhauer\". The record is time-sensitive (it can fall at the next Annakirmes in late July), so reviewBy is set to 2027-08-31.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "timeline",
+   "reviewBy"
+  ]
+ },
+ "f11540": {
+  "kind": "marked",
+  "reason": "The wording asks for the magazine's current title; the publisher's page (2026) still calls it medizini. reviewBy set a year out to recheck the current title.",
+  "sources": [
+   {
+    "url": "https://www.wortundbildverlag.de/medizini"
+   }
+  ],
+  "fields": [
+   "reviewBy"
+  ]
+ },
+ "f11608": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2263 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f11609": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2263 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f11227": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f11226": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f13977": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f13975": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f13973": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f13974": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f13976": {
+  "kind": "marked",
+  "reason": "Answer spans moved mechanically after an earlier sentence of a2596 was edited; they still mark the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://www.dueren.de/kultur-tourismus/veranstaltungen/annakirmes/kirschkernweitspucken"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ }
+}

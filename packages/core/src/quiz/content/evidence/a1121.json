@@ -1,0 +1,399 @@
+{
+ "article": "a1121",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kegeln",
+   "title": "Kegeln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:01.762Z",
+   "snapshot": "71402dcbf5f32ebaae3bf70003830e4c488936693ad06a919393ef2f6c8b9171"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Deutscher_Kegler-_und_Bowlingbund",
+   "title": "Deutscher Kegler- und Bowlingbund – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:02.331Z",
+   "snapshot": "be852884fe8e23e7e767a7eff8ed92341579b3ee3c013977cfca62304aaa7790"
+  },
+  "s3": {
+   "url": "https://www.dwds.de/wb/neun",
+   "title": "neun – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:04.545Z",
+   "snapshot": "db03f1af1c29d1d1aaf7298bba04521c675ccf6ebbc54fd4a40e9d1b7d004808"
+  },
+  "s4": {
+   "url": "https://www.redensarten-index.de/suche.php?suchbegriff=alle+neune&bool=relevanz&suchspalte%5B%5D=rart_ou",
+   "title": "alle neune – Redensarten-Index",
+   "publisher": "Redensarten-Index",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:04.881Z",
+   "snapshot": "ed404878c82c8a1dbc830b0f21f2aefc03d818b802c06872690323df29bb1561"
+  },
+  "s5": {
+   "url": "http://www.kegelnundbowling.de/seite/471053/geschichte-des-kegelns.html",
+   "title": "Geschichte des Kegelns",
+   "publisher": "Landesverband Kegeln und Bowling (kegelnundbowling.de)",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:04.967Z",
+   "snapshot": "3751445d7b5b5dc2198b41f03ee9014cf618f73d601bd92b0c9b856f5a466845"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pudel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c094"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "alle Neune",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kranz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "König",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rothenburg ob der Tauber",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:36.011Z",
+   "target": "f05601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pudel: Im Mittel- und Niederdeutschen puddeln (= „im Wasser plätschern“ oder auch „nass werden“).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pudel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:36.011Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "alle Neune",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“alle Neune”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:36.011Z",
+   "target": "f05603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lediglich der Mittelkegel, König genannt, darf stehen bleiben (Kranz), allerdings werden auch nur die 8 gefallenen Kegel gewertet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kranz” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:36.011Z",
+   "target": "f23920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auf Bohle- und Scherebahnen wird der gerade geschnittene 2000er-Kegel eingesetzt, wobei der mittlere Kegel, der König, durch eine kleine Kappe oben etwas größer ist als die anderen acht Kegel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “König” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:36.011Z",
+   "target": "f23921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erstmals wird 1157 in der Chronik von Rothenburg ob der Tauber Kegeln als verbreitetes Volksvergnügen geschildert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rothenburg ob der Tauber” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:36Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "alle neune werfen, schieben (= mit einem Wurf alle Kegel zu Fall bringen)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:39:39Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ausruf, wenn man beim Kegeln mit einem Wurf alle neun Kegel umwirft; im erweiterten Sinn: Volltreffer!",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:39:42Z",
+   "target": "f23921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Westeuropa lässt sich die Entwicklung des Kegelns bis ins 12. Jahrhundert zurückverfolgen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the 12th-century date only; no second source naming the Rothenburg chronicle was found (web-search quota exhausted)"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:13.824Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "alle neune werfen, schieben (= mit einem Wurf alle Kegel zu Fall bringen)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:13.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:13.824Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ausruf, wenn man beim Kegeln mit einem Wurf alle neun Kegel umwirft; im erweiterten Sinn: Volltreffer!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:13.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:13.824Z",
+   "target": "f23921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Westeuropa lässt sich die Entwicklung des Kegelns bis ins 12. Jahrhundert zurückverfolgen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:13.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:13.824Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kegelnes fielen alle neune",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:13.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “alle Neune” is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:13.824Z",
+   "target": "f05602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gleich beim ersten Wurf alle neune!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:13.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “alle Neune” is on the snapshot of s4"
+  }
+ ]
+}

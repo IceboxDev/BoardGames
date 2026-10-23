@@ -1,0 +1,289 @@
+{
+ "article": "a1776",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Elon_Musk",
+   "title": "Elon Musk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:07.691Z",
+   "snapshot": "8666234241272fa453e54a230edbad8017f6802523840cc09b0ceced1c592e59"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Elon_Musk",
+   "title": "Elon Musk",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:21:43.964Z",
+   "snapshot": "e83c2074b7341ec52a57fccbc174ea0f354a3b05ac89a4903e81f68195815e28"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amazon_(company)",
+   "title": "Amazon (company) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:47.563Z",
+   "snapshot": "f0c36863cfbd034794b8aa7646841926a4b5fdde1cf29a7f3487e7069154cb3f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Virgin_Galactic_Unity_22",
+   "title": "Virgin Galactic Unity 22 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:49.162Z",
+   "snapshot": "5fb6455409d5c3649621a7923425e61bac3121407417152dfb02c96fdb1b218b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+   "title": "Steve Jobs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:09.466Z",
+   "snapshot": "a58f6caac6cc22beb11a6b7cfe7831137d210b92ab838b5ac0ffd2ba8599e535"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mark_Zuckerberg",
+   "title": "Mark Zuckerberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:49.591Z",
+   "snapshot": "8b53fb0574bf675feea35b18113a659c12a2dc7244134f667fea58cbe3e0dd94"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Elon Musk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elon Musk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-143"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jeff Bezos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08878",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard Branson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Steve Jobs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mark Zuckerberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:20.581Z",
+   "target": "f08876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jacob Silverman, author of the 2025 book Gilded Rage: Elon Musk and the Radicalization of Silicon Valley, said that the tech industry represented by Musk, Thiel, Andreessen and other capitalists, actually flourished under Biden, but the tech leaders chose Trump for their common ground on cultural",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elon Musk” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:20.581Z",
+   "target": "f08876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Weggefährten beschreiben den jungen Elon Musk als eigenwilligen, sozial unbeholfenen Außenseiter, der oft durch Geistesabwesenheit auffiel und bei Gleichaltrigen aneckte.​",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elon Musk” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:20.581Z",
+   "target": "f08877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Founded in 1994 by Jeff Bezos in Bellevue, Washington, the company started as an online book marketplace that gradually expanded to include virtually all consumer products as well as many other categories, positioned as \"The Everything Store\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jeff Bezos” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:20.581Z",
+   "target": "f08878",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The crew consisted of pilots David Mackay and Michael Masucci as well as passengers Sirisha Bandla, Colin Bennett, Beth Moses, and Richard Branson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Branson” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:20.581Z",
+   "target": "f08879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Steve Jobs didn't get his hands dirty in that sense.\" Kottke also stated that much of the early work took place in Jobs's kitchen, where he spent hours on the phone trying to find investors for the company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steve Jobs” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:20.581Z",
+   "target": "f08880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Evidence showed that Mark Zuckerberg approved allowing minors to access AI chatbot companions that safety staffers warned were capable of sexual interactions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Zuckerberg” is on the snapshot of s6"
+  }
+ ]
+}

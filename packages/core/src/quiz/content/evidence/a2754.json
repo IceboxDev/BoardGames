@@ -1,0 +1,402 @@
+{
+ "article": "a2754",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hangul",
+   "title": "Hangul",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:19.239Z",
+   "snapshot": "7f352acd27fa07a54b1bdbfbeca7d7051bd4f1c1647d4799c80250f25a810780"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hunminjeongeum",
+   "title": "Hunminjeongeum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:20.135Z",
+   "snapshot": "bb2ca8ef6cbf156f5777f5ed0c0beed036808658a178e4d6f984f6abc758e159"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sejong_the_Great",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:21.584Z",
+   "snapshot": "c9c6560bebefa0875a357f61f6b179e2ae89540878f6c3a82aca81e2e7922b8c"
+  },
+  "s4": {
+   "url": "https://korean.go.kr/kornorms/regltn/regltnView.do",
+   "title": "한글 맞춤법 (Korean orthography rules), 제4항",
+   "publisher": "National Institute of Korean Language (국립국어원)",
+   "kind": "official",
+   "lang": "ko",
+   "retrievedAt": "2026-10-23T12:50:20.068Z",
+   "snapshot": "15b52c9b935e87de592a24e59ad7eb62242c9d3d7971b8364763917c7c75fecc"
+  },
+  "s5": {
+   "url": "https://asiasociety.org/education/worlds-most-incredible-alphabet",
+   "title": "The World's Most Incredible Alphabet",
+   "publisher": "Asia Society",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:45:51Z"
+  },
+  "s6": {
+   "url": "https://ko.wikisource.org/wiki/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C",
+   "title": "訓民正音 (Hunminjeongeum, 1446) – Wikisource",
+   "publisher": "Wikisource (text of the Hunminjeongeum)",
+   "kind": "primary",
+   "lang": "zh",
+   "retrievedAt": "2026-10-23T12:50:12.327Z",
+   "snapshot": "62d323b4a647a5336290821e38879e2ab6cf6912298a18e8850259964b1e5e55"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "To promote literacy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript ppm-100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hunminjeongeum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "24",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the human speech organs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:08.162Z",
+   "target": "f25691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "To promote literacy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“To promote literacy”, “Förderung der Lese- und Schreibfähigkeit”, “распространение грамотности”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:08.162Z",
+   "target": "f25692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hunminjeongeum (Korean: 훈민정음; Hanja: 訓民正音; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hunminjeongeum” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:08.162Z",
+   "target": "f25694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Modern Korean language orthographies use 24 basic letters, which are called jamo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “24” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:08.162Z",
+   "target": "f25695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the human speech organs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the human speech organs”, “die menschlichen Sprechorgane”, “органы речи человека”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:39Z",
+   "target": "f25691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As Hanja was poorly suited for representing the Korean language, and because its difficulty contributed to high illiteracy, Joseon king Sejong the Great (r. 1418–1450) moved to create Hangul.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:45:44Z",
+   "target": "f25694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "한글 자모의 수는 스물넉 자로 하고, 그 순서와 이름은 다음과 같이 정한다.",
+     "quoteLang": "ko",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "South Korea's official orthography: the Hangul alphabet has twenty-four (스물넉) letters."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:45:47Z",
+   "target": "f25695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The shapes of five basic consonants are based on those of human speech organs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:45:51Z",
+   "target": "f25695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the letter shapes for the consonants are made to look like the positions of the mouth, teeth, tongue, and throat when pronouncing the sounds",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:45:59Z",
+   "target": "f25691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "故愚民。有所欲言而終不得伸其情者。多矣。予。為此憫然。新制二十八字。欲使人人易習。便於日用矣",
+     "quoteLang": "zh",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "King Sejong's own preface (Classical Chinese): the ignorant people cannot express themselves in writing, so he made 28 new letters for everyone to learn easily and use daily — i.e. to promote literacy."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:55.608Z",
+   "target": "f25691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As Hanja was poorly suited for representing the Korean language, and because its difficulty contributed to high illiteracy, Joseon king Sejong the Great (r. 1418–1450) moved to create Hangul.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:55.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:55.608Z",
+   "target": "f25694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "한글 자모의 수는 스물넉 자로 하고, 그 순서와 이름은 다음과 같이 정한다.",
+     "quoteLang": "ko",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:55.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:55.608Z",
+   "target": "f25695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The shapes of five basic consonants are based on those of human speech organs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:55.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:55.608Z",
+   "target": "f25691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "故愚民。有所欲言而終不得伸其情者。多矣。予。為此憫然。新制二十八字。欲使人人易習。便於日用矣",
+     "quoteLang": "zh",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:55.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:55.608Z",
+   "target": "f25694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "(24) 무엇을 하든지 꾸준히 열심히 하는 것, 다시 말해 성실이 가장 큰 경쟁력이다.",
+     "quoteLang": "ko",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:55.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “24” is on the snapshot of s4"
+  }
+ ]
+}

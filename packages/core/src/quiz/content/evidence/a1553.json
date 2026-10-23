@@ -1,0 +1,423 @@
+{
+ "article": "a1553",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aikido",
+   "title": "Aikido – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:58.009Z",
+   "snapshot": "cae4ad5ee1be535a6e4d863ca11bde89a3db2873bcff81aaff2513d22815d402"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kendo",
+   "title": "Kendo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:38.371Z",
+   "snapshot": "be84123f078b34f7585928d18d1f73bb40322d6323cee0d3cfb83b264ddfc55e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sumo",
+   "title": "Sumo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:59.058Z",
+   "snapshot": "69151b562e6740701943605b6b00c7704775ab610add38d07568986cc4510179"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Morihei_Ueshiba",
+   "title": "Morihei Ueshiba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:46.037Z",
+   "snapshot": "4b90ac28bbc0082eb3177aebe1e8d62850c7c10ca95b5b670d4341dae05d18d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Makuuchi",
+   "title": "Makuuchi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:59.977Z",
+   "snapshot": "46f214739ea41a1be42e3d6efea03dc673c217e9844e9f1a1e616b83a004e077"
+  },
+  "s6": {
+   "url": "https://www.asahi.com/ajw/articles/14919594",
+   "title": "Kiribayama to be promoted to ozeki",
+   "publisher": "The Asahi Shimbun (Asia & Japan Watch)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:37.815Z",
+   "snapshot": "32125c362838ebeb12e6fe38f0822f9c1e10bf111c118e8076d316b1f0631504"
+  },
+  "s7": {
+   "url": "https://english.kyodonews.net/news/2021/03/443456bd50d5-breaking-news-sumo-association-approves-retirement-of-yokozuna-kakuryu.html",
+   "title": "Sumo: Yokozuna Kakuryu retires after missing 5th straight tourney",
+   "publisher": "Kyodo News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:38.622Z",
+   "snapshot": "d5e82c09f6ed9e395dbbb64eb38f14189fbd34a204b2aa6bf1f01269b3b06174"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Yokozuna",
+   "title": "Yokozuna – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:37.281Z",
+   "snapshot": "46f214739ea41a1be42e3d6efea03dc673c217e9844e9f1a1e616b83a004e077"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "aikido",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "kendo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sumo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Morihei Ueshiba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "yokozuna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:43.220Z",
+   "target": "f07761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aikido (Shinjitai: 合気道, Kyūjitai: 合氣道, aikidō, Japanese pronunciation: [aikiꜜdoː]) is a modern Japanese martial art which is split into many different styles including Aikikai, Shodokan Aikido, Yoshinkan, Renshinkai, Iwama Ryu, Iwama Shin Shin Aiki Shuren Kai, and Ki Aikido.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aikido” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:43.220Z",
+   "target": "f07764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kendo (Japanese: 剣道, Hepburn: Kendō; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kendo” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:43.220Z",
+   "target": "f07765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sumo (Japanese: 相撲, Hepburn: sumō; pronounced [sɯmoː], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sumo” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:43.220Z",
+   "target": "f24260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Morihei Ueshiba (植芝 盛平, Ueshiba Morihei; December 14, 1883 – April 26, 1969) was a Japanese martial artist and founder of the martial art of aikido.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Morihei Ueshiba” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:43.220Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At the top fixed positions of the division are the \"titleholder\" or san'yaku ranks of yokozuna, ōzeki, sekiwake and komusubi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:43.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “yokozuna” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:12:05Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "all of whom eventually were promoted to the highest rank of yokozuna",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:12:06Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Yokozuna Kakuryu, a wrestler at sumo's highest rank and winner of six top-division titles",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:12:08Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is the highest rank in sumo",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:30.163Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "all of whom eventually were promoted to the highest rank of yokozuna",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:30.163Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is the highest rank in sumo",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:30.163Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mongolian sumo wrestler Kiribayama will soon be one step closer to following in the footsteps of his stablemaster and other yokozuna from his country, when he is promoted to the second-highest rank of ozeki.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “yokozuna” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:30.163Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sumo: Yokozuna Kakuryu retires after missing 5th straight tourney",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “yokozuna” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:30.163Z",
+   "target": "f24261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "At the top fixed positions of the division are the \"titleholder\" or san'yaku ranks of yokozuna, ōzeki, sekiwake and komusubi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:30.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “yokozuna” is on the snapshot of s8"
+  }
+ ]
+}

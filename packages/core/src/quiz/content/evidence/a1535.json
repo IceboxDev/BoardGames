@@ -1,0 +1,195 @@
+{
+ "article": "a1535",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Coriander",
+   "title": "Coriander – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:13.565Z",
+   "snapshot": "649cebdc7bdd2a5983d29c14b2d32aa04f2a773bd39436f3a660379f0d430409"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/B%C3%A9arnaise_sauce",
+   "title": "Béarnaise sauce – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:56.863Z",
+   "snapshot": "638c096eb1d5f1ffc3524c398114baa3f191ff453c080923f934c286dccdd45e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gravlax",
+   "title": "Gravlax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:57.908Z",
+   "snapshot": "aa05a0ec9cdcfed9b21f5f037b4bcddf512381ed38275ebeb39fbe12ebde04b1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marjoram",
+   "title": "Marjoram – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:58.873Z",
+   "snapshot": "e58e722027f388ddc99d3a02c5451ea456e6cee8b90df355a9bd2b622d38d097"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "coriander",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "tarragon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "marjoram",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:40.506Z",
+   "target": "f07671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Coriander (), or Coriandrum sativum, is an annual herb in the family Apiaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coriander” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:40.506Z",
+   "target": "f07673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The difference is in the flavoring: béarnaise uses shallot, black pepper, and tarragon, while hollandaise uses white pepper or a pinch of cayenne.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tarragon” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:40.506Z",
+   "target": "f07674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gravlax (Swedish: [ˈgrɑ̂ːvlakːs]), graavilohi (Finnish: [ˈɡrɑ̝ːʋiˌlo̞ɦi]), gravad lax, gravlaks or graved salmon is a Nordic dish consisting of salmon that is cured using a mix of salt, sugar and dill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dill” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:40.506Z",
+   "target": "f07675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marjoram (, Origanum majorana, syn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “marjoram” is on the snapshot of s4"
+  }
+ ]
+}

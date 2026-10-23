@@ -1,0 +1,202 @@
+{
+ "article": "a1710",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Greenpeace",
+   "title": "Greenpeace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:19.547Z",
+   "snapshot": "925eed815fa07bb006cee1c1c1dcd51036f2288fe5d27eaf3d5bb31896b3bdc5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/World_Wide_Fund_for_Nature",
+   "title": "World Wide Fund for Nature – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:20.415Z",
+   "snapshot": "d692bff0bd6008617cf94791c7bdfb75bc99fcb0df857d75049742dd253994f8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sea_Shepherd_Conservation_Society",
+   "title": "Sea Shepherd Conservation Society – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:21.601Z",
+   "snapshot": "79200a1ebd5389362249c2ca18deba2205f7e88327f1393151343bf1fd0fc12d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/M%C3%A9decins_Sans_Fronti%C3%A8res",
+   "title": "Médecins Sans Frontières – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:02.420Z",
+   "snapshot": "b2b3e96750e98be2a2e7cfdf296b03b46b882d30fd80bfaaf20389d2249def03"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/World_Wildlife_Fund",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:18.041Z",
+   "snapshot": "d692bff0bd6008617cf94791c7bdfb75bc99fcb0df857d75049742dd253994f8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greenpeace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "WWF",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sea Shepherd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Médecins Sans Frontières",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:09.698Z",
+   "target": "f08546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greenpeace is a global campaigning network, founded in Canada in 1971 by a group of environmental activists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greenpeace” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:09.698Z",
+   "target": "f08547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "WWF is a Swiss-based international non-governmental organization that works in the field of wilderness preservation and the reduction of human impact on the environment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “WWF” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:09.698Z",
+   "target": "f08548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sea Shepherd Conservation Society (SSCS) is a non-profit, marine conservation activism organization based in Friday Harbor on San Juan Island, Washington, in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sea Shepherd” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:09.698Z",
+   "target": "f08550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Médecins Sans Frontières (MSF; pronounced [medsɛ̃ sɑ̃ fʁɔ̃tjɛʁ] ), French for Doctors Without Borders, is a charity that provides humanitarian medical care.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Médecins Sans Frontières” is on the snapshot of s4"
+  }
+ ]
+}

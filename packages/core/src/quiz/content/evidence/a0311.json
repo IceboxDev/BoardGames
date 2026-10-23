@@ -1,0 +1,249 @@
+{
+ "article": "a0311",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Maria_Clementine_Martin",
+   "title": "Maria Clementine Martin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:49.835Z",
+   "snapshot": "232ac606c5ca970571d4f090f0e9b1ea03a8dfcaef88042d49e7f7ab7d4ace30"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Johann_Andreas_Buchner",
+   "title": "Johann Andreas Buchner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:02.258Z",
+   "snapshot": "3483610625b812f476b8245315b1949ce9ae98cae97aeee7f1fa6809e3090466"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/William_Withering",
+   "title": "William Withering – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:05.337Z",
+   "snapshot": "398eb33247cdb83d6970c62ade6cedbe7dbf20f3793879804df3a7ec71e4dd94"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Quinine",
+   "title": "Quinine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:06.396Z",
+   "snapshot": "9c756658d50a84ffda147fc726ce4a5c4785d7e38d1569df58dd86a740dc90b4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Morphine",
+   "title": "Morphine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:07.474Z",
+   "snapshot": "f45e35043830d4d5a18e514c79e39fbcc3d21f20494c8ebd9e704831030cc90a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Melissa_officinalis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:08.260Z",
+   "snapshot": "4713c956f23004c176868b72aaac37dc82d86f4fc06264add94649fe8cc55e49"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Melisse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "willow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "foxglove",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cinchona",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "opium poppy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:28.029Z",
+   "target": "f01551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tanja Schurkus: Schwester Melisse – Die Klosterfrau von Köln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Melisse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:28.029Z",
+   "target": "f01552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He is credited with isolating salicin from willow bark (1828) and the discovery of berberine (from the root bark of Berberis vulgaris).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “willow” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:28.029Z",
+   "target": "f01553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The story is that he noticed a person with dropsy (swelling from congestive heart failure) improve remarkably after taking a traditional herbal remedy; Withering became famous for recognising that the active ingredient in the mixture came from the foxglove plant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “foxglove” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:28.029Z",
+   "target": "f01554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Quinine was first isolated in 1820 from the bark of a cinchona tree, which is native to Peru, and its molecular formula was determined by Adolph Strecker in 1854.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cinchona” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:28.029Z",
+   "target": "f01555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The primary source of morphine is isolation from poppy straw of the opium poppy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “opium poppy” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,518 @@
+{
+ "article": "a0355",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/L'Or%C3%A9al",
+   "title": "L'Oréal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:18.958Z",
+   "snapshot": "2f2a058f0b504fff29d7814560a52f9bb612a56e8a6ae6f472828e5245b9d63f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Procter_&_Gamble",
+   "title": "Procter & Gamble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:19.924Z",
+   "snapshot": "df240d7ff2057401b5b0978529f8f2333f1e7e9b51f6dc9eb2d3819cb801bb31"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Unilever",
+   "title": "Unilever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:20.963Z",
+   "snapshot": "ead80f97ef52e0446afa266c9a006168092c08caa9e76187f8eeed1b4730d2b3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Henkel_(Unternehmen)",
+   "title": "Henkel (Unternehmen) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:19.513Z",
+   "snapshot": "fa9ae8d51016a956719cd00174a8803378c90fc104b4f73908589289973775c0"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Beiersdorf_AG",
+   "title": "Beiersdorf AG – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:20.650Z",
+   "snapshot": "f55ff5485fabe9dddca8042d8eaf90dc210dd5dcfeeeda0a8a19d06508c9bb02"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Nivea",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:21.507Z",
+   "snapshot": "0290756c26113202f4fc11018ee9c2b7b7d596d446e9de27ab26434bdf600403"
+  },
+  "s7": {
+   "url": "https://www.loreal.com/en/groupe/",
+   "title": "Discover L'Oréal Groupe",
+   "publisher": "L'Oréal Groupe",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:32.584Z",
+   "snapshot": "c4e0addf1984fd91f4f93952aedeca3597e645906b3b1b33f7cbc7464cc823aa"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/L%27Or%C3%A9al",
+   "title": "L'Oréal",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:33.183Z",
+   "snapshot": "2f2a058f0b504fff29d7814560a52f9bb612a56e8a6ae6f472828e5245b9d63f"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/The_Body_Shop",
+   "title": "The Body Shop",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:34.169Z",
+   "snapshot": "f7d1a29f85fe3945875fa4acaa9b781192acf79c44c901fdb0000644438fdd0c"
+  },
+  "s10": {
+   "url": "https://www.loreal.com/en/our-global-brands-portfolio/",
+   "title": "Our Global Brands Portfolio",
+   "publisher": "L'Oréal Groupe",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:33.367Z",
+   "snapshot": "9fb05406b77319c0afdfbbf926135dedd7531584895cc2eda374f10a9d98eced"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "L'Oréal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c030"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Procter & Gamble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unilever",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Henkel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Beiersdorf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:35.099Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As of the early 2020s, L'Oréal owned 36 brands and 497 patents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “L'Oréal” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:35.099Z",
+   "target": "f01772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Procter & Gamble Company (P&G) is an American multinational consumer goods corporation incorporated and headquartered in Cincinnati, Ohio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Procter & Gamble” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:35.099Z",
+   "target": "f01773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unilever PLC () is a British multinational consumer packaged goods company headquartered in London, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unilever” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:35.099Z",
+   "target": "f01774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Henkel ist mit rund 47.200 Mitarbeitern in 75 Ländern vertreten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henkel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:35.099Z",
+   "target": "f01775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Beiersdorf AG ist ein börsennotierter, weltweit tätiger deutscher Konsumgüterkonzern mit Sitz in Hamburg-Eimsbüttel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beiersdorf” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:11:06Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Group has consolidated its position as the world leader in beauty, sustained its growth and strengthened its margins.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:11:09Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "As of 2024, it is the world's largest cosmetics company.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:12Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In September 2017, L'Oréal sold it to Brazil's Natura & Co for £880 million.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Refutes the card's premise 'since 2006 The Body Shop' (owned only 2006–2017); the answer L'Oréal stands."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:11:15Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Garnier",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Garnier and Maybelline New York listed in L'Oréal's own brand portfolio; answer confirmed."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:11:26Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Body Shop operated under the French cosmetics company L'Oréal between 2006 and 2017.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the corrected wording (owned 2006–2017); supersedes e13, which refuted only the card's old 'since 2006' premise."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Group has consolidated its position as the world leader in beauty, sustained its growth and strengthened its margins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "As of 2024, it is the world's largest cosmetics company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Body Shop operated under the French cosmetics company L'Oréal between 2006 and 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "From the very first hair dye L’Oréal produced in 1909 to our innovative Beauty Tech products and services today, our company has been a pure player and leader in the beauty sector worldwide for decades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “L'Oréal” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "As of the early 2020s, L'Oréal owned 36 brands and 497 patents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “L'Oréal” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Body Shop operated under the French cosmetics company L'Oréal between 2006 and 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “L'Oréal” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:55.690Z",
+   "target": "f01771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "L’Oréal’s global brands is organised as 4 complementary Divisions, with each one developing a specific vision of Beauty: Professional Products Division, Consumer Products Division, Luxe Division and the Dermatological Beauty Division.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “L'Oréal” is on the snapshot of s10"
+  }
+ ]
+}

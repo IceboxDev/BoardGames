@@ -1,0 +1,287 @@
+{
+ "article": "a0882",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Warsaw_Ghetto_Uprising",
+   "title": "Warsaw Ghetto Uprising – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:34.357Z",
+   "snapshot": "7ac0641e675d28672ba5e8cb9abbc1fb7e13299a8cea595a61068fdbfb642bc7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918",
+   "title": "Armistice of 11 November 1918 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:35.346Z",
+   "snapshot": "f0bd295c6f9fdd15d13c2547625729192afbf7778c40f66b7d78a276ce4ddc48"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall",
+   "title": "Fall of the Berlin Wall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:36.366Z",
+   "snapshot": "aac8a20548edbcb5e15d64446667dd421a04127ec7da340b72798771101a4a46"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Lichtgrenze",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:33.565Z",
+   "snapshot": "1515409458f63e6eaa8c63d4b397003bbb9c3c80c642c519522d3ab42c0c874d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Normandy_landings",
+   "title": "Normandy landings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:37.479Z",
+   "snapshot": "a8fef9b32c45ff68c97fa7a858f7b580f0792fb679950b40a539ec9c1b3380e5"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Reformationstag",
+   "title": "Reformationstag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:34.541Z",
+   "snapshot": "f7c9847c275d54befc606a21b323daee40a5bc7cf7e5bb2d562938aa61e5bfb5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Warsaw Ghetto Uprising",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Armistice of Compiègne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fall of the Berlin Wall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fall der Berliner Mauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "D-Day",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Beginn der Reformation",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:59.512Z",
+   "target": "f04406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Warsaw Ghetto Uprising was an uprising by the Jewish resistance in the Warsaw Ghetto in German-occupied Poland during World War II to oppose Nazi Germany's final effort to transport the remaining ghetto population to the gas chambers of the Majdanek and Treblinka extermination camps in 1943.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Warsaw Ghetto Uprising” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:59.512Z",
+   "target": "f04407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Also known as the Armistice of Compiègne (French: Armistice de Compiègne, German: Waffenstillstand von Compiègne) from the town near the place where it was officially agreed to at 5:00 a.m.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Armistice of Compiègne” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:59.512Z",
+   "target": "f04408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Fall of the Berlin Wall and the fortified inner German border occurred immediately...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fall of the Berlin Wall” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:59.512Z",
+   "target": "f04408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fall der Berliner Mauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Fall der Berliner Mauer”, “Fall of the Berlin Wall”, “Падение Берлинской стены”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:59.512Z",
+   "target": "f04409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Codenamed Operation Neptune and often referred to as D-Day (after the military term), it is the largest seaborne invasion in history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “D-Day” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:59.512Z",
+   "target": "f04410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oktober im Gedenken an den Beginn der Reformation der Kirche durch Martin Luther im Jahr 1517 gefeiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beginn der Reformation” is on the snapshot of s6"
+  }
+ ]
+}

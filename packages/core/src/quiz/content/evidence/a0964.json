@@ -1,0 +1,338 @@
+{
+ "article": "a0964",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gray%27s_Anatomy",
+   "title": "Gray's Anatomy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:09.057Z",
+   "snapshot": "038e94c410899c3af15cb0dde1941734ef9f7a0a7c2ca1e11aceea455c6fd7dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Scrubs_(2001_TV_series)",
+   "title": "Scrubs (2001 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:39.623Z",
+   "snapshot": "36640b61afd602e913a5cca3d6a44f6fa9d0373a5f49c488e70212986faf756e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_Schwarzwaldklinik",
+   "title": "Die Schwarzwaldklinik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:32:07.704Z",
+   "snapshot": "2a40e4240b98d778b53d948b368a95d9f7f76df46dd25790e646ba191da19851"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grey%27s_Anatomy",
+   "title": "Grey's Anatomy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:10.567Z",
+   "snapshot": "f4014a631a7eaf00acd20f1f497c0467a3c75fb43f1490c4f3c046fa56e3f249"
+  },
+  "s5": {
+   "url": "https://abc.com/shows/greys-anatomy",
+   "title": "Watch Grey's Anatomy TV Show - ABC.com",
+   "publisher": "ABC",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:53.726Z",
+   "snapshot": "c03f2850f26d8c695e72fad786162a154c7ebdfea5763413e4850389277b113e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grey's Anatomy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scrubs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Schwarzwaldklinik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gray's Anatomy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-191"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:12.151Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grey's Anatomy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Grey's Anatomy”, “Анатомия страсти”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:12.151Z",
+   "target": "f04819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scrubs (stylized as [scrubs]) is an American medical sitcom created by Bill Lawrence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scrubs” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:12.151Z",
+   "target": "f04820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Schwarzwaldklinik ist eine deutsche Fernsehserie des ZDF, die zwischen 1984 und 1988 produziert und von 1985 bis 1989 erstmals ausgestrahlt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Schwarzwaldklinik” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:12.151Z",
+   "target": "f11653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Its title is a mixture of the protagonist's surname and the name of the classic human anatomy textbook Gray's Anatomy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gray's Anatomy” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:28:08Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Its title is a mixture of the protagonist's surname and the name of the classic human anatomy textbook Gray's Anatomy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:28:21Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "attending neurosurgeon Derek Shepherd, dubbed 'McDreamy' by the residents",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:28:29Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ellen Pompeo as Meredith Grey",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23",
+   "note": "The broadcaster's page: Meredith Grey is the lead of Grey's Anatomy."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:42.181Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "attending neurosurgeon Derek Shepherd, dubbed 'McDreamy' by the residents",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:42.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:42.181Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ellen Pompeo as Meredith Grey",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:42.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:42.181Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grey's Anatomy is an American medical drama television series focusing on the personal and professional lives of surgical interns, residents, and attendings at the fictional Seattle Grace Hospital (later renamed Seattle Grace Mercy West Hospital, and currently Grey Sloan Memorial Hospital).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:42.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Grey's Anatomy” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:42.181Z",
+   "target": "f04816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grey's Anatomy - Thursdays 10/9c10.15.2026",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:42.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Grey's Anatomy” is on the snapshot of s5"
+  }
+ ]
+}

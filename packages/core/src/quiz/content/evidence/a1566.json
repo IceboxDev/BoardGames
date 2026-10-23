@@ -1,0 +1,413 @@
+{
+ "article": "a1566",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Unwort_des_Jahres_(Deutschland)",
+   "title": "Unwort des Jahres (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:08:45.121Z",
+   "snapshot": "ef4a353940514e79cd8fb5300412a479d7f87dacbf31c84c690195d4cd419062"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Wort_des_Jahres_(Deutschland)",
+   "title": "Wort des Jahres (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:08:46.087Z",
+   "snapshot": "d36627f826da727dab819ad78fbb42fc423e8cf7aca6b5d33b435f10c2a53b06"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Jugendwort_des_Jahres_(Deutschland)",
+   "title": "Jugendwort des Jahres (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:08:47.805Z",
+   "snapshot": "421b8bdd566eac2ef8e5020edfccf3e0a1a098c0a3f412626d214de261a47eb5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Word_of_the_year",
+   "title": "Word of the year – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:48.977Z",
+   "snapshot": "da84bb5b5cd011b9f060056e8e16d96e9b10eb4c11cea5c49dc10661df57b810"
+  },
+  "s5": {
+   "url": "https://edition.cnn.com/2018/11/14/uk/oxford-dictionary-word-of-the-year-toxic-gbr-intl/index.html",
+   "title": "Toxic: Oxford Dictionaries sums up the mood of 2018 with word of the year – CNN",
+   "publisher": "CNN",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:48.288Z",
+   "snapshot": "d9802614af7762d38e65379e0a2420e7447d9a62595b1bae16c69ba7d22f8fbc"
+  },
+  "s6": {
+   "url": "https://www.usatoday.com/story/news/nation-now/2014/11/18/vape-oxford-word-year/19212351/",
+   "title": "Oxford names 'vape' 2014 Word of the Year – USA Today",
+   "publisher": "USA Today",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:48.337Z",
+   "snapshot": "30fb481b4bf45430f35c1d28ced0e96ca8218a5da4f599c9e6eaaccd12230358"
+  },
+  "s7": {
+   "url": "https://corp.oup.com/feature/oxford-word-of-the-year-defining-the-past-20-years/",
+   "title": "Oxford Word of the Year: defining the past 20 years – Oxford University Press",
+   "publisher": "Oxford University Press",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:47.839Z",
+   "snapshot": "fd2f8a268dd2b67a1f5fa6b52773b76697a1f7519219a044d21c59abbeb72fee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unwort des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wort des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wort des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-279"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jugendwort des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oxford Word of the Year",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:44.708Z",
+   "target": "f07826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Unwort des Jahres wird jährlich in einer sprachkritischen Aktion gekürt, die in Deutschland 1991 von dem Sprachwissenschaftler Horst Dieter Schlosser ins Leben gerufen wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unwort des Jahres” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:44.708Z",
+   "target": "f07827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Wort des Jahres wurde in der Bundesrepublik Deutschland erstmals 1971 und wird seit 1977 regelmäßig von der Gesellschaft für deutsche Sprache (GfdS) in Wiesbaden als sprachlicher Jahresrückblick veröffentlicht und seit 1978 in der Zeitschrift Der Sprachdienst publiziert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wort des Jahres” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:44.708Z",
+   "target": "f25104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Wort des Jahres wurde in der Bundesrepublik Deutschland erstmals 1971 und wird seit 1977 regelmäßig von der Gesellschaft für deutsche Sprache (GfdS) in Wiesbaden als sprachlicher Jahresrückblick veröffentlicht und seit 1978 in der Zeitschrift Der Sprachdienst publiziert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wort des Jahres” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:44.708Z",
+   "target": "f07828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Jugendwort des Jahres ist ein Wort, das ab 2008 jährlich von einer Jury unter der Leitung des Langenscheidt-Verlags, der seit 2019 zu Pons (Klett Gruppe) gehört, ausgewählt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jugendwort des Jahres” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:44.708Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oxford Word of the Year",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Oxford Word of the Year”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:21Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with 2016 taking its cue from the Brexit referendum and US presidential election to choose “post-truth” as its word.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:18:23Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2017, its Word of the Year was “youthquake,”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:18:25Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Oxford Dictionaries named \"vape\" 2014's Word of the Year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:18:27Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 2013, usage of selfie (n.) grew by 17,000% on the previous year in our corpus, as it pivoted from a social media buzzword to a mainstream word for a self-portrait photograph.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "OUP's own retrospective on its Words of the Year; selfie was the 2013 winner."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:31.921Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2017, its Word of the Year was “youthquake,”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:31.921Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:31.921Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Oxford Dictionaries named \"vape\" 2014's Word of the Year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:31.921Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:31.921Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 2013, usage of selfie (n.) grew by 17,000% on the previous year in our corpus, as it pivoted from a social media buzzword to a mainstream word for a self-portrait photograph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:31.921Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:31.921Z",
+   "target": "f07830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oxford Word of the Year: defining the past 20 years - Oxford University Press",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:31.921Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Oxford Word of the Year” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,426 @@
+{
+ "article": "a2498",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bienenelfe",
+   "title": "Bienenelfe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:41.988Z",
+   "snapshot": "98fe26b36f1493182753620b0d1f30d88d8bf24f13a84777842fd0b7854e0259"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bee_hummingbird",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:45.642Z",
+   "snapshot": "b3c9c76d002d84463fc12cc2ffa58c8340846f7ecb41f06c975615da1fa8e521"
+  },
+  "s3": {
+   "url": "https://www.gcbo.org/wp-content/uploads/2020/06/What-Makes-Hummingbirds-Special-NN.pdf",
+   "title": "What Makes Hummingbirds Special – Gulf Coast Bird Observatory",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-20"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hummingbird",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:46.723Z",
+   "snapshot": "9beefc50b30ef560c0aac862869decc3338172b7b7d2b280429fe69de16d4b9b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Patagona",
+   "title": "Patagona – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:47.642Z",
+   "snapshot": "12fd318d9ad77decad4ad3cb012bdb2a452d46a42cba76ab4e7f3d2c2b358d8b"
+  },
+  "s6": {
+   "url": "https://animaldiversity.org/accounts/Mellisuga_helenae/",
+   "title": "Mellisuga helenae (bee hummingbird)",
+   "publisher": "Animal Diversity Web, University of Michigan",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:43.767Z",
+   "snapshot": "656c3f3ee273e538ed732766010d6d36c0578e7174a43d130e6abf3a69f8723b"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11126955/",
+   "title": "Extreme elevational migration spurred cryptic speciation in giant hummingbirds (PNAS, 2024)",
+   "publisher": "PNAS / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:44.680Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ein Vogel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-053"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a bird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hummingbird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-295"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hummingbird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 14"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cuba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "torpor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "giant hummingbird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; history entry seq 30"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:29.814Z",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ein Vogel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ein Vogel”, “a bird”, “птица”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:29.814Z",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a bird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“a bird”, “ein Vogel”, “птица”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:29.814Z",
+   "target": "f13256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As of 2026, 21 hummingbird species are listed as endangered or critically endangered, with about 255 species declining in population.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hummingbird” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:29.814Z",
+   "target": "f13257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The bee hummingbird, zunzuncito or Helena hummingbird (Mellisuga helenae) is a species of hummingbird, native to the island of Cuba in the Caribbean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cuba” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:29.814Z",
+   "target": "f13258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "To conserve energy when food is scarce and at night when not foraging, they can enter torpor, a state similar to hibernation, and slow their metabolic rate to 1⁄15 of its normal rate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “torpor” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:29.814Z",
+   "target": "f13259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The genus includes two species, the sedentary giant hummingbird and the migratory giant hummingbird, which are the largest and second largest species of hummingbird respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “giant hummingbird” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:54Z",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bee hummingbirds are the smallest birds in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:58Z",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a species of hummingbird, native to the island of Cuba in the Caribbean.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:18:02Z",
+   "target": "f13259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It evolved massive size (17 to 31 g), approximately twice as large as the next largest hummingbird",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:20:09Z",
+   "target": "f13256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "giving these birds the largest brain-to-body proportion of any bird.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23",
+   "note": "popular 4.2 % figure; notes already say encephalization measures favour parrots and corvids"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:13.514Z",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bee hummingbirds are the smallest birds in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:13.514Z",
+   "target": "f13255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a species of hummingbird, native to the island of Cuba in the Caribbean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  }
+ ]
+}

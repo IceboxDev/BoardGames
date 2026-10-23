@@ -24,6 +24,14 @@
  *   FARM_ORDER          `reach` (default: most played on lichess first, then most of your
  *                       games) or `deep` (its own follow-ups, then the deepest waiting
  *                       position: finishes lines)
+ *   FARM_LANE           `normal` (default) or `heavy`. A normal lane hands the heavy lane a
+ *                       decided position of yours (±7 at the pre-pass, `HEAVY_SCREEN_CP`)
+ *                       before its deep search, and any job it has spent
+ *                       FARM_HANDOVER_HOURS on (default 12), with an estimate of what the job
+ *                       would take here. The heavy lane takes only those, least bad first, and
+ *                       searches them to the full depth however long it takes.
+ *   FARM_HASH_MB        the heavy lane's hash (every normal lane runs core's `SEARCH`); its
+ *                       results name it in their engine label
  *   LC0_SERVE_PORT      also serve this worker's Lc0 on 127.0.0.1 to the fleet (ws21: 3002)
  *   LC0_URL             use that remote Lc0 instead of a local one (fleet: http://localhost:3002/)
  */
@@ -55,11 +63,17 @@ import {
   analyse,
   defaultPolicy,
   type FarmEngines,
+  Halted,
+  HEAVY_SCREEN_CP,
+  handoverEstimate,
+  type JobControl,
   Lc0Lane,
   type Lc0Source,
+  SCREENED_EST_HOURS,
+  Screened,
   ShortSearch,
 } from "./pipeline.ts";
-import { UciEngine } from "./uci.ts";
+import { progressText, UciEngine } from "./uci.ts";
 
 const log = (...args: unknown[]) => console.log(new Date().toISOString(), ...args);
 
@@ -80,6 +94,10 @@ const KINDS = (process.env.FARM_KINDS ?? "user,opp")
 if (KINDS.length === 0) throw new Error("FARM_KINDS must name user and/or opp");
 const IDLE_EXIT_MS = Number(process.env.FARM_IDLE_EXIT_MIN ?? 0) * 60_000;
 const ORDER = process.env.FARM_ORDER === "deep" ? "deep" : "reach";
+const HEAVY = process.env.FARM_LANE === "heavy";
+const HASH_MB = HEAVY ? Number(need("FARM_HASH_MB")) : SEARCH.hashMb;
+if (!Number.isInteger(HASH_MB) || HASH_MB < 1) throw new Error("FARM_HASH_MB must be a whole MB");
+const HANDOVER_MS = Number(process.env.FARM_HANDOVER_HOURS ?? 12) * 3600_000;
 
 async function farm<T>(path: string, body: unknown, schema: z.ZodType<T>): Promise<T> {
   const res = await fetch(`${FARM_URL}/api/chess-farm${path}`, {
@@ -188,7 +206,7 @@ async function queueFollowUps(
 async function main() {
   const threads = SEARCH.threads;
   const sf = new UciEngine(need("SF_PATH"), [], log);
-  await sf.init({ Threads: SEARCH.threads, Hash: SEARCH.hashMb, MultiPV: 1 });
+  await sf.init({ Threads: SEARCH.threads, Hash: HASH_MB, MultiPV: 1 });
   let lc0: Lc0Source | null = null;
   let lc0Engine: UciEngine | null = null;
   if (process.env.LC0_URL) {
@@ -210,14 +228,22 @@ async function main() {
   const label = [
     `stockfish ${process.env.SF_LABEL ?? need("SF_PATH").split("/").at(-1)}`,
     lc0 ? `lc0 ${process.env.LC0_LABEL ?? process.env.LC0_WEIGHTS?.split("/").at(-1)}` : null,
+    HEAVY ? `hash ${HASH_MB} MB` : null,
   ]
     .filter(Boolean)
     .join(" + ");
-  const policy = { ...defaultPolicy(), lookups: process.env.FARM_LOOKUPS === "1" };
+  const policy = {
+    ...defaultPolicy(),
+    lookups: process.env.FARM_LOOKUPS === "1",
+    screenCp: HEAVY ? null : HEAVY_SCREEN_CP,
+  };
   const engines: FarmEngines = { sf, lc0, label };
   log(
     `worker ${WORKER} up: ${label}${process.env.LC0_URL ? " (remote)" : ""}, ${threads} threads,` +
-      ` takes ${KINDS.join(" + ")}, ${ORDER === "deep" ? "deepest" : "most reached"} first`,
+      ` takes ${KINDS.join(" + ")}, ` +
+      (HEAVY
+        ? "the heavy lane's jobs, least bad first"
+        : `${ORDER === "deep" ? "deepest" : "most reached"} first, hands over after ${HANDOVER_MS / 3600_000} h`),
   );
   let idleSince = Date.now();
 
@@ -243,12 +269,13 @@ async function main() {
     // Not 0: only an idle exit (below) may let a fleet unit power the machine off.
     process.exit(143);
   };
-  // A long search says how deep it has got, so its finish can be judged.
+  // A long search says how deep it has got and whether it is still moving
+  // (nodes, hash, the root move and how long since the engine last spoke), so
+  // its finish can be judged.
   setInterval(() => {
     const p = sf.progress;
     if (!current || !p) return;
-    const hours = ((Date.now() - p.startedAt) / 3_600_000).toFixed(1);
-    log(`#${current.id} ${current.kind} reach ${current.reach}: d${p.depth} after ${hours} h`);
+    log(`#${current.id} ${current.kind} reach ${current.reach}: ${progressText(p, Date.now())}`);
   }, 30 * 60_000).unref();
   process.on("SIGTERM", shutdown);
   process.on("SIGINT", shutdown);
@@ -283,7 +310,8 @@ async function main() {
             max: 1,
             kinds: KINDS,
             order: ORDER,
-            ...(prefer.length > 0 ? { prefer } : {}),
+            lane: HEAVY ? "heavy" : "normal",
+            ...(prefer.length > 0 && !HEAVY ? { prefer } : {}),
           },
           FarmClaimResponseSchema,
         )
@@ -311,8 +339,27 @@ async function main() {
       const key = positionKey(parseFen(job.fen));
       const wasChained = chain.some((f) => positionKey(parseFen(f)) === key);
       chain = chain.filter((f) => positionKey(parseFen(f)) !== key);
+      // A normal lane's clock runs over the whole job, every deep search in it.
+      const started = Date.now();
+      let searching = { target: 0, left: 1 };
+      let halt = null as { depth: number; at: number } | null;
+      const control: JobControl = {
+        halted: () => halt !== null,
+        searching: (target, left) => {
+          searching = { target, left };
+        },
+      };
+      const handover = HEAVY
+        ? null
+        : setTimeout(() => {
+            halt = { depth: sf.progress?.depth ?? 0, at: Date.now() };
+            log(
+              `#${job.id} ${job.kind} reach ${job.reach}: ${HANDOVER_MS / 3600_000} h — handing over`,
+            );
+            sf.stop();
+          }, HANDOVER_MS);
       try {
-        const result: PositionEval = await analyse(job, engines, policy);
+        const result: PositionEval = await analyse(job, engines, policy, control);
         await farm("/complete", { worker: WORKER, id: job.id, result }, FarmOkSchema);
         log(
           `#${job.id} ${job.kind} reach ${job.reach}: ${result.best} d${result.depth} ${result.source}` +
@@ -330,6 +377,32 @@ async function main() {
           );
         }
       } catch (err) {
+        const why =
+          err instanceof Screened
+            ? { estHours: SCREENED_EST_HOURS, why: `${WORKER}: ${err.message}` }
+            : halt !== null && (err instanceof Halted || err instanceof ShortSearch)
+              ? {
+                  estHours: handoverEstimate(
+                    halt.at - started,
+                    halt.depth,
+                    searching.target,
+                    searching.left,
+                  ),
+                  why: `${WORKER} at d${halt.depth}/${searching.target} after ${((halt.at - started) / 3600_000).toFixed(1)} h, ${searching.left} deep search(es) left`,
+                }
+              : null;
+        if (why) {
+          log(
+            `#${job.id} ${job.kind} reach ${job.reach}: to the heavy lane (~${why.estHours.toFixed(1)} h) — ${why.why}`,
+          );
+          await farm(
+            "/fail",
+            { worker: WORKER, id: job.id, error: why.why, retry: true, heavy: why },
+            FarmOkSchema,
+          ).catch((e) => log(`#${job.id} hand-over failed:`, e instanceof Error ? e.message : e));
+          current = null;
+          continue;
+        }
         if (err instanceof ShortSearch) {
           // Not stored, nothing queued below it; this worker won't take it again.
           log(`#${job.id} ${job.kind} reach ${job.reach}: ${err.message} — handed on`);
@@ -368,6 +441,8 @@ async function main() {
           { worker: WORKER, id: job.id, error: message, retry: true },
           FarmOkSchema,
         ).catch(() => {});
+      } finally {
+        if (handover) clearTimeout(handover);
       }
       current = null;
       idleSince = Date.now();

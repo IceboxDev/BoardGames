@@ -1,0 +1,356 @@
+{
+ "article": "a2121",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hydrogen",
+   "title": "Hydrogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:53.153Z",
+   "snapshot": "be881345345248f83c41d6326597c9832e9c7ed918e52cd9ccefd6dcb497ab0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fischer%E2%80%93Tropsch_process",
+   "title": "Fischer–Tropsch process – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:45.899Z",
+   "snapshot": "097758859b50e14d4dba0d73a481f22e25deecdebd28f4a0c81ee9a5da176384"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Helium",
+   "title": "Helium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:12.245Z",
+   "snapshot": "32a6e81d98a0a6e7a8128fcd35ea5604658f3924dccaf6da4ccf44b90270d983"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Carbon_dioxide",
+   "title": "Carbon dioxide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:50.491Z",
+   "snapshot": "ea4c10ccd20ea0ad91080d96034bf0b2c93b0536a33b7b9fb0045144d18c4383"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nitrogen",
+   "title": "Nitrogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:50.354Z",
+   "snapshot": "66b15223c6d3162852778cb5631e02ab43066f2ec98fa307bcf00e4af666c1cd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Apollo_command_and_service_module",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:46.817Z",
+   "snapshot": "e6163607bce8ab2d0dbd44b88e5df77603d6969a6fc3170734ec11f9729099c4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Nitrogen_narcosis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:47.908Z",
+   "snapshot": "42dd00db853bae633c8596057806afe8fff5a920a071ff9d17796cca794f8dc7"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Biogas",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:45.305Z",
+   "snapshot": "bd5f0aec57c556a1296cb73789bc0af06f3aa4be3909120142a0b3a135d6fd25"
+  },
+  "s9": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+   "title": "Earth Fact Sheet",
+   "publisher": "NASA Goddard Space Flight Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.376Z",
+   "snapshot": "97edc601d43f7cd9ab0826e96760dade7ff1826c84387655430da22533f32f0e"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+   "title": "Atmosphere of Earth – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:29:28Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hydrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "carbon monoxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "helium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "nitrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:26.631Z",
+   "target": "f10601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hydrogen is a chemical element; it has the symbol H and atomic number 1.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.631Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hydrogen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:26.631Z",
+   "target": "f10602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Fischer–Tropsch process (FT) is a collection of chemical reactions that converts a mixture of carbon monoxide and hydrogen, known as syngas, into liquid hydrocarbons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.631Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carbon monoxide” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:26.631Z",
+   "target": "f10603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Helium (from Ancient Greek: ἥλιος, romanized: helios, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.631Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “helium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:26.631Z",
+   "target": "f10604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carbon dioxide is a chemical compound with the chemical formula CO2.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.631Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carbon dioxide” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:26.631Z",
+   "target": "f10605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nitrogen is a chemical element; it has symbol N and atomic number 7.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.631Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nitrogen” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:29:26Z",
+   "target": "f10605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "78.08% Nitrogen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:29:28Z",
+   "target": "f10605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "dry air contains 78.08% nitrogen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:13.098Z",
+   "target": "f10605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "78.08% Nitrogen",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s9"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:13.098Z",
+   "target": "f10605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Major : 78.08% Nitrogen (N2), 20.95% Oxygen (O2),",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “nitrogen” is on the snapshot of s9"
+  }
+ ]
+}

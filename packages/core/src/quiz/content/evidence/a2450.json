@@ -1,0 +1,281 @@
+{
+ "article": "a2450",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_alte_Mann_und_das_Meer",
+   "title": "Der alte Mann und das Meer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:53.622Z",
+   "snapshot": "02d66698ea06748a0bf17d33a3ada41af826d403760712c8bb57faf01c13b775"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/El_Floridita",
+   "title": "El Floridita",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:54.227Z",
+   "snapshot": "674014e770acfd21500187d2df53ef4a15d23c07da3a37b81eede439e48cdc7a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea",
+   "title": "The Old Man and the Sea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:57.076Z",
+   "snapshot": "4e07b1ae0f8d5e5a2799ef023e25220421662c68b20df1f3ccb50451139a87b5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Floridita",
+   "title": "Floridita – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:58.021Z",
+   "snapshot": "45fc230cee1e2bd0e7bb303a746ff80da3ae4a0b32943126930b2b046a4a2929"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Finca_Vig%C3%ADa",
+   "title": "Finca Vigía – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:59.070Z",
+   "snapshot": "d1f9e4ef1f879d4c5e1c10daf0ddce90a6cfa29fcc4b8582bd44f69cce8e20b7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ernest Hemingway",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-301"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Santiago",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pulitzer Prize",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "El Floridita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Finca Vigía",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:21.892Z",
+   "target": "f12898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Mittelpunkt der Handlung steht der kubanische Fischer Santiago, der mit einem riesigen Marlin ringt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marlin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:21.892Z",
+   "target": "f12899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Besonders durch Ernest Hemingway gewann die Bar und der Daiquiri an Bekanntheit, wobei Hemingway stets seine eigene Variante des Cocktails mit der doppelten Menge Rum, sowie zusätzlich Grapefruitsaft und Maraschino und ohne Zucker getrunken haben soll, den er Papa Doble nannte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernest Hemingway” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:21.892Z",
+   "target": "f12900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It tells the story of Santiago, an aging fisherman, and his long struggle to catch a giant marlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santiago” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:21.892Z",
+   "target": "f12901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1953, it received the Pulitzer Prize for Fiction, and it was the only work explicitly mentioned when Hemingway was awarded the Nobel Prize in Literature in 1954.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pulitzer Prize” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:21.892Z",
+   "target": "f12902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Floridita (Spanish pronunciation: [floɾiˈðita]) or El Floridita is a historic fish restaurant and cocktail bar in the older part of Havana (La Habana Vieja), Cuba.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Floridita” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:21.892Z",
+   "target": "f12903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Finca Vigía (Spanish pronunciation: [ˈfiŋka βiˈxi.a], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Finca Vigía” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1063",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Vereinte_Dienstleistungsgewerkschaft",
+   "title": "Vereinte Dienstleistungsgewerkschaft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:24.821Z",
+   "snapshot": "2cb9eb5a20273f5bd95e368ecc9ff2b11a2a6e4f1d136b59ac1ab02c4515a4ff"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Deutscher_Gewerkschaftsbund",
+   "title": "Deutscher Gewerkschaftsbund – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:24.861Z",
+   "snapshot": "30c9207785a07afaca2d4d02742466d55a7ead8cc91f2567f936e77d0681477b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/IG_Bergbau,_Chemie,_Energie",
+   "title": "IG Bergbau, Chemie, Energie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:26.112Z",
+   "snapshot": "3f6bde9455ffd915b82dda24e4ce629a959b6b0a69f0d554e203bddeefb3ba7f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Bundesvereinigung_der_Deutschen_Arbeitgeberverb%C3%A4nde",
+   "title": "Bundesvereinigung der Deutschen Arbeitgeberverbände – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:26.879Z",
+   "snapshot": "343cd98903984345dfb002450a39dcb30a9f02ebe6f18b8113105d38e3f2f2c6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bundesverband_der_Deutschen_Industrie",
+   "title": "Bundesverband der Deutschen Industrie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:27.821Z",
+   "snapshot": "c8b69616b054a85ec2316fc7e86c9edb54525b1e3cbb8b8995ba56bb127f2838"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vereinte Dienstleistungsgewerkschaft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Deutscher Gewerkschaftsbund",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Industriegewerkschaft Bergbau, Chemie, Energie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bundesvereinigung der Deutschen Arbeitgeberverbände",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bundesverband der Deutschen Industrie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:27.074Z",
+   "target": "f05311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Vereinte Dienstleistungsgewerkschaft (kurz Verdi oder Ver.di, Eigenschreibweise ver.di, Aussprache [ˈvɛɐ̯.di]) ist eine deutsche Gewerkschaft mit Sitz in Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vereinte Dienstleistungsgewerkschaft” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:27.074Z",
+   "target": "f05312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Deutscher Gewerkschaftsbund",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutscher Gewerkschaftsbund” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:27.074Z",
+   "target": "f05313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Industriegewerkschaft Bergbau, Chemie, Energie (IGBCE) entstand 1997 durch Fusion der IG Bergbau und Energie (IG BE) mit der IG Chemie-Papier-Keramik (IG CPK) und der Gewerkschaft Leder (GL).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Industriegewerkschaft Bergbau, Chemie, Energie” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:27.074Z",
+   "target": "f05314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nachdem sich Ende 1949 auch die Verbände auf dem Gebiet der ehemaligen Französischen Besatzungszone angeschlossen hatten, wurde im November 1950 der Name „Bundesvereinigung der Deutschen Arbeitgeberverbände“ festgelegt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bundesvereinigung der Deutschen Arbeitgeberverbände” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:27.074Z",
+   "target": "f05315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zu Beginn des Jahres 1950 wurde der Verein in Bundesverband der Deutschen Industrie umbenannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bundesverband der Deutschen Industrie” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,465 @@
+{
+ "article": "a1343",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Seahorse",
+   "title": "Seahorse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:42.415Z",
+   "snapshot": "7194e3e028942c31cb92ae1e1211406d8f6783f8a1f209b330735e3c2538c935"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Emperor_penguin",
+   "title": "Emperor penguin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:12.192Z",
+   "snapshot": "fcdc70f08bc340a31afef2d1b9990cc0c04686ce89eafad93fe80c4ef451953c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Common_midwife_toad",
+   "title": "Common midwife toad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:58.195Z",
+   "snapshot": "005904d66f51c826c21aa9f6a11fec29224d129937bfcb645100bc479b97fbfb"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Vogel_des_Jahres_(Deutschland)",
+   "title": "Vogel des Jahres (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:55.460Z",
+   "snapshot": "68eeb88b075b96ea5d017be55e54811434ff9d863c368380c05eba4754e0bf34"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Seepferdchen",
+   "title": "Seepferdchen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:56.347Z",
+   "snapshot": "7b6c95d7c7d2f5ecf0e9f9c2b3e6a0a09d5a2f985213980446df8fdc1b0f70fd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Splash_tetra",
+   "title": "Splash tetra",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:59.272Z",
+   "snapshot": "72b9f6d850b04ce07228183a828b1ed3f71f93cd9d26801e1f42d1919bb3261c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Common_cuckoo",
+   "title": "Common cuckoo – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:21:42Z"
+  },
+  "s8": {
+   "url": "https://www.fishbase.se/summary/Copella-arnoldi.html",
+   "title": "Copella arnoldi, Splash tetra – FishBase",
+   "publisher": "FishBase",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:30.034Z",
+   "snapshot": "69547efff68eb57ab17174a1bda5a46a816e08042b76afb2491478b97bdbb940"
+  },
+  "s9": {
+   "url": "https://www.rspb.org.uk/birds-and-wildlife/cuckoo",
+   "title": "Cuckoo Bird Facts – RSPB",
+   "publisher": "Royal Society for the Protection of Birds (RSPB)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:30.706Z",
+   "snapshot": "7bddd6a10202dc7e46ed66b9ad49ede09b574ccb586464c4ea9b60b276698a07"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seahorses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06712",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Emperor penguins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06713",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Midwife toad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kuckuck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Seepferdchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-267"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On leaves overhanging the water",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-080"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:11.010Z",
+   "target": "f06711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Having a head and neck suggestive of a horse, seahorses also feature segmented bony armour, an upright posture and a curled prehensile tail.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seahorses” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:11.010Z",
+   "target": "f06712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The only penguin species that breeds during the Antarctic winter, emperor penguins trek 50–120 km (31–75 mi) over the ice to breeding colonies which can contain up to several thousand individuals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emperor penguins” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:11.010Z",
+   "target": "f06713",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The common midwife toad (Alytes obstetricans) is a species of midwife frog in the family Alytidae (formerly Discoglossidae).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Midwife toad” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:11.010Z",
+   "target": "f06714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kuckuck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Kuckuck”, “Cuckoo”, “кукушка”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:11.010Z",
+   "target": "f13252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Seepferdchen (Hippocampus) sind Knochenfische, deren Gestalt und Lebensweise deutlich von der typischer Fische abweicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seepferdchen” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:11.010Z",
+   "target": "f25327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "On leaves overhanging the water",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“On leaves overhanging the water”, “Auf Blättern, die über das Wasser hängen”, “на листьях, нависающих над водой”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:21:42Z",
+   "target": "f06714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is a brood parasite, which means it lays eggs in the nests of other bird species, particularly of dunnocks, meadow pipits, and reed warblers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:21:46Z",
+   "target": "f25327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This species lays its eggs on the underside of leaves just above the water line and the adults, mainly the male, splash water on the eggs until they hatch.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:21:51Z",
+   "target": "f25327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the pair simultaneously leap out of the water and cling onto a low-hanging leaf with their pelvic fins for up to ten seconds.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:22:06Z",
+   "target": "f06714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "That means that they don’t build their own nests, but the female Cuckoos lay their eggs in other birds’ nests.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:54.856Z",
+   "target": "f25327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This species lays its eggs on the underside of leaves just above the water line and the adults, mainly the male, splash water on the eggs until they hatch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:54.856Z",
+   "target": "f25327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the pair simultaneously leap out of the water and cling onto a low-hanging leaf with their pelvic fins for up to ten seconds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:54.856Z",
+   "target": "f06714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "That means that they don’t build their own nests, but the female Cuckoos lay their eggs in other birds’ nests.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:54.856Z",
+   "target": "f06714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cuckoo Bird Facts | Cuculus Canorus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cuckoo” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0659",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ferret",
+   "title": "Ferret – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:25.179Z",
+   "snapshot": "89138adc5690b657f920f9c9398b3c2130c6cabea6b4e0f4c9372605ab4e7ab9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sheep",
+   "title": "Sheep – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:26.264Z",
+   "snapshot": "3cab3ab88aad0bd9d4b95cfd05d0283e96f271bf5831321804129a2d58f1b324"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aurochs",
+   "title": "Aurochs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:27.267Z",
+   "snapshot": "3a0b95a6fadc8d668949f7491fbd7f40e8ee7704865718ae8fa6e7e8f95778f7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Red_junglefowl",
+   "title": "Red junglefowl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:28.082Z",
+   "snapshot": "32435b81f788eb45d0a6a21b18e9bb8bbce4d796396b8adf7e39ad2c870ea53d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Domestic_goose",
+   "title": "Domestic goose – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:29.093Z",
+   "snapshot": "daca0097e30e7988aa11e5a6237434b78db3138c15a9639a262f98fd44becfff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ferret",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mouflon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "aurochs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "red junglefowl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "greylag goose",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:22.505Z",
+   "target": "f03291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The ferret (Mustela furo) is a small, domesticated species belonging to the family Mustelidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ferret” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:22.505Z",
+   "target": "f03292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sheep are most likely descended from the wild mouflon of Europe and Asia, with Iran being a geographic envelope of the domestication center.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mouflon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:22.505Z",
+   "target": "f03293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The aurochs (Bos primigenius;  or ; pl.: aurochs or aurochsen; also ure or urus) is an extinct species of bovine, considered to be the wild ancestor of modern domestic cattle (Bos taurus).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aurochs” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:22.505Z",
+   "target": "f03294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The red junglefowl (Gallus gallus), also known as the Indian red junglefowl (and formerly the bankiva or bankiva-fowl), is a species of tropical, galliform bird in the phasianid family, found across much of Southeast Asia and parts of South Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red junglefowl” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:22.505Z",
+   "target": "f03295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Domestic geese have been derived through selective breeding from the wild greylag goose (Anser anser domesticus) and swan goose (Anser cygnoides domesticus).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “greylag goose” is on the snapshot of s5"
+  }
+ ]
+}

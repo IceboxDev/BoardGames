@@ -1,0 +1,287 @@
+{
+ "article": "a0594",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Korean_Armistice_Agreement",
+   "title": "Korean Armistice Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:56.471Z",
+   "snapshot": "d51d1aa7fa0693fa237fca3b6b286125aa0996aab88ac2409412b176fbda041f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_Civil_War",
+   "title": "Spanish Civil War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:18.285Z",
+   "snapshot": "8132f716b4a23800b322dbb1ced67a80a9d4ef5a704d8a9322c7c4c3ee5aa9fc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vietnam_War",
+   "title": "Vietnam War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:57.528Z",
+   "snapshot": "96ca93f8163ee05193228a629535bd33eb096ba06c883b9e1abee51fed6eeebf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Six-Day_War",
+   "title": "Six-Day War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:58.514Z",
+   "snapshot": "d545cd42005e309b4fe52fe6c1674aaeac4a065c9727496625391304f510e76d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Jom-Kippur-Krieg",
+   "title": "Jom-Kippur-Krieg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:56.328Z",
+   "snapshot": "1c32ff704cdd89f6713068894cd2e2eade792d1cc0974d0bdae3df19991b71e7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Egypt%E2%80%93Israel_peace_treaty",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:59.324Z",
+   "snapshot": "d6eb9f4b5a13676f0ce5eba8dc7e4ae6200d4f2ddb5acc6fc39e06f7b19398cf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Korean War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spanish Civil War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vietnam War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Six-Day War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jom-Kippur-Krieg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-177"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yom Kippur War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:11.648Z",
+   "target": "f02966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Korean Armistice Agreement (Korean: 한국정전협정; Hanja: 韓國停戰協定) is an armistice that brought about a cessation of hostilities of the Korean War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Korean War” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:11.648Z",
+   "target": "f02968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Spanish Civil War (Spanish: guerra civil española) was fought in Spain from 1936 to 1939 between the Republicans and the Nationalist rebels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spanish Civil War” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:11.648Z",
+   "target": "f02969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Vietnam War was one of the postcolonial wars of national liberation, a theater in the Cold War, and a civil war, with civil warfare a defining feature from the outset.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vietnam War” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:11.648Z",
+   "target": "f02970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Six-Day War, or the 1967 Arab–Israeli war (5–10 June 1967), was fought between Israel and a coalition of six Arab states, primarily Egypt, Syria, and Jordan, in the context of the Arab–Israeli conflict.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Six-Day War” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:11.648Z",
+   "target": "f12456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Jom-Kippur-Krieg (hebräisch מלחמת יום הכיפורים Milchemet Jom HaKippurim oder מלחמת יום כיפור Milchemet Jom Kippur)  wurde vom 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.648Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jom-Kippur-Krieg” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:11.648Z",
+   "target": "f12456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yom Kippur War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Yom Kippur War”, “Jom-Kippur-Krieg”, “Война Судного дня”) on the snapshot of s6"
+  }
+ ]
+}

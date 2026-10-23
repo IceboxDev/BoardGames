@@ -1,0 +1,226 @@
+{
+ "article": "a1694",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Neapolitan_Novels",
+   "title": "Neapolitan Novels – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:16.401Z",
+   "snapshot": "813a9d8b42929ef94a540a6ddcc5a3f69c6f771711f2b48bf22027809ea5cfa0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Emil_and_the_Detectives_(1931_film)",
+   "title": "Emil and the Detectives (1931 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:17.321Z",
+   "snapshot": "cd440aed0f76f98888966269d227d076a6e462bc15d0db28a345e1532c8378bf"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Emil_und_die_Detektive",
+   "title": "Emil und die Detektive – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:16:14.791Z",
+   "snapshot": "a0581f22e42cb8bb9092c312eec6faff170dc8dc6c8911716e8131ab38fcdae2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Naples",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f22382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lila",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gustav",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f22384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Walter Trier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:06.946Z",
+   "target": "f08466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "and intelligent girls, Elena (sometimes called \"Lenù\") Greco and Raffaella (\"Lila\") Cerullo, from childhood to adulthood and old age, as they try to create lives for themselves amidst the violent and stultifying culture of their home – a poor neighborhood on the outskirts of Naples, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Naples” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:06.946Z",
+   "target": "f08470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She sends him to Berlin with 140 marks (equivalent to her monthly income) to give to his grandmother who lives with his young female cousin, Pony Hütchen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:06.946Z",
+   "target": "f22382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The series follows the lives of two perceptive and intelligent girls, Elena (sometimes called \"Lenù\") Greco and Raffaella (\"Lila\") Cerullo, from childhood to adulthood and old age, as they try to create lives for themselves amidst the violent and stultifying culture of their home – a poor",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lila” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:06.946Z",
+   "target": "f22383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Er wird von dem gleichaltrigen Berliner Jungen Gustav mit der Hupe angesprochen: „Du bist wohl nicht aus Wilmersdorf?“ Gustav trommelt einige Freunde zusammen, die eine Kriegskasse anlegen und einen Nachrichtendienst organisieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustav” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:06.946Z",
+   "target": "f22384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emil und die Detektive (Untertitel Ein Roman für Kinder) ist ein Kinderbuch von Erich Kästner (Text) und Walter Trier (Illustrationen).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.946Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Trier” is on the snapshot of s3"
+  }
+ ]
+}

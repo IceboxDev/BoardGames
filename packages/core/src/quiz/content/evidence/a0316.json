@@ -1,0 +1,242 @@
+{
+ "article": "a0316",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Good_Bye,_Lenin!",
+   "title": "Good Bye, Lenin! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:30.274Z",
+   "snapshot": "2985732a9d7ce4e59a4f1212e3110bab2e584a45923828d61be361d4b8b8ffb7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Run_Lola_Run",
+   "title": "Run Lola Run – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:31.269Z",
+   "snapshot": "b0b2cee79ab5bf37171366700325a11a03a57cb7b614f5762c9120f064bdb8d2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Troy_(film)",
+   "title": "Troy (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:32.371Z",
+   "snapshot": "b69bcac523341b181c489265121aeb9b6287c915273cf3d4a3513b4dbdd16675"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Lives_of_Others",
+   "title": "The Lives of Others – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:33.378Z",
+   "snapshot": "b02ce341aaf73e4f3412bfacdcc96bbcec4537e898427c0b74894ef18351d6cd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lothar-G%C3%BCnther_Buchheim",
+   "title": "Lothar-Günther Buchheim – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:34.261Z",
+   "snapshot": "5432734ced6bcb1b7a3e65fe97545423468c20020089fe5c81cbdda003b5d332"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Good Bye, Lenin!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Run Lola Run",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Troy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lives of Others",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Boot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:28.924Z",
+   "target": "f01576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Good Bye, Lenin! is a 2003 German tragicomedy film, directed by Wolfgang Becker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Good Bye, Lenin!” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:28.924Z",
+   "target": "f01577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Run Lola Run (German: Lola rennt, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Run Lola Run” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:28.924Z",
+   "target": "f01578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Troy is a 2004 epic historical action film directed by Wolfgang Petersen and written by David Benioff.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Troy” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:28.924Z",
+   "target": "f01579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lives of Others (German: Das Leben der Anderen, pronounced [das ˈleːbn deːɐ̯ ˈʔandəʁən] ) is a 2006 German drama film written and directed by Florian Henckel von Donnersmarck, marking his feature film directorial debut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Lives of Others” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:28.924Z",
+   "target": "f01580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He is best known for his 1973 antiwar novel Das Boot (The Boat), based on his experiences during the war, which became an international bestseller and was adapted as the 1981 Oscar-nominated film of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Boot” is on the snapshot of s5"
+  }
+ ]
+}

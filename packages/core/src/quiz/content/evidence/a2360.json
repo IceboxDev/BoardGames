@@ -1,0 +1,421 @@
+{
+ "article": "a2360",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+   "title": "Gregorian calendar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:07.443Z",
+   "snapshot": "b050a76b00bb76ea19b40906a36ce55d0c2a66afddd701ba477b25bc42ff03d8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Adoption_of_the_Gregorian_calendar",
+   "title": "Adoption of the Gregorian calendar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:08.363Z",
+   "snapshot": "4d1024ff146897f34b52a37c659622497629c2f803390ffa5f54a3bd43cf05c6"
+  },
+  "s3": {
+   "url": "https://www.irishstatutebook.ie/eli/1750/act/23/enacted/en/print",
+   "title": "Calendar (New Style) Act 1750 (24 Geo. 2 c. 23)",
+   "publisher": "Irish Statute Book (Office of the Attorney General, Ireland)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:52.806Z",
+   "snapshot": "aded5abbb97186ec1b4cf922009a1eff75b536a2cc91a2ec3838a877d633d90b"
+  },
+  "s4": {
+   "url": "https://www.historytoday.com/archive/gregorian-calendar-adopted-england",
+   "title": "The Gregorian Calendar Adopted in England",
+   "publisher": "History Today (Richard Cavendish)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:52.988Z",
+   "snapshot": "51969bb4e1494273e38f5f263d16ebf106779bb0a10d635628ebef0b8e3d9804"
+  },
+  "s5": {
+   "url": "https://soviethistory.msu.edu/1917/new-letters-and-dates/new-letters-and-dates-texts/introduction-of-a-new-calendar/",
+   "title": "Introduction of a New Calendar (Decree of the Council of People's Commissars, 1918)",
+   "publisher": "Seventeen Moments in Soviet History (Michigan State University)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:53.914Z",
+   "snapshot": "a3343c034e90a0b63c00434968ab289fb247a8d05a8cb67e966bf33ea2cdd1ce"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "15 October 1582",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gregory XIII",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Inter gravissimas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1752",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1918",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:04.743Z",
+   "target": "f12300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "To reinstate the association, the reform advanced the date by 10 days: Thursday 4 October 1582 was followed by Friday 15 October 1582.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “15 October 1582” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:04.743Z",
+   "target": "f12301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It went into effect in October 1582 following the papal bull Inter gravissimas issued by Pope Gregory XIII, which introduced it as a modification of, and replacement for, the Julian calendar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gregory XIII” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:04.743Z",
+   "target": "f12302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It went into effect in October 1582 following the papal bull Inter gravissimas issued by Pope Gregory XIII, which introduced it as a modification of, and replacement for, the Julian calendar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inter gravissimas” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:04.743Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Through enactment of the Calendar (New Style) Act 1750, Great Britain and its possessions (including parts of what is now the United States) adopted the Gregorian calendar in 1752, by which time it was necessary to correct by 11 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1752” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:04.743Z",
+   "target": "f12304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The beginning of the year was reset to 1 January starting in 1918.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1918” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:00:50Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "until 2 Sept. 1752 inclusive, and the day following to be accounted 14 Sept., omitting for that time the intermediate 11 nominal days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Text of the Act itself."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:00:52Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The country skipped ahead 11 days on September 2nd, 1752.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:01:27Z",
+   "target": "f12304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On February 6, 1918, the Council of People's Commissars decreed that Russia would abandon the Julian calendar in favor of the Gregorian calendar used across most of Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Includes the decree text: 'The first day after January 31, this year, shall be reckoned, not as February 1, but as February 14'."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:49.231Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "until 2 Sept. 1752 inclusive, and the day following to be accounted 14 Sept., omitting for that time the intermediate 11 nominal days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:49.231Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The country skipped ahead 11 days on September 2nd, 1752.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:49.231Z",
+   "target": "f12304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On February 6, 1918, the Council of People's Commissars decreed that Russia would abandon the Julian calendar in favor of the Gregorian calendar used across most of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:49.231Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1752 inclusive, and the day following to be accounted 14 Sept., omitting for that time the intermediate 11 nominal days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1752” is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:49.231Z",
+   "target": "f12303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The country skipped ahead 11 days on September 2nd, 1752.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1752” is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:49.231Z",
+   "target": "f12304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On February 6, 1918, the Council of People's Commissars decreed that Russia would abandon the Julian calendar in favor of the Gregorian calendar used across most of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:49.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1918” is on the snapshot of s5"
+  }
+ ]
+}

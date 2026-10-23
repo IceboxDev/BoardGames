@@ -1,0 +1,353 @@
+{
+ "article": "a1165",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/My_Heart_Will_Go_On",
+   "title": "My Heart Will Go On – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:45.971Z",
+   "snapshot": "9ebc570e9f6f12296130e74084963c73f0af675d0dc8378096072aa368d450ea"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/(Everything_I_Do)_I_Do_It_for_You",
+   "title": "(Everything I Do) I Do It for You – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:46.835Z",
+   "snapshot": "58b279e5ba38586ba807c0777bda0678736b265017dbea81de1682cc0de4d222"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/(I've_Had)_The_Time_of_My_Life",
+   "title": "(I've Had) The Time of My Life – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:47.931Z",
+   "snapshot": "d8e43d45ecea41aa5d3f88c5cb66f29b527f157481af61d8c3fd6f5feb070cbd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Can_You_Feel_the_Love_Tonight",
+   "title": "Can You Feel the Love Tonight – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:48.832Z",
+   "snapshot": "920030fd19dc15306bd98ffbd8a11ff08ec27df9d7b27b9691557e778356ee38"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Christina_Aguilera",
+   "title": "Christina Aguilera",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:50.315Z",
+   "snapshot": "a6b408f4095a93d62a4c374827a6e77c4aa00c77966cdc0274ab2c1ced0a0e9c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/(Everything_I_Do)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  },
+  "s7": {
+   "url": "http://www.officialcharts.com/chart-news/the-uks-official-top-20-biggest-selling-love-ballads-of-all-time__13786/",
+   "title": "The UK's Official Top 20 biggest selling love ballads of all time",
+   "publisher": "Official Charts Company",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:24.129Z",
+   "snapshot": "34250e69899beeebaae1705d6efbd8e56e673e7770be0910e71ea12ce921b661"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05821",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "My Heart Will Go On",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(Everything I Do) I Do It for You",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(I've Had) The Time of My Life",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Can You Feel the Love Tonight",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Christina Aguilera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; transcript tp-296"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:42.555Z",
+   "target": "f05821",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"My Heart Will Go On\" is a song recorded by the Canadian singer Celine Dion as the theme for the 1997 film Titanic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “My Heart Will Go On” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:42.555Z",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"(Everything I Do) I Do It for You\" is a song by Canadian singer-songwriter Bryan Adams.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “(Everything I Do) I Do It for You” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:42.555Z",
+   "target": "f05824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"(I've Had) The Time of My Life\" is a song composed by Franke Previte, John DeNicola, and Donald Markowitz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “(I've Had) The Time of My Life” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:42.555Z",
+   "target": "f05825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Can You Feel the Love Tonight\" is a song from Disney's 1994 animated feature film The Lion King composed by British musician Elton John with lyrics by Tim Rice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Can You Feel the Love Tonight” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:42.555Z",
+   "target": "f13148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1999–2001: Christina Aguilera, Mi Reflejo, and My Kind of Christmas",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christina Aguilera” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:38Z",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bryan's classic ballad kept hold of the top spot for an incredible 16 weeks.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:07:40Z",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "spending sixteen consecutive weeks at the top of the UK Singles Chart from July 7, 1991, to October 27",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:21.196Z",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bryan's classic ballad kept hold of the top spot for an incredible 16 weeks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:21.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:21.196Z",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "spending sixteen consecutive weeks at the top of the UK Singles Chart from July 7, 1991, to October 27",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:21.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:21.196Z",
+   "target": "f05823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "3: (Everything I Do) I Do It For You – Bryan Adams",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:21.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “(Everything I Do) I Do It for You” is on the snapshot of s7"
+  }
+ ]
+}

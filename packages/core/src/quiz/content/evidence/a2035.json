@@ -1,0 +1,476 @@
+{
+ "article": "a2035",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Viktor_Yanukovych",
+   "title": "Viktor Yanukovych – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:21.521Z",
+   "snapshot": "c5cf5fa95c05a1bad48f2b97b67701f2ed0786ea36a247a5b63120a4ea72ce7b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Viktor_Yushchenko",
+   "title": "Viktor Yushchenko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:22.372Z",
+   "snapshot": "11a69dab197c8fe24b1d1557a9831a74c13fdbc64af7f25f7892d5e30a85e6ef"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Yulia_Tymoshenko",
+   "title": "Yulia Tymoshenko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:23.602Z",
+   "snapshot": "09cd11cc3b93811d7ec60dd834f52ad9cb41149dddd52f246b4050436dc69db0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Petro_Poroshenko",
+   "title": "Petro Poroshenko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:24.649Z",
+   "snapshot": "f95bfe038aa78898bcd65e534e3ad8d53c4cdaf0fbce1760e3fd46f020063277"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/2019_Ukrainian_presidential_election",
+   "title": "2019 Ukrainian presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:25.295Z",
+   "snapshot": "df295f91f7f49fed1a387559e50bb85039f685d59ed32bda15f88ccaad17ff9b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Vitali_Klitschko",
+   "title": "Vitali Klitschko",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:37:22.639Z",
+   "snapshot": "732f1b9e3064115e3eb1111b147e49ba96e1e6de94519b50ca20ae2b18b78b7c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Oleksandr_Turchynov",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:29.332Z",
+   "snapshot": "9ca24bd14ebf5c4a615436cea02e321bcb91979175228bffd6ee46645d36abc5"
+  },
+  "s8": {
+   "url": "https://www.bbc.com/news/world-europe-48007487",
+   "title": "Ukraine election: Comedian Zelensky wins presidency by landslide",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:10.295Z",
+   "snapshot": "fe9118e6e8e9ada2a23a535d3b7a9e0d08d689720468f59d1263d36959275225"
+  },
+  "s9": {
+   "url": "https://www.rferl.org/a/it-s-official-zelenskiy-declared-winner-of-presidential-election-in-ukraine/29912480.html",
+   "title": "It's Official: Zelenskiy Declared Winner Of Presidential Election In Ukraine",
+   "publisher": "Radio Free Europe/Radio Liberty",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:10.594Z",
+   "snapshot": "b997e9a7f6656839553e58b7cc3495cec40f5e35d52a0d419baa8c04aa68746a"
+  },
+  "s10": {
+   "url": "https://www.aljazeera.com/news/2019/4/22/volodymyr-zelenskyy-wins-ukraines-presidential-vote",
+   "title": "Volodymyr Zelenskyy wins Ukraine's presidential vote",
+   "publisher": "Al Jazeera",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:10.715Z",
+   "snapshot": "42e7f20dbf8d2b19addcdf22d5e89484d766865fc30589cd55f9ba228696752a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Viktor Yanukovych",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Viktor Yushchenko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Yulia Tymoshenko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Petro Poroshenko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Volodymyr Zelensky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kiew",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-320"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:10.324Z",
+   "target": "f10171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After describing the mansion's complicated ownership scheme, the article author noted, \"The story of Viktor Yanukovych and his residence highlights a paradox.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Viktor Yanukovych” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:10.324Z",
+   "target": "f10172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 21 June 2026, Viktor Yushchenko returned his Order of the White Eagle to Poland in protest against the decision of Polish President Karol Nawrocki to revoke this award from Volodymyr Zelenskyy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Viktor Yushchenko” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:10.324Z",
+   "target": "f10173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(companies affiliated with Yulia Tymoshenko) in connection with Lazarenko's activities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yulia Tymoshenko” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:10.324Z",
+   "target": "f10174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Petro Poroshenko was born on 26 September 1965, into an ethnic Ukrainian family in Bolhrad, a primarily Bulgarian town in Ukraine's southwestern Odesa Oblast.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Petro Poroshenko” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:10.324Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Volodymyr Zelensky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Volodymyr Zelensky”, “Wolodymyr Selenskyj”, “Владимир Зеленский”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:10.324Z",
+   "target": "f13696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mai 2014 zum Bürgermeister von Kiew gewählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kiew” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:32:30Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "With nearly all ballots counted in the run-off vote, Mr Zelensky had taken more than 73% with incumbent Petro Poroshenko trailing far behind on 24%.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:32:32Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Commission Chairwoman Tetyana Slipachuk announced on April 30 that Zelenskiy received 13,541,528 votes, more than 73 percent, while incumbent President Petro Poroshenko received 4,522,450, less than 25 percent.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:32:33Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Comic Volodymyr Zelenskyy has won Ukraine’s presidential runoff vote, defeating incumbent President Petro Poroshenko with more than 73 percent of the vote against about 25, according to official preliminary results.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:56.758Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "With nearly all ballots counted in the run-off vote, Mr Zelensky had taken more than 73% with incumbent Petro Poroshenko trailing far behind on 24%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:56.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:56.758Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Commission Chairwoman Tetyana Slipachuk announced on April 30 that Zelenskiy received 13,541,528 votes, more than 73 percent, while incumbent President Petro Poroshenko received 4,522,450, less than 25 percent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:56.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:56.758Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Comic Volodymyr Zelenskyy has won Ukraine’s presidential runoff vote, defeating incumbent President Petro Poroshenko with more than 73 percent of the vote against about 25, according to official preliminary results.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:56.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:56.758Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Volodymyr Zelensky and his supporters celebrate winning Ukraine's presidential election",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:56.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Volodymyr Zelensky” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:56.758Z",
+   "target": "f10175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ukraine's President-elect Volodymyr Zelensky",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:56.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Volodymyr Zelensky” is on the snapshot of s9"
+  }
+ ]
+}

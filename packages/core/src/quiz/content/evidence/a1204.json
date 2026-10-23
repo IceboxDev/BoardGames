@@ -1,0 +1,296 @@
+{
+ "article": "a1204",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mad_Men",
+   "title": "Mad Men – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:17.061Z",
+   "snapshot": "7e4a8fa7d1533bab954703b443f062bee3a7af1052bfb9c9a156d0e1a3fff438"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Office_(American_TV_series)",
+   "title": "The Office (American TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:07.160Z",
+   "snapshot": "52b0fe84c9276056a1c733a1cf576dbaea9b4e48672173a7dfcd56043e1f0d5f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Suits_(American_TV_series)",
+   "title": "Suits (American TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:07.954Z",
+   "snapshot": "3c43e7b5a89bf0d61c045c2ff5dd1389cfa43ea2d1eced86615bf917f51bf3fb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Billions_(TV_series)",
+   "title": "Billions (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:09.020Z",
+   "snapshot": "caacac92c26042470629824120c08985c23a946eb76f8369d8de685cbfc0b8df"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Succession_(TV_series)",
+   "title": "Succession (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:09.956Z",
+   "snapshot": "61461a1a0b2affa840d7a2d590989f20e6b4d6ddaa52ed0465ef17ffc60556cb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Roger_Sterling",
+   "title": "Roger Sterling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:10.880Z",
+   "snapshot": "cd40d341ec5dbab7572067413d4199a126029da8e0c6a5aa02ff1589e4ea8376"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Michael_Scott_(The_Office)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:12.161Z",
+   "snapshot": "09a01834c0807bfa72b257cfd5749f35be18c078814affce20fdd3a67ca1300e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "advertising agency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "paper company",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "law firm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hedge fund",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "media conglomerate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sterling Cooper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-217"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.693Z",
+   "target": "f06016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Set between March 1960 and November 1970, Mad Men follows Don Draper (Jon Hamm), a senior executive and creative director at Sterling Cooper, a Manhattan-based advertising agency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “advertising agency” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.693Z",
+   "target": "f06017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The show depicts the everyday work lives of office employees at the Scranton, Pennsylvania branch of the fictional Dunder Mifflin Paper Company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “paper company” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:47.693Z",
+   "target": "f06018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Set in a New York City corporate law firm, the series follows Mike Ross (Patrick J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “law firm” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:47.693Z",
+   "target": "f06019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Set primarily in New York and Connecticut, the series depicts hedge fund manager Bobby Axelrod (Damian Lewis) as he accumulates wealth and power in the world of high finance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hedge fund” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:47.693Z",
+   "target": "f06020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Succession follows the Roy family, which owns the New York City-based global media conglomerate Waystar RoyCo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “media conglomerate” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:47.693Z",
+   "target": "f11650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He formerly worked for Sterling Cooper, an advertising agency his father co-founded in 1923, before he became a founding partner at the new firm of Sterling Cooper Draper Pryce in late 1963.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sterling Cooper” is on the snapshot of s6"
+  }
+ ]
+}

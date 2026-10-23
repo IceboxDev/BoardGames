@@ -1,0 +1,477 @@
+{
+ "article": "a0813",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vinegar",
+   "title": "Vinegar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:03.434Z",
+   "snapshot": "273cdc87e6cd8936a9b848e2ed65fdf48d49f6a543f8cc07a1c8506d8bb2ce26"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Archimedes",
+   "title": "Archimedes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:20.245Z",
+   "snapshot": "360c793e32d916c1074185af4e1d22a3223bc184e7ec9a5261471a771d3299b6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Samuel_Plimsoll",
+   "title": "Samuel Plimsoll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:04.376Z",
+   "snapshot": "27a91db713d2c3b931e57301041717ac92d963d439459563441418c2a4b2901c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process",
+   "title": "Hall–Héroult process – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:05.431Z",
+   "snapshot": "f810bee801d037abee6299ecee869af98d7aae6fae70f6970122c9df890d2770"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Properties_of_water",
+   "title": "Properties of water",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:06.437Z",
+   "snapshot": "668ef7d4d20b2496aa77dc1a198074bb9afa9a71f9cce8fde815abb677821706"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Dead_Sea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:07.431Z",
+   "snapshot": "9ab7ad4313bc0fc145531f119061599fdca461ea37132b8b249cc0a4a4660621"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Seawater",
+   "title": "Seawater",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:22:16Z"
+  },
+  "s8": {
+   "url": "https://hypertextbook.com/facts/2002/EdwardLaValley.shtml",
+   "title": "Density of Seawater - The Physics Factbook",
+   "publisher": "The Physics Factbook",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:55.635Z",
+   "snapshot": "f527589c2ab3177d431ae2320f03f50c86356083729516b239e22cc3dfb4af8d"
+  },
+  "s9": {
+   "url": "https://www.engineeringtoolbox.com/water-density-specific-weight-d_595.html",
+   "title": "Water Density, Specific Weight and Thermal Expansion Coefficients",
+   "publisher": "Engineering ToolBox",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:55.598Z",
+   "snapshot": "9ffea4f25c1e90c88b160c9ddcb7406f79212e8fc989c828e7e214f8b36aad00"
+  },
+  "s10": {
+   "url": "https://hypertextbook.com/facts/2007/AllenMa.shtml",
+   "title": "Density of Water - The Physics Factbook",
+   "publisher": "The Physics Factbook",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:56.307Z",
+   "snapshot": "e706939829f605869b0be6615fd5c90936a2e18621f2f526b5e65a8da26a47f3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "vinegar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "gold",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "seawater",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "iron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "4 °C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-033"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:48.955Z",
+   "target": "f04061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vinegar (from Old French  vyn egre 'sour wine') is an odorous aqueous solution of diluted acetic acid and trace compounds that may include flavorings or naturally occurring organic compounds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vinegar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:48.955Z",
+   "target": "f04063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is credited solving with in service of Hiero II is the \"wreath problem.\" According to Vitruvius, writing about two centuries after Archimedes' death, King Hiero II of Syracuse had commissioned a golden wreath for a temple to the immortal gods, and had supplied pure gold to be used by the goldsmith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gold” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:48.955Z",
+   "target": "f04064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "seawater",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“seawater”, “Meerwasser”, “морская вода”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:48.955Z",
+   "target": "f04065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It occurs in many minerals, but its primary commercial source is bauxite, a mixture of hydrated aluminium oxides and compounds of other elements such as iron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “iron” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:48.955Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The breaking of hydrogen bonds on melting with increasing temperature in the range 0–4 °C allows for a denser molecular packing in which some of the lattice cavities are filled by water molecules.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4 °C” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:22:16Z",
+   "target": "f04064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The density of surface seawater ranges from about 1020 to 1029 kg/m3, depending on the temperature and salinity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: average salinity about 3.5%."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:22:17Z",
+   "target": "f04064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a good estimate of its density at the ocean's surface is 1025 kilogram per cubic meter",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:22:19Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Pure water has its highest density 1000 kg/m3 or 1.940 slug/ft3 at temperature 4°C (=39.2°F).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Exact maximum at 3.98 °C, conventionally 4 °C."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:22:21Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Water has its maximum density of 1g/cm3 at 4 degrees Celsius.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:17.198Z",
+   "target": "f04064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a good estimate of its density at the ocean's surface is 1025 kilogram per cubic meter",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:17.198Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Pure water has its highest density 1000 kg/m3 or 1.940 slug/ft3 at temperature 4°C (=39.2°F).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:17.198Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Water has its maximum density of 1g/cm3 at 4 degrees Celsius.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:17.198Z",
+   "target": "f04064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Density of Seawater - The Physics Factbook",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “seawater” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:17.198Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The density of water is 1.940 sl/ft3 at 39 °F (4 °C), and the specific weight in Imperial units is",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4 °C” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:17.198Z",
+   "target": "f25426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "4 °C reference",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4 °C” is on the snapshot of s10"
+  }
+ ]
+}

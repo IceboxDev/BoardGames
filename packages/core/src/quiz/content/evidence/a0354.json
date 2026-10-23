@@ -1,0 +1,494 @@
+{
+ "article": "a0354",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Oktoberfest",
+   "title": "Oktoberfest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:35:10.628Z",
+   "snapshot": "4d9cd4c334434d056ec3dde77941fba6a9b100758088b737c7a36beb75062c75"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Cannstatter_Volksfest",
+   "title": "Cannstatter Volksfest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:17.680Z",
+   "snapshot": "2824eec71508d758c6ab537e812bde039c447f6ed600c62a779f24a3e890c3df"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Great_Exhibition",
+   "title": "Great Exhibition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:15.841Z",
+   "snapshot": "c1cf11fe4fec5c34c4c533b29bbe236502cde683f563a9f41b235ee7a5b25840"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
+   "title": "1896 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:16.942Z",
+   "snapshot": "7956e3d4db1226527b7e499eb058f4de14632d385c7d02c95c58459c3215be10"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1903_Tour_de_France",
+   "title": "1903 Tour de France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:17.831Z",
+   "snapshot": "7b17af3ed213df9993ffe55042af8292041832f1704e38cebea3673ccee61213"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Oktoberfest_Blumenau",
+   "title": "Oktoberfest Blumenau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:18.510Z",
+   "snapshot": "dab01781a85cb8dfc8d169edc2bf34ef1e6cb17195b221f71bf1a532e2aeecf3"
+  },
+  "s7": {
+   "url": "https://www.bie-paris.org/site/en/1851-london",
+   "title": "1851 London – Bureau International des Expositions",
+   "publisher": "Bureau International des Expositions",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:09:28Z"
+  },
+  "s8": {
+   "url": "https://www.oktoberfest.de/en/magazine/tradition/the-history-of-oktoberfest",
+   "title": "The history of Oktoberfest",
+   "publisher": "Oktoberfest.de (official portal of the City of Munich)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:32.123Z",
+   "snapshot": "d6b1b77f252042330e3eaf77bbe6e51c7e27e72aabc77259ad262aecd2a97586"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oktoberfest",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c030"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cannstatter Volksfest",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "World's Fair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Olympic Games",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tour de France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Hochzeit von Kronprinz Ludwig und Prinzessin Therese",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-179"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pferderennen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 46; transcript tp-346"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Oktoberfest in Blumenau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52; history entry seq 53; transcript tp-341"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f01766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Oktoberfest in München, mundartlich d’Wiesn, ist das weltweit größte Volksfest.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oktoberfest” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f01767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Cannstatter Volksfest (auch Cannstatter Wasen oder kurz Wasen genannt) ist ein 17-tägiges Volksfest, das mit wenigen Ausnahmen seit 1818 jährlich von Ende September bis Mitte Oktober auf dem Cannstatter Wasen im Stuttgarter Stadtbezirk Bad Cannstatt veranstaltet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cannstatter Volksfest” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f01768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "World's Fair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“World's Fair”, “Weltausstellung”, “Всемирная выставка”) on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f01769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 1896 Summer Olympics, officially known as the Games of the I Olympiad, and commonly known as Athens 1896 (Greek: Αθήνα 1896), were the first international Olympic Games held in modern history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Olympic Games” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f01770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 1903 Tour de France was the first cycling race set up and sponsored by the newspaper L'Auto, ancestor of the current daily, L'Équipe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tour de France” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f11148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Hochzeit von Kronprinz Ludwig und Prinzessin Therese",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Die Hochzeit von Kronprinz Ludwig und Prinzessin Therese”, “The wedding of Crown Prince Ludwig and Princess Therese”, “Свадьба кронпринца Людвига и принцессы Терезы”) on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f11149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oktober 1810 fanden in München zahlreiche private und öffentliche Feiern statt, darunter ein Pferderennen am 17.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pferderennen” is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:34.877Z",
+   "target": "f11150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Oktoberfest in Blumenau auf aventuradobrasil.de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Oktoberfest in Blumenau” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:09:28Z",
+   "target": "f01768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first World Expo, ‘The Exhibition of the Works of Industry of All Nations’, commonly known as the Great Exhibition of 1851, was held in London between 1 May 1851 and 11 October 1851.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:09:32Z",
+   "target": "f01768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1st world's fair in 1851 in London, England",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:09:35Z",
+   "target": "f11148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "had the idea of celebrating the wedding of Prince Regent Ludwig of Bavaria, later King Ludwig I, and Princess Therese of Saxe-Hildburghausen in a different way: with a big horse race.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:09:39Z",
+   "target": "f11148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anlässlich der Hochzeit von Kronprinz Ludwig von Bayern und Prinzessin Therese am 12. Oktober 1810 fanden in München zahlreiche private und öffentliche Feiern statt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:55.450Z",
+   "target": "f11148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "had the idea of celebrating the wedding of Prince Regent Ludwig of Bavaria, later King Ludwig I, and Princess Therese of Saxe-Hildburghausen in a different way: with a big horse race.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:55.450Z",
+   "target": "f11148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anlässlich der Hochzeit von Kronprinz Ludwig von Bayern und Prinzessin Therese am 12. Oktober 1810 fanden in München zahlreiche private und öffentliche Feiern statt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.450Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s1"
+  }
+ ]
+}

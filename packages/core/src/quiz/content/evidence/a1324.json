@@ -1,0 +1,294 @@
+{
+ "article": "a1324",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/44th_Academy_Awards",
+   "title": "44th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:07.169Z",
+   "snapshot": "b94edf7a7749e6eb8c46d43ce44b8f4f5d70c5adb82852723afe77c8a11c66c7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charlie_Chaplin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:50.609Z",
+   "snapshot": "275b437ffaee9244fd5a00d34dc1db0860815f0e0fdbf8f763ec89795a42ce9e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spartacus_(film)",
+   "title": "Spartacus (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:48.264Z",
+   "snapshot": "e1a98fbd408ae69d229fb34da4c4f01457b678187899aa374c149735454e0d9c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Elia_Kazan",
+   "title": "Elia Kazan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:49.356Z",
+   "snapshot": "fcc99dba21a3588aef26b447ec349428c8c77d53c7562b05dd3378a28393853e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Losey",
+   "title": "Joseph Losey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:50.277Z",
+   "snapshot": "d6659aa33644e689a5131b453d66cfcde159ff1e6f04667dde4894c263a32c83"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bertolt_Brecht",
+   "title": "Bertolt Brecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:05.248Z",
+   "snapshot": "28d5fe309471386778d6df924b89ea26ba8920341ebefe2df74df6f7c9f133ea"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Dalton_Trumbo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:51.279Z",
+   "snapshot": "eac3d4f4bd1dd227d79c9587bfab6d53eb82b32c3b597029833ab645c26d339a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charlie Chaplin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charlie Chaplin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dalton Trumbo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elia Kazan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Joseph Losey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:06.553Z",
+   "target": "f06616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charlie Chaplin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Charlie Chaplin”, “Чарли Чаплин”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:06.553Z",
+   "target": "f06616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harper's Weekly reported that the name of Charlie Chaplin was \"a part of the common language of almost every country\", and that the Tramp image was \"universally familiar\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlie Chaplin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:06.553Z",
+   "target": "f06617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Adapted by Dalton Trumbo from Howard Fast's  1951 novel of the same title, the film also stars Laurence Olivier as Roman general and politician Marcus Licinius Crassus, Charles Laughton as rival senator Sempronius Gracchus, Peter Ustinov as gladiatorial school owner Lentulus Batiatus, and John Gavin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dalton Trumbo” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:06.553Z",
+   "target": "f06618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elias Kazantzoglou (Greek: Ηλίας Καζαντζόγλου, IPA: [iˈli.as kazanˈdzoɣlu]; September 7, 1909 – September 28, 2003), known as Elia Kazan ( EE-lee-ə kə-ZAN), was a Greek-American film and theatre director, producer, screenwriter and actor, described by The New York Times as \"one of the most honored",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elia Kazan” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:06.553Z",
+   "target": "f06619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The fictional director played by Scorsese is based on Joseph Losey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Losey” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:06.553Z",
+   "target": "f06620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugen Berthold Friedrich Brecht (10 February 1898 – 14 August 1956), known as Bertolt Brecht and Bert Brecht, was a German theatre practitioner, playwright, and poet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s6"
+  }
+ ]
+}

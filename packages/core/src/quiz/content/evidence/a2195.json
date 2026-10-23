@@ -1,0 +1,362 @@
+{
+ "article": "a2195",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Setsubun",
+   "title": "Setsubun",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:19.512Z",
+   "snapshot": "36a085984244c9a26a5077f512d7d78cb18ae3a803ec2478f538262a137a740b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Holi",
+   "title": "Holi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:56.075Z",
+   "snapshot": "b5134fb0d45ddf1a8fa8e89a3aa4c3fa2932360d32ff05aa5ab25bc8f5d85216"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Tomatina",
+   "title": "Tomatina",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:20.434Z",
+   "snapshot": "7d877f5eb50721bf67bd85342d14323a407f1f13a8eb9007e102eed56711a9d0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Boryeong_Mud_Festival",
+   "title": "Boryeong Mud Festival",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:23.176Z",
+   "snapshot": "3635fd8fd35d8d7efa39e11a3f79aa75183ee3cd039b18aa2600243959201582"
+  },
+  "s5": {
+   "url": "https://it.wikipedia.org/wiki/Storico_Carnevale_di_Ivrea",
+   "title": "Storico Carnevale di Ivrea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T05:47:20.697Z",
+   "snapshot": "feaf22f6298f7429784072a0580dd6da10b90face7bbfff58ae1467867a3fe63"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/La_Tomatina",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:24.339Z",
+   "snapshot": "bb7ae687bdd423540f42f6aa3366904691bd97e2645256f2c6da75f3e830da28"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Carnival_of_Ivrea",
+   "title": "Carnival of Ivrea – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:17.820Z",
+   "snapshot": "2bdae7d7fd931375a68cd545183d101d946a3fe79d1a42ec55254b28e1a1fa53"
+  },
+  "s8": {
+   "url": "https://www.storicocarnevaleivrea.it/",
+   "title": "Storico Carnevale di Ivrea",
+   "publisher": "Fondazione dello Storico Carnevale di Ivrea",
+   "kind": "primary",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:45:17.621Z",
+   "snapshot": "2c8675d1eb37a93b073cbf004133eb011be02f9c63b7ca33548ba076e52e439a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Geröstete Sojabohnen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Holi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-046"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tomaten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-323"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-281"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Oranges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:35.263Z",
+   "target": "f11151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es werden geröstete Sojabohnen (豆, mame) entweder auf einen als Oni verkleideten Menschen oder im Haus zweimal in eine als glücklich und zweimal in eine als unglücklich geltende Richtung geworfen und dabei die Worte „Oni wa soto!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.263Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geröstete Sojabohnen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.263Z",
+   "target": "f11152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Holi (IPA: ['hoːli:, hoːɭiː]) is a major Hindu festival of colours, love and spring.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.263Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holi” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.263Z",
+   "target": "f11153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bei dem Fest bewerfen sich die Teilnehmer mit überreifen Tomaten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.263Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tomaten” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.263Z",
+   "target": "f11154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Boryeong Mud Festival (Korean: 보령머드축제) is an annual festival which takes place during the summer on Daecheon Beach (대천해수욕장) near Boryeong, a town some 200 km south of Seoul, South Korea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.263Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mud” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.263Z",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Oranges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Oranges”, “Orangen”, “Апельсины”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:26Z",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "who throw oranges at each other—with considerable violence—during the traditional carnival days: Sunday, Monday and Tuesday.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:30Z",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Scopri tutto sui personaggi, i momenti e la battaglia delle arance dello storico carnevale",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:22.351Z",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "who throw oranges at each other—with considerable violence—during the traditional carnival days: Sunday, Monday and Tuesday.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:22.351Z",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Scopri tutto sui personaggi, i momenti e la battaglia delle arance dello storico carnevale",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:22.351Z",
+   "target": "f11155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Carnival of Ivrea is a festival in the Northern Italian city of Ivrea that includes a tradition of throwing oranges between organized groups, known as the \"Battle of the Oranges\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Oranges” is on the snapshot of s7"
+  }
+ ]
+}

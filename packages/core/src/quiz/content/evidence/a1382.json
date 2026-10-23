@@ -1,0 +1,454 @@
+{
+ "article": "a1382",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Frankfurter_Buchmesse",
+   "title": "Frankfurter Buchmesse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:03.724Z",
+   "snapshot": "952524b15ea1f6b36da5a98a974afa8f322d32cab253a5695c68a366282a67fa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Georg_B%C3%BCchner_Prize",
+   "title": "Georg Büchner Prize – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:05.228Z",
+   "snapshot": "229272f97e9627200ede8a07ed35fb6c7f2e865f40fe01ab959bd232bc9c36e9"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ingeborg-Bachmann-Preis",
+   "title": "Ingeborg-Bachmann-Preis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:04.036Z",
+   "snapshot": "f29042c863610b6959287dd6b0c43ba3ba7eca77cb006e82593c12a0bffe784f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Leipziger_Buchmesse",
+   "title": "Leipziger Buchmesse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:04.490Z",
+   "snapshot": "9d87891ba33db87d770f0dae1be28f8857a8ce8bb00d50ee093ecc1286fbc128"
+  },
+  "s5": {
+   "url": "https://www.bpb.de/shop/zeitschriften/apuz/32148/die-internationale-leipziger-buchmesse/",
+   "title": "Patricia F. Zeckert: Die Internationale Leipziger Buchmesse (APuZ 11/2009, bpb)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:04.692Z",
+   "snapshot": "769c24b88d4dd426e372462b6f9295c3e846bb81d0c96aaa67497c17d9221b51"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Frankfurt_Book_Fair",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:06.231Z",
+   "snapshot": "47fdc01a4e5bee50b8b21d001320e71d02e56a9480b305863aaeffb5ab572632"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bologna_Children%27s_Book_Fair",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:08.064Z",
+   "snapshot": "1057975d4b5c288528cdf7379932a81c53772c462f17eb5bdd80839e08439046"
+  },
+  "s8": {
+   "url": "https://www.buchmesse.de/en/about-us",
+   "title": "About us – Frankfurter Buchmesse",
+   "publisher": "Frankfurter Buchmesse GmbH",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:44.435Z",
+   "snapshot": "fa7b1f89e03f1c4f71e73e1d27810dc63041adaf4a5990dca5114d69bc866a96"
+  },
+  "s9": {
+   "url": "https://www.leipziger-buchmesse.de/en/",
+   "title": "Leipzig Book Fair",
+   "publisher": "Leipziger Messe GmbH",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:43.929Z",
+   "snapshot": "397bc382073af770aa962532ddf32ef30f543be22ba7a6cca73c6e1af787cb90"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frankfurt am Main und Leipzig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Darmstadt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06909",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Klagenfurt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Leipzig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-295"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1952",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s4",
+     "quote": "1952",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-378/4, u07): Statement false: exhibitors from the western zones joined from the start and West German books came via inter-zonal trading firms in the early 1950s. But 'Western publishers from 1952' was imprecise (an Austrian publisher came in 1948); per Zeckert (bpb) 1952 is the first wave of publishers from Britain, France, the Netherlands and Switzerland, so the question now asks exactly that."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f12772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1952",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f12772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1952",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frankfurt am Main und Leipzig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Frankfurt am Main und Leipzig”, “Frankfurt am Main and Leipzig”, “Франкфурт-на-Майне и Лейпциг”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f06907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It goes to German language authors, and the annual speech by the recipient takes place in Darmstadt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darmstadt” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f06909",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Ingeborg-Bachmann-Preis wurde 1976 von der Stadt Klagenfurt im Gedenken an die Schriftstellerin Ingeborg Bachmann gestiftet und wird seit 1977 jährlich während der mehrtägigen Tage der deutschsprachigen Literatur verliehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klagenfurt” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f12771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im Rahmen der Leipziger Buchmesse findet das größte europäische Lesefest Leipzig liest statt, das einen intensiven Austausch zwischen Autoren und Lesern schaffen soll.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipzig” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f12772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ab 1952 waren westliche Verlage vertreten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1952” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:16.986Z",
+   "target": "f12772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Einen ersten Internationalisierungsschub aus westlicher Richtung erlebte die Buchmesse 1952: Seitdem zählten neben Österreich auch Verlage aus Großbritannien, Frankreich, den Niederlanden und der Schweiz zu den Ausstellern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.986Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1952” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:58:02Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Today, Frankfurter Buchmesse is the largest book fair in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:58:04Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sie ist vor der Frankfurter Buchmesse die besucherstärkste Buchmesse Deutschlands",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23",
+   "note": "Leipzig and Frankfurt are Germany's two largest book fairs (Leipzig by visitors, Frankfurt by exhibitors)"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:58:08Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "313,000 visitors at the exhibition center and throughout the city, including 55,000 trade visitors",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r039",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:01.925Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Today, Frankfurter Buchmesse is the largest book fair in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:01.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:01.925Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sie ist vor der Frankfurter Buchmesse die besucherstärkste Buchmesse Deutschlands",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:01.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:01.925Z",
+   "target": "f06906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "313,000 visitors at the exhibition center and throughout the city, including 55,000 trade visitors",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:01.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  }
+ ]
+}

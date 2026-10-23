@@ -1,0 +1,249 @@
+{
+ "article": "a0673",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Where_the_Wild_Roses_Grow",
+   "title": "Where the Wild Roses Grow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:18.127Z",
+   "snapshot": "47e29df9826881229c4585fff9222731e4125f6238d3650c6ef5bce0f442a857"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Murder_Ballads",
+   "title": "Murder Ballads – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:19.113Z",
+   "snapshot": "4f442a75cfcab99c580c69835849f8ba72a0dd0166d8ae612d938e5a30ebadf8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Don%27t_Go_Breaking_My_Heart",
+   "title": "Don't Go Breaking My Heart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:20.092Z",
+   "snapshot": "290e324fd98d38433b725ec68d84ea3b4f04051d114ba2c13abcacb0594568a4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Don%27t_Give_Up_(Peter_Gabriel_and_Kate_Bush_song)",
+   "title": "Don't Give Up (Peter Gabriel and Kate Bush song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:21.108Z",
+   "snapshot": "50b250ee9f9c33ad1055594a151555838ca8f18b0006edc3249e95ac1d116655"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Islands_in_the_Stream_(song)",
+   "title": "Islands in the Stream (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:22.100Z",
+   "snapshot": "f679b4d86aa6e20197eab3f7dbe571a484800d7bf9cb9a66ac411a9b29892f90"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_song)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:23.336Z",
+   "snapshot": "5f1c6b6b6c21a02bca79b69107eef311c1ac37ad7a8e007b3994cd781c0dd926"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kylie Minogue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "PJ Harvey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kiki Dee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03364",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kate Bush",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03365",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dolly Parton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:24.341Z",
+   "target": "f03361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Where the Wild Roses Grow\" is a song by Australian rock band Nick Cave and the Bad Seeds and pop singer Kylie Minogue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kylie Minogue” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.341Z",
+   "target": "f03362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Other prominent guest musicians on the album include then-partner PJ Harvey and Shane MacGowan of the Pogues.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PJ Harvey” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.341Z",
+   "target": "f03363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Don't Go Breaking My Heart\" is a duet by the English musician Elton John and the English singer Kiki Dee, released by The Rocket Record Company on 25 June 1976.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kiki Dee” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.341Z",
+   "target": "f03364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Don't Give Up (Peter Gabriel and Kate Bush song)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kate Bush” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.341Z",
+   "target": "f03365",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Islands in the Stream\" is a song written by the Bee Gees and recorded by American country music artists Kenny Rogers and Dolly Parton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dolly Parton” is on the snapshot of s5"
+  }
+ ]
+}

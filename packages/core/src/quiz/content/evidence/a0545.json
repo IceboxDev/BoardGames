@@ -1,0 +1,441 @@
+{
+ "article": "a0545",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Magdalena_Neuner",
+   "title": "Magdalena Neuner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:56.851Z",
+   "snapshot": "b3682612e6af6551c0b209f55f6c1afdfc1fde94f8455c0c94b25ba8e35560d7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Laura_Dahlmeier",
+   "title": "Laura Dahlmeier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:54.606Z",
+   "snapshot": "08f60c03d089b636ee8544596d69b3b03605a60883ad2fa5b376ed82e241c130"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kati_Wilhelm",
+   "title": "Kati Wilhelm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:56.311Z",
+   "snapshot": "52e4024ab335ff0e903b395d29acddf2a9393be187f045fff8a4dce7ae4208ce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Magdalena_Forsberg",
+   "title": "Magdalena Forsberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:58.051Z",
+   "snapshot": "d5bc2ddc30b4c7b6a5544e839b6bf0f1fce514aefaa040df5131e2e7ed9bc28c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Darya_Domracheva",
+   "title": "Darya Domracheva – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:58.219Z",
+   "snapshot": "b267595c0f10f0827cb3aa5ba297539f9d9f8d2c69662aae02f526a9957cb8cb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Marte_Olsbu_R%C3%B8iseland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:57.899Z",
+   "snapshot": "e1b1e5100879897adf6cfe31593b2dd4c97ecdc33030d8d2b6ee4903c4141854"
+  },
+  "s7": {
+   "url": "https://www.magdalena-neuner.de/vita/",
+   "title": "Vita – Magdalena Neuner",
+   "publisher": "Magdalena Neuner (official site)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:02.113Z",
+   "snapshot": "5e2d5facb76fdbdf5c5845ae9d2bebf88f09fe656460455fbd96da7270612b0e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Marte_Olsbu_R%C3%B8iseland",
+   "title": "Marte Olsbu Røiseland – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:01.971Z",
+   "snapshot": "f6764471eaa20c3ecf5d6d29a03b72c85a110103eea6ba2285692a333424100d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Magdalena Neuner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Laura Dahlmeier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kati Wilhelm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Magdalena Forsberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Darya Domracheva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:04.871Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zwischen ihrem Debüt im Weltcup 2006 und dem Karriereende 2012 gewann Magdalena Neuner 34 Einzelrennen im Biathlon-Weltcup, dreimal den Gesamtweltcup und sieben Disziplinenweltcups.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magdalena Neuner” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:04.871Z",
+   "target": "f02722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oktober 2019 wurde ihr Kinderbuch Die Klimagang: Laura Dahlmeier und Freunde im Einsatz für die Natur auf der Frankfurter Buchmesse vorgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laura Dahlmeier” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:04.871Z",
+   "target": "f02723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ihre ersten Erfahrungen in der Loipe sammelte Kati Wilhelm 1983 im Trainingszentrum in Steinbach-Hallenberg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kati Wilhelm” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:04.871Z",
+   "target": "f02724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Magdalena Forsberg retired from active sports after the 2001–02 season.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magdalena Forsberg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:04.871Z",
+   "target": "f02725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Darya Domracheva at IBU BiathlonWorld.comDarya Domracheva at IBU BiathlonResults.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darya Domracheva” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:37:35Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bei Biathlon-Weltmeisterschaften ist sie mit zwölf Goldmedaillen Rekordtitelträgerin und stand insgesamt 17 Mal auf dem Podium.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "de.wikipedia's present tense is outdated: Røiseland reached 13 in 2023; the card's 'as of 2018' holds."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:37:38Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Für ihre Leistungen wurde sie 2007, 2011 und 2012 als Deutschlands Sportlerin des Jahres ausgezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:37:40Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In den Folgejahren gewann ich noch insgesamt 9 mal eine Goldmedaille bei Weltmeisterschaften und 3 Mal den Gesamtweltcup.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "3 golds at Antholz 2007 plus 9 later = 12 World Championship golds."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:37:42Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "World Championships Teams 7 ( 2015 – 2023 ) Medals 17 (13 gold)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Context: Røiseland's 13 golds (to 2023) passed Neuner's 12, so the record claim is true only 'as of 2018' as the card says."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:47:48Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "17 medals (13 gold, 4 bronze)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Context: Røiseland's 13 World Championship golds (to 2023) passed Neuner's 12; the card's 'as of 2018' holds."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:29.228Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Für ihre Leistungen wurde sie 2007, 2011 und 2012 als Deutschlands Sportlerin des Jahres ausgezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:29.228Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In den Folgejahren gewann ich noch insgesamt 9 mal eine Goldmedaille bei Weltmeisterschaften und 3 Mal den Gesamtweltcup.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:29.228Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "17 medals (13 gold, 4 bronze)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:29.228Z",
+   "target": "f02721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Vita - Magdalena Neuner",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Magdalena Neuner” is on the snapshot of s7"
+  }
+ ]
+}

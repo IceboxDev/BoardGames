@@ -1,0 +1,242 @@
+{
+ "article": "a0769",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Beats_(brand)",
+   "title": "Beats (brand) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:06.392Z",
+   "snapshot": "08bf37a8de3063801d2bddc4eead90f13e6ff70ab69edf00635f3bbd6aac4d9a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tidal_(service)",
+   "title": "Tidal (service) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:07.375Z",
+   "snapshot": "07240b81eb050de48c5b6dddf78c2aef46694c23770001ee13f2877641447cf4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Adidas_Yeezy",
+   "title": "Adidas Yeezy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:08.420Z",
+   "snapshot": "8e852ba83aa83013dbd9ac4601b0832bcc94edb4014b92fbf8155c00d95c3122"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Energy_Brands",
+   "title": "Energy Brands (Glacéau) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:09.391Z",
+   "snapshot": "7330de59c602428a34740ff2b374d10beab4b34f00a3180fe90fc4fb748ad02b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Shady_Records",
+   "title": "Shady Records – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:10.306Z",
+   "snapshot": "a465bbfcb9bcea7fe0872a55d55313e3d1c165eb243a2454a0ba2e2cf6b416e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03841",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dr. Dre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03842",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jay-Z",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03843",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kanye West",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03844",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "50 Cent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eminem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:42.639Z",
+   "target": "f03841",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beats Electronics (also known as Beats by Dre, Beats by Dr. Dre or simply Beats) is an American consumer audio products and accessories manufacturer headquartered in Culver City, California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Dre” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:42.639Z",
+   "target": "f03842",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(controlled by American rapper and businessman Jay-Z) for SEK 466 million (USD 56.2 million) in January 2015.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jay-Z” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:42.639Z",
+   "target": "f03843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Adidas Yeezy (or just Yeezy, stylized as YEEƵY) was a fashion collaboration between American rapper, designer, and entrepreneur Kanye West's Yeezy and German sportswear company Adidas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kanye West” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:42.639Z",
+   "target": "f03844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rapper 50 Cent obtained a minority share of the company as part of an endorsement deal in the company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “50 Cent” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:42.639Z",
+   "target": "f03845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Shady Records is an American record label founded by rapper Eminem and his manager Paul Rosenberg in 1999, following the commercially successful release of The Slim Shady LP that same year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eminem” is on the snapshot of s5"
+  }
+ ]
+}

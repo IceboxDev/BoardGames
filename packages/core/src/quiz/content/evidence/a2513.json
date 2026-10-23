@@ -1,0 +1,414 @@
+{
+ "article": "a2513",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meerkat",
+   "title": "Meerkat",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:36.774Z",
+   "snapshot": "3f9d4813e4bc85b9ba58ab26ed5136d8cd172bbf97c9d494c7fd608a6c9acde1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mongoose",
+   "title": "Mongoose – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:37.638Z",
+   "snapshot": "36c1c8d124adf20be70f69853dead8f5e7f225cd61b4dcb1f7f0ce73ef8c5bae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Virginia_opossum",
+   "title": "Virginia opossum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:10.600Z",
+   "snapshot": "f359e10941a260770bbbccbc11bedbda53ff001f16b7e8cbe3a7de87d4c0630f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Platypus",
+   "title": "Platypus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:17.244Z",
+   "snapshot": "5a5f147c579b0162b5f7547067b8fa2e158296a268943c60e05c1086b46eed67"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Slow_loris",
+   "title": "Slow loris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:38.813Z",
+   "snapshot": "8770dfb081f696323387552b38c260f7962b965cfba98ae3edd4eae849577c97"
+  },
+  "s6": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3852360/",
+   "title": "Mad, bad and dangerous to know: the biochemistry, ecology and evolution of slow loris venom (Nekaris et al. 2013)",
+   "publisher": "Journal of Venomous Animals and Toxins including Tropical Diseases / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:52.946Z",
+   "snapshot": "f549a6129b0c1f1af478935678a85e3e121546cb1db35ef78b202bea7b6f934a"
+  },
+  "s7": {
+   "url": "https://nationalzoo.si.edu/animals/pygmy-slow-loris",
+   "title": "Pygmy slow loris",
+   "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:52.991Z",
+   "snapshot": "e926d7589b0ad96e17ce4dd179c11ddeaa17035e2eeb2fc9473688c3b4981db3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scorpions",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-351"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mongooses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Virginia opossum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "platypus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "slow loris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:32.853Z",
+   "target": "f13354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The meerkat is primarily an insectivore, feeding heavily on beetles and lepidopterans; it can additionally feed on eggs, amphibians, arthropods (such as scorpions, to whose venom they are immune), reptiles, small birds (such as the southern anteater-chat), plants and seeds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scorpions” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:32.853Z",
+   "target": "f13355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The plural form is \"mongooses\", although \"mongeese\" is also used.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mongooses” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:32.853Z",
+   "target": "f13356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Virginia opossum (Didelphis virginiana), also known as the North American opossum, is a member of the opossum family found from southern Canada to northern Costa Rica, making it the northernmost marsupial in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virginia opossum” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:32.853Z",
+   "target": "f13357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The platypus (Ornithorhynchus anatinus), sometimes referred to as the duck-billed platypus, is a semiaquatic, egg-laying mammal endemic to eastern Australia, including Tasmania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “platypus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:32.853Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Although many previous classifications recognized as few as a single all-inclusive species, there are now at least eight that are considered valid: the Sunda slow loris (N.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.853Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “slow loris” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:08:13Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "are the final mammals, and the only primates, which harbour toxins",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:08:15Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pygmy slow lorises produce a venom in brachial glands in their upper arm that, when combined with enzymes in their saliva, causes their bites to be extra painful.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:08:17Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "that is licked and mixed with their saliva. In tests, three predators",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:16.706Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "are the final mammals, and the only primates, which harbour toxins",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:16.706Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pygmy slow lorises produce a venom in brachial glands in their upper arm that, when combined with enzymes in their saliva, causes their bites to be extra painful.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:16.706Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "that is licked and mixed with their saliva. In tests, three predators",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:16.706Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mad, bad and dangerous to know: the biochemistry, ecology and evolution of slow loris venom - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “slow loris” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:16.706Z",
+   "target": "f13358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pygmy slow loris | Smithsonian's National Zoo and Conservation Biology Institute",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “slow loris” is on the snapshot of s7"
+  }
+ ]
+}

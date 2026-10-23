@@ -1,0 +1,592 @@
+{
+ "article": "a2512",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sloth_moth",
+   "title": "Sloth moth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:31.684Z",
+   "snapshot": "259b87a48e386d80927463ba7756e5f0be6d49033257d9a29e661acccf85ac89"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gro%C3%9Fer_Ameisenb%C3%A4r",
+   "title": "Großer Ameisenbär",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:30.141Z",
+   "snapshot": "0708b6dd10c82a077732fd459b7f56a24f27e5838ffe345eed0308c9a3fb252a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Giant_anteater",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:16.448Z",
+   "snapshot": "cb5d58a8d09c7acbf970653541391f5e868b00f100ad669a1bc09c713b81cba8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Xenarthra",
+   "title": "Xenarthra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:32.645Z",
+   "snapshot": "ae1f2e57290a05d48ae0378f4adb7050e1543186d972ef9848ed707959770ee7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nine-banded_armadillo",
+   "title": "Nine-banded armadillo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:33.680Z",
+   "snapshot": "e431f5b8d5c9218abb71ba1a3bfa55592d514be6060e400219855564c1bddd9e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Three-banded_armadillo",
+   "title": "Three-banded armadillo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:34.698Z",
+   "snapshot": "ce5b42da23c1ad0fb73e315f573517bf19903b7d9cb447751bf04bf6e3803242"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Linnaeus%27s_two-toed_sloth",
+   "title": "Linnaeus's two-toed sloth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:35.638Z",
+   "snapshot": "64b48e681b71a379361547fada84f459f5b319b16030fdcb2f834a342ab4ba2b"
+  },
+  "s8": {
+   "url": "https://www.nationalgeographic.com/animals/mammals/facts/giant-anteater",
+   "title": "Giant Anteater",
+   "publisher": "National Geographic",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:52.774Z",
+   "snapshot": "6e9e70130d5b73194c260025360bf400d6d0ab205967d43698e77432e26a27d1"
+  },
+  "s9": {
+   "url": "https://animals.sandiegozoo.org/animals/giant-anteater",
+   "title": "Giant Anteater",
+   "publisher": "San Diego Zoo Wildlife Alliance",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:52.586Z",
+   "snapshot": "e33ba7e1aecaee86f51d90449922366832881b51c5ecfe0633927c6ab7045dc4"
+  },
+  "s10": {
+   "url": "https://animaldiversity.org/accounts/Dasypus_novemcinctus/",
+   "title": "Dasypus novemcinctus (nine-banded armadillo)",
+   "publisher": "Animal Diversity Web, University of Michigan Museum of Zoology",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:52.694Z",
+   "snapshot": "d33be9243347d4092822dbaf83de438e4a26e81d9506f9acb53fc779973cb69f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sloths",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "35.000",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-287"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "35,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 13"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Xenarthra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "identical quadruplets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "three-banded armadillos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "algae",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A sloth moth is a coprophagous moth which has evolved to exclusively inhabit the fur of sloths and to use sloth dung as a substrate for the early stages of reproduction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sloths” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Große Ameisenbär ist ein spezialisierter Insektenfresser, seine Hauptnahrung besteht aus Ameisen und Termiten, von denen er täglich bis zu 35.000 Tiere frisst, die er mittels seines guten Geruchssinnes aufspürt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “35.000” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An anteater attacks up to 200 nests in one day, for as long as a minute each, and consumes a total of around 35,000 insects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “35,000” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Xenarthra (; from Ancient Greek ξένος (xénos), meaning \"strange, foreign\", and ἄρθρον (árthron), meaning \"joint\") is a superorder and major clade of placental mammals native to the Americas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xenarthra” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "identical quadruplets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“identical quadruplets”, “eineiige Vierlinge”, “Однояйцевые четверняшки”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The genus Tolypeutes contains the two species of three-banded armadillos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “three-banded armadillos” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:32.748Z",
+   "target": "f13353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Their fur color ranges from a brownish yellow to a pale tone of brown, however, in the wild their fur sometimes has a green hue from algae that grows on their fur during the rainy season.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:32.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “algae” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:06:55Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "consumes a total of around 35,000 insects",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:06:59Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "lap up the 35,000 ants and termites they swallow whole each day",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:07:03Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "eat up to 30,000 ants and termites each day",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gives 'up to 30,000' — same order; the card's choices were 35,000 / 85,000 / 145,000, so 35,000 is the intended answer and notes already accept ~30,000."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:07:19Z",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "it splits into four identical embryos via collapse of the common amnion and subsequent division of the embryonic shield",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:07:21Z",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This embryonic process almost always results in the birth of four identical quadruplets.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "consumes a total of around 35,000 insects",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "lap up the 35,000 ants and termites they swallow whole each day",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "eat up to 30,000 ants and termites each day",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "it splits into four identical embryos via collapse of the common amnion and subsequent division of the embryonic shield",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This embryonic process almost always results in the birth of four identical quadruplets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "But their long tongues are more than sufficient to lap up the 35,000 ants and termites they swallow whole each day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “35,000” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:16.554Z",
+   "target": "f13351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "four identical quadruplets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:16.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “identical quadruplets” is on the snapshot of s10"
+  }
+ ]
+}

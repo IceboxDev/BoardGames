@@ -1,0 +1,752 @@
+{
+ "article": "a0275",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cucumber",
+   "title": "Cucumber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:38.796Z",
+   "snapshot": "df8e7f653e7c66cf2f74a3a4df39e710e4f44ae92c95e2893196a502f7c5cb23"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gem%C3%BCsespargel",
+   "title": "Gemüsespargel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:37.924Z",
+   "snapshot": "4b999d5dcced8f6f75914f361569175ba20c33cc28390f1fc72ac5ce152573cd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wheat",
+   "title": "Wheat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:39.921Z",
+   "snapshot": "6065e6ed23ba5495b13b74185cc060b381e0d0498c36462f1be9c4a5a6720aec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/History_of_rice_cultivation",
+   "title": "History of rice cultivation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:40.880Z",
+   "snapshot": "793233d094219d00b6c13259a63d446617f4e38fec8165bebc071ef0faf9680f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coffea_canephora",
+   "title": "Coffea canephora – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:41.784Z",
+   "snapshot": "d5f43a191827954103efd4f0386988264e7d5d945f4a57d531a65623b337b151"
+  },
+  "s6": {
+   "url": "https://www.rhs.org.uk/vegetables/cucumbers/grow-your-own",
+   "title": "How to grow cucumbers – RHS",
+   "publisher": "Royal Horticultural Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:00.766Z",
+   "snapshot": "c372fc0b059496fc5f223b233ac54d99427ef63d5a5760c48fe5fb08c79de386"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Gurke",
+   "title": "Gurke – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:00.790Z",
+   "snapshot": "341bcbcb0f8a0d4119c5beb634d912ecd7dce760384dd9593b1c0729242ec75f"
+  },
+  "s8": {
+   "url": "https://extension.psu.edu/asparagus-production",
+   "title": "Asparagus Production – Penn State Extension",
+   "publisher": "Penn State Extension",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:01.071Z",
+   "snapshot": "41061e5e4c1a4067b2079bc1d0d3dae9899da03f1bfe5ebe6eaa003b08db0785"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Asparagus",
+   "title": "Asparagus – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:02.545Z",
+   "snapshot": "742f49385cc20ab223b26db134fb0681caa7ca9d555f79f224a0701546d87132"
+  },
+  "s10": {
+   "url": "https://www.ers.usda.gov/topics/crops/wheat/wheat-sector-at-a-glance",
+   "title": "Wheat Sector at a Glance – USDA Economic Research Service",
+   "publisher": "USDA ERS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:01.887Z",
+   "snapshot": "be3f541ae480fb9abe88fb1fd0cbdb1d4d788e45d55dcd863b6e8d38750ab6f4"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Upland_rice",
+   "title": "Upland rice – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:03.477Z",
+   "snapshot": "8372f7a64b354d385a7bc4fe14fca25d82e94afa59379d7c7ff5d1d098f32d4e"
+  },
+  "s12": {
+   "url": "https://www.dwds.de/wb/Bergreis",
+   "title": "Bergreis – DWDS (corpus citation: Hagenbeck & Ottmann, Südasiatische Fahrten und Abenteuer, 1924)",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "book",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:01.658Z",
+   "snapshot": "7c440fba3644e6473f7193e1ec96f8a24b500c1b848ebf9d2a5a3a8dda0d776e"
+  },
+  "s13": {
+   "url": "https://www.ncausa.org/About-Coffee/What-is-Coffee",
+   "title": "What is Coffee? – National Coffee Association USA",
+   "publisher": "National Coffee Association USA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:02.330Z",
+   "snapshot": "4e73174341ac6938fda2c5f8737df49e3bec91d8da200d44a7588e57fdc36057"
+  },
+  "s14": {
+   "url": "https://en.wikipedia.org/wiki/Coffea_arabica",
+   "title": "Coffea arabica – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:07:20Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Salad cucumbers are grown in greenhouses, ridge cucumbers in the open field",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Weißer Spargel wächst unter Erdwällen ohne Licht, grüner Spargel über der Erde im Licht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-235"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winter wheat is sown in autumn, spring wheat in spring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wet rice grows in flooded paddies, upland rice on dry fields",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arabica grows in the highlands, Robusta in the lowlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:23.010Z",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Salad cucumbers are grown in greenhouses, ridge cucumbers in the open field",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Salad cucumbers are grown in greenhouses, ridge cucumbers in the open field”, “Salatgurken wachsen im Gewächshaus, Landgurken im Freiland”, “Салатные огурцы выращивают в теплицах, грунтовые — в открытом грунте”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:23.010Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Weißer Spargel wächst unter Erdwällen ohne Licht, grüner Spargel über der Erde im Licht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Weißer Spargel wächst unter Erdwällen ohne Licht, grüner Spargel über der Erde im Licht”, “White asparagus grows under mounded soil without light, green asparagus above ground in the light”, “Белая спаржа растёт под земляными валами без света, зелёная — над землёй на свету”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:23.010Z",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winter wheat is sown in autumn, spring wheat in spring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Winter wheat is sown in autumn, spring wheat in spring”, “Winterweizen wird im Herbst gesät, Sommerweizen im Frühjahr”, “Озимую пшеницу сеют осенью, яровую — весной”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:23.010Z",
+   "target": "f01374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wet rice grows in flooded paddies, upland rice on dry fields",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Wet rice grows in flooded paddies, upland rice on dry fields”, “Nassreis wächst auf gefluteten Feldern, Trockenreis auf trockenen Feldern”, “Заливной рис растёт на затопленных полях, суходольный — на сухих полях”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:23.010Z",
+   "target": "f01375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arabica grows in the highlands, Robusta in the lowlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Arabica grows in the highlands, Robusta in the lowlands”, “Arabica wächst im Hochland, Robusta im Tiefland”, “Арабика растёт в высокогорье, робуста — в низинах”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:06:42Z",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "There are indoor varieties for growing in greenhouses, polytunnels or large coldframes, and outdoor varieties (or ridge cucumbers) for growing in a sunny, sheltered spot.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:06:44Z",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Salatgurke ist der häufigste und gebräuchlichste Typ, auch Schlangengurke genannt, die fast nur im Treibhaus angebaut wird.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:06:46Z",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die seltener angebotenen Salatgurken aus dem Freilandanbau werden als „Landgurke“ vermarktet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:06:49Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Excluding light when spears are emerging will produce blanched, or white, spears.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:06:52Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "weiße Spargeltriebe sind unter der Erde abgeschnitten worden, grüne und violette über der Erde",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:06:56Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the shoots are covered with soil as they grow, i.e. earthed up; without exposure to sunlight, there is no photosynthesis and the shoots remain white.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:07:00Z",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Winter wheat varieties are sown in the fall and usually become established before going into dormancy when cold weather arrives.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:07:04Z",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Spring and Durum wheat are typically planted as soon as soil conditions permit in mid-March through May",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:07:07Z",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It can be planted in autumn and harvested in early summer as winter wheat in climates that are not too severe, or planted in spring and harvested in autumn as spring wheat.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:07:10Z",
+   "target": "f01374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Upland rice (also called dry rice) is rice grown in dry-land environments. The term describes varieties of rice developed for rain-fed or less-intensely irrigated soil instead of flooded rice paddy fields",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:07:13Z",
+   "target": "f01374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Dieser Paddy ist der sogenannte Bergreis, d. h. er wird nicht im Wasser gezogen wie der gemeine Reis, sondern wächst auf trockenem Boden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23",
+   "note": "Old corpus citation; supports the dry-field vs water contrast."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T08:07:16Z",
+   "target": "f01375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Higher altitudes, milder temperatures",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23",
+   "note": "Arabica column of the NCA arabica-vs-robusta table (Growing conditions)."
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T08:07:18Z",
+   "target": "f01375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Lower altitudes, warmer temperatures",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23",
+   "note": "Robusta column of the NCA arabica-vs-robusta table (Growing conditions)."
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T08:07:20Z",
+   "target": "f01375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "It is usually cultivated at an altitude between 1,200 and 1,500 m (3,900 and 4,900 ft)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "There are indoor varieties for growing in greenhouses, polytunnels or large coldframes, and outdoor varieties (or ridge cucumbers) for growing in a sunny, sheltered spot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die seltener angebotenen Salatgurken aus dem Freilandanbau werden als „Landgurke“ vermarktet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Excluding light when spears are emerging will produce blanched, or white, spears.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "weiße Spargeltriebe sind unter der Erde abgeschnitten worden, grüne und violette über der Erde",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the shoots are covered with soil as they grow, i.e. earthed up; without exposure to sunlight, there is no photosynthesis and the shoots remain white.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Spring and Durum wheat are typically planted as soon as soil conditions permit in mid-March through May",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It can be planted in autumn and harvested in early summer as winter wheat in climates that are not too severe, or planted in spring and harvested in autumn as spring wheat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Upland rice (also called dry rice) is rice grown in dry-land environments. The term describes varieties of rice developed for rain-fed or less-intensely irrigated soil instead of flooded rice paddy fields",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:52:43.215Z",
+   "target": "f01374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Dieser Paddy ist der sogenannte Bergreis, d. h. er wird nicht im Wasser gezogen wie der gemeine Reis, sondern wächst auf trockenem Boden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.215Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s12"
+  }
+ ]
+}

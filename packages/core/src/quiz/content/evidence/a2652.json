@@ -1,0 +1,460 @@
+{
+ "article": "a2652",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/LTS_M62",
+   "title": "LTS M62",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:09.396Z",
+   "snapshot": "e63d184339fa8f6a1f6f8a75aaa89af2a31e5d894914b8b98b3c3ade5caca146"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/DR-Baureihe_130",
+   "title": "DR-Baureihe 130 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:11.067Z",
+   "snapshot": "d297420497a70e6ca52910f482dfb6e9594b1461ae0fe49efbefbde93a0dc4d9"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/DR-Baureihe_VT_2.09",
+   "title": "DR-Baureihe VT 2.09 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:11.784Z",
+   "snapshot": "e16c6a3a9d2604674f444385c6d34a9bd9a9a33490a89b7e2ee27c2fd1e3aa65"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Uerdinger_Schienenbus",
+   "title": "Uerdinger Schienenbus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:12.700Z",
+   "snapshot": "3de4106f692eaa015c8111446b106c69c729cda0606db2984f741b347ae48344"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/SBB-CFF-FFS_Ce_6/8_II",
+   "title": "SBB-CFF-FFS Ce 6/8 II – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:13.209Z",
+   "snapshot": "f316497220527554904377bc26de49d16eeda6168043ffc51e02afa9ff9bcc50"
+  },
+  "s6": {
+   "url": "https://www.eisenbahnfreunde-berlin.net/en/dr-class-120/",
+   "title": "DR Class 120 (V 200) Diesel Locomotive – The Taiga Drum",
+   "publisher": "Eisenbahnfreunde Berlin",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:17.409Z",
+   "snapshot": "0ceacbf951923b62b448c03a86d25831eee6b1bd46b79bff84562028755c801d"
+  },
+  "s7": {
+   "url": "http://www.schiebebuehne.de/tfz/232.html",
+   "title": "Die Baureihe 232",
+   "publisher": "Schiebebühne – Triebfahrzeug-Lexikon",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:16.854Z",
+   "snapshot": "58bc91a5d0e1a0f1121f6d70abe2ac3486a33326ec893144869ac391f6531005"
+  },
+  "s8": {
+   "url": "https://www.eisenbahnfreunde-berlin.net/en/dr-class-130/",
+   "title": "DR Class 130 of the Deutsche Reichsbahn – The Ludmilla",
+   "publisher": "Eisenbahnfreunde Berlin",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:17.734Z",
+   "snapshot": "f2949391850682330ea06672816f6e8aacd8e66e3f1a5ef2fe5e4f42bcd7a5c2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Diesellok M62",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; history entry seq 8; transcript tp-209"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "DR-Baureihe 132",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "VT 2.09",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uerdinger Schienenbus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ce 6/8 II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:52.433Z",
+   "target": "f14358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Diesellok M62",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die Diesellok M62”, “the M62 diesel locomotive”, “тепловоз M62”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:52.433Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "DR-Baureihe 132",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“DR-Baureihe 132”, “DR class 132”, “серия DR 132”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:52.433Z",
+   "target": "f14360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Als DR-Baureihe VT 2.09 (ab 1970: Baureihe 171/172) wurden Schienenbusse der Deutschen Reichsbahn bezeichnet, die vom VEB Waggonbau Bautzen entwickelt und dort, sowie später vom VEB Waggonbau Görlitz, produziert wurden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “VT 2.09” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:52.433Z",
+   "target": "f14361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uerdinger Schienenbus ist die umgangssprachliche Bezeichnung von Schienenbussen, die von der Waggonfabrik Uerdingen entwickelt wurden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uerdinger Schienenbus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:52.433Z",
+   "target": "f14362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Ce 6/8 II (later becoming Be 6/8 II) are electric locomotives of the Swiss Federal Railways (SBB), which were primarily used on the Gotthard Railway in front of freight trains and were in service until the 1980s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ce 6/8 II” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:18Z",
+   "target": "f14358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das laute Auspuffgeräusch, das ihnen in der DDR zum Spitznamen „Taigatrommel“ verhalf",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:39:21Z",
+   "target": "f14358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The standard diesel locomotive Taiga Drum DR Class 120 - the diesel locomotive for main and branch line service",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: manufacturer Luhansk Locomotive Factory, built 1966–1975 — the DR class 120 is the M62."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:39:23Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie kaufte davon bis 1982 insgesamt 709 Stück.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:39:26Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Beschafft: 709 Lokomotiven",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: the class 132, renumbered 232 from 1992, has the nickname 'Ludmilla'."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:29Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Numbering: 130 001-080, 101, 102 131 001-076 132 001-709 142 001-006",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Page title calls the class 130 family 'The Ludmilla'; the class 132 is numbered 001–709, the largest group."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:38.229Z",
+   "target": "f14358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "das laute Auspuffgeräusch, das ihnen in der DDR zum Spitznamen „Taigatrommel“ verhalf",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:38.229Z",
+   "target": "f14358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The standard diesel locomotive Taiga Drum DR Class 120 - the diesel locomotive for main and branch line service",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:38.229Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie kaufte davon bis 1982 insgesamt 709 Stück.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:38.229Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Beschafft: 709 Lokomotiven",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:38.229Z",
+   "target": "f14359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Numbering: 130 001-080, 101, 102 131 001-076 132 001-709 142 001-006",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,336 @@
+{
+ "article": "a2215",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Shining_(1980)",
+   "title": "Shining (1980)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:12.622Z",
+   "snapshot": "d893c92fc8c8483eb1dbc038fd72a50bf5dbb9c088c7f1ff61766fb34f31181b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dr._Seltsam_oder:_Wie_ich_lernte,_die_Bombe_zu_lieben",
+   "title": "Dr. Seltsam oder: Wie ich lernte, die Bombe zu lieben",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:13.589Z",
+   "snapshot": "7356339bbd8d93623c876c0c3ef75063f8abc31ce8f7ac4feb766791391e5906"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dr._Strangelove",
+   "title": "Dr. Strangelove – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:13.864Z",
+   "snapshot": "6dbdb844efe8857a608b257b21849aa3f46abb60fbbdac9fd2e170ddd8bda5df"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Barry_Lyndon",
+   "title": "Barry Lyndon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:14.787Z",
+   "snapshot": "32ea19cb99d79f8fbb50244d189037f02f9459b6dcb91f7c74d2cdfe8aafcc93"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Full_Metal_Jacket",
+   "title": "Full Metal Jacket – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:15.815Z",
+   "snapshot": "947452bc85420e3b5b671fbad7bea71556f82e1c5b3b06996eee694a144af663"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wege_zum_Ruhm",
+   "title": "Wege zum Ruhm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:14.635Z",
+   "snapshot": "8f54a3c6d4e85f1c45b42e3e8748225a3439660e6dcf1b8ec2a5ea92e99260b5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Paths_of_Glory",
+   "title": "Paths of Glory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:16.812Z",
+   "snapshot": "f962f9e85e34d6d257811f6d9f5ef244b23e689943cd4df5f5360b0459f83fd8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stanley Kubrick",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dr. Seltsam oder: Wie ich lernte, die Bombe zu lieben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-354"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Peter Sellers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barry Lyndon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Full Metal Jacket",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wege zum Ruhm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Paths of Glory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shining (Original: The Shining) ist ein britisch-US-amerikanischer Horrorfilm des Regisseurs Stanley Kubrick aus dem Jahr 1980 nach Stephen Kings gleichnamigem Roman.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stanley Kubrick” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Als Beispiele führt er dabei Szenen der Filme Dr. Seltsam oder: Wie ich lernte, die Bombe zu lieben, Uhrwerk Orange und 2001: Odyssee im Weltraum an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Seltsam oder: Wie ich lernte, die Bombe zu lieben” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Strangelove parodies the heightened fears during the Cold War of a nuclear war between the United States and the Soviet Union and stars Peter Sellers (portraying three different characters), George C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Sellers” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barry Lyndon is a 1975 epic historical drama film written, produced, and directed by Stanley Kubrick, based on the 1844 novel The Luck of Barry Lyndon by William Makepeace Thackeray.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barry Lyndon” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Full Metal Jacket is a 1987 war film directed and produced by Stanley Kubrick from a screenplay he co-wrote with Michael Herr and Gustav Hasford.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Full Metal Jacket” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wege zum Ruhm (Originaltitel: Paths of Glory) ist ein im 35mm-Schwarzweiß-Format produziertes Anti-Kriegs-Drama von Stanley Kubrick aus dem Jahr 1957.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wege zum Ruhm” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:37.955Z",
+   "target": "f11298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Paths of Glory is a 1957 American anti-war film directed by Stanley Kubrick, from a screenplay he co-wrote with Calder Willingham and Jim Thompson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.955Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paths of Glory” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2250",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/British_Broadcasting_Corporation",
+   "title": "British Broadcasting Corporation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:37.466Z",
+   "snapshot": "317851b7b7910c968788884b0dd37ddb644914311e599ae9d8bb4d6e1b9796b5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jovian%E2%80%93Plutonian_gravitational_effect",
+   "title": "Jovian–Plutonian gravitational effect",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:38.731Z",
+   "snapshot": "bd370ab454747d7a709e783301f36ba25ee3fe247d6ea1c31fe262bfb2dd7b52"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Sky_at_Night",
+   "title": "The Sky at Night – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:39.754Z",
+   "snapshot": "f11ca6a40b6a80cb14edb93c783109ec9fbd22501e388b7fe25485df4f31123e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spaghetti-tree_hoax",
+   "title": "Spaghetti-tree hoax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:40.721Z",
+   "snapshot": "4dba6a0d61aa05c989ba46edbeae7cea51297c0b110ddb949c08c7e33313346d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/John_Reith,_1st_Baron_Reith",
+   "title": "John Reith, 1st Baron Reith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:41.782Z",
+   "snapshot": "45306ebf8eecf7e206378d6d019d8903d6b16065bf4e602bc22d75629cc0046b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "BBC",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-368"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Patrick Moore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-211"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sky at Night",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "spaghetti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John Reith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:43.458Z",
+   "target": "f11529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die British Broadcasting Corporation, kurz BBC [biːbiːˈsiː], ist eine öffentlich-rechtliche Rundfunkanstalt des Vereinigten Königreichs, die mehrere Hörfunk- und Fernsehprogramme sowie einen Internet-Nachrichtendienst betreibt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BBC” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:43.458Z",
+   "target": "f11530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The hoax was invented for April Fools' Day by the English astronomer Patrick Moore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Patrick Moore” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:43.458Z",
+   "target": "f11531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sky at Night is a documentary television programme on astronomy produced by the BBC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sky at Night” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:43.458Z",
+   "target": "f11532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The spaghetti-tree hoax was a three-minute hoax report broadcast on April Fools' Day 1957 by the BBC current-affairs programme Panorama, purportedly showing a family in southern Switzerland harvesting spaghetti from a \"spaghetti tree\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “spaghetti” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:43.458Z",
+   "target": "f11533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hansard 1803–2005: contributions in Parliament by John Reith",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Reith” is on the snapshot of s5"
+  }
+ ]
+}

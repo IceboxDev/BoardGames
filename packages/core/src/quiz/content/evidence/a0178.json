@@ -1,0 +1,396 @@
+{
+ "article": "a0178",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/H%E1%BA%A1_Long_Bay",
+   "title": "Hạ Long Bay – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:24.401Z",
+   "snapshot": "fe68610790be5b0610495036eb97baa831d6989649e87bfe223e11cb91bf5453"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bay_of_Fundy",
+   "title": "Bay of Fundy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:25.275Z",
+   "snapshot": "50239347e3e79aa7f78d96358b94f502dcf55f7a8e5360d268abf4b59771813f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Guanabara_Bay",
+   "title": "Guanabara Bay – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:26.308Z",
+   "snapshot": "1e8e4e18af234d6e845531e4ee5049f9e8e36e5c8d083c427f95ffd0bd05552f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Table_Bay",
+   "title": "Table Bay – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:27.280Z",
+   "snapshot": "d8d502b8f31fac7b15ca6854710dd471a1dc609cc30aca4cef3ea888a17aa19a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/C%C3%B4te_d%27Opale",
+   "title": "Côte d'Opale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:28.285Z",
+   "snapshot": "edb17e2914b9cf8973f79412374835f44efb49800446eae6e2593e769ee548e7"
+  },
+  "s6": {
+   "url": "https://oceanservice.noaa.gov/facts/highesttide.html",
+   "title": "Where is the highest tide?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:23.361Z",
+   "snapshot": "a4dcc1a65a2f19f93e254d05b88c82597717fbdad5687f68e8c9cca1d94ad064"
+  },
+  "s7": {
+   "url": "https://www.bayoffundy.com/",
+   "title": "Bay of Fundy - Discover Canada's Natural Wonder",
+   "publisher": "BayofFundy.com",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:23.897Z",
+   "snapshot": "3eb6032b9a0d3160f417768082cceaff97c44d692ee537feef8516e20412c47c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ha Long Bay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bay of Fundy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Guanabara Bay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Table Bay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Opal Coast",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-052"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:05.754Z",
+   "target": "f00886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hạ Long Bay or Halong Bay (Vietnamese: Vịnh Hạ Long, pronounced [vînˀ hâːˀ lawŋm] ) is a bay located in Northeastern Vietnam, administered by the city of Quảng Ninh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:05.754Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ha Long Bay” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:05.754Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Bay of Fundy (French: Baie de Fundy) is a bay between the Canadian provinces of New Brunswick and Nova Scotia, with a small portion touching the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:05.754Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bay of Fundy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:05.754Z",
+   "target": "f00888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Guanabara Bay (Portuguese: baía de Guanabara, baía da Guanabara, IPA: [baˈi.ɐ da ɡwɐnaˈbaɾɐ]) is an oceanic bay in Southeast Brazil in the state of Rio de Janeiro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:05.754Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guanabara Bay” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:05.754Z",
+   "target": "f00890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Table Bay (Afrikaans: Tafelbaai) is a natural bay on the Atlantic Ocean at the northern end of the Cape Peninsula, which stretches south to the Cape of Good Hope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:05.754Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Table Bay” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:05.754Z",
+   "target": "f12070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Opal Coast (Côte d'Opale (French) French pronunciation: [kot dɔpal]; Opoalkust (West Flemish)) is a coastal region in northern France on the English Channel, popular with tourists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:05.754Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Opal Coast” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:31:20Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The highest tides in the world can be found in Canada at the Bay of Fundy, which separates New Brunswick from Nova Scotia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "Leaf Basin in Ungava Bay (Quebec) is sometimes cited as a near-equal rival; Fundy is the standard answer"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:31:28Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bay of Fundy Tides: The Highest Tides in the World!",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:39:41Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bay of Fundy: Home to the World's Highest Tides",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted to match the page text exactly"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:24.545Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The highest tides in the world can be found in Canada at the Bay of Fundy, which separates New Brunswick from Nova Scotia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:24.545Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bay of Fundy: Home to the World's Highest Tides",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:24.545Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The highest tides in the world can be found in Canada's Bay of Fundy at Burntcoat Head in Nova Scotia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bay of Fundy” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:24.545Z",
+   "target": "f00887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bay of Fundy - Discover Canada's Natural Wonder",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:24.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bay of Fundy” is on the snapshot of s7"
+  }
+ ]
+}

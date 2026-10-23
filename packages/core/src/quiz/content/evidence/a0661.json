@@ -1,0 +1,242 @@
+{
+ "article": "a0661",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Metallica_(album)",
+   "title": "Metallica (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:37.178Z",
+   "snapshot": "a26ee936616fbbaa4e4bdd3fc4e71271df3867e03d00bcc80bcd635f07102705"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Number_of_the_Beast_(album)",
+   "title": "The Number of the Beast (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:38.186Z",
+   "snapshot": "29215dad895a4680ddbc4090a246d2110148cb638dcfd41670cf7dca214ebb38"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/British_Steel_(album)",
+   "title": "British Steel (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:39.120Z",
+   "snapshot": "5b10345cb5db623e6209a7a2587c4209dc23a9d576ad981932faa5532f477499"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paranoid_(album)",
+   "title": "Paranoid (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:40.191Z",
+   "snapshot": "90f56761457eda029e9fb609797600ec9551acc3591fdd8927d8f2550a937ce4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Slayer",
+   "title": "Slayer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:41.331Z",
+   "snapshot": "f0230cfb542e59c52cff372794c5890463df7524149f88e6ad0d9497f3d7465a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Metallica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iron Maiden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Judas Priest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Black Sabbath",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Slayer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:22.793Z",
+   "target": "f03301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Metallica (commonly known as The Black Album) is the fifth studio album by the American heavy metal band Metallica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metallica” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:22.793Z",
+   "target": "f03302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Number of the Beast is the third studio album by the English heavy metal band Iron Maiden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iron Maiden” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:22.793Z",
+   "target": "f03303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "British Steel is the sixth studio album by English heavy metal band Judas Priest, released on 11 April 1980 by CBS Records and in May 1980 in the US by Columbia Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Judas Priest” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:22.793Z",
+   "target": "f03304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paranoid is the second studio album by the British heavy metal band Black Sabbath.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Sabbath” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:22.793Z",
+   "target": "f03305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Slayer is an American thrash metal band from Huntington Park, California, formed in 1981 by guitarists Kerry King and Jeff Hanneman, drummer Dave Lombardo and vocalist/bassist Tom Araya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.793Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slayer” is on the snapshot of s5"
+  }
+ ]
+}

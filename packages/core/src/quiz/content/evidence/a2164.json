@@ -1,0 +1,478 @@
+{
+ "article": "a2164",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Erdkern",
+   "title": "Erdkern",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:31.179Z",
+   "snapshot": "6ec77a7ca8c089f17571223f181c1c32c563e13c1db05a9312692bb54b7917bf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Earth's_inner_core",
+   "title": "Earth's inner core",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:34.919Z",
+   "snapshot": "c8d378ed401561ffc4dbf1598bb2bfb0be610589df6fb1585390020087902da9"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Erde",
+   "title": "Erde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:26.212Z",
+   "snapshot": "21f55518b25c27a53f90b75f345a6888ec4073caa4dce54fa11255ee309313ce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Earth%27s_mantle",
+   "title": "Earth's mantle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:36.044Z",
+   "snapshot": "3d8a24ae41f1a5cdbe88859fad3e120f69e41d60466e60f26459bb64a06d403d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mohorovi%C4%8Di%C4%87_discontinuity",
+   "title": "Mohorovičić discontinuity – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:36.888Z",
+   "snapshot": "5a0f205f7c63a418f6debf178076de85972ebe7150b73d88b7567d1fe51723c2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Earth%27s_outer_core",
+   "title": "Earth's outer core – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:37.991Z",
+   "snapshot": "7888d491e0767586653cebf9c4dd9b4f1f6c355ec07e7ac91857242e865230c4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Internal_structure_of_Earth",
+   "title": "Internal structure of Earth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:38.901Z",
+   "snapshot": "10143dc7256ad23166d31781921d02af3e790a02e5873f182dce3cd7f81cd849"
+  },
+  "s8": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+   "title": "Earth Fact Sheet",
+   "publisher": "NASA Space Science Data Coordinated Archive",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.376Z",
+   "snapshot": "97edc601d43f7cd9ab0826e96760dade7ff1826c84387655430da22533f32f0e"
+  },
+  "s9": {
+   "url": "https://people.ohio.edu/dyer/TPE/tpe_3e/earth_system/describing_earth.html",
+   "title": "Describing Earth",
+   "publisher": "Ohio University (The Physical Environment textbook)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:05.480Z",
+   "snapshot": "0cb8ef6d5af2aedf38751849979c4c3c83640c5123ed85083048337019bc986d"
+  },
+  "s10": {
+   "url": "https://www.universetoday.com/articles/diameter-of-earth",
+   "title": "What is the Diameter of Earth?",
+   "publisher": "Universe Today",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:04.907Z",
+   "snapshot": "064178371a29cdc2b247445988706dddb484669c85a77095ff9e31fab6f0ae30"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eisen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-317"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-127"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "12.700 Kilometer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-380"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mantle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mohorovičić discontinuity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "outer core",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seismic waves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-129"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f10949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es wird angenommen, dass sich die Metalllegierung im inneren Kern zu 80 % aus Eisen (Fe) und zu 20 % aus Nickel (Ni) zusammensetzt (daher kurz NiFe), wobei die Dichte des Kerns von der Grenze zum äußeren Erdkern von etwa 12,2 g/cm3 bis zum Mittelpunkt auf 12,6 bis 13,0 g/cm3 ansteigt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eisen” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f10949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "As recently as February 2025 there are indications that the previously believed solid iron-nickel sphere is partially deformable and undergoing viscous changes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iron” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ihr Durchmesser beträgt mehr als 12 700 Kilometer und ihr Alter etwa 4,54 Milliarden Jahre.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “12.700 Kilometer” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f10951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Earth's mantle is a layer of silicate rock between the crust and the outer core.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mantle” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f10952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Mohorovičić discontinuity ( MOH-hə-ROH-vih-chitch; Croatian: [moxorôʋiːtʃitɕ]), usually called the Moho discontinuity, Moho boundary, or just Moho, is the boundary between the crust and the mantle of Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mohorovičić discontinuity” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f10954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Earth's outer core is a fluid layer about 2,260 km (1,400 mi) thick, composed of mostly  iron and nickel that lies above Earth's solid inner core and below its mantle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “outer core” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:32.334Z",
+   "target": "f25579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "observations of rock in outcrop, samples brought to the surface from greater depths by volcanoes or volcanic activity, analysis of the seismic waves that pass through Earth, measurements of the gravitational and magnetic fields of Earth, and experiments with crystalline solids at pressures",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seismic waves” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:57:21Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Polar radius (km) 6356.752",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "polar radius 6,356.752 km doubles to a pole-to-pole diameter of about 12,713.5 km, i.e. about 12,700 km"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:57:23Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "From pole-to-pole the distance is 12,713.6 km.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:57:25Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the Earth has an equatorial diameter of 12,756 km (7926 mi), and a polar diameter of 12713.6 km (7899.86 mi)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:19.186Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Polar radius (km) 6356.752",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:19.186Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "From pole-to-pole the distance is 12,713.6 km.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:19.186Z",
+   "target": "f10950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the Earth has an equatorial diameter of 12,756 km (7926 mi), and a polar diameter of 12713.6 km (7899.86 mi)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  }
+ ]
+}

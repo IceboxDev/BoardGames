@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-174",
+ "image": "IMG20261007180533.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Der Central Park in New York ist größer als das Fürstentum Monaco. Richtig oder falsch?",
+   "de": "Wie viele Quadratkilometer misst der Central Park in New York – mehr als das ganze Fürstentum Monaco?",
+   "en": "How many square kilometres does Central Park in New York cover – more than the entire Principality of Monaco?",
+   "reworked": true,
+   "answerDe": "3,41 km² (843 Acres)",
+   "answerEn": "3.41 km² (843 acres)",
+   "timeline": {
+    "kind": "founding",
+    "start": "1858",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first areas of Central Park in Manhattan open to the public",
+    "labelDe": "Die ersten Teile des Central Park in Manhattan werden für die Öffentlichkeit geöffnet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Central_Park",
+    "title": "Central Park",
+    "lang": "en"
+   },
+   "notes": "The card's statement is true: Central Park covers 843 acres (3.41 km²), Monaco about 2.08 km² (en.wikipedia Monaco). Accept answers around 3.4 km².",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie viele Ferkel wurden am Set von Ein Schweinchen namens Babe eingesetzt: 4, 26 oder 48?",
+   "de": "Wie viele Ferkel wurden am Set von Ein Schweinchen namens Babe eingesetzt?",
+   "en": "How many piglets were used on the set of Babe?",
+   "reworked": true,
+   "answerDe": "48",
+   "answerEn": "48",
+   "timeline": {
+    "kind": "event",
+    "start": "1995",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Release of the film Babe, whose title pig was played by 48 Large White piglets",
+    "labelDe": "Kinostart von „Ein Schweinchen namens Babe“, dessen Titelschwein von 48 Ferkeln gespielt wurde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Babe_(film)",
+    "title": "Babe (film)",
+    "lang": "en"
+   },
+   "notes": "Large White piglets grow so fast that 48 of the right size were used over the shoot, plus an animatronic double.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt das Land, das im 17. und 18. Jahrhundert eine Bartsteuer erhob?",
+   "de": "Wie heißt das Land, das im 17. und 18. Jahrhundert eine Bartsteuer erhob?",
+   "en": "What is the name of the country that levied a beard tax in the 17th and 18th centuries?",
+   "reworked": false,
+   "answerDe": "Russland",
+   "answerEn": "Russia",
+   "timeline": {
+    "kind": "period",
+    "start": "1698",
+    "end": "1772",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Russia's beard tax, introduced by Tsar Peter I and dropped by Catherine II",
+    "labelDe": "Russlands Bartsteuer, eingeführt von Zar Peter I. und von Katharina II. aufgegeben"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bartsteuer",
+    "title": "Bartsteuer",
+    "lang": "de"
+   },
+   "notes": "Other places taxed beards at other times (e.g. a reputed English beard tax in the 16th century), but the 1698–1772 tax is Russia's.",
+   "domain": "history",
+   "sub": "early-modern"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Maler baute 1887 auf dem Weg in die Südsee am Panamakanal mit: Paul Gauguin, Edgar Degas oder Claude Monet?",
+   "de": "Welcher französische Maler arbeitete 1887 als Arbeiter beim Bau des Panamakanals mit?",
+   "en": "Which French painter worked as a labourer on the construction of the Panama Canal in 1887?",
+   "reworked": true,
+   "answerDe": "Paul Gauguin",
+   "answerEn": "Paul Gauguin",
+   "timeline": {
+    "kind": "event",
+    "start": "1887",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Paul Gauguin travels to Panama and works on the canal construction before moving on to Martinique",
+    "labelDe": "Paul Gauguin reist nach Panama und arbeitet beim Kanalbau, bevor er nach Martinique weiterzieht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Paul_Gauguin",
+    "title": "Paul Gauguin",
+    "lang": "de"
+   },
+   "notes": "The card's \"auf dem Weg in die Südsee\" is loose: the 1887 trip went to Panama and Martinique; Gauguin only left for Tahiti in 1891. The rework drops that phrase.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Das Wort „Sonar” ist ein Akronym, das sich aus welchen englischen Wörtern zusammensetzt?",
+   "de": "Das Wort „Sonar” ist ein Akronym, das sich aus welchen englischen Wörtern zusammensetzt?",
+   "en": "The word \"sonar\" is an acronym made up of which English words?",
+   "reworked": false,
+   "answerDe": "Sound Navigation and Ranging",
+   "answerEn": "Sound Navigation and Ranging",
+   "timeline": {
+    "kind": "event",
+    "start": "1913",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "German physicist Alexander Behm patents an echo sounder, an early form of sonar",
+    "labelDe": "Der deutsche Physiker Alexander Behm erhält ein Patent auf ein Echolot, eine frühe Form des Sonars"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sonar",
+    "title": "Sonar",
+    "lang": "en"
+   },
+   "notes": "Also given as \"sonic navigation and ranging\".",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welchem Land liegt der längste Wanderweg der Welt: Russland, Australien oder Kanada?",
+   "de": "In welchem Land liegt der längste Wanderweg der Welt?",
+   "en": "In which country is the world's longest hiking trail?",
+   "reworked": true,
+   "answerDe": "Kanada",
+   "answerEn": "Canada",
+   "timeline": {
+    "kind": "founding",
+    "start": "1992",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Trans Canada Trail is conceived, now the world's longest recreational trail network at over 28,000 km",
+    "labelDe": "Der Trans Canada Trail wird ins Leben gerufen – heute mit über 28.000 km das längste Freizeitwegenetz der Welt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Trans_Canada_Trail",
+    "title": "Trans Canada Trail",
+    "lang": "en"
+   },
+   "notes": "The Trans Canada Trail (The Great Trail) is a multi-use network of greenways, waterways and roads, not a pure footpath.",
+   "domain": "everyday",
+   "sub": "leisure"
+  }
+ ]
+}

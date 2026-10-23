@@ -1,0 +1,242 @@
+{
+ "article": "a2094",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Frederick_the_Great",
+   "title": "Frederick the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:57.960Z",
+   "snapshot": "ba5760f05d34714105e8f545d754b50db4dc34e4e868c9ddc53f114760244876"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Schmidt",
+   "title": "Helmut Schmidt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:39.615Z",
+   "snapshot": "3c1f7cc6d4e9754449891d30459073c5fe2363028e3dd1c44744d478df6a39b7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Arsenio_Hall_Show",
+   "title": "The Arsenio Hall Show – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:59.051Z",
+   "snapshot": "931fe710a0a3aa78987a673ed220c3efe2d307e5be97a484372872ab53207f49"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+   "title": "Albert Einstein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:51.891Z",
+   "snapshot": "a6f2048f2fd48427b0b0ee1924ffbf08c6f3c0380b7465159b29c00c191d8a45"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Albert_Schweitzer",
+   "title": "Albert Schweitzer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:00.004Z",
+   "snapshot": "e898d7690a002f251bc97bc57bc8fd9a3fee0408833784290b8450c97cd667d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "flute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "piano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "saxophone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "violin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "organ",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:21.250Z",
+   "target": "f10466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was a talented musician and composer in his own right, playing the transverse flute, and composing 121 sonatas for flute and continuo, four concertos for flute and strings, four sinfonias, three military marches and seven arias.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flute” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:21.250Z",
+   "target": "f10467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schmidt was a talented pianist and recorded piano concertos of both Mozart and Bach with German pianist and conductor Christoph Eschenbach.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “piano” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:21.250Z",
+   "target": "f10468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In June 1992, then-presidential candidate Bill Clinton (who was a fan of the show) was a guest on the show, playing \"Heartbreak Hotel\" on the saxophone (causing Arsenio to quip, \"It's nice to see a Democrat blow something besides the election\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “saxophone” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:21.250Z",
+   "target": "f10469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "His mother played the piano reasonably well and wanted her son to learn the violin, not only to instill in him a love of music but also to help him assimilate into German culture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “violin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:21.250Z",
+   "target": "f10470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As a music scholar and organist, he studied the music of German composer Johann Sebastian Bach and influenced the Organ Reform Movement (Orgelbewegung).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “organ” is on the snapshot of s5"
+  }
+ ]
+}

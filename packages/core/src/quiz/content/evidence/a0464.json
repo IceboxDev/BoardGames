@@ -1,0 +1,482 @@
+{
+ "article": "a0464",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pandora's_box",
+   "title": "Pandora's box – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:06.896Z",
+   "snapshot": "aae2457ddc3937407d7bfaeb9a9e583df4df2413da49382e08f5245f3742649b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Works_and_Days",
+   "title": "Works and Days – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:07.897Z",
+   "snapshot": "e1ee28fd33cd4cb5514f7b787d9b7a4f268d1a5fd07179ac0342639449f33e7b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Achilles'_heel",
+   "title": "Achilles' heel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:08.787Z",
+   "snapshot": "559948f804b84e2db4f493f04064cb006442863def6d7fe9f0bc3e75e0403ec4"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/nectar",
+   "title": "nectar – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ambrosia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:09.823Z",
+   "snapshot": "081b4a5b9c8bec5730b2c5f862605617d66b1e8257f096f586d6c631df40f845"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sisyphus_(Titian)",
+   "title": "Sisyphus (Titian) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:10.819Z",
+   "snapshot": "4b4aef2af722730cdf99a3d5e5e11fbfdeb5bf76c51c478577ee9f4ecc6b4345"
+  },
+  "s7": {
+   "url": "https://www.worldhistory.org/Achilles/",
+   "title": "Achilles – World History Encyclopedia",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:19.837Z",
+   "snapshot": "0347975eb82d44f80b9ecddb2f9a4f274be8a7501f97731361255c1a7a30a062"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Sisyphus",
+   "title": "Sisyphus – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:56:35Z"
+  },
+  "s9": {
+   "url": "https://www.worldhistory.org/Sisyphus/",
+   "title": "Sisyphus – World History Encyclopedia",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:20.562Z",
+   "snapshot": "b5aeeebb57fb13c0738ab522fd2c6cef463d11f2804a0ddd26c9537d762295a4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The heel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nectar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nectar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 21"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A boulder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:52.626Z",
+   "target": "f02316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Though she hastened to close the container, only one thing was left behind – usually translated as Hope, though it could also have the pessimistic meaning of \"deceptive expectation\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hope” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:52.626Z",
+   "target": "f02317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the Theogony, Pandora and the \"tribe of women\" had been sent as a plague upon man in punishment for Prometheus's attempt to deceive Zeus of his deserved portion when men and gods were dividing a feast, and for his subsequent theft of fire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fire” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:52.626Z",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The heel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The heel”, “Die Ferse”, “пятка”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:52.626Z",
+   "target": "f02319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ambrosia is very closely related to nectar, the Greek gods' other form of sustenance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nectar” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:52.626Z",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A boulder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“A boulder”, “Einen Felsblock”, “камень”) on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:56:33Z",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "his mother had dipped the infant Achilles in the river Styx, holding onto him by his heel, and he became invulnerable where the waters touched him",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:56:34Z",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of course, the arrow hit the only vulnerable place, the heel, and so Achilles was sent down to Hades.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:56:35Z",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The gods condemned him to push an immense boulder up a hill only for it to roll back down every time it neared the top, repeating this action for eternity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:56:36Z",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Zeus dealt him the eternal punishment of forever rolling a boulder up a hill in the depths of Hades",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:56:37Z",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bracing himself and thrusting with hands and feet he pushed the boulder uphill to the top.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Homer, Odyssey 11 (Rieu translation) quoted on the page."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:15.089Z",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "his mother had dipped the infant Achilles in the river Styx, holding onto him by his heel, and he became invulnerable where the waters touched him",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:15.089Z",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of course, the arrow hit the only vulnerable place, the heel, and so Achilles was sent down to Hades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:15.089Z",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bracing himself and thrusting with hands and feet he pushed the boulder uphill to the top.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:15.089Z",
+   "target": "f02318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of course, the arrow hit the only vulnerable place, the heel, and so Achilles was sent down to Hades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The heel” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:15.089Z",
+   "target": "f02320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Sisyphus ultimately got his comeuppance when Zeus dealt him the eternal punishment of forever rolling a boulder up a hill in the depths of Hades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “A boulder” is on the snapshot of s9"
+  }
+ ]
+}

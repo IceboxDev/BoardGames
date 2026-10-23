@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-269",
+ "image": "IMG20261007173404.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt das Wort, das sowohl ein deutsches Mittelgebirge bezeichnet, als auch das Material, aus dem Bernstein ist?",
+   "de": "Wie heißt das Wort, das sowohl ein deutsches Mittelgebirge bezeichnet, als auch das Material, aus dem Bernstein ist?",
+   "en": "What is the word that names both a German low mountain range and the material amber is made of?",
+   "reworked": false,
+   "answerDe": "Harz",
+   "answerEn": "Harz (resin)",
+   "timeline": {
+    "kind": "era",
+    "start": "-50000000",
+    "end": "-35000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Baltic amber forms from fossil tree resin in the Eocene, roughly 50 to 35 million years ago",
+    "labelDe": "Baltischer Bernstein entsteht im Eozän vor etwa 50 bis 35 Millionen Jahren aus fossilem Baumharz"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bernstein",
+    "title": "Bernstein",
+    "lang": "de"
+   },
+   "notes": "Bernstein is fossil Harz (resin); the Harz is the highest mountain range in northern Germany (de.wikipedia Harz (Mittelgebirge)). English answer keeps the German word, since the pun only works in German.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie lautete der Name der Rundfunkanstalt, die 1946 von der Militäradministration in Berlins amerikanischem Sektor gegründet wurde?",
+   "de": "Wie lautete der Name der Rundfunkanstalt, die 1946 von der Militäradministration in Berlins amerikanischem Sektor gegründet wurde?",
+   "en": "What was the name of the broadcaster founded in 1946 by the military administration in Berlin's American sector?",
+   "reworked": false,
+   "answerDe": "RIAS (Rundfunk im amerikanischen Sektor)",
+   "answerEn": "RIAS (Radio in the American Sector)",
+   "timeline": {
+    "kind": "founding",
+    "start": "1946-02-07",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The US broadcaster in Berlin goes on air as wire radio DIAS, renamed RIAS on 5 September 1946",
+    "labelDe": "Der US-Sender in Berlin geht als Drahtfunk DIAS auf Sendung, ab 5. September 1946 unter dem Namen RIAS"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/RIAS",
+    "title": "RIAS",
+    "lang": "de"
+   },
+   "notes": "It started on 7 Feb 1946 as DIAS (Drahtfunk im amerikanischen Sektor) and broadcast as RIAS from 5 Sep 1946; RIAS is the expected answer.",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 3,
+   "cardDe": "Was wurde 1993 in Deutschland reformiert: Rechtschreibung, Flensburger Punkteregister oder Postleitzahlen?",
+   "de": "Welches Nummernsystem der Post wurde 1993 in Deutschland reformiert und auf fünf Stellen umgestellt?",
+   "en": "Which postal numbering system was reformed in Germany in 1993 and switched to five digits?",
+   "reworked": true,
+   "answerDe": "Die Postleitzahlen",
+   "answerEn": "Postal codes",
+   "timeline": {
+    "kind": "event",
+    "start": "1993-07-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Germany introduces new five-digit postal codes, replacing the two four-digit systems of East and West",
+    "labelDe": "Deutschland führt die neuen fünfstelligen Postleitzahlen ein und ersetzt die beiden vierstelligen Systeme aus Ost und West"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Postleitzahl_(Deutschland)",
+    "title": "Postleitzahl (Deutschland)",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked; the other options were Rechtschreibung and Flensburger Punkteregister.",
+   "domain": "society",
+   "sub": "society"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt der Autor, der Die Geschichte von dem kleinen Muck schrieb?",
+   "de": "Wie heißt der Autor, der Die Geschichte von dem kleinen Muck schrieb?",
+   "en": "What is the name of the author who wrote The Story of Little Muck?",
+   "reworked": false,
+   "answerDe": "Wilhelm Hauff",
+   "answerEn": "Wilhelm Hauff",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1802-11-29",
+    "end": "1827-11-18",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Wilhelm Hauff, German writer of fairy tales such as Little Muck (1802–1827)",
+    "labelDe": "Wilhelm Hauff, deutscher Schriftsteller von Märchen wie Der kleine Muck (1802–1827)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Wilhelm_Hauff",
+    "title": "Wilhelm Hauff",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wofür steht die Abkürzung IP in der IP-Adresse eines Computers?",
+   "de": "Wofür steht die Abkürzung IP in der IP-Adresse eines Computers?",
+   "en": "What does the abbreviation IP stand for in a computer's IP address?",
+   "reworked": false,
+   "answerDe": "Internet Protocol",
+   "answerEn": "Internet Protocol",
+   "timeline": {
+    "kind": "creation",
+    "start": "1981-09",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RFC 791 specifies the Internet Protocol version 4, which defines 32-bit IP addresses",
+    "labelDe": "RFC 791 spezifiziert das Internet Protocol Version 4 mit seinen 32-Bit-IP-Adressen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Internet_Protocol",
+    "title": "Internet Protocol",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welche Kategorie gehört nicht zum Leichtathletik-Wettbewerb der Bundesjugendspiele: schnell laufen, weit laufen oder ausdauernd laufen?",
+   "de": "Welche Laufkategorie gehört neben „schnell laufen“ zum Leichtathletik-Wettbewerb der Bundesjugendspiele?",
+   "en": "Besides “running fast”, which running category is part of the athletics competition (Wettbewerb) of Germany's Federal Youth Games?",
+   "reworked": true,
+   "answerDe": "Ausdauernd laufen",
+   "answerEn": "Endurance running (“ausdauernd laufen”)",
+   "timeline": {
+    "kind": "event",
+    "start": "2001",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Bundesjugendspiele are reformed, adding the four-area athletics Wettbewerb as an alternative to the classic contest",
+    "labelDe": "Die Bundesjugendspiele werden reformiert: Der Leichtathletik-Wettbewerb mit vier Bereichen kommt als Alternative zum Wettkampf hinzu"
+   },
+   "source": {
+    "url": "https://lvnordrhein.de/schulsport/schulsportprogramm/bundesjugendspiele/leichtathletik-wettbewerb-in-den-bjs",
+    "title": "Leichtathletik-Wettbewerb in den Bundesjugendspielen (Grundschule)",
+    "lang": "de"
+   },
+   "notes": "The card's odd one out is „weit laufen“; the four areas are schnell laufen, weit/hoch springen, weit werfen/stoßen and ausdauernd laufen. Reform year 2001 from de.wikipedia Bundesjugendspiele.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

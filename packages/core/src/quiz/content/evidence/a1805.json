@@ -1,0 +1,481 @@
+{
+ "article": "a1805",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tennis_scoring_system",
+   "title": "Tennis scoring system – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:40.614Z",
+   "snapshot": "7ea921993c9ed1e42458c305d534a6485f52ecc3530cc0c60daab9c24d8e87af"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tennis",
+   "title": "Tennis",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:23:38.081Z",
+   "snapshot": "8eb42a902be0c95185591f52d4a94764c4f1845932ed2ee3487ce7982f00fcce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pancho_Gonzales",
+   "title": "Pancho Gonzales – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:41.515Z",
+   "snapshot": "10f4d33076825d217a4209357fd7e5aa0b83ff692b28e8f19fc179741e001b14"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Isner%E2%80%93Mahut_match_at_the_2010_Wimbledon_Championships",
+   "title": "Isner–Mahut match at the 2010 Wimbledon Championships – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:42.524Z",
+   "snapshot": "41952a247ec615b865854d640e8829424d83d72cbd0a226fc3dcc970625064bd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ace_(tennis)",
+   "title": "Ace (tennis) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:43.647Z",
+   "snapshot": "2917b55c54bf1d73efcbd8861de7d7ad1ea693ba38c59c3c4c0738913bde13d8"
+  },
+  "s6": {
+   "url": "https://www.ebsco.com/research-starters/sports-and-leisure/tennis",
+   "title": "Tennis – Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:35.294Z",
+   "snapshot": "54ec6104e952704a1960656bf13d4d3fc58aea7c3afb358689b9842ba72ea878"
+  },
+  "s7": {
+   "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/tennis-scoring-rules.html",
+   "title": "Tennis Scoring: Points, Sets & Games",
+   "publisher": "USTA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:35.439Z",
+   "snapshot": "eb49870be9590dfe9ca09e699905284d6d4248bc80ffb44f87003feb3fa7e96e"
+  },
+  "s8": {
+   "url": "https://olympics.ie/introduction-to-tennis",
+   "title": "Introduction to Tennis",
+   "publisher": "Olympic Federation of Ireland",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:37.685Z",
+   "snapshot": "893d47075e668597f9593ff9043bef64ec88e75b04525d168fbb86d58ceae657"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tie-break",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deuce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Einstand",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-196"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Advantage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Break",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:25.041Z",
+   "target": "f09021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Australian Open first created the format in 2001, the US Open adopted it in 2003, and the French Open adopted it in 2007, while Wimbledon continues to use a regular tie-break set -except for the 2024 edition where delays caused by weather conditions lead to adopting match tiebreak scoring.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.041Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tie-break” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:25.041Z",
+   "target": "f09022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "However, if each player has won three points, the score is called as \"deuce\" rather than \"40 all\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.041Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deuce” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:25.041Z",
+   "target": "f09022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die No-Ad-Regelung bedeutet, dass beim Spielstand „Einstand“ (40:40) der nachfolgende Ballwechsel über das Spiel entscheidet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.041Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Einstand” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:25.041Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Advantage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Advantage”, “Vorteil”, “преимущество”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:25.041Z",
+   "target": "f09024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Following a six-hour semifinal match between Kevin Anderson and Isner at the men's singles semifinals, the 2019 tournament introduced a tie break when the score in the fifth set (third set for women's matches) reaches 12–12.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.041Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Break” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:25.041Z",
+   "target": "f09025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In tennis, an ace is a legal serve that is not touched by the receiver, winning the point for the server.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.041Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ace” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:19Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "if the score ties at 40-40 (called “deuce”), the next point is identified as the “advantage” of the scoring player (“ad in” if the server scores, “ad out” if the receiver scores)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:47:21Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "If the team with the advantage (Ad-In or Ad-Out) wins another point, they win the game, or it goes back to deuce.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:47:23Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In case of a 40-40 tie (deuce), the athlete or pair must win two subsequent points (advantage, “game”).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:13.066Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "if the score ties at 40-40 (called “deuce”), the next point is identified as the “advantage” of the scoring player (“ad in” if the server scores, “ad out” if the receiver scores)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:13.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:13.066Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "If the team with the advantage (Ad-In or Ad-Out) wins another point, they win the game, or it goes back to deuce.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:13.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:13.066Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In case of a 40-40 tie (deuce), the athlete or pair must win two subsequent points (advantage, “game”).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:13.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:13.066Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "However, because the winner must win by two, if the score ties at 40-40 (called “deuce”), the next point is identified as the “advantage” of the scoring player (“ad in” if the server scores, “ad out” if the receiver scores).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:13.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Advantage” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:13.066Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "If the team with the advantage (Ad-In or Ad-Out) wins another point, they win the game, or it goes back to deuce.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:13.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Advantage” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:13.066Z",
+   "target": "f09023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In case of a 40-40 tie (deuce), the athlete or pair must win two subsequent points (advantage, “game”).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:13.066Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Advantage” is on the snapshot of s8"
+  }
+ ]
+}

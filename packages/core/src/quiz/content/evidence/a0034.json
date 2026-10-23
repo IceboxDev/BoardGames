@@ -1,0 +1,438 @@
+{
+ "article": "a0034",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hong_Kong",
+   "title": "Hong Kong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:26.679Z",
+   "snapshot": "c4f290037c9685a7dd7e5b3809b617238629521483c23d48df3043d279ef391e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1819_Singapore_Treaty",
+   "title": "1819 Singapore Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:27.468Z",
+   "snapshot": "3e8980e36de67bd3b16fc566be35613e257a9daa7372ca98b73be5d5f96795ee"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Nanking",
+   "title": "Treaty of Nanking – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:28.583Z",
+   "snapshot": "e9ede88332a50f13e382625664a13368ccb8274ff32cb9bd217423c27d57a1bf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Handover_of_Macau",
+   "title": "Handover of Macau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:29.577Z",
+   "snapshot": "4c55cfa5cc712ed32d33b27ac4f02e6f47e700cc14ed57eced71901218d97c98"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Macau",
+   "title": "Macau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:26.977Z",
+   "snapshot": "25364d2a5756d4d4f7a83a7217d2d5283faa2978f52cb3bb4be64f138411b27d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/List_of_capitals_of_India",
+   "title": "List of capitals of India – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:30.441Z",
+   "snapshot": "a6dd9e34656ccbd0fb93d4675ec42c161df82f23501cc0ec45ce9354682e528c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Founding_of_modern_Singapore",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:31.456Z",
+   "snapshot": "3e8980e36de67bd3b16fc566be35613e257a9daa7372ca98b73be5d5f96795ee"
+  },
+  "s8": {
+   "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Calcutta",
+   "title": "1911 Encyclopædia Britannica/Calcutta",
+   "publisher": "Encyclopædia Britannica (11th ed., via Wikisource)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:25.716Z",
+   "snapshot": "97211ea0d77998507e0d1e1d35ea1695355eed8bef693204361310c8d7ff26f4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hong Kong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00167",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Singapore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00168",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shanghai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Macau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Macau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-116"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kolkata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.172Z",
+   "target": "f00166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hong Kong is a special administrative region of China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hong Kong” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.172Z",
+   "target": "f00167",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The signing of the Treaty of Singapore on 6 February 1819 is officially recognised as the founding of modern-day Singapore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Singapore” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.172Z",
+   "target": "f00168",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Four additional \"treaty ports\" opened for foreign trade alongside Canton (Shameen Island from 1859 until 1943): Xiamen (or Amoy; until 1930), Fuzhou, Ningbo and Shanghai (until 1943), where foreign merchants were to be allowed to trade with anyone they wished.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shanghai” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.172Z",
+   "target": "f00169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The handover of Macau from the Portuguese Republic to the People's Republic of China (PRC) officially occurred at midnight on 20 December 1999.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macau” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:40.172Z",
+   "target": "f00169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Macau (chinesisch 澳門 / 澳门, Pinyin Àomén, Jyutping Ou3mun4*2, englisch Macao; portugiesisch Macau, Abk.: 澳 / 澳) ist eine etwa 50 Kilometer westlich von Hongkong gelegene Sonderverwaltungsregion der Volksrepublik China.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macau” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:40.172Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kolkata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Kolkata”, “Kalkutta”, “Калькутта”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:22:50Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "During the British Raj , until 1911, Calcutta was the capital of India.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:22:51Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The current capital city is New Delhi , which replaced Calcutta in 1911.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:22:52Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "CALCUTTA, the capital of British India and also of the province of Bengal.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Contemporary (pre-transfer) reference confirming Calcutta's status; the 1911 Delhi Durbar moved the capital."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:24:07Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "During the British Raj, until 1911, Calcutta was the capital of India.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supersedes e13/e14, whose quotes carried a spacing artefact."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:55.741Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "CALCUTTA, the capital of British India and also of the province of Bengal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:55.741Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "During the British Raj, until 1911, Calcutta was the capital of India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:55.741Z",
+   "target": "f00170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "See also Kolkata on Wikipedia; and our 1911 Encyclopædia Britannica disclaimer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kolkata” is on the snapshot of s8"
+  }
+ ]
+}

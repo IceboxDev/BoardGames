@@ -1,0 +1,344 @@
+{
+ "article": "a1646",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Winnetou",
+   "title": "Winnetou – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:30.569Z",
+   "snapshot": "1527ec770032f8aca526c782655429a9645af176d71b905ac5310f6b01a6a7e4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Karl_May",
+   "title": "Karl May – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:31.721Z",
+   "snapshot": "3271d651cb18a276fbdb49614f5db3a1068dadd7a8ed25c8e48cd111d0873857"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Figuren_aus_Karl_Mays_Werken",
+   "title": "Figuren aus Karl Mays Werken – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:32.701Z",
+   "snapshot": "c6209bc3676955e4e69a95f6bb54247cf3d3f185ae264e678c4837026ffb6416"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Orientzyklus",
+   "title": "Orientzyklus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:33.477Z",
+   "snapshot": "2ca43af6676613a4a95f58c21894d935feca1f8a4ebf7c8dcebc4eeb416409c4"
+  },
+  "s5": {
+   "url": "https://karl-may-wiki.de/index.php/Amerikareise",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:32.050Z",
+   "snapshot": "76e5c8432b93a1a82a8866bb8ddf0c1a9a74481885dc840f236ce1088535a309"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nscho-tschi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c138"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winnetou",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Intschu tschuna",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Intschu tschuna",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sam Hawkens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hadschi Halef Omar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "USA",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "USA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-232/4, u07: False: May travelled to the Orient (1899–1900) and with Klara to the USA in 1908 (New York 15 Sept, Albany, Buffalo/Niagara, Lawrence lecture 18 Oct, about six weeks in America)."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f12666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "USA",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f08226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Pflege von Old Shatterhand übernimmt Winnetous Schwester Nscho-tschi (Schöner Tag).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nscho-tschi” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f08227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winnetou ist eine Figur aus dem gleichnamigen Roman und anderen Werken des deutschen Autors Karl May (1842–1912), die im sogenannten Wilden Westen spielen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winnetou” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f08228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Intschu tschuna (Gute Sonne), der Häuptling aller Apachen, sein Sohn Winnetou (laut Karl May: Brennendes Wasser) und der aus Deutschland stammende Klekih-petra (Weißer Vater) kommen, um die Eisenbahn-Surveyors friedlich darauf hinzuweisen, dass dies ihr Land sei, und Intschu tschuna verbietet den",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Intschu tschuna” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f08228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Intschu tschuna",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Intschu tschuna”, “Инчу-Чуна”) on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f08229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sam Hawkens ist der Gefährte und erster Wildwest-Lehrer des Ich-Erzählers, der in seiner Anwesenheit den Namen Old Shatterhand erhält, und begleitet diesen auf seinem ersten, aber auch bei späteren Abenteuern (Old Firehand (1875), Der Oelprinz (1877, nicht identisch mit der Jugenderzählung), Im",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sam Hawkens” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f08230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kara Ben Nemsi und sein Diener und späterer Freund Hadschi Halef Omar reiten durch die Sahara Tunesiens.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hadschi Halef Omar” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:57.811Z",
+   "target": "f12666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Frankreich, Großbritannien und den USA ist er beinahe unbekannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:57.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “USA” is on the snapshot of s2"
+  }
+ ]
+}

@@ -1,0 +1,280 @@
+{
+ "article": "a0423",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dona_i_Ocell",
+   "title": "Dona i Ocell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:02.596Z",
+   "snapshot": "8691bb459ac421ef3a876de1fa2d2807e1ec379432bb052ed2a02b6fbc7238e1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eduardo_Chillida",
+   "title": "Eduardo Chillida – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:05.604Z",
+   "snapshot": "dd889e60c4139473b7c7324a68c57bb4390d4e9b063b05f26f741c759358f37c"
+  },
+  "s3": {
+   "url": "https://es.wikipedia.org/wiki/Peine_del_Viento",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T03:55:02.812Z",
+   "snapshot": "40ac2fe6debd1795e970d4f54ac62402536ba3221a34ac7f1fb493b53502283d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+   "title": "Salvador Dalí",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:03.400Z",
+   "snapshot": "2b3d22517366dc5432b50a914faa7c628a9731bc905c0a1aee0f7600a2107dd2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dal%C3%AD_Theatre_and_Museum",
+   "title": "Dalí Theatre and Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:18.905Z",
+   "snapshot": "3785f9b990fb7bc7457d5e5cae2e607428237645d34cc5610e9303c16198310d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Joan Miró",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eduardo Chillida",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eduardo Chillida",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Katalonien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-022"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "San Sebastián",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Figueres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:46.192Z",
+   "target": "f02111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dona i Ocell (Catalan: [ˈdɔnə j uˈseʎ]; \"Woman and Bird\") is a 22-metre high sculpture by Joan Miró located in the Joan Miró Park in Barcelona, Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joan Miró” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:46.192Z",
+   "target": "f02115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eduardo Chillida Juantegui (Basque: Eduardo Txillida Juantegi; 10 January 1924 – 19 August 2002) was a Spanish Basque sculptor notable for his abstract works.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eduardo Chillida” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:46.192Z",
+   "target": "f02115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "El Peine del viento XV, llamado en euskera Haizearen orrazia y conocido simplemente como Peine del viento, es un conjunto de esculturas de Eduardo Chillida sobre una obra arquitectónica del arquitecto vasco Luis Peña Ganchegui.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eduardo Chillida” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:46.192Z",
+   "target": "f10737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mai 1904 in Figueres, Katalonien, Spanien; † 23.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Katalonien” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:46.192Z",
+   "target": "f20200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Se encuentra al final de la playa de Ondarreta, en el municipio de San Sebastián, en la provincia de Guipúzcoa, en el País Vasco.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “San Sebastián” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:46.192Z",
+   "target": "f20201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Dalí Theatre and Museum (Catalan: Teatre-Museu Dalí, IPA: [teˈatɾə muˈzɛw ðəˈli]; Spanish: Teatro-Museo Dalí) is a museum dedicated to the artist Salvador Dalí in his home town of Figueres, in Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Figueres” is on the snapshot of s5"
+  }
+ ]
+}

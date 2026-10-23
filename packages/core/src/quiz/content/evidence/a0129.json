@@ -1,0 +1,482 @@
+{
+ "article": "a0129",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meiosis",
+   "title": "Meiosis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:14.257Z",
+   "snapshot": "317801c2c7e6f78e887404201aca9b1678d33c14159717be00bb54bd9de71ba4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Chromosome",
+   "title": "Chromosome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:15.102Z",
+   "snapshot": "d0b3802dad46ebc264033a4704347eee2ca3a56d0efc33c4bf050cfaab24dae4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mitosis",
+   "title": "Mitosis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:16.174Z",
+   "snapshot": "19178bcebcc1e72ae5b401e4446c72c7c2079b39778ee2568b92999e6018e077"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cohesin",
+   "title": "Cohesin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:17.187Z",
+   "snapshot": "01d605884f93a50f48bc93f97c88921673c3da318d84a8080ba628a7b8435512"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Joe_Hin_Tjio",
+   "title": "Joe Hin Tjio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:18.505Z",
+   "snapshot": "742254aba479ae7117e216444e241887ea740f1e131f2eba42bf57c66c51f9ab"
+  },
+  "s6": {
+   "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+   "title": "10.2 The Cell Cycle – Biology 2e",
+   "publisher": "OpenStax (Rice University)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:01.543Z",
+   "snapshot": "f33a8647fe9783dab0fcb4741d9c68a209dda0a749ba9c0a7ed14c69be0f8baa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Meiosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prophase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Metaphase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anaphase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Telophase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:56.767Z",
+   "target": "f00641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Meiosis ( ) is a special type of cell division of germ cells in sexually-reproducing organisms that produces the gametes: the sperm or egg cells.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meiosis” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:56.767Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prophase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Prophase”, “профаза”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:56.767Z",
+   "target": "f00643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "These stages are preprophase (specific to plant cells), prophase, prometaphase, metaphase, anaphase, and telophase.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metaphase” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:56.767Z",
+   "target": "f00644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cohesin holds sister chromatids together after DNA replication until anaphase when removal of cohesin leads to separation of sister chromatids.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anaphase” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:56.767Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Telophase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Telophase”, “телофаза”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:43Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prophase is the first stage in mitosis. The nuclear envelope begins to break down and chromosomes condense and are now visible.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "In five-phase schemes the envelope's breakdown is completed in prometaphase"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:48Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At the onset of prophase, chromatin fibers condense into discrete chromosomes that are typically visible at high magnification through a light microscope.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:16:53Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Telophase and Cytokinesis - Chromosomes arrive at opposite poles and start to decondense and become less visible. The nuclear envelope reassembles and begins to surround each new set of chromosomes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:16:57Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Both sets of chromosomes, now surrounded by new nuclear membrane, begin to \"relax\" or decondense.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Prophase is the first stage in mitosis. The nuclear envelope begins to break down and chromosomes condense and are now visible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At the onset of prophase, chromatin fibers condense into discrete chromosomes that are typically visible at high magnification through a light microscope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Telophase and Cytokinesis - Chromosomes arrive at opposite poles and start to decondense and become less visible. The nuclear envelope reassembles and begins to surround each new set of chromosomes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Both sets of chromosomes, now surrounded by new nuclear membrane, begin to \"relax\" or decondense.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "These stages are preprophase (specific to plant cells), prophase, prometaphase, metaphase, anaphase, and telophase.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Prophase” is on the snapshot of s3"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Karyokinesis, also known as mitosis, is divided into a series of phases—prophase, prometaphase, metaphase, anaphase, and telophase—that result in the division of the cell nucleus (Figure 10.6).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Prophase” is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mitosis is preceded by the S phase of interphase (during which DNA replication occurs) and is followed by telophase and cytokinesis, which divide the cytoplasm, organelles, and cell membrane of one cell into two new cells containing roughly equal shares of these cellular components.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Telophase” is on the snapshot of s3"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:15.168Z",
+   "target": "f00645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Karyokinesis, also known as mitosis, is divided into a series of phases—prophase, prometaphase, metaphase, anaphase, and telophase—that result in the division of the cell nucleus (Figure 10.6).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Telophase” is on the snapshot of s6"
+  }
+ ]
+}

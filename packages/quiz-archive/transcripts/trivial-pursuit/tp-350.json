@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-350",
+ "image": "IMG20261007174448.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welchem Land wurden 2016 wertmäßig rund 95 Prozent des Umsatzes im Einzelhandel bargeldlos abgewickelt: Großbritannien, Schweden oder Dänemark?",
+   "de": "In welchem Land wurden 2016 wertmäßig rund 95 Prozent des Umsatzes im Einzelhandel bargeldlos abgewickelt?",
+   "en": "In which country was around 95 percent of retail turnover by value paid without cash in 2016?",
+   "reworked": true,
+   "answerDe": "Schweden",
+   "answerEn": "Sweden",
+   "timeline": {
+    "kind": "event",
+    "start": "2016",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Sweden: only about 2% of the value of payments is made in cash",
+    "labelDe": "Schweden: Nur noch rund 2 % des Zahlungswerts werden bar beglichen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cashless_society",
+    "title": "Cashless society",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice options removed. The fetched page gives about 2% of the value transacted in Sweden in cash in 2016 (about 20% of retail transactions by count); the card's 95% figure is the publisher's.",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der studierte Pädagoge und Musiktherapeut, der im Jahr 1998 für Deutschland beim Eurovision Song Contest antrat?",
+   "de": "Wie heißt der studierte Pädagoge und Musiktherapeut, der im Jahr 1998 für Deutschland beim Eurovision Song Contest antrat?",
+   "en": "What is the name of the trained educator and music therapist who represented Germany at the 1998 Eurovision Song Contest?",
+   "reworked": false,
+   "answerDe": "Guildo Horn",
+   "answerEn": "Guildo Horn",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1963-02-15",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Guildo Horn, German Schlager singer, Eurovision 1998 entrant (born 1963)",
+    "labelDe": "Guildo Horn, deutscher Schlagersänger, ESC-Teilnehmer 1998 (geboren 1963)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Guildo_Horn",
+    "title": "Guildo Horn",
+    "lang": "de"
+   },
+   "notes": "Sang 'Guildo hat euch lieb!' (7th place); Diplom-Pädagoge (Universität Trier), then music therapist.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Babyschnuller gibt es in Europa bereits seit dem Mittelalter. Richtig oder falsch?",
+   "de": "Wie heißen die mit gesüßtem Brei gefüllten Stoffschnuller, die in Europa vom Spätmittelalter bis ins 18. Jahrhundert verbreitet waren?",
+   "en": "What were the cloth pacifiers filled with sweetened mash called that were common in Europe from the late Middle Ages to the 18th century?",
+   "reworked": true,
+   "answerDe": "Lutschbeutel",
+   "answerEn": "Sucking bags (Lutschbeutel)",
+   "timeline": {
+    "kind": "period",
+    "start": "1400",
+    "end": "1799",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Cloth 'sucking bags' used as pacifiers in Europe, late Middle Ages to the 18th century",
+    "labelDe": "Lutschbeutel als Stoffschnuller in Europa, vom Spätmittelalter bis ins 18. Jahrhundert"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schnuller",
+    "title": "Schnuller",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the card's statement is true — pacifiers are attested in Europe at least since the Middle Ages (15th-century altarpiece in Aschersleben).",
+   "domain": "history",
+   "sub": "medieval"
+  },
+  {
+   "category": 4,
+   "cardDe": "In welcher Stadt eröffnete Designer Giorgio Armani sein erstes eigenes Hotel: Mailand, Dubai oder Amsterdam?",
+   "de": "In welcher Stadt eröffnete Designer Giorgio Armani sein erstes eigenes Hotel?",
+   "en": "In which city did designer Giorgio Armani open his first own hotel?",
+   "reworked": true,
+   "answerDe": "Dubai",
+   "answerEn": "Dubai",
+   "timeline": {
+    "kind": "founding",
+    "start": "2010-04-27",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first Armani Hotel opens in the Burj Khalifa, Dubai",
+    "labelDe": "Das erste Armani Hotel eröffnet im Burj Khalifa in Dubai"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Armani",
+    "title": "Armani",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice options removed.",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 5,
+   "cardDe": "Ameisen können das Hundertfache ihres Körpergewichts tragen. Richtig oder falsch?",
+   "de": "Das Wievielfache ihres eigenen Körpergewichts sollen Ameisen laut einer in populärer Literatur oft wiederholten Behauptung tragen können?",
+   "en": "According to a claim often repeated in popular literature, how many times their own body weight can ants carry?",
+   "reworked": true,
+   "answerDe": "Das 100-Fache",
+   "answerEn": "100 times",
+   "timeline": {
+    "kind": "era",
+    "start": "-110000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Oldest undisputed ant fossils, from the mid-Cretaceous",
+    "labelDe": "Älteste eindeutige Ameisenfossilien, aus der mittleren Kreidezeit"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Ameisen",
+    "title": "Ameisen",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the fetched page calls the 100-times figure a popular claim that ignores scaling (muscle force grows with cross-section, weight with volume); weaver ants can cling against about 200 times their weight.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Beim FIFA-WM-Finale 2006 in Berlin war Schauspieler Armin Mueller-Stahl Stadionsprecher. Richtig oder falsch?",
+   "de": "Welcher französische Spieler wurde beim FIFA-WM-Finale 2006 in Berlin nach einem Kopfstoß gegen Marco Materazzi vom Platz gestellt?",
+   "en": "Which French player was sent off in the 2006 FIFA World Cup final in Berlin after headbutting Marco Materazzi?",
+   "reworked": true,
+   "answerDe": "Zinédine Zidane",
+   "answerEn": "Zinedine Zidane",
+   "timeline": {
+    "kind": "event",
+    "start": "2006-07-09",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Italy beat France on penalties in the World Cup final in Berlin; Zidane is sent off",
+    "labelDe": "Italien schlägt Frankreich im WM-Finale in Berlin im Elfmeterschießen; Zidane sieht Rot"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_final",
+    "title": "2006 FIFA World Cup final",
+    "lang": "en"
+   },
+   "notes": "True/false reworked to another fact about the same match: the stadium-announcer claim about Armin Mueller-Stahl could not be verified on any fetched page (almost certainly the card's 'false' answer).",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

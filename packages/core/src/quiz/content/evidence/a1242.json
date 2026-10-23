@@ -1,0 +1,752 @@
+{
+ "article": "a1242",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rosa_Parks",
+   "title": "Rosa Parks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:23.673Z",
+   "snapshot": "4e9634f3f1caffa1da2647144e9cf11c92f0fcb9512a340c5e0692814cd2581e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Letter_from_Birmingham_Jail",
+   "title": "Letter from Birmingham Jail – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:24.658Z",
+   "snapshot": "7b121f83311c555b1589715753d535d9bcff09e4c509b7d8e218a5dfe591dbc3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Muhammad_Ali",
+   "title": "Muhammad Ali – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:09.010Z",
+   "snapshot": "470ecc9dfbca96a4f74e7298c3bae338264568d606ad886fa153ee7c749aad23"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Susan_B._Anthony",
+   "title": "Susan B. Anthony – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:25.650Z",
+   "snapshot": "4b7552b7cfb0c5ad1de47e0acdca991014870c9dcbe199c3e2d50cd8b9344327"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Salt_March",
+   "title": "Salt March – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:34.071Z",
+   "snapshot": "6f5e5dd8c9efca5f567b72d4237737a7148c72077330d0a14f910aa9be3bca1d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+   "title": "Mahatma Gandhi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:24.481Z",
+   "snapshot": "76de9b09a5d69452cec19cdc25ef159bc8055b435ca1ecaf3557e546f3917d83"
+  },
+  "s7": {
+   "url": "https://www.archives.gov/education/lessons/rosa-parks",
+   "title": "An Act of Courage, The Arrest Records of Rosa Parks",
+   "publisher": "U.S. National Archives",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:54.585Z",
+   "snapshot": "0866f3cb4887463b9de308fff8db22d6fcaaf0027a8b2d1a083bb7615539f0f2"
+  },
+  "s8": {
+   "url": "https://kinginstitute.stanford.edu/letter-birmingham-jail",
+   "title": "\"Letter from Birmingham Jail\" – The Martin Luther King, Jr. Research and Education Institute",
+   "publisher": "Stanford University, King Institute",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:55.133Z",
+   "snapshot": "d1470b301a9046aea0385c6da474d8b297cc7c2087191190cb06633cfccf6d65"
+  },
+  "s9": {
+   "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html",
+   "title": "Clay Refuses Army Oath; Stripped of Boxing Crown",
+   "publisher": "The New York Times",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:54.692Z",
+   "snapshot": "6428f65d9b8e273d426923b912a8a5c6341ce34d1ae659ef4d998dbed468c110"
+  },
+  "s10": {
+   "url": "https://susanb.org/her-life/",
+   "title": "Her Life – National Susan B. Anthony Museum & House",
+   "publisher": "National Susan B. Anthony Museum & House",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:55.993Z",
+   "snapshot": "c51408ccb2a0ed4c197bb3c0df053944532f0d4883cee56a4304120629bebd82"
+  },
+  "s11": {
+   "url": "https://www.mkgandhi.org/chrono/arrestofmahatma.php",
+   "title": "Arrests of Mahatma Gandhi",
+   "publisher": "mkgandhi.org (Bombay Sarvodaya Mandal & Gandhi Research Foundation)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:54.982Z",
+   "snapshot": "983ae48e6b3bda9b798a157f6095f482c892faad0e47b31caf66e787a1f1af45"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "refusing to give up her bus seat to a white passenger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "leading a protest march in defiance of a court injunction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "refusing induction into the US Army",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "voting in the presidential election",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "breaking the British salt laws",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lawyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-099"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:53.620Z",
+   "target": "f06206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "refusing to give up her bus seat to a white passenger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“refusing to give up her bus seat to a white passenger”, “Weigerung, ihren Sitzplatz im Bus für einen weißen Fahrgast freizugeben”, “отказ уступить место в автобусе белому пассажиру”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:53.620Z",
+   "target": "f06207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "leading a protest march in defiance of a court injunction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“leading a protest march in defiance of a court injunction”, “Anführen eines Protestmarsches trotz gerichtlichen Verbots”, “руководство протестным маршем вопреки судебному запрету”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:53.620Z",
+   "target": "f06208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "refusing induction into the US Army",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“refusing induction into the US Army”, “Verweigerung der Einberufung in die US-Armee”, “отказ от призыва в армию США”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:53.620Z",
+   "target": "f06209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "voting in the presidential election",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“voting in the presidential election”, “Stimmabgabe bei der Präsidentschaftswahl”, “участие в президентских выборах”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:53.620Z",
+   "target": "f06210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "breaking the British salt laws",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“breaking the British salt laws”, “Verletzung des britischen Salzgesetzes”, “нарушение британских законов о соли”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:53.620Z",
+   "target": "f25649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mohandas Karamchand Gandhi (2 October 1869 – 30 January 1948) was an Indian lawyer, anti-colonial nationalist, and political ethicist who employed nonviolent resistance to lead the successful campaign for India's independence from British rule, and whose legacy would later inspire movements for",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:53.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lawyer” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:11Z",
+   "target": "f06206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She is best known for her 1955 refusal to move from her seat on a bus in Montgomery, Alabama, in defiance of Jim Crow racial segregation laws",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:52:13Z",
+   "target": "f06206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rosa Parks, an African American, was arrested that day for violating a city law requiring racial segregation of public buses.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "The driver had told her to move back to give up her seat; she refused."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:52:15Z",
+   "target": "f06207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On April 10, Circuit Judge W. A. Jenkins Jr. issued a blanket injunction against \"parading, demonstrating, boycotting, trespassing and picketing\". Leaders of the campaign announced they would disobey the ruling.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:52:17Z",
+   "target": "f06207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "King’s 12 April 1963 arrest for violating Alabama’s law against mass public demonstrations took place just over a week after the campaign’s commencement.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Describes the charge as a demonstration law rather than the injunction; both refer to marching despite the ban (noted in the article notes)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:52:19Z",
+   "target": "f06208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cassius Clay refused today, as expected, to take the one step forward that would have constituted induction into the armed forces.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Contemporary report, 29 April 1967."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:52:21Z",
+   "target": "f06208",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "There was no immediate Government action.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Refutes the old premise that Ali was arrested in Houston on 28 April 1967; the wording now asks why he was stripped of his title and convicted."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:52:23Z",
+   "target": "f06208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At the trial on June 20, 1967, the jury found Ali guilty after only 21 minutes of deliberation of the criminal offense of violating the Selective Service laws by refusing to be drafted.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:52:25Z",
+   "target": "f06209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anthony was arrested on November 18, 1872, by a U.S. Deputy Marshal and charged with illegally voting.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:52:28Z",
+   "target": "f06209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "1872 – Anthony is arrested for voting in the front parlor of 7 Madison Street (now 17 Madison) on November 18 and is indicted in Albany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:52:29Z",
+   "target": "f06210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "At 12.45 a.m. arrested at Karadi near Dandi for violating Salt Law, without trial was imprisoned and released on 26 January, 1931 unconditionally.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:52:31Z",
+   "target": "f06210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "However, Gandhi was arrested on the midnight of 4–5 May 1930, just days before the planned action at Dharasana.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia's Gandhi article adds he was interned under a regulation dating from 1827 (noted in the article notes)."
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She is best known for her 1955 refusal to move from her seat on a bus in Montgomery, Alabama, in defiance of Jim Crow racial segregation laws",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rosa Parks, an African American, was arrested that day for violating a city law requiring racial segregation of public buses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On April 10, Circuit Judge W. A. Jenkins Jr. issued a blanket injunction against \"parading, demonstrating, boycotting, trespassing and picketing\". Leaders of the campaign announced they would disobey the ruling.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "King’s 12 April 1963 arrest for violating Alabama’s law against mass public demonstrations took place just over a week after the campaign’s commencement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Cassius Clay refused today, as expected, to take the one step forward that would have constituted induction into the armed forces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06208",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "There was no immediate Government action.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At the trial on June 20, 1967, the jury found Ali guilty after only 21 minutes of deliberation of the criminal offense of violating the Selective Service laws by refusing to be drafted.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anthony was arrested on November 18, 1872, by a U.S. Deputy Marshal and charged with illegally voting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s4"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "1872 – Anthony is arrested for voting in the front parlor of 7 Madison Street (now 17 Madison) on November 18 and is indicted in Albany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "At 12.45 a.m. arrested at Karadi near Dandi for violating Salt Law, without trial was imprisoned and released on 26 January, 1931 unconditionally.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s11"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:55:36.073Z",
+   "target": "f06210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "However, Gandhi was arrested on the midnight of 4–5 May 1930, just days before the planned action at Dharasana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s5"
+  }
+ ]
+}

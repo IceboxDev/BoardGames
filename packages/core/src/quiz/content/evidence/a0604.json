@@ -1,0 +1,305 @@
+{
+ "article": "a0604",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/19th_European_Film_Awards",
+   "title": "19th European Film Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:38.378Z",
+   "snapshot": "7af24c4fe26408baaa77632df0f9a564aa6a7502c20d2c6c9ce2772bac3ad036"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Tin_Drum_(film)",
+   "title": "The Tin Drum (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:39.504Z",
+   "snapshot": "4bd4f1e7d05ebe80aa1e327768d23876e6c58bc94e7d327788c1739cfc07d425"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/All_Quiet_on_the_Western_Front_(2022_film)",
+   "title": "All Quiet on the Western Front (2022 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:40.473Z",
+   "snapshot": "ad6c586b0721d6262e78df4b89cf7dbcde1eb33c3e3e3ff77b2ee8a2c52b741a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Counterfeiters_(2007_film)",
+   "title": "The Counterfeiters (2007 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:41.354Z",
+   "snapshot": "c0e9ab585c8d2af3f0f4d53d8385fca21f38557cabef57843e243bcd3a29b74b"
+  },
+  "s5": {
+   "url": "https://www.oscars.org/oscars/ceremonies/2007",
+   "title": "The 79th Academy Awards | 2007",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:26.846Z",
+   "snapshot": "c78a8a05479cc3120289fa1feaaf89e7e56710cc95b3e276761671e4e2e5215e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Lives_of_Others",
+   "title": "The Lives of Others – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:37:10Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Lives of Others",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tin Drum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "All Quiet on the Western Front",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Counterfeiters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:12.958Z",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Lives of Others",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Lives of Others”, “Das Leben der Anderen”, “Жизнь других”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:12.958Z",
+   "target": "f03017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tin Drum (German: Die Blechtrommel) is a 1979 anti-war film adapted from Günter Grass's 1959 novel, directed by Volker Schlöndorff from a screenplay co-written by Schlöndorff, Jean-Claude Carrière, and Franz Seitz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tin Drum” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.958Z",
+   "target": "f03019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "All Quiet on the Western Front (German: Im Westen nichts Neues, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “All Quiet on the Western Front” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:12.958Z",
+   "target": "f03020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Counterfeiters (German: Die Fälscher) is a 2007 Austrian-German drama film written and directed by Stefan Ruzowitzky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Counterfeiters” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:36:38Z",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Foreign Language Film Winner The Lives of Others Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:37:10Z",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It stars Ulrich Mühe as Stasi Captain Gerd Wiesler",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:37:16Z",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Lives of Others won the 2007 Academy Award for Best International Feature Film.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:53:39.356Z",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Foreign Language Film Winner The Lives of Others Germany",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:39.356Z",
+   "target": "f03016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Lives of Others",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Lives of Others” is on the snapshot of s5"
+  }
+ ]
+}

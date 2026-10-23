@@ -1,0 +1,451 @@
+{
+ "article": "a2171",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Domino%27s",
+   "title": "Domino's",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:01.346Z",
+   "snapshot": "71a51f5a88448f718364c40e08f7044ad2f20b010c9a4829806c23bdb30514fd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/McDonald%27s",
+   "title": "McDonald's",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:02.157Z",
+   "snapshot": "23452aaa7e5dcb21c335eb9b577becb59b8b8c8563ef610c1a3e28d0f0c313ad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/KFC",
+   "title": "KFC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:03.032Z",
+   "snapshot": "950ae09cce594a253d0a7ba9bc5ed477298841698342b69367053c840b3f7758"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
+   "title": "Subway (restaurant) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:04.281Z",
+   "snapshot": "3e2d0dab86009b8cc293ae2817704ed3a97887e54c99a62420e1f8e2ed34e8b6"
+  },
+  "s5": {
+   "url": "https://1000logos.net/dominos-logo/",
+   "title": "Domino's Logo – 1000 Logos",
+   "publisher": "1000 Logos",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:10.636Z",
+   "snapshot": "d9d1911fbd2a88803dfcc3fc7c56658116720bc790fea5acf0195ee912469077"
+  },
+  "s6": {
+   "url": "https://logos-world.net/dominos-logo/",
+   "title": "Domino's Logo – Logos World",
+   "publisher": "Logos World",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:10.607Z",
+   "snapshot": "3110887ce40988d1c0dc9d920745d99e312e916c5c86ff67aa028abc9ce86fea"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/History_of_McDonald%27s",
+   "title": "History of McDonald's",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:10.854Z",
+   "snapshot": "6242527ebffecc7b3775a2a9ca90ac7ff4bb56d3efc2df4abdda897def6fa8c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "3 pips",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "McDonald's",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-165"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "KFC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Subway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ypsilanti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:33.170Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "3 pips",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“3 pips”, “3 Augen”, “3 точки”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.170Z",
+   "target": "f10997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "McDonald's Corporation is an American multinational fast food restaurant chain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.170Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “McDonald's” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.170Z",
+   "target": "f10998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "KFC Corporation, trading as Kentucky Fried Chicken (KFC), is an American multinational fast food restaurant chain specializing in Southern fried chicken and chicken sandwiches.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.170Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “KFC” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.170Z",
+   "target": "f10999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Subway IP LLC, trading as Subway, is an American multinational fast food restaurant franchise that specializes in submarine sandwiches (subs) and wraps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.170Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Subway” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.170Z",
+   "target": "f11000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1960, Tom Monaghan and his brother, Jim, took over the operation of DomiNick's, an existing location of a small pizza restaurant chain that had been owned by Dominick DeVarti, at 507 Cross Street (now 301 West Cross Street) in Ypsilanti, Michigan, near Eastern Michigan University.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.170Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ypsilanti” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:31:01Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "representing the three stores in 1965. Monaghan planned to add a new dot with the addition of every new store",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:31:13Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The symbol of Domino’s Pizza is a blue and red domino with three solid white dots, which symbolize the three restaurants, from which the history of the company started.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:31:20Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The logo changed accordingly: it became a domino. At first, each store had three points.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:31:28Z",
+   "target": "f10997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1940, the McDonalds opened a barbecue stand in San Bernardino.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "the 35-cent price on the printed card was not found in a fetched source"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:31:34Z",
+   "target": "f10997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "FoundedMay 15, 1940",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:20.078Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "representing the three stores in 1965. Monaghan planned to add a new dot with the addition of every new store",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:20.078Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The symbol of Domino’s Pizza is a blue and red domino with three solid white dots, which symbolize the three restaurants, from which the history of the company started.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:20.078Z",
+   "target": "f10996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The logo changed accordingly: it became a domino. At first, each store had three points.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:20.078Z",
+   "target": "f10997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1940, the McDonalds opened a barbecue stand in San Bernardino.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:20.078Z",
+   "target": "f10997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The American fast-food restaurant chain McDonald's was founded in 1940 by the McDonald brothers, Richard and Maurice, and has since grown to the world's largest restaurant chain by revenue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “McDonald's” is on the snapshot of s7"
+  }
+ ]
+}

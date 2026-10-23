@@ -8,7 +8,7 @@ import { z } from "zod";
 import { CARD_ID_RE, PLACE_ID_RE } from "../../trainers/geography/catalog.ts";
 import { ContinentIdSchema } from "../../trainers/geography/content-types.ts";
 import { DateKeyStringSchema } from "./collection.ts";
-import { SrsStateKindSchema } from "./quiztopia.ts";
+import { SrsStateKindSchema } from "./trainer-quiz.ts";
 
 export const GeoCardIdSchema = z.string().regex(CARD_ID_RE, "Expected a card id like co:DEU:s1");
 export const GeoPlaceIdSchema = z.string().regex(PLACE_ID_RE, "Expected a place id like co:DEU");

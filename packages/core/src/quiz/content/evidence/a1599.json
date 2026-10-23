@@ -1,0 +1,433 @@
+{
+ "article": "a1599",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Knossos",
+   "title": "Knossos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:03.977Z",
+   "snapshot": "2401dae23eb4124e173334a6df0849f353b46bcd49c4a1eb66cf6ad9e2b6fddc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Phaistos_Disc",
+   "title": "Phaistos Disc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:05.040Z",
+   "snapshot": "3a4e27178a804b840ec2b620e6b235e86ea5cdccf353b7bed1f943511915431f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Minoan_eruption",
+   "title": "Minoan eruption – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:06.026Z",
+   "snapshot": "89b91e8ee8b2f442db156eea1b29aa3c48ab38614d0f6f924e413c10884c634a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Malia_Pendant",
+   "title": "Malia Pendant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:06.949Z",
+   "snapshot": "6062aefc3b2954e7bafeeeb006bf193ccd8ba1e656e5885b5dcc04b6090264f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gortyn_code",
+   "title": "Gortyn code – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:07.969Z",
+   "snapshot": "87666b105a19fe0c2d3e2cec7148af4b8695205a747c6a8dd67009ebf9ab3ee1"
+  },
+  "s6": {
+   "url": "https://www.worldhistory.org/Phaistos/",
+   "title": "Phaistos",
+   "publisher": "World History Encyclopedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:03.181Z",
+   "snapshot": "0de6b0d80e985bde3c900ff79ca63ff1ae0f99ef7da7869bc361704a55634c6d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Phaistos",
+   "title": "Phaistos – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:05.559Z",
+   "snapshot": "508612183254c6909609c098e63b5e6dc993fc18bad79b62347def6fd456c11b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Knossos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Phaistos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Akrotiri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Malia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gortyn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:49.125Z",
+   "target": "f07991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Knossos (; Ancient Greek: Κνωσσός, romanized: Knōssós; Greek: Κνωσός, romanized: Knōsós; Linear B: 𐀒𐀜𐀰 Ko-no-so) is an archaeological site and ancient urban centre in Crete, Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knossos” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:49.125Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Phaistos Disc, or Phaistos Disk, is a disc of fired clay from the island of Crete, Greece, possibly from the middle or late Minoan Bronze Age (second millennium BC), bearing a text in an unknown script and language.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phaistos” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:49.125Z",
+   "target": "f07993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It destroyed the Minoan settlement at Akrotiri, as well as communities and agricultural areas on nearby islands and the coast of Crete with subsequent earthquakes and tsunamis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Akrotiri” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:49.125Z",
+   "target": "f07994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Malia Pendant is a gold pendant found in a tomb in 1930 at Chrysolakkos, Malia, Crete.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:49.125Z",
+   "target": "f07995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Gortyn code (also called the Great Code) was a legal code that was the codification of the civil law of the ancient Greek city-state of Gortyn in southern Crete.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gortyn” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:48Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "was second only to Knossos in size and importance",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:51Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Despite much scholarly endeavour and debate, these symbols remain undeciphered.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23",
+   "note": "As of 2026."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:50:55Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The palace was around 2/3 as large as the palace at Knossos.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:50:58Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "scholarly attempts at decipherment are thought to be unlikely to succeed unless more examples of the signs turn up elsewhere",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:36.919Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Despite much scholarly endeavour and debate, these symbols remain undeciphered.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:36.919Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The palace was around 2/3 as large as the palace at Knossos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:36.919Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "scholarly attempts at decipherment are thought to be unlikely to succeed unless more examples of the signs turn up elsewhere",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:36.919Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phaistos - World History Encyclopedia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Phaistos” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:36.919Z",
+   "target": "f07992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Phaistos (Greek: Φαιστός, pronounced [feˈstos]; Ancient Greek: Φαιστός, pronounced [pʰai̯stós], Linear B: 𐀞𐀂𐀵 Pa-i-to; Linear A: 𐘂𐘚𐘄 Pa-i-to), also transliterated as Phaestos, Festos and Latin Phaestus, is a Bronze Age archaeological site at modern Faistos, a municipality in south central",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Phaistos” is on the snapshot of s7"
+  }
+ ]
+}

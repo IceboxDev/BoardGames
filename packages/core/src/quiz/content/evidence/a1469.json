@@ -1,0 +1,249 @@
+{
+ "article": "a1469",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Brooklyn_Dodgers_1,_Boston_Braves_1_(26_innings)",
+   "title": "Brooklyn Dodgers 1, Boston Braves 1 (26 innings) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:23.484Z",
+   "snapshot": "2bfc274c3213093c6a28082f8f102105134dca20d3bf38a183ba640dba0b6368"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hank_Aaron",
+   "title": "Hank Aaron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:24.606Z",
+   "snapshot": "1b0c4b8effe2ad8f7ad3c1b13b63ddc63c029500833ff7f5f71146c285cd8768"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Baseball_field",
+   "title": "Baseball field – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:25.533Z",
+   "snapshot": "df0691c575a5513d867b51fefcef3ae089860809cd1cf9628b1bfef10a53fba1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nolan_Ryan",
+   "title": "Nolan Ryan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:26.513Z",
+   "snapshot": "ab8df0d0da9b4c49478ec1dc7e6773a84cb63150dc09fd13d350298a78d157be"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1903_World_Series",
+   "title": "1903 World Series – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:27.479Z",
+   "snapshot": "fc993f42d38a228533616eb685749355ca3866137dc3c76853386a9015b72995"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/World_Series",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:28.450Z",
+   "snapshot": "5dc91fa1c3868a694efb5ed14014f64232dfc6a57810cc35ad1b5385a6773a29"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Inning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Home run",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pitcher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Strikeout",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "World Series",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:30.617Z",
+   "target": "f07341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brooklyn scored a run in the fifth inning, and Boston in the sixth; thereafter, the pitchers became increasingly dominant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inning” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:30.617Z",
+   "target": "f07342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "During his time in Major League Baseball, and especially during his run for the home run record, Aaron and his family endured extensive racist threats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Home run” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:30.617Z",
+   "target": "f07343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Near the center of the square is an artificial hill known as the pitcher's mound, atop which is a white rubber slab known as the pitcher's plate, colloquially the \"rubber\" because of its physical composition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pitcher” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:30.617Z",
+   "target": "f07344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ryan held the school's single game strikeout record for 44 years, striking out 21 hitters in a seven-inning game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Strikeout” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:30.617Z",
+   "target": "f07345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 1903 World Series was the first modern World Series to be played in Major League Baseball.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.617Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “World Series” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,512 @@
+{
+ "article": "a0191",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Agave_tequilana",
+   "title": "Agave tequilana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:10.098Z",
+   "snapshot": "cb078da8f52fe08653cb164fcfd4319dd49fbb5002b35f25556c067dfd584436"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rum_ration",
+   "title": "Rum ration – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:11.083Z",
+   "snapshot": "ed3ad5b3031942e49652713d5301930c0f5a9c19fc959431ea150740ca5facd6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sake",
+   "title": "Sake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:12.322Z",
+   "snapshot": "fb2e28149e0aa6be2dcd6d23dff189e871cbbfbbf77cb1c91976f2e2ab45bd99"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Calvados",
+   "title": "Calvados – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:13.077Z",
+   "snapshot": "d30dea8b89a65e47af64accf8ed90894e7e224f23fb770364abdb6961bcdb96d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Slivovitz",
+   "title": "Slivovitz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:14.093Z",
+   "snapshot": "afdf279d2d6706fa3df85832b145c2775344496b590ed50b7d1fff7311a89b18"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Calvados_(brandy)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:15.106Z",
+   "snapshot": "695505e7f4003cf72e652ade645bc997c809f8c9779694f978d4fb00193c4b26"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Rum",
+   "title": "Rum – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:56:27Z"
+  },
+  "s8": {
+   "url": "https://www.law.cornell.edu/cfr/text/27/5.147",
+   "title": "27 CFR § 5.147 - Rum (LII / Cornell)",
+   "publisher": "Legal Information Institute, Cornell Law School (US Code of Federal Regulations)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:28.726Z",
+   "snapshot": "407c1cf352d003ef429f1bbac31c6d0b534d24c5b5d6cecb5d389a94e9711465"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/calvados",
+   "title": "CALVADOS – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:28.795Z",
+   "snapshot": "64804ba591a1aae62cfeefee2c7404709b68e2bc948a9bd00b0f5d1d0b6f01bd"
+  },
+  "s10": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/calvados",
+   "title": "calvados – Oxford Learner's Dictionaries",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:28.951Z",
+   "snapshot": "a8a2a60d08c784aca5a30b086206865fd83f24ae38764fbfdf7fdef21c91d8d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "blue agave",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sugar cane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "rice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "apples",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "plums",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:07.547Z",
+   "target": "f00951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Agave tequilana, commonly called blue agave (agave azul) or tequila agave, is an agave plant that is an important economic product of Jalisco state of Mexico, due to its role as the base ingredient of tequila.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blue agave” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:07.547Z",
+   "target": "f00952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sugar cane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sugar cane”, “Zuckerrohr”, “сахарный тростник”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:07.547Z",
+   "target": "f00953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sake, saké (Japanese: 酒, Hepburn: sake; English: IPA:  SAH-kee, SAK-ay), or saki, also referred to as Japanese rice wine (specified as 日本酒 \"nihonshu\" in Japanese, as 酒 can refer to all alcohol), is an alcoholic beverage of Japanese origin made by fermenting rice that has been polished to remove the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rice” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:07.547Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "apples",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“apples”, “Äpfel”, “яблоки”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:07.547Z",
+   "target": "f00955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Slivovitz is a fruit spirit (or fruit brandy) made from damson plums, often referred to as plum spirit (or plum brandy).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:07.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “plums” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:56:27Z",
+   "target": "f00952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rum is a liquor made by fermenting and then distilling sugarcane molasses or sugarcane juice.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:56:31Z",
+   "target": "f00952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "“Rum” is distilled spirits that is distilled from the fermented juice of sugar cane, sugar cane syrup, sugar cane molasses, or other sugar cane by-products",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:56:34Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a brandy from Normandy in France, made from cider apples or pears.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:56:36Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a strong alcoholic drink made from apples, produced in northern France",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:56:39Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a French strong alcoholic drink made by distilling apple juice",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r046",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "“Rum” is distilled spirits that is distilled from the fermented juice of sugar cane, sugar cane syrup, sugar cane molasses, or other sugar cane by-products",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a brandy from Normandy in France, made from cider apples or pears.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a strong alcoholic drink made from apples, produced in northern France",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a French strong alcoholic drink made by distilling apple juice",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "“Rum” is distilled spirits that is distilled from the fermented juice of sugar cane, sugar cane syrup, sugar cane molasses, or other sugar cane by-products at less than 95 percent alcohol by volume (190° proof) having the taste, aroma, and characteristics generally attributed to rum, and bottled at",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sugar cane” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Calvados (UK: , US: , French: [kalvados] ) is a brandy from Normandy in France, made from cider apples or pears.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “apples” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:26.301Z",
+   "target": "f00954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a strong alcoholic drink made from apples, produced in northern France",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:26.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “apples” is on the snapshot of s9"
+  }
+ ]
+}

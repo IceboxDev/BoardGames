@@ -1,0 +1,242 @@
+{
+ "article": "a1346",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Don_Quixote",
+   "title": "Don Quixote – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:05.401Z",
+   "snapshot": "e3d9c38b2e44f84161cbaf0fa6f0e8b4e73ce6d96f7465f3ed891acdba7cc424"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days",
+   "title": "Around the World in Eighty Days – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:12.255Z",
+   "snapshot": "5ea0b156e647132b68f20c8056c070b1aaa3721c0f4b37866c048c3380471759"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Sign_of_the_Four",
+   "title": "The Sign of the Four – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:06.177Z",
+   "snapshot": "0c88bb0a855713dcf31388dc685a85e7d7ffe265d2869370ca082e2a367e024f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Robinson_Crusoe",
+   "title": "Robinson Crusoe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:07.261Z",
+   "snapshot": "0deebb1557c6bb6856476a943946f210adb0d6919185c40ad1484996b9f26ede"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Divine_Comedy",
+   "title": "Divine Comedy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:31.669Z",
+   "snapshot": "4500e6de13f31476cd7777ac9e72bc5750ed59d2ba48e81e79d8f296acf7db3b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sancho Panza",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Passepartout",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dr. Watson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friday",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Virgil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:11.351Z",
+   "target": "f06726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He recruits as his squire a simple farm labourer, Sancho Panza, who brings an earthy wit to Don Quixote's lofty rhetoric.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sancho Panza” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:11.351Z",
+   "target": "f06727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the story, Phileas Fogg of London and his newly employed French valet Jean Passepartout attempt to circumnavigate the world in 80 days on a wager of £20,000 (equivalent to £2.5 million in 2024) set by his friends at the Reform Club.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Passepartout” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:11.351Z",
+   "target": "f06728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oliver as Dr. Watson, and Viola Karwowska as Mary Morstan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Watson” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:11.351Z",
+   "target": "f06729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Every night, he dreams of obtaining one or two servants by freeing some prisoners; during the cannibals' next visit to the island, when a prisoner escapes, Crusoe helps him, naming his new companion \"Friday\" after the day of the week he appeared.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friday” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:11.351Z",
+   "target": "f06730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the poem, the pilgrim Dante is accompanied by three guides: Virgil, who represents human reason and who guides him for all of Inferno and most of Purgatorio; Beatrice, who represents divine revelation, in addition to theology, grace, and faith, and who guides him from the end of Purgatorio",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virgil” is on the snapshot of s5"
+  }
+ ]
+}

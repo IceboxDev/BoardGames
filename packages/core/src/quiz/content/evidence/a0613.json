@@ -1,0 +1,249 @@
+{
+ "article": "a0613",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Freie_Volksb%C3%BChne_Berlin",
+   "title": "Freie Volksbühne Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:14.146Z",
+   "snapshot": "0e05409e1c81490e2a3ac4fc69719d32e42aacb06bdd36f1b393d56d219b085b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Deutsches_Theater_Berlin",
+   "title": "Deutsches Theater Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:14.722Z",
+   "snapshot": "b48c4db40310a192532ab7d91c39090eaeb291aeb516999c1ed2a808264736c4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Schaub%C3%BChne_am_Lehniner_Platz",
+   "title": "Schaubühne am Lehniner Platz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:15.632Z",
+   "snapshot": "42d704b38db5079b138f8e0d15424abebefe97ba337e9e27b3a4d44ffd7ad3fa"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Maxim_Gorki_Theater",
+   "title": "Maxim Gorki Theater – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:16.651Z",
+   "snapshot": "286c3e6381011a1c572e8056743cbe928037d99fc4ad4bd8077b20d3016ec5b6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Christoph_Schlingensief",
+   "title": "Christoph Schlingensief",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:17.780Z",
+   "snapshot": "96640449544a42053030410f625271f55f480ed2173e82a6e4ad351eafa35d89"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Ensemble",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:17.150Z",
+   "snapshot": "bd1dc6cfccfae1ec0a8c013575dbf1160524e243ada3b46f220c9bf954aeaf72"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Volksbühne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c052"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Deutsches Theater",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schaubühne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maxim Gorki Theater",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Christoph Schlingensief",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-004"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:14.279Z",
+   "target": "f03061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Er initiierte den Bau der heutigen Volksbühne am Rosa-Luxemburg-Platz (1913 eröffnet).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volksbühne” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:14.279Z",
+   "target": "f03063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alfred Dreifuss: Deutsches Theater Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsches Theater” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:14.279Z",
+   "target": "f03064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Schaubühne am Lehniner Platz ist ein Theater am Kurfürstendamm im Berliner Ortsteil Wilmersdorf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schaubühne” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:14.279Z",
+   "target": "f03065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Maxim Gorki Theater (früher Maxim-Gorki-Theater) in der Dorotheenstadt im Ortsteil Mitte (Bezirk Mitte) von Berlin ist mit 440 Plätzen das kleinste der Berliner Staatstheater.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maxim Gorki Theater” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:14.279Z",
+   "target": "f13180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Christoph Schlingensief wurde als Sohn des Apothekers Hermann Josef Schlingensief (1924–2007) und der Kinderkrankenschwester Anni Schlingensief, geborene Knipp (1926–2016), geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christoph Schlingensief” is on the snapshot of s5"
+  }
+ ]
+}

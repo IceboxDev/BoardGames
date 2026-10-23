@@ -1,0 +1,420 @@
+{
+ "article": "a2172",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Listerine",
+   "title": "Listerine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:04.958Z",
+   "snapshot": "eeef812bc8992701273fa26e91978dd1368eb5943082c512310c450bf05d465e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mascara",
+   "title": "Mascara – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:06.020Z",
+   "snapshot": "990b1e326ebbb907ffcbf1af53e2696b7934c02aa979aa56e90debcfbaea112a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Frizz",
+   "title": "Frizz",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:06.917Z",
+   "snapshot": "96b2a29846e4e4e20c7938b77dbd3f91fbac60fc72192f31971b6c065c6a9c97"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Lister",
+   "title": "Joseph Lister – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:09.265Z",
+   "snapshot": "8ac896efa6ddc5b56db9baae905e588227a5ae883e794b73b237ef9f281aa622"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Odol",
+   "title": "Odol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:04.500Z",
+   "snapshot": "6c95262740e2a40a5e6236a7e8f693e221ab7c8469c18633ee79749e292105fc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Maybelline",
+   "title": "Maybelline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:07.992Z",
+   "snapshot": "798f64c4d853805db0bcb89aadad651090510d26f341a656d6b5fbe789982523"
+  },
+  "s7": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/frizz",
+   "title": "frizz – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:10.942Z",
+   "snapshot": "6f1bec4425502a34375e920e20f5bb8d68208e9485567f208157bcb49755d63f"
+  },
+  "s8": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/frizz_1",
+   "title": "frizz noun – Oxford Learner's Dictionaries",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:11.106Z",
+   "snapshot": "f95755b429ad3b47d4f0c0179e12a7aa1e2045c775a34616fb71324aee64c987"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Listerine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mascara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-041"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unruly hair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-117"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joseph Lister",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Odol",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Maybelline",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.388Z",
+   "target": "f11001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Listerine ( LIST-ər-EEN) is an American brand of antiseptic mouthwash that is promoted with the slogan \"Kills germs that cause bad breath\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Listerine” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.388Z",
+   "target": "f11002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mascara (UK: , US: ) is a cosmetic commonly used to enhance the upper and lower eyelashes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mascara” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.388Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unruly hair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Unruly hair”, “Widerspenstiges Haar”, “Непослушные волосы”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.388Z",
+   "target": "f11004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joseph Lister, 1st Baron Lister (5 April 1827 – 10 February 1912) was an English surgeon, medical scientist, experimental pathologist and pioneer of antiseptic surgery and preventive healthcare.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Lister” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:33.388Z",
+   "target": "f11005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Odol ist ein Markenname der Haleon für eine Pflegeserie zur Gesunderhaltung von Zahnfleisch, Zähnen, Mund und Rachen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Odol” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:33.388Z",
+   "target": "f11006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Maybelline New York (formerly The Maybelline Company and Mabelline and Co.), trading as and commonly known as simply Maybelline (  MAY-bil-een), is an American multinational cosmetics, skin care, perfume, and personal care company, based in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maybelline” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:31:38Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This mousse says it's designed to eliminate frizz and make hair glossy and easier to manage.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:31:43Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "hair that is not smooth and neat, but very curly and untidy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:31:48Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Myriad products such as serums, pomades, and hair waxes are designed to reduce frizz",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:20.341Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This mousse says it's designed to eliminate frizz and make hair glossy and easier to manage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:20.341Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "hair that is not smooth and neat, but very curly and untidy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:20.341Z",
+   "target": "f11003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Myriad products such as serums, pomades, and hair waxes are designed to reduce frizz",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  }
+ ]
+}

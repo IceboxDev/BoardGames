@@ -1,0 +1,442 @@
+{
+ "article": "a0924",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/SMS",
+   "title": "SMS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:25.390Z",
+   "snapshot": "3bdabffc5256e180bcd6545407ac17d3c58f4b113a8fbf9fc9182a1e6147745b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Multimedia_Messaging_Service",
+   "title": "Multimedia Messaging Service – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:26.325Z",
+   "snapshot": "4f3a48da231704babcd9d13ad670f35947976b6c7acb6b6914106c5389b06136"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/GSM",
+   "title": "GSM – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:11.040Z",
+   "snapshot": "16f398db8ac2a894f44a6d2191a394aafdc624416fa3de6e9c503b2646ae388f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Friedhelm_Hillebrand",
+   "title": "Friedhelm Hillebrand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:27.298Z",
+   "snapshot": "de3eb66d0c57fc50aee9927010cd2e9109b6eb44da42846e9d95e2aad86c8823"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/IEEE_802.11_(legacy_mode)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:28.320Z",
+   "snapshot": "24098c2500c16bdb5d08f1b01b22774cacadbeb9a6764bdce14917535cc1f048"
+  },
+  "s6": {
+   "url": "http://latimesblogs.latimes.com/technology/2009/05/invented-text-messaging.html",
+   "title": "Why text messages are limited to 160 characters",
+   "publisher": "Los Angeles Times",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:37.559Z",
+   "snapshot": "4b19ca8a00a1ff69b4d92ea34a201568f0c95e61aacd9c9bd57a4bdfe9f76a47"
+  },
+  "s7": {
+   "url": "https://www.bbc.co.uk/news/technology-63825894",
+   "title": "SMS: First text message sold as NFT",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:37.721Z",
+   "snapshot": "2f22582c31ace3502277f714558f2d84aae74f404591b53ab9d704787d71f08c"
+  },
+  "s8": {
+   "url": "https://www.dw.com/en/happy-birthday-25-years-of-sms/g-41612000",
+   "title": "Happy birthday: 25 years of SMS",
+   "publisher": "Deutsche Welle",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:38.858Z",
+   "snapshot": "4e4f408f67d43c2ce06a10e2694a62b7688d57ef27b58ceb1c9e3ba75acc7a94"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Short Message Service",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Multimedia Messaging Service",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Global System for Mobile Communications",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "160 characters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24364",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Groupe Spécial Mobile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:05.435Z",
+   "target": "f04616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Short Message Service (SMS) is a mostly paid text messaging service component of most telephone, Internet and mobile device systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Short Message Service” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:05.435Z",
+   "target": "f04617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Multimedia Messaging Service (MMS) is a standard way to send messages that include multimedia content to and from a mobile phone over a cellular network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Multimedia Messaging Service” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:05.435Z",
+   "target": "f04618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Global System for Mobile Communications (GSM) is a family of standards to describe the protocols for second-generation (2G) digital cellular networks, as used by mobile devices such as mobile phones and mobile broadband modems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Global System for Mobile Communications” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:05.435Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As chairman of the non-voice services committee for the Global System for Mobile Communications standard in 1985, he conducted experiments to determine the length needed for text messages and found that 160 characters was sufficient.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “160 characters” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:05.435Z",
+   "target": "f24364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1983, work began to develop a European standard for digital cellular voice telecommunications when the European Conference of Postal and Telecommunications Administrations (CEPT) set up the Groupe Spécial Mobile (GSM) committee and later provided a permanent technical-support group based in Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:05.435Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Groupe Spécial Mobile” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:47:02Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Each blurb ran on for a line or two and nearly always clocked in under 160 characters.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:47:05Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Originally, an SMS could only be text, up to 160 characters long.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:14Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Technicians studied these, and found that nearly all such communications were 160 characters or less in length. That's how the maximum length of SMS messages was decided on.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:35.011Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Each blurb ran on for a line or two and nearly always clocked in under 160 characters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:35.011Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Originally, an SMS could only be text, up to 160 characters long.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:35.011Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Technicians studied these, and found that nearly all such communications were 160 characters or less in length. That's how the maximum length of SMS messages was decided on.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:35.011Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Why text messages are limited to 160 characters - Los Angeles Times",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “160 characters” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:35.011Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Originally, an SMS could only be text, up to 160 characters long.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “160 characters” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:35.011Z",
+   "target": "f24363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Technicians studied these, and found that nearly all such communications were 160 characters or less in length.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “160 characters” is on the snapshot of s8"
+  }
+ ]
+}

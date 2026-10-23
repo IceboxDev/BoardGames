@@ -1,0 +1,289 @@
+{
+ "article": "a0375",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Golden_ratio",
+   "title": "Golden ratio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:42.194Z",
+   "snapshot": "b0da9068117a970aa56602072d2e536bcf50f0c8ce2adfa2bf0d8a55b24c9d5e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vitruvian_Man",
+   "title": "Vitruvian Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:42.942Z",
+   "snapshot": "395c7af7046e19178778a20256bc795484996e0e28a7d572039da4b1c7797116"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Modulor",
+   "title": "Modulor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:43.907Z",
+   "snapshot": "a0057414fe4658f3b8ad471540f45419d292f000651fa9153cf21ffac562b68c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Liber_Abaci",
+   "title": "Liber Abaci – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:44.885Z",
+   "snapshot": "e382568cbded86a8d5f1bf0a0b43527ed51aca9853e8bcb8306e470deb7f3e74"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fibonacci_sequence",
+   "title": "Fibonacci sequence",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:46.691Z",
+   "snapshot": "3d47b34a70794c81c550345c8a66b5f8884317124cf6153ad6721227cf5ea5d0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Divina_proportione",
+   "title": "Divina proportione – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:46.866Z",
+   "snapshot": "5569a7b064115f15e1badbcb46ae300e4330264feda23b98343dc866c6856429"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "golden ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01872",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vitruvian Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Modulor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01874",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fibonacci sequence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01874",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fibonacci sequence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-060"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "De divina proportione",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:38.022Z",
+   "target": "f01871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In mathematics, two quantities are in the golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “golden ratio” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:38.022Z",
+   "target": "f01872",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vitruvian Man (Italian: L'uomo vitruviano) is a drawing by the Italian Renaissance artist and scientist Leonardo da Vinci, dated to c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vitruvian Man” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:38.022Z",
+   "target": "f01873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Modulor is an anthropometric scale of proportions devised by the Swiss-born French architect Le Corbusier (1887–1965).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Modulor” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:38.022Z",
+   "target": "f01874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Although the resulting Fibonacci sequence dates back long before Leonardo, its inclusion in his book is why the sequence is named after him today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fibonacci sequence” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:38.022Z",
+   "target": "f01874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In mathematics, the Fibonacci sequence is a sequence in which each element is the sum of the two elements that precede it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fibonacci sequence” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:38.022Z",
+   "target": "f01875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Divina proportione (15th century Italian for Divine proportion), later also called De divina proportione (converting the Italian title into a Latin one) is a book on mathematics written by Luca Pacioli and illustrated by Leonardo da Vinci, completed by February 9th, 1498 in Milan and first printed",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.022Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “De divina proportione” is on the snapshot of s6"
+  }
+ ]
+}

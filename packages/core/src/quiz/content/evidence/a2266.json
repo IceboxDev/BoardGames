@@ -1,0 +1,516 @@
+{
+ "article": "a2266",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Full_House",
+   "title": "Full House",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:28.307Z",
+   "snapshot": "91afb5f27e701e09beebe7e89ebed38e29a578246ce52ee6745d567a9325853e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sandra_Bernhard",
+   "title": "Sandra Bernhard",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:29.189Z",
+   "snapshot": "67764c2009418b8850ecf5d03443f71f2c0678424477e1a5ec430d7e2d90d175"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Monk%27s_Caf%C3%A9",
+   "title": "Monk's Café",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:30.211Z",
+   "snapshot": "024898b67c74c1931c481431034218790d93f75d4e83af9ade3a52c3e6a898bf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Friends_season_1",
+   "title": "Friends season 1",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:31.192Z",
+   "snapshot": "0991574aa171b64cc3a73165f39054114f49935f75d0418f1db1d7c3d02a4e0c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Joey_Tribbiani",
+   "title": "Joey Tribbiani",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:32.329Z",
+   "snapshot": "e318511bb487081aa814fd99ed276dcd2b7a3be502acceadaadee1e8bce0b020"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Home_Improvement_(TV_series)",
+   "title": "Home Improvement (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:33.311Z",
+   "snapshot": "d3159024bdc69ecb3e5dc54235d3a00925f6f854e3800f42cbb5963779014030"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Family_Matters",
+   "title": "Family Matters – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:34.231Z",
+   "snapshot": "b81d9a7559fdf8d81862f29d73a3e02d85add664b07c7d486ffe14879f1db023"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/The_Nanny",
+   "title": "The Nanny – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:35.452Z",
+   "snapshot": "bc1efbccd108773580d5023978bf9c9cd310b2baceaf47b63d38c083781f0a49"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ross_Geller",
+   "title": "Ross Geller",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:47.105Z",
+   "snapshot": "c255e9bee7737e45a66b5135b5ead538781cfd6b6f52a537f8a310bb26ecdb46"
+  },
+  "s10": {
+   "url": "https://www.tvmaze.com/episodes/40666/friends-1x21-the-one-with-the-fake-monica",
+   "title": "The One With the Fake Monica – Friends 1x21",
+   "publisher": "TVmaze",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:47.723Z",
+   "snapshot": "017da1a87580cacd86b1d5ca2f144f958decb3a5d664bfeefde72069eba508dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Full House",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11633",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sandra Bernhard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-175"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Seinfeld",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-396"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marcel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-244"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Joey Tribbiani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26; transcript tp-397"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Home Improvement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Family Matters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Nanny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Full House is an American television sitcom created by Jeff Franklin for ABC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Full House” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11633",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sandra Bernhard (born June 6, 1955) is an American actress, comedian, and singer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sandra Bernhard” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monk's Café is a fictional coffee shop from the NBC sitcom Seinfeld.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seinfeld” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marcel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Marcel”, “Марсель”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Joey Tribbiani is a member of the Screen Actors Guild, having refused to follow in his father's foot steps and become a pipefitter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joey Tribbiani” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Home Improvement is an American sitcom television series starring Tim Allen, originally airing on ABC from September 17, 1991, to May 25, 1999, with a total of 204 half-hour episodes spanning eight seasons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Home Improvement” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Family Matters is an American television sitcom that originally aired on ABC for eight seasons from September 22, 1989, to May 9, 1997, then moved to CBS for its ninth and final season from September 19, 1997, to July 17, 1998.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Family Matters” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:45.677Z",
+   "target": "f11639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Nanny is an American television sitcom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:45.677Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Nanny” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:23:49Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ross had a pet in the first season of the show: a white-headed capuchin monkey named Marcel",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:23:50Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ross realizes it's time to find a new home for Marcel.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:31.324Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ross had a pet in the first season of the show: a white-headed capuchin monkey named Marcel",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:31.324Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ross realizes it's time to find a new home for Marcel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:31.324Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ross had a pet in the first season of the show: a white-headed capuchin monkey named Marcel (although the monkey used in the series was a female called Katie).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Marcel” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:31.324Z",
+   "target": "f11635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Monica meets the woman who used her credit-card number; Ross realizes it's time to find a new home for Marcel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.324Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Marcel” is on the snapshot of s10"
+  }
+ ]
+}

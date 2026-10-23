@@ -1,0 +1,334 @@
+{
+ "article": "a0786",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Solidarity_(Polish_trade_union)",
+   "title": "Solidarity (Polish trade union) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:08.336Z",
+   "snapshot": "55bb73af8d102d65321e5d26e6bc0b34e47d9c5d2db233f1e0fda5feb6a8ef99"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1989_Polish_parliamentary_election",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:32.466Z",
+   "snapshot": "7b8e66c4761434aca197c7cb73bcaa422e2dccd3db20c86b7c64e6fd8c08a045"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tadeusz_Mazowiecki",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:09.451Z",
+   "snapshot": "366ce8e060ce86902c21b7c74f6e2e4769d8c1e08d7c522a7a161c6ffe0c0bc4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Charter_77",
+   "title": "Charter 77 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:10.405Z",
+   "snapshot": "5c7cf457f1b8a1c0d25b1b8e7e7b79617ea2248876f3b05aa84aace9e83a10f7"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Neues_Forum",
+   "title": "Neues Forum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:20:07.785Z",
+   "snapshot": "73b794d633aceba7e2ad213d9fa977a75ceddbef24452a76564efd65902ce696"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Perestroika",
+   "title": "Perestroika – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:11.310Z",
+   "snapshot": "dfc23658e2f620f54a9af84b92880e0ffb0533c2e8062993f79771bd23376c0d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Monday_demonstrations_in_East_Germany",
+   "title": "Monday demonstrations in East Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:12.332Z",
+   "snapshot": "009c482922753c42a925fda6fd3222ee4e293377fdd758b4dafdf06d30461352"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Solidarność",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c066"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Solidarność",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Solidarność",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charter 77",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Neues Forum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Perestroika",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f03930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Monday demonstrations",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Solidarity (Polish: „Solidarność”, pronounced [sɔliˈdarnɔɕt͡ɕ] ), full name Independent Self-Governing Trade Union \"Solidarity\" (Niezależny Samorządny Związek Zawodowy „Solidarność” [ɲɛzaˈlɛʐnɨ samɔˈʐɔndnɨ ˈzvjɔ̃zɛɡ zavɔˈdɔvɨ sɔliˈdarnɔɕt͡ɕ], abbreviated NSZZ „Solidarność”), is a Polish trade union",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solidarność” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "These actions shook the communist regime of the country to such an extent that it decided to begin talking about recognising Solidarity (Polish: Solidarność), an \"unofficial\" labor union that subsequently grew into a political movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solidarność” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "From 1981, he was the editor-in-chief of the Tygodnik Solidarność weekly magazine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solidarność” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charter 77 (Charta 77 in Czech and Slovak) was an informal civic initiative in the Czechoslovak Socialist Republic from 1976 to 1992, named after the document Charter 77 from January 1977.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charter 77” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Neues Forum: Die ersten Texte des NEUEN FORUM.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neues Forum” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Perestroika ( PERR-ə-STROY-kə; Russian: перестройка, romanized: perestroyka, IPA: [pʲɪrʲɪˈstrojkə] ) was a political reform movement within the Communist Party of the Soviet Union (CPSU) during the late 1980s, widely associated with CPSU general secretary Mikhail Gorbachev and his glasnost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perestroika” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:45.306Z",
+   "target": "f03930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Monday demonstrations (German: Montagsdemonstrationen in der DDR) were a series of peaceful political protests against the government of the German Democratic Republic (GDR).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:45.306Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monday demonstrations” is on the snapshot of s7"
+  }
+ ]
+}

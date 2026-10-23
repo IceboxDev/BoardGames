@@ -1,0 +1,242 @@
+{
+ "article": "a0793",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ready_to_Die",
+   "title": "Ready to Die – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:37.399Z",
+   "snapshot": "e12826945c7c96aba31b407134cfd2c99333b180a207965e50bb4d12320a22bf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/All_Eyez_on_Me",
+   "title": "All Eyez on Me – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:38.386Z",
+   "snapshot": "a737ccd96b7c0bd35b3b619f901434063d684f00cc1ed9bf5a044d4afe211ec6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Marshall_Mathers_LP",
+   "title": "The Marshall Mathers LP – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:39.429Z",
+   "snapshot": "fe6602f7a001dee4dcc63ac31282be30a05289850a4fb17cbc31867840c71b9e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Chronic",
+   "title": "The Chronic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:40.408Z",
+   "snapshot": "9bb5f9a0864759acfd642f34e492e416582a10c039191d50728040d80223c59d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Reasonable_Doubt_(album)",
+   "title": "Reasonable Doubt (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:41.491Z",
+   "snapshot": "6290208b3ddda12119ec2055369e21abd5cb1cd333493e4c1a46aa4ed178ac69"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Notorious B.I.G.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03962",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tupac Shakur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03963",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eminem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03964",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dr. Dre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03965",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jay-Z",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:46.343Z",
+   "target": "f03961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ready to Die is the debut studio album by the American rapper The Notorious B.I.G., released on September 13, 1994, by Bad Boy Records and distributed by Arista Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Notorious B.I.G.” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:46.343Z",
+   "target": "f03962",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tupac Shakur discography",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tupac Shakur” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:46.343Z",
+   "target": "f03963",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Marshall Mathers LP (also referred to as the MMLP) is the third studio album by the American rapper Eminem, released on May 23, 2000, by Goliath Artists, Aftermath Entertainment, WEB Entertainment, and Interscope Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eminem” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:46.343Z",
+   "target": "f03964",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Chronic is the debut studio album by American rapper and producer Dr. Dre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Dre” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:46.343Z",
+   "target": "f03965",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reasonable Doubt is the debut studio album by American rapper Jay-Z.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.343Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jay-Z” is on the snapshot of s5"
+  }
+ ]
+}

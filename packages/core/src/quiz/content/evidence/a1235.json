@@ -1,0 +1,353 @@
+{
+ "article": "a1235",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Pastinak",
+   "title": "Pastinak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:57.939Z",
+   "snapshot": "a4f6e2074c18b758a1b6c68fd6b35b129b73dcc5b01d5764d1c760064eb409e5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Beta_vulgaris",
+   "title": "Beta vulgaris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:01.070Z",
+   "snapshot": "b6cb88d6edb3b558f93e1d8a885a80c3875510b29870760abc99ece266266556"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Horseradish",
+   "title": "Horseradish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:01.947Z",
+   "snapshot": "d24275396a1859fd09c24c55dbf36248e74bd3bb3be556b44c88d7962ae326f1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pseudopodospermum_hispanicum",
+   "title": "Pseudopodospermum hispanicum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:02.934Z",
+   "snapshot": "3169158c54a82cad17fd9c3d9d7e9f49b6513313f39638ad014e5ee0a7c08d86"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Turnip_Winter",
+   "title": "Turnip Winter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:03.912Z",
+   "snapshot": "788a8fbf421736810f274e475d5f48940452db89873f4df2bcb5072985091ee5"
+  },
+  "s6": {
+   "url": "https://www.dhm.de/lemo/kapitel/erster-weltkrieg/alltagsleben/kohlruebenwinter-191617.html",
+   "title": "LeMO – \"Kohlrübenwinter\" 1916/17",
+   "publisher": "Deutsches Historisches Museum / Haus der Geschichte (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:53.178Z",
+   "snapshot": "116831d04f9b059ed406339da45623d35d9b8aacd36314843b339a5dc94a8406"
+  },
+  "s7": {
+   "url": "https://www.welt.de/geschichte/article124743724/Wie-der-Steckruebenwinter-zum-Trauma-wurde.html",
+   "title": "Erster Weltkrieg: Wie der „Steckrübenwinter“ zum Trauma wurde - WELT",
+   "publisher": "Die Welt",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:53.585Z",
+   "snapshot": "4e6de406c790b9a56fb8d49992e58f921814518381236d5dc0956ba732af3b53"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pastinake",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beetroot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Horseradish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Black salsify",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Swede",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:52.670Z",
+   "target": "f06171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Pastinak (Pastinaca sativa), insbesondere in der Schweiz auch die Pastinake (von lateinisch pastinaca) genannt, ist eine Pflanzenart aus der Gattung der Pastinaken (Pastinaca) innerhalb der Familie der Doldenblütler (Apiaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pastinake” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:52.670Z",
+   "target": "f06172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Some of the most popular cultivar groups include: the sugar beet (used to produce table sugar), the root vegetable known as the beetroot or garden beet, the leaf vegetable known as chard or spinach beet or silverbeet, and mangelwurzel (a fodder crop).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beetroot” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:52.670Z",
+   "target": "f06173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Horseradish (Armoracia rusticana, syn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horseradish” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:52.670Z",
+   "target": "f06174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pseudopodospermum hispanicum, commonly known as black salsify or Spanish salsify, also known as black oyster plant, serpent root, viper's herb, viper's grass or scorzonera, is a perennial species of plant in the sunflower family (Asteraceae), cultivated as a root vegetable in the same way as purple",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black salsify” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:52.670Z",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Swede",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Swede”, “Steckrübe”, “Брюква”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:19:41Z",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Als Ersatz für das Grundnahrungsmittel wurden rationierte Kohl- bzw. Steckrüben ausgegeben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:19:45Z",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der „Steckrübenwinter“ 1916/17 wurde zum Symbol des Hungers, der während des Krieges in Deutschland grassierte.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:19:48Z",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The loss of the potato crop forced the German population to subsist on Swedish turnip or rutabaga as an alternative.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:35.060Z",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Als Ersatz für das Grundnahrungsmittel wurden rationierte Kohl- bzw. Steckrüben ausgegeben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:35.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:35.060Z",
+   "target": "f06175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The loss of the potato crop forced the German population to subsist on Swedish turnip or rutabaga as an alternative.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:35.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  }
+ ]
+}

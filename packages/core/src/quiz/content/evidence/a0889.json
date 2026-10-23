@@ -1,0 +1,202 @@
+{
+ "article": "a0889",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Dieter_Hildebrandt",
+   "title": "Dieter Hildebrandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:04.085Z",
+   "snapshot": "1934c96ba32bb598d1798efe05fb28604a971fe210a6bde57b3773085f4b7a73"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Urban_Priol",
+   "title": "Urban Priol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:03.604Z",
+   "snapshot": "e9a5f98b38898ddb8c6c0dd8a00f72f6152fbaca5950f8ea636db52fdd8e057c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_Anstalt",
+   "title": "Die Anstalt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:04.717Z",
+   "snapshot": "72f3f9434cbfcf95797796e305b93363aa70a030257b4129248bb5ca29a17154"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Frank-Markus_Barwasser",
+   "title": "Frank-Markus Barwasser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:06.227Z",
+   "snapshot": "7383b666a7db4e82ace2f3136cfff6503668b5a8a2df40dd02d6600e8f81ba75"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Neues_aus_der_Anstalt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:06.571Z",
+   "snapshot": "97345f405e569684a7bdfe03a8742064b3bedef68d9addf530695aaaf5d19530"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dieter Hildebrandt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Urban Priol",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Max Uthoff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frank-Markus Barwasser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:00.602Z",
+   "target": "f04441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dieter Hildebrandt wurde als Sohn des beamteten Oberlandwirtschaftsrats Walter Hildebrandt (1889–1976) und seiner Frau Gertrud, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dieter Hildebrandt” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:00.602Z",
+   "target": "f04442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Urban Priol wurde 1961 in Aschaffenburg geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Urban Priol” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:00.602Z",
+   "target": "f04443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Durch die Sendung führen die Kabarettisten Max Uthoff und Claus von Wagner.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Uthoff” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:00.602Z",
+   "target": "f04444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frank-Markus Barwasser kam als viertes von fünf Kindern des späteren Direktor des Arbeitsgerichts Franz H.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank-Markus Barwasser” is on the snapshot of s4"
+  }
+ ]
+}

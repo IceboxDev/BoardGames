@@ -1,0 +1,356 @@
+{
+ "article": "a1640",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Archimedes",
+   "title": "Archimedes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:20.245Z",
+   "snapshot": "360c793e32d916c1074185af4e1d22a3223bc184e7ec9a5261471a771d3299b6"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+   "title": "Johann Wolfgang von Goethe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:11.051Z",
+   "snapshot": "ee1b9be4bf35c72da4d3b92f48093e1bd8f7652f44e77f67d1ff8dfeda900ef2"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Immanuel_Kant",
+   "title": "Immanuel Kant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:11.777Z",
+   "snapshot": "0463d656fc34d74150f95e7ff0a8465e43c3f9479c00be9d9c047f460992cb8e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Sieben_letzte_Worte",
+   "title": "Sieben letzte Worte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:12.796Z",
+   "snapshot": "02527f911fde0ec1fa8d0f26e3bca2b1a7a7ad895966694301c0a880f94f7af6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Julius_Caesar_(play)",
+   "title": "Julius Caesar (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:14.640Z",
+   "snapshot": "c78895072026d58028ee2499d79fb38de50bb1786c5a920b8f9b5aaec4c6969e"
+  },
+  "s6": {
+   "url": "https://math.nyu.edu/Archimedes/Death/Histories.html",
+   "title": "Death of Archimedes (Sources) – Archimedes Home Page (Chris Rorres)",
+   "publisher": "Courant Institute, New York University (Chris Rorres)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:16.256Z",
+   "snapshot": "b5827a516612d7ef9feb606d57c9d666753e4a611320c69fc45f3741a655122a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Noli_turbare_circulos_meos!",
+   "title": "Noli turbare circulos meos! – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:16.728Z",
+   "snapshot": "0ca9ce557a3f2aaa037aaed0bbd8c85e62ea1d3ae0ce8c4518c208995d4a8fae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Do not disturb my circles!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mehr Licht!",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Es ist gut.",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Es ist vollbracht.",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Et tu, Brute?",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:56.569Z",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Do not disturb my circles!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Do not disturb my circles!”, “Störe meine Kreise nicht!”, “Не трогай моих кругов!”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:56.569Z",
+   "target": "f08197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ob Goethes überlieferte letzte Worte „Mehr Licht!“ authentisch sind, ist umstritten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mehr Licht!” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:56.569Z",
+   "target": "f08198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Seine letzten Worte waren angeblich: „Es ist gut.“ Das Grabmal Immanuel Kants befindet sich an der Außenseite des Königsberger Doms, der sogenannten Stoa Kantiana, also dem Ort der ersten Grablegung Kants.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Es ist gut.” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:56.569Z",
+   "target": "f08199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "„Es ist vollbracht.“ (Joh 19,30 )",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Es ist vollbracht.” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:56.569Z",
+   "target": "f08200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At this, Caesar asks \"Et tu, Brute?\" (\"You too, Brutus?\"), concluding with \"Then fall, Caesar!\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Et tu, Brute?” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:03:57Z",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Anonymous (Legendary last words of Archimedes) GREEK: Μὴ μου τοὺς κύκλους τάραττε. LATIN: Noli turbare circulos meos. ENGLISH: Don't disturb my circles.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "legendary; the oldest version (Valerius Maximus) has \"noli, obsecro, istum disturbare\""
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:03:59Z",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a Latin phrase, meaning \"Do not disturb my circles!\" It is said to have been uttered by Archimedes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:44.319Z",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Anonymous (Legendary last words of Archimedes) GREEK: Μὴ μου τοὺς κύκλους τάραττε. LATIN: Noli turbare circulos meos. ENGLISH: Don't disturb my circles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:44.319Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:44.319Z",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a Latin phrase, meaning \"Do not disturb my circles!\" It is said to have been uttered by Archimedes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:44.319Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:44.319Z",
+   "target": "f08196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"Nōlī turbāre circulōs meōs!\" is a Latin phrase, meaning \"Do not disturb my circles!\" It is said to have been uttered by Archimedes—in reference to a geometric figure he had outlined on the sand—as he was about to be killed by a Roman soldier during the Siege of Syracuse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:44.319Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Do not disturb my circles!” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0936",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/QR_code",
+   "title": "QR code – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:19.295Z",
+   "snapshot": "ea59132b92f7f63506d4674105cd1e44d17188fefcbe30b8726677fe4d2cc8a2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/JPEG",
+   "title": "JPEG – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:20.748Z",
+   "snapshot": "e3aff057fe0e305c78ba27dbcd5f9597522bece883241cf827fbcd65068e52cc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Near-field_communication",
+   "title": "Near-field communication – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:21.343Z",
+   "snapshot": "2790cbe2ab1d295277a7d6c38f23c30b199a0156be3cc9c8f58ce19d5d57b126"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/USB",
+   "title": "USB – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:49.534Z",
+   "snapshot": "c0468cc31e96018e4ebe19fb97763839c3c13873d1f3a0d0f4c195f09efbe551"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Radio-frequency_identification",
+   "title": "Radio-frequency identification – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:22.556Z",
+   "snapshot": "19a21a0168b9d3de30f25ad94cc0724c36b128a2ea3c0f5ab4a7600d1100fff9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the QR code",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "JPEG",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "NFC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "USB",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "RFID",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:07.535Z",
+   "target": "f04676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Whereas a barcode is a machine-readable optical image that contains information specific to the labeled item, the QR code contains the data for a locator, an identifier, and web tracking.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the QR code” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:07.535Z",
+   "target": "f04677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "JPEG ( JAY-peg, short for Joint Photographic Experts Group and sometimes retroactively referred to as JPEG 1) is a commonly used method of lossy compression for digital images, particularly for those images produced by digital photography.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “JPEG” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:07.535Z",
+   "target": "f04678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Near-field communication (NFC) is a set of communication protocols that enables communication between two electronic devices over a distance of 4 cm (1+1⁄2 in) or less.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NFC” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:07.535Z",
+   "target": "f04679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Universal Serial Bus (USB) is an industry standard, developed by USB Implementers Forum (USB-IF), for digital data transmission and power delivery between many types of electronics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “USB” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:07.535Z",
+   "target": "f04680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Radio-frequency identification (RFID) uses electromagnetic fields to automatically identify and track tags attached to objects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “RFID” is on the snapshot of s5"
+  }
+ ]
+}

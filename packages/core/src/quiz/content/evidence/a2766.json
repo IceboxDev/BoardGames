@@ -1,0 +1,633 @@
+{
+ "article": "a2766",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Arctic_ground_squirrel",
+   "title": "Arctic ground squirrel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:01.508Z",
+   "snapshot": "bf2fe1c424615cba926620bd16e44adaf340b63a166bb9977cc3b04cd88c6457"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lemming",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:06.070Z",
+   "snapshot": "9a06d811c56538584b3771e2fad94b7edc9d79df99626e510d426d50d0dda7c6"
+  },
+  "s3": {
+   "url": "https://www.guinnessworldrecords.com/world-records/118885-most-efficient-insulation-in-a-bear",
+   "title": "Most efficient insulation in a bear",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:03.482Z",
+   "snapshot": "74248c9d0dae06b6312079852d1492fb53606047ad91d10df5485bf974b8d321"
+  },
+  "s4": {
+   "url": "https://defenders.org/blog/2013/10/lynx-and-snowshoe-hare-color-of-survival",
+   "title": "Lynx and Snowshoe Hare: The Color of Survival",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:04.145Z",
+   "snapshot": "a9b6706548957fd9d4ff076447258025a0b8b005b2b7836963ecd966d147c4d0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Arctic_fox",
+   "title": "Arctic fox – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:07.045Z",
+   "snapshot": "dece885af2f28110d19d28edc557aa887fd1792f7581196780a2ba3e3e03f35f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Beluga_whale",
+   "title": "Beluga whale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:08.296Z",
+   "snapshot": "ae4bdf6a37276d18dba37ce0f2e1e60ee0a2e2b481a9ceb05b12cd4e0ed96865"
+  },
+  "s7": {
+   "url": "https://www.umt.edu/mills-lab/stories/seasonalbasismolt.php",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:06.117Z",
+   "snapshot": "0880e4030d62a9f8d38e61322581d0d7838a0ce934d76c55401654778058507f"
+  },
+  "s8": {
+   "url": "https://www.umt.edu/mills-lab/publications/zimova-et-al-2018-bioreview_color-molting-basis.pdf",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s9": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:2740905%20AND%20SRC:MED&resultType=core&format=json",
+   "title": "Freeze avoidance in a mammal: body temperatures below 0 degree C in an Arctic hibernator (Barnes, Science 1989, abstract)",
+   "publisher": "Europe PMC / Science",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:13:26Z"
+  },
+  "s10": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11777201/",
+   "title": "Anti-icing properties of polar bear fur (Science Advances 2025)",
+   "publisher": "Science Advances (via PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:18.125Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arctic ground squirrel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arctic ground squirrel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20; history entry seq 22"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "polar bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-082"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "polar bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23; history entry seq 24; history entry seq 25; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "day length",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28; history entry seq 29; history entry seq 30; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arctic fox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arctic fox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 33; history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Beluga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beluga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 36; history entry seq 38"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23",
+   "target": "f25793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lemmings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; history entry seq 41"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23",
+   "target": "f25790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "day length",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "day length",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "day length",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-124/1, u05: Molt onset in snowshoe hares is timed by photoperiod and does not shift with snow; snow only modulates the rate (Mills et al. 2013 PNAS; Zimova et al. 2018). The body already corrects the card's 'earlier winters' to shorter snow seasons."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "day length",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Arctic ground squirrel (Urocitellus parryii) (Inuktitut: ᓯᒃᓯᒃ, siksik) is a species of ground squirrel in the squirrel family Sciuridae that is native to the Arctic and Subarctic regions of the Northern Hemisphere, mainly in North America and Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arctic ground squirrel” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arctic ground squirrel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Arctic ground squirrel”, “Arktisches Ziesel”, “американский суслик”) on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "polar bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“polar bear”, “Eisbär”, “белый медведь”) on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The combined pelage and blubber (up to 10 cm thick) of a polar bear Ursus maritimus provides the most efficient insulation in any species of bear.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “polar bear” is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "day length",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“day length”, “Tageslänge”, “долгота дня”) on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This color-changing molt begins based on day length; as we’re all aware, in the northern regions days shorten throughout the fall into winter, and lengthen into spring.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “day length” is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arctic fox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Arctic fox”, “Polarfuchs”, “песец”) on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Arctic fox (Vulpes lagopus), also known as the white fox, polar fox, or snow fox, is a small species of fox native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arctic fox” is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beluga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Beluga”, “белуха”) on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The beluga whale () or the white whale (Delphinapterus leucas) is an Arctic and sub-Arctic cetacean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beluga” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T06:31:10.151Z",
+   "target": "f25793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lemmings form the subfamily Arvicolinae (also known as Microtinae) together with voles and muskrats, which form part of the superfamily Muroidea, which also includes rats, mice, hamsters and gerbils.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lemmings” is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T08:13:26Z",
+   "target": "f25788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Hibernating arctic ground squirrels, Spermophilus parryii, were able to adopt and spontaneously arouse from core body temperatures as low as -2.9 degrees C without freezing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T08:13:29Z",
+   "target": "f25788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "its core body temperature reaches temperatures down to −2.9 °C (26.8 °F)[33] while its brain is kept just above freezing, which is colder than any other hibernating mammal",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T08:13:32Z",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moreover, it is virtually invisible under infrared photography.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T08:13:37Z",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "polar bears are so well insulated that the temperature of the dry fur closely matches that of the surroundings",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Thermal image in the paper: the fur shows little contrast with the surroundings"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:59:59.370Z",
+   "target": "f25789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moreover, it is virtually invisible under infrared photography.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s3"
+  }
+ ]
+}

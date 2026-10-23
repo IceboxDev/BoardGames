@@ -1,0 +1,382 @@
+{
+ "article": "a1711",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Holding",
+   "title": "Holding – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:18.847Z",
+   "snapshot": "417ea805c6256ea49a8b2a81a39d39b5610cf952f9099d8ed2ee0a0c7055c845"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dot-com_bubble",
+   "title": "Dot-com bubble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:22.334Z",
+   "snapshot": "007b5f03534a10515f35b38e2a5793431b67a8cdcf03f4d35d8f6914d9602041"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Outsourcing",
+   "title": "Outsourcing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:23.370Z",
+   "snapshot": "cc6e3dafa9508cd7382da7c19f59d135ec1202f960795d93f3e64b156b08d47d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Joint_venture",
+   "title": "Joint venture – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:24.412Z",
+   "snapshot": "ac939885d66536a4e424b4e8e70f12f753b2c09e4e03d3159ffdef8c2afc1ff1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Franchising",
+   "title": "Franchising – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:25.496Z",
+   "snapshot": "fc24253791c56eb6eff05f4a7bf6a299d556df9eac017b8a661e979e44f15832"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Volkswagen_Group",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:56.108Z",
+   "snapshot": "537d880f1ae0953145c3c114539fc1c08b63437c1a7d6a6d30bc6eff6864c66c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Startup_company",
+   "title": "Startup company – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:49.430Z",
+   "snapshot": "19318bd9604b0a3303788345d08c8adeb418e5919876bb03b922ff1877b5d142"
+  },
+  "s8": {
+   "url": "https://www.duden.de/rechtschreibung/Start_up",
+   "title": "Start-up – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:49.522Z",
+   "snapshot": "d019c796beb150b570e036e97a3c0c3c21dff1d3780c8e291321e5e4c805fd33"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Holding",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Start-up",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Outsourcing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joint venture",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franchising",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:09.956Z",
+   "target": "f08551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Holding (Kurzform für Holding-Gesellschaft, Holding-Organisation oder auch Dachgesellschaft) ist der Anglizismus für Unternehmen, deren Betriebszweck unter anderem darin besteht, Kapitalbeteiligungen an anderen Unternehmen zu halten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holding” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:09.956Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Start-up",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Start-up”, “стартап”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:09.956Z",
+   "target": "f08553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Outsourcing is a business practice in which companies use external providers to carry out business processes that would otherwise be handled internally.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Outsourcing” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:09.956Z",
+   "target": "f08554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A joint venture (JV) is formed when two or more distinct firms combine a portion of their resources to form a separate, jointly-owned entity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joint venture” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:09.956Z",
+   "target": "f08555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franchising is a business practice where a company licenses its business model to another company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.956Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franchising” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:22:25Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A startup or start-up is a company or project typically undertaken by an entrepreneur to seek, develop, and validate a scalable business model.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:22:26Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "neu gegründetes Wirtschaftsunternehmen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:56.612Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A startup or start-up is a company or project typically undertaken by an entrepreneur to seek, develop, and validate a scalable business model.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:56.612Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "neu gegründetes Wirtschaftsunternehmen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:56.612Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A startup or start-up is a company or project typically undertaken by an entrepreneur to seek, develop, and validate a scalable business model.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Start-up” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:56.612Z",
+   "target": "f08552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Start-up ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Start-up” is on the snapshot of s8"
+  }
+ ]
+}

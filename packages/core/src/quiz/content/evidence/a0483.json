@@ -1,0 +1,242 @@
+{
+ "article": "a0483",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Doge%27s_Palace",
+   "title": "Doge's Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:23.074Z",
+   "snapshot": "0beed6f2e9eb692e1dee105c525a77945edab18c80c41db6f4e1902d40457d8b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Palazzo_Vecchio",
+   "title": "Palazzo Vecchio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:23.991Z",
+   "snapshot": "a385e4c2ed50f7c1582e2810d3ed7b014cff86799e8b1e1b89f4c1ca6c849f59"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palazzo_Pubblico",
+   "title": "Palazzo Pubblico – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:24.948Z",
+   "snapshot": "ccd33ca9631e8996970c1a7af90593fdaab2096bc89ba9552fd4cfcff62dc8ed"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rector%27s_Palace,_Dubrovnik",
+   "title": "Rector's Palace, Dubrovnik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:25.941Z",
+   "snapshot": "7c384285181ba7fb65abe96fbbce0c77daa5abcb10b6900d48285f3974f0e644"
+  },
+  "s5": {
+   "url": "https://it.wikipedia.org/wiki/Palazzo_Senatorio",
+   "title": "Palazzo Senatorio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T03:59:23.332Z",
+   "snapshot": "d697e6faa8cc83c333c19ef9cc06dec8a596c5c39bfb7dac46a40a9448acc178"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Doge's Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Palazzo Vecchio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palazzo Pubblico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rector's Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Palazzo Senatorio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:55.954Z",
+   "target": "f02411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Doge's Palace (Doge pronounced ; Italian: Palazzo Ducale; Venetian: Pałaso Dogal) is a palace built in Venetian Gothic style, and one of the main landmarks of the city of Venice in northern Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doge's Palace” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:55.954Z",
+   "target": "f02412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Palazzo Vecchio (Italian: [paˈlattso ˈvɛkkjo]; Italian for 'Old Palace') is the town hall of Florence, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palazzo Vecchio” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:55.954Z",
+   "target": "f02413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Palazzo Pubblico (town hall) is a historic palace in Siena, Tuscany, in central Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palazzo Pubblico” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:55.954Z",
+   "target": "f02414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Rector's Palace (Croatian: Knežev dvor; Italian: Palazzo dei Rettori) is a palace in the city of Dubrovnik that used to serve as the seat of the Rector of the Republic of Ragusa between the 14th century and 1808.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rector's Palace” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:55.954Z",
+   "target": "f02415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Palazzo Senatorio è la sede del municipio di Roma.",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palazzo Senatorio” is on the snapshot of s5"
+  }
+ ]
+}

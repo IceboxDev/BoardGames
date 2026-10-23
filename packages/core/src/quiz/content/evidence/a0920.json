@@ -1,0 +1,382 @@
+{
+ "article": "a0920",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Capitoline_Wolf",
+   "title": "Capitoline Wolf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:07.292Z",
+   "snapshot": "ff9b9fb2c490940889b6bda7ec0e922388fbf27bc35b459cb710896591a856ab"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Romulus_und_Remus",
+   "title": "Romulus und Remus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:04.588Z",
+   "snapshot": "bbaf827cebb8fe0cff998e8fcfd130a19ed987e56d105d5662e4bbc447aa0f27"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rhea_Silvia",
+   "title": "Rhea Silvia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:08.291Z",
+   "snapshot": "74b6921974691cb9b164c3112a5f5c069b32b8986f26b0e8eade89672fff2b9e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mars_(mythology)",
+   "title": "Mars (mythology) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:48.366Z",
+   "snapshot": "009bbb2a2299d9f4fd115b13ef80ccc0f8b30a6f6085fc39b15ed80e465210f6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lupercal",
+   "title": "Lupercal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:09.297Z",
+   "snapshot": "0407320afd71f74788642fc1d1f2efed571c602c48417a81fe7b3918ae17fd14"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Palatine_Hill",
+   "title": "Palatine Hill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:10.305Z",
+   "snapshot": "6805b9acc5f36ada23f099c16b84b63fc23f5319f08a9aaed560bc0eba3ff8f7"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Amulius",
+   "title": "Amulius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:11.298Z",
+   "snapshot": "fc2f83d66c43623984a0f0d719107aa9cc5171f7173a2b4292fb737a8dc31714"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Quintus_Fabius_Pictor",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:12.282Z",
+   "snapshot": "4baf3af5c61310c36dc7e56e8a8e00603e31a4de5f2bbfc7a41d9dcb6c8c9623"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Romulus and Remus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Romulus und Remus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-078"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhea Silvia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Faustulus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Palatine Hill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Amulius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Amulius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 38"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f04596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The sculpture shows a she-wolf suckling the mythical twin founders of Rome, Romulus and Remus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romulus and Remus” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f04596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Romulus und Remus waren nach der römischen Mythologie die Gründer der Stadt Rom im Jahre 753 v.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romulus und Remus” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f04597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "According to the Roman historian Livy's account of the legend, Rhea Silvia was the daughter of Numitor, king of Alba Longa and descendant of Aeneas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhea Silvia” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f04598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In ancient Roman religion and mythology, Mars (Latin: Mārs, pronounced [maːrs]) is the god of war and also an agricultural guardian, a combination characteristic of early Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mars” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f04599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the legend of the founding of Rome, Romulus and Remus were found there by the she-wolf who suckled them until they were rescued by the shepherd Faustulus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Faustulus” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f04600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Palatine Hill ( PAL-ə-tyne; Classical Latin: Palatium; New Latin: Collis/Mons Palatinus; Italian: Palatino [palaˈtiːno]), which is the centremost of the seven hills of Rome, is one of the most ancient parts of the city; it has been called \"the first nucleus of the Roman Empire\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palatine Hill” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f28504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In Roman mythology, Amulius (Latin: [aˈmuːliʊs]) was king of Alba Longa who ordered the death of his infant, twin grandnephews Romulus, the eventual founder and king of Rome, and Remus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amulius” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:04.824Z",
+   "target": "f28504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "For instance, his narrative of the legendary overthrow of Amulius by Romulus and Remus was taken from Diocles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.824Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amulius” is on the snapshot of s8"
+  }
+ ]
+}

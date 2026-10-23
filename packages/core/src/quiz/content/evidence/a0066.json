@@ -1,0 +1,523 @@
+{
+ "article": "a0066",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/First_Triumvirate",
+   "title": "First Triumvirate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:05.806Z",
+   "snapshot": "05204edc20ba67dff190661264878eba54c72103e3053267e24ea87e898d7d03"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Second_Triumvirate",
+   "title": "Second Triumvirate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:06.761Z",
+   "snapshot": "64759d24780f5155df3d9264823922b2eeb8af9af6f22d5f38271b5539e8f9c7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Julius_Caesar",
+   "title": "Assassination of Julius Caesar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:07.638Z",
+   "snapshot": "77f8ca97bc48ff8df0bc74101578f5ef4e419ef64b8bd611f886746a9e7ea508"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gracchi_brothers",
+   "title": "Gracchi brothers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:08.792Z",
+   "snapshot": "b7c4dd480b5ee613bc72ae34b2a835497772b70f5d1e334a69f7687a399246d5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/March_on_Rome_(88_BC)",
+   "title": "March on Rome (88 BC) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:09.551Z",
+   "snapshot": "68eb7a132eca0eb81fe8e27205e79f00c43f5b0949817c417fd87bf53467ac0d"
+  },
+  "s6": {
+   "url": "https://www.worldhistory.org/Second_Triumvirate/",
+   "title": "Second Triumvirate",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:38.930Z",
+   "snapshot": "eb029625be17c09ef2cf084ef33860bb5b344092d162ebd0b6dc2a15cb52ac46"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Gaius_Gracchus",
+   "title": "Gaius Gracchus – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:39.245Z",
+   "snapshot": "53ec2c31b824029551a4152be4eb1d126a4ad5d9649d9588a6742c4737ed5810"
+  },
+  "s8": {
+   "url": "https://www.worldhistory.org/Gracchi/",
+   "title": "The Gracchi",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:40.261Z",
+   "snapshot": "eb95a8bb7f7372a0b2e234829d884fa542107ff1f68486025442e154c13de55b"
+  },
+  "s9": {
+   "url": "https://www.worldhistory.org/Sulla/",
+   "title": "Sulla",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:41.404Z",
+   "snapshot": "f9e1dc6dff50072e5494d2f5e5e7ba777ee5bf485d8a1031470a6c56db3727c3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Caesar and Pompey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Octavian and Mark Antony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brutus and Cassius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tiberius and Gaius Gracchus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Marius and Sulla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:45.204Z",
+   "target": "f00326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Caesar and Pompey, the two remaining allies, maintained friendly relations for a few years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Caesar and Pompey” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:45.204Z",
+   "target": "f00327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Octavian and Mark Antony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Octavian and Mark Antony”, “Octavian und Marcus Antonius”, “Октавиан и Марк Антоний”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:45.204Z",
+   "target": "f00328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "To combat Brutus and Cassius, who were massing an enormous army in Greece, Antony needed soldiers, the money from Caesar's war chests, and the legitimacy that Caesar's name would provide for any action he took against them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.204Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brutus and Cassius” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:45.204Z",
+   "target": "f00329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tiberius and Gaius Gracchus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tiberius and Gaius Gracchus”, “Tiberius und Gaius Gracchus”, “Тиберий и Гай Гракхи”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:45.204Z",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Marius and Sulla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Marius and Sulla”, “Marius und Sulla”, “Марий и Сулла”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:31:56Z",
+   "target": "f00327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Second Triumvirate was an extraordinary commission and magistracy created at the end of the Roman republic for Mark Antony, Lepidus, and Octavian to give them practically absolute power.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:32:01Z",
+   "target": "f00327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Second Triumvirate was a political association of convenience between three of Rome's most powerful figures: Mark Antony, Lepidus, and Octavian in the 1st century BCE.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:32:04Z",
+   "target": "f00329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He is best known for his plebeian tribunates in 123 and 122 BC",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:32:08Z",
+   "target": "f00329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Serving in 133 BCE, Tiberius introduced a land reform but was beaten to death after his term.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:32:11Z",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The March on Rome of 88 BC was a coup d'état by the consul of the Roman Republic Lucius Cornelius Sulla, who seized power against his enemies Marius and Sulpicius, after they had ousted him from Rome.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:32:14Z",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "His relationship with Marius soured during the conflicts that would follow and lead to a rivalry which would only end with Marius' death.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Second Triumvirate was an extraordinary commission and magistracy created at the end of the Roman republic for Mark Antony, Lepidus, and Octavian to give them practically absolute power.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Second Triumvirate was a political association of convenience between three of Rome's most powerful figures: Mark Antony, Lepidus, and Octavian in the 1st century BCE.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He is best known for his plebeian tribunates in 123 and 122 BC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Serving in 133 BCE, Tiberius introduced a land reform but was beaten to death after his term.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The March on Rome of 88 BC was a coup d'état by the consul of the Roman Republic Lucius Cornelius Sulla, who seized power against his enemies Marius and Sulpicius, after they had ousted him from Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "His relationship with Marius soured during the conflicts that would follow and lead to a rivalry which would only end with Marius' death.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:00.850Z",
+   "target": "f00330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The jealousy and hatred would only deepen between Marius and Sulla.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Marius and Sulla” is on the snapshot of s9"
+  }
+ ]
+}

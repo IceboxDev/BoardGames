@@ -1,0 +1,322 @@
+{
+ "article": "a2223",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)",
+   "title": "Jurassic Park (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:04.648Z",
+   "snapshot": "161ce269455888dd66984b33cb328ffc638e4f7a9d4b48370f24d36e4e0364f9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jurassic_Park",
+   "title": "Jurassic Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:01.843Z",
+   "snapshot": "161ce269455888dd66984b33cb328ffc638e4f7a9d4b48370f24d36e4e0364f9"
+  },
+  "s3": {
+   "url": "https://gizmodo.com/yes-jurassic-parks-bad-dinosaur-science-still-matters-1710655652",
+   "title": "Yes, Jurassic Park's Bad Dinosaur Science Still Matters",
+   "publisher": "Gizmodo",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:28.105Z",
+   "snapshot": "2ec0618839d6647151114c2937fef292c2bcf000869fecd68f2b157c48f379d7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mosquito",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-202"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "amber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "frog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Isla Nublar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Hammond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:39.121Z",
+   "target": "f11336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Scotch Marmo's draft, Hammond chooses to stay behind on Isla Nublar, and then drowns in a puddle, with the film's final shot being a mosquito landing on his arm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mosquito” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:39.121Z",
+   "target": "f11337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "At the park's visitor center, the group learns that the cloning was accomplished by extracting dinosaur DNA from prehistoric mosquitoes preserved in amber.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “amber” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:39.121Z",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "frog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“frog”, “Frosch”, “лягушка”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:39.121Z",
+   "target": "f11339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Starring Sam Neill, Laura Dern, Jeff Goldblum, and Richard Attenborough, the film is set on the fictional island of Isla Nublar where industrialist John Hammond (Attenborough) and a team of genetic scientists have created a wildlife park of de-extinct dinosaurs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isla Nublar” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:39.121Z",
+   "target": "f11340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Starring Sam Neill, Laura Dern, Jeff Goldblum, and Richard Attenborough, the film is set on the fictional island of Isla Nublar where industrialist John Hammond (Attenborough) and a team of genetic scientists have created a wildlife park of de-extinct dinosaurs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.121Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Hammond” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:28:35Z",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "DNA from frogs and other animals was used to fill in gaps in the dinosaurs' genome.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:28:39Z",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "“The park’s dinosaurs were made with frog DNA, so that explains the inaccuracies.” I know. Mr. DNA told us all about it.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:25.726Z",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "DNA from frogs and other animals was used to fill in gaps in the dinosaurs' genome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:25.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:25.726Z",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "“The park’s dinosaurs were made with frog DNA, so that explains the inaccuracies.” I know. Mr. DNA told us all about it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:25.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:25.726Z",
+   "target": "f11338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thinking that they’re the first to point this out, both online and at some of my public talks, I’ve had diehard fans of the film tell me “The park’s dinosaurs were made with frog DNA, so that explains the inaccuracies.” I know.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:25.726Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “frog” is on the snapshot of s3"
+  }
+ ]
+}

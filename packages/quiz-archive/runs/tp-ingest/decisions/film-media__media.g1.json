@@ -1,0 +1,795 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "film-media/media",
+ "operations": [
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-088",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-209",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-269",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-373",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "An welches Datum soll die Zahl 301 in der Typenbezeichnung des Volksempfängers VE 301 erinnern?",
+      "en": "Which date is the number 301 in the model name of the Volksempfänger VE 301 meant to recall?",
+      "answerDe": "30. Januar 1933",
+      "answerEn": "30 January 1933",
+      "timeline": {
+       "kind": "creation",
+       "start": "1933-08",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Volksempfänger VE 301 is presented at the Berlin radio exhibition",
+       "labelDe": "Der Volksempfänger VE 301 wird auf der Berliner Funkausstellung vorgestellt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Volksempfänger",
+       "title": "Volksempfänger – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß die Kabarettsendung von Günter Neumann im RIAS, die am 25. Dezember 1948 zum ersten Mal lief?",
+      "en": "What was the name of the RIAS cabaret programme by Günter Neumann that was first broadcast on 25 December 1948?",
+      "answerDe": "Die Insulaner",
+      "answerEn": "Die Insulaner",
+      "timeline": {
+       "kind": "event",
+       "start": "1948-12-25",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First broadcast of Günter Neumann's cabaret „Die Insulaner“ on RIAS",
+       "labelDe": "Erste Sendung von Günter Neumanns Kabarett „Die Insulaner“ im RIAS"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/RIAS",
+       "title": "RIAS – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "„Achtung, Achtung!“: German Radio from the Vox-Haus to B3",
+    "titleDe": "„Achtung, Achtung!“: Deutscher Rundfunk vom Voxhaus bis B3",
+    "bodyEn": "At 8 p.m. on 29 October 1923 an announcer named Friedrich Georg Knöpfke spoke into a microphone in an attic in Berlin: „Achtung, Achtung! Hier ist die Sendestelle Berlin im Voxhaus auf Welle 400 Meter.“ It was the first official entertainment broadcast in Germany, and it came from the Vox-Haus near Potsdamer Platz, the headquarters of the Vox record company. The first piece of music listeners heard was Fritz Kreisler's Andantino („in the style of Martini“), a cello solo played live by Otto Urack with Fritz Goldschmidt at the piano. The operator, registered in 1924 as the Funk-Stunde AG, became the model for the regional broadcasting companies that soon covered the whole country.\n\nThe young medium was quickly put to political use. In August 1933, at the Berlin radio exhibition, the new regime presented the Volksempfänger VE 301, a cheap set costing 76 Reichsmark; its number was meant to recall 30 January 1933, the day Hitler came to power. About 100,000 sets were sold during the exhibition alone, and in 1934 the Funk-Stunde was wound up and turned into the Reichssender Berlin.\n\nAfter the war the Allies rebuilt radio in their own zones. In Berlin's American sector a wired service called DIAS (Drahtfunk im amerikanischen Sektor) started over telephone lines on 7 February 1946; from 5 September 1946 it broadcast over the air as RIAS (Radio in the American Sector). For the divided city it was far more than a station: its cabaret Die Insulaner, written by Günter Neumann and first aired on 25 December 1948, mocked the blockade and the East, and Hans Rosenthal hosted quiz shows there. RIAS went off the air on 31 December 1993 and became part of Deutschlandradio.\n\nThe most famous double act of West German pop radio came from Munich. Bayern 3 had gone on air on 1 April 1971 as a service station for drivers; in the 1980s its afternoon B3-Radioshow belonged to Thomas Gottschalk and Günther Jauch. Gottschalk opened the programme, Jauch took over for the following ninety minutes, and their teasing handover of the microphone became a cult ritual long before both men moved on to Saturday-night television and the big quiz shows.\n\n| Date | Event |\n|---|---|\n| 29 Oct 1923 | First broadcast from the Vox-Haus |\n| Aug 1933 | Volksempfänger VE 301 presented |\n| 5 Sep 1946 | RIAS on the air in Berlin |\n| 25 Dec 1948 | First „Die Insulaner“ |\n| 1980s | B3-Radioshow with Gottschalk and Jauch |",
+    "bodyDe": "Am 29. Oktober 1923 um 20 Uhr sprach ein Ansager namens Friedrich Georg Knöpfke in einem Berliner Dachgeschoss in ein Mikrofon: „Achtung, Achtung! Hier ist die Sendestelle Berlin im Voxhaus auf Welle 400 Meter.“ Es war die erste offizielle Unterhaltungssendung in Deutschland, und sie kam aus dem Voxhaus am Potsdamer Platz, dem Sitz der Schallplattenfirma Vox. Das erste Musikstück, das die Hörer zu hören bekamen, war das Andantino von Fritz Kreisler („im Stile von Martini“), ein Cello-Solo, live gespielt von Otto Urack, am Klavier begleitet von Fritz Goldschmidt. Der Betreiber, 1924 als Funk-Stunde AG ins Handelsregister eingetragen, wurde zum Vorbild für die regionalen Rundfunkgesellschaften, die bald das ganze Land abdeckten.\n\nDas junge Medium wurde schnell politisch genutzt. Im August 1933 stellte das neue Regime auf der Berliner Funkausstellung den Volksempfänger VE 301 vor, ein billiges Gerät für 76 Reichsmark; seine Nummer sollte an den 30. Januar 1933 erinnern, den Tag der Machtergreifung Hitlers. Allein während der Ausstellung wurden rund 100.000 Geräte verkauft, und 1934 wurde die Funk-Stunde aufgelöst und zum Reichssender Berlin.\n\nNach dem Krieg bauten die Alliierten den Rundfunk in ihren Zonen neu auf. Im amerikanischen Sektor Berlins begann am 7. Februar 1946 der DIAS (Drahtfunk im amerikanischen Sektor) über Telefonleitungen zu senden; ab dem 5. September 1946 ging er als RIAS (Rundfunk im amerikanischen Sektor) über den Äther. Für die geteilte Stadt war er weit mehr als ein Sender: Sein Kabarett Die Insulaner, geschrieben von Günter Neumann und erstmals am 25. Dezember 1948 gesendet, verspottete die Blockade und den Osten, und Hans Rosenthal moderierte hier Quizsendungen. Der RIAS stellte am 31. Dezember 1993 den Sendebetrieb ein und ging im Deutschlandradio auf.\n\nDas berühmteste Duo des westdeutschen Popradios kam aus München. Bayern 3 war am 1. April 1971 als Servicewelle für Autofahrer auf Sendung gegangen; in den 1980er-Jahren gehörte die nachmittägliche B3-Radioshow Thomas Gottschalk und Günther Jauch. Gottschalk eröffnete die Sendung, Jauch übernahm die folgenden neunzig Minuten, und ihre neckische Mikrofonübergabe wurde zum Kult, lange bevor beide zum Samstagabendfernsehen und zu den großen Quizshows wechselten.\n\n| Datum | Ereignis |\n|---|---|\n| 29. Okt. 1923 | Erste Sendung aus dem Voxhaus |\n| Aug. 1933 | Volksempfänger VE 301 vorgestellt |\n| 5. Sep. 1946 | RIAS in Berlin auf Sendung |\n| 25. Dez. 1948 | Erste Folge „Die Insulaner“ |\n| 1980er | B3-Radioshow mit Gottschalk und Jauch |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-368",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-211",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie heißt die Astronomiesendung der BBC, die Patrick Moore von ihrer ersten Ausstrahlung 1957 bis zu seinem Tod 2012 moderierte?",
+      "en": "What is the name of the BBC astronomy programme that Patrick Moore presented from its first broadcast in 1957 until his death in 2012?",
+      "answerDe": "The Sky at Night",
+      "answerEn": "The Sky at Night",
+      "timeline": {
+       "kind": "event",
+       "start": "1957-04-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First broadcast of the BBC astronomy programme „The Sky at Night“",
+       "labelDe": "Erste Ausstrahlung der BBC-Astronomiesendung „The Sky at Night“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Sky_at_Night",
+       "title": "The Sky at Night – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Was erntete eine Schweizer Familie in der BBC-Sendung Panorama am 1. April 1957 von den Bäumen?",
+      "en": "What did the BBC programme Panorama show a Swiss family harvesting from trees on 1 April 1957?",
+      "answerDe": "Spaghetti",
+      "answerEn": "spaghetti",
+      "timeline": {
+       "kind": "event",
+       "start": "1957-04-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "BBC Panorama broadcasts its spaghetti-harvest April Fools' hoax",
+       "labelDe": "Die BBC-Sendung Panorama zeigt ihren Aprilscherz von der Spaghetti-Ernte"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Spaghetti-tree_hoax",
+       "title": "Spaghetti-tree hoax – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer war von 1927 bis 1938 der erste Generaldirektor der BBC?",
+      "en": "Who was the first Director-General of the BBC, from 1927 to 1938?",
+      "answerDe": "John Reith",
+      "answerEn": "John Reith",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1889-07-20",
+       "end": "1971-06-16",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "John Reith, first Director-General of the BBC",
+       "labelDe": "John Reith, erster Generaldirektor der BBC"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/John_Reith,_1st_Baron_Reith",
+       "title": "John Reith, 1st Baron Reith – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Beeb and Its April Fools",
+    "titleDe": "„The Beeb“ und seine Aprilscherze",
+    "bodyEn": "Few institutions have as many nicknames as the British Broadcasting Corporation, but the fondest is „the Beeb“, sometimes extended to „Auntie Beeb“. The BBC began on 18 October 1922 as the British Broadcasting Company, a consortium of radio manufacturers, and became a public corporation under royal charter in 1927. Its character was shaped by a stern Scot, John Reith, who joined as general manager in 1922 and served as the first Director-General of the corporation from 1927 to 1938. The BBC itself credits him with the mission „inform, educate and entertain“, and since 1948 the annual Reith Lectures have carried his name.\n\nOver the decades the Beeb also earned a reputation for straight-faced April Fools' jokes. On 1 April 1957 the current-affairs programme Panorama showed a family in the Swiss canton of Ticino harvesting spaghetti from trees, with the respected Richard Dimbleby providing the voice-over. An estimated eight million people watched, and many called in to ask how they could grow a spaghetti tree of their own.\n\nTwo decades later radio produced an equally celebrated hoax. On 1 April 1976 the astronomer Patrick Moore told listeners of BBC Radio 2 that at 9:47 a.m. Pluto would pass behind Jupiter and the combined pull of the two planets would briefly reduce the Earth's gravity. Anyone who jumped at that very moment, he promised, would feel a strange floating sensation. Hundreds of listeners phoned in to say they had felt it; one woman reported that she and eleven friends had been „wafted from their chairs“ and had orbited gently around the room.\n\nThe joke worked because the voice was so trusted. Moore had presented the BBC's monthly astronomy programme The Sky at Night since its first broadcast on 24 April 1957, and he kept doing so until his death in December 2012 – the longest-running programme with the same presenter in television history.\n\n| Year | Moment |\n|---|---|\n| 1922 | British Broadcasting Company founded |\n| 1927 | Reith becomes the first Director-General |\n| 1957 | „The Sky at Night“ begins; spaghetti harvest on Panorama |\n| 1976 | Patrick Moore's gravity hoax on Radio 2 |",
+    "bodyDe": "Kaum eine Institution hat so viele Spitznamen wie die British Broadcasting Corporation, doch der liebevollste ist „the Beeb“, manchmal erweitert zu „Auntie Beeb“. Die BBC begann am 18. Oktober 1922 als British Broadcasting Company, ein Zusammenschluss von Radioherstellern, und wurde 1927 per königlicher Charta zu einer öffentlich-rechtlichen Körperschaft. Geprägt hat sie ein strenger Schotte, John Reith, der 1922 als Geschäftsführer anfing und von 1927 bis 1938 der erste Generaldirektor der Corporation war. Die BBC selbst schreibt ihm den Auftrag „informieren, bilden und unterhalten“ zu, und seit 1948 tragen die jährlichen Reith Lectures seinen Namen.\n\nIm Lauf der Jahrzehnte erwarb sich die BBC auch einen Ruf für todernst vorgetragene Aprilscherze. Am 1. April 1957 zeigte das Politmagazin Panorama eine Familie im Schweizer Kanton Tessin, die Spaghetti von den Bäumen erntete; den Kommentar sprach der angesehene Richard Dimbleby. Schätzungsweise acht Millionen Menschen sahen zu, und viele riefen an, um zu fragen, wie sie selbst einen Spaghettibaum ziehen könnten.\n\nZwei Jahrzehnte später lieferte das Radio einen ebenso berühmten Streich. Am 1. April 1976 erzählte der Astronom Patrick Moore den Hörern von BBC Radio 2, um 9:47 Uhr werde Pluto hinter Jupiter vorbeiziehen, und die vereinte Anziehungskraft der beiden Planeten werde die Schwerkraft der Erde kurz verringern. Wer genau in diesem Moment springe, versprach er, werde ein seltsames Schwebegefühl spüren. Hunderte Hörer riefen an und berichteten, sie hätten es gespürt; eine Frau erzählte, sie und elf Freundinnen seien von ihren Stühlen gehoben worden und sanft durch den Raum geschwebt.\n\nDer Scherz funktionierte, weil die Stimme so vertrauenswürdig war. Moore moderierte die monatliche Astronomiesendung der BBC, The Sky at Night, seit ihrer ersten Ausstrahlung am 24. April 1957 und tat dies bis zu seinem Tod im Dezember 2012 – die am längsten laufende Fernsehsendung mit demselben Moderator.\n\n| Jahr | Moment |\n|---|---|\n| 1922 | Gründung der British Broadcasting Company |\n| 1927 | Reith wird erster Generaldirektor |\n| 1957 | Start von „The Sky at Night“; Spaghetti-Ernte bei Panorama |\n| 1976 | Patrick Moores Schwerkraft-Scherz auf Radio 2 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-385",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-399",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Münchner Satirezeitschrift, 1896 von Albert Langen gegründet, hatte eine rote Bulldogge als Wappentier?",
+      "en": "Which Munich satirical weekly, founded by Albert Langen in 1896, had a red bulldog as its emblem?",
+      "answerDe": "Simplicissimus",
+      "answerEn": "Simplicissimus",
+      "timeline": {
+       "kind": "founding",
+       "start": "1896-04-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First issue of the satirical weekly Simplicissimus in Munich",
+       "labelDe": "Erste Ausgabe der Satirezeitschrift Simplicissimus in München"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Simplicissimus",
+       "title": "Simplicissimus – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Für welche 1962 gestartete Frankfurter Satirezeitschrift arbeiteten Robert Gernhardt und F. K. Waechter, bevor sie die Titanic gründeten?",
+      "en": "Which Frankfurt satirical magazine, launched in 1962, did Robert Gernhardt and F. K. Waechter work for before they founded Titanic?",
+      "answerDe": "Pardon",
+      "answerEn": "Pardon",
+      "timeline": {
+       "kind": "founding",
+       "start": "1962-08-27",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First regular issue of the satirical magazine Pardon in Frankfurt",
+       "labelDe": "Erste reguläre Ausgabe der Satirezeitschrift Pardon in Frankfurt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Pardon_(Zeitschrift)",
+       "title": "Pardon (Zeitschrift) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welchem Namen erschien die ostdeutsche Satirezeitschrift Eulenspiegel erstmals 1946?",
+      "en": "Under what name did the East German satirical magazine Eulenspiegel first appear in 1946?",
+      "answerDe": "Frischer Wind",
+      "answerEn": "Frischer Wind",
+      "timeline": {
+       "kind": "founding",
+       "start": "1946-04-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The satirical paper „Frischer Wind“, forerunner of Eulenspiegel, first appears",
+       "labelDe": "Die Satirezeitung „Frischer Wind“, Vorläufer des Eulenspiegel, erscheint erstmals"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Eulenspiegel_(Zeitschrift)",
+       "title": "Eulenspiegel (Zeitschrift) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Bulldogs, Tricksters and the Final Satire Magazine",
+    "titleDe": "Bulldoggen, Schalksnarren und das endgültige Satiremagazin",
+    "bodyEn": "German satire has always needed a magazine to live in, and its history can be told in a handful of titles. The ancestor of them all appeared in Munich on 4 April 1896: Simplicissimus, founded by the publisher Albert Langen. Its emblem, a red bulldog drawn by Thomas Theodor Heine, bared its teeth in cartoons that mocked the Kaiser, the military and the church, and the magazine repeatedly paid for its boldness with confiscations and trials. It faded under the Nazis and printed its last issue on 13 September 1944.\n\nAfter the war West Germany found its satirical voice in Frankfurt. Pardon, published by Hans A. Nikel and Erich Bärmeier, brought out its first regular issue on 27 August 1962. Among its contributors were the young Robert Gernhardt, F. W. Bernstein and the illustrator F. K. Waechter, who filled its double page „Welt im Spiegel“ with nonsense and formed the core of what was later called the New Frankfurt School. In 1979 Gernhardt, Waechter and other Pardon veterans such as Hans Traxler, Peter Knorr and Chlodwig Poth left to start a monthly of their own: Titanic, which calls itself „the final satire magazine“ and published its first issue in November 1979. Pardon folded in 1982; Titanic is still edited in Frankfurt.\n\nIn the East satire needed a licence. On 15 April 1946 a satirical paper called Frischer Wind appeared under a Soviet press licence; on 1 May 1954 it was renamed Eulenspiegel, after the trickster of German folk tales. As the only satirical weekly of the GDR it walked a fine line, poking fun at bureaucrats and shortages while sparing the party leadership. It survived reunification, switched to monthly publication in 1991 and is still published in Berlin.\n\n| Magazine | Founded | City |\n|---|---|---|\n| Simplicissimus | 1896 | Munich |\n| Frischer Wind / Eulenspiegel | 1946 / 1954 | Berlin |\n| Pardon | 1962 | Frankfurt |\n| Titanic | 1979 | Frankfurt |",
+    "bodyDe": "Die deutsche Satire brauchte immer eine Zeitschrift, in der sie leben konnte, und ihre Geschichte lässt sich an einer Handvoll Titel erzählen. Die Urahnin erschien am 4. April 1896 in München: der Simplicissimus, gegründet vom Verleger Albert Langen. Sein Wappentier, eine rote Bulldogge von Thomas Theodor Heine, fletschte die Zähne in Karikaturen, die Kaiser, Militär und Kirche verspotteten, und die Zeitschrift bezahlte ihren Mut immer wieder mit Beschlagnahmungen und Prozessen. Unter den Nationalsozialisten verblasste sie und erschien zum letzten Mal am 13. September 1944.\n\nNach dem Krieg fand die westdeutsche Satire ihre Stimme in Frankfurt. Pardon, herausgegeben von Hans A. Nikel und Erich Bärmeier, brachte am 27. August 1962 seine erste reguläre Ausgabe heraus. Zu den Mitarbeitern gehörten der junge Robert Gernhardt, F. W. Bernstein und der Zeichner F. K. Waechter, die die Doppelseite „Welt im Spiegel“ mit Nonsens füllten und den Kern dessen bildeten, was später Neue Frankfurter Schule genannt wurde. 1979 gingen Gernhardt, Waechter und weitere Pardon-Veteranen wie Hans Traxler, Peter Knorr und Chlodwig Poth und gründeten ein eigenes Monatsblatt: die Titanic, die sich „das endgültige Satiremagazin“ nennt und im November 1979 zum ersten Mal erschien. Pardon wurde 1982 eingestellt; die Titanic wird bis heute in Frankfurt gemacht.\n\nIm Osten brauchte die Satire eine Lizenz. Am 15. April 1946 erschien mit sowjetischer Presselizenz die Satirezeitung Frischer Wind; am 1. Mai 1954 wurde sie nach dem Schalksnarren der deutschen Volksbücher in Eulenspiegel umbenannt. Als einzige satirische Wochenzeitschrift der DDR bewegte sie sich auf einem schmalen Grat: Sie spottete über Bürokraten und Mangelwirtschaft, verschonte aber die Parteiführung. Sie überlebte die Wiedervereinigung, erscheint seit 1991 monatlich und wird weiterhin in Berlin herausgegeben.\n\n| Zeitschrift | Gegründet | Stadt |\n|---|---|---|\n| Simplicissimus | 1896 | München |\n| Frischer Wind / Eulenspiegel | 1946 / 1954 | Berlin |\n| Pardon | 1962 | Frankfurt |\n| Titanic | 1979 | Frankfurt |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-395",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-297",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-261",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-147",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welchem Pseudonym beantwortete der Psychotherapeut Martin Goldstein ab 1969 die Fragen von Bravo-Lesern zu Liebe und Sex?",
+      "en": "Under which pseudonym did the psychotherapist Martin Goldstein answer Bravo readers' questions about love and sex from 1969?",
+      "answerDe": "Dr. Jochen Sommer",
+      "answerEn": "Dr. Jochen Sommer",
+      "timeline": {
+       "kind": "event",
+       "start": "1969-10-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Martin Goldstein begins answering Bravo readers' questions as „Dr. Jochen Sommer“",
+       "labelDe": "Martin Goldstein beginnt, als „Dr. Jochen Sommer“ die Fragen der Bravo-Leser zu beantworten"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Dr.-Sommer-Team",
+       "title": "Bravo (deutsche Zeitschrift) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Apotheken-Kundenzeitschrift, 1956 vom Verleger Rolf Becker gegründet, erscheint im Wort & Bild Verlag in Baierbrunn?",
+      "en": "Which pharmacy customer magazine, founded by the publisher Rolf Becker in 1956, is published by Wort & Bild Verlag in Baierbrunn?",
+      "answerDe": "Apotheken Umschau",
+      "answerEn": "Apotheken Umschau",
+      "timeline": {
+       "kind": "founding",
+       "start": "1956",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Rolf Becker founds the pharmacy magazine Apotheken Umschau",
+       "labelDe": "Rolf Becker gründet die Apothekenzeitschrift Apotheken Umschau"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Apotheken_Umschau",
+       "title": "Apotheken Umschau – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wofür steht die Abkürzung FF im Titel der DDR-Programmzeitschrift FF dabei?",
+      "en": "What does the abbreviation FF stand for in the title of the East German television guide FF dabei?",
+      "answerDe": "Fernsehfunk",
+      "answerEn": "Fernsehfunk",
+      "timeline": {
+       "kind": "event",
+       "start": "1969",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The GDR listings magazine is relaunched as „FF dabei“",
+       "labelDe": "Die DDR-Programmzeitschrift erscheint neu als „FF dabei“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/FF_dabei",
+       "title": "FF dabei – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Bravo to Medizini: Magazines Germans Grew Up With",
+    "titleDe": "Von Bravo bis Medizini: Zeitschriften, mit denen Deutschland aufwuchs",
+    "bodyEn": "Some magazines accompany Germans through whole stages of life, from the pharmacy counter to the kiosk. The youth magazine Bravo appeared for the first time on 26 August 1956, priced at 50 pfennigs and with Marilyn Monroe on the cover. Founded by the journalists Peter Boenisch and Alexander Rentsch with the publisher Helmut Kindler, and today published by the Bauer Media Group in Hamburg, it turned 60 years old in 2016, after generations of teenagers had pinned its posters to their walls. Its most famous section began on 20 October 1969, when the psychotherapist Martin Goldstein started answering readers' questions about love and sex under a pseudonym the editors had invented: Dr. Jochen Sommer. The column later grew into the „Dr. Sommer team“ of experts, and since 1957 the magazine has also handed out its own award, the Bravo Otto.\n\nChildren met their first magazine at the pharmacy. In May 1974 the Wort und Bild Verlag brought out a free health magazine for children titled „Medi & Zini“; since 1986 it has been called Medizini. Its big sister, the Apotheken Umschau, founded in 1956 by the publisher Rolf Becker and produced in Baierbrunn near Munich, sells more than five million copies and is one of the most widely read magazines in the country.\n\nAdults reached for gossip and listings. Gala, a celebrity magazine that its publisher had first launched in France, appeared in a German edition on 13 April 1994. The publisher was Gruner + Jahr in Hamburg, until RTL Deutschland, the parent company of Gruner + Jahr, sold the title to the Funke Mediengruppe in March 2025.\n\nIn East Germany one television guide served everybody. Founded in 1946 as „Der Rundfunk“, it went through several names before it was relaunched for the twentieth anniversary of the GDR in 1969 as FF dabei – the FF standing for Fernsehfunk, the name of East German television. Selling about 1.5 million copies a week by 1990, it was one of the most read publications in the country; after reunification its circulation collapsed, and since 1996 it has survived only as a supplement for readers in the eastern states.\n\n| Magazine | Since | Publisher |\n|---|---|---|\n| Bravo | 1956 | Bauer Media Group |\n| Apotheken Umschau | 1956 | Wort & Bild Verlag |\n| FF dabei | 1969 (as „Der Rundfunk“ 1946) | GDR, later a supplement |\n| Medizini | 1974 (as „Medi & Zini“) | Wort & Bild Verlag |\n| Gala | 1994 in Germany | Gruner + Jahr, Funke since 2025 |",
+    "bodyDe": "Manche Zeitschriften begleiten die Deutschen durch ganze Lebensabschnitte, von der Apothekentheke bis zum Kiosk. Die Jugendzeitschrift Bravo erschien zum ersten Mal am 26. August 1956, für 50 Pfennig und mit Marilyn Monroe auf dem Titel. Gegründet von den Journalisten Peter Boenisch und Alexander Rentsch mit dem Verleger Helmut Kindler und heute bei der Bauer Media Group in Hamburg verlegt, wurde sie 2016 60 Jahre alt, nachdem Generationen von Teenagern ihre Poster an die Wand gehängt hatten. Ihre berühmteste Rubrik begann am 20. Oktober 1969, als der Psychotherapeut Martin Goldstein unter einem von der Redaktion erfundenen Pseudonym Leserfragen zu Liebe und Sex zu beantworten begann: Dr. Jochen Sommer. Aus der Kolumne wurde später das Expertenteam „Dr.-Sommer-Team“, und seit 1957 vergibt die Zeitschrift außerdem einen eigenen Preis, den Bravo Otto.\n\nKinder begegneten ihrer ersten Zeitschrift in der Apotheke. Im Mai 1974 brachte der Wort und Bild Verlag ein kostenloses Gesundheitsheft für Kinder mit dem Titel „Medi & Zini“ heraus; seit 1986 heißt es Medizini. Die große Schwester, die Apotheken Umschau, 1956 vom Verleger Rolf Becker gegründet und in Baierbrunn bei München gemacht, verkauft mehr als fünf Millionen Exemplare und gehört zu den meistgelesenen Zeitschriften des Landes.\n\nErwachsene griffen zu Klatsch und Programm. Gala, ein People-Magazin, das sein Verlag zuerst in Frankreich gestartet hatte, erschien am 13. April 1994 in einer deutschen Ausgabe. Verlag war Gruner + Jahr in Hamburg, bis RTL Deutschland, die Muttergesellschaft von Gruner + Jahr, den Titel im März 2025 an die Funke Mediengruppe verkaufte.\n\nIn der DDR gab es eine Fernsehzeitschrift für alle. 1946 als „Der Rundfunk“ gegründet, trug sie mehrere Namen, bis sie 1969 zum 20. Jahrestag der DDR als FF dabei neu gestartet wurde – FF stand für Fernsehfunk, den Namen des DDR-Fernsehens. Mit rund 1,5 Millionen verkauften Exemplaren pro Woche im Jahr 1990 gehörte sie zu den meistgelesenen Blättern des Landes; nach der Wiedervereinigung brach die Auflage ein, und seit 1996 erscheint sie nur noch als Beilage für Leser in den neuen Bundesländern.\n\n| Zeitschrift | Seit | Verlag |\n|---|---|---|\n| Bravo | 1956 | Bauer Media Group |\n| Apotheken Umschau | 1956 | Wort & Bild Verlag |\n| FF dabei | 1969 (als „Der Rundfunk“ 1946) | DDR, später Beilage |\n| Medizini | 1974 (als „Medi & Zini“) | Wort & Bild Verlag |\n| Gala | 1994 in Deutschland | Gruner + Jahr, seit 2025 Funke |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-110",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-303",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-374",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer gründete 1953 in Chicago das Magazin Playboy?",
+      "en": "Who founded Playboy magazine in Chicago in 1953?",
+      "answerDe": "Hugh Hefner",
+      "answerEn": "Hugh Hefner",
+      "timeline": {
+       "kind": "founding",
+       "start": "1953-12",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Hugh Hefner publishes the first, undated issue of Playboy in Chicago",
+       "labelDe": "Hugh Hefner bringt in Chicago die erste, undatierte Ausgabe des Playboy heraus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Playboy",
+       "title": "Playboy – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer gründete 1967 in San Francisco zusammen mit dem Kritiker Ralph J. Gleason das Magazin Rolling Stone?",
+      "en": "Who founded Rolling Stone magazine in San Francisco in 1967 together with the critic Ralph J. Gleason?",
+      "answerDe": "Jann Wenner",
+      "answerEn": "Jann Wenner",
+      "timeline": {
+       "kind": "founding",
+       "start": "1967-10-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first issue of Rolling Stone is released in San Francisco",
+       "labelDe": "Die erste Ausgabe des Rolling Stone erscheint in San Francisco"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Rolling_Stone",
+       "title": "Rolling Stone – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welchen Namen erhielt der Dandy mit Zylinder und Monokel auf dem Titel der ersten Ausgabe des New Yorker von 1925?",
+      "en": "What name was given to the top-hatted dandy with a monocle on the cover of the first issue of The New Yorker in 1925?",
+      "answerDe": "Eustace Tilley",
+      "answerEn": "Eustace Tilley",
+      "timeline": {
+       "kind": "creation",
+       "start": "1925-02-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first issue of The New Yorker appears with Rea Irvin's dandy on the cover",
+       "labelDe": "Die erste Ausgabe des New Yorker erscheint mit Rea Irvins Dandy auf dem Titel"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Eustace_Tilley",
+       "title": "Eustace Tilley – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "First Covers: Playboy, Rolling Stone and The New Yorker",
+    "titleDe": "Erste Titelbilder: Playboy, Rolling Stone und The New Yorker",
+    "bodyEn": "American magazines are remembered by their covers, and three titles show how a first issue can define a brand for decades. The New Yorker, founded by Harold Ross, appeared on 21 February 1925 with a cover by Rea Irvin: a top-hatted Regency dandy peering through a monocle at a butterfly. The figure was later named Eustace Tilley, became the magazine's mascot and still returns on anniversary covers.\n\nIn Chicago in December 1953, Hugh Hefner, partly financed by a $1,000 loan from his mother, published a magazine so unsure of its future that the first issue carried no date. Playboy's cover star and first centrefold was Marilyn Monroe, in a photograph originally taken for a calendar; three years later she also graced the cover of the first issue of the German youth magazine Bravo. Nudity remained Playboy's trademark for six decades, until the internet made it commonplace: in October 2015 the magazine announced that from March 2016 the US edition would no longer show fully nude women. The experiment lasted barely a year. With the March/April 2017 issue nudity returned, the magazine admitting that dropping it had been a mistake.\n\nRolling Stone began in San Francisco. Founded in 1967 by the 21-year-old Jann Wenner and the jazz critic Ralph J. Gleason, it released its first issue on 18 October 1967, with a cover date of 9 November. The cover showed John Lennon in an army helmet, a still from Richard Lester's film „How I Won the War“. The magazine moved to New York in 1977 and became the leading voice of rock journalism; a Rolling Stone cover is still a milestone in any musician's career.\n\n| Magazine | First issue | First cover |\n|---|---|---|\n| The New Yorker | 21 Feb 1925 | Eustace Tilley |\n| Playboy | Dec 1953 | Marilyn Monroe |\n| Rolling Stone | 9 Nov 1967 (cover date) | John Lennon |",
+    "bodyDe": "Amerikanische Zeitschriften bleiben durch ihre Titelbilder in Erinnerung, und drei Magazine zeigen, wie eine erste Ausgabe eine Marke für Jahrzehnte prägen kann. The New Yorker, gegründet von Harold Ross, erschien am 21. Februar 1925 mit einem Titelbild von Rea Irvin: ein Regency-Dandy mit Zylinder, der durch sein Monokel einen Schmetterling betrachtet. Die Figur erhielt später den Namen Eustace Tilley, wurde zum Maskottchen des Magazins und kehrt bis heute auf Jubiläumstiteln zurück.\n\nIm Dezember 1953 brachte Hugh Hefner in Chicago, teils mit einem Darlehen seiner Mutter über 1.000 Dollar finanziert, ein Magazin heraus, das seiner Zukunft so wenig sicher war, dass die erste Ausgabe kein Datum trug. Titelstar und erstes Centerfold des Playboy war Marilyn Monroe, auf einem Foto, das ursprünglich für einen Kalender entstanden war; drei Jahre später zierte sie auch das Titelbild der ersten Ausgabe der deutschen Jugendzeitschrift Bravo. Nacktheit blieb sechs Jahrzehnte lang das Markenzeichen des Playboy, bis das Internet sie alltäglich machte: Im Oktober 2015 kündigte das Magazin an, die US-Ausgabe werde ab März 2016 keine völlig nackten Frauen mehr zeigen. Das Experiment hielt kaum ein Jahr. Mit der Ausgabe März/April 2017 kehrte die Nacktheit zurück, und das Magazin räumte ein, der Verzicht sei ein Fehler gewesen.\n\nDer Rolling Stone begann in San Francisco. 1967 von dem 21-jährigen Jann Wenner und dem Jazzkritiker Ralph J. Gleason gegründet, erschien die erste Ausgabe am 18. Oktober 1967 mit dem Titeldatum 9. November. Das Cover zeigte John Lennon mit Militärhelm, ein Standbild aus Richard Lesters Film „Wie ich den Krieg gewann“. 1977 zog das Magazin nach New York und wurde zur führenden Stimme des Rockjournalismus; ein Titelbild des Rolling Stone ist bis heute ein Meilenstein in jeder Musikerkarriere.\n\n| Zeitschrift | Erste Ausgabe | Erstes Titelbild |\n|---|---|---|\n| The New Yorker | 21. Feb. 1925 | Eustace Tilley |\n| Playboy | Dez. 1953 | Marilyn Monroe |\n| Rolling Stone | 9. Nov. 1967 (Titeldatum) | John Lennon |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-008",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-060",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-268",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer war der Gründungsverleger der Hamburger Wochenzeitung Die Zeit, die 1946 erstmals erschien, und blieb bis zu seinem Tod ihr Verleger?",
+      "en": "Who was the founding publisher of the Hamburg weekly Die Zeit, first published in 1946, who remained its publisher until his death?",
+      "answerDe": "Gerd Bucerius",
+      "answerEn": "Gerd Bucerius",
+      "timeline": {
+       "kind": "founding",
+       "start": "1946-02-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First issue of the weekly Die Zeit in Hamburg",
+       "labelDe": "Erste Ausgabe der Wochenzeitung Die Zeit in Hamburg"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Die_Zeit",
+       "title": "Die Zeit – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Verleger brachte am 24. Juni 1952 die Bild-Zeitung heraus?",
+      "en": "Which publisher launched the Bild newspaper on 24 June 1952?",
+      "answerDe": "Axel Springer",
+      "answerEn": "Axel Springer",
+      "timeline": {
+       "kind": "founding",
+       "start": "1952-06-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First issue of Axel Springer's Bild newspaper",
+       "labelDe": "Erste Ausgabe von Axel Springers Bild-Zeitung"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Bild_(Zeitung)",
+       "title": "Bild (Zeitung) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie heißt die tägliche Glosse oben links auf der Titelseite der Süddeutschen Zeitung?",
+      "en": "What is the name of the daily witty commentary at the top left of the Süddeutsche Zeitung's front page?",
+      "answerDe": "Streiflicht",
+      "answerEn": "Streiflicht",
+      "timeline": {
+       "kind": "founding",
+       "start": "1945-10-06",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First issue of the Süddeutsche Zeitung in Munich",
+       "labelDe": "Erste Ausgabe der Süddeutschen Zeitung in München"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Süddeutsche_Zeitung",
+       "title": "Süddeutsche Zeitung – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Mastheads and Headlines: Three German Newspapers",
+    "titleDe": "Zeitungsköpfe und Schlagzeilen: Drei deutsche Zeitungen",
+    "bodyEn": "The modern German press was born under licence. After 1945 the Allies allowed only newspapers whose publishers they had vetted, and two of today's most respected titles date from that first year of peace. In Munich the Süddeutsche Zeitung appeared on 6 October 1945 as licensed newspaper no. 1 in Bavaria, printed on the presses of the former Münchner Neueste Nachrichten. Its trademark is the Streiflicht, a witty unsigned commentary at the top left of the front page every day. Its Friday supplement, the SZ-Magazin, became a home for columnists: from 1990 Axel Hacke published his „Der kleine Erziehungsberater“ (The Little Parenting Adviser) there, comic sketches from family life that came out as a book in 1992 and sold more than a million copies.\n\nIn Hamburg the weekly Die Zeit followed on 21 February 1946, published by Gerd Bucerius together with Lovis H. Lorenz, Richard Tüngel and Ewald Schmidt di Simoni. Its masthead hides a small puzzle. The first issues showed the Hamburg coat of arms, but the Hamburg Senate objected to the use of its official emblem. From issue 19, on 27 June 1946, the paper therefore carried the key and crown of Bremen instead, with the permission of Bremen's mayor Wilhelm Kaisen – which is why a Hamburg paper still bears another city's arms. Bucerius remained its publisher until his death in 1995; in 1983 the former chancellor Helmut Schmidt joined as co-publisher.\n\nThe loudest voice came a little later. Axel Springer launched Bild on 24 June 1952 as a cheap tabloid with huge type and few words, and it became the best-selling newspaper in Europe. Its headlines have entered the language, none more than the front page of 20 April 2005, the day after the Bavarian cardinal Joseph Ratzinger was elected Pope Benedict XVI: the headline “We are Pope!” („Wir sind Papst!“), quoted ever since whenever Germans celebrate a compatriot's success.\n\n| Newspaper | First issue | City |\n|---|---|---|\n| Süddeutsche Zeitung | 6 Oct 1945 | Munich |\n| Die Zeit | 21 Feb 1946 | Hamburg |\n| Bild | 24 Jun 1952 | Hamburg (today Berlin) |",
+    "bodyDe": "Die moderne deutsche Presse wurde unter Lizenz geboren. Nach 1945 ließen die Alliierten nur Zeitungen zu, deren Herausgeber sie geprüft hatten, und zwei der heute angesehensten Titel stammen aus diesem ersten Friedensjahr. In München erschien am 6. Oktober 1945 die Süddeutsche Zeitung als Lizenzzeitung Nr. 1 in Bayern, gedruckt in den Räumen der früheren Münchner Neuesten Nachrichten. Ihr Markenzeichen ist das Streiflicht, eine geistreiche, ungezeichnete Glosse, die täglich oben links auf der Titelseite steht. Ihre Freitagsbeilage, das SZ-Magazin, wurde zur Heimat von Kolumnisten: Ab 1990 veröffentlichte Axel Hacke dort seinen „Kleinen Erziehungsberater“, komische Szenen aus dem Familienleben, die 1992 als Buch erschienen und sich mehr als eine Million Mal verkauften.\n\nIn Hamburg folgte am 21. Februar 1946 die Wochenzeitung Die Zeit, herausgegeben von Gerd Bucerius zusammen mit Lovis H. Lorenz, Richard Tüngel und Ewald Schmidt di Simoni. Ihr Zeitungskopf birgt ein kleines Rätsel. Die ersten Ausgaben zeigten das Hamburger Wappen, doch der Hamburger Senat wandte sich gegen die Verwendung seines Hoheitszeichens. Ab Ausgabe 19 vom 27. Juni 1946 trug das Blatt deshalb Schlüssel und Krone von Bremen, mit Erlaubnis des Bremer Bürgermeisters Wilhelm Kaisen – darum trägt eine Hamburger Zeitung bis heute das Wappen einer anderen Stadt. Bucerius blieb ihr Verleger bis zu seinem Tod 1995; 1983 kam Altbundeskanzler Helmut Schmidt als Mitherausgeber hinzu.\n\nDie lauteste Stimme kam etwas später. Axel Springer brachte am 24. Juni 1952 die Bild heraus, ein billiges Boulevardblatt mit riesigen Lettern und wenig Text, das zur meistverkauften Zeitung Europas wurde. Ihre Schlagzeilen sind in die Sprache eingegangen, keine so sehr wie die Titelseite vom 20. April 2005, dem Tag nach der Wahl des bayerischen Kardinals Joseph Ratzinger zu Papst Benedikt XVI.: „Wir sind Papst!“ – seither zitiert, wann immer Deutsche den Erfolg eines Landsmanns feiern.\n\n| Zeitung | Erste Ausgabe | Stadt |\n|---|---|---|\n| Süddeutsche Zeitung | 6. Okt. 1945 | München |\n| Die Zeit | 21. Feb. 1946 | Hamburg |\n| Bild | 24. Juni 1952 | Hamburg (heute Berlin) |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-204",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-247",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-290",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welchem Titel wurde die Wiener Zeitung 1703 gegründet?",
+      "en": "Under what title was the Wiener Zeitung founded in 1703?",
+      "answerDe": "Wiennerisches Diarium",
+      "answerEn": "Wiennerisches Diarium",
+      "timeline": {
+       "kind": "founding",
+       "start": "1703-08-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First issue of the Wiennerisches Diarium, later the Wiener Zeitung",
+       "labelDe": "Erste Ausgabe des Wiennerischen Diariums, der späteren Wiener Zeitung"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Wiener_Zeitung",
+       "title": "Wiener Zeitung – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer gründete die niederländische Zeitung De Telegraaf, die am 1. Januar 1893 zum ersten Mal erschien?",
+      "en": "Who founded the Dutch newspaper De Telegraaf, first published on 1 January 1893?",
+      "answerDe": "Henry Tindal",
+      "answerEn": "Henry Tindal",
+      "timeline": {
+       "kind": "founding",
+       "start": "1893-01-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First issue of Henry Tindal's De Telegraaf in Amsterdam",
+       "labelDe": "Erste Ausgabe von Henry Tindals De Telegraaf in Amsterdam"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/De_Telegraaf",
+       "title": "De Telegraaf – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Motto gab sich die Washington Post nach der US-Präsidentschaftswahl 2016?",
+      "en": "What motto did The Washington Post adopt after the 2016 US presidential election?",
+      "answerDe": "Democracy Dies in Darkness",
+      "answerEn": "Democracy Dies in Darkness",
+      "timeline": {
+       "kind": "event",
+       "start": "2016",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Washington Post adopts the motto „Democracy Dies in Darkness“",
+       "labelDe": "Die Washington Post gibt sich das Motto „Democracy Dies in Darkness“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Washington_Post",
+       "title": "The Washington Post – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Old Papers, New Owners: Three Dailies Abroad",
+    "titleDe": "Alte Blätter, neue Besitzer: Drei Tageszeitungen im Ausland",
+    "bodyEn": "The oldest newspapers in the world are almost all European, and for a long time the record holder was in Vienna. On 8 August 1703 Johann Baptist Schönwetter published the first issue of the Wiennerisches Diarium, which became the Wiener Zeitung and, as the official gazette of the Austrian state, carried imperial decrees and later the republic's legal notices. Until 2023 it was regarded as the oldest daily newspaper still in print anywhere. Then a new law ended its role as an official gazette, and the last printed issue appeared on 30 June 2023; since July 2023 it has continued online only.\n\nThe great popular daily of the Netherlands is much younger. De Telegraaf, founded by Henry Tindal, a publisher who had already launched the paper De Courant, put out its first issue on 1 January 1893. Based in Amsterdam, it grew into the country's largest morning paper: in the mid-1990s it sold about 760,000 copies and ranked among the ten best-selling newspapers in Europe.\n\nIn the United States one of the most famous mastheads changed hands in 2013. The Washington Post, founded in 1877, had belonged since 1933 to the family of Eugene Meyer and his daughter Katharine Graham, who steered it through the Pentagon Papers and Watergate. In August 2013 the Graham family announced the sale of the paper to the Amazon founder Jeff Bezos, who paid 250 million dollars through his holding company Nash Holdings. After the 2016 presidential election the paper adopted the motto that has stood under its masthead ever since: „Democracy Dies in Darkness“.\n\n| Newspaper | Founded | Country |\n|---|---|---|\n| Wiener Zeitung | 1703 | Austria |\n| De Telegraaf | 1893 | Netherlands |\n| The Washington Post | 1877 | United States |",
+    "bodyDe": "Die ältesten Zeitungen der Welt sind fast alle europäisch, und lange Zeit stand der Rekordhalter in Wien. Am 8. August 1703 brachte Johann Baptist Schönwetter die erste Ausgabe einer Zeitung mit dem Titel Wiennerisches Diarium heraus, die zur Wiener Zeitung wurde und als Amtsblatt des österreichischen Staates kaiserliche Erlässe und später die Kundmachungen der Republik veröffentlichte. Bis 2023 galt sie als älteste noch gedruckte Tageszeitung der Welt. Dann beendete ein neues Gesetz ihre Rolle als Amtsblatt, und die letzte gedruckte Ausgabe erschien am 30. Juni 2023; seit Juli 2023 erscheint sie nur noch online.\n\nDie große Volkszeitung der Niederlande ist viel jünger. De Telegraaf, gegründet von Henry Tindal, einem Verleger, der bereits die Zeitung De Courant ins Leben gerufen hatte, erschien zum ersten Mal am 1. Januar 1893. Mit Sitz in Amsterdam wurde sie zur größten Morgenzeitung des Landes: Mitte der 1990er-Jahre verkaufte sie rund 760.000 Exemplare und gehörte zu den zehn meistverkauften Zeitungen Europas.\n\nIn den Vereinigten Staaten wechselte 2013 einer der berühmtesten Zeitungsköpfe den Besitzer. The Washington Post, gegründet 1877, gehörte seit 1933 der Familie von Eugene Meyer und seiner Tochter Katharine Graham, die sie durch die Pentagon Papers und Watergate steuerte. Im August 2013 gab die Familie Graham den Verkauf der Zeitung an Amazon-Gründer Jeff Bezos bekannt, der über seine Holding Nash Holdings 250 Millionen Dollar zahlte. Nach der Präsidentschaftswahl 2016 gab sich das Blatt das Motto, das seither unter seinem Titel steht: „Democracy Dies in Darkness“ (Die Demokratie stirbt in der Dunkelheit).\n\n| Zeitung | Gegründet | Land |\n|---|---|---|\n| Wiener Zeitung | 1703 | Österreich |\n| De Telegraaf | 1893 | Niederlande |\n| The Washington Post | 1877 | Vereinigte Staaten |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-392",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Auf wessen Testament gehen die bekanntesten Journalistenpreise Amerikas zurück, die 1917 erstmals an der Columbia University vergeben wurden?",
+      "en": "Under whose will were America's best-known journalism prizes, first awarded at Columbia University in 1917, established?",
+      "answerDe": "Joseph Pulitzer",
+      "answerEn": "Joseph Pulitzer",
+      "timeline": {
+       "kind": "founding",
+       "start": "1917-06-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first Pulitzer Prizes are awarded",
+       "labelDe": "Die ersten Pulitzer-Preise werden vergeben"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize",
+       "title": "Pulitzer Prize – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher deutsche Journalistenpreis, seit 1962 vom Zeitungsverlegerverband BDZV vergeben, ist nach dem früheren Chefredakteur des Berliner Tageblatts benannt?",
+      "en": "Which German journalism prize, awarded by the newspaper publishers' federation BDZV since 1962, is named after the former editor-in-chief of the Berliner Tageblatt?",
+      "answerDe": "Theodor-Wolff-Preis",
+      "answerEn": "Theodor Wolff Prize",
+      "timeline": {
+       "kind": "founding",
+       "start": "1962",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Theodor Wolff Prize for journalism is awarded for the first time",
+       "labelDe": "Der Theodor-Wolff-Preis für Journalismus wird zum ersten Mal vergeben"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Theodor-Wolff-Preis",
+       "title": "Theodor-Wolff-Preis – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Nach wem ist der deutsche Fernsehpreis benannt, der 1964 zum ersten Mal in Marl verliehen wurde?",
+      "en": "After whom is the German television award that was first presented in Marl in 1964 named?",
+      "answerDe": "Adolf Grimme",
+      "answerEn": "Adolf Grimme",
+      "timeline": {
+       "kind": "founding",
+       "start": "1964-01-16",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Grimme Prize is presented for the first time in Marl",
+       "labelDe": "Der Grimme-Preis wird zum ersten Mal in Marl verliehen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Grimme-Preis",
+       "title": "Grimme-Preis – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche 1985 in Montpellier gegründete Organisation veröffentlicht jährlich die Rangliste der Pressefreiheit?",
+      "en": "Which organisation, founded in Montpellier in 1985, publishes the annual World Press Freedom Index?",
+      "answerDe": "Reporter ohne Grenzen",
+      "answerEn": "Reporters Without Borders",
+      "timeline": {
+       "kind": "founding",
+       "start": "1985",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Reporters Without Borders is founded in Montpellier",
+       "labelDe": "Reporter ohne Grenzen wird in Montpellier gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Reporters_Without_Borders",
+       "title": "Reporters Without Borders – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Praise and Blame: The Prizes of Journalism",
+    "titleDe": "Lob und Tadel: Die Preise des Journalismus",
+    "bodyEn": "Journalism likes to reward itself, and a few of its prizes are known far beyond the profession. The oldest and most famous were established under the will of Joseph Pulitzer, the Hungarian-born publisher of the New York World, who died in 1911 and left money to Columbia University for a school of journalism and a set of annual awards. The Pulitzer Prizes were first presented on 4 June 1917 and have been administered by Columbia ever since; the gold medal for Public Service is the most coveted of them.\n\nGermany has its own counterparts. Since 1962 the federation of German newspaper publishers (BDZV) has awarded the Theodor Wolff Prize for outstanding newspaper journalism. It honours the liberal editor-in-chief of the Berliner Tageblatt, whom the Nazis drove out of Germany in 1933 because of his Jewish origin. Television has the Grimme Prize, first presented in Marl on 16 January 1964 and named after Adolf Grimme (1889–1963), the first director-general of the Nordwestdeutscher Rundfunk; it is awarded by the Grimme Institute, set up on the initiative of the German adult-education association.\n\nSome judgements look outward. Reporters Without Borders, founded in Montpellier in 1985 by Robert Ménard and three colleagues and now based in Paris, ranks 180 countries every year in its World Press Freedom Index, a list that governments quote proudly or attack angrily, depending on their place in it.\n\nThe most entertaining prize, however, is a negative one. Since 2002 the German journalists' association Netzwerk Recherche has handed out the Closed Oyster (Verschlossene Auster), a slate sculpture, to those in politics and business who refuse to give the press information. The first went to the interior minister Otto Schily for blocking a freedom-of-information law; later „winners“ include Aldi, Vladimir Putin, the International Olympic Committee, FIFA, Facebook and Tesla.\n\n| Prize or ranking | Since | Awarded by |\n|---|---|---|\n| Pulitzer Prize | 1917 | Columbia University |\n| Theodor Wolff Prize | 1962 | BDZV |\n| Grimme Prize | 1964 | Grimme Institute |\n| World Press Freedom Index | – | Reporters Without Borders (founded 1985) |\n| Closed Oyster | 2002 | Netzwerk Recherche |",
+    "bodyDe": "Der Journalismus belohnt sich gern selbst, und einige seiner Preise sind weit über die Branche hinaus bekannt. Die ältesten und berühmtesten gehen auf das Testament von Joseph Pulitzer zurück, dem in Ungarn geborenen Verleger der New York World, der 1911 starb und der Columbia University Geld für eine Journalistenschule und eine Reihe jährlicher Auszeichnungen hinterließ. Die Pulitzer-Preise wurden am 4. Juni 1917 zum ersten Mal verliehen und werden seither von der Columbia University verwaltet; die Goldmedaille für Verdienste um die Öffentlichkeit ist die begehrteste von ihnen.\n\nDeutschland hat eigene Gegenstücke. Seit 1962 vergibt der Bundesverband Deutscher Zeitungsverleger (BDZV) den Theodor-Wolff-Preis für herausragenden Zeitungsjournalismus. Er erinnert an den liberalen Chefredakteur des Berliner Tageblatts, den die Nationalsozialisten 1933 wegen seiner jüdischen Herkunft aus Deutschland vertrieben. Das Fernsehen hat den Grimme-Preis, erstmals am 16. Januar 1964 in Marl verliehen und benannt nach Adolf Grimme (1889–1963), dem ersten Generaldirektor des Nordwestdeutschen Rundfunks; vergeben wird er vom Grimme-Institut, das auf Initiative des Deutschen Volkshochschul-Verbands entstand.\n\nManche Urteile blicken nach außen. Reporter ohne Grenzen, 1985 von Robert Ménard und drei Kollegen in Montpellier gegründet und heute in Paris ansässig, ordnet jedes Jahr 180 Länder in seiner Rangliste der Pressefreiheit – einer Liste, die Regierungen je nach Platzierung stolz zitieren oder wütend angreifen.\n\nDer unterhaltsamste Preis ist jedoch ein negativer. Seit 2002 vergibt die Journalistenvereinigung Netzwerk Recherche die Verschlossene Auster, eine Schieferskulptur, an Auskunftsverweigerer in Politik und Wirtschaft. Die erste ging an Innenminister Otto Schily, weil er ein Informationsfreiheitsgesetz blockierte; spätere „Preisträger“ sind unter anderem Aldi, Wladimir Putin, das Internationale Olympische Komitee, die FIFA, Facebook und Tesla.\n\n| Preis oder Rangliste | Seit | Vergeben von |\n|---|---|---|\n| Pulitzer-Preis | 1917 | Columbia University |\n| Theodor-Wolff-Preis | 1962 | BDZV |\n| Grimme-Preis | 1964 | Grimme-Institut |\n| Rangliste der Pressefreiheit | – | Reporter ohne Grenzen (gegr. 1985) |\n| Verschlossene Auster | 2002 | Netzwerk Recherche |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

@@ -1,0 +1,358 @@
+{
+ "article": "a2555",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Goethe-Institut",
+   "title": "Goethe-Institut",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:05.084Z",
+   "snapshot": "e0b24dca6e4eaa50f21e21ee5b7f9f1230b50ac9bb5d32e54fd03f447c0c045f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Goethe-Institut",
+   "title": "Goethe-Institut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:04.696Z",
+   "snapshot": "94fd32c005aeab07e93fd635b11608b406ba0ab3950d2e6aac051e5c60eb300c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/British_Council",
+   "title": "British Council – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:07.726Z",
+   "snapshot": "1cfd3a9c6daa5f34b6c0531e7fc0795455f70abfce61eb1779b2146f4dda0660"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alliance_Fran%C3%A7aise",
+   "title": "Alliance Française – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:06.803Z",
+   "snapshot": "1a2435893ed76ced352bc8b7bd28b744d47538273fcb4d1e6d30e504c3f3cb86"
+  },
+  "s5": {
+   "url": "https://wissenschaft.de/artikel/mit-goethe-um-die-welt",
+   "title": "Mit Goethe um die Welt",
+   "publisher": "wissenschaft.de (bild der wissenschaft)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:09.805Z",
+   "snapshot": "911bea589d00848409425973dc18dec562d91beac04e897fb9d7fff074f8c474"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Athen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-082"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1951",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Munich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "British Council",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alliance Française",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:37.931Z",
+   "target": "f13665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1952 konnte das erste Goethe-Institut in Athen eröffnet werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Athen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:37.931Z",
+   "target": "f13666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1951: The government of the German Federal republic replaced the former Deutsche Akademie with the new Goethe-Institut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1951” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:37.931Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Munich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Munich”, “München”, “Мюнхен”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:37.931Z",
+   "target": "f13668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The British Council is a British organisation specialising in international cultural and educational opportunities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “British Council” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:37.931Z",
+   "target": "f13669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alliance française (French pronunciation: [aljɑ̃s fʁɑ̃sɛːz]; \"French Alliance\", stylised as af) is an international organization that aims to promote the French language and francophone culture around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alliance Française” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:40:39Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Goethe-Institut ist ein gemeinnütziger Verein mit Hauptsitz in München",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:40:41Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Goethe-Institut, mit Hauptsitz in München, wurde 1951 als Nachfolgeinstitution der Deutschen Akademie gegründet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:22.423Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Goethe-Institut ist ein gemeinnütziger Verein mit Hauptsitz in München",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:22.423Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Goethe-Institut, mit Hauptsitz in München, wurde 1951 als Nachfolgeinstitution der Deutschen Akademie gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:22.423Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Goethe-Institut ist ein gemeinnütziger Verein mit Hauptsitz in München, der es sich zur Aufgabe gemacht hat, die Kenntnis der deutschen Sprache im Ausland zu fördern, die internationale kulturelle Zusammenarbeit zu pflegen und ein umfassendes, aktuelles Deutschlandbild zu vermitteln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “München” is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:22.423Z",
+   "target": "f13667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Goethe-Institut, mit Hauptsitz in München, wurde 1951 als Nachfolgeinstitution der Deutschen Akademie gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.423Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “München” is on the snapshot of s5"
+  }
+ ]
+}

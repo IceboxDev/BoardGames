@@ -1,0 +1,358 @@
+{
+ "article": "a2384",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Louis_Braille",
+   "title": "Louis Braille",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:03.703Z",
+   "snapshot": "c4a5d5a92189b48ffcc0683916475c7d47f1f74d918802e99ff7c0798e75bd77"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Florence_Nightingale",
+   "title": "Florence Nightingale",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:05.144Z",
+   "snapshot": "5fd683891f8a0495796e18557224863877cddfbdec8f3575ab3bdb01c04fe983"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Braille",
+   "title": "Louis Braille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:03.143Z",
+   "snapshot": "b846b2c9d759e6dfbd7e67af920889d7d3814f4c0f550aba71fbebb895102260"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Florence_Nightingale",
+   "title": "Florence Nightingale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:17.868Z",
+   "snapshot": "3ee4194122b62a39e567926fa21114923a552ef2b3bb96afa7a85da2c14b2fbb"
+  },
+  "s5": {
+   "url": "https://afb.org/blindness-and-low-vision/braille/what-braille",
+   "title": "What Is Braille?",
+   "publisher": "American Foundation for the Blind",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:02.332Z",
+   "snapshot": "eb99ae08ab71e7639fcd0a78267c2c93f69d162742618f6455cdb9ddc73667b2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ahle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Florenz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-173"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charles Barbier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "six",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Scutari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lady with the Lamp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:10.277Z",
+   "target": "f12447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Alter von drei Jahren verletzte sich Braille mit einer Ahle aus der Sattlerwerkstatt seines Vaters am Auge.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ahle” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:10.277Z",
+   "target": "f12448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mai 1820 in Florenz, Großherzogtum Toskana; † 13.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florenz” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:10.277Z",
+   "target": "f12449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Inspired by a system invented by Charles Barbier, Braille's new method was more compact and lent itself to a range of uses, including music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Barbier” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:10.277Z",
+   "target": "f12450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He made uniform columns for each letter, and reduced the maximum of twelve raised dots to six.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “six” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:10.277Z",
+   "target": "f12451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "most famous contribution came during the Crimean War, which became her central focus when reports got back to Britain about the horrific conditions for the wounded at the military hospital on the Asiatic side of the Bosporus, opposite Constantinople, at Scutari (modern-day Üsküdar in Istanbul).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scutari” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:10.277Z",
+   "target": "f12452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nightingale gave nursing a favourable reputation and became an icon of Victorian culture, especially in the persona of \"The Lady with the Lamp\" making ward rounds for wounded soldiers at night.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:10.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Lady with the Lamp” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:30Z",
+   "target": "f12450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A full braille cell consists of six raised dots arranged in two parallel rows each having three dots.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:44:34Z",
+   "target": "f12450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He made uniform columns for each letter, and reduced the maximum of twelve raised dots to six.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:54.318Z",
+   "target": "f12450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A full braille cell consists of six raised dots arranged in two parallel rows each having three dots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:54.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:54.318Z",
+   "target": "f12450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A full braille cell consists of six raised dots arranged in two parallel rows each having three dots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:54.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “six” is on the snapshot of s5"
+  }
+ ]
+}

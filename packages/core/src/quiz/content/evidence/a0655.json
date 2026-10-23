@@ -1,0 +1,824 @@
+{
+ "article": "a0655",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Worshipful_Company_of_Skinners",
+   "title": "Worshipful Company of Skinners – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:09.058Z",
+   "snapshot": "f9f7ee602bac62cf84f3cfdb85189a2959519ffbe9f34134d470cee2a5889b6e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tanning_(leather)",
+   "title": "Tanning (leather) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:10.086Z",
+   "snapshot": "865252d9c68d59622f4407d1a2b859548ebc3bf1207333a37cb8e4303b3ebec2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Barrel",
+   "title": "Barrel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:11.168Z",
+   "snapshot": "01be52ed9ad65327ab5b646f509992ee5e2836aeadfa61a60d0403ca1ccab0d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Worshipful_Company_of_Saddlers",
+   "title": "Worshipful Company of Saddlers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:12.087Z",
+   "snapshot": "8e7abfcd3b1b3fb331e6ff7bd484ad048558e6e2e26ce1cf64b91e3fa0f5a0f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Reeperbahn",
+   "title": "Reeperbahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:13.093Z",
+   "snapshot": "2eb38ede49d936230fa8fd051379060f0e7985fb4d3a92ba751f2f7b117f9de8"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/furrier",
+   "title": "FURRIER | Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:54.448Z",
+   "snapshot": "39c7f13bb1a4333cf9477a150d162fcf9735e7c985e0921ba42cdea1140ed32f"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/furrier",
+   "title": "FURRIER Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:54.746Z",
+   "snapshot": "7aa42c9275c4f093dea6e4690378ec29cf423d85fcdc0cbb75addc747c53cbd0"
+  },
+  "s8": {
+   "url": "https://ahdictionary.com/word/search.html?q=furrier",
+   "title": "furrier – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:54.934Z",
+   "snapshot": "fef3e50923394f20f3c7b7e4c271aad28e74b86d8ce1627595393dfb7124e249"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/saddler",
+   "title": "SADDLER | Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:55.351Z",
+   "snapshot": "bd8187a4c5371e2e23419303ca6b1532a1e7f40571e5582309477c784b536e2d"
+  },
+  "s10": {
+   "url": "https://www.dictionary.com/browse/saddler",
+   "title": "SADDLER Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:55.694Z",
+   "snapshot": "371d7ba68c1af769c70ac29a6ba601644f986537948c4ee72c32e6049acc1383"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Saddler_%28trade%29",
+   "title": "Saddler (trade) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:55.378Z",
+   "snapshot": "ffa4a394f229fa4e725857a10752a1b4664f01ab6c0a0e1ffc1246c31fb628cc"
+  },
+  "s12": {
+   "url": "https://www.dictionary.com/browse/ropemaker",
+   "title": "ROPEMAKER Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:56.696Z",
+   "snapshot": "7ace262cb1054b98a64cb78d9e825baf10f94e5f3bbe397fd61164ea5aeb8a74"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Ropewalk",
+   "title": "Ropewalk – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:56.369Z",
+   "snapshot": "de3a1a338460b0b2e26a5c222dd01880fc683bd171144e8c8de4b90a1c0f1b6e"
+  },
+  "s14": {
+   "url": "https://ahdictionary.com/word/search.html?q=ropewalk",
+   "title": "ropewalk – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:55.953Z",
+   "snapshot": "723109af7f2b3050d9048f9ab1f80f14da88f33f30bfa1a46b08325f15c6d419"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "furrier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "tanner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cooper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "saddler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ropemaker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:21.093Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "furrier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“furrier”, “Kürschner”, “скорняк”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:21.093Z",
+   "target": "f03272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "This can be done by the tanner, or by obtaining a skin at a slaughterhouse, farm, or local fur trader.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tanner” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:21.093Z",
+   "target": "f03273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Someone who makes traditional wooden barrels is called a cooper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cooper” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:21.093Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "saddler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“saddler”, “Sattler”, “шорник”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:21.093Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ropemaker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ropemaker”, “Seiler”, “канатчик”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:19:29Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a person who makes or sells clothes made from fur",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:19:31Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a person who buys and sells furs, or one who makes, repairs, or cleans furs and fur garments; a fur dealer or fur dresser.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:19:32Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "One whose occupation is the dressing, designing, cleaning, or repairing of furs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:19:33Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a person who makes, sells, and repairs saddles and other leather objects for horses",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:19:35Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a person who makes, deals in, or repairs saddles and other leather",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:19:36Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Saddler or harness maker is a trade that creates and repairs horse tack such as saddles, harnesses, and bridles",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:19:38Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "the act, skill, or process of fabricating rope.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Dictionary.com lists ropemaker as derived from ropemaking, defined here."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:19:39Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "which helps the ropemaker bring the strands together",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:19:40Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "A long alley or covered pathway where strands of material, such as hemp fiber, are laid and twisted into rope.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the article sentence on the rope walk."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a person who makes or sells clothes made from fur",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a person who buys and sells furs, or one who makes, repairs, or cleans furs and fur garments; a fur dealer or fur dresser.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "One whose occupation is the dressing, designing, cleaning, or repairing of furs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a person who makes, sells, and repairs saddles and other leather objects for horses",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a person who makes, deals in, or repairs saddles and other leather",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Saddler or harness maker is a trade that creates and repairs horse tack such as saddles, harnesses, and bridles",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "the act, skill, or process of fabricating rope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s12"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "which helps the ropemaker bring the strands together",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s13"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "A long alley or covered pathway where strands of material, such as hemp fiber, are laid and twisted into rope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s14"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "FURRIER | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “furrier” is on the snapshot of s6"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "FURRIER Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “furrier” is on the snapshot of s7"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "American Heritage Dictionary Entry: furrier",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “furrier” is on the snapshot of s8"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "SADDLER | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “saddler” is on the snapshot of s9"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "SADDLER Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “saddler” is on the snapshot of s10"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Saddler or harness maker is a trade that creates and repairs horse tack such as saddles, harnesses, and bridles, primarily of leather.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “saddler” is on the snapshot of s11"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "ROPEMAKER Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ropemaker” is on the snapshot of s12"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:49.402Z",
+   "target": "f03275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The essence of a ropewalk, where this spinning is achieved, is a drive mechanism at one end of the walk, a \"donkey\" guide or \"runner\" in the middle, which helps the ropemaker bring the strands together, and a fixing point at the far end.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:49.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ropemaker” is on the snapshot of s13"
+  }
+ ]
+}

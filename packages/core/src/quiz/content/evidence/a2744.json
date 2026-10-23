@@ -1,0 +1,242 @@
+{
+ "article": "a2744",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Hillier",
+   "title": "Lake Hillier",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:34.966Z",
+   "snapshot": "12c6abcea31f951b56f589007150f3b810f9b768af8508acfda8f9629659473c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Retba",
+   "title": "Lake Retba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:35.989Z",
+   "snapshot": "e0b98806fa5a26aa93c7269cfe43411d7b06bfb83a95eed3b0a40c1830cc9f76"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kelimutu",
+   "title": "Kelimutu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:37.015Z",
+   "snapshot": "afc063d922beba068b3bcc86119836e8b78a6180edb91d12291ec0820b44c55b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Laguna_Colorada",
+   "title": "Laguna Colorada – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:37.992Z",
+   "snapshot": "e02e9f859e4610a8b97778852c7b02c7953529f75f76b80a5125ea8aac0df665"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spotted_Lake",
+   "title": "Spotted Lake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:38.985Z",
+   "snapshot": "9e922fe3039e734c5c0236cc05f21d65577e2ad9bb3e8c9843c395c07e1b151d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lake Hillier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25625",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lake Retba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kelimutu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Laguna Colorada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spotted Lake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:06.791Z",
+   "target": "f25624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lake Hillier is a saline lake on the edge of Middle Island, the largest of the islands and islets that make up the Recherche Archipelago in the Goldfields-Esperance region, off the south coast of Western Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Hillier” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:06.791Z",
+   "target": "f25625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lake Retba, also known as Lac Rose (meaning \"pink lake\"), lies north of the Cape Verde peninsula in Senegal, some 35 km (22 mi) north-east of the capital, Dakar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Retba” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:06.791Z",
+   "target": "f25626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kelimutu (pronounced [kəliˈmutu]) is a volcano close to the small town of Moni in central Flores island in Indonesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kelimutu” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:06.791Z",
+   "target": "f25627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Laguna Colorada, (translated to Red Lagoon), is a shallow, hypersaline lake in the remote southwestern region of the Altiplano, within the Eduardo Avaroa Andean Fauna National Reserve in Bolivia and located at an elevation of approximately 4,278 metres (14,000 ft) above sea level.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laguna Colorada” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:06.791Z",
+   "target": "f25628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spotted Lake — known as Lake Khiluk (Nsyilxcən: Kłlil’xᵂ) in the Nsyilxcən language  — is a saline endorheic alkali lake located northwest of Osoyoos in the eastern Similkameen Valley of British Columbia, Canada, accessed via Highway 3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spotted Lake” is on the snapshot of s5"
+  }
+ ]
+}

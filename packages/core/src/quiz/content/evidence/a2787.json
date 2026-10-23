@@ -1,0 +1,274 @@
+{
+ "article": "a2787",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ethiopian_calendar",
+   "title": "Ethiopian calendar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:55.084Z",
+   "snapshot": "b32b1a9583d095b68f744508684676ab77650e43a9763f03d2a033ef81ae3448"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Solar_Hijri_calendar",
+   "title": "Solar Hijri calendar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:56.077Z",
+   "snapshot": "fbc33f19427947ca1d6f8bf478814100e5712ea9c436e75a27842ee4f7f46460"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Thai_solar_calendar",
+   "title": "Thai solar calendar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:57.148Z",
+   "snapshot": "131ef2e14298cdcd14d3849f2ab5d74d4fed7dfe7f7c2a1558a5ddd120c02f17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ethiopian_Millennium",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:58.093Z",
+   "snapshot": "fa0fbaf07a77bdf8b4fe121847f6f36f38f06c885b98c5d66b79ec8a79474906"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nowruz",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:59.344Z",
+   "snapshot": "6aa7f0e81bb1014fb65aa3ca1299c1b338510cf58e66e7388a9a16e3405a739b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pagume",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:00.083Z",
+   "snapshot": "c60b9fd9f3ecc5948ce16a36c93eaf130dfb2c14545064284e4da6f1012844d9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Enkutatash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nowruz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buddhist Era",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ethiopia",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Ethiopia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-145/1, u09: The Ethiopian calendar has twelve 30-day months plus Pagume (5/6 days). The card's explanation (different incarnation year) explains the 7–8-year lag, not the 13 months; the article notes already say so."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ethiopia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ethiopia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s6"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Ethiopian calendar or Geʽez calendar is the official state civil calendar of Ethiopia and serves as Orthodox calendar in Eritrea, and among Ethiopians and Eritreans in the diaspora.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ethiopia” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In Ethiopia, the period is known as Paguemain, Phagumien (Amharic: ጳጐሜን, Ṗagʷəmen), Pagume, or Pagumay (ጳጉሜ, Ṗagume).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ethiopia” is on the snapshot of s6"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Ethiopian New Year is called Kudus Yohannes in Geʽez and Tigrinya, while in Amharic, the official language of Ethiopia, it is called Enkutatash meaning \"gift of jewels\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enkutatash” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The ancient Iranian New Year's Day, which is called Nowruz, always falls on the March equinox.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nowruz” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:13.646Z",
+   "target": "f25949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Years are now counted in the Buddhist Era (B.E.): พุทธศักราช, พ.ศ.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buddhist Era” is on the snapshot of s3"
+  }
+ ]
+}

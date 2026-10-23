@@ -1,0 +1,625 @@
+{
+ "article": "a1159",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/BASF",
+   "title": "BASF – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:22.962Z",
+   "snapshot": "dd53717d832f27d47bd1ddff007704fe9af0598983639f20f993e136ce80874a"
+  },
+  "s2": {
+   "url": "https://www.facingsouth.org/2010/10/european-polluters-financing-senate-global-warming-deniers-and-climate-bill-blockers.html",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:20.495Z",
+   "snapshot": "d74908250f15b1e3473b1e90af39326eb3fc84c60fde80bfe42dbe80fd77001b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Merck_KGaA",
+   "title": "Merck KGaA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:20.684Z",
+   "snapshot": "65678c1ada35c4d7940754a621f70cf9934dabd448196975d09ed360a7f0446b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Linde_plc",
+   "title": "Linde plc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:23.872Z",
+   "snapshot": "8b44e746da028745b1b832cbb9a5d237269955b9ac779f25b835ea006596eee5"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Evonik_Industries",
+   "title": "Evonik Industries – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:21.653Z",
+   "snapshot": "3be259a1852015773a7a7a0643eaf2d265cb56da5624a5829f9e87a926b77571"
+  },
+  "s6": {
+   "url": "https://euobserver.com/news/arf2d7d802",
+   "title": "EU business guilty of environmental doublespeak, say NGOs",
+   "publisher": "EUobserver",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:19.529Z",
+   "snapshot": "a2e8f0d9e2ebc412576d8315369d545e638ae69174a43e0c8cc2659fe1f30367"
+  },
+  "s7": {
+   "url": "https://www.germanwatch.org/de/2108",
+   "title": "BASF, Bayer und EON unterstützen Klimaschutz-Gegner im US-Wahlkampf",
+   "publisher": "Germanwatch",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:19.577Z",
+   "snapshot": "55fc9669e13b697a30ef7cc758ce723442bd0d5e86b07c874519739e159b3df4"
+  },
+  "s8": {
+   "url": "https://unifac.ddbst.com/top-50-list.html",
+   "title": "Top 50 list (based on C&EN Global Top 50)",
+   "publisher": "UNIFAC Consortium / DDBST",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:19.821Z",
+   "snapshot": "371008ef978c93ca444c6a03f76a8bf979a36c61069cef26f4aad9283ab67fa4"
+  },
+  "s9": {
+   "url": "https://lehmanns.de/shop/geisteswissenschaften/43121822-9783406700392-merck",
+   "title": "Merck: From a Pharmacy to a Global Corporation, 1668–2018 (C.H. Beck)",
+   "publisher": "C.H. Beck (via Lehmanns)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:20.192Z",
+   "snapshot": "6f0944a1a4c4b357e441e7a1fc84340056da06dfb65c8e4d73d35076ed8e0454"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "BASF",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "BASF",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Merck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Evonik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:41.855Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "BASF SE (German pronunciation: [beːaːɛsˈʔɛf] ), an initialism of its original name Badische Anilin- & Soda-Fabrik (German for 'Baden Aniline & Soda Factory'), is a German multinational company and the largest chemical producer in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:41.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BASF” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:41.855Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The companies examined in the report include Belgium's Solvay; Britain's BP; France's Lafarge and GDF Suez; Germany's Bayer, BASF and E.ON; and Luxembourg's Arcelor-Mittal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:41.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BASF” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:41.855Z",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Merck KGaA (in den USA und Kanada MilliporeSigma, EMD Serono und EMD Electronics) ist ein deutsches Unternehmen der Chemie- und Pharmaindustrie mit Sitz in Darmstadt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:41.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merck” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:41.855Z",
+   "target": "f05794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linde is a global multinational chemical company and the world's largest industrial gas supplier by market share and revenue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:41.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linde” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:41.855Z",
+   "target": "f05795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Evonik Industries AG ist ein börsennotiertes Chemieunternehmen mit Schwerpunkt Spezialchemie und Sitz in Essen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:41.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evonik” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:25:25Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Germany's Bayer, BASF and E.ON",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:25:26Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lafarge, GDF-Suez, E.On, BP, BASF, Bayer, Solvay and Arcelor-Mittal",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:25:28Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "BASF, Bayer und EON unterstützen Klimaschutz-Gegner im US-Wahlkampf",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:25:29Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1 1 BASF",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23",
+   "note": "C&EN Global Top 50 2024 ranks BASF first"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:25:30Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the largest chemical producer in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:25:31Z",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Merck is the oldest pharmaceutical-chemical company in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23",
+   "note": "company-sponsored history; 'oldest' is the company's own, widely repeated claim"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:25:33Z",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Merck gilt damit als das älteste pharmazeutisch-chemische Unternehmen der Welt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Germany's Bayer, BASF and E.ON",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lafarge, GDF-Suez, E.On, BP, BASF, Bayer, Solvay and Arcelor-Mittal",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "BASF, Bayer und EON unterstützen Klimaschutz-Gegner im US-Wahlkampf",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1 1 BASF",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the largest chemical producer in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Merck is the oldest pharmaceutical-chemical company in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Merck gilt damit als das älteste pharmazeutisch-chemische Unternehmen der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s3"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Energy firms dominate the list made up of: Lafarge, GDF-Suez, E.On, BP, BASF, Bayer, Solvay and Arcelor-Mittal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “BASF” is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "BASF, Bayer und EON unterstützen Klimaschutz-Gegner im US-Wahlkampf | Germanwatch e.V.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “BASF” is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "BASF",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “BASF” is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:19.817Z",
+   "target": "f05793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Merck von Carsten Burhop | ISBN 978-3-406-70039-2 | Buch online kaufen - Lehmanns.de",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:19.817Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Merck” is on the snapshot of s9"
+  }
+ ]
+}

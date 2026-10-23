@@ -1,0 +1,406 @@
+{
+ "article": "a1273",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pet_Sounds",
+   "title": "Pet Sounds – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:22.288Z",
+   "snapshot": "b37b55bb5c7e92d32091ec3ffeabcc8888fd087f581ae1c5803232b02fbf8095"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Candlestick_Park",
+   "title": "Candlestick Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:23.269Z",
+   "snapshot": "767b8b44efd6c0add987f1c1b019c9f4465aa432580bd460fdd1977f181a961b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Piper_at_the_Gates_of_Dawn",
+   "title": "The Piper at the Gates of Dawn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:24.145Z",
+   "snapshot": "b680565866a969e398f264b099ad2fdab3aa93fc63de1a79ef96fe671dc3ebcf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lucy_(hominid)",
+   "title": "Lucy (hominid)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:23.393Z",
+   "snapshot": "6b401ba825119c3fb15d7df13982cfb5ed73bcfb697e46a87390058db85c6a44"
+  },
+  "s5": {
+   "url": "https://www.the-paulmccartney-project.com/song/sgt-pepper-inner-groove/",
+   "title": "Sgt. Pepper Inner Groove – The Paul McCartney Project",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:21.342Z",
+   "snapshot": "05b1d62bff5a8ea65c79ea159461e624a2cc0431145d8e3610e70f02f6414136"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/A_Day_in_the_Life",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:25.251Z",
+   "snapshot": "a4086f8a65470ee4fd6a3ace8fbee3c6ecb3d1d6f3d2c107b694b693b70eb94a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aftermath_(Rolling_Stones_album)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:26.160Z",
+   "snapshot": "1e21469315a7e586bf61f496dca0a509f49035ff886e813d43b18b2a5ee3225f"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/The_Doors_(album)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:27.195Z",
+   "snapshot": "3c7d7edc84f94e93cc9b014a55ad511a2e1b1ea8c35f71fe2239e5f0475593f3"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Sgt._Pepper%27s_Lonely_Hearts_Club_Band",
+   "title": "Sgt. Pepper's Lonely Hearts Club Band – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:14:16Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Beach Boys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c107"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Beatles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06364",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pink Floyd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lucy in the Sky with Diamonds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-208"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul McCartney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-294"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Paul McCartney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:58.746Z",
+   "target": "f06361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pet Sounds is the eleventh studio album by the American rock band the Beach Boys, released on May 16, 1966, by Capitol Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beach Boys” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:58.746Z",
+   "target": "f06362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Beatles gave their last full public concert at Candlestick Park on August 29, 1966.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beatles” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:58.746Z",
+   "target": "f06364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Piper at the Gates of Dawn is the debut studio album by the English rock band Pink Floyd, released on 4 August 1967 by EMI Columbia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pink Floyd” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:58.746Z",
+   "target": "f13121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lucy was named by Pamela Alderman as the namesake of the 1967 song \"Lucy in the Sky with Diamonds\" by the Beatles, which was played loudly and repeatedly in the expedition camp all evening after the excavation team's first day's work on the Hadar recovery site.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lucy in the Sky with Diamonds” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:58.746Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Written by Paul McCartney • Ringo Starr • John Lennon • George Harrison • Instrumental",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul McCartney” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:58.746Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Credited to Lennon–McCartney, the opening and closing sections of the song were mainly written by John Lennon, with Paul McCartney primarily contributing the song's middle section.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:58.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul McCartney” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:12Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul had said, 'We never record anything for animals. You realise that, don't you? Let's put on something which only a dog can hear.'",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "George Martin's account (quoted on the page) credits McCartney with the dog-tone idea."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:16Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "it was added at Lennon's suggestion with the intention that it would annoy dogs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Other accounts (MacDonald, cited by Wikipedia) credit John Lennon; Lennon is accepted as an alternative in the notes."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:14:21Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This addition was part of the Beatles' humour and was suggested by Lennon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:41.578Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul had said, 'We never record anything for animals. You realise that, don't you? Let's put on something which only a dog can hear.'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:41.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:41.578Z",
+   "target": "f13122",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This addition was part of the Beatles' humour and was suggested by Lennon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:41.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  }
+ ]
+}

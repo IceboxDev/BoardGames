@@ -1,0 +1,355 @@
+{
+ "article": "a0224",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Berkeley,_California",
+   "title": "Berkeley, California – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:05.252Z",
+   "snapshot": "6bb68b5357c0764b2f0199e2eba556c2848e116938b74a8a5ff879a12d9fde5a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/St._Augustine,_Florida",
+   "title": "St. Augustine, Florida – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:02.249Z",
+   "snapshot": "9b9cbc001beb4bef7958e6816dcf37bd2f5ea6f098e0e91837e31e878a9c4584"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Providence,_Rhode_Island",
+   "title": "Providence, Rhode Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:03.106Z",
+   "snapshot": "f71ecd30ef4c241a8387ffbee8ded34474e74662f91bc0362e535803aa535281"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+   "title": "Salt Lake City – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:06.214Z",
+   "snapshot": "c320ebbd1995a3c462172aaf7ec229d9d4b2d4c6015944c02c36160c2923a0d7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bethlehem,_Pennsylvania",
+   "title": "Bethlehem, Pennsylvania – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:07.104Z",
+   "snapshot": "38db15fcfbaabc31af1f23c01217d78ffa8f571c879c03a29a449c24e3a3e699"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Roger_Williams",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:08.290Z",
+   "snapshot": "ae8506a7cdc141472ba9ce5fbf0669c59118ab20b01fd732c67337c72ffc67fd"
+  },
+  "s7": {
+   "url": "https://www.floridamuseum.ufl.edu/staugustine/",
+   "title": "St. Augustine",
+   "publisher": "Florida Museum of Natural History (University of Florida)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:41.463Z",
+   "snapshot": "74687361676b5a1457f0c2ee752297fb739eea9de8bd9cfb111bdefccc763b76"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "California",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Florida",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhode Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Utah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pennsylvania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:14.871Z",
+   "target": "f01116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berkeley (  BURK-lee) is a city on the eastern shore of San Francisco Bay (part of the San Francisco Bay Area) in northern Alameda County, California, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “California” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:14.871Z",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johns County, Florida, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florida” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:14.871Z",
+   "target": "f01118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Williams and others established a settlement in Rumford, Rhode Island.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhode Island” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:14.871Z",
+   "target": "f01119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is home to a significant LGBT community and hosts the annual Utah Pride Festival.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utah” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:14.871Z",
+   "target": "f01120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bethlehem is a city in Northampton and Lehigh counties in the Lehigh Valley region of eastern Pennsylvania, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pennsylvania” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:12:10Z",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Founded in 1565 by Spanish settlers, it is the oldest continuously inhabited European-established settlement in what is now the contiguous United States.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Superlative holds only for the contiguous US (San Juan, Puerto Rico, 1521, is older); wording narrowed."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:12:12Z",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "has survived until today as the oldest continuously occupied European town in the United States",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:33.766Z",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Founded in 1565 by Spanish settlers, it is the oldest continuously inhabited European-established settlement in what is now the contiguous United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:33.766Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:33.766Z",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "has survived until today as the oldest continuously occupied European town in the United States",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:33.766Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:33.766Z",
+   "target": "f01117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Augustine: America's Ancient City – Florida Museum of Natural History",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:33.766Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Florida” is on the snapshot of s7"
+  }
+ ]
+}

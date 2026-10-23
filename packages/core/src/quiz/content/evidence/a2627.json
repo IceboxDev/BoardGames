@@ -1,0 +1,319 @@
+{
+ "article": "a2627",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Memory_foam",
+   "title": "Memory foam",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:12.066Z",
+   "snapshot": "c0e9c648b91d90369b12fda7c6eaa0f9b7cfe97b77b17f38c599590dd373dc36"
+  },
+  "s2": {
+   "url": "https://spinoff.nasa.gov/Spinoff2005/ch_6.html",
+   "title": "Spinoff 2005: Temper Foam – NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:10.733Z",
+   "snapshot": "f8913268d8e40ff264fe9ea3c7e4bc7fcf2339f5f382c00b72db5c10f52f5447"
+  },
+  "s3": {
+   "url": "https://www.sleepfoundation.org/mattress-information/what-is-memory-foam",
+   "title": "What is Memory Foam?",
+   "publisher": "Sleep Foundation",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:07:50Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Memory foam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Yost",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ames Research Center",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "aircraft seats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tempur-Pedic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:48.964Z",
+   "target": "f14212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Memory foam consists mainly of polyurethane with additional chemicals that increase its viscosity and density.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Memory foam” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:48.964Z",
+   "target": "f14213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "As an aeronautical engineer with the Systems Dynamics Group at North American Aviation, Inc., Charles Yost* helped to build a recovery system for the Apollo command module in 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Yost” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:48.964Z",
+   "target": "f14214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Memory foam was developed in 1966 under a contract by NASA's Ames Research Center to improve the safety of aircraft cushions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ames Research Center” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:48.964Z",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "aircraft seats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“aircraft seats”, “Flugzeugsitze”, “сиденья самолётов”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:48.964Z",
+   "target": "f14216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Their 1991 product, the Tempur-Pedic Swedish Mattress eventually led to the mattress and cushion company Tempur World.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tempur-Pedic” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:07:45Z",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Temper foam, whose origins date back to 1966 when it was developed to absorb shock and, thus, offer improved protection and comfort in NASA’s airplane seats",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:07:48Z",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "NASA’s Ames Research Center fit this cushion-like material into a new airplane seat design that not only offered better impact protection in the event of an accident",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:07:50Z",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "First designed in the 1960’s for use in NASA spaceship seats and seatbelts",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "this popular source says 'spaceship seats' — imprecise; NASA's own Spinoff says airplane seats (Ames)"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:08:03Z",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yost was contracted by NASA, through Stencel Aero Engineering Corporation, in Asheville, North Carolina, to assist in the improvement of airline seating for crash and vibration protection",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "resolves e13: NASA's own account (primary) says aircraft/airline seats, not spacecraft seats"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:34.072Z",
+   "target": "f14215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yost was contracted by NASA, through Stencel Aero Engineering Corporation, in Asheville, North Carolina, to assist in the improvement of airline seating for crash and vibration protection",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "article": "a2576",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cricket_in_India",
+   "title": "Cricket in India",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:58.273Z",
+   "snapshot": "f6252e3b3811f5ea95f612546012f42c73474578df82aaf433ee30e5f30499aa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Indian_Premier_League",
+   "title": "Indian Premier League – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:59.165Z",
+   "snapshot": "a7f43d6f3d61d2f9e0c8f944705bbb63707f21da13b19a6507e3139bc6b947a0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lord%27s",
+   "title": "Lord's – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:00.292Z",
+   "snapshot": "559958d60b9a9436262081fc1dd6d7b683cba7451314905f5e2b62ff6f108c28"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1975_Cricket_World_Cup",
+   "title": "1975 Cricket World Cup – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:01.251Z",
+   "snapshot": "f050a46137409cc485b9b06b8514c69e3147895ca871532ef38451e571eca5b7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Ashes",
+   "title": "The Ashes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:33.579Z",
+   "snapshot": "95f3d213f79a4f9d67f67e78942d626b2ca7435e53cd156a24addce6283fb783"
+  },
+  "s6": {
+   "url": "https://yougov.com/en-gb/articles/3147-indias-favourite-sports",
+   "title": "India's favourite sports",
+   "publisher": "YouGov",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:20.148Z",
+   "snapshot": "0aabe85f08808c9dac1fa794f09da3649c964d55acc4f793ba6b6e9f43a37409"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cricket",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-264"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Indian Premier League",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lord's",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13821",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "West Indies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13822",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Ashes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:41.349Z",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cricket is the most popular sport in India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cricket” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:41.349Z",
+   "target": "f13819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Indian Premier League (IPL) is a professional Twenty20 (T20) cricket league in India, organised by the Board of Control for Cricket in India (BCCI).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Indian Premier League” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:41.349Z",
+   "target": "f13820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lord's Cricket Ground, better known as Lord's, is a cricket venue at St John's Wood, historically in Middlesex and now in the City of Westminster, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lord's” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:41.349Z",
+   "target": "f13821",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tournament was sponsored by Prudential Assurance Company and had eight participating countries: the six Test-playing teams of the time – Australia, England, India, New Zealand, Pakistan, the West Indies – and the two leading Associate nations at the time – Sri Lanka and East Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “West Indies” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:41.349Z",
+   "target": "f13822",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Ashes is a Test cricket series played biennially between England and Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.349Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Ashes” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:41:30Z",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cricket is the most popular sport in India",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:41:32Z",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "85% of respondents watch cricket, on TV or in the media, at least once a week and 62% play cricket at least four times a year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:25.738Z",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cricket is the most popular sport in India",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:25.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:25.738Z",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "85% of respondents watch cricket, on TV or in the media, at least once a week and 62% play cricket at least four times a year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:25.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:25.738Z",
+   "target": "f13818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cricket, tennis and football are the top three most followed sports in India, according to a new research",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:25.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cricket” is on the snapshot of s6"
+  }
+ ]
+}

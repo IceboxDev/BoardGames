@@ -1,0 +1,242 @@
+{
+ "article": "a2341",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Prince_Henrik_of_Denmark",
+   "title": "Prince Henrik of Denmark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:03.352Z",
+   "snapshot": "e854864f79946e6344beee651bf2627409fefb1f7ae471810cee10a30c527d30"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Queen_Silvia_of_Sweden",
+   "title": "Queen Silvia of Sweden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:04.261Z",
+   "snapshot": "05ada249e00c5b17b36e1089e39f990aeccd637111d04e054ac1a1eef61f9f80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Queen_M%C3%A1xima_of_the_Netherlands",
+   "title": "Queen Máxima of the Netherlands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:05.349Z",
+   "snapshot": "92f06b5a1d447d969b4b1e823cf16dad22996eb69dc700a44ae0c030da498e27"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Queen_Mary_of_Denmark",
+   "title": "Queen Mary of Denmark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:06.375Z",
+   "snapshot": "4d531f8d2aa6c900713174fdc10865c46ab6a48c943b5148f6ec6dff928fd8f9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Prince_Philip,_Duke_of_Edinburgh",
+   "title": "Prince Philip, Duke of Edinburgh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:07.366Z",
+   "snapshot": "ecf2b4c91a0c8eadf9923b290a788903cd334a04cdc30350a6d41b15ad1041e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-265"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Heidelberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Argentina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Corfu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:01.455Z",
+   "target": "f12186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The family spent the Second World War at the family home in Cahors, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:01.455Z",
+   "target": "f12187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Silvia Renate Sommerlath was born in Heidelberg, Germany, on 23 December 1943, the only daughter of Alice (née Soares de Toledo) and Walther Sommerlath.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heidelberg” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:01.455Z",
+   "target": "f12188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Máxima Zorreguieta was born in Buenos Aires, Argentina, on 17 May 1971.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Argentina” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:01.455Z",
+   "target": "f12189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Between 1994 and 1996, she completed a graduate program and obtained certificates in advertising from the Advertising Federation of Australia and in direct marketing from the Australian Direct Marketing Association.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:01.455Z",
+   "target": "f12190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Philip (Greek: Φίλιππος, romanised: Phílippos) was born on 10 June 1921 on the dining room table at Mon Repos, a villa on the Greek island of Corfu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Corfu” is on the snapshot of s5"
+  }
+ ]
+}

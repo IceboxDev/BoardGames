@@ -1,0 +1,281 @@
+{
+ "article": "a1284",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_Behm",
+   "title": "Alexander Behm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:02.105Z",
+   "snapshot": "8dd57522da37860f84942fb672fbf61f9eabf25d1f65d59625d8b8ac3db1fee5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Enigma_machine",
+   "title": "Enigma machine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:03.310Z",
+   "snapshot": "309a465fe475f6c359a2110b21e8e90409d28ed2cd5510e77182f565bdae5de1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Christian_H%C3%BClsmeyer",
+   "title": "Christian Hülsmeyer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:00.643Z",
+   "snapshot": "9e155be3527e02e895577188c02865fc580ca1041180aa5df36110b302589253"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Electron_microscope",
+   "title": "Electron microscope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:04.068Z",
+   "snapshot": "d162f7d7bb727d888bea6671e3616a6ddb5ee3fd32ff81f68db44c0c504c7125"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Elektronenmikroskop",
+   "title": "Elektronenmikroskop",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:01.477Z",
+   "snapshot": "6780fe5b7f3d554819a642bea1a967d08a6d8bf031d514e45914fb59a665fdc0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "echo sounder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c107"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Enigma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Telemobiloskop",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "electron microscope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "electron microscope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Elektronenmikroskop",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-334"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:00.195Z",
+   "target": "f06416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alexander Behm (11 November 1880, in Sternberg (Mecklenburg) – 22 January 1952, in Tarp (Schleswig-Flensburg)) was a German physicist who developed working ocean echo sounder in Germany at the same time Reginald Fessenden was doing so in North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.195Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “echo sounder” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:00.195Z",
+   "target": "f06417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Enigma machine is a cipher device developed and used in the early- to mid-20th century to protect commercial, diplomatic, and military communication.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.195Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enigma” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:00.195Z",
+   "target": "f06418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mai 1904 die „Telemobiloskop-Gesellschaft Hülsmeyer und Mannheim“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.195Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telemobiloskop” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:00.195Z",
+   "target": "f06420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An electron microscope is a microscope that uses a beam of electrons as a source of \"illumination\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.195Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “electron microscope” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:00.195Z",
+   "target": "f25205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An electron microscope is a microscope that uses a beam of electrons as a source of \"illumination\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.195Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “electron microscope” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:00.195Z",
+   "target": "f25205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ein Elektronenmikroskop (früher auch Übermikroskop) ist ein Mikroskop, welches das Innere oder die Oberfläche eines Objekts mit Elektronen abbilden kann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.195Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elektronenmikroskop” is on the snapshot of s5"
+  }
+ ]
+}

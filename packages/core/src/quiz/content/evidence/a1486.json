@@ -1,0 +1,256 @@
+{
+ "article": "a1486",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sagittarius_A*",
+   "title": "Sagittarius A* – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:29.969Z",
+   "snapshot": "067bda56fe3acba68537b8782caf70cb73651d238f55e0b6f30aa67665e7f2ff"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Betelgeuse",
+   "title": "Betelgeuse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:18.246Z",
+   "snapshot": "100c3de8cae617fedf60231f0691c7181be31041b4e2ef3f3c2f05f52ab19a6f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
+   "title": "Andromeda Galaxy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:51.065Z",
+   "snapshot": "3679e83316650c33b5ee9053bf782060e8b17f3385ed516e16bca120168014eb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sirius",
+   "title": "Sirius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:16.000Z",
+   "snapshot": "c6b0b01a0afd15186ca367a76c26fa0e9ba6c689000ddd90fa0dffd28b0d5a11"
+  },
+  "s5": {
+   "url": "https://www.nobelprize.org/prizes/physics/2020/summary/",
+   "title": "The Nobel Prize in Physics 2020 – NobelPrize.org",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:27.797Z",
+   "snapshot": "5ddb47acdfd7e7d09025f93e259611d7846cf01432e9696e4d84f247e89c5e0d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Polaris",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:30.556Z",
+   "snapshot": "276d2cac1226fb1d623ce49f3e843e7d373274cef483fe9b47f1b5f009873782"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Andromeda%E2%80%93Milky_Way_collision",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:56.090Z",
+   "snapshot": "c8dce39463b95ccdf3089d16c8206ddc50eecc22e67218ee55fbb51cd1295832"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sagittarius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Orion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Andromeda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alvan Graham Clark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reinhard Genzel and Andrea Ghez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:33.331Z",
+   "target": "f07426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sagittarius A*, abbreviated as Sgr A* ( SADGE-AY-star), is the supermassive black hole at the Galactic Center of the Milky Way.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sagittarius” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:33.331Z",
+   "target": "f07427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Betelgeuse is a red supergiant star in the equatorial constellation of Orion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orion” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:33.331Z",
+   "target": "f07430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Andromeda Galaxy is a barred spiral galaxy and is the nearest major galaxy to the Milky Way.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andromeda” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:33.331Z",
+   "target": "f20720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 31 January 1862, American telescope-maker and astronomer Alvan Graham Clark first observed the faint companion, which is now called Sirius B.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alvan Graham Clark” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:33.331Z",
+   "target": "f20721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "2020 was divided, one half awarded to Roger Penrose \"for the discovery that black hole formation is a robust prediction of the general theory of relativity\", the other half jointly to Reinhard Genzel and Andrea Ghez \"for the discovery of a supermassive compact object at the centre of our galaxy\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.331Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reinhard Genzel and Andrea Ghez” is on the snapshot of s5"
+  }
+ ]
+}

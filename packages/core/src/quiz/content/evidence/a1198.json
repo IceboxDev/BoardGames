@@ -1,0 +1,355 @@
+{
+ "article": "a1198",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/U.S._Route_66",
+   "title": "U.S. Route 66 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:43.981Z",
+   "snapshot": "ba9a93128703fd8c9ab9a48e1f4c733a6343cd65acce64bd176e5f2ef460bf21"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Trans-Siberian_Railway",
+   "title": "Trans-Siberian Railway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:45.084Z",
+   "snapshot": "05a939b5fca0f615a1b96323f0efd06039a565de27f09db07ad3651d31712171"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Brindisi",
+   "title": "Brindisi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:48.645Z",
+   "snapshot": "4d5e2b81100fefacb2f91c9807649b1f3fed35cd88d3249c2dedd32fd92a6143"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Romantische_Stra%C3%9Fe",
+   "title": "Romantische Straße – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:43.239Z",
+   "snapshot": "c98e1d1b6880c2de8b5b0a4699537ef9dd9d5048ffa60a0c434f8d7cc5003eea"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Camino_de_Santiago",
+   "title": "Camino de Santiago – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:47.029Z",
+   "snapshot": "e439959f1ebbeafeb3591eb4e73fb59ce42187bbcce4b21f99878cd0be43942e"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Camino_Franc%C3%A9s",
+   "title": "Camino Francés",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:44.137Z",
+   "snapshot": "5d7ab8c8321ef5753b466e8fa40d2a837fd113da2da4cccab09dac92b9a7e842"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05986",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chicago",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vladivostok",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brindisi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Füssen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Santiago de Compostela",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Camino Francés",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Camino Francés",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-125/1, u01: The Way of St James is a network of routes; UNESCO lists the Camino Francés and the Northern Spanish routes, plus the French routes (1998). Statement false, answer right."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f14499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Camino Francés",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s5"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f14499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Camino Francés",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f05986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Established on November 11, 1926, with signage erected the following year, the highway ran from Chicago, Illinois, through Missouri, Kansas, Oklahoma, Texas, New Mexico, and Arizona before terminating in Santa Monica, California, covering 2,448 miles (3,940 km).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chicago” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f05987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It runs from the city of Moscow in the west to the city of Vladivostok in the east.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vladivostok” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f05988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brindisi (US:  BRIN-diz-ee, BREEN-; Italian: [ˈbrindizi] ; Brindisino: Brìnnisi) is a city in the region of Apulia in southern Italy, the capital of the province of Brindisi, on the coast of the Adriatic Sea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brindisi” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f05989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Straße erstreckt sich über 413 km von Würzburg bis nach Füssen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Füssen” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f05990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "James in English, is a network of pilgrims' ways or pilgrimages leading to the shrine of the apostle James in the cathedral of Santiago de Compostela in Galicia in northwestern Spain, where tradition holds that the remains of the apostle are buried.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santiago de Compostela” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f14499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Camino Francés, or French Way, is the most popular.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Camino Francés” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:46.903Z",
+   "target": "f14499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Camino Francés (deutsch: „Französischer Weg“) ist der klassische Jakobsweg, der auf einer Strecke von fast 800 Kilometern quer durch den Norden Spaniens von den Pyrenäen nach Santiago de Compostela führt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Camino Francés” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,381 @@
+{
+ "id": "a1140",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "Who Runs the Internet? DENIC, ICANN and Friends",
+ "titleDe": "Wer betreibt das Internet? DENIC, ICANN und Co.",
+ "titleRu": "Кто управляет интернетом? DENIC, ICANN и другие",
+ "bodyEn": "The internet has no owner and no government, but it does have administrators. A handful of organisations, most of them non-profit and little known outside the industry, keep the address system working so that a name typed into a browser reliably leads to the right computer.\n\nAt the top of the system stands ICANN, the Internet Corporation for Assigned Names and Numbers, founded on 30 September 1998 in California. Its task is the global coordination of domain names and IP addresses: ICANN decides which top-level domains exist (.com, .org, .de, .berlin and many hundreds more), oversees the root servers of the Domain Name System and, through its IANA function, allocates blocks of IP addresses to the regional registries. ICANN itself does not register a single domain; it delegates each top-level domain to a registry.\n\nFor Germany's country domain that registry is DENIC eG, based in Frankfurt am Main. Founded on 17 December 1996 as a cooperative (eingetragene Genossenschaft, hence 'eG') of internet providers, its task is the administration of .de domains: it maintains the central database of all names under .de, runs the name servers that answer queries for them, and sets the rules for who may register what. With more than 17 million registered names, .de is one of the largest country-code domains in the world, second only to China's .cn among country codes. It was not always meant to be alone: the GDR had been assigned the top-level domain .dd, but it was never delegated in the public Domain Name System – it was used only internally in an isolated university network – and it became obsolete with reunification in 1990, leaving .de for the whole country. DENIC does not sell domains to end customers either; registration goes through its member companies and providers, from web hosters to telecoms firms.\n\nThe technical machinery both organisations serve is the Domain Name System, DNS, the 'telephone book of the internet' devised by Paul Mockapetris and specified in November 1983. Its job is the translation of domain names into IP addresses: when you type denic.de, a chain of name servers - root, .de, denic - answers with the numerical address that your computer actually needs to connect. Without DNS, every website would have to be remembered as a string of numbers.\n\nWhat appears on the page once the connection is made is the concern of the W3C, the World Wide Web Consortium, founded by web inventor Tim Berners-Lee at MIT on 1 October 1994. It is responsible for the standardisation of web technologies such as HTML and CSS, so that a page written once displays the same in every browser.\n\nAnd in Germany one more authority watches over the whole: the BSI, the Federal Office for Information Security (Bundesamt für Sicherheit in der Informationstechnik) in Bonn, founded on 1 January 1991, whose responsibility is IT security in Germany - from certifying encryption products and protecting the federal government's networks to warning the public about vulnerabilities and attacks.\n\n| Organisation | Responsible for |\n|---|---|\n| DENIC eG | The administration of .de domains |\n| ICANN | The global coordination of domain names and IP addresses |\n| DNS | The translation of domain names into IP addresses |\n| W3C | The standardisation of web technologies such as HTML and CSS |\n| BSI | IT security in Germany |\n\nNone of these bodies makes headlines, which is precisely the point: the address system of the internet works so quietly that most users have never heard of the organisations that keep it running.",
+ "bodyDe": "Das Internet hat keinen Eigentümer und keine Regierung, aber es hat Verwalter. Eine Handvoll Organisationen, die meisten gemeinnützig und außerhalb der Branche wenig bekannt, halten das Adresssystem am Laufen, damit ein in den Browser getippter Name zuverlässig zum richtigen Rechner führt.\n\nAn der Spitze des Systems steht die ICANN, die Internet Corporation for Assigned Names and Numbers, am 30. September 1998 in Kalifornien gegründet. Ihre Aufgabe ist die weltweite Koordination von Domainnamen und IP-Adressen: Die ICANN entscheidet, welche Top-Level-Domains es gibt (.com, .org, .de, .berlin und viele Hundert mehr), beaufsichtigt die Root-Server des Domain Name System und weist über ihre IANA-Funktion den regionalen Registries Blöcke von IP-Adressen zu. Die ICANN selbst registriert keine einzige Domain; sie delegiert jede Top-Level-Domain an eine Registry.\n\nFür Deutschlands Länderdomain ist diese Registry die DENIC eG mit Sitz in Frankfurt am Main. Am 17. Dezember 1996 als eingetragene Genossenschaft (daher „eG“) von Internetanbietern gegründet, ist ihre Aufgabe die Verwaltung der .de-Domains: Sie führt die zentrale Datenbank aller Namen unter .de, betreibt die Nameserver, die Anfragen zu ihnen beantworten, und legt die Regeln fest, wer was registrieren darf. Mit mehr als 17 Millionen registrierten Namen ist .de eine der größten Länderdomains der Welt, unter den Ländercodes nur von Chinas .cn übertroffen. Allein sollte sie nicht immer sein: Für die DDR war die Top-Level-Domain .dd vorgesehen, doch sie wurde nie im öffentlichen Domain Name System delegiert – genutzt wurde sie nur intern in einem abgeschotteten Hochschulnetz – und mit der Wiedervereinigung 1990 wurde sie hinfällig, sodass .de für das ganze Land blieb. Auch die DENIC verkauft keine Domains an Endkunden; die Registrierung läuft über ihre Mitgliedsunternehmen und Provider, vom Webhoster bis zum Telekommunikationskonzern.\n\nDie technische Maschinerie, der beide Organisationen dienen, ist das Domain Name System, DNS, das „Telefonbuch des Internets“, das Paul Mockapetris entwarf und das im November 1983 spezifiziert wurde. Seine Aufgabe ist die Übersetzung von Domainnamen in IP-Adressen: Tippt man denic.de ein, antwortet eine Kette von Nameservern – Root, .de, denic – mit der numerischen Adresse, die der Rechner tatsächlich für die Verbindung braucht. Ohne DNS müsste man sich jede Website als Zahlenfolge merken.\n\nWas auf der Seite erscheint, sobald die Verbindung steht, ist Sache des W3C, des World Wide Web Consortium, das der Web-Erfinder Tim Berners-Lee am 1. Oktober 1994 am MIT gründete. Es ist zuständig für die Standardisierung von Webtechnologien wie HTML und CSS, damit eine einmal geschriebene Seite in jedem Browser gleich angezeigt wird.\n\nUnd in Deutschland wacht noch eine Behörde über das Ganze: das BSI, das Bundesamt für Sicherheit in der Informationstechnik in Bonn, gegründet am 1. Januar 1991, dessen Zuständigkeit die IT-Sicherheit in Deutschland ist – von der Zertifizierung von Verschlüsselungsprodukten und dem Schutz der Netze der Bundesverwaltung bis zu Warnungen an die Öffentlichkeit vor Sicherheitslücken und Angriffen.\n\n| Organisation | Zuständig für |\n|---|---|\n| DENIC eG | Die Verwaltung der .de-Domains |\n| ICANN | Die weltweite Koordination von Domainnamen und IP-Adressen |\n| DNS | Die Übersetzung von Domainnamen in IP-Adressen |\n| W3C | Die Standardisierung von Webtechnologien wie HTML und CSS |\n| BSI | Die IT-Sicherheit in Deutschland |\n\nKeine dieser Stellen macht Schlagzeilen, und genau das ist der Punkt: Das Adresssystem des Internets funktioniert so leise, dass die meisten Nutzer noch nie von den Organisationen gehört haben, die es am Laufen halten.",
+ "bodyRu": "У интернета нет владельца и нет правительства, но у него есть администраторы. Горстка организаций, в большинстве некоммерческих и малоизвестных за пределами отрасли, поддерживает работу адресной системы, чтобы имя, набранное в браузере, надёжно приводило к нужному компьютеру.\n\nНа вершине системы стоит ICANN – Корпорация по управлению доменными именами и IP-адресами (Internet Corporation for Assigned Names and Numbers), основанная 30 сентября 1998 года в Калифорнии. Её задача – глобальная координация доменных имён и IP-адресов: ICANN решает, какие домены верхнего уровня существуют (.com, .org, .de, .berlin и многие сотни других), надзирает за корневыми серверами системы доменных имён и через свою функцию IANA распределяет блоки IP-адресов между региональными регистратурами. Сама ICANN не регистрирует ни одного домена; каждый домен верхнего уровня она передаёт в ведение регистратуры.\n\nДля национального домена Германии такой регистратурой является DENIC eG со штаб-квартирой во Франкфурте-на-Майне. Основанная 17 декабря 1996 года как кооператив интернет-провайдеров (eingetragene Genossenschaft, «зарегистрированный кооператив», отсюда «eG»), её задача – управление доменами .de: она ведёт центральную базу данных всех имён в зоне .de, обслуживает серверы имён, отвечающие на запросы о них, и устанавливает правила, кто и что может регистрировать. С более чем 17 миллионами зарегистрированных имён .de – один из крупнейших национальных доменов в мире, среди кодов стран уступающий только китайскому .cn. Он не всегда должен был быть единственным: для ГДР был предусмотрен домен верхнего уровня .dd, но он так и не был делегирован в публичной системе доменных имён – его использовали лишь внутри изолированной университетской сети – и с воссоединением в 1990 году утратил смысл, так что .de остался для всей страны. DENIC тоже не продаёт домены конечным клиентам; регистрация идёт через её компании-участники и провайдеров – от хостинговых компаний до телекоммуникационных концернов.\n\nТехническая машинерия, которой служат обе организации, – это система доменных имён, DNS, «телефонная книга интернета», разработанная Полом Мокапетрисом и описанная в спецификациях в ноябре 1983 года. Её задача – преобразование доменных имён в IP-адреса: когда вы набираете denic.de, цепочка серверов имён – корневой, .de, denic – отвечает числовым адресом, который на самом деле нужен вашему компьютеру для соединения. Без DNS каждый сайт пришлось бы запоминать как набор цифр.\n\nТо, что появляется на странице после установления соединения, – забота W3C, Консорциума Всемирной паутины, основанного изобретателем веба Тимом Бернерсом-Ли в MIT 1 октября 1994 года. Его задача – стандартизация веб-технологий, таких как HTML и CSS, чтобы однажды написанная страница выглядела одинаково в любом браузере.\n\nА в Германии за всем этим следит ещё одно ведомство: BSI, Федеральное ведомство по информационной безопасности (Bundesamt für Sicherheit in der Informationstechnik) в Бонне, основанное 1 января 1991 года, чья сфера ответственности – IT-безопасность в Германии: от сертификации средств шифрования и защиты сетей федерального правительства до предупреждений населения об уязвимостях и атаках.\n\n| Организация | Отвечает за |\n|---|---|\n| DENIC eG | управление доменами .de |\n| ICANN | глобальная координация доменных имён и IP-адресов |\n| DNS | преобразование доменных имён в IP-адреса |\n| W3C | стандартизация веб-технологий, таких как HTML и CSS |\n| BSI | IT-безопасность в Германии |\n\nНи одна из этих структур не попадает в заголовки, и в этом-то всё дело: адресная система интернета работает так тихо, что большинство пользователей никогда не слышали об организациях, которые поддерживают её работу.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/An_annotated_example_of_a_domain_name.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Domain_name",
+   "width": 977,
+   "height": 358,
+   "alt": {
+    "en": "Annotated diagram of the parts of a domain name",
+    "de": "Beschriftetes Schema der Bestandteile eines Domainnamens",
+    "ru": "Схема с подписями частей доменного имени"
+   },
+   "caption": {
+    "en": "The parts of a domain name, from the top-level domain on the right to the subdomains on the left: ICANN decides which top-level domains exist, registries such as DENIC run them, and DNS turns the whole name into an IP address.",
+    "de": "Die Teile eines Domainnamens, von der Top-Level-Domain rechts bis zu den Subdomains links: Die ICANN entscheidet, welche Top-Level-Domains es gibt, Registries wie die DENIC verwalten sie, und das DNS übersetzt den ganzen Namen in eine IP-Adresse.",
+    "ru": "Части доменного имени – от домена верхнего уровня справа до поддоменов слева: ICANN решает, какие домены верхнего уровня существуют, регистратуры вроде DENIC управляют ими, а DNS переводит всё имя в IP-адрес."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Ams-ix.k.root-servers.net.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Root_name_server",
+   "width": 1600,
+   "height": 1200,
+   "alt": {
+    "en": "Server rack of the K root name server at AMS-IX in Amsterdam",
+    "de": "Serverschrank des K-Root-Nameservers am AMS-IX in Amsterdam",
+    "ru": "Серверная стойка корневого сервера имён K в AMS-IX в Амстердаме"
+   },
+   "caption": {
+    "en": "Hardware of the K root name server in Amsterdam – one of the root servers of the Domain Name System that ICANN oversees and where every DNS lookup begins.",
+    "de": "Hardware des K-Root-Nameservers in Amsterdam – eines der Root-Server des Domain Name System, die die ICANN beaufsichtigt und bei denen jede DNS-Abfrage beginnt.",
+    "ru": "Оборудование корневого сервера имён K в Амстердаме – одного из корневых серверов DNS, за которыми надзирает ICANN и с которых начинается любой DNS-запрос."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f05696",
+   "answerEn": "The administration of .de domains",
+   "answerDe": "Die Verwaltung der .de-Domains",
+   "answerRu": "Управление доменами .de",
+   "spans": {
+    "en": [
+     1031,
+     33
+    ],
+    "de": [
+     1079,
+     30
+    ],
+    "ru": [
+     1167,
+     23
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "1996-12-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "DENIC eG, registry of the .de domain, is founded in Frankfurt",
+    "labelDe": "Die DENIC eG, Registry der .de-Domain, wird in Frankfurt gegründet",
+    "labelRu": "Основана DENIC eG, регистратура домена .de, во Франкфурте"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/DENIC",
+    "title": "DENIC – Wikipedia",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w05696",
+     "en": "What is DENIC eG responsible for?",
+     "de": "Wofür ist die DENIC eG zuständig?",
+     "ru": "За что отвечает DENIC eG?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c095",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f05697",
+   "answerEn": "The global coordination of domain names and IP addresses",
+   "answerDe": "Die weltweite Koordination von Domainnamen und IP-Adressen",
+   "answerRu": "Глобальная координация доменных имён и IP-адресов",
+   "spans": {
+    "en": [
+     428,
+     56
+    ],
+    "de": [
+     457,
+     58
+    ],
+    "ru": [
+     482,
+     49
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "1998-09-30",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "ICANN is founded to coordinate domain names and IP addresses",
+    "labelDe": "Die ICANN wird zur Koordination von Domainnamen und IP-Adressen gegründet",
+    "labelRu": "Основана ICANN для координации доменных имён и IP-адресов"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/ICANN",
+    "title": "ICANN – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05697",
+     "en": "What is ICANN responsible for?",
+     "de": "Wofür ist die ICANN zuständig?",
+     "ru": "За что отвечает ICANN?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q485750",
+     "label": "ICANN",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f05698",
+   "answerEn": "The translation of domain names into IP addresses",
+   "answerDe": "Die Übersetzung von Domainnamen in IP-Adressen",
+   "answerRu": "Преобразование доменных имён в IP-адреса",
+   "spans": {
+    "en": [
+     2017,
+     49
+    ],
+    "de": [
+     2136,
+     46
+    ],
+    "ru": [
+     2208,
+     40
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1983-11",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Domain Name System is specified in RFC 882 and RFC 883",
+    "labelDe": "Das Domain Name System wird in RFC 882 und RFC 883 spezifiziert",
+    "labelRu": "Система доменных имён описана в RFC 882 и RFC 883"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Domain_Name_System",
+    "title": "Domain Name System – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05698",
+     "en": "What is the Domain Name System (DNS) responsible for?",
+     "de": "Wofür ist das Domain Name System (DNS) zuständig?",
+     "ru": "За что отвечает система доменных имён (DNS)?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f05699",
+   "answerEn": "The standardisation of web technologies such as HTML and CSS",
+   "answerDe": "Die Standardisierung von Webtechnologien wie HTML und CSS",
+   "answerRu": "Стандартизация веб-технологий, таких как HTML и CSS",
+   "spans": {
+    "en": [
+     2497,
+     60
+    ],
+    "de": [
+     2616,
+     57
+    ],
+    "ru": [
+     2672,
+     51
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "1994-10-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tim Berners-Lee founds the World Wide Web Consortium (W3C)",
+    "labelDe": "Tim Berners-Lee gründet das World Wide Web Consortium (W3C)",
+    "labelRu": "Тим Бернерс-Ли основывает Консорциум Всемирной паутины (W3C)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/World_Wide_Web_Consortium",
+    "title": "World Wide Web Consortium – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05699",
+     "en": "What is the World Wide Web Consortium (W3C) responsible for?",
+     "de": "Wofür ist das World Wide Web Consortium (W3C) zuständig?",
+     "ru": "За что отвечает Консорциум Всемирной паутины (W3C)?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q37033",
+     "label": "World Wide Web Consortium",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f14191",
+   "answerEn": ".dd",
+   "answerDe": ".dd",
+   "answerRu": ".dd",
+   "spans": {
+    "en": [
+     1459,
+     3
+    ],
+    "de": [
+     1502,
+     3
+    ],
+    "ru": [
+     1606,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "period",
+    "start": "1949-10-07",
+    "end": "1990-10-03",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The German Democratic Republic exists, from its founding to German reunification",
+    "labelDe": "Die Deutsche Demokratische Republik besteht, von ihrer Gründung bis zur Wiedervereinigung",
+    "labelRu": "Существует Германская Демократическая Республика – от основания до воссоединения Германии"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/.dd",
+    "title": ".dd",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14483",
+     "en": "Which top-level domain was intended for the GDR (East Germany)?",
+     "de": "Welche Top-Level-Domain war für die DDR vorgesehen?",
+     "ru": "Какой домен верхнего уровня был предусмотрен для ГДР (Восточной Германии)?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-271",
+      "category": 2
+     },
+     "cardText": "Welche Top-Level-Domain war für die DDR vorgesehen: .ddr, .dd oder .dr?"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q435553",
+     "label": ".dd",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f05700",
+   "answerEn": "IT security in Germany",
+   "answerDe": "Die IT-Sicherheit in Deutschland",
+   "answerRu": "IT-безопасность в Германии",
+   "spans": {
+    "en": [
+     2849,
+     22
+    ],
+    "de": [
+     2936,
+     32
+    ],
+    "ru": [
+     3031,
+     26
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "1991-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Germany's Federal Office for Information Security (BSI) is founded",
+    "labelDe": "Das Bundesamt für Sicherheit in der Informationstechnik (BSI) wird gegründet",
+    "labelRu": "Основано Федеральное ведомство по информационной безопасности (BSI)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bundesamt_f%C3%BCr_Sicherheit_in_der_Informationstechnik",
+    "title": "Bundesamt für Sicherheit in der Informationstechnik – Wikipedia",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w05700",
+     "en": "What is the Federal Office for Information Security (BSI) responsible for?",
+     "de": "Wofür ist das Bundesamt für Sicherheit in der Informationstechnik (BSI) zuständig?",
+     "ru": "За что отвечает Федеральное ведомство по информационной безопасности (BSI)?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-23",
+    "code": "non-trivia",
+    "reason": "Least trivia-like: a long job description of a German federal office rather than a crisp question anyone would enjoy answering."
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/internet/governance",
+  "region:de",
+  "audience:international"
+ ]
+}

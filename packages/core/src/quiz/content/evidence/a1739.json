@@ -1,0 +1,333 @@
+{
+ "article": "a1739",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Antje_(Walross)",
+   "title": "Antje (Walross) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:09.865Z",
+   "snapshot": "b081c722719a3a8eb08d017dbde80f06ddc3aa0d2a0dc17187abf27f335b090d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Goleo_and_Pille",
+   "title": "Goleo and Pille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:12.425Z",
+   "snapshot": "79db1233f595f54e2dc586ba34f3e68b66cc3073ccbcdea072b99ee62c57584c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Knut_(polar_bear)",
+   "title": "Knut (polar bear) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:13.450Z",
+   "snapshot": "e73b28954b7d59dfe151b22a34002116ce65c633e67f2300d5e749e5b2ef102b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paul_the_Octopus",
+   "title": "Paul the Octopus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:14.361Z",
+   "snapshot": "beed94664e3bb90b947d0a2ebc3cd362a37e07ec5ba6e5d562385083c029f2b3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Chi_Chi_(giant_panda)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:15.394Z",
+   "snapshot": "06665bc2d6a6c34aa7e54192747a0d5c0be77afb9d09b35682fe4391b707e890"
+  },
+  "s6": {
+   "url": "https://news.bbc.co.uk/2/hi/business/4989726.stm",
+   "title": "World Cup mascot firm goes bust",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:02.154Z",
+   "snapshot": "584d6eab68ea93c983c86fde4c657842897c0a09a4fd4e793bb1ec073c3d0695"
+  },
+  "s7": {
+   "url": "http://www.spiegel.de/wirtschaft/0,1518,416510,00.html",
+   "title": "Plüschtier-Flaute: Hersteller von WM-Löwe Goleo ist pleite",
+   "publisher": "Der Spiegel",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:02.698Z",
+   "snapshot": "bdd7cc03d77290496391fd6ccaa3ecb4ceca84c17b28538546d9f9153dc80507"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Walross Antje",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Goleo VI the lion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Knut the polar bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paul the octopus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:14.991Z",
+   "target": "f08691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mit dem Walross Antje eröffnete sich für den NDR eine ungeahnte Einnahmequelle in Form zahlreicher Antje-Merchandising-Produkte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walross Antje” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:14.991Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Goleo VI the lion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Goleo VI the lion”, “Löwe Goleo VI”, “лев Голео VI”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:14.991Z",
+   "target": "f08693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Leben von Eisbär Knut at Rundfunk Berlin-Brandenburg (in German)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eisbär Knut” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:14.991Z",
+   "target": "f08694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paul the Octopus  (26 January 2008 – 26 October 2010) was a common octopus who predicted the results of international association football matches.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul the octopus” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:07:20Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Goleo VI, commonly known as Goleo, and Pille, were the official mascots for the 2006 FIFA World Cup in Germany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:07:22Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "for the sole rights to \"Goleo\", a football-kit-wearing lion.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:23Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hersteller von WM-Löwe Goleo ist pleite",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:02.413Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Goleo VI, commonly known as Goleo, and Pille, were the official mascots for the 2006 FIFA World Cup in Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:02.413Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:02.413Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "for the sole rights to \"Goleo\", a football-kit-wearing lion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:02.413Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:02.413Z",
+   "target": "f08692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hersteller von WM-Löwe Goleo ist pleite",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:02.413Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  }
+ ]
+}

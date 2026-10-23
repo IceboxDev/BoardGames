@@ -1,0 +1,249 @@
+{
+ "article": "a1384",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Evelyn_Hamann",
+   "title": "Evelyn Hamann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:06.510Z",
+   "snapshot": "064816379af1d7a427fde062ee72332e9a1072187b7bba8d0df99f64714dc66e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Liesl_Karlstadt",
+   "title": "Liesl Karlstadt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:07.508Z",
+   "snapshot": "b6b8660f88ee37c783cdcd4a052db9d05fa1515d543974c169af94daf610a3cd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Nonstop_Nonsens",
+   "title": "Nonstop Nonsens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:08.540Z",
+   "snapshot": "67100d6a44934203482444861136f0899d71e2f11b6d9a2b6589f705c9cfeb7b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Terence_Hill_and_Bud_Spencer",
+   "title": "Terence Hill and Bud Spencer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:09.322Z",
+   "snapshot": "70a3aaaa05d82a3e20afbea9983d86ed53140a5df5de2c3aaa515fe2bd9d3b2b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Stan_Laurel",
+   "title": "Stan Laurel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:10.360Z",
+   "snapshot": "afb317cc088badf68ab36535ebb0d675853a9956e117737c480bf93628b44288"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Laurel_and_Hardy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:11.450Z",
+   "snapshot": "614a3a831346704174e63b31f10c8c53bb0909514454417b5638dd82a714f0a1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Evelyn Hamann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Liesl Karlstadt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rotraud Schindler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Terence Hill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stan Laurel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:17.316Z",
+   "target": "f06916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Evelyn Hamann (bürgerlich Eveline Braun; * 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evelyn Hamann” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:17.316Z",
+   "target": "f06917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Liesl Karlstadt (eigentlich Elisabeth Wellano; * 12.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liesl Karlstadt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:17.316Z",
+   "target": "f06918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neben Hallervorden traten unter anderem Rotraud Schindler, Kurt Schmidtchen und Gerhard Wollner als Darsteller auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotraud Schindler” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:17.316Z",
+   "target": "f06919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Terence Hill (born Mario Girotti in 1939) and Bud Spencer (born Carlo Pedersoli, 1929–2016) are Italian actors who made numerous action-comedy and spaghetti Western films together.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Terence Hill” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:17.316Z",
+   "target": "f06920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stan Laurel ( LORR-əl; born Arthur Stanley Jefferson; 16 June 1890 – 23 February 1965) was an English actor, comedian, director and writer who was in the comedy duo Laurel and Hardy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stan Laurel” is on the snapshot of s5"
+  }
+ ]
+}

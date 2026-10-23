@@ -1,0 +1,241 @@
+{
+ "article": "a0428",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Condition_of_the_Working_Class_in_England",
+   "title": "The Condition of the Working Class in England – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:20.645Z",
+   "snapshot": "a8dfb4cdb0cb0d8ecc3b23470112e296fd1567c6d49776933e647993a5badd04"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Marx",
+   "title": "Karl Marx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:26.772Z",
+   "snapshot": "e5a88222ed9f513be0382ba1d26fc12d7188c744016b10e4b5de4eead7b8b64f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Also_sprach_Zarathustra",
+   "title": "Also sprach Zarathustra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:21.711Z",
+   "snapshot": "07e78b46c6d477a4f58fc2cc570e7f1e97d69280b10aa8d7eafc104570b27a40"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_World_as_Will_and_Representation",
+   "title": "The World as Will and Representation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:28.265Z",
+   "snapshot": "753383bedec482b6881fcf294b54204be6fb668bdf628c40dae9111a41e7d0e8"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Engels",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:19.224Z",
+   "snapshot": "62bad465750853ca245eae07225c399d7e58478024d059a9c777da525485419d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02136",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Engels",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02137",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Marx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02138",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Friedrich Nietzsche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Café de la Régence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The World as Will and Representation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:46.950Z",
+   "target": "f02136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Condition of the Working Class in England (German: Die Lage der arbeitenden Klasse in England) is an 1845 book by the German philosopher Friedrich Engels, a study of the industrial working class in Victorian England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Engels” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:46.950Z",
+   "target": "f02137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Marx (German: [ˈkaʁl ˈmaʁks]; 5 May 1818 – 14 March 1883) was a German philosopher, social and political theorist, journalist, and revolutionary socialist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:46.950Z",
+   "target": "f02138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "30 (German: [ˈalzo ʃpʁaːx t͡saʁaˈtʊstʁa] , Thus Spoke Zarathustra or Thus Spake Zarathustra) is a tone poem by the German composer Richard Strauss, written in 1896 and inspired by Friedrich Nietzsche's 1883–1885 philosophical work of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Nietzsche” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:46.950Z",
+   "target": "f20420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 28 August 1844, Marx met the German socialist Friedrich Engels at the Café de la Régence, beginning a lifelong friendship.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Café de la Régence” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:46.950Z",
+   "target": "f20421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The World as Will and Representation (WWR; German: Die Welt als Wille und Vorstellung), sometimes translated as The World as Will and Idea, is the central work of the German philosopher Arthur Schopenhauer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The World as Will and Representation” is on the snapshot of s4"
+  }
+ ]
+}

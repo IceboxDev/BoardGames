@@ -1,0 +1,374 @@
+{
+ "article": "a0519",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
+   "title": "Sistine Chapel ceiling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:55.138Z",
+   "snapshot": "80ad4bc5f4b1003ccd35bdcdb66d5bd872e7b79c8281365276a14e16802d4853"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+   "title": "The Last Supper (Leonardo) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:55.520Z",
+   "snapshot": "8a1674b91189b9ac0f5d43aebec48a15432eca7d2620cbfed36affb520fcf17d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vandalism_of_Michelangelo%27s_Piet%C3%A0",
+   "title": "Vandalism of Michelangelo's Pietà – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:56.004Z",
+   "snapshot": "dfe6e8ddf0846095225cb5f1f4d9f431150f61fbc29105eb7329d5edefe01d39"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/St._Peter%27s_Basilica",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:57.201Z",
+   "snapshot": "47542562b43b06b3267ebeb8741fe2849787865b672b5605f2d5a890e04a1961"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Moses_(Michelangelo)",
+   "title": "Moses (Michelangelo) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:58.019Z",
+   "snapshot": "e8bd691c249de133177e6d846dd6457ee31934f468f1d5dd00da7f6ae814f6d3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Scrovegni_Chapel",
+   "title": "Scrovegni Chapel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:59.101Z",
+   "snapshot": "2adc6c0da0829efe37cdff133b7bf040ed84a83f8db07346dbae1dad64133a27"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/The_Last_Judgment_(Michelangelo)",
+   "title": "The Last Judgment (Michelangelo)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:00.143Z",
+   "snapshot": "59be313c0ff0b1fc909b97b41ae9f54d22a66d58cd6f7612a186c1e86c455426"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sistine Chapel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Santa Maria delle Grazie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "St. Peter's Basilica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St. Peter's Basilica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 57"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "San Pietro in Vincoli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Scrovegni Chapel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Michelangelo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-160"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Leonardo da Vinci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-073"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f02591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sistine Chapel ceiling (Italian: Soffitto della Cappella Sistina), painted in fresco by Michelangelo between 1508 and 1512, is a cornerstone work of High Renaissance art.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sistine Chapel” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f02592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1495–1498, housed in the refectory of the Convent of Santa Maria delle Grazie in Milan, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santa Maria delle Grazie” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f02593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 21 May 1972, Michelangelo's Pietà statue, located in St. Peter's Basilica, Vatican City, was attacked by Laszlo Toth, a Hungarian geologist who believed he was Jesus Christ.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St. Peter's Basilica” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f02593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Papal Basilica of Saint Peter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply St. Peter's Basilica (Latin: Basilica Sancti Petri; Italian: Basilica di San Pietro [baˈziːlika di sam ˈpjɛːtro]), is a church of the Italian Renaissance located in Vatican City, an",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St. Peter's Basilica” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f02594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1513–1515) is a sculpture by the Italian High Renaissance artist Michelangelo, housed in the Basilica of San Pietro in Vincoli in Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “San Pietro in Vincoli” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f02595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Scrovegni Chapel (Italian: Cappella degli Scrovegni [kapˈpɛlla deʎʎi skroˈveɲɲi]), also known as the Arena Chapel, is a small church, adjacent to the Augustinian monastery, the Monastero degli Eremitani in Padua, region of Veneto, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scrovegni Chapel” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f14435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Last Judgment (Italian: Il Giudizio Universale) is a fresco by the Italian Renaissance painter Michelangelo covering the whole altar wall of the Sistine Chapel in Vatican City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michelangelo” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:01.241Z",
+   "target": "f25221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Last Supper (Italian: Il Cenacolo [il tʃeˈnaːkolo] or L'Ultima Cena [ˈlultima ˈtʃeːna]) is a mural painting by the Italian High Renaissance artist Leonardo da Vinci, dated to c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.241Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonardo da Vinci” is on the snapshot of s2"
+  }
+ ]
+}

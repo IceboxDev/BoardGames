@@ -1,0 +1,202 @@
+{
+ "article": "a0296",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Voltaire",
+   "title": "Voltaire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:33.243Z",
+   "snapshot": "ac972b369667f26d0484f79c8596a1cda89472bcb3f5165f73248b0780374441"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Encyclop%C3%A9die",
+   "title": "Encyclopédie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:34.012Z",
+   "snapshot": "fa3e990c9b7d658660e65a5ea404e5e44ef1e2cce077d2e8f594f70fb94f70f7"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F",
+   "title": "Beantwortung der Frage: Was ist Aufklärung? – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:45:31.769Z",
+   "snapshot": "71e7c0bf9ebc130d304b4afca6e171c2196f455f3f35c9b023269db1f5aac322"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_II._(Preu%C3%9Fen)",
+   "title": "Friedrich II. (Preußen)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:45:32.380Z",
+   "snapshot": "58899dd0a89707948a1a3d1997ae50b80376e29c491f1f358e683a4aa6b49dc8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Spirit_of_Law",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:18.950Z",
+   "snapshot": "1a974b258b92ca25ded6e73127338e34933e2c0de24a8f06ef3881e53bb88991"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Voltaire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Denis Diderot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Immanuel Kant",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "der Alte Fritz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-081"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:25.720Z",
+   "target": "f01476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "François-Marie Arouet (French: [fʁɑ̃swa maʁi aʁwɛ]; 21 November 1694 – 30 May 1778), known by his pen name Voltaire (, US also ; French: [vɔltɛːʁ]), was a French Enlightenment writer, philosopher (philosophe), satirist, and historian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Voltaire” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:25.720Z",
+   "target": "f01478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was edited by Denis Diderot and, until 1759, co-edited by Jean le Rond d'Alembert.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Denis Diderot” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:25.720Z",
+   "target": "f01480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ist ein Essay des Philosophen Immanuel Kant aus dem Jahr 1784.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:25.720Z",
+   "target": "f12263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "August 1786 in Potsdam), volkstümlich „Der Alte Fritz“ genannt, war ab 1740 König in, ab 1772 König von Preußen und ab 1740 Markgraf von Brandenburg und somit einer der Kurfürsten des Heiligen Römischen Reiches.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “der Alte Fritz” is on the snapshot of s4"
+  }
+ ]
+}

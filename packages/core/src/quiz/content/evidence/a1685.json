@@ -1,0 +1,355 @@
+{
+ "article": "a1685",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meeple",
+   "title": "Meeple – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:50.357Z",
+   "snapshot": "324603c5edb7b1cff513923148f815c7e8cd2677c7f93c6b0e331d48cbd952b1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Catan",
+   "title": "Catan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:01.408Z",
+   "snapshot": "9a26392b2d36ed52d5115cf07c97eda50bef3908e188b2d9ed66638f32339e68"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dorfromantik",
+   "title": "Dorfromantik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:51.390Z",
+   "snapshot": "ca70c36b2692d7107bc1dd7b8aed572cb2fcc114e05f41cc048f19963fe74b1e"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/castle",
+   "title": "Castle – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Stalemate",
+   "title": "Stalemate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:52.390Z",
+   "snapshot": "61883ed0a2f0896042b15d4dc62ccf888d567cbb445d1936a51e12c5bac52fd8"
+  },
+  "s6": {
+   "url": "https://handbook.fide.com/chapter/E012023",
+   "title": "FIDE Laws of Chess taking effect from 1 January 2023",
+   "publisher": "FIDE",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:32.053Z",
+   "snapshot": "3a0c61d7465cbd556d98b8e9b7a323bc241ada1a5e551a1f7308b454a55ac1c0"
+  },
+  "s7": {
+   "url": "https://www.chess.com/terms/castling-chess",
+   "title": "Chess Castling – Chess Terms",
+   "publisher": "Chess.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:32.641Z",
+   "snapshot": "1f253a4222e192dac17b30f51c83f43624fcb741f4fec67fca6facffc8d95d8f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Meeple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spiel des Jahres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Castling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stalemate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:05.706Z",
+   "target": "f08421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A meeple is a small board-game piece in a star-like shape that depicts an abstracted human form.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meeple” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:05.706Z",
+   "target": "f08422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "There is also a robber token, initially placed on the desert; if a player rolls 7, the robber must be moved to another hex, which will no longer produce resources until the robber is moved again.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robber” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:05.706Z",
+   "target": "f08423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A cooperative board game version was published by Pegasus Spiele as Dorfromantik: The Board Game in February 2023, which won that year's Spiel des Jahres award.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spiel des Jahres” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:05.706Z",
+   "target": "f08425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stalemate is a situation in chess where the player whose turn it is to move is not in check but has no legal move.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.706Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stalemate” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:34:58Z",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This is a move of the king and either rook of the same colour along the player’s first rank, counting as a single move of the king",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:35:01Z",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Castling is a special move in chess where you do multiple unique actions. First of all, it is the only move where you may move two pieces in the same move!",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:52.003Z",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This is a move of the king and either rook of the same colour along the player’s first rank, counting as a single move of the king",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:52.003Z",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Castling is a special move in chess where you do multiple unique actions. First of all, it is the only move where you may move two pieces in the same move!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:52.003Z",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "3.8.2.2 Castling is prevented temporarily:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Castling” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:52.003Z",
+   "target": "f08424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Chess Castling - Chess Terms - Chess.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Castling” is on the snapshot of s7"
+  }
+ ]
+}

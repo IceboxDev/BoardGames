@@ -1,0 +1,381 @@
+{
+ "article": "a0312",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Trolling",
+   "title": "Trolling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:47.010Z",
+   "snapshot": "acdd25c9396606c8a04b3535c00e347b3f768b30f4308b69fc3d789f82ab5ee6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1%25_rule",
+   "title": "1% rule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:09.262Z",
+   "snapshot": "e9e500be9a1e2795f24141c9cb627f63c7365c454f853fc6e7d2ac12a9470648"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003",
+   "title": "CAN-SPAM Act of 2003 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:10.270Z",
+   "snapshot": "cd40866321019f06dfcf2e7bd491a867be3408063704ede96c39db62375e7ecc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sock_puppet_account",
+   "title": "Sock puppet account – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:11.250Z",
+   "snapshot": "279d19058e403e496f1558f7f94afb2e976dc2e00cbbeee131195862eaa30ef1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Phishing",
+   "title": "Phishing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:12.378Z",
+   "snapshot": "b92c5d9233d9d558876ec442d1c6194cb7e707f6bf7c859199fc4da3cff6aadd"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/lurker",
+   "title": "LURKER – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:05.284Z",
+   "snapshot": "aa79c8819980a8d1cce96443ae5cae6d388a2d18d55121e6a330d7691df504db"
+  },
+  "s7": {
+   "url": "https://www.nngroup.com/articles/participation-inequality/",
+   "title": "Participation Inequality: The 90-9-1 Rule",
+   "publisher": "Nielsen Norman Group",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:08:38Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Lurker",
+   "title": "Lurker",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:06.567Z",
+   "snapshot": "bc9914a37c848afc01497163155e990613825fa0bf1d569813dfbfda14b9b98f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "troll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lurker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "spam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01559",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sock puppet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "phishing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:28.134Z",
+   "target": "f01556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The behavior is typically for the troll's amusement, or to achieve a specific result such as disrupting a rival's online activities or purposefully causing confusion or harm to other people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “troll” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:28.134Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lurker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“lurker”, “Lurker”, “лёркер”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:28.134Z",
+   "target": "f01558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Controlling the Assault of Non-Solicited Pornography And Marketing (CAN-SPAM) Act of 2003 is a law passed in 2003 establishing the United States' first national standards for the sending of commercial e-mail.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “spam” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:28.134Z",
+   "target": "f01559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A sock puppet, sock puppet account, or sock is a false online identity used for deceptive purposes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sock puppet” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:28.134Z",
+   "target": "f01560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Phishing is a form of social engineering and a scam in which attackers deceive people into revealing sensitive information or installing malware.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “phishing” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:08:36Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "someone who reads the messages in a chat room without taking part",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:08:38Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In most online communities, 90% of users are lurkers who never contribute",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:08:41Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In Internet culture , a lurker is typically a member of an online community who observes, but does not participate by posting or commenting.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:48.628Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "someone who reads the messages in a chat room without taking part",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:48.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:48.628Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LURKER | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:48.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “lurker” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:48.628Z",
+   "target": "f01557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In Internet culture, a lurker is typically a member of an online community who observes, but does not participate by posting or commenting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:48.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “lurker” is on the snapshot of s8"
+  }
+ ]
+}

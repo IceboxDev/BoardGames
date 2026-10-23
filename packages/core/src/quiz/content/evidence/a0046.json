@@ -1,0 +1,626 @@
+{
+ "article": "a0046",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kazakhstan",
+   "title": "Kazakhstan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:26.397Z",
+   "snapshot": "42f5fd396d10bfe4dbd6d0dd034b83f24d82f2a4cd09dff4ee545886e3e898f3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kasachstan",
+   "title": "Kasachstan",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:17:23.024Z",
+   "snapshot": "e279696d432cd4dad9b74d23bc55cb6e95dbf8e1203200a41554cd7939042acf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Uzbekistan",
+   "title": "Uzbekistan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:26.739Z",
+   "snapshot": "3281d565e92314ca5b354d1fde6281f06c0a9e4f16a25d0aec225195dc858688"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Armenia",
+   "title": "Armenia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:27.649Z",
+   "snapshot": "666590ec037fc32d91ff68fc6de162b4837790b29e6abcc49960e037fe7c6b8f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ismoil_Somoni_Peak",
+   "title": "Ismoil Somoni Peak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:28.496Z",
+   "snapshot": "b083212107f8f0baabf3733a8154cfda8fbb748919fb19d91c519f8adcd13333"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Republik_Moldau",
+   "title": "Republik Moldau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:17:30.495Z",
+   "snapshot": "045e99aba5c75f18b581ba55cfcda6f36c65926ff8706e0bd3d51f791664c3e4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tajikistan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:29.505Z",
+   "snapshot": "1c660c56685719db6abc9abe0f1ca267d073035a2c6cafb4b07ebd62a9ddbe95"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Post-Soviet_states",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:30.827Z",
+   "snapshot": "c30f047926e2da871bdb889b713d5aeb995e9f43a806f9769af42e789723612a"
+  },
+  "s9": {
+   "url": "https://www.worldatlas.com/articles/the-largest-landlocked-countries-in-the-world.html",
+   "title": "The Largest Landlocked Countries In The World",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:28.036Z",
+   "snapshot": "af2a6a9a0ae5b6a9230f5ca6048a61c3c06dffec7a99c82e4dccb346ddeed3b3"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Landlocked_country",
+   "title": "Landlocked country",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:25:44Z"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Republics_of_the_Soviet_Union",
+   "title": "Republics of the Soviet Union",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:28.009Z",
+   "snapshot": "848758b9d2d8abcca6a34a894ad8046f7c224b8cbc8690f063d800e415415cfc"
+  },
+  "s12": {
+   "url": "https://www.gov.am/en/geography/",
+   "title": "Geography – The Government of the Republic of Armenia",
+   "publisher": "Government of the Republic of Armenia",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:29.337Z",
+   "snapshot": "933536fa38760a3e7a5a1e83a73e0d30ab17662aa31283153229531a74b4559c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kazakhstan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kasachstan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-148"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uzbekistan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armenia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tajikistan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rumänien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-075"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:41.950Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kazakhstan, officially the Republic of Kazakhstan, is a landlocked country situated primarily in Central Asia, with a portion of its territory extending into Eastern Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kazakhstan” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:41.950Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kasachstan (kasachisch  Qazaqstan [qɑzɑqˈstɑn], russisch , amtlich Republik Kasachstan, kasachisch  Qasaqstan Respublikasy, russisch Республика Казахстан Respublika Kasachstan) ist ein Staat in Zentralasien und Osteuropa.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kasachstan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:41.950Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uzbekistan, officially the Republic of Uzbekistan, formely known as Uzbekia, is a sovereign, doubly landlocked country located in Central Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uzbekistan” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:41.950Z",
+   "target": "f00228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Armenia, officially the Republic of Armenia, is a landlocked country in the Armenian highlands of West Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Armenia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:41.950Z",
+   "target": "f00230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ismoil Somoni Peak (Tajik: Қуллаи Исмоили Сомонӣ, romanized: Qulla-i Ismō‘il-i Sōmōnî/Qullaji Ismojili Somonī; Russian: пик Исмои́ла Сомони́, romanized: pik Ismoíla Somoní) is the highest mountain in Tajikistan, as well as the former Russian Empire and Soviet Union before Tajikistan's independence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tajikistan” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:41.950Z",
+   "target": "f11903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Historisch gehörte das Territorium ab der Gründung des Fürstentums Moldau zu diesem Staat, ab 1812 zum Russischen Kaiserreich, nach dem Ersten Weltkrieg großteils zu Rumänien und ab 1940 / 1944 zur Sowjetunion.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.950Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rumänien” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:25:36Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kazakhstan is the world's ninth-largest country by land area and the largest landlocked country.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:25:39Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kazakhstan is not just the largest landlocked country on earth, it is the ninth-largest country of any kind, bigger than all of Western Europe combined, and it does it without a single seaport.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:25:42Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a sovereign, doubly landlocked country located in Central Asia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:25:44Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "there are 44 landlocked countries, two of them doubly landlocked due to being surrounded by other landlocked n",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:25:47Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "There are 44 of them, and two, Uzbekistan and Liechtenstein, are so thoroughly hemmed in that you have to cross two international borders just to reach salt water.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:25:49Z",
+   "target": "f00228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Smallest: 29,800 km2 (11,500 sq mi) (Armenian SSR)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Infobox of the Soviet republics: Armenian SSR smallest by area; the next smallest successor state, Estonia, has about 45,000 km²."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:25:51Z",
+   "target": "f00228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Territory: 29.743 square kilometers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official area (29,743 km²), below every other post-Soviet state (Estonia ~45,300 km² is next)."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kazakhstan is the world's ninth-largest country by land area and the largest landlocked country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kazakhstan is not just the largest landlocked country on earth, it is the ninth-largest country of any kind, bigger than all of Western Europe combined, and it does it without a single seaport.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a sovereign, doubly landlocked country located in Central Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "There are 44 of them, and two, Uzbekistan and Liechtenstein, are so thoroughly hemmed in that you have to cross two international borders just to reach salt water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Territory: 29.743 square kilometers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Map of Kazakhstan with bordering countries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kazakhstan” is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "There are 44 of them, and two, Uzbekistan and Liechtenstein, are so thoroughly hemmed in that you have to cross two international borders just to reach salt water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uzbekistan” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:51:57.341Z",
+   "target": "f00228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Geography • Government of the Republic of Armenia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:57.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Armenia” is on the snapshot of s12"
+  }
+ ]
+}

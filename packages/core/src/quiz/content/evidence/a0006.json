@@ -1,0 +1,378 @@
+{
+ "article": "a0006",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hundred_Years'_War",
+   "title": "Hundred Years' War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:06.658Z",
+   "snapshot": "0f9ee395158f4c3c8a284e6a4efb57a53c5f2eb99365f364d75bc5b936f3ffc8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Punic_Wars",
+   "title": "Punic Wars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:07.604Z",
+   "snapshot": "4e9efbc9f2533aef3fc3d1445f898386eb770e91c5bd9606030e4dcc679b58a2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anglo-Dutch_wars",
+   "title": "Anglo-Dutch wars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:08.518Z",
+   "snapshot": "4f56b815a44298d6f3062174862f35a1206474b7923c39b71a48e38454e1a437"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Tsushima",
+   "title": "Battle of Tsushima – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:09.599Z",
+   "snapshot": "5d22a51d0c3d395d48dc84e6fef1fa2e7e63ba631179ee1c02b33f5f0954f89c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Russian_Revolution_of_1905",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:10.605Z",
+   "snapshot": "fcdd82edbb5422b4680a4472f4e1111dbe3b3a45c4536d8fdc31c7f9ed39d9be"
+  },
+  "s6": {
+   "url": "https://www.canonvannederland.nl/nl/michielderuyter",
+   "title": "Michiel de Ruyter – Canon van Nederland",
+   "publisher": "Stichting entoen.nu (Canon van Nederland)",
+   "kind": "reference",
+   "lang": "nl",
+   "retrievedAt": "2026-10-23T12:30:14.597Z",
+   "snapshot": "020d41d72102c529964a07c562246ff48483ac11ac98cc286540bb3f6ec716b0"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Russo-Japanese_War",
+   "title": "Russo-Japanese War – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:30:47Z"
+  },
+  "s8": {
+   "url": "https://history.state.gov/milestones/1899-1913/portsmouth-treaty",
+   "title": "The Treaty of Portsmouth and the Russo-Japanese War, 1904–1905",
+   "publisher": "U.S. Department of State, Office of the Historian",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:14.765Z",
+   "snapshot": "b064804535d38a4b7d7a0ff176bbcfd2dce9e96957fc36757dafc11cd91d1789"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "England and France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00027",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rome and Carthage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "England and the Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00029",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Russia and Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:36.244Z",
+   "target": "f00026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Hundred Years' War (French: Guerre de Cent Ans; 1337–1453) was a series of conflicts between the kingdoms of England and France and a civil war in France during the late Middle Ages.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “England and France” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:36.244Z",
+   "target": "f00027",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "As Rome and Carthage came closer to sharing a joint border the chances of misunderstandings and hostilities increased.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rome and Carthage” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:36.244Z",
+   "target": "f00028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "England and the Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“England and the Netherlands”, “England und die Niederlande”, “Англия и Нидерланды”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:36.244Z",
+   "target": "f00029",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Russia and Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Russia and Japan”, “Russland und Japan”, “Россия и Япония”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:30:36Z",
+   "target": "f00028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first three wars occurred in the second half of the 17th century due to Anglo-Dutch tensions over trade and colonial expansion, while the fourth conflict was fought more than a century later.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:30:41Z",
+   "target": "f00028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Al snel volgen twee zeeoorlogen met Engeland vanwege conflicten over de handel.",
+     "quoteLang": "nl",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:30:47Z",
+   "target": "f00029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "was fought between the Russian Empire and the Empire of Japan over rival imperial ambitions in Manchuria and the Korean Empire",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:30:51Z",
+   "target": "f00029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "By 1904, Russia and Japan had endured several years of disputes over control of Manchuria.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:51:50.606Z",
+   "target": "f00028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first three wars occurred in the second half of the 17th century due to Anglo-Dutch tensions over trade and colonial expansion, while the fourth conflict was fought more than a century later.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:50.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:50.606Z",
+   "target": "f00028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Al snel volgen twee zeeoorlogen met Engeland vanwege conflicten over de handel.",
+     "quoteLang": "nl",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:50.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:50.606Z",
+   "target": "f00029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "By 1904, Russia and Japan had endured several years of disputes over control of Manchuria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:50.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:50.606Z",
+   "target": "f00029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "By 1904, Russia and Japan had endured several years of disputes over control of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:50.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Russia and Japan” is on the snapshot of s8"
+  }
+ ]
+}

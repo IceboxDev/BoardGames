@@ -1,0 +1,296 @@
+{
+ "article": "a0079",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+   "title": "Tesla, Inc. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:01.784Z",
+   "snapshot": "537c6fec26155afe90b6bab731ab05d17cfc78fe3a5554ef88847911f86e1dbd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_flight_test_1",
+   "title": "SpaceX Starship flight test 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:02.602Z",
+   "snapshot": "11f1bd6006457b7fdb36857302959ad84270555c31aa3c72fe16aa02f08adb1c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Neuralink",
+   "title": "Neuralink – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:03.590Z",
+   "snapshot": "b30b0d6550899dadd14e18fe17f4ff967f4c34d068dea207bd7f001cde952302"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/PayPal",
+   "title": "PayPal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:04.602Z",
+   "snapshot": "84c08be7e42bfc12181b487156055ec8fdfb3b4bf2c10ebcb5c6fdc2f3212164"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk",
+   "title": "Acquisition of Twitter by Elon Musk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:05.717Z",
+   "snapshot": "30c548694d181a0862cb6c3cc9d7dc4790ccd525708a9fb4c10ab3b23e002e1b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Boring_Company",
+   "title": "The Boring Company – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:06.591Z",
+   "snapshot": "0803ad212aa11fec01bfceb7fd23cf11713580496032c8022282ee4ea40520b3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Elon_Musk",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:07.691Z",
+   "snapshot": "8666234241272fa453e54a230edbad8017f6802523840cc09b0ceced1c592e59"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tesla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "SpaceX",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neuralink",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "PayPal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Twitter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Boring Company",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:47.088Z",
+   "target": "f00391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The company was incorporated in July 2003 by Martin Eberhard and Marc Tarpenning as Tesla Motors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tesla” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:47.088Z",
+   "target": "f00392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Starship flight test 1 was the maiden flight of the integrated SpaceX Starship launch vehicle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “SpaceX” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:47.088Z",
+   "target": "f00393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neuralink was launched in 2016 and first publicly reported in March 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neuralink” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:47.088Z",
+   "target": "f00394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Established in 1998 as Confinity, PayPal went public through an IPO in 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PayPal” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:47.088Z",
+   "target": "f00395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Acquisition of Twitter by Elon Musk",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twitter” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:47.088Z",
+   "target": "f28000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Boring Company (TBC) is an American infrastructure, tunnel construction service, and equipment company founded by Elon Musk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.088Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Boring Company” is on the snapshot of s6"
+  }
+ ]
+}

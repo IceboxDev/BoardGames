@@ -1,0 +1,520 @@
+{
+ "source": "publish-or-perish-mge",
+ "bucket": "science/medicine",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-071",
+    "category": 1
+   },
+   "factId": "f07303"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-072",
+    "category": 1
+   },
+   "factId": "f13469"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-089",
+    "category": 2
+   },
+   "factId": "f13466"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-092",
+    "category": 2
+   },
+   "factId": "f06462"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-135",
+    "category": 2
+   },
+   "factId": "f06464"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0621",
+   "baseHash": "21cdf1345153",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-006",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "What Is in a Vaccine? Five Kinds of Active Ingredient",
+    "titleDe": "Was steckt in einem Impfstoff? Fünf Arten von Wirkstoff",
+    "bodyEn": "Every vaccine has the same purpose – to show the immune system a harmless version of an enemy so that it is ready for the real one – but the \"harmless version\" can be made in very different ways. The active ingredient tells you which.\n\nThe vaccine against measles, mumps and rubella (MMR) contains live attenuated viruses: real, replicating viruses that have been weakened by being grown for years in cell cultures until they can no longer cause the disease. Maurice Hilleman at Merck developed the mumps component in 1967 from a throat swab of his own daughter Jeryl Lynn, whose name the strain still bears; the combined MMR vaccine was licensed in the United States in 1971. Because the viruses multiply in the body, a single dose gives strong, long-lasting immunity, but live vaccines cannot be given to people with severely weakened immune systems or during pregnancy. Yellow fever, chickenpox and Albert Sabin's oral polio drops work the same way.\n\nThe opposite approach is to kill the virus. Jonas Salk's polio vaccine, declared safe and effective on 12 April 1955, contains inactivated viruses, treated with formaldehyde so that they cannot replicate but still show their surface to the immune system; Germany has used it instead of the oral live vaccine since 1998. Rabies, hepatitis A, tick-borne encephalitis and most influenza vaccines are inactivated vaccines; they are safe for everyone but usually need several doses and boosters.\n\nSome diseases are caused not by the germ itself but by its poison. Tetanus and diphtheria are the examples, and their vaccines contain a toxoid: the bacterial toxin itself, detoxified with formaldehyde – a method Gaston Ramon worked out at the Institut Pasteur in the 1920s. The body learns to neutralise the poison; the bacterium is almost beside the point.\n\nThe hepatitis B vaccine contains the surface antigen HBsAg – a single protein from the virus's coat, produced by genetically modified yeast since the approval of the first recombinant version on 23 July 1986. It was the first recombinant vaccine, and hepatitis B vaccines were the first that can prevent a cancer, since chronic hepatitis B causes liver cancer.\n\nThe newest class dispenses with the protein altogether. Comirnaty, the COVID-19 vaccine developed by BioNTech in Mainz together with Pfizer and authorised first in the United Kingdom on 2 December 2020, contains mRNA: the genetic instruction for the coronavirus spike protein, packed in lipid nanoparticles. The recipient's own cells make the protein for a few days, and the immune system does the rest. Katalin Karikó and Drew Weissman received the 2023 Nobel Prize in Medicine for the modifications that made this possible.\n\nMany vaccines contain one more ingredient that is not the antigen at all. An adjuvant – from the Latin adiuvare, \"to help\" – is a substance added to a vaccine to enhance the body's immune response to its antigen, so that less antigen or fewer doses are needed. The oldest and still the most common adjuvants are aluminium salts, whose effect Alexander Glenny and his colleagues described in 1926 with diphtheria toxoid precipitated by alum; toxoid and many subunit vaccines contain them, while live vaccines need none, because the multiplying virus is stimulus enough.\n\n| Vaccine | Active ingredient | Type |\n|---|---|---|\n| MMR | live attenuated viruses | live vaccine |\n| polio (Salk, IPV) | inactivated viruses | inactivated vaccine |\n| tetanus, diphtheria | toxoid | toxoid vaccine |\n| hepatitis B | the surface antigen HBsAg | recombinant subunit vaccine |\n| COVID-19 (Comirnaty) | mRNA | mRNA vaccine |",
+    "bodyDe": "Jeder Impfstoff hat denselben Zweck – dem Immunsystem eine harmlose Version eines Feindes zu zeigen, damit es auf den echten vorbereitet ist –, aber die „harmlose Version“ lässt sich auf sehr verschiedene Weise herstellen. Der wirksame Bestandteil verrät, welche.\n\nDer Impfstoff gegen Masern, Mumps und Röteln (MMR) enthält abgeschwächte Lebendviren: echte, vermehrungsfähige Viren, die über Jahre in Zellkulturen gezüchtet und dabei so geschwächt wurden, dass sie die Krankheit nicht mehr auslösen können. Maurice Hilleman bei Merck entwickelte die Mumps-Komponente 1967 aus einem Rachenabstrich seiner eigenen Tochter Jeryl Lynn, deren Namen der Stamm bis heute trägt; der kombinierte MMR-Impfstoff wurde 1971 in den USA zugelassen. Weil sich die Viren im Körper vermehren, gibt schon eine Dosis eine starke, lang anhaltende Immunität, aber Lebendimpfstoffe dürfen Menschen mit stark geschwächtem Immunsystem und Schwangeren nicht gegeben werden. Gelbfieber, Windpocken und Albert Sabins Schluckimpfung gegen Polio funktionieren genauso.\n\nDer entgegengesetzte Ansatz ist, das Virus abzutöten. Jonas Salks Polio-Impfstoff, am 12. April 1955 für sicher und wirksam erklärt, enthält inaktivierte Viren, mit Formaldehyd behandelt, sodass sie sich nicht mehr vermehren, dem Immunsystem aber noch ihre Oberfläche zeigen; Deutschland verwendet ihn seit 1998 anstelle der Schluckimpfung. Tollwut, Hepatitis A, FSME und die meisten Grippeimpfstoffe sind Totimpfstoffe; sie sind für alle unbedenklich, brauchen aber meist mehrere Dosen und Auffrischungen.\n\nManche Krankheiten werden nicht vom Erreger selbst, sondern von seinem Gift verursacht. Tetanus und Diphtherie sind die Beispiele, und ihre Impfstoffe enthalten ein Toxoid: das Bakteriengift selbst, mit Formaldehyd entgiftet – eine Methode, die Gaston Ramon in den 1920er Jahren am Institut Pasteur ausarbeitete. Der Körper lernt, das Gift zu neutralisieren; das Bakterium ist fast Nebensache.\n\nDer Hepatitis-B-Impfstoff enthält das Oberflächenantigen HBsAg – ein einzelnes Protein aus der Hülle des Virus, das seit der Zulassung der ersten rekombinanten Version am 23. Juli 1986 von gentechnisch veränderter Hefe hergestellt wird. Er war der erste rekombinante Impfstoff, und Hepatitis-B-Impfstoffe waren die ersten, die einen Krebs verhindern können, denn chronische Hepatitis B verursacht Leberkrebs.\n\nDie neueste Klasse verzichtet ganz auf das Protein. Comirnaty, der COVID-19-Impfstoff, den BioNTech in Mainz zusammen mit Pfizer entwickelte und der am 2. Dezember 2020 zuerst im Vereinigten Königreich zugelassen wurde, enthält mRNA: die genetische Bauanleitung für das Spike-Protein des Coronavirus, verpackt in Lipid-Nanopartikel. Die Zellen des Geimpften stellen das Protein einige Tage lang selbst her, und das Immunsystem erledigt den Rest. Katalin Karikó und Drew Weissman erhielten 2023 den Medizin-Nobelpreis für die Modifikationen, die das möglich machten.\n\nViele Impfstoffe enthalten noch einen weiteren Bestandteil, der gar nicht das Antigen ist. Ein Adjuvans – vom lateinischen adiuvare, „helfen“ – ist ein Stoff, der einem Impfstoff zugesetzt wird, um die Immunantwort des Körpers auf das Antigen zu verstärken, sodass weniger Antigen oder weniger Dosen nötig sind. Die ältesten und bis heute häufigsten Adjuvanzien sind Aluminiumsalze, deren Wirkung Alexander Glenny und seine Kollegen 1926 an mit Alaun gefälltem Diphtherie-Toxoid beschrieben; Toxoid- und viele Untereinheiten-Impfstoffe enthalten sie, Lebendimpfstoffe dagegen brauchen keines, weil das sich vermehrende Virus Reiz genug ist.\n\n| Impfstoff | Wirksamer Bestandteil | Typ |\n|---|---|---|\n| MMR | abgeschwächte Lebendviren | Lebendimpfstoff |\n| Polio (Salk, IPV) | inaktivierte Viren | Totimpfstoff |\n| Tetanus, Diphtherie | Toxoid | Toxoidimpfstoff |\n| Hepatitis B | das Oberflächenantigen HBsAg | rekombinanter Untereinheiten-Impfstoff |\n| COVID-19 (Comirnaty) | mRNA | mRNA-Impfstoff |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0345",
+   "baseHash": "723bd6fa70e0",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-058",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-076",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Microbe Hunters: From Cowpox to Polio",
+    "titleDe": "Die Mikrobenjäger: Von den Kuhpocken bis zur Kinderlähmung",
+    "bodyEn": "For most of history nobody knew why milk soured, wine spoiled or a scratch turned deadly. Within a single century, from 1796 to the 1890s, a handful of physicians and chemists worked out that invisible living organisms were responsible, and then learned to fight them.\n\nPeople had fought smallpox long before they understood it. Anyone who survived the disease was protected for life, so healers tried to give it in a mild form – variolation. Its oldest documented form comes from 16th-century China: dried scabs from a mild case were ground to powder and blown up the nostrils (nasal insufflation) through a silver pipe, the right nostril for boys and the left for girls. In the Ottoman Empire the material was scratched into the skin instead, and Lady Mary Wortley Montagu, who had seen it in Constantinople, had her daughter variolated in London in 1721. Only one or two in a hundred variolated people died, against about thirty in a hundred who caught smallpox naturally – but the patient could still pass on the real disease.\n\nThe first true vaccine came before anyone understood the cause. Edward Jenner, a country doctor in Gloucestershire, knew the local belief that milkmaids who had caught cowpox never got smallpox. On 14 May 1796 he scratched material from a cowpox pustule into the arm of eight-year-old James Phipps and later exposed him to smallpox; the boy stayed healthy. It was the first vaccine of all, and it was against smallpox. Jenner called the procedure vaccination, from vacca, the Latin for cow, and it eventually led to the eradication of smallpox in 1980.\n\nThe theory arrived with Louis Pasteur. A chemist by training, born in Dole in 1822, he showed in the 1850s and 1860s that fermentation and putrefaction were caused by micro-organisms and not by \"spontaneous generation\". His practical answer was to heat wine, beer and later milk to around 60 degrees for a short time, killing most of the microbes without spoiling the taste; the process is still named after Louis Pasteur: pasteurisation. He then turned to disease. In 1881 he demonstrated a vaccine against anthrax in sheep at Pouilly-le-Fort, and on 6 July 1885 he saved the boy Joseph Meister, bitten by a rabid dog, with the first rabies vaccine. The Institut Pasteur in Paris opened in 1888.\n\nHis great rival was Robert Koch (1843–1910), a district physician from Prussia who in 1876 grew the anthrax bacillus in pure culture, and on 24 March 1882 announced the bacterium that causes tuberculosis, at that time the cause of one in seven deaths in Europe. A year later, in Egypt and India, he isolated the cholera bacillus. \"Koch's postulates\", his rules for proving that a particular microbe causes a particular disease, are still taught, and he received the Nobel Prize in 1905.\n\n| Scientist | Country | Achievement | Year |\n|---|---|---|---|\n| Edward Jenner | England | smallpox vaccination | 1796 |\n| Louis Pasteur | France | pasteurisation; anthrax and rabies vaccines | 1864–85 |\n| Robert Koch | Germany | tuberculosis and cholera pathogens | 1882–83 |\n| Emil von Behring | Germany | diphtheria antitoxin | 1890 |\n| Jonas Salk | USA | first polio vaccine | 1955 |\n\nKoch's assistant Emil von Behring (1854–1917) took the next step: rather than preventing infection, he showed in 1890 that the blood serum of animals immunised against diphtheria neutralised its toxin, and from 1892 such serum was curing children who already had the disease. Serum therapy earned him the very first Nobel Prize in Physiology or Medicine in 1901 and the nickname \"saviour of children\".\n\nThe tradition reached the twentieth century with Jonas Salk. Working in Pittsburgh with an inactivated virus, he developed a polio vaccine that was tested on 1.8 million children and declared safe and effective on 12 April 1955. Salk refused to patent it: asked who owned it, he replied, \"the people. Could you patent the sun?\"\n\nFrom Jenner's cowpox to Salk's polio shot, the line runs through Pasteur, the chemist who proved that microbes mattered.",
+    "bodyDe": "Den größten Teil der Geschichte wusste niemand, warum Milch sauer wurde, Wein verdarb oder ein Kratzer tödlich enden konnte. Innerhalb eines einzigen Jahrhunderts, von 1796 bis in die 1890er Jahre, fanden einige Ärzte und Chemiker heraus, dass unsichtbare Lebewesen dafür verantwortlich waren, und lernten dann, sie zu bekämpfen.\n\nGegen die Pocken kämpfte man schon lange, bevor man sie verstand. Wer die Krankheit überlebte, war lebenslang geschützt, also versuchten Heiler, sie in milder Form zu übertragen – die Variolation. Ihre älteste belegte Form stammt aus dem China des 16. Jahrhunderts: Getrockneter Schorf eines leichten Falls wurde zu Pulver zermahlen und durch ein silbernes Röhrchen in die Nase geblasen (nasale Insufflation), bei Jungen ins rechte, bei Mädchen ins linke Nasenloch. Im Osmanischen Reich ritzte man das Material stattdessen in die Haut, und Lady Mary Wortley Montagu, die es in Konstantinopel gesehen hatte, ließ 1721 in London ihre Tochter variolieren. Nur ein bis zwei von hundert Variolierten starben, gegenüber etwa dreißig von hundert, die sich auf natürlichem Weg ansteckten – doch der Behandelte konnte die echte Krankheit weitergeben.\n\nDer erste echte Impfstoff kam, bevor irgendjemand die Ursache verstand. Edward Jenner, ein Landarzt in Gloucestershire, kannte den Volksglauben, dass Mägde, die sich mit Kuhpocken angesteckt hatten, nie an den Pocken erkrankten. Am 14. Mai 1796 ritzte er Material aus einer Kuhpockenpustel in den Arm des achtjährigen James Phipps und setzte ihn später den Pocken aus; der Junge blieb gesund. Es war der allererste Impfstoff überhaupt, und er richtete sich gegen die Pocken. Jenner nannte das Verfahren Vakzination, nach vacca, dem lateinischen Wort für Kuh, und es führte schließlich 1980 zur Ausrottung der Pocken.\n\nDie Theorie kam mit Louis Pasteur. Als Chemiker ausgebildet, 1822 in Dole geboren, zeigte er in den 1850er und 1860er Jahren, dass Gärung und Fäulnis von Mikroorganismen verursacht werden und nicht durch „Urzeugung“. Seine praktische Antwort war, Wein, Bier und später Milch kurz auf etwa 60 Grad zu erhitzen, was die meisten Mikroben abtötet, ohne den Geschmack zu verderben; das Verfahren ist bis heute nach Louis Pasteur benannt: Pasteurisierung. Dann wandte er sich den Krankheiten zu. 1881 demonstrierte er in Pouilly-le-Fort einen Impfstoff gegen Milzbrand bei Schafen, und am 6. Juli 1885 rettete er den von einem tollwütigen Hund gebissenen Jungen Joseph Meister mit dem ersten Tollwutimpfstoff. Das Institut Pasteur in Paris öffnete 1888.\n\nSein großer Rivale war Robert Koch (1843–1910), ein Kreisphysikus aus Preußen, der 1876 den Milzbrandbazillus in Reinkultur züchtete und am 24. März 1882 das Bakterium bekannt gab, das die Tuberkulose verursacht, damals die Ursache jedes siebten Todesfalls in Europa. Ein Jahr später isolierte er in Ägypten und Indien den Cholerabazillus. Die „Kochschen Postulate“, seine Regeln für den Nachweis, dass eine bestimmte Mikrobe eine bestimmte Krankheit verursacht, werden bis heute gelehrt, und 1905 erhielt er den Nobelpreis.\n\n| Forscher | Land | Leistung | Jahr |\n|---|---|---|---|\n| Edward Jenner | England | Pockenimpfung | 1796 |\n| Louis Pasteur | Frankreich | Pasteurisierung; Impfstoffe gegen Milzbrand und Tollwut | 1864–85 |\n| Robert Koch | Deutschland | Erreger von Tuberkulose und Cholera | 1882–83 |\n| Emil von Behring | Deutschland | Diphtherie-Antitoxin | 1890 |\n| Jonas Salk | USA | erster Polio-Impfstoff | 1955 |\n\nKochs Mitarbeiter Emil von Behring (1854–1917) ging den nächsten Schritt: Statt eine Infektion zu verhindern, zeigte er 1890, dass das Blutserum von Tieren, die gegen Diphtherie immunisiert waren, das Diphtheriegift neutralisiert, und ab 1892 heilte solches Serum bereits erkrankte Kinder. Die Serumtherapie brachte ihm 1901 den allerersten Nobelpreis für Physiologie oder Medizin und den Beinamen „Retter der Kinder“ ein.\n\nDie Tradition erreichte das 20. Jahrhundert mit Jonas Salk. In Pittsburgh entwickelte er mit einem inaktivierten Virus einen Polio-Impfstoff, der an 1,8 Millionen Kindern getestet und am 12. April 1955 für sicher und wirksam erklärt wurde. Salk verzichtete auf ein Patent: Gefragt, wem der Impfstoff gehöre, antwortete er: „Den Menschen. Könnte man die Sonne patentieren?“\n\nVon Jenners Kuhpocken bis zu Salks Polio-Spritze führt die Linie über Pasteur, den Chemiker, der bewies, dass Mikroben zählen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1029",
+   "baseHash": "9dbbef6b5a57",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-046",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "I Shall Please: What Medical Words Really Say",
+    "titleDe": "Ich werde gefallen: Was medizinische Wörter wirklich sagen",
+    "bodyEn": "Medical vocabulary is a museum of Latin and Greek, and a surprising number of everyday terms turn out to be small sentences or vivid images. The best-known is the placebo, the dummy pill or sham treatment given to the control group in a clinical trial. The word placebo is the Latin future tense “I shall please”; from the early 13th century it was the name of the Vespers for the Dead, after their first words (“Placebo Domino”, “I shall please the Lord”), and it came to describe flatterers and paid mourners before eighteenth-century physicians borrowed it for medicines given more to please than to benefit the patient. Today a placebo is the benchmark against which every new drug must prove itself, and the placebo effect – real improvement produced by expectation alone – is a research field in its own right. Even the form of the dummy matters: capsules tend to work better than tablets, and the injection works better still – an inert shot impresses patients more than any pill, as a 2010 review by Rosenberg and Kosslyn summed up.\n\nIts mirror image is the nocebo, Latin for “I shall harm”, coined by Walter Kennedy in 1961. A nocebo response occurs when a harmless treatment produces side effects simply because the patient expects them; warnings on package inserts, for example, measurably increase reports of headache and nausea.\n\nTwo drug classes wear their purpose in their Greek names. An antibiotic is literally “against life” (*anti* + *bios*): a substance, originally produced by microorganisms, that kills or inhibits bacteria. Selman Waksman, discoverer of streptomycin, gave the term its modern meaning in 1942, fourteen years after Alexander Fleming noticed penicillin. An analgesic is a painkiller, from *an-* (“without”) and *algos* (“pain”); aspirin (named by Bayer in 1899), paracetamol, ibuprofen and the opioids all belong to the class, differing enormously in strength and risk; since 1986 the WHO’s “analgesic ladder” has guided doctors from simple painkillers up to strong opioids. The same root gives us “anaesthesia”, meaning “without sensation”.\n\nGreek also names what doctors do and what they study. Rhinoplasty joins rhis, rhinos, the nose, with plassein, to form or mould; doctors also call it a nasal correction, and in plain English it is a nose job, whether it is done for looks or to restore the shape of a nose after an injury, and its history reaches back to ancient India, where noses were rebuilt with skin from the forehead around 400 BC. Gelotology, from gelos, laughter, is the science of the physical and psychological effects of laughing; the psychiatrist William F. Fry coined the term and began studying laughter at Stanford University in 1964. Its findings – laughter eases muscle tension and pain, though many claims remain unconfirmed – inspire the clinic clowns who visit children's wards.\n\nDiseases were named before their causes were known, which is why some names are simply wrong. Malaria is Italian for “bad air” (*mal’aria*), because for centuries the fevers of the Roman Campagna and the Po marshes were blamed on the noxious vapours rising from swamps. Only in 1880 did Alphonse Laveran see the parasite in the blood, and in 1897 Ronald Ross showed that the Anopheles mosquito transmits it. The swamp theory was wrong about the air but right about the place: drain the marsh and the mosquitoes – and the fever – disappear.\n\n| Term | Language | Literal meaning | Modern sense |\n|---|---|---|---|\n| Placebo | Latin | I shall please | inactive control treatment |\n| Nocebo | Latin | I shall harm | harmful effect of expectation |\n| Antibiotic | Greek | against life | drug against bacteria |\n| Analgesic | Greek | without pain | painkiller |\n| Malaria | Italian | bad air | mosquito-borne parasitic disease |\n| Rhinoplasty | Greek | nose moulding | surgical correction of the nose |\n| Gelotology | Greek | study of laughter | research into the effects of laughing |",
+    "bodyDe": "Das medizinische Vokabular ist ein Museum des Lateinischen und Griechischen, und erstaunlich viele Alltagsbegriffe entpuppen sich als kleine Sätze oder anschauliche Bilder. Der bekannteste ist das Placebo, die Scheinpille oder Scheinbehandlung, die in einer klinischen Studie der Kontrollgruppe gegeben wird. Das Wort Placebo ist lateinisches Futur und heißt „Ich werde gefallen“; seit dem frühen 13. Jahrhundert war es nach deren Anfangsworten der Name der Totenvesper („Placebo Domino“, „Ich werde dem Herrn gefallen“) und bezeichnete später Schmeichler und bezahlte Klageweiber, bevor Ärzte des 18. Jahrhunderts es für Arzneien entlehnten, die mehr gegeben werden, um dem Patienten zu gefallen, als ihm zu nützen. Heute ist ein Placebo der Maßstab, an dem sich jedes neue Medikament messen muss, und der Placebo-Effekt – eine echte Besserung allein durch Erwartung – ist ein eigenes Forschungsfeld. Sogar die Form der Attrappe zählt: Kapseln wirken meist besser als Tabletten, und die Injektion wirkt noch stärker – eine wirkstofflose Spritze beeindruckt Patienten mehr als jede Pille, wie eine Übersicht von Rosenberg und Kosslyn 2010 zusammenfasste.\n\nSein Spiegelbild ist das Nocebo, lateinisch für „Ich werde schaden“, geprägt von Walter Kennedy im Jahr 1961. Eine Nocebo-Reaktion tritt auf, wenn eine harmlose Behandlung Nebenwirkungen hervorruft, nur weil der Patient sie erwartet; Warnhinweise auf Beipackzetteln etwa erhöhen messbar die Meldungen von Kopfschmerzen und Übelkeit.\n\nZwei Wirkstoffklassen tragen ihren Zweck in ihren griechischen Namen. Ein Antibiotikum ist wörtlich „gegen das Leben“ (*anti* + *bios*): eine ursprünglich von Mikroorganismen erzeugte Substanz, die Bakterien abtötet oder hemmt. Selman Waksman, der Entdecker des Streptomycins, gab dem Begriff 1942 seine moderne Bedeutung, vierzehn Jahre nachdem Alexander Fleming das Penicillin bemerkt hatte. Ein Analgetikum ist ein Schmerzmittel, von *an-* („ohne“) und *algos* („Schmerz“); Aspirin (1899 von Bayer so benannt), Paracetamol, Ibuprofen und die Opioide gehören alle zu dieser Klasse und unterscheiden sich enorm in Stärke und Risiko; seit 1986 leitet das Stufenschema der WHO Ärzte von einfachen Schmerzmitteln bis zu starken Opioiden an. Dieselbe Wurzel liefert die „Anästhesie“, die „ohne Empfindung“ bedeutet.\n\nDas Griechische benennt auch, was Ärzte tun und erforschen. Die Rhinoplastik verbindet rhis, rhinos, die Nase, mit plassein, formen; Mediziner sprechen auch von Nasenplastik oder Nasenkorrektur, ob der Eingriff nun dem Aussehen dient oder die Form einer Nase nach einer Verletzung wiederherstellt, und seine Geschichte reicht bis ins alte Indien zurück, wo man um 400 v. Chr. Nasen mit Haut von der Stirn wiederaufbaute. Die Gelotologie, von gelos, das Lachen, ist die Wissenschaft von den körperlichen und psychischen Auswirkungen des Lachens; der Psychiater William F. Fry prägte den Begriff und begann 1964 an der Stanford University, das Lachen zu erforschen. Ihre Erkenntnisse – Lachen löst Muskelverspannungen und lindert Schmerzen, auch wenn vieles unbestätigt ist – inspirieren die Klinikclowns, die Kinderstationen besuchen.\n\nKrankheiten wurden benannt, bevor ihre Ursachen bekannt waren, weshalb manche Namen schlicht falsch sind. Malaria ist italienisch für „schlechte Luft“ (*mal’aria*), weil man die Fieber der römischen Campagna und der Po-Sümpfe jahrhundertelang den giftigen Dünsten zuschrieb, die aus den Sümpfen aufstiegen. Erst 1880 sah Alphonse Laveran den Parasiten im Blut, und 1897 zeigte Ronald Ross, dass die Anopheles-Mücke ihn überträgt. Die Sumpftheorie irrte bei der Luft, hatte aber beim Ort recht: Legt man den Sumpf trocken, verschwinden die Mücken – und mit ihnen das Fieber.\n\n| Begriff | Sprache | Wörtliche Bedeutung | Heutiger Sinn |\n|---|---|---|---|\n| Placebo | Latein | Ich werde gefallen | wirkstofffreie Kontrollbehandlung |\n| Nocebo | Latein | Ich werde schaden | schädliche Wirkung der Erwartung |\n| Antibiotikum | Griechisch | gegen das Leben | Mittel gegen Bakterien |\n| Analgetikum | Griechisch | ohne Schmerz | Schmerzmittel |\n| Malaria | Italienisch | schlechte Luft | von Mücken übertragene Parasitenkrankheit |\n| Rhinoplastik | Griechisch | Nasenformung | operative Korrektur der Nase |\n| Gelotologie | Griechisch | Lehre vom Lachen | Erforschung der Wirkungen des Lachens |",
+    "notesEn": "Rhinoplasty: “nose job”, “nose correction” and “nose reshaping” are also accepted.",
+    "notesDe": "Rhinoplastik: „Nasenplastik“ und „Nasen-OP“ gelten ebenfalls."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1785",
+   "baseHash": "efb789ca37be",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-112",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [
+    "f08925"
+   ],
+   "article": {
+    "titleEn": "Sleepwalking, Jamais Vu and Other Phenomena with Learned Names",
+    "titleDe": "Schlafwandeln, Jamais-vu und andere Phänomene mit gelehrten Namen",
+    "bodyEn": "Somnambulism – from the Latin somnus, \"sleep\", and ambulare, \"to walk\" – is the medical term for sleepwalking. It belongs to the parasomnias, disorders that intrude on sleep without waking the sleeper, and it arises not from dreams but from the deepest stage of non-REM sleep, usually in the first third of the night. The sleepwalker sits up, wanders about, may open doors or even cook, with open eyes and a blank expression, and remembers nothing the next morning. Up to one child in six sleepwalks at least once; most grow out of it, and only two to four per cent of adults are affected. Lack of sleep, fever and stress make episodes more likely. The condition even has its own opera: Bellini's „La sonnambula“, first performed in Milan on 6 March 1831. Contrary to legend, waking a sleepwalker is not dangerous, though the person will be confused; gently steering them back to bed is the usual advice.\n\nMedicine has a Latin or Greek label for many other everyday phenomena, most of them belonging to the night – and the study of memory has borrowed a few French ones.\n\nBruxism (from the Greek brychein, \"to gnash\"; first recorded in English in 1932) is teeth grinding, most often during sleep. Many sufferers only learn of it from a partner or from a dentist who spots worn enamel; a plastic splint worn at night protects the teeth.\n\nSingultus, the Latin word for a sob or gasp, is the clinical name for hiccups: a sudden contraction of the diaphragm followed by the snapping shut of the vocal cords that produces the sound. Most bouts end within minutes; the longest recorded case, that of the American farmer Charles Osborne, lasted 68 years, from 1922 to 1990.\n\nEnuresis nocturna – from the Greek enourein, \"to urinate in\" – is bedwetting during sleep beyond the age at which bladder control is expected, usually five. About one in ten seven-year-olds is affected, boys more often than girls, and it runs in families. The bedwetting alarm, which wakes the child at the first drops, was developed in the 1930s by the psychologists Orval and Willie Mowrer.\n\nSleep laboratories know one more nocturnal phenomenon, and it has a plain English name: the first-night effect. People sleep worse during their first night in an unfamiliar place – they take longer to fall asleep, wake more often and get less deep sleep. Harold Agnew, Wilse Webb and Robert Williams described it in an EEG study in 1966, and it is so reliable that researchers often discard the first night's recording. In 2016 a team at Brown University found the likely reason: in a new environment one hemisphere of the brain stays more alert than the other, a night watchman that reacts faster to unusual sounds.\n\nOne phenomenon belongs to a summer afternoon rather than the night. Sphenopalatine ganglioneuralgia is the tongue-twisting medical name for brain freeze, the short, stabbing headache behind the forehead that follows a mouthful of ice cream or an iced drink gulped too fast. Cold on the palate makes the blood vessels there constrict and then rapidly widen again, and the pain is felt in the forehead; in 2012 researchers reported a study that watched exactly this happen in volunteers sipping iced water through a straw. Pressing the tongue against the roof of the mouth usually ends it within a minute.\n\nTwo phenomena of memory carry French names. Déjà vu, \"already seen\", is the eerie feeling of having lived through the present moment before; the term was coined by the French philosopher Émile Boirac in 1876, and about two thirds of people report it at least once. Its opposite is jamais vu, \"never seen\": something thoroughly familiar – a common word, a well-known face, one's own street – suddenly seems completely strange. Repeating a word over and over until it turns into a meaningless sound produces a mild jamais vu in almost anyone. Both experiences are usually harmless, but frequent episodes can be an aura of temporal-lobe epilepsy.\n\nThe last learned name describes not a lapse but a surplus. Synesthesia – from the Greek syn, \"together\", and aisthesis, \"sensation\" – is the phenomenon in which stimulating one sense involuntarily triggers experiences in another: a synesthete may \"see\" sounds as colours, or perceive every letter and number in its own fixed hue. The first medical account came from the German physician Georg Tobias Ludwig Sachs, an albino who in 1812 described his own coloured vowels, numbers and days of the week. It is not an illness – the associations are stable for life and often an asset to artists and musicians.\n\n| Medical term | Everyday phenomenon |\n|---|---|\n| Somnambulism | sleepwalking |\n| Bruxism | teeth grinding |\n| Singultus | hiccups |\n| Enuresis nocturna | bedwetting |\n| First-night effect | poor sleep in a new place |\n| Sphenopalatine ganglioneuralgia | brain freeze |\n| Jamais vu | the familiar seeming strange |\n| Synesthesia | one sense triggering another |",
+    "bodyDe": "Somnambulismus – vom lateinischen somnus, „Schlaf“, und ambulare, „gehen“ – ist der medizinische Fachbegriff für Schlafwandeln. Es gehört zu den Parasomnien, Störungen, die in den Schlaf eindringen, ohne den Schlafenden zu wecken, und entsteht nicht aus Träumen, sondern aus der tiefsten Phase des Non-REM-Schlafs, meist im ersten Drittel der Nacht. Der Schlafwandler setzt sich auf, geht umher, öffnet vielleicht Türen oder kocht sogar, mit offenen Augen und leerem Blick, und erinnert sich am nächsten Morgen an nichts. Bis zu jedes sechste Kind schlafwandelt mindestens einmal; die meisten wachsen heraus, und nur zwei bis vier Prozent der Erwachsenen sind betroffen. Schlafmangel, Fieber und Stress machen Episoden wahrscheinlicher. Das Phänomen hat sogar eine eigene Oper: Bellinis „La sonnambula“, uraufgeführt am 6. März 1831 in Mailand. Anders als die Legende behauptet, ist es nicht gefährlich, einen Schlafwandler zu wecken, auch wenn die Person verwirrt sein wird; der übliche Rat lautet, sie sanft zurück ins Bett zu führen.\n\nDie Medizin hat für viele andere Alltagsphänomene, die meisten davon nächtliche, eine lateinische oder griechische Bezeichnung – und die Gedächtnisforschung hat sich einige französische geborgt.\n\nBruxismus (vom griechischen brychein, „knirschen“; im Englischen erstmals 1932 belegt) ist Zähneknirschen, meist im Schlaf. Viele Betroffene erfahren davon erst vom Partner oder vom Zahnarzt, der abgeschliffenen Zahnschmelz bemerkt; eine nachts getragene Kunststoffschiene schützt die Zähne.\n\nSingultus, das lateinische Wort für Schluchzen oder Keuchen, ist der klinische Name für Schluckauf: eine plötzliche Kontraktion des Zwerchfells, gefolgt vom Zuschnappen der Stimmlippen, das den Laut erzeugt. Die meisten Anfälle enden binnen Minuten; der längste dokumentierte Fall, der des amerikanischen Farmers Charles Osborne, dauerte 68 Jahre, von 1922 bis 1990.\n\nEnuresis nocturna – vom griechischen enourein, „hineinurinieren“ – ist Bettnässen im Schlaf jenseits des Alters, in dem Blasenkontrolle erwartet wird, meist fünf Jahre. Etwa jedes zehnte siebenjährige Kind ist betroffen, Jungen häufiger als Mädchen, und es liegt in der Familie. Die Klingelhose, die das Kind bei den ersten Tropfen weckt, entwickelten in den 1930er Jahren die Psychologen Orval und Willie Mowrer.\n\nSchlaflabore kennen noch ein nächtliches Phänomen, und es trägt einen schlichten Namen: den Erste-Nacht-Effekt. In der ersten Nacht an einem ungewohnten Ort schläft man schlechter – man braucht länger zum Einschlafen, wacht öfter auf und hat weniger Tiefschlaf. Harold Agnew, Wilse Webb und Robert Williams beschrieben ihn 1966 in einer EEG-Studie, und er ist so verlässlich, dass Forscher die Aufzeichnung der ersten Nacht oft verwerfen. 2016 fand ein Team der Brown University den wahrscheinlichen Grund: In einer neuen Umgebung bleibt eine Hirnhälfte wachsamer als die andere, ein Nachtwächter, der schneller auf ungewöhnliche Geräusche reagiert.\n\nEin Phänomen gehört eher zum Sommernachmittag als zur Nacht. Ganglioneuralgia sphenopalatinum ist der zungenbrecherische Fachbegriff für den Hirnfrost, den kurzen, stechenden Kopfschmerz hinter der Stirn, der auf einen Bissen Speiseeis oder ein zu hastig getrunkenes eiskaltes Getränk folgt. Kälte am Gaumen lässt die Blutgefäße dort sich zusammenziehen und gleich darauf rasch wieder weiten, und der Schmerz wird in der Stirn empfunden; 2012 berichteten Forscher von einer Studie, die genau das bei Freiwilligen beobachtete, die Eiswasser durch einen Strohhalm tranken. Drückt man die Zunge gegen den Gaumen, ist er meist binnen einer Minute vorbei.\n\nZwei Phänomene des Gedächtnisses tragen französische Namen. Déjà-vu, „schon gesehen“, ist das unheimliche Gefühl, den gegenwärtigen Augenblick schon einmal erlebt zu haben; den Begriff prägte der französische Philosoph Émile Boirac 1876, und etwa zwei Drittel aller Menschen berichten, es mindestens einmal erlebt zu haben. Sein Gegenteil ist das Jamais-vu, „nie gesehen“: Etwas durch und durch Vertrautes – ein gängiges Wort, ein bekanntes Gesicht, die eigene Straße – erscheint plötzlich völlig fremd. Wer ein Wort so oft wiederholt, bis es zum sinnlosen Klang wird, erzeugt bei fast jedem ein leichtes Jamais-vu. Beide Erlebnisse sind meist harmlos, häufige Episoden können aber die Aura einer Schläfenlappenepilepsie sein.\n\nDer letzte gelehrte Name beschreibt keinen Aussetzer, sondern ein Mehr. Synästhesie – vom griechischen syn, „zusammen“, und aisthesis, „Empfindung“ – ist das Phänomen, bei dem die Reizung eines Sinnes unwillkürlich Wahrnehmungen in einem anderen auslöst: Ein Synästhet „sieht“ etwa Töne als Farben oder nimmt jeden Buchstaben und jede Zahl in einem festen Farbton wahr. Den ersten medizinischen Bericht lieferte der deutsche Arzt Georg Tobias Ludwig Sachs, ein Albino, der 1812 seine eigenen farbigen Vokale, Zahlen und Wochentage beschrieb. Eine Krankheit ist sie nicht – die Verknüpfungen bleiben ein Leben lang gleich und sind für Künstler und Musiker oft ein Gewinn.\n\n| Fachbegriff | Alltagsphänomen |\n|---|---|\n| Somnambulismus | Schlafwandeln |\n| Bruxismus | Zähneknirschen |\n| Singultus | Schluckauf |\n| Enuresis nocturna | Bettnässen |\n| Erste-Nacht-Effekt | schlechter Schlaf am neuen Ort |\n| Ganglioneuralgia sphenopalatinum | Hirnfrost |\n| Jamais-vu | Vertrautes erscheint fremd |\n| Synästhesie | ein Sinn löst einen anderen aus |",
+    "notesEn": "For sphenopalatine ganglioneuralgia, „ice-cream headache“ or „cold-stimulus headache“ is also accepted.",
+    "notesDe": "Für Ganglioneuralgia sphenopalatinum gelten auch „Kältekopfschmerz“ oder „Eiscreme-Kopfschmerz“."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2097",
+   "baseHash": "adf3f47f1d16",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-143",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Pioneers of Hygiene and Germ Theory",
+    "titleDe": "Pioniere der Hygiene und der Keimtheorie",
+    "bodyEn": "Until the middle of the nineteenth century, doctors did not wash their hands, surgeons operated in coats stiff with old blood, and the idea that invisible living things caused disease was a fringe theory. Within fifty years a handful of men changed all that.\n\nIgnaz Semmelweis, a Hungarian obstetrician at the Vienna General Hospital, noticed in 1847 that women in the maternity clinic staffed by doctors and medical students died of childbed fever several times as often as those in the clinic run by midwives. The doctors came straight from the dissecting room. After a colleague died of a similar fever following a scalpel cut during an autopsy, Semmelweis concluded that \"cadaverous particles\" were carried on the hands of the staff, and in May 1847 he ordered everyone to wash their hands in chlorinated lime before examining patients. Mortality in the doctors' clinic fell from 18 per cent in April 1847 to below 2 per cent within months. His findings, first made known through colleagues in 1847 and 1848 and set out in full in his own book of 1861, were ridiculed by most of the profession; he died in a Viennese asylum in 1865, and only later was he honoured as the \"saviour of mothers\".\n\nThe English physician John Snow provided the epidemiological proof that disease travels through water. During the cholera outbreak in Soho in 1854 he mapped the deaths and showed that they clustered around the public pump in Broad Street; the parish had the pump handle removed, and the outbreak, already waning, came to an end. Snow is regarded as the founder of modern epidemiology.\n\nThe French chemist Louis Pasteur showed in 1861 that microbes do not arise spontaneously in sterilised broth but come from the air, discrediting the theory of spontaneous generation. He developed pasteurisation for wine and milk, vaccines against anthrax and chicken cholera, and in 1885 saved the boy Joseph Meister with the first rabies vaccine. His laboratory also gave hospitals their most trusted machine: in 1879 his collaborator Charles Chamberland invented the autoclave, a pressure vessel that heats steam well above the boiling point of water, typically to 121 °C. Medical instruments and laboratory waste are autoclaved for sterilization – the steam kills bacteria and even their hardy spores, which boiling cannot.\n\nInspired by Pasteur, the British surgeon Joseph Lister began in 1867 to treat wounds and instruments with carbolic acid (phenol) and later also to spray it in the operating theatre. Post-operative deaths from sepsis on his Glasgow wards fell dramatically, and antiseptic surgery spread across Europe.\n\nRobert Koch, a country doctor from Clausthal, put the germ theory on a firm scientific footing. He identified the anthrax bacillus in 1876, the tuberculosis bacillus in 1882 – announced on 24 March, now World Tuberculosis Day – and the cholera vibrio in 1883, and formulated the \"Koch's postulates\" that link a specific microbe to a specific disease. He received the Nobel Prize in Physiology or Medicine in 1905.\n\n| Pioneer | Contribution | Year |\n|---|---|---|\n| Ignaz Semmelweis | hand disinfection | 1847 |\n| John Snow | cholera and the Broad Street pump | 1854 |\n| Louis Pasteur | refutation of spontaneous generation | 1861 |\n| Joseph Lister | antiseptic surgery | 1867 |\n| Charles Chamberland | autoclave | 1879 |\n| Robert Koch | tuberculosis bacillus | 1882 |",
+    "bodyDe": "Bis zur Mitte des neunzehnten Jahrhunderts wuschen sich Ärzte nicht die Hände, Chirurgen operierten in Kitteln, die von altem Blut steif waren, und die Vorstellung, dass unsichtbare Lebewesen Krankheiten verursachen, war eine Randtheorie. Innerhalb von fünfzig Jahren änderte eine Handvoll Männer all das.\n\nIgnaz Semmelweis, ein ungarischer Geburtshelfer am Wiener Allgemeinen Krankenhaus, bemerkte 1847, dass Frauen in der von Ärzten und Medizinstudenten betreuten Geburtsklinik um ein Vielfaches häufiger am Kindbettfieber starben als jene in der von Hebammen geführten Klinik. Die Ärzte kamen direkt aus dem Sezierraum. Nachdem ein Kollege nach einem Skalpellschnitt bei einer Obduktion an einem ähnlichen Fieber gestorben war, schloss Semmelweis, dass „Leichenteilchen“ an den Händen des Personals übertragen würden, und im Mai 1847 ordnete er an, dass sich alle vor jeder Untersuchung die Hände in Chlorkalklösung zu waschen hätten. Die Sterblichkeit in der Ärzteklinik sank von 18 Prozent im April 1847 binnen Monaten auf unter 2 Prozent. Seine Erkenntnisse, 1847 und 1848 zunächst durch Kollegen bekannt gemacht und 1861 in seinem eigenen Buch vollständig dargelegt, wurden von den meisten Fachkollegen verspottet; er starb 1865 in einer Wiener Irrenanstalt, und erst später ehrte man ihn als „Retter der Mütter“.\n\nDer englische Arzt John Snow lieferte den epidemiologischen Beweis, dass Krankheiten über das Wasser wandern. Während des Choleraausbruchs in Soho 1854 kartierte er die Todesfälle und zeigte, dass sie sich um die öffentliche Pumpe in der Broad Street häuften; die Gemeinde ließ den Schwengel der Pumpe entfernen, und der bereits abflauende Ausbruch kam zum Erliegen. Snow gilt als Begründer der modernen Epidemiologie.\n\nDer französische Chemiker Louis Pasteur zeigte 1861, dass Mikroben in sterilisierter Brühe nicht spontan entstehen, sondern aus der Luft stammen, und entzog damit der Urzeugungslehre den Boden. Er entwickelte die Pasteurisierung für Wein und Milch, Impfstoffe gegen Milzbrand und Hühnercholera und rettete 1885 mit dem ersten Tollwutimpfstoff den Jungen Joseph Meister. Sein Labor schenkte den Krankenhäusern auch ihre verlässlichste Maschine: 1879 erfand sein Mitarbeiter Charles Chamberland den Autoklaven, einen Druckbehälter, der Dampf weit über den Siedepunkt des Wassers erhitzt, meist auf 121 °C. Medizinische Instrumente und Laborabfälle werden zur Sterilisation autoklaviert – der Dampf tötet Bakterien und sogar ihre widerstandsfähigen Sporen, was bloßes Kochen nicht schafft.\n\nVon Pasteur inspiriert, begann der britische Chirurg Joseph Lister 1867, Wunden und Instrumente mit Karbolsäure (Phenol) zu behandeln und sie später auch im Operationssaal zu versprühen. Die postoperativen Todesfälle durch Sepsis auf seinen Glasgower Stationen gingen dramatisch zurück, und die antiseptische Chirurgie verbreitete sich über ganz Europa.\n\nRobert Koch, ein Landarzt aus Clausthal, stellte die Keimtheorie auf ein festes wissenschaftliches Fundament. Er identifizierte 1876 den Milzbranderreger, 1882 den Tuberkulosebazillus – verkündet am 24. März, heute Welttuberkulosetag – und 1883 den Choleraerreger und formulierte die „Kochschen Postulate“, die eine bestimmte Mikrobe mit einer bestimmten Krankheit verknüpfen. 1905 erhielt er den Nobelpreis für Physiologie oder Medizin.\n\n| Pionier | Beitrag | Jahr |\n|---|---|---|\n| Ignaz Semmelweis | Händedesinfektion | 1847 |\n| John Snow | Cholera und die Pumpe in der Broad Street | 1854 |\n| Louis Pasteur | Widerlegung der Urzeugung | 1861 |\n| Joseph Lister | antiseptische Chirurgie | 1867 |\n| Charles Chamberland | Autoklav | 1879 |\n| Robert Koch | Tuberkulosebazillus | 1882 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-013",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "What is a malignant tumour that arises from epithelial cells, the cells lining the body's inner and outer surfaces, called?",
+      "de": "Wie heißt ein bösartiger Tumor, der aus Epithelzellen entsteht, den Zellen, die die inneren und äußeren Oberflächen des Körpers auskleiden?",
+      "answerEn": "carcinoma",
+      "answerDe": "Karzinom",
+      "timeline": {
+       "kind": "event",
+       "start": "-0400",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Hippocrates calls malignant tumours karkinos, „crab“, the root of the word carcinoma",
+       "labelDe": "Hippokrates nennt bösartige Tumoren karkinos, „Krebs“ – die Wurzel des Wortes Karzinom"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Carcinoma",
+       "title": "Carcinoma – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is a benign tumour made of fat tissue, the most common non-cancerous soft-tissue tumour, called?",
+      "de": "Wie heißt ein gutartiger Tumor aus Fettgewebe, der häufigste nicht krebsartige Weichteiltumor?",
+      "answerEn": "lipoma",
+      "answerDe": "Lipom",
+      "timeline": {
+       "kind": "creation",
+       "start": "1709",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The term „lipoma“ is first used for benign fatty tumours",
+       "labelDe": "Der Begriff „Lipom“ wird erstmals für gutartige Fettgeschwulste verwendet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Lipoma",
+       "title": "Lipoma – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is a secondary tumour called that forms when cancer cells spread from the original tumour to a distant part of the body?",
+      "de": "Wie heißt ein Tochtergeschwulst, der entsteht, wenn sich Krebszellen vom ursprünglichen Tumor in einen entfernten Teil des Körpers ausbreiten?",
+      "answerEn": "metastasis",
+      "answerDe": "Metastase",
+      "timeline": {
+       "kind": "event",
+       "start": "1889",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Stephen Paget proposes the „seed and soil“ theory of where tumours spread",
+       "labelDe": "Stephen Paget stellt die „Seed and Soil“-Theorie darüber auf, wohin Tumoren streuen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Metastasis",
+       "title": "Metastasis – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which branch of medicine, which deals with tumours, takes its name from the Greek word onkos, „swelling“?",
+      "de": "Welches Fachgebiet der Medizin, das sich mit Tumoren befasst, ist nach dem griechischen Wort onkos, „Schwellung“, benannt?",
+      "answerEn": "oncology",
+      "answerDe": "Onkologie",
+      "timeline": {
+       "kind": "era",
+       "start": "0101",
+       "end": "0200",
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Galen uses the Greek word oncos, „swelling“, for all tumours (2nd century AD)",
+       "labelDe": "Galen verwendet das griechische Wort oncos, „Schwellung“, für alle Tumoren (2. Jahrhundert n. Chr.)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/History_of_cancer",
+       "title": "History of cancer – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Crab to Monster: What Tumours Are Called",
+    "titleDe": "Vom Krebs zum Monster: Wie Tumoren heißen",
+    "bodyEn": "Doctors have been naming lumps for some 2,400 years, and the names still carry their history. The Greek physician Hippocrates (c. 460–c. 370 BC) called certain malignant growths karkinos, \"crab\", because the swollen veins spreading out from a cut tumour reminded him of a crab's legs. From his word comes carcinoma, the name for a malignant tumour that arises from epithelial cells – the cells lining the skin and the inner and outer surfaces of the organs. Carcinomas are by far the most common cancers: most breast, lung, colon and prostate cancers are carcinomas. The Roman writer Celsus translated karkinos into Latin as cancer, which also means crab.\n\nIn the 2nd century AD Galen used another Greek word, onkos, \"swelling\", for every kind of tumour and kept karkinos for the malignant ones. Onkos survives in oncology, the branch of medicine that deals with tumours, their diagnosis and their treatment, and in the oncologist who practises it.\n\nThe suffix -oma, \"growth\", turns a tissue into a tumour name. A lipoma (from lipos, \"fat\") is a benign tumour made of fat tissue: a soft, movable, painless lump under the skin, and the most common non-cancerous soft-tissue tumour. The word was first used for such growths in 1709. A sarcoma (from sarx, \"flesh\") is a malignant tumour of connective tissue – bone, cartilage, muscle or fat.\n\nThe strangest name belongs to the teratoma, from the Greek teras, \"monster\". A teratoma is a tumour made up of several types of tissue, which can contain hair, teeth, muscle or even bone. It arises from germ cells that can still form any tissue, so it usually grows in an ovary, a testicle or at the base of the tailbone; most teratomas of the ovary are benign dermoid cysts. The first well-documented case, an ovarian cyst full of hair, was recorded by the German surgeon Johannes Scultetus and published in 1659.\n\nWhat makes a malignant tumour dangerous is above all its ability to travel. Cancer cells break away, ride the blood or the lymph and settle elsewhere, where they grow into a metastasis – Greek for \"change of place\" – a secondary tumour at a distance from the original one. In 1889 the English surgeon Stephen Paget noticed that breast cancers do not spread at random but favour certain organs, as a seed needs a suitable soil. His \"seed and soil\" theory still shapes cancer research, and most cancer deaths are caused by metastases rather than by the first tumour.\n\n| Name | Greek root | What it is |\n|---|---|---|\n| carcinoma | karkinos, crab | malignant tumour of epithelial cells |\n| sarcoma | sarx, flesh | malignant tumour of connective tissue |\n| lipoma | lipos, fat | benign tumour of fat tissue |\n| teratoma | teras, monster | tumour of several tissue types |\n| metastasis | change of place | secondary tumour far from the first |",
+    "bodyDe": "Seit rund 2400 Jahren geben Ärzte Geschwülsten Namen, und die Namen tragen ihre Geschichte bis heute mit sich. Der griechische Arzt Hippokrates (um 460–um 370 v. Chr.) nannte bestimmte bösartige Wucherungen karkinos, „Krebs“ (das Tier), weil ihn die geschwollenen Adern, die von einem aufgeschnittenen Tumor nach allen Seiten abgehen, an die Beine eines Krebses erinnerten. Von seinem Wort stammt das Karzinom, der Name für einen bösartigen Tumor, der aus Epithelzellen entsteht – den Zellen, die die Haut sowie die inneren und äußeren Oberflächen der Organe auskleiden. Karzinome sind die mit Abstand häufigsten Krebsarten: Brust-, Lungen-, Darm- und Prostatakrebs sind meist Karzinome. Der römische Autor Celsus übersetzte karkinos ins Lateinische als cancer, was ebenfalls Krebs bedeutet.\n\nIm 2. Jahrhundert n. Chr. verwendete Galen ein anderes griechisches Wort, onkos, „Schwellung“, für jede Art von Tumor und behielt karkinos den bösartigen vor. Onkos lebt in der Onkologie fort, dem Fachgebiet der Medizin, das sich mit Tumoren, ihrer Diagnose und ihrer Behandlung befasst, und im Onkologen, der es ausübt.\n\nDie Endung -om, „Geschwulst“, macht aus einem Gewebe einen Tumornamen. Ein Lipom (von lipos, „Fett“) ist ein gutartiger Tumor aus Fettgewebe: ein weicher, verschiebbarer, schmerzloser Knoten unter der Haut und der häufigste nicht krebsartige Weichteiltumor. Das Wort wurde 1709 erstmals für solche Geschwülste verwendet. Ein Sarkom (von sarx, „Fleisch“) ist ein bösartiger Tumor des Bindegewebes – von Knochen, Knorpel, Muskel oder Fett.\n\nDen seltsamsten Namen trägt das Teratom, vom griechischen teras, „Ungeheuer“. Ein Teratom ist ein Tumor aus mehreren Gewebearten, der Haare, Zähne, Muskeln oder sogar Knochen enthalten kann. Es entsteht aus Keimzellen, die noch jedes Gewebe bilden können, und wächst daher meist im Eierstock, im Hoden oder am unteren Ende des Steißbeins; die meisten Teratome des Eierstocks sind gutartige Dermoidzysten. Der erste gut dokumentierte Fall, eine mit Haaren gefüllte Eierstockzyste, wurde von dem deutschen Chirurgen Johannes Scultetus festgehalten und 1659 veröffentlicht.\n\nGefährlich macht einen bösartigen Tumor vor allem seine Fähigkeit zu wandern. Krebszellen lösen sich, reisen mit Blut oder Lymphe und siedeln sich anderswo an, wo sie zu einer Metastase heranwachsen – griechisch für „Ortswechsel“ –, einer Tochtergeschwulst fern vom ursprünglichen Tumor. 1889 bemerkte der englische Chirurg Stephen Paget, dass Brustkrebs nicht zufällig streut, sondern bestimmte Organe bevorzugt, so wie ein Samen einen passenden Boden braucht. Seine „Seed and Soil“-Theorie prägt die Krebsforschung bis heute, und die meisten Krebstodesfälle gehen auf Metastasen zurück, nicht auf den ersten Tumor.\n\n| Name | Griechische Wurzel | Was es ist |\n|---|---|---|\n| Karzinom | karkinos, Krebs | bösartiger Tumor aus Epithelzellen |\n| Sarkom | sarx, Fleisch | bösartiger Tumor des Bindegewebes |\n| Lipom | lipos, Fett | gutartiger Tumor aus Fettgewebe |\n| Teratom | teras, Ungeheuer | Tumor aus mehreren Gewebearten |\n| Metastase | Ortswechsel | Tochtergeschwulst fern vom ersten Tumor |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-034",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the abbreviation for the dose of a substance that kills half of a group of test animals, introduced by J. W. Trevan in 1927?",
+      "de": "Wie lautet die Abkürzung für die Dosis eines Stoffes, die die Hälfte einer Gruppe von Versuchstieren tötet, eingeführt von J. W. Trevan im Jahr 1927?",
+      "answerEn": "LD50",
+      "answerDe": "LD50",
+      "timeline": {
+       "kind": "creation",
+       "start": "1927",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "J. W. Trevan introduces the LD50 test of a substance's toxicity",
+       "labelDe": "J. W. Trevan führt den LD50-Test für die Giftigkeit eines Stoffes ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Median_lethal_dose",
+       "title": "Median lethal dose – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the practice of protecting oneself against a poison by taking small, non-lethal doses of it over time called?",
+      "de": "Wie heißt die Praxis, sich gegen ein Gift zu schützen, indem man über längere Zeit kleine, nicht tödliche Mengen davon einnimmt?",
+      "answerEn": "mithridatism",
+      "answerDe": "Mithridatisation",
+      "timeline": {
+       "kind": "reign",
+       "start": "-0120",
+       "end": "-0063",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Reign of Mithridates VI of Pontus, who took small doses of poison to become immune",
+       "labelDe": "Herrschaft Mithridates' VI. von Pontos, der kleine Giftmengen nahm, um immun zu werden"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mithridatism",
+       "title": "Mithridatism – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Menorca-born chemist, author of the 1813 Traité des poisons, is regarded as the father of modern toxicology?",
+      "de": "Welcher auf Menorca geborene Chemiker, Verfasser des Traité des poisons von 1813, gilt als Vater der modernen Toxikologie?",
+      "answerEn": "Mathieu Orfila",
+      "answerDe": "Mathieu Orfila",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1787-04-24",
+       "end": "1853-03-12",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of Mathieu Orfila, the father of modern toxicology",
+       "labelDe": "Leben von Mathieu Orfila, dem Vater der modernen Toxikologie"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mathieu_Orfila",
+       "title": "Mathieu Orfila – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which drug is given as the antidote for a paracetamol overdose?",
+      "de": "Welches Medikament wird als Gegengift bei einer Paracetamol-Überdosis gegeben?",
+      "answerEn": "acetylcysteine",
+      "answerDe": "Acetylcystein",
+      "timeline": {
+       "kind": "event",
+       "start": "1977",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A first US case report shows oral acetylcysteine preventing liver damage after a paracetamol overdose",
+       "labelDe": "Ein erster US-Fallbericht zeigt, dass orales Acetylcystein nach einer Paracetamol-Überdosis Leberschäden verhindert"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Acetylcysteine",
+       "title": "Acetylcysteine – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Dose Makes the Poison: Key Ideas of Toxicology",
+    "titleDe": "Die Dosis macht das Gift: Grundbegriffe der Toxikologie",
+    "bodyEn": "Every substance can kill; what matters is how much. The Swiss physician Paracelsus put it in the sixteenth century in words still quoted in every textbook: all things are poison, and only the dose makes a thing not a poison. Toxicology, the science of poisons, has been working out what that means ever since.\n\nIt became a science in Paris. Mathieu Orfila, born on Menorca in 1787, published his Traité des poisons in 1813, the first systematic work on poisons and their detection in the body, and he is regarded as the father of modern toxicology. In 1840 his evidence of arsenic in the body of Charles Lafarge decided one of the most famous poisoning trials of the century.\n\nTo compare poisons, toxicologists needed a number. In 1927 the British pharmacologist J. W. Trevan introduced the LD50, the \"lethal dose, 50 per cent\": the dose of a substance that kills half of a group of test animals, usually given in milligrams per kilogram of body weight. The lower the LD50, the more toxic the substance. Because the test kills many animals it has largely been replaced by gentler methods, but the figure still appears on safety data sheets.\n\nThe dose–response curve hides a surprise. In hormesis, a small dose of a harmful substance has a beneficial effect, while a larger dose of the same substance does harm. Chester Southam and J. Ehrlich coined the word in 1943, after finding that a tree extract which killed fungi at high concentrations made them grow faster at low ones; it comes from the Greek hormesis, \"eagerness\", the root that also gives us \"hormone\". Low doses of radiation, alcohol and plant toxins have all been studied as possible cases, though how far hormesis applies to people is disputed.\n\nA much older idea is to train the body against poison. Mithridates VI, king of Pontus from 120 to 63 BC, feared being poisoned like his father and is said to have swallowed sub-lethal doses of poisons regularly. The practice of protecting oneself against a poison by taking small, non-lethal doses of it over time is named after him: mithridatism. Legend says it worked too well – when the defeated king tried to poison himself, the poison failed. In reality it builds tolerance to some toxins, but not to most.\n\nWhen prevention fails, toxicology looks for an antidote. The best known in emergency rooms today is acetylcysteine, given for a paracetamol (acetaminophen) overdose: it replenishes glutathione, the liver's own defence against the drug's toxic breakdown product. A first US case report of oral acetylcysteine preventing liver damage appeared in 1977, and given within about eight hours it almost always prevents serious harm.\n\n| Term | Meaning |\n|---|---|\n| LD50 | dose that kills half the test animals |\n| hormesis | a low dose helps, a high dose harms |\n| mithridatism | tolerance built up by small doses |\n| acetylcysteine | antidote to paracetamol |",
+    "bodyDe": "Jeder Stoff kann töten; entscheidend ist die Menge. Der Schweizer Arzt Paracelsus fasste es im 16. Jahrhundert in Worte, die bis heute in jedem Lehrbuch stehen: Alle Dinge sind Gift, und allein die Dosis macht, dass ein Ding kein Gift ist. Die Toxikologie, die Wissenschaft von den Giften, arbeitet seither heraus, was das bedeutet.\n\nZur Wissenschaft wurde sie in Paris. Mathieu Orfila, 1787 auf Menorca geboren, veröffentlichte 1813 seinen Traité des poisons, das erste systematische Werk über Gifte und ihren Nachweis im Körper, und gilt als Vater der modernen Toxikologie. 1840 entschied sein Nachweis von Arsen in der Leiche von Charles Lafarge einen der berühmtesten Giftmordprozesse des Jahrhunderts.\n\nUm Gifte vergleichen zu können, brauchten Toxikologen eine Zahl. 1927 führte der britische Pharmakologe J. W. Trevan die LD50 ein, die „letale Dosis 50 Prozent“: die Dosis eines Stoffes, die die Hälfte einer Gruppe von Versuchstieren tötet, meist in Milligramm pro Kilogramm Körpergewicht angegeben. Je niedriger die LD50, desto giftiger der Stoff. Weil der Test viele Tiere tötet, wurde er weitgehend durch schonendere Verfahren ersetzt, doch der Wert steht noch immer in Sicherheitsdatenblättern.\n\nDie Dosis-Wirkungs-Kurve birgt eine Überraschung. Bei der Hormesis hat eine kleine Dosis eines schädlichen Stoffes eine nützliche Wirkung, während eine größere Dosis desselben Stoffes schadet. Chester Southam und J. Ehrlich prägten das Wort 1943, nachdem sie festgestellt hatten, dass ein Baumextrakt, der Pilze in hoher Konzentration abtötete, sie in niedriger schneller wachsen ließ; es stammt vom griechischen hormesis, „Eifer“, derselben Wurzel, die uns das „Hormon“ gibt. Niedrige Dosen von Strahlung, Alkohol und Pflanzengiften wurden als mögliche Fälle untersucht, doch wie weit Hormesis für den Menschen gilt, ist umstritten.\n\nViel älter ist die Idee, den Körper gegen Gift zu trainieren. Mithridates VI., König von Pontos von 120 bis 63 v. Chr., fürchtete, wie sein Vater vergiftet zu werden, und soll regelmäßig nicht tödliche Giftmengen geschluckt haben. Die Praxis, sich gegen ein Gift zu schützen, indem man über längere Zeit kleine, nicht tödliche Mengen davon einnimmt, ist nach ihm benannt: Mithridatisation. Der Legende nach wirkte sie zu gut – als der besiegte König sich vergiften wollte, versagte das Gift. Tatsächlich baut sie gegen manche Gifte eine Toleranz auf, gegen die meisten aber nicht.\n\nVersagt die Vorbeugung, sucht die Toxikologie ein Gegengift. Das bekannteste in Notaufnahmen ist heute Acetylcystein, das bei einer Paracetamol-Überdosis gegeben wird: Es füllt das Glutathion auf, die körpereigene Abwehr der Leber gegen das giftige Abbauprodukt des Medikaments. Ein erster US-Fallbericht, in dem orales Acetylcystein Leberschäden verhinderte, erschien 1977, und innerhalb von etwa acht Stunden gegeben verhindert es fast immer ernsthaften Schaden.\n\n| Begriff | Bedeutung |\n|---|---|\n| LD50 | Dosis, die die Hälfte der Versuchstiere tötet |\n| Hormesis | kleine Dosis nützt, große schadet |\n| Mithridatisation | Toleranz durch kleine Dosen |\n| Acetylcystein | Gegengift bei Paracetamol |",
+    "notesEn": "Mithridatism: „mithridatization“ is also accepted.",
+    "notesDe": "Mithridatisation: „Mithridatismus“ gilt ebenfalls."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-047",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "Which ring-shaped muscle around the eye, whose contraction forms crow's feet, marks a genuine smile?",
+      "de": "Welcher ringförmige Muskel um das Auge, dessen Anspannung Krähenfüße bildet, kennzeichnet ein echtes Lächeln?",
+      "answerEn": "orbicularis oculi",
+      "answerDe": "Musculus orbicularis oculi",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1862",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Duchenne shows by electrical stimulation that the eye's ring muscle joins only a genuine smile",
+       "labelDe": "Duchenne zeigt durch elektrische Reizung, dass der Ringmuskel des Auges nur bei einem echten Lächeln mitwirkt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Smile",
+       "title": "Smile – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the system, published in 1978, that breaks every facial expression down into numbered muscle movements called action units?",
+      "de": "Wie heißt das 1978 veröffentlichte System, das jeden Gesichtsausdruck in nummerierte Muskelbewegungen, sogenannte Action Units, zerlegt?",
+      "answerEn": "Facial Action Coding System",
+      "answerDe": "Facial Action Coding System",
+      "timeline": {
+       "kind": "creation",
+       "start": "1978",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Paul Ekman and Wallace Friesen publish the Facial Action Coding System",
+       "labelDe": "Paul Ekman und Wallace Friesen veröffentlichen das Facial Action Coding System"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Facial_Action_Coding_System",
+       "title": "Facial Action Coding System – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which book did Charles Darwin publish in 1872 to argue that facial expressions of emotion are shared across humankind and with animals?",
+      "de": "Welches Buch veröffentlichte Charles Darwin 1872, um zu zeigen, dass der Gefühlsausdruck im Gesicht allen Menschen und auch Tieren gemeinsam ist?",
+      "answerEn": "The Expression of the Emotions in Man and Animals",
+      "answerDe": "Der Ausdruck der Gemütsbewegungen bei dem Menschen und den Tieren",
+      "timeline": {
+       "kind": "creation",
+       "start": "1872-11-26",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Darwin publishes The Expression of the Emotions in Man and Animals",
+       "labelDe": "Darwin veröffentlicht „Der Ausdruck der Gemütsbewegungen bei dem Menschen und den Tieren“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Expression_of_the_Emotions_in_Man_and_Animals",
+       "title": "The Expression of the Emotions in Man and Animals – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American psychologist showed from the late 1960s that facial expressions of six basic emotions are recognised across cultures?",
+      "de": "Welcher amerikanische Psychologe zeigte ab den späten 1960er Jahren, dass die Gesichtsausdrücke von sechs Grundemotionen kulturübergreifend erkannt werden?",
+      "answerEn": "Paul Ekman",
+      "answerDe": "Paul Ekman",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1934-02-15",
+       "end": "2025-11-17",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of Paul Ekman, American psychologist of emotions and facial expressions",
+       "labelDe": "Leben von Paul Ekman, amerikanischer Psychologe der Emotionen und Gesichtsausdrücke"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Paul_Ekman",
+       "title": "Paul Ekman – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Genuine Smile: How Science Reads the Face",
+    "titleDe": "Das echte Lächeln: Wie die Wissenschaft Gesichter liest",
+    "bodyEn": "A smile is the easiest expression to fake, and for more than 160 years scientists have been learning how to tell a real one from a polite one.\n\nThe first to do it systematically was the French neurologist Guillaume-Benjamin Duchenne de Boulogne. He applied electric currents to the faces of volunteers, contracting one muscle at a time and photographing the results, and in 1862 he published them as Mécanisme de la physionomie humaine. A current to the zygomatic major, the muscle that pulls the corners of the mouth upward, produced a smile – but an empty one. A genuine smile, he found, also engages the muscles around the eyes, which few people can command at will. Such a smile is now called the Duchenne smile.\n\nThe eye muscle in question is the orbicularis oculi, the ring of muscle around each eye that closes the lids. In a real smile its outer part lifts the cheeks and narrows the eyes, and the skin folds into the radiating wrinkles called crow's feet; over a lifetime those folds become permanent. A smile that stays in the mouth while the eyes remain unchanged is the polite, social smile.\n\nDuchenne's photographs travelled to England. Charles Darwin used some of them in The Expression of the Emotions in Man and Animals, published on 26 November 1872, in which he argued that emotional expressions are shared across humankind and with animals – evidence, he thought, of a common evolutionary origin. People everywhere, he wrote, \"express the same state of mind by the same movements\".\n\nA century later the American psychologist Paul Ekman (1934–2025) set out to test Darwin. From the late 1960s he showed photographs of faces to people in many cultures, including isolated communities, and found that six expressions – anger, disgust, fear, happiness, sadness and surprise – were recognised almost everywhere. Critics objected to his methods, but the six basic emotions became a cornerstone of psychology.\n\nTo study faces precisely, Ekman and Wallace Friesen built on the work of the Swedish anatomist Carl-Herman Hjortsjö and published the Facial Action Coding System (FACS) in 1978. It breaks every facial expression down into numbered \"action units\", each the movement of one muscle or group of muscles; a Duchenne smile is action unit 6, the cheek raiser, together with action unit 12, the lip corner puller. Animators, researchers into deception and software that reads emotions from video all use it.\n\n| Name | What it is | Year |\n|---|---|---|\n| Duchenne smile | genuine smile that engages the eyes | 1862 |\n| orbicularis oculi | the eye's ring muscle, makes crow's feet | – |\n| Darwin's Expression of the Emotions | expressions shared by all humans | 1872 |\n| Facial Action Coding System | catalogue of facial action units | 1978 |",
+    "bodyDe": "Ein Lächeln ist der am leichtesten vorzutäuschende Gesichtsausdruck, und seit über 160 Jahren lernen Wissenschaftler, ein echtes von einem höflichen zu unterscheiden.\n\nAls Erster ging der französische Neurologe Guillaume-Benjamin Duchenne de Boulogne systematisch vor. Er leitete elektrischen Strom in die Gesichter von Freiwilligen, spannte so einen Muskel nach dem anderen an, fotografierte die Ergebnisse und veröffentlichte sie 1862 als Mécanisme de la physionomie humaine. Strom am großen Jochbeinmuskel (Zygomaticus major), der die Mundwinkel nach oben zieht, erzeugte ein Lächeln – aber ein leeres. Ein echtes Lächeln, fand er, beansprucht auch die Muskeln um die Augen, die kaum jemand willentlich steuern kann. Ein solches Lächeln heißt heute Duchenne-Lächeln.\n\nDer fragliche Augenmuskel ist der Musculus orbicularis oculi, der Ringmuskel um jedes Auge, der die Lider schließt. Bei einem echten Lächeln hebt sein äußerer Teil die Wangen und verengt die Augen, und die Haut legt sich zu den strahlenförmigen Fältchen, die man Krähenfüße nennt; im Lauf eines Lebens werden diese Falten bleibend. Ein Lächeln, das im Mund bleibt, während die Augen unverändert sind, ist das höfliche, soziale Lächeln.\n\nDuchennes Fotografien gelangten nach England. Charles Darwin verwendete einige davon in Der Ausdruck der Gemütsbewegungen bei dem Menschen und den Tieren (The Expression of the Emotions in Man and Animals), erschienen am 26. November 1872, in dem er darlegte, dass der Gefühlsausdruck allen Menschen und auch Tieren gemeinsam ist – für ihn ein Zeichen gemeinsamer evolutionärer Herkunft. Menschen überall, schrieb er, drücken denselben Gemütszustand durch dieselben Bewegungen aus.\n\nEin Jahrhundert später machte sich der amerikanische Psychologe Paul Ekman (1934–2025) daran, Darwin zu prüfen. Ab den späten 1960er Jahren zeigte er Menschen in vielen Kulturen, auch in abgelegenen Gemeinschaften, Fotos von Gesichtern und stellte fest, dass sechs Ausdrücke – Wut, Ekel, Angst, Freude, Trauer und Überraschung – fast überall erkannt wurden. Kritiker bemängelten seine Methoden, doch die sechs Grundemotionen wurden zu einem Eckpfeiler der Psychologie.\n\nUm Gesichter genau zu untersuchen, bauten Ekman und Wallace Friesen auf der Arbeit des schwedischen Anatomen Carl-Herman Hjortsjö auf und veröffentlichten 1978 das Facial Action Coding System (FACS). Es zerlegt jeden Gesichtsausdruck in nummerierte „Action Units“, jede die Bewegung eines Muskels oder einer Muskelgruppe; ein Duchenne-Lächeln ist Action Unit 6, der Wangenheber, zusammen mit Action Unit 12, dem Mundwinkelheber. Trickfilmzeichner, Forscher zur Täuschung und Software, die Gefühle aus Videos liest, nutzen es alle.\n\n| Name | Was es ist | Jahr |\n|---|---|---|\n| Duchenne-Lächeln | echtes Lächeln, an dem die Augen beteiligt sind | 1862 |\n| Musculus orbicularis oculi | Ringmuskel des Auges, bildet Krähenfüße | – |\n| Darwins Ausdruck der Gemütsbewegungen | allen Menschen gemeinsamer Ausdruck | 1872 |\n| Facial Action Coding System | Katalog der mimischen Action Units | 1978 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "ppm-033",
+   "category": 2,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Human energy metabolism (NEAT, fidgeting burning calories), like the fat-to-CO2 metabolism question handed to biology before."
+  },
+  {
+   "card": "ppm-068",
+   "category": 2,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Anatomy of the skull: cranial sutures (fibrous joints), not medicine or health."
+  },
+  {
+   "card": "ppm-160",
+   "category": 1,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Nutrition basics (macronutrients vs micronutrients) fit the biology nutrient articles such as a1593 'Essential Nutrients'."
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "article": "a1724",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Onania",
+   "title": "Onania – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:12.418Z",
+   "snapshot": "7b898632bc83eb1cf1dcbd8af4108a60d2bf615a6f255d73e0fdc9944a1f4cef"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kiss_of_Judas",
+   "title": "Kiss of Judas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:13.333Z",
+   "snapshot": "e82e22c0bff33fb092f6ee0845461160acc7ab0ec30e3fe01c90040cbe3bdec6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Goliath",
+   "title": "Goliath – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:14.481Z",
+   "snapshot": "4603cb2f28c93732b593d6cc77c5c0288429a569eed274fbd64dd34d11de2436"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gospel_of_John",
+   "title": "Gospel of John – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:51.333Z",
+   "snapshot": "a2a3f65d9e3adf557e2c239afbf98d63303f2d7bfd65a6cb77063e98deabf07c"
+  },
+  "s5": {
+   "url": "https://www.dictionary.com/browse/onanism",
+   "title": "ONANISM Definition & Meaning – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:52.298Z",
+   "snapshot": "27f3497e89a492d5f2e56e68af93d4df9a723980c6e99972034f0dafdddd6041"
+  },
+  "s6": {
+   "url": "https://www.biblegateway.com/passage/?search=Genesis+38%3A9&version=NRSVUE",
+   "title": "Genesis 38:9 NRSVUE - Bible Gateway",
+   "publisher": "Bible Gateway (NRSVUE, National Council of Churches)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:52.373Z",
+   "snapshot": "91260e9552876404fff0cf1e4329f2c2e07a11d146bff5c0ede7c7b349b30acc"
+  },
+  "s7": {
+   "url": "https://bible.usccb.org/bible/genesis/38",
+   "title": "Genesis, Chapter 38 – USCCB",
+   "publisher": "United States Conference of Catholic Bishops (NABRE)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:04:26Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "onanism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Judas kiss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Goliath",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "doubting Thomas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:12.247Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "onanism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“onanism”, “Onanie”, “онанизм”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:12.247Z",
+   "target": "f08617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "More broadly, a Judas kiss may refer to \"an act appearing to be an act of friendship, which is in fact harmful to the recipient.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Judas kiss” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:12.247Z",
+   "target": "f08619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Goliath ( gə-LY-əth) is a legendary Philistine warrior of giant stature attested to in the Biblical narratives of 1 and 2 Samuel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Goliath” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:12.247Z",
+   "target": "f08620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thomas is given a personality beyond a mere name, described as \"Doubting Thomas\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:12.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “doubting Thomas” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:04:21Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "First recorded in 1720-30; after Onan, son of Judah (Genesis 38:9)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:04:24Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "But since Onan knew that the offspring would not be his, he spilled his semen on the ground whenever he went in to his brother's wife",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:04:26Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "he wasted his seed on the ground, to avoid giving offspring to his brother.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:59.528Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "First recorded in 1720-30; after Onan, son of Judah (Genesis 38:9)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:59.528Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "But since Onan knew that the offspring would not be his, he spilled his semen on the ground whenever he went in to his brother's wife",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:59.528Z",
+   "target": "f08616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ONANISM Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:59.528Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “onanism” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,463 @@
+{
+ "article": "a2710",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Asian_giant_hornet",
+   "title": "Asian giant hornet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:27.340Z",
+   "snapshot": "53898c83c057de4cc33c7de7b9cfcff1b12c18d5735f3f211b584aaf5d74db26"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hornet",
+   "title": "Hornet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:28.217Z",
+   "snapshot": "b2256abce2c8cb5a12526140738b67846621779c08b7cff9f874d69ef5f3d198"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Asian_hornet",
+   "title": "Asian hornet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:29.232Z",
+   "snapshot": "6c424153d7c60cdea84e50639cce46f98df43bd034b9573fb81e19478dfa9c37"
+  },
+  "s4": {
+   "url": "https://www.nationalbeeunit.com/diseases-and-pests/asian-hornet",
+   "title": "Yellow-legged Hornet",
+   "publisher": "APHA National Bee Unit (BeeBase), UK government",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:17:31Z"
+  },
+  "s5": {
+   "url": "https://tellus.ars.usda.gov/stories/articles/ars-takes-asian-giant-hornet",
+   "title": "ARS Takes On the Asian Giant Hornet",
+   "publisher": "USDA Agricultural Research Service (Tellus)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:43.994Z",
+   "snapshot": "c3f92cf0e425d8199a502e8384e5b9a542615d8897bb5f0ad852c27217e817c5"
+  },
+  "s6": {
+   "url": "https://entsoc.org/news/press-releases/northern-giant-hornet-common-name-vespa-mandarinia",
+   "title": "‘Northern Giant Hornet’ Adopted as Common Name for Vespa mandarinia",
+   "publisher": "Entomological Society of America",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:41.783Z",
+   "snapshot": "ea148076e281fa0000ff26c8cce85670f42667de92afad4c3263679a4325efeb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The bees themselves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript pp-059"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vespa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Asian giant hornet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Northern giant hornet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Asian hornet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:01.212Z",
+   "target": "f25338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The bees themselves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The bees themselves”, “Die Bienen selbst”, “сами пчёлы”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:01.212Z",
+   "target": "f25339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hornets are wasps of the genus Vespa in the subfamily Vespinae (the vespine wasps).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vespa” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:01.212Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Asian giant hornet (Vespa mandarinia), also known as the northern giant hornet, is the world's largest hornet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asian giant hornet” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:01.212Z",
+   "target": "f25341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Asian giant hornet (Vespa mandarinia), also known as the northern giant hornet, is the world's largest hornet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Northern giant hornet” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:01.212Z",
+   "target": "f25342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Asian hornet (Vespa velutina), also known as the yellow-legged hornet or Asian predatory wasp, is a species of hornet indigenous to Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asian hornet” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:17:27Z",
+   "target": "f25338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hives to obtain the adults, pupae, and larvae as food for their own larvae",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:17:31Z",
+   "target": "f25338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "When they catch a returning bee, they will remove the wings, head and abdomen, and return to the nest with the protein rich thorax to feed the brood.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "About the yellow-legged (Asian) hornet Vespa velutina: same behaviour — bees are protein for the hornet brood."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:17:37Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At roughly 2 inches in length, this invasive species from Southeast Asia is the world’s largest hornet.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: 'investigating the AGH, dubbed the “Murder Hornet.”'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:42Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "whilst the mainstream media took to using the nickname \"murder hornet\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:47Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been referred to elsewhere as \"Asian giant hornet\" or \"murder hornet.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:48.674Z",
+   "target": "f25338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hives to obtain the adults, pupae, and larvae as food for their own larvae",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:48.674Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At roughly 2 inches in length, this invasive species from Southeast Asia is the world’s largest hornet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:48.674Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "whilst the mainstream media took to using the nickname \"murder hornet\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:48.674Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been referred to elsewhere as \"Asian giant hornet\" or \"murder hornet.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:48.674Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ARS Takes On the Asian Giant Hornet | Scientific Discoveries",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Asian giant hornet” is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:48.674Z",
+   "target": "f25340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been referred to elsewhere as \"Asian giant hornet\" or \"murder hornet.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Asian giant hornet” is on the snapshot of s6"
+  }
+ ]
+}

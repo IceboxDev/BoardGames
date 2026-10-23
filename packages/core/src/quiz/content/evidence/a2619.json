@@ -1,0 +1,195 @@
+{
+ "article": "a2619",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Archery_in_Bhutan",
+   "title": "Archery in Bhutan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:40.023Z",
+   "snapshot": "72f8b2e86389c55a73b1fcf6de94a1aaed57e93a326d00f25e686f353f760caa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Naadam",
+   "title": "Naadam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:41.105Z",
+   "snapshot": "8be1cfac295883495e156bf2c4ab7a90b78448660de69bdcfb3f9692bc212353"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pato",
+   "title": "Pato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:42.050Z",
+   "snapshot": "4817c8ef531337c24f2027c8649b573c8a03fde2e771505328473a7deaac6fbf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kabaddi",
+   "title": "Kabaddi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:43.181Z",
+   "snapshot": "6daff7866e2c9e53fd111bf769b3b9c64b33ab304aeab62f4cb72978fb504830"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Naadam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kabaddi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:47.943Z",
+   "target": "f14145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Throughout the history of Bhutan, fire and the bow and arrow were an important means of survival in the highlands during war and on hunts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bow” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:47.943Z",
+   "target": "f14146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Naadam (Mongolian: Наадам, Mongolian script: ᠨᠠᠭᠠᠳᠤᠮ, romanized: Naɣadum, [ˈnaːdəm], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Naadam” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:47.943Z",
+   "target": "f14147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pato, also called juego del pato (Spanish pronunciation: [ˈxweɣo ðel ˈpato], literally \"duck game\"), is a game played on horseback that combines elements from polo and basketball.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pato” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:47.943Z",
+   "target": "f14148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kabaddi is a contact sport played between two teams of seven players each.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kabaddi” is on the snapshot of s4"
+  }
+ ]
+}

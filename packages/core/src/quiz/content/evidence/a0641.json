@@ -1,0 +1,242 @@
+{
+ "article": "a0641",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bouldering",
+   "title": "Bouldering – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:07.187Z",
+   "snapshot": "173f881d90085cec5a5af8efb15910fd8daa87ed1c662c8b9f65034bbeabebd4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alex_Honnold",
+   "title": "Alex Honnold – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:08.139Z",
+   "snapshot": "6ef077ec4b50c620fc4251785f43cb1cadfa0e7436e181550918b1529f249b70"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sport_climbing_at_the_2024_Summer_Olympics",
+   "title": "Sport climbing at the 2024 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:10.193Z",
+   "snapshot": "ea3b2965423e8fbe521f48f128c59b02dffcf787617dbb85b42c2180f2b46114"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Deep-water_soloing",
+   "title": "Deep-water soloing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:10.281Z",
+   "snapshot": "d3cf066e43d6ac383a59faaf0d4eef2f6231ce55463f03ffe8a622767a7aea27"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ice_climbing",
+   "title": "Ice climbing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:11.061Z",
+   "snapshot": "9b04d7a3b35e37378011c1dcef7ebf64b285ae91331100c0c62585dfd91c8a40"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bouldering",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Free solo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Speed climbing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Deep water soloing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ice climbing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:19.021Z",
+   "target": "f03201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bouldering is a form of rock climbing that is performed on small rock formations or artificial rock walls without the use of ropes or harnesses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bouldering” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:19.021Z",
+   "target": "f03202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexander J Honnold (born August 17, 1985) is an American rock climber best known for his free solo ascents of big wall climbing routes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Free solo” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:19.021Z",
+   "target": "f03203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The format, along with the scoring system multiplying a placement from each discipline, drew criticisms from athletes, prompting a significant overlap between the boulder-and-lead tandem and speed climbing specialists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Speed climbing” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:19.021Z",
+   "target": "f03204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Deep-water soloing (DWS), also known as psicobloc (from \"psycho-bouldering\"), is a form of free solo climbing where a fall should result in the climber landing safely in deep water below the route.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deep water soloing” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:19.021Z",
+   "target": "f03205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ice climbing is a climbing discipline that involves ascending routes consisting entirely of frozen water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ice climbing” is on the snapshot of s5"
+  }
+ ]
+}

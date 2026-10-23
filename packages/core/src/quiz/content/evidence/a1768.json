@@ -1,0 +1,195 @@
+{
+ "article": "a1768",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Stranger_Things",
+   "title": "Stranger Things – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:26.103Z",
+   "snapshot": "e010438a399e2d53ca00455b32de2331b946ecbf13a5b97d21b605641efcbe9d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Squid_Game",
+   "title": "Squid Game – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:15.512Z",
+   "snapshot": "e360386d921639965c9cb819dd05f0fcfa4245c9ac656f5df54bb759384c5dbb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Queen%27s_Gambit_(miniseries)",
+   "title": "The Queen's Gambit (miniseries) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:16.535Z",
+   "snapshot": "686b00b511b31c28ce1cca38190a035a64570bf68070f3366b0ee8c58f26debd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lilyhammer",
+   "title": "Lilyhammer",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:17.561Z",
+   "snapshot": "03f5ce6043d3c85ec6de792d4994afba3ec93e9307ac14ad6fa37c56434861b6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stranger Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Squid Game",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Queen's Gambit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lilyhammer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26; transcript tp-097"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:19.056Z",
+   "target": "f08836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stranger Things is an American television series created by the Duffer Brothers for Netflix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stranger Things” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:19.056Z",
+   "target": "f08838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Squid Game (Korean: 오징어 게임; RR: Ojingeo geim) is a South Korean dystopian survival thriller drama television series created, written, and directed by Hwang Dong-hyuk for Netflix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Squid Game” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:19.056Z",
+   "target": "f08840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Queen's Gambit is a 2020 American coming-of-age period drama television miniseries based on the 1983 eponymous novel by Walter Tevis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Queen's Gambit” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:19.056Z",
+   "target": "f11652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lilyhammer is a crime comedy-drama television series starring Steven Van Zandt about a former New York–based gangster named Frank \"The Fixer\" Tagliano trying to start a new life in isolated Lillehammer, Norway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lilyhammer” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2626",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Stuxnet",
+   "title": "Stuxnet",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:07.215Z",
+   "snapshot": "57e40c22f7587a1cbedf96a54cdb0c11dec2c6855e0812bf4ac24be8bd6f7689"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Morris_worm",
+   "title": "Morris worm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:08.061Z",
+   "snapshot": "b185d7c8b4cc74dbc662b41b5bca7e9abd93171da589f10ad4aa01e51f68ef79"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/ILOVEYOU",
+   "title": "ILOVEYOU – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:09.127Z",
+   "snapshot": "ef304495f3be5e1e7530d62604c5bd29a9c840a2c5d95e1a4ec6bf0f203df8b7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+   "title": "WannaCry ransomware attack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:10.120Z",
+   "snapshot": "42c2eb199754f9553a15ff62629c00d0501aed29a7c5d44fe065e2c6498cd274"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/2017_Ukraine_ransomware_attacks",
+   "title": "2017 Ukraine ransomware attacks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:11.132Z",
+   "snapshot": "0dfde822251464d01dca79602dabde80f3401903b32612065ce5d6585a56b02c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iran",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-322"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robert Tappan Morris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Philippines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "National Health Service",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ukraine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:48.891Z",
+   "target": "f14206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Da bis Ende September 2010 der Iran den größten Anteil der infizierten Computer besaß und es zu außergewöhnlichen Störungen im iranischen Atomprogramm kam, lag es nah, dass Stuxnet hauptsächlich entstand, um als Schadsoftware die Leittechnik für Zentrifugen der Urananreicherungsanlage in Natanz oder",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:48.891Z",
+   "target": "f14207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was written by Robert Tappan Morris, a graduate student at Cornell University, and launched on 8:30 p.m.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Tappan Morris” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:48.891Z",
+   "target": "f14208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The worm was created by Onel de Guzman, a dropout of AMA Computer College in the Philippines, because of his belief that internet access was a human right; the worm attempts to download a computer trojan that steals dial-up Internet access credentials to fulfill this aim.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philippines” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:48.891Z",
+   "target": "f14209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "One of the largest agencies struck by the attack was the National Health Service hospitals in England and Scotland, and up to 70,000 devices—including computers, MRI scanners, blood-storage refrigerators and theatre equipment—may have been affected.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “National Health Service” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:48.891Z",
+   "target": "f14210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ESET estimated on 28 June 2017 that 80% of all infections were in Ukraine, with Germany second hardest hit with about 9%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ukraine” is on the snapshot of s5"
+  }
+ ]
+}

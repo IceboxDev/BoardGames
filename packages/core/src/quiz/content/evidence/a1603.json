@@ -1,0 +1,375 @@
+{
+ "article": "a1603",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meissen_porcelain",
+   "title": "Meissen porcelain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:19.132Z",
+   "snapshot": "b55964a11118d42e17d7a337ae1adf4fd9f70d6ad0f20b0ca5e7b6dcf1349112"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lombe%27s_Mill",
+   "title": "Lombe's Mill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:20.041Z",
+   "snapshot": "a15b3980da9882264015cd35fd7ee83cdb1ab1754616656587a222bc5801d827"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Verlagssystem",
+   "title": "Verlagssystem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:17.595Z",
+   "snapshot": "881fd6554a262b0acbdc2abdb4edc6246b10341d8bd45baf74830ac4ffe2a112"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Worshipful_Company_of_Weavers",
+   "title": "Worshipful Company of Weavers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:21.236Z",
+   "snapshot": "03047d08bb124ccef24c6c3710d483017767ae657d51bdc5586f7186054d455c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Assembly_line",
+   "title": "Assembly line – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:22.093Z",
+   "snapshot": "5add85bc89a0b625dbfccd3e54dc19f529b45f9b6c8c50552e25807870dffbfe"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Guild",
+   "title": "Guild – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:06.695Z",
+   "snapshot": "6cb8bf6c4c7fc082664ec24474268d0a2f842ac6d2817e2e1acd4cb52a48ffb9"
+  },
+  "s7": {
+   "url": "https://www.worldhistory.org/Medieval_Guilds/",
+   "title": "Medieval Guilds (Mark Cartwright)",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:05.766Z",
+   "snapshot": "e22b8faec99948906ed9e66724fa2555e3d5fef05b3e15457354e6261d750fae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08011",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "manufactory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "factory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08013",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Verlagssystem",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "guild",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fordism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:49.565Z",
+   "target": "f08011",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dresden porcelain (or \"china\") was once the usual term for these wares, until in 1975 the Oberlandesgericht (Higher Munich State Court) decided in favour of the Saxon Porcelain Manufactory Dresden, which alone was then allowed to use the name Dresden Porcelain (it ceased producing in 2020).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “manufactory” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:49.565Z",
+   "target": "f08012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lombe's Mill was the first successful silk throwing mill in England and probably the first fully mechanised factory in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “factory” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:49.565Z",
+   "target": "f08013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Verlagssystem ist ein historischer Begriff für Formen der dezentralen Arbeitsorganisation wie die heutige Heimarbeit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verlagssystem” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:49.565Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "guild",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“guild”, “Zunft”, “цех”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:49.565Z",
+   "target": "f08015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The combination of high wages and high efficiency is called \"Fordism\", and was copied by most major industries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fordism” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:19:36Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a professional association of artisans and merchants who oversee the practice of their craft/trade in a particular territory.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:19:37Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Guilds of merchants and craft workers were formed in medieval Europe so that their members could benefit from mutual aid.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:37.340Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a professional association of artisans and merchants who oversee the practice of their craft/trade in a particular territory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:37.340Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Guilds of merchants and craft workers were formed in medieval Europe so that their members could benefit from mutual aid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:37.340Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A guild (, GHILD) is a professional association of artisans and merchants who oversee the practice of their craft/trade in a particular territory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “guild” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:37.340Z",
+   "target": "f08014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The name 'guild' derives from the Saxon word gilden, meaning 'to pay' or 'yield', as members of the guild were expected to contribute to its collective finances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “guild” is on the snapshot of s7"
+  }
+ ]
+}

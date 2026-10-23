@@ -1,0 +1,438 @@
+{
+ "article": "a1596",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Spinning_jenny",
+   "title": "Spinning jenny – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:52.968Z",
+   "snapshot": "1082fd091a7563a8828b02dfb79aa87040d29c89dce1fe3b6d0dd1e47269dcd5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Water_frame",
+   "title": "Water frame – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:53.941Z",
+   "snapshot": "61080aadff4ef436fe70ef7f1d44b0d82b97c798315358d3ba81a0e46586d945"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spinning_mule",
+   "title": "Spinning mule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:55.068Z",
+   "snapshot": "3b6b483fa2e45b89e13aa55a1ed1d1ca45b16c897be88719e3f0ff8e371ad93b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Flying_shuttle",
+   "title": "Flying shuttle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:55.989Z",
+   "snapshot": "4a3f58aacd803879b2ef33ad7e5a4e02ee9874ed65dcd775034e5e106f78e85d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jacquard_machine",
+   "title": "Jacquard machine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:56.949Z",
+   "snapshot": "8a3f20ac092e2974c9c2d77e5989bb254ffca7a1f473871e3ed597da7a200a71"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Knocker-up",
+   "title": "Knocker-up",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:58.032Z",
+   "snapshot": "c3cf160ac598276eb2023372396f52b945ac1027a363d617feeb85595b62d676"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Lewis_Paul",
+   "title": "Lewis Paul – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:03.586Z",
+   "snapshot": "3c0e0529fbdbe6f91b7d5141f3e53c4f7d682843e0794101e923af99509bbcef"
+  },
+  "s8": {
+   "url": "https://www.encyclopedia.com/people/science-and-technology/technology-biographies/james-hargreaves",
+   "title": "James Hargreaves | Encyclopedia.com",
+   "publisher": "Encyclopedia.com (Oxford Companion to British History; World Encyclopedia)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:09:46Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Spinning Jenny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "water frame",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spinning Mule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "flying shuttle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jacquard loom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f26017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "England",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48; transcript tp-221"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:48.627Z",
+   "target": "f07976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The spinning jenny is a multi-spindle spinning frame, and was one of the key developments in the industrialisation of textile manufacturing during the early Industrial Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spinning Jenny” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:48.627Z",
+   "target": "f07977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The water frame is a spinning frame that is powered by a water-wheel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “water frame” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:48.627Z",
+   "target": "f07978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The spinning mule is a machine used to spin cotton and other fibres like wool.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spinning Mule” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:48.627Z",
+   "target": "f07979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The flying shuttle or fly shuttle is a type of weaving shuttle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flying shuttle” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:48.627Z",
+   "target": "f07980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The resulting ensemble of the loom and Jacquard machine is then called a Jacquard loom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacquard loom” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:48.627Z",
+   "target": "f26017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "By the 1940s and 1950s, the job had more or less entirely died out, although it still continued in some pockets of industrial England until the early 1970s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “England” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:09:44Z",
+   "target": "f07976",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Roller spinning was certainly Paul's idea, and Wyatt built a machine (or model) for him. Paul obtained a patent for this on 24 June 1738.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "premise 'the first spinning machine' is wrong: Paul and Wyatt's roller-spinning machine (1738) predates the jenny (1764); wording reworded to 'the multi-spindle spinning machine Hargreaves built in the mid-1760s'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:09:45Z",
+   "target": "f07976",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was invented in 1764–1765 by James Hargreaves in Stanhill, Oswaldtwistle , Lancashire in England.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:09:46Z",
+   "target": "f07976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hargreaves was a largely self-taught weaver from Lancashire, who invented the spinning jenny in 1764 and patented it in 1770.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:09:47Z",
+   "target": "f07976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The spinning jenny helped to start the factory system of cotton manufacturing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:36.396Z",
+   "target": "f07976",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Roller spinning was certainly Paul's idea, and Wyatt built a machine (or model) for him. Paul obtained a patent for this on 24 June 1738.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:36.396Z",
+   "target": "f07976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The spinning jenny helped to start the factory system of cotton manufacturing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:36.396Z",
+   "target": "f07976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Spinning Jenny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“Spinning Jenny”, “прялка «Дженни»”) on the snapshot of s7"
+  }
+ ]
+}

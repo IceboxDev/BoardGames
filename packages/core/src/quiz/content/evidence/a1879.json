@@ -1,0 +1,756 @@
+{
+ "article": "a1879",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Begr%C3%BC%C3%9Fungsgeld",
+   "title": "Begrüßungsgeld – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:42.700Z",
+   "snapshot": "342cec58a1548e43593de5b999bb0bb28d608cfd46399fe370d993a495cdf5f5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mindestumtausch",
+   "title": "Mindestumtausch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:43.896Z",
+   "snapshot": "35faaf092d3b65904c4093f83d4b979cd1b9e7bbb7789b99d070fcdd6d8b8ce4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/W%C3%A4hrungs-,_Wirtschafts-_und_Sozialunion",
+   "title": "Währungs-, Wirtschafts- und Sozialunion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:44.691Z",
+   "snapshot": "50bdf65e6bb25f5ac700e445e8a9cdfa5502edad92ef49db3b47ec33bacd568f"
+  },
+  "s4": {
+   "url": "https://www.ddr-museum.de/en/blog/archive/east-west-relationships-between-minimum-exchange-and-welcome-money",
+   "title": "East-West relationships: between minimum exchange and welcome money – DDR Museum",
+   "publisher": "DDR Museum Berlin",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:04.928Z",
+   "snapshot": "215d92713eb54ba211aee28233025ff1a0556a233837486625fb857415119a91"
+  },
+  "s5": {
+   "url": "https://time.com/5714252/berlin-wall-east-germans-money/",
+   "title": "What East Germans bought when the Berlin Wall fell – TIME",
+   "publisher": "TIME",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:05.616Z",
+   "snapshot": "d93d85d1f86ee1db092ec13bcbbc6867783073f8f080deefff7af4cb003e91cb"
+  },
+  "s6": {
+   "url": "https://web.archive.org/web/20020320171111/http://www.hdg.de/lemo/html/dokumente/DieDeutscheEinheit_vertragWaehrungsWirtschaftsSozialunion/index.html",
+   "title": "Vertrag über die Schaffung einer Währungs-, Wirtschafts- und Sozialunion (LeMO, archived)",
+   "publisher": "Stiftung Haus der Geschichte (LeMO)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:06.437Z",
+   "snapshot": "d487511901936b93bc032f87d79053ee226ecdfe423bcf5e6beea6dd6df52000"
+  },
+  "s7": {
+   "url": "http://www.verfassungen.de/ddr/waehrungsunionsvertrag90.htm",
+   "title": "Vertrag über die Schaffung einer Währungs-, Wirtschafts- und Sozialunion (1990) – verfassungen.de",
+   "publisher": "verfassungen.de",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:05.763Z",
+   "snapshot": "dcc2165050fa1b7dc9eba16352202c1097858211deec413a4dd862b2138b7efd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "100 D-Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "30 D-Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "25 D-Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1:1",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "4000 Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:38.318Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "100 D-Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“100 D-Mark”, “100 Deutsche Mark”, “100 немецких марок”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:38.318Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "30 D-Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“30 D-Mark”, “30 Deutsche Mark”, “30 немецких марок”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:38.318Z",
+   "target": "f09393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "25 D-Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“25 D-Mark”, “25 Deutsche Mark”, “25 немецких марок”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:38.318Z",
+   "target": "f09394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Deutsche Institut für Wirtschaftsforschung (DIW) schlug einen möglichst niedrigen Wechselkurs von 5:1 vor, um die Exportwirtschaft der DDR zu schützen, während die dortige Bevölkerung selbst von einem Kurs von 1:1 ausging.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1:1” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:38.318Z",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "4000 Mark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“4000 Mark”, “4,000 marks”, “4000 марок”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:25:34Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1988 wurde es auf 100 DM erhöht, jedoch auf eine einmalige jährliche Inanspruchnahme beschränkt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:25:36Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1988 the sum was raised to 100 DM but was therefore only payed out once a year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:25:38Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "initially of 30 deutsche marks (DM) twice a year, later rising to 100 DM once a year, under a program known as Begrüßungsgeld or “welcome money.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:25:39Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es wurde 1970 in Höhe von 30 Deutschen Mark (DM) eingeführt und konnte zweimal im Jahr in Anspruch genommen werden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:25:41Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The „welcome money“ was introduced by the government of the Federal Republic of Germany in 1970. Originally it was supposed to serve as a financial support mainly for seniors or tourists from East Germany. The obolus of 30 DM could be claimed twice a year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:25:43Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Since 1970, East Germans arriving to the Federal Republic of Germany by whatever means were paid a grant, initially of 30 deutsche marks (DM) twice a year",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:25:44Z",
+   "target": "f09393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die DDR kündigte am 9. Oktober 1980 eine zum 13. Oktober in Kraft tretende Änderung an. Demnach mussten nun 25,00 DM pro Person und Tag umgetauscht werden",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:25:46Z",
+   "target": "f09393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "During the 1980s, Western citizens payed the sum of 25 DM per day, seniors only 15 DM.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms 25 DM/day in the 1980s; the reduced senior rate refers to later in the decade (from 1980 pensioners paid the full rate per the GDR's ordinance of 9 Oct 1980)."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:25:48Z",
+   "target": "f09394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Löhne, Gehälter, Stipendien, Renten, Mieten und Pachten sowie weitere wiederkehrende Zahlungen wurden zum Kurs von 1:1 umgestellt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:25:50Z",
+   "target": "f09394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Löhne, Gehälter, Stipendien, Renten, Mieten und Pachten sowie weitere wiederkehrende Zahlungen werden im Verhältnis 1 zu 1 umgestellt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:25:51Z",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "So durften Bürger ab 60 Jahren bis zu 6.000, Erwachsene bis zu 4.000 und Kinder bis 14 Jahren bis zu 2.000 DDR-Mark zum Kurs von 1:1 umtauschen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:25:53Z",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "zwischen dem 2. Juli 1931 und dem 1. Juli 1976 geboren sind, bis zu 4 000 Mark,",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Treaty Annex I Art. 6: the brackets are set by date of birth (roughly ages 14–58 on 1 July 1990); popular accounts give them as up to 14 / 15–59 / 60+."
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1988 wurde es auf 100 DM erhöht, jedoch auf eine einmalige jährliche Inanspruchnahme beschränkt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1988 the sum was raised to 100 DM but was therefore only payed out once a year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "initially of 30 deutsche marks (DM) twice a year, later rising to 100 DM once a year, under a program known as Begrüßungsgeld or “welcome money.”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es wurde 1970 in Höhe von 30 Deutschen Mark (DM) eingeführt und konnte zweimal im Jahr in Anspruch genommen werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The „welcome money“ was introduced by the government of the Federal Republic of Germany in 1970. Originally it was supposed to serve as a financial support mainly for seniors or tourists from East Germany. The obolus of 30 DM could be claimed twice a year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Since 1970, East Germans arriving to the Federal Republic of Germany by whatever means were paid a grant, initially of 30 deutsche marks (DM) twice a year",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die DDR kündigte am 9. Oktober 1980 eine zum 13. Oktober in Kraft tretende Änderung an. Demnach mussten nun 25,00 DM pro Person und Tag umgetauscht werden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s2"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "During the 1980s, Western citizens payed the sum of 25 DM per day, seniors only 15 DM.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Löhne, Gehälter, Stipendien, Renten, Mieten und Pachten sowie weitere wiederkehrende Zahlungen wurden zum Kurs von 1:1 umgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Löhne, Gehälter, Stipendien, Renten, Mieten und Pachten sowie weitere wiederkehrende Zahlungen werden im Verhältnis 1 zu 1 umgestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s6"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "So durften Bürger ab 60 Jahren bis zu 6.000, Erwachsene bis zu 4.000 und Kinder bis 14 Jahren bis zu 2.000 DDR-Mark zum Kurs von 1:1 umtauschen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s3"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "zwischen dem 2. Juli 1931 und dem 1. Juli 1976 geboren sind, bis zu 4 000 Mark,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s7"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A 100 Deutsche Mark bill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “100 Deutsche Mark” is on the snapshot of s5"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:57:27.850Z",
+   "target": "f09395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "geboren sind, bis zu 4 000 Mark,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.850Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4000 Mark” is on the snapshot of s7"
+  }
+ ]
+}

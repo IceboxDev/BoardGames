@@ -1,0 +1,242 @@
+{
+ "article": "a0543",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Secession",
+   "title": "Berliner Secession – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:47.227Z",
+   "snapshot": "75e537fcf2bc22750e5dd81f28386c9bda15c9eee0913688c9d10a769dd2dbd7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/M%C3%BCnchener_Secession",
+   "title": "Münchener Secession – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:47.680Z",
+   "snapshot": "59d9bbd1be0e3688d9c726c77ff308c4ff07062154da8da1573afd9b27b4ff4d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wiener_Secession",
+   "title": "Wiener Secession – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:48.561Z",
+   "snapshot": "18f9966203c4bc06e97aac57191473cce83cc5e297ef60a4a09cf598306c19d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Br%C3%BCcke_Museum",
+   "title": "Brücke Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:50.058Z",
+   "snapshot": "272100c6b1a381ecaee419b25bbb98b445097f41f8f8c1498707f9c30d48ea7a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Der_Blaue_Reiter",
+   "title": "Der Blaue Reiter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:51.061Z",
+   "snapshot": "2a0cf0b9c072c9b95efc1690c7625672af764b68e8775d709269839cad05e237"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berliner Secession",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02712",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Münchner Secession",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02713",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wiener Secession",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Brücke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Blaue Reiter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:04.600Z",
+   "target": "f02711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berliner Secession (auch: Berliner Sezession) ist die Bezeichnung einer deutschen Künstlergruppe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berliner Secession” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:04.600Z",
+   "target": "f02712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Über alle stilistischen Unterschiede der Sezessionsmitglieder hinaus zielte die Münchner Secession dabei auf die Verwirklichung des Ideals der künstlerischen Freiheit ab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Münchner Secession” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:04.600Z",
+   "target": "f02713",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Wiener Secession, genauer Vereinigung bildender Künstler Wiener Secession, ist eine Vereinigung bildender Künstler in Wien aus der Zeit des Fin de siècle.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wiener Secession” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:04.600Z",
+   "target": "f02714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Brücke Museum in Berlin houses the world's largest collection of works by members of the group Die Brücke (\"The Bridge\"), an early 20th-century German expressionist movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Brücke” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:04.600Z",
+   "target": "f02715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Blaue Reiter (English: The Blue Rider) was a group of artists and a designation by Wassily Kandinsky and Franz Marc for their exhibition and publication activities, in which both artists acted as sole editors in the almanac of the same name (first published in mid-May 1912).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Blaue Reiter” is on the snapshot of s5"
+  }
+ ]
+}

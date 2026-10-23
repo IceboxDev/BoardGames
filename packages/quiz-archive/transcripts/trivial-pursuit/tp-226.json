@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-226",
+ "image": "IMG20261007174702.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt die Stadt, in der das deutsche Bundesverfassungsgericht seinen Sitz hat?",
+   "de": "Wie heißt die Stadt, in der das deutsche Bundesverfassungsgericht seinen Sitz hat?",
+   "en": "In which city does the German Federal Constitutional Court have its seat?",
+   "reworked": false,
+   "answerDe": "Karlsruhe",
+   "answerEn": "Karlsruhe",
+   "timeline": {
+    "kind": "founding",
+    "start": "1951-09-28",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Germany's Federal Constitutional Court is officially opened in Karlsruhe",
+    "labelDe": "Das Bundesverfassungsgericht wird in Karlsruhe feierlich eröffnet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bundesverfassungsgericht",
+    "title": "Bundesverfassungsgericht",
+    "lang": "de"
+   },
+   "notes": "Seat fixed in § 1 (2) BVerfGG.",
+   "domain": "society",
+   "sub": "law"
+  },
+  {
+   "category": 2,
+   "cardDe": "Von welcher Band stammt der Titelsong des Films Pretty in Pink aus dem Jahr 1986?",
+   "de": "Von welcher Band stammt der Titelsong des Films Pretty in Pink aus dem Jahr 1986?",
+   "en": "Which band recorded the title song of the 1986 film Pretty in Pink?",
+   "reworked": false,
+   "answerDe": "The Psychedelic Furs",
+   "answerEn": "The Psychedelic Furs",
+   "timeline": {
+    "kind": "creation",
+    "start": "1986",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Psychedelic Furs re-record \"Pretty in Pink\" for the film of the same name",
+    "labelDe": "The Psychedelic Furs nehmen „Pretty in Pink“ für den gleichnamigen Film neu auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pretty_in_Pink_(song)",
+    "title": "Pretty in Pink (song)",
+    "lang": "en"
+   },
+   "notes": "The song first appeared in 1981 on the album Talk Talk Talk and was re-recorded in 1986 for the film. The film title is italic on the card.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Barack Obama war der erste US-Präsident, der während seiner Amtszeit mit dem Friedensnobelpreis ausgezeichnet wurde. Richtig oder falsch?",
+   "de": "Welcher US-Präsident wurde als erster während seiner Amtszeit mit dem Friedensnobelpreis ausgezeichnet?",
+   "en": "Which US president was the first to be awarded the Nobel Peace Prize while in office?",
+   "reworked": true,
+   "answerDe": "Theodore Roosevelt",
+   "answerEn": "Theodore Roosevelt",
+   "timeline": {
+    "kind": "event",
+    "start": "1906",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Theodore Roosevelt becomes the first American to receive the Nobel Peace Prize",
+    "labelDe": "Theodore Roosevelt erhält als erster Amerikaner den Friedensnobelpreis"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Theodore_Roosevelt",
+    "title": "Theodore Roosevelt",
+    "lang": "de"
+   },
+   "notes": "Card's true/false reworked; the card's statement is false. Roosevelt (president 1901–1909) received the 1906 prize for mediating the end of the Russo-Japanese War; Woodrow Wilson (1919) and Barack Obama (2009) also received it in office.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Roman von Anthony Burgess aus dem Jahr 1963 beschreibt eine düstere Zukunft und wurde 1971 mit Malcolm McDowell verfilmt?",
+   "de": "Welcher Roman von Anthony Burgess aus dem Jahr 1963 beschreibt eine düstere Zukunft und wurde 1971 mit Malcolm McDowell verfilmt?",
+   "en": "Which novel by Anthony Burgess from 1963 depicts a bleak future and was filmed in 1971 with Malcolm McDowell?",
+   "reworked": false,
+   "answerDe": "Uhrwerk Orange",
+   "answerEn": "A Clockwork Orange",
+   "timeline": {
+    "kind": "creation",
+    "start": "1962-03-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Anthony Burgess's novel A Clockwork Orange is first published",
+    "labelDe": "Anthony Burgess' Roman Uhrwerk Orange (A Clockwork Orange) erscheint erstmals"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Uhrwerk_Orange_(Roman)",
+    "title": "Uhrwerk Orange (Roman)",
+    "lang": "de"
+   },
+   "notes": "The card's year is off: the novel was first published in 1962 (William Heinemann, 17 March 1962 per the English Wikipedia). Stanley Kubrick's film followed in 1971.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "In welchem skandinavischen Land steht eine vier Meter hohe Fichte, die 9.500 Jahre alte Wurzeln hat?",
+   "de": "In welchem skandinavischen Land steht eine vier Meter hohe Fichte, die 9.500 Jahre alte Wurzeln hat?",
+   "en": "In which Scandinavian country does a four-metre-tall spruce with 9,500-year-old roots stand?",
+   "reworked": false,
+   "answerDe": "Schweden",
+   "answerEn": "Sweden",
+   "timeline": {
+    "kind": "discovery",
+    "start": "2008",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Radiocarbon dating of Old Tjikko's roots is announced, making it the oldest known clonal spruce",
+    "labelDe": "Die Radiokarbondatierung der Wurzeln von Old Tjikko wird bekannt; sie gilt als älteste bekannte Fichte"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Old_Tjikko",
+    "title": "Old Tjikko",
+    "lang": "de"
+   },
+   "notes": "Old Tjikko, a Norway spruce in Fulufjället National Park, Dalarna; root parts dated to about 9,550 years. Discovered by Leif Kullman and Lisa Öberg.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welcher Reitweise wird getrabt: im englischen, klassischen oder Western-Stil?",
+   "de": "Wie heißt beim Westernreiten der sehr langsame Trab, der dem Tempo einer getriebenen Rinderherde entspricht?",
+   "en": "In Western riding, what is the name of the very slow trot that matches the pace of a cattle drive?",
+   "reworked": true,
+   "answerDe": "Jog",
+   "answerEn": "Jog",
+   "timeline": {
+    "kind": "era",
+    "start": "1800",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Western riding develops from the cattle work of cowboys and vaqueros in the American West",
+    "labelDe": "Das Westernreiten entwickelt sich aus der Rinderarbeit von Cowboys und Vaqueros im amerikanischen Westen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Pferdegangart",
+    "title": "Pferdegangart",
+    "lang": "de"
+   },
+   "notes": "Card's multiple choice reworked; the card's question is unclear (the trot is ridden in all three styles), so the open question asks for the Western name of the trot. Timeline approximate, from the English article 'Western riding' (vaquero influence).",
+   "domain": "everyday",
+   "sub": "leisure"
+  }
+ ]
+}

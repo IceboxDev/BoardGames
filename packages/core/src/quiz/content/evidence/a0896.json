@@ -1,0 +1,546 @@
+{
+ "article": "a0896",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sisyphus",
+   "title": "Sisyphus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:30.230Z",
+   "snapshot": "3be412df217feb07301f8dff3fc5568729499c0905ad9fca7a36c27a50210450"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Achilles%27_heel",
+   "title": "Achilles' heel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:31.228Z",
+   "snapshot": "559948f804b84e2db4f493f04064cb006442863def6d7fe9f0bc3e75e0403ec4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pandora%27s_box",
+   "title": "Pandora's box – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:32.354Z",
+   "snapshot": "aae2457ddc3937407d7bfaeb9a9e583df4df2413da49382e08f5245f3742649b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Procrustes",
+   "title": "Procrustes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:33.273Z",
+   "snapshot": "fa414b1ae5967475f508c6a27bc0020f4ce7078577fc82bc0ea11bf9b645c7e9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ariadne_auf_Naxos",
+   "title": "Ariadne auf Naxos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:34.358Z",
+   "snapshot": "b0bb44c35723eb1b209f2ce835b73e00b383bd920245dc76631593543bb56977"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/sisyphean",
+   "title": "Sisyphean | English meaning - Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:30.265Z",
+   "snapshot": "0bc48edc78910196b7111023dabf69d100ecf7086870539e8b6c5e3c9cba6d1a"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Sisyphusarbeit",
+   "title": "Sisyphusarbeit – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:31.299Z",
+   "snapshot": "b05adda8d66f4e18e3272f58e90223c50c711772562467059c766ab730d084c8"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Ariadne%27s_thread_(logic)",
+   "title": "Ariadne's thread (logic) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:30.440Z",
+   "snapshot": "b53a632614f8085f2e62c372ba9117980ef3b2eac9b355ec0d53464de9e114af"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Ariadnefaden",
+   "title": "Ariadnefaden – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:31.993Z",
+   "snapshot": "9c7d545e59d681608e6345b2e8da0ea17fb2877adaf2879d0c2aae881e098f56"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sisyphean task",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Achilles' heel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pandora's box",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Procrustean bed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ariadne's thread",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:01.654Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sisyphean task",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sisyphean task”, “Sisyphusarbeit”, “сизифов труд”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:01.654Z",
+   "target": "f04477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An Achilles' heel (or  Achilles heel) is a weakness despite overall strength, which can lead to downfall.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Achilles' heel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:01.654Z",
+   "target": "f04478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pandora's box is an artefact in Greek mythology connected with the myth of Pandora in Hesiod's c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandora's box” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:01.654Z",
+   "target": "f04479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Procrustean bed is an arbitrary standard to which exact conformity is forced.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.654Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Procrustean bed” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:01.654Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ariadne's thread",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ariadne's thread”, “Ariadnefaden”, “нить Ариадны”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:00:27Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tasks that are laborious, futile, and never-ending are therefore often described as Sisyphean",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:00:31Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trying to completely eliminate doping from sport is a Sisyphean task.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:00:33Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "sinnlose, vergebliche Anstrengung; schwere, nie ans Ziel führende Arbeit",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:00:36Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ariadne's thread, named for the legend of Ariadne who gave Theseus a ball of thread",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:00:38Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "etwas, was jemanden durch Wirrnis hindurchleitet, ihm aus einer unüberschaubaren Situation heraushilft",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tasks that are laborious, futile, and never-ending are therefore often described as Sisyphean",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trying to completely eliminate doping from sport is a Sisyphean task.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "sinnlose, vergebliche Anstrengung; schwere, nie ans Ziel führende Arbeit",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ariadne's thread, named for the legend of Ariadne who gave Theseus a ball of thread",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "etwas, was jemanden durch Wirrnis hindurchleitet, ihm aus einer unüberschaubaren Situation heraushilft",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trying to completely eliminate doping from sport is a Sisyphean task.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sisyphean task” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sisyphusarbeit ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sisyphusarbeit” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ariadne's thread, named for the legend of Ariadne who gave Theseus a ball of thread (literally a “clue”) to find his way back out of the Minotaur’s labyrinth, is solving a problem which has multiple apparent ways to proceed—such as a physical maze, a logic puzzle, or an ethical dilemma—through an",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ariadne's thread” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:30.942Z",
+   "target": "f04480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ariadnefaden ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ariadnefaden” is on the snapshot of s9"
+  }
+ ]
+}

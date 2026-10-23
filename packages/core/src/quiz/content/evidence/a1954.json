@@ -1,0 +1,262 @@
+{
+ "article": "a1954",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Great_Blizzard_of_1888",
+   "title": "Great Blizzard of 1888 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:52.559Z",
+   "snapshot": "64a29cd899ff0428a9d498dabf689e976861124112896af694082648f5f60a16"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Typhoon",
+   "title": "Typhoon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:53.671Z",
+   "snapshot": "e57af0fae3c7163044c74e39653b72ae198e1278e8284fb07729aced0bf3fd9e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1925_tri-state_tornado",
+   "title": "1925 tri-state tornado – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:54.682Z",
+   "snapshot": "955ceedbae5b7e649a217f1e52ece3005cce17e59c084b14f4996b2b524eff04"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chinook_wind",
+   "title": "Chinook wind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:55.706Z",
+   "snapshot": "a163919299eabc868a0302d19426a092c9f740831798d01ee9f3945b27334a68"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tornado_Alley",
+   "title": "Tornado Alley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:56.568Z",
+   "snapshot": "11c83dc8f15095bbe5d51df8c790078e267c4f6f3d224ea729f66ff5623a4672"
+  },
+  "s6": {
+   "url": "https://www.etymonline.com/word/blizzard",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Haartrockner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:42:32.848Z",
+   "snapshot": "9e8996f714f442dad095bc3126092ec8b8c8cbcb0bc1273fa1fefc968724d279"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mistral_(wind)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:55.323Z",
+   "snapshot": "0c7c7f4eb450be53afd17d048e216b2931fa50bcbde8794b64521fc609d26593"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blizzard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Typhoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tornado",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20823",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chinook",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tornado Alley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:52.980Z",
+   "target": "f09766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Great Blizzard of 1888, also known as the Great Blizzard of '88 or the Great White Hurricane (March 11–14, 1888), was one of the most severe recorded blizzards and deadliest blizzard in American history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blizzard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:52.980Z",
+   "target": "f09768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A typhoon is a tropical cyclone that develops between 180° and 100°E in the Northern Hemisphere and which produces sustained hurricane-force winds of at least 119 km/h (74 mph).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Typhoon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:52.980Z",
+   "target": "f09770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the midday and afternoon hours of Wednesday, March 18, 1925, the deadliest tornado in United States history and second-deadliest worldwide moved through Eastern Missouri, Southern Illinois and Southern Indiana, killing 695 people and injuring 2,027 more in what is sometimes known as the Tri-State",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tornado” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:52.980Z",
+   "target": "f20823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chinook winds, or simply chinooks, are two types of prevailing warm, generally westerly winds in western North America: Coastal Chinooks and interior Chinooks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chinook” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:52.980Z",
+   "target": "f20824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tornado Alley, also known as Tornado Valley, is a loosely defined location of the central United States where tornadoes are most frequent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tornado Alley” is on the snapshot of s5"
+  }
+ ]
+}

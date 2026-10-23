@@ -1,0 +1,335 @@
+{
+ "article": "a1507",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hugo_Boss",
+   "title": "Hugo Boss – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:30.814Z",
+   "snapshot": "00989271cbdc7cb852ebfeb27f7299e8437b3caa36aefc28d4297ed62c9a007e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bertelsmann",
+   "title": "Bertelsmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:31.381Z",
+   "snapshot": "8a8298b00d7923b33e4fc0d589a1fc8ba9101aea1bdf2e04a631b89996371df2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dr._Oetker",
+   "title": "Dr. Oetker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:31.892Z",
+   "snapshot": "e161e3ab1a97a0c5b5298f750d44d2d8a4d8bb91fdba058cf18fc53660bf0b5a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/BASF",
+   "title": "BASF – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:22.962Z",
+   "snapshot": "dd53717d832f27d47bd1ddff007704fe9af0598983639f20f993e136ce80874a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Reebok",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:33.024Z",
+   "snapshot": "77e84db9a3e7df4dade0516a93b6e7cb270e23cc11c9401a5c3071e2a890e0b4"
+  },
+  "s6": {
+   "url": "https://cen.acs.org/content/dam/cen/102/22/WEB/10222-global50-2024.pdf",
+   "title": "C&EN's Global Top 50 chemical companies 2024",
+   "publisher": "Chemical & Engineering News (American Chemical Society)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:14:38Z"
+  },
+  "s7": {
+   "url": "https://newsspace.kr/news/article.html?no=8398",
+   "title": "Global Chemical Company Rankings: Germany's BASF and China's Sinopec Rank 1st and 2nd – Newsspace",
+   "publisher": "Newsspace (Korea)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:17.713Z",
+   "snapshot": "cea78c1fe35028b3f7e3f31656daaf5baa9b1e5a56e6a95b41ac8eeabb234dac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hugo Boss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertelsmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dr. Oetker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "BASF",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:36.441Z",
+   "target": "f07531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hugo Boss AG (stylized in all caps) is a German designer fashion company headquartered in Metzingen, Baden-Württemberg, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.441Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hugo Boss” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:36.441Z",
+   "target": "f07533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertelsmann ist ein internationales Medien-, Dienstleistungs- und Bildungsunternehmen mit Hauptsitz in Gütersloh.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.441Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertelsmann” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:36.441Z",
+   "target": "f07534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dr. Oetker (German pronunciation: [ˌdɔktoːɐ̯ ˈʔœtkɐ]) is a German multinational company that produces baking powder, cake mixes, frozen pizza, pudding, breakfast cereals, cake decoration, birthday candles, and various other products.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.441Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Oetker” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:36.441Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "BASF SE (German pronunciation: [beːaːɛsˈʔɛf] ), an initialism of its original name Badische Anilin- & Soda-Fabrik (German for 'Baden Aniline & Soda Factory'), is a German multinational company and the largest chemical producer in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.441Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BASF” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:14:38Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The world’s largest chemical maker",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "BASF ranked No. 1 (2023 chemical sales $74.5 billion)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:14:40Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Among the top 10 global chemical companies by sales in 2025, Germany's BASF still holds the top spot.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "Reports C&EN's July 2025 Global Top 50."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:14:41Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is a German multinational company and the largest chemical producer in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:22.256Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Among the top 10 global chemical companies by sales in 2025, Germany's BASF still holds the top spot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.256Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:22.256Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is a German multinational company and the largest chemical producer in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.256Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:22.256Z",
+   "target": "f07535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Global Chemical Company Rankings: Germany's BASF and China's Sinopec Rank 1st and 2nd, LG Chem 7th, Lotte Chemical 24th",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.256Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “BASF” is on the snapshot of s7"
+  }
+ ]
+}

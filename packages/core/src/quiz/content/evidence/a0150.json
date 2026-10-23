@@ -1,0 +1,256 @@
+{
+ "article": "a0150",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Maria_Theresa",
+   "title": "Maria Theresa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:13.982Z",
+   "snapshot": "589673728c9b2537eea024309b7e3438125612aa8d7d1e9660e766b1aac6819c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Louis_XVI",
+   "title": "Louis XVI – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:14.785Z",
+   "snapshot": "a11d23f81d7ddef71388e27dba27665f657d9ed6c0db8b60f15c2b8065b75e7e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Pragmatische_Sanktion",
+   "title": "Pragmatische Sanktion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:27:13.325Z",
+   "snapshot": "02936532768c1601f88914956e6c5688695cb687944978f9ff03e42e748fd042"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marie_Louise,_Duchess_of_Parma",
+   "title": "Marie Louise, Duchess of Parma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:15.864Z",
+   "snapshot": "ec319bea7373cffac5e1ae0fddebe0bd35a8d65488bc669614732a23791513f2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Let_them_eat_cake",
+   "title": "Let them eat cake",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:16.794Z",
+   "snapshot": "6d3266a5f5b62b278878880e0433837703e0dd3e31d66e22a7dc1b6da907278b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/War_of_the_Austrian_Succession",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:18.004Z",
+   "snapshot": "47c3761663c25f0a93e8ef7209bc4d4c502b60ca2e0df4ff057959b607d67a25"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Louis_XVII",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:18.857Z",
+   "snapshot": "74c6cdc69c60d7f8a1ac1a61728ca72f610c4388d709b9f08253468800d30733"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maria Theresa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis XVI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl VI.",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00750",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marie Louise of Austria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jean-Jacques Rousseau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-093"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:01.006Z",
+   "target": "f00746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maria Theresa (Maria Theresia Walburga Amalia Christina; 13 May 1717 – 29 November 1780) was the ruler of the Habsburg monarchy from 1740 until her death in 1780, and the only woman to hold the position in her own right.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maria Theresa” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:01.006Z",
+   "target": "f00747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis XVI (Louis-Auguste; French: [lwi sɛːz]; 23 August 1754 – 21 January 1793) was the last king of France before the fall of the monarchy during the French Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis XVI” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:01.006Z",
+   "target": "f00748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "April 1713 von Kaiser Karl VI. veröffentlichte Urkunde (Hausgesetz), die die Unteilbarkeit und Untrennbarkeit aller habsburgischen Erbkönigreiche und Länder festlegte und zu diesem Zweck eine einheitliche Erbfolgeordnung vorsah.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl VI.” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:01.006Z",
+   "target": "f00750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Archduchess Marie Louise of Austria (who was given the Latin baptismal name of Maria Ludovica Leopoldina Francisca Theresa Josepha Lucia) was born at the Hofburg Palace in Vienna on 12 December 1791 to Archduke Francis of Austria and his second wife, Maria Theresa of Naples and Sicily.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marie Louise of Austria” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:01.006Z",
+   "target": "f12261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The phrase can actually be traced back to Jean-Jacques Rousseau's Confessions in 1765, 24 years prior to the French Revolution, and when Antoinette was nine years old and had never been to France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Jacques Rousseau” is on the snapshot of s5"
+  }
+ ]
+}

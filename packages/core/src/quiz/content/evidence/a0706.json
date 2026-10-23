@@ -1,0 +1,222 @@
+{
+ "article": "a0706",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus",
+   "title": "Voyages of Christopher Columbus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:05.718Z",
+   "snapshot": "48e332a5668efdef276ebae43245ea13d854dc2d0d3e4bd81712f9f225eb5c0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hippalus",
+   "title": "Hippalus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:30.151Z",
+   "snapshot": "86347bfbe94616407090aed17a5b1b19315fb38e4efabe3ac7a6d22687105794"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Intertropical_Convergence_Zone",
+   "title": "Intertropical Convergence Zone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:31.253Z",
+   "snapshot": "3a0b0a888c2e6cb599965f21fe6dba3c98911277e60fd5fff2d38b8411c91522"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trade_winds",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:32.163Z",
+   "snapshot": "397ed15d4d3fa9ad7b9f26b92293126a6ea7d7d62472e907f1c3842abbedc945"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/Passat",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:29.671Z",
+   "snapshot": "3a839979d09d85e1278ecf57a352576e0f84f68cfb171a4010ed78fb04d1964d"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/F%C3%B6hn",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:49.593Z",
+   "snapshot": "2eeb09cdee3438a5f4eb96a04f89d0e271d5eceecf42db682b24c91986a6b23b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mistral_(wind)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:55.323Z",
+   "snapshot": "0c7c7f4eb450be53afd17d048e216b2931fa50bcbde8794b64521fc609d26593"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Brand_von_Glarus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:29.909Z",
+   "snapshot": "461481e94f3522c022d7626bdad521a068cf24e9f8f9208b1eecdc86107f52cd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "trade wind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c059"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03527",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "monsoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f20820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "doldrums",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20822",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hippalus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:29.819Z",
+   "target": "f03526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He planned to first sail to the Canary Islands before continuing west by utilizing the northeast trade wind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “trade wind” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:29.819Z",
+   "target": "f03527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pliny the Elder claimed that Hippalus discovered not the route, but the monsoon wind also called Hippalus (the south-west monsoon wind).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monsoon” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:29.819Z",
+   "target": "f20820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Intertropical Convergence Zone (ITCZ  ITCH, or ICZ), known by sailors as the doldrums or the calms because of its monotonous windless weather, is the area where the northeast and the southeast trade winds converge.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “doldrums” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:29.819Z",
+   "target": "f20822",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hippalus (Ancient Greek: Ἵππαλος) was a Greek navigator and merchant who probably lived in the 1st century BCE.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hippalus” is on the snapshot of s2"
+  }
+ ]
+}

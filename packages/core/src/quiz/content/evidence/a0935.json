@@ -1,0 +1,335 @@
+{
+ "article": "a0935",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Red_cabbage",
+   "title": "Red cabbage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:18.297Z",
+   "snapshot": "9afc981b1a6521db609e991748156da499665906212b1cd082b6370fde6358e5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gartenhortensie",
+   "title": "Gartenhortensie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:15.512Z",
+   "snapshot": "a8473688064fa91d3f31141ba9a0fd1a227e43dee62fb07695db2691b0507a05"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Beetroot",
+   "title": "Beetroot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:16.246Z",
+   "snapshot": "98969cce44136805bea061481364d90483cbf48bd1346dc69ecb5d3b2aa8d662"
+  },
+  "s4": {
+   "url": "https://www.planet-wissen.de/gesellschaft/lebensmittel/spargel/index.html",
+   "title": "Spargel – Planet Wissen",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:15.707Z",
+   "snapshot": "e7e72a32aa8a8aee7bbdca1e1e75391fef5c568cbf986193c913e778de17ddb7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Onion",
+   "title": "Onion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:19.481Z",
+   "snapshot": "4c70a86b2b104a7d8ad7f311ccbdb40b4706e325c25e15bef4318bbad56e5f0d"
+  },
+  "s6": {
+   "url": "https://hgic.clemson.edu/factsheet/hydrangea/",
+   "title": "Hydrangea – HGIC 1067",
+   "publisher": "Clemson Cooperative Extension (Home & Garden Information Center)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:43.309Z",
+   "snapshot": "d39c38664891e13d6268e37ab550cb0feb2e7d868e4a82bfbbe3ac7aa1df9128"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hydrangea_macrophylla",
+   "title": "Hydrangea macrophylla – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:42.292Z",
+   "snapshot": "6906a790f7e1e356d7d05b2b9c3c64713d5df0face81c7fc4619454984d3028e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "red cabbage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "die Hortensie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "beetroot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Spargel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the onion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:07.394Z",
+   "target": "f04671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The red cabbage (purple-leaved varieties of Brassica oleracea Capitata Group) is a kind of cabbage, also known as Blaukraut after preparation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red cabbage” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:07.394Z",
+   "target": "f04672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "die Hortensie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die Hortensie”, “the hydrangea”, “Гортензия”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:07.394Z",
+   "target": "f04673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beetroot or beet is the taproot portion of a Beta vulgaris subsp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “beetroot” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:07.394Z",
+   "target": "f04674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lebensmittel: Spargel - Lebensmittel - Gesellschaft - Planet Wissen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spargel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:07.394Z",
+   "target": "f04675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The onion (Allium cepa L.Tooltip Carl Linnaeus, from Latin cepa), also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the onion” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:32Z",
+   "target": "f04672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Flower Colors: Blue in acidic soil; pink in alkaline soil",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:37Z",
+   "target": "f04672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An acidic soil (pH below 7) will usually produce a flower colour closer to blue, whereas an alkaline soil (pH above 7) will produce flowers of a pink, or even a red colour.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:37.124Z",
+   "target": "f04672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Flower Colors: Blue in acidic soil; pink in alkaline soil",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:37.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:37.124Z",
+   "target": "f04672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An acidic soil (pH below 7) will usually produce a flower colour closer to blue, whereas an alkaline soil (pH above 7) will produce flowers of a pink, or even a red colour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:37.124Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "article": "a0686",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rumantsch_Grischun",
+   "title": "Rumantsch Grischun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:06.661Z",
+   "snapshot": "a81ba924c7fb13f9ed480cb5027072174b0836761e3e966ea6fb743162b152d8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eupen-Malmedy",
+   "title": "Eupen-Malmedy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:10.235Z",
+   "snapshot": "9f55fa5459045efbfb7502cd8d000e400f20b4d464714f01a2c62b961c50edd8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Deutschsprachige_Gemeinschaft",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:07.591Z",
+   "snapshot": "46c8e186dbc3cd0dda851967b9391787c91c267fb503ad162a4aa25bc2657465"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Luxembourgish",
+   "title": "Luxembourgish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:11.221Z",
+   "snapshot": "a900b019774e0282e46df719134cfe2baa230a400597ae5a3fbcc0de0bc73c28"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Swedish-speaking_population_of_Finland",
+   "title": "Swedish-speaking population of Finland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:12.308Z",
+   "snapshot": "ac49a4f5d0e52b1b045ad11ff63274fb23a2bfaf37958b88a9651ce305173ae8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rätoromanisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "German",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutsch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luxembourgish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Swedish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:26.760Z",
+   "target": "f03426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seit 2021 wird das Wahlfach Rätoromanisch an der gymnasialen Oberstufe Graubündens unterrichtet, das den Schülern Rumantsch Grischun gleichberechtigt anstelle der Wahl eines Idioms anbietet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rätoromanisch” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:26.760Z",
+   "target": "f03427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eupen-Malmedy is a small, predominantly German-speaking region in eastern Belgium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “German” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.760Z",
+   "target": "f03427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ansonsten wird weitgehend die hochdeutsche Standardsprache (Deutsch) in Verwaltungen, Schulen, im Kirchenleben und in den Sozialbeziehungen verwendet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.760Z",
+   "target": "f03428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luxembourgish ( LUK-səm-bur-ghish; also Luxemburgish, Luxembourgian, Letzebu(e)rgesch; endonym: Lëtzebuergesch [ˈlətsəbu̯əjəʃ] ) is a West Germanic language that is spoken mainly in Luxembourg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luxembourgish” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.760Z",
+   "target": "f03429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Swedish-speaking population of Finland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Swedish” is on the snapshot of s5"
+  }
+ ]
+}

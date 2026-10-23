@@ -1,0 +1,242 @@
+{
+ "article": "a1372",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Darkly_Dreaming_Dexter",
+   "title": "Darkly Dreaming Dexter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:35.220Z",
+   "snapshot": "ad3c7e36d3f2fae2d3d0efa5110745f0ce7ddd947b67278fc002472722c01cff"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Monk_(TV_series)",
+   "title": "Monk (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:04.827Z",
+   "snapshot": "1237ef297ee6c9851702c55e3c51a849907fb53fb1957d714cfbb2814bbaa983"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bones_(TV_series)",
+   "title": "Bones (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:36.353Z",
+   "snapshot": "d950c7e5c88c9c09dbae20903274529ea213f083db738fa9b9c17ca07b542884"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Michael_C._Hall",
+   "title": "Michael C. Hall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:37.297Z",
+   "snapshot": "f4a0faf4389b34736f1ff66d7882262e802e965e721e7d126feb4de45ae4201e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/James_Gandolfini",
+   "title": "James Gandolfini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:38.311Z",
+   "snapshot": "31b01b81cf1d10d015390458203ab68251d056fdd440f9130235a5a82feece27"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dexter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Monk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Michael C. Hall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "James Gandolfini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:15.497Z",
+   "target": "f06856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Darkly Dreaming Dexter is a 2004 novel by Jeff Lindsay, the first in his crime/thriller series about American forensic analyst/serial killer Dexter Morgan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dexter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:15.497Z",
+   "target": "f06859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Monk is an American mystery comedy-drama television series that originally ran on the USA Network from July 12, 2002, to December 6, 2009, with 125 episodes broadcast over eight seasons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monk” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:15.497Z",
+   "target": "f06860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bones is an American police procedural drama television series created by Hart Hanson for Fox.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bones” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:15.497Z",
+   "target": "f21320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Michael C. Hall was born in Raleigh, North Carolina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael C. Hall” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:15.497Z",
+   "target": "f21321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "But James Gandolfini gets his own mountain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Gandolfini” is on the snapshot of s5"
+  }
+ ]
+}

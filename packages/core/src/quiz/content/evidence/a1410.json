@@ -1,0 +1,265 @@
+{
+ "article": "a1410",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Costa_Concordia_disaster",
+   "title": "Costa Concordia disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:39.783Z",
+   "snapshot": "f8d342e2be46b6c5c052d2462533cf7f51ff900b1ed0cbb2161e69bf940eec72"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/SS_Andrea_Doria",
+   "title": "SS Andrea Doria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:40.492Z",
+   "snapshot": "e24b09fc2d7c959ffa3af6ed11352027120c85ad21a95dc7024470bd246bafcd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/MS_Estonia",
+   "title": "MS Estonia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:41.279Z",
+   "snapshot": "b8baa5ecaa3d1f70b255af59c6d13123f0b7b5718ce9d6f5a0e28eb84283fd6e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Millvina_Dean",
+   "title": "Millvina Dean",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:42.284Z",
+   "snapshot": "8eb263208135d66969114db1a9d2750cb33ca3b1c20b0a1e74b854218a9565be"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Lusitania",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:43.664Z",
+   "snapshot": "9ef7d52ba3caf45e32c1f5f8bc3422b60a7e7cc09a09e0dfbb672a2360e1f248"
+  },
+  "s6": {
+   "url": "https://www.encyclopedia-titanica.org/titanic-survivor/millvina-dean.html",
+   "title": "Millvina Dean (1912–2009) : Last survivor of the Titanic",
+   "publisher": "Encyclopedia Titanica",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:52:37Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Costa Concordia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Andrea Doria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Estonia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sinking of the Titanic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-141"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:21.206Z",
+   "target": "f07046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 13 January 2012, the seven-year-old Costa Cruises vessel Costa Concordia was on the first leg of a cruise around the Mediterranean Sea when the cruise ship deviated from her planned route at Isola del Giglio, Italy in order to perform a sail-by salute, and as a consequence struck a rock formation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Costa Concordia” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:21.206Z",
+   "target": "f07049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "SS Andrea Doria (pronounced [anˈdrɛːa ˈdɔːrja]) was a transatlantic ocean liner of the Italian Line (Società di navigazione Italia), put into service in 1953.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andrea Doria” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:21.206Z",
+   "target": "f07050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MS Estonia was a car-passenger ferry built in 1980 for the Finnish shipping company Rederi Ab Sally by Meyer Werft, in Papenburg, West Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Estonia” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:21.206Z",
+   "target": "f12455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sinking of the Titanic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sinking of the Titanic”, “Untergang der Titanic”, “крушение «Титаника»”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:52:34Z",
+   "target": "f12455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the last living survivor of the sinking of the RMS Titanic on 15 April 1912 until her death in 2009.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:52:37Z",
+   "target": "f12455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The last survivor of the Titanic disaster died on 31 May 2009 after a short illness.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:06.157Z",
+   "target": "f12455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the last living survivor of the sinking of the RMS Titanic on 15 April 1912 until her death in 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:06.157Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s4"
+  }
+ ]
+}

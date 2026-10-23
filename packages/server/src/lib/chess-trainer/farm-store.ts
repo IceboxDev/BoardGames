@@ -8,8 +8,11 @@ import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
 import { finalDepth, pickBest } from "@boardgames/core/games/chess/trainer/eval-policy";
 import {
   type EvalKind,
+  FARM_HEAVY_PREFIX,
   FARM_NODE_LIMIT_PREFIX,
   type FarmJob,
+  heavyEstimate,
+  heavyMark,
   type PositionEval,
   PositionEvalSchema,
 } from "@boardgames/core/protocol";
@@ -136,14 +139,22 @@ const StatsRowSchema = z.object({
 });
 
 export async function farmStats(db: Client) {
-  const [counts, avg, seen] = await Promise.all([
+  const [counts, avg, seen, heavy] = await Promise.all([
     db.execute("SELECT status, COUNT(*) AS n FROM chess_eval_jobs GROUP BY status"),
     db.execute(`SELECT AVG(seconds) AS s FROM chess_eval_jobs
                 WHERE status = 'done' AND seconds IS NOT NULL AND updated_at > datetime('now', '-1 day')`),
     db.execute("SELECT MAX(last_seen_ms) AS t FROM chess_farm_workers"),
+    db.execute({
+      sql: `SELECT status, COUNT(*) AS n FROM chess_eval_jobs
+            WHERE error LIKE ? AND status IN ('queued', 'running') GROUP BY status`,
+      args: [`${FARM_HEAVY_PREFIX}%`],
+    }),
   ]);
   const by = Object.fromEntries(
     parseRows(StatsRowSchema, counts.rows, "chess_eval_jobs.stats").map((r) => [r.status, r.n]),
+  );
+  const heavyBy = Object.fromEntries(
+    parseRows(StatsRowSchema, heavy.rows, "chess_eval_jobs.heavy").map((r) => [r.status, r.n]),
   );
   const avgSeconds = avg.rows[0]?.s;
   const lastSeen = seen.rows[0]?.t;
@@ -154,7 +165,56 @@ export async function farmStats(db: Client) {
     failed: Number(by.failed ?? 0),
     avgSeconds: typeof avgSeconds === "number" ? Math.round(avgSeconds * 10) / 10 : null,
     lastSeen: typeof lastSeen === "number" ? new Date(lastSeen).toISOString() : null,
+    heavy: { queued: Number(heavyBy.queued ?? 0), running: Number(heavyBy.running ?? 0) },
   };
+}
+
+const PlaceRowSchema = z.object({
+  fen_key: z.string(),
+  kind: z.enum(["user", "opp"]),
+  status: z.enum(["queued", "running"]),
+});
+
+/**
+ * Where `items` stand at the farm, for an ETA: running, or queued with how
+ * many jobs come first in the order the farm's lanes claim them (the most
+ * popular, then the most reached, then the oldest; `claimJobs`). A position
+ * with no live job is left out. `lanes` is the searches running now.
+ */
+export async function queuePlaces(
+  db: Client,
+  spec: string,
+  items: readonly { fen: string; kind: EvalKind }[],
+): Promise<{
+  places: Record<string, { status: "queued" | "running"; ahead: number }>;
+  lanes: number;
+  avgSeconds: number | null;
+}> {
+  const [res, stats] = await Promise.all([
+    db.execute({
+      // The heavy lane's jobs aren't in this order and have no ETA: left out.
+      sql: `SELECT fen_key, kind, status FROM chess_eval_jobs
+             WHERE spec = ? AND status IN ('queued', 'running')
+               AND (error IS NULL OR error NOT LIKE ?)
+             ORDER BY popularity IS NULL, popularity DESC, reach DESC, id`,
+      args: [spec, `${FARM_HEAVY_PREFIX}%`],
+    }),
+    farmStats(db),
+  ]);
+  const rank = new Map<string, { status: "queued" | "running"; ahead: number }>();
+  let queuedSoFar = 0;
+  for (const row of parseRows(PlaceRowSchema, res.rows, "chess_eval_jobs.places")) {
+    const id = `${row.fen_key}|${row.kind}`;
+    if (row.status === "running") rank.set(id, { status: "running", ahead: 0 });
+    else rank.set(id, { status: "queued", ahead: queuedSoFar++ });
+  }
+  const places: Record<string, { status: "queued" | "running"; ahead: number }> = {};
+  for (const item of items) {
+    const key = fenKey(item.fen);
+    const place = key ? rank.get(`${key}|${item.kind}`) : undefined;
+    if (place) places[item.fen] = place;
+  }
+  return { places, lanes: stats.running, avgSeconds: stats.avgSeconds };
 }
 
 /** Whether a worker checked in recently enough to call the farm "running". */
@@ -203,6 +263,12 @@ const CandidateRowSchema = z.object({
  * ~5–20 %, too little to spend hours on a one-game line while a main line
  * waits. `deep` order: the preferred positions first, then the deepest waiting
  * position (most reach among equals) — a worker that finishes lines.
+ *
+ * Jobs handed to the heavy lane (`FARM_HEAVY_PREFIX`) are the `heavy` lane's
+ * alone: its own unfinished one first (a restarted heavy worker), then the
+ * smallest estimate, so the most results come back soonest and the worst
+ * offenders wait for the rest — and never re-leased by age, since
+ * one heavy search may run for weeks.
  */
 export async function claimJobs(
   db: Client,
@@ -212,8 +278,10 @@ export async function claimJobs(
   kinds: readonly EvalKind[] = ["user", "opp"],
   now = Date.now(),
   order: "reach" | "deep" = "reach",
+  lane: "normal" | "heavy" = "normal",
 ): Promise<FarmJob[]> {
   await touchWorker(db, worker, now);
+  if (lane === "heavy") return claimHeavy(db, worker, max, kinds, now);
   const keys = prefer.flatMap((fen) => {
     const key = fenKey(fen);
     return key ? [key] : [];
@@ -222,12 +290,19 @@ export async function claimJobs(
     const i = keys.indexOf(key);
     return i < 0 ? keys.length : i;
   };
-  // Never a job this worker already ran out of nodes on (another worker may finish it).
+  // Never a job this worker already ran out of nodes on (another worker may
+  // finish it), nor one handed to the heavy lane.
   const claimable = `kind IN (${kinds.map(() => "?").join(", ")})
               AND (status = 'queued'
                 OR (status = 'running' AND (claimed_at_ms < ? OR worker = ?)))
-              AND (error IS NULL OR error NOT LIKE ?)`;
-  const claimableArgs = [...kinds, now - LEASE_MS, worker, `${FARM_NODE_LIMIT_PREFIX}${worker}:%`];
+              AND (error IS NULL OR (error NOT LIKE ? AND error NOT LIKE ?))`;
+  const claimableArgs = [
+    ...kinds,
+    now - LEASE_MS,
+    worker,
+    `${FARM_NODE_LIMIT_PREFIX}${worker}:%`,
+    `${FARM_HEAVY_PREFIX}%`,
+  ];
 
   let pick: { sql: string; args: (string | number)[] };
   if (order === "deep") {
@@ -291,6 +366,66 @@ export async function claimJobs(
     requestedBy: r.requested_by,
     stage: r.stage,
   }));
+}
+
+const HeavyRowSchema = z.object({
+  id: z.number(),
+  status: z.string(),
+  worker: z.string().nullable(),
+  error: z.string().nullable(),
+});
+
+/** The heavy lane's claim (see `claimJobs`). */
+async function claimHeavy(
+  db: Client,
+  worker: string,
+  max: number,
+  kinds: readonly EvalKind[],
+  now: number,
+): Promise<FarmJob[]> {
+  const claimable = `kind IN (${kinds.map(() => "?").join(", ")}) AND error LIKE ?
+              AND (status = 'queued' OR (status = 'running' AND worker = ?))`;
+  const claimableArgs = [...kinds, `${FARM_HEAVY_PREFIX}%`, worker];
+  const res = await db.execute({
+    sql: `SELECT id, status, worker, error FROM chess_eval_jobs WHERE ${claimable}`,
+    args: claimableArgs,
+  });
+  const ids = parseRows(HeavyRowSchema, res.rows, "chess_eval_jobs.heavy")
+    .sort(
+      (a, b) =>
+        Number(b.status === "running") - Number(a.status === "running") ||
+        (heavyEstimate(a.error) ?? 0) - (heavyEstimate(b.error) ?? 0) ||
+        a.id - b.id,
+    )
+    .slice(0, max)
+    .map((r) => r.id);
+  if (ids.length === 0) return [];
+  const leased = await db.execute({
+    sql: `UPDATE chess_eval_jobs
+          SET status = 'running', worker = ?, claimed_at_ms = ?, attempts = attempts + 1,
+              updated_at = datetime('now')
+          WHERE id IN (${ids.map(() => "?").join(", ")}) AND ${claimable}
+          RETURNING id, fen, kind, reach, spec, attempts, requested_by, stage`,
+    args: [worker, now, ...ids, ...claimableArgs],
+  });
+  const rows = parseRows(JobRowSchema, leased.rows, "chess_eval_jobs.heavy-claim");
+  return ids.flatMap((id) => {
+    const r = rows.find((x) => x.id === id);
+    return r
+      ? [
+          {
+            id: r.id,
+            fen: r.fen,
+            kind: r.kind,
+            reach: r.reach,
+            spec: r.spec,
+            attempts: r.attempts,
+            requestedBy: r.requested_by,
+            stage: r.stage,
+          },
+        ]
+      : [];
+  });
 }
 
 export type CompleteResult = { ok: true } | { ok: false; status: 404 | 409 | 422; message: string };
@@ -386,7 +521,11 @@ export async function completeJob(
   return { ok: true };
 }
 
-/** A worker couldn't finish a job: back in the queue (while attempts last) or failed. */
+/**
+ * A worker couldn't finish a job: back in the queue (while attempts last) or
+ * failed. `heavy` hands it to the heavy lane instead (queued, the attempt not
+ * counted); a job already there keeps its marker whatever happens to it.
+ */
 export async function failJob(
   db: Client,
   worker: string,
@@ -395,21 +534,23 @@ export async function failJob(
   retry: boolean,
   now = Date.now(),
   released = false,
+  heavy?: { estHours: number; why: string },
 ): Promise<CompleteResult> {
   await touchWorker(db, worker, now);
+  const message = heavy ? heavyMark(heavy.estHours, heavy.why) : error.slice(0, 500);
+  const keep = `CASE WHEN error LIKE '${FARM_HEAVY_PREFIX}%' THEN error ELSE ? END`;
   const res = await db.execute({
-    sql: released
-      ? `UPDATE chess_eval_jobs SET
-            status = 'queued', attempts = MAX(0, attempts - 1), error = ?,
+    sql:
+      released || heavy
+        ? `UPDATE chess_eval_jobs SET
+            status = 'queued', attempts = MAX(0, attempts - 1), error = ${heavy ? "?" : keep},
             worker = NULL, claimed_at_ms = NULL, updated_at = datetime('now')
           WHERE id = ? AND status = 'running' AND worker = ?`
-      : `UPDATE chess_eval_jobs SET
+        : `UPDATE chess_eval_jobs SET
             status = CASE WHEN ? AND attempts < ${MAX_ATTEMPTS} THEN 'queued' ELSE 'failed' END,
-            error = ?, worker = NULL, claimed_at_ms = NULL, updated_at = datetime('now')
+            error = ${keep}, worker = NULL, claimed_at_ms = NULL, updated_at = datetime('now')
           WHERE id = ? AND status = 'running' AND worker = ?`,
-    args: released
-      ? [error.slice(0, 500), id, worker]
-      : [retry ? 1 : 0, error.slice(0, 500), id, worker],
+    args: released || heavy ? [message, id, worker] : [retry ? 1 : 0, message, id, worker],
   });
   if (res.rowsAffected === 0) {
     return { ok: false, status: 409, message: "The job isn't leased to this worker" };

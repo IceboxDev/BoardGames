@@ -1,0 +1,288 @@
+{
+ "article": "a0363",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/International_Exhibition_of_Modern_Decorative_and_Industrial_Arts",
+   "title": "International Exhibition of Modern Decorative and Industrial Arts – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:44.924Z",
+   "snapshot": "7f966b688feb03e4be1a7e8ab1362c48a899d411d2c6f66644315e7df4abc9a7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bauhaus",
+   "title": "Bauhaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:45.873Z",
+   "snapshot": "3c4a71c91a284426fff40bf09fdfbdafbb86c2e0698f979581ea222c320c0847"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bauhaus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:43.128Z",
+   "snapshot": "a81040a24cbea491e39651418e6689948f9f554bcbf1fbb5a01e3f49ce3c928b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jugend_(magazine)",
+   "title": "Jugend (magazine) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:46.853Z",
+   "snapshot": "d1b8086b0c2750c4ddfd628bd62072158bbe435d1950f3fd1361c18eb53a78f9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/De_Stijl",
+   "title": "De Stijl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:47.832Z",
+   "snapshot": "19ce3bb50cb02aa48c927e3f9b5e34a44ffb6b7905f01c6f61bcfbf516e3e029"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Memphis_Group",
+   "title": "Memphis Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:48.836Z",
+   "snapshot": "efa292cad54835f411a93964c81a2c3566342023fb1ed7807eb1c261d81c8e3a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Art Deco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01812",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bauhaus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01812",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bauhaus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01813",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jugendstil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "De Stijl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Memphis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:36.246Z",
+   "target": "f01811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The modern style presented at the exposition later became known as \"Art Deco\", after the exposition's name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Art Deco” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:36.246Z",
+   "target": "f01812",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Staatliches Bauhaus (German: [ˈʃtaːtlɪçəs ˈbaʊˌhaʊs] ), commonly known as the Bauhaus (German for 'building house'), was a German art school operational from 1919 to 1933 that combined crafts and the fine arts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bauhaus” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:36.246Z",
+   "target": "f01812",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Staatliche Bauhaus, inzwischen meist nur Bauhaus, war eine 1919 von Walter Gropius in Weimar gegründete Kunstschule.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bauhaus” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:36.246Z",
+   "target": "f01813",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was also famed for its \"shockingly brilliant covers and radical editorial tone\" and for its avant-garde influence on German arts and culture for decades, ultimately launching the eponymous Jugendstil ('Youth Style') movement in Munich, Weimar, and Darmstadt's Darmstadt Artists' Colony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jugendstil” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:36.246Z",
+   "target": "f01814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "De Stijl (, Dutch: [də ˈstɛil]; 'The Style') was a Dutch art movement founded in 1917 by a group of artists and architects based in Leiden (Theo van Doesburg, J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “De Stijl” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:36.246Z",
+   "target": "f01815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Memphis Group, also known as Memphis Milano, was an Italian design and architecture group founded by Ettore Sottsass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.246Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Memphis” is on the snapshot of s6"
+  }
+ ]
+}

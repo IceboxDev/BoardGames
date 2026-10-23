@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-068",
+ "image": "IMG20261007175004.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Land folgt China als nächstes in der Liste der bevölkerungsreichsten Länder?",
+   "de": "Welches Land hat China im April 2023 als bevölkerungsreichsten Staat der Erde abgelöst?",
+   "en": "Which country overtook China in April 2023 as the most populous country on Earth?",
+   "reworked": true,
+   "answerDe": "Indien",
+   "answerEn": "India",
+   "timeline": {
+    "kind": "event",
+    "start": "2023-04",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "India overtakes China as the most populous country in the world",
+    "labelDe": "Indien löst China als bevölkerungsreichsten Staat der Welt ab"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Indien",
+    "title": "Indien – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Card premise is outdated: India (the card's answer) has been ahead of China since April 2023, so the question was reworked to the current fact.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welche Sängerin hat nicht in einem James-Bond-Film mitgespielt: Madonna, Grace Jones oder Shirley Bassey?",
+   "de": "Welche walisische Sängerin aus Cardiff sang die Titelmelodien von drei James-Bond-Filmen, darunter „Goldfinger“?",
+   "en": "Which Welsh singer from Cardiff sang the title songs of three James Bond films, including \"Goldfinger\"?",
+   "reworked": true,
+   "answerDe": "Shirley Bassey",
+   "answerEn": "Shirley Bassey",
+   "timeline": {
+    "kind": "event",
+    "start": "1964-08",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Shirley Bassey records \"Goldfinger\" for the James Bond film of the same name",
+    "labelDe": "Shirley Bassey nimmt „Goldfinger“ für den gleichnamigen James-Bond-Film auf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Shirley_Bassey",
+    "title": "Shirley Bassey – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Reworked from a 'which did NOT' multiple-choice question. Card answer Shirley Bassey: she sang Bond themes (Goldfinger, Diamonds Are Forever, Moonraker) but never acted in one; Madonna (Die Another Day) and Grace Jones (A View to a Kill) did.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Unter welchem Namen kam der Urahn des heutigen Haribo-Goldbären auf den Markt: Tanzbär, Lutschbär oder Farbenbär?",
+   "de": "Unter welchem Namen brachte Hans Riegel 1922 den Urahn des heutigen Haribo-Goldbären auf den Markt?",
+   "en": "Under what name did Hans Riegel launch the forerunner of today's Haribo Goldbears in 1922?",
+   "reworked": true,
+   "answerDe": "Tanzbär",
+   "answerEn": "Tanzbär (\"Dancing Bear\")",
+   "timeline": {
+    "kind": "creation",
+    "start": "1922",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hans Riegel of Haribo invents the gummy bear, first sold as the \"Tanzbär\"",
+    "labelDe": "Hans Riegel von Haribo erfindet den Gummibären, zunächst als „Tanzbär“ verkauft"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Haribo",
+    "title": "Haribo – Wikipedia",
+    "lang": "de"
+   },
+   "notes": "Reworked from multiple choice.",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 4,
+   "cardDe": "Harper Lees Buch Gehe hin, stelle einen Wächter ist der Nachfolgeroman zu welchem Buch?",
+   "de": "Harper Lees Buch Gehe hin, stelle einen Wächter ist der Nachfolgeroman zu welchem Buch?",
+   "en": "Harper Lee's book \"Go Set a Watchman\" is the follow-up novel to which book?",
+   "reworked": false,
+   "answerDe": "Wer die Nachtigall stört",
+   "answerEn": "To Kill a Mockingbird",
+   "timeline": {
+    "kind": "event",
+    "start": "2015-07-14",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Harper Lee's Go Set a Watchman is published, 55 years after To Kill a Mockingbird",
+    "labelDe": "Harper Lees „Gehe hin, stelle einen Wächter“ erscheint, 55 Jahre nach „Wer die Nachtigall stört“"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Go_Set_a_Watchman",
+    "title": "Go Set a Watchman – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "The card prints the title in italics. Promoted as a sequel, but now regarded as an earlier first draft of To Kill a Mockingbird.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Alle drei Astronauten der ersten Mondmission hatten für den Notfall Lebensversicherungen abgeschlossen. Richtig oder falsch?",
+   "de": "Was unterschrieben die Astronauten der ersten Mondmission zu Hunderten als Absicherung für ihre Familien, weil Versicherer ihnen keine Lebensversicherung gaben?",
+   "en": "What did the astronauts of the first Moon landing mission sign by the hundreds to provide for their families, because insurers would not give them life insurance?",
+   "reworked": true,
+   "answerDe": "Briefumschläge (Insurance Covers)",
+   "answerEn": "Postal covers (insurance covers)",
+   "timeline": {
+    "kind": "event",
+    "start": "1969-07-16",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Apollo 11 launches; the crew's signed \"insurance covers\" are postmarked at Kennedy Space Center",
+    "labelDe": "Start von Apollo 11; die signierten „Insurance Covers“ der Crew werden im Kennedy Space Center abgestempelt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Apollo_insurance_covers",
+    "title": "Apollo insurance covers – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "Reworked from true/false (card answer: false). Insurers refused coverage, so the crew signed autographed postal covers their families could sell if they died.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Olympische Goldmedaillen bestehen hauptsächlich aus welchem Metall: Gold, Silber oder Eisen?",
+   "de": "Olympische Goldmedaillen bestehen hauptsächlich aus welchem Metall?",
+   "en": "Olympic gold medals are made mainly of which metal?",
+   "reworked": true,
+   "answerDe": "Silber",
+   "answerEn": "Silver",
+   "timeline": {
+    "kind": "event",
+    "start": "1912",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Last Olympic Games to award gold medals made of solid gold",
+    "labelDe": "Letzte Olympische Spiele mit Goldmedaillen aus massivem Gold"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Olympic_medal",
+    "title": "Olympic medal – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "Reworked from multiple choice. Gold medals are at least 92.5% silver, plated with 6 g of gold.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

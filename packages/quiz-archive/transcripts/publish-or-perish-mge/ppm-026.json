@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-026",
+ "image": "IMG20261022153405.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] In what way has the Moon been changing in its size?\nA. It has expanded\nB. It has expanded and shrunk periodically\nC. It has shrunk\nAnswer: C. Recent studies have shown that the Moon is gradually getting smaller. As its interior cools, it develops wrinkles and shrinks slightly over time. This process has resulted in the Moon decreasing in size by about 150 feet or 45 meters in diameter over the past few hundred million years.",
+   "de": "Wie hat sich die Größe des Mondes in den letzten paar hundert Millionen Jahren verändert, während sein Inneres abkühlt?",
+   "en": "As its interior cools, how has the Moon's size been changing over the last several hundred million years?",
+   "reworked": true,
+   "answerDe": "Er ist geschrumpft (um etwa 50 m im Durchmesser)",
+   "answerEn": "It has shrunk (by about 50 m in diameter)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "2010-08",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "NASA's Lunar Reconnaissance Orbiter images of lobate scarps reveal that the Moon is shrinking",
+    "labelDe": "Aufnahmen des Lunar Reconnaissance Orbiter der NASA zeigen Bruchstufen, die belegen, dass der Mond schrumpft"
+   },
+   "source": {
+    "url": "https://www.planetary.org/articles/is-the-moon-shrinking",
+    "title": "Is the Moon shrinking?",
+    "lang": "en"
+   },
+   "notes": "Card's metric figure is slightly off: 150 feet is about 50 m (Planetary Society, NASA), not 45 m. Timeline from NASA's 'Incredible Shrinking Moon' release of 19 Aug 2010 (cited in Wikipedia's Moon article).",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] In ancient Rome, what was used as mouthwash?\nA. Vinegar\nB. Honey\nC. Urine\nAnswer: C. In ancient Rome, urine was used as a mouthwash due to its ammonia content.",
+   "de": "Womit spülten und weißten die Keltiberer im antiken Iberien laut Catull, Diodor und Strabon ihre Zähne?",
+   "en": "According to Catullus, Diodorus and Strabo, what did the Celtiberians of ancient Iberia use to rinse and whiten their teeth?",
+   "reworked": true,
+   "answerDe": "Urin",
+   "answerEn": "Urine",
+   "timeline": {
+    "kind": "creation",
+    "start": "-60",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Catullus mocks the Celtiberian Egnatius for whitening his teeth with urine",
+    "labelDe": "Catull verspottet den Keltiberer Egnatius, weil er seine Zähne mit Urin weißt"
+   },
+   "source": {
+    "url": "https://talesoftimesforgotten.com/2021/03/03/did-the-ancient-romans-really-wash-their-teeth-with-urine/",
+    "title": "Did the Ancient Romans Really Wash Their Teeth with Urine?",
+    "lang": "en"
+   },
+   "notes": "Card error: the ancient sources (Catullus 37 and 39, Diodorus 5.33.5, Strabo 3.4.16) describe urine tooth-washing as a Celtiberian/Cantabrian custom and mock it as un-Roman; none presents it as a Roman practice. The ammonia rationale is modern speculation. Question reworked to the attested fact. Catullus' poems dated approximately (he lived c. 84–54 BC).",
+   "domain": "history",
+   "sub": "ancient"
+  }
+ ]
+}

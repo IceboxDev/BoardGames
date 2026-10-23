@@ -1,0 +1,555 @@
+{
+ "article": "a1973",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Eiger-Nordwand",
+   "title": "Eiger-Nordwand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:06.342Z",
+   "snapshot": "54bce415bc2915f341fb2cdd67d83a286ab34b8fbac5107507c6683f40996f82"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mont_Blanc",
+   "title": "Mont Blanc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:11.182Z",
+   "snapshot": "2c55dce7856156a2d6823126e95ab2123e647a8e387b1e2bb902470842f47dbf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Matterhorn",
+   "title": "Matterhorn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:04.863Z",
+   "snapshot": "f5f48e21048e5db66e44878f57af44f6fb3163cdc33287d1deac788ea8f47c0b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nanga_Parbat",
+   "title": "Nanga Parbat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:01.759Z",
+   "snapshot": "019ed6989a2056f27c708304e0a46e8a0896625eca72d75d5211f9d9383a7898"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Junko_Tabei",
+   "title": "Junko Tabei",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:05.647Z",
+   "snapshot": "0bb843ed4074b6aa6acdced3b2a506b214e705ea55976f32a1a6cafd46d9e555"
+  },
+  "s6": {
+   "url": "https://hls-dhs-dss.ch/de/articles/008785/",
+   "title": "Eiger – Historisches Lexikon der Schweiz",
+   "publisher": "Historisches Lexikon der Schweiz (HLS)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T10:34:53Z"
+  },
+  "s7": {
+   "url": "https://www.independent.co.uk/news/obituaries/anderl-heckmair-484841.html",
+   "title": "Anderl Heckmair (obituary)",
+   "publisher": "The Independent",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:43.030Z",
+   "snapshot": "3b5b4202070ecc096695bc62bb90577f3aafeb605f32569001c79b3000dc80e0"
+  },
+  "s8": {
+   "url": "https://www.theguardian.com/world/2016/nov/10/junko-tabei-obituary",
+   "title": "Junko Tabei obituary",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:43.124Z",
+   "snapshot": "0f4bee1c67bdf0b7ba076838758542b158220befb947592ebd084c73818b39af"
+  },
+  "s9": {
+   "url": "https://www.outsideonline.com/2131091/obituary-junko-tabei-first-woman-summit-everest",
+   "title": "Obituary: Junko Tabei, the First Woman to Summit Everest (1939-2016)",
+   "publisher": "Outside",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:45.178Z",
+   "snapshot": "a213608a4229f77d5cb4ba633215aff3fff5e32919ef253d4a9ab187754020d2"
+  },
+  "s10": {
+   "url": "http://www.alpinist.com/doc/web16f/newswire-junko-tabei-obit",
+   "title": "Junko Tabei, first woman to summit Everest, dies at 77",
+   "publisher": "Alpinist",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:45.375Z",
+   "snapshot": "c29de3f4f3604b2f2cec3a6348c86e99de4e718f21ca2981e710efa3003151c2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eiger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mont Blanc",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Matterhorn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09865",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nanga Parbat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-173"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:57.547Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Eiger-Nordwand ist eine der großen Nordwände der Alpen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eiger” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:57.547Z",
+   "target": "f09862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mont Blanc (UK: ; US: ) is a mountain in the Alps, rising 4,807.3 m (15,771.9 ft) above sea level, located right at the Franco-Italian border.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mont Blanc” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:57.547Z",
+   "target": "f09863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Matterhorn is a mountain of the Alps, straddling the main watershed and border between Switzerland and Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Matterhorn” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:57.547Z",
+   "target": "f09865",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nanga Parbat, known in Shina as Diamer, is the ninth-highest mountain on Earth with its summit at 8,126 m (26,660 ft) above sea level.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nanga Parbat” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:57.547Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tabei wrote seven books, organized environmental projects to clean up trash left behind by climbers on Everest, and led annual climbs up Mount Fuji for youth affected by the Great East Japan Earthquake.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:34:53Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im Juli 1938 glückte den Deutschen Anderl Heckmair und Ludwig Vörg sowie den Österreichern Heinrich Harrer und Fritz Kasparek in vier Tagen der Durchstieg, was von den Nationalsozialisten propagandistisch ausgeschlachtet wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23",
+   "note": "1938 was the first ascent of the NORTH FACE; the summit was first reached on 11 Aug 1858 (Barrington, Almer, Bohren) — wording narrowed to the north face"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:34:57Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The symbolism of Germany and Austria united in heroic struggle only four months after the Anschluss was a gift to the Nazi propaganda machine and the climbers were feted by Adolf Hitler.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:35:00Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Erstbesteigung des E.s erfolgte am 11.8.1858 über die Westflanke",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23",
+   "note": "the card's premise 'first ascent in 1938' is wrong for the mountain itself (summit 1858); true only for the north face"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:35:12Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im Juli 1938 glückte den Deutschen Anderl Heckmair und Ludwig Vörg sowie den Österreichern Heinrich Harrer und Fritz Kasparek in vier Tagen der Durchstieg, was von den Nationalsozialisten propagandistisch ausgeschlachtet wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23",
+   "note": "supersedes e13: the answer Eiger stands; e13's 1858 point concerned the printed wording's premise ('first ascent in 1938'), now fixed by asking about the north face"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:35:41Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Japanese mountaineer who was the first woman to reach the summit of Everest",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:35:42Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Japanese Women's Everest Expedition of 1975 boasted a television crew, three journalists, four cameramen, 23 support climbers, and some 500 porters.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:35:44Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Born September 22, 1939, she grew up in Fukushima Prefecture, Japan, in relative poverty",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The symbolism of Germany and Austria united in heroic struggle only four months after the Anschluss was a gift to the Nazi propaganda machine and the climbers were feted by Adolf Hitler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Japanese mountaineer who was the first woman to reach the summit of Everest",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Japanese Women's Everest Expedition of 1975 boasted a television crew, three journalists, four cameramen, 23 support climbers, and some 500 porters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Born September 22, 1939, she grew up in Fukushima Prefecture, Japan, in relative poverty",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f09861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Anderl Heckmair led the first ascent of the north face of the Eiger.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eiger” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Northern Honshu was not as badly affected by allied bombing as some parts of Japan, but like many Japanese children of her generation she was frail and grew to a height of only 147cm (4ft 10in).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Japan” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:46.588Z",
+   "target": "f14019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Born September 22, 1939, she grew up in Fukushima Prefecture, Japan, in relative poverty and was considered a “weak child,” according to her website.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:46.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Japan” is on the snapshot of s10"
+  }
+ ]
+}

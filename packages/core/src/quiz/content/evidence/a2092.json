@@ -1,0 +1,279 @@
+{
+ "article": "a2092",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pixar",
+   "title": "Pixar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:55.662Z",
+   "snapshot": "ed2a03cf24684026e4966611586c3fcd0bae07bf5967090b9eba3b0a9c1befa3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Illumination_(company)",
+   "title": "Illumination (company) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:16.601Z",
+   "snapshot": "294fe5ad099b6f0eb9011f6ced3cbbc8bd2730749223ab6e2fdbb1040c89cda0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Pixar",
+   "title": "Pixar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:49.281Z",
+   "snapshot": "2288bc8cd037fe8aa14356be9fca6a669468a380443f5c14d80bf502cb2398c8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/DreamWorks_Animation",
+   "title": "DreamWorks Animation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:56.564Z",
+   "snapshot": "4620be375fff5b0122e3c2599f369ed95ad2d50ec24a4bba1f791bf0b16c6628"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Studio_Ghibli",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:52.879Z",
+   "snapshot": "60ae63173cbcfbbe47e3a3b62ddeea4dcf1cd6e430d1ea61393f48d7d4887733"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pixar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Illumination",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George Lucas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-004"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Lucas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "NBCUniversal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chris Meledandri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:20.936Z",
+   "target": "f10456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pixar (), doing business as Pixar Animation Studios, is an American animation studio based in Emeryville, California, known for its critically and commercially successful computer-animated feature films.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.936Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pixar” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:20.936Z",
+   "target": "f10460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Illumination (formerly known as Illumination Entertainment) is an American animation studio founded by producer Chris Meledandri in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.936Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Illumination” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:20.936Z",
+   "target": "f11228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The physical award was ceremonially handed to Lucasfilm's founder, George Lucas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.936Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Lucas” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:20.936Z",
+   "target": "f11228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George Lucas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“George Lucas”, “Джордж Лукас”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:20.936Z",
+   "target": "f20980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "(DWA, also known as DreamWorks Animation Studios or simply DreamWorks) is an American animation studio, owned by Comcast's NBCUniversal as part of Universal Filmed Entertainment Group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.936Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NBCUniversal” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:20.936Z",
+   "target": "f20981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Illumination (formerly known as Illumination Entertainment) is an American animation studio founded by producer Chris Meledandri in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.936Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chris Meledandri” is on the snapshot of s2"
+  }
+ ]
+}

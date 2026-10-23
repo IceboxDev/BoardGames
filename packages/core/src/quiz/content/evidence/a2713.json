@@ -1,0 +1,453 @@
+{
+ "article": "a2713",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Laughter_in_animals",
+   "title": "Laughter in animals",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:41.199Z",
+   "snapshot": "7341dd44a9405e88c3c3ce9ce7ee04699488738537f0d6a4c01947fb8568ec3e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Signature_whistle",
+   "title": "Signature whistle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:42.202Z",
+   "snapshot": "73deb7774ccff7b81e78b8455c89096e51ebbb5a607c4688da6d8cab7b449ec4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Elephant_communication",
+   "title": "Elephant communication – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:43.223Z",
+   "snapshot": "c438bd1ae2219bc936f738f05ee4f0f040f1b73c25ea51bf930f6a59176acca6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vervet_monkey",
+   "title": "Vervet monkey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:44.308Z",
+   "snapshot": "a50f9593c043c063e135251ce05c1510c38768c69f2f50a2d10dde42d1bd4631"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Prairie_dog",
+   "title": "Prairie dog – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:45.323Z",
+   "snapshot": "17ec8af80bfaf3fca4ef8d9846eec7f2441cdc5656e5e2ad09d2b12685e7cf44"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Whale_song",
+   "title": "Whale song – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:46.335Z",
+   "snapshot": "245039afd8c5844690e94732697f591c7535f92b98e0a4e1970a6585ac158582"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Brown_rat",
+   "title": "Brown rat",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:47.275Z",
+   "snapshot": "a6fb75e7029235a5c8ff835d0249c798acf20e5a18820bd75231822cbe1eb3c2"
+  },
+  "s8": {
+   "url": "https://europepmc.org/article/MED/34697669",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:48.354Z",
+   "snapshot": "2ace52450e7ee9d099ec42692b71aff3d8612d9eac1339e9a8d17b8da05d1454"
+  },
+  "s10": {
+   "url": "https://link.springer.com/article/10.1007/s10071-021-01571-8",
+   "title": "An exploratory analysis of head-tilting in dogs (Sommese et al., Animal Cognition 25, 2022; online 2021)",
+   "publisher": "Animal Cognition (Springer Nature)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:42.240Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dolphins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-094"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "African elephants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vervet monkeys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prairie dogs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25364",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Humpback whale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "eye boggling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-017"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "eye boggling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 60; history entry seq 61; history entry seq 62; history entry seq 64"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "attention to words it knows",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 65; history entry seq 66; history entry seq 67; history entry seq 69; history entry seq 70; transcript ppm-144"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "High frequency ultrasonic vocalizations are important in rat communication and function to elicit approach behavior in the recipient.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rat” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are typically used for localisation purposes, however they also provide dolphins with behavioural context.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dolphins” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Infrasonic calls are important, particularly for long-distance communication, in both Asian and African elephants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “African elephants” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In addition to behavioral research on natural populations, vervet monkeys serve as a nonhuman primate model for understanding genetic and social behaviors of humans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vervet monkeys” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prairie dogs (genus Cynomys) are herbivorous burrowing ground squirrels native to the grasslands of North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prairie dogs” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The word \"song\" is used to describe the pattern of regular and predictable sounds made by some species of whales, especially the humpback whale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Humpback whale” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:31:02.002Z",
+   "target": "f25770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "eye boggling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“eye boggling”, “Augenboggeln”, “«боггинг» глаз”) on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:19:22Z",
+   "target": "f25770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Vigorous bruxing can be accompanied by boggling, where the eyes of the rat rapidly bulge and retract due to movement of the lower jaw muscles behind the eye socket.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia's own cited source (a Pet Partners rat-behaviour PDF) is now dead; no second independent page reachable in this run (web search quota exhausted). Term is pet-keeper usage, not a scientific one."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:19:58Z",
+   "target": "f25771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Our results indicate that only dogs that had learned the name of the objects tilted their heads frequently. Besides, the side of the tilt was stable across several months and tests. Thus, we suggest a relationship between head-tilting and processing relevant, meaningful stimuli.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Abstract also: 'we hypothesised that head-tilts may be related to increased attention'. Open-access publisher page of the study the ledger already cites via Europe PMC (s8, behind a bot check)."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:49.234Z",
+   "target": "f25770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Vigorous bruxing can be accompanied by boggling, where the eyes of the rat rapidly bulge and retract due to movement of the lower jaw muscles behind the eye socket.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  }
+ ]
+}

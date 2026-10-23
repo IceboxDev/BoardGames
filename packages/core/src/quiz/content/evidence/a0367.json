@@ -1,0 +1,289 @@
+{
+ "article": "a0367",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bundesrat_(Schweiz)",
+   "title": "Bundesrat (Schweiz) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:05.350Z",
+   "snapshot": "596c63367b1d8c366086fb14b6386c69169c83fa4325f2a529f6c54ab271fb3f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Federal_Assembly_(Switzerland)",
+   "title": "Federal Assembly (Switzerland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:08.887Z",
+   "snapshot": "a661b5064c58eb605a2a8449b18df4a497fdaf89cf633a7f863bdf6e69714c7b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Knesset",
+   "title": "Knesset – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:14.021Z",
+   "snapshot": "ae8016c1398e0fb855104ad6402a4df656274c54c6b8fef252ff9f36c07dc68a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Knesset",
+   "title": "Knesset",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:06.343Z",
+   "snapshot": "84e90d27a215e1ebd0e7f5db39d6e66fdb0505e19a464a35068e756f328dda79"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Constitution_of_Norway",
+   "title": "Constitution of Norway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:09.963Z",
+   "snapshot": "bc79994ce4b38609a28a19ba2f5c2c5bbec3c38843009b07ef669e2f307cef98"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sejm",
+   "title": "Sejm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:10.936Z",
+   "snapshot": "2ba346c0509efaa4fef2effac820713473eca2e3e1fbcbe983455f9757391d4b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bundesrat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Federal Assembly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Knesset",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Knesset",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-297"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Storting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sejm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:36.931Z",
+   "target": "f01831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Bundesrat (abgekürzt BR;  französisch Conseil fédéral, CF; italienisch Consiglio federale, CF; rätoromanisch , CF) ist die Regierung der Schweizerischen Eidgenossenschaft und gemäss Art.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bundesrat” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:36.931Z",
+   "target": "f01832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Federal Assembly, also known as the Swiss Parliament, is the federal bicameral parliament   of Switzerland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Federal Assembly” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:36.931Z",
+   "target": "f01833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Knesset (Hebrew: הַכְּנֶסֶת, romanized: HaKneset [haˈkneset] , lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knesset” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:36.931Z",
+   "target": "f01833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Knesset (Ivrit כְּנֶסֶת  ‚Versammlung‘) ist das Einkammerparlament des Staates Israel in Givʿat Ram, Jerusalem.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knesset” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:36.931Z",
+   "target": "f01834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In May 2014, the Storting passed the most substantial changes since 1814, particularly by including paragraphs on human rights.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Storting” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:36.931Z",
+   "target": "f01835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Sejm (Polish: [sɛjm] ), officially known as the Sejm of the Republic of Poland (Polish: Sejm Rzeczypospolitej Polskiej), is the lower house of the bicameral parliament of Poland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sejm” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2313",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rabat",
+   "title": "Rabat",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:17.083Z",
+   "snapshot": "5feac4aa305f66b3e1a90f56db979f782788ce53c56b7df8aaea5fb5a7b98ad1"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Burkina_Faso",
+   "title": "Burkina Faso",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:49.557Z",
+   "snapshot": "c0ef3d3d84e1d42b45d0851dcfed81bb1bc320b087290d72d1eaed4d934fd732"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Abuja",
+   "title": "Abuja – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:20.542Z",
+   "snapshot": "229b28ca1576eb74d23e3823015b7dd88a8bf8d1ca2e05592f9ac72aaa75f355"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dodoma",
+   "title": "Dodoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:21.505Z",
+   "snapshot": "8a72ca5c5dd32e7112d55fff652693c718ecd06ed9ee8ba8300b63963f45fce9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Yamoussoukro",
+   "title": "Yamoussoukro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:22.578Z",
+   "snapshot": "8dc347e4d869d965165c00432c6e60f77cb41f08ae0b03efd43eaddb57fb51a7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rabat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Burkina Faso",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-043"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Abuja",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dodoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yamoussoukro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:54.666Z",
+   "target": "f11974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rabat (Zentralatlas-Tamazight ⴰⵕⴱⴰⵟ Aṛbaṭ, arabisch الرباط, DMG ar-Ribāṭ ‚befestigter Ort‘, marokkanisches Tamazight ⵕⵕⴱⴰⵟ Rrbat) ist seit 1956 die Hauptstadt Marokkos mit dem Regierungssitz und der Residenz des Königs; gleichzeitig ist die Stadt Hauptort der Region Rabat-Salé-Kénitra.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.666Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rabat” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:54.666Z",
+   "target": "f11975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Burkina Faso (deutsche Aussprache: [bʊɐ̯ˌkʰiːnaˈfaːzo]), übersetzt Land des aufrichtigen Menschen, ist ein westafrikanischer Binnenstaat, der südlich des Nigerbogens liegt und an Mali, Niger, Benin, Togo, Ghana und die Elfenbeinküste grenzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.666Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burkina Faso” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:54.666Z",
+   "target": "f11976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Abuja () is the capital city of Nigeria, strategically situated at the geographic midpoint of the country within the Federal Capital Territory (FCT).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.666Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abuja” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:54.666Z",
+   "target": "f11977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "'It has sunk' in Gogo), officially Dodoma City (Jiji Kuu la Dodoma, in Swahili), is the capital city of Tanzania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.666Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dodoma” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:54.666Z",
+   "target": "f11978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yamoussoukro (; French pronunciation: [jamusukʁo] , locally [jamsokʁo]) is the capital city of Ivory Coast and an autonomous district.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.666Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yamoussoukro” is on the snapshot of s5"
+  }
+ ]
+}

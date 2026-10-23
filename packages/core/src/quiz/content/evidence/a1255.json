@@ -1,0 +1,383 @@
+{
+ "article": "a1255",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Wealth_of_Nations",
+   "title": "The Wealth of Nations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:14.595Z",
+   "snapshot": "fea52264a089d07139f434d59d8560d5980eac5a4be0a30a5de1e7ab3251b4a6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_General_Theory_of_Employment,_Interest_and_Money",
+   "title": "The General Theory of Employment, Interest and Money – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:15.645Z",
+   "snapshot": "ce64d355aa7fa04b11a7e45486ea5a942ef4fd6b1fc07834a121d298ebd2f528"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Capitalism,_Socialism_and_Democracy",
+   "title": "Capitalism, Socialism and Democracy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:16.427Z",
+   "snapshot": "4d8f6764fd46d8ea6b3f3d17bdc1fd414017ef272bd9000635f12216d7ee7ad8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Milton_Friedman",
+   "title": "Milton Friedman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:17.487Z",
+   "snapshot": "e410b068598c213ea066fcdc46749cb8b6b3d6e880281d37beb5ba3a9ca509e4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Comparative_advantage",
+   "title": "Comparative advantage",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:18.549Z",
+   "snapshot": "47976218550dc8efaa43ffe9cf8d28ebeedfa90475942a94ec41b7b640e41c78"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gresham%27s_law",
+   "title": "Gresham's law",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:19.531Z",
+   "snapshot": "0d0c5daf34963919fcc3d714ecabfa49bc6ab28add0d39192d35a0a91c4bc6f3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Conspicuous_consumption",
+   "title": "Conspicuous consumption",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:20.539Z",
+   "snapshot": "cd76d768f0c34b62e92514f0174f3e363267ff43272e28e00c338d1ef393c52e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Invisible_hand",
+   "title": "Invisible hand",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:21.536Z",
+   "snapshot": "9483b98c2e44feadbbb116a578932869e636bf2b149c062a8e1a4a292d02544b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Adam Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Maynard Keynes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joseph Schumpeter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Milton Friedman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Comparative advantage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-066"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gresham's law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-061"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Conspicuous consumption",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 58; transcript pp-060"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The invisible hand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-080"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f06271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An Inquiry into the Nature and Causes of the Wealth of Nations, usually referred to by its shortened title The Wealth of Nations, is a book by Scottish economist and moral philosopher Adam Smith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adam Smith” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f06273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The General Theory of Employment, Interest and Money is a book by English economist John Maynard Keynes published in February 1936.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Maynard Keynes” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f06274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Capitalism, Socialism, and Democracy is a book on economics, sociology, and history by Joseph Schumpeter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Schumpeter” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f06275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Milton Friedman ( ; July 31, 1912 – November 16, 2006) was an American economist and statistician who received the 1976 Nobel Memorial Prize in Economic Sciences for his research on consumption analysis, monetary history and theory and the complexity of stabilization policy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milton Friedman” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f25438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Comparative advantage is an economic principle that explains why people, firms, and countries can often benefit from trade even when one party is more productive at producing every good or service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Comparative advantage” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f25439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In economics, Gresham's law, also Gresham-Copernicus Law (after Nicolaus Copernicus) is a monetary principle stating that \"bad money drives out good\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gresham's law” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f25440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In sociology and in economics, the term conspicuous consumption describes and explains the consumer practice of buying and using goods of a higher quality, price, or in greater quantity than practical.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Conspicuous consumption” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:55.613Z",
+   "target": "f25890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The invisible hand is a metaphor inspired by the Scottish economist and moral philosopher Adam Smith that describes the incentives which free markets sometimes create for self-interested people to accidentally act in the public interest, even when this is not something they intended.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The invisible hand” is on the snapshot of s8"
+  }
+ ]
+}

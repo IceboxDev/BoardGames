@@ -1,0 +1,430 @@
+{
+ "article": "a1967",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ysengrimus",
+   "title": "Ysengrimus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:44.605Z",
+   "snapshot": "7f51f1f59a20df6c759ce7a2c6d4378a00006ae5bebed4717db4f713a1486734"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Reynke_de_vos",
+   "title": "Reynke de vos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:41.893Z",
+   "snapshot": "5e36477fefb9f16a4b48fc3a2027af444c5c72b1088b37ea231cf15c898f100b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_Hase_und_der_Igel",
+   "title": "Der Hase und der Igel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:42.784Z",
+   "snapshot": "5861d733a8d10798a1cfd8651210c214aabac1d4d672bbe179007ae180275777"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Wei%C3%9Fstorch",
+   "title": "Weißstorch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:43.905Z",
+   "snapshot": "1f835810617bd19ba323564787954f57f20249184afa5d844b76a70bc66204be"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Reineke_Fuchs",
+   "title": "Reineke Fuchs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:45.036Z",
+   "snapshot": "5233c837cf138ea8ce4c19cac6394f4e76f443e2c15fb0e511b5a8bf834c6098"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Fabel",
+   "title": "Fabel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:45.909Z",
+   "snapshot": "c39f0ad8d9812d0206c58d950f7a7b041e1b62c89aae6e8a3205da0e661ea5c6"
+  },
+  "s7": {
+   "url": "https://de.wikisource.org/wiki/Fuchs_und_Gans",
+   "title": "Fuchs und Gans (Wilhelm Busch, Zu guter Letzt, 1904)",
+   "publisher": "Wikisource (text of Wilhelm Busch)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:40.847Z",
+   "snapshot": "6672f82248ec27632141353de7147c7f8fca5d80580ca1191fc5b4d1e6b072bc"
+  },
+  "s8": {
+   "url": "https://de.wikisource.org/wiki/Gerdmann_un_Alheid",
+   "title": "Gerdmann un Alheid (Wilhelm Busch, Ut ôler Welt, 1910)",
+   "publisher": "Wikisource (text of Wilhelm Busch)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:41.675Z",
+   "snapshot": "766f77c2860db77c08851aa799df72abdcb28b36a655fca4cc27cbbda8299aa0"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Reineke_Fuchs_(Goethe)",
+   "title": "Reineke Fuchs (Goethe) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:43:40.978Z",
+   "snapshot": "2debaf7decb493e12ede9b577520072c17907d81752a2c4e3bc4a410c2828b0b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "wolf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fuchs",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Storch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dachs",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gans und Hahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-033"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:36:57.029Z",
+   "target": "f09831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Its title character is Isengrim the wolf, a greedy and gullible monk, who is repeatedly deceived, humiliated and finally destroyed by the trickster fox Reynard (Latin Reinardus).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wolf” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:36:57.029Z",
+   "target": "f09832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die 1498 von Hans van Ghetelen in Lübeck gedruckte Inkunabel, die in einem einzigen vollständigen Exemplar in der Herzog August Bibliothek in Wolfenbüttel erhalten ist, verhalf der Geschichte vom schlauen Fuchs Reineke, entstanden im 13.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fuchs” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:36:57.029Z",
+   "target": "f09833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Hase und der Igel ist ein Schwank (ATU 275C).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hase” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:36:57.029Z",
+   "target": "f09834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bei Kleinsttier-Nahrung wie Regenwürmern oder Insekten ist für den Storch eine deutlich höhere tägliche Nahrungsmenge erforderlich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Storch” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:36:57.029Z",
+   "target": "f09835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nachdem Grimbart, der Dachs, Reineke erneut zum Hof gebracht hat, entwickelt sich eine zweite Gerichtsverhandlung, in der weitere Schandtaten Reinekes ans Licht kommen und in Reden der Anklage und der Verteidigung verhandelt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dachs” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:36:57.029Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gans und Hahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Gans und Hahn”, “goose and rooster”, “гусыня и петух”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:10:08Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Gans, die gute Adelheid,",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:10:13Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "un de gante häit Gerdmann un de goos häit Alheid",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23",
+   "note": "Low German folk tale: the goose is named Alheid"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:10:15Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Henning, der Hahn, bringt „auf trauriger Bahre“ die vom Fuchs gemeuchelte Henne Kratzefuß.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:45.790Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Gans, die gute Adelheid,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:45.790Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "un de gante häit Gerdmann un de goos häit Alheid",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:45.790Z",
+   "target": "f14604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Henning, der Hahn, bringt „auf trauriger Bahre“ die vom Fuchs gemeuchelte Henne Kratzefuß.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.790Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  }
+ ]
+}

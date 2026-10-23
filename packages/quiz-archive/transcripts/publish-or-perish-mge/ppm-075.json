@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-075",
+ "image": "IMG20261022154127.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] What is a fjord?\nA. A flat, desert plain\nB. A narrow, deep inlet of the sea between high cliffs or steep slopes\nC. A type of forestland found in Norway\nAnswer: B. Fjords are formed by the deep erosion of glaciers over thousands of years, creating steep, U-shaped valleys that are later flooded by seawater.",
+   "de": "Wie heißt ein langer, schmaler, tiefer Meeresarm zwischen steilen Felswänden, den ein Gletscher ausgeschürft hat und der später vom Meer geflutet wurde?",
+   "en": "What is the name for a long, narrow, deep inlet of the sea between steep cliffs, carved by a glacier and later flooded by seawater?",
+   "reworked": true,
+   "answerDe": "Fjord",
+   "answerEn": "Fjord",
+   "timeline": {
+    "kind": "era",
+    "start": "-10000",
+    "end": null,
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "As the ice sheets of the last ice age retreat, the sea floods glacier-carved valleys into today's fjords",
+    "labelDe": "Mit dem Rückzug der Eisschilde der letzten Eiszeit flutet das Meer die von Gletschern ausgeschürften Täler zu den heutigen Fjorden"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fjord",
+    "title": "Fjord",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] Between which two planets does the asteroid belt lie?\nA. Mars and Jupiter\nB. Jupiter and Saturn\nC. Earth and Mars\nAnswer: A. The asteroid belt contains numerous asteroids and minor planets. It lies between the orbits of Mars and Jupiter and separates the inner planets from the outer planets in our solar system.",
+   "de": "Zwischen den Bahnen welcher zwei Planeten liegt der Asteroidengürtel?",
+   "en": "Between the orbits of which two planets does the asteroid belt lie?",
+   "reworked": true,
+   "answerDe": "Mars und Jupiter",
+   "answerEn": "Mars and Jupiter",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1801-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Giuseppe Piazzi discovers Ceres, the largest object in the asteroid belt",
+    "labelDe": "Giuseppe Piazzi entdeckt Ceres, das größte Objekt im Asteroidengürtel"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Asteroid_belt",
+    "title": "Asteroid belt",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  }
+ ]
+}

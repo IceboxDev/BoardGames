@@ -1,4 +1,4 @@
-import { hashSeed } from "@boardgames/core/games/quiztopia/ids";
+import { hashSeed } from "@boardgames/core/lib/rng";
 import type { GeoOverview, GeoReviewBody } from "@boardgames/core/protocol";
 import {
   cardId,

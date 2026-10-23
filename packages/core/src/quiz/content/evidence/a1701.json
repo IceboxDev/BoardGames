@@ -1,0 +1,934 @@
+{
+ "article": "a1701",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Collagen",
+   "title": "Collagen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:42.432Z",
+   "snapshot": "bb6731076aebf122cc21c285db7ca3e87d40f18357914fc04ced79d4048302e8"
+  },
+  "s2": {
+   "url": "https://www.nature.com/articles/1971297a0",
+   "title": "Constitution of the Cross-linkages in Elastin – Nature",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:39.649Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/keratin",
+   "title": "keratin – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Edwin_Joseph_Cohn",
+   "title": "Edwin Joseph Cohn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:44.049Z",
+   "snapshot": "0412036ad7ac3f9d4499c2c76d9f3242e5994edc532d945be001ce312473f3f4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Antibody",
+   "title": "Antibody – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:44.550Z",
+   "snapshot": "dc110dc41f5ec3321087f5ec4a09f1f36ba1621fa5dd0dab99c0935f3d599fbf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Enzyme",
+   "title": "Enzyme",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:45.491Z",
+   "snapshot": "33ca266c40e844a5d46291de32f90d09f7db39bdce8fc25a0d631d9de89c39b0"
+  },
+  "s7": {
+   "url": "https://my.clevelandclinic.org/health/articles/23089-collagen",
+   "title": "Collagen: What It Is, Types, Function & Benefits",
+   "publisher": "Cleveland Clinic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:35.951Z",
+   "snapshot": "4e6f37dd017c54f0b523aa08634373dc2c20e0bc6cfa9e9a4b439ec45a6c8677"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Elastin",
+   "title": "Elastin – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:36.140Z",
+   "snapshot": "c889ef64a9be06d4924aac5bc4ada2c419f8bc0c61642769b8844e5c6a7c6e75"
+  },
+  "s9": {
+   "url": "https://medlineplus.gov/genetics/gene/eln/",
+   "title": "ELN gene: MedlinePlus Genetics",
+   "publisher": "U.S. National Library of Medicine (MedlinePlus)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:36.514Z",
+   "snapshot": "d52fce43c422740f32b282ddee59ff2c3fd7254e33f50a0928f30c2f983c5bf3"
+  },
+  "s10": {
+   "url": "https://my.clevelandclinic.org/health/body/23204-keratin",
+   "title": "Keratin: Protein, Structure, Benefits, Uses & Risks",
+   "publisher": "Cleveland Clinic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.039Z",
+   "snapshot": "9c718c9aec813e14ab4bd85adc23a396228b1ee7a549be5150e862dc0808acb9"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Keratin",
+   "title": "Keratin – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:28:46Z"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Human_serum_albumin",
+   "title": "Human serum albumin – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.135Z",
+   "snapshot": "71fc85a2fa9662c9d75d960e4ccbca5131ab27420fd2383765d3a209b37a3cf4"
+  },
+  "s13": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12681643/",
+   "title": "Albumin does not induce IL-6 release and toll-like receptor activation in vitro: Role of endotoxin contamination",
+   "publisher": "PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:36.874Z",
+   "snapshot": "bc760ef1f0b3bfcb7bcf0fe44f74cb30aa364528972a0ca8761f6c4bd05077eb"
+  },
+  "s14": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065628/",
+   "title": "When Albumin Meets Liposomes: A Feasible Drug Carrier for Biomedical Applications",
+   "publisher": "PMC (Pharmaceuticals)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.852Z",
+   "snapshot": "81090fc21171d7b46c0b2dcc5385c1aff9ae1af1fe67d99624ac5564ab784fb1"
+  },
+  "s15": {
+   "url": "https://medlineplus.gov/ency/article/002223.htm",
+   "title": "Antibody: MedlinePlus Medical Encyclopedia",
+   "publisher": "U.S. National Library of Medicine (MedlinePlus)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.182Z",
+   "snapshot": "968672911ec188cd59fa79704e768dc042b65d20de8cfa7a8918607f46a60624"
+  },
+  "s16": {
+   "url": "https://www.genome.gov/genetics-glossary/Antibody",
+   "title": "Antibody – Talking Glossary",
+   "publisher": "National Human Genome Research Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.689Z",
+   "snapshot": "77f69bd84bca29bc62d0f6887a1f758464c7fbd4f0c675165d6e2ae6308534ce"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "collagen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "elastin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "keratin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "albumin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A protein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript pp-051"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Catalysts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 58; transcript ppm-105"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:08.058Z",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Collagen () is the main structural protein in the extracellular matrix of the connective tissues of many animals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “collagen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:08.058Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "elastin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“elastin”, “Elastin”, “эластин”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:08.058Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In particular, he worked out the techniques for isolating the serum albumin fraction of blood plasma, which is essential for maintaining the osmotic pressure in the blood vessels, preventing their collapse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “albumin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:08.058Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A protein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“A protein”, “Ein Protein”, “белок”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:08.058Z",
+   "target": "f25808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Other biological catalysts include catalytic RNA molecules, or ribozymes, which are sometimes classified as enzymes despite being composed of RNA rather than protein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catalysts” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:28:32Z",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Collagen is the most abundant protein in your body. It accounts for about 30% of your body’s total protein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:28:35Z",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the most abundant protein in mammals",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:28:37Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is highly elastic and present in connective tissue of the body to resume its shape after stretching or contracting.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:28:39Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They can be stretched and then snap back into place, which is how they provide resilience and flexibility to organs and tissues such as the heart, skin, lungs, ligaments, and blood vessels.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23",
+   "note": "\"They\" = elastic fibers, whose major component is elastin."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:28:44Z",
+   "target": "f08503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Keratin is a protein that helps form hair, nails and your skin’s outer layer (epidermis).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:28:46Z",
+   "target": "f08503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "It is the key structural material making up scales, hair, nails, feathers, horns, claws, hooves, and the outer layer of skin in tetrapod vertebrates.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:28:48Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "It is the most abundant protein in human blood plasma; it constitutes about half of serum protein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:28:50Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Human serum albumin (HSA), the most abundant protein in plasma, plays a central role in maintaining oncotic pressure",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:28:56Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Albumin, the most abundant protein in plasma",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:29:02Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "An antibody is a protein produced by the body's immune system when it detects harmful substances, called antigens.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T08:29:05Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "An antibody is a protein component of the immune system that circulates in the blood, recognizes foreign substances like bacteria and viruses, and neutralizes them.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Collagen is the most abundant protein in your body. It accounts for about 30% of your body’s total protein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the most abundant protein in mammals",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is highly elastic and present in connective tissue of the body to resume its shape after stretching or contracting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They can be stretched and then snap back into place, which is how they provide resilience and flexibility to organs and tissues such as the heart, skin, lungs, ligaments, and blood vessels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Keratin is a protein that helps form hair, nails and your skin’s outer layer (epidermis).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "It is the most abundant protein in human blood plasma; it constitutes about half of serum protein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s12"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Human serum albumin (HSA), the most abundant protein in plasma, plays a central role in maintaining oncotic pressure",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s13"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Albumin, the most abundant protein in plasma",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s14"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "An antibody is a protein produced by the body's immune system when it detects harmful substances, called antigens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s15"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "An antibody is a protein component of the immune system that circulates in the blood, recognizes foreign substances like bacteria and viruses, and neutralizes them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s16"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Collagen: What It Is, Types, Function & Benefits",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “collagen” is on the snapshot of s7"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Elastin is a protein encoded by the ELN gene in humans and several other animals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “elastin” is on the snapshot of s8"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Multiple copies of the tropoelastin protein attach to one another and are processed to form a mature protein called elastin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “elastin” is on the snapshot of s9"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Keratin: Protein, Structure, Benefits, Uses & Risks",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “keratin” is on the snapshot of s10"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Human serum albumin (HSA or \"Human Fraction V\") is the serum albumin found in human blood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “albumin” is on the snapshot of s12"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Albumin does not induce IL-6 release and toll-like receptor activation in vitro: Role of endotoxin contamination and biochemical modifications - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “albumin” is on the snapshot of s13"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f08505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "When Albumin Meets Liposomes: A Feasible Drug Carrier for Biomedical Applications - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “albumin” is on the snapshot of s14"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "An antibody is a protein produced by the body's immune system when it detects harmful substances, called antigens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “A protein” is on the snapshot of s15"
+  },
+  {
+   "id": "e41",
+   "at": "2026-10-23T12:56:54.312Z",
+   "target": "f25377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "An antibody is a protein component of the immune system that circulates in the blood, recognizes foreign substances like bacteria and viruses, and neutralizes them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “A protein” is on the snapshot of s16"
+  }
+ ]
+}

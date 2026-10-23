@@ -1,0 +1,841 @@
+{
+ "article": "a2729",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Three_Gorges_Dam",
+   "title": "Three Gorges Dam",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:18.408Z",
+   "snapshot": "410cbb6224a9021f194fdc49c8286efb8808992c2ab9eff2a4016b9510d1dc0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Itaipu_Dam",
+   "title": "Itaipu Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:05.375Z",
+   "snapshot": "13c8abe5f42b2360846cad672d2a07860d78390dce45cc1ed87cc45759133938"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Baihetan_Dam",
+   "title": "Baihetan Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:16:11.276Z",
+   "snapshot": "2368ce2162069a44492d932c0e151a7e495229936accacd5d03000eb621a9213"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grand_Coulee_Dam",
+   "title": "Grand Coulee Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:16:12.544Z",
+   "snapshot": "7001efe1efc18fe1764a252777b5b9dd5ed8223dae64cc29d0abb436f437c4e5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hydroelectricity",
+   "title": "Hydroelectricity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:16:13.422Z",
+   "snapshot": "dd6a4970a3c747c9b2576a2f75efe5edd83de300e5c754f807fec2e36511ed45"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hoover_Dam",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:40.627Z",
+   "snapshot": "c0da4e6a2b644086b8dd3b762b11a07d7ba695fade587b194b595d438de06cf3"
+  },
+  "s7": {
+   "url": "https://www.ctg.com.cn/ctgenglish/business/clean_energy/hydropower7/index.html",
+   "title": "Hydropower",
+   "publisher": "China Three Gorges Corporation (operator)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:11.185Z",
+   "snapshot": "e2b888eb77add1c6963350af190ac347aedc8ff5ab220ab746e39d97183a0af5"
+  },
+  "s8": {
+   "url": "https://www.power-technology.com/projects/gorges/",
+   "title": "Three Gorges Dam Hydro Electric Power Plant, China",
+   "publisher": "Power Technology",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:54.332Z",
+   "snapshot": "012ac6069b4023d1a58de96e65a54085967a13ccf2b922bcf3aab12bec5a8fd6"
+  },
+  "s9": {
+   "url": "https://www.power-technology.com/projects/baihetan-hydropower-project-china/",
+   "title": "Baihetan Hydropower Project, China",
+   "publisher": "Power Technology",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:56.473Z",
+   "snapshot": "386e3eebd41ff0983ca0b8310729c6f6b941e511f5035112cd5fb7d7815332f7"
+  },
+  "s10": {
+   "url": "https://www.itaipu.energy/",
+   "title": "Itaipu Binacional",
+   "publisher": "Itaipu Binacional (operator)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:58.024Z",
+   "snapshot": "002b5b59790ac9301a84d8bc7ad7c26b21032103c45a25d758aa1219a59441b5"
+  },
+  "s11": {
+   "url": "https://www.usbr.gov/pn/grandcoulee/about/index.html",
+   "title": "About Grand Coulee Dam",
+   "publisher": "U.S. Bureau of Reclamation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:59.145Z",
+   "snapshot": "ae83523dfc4ab188b7282be90c98bea1fa950db5cc2bfe8ff8dad35a1decb728"
+  },
+  "s12": {
+   "url": "https://www.eia.gov/energyexplained/hydropower/where-hydropower-is-generated.php",
+   "title": "Where hydropower is generated",
+   "publisher": "U.S. Energy Information Administration",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:59.276Z",
+   "snapshot": "c3dd0806ff7774a2ab1a6e6d59c7bb48a6107f9e14df4eb5ef7e3d748326faac"
+  },
+  "s13": {
+   "url": "https://ember-energy.org/latest-insights/global-electricity-review-2024/electricity-transition-in-2023",
+   "title": "Global Electricity Review 2024 – Electricity Transition in 2023",
+   "publisher": "Ember",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:00.381Z",
+   "snapshot": "3d224609b646b235762b802a30a3d79030cc3da2898361169fd626ce52e927d3"
+  },
+  "s14": {
+   "url": "https://www.hydropower.org/publications/2024-world-hydropower-outlook",
+   "title": "2024 World Hydropower Outlook",
+   "publisher": "International Hydropower Association",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:00.565Z",
+   "snapshot": "2c085449b92db704b786284bc0dcd9813d8b5641b280c182332ca5a6c1a6fc97"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Three Gorges Dam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Itaipu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Baihetan Dam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grand Coulee Dam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hydropower",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-024"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:04.491Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Three Gorges Dam, officially known as Yangtze River Three Gorges Water Conservancy Project is a hydroelectric gravity dam that spans the Yangtze River near Sandouping in Yiling District, Yichang, Hubei province, central China, downstream of the Three Gorges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Three Gorges Dam” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:04.491Z",
+   "target": "f25489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Itaipu Dam (Guarani: Yjoko Itaipu [itajˈpu]; Portuguese: Barragem de Itaipu [itajˈpu]; Spanish: Represa de Itaipú [itajˈpu]) is a hydroelectric dam on the Paraná River located on the border between Brazil and Paraguay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Itaipu” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:04.491Z",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Baihetan Dam is a large hydroelectric dam on the Jinsha River, an upper stretch of the  Yangtze River in Sichuan and Yunnan provinces, in southwest China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baihetan Dam” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:04.491Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Grand Coulee Dam is a concrete gravity dam on the Columbia River in the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grand Coulee Dam” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:04.491Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hydroelectricity, or hydroelectric power, is electricity generated from hydropower.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:04.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hydropower” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:15:46Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Three Gorges Project Location: Hubei Province, China Installed Capacity: 22.5 GW",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "operator's figures: Three Gorges 22.5 GW, Baihetan 16 GW; Itaipu 14 GW (itaipu.energy) — so Three Gorges is the largest"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:15:49Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 2012, all 32 hydro units were commissioned to generate a total of 22,500MW output.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:15:52Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "making it one of the world’s largest hydro plants, well ahead of Brazil’s 12,600MW Itaipu installation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:15:54Z",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The 16GW Baihetan hydropower project is the second-largest hydroelectric project in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:15:57Z",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Baihetan Hydropower Station Location: at the border of Yunnan and Sichuan Provinces, China Installed Capacity: 16 GW",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:16:00Z",
+   "target": "f25489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "103,100 GWh Best annual output (2016)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:16:03Z",
+   "target": "f25489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It is the single plant that has generated the most energy in history",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:16:06Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Grand Coulee Dam became the largest hydropower generating complex in the United States with a generating capacity of more than 6,809-megawatts",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:16:08Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "the Grand Coulee Dam, which is the largest U.S. hydropower facility and has the highest electricity-generation capacity of all U.S. power plants",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:16:11Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Although it remained the largest source of clean power globally, its share in the world’s electricity mix dropped 0.6 percentage points to 14.3%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "hydropower 4,210 TWh = 14.3% in 2023: 'about 15%' corrected to 'about 14%'"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:16:14Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Hydropower is the largest single source of renewable energy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Three Gorges Project Location: Hubei Province, China Installed Capacity: 22.5 GW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "making it one of the world’s largest hydro plants, well ahead of Brazil’s 12,600MW Itaipu installation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The 16GW Baihetan hydropower project is the second-largest hydroelectric project in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Baihetan Hydropower Station Location: at the border of Yunnan and Sichuan Provinces, China Installed Capacity: 16 GW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It is the single plant that has generated the most energy in history",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Grand Coulee Dam became the largest hydropower generating complex in the United States with a generating capacity of more than 6,809-megawatts",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "the Grand Coulee Dam, which is the largest U.S. hydropower facility and has the highest electricity-generation capacity of all U.S. power plants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Although it remained the largest source of clean power globally, its share in the world’s electricity mix dropped 0.6 percentage points to 14.3%",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s13"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Hydropower is the largest single source of renewable energy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s14"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Three Gorges Dam Hydro Electric Power Plant, China",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Three Gorges Dam” is on the snapshot of s8"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Itaipu Binacional | Integration that generates energy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Itaipu” is on the snapshot of s10"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The second generator was installed by September 2020, while the construction of all underground facilities at the Baihetan dam was completed in October.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baihetan Dam” is on the snapshot of s9"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "About Grand Coulee Dam | Bureau of Reclamation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Grand Coulee Dam” is on the snapshot of s11"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "utility-scale conventional hydroelectricity generation capacity is concentrated in Washington, California, and Oregon.1 Washington has more conventional hydroelectricity-generation capacity than any other state and is the site of the Grand Coulee Dam, which is the largest U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Grand Coulee Dam” is on the snapshot of s12"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "However, clean sources were unable to meet all of the rise in demand, and a record fall in hydropower created a further shortfall, so fossil generation increased to meet the gap.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hydropower” is on the snapshot of s13"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:59:51.828Z",
+   "target": "f25957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "2024 World Hydropower Outlook | IHA Report 2024 World Hydropower Outlook",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:51.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hydropower” is on the snapshot of s14"
+  }
+ ]
+}

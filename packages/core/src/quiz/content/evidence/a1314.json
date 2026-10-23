@@ -1,0 +1,249 @@
+{
+ "article": "a1314",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Illuminati",
+   "title": "Illuminati – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:16.246Z",
+   "snapshot": "6e8275549b295cb6fe8fb5915ea3fa713b930837f5df7a5fe8db650ab62386ca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/United_Grand_Lodge_of_England",
+   "title": "United Grand Lodge of England – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:17.233Z",
+   "snapshot": "d171841b2103c64fe763f55522d8f35e2a8de5a41946ff56365b0621354b60d4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rosicrucianism",
+   "title": "Rosicrucianism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:18.186Z",
+   "snapshot": "85e478de06039539cc14d8092e129d37d851fd8e64b5991942a608b7fa0b000b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Carbonari",
+   "title": "Carbonari – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:19.213Z",
+   "snapshot": "d5add2ebd0f79d163758e08298d207ce6c44ff9ecdbbcea4537f3f341ef37fdd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Skull_and_Bones",
+   "title": "Skull and Bones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:20.241Z",
+   "snapshot": "9fc71e2a91c047b737d932f94077198b97de345a83d0181cebb4d7b1ea9fde12"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Adam_Weishaupt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:21.146Z",
+   "snapshot": "fee53d5fa9586cd1073ddd5bf89d2e15de9d1c78043b93bac44636992b03454a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Illuminati",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Freemasons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosicrucians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carbonari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Skull and Bones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:04.923Z",
+   "target": "f06566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Illuminati (; plural of Latin illuminatus, 'enlightened') is a name given to several groups, both real and fictitious.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Illuminati” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:04.923Z",
+   "target": "f06567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The United Grand Lodge of England (UGLE) is the governing Masonic lodge for the majority of freemasons in England, Wales, and some Commonwealth of Nations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Freemasons” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:04.923Z",
+   "target": "f06568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "There have been several Rosicrucian (or Rosicrucian-inspired) organizations since the Rosicrucians appeared as characters from literary works, including the Order of the Golden and Rosy Cross (1750s–1790s), the Societas Rosicruciana in Anglia (1865–present), and the Hermetic Order of the Golden Dawn",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosicrucians” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:04.923Z",
+   "target": "f06569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Carbonari may have further influenced other revolutionary groups in France, Portugal, Spain, the  Empire of Brazil, Uruguay, the Ottoman Empire, and Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carbonari” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:04.923Z",
+   "target": "f06570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Skull and Bones (also known as The Order, Order 322 or The Brotherhood of Death) is an American undergraduate senior society at Yale University in New Haven, Connecticut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skull and Bones” is on the snapshot of s5"
+  }
+ ]
+}

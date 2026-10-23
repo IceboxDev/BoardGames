@@ -1,0 +1,195 @@
+{
+ "article": "a1851",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/W%C3%BCrzburg_Residence",
+   "title": "Würzburg Residence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:30.353Z",
+   "snapshot": "187c937d30491b8f9e7b8a703a0ab777c99259395f7f00209397bbe520c7f145"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Villa_La_Rotonda",
+   "title": "Villa La Rotonda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:00.456Z",
+   "snapshot": "36c37ac6c47a610daaa0d6baf313d5adb426c7bf5737f283dd0f2fdb16f142d7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palais_Garnier",
+   "title": "Palais Garnier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:01.587Z",
+   "snapshot": "cf864f7d188483ea6c16829d8c2c071fbeb2bf4ed105dfde01eebd22202bb3e2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Moissac_Abbey",
+   "title": "Moissac Abbey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:02.439Z",
+   "snapshot": "ec6c2e40d98a3a2f9126f1422825132002083dbe3eb66b75223a314c1ac7234d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "vestibule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "portico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "foyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cloister",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:34.109Z",
+   "target": "f09251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As a result of a devastating British air raid on 16 March 1945, the residence was almost completely burnt out and only the central building with the Vestibule, Garden Hall, Staircase, White Hall and Imperial Hall survived the inferno, their roofs destroyed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vestibule” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:34.109Z",
+   "target": "f09252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The design is for a completely symmetrical building having a square plan with four facades, each of which has a projecting portico.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “portico” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:34.109Z",
+   "target": "f09254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The building features a large ceremonial staircase of white marble with a balustrade of red and green marble, which divides into two divergent flights of stairs that lead to the Grand Foyer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “foyer” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:34.109Z",
+   "target": "f09255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pope Urban II visited in 1097 and consecrated the high altar and issued a Papal Bull dated 7 May 1097 restoring 40 churches to the abbey; he also ordered the construction of the cloister, completed in 1100.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:34.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cloister” is on the snapshot of s4"
+  }
+ ]
+}

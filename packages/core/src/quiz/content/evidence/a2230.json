@@ -1,0 +1,242 @@
+{
+ "article": "a2230",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Roland_Emmerich",
+   "title": "Roland Emmerich",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:48.934Z",
+   "snapshot": "a24ce88c647742d1f42904169efbfb5ba9c6b5b44395843f65ef9560c7e80660"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Air_Force_One_(film)",
+   "title": "Air Force One (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:16.984Z",
+   "snapshot": "0ded7f5819206531d3a43a12c092d3f7fa74ca786264f2bcbf5d042329cb03ef"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ernst_Lubitsch",
+   "title": "Ernst Lubitsch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:52.704Z",
+   "snapshot": "1c6ee1bd18f8f7bca201334d617259c31f11d18bbccd0f8782a326ed5c7b57ec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sunrise:_A_Song_of_Two_Humans",
+   "title": "Sunrise: A Song of Two Humans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:53.764Z",
+   "snapshot": "0415bdcf606207a0329ba7b89020229bb17757a91f71b481723b5e3230a52711"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Independence_Day_(1996_film)",
+   "title": "Independence Day (1996 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:49.207Z",
+   "snapshot": "cf65c42f4bb8042a239395038813ce13a08e5554975f7e6af01ecb82f33ec95b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Baden-Württemberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-343"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wolfgang Petersen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ernst Lubitsch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "F. W. Murnau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Independence Day",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:40.053Z",
+   "target": "f11385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Verdienstorden des Landes Baden-Württemberg 2007",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baden-Württemberg” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:40.053Z",
+   "target": "f11386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Air Force One is a 1997 American political action thriller film directed and co-produced by Wolfgang Petersen and written by Andrew W.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Petersen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:40.053Z",
+   "target": "f11387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ernst Lubitsch (; January 29, 1892 – November 30, 1947) was a German and American film director, producer, writer, and actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Lubitsch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:40.053Z",
+   "target": "f11388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sunrise: A Song of Two Humans (also known as Sunrise) is a 1927 American synchronized sound romantic drama directed by German director F. W. Murnau (in his American film debut) and starring George O'Brien, Janet Gaynor, and Margaret Livingston.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “F. W. Murnau” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:40.053Z",
+   "target": "f11389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Independence Day is a 1996 American science fiction action film directed by Roland Emmerich, written by Emmerich and the film's producer Dean Devlin, and starring an ensemble cast that consists of Will Smith, Bill Pullman, Jeff Goldblum, Mary McDonnell, Judd Hirsch, Margaret Colin, Randy Quaid,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.053Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Independence Day” is on the snapshot of s5"
+  }
+ ]
+}

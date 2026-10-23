@@ -1,0 +1,375 @@
+{
+ "article": "a2696",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
+   "title": "Gutenberg Bible",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:20.334Z",
+   "snapshot": "b101587b31aeed989d952d936b0f1a0b62cfde57659d0118d07f3052db0f0c4d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nieders%C3%A4chsische_Staats-_und_Universit%C3%A4tsbibliothek_G%C3%B6ttingen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:13:18.410Z",
+   "snapshot": "fdd694ce1c061cb2081eac3c2ee069156a28a2f3665f668fe5ab5dc68f92ba02"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gutenberg-Museum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:13:19.349Z",
+   "snapshot": "0de9a50212ae4804c893c2a0a3a42e34be8feffcd3ddca968ea8336ecca8e4ee"
+  },
+  "s4": {
+   "url": "https://www.hrc.utexas.edu/gutenberg-bible/",
+   "title": "The Gutenberg Bible",
+   "publisher": "Harry Ransom Center, University of Texas at Austin",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:35.964Z",
+   "snapshot": "f5f2b9218d34ee2fd37403f5fd17c26eec8c08018acd9139893fe150322b053f"
+  },
+  "s5": {
+   "url": "https://www.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+   "title": "The Gutenberg Bible – Bibles",
+   "publisher": "Library of Congress",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:36.312Z",
+   "snapshot": "26fdda68479c6354f4244b83185bb4740c4b3178ef964b95fea22a2e3746c165"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "21 copies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; history entry seq 9; transcript tp-207"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Latin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "42 lines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pius II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Austin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:58.523Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "21 copies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“21 copies”, “21 Exemplare”, “21 экземпляр”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:58.523Z",
+   "target": "f14702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Gutenberg Bible is an edition of the Latin Vulgate printed in the 1450s by Johannes Gutenberg in Mainz (Holy Roman Empire), in present-day Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Latin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:58.523Z",
+   "target": "f14703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Page 10 has 41, and from there on the 42 lines appear.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “42 lines” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:58.523Z",
+   "target": "f14704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In March 1455, the future Pope Pius II wrote that he had seen pages from the Gutenberg Bible, displayed in Frankfurt to promote the edition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pius II” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:58.523Z",
+   "target": "f14705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This copy is now in Austin, Texas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Austin” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:08:43Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ransom Center's copy represents one of only 20 complete copies in the world that survive intact.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Census counts of complete copies vary: 20 (Ransom Center), 21 (en.wikipedia lead; the printed card's answer), 25 (en.wikipedia 'Surviving copies', as of 2009). The bank keeps the card's 21 and lists 20 and 25 in the notes."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:08:44Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "49 survive in at least substantial portion, 21 of them in entirety",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Answer kept as the printed card's 21; alternatives (20, 25) accepted in the notes."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:08:46Z",
+   "target": "f14703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Bible is printed throughout in double columns, for the most part, with forty-two lines to a page.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:08:47Z",
+   "target": "f14703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Page 10 has 41, and from there on the 42 lines appear.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:46.135Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ransom Center's copy represents one of only 20 complete copies in the world that survive intact.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:46.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:46.135Z",
+   "target": "f14701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "49 survive in at least substantial portion, 21 of them in entirety",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:46.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:46.135Z",
+   "target": "f14703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Bible is printed throughout in double columns, for the most part, with forty-two lines to a page.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:46.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  }
+ ]
+}

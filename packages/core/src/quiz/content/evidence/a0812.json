@@ -1,0 +1,242 @@
+{
+ "article": "a0812",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus",
+   "title": "Tractatus Logico-Philosophicus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:58.541Z",
+   "snapshot": "14aaefc75b887ed81abbee7690b363ba4e32eba29c4066eb76810b556afd054d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Logic_of_Scientific_Discovery",
+   "title": "The Logic of Scientific Discovery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:59.327Z",
+   "snapshot": "d1233a1d6ac6e8cda839694743c1b7c62bb6b1738bb4131b03f9386d14f26502"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Moritz_Schlick",
+   "title": "Moritz Schlick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:00.443Z",
+   "snapshot": "be73ec208f13f0bd8ecf5aef4730506882bc9b02e445b9c34516a04a2a08fbe5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/I_and_Thou",
+   "title": "I and Thou – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:01.328Z",
+   "snapshot": "261c8951e745f5abd50296ac16cf346a14583d44f03788bf22c90aaf0befc914"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Otto_Weininger",
+   "title": "Otto Weininger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:02.329Z",
+   "snapshot": "4a70df518752edf1dd3db52c715a4f243389b22f4cc7dff2f0855195200b8378"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ludwig Wittgenstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Popper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moritz Schlick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Martin Buber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Otto Weininger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:48.816Z",
+   "target": "f04056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Tractatus Logico-Philosophicus (widely abbreviated and cited as TLP) is the only book-length philosophical work by the Austrian philosopher Ludwig Wittgenstein that was published during his lifetime.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Wittgenstein” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:48.816Z",
+   "target": "f04057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Logic of Scientific Discovery is a 1959 book about the philosophy of science by the philosopher Karl Popper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Popper” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:48.816Z",
+   "target": "f04058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Friedrich Albert Moritz Schlick (; German: [ʃlɪk] ; 14 April 1882 – 22 June 1936) was a German philosopher, physicist, and the founding father of logical positivism and the Vienna Circle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moritz Schlick” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:48.816Z",
+   "target": "f04059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ich und Du, usually translated as I and Thou, is a book by Martin Buber, published in 1923.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Buber” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:48.816Z",
+   "target": "f04060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Otto Weininger (German: [ˈvaɪnɪŋɐ]; 3 April 1880 – 4 October 1903) was an Austrian philosopher who in 1903 published the book Geschlecht und Charakter (Sex and Character), which gained popularity after his suicide at the age of 23.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:48.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Weininger” is on the snapshot of s5"
+  }
+ ]
+}

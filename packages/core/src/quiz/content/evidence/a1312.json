@@ -1,0 +1,249 @@
+{
+ "article": "a1312",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Wages_of_Fear",
+   "title": "The Wages of Fear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:06.126Z",
+   "snapshot": "f6ed45240b38f9291ecda5b58dceeeb1ddd79801733374b3943c15d66fbaedde"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/CSX_8888_incident",
+   "title": "CSX 8888 incident – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:07.248Z",
+   "snapshot": "2aac40f485333c173eef9c5f81318960e22ae8da37afad6da935280e37733e48"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Smokey_and_the_Bandit",
+   "title": "Smokey and the Bandit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:08.245Z",
+   "snapshot": "b4f461553c9df9d72b4cd952fdcf0bfa621fca6d0572e16cb33e26eb1d3a9839"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Italian_Job",
+   "title": "The Italian Job – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:09.192Z",
+   "snapshot": "a7976b8ffef8a10aceb660775fb7f488237722ce94dd761758918885e7209e30"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Lost_World:_Jurassic_Park",
+   "title": "The Lost World: Jurassic Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:10.374Z",
+   "snapshot": "c16011fa8517ab51f9b571b869993ab409b9477685ea5df4091e8f50f95ab43a"
+  },
+  "s6": {
+   "url": "https://fr.wikipedia.org/wiki/Le_Salaire_de_la_peur_(film)",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:54:07.486Z",
+   "snapshot": "d490856bac1a29a067767974f8c0e517710f6f1c6d6acd06eefda4fa7ed002f0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nitroglycerin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Phenol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Coors beer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06559",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gold",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tyrannosaurus rex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:04.679Z",
+   "target": "f06556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The film centres on a group of four down-on-their-luck European men who are hired by an American oil company to drive two trucks, loaded with nitroglycerin needed to extinguish an oil well fire, over mountain dirt roads.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nitroglycerin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:04.679Z",
+   "target": "f06557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Locomotive #8888, an EMD SD40-2, ran uncontrolled for just under two hours at up to 53 miles per hour (85 km/h) while pulling a train of 47 cars; 2 cars were loaded with molten phenol, a substance used in dyes and glues.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phenol” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:04.679Z",
+   "target": "f06558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The film follows Bo \"Bandit\" Darville (Reynolds) and Cledus \"Snowman\" Snow (Reed), two truck-driving bootleggers attempting to illegally transport 400 cases of Coors beer from Texarkana to Atlanta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coors beer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:04.679Z",
+   "target": "f06559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The film's plot centres on Cockney criminal Charlie Croker, recently released from prison, who forms a gang for the job of stealing a cache of gold bullion being transported through the city of Turin, Italy, in an armoured security truck.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gold” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:04.679Z",
+   "target": "f06560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On the way back to the trailer, Nick rescues an injured Tyrannosaurus rex infant that Roland used as bait to hunt its father.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tyrannosaurus rex” is on the snapshot of s5"
+  }
+ ]
+}

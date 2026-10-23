@@ -1,0 +1,342 @@
+{
+ "article": "a2463",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Pablo_Neruda",
+   "title": "Pablo Neruda",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:32.120Z",
+   "snapshot": "50a033b3a316bf4e95ee8a40068cd09a0fd0c2033bf7187ab683cae3f01735a3"
+  },
+  "s2": {
+   "url": "https://www.tiposinfames.com/libros/odas-a-la-comida-y-otros-placeres-elementales/68649/",
+   "title": "Odas a la comida y otros placeres elementales",
+   "kind": "other",
+   "lang": "es",
+   "retrievedAt": "2026-10-20"
+  },
+  "s3": {
+   "url": "https://es.wikipedia.org/wiki/Casa_de_Isla_Negra",
+   "title": "Casa de Isla Negra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T06:00:32.373Z",
+   "snapshot": "4bf9293807d57e6feeb10b30fd5b44ff809fb8d7813307d796a6656712359fc0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Il_Postino:_The_Postman",
+   "title": "Il Postino: The Postman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:35.012Z",
+   "snapshot": "774342f05f7720389006ba99ba6b6f73dae0fa538b937f40d4310d6db1fd6cc2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Twenty_Love_Poems_and_a_Song_of_Despair",
+   "title": "Twenty Love Poems and a Song of Despair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:36.000Z",
+   "snapshot": "4b4026064bfb9a9a9a88a0fa554b1b8a60d7a1c47bf374f5e2eb6ba5b8258911"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pablo_Neruda",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:15.717Z",
+   "snapshot": "f41fdeadbd04da06373dfb90629f72b694493840b26f01274b658c013ce9ed5f"
+  },
+  "s7": {
+   "url": "https://www.poesi.as/pn59132.htm",
+   "title": "Oda a las papas fritas – Pablo Neruda",
+   "publisher": "poesi.as (poetry text archive)",
+   "kind": "other",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T12:47:29.719Z",
+   "snapshot": "3afd1bb90b85c76e057473cd3b37e1db9915cfcea0ab471319c1758965a2082f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Potato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-216"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Isla Negra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Il Postino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Twenty Love Poems and a Song of Despair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Santiago de Chile",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Santiago de Chile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-157/5, u03: Neruda never lived in the GDR. His exiles were in Europe and Asia (Italy, France, etc.), and he died on 23 Sept 1973 at the Santa María clinic in Santiago."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Santiago de Chile",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Santiago de Chile",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "September 1973 in Santiago de Chile), war ein chilenischer Dichter und Schriftsteller sowie Diplomat, der sich vor allem gegen den Faschismus in seinem Heimatland und in Spanien einsetzte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santiago de Chile” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ediciones de Libreria Neira, Santiago de Chile, 1948.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santiago de Chile” is on the snapshot of s6"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "La Casa Museo de Isla Negra es una de las tres casas que el escritor y poeta chileno Pablo Neruda tenía en su país.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isla Negra” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Il Postino: The Postman (Italian: Il postino, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Il Postino” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:24.056Z",
+   "target": "f12978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Twenty Love Poems and a Song of Despair (Spanish: Veinte poemas de amor y una canción desesperada) is a poetry collection by the Chilean poet Pablo Neruda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.056Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twenty Love Poems and a Song of Despair” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:07:49Z",
+   "target": "f12974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "ODA A LAS PAPAS FRITAS Chisporrotea en el aceite hirviendo la alegría del mundo: las papas fritas",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Text of Neruda's ode to (fried) potatoes; the bank's 'Oda a la papa' (Tercer libro de las odas, 1957) is the plain-potato ode — no crawler-readable copy found (poemhunter, poemas-del-alma, ciudadseva, tiposinfames block the crawler). Either way the answer 'potato' holds."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:06.863Z",
+   "target": "f12974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "ODA A LAS PAPAS FRITAS Chisporrotea en el aceite hirviendo la alegría del mundo: las papas fritas",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  }
+ ]
+}

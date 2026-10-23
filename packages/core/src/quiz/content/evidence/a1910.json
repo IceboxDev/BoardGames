@@ -1,0 +1,249 @@
+{
+ "article": "a1910",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hermeneutik",
+   "title": "Hermeneutik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:29:42.798Z",
+   "snapshot": "df146c422c72632c064dc8eb6b6c04b8604d39546d4bc1ee27689ad54cfd5dcd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Umberto_Eco",
+   "title": "Umberto Eco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:46.639Z",
+   "snapshot": "6d7be34604dfa306d3fd91f999b897bacba4bf9f70fc2d92d4defae5375cdf81"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Etymologiae",
+   "title": "Etymologiae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:47.643Z",
+   "snapshot": "fb7d25caba9547b4c42e05f4ecee56e795526abb14b2ee5fe1c80a0b719a2747"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sophist",
+   "title": "Sophist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:48.728Z",
+   "snapshot": "ade5c2c6e1484fda6b8a1cedff528ea094c0d0fdb9b22cb3c6571de4798bd4b1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ars_Poetica_(Horace)",
+   "title": "Ars Poetica (Horace) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:49.518Z",
+   "snapshot": "bbb04bb0c2344cddd05e77e6f9ce631e4682c006a7759becb3bf04f27d1ddddb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Poetics_(Aristotle)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:50.610Z",
+   "snapshot": "2403b54dc1b8dede5a6acdda4105427fd523d5896b4ba84efaf6bc468640d357"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hermeneutik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "semiotics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "etymology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "rhetoric",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "poetics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:43.382Z",
+   "target": "f09546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Hermeneutik (altgriechisch ἑρμηνεύειν hermēneúein, deutsch ‚erklären‘, ‚auslegen‘, ‚übersetzen‘) ist die Theorie der Interpretation von Texten und des Verstehens.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermeneutik” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:43.382Z",
+   "target": "f09547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In English, he is best known for his popular 1980 novel The Name of the Rose, a historical mystery combining semiotics in fiction with biblical analysis, medieval studies and literary theory, as well as Foucault's Pendulum, his 1988 novel which touches on the history of occultism and its",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “semiotics” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:43.382Z",
+   "target": "f09548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Etymology, the origins of words, is prominent, but the work also covers, among other things, grammar, rhetoric, mathematics, geometry, music, astronomy, medicine, law, the church and heretical sects, pagan philosophers, languages, cities, humans, animals, the physical world, geography, public",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “etymology” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:43.382Z",
+   "target": "f09549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sophists specialized in one or more subject areas, such as philosophy, rhetoric, music, athletics, mathematics, and arete: \"virtue\" or \"excellence\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rhetoric” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:43.382Z",
+   "target": "f09550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This principle is considered a core component of Horatian poetics as it principally aimed to achieve verisimilitude in artistic representation, guiding everything from the choice of genre to diction, dramatic characterization, meter, poetic invention, and the intended effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “poetics” is on the snapshot of s5"
+  }
+ ]
+}

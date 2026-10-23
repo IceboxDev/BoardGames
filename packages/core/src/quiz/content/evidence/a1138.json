@@ -1,0 +1,485 @@
+{
+ "article": "a1138",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alice_Springs",
+   "title": "Alice Springs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:06.263Z",
+   "snapshot": "81be34b6591bd9e56c44facbdb86d4b566a571a30e0ea8049aabee912ae43364"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Atacama_Desert",
+   "title": "Atacama Desert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:04.059Z",
+   "snapshot": "1e1319cde4c5a91d26897a1352f9c076e67a587f687dc056bcdae17578d55a5a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Vostok",
+   "title": "Lake Vostok – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:07.175Z",
+   "snapshot": "88efd935971d4c0b1ba980d4b0b0c6c1011e2e310a5b659318270651afe86888"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Northern_Territory",
+   "title": "Northern Territory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:08.234Z",
+   "snapshot": "db018a13b8cf9082ba4c978857e49d65a938e7b6115d69f95a57765c953d7797"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
+   "title": "Great Barrier Reef",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:02.416Z",
+   "snapshot": "15b77ed2a10b4961d6a42fc08fc38260f5f11d345c1f66e980fb01c1c63838ae"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Uluru",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:23.679Z",
+   "snapshot": "0ec73f5db5791e3089fd8d9f53d332dd1c2154b7935b0bac675ffe18528bdd1d"
+  },
+  "s7": {
+   "url": "https://news.bbc.co.uk/2/hi/science/nature/4437153.stm",
+   "title": "Chile desert's super-dry history",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:08.438Z",
+   "snapshot": "2a7a044fc14d4bf04551e5d8ae2662bcfc16b1ff5d8ef30c88c16cab1631f877"
+  },
+  "s8": {
+   "url": "https://whc.unesco.org/en/list/154",
+   "title": "Great Barrier Reef – UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:15:41Z"
+  },
+  "s9": {
+   "url": "https://www.skyatnightmagazine.com/earth-from-space/great-barrier-reef",
+   "title": "Great Barrier Reef from space",
+   "publisher": "BBC Sky at Night Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:10.871Z",
+   "snapshot": "02f61c6994ab802b7319a16acf9d01ac48318f7a4df4fef96cbbb4857283773c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "South America",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Antarctica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-098"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Northern Territory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Great Barrier Reef",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-369"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:38.457Z",
+   "target": "f05686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alice Springs (Eastern Arrernte: Mparntwe, [ᵐbaⁿɖʷə], colloquially in English The Alice or Alice) is a town in the Northern Territory, Australia; it is the third-largest settlement in the Northern Territory after Darwin and Palmerston.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australia” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:38.457Z",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Atacama Desert (Spanish: Desierto de Atacama [ataˈkama]) is a desert plateau on the Pacific coast of South America, stretching along a 1,600-kilometre-long (1,000-mile) strip of land in northern Chile, west of the Andes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South America” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:38.457Z",
+   "target": "f05689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lake Vostok (Russian: озеро Восток, romanized: ozero Vostok) is the largest of Antarctica's 675 known subglacial lakes and the 16th largest lake in the world by area.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antarctica” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:38.457Z",
+   "target": "f05690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Northern Territory (abbreviated as NT; known formally as the Northern Territory of Australia and informally as the Territory) is an Australian internal territory in the central and central-northern regions of Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Northern Territory” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:38.457Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres (1,400 mi) over an area of approximately 344,400 square kilometres (133,000 mi2).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.457Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Barrier Reef” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:07:29Z",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Atacama is the driest non-polar desert in the world and the largest fog desert on Earth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:07:31Z",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Atacama desert in South America has been in a super-dry state far longer than any other location on Earth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:15:41Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is one of a few living structures visible from space",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:15:44Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Barrier Reef can be seen from outer space and is the world's biggest single structure made by living organisms.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:15:46Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Great Barrier Reef is the largest, indeed the only living thing that can be seen from space",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:16.342Z",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Atacama is the driest non-polar desert in the world and the largest fog desert on Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:16.342Z",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Atacama desert in South America has been in a super-dry state far longer than any other location on Earth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:16.342Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Barrier Reef can be seen from outer space and is the world's biggest single structure made by living organisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:16.342Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Great Barrier Reef is the largest, indeed the only living thing that can be seen from space",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:16.342Z",
+   "target": "f05688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Atacama desert in South America has been in a super-dry state far longer than any other location on Earth - nearly 40 million years in some places.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “South America” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:16.342Z",
+   "target": "f12069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Great Barrier Reef from space | BBC Sky at Night Magazine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Great Barrier Reef” is on the snapshot of s9"
+  }
+ ]
+}

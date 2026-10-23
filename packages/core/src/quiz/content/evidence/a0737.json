@@ -1,0 +1,249 @@
+{
+ "article": "a0737",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Equestrian_vaulting",
+   "title": "Equestrian vaulting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:47.315Z",
+   "snapshot": "7a6f57c99f9229a2b30f070cab24b4d68436efd97df4a844d6d63be0baccac21"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dressage",
+   "title": "Dressage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:11.952Z",
+   "snapshot": "f57fd1895935ebff38c6d2f6a869e52211cfb3e61ff8ad9dc8d50f60c5443f3f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rhythmic_gymnastics",
+   "title": "Rhythmic gymnastics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:48.212Z",
+   "snapshot": "8d819f56c9758883b5f5f818bcbb8d26c0c3134d50cfe78a6bbb5256614659f2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Polo_at_the_1900_Summer_Olympics",
+   "title": "Polo at the 1900 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:49.194Z",
+   "snapshot": "ea45ca1dfb0de64c74c0f5767ab94ce6ba5f291c4b82ceb234e018c26a133391"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Trampoline",
+   "title": "Trampoline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:50.236Z",
+   "snapshot": "3edd9e01599910ff08d13d94cf5b7e2938596cca8cce6fe8960a66b686e69fc1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Polo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:51.355Z",
+   "snapshot": "1e111ef36e9d7eeda21de518cb9fc570c972e12be5305d64953326199effdf02"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Equestrian vaulting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dressage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03683",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhythmic gymnastics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03684",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Polo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03685",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Trampolining",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:36.755Z",
+   "target": "f03681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Equestrian vaulting, or simply vaulting, is most often described as gymnastics and dance on horseback, which can be practiced both competitively or non-competitively and is different from circus or trick riding in that the horse is highly trained and controlled by a Loungeur.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Equestrian vaulting” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:36.755Z",
+   "target": "f03682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dressage ( or ; French: [dʁɛsaʒ], most commonly translated as \"training\") is a form of horse riding performed in exhibition and competition, as well as an art sometimes pursued solely for the sake of mastery.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dressage” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:36.755Z",
+   "target": "f03683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhythmic gymnastics is a sport in which gymnasts perform individually or in groups on a floor with an apparatus: hoop, ball, clubs, ribbon and rope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhythmic gymnastics” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:36.755Z",
+   "target": "f03684",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Polo at the 1900 Summer Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polo” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:36.755Z",
+   "target": "f03685",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A game similar to trampolining was developed by the Inuit, who would toss blanket dancers into the air on a walrus skin one at a time (see Nalukataq) during a spring celebration of whale harvest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trampolining” is on the snapshot of s5"
+  }
+ ]
+}

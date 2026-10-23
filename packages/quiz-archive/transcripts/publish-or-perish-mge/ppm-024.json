@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-024",
+ "image": "IMG20261022153346.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] What is the religious origin of yoga?\nA. Jainism\nB. Buddhism\nC. Hinduism\nAnswer: C. The word “yoga” is derived from the Sanskrit root “yuj,” which means “to unite.” According to yogic scriptures, the practice of yoga leads to the union of individual consciousness with Universal Consciousness.",
+   "de": "Was bedeutet die Sanskrit-Wurzel „yuj“, von der das Wort „Yoga“ abgeleitet ist?",
+   "en": "What does the Sanskrit root “yuj”, from which the word “yoga” is derived, mean?",
+   "reworked": true,
+   "answerDe": "Anjochen (verbinden)",
+   "answerEn": "To yoke (to join)",
+   "timeline": {
+    "kind": "creation",
+    "start": "200",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Patanjali compiles the Yoga Sutras in India in the early centuries CE",
+    "labelDe": "Patanjali stellt in den frühen Jahrhunderten n. Chr. in Indien die Yoga-Sutras zusammen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Yoga",
+    "title": "Yoga",
+    "lang": "en"
+   },
+   "notes": "Card's answer is oversimplified: Wikipedia says yoga originated in ancient India and is practised in the Hindu, Jain and Buddhist traditions, so 'Hinduism' as THE religious origin is contested. The open question asks the etymology from the card's explanation instead: yuj = 'to attach, join, harness, yoke' (card: 'to unite'). Timeline per Wikipedia, Yoga Sutras of Patanjali.",
+   "domain": "belief",
+   "sub": "religion"
+  },
+  {
+   "category": 2,
+   "discipline": "Engineering and Invention",
+   "cardText": "[Engineering and Invention] What is the most dominant type of renewable energy in the world?\nA. Wind energy\nB. Solar energy\nC. Hydropower\nAnswer: C. As of 2023, hydropower accounts for about 47% of all renewable electricity production worldwide. However, both solar and wind energy are rapidly growing and are expected to become more dominant in the future.",
+   "de": "Welche erneuerbare Quelle erzeugte 2023 weltweit den meisten Strom, rund 15 % des gesamten Stroms der Welt?",
+   "en": "Which renewable source generated the most electricity worldwide in 2023, about 15% of all global electricity?",
+   "reworked": true,
+   "answerDe": "Wasserkraft",
+   "answerEn": "Hydropower",
+   "timeline": {
+    "kind": "event",
+    "start": "2023",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hydropower supplies about 15% of the world's electricity, some 4,210 TWh",
+    "labelDe": "Wasserkraft liefert rund 15 % des weltweiten Stroms, etwa 4.210 TWh"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hydroelectricity",
+    "title": "Hydroelectricity",
+    "lang": "en"
+   },
+   "notes": "Card confirmed for electricity (Wikipedia: hydro was about half of renewable generation in 2022, more than all other renewables combined). Dated: wind and solar are growing fast. Counting all renewable energy, not just electricity, bioenergy is larger, so the question is limited to electricity.",
+   "domain": "technology",
+   "sub": "energy"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a0392",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fox_sisters",
+   "title": "Fox sisters – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:55.540Z",
+   "snapshot": "3fbdeed008b29e846ce9ef741c08aeec6c084138348ee0756e9a2fc1b15214af"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wudu",
+   "title": "Wudu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:56.508Z",
+   "snapshot": "9d1336e6bd08ad3e877398794a516104ae0cef6a358a4d2f4937b41b61b70818"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fukan_zazengi",
+   "title": "Fukan zazengi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:57.437Z",
+   "snapshot": "bcd701457f5ca3a94e7507b9bbf179a874e5e6dd3b613b31beca15bdc520c7c8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Shiva_(Judaism)",
+   "title": "Shiva (Judaism) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:58.556Z",
+   "snapshot": "fb1779954d94720a3927af13abd4b1655895161fed577467a752f898a7a585d1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Penance_in_the_Catholic_Church",
+   "title": "Penance in the Catholic Church – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:59.566Z",
+   "snapshot": "4bdcb7cc83b9e2823c06771b8b69bba09a7c3b2390bb6503be1c5b4766d689dd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sky_burial",
+   "title": "Sky burial",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:00.467Z",
+   "snapshot": "d2009dbcef9e67ae81f4c844bf0d593bdf20dc779ba3d9bfd263022b8bebe998"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Séance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wudu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zazen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shiva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Confession",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vultures",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 49; history entry seq 53; transcript ppm-052"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:41.702Z",
+   "target": "f01956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The report also noted that the raps were heard close to Margaretta and a séance sitter, Professor Furness, had felt pulsations in her foot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Séance” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:41.702Z",
+   "target": "f01957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The steps of wudu are: washing the hands, rinsing the mouth and nose, washing the face, then the forearms, then wiping the head and ears, then washing or wiping the feet, done in order without any long breaks between them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wudu” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:41.702Z",
+   "target": "f01958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fukan zazengi (Japanese: 普勸坐禪儀), also known by its English translation Universal Recommendation for Zazen, is an essay describing and promoting the practice of zazen written by the 13th century Japanese Zen monk Eihei Dōgen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zazen” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:41.702Z",
+   "target": "f01959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shiva (Hebrew: שִׁבְעָה, romanized: šīvʿā, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shiva” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:41.702Z",
+   "target": "f01960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The sacrament of penance (also commonly called the sacrament of reconciliation or confession) is one of the seven sacraments of the Catholic Church (known in Eastern Christianity as sacred mysteries).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Confession” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:41.702Z",
+   "target": "f25546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"bird-scattered\") is a funeral practice in which a corpse is placed on a mountaintop to decompose while exposed to the elements, or to be eaten by scavenging animals, especially crows, vultures, bears and jackals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vultures” is on the snapshot of s6"
+  }
+ ]
+}

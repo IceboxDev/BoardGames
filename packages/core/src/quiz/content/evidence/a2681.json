@@ -1,0 +1,195 @@
+{
+ "article": "a2681",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Metallica_v._Napster,_Inc.",
+   "title": "Metallica v. Napster, Inc.",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:29.151Z",
+   "snapshot": "5e055342c0255250924b7c855a8e88ca8e13098f67dcfba5f39f9c65d243891c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/In_Rainbows",
+   "title": "In Rainbows – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:30.159Z",
+   "snapshot": "37dda04a819297cbc1b0fa5042535da52e5a3445dcbe0e8b3e815245a0eda205"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Taylor_Swift",
+   "title": "Taylor Swift – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:31.393Z",
+   "snapshot": "0c742d06582d894611191e2de7964bfc8a74646fe2bc11013495fdbc5c3a1948"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Prince_(musician)",
+   "title": "Prince (musician) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:32.377Z",
+   "snapshot": "db4d8ca39fe0880a3dd4ae47d06067cc5742e82725ecca7979311dfc8195d397"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Metallica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-239"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Rainbows",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Taylor Swift",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Prince",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:57.172Z",
+   "target": "f14582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Metallica is an American heavy metal band.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metallica” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:57.172Z",
+   "target": "f14583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Rainbows is the seventh studio album by the English rock band Radiohead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “In Rainbows” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:57.172Z",
+   "target": "f14584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Swift signed with Big Machine Records in 2005 and debuted as a country singer with the albums Taylor Swift (2006) and Fearless (2008).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taylor Swift” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:57.172Z",
+   "target": "f14585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Prince Rogers Nelson (June 7, 1958 – April 21, 2016) was an American singer, songwriter, musician, dancer, actor, and filmmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prince” is on the snapshot of s4"
+  }
+ ]
+}

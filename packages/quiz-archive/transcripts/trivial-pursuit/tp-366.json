@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-366",
+ "image": "IMG20261007182514.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welchem Land liegt der Ort Y?",
+   "de": "In welchem Land liegt der Ort Y?",
+   "en": "In which country is the village of Y?",
+   "reworked": false,
+   "answerDe": "Frankreich",
+   "answerEn": "France",
+   "timeline": {
+    "kind": "event",
+    "start": "1050",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The village of Y in the Somme is first documented by date, as 'Villa Iei'",
+    "labelDe": "Der Ort Y im Département Somme wird erstmals datiert erwähnt, als „Villa Iei“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Y_(Somme)",
+    "title": "Y (Somme)",
+    "lang": "de"
+   },
+   "notes": "Y is a commune in the Somme department, Hauts-de-France, and has the shortest name of any municipality in Europe.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt das fiktive Kasino, benannt nach einer Hafenstadt in Marokko, das Robert De Niros Filmfigur in Martin Scorseses Casino betreibt?",
+   "de": "Wie heißt das fiktive Kasino, benannt nach einer Hafenstadt in Marokko, das Robert De Niros Filmfigur in Martin Scorseses Casino betreibt?",
+   "en": "What is the name of the fictional casino, named after a port city in Morocco, that Robert De Niro's character runs in Martin Scorsese's Casino?",
+   "reworked": false,
+   "answerDe": "Tangiers",
+   "answerEn": "Tangiers",
+   "timeline": {
+    "kind": "creation",
+    "start": "1995-11-22",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Martin Scorsese's Casino, with Robert De Niro as the manager of the Tangiers casino, opens in US cinemas",
+    "labelDe": "Martin Scorseses „Casino“ mit Robert De Niro als Leiter des Kasinos Tangiers startet in den US-Kinos"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Casino_(Film)",
+    "title": "Casino (Film)",
+    "lang": "de"
+   },
+   "notes": "De Niro plays Sam 'Ace' Rothstein. The casino is named after Tangier (Tanger). 'Casino' is italic on the card.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Von welchem Kontinent spricht jemand, der von der „Wiege der Zivilisation“ redet?",
+   "de": "Welches Zweistromland zwischen Euphrat und Tigris wird oft als „Wiege der Zivilisation“ bezeichnet?",
+   "en": "Which land between the Euphrates and the Tigris is often called the \"cradle of civilisation\"?",
+   "reworked": true,
+   "answerDe": "Mesopotamien",
+   "answerEn": "Mesopotamia",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1840",
+    "end": null,
+    "precision": "decade",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Excavations from the 1840s uncover millennia-old cities, temples and writing in Mesopotamia and Egypt",
+    "labelDe": "Ausgrabungen ab den 1840er Jahren bringen in Mesopotamien und Ägypten jahrtausendealte Städte, Tempel und Schriften ans Licht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Wiege_der_Zivilisation",
+    "title": "Wiege der Zivilisation",
+    "lang": "de"
+   },
+   "notes": "Reworked because the card's question is ambiguous: the phrase most often means Mesopotamia (Asia), but historians name at least six cradles (Fertile Crescent, Nile valley in Africa, Indus, North China Plain, Andean coast, Gulf of Mexico), and it is easily confused with the 'cradle of humankind' (Africa). The printed answer on the back is unknown; with the Mesopotamian reading it would be Asia.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Buch inspirierte Helen Fielding zu ihren Bridget-Jones-Romanen: Love Story, Stolz und Vorurteil oder Vom Winde verweht?",
+   "de": "Welcher Roman von Jane Austen inspirierte Helen Fielding zu ihren Bridget-Jones-Romanen?",
+   "en": "Which Jane Austen novel inspired Helen Fielding's Bridget Jones novels?",
+   "reworked": true,
+   "answerDe": "Stolz und Vorurteil",
+   "answerEn": "Pride and Prejudice",
+   "timeline": {
+    "kind": "creation",
+    "start": "1996",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Helen Fielding's novel Bridget Jones's Diary, a loose adaptation of Pride and Prejudice, is published",
+    "labelDe": "Helen Fieldings Roman „Schokolade zum Frühstück“ (Bridget Jones's Diary), eine lose Adaption von „Stolz und Vorurteil“, erscheint"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bridget_Jones%27s_Diary",
+    "title": "Bridget Jones's Diary",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice options removed; naming Jane Austen keeps exactly one answer. Titles are italic on the card. Mark Darcy echoes Austen's Mr Darcy.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Der Stör hat keine Zähne, Gräten und Schuppen. Richtig oder falsch?",
+   "de": "Was trägt der Stör anstelle normaler Schuppen in fünf Längsreihen auf seinem Körper?",
+   "en": "What does the sturgeon carry on its body in five lengthwise rows instead of ordinary scales?",
+   "reworked": true,
+   "answerDe": "Knochenplatten",
+   "answerEn": "Bony plates (scutes)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1831",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Charles Lucien Bonaparte names the sturgeon family Acipenseridae",
+    "labelDe": "Charles Lucien Bonaparte gibt der Familie der Störe den wissenschaftlichen Namen Acipenseridae"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/St%C3%B6re",
+    "title": "Störe",
+    "lang": "de"
+   },
+   "notes": "True/false reworked into an open question. The card's statement is broadly true: adult sturgeons have toothless jaws, a skeleton largely reduced to cartilage (no fishbones) and strongly reduced scales; instead they bear five rows of bony plates (scuta).",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Der Fußballtrainer Rudi Gutendorf betreute in seiner Laufbahn 145 Klubs und Nationalmannschaften auf fünf Kontinenten. Richtig oder falsch?",
+   "de": "Wie viele Trainerstationen bei Klubs und Nationalmannschaften auf fünf Kontinenten hatte der Weltrekord-Fußballtrainer Rudi Gutendorf in seiner Laufbahn?",
+   "en": "How many coaching posts at clubs and national teams on five continents did the world-record football coach Rudi Gutendorf hold in his career?",
+   "reworked": true,
+   "answerDe": "55",
+   "answerEn": "55",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1926-08-30",
+    "end": "2019-09-13",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of German football coach Rudi Gutendorf, Guinness record holder with 55 coaching posts worldwide",
+    "labelDe": "Leben des deutschen Fußballtrainers Rudi Gutendorf, Guinness-Rekordhalter mit 55 Trainerstationen weltweit"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rudi_Gutendorf",
+    "title": "Rudi Gutendorf",
+    "lang": "de"
+   },
+   "notes": "True/false reworked into an open question; the card's 145 is false. Media consistently report 55 coaching posts (1946–2003), a figure that probably rests on Gutendorf's own account; some sources say 56.",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

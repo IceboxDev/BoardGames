@@ -139,6 +139,16 @@ export function applyReview(
           dueDate: addDays(at.localDate, SRS.FIRST_INTERVAL),
         };
       case "learning":
+        // Right after a miss (interval 0): the first right answer is the
+        // first step again, due tomorrow; graduating needs a second day.
+        if (prev.intervalDays === 0) {
+          return {
+            ...base,
+            state: "learning",
+            intervalDays: SRS.FIRST_INTERVAL,
+            dueDate: addDays(at.localDate, SRS.FIRST_INTERVAL),
+          };
+        }
         return {
           ...base,
           state: "review",
@@ -203,42 +213,37 @@ export interface QueueItem {
 export interface QueueInput {
   /** States already filtered to `dueDate <= today`. */
   due: readonly SrsState[];
-  /** Every question id that has a state row (introduced before). */
+  /** Every card id that has a state row (introduced before). */
   seenIds: ReadonlySet<string>;
-  /** Introduction order for brand-new questions. */
+  /** Introduction order for brand-new cards, an article's cards back to back. */
   newOrder: readonly string[];
-  /** New cards still allowed today (per-day cap minus already introduced). */
+  /** New cards still allowed today (per-day budget minus already introduced). */
   newRemaining: number;
   limit: number;
   includeLeeches: boolean;
-  /** A question's set, the unit both groupings work on. */
-  setIdOf: (questionId: string) => string;
+  /** A card's article — the unit new cards arrive in. */
+  articleOf: (cardId: string) => string;
   /**
-   * "spread" (default): a set's questions never come back to back.
-   * "sets": they stay together — new cards arrive a whole set at a time
-   * (the cap is rounded up to finish the last set started) and due cards
-   * are gathered by set, so a topic is studied in one sitting.
-   */
-  grouping?: "spread" | "sets";
-  /**
-   * Set mode only: after the day's new articles have been read, their
-   * questions and everything due are studied in one shuffled mix (seed it
-   * per user and day so a reload keeps the order). Without it the new sets
-   * stay back to back and due siblings are gathered.
+   * After the day's new articles have been read, their cards and everything
+   * due are studied in one shuffled mix (seed it per user and day so a
+   * reload keeps the order). Without it new articles stay back to back.
    */
   shuffleSeed?: number;
   /**
-   * Set mode only: articles begun on an earlier day. Their unseen questions
-   * are leftovers — always dealt, and outside `newRemaining`, which budgets
-   * only articles opened fresh.
+   * Articles begun on an earlier day. Their unseen cards are leftovers —
+   * always dealt, outside `newRemaining`.
    */
-  startedSets?: ReadonlySet<string>;
+  startedArticles?: ReadonlySet<string>;
 }
 
 /**
  * Today's queue: learning / relearning first (oldest review first), then
- * due reviews (most overdue first), then new cards up to the daily cap;
- * siblings spread apart (or gathered, in set mode); cut at `limit`.
+ * due reviews (most overdue first), then new cards. New cards come a whole
+ * article at a time: articles are taken in `newOrder` while they fit the
+ * budget — one that doesn't fit waits (and leads tomorrow) while a smaller
+ * later one may still fit — and the very first article is taken even when
+ * it alone is bigger than the budget, so a small budget never stalls.
+ * Cut at `limit`.
  */
 export function buildDailyQueue(input: QueueInput): QueueItem[] {
   const usable = input.due.filter((s) => input.includeLeeches || !isLeech(s));
@@ -252,38 +257,32 @@ export function buildDailyQueue(input: QueueInput): QueueItem[] {
   const review = usable
     .filter((s) => s.state === "review")
     .sort((a, b) => a.dueDate.localeCompare(b.dueDate) || a.questionId.localeCompare(b.questionId));
-  const bySet = input.grouping === "sets";
-  const fresh: string[] = [];
-  const leftover: string[] = [];
-  const cap = Math.max(0, input.newRemaining);
-  let full = false;
+  const groups = new Map<string, string[]>();
   for (const id of input.newOrder) {
     if (input.seenIds.has(id)) continue;
-    if (bySet && input.startedSets?.has(input.setIdOf(id))) {
-      leftover.push(id);
-      continue;
+    const art = input.articleOf(id);
+    const group = groups.get(art);
+    if (group) group.push(id);
+    else groups.set(art, [id]);
+  }
+  const leftover: string[] = [];
+  const fresh: string[] = [];
+  const budget = Math.max(0, input.newRemaining);
+  for (const [art, ids] of groups) {
+    if (input.startedArticles?.has(art)) leftover.push(...ids);
+    else if (fresh.length + ids.length <= budget || (fresh.length === 0 && budget > 0)) {
+      fresh.push(...ids);
     }
-    if (full) continue; // past the cap: only leftovers are still collected
-    if (fresh.length >= cap) {
-      // In set mode, finish the set the cap cut into, then stop.
-      if (!bySet || cap === 0 || input.setIdOf(id) !== input.setIdOf(fresh[fresh.length - 1])) {
-        if (!bySet || !input.startedSets) break;
-        full = true;
-        continue;
-      }
-    }
-    fresh.push(id);
   }
   const items: QueueItem[] = [
     ...learning.map((s) => ({ questionId: s.questionId, tier: "learning" as const, state: s })),
     ...review.map((s) => ({ questionId: s.questionId, tier: "review" as const, state: s })),
     ...[...leftover, ...fresh].map((id) => ({ questionId: id, tier: "new" as const, state: null })),
   ];
-  const keyOf = (it: QueueItem) => input.setIdOf(it.questionId);
-  let ordered: QueueItem[];
-  if (!bySet) ordered = interleaveSiblings(items, keyOf);
-  else if (input.shuffleSeed === undefined) ordered = groupSiblings(items, keyOf);
-  else ordered = shuffle(items, createRng(input.shuffleSeed));
+  const ordered =
+    input.shuffleSeed === undefined
+      ? groupSiblings(items, (it) => input.articleOf(it.questionId))
+      : shuffle(items, createRng(input.shuffleSeed));
   return ordered.slice(0, Math.max(0, input.limit));
 }
 

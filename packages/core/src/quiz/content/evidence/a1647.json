@@ -1,0 +1,289 @@
+{
+ "article": "a1647",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jewish_Museum_Berlin",
+   "title": "Jewish Museum Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:17.521Z",
+   "snapshot": "8f20caf84f5d675d2f9c7d8ddca22ebb2240d1ff92b1c88f794f4b4e8c255f22"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum",
+   "title": "Solomon R. Guggenheim Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:44.992Z",
+   "snapshot": "a4573048f1618c27e78894040acc5bea5df43e45ba62e56f45ba80c23f122fa5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/One_World_Trade_Center",
+   "title": "One World Trade Center – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:12.306Z",
+   "snapshot": "4cf22025a5b5f2d47ec6987f8ab37675a0f0bd182908b050a150f18237863524"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe",
+   "title": "Ludwig Mies van der Rohe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:32.365Z",
+   "snapshot": "a1ed742b3e79335ca59f00635de991b273b7b841cc5833a366a1b3bff6b11eee"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/I._M._Pei",
+   "title": "I. M. Pei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:33.370Z",
+   "snapshot": "11b10b571e3aea89c6f824a870b9cc8288707f8c8ab4dd07a7e58e567b623b8a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Ieoh_Ming_Pei",
+   "title": "Ieoh Ming Pei",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:34.608Z",
+   "snapshot": "adbec5c3d737570b1ffb137dc3793a16b138f49fccb76c1c7e424dbc929cf0fa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Daniel Libeskind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c138"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frank Lloyd Wright",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "David Childs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ludwig Mies van der Rohe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I. M. Pei",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "I. M. Pei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-114"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:58.165Z",
+   "target": "f08231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It consists of three buildings, two of which are new additions specifically built for the museum by architect Daniel Libeskind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daniel Libeskind” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:58.165Z",
+   "target": "f08232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The museum's building, a landmark work of 20th-century architecture designed by Frank Lloyd Wright, drew controversy for the unusual shape of its display spaces and took 15 years to design and build; it was completed in 1959.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank Lloyd Wright” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:58.165Z",
+   "target": "f08233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Designed by David Childs of Skidmore, Owings & Merrill, One World Trade Center is the tallest building in the United States, the tallest building in the Western Hemisphere, and the seventh-tallest in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Childs” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:58.165Z",
+   "target": "f08234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ludwig Mies van der Rohe ( MEESS-...-ROH; German: [ˈluːtvɪç ˈmiːs fan deːɐ̯ ˈʁoːə]; born Maria Ludwig Michael Mies; March 27, 1886 – August 17, 1969) was a German and American architect, academic, and interior designer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Mies van der Rohe” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:58.165Z",
+   "target": "f08235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1955, he established an independent design firm, I. M. Pei & Associates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I. M. Pei” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:58.165Z",
+   "target": "f08235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "I. M. Pei kam als Nachfahr einer namhaften wohlhabenden Suzhouer Familie in Guangzhou (Kanton) zur Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I. M. Pei” is on the snapshot of s6"
+  }
+ ]
+}

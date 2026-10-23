@@ -1,0 +1,242 @@
+{
+ "article": "a0678",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Au%C3%9Ferparlamentarische_Opposition",
+   "title": "Außerparlamentarische Opposition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:36.159Z",
+   "snapshot": "0d5c3f923d3ebd97a54928145fecca9670ff54fe4faf07f0329a85d2e5c3bf7d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sozialistischer_Deutscher_Studentenbund",
+   "title": "Sozialistischer Deutscher Studentenbund – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:37.081Z",
+   "snapshot": "e7ba1604f1fb9c97ca926a42a839eb52ec410333137ca6948d1493de7b744dbf"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Rote_Armee_Fraktion",
+   "title": "Rote Armee Fraktion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:37.621Z",
+   "snapshot": "734e92a69e93e544d666c7f8bb86d07ef0a1235af3ed2995807679fa36800552"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_Heimat",
+   "title": "Die Heimat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:38.786Z",
+   "snapshot": "5d25dd636812b5ca1df50805d323b7c653ade2e2581d940606ba2af1d326c2b3"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Deutsche_Kommunistische_Partei",
+   "title": "Deutsche Kommunistische Partei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:40.793Z",
+   "snapshot": "bae3d409008d0ae7101ed0df6b086795d6eb0d25813258571d410d7b92d5ae69"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Außerparlamentarische Opposition",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sozialistischer Deutscher Studentenbund",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rote Armee Fraktion",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nationaldemokratische Partei Deutschlands",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Deutsche Kommunistische Partei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:25.336Z",
+   "target": "f03386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Außerparlamentarische Opposition (kurz APO) beschreibt eine Opposition (lateinisch oppositio ‚Entgegensetzung‘), die außerhalb des Parlamentes stattfindet, weil sie entweder durch die im Parlament vertretenen oder sonstigen Parteien (noch) kein Sprachrohr hat oder auch nicht haben will.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Außerparlamentarische Opposition” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:25.336Z",
+   "target": "f03387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sozialistischer Deutscher Studentenbund",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sozialistischer Deutscher Studentenbund” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:25.336Z",
+   "target": "f03388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Rote Armee Fraktion (RAF) war eine linksextremistische terroristische Vereinigung in der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rote Armee Fraktion” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:25.336Z",
+   "target": "f03389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Heimat (Kurzbezeichnung HEIMAT, stilisiert HEIMAT!) ist eine rechtsextreme und neonazistische deutsche Partei, die 1964 als Nationaldemokratische Partei Deutschlands (NPD) gegründet und im Juni 2023 umbenannt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nationaldemokratische Partei Deutschlands” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:25.336Z",
+   "target": "f03390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Deutsche Kommunistische Partei (DKP) ist eine 1968 in der Bundesrepublik Deutschland gegründete kommunistische Kleinpartei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsche Kommunistische Partei” is on the snapshot of s5"
+  }
+ ]
+}

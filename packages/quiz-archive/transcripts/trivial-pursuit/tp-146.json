@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-146",
+ "image": "IMG20261007181937.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Stadt wurde die Raufasertapete erfunden: Erfurt, Wuppertal oder Bremen?",
+   "de": "In welcher heutigen Stadt im Tal der Wupper wurde die Raufasertapete erfunden?",
+   "en": "In which present-day city in the Wupper valley was woodchip wallpaper invented?",
+   "reworked": true,
+   "answerDe": "Wuppertal",
+   "answerEn": "Wuppertal",
+   "timeline": {
+    "kind": "creation",
+    "start": "1864",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hugo Erfurt invents woodchip wallpaper (\"Rauhfaser\") at the Erfurt & Sohn paper mill on the Wupper",
+    "labelDe": "Hugo Erfurt erfindet in der Papierfabrik Erfurt & Sohn an der Wupper die Raufasertapete"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Erfurt_%26_Sohn",
+    "title": "Erfurt & Sohn",
+    "lang": "de"
+   },
+   "notes": "Options (Erfurt, Wuppertal, Bremen) removed; \"Erfurt\" was a trap — it is the inventor's surname (Hugo Erfurt, 1864, per the German Wikipedia article \"Raufaser\"). The mill sits in Wuppertal-Beyenburg on the Wupper, which here borders Schwelm; Wuppertal itself was only formed in 1929.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 2,
+   "cardDe": "In welchem Filmklassiker der 1950er-Jahre wird Marlon Brando gefragt, gegen was er rebelliert?",
+   "de": "In welchem Filmklassiker der 1950er-Jahre wird Marlon Brando gefragt, gegen was er rebelliert?",
+   "en": "In which 1950s film classic is Marlon Brando asked what he is rebelling against?",
+   "reworked": false,
+   "answerDe": "Der Wilde",
+   "answerEn": "The Wild One",
+   "timeline": {
+    "kind": "event",
+    "start": "1953-12-25",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "\"The Wild One\" starring Marlon Brando opens in Los Angeles",
+    "labelDe": "„Der Wilde“ mit Marlon Brando startet in Los Angeles"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/The_Wild_One",
+    "title": "The Wild One",
+    "lang": "en"
+   },
+   "notes": "\"Hey Johnny, what are you rebelling against?\" — \"Whaddaya got?\"",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welcher Hersteller machte als erster die Computermaus zu einem Massenprodukt?",
+   "de": "Welcher Hersteller machte als erster die Computermaus zu einem Massenprodukt?",
+   "en": "Which manufacturer was the first to make the computer mouse a mass-market product?",
+   "reworked": false,
+   "answerDe": "Apple",
+   "answerEn": "Apple",
+   "timeline": {
+    "kind": "event",
+    "start": "1984-01-24",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Apple launches the Macintosh, shipped with a mouse as its primary input device",
+    "labelDe": "Apple stellt den Macintosh vor, der mit einer Maus als primärem Eingabegerät ausgeliefert wird"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Computermaus",
+    "title": "Computermaus",
+    "lang": "de"
+   },
+   "notes": "Apple's Lisa (1983) first shipped with a mouse but sold poorly; the 1984 Macintosh made it a success. Launch date from the German Wikipedia article \"Macintosh\".",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wer konnte dem frühmittelalterlichen Physiologus zufolge als Einzige ein Einhorn fangen: Jungfrauen, Kinder oder Löwen?",
+   "de": "Wer konnte dem Physiologus zufolge als Einzige ein Einhorn fangen?",
+   "en": "According to the Physiologus, who alone could catch a unicorn?",
+   "reworked": true,
+   "answerDe": "Jungfrauen",
+   "answerEn": "Virgins",
+   "timeline": {
+    "kind": "creation",
+    "start": "101",
+    "end": "400",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Physiologus, an early Christian Greek book of allegorical natural history, takes shape",
+    "labelDe": "Der Physiologus, eine frühchristliche griechische Naturlehre mit allegorischen Deutungen, entsteht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Einhorn",
+    "title": "Einhorn",
+    "lang": "de"
+   },
+   "notes": "Options (virgins, children, lions) removed and the card's \"frühmittelalterlich\" dropped: the Physiologus dates from the 2nd–4th century (German Wikipedia \"Physiologus\"), though it spread through medieval Europe. The virgin was read allegorically as the Virgin Mary. Physiologus is italic on the card.",
+   "domain": "belief",
+   "sub": "mythology"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie hieß keines der Mopeds vom Fahrzeughersteller Simson: Sperber, Habicht oder Falke?",
+   "de": "Welchen Greifvogelnamen trug das Simson-Kleinkraftrad SR 4-4 aus der Vogelserie?",
+   "en": "Which bird of prey's name did the Simson SR 4-4 moped from the \"bird series\" bear?",
+   "reworked": true,
+   "answerDe": "Habicht",
+   "answerEn": "Habicht (goshawk)",
+   "timeline": {
+    "kind": "period",
+    "start": "1972",
+    "end": "1975",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Simson builds the SR 4-4 \"Habicht\" moped in Suhl",
+    "labelDe": "Simson baut in Suhl das Kleinkraftrad SR 4-4 „Habicht“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Vogelserie_(Simson)",
+    "title": "Vogelserie (Simson)",
+    "lang": "de"
+   },
+   "notes": "Card asked which name was NOT a Simson moped (Falke — the bird series was Schwalbe, Spatz, Star, Sperber, Habicht); reworked to the positive fact. Sperber (SR 4-3) is also a raptor, so the type number disambiguates.",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches itsy, bitsy, teeny, weeny Damenbekleidungsteil feierte im Jahr 2016 seinen 70. Geburtstag?",
+   "de": "Welches itsy, bitsy, teeny, weeny Damenbekleidungsteil feierte im Jahr 2016 seinen 70. Geburtstag?",
+   "en": "Which itsy, bitsy, teeny, weeny item of women's clothing celebrated its 70th birthday in 2016?",
+   "reworked": false,
+   "answerDe": "der Bikini",
+   "answerEn": "The bikini",
+   "timeline": {
+    "kind": "event",
+    "start": "1946-07-05",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Louis Réard presents the bikini at the Piscine Molitor in Paris",
+    "labelDe": "Louis Réard präsentiert den Bikini im Pariser Bad Piscine Molitor"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bikini",
+    "title": "Bikini",
+    "lang": "de"
+   },
+   "notes": "The wording alludes to the song \"Itsy Bitsy Teenie Weenie Yellow Polka Dot Bikini\". 2016 = 70 years after the 1946 presentation.",
+   "domain": "art",
+   "sub": "design"
+  }
+ ]
+}

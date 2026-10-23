@@ -10,7 +10,8 @@
 import type { TreeProviders } from "@boardgames/core/games/chess/trainer/builder";
 import type { EngineLine } from "@boardgames/core/games/chess/trainer/tree";
 import { BrowserEngine } from "../analysis/engine";
-import { cloudEval, type ExplorerMove, explorerMoves } from "./lichess/client";
+import { cloudEval, type ExplorerMove, type LichessPriority } from "./lichess/client";
+import { cachedExplorerMoves } from "./lichess/explorer-store";
 import { legalUcis } from "./tree-nav";
 
 /** An evaluation with its lines' continuations and where it came from. */
@@ -111,11 +112,14 @@ export class TrainerProviders implements TreeProviders {
 
   private readonly explorerCache = new Map<string, Promise<ExplorerMove[]>>();
 
-  /** The lichess database here, with results; asked once per position. */
-  explorer(fen: string): Promise<ExplorerMove[]> {
+  /**
+   * The lichess database here, with results; asked once per position, from
+   * the server's shared cache when anyone has fetched it (`explorer-store.ts`).
+   */
+  explorer(fen: string, priority: LichessPriority = "now"): Promise<ExplorerMove[]> {
     let hit = this.explorerCache.get(fen);
     if (!hit) {
-      hit = explorerMoves(fen, this.token).then((m) => normalizeUcis(fen, m));
+      hit = cachedExplorerMoves(fen, this.token, priority).then((m) => normalizeUcis(fen, m));
       hit.catch(() => this.explorerCache.delete(fen));
       this.explorerCache.set(fen, hit);
     }
@@ -123,7 +127,7 @@ export class TrainerProviders implements TreeProviders {
   }
 
   async popularMoves(fen: string) {
-    return (await this.explorer(fen)).map(({ uci, games }) => ({ uci, games }));
+    return (await this.explorer(fen, "build")).map(({ uci, games }) => ({ uci, games }));
   }
 
   dispose(): void {

@@ -1,0 +1,334 @@
+{
+ "article": "a2200",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Palio_di_Siena",
+   "title": "Palio di Siena",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:33.444Z",
+   "snapshot": "c809c7dd4d9679bfbdf6a56c886affcb6f36118aa8a7ad8e5a266316c42caf5b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Burning_Man",
+   "title": "Burning Man",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:37.447Z",
+   "snapshot": "786b84f0a11a544db681c11e8f6aa4ee2e1af38d10f304ed4f0bfb89581be527"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palio_di_Siena",
+   "title": "Palio di Siena – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:38.319Z",
+   "snapshot": "17793499550afe59949a26ee9bc203008aa06780e35ed68a87a36154266b832a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Festival_of_San_Ferm%C3%ADn",
+   "title": "Festival of San Fermín – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:39.235Z",
+   "snapshot": "08674396abba585b62d913bd4ad6e7ca3ca25bcab10e8063104824639f59b0a8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cooper%27s_Hill_Cheese-Rolling_and_Wake",
+   "title": "Cooper's Hill Cheese-Rolling and Wake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:40.232Z",
+   "snapshot": "e94920ef8afc1f852f0fa1d64b4ad6d42ae897e8fbefb87b3135b129a4822d4d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Running_of_the_bulls",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:41.319Z",
+   "snapshot": "206435bb8ba066b30e04c0c43839b3d542d69f30c780bf6e104420171beee616"
+  },
+  "s7": {
+   "url": "https://www.ilpalio.org/cosa_e_palio.htm",
+   "title": "Che cos'è il Palio di Siena?",
+   "publisher": "ilpalio.org",
+   "kind": "reference",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:45:18.039Z",
+   "snapshot": "432c9e26b83caaf27af43f33603fabca2119eae81fa2d9e639124cfc04a6b7b3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pferderennen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Burning Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-297"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Three",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pamplona",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Double Gloucester",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:35.743Z",
+   "target": "f11180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Il Palio) ist eines der härtesten Pferderennen der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pferderennen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.743Z",
+   "target": "f11181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Burning Man is a week-long large-scale desert event focused on \"community, art, self-expression, and self-reliance\" held annually in the Western United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burning Man” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.743Z",
+   "target": "f11182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The seven contrade that did not take part in that month of the previous year are automatically included; three more are chosen by draw.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Three” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.743Z",
+   "target": "f11183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The festival of San Fermín is a week-long, traditional celebration held annually in the city of Pamplona, Navarre, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pamplona” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.743Z",
+   "target": "f11184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Participants race down the 200-yard (180 m) long hill chasing a wheel of Double Gloucester cheese.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.743Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Double Gloucester” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:46Z",
+   "target": "f11182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The race is run for three laps of the piazza and usually lasts no more than 90 seconds.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:49Z",
+   "target": "f11182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Se la Mossa è valida i cavalli dovranno compiere tre giri di Piazza (1000 metri circa)",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:22.813Z",
+   "target": "f11182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The race is run for three laps of the piazza and usually lasts no more than 90 seconds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:22.813Z",
+   "target": "f11182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Se la Mossa è valida i cavalli dovranno compiere tre giri di Piazza (1000 metri circa)",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

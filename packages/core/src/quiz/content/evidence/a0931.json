@@ -1,0 +1,242 @@
+{
+ "article": "a0931",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2000_United_States_presidential_election",
+   "title": "2000 United States presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:01.549Z",
+   "snapshot": "d2ce6f35ef9a6b73def485841e8cccb458e76c749bc2511554b6927538f1295f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/2004_United_States_presidential_election",
+   "title": "2004 United States presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:02.431Z",
+   "snapshot": "bc1514fa7c70f17d6588cbbc5bf9242f44592a271f921ee0edd076b6e90955b6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1992_United_States_presidential_election",
+   "title": "1992 United States presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:03.470Z",
+   "snapshot": "09184d3c7ef9b757eb116865e23d696adac48d71a8c4dc3c28a5debfd3e36ba5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_McCain",
+   "title": "John McCain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:05.435Z",
+   "snapshot": "c4f85f2fa2c0ae256c43c5efd640d158b17a27180efa40545a0adee3cc79c14e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hillary_Clinton",
+   "title": "Hillary Clinton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:05.516Z",
+   "snapshot": "e07609c8f857a84cf85da027703042072e06e507e6d279bbddaedb6198982dcf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Al Gore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Kerry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George H. W. Bush",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John McCain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hillary Clinton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:06.728Z",
+   "target": "f04651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bush and former secretary of defense Dick Cheney narrowly defeated the Democratic ticket of incumbent vice president Al Gore and Connecticut junior senator Joe Lieberman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Al Gore” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:06.728Z",
+   "target": "f04652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bush and his running mate, incumbent vice president Dick Cheney, were re-elected to a second term; they narrowly defeated the Democratic ticket of Massachusetts junior senator John Kerry and North Carolina senior senator John Edwards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Kerry” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:06.728Z",
+   "target": "f04653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Democratic ticket of Arkansas governor Bill Clinton and Tennessee junior senator Al Gore defeated incumbent Republican president George H. W. Bush and vice president Dan Quayle and the independent ticket of businessman Ross Perot and vice admiral James Stockdale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George H. W. Bush” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:06.728Z",
+   "target": "f04654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On April 4, 2019, the Kyiv City Council renamed a street that had previously been named after the NKVD agent Ivan Kudria to \"John McCain Street\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John McCain” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:06.728Z",
+   "target": "f04655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "During her husband's campaign, Hillary began to use the name \"Hillary Clinton\", or sometimes \"Mrs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hillary Clinton” is on the snapshot of s5"
+  }
+ ]
+}

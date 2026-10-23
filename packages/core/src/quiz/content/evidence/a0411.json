@@ -1,0 +1,335 @@
+{
+ "article": "a0411",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Museum_Folkwang",
+   "title": "Museum Folkwang – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:13.095Z",
+   "snapshot": "5c8f241b37e8f842bfa1b6a8063faf0c778dc4ac4b09d209843bc006efa48d39"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bilbao_Metro",
+   "title": "Bilbao Metro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:18.773Z",
+   "snapshot": "d71c772b31fe16378dc66dc66313ba9bae63ee8bffc39ce0aa6891ccc573b5bc"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Guggenheim-Museum_Bilbao",
+   "title": "Guggenheim-Museum Bilbao",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:13.864Z",
+   "snapshot": "4d3039d415e544b9c1d0126589d2bcc20667dd2b25bc757266ee506aee539c90"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jewish_Museum_Berlin",
+   "title": "Jewish Museum Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:17.521Z",
+   "snapshot": "8f20caf84f5d675d2f9c7d8ddca22ebb2240d1ff92b1c88f794f4b4e8c255f22"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Elbphilharmonie",
+   "title": "Elbphilharmonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:52.459Z",
+   "snapshot": "6314f3d6b68355cfe6d10f3750f0774c4c3a77642f613d92b096a697e87ae8e1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Elbphilharmonie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:15.038Z",
+   "snapshot": "7f5211ee2c3e4ecb685d3aea15929cfd0f1dd4a3d34893c3cf12120be4d68b06"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Wolfsburg",
+   "title": "Wolfsburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:18.472Z",
+   "snapshot": "34ad6cc2779deeb01742f4da2fc13c5e3f48d62cfd5ffe54f88442d66f94006a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Essen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bilbao",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bilbao",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-106"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hamburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hamburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f02055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Wolfsburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Museum Folkwang ist ein Kunstmuseum in Essen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Essen” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Bilbao Metro (Spanish: Metro de Bilbao, Basque: Bilboko metroa) is a rapid transit system serving the city of Bilbao and the region of Greater Bilbao.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bilbao” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Guggenheim-Museum Bilbao ist ein Kunstmuseum für moderne Kunst in Bilbao im spanischen Baskenland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bilbao” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Jewish Museum Berlin (Jüdisches Museum Berlin) was opened in 2001 and is the largest Jewish museum in Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Elbphilharmonie (German pronunciation: [ˈɛlpfɪlhaʁmoˌniː] ; \"Elbe Philharmonic Hall\"), popularly nicknamed Elphi, is a concert hall in the HafenCity quarter of Hamburg, Germany, on the Grasbrook peninsula of the Elbe River.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Elbphilharmonie (umgangssprachlich Elphi) ist ein im Januar 2017 eröffnetes Konzerthaus in Hamburg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:44.498Z",
+   "target": "f02055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Wolfsburg (German: [ˈvɔlfsbʊʁk] ; Eastphalian: Wulfsborg) is the fifth-largest city in the German state of Lower Saxony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.498Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfsburg” is on the snapshot of s7"
+  }
+ ]
+}

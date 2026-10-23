@@ -1,0 +1,618 @@
+{
+ "subs": {
+  "stage-tv": [
+   {
+    "slug": "tv-drama",
+    "en": "Drama & Crime Series",
+    "de": "Drama- & Krimiserien",
+    "ru": "Драмы и детективные сериалы"
+   },
+   {
+    "slug": "tv",
+    "en": "Sitcoms, Kids' TV & TV Culture",
+    "de": "Sitcoms, Kinderfernsehen & TV-Kultur",
+    "ru": "Ситкомы, детское ТВ и телекультура"
+   },
+   {
+    "slug": "tv-scifi",
+    "en": "Sci-Fi & Fantasy Series",
+    "de": "Sci-Fi- & Fantasyserien",
+    "ru": "Фантастические сериалы"
+   },
+   {
+    "slug": "german-tv",
+    "en": "German Television",
+    "de": "Deutsches Fernsehen",
+    "ru": "Немецкое телевидение"
+   },
+   {
+    "slug": "plays",
+    "en": "Plays & Playwrights",
+    "de": "Theaterstücke & Dramatiker",
+    "ru": "Пьесы и драматурги"
+   },
+   {
+    "slug": "theatre",
+    "en": "Theatre, Stagecraft & Cabaret",
+    "de": "Theater, Bühnenhandwerk & Kabarett",
+    "ru": "Театр, сценическое ремесло и кабаре"
+   },
+   {
+    "slug": "musicals",
+    "en": "Musicals & Dance",
+    "de": "Musical & Tanz",
+    "ru": "Мюзиклы и танец"
+   }
+  ]
+ },
+ "assign": {
+  "a0004": {
+   "sub": "german-tv",
+   "reason": "A German-television article (German Series That Travelled the World) — moved from Television to the new German Television sub."
+  },
+  "a0268": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Bedtime on Both Sides of the Wall) — moved from Television to the new German Television sub."
+  },
+  "a0580": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Phoenix, KiKA and Co: The Joint Channels of German Public Broadcasting) — moved from Television to the new German Television sub."
+  },
+  "a0856": {
+   "sub": "german-tv",
+   "reason": "A German-television article (From Sketch Show to Sitcom: The Wochenshow Generation) — moved from Television to the new German Television sub."
+  },
+  "a0940": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Aktuelle Kamera: Television News and the Programmes That Defined German Screens) — moved from Television to the new German Television sub."
+  },
+  "a0988": {
+   "sub": "german-tv",
+   "reason": "A German-television article (The Shows That Gathered Germany Around the Television) — moved from Television to the new German Television sub."
+  },
+  "a1336": {
+   "sub": "german-tv",
+   "reason": "A German-television article (German Television Series with a Cult Following) — moved from Television to the new German Television sub."
+  },
+  "a1408": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Sunday Night Murder: The Classic German Television Crime Series) — moved from Television to the new German Television sub."
+  },
+  "a1468": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Germany's Daily Soaps and the Stars They Made) — moved from Television to the new German Television sub."
+  },
+  "a1480": {
+   "sub": "german-tv",
+   "reason": "A German-television article (The Mouse and Its Makers: Presenters of German Children's Television) — moved from Television to the new German Television sub."
+  },
+  "a1492": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Before the Spotlight: What German TV Stars Learned First) — moved from Television to the new German Television sub."
+  },
+  "a1504": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Mother Beimer and Company: Roles That Became German Television) — moved from Television to the new German Television sub."
+  },
+  "a1660": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Germany's Streaming-Era Series) — moved from Television to the new German Television sub."
+  },
+  "a1960": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Clans, Cops and Time Loops: The German Series Boom) — moved from Television to the new German Television sub."
+  },
+  "a1972": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Tatort and Its Most Popular Investigators) — moved from Television to the new German Television sub."
+  },
+  "a1984": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Plopp, Playback and a Blue Trailer: German Children's Television and Its Hosts) — moved from Television to the new German Television sub."
+  },
+  "a1996": {
+   "sub": "german-tv",
+   "reason": "A German-television article (\"Die Manns\": Heinrich Breloer's Family Saga and Its Cast) — moved from Television to the new German Television sub."
+  },
+  "a2056": {
+   "sub": "german-tv",
+   "reason": "A German-television article (The German Voices of Springfield) — moved from Television to the new German Television sub."
+  },
+  "a2275": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Jungle Kings and Glamorous Millionaires: German Reality Television) — moved from Television to the new German Television sub."
+  },
+  "a2276": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Harbour Beat: Hamburg on the Small Screen) — moved from Television to the new German Television sub."
+  },
+  "a2277": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Christmas Adventures: The ZDF Holiday Series) — moved from Television to the new German Television sub."
+  },
+  "a2278": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Fawns, Cameras and a Refusal: Germany's Television Awards) — moved from Television to the new German Television sub."
+  },
+  "a2279": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Raab, Joko and Klaas: The Entertainers of ProSieben) — moved from Television to the new German Television sub."
+  },
+  "a2280": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Talk Comes from 'To Talk': German Talk Shows from Höfer to Böhmermann) — moved from Television to the new German Television sub."
+  },
+  "a2281": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Two Buttons, Two Systems: How Colour Came to German Television) — moved from Television to the new German Television sub."
+  },
+  "a2282": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Otto, Hape and Bully: The Comedians Who Made German Television Laugh) — moved from Television to the new German Television sub."
+  },
+  "a2283": {
+   "sub": "german-tv",
+   "reason": "A German-television article (Gud'n Aaamd: The Mainzelmännchen of ZDF) — moved from Television to the new German Television sub."
+  },
+  "a0028": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Crime Dramas of Television's Golden Age) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0076": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (From Page to Screen: Five Series Born from Novels) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0148": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (When the Character Is the Title: American Series Named After Their Heroes) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0184": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Crowned Heads on the Small Screen) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0208": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Crime Families on Screen: From the Corleones to the Byrdes) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0220": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Television’s Golden Age: Five Series That Defined It) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0256": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Scrubs and the American Hospital Series) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0592": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Hunting the Killer: Five Serial-Killer Series That Changed Television) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0772": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Great Houses and Family Sagas: Britain's Period Dramas) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0844": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Detectives of the Small Screen: From Twin Peaks to Columbo) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0868": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (How HBO Taught Television to Think Big) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0952": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (The Golden Age of American Television Drama) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0964": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Scrubs, Scalpels and Soap: The Hospital Drama on Television) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1060": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Television Series Built on Borrowed Blueprints) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1072": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Death, Drugs and Dragons: The Series That Made Television Serious) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1108": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Partners in Crime-Solving: Five Television Duos) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1204": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Where TV's Great Characters Go to Work) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1264": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Bikers, Ad Men and Inmates: The Worlds of Five TV Series) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1372": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Blood Spatter and Broken Heroes: The Golden Age of American Crime Series) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1528": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Ticking Clocks and Double Lives: The Modern TV Thriller) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1744": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Detectives Who Made the Leap to the Screen) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1768": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Six Series That Made Netflix a Studio) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1876": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Death in the Pilot: How Great Series Begin) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a1888": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (The Marvelous Mrs. Maisel and the Series of Famous Showrunners) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a2068": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Television's Antiheroes: From Tony Soprano to Tyrion Lannister) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a2104": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Nordic Noir: Detectives Across the Border) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a2116": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Small Towns That Never Existed: Fictional Settings in Television) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a2269": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (Downton Abbey: Upstairs and Downstairs in Yorkshire) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a2270": {
+   "sub": "tv-drama",
+   "reason": "A drama/crime-series article (The Sopranos: Inside Television's Most Famous Mob Family) — moved from Television to the new Drama & Crime Series sub."
+  },
+  "a0040": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Dark Screens and Blue Boxes: British Science-Fiction Television) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a1600": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Acronyms of the Small Screen) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a0472": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Monsters of the Week: How the Supernatural Conquered Television) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a0664": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Life After the Bridge: Star Trek Actors in Other Roles) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a1024": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Title Heroines: When the Character Is the Show) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a1168": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (From the Big Screen to the Small: Films That Became Series) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a1348": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Ships and Crews: Space Opera on Television) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a1516": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Captains on the Bridge: Who Commanded Star Trek) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a1924": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Blue Box and Beyond: British Cult Television) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a2264": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Aboard the First Enterprise: Crew and Gadgets of Star Trek) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a2267": {
+   "sub": "tv-scifi",
+   "reason": "A science-fiction/fantasy series article (Heroes: Ordinary People Under an Eclipse) — moved from Television to the new Sci-Fi & Fantasy Series sub."
+  },
+  "a0100": {
+   "sub": "tv"
+  },
+  "a0328": {
+   "sub": "tv"
+  },
+  "a0652": {
+   "sub": "tv"
+  },
+  "a0712": {
+   "sub": "tv"
+  },
+  "a1540": {
+   "sub": "tv"
+  },
+  "a1576": {
+   "sub": "tv"
+  },
+  "a1588": {
+   "sub": "tv"
+  },
+  "a1696": {
+   "sub": "tv"
+  },
+  "a1792": {
+   "sub": "tv"
+  },
+  "a1852": {
+   "sub": "tv"
+  },
+  "a2265": {
+   "sub": "tv"
+  },
+  "a2266": {
+   "sub": "tv"
+  },
+  "a2268": {
+   "sub": "tv"
+  },
+  "a0088": {
+   "sub": "tv"
+  },
+  "a0556": {
+   "sub": "tv"
+  },
+  "a1756": {
+   "sub": "tv"
+  },
+  "a2032": {
+   "sub": "tv"
+  },
+  "a2271": {
+   "sub": "tv"
+  },
+  "a2273": {
+   "sub": "tv"
+  },
+  "a2274": {
+   "sub": "tv"
+  },
+  "a0181": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Gretchen's Question on Stage) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a0457": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Waiting for Godot and the Theatre of the Absurd) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a0517": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Molière: The Comedies That Outlived Their Author) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a0565": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Schiller's Great Stage Dramas) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a0625": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Two Households in Verona: The World of Romeo and Juliet) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a0709": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Gerhart Hauptmann and the Stage of German Naturalism) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1057": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Playwrights and the Women Who Married Them) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1105": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Set Pieces of the German Stage: Five Scenes Everyone Knows) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1129": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Tennessee Williams and the Pulitzer Years of American Drama) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1153": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Youth, Desire and Revolt: Five German Dramas That Broke the Rules) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1189": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Aeschylus and the Playwrights of Classical Athens) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1261": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Judges, Cobblers and Runaway Princes: Five Classic German Comedies) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1321": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Family, Law and the Gods: The Great Tragedies of Athens) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1333": {
+   "sub": "plays",
+   "reason": "A play/playwright article (The Founders of Modern Drama) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1381": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Doomed Lovers of the Stage) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1417": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Goethe on the Stage: Five Plays from Frankfurt to Weimar) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1621": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Dürrenmatt's Physicists and the Swiss Stage) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1681": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Title Heroes of the European Stage) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1717": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Swiss Drama of the Postwar Years: Frisch and Dürrenmatt) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1873": {
+   "sub": "plays",
+   "reason": "A play/playwright article (The Playwrights Who Built Modern Drama) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1897": {
+   "sub": "plays",
+   "reason": "A play/playwright article (The Rest Is Silence: Famous Lines from Shakespeare's Stage) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a1957": {
+   "sub": "plays",
+   "reason": "A play/playwright article (Dead at 23, Immortal on Stage: Georg Büchner and the German Drama) — moved from Theatre, Musical & Dance to the new Plays & Playwrights sub."
+  },
+  "a0217": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (The Composers Behind the Musical Stage) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0541": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (From the Rock Club to the Stage: Songwriters Who Wrote Musicals) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0637": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (From the Screen to the Stage: Disney and the Pop-Star Musical) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0733": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (When the Cast Album Topped the Charts: Musicals That Became Pop Hits) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a1441": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Composers of the Broadway Stage) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a1753": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Real Lives on the Musical Stage) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a2488": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Roller Skates and the Wall: Germany's Musicals with a House of Their Own) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a2489": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (From Broadway to the Big Screen: Musicals That Became Films) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a2017": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (From Brecht’s Stage to the Great American Songbook) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0145": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (National Dances of Europe: From the Ballroom Procession to Ravel) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0853": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Dances That Became National Symbols) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0985": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Who Leads Germany's Great Dance Companies) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a1513": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Swans and Fauns: Six Dancers Who Defined Twentieth-Century Ballet) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a1885": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (Pina Bausch and the Choreographers Who Shaped Modern Dance) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a2490": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (First Position to Pas de Deux: The Basics of Classical Ballet) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a2491": {
+   "sub": "musicals",
+   "reason": "A musical / dance article (From the Disco to the Street: Dance Styles of Pop Culture) — moved from Theatre, Musical & Dance to the new Musicals & Dance sub."
+  },
+  "a0121": {
+   "sub": "theatre"
+  },
+  "a0157": {
+   "sub": "theatre"
+  },
+  "a0325": {
+   "sub": "theatre"
+  },
+  "a0601": {
+   "sub": "theatre"
+  },
+  "a0613": {
+   "sub": "theatre"
+  },
+  "a0697": {
+   "sub": "theatre"
+  },
+  "a0745": {
+   "sub": "theatre"
+  },
+  "a0817": {
+   "sub": "theatre"
+  },
+  "a0865": {
+   "sub": "theatre"
+  },
+  "a0889": {
+   "sub": "theatre"
+  },
+  "a1021": {
+   "sub": "theatre"
+  },
+  "a1045": {
+   "sub": "theatre"
+  },
+  "a1213": {
+   "sub": "theatre"
+  },
+  "a1237": {
+   "sub": "theatre"
+  },
+  "a1489": {
+   "sub": "theatre"
+  },
+  "a1501": {
+   "sub": "theatre"
+  },
+  "a1561": {
+   "sub": "theatre"
+  },
+  "a1825": {
+   "sub": "theatre"
+  },
+  "a2005": {
+   "sub": "theatre"
+  },
+  "a2029": {
+   "sub": "theatre"
+  },
+  "a2041": {
+   "sub": "theatre"
+  },
+  "a2089": {
+   "sub": "theatre"
+  },
+  "a2492": {
+   "sub": "theatre"
+  },
+  "a2493": {
+   "sub": "theatre"
+  },
+  "a0301": {
+   "sub": "german-tv",
+   "reason": "German TV comedians and presenters (Hirschhausen, Loriot, Otto Waalkes) and what they studied — television entertainment, not stage; moved from Theatre, Musical & Dance to German Television."
+  }
+ },
+ "outgoing": {
+  "a1456": {
+   "domain": "film-media",
+   "suggestedSub": "film",
+   "reason": "About spaceship names in cinema films (Alien's Nostromo, Aliens' Sulaco, 2001's Discovery One), not television — belongs in Film."
+  },
+  "a2272": {
+   "domain": "digital",
+   "suggestedSub": "media",
+   "reason": "About social-media celebrity in the smartphone/selfie era (Ellen's Oscars selfie, Kim Kardashian's 'Selfish', Instagram fame) — internet culture, not television."
+  }
+ }
+}

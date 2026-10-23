@@ -1,0 +1,242 @@
+{
+ "article": "a0865",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Deus_ex_machina",
+   "title": "Deus ex machina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:28.232Z",
+   "snapshot": "ef829080f9c5301c26f0f933440052b810f1004539e49e45dff8cc8c1cbe1bf0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Catharsis",
+   "title": "Catharsis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:29.381Z",
+   "snapshot": "c6ad3339c38296cfd4d743c8793fe5bb555483b51665277b3ac1a942e8b8d368"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Against_Meidias",
+   "title": "Against Meidias – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:30.230Z",
+   "snapshot": "d897e001d18b0ee2e8ffd912006cb66a728396e87fe97b74990d6616626bfa86"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peripeteia",
+   "title": "Peripeteia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:31.224Z",
+   "snapshot": "67c7556759732954050f7ced0fe4c6d576cbfea9053be22fa411f5e44a85cc3c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Skene_(theatre)",
+   "title": "Skene (theatre) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:32.202Z",
+   "snapshot": "a5e07f86812d597ed0864f01ad6d89c6784b00b1654412affe9320f0fcf7a502"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deus ex machina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Catharsis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hubris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peripeteia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04325",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Skene",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:56.862Z",
+   "target": "f04321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deus ex machina ( DAY-əs ex-MA(H)K-in-ə; Latin: [ˈdɛ.ʊs ɛks ˈmaːkʰɪnaː]; plural: dei ex machina; 'God from the machine') is a plot device, a type of denouement  in which a seemingly unsolvable problem in a story is suddenly or abruptly resolved by an unexpected and unlikely occurrence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deus ex machina” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:56.862Z",
+   "target": "f04322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Catharsis or katharsis is from the Ancient Greek word κάθαρσις, katharsis, meaning 'purification' or 'cleansing', commonly used to refer to the purification and purgation of thoughts and emotions by way of expressing them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catharsis” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:56.862Z",
+   "target": "f04323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It gives valuable information about Athenian law and festivals, and especially about the Greek concept of hubris (aggravated assault), which was regarded as a crime not only against the citizen or city but against society as a whole.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hubris” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:56.862Z",
+   "target": "f04324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peripeteia (, peripety, alternative Latin form: Peripetīa, ultimately from Greek: περιπέτεια) is a reversal of circumstances, or turning point, within a work of literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peripeteia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:56.862Z",
+   "target": "f04325",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the theatre of ancient Greece, the skene was the structure at the back of a stage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skene” is on the snapshot of s5"
+  }
+ ]
+}

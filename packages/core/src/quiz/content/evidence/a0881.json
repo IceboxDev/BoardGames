@@ -1,0 +1,294 @@
+{
+ "article": "a0881",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tamagotchi",
+   "title": "Tamagotchi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:29.262Z",
+   "snapshot": "335e514adb1a6e82eb688fb2680b52daeaedf0eb6f153be511c8d5ba17d95229"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Game_Boy",
+   "title": "Game Boy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:30.515Z",
+   "snapshot": "0af5a7011e11f03cd4745760c1b2d571a3330332e4af77f2936d842becf1918e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Furby",
+   "title": "Furby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:31.436Z",
+   "snapshot": "a4b24a13f6df5f06451c77753b2dfbdbe5201edf77f65b4e4ca7c92c82b9f443"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fidget_spinner",
+   "title": "Fidget spinner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:32.226Z",
+   "snapshot": "c38a1ffe76c5b97ee1f61558d924a8795683082dc805704dcfa7894fd55f96ff"
+  },
+  "s5": {
+   "url": "https://www.ponylande.de/g1/liste.html",
+   "title": "Namensliste Englisch-Deutsch (G1)",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:29.388Z",
+   "snapshot": "2f97f7ebe86e80696a1a51394673c77e1e8994eed94ee2e8d4f60f57d2635658"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/My_Little_Pony",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:33.381Z",
+   "snapshot": "3e8109b48b708b891364e616e9f7c865e479277f87b94618b89efb98d02534a8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Rubik%27s_Cube",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:31.071Z",
+   "snapshot": "eae67fe0964958393fcc88edfa6c4f0d1e882cf6d828990c2c0107ab17bdad2a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tamagotchi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Game Boy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Furby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fidget Spinner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "My Little Pony",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-108"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "My Little Pony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:59.366Z",
+   "target": "f04401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tamagotchi (Japanese: たまごっち; IPA: [tamaɡotꜜtɕi], \"Egg Watch\") is a brand of handheld digital pets marketed since 1996 by Japanese toymaker Bandai, a division of Bandai Namco Holdings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tamagotchi” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:59.366Z",
+   "target": "f04403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Game Boy is a handheld game console developed and marketed by Nintendo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Game Boy” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:59.366Z",
+   "target": "f04404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Furby is an American electronic robotic toy created by Tiger Electronics – a subsidiary of Hasbro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Furby” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:59.366Z",
+   "target": "f04405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A fidget spinner or hand spinner is a fidget toy composed of a central ball bearing and two or more weighted lobes that rotate around the central axis when spun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fidget Spinner” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:59.366Z",
+   "target": "f11187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "My Little Pony",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“My Little Pony”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:59.366Z",
+   "target": "f11187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "My Little Pony (MLP) is a toyline and media franchise developed by American toy company Hasbro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.366Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “My Little Pony” is on the snapshot of s6"
+  }
+ ]
+}

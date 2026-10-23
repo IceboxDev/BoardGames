@@ -1,0 +1,74 @@
+{
+ "w24558": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish utilitarianism card.", "sources": [], "fields": ["ru"]},
+ "a0788": {"kind": "corrected", "reason": "Russian body: grammar fix in the Lilith sentence (сотворённую → сотворённой, agreeing with 'первой женой').", "sources": [], "fields": ["bodyRu"]},
+ "w24561": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish mezuzah card.", "sources": [], "fields": ["ru"]},
+ "a2163": {"kind": "marked", "reason": "The German answer '4,54 Milliarden Jahre' was marked inside the dative 'Jahren'; the opening sentence now states the age in the nominative ('Die Erde ist etwa 4,54 Milliarden Jahre alt'), so the answer mark sits on a whole phrase.", "sources": [], "fields": ["bodyDe", "facts.f10942.spans"]},
+ "w24609": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish Pangaea card.", "sources": [], "fields": ["ru"]},
+ "a0538": [
+  {"kind": "corrected", "reason": "Earth (12,756 km) minus Venus (12,104 km) is 652 km, so 'less than 650 kilometres narrower' was wrong; now 'only about 650 kilometres narrower' (DE likewise).", "sources": [{"url": "https://en.wikipedia.org/wiki/Venus"}], "fields": ["bodyEn", "bodyDe"]},
+  {"kind": "translated", "reason": "Russian title, body and notes translated from the current (merged) text.", "sources": [], "fields": ["titleRu", "bodyRu", "notesRu"]}
+ ],
+ "f25237": [
+  {"kind": "translated", "reason": "Russian answer and timeline label added.", "sources": [], "fields": ["answerRu", "timeline.labelRu"]},
+  {"kind": "marked", "reason": "Answer mark moved from the diameter comparison to the sentence that explains why Venus is called Earth's sister planet, which is what the card asks.", "sources": [], "fields": ["spans"]}
+ ],
+ "w24575": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish Jupiter card.", "sources": [], "fields": ["ru"]},
+ "w24576": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish Mercury card.", "sources": [], "fields": ["ru"]},
+ "w24581": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish Venus card.", "sources": [], "fields": ["ru"]},
+ "a1282": [
+  {"kind": "corrected", "reason": "The intro called the Local Group 'a modest cluster of a few dozen members', contradicting the body's 'more than a hundred galaxies' (Wikipedia: 134 known members within 1 Mpc); now 'a modest group of more than a hundred members, most of them dwarfs'. The table typed it as a 'cluster'; it is a galaxy group. The Large Magellanic Cloud's star count was 15 billion in the table; Wikipedia gives 20 billion. The closing line said Andromeda's light left 'before humans existed' – 2.5 million years ago the genus Homo already existed, so it now says 'before our own species existed'. The Sagittarius A* sentence was rearranged so the next sentence states the answer ('A supermassive black hole like it sits at the heart of almost every large galaxy').", "sources": [{"url": "https://en.wikipedia.org/wiki/Local_Group"}, {"url": "https://en.wikipedia.org/wiki/Large_Magellanic_Cloud"}], "fields": ["bodyEn", "bodyDe"]},
+  {"kind": "translated", "reason": "Russian title, body and notes translated from the current text.", "sources": [], "fields": ["titleRu", "bodyRu", "notesRu"]}
+ ],
+ "f25239": [
+  {"kind": "translated", "reason": "Russian answer and timeline label added.", "sources": [], "fields": ["answerRu", "timeline.labelRu"]},
+  {"kind": "marked", "reason": "Answer mark moved to the sentence saying a supermassive black hole sits at the heart of almost every large galaxy, which is what the card asks.", "sources": [], "fields": ["spans"]}
+ ],
+ "w24583": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish black-hole card.", "sources": [], "fields": ["ru"]},
+ "a1662": [
+  {"kind": "corrected", "reason": "The merge inserted the Iraq sentence between 'its first named rulers' and 'Some of them are historical', so 'them' no longer referred to the rulers; the sentence now reads 'Of the rulers who made its name, some are historical…'. The redundant 'in today's Iraq' in the first sentence was dropped, since the next sentence states it precisely.", "sources": [{"url": "https://en.wikipedia.org/wiki/Mesopotamia"}], "fields": ["bodyEn", "bodyDe"]},
+  {"kind": "translated", "reason": "Russian title, body and notes translated from the current text.", "sources": [], "fields": ["titleRu", "bodyRu", "notesRu"]}
+ ],
+ "f25281": [
+  {"kind": "translated", "reason": "Russian answer and timeline label added.", "sources": [], "fields": ["answerRu", "timeline.labelRu"]},
+  {"kind": "marked", "reason": "Answer mark moved from 'in today's Iraq' (removed) to the sentence saying Mesopotamia's territory corresponds roughly to the modern state of Iraq.", "sources": [], "fields": ["spans"]}
+ ],
+ "w24629": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish Mesopotamia card.", "sources": [], "fields": ["ru"]},
+ "a2061": [
+  {"kind": "corrected", "reason": "Linnaeus reversed Celsius's scale in 1744, the year of Celsius's death (Wikipedia, Celsius), not 1745. The traveller's rule 'double and add 30' is not 'within a couple of degrees' everywhere (at 35 °C it gives 100 vs 95 °F); now 'at everyday temperatures … within a few degrees'.", "sources": [{"url": "https://en.wikipedia.org/wiki/Celsius"}], "fields": ["bodyEn", "bodyDe"]},
+  {"kind": "translated", "reason": "Russian title, body and notes translated from the current text.", "sources": [], "fields": ["titleRu", "bodyRu", "notesRu"]}
+ ],
+ "f10302": {"kind": "corrected", "reason": "Timeline start corrected from 1745 to 1744, the year Linnaeus reversed the Celsius scale.", "sources": [{"url": "https://en.wikipedia.org/wiki/Celsius"}], "fields": ["timeline.start"]},
+ "f25425": {"kind": "translated", "reason": "Russian answer and timeline label added; answer marks set on the sentence defining the triple point.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "w24793": {"kind": "translated", "reason": "Added the Russian open question for the Publish or Perish triple-point card.", "sources": [], "fields": ["ru"]},
+ "a2700": [
+  {"kind": "translated", "reason": "Russian title, body and notes translated.", "sources": [], "fields": ["titleRu", "bodyRu", "notesRu"]},
+  {"kind": "illustrated", "reason": "Added the IAU chart of Orion (traditional figure, official boundaries, Orion Nebula), a Big Dipper/Ursa Major map (asterism vs constellation) and Hubble's Orion Nebula mosaic.", "sources": [{"url": "https://en.wikipedia.org/wiki/Orion_(constellation)"}, {"url": "https://en.wikipedia.org/wiki/Big_Dipper"}, {"url": "https://en.wikipedia.org/wiki/Orion_Nebula"}], "fields": ["images"]}
+ ],
+ "f25254": {"kind": "marked", "reason": "The English answer mark sat in the summary table ('| Star |'); moved to the defining sentence. Russian answer, label and mark added.", "sources": [], "fields": ["spans", "answerRu", "timeline.labelRu"]},
+ "f25255": {"kind": "marked", "reason": "The English answer mark sat in the summary table; moved to the defining sentence. Russian answer, label and mark added.", "sources": [], "fields": ["spans", "answerRu", "timeline.labelRu"]},
+ "f25256": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "f25257": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "f25258": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "f25259": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "w24598": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24599": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24600": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24601": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24602": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24603": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "a2720": [
+  {"kind": "corrected", "reason": "The opening paragraph quoted the card's question verbatim ('What is the name for…? VO2 max, …'), which reads as a quiz inside the article; it now states the definition as prose. The Nobel Prize 'for 1922' was awarded to Hill and Meyerhof in 1923, so 'That same year Hill shared the Nobel Prize' became 'He shared the Nobel Prize … for 1922'; Meyerhof's citation was for the fixed relationship between the muscle's oxygen consumption and its lactic-acid metabolism, not for 'tracing how it breaks down glycogen'.", "sources": [{"url": "https://en.wikipedia.org/wiki/VO2_max"}, {"url": "https://www.nobelprize.org/prizes/medicine/1922/summary/"}], "fields": ["bodyEn", "bodyDe"]},
+  {"kind": "translated", "reason": "Russian title, body and notes translated.", "sources": [], "fields": ["titleRu", "bodyRu", "notesRu"]},
+  {"kind": "illustrated", "reason": "Added a photo of a VO2 max test in an ergospirometry lab and a portrait of A. V. Hill.", "sources": [{"url": "https://en.wikipedia.org/wiki/VO2_max"}, {"url": "https://en.wikipedia.org/wiki/Archibald_Hill"}], "fields": ["images"]}
+ ],
+ "f25419": {"kind": "corrected", "reason": "The German answer 'VO2max (maximale Sauerstoffaufnahme)' carried an alternative in brackets (already listed in the notes); it is now the plain 'VO2max'. Russian answer, label and marks added.", "sources": [{"url": "https://en.wikipedia.org/wiki/VO2_max"}], "fields": ["answerDe", "answerRu", "timeline.labelRu", "spans"]},
+ "f25420": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "f25421": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "f25422": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "f25423": {"kind": "translated", "reason": "Russian answer, timeline label and answer mark added.", "sources": [], "fields": ["answerRu", "timeline.labelRu", "spans"]},
+ "w24787": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24788": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24789": {"kind": "reworded", "reason": "The prize is 'the Nobel Prize for 1922' (awarded in 1923); the wording now says 'for 1922' in EN/DE. Russian open question added.", "sources": [{"url": "https://www.nobelprize.org/prizes/medicine/1922/summary/"}], "fields": ["en", "de", "ru"]},
+ "w24790": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]},
+ "w24791": {"kind": "translated", "reason": "Russian open question added.", "sources": [], "fields": ["ru"]}
+}

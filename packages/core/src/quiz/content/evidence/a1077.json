@@ -1,0 +1,195 @@
+{
+ "article": "a1077",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Platelet",
+   "title": "Platelet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:15.180Z",
+   "snapshot": "cb8e68915b05194d2cc39df2d67fd087108f26382ff52d4438aba36a34bca795"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+   "title": "Red blood cell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:16.160Z",
+   "snapshot": "cc3488cf09dd2b650744371911f825e7ae1fcc2f7640fdf769bdf6637885101c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Leukemia",
+   "title": "Leukemia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:17.186Z",
+   "snapshot": "fb41f2abe8c95c7164b9fa6efe172d16a3df2aea0b8c71b14e50f80c15e54fc5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hemoglobin",
+   "title": "Hemoglobin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:39.354Z",
+   "snapshot": "a13f740158dcd721365e5c9fcebf2876b123069c0be3e7513de94d7435949ca1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "platelets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "red blood cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "white blood cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "haemoglobin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:28.780Z",
+   "target": "f05381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Platelets or thrombocytes (from Ancient Greek  θρόμβος (thrómbos) 'clot' and  κύτος (kútos) 'cell') are a part of blood whose function (along with the coagulation factors) is to react to bleeding from blood vessel injury by clumping to form a blood clot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “platelets” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:28.780Z",
+   "target": "f05382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Red blood cells (RBCs), referred to as erythrocytes (from Ancient Greek  erythros 'red' and  kytos 'hollow vessel', with -cyte translated as 'cell' in modern usage) in academia and medical publishing, also known as red cells, erythroid cells, and rarely haematids, are the most common type of blood",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red blood cells” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:28.780Z",
+   "target": "f05383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chronic leukemia is characterized by the excessive buildup of relatively mature, but still abnormal, white blood cells (or, more rarely, red blood cells).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “white blood cells” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:28.780Z",
+   "target": "f05385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hemoglobin (haemoglobin, Hb or Hgb) is a protein containing iron that facilitates the transportation of oxygen in red blood cells.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “haemoglobin” is on the snapshot of s4"
+  }
+ ]
+}

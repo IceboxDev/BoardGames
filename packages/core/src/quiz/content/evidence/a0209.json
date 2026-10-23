@@ -1,0 +1,474 @@
+{
+ "article": "a0209",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Squash_(sport)",
+   "title": "Squash (sport) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:05.541Z",
+   "snapshot": "a0853e808c9066c3029e0122e30bddc2f9eccc35ea5919914e45c33df61050bc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Table_tennis",
+   "title": "Table tennis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:05.890Z",
+   "snapshot": "391c8b516255aba2f1ff38c2f4f33e1d744a99a27dca0b48c03ebe8a852d2d8f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Padel",
+   "title": "Padel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:06.795Z",
+   "snapshot": "4856e5341168f5c102d706081cf6c76c7b61b9ba0250e2c1cef34eeec6721609"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Volleyball",
+   "title": "Volleyball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:18.401Z",
+   "snapshot": "b5f2554946cd34305d0e469f94cb5a5ffeb20b95a558015f16220c76a033aa5e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Federball",
+   "title": "Federball",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:03.933Z",
+   "snapshot": "0f1b5ce2abb39f89332a67a68882c054787ed2f636b35396000a986032e759f0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Badminton",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:02.641Z",
+   "snapshot": "b97ed445f5be5d3e6d66dc60a00e913632ce1eea3412c426de2bd195d0da7a4d"
+  },
+  "s7": {
+   "url": "https://worldbadminton.com/laws/index.html",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:04.726Z",
+   "snapshot": "c756644904d5dbaa313236ccf25f01478069167a89587100a0d955f621d87060"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Shuttlecock",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:07.706Z",
+   "snapshot": "6ffc71cea8fb47c3776680e58b62452bbd802d24fdcdd1387c3a7b6b7cb00216"
+  },
+  "s9": {
+   "url": "https://improbable.com/2013/01/23/shuttlecock-aerodynamics-part-4-an-emigma/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:06.622Z",
+   "snapshot": "e8a3e7f69b81d80975c85ee960f1ae900a6d5bce5f91cb210e8d3e61ae370aa5"
+  },
+  "s10": {
+   "url": "https://system.bwfbadminton.com/documents/folder_1_81/Regulations/Laws/Part%20II%20Section%201A%20-%20Laws%20of%20Badminton%20-%20June%202016%20Revised.pdf",
+   "title": "Laws of Badminton (June 2016 revised)",
+   "publisher": "Badminton World Federation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:06:15Z"
+  },
+  "s11": {
+   "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/Badminton/Laws-of-Badminton.aspx",
+   "title": "Laws of Badminton",
+   "publisher": "Tower Hamlets Council",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:06:18Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Squash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Table tennis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Padel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Volleyball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "16 Federn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-394"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "16 feathers",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "16 feathers",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "16 feathers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-394/6, u04: Statement false: the Laws of Badminton (Law 2.2) fix only 16 feathers; manufacturers use feathers from one wing per shuttle, left OR right (Yonex), never mixed. Bank question and notes already say this."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "16 feathers",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s7"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "16 feathers",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s8"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "16 feathers",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s9"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f01041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Squash, sometimes called squash rackets, is a racket sport played by two (singles) or four players (doubles) in a four-walled court with a small, hollow, rubber ball.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Squash” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f01043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Table tennis (also known as ping-pong) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Table tennis” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f01044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Padel (Spanish: pádel) is a racquet sport that combines elements of tennis and squash.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Padel” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f01045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Volleyball is a team sport in which two teams of six players are separated by a net.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volleyball” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "16 Federn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“16 Federn”, “16 feathers”, “16 перьев”) on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "2.2.1 The shuttle shall have 16 feathers fixed in the base.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “16 feathers” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It has 16 feathers with each feather 62 to 70 mm (2.4 to 2.8 in) in length, and the diameter of the cork is 25 to 28 mm (0.98 to 1.10 in).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “16 feathers” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:24:12.122Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The 16 feathers traditionally used to construct traditional shuttlecocks are normally organised in an overlapping spiral arrangement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “16 feathers” is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:06:15Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The shuttle shall have 16 feathers fixed in the base.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23",
+   "note": "BWF Law 2.2.1."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:06:18Z",
+   "target": "f13826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The shuttle shall have 16 feathers fixed in the base.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23",
+   "note": "Reproduces BWF Law 2.2.1."
+  }
+ ]
+}

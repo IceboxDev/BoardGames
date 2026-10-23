@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-004",
+ "image": "IMG20261022010630.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Engineering and Inventions",
+   "cardText": "[Engineering and Inventions] What ancient device is known as the world’s first computer?\nA. The Abacus\nB. The Antikythera Mechanism\nC. The Astrolabe\nAnswer: B. The Antikythera Mechanism, an ancient Greek device, is considered the world’s first computer for its sophisticated use of gears to predict astronomical positions.",
+   "de": "Welches antike griechische Zahnradgerät zur Vorhersage astronomischer Positionen gilt als ältester bekannter (Analog-)Computer der Welt?",
+   "en": "Which ancient Greek geared device, used to predict astronomical positions, is known as the world's oldest known (analogue) computer?",
+   "reworked": true,
+   "answerDe": "Mechanismus von Antikythera",
+   "answerEn": "Antikythera mechanism",
+   "timeline": {
+    "kind": "creation",
+    "start": "-200",
+    "end": "-101",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Antikythera mechanism, an ancient Greek geared orrery, is built",
+    "labelDe": "Der Mechanismus von Antikythera, ein antikes griechisches Zahnrad-Planetarium, wird gebaut"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+    "title": "Antikythera mechanism",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: the oldest known example of an analogue computer; built in the 2nd century BC, discovered in 1901.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 2,
+   "discipline": "Medical Sciences",
+   "cardText": "[Medical Sciences] Diabetes develops as the result of a problem with which specific organ in the body?\nA. Pancreas B. Liver C. Kidney\nAnswer: A. The pancreas is responsible for producing insulin, a hormone that regulates blood sugar. In diabetes, either the pancreas does not produce enough insulin (Type 1) or the body becomes resistant to insulin’s effects (Type 2).",
+   "de": "Welches Organ produziert Insulin, das Hormon, dessen Mangel oder Unwirksamkeit Diabetes verursacht?",
+   "en": "Which organ produces insulin, the hormone whose lack or ineffectiveness causes diabetes?",
+   "reworked": true,
+   "answerDe": "Bauchspeicheldrüse",
+   "answerEn": "Pancreas",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1921",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Frederick Banting and Charles Best first isolate insulin from a dog's pancreas in Toronto",
+    "labelDe": "Frederick Banting und Charles Best isolieren in Toronto erstmals Insulin aus einer Hundebauchspeicheldrüse"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Diabetes",
+    "title": "Diabetes",
+    "lang": "en"
+   },
+   "notes": "The card's framing is simplified: in type 2 diabetes the main problem is the body's resistance to insulin, not the pancreas alone; the question asks the organ that makes insulin. Timeline from the Insulin article.",
+   "domain": "science",
+   "sub": "medicine"
+  }
+ ]
+}

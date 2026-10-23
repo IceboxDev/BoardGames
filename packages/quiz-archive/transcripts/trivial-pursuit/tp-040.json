@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-040",
+ "image": "IMG20261007181959.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welche Stadt hatte der Orient-Express, der 1889 täglich von Paris abfuhr, nach einer 3.000 Kilometer langen Strecke als Ziel?",
+   "de": "Welche Stadt hatte der Orient-Express, der 1889 täglich von Paris abfuhr, nach einer 3.000 Kilometer langen Strecke als Ziel?",
+   "en": "Which city was the destination of the Orient Express, which departed Paris daily in 1889, after a 3,000-kilometre route?",
+   "reworked": false,
+   "answerDe": "Konstantinopel",
+   "answerEn": "Constantinople",
+   "timeline": {
+    "kind": "event",
+    "start": "1889",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Orient Express first runs through by rail from Paris to Constantinople via Vienna, Budapest and Sofia",
+    "labelDe": "Der Orient-Express fährt erstmals durchgehend auf der Schiene von Paris über Wien, Budapest und Sofia nach Konstantinopel"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Orient-Express",
+    "title": "Orient-Express",
+    "lang": "de"
+   },
+   "notes": "Constantinople has been called Istanbul since 1930; accept Istanbul.",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Schauspieler hat mit Stand 2016 keinen Superhelden in einem Marvel-Comics-Film gespielt: Ryan Reynolds, Liam Hemsworth oder Hugh Jackman?",
+   "de": "An welchen seiner Brüder verlor Liam Hemsworth die Titelrolle in der Marvel-Comicverfilmung „Thor“?",
+   "en": "To which of his brothers did Liam Hemsworth lose the title role in the Marvel comic adaptation Thor?",
+   "reworked": true,
+   "answerDe": "Chris Hemsworth",
+   "answerEn": "Chris Hemsworth",
+   "timeline": {
+    "kind": "creation",
+    "start": "2011",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Marvel's Thor is released with Chris Hemsworth in the title role",
+    "labelDe": "Marvels Thor kommt mit Chris Hemsworth in der Titelrolle in die Kinos"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Liam_Hemsworth",
+    "title": "Liam Hemsworth",
+    "lang": "de"
+   },
+   "notes": "Card's multiple-choice answer was Liam Hemsworth (Reynolds played Deadpool, Jackman Wolverine); reworked into the open fact that Liam lost the Thor role to his brother Chris.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wofür steht das „A“ im Namen des Chemiekonzerns BASF?",
+   "de": "Wofür steht das „A“ im Namen des Chemiekonzerns BASF?",
+   "en": "What does the 'A' in the name of the chemical company BASF stand for?",
+   "reworked": false,
+   "answerDe": "Anilin",
+   "answerEn": "Aniline",
+   "timeline": {
+    "kind": "founding",
+    "start": "1865-04-06",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "BASF is founded in Mannheim as the Badische Anilin- & Soda-Fabrik",
+    "labelDe": "BASF wird in Mannheim als Badische Anilin- & Soda-Fabrik gegründet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/BASF",
+    "title": "BASF",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher berühmte britische Autor erfand Figuren wie Miss Havisham, Oliver Twist und den kleinen Tim?",
+   "de": "Welcher berühmte britische Autor erfand Figuren wie Miss Havisham, Oliver Twist und den kleinen Tim?",
+   "en": "Which famous British author created characters such as Miss Havisham, Oliver Twist and Tiny Tim?",
+   "reworked": false,
+   "answerDe": "Charles Dickens",
+   "answerEn": "Charles Dickens",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1812-02-07",
+    "end": "1870-06-09",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Charles Dickens, English novelist of Oliver Twist, Great Expectations and A Christmas Carol",
+    "labelDe": "Charles Dickens, englischer Romancier von Oliver Twist, Große Erwartungen und Eine Weihnachtsgeschichte"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Charles_Dickens",
+    "title": "Charles Dickens",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Computerfirma wurde 1976 von Steve Wozniak kofinanziert?",
+   "de": "Welche Computerfirma wurde 1976 von Steve Wozniak kofinanziert?",
+   "en": "Which computer company was co-financed by Steve Wozniak in 1976?",
+   "reworked": false,
+   "answerDe": "Apple",
+   "answerEn": "Apple",
+   "timeline": {
+    "kind": "founding",
+    "start": "1976-04-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Apple is founded by Steve Wozniak, Steve Jobs and Ron Wayne as a garage company",
+    "labelDe": "Apple wird von Steve Wozniak, Steve Jobs und Ron Wayne als Garagenfirma gegründet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Apple",
+    "title": "Apple",
+    "lang": "de"
+   },
+   "notes": "Wozniak co-founded Apple with Steve Jobs and Ron Wayne.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Über welche Distanz geht der Lauf bei einem olympischen Triathlon?",
+   "de": "Über welche Distanz geht der Lauf bei einem olympischen Triathlon?",
+   "en": "Over what distance is the run in an Olympic triathlon?",
+   "reworked": false,
+   "answerDe": "10 Kilometer",
+   "answerEn": "10 kilometres",
+   "timeline": {
+    "kind": "event",
+    "start": "1989-04-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The new ITU fixes the Olympic triathlon distance: 1.5 km swim, 40 km bike, 10 km run",
+    "labelDe": "Die neue ITU legt die olympische Triathlondistanz fest: 1,5 km Schwimmen, 40 km Rad, 10 km Laufen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Triathlon",
+    "title": "Triathlon",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-117",
+ "image": "IMG20261022154451.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Epidemiology",
+   "cardText": "[Epidemiology] Which of the following is LEAST likely to kill you?\nA. Shark\nB. Vending machine\nC. Lightning\nAnswer: A. Despite their fearsome reputation, shark attacks are exceedingly rare, with only about five fatalities worldwide each year. In contrast, vending machine accidents cause about two to three deaths annually in the United States alone. Lightning strikes, while also rare, result in around 20 deaths per year in the United States.",
+   "de": "Wie viele Menschen sterben laut dem International Shark Attack File weltweit in einem durchschnittlichen Jahr durch unprovozierte Haibisse?",
+   "en": "According to the International Shark Attack File, about how many people are killed by unprovoked shark bites worldwide in an average year?",
+   "reworked": true,
+   "answerDe": "Etwa 8",
+   "answerEn": "About 8",
+   "timeline": {
+    "kind": "founding",
+    "start": "1958-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The US Office of Naval Research forms the Shark Research Panel, origin of the International Shark Attack File",
+    "labelDe": "Das Office of Naval Research der US-Marine gründet das Shark Research Panel, den Ursprung des International Shark Attack File"
+   },
+   "source": {
+    "url": "https://www.floridamuseum.ufl.edu/shark-attacks/yearly-worldwide-summary/",
+    "title": "Yearly Worldwide Shark Attack Summary",
+    "lang": "en"
+   },
+   "notes": "Asked as an open number. Card's 'about five' is low/dated: ISAF gives a 2020–2024 average of 8 unprovoked fatalities per year (9 in 2025; 2011–2015 avg 11). 'Least likely' depends on where you live, so the comparison was dropped; vending-machine and lightning figures not checked. Timeline from Wikipedia 'International Shark Attack File'.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] What mountain peak is farthest from the center of the Earth?\nA. Everest  B. Kilimanjaro  C. Chimborazo\nAnswer: C. Chimborazo in Ecuador is farthest from the Earth’s center due to the equatorial bulge.",
+   "de": "Der Gipfel welches Berges ist dank der Äquatorwulst der vom Erdmittelpunkt am weitesten entfernte Punkt der Erdoberfläche?",
+   "en": "Which mountain's summit is the point on Earth's surface farthest from Earth's centre, thanks to the equatorial bulge?",
+   "reworked": true,
+   "answerDe": "Chimborazo",
+   "answerEn": "Chimborazo",
+   "timeline": {
+    "kind": "event",
+    "start": "1880-01-04",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Edward Whymper makes the first ascent of Chimborazo in Ecuador",
+    "labelDe": "Edward Whymper gelingt die Erstbesteigung des Chimborazo in Ecuador"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Chimborazo",
+    "title": "Chimborazo",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "geography",
+   "sub": "physical"
+  }
+ ]
+}

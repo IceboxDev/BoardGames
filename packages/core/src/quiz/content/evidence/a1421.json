@@ -1,0 +1,306 @@
+{
+ "article": "a1421",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Friday_the_13th_Part_III",
+   "title": "Friday the 13th Part III – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:15.478Z",
+   "snapshot": "248de7b4470a420b9690fc120c67dc678d067fc9541073ff00380bdc262626a4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rocky",
+   "title": "Rocky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:28.063Z",
+   "snapshot": "b7f96fdae50a56d2e3defec6fa70e929260b5fd77a685187c00c41a3607f7860"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Karate_Kid",
+   "title": "The Karate Kid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:16.395Z",
+   "snapshot": "c0576e91f0d6bb677a8324e7952172f18e3094cfff8dedabea465dd17c4be765"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Happy_Gilmore",
+   "title": "Happy Gilmore – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:17.419Z",
+   "snapshot": "892156c18d86069470811ce7f369067cbccabba7e1adfda3e669686dcf0f64d7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cool_Runnings",
+   "title": "Cool Runnings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:18.411Z",
+   "snapshot": "98626785dfd3bb1c95ae34216d79ae0045e6b2f3c36a5a65c6a3289178deac25"
+  },
+  "s6": {
+   "url": "https://theweek.com/articles/543945/friday-13th-part-iii-how-80s-horror-franchise-bet-all-3d--won",
+   "title": "Friday the 13th Part III: How an '80s horror franchise bet it all on 3-D — and won",
+   "publisher": "The Week",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:51.227Z",
+   "snapshot": "63c687d307c6883f021b479226f438a2c572504ab1ace6fd7f5d0882f9fdb9ca"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ice hockey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Boxing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Golf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bobsleigh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:23.060Z",
+   "target": "f07101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ice hockey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ice hockey”, “Eishockey”, “Хоккей с шайбой”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:23.060Z",
+   "target": "f07102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "To mark the upcoming United States Bicentennial, heavyweight boxing world champion Apollo Creed plans to hold a title bout in Philadelphia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boxing” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:23.060Z",
+   "target": "f07103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Karate Kid is a 1984 American martial arts drama film directed by John G.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karate” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:23.060Z",
+   "target": "f07104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The film follows Happy Gilmore, a boorish, failed ice hockey player with a unique talent for golf, who seeks to raise enough money to prevent the foreclosure of his grandmother's house.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golf” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:23.060Z",
+   "target": "f07105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is loosely based on the debut of the Jamaican national bobsleigh team at the 1988 Winter Olympics, and stars Leon, Doug E.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bobsleigh” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:34:02Z",
+   "target": "f07101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The film marks the first appearance of Jason's signature hockey mask",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:34:05Z",
+   "target": "f07101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The third entry in the slasher franchise gave Jason Vorhees his hockey mask",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:08.191Z",
+   "target": "f07101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The film marks the first appearance of Jason's signature hockey mask",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:08.191Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  }
+ ]
+}

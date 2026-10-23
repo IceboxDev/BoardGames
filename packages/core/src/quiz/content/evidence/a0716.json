@@ -1,0 +1,467 @@
+{
+ "article": "a0716",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Republic_(Plato)",
+   "title": "Republic (Plato) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:11.330Z",
+   "snapshot": "3c4baf88504a46760a2c4ebc0ea650666b353a04a4421423434015fc44ef9f13"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes",
+   "title": "René Descartes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:12.223Z",
+   "snapshot": "6c7686ef26f0ca088fc1009cd4adb53295629034c41ea0bf08fb0ebc647b77f5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cogito,_ergo_sum",
+   "title": "Cogito, ergo sum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:14.400Z",
+   "snapshot": "27d12c78d29bd2d056a5044f598aaf4e241dcfe0dc8c028ec17b50f79b600796"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Perpetual_Peace:_A_Philosophical_Sketch",
+   "title": "Perpetual Peace: A Philosophical Sketch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:13.240Z",
+   "snapshot": "090cb493e351edefa68fec99f2f9c628f29554d51497cbc23694719c3c6108ea"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kategorischer_Imperativ",
+   "title": "Kategorischer Imperativ",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:15:10.667Z",
+   "snapshot": "3be6c7e4cb314b1feea225c41c1761d258fe4a88a7c6194b44acaa7dcc4caa9d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Groundwork_of_the_Metaphysics_of_Morals",
+   "title": "Groundwork of the Metaphysics of Morals",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:14.368Z",
+   "snapshot": "71f937b1c0ccf196040c7c90feda009f1ea13f98b6573d8075ebefc181ef4353"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/A_Theory_of_Justice",
+   "title": "A Theory of Justice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:15.308Z",
+   "snapshot": "9ba5e1de95edb3d61619a0ecd621e0281b62501d15b20f1290da8303aefe39c5"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Allegory_of_the_cave",
+   "title": "Allegory of the cave",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:16.313Z",
+   "snapshot": "524efab2b4aaed7eca4e425932afdad9c06c7043948658e5fbfc96d8a5c32a72"
+  },
+  "s9": {
+   "url": "https://www.gutenberg.org/files/1497/1497-h/1497-h.htm",
+   "title": "The Republic by Plato (Jowett translation) – Project Gutenberg",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:14.226Z",
+   "snapshot": "d5941ac7931d8ca3f2607135b8d77065ee49683bee1582a6edaa96e5f910adbf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Plato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "René Descartes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "René Descartes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-160"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Immanuel Kant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Immanuel Kant",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-129"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Immanuel Kant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-009"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f03580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "John Rawls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Shadows on the cave wall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-056"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Republic (Ancient Greek: Πολιτεία, romanized: Politeia; Latin: De Republica) is a Socratic dialogue authored by Plato around 375 BC, concerning justice (dikaiosúnē), the order and character of the just city-state, and the just man.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Plato” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "René Descartes ( day-KART, also  DAY-kart; French: [ʁəne dekaʁt] ; 31 March 1596 – 11 February 1650) was a French philosopher, mathematician, and scientist whose work was foundational to mathematics and modern philosophy, and influenced the development of early modern science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Descartes” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Latin cogito, ergo sum, usually translated into English as \"I think, therefore I am\", is the \"first principle\" of the philosophy of the French scientist and philosopher René Descartes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Descartes” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein philosophischer Entwurf) is a 1795 book authored by the German philosopher Immanuel Kant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der kategorische Imperativ ist für Immanuel Kant das grundlegende Prinzip moralischen Handelns: Um zu entscheiden, ob eine Handlung moralisch sei, soll geprüft werden, ob sie einer Maxime folgt, deren Gültigkeit für alle, jederzeit und ohne Ausnahme akzeptabel wäre, und ob alle betroffenen Personen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "of the Metaphysics of Morals, Grounding of the Metaphysics of Morals, and the Grounding for the Metaphysics of Morals) is the first of Immanuel Kant's mature works on moral philosophy and the first of his trilogy of major works on ethics alongside the Critique of Practical Reason and The",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f03580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A Theory of Justice is a 1971 work of political philosophy and ethics by the philosopher John Rawls (1921–2002) in which the author attempts to provide a moral theory alternative to utilitarianism and that addresses the problem of distributive justice (the socially just distribution of goods in a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:31.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Rawls” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:31.854Z",
+   "target": "f25225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Shadows on the cave wall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Shadows on the cave wall”, “Die Schatten an der Höhlenwand”, “тени на стене пещеры”) on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:07:17Z",
+   "target": "f25225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "To them, I said, the truth would be literally nothing but the shadows of the images.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:07:20Z",
+   "target": "f25225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The shadows and sounds are the prisoners' sole reality.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:00.898Z",
+   "target": "f25225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "To them, I said, the truth would be literally nothing but the shadows of the images.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:00.898Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:00.898Z",
+   "target": "f25225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The shadows and sounds are the prisoners' sole reality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:00.898Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  }
+ ]
+}

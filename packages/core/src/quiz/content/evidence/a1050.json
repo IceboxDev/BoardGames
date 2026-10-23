@@ -1,0 +1,249 @@
+{
+ "article": "a1050",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Asculum",
+   "title": "Battle of Asculum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:30.564Z",
+   "snapshot": "a0cc7bd3d699f78f9ec0da066514963043f6f15a0316f4da01b96b0027b10d0c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Crossing_the_Rubicon",
+   "title": "Crossing the Rubicon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:31.588Z",
+   "snapshot": "f18bea8f74df175b801bed57f11de567778f950d14c90fdd9c4b80f6575cd944"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Death_of_Alexander_the_Great",
+   "title": "Death of Alexander the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:32.558Z",
+   "snapshot": "e5519966693c965c2af5c81d59ec6cbee9fb7249fc1ab9b4a8ffe26482ba3f55"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cato_the_Elder",
+   "title": "Cato the Elder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:33.657Z",
+   "snapshot": "9d4c020a8f45e88c9953dd8bc6e22342bc52da85b8405ae5c830252f9b4fe7c3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Molon_labe",
+   "title": "Molon labe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:34.569Z",
+   "snapshot": "e2f1326765e706d08592823d476908da9e5bf6e46823deb7b1b91444f376b2c7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Carthago_delenda_est",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:35.602Z",
+   "snapshot": "eab43fe59b8f133bfe130ac768a29287c760c0bfc834198174f1e3ecbf9434b9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pyrrhus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Julius Caesar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexander the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cato the Elder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leonidas I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:25.146Z",
+   "target": "f05246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Asculum (modern Ascoli Satriano) in 279 BC, and was thought to have lasted either one or two days, between the Roman Republic under the command of the consuls Publius Decius Mus (who by some accounts died before the battle) and Publius Sulpicius Saverrio, and the forces of King Pyrrhus of Epirus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pyrrhus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:25.146Z",
+   "target": "f05247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Its meaning comes from the crossing of the Rubicon river by Julius Caesar in January 49 BC at the head of the 13th Legion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Julius Caesar” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:25.146Z",
+   "target": "f05248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "According to a Babylonian astronomical diary, Alexander the Great died in the palace of Nebuchadnezzar II in Babylon between the evening of 10 June and the evening of 11 June 323 BCE, at the age of 32.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander the Great” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:25.146Z",
+   "target": "f05249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cato the Elder was born in the municipal town of Tusculum, like some generations of his ancestors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cato the Elder” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:25.146Z",
+   "target": "f05250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"come and take [them]\") is a Greek phrase attributed to Leonidas I of Sparta during his written correspondence with Xerxes I of Persia on the eve of the Battle of Thermopylae in 480 BC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonidas I” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-016",
+ "image": "IMG20261022153302.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Archaeology",
+   "cardText": "[Archaeology] The Egyptian pyramids were most likely built by:\nA. Slaves\nB. Paid laborers\nC. Greeks\nAnswer: B.",
+   "de": "Wer hat laut den bei Gizeh gefundenen Arbeitergräbern die ägyptischen Pyramiden höchstwahrscheinlich gebaut – und nicht Sklaven, wie lange angenommen?",
+   "en": "According to the workers' tombs found beside them at Giza, who most likely built the Egyptian pyramids – rather than slaves, as was long believed?",
+   "reworked": true,
+   "answerDe": "Bezahlte Arbeiter",
+   "answerEn": "Paid laborers",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1990",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tombs of the pyramid builders are discovered beside the pyramids at Giza",
+    "labelDe": "Die Gräber der Pyramidenarbeiter werden neben den Pyramiden von Gizeh entdeckt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
+    "title": "Giza pyramid complex",
+    "lang": "en"
+   },
+   "notes": "Card correct: the workers' tombs support paid laborers, not slaves; the slave myth goes back to Herodotus.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 2,
+   "discipline": "Medical Sciences",
+   "cardText": "[Medical Sciences] What is melanin responsible for?\nA. Sleep\nB. Skin pigmentation\nC. Wound healing\nAnswer: B. Melanin is the natural pigment that gives our hair, skin, and eyes their color. It is also known to provide some protection against the effects of UV radiation. Generally, darker-skinned individuals have melanin that is more spread out in the skin, while lighter-skinned individuals have more clumped melanin.",
+   "de": "Welches natürliche Pigment verleiht menschlichem Haar, Haut und Augen ihre Farbe und schützt etwas vor UV-Strahlung?",
+   "en": "Which natural pigment gives human hair, skin and eyes their colour and offers some protection against UV radiation?",
+   "reworked": true,
+   "answerDe": "Melanin",
+   "answerEn": "Melanin",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1840",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Jöns Jacob Berzelius applies the name melanin to a dark pigment from the eye",
+    "labelDe": "Jöns Jacob Berzelius belegt ein dunkles Pigment aus dem Auge mit dem Namen Melanin"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Melanin",
+    "title": "Melanin",
+    "lang": "en"
+   },
+   "notes": "Card correct. Timeline (Berzelius 1840) from web search, not the source page; Merriam-Webster traces the word to Bartolomeo Bizio (1825), hence approx. Don't confuse with melatonin (sleep).",
+   "domain": "science",
+   "sub": "biology"
+  }
+ ]
+}

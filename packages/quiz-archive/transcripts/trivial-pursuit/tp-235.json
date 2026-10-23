@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-235",
+ "image": "IMG20261007182555.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welchem Land ist der 1. Mai kein gesetzlicher Feiertag: Finnland, Großbritannien oder Portugal?",
+   "de": "Auf welchen Tag fällt in Großbritannien der Feiertag „Early May Bank Holiday“, der dort statt des 1. Mai begangen wird?",
+   "en": "On which day does the Early May Bank Holiday, observed in Britain instead of 1 May, fall?",
+   "reworked": true,
+   "answerDe": "Erster Montag im Mai",
+   "answerEn": "First Monday in May",
+   "timeline": {
+    "kind": "event",
+    "start": "1978",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Early May bank holiday (first Monday in May) is introduced throughout the United Kingdom",
+    "labelDe": "Der Early May Bank Holiday (erster Montag im Mai) wird im ganzen Vereinigten Königreich eingeführt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom",
+    "title": "Public holidays in the United Kingdom",
+    "lang": "en"
+   },
+   "notes": "The card's answer is Great Britain: 1 May itself is no public holiday there; the bank holiday is the first Monday in May (since 1978; moved to 8 May in 1995 and 2020 for VE Day anniversaries).",
+   "domain": "everyday",
+   "sub": "holidays"
+  },
+  {
+   "category": 2,
+   "cardDe": "In der wievielten Staffel von South Park beginnen Cartman, Kenny, Stan und Kyle mit der vierten Klasse?",
+   "de": "In der wievielten Staffel von South Park beginnen Cartman, Kenny, Stan und Kyle mit der vierten Klasse?",
+   "en": "In which season of South Park do Cartman, Kenny, Stan and Kyle start fourth grade?",
+   "reworked": false,
+   "answerDe": "4. Staffel",
+   "answerEn": "Season 4",
+   "timeline": {
+    "kind": "event",
+    "start": "2000-11-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "South Park episode 'Fourth Grade' (season 4, episode 11) first airs",
+    "labelDe": "Die South-Park-Folge „Fourth Grade“ (Staffel 4, Folge 11) wird erstmals ausgestrahlt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fourth_Grade_(South_Park)",
+    "title": "Fourth Grade (South Park)",
+    "lang": "en"
+   },
+   "notes": "Episode 11 of season 4, 'Fourth Grade'.",
+   "domain": "film-media",
+   "sub": "animation"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt das Land, in dem der sogenannte „Arabische Frühling“ im Jahr 2010 startete?",
+   "de": "Wie heißt das Land, in dem der sogenannte „Arabische Frühling“ im Jahr 2010 startete?",
+   "en": "What is the name of the country where the so-called 'Arab Spring' began in 2010?",
+   "reworked": false,
+   "answerDe": "Tunesien",
+   "answerEn": "Tunisia",
+   "timeline": {
+    "kind": "event",
+    "start": "2010-12-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Tunisian Revolution begins, setting off the Arab Spring",
+    "labelDe": "Die Revolution in Tunesien beginnt und löst den Arabischen Frühling aus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Revolution_in_Tunesien_2010/2011",
+    "title": "Revolution in Tunesien 2010/2011",
+    "lang": "de"
+   },
+   "notes": "Triggered by the self-immolation of Mohamed Bouazizi in Sidi Bouzid.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Autor J. M. Barry erfand den Mädchennamen Wendy für sein Kinderbuch Peter Pan. Richtig oder falsch?",
+   "de": "Welches Mädchen, das ihn „my fwendy“ nannte, inspirierte Autor J. M. Barrie zum Namen Wendy in Peter Pan?",
+   "en": "Which girl, who called him 'my fwendy', inspired author J. M. Barrie to the name Wendy in Peter Pan?",
+   "reworked": true,
+   "answerDe": "Margaret Henley",
+   "answerEn": "Margaret Henley",
+   "timeline": {
+    "kind": "creation",
+    "start": "1904",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "J. M. Barrie's play Peter Pan, with the character Wendy Darling, premieres",
+    "labelDe": "J. M. Barries Theaterstück Peter Pan mit der Figur Wendy Darling wird uraufgeführt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Wendy",
+    "title": "Wendy",
+    "lang": "en"
+   },
+   "notes": "Card misspells Barrie as 'Barry' (kept verbatim in cardDe). The statement is commonly held true but disputed: Wendy is recorded earlier (e.g. a 17th-century Captain Wendy Oxford); Barrie made it popular as a girl's name. Margaret was the daughter of poet W. E. Henley.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Weißer Spargel ist mit grünem Spargel identisch, er war nur nicht dem Sonnenlicht ausgesetzt. Richtig oder falsch?",
+   "de": "Wann wird weißer Spargel gestochen, damit er – anders als grüner Spargel – weiß bleibt?",
+   "en": "When is white asparagus harvested so that, unlike green asparagus, it stays white?",
+   "reworked": true,
+   "answerDe": "Bevor er die Erdoberfläche erreicht",
+   "answerEn": "Before it reaches the soil surface",
+   "timeline": {
+    "kind": "era",
+    "start": "1501",
+    "end": "1600",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Asparagus cultivation in Germany is documented again, as an expensive delicacy",
+    "labelDe": "Der Spargelanbau ist in Deutschland wieder belegt, als teure Delikatesse"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gem%C3%BCsespargel",
+    "title": "Gemüsespargel",
+    "lang": "de"
+   },
+   "notes": "Card statement is essentially true: the colour comes largely from the harvest method; white shoots are cut underground before light turns them green (though growers also prefer certain varieties for white asparagus).",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches Power-Training der 1990er-Jahre bestand aus einfachen Übungen, wie das Hüpfen oder Marschieren über eine niedrige Plattform?",
+   "de": "Welches Power-Training der 1990er-Jahre bestand aus einfachen Übungen, wie das Hüpfen oder Marschieren über eine niedrige Plattform?",
+   "en": "Which 1990s power workout consisted of simple exercises such as hopping or marching over a low platform?",
+   "reworked": false,
+   "answerDe": "Step-Aerobic",
+   "answerEn": "Step aerobics",
+   "timeline": {
+    "kind": "event",
+    "start": "1990",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Step aerobics booms in US gyms, promoted by Reebok and Gin Miller",
+    "labelDe": "Step-Aerobic erlebt in US-Fitnessstudios einen Boom, gefördert von Reebok und Gin Miller"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Step-Aerobic",
+    "title": "Step-Aerobic",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "everyday",
+   "sub": "leisure"
+  }
+ ]
+}

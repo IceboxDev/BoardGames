@@ -1,0 +1,419 @@
+{
+ "article": "a0290",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/a.m.",
+   "title": "a.m. – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/p.m.",
+   "title": "p.m. – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anno_Domini",
+   "title": "Anno Domini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:09.133Z",
+   "snapshot": "4396b42a53ce6ea237bc04df6e58425047e2329e3c45a2b4f4b229a7aac22890"
+  },
+  "s4": {
+   "url": "https://en.wiktionary.org/wiki/i.e.",
+   "title": "i.e. – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:06.680Z",
+   "snapshot": "02fb4fa56ef835470ed1c47dadf86af5fdfeabefac49ac61e67a0b398fdb60fb"
+  },
+  "s5": {
+   "url": "https://en.wiktionary.org/wiki/e.g.",
+   "title": "e.g. – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:07.519Z",
+   "snapshot": "0fd0224604c9795c6906b9e7dd7648a0aca023659f09520b6ba6c5512085eb91"
+  },
+  "s6": {
+   "url": "https://ahdictionary.com/word/search.html?q=ante+meridiem",
+   "title": "ante meridiem – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary (HarperCollins)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:05.307Z",
+   "snapshot": "49e1898b1355ea7be92fbb834fc44390c0ea965ea305968b73f94e1a783d8cbf"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/12-hour_clock",
+   "title": "12-hour clock",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:07.482Z",
+   "snapshot": "d8b579865a270c3ef0400c547d508d8ba44db3902f5095722510118ce53c4b56"
+  },
+  "s8": {
+   "url": "https://ahdictionary.com/word/search.html?q=post+meridiem",
+   "title": "post meridiem – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary (HarperCollins)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:06.061Z",
+   "snapshot": "e870040b61c15680d1367fcd4a1847bbe1442e44323d1b6d13556f807329b31e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "before noon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "after noon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "in the year of the Lord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "that is",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "for example",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.864Z",
+   "target": "f01448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anno Domini is Medieval Latin for \"in the year of the Lord\", often read as \"our Lord\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “in the year of the Lord” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.864Z",
+   "target": "f01449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "e., an abbreviation of id est (“that is”).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “that is” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.864Z",
+   "target": "f01450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An initialism used to introduce an illustrative example or short list of examples: for the sake of an example; for example.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.864Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “for example” is on the snapshot of s5"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:46:25Z",
+   "target": "f01446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[Latin ante, before + merīdiem, accusative of merīdiēs, noon.]",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:46:30Z",
+   "target": "f01446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The terms \"a.m.\" and \"p.m.\" are abbreviations of the Latin ante meridiem (before midday) and post meridiem (after midday).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:46:35Z",
+   "target": "f01447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "[Latin post merīdiem : post, after + merīdiem, accusative of merīdiēs, midday.]",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:46:39Z",
+   "target": "f01447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The terms \"a.m.\" and \"p.m.\" are abbreviations of the Latin ante meridiem (before midday) and post meridiem (after midday).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:44.942Z",
+   "target": "f01446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[Latin ante, before + merīdiem, accusative of merīdiēs, noon.]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:44.942Z",
+   "target": "f01446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The terms \"a.m.\" and \"p.m.\" are abbreviations of the Latin ante meridiem (before midday) and post meridiem (after midday).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:44.942Z",
+   "target": "f01447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "[Latin post merīdiem : post, after + merīdiem, accusative of merīdiēs, midday.]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:44.942Z",
+   "target": "f01447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The terms \"a.m.\" and \"p.m.\" are abbreviations of the Latin ante meridiem (before midday) and post meridiem (after midday).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:44.942Z",
+   "target": "f01446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Before noon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “before noon” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:44.942Z",
+   "target": "f01447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "After noon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:44.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “after noon” is on the snapshot of s8"
+  }
+ ]
+}

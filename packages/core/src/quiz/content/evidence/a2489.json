@@ -1,0 +1,448 @@
+{
+ "article": "a2489",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Paint_Your_Wagon_(film)",
+   "title": "Paint Your Wagon (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:12.669Z",
+   "snapshot": "0cb18e35489550916d77a1904799cc4a5b33ebcf64907a709fb118644692bf04"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Into_the_Woods_(Film)",
+   "title": "Into the Woods (Film)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:10.110Z",
+   "snapshot": "e52c3d016e508069dec1734a52ed87e1adb25258e5af531526ad142c61fab1f0"
+  },
+  "s3": {
+   "url": "https://fr.wikipedia.org/wiki/Les_Mis%C3%A9rables_(com%C3%A9die_musicale)",
+   "title": "Les Misérables (comédie musicale) – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T06:02:10.549Z",
+   "snapshot": "de40ae21670b634bbed941a9f5ec914fc9dbda55fcce419d72fbb3adba2068fa"
+  },
+  "s4": {
+   "url": "https://www.broadwayworld.com/miami/article/LES-MISERABLES-Runs-310-45-at-Maltz-Jupiter-Theatre-20150309",
+   "title": "LES MISERABLES Runs 3/10-4/5 at Maltz Jupiter Theatre",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:10.748Z",
+   "snapshot": "a12ad0ba6afa5d121382714f2683ec054ee3bbba7839d880c7e11fbf93d76c2a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Sound_of_Music_(film)",
+   "title": "The Sound of Music (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:13.767Z",
+   "snapshot": "2c52c7840ecf72782edc7e75385374afc1e3c3488593efb100b47f54ce860cd4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Chicago_(2002_film)",
+   "title": "Chicago (2002 film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:14.697Z",
+   "snapshot": "f63f5fda406030908d8edfcfc3e673625ec1027f9cd197c38b8ed02e8f7a9d6a"
+  },
+  "s7": {
+   "url": "http://web.archive.org/web/20160531233614/http://www.lesmis.com/uk/",
+   "title": "Les Misérables – Official London site (archived 31 May 2016)",
+   "publisher": "Cameron Mackintosh Ltd (lesmis.com)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:00:19Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables_(musical)",
+   "title": "Les Misérables (musical)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:00:20Z"
+  },
+  "s9": {
+   "url": "https://www.lesmis.com/",
+   "title": "Les Misérables – Official site",
+   "publisher": "Cameron Mackintosh Ltd (lesmis.com)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:38.243Z",
+   "snapshot": "8f6b7ae36ffbf10bc27490aab3e0ca7fa5179b34235cd98f2a285d47ea600988"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paint Your Wagon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Into the Woods",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-121"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Misérables",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Les Misérables",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 16; transcript tp-263"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Sound of Music",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chicago",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.467Z",
+   "target": "f13192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paint Your Wagon is a 1969 American Western musical film directed by Joshua Logan, adapted by Paddy Chayefsky and screenplay by producer Alan Jay Lerner from the 1951 Lerner and Loewe stage musical.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paint Your Wagon” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.467Z",
+   "target": "f13193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Into the Woods ist ein US-amerikanischer Märchenfilm von Rob Marshall aus dem Jahr 2014.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Into the Woods” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.467Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Misérables est une comédie musicale adaptée du roman éponyme de Victor Hugo par Claude-Michel Schönberg (musique) et Alain Boublil et Jean-Marc Natel (paroles originales en français), et Herbert Kretzmer (paroles en anglais).",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Misérables” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.467Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "LES MISERABLES Runs Now thru 4/5 at Maltz Jupiter Theatre",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Misérables” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:28.467Z",
+   "target": "f13195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Sound of Music  is a 1965 American musical drama film produced and directed by Robert Wise from a screenplay written by Ernest Lehman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sound of Music” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:28.467Z",
+   "target": "f13196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chicago is a 2002 musical black comedy crime film based on the 1975 stage musical, which in turn originated in the 1926 play.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chicago” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:00:19Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seen by more than 70 million people in 44 countries and in 22 languages around the globe, it is still breaking box-office records everywhere.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer confirmed; the official 2016 figure is 44 countries, the card's '42 countries / 76 awards' could not be matched — wording reworded to the official figures"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:00:20Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The show has been produced in at least 42 countries and translated into at least 23 languages",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:00:22Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Les Misérables is now playing in London and Madrid",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "current site: 150m viewers in 55 countries and 22 languages"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:00:32Z",
+   "target": "f13194",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seen by more than 70 million people in 44 countries and in 22 languages around the globe",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "card premise '42 countries and 76 international awards' (as of 2016) not matched: the producers' own 2016 site says 44 countries; no source for 76 awards found; wording reworded"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:15:40Z",
+   "target": "f13194",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seen by more than 70 million people in 44 countries and in 22 languages around the globe",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "reworded premise (70 million, 44 countries, 22 languages, by 2016) matches the producers' own May 2016 site"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:10.819Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Les Misérables is now playing in London and Madrid",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:10.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:10.819Z",
+   "target": "f13194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Les Misérables | The Official Global Website",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:10.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Les Misérables” is on the snapshot of s9"
+  }
+ ]
+}

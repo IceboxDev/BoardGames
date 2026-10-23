@@ -1,0 +1,444 @@
+{
+ "article": "a2651",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Omega_(navigation_system)",
+   "title": "Omega (navigation system)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:09.192Z",
+   "snapshot": "e2e5d69f4de7eb909443dd6ba9a63946ab93407742c3a2f12180ef89519e93c1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/LORAN",
+   "title": "LORAN – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:10.106Z",
+   "snapshot": "a1db98bf956fd5f324574f9c4d3aaa17b11e66d0d917dd33ffe2dde79727b531"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+   "title": "Global Positioning System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:08.364Z",
+   "snapshot": "942396bc54578cac7e977ee832ba16b7d34fdb7b1b051c95dfc303a746dc3390"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/GLONASS",
+   "title": "GLONASS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:11.214Z",
+   "snapshot": "7c22aac2bc05d5183291e52f462162343b84dbdce8b0330d994d7969b6024954"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Galileo_(satellite_navigation)",
+   "title": "Galileo (satellite navigation) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:12.392Z",
+   "snapshot": "175bda2cf788436096a7b59b02d54ad511d657c775b64e9e9071f88ca492cf60"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Transit_(satellite)",
+   "title": "Transit (satellite) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:16.566Z",
+   "snapshot": "0f27f73b153ed25c49f37ce40946776dba18e2d366ef0e8f7190d1ae23831dd9"
+  },
+  "s7": {
+   "url": "http://www.jproc.ca/hyperbolic/omega.html",
+   "title": "OMEGA",
+   "publisher": "Jerry Proc (Radio Navigation Systems history site)",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:17.607Z",
+   "snapshot": "2ff6c2aec7e6b0b71673263cd1e8f4e3ceea431388f2787ab2b2ac9b2a5ffe1b"
+  },
+  "s8": {
+   "url": "https://seefunknetz.de/omega.htm",
+   "title": "Omega",
+   "publisher": "Seefunknetz.de",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:16.738Z",
+   "snapshot": "4d4aa3e10c2c90f5eebcc9d702765489bc747d1aa3808c9764ef73892ffab345"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Omega",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "LORAN",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "GPS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "GLONASS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Galileo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:52.218Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "OMEGA was the first global-range radio navigation system, operated by the United States in cooperation with six partner nations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Omega” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:52.218Z",
+   "target": "f14354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "LORAN (Long Range Navigation) was a hyperbolic radio navigation system developed in the United States during World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LORAN” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:52.218Z",
+   "target": "f14355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Global Positioning System (GPS) is a satellite-based hyperbolic navigation system owned by the United States Space Force and operated by Mission Delta 31.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “GPS” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:52.218Z",
+   "target": "f14356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "System (Russian: Глобальная навигационная спутниковая система, romanized: Global'naya Navigatsionnaya Sputnikovaya Sistema), usually referred to by the acronym GLONASS (ГЛОНАСС, IPA: [ɡɫɐˈnas]), is a Russian satellite navigation system operating as part of a radionavigation-satellite service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “GLONASS” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:52.218Z",
+   "target": "f14357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Galileo (satellite navigation system)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galileo” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:37:21Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Transit provided continuous navigation satellite service from 1964, initially for Polaris submarines and later for civilian use as well.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Contests the unqualified 'first global radio navigation system': the US Navy's Transit satellite system gave worldwide radio fixes from 1964, before Omega (about 1971). Wording narrowed to the first worldwide ground-based (terrestrial) system; Transit named in the notes."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:37:23Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "OMEGA was the first global-range radio navigation system, operated by the United States in cooperation with six partner nations.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Holds for ground-based (terrestrial) radio navigation, which the narrowed wording asks for."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:37:25Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The OMEGA radionavigation system, developed by the United States Navy for military aviation users, was approved for full implementation in 1968 and promised a true worldwide oceanic coverage capability",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:37:27Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Omega, ursprünglich fuer militärische Zwecke entwickelt, hat sich als weltweit erreichbares, witterungsunabhängiges Funknavigationssystem",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: Omega was the last newly introduced terrestrial radio navigation method, eight stations worldwide."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:37.978Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Transit provided continuous navigation satellite service from 1964, initially for Polaris submarines and later for civilian use as well.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:37.978Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The OMEGA radionavigation system, developed by the United States Navy for military aviation users, was approved for full implementation in 1968 and promised a true worldwide oceanic coverage capability",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:37.978Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Omega, ursprünglich fuer militärische Zwecke entwickelt, hat sich als weltweit erreichbares, witterungsunabhängiges Funknavigationssystem",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:37.978Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The OMEGA radionavigation system, developed by the United States Navy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Omega” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:37.978Z",
+   "target": "f14353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "entwickelten die USA das Omega Navigationsverfahren und betrieben es in",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:37.978Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Omega” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "id": "a1584",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "From Source Code to Running Program",
+ "titleDe": "Vom Quellcode zum laufenden Programm",
+ "titleRu": "От исходного кода к работающей программе",
+ "bodyEn": "A computer's processor understands only machine code, long sequences of binary instructions that no human wants to write by hand. Programming languages exist so that people can write \"print(total)\" instead, and between that line and the electrons in the chip lies a chain of processes, each with its own name.\n\nThe central one is compiling. A compiler reads the complete source code of a program, written in a language such as C, C++, Rust or Go, checks it, and translates it into machine code for a particular processor and operating system. The result is stored as a file and can be run any number of times without the compiler being present. Grace Hopper built the first compiler, A-0, in 1952, and FORTRAN (1957) was the first widely used compiled language.\n\nCompiling is not the only way to execute a program. Languages such as Python, JavaScript and the classic BASIC are usually run by interpreting: an interpreter reads the source code instruction by instruction and carries out each one immediately, without producing a separate executable. Interpreted programs are slower, because the translation is repeated every time the program runs, but they are easier to test and to move between machines. An interpreter also launched the home-computer age: Altair BASIC, the interpreter with which Bill Gates and Paul Allen started Microsoft, was released in version 2.0 on 1 July 1975. The first interpreter for a high-level language was written for Lisp, which John McCarthy began developing in 1958: Steve Russell turned its eval function into a working interpreter on an IBM 704. Modern engines blur the line with \"just-in-time\" compilation, which translates the hot parts of an interpreted program into machine code while it runs.\n\nInside a compiler the first real work is parsing. A lexer first cuts the text into tokens (words, numbers, operators), and the parser then arranges these tokens into a tree according to the grammar of the language, so that \"a = b + c * 2\" is understood as an assignment whose right-hand side is a sum with a product inside it. It is the parser that reports a \"syntax error\" when a bracket is missing. Donald Knuth's LR parsing, published in 1965, showed how such grammars can be analysed efficiently in linear time.\n\nA large program is compiled in pieces, one object file per source file, and these pieces refer to each other and to libraries such as the standard input-output routines. Linking is the process that joins the object files and libraries into a single executable, resolving every reference to a function or variable defined elsewhere. The \"undefined reference\" message that greets beginners in C comes from the linker, not from the compiler. The idea goes back to the EDSAC computer, whose programs were a main program plus subroutines copied from a library on punched tape, a method Wilkes, Wheeler and Gill described in 1951.\n\nNone of this guarantees that the program does what its author intended. Debugging, the process of tracking down and removing errors, often takes up a large share of a programmer's time. The word is older than the computer, but it was popularised in 1947 when Grace Hopper's team at Harvard found a moth in a relay of the Mark II and taped it into the logbook as the \"first actual case of bug being found\".\n\n| Process | What it does |\n|---|---|\n| parsing | turns source text into a syntax tree |\n| compiling | translates source code into machine code |\n| linking | joins object files and libraries into one executable |\n| interpreting | executes source code instruction by instruction |\n| debugging | finds and removes errors |",
+ "bodyDe": "Der Prozessor eines Computers versteht nur Maschinencode, lange Folgen binärer Befehle, die kein Mensch von Hand schreiben möchte. Programmiersprachen gibt es, damit Menschen stattdessen „print(total)“ schreiben können, und zwischen dieser Zeile und den Elektronen im Chip liegt eine Kette von Vorgängen, jeder mit eigenem Namen.\n\nDer zentrale ist das Kompilieren. Ein Compiler liest den vollständigen Quellcode eines Programms, geschrieben in einer Sprache wie C, C++, Rust oder Go, prüft ihn und übersetzt ihn in Maschinencode für einen bestimmten Prozessor und ein bestimmtes Betriebssystem. Das Ergebnis wird als Datei gespeichert und kann beliebig oft ausgeführt werden, ohne dass der Compiler vorhanden sein muss. Grace Hopper baute 1952 den ersten Compiler, A-0, und FORTRAN (1957) war die erste weit verbreitete kompilierte Sprache.\n\nKompilieren ist nicht der einzige Weg, ein Programm auszuführen. Sprachen wie Python, JavaScript und das klassische BASIC werden gewöhnlich durch Interpretieren ausgeführt: Ein Interpreter liest den Quellcode Anweisung für Anweisung und führt jede sofort aus, ohne eine eigene ausführbare Datei zu erzeugen. Interpretierte Programme sind langsamer, weil die Übersetzung bei jedem Lauf wiederholt wird, aber sie sind leichter zu testen und zwischen Rechnern zu übertragen. Ein Interpreter eröffnete auch das Heimcomputer-Zeitalter: Altair BASIC, mit dem Bill Gates und Paul Allen Microsoft begründeten, erschien am 1. Juli 1975 in der Version 2.0. Der erste Interpreter für eine Hochsprache entstand für Lisp, das John McCarthy ab 1958 entwickelte: Steve Russell machte aus dessen eval-Funktion einen lauffähigen Interpreter auf einer IBM 704. Moderne Laufzeitumgebungen verwischen die Grenze mit der „Just-in-time“-Kompilierung, die die heißen Teile eines interpretierten Programms während des Laufs in Maschinencode übersetzt.\n\nInnerhalb eines Compilers ist die erste eigentliche Arbeit das Parsen. Ein Lexer zerlegt den Text zunächst in Token (Wörter, Zahlen, Operatoren), und der Parser ordnet diese Token dann nach der Grammatik der Sprache zu einem Baum, sodass „a = b + c * 2“ als Zuweisung verstanden wird, deren rechte Seite eine Summe mit einem Produkt darin ist. Es ist der Parser, der einen „Syntaxfehler“ meldet, wenn eine Klammer fehlt. Donald Knuths 1965 veröffentlichtes LR-Parsing zeigte, wie sich solche Grammatiken effizient in linearer Zeit analysieren lassen.\n\nEin großes Programm wird in Stücken kompiliert, eine Objektdatei pro Quelldatei, und diese Stücke verweisen aufeinander und auf Bibliotheken wie die Standard-Ein-/Ausgaberoutinen. Das Linken ist der Vorgang, der die Objektdateien und Bibliotheken zu einer einzigen ausführbaren Datei zusammenfügt und dabei jeden Verweis auf eine anderswo definierte Funktion oder Variable auflöst. Die Meldung „undefined reference“, die Anfänger in C begrüßt, stammt vom Linker, nicht vom Compiler. Die Idee geht auf den Rechner EDSAC zurück, dessen Programme aus einem Hauptprogramm und Unterprogrammen bestanden, die aus einer Lochstreifen-Bibliothek kopiert wurden – ein Verfahren, das Wilkes, Wheeler und Gill 1951 beschrieben.\n\nNichts davon garantiert, dass das Programm tut, was sein Autor beabsichtigt hat. Das Debugging, das Aufspüren und Beseitigen von Fehlern, nimmt oft einen großen Teil der Arbeitszeit eines Programmierers ein. Das Wort ist älter als der Computer, wurde aber 1947 populär, als Grace Hoppers Team in Harvard eine Motte in einem Relais des Mark II fand und sie mit dem Vermerk „erster tatsächlicher Fall eines gefundenen Bugs“ ins Logbuch klebte.\n\n| Vorgang | Was er tut |\n|---|---|\n| Parsen | verwandelt Quelltext in einen Syntaxbaum |\n| Kompilieren | übersetzt Quellcode in Maschinencode |\n| Linken | fügt Objektdateien und Bibliotheken zu einer ausführbaren Datei zusammen |\n| Interpretieren | führt Quellcode Anweisung für Anweisung aus |\n| Debugging | findet und beseitigt Fehler |",
+ "bodyRu": "Процессор компьютера понимает только машинный код — длинные последовательности двоичных команд, которые никто не хочет писать вручную. Языки программирования существуют для того, чтобы человек мог написать вместо этого «print(total)», а между этой строкой и электронами в микросхеме лежит цепочка процессов, у каждого из которых своё название.\n\nГлавный из них — компиляция. Компилятор читает весь исходный код программы, написанный на таком языке, как C, C++, Rust или Go, проверяет его и переводит в машинный код для определённого процессора и операционной системы. Результат сохраняется в файле и может запускаться сколько угодно раз без участия компилятора. Грейс Хоппер создала первый компилятор, A-0, в 1952 году, а FORTRAN (1957) стал первым широко распространённым компилируемым языком.\n\nКомпиляция — не единственный способ выполнить программу. Для программ на таких языках, как Python, JavaScript и классический BASIC, обычно используется другой способ — интерпретация: интерпретатор читает исходный код команду за командой и сразу же выполняет каждую, не создавая отдельного исполняемого файла. Интерпретируемые программы работают медленнее, потому что перевод повторяется при каждом запуске, зато их легче тестировать и переносить с машины на машину. Интерпретатор открыл и эпоху домашних компьютеров: Altair BASIC, интерпретатор, с которого Билл Гейтс и Пол Аллен начали Microsoft, вышел в версии 2.0 1 июля 1975 года. Первый интерпретатор языка высокого уровня был написан для Лиспа, который Джон Маккарти начал разрабатывать в 1958 году: Стив Рассел превратил его функцию eval в работающий интерпретатор на IBM 704. Современные среды выполнения стирают границу с помощью JIT-компиляции («точно в срок»), которая во время работы переводит в машинный код самые нагруженные части интерпретируемой программы.\n\nВнутри компилятора первая настоящая работа — синтаксический анализ, или парсинг. Сначала лексер разрезает текст на токены (слова, числа, операторы), а затем парсер выстраивает эти токены в дерево по грамматике языка, так что «a = b + c * 2» понимается как присваивание, правая часть которого — сумма с произведением внутри. Именно парсер сообщает о «синтаксической ошибке», когда не хватает скобки. LR-анализ Дональда Кнута, опубликованный в 1965 году, показал, как эффективно разбирать такие грамматики за линейное время.\n\nБольшая программа компилируется по частям — по одному объектному файлу на каждый исходный файл, и эти части ссылаются друг на друга и на библиотеки, например на стандартные процедуры ввода-вывода. Компоновка, или линковка, — это процесс, который объединяет объектные файлы и библиотеки в один исполняемый файл и разрешает каждую ссылку на функцию или переменную, определённую в другом месте. Сообщение «undefined reference», встречающее новичков в C, выдаёт компоновщик, а не компилятор. Идея восходит к компьютеру EDSAC, программы которого состояли из основной программы и подпрограмм, копируемых из библиотеки на перфоленте, — этот метод Уилкс, Уилер и Гилл описали в 1951 году.\n\nНичто из этого не гарантирует, что программа делает то, что задумал её автор. Отладка — процесс поиска и устранения ошибок — нередко отнимает у программиста значительную часть рабочего времени. Английское слово debugging старше компьютера, но популярным оно стало в 1947 году, когда команда Грейс Хоппер в Гарварде нашла мотылька в реле компьютера Mark II и вклеила его в журнал с пометкой «первый реальный случай обнаружения жучка».\n\n| Процесс | Что он делает |\n|---|---|\n| парсинг | превращает исходный текст в синтаксическое дерево |\n| компиляция | переводит исходный код в машинный код |\n| компоновка | объединяет объектные файлы и библиотеки в один исполняемый файл |\n| интерпретация | выполняет исходный код команду за командой |\n| отладка | находит и устраняет ошибки |",
+ "notesEn": "Also accepted: „compilation“.",
+ "notesDe": "Ebenfalls richtig: „Kompilierung“ / „Kompilation“.",
+ "notesRu": "Также принимается: «трансляция».",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/First_Computer_Bug%2C_1947.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1945.jpg",
+   "width": 2889,
+   "height": 2285,
+   "alt": {
+    "en": "Logbook page with a moth taped to it",
+    "de": "Logbuchseite mit einer eingeklebten Motte",
+    "ru": "Страница журнала с вклеенным мотыльком"
+   },
+   "caption": {
+    "en": "The Harvard Mark II logbook of 9 September 1947 with the moth found in a relay – „first actual case of bug being found“, the story that popularised the word debugging.",
+    "de": "Das Logbuch des Harvard Mark II vom 9. September 1947 mit der in einem Relais gefundenen Motte – „first actual case of bug being found“, die Geschichte, die das Wort Debugging populär machte.",
+    "ru": "Журнал Harvard Mark II от 9 сентября 1947 года с мотыльком, найденным в реле, — «первый реальный случай обнаружения жучка»; эта история сделала популярным слово debugging (отладка)."
+   },
+   "credit": "U.S. Naval History and Heritage Command"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Commodore_Grace_M._Hopper%2C_USN_%28covered%29_head_and_shoulders_crop.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Grace_Hopper",
+   "width": 1542,
+   "height": 2051,
+   "alt": {
+    "en": "Portrait of Grace Hopper in US Navy uniform",
+    "de": "Porträt von Grace Hopper in Uniform der US Navy",
+    "ru": "Портрет Грейс Хоппер в форме ВМС США"
+   },
+   "caption": {
+    "en": "Grace Hopper, who built the first compiler, A-0, in 1952 and whose team logged the famous moth in the Mark II.",
+    "de": "Grace Hopper, die 1952 den ersten Compiler A-0 baute und deren Team die berühmte Motte im Mark II ins Logbuch klebte.",
+    "ru": "Грейс Хоппер, создавшая в 1952 году первый компилятор A-0; её команда вклеила в журнал знаменитого мотылька из Mark II."
+   },
+   "credit": "U.S. Navy / Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f07916",
+   "answerEn": "compiling",
+   "answerDe": "Kompilieren",
+   "answerRu": "компиляция",
+   "spans": {
+    "en": [
+     330,
+     9
+    ],
+    "de": [
+     352,
+     11
+    ],
+    "ru": [
+     362,
+     10
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1952",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Grace Hopper completes A-0, the first compiler",
+    "labelDe": "Grace Hopper stellt A-0 fertig, den ersten Compiler",
+    "labelRu": "Грейс Хоппер завершает A-0 — первый компилятор"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/A-0_System",
+    "title": "A-0 System – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07916",
+     "en": "What is the process of translating from a programming language into a form executable by the computer called?",
+     "de": "Wie wird der Vorgang des Übersetzens aus einer Programmiersprache in eine für den Computer ausführbare Form genannt?",
+     "ru": "Как называется процесс перевода с языка программирования в форму, которую может выполнить компьютер?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c132",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f07917",
+   "answerEn": "interpreting",
+   "answerDe": "Interpretieren",
+   "answerRu": "интерпретация",
+   "spans": {
+    "en": [
+     893,
+     12
+    ],
+    "de": [
+     988,
+     14
+    ],
+    "ru": [
+     963,
+     13
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1975-07-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Altair BASIC 2.0, Gates and Allen's interpreter for the first personal computer, is released",
+    "labelDe": "Altair BASIC 2.0, der Interpreter von Gates und Allen für den ersten Personal Computer, erscheint",
+    "labelRu": "Выходит Altair BASIC 2.0 — интерпретатор Гейтса и Аллена для первого персонального компьютера"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Interpreter_(computing)",
+    "title": "Interpreter (computing) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07917",
+     "en": "What is the process called in which a program does not translate the source code in advance but works through it instruction by instruction during execution?",
+     "de": "Wie wird der Vorgang genannt, bei dem ein Programm den Quellcode nicht vorab übersetzt, sondern Anweisung für Anweisung während der Ausführung abarbeitet?",
+     "ru": "Как называется процесс, при котором программа не переводит исходный код заранее, а обрабатывает его команду за командой во время выполнения?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f07918",
+   "answerEn": "linking",
+   "answerDe": "Linken",
+   "answerRu": "компоновка",
+   "spans": {
+    "en": [
+     2425,
+     7
+    ],
+    "de": [
+     2607,
+     6
+    ],
+    "ru": [
+     2540,
+     10
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1951",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Wilkes, Wheeler and Gill describe building EDSAC programs from a subroutine library",
+    "labelDe": "Wilkes, Wheeler und Gill beschreiben, wie EDSAC-Programme aus einer Unterprogrammbibliothek entstehen",
+    "labelRu": "Уилкс, Уилер и Гилл описывают сборку программ EDSAC из библиотеки подпрограмм"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Library_(computing)",
+    "title": "Library (computing) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07918",
+     "en": "What is the process called in which several translated object files and libraries are joined into a single executable program?",
+     "de": "Wie wird der Vorgang genannt, bei dem mehrere übersetzte Objektdateien und Bibliotheken zu einem einzigen ausführbaren Programm zusammengefügt werden?",
+     "ru": "Как называется процесс, при котором несколько переведённых объектных файлов и библиотек объединяются в одну исполняемую программу?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f07919",
+   "answerEn": "parsing",
+   "answerDe": "Parsen",
+   "answerRu": "парсинг",
+   "spans": {
+    "en": [
+     1779,
+     7
+    ],
+    "de": [
+     1934,
+     6
+    ],
+    "ru": [
+     1891,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1965",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Donald Knuth publishes LR parsing",
+    "labelDe": "Donald Knuth veröffentlicht das LR-Parsing",
+    "labelRu": "Дональд Кнут публикует LR-анализ"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/LR_parser",
+    "title": "LR parser – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07919",
+     "en": "What is the process called in which a translator breaks the source text down into its syntactic structure according to the grammar of the language?",
+     "de": "Wie wird der Vorgang genannt, bei dem ein Übersetzer den Quelltext anhand der Grammatik der Sprache in seine syntaktische Struktur zerlegt?",
+     "ru": "Как называется процесс, при котором транслятор разбирает исходный текст на синтаксическую структуру по грамматике языка?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f07920",
+   "answerEn": "debugging",
+   "answerDe": "Debugging",
+   "answerRu": "отладка",
+   "spans": {
+    "en": [
+     2953,
+     9
+    ],
+    "de": [
+     3225,
+     9
+    ],
+    "ru": [
+     3103,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1947",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A moth is found in the Harvard Mark II – the „first actual case of bug being found“",
+    "labelDe": "In der Harvard Mark II wird eine Motte gefunden – der „erste tatsächliche Fall eines gefundenen Bugs“",
+    "labelRu": "В Harvard Mark II находят мотылька — «первый реальный случай обнаружения жучка»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Debugging",
+    "title": "Debugging – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07920",
+     "en": "What is the process called in which errors in a program are systematically tracked down and removed?",
+     "de": "Wie wird der Vorgang genannt, bei dem Fehler in einem Programm systematisch aufgespürt und beseitigt werden?",
+     "ru": "Как называется процесс систематического поиска и устранения ошибок в программе?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/programming",
+  "audience:international"
+ ]
+}

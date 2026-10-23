@@ -1,0 +1,288 @@
+{
+ "article": "a2486",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Madonna_(K%C3%BCnstlerin)",
+   "title": "Madonna (Künstlerin)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:57.267Z",
+   "snapshot": "1d3544e43cf817081b31150b4826f04784d47826cbc1b6c5d9ade0bcaac879ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Breakfast_Club_(band)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:00.587Z",
+   "snapshot": "e1a0d993a10b261dad8d318188c55e3f489679b28a17d858b1a906b4008dcbfb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dave_Grohl",
+   "title": "Dave Grohl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:01.806Z",
+   "snapshot": "a4a7adf7b3a8be9d8fdaf85ad82a52c5e2e9bcc2c279f964527f5daf84d66d5a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Phil_Collins",
+   "title": "Phil Collins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:02.784Z",
+   "snapshot": "590ab2e9ca67d3835b1ba7da61bb32c64184c8a2b291712a2433bcc3e4335837"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Karen_Carpenter",
+   "title": "Karen Carpenter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:03.717Z",
+   "snapshot": "a55561b944c258776072ab25851e8b9fc66019466158ab80b6539d544de6d547"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Don_Henley",
+   "title": "Don Henley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:04.685Z",
+   "snapshot": "b2a0578b97f7cae9b198c20323aa5ce0b1c31f9d1b7096fd5aee30fdccb9c148"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Madonna",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-224"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Madonna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dave Grohl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Phil Collins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Karen Carpenter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Don Henley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.010Z",
+   "target": "f13170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Madonna (englische Aussprache [məˈdɑna]; * 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madonna” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.010Z",
+   "target": "f13170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The group was formed in New York City in 1979 and went through several line-ups, including one in which future pop star Madonna was the drummer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madonna” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.010Z",
+   "target": "f13171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On January 28, it was announced that the first authorized Dave Grohl documentary will be released via The Coda Collection.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dave Grohl” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.010Z",
+   "target": "f13172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Concurrently, he performed as the drummer for the jazz fusion band Brand X (1975–1979) and formed the Phil Collins Big Band in 1996.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phil Collins” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:28.010Z",
+   "target": "f13173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1989, six years after Karen Carpenter's death, a portion of the solo album was commercially released when Richard's remixes of some of its tracks were included on the album Lovelines, the final album of previously unreleased material from the Carpenters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karen Carpenter” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:28.010Z",
+   "target": "f13174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 2002 a live DVD entitled Don Henley: Live Inside Job was released.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Don Henley” is on the snapshot of s6"
+  }
+ ]
+}

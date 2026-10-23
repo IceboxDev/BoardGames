@@ -1,0 +1,242 @@
+{
+ "article": "a2032",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Mickey_Mouse_Club",
+   "title": "The Mickey Mouse Club – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:12.403Z",
+   "snapshot": "f275c56e71396a2af0598b5616a7c3105df739c78725b57b20011f1d3dd557d6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Selena_Gomez",
+   "title": "Selena Gomez – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:13.502Z",
+   "snapshot": "f336f49c676d8dc34769b1609d0f98f2b925ca445872c234c27027173cd75599"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/American_Idol_season_1",
+   "title": "American Idol season 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:14.385Z",
+   "snapshot": "b980e22c32df4f938ff79efb58526924dd77eeff69094204168405b929364af4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Deutschland_sucht_den_Superstar/Staffel_1",
+   "title": "Deutschland sucht den Superstar/Staffel 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:37:11.517Z",
+   "snapshot": "e51e39e67e64f96fda9ed6484ea368df82f50dad93bbb1347f573ec803c9bb46"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_X_Factor_(British_TV_series)",
+   "title": "The X Factor (British TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:15.272Z",
+   "snapshot": "43da0c26839c7e1c3d6d45617553c431c8cc1ad7be1c9c95edcad632b8ac6c06"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mickey Mouse Club",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Barney & Friends",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "American Idol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Deutschland sucht den Superstar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The X Factor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:09.628Z",
+   "target": "f10156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Mickey Mouse Club is an American variety television show that aired intermittently from 1955 to 1996 and briefly returned to social media in 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mickey Mouse Club” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:09.628Z",
+   "target": "f10157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gomez began her career as a child actress on the children's television series Barney & Friends (2002–2004), and emerged as a teen idol for her leading role as Alex Russo on the Disney Channel sitcom Wizards of Waverly Place (2007–2012).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barney & Friends” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:09.628Z",
+   "target": "f10158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first season of American Idol (originally entitled American Idol: The Search for a Superstar) premiered on June 11, 2002, over four months after Pop Idol's first series ended, with Will Young winning the series, and continued until September 4, 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “American Idol” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:09.628Z",
+   "target": "f10159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die erste Staffel der deutschen Gesangs-Castingshow Deutschland sucht den Superstar wurde vom 9.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutschland sucht den Superstar” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:09.628Z",
+   "target": "f10160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The X Factor is a British reality television music competition – that spawned the global X Factor franchise – created by Simon Cowell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The X Factor” is on the snapshot of s5"
+  }
+ ]
+}

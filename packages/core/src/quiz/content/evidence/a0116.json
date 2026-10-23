@@ -1,0 +1,425 @@
+{
+ "article": "a0116",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Church_tabernacle",
+   "title": "Church tabernacle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:44.142Z",
+   "snapshot": "8c407e1f691c01dbef0172f4b1780b7d597cb7aa3e7b7f69641a23febe6e70f2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ciborium_(container)",
+   "title": "Ciborium (container) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:44.932Z",
+   "snapshot": "53bf66e4064ceea435515f08ff8bb5d0036b8af750f37698267e16ea4aef058e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Monstranz",
+   "title": "Monstranz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:42.148Z",
+   "snapshot": "d0ff7869685644a09cf9ac55662c3667ea02066eb9c7883290f464a7321f41b5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Last_Supper",
+   "title": "Last Supper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:46.094Z",
+   "snapshot": "83b32f65da98a9bafb6b845133fc26b2fe07eaff28f70c89a735034d83d65a43"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Chalice",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:46.930Z",
+   "snapshot": "e7a8d94aaff8ef461aa0f2741b4520db2c49d0974ebf6aa25744870d3419d667"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Ewiges_Licht",
+   "title": "Ewiges Licht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:44.294Z",
+   "snapshot": "afe7793e9cbc8cc05a65c781de1b95337bfb270ea8c0b629eb6470c5022993f2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Good_Friday",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:48.153Z",
+   "snapshot": "ea49c4678f64d0b55bd6c521b0eea29cec2372f180c3c02850a1b35fa3eb876c"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Pyx",
+   "title": "Pyx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:48.957Z",
+   "snapshot": "cf0460ac19a2dc4a353922c462c3260863c678a045a6f940fc06aa2f466d695f"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Trial_of_the_Pyx",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:49.942Z",
+   "snapshot": "f1683dc3f95d8ff7388d33ab11b4b783aa9181d8bcba683cbc822efeb683e0f8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tabernacle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ciborium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monstranz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "chalice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "chalice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ewiges Licht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f00580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "sanctuary lamp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "pyx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f28405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "pyx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 36"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A tabernacle, also called a sacrament house, is a fixed, locked receptacle, usually located in a church or chapel, in which the Eucharist is reserved as part of the practice of keeping the \"reserved sacrament\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tabernacle” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A ciborium (plural ciboria; Medieval Latin ciborium \"drinking cup\", from the Ancient Greek κιβώριον kibōrion, \"drinking cup\") is a vessel, normally in metal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ciborium” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eine Monstranz (von lateinisch monstrare „zeigen“) ist ein kostbares, mit Gold und oft auch mit Edelsteinen gestaltetes liturgisches Schaugerät (Ostensorium) mit einem Fensterbereich, in dem eine konsekrierte Hostie („das Allerheiligste“) bei Gottesdiensten und Prozessionen in der",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monstranz” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "chalice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“chalice”, “Kelch”, “потир”) on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A chalice (from Latin calix 'cup', taken from the Ancient Greek κύλιξ (kylix) 'cup') is a drinking cup raised on a stem with a foot or base.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chalice” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das esch tamid war früher ein anderes ewiges Licht, das im Altar des Mischkan aufgestellt war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ewiges Licht” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f00580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "sanctuary lamp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sanctuary lamp”, “Ewiges Licht”, “неугасимая лампада”) on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f28405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A pyx or pix (Latin: pyxis, transliteration of Greek: πυξίς, boxwood receptacle, from πύξος, box tree) is a small round container used in the Catholic, Old Catholic, Lutheran and Anglican Churches to carry the Eucharist, to the sick or those who are otherwise unable to come to a church in order to",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pyx” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:23:54.314Z",
+   "target": "f28405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Trial of the Pyx () is a judicial ceremony in the United Kingdom to ensure that newly minted coins from the Royal Mint conform to their required dimensional and fineness specifications.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.314Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pyx” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "id": "a0249",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "Five Words Every Computer Scientist Learns First",
+ "titleDe": "Fünf Wörter, die jeder Informatiker zuerst lernt",
+ "titleRu": "Пять слов, которые каждый информатик узнаёт первыми",
+ "bodyEn": "Computer science likes to present itself as a young discipline, but its basic vocabulary is a patchwork of ideas from ancient Greece, medieval Persia and the telegraph age. Five terms that every first-year student meets in the opening weeks show how old the foundations of the digital world really are.\n\nThe word at the centre of everything is the algorithm. Formally it is an unambiguous, executable sequence of instructions of finite length that solves a class of problems: a recipe, a route description or a long division are all algorithms, and so is every program that runs on a computer. The name is a corruption of al-Khwarizmi, the Persian mathematician who worked in Baghdad around 820 and whose textbook on Indian numerals reached Europe in Latin as \"Algoritmi de numero Indorum\". Euclid's method for finding the greatest common divisor, written down about 300 BC, is still taught as the oldest algorithm in regular use, and in 1936 Alan Turing gave the concept its precise modern definition.\n\nBefore any algorithm can be proved correct, mathematics needs a starting point that is not itself proved. Such a statement is called an axiom. Euclid opened his \"Elements\", written around 300 BC, with five of them, including the parallel postulate, which amounts to saying that through a point outside a line exactly one parallel can be drawn; the discovery in the nineteenth century that this one could be replaced by its opposite gave rise to non-Euclidean geometry and, eventually, to Einstein's curved spacetime. In 1899 David Hilbert rebuilt geometry on a complete, rigorous set of axioms in his “Grundlagen der Geometrie”. Modern set theory rests on the Zermelo-Fraenkel axioms, and Peano's axioms define the natural numbers.\n\nAmong those numbers, the prime number holds a special place: a natural number greater than 1 that is divisible only by 1 and by itself. Euclid proved that there are infinitely many of them, Eratosthenes devised a sieve to find them, and today the largest known primes have tens of millions of digits. Their practical importance came late. Since 1977 the RSA cryptosystem, which secures online banking and messaging, has relied on the fact that multiplying two large primes is easy while factoring the product is not.\n\nA technique rather than an object, recursion describes a procedure in which a function calls itself with a smaller version of the same problem until it reaches a trivial case. The factorial of n is n times the factorial of n minus 1; the Towers of Hanoi are solved by moving a smaller tower twice. The idea is essential to the theory of computable functions and to every programming language since Lisp, begun in 1958, and it has produced the discipline's favourite joke: to understand recursion, one must first understand recursion.\n\nThe smallest term is the bit, the unit of information that can take only the values 0 and 1. The word, a contraction of \"binary digit\", was coined by the statistician John Tukey in a Bell Labs memo of 9 January 1947 and made famous by Claude Shannon's 1948 paper \"A Mathematical Theory of Communication\", which founded information theory. Eight bits make a byte, and everything from this text to a satellite image is, in the end, a very long sequence of them.\n\n| Term | Origin | Meaning |\n|---|---|---|\n| Algorithm | al-Khwarizmi, 9th century | finite executable sequence of instructions |\n| Axiom | Greek axíōma, \"what is worthy\" | unproved starting statement |\n| Prime number | Euclid, c. 300 BC | divisible only by 1 and itself |\n| Recursion | Latin recurrere, \"to run back\" | a function that calls itself |\n| Bit | Tukey/Shannon, 1947–48 | binary digit, 0 or 1 |",
+ "bodyDe": "Die Informatik stellt sich gern als junge Disziplin dar, doch ihr Grundvokabular ist ein Flickenteppich aus Ideen des antiken Griechenlands, des mittelalterlichen Persiens und des Telegrafenzeitalters. Fünf Begriffe, denen jeder Studienanfänger in den ersten Wochen begegnet, zeigen, wie alt die Fundamente der digitalen Welt wirklich sind.\n\nDas Wort im Zentrum von allem ist der Algorithmus. Formal ist er eine eindeutige, ausführbare Folge von Anweisungen endlicher Länge, die eine Klasse von Problemen löst: Ein Rezept, eine Wegbeschreibung oder eine schriftliche Division sind allesamt Algorithmen, ebenso jedes Programm, das auf einem Computer läuft. Der Name ist eine Verballhornung von al-Chwarizmi, dem persischen Mathematiker, der um 820 in Bagdad wirkte und dessen Lehrbuch über die indischen Ziffern Europa auf Latein als „Algoritmi de numero Indorum“ erreichte. Euklids Verfahren zur Bestimmung des größten gemeinsamen Teilers, um 300 v. Chr. niedergeschrieben, wird noch immer als ältester regelmäßig genutzter Algorithmus gelehrt, und 1936 gab Alan Turing dem Begriff seine präzise moderne Definition.\n\nBevor irgendein Algorithmus als korrekt bewiesen werden kann, braucht die Mathematik einen Ausgangspunkt, der selbst nicht bewiesen wird. Eine solche Aussage heißt Axiom. Euklid eröffnete seine um 300 v. Chr. verfassten „Elemente“ mit fünf davon, darunter das Parallelenpostulat, das im Kern besagt, dass sich durch einen Punkt außerhalb einer Geraden genau eine Parallele ziehen lässt; die Entdeckung im 19. Jahrhundert, dass man dieses durch sein Gegenteil ersetzen kann, führte zur nichteuklidischen Geometrie und schließlich zu Einsteins gekrümmter Raumzeit. 1899 stellte David Hilbert die Geometrie in seinen „Grundlagen der Geometrie“ auf ein vollständiges, strenges Axiomensystem. Die moderne Mengenlehre ruht auf den Zermelo-Fraenkel-Axiomen, und die Peano-Axiome definieren die natürlichen Zahlen.\n\nUnter diesen Zahlen nimmt die Primzahl einen besonderen Platz ein: eine natürliche Zahl größer als 1, die nur durch 1 und durch sich selbst teilbar ist. Euklid bewies, dass es unendlich viele davon gibt, Eratosthenes ersann ein Sieb, um sie zu finden, und heute haben die größten bekannten Primzahlen zig Millionen Stellen. Ihre praktische Bedeutung kam spät. Seit 1977 beruht das RSA-Kryptosystem, das Onlinebanking und Nachrichtendienste absichert, auf der Tatsache, dass das Multiplizieren zweier großer Primzahlen leicht ist, das Zerlegen des Produkts aber nicht.\n\nEher eine Technik als ein Objekt ist die Rekursion: ein Verfahren, bei dem eine Funktion sich selbst mit einer kleineren Version desselben Problems aufruft, bis sie einen trivialen Fall erreicht. Die Fakultät von n ist n mal die Fakultät von n minus 1; die Türme von Hanoi löst man, indem man einen kleineren Turm zweimal versetzt. Die Idee ist grundlegend für die Theorie der berechenbaren Funktionen und für jede Programmiersprache seit Lisp, das 1958 entstand, und sie hat den Lieblingswitz der Disziplin hervorgebracht: Um Rekursion zu verstehen, muss man zuerst Rekursion verstehen.\n\nDer kleinste Begriff ist das Bit, die Informationseinheit, die nur die Werte 0 und 1 annehmen kann. Das Wort, eine Zusammenziehung von „binary digit“, prägte der Statistiker John Tukey in einem Bell-Labs-Memo vom 9. Januar 1947, berühmt machte es Claude Shannons Aufsatz „A Mathematical Theory of Communication“ von 1948, der die Informationstheorie begründete. Acht Bit ergeben ein Byte, und alles von diesem Text bis zu einem Satellitenbild ist am Ende eine sehr lange Folge davon.\n\n| Begriff | Herkunft | Bedeutung |\n|---|---|---|\n| Algorithmus | al-Chwarizmi, 9. Jahrhundert | endliche ausführbare Anweisungsfolge |\n| Axiom | griechisch axíōma, „das Würdige“ | unbewiesene Ausgangsaussage |\n| Primzahl | Euklid, um 300 v. Chr. | nur durch 1 und sich selbst teilbar |\n| Rekursion | lateinisch recurrere, „zurücklaufen“ | eine Funktion, die sich selbst aufruft |\n| Bit | Tukey/Shannon, 1947–48 | Binärziffer, 0 oder 1 |",
+ "bodyRu": "Информатика любит представлять себя молодой дисциплиной, но её базовый словарь — лоскутное одеяло из идей Древней Греции, средневековой Персии и эпохи телеграфа. Пять терминов, с которыми каждый первокурсник сталкивается в первые же недели, показывают, насколько стары основы цифрового мира.\n\nСлово в центре всего — это алгоритм. Формально это однозначная, выполнимая последовательность инструкций конечной длины, решающая класс задач: рецепт, описание маршрута или деление в столбик — всё это алгоритмы, как и любая программа, работающая на компьютере. Название — искажённое имя аль-Хорезми, персидского математика, работавшего в Багдаде около 820 года, чей учебник об индийских цифрах дошёл до Европы на латыни под названием «Algoritmi de numero Indorum». Алгоритм Евклида для нахождения наибольшего общего делителя, записанный около 300 года до н. э., до сих пор преподаётся как старейший регулярно используемый алгоритм, а в 1936 году Алан Тьюринг дал этому понятию точное современное определение.\n\nПрежде чем доказать правильность какого-либо алгоритма, математике нужна отправная точка, которая сама не доказывается. Такое утверждение — аксиома. Евклид открыл свои «Начала», написанные около 300 года до н. э., пятью такими утверждениями, среди которых постулат о параллельных, по сути означающий, что через точку вне прямой можно провести ровно одну параллельную ей прямую; открытие в XIX веке того, что его можно заменить противоположным, породило неевклидову геометрию, а в конечном счёте и искривлённое пространство-время Эйнштейна. В 1899 году Давид Гильберт перестроил геометрию на полной и строгой системе аксиом в своих «Основаниях геометрии». Современная теория множеств опирается на аксиомы Цермело — Френкеля, а аксиомы Пеано определяют натуральные числа.\n\nСреди этих чисел особое место занимает простое число: натуральное число больше 1, которое делится только на 1 и на само себя. Евклид доказал, что их бесконечно много, Эратосфен придумал решето для их поиска, а сегодня крупнейшие известные простые числа насчитывают десятки миллионов цифр. Практическое значение пришло к ним поздно. С 1977 года криптосистема RSA, защищающая онлайн-банкинг и мессенджеры, опирается на то, что перемножить два больших простых числа легко, а разложить произведение на множители — нет.\n\nСкорее техника, чем объект, рекурсия описывает процедуру, в которой функция вызывает саму себя для уменьшенной версии той же задачи, пока не дойдёт до тривиального случая. Факториал n равен n, умноженному на факториал n минус 1; Ханойская башня решается двукратным перемещением башни поменьше. Эта идея лежит в основе теории вычислимых функций и любого языка программирования начиная с Лиспа, работа над которым началась в 1958 году, и она породила любимую шутку дисциплины: чтобы понять рекурсию, нужно сначала понять рекурсию.\n\nСамый маленький термин — бит, единица информации, которая может принимать только значения 0 и 1. Это слово, сокращение от «binary digit» («двоичная цифра»), придумал статистик Джон Тьюки в служебной записке Bell Labs от 9 января 1947 года, а прославила его статья Клода Шеннона «Математическая теория связи» 1948 года, основавшая теорию информации. Восемь бит составляют байт, и всё — от этого текста до спутникового снимка — в конечном счёте представляет собой очень длинную их последовательность.\n\n| Термин | Происхождение | Значение |\n|---|---|---|\n| Алгоритм | аль-Хорезми, IX век | конечная выполнимая последовательность инструкций |\n| Аксиома | греч. axíōma, «достойное» | недоказуемое исходное утверждение |\n| Простое число | Евклид, около 300 до н. э. | делится только на 1 и на себя |\n| Рекурсия | лат. recurrere, «бежать назад» | функция, вызывающая саму себя |\n| Бит | Тьюки/Шеннон, 1947–48 | двоичная цифра, 0 или 1 |",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/P.Penn._Museum_inv._E02748_Euclid%27s_Elements_2.5.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Euclid%27s_Elements",
+   "width": 3745,
+   "height": 2322,
+   "alt": {
+    "en": "Papyrus fragment of Euclid's Elements",
+    "de": "Papyrusfragment von Euklids „Elementen“",
+    "ru": "Фрагмент папируса с «Началами» Евклида"
+   },
+   "caption": {
+    "en": "One of the oldest surviving fragments of Euclid's “Elements”, found at Oxyrhynchus: the book that built geometry on axioms and proved that there are infinitely many primes.",
+    "de": "Eines der ältesten erhaltenen Fragmente von Euklids „Elementen“, gefunden in Oxyrhynchos: das Buch, das die Geometrie auf Axiome stellte und bewies, dass es unendlich viele Primzahlen gibt.",
+    "ru": "Один из древнейших сохранившихся фрагментов «Начал» Евклида, найденный в Оксиринхе, — книги, построившей геометрию на аксиомах и доказавшей бесконечность простых чисел."
+   },
+   "credit": "Penn Museum, via Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Animation_Sieve_of_Eratosth.gif",
+   "pageUrl": "https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes",
+   "width": 445,
+   "height": 369,
+   "alt": {
+    "en": "Animation of the sieve of Eratosthenes",
+    "de": "Animation des Siebs des Eratosthenes",
+    "ru": "Анимация решета Эратосфена"
+   },
+   "caption": {
+    "en": "The sieve of Eratosthenes crosses out the multiples of each prime in turn; the numbers left over are the primes.",
+    "de": "Das Sieb des Eratosthenes streicht nacheinander die Vielfachen jeder Primzahl; übrig bleiben die Primzahlen.",
+    "ru": "Решето Эратосфена по очереди вычёркивает кратные каждого простого числа; оставшиеся числа — простые."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/UniversumUNAM34.JPG/3840px-UniversumUNAM34.JPG",
+   "pageUrl": "https://en.wikipedia.org/wiki/Tower_of_Hanoi",
+   "width": 6016,
+   "height": 4000,
+   "alt": {
+    "en": "A Tower of Hanoi puzzle",
+    "de": "Ein Turm-von-Hanoi-Spiel",
+    "ru": "Головоломка «Ханойская башня»"
+   },
+   "caption": {
+    "en": "The Tower of Hanoi, the classic example of recursion: to move a tower, move the smaller tower on top of it twice.",
+    "de": "Der Turm von Hanoi, das klassische Beispiel für Rekursion: Um einen Turm zu versetzen, versetzt man den kleineren Turm darauf zweimal.",
+    "ru": "Ханойская башня — классический пример рекурсии: чтобы переложить башню, нужно дважды переложить башню поменьше, лежащую сверху."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f01241",
+   "answerEn": "Algorithm",
+   "answerDe": "Algorithmus",
+   "answerRu": "алгоритм",
+   "spans": {
+    "en": [
+     348,
+     9
+    ],
+    "de": [
+     380,
+     11
+    ],
+    "ru": [
+     320,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1936",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alan Turing gives the algorithm its precise modern definition",
+    "labelDe": "Alan Turing gibt dem Algorithmus seine präzise moderne Definition",
+    "labelRu": "Алан Тьюринг даёт алгоритму точное современное определение"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Turing_machine",
+    "title": "Turing machine – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01241",
+     "en": "What is an unambiguous, executable sequence of instructions of finite length for solving a problem called?",
+     "de": "Wie wird eine eindeutige, ausführbare Folge von Anweisungen endlicher Länge zur Lösung eines Problems genannt?",
+     "ru": "Как называется однозначная, выполнимая последовательность инструкций конечной длины для решения задачи?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c021",
+      "category": 9
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f01242",
+   "answerEn": "Axiom",
+   "answerDe": "Axiom",
+   "answerRu": "аксиома",
+   "spans": {
+    "en": [
+     1140,
+     5
+    ],
+    "de": [
+     1281,
+     5
+    ],
+    "ru": [
+     1143,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1899",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hilbert's „Grundlagen der Geometrie“ replaces Euclid's axioms with a rigorous system",
+    "labelDe": "Hilberts „Grundlagen der Geometrie“ ersetzen Euklids Axiome durch ein strenges System",
+    "labelRu": "«Основания геометрии» Гильберта заменяют аксиомы Евклида строгой системой"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/David_Hilbert",
+    "title": "David Hilbert – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01242",
+     "en": "What is a statement called that is assumed to be true without proof in a mathematical theory?",
+     "de": "Wie wird eine Aussage genannt, die in einer mathematischen Theorie ohne Beweis als wahr vorausgesetzt wird?",
+     "ru": "Как называется утверждение, которое в математической теории принимается за истинное без доказательства?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f01243",
+   "answerEn": "Recursion",
+   "answerDe": "Rekursion",
+   "answerRu": "рекурсия",
+   "spans": {
+    "en": [
+     2290,
+     9
+    ],
+    "de": [
+     2535,
+     9
+    ],
+    "ru": [
+     2318,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1958",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "John McCarthy begins developing Lisp, built on recursion",
+    "labelDe": "John McCarthy beginnt mit Lisp, einer auf Rekursion gebauten Sprache",
+    "labelRu": "Джон Маккарти начинает разработку Лиспа — языка, построенного на рекурсии"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lisp_(programming_language)",
+    "title": "Lisp (programming language) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01243",
+     "en": "What is a procedure called in which a function or definition calls itself in order to solve a task?",
+     "de": "Wie wird ein Verfahren genannt, bei dem sich eine Funktion oder Definition zur Lösung einer Aufgabe selbst aufruft?",
+     "ru": "Как называется процедура, в которой функция или определение для решения задачи вызывает само себя?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f01244",
+   "answerEn": "Bit",
+   "answerDe": "Bit",
+   "answerRu": "бит",
+   "spans": {
+    "en": [
+     2815,
+     3
+    ],
+    "de": [
+     3112,
+     3
+    ],
+    "ru": [
+     2845,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1948",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Shannon's „A Mathematical Theory of Communication“ makes the bit the unit of information",
+    "labelDe": "Shannons „A Mathematical Theory of Communication“ macht das Bit zur Einheit der Information",
+    "labelRu": "Статья Шеннона «Математическая теория связи» делает бит единицей информации"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/A_Mathematical_Theory_of_Communication",
+    "title": "A Mathematical Theory of Communication – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25383",
+     "en": "What is a single binary digit, 0 or 1, the most basic unit of information in computing, called?",
+     "de": "Wie heißt eine einzelne Binärziffer, 0 oder 1, die grundlegendste Informationseinheit in der Informatik?",
+     "ru": "Как называется одна двоичная цифра, 0 или 1, — самая базовая единица информации в вычислительной технике?",
+     "origin": "printed",
+     "printed": {
+      "source": "publish-or-perish-mge",
+      "card": "ppm-090",
+      "category": 1
+     },
+     "cardText": "[Computer Science] What are the basic binary digits 0 and 1 also known as?\nA. Bytes B. Bits C. Bauds\nAnswer: B. The term “bit” is a contraction of “binary digit,” which is the most basic unit of data in computing and digital communications."
+    }
+   ],
+   "retiredWordings": [
+    {
+     "id": "w01244",
+     "en": "What is the smallest unit of information called that can take only the two values 0 and 1?",
+     "de": "Wie wird die kleinste Informationseinheit genannt, die nur die beiden Werte 0 und 1 annehmen kann?",
+     "ru": "Как называется наименьшая единица информации, которая может принимать только два значения — 0 и 1?",
+     "origin": "generated",
+     "retired": {
+      "at": "2026-10-22",
+      "code": "superseded-by-print",
+      "reason": "Homebrew stand-in retired: publish-or-perish-mge card ppm-090 asks the same question (w25383).",
+      "replacedBy": [
+       "w25383"
+      ]
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f01245",
+   "answerEn": "Prime number",
+   "answerDe": "Primzahl",
+   "answerRu": "простое число",
+   "spans": {
+    "en": [
+     1762,
+     12
+    ],
+    "de": [
+     1955,
+     8
+    ],
+    "ru": [
+     1813,
+     13
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1977",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The prime-based RSA cryptosystem is published",
+    "labelDe": "Das auf Primzahlen beruhende RSA-Verfahren wird veröffentlicht",
+    "labelRu": "Опубликована криптосистема RSA, основанная на простых числах"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/RSA_cryptosystem",
+    "title": "RSA cryptosystem – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01245",
+     "en": "What is a natural number greater than 1 called that is divisible without remainder only by 1 and by itself?",
+     "de": "Wie wird eine natürliche Zahl größer als 1 genannt, die nur durch 1 und durch sich selbst ohne Rest teilbar ist?",
+     "ru": "Как называется натуральное число больше 1, которое делится без остатка только на 1 и на само себя?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-23",
+    "code": "off-topic",
+    "reason": "Off-topic and not trivia: the school definition of a prime number is mathematics, not a word of computer science."
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/computing",
+  "topic:mathematics/logic",
+  "audience:international"
+ ]
+}

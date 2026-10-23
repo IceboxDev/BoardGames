@@ -1,0 +1,234 @@
+{
+ "article": "a2484",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chandelier_(song)",
+   "title": "Chandelier (song)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:51.655Z",
+   "snapshot": "5d28bb8708a377df7ff4c71921b4c7f78611af770188818b675132bf45479847"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sia_(S%C3%A4ngerin)",
+   "title": "Sia (Sängerin)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:49.671Z",
+   "snapshot": "42e0b8262e01ad1d5afdf0e87f43c088806d01e70e329876b835b8e61cbe8eac"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Diamonds_(Rihanna_song)",
+   "title": "Diamonds (Rihanna song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:52.736Z",
+   "snapshot": "a36244413b4cd1b5ff79e714313430282db756c27b2671983c8e1e1f3ba5ded3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sia",
+   "title": "Sia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:53.584Z",
+   "snapshot": "654fb06acf1157f7423fb96b4da023e9f622cb1cddbe37f93cfefb6bd2f2ef15"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Perücke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-052"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maddie Ziegler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Diamonds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Zero 7",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:27.579Z",
+   "target": "f13158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Chandelier\" is a song by Australian singer and songwriter Sia, from her sixth studio album, 1000 Forms of Fear (2014).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sia” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:27.579Z",
+   "target": "f13159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wie auch bei ihrem letzten Album versteckt Sia ihr Gesicht bei Live-Auftritten hinter einer großen Perücke.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perücke” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:27.579Z",
+   "target": "f13160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A music video for the song, directed by Sia and Daniel Askill, and choreographed by Ryan Heffington, features American dancer Maddie Ziegler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maddie Ziegler” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:27.579Z",
+   "target": "f13162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Diamonds\" is a song recorded by the Barbadian singer Rihanna as the lead single for her seventh album, Unapologetic (2012).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diamonds” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:27.579Z",
+   "target": "f13163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sia moved to London and provided vocals for the English duo Zero 7.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zero 7” is on the snapshot of s4"
+  }
+ ]
+}

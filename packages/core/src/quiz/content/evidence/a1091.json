@@ -1,0 +1,393 @@
+{
+ "article": "a1091",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Macrolepiota_procera",
+   "title": "Macrolepiota procera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:13.073Z",
+   "snapshot": "37cdd5e8b095c159ec27e670615fd51d2abd1df4d8a83e7a167e647340b7e7eb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Amanita_muscaria",
+   "title": "Amanita muscaria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:14.149Z",
+   "snapshot": "2df004f1a20195eac326fb47d7287b4dc20e65ce6b02abc6340ffae8456d01bf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pleurotus_ostreatus",
+   "title": "Pleurotus ostreatus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:15.144Z",
+   "snapshot": "0571e3ec76979880f7c8aa8f710d3aeb8fd9906ff452cddb1607c4d3dc136984"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Auricularia_auricula-judae",
+   "title": "Auricularia auricula-judae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:16.138Z",
+   "snapshot": "5df575ff0c2b4449ccdc1346592b5f8e5c3d80670186d5af9749b4564a17e736"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rubroboletus_satanas",
+   "title": "Rubroboletus satanas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:17.192Z",
+   "snapshot": "114804969e7783ece3f8aa9997d0a2264ecc49c64aaef8951f8b39fe491adc47"
+  },
+  "s6": {
+   "url": "https://www.dgfm-ev.de/pilz-des-jahres/2017-judasohr",
+   "title": "Pilz des Jahres 2017: Judasohr",
+   "publisher": "Deutsche Gesellschaft für Mykologie (DGfM)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:52.374Z",
+   "snapshot": "206ee98fb5b6b149ec7ef5a3963b50fe28bee00741a7c9abddcfe1994943b243"
+  },
+  "s7": {
+   "url": "https://www.first-nature.com/fungi/auricularia-auricula-judae.php",
+   "title": "Auricularia auricula-judae, Jelly Ear fungus – First Nature",
+   "publisher": "First Nature (Pat O'Reilly)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:52.326Z",
+   "snapshot": "fdc5d575c22efa73af191bbb740f71c7bc1ee84b952f76e28774f6c0a39e0485"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the parasol mushroom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the fly agaric",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the oyster mushroom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Judas's ear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the devil's bolete",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:31.484Z",
+   "target": "f05451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Macrolepiota procera, the parasol mushroom, is a basidiomycete fungus with a large, prominent fruiting body resembling a parasol.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the parasol mushroom” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:31.484Z",
+   "target": "f05452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Amanita muscaria, commonly known as the fly agaric or fly amanita or simply red toadstool, is a basidiomycete fungus of the genus Amanita.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the fly agaric” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:31.484Z",
+   "target": "f05453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pleurotus ostreatus, commonly known as the oyster mushroom, grey oyster mushroom, oyster fungus, hiratake, or pearl oyster mushroom, is a popular edible mushroom found in temperate and subtropical forests around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the oyster mushroom” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:31.484Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Judas's ear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Judas's ear”, “das Judasohr”, “Иудино ухо”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:31.484Z",
+   "target": "f05455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rubroboletus satanas, commonly known as Satan's bolete or as the Devil's bolete, is a basidiomycete fungus of the bolete family (Boletaceae) and one of its most infamous members.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the devil's bolete” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:04:38Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der deutsche Volksname Judasohr beruht auf einer Sage. Demnach soll sich Judas Iskariot, der Jünger, der Jesus mit einem Kuss verriet, aus Gram an einem Holunderbaum erhängt haben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:04:40Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Judas' Ear - the latter a reference to the belief that Judas Iscariot hanged himself on an Elder tree in shame after betraying Jesus Christ to his executioners.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:04:42Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The specific epithet is derived from the belief that Judas Iscariot hanged himself from an elder tree.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:07.609Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der deutsche Volksname Judasohr beruht auf einer Sage. Demnach soll sich Judas Iskariot, der Jünger, der Jesus mit einem Kuss verriet, aus Gram an einem Holunderbaum erhängt haben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:07.609Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Judas' Ear - the latter a reference to the belief that Judas Iscariot hanged himself on an Elder tree in shame after betraying Jesus Christ to his executioners.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:07.609Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The specific epithet is derived from the belief that Judas Iscariot hanged himself from an elder tree.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:07.609Z",
+   "target": "f05454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Judasohr besiedelt vor allem Schwarzen Holunder.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “das Judasohr” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "mge-ingest",
+ "title": "Publish or Perish MGE expansion: transcribe 160 cards and merge them",
+ "startedAt": "2026-10-22",
+ "endedAt": "2026-10-22",
+ "kind": "ingest",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded)"
+ ],
+ "brief": "repo scripts/quiz-ingest/TRANSCRIBE.md, MERGE.md",
+ "inputs": [
+  "photos/publish-or-perish-mge"
+ ],
+ "outputs": [
+  "transcripts/publish-or-perish-mge",
+  "bank (merge history 2026-10-22, refs 'publish-or-perish-mge/ppm-NNN')"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/publish-or-perish-mge"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 110,
+  "bytes": 2620919,
+  "byExt": {
+   ".json": 53,
+   ".md": 53,
+   ".tsv": 3,
+   ".txt": 1
+  },
+  "cards": 160,
+  "printedQuestions": 320
+ },
+ "notes": "Not archived: printed/ (= transcripts/), staged/ (67 MB), scratch/ (383 MB)."
+}

@@ -1,0 +1,241 @@
+{
+ "article": "a0498",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Karl_Liebknecht",
+   "title": "Karl Liebknecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:00:21.390Z",
+   "snapshot": "19ade5b5edb92bdc96a5d229c52530eefa6fc6c44bf666f2a7320d06e1432af7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rosa_Luxemburg",
+   "title": "Rosa Luxemburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:25.178Z",
+   "snapshot": "a062408a026c9df419a4e76d778bd5fbb142fb6306027243b805cc74fbf37e1c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Philipp_Scheidemann",
+   "title": "Philipp Scheidemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:26.098Z",
+   "snapshot": "028586c15d4b84fed0972449478b91b410034b44144e9f1de8216423ad460109"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hugo_Haase",
+   "title": "Hugo Haase – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:27.773Z",
+   "snapshot": "51488e0bafb21d27fab7933e61510be7fec725e76ce158d19064fc4a8e67f438"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hugo_Haase",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:00:24.693Z",
+   "snapshot": "bd16114dbb3c7c0217b41c0e2f4d879c5de04882146bec6079673219c7ee2c1b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Liebknecht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rosa Luxemburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Philipp Scheidemann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hugo Haase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hugo Haase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:58.433Z",
+   "target": "f02486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Liebknecht wurde 1871 in Leipzig geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Liebknecht” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:58.433Z",
+   "target": "f02487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rosa Luxemburg ( LUK-səm-burg; Polish: Róża Luksemburg [ˈruʐa ˈluksɛmburk] ; German: [ˈʁoːza ˈlʊksm̩bʊʁk] ; 5 March 1871 – 15 January 1919) was a Polish and naturalised-German Marxist theorist and revolutionary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosa Luxemburg” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:58.433Z",
+   "target": "f02489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Philipp Scheidemann was born in Kassel on 26 July 1865, the son of the upholsterer Friedrich Scheidemann (1842–1879) and his wife Wilhelmine (née Pape, 1842–1907).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philipp Scheidemann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:58.433Z",
+   "target": "f02490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hugo Haase (29 September 1863 – 7 November 1919) was a German socialist politician, jurist and pacifist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hugo Haase” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:58.433Z",
+   "target": "f02490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hugo Haase starb an den Folgen eines am 8.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hugo Haase” is on the snapshot of s5"
+  }
+ ]
+}

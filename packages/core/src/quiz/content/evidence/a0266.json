@@ -1,0 +1,209 @@
+{
+ "article": "a0266",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ulysses_(novel)",
+   "title": "Ulysses (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:46.809Z",
+   "snapshot": "97a73abec465c8c8bde6ec79044a2686929ffb9f3a63e7ee34e0911158573698"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities",
+   "title": "The Man Without Qualities – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:03.886Z",
+   "snapshot": "ed158ab30bdead76015815b264aac1f6272adcf0f2721abae493d4a495c3860b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oliver!",
+   "title": "Oliver! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:04.946Z",
+   "snapshot": "5dac2aa3130077c4b31a985cc08efb38c7c5527425be8ecce79262ade632f345"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Historic_Centre_of_Saint_Petersburg_and_Related_Groups_of_Monuments",
+   "title": "Historic Centre of Saint Petersburg and Related Groups of Monuments – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:01.833Z",
+   "snapshot": "8130eac76c452366cf0cd4006748c3ef9952ad890226da92598b13ee204d8dfa"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Buddenbrookhaus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:38:34.375Z",
+   "snapshot": "18324e9c0105135fe1e248d39889c11fdfb721e8e2972da87777b3629856f4f0"
+  },
+  "s6": {
+   "url": "https://en.wikisource.org/wiki/Crime_and_Punishment/Part_I/Chapter_I",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:45.206Z",
+   "snapshot": "6782088f6ff90e958a76d208a10b3f2cce55b4e23aacca602a12f50009d1825d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dublin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "London",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saint Petersburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:21.744Z",
+   "target": "f01326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Such themes as antisemitism, human sexuality, British rule in Ireland, Catholicism and Irish nationalism are treated in the context of early-20th-century Dublin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dublin” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:21.744Z",
+   "target": "f01328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The story takes place in 1913 in Vienna, the capital of Austria-Hungary, which Musil refers to by the playful term Kakanien (Kakania in the Wilkins-Pike translation).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:21.744Z",
+   "target": "f01329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It premiered at the Wimbledon Theatre, southwest London in 1960 before opening in the West End, where it enjoyed a record-breaking long run.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:21.744Z",
+   "target": "f01330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Historic Centre of Saint Petersburg and Related Groups of Monuments",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint Petersburg” is on the snapshot of s4"
+  }
+ ]
+}

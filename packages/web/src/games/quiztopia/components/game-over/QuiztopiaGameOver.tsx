@@ -1,10 +1,10 @@
-import { parseQuestionId } from "@boardgames/core/games/quiztopia/ids";
 import {
   BUILDING_COUNT,
   type QuestionLogEntry,
   type QuiztopiaPlayerView,
   type QuiztopiaResult,
 } from "@boardgames/core/games/quiztopia/types";
+import { FACT_ID_RE } from "@boardgames/core/quiz/ids";
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GameOverLayout, GameOverStats, StatItem } from "../../../../components/game-over";
@@ -17,12 +17,12 @@ import {
   Surface,
 } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
+import { ReportButton } from "../../../../trainers/quiz/components/report/ReportButton";
+import { TRAINER_BASE, trainerPaths } from "../../../../trainers/quiz/paths";
 import { districtByIndex } from "../../bands";
 import { type BoardLanguage, deckLabel, wikiPathFor } from "../../logic/copy";
 import { type SeatNames, seatName } from "../../logic/seats";
-import { TRAINER_BASE, trainerPaths } from "../../paths";
 import { Skyline } from "../common/Skyline";
-import { ReportButton } from "../report/ReportButton";
 
 // The end of a co-op room. The city as it ended, the numbers, every question
 // that was asked (with a wiki link for the real ones), and the bridge into
@@ -58,7 +58,7 @@ function headlineFor(result: QuiztopiaResult): {
 }
 
 function isReal(entry: QuestionLogEntry): boolean {
-  return parseQuestionId(entry.questionId) !== null;
+  return FACT_ID_RE.test(entry.questionId);
 }
 
 export default function QuiztopiaGameOver({
@@ -232,7 +232,7 @@ export default function QuiztopiaGameOver({
                 <ol className="flex flex-col gap-2">
                   {view.questionLog.map((e, i) => {
                     const d = districtByIndex(e.categoryIndex);
-                    const wiki = wikiPathFor(e.cardRef, d.slug);
+                    const wiki = wikiPathFor(e.questionId);
                     return (
                       <Surface
                         as="li"
@@ -271,7 +271,6 @@ export default function QuiztopiaGameOver({
                               context={{
                                 target: { kind: "question", id: e.questionId },
                                 title: primary === "de" ? e.de : e.en,
-                                category: e.categoryIndex + 1,
                                 surface: "game",
                                 language: lang,
                               }}

@@ -1,0 +1,381 @@
+{
+ "article": "a1081",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jim_Morrison",
+   "title": "Jim Morrison – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:30.282Z",
+   "snapshot": "b5e625ed1c5b4c0fb51ed3d223ffe5c51c1119b6dbeb696523575beca8a3412c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Cimeti%C3%A8re_du_P%C3%A8re-Lachaise",
+   "title": "Cimetière du Père-Lachaise",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:27.430Z",
+   "snapshot": "424921f457d0501ca8ef87b9edfec5bfbc920fcea5d5089eec2919f517af978c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ludwig_van_Beethoven",
+   "title": "Ludwig van Beethoven – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:28.719Z",
+   "snapshot": "a23772599e038feb5e7811986bffcbba1bef5f15a6ad59d3205a78d06460b714"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:31.308Z",
+   "snapshot": "f7cafcb56277ed294198d7ce8f5af34ff826b16b340f558698da8f0767442936"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Elvis_Presley",
+   "title": "Elvis Presley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:32.313Z",
+   "snapshot": "f02b7c9d67a096391ad7b7c5f815f5805bbb06e96d09e566cef976f7e597ac04"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Johann_Sebastian_Bach",
+   "title": "Johann Sebastian Bach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:29.725Z",
+   "snapshot": "7260cab0331a14de5c177209a6f887bff9c7ec48ed0b80e0009b5ede49c52067"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:33.282Z",
+   "snapshot": "0fd30e00f8bf45e36129990e47f6c7ef151deb5033ff7344b06acc3269cd1626"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
+   "title": "George Frideric Handel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:34.240Z",
+   "snapshot": "43c1b0e29f9abe1234ad345a8a4abb6f8f2dc506a828eed17fff4b174749df84"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-286"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Memphis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Leipzig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f05404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Leipzig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 30"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f05405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "London",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1971, Morrison died unexpectedly in a Paris apartment at the age of 27, amid several conflicting witness reports.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Cimetière du Père-Lachaise [simtjɛʁ dy pɛʁ laˈʃɛz] ist mit einer Fläche von 43 Hektar der größte Friedhof von Paris und zugleich die erste als Parkfriedhof angelegte Begräbnisstelle der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "März 1827 in Wien, Kaisertum Österreich) war ein deutscher Komponist und Pianist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wien” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At age 21, he moved to Vienna, which became his base, and studied composition with Joseph Haydn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Presley was born in Tupelo, Mississippi; his family moved to Memphis, Tennessee, when he was 13.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Memphis” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Juli 1750 in Leipzig, Kurfürstentum Sachsen) war ein deutscher Komponist, Organist, Cembalist und Violinist des Barock.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipzig” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "By 1723 he was hired as Thomaskantor, church music director of the city of Leipzig and thus responsible for music in four Lutheran city churches and for the St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipzig” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:29.689Z",
+   "target": "f05405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Born in Halle, Handel spent his early life in Hamburg and Italy before settling in London in 1712, where he spent the bulk of his career and became a naturalised British subject in 1727.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London” is on the snapshot of s8"
+  }
+ ]
+}

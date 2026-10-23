@@ -1,0 +1,242 @@
+{
+ "article": "a1970",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sturm_und_Drang",
+   "title": "Sturm und Drang – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:44.264Z",
+   "snapshot": "13b58fb86848458260e0e46fa044a1bbf1f8589f3b2451d4c692dded204f45d8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Aufkl%C3%A4rung_(Literatur)",
+   "title": "Aufklärung (Literatur) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:51.231Z",
+   "snapshot": "4cbf4fecbc7e8ccb0a7658c779470077fdf00b24a9a478fa33e5a7296a4d0986"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Romantik",
+   "title": "Romantik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:52.118Z",
+   "snapshot": "c1a7850035f1c7a49355d62121296a922241711ffa52de4c4512aa52efcbcd4f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Naturalismus_(Literatur)",
+   "title": "Naturalismus (Literatur) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:53.206Z",
+   "snapshot": "b7db301f4e9dcf03e92c6f51f32cf18de6ee6e9004a7635e84f508e7429823f9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Leiden_des_jungen_Werthers",
+   "title": "Die Leiden des jungen Werthers",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:54.525Z",
+   "snapshot": "68a0c05dfc4a61378a49cf8d76dbf3c4f5f145c8eaf017346f6a23741ce5d7cc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sturm und Drang",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aufklärung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Romantik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Naturalismus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Leiden des jungen Werthers",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-302"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:56.781Z",
+   "target": "f09846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sturm und Drang war eine Strömung der deutschen Literatur in der Epoche der Aufklärung, die etwa von 1765 bis 1785 hauptsächlich von jungen, etwa 20- bis 30-jährigen Autoren getragen wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sturm und Drang” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:56.781Z",
+   "target": "f09847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Literatur der Aufklärung oder Aufklärungsliteratur werden allgemein Werke zugeordnet, die zwischen 1720 und 1800 entstanden sind und bewusst oder unbewusst die Ideen des Zeitalters der Aufklärung vertreten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aufklärung” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:56.781Z",
+   "target": "f09849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Romantik ist eine kulturgeschichtliche Epoche, die vom Ende des 18.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romantik” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:56.781Z",
+   "target": "f09850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Naturalismus (von lateinisch naturalis  ‚natürlich‘) ist eine Strömung in Literatur und Theater von etwa 1880 bis ins 20.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Naturalismus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:56.781Z",
+   "target": "f12664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Leiden des jungen Werthers (später auch Die Leiden des jungen Werther) lautet der ursprüngliche Titel des von Johann Wolfgang Goethe verfassten Briefromans, in dem der junge Rechtspraktikant Werther bis zu seinem Suizid über seine unglückliche Liebesbeziehung zu Lotte schreibt, die zunächst mit",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:56.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Leiden des jungen Werthers” is on the snapshot of s5"
+  }
+ ]
+}

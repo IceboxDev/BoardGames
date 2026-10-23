@@ -1,0 +1,392 @@
+{
+ "id": "a2088",
+ "domain": "technology",
+ "sub": "tech-terms",
+ "titleEn": "DOS, BIOS, RAM: The Alphabet of the Personal Computer",
+ "titleDe": "DOS, BIOS, RAM: Das Alphabet des Personal Computers",
+ "titleRu": "DOS, BIOS, RAM: алфавит персонального компьютера",
+ "bodyEn": "The personal computer arrived speaking in initials. Anyone who switched on an IBM PC in the 1980s met a screen full of three-letter abbreviations, and most of them are still with us, printed on the boxes of laptops and phones that have nothing else in common with that beige machine.\n\n**DOS** stands for **Disk Operating System**, the family of operating systems that loaded from a floppy disk and offered the user nothing but a blinking prompt and a command line. When IBM was preparing its first PC in 1980, it turned to Microsoft for software, and Microsoft, which had no operating system of its own, bought one. The product was 86-DOS, written by Tim Paterson at Seattle Computer Products and originally called QDOS, the “quick and dirty operating system”. Microsoft paid about 75,000 dollars for it, licensed it to IBM as PC DOS and sold it to every other manufacturer as MS-DOS. For more than a decade commands such as DIR, COPY and FORMAT C: were the first thing a PC user learned, and MS-DOS lived on underneath consumer Windows until Windows Me in 2000. IBM's first PC went on sale on 12 August 1981, and the first operating system installed on it was MS-DOS, which IBM sold under its own name, PC DOS. Windows itself began as a graphical shell on top of DOS: Windows 1.0 appeared on 20 November 1985, and Windows 10 followed on 29 July 2015, 30 years later, give or take a few months.\n\nBefore DOS could load, something had to wake the machine up. That was the **BIOS**, the **Basic Input/Output System**, a small program stored in a read-only chip on the motherboard that tests the hardware, finds a disk to boot from and provides the most elementary routines for the keyboard, screen and drives. Gary Kildall coined the term for his CP/M operating system in 1975, and the IBM PC's BIOS became so central to the machine that rival manufacturers had to reverse-engineer it in a clean room before they could sell compatible computers.\n\nTwo more abbreviations describe the hardware the BIOS tests. **RAM** is **Random Access Memory**, the working memory in which running programs and their data are held; it can be read and written in any order, hence “random access”, and it forgets everything when the power is switched off. The original IBM PC shipped with as little as 16 kilobytes of it; the first commercially available memory chip of the modern kind, Intel's 1103 DRAM, had appeared in October 1970 – but the company's very first product, in 1969, had already been a RAM: the 64-bit 3101. The **CPU**, the **Central Processing Unit**, is the processor that carries out the instructions of a program, and the chip in that first PC was an Intel 8088, introduced on 1 June 1979 and running at 4.77 megahertz, a distant ancestor of the multi-core processors in a modern laptop. The family line begins with the Intel 4004, the first commercial microprocessor, launched on 15 November 1971.\n\nThe youngest of the five abbreviations solved a problem that plagued every PC of the DOS era: the tangle of incompatible plugs for keyboards, mice, printers and modems. In January 1996 a group of companies led by Intel, whose engineer Ajay Bhatt is usually credited with the idea, published the specification of the **USB**, the **Universal Serial Bus**, a single connector and protocol for almost every peripheral. USB 2.0 raised the top speed to 480 megabits per second in April 2000, and the reversible USB-C plug of 2014 has since spread from computers to phones, cameras and even the charging cables of the European Union.\n\n| Abbreviation | Expansion | Introduced |\n|---|---|---|\n| DOS | Disk Operating System | 1981 (PC DOS 1.0) |\n| BIOS | Basic Input/Output System | 1975 (CP/M) |\n| RAM | Random Access Memory | 1960s |\n| CPU | Central Processing Unit | 1950s |\n| USB | Universal Serial Bus | 1996 |",
+ "bodyDe": "Der Personal Computer kam in Abkürzungen sprechend zur Welt. Wer in den 1980er-Jahren einen IBM PC einschaltete, sah einen Bildschirm voller Dreibuchstabenkürzel, und die meisten davon begleiten uns bis heute, gedruckt auf die Verpackungen von Laptops und Telefonen, die sonst nichts mit jener beigen Maschine gemein haben.\n\n**DOS** steht für **Disk Operating System**, jene Familie von Betriebssystemen, die von einer Diskette geladen wurden und dem Benutzer nichts als einen blinkenden Prompt und eine Kommandozeile boten. Als IBM 1980 seinen ersten PC vorbereitete, wandte sich das Unternehmen für die Software an Microsoft, und Microsoft, das kein eigenes Betriebssystem hatte, kaufte eines. Das Produkt war 86-DOS, geschrieben von Tim Paterson bei Seattle Computer Products und ursprünglich QDOS genannt, das „quick and dirty operating system“. Microsoft zahlte rund 75.000 Dollar dafür, lizenzierte es als PC DOS an IBM und verkaufte es als MS-DOS an alle anderen Hersteller. Über ein Jahrzehnt lang waren Befehle wie DIR, COPY und FORMAT C: das Erste, was ein PC-Benutzer lernte, und MS-DOS lebte unter den Verbraucher-Versionen von Windows bis zu Windows Me im Jahr 2000 weiter. IBMs erster PC kam am 12. August 1981 auf den Markt, und das erste darauf installierte Betriebssystem war MS-DOS, das IBM unter eigenem Namen als PC DOS verkaufte. Windows selbst begann als grafische Oberfläche auf DOS: Windows 1.0 erschien am 20. November 1985, Windows 10 folgte am 29. Juli 2015, knapp 30 Jahre später.\n\nBevor DOS laden konnte, musste etwas die Maschine wecken. Das war das **BIOS**, das **Basic Input/Output System**, ein kleines Programm in einem Nur-Lese-Chip auf der Hauptplatine, das die Hardware prüft, ein Laufwerk zum Starten sucht und die elementarsten Routinen für Tastatur, Bildschirm und Laufwerke bereitstellt. Gary Kildall prägte den Begriff 1975 für sein Betriebssystem CP/M, und das BIOS des IBM PC wurde so zentral für die Maschine, dass konkurrierende Hersteller es in einem Reinraum nachbauen mussten, bevor sie kompatible Computer verkaufen konnten.\n\nZwei weitere Abkürzungen beschreiben die Hardware, die das BIOS prüft. **RAM** ist der **Random Access Memory**, der Arbeitsspeicher, in dem laufende Programme und ihre Daten gehalten werden; er kann in beliebiger Reihenfolge gelesen und beschrieben werden, daher „random access“, und er vergisst alles, sobald der Strom abgeschaltet wird. Der ursprüngliche IBM PC wurde mit gerade einmal 16 Kilobyte davon ausgeliefert; der erste kommerziell erhältliche Speicherchip moderner Bauart, Intels DRAM 1103, war im Oktober 1970 erschienen – doch schon das allererste Produkt der Firma war 1969 ein RAM gewesen: der 64-Bit-Chip 3101. Die **CPU**, die **Central Processing Unit**, ist der Prozessor, der die Befehle eines Programms ausführt, und der Chip in jenem ersten PC war ein am 1. Juni 1979 vorgestellter Intel 8088 mit 4,77 Megahertz, ein ferner Vorfahr der Mehrkernprozessoren in einem modernen Laptop. Die Ahnenreihe beginnt mit dem Intel 4004, dem ersten kommerziellen Mikroprozessor, der am 15. November 1971 auf den Markt kam.\n\nDie jüngste der fünf Abkürzungen löste ein Problem, das jeden PC der DOS-Ära plagte: das Gewirr inkompatibler Stecker für Tastaturen, Mäuse, Drucker und Modems. Im Januar 1996 veröffentlichte eine Gruppe von Unternehmen unter Führung von Intel, dessen Ingenieur Ajay Bhatt gewöhnlich die Idee zugeschrieben wird, die Spezifikation des **USB**, des **Universal Serial Bus**, eines einzigen Steckers und Protokolls für fast jedes Peripheriegerät. USB 2.0 hob die Höchstgeschwindigkeit im April 2000 auf 480 Megabit pro Sekunde, und der beidseitig einsteckbare USB-C-Stecker von 2014 hat sich seither von Computern auf Telefone, Kameras und sogar die Ladekabel der Europäischen Union ausgebreitet.\n\n| Abkürzung | Bedeutung | Eingeführt |\n|---|---|---|\n| DOS | Disk Operating System | 1981 (PC DOS 1.0) |\n| BIOS | Basic Input/Output System | 1975 (CP/M) |\n| RAM | Random Access Memory | 1960er-Jahre |\n| CPU | Central Processing Unit | 1950er-Jahre |\n| USB | Universal Serial Bus | 1996 |",
+ "bodyRu": "Персональный компьютер пришёл в мир, говоря аббревиатурами. Каждый, кто в 1980-е включал IBM PC, видел экран, полный трёхбуквенных сокращений, и большинство из них с нами до сих пор — они напечатаны на коробках ноутбуков и телефонов, у которых больше ничего общего с той бежевой машиной нет.\n\n**DOS** означает **Disk Operating System** — семейство операционных систем, загружавшихся с дискеты и не предлагавших пользователю ничего, кроме мигающего приглашения и командной строки. Когда IBM в 1980 году готовила свой первый ПК, она обратилась за программами к Microsoft, а у Microsoft собственной операционной системы не было, и она её купила. Это была 86-DOS, написанная Тимом Патерсоном в Seattle Computer Products и первоначально называвшаяся QDOS — «quick and dirty operating system», «быстрая и грязная операционная система». Microsoft заплатила за неё около 75 000 долларов, лицензировала её IBM как PC DOS и продавала всем остальным производителям как MS-DOS. Больше десяти лет команды вроде DIR, COPY и FORMAT C: были первым, что осваивал пользователь ПК, а MS-DOS жила под потребительскими версиями Windows вплоть до Windows Me в 2000 году. Первый ПК IBM поступил в продажу 12 августа 1981 года, и первой установленной на нём операционной системой была MS-DOS, которую IBM продавала под собственным названием PC DOS. Сама Windows начиналась как графическая оболочка поверх DOS: Windows 1.0 вышла 20 ноября 1985 года, а Windows 10 последовала 29 июля 2015 года — примерно 30 лет спустя, плюс-минус несколько месяцев.\n\nПрежде чем загрузится DOS, что-то должно разбудить машину. Это делала **BIOS** — **Basic Input/Output System**, небольшая программа в микросхеме постоянной памяти на материнской плате, которая проверяет оборудование, находит диск для загрузки и предоставляет самые элементарные процедуры для клавиатуры, экрана и дисководов. Термин придумал Гэри Килдалл в 1975 году для своей операционной системы CP/M, а BIOS IBM PC стала настолько важной частью машины, что конкурентам пришлось воссоздавать её методом «чистой комнаты», прежде чем продавать совместимые компьютеры.\n\nЕщё две аббревиатуры описывают оборудование, которое проверяет BIOS. **RAM** — это **Random Access Memory**, оперативная память, в которой хранятся работающие программы и их данные; читать и записывать её можно в любом порядке, отсюда «произвольный доступ», и при отключении питания она всё забывает. Первый IBM PC поставлялся всего с 16 килобайтами такой памяти; первая коммерчески доступная микросхема памяти современного типа, DRAM Intel 1103, появилась в октябре 1970 года — но самым первым продуктом компании ещё в 1969 году тоже была RAM: 64-битная микросхема 3101. **CPU** — **Central Processing Unit**, центральный процессор, выполняющий команды программы; в том первом ПК стоял Intel 8088, представленный 1 июня 1979 года и работавший на частоте 4,77 мегагерца, — далёкий предок многоядерных процессоров современного ноутбука. Родословная начинается с Intel 4004, первого коммерческого микропроцессора, выпущенного 15 ноября 1971 года.\n\nСамая молодая из пяти аббревиатур решила проблему, мучившую каждый ПК эпохи DOS: путаницу несовместимых разъёмов для клавиатур, мышей, принтеров и модемов. В январе 1996 года группа компаний во главе с Intel, чьему инженеру Аджаю Бхатту обычно приписывают идею, опубликовала спецификацию **USB** — **Universal Serial Bus**, единого разъёма и протокола почти для любой периферии. USB 2.0 в апреле 2000 года подняла максимальную скорость до 480 мегабит в секунду, а симметричный разъём USB-C 2014 года с тех пор распространился с компьютеров на телефоны, камеры и даже на зарядные кабели Европейского союза.\n\n| Аббревиатура | Расшифровка | Появление |\n|---|---|---|\n| DOS | Disk Operating System | 1981 (PC DOS 1.0) |\n| BIOS | Basic Input/Output System | 1975 (CP/M) |\n| RAM | Random Access Memory | 1960-е |\n| CPU | Central Processing Unit | 1950-е |\n| USB | Universal Serial Bus | 1996 |",
+ "notesEn": "IBM shipped MS-DOS under its own name, PC DOS 1.0 – “PC DOS” is also accepted. Windows 1.0 (20 November 1985) to Windows 10 (29 July 2015) is 29 years and 8 months, i.e. about 30 years.",
+ "notesDe": "IBM lieferte MS-DOS unter eigenem Namen als PC DOS 1.0 aus – „PC DOS“ gilt ebenfalls. Von Windows 1.0 (20. November 1985) bis Windows 10 (29. Juli 2015) vergingen 29 Jahre und 8 Monate, also rund 30 Jahre.",
+ "notesRu": "IBM поставляла MS-DOS под собственным названием PC DOS 1.0 — ответ «PC DOS» тоже засчитывается. От Windows 1.0 (20 ноября 1985 года) до Windows 10 (29 июля 2015 года) прошло 29 лет и 8 месяцев, то есть около 30 лет.",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/IBM_PC_5150.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/IBM_Personal_Computer",
+   "width": 962,
+   "height": 708,
+   "alt": {
+    "en": "The IBM PC 5150 with monitor and keyboard",
+    "de": "Der IBM PC 5150 mit Monitor und Tastatur",
+    "ru": "IBM PC 5150 с монитором и клавиатурой"
+   },
+   "caption": {
+    "en": "The original IBM PC (model 5150) of August 1981, which ran Microsoft's DOS – sold by IBM as PC DOS – and an Intel 8088 CPU.",
+    "de": "Der ursprüngliche IBM PC (Modell 5150) vom August 1981 mit Microsofts DOS – von IBM als PC DOS verkauft – und einer Intel-8088-CPU.",
+    "ru": "Первый IBM PC (модель 5150) августа 1981 года с DOS от Microsoft, которую IBM продавала как PC DOS, и процессором Intel 8088."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/KL_Intel_TD8088.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Intel_8088",
+   "width": 1479,
+   "height": 786,
+   "alt": {
+    "en": "An Intel 8088 microprocessor chip",
+    "de": "Ein Intel-8088-Mikroprozessor",
+    "ru": "Микропроцессор Intel 8088"
+   },
+   "caption": {
+    "en": "The Intel 8088, the CPU of the first IBM PC, introduced on 1 June 1979 and clocked there at 4.77 megahertz.",
+    "de": "Der Intel 8088, die CPU des ersten IBM PC, vorgestellt am 1. Juni 1979 und dort mit 4,77 Megahertz getaktet.",
+    "ru": "Intel 8088 — центральный процессор первого IBM PC, представленный 1 июня 1979 года и работавший в нём на частоте 4,77 мегагерца."
+   },
+   "credit": "Konstantin Lanzet, Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f10436",
+   "answerEn": "Disk Operating System",
+   "answerDe": "Disk Operating System",
+   "answerRu": "Disk Operating System",
+   "spans": {
+    "en": [
+     306,
+     21
+    ],
+    "de": [
+     345,
+     21
+    ],
+    "ru": [
+     312,
+     21
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1981-08-12",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The IBM PC goes on sale with PC DOS",
+    "labelDe": "Der IBM PC kommt mit PC DOS auf den Markt",
+    "labelRu": "IBM PC поступает в продажу с PC DOS"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/IBM_Personal_Computer",
+    "title": "IBM Personal Computer – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w10436",
+     "en": "What does DOS stand for?",
+     "de": "Wofür steht DOS?",
+     "ru": "Что означает DOS?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c174",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f10437",
+   "answerEn": "Basic Input/Output System",
+   "answerDe": "Basic Input/Output System",
+   "answerRu": "Basic Input/Output System",
+   "spans": {
+    "en": [
+     1486,
+     25
+    ],
+    "de": [
+     1596,
+     25
+    ],
+    "ru": [
+     1608,
+     25
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1975",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gary Kildall coins „BIOS“ for his CP/M operating system",
+    "labelDe": "Gary Kildall prägt „BIOS“ für sein Betriebssystem CP/M",
+    "labelRu": "Гэри Килдалл вводит термин «BIOS» для своей ОС CP/M"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/BIOS",
+    "title": "BIOS – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w10437",
+     "en": "What does BIOS stand for?",
+     "de": "Wofür steht BIOS?",
+     "ru": "Что означает BIOS?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f14157",
+   "answerEn": "MS-DOS",
+   "answerDe": "MS-DOS",
+   "answerRu": "MS-DOS",
+   "spans": {
+    "en": [
+     1161,
+     6
+    ],
+    "de": [
+     1293,
+     6
+    ],
+    "ru": [
+     1261,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1981-08",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "IBM announces PC DOS 1.0, its branded version of Microsoft's MS-DOS, for the IBM PC",
+    "labelDe": "IBM kündigt PC DOS 1.0, seine Markenversion von Microsofts MS-DOS, für den IBM PC an",
+    "labelRu": "IBM анонсирует PC DOS 1.0 — свою версию MS-DOS от Microsoft — для IBM PC"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/PC_DOS",
+    "title": "PC DOS",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14441",
+     "en": "What was the name of the first operating system installed on IBM's first PC in 1981?",
+     "de": "Wie hieß das erste Betriebssystem, das 1981 auf dem ersten PC von IBM installiert wurde?",
+     "ru": "Как называлась первая операционная система, установленная в 1981 году на первом ПК IBM?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-268",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "risk:superlative",
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q47604",
+     "label": "MS-DOS",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f14158",
+   "answerEn": "30 years",
+   "answerDe": "30 Jahre",
+   "answerRu": "30 лет",
+   "spans": {
+    "en": [
+     1352,
+     8
+    ],
+    "de": [
+     1492,
+     8
+    ],
+    "ru": [
+     1479,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "period",
+    "start": "1985-11-20",
+    "end": "2015-07-29",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Microsoft Windows from version 1.0 (20 Nov 1985) to Windows 10 (29 Jul 2015)",
+    "labelDe": "Microsoft Windows von Version 1.0 (20. Nov. 1985) bis Windows 10 (29. Juli 2015)",
+    "labelRu": "Microsoft Windows от версии 1.0 (20 ноября 1985) до Windows 10 (29 июля 2015)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Microsoft_Windows",
+    "title": "Microsoft Windows",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14442",
+     "en": "How many years passed between the release of Microsoft Windows 1.0 and Windows 10?",
+     "de": "Wie viele Jahre lagen zwischen der Veröffentlichung von Microsoft Windows 1.0 und Windows 10?",
+     "ru": "Сколько лет прошло между выходом Microsoft Windows 1.0 и Windows 10?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-320",
+      "category": 5
+     },
+     "cardText": "Wie lange benötigte Microsoft Windows für seinen Weg von 1.0 zu 10.0: 20, 25 oder 30 Jahre?"
+    }
+   ],
+   "tags": [
+    "risk:number",
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q58378",
+     "label": "Windows 1.0",
+     "role": "mentioned"
+    }
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f10438",
+   "answerEn": "Random Access Memory",
+   "answerDe": "Random Access Memory",
+   "timeline": {
+    "kind": "event",
+    "start": "1969",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Intel's first product, the 3101, a 64-bit static RAM chip, is released",
+    "labelDe": "Intels erstes Produkt, der 3101, ein statischer 64-Bit-RAM-Chip, kommt heraus"
+   },
+   "source": {
+    "url": "https://www.righto.com/2017/07/inside-intels-first-product-3101-ram.html",
+    "title": "Inside Intel's first product: the 3101 RAM chip held just 64 bits – Ken Shirriff's blog",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w10438",
+     "en": "What does RAM stand for?",
+     "de": "Wofür steht RAM?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f04436; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f04436"
+    ]
+   }
+  },
+  {
+   "id": "f10439",
+   "answerEn": "Central Processing Unit",
+   "answerDe": "Central Processing Unit",
+   "timeline": {
+    "kind": "event",
+    "start": "1979-06-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Intel introduces the 8088, later the processor of the first IBM PC",
+    "labelDe": "Intel stellt den 8088 vor, später der Prozessor des ersten IBM-PC"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Intel_8088",
+    "title": "Intel 8088 – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w10439",
+     "en": "What does CPU stand for?",
+     "de": "Wofür steht CPU?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f04438; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f04438"
+    ]
+   }
+  },
+  {
+   "id": "f10440",
+   "answerEn": "Universal Serial Bus",
+   "answerDe": "Universal Serial Bus",
+   "timeline": {
+    "kind": "event",
+    "start": "2000-04",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "USB 2.0 raises the Universal Serial Bus to 480 Mbit/s",
+    "labelDe": "USB 2.0 hebt den Universal Serial Bus auf 480 Mbit/s"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/USB",
+    "title": "USB – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w10440",
+     "en": "What does USB stand for?",
+     "de": "Wofür steht USB?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f02159, f09296; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f02159",
+     "f09296"
+    ]
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/operating-systems",
+  "topic:language/abbreviations",
+  "audience:international"
+ ]
+}

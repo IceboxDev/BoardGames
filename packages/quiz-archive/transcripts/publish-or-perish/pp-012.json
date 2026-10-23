@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-012",
+ "image": "IMG20261022010730.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardText": "[Archaeology] Which ancient civilization built the Machu Picchu complex?\nA. The Aztecs\nB. The Mayans\nC. The Incas\nAnswer: C. Machu Picchu is an ancient Incan city set high in the Andes Mountains in Peru. This complex was so well hidden in the mountains that it was not known to the Spanish people during the colonial period and was only brought to international attention in the early 20th century.",
+   "discipline": "Archaeology",
+   "en": "Which civilization built the Machu Picchu complex high in the Andes of Peru?",
+   "de": "Welche Zivilisation erbaute die Anlage Machu Picchu hoch in den Anden Perus?",
+   "reworked": true,
+   "answerEn": "The Incas",
+   "answerDe": "Die Inka",
+   "timeline": {
+    "kind": "creation",
+    "start": "1450",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Construction of Machu Picchu begins, probably as an estate of the Inca emperor Pachacuti",
+    "labelDe": "Baubeginn von Machu Picchu, vermutlich als Landsitz des Inka-Herrschers Pachacútec"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Machu_Picchu",
+    "title": "Machu Picchu – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "medieval"
+  },
+  {
+   "category": 2,
+   "cardText": "[Astronomy] What is the only planet that spins clockwise?\nA. Venus B. Mars C. Uranus\nAnswer: A. Venus is the only planet in our solar system that rotates clockwise, also known as a retrograde rotation.",
+   "discipline": "Astronomy",
+   "en": "Which planet spins clockwise (retrograde) so slowly that its day lasts longer than its year?",
+   "de": "Welcher Planet dreht sich so langsam im Uhrzeigersinn (retrograd), dass sein Tag länger dauert als sein Jahr?",
+   "reworked": true,
+   "answerEn": "Venus",
+   "answerDe": "Venus",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1963",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Goldstein and Carpenter's radar measurements give the first estimate of Venus's retrograde rotation period",
+    "labelDe": "Radarmessungen von Goldstein und Carpenter liefern die erste Schätzung der rückläufigen Rotationsdauer der Venus"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Venus",
+    "title": "Venus – Wikipedia",
+    "lang": "en"
+   },
+   "notes": "The card's 'only planet' is not strictly true: Uranus also has a retrograde rotation (axial tilt ~98°). Reworded to the unique fact: Venus's sidereal day (243 Earth days) is longer than its year (224.7 days).",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  }
+ ]
+}

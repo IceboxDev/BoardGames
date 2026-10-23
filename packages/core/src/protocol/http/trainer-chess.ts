@@ -15,6 +15,8 @@ import {
   TreeSettingsSchema,
   TreeStatsSchema,
 } from "../../games/chess/trainer/tree.ts";
+import { DateKeyStringSchema } from "./collection.ts";
+import { SrsStateKindSchema } from "./trainer-quiz.ts";
 
 /** Games per upload. */
 export const CHESS_GAMES_PER_UPLOAD = 1000;
@@ -120,4 +122,141 @@ export type LibraryResponse = z.infer<typeof LibraryResponseSchema>;
 export const UpdateLibraryBodySchema = z.object({
   expectedVersion: z.number().int().min(0),
   library: LibrarySchema,
+});
+
+// ── Drill (your moves, spaced repetition) ─────────────────────────────
+//
+// One shared-trainer deck per colour (`chess-w`, `chess-b`, migration 0043's
+// tables). A card is a position where it is your move in that colour's tree,
+// keyed by its position key (`engine/fen.ts:positionKey`); the move to play
+// is the tree's, so cards follow the tree as it changes.
+
+export const MAX_CHESS_DRILL_BULK = 200;
+
+/** A position key: placement, side to move, castling, en passant. */
+export const ChessCardIdSchema = z
+  .string()
+  .max(100)
+  .regex(
+    /^[pnbrqkPNBRQK1-8/]+ [wb] (-|K?Q?k?q?) (-|[a-h][36])$/,
+    "Expected a position key like 'rnbqkbnr/… w KQkq -'",
+  );
+
+export const ChessDrillGradeSchema = z.enum(["again", "hard", "good", "easy"]);
+
+export const ChessDrillStateSchema = z.object({
+  /** The card id (the shared scheduler calls every item a question). */
+  questionId: ChessCardIdSchema,
+  state: SrsStateKindSchema,
+  ease: z.number(),
+  intervalDays: z.number().int().nonnegative(),
+  dueDate: DateKeyStringSchema,
+  reps: z.number().int().nonnegative(),
+  lapses: z.number().int().nonnegative(),
+  lastReviewedAt: z.string().nullable(),
+  leech: z.boolean(),
+});
+export type ChessDrillStateWire = z.infer<typeof ChessDrillStateSchema>;
+
+export const ChessDrillOverviewQuerySchema = z.object({ today: DateKeyStringSchema });
+
+export const ChessDrillOverviewResponseSchema = z.object({
+  states: z.array(ChessDrillStateSchema),
+  today: z.object({
+    reviews: z.number().int().nonnegative(),
+    correct: z.number().int().nonnegative(),
+  }),
+  /** Cards answered for the first time today (the new-card budget's use). */
+  introducedToday: z.number().int().nonnegative(),
+  streak: z.object({
+    current: z.number().int().nonnegative(),
+    longest: z.number().int().nonnegative(),
+    studiedToday: z.boolean(),
+  }),
+  /** Share of non-"again" answers on review cards over the last 30 days, or null. */
+  retention30: z.number().min(0).max(1).nullable(),
+});
+export type ChessDrillOverview = z.infer<typeof ChessDrillOverviewResponseSchema>;
+
+/** What the answer was, kept for later analysis. */
+export const ChessDrillOutcomeSchema = z.object({
+  /** The move you played, or null when you asked to see it. */
+  played: z.string().max(5).nullable(),
+  expected: z.string().min(4).max(5),
+  hinted: z.boolean(),
+});
+
+export const ChessDrillReviewBodySchema = z.object({
+  clientId: z.string().min(8).max(64),
+  color: ChessColorSchema,
+  cardId: ChessCardIdSchema,
+  grade: ChessDrillGradeSchema,
+  localDate: DateKeyStringSchema,
+  durationMs: z.number().int().min(0).max(600_000).nullable().optional(),
+  reviewedAt: z.string().datetime({ offset: true }).optional(),
+  /** "drill": free practice; only reschedules a card that is due anyway. */
+  source: z.enum(["trainer", "drill"]).default("trainer"),
+  outcome: ChessDrillOutcomeSchema,
+});
+export type ChessDrillReviewBody = z.input<typeof ChessDrillReviewBodySchema>;
+
+export const ChessDrillReviewResponseSchema = z.object({
+  ok: z.literal(true),
+  existed: z.boolean(),
+  applied: z.boolean(),
+  state: ChessDrillStateSchema.nullable(),
+});
+
+export const ChessDrillBulkReviewsBodySchema = z.object({
+  reviews: z.array(ChessDrillReviewBodySchema).min(1).max(MAX_CHESS_DRILL_BULK),
+});
+export const ChessDrillBulkReviewsResponseSchema = z.object({
+  ok: z.literal(true),
+  applied: z.number().int().nonnegative(),
+  skipped: z.number().int().nonnegative(),
+  states: z.array(ChessDrillStateSchema),
+});
+
+// ── Explorer cache (lichess database answers, shared) ─────────────────
+//
+// lichess allows about one explorer request every three seconds, so each
+// position is fetched once and kept on the server for everyone
+// (`chess_explorer_cache`, migration 0064): the browser asks here first,
+// fetches only the misses from lichess, and saves them back.
+
+export const MAX_EXPLORER_LOOKUP = 200;
+export const MAX_EXPLORER_SAVE = 50;
+
+export const ExplorerMoveSchema = z.object({
+  uci: z.string().min(4).max(5),
+  white: z.number().int().nonnegative(),
+  draws: z.number().int().nonnegative(),
+  black: z.number().int().nonnegative(),
+});
+
+export const ExplorerAnswerSchema = z.object({
+  /** Games that reached the position. */
+  games: z.number().int().nonnegative(),
+  /** Its moves, most played first. */
+  moves: z.array(ExplorerMoveSchema).max(40),
+});
+export type ExplorerAnswer = z.infer<typeof ExplorerAnswerSchema>;
+
+export const ChessExplorerLookupBodySchema = z.object({
+  fens: z.array(z.string().min(10).max(100)).min(1).max(MAX_EXPLORER_LOOKUP),
+});
+export const ChessExplorerLookupResponseSchema = z.object({
+  /** Known answers, keyed by the request's FEN; the rest are misses. */
+  results: z.record(z.string(), ExplorerAnswerSchema.extend({ fetchedAt: z.string() })),
+});
+
+export const ChessExplorerSaveBodySchema = z.object({
+  entries: z
+    .array(ExplorerAnswerSchema.extend({ fen: z.string().min(10).max(100) }))
+    .min(1)
+    .max(MAX_EXPLORER_SAVE),
+});
+export const ChessExplorerSaveResponseSchema = z.object({
+  ok: z.literal(true),
+  saved: z.number().int().nonnegative(),
 });

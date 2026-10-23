@@ -214,7 +214,10 @@ function ConnectionDialog({
                   {c === "w" ? "♔ White" : "♚ Black"}
                 </span>
                 <span className="min-w-0 flex-1 truncate text-fg-secondary">
-                  {b ? buildLabel(b) : "Not created yet"}
+                  {b
+                    ? buildLabel(b) ||
+                      `Built · ${Object.keys(b.tree?.nodes ?? {}).length.toLocaleString()} positions`
+                    : "Not created yet"}
                 </span>
                 {b &&
                   (b.phase !== "idle" ? (

@@ -1,0 +1,287 @@
+{
+ "article": "a2372",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bayern",
+   "title": "Bayern",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:21.567Z",
+   "snapshot": "30108ec4de94e00dc3c16297ac6ff2cf487fce786f67cd3f94b127446dcf2a8d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gro%C3%9F-Hessen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:42.739Z",
+   "snapshot": "ac3e47df36c80353852028117a12055d8f081393e7e63adc159677334ddcd945"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/North_Rhine-Westphalia",
+   "title": "North Rhine-Westphalia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:14.018Z",
+   "snapshot": "d960ce7f72613cbf3f5e710c452df2c8835307cd9c692480d55b150ec2b2ef93"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Niedersachsen",
+   "title": "Niedersachsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:17.621Z",
+   "snapshot": "8c1afd180a6c9ce2603779ea49439d26de7695eb542786a12309cf5f0e95ff7a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Rheinland-Pfalz",
+   "title": "Rheinland-Pfalz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:44.071Z",
+   "snapshot": "c54bbcdec83fc75a7831d5301728d7b3cb48d48a56d98b162566397abfc732c5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Free_Hanseatic_City_of_Bremen",
+   "title": "Free Hanseatic City of Bremen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:41.026Z",
+   "snapshot": "14f70a4efcadd357ab35a621bdc0aeab88760241ed154f044cec3423e10843a6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die US-Militärregierung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-356"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "die US-Militärregierung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 5"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "North Rhine-Westphalia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Niedersachsen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rheinland-Pfalz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bremen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:07.145Z",
+   "target": "f12375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Da die US-Militärregierung entschieden gegen die Wiederherstellung einer Monarchie eingestellt war, verbot sie 1946 die wiedergegründete Bayerische Heimat- und Königspartei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die US-Militärregierung” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:07.145Z",
+   "target": "f12375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "die US-Militärregierung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die US-Militärregierung”, “the US military government”, “американская военная администрация”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:07.145Z",
+   "target": "f12376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "North Rhine-Westphalia or North-Rhine/Westphalia (German: Nordrhein-Westfalen [ˌnɔɐtʁaɪn vɛstˈfaːlən] ), commonly shortened to NRW, is a landlocked state (Land) in Western Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “North Rhine-Westphalia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:07.145Z",
+   "target": "f12377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Niedersachsen ([ˈniːdɐzaksn̩] ; niederdeutsch Neddersassen, saterfriesisch Läichsaksen, Landescode NI, Abkürzung Nds.; amtlich Land Niedersachsen) ist ein Land im Nordwesten der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Niedersachsen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:07.145Z",
+   "target": "f12378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rheinland-Pfalz ([ˈʁaɪ̯nlantˈp͡falt͡s] ; Abkürzung RP, oft auch RLP) ist ein Land im Südwesten der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rheinland-Pfalz” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:07.145Z",
+   "target": "f12379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bremen (German: [ˈbʁeːmən] ), officially the Free Hanseatic City of Bremen (German: Freie Hansestadt Bremen; Low German: Free Hansestadt Bremen), is the smallest and least populous of Germany's 16 states.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bremen” is on the snapshot of s6"
+  }
+ ]
+}

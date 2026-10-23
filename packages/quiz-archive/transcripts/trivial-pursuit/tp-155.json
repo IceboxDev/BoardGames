@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-155",
+ "image": "IMG20261007181858.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Griechenland ist, mit Stand 2016, das Land mit den meisten Weltkulturerbestätten. Richtig oder falsch?",
+   "de": "Welches Land hatte mit Stand 2016 die meisten Weltkulturerbestätten?",
+   "en": "Which country had the most World Heritage sites as of 2016?",
+   "reworked": true,
+   "answerDe": "Italien",
+   "answerEn": "Italy",
+   "timeline": {
+    "kind": "event",
+    "start": "2016",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Italy leads the UNESCO World Heritage List with 51 sites as of 2016, ahead of China (50)",
+    "labelDe": "Italien führt 2016 die UNESCO-Welterbeliste mit 51 Stätten an, vor China (50)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Welterbe_in_Italien",
+    "title": "Welterbe in Italien",
+    "lang": "de"
+   },
+   "notes": "Card statement is false (Greece had 18 sites by 2016). Counted from the inscription years in the de.wikipedia lists: Italy 51, China 50, Spain 45, Greece 18 sites inscribed up to 2016. China later drew level (both 55 in 2019).",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welche Stellung hat Montgomery „Scotty“ Scott auf dem Raumschiff Enterprise inne?",
+   "de": "Welche Stellung hat Montgomery „Scotty“ Scott auf dem Raumschiff Enterprise inne?",
+   "en": "What position does Montgomery \"Scotty\" Scott hold on the starship Enterprise?",
+   "reworked": false,
+   "answerDe": "Chefingenieur",
+   "answerEn": "Chief engineer",
+   "timeline": {
+    "kind": "period",
+    "start": "1966",
+    "end": "1969",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Original run of Star Trek (Raumschiff Enterprise), with James Doohan as chief engineer Scotty",
+    "labelDe": "Erstausstrahlung von Raumschiff Enterprise (Star Trek) mit James Doohan als Chefingenieur Scotty"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Figuren_im_Star-Trek-Universum",
+    "title": "Figuren im Star-Trek-Universum",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Für welche App, mit der Fotos und Videos geteilt werden, bezahlte Facebook 2012 rund eine Milliarde US-Dollar?",
+   "de": "Für welche App, mit der Fotos und Videos geteilt werden, bezahlte Facebook 2012 rund eine Milliarde US-Dollar?",
+   "en": "For which photo- and video-sharing app did Facebook pay around one billion US dollars in 2012?",
+   "reworked": false,
+   "answerDe": "Instagram",
+   "answerEn": "Instagram",
+   "timeline": {
+    "kind": "event",
+    "start": "2012-04",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Facebook announces it will buy Instagram for one billion dollars",
+    "labelDe": "Facebook kündigt die Übernahme von Instagram für eine Milliarde Dollar an"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Instagram",
+    "title": "Instagram",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt Hieronymus Boschs berühmtes Triptychon, das im Madrider Museo del Prado ausgestellt ist?",
+   "de": "Wie heißt Hieronymus Boschs berühmtes Triptychon, das im Madrider Museo del Prado ausgestellt ist?",
+   "en": "What is the name of Hieronymus Bosch's famous triptych displayed in Madrid's Museo del Prado?",
+   "reworked": false,
+   "answerDe": "Der Garten der Lüste",
+   "answerEn": "The Garden of Earthly Delights",
+   "timeline": {
+    "kind": "creation",
+    "start": "1490",
+    "end": "1500",
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Hieronymus Bosch paints the triptych The Garden of Earthly Delights",
+    "labelDe": "Hieronymus Bosch malt das Triptychon Der Garten der Lüste"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Der_Garten_der_L%C3%BCste_(Bosch)",
+    "title": "Der Garten der Lüste (Bosch)",
+    "lang": "de"
+   },
+   "notes": "The Prado also holds other Bosch works (e.g. the Haywain Triptych), but The Garden of Earthly Delights is the famous one meant here.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Rohe Bohnen sind giftig. Richtig oder falsch?",
+   "de": "Welcher Giftstoff macht rohe Bohnen giftig?",
+   "en": "Which toxin makes raw beans poisonous?",
+   "reworked": true,
+   "answerDe": "Phasin",
+   "answerEn": "Phasin (phytohaemagglutinin)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-6000",
+    "end": null,
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Oldest finds of the common bean, from the Guitarrero Cave in Peru (c. 6000 BC)",
+    "labelDe": "Älteste Funde der Gartenbohne aus der Guitarrero-Höhle in Peru (um 6000 v. Chr.)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gartenbohne",
+    "title": "Gartenbohne",
+    "lang": "de"
+   },
+   "notes": "Card statement is true. Phasin is a lectin (also called phytohaemagglutinin, PHA) that is destroyed by cooking.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welche Jagdwaffe ist das nationale Sportgerät des winzigen Himalaja-Königreichs Bhutan: der Bogen, der Bumerang oder das Netz?",
+   "de": "Welche Jagdwaffe ist das nationale Sportgerät des winzigen Himalaja-Königreichs Bhutan?",
+   "en": "Which hunting weapon is the national sporting implement of the tiny Himalayan kingdom of Bhutan?",
+   "reworked": true,
+   "answerDe": "Bogen",
+   "answerEn": "Bow",
+   "timeline": {
+    "kind": "event",
+    "start": "1971",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Archery is declared the national sport of Bhutan",
+    "labelDe": "Bogenschießen wird zum Nationalsport Bhutans erklärt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Archery_in_Bhutan",
+    "title": "Archery in Bhutan",
+    "lang": "en"
+   },
+   "notes": "Archery (Bogenschießen) is Bhutan's national sport; 'Pfeil und Bogen' also accepted.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

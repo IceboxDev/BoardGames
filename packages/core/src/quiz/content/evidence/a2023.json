@@ -1,0 +1,286 @@
+{
+ "article": "a2023",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hanseatic_League",
+   "title": "Hanseatic League – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:53.931Z",
+   "snapshot": "016e2a78d3233199003e303d8989f8bd76ad14782d8d7f227f273c066fe848f5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Steelyard",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:38.358Z",
+   "snapshot": "464977c4b702413ea46704ce74da8ef60c7c497afdd4ab4b5a361e37c66c56ca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kontor",
+   "title": "Kontor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:39.293Z",
+   "snapshot": "8388ebb7806047f49c126b47bfe97cdf55254dedd181acb8447d0c034262d2bb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bremen_cog",
+   "title": "Bremen cog – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:40.373Z",
+   "snapshot": "9fa3928d0d122d1e707e2dca7887605cb51d488286a2f7e2f182e6eb26fcda84"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Zunft",
+   "title": "Zunft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:38.131Z",
+   "snapshot": "8f328f2bf251c2a8788ea9993cf4e6b60166cb0cc3b19c1da22a4462abe6008c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Stalhof",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:38.631Z",
+   "snapshot": "6a749506f62a29529fd9af9ce282d7b5ba75f044415551121dd9ef0dd03497c1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hansas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hansas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kontore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Steelyard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zünfte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:08.334Z",
+   "target": "f10111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Well before the term Hanse appeared in a document in 1267, in different cities began to form guilds, or hansas, with the intention of trading with overseas towns, especially in the economically less-developed eastern Baltic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hansas” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:08.334Z",
+   "target": "f10111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hansas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Hansas”, “Hansen”, “Ганзы”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:08.334Z",
+   "target": "f10112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In addition to the kontore were less important trading posts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kontore” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:08.334Z",
+   "target": "f10113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Steelyard, from the Middle Low German Stâlhof (sample yard), was the kontor (foreign trading post) of the Hanseatic League in London, and their main trading base in England, between the 13th and 16th centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steelyard” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:08.334Z",
+   "target": "f10114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Bremen cog is a well-preserved wreck of a cog dated to 1380, found in 1962 in Bremen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cog” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:08.334Z",
+   "target": "f10115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Zünfte (von althochdeutsch (ge-)zumft ‚Gemeinschaft, Übereinkunft, Vertrag, Verbindung‘, einem Verbalabstraktum zu althochdeutsch (gi-)zëman ‚sich geziemen, angemessen sein‘) bezeichnet man ständische Körperschaften von Handwerkern, wie sie seit dem Mittelalter zur Wahrung gemeinsamer Interessen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:08.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zünfte” is on the snapshot of s5"
+  }
+ ]
+}

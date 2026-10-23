@@ -1,0 +1,256 @@
+{
+ "article": "a0520",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dogville",
+   "title": "Dogville – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:00.999Z",
+   "snapshot": "6c1f222f34323cab20e1c2dd3fe82032e675b2f96fbb93621c2c01f1a335ae3a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_D%C3%B6blin",
+   "title": "Alfred Döblin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:02.121Z",
+   "snapshot": "759db0cf3963504bebca4c6440f5facde8b996a6cc01885196ac4a11f83db76b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/G%C3%BCnter_Grass",
+   "title": "Günter Grass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:59.605Z",
+   "snapshot": "97f423730beb12033459e2216317893fab25e4b74d26781cc1f7040ae56ec22d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Perfume_(novel)",
+   "title": "Perfume (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:03.107Z",
+   "snapshot": "4fb4b3019e55202a772758dfa94f1ddeebb0357e2c111118580b3fb1f0c0fb75"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Death_in_Venice",
+   "title": "Death in Venice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:04.146Z",
+   "snapshot": "31ccdd97c0d2e48be4f6ae9d27e37083bb79e4ac8153c4a34dc1e37443da41e0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bertolt_Brecht",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:05.248Z",
+   "snapshot": "28d5fe309471386778d6df924b89ea26ba8920341ebefe2df74df6f7c9f133ea"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz_(miniseries)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:06.093Z",
+   "snapshot": "eb9d4b700e8c1c19a6926a1b7978b0a8eac9c1c7d53b02172b61e0526f164b76"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alfred Döblin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Günter Grass",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Patrick Süskind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thomas Mann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:01.491Z",
+   "target": "f02596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As such it is heavily influenced by the theatre of Bertolt Brecht.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:01.491Z",
+   "target": "f02597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bruno Alfred Döblin (German: [ˈalfʁeːt døːˈbliːn] ; 10 August 1878 – 26 June 1957) was a German novelist, essayist, and doctor, best known for his novel Berlin Alexanderplatz (1929).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Döblin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:01.491Z",
+   "target": "f02598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Blechtrommel Paris, nach dem Ende seiner Berliner Jahre Wewelsfleth in Schleswig-Holstein, schließlich Feriendomizile auf Møn und an der portugiesischen Algarve sowie als Wohnort und Schaffensmittelpunkt für seine drei letzten Lebensjahrzehnte Behlendorf, unweit Lübeck mit dem Günter-Grass-Haus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Grass” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:01.491Z",
+   "target": "f02599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Perfume: The Story of a Murderer (German: Das Parfum: Die Geschichte eines Mörders [das paʁˈfœ̃ː diː ɡəˈʃɪçtə ˈʔaɪnəs ˈmœʁdɐs] ) is a 1985 literary historical fantasy novel by German writer Patrick Süskind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Patrick Süskind” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:01.491Z",
+   "target": "f02600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Death in Venice (German: Der Tod in Venedig) is a novella by German author Thomas Mann, drawing in part on his own experience in Venice during the 1911 cholera epidemic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Mann” is on the snapshot of s5"
+  }
+ ]
+}

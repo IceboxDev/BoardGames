@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-100",
+ "image": "IMG20261007174756.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt das britische Gebiet, das an Spanien grenzt?",
+   "de": "Wie heißt das britische Gebiet, das an Spanien grenzt?",
+   "en": "What is the name of the British territory that borders Spain?",
+   "reworked": false,
+   "answerDe": "Gibraltar",
+   "answerEn": "Gibraltar",
+   "timeline": {
+    "kind": "event",
+    "start": "1713",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Treaty of Utrecht confirms British rule over Gibraltar, held since 1704",
+    "labelDe": "Der Frieden von Utrecht sichert Großbritannien Gibraltar zu, das es seit 1704 hält"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gibraltar",
+    "title": "Gibraltar",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welches Element gibt es nur in der Welt von „Star Trek“: Protactinium, Dubnium oder Dilithium?",
+   "de": "Welcher fiktive kristalline Stoff steuert in der Welt von „Star Trek“ die Materie-Antimaterie-Reaktoren der Raumschiffe?",
+   "en": "Which fictional crystalline material controls the starships' matter–antimatter reactors in the world of \"Star Trek\"?",
+   "reworked": true,
+   "answerDe": "Dilithium",
+   "answerEn": "Dilithium",
+   "timeline": {
+    "kind": "creation",
+    "start": "1966",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Dilithium crystals introduced as starship reactor fuel in Star Trek: The Original Series",
+    "labelDe": "Dilithiumkristalle werden in „Raumschiff Enterprise“ als Treibstoff der Schiffsreaktoren eingeführt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dilithium_(Star_Trek)",
+    "title": "Dilithium (Star Trek)",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice card reworked to an open question; Protactinium and Dubnium are real elements. Real-world dilithium (Li2) is a molecule, not an element.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die USA haben keine Zentralbank. Richtig oder falsch?",
+   "de": "Wie heißt das Zentralbanksystem der USA?",
+   "en": "What is the name of the central bank system of the USA?",
+   "reworked": true,
+   "answerDe": "Federal Reserve System",
+   "answerEn": "Federal Reserve System",
+   "timeline": {
+    "kind": "founding",
+    "start": "1913-12-23",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Federal Reserve System, the central bank of the United States, founded",
+    "labelDe": "Gründung des Federal Reserve Systems, der Zentralbank der Vereinigten Staaten"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Federal_Reserve_System",
+    "title": "Federal Reserve System",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: the USA's central bank is the Federal Reserve (\"Fed\").",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Gillian-Flynn-Bestseller wurde für einen Blockbuster-Thriller mit Ben Affleck und Rosamund Pike adaptiert?",
+   "de": "Welcher Gillian-Flynn-Bestseller wurde für einen Blockbuster-Thriller mit Ben Affleck und Rosamund Pike adaptiert?",
+   "en": "Which Gillian Flynn bestseller was adapted into a blockbuster thriller starring Ben Affleck and Rosamund Pike?",
+   "reworked": false,
+   "answerDe": "Gone Girl",
+   "answerEn": "Gone Girl",
+   "timeline": {
+    "kind": "creation",
+    "start": "2012",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gillian Flynn's thriller novel Gone Girl published (filmed by David Fincher in 2014)",
+    "labelDe": "Gillian Flynns Thriller „Gone Girl“ erscheint (2014 von David Fincher verfilmt)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gone_Girl_(film)",
+    "title": "Gone Girl (film)",
+    "lang": "en"
+   },
+   "notes": "German title: „Gone Girl – Das perfekte Opfer“.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Winkelsumme hat ein Fünfeck?",
+   "de": "Welche Winkelsumme hat ein Fünfeck?",
+   "en": "What is the sum of the interior angles of a pentagon?",
+   "reworked": false,
+   "answerDe": "540°",
+   "answerEn": "540°",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-300",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Euclid's Elements set out the angle sum of polygons, (n − 2) × 180°",
+    "labelDe": "Euklids „Elemente“ begründen die Winkelsumme von Vielecken, (n − 2) × 180°"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/F%C3%BCnfeck",
+    "title": "Fünfeck",
+    "lang": "de"
+   },
+   "notes": "(n − 2) · 180° = 3 · 180° = 540°; holds for any simple (convex or concave) pentagon.",
+   "domain": "science",
+   "sub": "maths"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißen drei der vier Spielfiguren, die sich diagonal auf einem Schachbrett bewegen können?",
+   "de": "Wie heißen drei der vier Spielfiguren, die sich diagonal auf einem Schachbrett bewegen können?",
+   "en": "Name three of the four chess pieces that can move diagonally on a chessboard.",
+   "reworked": false,
+   "answerDe": "König, Dame, Läufer, Bauer",
+   "answerEn": "King, queen, bishop, pawn",
+   "timeline": {
+    "kind": "era",
+    "start": "1475",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Late-15th-century reform of chess gives the bishop and queen their long diagonal moves",
+    "labelDe": "Schachreform Ende des 15. Jahrhunderts: Läufer und Dame erhalten ihre weiten Diagonalzüge"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schachfigur",
+    "title": "Schachfigur",
+    "lang": "de"
+   },
+   "notes": "Any three of the four count. The pawn moves diagonally only when capturing (including en passant).",
+   "domain": "sport-games",
+   "sub": "games"
+  }
+ ]
+}

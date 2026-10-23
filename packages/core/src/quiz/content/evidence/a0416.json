@@ -1,0 +1,480 @@
+{
+ "article": "a0416",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sphinx",
+   "title": "Sphinx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:30.511Z",
+   "snapshot": "70e08604feef8ce3a912b0d0ca00e556a6a9c96dcc5e9023271c190c8fec08e3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hemera",
+   "title": "Hemera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:31.475Z",
+   "snapshot": "4905c33bf3e7a10655b2880f194ee7ed9d3a22d6b378fd65a5e25d02147ee9f7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Homer",
+   "title": "Homer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:32.596Z",
+   "snapshot": "19674697b0ba990e2e2ffee2108d6aa5cf643d517298e799ed0d35143c6563c2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Oedipus_at_Colonus",
+   "title": "Oedipus at Colonus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:33.575Z",
+   "snapshot": "9b03770b67a5494cd4f87229976148d6ef06e101f1ef3371c63d9439e458a7ed"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Thebes,_Greece",
+   "title": "Thebes, Greece – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:34.575Z",
+   "snapshot": "42d423a5ea9e6ee27f3d0b8fbf64e63d52737fd11e3d7eec569eae982189e0eb"
+  },
+  "s6": {
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Athenaeus/10E*.html",
+   "title": "Athenaeus, Deipnosophistae Book X (trans. Gulick, Loeb)",
+   "publisher": "LacusCurtius (University of Chicago)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:57.132Z",
+   "snapshot": "3c129a109e991f494056d35628b117606aac89273405c05ee7915fd7e404ab83"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/files/348/348-h/348-h.htm",
+   "title": "Hesiod, the Homeric Hymns, and Homerica (trans. Evelyn-White): The Contest of Homer and Hesiod",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:57.533Z",
+   "snapshot": "e2de33cb6d982d4b885b77974e9144f412ad4eb65dbc313cb9cbff91996ed843"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Ios",
+   "title": "Ios",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:57.429Z",
+   "snapshot": "f01ae23641a2b8ac05167c52851350a64faabfd9ea1ec1937cab4f29e330ab3d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02076",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A human being",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Day and night",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02079",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oedipus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thebes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:45.078Z",
+   "target": "f02076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As a sphinx, it has the body of a lion and the head of a human being, and is not to be confused with Narasimha, the fourth incarnation of the deity Vishnu; this avatara or incarnation of Vishnu has a human body and the head of a lion and Vishnu as Narashima killed Hiranyakashipu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A human being” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:45.078Z",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Day and night",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Day and night”, “Tag und Nacht”, “День и ночь”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:45.078Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Lice”, “Läuse”, “Вши”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:45.078Z",
+   "target": "f02079",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oedipus at Colonus (also Oedipus Coloneus; Ancient Greek: Οἰδίπους ἐπὶ Κολωνῷ, Oidipous epi Kolōnō) is the second of the three Theban plays of the Athenian tragedian Sophocles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oedipus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:45.078Z",
+   "target": "f02080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Thebes ( THEEBZ; Greek: Θήβα, Thíva [ˈθiva]; Ancient Greek: Θῆβαι, Thêbai [tʰɛ̂ːbai̯]) is a city in Boeotia, Central Greece, and one of the oldest continuously inhabited cities in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thebes” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:12:04Z",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The answer is \"day and night\" (both words—ἡμέρα and νύξ, respectively—are feminine in Ancient Greek).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:12:06Z",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "he speaks of the night and the day in enigmatic language",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Athenaeus 10.451 quoting Theodectes' Oedipus: 'There be two sisters, of whom the one gives birth to the other, whole she herself, after giving birth, is brought forth by the other.'"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:12:08Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They then explained that they had caught nothing in fishing, but had been catching their lice",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:12:19Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The children were talking about lice.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The answer is \"day and night\" (both words—ἡμέρα and νύξ, respectively—are feminine in Ancient Greek).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "he speaks of the night and the day in enigmatic language",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They then explained that they had caught nothing in fishing, but had been catching their lice",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The children were talking about lice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Who are the two sisters?\" The answer is \"day and night\" (both words—ἡμέρα and νύξ, respectively—are feminine in Ancient Greek).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Day and night” is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "lice, and those of the lice which they caught, they left behind; but carried",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Lice” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:06.522Z",
+   "target": "f02078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The children were talking about lice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:06.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Lice” is on the snapshot of s8"
+  }
+ ]
+}

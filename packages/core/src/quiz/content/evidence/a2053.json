@@ -1,0 +1,242 @@
+{
+ "article": "a2053",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/2raumwohnung",
+   "title": "2raumwohnung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:23.502Z",
+   "snapshot": "89f03b9b28546d6222f3d3d16018c9ac69370ce1d722d4714750365b7ac104ec"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ideal_(Band)",
+   "title": "Ideal (Band) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:24.506Z",
+   "snapshot": "9758ee8f8dc2348eed14fd5d53dc9581bc6d59af6678276a12826c8392942979"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Deutsch-%C3%96sterreichisches_Feingef%C3%BChl",
+   "title": "Deutsch-Österreichisches Feingefühl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:25.508Z",
+   "snapshot": "d2484271c5149b17f70ad34b2168a1516a3d069d9a00819d711a8879097c1eb3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Humpe_&_Humpe",
+   "title": "Humpe & Humpe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:26.563Z",
+   "snapshot": "536bbe9221e18dacea57dcad609106fe71850d4a8ddfe57a6f605903eb7b2556"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ich_+_Ich",
+   "title": "Ich + Ich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:27.494Z",
+   "snapshot": "256530e448688699ee92cb25a9152948be0336b576d046144d03b72b036551ee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "2raumwohnung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ideal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "DÖF",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humpe & Humpe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ich + Ich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:14.377Z",
+   "target": "f10261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "2raumwohnung ist ein im Jahr 2000 gegründetes deutsches Elektropopduo aus Berlin, das aus der Sängerin Inga Humpe und ihrem Lebensgefährten Tommi Eckart besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2raumwohnung” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:14.377Z",
+   "target": "f10262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ideal war eine West-Berliner Band, die 1980 gegründet wurde und bis 1983 existierte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ideal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:14.377Z",
+   "target": "f10263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutsch-Österreichisches Feingefühl (DÖF) war ein der Neuen Deutschen Welle zugeordnetes Projekt, bestehend aus Joesi Prokopetz, Manfred O.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DÖF” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:14.377Z",
+   "target": "f10264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humpe & Humpe (auch Humpe • Humpe oder Inga & Anete Humpe) war der Name des gemeinsamen Musikprojektes der deutschen Musiker-Schwestern, Pop-Sängerinnen und Musikproduzentinnen Annette (* 1950) und Inga Humpe (* 1956).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Humpe & Humpe” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:14.377Z",
+   "target": "f10265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ich + Ich (gesprochen ich und ich) ist ein deutsches Popmusikprojekt, das aus den Musikern Annette Humpe und Adel Tawil besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ich + Ich” is on the snapshot of s5"
+  }
+ ]
+}

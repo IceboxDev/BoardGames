@@ -1,0 +1,242 @@
+{
+ "article": "a1846",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_Myanmar",
+   "title": "Flag of Myanmar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:49.372Z",
+   "snapshot": "464e2d224549365be6dd42ab9530e2545c06c743549432f1d70fd432a043ca9d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Thailand",
+   "title": "Thailand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:47.039Z",
+   "snapshot": "193d401f531601eb8510d5c34e28626b9c641e107ba97dc8fb82b6ae1bf657d4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Thailand",
+   "title": "Thailand",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:25.941Z",
+   "snapshot": "183c46bd010161f610a5ad4f8872e074e44420fa46398d14a711752d833d9d1f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Name_of_Iran",
+   "title": "Name of Iran – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:27.208Z",
+   "snapshot": "13c2a2a3c0186e723fb9634aee78e78b5c1d25c6a38b25eb5b9fa1f36c5d0ace"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Burkina_Faso",
+   "title": "Burkina Faso",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:49.557Z",
+   "snapshot": "c0ef3d3d84e1d42b45d0851dcfed81bb1bc320b087290d72d1eaed4d934fd732"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Myanmar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thailand",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thailand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-069"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Burkina Faso",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-151"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:32.910Z",
+   "target": "f09226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The State Flag of the Republic of the Union of Myanmar is a horizontal rectangular tricolor flag of yellow, green, and red with a large white five-pointed star in the center.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Myanmar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:32.910Z",
+   "target": "f09229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thailand (thailändisch ประเทศไทย [pratʰêːt tʰaj]), offiziell Königreich Thailand ( [râːt͡ɕʰáʔaːnaːt͡ɕàk tʰaj], umgangssprachlich:  [mɯːaŋ tʰaj]), ist ein Staat in Südostasien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thailand” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:32.910Z",
+   "target": "f09229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thailand, officially the Kingdom of Thailand, and formerly known as Siam, is a country located in Mainland Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thailand” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:32.910Z",
+   "target": "f09230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Historically, Iran was commonly referred to as \"Persia\" in the Western world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:32.910Z",
+   "target": "f11971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Burkina Faso (deutsche Aussprache: [bʊɐ̯ˌkʰiːnaˈfaːzo]), übersetzt Land des aufrichtigen Menschen, ist ein westafrikanischer Binnenstaat, der südlich des Nigerbogens liegt und an Mali, Niger, Benin, Togo, Ghana und die Elfenbeinküste grenzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burkina Faso” is on the snapshot of s5"
+  }
+ ]
+}

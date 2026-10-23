@@ -1,0 +1,411 @@
+{
+ "article": "a1800",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Moorhuhn_(Computerspielreihe)",
+   "title": "Moorhuhn (Computerspielreihe) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:23:19.199Z",
+   "snapshot": "bdce080708229ffba1d276efdea5621080f48a838ca1346f92cb083af8a05514"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nokia_6110",
+   "title": "Nokia 6110 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:19.413Z",
+   "snapshot": "23a289f0d03d10bda46462b24a24ae6b9bc5a16abc92338d03d6d67c76b893b9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Angry_Birds_(video_game)",
+   "title": "Angry Birds (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:20.540Z",
+   "snapshot": "eab941cfb6132ce244d51e57b46bcf61046c888ce0916f99bd4fe10b5f5a7fd4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Snake_(video_game_genre)",
+   "title": "Snake (video game genre) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:21.461Z",
+   "snapshot": "7971d94752cf529ff8272ecb46360244bb0db6a24bd35f2ef9e5e79dd424fa32"
+  },
+  "s5": {
+   "url": "https://www.engadget.com/2015/05/07/snake-rewind/",
+   "title": "'Snake Rewind' modernizes the Nokia game for touchscreen devices – Engadget",
+   "publisher": "Engadget",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:33.962Z",
+   "snapshot": "6ebf1fb3e72ac5979457393ff3f8293f705b20af9ac74468753f0c41671fdbaf"
+  },
+  "s6": {
+   "url": "https://medien-mittweida.de/project/moorhuhn/",
+   "title": "Moorhuhn – medienMITTWEIDA",
+   "publisher": "medienMITTWEIDA (Hochschule Mittweida)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:34.325Z",
+   "snapshot": "cd5a38c3d92053fb28567e4d5d63afe61dc5ff8c11e57ac9376500b6d750b810"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Snake_(1998_video_game)",
+   "title": "Snake (1998 video game) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:34.195Z",
+   "snapshot": "df0015f9bd600c031a83f544179e1d06b836532e0d1cdcc44267fa244dbe02df"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Moorhuhn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Snake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Angry Birds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taneli Armanto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "neunzig Sekunden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:24.395Z",
+   "target": "f08996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Moorhuhn ist eine Serie von Videospielen im Shooter-Genre.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moorhuhn” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:24.395Z",
+   "target": "f08999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was also the first phone from Nokia to have the popular Snake game pre-installed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snake” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:24.395Z",
+   "target": "f09000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Angry Birds is a 2009 puzzle video game developed by Rovio Entertainment and published by Chillingo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angry Birds” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:24.395Z",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taneli Armanto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Taneli Armanto”, “Танели Арманто”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:24.395Z",
+   "target": "f24124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "neunzig Sekunden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“neunzig Sekunden”, “ninety seconds”, “девяносто секунд”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:48:30Z",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The latter's the Nokia engineer who preloaded it on the 6110 back in 1997",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:48:32Z",
+   "target": "f24124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "bietet dieser Shooter dem Spieler 90 Sekunden und unendlich viel Munition",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:48:34Z",
+   "target": "f24124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine Spielrunde dauert gerade mal 90 Sekunden und ließ sich somit ideal in den Büroalltag integrieren.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:48:42Z",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a 1998 mobile video game created by Taneli Armanto as one of the three games included in the Nokia 6110 cellular phone .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:12.475Z",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The latter's the Nokia engineer who preloaded it on the 6110 back in 1997",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:12.475Z",
+   "target": "f24124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine Spielrunde dauert gerade mal 90 Sekunden und ließ sich somit ideal in den Büroalltag integrieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:12.475Z",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A version for modern smartphones and tablets called Snake Rewind will be released on May 14th by game developer Rumilus Design and Taneli Armanto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Taneli Armanto” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:12.475Z",
+   "target": "f24123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Snake (Finnish: Matopeli) is a 1998 mobile video game created by Taneli Armanto as one of the three games included in the Nokia 6110 cellular phone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Taneli Armanto” is on the snapshot of s7"
+  }
+ ]
+}

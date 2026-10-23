@@ -1,0 +1,209 @@
+{
+ "article": "a1083",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+   "title": "Statue of Liberty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:37.285Z",
+   "snapshot": "4a626931a6eb84af394612282d2022e0b12ea8a4820e5970ce56d18c5dc62708"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Park_G%C3%BCell",
+   "title": "Park Güell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:38.073Z",
+   "snapshot": "24255846a2abd81366b1a307844709d60d60c570eca2b2f2429a860b31d3c225"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Walt_Disney_Concert_Hall",
+   "title": "Walt Disney Concert Hall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:39.159Z",
+   "snapshot": "e8fa5144ea13c41e3d69a2ce3dce9fad64dce82fa54a18d62807d8f8ab0e292a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Shard",
+   "title": "The Shard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:40.189Z",
+   "snapshot": "51be75575dfa62150bb14bdfd26316417d1c2d8a16d1e871af6b26c05fa55f4f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fallingwater",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:41.299Z",
+   "snapshot": "e72c064c60afa7f26715b7c3b5cc73a9b68cabebe1b60bc4c9e83251ba4e63d0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Renzo_Piano",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:42.233Z",
+   "snapshot": "55a7bd42e3d8f170ffd117492483c0d06e6bb201c049bb96adcde0503d882b48"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Statue of Liberty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Park Güell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Walt Disney Concert Hall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Shard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:30.160Z",
+   "target": "f05411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Statue of Liberty (Liberty Enlightening the World, French: La Liberté éclairant le monde; colloquially known as Lady Liberty) is a colossal neoclassical sculpture of a robed and crowned woman on Liberty Island, part of New York City, in New York Harbor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Statue of Liberty” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:30.160Z",
+   "target": "f05412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Park Güell (Catalan: Parc Güell [ˈpaɾɡ ˈɡweʎ]; Spanish: Parque Güell) is a complex of parks and gardens in Barcelona with architectural elements, located in the La Salut neighborhood of the Gràcia district in Barcelona, Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Park Güell” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:30.160Z",
+   "target": "f05414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Walt Disney Concert Hall in downtown Los Angeles, California, is the fourth hall of the Los Angeles Music Center and was designed by Frank Gehry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Walt Disney Concert Hall” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:30.160Z",
+   "target": "f05415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Shard, also referred to as the Shard London Bridge and formerly London Bridge Tower, is a 95-storey mixed-use development supertall pyramid-shaped skyscraper, designed by the Italian architect Renzo Piano, in Southwark, London, that forms part of The Shard Quarter development.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Shard” is on the snapshot of s4"
+  }
+ ]
+}

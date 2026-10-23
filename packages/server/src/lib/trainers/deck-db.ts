@@ -1,12 +1,12 @@
 // Persistence for the generic trainer decks (migration 0043): schedule rows
 // in `trainer_srs`, the append-only log in `trainer_reviews`, one settings
-// blob per deck in `trainer_settings`. The write path mirrors Quiztopia's
-// (`lib/quiztopia/srs-db.ts`): the card must exist in the deck and the
-// client's `localDate` must be plausible; a replayed `clientId` grades
-// nothing; the schedule advances through the shared `applyReview` under a
-// compare-and-set on `reps`. Two kinds of review are logged with
-// `applied = 0`: a replay older than the card's last review, and a drill
-// answer on a card that was not due.
+// blob per deck in `trainer_settings`. On the write path the card must
+// exist in the deck and the client's `localDate` must be plausible
+// (`review-guards.ts`); a replayed `clientId` grades nothing; the schedule
+// advances through the shared `applyReview` under a compare-and-set on
+// `reps`. Three kinds of review are logged with `applied = 0`: a replay
+// older than the card's last review, a drill answer on a card that was not
+// due, and a table-game answer the member hasn't let move their schedule.
 
 import { SrsStateKindSchema } from "@boardgames/core/protocol";
 import {
@@ -19,7 +19,7 @@ import {
 import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { parseRow, parseRows } from "../db-rows.ts";
-import { localDateInWindow, ReviewRejectedError } from "../quiztopia/srs-db.ts";
+import { localDateInWindow, ReviewRejectedError } from "./review-guards.ts";
 
 const StateRowSchema = z.object({
   card_id: z.string(),
@@ -118,7 +118,8 @@ export interface DeckReviewInput {
   localDate: string;
   durationMs?: number | null;
   reviewedAt?: string;
-  source: "trainer" | "drill";
+  /** "game": an answer at a table game, recorded by the server at game over. */
+  source: "trainer" | "drill" | "game";
   /** What the answer was; stored as JSON for later analysis. */
   outcome: unknown;
 }
@@ -147,7 +148,12 @@ export async function recordDeckReview(
   userId: string,
   deck: string,
   body: DeckReviewInput,
-  opts: { cardExists: (id: string) => boolean; now?: Date },
+  opts: {
+    cardExists: (id: string) => boolean;
+    now?: Date;
+    /** Whether a "game" review moves the schedule (the member's opt-in). */
+    gameApplies?: boolean;
+  },
 ): Promise<DeckReviewResult> {
   if (!opts.cardExists(body.cardId)) {
     throw new ReviewRejectedError("UNKNOWN_QUESTION", `unknown card ${body.cardId}`);
@@ -174,6 +180,7 @@ export async function recordDeckReview(
   const prev = await readDeckState(db, userId, deck, body.cardId);
   let apply = true;
   if (body.source === "drill") apply = prev !== null && prev.dueDate <= body.localDate;
+  if (body.source === "game") apply = opts.gameApplies ?? false;
   if (apply && prev?.lastReviewedAt && reviewedAt < prev.lastReviewedAt) apply = false;
   const prevState = prev?.state ?? "new";
 

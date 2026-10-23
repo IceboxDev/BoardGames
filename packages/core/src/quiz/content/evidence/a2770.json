@@ -1,0 +1,342 @@
+{
+ "article": "a2770",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Methane",
+   "title": "Methane",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:49.159Z",
+   "snapshot": "1b34ac84a62540bac509dacaca8054a4c408a123c980747ea58fdee747840a75"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lipid",
+   "title": "Lipid",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:25.161Z",
+   "snapshot": "d3c3f53ed6032c3abfd5b09d215af0256f58198a725b941413402fe564da6060"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Benzene",
+   "title": "Benzene",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:26.173Z",
+   "snapshot": "fca6cbdc4475323afae69dfe70d960a4dd1f1f9862a5c83d2363808024ecc744"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Propane",
+   "title": "Propane",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:27.132Z",
+   "snapshot": "e08cd67c2e304c713e05106496d3e2916e32103a86ac438eb76b1e11af418dfa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ethylene_as_a_plant_hormone",
+   "title": "Ethylene as a plant hormone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:28.168Z",
+   "snapshot": "dc4bb2965d9d46596ff003993aa411e9949fcb14996a3f7d63a7ee0011367f4e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hermann_Staudinger",
+   "title": "Hermann Staudinger",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:29.063Z",
+   "snapshot": "e8272f3850d6c0ff7a7c1967688d83b51c05ac34f873414237423baa1a05df11"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Simple_lipid",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:30.054Z",
+   "snapshot": "11b02bf50594955e77610f8119bc2c44d403e664f0bf72d537d4b8d1701be422"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Methane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Benzene",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Propane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ethylene",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Polymers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lipids",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Lipids",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-028/2, u06: The card's 'a lipid is a type of fat' is backwards: fats (triglycerides) are a subgroup of lipids. Our open wording asks for the class (lipids) and is right; a note now explains the card's error."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lipids",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Methane (US:  METH-ayn, UK:  MEE-thayn) is a chemical compound that has the chemical formula CH4 (one carbon atom bonded to four hydrogen atoms).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Methane” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lipids are a broad group of organic compounds that include fats, waxes, sterols, fat-soluble vitamins (such as vitamins A, D, E and K), monoglycerides, diglycerides, phospholipids, and others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lipids” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "These lipids belong to a heterogeneous class of predominantly nonpolar compounds, mostly insoluble in water, but soluble in nonpolar organic solvents such as chloroform and benzene.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lipids” is on the snapshot of s7"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Benzene is an organic chemical compound with the molecular formula C6H6.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benzene” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Propane () is a three-carbon chain alkane with the molecular formula C3H8.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Propane” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ethylene (CH2=CH2) is an unsaturated hydrocarbon gas (alkene) acting as a naturally occurring plant hormone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ethylene” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:11.115Z",
+   "target": "f25835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hermann Staudinger (German: [ˈhɛʁman ˈʃtaʊ̯dɪŋɐ] ; 23 March 1881 – 8 September 1965) was a German organic chemist who demonstrated the existence of macromolecules, which he characterized as polymers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polymers” is on the snapshot of s6"
+  }
+ ]
+}

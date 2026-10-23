@@ -1,0 +1,395 @@
+{
+ "article": "a2574",
+ "sources": {
+  "s1": {
+   "url": "https://fr.wikipedia.org/wiki/Ren%C3%A9_Lacoste",
+   "title": "René Lacoste",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T06:06:48.552Z",
+   "snapshot": "a8e3ddac0c71f982a1a7cf772028239d07281eafa82200e4a17a107e4e519eb3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Strings_(tennis)",
+   "title": "Strings (tennis)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:52.343Z",
+   "snapshot": "cac287bbb7e778a2a85faee15718b99a14b213837623750f34fe3a36e2722834"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Babolat",
+   "title": "Babolat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:53.192Z",
+   "snapshot": "d247133be089065612293af3630f41d65bc991a626b2cd8699cbc5c4a5dd4cdd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tennis_ball",
+   "title": "Tennis ball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:54.165Z",
+   "snapshot": "b2cc948c3a0695ff7d2decd9339b2dd28361ceda9956e99296ed3f635f85825f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Howard_Head",
+   "title": "Howard Head – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:55.158Z",
+   "snapshot": "0a805337792f80ada6cb56ed7b380dc914557a8e5b4e2ae4e802ac2856f041a5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Lacoste",
+   "title": "René Lacoste – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:54.910Z",
+   "snapshot": "f58fec3d8fe01d8ffadd92a0a442209f88d5760b7033f235b4aa5a05aab19f3e"
+  },
+  "s7": {
+   "url": "https://www.babolat.com/eu/history",
+   "title": "Babolat history – 150 years",
+   "publisher": "Babolat",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:19.608Z",
+   "snapshot": "e7e66230a4bd453d83eede5e957d8e7954cf2b5e6f79cb7a4e797613ab5f0c1b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "René Lacoste",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-178"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; history entry seq 12; transcript tp-314"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Babolat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "yellow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Howard Head",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jimmy Connors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:40.940Z",
+   "target": "f13794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "René Lacoste, né le 2 juillet 1904 à Paris et mort le 12 octobre 1996 à Saint-Jean-de-Luz au Pays basque, est un champion de tennis, industriel, ingénieur et designer français.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Lacoste” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:40.940Z",
+   "target": "f13795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Natural gut is produced by drying fibers extracted from a part of the cow intestine called the serous membrane, or serosa, which contains collagen designed to withstand the stretching and contraction of the intestine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cow” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:40.940Z",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Babolat () is a French tennis, badminton, pickleball, and padel equipment company, headquartered in Lyon, best known for its strings and tennis racquets which are used by professional and recreational players worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Babolat” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:40.940Z",
+   "target": "f13797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tennis balls are fluorescent yellow in professional competitions, but in recreational play other colors are also used.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “yellow” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:40.940Z",
+   "target": "f13798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Howard Head (July 31, 1914 – March 3, 1991) was an American businessman who invented the first commercially successful brand of aluminum laminate skis, the Head Standard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Howard Head” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:40.940Z",
+   "target": "f13799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pierre Darmon debuted the racket at Wimbledon in 1963, but it achieved critical acclaim and huge popularity as the Wilson T-2000, used by American tennis greats Billie Jean King and Jimmy Connors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jimmy Connors” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:03:09Z",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The company has made strings since 1875, when Pierre Babolat created the first strings made of natural gut.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:06:17Z",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1875 A pioneer in innovation, Babolat invents the first tennis string",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Company's own claim; Babolat's first strings were natural gut (Wikipedia)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:25.334Z",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The company has made strings since 1875, when Pierre Babolat created the first strings made of natural gut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:25.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:25.334Z",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1875 A pioneer in innovation, Babolat invents the first tennis string",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:25.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:25.334Z",
+   "target": "f13796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "150 years of history | Babolat Official Website",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:25.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Babolat” is on the snapshot of s7"
+  }
+ ]
+}

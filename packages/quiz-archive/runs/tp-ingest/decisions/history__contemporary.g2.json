@@ -1,0 +1,1191 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "history/contemporary",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-009",
+    "category": 3
+   },
+   "factId": "f06086"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-035",
+    "category": 3
+   },
+   "factId": "f06331"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-058",
+    "category": 3
+   },
+   "factId": "f06572"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-094",
+    "category": 3
+   },
+   "factId": "f04771"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-116",
+    "category": 3
+   },
+   "factId": "f00169"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-175",
+    "category": 3
+   },
+   "factId": "f07475"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-235",
+    "category": 3
+   },
+   "factId": "f07475"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0402",
+   "baseHash": "5670683f687a",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-227",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "From the Prison Cell to the Presidency",
+    "titleDe": "Aus der Gefängniszelle ins Präsidentenamt",
+    "bodyEn": "Few political careers are as dramatic as those of dissidents who were locked up by the regimes they opposed and then, after those regimes fell or gave way, were elected to lead their countries. The late twentieth century produced a whole generation of such presidents.\n\nThe most famous of them is Nelson Mandela. A lawyer and leader of the African National Congress, arrested on 5 August 1962, he was sentenced to life imprisonment in the Rivonia Trial of 1964 for his part in the armed struggle against apartheid. He spent 18 of his 27 years behind bars on Robben Island – an island in Table Bay named after the seals (Dutch robben) that once crowded its shores – breaking stones in a lime quarry, before being moved to prisons on the mainland. Released on 11 February 1990, he negotiated the end of white minority rule with President F. W. de Klerk, shared the Nobel Peace Prize with him in 1993 and, after South Africa's first free election in April 1994, became the country's first Black president.\n\nIn Central Europe the same pattern played out in the revolutions of 1989. Václav Havel, the Czech playwright and co-author of the human-rights manifesto Charter 77, was imprisoned repeatedly by the communist authorities, the longest stretch lasting almost four years. Within weeks of the Velvet Revolution he was elected president of Czechoslovakia on 29 December 1989, and he later served as the first president of the Czech Republic.\n\nNext door in Poland, the electrician Lech Wałęsa had led the strike at the Gdańsk shipyard in 1980 that gave birth to Solidarity, the first independent trade union in the Eastern Bloc. When General Jaruzelski declared martial law in December 1981, Wałęsa was interned for almost a year. He received the Nobel Peace Prize in 1983, co-led the Round Table talks of 1989 and was elected president of Poland in the run-off of 9 December 1990.\n\nIn Asia, the South Korean opposition leader Kim Dae-jung survived almost everything a dictatorship could inflict: he was kidnapped from a Tokyo hotel by South Korean agents in 1973, sentenced to death after the Gwangju uprising of 1980 and spent years in prison and exile. On 18 December 1997 he was elected president of South Korea, and his „Sunshine Policy“ of engagement with North Korea earned him the Nobel Peace Prize in 2000.\n\nThe youngest example comes from South-East Asia. Xanana Gusmão led the guerrilla resistance against the Indonesian occupation of East Timor for more than a decade before he was captured in 1992 and sentenced to life imprisonment, later reduced to 20 years. He was released in 1999, when the Timorese voted for independence, and on 14 April 2002 he was elected the first president of the newly independent country.\n\n| President | Country | Imprisoned | Elected |\n|---|---|---|---|\n| Nelson Mandela | South Africa | 1962–1990 (27 years) | 1994 |\n| Václav Havel | Czechoslovakia | several terms, 1977–1989 | 1989 |\n| Lech Wałęsa | Poland | interned 1981–1982 | 1990 |\n| Kim Dae-jung | South Korea | 1970s–1980s | 1997 |\n| Xanana Gusmão | East Timor | 1992–1999 | 2002 |",
+    "bodyDe": "Wenige politische Laufbahnen sind so dramatisch wie die von Dissidenten, die von den Regimen, gegen die sie kämpften, eingesperrt wurden und dann, nachdem diese Regime gestürzt waren oder nachgaben, zu Staatsoberhäuptern ihrer Länder gewählt wurden. Das späte zwanzigste Jahrhundert brachte eine ganze Generation solcher Präsidenten hervor.\n\nDer berühmteste von ihnen ist Nelson Mandela. Als Anwalt und Führer des Afrikanischen Nationalkongresses wurde er, am 5. August 1962 verhaftet, im Rivonia-Prozess 1964 für seinen Anteil am bewaffneten Kampf gegen die Apartheid zu lebenslanger Haft verurteilt. Von seinen 27 Jahren hinter Gittern verbrachte er 18 auf Robben Island – einer Insel in der Tafelbucht, die nach den Robben benannt ist (niederländisch robben, Plural von Robbe), die einst ihre Küsten bevölkerten –, wo er in einem Kalksteinbruch Steine klopfte, bevor er in Gefängnisse auf dem Festland verlegt wurde. Am 11. Februar 1990 freigelassen, handelte er mit Präsident F. W. de Klerk das Ende der weißen Minderheitsherrschaft aus, teilte sich 1993 mit ihm den Friedensnobelpreis und wurde nach Südafrikas erster freier Wahl im April 1994 der erste schwarze Präsident des Landes.\n\nIn Mitteleuropa wiederholte sich dasselbe Muster in den Revolutionen von 1989. Václav Havel, der tschechische Dramatiker und Mitverfasser des Menschenrechtsmanifests Charta 77, wurde von den kommunistischen Behörden wiederholt inhaftiert, am längsten fast vier Jahre lang. Wenige Wochen nach der Samtenen Revolution wurde er am 29. Dezember 1989 zum Präsidenten der Tschechoslowakei gewählt, und später diente er als erster Präsident der Tschechischen Republik.\n\nNebenan in Polen hatte der Elektriker Lech Wałęsa 1980 den Streik auf der Danziger Werft angeführt, aus dem die Solidarność hervorging, die erste unabhängige Gewerkschaft des Ostblocks. Als General Jaruzelski im Dezember 1981 das Kriegsrecht verhängte, wurde Wałęsa fast ein Jahr lang interniert. Er erhielt 1983 den Friedensnobelpreis, leitete 1989 die Gespräche am Runden Tisch mit und wurde in der Stichwahl am 9. Dezember 1990 zum Präsidenten Polens gewählt.\n\nIn Asien überlebte der südkoreanische Oppositionsführer Kim Dae-jung fast alles, was eine Diktatur zufügen kann: 1973 wurde er von südkoreanischen Agenten aus einem Hotel in Tokio entführt, nach dem Aufstand von Gwangju 1980 zum Tode verurteilt, und er verbrachte Jahre in Haft und im Exil. Am 18. Dezember 1997 wurde er zum Präsidenten Südkoreas gewählt, und seine „Sonnenscheinpolitik“ der Annäherung an Nordkorea brachte ihm im Jahr 2000 den Friedensnobelpreis ein.\n\nDas jüngste Beispiel stammt aus Südostasien. Xanana Gusmão führte mehr als ein Jahrzehnt lang den Guerillawiderstand gegen die indonesische Besetzung Osttimors, bevor er 1992 gefasst und zu lebenslanger Haft verurteilt wurde, später auf 20 Jahre reduziert. 1999, als die Timoresen für die Unabhängigkeit stimmten, kam er frei, und am 14. April 2002 wurde er zum ersten Präsidenten des neuen unabhängigen Staates gewählt.\n\n| Präsident | Land | Haft | Gewählt |\n|---|---|---|---|\n| Nelson Mandela | Südafrika | 1962–1990 (27 Jahre) | 1994 |\n| Václav Havel | Tschechoslowakei | mehrere Haftstrafen, 1977–1989 | 1989 |\n| Lech Wałęsa | Polen | interniert 1981–1982 | 1990 |\n| Kim Dae-jung | Südkorea | 1970er–1980er-Jahre | 1997 |\n| Xanana Gusmão | Osttimor | 1992–1999 | 2002 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0595",
+   "baseHash": "ce07e21b3fd9",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-197",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "New Flags: How Africa's Borders Kept Changing",
+    "titleDe": "Neue Flaggen: Wie sich Afrikas Grenzen immer wieder veränderten",
+    "bodyEn": "The map of Africa that the colonial powers drew at the Berlin Conference of 1884–85 has been surprisingly durable – with a handful of important exceptions. Five dates show how new states were born.\n\nThe first was 6 March 1957. Ghana, the former British Gold Coast, became the first colony in sub-Saharan Africa to gain independence. Its leader, Kwame Nkrumah, had organised strikes and been imprisoned by the British before winning elections from his cell. His speech on independence night – ‘our independence is meaningless unless it is linked up with the total liberation of Africa’ – made him the leading voice of pan-Africanism; on 1 July 1960 Ghana became a republic with Nkrumah as president, and in 1960 alone seventeen more African states followed.\n\nThe last of the classic decolonisations came much later in the south. Rhodesia's white minority government had declared independence from Britain unilaterally in 1965; after a fifteen-year bush war, the Lancaster House Agreement of 21 December 1979 led to elections that Robert Mugabe's ZANU party won. Zimbabwe became independent on 18 April 1980. Its first president was the Methodist minister Canaan Banana, who held the largely ceremonial office until 1987, while real power lay with Mugabe as prime minister; from 1987 Mugabe was executive president – a post he held until a military intervention removed him in 2017.\n\nSouth West Africa had been a German colony until 1915 and was then administered by South Africa, which extended its apartheid laws to the territory and ignored United Nations demands to withdraw. After a long guerrilla war by SWAPO and UN-supervised elections, Namibia became independent on 21 March 1990, with Sam Nujoma as its first president. It was the last major territory on the continent to shed colonial-style rule.\n\nThe next two states were carved out of existing African countries rather than out of empires. Eritrea, an Italian colony and then under British military administration, had been federated with Ethiopia in 1952 and annexed in 1962. Thirty years of war ended when the Eritrean People's Liberation Front took Asmara in 1991; in a referendum in April 1993, 99.8 percent voted for independence, and Eritrea became a sovereign state on 24 May 1993.\n\nThe most recent new flag belongs to South Sudan. Two civil wars between the Arab-Muslim north and the largely Christian and animist south of Sudan – the second, from 1983 to 2005, cost about two million lives – ended with the Comprehensive Peace Agreement, which promised the south a vote on secession. In the referendum of 9–15 January 2011, 98.8 percent chose independence. On 9 July 2011 South Sudan became independent, and five days later the 193rd member of the United Nations, with Salva Kiir as president and Juba as its capital. Oil, on which both countries depend, lies mostly in the south, while the pipelines run north – a source of conflict ever since.\n\n| New state | Independence | Separated from |\n|---|---|---|\n| Ghana | 6 March 1957 | United Kingdom |\n| Zimbabwe | 18 April 1980 | United Kingdom (via Rhodesia) |\n| Namibia | 21 March 1990 | South Africa |\n| Eritrea | 24 May 1993 | Ethiopia |\n| South Sudan | 9 July 2011 | Sudan |\n\nThe African Union, like the Organisation of African Unity before it, insists on the inviolability of colonial borders. Eritrea and South Sudan are the only two cases in which a change has been accepted – both after referendums with over 98 percent in favour.",
+    "bodyDe": "Die Landkarte Afrikas, die die Kolonialmächte auf der Berliner Konferenz von 1884/85 zeichneten, hat sich als erstaunlich dauerhaft erwiesen – mit einer Handvoll wichtiger Ausnahmen. Fünf Daten zeigen, wie neue Staaten entstanden.\n\nDas erste war der 6. März 1957. Ghana, die frühere britische Goldküste, wurde als erste Kolonie Subsahara-Afrikas unabhängig. Sein Führer Kwame Nkrumah hatte Streiks organisiert und war von den Briten inhaftiert worden, bevor er die Wahlen aus seiner Zelle heraus gewann. Seine Rede in der Nacht der Unabhängigkeit – „unsere Unabhängigkeit ist bedeutungslos, wenn sie nicht mit der vollständigen Befreiung Afrikas verbunden ist“ – machte ihn zur führenden Stimme des Panafrikanismus; am 1. Juli 1960 wurde Ghana eine Republik mit Nkrumah als Präsident, und allein 1960 folgten siebzehn weitere afrikanische Staaten.\n\nDie letzte der klassischen Entkolonialisierungen kam viel später im Süden. Rhodesiens weiße Minderheitsregierung hatte 1965 einseitig die Unabhängigkeit von Großbritannien erklärt; nach einem fünfzehnjährigen Buschkrieg führte das Lancaster-House-Abkommen vom 21. Dezember 1979 zu Wahlen, die Robert Mugabes Partei ZANU gewann. Simbabwe wurde am 18. April 1980 unabhängig. Erster Präsident wurde der methodistische Pfarrer Canaan Banana, der das weitgehend repräsentative Amt bis 1987 innehatte, während die eigentliche Macht bei Mugabe als Premierminister lag; ab 1987 war Mugabe exekutiver Präsident – ein Amt, das er innehatte, bis ihn 2017 eine Militärintervention absetzte.\n\nSüdwestafrika war bis 1915 deutsche Kolonie gewesen und wurde danach von Südafrika verwaltet, das seine Apartheidgesetze auf das Gebiet ausdehnte und Rückzugsforderungen der Vereinten Nationen ignorierte. Nach einem langen Guerillakrieg der SWAPO und von der UNO überwachten Wahlen wurde Namibia am 21. März 1990 unabhängig, mit Sam Nujoma als erstem Präsidenten. Es war das letzte große Gebiet des Kontinents, das kolonialartige Herrschaft abschüttelte.\n\nDie nächsten beiden Staaten wurden nicht aus Imperien, sondern aus bestehenden afrikanischen Ländern herausgelöst. Eritrea, erst italienische Kolonie und dann unter britischer Militärverwaltung, war 1952 mit Äthiopien föderiert und 1962 annektiert worden. Dreißig Jahre Krieg endeten, als die Eritreische Volksbefreiungsfront 1991 Asmara einnahm; bei einem Referendum im April 1993 stimmten 99,8 Prozent für die Unabhängigkeit, und Eritrea wurde am 24. Mai 1993 ein souveräner Staat.\n\nDie jüngste neue Flagge gehört dem Südsudan. Zwei Bürgerkriege zwischen dem arabisch-muslimischen Norden und dem überwiegend christlichen und animistischen Süden des Staates Sudan – der zweite, von 1983 bis 2005, kostete etwa zwei Millionen Menschen das Leben – endeten mit dem Umfassenden Friedensabkommen, das dem Süden eine Abstimmung über die Abspaltung versprach. Beim Referendum vom 9. bis 15. Januar 2011 entschieden sich 98,8 Prozent für die Unabhängigkeit. Am 9. Juli 2011 wurde der Südsudan unabhängig und fünf Tage später das 193. Mitglied der Vereinten Nationen, mit Salva Kiir als Präsident und Juba als Hauptstadt. Das Öl, von dem beide Länder abhängen, liegt größtenteils im Süden, während die Pipelines nach Norden führen – seither eine Quelle ständiger Konflikte.\n\n| Neuer Staat | Unabhängigkeit | Abgetrennt von |\n|---|---|---|\n| Ghana | 6. März 1957 | Vereinigtes Königreich |\n| Simbabwe | 18. April 1980 | Vereinigtes Königreich (über Rhodesien) |\n| Namibia | 21. März 1990 | Südafrika |\n| Eritrea | 24. Mai 1993 | Äthiopien |\n| Südsudan | 9. Juli 2011 | Sudan |\n\nDie Afrikanische Union besteht wie zuvor die Organisation für Afrikanische Einheit auf der Unantastbarkeit der kolonialen Grenzen. Eritrea und der Südsudan sind die einzigen beiden Fälle, in denen eine Änderung akzeptiert wurde – beide nach Referenden mit über 98 Prozent Zustimmung.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0474",
+   "baseHash": "c94b6d127c27",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-273",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Born of Secession: New States of the Late Twentieth Century",
+    "titleDe": "Aus Abspaltung geboren: Neue Staaten des späten 20. Jahrhunderts",
+    "bodyEn": "When British India was partitioned in 1947, the new Muslim state of Pakistan was created in two halves separated by 1,600 kilometres of Indian territory. West Pakistan held the capital, the army and the political power; East Pakistan, the Bengali-speaking delta of the Ganges, held the majority of the population but received a fraction of the investment. Resentment grew for two decades and came to a head in the general election of December 1970, when the Awami League of Sheikh Mujibur Rahman won almost every seat in the east and an absolute majority in the national assembly. The military government refused to let it govern. On the night of 25 March 1971 the Pakistani army launched Operation Searchlight against Dhaka, and the following day the independence of Bangladesh was declared.\n\nThe war that followed was among the bloodiest of the century. Bengali guerrillas, the Mukti Bahini, fought the army for nine months while an estimated ten million refugees fled across the border into India. When Pakistan bombed Indian airfields on 3 December 1971, India entered the war openly; its forces reached Dhaka in less than two weeks, and on 16 December the Pakistani garrison of some 93,000 men surrendered. That day is still celebrated as Victory Day. Sheikh Mujib, released from a West Pakistani prison, returned in January 1972 to lead the new country, which today has more than 170 million inhabitants.\n\nBangladesh was the first of a series of states carved out of larger neighbours by war and referendum in the late twentieth and early twenty-first centuries. Slovenia, the northernmost republic of Yugoslavia, declared independence on 25 June 1991; the Yugoslav People's Army moved to seize the border posts, but after the Ten-Day War, fought from 27 June to 7 July 1991, and the Brioni Agreement it withdrew, and Slovenia escaped the far longer wars that consumed Croatia and Bosnia. It joined the European Union in 2004. Croatia declared independence on the same day as Slovenia, and Bosnia and Herzegovina followed after a referendum in March 1992 – three of the states that emerged in the early 1990s from the break-up of the Socialist Federal Republic of Yugoslavia.\n\nIn Africa, Eritrea had been federated with Ethiopia in 1952 and annexed outright in 1962, provoking a guerrilla war that lasted thirty years. When the Ethiopian regime collapsed in 1991, the Eritrean People's Liberation Front took control, and a UN-supervised referendum in April 1993 produced a vote of 99.8 per cent for independence, proclaimed on 24 May 1993. Eighteen years later South Sudan followed a similar path: the 2005 peace agreement that ended Africa's longest civil war promised the mainly Christian and animist south a referendum, and in January 2011 almost 99 per cent voted to leave. The Republic of South Sudan became the world's newest country on 9 July 2011.\n\nThe youngest state in Asia is East Timor, or Timor-Leste. A Portuguese colony for four centuries, it was invaded by Indonesia in 1975 and occupied for 24 years at the cost of perhaps 100,000 lives. In August 1999 its people voted overwhelmingly for independence; after violence by pro-Indonesian militias, the United Nations administered the territory until it became sovereign on 20 May 2002.\n\n| State | Separated from | Independence |\n|---|---|---|\n| Bangladesh | Pakistan | 16 December 1971 |\n| Slovenia | Yugoslavia | 25 June 1991 |\n| Eritrea | Ethiopia | 24 May 1993 |\n| East Timor | Indonesia | 20 May 2002 |\n| South Sudan | Sudan | 9 July 2011 |\n\nEach of these countries was born from the failure of a larger state to hold its parts together, and each still lives with the consequences of the struggle that created it.",
+    "bodyDe": "Als Britisch-Indien 1947 geteilt wurde, entstand der neue muslimische Staat Pakistan in zwei Hälften, die durch 1.600 Kilometer indisches Gebiet getrennt waren. Westpakistan hatte die Hauptstadt, die Armee und die politische Macht; Ostpakistan, das bengalischsprachige Delta des Ganges, hatte die Mehrheit der Bevölkerung, erhielt aber nur einen Bruchteil der Investitionen. Zwei Jahrzehnte lang wuchs der Unmut und gipfelte in der Parlamentswahl vom Dezember 1970, als die Awami-Liga von Scheich Mujibur Rahman fast jeden Sitz im Osten und die absolute Mehrheit in der Nationalversammlung gewann. Die Militärregierung verweigerte ihr die Regierungsbildung. In der Nacht des 25. März 1971 startete die pakistanische Armee die Operation Searchlight gegen Dhaka, und am folgenden Tag, dem 26. März, wurde die Unabhängigkeit von Bangladesch erklärt.\n\nDer Krieg, der folgte, gehörte zu den blutigsten des Jahrhunderts. Bengalische Guerillas, die Mukti Bahini, kämpften neun Monate gegen die Armee, während schätzungsweise zehn Millionen Flüchtlinge über die Grenze nach Indien flohen. Als Pakistan am 3. Dezember 1971 indische Flugplätze bombardierte, trat Indien offen in den Krieg ein; seine Truppen erreichten Dhaka in weniger als zwei Wochen, und am 16. Dezember kapitulierte die pakistanische Garnison von rund 93.000 Mann. Dieser Tag wird noch heute als Tag des Sieges gefeiert. Scheich Mujib, aus einem westpakistanischen Gefängnis entlassen, kehrte im Januar 1972 zurück, um das neue Land zu führen, das heute mehr als 170 Millionen Einwohner hat.\n\nBangladesch war der erste einer Reihe von Staaten, die im späten 20. und frühen 21. Jahrhundert durch Krieg und Referendum aus größeren Nachbarn herausgelöst wurden. Slowenien, die nördlichste Republik Jugoslawiens, erklärte am 25. Juni 1991 seine Unabhängigkeit; die Jugoslawische Volksarmee rückte an, um die Grenzposten zu besetzen, doch nach dem Zehn-Tage-Krieg vom 27. Juni bis 7. Juli 1991 und dem Abkommen von Brioni zog sie ab, und Slowenien entging den weit längeren Kriegen, die Kroatien und Bosnien verzehrten. 2004 trat es der Europäischen Union bei. Kroatien erklärte am selben Tag wie Slowenien seine Unabhängigkeit, Bosnien und Herzegowina folgte nach einem Referendum im März 1992 – drei der Staaten, die in den frühen 1990er-Jahren aus dem Zerfall der Sozialistischen Föderativen Republik Jugoslawien hervorgingen.\n\nIn Afrika war Eritrea 1952 mit Äthiopien föderiert und 1962 vollständig annektiert worden, was einen dreißigjährigen Guerillakrieg auslöste. Als das äthiopische Regime 1991 zusammenbrach, übernahm die Eritreische Volksbefreiungsfront die Kontrolle, und ein von der UNO überwachtes Referendum im April 1993 ergab 99,8 Prozent für die Unabhängigkeit, die am 24. Mai 1993 ausgerufen wurde. Achtzehn Jahre später folgte der Südsudan einem ähnlichen Weg: Das Friedensabkommen von 2005, das Afrikas längsten Bürgerkrieg beendete, versprach dem überwiegend christlichen und animistischen Süden ein Referendum, und im Januar 2011 stimmten fast 99 Prozent für die Trennung. Die Republik Südsudan wurde am 9. Juli 2011 zum jüngsten Land der Welt.\n\nDer jüngste Staat Asiens ist Osttimor, auch Timor-Leste. Vier Jahrhunderte lang portugiesische Kolonie, wurde es 1975 von Indonesien überfallen und 24 Jahre lang besetzt, was vielleicht 100.000 Menschen das Leben kostete. Im August 1999 stimmte seine Bevölkerung mit überwältigender Mehrheit für die Unabhängigkeit; nach Gewalttaten pro-indonesischer Milizen verwalteten die Vereinten Nationen das Gebiet, bis es am 20. Mai 2002 souverän wurde.\n\n| Staat | Abgespalten von | Unabhängigkeit |\n|---|---|---|\n| Bangladesch | Pakistan | 16. Dezember 1971 |\n| Slowenien | Jugoslawien | 25. Juni 1991 |\n| Eritrea | Äthiopien | 24. Mai 1993 |\n| Osttimor | Indonesien | 20. Mai 2002 |\n| Südsudan | Sudan | 9. Juli 2011 |\n\nJedes dieser Länder entstand aus dem Scheitern eines größeren Staates, seine Teile zusammenzuhalten, und jedes lebt bis heute mit den Folgen des Kampfes, der es hervorbrachte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-162",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-104",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer war von 1992 bis 1997 der letzte britische Gouverneur von Hongkong?",
+      "en": "Who was the last British Governor of Hong Kong, from 1992 to 1997?",
+      "answerDe": "Chris Patten",
+      "answerEn": "Chris Patten",
+      "timeline": {
+       "kind": "period",
+       "start": "1992-07-09",
+       "end": "1997-06-30",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Chris Patten as the last Governor of Hong Kong",
+       "labelDe": "Chris Patten als letzter Gouverneur von Hongkong"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong",
+       "title": "Handover of Hong Kong – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welchem von Deng Xiaoping entwickelten Grundsatz sollten Hongkong und Macau nach ihrer Rückgabe an China 50 Jahre lang ihr eigenes Wirtschafts- und Rechtssystem behalten?",
+      "en": "Under which principle developed by Deng Xiaoping were Hong Kong and Macau to keep their own economic and legal systems for 50 years after their return to China?",
+      "answerDe": "Ein Land, zwei Systeme",
+      "answerEn": "One country, two systems",
+      "timeline": {
+       "kind": "creation",
+       "start": "1982",
+       "end": null,
+       "precision": "decade",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Deng Xiaoping's principle 'one country, two systems' takes shape in the early 1980s",
+       "labelDe": "Deng Xiaopings Grundsatz „Ein Land, zwei Systeme“ nimmt Anfang der 1980er-Jahre Gestalt an"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/One_country,_two_systems",
+       "title": "One country, two systems – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Auf welcher königlichen Jacht verließen der letzte Gouverneur Chris Patten und Prinz Charles Hongkong nach der Übergabe 1997?",
+      "en": "On which royal yacht did the last governor Chris Patten and Prince Charles leave Hong Kong after the 1997 handover?",
+      "answerDe": "Britannia",
+      "answerEn": "Britannia",
+      "timeline": {
+       "kind": "event",
+       "start": "1997-07-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "HMY Britannia carries Chris Patten and Prince Charles away from Hong Kong",
+       "labelDe": "Die HMY Britannia bringt Chris Patten und Prinz Charles aus Hongkong fort"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/HMY_Britannia",
+       "title": "HMY Britannia – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem Jahr unterzeichneten Margaret Thatcher und Zhao Ziyang die Gemeinsame Erklärung, die die Rückgabe Hongkongs an China festlegte?",
+      "en": "In which year did Margaret Thatcher and Zhao Ziyang sign the Joint Declaration that fixed Hong Kong's return to China?",
+      "answerDe": "1984",
+      "answerEn": "1984",
+      "timeline": {
+       "kind": "event",
+       "start": "1984-12-19",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Sino-British Joint Declaration on Hong Kong signed in Beijing",
+       "labelDe": "Chinesisch-Britische Gemeinsame Erklärung zu Hongkong in Peking unterzeichnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong",
+       "title": "Handover of Hong Kong – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Last Flags Come Down: Hong Kong 1997 and Macau 1999",
+    "titleDe": "Die letzten Flaggen werden eingeholt: Hongkong 1997 und Macau 1999",
+    "bodyEn": "At the end of the twentieth century the last two European colonies on the coast of China went back to Beijing within two and a half years of each other. Both had been European outposts for well over a century, both lay at the mouth of the Pearl River, and both were handed over under the same promise.\n\n**Hong Kong.** Britain had taken Hong Kong Island in 1841, during the First Opium War, and later added Kowloon and – on a 99-year lease from 1898 – the much larger New Territories. As the lease ran towards its end, Margaret Thatcher and the Chinese premier Zhao Ziyang signed the Sino-British Joint Declaration in Beijing on 19 December 1984: the whole colony would return to China in 1997. The last British governor, Chris Patten, arrived in 1992 and pushed through democratic reforms that Beijing bitterly resented. At midnight on 1 July 1997, in a rain-soaked ceremony attended by Prince Charles, Great Britain gave up control of Hong Kong. That night the royal yacht Britannia, on her final foreign mission, carried Patten and the prince away.\n\n**Macau.** The Portuguese had settled at Macau as early as 1557, long before the British came to the region, which made it the oldest European foothold in China. After the Carnation Revolution of 1974 Portugal offered to give the territory back, and a joint declaration with China followed in 1987. At midnight on 19/20 December 1999 Portugal returned sovereignty over Macau to China – the end of almost four and a half centuries of Portuguese rule and, many said, the end of Europe's colonial era in Asia.\n\n**One country, two systems.** Both handovers rested on a formula developed by Deng Xiaoping in the early 1980s, originally with Taiwan in mind: \"one country, two systems\". Hong Kong and Macau became special administrative regions of the People's Republic, each promised that its capitalist economy, currency, legal system and way of life would remain unchanged for 50 years. Hong Kong kept its common law and its own dollar; Macau kept the pataca and grew into the world's largest gambling centre. Since the protests of 2019 and the national security law of 2020, many observers argue that the promise for Hong Kong has been hollowed out long before 2047.\n\n| Territory | Colonial power | European since | Returned |\n|---|---|---|---|\n| Hong Kong | United Kingdom | 1841 | 1 July 1997 |\n| Macau | Portugal | 1557 | 20 December 1999 |",
+    "bodyDe": "Am Ende des zwanzigsten Jahrhunderts gingen die beiden letzten europäischen Kolonien an der Küste Chinas innerhalb von zweieinhalb Jahren an Peking zurück. Beide waren weit über ein Jahrhundert lang europäische Außenposten gewesen, beide lagen an der Mündung des Perlflusses, und beide wurden mit demselben Versprechen übergeben.\n\n**Hongkong.** Großbritannien hatte die Insel Hongkong 1841 im Ersten Opiumkrieg besetzt und später Kowloon sowie – mit einem 99-jährigen Pachtvertrag ab 1898 – die viel größeren New Territories hinzugewonnen. Als der Pachtvertrag seinem Ende zuging, unterzeichneten Margaret Thatcher und der chinesische Ministerpräsident Zhao Ziyang am 19. Dezember 1984 in Peking die Chinesisch-Britische Gemeinsame Erklärung: Die ganze Kolonie sollte 1997 an China zurückfallen. Der letzte britische Gouverneur, Chris Patten, kam 1992 und setzte demokratische Reformen durch, die Peking zutiefst missfielen. Um Mitternacht zum 1. Juli 1997 gab Großbritannien in einer verregneten Zeremonie im Beisein von Prinz Charles die Kontrolle über Hongkong auf. In derselben Nacht brachte die königliche Jacht Britannia auf ihrer letzten Auslandsmission Patten und den Prinzen fort.\n\n**Macau.** Die Portugiesen hatten sich bereits 1557 in Macau niedergelassen, lange bevor die Briten in die Region kamen – damit war es der älteste europäische Stützpunkt in China. Nach der Nelkenrevolution von 1974 bot Portugal an, das Gebiet zurückzugeben, 1987 folgte eine gemeinsame Erklärung mit China. Um Mitternacht vom 19. auf den 20. Dezember 1999 gab Portugal die Souveränität über Macau an China zurück – das Ende von fast viereinhalb Jahrhunderten portugiesischer Herrschaft und, wie viele sagten, das Ende der Kolonialzeit Europas in Asien.\n\n**Ein Land, zwei Systeme.** Beide Übergaben beruhten auf einer Formel, die Deng Xiaoping Anfang der 1980er-Jahre ursprünglich mit Blick auf Taiwan entwickelt hatte: „Ein Land, zwei Systeme“. Hongkong und Macau wurden Sonderverwaltungszonen der Volksrepublik, und beiden wurde zugesagt, dass ihre kapitalistische Wirtschaft, ihre Währung, ihr Rechtssystem und ihre Lebensweise 50 Jahre lang unverändert bleiben würden. Hongkong behielt sein Common Law und seinen eigenen Dollar; Macau behielt die Pataca und wurde zum größten Glücksspielzentrum der Welt. Seit den Protesten von 2019 und dem Sicherheitsgesetz von 2020 meinen viele Beobachter, dass das Versprechen für Hongkong lange vor 2047 ausgehöhlt worden sei.\n\n| Gebiet | Kolonialmacht | Europäisch seit | Zurückgegeben |\n|---|---|---|---|\n| Hongkong | Vereinigtes Königreich | 1841 | 1. Juli 1997 |\n| Macau | Portugal | 1557 | 20. Dezember 1999 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-115",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-274",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-020",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-385",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-057",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß die Katze der Familie Clinton, die während Bill Clintons Präsidentschaft im Weißen Haus lebte?",
+      "en": "What was the name of the Clinton family's cat that lived in the White House during Bill Clinton's presidency?",
+      "answerDe": "Socks",
+      "answerEn": "Socks",
+      "timeline": {
+       "kind": "period",
+       "start": "1993-01-20",
+       "end": "2001-01-20",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Socks the cat lives in the White House during the Clinton presidency",
+       "labelDe": "Kater Socks lebt während Clintons Präsidentschaft im Weißen Haus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Socks_(cat)",
+       "title": "Socks (cat) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß der Portugiesische Wasserhund, der im April 2009 bei der Familie Obama im Weißen Haus einzog?",
+      "en": "What was the name of the Portuguese Water Dog that moved into the White House with the Obama family in April 2009?",
+      "answerDe": "Bo",
+      "answerEn": "Bo",
+      "timeline": {
+       "kind": "event",
+       "start": "2009-04-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Bo, the Obamas' Portuguese Water Dog, moves into the White House",
+       "labelDe": "Bo, der Portugiesische Wasserhund der Obamas, zieht ins Weiße Haus ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bo_(dog)",
+       "title": "Bo (dog) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Jelly Beans to Guantánamo: Four Presidents, Four Stories",
+    "titleDe": "Von Jelly Beans bis Guantánamo: Vier Präsidenten, vier Geschichten",
+    "bodyEn": "Between 1981 and 2017 four men led the United States through the end of the Cold War, the dawn of the Internet and the \"war on terror\". Each left behind grand policies – and a few details that people remember just as well.\n\n**Ronald Reagan (1981–1989).** The former actor had given up pipe smoking in the 1960s with the help of jelly beans and never lost the habit. Jars of them stood in the Oval Office and on Air Force One, three and a half tonnes were ordered for his inauguration in 1981, and he liked to offer them to his guests. Liquorice was his favourite flavour – but only as a jelly bean.\n\n**George H. W. Bush (1989–1993).** Accepting the Republican nomination in New Orleans on 18 August 1988, Reagan's vice-president promised: \"Read my lips: no new taxes.\" The line helped him win the election, but in 1990, facing a growing deficit, George H. W. Bush agreed to a budget deal that raised taxes. His opponents replayed the promise endlessly, and in 1992 he lost to Bill Clinton.\n\n**Bill Clinton (1993–2001).** Clinton was the first president of the Internet age. When he was sworn in for his second term on 20 January 1997, the ceremony was streamed live on the Internet for the first time. The family cat, Socks, who had come with the Clintons from Arkansas, became a celebrity of his own and even had a page on the first White House website.\n\n**Barack Obama (2009–2017).** Two days after taking office, on 22 January 2009, Obama signed an executive order to close the detention camp at Guantanamo Bay, the US naval base in Cuba where suspects of the \"war on terror\" had been held without trial since 2002. Congress blocked the transfer of the prisoners, and the camp is still open today. Obama had more success with Cuba itself: after secret talks, the United States and Cuba restored full diplomatic relations on 20 July 2015 – the first time since 1961 – and in March 2016 he became the first sitting president to visit Havana in 88 years. At home, the family's Portuguese Water Dog Bo, who arrived in April 2009, was the most photographed resident of the White House.\n\n| President | Term | Remembered for |\n|---|---|---|\n| Ronald Reagan | 1981–1989 | jelly beans |\n| George H. W. Bush | 1989–1993 | \"no new taxes\" |\n| Bill Clinton | 1993–2001 | first inauguration streamed online |\n| Barack Obama | 2009–2017 | Guantánamo order, Cuba thaw |",
+    "bodyDe": "Zwischen 1981 und 2017 führten vier Männer die Vereinigten Staaten durch das Ende des Kalten Krieges, die Anfänge des Internets und den „Krieg gegen den Terror“. Jeder hinterließ große Politik – und ein paar Einzelheiten, an die man sich genauso gut erinnert.\n\n**Ronald Reagan (1981–1989).** Der frühere Schauspieler hatte sich in den 1960er-Jahren das Pfeiferauchen mithilfe von Jelly Beans abgewöhnt und die Geleebohnen nie wieder aufgegeben. Gläser damit standen im Oval Office und an Bord der Air Force One, dreieinhalb Tonnen wurden für seine Amtseinführung 1981 bestellt, und er bot sie gern seinen Gästen an. Lakritz war seine Lieblingssorte – aber eben als Jelly Bean.\n\n**George H. W. Bush (1989–1993).** Als Reagans Vizepräsident am 18. August 1988 in New Orleans die Nominierung der Republikaner annahm, versprach er: „Read my lips: no new taxes“ – sinngemäß „Nehmt mich beim Wort – keine neuen Steuern“. Der Satz half ihm, die Wahl zu gewinnen, doch 1990 stimmte George H. W. Bush angesichts eines wachsenden Defizits einem Haushaltskompromiss mit Steuererhöhungen zu. Seine Gegner spielten das Versprechen immer wieder ab, und 1992 verlor er gegen Bill Clinton.\n\n**Bill Clinton (1993–2001).** Clinton war der erste Präsident des Internetzeitalters. Als er am 20. Januar 1997 für seine zweite Amtszeit vereidigt wurde, wurde die Zeremonie zum ersten Mal live im Internet übertragen. Die Familienkatze Socks, die mit den Clintons aus Arkansas gekommen war, wurde selbst zur Berühmtheit und hatte sogar eine Seite auf der ersten Website des Weißen Hauses.\n\n**Barack Obama (2009–2017).** Zwei Tage nach seinem Amtsantritt, am 22. Januar 2009, unterzeichnete Obama ein Dekret zur Schließung des Gefangenenlagers Guantánamo auf dem US-Marinestützpunkt in Kuba, wo seit 2002 Verdächtige des „Kriegs gegen den Terror“ ohne Prozess festgehalten wurden. Der Kongress blockierte die Verlegung der Gefangenen, und das Lager besteht bis heute. Mehr Erfolg hatte Obama mit Kuba selbst: Nach geheimen Gesprächen nahmen die USA und Kuba am 20. Juli 2015 wieder volle diplomatische Beziehungen auf – zum ersten Mal seit 1961 –, und im März 2016 besuchte er als erster amtierender Präsident seit 88 Jahren Havanna. Im Weißen Haus war der Portugiesische Wasserhund Bo, der im April 2009 einzog, der meistfotografierte Bewohner.\n\n| Präsident | Amtszeit | In Erinnerung durch |\n|---|---|---|\n| Ronald Reagan | 1981–1989 | Jelly Beans |\n| George H. W. Bush | 1989–1993 | „keine neuen Steuern“ |\n| Bill Clinton | 1993–2001 | erste live im Internet übertragene Vereidigung |\n| Barack Obama | 2009–2017 | Guantánamo-Dekret, Annäherung an Kuba |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-210",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "In welcher ostlibyschen Stadt begannen im Februar 2011 die Proteste, aus denen der Aufstand gegen Muammar al-Gaddafi wurde?",
+      "en": "In which eastern Libyan city did the protests begin in February 2011 that grew into the uprising against Muammar Gaddafi?",
+      "answerDe": "Bengasi",
+      "answerEn": "Benghazi",
+      "timeline": {
+       "kind": "event",
+       "start": "2011-02-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Protests in Benghazi ignite the Libyan uprising against Gaddafi",
+       "labelDe": "Proteste in Bengasi lösen den libyschen Aufstand gegen Gaddafi aus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/First_Libyan_Civil_War",
+       "title": "First Libyan Civil War – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Mit welcher Resolution genehmigte der UN-Sicherheitsrat am 17. März 2011 eine Flugverbotszone über Libyen?",
+      "en": "With which resolution did the UN Security Council authorise a no-fly zone over Libya on 17 March 2011?",
+      "answerDe": "Resolution 1973",
+      "answerEn": "Resolution 1973",
+      "timeline": {
+       "kind": "event",
+       "start": "2011-03-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "UN Security Council adopts Resolution 1973 on Libya",
+       "labelDe": "UN-Sicherheitsrat verabschiedet Resolution 1973 zu Libyen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/2011_military_intervention_in_Libya",
+       "title": "2011 military intervention in Libya – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Unter welchem Decknamen griffen die Vereinigten Staaten im März 2011 in Libyen ein?",
+      "en": "Under which code name did the United States intervene in Libya in March 2011?",
+      "answerDe": "Operation Odyssey Dawn",
+      "answerEn": "Operation Odyssey Dawn",
+      "timeline": {
+       "kind": "event",
+       "start": "2011-03-19",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Start of the US Operation Odyssey Dawn over Libya",
+       "labelDe": "Beginn der US-Operation Odyssey Dawn über Libyen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/2011_military_intervention_in_Libya",
+       "title": "2011 military intervention in Libya – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß das Gremium, das die libyschen Rebellen im Februar 2011 in Bengasi als ihre politische Führung ausriefen?",
+      "en": "What was the name of the body that the Libyan rebels proclaimed in Benghazi in February 2011 as their political leadership?",
+      "answerDe": "Nationaler Übergangsrat",
+      "answerEn": "National Transitional Council",
+      "timeline": {
+       "kind": "founding",
+       "start": "2011-02-27",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Libya's National Transitional Council announced in Benghazi",
+       "labelDe": "Libyens Nationaler Übergangsrat in Bengasi ausgerufen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/National_Transitional_Council",
+       "title": "National Transitional Council – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Libya 2011: From Benghazi to the No-Fly Zone",
+    "titleDe": "Libyen 2011: Von Bengasi zur Flugverbotszone",
+    "bodyEn": "Of all the uprisings of the Arab Spring, the one in Libya turned most quickly into war – and it was the only one in which Western air forces intervened directly.\n\n**The uprising.** Inspired by the fall of the rulers of Tunisia and Egypt, Libyans took to the streets of Benghazi, the country's second city and the traditional centre of the long-neglected east, on 15 February 2011. Within days the protests had spread, security forces had opened fire, and much of eastern Libya had slipped out of Muammar Gaddafi's control. On 27 February the rebels announced a National Transitional Council in Benghazi, headed by the former justice minister Mustafa Abdul Jalil, as the political face of the revolution.\n\n**The resolution.** By mid-March Gaddafi's army was advancing on Benghazi, and the colonel threatened to show its people \"no mercy\". On 17 March 2011 the UN Security Council adopted Resolution 1973 by ten votes to none, with five abstentions – among them Germany, Russia and China. It authorised a no-fly zone and \"all necessary measures\" to protect civilians.\n\n**The intervention.** Two days later, on 19 March, France was the first country to send fighter jets over Libya: Rafale and Mirage aircraft struck government tanks outside Benghazi under the French code name Opération Harmattan, after the dry West African wind. The same evening American and British ships fired cruise missiles at Libyan air defences – the United States called its part Operation Odyssey Dawn. At the end of March NATO took over command of the whole campaign as Operation Unified Protector.\n\n**The end.** With air support the rebels pushed west; Tripoli fell in August. On 20 October 2011 Gaddafi was captured and killed near his home town of Sirte, and three days later the National Transitional Council declared Libya liberated. Peace did not follow: rival governments and militias have divided the country ever since.\n\n| Date | Event |\n|---|---|\n| 15 February 2011 | Protests begin in Benghazi |\n| 27 February 2011 | National Transitional Council announced |\n| 17 March 2011 | UN Resolution 1973 |\n| 19 March 2011 | French jets over Libya; Operation Odyssey Dawn |\n| 20 October 2011 | Gaddafi killed near Sirte |",
+    "bodyDe": "Von allen Aufständen des Arabischen Frühlings wurde der libysche am schnellsten zum Krieg – und er war der einzige, in den westliche Luftstreitkräfte direkt eingriffen.\n\n**Der Aufstand.** Ermutigt vom Sturz der Herrscher Tunesiens und Ägyptens gingen am 15. Februar 2011 Libyer in Bengasi auf die Straße, der zweitgrößten Stadt des Landes und dem traditionellen Zentrum des lange vernachlässigten Ostens. Binnen Tagen hatten sich die Proteste ausgebreitet, Sicherheitskräfte hatten das Feuer eröffnet, und ein großer Teil Ostlibyens war Muammar al-Gaddafis Kontrolle entglitten. Am 27. Februar riefen die Rebellen in Bengasi einen Nationalen Übergangsrat unter dem früheren Justizminister Mustafa Abdul Dschalil aus, als politisches Gesicht der Revolution.\n\n**Die Resolution.** Mitte März rückte Gaddafis Armee auf Bengasi vor, und der Oberst drohte, den Menschen dort „keine Gnade“ zu zeigen. Am 17. März 2011 verabschiedete der UN-Sicherheitsrat die Resolution 1973 mit zehn Stimmen ohne Gegenstimme bei fünf Enthaltungen – darunter Deutschland, Russland und China. Sie erlaubte eine Flugverbotszone und „alle notwendigen Maßnahmen“ zum Schutz der Zivilbevölkerung.\n\n**Die Intervention.** Zwei Tage später, am 19. März, schickte Frankreich als erstes Land Kampfflugzeuge nach Libyen: Rafale- und Mirage-Jets griffen vor Bengasi Panzer der Regierung an, unter dem französischen Decknamen Opération Harmattan, nach dem trockenen westafrikanischen Wind. Am selben Abend feuerten amerikanische und britische Schiffe Marschflugkörper auf die libysche Luftabwehr – die Vereinigten Staaten nannten ihren Teil Operation Odyssey Dawn. Ende März übernahm die NATO als Operation Unified Protector das Kommando über den gesamten Einsatz.\n\n**Das Ende.** Mit Luftunterstützung drangen die Rebellen nach Westen vor; im August fiel Tripolis. Am 20. Oktober 2011 wurde Gaddafi bei seiner Heimatstadt Sirte gefasst und getötet, drei Tage später erklärte der Nationale Übergangsrat Libyen für befreit. Frieden folgte nicht: Rivalisierende Regierungen und Milizen teilen das Land seither unter sich auf.\n\n| Datum | Ereignis |\n|---|---|\n| 15. Februar 2011 | Proteste beginnen in Bengasi |\n| 27. Februar 2011 | Nationaler Übergangsrat ausgerufen |\n| 17. März 2011 | UN-Resolution 1973 |\n| 19. März 2011 | Französische Jets über Libyen; Operation Odyssey Dawn |\n| 20. Oktober 2011 | Gaddafi bei Sirte getötet |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-204",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem Dorf bei Paris verbrachte Ajatollah Chomeini 1978/79 die letzten Monate seines Exils?",
+      "en": "In which village near Paris did Ayatollah Khomeini spend the last months of his exile in 1978–79?",
+      "answerDe": "Neauphle-le-Château",
+      "answerEn": "Neauphle-le-Château",
+      "timeline": {
+       "kind": "event",
+       "start": "1978-10-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Khomeini moves into exile at Neauphle-le-Château near Paris",
+       "labelDe": "Chomeini bezieht sein Exil in Neauphle-le-Château bei Paris"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Neauphle-le-Ch%C3%A2teau",
+       "title": "Neauphle-le-Château – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Zu welcher Staatsform wurde Iran nach dem Referendum vom März 1979 erklärt?",
+      "en": "What form of state was Iran declared after the referendum of March 1979?",
+      "answerDe": "Islamische Republik",
+      "answerEn": "Islamic Republic",
+      "timeline": {
+       "kind": "event",
+       "start": "1979-03-30",
+       "end": "1979-03-31",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Referendum turns Iran into an Islamic Republic",
+       "labelDe": "Referendum macht Iran zur Islamischen Republik"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/1979_Iranian_Islamic_Republic_referendum",
+       "title": "1979 Iranian Islamic Republic referendum – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie viele Tage dauerte die Geiselnahme in der US-Botschaft in Teheran von 1979 bis 1981?",
+      "en": "How many days did the hostage crisis at the US embassy in Tehran last, from 1979 to 1981?",
+      "answerDe": "444",
+      "answerEn": "444",
+      "timeline": {
+       "kind": "period",
+       "start": "1979-11-04",
+       "end": "1981-01-20",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Iran hostage crisis at the US embassy in Tehran",
+       "labelDe": "Geiselnahme in der US-Botschaft in Teheran"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Iran_hostage_crisis",
+       "title": "Iran hostage crisis – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß die im April 1980 gescheiterte Militäraktion der USA zur Befreiung der Geiseln in Teheran?",
+      "en": "What was the name of the US military mission to free the hostages in Tehran that failed in April 1980?",
+      "answerDe": "Operation Eagle Claw",
+      "answerEn": "Operation Eagle Claw",
+      "timeline": {
+       "kind": "event",
+       "start": "1980-04-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Failure of the US rescue mission Operation Eagle Claw in Iran",
+       "labelDe": "Scheitern der US-Befreiungsaktion Operation Eagle Claw im Iran"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Iran_hostage_crisis",
+       "title": "Iran hostage crisis – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Iran 1979: The Revolution That Changed Everything – Even the Tie",
+    "titleDe": "Iran 1979: Die Revolution, die alles veränderte – sogar die Krawatte",
+    "bodyEn": "In 1979 a monarchy that had seemed one of the most stable in the Middle East collapsed within weeks, and Iran became a state unlike any other.\n\n**The fall of the Shah.** Throughout 1978 strikes and mass demonstrations spread against Shah Mohammad Reza Pahlavi, whose secret police and rapid Westernisation had alienated the clergy, the bazaar and the left alike. Their figurehead was Ayatollah Ruhollah Khomeini, who had lived in exile since 1964. Expelled from Iraq, he moved on 8 October 1978 to Neauphle-le-Château, a village west of Paris, from where his sermons were smuggled into Iran on cassette tapes. On 16 January 1979 the Shah left the country; on 1 February Khomeini returned to Tehran to a crowd of millions, and on 11 February the last royal government gave way.\n\n**A new state.** In a referendum on 30 and 31 March 1979 Iranians were asked a single question – whether the monarchy should be replaced by an Islamic Republic – and over 98 percent said yes. A constitution placed a religious jurist, the Supreme Leader, above the elected president and parliament.\n\n**A new dress code.** The revolution reached into daily life. Women were required to cover their hair, alcohol and Western pop music disappeared, and the necktie, condemned by Khomeini as a symbol of Western decadence, vanished from public life: after 1979 the tie was effectively banned in Iran, and politicians and officials to this day wear collarless or buttoned-up shirts under their jackets.\n\n**The hostage crisis.** When the deposed Shah was admitted to the United States for cancer treatment, students stormed the US embassy in Tehran on 4 November 1979 and took its staff hostage. Fifty-two Americans were held for 444 days. A rescue attempt, Operation Eagle Claw, ended in disaster in the desert on 24 April 1980, when a helicopter collided with a transport aircraft and eight servicemen died. The hostages were freed only on 20 January 1981, minutes after Ronald Reagan was sworn in – and relations between Washington and Tehran have never recovered.\n\n| Date | Event |\n|---|---|\n| 8 October 1978 | Khomeini moves to Neauphle-le-Château |\n| 16 January 1979 | The Shah leaves Iran |\n| 30–31 March 1979 | Referendum on the Islamic Republic |\n| 4 November 1979 | US embassy stormed |\n| 24 April 1980 | Operation Eagle Claw fails |",
+    "bodyDe": "1979 brach im Iran eine Monarchie, die als eine der stabilsten im Nahen Osten galt, innerhalb weniger Wochen zusammen, und es entstand ein Staat wie kein anderer.\n\n**Der Sturz des Schahs.** Im Laufe des Jahres 1978 breiteten sich Streiks und Massendemonstrationen gegen Schah Mohammad Reza Pahlavi aus, dessen Geheimpolizei und rasche Verwestlichung Geistliche, Basarhändler und Linke gleichermaßen gegen ihn aufgebracht hatten. Ihre Leitfigur war Ajatollah Ruhollah Chomeini, der seit 1964 im Exil lebte. Aus dem Irak ausgewiesen, zog er am 8. Oktober 1978 nach Neauphle-le-Château, einem Dorf westlich von Paris, von wo aus seine Predigten auf Tonbandkassetten in den Iran geschmuggelt wurden. Am 16. Januar 1979 verließ der Schah das Land; am 1. Februar kehrte Chomeini unter dem Jubel von Millionen nach Teheran zurück, und am 11. Februar gab die letzte königliche Regierung auf.\n\n**Ein neuer Staat.** In einem Referendum am 30. und 31. März 1979 wurde den Iranern eine einzige Frage gestellt – ob die Monarchie durch eine Islamische Republik ersetzt werden solle –, und über 98 Prozent stimmten mit Ja. Eine Verfassung stellte einen islamischen Rechtsgelehrten, den Obersten Führer, über den gewählten Präsidenten und das Parlament.\n\n**Eine neue Kleiderordnung.** Die Revolution reichte bis in den Alltag. Frauen mussten ihr Haar bedecken, Alkohol und westliche Popmusik verschwanden, und die Krawatte, die Chomeini als Symbol westlicher Dekadenz verdammte, verschwand aus dem öffentlichen Leben: Nach 1979 war die Krawatte im Iran faktisch verboten, und Politiker und Beamte tragen bis heute kragenlose oder hochgeknöpfte Hemden unter dem Sakko.\n\n**Die Geiselnahme.** Als der gestürzte Schah zur Krebsbehandlung in die Vereinigten Staaten eingelassen wurde, stürmten Studenten am 4. November 1979 die US-Botschaft in Teheran und nahmen ihr Personal als Geiseln. 52 Amerikaner wurden 444 Tage lang festgehalten. Ein Befreiungsversuch, die Operation Eagle Claw, endete am 24. April 1980 in der Wüste in einer Katastrophe, als ein Hubschrauber mit einem Transportflugzeug zusammenstieß und acht Soldaten starben. Die Geiseln kamen erst am 20. Januar 1981 frei, Minuten nach der Vereidigung Ronald Reagans – und die Beziehungen zwischen Washington und Teheran haben sich nie wieder erholt.\n\n| Datum | Ereignis |\n|---|---|\n| 8. Oktober 1978 | Chomeini zieht nach Neauphle-le-Château |\n| 16. Januar 1979 | Der Schah verlässt den Iran |\n| 30.–31. März 1979 | Referendum über die Islamische Republik |\n| 4. November 1979 | Sturm auf die US-Botschaft |\n| 24. April 1980 | Operation Eagle Claw scheitert |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-277",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer überlebte 1901 als erster Mensch eine Fahrt über die Niagarafälle in einem Fass?",
+      "en": "Who in 1901 became the first person to survive a trip over Niagara Falls in a barrel?",
+      "answerDe": "Annie Edson Taylor",
+      "answerEn": "Annie Edson Taylor",
+      "timeline": {
+       "kind": "event",
+       "start": "1901-10-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Annie Edson Taylor goes over Niagara Falls in a barrel on her 63rd birthday",
+       "labelDe": "Annie Edson Taylor fährt an ihrem 63. Geburtstag in einem Fass über die Niagarafälle"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Annie_Edson_Taylor",
+       "title": "Annie Edson Taylor – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher französische Seiltänzer überquerte 1859 die Niagara-Schlucht auf einem Hochseil?",
+      "en": "Which French tightrope walker crossed the Niagara Gorge on a high rope in 1859?",
+      "answerDe": "Charles Blondin",
+      "answerEn": "Charles Blondin",
+      "timeline": {
+       "kind": "event",
+       "start": "1859-06-30",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Charles Blondin crosses the Niagara Gorge on a tightrope",
+       "labelDe": "Charles Blondin überquert die Niagara-Schlucht auf dem Hochseil"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Charles_Blondin",
+       "title": "Charles Blondin – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer überquerte im Juni 2012 als erster Mensch die Niagarafälle direkt auf einem Hochseil?",
+      "en": "Who in June 2012 became the first person to walk a high wire directly over Niagara Falls?",
+      "answerDe": "Nik Wallenda",
+      "answerEn": "Nik Wallenda",
+      "timeline": {
+       "kind": "event",
+       "start": "2012-06-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Nik Wallenda walks a high wire directly over Niagara Falls",
+       "labelDe": "Nik Wallenda läuft auf dem Hochseil direkt über die Niagarafälle"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Nik_Wallenda",
+       "title": "Nik Wallenda – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Over the Edge: The Daredevils of Niagara Falls",
+    "titleDe": "Über die Kante: Die Wagehälse der Niagarafälle",
+    "bodyEn": "Ever since tourists began flocking to Niagara Falls in the nineteenth century, the thundering water on the border between the United States and Canada has drawn people who wanted to defy it – some on a rope above the gorge, others in a barrel straight over the edge.\n\n**On the rope.** The first great Niagara showman was the Frenchman Jean-François Gravelet, known as Charles Blondin. On 30 June 1859 he crossed the Niagara Gorge below the falls on a rope about 340 metres long and some 50 metres above the water. He returned again and again, each time with a new twist – blindfolded, on stilts, pushing a wheelbarrow, carrying his manager on his back, and once stopping halfway to cook an omelette. For more than 150 years, however, no one walked directly over the falls themselves. That changed on 15 June 2012, when Nik Wallenda, a seventh-generation member of the famous Flying Wallendas circus family, walked about 550 metres on a wire across the falls, from the American to the Canadian side, watched live on television by millions.\n\n**In the barrel.** The first person to go over the falls in a barrel and live was a schoolteacher: Annie Edson Taylor climbed into an oak barrel padded with a mattress on her 63rd birthday, 24 October 1901, and emerged from the Horseshoe Falls bleeding but alive. She had hoped the stunt would make her rich; it did not. Many imitators died trying to repeat it.\n\n**Two at once.** On 18 June 1995 the American Steve Trotter, who had already survived the plunge alone in 1985, went over the Horseshoe Falls again – this time together with Lori Martin, making them the first man and woman to go over the falls together. Their vessel was, again, a barrel: welded together from two water-heater tanks and carrying an air supply for 90 minutes. Both survived, and both were promptly fined, because every such stunt has long been illegal on both sides of the border.\n\n| Year | Daredevil | Feat |\n|---|---|---|\n| 1859 | Charles Blondin | tightrope across the gorge |\n| 1901 | Annie Edson Taylor | first barrel ride |\n| 1995 | Steve Trotter and Lori Martin | first couple in a barrel |\n| 2012 | Nik Wallenda | high wire directly over the falls |",
+    "bodyDe": "Seit im 19. Jahrhundert Touristen zu den Niagarafällen strömten, hat das donnernde Wasser an der Grenze zwischen den Vereinigten Staaten und Kanada Menschen angezogen, die ihm trotzen wollten – manche auf einem Seil über der Schlucht, andere in einem Fass direkt über die Kante.\n\n**Auf dem Seil.** Der erste große Showman am Niagara war der Franzose Jean-François Gravelet, bekannt als Charles Blondin. Am 30. Juni 1859 überquerte er die Niagara-Schlucht unterhalb der Fälle auf einem etwa 340 Meter langen Seil rund 50 Meter über dem Wasser. Er kam immer wieder, jedes Mal mit einem neuen Kunststück – mit verbundenen Augen, auf Stelzen, mit einer Schubkarre, mit seinem Manager auf dem Rücken, und einmal hielt er auf halber Strecke an, um ein Omelett zu braten. Mehr als 150 Jahre lang lief jedoch niemand direkt über die Fälle selbst. Das änderte sich am 15. Juni 2012, als Nik Wallenda, Angehöriger der siebten Generation der berühmten Zirkusfamilie Flying Wallendas, auf einem Drahtseil rund 550 Meter über die Fälle von der amerikanischen auf die kanadische Seite lief, live im Fernsehen von Millionen verfolgt.\n\n**Im Fass.** Der erste Mensch, der in einem Fass über die Fälle fuhr und überlebte, war eine Lehrerin: Annie Edson Taylor stieg an ihrem 63. Geburtstag, dem 24. Oktober 1901, in ein mit einer Matratze gepolstertes Eichenfass und kam blutend, aber lebend unterhalb der Horseshoe Falls heraus. Sie hatte gehofft, durch den Stunt reich zu werden; das wurde sie nicht. Viele Nachahmer starben bei dem Versuch, es ihr gleichzutun.\n\n**Zu zweit.** Am 18. Juni 1995 fuhr der Amerikaner Steve Trotter, der den Sturz 1985 schon allein überlebt hatte, erneut über die Horseshoe Falls – diesmal zusammen mit Lori Martin, als erstes Paar aus Mann und Frau. Ihr Gefährt war wieder ein Fass: zusammengeschweißt aus zwei Warmwasserboilern und mit Luft für 90 Minuten. Beide überlebten die Fahrt in einem Fass, und beide mussten prompt eine Geldstrafe zahlen, denn solche Stunts sind auf beiden Seiten der Grenze längst verboten.\n\n| Jahr | Wagehals | Leistung |\n|---|---|---|\n| 1859 | Charles Blondin | Seiltanz über die Schlucht |\n| 1901 | Annie Edson Taylor | erste Fahrt im Fass |\n| 1995 | Steve Trotter und Lori Martin | erstes Paar im Fass |\n| 2012 | Nik Wallenda | Hochseil direkt über die Fälle |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-072",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Welchen Spitznamen trägt die kanadische Ein-Dollar-Münze, die seit 1987 einen Seetaucher zeigt?",
+      "en": "What is the nickname of the Canadian one-dollar coin, which has shown a loon since 1987?",
+      "answerDe": "Loonie",
+      "answerEn": "Loonie",
+      "timeline": {
+       "kind": "event",
+       "start": "1987-06-30",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Canada's one-dollar 'loonie' coin enters circulation",
+       "labelDe": "Kanadas Ein-Dollar-Münze „Loonie“ kommt in Umlauf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Loonie",
+       "title": "Loonie – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welchen Spitznamen bekam die kanadische Zwei-Dollar-Münze bei ihrer Einführung 1996?",
+      "en": "What nickname did the Canadian two-dollar coin receive when it was introduced in 1996?",
+      "answerDe": "Toonie",
+      "answerEn": "Toonie",
+      "timeline": {
+       "kind": "event",
+       "start": "1996",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Canada introduces the two-dollar 'toonie' coin",
+       "labelDe": "Kanada führt die Zwei-Dollar-Münze „Toonie“ ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Loonie",
+       "title": "Loonie – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem Euroland werden Barzahlungen seit der Euro-Einführung 2002 auf fünf Cent gerundet, sodass 1- und 2-Cent-Münzen kaum umlaufen?",
+      "en": "In which euro country have cash payments been rounded to five cents since the euro's introduction in 2002, so that 1- and 2-cent coins hardly circulate?",
+      "answerDe": "Finnland",
+      "answerEn": "Finland",
+      "timeline": {
+       "kind": "event",
+       "start": "2002",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Finland introduces euro cash and rounds cash payments to five cents",
+       "labelDe": "Finnland führt das Euro-Bargeld ein und rundet Barzahlungen auf fünf Cent"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Cash_rounding",
+       "title": "Cash rounding – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Land zog 1992 seine 1- und 2-Cent-Münzen aus dem Verkehr?",
+      "en": "Which country withdrew its 1- and 2-cent coins from circulation in 1992?",
+      "answerDe": "Australien",
+      "answerEn": "Australia",
+      "timeline": {
+       "kind": "event",
+       "start": "1992",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Australia withdraws its 1- and 2-cent coins",
+       "labelDe": "Australien zieht seine 1- und 2-Cent-Münzen ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Cash_rounding",
+       "title": "Cash rounding – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Goodbye, Small Change: The Countries That Dropped Their Smallest Coins",
+    "titleDe": "Abschied vom Kleingeld: Länder, die ihre kleinsten Münzen abschafften",
+    "bodyEn": "A coin that costs more to make than it is worth is a strange thing to keep producing. Since the late twentieth century, one country after another has quietly stopped – and discovered that shops can simply round the total.\n\n**Australia and New Zealand.** The pioneers were in the southern hemisphere. Australia minted its last 1- and 2-cent coins in 1991 and removed them from circulation in 1992; New Zealand had done the same with its own two smallest coins in 1990 and in 2006 went further, dropping the 5-cent coin as well. Cash totals are rounded; card payments are still charged to the cent.\n\n**Finland.** When the euro arrived in 2002, Finland decided from the start that cash payments would be rounded to the nearest five cents. Finnish 1- and 2-cent coins were struck only in small numbers for collectors, and although they remain legal tender in every euro country, they hardly circulate. Several other euro countries, among them the Netherlands, Belgium, Ireland and Italy, later adopted similar rounding rules.\n\n**Canada.** Canada announced in its federal budget of 29 March 2012 that it would phase out its one-cent coin. The penny, which cost about 1.6 cents to produce, was minted for the last time at the Royal Canadian Mint's plant in Winnipeg on 4 May 2012, and banks stopped handing it out on 4 February 2013. Since then Canadian cash prices are rounded to the nearest five cents. Canadians had long been used to coins replacing notes: the one-dollar coin, introduced in 1987 with a common loon on its reverse, was nicknamed the loonie at once, and when the two-dollar coin followed in 1996 it inevitably became the toonie – a blend of \"two\" and \"loonie\".\n\n**The holdouts.** The United States still mints its cent, even though it has cost more than a cent to make for years, and in Germany the 1- and 2-cent coins remain in everyday use – though the debate about abolishing them returns every few years.\n\n| Country | Smallest coins dropped | Year |\n|---|---|---|\n| New Zealand | 1 and 2 cents | 1990 |\n| Australia | 1 and 2 cents | 1992 |\n| Finland | 1 and 2 cents (rounding) | 2002 |\n| Canada | 1 cent | 2012/2013 |",
+    "bodyDe": "Eine Münze, deren Herstellung mehr kostet, als sie wert ist, weiter zu prägen, ist eigentlich seltsam. Seit dem späten 20. Jahrhundert hat ein Land nach dem anderen stillschweigend damit aufgehört – und festgestellt, dass Geschäfte den Betrag einfach runden können.\n\n**Australien und Neuseeland.** Die Vorreiter lagen auf der Südhalbkugel. Australien prägte seine letzten 1- und 2-Cent-Münzen 1991 und zog sie 1992 aus dem Verkehr; Neuseeland hatte dasselbe 1990 mit seinen beiden kleinsten Münzen getan und schaffte 2006 auch noch die 5-Cent-Münze ab. Barbeträge werden gerundet, Kartenzahlungen weiterhin centgenau abgerechnet.\n\n**Finnland.** Als 2002 der Euro kam, beschloss Finnland von Anfang an, Barzahlungen auf die nächsten fünf Cent zu runden. Finnische 1- und 2-Cent-Münzen wurden nur in kleinen Mengen für Sammler geprägt, und obwohl sie in jedem Euroland gesetzliches Zahlungsmittel sind, laufen sie kaum um. Mehrere andere Euroländer, darunter die Niederlande, Belgien, Irland und Italien, führten später ähnliche Rundungsregeln ein.\n\n**Kanada.** Kanada kündigte in seinem Bundeshaushalt vom 29. März 2012 an, die 1-Cent-Münze auslaufen zu lassen. Der Penny, dessen Herstellung rund 1,6 Cent kostete, wurde am 4. Mai 2012 zum letzten Mal im Werk der Royal Canadian Mint in Winnipeg geprägt, und am 4. Februar 2013 gaben die Banken ihn nicht mehr aus. Seitdem werden Barpreise in Kanada auf fünf Cent gerundet. Dass Münzen Scheine ersetzen, waren die Kanadier längst gewohnt: Die 1987 eingeführte Ein-Dollar-Münze mit einem Eistaucher auf der Rückseite wurde sofort Loonie genannt, und als 1996 die Zwei-Dollar-Münze folgte, hieß sie unvermeidlich Toonie – eine Mischung aus „two“ und „Loonie“.\n\n**Die Standhaften.** Die Vereinigten Staaten prägen ihren Cent weiterhin, obwohl er seit Jahren mehr als einen Cent kostet, und in Deutschland sind die 1- und 2-Cent-Münzen weiterhin im Alltag in Gebrauch – auch wenn die Debatte über ihre Abschaffung alle paar Jahre wiederkehrt.\n\n| Land | Abgeschaffte Kleinmünzen | Jahr |\n|---|---|---|\n| Neuseeland | 1 und 2 Cent | 1990 |\n| Australien | 1 und 2 Cent | 1992 |\n| Finnland | 1 und 2 Cent (Rundung) | 2002 |\n| Kanada | 1 Cent | 2012/2013 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-295",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie lautet der wissenschaftliche Name der Gemeinen Bettwanze?",
+      "en": "What is the scientific name of the common bed bug?",
+      "answerDe": "Cimex lectularius",
+      "answerEn": "Cimex lectularius",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1758",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Linnaeus names the common bed bug Cimex lectularius",
+       "labelDe": "Linné benennt die Gemeine Bettwanze Cimex lectularius"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bed_bug",
+       "title": "Bed bug – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wovon ernähren sich Bettwanzen?",
+      "en": "What do bed bugs feed on?",
+      "answerDe": "Blut",
+      "answerEn": "Blood",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1758",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The blood-feeding bed bug is described scientifically by Linnaeus",
+       "labelDe": "Die blutsaugende Bettwanze wird von Linné wissenschaftlich beschrieben"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bed_bug",
+       "title": "Bed bug – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Zu welcher Insektenfamilie gehören die Bettwanzen?",
+      "en": "To which insect family do bed bugs belong?",
+      "answerDe": "Plattwanzen (Cimicidae)",
+      "answerEn": "Cimicidae",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1758",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Linnaeus describes the common bed bug, a member of the Cimicidae",
+       "labelDe": "Linné beschreibt die Gemeine Bettwanze, eine Vertreterin der Plattwanzen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bed_bug",
+       "title": "Bed bug – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welcher europäischen Hauptstadt sorgten Bettwanzen im Herbst 2023, ein Jahr vor den Olympischen Spielen, für Schlagzeilen?",
+      "en": "In which European capital did bed bugs make headlines in autumn 2023, a year before the Olympic Games?",
+      "answerDe": "Paris",
+      "answerEn": "Paris",
+      "timeline": {
+       "kind": "event",
+       "start": "2023",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Bed bug scare in Paris ahead of the 2024 Olympics",
+       "labelDe": "Bettwanzen-Alarm in Paris vor den Olympischen Spielen 2024"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bed_bug",
+       "title": "Bed bug – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Return of the Bed Bug",
+    "titleDe": "Die Rückkehr der Bettwanze",
+    "bodyEn": "For a few decades after the Second World War, people in rich countries could believe that the bed bug was a pest of the past. Powerful insecticides had all but wiped it out. Since the 1990s, however, the little bloodsucker has staged one of the most remarkable comebacks in the insect world.\n\n**The insect.** The common bed bug, Cimex lectularius – named by Linnaeus in 1758 from the Latin for \"bug\" and \"of the bed\" – is a flat, wingless, reddish-brown insect about five millimetres long. It belongs to the family Cimicidae, a group of true bugs that live entirely as parasites, and it feeds only on blood, usually human. Bed bugs hide by day in mattress seams, bed frames, skirting boards and behind wallpaper and come out at night, drawn by body heat and the carbon dioxide we breathe out. Their bites cause itching welts but, as far as is known, transmit no disease. An adult can survive many months without a meal.\n\n**The comeback.** Why they returned is still debated: more international travel and second-hand furniture, the abandonment of the old, harsh insecticides, and above all widespread resistance to the pyrethroids that replaced them. New York City became the emblem of the resurgence. Reported cases there rose from about 500 in 2004 to around 10,000 in 2009; cinemas, offices, shops and famous hotels had to close for fumigation. That year the city convened a bed bug advisory board under a local law to recommend how to fight the infestation, and later required landlords to disclose a building's bed bug history to new tenants.\n\n**The panic.** Europe has had its own scares. In autumn 2023 reports of bed bugs in cinemas, trains and the Paris Métro caused a media storm in Paris, less than a year before the city hosted the Olympic Games; the government held crisis meetings, and schools closed for fumigation. Experts noted that the numbers had been rising slowly for years and that the panic spread faster than the insects.\n\n**Fighting back.** Because bed bugs resist many sprays, professionals increasingly rely on heat: an hour at around 50 °C kills them in every stage of life, eggs included.",
+    "bodyDe": "Einige Jahrzehnte nach dem Zweiten Weltkrieg konnten die Menschen in reichen Ländern glauben, die Bettwanze sei ein Schädling von gestern. Starke Insektizide hatten sie fast ausgerottet. Seit den 1990er-Jahren aber feiert der kleine Blutsauger eines der bemerkenswertesten Comebacks der Insektenwelt.\n\n**Das Insekt.** Die Gemeine Bettwanze, Cimex lectularius – 1758 von Linné nach dem lateinischen Wort für „Wanze“ und „zum Bett gehörig“ benannt –, ist ein flaches, flügelloses, rotbraunes Insekt von etwa fünf Millimetern Länge. Sie gehört zur Familie der Plattwanzen (Cimicidae), einer Gruppe von Wanzen, die ausschließlich als Parasiten leben, und ernährt sich nur von Blut, meist von menschlichem. Tagsüber versteckt sich die Bettwanze in Matratzennähten, Bettgestellen, hinter Fußleisten und Tapeten und kommt nachts heraus, angelockt von Körperwärme und dem Kohlendioxid, das wir ausatmen. Ihre Stiche verursachen juckende Quaddeln, übertragen aber nach heutigem Wissen keine Krankheiten. Ein erwachsenes Tier kann viele Monate ohne Mahlzeit überleben.\n\n**Das Comeback.** Warum sie zurückkehrten, ist noch umstritten: mehr internationale Reisen und gebrauchte Möbel, der Verzicht auf die alten, scharfen Insektizide und vor allem weit verbreitete Resistenzen gegen die Pyrethroide, die diese ersetzten. New York wurde zum Sinnbild der Rückkehr. Die gemeldeten Fälle stiegen dort von etwa 500 im Jahr 2004 auf rund 10.000 im Jahr 2009; Kinos, Büros, Geschäfte und berühmte Hotels mussten zur Begasung schließen. In jenem Jahr berief die Stadt per Gesetz einen Sachverständigenrat zur Bettwanzenplage ein, der Empfehlungen zur Bekämpfung erarbeiten sollte, und verpflichtete später Vermieter, neuen Mietern den Bettwanzenbefall eines Hauses offenzulegen.\n\n**Die Panik.** Auch Europa hatte seine Schreckmomente. Im Herbst 2023 lösten Berichte über Bettwanzen in Kinos, Zügen und der Métro in Paris einen Mediensturm aus, weniger als ein Jahr bevor die Stadt die Olympischen Spiele ausrichtete; die Regierung hielt Krisensitzungen ab, und Schulen schlossen zur Begasung. Fachleute wiesen darauf hin, dass die Zahlen seit Jahren langsam stiegen und sich die Panik schneller verbreitete als die Insekten.\n\n**Die Gegenwehr.** Weil Bettwanzen vielen Sprays widerstehen, setzen Schädlingsbekämpfer zunehmend auf Hitze: Eine Stunde bei rund 50 °C tötet sie in jedem Lebensstadium, auch die Eier. Kein Blut, keine Bettwanze – doch Hungern allein reicht selten.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-012",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-259",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer wurde im Februar 1986 nach der „People Power“-Revolution die erste Präsidentin der Philippinen?",
+      "en": "Who became the first female president of the Philippines in February 1986 after the \"People Power\" revolution?",
+      "answerDe": "Corazon Aquino",
+      "answerEn": "Corazon Aquino",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1933-01-25",
+       "end": "2009-08-01",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Corazon Aquino, first female president of the Philippines",
+       "labelDe": "Corazon Aquino, erste Präsidentin der Philippinen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Corazon_Aquino",
+       "title": "Corazon Aquino – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer wurde im Dezember 1989 als erster Präsident nach dem Ende der Militärdiktatur Augusto Pinochets in Chile gewählt?",
+      "en": "Who was elected in December 1989 as Chile's first president after the end of Augusto Pinochet's military dictatorship?",
+      "answerDe": "Patricio Aylwin",
+      "answerEn": "Patricio Aylwin",
+      "timeline": {
+       "kind": "event",
+       "start": "1989-12-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Patricio Aylwin elected president of Chile after the Pinochet era",
+       "labelDe": "Patricio Aylwin wird nach der Pinochet-Ära zum Präsidenten Chiles gewählt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Patricio_Aylwin",
+       "title": "Patricio Aylwin – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer besiegte bei der Wahl im Februar 1990 in Nicaragua den Amtsinhaber Daniel Ortega und wurde die erste gewählte Präsidentin Amerikas?",
+      "en": "Who defeated the incumbent Daniel Ortega in Nicaragua's February 1990 election and became the first elected woman president in the Americas?",
+      "answerDe": "Violeta Chamorro",
+      "answerEn": "Violeta Chamorro",
+      "timeline": {
+       "kind": "event",
+       "start": "1990-02-25",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Violeta Chamorro defeats Daniel Ortega in Nicaragua's presidential election",
+       "labelDe": "Violeta Chamorro besiegt Daniel Ortega bei der Präsidentschaftswahl in Nicaragua"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Violeta_Chamorro",
+       "title": "Violeta Chamorro – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Firsts of a Democratic Wave: New Leaders from Manila to Moscow",
+    "titleDe": "Premieren einer Demokratiewelle: Neue Führungsfiguren von Manila bis Moskau",
+    "bodyEn": "Between the mid-1980s and the early 1990s dictatorships and one-party states fell on almost every continent. The elections that followed produced a series of firsts – often leaders whose families had suffered under the old regimes.\n\n**Philippines, 1986.** When the opposition leader Benigno Aquino was shot dead at Manila airport in 1983, his widow Corazon Aquino took up his cause. She challenged Ferdinand Marcos in the snap election of February 1986, and when Marcos claimed victory, millions filled the streets in the peaceful \"People Power\" revolution. On 25 February 1986 Aquino was sworn in as the first female president in Philippine history, and Marcos fled into exile.\n\n**Pakistan, 1988.** Benazir Bhutto's father, the former prime minister Zulfikar Ali Bhutto, had been overthrown by General Zia-ul-Haq and hanged in 1979; she herself spent years in prison and under house arrest. After Zia died in a plane crash, her Pakistan Peoples Party won the election of November 1988, and at 35 Benazir Bhutto became Pakistan's first female prime minister – the first woman to lead a democratic government in a Muslim-majority country. She governed from 1988 to 1990 and again from 1993 to 1996, and was assassinated at a rally in Rawalpindi in December 2007.\n\n**Chile, 1989.** After Augusto Pinochet lost the 1988 plebiscite on extending his rule, Chile held open elections. On 14 December 1989 the Christian Democrat Patricio Aylwin, candidate of a broad coalition, was elected the first president after the military dictatorship, and took office on 11 March 1990.\n\n**Nicaragua, 1990.** In February 1990 the Sandinista president Daniel Ortega, expected to win, was defeated by the publisher Violeta Chamorro, whose husband, a newspaper editor, had been murdered under the Somoza dictatorship. She became the first elected woman president in the Americas.\n\n**Russia, 1991.** On 12 June 1991 the Russian people elected a head of state in a free, popular vote for the first time in their history: Boris Yeltsin became president of the Russian Soviet republic with 57 percent of the vote. Two months later he stood on a tank to defy the August coup, and after the Soviet Union dissolved he remained president of Russia until 1999.",
+    "bodyDe": "Zwischen der Mitte der 1980er- und dem Beginn der 1990er-Jahre fielen auf fast allen Kontinenten Diktaturen und Einparteienstaaten. Die folgenden Wahlen brachten eine Reihe von Premieren – oft Führungsfiguren, deren Familien unter den alten Regimen gelitten hatten.\n\n**Philippinen, 1986.** Als der Oppositionsführer Benigno Aquino 1983 auf dem Flughafen von Manila erschossen wurde, übernahm seine Witwe Corazon Aquino seine Sache. Sie trat bei der vorgezogenen Wahl im Februar 1986 gegen Ferdinand Marcos an, und als Marcos den Sieg für sich beanspruchte, füllten Millionen in der friedlichen „People Power“-Revolution die Straßen. Am 25. Februar 1986 wurde Aquino als erste Präsidentin in der Geschichte der Philippinen vereidigt, und Marcos floh ins Exil.\n\n**Pakistan, 1988.** Benazir Bhuttos Vater, der frühere Premierminister Zulfikar Ali Bhutto, war von General Zia-ul-Haq gestürzt und 1979 gehängt worden; sie selbst verbrachte Jahre in Haft und unter Hausarrest. Nachdem Zia bei einem Flugzeugabsturz ums Leben gekommen war, gewann ihre Pakistanische Volkspartei die Wahl im November 1988, und mit 35 Jahren wurde Benazir Bhutto die erste Premierministerin Pakistans – die erste Frau an der Spitze einer demokratischen Regierung in einem mehrheitlich muslimischen Land. Sie regierte von 1988 bis 1990 und erneut von 1993 bis 1996 und wurde im Dezember 2007 bei einer Kundgebung in Rawalpindi ermordet.\n\n**Chile, 1989.** Nachdem Augusto Pinochet 1988 die Volksabstimmung über die Verlängerung seiner Herrschaft verloren hatte, hielt Chile freie Wahlen ab. Am 14. Dezember 1989 wurde der Christdemokrat Patricio Aylwin, Kandidat eines breiten Bündnisses, zum ersten Präsidenten nach der Militärdiktatur gewählt; am 11. März 1990 trat er sein Amt an.\n\n**Nicaragua, 1990.** Im Februar 1990 unterlag der sandinistische Präsident Daniel Ortega, der als Favorit galt, der Verlegerin Violeta Chamorro, deren Mann, ein Zeitungsherausgeber, unter der Somoza-Diktatur ermordet worden war. Sie wurde die erste gewählte Präsidentin Amerikas.\n\n**Russland, 1991.** Am 12. Juni 1991 wählte das russische Volk zum ersten Mal in seiner Geschichte in freier Volkswahl ein Staatsoberhaupt: Boris Jelzin wurde mit 57 Prozent der Stimmen Präsident der russischen Sowjetrepublik. Zwei Monate später stellte er sich auf einen Panzer, um dem Augustputsch zu trotzen, und nach der Auflösung der Sowjetunion blieb er bis 1999 Präsident Russlands.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-056",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Emirat trat Anfang 1972 als siebtes den Vereinigten Arabischen Emiraten bei?",
+      "en": "Which emirate joined the United Arab Emirates in early 1972 as the seventh?",
+      "answerDe": "Ras al-Chaima",
+      "answerEn": "Ras al-Khaimah",
+      "timeline": {
+       "kind": "event",
+       "start": "1972",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ras al-Khaimah joins the United Arab Emirates as the seventh emirate",
+       "labelDe": "Ras al-Chaima tritt als siebtes Emirat den Vereinigten Arabischen Emiraten bei"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates",
+       "title": "United Arab Emirates – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer war von 1971 bis 2004 der erste Präsident der Vereinigten Arabischen Emirate?",
+      "en": "Who was the first president of the United Arab Emirates, from 1971 to 2004?",
+      "answerDe": "Zayid bin Sultan Al Nahyan",
+      "answerEn": "Zayed bin Sultan Al Nahyan",
+      "timeline": {
+       "kind": "period",
+       "start": "1971",
+       "end": "2004",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Zayed bin Sultan Al Nahyan as first president of the UAE",
+       "labelDe": "Zayid bin Sultan Al Nahyan als erster Präsident der VAE"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates",
+       "title": "United Arab Emirates – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Stadt ist die Hauptstadt der Vereinigten Arabischen Emirate?",
+      "en": "Which city is the capital of the United Arab Emirates?",
+      "answerDe": "Abu Dhabi",
+      "answerEn": "Abu Dhabi",
+      "timeline": {
+       "kind": "founding",
+       "start": "1971-12-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Founding of the United Arab Emirates with Abu Dhabi as capital",
+       "labelDe": "Gründung der Vereinigten Arabischen Emirate mit Abu Dhabi als Hauptstadt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates",
+       "title": "United Arab Emirates – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Inselstaat im Persischen Golf wurde im August 1971 unabhängig, statt sich der geplanten Föderation der Emirate anzuschließen?",
+      "en": "Which island state in the Persian Gulf became independent in August 1971 instead of joining the planned federation of emirates?",
+      "answerDe": "Bahrain",
+      "answerEn": "Bahrain",
+      "timeline": {
+       "kind": "event",
+       "start": "1971-08",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Bahrain becomes independent",
+       "labelDe": "Bahrain wird unabhängig"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates",
+       "title": "United Arab Emirates – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Seven Emirates, One State: The Birth of the UAE",
+    "titleDe": "Sieben Emirate, ein Staat: Die Geburt der VAE",
+    "bodyEn": "Until 1971 the southern shore of the Persian Gulf was a patchwork of small sheikhdoms under British protection, known as the Trucial States after the truces their rulers had signed with Britain in the nineteenth century. When London announced in 1968 that it would withdraw all its forces east of Suez, the sheikhs had to decide how to survive on their own.\n\n**A federation takes shape.** The first plan was a federation of nine emirates, including Bahrain and Qatar. But the two larger states went their own way: Bahrain became independent in August 1971, Qatar in September. The British treaties expired on 1 December 1971, and on 2 December 1971 six emirates – Abu Dhabi, Dubai, Sharjah, Ajman, Umm al-Quwain and Fujairah – united to form the United Arab Emirates. Thus 6 emirates founded the state; the seventh, Ras al-Khaimah, had hesitated over its claim to islands seized by Iran and joined early in 1972, giving the federation the seven emirates it has today.\n\n**The founding father.** The driving force behind the union was Sheikh Zayed bin Sultan Al Nahyan, ruler of oil-rich Abu Dhabi, who served as the country's first president from 1971 until his death in 2004. Abu Dhabi, the largest emirate and the source of most of the oil wealth, became the federal capital, while Dubai's ruler traditionally serves as vice-president and prime minister. Each emirate keeps its own ruler and considerable autonomy; the seven rulers together form the Federal Supreme Council.\n\n**From pearls to skyscrapers.** At independence the region had only recently left behind a modest economy of pearl diving, fishing and trade. Oil, first exported from Abu Dhabi in 1962, transformed it within a generation. Dubai, with less oil, reinvented itself as a hub of trade, aviation and tourism, crowned in 2010 by the Burj Khalifa, the tallest building in the world.\n\n| Emirate | Joined |\n|---|---|\n| Abu Dhabi, Dubai, Sharjah, Ajman, Umm al-Quwain, Fujairah | 2 December 1971 |\n| Ras al-Khaimah | early 1972 |",
+    "bodyDe": "Bis 1971 war die Südküste des Persischen Golfs ein Flickenteppich kleiner Scheichtümer unter britischem Schutz, die nach den Waffenstillstandsverträgen ihrer Herrscher mit Großbritannien im 19. Jahrhundert Vertragsstaaten (Trucial States) hießen. Als London 1968 ankündigte, alle Truppen östlich von Suez abzuziehen, mussten die Scheichs entscheiden, wie sie allein bestehen wollten.\n\n**Eine Föderation entsteht.** Der erste Plan sah eine Föderation von neun Emiraten vor, Bahrain und Katar eingeschlossen. Doch die beiden größeren Staaten gingen eigene Wege: Bahrain wurde im August 1971 unabhängig, Katar im September. Die britischen Verträge liefen am 1. Dezember 1971 aus, und am 2. Dezember 1971 schlossen sich sechs Emirate – Abu Dhabi, Dubai, Schardscha, Adschman, Umm al-Qaiwain und Fudschaira – zu den Vereinigten Arabischen Emiraten zusammen. 6 Emirate gründeten also den Staat; das siebte, Ras al-Chaima, hatte wegen seines Anspruchs auf vom Iran besetzte Inseln gezögert und trat Anfang 1972 bei, womit die Föderation ihre heutigen sieben Emirate erhielt.\n\n**Der Gründervater.** Treibende Kraft der Union war Scheich Zayid bin Sultan Al Nahyan, Herrscher des ölreichen Abu Dhabi, der von 1971 bis zu seinem Tod 2004 erster Präsident des Landes war. Abu Dhabi, das größte Emirat und Quelle des meisten Ölreichtums, wurde Bundeshauptstadt, während der Herrscher Dubais traditionell Vizepräsident und Premierminister ist. Jedes Emirat behält seinen eigenen Herrscher und weitgehende Autonomie; die sieben Herrscher bilden gemeinsam den Obersten Rat der Föderation.\n\n**Von Perlen zu Wolkenkratzern.** Bei der Unabhängigkeit hatte die Region eine bescheidene Wirtschaft aus Perlentauchen, Fischfang und Handel gerade erst hinter sich gelassen. Das Öl, das Abu Dhabi seit 1962 exportierte, verwandelte sie binnen einer Generation. Dubai, mit weniger Öl, erfand sich als Drehkreuz für Handel, Luftfahrt und Tourismus neu, gekrönt 2010 vom Burj Khalifa, dem höchsten Gebäude der Welt.\n\n| Emirat | Beitritt |\n|---|---|\n| Abu Dhabi, Dubai, Schardscha, Adschman, Umm al-Qaiwain, Fudschaira | 2. Dezember 1971 |\n| Ras al-Chaima | Anfang 1972 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-264",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "In welcher Stadt fand im Juni 1992 der Erdgipfel statt, auf dem die Klimarahmenkonvention der Vereinten Nationen zur Unterzeichnung auflag?",
+      "en": "In which city was the Earth Summit held in June 1992, where the UN Framework Convention on Climate Change was opened for signature?",
+      "answerDe": "Rio de Janeiro",
+      "answerEn": "Rio de Janeiro",
+      "timeline": {
+       "kind": "event",
+       "start": "1992-06-03",
+       "end": "1992-06-14",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Earth Summit in Rio de Janeiro",
+       "labelDe": "Erdgipfel in Rio de Janeiro"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Earth_Summit",
+       "title": "Earth Summit – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Nach welcher japanischen Stadt ist das 1997 beschlossene Klimaschutzprotokoll benannt?",
+      "en": "After which Japanese city is the climate protocol adopted in 1997 named?",
+      "answerDe": "Kyoto",
+      "answerEn": "Kyoto",
+      "timeline": {
+       "kind": "event",
+       "start": "1997",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Adoption of the Kyoto Protocol",
+       "labelDe": "Verabschiedung des Kyoto-Protokolls"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Paris_Agreement",
+       "title": "Paris Agreement – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wofür steht die Abkürzung COP bei den jährlichen UN-Klimagipfeln?",
+      "en": "What does the abbreviation COP stand for at the annual UN climate summits?",
+      "answerDe": "Conference of the Parties",
+      "answerEn": "Conference of the Parties",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-12-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "COP21 in Paris adopts the Paris Agreement",
+       "labelDe": "Die COP21 in Paris verabschiedet das Übereinkommen von Paris"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Paris_Agreement",
+       "title": "Paris Agreement – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Land trat am 4. November 2020 unter Präsident Donald Trump aus dem Übereinkommen von Paris aus?",
+      "en": "Which country left the Paris Agreement on 4 November 2020 under President Donald Trump?",
+      "answerDe": "USA",
+      "answerEn": "United States",
+      "timeline": {
+       "kind": "event",
+       "start": "2020-11-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The United States' first withdrawal from the Paris Agreement takes effect",
+       "labelDe": "Der erste Austritt der Vereinigten Staaten aus dem Übereinkommen von Paris wird wirksam"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Paris_Agreement",
+       "title": "Paris Agreement – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Rio to Paris: How the World Learned to Negotiate the Climate",
+    "titleDe": "Von Rio nach Paris: Wie die Welt über das Klima verhandeln lernte",
+    "bodyEn": "The idea that the whole world must agree on how much greenhouse gas it emits is barely a generation old. In three decades of summits, the fight against climate change has produced three landmark agreements – and a great deal of disappointment in between.\n\n**Rio, 1992.** At the Earth Summit in Rio de Janeiro, from 3 to 14 June 1992, the United Nations Framework Convention on Climate Change was opened for signature. It committed its parties to stabilising greenhouse-gas concentrations at a level that would prevent dangerous interference with the climate, but it set no binding targets. Since 1995 its member states have met almost every year at the Conference of the Parties – the \"COP\" – numbered in sequence.\n\n**Kyoto, 1997.** At COP3 in the old Japanese imperial city, the parties adopted the Kyoto Protocol, the first treaty with legally binding emission cuts. Only industrialised countries had targets, however; the United States never ratified it, and fast-growing emitters such as China and India had no obligations at all.\n\n**Paris, 2015.** After the failure of the Copenhagen summit in 2009, a new approach succeeded. On 12 December 2015, at COP21 in Paris, 195 countries adopted the Paris Agreement by consensus. It aims to hold global warming to well below 2 °C above pre-industrial levels and to pursue efforts to limit it to 1.5 °C. Instead of imposed targets, every country sets its own \"nationally determined contribution\" and must raise its ambition every five years. When the agreement was opened for signature at UN headquarters in New York on Earth Day, 22 April 2016, leaders from 175 states signed it on the first day – a record for an international treaty.\n\n**Setbacks.** The agreement's weakest point is that it relies on goodwill. Under President Donald Trump the United States left it, with effect from 4 November 2020; President Joe Biden rejoined in 2021, and Trump announced a second withdrawal after returning to office in 2025. Meanwhile emissions have kept rising, and 2024 became the first calendar year in which the world was more than 1.5 °C warmer than before industrialisation.\n\n| Year | Place | Result |\n|---|---|---|\n| 1992 | Rio de Janeiro | Framework Convention on Climate Change |\n| 1997 | Kyoto | Kyoto Protocol |\n| 2015 | Paris | Paris Agreement |",
+    "bodyDe": "Die Vorstellung, dass sich die ganze Welt darauf einigen muss, wie viele Treibhausgase sie ausstößt, ist kaum eine Generation alt. In drei Jahrzehnten von Gipfeln hat der Kampf gegen den Klimawandel drei wegweisende Abkommen hervorgebracht – und dazwischen viele Enttäuschungen.\n\n**Rio, 1992.** Auf dem Erdgipfel in Rio de Janeiro vom 3. bis 14. Juni 1992 wurde die Klimarahmenkonvention der Vereinten Nationen zur Unterzeichnung aufgelegt. Sie verpflichtete ihre Vertragsparteien, die Treibhausgaskonzentration auf einem Niveau zu stabilisieren, das eine gefährliche Störung des Klimas verhindert, setzte aber keine verbindlichen Ziele. Seit 1995 treffen sich die Mitgliedstaaten fast jedes Jahr zur Vertragsstaatenkonferenz, der Conference of the Parties – kurz „COP“ –, fortlaufend nummeriert.\n\n**Kyoto, 1997.** Auf der COP3 in der alten japanischen Kaiserstadt verabschiedeten die Vertragsparteien das Kyoto-Protokoll, den ersten Vertrag mit rechtlich verbindlichen Emissionssenkungen. Ziele hatten allerdings nur die Industrieländer; die Vereinigten Staaten ratifizierten es nie, und schnell wachsende Emittenten wie China und Indien hatten überhaupt keine Pflichten.\n\n**Paris, 2015.** Nach dem Scheitern des Gipfels von Kopenhagen 2009 hatte ein neuer Ansatz Erfolg. Am 12. Dezember 2015 verabschiedeten 195 Staaten auf der COP21 in Paris im Konsens das Übereinkommen von Paris. Es soll die Erderwärmung auf deutlich unter 2 °C gegenüber dem vorindustriellen Niveau begrenzen und Anstrengungen unternehmen, sie auf 1,5 °C zu beschränken. Statt vorgegebener Ziele legt jedes Land seinen eigenen „national festgelegten Beitrag“ fest und muss seine Ambitionen alle fünf Jahre erhöhen. Als das Übereinkommen am Tag der Erde, dem 22. April 2016, im UN-Hauptquartier in New York zur Unterzeichnung auflag, unterschrieben führende Politiker aus 175 Staaten schon am ersten Tag – ein Rekord für einen internationalen Vertrag.\n\n**Rückschläge.** Die größte Schwäche des Abkommens ist, dass es auf gutem Willen beruht. Unter Präsident Donald Trump traten die USA mit Wirkung zum 4. November 2020 aus; Präsident Joe Biden trat 2021 wieder bei, und Trump kündigte nach seiner Rückkehr ins Amt 2025 einen zweiten Austritt an. Unterdessen stiegen die Emissionen weiter, und 2024 war das erste Kalenderjahr, in dem die Welt mehr als 1,5 °C wärmer war als vor der Industrialisierung.\n\n| Jahr | Ort | Ergebnis |\n|---|---|---|\n| 1992 | Rio de Janeiro | Klimarahmenkonvention |\n| 1997 | Kyoto | Kyoto-Protokoll |\n| 2015 | Paris | Übereinkommen von Paris |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-192",
+   "category": 3,
+   "domain": "technology",
+   "sub": "computing",
+   "why": "Asks which US agency's surveillance programmes Snowden revealed (NSA); it belongs beside a0384 'The Snowden Files' (technology/computing), whose facts PRISM, XKeyscore and Tempora already cover the same leak."
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a1488",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/WhatsApp",
+   "title": "WhatsApp – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:08.677Z",
+   "snapshot": "da9c1dcd49d3f94b170f77c182a52726347d350af432bb137fe41a2a550e7cbf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Instagram",
+   "title": "Instagram – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:44.265Z",
+   "snapshot": "fa19a516985ae9b7c22118ae8e4c4e444d02531e79ff527fa93152a5688edf8b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Instagram",
+   "title": "Instagram",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:29.122Z",
+   "snapshot": "ba9816c1b48b0827bb15f95c155724f7b596fdb21cd54bfb833dcf9e8ddf7309"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Skype",
+   "title": "Skype – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:33.017Z",
+   "snapshot": "9e61b40fc99903f12b60715e7c51b729515e02b182ba15442fc2f455cff570e7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/LinkedIn",
+   "title": "LinkedIn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:09.703Z",
+   "snapshot": "0f52e98f85f14e89d2c733043cf2e283f0e1642327c875f3f6b3cb9a1c4ca3e9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Susan_Wojcicki",
+   "title": "Susan Wojcicki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:33.867Z",
+   "snapshot": "3ac7018590bedc6d5a7bef789eb873dc27ffe68194605b66f441df4de49bf6b9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "WhatsApp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Instagram",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Instagram",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-155"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Skype",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reid Hoffman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f24407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Susan Wojcicki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:33.635Z",
+   "target": "f07436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "WhatsApp Messenger, commonly known simply as WhatsApp, is an American social media, instant messaging (IM), and Voice over IP (VoIP) service accessible via desktop and mobile app.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “WhatsApp” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:33.635Z",
+   "target": "f07437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Instagram is an American photo and short-form video sharing social networking service owned by Meta Platforms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Instagram” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:33.635Z",
+   "target": "f07437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Instagram ist ein soziales Netzwerk mit Fokus auf Video- und Foto-Sharing, das vom Unternehmen Meta Platforms betrieben wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Instagram” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:33.635Z",
+   "target": "f07439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Skype ( ) was a proprietary telecommunications application operated by Skype Technologies, an acquired division of Microsoft, best known for IP-based videotelephony, videoconferencing and voice calls.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skype” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:33.635Z",
+   "target": "f24406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was launched on May 5, 2003, by Reid Hoffman and Eric Ly, receiving financing from numerous venture capital firms, including Sequoia Capital, in the years following its inception.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reid Hoffman” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:33.635Z",
+   "target": "f24407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Susan Wojcicki",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Susan Wojcicki” is on the snapshot of s6"
+  }
+ ]
+}

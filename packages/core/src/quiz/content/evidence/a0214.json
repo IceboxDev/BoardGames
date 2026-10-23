@@ -1,0 +1,321 @@
+{
+ "article": "a0214",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus",
+   "title": "Voyages of Christopher Columbus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:05.718Z",
+   "snapshot": "48e332a5668efdef276ebae43245ea13d854dc2d0d3e4bd81712f9f225eb5c0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Victoria_(ship)",
+   "title": "Victoria (ship) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:27.707Z",
+   "snapshot": "48b1d5455855964d410c31897fc5107ab8ec2b800b15767d0d00126279781a84"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/HMS_Beagle",
+   "title": "HMS Beagle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:28.815Z",
+   "snapshot": "a6f40dd96d356b6c9523c07a24c1223c6c17046c4fbbe39b782db69e6ae8f3ea"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/First_voyage_of_James_Cook",
+   "title": "First voyage of James Cook – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:29.736Z",
+   "snapshot": "e33bbf77a34704e0027104e0d46e423e12d2082b1adc7cefdda3e99ebe3ff067"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fram_(ship)",
+   "title": "Fram (ship) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:30.837Z",
+   "snapshot": "f2d3a4b92b8471d3e2eb8c8cf5ff3671e21da16085a986f0add55a6e6134822b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ni%C3%B1a_(ship)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:31.708Z",
+   "snapshot": "a4083a727b267c3463cc3a5ed043864c5fd960001cf2311823d529b3c5cec2a5"
+  },
+  "s7": {
+   "url": "https://exploration.marinersmuseum.org/subject/christopher-columbus/",
+   "title": "Christopher Columbus – Ages of Exploration",
+   "publisher": "The Mariners' Museum and Park",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:21.510Z",
+   "snapshot": "7d92412c49337dd36ff1bdd956e44b51e34f3a457897dd5b83ea5efbe1813739"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Santa_Mar%C3%ADa_(ship)",
+   "title": "Santa María (ship) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:35:07Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Santa María, Pinta and Niña",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Victoria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beagle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Endeavour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fram",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:12.972Z",
+   "target": "f01066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Santa María, Pinta and Niña",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Santa María, Pinta and Niña”, “Santa María, Pinta und Niña”, “Санта-Мария, Пинта и Нинья”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:12.972Z",
+   "target": "f01067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Victoria or Nao Victoria (Spanish for \"Victory\") was a carrack famed as the first ship to successfully circumnavigate the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.972Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Victoria” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:12.972Z",
+   "target": "f01068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "HMS Beagle was a Cherokee-class 10-gun brig-sloop of the Royal Navy, one of more than 100 ships of this class.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.972Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beagle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:12.972Z",
+   "target": "f01069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first voyage of James Cook was a combined Royal Navy and Royal Society expedition to the south Pacific Ocean aboard HMS Endeavour, from 1768 to 1771.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.972Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Endeavour” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:12.972Z",
+   "target": "f01070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fram ('Forward') is a ship that was used in expeditions of the Arctic and Antarctic regions by the Norwegian explorers Fridtjof Nansen, Otto Sverdrup, Oscar Wisting, and Roald Amundsen between 1893 and 1912.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.972Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fram” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:35:04Z",
+   "target": "f01066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Columbus’ voyage departed in August of 1492 with 87 men sailing on three ships: the Niña, the Pinta, and the Santa María.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:35:07Z",
+   "target": "f01066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The other ships of the Columbus expedition were the smaller caravel-type ships Santa Clara, nicknamed La Niña (\"The Girl\"), and La Pinta (\"The Painted\").",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:31.759Z",
+   "target": "f01066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Columbus’ voyage departed in August of 1492 with 87 men sailing on three ships: the Niña, the Pinta, and the Santa María.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  }
+ ]
+}

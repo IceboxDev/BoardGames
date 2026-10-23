@@ -1,0 +1,430 @@
+{
+ "article": "a0084",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Augmented_reality",
+   "title": "Augmented reality – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:27.623Z",
+   "snapshot": "ff515c3e8b8462e5ba94d58371995883c8ad8569ca1b7f7f3149d87c5b44678b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Virtual_reality",
+   "title": "Virtual reality – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:28.706Z",
+   "snapshot": "531e1c9ad4f522ff3ffa5a873cb07cdb803e56db7ed6b70bfe0889e4cecd6021"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Virtual-Reality-Headset",
+   "title": "Virtual-Reality-Headset",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:25.706Z",
+   "snapshot": "ed69e03c73207dcbcf68fea237139120e18f2825a3b8680166f91536145fa8dd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cloud_computing",
+   "title": "Cloud computing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:29.615Z",
+   "snapshot": "e972a839c2fea5ca50286802a67b7fb308c4e8c875f9833d341110ee8512bebd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Internet_of_things",
+   "title": "Internet of things – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:30.707Z",
+   "snapshot": "37f0186d547a7dcb0a8dfb8b9dae15781a86b4494ccf8f509a2c675642ad75bd"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Internet_der_Dinge",
+   "title": "Internet der Dinge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:27.853Z",
+   "snapshot": "1278a04cd8db20d84d4d4a91f83539b45cb1beb707ca6d238ab51f850127ad6d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Deepfake",
+   "title": "Deepfake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:31.748Z",
+   "snapshot": "51573113f0d94a9dc507155a804c142098c50f41a9eca22a3ef95154c1bccb49"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go",
+   "title": "Pokémon Go – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:32.755Z",
+   "snapshot": "cdf6eaf6ef982be63cc6be8bba90f45cf9890a27fd5bdaee5f1e99a39fbab91d"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Erweiterte_Realit%C3%A4t",
+   "title": "Erweiterte Realität",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:29.934Z",
+   "snapshot": "6c61716025e90133043bb2d94521048a602b813ed86e2065b5029ec8b55a726d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Augmented Reality",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Virtual Reality",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Virtual Reality",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-223"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cloud Computing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Internet of Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-085"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Internet of Things",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-081"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f00420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Deepfake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Augmented Reality",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 49"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Augmented Reality",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-231"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Augmented reality (AR) is a form of 3D human–computer interaction that overlays real-time 3D-rendered computer graphics into the real world through a display, such as a handheld device or head-mounted display.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augmented Reality” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Virtual reality (VR) is a simulated experience that employs 3D head-mounted displays and pose tracking to give the user an immersive feel of a virtual world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virtual Reality” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ein Virtual-Reality-Headset (kurz VR-Headset, auch VR- oder Virtual-Reality-Brille, VR- oder Virtual-Reality-Helm) ist ein immersives Mediensystem, welches über spezielle Head-Mounted Displays die Wahrnehmung einer Virtuellen Realität (VR) ermöglicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virtual Reality” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cloud computing is defined by the International Organization for Standardization (ISO) as \"a paradigm for enabling network access to a scalable and elastic pool of shareable physical or virtual resources with self-service provisioning and administration on demand\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cloud Computing” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Internet of things (IoT) describes physical objects that are embedded with sensors, processing ability, software, and other technologies that connect and exchange data with other devices and systems over the Internet or other communication networks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Internet of Things” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Internet der Dinge (IdD) (auch: „Allesnetz“; englisch Internet of Things, Kurzform: IoT) ist ein Sammelbegriff für Technologien einer globalen Infrastruktur der Informationsgesellschaften, die es ermöglicht, physische und virtuelle Objekte miteinander zu vernetzen und sie durch Informations- und",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Internet of Things” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f00420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Academic research has also delved deeper into the factors driving deepfake engagement online as well as potential countermeasures to malicious application of deepfakes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deepfake” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f25200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Pokémon Go (stylized as Pokémon GO) is a 2016 augmented reality (AR) mobile game originally developed and published by Niantic and since 2025 by Scopely Explore, in partnership with Nintendo and the Pokémon Company, for iOS and Android devices.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augmented Reality” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:23:47.849Z",
+   "target": "f25200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Unter erweiterter Realität (auch englisch augmented reality [ɔːɡˈmɛntɪd ɹiˈælɪti], kurz AR) versteht man die computergestützte Erweiterung der Realitätswahrnehmung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augmented Reality” is on the snapshot of s9"
+  }
+ ]
+}

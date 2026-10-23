@@ -1,0 +1,202 @@
+{
+ "article": "a1347",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Westminster_Abbey",
+   "title": "Westminster Abbey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:21.302Z",
+   "snapshot": "6250d62a3795a76b69c6b7c5170e904e3420bb98492e810a14472fa7810566cf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_VII_of_France",
+   "title": "Charles VII of France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:08.232Z",
+   "snapshot": "af3c8ec8bcb98a91d7eb842d444c16e84a3816b2d688f70ab428e39effa6ff4f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+   "title": "Notre-Dame de Paris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:37.217Z",
+   "snapshot": "11dbae59f73fe5accbaed0c1ea7019bc47402a4974bc945e0d6591a7f203e30b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Basilica_of_Saint-Denis",
+   "title": "Basilica of Saint-Denis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:46.589Z",
+   "snapshot": "d91b6d27e3b5d0be6498ace0e08bbc08b44ceffd9c8bdede89763c283c473c39"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coronation_of_Napoleon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:59.041Z",
+   "snapshot": "28b5b669ba18cacbd4b8eea7ef95204789f122efa70e1c46918ca4fb7fe27955"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Westminster Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reims Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Notre-Dame",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Basilica of Saint-Denis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:11.548Z",
+   "target": "f06731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Westminster Abbey, formally titled the Collegiate Church of Saint Peter at Westminster, is an Anglican church in the City of Westminster, London, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Westminster Abbey” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:11.548Z",
+   "target": "f06732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With local English troops dispersed, the people of Reims switched allegiance and opened their gates, which enabled Charles VII to be crowned at Reims Cathedral in 1429.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reims Cathedral” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:11.548Z",
+   "target": "f06733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Notre-Dame de Paris (French: Cathédrale Notre-Dame de Paris French: [nɔtʁ(ə) dam də paʁi] : \"Cathedral of Our Lady of Paris\"), often referred to simply as Notre-Dame, is a medieval Catholic cathedral and basilica on the Île de la Cité (an island in the River Seine), in the 4th arrondissement of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Notre-Dame” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:11.548Z",
+   "target": "f06734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Basilica of Saint-Denis (French: basilique royale Saint-Denis; now formally known as the basilique cathédrale Saint-Denis) is a Roman Catholic cathedral that originated as a medieval abbey church.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:11.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basilica of Saint-Denis” is on the snapshot of s4"
+  }
+ ]
+}

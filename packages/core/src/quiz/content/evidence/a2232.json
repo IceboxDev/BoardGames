@@ -1,0 +1,394 @@
+{
+ "article": "a2232",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Angelina_Jolie",
+   "title": "Angelina Jolie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:55.680Z",
+   "snapshot": "4a85199dbc317f7e72c8eb83fbc9496f9c4f4830f0a18a795703773fdc6bd595"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Emma_Watson",
+   "title": "Emma Watson",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:54.908Z",
+   "snapshot": "fbb8460a3a20ae11e7a5d012185f880e01467587a88a359cb9cb478bc9df94c1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Danny_Kaye",
+   "title": "Danny Kaye – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:55.815Z",
+   "snapshot": "b6a36f53189929e8e618bcb4250803b3293f76a4e68f9144b22a26d0626ba520"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Ustinov",
+   "title": "Peter Ustinov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:56.850Z",
+   "snapshot": "924c2188664eb95b7bb729fbd418a282124af89aa01941e7845e0f6deedeae9b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Audrey_Hepburn",
+   "title": "Audrey Hepburn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:57.977Z",
+   "snapshot": "d47b398a1d4d9dd13ce8eb0defe40ad5bff11673630a4b159a48da91ea5ba775"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/George_Clooney",
+   "title": "George Clooney – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:58.825Z",
+   "snapshot": "26eea66afabab53242d789cd5b2d49163dbb8ebc94fe0f77b9a242c8ec446d03"
+  },
+  "s7": {
+   "url": "https://www.unicef.org/goodwill-ambassadors",
+   "title": "UNICEF Goodwill Ambassadors",
+   "publisher": "UNICEF",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:41.073Z",
+   "snapshot": "d2ce25cfe2711bf075f46ab46a89fe4ceab52149f71dd32714926d7e244d0993"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angelina Jolie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-267"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Emma Watson",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-312"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Danny Kaye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peter Ustinov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Audrey Hepburn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "George Clooney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:40.371Z",
+   "target": "f11411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angelina Jolie [ænd͡ʒəˌlina d͡ʒoʊ̯ˈli:], DCMG (* 4.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angelina Jolie” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:40.371Z",
+   "target": "f11412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Emma Watson wurde 1990 in Paris als Kind zweier Anwälte geboren und verbrachte dort die ersten fünf Jahre ihres Lebens.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emma Watson” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:40.371Z",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Danny Kaye (born David Daniel Kaminsky; January 18, 1911 – March 3, 1987) was an American actor, dancer, singer and comedian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danny Kaye” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:40.371Z",
+   "target": "f11414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ustinov gave his name to the Foundation of the International Academy of Television Arts and Sciences for their Sir Peter Ustinov Television Scriptwriting Award, given annually to a young television screenwriter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Ustinov” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:40.371Z",
+   "target": "f11415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "were in Always (1989), an American romantic fantasy film directed and produced by Steven Spielberg, and the 1990 documentary television series Gardens of the World with Audrey Hepburn, for which she won a Primetime Emmy Award for Outstanding Individual Achievement – Informational Programming.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Audrey Hepburn” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:40.371Z",
+   "target": "f11416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Elvis Mitchell of The New York Times praised their chemistry and the casting of Clooney in the role writing, \"the good work comes from George Clooney, who happens to have the Art Deco profile fit for a 1930s comedy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Clooney” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:34:45Z",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1954, Danny Kaye pioneered the role as Ambassador-at-Large",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:48Z",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He was the first ambassador-at-large of UNICEF in 1954",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:26.862Z",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1954, Danny Kaye pioneered the role as Ambassador-at-Large",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:26.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:26.862Z",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He was the first ambassador-at-large of UNICEF in 1954",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:26.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:26.862Z",
+   "target": "f11413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1954, Danny Kaye pioneered the role as Ambassador-at-Large, paving the way for Audrey Hepburn, Sir Roger Moore and the distinguished roster we boast today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:26.862Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Danny Kaye” is on the snapshot of s7"
+  }
+ ]
+}

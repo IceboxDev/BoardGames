@@ -1,0 +1,352 @@
+{
+ "article": "a0408",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nomophobia",
+   "title": "Nomophobia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:04.589Z",
+   "snapshot": "388b343af0d27f809270834a858eaf19cdfa71a31017593425401f02419a87eb"
+  },
+  "s2": {
+   "url": "https://www.merriam-webster.com/dictionary/technophobia",
+   "title": "Technophobia – Merriam-Webster",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wiktionary.org/wiki/cyberphobia",
+   "title": "cyberphobia – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:02.148Z",
+   "snapshot": "997106c49fa4d3f545fecb2775871adb8b163a83afc7c6623ed3225b8b50db37"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fear_of_missing_out",
+   "title": "Fear of missing out – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:05.588Z",
+   "snapshot": "9ee3c91134bc8151c5a510aabcc396fae205e7d98e467ecf47c941a3a67e73b0"
+  },
+  "s5": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/nomophobia",
+   "title": "NOMOPHOBIA – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:54.722Z",
+   "snapshot": "628f7c7cf7dcec2894bd4fbb5150be1f17c4912c0b157d4a544b2f485d7eba2c"
+  },
+  "s6": {
+   "url": "https://www.dictionary.com/browse/technophobia",
+   "title": "technophobia – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:54.987Z",
+   "snapshot": "c4dabcb8c8aa44a3bb04fc6c3b9268fbb91a08e5175a411aaa438dd16e7f76a4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Technophobia",
+   "title": "Technophobia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:55.512Z",
+   "snapshot": "22de73cc7cb8e9d41d35fba170129cc4b54522c2e6e214c42fdc4eb36dc4e559"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "being without a mobile phone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "modern technology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "computers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "missing out",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:44.070Z",
+   "target": "f02036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "being without a mobile phone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“being without a mobile phone”, “ohne Mobiltelefon zu sein”, “остаться без мобильного телефона”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:44.070Z",
+   "target": "f02038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the march to the future, these ex-assembly line laborers are being joined by white-collar workers suffering from cyberphobia (fear of computers), a growing number of functionally illiterate high school graduates and a new flood of illegal and poorly educated immigrants from Latin America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “computers” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:44.070Z",
+   "target": "f02040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fear of missing out (FOMO) is the feeling of apprehension that one is either not in the know about or missing out on information, events, experiences, or life decisions that could make one's life better.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “missing out” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:12:05Z",
+   "target": "f02036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "fear or worry at the idea of being without your mobile phone or unable to use it",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:12:08Z",
+   "target": "f02036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nomophobia (short for \"no mobile phobia \") is the fear of not having a working mobile phone .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:12:09Z",
+   "target": "f02037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "an irrational or disproportionate fear of technology, especially advanced digital technology including computers, robots, and artificial intelligence.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:12:11Z",
+   "target": "f02037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the fear or dislike of, or discomfort with, advanced technology or complex devices",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:53:05.348Z",
+   "target": "f02036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "fear or worry at the idea of being without your mobile phone or unable to use it",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:05.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:05.348Z",
+   "target": "f02037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "an irrational or disproportionate fear of technology, especially advanced digital technology including computers, robots, and artificial intelligence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:05.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:05.348Z",
+   "target": "f02037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the fear or dislike of, or discomfort with, advanced technology or complex devices",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:05.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:05.348Z",
+   "target": "f02037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Many technophobic groups revolt against modern technology because of their beliefs that these technologies are threatening their ways of life and livelihoods.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:05.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “modern technology” is on the snapshot of s7"
+  }
+ ]
+}

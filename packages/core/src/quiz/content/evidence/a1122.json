@@ -1,0 +1,289 @@
+{
+ "article": "a1122",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/I_Have_a_Dream",
+   "title": "I Have a Dream – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:03.190Z",
+   "snapshot": "a1244c4bbc080026d4296f52cb1f86a4617550f461dbed69f8aa0c3961643c0e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1964_Nobel_Peace_Prize",
+   "title": "1964 Nobel Peace Prize – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:04.177Z",
+   "snapshot": "eeecaf4673b6039fb52e67d4a9904d145093b6e02706c4b68bc78e63766cc34e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gettysburg_Address",
+   "title": "Gettysburg Address – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:05.127Z",
+   "snapshot": "83cfe7a5f2452f8a5416f9319113c8593e63ae1588d683040cd7d12d1530894a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ich_bin_ein_Berliner",
+   "title": "Ich bin ein Berliner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:06.182Z",
+   "snapshot": "10dae89d1f0fb172fa28b78a757573f6252c336834d4875880bad3d3c5d9c676"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Sportpalastrede",
+   "title": "Sportpalastrede – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:03.486Z",
+   "snapshot": "7ccd180f2f98a5bfd9b32b830687cd917db232d5b094b8e94f35a1fe62663d71"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/On_the_Cult_of_Personality_and_Its_Consequences",
+   "title": "On the Cult of Personality and Its Consequences – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:07.272Z",
+   "snapshot": "4046dd09c3d67326c1b998e24352eee1d4a492b84a99357968bafc946229f953"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I Have a Dream",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "I Have a Dream",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c094"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gettysburg Address",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ich bin ein Berliner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sportpalastrede",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Secret Speech",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:36.145Z",
+   "target": "f05606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"I Have a Dream\" is a public speech that was delivered by American civil rights activist and Baptist minister Martin Luther King Jr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I Have a Dream” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:36.145Z",
+   "target": "f05606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1963, more than 250,000 demonstrators marched to the Lincoln Memorial in Washington, where he gave his influential speech \"I Have a Dream\" in which he called for civil and economic rights and an end to racism in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I Have a Dream” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:36.145Z",
+   "target": "f05607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Gettysburg Address is a dedication speech delivered by Abraham Lincoln, the 16th U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gettysburg Address” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:36.145Z",
+   "target": "f05608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Ich bin ein Berliner\" (German pronunciation: [ɪç bɪn ʔaɪn bɛʁˈliːnɐ]; \"I Am a Berliner\") is a speech by United States president John F.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ich bin ein Berliner” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:36.145Z",
+   "target": "f05609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Sportpalastrede wird die Rede bezeichnet, in der der nationalsozialistische Reichspropagandaminister Joseph Goebbels am 18.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sportpalastrede” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:36.145Z",
+   "target": "f05610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is popularly known as the Secret Speech (Russian: секретный доклад Хрущёва, romanized: sekretnyi doklad Khrushchyova) because the session was not open to journalists or non-party members, and the Central Committee classified it as \"not for publication\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.145Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Secret Speech” is on the snapshot of s6"
+  }
+ ]
+}

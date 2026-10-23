@@ -1,0 +1,242 @@
+{
+ "article": "a2391",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sykes-Picot-Abkommen",
+   "title": "Sykes-Picot-Abkommen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:24.533Z",
+   "snapshot": "8e78710b1576a1289f434a8cf16bdea6636b9ba397b724c735a196b2aa6eaa53"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Balfour_Declaration",
+   "title": "Balfour Declaration – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:28.427Z",
+   "snapshot": "c3b32fd19d3337c63750a4d8d890b80c2acf257351f60afb742fcb3d7b532825"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/T._E._Lawrence",
+   "title": "T. E. Lawrence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:29.665Z",
+   "snapshot": "85bf4775862c89d97bcc13c01dcf4c45dbaa56ef8ed747b0684fe732a1e75e57"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sykes%E2%80%93Picot_Agreement",
+   "title": "Sykes–Picot Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:30.405Z",
+   "snapshot": "4e52446234585a4f7476f55fffa006287dc87e109ff1efeb6031918d997f3a4a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Lausanne",
+   "title": "Treaty of Lausanne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:31.196Z",
+   "snapshot": "c82e9c02600817a8543e7e5fff97a3463b18a1cffce202da8342647db16e29a1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Großbritannien und Frankreich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-312"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Balfour Declaration",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "T. E. Lawrence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Bolsheviks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Treaty of Lausanne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:12.682Z",
+   "target": "f12492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marfa Heimbach: 16.05.1916: Großbritannien und Frankreich unterzeichnen das Sykes-Picot-Abkommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Großbritannien und Frankreich” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:12.682Z",
+   "target": "f12493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Balfour Declaration (2 November 1917) was a public statement issued by the British Government in 1917 during the First World War announcing its support for the establishment of a \"national home for the Jewish people\" in Palestine, then an Ottoman region with a small Jewish minority among an",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Balfour Declaration” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:12.682Z",
+   "target": "f12494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He assigned the copyright in The Mint and all Lawrence's letters to the Letters and Symposium Trust, which he edited and published in the book T. E. Lawrence by his Friends in 1937.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “T. E. Lawrence” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:12.682Z",
+   "target": "f12495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The agreement, along with others, was made public by the Bolsheviks in Moscow on 23 November 1917 and repeated in The Manchester Guardian on 26 November 1917, such that \"the British were embarrassed, the Arabs dismayed and the Turks delighted\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Bolsheviks” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:12.682Z",
+   "target": "f12496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Treaty of Lausanne (French: Traité de Lausanne; Turkish: Lozan Antlaşması) is a peace treaty negotiated during the Lausanne Conference of 1922–1923 and signed in the Palais de Rumine in Lausanne, Switzerland, on 24 July 1923.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Lausanne” is on the snapshot of s5"
+  }
+ ]
+}

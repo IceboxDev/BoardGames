@@ -1,0 +1,488 @@
+{
+ "article": "a2702",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Volcanic_lightning",
+   "title": "Volcanic lightning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:53.173Z",
+   "snapshot": "6623baea281145c8e7e750287de09da18534b6392391b8e34ef893bbe2352729"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ball_lightning",
+   "title": "Ball lightning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:54.411Z",
+   "snapshot": "e59a1928112caf23a54274d319f0fcbdb772d861edabbe0f7240b2a550870719"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Catatumbo_lightning",
+   "title": "Catatumbo lightning – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:55.270Z",
+   "snapshot": "b7d4c41561489e12a9a66c18d2f4bfe5069e9ca1c38df6e2e88a26cc2be29556"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fulgurite",
+   "title": "Fulgurite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:56.195Z",
+   "snapshot": "ededd540a0cd2083c76750b4e0fdec047b8e70fc504fc259d8b3dd2cbffca26f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sprite_(lightning)",
+   "title": "Sprite (lightning) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:57.227Z",
+   "snapshot": "7912d45a43f6ece87cc41ccdb9317c4ce2d9e9d2900886b31abd0312eeae2cb9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lightning",
+   "title": "Lightning",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:06.336Z",
+   "snapshot": "aa90d6dee8976888ab4cef177dd21aa689ada4c134fd1dec07233c16d6e8961b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ozone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:00.161Z",
+   "snapshot": "57cff0755110ba5883cbfd51197729129a4b75ac0b17f6183cafa64b13e26715"
+  },
+  "s8": {
+   "url": "https://www.rmets.org/metmatters/ball-lightning",
+   "title": "Ball Lightning",
+   "publisher": "Royal Meteorological Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:39.556Z",
+   "snapshot": "db616c0c75c5139750a6ce1ee7243147ce7e693f7b025b5ad3da1c4b42c41052"
+  },
+  "s9": {
+   "url": "https://physics.aps.org/articles/v7/5",
+   "title": "First Spectrum of Ball Lightning",
+   "publisher": "American Physical Society (Physics magazine)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:40.718Z",
+   "snapshot": "173c53905c27fb6a4b312677bd1d9d4ca51cdfd0a8fe4a3219a0c533ae3ede9a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lightning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript pp-055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ball lightning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lake Maracaibo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fulgurite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "sprites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ozone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-009"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ozone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 45"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Volcanic lightning is an electrical discharge caused by a volcanic eruption rather than from an ordinary thunderstorm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lightning” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ball lightning is a rare and unexplained phenomenon described as luminescent spherical objects that vary from pea-sized to several meters (yards) in diameter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ball lightning” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Catatumbo lightning (Spanish: Relámpago del Catatumbo), also known as The Everlasting Storm, is an atmospheric phenomenon that occurs over and around Lake Maracaibo in Venezuela, typically over a bog area formed where the Catatumbo River flows into the lake.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Maracaibo” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fulgurites at Winans Lake, Livingston County, Michigan, extended discontinuously throughout a 30 m range and arguably include the largest reported fulgurite mass ever recovered and described: its largest section extending approximately 16 ft (4.88 m) in length by 1 ft in diameter (30 cm).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fulgurite” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sprites or red sprites are large-scale electric discharges that occur in the mesosphere, high above thunderstorm clouds, or cumulonimbus, giving rise to a varied range of visual shapes flickering in the night sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sprites” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Consequently, a lightning strike observed at a very close distance will be accompanied by a sudden clap of thunder, with almost no perceptible time lapse, possibly accompanied by the smell of ozone (O3).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ozone” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:59.848Z",
+   "target": "f25601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ozone ( ), also called trioxygen, is an inorganic molecule with the chemical formula O3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.848Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ozone” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:17:09Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "there are more than 10,000 written accounts of the bright, spherical lights in the sky, which linger for seconds longer than a true lightning bolt",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:17:11Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ball lightning typically appears during thunderstorms as a glow, ranging from the size of a golf ball to several meters across, which floats in the air for between one second and tens of seconds.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:17:14Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Scientific theories of ball lightning abound, with varying degrees of plausibility.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports 'still unexplained': competing theories, no accepted explanation"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:47.354Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "there are more than 10,000 written accounts of the bright, spherical lights in the sky, which linger for seconds longer than a true lightning bolt",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:47.354Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Scientific theories of ball lightning abound, with varying degrees of plausibility.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:47.354Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ball Lightning | Royal Meteorological Society",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ball lightning” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:47.354Z",
+   "target": "f25271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Physics - First Spectrum of Ball Lightning",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ball lightning” is on the snapshot of s9"
+  }
+ ]
+}

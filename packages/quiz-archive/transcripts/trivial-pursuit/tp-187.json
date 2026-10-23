@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-187",
+ "image": "IMG20261007175052.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt kein Ortsteil in Deutschland: Philadelphia, Rom oder Moskau?",
+   "de": "Zu welcher brandenburgischen Stadt gehört der Ortsteil Philadelphia?",
+   "en": "Which town in Brandenburg does the district of Philadelphia belong to?",
+   "reworked": true,
+   "answerDe": "Storkow (Mark)",
+   "answerEn": "Storkow (Mark)",
+   "timeline": {
+    "kind": "event",
+    "start": "1792",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The village of Hammelstall in Brandenburg is first recorded under the name Philadelphia",
+    "labelDe": "Das brandenburgische Dorf Hammelstall wird erstmals unter dem Namen Philadelphia erwähnt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Philadelphia_(Storkow_(Mark))",
+    "title": "Philadelphia (Storkow (Mark))",
+    "lang": "de"
+   },
+   "notes": "Card is a 'which is NOT' choice question; reworked to the positive fact. Card's intended answer is presumably Moskau: Philadelphia is an Ortsteil of Storkow (Mark) and Rom is an Ortsteil of Morsbach (NRW), while de.wikipedia's Moskau disambiguation lists no German Ortsteil.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Zu welchem muskelbepackten Wagen wird der Autobot Bumblebee in den Transformers-Actionfilmen?",
+   "de": "Zu welchem muskelbepackten Wagen wird der Autobot Bumblebee in den Transformers-Actionfilmen?",
+   "en": "Which muscle car does the Autobot Bumblebee turn into in the Transformers action films?",
+   "reworked": false,
+   "answerDe": "Chevrolet Camaro",
+   "answerEn": "Chevrolet Camaro",
+   "timeline": {
+    "kind": "creation",
+    "start": "2007",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first live-action Transformers film, in which Bumblebee became a yellow Chevrolet Camaro",
+    "labelDe": "Der erste Transformers-Realfilm, in dem Bumblebee zum gelben Chevrolet Camaro wurde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bumblebee_(Transformers)",
+    "title": "Bumblebee (Transformers)",
+    "lang": "en"
+   },
+   "notes": "In the original toys and cartoons Bumblebee was a Volkswagen Beetle; Volkswagen declined for the 2007 film.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wo fand der erste dokumentierte Streik der Weltgeschichte statt: im antiken Ägypten, im Römischen Reich oder im antiken Griechenland?",
+   "de": "In welchem Reich der Antike fand der erste dokumentierte Streik der Weltgeschichte statt?",
+   "en": "In which ancient realm did the first documented strike in world history take place?",
+   "reworked": true,
+   "answerDe": "Altes Ägypten",
+   "answerEn": "Ancient Egypt",
+   "timeline": {
+    "kind": "event",
+    "start": "-1159",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Royal tomb workers at Thebes (Deir el-Medina) lay down tools under Ramesses III, the first documented strike",
+    "labelDe": "Arbeiter an den Königsgräbern in Theben (Deir el-Medina) legen unter Ramses III. die Arbeit nieder – der erste belegte Streik"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Streik",
+    "title": "Streik",
+    "lang": "de"
+   },
+   "notes": "The workers struck in the 29th regnal year of Ramesses III because their grain wages were 18 days late; many sources date it 1157/1159 BC.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 4,
+   "cardDe": "Was würden Marcel Reich-Ranicki zufolge Schriftsteller einem Kollegen als Einziges nicht verzeihen: den Erfolg, sein Lob oder einen Preis?",
+   "de": "Was würden Marcel Reich-Ranicki zufolge Schriftsteller einem Kollegen als Einziges nicht verzeihen?",
+   "en": "According to Marcel Reich-Ranicki, what is the one thing writers would not forgive a colleague?",
+   "reworked": true,
+   "answerDe": "den Erfolg",
+   "answerEn": "Success",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1920-06-02",
+    "end": "2013-09-18",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Marcel Reich-Ranicki, German literary critic (1920–2013)",
+    "labelDe": "Marcel Reich-Ranicki, deutscher Literaturkritiker (1920–2013)"
+   },
+   "source": {
+    "url": "https://www.zitate7.de/autor/Marcel+Reich-Ranicki/",
+    "title": "Marcel Reich-Ranicki — Die besten Zitate",
+    "lang": "de"
+   },
+   "notes": "Quote as attributed: „Schriftsteller verzeihen ihren Kollegen alles, nur nicht den Erfolg.“ (also circulates as „Deutsche Schriftsteller …“). Only quote collections give it; no primary source found. Lifespan dates from de.wikipedia.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Die englische Wissenschaftlerin Rosalind Franklin war die erste Person, der es 1952 gelang, welches wichtige Molekül abzubilden?",
+   "de": "Die englische Wissenschaftlerin Rosalind Franklin war die erste Person, der es 1952 gelang, welches wichtige Molekül abzubilden?",
+   "en": "The English scientist Rosalind Franklin was the first person, in 1952, to succeed in imaging which important molecule?",
+   "reworked": false,
+   "answerDe": "DNA",
+   "answerEn": "DNA",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1952",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Photo 51, the X-ray diffraction image of DNA from Rosalind Franklin's lab, is taken",
+    "labelDe": "Foto 51, die Röntgenbeugungsaufnahme der DNA aus Rosalind Franklins Labor, entsteht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rosalind_Franklin",
+    "title": "Rosalind Franklin",
+    "lang": "de"
+   },
+   "notes": "Photo 51 (1952) was taken by Franklin's doctoral student Raymond Gosling under her direction.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt der Kontinent, auf dem das längste Radrennen der Welt stattfindet?",
+   "de": "Wie heißt der Kontinent, auf dem das längste Radrennen der Welt stattfindet?",
+   "en": "On which continent does the world's longest bicycle race take place?",
+   "reworked": false,
+   "answerDe": "Afrika",
+   "answerEn": "Africa",
+   "timeline": {
+    "kind": "event",
+    "start": "2003-01-18",
+    "end": "2003-05-18",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Tour d'Afrique, a bicycle race of about 11,000 km from Cairo to Cape Town",
+    "labelDe": "Erste Tour d'Afrique, ein Radrennen über rund 11.000 km von Kairo nach Kapstadt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tour_d%27Afrique",
+    "title": "Tour d'Afrique",
+    "lang": "en"
+   },
+   "notes": "Intended race: the Tour d'Afrique (Cairo–Cape Town, about 11,000–12,000 km). Dated premise: its race component was suspended after 2017 and it now runs as a cycling expedition.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

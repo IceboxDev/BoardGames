@@ -1,0 +1,421 @@
+{
+ "article": "a2358",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tulpenmanie",
+   "title": "Tulpenmanie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:58.572Z",
+   "snapshot": "359a1748924c8222546c0f4eb05b95d098f4b55ef9ed46f740b74d25f10a8ddf"
+  },
+  "s2": {
+   "url": "https://www.universalis.fr/encyclopedie/loto/1-genes-et-la-naissance-du-loto/",
+   "title": "Gênes et la naissance du loto – Encyclopædia Universalis",
+   "kind": "reference",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:55:58.633Z",
+   "snapshot": "9311086763fc8b753c2916586b66ed57c8da09670b6acf610458c04a71981c3d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tulip_mania",
+   "title": "Tulip mania – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:49.962Z",
+   "snapshot": "48b995c1592c902f1f3d4434a8a396f16206a2ff91cc83ac083340a4364ea167"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/South_Sea_Company",
+   "title": "South Sea Company – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:01.369Z",
+   "snapshot": "e417482c37cf012481f64e0a3ef449d1844b380e99b248e0ce48e19bcb0eb1f9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mississippi_Company",
+   "title": "Mississippi Company – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:02.253Z",
+   "snapshot": "a30b9ff9b0d53fe956faf1efabd3377f3a52fbc49cadda3a1175abe9dcfd6e98"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lottery",
+   "title": "Lottery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:03.450Z",
+   "snapshot": "4d36199b3c42773d93e0ddfbd0fd62d48bd43cff7dcd45a5792493fe81937e50"
+  },
+  "s7": {
+   "url": "https://www.treccani.it/enciclopedia/lotto_(Enciclopedia-Italiana)/",
+   "title": "Lotto – Enciclopedia Italiana (Treccani)",
+   "publisher": "Istituto della Enciclopedia Italiana (Treccani)",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:46:52.448Z",
+   "snapshot": "0461a56dc4d5cc0fe7afe6b9cd1f62248b5e1d29b7fde0750f096d8137b51f00"
+  },
+  "s8": {
+   "url": "https://it.wikipedia.org/wiki/Lotto",
+   "title": "Lotto – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:46:52.838Z",
+   "snapshot": "076f3bca4842f7642b499634edb5f411272d3d0c43447af6a8dbac389754cee4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tulpe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Senator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-048"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Semper Augustus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "South Sea Company",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John Law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Elizabeth I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:04.492Z",
+   "target": "f12289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Von ihm hat sich auch eine der frühesten, möglicherweise sogar die erste angefertigte Beschreibung eines Westeuropäers von einer Tulpe überliefert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tulpe” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:04.492Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Senator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Senator”, “Сенатор”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:04.492Z",
+   "target": "f12291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Semper Augustus was the most expensive tulip during the mania, which at its peak sold for ƒ10,000 (in guilders; equivalent to approximately €130,000 in 2024).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Semper Augustus” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:04.492Z",
+   "target": "f12292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The South Sea Company was a British joint-stock company founded in January 1711, created as a public-private partnership to consolidate and reduce the cost of the national debt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Sea Company” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:04.492Z",
+   "target": "f12293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John Law's Company, founded in 1717 by Scottish economist and financier John Law, was a joint-stock company that occupies a unique place in French and European monetary history, as it was for a brief moment granted the entire revenue-raising capacity of the French state.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Law” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:04.492Z",
+   "target": "f12294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Although the English probably first experimented with raffles and similar games of chance, the first recorded official lottery was chartered by Queen Elizabeth I, in the year 1566, and was drawn in 1569.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elizabeth I” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:43:08Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "la république était désormais dirigée par un Sénat composé de 120 membres – réduits par la suite à 90. Parmi eux, cinq gouverneurs et procurateurs étaient tirés au sort deux fois par an.",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:43:12Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "in occasione della scelta semestrale di cinque membri dei Serenissimi Collegi (Camera e Senato) in sostituzione di altrettanti uscenti di carica.",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23",
+   "note": "Treccani: the names were drawn from 120 candidates (Doria's 1576 reform), later reduced to 90; body corrected accordingly."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:43:16Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Qui nel 1576 le Leges novae stabilirono che due volte all'anno si sorteggiassero cinque membri della nobiltà cittadina per rinnovare i Serenissimi Collegi, cioè la massima autorità di governo",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:48.970Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "la république était désormais dirigée par un Sénat composé de 120 membres – réduits par la suite à 90. Parmi eux, cinq gouverneurs et procurateurs étaient tirés au sort deux fois par an.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:48.970Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "in occasione della scelta semestrale di cinque membri dei Serenissimi Collegi (Camera e Senato) in sostituzione di altrettanti uscenti di carica.",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:48.970Z",
+   "target": "f12290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Qui nel 1576 le Leges novae stabilirono che due volte all'anno si sorteggiassero cinque membri della nobiltà cittadina per rinnovare i Serenissimi Collegi, cioè la massima autorità di governo",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "article": "a2417",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jonathan_Harker",
+   "title": "Jonathan Harker",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:35.224Z",
+   "snapshot": "e021ab694148fc441065ba18f84e8d221da3f750e81affbcb58466aef04e14a4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bram_Stoker",
+   "title": "Bram Stoker",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:36.308Z",
+   "snapshot": "3811a009f10b25d252b2a797553137b06726c7016d43bef779dbdafb4eb9c767"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_seltsame_Fall_des_Dr._Jekyll_und_Mr._Hyde",
+   "title": "Der seltsame Fall des Dr. Jekyll und Mr. Hyde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:33.616Z",
+   "snapshot": "c2483f8dc7235c3f33888180e92f21525ce38db28693c2c8ee8df2e424d996ec"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Oscar_Wilde",
+   "title": "Oscar Wilde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:34.666Z",
+   "snapshot": "ccf109f0fedeb557c14335921ea3a6e77d40a8050e9e4293c8c6df05d1b28b57"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dracula",
+   "title": "Dracula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:00.271Z",
+   "snapshot": "fffef36ee57bca9e899b486ee402de559f5a081a8f7fb94fd7ce01a44134ac38"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray",
+   "title": "The Picture of Dorian Gray – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:37.321Z",
+   "snapshot": "4f2360340d62d4dd5fd8577d1c288a753a567476f7853e755e1854a20279e287"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jonathan Harker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Irish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-278"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dr. Jekyll und Mr. Hyde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-391"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Irland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-372"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Whitby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Abraham Van Helsing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Basil Hallward",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jonathan Harker is a fictional character and one of the main protagonists of Bram Stoker's 1897 Gothic horror novel Dracula.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jonathan Harker” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Abraham Stoker (8 November 1847 – 20 April 1912) was an Irish writer, barrister, literary critic, and theatre manager.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Irish” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der seltsame Fall des Dr. Jekyll und Mr. Hyde (Strange Case of Dr Jekyll and Mr Hyde) ist eine Novelle des schottischen Schriftstellers Robert Louis Stevenson (1850–1894) aus dem Jahr 1886.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dr. Jekyll und Mr. Hyde” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nach seiner Heirat unternahm er vom Oktober 1884 bis März 1885 die zweite Vortragstournee durch England, Wales, Schottland und Irland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Irland” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Revealing his true nature as a vampire, Dracula moves to England and plagues the seaside town of Whitby.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Whitby” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harker joins a group led by Abraham Van Helsing who hunt and kill the Count.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Van Helsing” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:17.148Z",
+   "target": "f12678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The story revolves around a portrait of Dorian Gray painted by Basil Hallward, a friend of Dorian's and an artist infatuated with Dorian's beauty.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basil Hallward” is on the snapshot of s6"
+  }
+ ]
+}

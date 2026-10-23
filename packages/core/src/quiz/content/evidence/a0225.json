@@ -1,0 +1,249 @@
+{
+ "article": "a0225",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Patellar_reflex",
+   "title": "Patellar reflex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:09.075Z",
+   "snapshot": "95a5e6f772242676abe5a10e2e73357f2e1cc6369588300260afcfee9297d258"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Synapse",
+   "title": "Synapse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:10.032Z",
+   "snapshot": "59bcb6a5f8e1fc3936b453e9d0c786eb4eeda38bd84d0de387a6bc743883271f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Axon",
+   "title": "Axon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:11.124Z",
+   "snapshot": "1a08c7fd087150dfa11a8fb0ca1d79d707117a295dc3a25b0c1b46f67439effd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bell%E2%80%93Magendie_law",
+   "title": "Bell–Magendie law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:12.039Z",
+   "snapshot": "ca14b9c388fccb895ceffc4e61fc6b8d5f0edab222ea5bfed4b9689ae72ce9f4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Acetylcholine",
+   "title": "Acetylcholine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:13.108Z",
+   "snapshot": "d26f3a55a6acfb22200eda598b33933e2c42c7a8c5ea8920ef500cbe2dd59ed6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stretch_reflex",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:14.023Z",
+   "snapshot": "a103f49c757528a0922fae6e0c94193e7b86d48b1a9ea5d79431f2f22cf81534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Reflex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Synapse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-109"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Axon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Spinal cord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Acetylcholine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:15.078Z",
+   "target": "f01121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The patellar reflex, also called the knee reflex or knee-jerk, is a stretch reflex which tests the L2, L3, and L4 segments of the spinal cord.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reflex” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:15.078Z",
+   "target": "f01122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the nervous system, a synapse is a structure that allows a neuron to exchange (receive or send) signals with another cell in its immediate vicinity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Synapse” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:15.078Z",
+   "target": "f01123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An axon (from Ancient Greek: ἄξων, romanized: áxōn, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Axon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:15.078Z",
+   "target": "f01124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles Bell referred to the motor functions of nerve fibers exiting the ventral roots of the spinal cord but did not mention the sensory functions of the dorsal roots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spinal cord” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:15.078Z",
+   "target": "f01125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Acetylcholine (ACh) is an organic compound that functions in the brain and body of many types of animals (including humans) as a neurotransmitter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Acetylcholine” is on the snapshot of s5"
+  }
+ ]
+}

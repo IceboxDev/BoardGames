@@ -1,0 +1,249 @@
+{
+ "article": "a1571",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rh_blood_group_system",
+   "title": "Rh blood group system – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:08.949Z",
+   "snapshot": "b21371242a4cff1dea61fd307a24156997f7f7bbca079a0a0f6d3d4b032795ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vaccine",
+   "title": "Vaccine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:10.102Z",
+   "snapshot": "a40ff484eb5bd5fb644596417735b44c2ddb78dff3bd0d21b3ed0b261a65672e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ivan_Pavlov",
+   "title": "Ivan Pavlov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:11.030Z",
+   "snapshot": "55faf4136ca71ef3b37e7a6a3539673ecb60051c26d776942935134e4392e760"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Hunt_Morgan",
+   "title": "Thomas Hunt Morgan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:12.003Z",
+   "snapshot": "624f6ade53ef53939d134335965b262eede2620dbad506069efee09511f819e1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Limulus_amebocyte_lysate",
+   "title": "Limulus amebocyte lysate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:27.106Z",
+   "snapshot": "29244e9f0defdf7d9eeb04e1bac8fc2f99fe65c46913041db0a23cbae96b3206"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rhesus_macaque",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:13.024Z",
+   "snapshot": "3c6e9f56b0cc21c5067035a4fa13017f218f3d8a1806f703c6708b8c950f248e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "rhesus macaque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fruit fly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "horseshoe crab",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:45.383Z",
+   "target": "f07851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wiener, who, at the time, believed it to be a similar antigen found in rhesus macaque red blood cells.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rhesus macaque” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:45.383Z",
+   "target": "f07852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The terms vaccine and vaccination are derived from Variolae vaccinae (smallpox of the cow), the term devised by Edward Jenner (who both developed the concept of vaccines and created the first vaccine) to denote cowpox.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cow” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:45.383Z",
+   "target": "f07853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This was a new kind of study, because previously experiments had been \"acute\", meaning that the dog underwent vivisection which ultimately killed it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dog” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:45.383Z",
+   "target": "f07854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Following the rediscovery of Mendelian inheritance in 1900, Morgan began to study the genetic characteristics of the fruit fly Drosophila melanogaster.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fruit fly” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:45.383Z",
+   "target": "f07855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Limulus amebocyte lysate (LAL) is an aqueous extract of motile blood cells (amebocytes) from the Atlantic horseshoe crab Limulus polyphemus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “horseshoe crab” is on the snapshot of s5"
+  }
+ ]
+}

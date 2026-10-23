@@ -1,0 +1,334 @@
+{
+ "article": "a1015",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Joschka_Fischer",
+   "title": "Joschka Fischer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:14.550Z",
+   "snapshot": "f32ccf2d672796763b7edc7e9e2ff5ed8957081ca04d301cd6a5271a1baf348f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Daniel_Bahr",
+   "title": "Daniel Bahr – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:19.308Z",
+   "snapshot": "fa859d58256f8ca99c0a9a1795a80c341febeea54edab64851cc9d4348fef5ab"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gerhard_Schr%C3%B6der",
+   "title": "Gerhard Schröder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:25.122Z",
+   "snapshot": "238c36863fff273a9a0e4e4e1dc30d2655f11b4caa3aa645fd3f55854dc62b0e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Karenzzeit",
+   "title": "Karenzzeit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:19.974Z",
+   "snapshot": "f83af25b1bf673105a08f43618f9fc05ef4ce000e492090032fca76850ed978b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Eckart_von_Klaeden",
+   "title": "Eckart von Klaeden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:20.554Z",
+   "snapshot": "0d47e2caaa798995cc7919bd8550f2b5dc8b3df36a5da6ca20f5450301f68a77"
+  },
+  "s6": {
+   "url": "https://www.bpb.de/themen/wirtschaft/lobbyismus/276820/drehtuer-karrieren-am-beispiel-der-automobilindustrie/",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:19.804Z",
+   "snapshot": "52985c86eb72657fce86c0ecdecfa207cdb8a8f7e1452120982cabf504d6983c"
+  },
+  "s7": {
+   "url": "https://www.lobbycontrol.de/wp-content/uploads/%C3%9Cberblick-Seitenwechsel-unter-Merkel.pdf",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Joschka_Fischer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:12.988Z",
+   "snapshot": "f54e57aa339c8e7d10be40c94a713f6083e042c8c2743feb43649f2e140d8a11"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Nord_Stream_1",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:21.189Z",
+   "snapshot": "22383b0920aef3bb57ca149fbf401868d980da5dab13230a09dffd56b720c20f"
+  },
+  "s10": {
+   "url": "https://de.wikipedia.org/wiki/Ronald_Pofalla",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:47.629Z",
+   "snapshot": "9c9a69a033c889b4528c49fea2c1c54573b78162943b2269f2a02da70d88105b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Joschka Fischer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daniel Bahr",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23762",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosneft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Karenzzeit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Daimler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Daimler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 42"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Daimler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 42"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:20.078Z",
+   "target": "f05071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Visa Affair 2005, Fischer was a popular politician, \"loved by an entire nation.\" Writing in Der Spiegel, journalist Charles Hawley opined that since 1998, \"Joschka Fischer's popularity has been virtually unassailable: The icon of the environmentally minded Green Party could, it seemed, do no wrong.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joschka Fischer” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:20.078Z",
+   "target": "f05074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daniel Bahr wurde 1976 als Sohn eines Polizisten in Lahnstein geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daniel Bahr” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:20.078Z",
+   "target": "f23762",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "September 2017 wurde Schröder auf Vorschlag der russischen Regierung, die die Aktienmehrheit am Energiekonzern Rosneft (damals 50 % plus eine Aktie) hält, zum Chef des Aufsichtsrats gewählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosneft” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:20.078Z",
+   "target": "f23763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Karenzzeit (lateinisch carere, „verzichten“) ist eine Wartezeit oder Sperrfrist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karenzzeit” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:20.078Z",
+   "target": "f28903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "November 2013 wurde er als Nachfolger von Martin Jäger Leiter des Bereichs Politik und Außenbeziehungen der Daimler AG.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daimler” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:20.078Z",
+   "target": "f28903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Noch während von Klaeden als Staatsminister arbeitete, kündigte er seinen Wechsel zu dem Stuttgarter Autokonzern Daimler an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daimler” is on the snapshot of s6"
+  }
+ ]
+}

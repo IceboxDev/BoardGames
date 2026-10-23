@@ -1,0 +1,281 @@
+{
+ "article": "a2126",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Birkenstock",
+   "title": "Birkenstock – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:57.982Z",
+   "snapshot": "179a7482820ab9f03ed40cebbf3452e82c2850e6e1b91a39adf4edd077d123aa"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Christian_Louboutin",
+   "title": "Christian Louboutin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:55.135Z",
+   "snapshot": "808715e764f9647a4a5583bf5c9e8313bf46961e9c0646287aaaa69e970fc9c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jimmy_Choo",
+   "title": "Jimmy Choo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:58.804Z",
+   "snapshot": "6dd3fab1d0a78cbed2d0f56db66c5983c75f35e3972dd11952db708f06b2afdb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Manolo_Blahnik",
+   "title": "Manolo Blahnik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:59.881Z",
+   "snapshot": "eb2e7241bcf4ce85ce33cdcce0e421b8f7c491215511848bc1d1146d9819c88f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Salvatore_Ferragamo",
+   "title": "Salvatore Ferragamo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:00.828Z",
+   "snapshot": "44bf23a387e2072166179c0f2149ec6aef7a36eb48e89f94928c87fd90fda535"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Birkenstock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christian Louboutin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-222"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Malaysia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-273"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Canary Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Salvatore Ferragamo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tamara Mellon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:27.202Z",
+   "target": "f10653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Birkenstock Holding plc is a German shoe manufacturer known for its sandals and other shoes notable for contoured cork footbeds (soles), made with layers of suede and jute, which conform to the shape of their wearers' feet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Birkenstock” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.202Z",
+   "target": "f10654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christian Louboutin [kʁisˈtjɑ̃ lubuˈtɛ̃ ] (* 7.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Louboutin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.202Z",
+   "target": "f10655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Choo was born in 1948 in the Crown Colony of Penang (now part of Malaysia) into a family of shoemakers of Hakka Chinese descent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malaysia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.202Z",
+   "target": "f10656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blahnik was born in Santa Cruz de la Palma, in the Canary Islands (Spain), to a Czech father and Spanish mother.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canary Islands” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:27.202Z",
+   "target": "f10657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Salvatore Ferragamo (Italian: [salvaˈtoːre ferraˈɡaːmo]; 5 June 1898 – 7 August 1960) was an Italian shoe designer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salvatore Ferragamo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:27.202Z",
+   "target": "f10658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "with British Vogue magazine accessories editor Tamara Mellon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tamara Mellon” is on the snapshot of s3"
+  }
+ ]
+}

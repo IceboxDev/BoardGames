@@ -1,0 +1,422 @@
+{
+ "article": "a1821",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meningitis",
+   "title": "Meningitis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:26.593Z",
+   "snapshot": "2f0b0160194ce63c5cc8f0f8ab300819ff85dc0d35268879ac813446a917a2a6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hepatitis_C",
+   "title": "Hepatitis C – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:27.575Z",
+   "snapshot": "1df648782e1568fd5dad7b781cbfab60761c7b00f704e46dd78f017f72d52afe"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hepatitis",
+   "title": "Hepatitis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:22.678Z",
+   "snapshot": "05e84edbe0fda6841c36218ef8e72db4afb0c4a3a34149a893ce3abe57b440d8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tick-borne_encephalitis",
+   "title": "Tick-borne encephalitis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:28.434Z",
+   "snapshot": "f864f749579aa9b6ddcd3ed9e52bbb37a7f6e6e176eeb9e2d3a0cab285fb5af9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Helicobacter_pylori",
+   "title": "Helicobacter pylori – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:29.623Z",
+   "snapshot": "506aa666edd6e120196dba173600616e2bc449ad563f13a3c31a7841cb138ee6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rheumatoid_arthritis",
+   "title": "Rheumatoid arthritis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:30.652Z",
+   "snapshot": "bad8d5d9c5c4294114247ddd39cef67bc7830c63227b915ab087bf3760798ca7"
+  },
+  "s7": {
+   "url": "https://www.nhs.uk/conditions/encephalitis/",
+   "title": "Encephalitis – NHS",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:43.161Z",
+   "snapshot": "96eaba41bae2e539068e0560f11602b2e4d1a78bb2c6ec09b62846256a524189"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/encephalitis",
+   "title": "ENCEPHALITIS – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:43.438Z",
+   "snapshot": "a6cd5740f619c056fe6eba4cc31e722acd7f0c5bc4211a34b41e5cbb1710e1fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The meninges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The liver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The liver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-082"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The brain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The stomach lining",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The joints",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:27.680Z",
+   "target": "f09101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "meningitides) is acute or chronic inflammation of the protective membranes covering the brain and spinal cord, collectively called the meninges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The meninges” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:27.680Z",
+   "target": "f09102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hepatitis C is an infectious disease caused by the hepatitis C virus (HCV) that primarily affects the liver; it is a type of viral hepatitis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The liver” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:27.680Z",
+   "target": "f09102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hepatitis is inflammation of the liver tissue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The liver” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:27.680Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The brain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The brain”, “Das Gehirn”, “Головной мозг”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:27.680Z",
+   "target": "f09104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gastric disorders due to infection begin with gastritis, or inflammation of the stomach lining.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The stomach lining” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:27.680Z",
+   "target": "f09105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The underlying mechanism involves the body's immune system attacking the joints.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The joints” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:27:54Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "but serious condition in which the brain becomes inflamed (swollen)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:27:56Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a serious illness caused by an infection that makes the brain swell",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:16.030Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "but serious condition in which the brain becomes inflamed (swollen)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:16.030Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a serious illness caused by an infection that makes the brain swell",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:16.030Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Encephalitis is an uncommon but serious condition in which the brain becomes inflamed (swollen).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The brain” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:16.030Z",
+   "target": "f09103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a serious illness caused by an infection that makes the brain swell",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The brain” is on the snapshot of s8"
+  }
+ ]
+}

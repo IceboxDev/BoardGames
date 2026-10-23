@@ -1,0 +1,402 @@
+{
+ "article": "a1474",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Spree",
+   "title": "Spree – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:43.832Z",
+   "snapshot": "985b55b90744f2208090bad7f14806894acf9e60a6b97d6e14b6acd52ade9e19"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Havelberg",
+   "title": "Havelberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:44.738Z",
+   "snapshot": "9251f9fcd7a1cf24547483ba32d258bd5c01c15b621f4d7af5bfae33b92b0a09"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rhine%E2%80%93Main%E2%80%93Danube_Canal",
+   "title": "Rhine–Main–Danube Canal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:50.060Z",
+   "snapshot": "1a117b91b344d1fc3cc6e027c9531940f35aba4fb6f6cb359aeea492fff900a7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Munich",
+   "title": "Munich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:47.499Z",
+   "snapshot": "832519900ac3108d033e94d4a5b88747438500f9662e6fb98a15c46d6dad97e9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Massacre_of_Verden",
+   "title": "Massacre of Verden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:48.364Z",
+   "snapshot": "ba2a2264acd92081911b2477cfc945ceba01b5f4910b3a532c564caf95fa9772"
+  },
+  "s6": {
+   "url": "https://www.infozentrum-isarmuendung.de/isarmuendungsgebiet/natur-erleben/die-isarmuendung/",
+   "title": "Die Isarmündung",
+   "publisher": "Infozentrum Isarmündung (Landkreis Deggendorf)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:06.337Z",
+   "snapshot": "cb6ada97e097103629f7d7da482be2b729a55437980333cc3efddbd295f09d8e"
+  },
+  "s7": {
+   "url": "https://www.karwendel-urlaub.de/reisefuehrer/isartal/isar/",
+   "title": "Die Isar",
+   "publisher": "karwendel-urlaub.de",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:12.137Z",
+   "snapshot": "140c9bfeaa650235ba5358d69fbc355853a41cb41e6cd1533806526bb74ddf16"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Isar",
+   "title": "Isar – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:06.218Z",
+   "snapshot": "66f6ab0c710270142a251bbd82f9e551e3818a4ef93e073d09ba5f38e77ed397"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Havel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elbe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07368",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Danube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07370",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Weser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:31.344Z",
+   "target": "f07366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Spree (sorbisch Sprjewja, niedersorbisch auch schlicht Rěka ,Fluss‘; tschechisch Spréva) ist ein knapp 400 Kilometer langer linker Nebenfluss der Havel im Osten Deutschlands.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.344Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Havel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:31.344Z",
+   "target": "f07367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Stadt, deren Zentrum sich auf einer Insel in der Havel befindet, liegt im äußersten Nordosten des Landes Sachsen-Anhalt an der Havel kurz vor ihrer Mündung in die Elbe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.344Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elbe” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:31.344Z",
+   "target": "f07368",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rhine–Main–Danube Canal (German: Rhein-Main-Donau-Kanal; also called Main–Danube Canal, RMD Canal or Europa Canal) is a canal in Bavaria, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.344Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhine” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:31.344Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Danube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Danube”, “Donau”, “Дунай”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:31.344Z",
+   "target": "f07370",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charlemagne ordered the execution of 4,500 Saxons near the confluence of the Aller and the Weser, in what is now Verden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.344Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weser” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:46Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bei Deggendorf, am Rande des Bayerischen Waldes, fließt die Isar in die Donau.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:18:49Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "292 Kilometern braucht sie auf ihrem Weg vom Hochgebirge bis zur Mündung in die Donau.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:18:53Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fünf Kilometer südlich von Deggendorf mündet die Isar in die Donau.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:17.197Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "292 Kilometern braucht sie auf ihrem Weg vom Hochgebirge bis zur Mündung in die Donau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:17.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:17.197Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fünf Kilometer südlich von Deggendorf mündet die Isar in die Donau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:17.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:17.197Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "292 Kilometern braucht sie auf ihrem Weg vom Hochgebirge bis zur Mündung in die Donau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:17.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Donau” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:17.197Z",
+   "target": "f07369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Isar ist ein für Wasserfahrzeuge über Floßgröße nicht schiffbarer Fluss in Tirol (Österreich) und Bayern (Deutschland), der nach einem 292 km langen Lauf südlich von Deggendorf von rechts in die Donau mündet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:17.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Donau” is on the snapshot of s8"
+  }
+ ]
+}

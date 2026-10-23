@@ -1,0 +1,202 @@
+{
+ "article": "a2799",
+ "sources": {
+  "s1": {
+   "url": "https://www.redensarten-index.de/suche.php?suchbegriff=Schwein+haben",
+   "title": "Schwein haben – Redensarten-Index",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:22:37.443Z",
+   "snapshot": "ebd8574a46a02d9d8605e57bbcc2ae72b5a4895e45a7fbeb384b1ea3a428e584"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Daumen_dr%C3%BCcken",
+   "title": "Daumen drücken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:22:37.685Z",
+   "snapshot": "c1b5ff7c37f41a1aabadfaa32dfc7a1e74177e4d139ffc81913925a3f9914d4c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Toi,_toi,_toi",
+   "title": "Toi, toi, toi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:22:38.602Z",
+   "snapshot": "5237cfb16fea7b9c32c1ca2a994ac37b542d1759319087a266a15396e249e9af"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pechvogel",
+   "title": "Pechvogel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:22:39.612Z",
+   "snapshot": "ee4c61f0d61da8f516c860dd642d5a8d483d990482c7a9025b435a94d81e5cfa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Crossed_fingers",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:41.133Z",
+   "snapshot": "9e53108381fcce99345ce8f3a2939a555342cc21140ad747424b3ace3df7486b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f28608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schwein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 2"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f28609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daumen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f28610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ausspucken",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f28611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vogelleim",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:14.857Z",
+   "target": "f28608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schwein haben - Redensarten-Index",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schwein” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:14.857Z",
+   "target": "f28609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jemandem die Daumen drücken (auch: für jemanden den/die Daumen drücken/halten) ist eine Redensart, mit der zum Ausdruck gebracht werden soll, dass man einer Person Erfolg in einer schwierigen Angelegenheit wünscht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daumen” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:14.857Z",
+   "target": "f28610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Um sie durch einen Glückwunsch nicht herbeizurufen, war es zudem üblich, die Formel „unberufen“ hinzuzufügen und durch dreimaliges Ausspucken, Klopfen auf Holz oder ähnliche Handlungen die Schutzwirkung zu bekräftigen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ausspucken” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:14.857Z",
+   "target": "f28611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die mit Vogelleim bestrichenen Ruten wurden auch „Pechruten“ genannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vogelleim” is on the snapshot of s4"
+  }
+ ]
+}

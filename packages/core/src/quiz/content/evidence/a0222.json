@@ -1,0 +1,195 @@
+{
+ "article": "a0222",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Neville_Chamberlain",
+   "title": "Neville Chamberlain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:33.121Z",
+   "snapshot": "f63780cf4f5c6b4ad9bd545a46a6e931b12923758c2bb57fad18793111fc8a64"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+   "title": "Winston Churchill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:34.139Z",
+   "snapshot": "c3f6004da290616ff56dde74821f194a1515ed9053b769f2cbb6682cffcf443b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/National_Health_Service",
+   "title": "National Health Service – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:35.007Z",
+   "snapshot": "3c6a70fa364c94df8ccf797d51fc1a62c8ba2543e005b986f24ed08d5248a8f8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89douard_Daladier",
+   "title": "Édouard Daladier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:38.158Z",
+   "snapshot": "ef55d5b159f80c49ff7664aecf673e43a7e159e4bf9115b238cbcb28b01b8d6d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neville Chamberlain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Winston Churchill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Clement Attlee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Édouard Daladier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:14.428Z",
+   "target": "f01106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arthur Neville Chamberlain (; 18 March 1869 – 9 November 1940) was Prime Minister of the United Kingdom from May 1937 to May 1940 and Leader of the Conservative Party from May 1937 to October 1940.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neville Chamberlain” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:14.428Z",
+   "target": "f01107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In May 1945, Winston Churchill commissioned the Chiefs of Staff Committee to provide its thoughts on a possible military campaign against the USSR, code-named Operation Unthinkable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winston Churchill” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:14.428Z",
+   "target": "f01108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "When Clement Attlee's Labour Party won the 1945 election he appointed Aneurin Bevan as Health Minister.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clement Attlee” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:14.428Z",
+   "target": "f01110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Édouard Daladier (French: [edwaʁ daladje]; 18 June 1884 – 10 October 1970) was a French Radical-Socialist (centre-left) politician, who was the Prime Minister of France in 1933, 1934 and again from 1938 to 1940.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Édouard Daladier” is on the snapshot of s4"
+  }
+ ]
+}

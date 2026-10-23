@@ -1,6 +1,6 @@
 /** Walking a stored opening tree: children, routes to a position, and where you leave it. */
 import { applyMove } from "@boardgames/core/games/chess/engine/apply";
-import { parseFen, positionKey } from "@boardgames/core/games/chess/engine/fen";
+import { parseFen, positionKey, toFen } from "@boardgames/core/games/chess/engine/fen";
 import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
 import { toSan } from "@boardgames/core/games/chess/engine/san";
 import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
@@ -11,6 +11,13 @@ export function keyAfter(fen: string, uci: string): string | null {
   const pos = parseFen(fen);
   const move = legalMoves(pos).find((m) => moveToUci(m) === uci);
   return move ? positionKey(applyMove(pos, move)) : null;
+}
+
+/** The FEN after `uci` from `fen`, or `null` for an illegal move. */
+export function fenAfter(fen: string, uci: string): string | null {
+  const pos = parseFen(fen);
+  const move = legalMoves(pos).find((m) => moveToUci(m) === uci);
+  return move ? toFen(applyMove(pos, move)) : null;
 }
 
 export function legalUcis(fen: string): string[] {
@@ -122,6 +129,27 @@ export function scoreText(fen: string, line: { cp: number | null; mate: number |
   return `${cp >= 0 ? "+" : ""}${(cp / 100).toFixed(1)}`;
 }
 
+const EDGES = new WeakMap<RepertoireTree, Map<string, readonly (string | null)[]>>();
+
+/**
+ * Where each of the tree's moves at `key` leads (null for an illegal one), in
+ * the node's move order. Worked out once per tree and position: move
+ * generation is the slow part of every walk over a tree.
+ */
+export function nextKeys(tree: RepertoireTree, key: string): readonly (string | null)[] {
+  let edges = EDGES.get(tree);
+  if (!edges) {
+    edges = new Map();
+    EDGES.set(tree, edges);
+  }
+  const known = edges.get(key);
+  if (known) return known;
+  const node = tree.nodes[key];
+  const out = node ? node.moves.map((m) => keyAfter(node.fen, m.uci)) : [];
+  edges.set(key, out);
+  return out;
+}
+
 /** Every tree position reachable from `roots` through the tree's own moves (roots included). */
 export function reachableFrom(tree: RepertoireTree, roots: readonly string[]): Set<string> {
   const seen = new Set<string>();
@@ -130,22 +158,17 @@ export function reachableFrom(tree: RepertoireTree, roots: readonly string[]): S
     const key = stack.pop() as string;
     if (seen.has(key)) continue;
     seen.add(key);
-    const node = tree.nodes[key];
-    if (!node) continue;
-    for (const m of node.moves) {
-      const next = keyAfter(node.fen, m.uci);
+    if (!tree.nodes[key]) continue;
+    for (const next of nextKeys(tree, key))
       if (next && tree.nodes[next] && !seen.has(next)) stack.push(next);
-    }
   }
   return seen;
 }
 
 /** The tree's leaves: positions whose moves lead nowhere further in the tree (where lines end, for now). */
 export function isLeaf(tree: RepertoireTree, key: string): boolean {
-  const node = tree.nodes[key];
-  if (!node) return false;
-  return !node.moves.some((m) => {
-    const next = keyAfter(node.fen, m.uci);
-    return next !== null && next !== key && tree.nodes[next] !== undefined;
-  });
+  if (!tree.nodes[key]) return false;
+  return !nextKeys(tree, key).some(
+    (next) => next !== null && next !== key && tree.nodes[next] !== undefined,
+  );
 }

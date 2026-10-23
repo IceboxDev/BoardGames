@@ -1,0 +1,327 @@
+{
+ "article": "a2797",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lion-man_of_Hohlenstein-Stadel",
+   "title": "Lion-man of Hohlenstein-Stadel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:31.121Z",
+   "snapshot": "19d02800484ddf3ef04204c16e8828e2f69e75a68caf07da16dc771b90c5256f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Venus_of_Willendorf",
+   "title": "Venus of Willendorf",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:32.111Z",
+   "snapshot": "fd1ee454e0f054c19606c4a2b5ef31c23d5b2c200ab8480559d5061a6eba886d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+   "title": "Cave of Altamira",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:33.107Z",
+   "snapshot": "ba1a47185967fb2a8753a18428f732490bfc6c49f23f470cd1c625dc1573bcce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chauvet_Cave",
+   "title": "Chauvet Cave",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:34.102Z",
+   "snapshot": "ac0a90ff5a62daa74a19d2fd5996a03e28441a1e41c6f04be96568bd9aba9f9b"
+  },
+  "s5": {
+   "url": "https://bawue.museum-digital.de/object/2497",
+   "title": "Löwenmensch",
+   "publisher": "Museum Ulm (museum-digital:baden-württemberg)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:50:28.988Z",
+   "snapshot": "af3847635ec209a8fbc969699b09c6a2eb8402e0c36f725a39de533e746c4dad"
+  },
+  "s6": {
+   "url": "https://www.spektrum.de/news/begabte-schwaben/696154",
+   "title": "Begabte Schwaben",
+   "publisher": "Spektrum der Wissenschaft",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:01:43Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lion-man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 2"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f28601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Willendorf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f28602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Altamira",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f28603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chauvet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:14.586Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Löwenmensch figurine, also called the Lion-man of Hohlenstein-Stadel, is a prehistoric sculpture discovered in Hohlenstein-Stadel, a German cave, part of the Caves and Ice Age Art in the Swabian Jura UNESCO World Heritage Site, in 1939.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lion-man” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:14.586Z",
+   "target": "f28601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Venus of Willendorf is an 11.1-centimetre-tall (4.4 in) Venus figurine estimated to have been made c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willendorf” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:14.586Z",
+   "target": "f28602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Cave of Altamira ( AL-tə-MEER-ə; Spanish: Cueva de Altamira [ˈkweβa ðe altaˈmiɾa]) is a cave complex, located near the historic town of Santillana del Mar in Cantabria, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Altamira” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:14.586Z",
+   "target": "f28603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Chauvet-Pont-d'Arc Cave (French: Grotte Chauvet-Pont d'Arc [ɡʁɔt ʃovɛ pɔ̃ daʁk]) in the Ardèche department of southeastern France is a cave that contains some of the best-preserved figurative cave paintings in the world, as well as other evidence of Upper Paleolithic life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chauvet” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:01:40Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "it is one of the oldest-known examples of an artistic representation and the oldest confirmed statue ever discovered",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:01:41Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als die Grabungen in der Stadel-Höhle am Hohlenstein am 25. August 1939 kriegsbedingt abgebrochen werden mussten",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Museum Ulm's own object record for the Löwenmensch: found 1939 in the Stadel cave, carved from mammoth tusk over 35,000 years ago, 'zählt zu den frühesten figürlichen Darstellungen der Menschheit' — so the 'oldest statue' superlative is softened to 'among the oldest'."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:43Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Heute gilt der Löwenmensch, der 1988 komplett restauriert wurde, als eines der ältesten figürlichen Kunstwerke der Menschheit.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T13:00:03.330Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "it is one of the oldest-known examples of an artistic representation and the oldest confirmed statue ever discovered",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T13:00:03.330Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als die Grabungen in der Stadel-Höhle am Hohlenstein am 25. August 1939 kriegsbedingt abgebrochen werden mussten",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T13:00:03.330Z",
+   "target": "f28600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Löwenmensch :: Museum Ulm :: museum-digital:baden-württemberg",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:03.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Löwenmensch” is on the snapshot of s5"
+  }
+ ]
+}

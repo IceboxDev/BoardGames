@@ -1,0 +1,242 @@
+{
+ "article": "a1616",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Mandarins",
+   "title": "The Mandarins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:03.573Z",
+   "snapshot": "8fe4faf827b5618b155a631abfca911a8dad74fbc2a93c5a676e69f54dbd7604"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pens%C3%A9es",
+   "title": "Pensées – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:04.533Z",
+   "snapshot": "47199005bcd93738ee48153e0b72cddd891855eb367b18efa7d611a3ed912777"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus",
+   "title": "The Myth of Sisyphus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:50.099Z",
+   "snapshot": "7306953b8148ca4e7dc73d1fe7500cb073f06315d77ff3448eda81776e78a919"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Discourse_on_the_Method",
+   "title": "Discourse on the Method – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:28.102Z",
+   "snapshot": "2c6b71a0ba7c7bfdda08573812e1219d6644af25876a8251ba62be8c1c32ad03"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pascaline",
+   "title": "Pascaline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:21.663Z",
+   "snapshot": "83e492b42ece21a83fe152cb5e56b08735d6c30afa37c1af5924efc0ee1f4e7e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08076",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Simone de Beauvoir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08078",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blaise Pascal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert Camus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Discourse on the Method",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pascaline",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:51.786Z",
+   "target": "f08076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Mandarins (French: Les Mandarins) is a 1954 roman à clef by Simone de Beauvoir, for which she won that year's Prix Goncourt, awarded annually to the best and most imaginative prose work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simone de Beauvoir” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:51.786Z",
+   "target": "f08078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Pensées (Thoughts) is a collection of fragments written by the French 17th-century philosopher and mathematician Blaise Pascal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blaise Pascal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:51.786Z",
+   "target": "f08080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Myth of Sisyphus (French: Le mythe de Sisyphe, pronounced [lə mit də sizif]) is a 1942 philosophical work by Albert Camus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Camus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:51.786Z",
+   "target": "f20484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth in the Sciences (French: Discours de la Méthode pour bien conduire sa raison, et chercher la vérité dans les sciences) is a philosophical and autobiographical treatise published by René Descartes in 1637.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Discourse on the Method” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:51.786Z",
+   "target": "f20485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Pascaline (also known as the arithmetic machine or Pascal's calculator) is a mechanical calculator invented by Blaise Pascal in 1642.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pascaline” is on the snapshot of s5"
+  }
+ ]
+}

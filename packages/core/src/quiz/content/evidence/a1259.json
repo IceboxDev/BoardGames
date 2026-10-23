@@ -1,0 +1,249 @@
+{
+ "article": "a1259",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Peach",
+   "title": "Peach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:33.541Z",
+   "snapshot": "dc18fed9534df576d9741075f4a0893924eff90558e799c7b23775da302c245b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Spain",
+   "title": "Coat of arms of Spain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:34.663Z",
+   "snapshot": "e7aa03715d83b7e0b1e08024f8e0ec251f8d0a6ffe2e2c1a5e5fe8bd7f068eb6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pineapple",
+   "title": "Pineapple – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:23.141Z",
+   "snapshot": "05da8bf020fb803096183c222990394c628725d43350e63958d930ec96c3e11d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grenade",
+   "title": "Grenade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:35.460Z",
+   "snapshot": "d2cda5dacd772a1b9e5a1dd3ea70c18a17100f5fb92f1efd3a8fcd58d6e306e1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tomato",
+   "title": "Tomato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:54.146Z",
+   "snapshot": "939e0d7d1bb533b4b3090c0bf630e7727df65f18d23a166b2eef64a1779ba848"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Garnet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:36.548Z",
+   "snapshot": "2d2906ed168e08095b3a666c6548ef4a887237432b2ecfe988e0149212f82185"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Peach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pomegranate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pineapple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hand grenade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nahuatl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:56.247Z",
+   "target": "f06291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The peach (Prunus persica) is a deciduous tree that bears edible juicy fruits with various characteristics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peach” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:56.247Z",
+   "target": "f06293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "fourth quarter Gules a cross, saltire and orle of chains linked together Or, a centre point Vert (for Navarre); enté en point Argent a pomegranate proper seeded Gules, supported, sculpted and leafed in two leaves Vert (for Granada); overall an escutcheon Azure bordure Gules, three",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pomegranate” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:56.247Z",
+   "target": "f06294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The pineapple (Ananas comosus) is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pineapple” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:56.247Z",
+   "target": "f20880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It can be thrown by hand (hand grenade), launched by a rifle attachment, or launched by a dedicated launcher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hand grenade” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:56.247Z",
+   "target": "f20881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The word tomato comes from the Spanish tomate, which in turn comes from the Nahuatl word tomatl [ˈtomat͡ɬ] .",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nahuatl” is on the snapshot of s5"
+  }
+ ]
+}

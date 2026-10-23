@@ -1,0 +1,343 @@
+{
+ "article": "a1750",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alcatraz_Federal_Penitentiary",
+   "title": "Alcatraz Federal Penitentiary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:59.574Z",
+   "snapshot": "fbe72efc8f8d4dd2b77cd941f5f79f29ab0e43e12f6457186da2c9adeadf0d65"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Robben_Island",
+   "title": "Robben Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:37.477Z",
+   "snapshot": "4391690b6fffd6d133a6cbdd40fb064f5917baf80dd316af335aedbebe4fe245"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Devil's_Island",
+   "title": "Devil's Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:00.494Z",
+   "snapshot": "8538b6027adcb07d606975df2cf955191baa67d26a7963857fa74f4ae7a02355"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Elba",
+   "title": "Elba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:01.371Z",
+   "snapshot": "6bbd76e9c12a6d2361ce46a302bd7add66563ef919a8116b49968fbbc54f9fd4"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Elba",
+   "title": "Elba",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:58.801Z",
+   "snapshot": "13a42c7f9201c6d2ed5fd3804e9174e07711073ac78f6488de71663c596b14c2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Alcatraz_Island",
+   "title": "Alcatraz Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:02.500Z",
+   "snapshot": "aea26e32c9099d96b44a215e465f0de5b91ab96897d5ea15b14622fff8d70816"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Alcatraz",
+   "title": "Alcatraz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:59.940Z",
+   "snapshot": "66e5bc324b72a9a5194f3557a3ba9580bfc2f3bf7c4e5fbccb2ffa9f94058c0b"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Longwood_House",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:03.396Z",
+   "snapshot": "ed6150376cd463df379bb94578b1c1c65d2a15868815ff77151e0cd0b4a96253"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alcatraz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robben Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Devil's Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Elba",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-120"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alcatraz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Alcatraz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-365"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f08746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "United States Penitentiary, Alcatraz Island, also known simply as Alcatraz (English: , Spanish: [alkaˈtɾas] \"the gannet\") or The Rock, was a maximum security federal prison on Alcatraz Island, 1.25 miles (2.01 km) off the coast of San Francisco, California, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alcatraz” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f08747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robben Island (Dutch: Robbeneiland) is an island in Table Bay, 6.9 kilometers (4.3 mi) west of the coast of Bloubergstrand, north of Cape Town, South Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robben Island” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f08748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The penal colony of Cayenne (French: Bagne de Cayenne), commonly known as Devil's Island (Île du Diable), was a French penal colony that operated for 100 years, from 1852 to 1952, and officially closed in 1953, in the Salvation Islands of French Guiana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Devil's Island” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f08749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elba (Italian: isola d'Elba, pronounced [ˈiːzola ˈdelba]; Latin: Ilva) is a Mediterranean island in the region of Tuscany in Italy, 10 km (6.2 mi) from the coastal town of Piombino on the Italian mainland, and the largest island of the Tuscan Archipelago.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elba” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f08749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Elba ist eine Insel im Mittelmeer und gehört zum Toskanischen Archipel der Region Toskana in Italien (Provinz Livorno).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elba” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f25212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alcatraz Island () is a small island about 1.25 miles offshore from San Francisco in San Francisco Bay, California, near the Golden Gate strait.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alcatraz” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:16.574Z",
+   "target": "f25212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Alcatraz ist eine US-amerikanische Felsinsel in der Bucht von San Francisco, Kalifornien, auf der sich von 1934 bis 1963 eines der damals bekanntesten und berüchtigtsten Hochsicherheitsgefängnisse der USA befand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alcatraz” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,816 @@
+{
+ "article": "a1605",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heike_Kamerlingh_Onnes",
+   "title": "Heike Kamerlingh Onnes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:25.993Z",
+   "snapshot": "d135a344df3ec1f3dda5cc1bdd3e270ef0fc197b5bb7c834ae413931cb608c8e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carbon-12",
+   "title": "Carbon-12 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:26.980Z",
+   "snapshot": "0c95f9a037d795a842f49d29f3b8b47fe5acbc70b9e557badf6744e87dd1383c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oxygen",
+   "title": "Oxygen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:56.422Z",
+   "snapshot": "f6dc865a0e3b10c2f582679d8377e3345c4bb67ce65b54c6c4200baeba2b46c2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Neon",
+   "title": "Neon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:28.002Z",
+   "snapshot": "72f8e9d16d530dc22030957652ec7503bf5d6f709966de8a33f909bfb60838ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Periodic_table",
+   "title": "Periodic table",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:29.253Z",
+   "snapshot": "57622773339ee5aec42f1de1ce3f5664076a79c6fce6cd7edfdf35c826441a1c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Helium",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:12.245Z",
+   "snapshot": "32a6e81d98a0a6e7a8128fcd35ea5604658f3924dccaf6da4ccf44b90270d983"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Oganesson",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:59.338Z",
+   "snapshot": "b6712960a7531f7529815d0617283c9c9df65c35d3f00c1edec1ebd47ef80d5e"
+  },
+  "s8": {
+   "url": "https://www.webelements.com/helium/",
+   "title": "WebElements Periodic Table » Helium » the essentials",
+   "publisher": "WebElements (Mark Winter, University of Sheffield)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:06.085Z",
+   "snapshot": "a3b26372b4202e3ef67de8c5e18fdd0b0bc9395eaafd870b9cf78a2c235881c0"
+  },
+  "s9": {
+   "url": "https://www.lenntech.com/periodic/elements/he.htm",
+   "title": "Helium (He) – Chemical properties",
+   "publisher": "Lenntech",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:06.140Z",
+   "snapshot": "898d544642c6ff02cae205e95630466a53bcbf8e8c43947fbd99135f54ecff5e"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Carbon",
+   "title": "Carbon – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:07.706Z",
+   "snapshot": "7280df347a2bd0ced2ec839286a71a795cee53481195aef67f8280911dfd106f"
+  },
+  "s11": {
+   "url": "https://www.webelements.com/carbon/",
+   "title": "WebElements Periodic Table » Carbon » the essentials",
+   "publisher": "WebElements (Mark Winter, University of Sheffield)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:06.966Z",
+   "snapshot": "fd03e31f5b29f45657040f5727f48b9d83623d48aa2b0a570edf77400c526da4"
+  },
+  "s12": {
+   "url": "https://www.webelements.com/oxygen/",
+   "title": "WebElements Periodic Table » Oxygen » the essentials",
+   "publisher": "WebElements (Mark Winter, University of Sheffield)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:07.984Z",
+   "snapshot": "b3eaacf54f0c74d3ecbadde7483f51b044b14e5e0f6b8c0fdf7c9153772167dd"
+  },
+  "s13": {
+   "url": "https://www.webelements.com/neon/",
+   "title": "WebElements Periodic Table » Neon » the essentials",
+   "publisher": "WebElements (Mark Winter, University of Sheffield)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:09.024Z",
+   "snapshot": "4fc24b1bdc97eb35fe71cbdeb120d6092f5115631f90a37b9b1e3a9c451573f4"
+  },
+  "s14": {
+   "url": "https://iupac.org/discovery-and-assignment-of-elements-with-atomic-numbers-113-115-117-and-118/",
+   "title": "Discovery and Assignment of Elements with Atomic Numbers 113, 115, 117 and 118 – IUPAC",
+   "publisher": "IUPAC",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:08.245Z",
+   "snapshot": "b8e4ea5cc4840c125cdacc860320879f48ee5325d7bdcc9afee8e1ce4e6ed372"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "atomic number 2",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "atomic number 6",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "atomic number 8",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "atomic number 10",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "118",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 53; transcript ppm-113"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:50.063Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "atomic number 2",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“atomic number 2”, “Ordnungszahl 2”, “атомный номер 2”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:50.063Z",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "atomic number 6",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“atomic number 6”, “Ordnungszahl 6”, “атомный номер 6”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:50.063Z",
+   "target": "f08024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "atomic number 8",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“atomic number 8”, “Ordnungszahl 8”, “атомный номер 8”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:50.063Z",
+   "target": "f08025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neon is a chemical element; it has the symbol Ne and the atomic number 10.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “atomic number 10” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:50.063Z",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "By 2010, the first 118 elements were known, thereby completing the first seven rows of the table; however, chemical characterization is still needed for the heaviest elements to confirm that their properties match their positions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.063Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “118” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:27:23Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it has symbol He and atomic number 2",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:27:25Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Atomic number: 2",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:27:27Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Gaseous chemical element, symbol: He, atomic number: 2",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:27:29Z",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "it has symbol C and atomic number 6",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:27:30Z",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Atomic number: 6",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:27:32Z",
+   "target": "f08024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it has the symbol O and its atomic number is 8",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:27:34Z",
+   "target": "f08024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Atomic number: 8",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:27:36Z",
+   "target": "f08025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "it has the symbol Ne and the atomic number 10",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:27:38Z",
+   "target": "f08025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Atomic number: 10",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:27:41Z",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Today, 118 elements are known, the first 94 of which are known to occur naturally on Earth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23",
+   "note": "Time-sensitive: true as of 2026; no element beyond 118 has been confirmed."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:27:42Z",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "These elements complete the 7th row of the periodic table of the elements",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23",
+   "note": "IUPAC (Dec 2015) verified elements 113, 115, 117 and 118, bringing the table to 118 elements; names approved 28 Nov 2016."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it has symbol He and atomic number 2",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Atomic number: 2",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Gaseous chemical element, symbol: He, atomic number: 2",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "it has symbol C and atomic number 6",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Atomic number: 6",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s11"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it has the symbol O and its atomic number is 8",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Atomic number: 8",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s12"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "it has the symbol Ne and the atomic number 10",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Atomic number: 10",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s13"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Today, 118 elements are known, the first 94 of which are known to occur naturally on Earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s5"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "These elements complete the 7th row of the periodic table of the elements",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s14"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "'sun') is a chemical element; it has symbol He and atomic number 2.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “atomic number 2” is on the snapshot of s6"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Atomic number\n2",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “atomic number 2” is on the snapshot of s9"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f08023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Carbon (from Latin  carbo 'coal') is a chemical element;  it has symbol C and atomic number 6.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “atomic number 6” is on the snapshot of s10"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:56:37.876Z",
+   "target": "f25829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Discovery and Assignment of Elements with Atomic Numbers 113, 115, 117 and 118 - IUPAC | International Union of Pure and Applied Chemistry",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:37.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “118” is on the snapshot of s14"
+  }
+ ]
+}

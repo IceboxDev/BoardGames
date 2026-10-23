@@ -17,11 +17,11 @@ import {
   Surface,
 } from "../../components/ui";
 import { FlameArt } from "../../components/ui/FlameArt.tsx";
-import { StudyHeatmap } from "../../games/quiztopia/components/trainer/StudyHeatmap";
-import { weekdayName } from "../../games/quiztopia/keys";
 import { useCurrentUser } from "../../hooks/useCurrentUser";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import { qk } from "../../lib/query-keys";
+import { StudyHeatmap } from "../quiz/components/trainer/StudyHeatmap";
+import { weekdayName } from "../quiz/keys";
 import { historyQuery } from "./api";
 import { geoPaths, useCatalog, useGeoOverview, useToday, useWorld } from "./data";
 import { Globe } from "./globe/Globe";

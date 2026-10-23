@@ -1,0 +1,327 @@
+{
+ "article": "a2259",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/TMZ",
+   "title": "TMZ",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:06.271Z",
+   "snapshot": "856f0c370e70f64e10ad7fc0cc6a71fe6503ab33094188e328608d039384e10f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Studio_zone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:07.300Z",
+   "snapshot": "9824d31de3003bd57d0153fb6cc02eea43bc269c76b95481a5842a131cec5717"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Perez_Hilton",
+   "title": "Perez Hilton",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:05.365Z",
+   "snapshot": "c4df5eadc917377c54649b87a646ef7adbac5d8437896435161c31b53b3eed8e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Gwyneth_Paltrow",
+   "title": "Gwyneth Paltrow",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:06.952Z",
+   "snapshot": "72b00f786568ce2f95164c48e0e0218a28f7a76f6d1dee924a98b0b823f2a356"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gawker",
+   "title": "Gawker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:08.287Z",
+   "snapshot": "10c4d253f196064b2bbfe94774277a380c58d25ffcd92517c0f886c5021b1d93"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Goop_(company)",
+   "title": "Goop (company) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:09.269Z",
+   "snapshot": "f079ca90a50fd82a1b2c85ab20f4fbe28ca0d5fc5485d80fc7b91405a29cf1d9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "TMZ",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "TMZ",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Perez Hilton",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-230"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Goop",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-367"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harvey Levin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hulk Hogan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chris Martin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "TMZ is an American entertainment-focused tabloid news organization owned by Fox Corporation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “TMZ” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The studio zone, also known as the thirty-mile zone (TMZ), is an area defined by a 30-mile (48 km) radius of \"Hollywood\" used by the American entertainment industry to determine employee benefits for work performed inside and outside of it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “TMZ” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Im Juni 2010 kam Perez Hilton in Negativ-Schlagzeilen, da er ein sogenanntes Upskirt-Foto des Teeniestars Miley Cyrus ins Netz stellte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perez Hilton” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "2008 gründete Paltrow die Website Goop auf Basis eines Newsletters mit persönlichen Lebensstil-Tipps von ihr und einem angeschlossenen Onlineshop mit dazu passenden Produkten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Goop” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "TMZ's founder and managing editor is Harvey Levin, a lawyer-turned-journalist who was previously a legal expert for the Los Angeles television station KCBS-TV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harvey Levin” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gawker's publication of a sex tape featuring Hulk Hogan led Hogan to sue the company for invasion of privacy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hulk Hogan” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:44.549Z",
+   "target": "f11588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Later in 2016, Paltrow moved the company's operations to the US from the UK following her separation from Chris Martin and Gersh left the position of CEO.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chris Martin” is on the snapshot of s6"
+  }
+ ]
+}

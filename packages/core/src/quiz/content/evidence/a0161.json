@@ -1,0 +1,249 @@
+{
+ "article": "a0161",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kayak_roll",
+   "title": "Kayak roll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:06.089Z",
+   "snapshot": "4bddf2b5157e18b99829bfc52a9dd4b6d8296d8bc3d5c655f9985ed1448ae48a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dick_Fosbury",
+   "title": "Dick Fosbury – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:07.031Z",
+   "snapshot": "a15a645d54d02cdc3ef550d546ebc6b68d7742fd7fccf677b38daac68e5f8cde"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cross-country_skiing",
+   "title": "Cross-country skiing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:08.124Z",
+   "snapshot": "7c79b56c0ca2f175456d3be857602c1a9250a0f6a90cf5532c815dcbd6078b44"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tumble_turn",
+   "title": "Tumble turn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:10.019Z",
+   "snapshot": "f8e5456fded295e0d93e3d845fdf7f4529c3ea69429f7c19a84233f08b9c55e1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jan_Bokl%C3%B6v",
+   "title": "Jan Boklöv – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:11.048Z",
+   "snapshot": "83fb48f1fb2d725c32acf4d8b3636e63dba724e559ca909a4dfcb3af365584fe"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ski_jumping",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:12.043Z",
+   "snapshot": "775eccf246ada36d384ec540b2dfa1e31c0f8bd5e7ece81f0e5fac61f4a8cb79"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eskimo roll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c014"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fosbury Flop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Skating",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flip turn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "V-style",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:02.684Z",
+   "target": "f00801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A kayak roll was also known as an Eskimo roll.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eskimo roll” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:02.684Z",
+   "target": "f00802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He won a gold medal at the 1968 Summer Olympics, revolutionizing the high jump event with a \"back-first\" technique now known as the Fosbury flop.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fosbury Flop” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:02.684Z",
+   "target": "f00803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Skiers propel themselves either by striding forward (classic style) or side-to-side in a skating motion (skate skiing), aided by arms pushing on ski poles against the snow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skating” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:02.684Z",
+   "target": "f00804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A tumble turn or flip turn is one of the turns in swimming, used to reverse the direction in which the person is swimming.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flip turn” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:02.684Z",
+   "target": "f00805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He is best known for popularising the now-ubiquitous V-style in the late 1980s and early 1990s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “V-style” is on the snapshot of s5"
+  }
+ ]
+}

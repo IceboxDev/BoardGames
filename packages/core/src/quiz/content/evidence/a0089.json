@@ -1,0 +1,242 @@
+{
+ "article": "a0089",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Franz_Beckenbauer",
+   "title": "Franz Beckenbauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:57.047Z",
+   "snapshot": "6d412fa41ba6079fa3e077af8fe1ca32ca7500576c635d0aa5046e90e83f542f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gerd_M%C3%BCller",
+   "title": "Gerd Müller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:45.924Z",
+   "snapshot": "02508f9f165b6a6936caafe9e3d810efb3619855d5568741e8513ee568e38b15"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Berti_Vogts",
+   "title": "Berti Vogts – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:46.934Z",
+   "snapshot": "1a4d38658ab739040b4de127998d4cd268d541724fd49b21a0ee69cfd3720bc0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Uwe_Seeler",
+   "title": "Uwe Seeler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:47.896Z",
+   "snapshot": "c7acc53f048364b1f9a28021ed3b3d99c42971260c22c202a9b0c78da6354ba2"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kevin",
+   "title": "Kevin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:45.047Z",
+   "snapshot": "4e468341f4d958659bcbd0b18fb11dc2d37f5bb0d8c5abe357d1e2612daa3785"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gerd Müller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Berti Vogts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uwe Seeler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kevin Keegan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-323"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:48.531Z",
+   "target": "f00441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Franz Anton Beckenbauer wurde 1945 als zweiter Sohn des mittleren Postbeamten und gelernten Maschinenschlossers Franz Beckenbauer (1905–1977) und dessen Frau Antonie Hupfauf (* 23.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:48.531Z",
+   "target": "f00442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "There is also a collection of apparel released by sporting giants Adidas under the Gerd Müller name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerd Müller” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:48.531Z",
+   "target": "f00444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Planetworldcup's biography of Berti Vogts",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berti Vogts” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:48.531Z",
+   "target": "f00445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uwe Seeler (German pronunciation: [ˈuːvə ˈzeːlɐ]; 5 November 1936 – 21 July 2022) was a German footballer and football official.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uwe Seeler” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:48.531Z",
+   "target": "f14667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1977 bis 1980 spielte der bekannte englische Fußballprofi Kevin Keegan beim deutschen Club Hamburger SV, zur gleichen Zeit stieg der Vorname sprunghaft von Platz >130 auf Platz 65 der beliebtesten männlichen Vornamen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kevin Keegan” is on the snapshot of s5"
+  }
+ ]
+}

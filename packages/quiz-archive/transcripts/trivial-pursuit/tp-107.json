@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-107",
+ "image": "IMG20261007174022.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welcher Premierminister des Nahen Ostens ließ sich 2015 bei einer Reise zur UNO in New York auf Spesenkosten einen 1.600 US-Dollar teuren Haarschnitt geben?",
+   "de": "Welcher Premierminister des Nahen Ostens ließ sich 2015 bei einer Reise zur UNO in New York auf Spesenkosten einen 1.600 US-Dollar teuren Haarschnitt geben?",
+   "en": "Which Middle Eastern prime minister had a US$1,600 haircut at public expense on a 2015 trip to the UN in New York?",
+   "reworked": false,
+   "answerDe": "Benjamin Netanjahu",
+   "answerEn": "Benjamin Netanyahu",
+   "timeline": {
+    "kind": "event",
+    "start": "2015",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Israeli Prime Minister Benjamin Netanyahu's trip to the UN General Assembly in New York",
+    "labelDe": "Reise des israelischen Premierministers Benjamin Netanjahu zur UN-Generalversammlung in New York"
+   },
+   "source": {
+    "url": "https://www.ynetnews.com/article/4816877",
+    "title": "Netanyahu spent $1,600 on hairdresser on New York trip",
+    "lang": "en"
+   },
+   "notes": "The expense list (released 2016) shows $1,600 for a personal hairdresser during the six-day trip to the UN General Assembly in autumn 2015.",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 2,
+   "cardDe": "In welchem Land leistete Elvis Presley in den 1950er-Jahren seinen Wehrdienst: Bundesrepublik Deutschland, Mexiko oder Neuseeland?",
+   "de": "In welchem Land leistete Elvis Presley in den 1950er-Jahren seinen Wehrdienst?",
+   "en": "In which country did Elvis Presley do his military service in the 1950s?",
+   "reworked": true,
+   "answerDe": "Bundesrepublik Deutschland",
+   "answerEn": "West Germany",
+   "timeline": {
+    "kind": "period",
+    "start": "1958-10",
+    "end": "1960-03",
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Elvis Presley's US Army service in West Germany (Ray Barracks, Friedberg)",
+    "labelDe": "Elvis Presleys Dienst in der US Army in der Bundesrepublik Deutschland (Ray Barracks, Friedberg)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Elvis_Presley",
+    "title": "Elvis Presley",
+    "lang": "en"
+   },
+   "notes": "Stationed at Ray Barracks (Friedberg) from 1 October 1958, living in Bad Nauheim; returned to the US on 2 March 1960.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welcher massige Dinosaurier, der bis zu 22 Tonnen Fleisch pro Jahr aß, hatte Arme, die nur so lang wie die eines Menschen waren?",
+   "de": "Welcher massige Dinosaurier, der bis zu 22 Tonnen Fleisch pro Jahr aß, hatte Arme, die nur so lang wie die eines Menschen waren?",
+   "en": "Which massive dinosaur, which ate up to 22 tonnes of meat a year, had arms only as long as a human's?",
+   "reworked": false,
+   "answerDe": "Tyrannosaurus rex",
+   "answerEn": "Tyrannosaurus rex",
+   "timeline": {
+    "kind": "era",
+    "start": "-69000000",
+    "end": "-66000000",
+    "precision": "megayear",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tyrannosaurus rex lived in the late Maastrichtian of the Late Cretaceous",
+    "labelDe": "Tyrannosaurus rex lebte im späten Maastrichtium der Oberkreide"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tyrannosaurus",
+    "title": "Tyrannosaurus",
+    "lang": "en"
+   },
+   "notes": "The 22-tonnes-of-meat figure is the card's own claim and was not verified; T. rex's short but powerful forelimbs are well documented.",
+   "domain": "nature",
+   "sub": "ecology"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Buch ist sowohl J. R. R. Tolkiens erstes als auch letztes zur Geschichte seiner Mittelerde?",
+   "de": "Welches Buch ist sowohl J. R. R. Tolkiens erstes als auch letztes zur Geschichte seiner Mittelerde?",
+   "en": "Which book is both J. R. R. Tolkien's first and his last on the history of his Middle-earth?",
+   "reworked": false,
+   "answerDe": "Das Silmarillion",
+   "answerEn": "The Silmarillion",
+   "timeline": {
+    "kind": "period",
+    "start": "1917",
+    "end": "1973",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tolkien works on the stories of The Silmarillion, from the first drafts to the last before his death",
+    "labelDe": "Tolkien arbeitet an den Geschichten des Silmarillion, von den ersten Entwürfen bis zu den letzten vor seinem Tod"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Das_Silmarillion",
+    "title": "Das Silmarillion",
+    "lang": "de"
+   },
+   "notes": "First drafts date from 1917, the last from 1973 shortly before Tolkien's death; published posthumously by Christopher Tolkien in 1977.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Emulgatoren wie Lezithin werden bei der Lebensmittelherstellung verwendet, um Wasser mit welcher anderen Zutat zu vermischen?",
+   "de": "Emulgatoren wie Lezithin werden bei der Lebensmittelherstellung verwendet, um Wasser mit welcher anderen Zutat zu vermischen?",
+   "en": "Emulsifiers such as lecithin are used in food production to mix water with which other ingredient?",
+   "reworked": false,
+   "answerDe": "Öl (Fett)",
+   "answerEn": "Oil (fat)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1845",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "French chemist Théodore Gobley first isolates lecithin",
+    "labelDe": "Der französische Chemiker Théodore Gobley isoliert erstmals Lecithin"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Emulsion",
+    "title": "Emulsion",
+    "lang": "en"
+   },
+   "notes": "Emulsifiers stabilise mixtures of oil (fat) and water, e.g. lecithin in egg yolk or soy lecithin. Lecithin's isolation in 1845 is from the Lecithin article.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 6,
+   "cardDe": "Surfer Tom Morey erfand 1971 ein leichtes Schaumstoff-Bodyboard und nannte es wie?",
+   "de": "Surfer Tom Morey erfand 1971 ein leichtes Schaumstoff-Bodyboard und nannte es wie?",
+   "en": "In 1971 surfer Tom Morey invented a light foam bodyboard. What did he call it?",
+   "reworked": false,
+   "answerDe": "Boogie Board",
+   "answerEn": "Boogie Board",
+   "timeline": {
+    "kind": "creation",
+    "start": "1971",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tom Morey invents the foam \"Boogie Board\" bodyboard",
+    "labelDe": "Tom Morey erfindet das Schaumstoff-Bodyboard „Boogie Board“"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bodyboarding",
+    "title": "Bodyboarding",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

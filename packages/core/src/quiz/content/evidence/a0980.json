@@ -1,0 +1,421 @@
+{
+ "article": "a0980",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ra",
+   "title": "Ra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:12.074Z",
+   "snapshot": "ee7ab6a5795226e52035ed2990d9c0677238dc63ffebc51fccc2bafc57aee783"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Colossus_of_Rhodes",
+   "title": "Colossus of Rhodes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:21.112Z",
+   "snapshot": "b19f98b4f749306547f7f94578aa16d2d896cb6111926679f2a892a1f3b58a40"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sol_Invictus",
+   "title": "Sol Invictus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:13.048Z",
+   "snapshot": "b5848d619583d3e0237042e9146156fbbf2ffccc07140a93f4f49be7f77e3006"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Inca_Empire",
+   "title": "Inca Empire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:14.227Z",
+   "snapshot": "dc905645c1040dc3ec5cceeeaff6c99c0e21121bf8d119f98bc894759eeed2dc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Aztec_sun_stone",
+   "title": "Aztec sun stone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:15.124Z",
+   "snapshot": "26d5a7684aeaa3bf08f7c543ae519512284d0c4559c18f59db1a33e5a8c7883a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Aten",
+   "title": "Aten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:15.988Z",
+   "snapshot": "4779449d59959373cea9e2b278c01baf5a4a29cebad74d30f5139ad2f59bcfeb"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Sol_(Roman_mythology)",
+   "title": "Sol (Roman mythology) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:01.342Z",
+   "snapshot": "16a42c9c15ddaf38d14b510c4b73a9d0baa324d1b0caa145dcd40d47ead6ba1c"
+  },
+  "s8": {
+   "url": "https://www.theoi.com/Titan/Helios.html",
+   "title": "HELIUS (Helios) – Greek Titan God of the Sun – Theoi Project",
+   "publisher": "Theoi Project",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:00.638Z",
+   "snapshot": "4e4fdfa4d31cd63f8c59cf1fc1dd7fa7555466466b71ff346ba20f81544aeaaa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ancient Egypt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c082"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ancient Greece",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ancient Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Inca Empire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Aztecs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aten",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:14.409Z",
+   "target": "f04896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was believed to have ruled as the second pharaoh of Ancient Egypt, succeeding Ptah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ancient Egypt” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:14.409Z",
+   "target": "f04897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Archaeologist Ursula Vedder has proposed that the sculpture was cast in large sections following traditional Greek methods and that Philo's account is \"not compatible with the situation proved by archaeology in ancient Greece.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ancient Greece” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:14.409Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ancient Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ancient Rome”, “das antike Rom”, “Древний Рим”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:14.409Z",
+   "target": "f04899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Inca Empire, officially known as the Realm of the Four Parts (Quechua: Tawantinsuyu pronounced [taˈwantiŋ ˈsuju], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Inca Empire” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:14.409Z",
+   "target": "f04900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Aztecs changed the order of the suns and introduced a fifth sun named \"Four Movement\" after they seized power over the central highlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Aztecs” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:14.409Z",
+   "target": "f28512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aten, also Aton, Atonu, or Itn (Ancient Egyptian: jtn, reconstructed *[ˈjaːtin]) was the focus of Atenism, the religious system formally established in ancient Egypt by the late Eighteenth Dynasty pharaoh Akhenaten.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:14.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aten” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:02:39Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sol is the personification of the Sun and a god in ancient Roman religion.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:02:41Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Greek Titan God of the Sun (Roman Sol)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:02:52Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The emperor Aurelian revived his cult in AD 274 and promoted Sol Invictus as the chief god of the empire.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the wording's premise (Aurelian)"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:44.907Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sol is the personification of the Sun and a god in ancient Roman religion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:44.907Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:44.907Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Greek Titan God of the Sun (Roman Sol)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:44.907Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:44.907Z",
+   "target": "f04898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The emperor Aurelian revived his cult in AD 274 and promoted Sol Invictus as the chief god of the empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:44.907Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  }
+ ]
+}

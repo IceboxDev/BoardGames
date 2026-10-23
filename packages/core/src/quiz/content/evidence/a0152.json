@@ -1,0 +1,249 @@
+{
+ "article": "a0152",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Eichmann_trial",
+   "title": "Eichmann trial – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:02.988Z",
+   "snapshot": "6b440fdee8a64d91e6635d6187c6bcd719eb60f4c49044bf1ab6656ec35cc9b3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Martin_Heidegger",
+   "title": "Martin Heidegger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:03.902Z",
+   "snapshot": "86e05dcabcd88787326952a51033bcc9cf97e40372a35176f3e0a863728fcd58"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Karl_Jaspers",
+   "title": "Karl Jaspers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:27:23.274Z",
+   "snapshot": "a1d3a0131b9f69d782e6bc33f267d5a4e768cf4276f0268a57f669b025e233a1"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Edith_Stein",
+   "title": "Edith Stein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:27:24.635Z",
+   "snapshot": "e853d799f88c103e851b1cbdafa9be093750e76e9434071e9c099a787d9a23a6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Walter_Benjamin",
+   "title": "Walter Benjamin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:01.612Z",
+   "snapshot": "222907478e6ab3d5081ef67e3a4e40f4c9e71d1df055de927852cfdfc2fdc3df"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hannah_Arendt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:02.134Z",
+   "snapshot": "1d18dca7649982a16fba51f5f76eb3daed6fbd279db96ca8a7a6ef8443b5a8f9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00756",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hannah Arendt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00757",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Martin Heidegger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00758",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Jaspers",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edith Stein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Walter Benjamin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:01.385Z",
+   "target": "f00756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The most famous critique came from political theorist Hannah Arendt, who covered the trial for The New Yorker and later published a book titled Eichmann in Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannah Arendt” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:01.385Z",
+   "target": "f00757",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Martin Heidegger (26 September 1889 – 26 May 1976) was a German philosopher whose work was central to the development of phenomenology, hermeneutics, and existentialism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Heidegger” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:01.385Z",
+   "target": "f00758",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Jaspers war der Sohn des Bankdirektors und Landtagsabgeordneten Carl Wilhelm Jaspers (1850–1940) und dessen Frau Henriette geborene Tantzen (1862–1941), der Tochter des oldenburgischen Landtagspräsidenten Theodor Tantzen der Ältere.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Jaspers” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:01.385Z",
+   "target": "f00759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edith Stein, Ordensname Teresia Benedicta a Cruce OCD oder Teresia Benedicta vom Kreuz (* 12.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edith Stein” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:01.385Z",
+   "target": "f00760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Walter Benjamin wurde als Sohn des Antiquitäten- und Kunsthändlers Emil Benjamin (1856–1926) und dessen Frau Pauline (1869–1930) (geborene Schoenflies) in Berlin-Tiergarten, Magdeburger Platz, geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:01.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Benjamin” is on the snapshot of s5"
+  }
+ ]
+}

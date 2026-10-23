@@ -1,0 +1,242 @@
+{
+ "article": "a2689",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Order_of_the_Sun_of_Peru",
+   "title": "Order of the Sun of Peru",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:53.156Z",
+   "snapshot": "240258d0f6faf3b2445210940c426721844f9b2ea682f7eeaa7d3ef5c3b13f7b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Legion_of_Honour",
+   "title": "Legion of Honour – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:54.174Z",
+   "snapshot": "7f10c3c74d44ec7f0f201090c2b6609b6110cd6a45a5ef0cde0e3a09e160e2ca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Order_of_the_Garter",
+   "title": "Order of the Garter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:55.270Z",
+   "snapshot": "8a141a9e68a12f4b400f71c11d022ea5fe546c717f9fae899489ea05956f9781"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Order_of_the_Chrysanthemum",
+   "title": "Order of the Chrysanthemum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:42.505Z",
+   "snapshot": "38f856ff0728e9911fd7c8878a460b07a36980f3aed228620d8f277ae1d7fe9f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Order_of_the_Elephant",
+   "title": "Order of the Elephant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:56.146Z",
+   "snapshot": "6e250935deb36f66324156d1bffcced4d0834e51c1acd69367d25792393df9e3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Order of the Sun of Peru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-382"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Legion of Honour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Order of the Garter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Order of the Chrysanthemum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Order of the Elephant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:58.067Z",
+   "target": "f14642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Order of the Sun of Peru (Spanish: Orden El Sol del Perú), formerly known as the Order of the Sun, is the highest award bestowed by the nation of Peru to commend notable civil and military merit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Order of the Sun of Peru” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:58.067Z",
+   "target": "f14643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The National Order of the Legion of Honour (French: Ordre national de la Légion d'honneur [ɔʁdʁ nɑsjɔnal d(ə) la leʒjɔ̃ dɔnœʁ] ), formerly the Imperial Order of the Legion of Honour (Ordre impérial de la Légion d'honneur), is the highest and most prestigious French national institution, both",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Legion of Honour” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:58.067Z",
+   "target": "f14644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Most Noble Order of the Garter is an order of chivalry founded by King Edward III in 1348.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Order of the Garter” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:58.067Z",
+   "target": "f14645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Supreme Order of the Chrysanthemum (大勲位菊花章, Dai-kun'i kikka-shō) is Japan's highest order.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Order of the Chrysanthemum” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:58.067Z",
+   "target": "f14646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Order of the Elephant (Danish: Elefantordenen) is a Danish order of chivalry and is Denmark's highest-ranked honour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Order of the Elephant” is on the snapshot of s5"
+  }
+ ]
+}

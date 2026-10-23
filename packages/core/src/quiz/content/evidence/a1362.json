@@ -1,0 +1,249 @@
+{
+ "article": "a1362",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/International_Committee_of_the_Red_Cross",
+   "title": "International Committee of the Red Cross – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:58.433Z",
+   "snapshot": "f1a26d9b153b59d688e9fecb2a5fe134512fe929056f9a2bac959a50110e665e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Salvation_Army",
+   "title": "The Salvation Army – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:59.368Z",
+   "snapshot": "f302276f275f97ea2f88d09f56359da80ec1c3939b95f237e5dce93b9b778417"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Save_the_Children",
+   "title": "Save the Children – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:00.333Z",
+   "snapshot": "5d3791981d24f12b136e1713d6fcdc49970627ec1c0d3174fd498bf2e5e42d65"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Amnesty_International",
+   "title": "Amnesty International – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:01.373Z",
+   "snapshot": "09717ab294b1eb079ac844c28d61208ffae19cc52ad8a892bb64d698bfe4539f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/M%C3%A9decins_Sans_Fronti%C3%A8res",
+   "title": "Médecins Sans Frontières – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:02.420Z",
+   "snapshot": "b2b3e96750e98be2a2e7cfdf296b03b46b882d30fd80bfaaf20389d2249def03"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Dunant",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:03.272Z",
+   "snapshot": "b0f8077afc10bd5ad147198d910887f4068c44c916f50b5a8d893d7398591b68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Red Cross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06807",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Salvation Army",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Save the Children",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06809",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amnesty International",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Médecins Sans Frontières",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:14.231Z",
+   "target": "f06806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "International Committee of the Red Cross",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Red Cross” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:14.231Z",
+   "target": "f06807",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Salvation Army is a Methodist Christian church and an international charitable organisation aligned with the Wesleyan-Holiness movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Salvation Army” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:14.231Z",
+   "target": "f06808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Save the Children Fund, commonly known as Save the Children, is a London-based international non-governmental organization.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Save the Children” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:14.231Z",
+   "target": "f06809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amnesty International (also referred to as Amnesty or AI) is an international non-governmental organization focused on human rights, with its headquarters in the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amnesty International” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:14.231Z",
+   "target": "f06810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Médecins Sans Frontières (MSF; pronounced [medsɛ̃ sɑ̃ fʁɔ̃tjɛʁ] ), French for Doctors Without Borders, is a charity that provides humanitarian medical care.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.231Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Médecins Sans Frontières” is on the snapshot of s5"
+  }
+ ]
+}

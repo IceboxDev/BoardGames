@@ -1,0 +1,517 @@
+{
+ "article": "a0681",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Methane",
+   "title": "Methane – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:49.159Z",
+   "snapshot": "1b34ac84a62540bac509dacaca8054a4c408a123c980747ea58fdee747840a75"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nitrogen",
+   "title": "Nitrogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:50.354Z",
+   "snapshot": "66b15223c6d3162852778cb5631e02ab43066f2ec98fa307bcf00e4af666c1cd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+   "title": "Atmosphere of Earth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:51.253Z",
+   "snapshot": "ad5ae87a3091ee0c18b3dbad5cec59bbde87f8bd9a370fc201e468ac2164bc72"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/White_Cliffs_of_Dover",
+   "title": "White Cliffs of Dover – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:52.231Z",
+   "snapshot": "10efb428cfdcce37a1d87808503ab4ac1106a26c8f3e553f7b680ebe5404a510"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Titan(IV)-oxid",
+   "title": "Titan(IV)-oxid",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:49.370Z",
+   "snapshot": "5aaa121ca9b7dcc413c1aef789836888b1d2c2c96c89278fedbf8ca37d98e32a"
+  },
+  "s6": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+   "title": "Earth Fact Sheet",
+   "publisher": "NASA NSSDCA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.376Z",
+   "snapshot": "97edc601d43f7cd9ab0826e96760dade7ff1826c84387655430da22533f32f0e"
+  },
+  "s7": {
+   "url": "https://snl.no/luft",
+   "title": "luft",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:35:05.174Z",
+   "snapshot": "82dba451a28c916a9672376a76ad0a619648756ddb55a6d5856f66d334c44753"
+  },
+  "s8": {
+   "url": "https://geology.com/rocks/limestone.shtml",
+   "title": "Limestone",
+   "publisher": "Geology.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:05.664Z",
+   "snapshot": "96567b353433a68739f454d7707710d415e71fb915f0ec0b9b3b195aaad74a7a"
+  },
+  "s9": {
+   "url": "https://snl.no/kalkstein",
+   "title": "kalkstein",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:35:06.075Z",
+   "snapshot": "753c6c22efad8b4b414735720a40fcbfc8d9241ada8ddf73c01152d24f9726fc"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Limestone",
+   "title": "Limestone",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:05.832Z",
+   "snapshot": "fb5f99f00a48230f6db0c3b78cc1279510a214e6a544bab7088d8035e3471adf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Methane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nitrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nitrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-039"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Calcium carbonate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Titandioxid",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-186"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:26.020Z",
+   "target": "f03401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Methane (US:  METH-ayn, UK:  MEE-thayn) is a chemical compound that has the chemical formula CH4 (one carbon atom bonded to four hydrogen atoms).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Methane” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:26.020Z",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nitrogen is a chemical element; it has symbol N and atomic number 7.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nitrogen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.020Z",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "By mole fraction (i.e., by quantity of molecules), dry air contains 78.08% nitrogen, 20.95% oxygen, 0.93% argon, 0.04% carbon dioxide, and small amounts of other trace gases (see Composition below for more detail).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nitrogen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.020Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Calcium carbonate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Calcium carbonate”, “Calciumcarbonat”, “карбонат кальция”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.020Z",
+   "target": "f13473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Titan(IV)-oxid (Titandioxid) ist das IV-wertige Oxid des Titans.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titandioxid” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:23Z",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "78.08% Nitrogen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "NASA Earth fact sheet: atmosphere major components 78.08% N2, 20.95% O2."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:26Z",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nitrogen og oksygen er de gassene det er mest av i luften.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:29Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Limestone is a sedimentary rock composed primarily of calcite, a calcium carbonate mineral",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:32Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kalkstein er en bergart som hovedsakelig består av kalsiumkarbonat",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:36Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "which are different crystal forms of calcium carbonate",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "78.08% Nitrogen",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Limestone is a sedimentary rock composed primarily of calcite, a calcium carbonate mineral",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kalkstein er en bergart som hovedsakelig består av kalsiumkarbonat",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "which are different crystal forms of calcium carbonate",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Major : 78.08% Nitrogen (N2), 20.95% Oxygen (O2),",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nitrogen” is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Limestone is a sedimentary rock composed primarily of calcite, a calcium carbonate mineral with a chemical composition of CaCO3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Calcium carbonate” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:54.296Z",
+   "target": "f03405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It is composed mostly of the minerals calcite and aragonite, which are different crystal forms of calcium carbonate CaCO3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Calcium carbonate” is on the snapshot of s10"
+  }
+ ]
+}

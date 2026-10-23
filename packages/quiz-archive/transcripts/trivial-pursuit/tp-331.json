@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-331",
+ "image": "IMG20261007180621.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt das irische Wahrzeichen, das Besucher küssen, um die Gabe der freien Rede zu erhalten?",
+   "de": "Wie heißt das irische Wahrzeichen, das Besucher küssen, um die Gabe der freien Rede zu erhalten?",
+   "en": "What is the name of the Irish landmark that visitors kiss to receive the gift of eloquence?",
+   "reworked": false,
+   "answerDe": "Blarney Stone",
+   "answerEn": "Blarney Stone",
+   "timeline": {
+    "kind": "creation",
+    "start": "1446",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Blarney Stone is set into a tower of Blarney Castle near Cork, Ireland",
+    "labelDe": "Der Blarney Stone wird in einen Turm von Blarney Castle bei Cork (Irland) eingesetzt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Blarney_Stone",
+    "title": "Blarney Stone",
+    "lang": "en"
+   },
+   "notes": "Kissing the stone is said to give 'the gift of the gab'.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welches berühmt-berüchtigte, gefiederte Kleidungsstück trug die isländische Sängerin Björk 2001 zur Oscarverleihung?",
+   "de": "Welches berühmt-berüchtigte, gefiederte Kleidungsstück trug die isländische Sängerin Björk 2001 zur Oscarverleihung?",
+   "en": "Which famous-infamous feathered garment did the Icelandic singer Björk wear to the 2001 Academy Awards?",
+   "reworked": false,
+   "answerDe": "Schwanenkleid",
+   "answerEn": "Swan dress",
+   "timeline": {
+    "kind": "event",
+    "start": "2001-03-25",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Björk wears Marjan Pejoski's swan dress at the 73rd Academy Awards",
+    "labelDe": "Björk trägt Marjan Pejoskis Schwanenkleid bei der 73. Oscarverleihung"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Swan_dress",
+    "title": "Swan dress",
+    "lang": "en"
+   },
+   "notes": "Designed by Marjan Pejoski.",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welches technische Bravourstück wurde 1990 fertiggestellt, als zwei Männer eine Wand durchbrachen, Hände schüttelten und „Bonjour“ und „Hello“ sagten?",
+   "de": "Welches technische Bravourstück wurde 1990 fertiggestellt, als zwei Männer eine Wand durchbrachen, Hände schüttelten und „Bonjour“ und „Hello“ sagten?",
+   "en": "Which engineering feat was completed in 1990 when two men broke through a wall, shook hands and said \"Bonjour\" and \"Hello\"?",
+   "reworked": false,
+   "answerDe": "Kanaltunnel (Eurotunnel)",
+   "answerEn": "Channel Tunnel",
+   "timeline": {
+    "kind": "event",
+    "start": "1990-12-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Graham Fagg and Philippe Cozette break through the Channel Tunnel's service tunnel",
+    "labelDe": "Graham Fagg und Philippe Cozette vollziehen den Durchbruch im Servicetunnel des Kanaltunnels"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Channel_Tunnel",
+    "title": "Channel Tunnel",
+    "lang": "en"
+   },
+   "notes": "The 1990 event was the breakthrough of the service tunnel by Englishman Graham Fagg and Frenchman Philippe Cozette; the tunnel itself opened in 1994.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt der bekannte Renaissancekünstler, der als Erster erkannte, dass das Alter von Bäumen an Jahresringen abgelesen werden kann?",
+   "de": "Wie heißt der bekannte Renaissancekünstler, der als Erster erkannte, dass das Alter von Bäumen an Jahresringen abgelesen werden kann?",
+   "en": "What is the name of the famous Renaissance artist who was the first to recognise that the age of trees can be read from their annual rings?",
+   "reworked": false,
+   "answerDe": "Leonardo da Vinci",
+   "answerEn": "Leonardo da Vinci",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1452-04-15",
+    "end": "1519-05-02",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of Leonardo da Vinci, Renaissance artist and the first to note that trees form annual rings",
+    "labelDe": "Lebenszeit Leonardo da Vincis, Renaissancekünstler und erster, der die jährlichen Baumringe beschrieb"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Dendrochronology",
+    "title": "Dendrochronology",
+    "lang": "en"
+   },
+   "notes": "Leonardo noted in his Treatise on Painting that trees form rings annually and that their thickness reflects growing conditions.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches Tier hat kein Exoskelett: Skorpion, Krabbe oder Hai?",
+   "de": "Aus welchem Gewebe besteht das Skelett eines Hais, der anders als Skorpion und Krabbe kein Exoskelett hat?",
+   "en": "What tissue is the skeleton of a shark made of – an animal that, unlike scorpions and crabs, has no exoskeleton?",
+   "reworked": true,
+   "answerDe": "Knorpel",
+   "answerEn": "Cartilage",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1871",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Edward Drinker Cope names the sharks (Selachii) as a scientific group",
+    "labelDe": "Edward Drinker Cope benennt die Haie (Selachii) als wissenschaftliche Gruppe"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Haie",
+    "title": "Haie",
+    "lang": "de"
+   },
+   "notes": "Options removed (Skorpion, Krabbe, Hai). Card answer: the shark; its whole skeleton is internal and made of hyaline cartilage.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Ein Brasilianer wurde 2016 bei dem Versuch festgenommen, welches Symbol auf dem Weg nach Rio zu löschen?",
+   "de": "Ein Brasilianer wurde 2016 bei dem Versuch festgenommen, welches Symbol auf dem Weg nach Rio zu löschen?",
+   "en": "In 2016 a Brazilian man was arrested while trying to extinguish which symbol on its way to Rio?",
+   "reworked": false,
+   "answerDe": "Das olympische Feuer",
+   "answerEn": "The Olympic flame",
+   "timeline": {
+    "kind": "event",
+    "start": "2016-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A man in Maracaju, Brazil, is arrested for throwing a bucket of water at the Olympic torch on its relay to Rio",
+    "labelDe": "Ein Mann in Maracaju (Brasilien) wird festgenommen, weil er einen Eimer Wasser auf die olympische Fackel auf dem Weg nach Rio schüttet"
+   },
+   "source": {
+    "url": "https://www.sbs.com.au/news/article/man-arrested-in-brazil-for-attempt-to-douse-olympic-torch/hpq7u5ur0",
+    "title": "Man arrested in Brazil for attempt to douse Olympic torch",
+    "lang": "en"
+   },
+   "notes": "Accept 'the Olympic torch'. The flame stayed lit; the 27-year-old said it was a Facebook dare (Reuters via SBS, 28 June 2016).",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

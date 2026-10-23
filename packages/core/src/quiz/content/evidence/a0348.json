@@ -1,0 +1,731 @@
+{
+ "article": "a0348",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bavarian_Ludwig_Railway",
+   "title": "Bavarian Ludwig Railway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:51.361Z",
+   "snapshot": "69eb099ddf0346d90ad4994084792a916cc89150473770f8c210c730220e1ca0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stockton_and_Darlington_Railway",
+   "title": "Stockton and Darlington Railway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:52.398Z",
+   "snapshot": "dba1f69458645ecab420dbd416f3fa0c381e9b6e1c5ba321e26afd5daca3469a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Liverpool_and_Manchester_Railway",
+   "title": "Liverpool and Manchester Railway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:53.521Z",
+   "snapshot": "388fda0474bffd703023602988b4e37c8c623999424a144b53582968aab4011d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Berlin%E2%80%93Magdeburg_railway",
+   "title": "Berlin–Magdeburg railway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:54.338Z",
+   "snapshot": "58738187e4b29e7af8bbee1804d8bf975098d1d4bc9e2345f665fd25e47b4aba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Leipzig%E2%80%93Dresden_railway",
+   "title": "Leipzig–Dresden railway – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:55.379Z",
+   "snapshot": "766f9c2f2467c8f648e9e6407137f965652cc998c353fcb78b4bf65ca7b4ffc6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Adler_(locomotive)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:56.361Z",
+   "snapshot": "968f0ab6a5f9d009e751c7eeeb1aa789fae426763d91e3d64b3e5034e9c28da9"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Bayerische_Ludwigsbahn",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:54.344Z",
+   "snapshot": "ba95a23f328d98526f97be34b9cca9ad3dfa0ab6b566c706602fc91d726545ab"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/William_Wilson_(engineer)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:57.368Z",
+   "snapshot": "24e9da70f3e4c2ecbedabe38ac03beb6093e2dd6eac9178b675f988fdbb18e34"
+  },
+  "s9": {
+   "url": "https://www.dhm.de/lemo/rueckblick/erste-eisenbahnen-in-deutschland.html",
+   "title": "Erste Eisenbahnen in Deutschland – LeMO",
+   "publisher": "Deutsches Historisches Museum",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:27.769Z",
+   "snapshot": "4658e26957e4e2797850f82130a687bfe5a6ce1e4f3ec4a59cba08ee2889262f"
+  },
+  "s10": {
+   "url": "https://dbmuseum.de/en/nuremberg/vehicles/the-adler",
+   "title": "The Adler – DB Museum",
+   "publisher": "DB Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:28.486Z",
+   "snapshot": "408f7cf7deaeca680ee070e7aca8c65eb0bea6ca725d298a1eec9082cbfd4aae"
+  },
+  "s11": {
+   "url": "https://teesvalley-ca.gov.uk/investments/darlington-stockton-railway-heritage-quarter/",
+   "title": "Darlington – Stockton Railway Heritage Quarter",
+   "publisher": "Tees Valley Combined Authority",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:29.355Z",
+   "snapshot": "092068ab7c4ff5279944618c9f3871725fb01eeab1c997ba7bd4429b2355dd6f"
+  },
+  "s12": {
+   "url": "https://www.thegazette.co.uk/all-notices/content/100741",
+   "title": "The opening of the Liverpool and Manchester Railway, 1830",
+   "publisher": "The Gazette (UK official public record)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:28.642Z",
+   "snapshot": "f12abf47d47ec7d2305e3de0f8b89f5af1044a4300bcc202d08a4d87e3de98c8"
+  },
+  "s13": {
+   "url": "https://lnwrs.org.uk/liverpool-manchester-railway",
+   "title": "The Liverpool & Manchester Railway 1830 to 1845",
+   "publisher": "LNWR Society",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:28.955Z",
+   "snapshot": "59a577a5c5ee99b51e63211f009ed39cd1a557f30c0bb04f94af46c6dad8a016"
+  },
+  "s14": {
+   "url": "https://www.dhm.de/archiv/ausstellungen/staendige-ausstellung/1789-1871/20042973.html",
+   "title": "Ansichtstasse Berlin-Potsdamer Eisenbahn – DHM",
+   "publisher": "Deutsches Historisches Museum",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:28.742Z",
+   "snapshot": "0ac7d8b97e994bcd1cb8d55493f04ec66e7af1189a53376a1339a0c3184b647c"
+  },
+  "s15": {
+   "url": "https://www.l-iz.de/bildung/zeitreise/2014/03/Erste-deutsche-Ferneisenbahn-Leipzig-Dresden-54530",
+   "title": "Erste deutsche Ferneisenbahn Leipzig – Dresden wird 175 Jahre alt",
+   "publisher": "Leipziger Zeitung",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:28.898Z",
+   "snapshot": "5b5e24a1680199d4fb409961de74e60f9cd09f331df4e35a5a9c268a7ea741cc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nuremberg and Fürth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stockton and Darlington",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liverpool and Manchester",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berlin and Potsdam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leipzig and Dresden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:34.061Z",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first reports from England over the planning of railways attracted great attention in Germany, particularly in Bavaria, where the road between the important commercial cities of Nuremberg and Fürth was the busiest road connection in the kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nuremberg and Fürth” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:34.061Z",
+   "target": "f01737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Stockton and Darlington Railway  (S&DR) was a railway company that operated in north-east England from 1825 to 1863.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stockton and Darlington” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:34.061Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Liverpool and Manchester Railway (L&MR) was the first inter-city railway in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liverpool and Manchester” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:34.061Z",
+   "target": "f01739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first railway stations between Berlin and Potsdam were Zehlendorf (established in 1838), Schöneberg (1839) and Steglitz (1839).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin and Potsdam” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:34.061Z",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The travel time between Leipzig and Dresden was three hours and 40 minutes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipzig and Dresden” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:27:53Z",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Am 7. Dezember 1835 wurde mit der sechs Kilometer langen Strecke von Nürnberg nach Fürth die erste deutsche Eisenbahnverbindung eröffnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:27:56Z",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "hauling trains on the Ludwig Railway between Nuremberg and Fürth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:27:59Z",
+   "target": "f01737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The ceremonial opening on 27 September 1825 was the first occasion on which a steam locomotive was used to haul passengers on a public railway.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:28:03Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The Liverpool and Manchester Railway, which opened in 1830, was the first modern, inter-city passenger railway. It was the first to rely exclusively on steam power",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:28:06Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The Liverpool and Manchester Railway was the first inter-city railway in the world. It opened on the 15th September 1830 between the Lancashire towns of Liverpool and Manchester.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:28:08Z",
+   "target": "f01739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Die erste Eisenbahnstrecke Preußens wurde 1838 in Betrieb genommen: am 22. September das Teilstück Zehlendorf-Potsdam.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:28:10Z",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Am 8. April 1839 wurde nach dreijähriger Bauzeit die erste deutsche Fernverbindung von Leipzig nach Dresden eröffnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23",
+   "note": "LeMO dates the opening 8 April 1839; most sources (incl. L-IZ) give 7 April 1839, the date in the body; the answer is unaffected"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:28:12Z",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Nach dreijähriger Bauzeit rollte am 7. April 1839 der offizielle Eröffnungszug der \"Leipzig-Dresdner Eisenbahn-Compagnie\" über die etwa 120 Kilometer lange erste deutsche Fernbahnstrecke von Leipzig nach Dresden",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Am 7. Dezember 1835 wurde mit der sechs Kilometer langen Strecke von Nürnberg nach Fürth die erste deutsche Eisenbahnverbindung eröffnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "hauling trains on the Ludwig Railway between Nuremberg and Fürth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The ceremonial opening on 27 September 1825 was the first occasion on which a steam locomotive was used to haul passengers on a public railway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s11"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The Liverpool and Manchester Railway, which opened in 1830, was the first modern, inter-city passenger railway. It was the first to rely exclusively on steam power",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s12"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The Liverpool and Manchester Railway was the first inter-city railway in the world. It opened on the 15th September 1830 between the Lancashire towns of Liverpool and Manchester.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s13"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Die erste Eisenbahnstrecke Preußens wurde 1838 in Betrieb genommen: am 22. September das Teilstück Zehlendorf-Potsdam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s14"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Am 8. April 1839 wurde nach dreijähriger Bauzeit die erste deutsche Fernverbindung von Leipzig nach Dresden eröffnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Nach dreijähriger Bauzeit rollte am 7. April 1839 der offizielle Eröffnungszug der \"Leipzig-Dresdner Eisenbahn-Compagnie\" über die etwa 120 Kilometer lange erste deutsche Fernbahnstrecke von Leipzig nach Dresden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s15"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It was imported from England and was in service for 22 years, hauling trains on the Ludwig Railway between Nuremberg and Fürth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nuremberg and Fürth” is on the snapshot of s10"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The Stockton and Darlington Railway was opened on 27 September 1825 with the prime purpose of transporting coal from the South West Durham collieries around Shildon, West Auckland and Witton Park, to the River Tees at Stockton, for shipment to the south of England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stockton and Darlington” is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The opening of the Liverpool and Manchester Railway, 1830 | The Gazette",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Liverpool and Manchester” is on the snapshot of s12"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The Liverpool and Manchester Railway was the first inter-city railway in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Liverpool and Manchester” is on the snapshot of s13"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:52:54.395Z",
+   "target": "f01740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "in Leipzig und Dresden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:54.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Leipzig und Dresden” is on the snapshot of s15"
+  }
+ ]
+}

@@ -1,0 +1,487 @@
+{
+ "article": "a1266",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Strafgesetzbuch_(Deutschland)",
+   "title": "Strafgesetzbuch (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:49.989Z",
+   "snapshot": "40206c807e7e7eb3b377e7050b0ea3a562f9f85a3510b70b86efbbbe6b246ca6"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Betrug_(Deutschland)",
+   "title": "Betrug (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:52.390Z",
+   "snapshot": "e1c5d9ec90fa6a0d50665a5d880dacfee27075dc3f6730cfabfee628250dd9ad"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Raub_(Deutschland)",
+   "title": "Raub (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:53.860Z",
+   "snapshot": "e45118633b5acaa71c8b1f2117955fc1cf667de2cd7b0b80ad2e0fb4e65f96cd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/N%C3%B6tigung_(Deutschland)",
+   "title": "Nötigung (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:54.110Z",
+   "snapshot": "bca1c833cbff4e0264d711626f86d28678d533de0bb9863cc9f024cf4587a59c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Meineid",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:53.894Z",
+   "snapshot": "7209c9dbfb0e1e83ffd602d20bef8bd69fe9e537427a3c472e6809692c778e66"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Omissivdelikt",
+   "title": "Omissivdelikt – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:01.657Z",
+   "snapshot": "6ede52c97dc559acb5edbdee78c462699e945a6ae1b69d1334b75043388907ff"
+  },
+  "s7": {
+   "url": "https://www.wissen.de/fremdwort/omissivdelikt",
+   "title": "Omissivdelikt – Fremdwort (Wahrig)",
+   "publisher": "wissen.de (Wahrig Fremdwörterlexikon)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:01.851Z",
+   "snapshot": "86b514d84ce5a47a83428d2d74d26f94aeeae5d6df34f93c492fa153e760fb60"
+  },
+  "s8": {
+   "url": "https://www.gesetze-im-internet.de/stgb/__154.html",
+   "title": "§ 154 StGB – Meineid",
+   "publisher": "Bundesministerium der Justiz (gesetze-im-internet.de)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:01.766Z",
+   "snapshot": "28c9eb1fa86fb9fe68982da08551734bd339828b38e2aa6b6fc0d942c94d5ac0"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Meineid",
+   "title": "Meineid – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:01.932Z",
+   "snapshot": "3b21f57b612e7ba4cda39044a398d9c303d8d589d9e3db1e12e1f2325d605f50"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unterlassungsdelikt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Meineid",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Betrug",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Raub",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nötigung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:57.026Z",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unterlassungsdelikt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Unterlassungsdelikt”, “crime of omission”, “преступное бездействие”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:57.026Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Meineid",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Meineid”, “perjury”, “клятвопреступление”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:57.026Z",
+   "target": "f06328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beim Betrug handelt es sich um einen Tatbestand des deutschen Strafrechts.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Betrug” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:57.026Z",
+   "target": "f06329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Raub ist ein Tatbestand des deutschen Strafrechts.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raub” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:57.026Z",
+   "target": "f06330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Nötigung ist ein Vergehen gegen Personen, das als Freiheitsdelikt im deutschen Strafrecht in § 240 Strafgesetzbuch (StGB) geregelt ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:57.026Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nötigung” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:26:36Z",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rechtssprache Unterlassungsdelikt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:26:38Z",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "strafbare Unterlassung",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:26:40Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wer vor Gericht oder vor einer anderen zur Abnahme von Eiden zuständigen Stelle falsch schwört",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:26:41Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Eid, mit dem wissentlich, vorsätzlich etwas Unwahres beschworen wird",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rechtssprache Unterlassungsdelikt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "strafbare Unterlassung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wer vor Gericht oder vor einer anderen zur Abnahme von Eiden zuständigen Stelle falsch schwört",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Eid, mit dem wissentlich, vorsätzlich etwas Unwahres beschworen wird",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rechtssprache Unterlassungsdelikt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Unterlassungsdelikt” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "§ 154 Meineid",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Meineid” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:39.607Z",
+   "target": "f06327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Meineid ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Meineid” is on the snapshot of s9"
+  }
+ ]
+}

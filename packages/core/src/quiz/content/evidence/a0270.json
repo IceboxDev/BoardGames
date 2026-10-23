@@ -1,0 +1,401 @@
+{
+ "article": "a0270",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Maria_Montessori",
+   "title": "Maria Montessori – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:14.780Z",
+   "snapshot": "418ef07d85585d825444ebb68bd88786b2cd2d0189ce56830b0b7e38e65dc26a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dorothea_Christiane_Erxleben",
+   "title": "Dorothea Christiane Erxleben – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:12.051Z",
+   "snapshot": "cec5ab11acb2ccf12268d1825d0a5a15638cc07a01c600efb29d81c53ad041f2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+   "title": "Marie Curie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:15.982Z",
+   "snapshot": "059abc4b64a255bffc12c9af7b607c9c8770b60e11800b3d526972374f10b3dd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Florence_Nightingale_Faculty_of_Nursing,_Midwifery_and_Palliative_Care",
+   "title": "Florence Nightingale Faculty of Nursing, Midwifery and Palliative Care – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:16.777Z",
+   "snapshot": "aeea31412d6df5a21ade457329c7346c6149fb6eca9cf320caf72ea45a53a8d2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Florence_Nightingale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:17.868Z",
+   "snapshot": "3ee4194122b62a39e567926fa21114923a552ef2b3bb96afa7a85da2c14b2fbb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Fr%C3%B6bel",
+   "title": "Friedrich Fröbel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:15.668Z",
+   "snapshot": "710104b309ad19fd34c275face5595244292bdc11a3c6720346560fabc8820a9"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Charlotte_von_Siebold",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:15.935Z",
+   "snapshot": "f9cc5bdabb84cdc9a4c37098af8cad33e6b0a67a167782c56d93ffe71af129fd"
+  },
+  "s8": {
+   "url": "https://www.nobelprize.org/prizes/lists/nobel-prize-awarded-women/",
+   "title": "Nobel Prize awarded women",
+   "publisher": "Nobel Prize Outreach (nobelprize.org)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:56.880Z",
+   "snapshot": "9ae24df2f3cad876adb85d05f5e72975d299a10509c5a39f6e63226ce2017c03"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maria Montessori",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dorothea Erxleben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marie Curie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Florence Nightingale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Florence Nightingale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Friedrich Fröbel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:22.200Z",
+   "target": "f01346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Maria Montessori Through the Seasons of the Method\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maria Montessori” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:22.200Z",
+   "target": "f01347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eine Kaserne im Norden von Halle (Saale), in der nach 1990 das Sanitätsregiment 13 stationiert war, trug bis zur Auflösung der Garnison Halle im Sommer 2007 den Namen Dr.-Dorothea-Erxleben-Kaserne.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dorothea Erxleben” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:22.200Z",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Maria Salomea Skłodowska Curie  (née Skłodowska; 7 November 1867 – 4 July 1934), better known as Marie Curie, was a Polish and naturalised-French physicist and chemist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marie Curie” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:22.200Z",
+   "target": "f01349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Florence Nightingale Faculty of Nursing, Midwifery and Palliative Care",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florence Nightingale” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:22.200Z",
+   "target": "f01349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Florence Nightingale ()  (12 May 1820 – 13 August 1910) was an English social reformer, statistician and the founder of modern nursing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florence Nightingale” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:22.200Z",
+   "target": "f01350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "März 2023 wurde die Kindergartenidee nach Friedrich Fröbel in das Bundesweite Verzeichnis des immateriellen Kulturerbes aufgenommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Fröbel” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:18:23Z",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Only one woman, Marie Curie, has been honoured twice, with the Nobel Prize in Physics 1903 and the Nobel Prize in Chemistry 1911.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23",
+   "note": "Body now says 'as of 2026'; reviewBy set after the 2027 Nobel announcements"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:18:27Z",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Curie was the first woman to win a Nobel Prize, the first person to win a Nobel Prize twice and the only person to win a Nobel Prize in two different scientific fields.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:42.109Z",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Only one woman, Marie Curie, has been honoured twice, with the Nobel Prize in Physics 1903 and the Nobel Prize in Chemistry 1911.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:42.109Z",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Curie was the first woman to win a Nobel Prize, the first person to win a Nobel Prize twice and the only person to win a Nobel Prize in two different scientific fields.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:42.109Z",
+   "target": "f01348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Only one woman, Marie Curie, has been honoured twice, with the Nobel Prize in Physics 1903 and the Nobel Prize in Chemistry 1911.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:42.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Marie Curie” is on the snapshot of s8"
+  }
+ ]
+}

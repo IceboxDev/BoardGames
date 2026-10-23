@@ -1,0 +1,202 @@
+{
+ "article": "a1489",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gustaf_Gr%C3%BCndgens",
+   "title": "Gustaf Gründgens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:34.865Z",
+   "snapshot": "225a5c0ed6176e2027a5147c7500461123207f63082c8f67353ca6956def0919"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Erika_Mann",
+   "title": "Erika Mann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:35.895Z",
+   "snapshot": "46c85a51acfde7e3cdb7458c18e3fb92a427bd4bb7466feffe25b9717cacc4ea"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mephisto_(1981_film)",
+   "title": "Mephisto (1981 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:36.881Z",
+   "snapshot": "dc32bad031b134dafdedcc0ff375555d17dbda8b8502e8ac6cede741072f31d5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Max_Reinhardt",
+   "title": "Max Reinhardt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:37.985Z",
+   "snapshot": "15311e27d148114ffb8c936062f7f22b839af4d010851f08fc11fb688af51913"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Ensemble",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:17.150Z",
+   "snapshot": "bd1dc6cfccfae1ec0a8c013575dbf1160524e243ada3b46f220c9bf954aeaf72"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gustaf Gründgens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erika Mann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Klaus Maria Brandauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Reinhardt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:33.827Z",
+   "target": "f07441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gustaf Gründgens (German: [ˈɡʊs.taf ˈɡʁʏnt.ɡəns] ; 22 December 1899 – 7 October 1963), born Gustav Heinrich Arnold Gründgens, was one of Germany's most famous and influential actors of the 20th century, and artistic director of theatres in Berlin, Düsseldorf, and Hamburg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustaf Gründgens” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:33.827Z",
+   "target": "f07442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erika Mann was born in Munich, the first-born daughter of German writer and later Nobel Prize winner Thomas Mann and his wife, Katia (née Pringsheim), the daughter of an intellectual German family of Jewish heritage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erika Mann” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:33.827Z",
+   "target": "f07443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It stars Klaus Maria Brandauer as a German stage actor (modelled on Gustaf Gründgens) who finds unexpected success and mixed blessings in the popularity of his performance in a Faustian play as the Nazis take power in pre-Second World War Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klaus Maria Brandauer” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:33.827Z",
+   "target": "f07444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Reinhardt (German: [maks ˈʁaɪnhaʁt] ; born Maximilian Goldmann; 9 September 1873 – 30 October 1943) was an Austrian-born theatre and film director, intendant, and theatrical producer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Reinhardt” is on the snapshot of s4"
+  }
+ ]
+}

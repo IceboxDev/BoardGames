@@ -1,0 +1,389 @@
+{
+ "article": "a2551",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Registered_trademark_symbol",
+   "title": "Registered trademark symbol",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:58.657Z",
+   "snapshot": "adda9c771787551f0ca5b45f508faf4aada14b79fd4ec21883f97aa189416fb7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Swiss_made",
+   "title": "Swiss made",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:55.854Z",
+   "snapshot": "3145303cb73495414b99883b1f2c007129508a8f1f271f76973bf3ea1d5151ec"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Made_in_Germany",
+   "title": "Made in Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:59.680Z",
+   "snapshot": "fdd4b564f2e9ed2c3c54b1036f868409467aff07a2e2fc5f6e3ce8d2440d25f5"
+  },
+  "s4": {
+   "url": "https://www.ige.ch/de/etwas-schuetzen/herkunftsangaben/faq",
+   "title": "Herkunftsangaben – FAQ",
+   "publisher": "Eidgenössisches Institut für Geistiges Eigentum (IGE)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:07.041Z",
+   "snapshot": "9985e34ceb6faca16b5fe4b46267508ab37293915806dc4eee69e9ae7aa06535"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "registered",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "60 Prozent",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-388"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "service mark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Merchandise Marks Act",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "80 Prozent",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:37.579Z",
+   "target": "f13642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The registered trademark symbol, ®, is a typographic symbol that provides notice that the preceding word or symbol is a trademark or service mark that has been registered with a national trademark office.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “registered” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:37.579Z",
+   "target": "f13643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bei elektronischen Uhren soll der Wert bei mindestens 60 Prozent liegen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “60 Prozent” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:37.579Z",
+   "target": "f13645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The registered trademark symbol, ®, is a typographic symbol that provides notice that the preceding word or symbol is a trademark or service mark that has been registered with a national trademark office.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “service mark” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:37.579Z",
+   "target": "f13646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The label was introduced in Great Britain by the Merchandise Marks Act 1887 (50 & 51 Vict.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merchandise Marks Act” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:37.579Z",
+   "target": "f13647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "So sollen mindestens 80 Prozent der Produktionskosten bei mechanischen Uhren in der Schweiz anfallen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:37.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “80 Prozent” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:33:25Z",
+   "target": "f13643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mindestens 60% der Herstellungskosten müssen in der Schweiz anfallen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "Art. 48c MSchG, in force since 1 Jan 2017"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:33:30Z",
+   "target": "f13643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Für Industrieprodukte: 60 % der Herstellungskosten und der wesentliche Fertigungsschritt müssen in der Schweiz erfolgen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:33:34Z",
+   "target": "f13647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mindestens 80% des Gewichts der Rohstoffe oder Zutaten, aus denen sie sich zusammensetzen, müssen aus der Schweiz stammen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "milk and dairy: 100 % of the milk; some raw materials unavailable in Switzerland are exempt"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:33:38Z",
+   "target": "f13647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Für Lebensmittel: 80 % des Gewichts der Rohstoffe und der notwendigen Verarbeitung müssen in der Schweiz erfolgen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:21.992Z",
+   "target": "f13643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mindestens 60% der Herstellungskosten müssen in der Schweiz anfallen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:21.992Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:21.992Z",
+   "target": "f13643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Für Industrieprodukte: 60 % der Herstellungskosten und der wesentliche Fertigungsschritt müssen in der Schweiz erfolgen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:21.992Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:21.992Z",
+   "target": "f13647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mindestens 80% des Gewichts der Rohstoffe oder Zutaten, aus denen sie sich zusammensetzen, müssen aus der Schweiz stammen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:21.992Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:21.992Z",
+   "target": "f13647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Für Lebensmittel: 80 % des Gewichts der Rohstoffe und der notwendigen Verarbeitung müssen in der Schweiz erfolgen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:21.992Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  }
+ ]
+}

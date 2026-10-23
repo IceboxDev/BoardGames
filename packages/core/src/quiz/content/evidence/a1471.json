@@ -1,0 +1,343 @@
+{
+ "article": "a1471",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Demeter_International",
+   "title": "Demeter International – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:33.408Z",
+   "snapshot": "043fce571edd8cf38364052be7390fc72921017df99159ecbf64695e286b7442"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nike,_Inc.",
+   "title": "Nike, Inc. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:34.575Z",
+   "snapshot": "7d26cd887d43b2d2d5c79402c5c1a72b820e20c350e72e696b1afd5689169bef"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Nike_Inc.",
+   "title": "Nike Inc.",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:31.880Z",
+   "snapshot": "eed03434312bac0146ede35a9057a1227832f294183d593d457a481ff739f09e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ajax_(cleaning_product)",
+   "title": "Ajax (cleaning product) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:35.465Z",
+   "snapshot": "0e878394d7774ea5248eaeb3af2fcfbcb8e7cde048e9b63288936beea3bb8e33"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hermes_Germany",
+   "title": "Hermes Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:32.721Z",
+   "snapshot": "41f2e26c3e07914dc65bb9a63ff9d7f35f1eacf1de04402b9942347bd954e042"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pandora_(jewelry)",
+   "title": "Pandora (jewelry) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:36.363Z",
+   "snapshot": "38602880a72f05aa9c0e6b44182833fd171354df5f4c4e7e6890772ea553ad0a"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Pandora_(Unternehmen)",
+   "title": "Pandora (Unternehmen)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:33.826Z",
+   "snapshot": "0a498ef524e5de6e536202360a09d683888110117d2511344a86a5b405b7db25"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Evri",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:37.408Z",
+   "snapshot": "b480b87c33fe9b57cefbb7182b5f09e8f6ab3637728384e792d3a8e5e8a27ac9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Demeter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nike",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nike",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-028"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ajax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hermes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pandora",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f07355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pandora",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-123"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Biodynamic Federation Demeter International is the largest certification organization for biodynamic agriculture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Demeter” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The company was founded on January 25, 1964, as \"Blue Ribbon Sports\", by Bill Bowerman and Phil Knight, and officially became Nike, Inc.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nike” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(englisch offiziell [ˈnaɪki], angelehnt an altgriechisch νίκη níkē [níːkɛː], deutsch ‚Sieg‘, bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nike” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ajax is an American brand of household cleaning products and detergents made by Colgate-Palmolive",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ajax” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Hermes Germany GmbH mit Sitz in Hamburg ist ein Logistikdienstleister und Partner von Onlineshops und Multi-Channel-Händler im In- und Ausland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermes” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pandora A/S (stylised in all caps) is a Danish jewelry manufacturer and retailer founded in 1982 by Per Enevoldsen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandora” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:30.977Z",
+   "target": "f07355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pandora (in Eigenschreibweise: PANDORA) ist ein dänisches Unternehmen der Schmuckindustrie in der Rechtsform A/S.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:30.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandora” is on the snapshot of s7"
+  }
+ ]
+}

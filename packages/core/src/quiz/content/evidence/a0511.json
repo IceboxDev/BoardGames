@@ -1,0 +1,249 @@
+{
+ "article": "a0511",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar",
+   "title": "Venezuelan bolívar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:21.076Z",
+   "snapshot": "7408b10ced5cdb75afa8fb1be42e499bf561484e859dda9186e3e38edc89ddc2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Ayacucho",
+   "title": "Battle of Ayacucho – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:22.162Z",
+   "snapshot": "835465a7bf4e89ac9166115097d805cc9d9cf8842596383869b2531a67bcd571"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vasco_N%C3%BA%C3%B1ez_de_Balboa",
+   "title": "Vasco Núñez de Balboa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:23.014Z",
+   "snapshot": "76f1e4e86fb226b13f723f522ba537f3a910d64f8d25129f704a73856015f2e8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lempira_(Lenca_ruler)",
+   "title": "Lempira (Lenca ruler) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:24.106Z",
+   "snapshot": "6d84016c9ccd9ef09fd19629f74a30c51e6b5c064fa8fb25aa49f36b42f9574e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fourth_voyage_of_Columbus",
+   "title": "Fourth voyage of Columbus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:24.991Z",
+   "snapshot": "6cf3cb5ca5e9e8aafe5bc7fd493643b1f3954d83efa18c30b74dd46f69142c60"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:26.201Z",
+   "snapshot": "db9ebcbbe802b7f7978ba98edfb96d5c8ea2b234a502a3274e4937e54f2bc3aa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Simón Bolívar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Antonio José de Sucre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vasco Núñez de Balboa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lempira",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Christopher Columbus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:59.811Z",
+   "target": "f02551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Named after the hero of South American independence Simón Bolívar, it was introduced by President Antonio Guzmán Blanco via the monetary reform of 1879, before which the venezolano was circulating.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simón Bolívar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:59.811Z",
+   "target": "f02552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "However, the campaign of Antonio José de Sucre continued through 1825 in Upper Peru, and the siege of the fortresses Chiloé and Callao eventually ended in 1826.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antonio José de Sucre” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:59.811Z",
+   "target": "f02553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vasco Núñez de Balboa (Spanish pronunciation: [ˈbasko ˈnuɲeθ ðe βalˈβo.a]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vasco Núñez de Balboa” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:59.811Z",
+   "target": "f02554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lempira was a warrior, chieftain of the Lencas of western Honduras in Central America during the 1530s, when he led resistance to Francisco de Montejo's attempts to conquer and incorporate the region into the province of Honduras.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lempira” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:59.811Z",
+   "target": "f02555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The fourth voyage of Columbus was a Spanish maritime expedition of discovery in 1502 to 1504 to the western Caribbean coast of Central America, led by Christopher Columbus and commissioned by the Catholic Monarchs of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christopher Columbus” is on the snapshot of s5"
+  }
+ ]
+}

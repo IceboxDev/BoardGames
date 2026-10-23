@@ -1,0 +1,202 @@
+{
+ "article": "a0317",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Shaolin_Monastery",
+   "title": "Shaolin Monastery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:35.364Z",
+   "snapshot": "15c583e94899eba83d71cd97bc5e80f321dc5f7d8a5110a540633480cc570006"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Karate",
+   "title": "Karate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:36.474Z",
+   "snapshot": "a6b12d2154af2b4c3290319771470e4a80cf5f0d6197913ff0172cd2b4f6df64"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Taekwondo",
+   "title": "Taekwondo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:37.388Z",
+   "snapshot": "626862c8174fa6bf93b285fe9e8817a3d8015c96694f6cbeca1a09611be858ed"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kendo",
+   "title": "Kendo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:38.371Z",
+   "snapshot": "be84123f078b34f7585928d18d1f73bb40322d6323cee0d3cfb83b264ddfc55e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Judo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:39.480Z",
+   "snapshot": "2749b595f844070c00a8b08760cc2a4fc47ba94ddcc68b4914d68f80f479414c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kung Fu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Taekwondo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kendo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:29.050Z",
+   "target": "f01581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shaolin Monastery (少林寺; shàolín-sì), also known as Shaolin Temple, is a Mahayana Buddhist monastic institution recognized as the birthplace of Chan Buddhism and the cradle of Shaolin kung fu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kung Fu” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:29.050Z",
+   "target": "f01582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karate (空手) (; Japanese pronunciation: [kaɾate] ; Okinawan pronunciation: [kaɾati]), also karate-do (空手道, Karate-dō), is a martial art developed in the Ryukyu Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karate” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:29.050Z",
+   "target": "f01584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Taekwondo (; Korean: 태권도; [t̪ʰɛ.k͈wʌ̹n.d̪o] ) is a Korean martial art and combat sport involving primarily kicking techniques and punching.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taekwondo” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:29.050Z",
+   "target": "f01585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kendo (Japanese: 剣道, Hepburn: Kendō; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kendo” is on the snapshot of s4"
+  }
+ ]
+}

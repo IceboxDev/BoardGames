@@ -1,0 +1,195 @@
+{
+ "article": "a0551",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nautilus_(fictional_submarine)",
+   "title": "Nautilus (fictional submarine) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:19.070Z",
+   "snapshot": "9de6eb760eb6847af73fdc1d997d608d2c4f9837fec012cb52bab30c1066154f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Robur_the_Conqueror",
+   "title": "Robur the Conqueror – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:20.055Z",
+   "snapshot": "2ac38f1be424beebdbdaaf65d520d519bc643fd01473e6674de8737f1a9aeeb8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bald_eagle",
+   "title": "Bald eagle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:21.303Z",
+   "snapshot": "4cfb66630812c866c65b3f38fc88c3c0eda804e47ba8e8ca2c0f279a1d5353d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Falcon_9",
+   "title": "Falcon 9 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:22.175Z",
+   "snapshot": "85ff0de29b4fcf3ea68966b816a7e7fbe7dc7828bb884866d16dee3b6883cfc7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nautilus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "albatross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "eagle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "falcon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:05.805Z",
+   "target": "f02751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nautilus is the fictional submarine belonging to Captain Nemo featured in Jules Verne's novels Twenty Thousand Leagues Under the Seas (1870) and The Mysterious Island (1875).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.805Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nautilus” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:05.805Z",
+   "target": "f02752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He takes them on board his ship, a huge, battery-powered \"aeronef\" called the Albatross, which has many vertical airscrews to provide lift, and two horizontal airscrews in a push-pull configuration to drive the vessel forward.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.805Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “albatross” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:05.805Z",
+   "target": "f02754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The bald eagle (Haliaeetus leucocephalus) is a bird of prey found in North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.805Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “eagle” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:05.805Z",
+   "target": "f02755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Falcon 9 is a partially reusable, two-stage-to-orbit, medium-lift launch vehicle designed and manufactured in the United States by SpaceX.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.805Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “falcon” is on the snapshot of s4"
+  }
+ ]
+}

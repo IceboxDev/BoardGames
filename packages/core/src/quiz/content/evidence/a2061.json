@@ -1,0 +1,834 @@
+{
+ "article": "a2061",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fahrenheit",
+   "title": "Fahrenheit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:50.745Z",
+   "snapshot": "38163f0610b982d3fd3836ae6359d013eebfbc15326a98223bd4d1cc7962839b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anders_Celsius",
+   "title": "Anders Celsius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:51.767Z",
+   "snapshot": "64ca6906c0b67f8ca41c4c9700e8ecc9798b06624dadad6412fde4ad08b79785"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Celsius",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:34.400Z",
+   "snapshot": "2378021fd17df3e100f9e15545d85e519e0699d7bf31740a899bfb556e994929"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Grad_Fahrenheit",
+   "title": "Grad Fahrenheit",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:48.964Z",
+   "snapshot": "f641bd96b4791f9711169765364b90bcb981e24f715b1fe1b0ef7f9cf4d00be5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Reinhold_August_Wunderlich",
+   "title": "Carl Reinhold August Wunderlich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:50.075Z",
+   "snapshot": "395080c34eb31a2e53f34e92b14c3eda10eed1a0406116d72e2a878c88034eba"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Daniel_Gabriel_Fahrenheit",
+   "title": "Daniel Gabriel Fahrenheit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:46.388Z",
+   "snapshot": "ef666b25e6baa582ead18d566adbb48d97e98dc8cf52744e16ce2288dd82cf20"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Kelvin",
+   "title": "Kelvin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:33.121Z",
+   "snapshot": "808fa352846a8abfdb60a2a783d1427dfbcfdc481e2eebc9459c88ee852d55ae"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Triple_point",
+   "title": "Triple point",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:52.727Z",
+   "snapshot": "db4aa0f0b84d98953cfeb4005b7accc179d7dabc20a14b80513b902a724110c2"
+  },
+  "s9": {
+   "url": "https://www.mathsisfun.com/temperature-conversion.html",
+   "title": "Conversion of Temperature Celsius and Fahrenheit",
+   "publisher": "Math is Fun",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:17.939Z",
+   "snapshot": "c3d3e95c867ab0455555c8d4fad97ea24eb9e3466ee071e7ee0df107b1a0e6d1"
+  },
+  "s10": {
+   "url": "https://www.science.ca/askascientist/viewquestion.php?qID=3605",
+   "title": "Ask a Scientist – Question #3605",
+   "publisher": "science.ca",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:19.438Z",
+   "snapshot": "f72888be53a5a2ddc9fa83ddf9731d522035617feb8bf84aa502fd0fefe7a47b"
+  },
+  "s11": {
+   "url": "https://medlineplus.gov/ency/article/001982.htm",
+   "title": "Body temperature norms – MedlinePlus Medical Encyclopedia",
+   "publisher": "U.S. National Library of Medicine",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:19.229Z",
+   "snapshot": "ef338233948ba50425a31c12c3f3715c2c71790f3642400bf106f8015bde3b52"
+  },
+  "s12": {
+   "url": "https://www.nist.gov/pml/owm/si-units-temperature",
+   "title": "SI Units – Temperature",
+   "publisher": "NIST",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:19.548Z",
+   "snapshot": "5db4621b9ba4181e0793433085513e7c788a8b0fe3fd22c4b55b4a648cdbe726"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "32 °F",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "212 °F",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "212 °F",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 48"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "212 °F",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-247"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "98.6 °F",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "minus 40",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "273.15 K",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The triple point",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-021"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "For much of the 20th century, the Fahrenheit scale was defined by two fixed points with a 180 °F separation: the temperature at which pure water freezes was defined as 32 °F and the boiling point of water was defined to be 212 °F, both at sea level and under standard atmospheric pressure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “32 °F” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "212 °F",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“212 °F”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "212 °F",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“212 °F”) on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Seit dieser Zeit war die Fahrenheit-Skala durch die Skala des hundertteiligen Thermometers definiert, hatte damit also als Fixpunkte den Gefrierpunkt (gleich 32 °F) und den Siedepunkt des Wassers (gleich 212 °F).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “212 °F” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He is known for his measurement of mean normal human body temperature of 37 °C (98.6 °F), now known more accurately to be about 36.8 °C (98.2 °F).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “98.6 °F” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "minus 40",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“minus 40”, “минус 40”) on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "273.15 K",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“273.15 K”, “273,15 K”, “273,15 К”) on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:15.923Z",
+   "target": "f25425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In thermodynamics, the triple point of a substance is the temperature and pressure at which the three phases (gas, liquid, and solid) of that substance coexist in thermodynamic equilibrium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The triple point” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:29:03Z",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "And as water freezes it measures 0° in Celsius, but 32° in Fahrenheit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:29:06Z",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the temperature at which pure water freezes was defined as 32",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:29:08Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Boiling water (at normal pressure) measures 100° in Celsius, but 212° in Fahrenheit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:29:10Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Then you add 32 to 180 and get 212 degrees Fahrenheit.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:29:11Z",
+   "target": "f10303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The average normal body temperature is generally accepted as 98.6°F (37°C).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T08:29:13Z",
+   "target": "f10303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Example: Convert 98.6° Fahrenheit (normal body temperature) to Celsius",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T08:29:14Z",
+   "target": "f10304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Fahrenheit and Celsius scales intersect numerically at −40 in the respective unit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T08:29:16Z",
+   "target": "f10304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The point at which Celsius and Fahrenheit are the same temperature is -40, that is 40 below zero.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T08:29:17Z",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "One Celsius degree is an interval of 1 K, and zero degrees Celsius is 273.15 K.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T08:29:19Z",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "any temperature in degrees Celsius can be converted to the kelvin scale by adding 273.15",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "And as water freezes it measures 0° in Celsius, but 32° in Fahrenheit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the temperature at which pure water freezes was defined as 32",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s1"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Boiling water (at normal pressure) measures 100° in Celsius, but 212° in Fahrenheit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Then you add 32 to 180 and get 212 degrees Fahrenheit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The average normal body temperature is generally accepted as 98.6°F (37°C).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s11"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Example: Convert 98.6° Fahrenheit (normal body temperature) to Celsius",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s9"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Fahrenheit and Celsius scales intersect numerically at −40 in the respective unit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s1"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The point at which Celsius and Fahrenheit are the same temperature is -40, that is 40 below zero.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s10"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "One Celsius degree is an interval of 1 K, and zero degrees Celsius is 273.15 K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s12"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "any temperature in degrees Celsius can be converted to the kelvin scale by adding 273.15",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s7"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Divide by 5, then multiply by 9, then add 32\n°F to °C",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “32 °F” is on the snapshot of s9"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:58:02.200Z",
+   "target": "f10305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "One Celsius degree is an interval of 1 K, and zero degrees Celsius is 273.15 K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.200Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “273.15 K” is on the snapshot of s12"
+  }
+ ]
+}

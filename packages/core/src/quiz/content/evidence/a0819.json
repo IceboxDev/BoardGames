@@ -1,0 +1,355 @@
+{
+ "article": "a0819",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dance_(Matisse)",
+   "title": "Dance (Matisse) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:31.410Z",
+   "snapshot": "733a4b020ef014986f08d3597d95ff921c8c75f47d58459eeb7cb95e7cd34e7a"
+  },
+  "s2": {
+   "url": "https://sammlung.belvedere.at/objects/6678/liebespaar-der-kuss",
+   "title": "The Kiss (Lovers) – Belvedere Sammlung Online",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Scream",
+   "title": "The Scream – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:33.123Z",
+   "snapshot": "9f484b8e7e825e2747ea0801611fe23b60be33a120661633567c84d77a6cb355"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Starry_Night",
+   "title": "The Starry Night – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:32.537Z",
+   "snapshot": "76410e647ed68b1847fdf08095d56786c41c07bd60e96e06d149548b00a5a3a8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne",
+   "title": "Starry Night Over the Rhône",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:33.360Z",
+   "snapshot": "3452e6b45ee2d9be2af057400e53cef4353c4272d255f6ee7af9a56aa880ad26"
+  },
+  "s6": {
+   "url": "https://www.tate.org.uk/tate-etc/issue-14-autumn-2008/gustav-klimt-and-1908-kunstschau",
+   "title": "Gustav Klimt and the 1908 Kunstschau – Tate Etc",
+   "publisher": "Tate",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:57.783Z",
+   "snapshot": "b2e25a807ac9fdaf7f5532461c759d54920126e7a0b2db3a2179b7e049de2b58"
+  },
+  "s7": {
+   "url": "http://mentalfloss.com/article/64727/15-things-you-should-know-about-klimts-kiss",
+   "title": "15 Things You Should Know About Klimt's The Kiss | Mental Floss",
+   "publisher": "Mental Floss",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:58.971Z",
+   "snapshot": "56f850f3c2ac1b09c06a6080e5329c6678cf9810fd9ff679b5a98677768115b5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henri Matisse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gustav Klimt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edvard Munch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vincent van Gogh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ursa Major",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; history entry seq 34; transcript tp-215"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:49.578Z",
+   "target": "f04091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dance (La Danse) is a painting made by Henri Matisse in 1910, at the request of Russian businessman and art collector Sergei Shchukin, who bequeathed the large decorative panel to the Hermitage Museum, in Saint Petersburg, where it hangs beside Music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henri Matisse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.578Z",
+   "target": "f04094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Scream is an image first created by the Norwegian artist Edvard Munch in 1893, and later repeated by him in different versions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edvard Munch” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.578Z",
+   "target": "f04095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Starry Night is an oil-on-canvas painting by the Dutch Post-Impressionist painter Vincent van Gogh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vincent van Gogh” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:49.578Z",
+   "target": "f10741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "That implied view is not, however, consistent with the stars depicted in the art, as the Plough (Big Dipper) in the constellation Ursa Major would not have been visible from that direction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.578Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ursa Major” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:19:28Z",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The recent Klimt exhibition at Tate Liverpool lacked one of the icons of the artist’s work – The Kiss",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:19:31Z",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Gustav Klimt’s The Kiss is a deceptively simple portrait of lust and love.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:17.823Z",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The recent Klimt exhibition at Tate Liverpool lacked one of the icons of the artist’s work – The Kiss",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:17.823Z",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Gustav Klimt’s The Kiss is a deceptively simple portrait of lust and love.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:17.823Z",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gustav Klimt and the 1908 Kunstschau – Tate Etc | Tate",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gustav Klimt” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:17.823Z",
+   "target": "f04093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "15 Things You Should Know About Gustav Klimt’s ‘The Kiss’",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gustav Klimt” is on the snapshot of s7"
+  }
+ ]
+}

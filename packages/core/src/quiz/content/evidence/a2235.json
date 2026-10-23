@@ -1,0 +1,289 @@
+{
+ "article": "a2235",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Marlon_Brando",
+   "title": "Marlon Brando",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:02.825Z",
+   "snapshot": "42c21c92b5050bb57eccd145828b56d16a29949df3cd2c9ad9dd4a3b11428745"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Wild_One",
+   "title": "The Wild One",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:03.829Z",
+   "snapshot": "757edd3dd0842c3ca1ba79d778a656ac5cd8d01538ca38982a216cde90a2c33d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Marlon_Brando",
+   "title": "Marlon Brando – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:04.952Z",
+   "snapshot": "1dc234ea532f2cdf81061e4f4f16c8d6d551fa4b85b2e8b5af4a4b3fcc959d95"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/On_the_Waterfront",
+   "title": "On the Waterfront – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:05.821Z",
+   "snapshot": "7abec56cbc813d9dec07988a21de742693797e04bd5fe0e124016a910fb42c66"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Superman_(1978_film)",
+   "title": "Superman (1978 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:06.914Z",
+   "snapshot": "f1e22b46f9f6153896af9e1e7a795a5a874f7c05c26e0d034a55e773d5107d5b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Apocalypse_Now",
+   "title": "Apocalypse Now – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:53.492Z",
+   "snapshot": "d56ce625d9b5dfb354d155edf0f5da16a588f5d4d79ac5f70966f1cd6e2f8276"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marlon Brando",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-180"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wild One",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-146"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stanley Kowalski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On the Waterfront",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jor-El",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Colonel Kurtz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:41.363Z",
+   "target": "f11429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marlon Brando nutzte seine Prominenz für ein vielseitiges gesellschaftspolitisches Engagement, beispielsweise zur Unterstützung der US-Bürgerrechtsbewegung der Afroamerikaner und der indigenen Organisation des American Indian Movement.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marlon Brando” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:41.363Z",
+   "target": "f11430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wild One is a 1953 American crime film directed by László Benedek and produced by Stanley Kramer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Wild One” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:41.363Z",
+   "target": "f11431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He returned to Broadway as Stanley Kowalski in the Tennessee Williams play A Streetcar Named Desire (1947), a role he reprised in the 1951 film adaptation directed by Elia Kazan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stanley Kowalski” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:41.363Z",
+   "target": "f11432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On the Waterfront is a 1954 American crime drama film, directed by Elia Kazan and written by Budd Schulberg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “On the Waterfront” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:41.363Z",
+   "target": "f11433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It depicts the origin of Superman, including his infancy as Kal-El of Krypton, son of Jor-El (Brando), and his youthful years in the rural town of Smallville.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jor-El” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:41.363Z",
+   "target": "f11434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The film follows a river journey from South Vietnam into Cambodia undertaken by Captain Willard (Martin Sheen), who is on a secret mission to assassinate Colonel Kurtz (Marlon Brando), a renegade Special Forces officer who is accused of murder and presumed insane.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colonel Kurtz” is on the snapshot of s6"
+  }
+ ]
+}

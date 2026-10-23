@@ -1,0 +1,242 @@
+{
+ "article": "a0960",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/IP_address",
+   "title": "IP address – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:55.117Z",
+   "snapshot": "1baddd24f503d9e5afe23ed2e695932cd9bc596b272971f154913066eec6e684"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ethernet",
+   "title": "Ethernet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:56.108Z",
+   "snapshot": "88e98a7b5b65e5994eff2ee931bf1868e2bfc3b62856eca1003d8e06875c3df8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Port_(computer_networking)",
+   "title": "Port (computer networking) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:57.070Z",
+   "snapshot": "d204390eee04f62046b8e69f32106cccf8c0f53de2dc8ce0c56e00e2e3c85f0c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol",
+   "title": "Dynamic Host Configuration Protocol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:58.072Z",
+   "snapshot": "d095a0732bc760dad368bc5c908f3fe7043c11005474dbe48524b68f87c2a45b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/URL",
+   "title": "URL – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:01.417Z",
+   "snapshot": "aa1ec348959fef6bf9794da0e78474a61be766da73602a78ebe1a5fe3135c718"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "IP address",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c080"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "MAC address",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Port number",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DHCP",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "URL",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:11.559Z",
+   "target": "f04796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An Internet Protocol address (IP address) is a numerical label, such as 192.168.1.1 or 2001:0db8:0000:0000:0000:8a2e:0370:7334, that is assigned to a device connected to a computer network that uses the Internet Protocol for communication.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IP address” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:11.559Z",
+   "target": "f04797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 48-bit MAC address was adopted by other IEEE 802 networking standards, including IEEE 802.11 (Wi-Fi), as well as by FDDI.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MAC address” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:11.559Z",
+   "target": "f04798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A port is uniquely identified by a number, the port number, associated with the combination of a transport protocol and the network IP address.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Port number” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:11.559Z",
+   "target": "f04799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DHCP” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:11.559Z",
+   "target": "f04800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A uniform resource locator (URL), colloquially known as a web address, is a reference to a resource on the World Wide Web.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.559Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “URL” is on the snapshot of s5"
+  }
+ ]
+}

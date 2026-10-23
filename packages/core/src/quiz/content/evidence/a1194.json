@@ -1,0 +1,450 @@
+{
+ "article": "a1194",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Blauer_Engel",
+   "title": "Blauer Engel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:34.065Z",
+   "snapshot": "0619e68c8215567da15e0494f3a69a7c23c472c9e8b31b9fedf12d32064da2ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Energy_Star",
+   "title": "Energy Star – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:35.011Z",
+   "snapshot": "240f29d30191f696193a24c77ca096edaa60afbdc27aa5e0043ddfe171733b83"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Forest_Stewardship_Council",
+   "title": "Forest Stewardship Council – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:35.971Z",
+   "snapshot": "522e3702e1ef07863296b1e484839c4baff0d1c054845849e765d9e03eeb2b50"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marine_Stewardship_Council",
+   "title": "Marine Stewardship Council – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:36.890Z",
+   "snapshot": "d592ad7645c0e6be98a5fb0ef1810b5d605c5c7edc925a8fa89872b15ae75723"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bio-Siegel",
+   "title": "Bio-Siegel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:35.780Z",
+   "snapshot": "e15e3656182b085501960bbcc9ca5b1b7ddb680d034ba1fb835e69cb5a9b49a4"
+  },
+  "s6": {
+   "url": "https://www.blauer-engel.de/de/blauer-engel/unser-zeichen-fuer-die-umwelt",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:35.135Z",
+   "snapshot": "6ac681196ccf52da93213b0ddf5d9dbca627f7fc654e555fa4a6330b202bd26d"
+  },
+  "s7": {
+   "url": "https://www.bundesumweltministerium.de/themen/nachhaltigkeit/konsum-und-produkte/blauer-engel",
+   "title": "Blauer Engel – Bundesumweltministerium",
+   "publisher": "Bundesministerium für Umwelt (BMUV)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:33.618Z",
+   "snapshot": "acf56e2e2b1b28ebfc70df5a92bacc3b7cf98b1ede076eaaa378e0e0b499635b"
+  },
+  "s8": {
+   "url": "https://www.blauer-engel.de/de/blauer-engel/unser-zeichen-fuer-die-umwelt/umweltzeichen-mit-geschichte",
+   "title": "Umweltzeichen mit Geschichte – Blauer Engel",
+   "publisher": "Blauer Engel (RAL / Umweltbundesamt)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:33.994Z",
+   "snapshot": "ed68a89088d35aca9f5c342709147ade4b83520317aacae9baf16b4bd173aa85"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Angel_(certification)",
+   "title": "Blue Angel (certification) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:34.173Z",
+   "snapshot": "f3290ce4f4da2d6312291c2742aee548cac36bb6e23598caf29694b6a46d790a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blauer Engel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Energy Star",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "FSC label",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "MSC label",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bio-Siegel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:46.507Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im äußeren Ring stehen die Worte „BLAUER ENGEL“ und „DAS UMWELTZEICHEN“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blauer Engel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:46.507Z",
+   "target": "f05967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Energy Star (trademarked ENERGY STAR) is a voluntary U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Energy Star” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:46.507Z",
+   "target": "f05968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The FSC label is used on a wide range of timber and non-timber products, from paper and furniture to medicine and jewelry, and aims to give consumers the option of supporting responsible forestry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “FSC label” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:46.507Z",
+   "target": "f05969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 2021 documentary Seaspiracy was critical of the Marine Stewardship Council, arguing it offers a false sense of assurance to consumers about the products possessing the MSC label.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MSC label” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:46.507Z",
+   "target": "f05970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ein Bio-Siegel ist ein Güte- und Prüfsiegel, mit welchem Erzeugnisse aus ökologischem Landbau gekennzeichnet werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bio-Siegel” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:45:01Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "das erste und auch erfolgreichste Umweltzeichen der Welt. Es wurde 1978 vom damals zuständigen Bundesinnenministerium und den Bundesländern ins Leben gerufen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:45:05Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Das Umweltzeichen wurde 1978 auf Initiative des Bundesministers des Inneren und durch den Beschluss der Umweltminister der Länder ins Leben gerufen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:45:09Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Blue Angel is an environmental label in Germany that has been awarded to particularly environmentally friendly products and services since 1978",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:28.591Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "das erste und auch erfolgreichste Umweltzeichen der Welt. Es wurde 1978 vom damals zuständigen Bundesinnenministerium und den Bundesländern ins Leben gerufen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:28.591Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Das Umweltzeichen wurde 1978 auf Initiative des Bundesministers des Inneren und durch den Beschluss der Umweltminister der Länder ins Leben gerufen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:28.591Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Blue Angel is an environmental label in Germany that has been awarded to particularly environmentally friendly products and services since 1978",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:28.591Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Online-Marktplatz \"Produktwelt Blauer Engel\"",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Blauer Engel” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:28.591Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Umweltzeichen mit Geschichte | Blauer Engel",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Blauer Engel” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:28.591Z",
+   "target": "f05966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Blue Angel is an environmental label in Germany that has been awarded to particularly environmentally friendly products and services since 1978.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Blue Angel” is on the snapshot of s9"
+  }
+ ]
+}

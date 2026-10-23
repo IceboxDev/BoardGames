@@ -1,0 +1,405 @@
+{
+ "article": "a1349",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Olympic_weightlifting",
+   "title": "Olympic weightlifting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:15.352Z",
+   "snapshot": "8cadc86d6f1c6b98fa57cc58328cbdab04e02697ab60aa3bcad5a7249ee1e175"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eddie_Hall",
+   "title": "Eddie Hall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:16.193Z",
+   "snapshot": "383de560505eb366571107b2843998746604322b8d11e367ecad8e22eb59888f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Powerlifting",
+   "title": "Powerlifting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:17.400Z",
+   "snapshot": "1106815b388304bac51645040abc0707e124553bb189c2e5e6afa5f580b5f6c1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/International_Powerlifting_Federation",
+   "title": "International Powerlifting Federation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:18.195Z",
+   "snapshot": "e5c8924f92ae5c7bcc44f140762bbc98cedcf3da2785df217dd98c90497da348"
+  },
+  "s5": {
+   "url": "https://britishweightlifting.org/competitions-explained/",
+   "title": "Competitions Explained",
+   "publisher": "British Weightlifting",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:31.372Z",
+   "snapshot": "d3eabeb0be4dc836ac564483b278713f062753fba23e3376fa0a11af5b48eac7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Gewichtheben",
+   "title": "Gewichtheben – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:32.374Z",
+   "snapshot": "7e6190608e2ec422a3e718339394ef77e533259c3576bd6b523220eae8141ada"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "snatch and clean and jerk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "deadlift",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "bench press",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "squat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "powerlifting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:12.081Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "snatch and clean and jerk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“snatch and clean and jerk”, “Reißen und Stoßen”, “Рывок и толчок”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:12.081Z",
+   "target": "f06742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He is best known for his former world record 500 kg (1,102 lb) deadlift and for winning 2017 World's Strongest Man competition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deadlift” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:12.081Z",
+   "target": "f06743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Powerlifting is a competitive strength sport that consists of three attempts at maximal weight on three lifts: squat, bench press, and deadlift.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bench press” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:12.081Z",
+   "target": "f06744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Powerlifting is a competitive strength sport that consists of three attempts at maximal weight on three lifts: squat, bench press, and deadlift.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “squat” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:12.081Z",
+   "target": "f06745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "International Powerlifting Federation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “powerlifting” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:45:37Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The snatch takes place first, followed by the clean and jerk after a short interval.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:45:39Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Each weightlifter gets three attempts at both the snatch and the clean and jerk, with the snatch attempted first.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:45:41Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wettbewerbe werden gegenwärtig als Zweikampf der beiden Disziplinen Reißen und Stoßen durchgeführt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:55.846Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The snatch takes place first, followed by the clean and jerk after a short interval.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.846Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:55.846Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Each weightlifter gets three attempts at both the snatch and the clean and jerk, with the snatch attempted first.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.846Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:55.846Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wettbewerbe werden gegenwärtig als Zweikampf der beiden Disziplinen Reißen und Stoßen durchgeführt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.846Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:55.846Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "During the weigh-in, athletes confirm their bodyweight category and declare their opening attempts in both the snatch and clean and jerk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.846Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “snatch and clean and jerk” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:55.846Z",
+   "target": "f06741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bei den Olympischen Spielen 1924 wurde dieser durch einen Fünfkampf ersetzt, bestehend aus beidarmigem Drücken, Reißen und Stoßen und einarmigem Reißen und Stoßen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:55.846Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Reißen und Stoßen” is on the snapshot of s6"
+  }
+ ]
+}

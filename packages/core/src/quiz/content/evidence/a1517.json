@@ -1,0 +1,249 @@
+{
+ "article": "a1517",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wizard_(card_game)",
+   "title": "Wizard (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:05.922Z",
+   "snapshot": "bef1e83f051566ed0594186882f619640b8191bacf5c06129e1a8560747e70b6"
+  },
+  "s2": {
+   "url": "https://www.cliquenabend.de/spiele/317300-Skull-King-2013.html",
+   "title": "Skull King (2013) – Cliquenabend",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:03.132Z",
+   "snapshot": "c8247232d788b4a977666cb74df0972b77ec2bb7832ec65ce2b81881ba18cdc3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Uno_(card_game)",
+   "title": "Uno (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:09.225Z",
+   "snapshot": "769ceed359083eaa2b610de7eaedb755b44b87ff743bcefc446644fd68b402ab"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bohnanza",
+   "title": "Bohnanza – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:06.844Z",
+   "snapshot": "b5f736e8a62252f7384c65f57dd2751e5163bc519cdb7d19ed57574b15488342"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/6_nimmt!",
+   "title": "6 nimmt! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:17.806Z",
+   "snapshot": "894aa1f9e39860a77a702ffcb3ab764c07ee8e1d15e601e35a57cf6e0ca2ed4e"
+  },
+  "s6": {
+   "url": "https://en.doc.boardgamearena.com/Gamehelpskullking",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:04.149Z",
+   "snapshot": "96a7d7c36872c6f3802eca220844b5c18d5cde43e78f2c1514d2b0251a7842d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wizard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Skull King",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Merle Robbins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uwe Rosenberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wolfgang Kramer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:37.973Z",
+   "target": "f07581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wizard is a trick-taking card game for three to six players designed by Ken Fisher of Toronto, Ontario in 1984.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wizard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:37.973Z",
+   "target": "f07582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Skull King (2013) im Test: Wertung 7/10, Regeln & Fazit",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skull King” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:37.973Z",
+   "target": "f24120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uno ( ; from Spanish and Italian for 'one'), stylized in all caps as UNO, is a proprietary American shedding-type card game originally developed in 1971 by Merle Robbins in Reading, Ohio, a suburb of Cincinnati, that housed International Inc., a gaming company acquired by Mattel on January 23, 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merle Robbins” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:37.973Z",
+   "target": "f24121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bohnanza is a German-style card game based on the game mechanics of trading and politics, designed by Uwe Rosenberg and released in 1997 (in German) by Amigo Spiele and (in English) by Rio Grande Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uwe Rosenberg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:37.973Z",
+   "target": "f24122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "/ Take 5 / Beat the Heat is a card game for 2–10 players designed by Wolfgang Kramer in 1994 and published by Amigo Spiele and Hasbro .",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Kramer” is on the snapshot of s5"
+  }
+ ]
+}

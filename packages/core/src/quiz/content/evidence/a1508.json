@@ -1,0 +1,612 @@
+{
+ "article": "a1508",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Torah",
+   "title": "Torah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:33.916Z",
+   "snapshot": "af66c6c6ba2d65ee62b7c71f0ae574d2523a1fbe9112ba5206527255718455f9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Great_Isaiah_Scroll",
+   "title": "Great Isaiah Scroll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:34.840Z",
+   "snapshot": "a9146ffa98ccd27c15c4e7ab197c1efabad17fd699b9b51c1860114973b0945a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ketuvim",
+   "title": "Ketuvim – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:35.886Z",
+   "snapshot": "1889d7587989bf7f2969ac7a676178c9b7f0612853290da053ad1cc0dc89f526"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Talmud",
+   "title": "Talmud – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:37.059Z",
+   "snapshot": "a92c95c4f3a74e3db0bd146711cb4242f0f95cab02e8f2315130f597f34e0887"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Septuagint",
+   "title": "Septuagint – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:37.930Z",
+   "snapshot": "aa121c56e73a2e5467dd5defbae5979f7d796b01b3e500e3704d95953b901375"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tora",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:35.316Z",
+   "snapshot": "2a4f010349aaabef1a6e998086196dbaab77603899e4a1ef51100af883daa00b"
+  },
+  "s7": {
+   "url": "https://www.ebsco.com/research-starters/religion-and-philosophy/neviim",
+   "title": "Nevi'im – EBSCO Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:16.495Z",
+   "snapshot": "e1ca795a9af80d095d6ea15d9192969a19a10a60db6b880cd271e0e305fdb28d"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/neviim",
+   "title": "NEVIIM Definition & Meaning – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:17.005Z",
+   "snapshot": "7ebe8e09809f28f949ca79113114e129ea7b4cc46cc21d86ee8c9196f078159f"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Nevi%27im",
+   "title": "Nevi'im – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:16.981Z",
+   "snapshot": "519e35603197965d19f3e18957545230f977f88ac4d0b318050743de0ca679e9"
+  },
+  "s10": {
+   "url": "https://www.dictionary.com/browse/septuagint",
+   "title": "SEPTUAGINT Definition & Meaning – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:17.528Z",
+   "snapshot": "8ec03925c92d9656a693c2ab06225fa4ac00fe74bc55eacc204b145497f6f024"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Torah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nevi'im",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ketuvim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Talmud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Septuagint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pentateuch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pentateuch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f07536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Torah (; Biblical Hebrew: תּוֹרָה, romanized: tōrā, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Torah” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nevi'im",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Nevi'im”, “Невиим”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f07538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Ketuvim (; Biblical Hebrew: כְּתוּבִים, romanized: Kǝṯuḇim, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ketuvim” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f07539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Talmud (; Hebrew: תַּלְמוּד, romanized: Talmūḏ, 'study' or 'learning') is a central text of Rabbinic Judaism, and a primary source of Jewish law (הֲלָכָה, Halakha) and Jewish theology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Talmud” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Septuagint ( SEP-tew-ə-jint), sometimes referred to as the Greek Old Testament or The Translation of the Seventy (Koine Greek: Ἡ μετάφρασις τῶν Ἑβδομήκοντα, romanized: Hē metáphrasis tôn Hebdomḗkonta), and abbreviated as LXX, is the earliest extant Greek translation of the Hebrew Bible from the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Septuagint” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f28413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Torah is also known as the Pentateuch () or the Five Books of Moses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pentateuch” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:36.580Z",
+   "target": "f28413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die griechische Bezeichnung Πεντάτευχος Pentáteuchos, deutsch ‚Fünfbuch‘ ergab den in der Fachliteratur gängigen Begriff Pentateuch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pentateuch” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:03:40Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nevi'im, meaning \"the prophets,\" is the second section of the Jewish sacred scriptures known as the Tanakh.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:03:41Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the Prophets, being the second of the three Jewish divisions of the Old Testament.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:03:42Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Second major division of the Hebrew Bible",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:03:44Z",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the oldest Greek version of the Old Testament, traditionally said to have been translated by 70 or 72 Jewish scholars at the request of Ptolemy II",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:03:46Z",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is the earliest extant Greek translation of the Hebrew Bible from the original Biblical Hebrew.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nevi'im, meaning \"the prophets,\" is the second section of the Jewish sacred scriptures known as the Tanakh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the Prophets, being the second of the three Jewish divisions of the Old Testament.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the oldest Greek version of the Old Testament, traditionally said to have been translated by 70 or 72 Jewish scholars at the request of Ptolemy II",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is the earliest extant Greek translation of the Hebrew Bible from the original Biblical Hebrew.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nevi'im | Religion and Philosophy | Research Starters | EBSCOhost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nevi'im” is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "From Hebrew nĕvî'îm: literally, “prophets,” plural of nāvî “prophet”; akin to Arabic tanabbaʼa, Hebrew nibē “to predict, prophesy”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nevi'im” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Nevi'im (; Biblical Hebrew: נְבִיאִים, romanized: Nəḇiʾim, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nevi'im” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:22.442Z",
+   "target": "f07540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "SEPTUAGINT Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:22.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Septuagint” is on the snapshot of s10"
+  }
+ ]
+}

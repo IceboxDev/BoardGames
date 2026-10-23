@@ -1,0 +1,334 @@
+{
+ "article": "a1062",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Erich_Mielke",
+   "title": "Erich Mielke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:18.643Z",
+   "snapshot": "a32ced1544365612aef3ab7ab8137303f25469ef140e9153b15acf9a03c4cf62"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Inoffizieller_Mitarbeiter",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:18.919Z",
+   "snapshot": "2eb1cf91f8c0098425f746002ff7b619881a8cbedc7edf80a9cb2c9cd8d00c61"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Erich_Honecker",
+   "title": "Erich Honecker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:20.620Z",
+   "snapshot": "7d91c7da5a89c98a678a5b9449497e8dbcabe4d367ba4085eac68b0cb3d7b180"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Walter_Ulbricht",
+   "title": "Walter Ulbricht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:21.089Z",
+   "snapshot": "5b7b40a6f3125d4f43d777ff0dd5a434866a20bcbecbdd1121f8c759b45594c6"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Willi_Stoph",
+   "title": "Willi Stoph – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:22.087Z",
+   "snapshot": "9d14b7babd90b81baad9917178fb9f235c445062942fca03cc107464cc7243a6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Wilhelm_Pieck",
+   "title": "Wilhelm Pieck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:21.677Z",
+   "snapshot": "d6b18dd8ef7dcd21ad01fff8158652916ca582b77da725ed5fbb38b752c95ad4"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Wilhelm_Pieck",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:38:23.015Z",
+   "snapshot": "3540478925bfd0557ecc10b977e84d4cd6a81fa8adaa4ac98dcb893b1bc37cf8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erich Mielke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erich Mielke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Erich Honecker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walter Ulbricht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Willi Stoph",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wilhelm Pieck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f05310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Wilhelm Pieck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 30"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erich Mielke wuchs in Berlin-Gesundbrunnen als Sohn eines Stellmachers in einem proletarischen Umfeld auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erich Mielke” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "2/79 des Ministers für Staatssicherheit, Erich Mielke, wurden die Arbeit der IM geregelt und u.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erich Mielke” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Erich Honecker kam in Neunkirchen (Saar) in der Karlstraße (seit 1945 Max-Braun-Straße) zur Welt, das damalige Wohnhaus der Familie wurde im Jahr 2024 bei einem Brand schwer beschädigt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erich Honecker” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rothe, wurde Walter Ulbricht 1893 in der Leipziger Gottschedstraße 4 (heute 25) geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Ulbricht” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ulrich Mählert: Willi Stoph – Ein Fußsoldat der KPD als Verteidigungsminister der DDR.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willi Stoph” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Media related to Wilhelm Pieck at Wikimedia Commons",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Pieck” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:26.892Z",
+   "target": "f05310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Wilhelm Pieck war der Sohn des Kutschers Friedrich Pieck (1850–1931) und dessen Ehefrau Auguste geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.892Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Pieck” is on the snapshot of s7"
+  }
+ ]
+}

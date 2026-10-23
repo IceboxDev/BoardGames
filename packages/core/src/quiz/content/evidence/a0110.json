@@ -1,0 +1,296 @@
+{
+ "article": "a0110",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Denis_Diderot",
+   "title": "Denis Diderot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:17.146Z",
+   "snapshot": "90571e4e999ed009c680adeff4b204ba3a9e7455253a896d0615bda625e0309f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Candide",
+   "title": "Candide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:18.088Z",
+   "snapshot": "5913507b4f63c07ee0abbc35e0c078e712b6eed88d4363962ff7273dc147ce0d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Candide_oder_der_Optimismus",
+   "title": "Candide oder der Optimismus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:15.338Z",
+   "snapshot": "faede421e9e72cddbce420758abf01a4c31ac3a0c3ad2a81b7a5d48a8bfe12ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Spirit_of_Law",
+   "title": "The Spirit of Law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:18.950Z",
+   "snapshot": "1a974b258b92ca25ded6e73127338e34933e2c0de24a8f06ef3881e53bb88991"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau",
+   "title": "Jean-Jacques Rousseau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:20.172Z",
+   "snapshot": "87072ae699f4d611be252d20505256724649297849c2f9d0f5c8e4bdfed00416"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jean_le_Rond_d%27Alembert",
+   "title": "Jean le Rond d'Alembert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:21.014Z",
+   "snapshot": "3173392a6079b7628f12adc98bdb8354e9fa3b6a69e7c0b1a6074d9d435e695e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Emile,_or_On_Education",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:22.024Z",
+   "snapshot": "547b720d6ff86e8a6a66c1d208f4d3b45c91f6e0e245d1c0a647580fc81271dd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Denis Diderot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Voltaire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Voltaire",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-123"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Montesquieu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jean-Jacques Rousseau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean le Rond d'Alembert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:52.883Z",
+   "target": "f00546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Denis Diderot (; French: [dəni did(ə)ʁo]; 5 October 1713 – 31 July 1784) was a French philosopher, art critic, and writer, best known for serving as co-founder, chief editor, and contributor to the Encyclopédie along with Jean le Rond d'Alembert.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Denis Diderot” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:52.883Z",
+   "target": "f00547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Candide, ou l'Optimisme ( kon-DEED or  kahn-DEED, French: [kɑ̃did] ) is a French satire written by Voltaire, a philosopher of the Age of Enlightenment, first published in 1759.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Voltaire” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:52.883Z",
+   "target": "f00547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Candide oder der Optimismus (französisch Candide ou l’optimisme) ist eine 1759 unter dem Pseudonym Docteur Ralph erschienene satirische Novelle des französischen Philosophen Voltaire.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Voltaire” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:52.883Z",
+   "target": "f00548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Spirit of Law (French: De l'esprit des lois, originally spelled De l'esprit des loix), also known in English as The Spirit of [the] Laws, is a treatise on political theory, as well as a pioneering work in comparative law by Montesquieu, published in 1748.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montesquieu” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:52.883Z",
+   "target": "f00549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jean-Jacques Rousseau (UK: , US: ; French: [ʒɑ̃ʒak ʁuso]; 28 June 1712 – 2 July 1778) was a Genevan philosophe, writer, and composer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Jacques Rousseau” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:52.883Z",
+   "target": "f00550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean Le Rond d'Alembert ( DAL-əm-BAIR; French: [ʒɑ̃ lə ʁɔ̃ dalɑ̃bɛʁ]; 16 November 1717 – 29 October 1783) was a French mathematician, physicist, philosopher, and music theorist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean le Rond d'Alembert” is on the snapshot of s6"
+  }
+ ]
+}

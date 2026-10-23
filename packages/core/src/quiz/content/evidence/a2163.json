@@ -1,0 +1,543 @@
+{
+ "article": "a2163",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Erde",
+   "title": "Erde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:26.212Z",
+   "snapshot": "21f55518b25c27a53f90b75f345a6888ec4073caa4dce54fa11255ee309313ce"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pangaea",
+   "title": "Pangaea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:28.987Z",
+   "snapshot": "3c80d1f2b1fec71e205264aa446d577b59ba6580c752f254b93f1fc90b5ba400"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Antarctica",
+   "title": "Antarctica",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:00.301Z",
+   "snapshot": "f91d97c687a3fe0fc930ef11a2f858e06752c0920f70655ca9eb00b5ad1321f0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Laurasia",
+   "title": "Laurasia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:30.002Z",
+   "snapshot": "518796d4705f5a571c195f7750279beb3929ce8ce8c773e4d3aa74c6f55f29cd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Panthalassa",
+   "title": "Panthalassa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:30.887Z",
+   "snapshot": "655a28761daceee37a01fe05b6afbd20c04f17b37319005b6ca2e8ba002b4870"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rodinia",
+   "title": "Rodinia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:31.946Z",
+   "snapshot": "d87d0651a05a4ee3e9e50e173ac5c794872f260cd21c9f917cdc16f7a6a89f77"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tethys_Ocean",
+   "title": "Tethys Ocean – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:33.046Z",
+   "snapshot": "ea704ca876060356f2d8b7414fce48973b4c87ca13b5eebffa3cc9028bd1689b"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Supercontinent",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:34.010Z",
+   "snapshot": "ac75ec4ee4ddf901481e6323c25f6536df90cca479fe783c4412cfef77821129"
+  },
+  "s9": {
+   "url": "https://pubs.usgs.gov/gip/geotime/age.html",
+   "title": "Geologic Time: Age of the Earth",
+   "publisher": "U.S. Geological Survey",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:05.098Z",
+   "snapshot": "5b7f58a9ae8a8028b95c42bd0d403eacd5ecbeb5b32a0a2d1b2282148fcf0931"
+  },
+  "s10": {
+   "url": "https://www.space.com/24854-how-old-is-earth.html",
+   "title": "How old is Earth?",
+   "publisher": "Space.com",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:04.517Z",
+   "snapshot": "dacc3099fce5a12b15102cdccfb6539d9291cfdccf689ca9b61bed1d1030db73"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "4,54 Milliarden Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gondwana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-087"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Laurasia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Panthalassa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rodinia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tethys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pangaea",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Pangaea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "pp-078/2, u03: The card's question is ambiguous, since Gondwana is also often called a supercontinent. Our wording already narrows it to the most recent supercontinent (assembled ~335 Mya, breakup ~175 Mya), and that is Pangaea."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pangaea",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Pangaea",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ihr Durchmesser beträgt mehr als 12 700 Kilometer und ihr Alter etwa 4,54 Milliarden Jahre.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4,54 Milliarden Jahre” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pangaea or Pangea ( pan-JEE-ə) was a supercontinent that existed during the late Paleozoic and early Mesozoic eras.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pangaea” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The last period in which the continental landmasses were near to one another was 336 to 175 million years ago, forming the supercontinent Pangaea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pangaea” is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "From the end of the Neoproterozoic era to the Cretaceous, Antarctica was part of the supercontinent Gondwana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gondwana” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Laurasia () was the more northern of two large landmasses that formed part of the Pangaea supercontinent from around 335 to 175 million years ago (Mya), the other being Gondwana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laurasia” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In historical geology, Panthalassa, also known as the Panthalassic Ocean or Panthalassan Ocean (from Ancient Greek  πᾶν (pan) 'all' and  θάλασσα (thalassa) 'sea'), was the vast superocean that encompassed planet Earth and surrounded the supercontinent Pangaea, the latest in a series of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Panthalassa” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In the geological history of Earth, Rodinia (from Russian  родина (rodina) 'motherland, birthplace') was a Mesoproterozoic and Neoproterozoic supercontinent that assembled 1.26–0.90 billion years ago (GaTooltip gigaannus) and broke up 750–633 million years ago (Ma).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rodinia” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:32.140Z",
+   "target": "f10948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Tethys Ocean ( TEETH-iss, TETH-; Greek: Τηθύς Tēthús), also called the Tethys Sea or the Neo-Tethys, was a prehistoric ocean during much of the Mesozoic Era and early-mid Cenozoic Era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tethys” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:56:45Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These calculations result in an age for the Earth and meteorites, and hence the Solar System, of 4.54 billion years with an uncertainty of less than 1 percent.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:57:16Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "scientists have calculated that Earth is 4.54 billion years old, with an error range of 50 million years",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:18.988Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These calculations result in an age for the Earth and meteorites, and hence the Solar System, of 4.54 billion years with an uncertainty of less than 1 percent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:18.988Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "scientists have calculated that Earth is 4.54 billion years old, with an error range of 50 million years",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:18.988Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These calculations result in an age for the Earth and meteorites, and hence the Solar System, of 4.54 billion years with an uncertainty of less than 1 percent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4.54 billion years” is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:18.988Z",
+   "target": "f10942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "By dating the rocks in Earth's ever-changing crust, as well as the rocks in Earth's neighbors, such as the moon and visiting meteorites, scientists have calculated that Earth is 4.54 billion years old, with an error range of 50 million years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4.54 billion years” is on the snapshot of s10"
+  }
+ ]
+}

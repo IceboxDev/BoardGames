@@ -1,0 +1,539 @@
+{
+ "article": "a0992",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Paul_Sartre",
+   "title": "Jean-Paul Sartre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:01.152Z",
+   "snapshot": "e11ae683de7248fae19f4a6972533c5d0a6a43c2017c1e46b343773382721b34"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1973_Nobel_Peace_Prize",
+   "title": "1973 Nobel Peace Prize – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:01.998Z",
+   "snapshot": "ab25c2fecaed27a6b020e93a3782402a27391747665edcaa345852f4349f3ecc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Grigori_Perelman",
+   "title": "Grigori Perelman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:03.207Z",
+   "snapshot": "307ba9a96867cb72e5c3d341ce6a079da72e27224d6bd63aac9465aaf47ec613"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/J%C3%BCrgen_Habermas",
+   "title": "Jürgen Habermas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:00.901Z",
+   "snapshot": "0e8417894bf680e2071ecd5c5eae8a256d03a19bbf6b03e957297fc7dcd975b8"
+  },
+  "s5": {
+   "url": "https://fr.wikipedia.org/wiki/Jean-Paul_Sartre",
+   "title": "Jean-Paul Sartre – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:34:01.307Z",
+   "snapshot": "5ecc74b24fac9d1f1080874cf8eef45afd510e0f525e01f4e0cb9a78edfab1ce"
+  },
+  "s6": {
+   "url": "https://www.nobelprize.org/prizes/facts/nobel-prize-facts/",
+   "title": "Nobel Prize facts – NobelPrize.org",
+   "publisher": "Nobel Prize Outreach",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:05.486Z",
+   "snapshot": "e752146011a133cf91eb7a762f45a57b01f241607a0a4ad9d2d9e9d514a205eb"
+  },
+  "s7": {
+   "url": "https://www.nobelprize.org/prizes/literature/1964/sartre/facts/",
+   "title": "Jean-Paul Sartre – Facts – NobelPrize.org",
+   "publisher": "Nobel Prize Outreach",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:06.357Z",
+   "snapshot": "b7c318b0d9a0af6e94c4de151b970cc60046f92d0f9b87c62d3c6f9e92105d92"
+  },
+  "s8": {
+   "url": "https://www.nybooks.com/articles/1964/12/17/sartre-on-the-nobel-prize/",
+   "title": "Sartre on the Nobel Prize – The New York Review of Books (17 Dec 1964)",
+   "publisher": "The New York Review of Books",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:05.727Z",
+   "snapshot": "bc11da9db5937c106ef85a5bd289462c2975d25e14a38ca256824fb8893e5341"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nobel Prize in Literature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nobel Peace Prize",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fields Medal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedenspreis des Deutschen Buchhandels",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Legion of Honour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:16.390Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He was awarded the 1964 Nobel Prize in Literature despite attempting to refuse it, saying that he always declined official honors and that \"a writer should not allow himself to be turned into an institution\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nobel Prize in Literature” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:16.390Z",
+   "target": "f04957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 1973 Nobel Peace Prize was awarded jointly to United States secretary of state Henry Kissinger and Worker's Party of Vietnam Politburo representative Lê Đức Thọ \"for jointly having negotiated a cease fire in Vietnam in 1973\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nobel Peace Prize” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:16.390Z",
+   "target": "f04958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In August 2006, Perelman was offered the Fields Medal for \"his contributions to geometry and his revolutionary insights into the analytical and geometric structure of the Ricci flow\", but he declined the award, stating: \"I'm not interested in money or fame; I don't want to be on display like an",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fields Medal” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:16.390Z",
+   "target": "f04959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "2001 wurde Habermas mit dem Friedenspreis des Deutschen Buchhandels ausgezeichnet, 2003 wurde ihm der Prinz-von-Asturien-Preis verliehen, und 2004 erhielt er für sein Lebenswerk den mit 364.000 Euro dotierten Kyoto-Preis der Inamori-Stiftung des japanischen Kyocera-Konzerns, eine Ehrung für Kultur",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.390Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedenspreis des Deutschen Buchhandels” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:16.390Z",
+   "target": "f04960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Legion of Honour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Legion of Honour”, “Ehrenlegion”, “орден Почётного легиона”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:04:18Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean-Paul Sartre, awarded the 1964 Nobel Prize in Literature, declined the prize because he had consistently declined all official honours.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: Pasternak (1958) 'was later coerced by the authorities of the Soviet Union' to decline — so Sartre is the only voluntary refusal of the literature prize (still true after the 2026 award to Anne Carson)"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:04:21Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jean-Paul Sartre declined the Nobel Prize.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:04:24Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In October 1964, Sartre was awarded the Nobel Prize in Literature, but he declined it. He was the first Nobel laureate to voluntarily decline the prize",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:04:28Z",
+   "target": "f04960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1945, after the war, when I was offered the Legion of Honor, I refused it, although I was sympathetic to the government.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Sartre's own statement of 22 Oct 1964"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:04:31Z",
+   "target": "f04960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Il avait de même refusé la Légion d'honneur, en 1945, ou encore une chaire au Collège de France.",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:04:34Z",
+   "target": "a0992:body",
+   "claim": "body-number",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1945, after the war, when I was offered the Legion of Honor, I refused it, although I was sympathetic to the government. Similarly, I have never sought to enter the Collège de France, as several of my friends suggested.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Old body said the Fourth Republic offered the Legion of Honour 'for his role in the Resistance' and that he 'turned down a chair at the Collège de France'; in 1945 the Fourth Republic did not yet exist (Provisional Government), and Sartre says he never sought the chair. Body corrected."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean-Paul Sartre, awarded the 1964 Nobel Prize in Literature, declined the prize because he had consistently declined all official honours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jean-Paul Sartre declined the Nobel Prize.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In October 1964, Sartre was awarded the Nobel Prize in Literature, but he declined it. He was the first Nobel laureate to voluntarily decline the prize",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1945, after the war, when I was offered the Legion of Honor, I refused it, although I was sympathetic to the government.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Il avait de même refusé la Légion d'honneur, en 1945, ou encore une chaire au Collège de France.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "a0992:body",
+   "claim": "body-number",
+   "verdict": "refuted",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1945, after the war, when I was offered the Legion of Honor, I refused it, although I was sympathetic to the government. Similarly, I have never sought to enter the Collège de France, as several of my friends suggested.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean-Paul Sartre, awarded the 1964 Nobel Prize in Literature, declined the prize because he had consistently declined all official honours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nobel Prize in Literature” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:47.139Z",
+   "target": "f04956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nobel Prize in Literature 1964",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nobel Prize in Literature” is on the snapshot of s7"
+  }
+ ]
+}

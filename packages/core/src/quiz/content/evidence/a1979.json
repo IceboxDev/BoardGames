@@ -1,0 +1,401 @@
+{
+ "article": "a1979",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Artichoke",
+   "title": "Artichoke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:24.733Z",
+   "snapshot": "6dd6cd1e2a9c63be5d8081d871195f3089d1103c1bd0b33db42f0e916498e036"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Allicin",
+   "title": "Allicin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:25.604Z",
+   "snapshot": "19fd007d03089b2b67cb78f423d11ac7c8945fef0b59d2b7ec6abca1163269fd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ginger",
+   "title": "Ginger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:21.347Z",
+   "snapshot": "62d2608b3e09ba284ae5c0c6ebe5c6df0925c6a9aa631debb1ecd0ea80c01883"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Arzneipflanze_des_Jahres",
+   "title": "Arzneipflanze des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:11.169Z",
+   "snapshot": "f2af7e233b8cfabe32b229a2a879f17c0ae7f8913adf3c5b12e28153a3ee6ac1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ysop",
+   "title": "Ysop",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:22.854Z",
+   "snapshot": "9cae7adbd53a0e13fd9c0c52a2c8ceba2087ce4be75d4a0f1a98493f43d37047"
+  },
+  "s6": {
+   "url": "https://www.nccih.nih.gov/health/sage",
+   "title": "Sage",
+   "publisher": "National Center for Complementary and Integrative Health (NIH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:48.566Z",
+   "snapshot": "c0e775771684dc1275032a5dce3d4ad1eca8e563d1c6a51b9b46cb46bfbba8b6"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=sage",
+   "title": "sage – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:48.712Z",
+   "snapshot": "20b5c6d8be9c07e53e271f3b3286e33244887bcc13bb4b04a14a0720e57e2821"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Salvia_officinalis",
+   "title": "Salvia officinalis – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:10:24Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09891",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "artichoke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "garlic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ginger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salbei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ysop",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-025"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:59.057Z",
+   "target": "f09891",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The artichoke (Cynara cardunculus var.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “artichoke” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:59.057Z",
+   "target": "f09893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Allicin is an organosulfur compound obtained from garlic and leeks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “garlic” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:59.057Z",
+   "target": "f09894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ginger (Zingiber officinale) is a flowering plant whose rhizome, ginger root or ginger, is widely used as a spice and a folk medicine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ginger” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:59.057Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salbei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Salbei”, “sage”, “шалфей”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:59.057Z",
+   "target": "f13377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Ysop [ˈiːzɔp] (Hyssopus officinalis) ist eine Pflanzenart aus der Gattung Hyssopus innerhalb der Familie der Lippenblütler (Lamiaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ysop” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:18Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Latin Names: Salvia officinalis, Salvia lavandulaefolia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:10:21Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Any of various plants of the genus Salvia of the mint family, especially S. officinalis, having aromatic grayish-green leaves.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:10:24Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Salvia officinalis, common sage or sage, is a perennial, evergreen subshrub",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:47.802Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Latin Names: Salvia officinalis, Salvia lavandulaefolia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:47.802Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Any of various plants of the genus Salvia of the mint family, especially S. officinalis, having aromatic grayish-green leaves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:47.802Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sage: Usefulness and Safety | NCCIH",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sage” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:47.802Z",
+   "target": "f09895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "American Heritage Dictionary Entry: sage",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sage” is on the snapshot of s7"
+  }
+ ]
+}

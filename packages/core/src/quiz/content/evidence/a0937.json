@@ -1,0 +1,242 @@
+{
+ "article": "a0937",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/California_Dreamin'",
+   "title": "California Dreamin' – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:23.325Z",
+   "snapshot": "70fab168270dcf0be37b06e24c0fd04e29506202f6329422dade044fb634a4c4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/White_Rabbit_(song)",
+   "title": "White Rabbit (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:24.320Z",
+   "snapshot": "934fa9ac9bd97a31a3f28eaa1218f856a003bb5444c1a684678b979d00e3759d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Light_My_Fire",
+   "title": "Light My Fire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:25.319Z",
+   "snapshot": "4b7e2e4a12d0fa28d9e52e90595b489516b3eb780d75edfe482cc433b7d1cf5c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Good_Vibrations",
+   "title": "Good Vibrations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:43.646Z",
+   "snapshot": "f436d6aae6560182bd3780d53e0819a4dff7b27578badc0b916dc3984a41f35c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mr._Tambourine_Man",
+   "title": "Mr. Tambourine Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:26.428Z",
+   "snapshot": "48f650929d836b1d809801576b7855a041e2b7bab0b1cd9abb3b62ba24d78396"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Mamas & the Papas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jefferson Airplane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04683",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Doors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04684",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Beach Boys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04685",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Byrds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:07.737Z",
+   "target": "f04681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The best-known version is by the Mamas & the Papas, who released it as a single in December 1965.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.737Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Mamas & the Papas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:07.737Z",
+   "target": "f04682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"White Rabbit\" is a song written by Grace Slick and recorded by the American rock band Jefferson Airplane for their 1967 album Surrealistic Pillow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.737Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jefferson Airplane” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:07.737Z",
+   "target": "f04683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Light My Fire\" is a song by the American rock band the Doors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.737Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Doors” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:07.737Z",
+   "target": "f04684",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Good Vibrations\" is a song by the American rock band the Beach Boys, produced and composed by Brian Wilson with lyrics by Mike Love and, in some published versions, by Tony Asher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.737Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beach Boys” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:07.737Z",
+   "target": "f04685",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The song has been performed and recorded by many artists, including the Byrds, Judy Collins, Melanie, Odetta, Alvin and the Chipmunks, and Stevie Wonder among others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.737Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Byrds” is on the snapshot of s5"
+  }
+ ]
+}

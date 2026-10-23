@@ -1,0 +1,343 @@
+{
+ "article": "a2340",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Silvio_Berlusconi",
+   "title": "Silvio Berlusconi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:54.859Z",
+   "snapshot": "8fbb9d485804ddcfacb33887b38fbe66c171abf7d441338f52df134215481ff5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nicolas_Sarkozy",
+   "title": "Nicolas Sarkozy",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:55.515Z",
+   "snapshot": "f57b879b069a69e6114f81767dcad39abf429ef1c5525034c578f19d3c449a5c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sigmundur_Dav%C3%AD%C3%B0_Gunnlaugsson",
+   "title": "Sigmundur Davíð Gunnlaugsson",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:56.485Z",
+   "snapshot": "07dcaa35e34bb40e3070e8455881bd7f73e7bbd644f4b0f26654e7773901ed9f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mediaset",
+   "title": "Mediaset – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:58.219Z",
+   "snapshot": "353e27d2a699d989a588c4b704746b9b6430a030e6921acce2eeef7122d467a6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Carla_Bruni",
+   "title": "Carla Bruni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:59.346Z",
+   "snapshot": "a96d76ab57f24e8f7df7e409199c89d1ca3f0212197d71312f252db74f9ca4bf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Panama_Papers",
+   "title": "Panama Papers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:00.274Z",
+   "snapshot": "8a6c1a981cbb5bde5aaed921972986fd28bf67b92598e5b35f4dcbd909879acb"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ibiza_affair",
+   "title": "Ibiza affair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:01.314Z",
+   "snapshot": "fdc0f3d317f705c897f0fe671865b653dacbae64651e5cca4180a054a46cd1b0"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Silvio_Berlusconi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:02.396Z",
+   "snapshot": "c36091b2672f5b16e6f864bd01d5517e0294f8bed715edddeee9b718864d7eb8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Silvio Berlusconi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nicolas Sarkozy",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-194"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Panama Papers",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-287"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mediaset",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Carla Bruni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mossack Fonseca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ibiza",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1954 erlangte Silvio Berlusconi das Reifezeugnis am Salesianer-Gymnasium Sant’Ambrogio in Mailand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Silvio Berlusconi” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nicolas Sarkozy ( [nikɔ'la saʁkɔ'zi],  vollständig Nicolas Paul Stéphane Sárközy de Nagy-Bocsa; * 28.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicolas Sarkozy” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Im Zusammenhang mit den Panama Papers wird ihm vorgeworfen, seine frühere Beteiligung an einer Briefkastenfirma seiner Ehefrau gegenüber dem Parlament verschwiegen zu haben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Panama Papers” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The company is controlled by the holding company MFE – MediaForEurope (the original iteration of Mediaset S.p.A., a.k.a.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mediaset” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Carla Bruni-Sarközy de Nagy-Bocsa (born Carla Gilberta Bruni Tedeschi; Italian pronunciation: [ˈkarla dʒilˈbɛrta ˈbruːni teˈdeski]; 23 December 1967) is an Italian and French singer, songwriter and fashion model who served as the first lady of France from 2008—when she married then president Nicolas",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carla Bruni” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "These documents, some dating back to the 1970s, were created by, and taken from, the former Panamanian offshore law firm and corporate service provider Mossack Fonseca, and compiled with similar leaks into a searchable database.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mossack Fonseca” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:01.197Z",
+   "target": "f12185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Ibiza affair (German: Ibiza-Affäre), also known as Ibiza-gate, was a political scandal in Austria involving Heinz-Christian Strache, the former vice chancellor of Austria and leader of the Freedom Party (FPÖ), as well as Johann Gudenus, formerly a deputy leader of the Freedom Party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ibiza” is on the snapshot of s7"
+  }
+ ]
+}

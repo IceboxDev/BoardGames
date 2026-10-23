@@ -1,0 +1,470 @@
+{
+ "article": "a2625",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Archie_(search_engine)",
+   "title": "Archie (search engine)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:04.049Z",
+   "snapshot": "03eb5226effc6f2740a1d482c2d4b4924c277356959fceadecb26b95b2a13440"
+  },
+  "s2": {
+   "url": "https://www.google.com/search/howsearchworks/our-approach/",
+   "title": "Our Approach - How Google Search Works",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:02.211Z",
+   "snapshot": "6e89b57efcdb5f8f951481f064c2cdb5924ffa02da5d043ab6e097369b15447d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/AltaVista",
+   "title": "AltaVista – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:05.061Z",
+   "snapshot": "d3cdc1157e1f786877bb6bb7ce0187a87dcf8dc84aba3b19dec798e0d0b62338"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ask.com",
+   "title": "Ask.com – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:06.045Z",
+   "snapshot": "8807b5f3bb2c4007e542da4e6ffc371a2b75760a8994fd3bc652dd80b3701208"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Microsoft_Bing",
+   "title": "Microsoft Bing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:07.367Z",
+   "snapshot": "1af9c6697dbfcb8180cb5bad0e88a8ced7c94956b8e7ed84e21e5e3466743028"
+  },
+  "s6": {
+   "url": "https://www.google.com/search/howsearchworks/how-search-works/",
+   "title": "How Search Works – Google Search",
+   "publisher": "Google",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:55.728Z",
+   "snapshot": "ffa09e8acaf3fc17430a35f6d5263dc8aa32a2296bec582e4ecad1ae2fea2af9"
+  },
+  "s7": {
+   "url": "https://www.searchenginejournal.com/google-revisits-15-unseen-queries-statistic-in-context-of-ai-search/512532/",
+   "title": "Google Revisits 15% Unseen Queries Statistic In Context Of AI Search",
+   "publisher": "Search Engine Journal",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:57.571Z",
+   "snapshot": "37fa3af54c2c1c4aae8876f67c839d86ac6902aa46f879758c1deae2b8d69125"
+  },
+  "s8": {
+   "url": "https://www.nextgov.com/digital-government/2017/07/however-strange-your-search-chances-are-google-has-seen-it/139291",
+   "title": "However Strange Your Search, Chances Are Google Has Seen it Before",
+   "publisher": "Nextgov",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:57.472Z",
+   "snapshot": "9a5777e81886aa79765419ad7183b4bb2c62713338fa92992ac1601ebbba40fb"
+  },
+  "s9": {
+   "url": "https://www.internethalloffame.org/inductee/alan-emtage/",
+   "title": "Alan Emtage – Internet Hall of Fame",
+   "publisher": "Internet Hall of Fame (Internet Society)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:56.705Z",
+   "snapshot": "53f2c7b2bfda982cb554ca213e71fa9fc51b84ab72c4604d2fa213778d4c41c3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Archie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-197"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "15 percent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-159"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "AltaVista",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jeeves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:48.813Z",
+   "target": "f14200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Archie is a tool for indexing FTP archives, allowing users to more easily identify specific files.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:48.813Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "15 percent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“15 percent”, “15 Prozent”, “15 процентов”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:48.813Z",
+   "target": "f14202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "AltaVista (a contraction of alta + vista, meaning \"high view\" in the Spanish language), based in Palo Alto, California, was a pioneering web search engine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “AltaVista” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:48.813Z",
+   "target": "f14203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ask.com (originally known as Ask Jeeves) was an American answer engine, e-magazine, and later a web search engine, created by Garrett Gruener and David Warthen and launched on June 1, 1997.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jeeves” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:48.813Z",
+   "target": "f14205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Microsoft Bing (also known simply as Bing) is a search engine owned and operated by Microsoft, and developed by Microsoft AI.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bing” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:02:45Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "15% of searches we see every day are new.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Google's own statement; repeated in 2025 (SEJ). Time-sensitive: reviewBy set."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:02:49Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Google's John Mueller speculated on why the '15% of queries unseen' statistic remains steady despite changes from LLMs and AI search",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "March 2025."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:03:06Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Only 15% of the billions of estimated searches per day are queries the service hasn’t seen before, according to Google.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:14:16Z",
+   "target": "f14200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is considered the first Internet search engine.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Archie indexed FTP archives (pre-Web); 'first web search engine' would be a different answer (e.g. W3Catalog/JumpStation)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:14:17Z",
+   "target": "f14200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1989, Alan Emtage conceived of and implemented Archie, the world’s first Internet search engine.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:33.949Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "15% of searches we see every day are new.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:33.949Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Only 15% of the billions of estimated searches per day are queries the service hasn’t seen before, according to Google.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:33.949Z",
+   "target": "f14200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is considered the first Internet search engine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:33.949Z",
+   "target": "f14200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bunyip distributed a licensed, commercial version of the Archie search engine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Archie” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:33.949Z",
+   "target": "f14201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "“We see billions of searches every day, and 15 percent of those queries are ones we haven’t seen before–so we’ve built ways to return results for queries we can’t anticipate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “15 percent” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "article": "a0894",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/St._Bartholomew%27s_Day_massacre",
+   "title": "St. Bartholomew's Day massacre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:23.394Z",
+   "snapshot": "140a6426ab335816bf283817ef34881fda86d8870e12074355455f78f69f7902"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Massacre_of_Vassy",
+   "title": "Massacre of Vassy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:24.250Z",
+   "snapshot": "3e6f9378b7bba8088c9cd2fbb2c023d2a6c1370f096e07604e8d734c24db61a8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sack_of_Magdeburg",
+   "title": "Sack of Magdeburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:25.234Z",
+   "snapshot": "365244e0b4441b96ea5a44f0722e0de595e7cc0af219cf6b62e509002111b7f1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Siege_of_Drogheda",
+   "title": "Siege of Drogheda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:26.365Z",
+   "snapshot": "a50bc9904499865f33ace4598f48566879b2afafcce203a8bc8ea896354c643c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Massacre_of_Glencoe",
+   "title": "Massacre of Glencoe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:27.237Z",
+   "snapshot": "d28da0ae73f7ea4e406ff906a62b1c4ecf7a280d59452f9cc50323846bbae43a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cromwellian_conquest_of_Ireland",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:28.280Z",
+   "snapshot": "6a449b4a70232759e1c3840c70f966ffa01287fe36535a10b81364a59e612d37"
+  },
+  "s7": {
+   "url": "https://www.bbc.co.uk/history/british/civil_war_revolution/cromwell_01.shtml",
+   "title": "Oliver Cromwell – BBC History",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:30.082Z",
+   "snapshot": "ed87b2846ef9a0f741541a9a58c74fda9cdf80e6e11901941fd581aeb51b6fe9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "St. Bartholomew's Day massacre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Massacre of Vassy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sack of Magdeburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Massacre of Drogheda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Massacre of Glencoe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:01.329Z",
+   "target": "f04466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It has been claimed that the Huguenot community represented as much as 10% of the French population on the eve of the St. Bartholomew's Day massacre, declining to 7–8% by the end of the 16th century, and further after heavy persecution began once again during the reign of Louis XIV, culminating with",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St. Bartholomew's Day massacre” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:01.329Z",
+   "target": "f04467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Massacre of Vassy (French: massacre de Wassy) was the murder of Huguenot worshippers and citizens in an armed action by troops of the Duke of Guise, in Wassy, France on 1 March 1562.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Massacre of Vassy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:01.329Z",
+   "target": "f04468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sack of Magdeburg, also called the Magdeburg Wedding (German: Magdeburger Hochzeit) or Magdeburg's Sacrifice (Magdeburgs Opfergang), was the destruction of the Protestant city of Magdeburg on 20–24 May 1631 by the Imperial Army and the forces of the Catholic League, resulting in the deaths of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sack of Magdeburg” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:01.329Z",
+   "target": "f04469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Massacre of Drogheda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Massacre of Drogheda”, “Massaker von Drogheda”, “Резня в Дроэде”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:01.329Z",
+   "target": "f04470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Massacre of Glencoe took place in Glen Coe in the Argyll region of the Scottish Highlands on 13 February 1692.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Massacre of Glencoe” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:05Z",
+   "target": "f04469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "After Aston rejected an invitation to surrender, the town was stormed and much of the garrison executed, along with an unknown but \"significant number\" of civilians.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "The garrison was a mixed force of Irish Catholics and Royalists; siege 3–11 September 1649."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:08Z",
+   "target": "f04469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "His first target was the town of Drogheda north of Dublin which he stormed and captured. Perhaps 2,500 men, mainly in arms, were killed during the storm and several hundred more - all the officers, all Catholic priests and friars, every tenth common soldier - were killed",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:30.601Z",
+   "target": "f04469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "After Aston rejected an invitation to surrender, the town was stormed and much of the garrison executed, along with an unknown but \"significant number\" of civilians.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:30.601Z",
+   "target": "f04469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "His first target was the town of Drogheda north of Dublin which he stormed and captured. Perhaps 2,500 men, mainly in arms, were killed during the storm and several hundred more - all the officers, all Catholic priests and friars, every tenth common soldier - were killed",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:30.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

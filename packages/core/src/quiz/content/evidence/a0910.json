@@ -1,0 +1,248 @@
+{
+ "article": "a0910",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Commissions_of_the_Danube_River",
+   "title": "Commissions of the Danube River – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:27.422Z",
+   "snapshot": "550cdf85dc0b65e458690964ffd6637a0040d3b082fd25d8fdee840d0a51c9db"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine",
+   "title": "Central Commission for Navigation on the Rhine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:28.268Z",
+   "snapshot": "f2f4b3a76738efb72154f2635abcf3493e68ef36c90e66b40e6a0bb3b600a5d5"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Magdalenenhochwasser_1342",
+   "title": "Magdalenenhochwasser 1342 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:25.508Z",
+   "snapshot": "2f6ace7b563f055b6020ff782bec6251dd25b3c579ad66ceb1321f1ecb538c13"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bremerhaven",
+   "title": "Bremerhaven – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:29.401Z",
+   "snapshot": "f982a2e0999a64123e2b81ce77d41e651ad8116b758440cbd8794bcf1f49fe66"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Main_(river)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:30.270Z",
+   "snapshot": "2cfdb29b537e31cc7563f2fcb9b517daf8c1f87ebfcaf8ebbc6587a79b30a0fd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Elbe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:40.348Z",
+   "snapshot": "0736f51675efea91eaec35ea4064c78ed00b9be48a24bfa8b31b24a42292baa9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Danube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Main",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Weser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Weser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:03.378Z",
+   "target": "f04546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Commissions of the Danube River",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danube” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:03.378Z",
+   "target": "f04547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Central Commission for Navigation on the Rhine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhine” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:03.378Z",
+   "target": "f04549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Für das Rhein-Main-Gebiet ist der Verlauf des Hochwassers aus zeitgenössischen Quellen sowie aus heutigen Modellrechnungen erschließbar.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Main” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:03.378Z",
+   "target": "f04550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bremerhaven (German pronunciation: [ˌbʁeːmɐˈhaːfn̩] ; Low German: Bremerhoben) is a port city on the east bank of the Weser estuary in northern Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weser” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:03.378Z",
+   "target": "f04550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "If the Weser-Werra are considered separate, it is the longest river lying entirely in Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weser” is on the snapshot of s5"
+  }
+ ]
+}

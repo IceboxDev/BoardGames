@@ -1,0 +1,590 @@
+{
+ "article": "a2374",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ferdinand_Cohen-Blind",
+   "title": "Ferdinand Cohen-Blind",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:45.704Z",
+   "snapshot": "76833b575ecb8ecdf6ab0a38bc920d8244d0f7ff2b634bb3051b554b72df8a22"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Liechtenstein",
+   "title": "Liechtenstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:37.090Z",
+   "snapshot": "08a9ba32c69801b43107971faa4883a21cd78b090b73f50bf1eef869401841ef"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sozialversicherung_(Deutschland)",
+   "title": "Sozialversicherung (Deutschland)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:47.143Z",
+   "snapshot": "81c31772c1a0e6b9928aa9edd227a7604759804cb849eb7bf208e2f6697f2b21"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Anti-Socialist_Laws",
+   "title": "Anti-Socialist Laws – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:44.409Z",
+   "snapshot": "7880652e4b3aa0c26469e6828b62a733e894fb62fd2606c79c38eb010cfe9105"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gesetzliche_Rentenversicherung_(Deutschland)",
+   "title": "Gesetzliche Rentenversicherung (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:47.884Z",
+   "snapshot": "dc61a96af7589df5b6434f26a96f155a85db877c88b4a6aadbc7a0c1b67d5ac7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Military_of_Liechtenstein",
+   "title": "Military of Liechtenstein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:45.331Z",
+   "snapshot": "200391ae3f063320987bbd414abc89b205204ed7dfd4d1c3d21c08224a4c17ee"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ferdinand_Cohen-Blind",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:46.353Z",
+   "snapshot": "54639fb7738c2ad86e0c75641c544ce924a483b39ed901fdc1b144177ca3ef3a"
+  },
+  "s8": {
+   "url": "https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Historie/historie_node.html",
+   "title": "Historie der Rentenversicherung",
+   "publisher": "Deutsche Rentenversicherung",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:58.469Z",
+   "snapshot": "3599d5234ee7c11789d70e9ef0b932c90563914e3cfc0b75a10b933e506be58b"
+  },
+  "s9": {
+   "url": "https://www.warhistoryonline.com/history/witzerland-invaded-liechtenstein-by-mistake-x.html",
+   "title": "Switzerland Invaded Liechtenstein by Mistake",
+   "publisher": "War History Online",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:58.760Z",
+   "snapshot": "e579425665713b1020f0aa0725ff3821e2f920cb269fe329e0b9837321009c95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Liechtenstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "die Sozialversicherung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-390"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anti-Socialist Laws",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unfallversicherung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "70 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1868",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferdinand Cohen-Blind",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Ferdinand Cohen-Blind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-029/3, u10: False: no vest – the royal physician found that Cohen-Blind's first three bullets only grazed Bismarck and the last two glanced off his ribs."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferdinand Cohen-Blind",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ferdinand Cohen-Blind",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s7"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferdinand Cohen-Blind wurde in Mannheim als Sohn jüdischer Eltern, Jakob Abraham Cohen und dessen zweiter Frau Friederike, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferdinand Cohen-Blind” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ferdinand Cohen-Blind (March 25, 1844 – May 8, 1866) was a Jewish German student who attempted to assassinate Otto von Bismarck, the Minister President of Prussia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferdinand Cohen-Blind” is on the snapshot of s7"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Liechtenstein [ˈlɪçtn̩ˌʃtaɪ̯n] (amtlich Fürstentum Liechtenstein) ist ein Binnenstaat im Alpenraum Mitteleuropas und der sechstkleinste Staat der Erde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liechtenstein” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Für- und Vorsorge durch die Sozialversicherung ist gesetzlich eng geregelt, die Organisation erfolgt durch selbstverwaltete Versicherungsträger.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Sozialversicherung” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Anti-Socialist Laws or Socialist Laws (German: Sozialistengesetze; officially Gesetz gegen die gemeingefährlichen Bestrebungen der Sozialdemokratie, \"Law against the public danger of social democratic endeavors\") was an act of the Reichstag of the German Empire passed on 19 October 1878.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anti-Socialist Laws” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unfallversicherung: Siebtes Buch Sozialgesetzbuch (SGB VII)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unfallversicherung” is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "70 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“70 Jahre”, “age 70”, “70 лет”) on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:07.746Z",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Liechtenstein disbanded its army in 1868, and has had no standing army since.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:07.746Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1868” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:36:50Z",
+   "target": "f12393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Eine Altersrente konnten Versicherte ab 70 mit mindestens 30 Beitragsjahren bekommen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:37:02Z",
+   "target": "f12393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sie sah eine Altersrente ab dem 70. Lebensjahr vor",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:37:10Z",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Liechtenstein disbanded its army of 80 men on 12 February 1868 and declared its permanent neutrality.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:37:16Z",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Liechtenstein disbanded its own in 1868",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:52.035Z",
+   "target": "f12393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Eine Altersrente konnten Versicherte ab 70 mit mindestens 30 Beitragsjahren bekommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:52.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:52.035Z",
+   "target": "f12393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sie sah eine Altersrente ab dem 70. Lebensjahr vor",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:52.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:52.035Z",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Liechtenstein disbanded its army of 80 men on 12 February 1868 and declared its permanent neutrality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:52.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:52.035Z",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Liechtenstein disbanded its own in 1868",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:52.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:52.035Z",
+   "target": "f12394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Liechtenstein disbanded its own in 1868 – making it one of the 22 countries in the world today without any armed forces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:52.035Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1868” is on the snapshot of s9"
+  }
+ ]
+}

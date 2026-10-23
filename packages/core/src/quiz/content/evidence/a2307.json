@@ -1,0 +1,377 @@
+{
+ "article": "a2307",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Dagen_H",
+   "title": "Dagen H",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:50.834Z",
+   "snapshot": "f87e7e4b22c67b5c1b38ba1b31f9986fd889941d1037165e574c2ce446911509"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Links-_und_Rechtsverkehr",
+   "title": "Links- und Rechtsverkehr",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:52.714Z",
+   "snapshot": "d6b797e806ac0d4b34d4e83a0b3c108616193e905baf374f3f0abf2295718c98"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+   "title": "Left- and right-hand traffic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:54.495Z",
+   "snapshot": "7d8c87f31d9535bf26824f3b339e5c55fe92aaafda66674479360e59dee62788"
+  },
+  "s4": {
+   "url": "https://www.visitmalta.com/en/getting-around/",
+   "title": "Getting Around Malta",
+   "publisher": "VisitMalta (Malta Tourism Authority)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:13.886Z",
+   "snapshot": "30c68561bf9143b8ca7fd6cdb782ec8b2261667dcff10f0edbdcc2a90983a7a0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11937",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schweden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-273"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Samoa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Malta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11942",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Okinawa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "on the left",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "links",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-311/1, u07: False: Hong Kong was handed over to China in 1997 (not 'independence') and still drives on the left."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "on the left",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "links",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "September 1967, um 5 Uhr in Schweden erfolgte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schweden” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Links- und Rechtsverkehr klassifiziert den Straßenverkehr nach der Fahrspur, auf der Verkehrsteilnehmer (aus eigener Sicht) üblicherweise fahren, oder der Straßenseite, auf der sie einander ausweichen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “links” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "RHT is the opposite: traffic keeps right, the driver usually sits on the left side of the car (LHD: left-hand drive), and roundabouts circulate counterclockwise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “on the left” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Samoa, a former German colony, had been RHT for more than a century, but switched to LHT in 2009, making it the first territory in almost 30 years to change sides.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samoa” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Today, four countries in Europe continue to use LHT, all island nations: the United Kingdom, Republic of Ireland (formerly part of the UK), Cyprus and Malta (both former British colonies).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malta” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:53.013Z",
+   "target": "f11942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Post-World War II Okinawa was ruled by the United States Civil Administration of the Ryukyu Islands until 1972, and was RHT until 6 a.m.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Okinawa” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:44:55Z",
+   "target": "f11941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Today, four countries in Europe continue to use LHT, all island nations: the United Kingdom, Republic of Ireland (formerly part of the UK), Cyprus and Malta (both former British colonies).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:45:01Z",
+   "target": "f11941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "All the road signs are in English and driving is on the left.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:38.640Z",
+   "target": "f11941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "All the road signs are in English and driving is on the left.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:38.640Z",
+   "target": "f11941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The public bus service on Malta and Gozo is a good way to get around as buses serve the major tourist areas, go practically everywhere and are inexpensive and efficient.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Malta” is on the snapshot of s4"
+  }
+ ]
+}

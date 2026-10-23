@@ -1,0 +1,550 @@
+{
+ "article": "a2437",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Agatha_Christie",
+   "title": "Agatha Christie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:15.502Z",
+   "snapshot": "316476a9384a8e8fa4d475718f807c1480ca76f24c1f8759f99a5e74053ca2cc"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mord_im_Orient-Express_(Roman)",
+   "title": "Mord im Orient-Express (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:15.824Z",
+   "snapshot": "c7c2e85ff3e698b8ef14527f3319af2c05a744b983316e408421767fc4bc2e3f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Agatha_Christie",
+   "title": "Agatha Christie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:13.150Z",
+   "snapshot": "35d0229ef2e6c7740783b57663859d2f94c37b52d6a83d9c545ee0dbb9a4a926"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Mousetrap",
+   "title": "The Mousetrap – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:14.015Z",
+   "snapshot": "eb5c9fd35d40cb1b52008b5364925429c9a798e1203677983f72d5d831605b4c"
+  },
+  "s5": {
+   "url": "https://www.guinnessworldrecords.com/world-records/67383-best-selling-author-for-fiction",
+   "title": "Best-selling author for fiction – Guinness World Records",
+   "publisher": "Guinness World Records",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:15.966Z",
+   "snapshot": "9432f2b9f4c68182c5d5727f7d9b8c0c017c5b585412f0610396ad800dafe4b7"
+  },
+  "s6": {
+   "url": "https://www.agathachristie.com/about-christie",
+   "title": "About Agatha Christie - The world's best-selling novelist",
+   "publisher": "Agatha Christie Limited (official site)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:16.456Z",
+   "snapshot": "8f73485acf489b538cd3a0de71c1e14f5b64f2ce2edb0ad631635b23f05d997f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express",
+   "title": "Murder on the Orient Express – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:13:45Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Pera_Palace_Hotel",
+   "title": "Pera Palace Hotel – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:16.733Z",
+   "snapshot": "3f603c7886b4174c05bbb7a223bfa9e9cae289b7561ac03c77a57b8ac365dd95"
+  },
+  "s9": {
+   "url": "https://www.the-mousetrap.co.uk/about/",
+   "title": "About Agatha Christie's The Mousetrap | Official Site",
+   "publisher": "The Mousetrap (official site)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:17.071Z",
+   "snapshot": "6ea0289563be8562c09d022dd4ccdec6bf967a242396dd18d3f84c6f903308fc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Agatha Christie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12812",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Istanbul",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-270"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12813",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Torquay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harrogate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Mousetrap",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:19.944Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Agatha Christie selbst erwähnt in ihrer Autobiografie andeutungsweise Immobilien in New York und in Trusts angelegtes Vermögen, aus dessen Zinseinkünften die Familie Miller lebte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agatha Christie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:19.944Z",
+   "target": "f12812",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mord im Orient-Express (englisch Murder on the Orient Express) ist ein Kriminalroman von Agatha Christie mit Hercule Poirot als Ermittler, der einen Mord im Orient-Express, einem Zug von Istanbul nach Calais, aufklärt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Istanbul” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:19.944Z",
+   "target": "f12813",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christie was born into a wealthy upper-middle-class family in Torquay, Devon, and was largely home-schooled.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Torquay” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:19.944Z",
+   "target": "f12814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 14 December 1926, she was located at the Swan Hydropathic Hotel in Harrogate, Yorkshire, 184 miles (296 km) north of her home in Sunningdale, registered as \"Mrs Tressa Neele\" (the surname of her husband's lover) from \"Capetown [sic] S.A.\" (South Africa).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harrogate” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:19.944Z",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Mousetrap is a murder mystery play by Agatha Christie.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Mousetrap” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:36Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The world's best-selling fiction writer is the late Dame Agatha Christie",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Guinness: an estimated 2 billion copies. The record is for fiction; the wording was narrowed accordingly."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:40Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Her books have sold over a billion copies in the English language and a billion in translation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:45Z",
+   "target": "f12812",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pera Palace Hotel – where Christie supposedly wrote the novel, although this is not stated in either her official biography or her own Autobiography",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Istanbul/Pera Palace is a tradition; the same page says she wrote the first part at the Baron Hotel in Aleppo."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:50Z",
+   "target": "f12812",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Detective writer Agatha Christie's 1934 novel Murder on the Orient Express was allegedly written in the Pera Palace Hotel.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "'allegedly'; the hotel keeps room 411 as a memorial. The wording now says 'according to tradition'."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:55Z",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Since 1952, Agatha Christie’s The Mousetrap has enthralled audiences in the heart of London, becoming the longest-running play in theatre history.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: opened at the Ambassadors Theatre on 25 November 1952."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:14:00Z",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "with over 30,000 performances making it the longest run of any play in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The world's best-selling fiction writer is the late Dame Agatha Christie",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Her books have sold over a billion copies in the English language and a billion in translation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12812",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Detective writer Agatha Christie's 1934 novel Murder on the Orient Express was allegedly written in the Pera Palace Hotel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Since 1952, Agatha Christie’s The Mousetrap has enthralled audiences in the heart of London, becoming the longest-running play in theatre history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "with over 30,000 performances making it the longest run of any play in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The world's best-selling fiction writer is the late Dame Agatha Christie (née Miller, later Lady Mallowan, 1890–1976), whose 78 crime novels have sold an estimated 2 billion copies in 44 languages.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Agatha Christie” is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "About Agatha Christie - The world's best-selling novelist - Agatha Christie",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Agatha Christie” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:03.072Z",
+   "target": "f12815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "About Agatha Christie's The Mousetrap | Official Site",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:03.072Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Mousetrap” is on the snapshot of s9"
+  }
+ ]
+}

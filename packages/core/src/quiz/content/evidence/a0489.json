@@ -1,0 +1,289 @@
+{
+ "article": "a0489",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pythagoras",
+   "title": "Pythagoras – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:01.363Z",
+   "snapshot": "8d167fffe3c56c09cc65195a3d05424f2b0a80b1aa0691a309fd6f33c6ec8e06"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Euclid%27s_Elements",
+   "title": "Euclid's Elements – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:05.721Z",
+   "snapshot": "3edd7525af62181283bdf7a0d8c5d457f536f7fe62be56dc95ec7102fa7c6265"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Archimedes",
+   "title": "Archimedes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:20.245Z",
+   "snapshot": "360c793e32d916c1074185af4e1d22a3223bc184e7ec9a5261471a771d3299b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thales_of_Miletus",
+   "title": "Thales of Miletus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:46.037Z",
+   "snapshot": "82ac04260108134f5465636881c322f9ef9e35d626dc30187fcd162c8402aa7b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eratosthenes",
+   "title": "Eratosthenes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:44.643Z",
+   "snapshot": "22acdc0f2b069995cfb88ef519831cca47243d98c1a4ac62736b7e7d4b638996"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Irrational_number",
+   "title": "Irrational number",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:47.075Z",
+   "snapshot": "2d39d5379dd90e4bb508930993e7b1e03c4340f21d65cefdcc6d40ba0c2c0877"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pythagoras",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Euclid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Archimedes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thales",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eratosthenes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Irrational number",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-156"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:57.043Z",
+   "target": "f02441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pythagoras of Samos (Ancient Greek: Πυθαγόρας; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pythagoras” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:57.043Z",
+   "target": "f02442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "300 BC by the Ancient Greek mathematician Euclid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Euclid” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:57.043Z",
+   "target": "f02443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Archimedes of Syracuse ( AR-kih-MEE-deez; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archimedes” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:57.043Z",
+   "target": "f02444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thales of Miletus ( THAY-leez; Ancient Greek: Θαλῆς; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thales” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:57.043Z",
+   "target": "f02445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eratosthenes of Cyrene ( err-ə-TOSS-thə-neez; Ancient Greek: Ἐρατοσθένης [eratostʰénɛːs]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eratosthenes” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:57.043Z",
+   "target": "f25836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Geometrically, when the ratio of lengths of two line segments is an irrational number, the line segments are also described as being incommensurable, meaning that they share no \"measure\" in common; that is, there is no length (\"the measure\"), no matter how short, that could be used to express the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:57.043Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Irrational number” is on the snapshot of s6"
+  }
+ ]
+}

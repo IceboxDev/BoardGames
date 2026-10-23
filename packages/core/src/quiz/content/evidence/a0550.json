@@ -1,0 +1,978 @@
+{
+ "article": "a0550",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Petersburg",
+   "title": "Saint Petersburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:08.140Z",
+   "snapshot": "1422bf9f29da91ebc3fa6d6d479dd768f2d724598cb4184fbfd46d07eda5981c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk",
+   "title": "Reykjavík – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:16.152Z",
+   "snapshot": "13a70dfa7f96fcfb503f3c20e2e369b4c248152590e6014800fbd066e0e16154"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wellington",
+   "title": "Wellington – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:36.129Z",
+   "snapshot": "2f8999f9401fba1e1ed62293de91f6b998f39983cd38ffb496c982047ed35edd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Murmansk",
+   "title": "Murmansk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:17.168Z",
+   "snapshot": "bbcae9608daadac57004309e441e133dfc3dfd41308fd44ba757a09bd5744827"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/%C3%9Cr%C3%BCmqi",
+   "title": "Ürümqi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:18.190Z",
+   "snapshot": "635fb3e6fd0fbd34ac3e5ca0cddd44ac0f322eef46d3e377508aff4aabcc8bf8"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Punta_Arenas",
+   "title": "Punta Arenas",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:15.495Z",
+   "snapshot": "c1e2d0428819a1c4fbd9b1e8a9f52e6d332ccb65131fb778487971383ba4d736"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Auckland",
+   "title": "Auckland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:18.819Z",
+   "snapshot": "fd9a81fe6c142fd33e70b2234c35e5a27bf690ee4b598bea9d7fabaf4c53d6bc"
+  },
+  "s8": {
+   "url": "https://www.miragenews.com/subnational-population-estimates-at-30-june-2025-1559427/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:16.426Z",
+   "snapshot": "0ba775f5e89c426eda7f82de32cd44e7d571869764a7b9337fea1e17ad96c2b9"
+  },
+  "s9": {
+   "url": "https://figure.nz/chart/58AEZiiI1SrNKc4D",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:18.485Z",
+   "snapshot": "84b44e62f376bbab9f62f1a716cd0ec6215371646cbc64e32e7e5d5aac00508d"
+  },
+  "s10": {
+   "url": "https://snl.no/Murmansk",
+   "title": "Murmansk – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:34:02.279Z",
+   "snapshot": "2d25162ffcd4bdd560a71b1b4858748de56c37cd2a3ad962585b98563c85b9a9"
+  },
+  "s11": {
+   "url": "https://snl.no/Punta_Arenas",
+   "title": "Punta Arenas – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:34:03.071Z",
+   "snapshot": "9e9ffffcc1fa18a946e40e45bf786994f73f033525fd6b38619941cff1e0a29c"
+  },
+  "s12": {
+   "url": "https://www.worldatlas.com/articles/biggest-cities-in-new-zealand.html",
+   "title": "Biggest Cities In New Zealand",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:02.633Z",
+   "snapshot": "69f1f0467492dbfc97a5ca1d55c6b492b56a5fe8fc6ef7765cc16022e8a606b6"
+  },
+  "s13": {
+   "url": "https://snl.no/Auckland",
+   "title": "Auckland – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:34:04.330Z",
+   "snapshot": "b4cbf6c307c5b0f9ef463ed673a09dd4d5c36190af68b14e0ee11e8b1b1068fc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saint Petersburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reykjavík",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wellington",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Murmansk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02750",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ürümqi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Südamerika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-160"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Auckland",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Auckland",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Auckland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-223/1, u03: Auckland has well over a million people: about 1.7 million in the urban area and just over 1.8 million in the region (Stats NZ, June 2025). The urban area passed one million in 1996."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Auckland",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s7"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Auckland",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Auckland",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s9"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f02746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saint Petersburg, formerly known as Petrograd (Петроград), and later Leningrad (Ленинград), is the second-largest city in Russia, after Moscow, the nation's capital.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint Petersburg” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f02747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reykjavík is the capital and largest city of Iceland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reykjavík” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f02748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wellington is the capital city of New Zealand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wellington” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Murmansk (Russian: Мурманск) is the administrative center and largest city of Murmansk Oblast in the far northwest part of Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Murmansk” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f02750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ürümqi is the capital and largest city of the Xinjiang Uyghur Autonomous Region in Northwestern China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ürümqi” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Südamerika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Südamerika”, “South America”, “Южная Америка”) on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Auckland [ˈɔːklənd], offizielle Bezeichnung Auckland Council, auf Māori: Tāmaki Makaurau oder Ākarana, ist eine Großstadt und zugleich Unitary Authority auf der Nordinsel von Neuseeland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auckland” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Subnational population estimates give the best available measure of the population, by age and sex, usually living in New Zealand's 16 regions, 67 territorial authority areas, 21 Auckland local board areas, and other areas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auckland” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:25:05.565Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Estimated resident population of the Auckland Region, New Zealand - Figure.NZ",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auckland” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:45:37Z",
+   "target": "f02746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saint Petersburg is the fourth-most populous city in Europe, the most populous city on the Baltic Sea, and the world's northernmost city of more than 1 million residents.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:45:41Z",
+   "target": "f02747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The city's latitude is 64°08' N, making it the world's northernmost capital of a sovereign state (Nuuk, the capital of Greenland, is slightly further",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:45:45Z",
+   "target": "f02748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "With a latitude of 41° 17' South, Wellington is the southernmost capital city in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:45:48Z",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is a major port city and is the world's most populous city north of the Arctic Circle.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:45:52Z",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Murmansk er verdens største by nord for polarsirkelen, endepunkt for Murmanbanen (fra 1916) og en viktig havn, godt beskyttet og isfri året rundt.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T07:45:55Z",
+   "target": "f02750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The largest city in western China, Ürümqi has earned a place in the Guinness Book of Records as the most remote city from any sea in the world. It is about 2,500 kilometres (1,600 mi) from the nearest coastline",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wikipedia cites Guinness; no independent second source could be fetched this run (GWR page not reachable)"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T07:45:58Z",
+   "target": "f11834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Punta Arenas er en havneby lengst sør i Chile, ved Magellanstredet.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23",
+   "note": "Chile is in South America"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T07:46:01Z",
+   "target": "f11834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Punta Arenas ist eine Stadt im äußersten Süden Chiles.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T07:46:05Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The two largest Kiwi cities lie on North Island with Auckland being the lone member of the 1,000,000+ club.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T07:46:08Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit über 1,4 Millionen Einwohnern ist sie die größte Stadt Neuseelands, in der etwa ein Drittel der neuseeländischen Bevölkerung lebt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T07:46:12Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Auckland er New Zealands største by og viktigste handels- og industrisenter.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r027",
+   "run": "provenance-research-2026-10-23",
+   "note": "largest NZ city; 1,495,000 inhabitants (2016) per SNL — the next city, Christchurch, is far below a million"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saint Petersburg is the fourth-most populous city in Europe, the most populous city on the Baltic Sea, and the world's northernmost city of more than 1 million residents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s1"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The city's latitude is 64°08' N, making it the world's northernmost capital of a sovereign state (Nuuk, the capital of Greenland, is slightly further",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s2"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "With a latitude of 41° 17' South, Wellington is the southernmost capital city in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s3"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is a major port city and is the world's most populous city north of the Arctic Circle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s4"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Murmansk er verdens største by nord for polarsirkelen, endepunkt for Murmanbanen (fra 1916) og en viktig havn, godt beskyttet og isfri året rundt.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s10"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The largest city in western China, Ürümqi has earned a place in the Guinness Book of Records as the most remote city from any sea in the world. It is about 2,500 kilometres (1,600 mi) from the nearest coastline",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s5"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Punta Arenas er en havneby lengst sør i Chile, ved Magellanstredet.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s11"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Punta Arenas ist eine Stadt im äußersten Süden Chiles.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e27 is on the snapshot of s6"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The two largest Kiwi cities lie on North Island with Auckland being the lone member of the 1,000,000+ club.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e28 is on the snapshot of s12"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit über 1,4 Millionen Einwohnern ist sie die größte Stadt Neuseelands, in der etwa ein Drittel der neuseeländischen Bevölkerung lebt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e29 is on the snapshot of s7"
+  },
+  {
+   "id": "e41",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Auckland er New Zealands største by og viktigste handels- og industrisenter.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e30 is on the snapshot of s13"
+  },
+  {
+   "id": "e42",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f02749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Murmansk, by i Russland, administrasjonssenter i Murmansk fylke, ved Polhavet på østsiden av den smale Kolafjorden; 314 700 innb.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Murmansk” is on the snapshot of s10"
+  },
+  {
+   "id": "e43",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "A protest event at Auckland Harbor Bridge in Auckland, New Zealand's most populated city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Auckland” is on the snapshot of s12"
+  },
+  {
+   "id": "e44",
+   "at": "2026-10-23T12:53:29.970Z",
+   "target": "f11835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Havna i Auckland med byen i bakgrunnen.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Auckland” is on the snapshot of s13"
+  }
+ ]
+}

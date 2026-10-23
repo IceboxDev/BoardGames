@@ -1,0 +1,249 @@
+{
+ "article": "a2104",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Bridge_(2011_TV_series)",
+   "title": "The Bridge (2011 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:37.920Z",
+   "snapshot": "402976f128603964b9ebec38e011c48a532aa0d8e16aadaad21fc757ce68281d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Killing_(Danish_TV_series)",
+   "title": "The Killing (Danish TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:38.883Z",
+   "snapshot": "40b624408fa9b4d5a2882bd832ead4624c28540648528034445f81b86951658a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Tunnel_(TV_series)",
+   "title": "The Tunnel (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:39.909Z",
+   "snapshot": "e186722f724a77c97f514e99050bad76b8093b7c2e9688177d898bdbd79e7a81"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Der_Pass",
+   "title": "Der Pass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:40.865Z",
+   "snapshot": "97dd6ffef6b74a3bf2cbe171c1ff8dd1763746d17e5e2d1f649759a8a9ca7f3c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kommissarin_Lund_%E2%80%93_Das_Verbrechen",
+   "title": "Kommissarin Lund – Das Verbrechen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:41:38.288Z",
+   "snapshot": "4e1ca9aaac9eb126dc6558134d5abb93140b60b1195c1cd3a73965a559c86915"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Wallander_(British_TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:42.039Z",
+   "snapshot": "597c29014b091bef67e52ec1da520e70b2537536e05004222c5cba75a06ae2fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Bridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Killing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tunnel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Pass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sarah Lund",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-103"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:23.217Z",
+   "target": "f10516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Bridge (Swedish: Bron, pronounced [bruːn]; Danish: Broen [ˈpʁoˀon]) is a Nordic noir crime television series created and written by Hans Rosenfeldt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.217Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Bridge” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:23.217Z",
+   "target": "f10517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Killing (Danish: Forbrydelsen, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.217Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Killing” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:23.217Z",
+   "target": "f10518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tunnel (French: Tunnel) is a British–French crime drama television series adapted from the 2011 Danish–Swedish crime series The Bridge (Bron/Broen).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.217Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tunnel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:23.217Z",
+   "target": "f10519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Pass (English: The Pass) or Pagan Peak is an Austrian-German television crime drama series which premiered on Sky Deutschland on 25 January 2019.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.217Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Pass” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:23.217Z",
+   "target": "f11651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jede Staffel erzählt episodenübergreifend die Ermittlungen der von Sofie Gråbøl gespielten Kommissarin Sarah Lund in Mordfällen in Kopenhagen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.217Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sarah Lund” is on the snapshot of s5"
+  }
+ ]
+}

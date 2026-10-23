@@ -1,0 +1,242 @@
+{
+ "article": "a1236",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+   "title": "AlphaGo versus Lee Sedol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:21.221Z",
+   "snapshot": "5cb529ef89b9f71c00d523a7e203d8a836309e002972e211c9ff0eb9e5eb9a97"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov",
+   "title": "Deep Blue versus Garry Kasparov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:04.904Z",
+   "snapshot": "70f70af18087572eed0bfcdae6b565c9665133362309d2f40a510e77dc287db6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/IBM_Watson",
+   "title": "IBM Watson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:06.047Z",
+   "snapshot": "5a2996877992c0a8187d0a8bd03feae95aaf61ea43a90357a6cc0871931e03d1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Libratus",
+   "title": "Libratus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:06.897Z",
+   "snapshot": "d5d2a87749e927a9570de925e8626a388eee32ed83ec8ff59f9718e2a490801f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/AlphaStar_(software)",
+   "title": "AlphaStar (software) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:07.915Z",
+   "snapshot": "ce58a8663b937313a688ef3477139f0f011f8c0f9a8b966f887e14da6ae5331a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the board game Go",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript c103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chess",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jeopardy!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Poker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "StarCraft II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:52.748Z",
+   "target": "f06176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "AlphaGo is a computer program developed by Google DeepMind to play the board game Go.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the board game Go” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:52.748Z",
+   "target": "f06177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Garry Kasparov, then-world champion in chess, played a pair of six-game matches against Deep Blue, a supercomputer by IBM.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chess” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:52.748Z",
+   "target": "f06178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The computer system was initially developed to answer questions on the popular quiz show Jeopardy! and in 2011, the Watson computer system competed on Jeopardy!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jeopardy!” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:52.748Z",
+   "target": "f06179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Libratus is an artificial intelligence computer program designed to play poker, specifically heads up no-limit Texas hold 'em.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:52.748Z",
+   "target": "f06180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "AlphaStar is an artificial intelligence (AI) software developed by DeepMind for playing the video game StarCraft II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “StarCraft II” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,445 @@
+{
+ "article": "a2723",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Warren_Buffett",
+   "title": "Warren Buffett",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:37.421Z",
+   "snapshot": "6775a64b199c5b69634027a4a448cf9fb2d4d11ea33cfe2d56eb729135ff608f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sharpe_ratio",
+   "title": "Sharpe ratio",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:38.291Z",
+   "snapshot": "d8241baba981b3340b2fd3a3284c2f834463b92fa66a9a71a0683af1b73decc5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/John_C._Bogle",
+   "title": "John C. Bogle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:39.295Z",
+   "snapshot": "5435a127fae8427c85b2a181b32662249b8eabb95982e1f7fe2c85337531ac67"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Harry_Markowitz",
+   "title": "Harry Markowitz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:40.267Z",
+   "snapshot": "34de72322f7104d6785d4ef4cda53e00c4ab75588ac4cde271f7f17603935781"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Capital_asset_pricing_model",
+   "title": "Capital asset pricing model – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:41.368Z",
+   "snapshot": "7e966b2a3f3b05feda1747dd39e02cb3f6c8a0ea9a1369d1815808d6af2836f1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory",
+   "title": "Modern portfolio theory",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:42.469Z",
+   "snapshot": "8b90a16fe2609a7627454022ed6df963f388e8de71e70423cb671571cf2b9684"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/S%26P_500",
+   "title": "S&P 500",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:43.497Z",
+   "snapshot": "0e32ff87c3a342b8ade8938e4fcb00be40200d97ca5b49fe195e290957da719e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/William_F._Sharpe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:44.256Z",
+   "snapshot": "6f5b1528474714de1f61091426c3c4c500289fa33cb04eb7d98276f4ea44233a"
+  },
+  "s9": {
+   "url": "https://www.investopedia.com/ask/answers/042415/what-average-annual-return-sp-500.asp",
+   "title": "What Is the Average Annual Return for the S&P 500?",
+   "publisher": "Investopedia",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:42:35Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hedge funds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Risk-adjusted return",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-096"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Bogle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harry Markowitz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Capital asset pricing model",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Beta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25891",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Standard deviation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-101"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "About 10% a year",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-094"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2007, Buffett made a bet with numerous managers that a simple S&P 500 index fund will outperform hedge funds that charge exorbitant fees.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hedge funds” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"A Comparison of Different Measures of Risk-adjusted Return\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Risk-adjusted return” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Bogle was born on May 8, 1929, in Montclair, New Jersey, to William Yates Bogle, Jr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Bogle” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harry Markowitz was born to a Jewish family, the son of Morris and Mildred Markowitz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry Markowitz” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In finance, the capital asset pricing model (CAPM) is a model used to determine a theoretically appropriate required rate of return of an asset, to make decisions about adding assets to a well-diversified portfolio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Capital asset pricing model” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The model takes into account the asset's sensitivity to non-diversifiable risk (also known as systematic risk or market risk), often represented by the quantity beta (β) in the financial industry, as well as the expected return of the market and the expected return of a theoretical risk-free asset.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beta” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25891",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The variance of return (or its transformation, the standard deviation) is used as a measure of risk, because it is tractable when assets are combined into portfolios.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:03.448Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Standard deviation” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:31:03.448Z",
+   "target": "f25892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "About 10% a year",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 10% a year”, “Etwa 10 % pro Jahr”, “около 10 % в год”) on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:42:33Z",
+   "target": "f25892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Since its inception in 1926, the index's compound annual growth rate—including dividends—has been approximately 9.8% (6% after inflation)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:42:35Z",
+   "target": "f25892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The long-term average annual return from the S&P 500 over the last century, 10.09%, is only part of the story.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:50.915Z",
+   "target": "f25892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Since its inception in 1926, the index's compound annual growth rate—including dividends—has been approximately 9.8% (6% after inflation)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,543 @@
+{
+ "article": "a1824",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Humphry_Davy",
+   "title": "Humphry Davy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:39.685Z",
+   "snapshot": "e08bedacf21ae8b3340d41b8bc06b57f99570cc697b2333abbbca972e3cc92b5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anode",
+   "title": "Anode – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:40.515Z",
+   "snapshot": "f0a5132d100151c645ef74463fbd9b3c4dc92034fd17aaf43ff1367a9a65f081"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cathode_ray",
+   "title": "Cathode ray – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:41.536Z",
+   "snapshot": "e314bae19abc26623ed83aad8d43e885f6f6c59ff2da53d5a1d7db39de871040"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/History_of_the_transistor",
+   "title": "History of the transistor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:42.560Z",
+   "snapshot": "a23d007440ca4ed451e28032b69e94cbe294af1e72f4e714dbcc9ce58af84c1b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Solar_cell",
+   "title": "Solar cell",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:18.628Z",
+   "snapshot": "22fcde241dd08b829da1dab50cfe4ae5def25f54f8dc56c4e5efb858556b131a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Silver",
+   "title": "Silver – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:40.154Z",
+   "snapshot": "3868dee678a6e337800998766f25f273da9232e7d19b12c0498e1f23b273823f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Electrode",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:43.549Z",
+   "snapshot": "f7baa7b6a99a9db96273db7272e5538baf9c0840482b063063b9b994610687e9"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/electrode",
+   "title": "Electrode – Definition",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:44.278Z",
+   "snapshot": "5d3275b2dfbf5e8031f9de814c4e0b4a00054a9e3461a4013fb2b900ea487a27"
+  },
+  "s9": {
+   "url": "https://www.guinnessworldrecords.com/world-records/107536-highest-electrical-conductivity",
+   "title": "Highest electrical conductivity",
+   "publisher": "Guinness World Records",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:44.529Z",
+   "snapshot": "fa80ee531b64db48f06135d6fda7bd73408778d059b67785dfcea3689a08cf76"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electrode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cathode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Transistor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Silicon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-047"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Silver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-051"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:28.464Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electrode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Electrode”, “Elektrode”, “Электрод”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:28.464Z",
+   "target": "f09117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An anode usually is an electrode of a polarized electrical device through which conventional current enters the device.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anode” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:28.464Z",
+   "target": "f09118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cathode rays are streams of electrons observed in discharge tubes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cathode” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:28.464Z",
+   "target": "f09120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A transistor is a semiconductor device with at least three terminals for connection to an electric circuit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Transistor” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:28.464Z",
+   "target": "f25486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Almost all commercial PV cells consist of crystalline silicon, with a market share of 95%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Silicon” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:28.464Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Silver is a chemical element; it has symbol Ag (from Latin  argentum) and atomic number 47.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.464Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Silver” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:06:05Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a conductor, not necessarily metallic, through which a current enters or leaves a nonmetallic medium, as an electrolytic cell, arc generator, vacuum tube, or gaseous discharge tube.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:06:06Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An electrode is an electrical conductor used to make contact with a nonmetallic part of a circuit (e.g. a semiconductor, an electrolyte, a vacuum or a gas).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:06:07Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "However, as a precious metal, it is prohibitively expensive, which is why copper wire is more commonly used as a conductor of electricity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:06:09Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Silver (symbol Ag, atomic number 47) possesses the highest electrical conductivity at room temperature of any element",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:06:10Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The electrical conductivity of silver is the highest of all metals, greater even than copper.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a conductor, not necessarily metallic, through which a current enters or leaves a nonmetallic medium, as an electrolytic cell, arc generator, vacuum tube, or gaseous discharge tube.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An electrode is an electrical conductor used to make contact with a nonmetallic part of a circuit (e.g. a semiconductor, an electrolyte, a vacuum or a gas).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Silver (symbol Ag, atomic number 47) possesses the highest electrical conductivity at room temperature of any element",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The electrical conductivity of silver is the highest of all metals, greater even than copper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "An electrode is an electrical conductor used to make contact with a nonmetallic part of a circuit (e.g.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Electrode” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f09116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "ELECTRODE Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Electrode” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:17.107Z",
+   "target": "f25487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Silver (symbol Ag, atomic number 47) possesses the highest electrical conductivity at room temperature of any element at 6.29 x 10^7 Sm^-1 (siemens per metre, a unit of measurement to indicate how well a material can transport an electrical charge).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:17.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Silver” is on the snapshot of s9"
+  }
+ ]
+}

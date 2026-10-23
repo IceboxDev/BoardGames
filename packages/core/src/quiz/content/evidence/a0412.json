@@ -1,0 +1,289 @@
+{
+ "article": "a0412",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Schuh_des_Manitu",
+   "title": "Der Schuh des Manitu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:15.884Z",
+   "snapshot": "8c4d1cba3bfbfbf42b1ab770db98b49889631e6ff65b49263a4dd6ac8affc7df"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Roberto_Benigni",
+   "title": "Roberto Benigni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:19.580Z",
+   "snapshot": "98b606052fd7df3fbda3ce9093c4c515d0576e77dab28e9b7d2f3cf3ce93f2e3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Braveheart",
+   "title": "Braveheart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:20.581Z",
+   "snapshot": "917f9d856cf101a28672ceba00bca5602be495072087567c38cb6e8b8ae116e1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dances_With_Wolves",
+   "title": "Dances With Wolves – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:21.603Z",
+   "snapshot": "281f3522057349e2111e6878f5a408ce57e8751057da8f3ecf69ebbc0916ed27"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Helge_Schneider",
+   "title": "Helge Schneider",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:18.921Z",
+   "snapshot": "b0def48d1439ca65a2ffd66295fb0951d46eae9ce0d5b6220f9bd6b7dbaaecaf"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/%C3%96dipussi",
+   "title": "Ödipussi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:19.923Z",
+   "snapshot": "a4ce332992c14ebcf124793bd2aa781b557fa35c52a36fc3769152a0e1fd7662"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michael Herbig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Roberto Benigni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mel Gibson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kevin Costner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helge Schneider",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-109"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Loriot",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; history entry seq 45; transcript tp-066"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:44.662Z",
+   "target": "f02056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Film entstand als relativ kleines Projekt unter der Regie und Produktionsleitung von Michael Herbig, der auch für das Drehbuch hauptverantwortlich war und zwei der Hauptrollen spielte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Herbig” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:44.662Z",
+   "target": "f02058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Roberto Benigni",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roberto Benigni” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:44.662Z",
+   "target": "f02059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Braveheart is a 1995 American epic historical war drama film directed and produced by Mel Gibson, who portrays Scottish warrior William Wallace in the First War of Scottish Independence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mel Gibson” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:44.662Z",
+   "target": "f02060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dances With Wolves is a 1990 American epic revisionist Western film directed and produced by Kevin Costner in his feature directorial debut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kevin Costner” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:44.662Z",
+   "target": "f11346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helge Schneider kam 1955 in Mülheim an der Ruhr im Ortsteil Styrum als Sohn des Fernmeldemonteurs Heinrich Schneider und der Finanzbeamtin Anneliese, geborene Schneider, zur Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helge Schneider” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:44.662Z",
+   "target": "f11347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ödipussi (auch: Loriots Ödipussi) ist eine deutsche Filmkomödie aus dem Jahr 1988 von und mit Loriot.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:44.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loriot” is on the snapshot of s6"
+  }
+ ]
+}

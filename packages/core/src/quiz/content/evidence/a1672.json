@@ -1,0 +1,242 @@
+{
+ "article": "a1672",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz_(miniseries)",
+   "title": "Berlin Alexanderplatz (miniseries) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:06.093Z",
+   "snapshot": "eb9d4b700e8c1c19a6926a1b7978b0a8eac9c1c7d53b02172b61e0526f164b76"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Effi_Briest_(1974_film)",
+   "title": "Effi Briest (1974 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:09.327Z",
+   "snapshot": "54188113dad4d208aa16f6e2e5ef495bcd99bc2fe3e33772592d1b052c6d6edc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Tin_Drum_(film)",
+   "title": "The Tin Drum (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:39.504Z",
+   "snapshot": "4bd4f1e7d05ebe80aa1e327768d23876e6c58bc94e7d327788c1739cfc07d425"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Lost_Honour_of_Katharina_Blum_(film)",
+   "title": "The Lost Honour of Katharina Blum (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:10.352Z",
+   "snapshot": "23f3ecabfb2f7d3c8c8b2ca35505e6500ae3060c061079579a4071c2ce091a5b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Blue_Angel",
+   "title": "The Blue Angel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:30.160Z",
+   "snapshot": "588e58bb8c7117f5c4a7484d254770e1f927f3e55bb91dbe1c55764121030626"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berlin Alexanderplatz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08357",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Effi Briest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tin Drum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lost Honour of Katharina Blum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Professor Unrat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:02.919Z",
+   "target": "f08356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berlin Alexanderplatz (German: [bɛʁˈliːn ʔalɛkˈsandɐˌplats]), originally broadcast in 1980, is a 14-part West German crime television miniseries, set in 1920s Berlin and adapted and directed by Rainer Werner Fassbinder from Alfred Döblin's 1929 novel of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin Alexanderplatz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:02.919Z",
+   "target": "f08357",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Effi Briest (also known as Fontane Effi Briest; original title: Fontane Effi Briest oder Viele, die eine Ahnung haben von ihren Möglichkeiten und Bedürfnissen und trotzdem das herrschende System in ihrem Kopf akzeptieren durch ihre Taten und es somit festigen und durchaus bestätigen, literally",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Effi Briest” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:02.919Z",
+   "target": "f08358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tin Drum (German: Die Blechtrommel) is a 1979 anti-war film adapted from Günter Grass's 1959 novel, directed by Volker Schlöndorff from a screenplay co-written by Schlöndorff, Jean-Claude Carrière, and Franz Seitz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Tin Drum” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:02.919Z",
+   "target": "f08359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lost Honour of Katharina Blum, or: How violence develops and where it can lead (German: Die Verlorene Ehre der Katharina Blum oder: Wie Gewalt entstehen und wohin sie führen kann) is a 1975 West German political drama film written and directed by Volker Schlöndorff and Margarethe von Trotta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Lost Honour of Katharina Blum” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:02.919Z",
+   "target": "f08360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Written by Carl Zuckmayer, Karl Vollmöller and Robert Liebmann, with uncredited contributions by Sternberg, it is based on Heinrich Mann's 1905 novel Professor Unrat (Professor Filth) and set in an unspecified northern German port city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Professor Unrat” is on the snapshot of s5"
+  }
+ ]
+}

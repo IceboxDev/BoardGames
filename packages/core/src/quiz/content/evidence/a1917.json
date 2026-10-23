@@ -1,0 +1,598 @@
+{
+ "article": "a1917",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Young%E2%80%93Helmholtz_theory",
+   "title": "Young–Helmholtz theory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:18.541Z",
+   "snapshot": "ccabae1038c0f567c2c99155fe9186feca5322b5415b95d0d0069836f86cf9db"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rhodopsin",
+   "title": "Rhodopsin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:19.508Z",
+   "snapshot": "652bd8af6a37e5646e776cbb88587282194829c60cfb663656b046c6b7f0c913"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+   "title": "Red blood cell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:16.160Z",
+   "snapshot": "cc3488cf09dd2b650744371911f825e7ae1fcc2f7640fdf769bdf6637885101c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Luminous_efficiency_function",
+   "title": "Luminous efficiency function",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:20.506Z",
+   "snapshot": "d03085bdbe91f46b8cdc9d2e3de652ea7eb0d8e90db418366f07e423aec7dc8c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rod_cell",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:21.523Z",
+   "snapshot": "672b9f9f119b6287574b7378cec52d473426edef67e41633e2ea38f9100296bb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Felix_Hoppe-Seyler",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:30:18.731Z",
+   "snapshot": "c10dbc93b8cd3041cebb9718e0772909c3b8ca2ed387e5f8ad599f87a8cdf9e1"
+  },
+  "s7": {
+   "url": "https://medlineplus.gov/ency/article/000571.htm",
+   "title": "Hemolytic anemia – MedlinePlus Medical Encyclopedia",
+   "publisher": "U.S. National Library of Medicine",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:25.417Z",
+   "snapshot": "08eca129446c0c7fb2a6fb31dda494c6e209040a60ace49c72ac1d30b2a339c6"
+  },
+  "s8": {
+   "url": "https://www.nhlbi.nih.gov/health/anemia/hemolytic-anemia",
+   "title": "Hemolytic Anemia",
+   "publisher": "National Heart, Lung, and Blood Institute (NIH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:26.442Z",
+   "snapshot": "c5c021eb330642bb86960ca34075b310d050b6d47ef8a7bd12524716efa94e47"
+  },
+  "s9": {
+   "url": "https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=160&ContentID=34",
+   "title": "Health Encyclopedia – Red blood cells",
+   "publisher": "University of Rochester Medical Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:28.704Z",
+   "snapshot": "225ded740e0d521994ad094548418a0f9175d7d23baf229077541256e130db1c"
+  },
+  "s10": {
+   "url": "https://www.nist.gov/pml/owm/si-units-luminous-intensity",
+   "title": "SI Units – Luminous Intensity",
+   "publisher": "NIST",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:26.790Z",
+   "snapshot": "2d98cbb29fc226e91d4c0df34a51bdf0f9e893c4f6f1247582b6757bf0ba5413"
+  },
+  "s11": {
+   "url": "http://hyperphysics.phy-astr.gsu.edu/hbase/vision/bright.html",
+   "title": "Brightness and Night/Day Sensitivity",
+   "publisher": "HyperPhysics, Georgia State University",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:26.714Z",
+   "snapshot": "859ce9853ac1334c8697d493bee1bf14da490041d076f1015900dd085eee9645"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "rods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "rhodopsin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "about 120 days",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yellowish green",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-035"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:44.902Z",
+   "target": "f09581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The relative strengths of the signals detected by the three types of cones are interpreted by the brain as a visible color.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cones” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:44.902Z",
+   "target": "f09582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In humans, it is fully regenerated in about 30 minutes, after which the rods are more sensitive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rods” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:44.902Z",
+   "target": "f23220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhodopsin, also known as visual purple, is a protein encoded by the RHO gene and a G-protein-coupled receptor (GPCR).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:44.902Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rhodopsin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:44.902Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "about 120 days",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“about 120 days”, “etwa 120 Tage”, “около 120 дней”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:44.902Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yellowish green",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Yellowish green”, “Gelbgrün”, “жёлто-зелёный”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:28:11Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Normally, red blood cells last for about 120 days in the body.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:28:13Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Red blood cells normally live for up to 120 days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:28:15Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They typically live for about 120 days, and then they die.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:28:18Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "in a healthy individual these cells live in blood circulation for about 100 to 120 days",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:28:21Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "in accordance with the standard luminous efficiency, V (λ), curve that peaks at 540 x 10",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23",
+   "note": "The page continues: the V(λ) curve peaks at 540 × 10^12 Hz (yellow-green); 540 THz corresponds to about 555 nm in air."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:28:24Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "compare the brightness of monochromatic light at 555 nm, where the eye is most sensitive",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:28:26Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The standard luminous efficiency function is normalized to a peak value of unity at 555 nm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Normally, red blood cells last for about 120 days in the body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Red blood cells normally live for up to 120 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They typically live for about 120 days, and then they die.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "in a healthy individual these cells live in blood circulation for about 100 to 120 days",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "in accordance with the standard luminous efficiency, V (λ), curve that peaks at 540 x 10",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "compare the brightness of monochromatic light at 555 nm, where the eye is most sensitive",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f25376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The standard luminous efficiency function is normalized to a peak value of unity at 555 nm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Normally, red blood cells last for about 120 days in the body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “about 120 days” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:36.477Z",
+   "target": "f23222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They typically live for about 120 days, and then they die.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:36.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “about 120 days” is on the snapshot of s9"
+  }
+ ]
+}

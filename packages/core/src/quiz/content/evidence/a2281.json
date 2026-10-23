@@ -1,0 +1,383 @@
+{
+ "article": "a2281",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Farbfernsehen",
+   "title": "Farbfernsehen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:28.143Z",
+   "snapshot": "915e22eac9c37b632689c5c286f6132eed1cc8354bf7b67e5a4ec41ffbf7f7f5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/DFF_2",
+   "title": "Deutscher Fernsehfunk",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:19.869Z",
+   "snapshot": "1bdb0a142849ef942af64370e0401ab9e790dc8ca44b82e252384c756c6eb0c3"
+  },
+  "s3": {
+   "url": "https://www.bpb.de/system/files/dokument_pdf/GuS_11_Farbfernsehen.pdf",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23"
+  },
+  "s4": {
+   "url": "https://www.visitberlin.de/de/berliner-fernsehturm",
+   "title": "Berliner Fernsehturm",
+   "publisher": "visitBerlin (Berlin Tourismus & Kongress GmbH)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:51.776Z",
+   "snapshot": "49c4bc1cc399f5e242ab9206f7c8cd374b81f359c8390526d403727a7621c6f4"
+  },
+  "s5": {
+   "url": "https://www.hdg.de/lemo/jahreschronik/1969",
+   "title": "Jahreschronik 1969",
+   "publisher": "LeMO – Stiftung Haus der Geschichte der Bundesrepublik Deutschland",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:51.912Z",
+   "snapshot": "3fbeb686acea60e40e0ec82061f982dea2e63ede66c55f2622575267e7627144"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11757",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Willy Brandt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-276"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berliner Fernsehturm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "DFF 2",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bundesrepublik Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Bundesrepublik Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-238/2, u09: West German colour TV started 25 August 1967 (PAL, Brandt at the Funkausstellung); the GDR followed on 3 October 1969 (SECAM). Statement false."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:47.861Z",
+   "target": "f11756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bundesrepublik Deutschland",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:47.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:47.861Z",
+   "target": "f11756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Start des Farbfernsehens in der Bundesrepublik Deutschland erfolgte auf der 25.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bundesrepublik Deutschland” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:47.861Z",
+   "target": "f11757",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "August 1967 um 10:57 Uhr mit der Betätigung eines großen roten Tasters (der eine Attrappe war) durch Vizekanzler Willy Brandt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:47.861Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berliner Fernsehturm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Berliner Fernsehturm”, “Берлинская телебашня”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:47.861Z",
+   "target": "f11760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Programm des Deutschen Fernsehfunks DFF 2 aus Anlass des bevorstehenden 20.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DFF 2” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:19:31Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mit dem Start des zweiten Programms des Deutschen Fernsehfunks (DFF) und der gleichzeitigen Inbetriebnahme des Berliner Fernsehturms vier Tage vor dem 20. Jahrestag der Gründung der DDR wurde dort das Farbfernsehen eingeführt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:19:34Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Fernsehturm Berlin wurde am 3. Oktober 1969 eingeweiht – kurz vor dem 20. Geburtstag der DDR.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Opening date of the tower; same day as the DFF's second programme (see LeMO 1969 chronicle)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:19:37Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "03.10. Der DDR-Staatschef Walter Ulbricht eröffnet ein zweites Fernsehprogramm in der DDR .",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Second GDR programme started 3 Oct 1969, the day the tower was inaugurated (visitBerlin)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:19:49Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der DDR-Staatschef Walter Ulbricht eröffnet ein zweites Fernsehprogramm in der DDR",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "Re-quoted without the link-spacing artefact of e12."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:33.073Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mit dem Start des zweiten Programms des Deutschen Fernsehfunks (DFF) und der gleichzeitigen Inbetriebnahme des Berliner Fernsehturms vier Tage vor dem 20. Jahrestag der Gründung der DDR wurde dort das Farbfernsehen eingeführt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:33.073Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Fernsehturm Berlin wurde am 3. Oktober 1969 eingeweiht – kurz vor dem 20. Geburtstag der DDR.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:33.073Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der DDR-Staatschef Walter Ulbricht eröffnet ein zweites Fernsehprogramm in der DDR",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:33.073Z",
+   "target": "f11759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Berliner Fernsehturm am Alexanderplatz in Berlin-Mitte ist mit insgesamt 368 Metern das höchste öffentlich zugängliche Gebäude Europas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.073Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Berliner Fernsehturm” is on the snapshot of s4"
+  }
+ ]
+}

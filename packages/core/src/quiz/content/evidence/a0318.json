@@ -1,0 +1,242 @@
+{
+ "article": "a0318",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Attila",
+   "title": "Attila – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:40.401Z",
+   "snapshot": "41fbf785490643859d62dd2985d45349aabe4451353aa053e6b42c57908d6f59"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alaric_I",
+   "title": "Alaric I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:41.380Z",
+   "snapshot": "6b63cd9a09ad1545701816ffaa770a3e29752711dd58efde57feaa81e20b507a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gaiseric",
+   "title": "Gaiseric – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:42.265Z",
+   "snapshot": "55528dd5c68df552a6feac40ffa6b44f15d199ad29a45834690464ab5251feb0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Theodoric_the_Great",
+   "title": "Theodoric the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:43.364Z",
+   "snapshot": "1ee3cf105651f99dfe4b5b04844aa1d4c0416b1ae88523ce6893a720ed9a9c92"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Odoacer",
+   "title": "Odoacer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:44.393Z",
+   "snapshot": "5589c52148693ae2904985055a7548a54d8ad01fd138e629bf2d8763bf481fe6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Attila",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alaric I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Genseric",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodoric the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Odoacer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:29.201Z",
+   "target": "f01586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Attila (  ə-TIL-ə or  AT-il-ə; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Attila” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:29.201Z",
+   "target": "f01587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alaric I (; reconstructed Gothic: *𐌰𐌻𐌰𐍂𐌴𐌹𐌺𐍃, *Alarīks lit.'ruler of all'; Latin: Alaricus; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alaric I” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:29.201Z",
+   "target": "f01588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "389 – 25 January 477 AD), also known as Geiseric or Genseric (Latin: Gaisericus, Geisericus; reconstructed Vandalic: *Gaisarīx) was king of the Vandals and Alans from 428 to 477 AD.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Genseric” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:29.201Z",
+   "target": "f01589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodoric the Great was interred in Ravenna, but his bones were scattered and his mausoleum was converted to a church after Belisarius conquered the city in 540.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodoric the Great” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:29.201Z",
+   "target": "f01590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Although he ruled Italy, Odoacer styled himself a client of the Eastern emperor Zeno in Constantinople.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Odoacer” is on the snapshot of s5"
+  }
+ ]
+}

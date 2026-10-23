@@ -1,0 +1,288 @@
+{
+ "article": "a2316",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sri_Lanka",
+   "title": "Sri Lanka",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:27.309Z",
+   "snapshot": "5c597937ff6d614b17479b3680090f87189fa170d888dfed3371b9981c7f4b86"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dhanushkodi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:30.510Z",
+   "snapshot": "16f64d168e91b5ef365c0e27d283a44eadf9b10cd1eefaf5ed53367eb7a7a781"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palk_Strait",
+   "title": "Palk Strait – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:31.522Z",
+   "snapshot": "2e25c2cde3367d6dc2c8603d672e282770780c425575f453db881e07d9cc84cf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Adam%27s_Bridge",
+   "title": "Adam's Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:32.518Z",
+   "snapshot": "306f2e53709c8d72e03a85d0e933681aded376d4401d494e188982b26f931355"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mal%C3%A9",
+   "title": "Malé – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:33.606Z",
+   "snapshot": "0e331953b50e1c47f90d3b35ecf9a4bfd4bbafbabf9a25d47545c4e78e33aacc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lakshadweep",
+   "title": "Lakshadweep – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:34.610Z",
+   "snapshot": "4314b40d36e7d8ed2ded66873215bb38ccd244f2c650d2b26ec4e8b0d7c8c8c4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sri Lanka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sri Lanka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palk Strait",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adam's Bridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Malé",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lakshadweep",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:55.235Z",
+   "target": "f11990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sri Lanka (singhalesisch ශ්‍රී ලංකා, śrī laṃkā, [ˌɕriːˈlaŋkaː]; Tamil இலங்கை, ilaṅkai), von 1796 bis 1972 Ceylon, ist ein Inselstaat im Indischen Ozean, 237 km (Westküste der Insel) östlich der Südspitze des Indischen Subkontinents, und hatte 2021 etwa 22 Millionen Einwohner.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sri Lanka” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:55.235Z",
+   "target": "f11990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is south-east of Pamban and is about 24 kilometres (15 mi) west of Talaimannar in Sri Lanka.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sri Lanka” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:55.235Z",
+   "target": "f11991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palk Strait is a strait between the Pamban Island in the Indian state of Tamil Nadu and the Mannar Island in the Northern Province of Sri Lanka.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palk Strait” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:55.235Z",
+   "target": "f11992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adam's Bridge, also known as Rama Setu, is a chain of natural limestone shoals between Pamban Island, also known as Rameswaram Island, off the southeastern coast of Tamil Nadu, India, and Mannar Island, off the northwestern coast of Sri Lanka.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adam's Bridge” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:55.235Z",
+   "target": "f11993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Malé is the capital and most populous city of the Maldives.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malé” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:55.235Z",
+   "target": "f11994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Lakshadweep is a union territory of India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lakshadweep” is on the snapshot of s6"
+  }
+ ]
+}

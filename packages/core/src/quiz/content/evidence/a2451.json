@@ -1,0 +1,242 @@
+{
+ "article": "a2451",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Truman_Capote",
+   "title": "Truman Capote",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:00.064Z",
+   "snapshot": "86051fb30a9f547c316577e667a326e7fb5974512b407615de557d37d8408821"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/In_Cold_Blood",
+   "title": "In Cold Blood – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:01.074Z",
+   "snapshot": "b311b280e9e2b13bde4bda92d278723ff33197a2c4e17fd8480ff9ece9fc8de9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Clutter_family_murders",
+   "title": "Clutter family murders – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:02.040Z",
+   "snapshot": "52906d90af0688fc1a69fb9adba5a73bb172995c95ee9a0ad6f700ac8cb8cb06"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Executioner's_Song",
+   "title": "The Executioner's Song – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:03.065Z",
+   "snapshot": "bc30e5675c3734a5bc09eafe3c5fcf68bfee488e95868ffdcb26a901567173b5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Wolfe",
+   "title": "Tom Wolfe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:04.097Z",
+   "snapshot": "647029f772e3d8fc5092435ffc0fb3d9f68306b27a8fb12a8e20d2b578d29fc6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Truman Capote",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Cold Blood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12906",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Holcomb",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12907",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Executioner's Song",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12908",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tom Wolfe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:22.003Z",
+   "target": "f12904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Truman Capote was born at Touro Infirmary in New Orleans, Louisiana, to Lillie Mae Faulk (1905–1954) and salesman Archulus Persons (1897–1981).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Truman Capote” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:22.003Z",
+   "target": "f12905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Cold Blood is a non-fiction novel by the American author Truman Capote, first published in 1966.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “In Cold Blood” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:22.003Z",
+   "target": "f12906",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the early morning of November 15, 1959, four members of the Clutter family – Herb Clutter, his wife, Bonnie, and their teenage children Nancy and Kenyon – were murdered in their rural home just outside the small farming community of Holcomb, Kansas, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holcomb” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:22.003Z",
+   "target": "f12907",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Executioner's Song (1979) is a Pulitzer Prize-winning true crime novel by American writer Norman Mailer that depicts the events related to the execution of Gary Gilmore for murder by the state of Utah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Executioner's Song” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:22.003Z",
+   "target": "f12908",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1977, PBS produced Tom Wolfe's Los Angeles, a fictional, satirical TV movie set in Los Angeles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.003Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Wolfe” is on the snapshot of s5"
+  }
+ ]
+}

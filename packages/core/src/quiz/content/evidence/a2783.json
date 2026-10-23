@@ -1,0 +1,256 @@
+{
+ "article": "a2783",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Libertarianism",
+   "title": "Libertarianism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:31.173Z",
+   "snapshot": "cf043de23be35bcafeb62af68268a4681de8d65df5ce75c8e5feb49d42237348"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Night-watchman_state",
+   "title": "Night-watchman state",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:32.068Z",
+   "snapshot": "2dd09571ca1f6b3a0a27c86e2fce54b4d05675a4874852fbde60ff56dd5690d7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anarchy,_State,_and_Utopia",
+   "title": "Anarchy, State, and Utopia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:33.286Z",
+   "snapshot": "06d858c2d2c795c4a09968438f0465bb45fbcb5001ba9eb9c5ffcfa7e0d43406"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Road_to_Serfdom",
+   "title": "The Road to Serfdom",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:34.182Z",
+   "snapshot": "1a7bbef19802a941ea7293bd756baae145de17f0d52685d434506eeca62d3b4a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Objectivism",
+   "title": "Objectivism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:35.094Z",
+   "snapshot": "1d026865609e1e60d2adfeb8ac77323f9a9bd5591982ecfb80bd5ab548355a69"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Nozick",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:36.213Z",
+   "snapshot": "f5b979167a2190b527b5b62e7d6ef0f5b5de5e82f29daac2e53e1dd254471664"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ayn_Rand",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:37.301Z",
+   "snapshot": "5535a5947c90ed5ce90758d971ef49702ff73f355b6c071f459169d371d6f418"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25923",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Libertarianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript ppm-033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Night-watchman state",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert Nozick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich Hayek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Objectivism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:13.012Z",
+   "target": "f25923",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Libertarianism (from French: libertaire, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Libertarianism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:13.012Z",
+   "target": "f25924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A night-watchman state, also referred to as a minimal state, minarchy or minarchism, whose proponents are known as minarchists, is a model of a state that is limited and minimal, whose functions depend on libertarian theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Night-watchman state” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:13.012Z",
+   "target": "f25925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anarchy, State, and Utopia (ASU) is a 1974 book by the American philosopher Robert Nozick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Nozick” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:13.012Z",
+   "target": "f25926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Road to Serfdom is a book by the Austrian-British economist and philosopher Friedrich Hayek.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Hayek” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:13.012Z",
+   "target": "f25927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Objectivism is a philosophical system named and developed by Russian-American writer and philosopher Ayn Rand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Objectivism” is on the snapshot of s5"
+  }
+ ]
+}

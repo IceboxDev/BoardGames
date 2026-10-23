@@ -1,0 +1,249 @@
+{
+ "article": "a2682",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fleetwood_Mac",
+   "title": "Fleetwood Mac – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:54.506Z",
+   "snapshot": "d991faf30ef0480114409c4fc79afbd50a0fdd5b079ef70caaa7913011efa857"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Born_in_the_U.S.A._(song)",
+   "title": "Born in the U.S.A. (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:33.224Z",
+   "snapshot": "113b83d7ec0dbf0021695380bb03c0c0e2f804c711cb140c8541a56956c27eec"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rockin%27_in_the_Free_World",
+   "title": "Rockin' in the Free World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:34.137Z",
+   "snapshot": "82cf356120bed0f915f36bbbc6eec2d22561b746ecff3dc5a43ad1808fb37dca"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Signed,_Sealed,_Delivered_I%27m_Yours",
+   "title": "Signed, Sealed, Delivered I'm Yours – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:35.174Z",
+   "snapshot": "318e5b782f5f16e9f11e0e36117906aab40b41cfd21efdab82847a62fcac5afb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/High_Hopes_(Frank_Sinatra_song)",
+   "title": "High Hopes (Frank Sinatra song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:36.255Z",
+   "snapshot": "f60e6d4e40cf1e4b490870e70efd7792ae303be8b47d7d42f75fcc508165fae4"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Eine_Nummer_zu_gro%C3%9F",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:34.356Z",
+   "snapshot": "b0972f038039b3d2e8391ab8ba2df6c5c5838356d0c8de442668843cad4299ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fleetwood Mac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bruce Springsteen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rockin' in the Free World",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Signed, Sealed, Delivered I'm Yours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "High Hopes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:57.360Z",
+   "target": "f14587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fleetwood Mac were a British and American  rock band formed in London in 1967.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.360Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fleetwood Mac” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:57.360Z",
+   "target": "f14588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Born in the U.S.A.\" is a song written and performed by American singer-songwriter Bruce Springsteen and released in 1984 on the album of the same name as its opening track.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.360Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruce Springsteen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:57.360Z",
+   "target": "f14589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Rockin' in the Free World\" is a song by Canadian-American singer-songwriter Neil Young from his seventeenth studio album Freedom (1989).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.360Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rockin' in the Free World” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:57.360Z",
+   "target": "f14590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Signed, Sealed, Delivered I'm Yours\" was arranged by Paul Riser and features an electric sitar  played by Eddie \"Chank\" Willis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.360Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Signed, Sealed, Delivered I'm Yours” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:57.360Z",
+   "target": "f14591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"High Hopes\" is a popular song first popularized by Frank Sinatra, with music written by James Van Heusen and lyrics by Sammy Cahn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.360Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “High Hopes” is on the snapshot of s5"
+  }
+ ]
+}

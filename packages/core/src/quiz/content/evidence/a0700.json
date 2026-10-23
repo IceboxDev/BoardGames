@@ -1,0 +1,447 @@
+{
+ "article": "a0700",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Hobbit:_An_Unexpected_Journey",
+   "title": "The Hobbit: An Unexpected Journey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:02.160Z",
+   "snapshot": "893ee09a729d482306d3e812c55a18e86c23e442f1faa78a1a69b0c47e4b930e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sherlock_(TV_series)",
+   "title": "Sherlock (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:03.351Z",
+   "snapshot": "748ce8dbb52618e30116c35a699360c7026a498e6e9c4bd783362a176afaa044"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Benedict_Cumberbatch",
+   "title": "Benedict Cumberbatch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:01.966Z",
+   "snapshot": "2f0d8bb679134db3d19b152f6fb00f2a64ecb133e7d6afde748f126d7da716d1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/X-Men_(film)",
+   "title": "X-Men (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:47.200Z",
+   "snapshot": "37e141c37752f150a3276fb558b347a430a7a37f285acb767f274f05cfcb81db"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl",
+   "title": "Pirates of the Caribbean: The Curse of the Black Pearl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:04.224Z",
+   "snapshot": "3358837eafd951f31b00fef6741ac8212a89f822bd217d25a03ecfb1fcb82438"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/King_Kong_(2005_film)",
+   "title": "King Kong (2005 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:05.163Z",
+   "snapshot": "db6438ddeff902311caca90ae458061a55d8f0fa3d97bfd1c6813f08e36ebd05"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Peter_Jackson",
+   "title": "Peter Jackson",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:02.869Z",
+   "snapshot": "41b9afc4bc77482e91a166ae38064bea6df3310d230c2c12898cf6152fdb3a2d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Christopher_Lee",
+   "title": "Christopher Lee",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:06.388Z",
+   "snapshot": "b8b262d7c521b7d5dee1fe727ff656a8cb37b4aa4d70d206354110ff4300a387"
+  },
+  "s9": {
+   "url": "https://tolkiengateway.net/wiki/Christopher_Lee",
+   "title": "Christopher Lee - Tolkien Gateway",
+   "publisher": "Tolkien Gateway",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:42:16Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Martin Freeman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c059"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Benedict Cumberbatch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Benedict Cumberbatch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-282"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ian McKellen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Orlando Bloom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Andy Serkis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Peter Jackson",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-001"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Christopher Lee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 48; transcript tp-166"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f03496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An Unexpected Journey tells the tale of Bilbo Baggins (Martin Freeman), who is convinced by the wizard Gandalf (Ian McKellen) to accompany thirteen Dwarves, led by Thorin Oakenshield (Richard Armitage), on a quest to reclaim the Lonely Mountain from the dragon Smaug.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Freeman” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f03497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Created by Steven Moffat and Mark Gatiss, the show stars Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as Doctor John Watson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benedict Cumberbatch” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f03497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grades von Arthur Conan Doyle ist, dem Schöpfer von Sherlock Holmes, für dessen Darstellung Benedict Cumberbatch weltweit bekannt ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benedict Cumberbatch” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f03498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Directed by Bryan Singer from a screenplay by David Hayter and a story by Singer and Tom DeSanto, it features an ensemble cast consisting of Patrick Stewart, Hugh Jackman, Ian McKellen, Halle Berry, Famke Janssen, James Marsden, Bruce Davison, Rebecca Romijn, Ray Park, and Anna Paquin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ian McKellen” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f03499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Starring Johnny Depp, Geoffrey Rush, Orlando Bloom, and Keira Knightley, it follows pirate Jack Sparrow (Depp) and blacksmith Will Turner (Bloom), as they attempt to rescue the kidnapped Elizabeth Swann (Knightley).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orlando Bloom” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f03500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The film stars Naomi Watts, Jack Black, Adrien Brody, Thomas Kretschmann, Colin Hanks, Jamie Bell, and Andy Serkis as the motion-capture performer of Kong.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andy Serkis” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f11275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Gründer der New Zealand Film Commission Jim Booth verließ diese und arbeitete fortan bis zu seinem Tod 1994 als Produzent mit Peter Jackson zusammen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Jackson” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:28.590Z",
+   "target": "f11276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In an AMC documentary on Halloween (1978), John Carpenter states that he offered the role of Samuel Loomis to Peter Cushing and Christopher Lee, before Donald Pleasence took the role.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:28.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christopher Lee” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:42:11Z",
+   "target": "f11276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Lee had met Tolkien once, which made him the only person involved in Jackson's films to have done so.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:42:16Z",
+   "target": "f11276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Lee also had the experience of actually meeting Tolkien in person (making him the only individual involved in the film trilogies to do so) while visiting The Eagle and Child during the 1950s",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:57.049Z",
+   "target": "f11276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Lee had met Tolkien once, which made him the only person involved in Jackson's films to have done so.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.049Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  }
+ ]
+}

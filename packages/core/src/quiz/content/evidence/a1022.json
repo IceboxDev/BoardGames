@@ -1,0 +1,302 @@
+{
+ "article": "a1022",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)",
+   "title": "A Clockwork Orange (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:53.191Z",
+   "snapshot": "f14835fe288111d5c23fb936e0762170b74695b7e6fb03181e22fd164dcae0ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:54.147Z",
+   "snapshot": "e16711efaf5c50899bce60826e58dd7ad696a0d535235b9da072a02ac514a4ac"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Uhrwerk_Orange_(Roman)",
+   "title": "Uhrwerk Orange (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:51.351Z",
+   "snapshot": "c220045aaff4cfa4b0a12960fcca1505cc34bfdc31d7a90f65ab5a70c4ade404"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lolita",
+   "title": "Lolita – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:55.178Z",
+   "snapshot": "4896ce6681a57327888c9938069ceb34487dbc7d32e9fe027df9c2d435d1daf4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey",
+   "title": "2001: A Space Odyssey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:56.279Z",
+   "snapshot": "6c0a551c2814379f572a030d31d9c503e1743384ecb683110edfe6c797fe786f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Dream_Story",
+   "title": "Dream Story – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:57.093Z",
+   "snapshot": "6c0e92a9da5e09a21a0b26ddeb48a3d081f180987f23695250bd2f3afb1d7eb2"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Ein_kleines_bisschen_Horrorschau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:54.320Z",
+   "snapshot": "22f84bac28814be26d87f7b38529a28f9db2288d41a3520400c19d24b38da884"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Eyes_Wide_Shut",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:58.175Z",
+   "snapshot": "120052ad684ffb5a8ae0ecec175b29e92eb641bb9bb2ddc67804f8a25ffd1a5b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Clockwork Orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Clockwork Orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uhrwerk Orange",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-226"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lolita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "2001: A Space Odyssey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dream Story",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:21.318Z",
+   "target": "f05106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Clockwork Orange is a 1971 dystopian crime film written, produced, and directed by Stanley Kubrick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Clockwork Orange” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:21.318Z",
+   "target": "f05106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Clockwork Orange is a novel by the English writer Anthony Burgess, published on 17 March 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Clockwork Orange” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:21.318Z",
+   "target": "f05106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Uhrwerk Orange (englisch A Clockwork Orange) ist ein 1962 veröffentlichter dystopischer Roman von Anthony Burgess.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uhrwerk Orange” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:21.318Z",
+   "target": "f05107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lolita is a 1955 novel written by the Russian and American novelist Vladimir Nabokov.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lolita” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:21.318Z",
+   "target": "f05109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "2001: A Space Odyssey is a 1968 epic science fiction film produced and directed by Stanley Kubrick, who co-wrote the screenplay with Arthur C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2001: A Space Odyssey” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:21.318Z",
+   "target": "f05110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rhapsody: A Dream Novel, also known as Dream Story (German: Traumnovelle), is a 1926 novella by the Austrian writer Arthur Schnitzler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dream Story” is on the snapshot of s6"
+  }
+ ]
+}

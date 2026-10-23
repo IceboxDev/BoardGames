@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-012",
+ "image": "IMG20261022153246.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] How do ogre-faced spiders hear?\nA. Through their eyes\nB. By vibrating their webs\nC. Using their hairs and legs\nAnswer: C. Ogre-faced spiders, despite not having ears, can detect sounds using specialized receptors on their legs. Their remarkable hearing allows them to catch flying insects midair even while blindfolded by researchers.",
+   "de": "Kescherspinnen (Deinopis) haben keine Ohren – mit welchen Körperteilen nehmen sie Geräusche wahr?",
+   "en": "Ogre-faced spiders have no ears – with which body parts do they detect sounds?",
+   "reworked": true,
+   "answerDe": "Mit den Beinen (Haare und Spaltsinnesorgane)",
+   "answerEn": "Their legs (hairs and slit sensilla)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "2020",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A study in Current Biology shows ogre-faced spiders use sound to detect airborne prey",
+    "labelDe": "Eine Studie in Current Biology zeigt, dass Kescherspinnen fliegende Beute am Geräusch erkennen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Deinopis",
+    "title": "Deinopis",
+    "lang": "en"
+   },
+   "notes": "Card correct: Deinopis uses hairs and slit sensilla on its legs to detect sounds up to 2 m away (Stafstrom et al. 2020).",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 2,
+   "discipline": "Engineering and Invention",
+   "cardText": "[Engineering and Invention] In which decade was the first electric car commercially sold?\nA. 1890s\nB. 1940s\nC. 1990s\nAnswer: A. One of the first commercially sold electric cars is the Electrobat. This electric vehicle was notably used for taxis in New York City and became quite popular in the 1890s.",
+   "de": "Welches frühe Elektroauto, 1894 von Henry G. Morris und Pedro G. Salom aus Philadelphia patentiert, fuhr als Elektrotaxi in New York City?",
+   "en": "Which early electric car, patented in 1894 by Henry G. Morris and Pedro G. Salom of Philadelphia, ran as electric cabs in New York City?",
+   "reworked": true,
+   "answerDe": "Electrobat",
+   "answerEn": "Electrobat",
+   "timeline": {
+    "kind": "creation",
+    "start": "1894-08-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Electrobat, one of the first electric automobiles, receives its patent",
+    "labelDe": "Das Electrobat, eines der ersten Elektroautos, erhält sein Patent"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electrobat",
+    "title": "Electrobat",
+    "lang": "en"
+   },
+   "notes": "Card's decade claim is shaky: Wikipedia's Electric car article lists Thomas Parker's car (1884) and the Flocken Elektrowagen (1888), so the first electric cars predate the 1890s; the Electrobat (1894) was only 'one of the first'. Reworked to the Electrobat itself.",
+   "domain": "technology",
+   "sub": "transport"
+  }
+ ]
+}

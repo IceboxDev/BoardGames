@@ -1,0 +1,289 @@
+{
+ "article": "a0128",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Temple_of_Artemis",
+   "title": "Temple of Artemis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:09.102Z",
+   "snapshot": "db7d0a82cc98d713aeed4c6f306d2d59ced3a6c62f6fe2ef35649a5f9ea1c0e8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Athena_Parthenos",
+   "title": "Athena Parthenos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:10.100Z",
+   "snapshot": "286ac69c69e5747baf641f2d71a277d62dd342a25eb2a2618ce44757bc30b93f"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Athene",
+   "title": "Athene",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:24:08.571Z",
+   "snapshot": "de0b9a6af6e3ff6bc1c89e19a4e1f8b6c24ea0086368aea1e0525c0eb2c3e578"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aphrodite_of_Knidos",
+   "title": "Aphrodite of Knidos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:11.085Z",
+   "snapshot": "27fafd2c6ddb9e5c56aea29b55c7f7fa8a6d4426cfcd6971ff8ee9e35516c93a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Heraion_of_Argos",
+   "title": "Heraion of Argos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:12.196Z",
+   "snapshot": "e56eef4208b3e1434804025519eb7f5a4e8511de31758e5c0b5c4a505832fda9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Eleusinian_Mysteries",
+   "title": "Eleusinian Mysteries – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:13.179Z",
+   "snapshot": "20f3519bc3871d13302dbc87d91e59be0d69a9b88ee710580710e1fb8264d1d3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Artemis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Athena",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Athene",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-340"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aphrodite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Demeter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:56.645Z",
+   "target": "f00636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Temple of Artemis or Artemision, also known as the Temple of Diana, was a Greek temple dedicated to a localised form of the goddess Artemis (equated with the Roman goddess Diana).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.645Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Artemis” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:56.645Z",
+   "target": "f00637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The statue of Athena Parthenos (Ancient Greek: Παρθένος Ἀθηνᾶ, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.645Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Athena” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:56.645Z",
+   "target": "f00637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Athene (altgriechisch Ἀθήνη Athḗnē) oder Athena (Ἀθηνᾶ Athēná) ist eine Göttin der griechischen Mythologie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.645Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Athene” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:56.645Z",
+   "target": "f00638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Aphrodite of Knidos (or Cnidus) was an Ancient Greek sculpture of the goddess Aphrodite created by Praxiteles of Athens around the 4th century BC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.645Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aphrodite” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:56.645Z",
+   "target": "f00639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Heraion of Argos (Greek: Ἡραῖον Ἄργους) is an ancient sanctuary in the Argolid, Greece, dedicated to Hera, whose epithet \"Argive Hera\" (Ἥρη Ἀργείη Here Argeie) appears in Homer's works.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.645Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hera” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:56.645Z",
+   "target": "f00640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Eleusinian Mysteries (Greek: Ἐλευσίνια Μυστήρια, romanized: Eleusínia Mystḗria) were initiations held every year for the cult of Demeter and Persephone based at the Panhellenic Sanctuary of Eleusis in ancient Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:56.645Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Demeter” is on the snapshot of s6"
+  }
+ ]
+}

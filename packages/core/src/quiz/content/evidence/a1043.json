@@ -1,0 +1,242 @@
+{
+ "article": "a1043",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pesto",
+   "title": "Pesto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:21.194Z",
+   "snapshot": "c4337cc1a1fd6df629908352fdae4358e8444b53fc6949d537c75d932cdd1cc8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Summer_savory",
+   "title": "Summer savory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:12.588Z",
+   "snapshot": "e8ab5c3e8ee7a95a7a5e627624eedda092adbca52f4fee5c8667c539ccdeb90b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Echter_K%C3%BCmmel",
+   "title": "Echter Kümmel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:09.884Z",
+   "snapshot": "4c88bca6a3b79f8a434cb3bc59ee772f1953e236de1aeaa33fea40bf760a4b9d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Liebst%C3%B6ckel",
+   "title": "Liebstöckel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:10.730Z",
+   "snapshot": "10fd9938093b9c06973de7d0beedfda5e43db9d7b4cdaab954925266cdbf57de"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coriander",
+   "title": "Coriander – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:13.565Z",
+   "snapshot": "649cebdc7bdd2a5983d29c14b2d32aa04f2a773bd39436f3a660379f0d430409"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "basil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "savory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kümmel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Liebstöckel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "coriander",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:24.275Z",
+   "target": "f05211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pesto (Italian: [ˈpesto]), also known as pesto genovese, is an Italian paste traditionally made with leaves of Genovese basil, extra virgin olive oil, Parmesan (alternatively Grana Padano), pecorino sardo, pine nuts, and garlic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “basil” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:24.275Z",
+   "target": "f05212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Summer savory (Satureja hortensis) is among the best known of the savory genus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “savory” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:24.275Z",
+   "target": "f05213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Echter Kümmel (Carum carvi), meist einfach Kümmel, regional auch Wiesen-Kümmel bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kümmel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:24.275Z",
+   "target": "f05214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Liebstöckel (Levisticum officinale) bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liebstöckel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:24.275Z",
+   "target": "f05215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Coriander (), or Coriandrum sativum, is an annual herb in the family Apiaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.275Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coriander” is on the snapshot of s5"
+  }
+ ]
+}

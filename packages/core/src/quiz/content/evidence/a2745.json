@@ -1,0 +1,255 @@
+{
+ "article": "a2745",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Eisenzeit",
+   "title": "Eisenzeit",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:18:36.402Z",
+   "snapshot": "0dfdc9edd8bb1c0f6b9f698326dd4b34f893ef644a9019386c2df7deacc067ad"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Christian_J%C3%BCrgensen_Thomsen",
+   "title": "Christian Jürgensen Thomsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:40.134Z",
+   "snapshot": "4dbe6382c29a0216909e355b5ae93f35b48758162b4689cd8e307a89235e8c76"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+   "title": "Göbekli Tepe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:40.998Z",
+   "snapshot": "d863df91378c048f0c73e1779f99d3c73527fda17456bb9fa02a18f68a01bb2b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Birch_bark_tar",
+   "title": "Birch bark tar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:40.038Z",
+   "snapshot": "64abd8e2115ac51965f4c75b20b0c344be07e8303deb5f3c7c62e8784037c19a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/K%C3%B6nigsaue",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:41.989Z",
+   "snapshot": "56faf984b598e87ebdf20ab0aa9e3c5aea606dab92d223c6be04972b58561cbb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Birkenpech",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:18:39.233Z",
+   "snapshot": "0641006385aed598160aee4c2568f4bca1ee5f613bdea35bc6df97282402f6cf"
+  },
+  "s7": {
+   "url": "https://idw-online.de/de/news815702",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:18:39.592Z",
+   "snapshot": "157f86e1f027d044bb7cc8e7af1dacab4430f5040559a0c060d442dd679bca6b"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10485052",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:39.911Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eisenzeit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 2; transcript tp-357"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christian Jürgensen Thomsen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Göbekli Tepe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-103"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Birch bark tar",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Birkenpech",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Birch bark tar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-139/1, u07: Card is wrong that the chewed birch tar is Neanderthal (those lumps are from modern humans); the direct Neanderthal evidence is birch-tar production as an adhesive: Campitello (≥190–200 ka) and Königsaue (~80 ka, with a Neanderthal fingerprint). Wording and notes already say this."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:06.843Z",
+   "target": "f25636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Birch bark tar",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:06.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s4"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:06.843Z",
+   "target": "f12101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Eisenzeit ist eine nach dem verwendeten Material (Eisen) zur Herstellung schneidender Waffen und Gerätschaften benannte Periode der Ur- und Frühgeschichte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eisenzeit” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:06.843Z",
+   "target": "f12105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christian Jürgensen Thomsen (29 December 1788 – 21 May 1865) was a Danish antiquarian who developed early archaeological techniques and methods.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Jürgensen Thomsen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:06.843Z",
+   "target": "f25635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Göbekli Tepe (pronounced ɟœbecˈli teˈpe  meaning 'Potbelly Hill') is a Neolithic archaeological site in Upper Mesopotamia (al-Jazira) in modern-day Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Göbekli Tepe” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:06.843Z",
+   "target": "f25636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Birch bark tar (sometimes referred to as birch bark pitch) is a substance that is synthesized by dry distillation of birch tree bark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Birch bark tar” is on the snapshot of s4"
+  }
+ ]
+}

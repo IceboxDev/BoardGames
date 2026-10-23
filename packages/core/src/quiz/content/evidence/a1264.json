@@ -1,0 +1,310 @@
+{
+ "article": "a1264",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sons_of_Anarchy",
+   "title": "Sons of Anarchy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:46.447Z",
+   "snapshot": "fcaf8c5ca4950aa5eb17b08a49be461ecd5216ece6ad6be73e9102715fb22cd7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Orange_Is_the_New_Black",
+   "title": "Orange Is the New Black – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:50.196Z",
+   "snapshot": "2386ccb99cf33525a3e3384d315516d6129603f14f9a0a36ea6efe1aae962c4a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ted_Lasso",
+   "title": "Ted Lasso – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:47.659Z",
+   "snapshot": "66462b3edd37631bb71ca8c207b631d4489c103ab96b9b22e8ac72218c75ce52"
+  },
+  "s4": {
+   "url": "https://www.apple.com/tv-pr/originals/ted-lasso/",
+   "title": "Ted Lasso – Apple TV Press",
+   "publisher": "Apple TV",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:01.312Z",
+   "snapshot": "c0a1f8ec99710df863bb5cd85f2671869b5a4bc462915c32f5bc1aec84d40f06"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "motorcycle club",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "women's prison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "football club",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charming",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "AFC Richmond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:56.826Z",
+   "target": "f06316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Originally aired from September 3, 2008, to December 9, 2014, Sons of Anarchy follows the lives of a close-knit outlaw motorcycle club operating in Charming, a fictional town in California's Central Valley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “motorcycle club” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:56.826Z",
+   "target": "f06318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is based on Piper Kerman's memoir Orange Is the New Black: My Year in a Women's Prison (2010), about her experiences at FCI Danbury, a minimum security federal prison.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “women's prison” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:56.826Z",
+   "target": "f06319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "football club",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“football club”, “Fußballclub”, “футбольный клуб”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:56.826Z",
+   "target": "f21305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Originally aired from September 3, 2008, to December 9, 2014, Sons of Anarchy follows the lives of a close-knit outlaw motorcycle club operating in Charming, a fictional town in California's Central Valley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charming” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:56.826Z",
+   "target": "f21306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She has hired Lasso, secretly hoping he will cause the team's downfall and devastate Rupert, who cared more about AFC Richmond than anything else.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.826Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “AFC Richmond” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:33:11Z",
+   "target": "f06319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is unexpectedly recruited to coach a fictional English Premier League soccer team",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:33:14Z",
+   "target": "f06319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ted returns to Richmond, taking on his biggest challenge yet: coaching a second division women’s football team.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:39.385Z",
+   "target": "f06319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is unexpectedly recruited to coach a fictional English Premier League soccer team",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:39.385Z",
+   "target": "f06319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ted returns to Richmond, taking on his biggest challenge yet: coaching a second division women’s football team.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:39.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  }
+ ]
+}

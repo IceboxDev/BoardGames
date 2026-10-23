@@ -1,0 +1,426 @@
+{
+ "article": "a1246",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Amazon_River",
+   "title": "Amazon River – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:38.631Z",
+   "snapshot": "1556fdb84e00d3977d441bda01807dec18b20bee2c34dca421580326b706872a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rhine",
+   "title": "Rhine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:00.434Z",
+   "snapshot": "a13903a7502a0b18226bf68f5b138a729ea13f4ff24ec996305f01bfc55c35fa"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Donauquelle",
+   "title": "Donauquelle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:41:04.820Z",
+   "snapshot": "e6c81fc84037daad12b5ccc4c2a9ae241438b033c783020da243c732c9dbfa90"
+  },
+  "s4": {
+   "url": "https://cs.wikipedia.org/wiki/Pramen_Labe",
+   "title": "Pramen Labe – Wikipedie",
+   "kind": "encyclopedia",
+   "lang": "cs",
+   "retrievedAt": "2026-10-23T04:49:35.739Z",
+   "snapshot": "036ed2bb1151d98dbafe1cb817e6b9183558042e51c90084892713419858858a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gangotri_Glacier",
+   "title": "Gangotri Glacier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:39.470Z",
+   "snapshot": "9fb6a4c597c090ac861ddb715650d325647b9d37b31340f06951791ac738c102"
+  },
+  "s6": {
+   "url": "https://www.donaueschingen.de/donauquelle",
+   "title": "Donauquelle – Donauquellstadt Donaueschingen",
+   "publisher": "Stadt Donaueschingen",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:45.368Z",
+   "snapshot": "15da46102d5c99ac08e834d716248ed31543d0447352c2cae71665e45ac479f3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Danube",
+   "title": "Danube – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:45.005Z",
+   "snapshot": "8ab2703069326efbd4443163cd050b8388f130d8f197f284ad73ea1eb88c0b24"
+  },
+  "s8": {
+   "url": "http://www.ikse-mkol.org/fileadmin/media/user_upload/E/06_Publikationen/08_IKSE_Flyer/2016_ICPER-Flyer_The_Elbe_River_Basin.pdf",
+   "title": "The Elbe River Basin (ICPER flyer, 2016)",
+   "publisher": "International Commission for the Protection of the Elbe River (IKSE/MKOL)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:16:36Z"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Elbe",
+   "title": "Elbe – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:16:38Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alps",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schwarzwald",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giant Mountains",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Himalayas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:54.357Z",
+   "target": "f06226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eventually the Andes Mountains formed, blocking its flow to the Pacific Ocean and causing it to switch directions to its current mouth in the Atlantic Ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andes” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:54.357Z",
+   "target": "f06227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The river begins in the Swiss canton of Graubünden in the southeastern Swiss Alps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alps” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:54.357Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schwarzwald",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Schwarzwald”, “Black Forest”, “Шварцвальд”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:54.357Z",
+   "target": "f06229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giant Mountains",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Giant Mountains”, “Riesengebirge”, “Исполинские горы”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:54.357Z",
+   "target": "f06230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "According to them, the Gangotri glacier, currently 30.2 km long and between 0.5 and 2.5 km wide, is one of the largest in the Himalayas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Himalayas” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:16:33Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Was hier aus der Erde sprudelt ist Regenwasser aus dem Schwarzwald",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:16:34Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It flows through Central and Southeastern Europe, from the Black Forest of Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:16:36Z",
+   "target": "f06229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "rises at an elevation of 1,386 m above sea level in the Giant Mountains (Krkonoše, Riesengebirge)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:16:38Z",
+   "target": "f06229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "It rises in the Giant Mountains of the northern Czech Republic",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:37.113Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Was hier aus der Erde sprudelt ist Regenwasser aus dem Schwarzwald",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:37.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:37.113Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It flows through Central and Southeastern Europe, from the Black Forest of Germany",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:37.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:37.113Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Was hier aus der Erde spru­delt ist Re­gen­was­ser aus dem Schwarz­wald, das in der Erde ver­si­ckert, un­ter­ir­disch bis zum Schwarz­wald­rand fließt und in Do­nau­eschin­gen als Quel­le der Donau wie­der ans Ta­ges­licht kommt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:37.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwarzwald” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:37.113Z",
+   "target": "f06228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It flows through Central and Southeastern Europe, from the Black Forest of Germany south through the Danube Delta in Romania into the Black Sea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:37.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Black Forest” is on the snapshot of s7"
+  }
+ ]
+}

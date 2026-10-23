@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-062",
+ "image": "IMG20261022011237.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] Which sense is most closely linked to memory?\nA. Sight B. Touch C. Smell\nAnswer: C. This is possibly because the olfactory bulb, which processes scents, has direct connections to areas of the brain strongly linked to emotion and memory, such as the amygdala and hippocampus.",
+   "en": "Which sense is most closely linked to memory, because its brain pathways connect directly to the amygdala and hippocampus?",
+   "de": "Welcher Sinn ist am engsten mit dem Gedächtnis verknüpft, weil seine Nervenbahnen direkt mit Amygdala und Hippocampus verbunden sind?",
+   "reworked": true,
+   "answerEn": "Smell",
+   "answerDe": "Geruchssinn",
+   "timeline": {
+    "kind": "creation",
+    "start": "1913",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Proust's “Swann's Way”, whose madeleine scene gave smell-triggered recall the name “Proust phenomenon”",
+    "labelDe": "Prousts „In Swanns Welt“, dessen Madeleine-Szene der durch Geruch ausgelösten Erinnerung den Namen „Proust-Effekt“ gab"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Olfactory_memory",
+    "title": "Olfactory memory",
+    "lang": "en"
+   },
+   "notes": "'Most closely linked' is the popular framing; the source describes the olfactory pathways' direct links to the amygdala and hippocampus and the Proust phenomenon. Swann's Way (1913) date from the In Search of Lost Time article.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 2,
+   "discipline": "Engineering and Inventions",
+   "cardText": "[Engineering and Inventions] What is the primary engineering application of the Kalman filter?\nA. Filtering out particles in a solution\nB. Filtering out useful signals in data\nC. Filtering out serum from blood\nAnswer: B. The Kalman filter is an algorithm widely used in spacecraft navigation, robotics, and self-driving cars to produce accurate estimates from noisy measurements.",
+   "en": "Which algorithm, widely used in spacecraft navigation, robotics and self-driving cars, produces accurate estimates of a system's state from noisy measurements?",
+   "de": "Welcher Algorithmus, der in der Raumfahrtnavigation, Robotik und bei selbstfahrenden Autos weit verbreitet ist, liefert aus verrauschten Messungen genaue Schätzungen des Zustands eines Systems?",
+   "reworked": true,
+   "answerEn": "Kalman filter",
+   "answerDe": "Kalman-Filter",
+   "timeline": {
+    "kind": "creation",
+    "start": "1960",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rudolf Kálmán publishes “A New Approach to Linear Filtering and Prediction Problems”, introducing the Kalman filter",
+    "labelDe": "Rudolf Kálmán veröffentlicht „A New Approach to Linear Filtering and Prediction Problems“ und stellt den Kalman-Filter vor"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Kalman_filter",
+    "title": "Kalman filter",
+    "lang": "en"
+   },
+   "notes": "Asked the other way round (the explanation names the uses). Thiele and Swerling had developed similar methods earlier; the filter was used in the Apollo navigation computer.",
+   "domain": "technology",
+   "sub": "computing"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a0381",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tonic_water",
+   "title": "Tonic water – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:03.415Z",
+   "snapshot": "1fda0924c8d68aadb113723317b5ff7f4b0901eab9158b7c81cd8b0de2c6bbcf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Iodised_salt",
+   "title": "Iodised salt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:04.542Z",
+   "snapshot": "7dae8946b41ef72918e43073d326c7823769a345a8ed4638e6d64674dd76d9b8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Water_fluoridation",
+   "title": "Water fluoridation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:05.659Z",
+   "snapshot": "056a0633812c30900fea048f871366d321ade89d85a49a33448ebdb4c92f9534"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Water_chlorination",
+   "title": "Water chlorination – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:06.538Z",
+   "snapshot": "08e7365943089fa2ca6efb92728f60c39d0637bb415fc4f5789513cae975df4d"
+  },
+  "s5": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4584791/",
+   "title": "Updated Estimates of Neural Tube Defects Prevented by Mandatory Folic Acid Fortification – PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:03.682Z",
+   "snapshot": "1c409808562e772fa23c89f774aee4d87c797f13d96140de39bc2bfbab96dd9d"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Chinin",
+   "title": "Chinin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:52:03.935Z",
+   "snapshot": "e661df486196e109ba595b80b581cd44f9a4e2bfe1dca677631b48197ccaa508"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "quinine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "iodine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "fluoride",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "chlorine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "folic acid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "bitter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-088"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:39.197Z",
+   "target": "f01901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tonic water is a carbonated soft drink in which quinine is dissolved.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “quinine” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:39.197Z",
+   "target": "f01902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iodized salt (also spelled iodised salt) is table salt mixed with a minuscule amount of various iodine salts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “iodine” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:39.197Z",
+   "target": "f01903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Water fluoridation is the controlled addition of fluoride to public water supplies to reduce tooth decay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fluoride” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:39.197Z",
+   "target": "f01904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Water chlorination is the process of adding chlorine or chlorine compounds such as sodium hypochlorite to water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chlorine” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:39.197Z",
+   "target": "f01905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Updated Estimates of Neural Tube Defects Prevented by Mandatory Folic Acid Fortification — United States, 1995–2011 - PMC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “folic acid” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:39.197Z",
+   "target": "f13471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(Unabhängig von den anderen entdeckte 1819 auch Friedlieb Ferdinand Runge das Chinin.) Der Extrakt wurde mit Kalilauge verdünnt, worauf ein gelblicher amorpher, sehr bitter schmeckender Niederschlag entstand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bitter” is on the snapshot of s6"
+  }
+ ]
+}

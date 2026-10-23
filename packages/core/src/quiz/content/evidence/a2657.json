@@ -1,0 +1,509 @@
+{
+ "article": "a2657",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Harley-Davidson",
+   "title": "Harley-Davidson",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:30.377Z",
+   "snapshot": "344a79245c1e9fcf2d28ceed724637ece9dc881d3203192b4cf3aede00c9cd59"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Honda",
+   "title": "Honda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:31.558Z",
+   "snapshot": "4b7d6810bae83fa47e029ab691cf4e3e5c0d9921e7a91ceaadda2dbb17bda486"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vespa",
+   "title": "Vespa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:32.228Z",
+   "snapshot": "b1617b36c4904a0d76b2bb696fced0dcb955d1e91c91349681f9fb29cb9ad6d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/BMW_R32",
+   "title": "BMW R32 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:33.095Z",
+   "snapshot": "292b5d3f13921b59841a5c1035374e2b9e273e51703b50e568ff100b53f42e7f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ducati",
+   "title": "Ducati – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:34.128Z",
+   "snapshot": "1d1504d8d57b074fe4ab0ec99c7314518784550a3d8445466b79de471a39c842"
+  },
+  "s6": {
+   "url": "https://global.honda/en/newsroom/news/2025/c250522aeng.html",
+   "title": "Honda Achieves 500 Million-unit Cumulative Global Motorcycle Production",
+   "publisher": "Honda Motor Co., Ltd.",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:20.271Z",
+   "snapshot": "14856c2de0e2ee4dec2cb18038dc1691bf27646903b77bd013a583567fedb260"
+  },
+  "s7": {
+   "url": "https://www.bmwgroup.com/en/company/history.html",
+   "title": "History of the BMW Group",
+   "publisher": "BMW Group",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:19.207Z",
+   "snapshot": "bf844318a375017a58d6b14a7faafbd46bb7c0a57e0ead20f9d71a2d324323ee"
+  },
+  "s8": {
+   "url": "https://web.archive.org/web/20120803030001/https://www.audi.com/etc/medialib/ngw/company/invest_relations_20121.Par.0008.File.pdf/hjfb2012_en.pdf",
+   "title": "Audi Interim Financial Report 2012",
+   "publisher": "AUDI AG",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:20.242Z",
+   "snapshot": "0495ed76b682505f1233d7335280b8892509c0f346e826164d5ddacda0d29f6f"
+  },
+  "s9": {
+   "url": "https://mediahouse.ducati.com/ducati-presents-2025-financial-results-solidity-and-profitability-in-a-challenging-global-environment/?lang=eng&country=UK",
+   "title": "Ducati presents 2025 financial results",
+   "publisher": "Ducati Motor Holding",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:19.809Z",
+   "snapshot": "b1467aa0df982b0944ad2c8f980371d42a90833af2faa701046af90a9595d441"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harley-Davidson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; history entry seq 8; transcript tp-363"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Honda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Piaggio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "BMW",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ducati",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:53.495Z",
+   "target": "f14393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harley-Davidson is noted for a style of customization that gave rise to the chopper motorcycle style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.495Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harley-Davidson” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:53.495Z",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Honda Motor Co., Ltd., commonly known as Honda, is a Japanese multinational conglomerate automotive manufacturer headquartered at the Toranomon Alcea Tower in Toranomon, Minato, Tokyo, Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.495Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Honda” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:53.495Z",
+   "target": "f14395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vespa (Italian pronunciation: [ˈvɛspa]; Italian for 'wasp') is an Italian brand of scooters  and mopeds manufactured by Piaggio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.495Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Piaggio” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:53.495Z",
+   "target": "f14396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The BMW R32 was the first motorcycle produced by BMW under the BMW name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.495Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BMW” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:53.495Z",
+   "target": "f14397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ducati Motor Holding S.p.A (Italian pronunciation: [duˈkaːti]) is an Italian motorcycle manufacturing company headquartered in Bologna, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:53.495Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ducati” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:47:42Z",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Honda has been the world's largest motorcycle manufacturer since 1959",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Cited there to a Wiley-Blackwell book; Honda's own 2025 press release (500 million motorcycles) confirms its scale but no independent page stating 'since 1959' could be fetched."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:47:44Z",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Honda achieved its 100 million-unit milestone in 1997, its 200 million-unit milestone in 2008, and its 300 million-unit milestone in 2014.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official production record supporting Honda's lead; it does not itself state the 1959 date."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:45Z",
+   "target": "f14396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1923 – BMW R 32: BMW's first motorcycle.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:47:47Z",
+   "target": "f14396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This new design was designated the BMW R32 and began production in 1923, becoming the first motorcycle to be badged as a BMW.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:47:49Z",
+   "target": "f14397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Effective July 19, 2012, the Audi Group acquired 100 percent of the voting rights in the motorcycle manufacturer Ducati Motor Holding S.p.A., Bologna (Italy)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:47:52Z",
+   "target": "f14397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A Company subject to the Management and Coordination activities of AUDI AG.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "March 2026: still under Audi. Time-sensitive; reviewBy set."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:39.272Z",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Honda has been the world's largest motorcycle manufacturer since 1959",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:39.272Z",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Honda achieved its 100 million-unit milestone in 1997, its 200 million-unit milestone in 2008, and its 300 million-unit milestone in 2014.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:39.272Z",
+   "target": "f14396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This new design was designated the BMW R32 and began production in 1923, becoming the first motorcycle to be badged as a BMW.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:39.272Z",
+   "target": "f14394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Honda Reaches 500 Million-Unit Milestone in Cumulative Global Motorcycle Production | Honda Global Corporate Website",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Honda” is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:39.272Z",
+   "target": "f14396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The history of the BMW Group dates back to 1916.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “BMW” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:39.272Z",
+   "target": "f14397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ducati presents 2025 financial results: solidity and profitability in a challenging global environment - Ducati Media House",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:39.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ducati” is on the snapshot of s9"
+  }
+ ]
+}

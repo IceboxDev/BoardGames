@@ -1,0 +1,281 @@
+{
+ "article": "a0399",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Factory",
+   "title": "The Factory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:24.611Z",
+   "snapshot": "5c84ffa05c7f814204e5f1a60926f9788dcf9fb1bf8f51cf9224332097761ec1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Exploding_Plastic_Inevitable",
+   "title": "Exploding Plastic Inevitable – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:25.453Z",
+   "snapshot": "b102020d2009a2151b115eb9e6e417aa83e945622c1fab4ef5a1d54f1fd07c70"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Interview_(magazine)",
+   "title": "Interview (magazine) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:26.473Z",
+   "snapshot": "c49a71b699cc94dbac2c2ec7c52d88087b05b0c7c6fb0e1156c3c250bcd855bf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Claes_Oldenburg",
+   "title": "Claes Oldenburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:27.563Z",
+   "snapshot": "a365ff35d38a387834f88d68f2e1c944c8e42c90c88bff9c2e0839aaf0fabc84"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Merzbau",
+   "title": "Merzbau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:53:24.778Z",
+   "snapshot": "b0f01cac5a2bd9626eeeb9b494e689100b60f8e48e3b1a1be2a31a47806032aa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Factory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Exploding Plastic Inevitable",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Interview",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Store",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Merzbau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andy Warhol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-140"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:42.692Z",
+   "target": "f01991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Factory was the studio of American artist Andy Warhol in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Factory” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:42.692Z",
+   "target": "f01992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Exploding Plastic Inevitable (originally known as the Erupting Plastic Inevitable and later known as Plastic Inevitable or EPI), was a series of multimedia gesamtkunstwerk events organized by Andy Warhol and Paul Morrissey in 1966 and 1967.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exploding Plastic Inevitable” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:42.692Z",
+   "target": "f01993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Interview is an American magazine founded by pop artist Andy Warhol and journalist John Wilcock in 1969.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Interview” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:42.692Z",
+   "target": "f01994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In December 1961, he rented a store on Manhattan's Lower East Side to house \"The Store\", a month-long installation he had first presented at the Martha Jackson Gallery in New York, stocked with sculptures in the form of consumer goods.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Store” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:42.692Z",
+   "target": "f01995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Merzbau nannte der Dichter und bildende Künstler Kurt Schwitters das raumfüllende Kunstwerk, das er vermutlich 1923 in seiner Wohnung in Hannover zu errichten begann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merzbau” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:42.692Z",
+   "target": "f10740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Factory was the studio of American artist Andy Warhol in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andy Warhol” is on the snapshot of s1"
+  }
+ ]
+}

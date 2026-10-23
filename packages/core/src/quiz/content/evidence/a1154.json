@@ -1,0 +1,389 @@
+{
+ "article": "a1154",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alpha_and_Omega",
+   "title": "Alpha and Omega – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:08.323Z",
+   "snapshot": "32eac556cc7b6342a236ebe48008330ccbc8ed0305cb366920e709867b7fdc51"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Greek_alphabet",
+   "title": "Greek alphabet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:09.348Z",
+   "snapshot": "7bb72ccdd6b4c1591de5e3898c9288643d3c83c06fe021698ba84d486380d08f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pi",
+   "title": "Pi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:10.959Z",
+   "snapshot": "c29f9f1620346cd2215433d7f7e2cec3403a280ab81f2a0c1dff8f37e3aa686c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Summation",
+   "title": "Summation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:11.428Z",
+   "snapshot": "50209972602c4ae9505d9fa85accc8ac3eeeb2256e5fddf5ab9ff7181ddf472e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/%E2%82%AC",
+   "title": "€",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:20.232Z",
+   "snapshot": "ccd31fcb1eb952caf9efbf5435535770584268f6970abe0a03014d56efc80373"
+  },
+  "s6": {
+   "url": "https://lex.dk/det_græske_alfabet",
+   "title": "det græske alfabet – Den Store Danske (lex.dk)",
+   "publisher": "Lex.dk / Den Store Danske",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:38:17.853Z",
+   "snapshot": "9bcd90ddc9a68f54c0d74903ef22caa254b2509f46369ae8b9cb4ccf12aa859d"
+  },
+  "s7": {
+   "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/Pi_through_the_ages/",
+   "title": "A history of Pi – MacTutor History of Mathematics",
+   "publisher": "MacTutor, University of St Andrews",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:18.090Z",
+   "snapshot": "56e501f7a9579ac833a4e7a0f35aa6a0ea6ab296f116b50cbdcafa5bc56cacea"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alpha and Omega",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "24 letters",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the letter pi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sigma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Epsilon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-013"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.703Z",
+   "target": "f05766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first written record of the phrase \"alpha and omega\" appears in ancient manuscripts of the Christian New Testament.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alpha and Omega” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.703Z",
+   "target": "f05767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "times, the Greek alphabet existed in many local variants, but, by the end of the 4th century BC, the Ionic-based Euclidean alphabet, with 24 letters, ordered from alpha to omega, had become standard throughout the Greek-speaking world and is the version that is still used for Greek writing",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “24 letters” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.703Z",
+   "target": "f05769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the letter pi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the letter pi”, “der Buchstabe Pi”, “буква пи”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:40.703Z",
+   "target": "f05770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is an enlarged capital Greek letter sigma.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sigma” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:40.703Z",
+   "target": "f14554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Es erinnert an den griechischen Buchstaben Epsilon (ϵ) und damit an den antiken Ursprung Europas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epsilon” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:38Z",
+   "target": "f05767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "består af 24 bogstaver – 17 konsonanter og syv vokaler",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:44:42Z",
+   "target": "f05767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "i Athen således indført ved en politisk beslutning i år 403/2 f.v.t.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:44:46Z",
+   "target": "f05767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Ionic-based Euclidean alphabet, with 24 letters, ordered from alpha to omega, had become standard throughout the Greek-speaking world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:44:50Z",
+   "target": "f05769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first to use π with its present meaning was an Welsh mathematician William Jones in 1706 when he states \"3.14159 etc. = π\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:44:56Z",
+   "target": "f05769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The earliest known use of the Greek letter π to represent the ratio of a circle's circumference to its diameter was by Welsh mathematician William Jones in 1706.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:18.644Z",
+   "target": "f05767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Ionic-based Euclidean alphabet, with 24 letters, ordered from alpha to omega, had become standard throughout the Greek-speaking world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:18.644Z",
+   "target": "f05769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first to use π with its present meaning was an Welsh mathematician William Jones in 1706 when he states \"3.14159 etc. = π\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

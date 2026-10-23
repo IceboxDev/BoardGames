@@ -1,0 +1,327 @@
+{
+ "article": "a0294",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Herero_and_Nama_genocide",
+   "title": "Herero and Nama genocide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:23.187Z",
+   "snapshot": "8f76d1a8ad216aa98bf24d9c40665788e82442bc773654077a616916e9638820"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Congo_Free_State",
+   "title": "Congo Free State – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:24.191Z",
+   "snapshot": "c88791dccc527a908b1500c51b72da9298739fa4e925bc606bd8b036fc423d7a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mau_Mau_rebellion",
+   "title": "Mau Mau rebellion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:25.229Z",
+   "snapshot": "2fe88fa348584858d69bbab5c411a7adaccae093fea25e71d4510ed65df12ca4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Algerian_War",
+   "title": "Algerian War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:26.286Z",
+   "snapshot": "d16c09d9b4fc3a814da084624f30716b4f150b64521ffa63845eee22de2a3603"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Indonesian_National_Revolution",
+   "title": "Indonesian National Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:27.223Z",
+   "snapshot": "bba5c5076af2ea4782851099bea5b3f7dde5f27c0ced49e1dbd87ba04a4547b3"
+  },
+  "s6": {
+   "url": "https://www.gov.uk/government/news/statement-to-parliament-on-settlement-of-mau-mau-claims",
+   "title": "Statement to Parliament on settlement of Mau Mau claims",
+   "publisher": "UK Foreign and Commonwealth Office (GOV.UK)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:09.135Z",
+   "snapshot": "5379aaf3cb00971523faf5023ccd153a411315abea54305ddbd588c7f35ebefd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Belgium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Britain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:25.384Z",
+   "target": "f01466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After reinforcements arrived from Germany, the Herero were surrounded and routed at the Battle of Waterberg in August.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Germany” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:25.384Z",
+   "target": "f01467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was privately owned by King Leopold II, the constitutional monarch of the Kingdom of Belgium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Belgium” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:25.384Z",
+   "target": "f01468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Britain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Great Britain”, “Großbritannien”, “Великобритания”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:25.384Z",
+   "target": "f01469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Algerian War, also known as the Algerian Revolution, the Franco-Algerian War, or the Algerian War of Independence, was an armed conflict between France and the Algerian National Liberation Front (FLN) from 1954 to 1962, which led to Algeria winning its independence from France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:25.384Z",
+   "target": "f01470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It took place between Indonesia's declaration of independence in 1945 and the Netherlands' transfer of sovereignty over the Dutch East Indies to the Republic of the United States of Indonesia at the end of 1949.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:25.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Netherlands” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:35:29Z",
+   "target": "f01468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The colonial authorities made unprecedented use of capital punishment and sanctioned harsh prison so-called ‘rehabilitation’ regimes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "William Hague's 2013 statement on behalf of the British government about the Kenya Emergency 1952–1963."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:35:32Z",
+   "target": "f01468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was an armed conflict in the British Colony of Kenya between the Kenya Land and Freedom Army (KLFA) and the British colonial authorities",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:45.614Z",
+   "target": "f01468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The colonial authorities made unprecedented use of capital punishment and sanctioned harsh prison so-called ‘rehabilitation’ regimes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:45.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:45.614Z",
+   "target": "f01468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "was an armed conflict in the British Colony of Kenya between the Kenya Land and Freedom Army (KLFA) and the British colonial authorities",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:45.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  }
+ ]
+}

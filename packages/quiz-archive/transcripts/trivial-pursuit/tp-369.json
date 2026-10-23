@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-369",
+ "image": "IMG20261007175140.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Das Great Barrier Reef vor der Küste Australiens ist vom Weltraum aus sichtbar. Richtig oder falsch?",
+   "de": "Welches Riff vor der Küste Australiens ist als größte von Lebewesen geschaffene Struktur sogar vom Weltraum aus sichtbar?",
+   "en": "Which reef off the coast of Australia, the largest structure built by living organisms, is visible even from space?",
+   "reworked": true,
+   "answerDe": "Great Barrier Reef",
+   "answerEn": "Great Barrier Reef",
+   "timeline": {
+    "kind": "event",
+    "start": "1981",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Great Barrier Reef is inscribed as a UNESCO World Heritage Site",
+    "labelDe": "Das Great Barrier Reef wird zum UNESCO-Welterbe erklärt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
+    "title": "Great Barrier Reef",
+    "lang": "en"
+   },
+   "notes": "True/false card (true) reworked to an open question. Wikipedia: the reef can be seen from outer space and is the world's biggest single structure made by living organisms.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher US-Sänger bezeichnete sich selbst als „Justin Bieber der 1970er-Jahre“ und fuhr fort mit: „Wirklich, fragen Sie Ihre Mutter!“?",
+   "de": "Welcher US-Sänger bezeichnete sich selbst als „Justin Bieber der 1970er-Jahre“ und fuhr fort mit: „Wirklich, fragen Sie Ihre Mutter!“?",
+   "en": "Which US singer called himself “the Justin Bieber of the 1970s” and went on: “Really, ask your mother!”?",
+   "reworked": false,
+   "answerDe": "Barry Manilow",
+   "answerEn": "Barry Manilow",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1943-06-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Life of US singer-songwriter Barry Manilow",
+    "labelDe": "Leben des US-Sängers und Songwriters Barry Manilow"
+   },
+   "source": {
+    "url": "https://www.timeout.com/los-angeles/music/barry-manilow",
+    "title": "Barry Manilow | Music in Los Angeles",
+    "lang": "en"
+   },
+   "notes": "Time Out calls Manilow the self-proclaimed “Justin Bieber of the 70s”; the “ask your mother” follow-up was not found on a fetched page. Birth date from en.wikipedia Barry Manilow.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "In welchem Turnus finden Europawahlen statt?",
+   "de": "In welchem Turnus finden Europawahlen statt?",
+   "en": "How often are European Parliament elections held?",
+   "reworked": false,
+   "answerDe": "Alle 5 Jahre",
+   "answerEn": "Every 5 years",
+   "timeline": {
+    "kind": "event",
+    "start": "1979",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First direct elections to the European Parliament",
+    "labelDe": "Erste Direktwahl zum Europäischen Parlament"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Europawahl",
+    "title": "Europawahl",
+    "lang": "de"
+   },
+   "notes": "Held every five years since 1979.",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 4,
+   "cardDe": "In welchem Land ist das Telefonbuch nach Vornamen sortiert: Liechtenstein, Island oder Luxemburg?",
+   "de": "In welchem Land ist das Telefonbuch nach Vornamen sortiert?",
+   "en": "In which country is the telephone directory sorted by first name?",
+   "reworked": true,
+   "answerDe": "Island",
+   "answerEn": "Iceland",
+   "timeline": {
+    "kind": "event",
+    "start": "1925",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Iceland's Althing bans the adoption of new family names, keeping patronymics as the norm",
+    "labelDe": "Islands Althing verbietet die Annahme neuer Familiennamen; Patronyme bleiben die Regel"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Icelandic_name",
+    "title": "Icelandic name",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice card reworked. Icelanders use patronymics, so listings such as the telephone directory are alphabetised by first name (the directory also lists professions). Timeline: the 1925 ban on new family names, which keeps the patronymic system.",
+   "domain": "geography",
+   "sub": "peoples"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißt der Zwergplanet, der 1930 seinen Namen von einer 11-jährigen englischen Schülerin erhielt?",
+   "de": "Wie heißt der Zwergplanet, der 1930 seinen Namen von einer 11-jährigen englischen Schülerin erhielt?",
+   "en": "What is the name of the dwarf planet that was named in 1930 by an 11-year-old English schoolgirl?",
+   "reworked": false,
+   "answerDe": "Pluto",
+   "answerEn": "Pluto",
+   "timeline": {
+    "kind": "event",
+    "start": "1930-05-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The name Pluto, suggested by 11-year-old Venetia Burney, is formally adopted",
+    "labelDe": "Der von der 11-jährigen Venetia Burney vorgeschlagene Name Pluto wird offiziell angenommen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Venetia_Burney",
+    "title": "Venetia Burney",
+    "lang": "en"
+   },
+   "notes": "Venetia Burney (1918–2009) of Oxford suggested the name on 14 March 1930; it was formally adopted on 1 May 1930.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welcher Schauspieler und Hobby-Rennfahrer machte die Rolex Daytona bei Uhrenliebhabern populär: James Dean, Steve McQueen oder Paul Newman?",
+   "de": "Welcher Schauspieler und Hobby-Rennfahrer machte die Rolex Daytona bei Uhrenliebhabern populär?",
+   "en": "Which actor and amateur racing driver made the Rolex Daytona popular among watch lovers?",
+   "reworked": true,
+   "answerDe": "Paul Newman",
+   "answerEn": "Paul Newman",
+   "timeline": {
+    "kind": "creation",
+    "start": "1965",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rolex introduces the “exotic” Daytona dials later named “Paul Newman” dials",
+    "labelDe": "Rolex führt die „exotischen“ Daytona-Zifferblätter ein, die später „Paul Newman“ genannt werden"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Rolex_Cosmograph_Daytona",
+    "title": "Rolex Cosmograph Daytona",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice card reworked. Newman got the watch from Joanne Woodward and popularised it by wearing it while racing; his own watch sold for $17.8 million in 2017.",
+   "domain": "everyday",
+   "sub": "brands"
+  }
+ ]
+}

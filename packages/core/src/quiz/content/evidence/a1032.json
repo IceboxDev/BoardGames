@@ -1,0 +1,490 @@
+{
+ "article": "a1032",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/CeBIT",
+   "title": "CeBIT – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:35.085Z",
+   "snapshot": "0433e80f92c7bb20a379b4b3e2fb25ee50fc7c887dc481492c9f6c4e2d7b5f47"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hannover_Messe",
+   "title": "Hannover Messe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:33.403Z",
+   "snapshot": "26926d4f0e5fc076f74114df65efaf721886fee2e1ed79059f614c635a8edefd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Internationale_Funkausstellung_Berlin",
+   "title": "Internationale Funkausstellung Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:33.297Z",
+   "snapshot": "9a44c88fb1664b4b3f69fc988233cb8ce735bf55ea8f72f350a0e1f0289a4a9c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Consumer_Electronics_Show",
+   "title": "Consumer Electronics Show – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:36.160Z",
+   "snapshot": "24bcaba30f8f9caa6b4a8b36c8986bbae927bb8804eee9fd8a8c29fb7497875d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gamescom",
+   "title": "Gamescom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:37.134Z",
+   "snapshot": "d40f09e73bf54fa93cdd21ef431931320fd02d635d4d8a6338dd01d58857addc"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Gamescom",
+   "title": "Gamescom",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:34.464Z",
+   "snapshot": "4eff11d41481a97acbb346571a95ae61743329f1f3438bb57e5c5e7c33485fed"
+  },
+  "s7": {
+   "url": "https://www.hannovermesse.de/de/news/news-fachartikel/brasilien-ist-partnerland-der-hannover-messe-2026",
+   "title": "Brasilien ist Partnerland der HANNOVER MESSE 2026",
+   "publisher": "Deutsche Messe AG",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:20.549Z",
+   "snapshot": "6fe91c9a5d3a14093eb2953f82b0e0f39b1b573de40b3ce287ca634fa1182e3a"
+  },
+  "s8": {
+   "url": "https://www.automation.com/en-us/articles/2015-2/hannover-messe-hosts-more-than-220000-visitors",
+   "title": "Hannover Messe Hosts More Than 220,000 Visitors",
+   "publisher": "Automation.com",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:50:22Z"
+  },
+  "s9": {
+   "url": "https://ipfonline.com/news/detail/industrynews/hannover_messe_-_a_brief_history/5302",
+   "title": "Hannover Messe – A Brief History",
+   "publisher": "Industrial Products Finder",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:39.065Z",
+   "snapshot": "8deabe462c590a72501bf63dd30429b1be001bad4558a17e6f25285c1b0cf594"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "CeBIT",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hannover Messe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "IFA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "CES",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gamescom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gamescom",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-246"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:23.060Z",
+   "target": "f05156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "CeBIT was a computer expo which, at its peak, was the largest and most internationally representative.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CeBIT” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:23.060Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Hannover-Messe (Eigenschreibweise Hannover Messe, bis 1962: Deutsche Industrie-Messe) ist eine Industriemesse mit internationaler Bedeutung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannover Messe” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:23.060Z",
+   "target": "f05158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die IFA (bis 2024 Internationale Funkausstellung, seit 2025 als Backronym Innovation for All) in Berlin ist eine Technologie- und Industriemesse, die jährlich im Sommer in den Messehallen unter dem Berliner Funkturm stattfindet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IFA” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:23.060Z",
+   "target": "f05159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "CES (formerly an acronym for Consumer Electronics Show) is an annual trade show organized by the Consumer Technology Association (CTA).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CES” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:23.060Z",
+   "target": "f05160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gamescom is a trade fair for video games held annually at the Koelnmesse in  Cologne, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gamescom” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:23.060Z",
+   "target": "f05160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Gamescom (Eigenschreibweise: gamescom) ist die weltweit größte Messe für Computer- und Videospiele sowie Unterhaltungselektronik und findet seit 2009 jährlich in Köln statt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gamescom” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:50:21Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Als weltweit führende Messe für industrielle Technologien wird die HANNOVER MESSE",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Organiser calls it the world's leading fair for industrial technology."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:50:22Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "HANNOVER MESSE 2015 – the world’s leading trade fair for industrial technology",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:50:24Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ist die Hannover-Messe nach wie vor die größte Investitionsgütermesse",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "en.wikipedia: started in 1947 in an undamaged factory building in Laatzen."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:50:25Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the 'Hannover Export Fair' was deemed a success",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Origins in 1947 as the Export Fair under the British occupation."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:57.524Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Als weltweit führende Messe für industrielle Technologien wird die HANNOVER MESSE",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.524Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:57.524Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ist die Hannover-Messe nach wie vor die größte Investitionsgütermesse",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.524Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:57.524Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the 'Hannover Export Fair' was deemed a success",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.524Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:57.524Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Partnerland: Brasilien ist Partnerland der HANNOVER MESSE 2026",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.524Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hannover Messe” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:57.524Z",
+   "target": "f05157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Industrial Products Finder, having been invited at the Press Preview of Hannover Messe 2015 held at Berlin in early February 2015, presents an overview of this grand exhibition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.524Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hannover Messe” is on the snapshot of s9"
+  }
+ ]
+}

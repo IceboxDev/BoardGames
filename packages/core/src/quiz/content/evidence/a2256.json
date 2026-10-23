@@ -1,0 +1,242 @@
+{
+ "article": "a2256",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Verschlossene_Auster",
+   "title": "Verschlossene Auster",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:59.660Z",
+   "snapshot": "923731148f112687b9088f12d671bc9c22db0f11213a88b565be4c0d186763b8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize",
+   "title": "Pulitzer Prize – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:00.283Z",
+   "snapshot": "4f1d2a1480d2698b230ff4aa7c4fcff47311cc707bdb1cf43cc5282d543cefc4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Theodor-Wolff-Preis",
+   "title": "Theodor-Wolff-Preis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:00.031Z",
+   "snapshot": "f467520f23c9ed6b0386d4bf6fe1f9c94b0575094b66c9dcdfb3d632b453fe03"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Grimme-Preis",
+   "title": "Grimme-Preis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:01.361Z",
+   "snapshot": "c95f41f74c44935159c5016d2e65272cfc871aec5a60b621301e588577694ae6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Reporters_Without_Borders",
+   "title": "Reporters Without Borders – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:01.275Z",
+   "snapshot": "d701cad010532103d18cc02dac7dce035fc830169c3077127cd92abf4ffa7c4a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Verschlossene Auster",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-392"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Pulitzer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Theodor-Wolff-Preis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adolf Grimme",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reporters Without Borders",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:44.117Z",
+   "target": "f11564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Verschlossene Auster ist ein von der Journalistenvereinigung Netzwerk Recherche e.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verschlossene Auster” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:44.117Z",
+   "target": "f11565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They were established in 1917 by the will of Joseph Pulitzer, a Hungarian-American immigrant and newspaper publisher whose bequest also founded and endowed the Columbia School of Journalism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Pulitzer” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:44.117Z",
+   "target": "f11566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Journalistenpreis der Digitalpublisher und Zeitungsverleger – Theodor-Wolff-Preis (TWP) ist der Journalistenpreis der deutschen Zeitungen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodor-Wolff-Preis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:44.117Z",
+   "target": "f11567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Grimme-Preis (bis 2010 Adolf-Grimme-Preis) ist eine Auszeichnung für Fernsehsendungen in Deutschland und gilt als renommierter Medienpreis in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolf Grimme” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:44.117Z",
+   "target": "f11568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reporters Without Borders (French: Reporters sans frontières; RSF) is an international non-profit and non-governmental organization headquartered in Paris, which focuses on safeguarding the right to freedom of information.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reporters Without Borders” is on the snapshot of s5"
+  }
+ ]
+}

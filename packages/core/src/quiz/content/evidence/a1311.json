@@ -1,0 +1,242 @@
+{
+ "article": "a1311",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Oscar_Niemeyer",
+   "title": "Oscar Niemeyer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:01.330Z",
+   "snapshot": "a5aa4f4a30c756431f2aafaa62849b4331246e18af9001b753ffc39d877930a9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/L%C3%BAcio_Costa",
+   "title": "Lúcio Costa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:02.230Z",
+   "snapshot": "423aef9d76662b9c094306743668df9c794543ea3ad8de984670b2a00feb7d07"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Le_Corbusier",
+   "title": "Le Corbusier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:03.347Z",
+   "snapshot": "7bcc505052e00510c1efea356e46eafa1a595dd28e36277322a0ec23b8f206aa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Walter_Burley_Griffin",
+   "title": "Walter Burley Griffin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:04.224Z",
+   "snapshot": "269f94660d8ec8ef63eaa17901802e6bd4304bbcb857a3d19fb1ca8869f1ab38"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Kahn",
+   "title": "Louis Kahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:05.235Z",
+   "snapshot": "edf3a803aa18e44a54fa4d82d698572452416ee2a66b6d00d93c9575729049d0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oscar Niemeyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lúcio Costa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Le Corbusier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walter Burley Griffin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Louis Kahn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:04.499Z",
+   "target": "f06551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oscar Ribeiro de Almeida Niemeyer Soares Filho (15 December 1907 – 5 December 2012), known as Oscar Niemeyer (Brazilian Portuguese: [ˈoskaʁ ni.eˈmajeʁ]), was a Brazilian architect considered to be one of the key figures in the development of modern architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oscar Niemeyer” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:04.499Z",
+   "target": "f06552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The design of Lucio Costa was selected for Brasília.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lúcio Costa” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:04.499Z",
+   "target": "f06553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charles-Édouard Jeanneret (6 October 1887 – 27 August 1965), known as Le Corbusier, was a French-Swiss architectural designer, painter, urban planner and writer who is described as one of the pioneers of what is now regarded as modern architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Le Corbusier” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:04.499Z",
+   "target": "f06554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walter Burley Griffin (November 24, 1876 – February 11, 1937) was an American architect and landscape architect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Burley Griffin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:04.499Z",
+   "target": "f06555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Louis Kahn, whose original name was Itze-Leib (Leiser-Itze) Schmuilowsky (Schmalowski), was born into a poor Jewish family in the Russian Empire (present-day Estonia).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.499Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Kahn” is on the snapshot of s5"
+  }
+ ]
+}

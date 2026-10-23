@@ -1,0 +1,339 @@
+{
+ "article": "a0457",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Waiting_for_Godot",
+   "title": "Waiting for Godot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:32.049Z",
+   "snapshot": "fc7643ac2d4f88862a1c786c6e3c3268ecd6590ec6ff42e375ac815c6d1ded2c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Samuel_Beckett",
+   "title": "Samuel Beckett – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:32.976Z",
+   "snapshot": "ed8a72fe102cd1c5c6d111ca984175d70f9c14fe5f5a996b19141aa0dc5b3401"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Endgame_(play)",
+   "title": "Endgame (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:33.790Z",
+   "snapshot": "5180b2797fb75c726093449a8e04dc21822cabf64bbff463248560e64a6de163"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rhinoceros_(play)",
+   "title": "Rhinoceros (play) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:34.828Z",
+   "snapshot": "86dd56f20086cd32c11bb50918f1134ad99610396917b3c97140c9aa7952bf1a"
+  },
+  "s5": {
+   "url": "https://www.ebsco.com/research-starters/literature-and-writing/rhinoceros-eugene-ionesco",
+   "title": "Rhinoceros by Eugène Ionesco – EBSCO Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.811Z",
+   "snapshot": "a2cd41eb14f9341f83e9aca65ca24c9d6f3891c400b90dc201aae28beca8a54c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Godot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samuel Beckett",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pozzo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hamm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bérenger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:51.047Z",
+   "target": "f02281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Waiting for Godot is a play by Irish playwright and author Samuel Beckett.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Godot” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:51.047Z",
+   "target": "f02282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He posthumously became one of the most prized and widely discussed Irish authors, and several landmarks have been named in his honour, with the most notable being the Samuel Beckett Bridge in Dublin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samuel Beckett” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:51.047Z",
+   "target": "f02283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "They encounter three other characters: Pozzo; his servant, Lucky; and a young boy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pozzo” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:51.047Z",
+   "target": "f02284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The plot is also supplanted by the development of a grotesque story-within-a-story that the character Hamm is relating.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamm” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:51.047Z",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "French town turn into rhinoceroses; ultimately the only human who does not succumb to this mass metamorphosis is the central character, Bérenger, a flustered everyman figure who is initially criticized in the play for his drinking, tardiness, and slovenly lifestyle and then, later, for his",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:51.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bérenger” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:44Z",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ultimately the only human who does not succumb to this mass metamorphosis is the central character, Bérenger",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:56Z",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As those around him succumb to the transformation, he resolves to resist, ultimately positioning himself as the last human standing in a world overtaken by the rhinoceroses.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:13.046Z",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ultimately the only human who does not succumb to this mass metamorphosis is the central character, Bérenger",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:13.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:13.046Z",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As those around him succumb to the transformation, he resolves to resist, ultimately positioning himself as the last human standing in a world overtaken by the rhinoceroses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:13.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:13.046Z",
+   "target": "f02285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Set in a small provincial town, the narrative begins with a casual conversation between two friends, Berenger and Jean, which is abruptly disrupted by the appearance of rhinoceroses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:13.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bérenger” is on the snapshot of s5"
+  }
+ ]
+}

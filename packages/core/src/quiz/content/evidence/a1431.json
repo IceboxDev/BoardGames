@@ -1,0 +1,195 @@
+{
+ "article": "a1431",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Keith_Haring",
+   "title": "Keith Haring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:12.287Z",
+   "snapshot": "ccfee9d347fb022bcd47b8b4a249074b98debe3ef3d4728086dcca3278eb37ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Campbell's_Soup_Cans",
+   "title": "Campbell's Soup Cans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:57.523Z",
+   "snapshot": "c04cda637f3e25e8e3a79262573fa2e71d6b3d8864aeb9cc5e763faa96db2653"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Michel_Basquiat",
+   "title": "Jean-Michel Basquiat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:58.686Z",
+   "snapshot": "3639c841371d0ddb5da09376754ed3717464ebf652f898842af26c2b84484cb7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Whaam!",
+   "title": "Whaam! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:59.511Z",
+   "snapshot": "8c15b0139ec9d827b376cea2dedd0d4204b748aaf11a9dfccb1953b0b040e797"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Keith Haring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c120"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Andy Warhol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean-Michel Basquiat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Roy Lichtenstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:24.675Z",
+   "target": "f07151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "During his visit to Australia, he painted the permanent Keith Haring Mural at Collingwood Technical College in Melbourne.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Keith Haring” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:24.675Z",
+   "target": "f07152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Campbell's Soup Cans is a series of 32 paintings produced by American artist Andy Warhol between 1961 and 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andy Warhol” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:24.675Z",
+   "target": "f07153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean-Michel Basquiat ( BAH-skee-AH(T), French: [ʒɑ̃ miʃɛl baskja]; December 22, 1960 – August 12, 1988) was an American artist and painter, of Haitian and Puerto Rican descent,  who rose to success during the 1980s as part of the Neo-expressionism movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Michel Basquiat” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:24.675Z",
+   "target": "f07154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is a 1963 diptych painting by the American artist Roy Lichtenstein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.675Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roy Lichtenstein” is on the snapshot of s4"
+  }
+ ]
+}

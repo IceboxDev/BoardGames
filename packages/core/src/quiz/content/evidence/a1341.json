@@ -1,0 +1,289 @@
+{
+ "article": "a1341",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2009_swine_flu_pandemic",
+   "title": "2009 swine flu pandemic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:50.393Z",
+   "snapshot": "2f1124956d298fe2f0461bdf0ef45110cf3582ce020212acc1cf1ba6c3890689"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1",
+   "title": "Influenza A virus subtype H5N1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:51.296Z",
+   "snapshot": "daa28d9f395287eb6b29f1cb91ccb16090b3a9991048bdc42d91a17c60e86518"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Vogelgrippe_H5N1",
+   "title": "Vogelgrippe H5N1",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:49.944Z",
+   "snapshot": "0d14385119588c69203bb8ccdaeac23567bb42e40b8edd2191fccef584a2d00e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_flu",
+   "title": "Spanish flu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:52.428Z",
+   "snapshot": "41df86aa44bc41313770f91f0bf34b46a46f58c4b78428bf9389c0314fc099dc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1957%E2%80%931958_influenza_pandemic",
+   "title": "1957–1958 influenza pandemic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:53.393Z",
+   "snapshot": "a1cbe0cc0bef2fab7341c86c7ba7f03418169c328c09f92f17236cbe4bcd045e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hong_Kong_flu",
+   "title": "Hong Kong flu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:54.381Z",
+   "snapshot": "eb866da31ce5dd7a19b9befa9aacbf0939dd710783d8466e42a673933cd77d0b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Swine flu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bird flu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vogelgrippe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-044"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Spanish flu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Asian flu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hong Kong flu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:10.591Z",
+   "target": "f06701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 2009 swine flu pandemic, caused by the H1N1/swine flu/influenza virus and declared by the World Health Organization (WHO) from June 2009 to August 2010, was the third recent flu pandemic involving the H1N1 virus (the first being the 1918–1920 Spanish flu pandemic and the second being the 1977",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Swine flu” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:10.591Z",
+   "target": "f06702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Influenza A virus subtype H5N1 (A/H5N1) is a subtype of the influenza A virus that causes the disease avian influenza (often referred to as \"bird flu\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bird flu” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:10.591Z",
+   "target": "f06702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vogelgrippe H5N1 ist eine Viruserkrankung der Vögel (darunter auch Pinguine), hervorgerufen durch das Influenza-A-Virus H5N1 (A/H5N1).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vogelgrippe” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:10.591Z",
+   "target": "f06703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 1918–1920 flu pandemic, also known as the Great Influenza epidemic or by the misleading name Spanish flu, was an exceptionally deadly global influenza pandemic caused by the H1N1 subtype of the influenza A virus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spanish flu” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:10.591Z",
+   "target": "f06704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 1957–1958 Asian flu pandemic was a global pandemic of influenza A virus subtype H2N2 that originated in Guizhou in Southern China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asian flu” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:10.591Z",
+   "target": "f06705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Hong Kong flu, also known as the 1968 flu pandemic, was an influenza pandemic that occurred between 1968 and 1970 and which killed between one and four million people globally.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.591Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hong Kong flu” is on the snapshot of s6"
+  }
+ ]
+}

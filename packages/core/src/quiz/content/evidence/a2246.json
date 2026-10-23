@@ -1,0 +1,296 @@
+{
+ "article": "a2246",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Pitch_Perfect",
+   "title": "Pitch Perfect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:20.973Z",
+   "snapshot": "6fd69cec6014e0257137d9516cc9d1bc2d82027ceb9ff0b0659f9e5c2af5f5a8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mamma_Mia!_(Film)",
+   "title": "Mamma Mia! (Film)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:22.039Z",
+   "snapshot": "21f56059da3be23f22811689eca6674e192931cfbda7bcc73184f3b17e36f74e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mamma_Mia!_(film)",
+   "title": "Mamma Mia! (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:24.804Z",
+   "snapshot": "4ebde54a1355b6df58cdeeefc62c3c54e213b0b04f7a66c94f4bcfd7e477a3bf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Greatest_Showman",
+   "title": "The Greatest Showman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:25.711Z",
+   "snapshot": "8b88c964b3e5cbb0847916e2af7a02625886124b441b8a205f559d2bbf265d49"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/La_La_Land",
+   "title": "La La Land – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:26.828Z",
+   "snapshot": "66f51775a7764a1aad94e09c362dfc355487c21c142e518f9ebeb8cccc0112d4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables_(2012_film)",
+   "title": "Les Misérables (2012 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:27.930Z",
+   "snapshot": "086db22d840607c8fcb884d11ff87b189bdaff3fe838eee743d23387a739b33e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/P._T._Barnum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:28.804Z",
+   "snapshot": "885e362a4ddf127955013ea9d9b72bcd7facb2d4c56d21fa0937f6786d469da4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A cappella",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Benny Andersson und Björn Ulvaeus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-222"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Skopelos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "P. T. Barnum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "City of Stars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Anne Hathaway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:42.983Z",
+   "target": "f11507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Komödie basiert lose auf Mickey Rapkins Sachbuch Pitch Perfect: The Quest for Collegiate A Cappella Glory aus dem Jahr 2008.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A cappella” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:42.983Z",
+   "target": "f11508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die beiden männlichen Mitglieder von ABBA, Benny Andersson und Björn Ulvaeus, sind im Film in kurzen Cameo-Gastauftritten zu sehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benny Andersson und Björn Ulvaeus” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:42.983Z",
+   "target": "f11509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Principal photography primarily took place on the Greek island of Skopelos from August to September 2007, with ABBA members Benny Andersson and Björn Ulvaeus composing the film's score.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skopelos” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:42.983Z",
+   "target": "f11510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The film is a heavily fictionalized depiction of the life of P. T. Barnum, the establishment of his circus, and the lives of its star performers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “P. T. Barnum” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:42.983Z",
+   "target": "f11511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Seb begins to perform regularly at a jazz club, and the two of them eventually move in together (\"City of Stars\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “City of Stars” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:42.983Z",
+   "target": "f11512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The film stars Hugh Jackman, Russell Crowe, Anne Hathaway, Eddie Redmayne, Amanda Seyfried, Helena Bonham Carter and Sacha Baron Cohen, with Samantha Barks, Aaron Tveit and Daniel Huttlestone in supporting roles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.983Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anne Hathaway” is on the snapshot of s6"
+  }
+ ]
+}

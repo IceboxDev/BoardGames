@@ -1,0 +1,195 @@
+{
+ "article": "a0530",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Eureka_(word)",
+   "title": "Eureka (word) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:53.054Z",
+   "snapshot": "ac6fc7c367e415fa50ebd634de253878498acc70d61b9465759f90e5c63ceaf2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/And_yet_it_moves",
+   "title": "And yet it moves – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:54.013Z",
+   "snapshot": "0e22e89e2449d9d4d3fd8fc2a5a4253e18a8edc9ece2e186d8b5ce74be4f7bbd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Zela_(47_BC)",
+   "title": "Battle of Zela (47 BC) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:55.035Z",
+   "snapshot": "d9df21f998fdab2834b13cae037bba8f8178773a26c2ab1ede047fe5542a0bb0"
+  },
+  "s4": {
+   "url": "https://fr.wikipedia.org/wiki/L%27%C3%89tat,_c%27est_moi",
+   "title": "L'État, c'est moi – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:02:52.514Z",
+   "snapshot": "84b67f7d9d3e21d99d694001c5bce77bab6045d075ccf09e058efc31c465fd19"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eureka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c045"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eppur si muove",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Veni, vidi, vici",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "L'État, c'est moi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:03.157Z",
+   "target": "f02646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eureka (Ancient Greek: εὕρηκα, romanized: héurēka) is an exclamation used to celebrate a discovery or invention.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.157Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eureka” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:03.157Z",
+   "target": "f02647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "E pur si muove or Eppur si muove [epˈpur si ˈmwɔːve] ('And yet it moves' or 'Although it does move') is an Italian phrase commonly attributed to the Italian physicist and astronomer Galileo Galilei (1564–1642).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.157Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eppur si muove” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:03.157Z",
+   "target": "f02649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Following his swift victory, Caesar famously declared, Veni, Vidi, Vici (\"I came, I saw, I conquered\"), emphasizing the speed and decisiveness of his triumph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.157Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Veni, vidi, vici” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:03.157Z",
+   "target": "f02650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "L'État, c'est moi est une formule apocryphe que Louis XIV, roi de France et de Navarre, aurait prononcée le 13 avril 1655 devant les parlementaires parisiens.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.157Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “L'État, c'est moi” is on the snapshot of s4"
+  }
+ ]
+}

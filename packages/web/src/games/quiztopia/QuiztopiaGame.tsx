@@ -4,20 +4,19 @@ import type {
   QuiztopiaResult,
 } from "@boardgames/core/games/quiztopia/types";
 import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { BoardFallback } from "../../components/RouteFallback";
 import { useGameShell } from "../../hooks/useGameShell";
 import { useSessionFlow } from "../../hooks/useSessionFlow";
+import { TRAINER_BASE } from "../../trainers/quiz/paths";
 import type { GameComponentProps } from "../types";
 import QuiztopiaBoard from "./components/board/QuiztopiaBoard";
 import QuiztopiaGameOver from "./components/game-over/QuiztopiaGameOver";
-import TrainerRoutes from "./components/trainer/TrainerRoutes";
-import { TRAINER_BASE } from "./paths";
 
 /**
  * Quiztopia's two surfaces:
- *   - Solo "Trainer" — the flashcard programme + wiki, nested routes under
- *     `/play/quiztopia/solo/*` (rendered by `<TrainerRoutes>`).
+ *   - Solo "Trainer" — the platform's quiz trainer (`/trainer/quiz`), where
+ *     Quiztopia's questions are studied beside every other quiz game's.
  *   - Multiplayer — the server-authoritative co-op referee room.
  *
  * The machine's `getActivePlayer` is −1 while playing (help cards, tip flips
@@ -26,7 +25,7 @@ import { TRAINER_BASE } from "./paths";
  * offers only what `legalActions` lists.
  */
 export default function QuiztopiaGame({ source }: GameComponentProps) {
-  if (source === "solo") return <TrainerRoutes />;
+  if (source === "solo") return <Navigate to={TRAINER_BASE} replace />;
   return <QuiztopiaRoom />;
 }
 

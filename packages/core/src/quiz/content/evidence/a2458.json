@@ -1,0 +1,462 @@
+{
+ "article": "a2458",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Malcolm_Gladwell",
+   "title": "Malcolm Gladwell",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:18.323Z",
+   "snapshot": "37463312c73b86c0249ce0fd7141a0ffa9fceba1a17608b403a805c690242d15"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Kunst_des_klaren_Denkens:_52_Denkfehler,_die_Sie_besser_anderen_%C3%BCberlassen",
+   "title": "Die Kunst des klaren Denkens: 52 Denkfehler, die Sie besser anderen überlassen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:19.345Z",
+   "snapshot": "3f08040faa3903e38ff94cb20e3236cc4c5f1bfc4b58b25fa1aac505f0e5b2d9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Outliers_(book)",
+   "title": "Outliers (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:20.989Z",
+   "snapshot": "c67975f2d9ea33a688aea17e2f05256664637143dd520bed5ae794ca3a9613b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Freakonomics",
+   "title": "Freakonomics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:22.118Z",
+   "snapshot": "ab7d41c6dbefb3a2c55e90cc8b195d4ccec15e01dd8af0bbe1ca5fcea4ebd790"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nudge_(book)",
+   "title": "Nudge (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:23.016Z",
+   "snapshot": "5be182339eaac48d05ce0d8de924c291195c66e97376288cb1a1c510b234dce5"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Rolf_Dobelli",
+   "title": "Rolf Dobelli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:20.739Z",
+   "snapshot": "e00a05676297319072b346f975593485ad74009cd5309c6c0ce5d98982fe4717"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/magazine-26384712",
+   "title": "Can 10,000 hours of practice make you an expert?",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:26.848Z",
+   "snapshot": "9e6da79d9bf67ecc1c87b96d04bb6f306abb3897d262b9fe795e8f153a43e892"
+  },
+  "s8": {
+   "url": "https://www.newyorker.com/sports/sporting-scene/complexity-and-the-ten-thousand-hour-rule",
+   "title": "Complexity and the Ten-Thousand-Hour Rule",
+   "publisher": "The New Yorker (Malcolm Gladwell)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:27.037Z",
+   "snapshot": "e5f7cf08a51a2d2488a039fecc8e11791b578e7d59ba448deeae63382d2705b5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Malcolm Gladwell",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-353"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Kunst des klaren Denkens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-364"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "10,000 hours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12942",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Freakonomics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nudge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nassim Nicholas Taleb",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:22.816Z",
+   "target": "f12939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das war meine Rettung: “Geh ungewöhnliche Wege”, Die Zeit, Interview von Herlinde Koelbl mit Malcolm Gladwell, 30.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malcolm Gladwell” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:22.816Z",
+   "target": "f12940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Kunst des klaren Denkens: 52 Denkfehler, die Sie besser anderen überlassen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Kunst des klaren Denkens” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:22.816Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gladwell repeatedly mentions the \"10,000-Hour Rule\", claiming that the key to achieving world-class expertise in any skill, is, to a large extent, a matter of practicing the correct way, for a total of around 10,000 hours, though the authors of the original study have disputed Gladwell's usage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “10,000 hours” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:22.816Z",
+   "target": "f12942",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Freakonomics: A Rogue Economist Explores the Hidden Side of Everything is the debut non-fiction book by University of Chicago economist Steven Levitt and New York Times journalist Stephen J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Freakonomics” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:22.816Z",
+   "target": "f12943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nudge: Improving Decisions about Health, Wealth, and Happiness is a book written by University of Chicago economist and Nobel laureate Richard H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nudge” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:22.816Z",
+   "target": "f12944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im September 2013 erhob der Autor Nassim Nicholas Taleb den Vorwurf, Dobelli hätte in Die Kunst des klaren Denkens und in einem Artikel in der Die Zeit mehrere Passagen aus seinen Werken plagiiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nassim Nicholas Taleb” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:01:52Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is Malcolm Gladwell's hugely popular book, Outliers, that is largely responsible for introducing \"the 10,000-hour rule\" to a mass audience - it's the name of one of the chapters.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:01:55Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This is the scholarly tradition I was referring to in my book “Outliers,” when I wrote about the “ten-thousand-hour rule.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gladwell's own article"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:01:58Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Throughout the book, Gladwell repeatedly mentions the \"10,000-Hour Rule\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:05.735Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is Malcolm Gladwell's hugely popular book, Outliers, that is largely responsible for introducing \"the 10,000-hour rule\" to a mass audience - it's the name of one of the chapters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:05.735Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This is the scholarly tradition I was referring to in my book “Outliers,” when I wrote about the “ten-thousand-hour rule.”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:05.735Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Throughout the book, Gladwell repeatedly mentions the \"10,000-Hour Rule\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:05.735Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Can 10,000 hours of practice make you an expert?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “10,000 hours” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:05.735Z",
+   "target": "f12941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Based on research suggesting that practice is the essence of genius, best-selling author Malcolm Gladwell popularized the idea that 10,000 hours of appropriately guided practice was “the magic number of greatness,” regardless of a person’s natural aptitude.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:05.735Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “10,000 hours” is on the snapshot of s8"
+  }
+ ]
+}

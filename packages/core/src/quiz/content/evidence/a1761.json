@@ -1,0 +1,468 @@
+{
+ "article": "a1761",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/hypochondria",
+   "title": "hypochondria – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/claustrophobia",
+   "title": "claustrophobia – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Agoraphobia",
+   "title": "Agoraphobia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:07.211Z",
+   "snapshot": "38a162c84fa4e768e2439082594804b155e0f862eba6c34777bf7fa44cc48b02"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Molaison",
+   "title": "Henry Molaison – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:45.405Z",
+   "snapshot": "b80b9219f2065f580c809b2288b51e90e486b9b6b7312d1e877e537dd36e5731"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jean-%C3%89tienne_Dominique_Esquirol",
+   "title": "Jean-Étienne Dominique Esquirol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:47.275Z",
+   "snapshot": "59b0b16576f847476971770b1a41ac672a00fc9cb74f3cd54d10f673138acc85"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/hypochondria",
+   "title": "HYPOCHONDRIA – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:13.029Z",
+   "snapshot": "204b8c07c1675e571feb980f5cb3e147f37f042ea3ee3b6f8be74f1372a06109"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Hypochondriasis",
+   "title": "Hypochondria – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:13.293Z",
+   "snapshot": "0cb8992eb7bb4e1646653336ea0852a982a6a1ff81c7a6c99281d960bdcfe97a"
+  },
+  "s8": {
+   "url": "https://www.nhs.uk/mental-health/conditions/claustrophobia/",
+   "title": "Claustrophobia – NHS",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:53.459Z",
+   "snapshot": "4929dff7699a7f4a249c5e3635cf58f11b3138c650b97eddb76c950ebfeca077"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/claustrophobia",
+   "title": "CLAUSTROPHOBIA – Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:53.690Z",
+   "snapshot": "157f634569fca7ae040c657a03f9a22b9ea499605d9b858ab2d7420cbdd3d0a2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hypochondria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c147"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Claustrophobia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Agoraphobia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Amnesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hallucination",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:18.089Z",
+   "target": "f08803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Agoraphobia is an anxiety disorder characterized by symptoms of anxiety in situations where people perceive their environment to be unsafe with no way to escape.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agoraphobia” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:18.089Z",
+   "target": "f08804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "After the surgery, which was partially successful in controlling his seizures, Molaison developed severe anterograde amnesia: although his working memory and procedural memory were intact, because his hippocampi was severed from the rest of his brain, Molaison lost his ability to remember and his",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amnesia” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:18.089Z",
+   "target": "f08805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was in 1817 that he coined the word hallucination.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:18.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hallucination” is on the snapshot of s5"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:26:33Z",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a state in which a person continuously worries about their health without having any reason to do so",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:26:35Z",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hypochondria is often characterized by fears that minor bodily or mental symptoms may indicate a serious illness, constant self-examination and self-diagnosis",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:26:36Z",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Claustrophobia is the irrational fear of confined spaces. People affected by claustrophobia will often go out of their way to avoid confined spaces, such as lifts, tunnels, tube trains and public toilets.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:26:39Z",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "He suffers from claustrophobia so he never travels on underground trains",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a state in which a person continuously worries about their health without having any reason to do so",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hypochondria is often characterized by fears that minor bodily or mental symptoms may indicate a serious illness, constant self-examination and self-diagnosis",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Claustrophobia is the irrational fear of confined spaces. People affected by claustrophobia will often go out of their way to avoid confined spaces, such as lifts, tunnels, tube trains and public toilets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "He suffers from claustrophobia so he never travels on underground trains",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "HYPOCHONDRIA | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hypochondria” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hypochondriasis or hypochondria is a condition in which a person is excessively and unduly worried about having a serious illness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hypochondria” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Claustrophobia is the irrational fear of confined spaces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Claustrophobia” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:05.638Z",
+   "target": "f08802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "CLAUSTROPHOBIA | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Claustrophobia” is on the snapshot of s9"
+  }
+ ]
+}

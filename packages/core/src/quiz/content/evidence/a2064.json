@@ -1,0 +1,402 @@
+{
+ "article": "a2064",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fleming_valve",
+   "title": "Fleming valve – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:01.745Z",
+   "snapshot": "df6c515edcc68de786ce74725f8fb701c8e82efde59a5450bfd404b922af7e17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Triode",
+   "title": "Triode – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:02.853Z",
+   "snapshot": "2533eaa843e0d96913bd4535eb602713c2df6ae364c293e2d9102d21510a2ec1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pentode",
+   "title": "Pentode – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:03.752Z",
+   "snapshot": "b2212c2f331e8595bd387637d8afc50f45b449fd3e9e11b9420da702a77f5c99"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/K._Ferdinand_Braun",
+   "title": "K. Ferdinand Braun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:04.821Z",
+   "snapshot": "fabf87945c2d25d9b135138d6e1446dcd6e3cbd2370794686b94120e3703b1dc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cavity_magnetron",
+   "title": "Cavity magnetron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:05.845Z",
+   "snapshot": "913d006d9145ec9bdb0da3119d384ccc041c30971f65f5a3104068ad4bd9fe91"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Percy_Spencer",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:06.732Z",
+   "snapshot": "3173923cc17050047430de1fee5dfc7e3fd5b9051337b02803364ac9f9c5f13a"
+  },
+  "s7": {
+   "url": "https://owl.museum-digital.de/object/4256",
+   "title": "Elektronenröhre (Triode) von Lee de Forest, 1906 – Heinz Nixdorf MuseumsForum",
+   "publisher": "Heinz Nixdorf MuseumsForum (museum-digital)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:19.713Z",
+   "snapshot": "01c476ac9a388a6a1e8f39872a182e188ef4bf3d26d02d79928a553520355b07"
+  },
+  "s8": {
+   "url": "https://ethw.org/Lee_De_Forest",
+   "title": "Lee De Forest – Engineering and Technology History Wiki",
+   "publisher": "IEEE History Center (ETHW)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:20.097Z",
+   "snapshot": "1508f7d7e954570c26a83b05e0b6c02666d1262465442d7d403ecedb4f0385bd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10316",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Diode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Triode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pentode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10319",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cathode-ray tube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Magnetron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:16.199Z",
+   "target": "f10316",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was the first practical vacuum tube and the first thermionic diode, a vacuum tube whose purpose is to conduct current in one direction and block current flowing in the opposite direction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diode” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:16.199Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A triode is an electronic amplifying vacuum tube (or thermionic valve in British English) consisting of three electrodes inside an evacuated glass envelope: a heated filament or cathode, a grid, and a plate (anode).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Triode” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:16.199Z",
+   "target": "f10318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A pentode is an electronic device having five electrodes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pentode” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:16.199Z",
+   "target": "f10319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Braun built the first cathode-ray tube in 1897, which led to the development of television, and the first semiconductor diode in 1874, which co-started the development of electronics and electronics engineering.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cathode-ray tube” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:16.199Z",
+   "target": "f10320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The cavity magnetron is a high-power vacuum tube used in early radar systems and subsequently in microwave ovens and in linear particle accelerators.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magnetron” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:46:29Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A triode is an electronic amplifying vacuum tube (or thermionic valve in British English) consisting of three electrodes inside an evacuated glass envelope: a heated filament or cathode, a grid, and a plate (ano",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:46:31Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit der Einführung einer steuernden Elektrode, dem Gitter, zwischen Kathode und Anode in einer evakuierten Röhre können zum ersten Mal kontinuierliche elektrische Signale verstärkt werden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same record: 'Lee de Forest meldete am 31. Dezember 1906 die Triode zum Patent an.' Not time-sensitive: a definition."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:46:33Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "patented the Audion, which is a three element vacuum tube that was a sensitive wireless receptor, in 1907.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:02.534Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A triode is an electronic amplifying vacuum tube (or thermionic valve in British English) consisting of three electrodes inside an evacuated glass envelope: a heated filament or cathode, a grid, and a plate (ano",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:02.534Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit der Einführung einer steuernden Elektrode, dem Gitter, zwischen Kathode und Anode in einer evakuierten Röhre können zum ersten Mal kontinuierliche elektrische Signale verstärkt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:02.534Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "patented the Audion, which is a three element vacuum tube that was a sensitive wireless receptor, in 1907.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:02.534Z",
+   "target": "f10317",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dezember 1906 die Triode zum Patent an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:02.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Triode” is on the snapshot of s7"
+  }
+ ]
+}

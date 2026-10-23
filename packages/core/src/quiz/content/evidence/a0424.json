@@ -1,0 +1,287 @@
+{
+ "article": "a0424",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Heike_Makatsch",
+   "title": "Heike Makatsch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:03.972Z",
+   "snapshot": "22823abbb947fafa4371e421a89b8ec417b24ad32837190fb53c50d814d5db00"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Troy_(film)",
+   "title": "Troy (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:32.371Z",
+   "snapshot": "b69bcac523341b181c489265121aeb9b6287c915273cf3d4a3513b4dbdd16675"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Zweiohrk%C3%BCken",
+   "title": "Zweiohrküken – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:05.436Z",
+   "snapshot": "4c3a166263004f6c31dfedf9eec4d071362bb51f3086819d68420bef6c61ad02"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Nora_Tschirner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:06.543Z",
+   "snapshot": "d4f189db790210ccdf9994a011c91345e9dcba6e67a26e5f360983edbad38ad4"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ralf_Moeller",
+   "title": "Ralf Moeller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:07.534Z",
+   "snapshot": "a1ab6b1a4d656b34ec9827ca40a95bbb1d9de2124688a81e3839ed09c131b7bf"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Matthias_Schweigh%C3%B6fer",
+   "title": "Matthias Schweighöfer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:08.029Z",
+   "snapshot": "c7e87b064f90297ec6a5b994067b825ccc24a71e90b32db2d349d4a954ff8f85"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heike Makatsch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Diane Kruger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nora Tschirner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nora Tschirner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ralf Möller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Anklam",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-234"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:46.274Z",
+   "target": "f02116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heike Makatsch kam 1971 in Düsseldorf als Tochter einer Grundschullehrerin und des deutschen Eishockey-Nationaltorwarts Rainer Makatsch (* 1946) zur Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heike Makatsch” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:46.274Z",
+   "target": "f02117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Produced by units in Malta, Mexico, and Britain's Shepperton Studios, the film features an ensemble cast led by Brad Pitt, Eric Bana, Orlando Bloom, Diane Kruger, Sean Bean, Brian Cox, Brendan Gleeson, Rose Byrne, and Peter O'Toole.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diane Kruger” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:46.274Z",
+   "target": "f02119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nora Tschirner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Nora Tschirner”, “Нора Чирнер”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:46.274Z",
+   "target": "f02119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nora Tschirner wurde in Berlin geboren und wuchs dort mit ihren zwei älteren Brüdern auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nora Tschirner” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:46.274Z",
+   "target": "f02120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gespräch mit Ralf Möller, Weltwach, Juni 2018",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ralf Möller” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:46.274Z",
+   "target": "f11352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "März 1981 in Anklam) ist ein deutscher Schauspieler, Synchronsprecher, Filmregisseur, Filmproduzent, Moderator und Sänger.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anklam” is on the snapshot of s6"
+  }
+ ]
+}

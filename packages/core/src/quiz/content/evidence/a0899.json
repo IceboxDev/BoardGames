@@ -1,0 +1,438 @@
+{
+ "article": "a0899",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rapunzel",
+   "title": "Rapunzel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:44.393Z",
+   "snapshot": "e696b86ea075b6def20eab68f0fa3ec23a83906a4a5e070ce86c9a416b6176df"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gew%C3%B6hnlicher_L%C3%B6wenzahn",
+   "title": "Gewöhnlicher Löwenzahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:41.556Z",
+   "snapshot": "923e890476664a89c9dcb54e83e8a8995a6633931f6ecf96192ce12442221728"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Capitulare_de_villis",
+   "title": "Capitulare de villis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:56.277Z",
+   "snapshot": "87e8aa4d4b2a25de454bac80baed97729682762305d8c2c85aa71e26e202afdd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Rucola",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:42.788Z",
+   "snapshot": "2ad4748102fb94cb78edfdf391ecdf434b030d5484a88ac2b253763b96f198af"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eggplant",
+   "title": "Eggplant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:15.475Z",
+   "snapshot": "659af91375a8ceb1791a1b0e2c7ab2d023c4cf993d719854a0003a52d9877a5a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tomate",
+   "title": "Tomate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:43.633Z",
+   "snapshot": "45e251608b30ef24f114820e04f8741409c2bfe560530581a324ac3eea0c5abd"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Eierfrucht",
+   "title": "Eierfrucht – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:32.856Z",
+   "snapshot": "af7a12cbe3289fff906853341c5023564002b103aea4aff2090d03baf4642750"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Aubergine",
+   "title": "Aubergine – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:31.661Z",
+   "snapshot": "c4bcbfa8df3c79ae0c0ee3c818107eda2b86e411c79f3c56c7a786d1f11b6631"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rapunzel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pusteblume",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rauke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rauke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 16"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eierfrucht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Paradeiser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:01.996Z",
+   "target": "f04491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Rapunzel\" ( rə-PUN-zəl; German: [ʁaˈpʊnt͡sl̩] ; French: Raiponce or Persinette) is a German fairy tale most notably recorded by the Brothers Grimm and published in 1812 as part of Children's and Household Tales (KHM 12).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rapunzel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:01.996Z",
+   "target": "f04492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im Volksmund trägt die Pflanze daher auch den Namen Pusteblume.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pusteblume” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:01.996Z",
+   "target": "f04493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rauke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Rauke”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:01.996Z",
+   "target": "f04493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Als Rucola (auch Rukola, Rauke, Arugula) werden verschiedene Pflanzenarten aus der Familie der Kreuzblütengewächse gehandelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rauke” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:01.996Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eierfrucht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Eierfrucht”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:01.996Z",
+   "target": "f04495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Tomate (Solanum lycopersicum), in Österreich sowie in Südtirol auch der Paradeiser bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.996Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paradeiser” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:57Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "dunkelviolette oder weißliche, ei- bis gurkenförmige, fleischige Frucht der Eierpflanze; Aubergine",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:02Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Einen von der Etymologie völlig unabhängigen Ursprung hat der englische Name egg-plant bzw. die deutsche Entsprechung Eierfrucht .",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:15:09Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "First recorded in 1763, the word \"eggplant\" was originally applied to white cultivars, which look very much like hen's eggs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:31.338Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "dunkelviolette oder weißliche, ei- bis gurkenförmige, fleischige Frucht der Eierpflanze; Aubergine",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.338Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:31.338Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "First recorded in 1763, the word \"eggplant\" was originally applied to white cultivars, which look very much like hen's eggs",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.338Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:31.338Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Eierfrucht ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.338Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eierfrucht” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:31.338Z",
+   "target": "f04494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "die deutsche Entsprechung Eierfrucht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:31.338Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eierfrucht” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,554 @@
+{
+ "article": "a2301",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kinshasa",
+   "title": "Kinshasa",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:24.722Z",
+   "snapshot": "d4ea4692c73c8b1e9809aff16bed998d1354158a8193ed1528411e452bab822b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kinshasa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:28.667Z",
+   "snapshot": "baa4a95a64badec30f71a9affce208dea22b7dab92fc4d12c75aff0e18996954"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Algiers_Metro",
+   "title": "Algiers Metro",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:29.452Z",
+   "snapshot": "87d73af2172f646f8384e4df6041b94204537dc9994dc8fd96c08f62b87a2d6d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Brazzaville",
+   "title": "Brazzaville – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:30.560Z",
+   "snapshot": "12774af6b288487e85da1d17a4b50fb95312e2362e37af85f1ca912ed85af90d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gautrain",
+   "title": "Gautrain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:31.549Z",
+   "snapshot": "2bc1fc5af5943ff817f4277ca4f8a58223b679c58c191b75829440bac8ccfbd4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Addis_Ababa_Light_Rail",
+   "title": "Addis Ababa Light Rail – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:32.504Z",
+   "snapshot": "195c34c86960df9152c8f32df4c8b8af2f9932f20d6c23858f04cd20504c2f1d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Cairo_Metro",
+   "title": "Cairo Metro",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:00.977Z",
+   "snapshot": "6cea30937d001226d73f3da532fba90dba9300bf4c2111ed2a6752c02183954f"
+  },
+  "s8": {
+   "url": "https://www.railway-technology.com/projects/algiers-metro/",
+   "title": "Algiers Metro",
+   "publisher": "Railway Technology",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:01.301Z",
+   "snapshot": "393d51b307d1733614e736f5ab9ff7845bda3d2d29187be6059d4c2904829830"
+  },
+  "s9": {
+   "url": "https://www.francetvinfo.fr/monde/afrique/republique-democratique-du-congo/kinshasa-a-depasse-paris-comme-plus-grande-ville-francophone-du-monde_3060123.html",
+   "title": "Kinshasa a dépassé Paris comme plus grande ville francophone du monde",
+   "publisher": "franceinfo",
+   "kind": "press",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:46:01.609Z",
+   "snapshot": "6c0103785953210b246def5c6cc00d3bd664e86c92ea1c472a7d3d86563ae4fa"
+  },
+  "s10": {
+   "url": "https://www.lefigaro.fr/voyages/savez-vous-que-paris-n-est-pas-la-ville-la-plus-francophone-du-monde-20220815",
+   "title": "Savez-vous que Paris n'est plus la ville la plus francophone du monde ?",
+   "publisher": "Le Figaro",
+   "kind": "press",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:46:01.821Z",
+   "snapshot": "aeacbabdca836e78dd5233148e271e1d103b4396cf282cca640d9bc78ee791f4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Afrika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Egypt and Algeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-253"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brazzaville",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gautrain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Addis Ababa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:51.281Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Stadt ist mit mehr als 16 Millionen Einwohnern (2023) noch vor Lagos die größte Stadt in Afrika und die größte frankophone Stadt der Welt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afrika” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:51.281Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the most densely populated city in the DRC, the third-most populous city and third-largest metropolitan area in Africa, the world's seventh-most populous city proper (the most populous outside of China), and the fourth-most populous capital city in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Africa” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:51.281Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Egypt and Algeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Egypt and Algeria”, “Ägypten und Algerien”, “Египет и Алжир”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:51.281Z",
+   "target": "f11888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brazzaville (French pronunciation: [bʁazavil]) is the capital and largest city of the Republic of the Congo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brazzaville” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:51.281Z",
+   "target": "f11889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gautrain is an 80-kilometre (50-mile) higher-speed express commuter rail system in Gauteng, South Africa, which links Johannesburg, Pretoria, Kempton Park and O.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gautrain” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:51.281Z",
+   "target": "f11890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Addis Ababa Light Rail (Amharic: የአዲስ አበባ ቀላል ባቡር, romanized: Ye’Adīsi Abeba k’elali Baburi) is a light rail system in Addis Ababa, Ethiopia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Addis Ababa” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:35:21Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kinshasa is the largest nominally Francophone urban area globally",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Kinshasa, capital of the DR Congo, lies in Africa."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:35:54Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Algiers Metro was the second metro system to open in Africa, after the Cairo Metro.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Third African metro (Lagos) opened only in 2023, so as of 2016 Egypt and Algeria were the only two."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:35:56Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was the first of the three full-fledged metro systems in Africa and the first in the Middle East to be constructed.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:37:04Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is Algeria’s first metro system and the second metro transport system in Africa.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Second after Cairo (1987); the third, Lagos, opened in 2023 — so as of 2016 only Egypt and Algeria."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:53:51Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ce n'est plus Paris mais Kinshasa, la capitale de la République Démocratique du Congo, qui détient ce titre, selon l'ONU.",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:53:54Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Kinshasa (République démocratique du Congo) est l'aire urbaine francophone la plus peuplée devant celle de Paris.",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:36.476Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kinshasa is the largest nominally Francophone urban area globally",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.476Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:36.476Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Algiers Metro was the second metro system to open in Africa, after the Cairo Metro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.476Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:36.476Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was the first of the three full-fledged metro systems in Africa and the first in the Middle East to be constructed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.476Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:36.476Z",
+   "target": "f11887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is Algeria’s first metro system and the second metro transport system in Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.476Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:36.476Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ce n'est plus Paris mais Kinshasa, la capitale de la République Démocratique du Congo, qui détient ce titre, selon l'ONU.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.476Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:36.476Z",
+   "target": "f11886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Kinshasa (République démocratique du Congo) est l'aire urbaine francophone la plus peuplée devant celle de Paris.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.476Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  }
+ ]
+}

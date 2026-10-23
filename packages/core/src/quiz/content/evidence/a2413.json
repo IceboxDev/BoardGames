@@ -1,0 +1,242 @@
+{
+ "article": "a2413",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Schildkr%C3%B6te_und_der_Hase_(Fabel)",
+   "title": "Die Schildkröte und der Hase (Fabel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:20.428Z",
+   "snapshot": "81da5a3dd04e5c55463c3ba727e41170694532650259e81e2cfc0a8ba6b1117f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Tortoise_and_the_Hare",
+   "title": "The Tortoise and the Hare – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:23.191Z",
+   "snapshot": "067f33460923f906360c9b0c7cded3c4ff4cced9bef7552ee8f84ecadabc207b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Fox_and_the_Grapes",
+   "title": "The Fox and the Grapes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:24.180Z",
+   "snapshot": "5d2c6e407139df4ada0ee03f37118916568294313e5756fcba8cd42a80166899"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf",
+   "title": "The Boy Who Cried Wolf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:25.212Z",
+   "snapshot": "3a46d97a1fde33ad69ffe4f3d7c17c62785698ae41427368d15724ab28e0e3a0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Lion_and_the_Mouse",
+   "title": "The Lion and the Mouse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:26.202Z",
+   "snapshot": "ce61474727d0994f5c12024ff5f18877ea95e50f1ccbff5c9aa6d3e7f834cd22"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der Hase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a nap",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "shepherd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the mouse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:16.480Z",
+   "target": "f12642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Schildkröte und der Hase (Fabel)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “der Hase” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:16.480Z",
+   "target": "f12643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The hare soon leaves the tortoise behind and, confident of winning, takes a nap midway through the race.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “a nap” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:16.480Z",
+   "target": "f12644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The expression \"sour grapes\" originated from this fable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sour” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:16.480Z",
+   "target": "f12645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tale concerns a shepherd boy who repeatedly tricks villagers into believing a wolf is attacking his flock.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “shepherd” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:16.480Z",
+   "target": "f12646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Lion and the Mouse is one of Aesop's Fables, numbered 150 in the Perry Index.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the mouse” is on the snapshot of s5"
+  }
+ ]
+}

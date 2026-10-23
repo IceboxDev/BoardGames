@@ -1,0 +1,584 @@
+{
+ "article": "a0265",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Django_Reinhardt",
+   "title": "Django Reinhardt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:39.681Z",
+   "snapshot": "927c3afca9d6b778f5d639bebd61600d9d00adaf399ff1bc7a8476daf0376a63"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tony_Iommi",
+   "title": "Tony Iommi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:40.910Z",
+   "snapshot": "b3764ccb704e65ce3bba6d7f3664113173893068d3ea281d132931dc45313dac"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_Special",
+   "title": "Red Special – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:41.698Z",
+   "snapshot": "d5ede24cac5d4abaaf2e6c04bb5166036d5444d85ddf0ef34af7741960248206"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monterey_International_Pop_Festival",
+   "title": "Monterey International Pop Festival – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:42.769Z",
+   "snapshot": "b522ca8d3c6bdbeb7cb18d6b346d82ca3810090e29ae1d43d2d6e8967d1ca32b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Jimi_Hendrix",
+   "title": "Jimi Hendrix",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:42:40.079Z",
+   "snapshot": "8eb760ff753f8241a55e03a8021a7cf1c2b60ed4b917c1fa664cea8869bc290a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Layla",
+   "title": "Layla – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:43.776Z",
+   "snapshot": "6764d51953d9383ab2cc3e419574fe30f0d2decd2b88ac87926ab0ed60fc5426"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Jimi_Hendrix",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:44.876Z",
+   "snapshot": "878a41a727e4e5da331d2d2db8507180fcba4be91ce6b2439240f3dd70462b76"
+  },
+  "s8": {
+   "url": "https://www.theguardian.com/lifeandstyle/2014/oct/18/brian-may-queen-guitar-red-special-dad",
+   "title": "Brian May: Me, my dad and ‘the old lady’",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:56.934Z",
+   "snapshot": "f20e66b7dcfdf409631e8b840cbd7133d9c037660513dec524c59c3158748de1"
+  },
+  "s9": {
+   "url": "https://www.rockhall.com/inductees/jimi-hendrix-experience",
+   "title": "Jimi Hendrix Experience – Rock & Roll Hall of Fame",
+   "publisher": "Rock & Roll Hall of Fame",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:57.665Z",
+   "snapshot": "cf1533372dbe6a9c9e13a50e870281f47f245736194669063e72a13c800778a0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Django Reinhardt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tony Iommi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brian May",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jimi Hendrix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jimi Hendrix",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-291"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01325",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eric Clapton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:21.577Z",
+   "target": "f01321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Decca Records in the United States released three records of Quintette tunes with Reinhardt on guitar, and one other, credited to \"Stephane Grappelli & His Hot 4 with Django Reinhardt\", in 1935.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Django Reinhardt” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:21.577Z",
+   "target": "f01322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The album featured Glenn Hughes (also formerly of Deep Purple) on vocals, but due to label pressures, it was billed as a release by \"Black Sabbath featuring Tony Iommi\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tony Iommi” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:21.577Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Red Special is the electric guitar designed and built by Queen's guitarist Brian May and his father, Harold, when Brian was a teenager in the early 1960s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brian May” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:21.577Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The festival is remembered for the first major American appearances by the Jimi Hendrix Experience, the Who, and Ravi Shankar, the first large-scale public performance of Janis Joplin, and the introduction of Otis Redding to a mass American audience.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jimi Hendrix” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:21.577Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mit seinen Bands – unter anderem The Jimi Hendrix Experience, Band of Gypsys und Gypsy Sun And Rainbows – hatte er Auftritte auf den populärsten Musikfestivals seiner Zeit, so 1967 beim Monterey Pop Festival, 1969 beim Woodstock-Festival und 1970 auf der Isle of Wight.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jimi Hendrix” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:21.577Z",
+   "target": "f01325",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"Layla\" is a song written by Eric Clapton and Jim Gordon, originally recorded with their band Derek and the Dominos, as the thirteenth track from their only studio album, Layla and Other Assorted Love Songs (1970).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.577Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eric Clapton” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:53:59Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The name Fireplace is a reference to the fact that the wood used to make the neck came from a fireplace mantel.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:54:01Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "When Brian May was a teenager, he and his father built their own electric guitar, the Red Special.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:54:03Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It’s the one he’s played on every Queen album",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the reworded, non-time-sensitive clause (played on every Queen album)."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:54:06Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hendrix mainly played right-handed guitars that were turned upside down and restrung for left-hand playing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:54:07Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Von Rolling Stone, Guitar World und anderen Zeitschriften wurde er zum besten E-Gitarristen aller Zeiten ernannt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23",
+   "note": "Rolling Stone ranked him No. 1 among guitarists; the card's 'most influential' paraphrases that ranking."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:54:10Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jimi Hendrix revolutionized electric guitar playing",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The name Fireplace is a reference to the fact that the wood used to make the neck came from a fireplace mantel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It’s the one he’s played on every Queen album",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hendrix mainly played right-handed guitars that were turned upside down and restrung for left-hand playing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Von Rolling Stone, Guitar World und anderen Zeitschriften wurde er zum besten E-Gitarristen aller Zeiten ernannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jimi Hendrix revolutionized electric guitar playing",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Brian May: Me, my dad and ‘the old lady’ | Family | The Guardian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Brian May” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He was inducted into the Rock and Roll Hall of Fame in 1992 as a part of his band, the Jimi Hendrix Experience; the institution describes him as \"arguably the greatest instrumentalist in the history of rock music\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jimi Hendrix” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:41.460Z",
+   "target": "f01324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jimi Hendrix Experience | Rock & Roll Hall of Fame",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jimi Hendrix” is on the snapshot of s9"
+  }
+ ]
+}

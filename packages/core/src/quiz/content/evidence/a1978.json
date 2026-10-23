@@ -1,0 +1,618 @@
+{
+ "article": "a1978",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Angel_Falls",
+   "title": "Angel Falls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:19.691Z",
+   "snapshot": "5f8b183a451c8ff25beea82c3361f5c533c023407b454a29d720c8f148cbc9d3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Victoria_Falls",
+   "title": "Victoria Falls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:56.461Z",
+   "snapshot": "70004ecc845e20c1ea430f0b132d91dab1ad9abd9601f97b93105c5f18d51329"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Iguazu_Falls",
+   "title": "Iguazu Falls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:55.351Z",
+   "snapshot": "f3bc7d6da8947b0ead08fa38ba3a2ae171c0100a7d58cbb36a6920667c843523"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Hennepin",
+   "title": "Louis Hennepin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:20.628Z",
+   "snapshot": "c2fd65d310fd1ef336b6db25a1550b5769be7b3fa861fdf0ba0f38c637dbf1aa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Royal_Natal_National_Park",
+   "title": "Royal Natal National Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:21.635Z",
+   "snapshot": "7a00ced1e6e089b2eb0ac2d4725cf2afbb5f50c22b819708052f4676255d0f99"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tugela_Falls",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:22.602Z",
+   "snapshot": "4552daa4cb04e15c530526fbadb9e42fda12954d8832ef66202f10302b47a6b9"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Niagara_Falls",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:23.839Z",
+   "snapshot": "72971822fd1deb4ae38cdc8a7ad8960e3072289777d03348bc582c81f0289b81"
+  },
+  "s8": {
+   "url": "https://www.guinnessworldrecords.com/world-records/highest-waterfall",
+   "title": "Tallest waterfall",
+   "publisher": "Guinness World Records",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:30.694Z",
+   "snapshot": "592dfd16a7b4776db356c411bdb503b19e38c32f0a152701b017e593849bbe5e"
+  },
+  "s9": {
+   "url": "https://whc.unesco.org/en/list/701/",
+   "title": "Canaima National Park",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:10:22Z"
+  },
+  "s10": {
+   "url": "https://www.niagaraparks.com/niagara-falls-attractions/niagara-falls-geology-facts-figures/",
+   "title": "Niagara Falls Geology Facts & Figures",
+   "publisher": "Niagara Parks Commission",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:48.402Z",
+   "snapshot": "dd52e1644f6097d6d3ff8aa65ce31c54b850e671626140334c11c819dd4db581"
+  },
+  "s11": {
+   "url": "https://www.worldwaterfalldatabase.com/tallest-waterfalls/total-height",
+   "title": "World's Tallest Waterfalls By Total Overall Height",
+   "publisher": "World Waterfall Database",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:48.168Z",
+   "snapshot": "ee9f43015fffcc2cdef99297d1f8be6f90ee62e70ce150a2e8ab888576fb4bb7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angel Falls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Victoria Falls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Iguazu Falls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Niagara Falls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tugela Falls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:58.984Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angel Falls   (Spanish: Salto Ángel; Pemon: Körepakupai Vená) is a waterfall in Venezuela.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angel Falls” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:58.984Z",
+   "target": "f09887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Victoria Falls (Lozi: Mosi-oa-Tunya, \"Thundering Smoke/Smoke that Rises\"; Tonga: Shungu Namutitima, \"Boiling Water\") is a waterfall on the Zambezi River, located on the border between Zambia and Zimbabwe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Victoria Falls” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:58.984Z",
+   "target": "f09888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Iguazú Falls or Iguaçu Falls are waterfalls of the Iguazu River on the border of the Argentine province of Misiones and the Brazilian state of Paraná.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iguazu Falls” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:58.984Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Two great waterfalls were brought to Europe's attention by Hennepin: Niagara Falls, with the most voluminous flow of any in North America, and the Saint Anthony Falls in what is now Minneapolis, the only natural waterfall on the Mississippi River.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Niagara Falls” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:58.984Z",
+   "target": "f09890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The main feature of the park is the Drakensberg Amphitheatre, a rock wall 5 kilometres (3.1 mi) long and up to 1,200 metres (3,900 ft) high, Mont-Aux-Sources peak where the Orange and Tugela rivers have their source, and the 948-metre (3,110 ft) Tugela Falls.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.984Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tugela Falls” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:14Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It acquired its alternative name of \"Angel Falls\" after the American pilot Jimmie Angel (d. 8 December 1956) recorded the natural feature in his logbook after flying over it in November 1933.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:10:19Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The tallest waterfall is Kerepakupai Merú, aka Salto Ángel or Angel Falls",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:22Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The sheer cliffs and waterfalls, including the world's highest (1,000 m), form a spectacular landscape.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:10:25Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "they are named after Jimmie Angel, a U.S. aviator, who was the first person to fly over the falls 16 November 1933.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:10:28Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the combined falls have the highest flow rate of any waterfall in North America and the seventh largest in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23",
+   "note": "No second independent page fetched states the North American flow record verbatim (search budget exhausted); Niagara Parks gives 2,832 m³/s peak tourist flow, far above any other North American fall."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:10:31Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "What makes Niagara Falls so impressive is the amount of water flowing over. Most of the tallest falls in the world have very little water flowing over them.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the large flow; does not itself state the North American ranking."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:10:33Z",
+   "target": "f09890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The combined total drop of its five distinct free-leaping falls is officially 948 m (3,110 ft).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:10:36Z",
+   "target": "f09890",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "1. Tugela Falls 3,110 feet 948 meters Tugela River Kwazulu Natal, South Africa",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23",
+   "note": "Identifies the 948 m Drakensberg fall as Tugela Falls, but WWD ranks it FIRST by total height, not second; the 'second highest' ranking (behind Angel Falls, 979 m) is the conventional one and is disputed. Wording reworded to avoid asserting the rank."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The tallest waterfall is Kerepakupai Merú, aka Salto Ángel or Angel Falls",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "they are named after Jimmie Angel, a U.S. aviator, who was the first person to fly over the falls 16 November 1933.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the combined falls have the highest flow rate of any waterfall in North America and the seventh largest in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "What makes Niagara Falls so impressive is the amount of water flowing over. Most of the tallest falls in the world have very little water flowing over them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The combined total drop of its five distinct free-leaping falls is officially 948 m (3,110 ft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09890",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "1. Tugela Falls 3,110 feet 948 meters Tugela River Kwazulu Natal, South Africa",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kerepakupai Merú, aka Salto Ángel or Angel Falls",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Angel Falls” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Niagara Falls is a group of three waterfalls at the southern end of Niagara Gorge, spanning the border between the Canadian province of Ontario and the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Niagara Falls” is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:57:47.699Z",
+   "target": "f09889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Niagara Falls Facts | Geology Facts & Figures",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Niagara Falls” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-247",
+ "image": "IMG20261007181832.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "De Telegraaf ist die größte dänische Tageszeitung. Richtig oder falsch?",
+   "de": "In welchem Land ist De Telegraaf die auflagenstärkste Tageszeitung?",
+   "en": "In which country is De Telegraaf the best-selling daily newspaper?",
+   "reworked": true,
+   "answerDe": "Niederlande",
+   "answerEn": "Netherlands",
+   "timeline": {
+    "kind": "founding",
+    "start": "1893-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First issue of the Amsterdam daily newspaper De Telegraaf",
+    "labelDe": "Erstausgabe der Amsterdamer Tageszeitung De Telegraaf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/De_Telegraaf",
+    "title": "De Telegraaf",
+    "lang": "de"
+   },
+   "notes": "The card's claim is false: De Telegraaf is Dutch (seat in Amsterdam), not Danish. Founded 1892 by Henry Tindal; first issue 1 January 1893.",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Schauspielerin, die Inger Nilsson in den Pippi-Langstrumpf-Filmen synchronisierte und im Tatort Kommissarin Klara Blum ist?",
+   "de": "Wie heißt die Schauspielerin, die Inger Nilsson in den Pippi-Langstrumpf-Filmen synchronisierte und im Tatort Kommissarin Klara Blum ist?",
+   "en": "What is the name of the actress who dubbed Inger Nilsson in the Pippi Longstocking films and plays Inspector Klara Blum in Tatort?",
+   "reworked": false,
+   "answerDe": "Eva Mattes",
+   "answerEn": "Eva Mattes",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1954-12-14",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Life of Eva Mattes, German-Austrian actress, voice of Pippi Longstocking and Tatort's Klara Blum",
+    "labelDe": "Leben Eva Mattes', deutsch-österreichische Schauspielerin, Stimme von Pippi Langstrumpf und Tatort-Kommissarin Klara Blum"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Eva_Mattes",
+    "title": "Eva Mattes",
+    "lang": "de"
+   },
+   "notes": "Klara Blum was the Konstanz Tatort inspector (2002–2016), so 'ist' is dated; Mattes voiced Pippi in the German version of the TV series and films.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "An welchem Wochentag erfolgte 1961 der Bau der Berliner Mauer?",
+   "de": "An welchem Wochentag erfolgte 1961 der Bau der Berliner Mauer?",
+   "en": "On which day of the week did the construction of the Berlin Wall take place in 1961?",
+   "reworked": false,
+   "answerDe": "Sonntag",
+   "answerEn": "Sunday",
+   "timeline": {
+    "kind": "event",
+    "start": "1961-08-13",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "East Germany seals the sector border in Berlin, beginning the Berlin Wall (\"Barbed Wire Sunday\")",
+    "labelDe": "Die DDR riegelt die Sektorengrenze in Berlin ab – Beginn des Mauerbaus („Stacheldrahtsonntag“)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+    "title": "Berlin Wall",
+    "lang": "en"
+   },
+   "notes": "On Sunday 13 August 1961 the border was sealed with barbed wire; the actual wall was built in the following days.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt der Künstler, der das Cover des Rolling-Stones-Albums Sticky Fingers entwarf?",
+   "de": "Wie heißt der Künstler, der das Cover des Rolling-Stones-Albums Sticky Fingers entwarf?",
+   "en": "What is the name of the artist who designed the cover of the Rolling Stones album Sticky Fingers?",
+   "reworked": false,
+   "answerDe": "Andy Warhol",
+   "answerEn": "Andy Warhol",
+   "timeline": {
+    "kind": "creation",
+    "start": "1971-04-23",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Rolling Stones release \"Sticky Fingers\" with Andy Warhol's zipper cover",
+    "labelDe": "Die Rolling Stones veröffentlichen „Sticky Fingers“ mit Andy Warhols Reißverschluss-Cover"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Sticky_Fingers",
+    "title": "Sticky Fingers",
+    "lang": "de"
+   },
+   "notes": "The cover showed a man's jeans with a real zipper.",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 5,
+   "cardDe": "Bei wie viel Grad Fahrenheit kocht Wasser auf Meereshöhe?",
+   "de": "Bei wie viel Grad Fahrenheit kocht Wasser auf Meereshöhe?",
+   "en": "At how many degrees Fahrenheit does water boil at sea level?",
+   "reworked": false,
+   "answerDe": "212 °F",
+   "answerEn": "212 °F",
+   "timeline": {
+    "kind": "creation",
+    "start": "1724",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Daniel Gabriel Fahrenheit publishes his temperature scale in the Philosophical Transactions",
+    "labelDe": "Daniel Gabriel Fahrenheit veröffentlicht seine Temperaturskala in den Philosophical Transactions"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Grad_Fahrenheit",
+    "title": "Grad Fahrenheit",
+    "lang": "de"
+   },
+   "notes": "Equivalent to 100 °C at standard pressure.",
+   "domain": "science",
+   "sub": "maths"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wer auf einer Maschine von Zamboni sitzt, macht in der Regel was: Eis glätten, Rasen mähen oder Straßen kehren?",
+   "de": "Was glättet man in der Regel, wenn man auf einer Maschine von Zamboni sitzt?",
+   "en": "What does someone sitting on a Zamboni machine usually smooth?",
+   "reworked": true,
+   "answerDe": "Eis",
+   "answerEn": "Ice",
+   "timeline": {
+    "kind": "creation",
+    "start": "1949",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Frank Zamboni develops the first ice resurfacer in Paramount, California",
+    "labelDe": "Frank Zamboni entwickelt in Paramount, Kalifornien, die erste Eisaufbereitungsmaschine"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ice_resurfacer",
+    "title": "Ice resurfacer",
+    "lang": "en"
+   },
+   "notes": "Reworked from a multiple-choice question (ice, lawn, streets). A Zamboni is an ice resurfacer that cleans and smooths the ice of a rink.",
+   "domain": "technology",
+   "sub": "inventions"
+  }
+ ]
+}

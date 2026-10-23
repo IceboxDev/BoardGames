@@ -1,0 +1,947 @@
+{
+ "article": "a0876",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Verst",
+   "title": "Verst – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:08.202Z",
+   "snapshot": "87ef519aefdd02127e4fc4b9785a2a3918a9f027bde8d7b9882e1207c65beed2"
+  },
+  "s2": {
+   "url": "https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BC%D0%B5%D1%80",
+   "kind": "encyclopedia",
+   "lang": "ru",
+   "retrievedAt": "2026-10-23T04:26:05.634Z",
+   "snapshot": "b03d8e8d60c6e6aa4f4776c1aef54703fe35e144bca4228023df340901995ec4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mile",
+   "title": "Mile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:09.234Z",
+   "snapshot": "10f12f5fc2f031b84e44d8f5a901ec549025a135a010a1142156ece811e58185"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nautical_mile",
+   "title": "Nautical mile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:10.218Z",
+   "snapshot": "15ff6c26a02f8a8323307922b0b97e24281fa93a7bffb98d5ff69fb8661d0974"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/International_yard_and_pound",
+   "title": "International yard and pound – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:11.218Z",
+   "snapshot": "072c23f204bf32f58a02f890435255ccb0c3ac306b9ee8e502ea43ab0793bcaf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Inch",
+   "title": "Inch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:12.215Z",
+   "snapshot": "9ddd826458cee55b789212d52e86c7b6fd68d4301f86f8fa313ac63fecff9fa4"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Knoten_%28Einheit%29",
+   "title": "Knoten (Einheit)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:09.452Z",
+   "snapshot": "9f380d7ef173a2a0309188131f89c9a7370dbc39bea03974f31c2cc023ea1a63"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Lot_(Ma%C3%9Feinheit)",
+   "title": "Lot (Maßeinheit)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:10.388Z",
+   "snapshot": "1d2710451f355871d19fff0827ad4c416def7c6e0416b3f63e9c91d1c18f8d94"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Chip_log",
+   "title": "Chip log – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:13.198Z",
+   "snapshot": "c00b333a72a647a04587891cccd3024ce6f5ed4fc442549035b4e61a93e0888c"
+  },
+  "s10": {
+   "url": "https://www.legislation.gov.uk/ukpga/1985/72/schedule/1",
+   "title": "Weights and Measures Act 1985, Schedule 1",
+   "publisher": "legislation.gov.uk",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:20.503Z",
+   "snapshot": "daacab5bab666349b18d257d89587017ff1aad7cfedf4dfa5b31c68e34a09910"
+  },
+  "s11": {
+   "url": "https://snl.no/engelsk_mil",
+   "title": "engelsk mil",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:36:20.890Z",
+   "snapshot": "322fcd421bcc7b4edd22df8264609769204cbf97e2d4ba51fdcf5f67f5a1124b"
+  },
+  "s12": {
+   "url": "https://snl.no/nautisk_mil",
+   "title": "nautisk mil",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:36:21.733Z",
+   "snapshot": "9e68e799683ef16f1c76651be19ed1d84c10ab74561b1178bc477ad4ab5bc792"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Yard",
+   "title": "Yard",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:22.547Z",
+   "snapshot": "fa642e17440fecbac7a78e59da5e8bc904a94a2d1b510b23e78e8ec1bb909f97"
+  },
+  "s14": {
+   "url": "https://snl.no/yard",
+   "title": "yard",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:36:22.956Z",
+   "snapshot": "42549854ed3fee0f3d4ed9b5547264e4af4db8635eda1e3c18a330c8c38c37d1"
+  },
+  "s15": {
+   "url": "https://snl.no/tomme",
+   "title": "tomme",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:36:23.613Z",
+   "snapshot": "d948a5f4f0d3864ff45994475b143b0d28d258b49961e8472500b157a31a70c1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Verst",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript c073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Верста",
+     "quoteLang": "ru",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nautical mile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Inch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Knoten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-288"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Gewichtseinheit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript tp-321"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Chip log",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 75; transcript pp-052"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f04376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A verst (; Russian: верста, romanized: versta) is an obsolete Russian unit of length, defined as 500 sazhen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verst” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f04376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Более ранние значения этих единиц могли отличаться от приведённых; так, например, уложением 1649 года была установлена межевая верста в 1 тыс.",
+     "quoteLang": "ru",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Верста” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The mile, sometimes the international mile or statute mile to distinguish it from other miles, is a British imperial unit and United States customary unit of length; both are based on the older English unit of length equal to 5,280 English feet, or 1,760 yards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mile” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f04378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A nautical mile is a unit of length used in air, marine, and space navigation, and for the definition of territorial waters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nautical mile” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The international yard and pound are two units of measurement that were the subject of an agreement among representatives of six nations signed on 1 July 1959: Australia, Canada, New Zealand, South Africa, the United Kingdom and the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yard” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f04380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The inch (symbol: in or ″) is a unit of length in the British Imperial and the United States customary systems of measurement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inch” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f13495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Knoten (kn) ist ein Geschwindigkeitsmaß in der See- und Luftfahrt bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knoten” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f13496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Das Lot (früher auch Loth geschrieben) ist eine Gewichtseinheit bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gewichtseinheit” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:25:58.485Z",
+   "target": "f25397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A chip log, also called common log, ship log, or just log, is a navigation tool mariners use to estimate the speed of a vessel through  water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.485Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chip log” is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:17:50Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "giving a mile of exactly 1,609.344 metres",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:17:53Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "1760 yards.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "UK Weights and Measures Act 1985 Sch. 1: Mile = 1760 yards; YARD = 0.9144 metre, hence 1,609.344 m."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:17:57Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "som svarer til lengdeenheten mile",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "SNL: 1609,34 m = the length unit mile."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T08:18:01Z",
+   "target": "f04378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Today the international nautical mile is defined as exactly 1,852 metres",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T08:18:05Z",
+   "target": "f04378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Nautisk mil er en lengdeenhet som tilsvarer nøyaktig 1852 meter og brukes til å måle avstand innen navigasjon til havs og i luftfart.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T08:18:09Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Since 1959 it has been by international agreement standardized as exactly 0.9144 meter.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T08:18:12Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Etter 1959 er internasjonal yard standardisert til nøyaktig 0,9144 meter (m).",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T08:18:16Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "0.9144 metre.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "UK Weights and Measures Act 1985 Sch. 1: YARD = 0.9144 metre."
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T08:18:19Z",
+   "target": "f04380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1 inch is exactly 2.54 cm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T08:18:23Z",
+   "target": "f04380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "1 tomme = 2,54 centimeter (cm)",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "Tomme = inch."
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "giving a mile of exactly 1,609.344 metres",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s3"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "1760 yards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "som svarer til lengdeenheten mile",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s11"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Today the international nautical mile is defined as exactly 1,852 metres",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s4"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Since 1959 it has been by international agreement standardized as exactly 0.9144 meter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s13"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Etter 1959 er internasjonal yard standardisert til nøyaktig 0,9144 meter (m).",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s14"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "0.9144 metre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s10"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "1 tomme = 2,54 centimeter (cm)",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e28 is on the snapshot of s15"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mile = 1760 yards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mile” is on the snapshot of s10"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Øvelsen består i baneløp over 1609,34 meter, som svarer til lengdeenheten mile.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mile” is on the snapshot of s11"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Square yard = a superficial area equal to that of a square each side of which measures one yard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yard” is on the snapshot of s10"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The yard (symbol: yd) is an English unit of length in both the British imperial and US customary systems of measurement equalling 3 feet or 36 inches.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yard” is on the snapshot of s13"
+  },
+  {
+   "id": "e41",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Yard er en lengdeenhet i både det britiske og amerikanske enhetssystemet.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yard” is on the snapshot of s14"
+  },
+  {
+   "id": "e42",
+   "at": "2026-10-23T12:54:27.354Z",
+   "target": "f04380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Det internasjonale symbolet for tomme er in (etter engelsk inch).",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Inch” is on the snapshot of s15"
+  }
+ ]
+}

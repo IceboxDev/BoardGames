@@ -1,0 +1,195 @@
+{
+ "article": "a0080",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Genesis_Flood",
+   "title": "The Genesis Flood – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:08.660Z",
+   "snapshot": "219bdec63e0cf19154d60e28ed02f0992d1e7e3a8c2a6445608b892bd282e09b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ra%C3%ABlism",
+   "title": "Raëlism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:12.885Z",
+   "snapshot": "6a41ef7d9beb8f8e2607181805bd6a1f4e2bfb6de839ac03477add77f91b6c0d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Church_of_Scientology",
+   "title": "Church of Scientology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:10.667Z",
+   "snapshot": "5fa7dd066ea0b431501191eb0cdd9029049adfc5a7ee488af79cd44ded6757e3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses",
+   "title": "Jehovah's Witnesses – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:11.700Z",
+   "snapshot": "79b69f92e20e18345887ff22667037f31b1da08299e67bb7ddd5f656b055040e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "creationism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raëlism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Scientology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jehovah's Witnesses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:47.292Z",
+   "target": "f00396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Morris that, according to historian Ronald Numbers, elevated young Earth creationism \"to a position of fundamentalist orthodoxy\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “creationism” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:47.292Z",
+   "target": "f00397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raëlism, also known as Raëlianism, is a UFO religion founded in the 1970s in France by Claude Vorilhon, now known as Raël.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raëlism” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:47.292Z",
+   "target": "f00398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Church of Scientology was started in 1953 by L.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scientology” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:47.292Z",
+   "target": "f00399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jehovah's Witnesses is a nontrinitarian, millenarian, and restorationist Christian denomination, stemming from the Bible Student movement founded by Charles Taze Russell in the nineteenth century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.292Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jehovah's Witnesses” is on the snapshot of s4"
+  }
+ ]
+}

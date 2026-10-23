@@ -1,0 +1,491 @@
+{
+ "article": "a0523",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/NATO_headquarters",
+   "title": "NATO headquarters – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:13.011Z",
+   "snapshot": "b8524ebc8ae2586954a2b370d8c440f2ff4609e51a369135fd71a14c650eec8a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Seat_of_the_European_Central_Bank",
+   "title": "Seat of the European Central Bank – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:14.023Z",
+   "snapshot": "ea633457efb4667afe8a17c00f5ca8abb98cea035349c45322c1e69d6a9f420c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/International_Court_of_Justice",
+   "title": "International Court of Justice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:15.034Z",
+   "snapshot": "d38ea91bde00d8370e45b97e0c883105b55784dd53b73ac7331bc3045d4d9bf3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/General_Agreement_on_Tariffs_and_Trade",
+   "title": "General Agreement on Tariffs and Trade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:16.128Z",
+   "snapshot": "b33d037c595400e828be0a01e4722c91cef3845b517661b42a532e6a080fc55c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/OPEC",
+   "title": "OPEC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:04.817Z",
+   "snapshot": "e1873c892bc0d4c68d72aab818c31ba4a0c88cc8970e2ffdb4afd8ea02832774"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Organisation_erd%C3%B6lexportierender_L%C3%A4nder",
+   "title": "Organisation erdölexportierender Länder",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:02:13.269Z",
+   "snapshot": "d74da0ff8838ddb0b11ceff7bfc15b7adc15425e7031e24fa258c66f755fef08"
+  },
+  "s7": {
+   "url": "https://www.nato.int/cps/en/natohq/topics_49284.htm",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:13.358Z",
+   "snapshot": "24d662c0fe60ea15990db18ec8a43d268843e8070dc2d7631c1afa86d33f5c5f"
+  },
+  "s8": {
+   "url": "https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies/european-central-bank-ecb_en",
+   "title": "European Central Bank (ECB) – European Union",
+   "publisher": "European Union",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:47.074Z",
+   "snapshot": "0eb7baebbf5bd76c366fa4bdd2c211effc8e5d93050c0817a3ac3a4d44cd281c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frankfurt am Main",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Geneva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Wien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-080/1, u02: OPEC has been headquartered in Vienna since 1965 (Geneva before), not Riyadh; statement false."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brussels",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Brussels",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-097/1, u02: NATO HQ is in Brussels (since 1967), not New York; statement false."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wien",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brussels",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After previous locations in London and Paris, it has been headquartered in Brussels since 1967, in a complex in Haren, part of the City of Brussels, along the Boulevard Léopold III/Leopold III-laan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brussels” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frankfurt am Main",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Frankfurt am Main”, “Франкфурт-на-Майне”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The ICJ is seated in the Peace Palace in The Hague, Netherlands, making it the only principal UN organ not located in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hague” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was signed by 23 nations in Geneva on 30 October 1947, and was applied on a provisional basis 1 January 1948.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geneva” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The conference ordinarily meets at the Vienna headquarters, at least twice a year and in additional extraordinary sessions when necessary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:01.872Z",
+   "target": "f02615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Organisation erdölexportierender Länder (kurz OPEC, früher auch O.P.E.C., von englisch Organization of the Petroleum Exporting Countries) ist eine 1960 gegründete internationale Organisation mit Sitz in Wien (bis 1965 Genf).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:01.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wien” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:19:24Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Established in : 1998 Location : Frankfurt (Germany)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:19:27Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The seat of the European Central Bank is situated in Frankfurt , Germany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:11:21Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Established in: 1998 Location: Frankfurt (Germany)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Re-quoted: e15 carried extraction spacing artefacts."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:11:23Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The seat of the European Central Bank is situated in Frankfurt, Germany.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Re-quoted: e16 carried extraction spacing artefacts."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:25.287Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Established in: 1998 Location: Frankfurt (Germany)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:25.287Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The seat of the European Central Bank is situated in Frankfurt, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:25.287Z",
+   "target": "f02612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "60314 Frankfurt-am-Main",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Frankfurt am Main” is on the snapshot of s8"
+  }
+ ]
+}

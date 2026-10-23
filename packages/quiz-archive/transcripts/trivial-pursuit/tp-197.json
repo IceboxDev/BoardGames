@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-197",
+ "image": "IMG20261007182812.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Der Eintrittspreis für Dachterrasse und Kuppel des Berliner Reichstags steigt oder fällt jährlich mit der Inflationsrate. Richtig oder falsch?",
+   "de": "Wie viel Eintritt kostet der Besuch von Dachterrasse und Kuppel des Berliner Reichstagsgebäudes?",
+   "en": "How much does admission to the roof terrace and dome of Berlin's Reichstag building cost?",
+   "reworked": true,
+   "answerDe": "Nichts (kostenlos)",
+   "answerEn": "Nothing (free of charge)",
+   "timeline": {
+    "kind": "event",
+    "start": "1999-04-19",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The rebuilt Reichstag building with its walk-in glass dome is handed over to the Bundestag",
+    "labelDe": "Das umgebaute Reichstagsgebäude mit seiner begehbaren Glaskuppel wird an den Bundestag übergeben"
+   },
+   "source": {
+    "url": "https://www.bundestag.de/besuche/kuppel-dachterrasseunddachgartenrestaurant/kuppel/244990",
+    "title": "Dachterrasse und Kuppel des Reichstagsgebäudes - Deutscher Bundestag",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: the Bundestag states 'Kuppel und Dachterrasse können kostenlos besichtigt werden' (advance registration required).",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie lauten die Vornamen der drei Crawley-Schwestern in der Fernsehserie Downton Abbey?",
+   "de": "Wie lauten die Vornamen der drei Crawley-Schwestern in der Fernsehserie Downton Abbey?",
+   "en": "What are the first names of the three Crawley sisters in the TV series Downton Abbey?",
+   "reworked": false,
+   "answerDe": "Mary, Edith und Sybil",
+   "answerEn": "Mary, Edith and Sybil",
+   "timeline": {
+    "kind": "event",
+    "start": "2010-09-26",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Downton Abbey premieres on ITV in the United Kingdom",
+    "labelDe": "Downton Abbey startet im britischen Fernsehsender ITV"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Downton_Abbey",
+    "title": "Downton Abbey",
+    "lang": "en"
+   },
+   "notes": "The card prints the series title in italics.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie hieß der erste Präsident Simbabwes mit Nachnamen: Banana, Mangho oder Himbeea?",
+   "de": "Wie hieß der erste Präsident Simbabwes mit Nachnamen?",
+   "en": "What was the surname of Zimbabwe's first president?",
+   "reworked": true,
+   "answerDe": "Banana",
+   "answerEn": "Banana",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1936-03-05",
+    "end": "2003-11-10",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Canaan Banana, first President of Zimbabwe (1980–1987)",
+    "labelDe": "Canaan Banana, erster Präsident Simbabwes (1980–1987)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Canaan_Banana",
+    "title": "Canaan Banana",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice options removed. Canaan Sodindo Banana held the then largely ceremonial presidency 1980–1987; Robert Mugabe was prime minister and became executive president in 1987.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Die New Yorker Freiheitsstatue ist größer als der Koloss von Rhodos, einem der sieben antiken Weltwunder. Richtig oder falsch?",
+   "de": "Wie hoch war der Koloss von Rhodos, eines der sieben antiken Weltwunder, ungefähr?",
+   "en": "Roughly how tall was the Colossus of Rhodes, one of the Seven Wonders of the Ancient World?",
+   "reworked": true,
+   "answerDe": "etwa 33 Meter",
+   "answerEn": "about 33 metres",
+   "timeline": {
+    "kind": "creation",
+    "start": "-280",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Colossus of Rhodes, a bronze statue of Helios by Chares of Lindos, is completed",
+    "labelDe": "Der Koloss von Rhodos, eine Bronzestatue des Helios von Chares von Lindos, wird fertiggestellt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Colossus_of_Rhodes",
+    "title": "Colossus of Rhodes",
+    "lang": "en"
+   },
+   "notes": "Card statement is true: the Colossus stood about 70 cubits (~33 m), roughly two-thirds the height of the Statue of Liberty from feet to crown (the copper statue alone is 46 m). Accept answers around 30–35 m.",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches war der Name der ersten Internet-Suchmaschine?",
+   "de": "Welches war der Name der ersten Internet-Suchmaschine?",
+   "en": "What was the name of the first internet search engine?",
+   "reworked": false,
+   "answerDe": "Archie",
+   "answerEn": "Archie",
+   "timeline": {
+    "kind": "creation",
+    "start": "1990-09-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alan Emtage's Archie, an index of FTP archives, is released",
+    "labelDe": "Alan Emtages Archie, ein Suchindex für FTP-Archive, wird veröffentlicht"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Archie_(search_engine)",
+    "title": "Archie (search engine)",
+    "lang": "en"
+   },
+   "notes": "Archie indexed FTP archives and is generally considered the first internet search engine; the first web search engines (e.g. W3Catalog, ALIWEB) followed in 1993.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welcher Sportart gewann Anfang des 20. Jahrhunderts die erste Frau eine olympische Medaille: Bogenschießen, Segeln oder Weitsprung?",
+   "de": "In welcher Sportart gewann Anfang des 20. Jahrhunderts die erste Frau eine olympische Medaille?",
+   "en": "In which sport did the first woman win an Olympic medal at the start of the 20th century?",
+   "reworked": true,
+   "answerDe": "Segeln",
+   "answerEn": "Sailing",
+   "timeline": {
+    "kind": "event",
+    "start": "1900-05-22",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hélène de Pourtalès wins Olympic sailing gold in Paris, the first woman to win an Olympic medal",
+    "labelDe": "Hélène de Pourtalès gewinnt bei den Spielen von Paris olympisches Gold im Segeln – als erste Frau eine olympische Medaille"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hélène_de_Pourtalès",
+    "title": "Hélène de Pourtalès",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice options removed. Swiss sailor Hélène de Pourtalès won gold in the 1–2 ton class (race of 22 May 1900), weeks before tennis player Charlotte Cooper's individual title.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

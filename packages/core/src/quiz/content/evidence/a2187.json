@@ -1,0 +1,274 @@
+{
+ "article": "a2187",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Nappieren",
+   "title": "Nappieren",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:52.534Z",
+   "snapshot": "fc27fce6dc93ec528b98d95bd1fc8fecc1455dafdc070104c7548d4e0f31d028"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Brunoise",
+   "title": "Brunoise",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:53.473Z",
+   "snapshot": "c56e263e4bff412f575c8ba99cc442aa1b51c37e4fd3a3b202b18cc47781d371"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Flambieren",
+   "title": "Flambieren",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:54.473Z",
+   "snapshot": "8c7a662e4d0bf81bdffcd35dea5663724723b2d4baf7ffa5858d79b202a6bfdf"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Vakuumgaren",
+   "title": "Vakuumgaren",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:55.480Z",
+   "snapshot": "137bfccb022eb161a41796aa4be849eaffefb5123bb6e0481168b92a9b978d80"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bain-marie",
+   "title": "Bain-marie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:55.172Z",
+   "snapshot": "2f3f2f8dce834a5de1cbca89696d9d12847b0e83c06e50ba5c066c44f4e5d7fa"
+  },
+  "s6": {
+   "url": "https://www.rewe.de/kuechenlexikon/nappieren/",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brunoise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flambieren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-140"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sous-vide",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-201"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bain-marie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nappieren",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Nappieren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-016/6, u06: Statement false: in saucieren the sauce goes under or beside the food (a sauce mirror); coating the food is nappieren."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:34.748Z",
+   "target": "f11105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nappieren",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:34.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:34.748Z",
+   "target": "f11105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Nappieren (von französisch napper ‚überziehen‘ oder ‚übergießen‘) wird eine Anrichtungsform in der Küche bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nappieren” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.748Z",
+   "target": "f11106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brunoise ist der Fachbegriff für eine beim Kochen verwendete Schneideart von Gemüse.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brunoise” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.748Z",
+   "target": "f11107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flambieren (von französisch flamber ‚abflammen‘) bezeichnet das Entzünden des verdunstenden Alkohols einer mit einer Spirituose übergossenen Speise.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flambieren” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.748Z",
+   "target": "f11108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Als Vakuumgaren oder Sous-vide-Garen (sprich /​suːˈviːd​-/; französisch sous ‚unter‘; vide ‚Vakuum‘) bezeichnet man eine Methode zum Garen von Fleisch, Fisch oder Gemüse in einem Kunststoffbeutel bei relativ niedrigen Temperaturen von unter 100 °C.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sous-vide” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.748Z",
+   "target": "f11110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A bain-marie (English:  BAN-mə-REE, French: [bɛ̃ maʁi]), also known as a water bath or double boiler, a type of heated bath, is a piece of equipment used in science, industry, and cooking to heat materials gently or to keep materials warm over a period of time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bain-marie” is on the snapshot of s5"
+  }
+ ]
+}

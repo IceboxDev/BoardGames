@@ -1,0 +1,546 @@
+{
+ "article": "a1009",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Adele",
+   "title": "Adele – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:00.297Z",
+   "snapshot": "2eb09c5cc44490e255fa4b629be0f4c4c9a69df62e40f41fe44b491371ca0b51"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Goldfinger_(film)",
+   "title": "Goldfinger (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:01.192Z",
+   "snapshot": "c0c44c85340a8735fd9b96a3c28a2c292561abaf5103a11dd7d9c95218e260f8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Shirley_Bassey",
+   "title": "Shirley Bassey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:58.355Z",
+   "snapshot": "77ffa6c32c6ae8924e8bb6a4d5fe261a84a885750a2d918ac89acd2604a9e822"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_View_to_a_Kill_(song)",
+   "title": "A View to a Kill (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:02.027Z",
+   "snapshot": "996e447e0a11efa5dead83ccdb071937c1964ade9a86c3cedb84fcd7fea26488"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/88th_Academy_Awards",
+   "title": "88th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:03.050Z",
+   "snapshot": "879fff992df6cd96eaad86d9124151bf41e2242ab762425e8614ff87a68b4d08"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/94th_Academy_Awards",
+   "title": "94th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:04.154Z",
+   "snapshot": "110e51f9d9375dbfef022587f3efb469f4c77249f9af6e131df34ff5025d6f66"
+  },
+  "s7": {
+   "url": "https://www.oscars.org/oscars/ceremonies/2016",
+   "title": "The 88th Academy Awards (2016)",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:11.765Z",
+   "snapshot": "f0f0d7024e196732c217c5aabcba71b2c214c0871d68aa57ac6c6fc046210a6d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/No_Time_to_Die_(song)",
+   "title": "No Time to Die (song) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:11.867Z",
+   "snapshot": "d67f65c130360e5f5573ac318d1e8ba2ff6c4442671cb6b114ed546723e0b2d7"
+  },
+  "s9": {
+   "url": "https://www.oscars.org/oscars/ceremonies/2022",
+   "title": "The 94th Academy Awards (2022)",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:12.672Z",
+   "snapshot": "e02653b7e69bcba11061ae36e90e5dfbc8cc205c512f76157785837b8a406837"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Adele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shirley Bassey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shirley Bassey",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-068"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Duran Duran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sam Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Billie Eilish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:19.176Z",
+   "target": "f05041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Adele Laurie Blue Adkins ( ə-DEL; born 5 May 1988) is an English singer and songwriter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adele” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:19.176Z",
+   "target": "f05042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "a full rendition on the soundtrack only commenced for the final scene on the waters at Venice and through the following end titles.) Shirley Bassey established the opening title tradition giving her distinguished style to \"Goldfinger\", and would sing the theme songs for two future Bond",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shirley Bassey” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:19.176Z",
+   "target": "f05042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Royal Mail gab Shirley Bassey zu Ehren im September 2023 zwei Briefmarkenserien mit insgesamt 12 Marken heraus, die sie im Zeitraum von 1961 bis 2009 bei Auftritten und im Tonstudio zeigen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shirley Bassey” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:19.176Z",
+   "target": "f05043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"A View to a Kill\" is a song by the English pop rock band Duran Duran, released on 6 May 1985.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Duran Duran” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:19.176Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sam Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sam Smith”, “Сэм Смит”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:19.176Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Billie Eilish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Billie Eilish”, “Билли Айлиш”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:03:13Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Music (Original Song) Winner Spectre \"Writing's On The Wall\" from Spectre; Music and Lyric by Jimmy Napes and Sam Smith",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:03:16Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "making it the third-ever and third consecutive Bond theme to win the Academy Award (after \"Skyfall\" from the film of the same name by Adele in 2012 and \"Writing's on the Wall\" from Spectre by Sam Smith in",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:03:19Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Music (Original Song) Winner No Time To Die from No Time to Die; Music and Lyric by Billie Eilish and Finneas O'Connell",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:03:22Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "\"No Time to Die\" is the theme song for the James Bond film of the same name, performed by American singer-songwriter Billie Eilish.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Music (Original Song) Winner Spectre \"Writing's On The Wall\" from Spectre; Music and Lyric by Jimmy Napes and Sam Smith",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "making it the third-ever and third consecutive Bond theme to win the Academy Award (after \"Skyfall\" from the film of the same name by Adele in 2012 and \"Writing's on the Wall\" from Spectre by Sam Smith in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Music (Original Song) Winner No Time To Die from No Time to Die; Music and Lyric by Billie Eilish and Finneas O'Connell",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "\"No Time to Die\" is the theme song for the James Bond film of the same name, performed by American singer-songwriter Billie Eilish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "“Writing’s On The Wall” from Spectre; Music and Lyric by Jimmy Napes and Sam Smith",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sam Smith” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Choice Movie Award for Best Song, and the Academy Award for Best Original Song, making it the third-ever and third consecutive Bond theme to win the Academy Award (after \"Skyfall\" from the film of the same name by Adele in 2012 and \"Writing's on the Wall\" from Spectre by Sam Smith in 2015).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sam Smith” is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "\"No Time to Die\" is the theme song for the James Bond film of the same name, performed by American singer-songwriter Billie Eilish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Billie Eilish” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:51.130Z",
+   "target": "f05045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "from No Time to Die; Music and Lyric by Billie Eilish and Finneas O'Connell",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Billie Eilish” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "article": "a2198",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tag_der_Erde",
+   "title": "Tag der Erde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:29.117Z",
+   "snapshot": "26e63aca76621728bf440074c88ac4233525893f594b7914c3959f9ad78bc0d3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom",
+   "title": "Public holidays in the United Kingdom",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:31.303Z",
+   "snapshot": "61d270f6dfa9d898031bb00894f3a161aa2aafce21ff39bd0e0163d66d49d4e8"
+  },
+  "s3": {
+   "url": "https://nationaltoday.com/national-mother-law-day/",
+   "title": "National Mother-in-Law Day – National Today",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:29.713Z",
+   "snapshot": "1f9e9432ae6500454dccab1007116cc09c11ddae31d79ee9c5f6d7c4069aac95"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day",
+   "title": "International Talk Like a Pirate Day",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:32.227Z",
+   "snapshot": "d2a520993e174090577888e8cdf64c87446e15d6a8c3e52fade2ddb268c5b184"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pi_Day",
+   "title": "Pi Day – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:33.204Z",
+   "snapshot": "3eab9984111cd64b8629af2d57db115c34149cb6479be49d3ed7ffa060e75d8b"
+  },
+  "s6": {
+   "url": "https://blog.genealogybank.com/?p=8661",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:30.734Z",
+   "snapshot": "2f9fd960efe231ebdf73cfeff883d5dae537bdcb4b7407121921de0b8d150945"
+  },
+  "s7": {
+   "url": "https://csmonitor.com/1981/1023/102347.html",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:31.276Z",
+   "snapshot": "2e78723e3244a6bf3d4749c8ebe00b1ff5d0de98e43715082cbdeaba3e235d28"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11168",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Tag der Erde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "First Monday in May",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-235"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Like a pirate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-330"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "14 March",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fourth Sunday in October",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Fourth Sunday in October",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Fourth Sunday in October",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-315/6, u10: False: there is no 'insult your mother-in-law' day; the US has the (unofficial) National Mother-in-Law Day, first held in Amarillo on 5 March 1934 and now on the fourth Sunday in October."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:35.600Z",
+   "target": "f11168",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Tag der Erde (englisch Earth Day) wird alljährlich am 22.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Tag der Erde” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.600Z",
+   "target": "f11169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "From 1978, the final Monday of May in Scotland (a statutory holiday in the rest of the UK) and the first Monday in May in the rest of the UK (a statutory holiday in Scotland) have been proclaimed as bank holidays.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “First Monday in May” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.600Z",
+   "target": "f11170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "National Mother-in-Law Day arrives every fourth Sunday in October, celebrating the invaluable women who enrich our families.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fourth Sunday in October” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.600Z",
+   "target": "f11171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "International Talk Like a Pirate Day is a parodic holiday created in 1995 by John Baur and Mark Summers of Albany, Oregon, who proclaimed September 19 each year as the day when everyone in the world should talk like a pirate (that is, in English with a stereotypical West Country accent).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Like a pirate” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.600Z",
+   "target": "f11172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "数学漫谈 (A Tour of Mathematics),  a public lecture (in Chinese) delivered by Professor Ya-xiang Yuan (President of International Council for Industrial and Applied Mathematics) on 14 March 2020, the first International Day of Mathematics (slides)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “14 March” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2095",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Benjamin_Netanyahu",
+   "title": "Benjamin Netanyahu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:01.002Z",
+   "snapshot": "7a85bd347361dae78e01ed95cd50640a99a8f0be9dc93665f76ef31b24292880"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ehud_Olmert",
+   "title": "Ehud Olmert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:01.921Z",
+   "snapshot": "cb4172d77ea9b5e5d0fbfecd56a45b815895dd1782c5e0fb8ed65d8661879e7e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jacques_Chirac",
+   "title": "Jacques Chirac – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:02.998Z",
+   "snapshot": "c9ede36cd356220b53d6a32bed6c01ca220aa7d48da7422f205d199a93739471"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Impeachment_of_Park_Geun-hye",
+   "title": "Impeachment of Park Geun-hye – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:03.966Z",
+   "snapshot": "46b8026b3b088df3ff186a5853acb5c24ec4930e15b6e9564f6adbfae8913926"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Najib_Razak",
+   "title": "Najib Razak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:04.980Z",
+   "snapshot": "7e5f8ccb73a10e94b2c9e3e09776e0f2052912b72eddc64465e7051ce54bb1fe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benjamin Netanyahu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ehud Olmert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jacques Chirac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Park Geun-hye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Najib Razak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:21.582Z",
+   "target": "f10471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benjamin Netanyahu's 2015 address to the United States Congress marked Netanyahu's third speech to a joint session of Congress.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benjamin Netanyahu” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:21.582Z",
+   "target": "f10472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ehud Olmert (; Hebrew: אֶהוּד אוֹלְמֶרְט, IPA: [eˈhud ˈolmeʁt] ; born 30 September 1945) is an Israeli politician and lawyer who served as the prime minister of Israel from 2006 to 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ehud Olmert” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:21.582Z",
+   "target": "f10473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tiberi was finally expelled from the Rally for the Republic, Chirac's party, on 12 October 2000, declaring to the magazine Le Figaro on 18 November 2000: \"Jacques Chirac is not my friend anymore\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacques Chirac” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:21.582Z",
+   "target": "f10474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 9 December 2016, Park Geun Hye, the president of South Korea, was impeached as the culmination of a political scandal involving interventions to the presidency from her aide, Choi Soon-sil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Park Geun-hye” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:21.582Z",
+   "target": "f10475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Najib Razak returned to Malaysia in 1974 and entered the business world, serving briefly at Bank Negara Malaysia and later with Petronas (Malaysia's national oil company) as a public affairs manager.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Najib Razak” is on the snapshot of s5"
+  }
+ ]
+}

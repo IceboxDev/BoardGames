@@ -1,0 +1,443 @@
+{
+ "article": "a2701",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/WASP-76b",
+   "title": "WASP-76b",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:49.191Z",
+   "snapshot": "557367611fd35ee5155f9c0108dda039f26debe02cf24a1f5cffc8092e807e14"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/51_Pegasi_b",
+   "title": "51 Pegasi b – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:50.183Z",
+   "snapshot": "427f896e4de11c7fcbb97c008b4e0d970d7e5f211c5eb56b07a5b9d298e061ac"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Transit_photometry",
+   "title": "Transit photometry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:51.501Z",
+   "snapshot": "aa1b7497faf58cd021656f7b2eab9fe69e32ff6d6f29225b25bedd55f3503ba3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/TRAPPIST-1",
+   "title": "TRAPPIST-1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:52.411Z",
+   "snapshot": "808ff45fd8bc3079d066f69683229b405f05a804ed5ab5991cc1097aad42948d"
+  },
+  "s5": {
+   "url": "https://commons.wikimedia.org/wiki/File:Artist_impression_of_the_exoplanet_51_Pegasi_b.jpg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:49.460Z",
+   "snapshot": "7521ffca9d53950cd2e6146192918a45958f9c68ae0e6e9089c6ad409bef2cb1",
+   "cloneOf": "wikipedia.org"
+  },
+  "s6": {
+   "url": "https://www.nobelprize.org/prizes/physics/2019/press-release/",
+   "title": "Press release: The Nobel Prize in Physics 2019",
+   "publisher": "Royal Swedish Academy of Sciences / NobelPrize.org",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:39.371Z",
+   "snapshot": "b261c0f48af4e27a7a352bc642a603430955f8cac80fd51a417a45355fe21457"
+  },
+  "s7": {
+   "url": "https://science.nasa.gov/universe/exoplanets/nobel-winners-changed-our-understanding-with-exoplanet-discovery/",
+   "title": "Nobel Winners Changed Our Understanding with Exoplanet Discovery",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:39.104Z",
+   "snapshot": "a8273ede8a2e58d217deaefb0771d3d09cce8e2c2bc79f8d7232c222878d0ea6"
+  },
+  "s8": {
+   "url": "https://earthsky.org/space/this-date-in-science-first-planet-discovered-around-sunlike-star",
+   "title": "1st planet orbiting a sunlike star discovered 30 years ago",
+   "publisher": "EarthSky",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:39.531Z",
+   "snapshot": "009b4b08ed2856ecc78a6dab971ce35836dff56dd7cea9f180d26546e2b35a6d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "51 Pegasi b",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hot Jupiter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "transit method",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "TRAPPIST-1",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:59.657Z",
+   "target": "f25260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Further analysis using higher-resolution spectra has revealed the presence of ionized elements such as lithium, sodium, magnesium, calcium, manganese, potassium, and iron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iron” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:59.657Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "51 Pegasi b, officially named Dimidium (), is an extrasolar planet approximately 50 light-years (15 parsecs) away in the constellation Pegasus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “51 Pegasi b” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:59.657Z",
+   "target": "f25262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The findings also could suggest a high albedo for the planet,  hence a large radius up to 1.9±0.3 Jupiter radii, which could suggest 51 Pegasi b is an inflated hot Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hot Jupiter” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:59.657Z",
+   "target": "f25263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(After 2012, the transit method from the Kepler space telescope overtook it in number.) The radial velocity signal is distance independent, but requires high signal-to-noise ratio spectra to achieve high precision, and so is generally used only for relatively nearby stars, out to about 160",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “transit method” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:59.657Z",
+   "target": "f25264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "TRAPPIST-1 (also known as 2MASS J23062928−0502285 or SPECULOOS-1) is a red dwarf star with seven known exoplanets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.657Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “TRAPPIST-1” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:13Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In October 1995, Michel Mayor and Didier Queloz announced the first discovery of a planet outside our solar system, an exoplanet, orbiting a solar-type star in our home galaxy, the Milky Way.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:01:16Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "51 Pegasi b, also called \"Dimidium,\" was the first exoplanet discovered orbiting a Sun-like star in 1995.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:01:18Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On October 6, 1995, astronomers Michel Mayor and Didier Queloz announced the discovery of the first planet in orbit around a distant sunlike star.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:47.162Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In October 1995, Michel Mayor and Didier Queloz announced the first discovery of a planet outside our solar system, an exoplanet, orbiting a solar-type star in our home galaxy, the Milky Way.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:47.162Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "51 Pegasi b, also called \"Dimidium,\" was the first exoplanet discovered orbiting a Sun-like star in 1995.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:47.162Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On October 6, 1995, astronomers Michel Mayor and Didier Queloz announced the discovery of the first planet in orbit around a distant sunlike star.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:47.162Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "At the Haute-Provence Observatory in southern France, using custom-made instruments, they were able to see planet 51 Pegasi b, a gaseous ball comparable with the solar system’s biggest gas giant, Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “51 Pegasi b” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:47.162Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "51 Pegasi b, also called \"Dimidium,\" was the first exoplanet discovered orbiting a Sun-like star in 1995.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “51 Pegasi b” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:47.162Z",
+   "target": "f25261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Here is a comparison showing an artists’ concept of 51 Pegasi b to Jupiter and 51 Pegasi to our sun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “51 Pegasi b” is on the snapshot of s8"
+  }
+ ]
+}

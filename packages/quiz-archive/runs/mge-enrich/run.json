@@ -1,0 +1,35 @@
+{
+ "id": "mge-enrich",
+ "title": "Publish or Perish MGE: enrich the merged articles, card errata",
+ "startedAt": "2026-10-22",
+ "endedAt": "2026-10-22",
+ "kind": "enrich",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (enrich-agent)"
+ ],
+ "brief": "repo scripts/quiz-ingest/ENRICH.md",
+ "inputs": [
+  "problems.txt (check-bank problems before enrich), enrich-notes.md, enrich-batches.txt"
+ ],
+ "outputs": [
+  "enrich-report/*.md + reasons(.orig).json",
+  "errata.md"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/publish-or-perish-mge"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 66,
+  "bytes": 1989067,
+  "byExt": {
+   ".json": 40,
+   ".md": 22,
+   ".py": 1,
+   ".sh": 1,
+   ".txt": 2
+  }
+ },
+ "notes": "History author 'enrich-agent' covers this run and pop-enrich together."
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a0777",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gerhard_Armauer_Hansen",
+   "title": "Gerhard Armauer Hansen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:32.292Z",
+   "snapshot": "e2070bdc279d0ea7c2d7e42f997a51e8689ae83d47c4e38c9a4274c9959b65cd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Black_Death",
+   "title": "Black Death – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:37.505Z",
+   "snapshot": "156fe1c5a611ef14f57f723ce157f411e075cf4dac91adb38b2009d25445f2cf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tuberculosis",
+   "title": "Tuberculosis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:33.416Z",
+   "snapshot": "772b54a5b6fa96e8604f24407ee1771562e86d439e63838cedb6a0e7313626b5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/James_Lind",
+   "title": "James Lind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:34.361Z",
+   "snapshot": "8bbd7fbc0da87a4b672c41dd4e59d919b5d46dd650a33590d054e2a176813498"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rickets",
+   "title": "Rickets – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:35.282Z",
+   "snapshot": "49a84574441a634548093f9748aeec242320eb1b6bbbf41ca1ff42f19b5fca25"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lazaretto",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:36.308Z",
+   "snapshot": "6ce7bf795bc69173a8358538087f1bd0f3245c7798cf74ce6bf8e84d916e4642"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "leprosy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "plague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tuberculosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "scurvy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "rickets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:43.692Z",
+   "target": "f03881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gerhard Henrik Armauer Hansen (Norwegian pronunciation: [ˈɡæ̂rhɑɖ ɑrˈmæ̀ʉər ˈhɑ̂nsn̩]; 29 July 1841 – 12 February 1912) was a Norwegian physician, remembered for his identification of the bacterium Mycobacterium leprae in 1873 as the etiologic agent of leprosy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “leprosy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:43.692Z",
+   "target": "f03882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Black Death was a plague pandemic that occurred in Europe from 1346 to 1353.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “plague” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:43.692Z",
+   "target": "f03883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tuberculosis ( tew-BUR-kew-LOH-siss, also  TEW-bər-; TB), also known colloquially as the \"white death\", or historically as consumption, is a contagious disease usually caused by Mycobacterium tuberculosis (MTB) bacteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tuberculosis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:43.692Z",
+   "target": "f03884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "By conducting one of the first ever clinical trials, he developed the theory that citrus fruits cured scurvy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “scurvy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:43.692Z",
+   "target": "f03885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rickets (scientific nomenclature: rachitis; from Greek ῥαχίτης rhakhítēs, meaning \"in or of the spine\" which was chosen as a back-formation, see Etymology) is a condition that results in weak or soft bones in children and may have either dietary-deficiency or genetic causes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.692Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rickets” is on the snapshot of s5"
+  }
+ ]
+}

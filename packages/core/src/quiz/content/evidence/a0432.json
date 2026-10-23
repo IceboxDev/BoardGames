@@ -1,0 +1,442 @@
+{
+ "article": "a0432",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/FAQ",
+   "title": "FAQ – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:34.642Z",
+   "snapshot": "ed383a4bdd7a1c2c4156049ead7c7730959b14be8af93b863f5c61214fe4e04e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/HTML",
+   "title": "HTML – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:35.842Z",
+   "snapshot": "53691e4aa2c484ec2b11cedcff168599d3bc7f38948cdb91f967308d9b20e3b4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hypertext_Markup_Language",
+   "title": "Hypertext Markup Language",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:32.900Z",
+   "snapshot": "d968a575e6acc3d7c92461769456374ec8bc2cad6bf0f0fb5c7a3ed125c5735c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Williams_tube",
+   "title": "Williams tube – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:36.662Z",
+   "snapshot": "56e9d97626df8e379b48ed21b6e4c52c112999c4c22cde74f0145e450e11d5b6"
+  },
+  "s5": {
+   "url": "https://coe.psu.ac.th/ad/Y379/Unk/Unknown.pdf",
+   "title": "Computing history calendar – Henry Spencer / FAQs entries",
+   "publisher": "Andrew Davison, Prince of Songkla University",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:34:01Z"
+  },
+  "s6": {
+   "url": "https://www.livinginternet.com/i/it_faq_history.htm",
+   "title": "Frequently Asked Questions (FAQ) History",
+   "publisher": "Living Internet (Bill Stewart)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:08.471Z",
+   "snapshot": "fb9abc0352c765c281d20fd016ab180380f9cd7beaea526ad257b4e93afae3e0"
+  },
+  "s7": {
+   "url": "https://www.computinghistory.org.uk/det/6013/",
+   "title": "The Manchester Baby, the world's first stored program computer, runs its first program",
+   "publisher": "Centre for Computing History",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:07.743Z",
+   "snapshot": "1d82b53cb91108dfaee32fccf857919fe0a5c57c52e4a04a66613aa58784c4cf"
+  },
+  "s8": {
+   "url": "https://blog.scienceandindustrymuseum.org.uk/how-does-babys-memory-work/",
+   "title": "How does Baby's memory work?",
+   "publisher": "Science and Industry Museum (Science Museum Group)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:08.282Z",
+   "snapshot": "a4eea03de720aa12e54e67e388935e2d12940c8a7b9dd9c37014f0bde207de7f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frequently Asked Questions",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "HyperText Markup Language",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-054"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "HyperText Markup Language",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-203"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eugene Miya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Williams tube",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:47.421Z",
+   "target": "f02156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is an acronym that expands to \"frequently asked question\" or \"frequently asked questions\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frequently Asked Questions” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:47.421Z",
+   "target": "f02157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “HyperText Markup Language” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:47.421Z",
+   "target": "f02157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Hypertext Markup Language (HTML, englisch für Hypertext-Auszeichnungssprache) ist eine textbasierte Auszeichnungssprache zur Strukturierung elektronischer Dokumente wie Texte mit Hyperlinks, Bildern und anderen Inhalten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “HyperText Markup Language” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:47.421Z",
+   "target": "f24340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Between 1982 and 1985, Eugene Miya of NASA coined the acronym FAQ for use on the SPACE mailing list.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eugene Miya” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:47.421Z",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Williams tube, or the Williams–Kilburn tube named after British inventors Freddie Williams and Tom Kilburn, is an early form of computer memory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Williams tube” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:34:01Z",
+   "target": "f24340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The first FAQ appeared in the sci.space newsgroup and the Space Digest mailing list, mostly through the efforts of Eugene Miya of the Computer Systems Division at NASA Ames.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23",
+   "note": "Davison says Miya dubbed it 'Frequently Answered Questions'; Miya himself credited Mark Horton's earlier 18-question post for the format, but the FAQ name on the space list is attributed to Miya"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:34:02Z",
+   "target": "f24340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugene Miya wrote the next FAQs for the ARPANET “space” and “net.space” mailing list, which he started distributing in 1983 once a month",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:34:04Z",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rather, it was a proof-of-concept built to test the experimental Williams-Kilburn tube, the first electronic random-access memory (RAM) device.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:34:06Z",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Baby used three Williams tubes and one CRT, with the first Williams tube providing the 32 by 32-bit random-access memory (RAM)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:09.426Z",
+   "target": "f24340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugene Miya wrote the next FAQs for the ARPANET “space” and “net.space” mailing list, which he started distributing in 1983 once a month",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:09.426Z",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rather, it was a proof-of-concept built to test the experimental Williams-Kilburn tube, the first electronic random-access memory (RAM) device.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:09.426Z",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Baby used three Williams tubes and one CRT, with the first Williams tube providing the 32 by 32-bit random-access memory (RAM)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:09.426Z",
+   "target": "f24340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugene Miya wrote the next FAQs for the ARPANET “space” and “net.space” mailing list, which he started distributing in 1983 once a month to try to answer a lot of the simple questions from new users that could drown out the rest of a list.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Eugene Miya” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:09.426Z",
+   "target": "f24341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Williams tube used a cathode ray tube (CRT), which probably makes many people think of their old bulky TVs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Williams tube” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a0384",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/PRISM",
+   "title": "PRISM – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:18.651Z",
+   "snapshot": "f6571396bd8af45083b94602e63ebce8257f3b4acd596b414d705328659dd8ec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tempora",
+   "title": "Tempora – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:19.460Z",
+   "snapshot": "a416e0ae470cadf1572484631866b2124da1be45637383aafe5e219dd506b03d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/XKeyscore",
+   "title": "XKeyscore – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:21.845Z",
+   "snapshot": "31f52c4d83863e59162fdc2032cedc559539a019ed1251b892320abe69113127"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/ECHELON",
+   "title": "ECHELON – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:21.470Z",
+   "snapshot": "0b565cb12c18f1c41ce7d6bdc626920eeda5c88c598f6724d6c79b375a2f7b61"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tor_(network)",
+   "title": "Tor (network) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:22.647Z",
+   "snapshot": "ec28a76f42a7ad2d979fab6523475f36632b3bdbbf2422fdfaba0966d39a4e78"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Edward_Snowden",
+   "title": "Edward Snowden",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:52:25.373Z",
+   "snapshot": "5b2a18d1a64d8c796fa51175fa9aa2d7734fae7c90c5d7fc252a7455df3802e6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "PRISM",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tempora",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "XKeyscore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Echelon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "NSA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; history entry seq 38; transcript tp-192"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:39.557Z",
+   "target": "f01916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "PRISM is a code name for a program under which the United States National Security Agency (NSA) collects internet communications from various U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PRISM” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:39.557Z",
+   "target": "f01917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tempora is the codeword for a formerly-secret computer system that is used by the British Government Communications Headquarters (GCHQ).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tempora” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:39.557Z",
+   "target": "f01918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "XKeyscore (XKEYSCORE or XKS) is a classified computer system used by the United States National Security Agency (NSA) for searching and analyzing global Internet data, which it collects in real time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “XKeyscore” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:39.557Z",
+   "target": "f01919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ECHELON, originally a secret government code name, is a surveillance program (signals intelligence/SIGINT collection and analysis network) operated by the five signatory states to the UKUSA Security Agreement: Australia, Canada, New Zealand, the UK and the United States, also known as the Five Eyes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Echelon” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:39.557Z",
+   "target": "f01920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tor is a free overlay network for enabling anonymous communication.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tor” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:39.557Z",
+   "target": "f14696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Enthüllungen lösten die Globale Überwachungs- und Spionageaffäre (auch „NSA-Affäre“) aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NSA” is on the snapshot of s6"
+  }
+ ]
+}

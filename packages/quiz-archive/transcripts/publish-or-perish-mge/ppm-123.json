@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-123",
+ "image": "IMG20261022154523.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Art History",
+   "cardText": "[Art History] Which artist is famous for the sculpture “David”?\nA. Leonardo da Vinci\nB. Michelangelo\nC. Raphael\nAnswer: B. From a block of marble once abandoned by another sculptor because of its average quality, Michelangelo skillfully sculpted the statue of David, dedicating over two years of continuous work to create this masterpiece.",
+   "de": "Welcher Künstler meißelte die Marmorstatue David in Florenz (1501–1504) aus einem Block, den ein anderer Bildhauer aufgegeben hatte?",
+   "en": "Which artist carved the marble statue David in Florence (1501–1504) from a block another sculptor had abandoned?",
+   "reworked": true,
+   "answerDe": "Michelangelo",
+   "answerEn": "Michelangelo",
+   "timeline": {
+    "kind": "creation",
+    "start": "1501",
+    "end": "1504",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Michelangelo carves his marble David in Florence",
+    "labelDe": "Michelangelo meißelt in Florenz seinen marmornen David"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/David_(Michelangelo)",
+    "title": "David (Michelangelo)",
+    "lang": "en"
+   },
+   "notes": "Confirmed: 1501–1504, from a block earlier worked on and left by Agostino di Duccio (and Antonio Rossellino).",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 2,
+   "discipline": "Linguistics",
+   "cardText": "[Linguistics] What does the word for “lo mein” mean in Cantonese?\nA. Wheat noodles\nB. Fried noodles\nC. Tossed noodles\nAnswer: C. Translated from “tossed noodles” in Cantonese, “lo mein” refers to the method of mixing boiled noodles with stir-fried vegetables and meat or seafood by tossing them together in a wok.",
+   "de": "Was bedeutet der kantonesische Name des Nudelgerichts Lo Mein wörtlich?",
+   "en": "What does the Cantonese name of the noodle dish lo mein literally mean?",
+   "reworked": true,
+   "answerDe": "Gerührte Nudeln",
+   "answerEn": "Stirred noodles",
+   "timeline": {
+    "kind": "period",
+    "start": "1848",
+    "end": "1855",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The California Gold Rush brings Cantonese immigrants, the start of American Chinese cuisine with dishes like lo mein",
+    "labelDe": "Der kalifornische Goldrausch bringt kantonesische Einwanderer – der Beginn der amerikanisch-chinesischen Küche mit Gerichten wie Lo Mein"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lo_mein",
+    "title": "Lo mein",
+    "lang": "en"
+   },
+   "notes": "Wikipedia/Merriam-Webster gloss 撈麵 as 'stirred noodles' (撈 lou = 'to stir'); the card's 'tossed noodles' should be accepted. The card's explanation (stir-fried in a wok) describes the American dish — Cantonese lo mein is boiled noodles tossed in sauce, not stir-fried. Timeline: lo mein has no date of its own; the Gold Rush start of American Chinese cuisine is from Wikipedia's 'American Chinese cuisine'.",
+   "domain": "literature",
+   "sub": "language"
+  }
+ ]
+}

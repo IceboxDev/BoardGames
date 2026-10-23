@@ -1,0 +1,355 @@
+{
+ "article": "a0035",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kupieren",
+   "title": "Kupieren – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:28.781Z",
+   "snapshot": "af4853451487788a27a661087d1278d29b9b8d74ab63e57f87f78ebd3a37c487"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Docking_(animal)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:32.508Z",
+   "snapshot": "7359e4e6e7bd96ec13c7cef08d838d0891fcef5f8419935d318d6af71c279103"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hornkuh-Initiative",
+   "title": "Hornkuh-Initiative – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:29.783Z",
+   "snapshot": "ffd1d345eb6609c3377381ff54b199ce6da9455291bbff0eb4bd3c35b654c198"
+  },
+  "s4": {
+   "url": "https://www.landwirtschaft.de/tier-und-pflanze/tier/schweine/ferkelkastration-nur-noch-mit-betaeubung",
+   "title": "Ferkelkastration: nur noch mit Betäubung – landwirtschaft.de",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:30.081Z",
+   "snapshot": "f0e05f7b89d36e10db022cdadf2cdb88b29faaf61a73cc0101a17037a6c89ec7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Onychectomy",
+   "title": "Onychectomy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:33.534Z",
+   "snapshot": "f7b0534a42d6c3952c2308e71781f5dd6dab18e6d0f3d8711b3cbd312eeb4d55"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Dehorning",
+   "title": "Dehorning",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:26.215Z",
+   "snapshot": "521c815124ac54ff1dfca5404e0f4d1d1dbe5a352c4a3aa15369b26ce1671383"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/dehorn",
+   "title": "dehorn",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:25.871Z",
+   "snapshot": "06dacf59b14f3573a979f8516166e8111822af37dfe5a83ab03fe420ff1a8f46"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kupieren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Docking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Enthornung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kastration",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Declawing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:40.270Z",
+   "target": "f00171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unter Kupieren (französisch couper  ‚abschneiden‘) versteht man das operative Entfernen (Amputation) von einigen Schwanzwirbeln bei Pferden und Hunden, das Kürzen des Schwanzes bei Schafen und Schweinen, die modebedingte Verkleinerung von Ohren bei Hunden und das Verstümmeln von Schnäbeln beim",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kupieren” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.270Z",
+   "target": "f00171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Docking is the intentional removal of part of an animal's tail or, sometimes, ears.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Docking” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.270Z",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Enthornung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Enthornung”, “Dehorning”, “Обезроживание”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.270Z",
+   "target": "f00173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die betäubungslose Kastration wurde lange praktiziert und war für die Tiere sehr schmerzhaft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kastration” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.270Z",
+   "target": "f00175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Onychectomy, popularly known as declawing, is an operation to remove an animal's claws surgically by means of the amputation of all or part of the distal phalanges, or end bones, of the animal's toes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Declawing” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:31Z",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dehorning is the process of removing the horns of livestock.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:07:33Z",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "to remove the horns of (cattle).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "dictionary.com also lists 'to prevent the formation or growth of horns in (cattle), as by cauterization' — the horn-bud case"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:51:55.865Z",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dehorning is the process of removing the horns of livestock.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:55.865Z",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "to remove the horns of (cattle).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:55.865Z",
+   "target": "f00172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dehorning is the process of removing the horns of livestock.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dehorning” is on the snapshot of s6"
+  }
+ ]
+}

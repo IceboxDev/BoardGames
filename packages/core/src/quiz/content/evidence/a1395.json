@@ -1,0 +1,336 @@
+{
+ "article": "a1395",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/El_Greco",
+   "title": "El Greco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:46.306Z",
+   "snapshot": "60f56680c8dee1b467f7edd4b7959ffec1c1a2eee43723da64f631785c642b2f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "title": "Caravaggio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:47.451Z",
+   "snapshot": "d1a2550e2e34238453fe753b438e8df91fbc18c3b70ae95f03b9991c43afe9c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tintoretto",
+   "title": "Tintoretto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:48.377Z",
+   "snapshot": "68b5a9ba2e8420e6cb09179b412a69796c6d9cae3a00d9677ebeefcc90222b17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sandro_Botticelli",
+   "title": "Sandro Botticelli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:49.373Z",
+   "snapshot": "18ca671fa238cbb293943844ff313f81d728b61fe03aeb4de645f4774d588cf8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Canaletto",
+   "title": "Canaletto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:50.272Z",
+   "snapshot": "295543b6124296c8cc3d6affd4df151f6d91a638afbc54a0ca07504e4617d148"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hieronymus_Bosch",
+   "title": "Hieronymus Bosch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:48.146Z",
+   "snapshot": "781a778635a0a271abe3d3b4751fabbf827c987be43d98d71383b51c0d494a6e"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Georg_Baselitz",
+   "title": "Georg Baselitz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:48.733Z",
+   "snapshot": "f75b8958477f44094420753d3962f7cf3c869f37ce4caed4f425387b5002a7c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "El Greco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Caravaggio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tintoretto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sandro Botticelli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Canaletto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hieronymus Bosch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-057"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Georg Baselitz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-289"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f06971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Theotokópoulos (Greek: Δομήνικος Θεοτοκόπουλος, pronounced [ðoˈminikos θeotoˈkopulos]; 1 October 1541 –  7 April 1614), most widely known as El Greco (Spanish pronunciation: [el ˈɣɾeko]; \"The Greek\"), was a Greek painter, sculptor and architect of the Spanish Renaissance, regarded as one of the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Greco” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f06972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Michelangelo Merisi da Caravaggio (also Michele Angelo Merigi or Amerighi da Caravaggio; 29 September 1571 – 18 July 1610), known mononymously as Caravaggio, was an Italian painter active in Rome for a significant portion of his artistic life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Caravaggio” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f06973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jacopo Robusti (late September or early October 1518 – 31 May 1594), best known as Tintoretto ( TIN-tə-RET-oh; Italian: [tintoˈretto]; Venetian: [tiŋtoˈɾeto]), was an Italian Renaissance painter of the Venetian school.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tintoretto” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f06974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1445 – May 17, 1510), better known as Sandro Botticelli ( BOT-ih-CHEL-ee; Italian: [ˈsandro bottiˈtʃɛlli]) or simply Botticelli, was an Italian painter of the Early Renaissance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sandro Botticelli” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f06975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giovanni Antonio Canal (18 October 1697 – 19 April 1768), commonly known as Canaletto (Italian: [kanaˈletto]), was an Italian painter from the Republic of Venice, considered an important member of the 18th-century Venetian school.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canaletto” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f14433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hieronymus Bosch [ɦijeːˈɾoːnimʏs ˈbɔs] (niederländisch auch Jheronimus Bosch; * um 1450 in ’s-Hertogenbosch als Jheronimus van Aken [jeɪˈɾoːnimʏs vɑn ˈaːkə(n)]; † August 1516 ebenda) war ein niederländischer Maler der Spätgotik bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hieronymus Bosch” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:18.729Z",
+   "target": "f14434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Georg Baselitz wurde 1938 in Deutschbaselitz als zweites Kind eines Lehrerehepaares geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Baselitz” is on the snapshot of s7"
+  }
+ ]
+}

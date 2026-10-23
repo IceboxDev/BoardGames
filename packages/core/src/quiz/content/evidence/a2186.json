@@ -1,0 +1,401 @@
+{
+ "article": "a2186",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/KFC_Original_Recipe",
+   "title": "KFC Original Recipe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:51.274Z",
+   "snapshot": "22d5135d1a6df9cdb2321fa889d99c5e38eac9528d50c27bcc01323fffa942b9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Friterie",
+   "title": "Friterie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:52.227Z",
+   "snapshot": "d7b3aaefc1f215b379b65f4603a1ebb0b4ddcaf9a52a081139881afb3c81a697"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Frietmuseum",
+   "title": "Frietmuseum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:49.510Z",
+   "snapshot": "210b7e922bb64c66e865c8d614b7a05e3296d29d3dc35d23a347914cbe98a896"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Huy_Fong_Foods",
+   "title": "Huy Fong Foods",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:53.187Z",
+   "snapshot": "a4e02f7d7d9a2d45fe1dbe00c372f2215c8ed057a0f4dea2378186fe4ba0e22a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Fusionsk%C3%BCche",
+   "title": "Fusionsküche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:50.486Z",
+   "snapshot": "45a9f2b391593e4265ce8798c6b9a5e82579940ec3cade028ca6ca653c9ad2f6"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Currywurst",
+   "title": "Currywurst",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:51.615Z",
+   "snapshot": "89d588063d8710a033dd16fbf50cb321772b10edea16976628db01d7b0051ea6"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Currywurst",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:54.184Z",
+   "snapshot": "0c3b95b4fe3b423d76ffa55fd50ad73743b48e9ea1e91f5e8780ef63ef6cc7f3"
+  },
+  "s8": {
+   "url": "https://global.kfc.com/our-history",
+   "title": "Our History – KFC",
+   "publisher": "KFC (Yum! Brands)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:15.091Z",
+   "snapshot": "f6942d3e50aee1ef26e10a202c68cde46be8ef5ce1958bb1e69a3b5928df34d6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "11 herbs and spices",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-301"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-086"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pommes frites",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-192"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rooster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-344"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fusionsküche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-124"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:34.715Z",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "While perfecting his secret recipe with 11 herbs and spices, Sanders found that pan frying chicken was too slow, requiring 30 minutes per order.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “11 herbs and spices” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.715Z",
+   "target": "f11093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Belgium and Northern France, or frituur or frietkot in Flanders and the Netherlands, also fritkot in French-speaking Belgium and friture or frietkraam in the Netherlands, is a traditional restaurant, kiosk or van serving quick-service fast food, particularly fries from which they derive their name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fries” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.715Z",
+   "target": "f11094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der erste Stock zeigt die Details der Geschichte der Kartoffel, der Pommes frites und deren Ursprung in Belgien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pommes frites” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.715Z",
+   "target": "f11095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It has grown to become one of the leaders in the Asian hot sauce market with its sriracha sauce, popularly referred to as \"rooster sauce\" or \"cock sauce\" due to the image of a rooster on the label.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rooster” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.715Z",
+   "target": "f11096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Fusionsküche wird die Kombination unterschiedlicher Esskulturen und Kochkünste sowie die Vermischung klassischer Regional- und Nationalküchen verstanden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fusionsküche” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.715Z",
+   "target": "f11097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Weit verbreiteter Auffassung gemäß ist die Currywurst in der Zeit nach dem Zweiten Weltkrieg in West-Berlin entstanden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:33:41Z",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "eventually perfecting the pressure cooker method and his secret recipe of 11 herbs and spices",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:33:45Z",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "While perfecting his secret recipe with 11 herbs and spices",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:21.847Z",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "eventually perfecting the pressure cooker method and his secret recipe of 11 herbs and spices",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:21.847Z",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "While perfecting his secret recipe with 11 herbs and spices",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:21.847Z",
+   "target": "f11092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "There, he started serving his delicious fried chicken to interstate travelers, eventually perfecting the pressure cooker method and his secret recipe of 11 herbs and spices.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “11 herbs and spices” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "article": "a1668",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Alibaba_Group",
+   "title": "Alibaba Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:54.469Z",
+   "snapshot": "40db40ce82390665daa6d84f66e7a9441f76f159350992471dea2e73102a88c4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tencent",
+   "title": "Tencent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:54.647Z",
+   "snapshot": "a71452b989521776c5347d36dee2552b60f54e28cb0764b47c4e8b022da67c2a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Baidu",
+   "title": "Baidu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:57.430Z",
+   "snapshot": "f0e3c4c5f8077aad5e58109ddf78d0e8b34bf41e6fdae2d72683fe387cff5712"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/EBay",
+   "title": "eBay – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:51.542Z",
+   "snapshot": "f2fd9a019d56df159b0cf131c6b4c32e82ad2c29a6157712259ea8224643ddc8"
+  },
+  "s5": {
+   "url": "https://gs.statcounter.com/search-engine-market-share/all/china",
+   "title": "Search Engine Market Share China – Statcounter Global Stats",
+   "publisher": "Statcounter",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:22.955Z",
+   "snapshot": "f2c839c94f75a01cc2140bf21029da6489639fa9bca03908bc5977de6001569a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alibaba",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c139"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tencent",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Baidu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "eBay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:02.382Z",
+   "target": "f08336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Alibaba Group Holding Limited (chinesisch 阿里巴巴集团控股有限公司, Pinyin Ālǐbābā Jítuán Kònggǔ Yǒuxiàn Gōngsī, kurz 阿里巴巴集团,  Ālǐbābā Jítuán) ist ein Unternehmen mit Sitz in Hangzhou, China.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alibaba” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:02.382Z",
+   "target": "f08337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zu den breitgestreuten Aktivitäten von Tencent zählen vor allem die Geschäftsfelder Sofortnachrichtendienste, Soziale Netzwerke, Onlinemedien (Webportale), Internet-Mehrwertdienste (stationär und im Mobilfunk), interaktive Unterhaltung (insbesondere Mehrspieler-Onlinespiele aka MMOG, MMORPG),",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tencent” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:02.382Z",
+   "target": "f08338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "( BY-doo; Chinese: 百度; pinyin: Bǎidù; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baidu” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:02.382Z",
+   "target": "f08340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "(  EE-bay, styled as ebay) is an American multinational e-commerce company based in San Jose, California, that allows users to buy or view items via retail sales through online marketplaces and websites in 190 markets worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:02.382Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “eBay” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T12:06:56Z",
+   "target": "f08338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Search Engine Market Share in China - September 2026 Baidu 46.65 % bing 21.76 %",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23",
+   "note": "as of September 2026 Baidu still leads, though its share has fallen below half"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:06:59Z",
+   "target": "f08338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Founded 18 January 2000 ; 26 years ago ( 2000-01-18 ) Founder Robin Li Eric Xu",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:48.994Z",
+   "target": "f08338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Baidu",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:48.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baidu” is on the snapshot of s5"
+  }
+ ]
+}

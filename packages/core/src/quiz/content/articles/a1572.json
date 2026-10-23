@@ -1,0 +1,320 @@
+{
+ "id": "a1572",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "Onions, Tunnels and Padlocks: The Alphabet of Online Privacy",
+ "titleDe": "Zwiebeln, Tunnel und Vorhängeschlösser: Das Alphabet der Online-Privatsphäre",
+ "titleRu": "Луковицы, туннели и замки: азбука приватности в интернете",
+ "bodyEn": "The tools that keep internet traffic private have names that sound like nonsense until they are unpacked. Tor, the free software for anonymous browsing, is the best example. The name was originally an acronym for The Onion Routing (often expanded as The Onion Router), a description of how it works: a message is wrapped in several layers of encryption, like an onion, and sent through a chain of at least three volunteer-run relays. The guard relay knows who sent the message but not where it is going; the exit relay knows the destination but not the sender; the middle relay knows neither. Onion routing was invented in the mid-1990s at the United States Naval Research Laboratory by Paul Syverson, Michael Reed and David Goldschlag to protect government communications. Roger Dingledine and Nick Mathewson turned it into Tor, released on 20 September 2002; the non-profit Tor Project has maintained it since 2006, and the Tor Browser, a modified Firefox, made it usable for millions of journalists, dissidents and ordinary users. The project now spells its name Tor rather than TOR, insisting it is no longer an acronym. Hidden services with the ending .onion, reachable only inside the network, gave rise to the so-called dark web.\n\nA VPN, a Virtual Private Network, solves a different problem; its standard security protocol, IPsec, dates from the mid-1990s (1996). It builds an encrypted tunnel from a device to a server run by a company or a commercial provider, so that the local network, the café's Wi-Fi or the internet provider sees only scrambled traffic to one address. Unlike Tor, a VPN hides the user from the network but not from the VPN operator, which is why it is a tool for security and for evading geographic blocks rather than for anonymity.\n\nPGP stands for Pretty Good Privacy. Phil Zimmermann wrote the program in 1991 and released it free of charge, making strong public-key encryption of e-mail available to anyone. The US government treated the export of such software as arms trafficking and investigated him for three years; Zimmermann responded by publishing the source code as a printed book, which the First Amendment protected. The open standard OpenPGP and the free implementation GnuPG descend from it.\n\nThe padlock in the browser stands for HTTPS, Hypertext Transfer Protocol Secure. It is ordinary HTTP wrapped in an encrypted connection, first introduced by Netscape in 1994. The encryption layer was originally SSL, Secure Sockets Layer, and since January 1999 its standardised successor TLS, Transport Layer Security, whose current version 1.3 dates from 2018. Since the free certificate authority Let's Encrypt began issuing certificates in 2015, the great majority of web traffic has been encrypted in this way.\n\n| Abbreviation | Stands for | Purpose |\n|---|---|---|\n| Tor | The Onion Routing | anonymity through layered relays |\n| VPN | Virtual Private Network | encrypted tunnel to a trusted server |\n| PGP | Pretty Good Privacy | e-mail encryption |\n| HTTPS | Hypertext Transfer Protocol Secure | encrypted web pages |\n| TLS | Transport Layer Security | the encryption layer beneath HTTPS |",
+ "bodyDe": "Die Werkzeuge, die den Internetverkehr privat halten, tragen Namen, die wie Unsinn klingen, bis man sie auspackt. Tor, die kostenlose Software zum anonymen Surfen, ist das beste Beispiel. Der Name war ursprünglich ein Akronym für The Onion Routing (oft auch als The Onion Router aufgelöst), eine Beschreibung der Funktionsweise: Eine Nachricht wird in mehrere Verschlüsselungsschichten gehüllt, wie eine Zwiebel, und durch eine Kette von mindestens drei von Freiwilligen betriebenen Relais geschickt. Das Eingangsrelais weiß, wer die Nachricht gesendet hat, aber nicht, wohin sie geht; das Ausgangsrelais kennt das Ziel, aber nicht den Absender; das mittlere Relais kennt keines von beiden. Das Onion-Routing wurde Mitte der 1990er Jahre am United States Naval Research Laboratory von Paul Syverson, Michael Reed und David Goldschlag erfunden, um Regierungskommunikation zu schützen. Roger Dingledine und Nick Mathewson machten daraus Tor, veröffentlicht am 20. September 2002; das gemeinnützige Tor Project pflegt es seit 2006, und der Tor Browser, ein modifizierter Firefox, machte es für Millionen von Journalisten, Dissidenten und gewöhnlichen Nutzern benutzbar. Das Projekt schreibt seinen Namen heute Tor statt TOR und betont, dass es kein Akronym mehr sei. Versteckte Dienste mit der Endung .onion, die nur innerhalb des Netzwerks erreichbar sind, ließen das sogenannte Darknet entstehen.\n\nEin VPN, ein Virtual Private Network, löst ein anderes Problem; sein Standard-Sicherheitsprotokoll IPsec stammt aus der Mitte der 1990er Jahre (1996). Es baut einen verschlüsselten Tunnel von einem Gerät zu einem Server auf, den ein Unternehmen oder ein kommerzieller Anbieter betreibt, sodass das lokale Netz, das WLAN des Cafés oder der Internetanbieter nur verschlüsselten Verkehr zu einer einzigen Adresse sieht. Anders als Tor verbirgt ein VPN den Nutzer vor dem Netzwerk, aber nicht vor dem VPN-Betreiber, weshalb es ein Werkzeug für Sicherheit und zum Umgehen von Ländersperren ist und nicht für Anonymität.\n\nPGP steht für Pretty Good Privacy. Phil Zimmermann schrieb das Programm 1991 und gab es kostenlos frei, womit starke Public-Key-Verschlüsselung von E-Mails für jedermann verfügbar wurde. Die US-Regierung behandelte den Export solcher Software als Waffenhandel und ermittelte drei Jahre lang gegen ihn; Zimmermann antwortete, indem er den Quellcode als gedrucktes Buch veröffentlichte, das der erste Verfassungszusatz schützte. Der offene Standard OpenPGP und die freie Implementierung GnuPG stammen davon ab.\n\nDas Vorhängeschloss im Browser steht für HTTPS, Hypertext Transfer Protocol Secure. Es ist gewöhnliches HTTP, verpackt in eine verschlüsselte Verbindung, erstmals 1994 von Netscape eingeführt. Die Verschlüsselungsschicht war ursprünglich SSL, Secure Sockets Layer, und seit Januar 1999 ihr standardisierter Nachfolger TLS, Transport Layer Security, dessen aktuelle Version 1.3 aus dem Jahr 2018 stammt. Seit die kostenlose Zertifizierungsstelle Let's Encrypt 2015 begann, Zertifikate auszustellen, ist der weitaus größte Teil des Webverkehrs auf diese Weise verschlüsselt.\n\n| Abkürzung | Steht für | Zweck |\n|---|---|---|\n| Tor | The Onion Routing | Anonymität durch geschichtete Relais |\n| VPN | Virtual Private Network | verschlüsselter Tunnel zu einem vertrauenswürdigen Server |\n| PGP | Pretty Good Privacy | E-Mail-Verschlüsselung |\n| HTTPS | Hypertext Transfer Protocol Secure | verschlüsselte Webseiten |\n| TLS | Transport Layer Security | die Verschlüsselungsschicht unter HTTPS |",
+ "bodyRu": "У инструментов, которые защищают интернет-трафик от чужих глаз, такие названия, что звучат как бессмыслица, пока их не расшифруешь. Лучший пример — Tor, бесплатная программа для анонимного сёрфинга. Изначально это название было сокращением от The Onion Routing («луковая маршрутизация»; часто расшифровывают и как The Onion Router – «луковый маршрутизатор») и описывало принцип работы: сообщение заворачивается в несколько слоёв шифрования, как луковица, и проходит через цепочку как минимум из трёх ретрансляторов, которые содержат добровольцы. Входной узел знает, кто отправил сообщение, но не знает, куда оно идёт; выходной узел знает адресата, но не отправителя; средний не знает ни того, ни другого. Луковую маршрутизацию изобрели в середине 1990-х годов в Исследовательской лаборатории ВМС США Пол Сайверсон, Майкл Рид и Дэвид Голдшлаг, чтобы защищать правительственную связь. Роджер Динглдайн и Ник Мэтьюсон превратили её в Tor, выпущенный 20 сентября 2002 года; с 2006 года его поддерживает некоммерческая организация Tor Project, а Tor Browser — доработанный Firefox — сделал сеть доступной для миллионов журналистов, диссидентов и обычных пользователей. Сегодня проект пишет своё имя как Tor, а не TOR, и настаивает, что это больше не аббревиатура. Скрытые сервисы с окончанием .onion, доступные только внутри сети, породили так называемый даркнет.\n\nVPN, Virtual Private Network («виртуальная частная сеть»), решает другую задачу; её стандартный протокол безопасности IPsec появился в середине 1990-х годов (1996). VPN строит зашифрованный туннель от устройства к серверу, которым управляет компания или коммерческий провайдер, так что локальная сеть, Wi-Fi в кафе или интернет-провайдер видят лишь зашифрованный трафик к одному-единственному адресу. В отличие от Tor, VPN скрывает пользователя от сети, но не от оператора VPN, поэтому это инструмент безопасности и обхода географических блокировок, а не анонимности.\n\nPGP расшифровывается как Pretty Good Privacy («довольно хорошая приватность»). Фил Циммерман написал эту программу в 1991 году и распространял её бесплатно, сделав стойкое шифрование электронной почты с открытым ключом доступным каждому. Правительство США расценило экспорт такого ПО как торговлю оружием и три года вело против него расследование; Циммерман ответил тем, что издал исходный код в виде печатной книги, защищённой Первой поправкой. От PGP происходят открытый стандарт OpenPGP и свободная реализация GnuPG.\n\nЗамочек в браузере означает HTTPS — Hypertext Transfer Protocol Secure («защищённый протокол передачи гипертекста»). Это обычный HTTP, упакованный в зашифрованное соединение; впервые его ввела компания Netscape в 1994 году. Шифрующим слоем поначалу был SSL, Secure Sockets Layer, а с января 1999 года — его стандартизированный преемник TLS, Transport Layer Security («безопасность транспортного уровня»), чья актуальная версия 1.3 появилась в 2018 году. С тех пор как в 2015 году бесплатный удостоверяющий центр Let's Encrypt начал выдавать сертификаты, подавляющая часть веб-трафика шифруется именно так.\n\n| Аббревиатура | Расшифровка | Назначение |\n|---|---|---|\n| Tor | The Onion Routing | анонимность за счёт многослойной ретрансляции |\n| VPN | Virtual Private Network | зашифрованный туннель к доверенному серверу |\n| PGP | Pretty Good Privacy | шифрование электронной почты |\n| HTTPS | Hypertext Transfer Protocol Secure | зашифрованные веб-страницы |\n| TLS | Transport Layer Security | шифрующий слой под HTTPS |",
+ "notesEn": "The Tor Project derives the name from „the onion routing“ (its NRL predecessor project); the common expansion „The Onion Router“ – used even in the title of the 2004 Tor design paper – is also accepted.",
+ "notesDe": "Das Tor Project leitet den Namen von „the onion routing“ ab (dem Vorgängerprojekt des Naval Research Lab); die verbreitete Auflösung „The Onion Router“ – sie steht sogar im Titel des Tor-Grundlagenpapiers von 2004 – wird ebenfalls anerkannt.",
+ "notesRu": "Tor Project выводит название из «the onion routing» (так назывался исходный проект Лаборатории ВМС США); распространённая расшифровка «The Onion Router» – она стоит даже в заголовке статьи 2004 года с описанием Tor – тоже засчитывается.",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/How_Tor_Works_2.svg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:How_Tor_Works_2.svg",
+   "width": 705,
+   "height": 453,
+   "alt": {
+    "en": "Diagram of a connection routed through three Tor relays",
+    "de": "Diagramm einer Verbindung über drei Tor-Relais",
+    "ru": "Схема соединения через три узла сети Tor"
+   },
+   "caption": {
+    "en": "How Tor works: the user's traffic is wrapped in layers of encryption and passed through a chain of relays, so that no single relay knows both the sender and the destination – the „onion“ in The Onion Router.",
+    "de": "So funktioniert Tor: Der Datenverkehr wird in Verschlüsselungsschichten gehüllt und über eine Kette von Relais geleitet, sodass kein einzelnes Relais Absender und Ziel zugleich kennt – die „Zwiebel“ in The Onion Router.",
+    "ru": "Как работает Tor: трафик пользователя заворачивается в слои шифрования и проходит через цепочку узлов, так что ни один узел не знает одновременно отправителя и адресата, — это и есть «луковица» в названии The Onion Router."
+   },
+   "credit": "Electronic Frontier Foundation / Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/PRZ_closeup_cropped.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Phil_Zimmermann",
+   "width": 3018,
+   "height": 4327,
+   "alt": {
+    "en": "Portrait of Phil Zimmermann",
+    "de": "Porträt von Phil Zimmermann",
+    "ru": "Портрет Фила Циммермана"
+   },
+   "caption": {
+    "en": "Phil Zimmermann, who wrote Pretty Good Privacy (PGP) in 1991 and was investigated by the US government for three years for letting it spread abroad.",
+    "de": "Phil Zimmermann, der 1991 Pretty Good Privacy (PGP) schrieb und gegen den die US-Regierung drei Jahre lang ermittelte, weil sich das Programm im Ausland verbreitete.",
+    "ru": "Фил Циммерман, написавший в 1991 году Pretty Good Privacy (PGP); правительство США три года вело против него расследование из-за распространения программы за рубежом."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f07856",
+   "answerEn": "The Onion Routing",
+   "answerDe": "The Onion Routing",
+   "answerRu": "The Onion Routing",
+   "spans": {
+    "en": [
+     213,
+     17
+    ],
+    "de": [
+     230,
+     17
+    ],
+    "ru": [
+     243,
+     17
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2002-09-20",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tor, „The Onion Router“, is released",
+    "labelDe": "Tor, „The Onion Router“, wird veröffentlicht",
+    "labelRu": "Выходит Tor — «The Onion Router»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Tor_(network)",
+    "title": "Tor (network) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07856",
+     "en": "„Tor“ is free software for increased anonymity on the Internet. What did the abbreviation „Tor“ originally stand for?",
+     "de": "„Tor“ ist eine kostenlose Software für erhöhte Anonymität im Internet. Wofür stand die Abkürzung „Tor“ ursprünglich?",
+     "ru": "Tor — бесплатная программа для повышения анонимности в интернете. Что изначально означало сокращение «Tor»?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c131",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q202044",
+     "label": "Tor",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f07858",
+   "answerEn": "Pretty Good Privacy",
+   "answerDe": "Pretty Good Privacy",
+   "answerRu": "Pretty Good Privacy",
+   "spans": {
+    "en": [
+     1781,
+     19
+    ],
+    "de": [
+     2027,
+     19
+    ],
+    "ru": [
+     1954,
+     19
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Phil Zimmermann releases Pretty Good Privacy (PGP)",
+    "labelDe": "Phil Zimmermann veröffentlicht Pretty Good Privacy (PGP)",
+    "labelRu": "Фил Циммерман выпускает Pretty Good Privacy (PGP)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pretty_Good_Privacy",
+    "title": "Pretty Good Privacy – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07858",
+     "en": "What does the abbreviation „PGP“ stand for in the e-mail encryption software released by Phil Zimmermann in 1991?",
+     "de": "Wofür steht die Abkürzung „PGP“ bei der 1991 von Phil Zimmermann veröffentlichten Verschlüsselungssoftware für E-Mails?",
+     "ru": "Что означает сокращение «PGP» в названии программы для шифрования электронной почты, выпущенной Филом Циммерманом в 1991 году?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q1227452",
+     "label": "Pretty Good Privacy",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f07859",
+   "answerEn": "Hypertext Transfer Protocol Secure",
+   "answerDe": "Hypertext Transfer Protocol Secure",
+   "answerRu": "Hypertext Transfer Protocol Secure",
+   "spans": {
+    "en": [
+     2285,
+     34
+    ],
+    "de": [
+     2571,
+     34
+    ],
+    "ru": [
+     2486,
+     34
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Netscape creates HTTPS for its Navigator browser",
+    "labelDe": "Netscape entwickelt HTTPS für seinen Navigator-Browser",
+    "labelRu": "Netscape создаёт HTTPS для своего браузера Navigator"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HTTPS",
+    "title": "HTTPS – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07859",
+     "en": "What does the abbreviation „HTTPS“, indicated in the browser by a padlock symbol, stand for?",
+     "de": "Wofür steht die Abkürzung „HTTPS“, die im Browser durch ein Schlosssymbol angezeigt wird?",
+     "ru": "Что означает сокращение «HTTPS», на которое в браузере указывает значок замка?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q44484",
+     "label": "Hypertext Transfer Protocol Secure",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f07860",
+   "answerEn": "Transport Layer Security",
+   "answerDe": "Transport Layer Security",
+   "answerRu": "Transport Layer Security",
+   "spans": {
+    "en": [
+     2533,
+     24
+    ],
+    "de": [
+     2846,
+     24
+    ],
+    "ru": [
+     2791,
+     24
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1999-01",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "TLS 1.0 is defined in RFC 2246 as the successor to SSL",
+    "labelDe": "TLS 1.0 wird in RFC 2246 als Nachfolger von SSL festgelegt",
+    "labelRu": "TLS 1.0 закреплён в RFC 2246 как преемник SSL"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+    "title": "Transport Layer Security – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07860",
+     "en": "What does the abbreviation „TLS“ stand for, the encryption protocol that replaced its predecessor SSL in 1999?",
+     "de": "Wofür steht die Abkürzung „TLS“, das Verschlüsselungsprotokoll, das 1999 den Vorgänger SSL ablöste?",
+     "ru": "Что означает сокращение «TLS» — название протокола шифрования, сменившего в 1999 году своего предшественника SSL?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q206494",
+     "label": "Transport Layer Security",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f07857",
+   "answerEn": "Virtual Private Network",
+   "answerDe": "Virtual Private Network",
+   "timeline": {
+    "kind": "creation",
+    "start": "1996",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "IPsec, the security protocol behind many VPNs, is developed",
+    "labelDe": "IPsec, das Sicherheitsprotokoll vieler VPNs, wird entwickelt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Virtual_private_network",
+    "title": "Virtual private network – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07857",
+     "en": "What does the abbreviation „VPN“, which denotes an encrypted connection through a public network, stand for?",
+     "de": "Wofür steht die Abkürzung „VPN“, die eine verschlüsselte Verbindung durch ein öffentliches Netz bezeichnet?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f04858; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f04858"
+    ]
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/security",
+  "topic:language/abbreviations",
+  "audience:international"
+ ]
+}

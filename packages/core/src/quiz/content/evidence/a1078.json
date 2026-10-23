@@ -1,0 +1,885 @@
+{
+ "article": "a1078",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/L%C3%A4ndereinf%C3%BChrungsgesetz",
+   "title": "Ländereinführungsgesetz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:14.431Z",
+   "snapshot": "132411f4386b57e363422cbe97856cd91510a37682dcf734c72ef6e9b2870d2a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/States_of_Germany",
+   "title": "States of Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:18.106Z",
+   "snapshot": "0903d21bdbfa1d1252699d5e343af3ae779e01f50e935afba271cb83e3e01785"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Schwerin",
+   "title": "Schwerin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:15.550Z",
+   "snapshot": "a92868f1017c47aacc081b8248ce834290dda399ce583ff04747751cb8beab37"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/German%E2%80%93Polish_Border_Treaty",
+   "title": "German–Polish Border Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:19.130Z",
+   "snapshot": "9979c01e57b556ba7f507d93b661e9c06346c5fc2c79556449ad284ee508c4eb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Sachsen",
+   "title": "Sachsen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:39:16.793Z",
+   "snapshot": "07496f6461f99097a82aa33b14bc90a12470dee92903444c329c7231bae0b5ea"
+  },
+  "s6": {
+   "url": "https://www.bundesrat.de/DE/bundesrat/laender/laender-node.html",
+   "title": "Die Länder – Bundesrat",
+   "publisher": "Bundesrat",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:41.550Z",
+   "snapshot": "7a5ed889906556e72f1d669c048fec9eaf24ae18020e3157f45c3d0acf40a497"
+  },
+  "s7": {
+   "url": "https://snl.no/Mecklenburg-Vorpommern",
+   "title": "Mecklenburg-Vorpommern – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:41.334Z",
+   "snapshot": "4d7ad3d4ea0a18ae7b51d9c57b301d072497c54ad3fb81b5e507b95bc6cbeb81"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Saxony",
+   "title": "Saxony – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:42.364Z",
+   "snapshot": "4bdf3fe0ba4ccced4246cf0d16a3d07cc90aefeca66a022c020f26de538da3ba"
+  },
+  "s9": {
+   "url": "https://snl.no/Schleswig-Holstein",
+   "title": "Schleswig-Holstein – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:42.256Z",
+   "snapshot": "4e6c7ae40b4ce290906b2fd87d60b8bee543b89811f73e63234d1f02144d3902"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Schleswig-Holstein",
+   "title": "Schleswig-Holstein – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:43.446Z",
+   "snapshot": "51c4de220e7ddbd9e0916e7eb2960fb6c533155088d4c855d4b0872c77bea8b5"
+  },
+  "s11": {
+   "url": "https://snl.no/Brandenburg",
+   "title": "Brandenburg – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:43.521Z",
+   "snapshot": "1b35a26530df6b2aba8d3b3ba70bee2f41d4c0cee0a7846b1f594e8cacb450a1"
+  },
+  "s12": {
+   "url": "https://snl.no/Sachsen",
+   "title": "Sachsen – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:44.315Z",
+   "snapshot": "f99d56dafebc7aa117b7492d8fae944a88e4e51845acca1d924684d7e56eec6e"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Brandenburg",
+   "title": "Brandenburg – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:44.268Z",
+   "snapshot": "4cd6e7230c7fef809df880748d7ac45595822a9f002417cb4a715a982d3225eb"
+  },
+  "s14": {
+   "url": "https://en.wikipedia.org/wiki/Mecklenburg-Vorpommern",
+   "title": "Mecklenburg-Vorpommern – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:44:23Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Potsdam, Schwerin, Magdeburg, Dresden und Erfurt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berlin, Hamburg and Bremen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schleswig-Holstein und Mecklenburg-Vorpommern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mecklenburg-Vorpommern, Brandenburg and Saxony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bayern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-387"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:28.977Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Potsdam, Schwerin, Magdeburg, Dresden und Erfurt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Potsdam, Schwerin, Magdeburg, Dresden und Erfurt”, “Potsdam, Schwerin, Magdeburg, Dresden and Erfurt”, “Потсдам, Шверин, Магдебург, Дрезден и Эрфурт”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:28.977Z",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berlin, Hamburg and Bremen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Berlin, Hamburg and Bremen”, “Berlin, Hamburg und Bremen”, “Берлин, Гамбург и Бремен”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:28.977Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schleswig-Holstein und Mecklenburg-Vorpommern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Schleswig-Holstein und Mecklenburg-Vorpommern”, “Schleswig-Holstein and Mecklenburg-Vorpommern”, “Шлезвиг-Гольштейн и Мекленбург — Передняя Померания”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:28.977Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mecklenburg-Vorpommern, Brandenburg and Saxony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mecklenburg-Vorpommern, Brandenburg and Saxony”, “Mecklenburg-Vorpommern, Brandenburg und Sachsen”, “Мекленбург — Передняя Померания, Бранденбург и Саксония”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:28.977Z",
+   "target": "f11933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nachbarländer innerhalb Deutschlands sind Bayern im Südwesten, Thüringen im Westen, Sachsen-Anhalt im Nordwesten sowie Brandenburg im Norden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.977Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bayern” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:43:37Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Brandenburg Hauptstadt: Potsdam",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:43:39Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vorpommern Hauptstadt: Schwerin",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:43:42Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sachsen-Anhalt Hauptstadt: Magdeburg",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:43:45Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Freistaat Sachsen Hauptstadt: Dresden",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:43:48Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Freistaat Thüringen Hauptstadt: Erfurt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:43:52Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hovedstaden er Schwerin, mens den største byen er Rostock.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:43:56Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Its capital is Dresden, and its largest city is Leipzig.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:43:58Z",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berlin, Hamburg und Bremen hingegen gehören zu den Stadtstaaten, da sie als Städte gleichzeitig den Status eines Landes haben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:44:01Z",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "every state except the city-states of Berlin and Hamburg and the state of Bremen consists of",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23",
+   "note": "Bremen (the cities of Bremen and Bremerhaven) is a city-state in the usual count of three."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:44:04Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Schleswig-Holstein er den nordligste delstaten i Tyskland, med kyst til Østersjøen i øst og Nordsjøen i vest.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:44:07Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "mens hele nordgrensen utgjør kysten til Østersjøen",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:44:09Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Schleswig-Holstein borders Denmark (Southern Denmark) to the north, the North Sea to the west, the Baltic Sea to the east",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:44:11Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "i sør til delstatene Niedersachsen og Brandenburg og i øst til Polen",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:44:14Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Brandenburg grenser i øst til Polen",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T07:44:17Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Sachsen grenser til Polen i øst, Tsjekkia og Bayern i sør",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T07:44:20Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Brandenburg borders Poland and the states of Berlin, Mecklenburg-Vorpommern, Lower Saxony, Saxony-Anhalt, and Saxony.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T07:44:23Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Mecklenburg-Vorpommern has land borders with Poland and the German states of Brandenburg, Lower Saxony, and Schleswig-Holstein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Freistaat Thüringen Hauptstadt: Erfurt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hovedstaden er Schwerin, mens den største byen er Rostock.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Its capital is Dresden, and its largest city is Leipzig.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berlin, Hamburg und Bremen hingegen gehören zu den Stadtstaaten, da sie als Städte gleichzeitig den Status eines Landes haben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "every state except the city-states of Berlin and Hamburg and the state of Bremen consists of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s2"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Schleswig-Holstein er den nordligste delstaten i Tyskland, med kyst til Østersjøen i øst og Nordsjøen i vest.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s9"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "mens hele nordgrensen utgjør kysten til Østersjøen",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s7"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Schleswig-Holstein borders Denmark (Southern Denmark) to the north, the North Sea to the west, the Baltic Sea to the east",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s10"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "i sør til delstatene Niedersachsen og Brandenburg og i øst til Polen",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s7"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Brandenburg grenser i øst til Polen",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s11"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Sachsen grenser til Polen i øst, Tsjekkia og Bayern i sør",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s12"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Brandenburg borders Poland and the states of Berlin, Mecklenburg-Vorpommern, Lower Saxony, Saxony-Anhalt, and Saxony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s13"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:55:04.625Z",
+   "target": "f05387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berlin, Hamburg und Bremen hingegen gehören zu den Stadtstaaten, da sie als Städte gleichzeitig den Status eines Landes haben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:04.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Berlin, Hamburg und Bremen” is on the snapshot of s6"
+  }
+ ]
+}

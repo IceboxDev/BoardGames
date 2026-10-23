@@ -1,0 +1,242 @@
+{
+ "article": "a1190",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Kite_Runner",
+   "title": "The Kite Runner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:18.976Z",
+   "snapshot": "305f158fd5966fa82e2df997b8cf8c5ff1bfb88b9124f42af9f5255597c4607e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez",
+   "title": "Gabriel García Márquez – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:20.089Z",
+   "snapshot": "11da7ed5493edd0f8276bf44ef886a3995831d424379e540ae4825d7c57e8884"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
+   "title": "Things Fall Apart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:20.870Z",
+   "snapshot": "c2431276486c24e57775e3af4b526f04d1b059ecb10c53aa436ba7b2bec238c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Midnight's_Children",
+   "title": "Midnight's Children – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:21.895Z",
+   "snapshot": "fad2c75206b42bc23fddd377115a6d50b5017d70ac881567120d1d2c47925d02"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Snow_(Pamuk_novel)",
+   "title": "Snow (Pamuk novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:22.885Z",
+   "snapshot": "6bdb07a32ab03ad45d4b379cd2fa6ff6e99a0483da9e13db8f8da412a4262631"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Afghanistan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Colombia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nigeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Turkey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:45.917Z",
+   "target": "f05946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The story is set against a backdrop of tumultuous events, beginning with the collapse of Afghanistan's monarchy and the Afghan conflict that sparked shortly thereafter, with a particular focus on the Soviet–Afghan War and the exodus of Afghan refugees, as well as the rise of the Taliban regime.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.917Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afghanistan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:45.917Z",
+   "target": "f05947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Upon García Márquez's death in April 2014, Juan Manuel Santos, the president of Colombia, called him \"the greatest Colombian who ever lived\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.917Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colombia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:45.917Z",
+   "target": "f05948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Set in Colonial Nigeria, it portrays the story of Okonkwo, a traditional and influential leader of the fictional Ibo clan (inspired by the real life Igbo clan) of Umuofia, who opposes colonialism and early Christianity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.917Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nigeria” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:45.917Z",
+   "target": "f05949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Midnight's Children is the second novel by Indian-British writer Salman Rushdie, published in 1981 by Jonathan Cape with cover design by Bill Botten, about India's transition from British colonial rule to independence and partition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.917Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:45.917Z",
+   "target": "f05950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The story encapsulates many of the political and cultural tensions of modern Turkey, including a real suicide epidemic among teenage girls, which took place in the city of Kars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.917Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Turkey” is on the snapshot of s5"
+  }
+ ]
+}

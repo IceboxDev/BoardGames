@@ -1,0 +1,362 @@
+{
+ "article": "a2149",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Maneki-neko",
+   "title": "Maneki-neko",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:44:30.047Z",
+   "snapshot": "315ed8e3ad22973cc0ac521e2e05bcab615b784d43eff9dafd88db83d26abe1c"
+  },
+  "s2": {
+   "url": "https://enchantedlivingmagazine.com/?p=9719",
+   "title": "The Magic of Everyday Flora and Fauna – Enchanted Living Magazine",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:30.675Z",
+   "snapshot": "e4b0c0f9bfc0607e0bd092152a888a8f4337eee56c3b0f0b2c16fb4fa3c177db"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Daruma_doll",
+   "title": "Daruma doll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:33.857Z",
+   "snapshot": "5d551affa87b8a8ef471cd405055fc00dffeb7f7b8da0bdc178af7d5febc5959"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Horseshoe",
+   "title": "Horseshoe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:34.890Z",
+   "snapshot": "1a9edfb2ba13d9a59da086a22321c7439b9ef04e2935cfab6cc568b527e18b23"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Four-leaf_clover",
+   "title": "Four-leaf clover – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:35.934Z",
+   "snapshot": "485d5258bff9aebc7545500a870dd04b7ea18605fb740d52e3bb9579dfec06bd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Maneki-neko",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:36.876Z",
+   "snapshot": "7d3c69574b3d28ec82e989f56a92586f981026602f3bdf7f1edba01b8846eacd"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Winkekatze",
+   "title": "Winkekatze – Rechtschreibung, Bedeutung, Definition",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:57.694Z",
+   "snapshot": "73f7bb2d0ec88dafb64fb0242d4d47f0f95a4dc4a996e71f859a14bbfb6e1806"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Winkekatze",
+   "title": "Winkekatze – DWDS",
+   "publisher": "DWDS (Berlin-Brandenburgische Akademie der Wissenschaften)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:57.269Z",
+   "snapshot": "10abf468c88b41d9b8ea3d528bda021e157e312a1c953ca819cbb2d0aeae6e82"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winkekatzen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spider",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-344"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Daruma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "horseshoe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "four-leaf clover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:30.002Z",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Winkekatzen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Winkekatzen”, “waving cats”, “машущие кошки”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:30.002Z",
+   "target": "f10836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "To kill a spider is still unlucky in many parts of Europe, but to see one is good luck, unless it is injured.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spider” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:30.002Z",
+   "target": "f10837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A Daruma doll (Japanese: 達磨, romanized: daruma; IPA: [da̠ɾɯ̟ma̠]) is a hollow, round, Japanese traditional doll modeled after Bodhidharma, the founder of the Zen tradition of Buddhism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daruma” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:30.002Z",
+   "target": "f10838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A horseshoe is a piece of equestrian equipment that protects a horse hoof from wear.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “horseshoe” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:30.002Z",
+   "target": "f10839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The four-leaf clover is a rare mutation of the common three-leaf clover that has four leaflets instead of three.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “four-leaf clover” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:18Z",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "(farbige) Figur einer winkenden Katze, die in Ostasien, besonders in Japan, als Glücksbringer verbreitet ist",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:21Z",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Maneki-neko (Manekineko) fachspr., japanisch",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:16.299Z",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "(farbige) Figur einer winkenden Katze, die in Ostasien, besonders in Japan, als Glücksbringer verbreitet ist",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:16.299Z",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Maneki-neko (Manekineko) fachspr., japanisch",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:16.299Z",
+   "target": "f10835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Form / GrammatikWinkekatze · Substantiv (Femininum) · Genitiv Singular: Winkekatze · Nominativ Plural: Winkekatzen · Deklinationstabelle",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Winkekatzen” is on the snapshot of s8"
+  }
+ ]
+}

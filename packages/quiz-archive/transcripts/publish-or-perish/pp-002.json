@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-002",
+ "image": "IMG20261022010616.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Botany",
+   "cardText": "[Botany] How can some pine trees be used to predict weather?\nA. They change color before a hail\nB. Their needles release a distinct scent before a snowfall\nC. Their cones close before it rains\nAnswer: C. Many pine trees have the ability to sense changes in humidity and will close their cones when they detect high moisture levels, which often indicate that rain is imminent. This helps the pinecones release seeds on dry days, giving them a greater chance at wide dispersal.",
+   "de": "Was tun Kiefernzapfen, wenn die Luft vor Regen feucht wird, weshalb sie als volkstümliche Wettervorhersage dienen?",
+   "en": "What do pine cones do when the air turns humid before rain, which is why they are used as a folk weather forecast?",
+   "reworked": true,
+   "answerDe": "Sie schließen sich",
+   "answerEn": "They close",
+   "timeline": {
+    "kind": "discovery",
+    "start": "2009-07",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Reyssat and Mahadevan explain how pine-cone scales bend shut in humid air and open when dry",
+    "labelDe": "Reyssat und Mahadevan erklären, wie sich Zapfenschuppen bei Feuchte schließen und bei Trockenheit öffnen"
+   },
+   "source": {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2838359/",
+    "title": "Hygromorphs: from pine cones to biomimetic bilayers",
+    "lang": "en"
+   },
+   "notes": "The movement is passive (hygroscopic swelling of the scale's outer layer), not active sensing as the card implies; opening when dry releases the seeds.",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 2,
+   "discipline": "Musicology",
+   "cardText": "[Musicology] For which musical instrument was the original Nokia ringtone composed?\nA. Guitar B. Violin C. Kalimba\nAnswer: A. The original Nokia ringtone, known as “Gran Vals” (or “Great Waltz”), is based on a guitar piece by the Spanish composer Francisco Tárrega.",
+   "de": "Für welches Instrument komponierte Francisco Tárrega den Gran Vals, die Melodie des ursprünglichen Nokia-Klingeltons?",
+   "en": "For which instrument did Francisco Tárrega compose the Gran Vals, the melody of the original Nokia ringtone?",
+   "reworked": true,
+   "answerDe": "Gitarre",
+   "answerEn": "Guitar",
+   "timeline": {
+    "kind": "creation",
+    "start": "1902",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Francisco Tárrega composes the Gran Vals for solo guitar, later the source of the Nokia tune",
+    "labelDe": "Francisco Tárrega komponiert den Gran Vals für Sologitarre, später Quelle der Nokia-Melodie"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Nokia_tune",
+    "title": "Nokia tune",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "music-stage",
+   "sub": "instruments"
+  }
+ ]
+}

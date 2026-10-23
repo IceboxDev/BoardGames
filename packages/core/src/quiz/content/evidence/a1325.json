@@ -1,0 +1,295 @@
+{
+ "article": "a1325",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sandwich",
+   "title": "Sandwich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:42.471Z",
+   "snapshot": "1904c8f055668dca7918a472c352eda8e3f54d132dc3319a421cac99d060450c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/FIBA",
+   "title": "FIBA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:52.171Z",
+   "snapshot": "e239006f56b9340f0f871cf7632545432d6d8ffc16f9ce0432ee6969eca9c90d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Basketball",
+   "title": "Basketball",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:54:49.679Z",
+   "snapshot": "e3d5aa6c928466cd39703804ff7730ae6f04b774054c520ff98f62fb611ffa0c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Volleyball",
+   "title": "Volleyball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:18.401Z",
+   "snapshot": "b5f2554946cd34305d0e469f94cb5a5ffeb20b95a558015f16220c76a033aa5e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Scrabble",
+   "title": "Scrabble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:32.067Z",
+   "snapshot": "9b028f36d4f2935cc310085ccafa22c7c73414fe34367c420c0de997d039f1b1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Basketball",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:17.402Z",
+   "snapshot": "b3005ec46679c132f1baebfcf90dc325c7a55a045173e7209d7e7a050ef51912"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Rubik%27s_Cube",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:31.071Z",
+   "snapshot": "eae67fe0964958393fcc88edfa6c4f0d1e882cf6d828990c2c0107ab17bdad2a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06621",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the sandwich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "basketball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Basketball",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-362"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "volleyball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mintonette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alfred Mosher Butts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:06.875Z",
+   "target": "f06621",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The sandwich began as a portable, convenient food in the Western world, and over time it has become prevalent worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the sandwich” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:06.875Z",
+   "target": "f06622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The International Basketball Federation (FIBA  FEE-bə; French: Fédération Internationale de Basketball) is an association of national organizations which governs the sport of basketball worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “basketball” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:06.875Z",
+   "target": "f06622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Basketball ist eine meist in der Halle betriebene Ballsportart, bei der zwei Mannschaften versuchen, den Ball in den jeweils gegnerischen Korb zu werfen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basketball” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:06.875Z",
+   "target": "f06623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Volleyball is a team sport in which two teams of six players are separated by a net.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “volleyball” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:06.875Z",
+   "target": "f20960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Morgan intended the game, which he originally called \"mintonette\", to be an alternative to basketball that was less physically demanding.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mintonette” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:06.875Z",
+   "target": "f20961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "American architect Alfred Mosher Butts invented the game in 1931.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:06.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Mosher Butts” is on the snapshot of s5"
+  }
+ ]
+}

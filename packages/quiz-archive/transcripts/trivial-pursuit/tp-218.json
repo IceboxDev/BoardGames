@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-218",
+ "image": "IMG20261007181645.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Der längste Fluss Deutschlands fließt von West nach Ost. Richtig oder falsch?",
+   "de": "Welcher Fluss hat innerhalb Deutschlands die längste Fließstrecke?",
+   "en": "Which river has the longest course within Germany?",
+   "reworked": true,
+   "answerDe": "Rhein",
+   "answerEn": "Rhine",
+   "timeline": {
+    "kind": "event",
+    "start": "1839",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The first continuous length survey of the Rhine is completed",
+    "labelDe": "Die erste durchgehende Längenvermessung des Rheins wird abgeschlossen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Liste_von_Fl%C3%BCssen_in_Deutschland",
+    "title": "Liste von Flüssen in Deutschland",
+    "lang": "de"
+   },
+   "notes": "Card's true/false statement reworked to an open question. The Rhine runs 865 km in Germany (the Danube 647 km) and flows mainly south to north, so the statement is false for it; only the Danube, the longest river overall that crosses Germany (2,857 km), flows west to east — the card is ambiguous.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Bond-Darsteller Sean Connery begann sein Arbeitsleben als Milchmann. Richtig oder falsch?",
+   "de": "Als was arbeitete Bond-Darsteller Sean Connery in seinem ersten Job bei der St. Cuthbert's Co-operative Society in Edinburgh?",
+   "en": "What did Bond actor Sean Connery work as in his first job, with St Cuthbert's Co-operative Society in Edinburgh?",
+   "reworked": true,
+   "answerDe": "Milchmann",
+   "answerEn": "Milkman",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1930-08-25",
+    "end": "2020-10-31",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Sean Connery, Scottish actor and the first film James Bond",
+    "labelDe": "Sean Connery, schottischer Schauspieler und erster Film-James-Bond"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sean_Connery",
+    "title": "Sean Connery",
+    "lang": "en"
+   },
+   "notes": "Card's true/false statement (true) reworked to an open question.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welche nationalistische politische Bewegung entstand im späten 19. Jahrhundert als Reaktion auf den zunehmenden europäischen Antisemitismus?",
+   "de": "Welche nationalistische politische Bewegung entstand im späten 19. Jahrhundert als Reaktion auf den zunehmenden europäischen Antisemitismus?",
+   "en": "Which nationalist political movement emerged in the late 19th century as a reaction to growing European antisemitism?",
+   "reworked": false,
+   "answerDe": "Zionismus",
+   "answerEn": "Zionism",
+   "timeline": {
+    "kind": "event",
+    "start": "1897-08-29",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The First Zionist Congress opens in Basel and adopts the Basel Programme",
+    "labelDe": "Der Erste Zionistenkongress beginnt in Basel und beschließt das Basler Programm"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Zionismus",
+    "title": "Zionismus",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Bei ägyptischen Hieroglyphen steht ein verziertes Auge meist für das Auge welches Gottes?",
+   "de": "Bei ägyptischen Hieroglyphen steht ein verziertes Auge meist für das Auge welches Gottes?",
+   "en": "In Egyptian hieroglyphs, a decorated eye usually stands for the eye of which god?",
+   "reworked": false,
+   "answerDe": "Horus",
+   "answerEn": "Horus",
+   "timeline": {
+    "kind": "era",
+    "start": "-2500",
+    "end": "-2100",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Eye of Horus (wedjat) is first attested as a protective amulet in Egypt's Old Kingdom",
+    "labelDe": "Das Horusauge (Udjat) ist im Alten Reich Ägyptens erstmals als Schutzamulett belegt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Horusauge",
+    "title": "Horusauge",
+    "lang": "de"
+   },
+   "notes": "The wedjat / udjat eye: Horus's left eye, torn out by Seth and healed by Thoth.",
+   "domain": "belief",
+   "sub": "mythology"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches Tier gehört nicht zur Ordnung der Wale: Großer Tümmler, Weißwal oder Walhai?",
+   "de": "Zu welcher Tiergruppe gehört der Walhai, obwohl sein Name an Wale erinnert?",
+   "en": "To which group of animals does the whale shark belong, even though its name suggests whales?",
+   "reworked": true,
+   "answerDe": "Haie",
+   "answerEn": "Sharks",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1828",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Andrew Smith describes the whale shark (Rhincodon typus)",
+    "labelDe": "Andrew Smith beschreibt den Walhai (Rhincodon typus) wissenschaftlich"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Walhai",
+    "title": "Walhai",
+    "lang": "de"
+   },
+   "notes": "Card asked which of bottlenose dolphin / beluga / whale shark is not a whale (the whale shark); reworked to an open question. It is a carpet shark (Orectolobiformes), a cartilaginous fish.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie lautet der offizielle Name der neuseeländischen Rugby-Mannschaft?",
+   "de": "Wie lautet der offizielle Name der neuseeländischen Rugby-Mannschaft?",
+   "en": "What is the official name of the New Zealand rugby team?",
+   "reworked": false,
+   "answerDe": "All Blacks",
+   "answerEn": "All Blacks",
+   "timeline": {
+    "kind": "event",
+    "start": "1905",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The name 'All Blacks' emerges on New Zealand's 1905 tour of the British Isles",
+    "labelDe": "Der Name „All Blacks“ entsteht auf Neuseelands Tour durch die Britischen Inseln 1905"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/New_Zealand_national_rugby_union_team",
+    "title": "New Zealand national rugby union team",
+    "lang": "en"
+   },
+   "notes": "Strictly the team is the New Zealand national rugby union team; 'All Blacks' is its nickname, used as its brand.",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

@@ -1,0 +1,418 @@
+{
+ "article": "a1223",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/White-tailed_eagle",
+   "title": "White-tailed eagle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:17.299Z",
+   "snapshot": "86ff0e55e9479194e6ebcc00c97d2381c1567432ddd93090fc4bdc09b74a6f5b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Naturschutzgebiet_(Deutschland)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:14.822Z",
+   "snapshot": "c28c372b20ab24ee9b82e2041ca0c4c313ead1b499b4436a447c9c7a9b3be43f"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Seeadler_(Art)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:15.187Z",
+   "snapshot": "e3df1de4c1c3694d3b769686dc33a6a88158ad2b98ce8c252d0af745c41bb9b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/World_Wildlife_Fund",
+   "title": "World Wildlife Fund – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:18.041Z",
+   "snapshot": "d692bff0bd6008617cf94791c7bdfb75bc99fcb0df857d75049742dd253994f8"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Naturschutzbund_Deutschland",
+   "title": "Naturschutzbund Deutschland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:16.857Z",
+   "snapshot": "da1dd873e932282536a67557de21d24ff3536ed293f12193b1f7e5270e572834"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Berlin",
+   "title": "Coat of arms of Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:18.935Z",
+   "snapshot": "66e676a22bc41acfa9cc7aee1220dbc15b072ddaf4553a9098ca9978047313c2"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Niedersachsen",
+   "title": "Niedersachsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:17.621Z",
+   "snapshot": "8c1afd180a6c9ce2603779ea49439d26de7695eb542786a12309cf5f0e95ff7a"
+  },
+  "s8": {
+   "url": "https://www.niedersachsen.de/startseite/land_leute/das_land/wappen_flagge/wappen-und-flagge-19957.html",
+   "title": "Wappen und Flagge – Portal Niedersachsen",
+   "publisher": "Niedersächsische Staatskanzlei (Land Niedersachsen)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:46.872Z",
+   "snapshot": "84380787d9f754fb7e3576b7c058160e7fb9b2e36eab946cd325149b5788614c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "White-tailed eagle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c102"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Seeadler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Seeadler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giant panda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Weißstorch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f06115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pferd",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The white-tailed eagle (Haliaeetus albicilla), sometimes known as the \"sea eagle\", is a large bird of prey, widely distributed across temperate Eurasia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “White-tailed eagle” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Seeadler wurde als Symbol des deutschen Wappenvogels übernommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seeadler” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Seeadler (Haliaeetus albicilla, aus griechisch hali- „meerwasser-“, aietos „Adler“ sowie albus „weiß“ und cilla „Schwanz“) ist ein Greifvogel aus der Familie der Habichtartigen (Accipitridae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seeadler” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "WWF's giant panda logo originated from a panda named Chi Chi that had been transferred from the Beijing Zoo to the London Zoo in 1958, three years before WWF was established.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giant panda” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Weißstorch wurde zum Wappenvogel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weißstorch” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Introduced in 1954 for West Berlin, it shows a black bear on a white shield.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.679Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bear” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:50.679Z",
+   "target": "f06115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pferd",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pferd”, “Horse”, “Лошадь”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:16:31Z",
+   "target": "f06115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wappen des Bundeslandes Niedersachsen ist das springende weiße Ross im roten Felde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:16:56Z",
+   "target": "f06115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "führt als Landeswappen einen Halbrundschild mit einem springenden weißen/heraldisch silbernen Ross im roten Feld.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:32.906Z",
+   "target": "f06115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wappen des Bundeslandes Niedersachsen ist das springende weiße Ross im roten Felde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:32.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:32.906Z",
+   "target": "f06115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Dieses ist als Bild-Wort-Marke konzipiert und besteht aus einem im roten Oval laufenden weißen Pferd mit dem rechts daneben stehenden Wort \"Niedersachsen\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:32.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pferd” is on the snapshot of s8"
+  }
+ ]
+}

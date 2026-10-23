@@ -1,0 +1,351 @@
+{
+ "article": "a1080",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Spotify",
+   "title": "Spotify – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:36.694Z",
+   "snapshot": "df0a38e9280cbf93c146fe7230394455619d22119aca6af1fca47a8c9ac15b53"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/SAP",
+   "title": "SAP – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:25.070Z",
+   "snapshot": "ef3a77b6220174fd0251392644b412e0edb26a9ad0cd4966f4d1155dc0230e1a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nokia",
+   "title": "Nokia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:26.305Z",
+   "snapshot": "41eb431b000b2175288b2e24df6545d9fc63fcce7f685853b1080931f1d79b85"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/ASML",
+   "title": "ASML – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:27.220Z",
+   "snapshot": "baa80b44b853d7a9416cad9511270f7001a52653a9bceffab2abb6753b78ad2a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Arm_Holdings",
+   "title": "Arm Holdings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:28.162Z",
+   "snapshot": "305036f47f736543556c5b7648bb73122510254bed157ec424248abf5f327921"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Extreme_ultraviolet_lithography",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:29.322Z",
+   "snapshot": "cb3157849bd79b83842e727a11b463bdaa4d3d4f970abb42ab706030c1175af4"
+  },
+  "s7": {
+   "url": "https://newsroom.arm.com/blog/arm-official-history",
+   "title": "The official history of Arm",
+   "publisher": "Arm Ltd",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:45.297Z",
+   "snapshot": "8223925dfc72eacba8d911ba920d12d8ec677fdedf4bed842da081a1d95ffbfc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sweden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript c090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the United Kingdom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:29.350Z",
+   "target": "f05396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Spotify was founded in April 2006 in Stockholm, Sweden, by Daniel Ek and Martin Lorentzon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sweden” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:29.350Z",
+   "target": "f05397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Five years later, the private partnership was dissolved and its rights were passed on to SAP GmbH.The headquarters moved the following year to Walldorf, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Germany” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:29.350Z",
+   "target": "f05398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nokia's main headquarters are in Espoo, Finland, in the Helsinki metropolitan area, but the company's actual roots are in the Tampere region of Pirkanmaa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Finland” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:29.350Z",
+   "target": "f05399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "During the 2010s and 2020s, the governments of the Netherlands and the United States imposed increasingly stringent controls on ASML's sales of semiconductor manufacturing equipment to China, citing concerns including national security and the protection of advanced semiconductor technology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:29.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Netherlands” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:29.350Z",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the United Kingdom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the United Kingdom”, “Großbritannien”, “Великобритания”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:34:40Z",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "including nearly 3,500 in the UK with its global headquarters in Cambridge.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:34:42Z",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Arm was officially founded as a company in November 1990 as Advanced RISC Machines Ltd, which was a joint venture between Acorn Computers, Apple Computer (now Apple Inc.), and VLSI Technology",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:34:43Z",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arm Holdings plc is a British semiconductor and software design company headquartered in Cambridge",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:05.365Z",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Arm was officially founded as a company in November 1990 as Advanced RISC Machines Ltd, which was a joint venture between Acorn Computers, Apple Computer (now Apple Inc.), and VLSI Technology",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:05.365Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:05.365Z",
+   "target": "f05400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arm Holdings plc is a British semiconductor and software design company headquartered in Cambridge",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:05.365Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  }
+ ]
+}

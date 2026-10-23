@@ -1,0 +1,775 @@
+{
+ "article": "a0058",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ganymede_(moon)",
+   "title": "Ganymede (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:31.514Z",
+   "snapshot": "f53ca95bf22713c1ab603b73af3b390e81d38aba83713ac9e806fcd215fe1b60"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Huygens_(spacecraft)",
+   "title": "Huygens (spacecraft) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:32.583Z",
+   "snapshot": "a0a12b03394a6536eecc2ae0d8b3e8929bc3e8180b35e94cb4262e9afb8cda9b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Volcanism_on_Io",
+   "title": "Volcanism on Io – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:34.513Z",
+   "snapshot": "1d414636dda1133cd90e6896c4f8c71356854df016d170fe322fd0b4d7240467"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Europa_Clipper",
+   "title": "Europa Clipper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:34.597Z",
+   "snapshot": "0d624bde954d7e7cc9e5e01141d9897b345e98c4fb1372d2481b87de676db5fa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Triton_(moon)",
+   "title": "Triton (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:35.583Z",
+   "snapshot": "ac29603cdd97732a3398a37fc6d8d039909a218d9a8ddc4bf1032eaebb3bcb45"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moons_of_Saturn",
+   "title": "Moons of Saturn",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:36.699Z",
+   "snapshot": "ecb3624c1d51512b00d2ec4e516dcbb703b7635e09f8b56456b22c77662a4a29"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Titan_(moon)",
+   "title": "Titan (moon)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:37.656Z",
+   "snapshot": "3d7aaaf43f37a4ace0c62a5ddb19db6fa05b4a3359efd1e12e65b59f85682f57"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Farmer_in_the_Sky",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:38.559Z",
+   "snapshot": "1353974e49172819be391f4a4ac99684f9d96dadf871ea059a7f5661c7513686"
+  },
+  "s9": {
+   "url": "https://science.nasa.gov/jupiter/jupiter-moons/ganymede/",
+   "title": "Ganymede",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:34.665Z",
+   "snapshot": "7e09bb3bd00a6d7d5ac9749c65257d9d9c1b7b869f18b73c9a0eb690f33e8d7a"
+  },
+  "s10": {
+   "url": "https://science.nasa.gov/saturn/moons/titan/facts/",
+   "title": "Titan: Facts",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:35.578Z",
+   "snapshot": "57032b07131070e76d83e11066bd95f9186819b6dba51114fb8e7527fbf9e3d6"
+  },
+  "s11": {
+   "url": "https://science.nasa.gov/saturn/moons/titan/",
+   "title": "Titan",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:36.565Z",
+   "snapshot": "1ee1c822749fd97a06835d3a0aa6ab9f0e352f5b40950815832509860e0ba7e9"
+  },
+  "s12": {
+   "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/",
+   "title": "Io",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:37.563Z",
+   "snapshot": "a6b4beaac489f32fea6a53d8d0c6eb10b85abb0ada34bf76cf1ad1fb2260ab99"
+  },
+  "s13": {
+   "url": "https://science.nasa.gov/saturn/moons/",
+   "title": "Saturn Moons",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:38.569Z",
+   "snapshot": "6ecfd396d79d0e848edfbb3609f8c0a255cd63b09a02f82e3037d7714196a986"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ganymede",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005; transcript ppm-158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Titan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Io",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Europa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Triton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Saturn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-031; transcript pp-006"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Titan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-114"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Titan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-131"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f00286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ganymede is a natural satellite of Jupiter and is the largest and most massive moon in the Solar System.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ganymede” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Huygens ( HOY-gənz) was an atmospheric entry robotic  space probe that landed successfully on Saturn's moon Titan in 2005.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titan” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f00288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Io, a moon of Jupiter, has a substantial presence of volcanoes, volcanic pits and lava flows on its surface.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Io” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f00289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Europa Clipper (previously known as the Europa Multiple Flyby Mission) is a mission to send a space probe developed by NASA to study Europa, a Galilean moon of Jupiter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Europa” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f00290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Triton is the largest natural satellite of the planet Neptune.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Triton” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f10851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Saturn has 293 moons with confirmed orbits as of June 2026, the most of any planet in the Solar System.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturn” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f25566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Titan is the largest moon of Saturn and the second largest in the Solar System.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titan” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:44.280Z",
+   "target": "f25567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Titan is the largest moon of Saturn and the second largest in the Solar System.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.280Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titan” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:58:30Z",
+   "target": "f00286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jupiter’s icy moon Ganymede is the largest moon in our solar system, even bigger than the planet Mercury, and the dwarf planet Pluto.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:58:31Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Titan is the second largest moon in our solar system. Only Jupiter's moon Ganymede is larger, by just 2 percent.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:58:32Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titan is Saturn's largest moon, and the only moon in our solar system known to have a substantial atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:58:33Z",
+   "target": "f25566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titan is Saturn's largest moon, and the only moon in our solar system known to have a substantial atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:58:35Z",
+   "target": "f00288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Jupiter's moon Io is the most volcanically active world in the solar system, with hundreds of volcanoes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T06:58:37Z",
+   "target": "f10851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Saturn has 293 confirmed moons in its orbit as of August 2026, far more than any other planet in our solar system.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jupiter’s icy moon Ganymede is the largest moon in our solar system, even bigger than the planet Mercury, and the dwarf planet Pluto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Titan is the second largest moon in our solar system. Only Jupiter's moon Ganymede is larger, by just 2 percent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titan is Saturn's largest moon, and the only moon in our solar system known to have a substantial atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s11"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f25566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titan is Saturn's largest moon, and the only moon in our solar system known to have a substantial atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Jupiter's moon Io is the most volcanically active world in the solar system, with hundreds of volcanoes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s12"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f10851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Saturn has 293 confirmed moons in its orbit as of August 2026, far more than any other planet in our solar system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s13"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Jupiter’s icy moon Ganymede is the largest moon in our solar system, even bigger than the planet Mercury, and the dwarf planet Pluto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ganymede” is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Titan is Saturn's largest moon, and the only moon in our solar system known to have a substantial atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Titan” is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titan is Saturn’s largest moon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Titan” is on the snapshot of s11"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f00288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Volcanic activity on this Jovian moon is so abundant, it resurfaces the face of Io with new deposits faster than comets and asteroids can mark it with large craters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Io” is on the snapshot of s12"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f10851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The Saturn system teems with natural satellites, from planet-sized Titan to small oddballs, shaped like potatoes or ravioli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Saturn” is on the snapshot of s13"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:51:59.863Z",
+   "target": "f25566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Titan is Saturn’s largest moon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Titan” is on the snapshot of s11"
+  }
+ ]
+}

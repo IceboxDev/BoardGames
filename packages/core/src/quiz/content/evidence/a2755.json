@@ -1,0 +1,231 @@
+{
+ "article": "a2755",
+ "sources": {
+  "s1": {
+   "url": "https://web.archive.org/web/20100401001721/http://kuscholarworks.ku.edu/dspace/bitstream/1808/5624/3/EngYakDwy2009_Uyg1full_10.pdf",
+   "title": "Engesæth, Yakup & Dwyer: Greetings from the Teklimakan – A Handbook of Modern Uyghur, Vol. 1 (2009), pp. 18–19",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:19.817Z",
+   "snapshot": "a9a872d8b58832010cdc78bb47e0b87957bcbab50a2afb316fa2bd86e0299b95"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Uyghur_grammar",
+   "title": "Uyghur grammar",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:22.289Z",
+   "snapshot": "741941c1443b909fce2254545591f191bc54e49213626e2e1eb1e73ae3b838c6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Uyghur_language",
+   "title": "Uyghur language – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:23.404Z",
+   "snapshot": "0841effb5906ab2fd780ae760e6b67f4022b9d1a4b2c8ead1d233cf24f51b547"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Xinjiang",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karluk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "all vowels",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eastern Turki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "drawing out the first vowel of awu",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "drawing out the first vowel of awu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (ppm-146/1, u10): The card's answer A is right: the KU handbook of Modern Uyghur says awu (for things considerably distant) is often said with a lengthened high intonation on the first vowel, 'aaaa(wu) terepte', with a raise of the chin. The fact asked another question (what decides the demonstrative), and the printed wording was its only one, so it was corrected in place; the body's 'shu = near the listener' was also corrected. Only one independent source describes it (no other found)."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:08.291Z",
+   "target": "f25697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is spoken primarily by the Uyghur people, most of whom live in what is now the Xinjiang Uyghur Autonomous Region of Western China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xinjiang” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:08.291Z",
+   "target": "f25698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uyghur, formerly known as Turki or Eastern Turki, is a Turkic language of the Karluk branch, with 8 to 13 million native speakers (as of 2021).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karluk” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:08.291Z",
+   "target": "f25699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unlike most Arabic-derived scripts, the Uyghur Arabic alphabet has mandatory marking of all vowels due to modifications to the original Perso-Arabic script made in the 20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “all vowels” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:08.291Z",
+   "target": "f25700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uyghur, formerly known as Turki or Eastern Turki, is a Turkic language of the Karluk branch, with 8 to 13 million native speakers (as of 2021).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eastern Turki” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:46:46Z",
+   "target": "f25696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Awu is usually accompanied by a raising of the chin in the direction of the object, and often by a lengthened high intonation on the first vowel (especially by women speakers)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "University-published Uyghur handbook. No second independent description of this gesture/intonation was found; Wikipedia's Uyghur grammar page does not mention it."
+  }
+ ]
+}

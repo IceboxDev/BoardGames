@@ -1,0 +1,492 @@
+{
+ "article": "a2653",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Multicopter",
+   "title": "Multicopter",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:14.287Z",
+   "snapshot": "ce0fbe6a3eaa99435182ea28d19966be9db728f74c25e9bc1d2d9f97579b40e5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Quadcopter",
+   "title": "Quadcopter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:14.102Z",
+   "snapshot": "c9f21d8ee9f5fb6bddf3d73284039f1e52c4fa6bab83e324121a48bf83f60a9f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Unmanned_aerial_vehicle",
+   "title": "Unmanned aerial vehicle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:15.456Z",
+   "snapshot": "0c7674254a245315308d22515913654d19e0523048893c4f812ac7e6909c2297"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/DJI",
+   "title": "DJI – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:16.282Z",
+   "snapshot": "4440f7c1d7218ebd5a3ef2078faa40cf6c53a69466ac017bf19eb5eabf4f38ac"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gatwick_Airport_drone_incident",
+   "title": "Gatwick Airport drone incident – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:17.113Z",
+   "snapshot": "e4dc784190ff069beaebb6964a89844cf9d8512ed611b64c3186d0b419b3d5b6"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/quadcopter",
+   "title": "QUADCOPTER | Cambridge English Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:17.640Z",
+   "snapshot": "1f1d6fa5cb8d742e525d27c570fb50fd37f3f77cd66d38a7ecb60d7e51c62763"
+  },
+  "s7": {
+   "url": "https://www.technologyreview.com/2024/06/26/1094249/china-commercial-drone-dji-security/",
+   "title": "DJI's drones and the US security debate",
+   "publisher": "MIT Technology Review",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:17.783Z",
+   "snapshot": "b5c68f96e8d1b3f1f234f6390f5f1c1074c1f109e5c9cda6ff1fa0fef72012b9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14363",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Drohne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-381"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "four",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14365",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "unmanned aerial vehicle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DJI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gatwick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gatwick",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:52.600Z",
+   "target": "f14363",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Drohne hat jedoch acht Propeller – je Motor einen oben und einen unten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Drohne” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:52.600Z",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A quadcopter, also called quadrocopter, or quadrotor is a type of helicopter or multicopter that has four rotors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “four” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:52.600Z",
+   "target": "f14365",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An unmanned aerial vehicle (UAV), or unmanned aircraft system (UAS), commonly known as an aerial drone or simply drone, is an aircraft with no human pilot, crew, or passengers on board, which instead is either autonomous or controlled remotely.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “unmanned aerial vehicle” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:52.600Z",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DJI is a Chinese technology company headquartered in Shenzhen, Guangdong.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DJI” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:52.600Z",
+   "target": "f14367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dezember 2018 um 21 Uhr GMT wurde der Flugbetrieb auf dem Gatwick Airport vorübergehend eingestellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gatwick” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:52.600Z",
+   "target": "f14367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Between 19 and 21 December 2018, hundreds of flights were cancelled at Gatwick Airport near London, England, following reports of drone sightings close to the runway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:52.600Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gatwick” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:40:51Z",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "with four blades that go around on top",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:40:53Z",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a type of helicopter or multicopter that has four rotors",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:40:55Z",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "With more than a 90% share of the global consumer market, this Shenzhen-based company",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23",
+   "note": "June 2024; time-sensitive market share, reviewBy set."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:40:57Z",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DJI accounted for over 90% of the world's consumer drone market as of June 2024.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r083",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:38.391Z",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "with four blades that go around on top",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:38.391Z",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a type of helicopter or multicopter that has four rotors",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:38.391Z",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "With more than a 90% share of the global consumer market, this Shenzhen-based company",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:38.391Z",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DJI accounted for over 90% of the world's consumer drone market as of June 2024.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:38.391Z",
+   "target": "f14364",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a small remote-controlled aircraft like a helicopter, with four blades that go around on top, used especially to film or photograph things from the air.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “four” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:38.391Z",
+   "target": "f14366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Whether you’ve flown a drone before or not, you’ve probably heard of DJI, or at least seen its logo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:38.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “DJI” is on the snapshot of s7"
+  }
+ ]
+}

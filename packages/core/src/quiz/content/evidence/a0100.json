@@ -1,0 +1,537 @@
+{
+ "article": "a0100",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sex_and_the_City",
+   "title": "Sex and the City – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:30.104Z",
+   "snapshot": "42dbbfab141ca51ba90072363d18f1bc86c0d48aa0635d6e07a35a6d00472fb7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sex_and_the_City_2",
+   "title": "Sex and the City 2 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:31.019Z",
+   "snapshot": "016185d11291a3e3afa9140f7eb6ab1c37e3a3003eb6512099955e9e438a5c54"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/And_Just_Like_That...",
+   "title": "And Just Like That... – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:32.023Z",
+   "snapshot": "f3c6bf2a3b35370b8edb020864a13937059f46ddad8c168ab9d1aa927b96d6c6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sex_and_the_City_(film)",
+   "title": "Sex and the City (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:33.041Z",
+   "snapshot": "2bd746e30ed4d04cba2799b6a93ad71a1c5da80df0a47effe12e1a3ba83da0cb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bradley_Cooper",
+   "title": "Bradley Cooper",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:33.959Z",
+   "snapshot": "cc64460ac98c32027338ce55b59758bceceff749da0186610e7916bcac6d2c72"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Carrie_Bradshaw",
+   "title": "Carrie Bradshaw",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:35.024Z",
+   "snapshot": "da4dcb6c6d99342105d2d83407150cb0ec55ae7594bbbe617c017f49fc646d97"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mr._Big_(Sex_and_the_City)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:35.958Z",
+   "snapshot": "19b968e02bbbd02098cffc84b98eb283ac5bed4c39a3e10c003a491acbd005fa"
+  },
+  "s8": {
+   "url": "https://www.marieclaire.com.au/candace-bushnell-sex-and-the-city-real-life",
+   "title": "Candace Bushnell on the real-life Sex and the City",
+   "publisher": "Marie Claire Australia",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:46.774Z",
+   "snapshot": "1ffe0d91da3f073de72e8842786e3559fd03972bdc40089b81e77e8fecca6f63"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Samantha_Jones_(Sex_and_the_City)",
+   "title": "Samantha Jones (Sex and the City)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:46.350Z",
+   "snapshot": "ad597c0ca494c26de9c94c393046d65ec5777567766a8e1b80235a33ee60feec"
+  },
+  "s10": {
+   "url": "https://www.tvmaze.com/characters/87132/sex-and-the-city-samantha-jones",
+   "title": "Samantha Jones – Sex and the City",
+   "publisher": "TVmaze",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:46.523Z",
+   "snapshot": "9345f990214f84f279d9dc2c650ba22c70d857438dfd8850b5b7d7106f59377c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carrie Bradshaw",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Miranda Hobbes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samantha Jones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charlotte York",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mr. Big",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bradley Cooper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-231"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The New York Star",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-327"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f00496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The series follows the lives of four female friends living in New York City: the streetwise newspaper columnist Carrie Bradshaw (played by Sarah Jessica Parker), the sexually liberal PR professional Samantha Jones (Kim Cattrall), the more conservative art dealer Charlotte York (Kristin Davis) and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carrie Bradshaw” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f00497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "living in New York City: the streetwise newspaper columnist Carrie Bradshaw (played by Sarah Jessica Parker), the sexually liberal PR professional Samantha Jones (Kim Cattrall), the more conservative art dealer Charlotte York (Kristin Davis) and the cynical lawyer Miranda Hobbes (Cynthia Nixon).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miranda Hobbes” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Samantha Jones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Samantha Jones”, “Саманта Джонс”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f00499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kristin Davis as Charlotte York Goldenblatt",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlotte York” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f00500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A few years after the events of the television series, Carrie Bradshaw and Mr. Big are in a committed relationship and preparing to move in together.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mr. Big” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f11612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The critic for Variety wrote, \"an excellent performance from a bulked-up Bradley Cooper, this harrowing and intimate character study offers fairly blunt insights into the physical and psychological toll exacted on the front lines.\" Similar sentiments were echoed by USA Today's Claudia Puig who",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bradley Cooper” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:50.449Z",
+   "target": "f11613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In the Sex and the City franchise, Carrie Bradshaw writes a weekly column titled Sex and the City for a fictional newspaper called The New York Star.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:50.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The New York Star” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:49:17Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The actor who portrayed the sex positive PR expert, Kim Cattrall, chose not to return to the show",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "refers to Samantha Jones, named in the preceding sentence"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:49:21Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Samantha Jones is one of four central characters in Sex and the City, depicted as a confident, outspoken, and sexually liberated public relations professional.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:49:25Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Sex and the City Main cast, played by Kim Cattrall",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms the actress–character pairing"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:09.674Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The actor who portrayed the sex positive PR expert, Kim Cattrall, chose not to return to the show",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:09.674Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Samantha Jones is one of four central characters in Sex and the City, depicted as a confident, outspoken, and sexually liberated public relations professional.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:09.674Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Sex and the City Main cast, played by Kim Cattrall",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:09.674Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "SATC Author Candace Bushnell On What The \"Real Life\" Samantha Jones Is Like",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Samantha Jones” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:09.674Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Samantha Jones is a fictional character in the Sex and the City media franchise, created by Candace Bushnell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Samantha Jones” is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:09.674Z",
+   "target": "f00498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Samantha Jones - Sex and the City | TVmaze",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:09.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Samantha Jones” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,925 @@
+{
+ "article": "a2305",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/El_Salvador",
+   "title": "El Salvador",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:44.760Z",
+   "snapshot": "e240d11be7ea83ce56f2d4f0de4323d63f07f3c17dd877d030984a3e527cffef"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Binnenstaat",
+   "title": "Binnenstaat",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:45.673Z",
+   "snapshot": "a315d6560f7ea55358c7b55541f35c7134625a4d21cd21aeeb164bc2f1b80d16"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hispaniola",
+   "title": "Hispaniola",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:46.759Z",
+   "snapshot": "149ca9a5ecc6d82f77d4bd3b07bea6d2376a87ede29b3bc7c5286a8c3167a57c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Belize",
+   "title": "Belize – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:48.735Z",
+   "snapshot": "d2b5974e6c3ff16e4032e945b1f05cc63367195484ae8dacea84fc922da88e99"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Colombia",
+   "title": "Colombia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:30.295Z",
+   "snapshot": "e6db822b88bb963c952a4319c388fe579469451f86897177501d82248cd4c021"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Geography_of_Chile",
+   "title": "Geography of Chile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:49.627Z",
+   "snapshot": "db104f4e1cff769d403c29d23210cb2fea85ba70f2cc8902410cec1427270bff"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Landlocked_country",
+   "title": "Landlocked country – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:50.581Z",
+   "snapshot": "958282376825564b87e89bdc1bcd4f41aaaf7710bd0f340001609be7439eee72"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/El_Salvador",
+   "title": "El Salvador",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:03.774Z",
+   "snapshot": "513e3e6932b585cc38be2947e5ba3a654b98c0758c1210e3e8e6742106ce79b2"
+  },
+  "s9": {
+   "url": "https://snl.no/El_Salvador",
+   "title": "El Salvador",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:04.546Z",
+   "snapshot": "0a19cc917f3760a49f6bf9c08d4a4bb92e480bb17a6511b1096af1d13ab8325c"
+  },
+  "s10": {
+   "url": "https://snl.no/Belize",
+   "title": "Belize",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:05.547Z",
+   "snapshot": "fa2d0a780a1316af7b39dd3985b8ecb18ca2592a0c6a54a02228a9437ea9664c"
+  },
+  "s11": {
+   "url": "https://www.un.org/ohrlls/content/list-lldcs",
+   "title": "List of LLDCs",
+   "publisher": "UN-OHRLLS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:43:38Z"
+  },
+  "s12": {
+   "url": "https://snl.no/Hispaniola",
+   "title": "Hispaniola",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:06.793Z",
+   "snapshot": "c3f9ac628ea4f23dbc645f48774fe0812d8bbc93e7304412598b1850294bb468"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Hispaniola",
+   "title": "Hispaniola",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:05.919Z",
+   "snapshot": "a364a2464eb83289c33c94148de59804d58bb5d1ff09ef6004cc0ecd9f4a0fae"
+  },
+  "s14": {
+   "url": "https://en.wikipedia.org/wiki/Paraguay",
+   "title": "Paraguay",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:06.827Z",
+   "snapshot": "d2b93b5221c5f39b2bce0081e21af990ee1a2edd549f7d665feb5bf9b748f404"
+  },
+  "s15": {
+   "url": "https://en.wikipedia.org/wiki/Paraguay_River",
+   "title": "Paraguay River",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:07.746Z",
+   "snapshot": "239952db187c2f650401d092b578f6020991c6073282041c639e91b55f76e8ff"
+  },
+  "s16": {
+   "url": "https://snl.no/Paraguay_-_elv",
+   "title": "Paraguay – elv",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:07.721Z",
+   "snapshot": "714aaa69cbbe7522369638190ff7195c127b38e08667d8e31fbde4036cbf5ef0"
+  },
+  "s17": {
+   "url": "https://snl.no/Paran%C3%A1_-_elv",
+   "title": "Paraná – elv",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:46:08.685Z",
+   "snapshot": "7ad7aacd309cb3f470ec5833941f1efe9eb60815c32750479cdb768cde9f51f3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "El Salvador",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-237"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "zwei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; history entry seq 12; transcript tp-220"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Haiti und die Dominikanische Republik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-113"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Belize",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11922",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Colombia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11923",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Paraguay and the Paraná",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "El Salvador (deutsche Aussprache [ɛl zalvaˈdoːɐ̯], spanische Aussprache [el salβaˈðoɾ]; spanisch „der Erlöser“, „der Heiland“) ist ein Staat in Mittelamerika.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Salvador” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unter den Binnenstaaten sind zwei Staaten, Liechtenstein und Usbekistan, ausschließlich von weiteren Binnenstaaten umgeben und somit doppelte Binnenstaaten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “zwei” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Haiti und die Dominikanische Republik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Haiti und die Dominikanische Republik”, “Haiti and the Dominican Republic”, “Гаити и Доминиканская Республика”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Belize is a country on the north-eastern coast of Central America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Belize” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Colombia, officially the Republic of Colombia, is a country located in South America, with insular regions in North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colombia” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11923",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The geography of Chile is extremely diverse, as the country extends from a latitude of 17° South to Cape Horn at 56°, and from the Pacific Ocean in the west to the Andes in the east.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:52.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chile” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:52.334Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Paraguay and the Paraná",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Paraguay and the Paraná”, “Paraguay und Paraná”, “Парагвай и Парана”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:42:15Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is the only Central American country that has no Caribbean coastline.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:42:20Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "El Salvador er det eneste landet i Mellom-Amerika som kun drenerer til Stillehavet.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "SNL: the only Central American country draining solely to the Pacific — consistent with having no Caribbean coast."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:42:25Z",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is bordered by Mexico to the north, the Caribbean Sea to the east, and Guatemala to the west and south.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Belize touches only the Caribbean; every other Central American state (Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica, Panama) has a Pacific coast."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:42:30Z",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Belize er et land i Mellom-Amerika, på Yucatán-halvøya ved Det karibiske hav. Landet grenser til Mexico i nord og nordvest, og til Guatemala i vest og sør.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Only Caribbean coast; no Pacific coastline."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:43:35Z",
+   "target": "f11919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "South American group (2): Bolivia and Paraguay",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:43:38Z",
+   "target": "f11919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "23. Plurinational State of Bolivia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "The UN list of 32 landlocked developing countries has exactly two South American entries: 22. Paraguay and 23. Plurinational State of Bolivia (no developed landlocked country lies in South America)."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:43:40Z",
+   "target": "f11920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Øya Hispaniola er delt mellom republikken Haiti i vest og Den dominikanske republikk i øst.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:43:43Z",
+   "target": "f11920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Caribbean island shared by the Dominican Republic and Haiti",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:43:46Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Paraguay has access to the Atlantic Ocean via the Paraná–Paraguay Waterway",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T07:43:50Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Paraná River → Río de la Plata → Atlantic Ocean",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Infobox flow of the Paraguay River."
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T07:54:54Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "Elven er en viktig samferdselsåre, lett å navigere på, og muliggjør båttrafikk helt til Río de la Plata.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same article: the Paraguay flows into the Paraná at Corrientes."
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T07:54:56Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s17",
+     "quote": "elven fungerer som en viktig vannvei som forbinder innlandsbyer i Argentina og Paraguay med Atlanterhavet",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It is the only Central American country that has no Caribbean coastline.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "El Salvador er det eneste landet i Mellom-Amerika som kun drenerer til Stillehavet.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is bordered by Mexico to the north, the Caribbean Sea to the east, and Guatemala to the west and south.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Belize er et land i Mellom-Amerika, på Yucatán-halvøya ved Det karibiske hav. Landet grenser til Mexico i nord og nordvest, og til Guatemala i vest og sør.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "South American group (2): Bolivia and Paraguay",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s7"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Øya Hispaniola er delt mellom republikken Haiti i vest og Den dominikanske republikk i øst.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s12"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Paraguay has access to the Atlantic Ocean via the Paraná–Paraguay Waterway",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s14"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "Elven er en viktig samferdselsåre, lett å navigere på, og muliggjør båttrafikk helt til Río de la Plata.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e25 is on the snapshot of s16"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s17",
+     "quote": "elven fungerer som en viktig vannvei som forbinder innlandsbyer i Argentina og Paraguay med Atlanterhavet",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e26 is on the snapshot of s17"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "El Salvador, officially the Republic of El Salvador, is a sovereign nation in Central America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “El Salvador” is on the snapshot of s8"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "El Salvador – les om historie, språk, politikk – SNL",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “El Salvador” is on the snapshot of s9"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "As of 2026, there are 44 landlocked countries, two of them doubly landlocked due to being surrounded by other landlocked nations (Liechtenstein and Uzbekistan), and three landlocked de facto states in the world, South Ossetia, Kosovo and Transnistria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “two” is on the snapshot of s7"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The divergence between the level of economic development in Haiti and the Dominican Republic makes its border the highest contrast of all western land borders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Haiti and the Dominican Republic” is on the snapshot of s13"
+  },
+  {
+   "id": "e40",
+   "at": "2026-10-23T12:58:37.705Z",
+   "target": "f11921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Belize – les om historie, språk, politikk – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:37.705Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Belize” is on the snapshot of s10"
+  }
+ ]
+}

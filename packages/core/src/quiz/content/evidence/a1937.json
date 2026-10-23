@@ -1,0 +1,242 @@
+{
+ "article": "a1937",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Brady",
+   "title": "Tom Brady – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:42.645Z",
+   "snapshot": "cb7d5c04ea9ae76cd468d150bb61fe5daccd9c5ee0b54141a13eea1558e3d3ff"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Walter_Camp",
+   "title": "Walter Camp – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:43.632Z",
+   "snapshot": "21556c638539bc5bf09349ba6b78fd777c6c7eda4843a48761efd4ef9204eaf3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jerry_Rice",
+   "title": "Jerry Rice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:44.780Z",
+   "snapshot": "5d9fdf010ccce6e73f68bffd1f57931424f0fd1e8fddad30bd42e921fc3d9cde"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Germany_Schulz",
+   "title": "Germany Schulz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:45.737Z",
+   "snapshot": "85659fe6a6e0ad2f02e50e1533c554adea5799c00f044d7962c41d2935f4425b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ray_Guy",
+   "title": "Ray Guy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:46.756Z",
+   "snapshot": "4f95d2e3b107bda5ac109fc1726be4458ca4cd219e17e6673e78d5f98e04aed1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Quarterback",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Center",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09683",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wide Receiver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09684",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linebacker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09685",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Punter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:49.560Z",
+   "target": "f09681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "(born August 3, 1977) is an American former professional football quarterback who played in the National Football League (NFL) for 23 seasons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quarterback” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:49.560Z",
+   "target": "f09682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He is credited with innovations such as the snap-back from center, the system of downs, and the points system as well as the introduction of what became a standard offensive arrangement of players—a seven-man line and a four-man backfield consisting of a quarterback, two halfbacks, and a fullback.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Center” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:49.560Z",
+   "target": "f09683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jerry Lee Rice (born October 13, 1962) is an American former professional football wide receiver who played for 20 seasons in the National Football League (NFL).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wide Receiver” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:49.560Z",
+   "target": "f09684",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As the first lineman to play in back of the line on defense, he is credited as football's first linebacker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linebacker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:49.560Z",
+   "target": "f09685",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Ray Guy (December 22, 1949 – November 3, 2022) was an American professional football punter who played for the Oakland / Los Angeles Raiders of the National Football League (NFL).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:49.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Punter” is on the snapshot of s5"
+  }
+ ]
+}

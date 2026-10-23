@@ -1,0 +1,384 @@
+{
+ "article": "a0051",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hall_of_Mirrors",
+   "title": "Hall of Mirrors – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:55.463Z",
+   "snapshot": "820868a66ff1f1b8ab99e595b13c09d1d5ee523fb760c00ee550631a7f7850ff"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Schloss_Versailles",
+   "title": "Schloss Versailles",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:17:53.052Z",
+   "snapshot": "63463ac24162c8b7fe564a931ee005b1e26d23c7163aa46357466f893abf51ff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sch%C3%B6nbrunn_Palace",
+   "title": "Schönbrunn Palace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:56.478Z",
+   "snapshot": "30cea61e7caa732c1f29ed5df6fc03104793bd3991ce5e50f0d9a5aabfcf2e1c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Winterpalast",
+   "title": "Winterpalast – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:17:53.753Z",
+   "snapshot": "b46e59280586bc2fc04e15a659b1ea713cbfef9a45f7c335e7aace1332b86b37"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jules_Hardouin-Mansart",
+   "title": "Jules Hardouin-Mansart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:57.569Z",
+   "snapshot": "b87f66b6246dace756552d7ab0527640ab5c530820b15e6b8d9cb1eb0e52cd4f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Francesco_Bartolomeo_Rastrelli",
+   "title": "Francesco Bartolomeo Rastrelli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:58.466Z",
+   "snapshot": "73ee697b6102e2f0432cecdba9e8b47163d8b5bb446a9f259a115ee678835391"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Court_of_the_Lions",
+   "title": "Court of the Lions – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:59.609Z",
+   "snapshot": "fd8e1d90dad0e9250d0fee61489f6a818a1301c8abbea26444d253db0a3b1047"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Sanssouci",
+   "title": "Sanssouci – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:13:57.551Z",
+   "snapshot": "74660bb214bcece28366e6ee22badb429d2b0428c66a5420aea906097506ad59",
+   "archiveUrl": "https://web.archive.org/web/20261023064802/https://en.wikipedia.org/wiki/Sanssouci"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Palace of Versailles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schloss Versailles",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-236"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00253",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schönbrunn Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Winterpalast",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jules Hardouin-Mansart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bartolomeo Rastrelli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f00252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Alhambra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f00255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Sanssouci Palace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f00251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Hall of Mirrors (French: Grande Galerie, Galerie des Glaces, Galerie de Louis XIV) is a grand Baroque style gallery and one of the most emblematic rooms in the royal Palace of Versailles near Paris, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palace of Versailles” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f00251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Schloss Versailles (französisch château de Versailles) in der gleichnamigen Nachbarstadt von Paris ist eine der größten Palastanlagen Europas und war von der Mitte des 17.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schloss Versailles” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f00253",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schönbrunn Palace (German: Schloss Schönbrunn [ˈʃlɔs ʃøːnˈbʁʊn] ) was the main summer residence of the Habsburg rulers, located in Hietzing, the 13th district of Vienna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schönbrunn Palace” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f00254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Winterpalast (russisch Зимний дворец ˈzʲimnʲɪj dvɐˈrʲɛts) ist die ehemalige Hauptresidenz der russischen Kaiser in Sankt Petersburg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winterpalast” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f20000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jules Hardouin-Mansart (French pronunciation: [ʒyl aʁdwɛ̃ mɑ̃saʁ]; 16 April 1646 – 11 May 1708) was a French Baroque architect and builder whose major work included the Place des Victoires (1684–1690); Place Vendôme (1690); the domed chapel of Les Invalides (1690), and the Grand Trianon of the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jules Hardouin-Mansart” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f20001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Francesco Bartolomeo Rastrelli (Russian: Франче́ско Бартоломе́о (Варфоломе́й Варфоломе́евич) Растре́лли; 1700 – 29 April 1771) was an Italian architect who worked mainly in Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bartolomeo Rastrelli” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f00252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Court of the Lions (Spanish: Patio de los Leones) or Palace of the Lions (Spanish: Palacio de los Leones) is a palace in the heart of the Alhambra, a historic citadel formed by a complex of palaces, gardens and forts in Granada, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alhambra” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:42.874Z",
+   "target": "f00255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Schloss Sanssouci (German pronunciation: [ˈsãːsusi]) is a historical building in Potsdam, near Berlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:42.874Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schloss Sanssouci” is on the snapshot of s8"
+  }
+ ]
+}

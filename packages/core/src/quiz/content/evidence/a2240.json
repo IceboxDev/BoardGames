@@ -1,0 +1,242 @@
+{
+ "article": "a2240",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Boris_Karloff",
+   "title": "Boris Karloff",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:14.292Z",
+   "snapshot": "41098bf5fc26f1e048b6297bc9160c3dcbdfd3462ced19ee862fef656d36cd35"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Frankenstein_(1931_film)",
+   "title": "Frankenstein (1931 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:12.822Z",
+   "snapshot": "4c3ed9b049a709a3d37aa54b9b1b10a164723eeee868adebc362ccaf41dac3d0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bela_Lugosi",
+   "title": "Bela Lugosi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:13.941Z",
+   "snapshot": "adb7607ed16bf3dfa44b0cf2c0a5f730f1d8b8a225539d76ab6da5db39e0b9fa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Wolf_Man_(1941_film)",
+   "title": "The Wolf Man (1941 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:14.769Z",
+   "snapshot": "94c24c21e0c752d8894230b636f9bf8276cdec2ca1b74fef0c7a86d316f828bb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bride_of_Frankenstein",
+   "title": "Bride of Frankenstein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:15.819Z",
+   "snapshot": "b2f16ffef4023f21c3a197239ba9a6ca3acdbcc94ce2739270c0e17faf5d2b86"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "britisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Whale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hungarian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lon Chaney Jr.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Elsa Lanchester",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:42.329Z",
+   "target": "f11476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Danach zog er weiter nach Ontario, später nach British Columbia.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “British” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:42.329Z",
+   "target": "f11477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frankenstein is a 1931 American pre-Code horror film directed by James Whale and produced by Carl Laemmle Jr..",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Whale” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:42.329Z",
+   "target": "f11478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Béla Ferenc Dezső Blaskó (October 20, 1882 – August 16, 1956), better known by his stage name Béla Lugosi was a Hungarian–American actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hungarian” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:42.329Z",
+   "target": "f11479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The film stars Lon Chaney Jr. as the Wolf Man.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lon Chaney Jr.” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:42.329Z",
+   "target": "f11480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Additionally, it features Elsa Lanchester in the dual role of Mary Shelley and the bride, Ernest Thesiger as Doctor Septimus Pretorius, and Oliver Peters Heggie as the blind hermit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elsa Lanchester” is on the snapshot of s5"
+  }
+ ]
+}

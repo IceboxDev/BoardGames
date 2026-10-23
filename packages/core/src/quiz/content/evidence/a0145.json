@@ -1,0 +1,242 @@
+{
+ "article": "a0145",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+   "title": "Frédéric Chopin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:20.840Z",
+   "snapshot": "41fa8229e478685b6e1a3e8e50ca7c642e6cbe089922f4e49287f66d90b49b3a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mazurek_D%C4%85browskiego",
+   "title": "Mazurek Dąbrowskiego – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:21.504Z",
+   "snapshot": "a83a077d646e2a14645800d7fba31b24a3a354aa2de034d5fe3de1899f450a77"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Polka",
+   "title": "Polka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:24.490Z",
+   "snapshot": "6af9b8bafca70be3bb55b75d830216d7a6174d5948ac31c8de9bf314cf4329d6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Wiener_Opernball",
+   "title": "Wiener Opernball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:22.931Z",
+   "snapshot": "2e0f2eff485ca47b40e0acfa2a3eafd354d79c93afa243c9c10e7ca7d3140829"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bol%C3%A9ro",
+   "title": "Boléro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:23.598Z",
+   "snapshot": "76461be5005754b43fe71a17a3e2aab1386290b6c1768ed4bf938460b1f75f78"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Polonaise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mazurka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Polka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walzer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bolero",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:59.854Z",
+   "target": "f00721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "2 und gemeinsam mit Friedrich Kalkbrenner, Camille Stamaty (anstatt des ursprünglich vorgesehenen Felix Mendelssohn Bartholdy), Ferdinand Hiller, George Osborne und Wojciech Sowiński die Grande Polonaise précédée d’une Introduction et d’une Marche op.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polonaise” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:59.854Z",
+   "target": "f00722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mazurek Dąbrowskiego [maˈzurɛk dɔmbrɔfˈskjɛɡɔ]  („Dombrowskis Mazurka“) ist die Nationalhymne der Republik Polen, benannt nach dem polnischen Nationalhelden Jan Henryk Dąbrowski.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mazurka” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:59.854Z",
+   "target": "f00723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Polka is a dance style and genre of dance music in 24 originating in nineteenth-century Bohemia, now part of the Czech Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polka” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:59.854Z",
+   "target": "f00724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Klaus Mühlsiegel steuerte hierbei die Choreographie bei, und die Tanzschule Elmayer zeichnete für den Wiener Walzer sowie das Einstudieren der Choreographie verantwortlich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walzer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:59.854Z",
+   "target": "f00725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Boléro (in der spanischen Schreibweise Bolero, so auch im Manuskript des Komponisten) ist ein Orchesterstück des französischen Komponisten Maurice Ravel aus dem Jahr 1928, dessen Titel sich auf die rhythmische Struktur des spanischen Bolero bezieht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.854Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bolero” is on the snapshot of s5"
+  }
+ ]
+}

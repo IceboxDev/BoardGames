@@ -1,0 +1,363 @@
+{
+ "article": "a0326",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Max_and_Moritz",
+   "title": "Max and Moritz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:15.309Z",
+   "snapshot": "f44ec9b2b618e219fc0842c762c99e8ae9e9a7a0402a6a30c9abfb195a92b7bb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Struwwelpeter",
+   "title": "Struwwelpeter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:16.402Z",
+   "snapshot": "ccc9a91f08ec4eb3bd375c938bc074c1c80ae98b7a5eae59a5b5d7a552b7f012"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(film)",
+   "title": "Snow White and the Seven Dwarfs (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:17.429Z",
+   "snapshot": "669b2a96ce41a8cdd43a24a79531d450e2d64a89a34e7def910ca8547116ffbf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hansel_and_Gretel",
+   "title": "Hansel and Gretel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:18.375Z",
+   "snapshot": "cafc02d7e9c610edebbb5e36de421b132701f850216775c9c3df479e02bce89d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Grimms%27_Fairy_Tales",
+   "title": "Grimms' Fairy Tales – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:19.287Z",
+   "snapshot": "9f3f96462a229af8afcd149adb6884099f3326e34be842badfd7111dfe34619a"
+  },
+  "s6": {
+   "url": "https://www.lesejury.de/james-kruess/buecher/die-weihnachtsmaus/9783833909443",
+   "title": "Die Weihnachtsmaus – James Krüss (Lesejury)",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-20"
+  },
+  "s7": {
+   "url": "https://der-audio-verlag.de/hoerbuecher/die-weihnachtsmaus-kruess-james-978-3-86231-095-1/",
+   "title": "Die Weihnachtsmaus – James Krüss – Der Audio Verlag",
+   "publisher": "Der Audio Verlag",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:17.875Z",
+   "snapshot": "880b692dd37bc8aa9e21fb8ff3b74073d71fa541e485ee115b000e431476bc2c"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Der_wohltemperierte_Leierkasten",
+   "title": "Der wohltemperierte Leierkasten – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:18.161Z",
+   "snapshot": "d16930fcf1852731db56a5d3e6d28fa8701f583e40a8c310ba7c747096e617ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Max and Moritz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Struwwelpeter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snow White",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hansel and Gretel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rumpelstiltskin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Maus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-296"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:30.304Z",
+   "target": "f01626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Max and Moritz: A Story of Seven Boyish Pranks (original: Max und Moritz – Eine Bubengeschichte in sieben Streichen) is a German language illustrated story in verse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max and Moritz” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:30.304Z",
+   "target": "f01627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Struwwelpeter ('Shock-Headed Peter') is an 1845 German children's book written and illustrated by the German psychiatrist Heinrich Hoffmann.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Struwwelpeter” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:30.304Z",
+   "target": "f01628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snow White and the Seven Dwarfs (film)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snow White” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:30.304Z",
+   "target": "f01629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Hansel and Gretel\" (; German: Hänsel und Gretel [ˈhɛnzl̩ ʔʊnt ˈɡʁeːtl̩]) is a German fairy tale collected by the Brothers Grimm and published in 1812 as part of Grimms' Fairy Tales (KHM 15).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hansel and Gretel” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:30.304Z",
+   "target": "f01630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rumpelstiltskin (Rumpelstilzchen): KHM 55",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rumpelstiltskin” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:01:19Z",
+   "target": "f12952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ein klarer Fall: Hier ist die hungrige Weihnachtsmaus am Werk. »Die Weihnachtsmaus« ist nur eines von James Krüss’ zahlreichen Weihnachtsgedichten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 13-stanza count is the card's premise and was not independently counted."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:01:20Z",
+   "target": "f12952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Einige der Gedichte dieses Werkes fanden Eingang in Schulbücher und Gedichtsammlungen, so zum Beispiel Das Feuer und Die Weihnachtsmaus.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:50.462Z",
+   "target": "f12952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ein klarer Fall: Hier ist die hungrige Weihnachtsmaus am Werk. »Die Weihnachtsmaus« ist nur eines von James Krüss’ zahlreichen Weihnachtsgedichten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:50.462Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:50.462Z",
+   "target": "f12952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Einige der Gedichte dieses Werkes fanden Eingang in Schulbücher und Gedichtsammlungen, so zum Beispiel Das Feuer und Die Weihnachtsmaus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:50.462Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  }
+ ]
+}

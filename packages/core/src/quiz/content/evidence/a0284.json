@@ -1,0 +1,242 @@
+{
+ "article": "a0284",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Anthroposophical_Society",
+   "title": "Anthroposophical Society – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:29.009Z",
+   "snapshot": "87ab272e64507137cca0934db78ca449606115a5a81fee2083dbf429c3af4b90"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Theosophical_Society",
+   "title": "Theosophical Society – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:29.890Z",
+   "snapshot": "9895703c30e1401e8a4e32034bb541d2348372a1051833289f76dcf074225ad4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Stoa_Poikile",
+   "title": "Stoa Poikile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:30.911Z",
+   "snapshot": "aeef7b8b50fba32ec51b542d8e2c8e8a6e50aa3973a10b6ad7588af4e075d8e3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Auguste_Comte",
+   "title": "Auguste Comte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:31.977Z",
+   "snapshot": "5e2cd25316bd8ecbd312a741f3702fbd83aac783ca9982f57ce4326a5405de3a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Church_of_Christ,_Scientist",
+   "title": "Church of Christ, Scientist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:32.901Z",
+   "snapshot": "e32f551334d05dca75402dc3bfdb7e5015829f90ddbab90edab058e88c924cc4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "anthroposophy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "theosophy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stoicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "positivism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Christian Science",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.266Z",
+   "target": "f01416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the life of the soul, both in the individual and in human society, on the basis of a true knowledge of the spiritual world.\" As an organization, it is dedicated to supporting the community of those interested in the inner path of schooling known as anthroposophy, developed by Rudolf Steiner.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.266Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “anthroposophy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.266Z",
+   "target": "f01417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Theosophical Society is the organizational body of Theosophy, an esoteric new religious movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.266Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “theosophy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.266Z",
+   "target": "f01418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was one of the most famous sites in ancient Athens, owing its fame to the paintings and war-booty displayed within it and to its association with ancient Greek philosophy, especially Stoicism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.266Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stoicism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:24.266Z",
+   "target": "f01419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Isidore Auguste Marie François Xavier Comte (; French: [oɡyst(ə) kɔ̃t] ; 19 January 1798 – 5 September 1857) was a French philosopher and writer who formulated the doctrine of positivism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.266Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “positivism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:24.266Z",
+   "target": "f01420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Church of Christ, Scientist is a Christian new religious movement founded in 1879 in Boston, Massachusetts, by Mary Baker Eddy, the author of Science and Health with Key to the Scriptures and founder of Christian Science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.266Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Science” is on the snapshot of s5"
+  }
+ ]
+}

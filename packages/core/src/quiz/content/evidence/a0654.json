@@ -1,0 +1,295 @@
+{
+ "article": "a0654",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Viet_Cong",
+   "title": "Viet Cong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:05.111Z",
+   "snapshot": "b4273c77cba80c9ee3e3df140d35221804578fddc4b12d03bbd78d76d43af9d5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tommy_Atkins",
+   "title": "Tommy Atkins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:04.103Z",
+   "snapshot": "1745bdc8f92d7d0da6865ee6427572a1caeacacc19f730d9a692d459554b1398"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/G.I.",
+   "title": "G.I. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:05.089Z",
+   "snapshot": "dea5e2785e95fe16f9db92fa0f473d82db5c82b724f21085ab019b5662d6d8d6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/G.I",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:06.054Z",
+   "snapshot": "dea5e2785e95fe16f9db92fa0f473d82db5c82b724f21085ab019b5662d6d8d6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Poilu",
+   "title": "Poilu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:07.089Z",
+   "snapshot": "a324fbffd1d02bb2f52b826addb5d7566fe09bdf7921f80ab9072efa763d254b"
+  },
+  "s6": {
+   "url": "https://stewross.com/wwii-soviet-soldiers/",
+   "title": "Tommy, Fritz, and Ivan – Stew Ross Discovers",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:06.645Z",
+   "snapshot": "cc4e3ad752f2828654187d8af07827665b6f56e5a61587868d938c3fe9322e91"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/List_of_ethnic_slurs_by_ethnicity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:08.404Z",
+   "snapshot": "02dd79ead03056302f0d3f4df1c467e747334230ba2ce22b4c1877ae20032ed1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charlie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tommy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "“GI”",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "“GI”",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "poilu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ivan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:21.039Z",
+   "target": "f03266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "American soldiers referred to the Viet Cong as Victor Charlie or VC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlie” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:21.039Z",
+   "target": "f03267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tommy Atkins (often just Tommy) is slang for a common soldier in the British Army.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tommy” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:21.039Z",
+   "target": "f03268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "American girls, beer, and Glenn Miller: GI morale in World War II (University of Missouri Press, 2012) online.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: ““GI”” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:21.039Z",
+   "target": "f03268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "American girls, beer, and Glenn Miller: GI morale in World War II (University of Missouri Press, 2012) online.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: ““GI”” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:21.039Z",
+   "target": "f03269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Poilu (; French: [pwaly] ) is an informal term for a late 18th century–early 20th century French infantryman, meaning, literally, 'hairy one'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “poilu” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:21.039Z",
+   "target": "f03270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tommy, Fritz, and Ivan - Stew Ross Discovers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:21.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ivan” is on the snapshot of s6"
+  }
+ ]
+}

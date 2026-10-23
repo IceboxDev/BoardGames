@@ -1,0 +1,249 @@
+{
+ "article": "a0799",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tesa_SE",
+   "title": "Tesa SE – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:04.369Z",
+   "snapshot": "569c4563c24ea5b66eaf946e2003784c0adb2775bda3b3a00a39c9b7c699438f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nivea",
+   "title": "Nivea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:21.507Z",
+   "snapshot": "0290756c26113202f4fc11018ee9c2b7b7d596d446e9de27ab26434bdf600403"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aspirin",
+   "title": "Aspirin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:05.556Z",
+   "snapshot": "b5d737773d3eccb78cbb40cff906f1000dd7b0cef476919363707760c6800e4b"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Aspirin_(Marke)",
+   "title": "Aspirin (Marke)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:21:02.736Z",
+   "snapshot": "f294c017b3f98fe1740bbb9a450ea81c9fe6ea427ca1f634f2fb0ea4bf0d2b74"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Haribo",
+   "title": "Haribo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:06.411Z",
+   "snapshot": "80cc0b9d6d10d950e56fe7cc929df8c67562144cfdbd32a5562764ed6adf5e65"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tesa_SE",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:21:03.719Z",
+   "snapshot": "e1da1ad0ac04fddae5df155c71df80263aa54cf4336d45b5fb9f5f5d0f79db07"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tesa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nivea",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aspirin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aspirin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-161"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Haribo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:47.131Z",
+   "target": "f03991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tesa SE is a German company manufacturing adhesive products.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tesa” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:47.131Z",
+   "target": "f03992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nivea (Eigenschreibweise: NIVEA) ist eine geschützte Marke der Beiersdorf AG.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nivea” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:47.131Z",
+   "target": "f03994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aspirin () is the genericized trademark for acetylsalicylic acid (ASA), a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain, fever, and inflammation, and as an antithrombotic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aspirin” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:47.131Z",
+   "target": "f03994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aspirin ist eine Marke, unter der von der Bayer AG verschiedene acetyl­salicyl­säurehaltige Arzneimittel vertrieben werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aspirin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:47.131Z",
+   "target": "f03995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The name \"Haribo\" is a syllabic abbreviation formed from Hans Riegel Bonn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haribo” is on the snapshot of s5"
+  }
+ ]
+}

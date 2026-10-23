@@ -1,0 +1,242 @@
+{
+ "article": "a1602",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sakoku",
+   "title": "Sakoku – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:14.080Z",
+   "snapshot": "b13d59e620eb1a862b60bc7b2cdde9489affcbffa8f2fba1ef0f30266a114135"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dejima",
+   "title": "Dejima – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:15.126Z",
+   "snapshot": "807f12faa252829b3b77a42725e7218af89e58c8a8da160ee2cc9badc3100d7f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hermit_kingdom",
+   "title": "Hermit kingdom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:16.040Z",
+   "snapshot": "fb07f9409b5dffea38b1317ba1a47288bbe849c39f5f06eecc3868ecf056ef6c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Canton_System",
+   "title": "Canton System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:17.190Z",
+   "snapshot": "0f4ef5064e3a52d44072d3b54661ef092618d5dbc84678f916670647452e1a2b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Television_in_Bhutan",
+   "title": "Television in Bhutan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:18.020Z",
+   "snapshot": "b8fcec3aca160473c3bb1741b17c615a6d755f51f944a4a696a07b888d6af451"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Korea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bhutan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:49.497Z",
+   "target": "f08006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "foreign policy of the Japanese Tokugawa shogunate under which, during the Edo period (from 1603 to 1867), relations and trade between Japan and other countries were severely limited, and almost all foreign nationals were banned from entering Japan, while common Japanese people were kept",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:49.497Z",
+   "target": "f08007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Times were especially hard when the Netherlands, then called the Batavian Republic, was under French Napoleonic rule.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Netherlands” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:49.497Z",
+   "target": "f08008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "North Korea is the most commonly cited example of a hermit kingdom-like country due to its Juche state ideology which is heavily focused on isolationist and self-sufficient internal politics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Korea” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:49.497Z",
+   "target": "f08009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"single [port] trading relations\") served as a means for Qing China to control trade with the West within its own country by focusing all trade on the southern port of Canton (now Guangzhou).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:49.497Z",
+   "target": "f08010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Television was introduced to Bhutan in 1999.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bhutan” is on the snapshot of s5"
+  }
+ ]
+}

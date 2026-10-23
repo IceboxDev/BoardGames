@@ -1,0 +1,319 @@
+{
+ "article": "a0908",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel",
+   "title": "Georg Wilhelm Friedrich Hegel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:21.888Z",
+   "snapshot": "2b215530572419788346608e85f3d7f1ad4384d596023378f902136dd18b598f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Opium_of_the_people",
+   "title": "Opium of the people – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:19.266Z",
+   "snapshot": "f4dccf72bfed333c58f1d89abe5b0992883c408f8b7a73814f87016c101434d6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cunning_of_reason",
+   "title": "Cunning of reason – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:20.324Z",
+   "snapshot": "12d9f711b8f4b5154ea759f8f2af78e8ed06f52d120ff25754d251560afa277c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Schopenhauer",
+   "title": "Arthur Schopenhauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:21.623Z",
+   "snapshot": "e2a23966aa94879d745e378ef81553a217ef7ff29ed4b6d3b3e9dc328f62a79a"
+  },
+  "s5": {
+   "url": "https://www.marxists.org/reference/archive/hegel/works/letters/1806-10-13.htm",
+   "title": "Hegel to Niethammer, Jena, 13 October 1806 (tr. Butler & Seiler) – Marxists Internet Archive",
+   "publisher": "Marxists Internet Archive",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:34.937Z",
+   "snapshot": "14da81b79b3ad2da2603d29ff6db868aa88c2191e2d64e097640c2dbd4fd0b02"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Napoleon Bonaparte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Marx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f20460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the cunning of reason",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arthur Schopenhauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jena",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:03.114Z",
+   "target": "f04536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Napoleon Bonaparte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Napoleon Bonaparte”, “Наполеон Бонапарт”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:03.114Z",
+   "target": "f04537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "used in reference to religion, derived from a frequently paraphrased partial statement of German revolutionary and critic of political economy Karl Marx: \"Religion is the opium of the people.\" In context, the statement is part of Marx's analysis that religion's role is as a metaphysical balm for",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:03.114Z",
+   "target": "f20460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Cunning of Reason (German: List der Vernunft) is a term coined by the German philosopher Georg Wilhelm Friedrich Hegel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the cunning of reason” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:03.114Z",
+   "target": "f20461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arthur Schopenhauer (22 February 1788 – 21 September 1860), also known as the “Philosopher of Pessimism”, was a German philosopher and writer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Schopenhauer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:03.114Z",
+   "target": "f20462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jena, Bamberg, Nuremberg (1801–1816)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jena” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:00:40Z",
+   "target": "f04536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I saw the Emperor – this world-soul [Weltseele] – riding out of the city on reconnaissance.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:00:43Z",
+   "target": "f04536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I saw the Emperor – this world-soul – riding out of the city on reconnaissance. It is indeed a wonderful sensation to see such an individual, who, concentrated here at a single point, astride a horse, reaches out over the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Hegel's own letter; 'world-soul on horseback' is the popular paraphrase of this passage"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:32.407Z",
+   "target": "f04536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I saw the Emperor – this world-soul [Weltseele] – riding out of the city on reconnaissance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:32.407Z",
+   "target": "f04536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I saw the Emperor – this world-soul – riding out of the city on reconnaissance. It is indeed a wonderful sensation to see such an individual, who, concentrated here at a single point, astride a horse, reaches out over the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  }
+ ]
+}

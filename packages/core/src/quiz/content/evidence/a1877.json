@@ -1,0 +1,498 @@
+{
+ "article": "a1877",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Siedler_von_Catan",
+   "title": "Die Siedler von Catan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:38.972Z",
+   "snapshot": "0b2b4d5da1010c62e642c0023830b1a9ee4e488a42b9736bf0ee1694435b301a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Catan",
+   "title": "Catan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:01.408Z",
+   "snapshot": "9a26392b2d36ed52d5115cf07c97eda50bef3908e188b2d9ed66638f32339e68"
+  },
+  "s3": {
+   "url": "https://rulespal.com/catan/rulebook",
+   "title": "Catan rulebook (Game Rules & Almanac)",
+   "publisher": "RulesPal",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:05.282Z",
+   "snapshot": "7b19dd34046f8d8c0f96580816962c4f1eda47a51bc3f3f843c25e954eb30c28"
+  },
+  "s4": {
+   "url": "https://www.ultraboardgames.com/catan/game-rules.php",
+   "title": "Catan Game Rules",
+   "publisher": "Ultra Board Games",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:04.419Z",
+   "snapshot": "6d9f594f42334e6dda1577988a4f868a1b5a490925f8934c619ab0fdac446f58"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Holz, Lehm, Wolle, Getreide und Erz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lumber and brick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wolle, Getreide und Erz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "two grain and three ore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:38.167Z",
+   "target": "f09381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Holz, Lehm, Wolle, Getreide und Erz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Holz, Lehm, Wolle, Getreide und Erz”, “lumber, brick, wool, grain and ore”, “дерево, глина, шерсть, зерно и руда”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:38.167Z",
+   "target": "f09382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lumber and brick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“lumber and brick”, “Holz und Lehm”, “дерево и глина”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:38.167Z",
+   "target": "f09383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wolle, Getreide und Erz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Wolle, Getreide und Erz”, “wool, grain and ore”, “шерсть, зерно и руда”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:38.167Z",
+   "target": "f09385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "two grain and three ore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“two grain and three ore”, “zwei Getreide und drei Erz”, “два зерна и три руды”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:30:06Z",
+   "target": "f09381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hills produce brick, forests produce lumber, mountains produce ore, fields produce grain, and pastures produce wool.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:30:08Z",
+   "target": "f09381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "95 resource cards (bearing the symbols for the brick, grain, lumber, ore, and wool resources)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23",
+   "note": "reproduces the official Catan Game Rules & Almanac"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:30:09Z",
+   "target": "f09382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A. Road Requires: Brick & Lumber",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:30:10Z",
+   "target": "f09382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Requires: Brick & Lumber",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:30:11Z",
+   "target": "f09385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "C. City Requires: 3 Ore & 2 Grain",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:30:12Z",
+   "target": "f09385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Requires: 3 Ore & 2 Grain",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:30:13Z",
+   "target": "f09383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "D. Buying Development Card (requires: Ore, Wool, & Grain)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:30:15Z",
+   "target": "f09383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buying a Development Card (Requires: Ore, Wool, & Grain)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hills produce brick, forests produce lumber, mountains produce ore, fields produce grain, and pastures produce wool.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "95 resource cards (bearing the symbols for the brick, grain, lumber, ore, and wool resources)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A. Road Requires: Brick & Lumber",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Requires: Brick & Lumber",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "C. City Requires: 3 Ore & 2 Grain",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Requires: 3 Ore & 2 Grain",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "D. Buying Development Card (requires: Ore, Wool, & Grain)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:27.468Z",
+   "target": "f09383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buying a Development Card (Requires: Ore, Wool, & Grain)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:27.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  }
+ ]
+}

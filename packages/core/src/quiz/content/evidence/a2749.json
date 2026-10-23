@@ -1,0 +1,256 @@
+{
+ "article": "a2749",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meta_(prefix)",
+   "title": "Meta (prefix)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:53.000Z",
+   "snapshot": "be4d8c054620b7ab1d86d52468d3bc48b314cf851c1834f2094e5064f2e34157"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hyperbole",
+   "title": "Hyperbole – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:54.047Z",
+   "snapshot": "a03164c2b55597c66ee68041c968308794cd772b789e6af31fc08030c3a562fa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hypothesis",
+   "title": "Hypothesis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:54.984Z",
+   "snapshot": "d53a347c8993753f2cf2427bb96ff6bbd30a052bdd733f56141605b8dc183f0e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Perimeter",
+   "title": "Perimeter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:55.998Z",
+   "snapshot": "2029edb9bca8b714270c3fc0deb6080b0380ffa1c84dbbc072d496309adad2e8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Antibiotic",
+   "title": "Antibiotic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:22.294Z",
+   "snapshot": "54b1b345a0bb470bdf3cc9bae205df5e2704a9f7bbaeaf693e5eea39545f5f8c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Metaphysics_(Aristotle)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:57.000Z",
+   "snapshot": "fa2a26e96e067046e2c54804ab72b30630c45df5d3a7baf5be5da691d9af3784"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aristotle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:41.977Z",
+   "snapshot": "84b96866df751bc7bcf8c0df2411a04dd3c0f8506f1e2857a2330519329d3f9d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "above",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "under",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "around",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "against",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:07.571Z",
+   "target": "f25665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Meta (from Ancient Greek  μετά (metá) 'after, beyond') is an adjective meaning 'more comprehensive' or 'transcending'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “After” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:07.571Z",
+   "target": "f25666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The word is composed from ὑπέρ hupér 'above, beyond' and βάλλω bállō 'throw'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “above” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:07.571Z",
+   "target": "f25667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The English word hypothesis comes from the ancient Greek word ὑπόθεσις (hypothesis), whose literal or etymological sense is \"putting or placing under\" and hence in extended use has many other meanings including \"supposition\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “under” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:07.571Z",
+   "target": "f25668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Similarly, the amount of string wound around a spool is related to the spool's perimeter; if the length of the string was exact, it would equal the perimeter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “around” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:07.571Z",
+   "target": "f25669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An antibiotic is a type of antimicrobial substance which is active against bacteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “against” is on the snapshot of s5"
+  }
+ ]
+}

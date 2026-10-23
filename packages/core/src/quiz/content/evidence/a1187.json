@@ -1,0 +1,469 @@
+{
+ "article": "a1187",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Calendula_officinalis",
+   "title": "Calendula officinalis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:12.877Z",
+   "snapshot": "c4fa615b5851c905a84eeb076f41e33b8ad47bb704278e9782e02bb074cb010c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ringelblume",
+   "title": "Ringelblume",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:10.243Z",
+   "snapshot": "2504b6b302a5c930638124efae7279b0c3b0bcb59fec743a0806cddd327782eb"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Arzneipflanze_des_Jahres",
+   "title": "Arzneipflanze des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:11.169Z",
+   "snapshot": "f2af7e233b8cfabe32b229a2a879f17c0ae7f8913adf3c5b12e28153a3ee6ac1"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Echte_Kamille",
+   "title": "Echte Kamille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:16:22.539Z",
+   "snapshot": "903bfa82ee4329df28cf03302c53fdd131ca4a1f8dea874c7ed57af7ea4a6171"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Taraxacum",
+   "title": "Taraxacum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:34.831Z",
+   "snapshot": "b41aba028856676df966c347e32151034771fc6e1701236d3ae8db8e7bf83618"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Absinthe",
+   "title": "Absinthe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:25.924Z",
+   "snapshot": "a39fcdbd67d5f18714a02275096392dae7a500e84246a765bdbfa851f9ed4891"
+  },
+  "s7": {
+   "url": "https://www.ema.europa.eu/en/medicines/herbal/arnicae-flos",
+   "title": "Arnicae flos – herbal medicinal product",
+   "publisher": "European Medicines Agency (EMA)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:32.864Z",
+   "snapshot": "313006c92469ff7ca2a776e1a41a3b489d85804e2461a63f8cae3dfce5eb732d"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Echte_Arnika",
+   "title": "Echte Arnika – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:32.638Z",
+   "snapshot": "8a5aebc2d88370d607d72cb2ef12633955cb33a70e3e818b9f15718e420a3227"
+  },
+  "s9": {
+   "url": "https://www.apotheken-umschau.de/heilpflanzen/arnika",
+   "title": "Arnika: Wie die Heilpflanze bei Prellungen hilft – Apotheken Umschau",
+   "publisher": "Apotheken Umschau (Wort & Bild Verlag)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:32.687Z",
+   "snapshot": "22905b14660cf51626b9bc959806d694b4fd6b815ae37766aa9d19c53a1c234a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pot marigold",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ringelblume",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-298"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arnika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kamille",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "dandelion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "wormwood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:45.552Z",
+   "target": "f05931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calendula officinalis, Mary's gold, common marigold, the pot marigold, Scotch marigold, or ruddles, is a flowering plant in the daisy family, Asteraceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.552Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pot marigold” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:45.552Z",
+   "target": "f05931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Ringelblume (Calendula officinalis), auch Gewöhnliche Ringelblume oder Garten-Ringelblume genannt, ist eine Pflanzenart aus der Gattung der Ringelblumen (Calendula) innerhalb der",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.552Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ringelblume” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:45.552Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arnika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Arnika”, “arnica”, “арника”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:45.552Z",
+   "target": "f05933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Echte Kamille (Matricaria chamomilla L.) ist eine Pflanzenart  aus der Gattung der Kamillen (Matricaria) innerhalb der Familie der Korbblütler (Asteraceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.552Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kamille” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:45.552Z",
+   "target": "f05934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "officinale (the common dandelion) and T.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.552Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dandelion” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:45.552Z",
+   "target": "f05935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Absinthe (, French: [apsɛ̃t] ) is an anise-flavoured spirit derived from several plants, including the flowers and leaves of Artemisia absinthium (\"grand wormwood\"), together with green anise, sweet fennel, and other medicinal and culinary herbs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.552Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wormwood” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:13Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "these arnica flower preparations can be used for the relief of bruises, sprains and localised muscle pain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:18Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Echte Arnika (Arnica montana), auch Bergwohlverleih genannt, ist eine Pflanzenart aus der Gattung Arnika innerhalb der Familie der Korbblütler (Asteraceae).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:14:22Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Arnika ist ein Schatz aus den Bergen, der bei Schwellungen, Prellungen und Muskelschmerzen helfen soll.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:27.048Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "these arnica flower preparations can be used for the relief of bruises, sprains and localised muscle pain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:27.048Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Echte Arnika (Arnica montana), auch Bergwohlverleih genannt, ist eine Pflanzenart aus der Gattung Arnika innerhalb der Familie der Korbblütler (Asteraceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:27.048Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This is a summary of the scientific conclusions reached by the Committee on Herbal Medicinal Products (HMPC) on the medicinal uses of arnica flower.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “arnica” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:27.048Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Echte Arnika (Arnica montana), auch Bergwohlverleih genannt, ist eine Pflanzenart aus der Gattung Arnika innerhalb der Familie der Korbblütler (Asteraceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Arnika” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:27.048Z",
+   "target": "f05932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Arnika: Wie die Heilpflanze bei Prellungen hilft | Apotheken Umschau",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Arnika” is on the snapshot of s9"
+  }
+ ]
+}

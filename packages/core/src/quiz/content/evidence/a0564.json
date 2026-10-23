@@ -1,0 +1,638 @@
+{
+ "article": "a0564",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Leitungsverlegung",
+   "title": "Leitungsverlegung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:03.299Z",
+   "snapshot": "7531fe2fa472515d3c0f45cb4cfc3f7619b0726158309608e86593c4b2a6b21c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Electrical_wiring_in_the_United_Kingdom",
+   "title": "Electrical wiring in the United Kingdom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:07.330Z",
+   "snapshot": "9b5d6905ed7b8e20a6cb3c10e5debbe4fcf18a1eadbda0e90a17f1624cd203fa"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Schutzleiter",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:04.371Z",
+   "snapshot": "ac6f5dd7b02950cfa7198134969548652658c37a718142a8a17f95e54db3efbd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Neutralleiter",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:05.317Z",
+   "snapshot": "fde542fcbad147cd433f7f3fc81293e8b3158a2292ad5d740ba21246948fcbc7"
+  },
+  "s5": {
+   "url": "https://www.sanier.de/elektroinstallation/farben-von-kabeln-und-leitungen",
+   "title": "Farben von Kabeln und Leitungen richtig erklärt",
+   "publisher": "sanier.de",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:06.416Z",
+   "snapshot": "3f63c049195c89fd53ee30bb399dc648042b3f7e015f6ba780766ddd28dd1e60"
+  },
+  "s6": {
+   "url": "https://www.bayka.de/?p=4487",
+   "title": "Aderkennzeichnung Energiekabel | Bayka",
+   "publisher": "Bayka (Bayerische Kabelwerke)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:06.325Z",
+   "snapshot": "283611ac23c61f2f473a2ff4d8c8837a0f27843f12011c5d18c69ffe3b3ec34b"
+  },
+  "s7": {
+   "url": "https://www.leinetal24.de/leben/wohnen/farben-haben-stromkabel-und-was-bedeuten-sie-welche-zr-92226406.html",
+   "title": "Grün, Braun und Schwarz: Das bedeuten die verschiedenen Farben beim Stromkabel",
+   "publisher": "leinetal24",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:07.213Z",
+   "snapshot": "b8d7b7ca8d63f2d9de782b246197e3bf303350743ba8aa0367d0ea338754fa1d"
+  },
+  "s8": {
+   "url": "https://www.immoportal.com/node/96732",
+   "title": "Informationen zu Stromkabel und deren Farben",
+   "publisher": "immoportal.com",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:06.703Z",
+   "snapshot": "c3f31a40fe4f86f363027799ed3498a2d11d05744d5ea990006a9f8d6f905f1b"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Au%C3%9Fenleiter",
+   "title": "Außenleiter – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:06.598Z",
+   "snapshot": "6aeb4a373987b30c7844d354e19933c18a65c8165bd5c7824cddf1161520736c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grün-Gelb",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "blue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Braun",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schwarz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:07.861Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grün-Gelb",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Grün-Gelb”, “green-yellow”, “жёлто-зелёный”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:07.861Z",
+   "target": "f02817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Colour-coded blue (pre-2004: black).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blue” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:07.861Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Braun",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Braun”, “brown”, “коричневый”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:07.861Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schwarz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Schwarz”, “black”, “чёрный”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:11:04Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "der Schutzleiter (PE) ohne Ausnahme durchgehend grün-gelb sein muss!",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:11:07Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Beibehaltung der Aderfarbe “Grüngelb” für den Schutzleiter und “Blau” für den Neutralleiter",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:11:10Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Teilerfolge waren die Einführung des grün-gelben Schutzleiters und die Harmonisierung der Aderfarben für flexible Leitungen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:11:13Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Phasen L1 bis L3 sind braun, schwarz und grau ummantelt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:16Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Phasenleiter ist dabei braun oder schwarz, der Neutralleiter blau und der Schutzleiter grün-gelb.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23",
+   "note": "Brown is the harmonised single-phase colour; black survives in pre-2003 wiring."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:11:19Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bevorzugte Farbkennzeichnung von Außenleitern beim Dreiphasenwechselstrom im CENELEC-Raum:braun, schwarz, grau",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:11:22Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Man kann sich aber an der bisher häufigsten angewendeten Zuordnung orientieren: L1 = braun / L2 = schwarz / L3 = grau.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: the standard itself does not fix which colour is L1/L2/L3."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:11:24Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine Empfehlung könnte sein, sich an die bisher häufig angewendete Zuordnung anzulehnen: L1 = schwarz / L2 = braun / L3 = grau",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23",
+   "note": "Cable maker notes the standard does not assign colours to L1/L2/L3 and suggests L1 black / L2 brown; old claim \"L2 black under DIN VDE 0293-308\" is overstated; wording now asks for the usual assignment."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:11:27Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Phasen L1 bis L3 sind braun, schwarz und grau ummantelt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:11:29Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bevorzugte Farbkennzeichnung von Außenleitern beim Dreiphasenwechselstrom im CENELEC-Raum:braun, schwarz, grau",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "der Schutzleiter (PE) ohne Ausnahme durchgehend grün-gelb sein muss!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Teilerfolge waren die Einführung des grün-gelben Schutzleiters und die Harmonisierung der Aderfarben für flexible Leitungen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Phasen L1 bis L3 sind braun, schwarz und grau ummantelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Phasenleiter ist dabei braun oder schwarz, der Neutralleiter blau und der Schutzleiter grün-gelb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Man kann sich aber an der bisher häufigsten angewendeten Zuordnung orientieren: L1 = braun / L2 = schwarz / L3 = grau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Phasen L1 bis L3 sind braun, schwarz und grau ummantelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Für alle Ausführungen gilt, dass nach DIN VDE 0100-510 der Schutzleiter (PE) ohne Ausnahme durchgehend grün-gelb sein muss!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Grün-Gelb” is on the snapshot of s5"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Grün, Braun und Schwarz: Das bedeuten die verschiedenen Farben beim Stromkabel",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Braun” is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Phasenleiter ist dabei braun oder schwarz, der Neutralleiter blau und der Schutzleiter grün-gelb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Braun” is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Man kann sich aber an der bisher häufigsten angewendeten Zuordnung orientieren: L1 = braun / L2 = schwarz / L3 = grau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwarz” is on the snapshot of s5"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:32.151Z",
+   "target": "f02819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Grün, Braun und Schwarz: Das bedeuten die verschiedenen Farben beim Stromkabel",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:32.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwarz” is on the snapshot of s7"
+  }
+ ]
+}

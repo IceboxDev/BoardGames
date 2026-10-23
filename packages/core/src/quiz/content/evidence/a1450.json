@@ -1,0 +1,195 @@
+{
+ "article": "a1450",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Waitangi",
+   "title": "Treaty of Waitangi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:08.553Z",
+   "snapshot": "a2cfba9536f47b64e4f3f7b363997cf09c95a0c4796bccf6a9715b520f1dd4df"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nunavut",
+   "title": "Nunavut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:09.443Z",
+   "snapshot": "4bb8948547d759c256e6d371d4c0d6fcc52ce1edaeb5878a2f88c4f9e0f947b5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Joik",
+   "title": "Joik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:10.419Z",
+   "snapshot": "c082dad8973f6413b1e85f0000c1fa0977e1a250a1523444a6b273b32c769990"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aotearoa",
+   "title": "Aotearoa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:11.334Z",
+   "snapshot": "1031ecaae89901cb10404f278488a2e3cb0cdc5d7de7d0e4d7174095e7f023d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Māori",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f21560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nunavut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f21561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aotearoa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:27.920Z",
+   "target": "f07246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Treaty of Waitangi (Māori: Te Tiriti o Waitangi), sometimes referred to as Te Tiriti (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Māori” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.920Z",
+   "target": "f21560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nunavut is the largest and northernmost territory of Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nunavut” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.920Z",
+   "target": "f21561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A joik or yoik (anglicised, where the latter spelling in English conforms with the pronunciation; also named luohti, vuolle, vuelie, or juoiggus in the Sámi languages) is a traditional form of song in Sámi music performed by the Sámi people of Sápmi in Northern Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joik” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.920Z",
+   "target": "f21562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aotearoa is the Māori-language name for New Zealand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aotearoa” is on the snapshot of s4"
+  }
+ ]
+}

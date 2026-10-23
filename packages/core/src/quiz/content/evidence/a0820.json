@@ -1,0 +1,303 @@
+{
+ "article": "a0820",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bud_Spencer",
+   "title": "Bud Spencer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:34.380Z",
+   "snapshot": "ec7ff5d9c7a9d4ebafbe4e2477bf0e9cf11fc22ac20979bc11a8034403bb8f50"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Michael_Caine",
+   "title": "Michael Caine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:35.608Z",
+   "snapshot": "d95ef9f7f43fc447a159ccc012a894b39253e0493860727b3a51a09bda98641a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Marilyn_Monroe",
+   "title": "Marilyn Monroe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:36.633Z",
+   "snapshot": "9589322cf10e40c12d8519f4ee0f519b2cd2ac4f2c99a49abba65bec2ce67ed1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Trail",
+   "title": "The Big Trail – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:37.368Z",
+   "snapshot": "f0eff55c61f33d403671373cf3323bf709cc0d6e8fec82827fa128aea10cc500"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Klaus_Kinski",
+   "title": "Klaus Kinski",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:35.745Z",
+   "snapshot": "feb1efffa74999f14710952456a3828aa31ef2d33174d1f82d0d51c0318948ce"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Gere",
+   "title": "Richard Gere",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:38.516Z",
+   "snapshot": "a9d8898b10958760340027f50ebd64f1d85649ad0ef20c56699bb00a77ec030e"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Terence_Hill",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:36.017Z",
+   "snapshot": "0dace95489e079f1cc209daf4083c76e9b63b8693f7a3961bdd13e4e95ed8043"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/John_Wayne",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:39.613Z",
+   "snapshot": "bbb132f08b67caf972fb21d1e6b232e04a232b738e97b047b9378f00dca821bc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bud Spencer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Michael Caine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marilyn Monroe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Wayne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Klaus Kinski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-131"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tiffany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-127"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.731Z",
+   "target": "f04096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bud Spencer (born Carlo Pedersoli; 31 October 1929 – 27 June 2016) was an Italian actor, professional swimmer and water polo player.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bud Spencer” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.731Z",
+   "target": "f04098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sir Michael Caine (born Maurice Joseph Micklewhite; 14 March 1933) is an English retired actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Caine” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:49.731Z",
+   "target": "f04099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marilyn Monroe ( MAIR-ə-lin mən-ROH; born Norma Jeane Mortenson; June 1, 1926 –  August 4, 1962) was an American actress and model.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marilyn Monroe” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:49.731Z",
+   "target": "f04100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Big Trail is a 1930 American epic pre-Code Western early widescreen film shot on location across the American West starring 23-year-old John Wayne in his first leading role and directed by Raoul Walsh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Wayne” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:49.731Z",
+   "target": "f11348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Klaus Kinski (eigentlich: Klaus Günter Karl Nakszynski; * 18.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klaus Kinski” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:49.731Z",
+   "target": "f11349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Richard Tiffany Gere ( GHEER; born August 31, 1949) is an American actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tiffany” is on the snapshot of s6"
+  }
+ ]
+}

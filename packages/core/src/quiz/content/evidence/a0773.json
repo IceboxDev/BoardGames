@@ -1,0 +1,414 @@
+{
+ "article": "a0773",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Olympic_flame",
+   "title": "Olympic flame – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:17.370Z",
+   "snapshot": "66f7f98729482673f1d3f8a9615176d27798bf27b82916d2d5b393ec9ca1b038"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stadion_(running_race)",
+   "title": "Stadion (running race) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:18.272Z",
+   "snapshot": "e0d54cf8d1d86b47708f842949139b12960fac1c561390edcf25c425ea3fb05e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Johannes_Sturm",
+   "title": "Johannes Sturm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:20.018Z",
+   "snapshot": "557731886d66c9f1678fdb4a6939c376f901afd29d2d27d37767b0831e4df990"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kentucky_Derby",
+   "title": "Kentucky Derby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:20.364Z",
+   "snapshot": "fafafe80985e59cccbcbe73a0c088ff252593ddb3b7dff82945388685c93b644"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tournament_(medieval)",
+   "title": "Tournament (medieval) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:21.377Z",
+   "snapshot": "42e58496af3778879e20eca9bba658e1528183cb089ee068e4f6e4de3ee307e3"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Stafette",
+   "title": "Stafette – DWDS",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:31.678Z",
+   "snapshot": "3934f362fd29c3a2413227fab06ed173db41bddc05376ee566cb7d9acf9c74b4"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Stafette",
+   "title": "Stafette – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:31.724Z",
+   "snapshot": "0199686831d76acc575bb66b9d98a9832f174273a288c8b3dec99813089fb0d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stafette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "stadium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "gymnasium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "derby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03865",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "tournament",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:43.143Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stafette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stafette”, “Эстафета”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:43.143Z",
+   "target": "f03862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "This word became stadium in Latin, which became the English \"stadium\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “stadium” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:43.143Z",
+   "target": "f03863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johannes Sturm (also known as Jean Sturm; Latinized as Ioannes Sturmius; 1 October 1507 – 3 March 1589) was a German educator and Protestant Reformer, who was influential in the design of the gymnasium system of secondary education.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gymnasium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:43.143Z",
+   "target": "f03864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Kentucky Derby () is an American Grade I stakes race run at Churchill Downs in Louisville, Kentucky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “derby” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:43.143Z",
+   "target": "f03865",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A tournament, or tourney (from Old French torneiement, tornei), was a chivalrous competition or mock fight that was common in the Middle Ages and Renaissance (12th to 16th centuries).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.143Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tournament” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:43:10Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(reitender) Eilbote, der im Wechsel mit anderen eine Nachricht überbringt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "DWDS also lists the sports sense 'Staffellauf' but marks it veraltet (dated)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:43:14Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "reitender Bote [der im Wechsel mit andern Nachrichten überbrachte]",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden lists Stafette = Staffel (1b) and Staffellauf, both 'Sport veraltet': the relay sense is real but now old-fashioned; body adjusted."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:43:18Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Staffellauf Gebrauch Sport veraltet",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Relay sense attested but dated — the card's 'heute' overstates current usage."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:43:21Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Stafette f. ‘Eilbote, Kurier’ (17. Jh.)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:11.375Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Staffellauf Gebrauch Sport veraltet",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:11.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:11.375Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Stafette f. ‘Eilbote, Kurier’ (17. Jh.)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:11.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:11.375Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Stafette – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:11.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stafette” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:11.375Z",
+   "target": "f03861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Stafette ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:11.375Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stafette” is on the snapshot of s7"
+  }
+ ]
+}

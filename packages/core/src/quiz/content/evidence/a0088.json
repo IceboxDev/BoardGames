@@ -1,0 +1,420 @@
+{
+ "article": "a0088",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Soap_opera",
+   "title": "Soap opera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:41.056Z",
+   "snapshot": "9442568a90fb121174eff280ec3a1061cab368f4140ba895c0bbe7714d63e63b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Frasier",
+   "title": "Frasier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:41.993Z",
+   "snapshot": "63871c669153a7064b63acda2bed4c30521ead747d04826eef04eb712ea84ab0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/I_Love_Lucy",
+   "title": "I Love Lucy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:43.097Z",
+   "snapshot": "fcd600d1d4309b5a4e70acde3c5de466ee9c80c67903cd0e016aeb6d4b4cb363"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Perils_of_Pauline_(1914_serial)",
+   "title": "The Perils of Pauline (1914 serial) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:43.926Z",
+   "snapshot": "f9e01f794d9a6a97f6ece3923419d49d14b6de1dc13a192c4e49b7f3aaed7755"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/blockbuster",
+   "title": "blockbuster – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Blockbuster_(entertainment)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:44.900Z",
+   "snapshot": "6cf5e58719341e80731c2ae478cfd633d0569418b774f7759fbc632436b4b079"
+  },
+  "s7": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/blockbuster",
+   "title": "blockbuster noun – Oxford Learner's Dictionaries",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:42.521Z",
+   "snapshot": "d5f3af4679c2a503b7337e8da9c2c32890e010f8ac86342e28f140010e9c0fc0"
+  },
+  "s8": {
+   "url": "https://www.vocabulary.com/dictionary/blockbuster",
+   "title": "Blockbuster – Definition, Meaning & Synonyms",
+   "publisher": "Vocabulary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:43.075Z",
+   "snapshot": "b41480b296f917db243544950e0a472c67de6e783c964acc45bf0658c8275899"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "soap opera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "spin-off",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sitcom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cliffhanger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "blockbuster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:48.374Z",
+   "target": "f00436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A soap opera (also called a daytime drama or soap) is a genre of a long-running radio or television serial, frequently characterized by melodrama, ensemble casts, and sentimentality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “soap opera” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:48.374Z",
+   "target": "f00437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The show was created as the third spin-off and a sequel to the sitcom Cheers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “spin-off” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:48.374Z",
+   "target": "f00438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "I Love Lucy is an American sitcom that aired on CBS from October 15, 1951, to May 6, 1957, with 180 half-hour episodes across six seasons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sitcom” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:48.374Z",
+   "target": "f00439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The term \"cliffhanger\" may have originated with the series, owing to a number of episodes filmed on or around the New Jersey Palisades—though it is also likely to refer to situations in stories of this type where the hero or heroine is hanging from a cliff, seemingly with no way out, until the next",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cliffhanger” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:48:03Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Word Origin1940s (denoting a huge aerial bomb capable of destroying a whole block of streets): from block + buster.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:06Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "this is the word's original, 1940s meaning, from the fact that such a bomb could destroy an entire city block",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:10Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The term began to appear in the American press in the early 1940s, referring to the blockbuster bombs, aerial munitions capable of destroying a whole block of buildings.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:07.530Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Word Origin1940s (denoting a huge aerial bomb capable of destroying a whole block of streets): from block + buster.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:07.530Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "this is the word's original, 1940s meaning, from the fact that such a bomb could destroy an entire city block",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:07.530Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The term began to appear in the American press in the early 1940s, referring to the blockbuster bombs, aerial munitions capable of destroying a whole block of buildings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:07.530Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A blockbuster is a work of entertainment—typically used to describe a feature film produced by a major film studio, but also other media—that is highly popular and financially successful.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “blockbuster” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:07.530Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "blockbuster noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “blockbuster” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:07.530Z",
+   "target": "f00440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Blockbuster - Definition, Meaning & Synonyms | Vocabulary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.530Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “blockbuster” is on the snapshot of s8"
+  }
+ ]
+}

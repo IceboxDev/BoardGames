@@ -1,0 +1,255 @@
+{
+ "source": "publish-or-perish-mge",
+ "bucket": "nature/ecology",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-111",
+    "category": 2
+   },
+   "factId": "f25348"
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-013",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-035",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-017",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "In ecology, what is each feeding position in a food chain called – producers on the first, herbivores on the second, predators above – a concept worked out by Raymond Lindeman in 1942?",
+      "de": "Wie heißt in der Ökologie jede Ernährungsstufe einer Nahrungskette – Produzenten auf der ersten, Pflanzenfresser auf der zweiten, Räuber darüber –, ein Konzept, das Raymond Lindeman 1942 ausarbeitete?",
+      "answerEn": "Trophic level",
+      "answerDe": "Trophieebene",
+      "timeline": {
+       "kind": "creation",
+       "start": "1942",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Raymond Lindeman publishes his trophic-dynamic concept of food chains",
+       "labelDe": "Raymond Lindeman veröffentlicht sein trophisch-dynamisches Konzept der Nahrungsketten"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Trophic_level",
+       "title": "Trophic level",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which bird of prey almost vanished from North America in the 1950s and 1960s because DDT thinned its eggshells, and was removed from the US endangered species list in 1999?",
+      "de": "Welcher Greifvogel verschwand in den 1950er- und 1960er-Jahren beinahe aus Nordamerika, weil DDT seine Eierschalen dünn machte, und wurde 1999 von der US-Liste der gefährdeten Arten gestrichen?",
+      "answerEn": "Peregrine falcon",
+      "answerDe": "Wanderfalke",
+      "timeline": {
+       "kind": "event",
+       "start": "1999-08-25",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The peregrine falcon is removed from the US endangered species list",
+       "labelDe": "Der Wanderfalke wird von der US-Liste der gefährdeten Arten gestrichen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Peregrine_falcon",
+       "title": "Peregrine falcon",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American ecological economist led the 1997 study in Nature that valued the world's ecosystem services at about 33 trillion US dollars a year?",
+      "de": "Welcher amerikanische ökologische Ökonom leitete die Studie von 1997 in Nature, die die Ökosystemleistungen der Welt auf etwa 33 Billionen US-Dollar im Jahr bezifferte?",
+      "answerEn": "Robert Costanza",
+      "answerDe": "Robert Costanza",
+      "timeline": {
+       "kind": "creation",
+       "start": "1997",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Costanza and colleagues value the world's ecosystem services at about US$33 trillion a year in Nature",
+       "labelDe": "Costanza und Kollegen beziffern die Ökosystemleistungen der Welt in Nature auf etwa 33 Billionen US-Dollar im Jahr"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ecosystem_service",
+       "title": "Ecosystem service",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the study of recurring events in the life cycles of plants and animals, such as budburst, flowering and bird migration, called – a word coined by the Belgian botanist Charles Morren in 1849?",
+      "de": "Wie heißt die Lehre von den wiederkehrenden Ereignissen im Lebenszyklus von Pflanzen und Tieren, etwa Blattaustrieb, Blüte und Vogelzug – ein Wort, das der belgische Botaniker Charles Morren 1849 prägte?",
+      "answerEn": "Phenology",
+      "answerDe": "Phänologie",
+      "timeline": {
+       "kind": "creation",
+       "start": "1849-12-16",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Charles Morren introduces the word 'phenology' in a lecture in Brussels",
+       "labelDe": "Charles Morren führt das Wort „Phänologie“ in einem Vortrag in Brüssel ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Phenology",
+       "title": "Phenology",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Up the Food Chain, Off the Calendar: Ecology Meets Human Impact",
+    "titleDe": "Die Nahrungskette hinauf, aus dem Takt: Ökologie und menschlicher Einfluss",
+    "bodyEn": "Ecology began as the study of nature on its own terms, but much of its modern vocabulary was coined to describe what happens when people step into the picture. A handful of terms – from the food chain to the wine harvest – show how closely the two are now bound together.\n\nEvery food chain is a ladder. Plants and algae, which make their own food from sunlight, stand on the first rung; the herbivores that eat them stand on the second, and the predators that eat the herbivores on the third and above. Each rung is called a trophic level, a concept worked out by the young American ecologist Raymond Lindeman in 1942, building on August Thienemann's division of living things into producers, consumers and decomposers.\n\nThe ladder matters because some substances climb it. A poison that dissolves poorly in water but readily in fat – the insecticide DDT is the classic case – is stored in an animal's tissues instead of being excreted. A predator that eats many contaminated prey takes in all of their stores at once, so at each higher level of the food chain the concentration rises. This increase is called biomagnification. It differs from bioaccumulation, the build-up of a substance within a single organism, and it explains why the animals at the top suffer first. In North America the peregrine falcon, the fastest animal on Earth, almost vanished in the 1950s and 1960s: DDT and its breakdown product DDE thinned the shells of its eggs until they broke under the brooding birds. After the United States banned DDT – the ban took effect on 31 December 1972 – and captive-bred birds were released, the falcon recovered and was removed from the US endangered species list on 25 August 1999.\n\nThe reverse question – what nature does for us – has a name too. The benefits humans receive from ecosystems, such as clean air and water, fertile soil, flood protection and the pollination of crops by insects, are called ecosystem services. The UN's Millennium Ecosystem Assessment of 2005 sorted them into provisioning, regulating, cultural and supporting services. Eight years earlier, in 1997, the American ecological economist Robert Costanza and his colleagues had dared to put a price on them in the journal Nature: between 16 and 54 trillion US dollars a year, about 33 trillion on average – more than the gross product of the whole world economy at the time.\n\nFinally there is timing. The study of recurring events in the life cycles of plants and animals – when buds burst, flowers open, birds migrate or fruit ripens – is called phenology, a word the Belgian botanist Charles Morren introduced in a lecture in Brussels on 16 December 1849. Long phenological records have become one of the clearest witnesses of climate change, and few are longer than the harvest dates of vineyards. They show that since the 1980s global warming has changed the timing of the harvest in most of the world's wine regions: the grapes ripen earlier. Warmer ripening means more sugar and therefore more alcohol in the wine, but less acidity, and many growers now pick earlier or plant later-ripening varieties to keep the balance.",
+    "bodyDe": "Die Ökologie begann als Lehre von der Natur in ihrem eigenen Recht, doch ein großer Teil ihres heutigen Vokabulars wurde geprägt, um zu beschreiben, was geschieht, wenn der Mensch ins Bild tritt. Eine Handvoll Begriffe – von der Nahrungskette bis zur Weinlese – zeigt, wie eng beides heute verbunden ist.\n\nJede Nahrungskette ist eine Leiter. Pflanzen und Algen, die ihre Nahrung selbst aus Sonnenlicht herstellen, stehen auf der ersten Sprosse; die Pflanzenfresser, die sie fressen, auf der zweiten, und die Räuber, die die Pflanzenfresser fressen, auf der dritten und darüber. Jede Sprosse heißt Trophieebene (auch Trophiestufe), ein Konzept, das der junge amerikanische Ökologe Raymond Lindeman 1942 ausarbeitete – aufbauend auf August Thienemanns Einteilung der Lebewesen in Produzenten, Konsumenten und Destruenten.\n\nDie Leiter ist wichtig, weil manche Stoffe sie hinaufsteigen. Ein Gift, das sich schlecht in Wasser, aber gut in Fett löst – das Insektizid DDT ist der klassische Fall –, wird im Gewebe eines Tieres gespeichert, statt ausgeschieden zu werden. Ein Räuber, der viele belastete Beutetiere frisst, nimmt deren gesamte Vorräte auf einmal auf, sodass die Konzentration auf jeder höheren Stufe der Nahrungskette steigt. Diese Zunahme heißt Biomagnifikation. Sie unterscheidet sich von der Bioakkumulation, der Anreicherung eines Stoffes in einem einzelnen Organismus, und sie erklärt, warum die Tiere an der Spitze zuerst leiden. In Nordamerika verschwand der Wanderfalke, das schnellste Tier der Erde, in den 1950er- und 1960er-Jahren beinahe: DDT und sein Abbauprodukt DDE machten die Schalen seiner Eier so dünn, dass sie unter den brütenden Vögeln zerbrachen. Nachdem die Vereinigten Staaten DDT verboten hatten – das Verbot trat am 31. Dezember 1972 in Kraft – und in Gefangenschaft gezüchtete Vögel ausgewildert worden waren, erholte sich der Falke und wurde am 25. August 1999 von der US-Liste der gefährdeten Arten gestrichen.\n\nDie umgekehrte Frage – was die Natur für uns leistet – hat ebenfalls einen Namen. Den Nutzen, den Menschen aus Ökosystemen ziehen, etwa saubere Luft und sauberes Wasser, fruchtbaren Boden, Hochwasserschutz und die Bestäubung von Nutzpflanzen durch Insekten, nennt man Ökosystemleistungen. Das Millennium Ecosystem Assessment der UN von 2005 ordnete sie in Versorgungs-, Regulierungs-, kulturelle und unterstützende Leistungen. Acht Jahre zuvor, 1997, hatten der amerikanische ökologische Ökonom Robert Costanza und seine Kollegen es gewagt, in der Zeitschrift Nature einen Preis dafür anzugeben: zwischen 16 und 54 Billionen US-Dollar im Jahr, im Mittel etwa 33 Billionen – mehr als die damalige Wirtschaftsleistung der ganzen Welt.\n\nBleibt die Zeit. Die Lehre von den wiederkehrenden Ereignissen im Lebenszyklus von Pflanzen und Tieren – wann Knospen aufbrechen, Blüten sich öffnen, Vögel ziehen oder Früchte reifen – heißt Phänologie, ein Wort, das der belgische Botaniker Charles Morren am 16. Dezember 1849 in einem Vortrag in Brüssel einführte. Lange phänologische Aufzeichnungen sind zu einem der deutlichsten Zeugen des Klimawandels geworden, und kaum eine ist länger als die Lesedaten der Weinberge. Sie zeigen, dass die globale Erwärmung seit den 1980er-Jahren den Zeitpunkt der Lese in den meisten Weinregionen der Welt verändert hat: Die Trauben reifen früher. Wärmere Reife bedeutet mehr Zucker und damit mehr Alkohol im Wein, aber weniger Säure, und viele Winzer lesen heute früher oder pflanzen später reifende Sorten, um das Gleichgewicht zu halten.",
+    "notesEn": "For trophic level, \"feeding level\" is also accepted.",
+    "notesDe": "Für die Trophieebene wird auch „Trophiestufe“ als richtig gewertet."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-011",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-084",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "What are reptiles, birds and mammals together called, after the membrane that encloses the embryo in their eggs – a group Ernst Haeckel named in 1866?",
+      "de": "Wie heißen Reptilien, Vögel und Säugetiere zusammen, nach der Haut, die den Embryo in ihren Eiern umschließt – eine Gruppe, die Ernst Haeckel 1866 benannte?",
+      "answerEn": "Amniotes",
+      "answerDe": "Amnioten",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1866",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ernst Haeckel formally names the Amniota after the amnion",
+       "labelDe": "Ernst Haeckel benennt die Amniota nach dem Amnion"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Amniote",
+       "title": "Amniote",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which British anatomist coined the name 'dinosaur', meaning 'terrible lizard', in 1842?",
+      "de": "Welcher britische Anatom prägte 1842 den Namen „Dinosaurier“, „schreckliche Echse“?",
+      "answerEn": "Richard Owen",
+      "answerDe": "Richard Owen",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1804",
+       "end": "1892",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Richard Owen, British anatomist who named the dinosaurs",
+       "labelDe": "Richard Owen, britischer Anatom, der die Dinosaurier benannte"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Dinosaur",
+       "title": "Dinosaur",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "From which group of mostly meat-eating, two-legged dinosaurs, which also includes Tyrannosaurus, did birds evolve?",
+      "de": "Aus welcher Gruppe meist fleischfressender, zweibeiniger Dinosaurier, zu der auch Tyrannosaurus gehört, haben sich die Vögel entwickelt?",
+      "answerEn": "Theropods",
+      "answerDe": "Theropoden",
+      "timeline": {
+       "kind": "era",
+       "start": "-160000000",
+       "end": null,
+       "precision": "megayear",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Birds evolve from theropod dinosaurs during the Late Jurassic",
+       "labelDe": "Vögel entwickeln sich im Oberjura aus Theropoden-Dinosauriern"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Dinosaur",
+       "title": "Dinosaur",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which small theropod, found in Liaoning, China, in 1996, was the first dinosaur outside the bird lineage known to have had feathers?",
+      "de": "Welcher kleine Theropode, 1996 in Liaoning in China gefunden, war der erste Dinosaurier außerhalb der Vogellinie, von dem man Federn kannte?",
+      "answerEn": "Sinosauropteryx",
+      "answerDe": "Sinosauropteryx",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1996-08",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Li Yumin finds the first specimen of the feathered dinosaur Sinosauropteryx in Liaoning",
+       "labelDe": "Li Yumin findet in Liaoning das erste Exemplar des gefiederten Dinosauriers Sinosauropteryx"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sinosauropteryx",
+       "title": "Sinosauropteryx",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Egg Before the Chicken: How Reptiles Conquered the Land",
+    "titleDe": "Das Ei vor dem Huhn: Wie die Reptilien das Land eroberten",
+    "bodyEn": "\"Which came first, the chicken or the egg?\" has been a riddle since antiquity, but palaeontology answers it without hesitation: the egg, by a very long way. Chickens descend from the red junglefowl of South-East Asia and are at most about 8,000 years old. The egg that made life on dry land possible is vastly older.\n\nThe first four-limbed vertebrates were amphibians, and like frogs today they had to return to water to lay soft, jelly-coated eggs that dry out in air. The breakthrough was an egg with its own pond inside: a set of membranes, one of which – the amnion – encloses the embryo in fluid, wrapped in a protective shell. The first hard-shelled amniote egg, one that could be laid on land, appeared in the Carboniferous about 312 million years ago. The animals that lay such eggs, or descend from those that did – reptiles, birds and mammals – are therefore called amniotes, a group Ernst Haeckel formally named in 1866 after that membrane; the Greek amnion originally meant a bowl for catching the blood of sacrificed lambs. The question of the chicken egg in particular has one complication: the eggshell protein ovocleidin-17 is made by the hen, not the embryo. But similar proteins occur in turkeys and finches, so they are far older than chickens – and the first true chicken still hatched from an egg laid by a bird that was not quite a chicken.\n\nAmong the amniotes, one lineage came to rule the Mesozoic. Dinosaurs belong to the reptiles – they are the clade Dinosauria within the archosaurs, the \"ruling reptiles\" that also include crocodiles. They appeared in the Triassic and, after the extinction at the end of that period about 201 million years ago, dominated land ecosystems through the Jurassic and Cretaceous. Their name was coined in 1842 by the British anatomist Richard Owen, later the founder of London's Natural History Museum, who built it from the Greek deinos, \"terrible\" or \"fearfully great\", and sauros, \"lizard\".\n\nNot all of them died out 66 million years ago. Birds evolved during the Late Jurassic from small feathered members of the theropods, the mostly meat-eating, two-legged dinosaurs that also include Tyrannosaurus and Velociraptor, so in the eyes of modern classification birds are themselves living dinosaurs. The decisive evidence came from China. In August 1996 the farmer and fossil hunter Li Yumin found in Liaoning Province a small theropod covered in simple filament-like feathers; described the same year as Sinosauropteryx, \"Chinese reptile wing\", it was the first dinosaur outside the bird lineage known to have had feathers. Its tail even preserves a pattern of light and dark bands – one of the first glimpses of a dinosaur's colours.",
+    "bodyDe": "„Was war zuerst da, das Huhn oder das Ei?“ ist seit der Antike ein Rätsel, doch die Paläontologie beantwortet es ohne Zögern: das Ei, und zwar mit gewaltigem Vorsprung. Hühner stammen vom Bankivahuhn Südostasiens ab und sind höchstens etwa 8000 Jahre alt. Das Ei, das das Leben auf dem Trockenen möglich machte, ist ungleich älter.\n\nDie ersten vierbeinigen Wirbeltiere waren Amphibien, und wie Frösche heute mussten sie zum Laichen ins Wasser zurück, weil ihre weichen, gallertigen Eier an der Luft austrocknen. Der Durchbruch war ein Ei mit eigenem Teich im Inneren: ein Satz von Häuten, von denen eine – das Amnion – den Embryo in Flüssigkeit einschließt, umgeben von einer schützenden Schale. Das erste hartschalige Amniotenei, das an Land gelegt werden konnte, tauchte im Karbon vor etwa 312 Millionen Jahren auf. Die Tiere, die solche Eier legen oder von solchen abstammen – Reptilien, Vögel und Säugetiere –, heißen daher Amnioten, eine Gruppe, die Ernst Haeckel 1866 nach jener Haut benannte; das griechische amnion bezeichnete ursprünglich eine Schale, in der man das Blut geopferter Lämmer auffing. Die Frage nach dem Hühnerei im Besonderen hat einen Haken: Das Schalenprotein Ovocleidin-17 bildet die Henne, nicht der Embryo. Ähnliche Proteine kommen aber bei Truthühnern und Finken vor, sind also weit älter als Hühner – und das erste echte Huhn schlüpfte dennoch aus dem Ei eines Vogels, der noch nicht ganz ein Huhn war.\n\nUnter den Amnioten kam eine Linie im Mesozoikum zur Herrschaft. Die Dinosaurier gehören zu den Reptilien – sie sind die Klade Dinosauria innerhalb der Archosaurier, der „Herrscherreptilien“, zu denen auch die Krokodile zählen. Sie tauchten in der Trias auf und beherrschten nach dem Massenaussterben am Ende dieser Periode vor etwa 201 Millionen Jahren die Landökosysteme durch Jura und Kreide. Ihren Namen prägte 1842 der britische Anatom Richard Owen, später Gründer des Natural History Museum in London, aus dem griechischen deinos, „schrecklich“ oder „furchtbar groß“, und sauros, „Echse“.\n\nNicht alle starben vor 66 Millionen Jahren aus. Vögel entwickelten sich im Oberjura aus kleinen gefiederten Vertretern der Theropoden, der meist fleischfressenden, zweibeinigen Dinosaurier, zu denen auch Tyrannosaurus und Velociraptor gehören – nach heutiger Systematik sind Vögel also selbst lebende Dinosaurier. Den entscheidenden Beleg lieferte China. Im August 1996 fand der Bauer und Fossiliensammler Li Yumin in der Provinz Liaoning einen kleinen Theropoden, der mit einfachen, fadenförmigen Federn bedeckt war; noch im selben Jahr als Sinosauropteryx, „chinesischer Reptilienflügel“, beschrieben, war er der erste Dinosaurier außerhalb der Vogellinie, von dem man Federn kannte. Sein Schwanz bewahrt sogar ein Muster aus hellen und dunklen Ringen – einer der ersten Einblicke in die Farben eines Dinosauriers.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

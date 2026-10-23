@@ -1,0 +1,289 @@
+{
+ "article": "a0449",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Microsoft_Solitaire",
+   "title": "Microsoft Solitaire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:57.669Z",
+   "snapshot": "b9b23eb05e02b42f38b6275122247a7eed72764102c9848e16ebf8c31e4ceb62"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Chaturanga",
+   "title": "Chaturanga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:58.657Z",
+   "snapshot": "1ae3dc3598c78e8337a891e85e3280374f4ec8c09a65f97cd44549e2bf813756"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ludo",
+   "title": "Ludo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:02.798Z",
+   "snapshot": "5bd93cd3fe8eeb4c99faa40b5e1341f17a0d50704d8a5ffd0e619dacdef4467d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Landlord%27s_Game",
+   "title": "The Landlord's Game – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:00.668Z",
+   "snapshot": "aea55aa1e19968ad12a43af4245cb4b7ae7f3491f344f70a9e5f3de1a649d51e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Shanghai_(video_game)",
+   "title": "Shanghai (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:01.858Z",
+   "snapshot": "c2dc95a3ff8368afde0888d20bf2c2791c22bfc0a5837f89391f76f2bb9af5f4"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Sudoku",
+   "title": "Sudoku",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:56:58.908Z",
+   "snapshot": "6d1ee9834b5e88a58c6e37e5177ec839f7c9f35ae81175dd0309fff11c956434"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Klondike",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chaturanga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pachisi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Landlord's Game",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mahjong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sudoku",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-319"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:49.715Z",
+   "target": "f02241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Solitaire is a computer game included with Microsoft Windows, based on a card game of the same name, also known as Klondike.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klondike” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:49.715Z",
+   "target": "f02242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chaturanga (Sanskrit: चतुरङ्ग, IAST: caturaṅga, pronounced [tɕɐt̪uˈɾɐŋɡɐ]) is an ancient Indian strategy board game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chaturanga” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:49.715Z",
+   "target": "f02243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ludo shares characteristics with other cross-and-circle games from around the world; these types of games include the pre-Columbian Mesoamerican game Patolli, and the Indian game Pachisi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pachisi” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:49.715Z",
+   "target": "f02244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Landlord's Game is a board game patented in 1904 by Elizabeth Magie as U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Landlord's Game” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:49.715Z",
+   "target": "f02245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Shanghai is a 1986 mahjong solitaire video game developed and published by Activision.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mahjong” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:49.715Z",
+   "target": "f14675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sudoku ist eine Gattung von Logikrätseln, die aus den lateinischen Quadraten entstand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.715Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sudoku” is on the snapshot of s6"
+  }
+ ]
+}

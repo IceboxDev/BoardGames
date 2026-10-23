@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { finalLines, parseInfo, parseLc0MoveStat } from "./uci.ts";
+import { finalLines, parseInfo, parseLc0MoveStat, progressText } from "./uci.ts";
 
 describe("farm UCI parsing", () => {
   it("reads Stockfish info lines and drops bound guesses", () => {
@@ -17,6 +17,7 @@ describe("farm UCI parsing", () => {
       pv: ["d2d4", "g8f6", "c2c4"],
       wdl: [40, 900, 60],
     });
+    expect(parseInfo(line)?.hashfull).toBe(210);
     expect(parseInfo("info depth 9 score mate -3 nodes 10 pv h7h6")).toMatchObject({
       mate: -3,
       cp: null,
@@ -38,6 +39,29 @@ describe("farm UCI parsing", () => {
       ["d2d4", 21],
       ["e2e4", 21],
     ]);
+  });
+
+  it("says how a long search is moving", () => {
+    const h = 3_600_000;
+    const latest = parseInfo(
+      "info depth 48 seldepth 71 multipv 1 score cp 31 lowerbound nodes 240000000000 nps 900000 hashfull 1000 time 1 pv e2e4 e7e5",
+    );
+    const text = progressText(
+      {
+        depth: 47,
+        depthAt: 10 * h,
+        startedAt: 0,
+        latest,
+        latestAt: 20 * h - 4 * 60_000,
+        bounds: 3,
+        currmove: "c2c3",
+        currmoveNumber: 5,
+      },
+      20 * h,
+    );
+    expect(text).toBe(
+      "d47 (10.0 h at it, sel 71) after 20.0 h · 2.4e+11 nodes 0.9 Mn/s · hash 100% · e2e4 +0.31 · 3 fail-high/low · root move 5 c2c3 · engine last spoke 4 min ago",
+    );
   });
 
   it("turns Lc0 move stats into win/draw/loss", () => {

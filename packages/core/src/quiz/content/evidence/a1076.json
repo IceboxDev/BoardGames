@@ -1,0 +1,256 @@
+{
+ "article": "a1076",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hijrah",
+   "title": "Hijrah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:09.093Z",
+   "snapshot": "e71ca13042a2bd93bfee9d187ce43e5b7fea3aea578278377d2c8b3c3dc1ec82"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Farewell_Pilgrimage",
+   "title": "Farewell Pilgrimage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:10.111Z",
+   "snapshot": "946b71f3d0438a0a4efcb6eea5a7f7b2e3854bbb4e7c6fc61f6e89a1720fcb05"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flight_into_Egypt",
+   "title": "Flight into Egypt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:11.178Z",
+   "snapshot": "ad2b1a61f839fb75c325282c0faababb43497eecd3ff7056ec0f7b50237b0fe2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_of_Patmos",
+   "title": "John of Patmos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:12.111Z",
+   "snapshot": "dd8e60b2902841828f0639135aad406207ad796c1d818aa2649b2854d485caad"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1959_Tibetan_uprising",
+   "title": "1959 Tibetan uprising – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:13.143Z",
+   "snapshot": "f15448d2f84284ccc067030b7ccfb52e46f7b82906fcd0bf580460aeff4bffda"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Qibla",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:14.194Z",
+   "snapshot": "cbc69594f203e0e1aeddd3648ef609035b604d64288a3c6430bcd3daf5a3801d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/14th_Dalai_Lama",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:15.087Z",
+   "snapshot": "92b5b2c270d960f3cbf0dd4e933ea482bf06b7734c119348c86059781e9ef555"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Medina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mecca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Egypt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Patmos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:28.664Z",
+   "target": "f05376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "'migration') also Hegira (from Medieval Latin), was the journey the Islamic prophet Muhammad and his followers took from Mecca to Medina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Medina” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:28.664Z",
+   "target": "f05377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Farewell Pilgrimage (Arabic: حِجَّة ٱلْوَدَاع, romanized: Ḥijjat al-Wadāʿ) was the Hajj pilgrimage that Muhammad performed in the Islamic year 10 AH, following the Conquest of Mecca.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mecca” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:28.664Z",
+   "target": "f05378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The flight into Egypt is a story recounted in the Gospel of Matthew (Matthew 2:13–23) and in New Testament apocrypha.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Egypt” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:28.664Z",
+   "target": "f05379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John of Patmos (also called John the Revelator, John the Divine, John the Theologian; Ancient Greek: Ἰωάννης ὁ Θεολόγος, romanized: Iōannēs ho Theologos) is the name traditionally given to the author of the Book of Revelation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Patmos” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:28.664Z",
+   "target": "f05380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bloody fighting continued for the next three days while the Dalai Lama escaped to India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s5"
+  }
+ ]
+}

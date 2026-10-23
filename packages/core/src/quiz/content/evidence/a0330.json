@@ -1,0 +1,289 @@
+{
+ "article": "a0330",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1948_South_African_general_election",
+   "title": "1948 South African general election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:31.364Z",
+   "snapshot": "a989045930c6415b305b698e4adab96a139c4215a219ae09e28bd0952bb20814"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jim_Crow_laws",
+   "title": "Jim Crow laws – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:32.478Z",
+   "snapshot": "8039cd499111029b7282d0ba1f53eefd519d88e01be571afa65914aaf26cc6e9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Reconstruction_era",
+   "title": "Reconstruction era – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:33.628Z",
+   "snapshot": "6fc78c590fa7fb3d83accc3f5d84c2be08563efb7b2c706444d801f5470ac728"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Reconquista",
+   "title": "Reconquista – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:34.510Z",
+   "snapshot": "33b5bac082f02a501fdd37a07c1b0822578c8353405d36f547065d9a522ffdd4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Prague_Spring",
+   "title": "Prague Spring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:35.609Z",
+   "snapshot": "cd10ee761f7626c003e62068cfa719b59321d0cf16f123400733fd0a38f56830"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Goldene_Zwanziger",
+   "title": "Goldene Zwanziger",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:32.794Z",
+   "snapshot": "11ea7f9bdb59d093de616951464f5f9f9819ff1d686f4cf8ea25a03b57e75a24"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "apartheid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jim Crow era",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Reconstruction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Reconquista",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prague Spring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "die 1920er Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-190"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:30.808Z",
+   "target": "f01646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The party called this system \"apartheid\" (meaning \"apartness\" or \"separation\") and promised safety and security from supposed black-on-white crime.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “apartheid” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:30.808Z",
+   "target": "f01647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Throughout the Jim Crow era, libraries were only available sporadically.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jim Crow era” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:30.808Z",
+   "target": "f01648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Reconstruction era, often simply called Reconstruction, was a period in United States history that followed the American Civil War (1861–1865) and was dominated by the legal, social, and political challenges of the abolition of slavery and federal control over, and reintegration of, the former",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reconstruction” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:30.808Z",
+   "target": "f01649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Reconquista (Spanish and Portuguese for 'reconquest') or the fall of al-Andalus was a series of military campaigns by northern Iberian Christian polities against Muslim-ruled al-Andalus, which had been part of the Visigothic Kingdom before the Muslim Conquest of 711.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reconquista” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:30.808Z",
+   "target": "f01650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Prague Spring (Czech: Pražské jaro; Slovak: Pražská jar) was a period of political liberalization and mass protest in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prague Spring” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:30.808Z",
+   "target": "f12385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zugleich waren die 1920er Jahre die Zeit der großen Revuen, bei denen Tanzeinlagen leicht bekleideter, im Gleichtakt die Beine schwenkender Girl-Truppen nicht fehlen durften.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die 1920er Jahre” is on the snapshot of s6"
+  }
+ ]
+}

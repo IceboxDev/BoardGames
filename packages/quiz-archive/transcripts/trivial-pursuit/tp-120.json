@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-120",
+ "image": "IMG20261007175233.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Auf welche Mittelmeerinsel wurde Napoleon Bonaparte im Jahr 1814 verbannt: Korsika, Elba oder Malta?",
+   "de": "Auf welche Mittelmeerinsel wurde Napoleon Bonaparte im Jahr 1814 verbannt?",
+   "en": "To which Mediterranean island was Napoleon Bonaparte exiled in 1814?",
+   "reworked": true,
+   "answerDe": "Elba",
+   "answerEn": "Elba",
+   "timeline": {
+    "kind": "period",
+    "start": "1814-05-04",
+    "end": "1815-02-26",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Napoleon's exile on Elba, from his landing to his escape back to France",
+    "labelDe": "Napoleons Exil auf Elba, von seiner Landung bis zu seiner Flucht nach Frankreich"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Elba",
+    "title": "Elba",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice options removed.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie lauten die Künstlernamen der fünf Spice Girls?",
+   "de": "Wie lauten die Künstlernamen der fünf Spice Girls?",
+   "en": "What are the stage names of the five Spice Girls?",
+   "reworked": false,
+   "answerDe": "Scary Spice, Sporty Spice, Baby Spice, Ginger Spice und Posh Spice",
+   "answerEn": "Scary Spice, Sporty Spice, Baby Spice, Ginger Spice and Posh Spice",
+   "timeline": {
+    "kind": "founding",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Spice Girls are formed in London",
+    "labelDe": "Die Spice Girls formieren sich in London"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Spice_Girls",
+    "title": "Spice Girls",
+    "lang": "de"
+   },
+   "notes": "Melanie Brown = Scary, Melanie Chisholm = Sporty, Emma Bunton = Baby, Geri Halliwell = Ginger, Victoria Beckham (Adams) = Posh.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welche Häufung fand in Europa im Jahr 1276 statt: es gab drei Sonnenfinsternisse, vier Päpste oder fünf Ostseesturmfluten?",
+   "de": "Wie viele Päpste gab es im Jahr 1276, dem bislang einzigen Jahr seiner Art?",
+   "en": "How many popes were there in 1276, the only year of its kind so far?",
+   "reworked": true,
+   "answerDe": "4",
+   "answerEn": "4",
+   "timeline": {
+    "kind": "event",
+    "start": "1276",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Year of Four Popes: Gregory X, Innocent V, Adrian V and John XXI",
+    "labelDe": "Das Vierpäpstejahr: Gregor X., Innozenz V., Hadrian V. und Johannes XXI."
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/1276",
+    "title": "1276",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice options removed. 1276 is the only Year of Four Popes: Gregory X died and was followed by Innocent V, Adrian V and John XXI.",
+   "domain": "history",
+   "sub": "medieval"
+  },
+  {
+   "category": 4,
+   "cardDe": "Um welches Gemüse geht es, wenn ein Franzose von „choux de Bruxelles“ spricht: Blumenkohl, Kohlrabi oder Rosenkohl?",
+   "de": "Um welches Gemüse geht es, wenn ein Franzose von „choux de Bruxelles“ spricht?",
+   "en": "Which vegetable is meant when a French person talks about \"choux de Bruxelles\"?",
+   "reworked": true,
+   "answerDe": "Rosenkohl",
+   "answerEn": "Brussels sprouts",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1587",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First records of Brussels sprouts being grown, in the Spanish Netherlands (today's Belgium)",
+    "labelDe": "Erste Belege für den Anbau von Rosenkohl in den Spanischen Niederlanden (heute Belgien)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Rosenkohl",
+    "title": "Rosenkohl",
+    "lang": "de"
+   },
+   "notes": "Multiple-choice options removed. Literally 'Brussels cabbages'; in German also known as 'Brüsseler Kohl'.",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 5,
+   "cardDe": "Der menschliche Körper nimmt Sauerstoff über die Haut auf. Richtig oder falsch?",
+   "de": "Wie nennt man die Aufnahme von Sauerstoff über die Haut, die auch beim Menschen stattfindet?",
+   "en": "What is the uptake of oxygen through the skin, which also takes place in humans, called?",
+   "reworked": true,
+   "answerDe": "Hautatmung",
+   "answerEn": "Cutaneous respiration",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1851",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Joseph von Gerlach shows that human skin takes up oxygen from the air (skin respiration)",
+    "labelDe": "Joseph von Gerlach weist nach, dass die menschliche Haut Sauerstoff aus der Luft aufnimmt (Hautatmung)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hautatmung",
+    "title": "Hautatmung",
+    "lang": "de"
+   },
+   "notes": "True/false removed. The card's statement is true but the share is tiny: in humans skin respiration accounts for only about 1–2 % of gas exchange (en.wikipedia 'Cutaneous respiration'); first shown by Joseph von Gerlach in 1851 (de.wikipedia 'Joseph von Gerlach').",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Koffein erhöht die Muskelkraft. Richtig oder falsch?",
+   "de": "Seit welchem Jahr steht das leistungssteigernde Koffein nicht mehr auf der Liste der verbotenen Substanzen der Welt-Anti-Doping-Agentur?",
+   "en": "Since which year has the performance-enhancing caffeine no longer been on the World Anti-Doping Agency's list of prohibited substances?",
+   "reworked": true,
+   "answerDe": "2004",
+   "answerEn": "2004",
+   "timeline": {
+    "kind": "event",
+    "start": "2004-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "WADA removes the stimulant caffeine from its list of prohibited substances",
+    "labelDe": "Die WADA streicht das Stimulans Koffein von der Liste der verbotenen Substanzen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Coffein",
+    "title": "Coffein",
+    "lang": "de"
+   },
+   "notes": "True/false removed. Caffeine is a performance-enhancing stimulant (it stood on the IOC doping list 1984–2004); WADA delisted it with effect from 1 January 2004.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

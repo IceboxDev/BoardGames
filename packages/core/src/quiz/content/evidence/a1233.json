@@ -1,0 +1,242 @@
+{
+ "article": "a1233",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law",
+   "title": "Beer–Lambert law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:53.101Z",
+   "snapshot": "1864831c1ba096e9cb3a523deeca1c09844d160f227d046857ca3cdf67fdabdd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Specular_reflection",
+   "title": "Specular reflection – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:54.006Z",
+   "snapshot": "c9f944776e36808b1ce6c74af2ea8d80533f7f419e31bef2514ad4398a661bd4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Snell%27s_law",
+   "title": "Snell's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:55.105Z",
+   "snapshot": "11b705e5d70d0b9067a5ddefb4fc60d0a64b2943c57dcd29c08d76d0889efe6f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Opticks",
+   "title": "Opticks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:55.950Z",
+   "snapshot": "bc57137c1ef2cad9aa1ee5cf268cfe08299c24c4c009dab3985d454068df9b97"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Diffraction",
+   "title": "Diffraction",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:56.916Z",
+   "snapshot": "9d0f41466f4237d780fd0f32bd192c9fe414d6faff461232679b50072e530a88"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Absorption",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reflection",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Refraction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dispersion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diffraction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript ppm-091"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:52.502Z",
+   "target": "f06161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "analysis, Beer does not discuss Bouguer and Lambert's prior work, writing in his introduction that \"Concerning the absolute magnitude of the absorption that a particular ray of light suffers during its propagation through an absorbing medium, there is no information available.\"  Beer may have",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.502Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Absorption” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:52.502Z",
+   "target": "f06162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Specular reflection, or regular reflection, is the mirror-like reflection of waves, such as light, from a surface.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.502Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reflection” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:52.502Z",
+   "target": "f06163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snell's law (also known as the Snell–Descartes law, and the law of refraction) is a formula used to describe the relationship between the angles of incidence and refraction, when referring to light or other waves passing through a boundary between two different isotropic media, such as water, glass,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.502Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Refraction” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:52.502Z",
+   "target": "f06165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Newton sets forth in full his experiments, first reported to the Royal Society of London in 1672, on dispersion, or the separation of light into a spectrum of its component colours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.502Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dispersion” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:52.502Z",
+   "target": "f25876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diffraction is the deviation of waves from straight-line propagation due to an obstacle or through an aperture, without any change in their energy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.502Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diffraction” is on the snapshot of s5"
+  }
+ ]
+}

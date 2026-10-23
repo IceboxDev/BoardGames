@@ -1,0 +1,365 @@
+{
+ "article": "a2174",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Belgischer_Brocken",
+   "title": "Belgischer Brocken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:09.186Z",
+   "snapshot": "7528bbfadfa992b6b394d397e40bfc083508ab68de3ba8ddfa41a15073f149a1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Novaculite",
+   "title": "Novaculite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:11.986Z",
+   "snapshot": "05e49772794ab5a2a1cb1d6b46fac7e819e50bc840899e485530e419d01b906c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Santoku",
+   "title": "Santoku – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:12.937Z",
+   "snapshot": "d902d8071800045e2453b81eb0297ca246860aab06c0017e1bb307566c03c403"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Solingen",
+   "title": "Solingen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:13.949Z",
+   "snapshot": "9643378493b232fee0cdb81ebc0831e4991459ad7c3333c41898363b8c3ba5f7"
+  },
+  "s5": {
+   "url": "https://www.ardennes-coticule.be/",
+   "title": "Ardennes-Coticule, the sole producer of the famous Belgian whetstones",
+   "publisher": "Ardennes-Coticule",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:11.732Z",
+   "snapshot": "9b2791f4dec7902892358be33445c19902150af06006801cc1c01b9ef0f668d0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Belgian_Blue_Whetstone",
+   "title": "Whetstone (Belgian Blue Whetstone)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:11.791Z",
+   "snapshot": "7ce4b2004e7c77666560fc64bc9680d177d8d694ed04dfbee2192f221284e8c2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Messer schleifen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vielsalm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arkansas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "santoku",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Solingen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:33.603Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Messer schleifen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Messer schleifen”, “Sharpening knives”, “Затачивать ножи”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.603Z",
+   "target": "f11014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Belgische Brocken ist ein bei Vielsalm in den belgischen Ardennen abgebauter Naturstein, der als Schleifstein bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vielsalm” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.603Z",
+   "target": "f11015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Novaculite, also called Arkansas Stone, is a microcrystalline to cryptocrystalline rock type that consists of silica in the form of chert or flint.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arkansas” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.603Z",
+   "target": "f11016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The santoku bōchō (Japanese: 三徳包丁; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “santoku” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.603Z",
+   "target": "f11017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Solingen (German pronunciation: [ˈzoːlɪŋən] ; Limburgish: Solich) is a city in North Rhine-Westphalia, Germany, 25 km east of Düsseldorf along the northern edge of the Bergisches Land, south of the Ruhr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.603Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solingen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:31:54Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der als Schleifstein bzw. Abziehstein für den Feinschliff verwendet wird.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:32:00Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bringing tradition and precision to your craft with nature's finest sharpening stones.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:32:04Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "which has been praised for the sharpness of the edge it can give to blades since Roman times",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:20.565Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der als Schleifstein bzw. Abziehstein für den Feinschliff verwendet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:20.565Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bringing tradition and precision to your craft with nature's finest sharpening stones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:20.565Z",
+   "target": "f11013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "which has been praised for the sharpness of the edge it can give to blades since Roman times",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "article": "a2703",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Silk_Road",
+   "title": "Silk Road",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:58.378Z",
+   "snapshot": "268599e26abe3d1b5561858e37518f619c54971f3fb42d96868c42f06d867ef3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ferdinand_von_Richthofen",
+   "title": "Ferdinand von Richthofen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:59.200Z",
+   "snapshot": "c9e0d43b7a17f211f5c218978ebc5bab152a38c06688d56389896166fdc7abc0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Zhang_Qian",
+   "title": "Zhang Qian – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:00.297Z",
+   "snapshot": "e6ca978e3cb775e5afcc1ff09cc4c2bed4127a3dafb233cdb52880f72bf783a6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Taklamakan_Desert",
+   "title": "Taklamakan Desert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:01.212Z",
+   "snapshot": "6aabefdd162992233a6ca9f848f30d5ee398594303abbe85dd294173d67a680f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Xi'an",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript pp-063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ferdinand von Richthofen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zhang Qian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emperor Wu of Han",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taklamakan Desert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:00.046Z",
+   "target": "f25282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The northern route started at Chang'an (now called Xi'an), an ancient capital of China that was moved further east during the Later Han to Luoyang.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xi'an” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:00.046Z",
+   "target": "f25283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ferdinand von Richthofen was born in Pokój, at that time called Carlsruhe in Prussian Silesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferdinand von Richthofen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:00.046Z",
+   "target": "f25284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cultural exchanges along some of these routes had already occurred before Zhang Qian's missions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zhang Qian” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:00.046Z",
+   "target": "f25285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Although the Silk Road was initially formulated during the reign of Emperor Wu of Han (141–87 BCE), it was reopened by the Tang Empire in 639 when Hou Junji conquered the Western Regions, and remained open for almost four decades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emperor Wu of Han” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:00.046Z",
+   "target": "f25286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Taklamakan Desert ( TAK-lə-mə-KAN) is a desert in northwestern China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taklamakan Desert” is on the snapshot of s4"
+  }
+ ]
+}

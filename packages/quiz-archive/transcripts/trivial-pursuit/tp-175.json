@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-175",
+ "image": "IMG20261007180948.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Die Sahara ist die älteste Wüste der Welt. Richtig oder falsch?",
+   "de": "Welche Wüste gilt als die älteste Wüste der Welt?",
+   "en": "Which desert is considered the oldest desert in the world?",
+   "reworked": true,
+   "answerDe": "Namib",
+   "answerEn": "Namib",
+   "timeline": {
+    "kind": "era",
+    "start": "-80000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Namib, the world's oldest desert, around 80 million years old",
+    "labelDe": "Die Namib, die älteste Wüste der Welt, rund 80 Millionen Jahre alt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Namib",
+    "title": "Namib",
+    "lang": "de"
+   },
+   "notes": "Card's true/false answer: false — not the Sahara but the Namib (about 80 million years old) is considered the oldest desert.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Schauspielerin, die Nancy Bartlett in Roseanne spielte?",
+   "de": "Wie heißt die Schauspielerin, die Nancy Bartlett in Roseanne spielte?",
+   "en": "What is the name of the actress who played Nancy Bartlett in Roseanne?",
+   "reworked": false,
+   "answerDe": "Sandra Bernhard",
+   "answerEn": "Sandra Bernhard",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1955-06-06",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Sandra Bernhard, American actress and comedian, Nancy in Roseanne (born 1955)",
+    "labelDe": "Sandra Bernhard, US-amerikanische Schauspielerin und Komikerin, Nancy in Roseanne (geboren 1955)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sandra_Bernhard",
+    "title": "Sandra Bernhard",
+    "lang": "en"
+   },
+   "notes": "She played Nancy Bartlett (Thomas) from 1991 to 1997.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt das Land, in dem 2010 die Proteste begannen, die zum sogenannten „Arabischen Frühling“ führten?",
+   "de": "Wie heißt das Land, in dem 2010 die Proteste begannen, die zum sogenannten „Arabischen Frühling“ führten?",
+   "en": "In which country did the protests begin in 2010 that led to the so-called “Arab Spring”?",
+   "reworked": false,
+   "answerDe": "Tunesien",
+   "answerEn": "Tunisia",
+   "timeline": {
+    "kind": "event",
+    "start": "2010-12-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Protests begin in Tunisia after Mohamed Bouazizi's self-immolation, sparking the Arab Spring",
+    "labelDe": "In Tunesien beginnen nach der Selbstverbrennung Mohamed Bouazizis Proteste, die den Arabischen Frühling auslösen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Arabischer_Fr%C3%BChling",
+    "title": "Arabischer Frühling",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches deutsche Wort stammt vom lateinischen Begriff für „Mäuschen“ ab: Muskel, Kartoffel oder Geldbörse?",
+   "de": "Welches deutsche Wort für ein Organ des Bewegungsapparats stammt vom lateinischen Begriff für „Mäuschen“ ab?",
+   "en": "Which German word for an organ of the musculoskeletal system derives from the Latin term for “little mouse”?",
+   "reworked": true,
+   "answerDe": "Muskel",
+   "answerEn": "Muskel (muscle)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1400",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The 15th-century 'Ulmer Wundarznei' records Middle High German 'mūs' for muscle, after Latin musculus ('little mouse')",
+    "labelDe": "Die „Ulmer Wundarznei“ des 15. Jahrhunderts belegt mittelhochdeutsch „mūs“ für Muskel, nach lateinisch musculus („Mäuschen“)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Muskulatur",
+    "title": "Muskulatur",
+    "lang": "de"
+   },
+   "notes": "Latin musculus = 'Mäuschen' (little mouse); the options Kartoffel and Geldbörse were dropped.",
+   "domain": "literature",
+   "sub": "language"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißen drei der vier Gesteinsplaneten unseres Sonnensystems?",
+   "de": "Wie heißen drei der vier Gesteinsplaneten unseres Sonnensystems?",
+   "en": "Name three of the four rocky planets of our Solar System.",
+   "reworked": false,
+   "answerDe": "Merkur, Venus, Erde, Mars (drei davon)",
+   "answerEn": "Mercury, Venus, Earth, Mars (any three)",
+   "timeline": {
+    "kind": "era",
+    "start": "-4600000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Formation of the Solar System and its four rocky inner planets, about 4.6 billion years ago",
+    "labelDe": "Entstehung des Sonnensystems und seiner vier inneren Gesteinsplaneten vor etwa 4,6 Milliarden Jahren"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Erd%C3%A4hnlicher_Himmelsk%C3%B6rper",
+    "title": "Erdähnlicher Himmelskörper",
+    "lang": "de"
+   },
+   "notes": "Any three of the four are accepted.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Japanische Sumoringer beginnen ihr morgendliches Training traditionell mit leerem Magen. Richtig oder falsch?",
+   "de": "Welche Mahlzeit lassen japanische Sumoringer traditionell aus, sodass sie ihr morgendliches Training mit leerem Magen beginnen?",
+   "en": "Which meal do Japanese sumo wrestlers traditionally skip, so that they begin their morning training on an empty stomach?",
+   "reworked": true,
+   "answerDe": "Frühstück",
+   "answerEn": "Breakfast",
+   "timeline": {
+    "kind": "era",
+    "start": "1603",
+    "end": "1868",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Edo period, when professional sumo and its stable life took shape (from the mid-17th century)",
+    "labelDe": "Edo-Zeit, in der sich das professionelle Sumo mit seinem Stallleben herausbildete (ab Mitte des 17. Jahrhunderts)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sumo",
+    "title": "Sumo",
+    "lang": "en"
+   },
+   "notes": "Card's true/false answer: true. Wrestlers normally eat no breakfast, train, then eat a large lunch and nap, to put on weight.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

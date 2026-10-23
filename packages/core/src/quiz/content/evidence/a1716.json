@@ -1,0 +1,242 @@
+{
+ "article": "a1716",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Korobeiniki",
+   "title": "Korobeiniki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:43.336Z",
+   "snapshot": "64febaedebdc4950d8e978691dbc0b143880304818d830716393866c9a25c09d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Microsoft_Minesweeper",
+   "title": "Microsoft Minesweeper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:44.361Z",
+   "snapshot": "2fec96536aa0cd3ac8ecc067e946bcd64fb17c81cb1af44863f4d2a3724df14f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lemmings_(video_game)",
+   "title": "Lemmings (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:45.437Z",
+   "snapshot": "a20792a920e898f793295cd1f8f9932243d40824c445cdd3e93addd2baf765a0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Candy_Crush_Saga",
+   "title": "Candy Crush Saga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:46.521Z",
+   "snapshot": "d78ad686ef8a62e6970fc258afddd06be1efe02171a0fbe46cd6e5e043876281"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Angry_Birds_Movie",
+   "title": "The Angry Birds Movie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:47.466Z",
+   "snapshot": "26099bb7191e1c216a7c88ded4d024ab79a59e505046f8ee07add229d9a49361"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tetris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Minesweeper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lemmings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Candy Crush Saga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Angry Birds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; transcript tp-105"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:10.795Z",
+   "target": "f08576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Outside Russia, \"Korobeiniki\" is widely known as the Tetris theme tune.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tetris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:10.795Z",
+   "target": "f08578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Microsoft Minesweeper (formerly just Minesweeper, and also known as Flower Field) is a minesweeper-type video game created by Curt Johnson, originally for IBM's OS/2, that was ported to Microsoft Windows by Robert Donner, both Microsoft employees at the time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minesweeper” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:10.795Z",
+   "target": "f08579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lemmings is a 1991 puzzle and strategy video game developed by DMA Design and published by Psygnosis for the Amiga.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lemmings” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:10.795Z",
+   "target": "f08580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Candy Crush Saga is a free-to-play tile-matching video game released by King on April 12, 2012, originally for Facebook; other versions for iOS, Android, Windows Phone, and Windows 10 followed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Candy Crush Saga” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:10.795Z",
+   "target": "f14668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Angry Birds Movie, also known as Angry Birds, is a 2016 animated comedy film based on the Angry Birds video game series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angry Birds” is on the snapshot of s5"
+  }
+ ]
+}

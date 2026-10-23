@@ -1,0 +1,242 @@
+{
+ "article": "a1570",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dom_Pedro_aquamarine",
+   "title": "Dom Pedro aquamarine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:04.926Z",
+   "snapshot": "2bb427b359434e472d56cee5cb5ee28521f164ab4c1431e1d2a8f48c0a0ca144"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Verneuil_method",
+   "title": "Verneuil method – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:05.992Z",
+   "snapshot": "7c1a26d80ffbd37b4e99026f3ccef76d523cbdb96e52423f736a905d00b1d553"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amethyst",
+   "title": "Amethyst – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:06.911Z",
+   "snapshot": "4f7996261aeb709405948425f9bf082f2be4fc1fb440713c9bce98294172a9df"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Synthetic_diamond",
+   "title": "Synthetic diamond – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:08.056Z",
+   "snapshot": "9d64a6d4184af666747c74549112bdddc01162d78cbb63392152dbf340e01f67"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lapis_lazuli",
+   "title": "Lapis lazuli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:01.172Z",
+   "snapshot": "66e789417ad1da32f05a4bd99c719cf2b2e36a38c9bcc3e25c74755ae44a646d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "aquamarine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ruby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "amethyst",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "diamond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "lapis lazuli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:45.277Z",
+   "target": "f07846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Dom Pedro aquamarine is the world's largest cut aquamarine gem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aquamarine” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:45.277Z",
+   "target": "f07847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is primarily used to produce the ruby, sapphire and padparadscha varieties of corundum, as well as the diamond simulants rutile, strontium titanate and spinel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ruby” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:45.277Z",
+   "target": "f07848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amethyst is a violet variety of natural quartz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “amethyst” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:45.277Z",
+   "target": "f07849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A synthetic diamond or laboratory-grown diamond (LGD), also called a lab-grown, laboratory-created, man-made, artisan-created, artificial, or cultured diamond, is a diamond that is produced in a controlled technological process, in contrast to a naturally formed diamond, which is created through",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diamond” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:45.277Z",
+   "target": "f07850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lapis lazuli (UK: ; US: ) is a deep-blue metamorphic rock used as a semi-precious stone that has been prized since antiquity for its intense color.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lapis lazuli” is on the snapshot of s5"
+  }
+ ]
+}

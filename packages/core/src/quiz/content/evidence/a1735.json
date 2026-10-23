@@ -1,0 +1,382 @@
+{
+ "article": "a1735",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Casio",
+   "title": "Casio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:54.353Z",
+   "snapshot": "f32cc74495afad2ea08eb388defb83219094d9c1f0a84f6277bcc1c93214ccda"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sony",
+   "title": "Sony – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:55.623Z",
+   "snapshot": "49918a83aceee5d55bf8b6d827fd32fad18ba907888a042e3fde9729b49c9e72"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Walkman",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:36.937Z",
+   "snapshot": "09ed6c47d3f8e2a95b377cebbc1a413cbf8ae519ce3cce9e5b11008ebd99126d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Walkman",
+   "title": "Walkman",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:54.712Z",
+   "snapshot": "6e82c53e46fdcae2b026bad1a57a52a54c62e426c2b93f846e7ba421bdbcf3ba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sharp_Corporation",
+   "title": "Sharp Corporation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:56.464Z",
+   "snapshot": "03710c02f08f01ba8af28dbc52480c13daaa5dd3dfad42c990517181fe080752"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
+   "title": "Nintendo Entertainment System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:57.619Z",
+   "snapshot": "3af8273d230a72b6ecd62ff7b922e1f75773f37146a34e21c3c6eef58561a702"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Nintendo",
+   "title": "Nintendo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:55.985Z",
+   "snapshot": "4a9a9a3a43174f96e2fa7c42b6753fd3ecca22903aab199cb4305fd2f78052ce"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Canon_Inc.",
+   "title": "Canon Inc. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:58.457Z",
+   "snapshot": "725c2424339499d671d1cb8dd3d1b20bcc5a3399a591cd8e09254e2110002883"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Casio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sony",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-176"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sharp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nintendo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f08674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nintendo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-015"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f08675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Canon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the fiscal year ended 31 March 2026, Casio reported consolidated net sales of ¥276.267 billion, of which ¥184.966 billion was generated by its Timepieces segment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Casio” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sony Group Corporation is a Japanese multinational conglomerate headquartered at the Sony City building in Minato, Tokyo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sony” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Walkman (Japanese: ウォークマン, Hepburn: Wōkuman) is a brand of portable audio players manufactured by Sony since 1979.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sony” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walkman [ˈwɔːkmən] (japanisch: ウォークマン) ist eine Marke der Firma Sony für ein tragbares Abspielgerät von Musik (u.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sony” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sharp Corporation (シャープ株式会社, Shāpu Kabushiki-gaisha) is a Japanese electronics company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sharp” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Nintendo Entertainment System (NES) is a home video game console developed and marketed by Nintendo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nintendo” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "(japanisch 任天堂株式会社, Nintendō kabushiki-gaisha, englisch Nintendo Co., Ltd.) ist ein japanischer Spieleentwickler und Verleger von Videospielen und Hersteller von Spielkonsolen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nintendo” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:14.010Z",
+   "target": "f08675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Canon has a primary listing on the Tokyo Stock Exchange and is a constituent of the TOPIX Core 30 and Nikkei 225 indexes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:14.010Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canon” is on the snapshot of s8"
+  }
+ ]
+}

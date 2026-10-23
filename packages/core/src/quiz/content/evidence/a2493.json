@@ -1,0 +1,242 @@
+{
+ "article": "a2493",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Cirque_du_Soleil",
+   "title": "Cirque du Soleil",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:24.120Z",
+   "snapshot": "20112c6c54360e4596b32219230716aaae10a390c5d07e2523d1b997635c09ed"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Man_Group",
+   "title": "Blue Man Group",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:27.703Z",
+   "snapshot": "662f914be588237f981619259659b8ea8ed49c7e7a80d7536418eba305761305"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cirque_du_Soleil",
+   "title": "Cirque du Soleil",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:28.691Z",
+   "snapshot": "91909570da465c4ece2f77ae2ba2e5786bb23587dcb32738a81d338c455aeeb5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Stomp_(theatrical_show)",
+   "title": "Stomp (theatrical show)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:29.604Z",
+   "snapshot": "c7e357fa99e3bfef02c562e7ee93943d932fff3d8888bdbad44fae4dcdcc1e3a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Circus_Roncalli",
+   "title": "Circus Roncalli",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:27.142Z",
+   "snapshot": "f714ff43ff1a26b7c228116ef4d1503ddf35be8471a5d8c2854d6af2d58d2949"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kanada",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-181"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blue Man Group",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-231"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Guy Laliberté",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stomp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Circus Roncalli",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:28.922Z",
+   "target": "f13214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cirque du Soleil [siʀkədysɔˈlɛj] (französisch für Zirkus der Sonne) ist ein Entertainment-Unternehmen aus Montréal in Kanada.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kanada” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.922Z",
+   "target": "f13215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blue Man Group is an American performance art company founded in New York City in 1987.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue Man Group” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.922Z",
+   "target": "f13216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Headquartered in the inner-city area of Saint-Michel, Montreal, it was founded in Baie-Saint-Paul on 16 June 1984 by former street performers Guy Laliberté and Gilles Ste-Croix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guy Laliberté” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.922Z",
+   "target": "f13217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stomp (stylised as STOMP) is a percussion group, originating in Brighton, England, that uses the body and ordinary objects to create a physical theatre performance using rhythms, acrobatics, and pantomime.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stomp” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.922Z",
+   "target": "f13218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Circus Roncalli (seit 2018 auch Circus-Theater Roncalli) ist ein deutscher Zirkus mit dem Geschäftssitz (GmbH) und Winterquartier in Köln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Circus Roncalli” is on the snapshot of s5"
+  }
+ ]
+}

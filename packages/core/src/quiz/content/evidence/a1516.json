@@ -1,0 +1,242 @@
+{
+ "article": "a1516",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Star_Trek:_The_Next_Generation",
+   "title": "Star Trek: The Next Generation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:01.900Z",
+   "snapshot": "d4a3e00610486599da8ce037be4fb3102b835da69a6db1c730b7891fa09d5144"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series",
+   "title": "Star Trek: The Original Series – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:34.529Z",
+   "snapshot": "0cfb48f6b51648390f3498eecedc03ec2457ad9e88bbbab42758e1d41fdc889e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Star_Trek:_Voyager",
+   "title": "Star Trek: Voyager – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:02.937Z",
+   "snapshot": "6566ec239d029d085328f3bee3c63fdc0692110342ff33ffddff6c9683c1612e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine",
+   "title": "Star Trek: Deep Space Nine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:04.010Z",
+   "snapshot": "dbbd118cef22def3a3b676bb6bbdd91dc9b3d6a138847af5121f27a4ed08ae7a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Star_Trek:_Enterprise",
+   "title": "Star Trek: Enterprise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:05.066Z",
+   "snapshot": "f5882b67584e853286a8e4cf279210853f1e3dc1079b9b6c22534b7d18d21f6e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean-Luc Picard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James T. Kirk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kathryn Janeway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Benjamin Sisko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jonathan Archer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:37.802Z",
+   "target": "f07576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Next Generation featured a new crew: Patrick Stewart as Captain Jean-Luc Picard, Jonathan Frakes as William Riker, Brent Spiner as Data, Michael Dorn as Worf, LeVar Burton as Geordi La Forge, Marina Sirtis as Deanna Troi, Gates McFadden as Dr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Luc Picard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:37.802Z",
+   "target": "f07577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The ship and crew are led by Captain James T. Kirk (William Shatner), First Officer and Science Officer Spock (Leonard Nimoy) and Chief Medical Officer Leonard H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James T. Kirk” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:37.802Z",
+   "target": "f07578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Voyager was the first Star Trek series to feature a female commanding officer, Captain Kathryn Janeway (Kate Mulgrew), as the lead character.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kathryn Janeway” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:37.802Z",
+   "target": "f07579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "to be created without the direct involvement of franchise creator Gene Roddenberry, the first set on a space station rather than a traveling starship, and the first to have an African American as its central character: Starfleet Commander, later Captain, Benjamin Sisko (played by Avery Brooks).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benjamin Sisko” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:37.802Z",
+   "target": "f07580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wanting a more basic, relatable, character-driven series, Berman and Braga concentrated on a core trio: Captain Jonathan Archer (played by Scott Bakula), Commander Trip Tucker (Connor Trinneer), and Sub-commander T'Pol (Jolene Blalock).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jonathan Archer” is on the snapshot of s5"
+  }
+ ]
+}

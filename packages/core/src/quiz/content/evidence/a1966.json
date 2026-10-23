@@ -1,0 +1,544 @@
+{
+ "article": "a1966",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Belemnitida",
+   "title": "Belemnitida – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:38.744Z",
+   "snapshot": "75903e7565074fed3d395e16df7b6f066f8f36ce0df0402b91a092a33c578978"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Parapuzosia_seppenradensis",
+   "title": "Parapuzosia seppenradensis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:39.652Z",
+   "snapshot": "8c05ac65826b06a6c9dc0ee7f7543310cf9f9ad4c78d6143b2d8251977e4258b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Trilobite",
+   "title": "Trilobite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:40.858Z",
+   "snapshot": "e16cc9d8e8a7e784d56bc904a14cf73869a77819ef63e66cc49219d40c74e495"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Coprolite",
+   "title": "Coprolite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:41.626Z",
+   "snapshot": "f9c5c711a3cb3ea4dfdb10abe2dacb7c2e5fcd2daeea46ad253b953d2740e221"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Trace_fossil",
+   "title": "Trace fossil",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:42.722Z",
+   "snapshot": "7f8704e100c3253006391ea94475fa5b2a19fc830a3c9ff4cee0ae0484c292fa"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stegosaurus",
+   "title": "Stegosaurus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:43.680Z",
+   "snapshot": "d6bd7f9f90605d402fdd36dbe86733e5f9bb0372cc703241baf0474d5e0cc22f"
+  },
+  "s7": {
+   "url": "https://www.bgs.ac.uk/discovering-geology/fossils-and-geological-time/belemnites/",
+   "title": "Belemnites",
+   "publisher": "British Geological Survey",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:39.853Z",
+   "snapshot": "8e886da800a25c48fb4ce5064f38f5e6e36e46a67e0b29f9b42d76114806edd0"
+  },
+  "s8": {
+   "url": "https://www.bgs.ac.uk/discovering-geology/fossils-and-geological-time/ammonites/",
+   "title": "Ammonites",
+   "publisher": "British Geological Survey",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:40.631Z",
+   "snapshot": "adace1f95be7f324b384a9bc60a8d7df0e45a0376854b967a97add30e9d78444"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ammonoidea",
+   "title": "Ammonoidea – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:40.346Z",
+   "snapshot": "a74a636c5f3fcd2025d953be93aeca171fb358a0885629a4783fbab8820cf4fc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "thunderbolts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ammonites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "trilobites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "coprolites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Trace fossil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript ppm-118"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Late Jurassic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 51; transcript ppm-121"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:36:56.883Z",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "thunderbolts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“thunderbolts”, “Donnerkeile”, “чёртовы пальцы”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:36:56.883Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ammonites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ammonites”, “Ammoniten”, “аммониты”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:36:56.883Z",
+   "target": "f09828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Trilobites (; meaning \"three-lobed entities\") are extinct marine arthropods that form the class Trilobita.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “trilobites” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:36:56.883Z",
+   "target": "f09830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Coprolites are classified as trace fossils as opposed to body fossils, as they give evidence for the animal's behaviour (in this case, diet) rather than morphology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coprolites” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:36:56.883Z",
+   "target": "f25580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A trace fossil, also called an ichnofossil (; from Ancient Greek  ἴχνος (íkhnos) 'trace, track'), is a fossil record of biological activity by lifeforms, but not the preserved remains of the organism itself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trace fossil” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:36:56.883Z",
+   "target": "f25581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "'roof-lizard') is a genus of extinct herbivorous four-legged armored dinosaurs from the Late Jurassic, characterized by the distinctive kite-shaped upright plates along their backs and spikes on their tails.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:56.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Late Jurassic” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:55Z",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The fossilised rostra were widely believed to have been flung down as darts from heaven during thunderstorms (thunderbolts).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:09:58Z",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After a thunderstorm, guards would sometimes be left exposed in the soil, explained as lightning bolts thrown from the sky.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:10:02Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ammonites take their name from the Egyptian god Amun, known to the Greeks as Zeus Ammon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:10:06Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ammonites lived during the periods of Earth history known as the Jurassic and Cretaceous.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:10:10Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "called fossils of these animals ammonis cornua (\"horns of Ammon\") because the Egyptian god Ammon (Amun) was typically depicted wearing rams' horns.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The fossilised rostra were widely believed to have been flung down as darts from heaven during thunderstorms (thunderbolts).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After a thunderstorm, guards would sometimes be left exposed in the soil, explained as lightning bolts thrown from the sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ammonites lived during the periods of Earth history known as the Jurassic and Cretaceous.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "called fossils of these animals ammonis cornua (\"horns of Ammon\") because the Egyptian god Ammon (Amun) was typically depicted wearing rams' horns.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The fossilised rostra were widely believed to have been flung down as darts from heaven during thunderstorms (thunderbolts).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “thunderbolts” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ammonites - British Geological Survey",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ammonites” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:45.568Z",
+   "target": "f09827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They are often called ammonites, which is most frequently used for members of the order Ammonitida, the only remaining group of ammonoids from the Jurassic up until their extinction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:45.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ammonites” is on the snapshot of s9"
+  }
+ ]
+}

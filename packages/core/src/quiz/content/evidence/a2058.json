@@ -1,0 +1,248 @@
+{
+ "article": "a2058",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sixth_Floor_Museum_at_Dealey_Plaza",
+   "title": "Sixth Floor Museum at Dealey Plaza – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:37.723Z",
+   "snapshot": "a2b846de2db751f627aa2aa02a377af4d90a497efce6f6620d77ff724c8c2e83"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_John_F._Kennedy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:38.884Z",
+   "snapshot": "da2fcf084bc6fa694237230a1af04dd0f42928a8329e6e0ee0ad490ee6f2521e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln",
+   "title": "Assassination of Abraham Lincoln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:01.060Z",
+   "snapshot": "f2e0bb20495f63f27e5223fef211fd7cd4d0396651692fc8a6662b3b5cb2b5ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pan-American_Exposition",
+   "title": "Pan-American Exposition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:39.747Z",
+   "snapshot": "4d635d67d6809efabdf14d155bb2c4ec5f574e0a9d891a888a427d1ea1598255"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sirhan_Sirhan",
+   "title": "Sirhan Sirhan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:40.879Z",
+   "snapshot": "ce1b85bf00d1b073488f763481c763c5331a066cdcef87dfa175b958df90ce42"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Robert_F._Kennedy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:41.873Z",
+   "snapshot": "b673f0cdbde159e3204a28c655fa130166b52e806c2a0a043610cfb9f8c73acc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dallas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dallas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Washington, D.C.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Buffalo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Los Angeles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:15.122Z",
+   "target": "f10286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sixth Floor Museum at Dealey Plaza is a museum located on the sixth floor of the Dallas County Administration Building, formerly the Texas School Book Depository, in downtown Dallas, Texas, overlooking Dealey Plaza at the intersection of Elm and Houston Streets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dallas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:15.122Z",
+   "target": "f10286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kennedy, the 35th president of the United States, was assassinated while riding in a presidential motorcade through Dallas, Texas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dallas” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:15.122Z",
+   "target": "f10287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On April 14, 1865, Abraham Lincoln, the 16th president of the United States, was shot in the head while attending a play at Ford's Theatre in Washington, D.C..",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Washington, D.C.” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:15.122Z",
+   "target": "f10288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Pan-American Exposition was a world's fair held in Buffalo, New York, from May 1 through November 2, 1901.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buffalo” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:15.122Z",
+   "target": "f10290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prosecutors declined to participate in or oppose his release in accordance with the directive of Los Angeles County District Attorney George Gascón that the prosecutors' role ends at sentencing and they should not influence decisions to release prisoners.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.122Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Los Angeles” is on the snapshot of s5"
+  }
+ ]
+}

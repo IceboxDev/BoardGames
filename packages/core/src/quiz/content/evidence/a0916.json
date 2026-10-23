@@ -1,0 +1,242 @@
+{
+ "article": "a0916",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Am%C3%A9lie",
+   "title": "Amélie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:52.275Z",
+   "snapshot": "e2ab918c5ef3d938fe45a3be018bfb159ac470791540acdeaebd3405b120e7e7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+   "title": "Titanic (1997 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:49.613Z",
+   "snapshot": "c7e5b70ff287673497568346202afdc472cd2b96dc2c59b1a233814c09a57fdc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pretty_Woman",
+   "title": "Pretty Woman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:53.281Z",
+   "snapshot": "f2dc5f08620cf36e123d21b422f09e92bbc899a19fbf116cf7d817bcd5839485"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/One_Million_Years_B.C.",
+   "title": "One Million Years B.C. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:54.384Z",
+   "snapshot": "ae2f8d3718ebbefcd94b2141fe309089b250df85106b2db107544206cafaba00"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ryan_Gosling",
+   "title": "Ryan Gosling",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:55.289Z",
+   "snapshot": "cd94591b3e6aeb891820b5419aaba8ddb9fbceb6c54d04685ccfbcbcec7c2fc6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amélie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Titanic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pretty Woman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fur bikini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-058"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11469",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Notebook",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-044"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:04.017Z",
+   "target": "f04576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amélie (French: Le Fabuleux Destin d'Amélie Poulain, pronounced [lə fabylø dɛstɛ̃ d‿ameli pulɛ̃], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.017Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amélie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:04.017Z",
+   "target": "f04578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Titanic is a 1997 American epic historical romance film written and directed by James Cameron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.017Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titanic” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:04.017Z",
+   "target": "f04579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pretty Woman is a 1990 American romantic comedy film directed by Garry Marshall and written by J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.017Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pretty Woman” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:04.017Z",
+   "target": "f11468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The cover of the issue featured a painting by Brian Lewis of Welch in the famous fur bikini.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.017Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fur bikini” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:04.017Z",
+   "target": "f11469",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He received praise for his performance in The Believer (2001), before emerging as a leading man for his role Noah Calhoun in the romantic drama The Notebook (2004) and further praise came with the psychological thriller Fracture and comedy-drama Lars and the Real Girl both (2007).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:04.017Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Notebook” is on the snapshot of s5"
+  }
+ ]
+}

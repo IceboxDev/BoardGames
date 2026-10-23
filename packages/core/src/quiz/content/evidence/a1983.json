@@ -1,0 +1,289 @@
+{
+ "article": "a1983",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Paul_Gauguin",
+   "title": "Paul Gauguin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:43.737Z",
+   "snapshot": "c7fad8651c7cbdc1d88a0be4a6d88f4dbe1eec7bca1cbf1f8646827833282b7f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Claude_Monet",
+   "title": "Claude Monet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:31.428Z",
+   "snapshot": "9cf98c4a58ca3876b2b3c4dff6268434513aea445e2eb00af642f85eb6fa12bd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Little_Dancer_of_Fourteen_Years",
+   "title": "Little Dancer of Fourteen Years – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:44.630Z",
+   "snapshot": "e56d8e8aa45bb8d40c1b74acfabeb82bb2977e49d2aeb9325235d214de9a29cf"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Edgar_Degas",
+   "title": "Edgar Degas",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:43.549Z",
+   "snapshot": "4d04950086d20be77dd247608fe3bfc016a1c5940433a0472b058251a8cdd9d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne",
+   "title": "Paul Cézanne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:45.859Z",
+   "snapshot": "f609eb1627ec0e4c26c6eaad2280af2e5441adcb7351edd00ab2abb74174b76a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moulin_Rouge:_La_Goulue",
+   "title": "Moulin Rouge: La Goulue – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:46.635Z",
+   "snapshot": "b6bd2973574b742755b023299cd00bc533af2e27c816940ebe15403b9738ae25"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paul Gauguin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Claude Monet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edgar Degas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edgar Degas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-127"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul Cézanne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Henri de Toulouse-Lautrec",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:00.098Z",
+   "target": "f09911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eugène Henri Paul Gauguin (; French: [øʒɛn ɑ̃ʁi pɔl ɡoɡɛ̃]; 7 June 1848 – 8 May 1903) was a French painter, sculptor, printmaker, ceramist, and writer, whose work has been primarily associated with the Post-Impressionist and Symbolist movements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Gauguin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:00.098Z",
+   "target": "f09912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oscar-Claude Monet (UK: , US: ; French: [klod mɔnɛ]; 14 November 1840 – 5 December 1926) was a French painter and founder of Impressionism who is seen as a key precursor to modernism, especially in his attempts to paint nature as he perceived it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claude Monet” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:00.098Z",
+   "target": "f09913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1880 by Edgar Degas of a young student of the Paris Opera Ballet dance school, a Belgian named Marie van Goethem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edgar Degas” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:00.098Z",
+   "target": "f09913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edgar Degas, bürgerlich Hilaire Germain Edgar de Gas (* 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edgar Degas” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:00.098Z",
+   "target": "f09914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Paul Cézanne ( say-ZAN, UK also  siz-AN, US also  say-ZAHN; French: [pɔl sezan]; Occitan: Pau Cesana; 19 January 1839 – 22 October 1906) was a French Post-Impressionist painter whose work introduced new modes of representation, influenced avant-garde artistic movements of the early 20th century and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Cézanne” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:00.098Z",
+   "target": "f09915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Moulin Rouge: La Goulue is a poster by French artist Henri de Toulouse-Lautrec.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:00.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henri de Toulouse-Lautrec” is on the snapshot of s6"
+  }
+ ]
+}

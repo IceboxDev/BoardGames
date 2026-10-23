@@ -1,0 +1,371 @@
+{
+ "article": "a0606",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ganz_unten",
+   "title": "Ganz unten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:41.516Z",
+   "snapshot": "6bd9c16ce2aa430361f899f444a9c17d56a9abac3b4a63ec18b5947221a0c017"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ten_Days_in_a_Mad-House",
+   "title": "Ten Days in a Mad-House – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:45.355Z",
+   "snapshot": "09c07a32871131508579d6824d6bd3cc788ae40392171a70b596a2ff610a8cb1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Jungle",
+   "title": "The Jungle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:46.401Z",
+   "snapshot": "e40bb0e1307cb5f471974db2d389103803466a8af80b164a9f2615c83cf0f5cd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Egon_Erwin_Kisch",
+   "title": "Egon Erwin Kisch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:44.555Z",
+   "snapshot": "36aaee8b3f7ad7fdc13236a538a0a51f69d63bb720e718d297f0d44e7c65a5d6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/All_the_President%27s_Men",
+   "title": "All the President's Men – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:47.352Z",
+   "snapshot": "7c5605f6f0deb75e651f49d873b13c68ce2302926d9597eec182a79248549895"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ganz_unten",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:48.362Z",
+   "snapshot": "f8a01aa279da67703f26109804bec9764f65622ac5938c03a2647cf980e8de08"
+  },
+  "s7": {
+   "url": "https://bobwoodward.com/biography",
+   "title": "Biography – Bob Woodward",
+   "publisher": "Bob Woodward (official site)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:27.548Z",
+   "snapshot": "d988a053fcbb6365f0d7ee8df16636e6859e9f9621cebe3fed7451543d1ad704"
+  },
+  "s8": {
+   "url": "https://www.fbi.gov/history/famous-cases/watergate",
+   "title": "Watergate — FBI",
+   "publisher": "Federal Bureau of Investigation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:17:11Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Günter Wallraff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03027",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nellie Bly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Upton Sinclair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03029",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Egon Erwin Kisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bob Woodward and Carl Bernstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:13.153Z",
+   "target": "f03026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oktober 1985 erstmals erschienenes, international erfolgreiches Buch des Autors und Journalisten Günter Wallraff, das Menschenrechtsverletzungen und Ausländerfeindlichkeit in der Bundesrepublik Deutschland in den frühen 1980er Jahren darstellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.153Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Wallraff” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:13.153Z",
+   "target": "f03027",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ten Days in a Mad-House is a book by American journalist Nellie Bly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.153Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nellie Bly” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:13.153Z",
+   "target": "f03028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Jungle is a novel by American author and journalist Upton Sinclair.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.153Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Upton Sinclair” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:13.153Z",
+   "target": "f03029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Egon Erwin Kisch (eigentlich Egon Kisch; geboren am 29.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.153Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Egon Erwin Kisch” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:13.153Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bob Woodward and Carl Bernstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bob Woodward and Carl Bernstein”, “Bob Woodward und Carl Bernstein”, “Боб Вудворд и Карл Бернстайн”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:02Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1972, the reporting of Woodward and Bernstein in the Post was regularly denounced by the Nixon re-election campaign, Republican leaders and the White House.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:05Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "I would apologize to Mr. Woodward and Mr. Bernstein . . . . They have vigorously pursued this story and they deserve the credit and are receiving the credit.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Ron Ziegler, 1973, quoted on Woodward's site; confirms the Watergate reporting pair."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:09Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "All the President's Men is a 1974 non-fiction book by Carl Bernstein and Bob Woodward , two Washington Post journalists who investigated the June 1972 break-in at the Watergate Office Building and the resultant political scandal .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:17:11Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "former FBI Deputy Director Mark Felt, who identified himself as “Deep Throat” in 2005",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the body's Deep Throat detail (premise), not the reporters' names."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:17:19Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Withdraws e14 as answer support: the FBI page confirms only the Deep Throat/Mark Felt background, not the reporters' names."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:39.606Z",
+   "target": "f03030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "I would apologize to Mr. Woodward and Mr. Bernstein . . . . They have vigorously pursued this story and they deserve the credit and are receiving the credit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "article": "a1708",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Groundhog_Day_(film)",
+   "title": "Groundhog Day (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:11.559Z",
+   "snapshot": "9ba8af93725c885a4d380cf88011aba42b6d7c3119815811945bfa9dce1db137"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Saturday_Night_Fever",
+   "title": "Saturday Night Fever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:18.181Z",
+   "snapshot": "69775e32ac4fc7178820686288c3fb4c7b6e483728ac4259cae0126d4035a059"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/As_Time_Goes_By_(song)",
+   "title": "As Time Goes By (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:12.341Z",
+   "snapshot": "db46c70f03703ede13fe53feb00bdab33f0c8a90a1035c08f8e3ead492353f64"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/60th_Academy_Awards",
+   "title": "60th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:13.341Z",
+   "snapshot": "cf787e451f56e4920dd1855e78ba099577b15bc6f4691b9dfaaaedfd28759e21"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Risky_Business",
+   "title": "Risky Business – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:14.334Z",
+   "snapshot": "65f62e82461191ae7d7dd8b4d031c33ae431d18e07211837e161990910b61ec3"
+  },
+  "s6": {
+   "url": "https://www.oscars.org/oscars/ceremonies/1988",
+   "title": "The 60th Academy Awards | 1988",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:44.644Z",
+   "snapshot": "4dcea9bc1a07d07a4563a84db4febb006d3c33a4fe1321888c2b29816c638e0a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Dirty_Dancing",
+   "title": "Dirty Dancing – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:34:26Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I Got You Babe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stayin' Alive",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As Time Goes By",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Time of My Life",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Old Time Rock and Roll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:09.298Z",
+   "target": "f08536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On February 2, Phil awakens in the Cherry Street Inn to Sonny & Cher's \"I Got You Babe\" playing on the clock radio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.298Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I Got You Babe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:09.298Z",
+   "target": "f08537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The soundtrack included material written by the Bee Gees: \"How Deep Is Your Love\", \"Stayin' Alive\" and \"Night Fever\", which they also performed, as well as Yvonne Elliman's version of \"If I Can't Have You\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.298Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stayin' Alive” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:09.298Z",
+   "target": "f08538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"As Time Goes By\" is a jazz song written by Herman Hupfeld in 1931.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.298Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “As Time Goes By” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:09.298Z",
+   "target": "f08539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Time of My Life",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Time of My Life”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:09.298Z",
+   "target": "f08540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On his first night home alone, Joel raids his parents' liquor cabinet, plays the stereo loudly, and dances around the living room in his briefs to \"Old Time Rock and Roll\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.298Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Old Time Rock and Roll” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:34:23Z",
+   "target": "f08539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Music (Original Song) Winner Dirty Dancing (I've Had) The Time Of My Life in \"Dirty Dancing\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:34:26Z",
+   "target": "f08539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "then they perform the dance they practiced all summer, ending with a successful climactic lift. Dr. Houseman admits he was wrong about Johnny and reconciles with Baby, and all the staff and guests join Baby and Johnny dancing to",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:56.006Z",
+   "target": "f08539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Music (Original Song) Winner Dirty Dancing (I've Had) The Time Of My Life in \"Dirty Dancing\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:56.006Z",
+   "target": "f08539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(I've Had) The Time Of My Life in \"Dirty Dancing\" Music by Franke Previte, John DeNicola and Donald Markowitz; Lyric by Franke Previte",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:56.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Time of My Life” is on the snapshot of s6"
+  }
+ ]
+}

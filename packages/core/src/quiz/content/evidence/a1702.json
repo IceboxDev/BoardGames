@@ -1,0 +1,607 @@
+{
+ "article": "a1702",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ellipse",
+   "title": "Ellipse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:46.810Z",
+   "snapshot": "9e00baa14bf5cc5751a875465a00075f23335582442a8426fe4cbbda41f9482f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium",
+   "title": "De revolutionibus orbium coelestium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:06.664Z",
+   "snapshot": "44b44a026ab533740aa92b1e07a78730389190c88aaca4e4def197cc2bf3d4d8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+   "title": "Philosophiæ Naturalis Principia Mathematica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:19.686Z",
+   "snapshot": "13e68e98920299a2af24aba8a15aa86fdf5e7795e40a92e377c9a529198e691e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1I/%CA%BBOumuamua",
+   "title": "1I/ʻOumuamua – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:47.428Z",
+   "snapshot": "a94437cf0ed66a3d8c6bc991d80d678434227778033ad4de4bc7859d06f3a959"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Conic_section",
+   "title": "Conic section – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:48.832Z",
+   "snapshot": "805c656bb130bde84ced666e76aab9d0aa482df1f5c9539ebbb0608ad28abc34"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/%CA%BBOumuamua",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:49.449Z",
+   "snapshot": "a94437cf0ed66a3d8c6bc991d80d678434227778033ad4de4bc7859d06f3a959"
+  },
+  "s7": {
+   "url": "https://plato.stanford.edu/entries/copernicus/",
+   "title": "Nicolaus Copernicus – Stanford Encyclopedia of Philosophy",
+   "publisher": "Stanford Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.384Z",
+   "snapshot": "e98c44592fe6cd7853cfbb028af1084b24d493ded46c31d9a9246bf4bbe2b57a"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Copernican_heliocentrism",
+   "title": "Copernican heliocentrism – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:38.134Z",
+   "snapshot": "9fa4fffbda297f99513e2e8efc69b5de1303400506a2537add35baf19aea570d"
+  },
+  "s9": {
+   "url": "https://openstax.org/books/university-physics-volume-1/pages/13-5-keplers-laws-of-planetary-motion",
+   "title": "University Physics Vol. 1, 13.5 Kepler's Laws of Planetary Motion",
+   "publisher": "OpenStax (Rice University)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:37.819Z",
+   "snapshot": "531771316d8c7ae10b3437add2138969bada08b6491357084e89c2c7b88f8d1a"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Parabolic_trajectory",
+   "title": "Parabolic trajectory – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:39.197Z",
+   "snapshot": "ec3ea71cf0dc2f8992b0aaed893d89e112f01688451aa17783c59460134254c8"
+  },
+  "s11": {
+   "url": "https://minorplanetcenter.net/mpec/K17/K17V17.html",
+   "title": "MPEC 2017-V17: New designation scheme for interstellar objects",
+   "publisher": "IAU Minor Planet Center",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:38.400Z",
+   "snapshot": "4a9f7d5645fbe911ae405dd6e1fd0b268eddac1daa44640634ddb57c3b4ea7d4"
+  },
+  "s12": {
+   "url": "https://www.nature.com/articles/nature25020",
+   "title": "A brief visit from a red and extremely elongated interstellar asteroid",
+   "publisher": "Nature (Meech et al. 2017)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:38.638Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ellipse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "circle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "parabola",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hyperbola",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "focus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:08.301Z",
+   "target": "f08506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In mathematics, an ellipse is a plane curve surrounding two focal points, such that for all points on the curve, the sum of both distances to the two focal points is a constant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ellipse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:08.301Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "circle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“circle”, “Kreis”, “окружность”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:08.301Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "parabola",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“parabola”, “Parabel”, “парабола”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:08.301Z",
+   "target": "f08509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hyperbola",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“hyperbola”, “Hyperbel”, “гипербола”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:08.301Z",
+   "target": "f08510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "One such property defines a non-circular conic to be the set of those points whose distances to some particular point, called a focus, and some particular line, called a directrix, are in a fixed ratio, called the eccentricity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “focus” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:14Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Copernicus was hampered by his insistence on preserving the idea that celestial bodies had to travel in perfect circles",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:21:16Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Disturbed by the failure of Ptolemy’s geocentric model of the universe to follow Aristotle’s requirement for the uniform circular motion of all celestial bodies.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:21:19Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "His heliostatic model retained several false Ptolemaic assumptions such as the planets' circular orbits , epicycles , and uniform speeds",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:21:21Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Recall that a satellite with zero total energy has exactly the escape velocity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23",
+   "note": "same paragraph: \"If the total energy is exactly zero, then e = 1 and the path is a parabola.\""
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:21:23Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "is an unbound orbit that is exactly on the border between elliptical and hyperbolic. When moving away from the source it is called an escape orbit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:21:24Z",
+   "target": "f08509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Since both the original and future barycentric orbits for this object are significantly hyperbolic, this object is not bound to our solar system",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:21:26Z",
+   "target": "f08509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "R.W. discovered 1I/2017 U1 in the Pan-STARRS data and, with M.M., realized that it had a hyperbolic orbit.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Copernicus was hampered by his insistence on preserving the idea that celestial bodies had to travel in perfect circles",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Disturbed by the failure of Ptolemy’s geocentric model of the universe to follow Aristotle’s requirement for the uniform circular motion of all celestial bodies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Recall that a satellite with zero total energy has exactly the escape velocity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "is an unbound orbit that is exactly on the border between elliptical and hyperbolic. When moving away from the source it is called an escape orbit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Since both the original and future barycentric orbits for this object are significantly hyperbolic, this object is not bound to our solar system",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "heliacal coil around a circle around the earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “circle” is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "His hypotheses are that the fixed stars and the Sun remain unmoved, that the Earth revolves about the Sun on the circumference of a circle, the Sun lying in the middle of the Floor, and that the sphere of the fixed stars, situated about the same center as the Sun, is so great that the circle in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “circle” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Every path taken by m is one of the four conic sections: a circle or an ellipse for bound or closed orbits, or a parabola or hyperbola for unbounded or open orbits.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “parabola” is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:54.712Z",
+   "target": "f08508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "If a body has an escape velocity with respect to the Earth, this is not enough to escape the Solar System, so near the Earth the orbit resembles a parabola, but further away it bends into an elliptical orbit around the Sun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:54.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “parabola” is on the snapshot of s10"
+  }
+ ]
+}

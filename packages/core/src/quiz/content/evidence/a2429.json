@@ -1,0 +1,242 @@
+{
+ "article": "a2429",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Flugabwehrkanone",
+   "title": "Flugabwehrkanone",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:51.835Z",
+   "snapshot": "45c203633632c88a7ba141de522a0027d6851b0d71484181e0564b91f733897f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Do_it_yourself",
+   "title": "Do it yourself – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:50.362Z",
+   "snapshot": "73cc5a8e98dd4c9cce34ed4f62cd25bdbb0f0c859cd9304ea0e49e665790c260"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kriminalpolizei_(Deutschland)",
+   "title": "Kriminalpolizei (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:53.158Z",
+   "snapshot": "90c05a39988a11b60b43c58d0a3a9719a4838a5349f101fcf30376113ff38e8e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Unimog",
+   "title": "Unimog – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:54.435Z",
+   "snapshot": "49dfbfad6a699ee6c56b70fd5137e9424b66080df61a7cff594d53042a916e48"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Degussa",
+   "title": "Degussa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:54.766Z",
+   "snapshot": "8560543c67471b9e34c66ad9d3980bd67f69c620c66d2e70b3070b7d107289ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Flugabwehrkanone",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Do it yourself",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-074"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kriminalpolizei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Universal-Motor-Gerät",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Deutsche Gold- und Silber-Scheideanstalt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:19.182Z",
+   "target": "f12751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Unter einer Flugabwehrkanone (auch Fliegerabwehrkanone genannt, kurz Flak, oder FlaK) versteht man eine ursprünglich im Ersten Weltkrieg entwickelte Waffe, die zur Abwehr von Flugzeugen eingesetzt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flugabwehrkanone” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:19.182Z",
+   "target": "f12752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Do it yourself\" (\"DIY\") is the practice of undertaking the construction, modification, or repair of objects or spaces independently, without the assistance of qualified professionals or certified experts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Do it yourself” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:19.182Z",
+   "target": "f12753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Kriminalpolizei (kurz: Kripo oder KriPo) ist als staatliches Instrument der spezialisierte Teil der Polizei, der für die Verhütung, Aufdeckung und Verfolgung von Straftaten wie Diebstahl, Betrug, Gewaltverbrechen oder Cyberkriminalität zuständig ist, oft in Zivilkleidung und in Zusammenarbeit",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kriminalpolizei” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:19.182Z",
+   "target": "f12754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Unimog (Akronym für Universal-Motor-Gerät) ist eine Fahrzeugmarke aus der Markenfamilie von Mercedes-Benz, des Herstellers Daimler Truck.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Universal-Motor-Gerät” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:19.182Z",
+   "target": "f12755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Januar 1873 als Deutsche Gold- und Silber-Scheideanstalt vormals Roessler AG in Frankfurt am Main gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.182Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsche Gold- und Silber-Scheideanstalt” is on the snapshot of s5"
+  }
+ ]
+}

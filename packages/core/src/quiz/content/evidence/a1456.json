@@ -1,0 +1,242 @@
+{
+ "article": "a1456",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nostromo",
+   "title": "Nostromo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:28.448Z",
+   "snapshot": "f7943aa5f4c77dec3c7185e418283917a6c28f149e40b94022f1069a3eecb9dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alien_3",
+   "title": "Alien 3 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:29.559Z",
+   "snapshot": "e7ee9a7de78242e7fc4b6054a69ba1c3e1b57416b2f6278cac1919bbcb86a9d5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2010:_The_Year_We_Make_Contact",
+   "title": "2010: The Year We Make Contact – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:30.443Z",
+   "snapshot": "348cb2b357f2379f578a8af5351e733db737aa2f49757df86222aaa47a349268"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Serenity_(2005_film)",
+   "title": "Serenity (2005 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:31.464Z",
+   "snapshot": "fac4eebce21ef641f31e5fe36c751bb5f71aa31faac0316e38866c3e72ba6d29"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Endurance_(1912_ship)",
+   "title": "Endurance (1912 ship) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:32.493Z",
+   "snapshot": "1eec461d92d616cbe354e7f4cc59265fcc5d1a0d5e2da5b806ed07a0a03fb203"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nostromo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sulaco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Discovery One",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Serenity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Endurance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:28.773Z",
+   "target": "f07276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nostromo: A Tale of the Seaboard (1904) is a novel by Joseph Conrad, set in the fictitious South American republic of \"Costaguana\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nostromo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:28.773Z",
+   "target": "f07277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Set immediately after the events of Aliens (1986), Ripley and an Alien organism are the only survivors of the Colonial Marine spaceship Sulaco following an escape pod's crash on a planet housing a penal colony populated by violent male inmates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sulaco” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:28.773Z",
+   "target": "f07278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "2010 follows a joint American and Soviet crew that is sent to Jupiter to discover the reason behind the failure of the Discovery One mission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Discovery One” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:28.773Z",
+   "target": "f07279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Serenity is a 2005 American space Western film written and directed by Joss Whedon in his feature directorial debut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Serenity” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:28.773Z",
+   "target": "f07280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Endurance was the three-masted barquentine in which Sir Ernest Shackleton and a crew of 27 men sailed for the Antarctic on the 1914–1917 Imperial Trans-Antarctic Expedition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.773Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Endurance” is on the snapshot of s5"
+  }
+ ]
+}

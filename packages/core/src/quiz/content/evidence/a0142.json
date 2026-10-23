@@ -1,0 +1,249 @@
+{
+ "article": "a0142",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Comet_Hale%E2%80%93Bopp",
+   "title": "Comet Hale–Bopp – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:09.326Z",
+   "snapshot": "d1ebaf95a6b7fc7153b94464e1aad7a2d0972f5c99f225be6d3c59c31315a368"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+   "title": "Halley's Comet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:10.519Z",
+   "snapshot": "2caff9b4ebc855894732793f4c2b5cd8cfd34c41a6e2782aa86c20e48e4239bf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Comet_Hyakutake",
+   "title": "Comet Hyakutake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:11.308Z",
+   "snapshot": "51d26a04de071bda4ecce5382242bbc8912383a5e99b8acf2415c4979e7c303b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Comet_Shoemaker%E2%80%93Levy_9",
+   "title": "Comet Shoemaker–Levy 9 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:12.314Z",
+   "snapshot": "e86c922855769b0adf01a86ea91bc87c5fdeb65ed126e9abf036b5592c7e0764"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/C/2020_F3_(NEOWISE)",
+   "title": "C/2020 F3 (NEOWISE) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:09.478Z",
+   "snapshot": "417c0126775e43178f23ae29f505a062f1571b55fe83ab86dfee40d6eb42217b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Comet_NEOWISE",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:13.332Z",
+   "snapshot": "f6d58c7cef8248489be00ccefe81743b038cc7b891c5c3a5fb019612be1a31bf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hale-Bopp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Halley's Comet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Comet Hyakutake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Comet Shoemaker-Levy 9",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Komet NEOWISE",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:59.474Z",
+   "target": "f00706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Comet Hale–Bopp (formally designated C/1995 O1) is a long-period comet that was one of the most widely observed of the 20th century and one of the brightest seen for many decades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hale-Bopp” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:59.474Z",
+   "target": "f00707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Halley's Comet is the only known short-period comet that is consistently visible to the naked eye from Earth, appearing roughly every 74–79 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halley's Comet” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:59.474Z",
+   "target": "f00708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Comet Hyakutake (formally designated C/1996 B2) is a comet discovered on 31 January 1996.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Comet Hyakutake” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:59.474Z",
+   "target": "f00709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Comet Shoemaker–Levy 9 (formally designated D/1993 F2) was a comet that broke apart in July 1992 and collided with Jupiter in July 1994, providing the first direct observation of an extraterrestrial collision of Solar System objects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Comet Shoemaker-Levy 9” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:59.474Z",
+   "target": "f00710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Komet NEOWISE zeigte einen stark strukturierten Staubschweif, ähnlich hervortretende und von der Erde aus erkennbare Details zeigten zuletzt C/2006 P1 (McNaught) für Beobachter auf der Südhalbkugel und C/1995 O1 (Hale-Bopp) für Beobachter auf der Nordhalbkugel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Komet NEOWISE” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,341 @@
+{
+ "id": "a1188",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "Cache: The Memory in the Middle",
+ "titleDe": "Der Cache: der Speicher in der Mitte",
+ "titleRu": "Кэш: память посередине",
+ "bodyEn": "A cache is a store of data kept close at hand so that it does not have to be fetched again from a slower or more distant source. The word comes from the French cacher, \"to hide\", and was first used for a hidden depot of provisions; in computing it was adopted in 1968 for the small, fast memory that IBM placed between the processor and main memory in its System/360 Model 85. The principle is the same at every level: whatever was needed recently is likely to be needed again, so keep a copy nearby. Processors have several levels of cache on the chip, operating systems cache disk blocks in memory, and a web browser caches the images, style sheets and scripts of the pages you visit on your hard drive. The next time you open the page, the browser checks whether its stored copy is still valid – using headers such as \"Cache-Control\" and \"ETag\", introduced with HTTP/1.1 in January 1997 – and loads only what has changed. That is why a page loads faster the second time, and why \"clear the cache\" is the first advice in any support forum when a site behaves strangely.\n\nThe browser cache is only one of several memories that a computer keeps between you and the outside world, and each answers a different question:\n\n| Term | What it stores | Where | Typical lifetime |\n|---|---|---|---|\n| cache | recently fetched data for fast reuse | processor, disk, browser | until space is needed or the copy expires |\n| cookie | small text record that a website asks the browser to keep | browser, per website | session or a set expiry date |\n| RAM | the programs and data currently in use | main memory chips | until power is switched off |\n| clipboard | the last thing you copied or cut | operating system | until the next copy |\n| proxy | requests forwarded on behalf of clients, often with a shared cache | server between network and internet | configurable |\n\nA cookie is not a cache: invented by the Netscape programmer Lou Montulli in June 1994, it is a note that the server writes and the browser sends back with every later request to the same site, which is how a shop remembers your basket and a login stays active – and how advertisers track visitors across the web, which is why, since EU rules on cookie consent took effect in 2011, cookie banners greet every European user. RAM, random-access memory, is the working memory of the machine; it is fast and volatile, losing everything when the power goes, which is why documents must be saved to disk. Its first practical form was the Williams tube, patented by Frederic Williams and Tom Kilburn from 11 December 1946. The first commercially available DRAM chip, Intel's 1103, appeared in October 1970. The clipboard is the operating system's short-term memory for copy and paste – commands that Larry Tesler and his colleagues at Xerox PARC built into their text editors from 1974 –, and holds only the most recent item unless a clipboard manager extends it. And a proxy is a server that stands in for many clients: a company proxy fetches pages from the internet, filters them and keeps a shared cache so that the hundredth employee who opens the same news site gets it from the local copy. Web proxies of this kind date from April 1994, when Ari Luotonen and Kevin Altis described the proxy of CERN's web server and its new shared cache.\n\nTogether these mechanisms explain most of what makes computing feel fast or slow. The cache is the oldest trick of the trade, and it works because human and machine behaviour share one habit: what we used a moment ago, we will probably use again.",
+ "bodyDe": "Ein Cache ist ein Vorrat an Daten, der griffbereit gehalten wird, damit sie nicht erneut aus einer langsameren oder entfernteren Quelle geholt werden müssen. Das Wort kommt vom französischen cacher, „verstecken“, und bezeichnete zunächst ein verborgenes Vorratslager; in der Informatik wurde es 1968 für den kleinen, schnellen Speicher übernommen, den IBM im System/360 Modell 85 zwischen Prozessor und Hauptspeicher setzte. Das Prinzip ist auf jeder Ebene dasselbe: Was gerade gebraucht wurde, wird wahrscheinlich bald wieder gebraucht, also bewahre eine Kopie in der Nähe auf. Prozessoren haben mehrere Cache-Ebenen auf dem Chip, Betriebssysteme cachen Festplattenblöcke im Arbeitsspeicher, und ein Webbrowser legt die Bilder, Stylesheets und Skripte der besuchten Seiten auf der Festplatte ab. Beim nächsten Aufruf der Seite prüft der Browser, ob seine gespeicherte Kopie noch gültig ist – über Header wie „Cache-Control“ und „ETag“, die mit HTTP/1.1 im Januar 1997 kamen – und lädt nur, was sich geändert hat. Deshalb lädt eine Seite beim zweiten Mal schneller, und deshalb ist „Cache leeren“ der erste Rat in jedem Support-Forum, wenn sich eine Website seltsam verhält.\n\nDer Browser-Cache ist nur einer von mehreren Speichern, die ein Computer zwischen Ihnen und der Außenwelt unterhält, und jeder beantwortet eine andere Frage:\n\n| Begriff | Was gespeichert wird | Wo | Typische Lebensdauer |\n|---|---|---|---|\n| Cache | kürzlich geholte Daten zur schnellen Wiederverwendung | Prozessor, Festplatte, Browser | bis Platz gebraucht wird oder die Kopie abläuft |\n| Cookie | kleiner Texteintrag, den eine Website vom Browser aufbewahren lässt | Browser, pro Website | Sitzung oder festes Ablaufdatum |\n| RAM | die gerade genutzten Programme und Daten | Hauptspeicherchips | bis zum Ausschalten |\n| Zwischenablage | das zuletzt Kopierte oder Ausgeschnittene | Betriebssystem | bis zum nächsten Kopieren |\n| Proxy | stellvertretend weitergeleitete Anfragen, oft mit gemeinsamem Cache | Server zwischen Netzwerk und Internet | konfigurierbar |\n\nEin Cookie ist kein Cache: Im Juni 1994 von dem Netscape-Programmierer Lou Montulli erfunden, ist es eine Notiz, die der Server schreibt und die der Browser bei jeder späteren Anfrage an dieselbe Website zurückschickt – so merkt sich ein Shop den Warenkorb und bleibt ein Login aktiv, und so verfolgen Werbenetzwerke Besucher quer durchs Web, weshalb, seit 2011 EU-Regeln zur Cookie-Einwilligung gelten, jeden europäischen Nutzer Cookie-Banner begrüßen. RAM, Random-Access Memory, ist der Arbeitsspeicher der Maschine; er ist schnell und flüchtig und verliert beim Stromausfall alles, weshalb Dokumente auf die Festplatte gespeichert werden müssen. Seine erste praxistaugliche Form war die Williams-Röhre, die Frederic Williams und Tom Kilburn ab dem 11. Dezember 1946 zum Patent anmeldeten. Der erste handelsübliche DRAM-Chip, Intels 1103, erschien im Oktober 1970. Die Zwischenablage ist das Kurzzeitgedächtnis des Betriebssystems für Kopieren und Einfügen – Befehle, die Larry Tesler und seine Kollegen bei Xerox PARC ab 1974 in ihre Texteditoren einbauten – und hält nur den jüngsten Eintrag, sofern kein Zwischenablage-Manager sie erweitert. Und ein Proxy ist ein Server, der für viele Clients einspringt: Ein Firmen-Proxy holt Seiten aus dem Internet, filtert sie und hält einen gemeinsamen Cache, sodass der hundertste Mitarbeiter, der dieselbe Nachrichtenseite öffnet, sie aus der lokalen Kopie bekommt. Solche Web-Proxys gibt es seit April 1994, als Ari Luotonen und Kevin Altis den Proxy des CERN-Webservers und seinen neuen gemeinsamen Cache beschrieben.\n\nZusammen erklären diese Mechanismen das meiste von dem, was Computer schnell oder langsam wirken lässt. Der Cache ist der älteste Trick des Fachs, und er funktioniert, weil Mensch und Maschine eine Gewohnheit teilen: Was wir vor einem Moment benutzt haben, werden wir wahrscheinlich wieder benutzen.",
+ "bodyRu": "Кэш – это запас данных, который держат под рукой, чтобы не загружать их заново из более медленного или удалённого источника. Слово происходит от французского cacher – «прятать» – и сначала обозначало спрятанный склад провизии; в вычислительной технике его в 1968 году переняли для маленькой быстрой памяти, которую IBM поместила между процессором и основной памятью в своей System/360 Model 85. Принцип на любом уровне один и тот же: то, что понадобилось недавно, скорее всего, понадобится снова, поэтому держи копию поблизости. У процессоров есть несколько уровней кэша прямо на кристалле, операционные системы кэшируют блоки диска в оперативной памяти, а веб-браузер сохраняет на жёстком диске изображения, таблицы стилей и скрипты посещённых страниц. Когда вы открываете страницу в следующий раз, браузер проверяет, действительна ли ещё сохранённая копия, – с помощью заголовков вроде «Cache-Control» и «ETag», появившихся вместе с HTTP/1.1 в январе 1997 года, – и загружает только то, что изменилось. Поэтому страница во второй раз грузится быстрее, и поэтому «очистите кэш» – первый совет на любом форуме поддержки, когда сайт ведёт себя странно.\n\nКэш браузера – лишь одна из нескольких разновидностей памяти, которые компьютер держит между вами и внешним миром, и каждая отвечает на свой вопрос:\n\n| Термин | Что хранит | Где | Обычный срок жизни |\n|---|---|---|---|\n| кэш | недавно загруженные данные для быстрого повторного использования | процессор, диск, браузер | пока не понадобится место или копия не устареет |\n| cookie | небольшая текстовая запись, которую сайт просит браузер сохранить | браузер, для каждого сайта | сеанс или заданная дата истечения |\n| RAM | программы и данные, используемые в данный момент | микросхемы основной памяти | до выключения питания |\n| буфер обмена | последнее скопированное или вырезанное | операционная система | до следующего копирования |\n| прокси | запросы, пересылаемые от имени клиентов, часто с общим кэшем | сервер между сетью и интернетом | настраивается |\n\nCookie – не кэш: изобретённый программистом Netscape Лу Монтулли в июне 1994 года, это записка, которую пишет сервер и которую браузер отправляет обратно при каждом следующем запросе к тому же сайту; так магазин запоминает вашу корзину и сохраняется вход в учётную запись – и так рекламщики отслеживают посетителей по всему вебу, поэтому с тех пор, как в 2011 году вступили в силу правила ЕС о согласии на cookie, каждого европейского пользователя встречают cookie-баннеры. RAM (random-access memory, память с произвольным доступом) – это рабочая память машины; она быстрая и энергозависимая, теряет всё при отключении питания, поэтому документы нужно сохранять на диск. Её первой практичной формой была трубка Уильямса, на которую Фредерик Уильямс и Том Килберн подавали патентные заявки начиная с 11 декабря 1946 года. Первая коммерчески доступная микросхема DRAM, Intel 1103, появилась в октябре 1970 года. Буфер обмена – кратковременная память операционной системы для копирования и вставки – команд, которые Ларри Теслер и его коллеги из Xerox PARC встраивали в свои текстовые редакторы с 1974 года, – и хранит лишь последний элемент, если его не расширяет менеджер буфера обмена. А прокси – это сервер, который выступает за многих клиентов: корпоративный прокси получает страницы из интернета, фильтрует их и хранит общий кэш, так что сотый сотрудник, открывший тот же новостной сайт, получает его из локальной копии. Такие веб-прокси существуют с апреля 1994 года, когда Ари Луотонен и Кевин Олтис описали прокси веб-сервера ЦЕРН и его новый общий кэш.\n\nВместе эти механизмы объясняют большую часть того, почему компьютер кажется быстрым или медленным. Кэш – старейший приём ремесла, и он работает потому, что у человека и машины есть одна общая привычка: то, чем мы пользовались мгновение назад, мы, вероятно, используем снова.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Cache%2Cbasic.svg/330px-Cache%2Cbasic.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Cache_(computing)",
+   "width": 330,
+   "height": 144,
+   "alt": {
+    "en": "Diagram of a cache between a client and a backing store",
+    "de": "Schema eines Caches zwischen einem Client und einem Hintergrundspeicher",
+    "ru": "Схема кэша между клиентом и основным хранилищем"
+   },
+   "caption": {
+    "en": "The basic idea of a cache: requests are answered from a small, fast copy when possible, and only misses go on to the slower backing store.",
+    "de": "Das Grundprinzip eines Caches: Anfragen werden wenn möglich aus einer kleinen, schnellen Kopie beantwortet, und nur Fehltreffer gehen an den langsameren Hintergrundspeicher.",
+    "ru": "Основная идея кэша: запросы по возможности обслуживаются из маленькой быстрой копии, и лишь промахи уходят к более медленному основному хранилищу."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Williams_Tube_memory_TNMOC-CP.jpg/3840px-Williams_Tube_memory_TNMOC-CP.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Williams_tube",
+   "width": 3840,
+   "height": 2263,
+   "alt": {
+    "en": "A Williams tube memory unit",
+    "de": "Eine Speichereinheit mit Williams-Röhre",
+    "ru": "Блок памяти на трубке Уильямса"
+   },
+   "caption": {
+    "en": "A Williams tube, the first practical random-access memory: Frederic Williams and Tom Kilburn stored bits as charged spots on the face of a cathode-ray tube.",
+    "de": "Eine Williams-Röhre, der erste praxistaugliche Direktzugriffsspeicher: Frederic Williams und Tom Kilburn speicherten Bits als geladene Punkte auf dem Schirm einer Kathodenstrahlröhre.",
+    "ru": "Трубка Уильямса – первая практичная память с произвольным доступом: Фредерик Уильямс и Том Килберн хранили биты в виде заряженных точек на экране электронно-лучевой трубки."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Intel_C1103.jpg/3840px-Intel_C1103.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Intel_1103",
+   "width": 3840,
+   "height": 2560,
+   "alt": {
+    "en": "An Intel 1103 memory chip",
+    "de": "Ein Speicherchip Intel 1103",
+    "ru": "Микросхема памяти Intel 1103"
+   },
+   "caption": {
+    "en": "The Intel 1103 of October 1970, the first commercially available DRAM chip – the kind of RAM that later replaced magnetic-core memory.",
+    "de": "Der Intel 1103 vom Oktober 1970, der erste handelsübliche DRAM-Chip – jene Art RAM, die später den Magnetkernspeicher ablöste.",
+    "ru": "Intel 1103 (октябрь 1970 года) – первая коммерчески доступная микросхема DRAM, тот тип оперативной памяти, который позже вытеснил память на магнитных сердечниках."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f05936",
+   "answerEn": "cache",
+   "answerDe": "Cache",
+   "answerRu": "Кэш",
+   "spans": {
+    "en": [
+     2,
+     5
+    ],
+    "de": [
+     4,
+     5
+    ],
+    "ru": [
+     0,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1997-01",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "HTTP/1.1 is published as RFC 2068, with new headers for managing browser caches",
+    "labelDe": "HTTP/1.1 erscheint als RFC 2068, mit neuen Headern zur Steuerung von Browser-Caches",
+    "labelRu": "HTTP/1.1 публикуется как RFC 2068 с новыми заголовками для управления кэшем браузера"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HTTP",
+    "title": "HTTP – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05936",
+     "en": "What is the term for a temporary buffer memory, e.g. of a web browser?",
+     "de": "Wie lautet die Bezeichnung für einen Zwischenspeicher z. B. eines Webbrowsers?",
+     "ru": "Как называется промежуточная память, например веб-браузера?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c099",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f05937",
+   "answerEn": "cookie",
+   "answerDe": "Cookie",
+   "answerRu": "Cookie",
+   "spans": {
+    "en": [
+     1860,
+     6
+    ],
+    "de": [
+     2047,
+     6
+    ],
+    "ru": [
+     2014,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2011",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "EU rules requiring consent for cookies take effect – the origin of cookie banners",
+    "labelDe": "EU-Regeln zur Einwilligung in Cookies treten in Kraft – der Ursprung der Cookie-Banner",
+    "labelRu": "Вступают в силу правила ЕС о согласии на cookie – начало cookie-баннеров"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/HTTP_cookie",
+    "title": "HTTP cookie – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w14471",
+     "en": "In computing, what is the small piece of text information called that a visited website can store in the user's browser?",
+     "de": "Wie heißt in der EDV die kleine Textinformation, die eine besuchte Website im Browser des Benutzers speichern kann?",
+     "ru": "Как в информатике называется небольшая текстовая информация, которую посещённый сайт может сохранить в браузере пользователя?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-281",
+      "category": 5
+     },
+     "cardText": "In der EDV werden alle Textdateien als Cookie bezeichnet. Richtig oder falsch?"
+    }
+   ],
+   "retiredWordings": [
+    {
+     "id": "w05937",
+     "en": "What is the term for a small piece of text data that a website stores in the browser, for example to recognise a user or a shopping basket again?",
+     "de": "Wie lautet die Bezeichnung für eine kleine Textinformation, die eine Website im Browser ablegt, um etwa einen Nutzer oder einen Warenkorb wiederzuerkennen?",
+     "ru": "Как называется небольшая текстовая запись, которую сайт сохраняет в браузере, например чтобы снова узнать пользователя или его корзину?",
+     "origin": "generated",
+     "retired": {
+      "at": "2026-10-22",
+      "code": "superseded-by-print",
+      "reason": "Homebrew stand-in retired: trivial-pursuit card tp-281 asks the same question (w14471). Homebrew only covers facts no game prints.",
+      "replacedBy": [
+       "w14471"
+      ]
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f05938",
+   "answerEn": "RAM",
+   "answerDe": "RAM",
+   "answerRu": "RAM",
+   "spans": {
+    "en": [
+     2282,
+     3
+    ],
+    "de": [
+     2497,
+     3
+    ],
+    "ru": [
+     2488,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1946-12-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Williams and Kilburn file the patent for the Williams tube, the first practical random-access memory",
+    "labelDe": "Williams und Kilburn melden die Williams-Röhre zum Patent an, den ersten praxistauglichen Direktzugriffsspeicher",
+    "labelRu": "Уильямс и Килберн подают патентную заявку на трубку Уильямса – первую практичную память с произвольным доступом"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Williams_tube",
+    "title": "Williams tube – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05938",
+     "en": "What is the English abbreviation for a computer's volatile working memory, whose contents are lost when the power is switched off?",
+     "de": "Wie lautet die englische Abkürzung für den flüchtigen Arbeitsspeicher eines Computers, dessen Inhalt beim Ausschalten verloren geht?",
+     "ru": "Какой английской аббревиатурой обозначают энергозависимую рабочую память компьютера, содержимое которой теряется при выключении питания?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f05939",
+   "answerEn": "clipboard",
+   "answerDe": "Zwischenablage",
+   "answerRu": "Буфер обмена",
+   "spans": {
+    "en": [
+     2662,
+     9
+    ],
+    "de": [
+     2914,
+     14
+    ],
+    "ru": [
+     2924,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1974",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Larry Tesler’s team at Xerox PARC begins building cut, copy and paste into editors",
+    "labelDe": "Larry Teslers Team bei Xerox PARC baut Ausschneiden, Kopieren und Einfügen in Editoren ein",
+    "labelRu": "Команда Ларри Теслера в Xerox PARC начинает встраивать вырезание, копирование и вставку в редакторы"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cut,_copy,_and_paste",
+    "title": "Cut, copy, and paste – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05939",
+     "en": "What is the term for the storage area of an operating system in which copied or cut content is held until it is pasted?",
+     "de": "Wie lautet die Bezeichnung für den Speicherbereich eines Betriebssystems, in dem kopierte oder ausgeschnittene Inhalte bis zum Einfügen aufbewahrt werden?",
+     "ru": "Как называется область памяти операционной системы, в которой скопированное или вырезанное содержимое хранится до вставки?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f05940",
+   "answerEn": "proxy",
+   "answerDe": "Proxy",
+   "answerRu": "Прокси",
+   "spans": {
+    "en": [
+     2921,
+     5
+    ],
+    "de": [
+     3198,
+     5
+    ],
+    "ru": [
+     3202,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1994-04",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Luotonen and Altis describe the CERN web proxy with shared caching",
+    "labelDe": "Luotonen und Altis beschreiben den CERN-Web-Proxy mit gemeinsamem Cache",
+    "labelRu": "Луотонен и Олтис описывают веб-прокси ЦЕРН с общим кэшем"
+   },
+   "source": {
+    "url": "https://web.archive.org/web/20161009061935/http://courses.cs.vt.edu/~cs4244/spring.09/documents/Proxies.pdf",
+    "title": "Luotonen & Altis: World-Wide Web Proxies (CERN, April 1994)",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w05940",
+     "en": "What is the term for a server that forwards requests to the internet on behalf of clients and often caches content in the process?",
+     "de": "Wie lautet die Bezeichnung für einen Server, der stellvertretend für Clients Anfragen ins Internet weiterleitet und dabei oft Inhalte zwischenspeichert?",
+     "ru": "Как называется сервер, который пересылает запросы в интернет от имени клиентов и часто при этом кэширует содержимое?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing",
+  "audience:international"
+ ]
+}

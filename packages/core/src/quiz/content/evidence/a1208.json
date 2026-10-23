@@ -1,0 +1,289 @@
+{
+ "article": "a1208",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pantheism",
+   "title": "Pantheism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:18.601Z",
+   "snapshot": "d3b4b8a05d7314a543e036599f32e827fc8d24a5ba2b7f9301f1078659fab2fb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Panentheism",
+   "title": "Panentheism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:26.050Z",
+   "snapshot": "4ef27bfddc8d0d7e987dec3db31e2fa3c343b80338dcf9dfea86502fd51f0c09"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Age_of_Reason",
+   "title": "The Age of Reason – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:27.125Z",
+   "snapshot": "95805c20a1801e1119169262fa6b9516972f750d9aab16ee6b88e3f5dfbf2a35"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Akhenaten",
+   "title": "Akhenaten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:28.135Z",
+   "snapshot": "2c0d9f6a673b43b5e78b61a890805e5532882e971cfd297ae577aa4e597eddc8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Henry_Huxley",
+   "title": "Thomas Henry Huxley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:29.131Z",
+   "snapshot": "4c3da30a7dc1fb262b71af7078a1a6387c3f8fd15b772b0753f2217112a632d3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Agnosticism",
+   "title": "Agnosticism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:30.002Z",
+   "snapshot": "18fd49981397edaf492d4c879dba608414e10a703d772024e556a117894f86f5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pantheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "panentheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "deism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "monotheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "agnosticism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "agnosticism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-125"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:48.386Z",
+   "target": "f06036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pantheism is a diverse family of philosophical and religious beliefs that equate reality with divinity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pantheism” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:48.386Z",
+   "target": "f06037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Panentheism ( ; \"all in God\", from the Greek πᾶν, pân, 'all', ἐν, en, 'in' and Θεός, Theós, 'God') is the belief that the divine intersects every part of the universe and also extends beyond space and time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “panentheism” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:48.386Z",
+   "target": "f06038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Age of Reason; Being an Investigation of True and Fabulous Theology is a work by English and American political activist Thomas Paine, arguing for the philosophical position of deism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deism” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:48.386Z",
+   "target": "f06039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Public and scholarly fascination with Akhenaten comes from his connection with Tutankhamun, the unique style and high quality of the pictorial arts he patronized, and the religion he attempted to establish, foreshadowing monotheism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monotheism” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:48.386Z",
+   "target": "f06040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Huxley coined the term agnosticism in 1869 and elaborated on it in 1889 to frame the nature of claims in terms of what is knowable and what is not.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “agnosticism” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:48.386Z",
+   "target": "f06040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Agnosticism is a position that questions the existence of God or the divine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “agnosticism” is on the snapshot of s6"
+  }
+ ]
+}

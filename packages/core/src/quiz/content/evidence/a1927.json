@@ -1,0 +1,408 @@
+{
+ "article": "a1927",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2010_United_States_House_of_Representatives_elections",
+   "title": "2010 United States House of Representatives elections – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:59.599Z",
+   "snapshot": "8febad9a02fe47d41adb6069c439c464911b0b429318c32a7639f169c73af190"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/UK_Independence_Party",
+   "title": "UK Independence Party – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:00.783Z",
+   "snapshot": "d3cd536ac8abf1fb07d149fd9e8f0af808829c2acf089ffa1e00390df687e0b5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Five_Star_Movement",
+   "title": "Five Star Movement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:01.650Z",
+   "snapshot": "c399ddfcf0f661fa7119f826a5e82fe43744913e017754354b633e87dc3e142c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pegida",
+   "title": "Pegida – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:30:59.906Z",
+   "snapshot": "2bdd78706df5da349512c2b390b7a122cd034b62131667fc1fbd25d1a0d828fe"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Populism",
+   "title": "Populism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:02.774Z",
+   "snapshot": "cae05cc287d98f48cc22a2be297d1a1dc3b1a75df831494f299707179822e4ff"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/FreedomWorks",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:03.576Z",
+   "snapshot": "ea6047b65282afdfad9fb93d480b1cb272bbf7e620657bf499da742a4abfe512"
+  },
+  "s7": {
+   "url": "https://www.newyorker.com/magazine/2010/08/30/covert-operations",
+   "title": "Covert Operations – The New Yorker (Jane Mayer, 2010)",
+   "publisher": "The New Yorker",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:27.374Z",
+   "snapshot": "c26658b802c52d540e75a9c4f345b87bc725e1fd86a4dc14da10f6a50616a915"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Tea_Party_movement",
+   "title": "Tea Party movement – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:26:13Z"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Koch_Industries",
+   "title": "Koch Industries – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:27.935Z",
+   "snapshot": "5f218861e88ad867a76018c1cb464242f37bf6a1ac96aa19fe1428465eeb1b1f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tea Party movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09633",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "UKIP",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Five Star Movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pegida",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Populism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-035"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:47.021Z",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tea Party movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tea Party movement”, “Tea-Party-Bewegung”, “движение чаепития”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:47.021Z",
+   "target": "f09633",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The UK Independence Party (UKIP   YOO-kip) is a far-right Christian nationalist political party in the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “UKIP” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:47.021Z",
+   "target": "f09634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Five Star Movement (Italian: Movimento 5 Stelle [moviˈmento ˈtʃiŋkwe ˈstelle], M5S) is a political party in Italy, led by Giuseppe Conte.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Five Star Movement” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:47.021Z",
+   "target": "f09635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pegida, kurz für Patriotische Europäer gegen die Islamisierung des Abendlandes (Akronym: PEGIDA), war eine islam- und fremdenfeindliche, völkische, rassistische und rechtsextreme Organisation.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pegida” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:47.021Z",
+   "target": "f25466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Populism is a contested concept for a variety of political stances that emphasise the idea of the \"common people\", often in opposition to a perceived elite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Populism” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:26:10Z",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "By giving money to “educate,” fund, and organize Tea Party protesters, they have helped turn their private agenda into a mass movement.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Koch companies denied funding the Tea Party directly (same article); 'largely financed' is the card's framing — the answer itself is not in doubt."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:26:13Z",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Journalist Jane Mayer has said that the Koch brothers were essential in funding and strengthening the movement, through groups such as Americans for Prosperity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:26:15Z",
+   "target": "f09631",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is the second-largest privately held company in the United States, after Cargill.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:38.069Z",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "By giving money to “educate,” fund, and organize Tea Party protesters, they have helped turn their private agenda into a mass movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.069Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:38.069Z",
+   "target": "f09631",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is the second-largest privately held company in the United States, after Cargill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.069Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:38.069Z",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Many of the ideas propounded in the 1980 campaign presaged the Tea Party movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:38.069Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tea Party movement” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:38.069Z",
+   "target": "f09631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tea Party movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“Tea Party movement”, “Tea-Party-Bewegung”, “движение чаепития”) on the snapshot of s9"
+  }
+ ]
+}

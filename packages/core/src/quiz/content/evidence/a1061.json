@@ -1,0 +1,480 @@
+{
+ "article": "a1061",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/WPA_World_Eight-ball_Championship",
+   "title": "WPA World Eight-ball Championship – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:17.654Z",
+   "snapshot": "c2bbed2b5f087bf7e752dbb01b424e4d41717582954e68b5985d46bcf65437cf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/World_Pool_Association",
+   "title": "World Pool Association – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:19.293Z",
+   "snapshot": "b32a3f664a47d47fde2fef19d8197e884564577375b7f42ca0a3577a629d58b8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mosconi_Cup",
+   "title": "Mosconi Cup – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:19.634Z",
+   "snapshot": "3dda221c0e57ee687a4731b5240a644bedede794e24ce4255161806e59fdd98b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/WPA_World_Nine-ball_Championship",
+   "title": "WPA World Nine-ball Championship – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:20.587Z",
+   "snapshot": "742f7e99b417176ab399c90c83dc980c9d74b4883f3a59a720fb832bd10e8e13"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nine-ball",
+   "title": "Nine-ball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:03.688Z",
+   "snapshot": "c30dbf9791da7a8ddba064ed4677794286cfcb6611af8b39798779dd35db1b23"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Eight-ball",
+   "title": "Eight-ball",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:48:15Z"
+  },
+  "s7": {
+   "url": "https://wpapool.com/wp-content/uploads/2026/10/WPA-Rules-2026-10-21-211.pdf",
+   "title": "WPA Rules of Play (21 October 2026)",
+   "publisher": "World Pool-Billiard Association",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:48:16Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in the middle of the third row",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "on the foot spot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the 1-ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the 9-ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "diamond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:26.784Z",
+   "target": "f05301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in the middle of the third row",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“in the middle of the third row”, “in der Mitte der dritten Reihe”, “в середине третьего ряда”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:26.784Z",
+   "target": "f05302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "on the foot spot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“on the foot spot”, “auf dem Fußpunkt”, “на задней отметке”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:26.784Z",
+   "target": "f05303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the 1-ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the 1-ball”, “die Kugel 1”, “шар 1”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:26.784Z",
+   "target": "f05304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the 9-ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the 9-ball”, “die Kugel 9”, “шар 9”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:26.784Z",
+   "target": "f05305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The object balls are placed in a diamond-shaped configuration, with the 1 ball positioned at the front, and the 9 ball placed in the center on the foot spot, although some tournaments may rack with the 1 ball on the foot spot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.784Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diamond” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:48:15Z",
+   "target": "f05301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "which must be placed in the center of the rack (i.e., the middle of the third row)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:48:16Z",
+   "target": "f05301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "ball that is directly below the apex ball",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23",
+   "note": "rule 4.2: the 8-ball is the first ball directly below the apex ball, i.e. the middle of the third row"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:48:17Z",
+   "target": "f05302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "with the apex ball on the Foot Spot",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:48:18Z",
+   "target": "f05302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "positioned so the apex ball of the rack is located on the foot spot",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:48:19Z",
+   "target": "f05303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "with the 1-ball at the apex of the",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23",
+   "note": "rule 5.2: 1-ball at the apex of the diamond towards the head of the table, 9-ball in the middle and on the foot spot"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:48:21Z",
+   "target": "f05303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with the 1 ball positioned at the front, and the 9 ball placed in the center on the foot spot",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:48:22Z",
+   "target": "f05304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with the 1 ball positioned at the front, and the 9 ball placed in the center on the foot spot",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:48:23Z",
+   "target": "f05304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "and the 9-ball in the middle of the diamond and on the Foot",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:02.373Z",
+   "target": "f05303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with the 1 ball positioned at the front, and the 9 ball placed in the center on the foot spot",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:02.373Z",
+   "target": "f05304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with the 1 ball positioned at the front, and the 9 ball placed in the center on the foot spot",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:02.373Z",
+   "target": "f05303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The object balls are placed in a diamond-shaped configuration, with the 1 ball positioned at the front, and the 9 ball placed in the center on the foot spot, although some tournaments may rack with the 1 ball on the foot spot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the 1-ball” is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:02.373Z",
+   "target": "f05304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An individual game (or rack) is won by the player pocketing the 9 ball.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:02.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the 9-ball” is on the snapshot of s5"
+  }
+ ]
+}

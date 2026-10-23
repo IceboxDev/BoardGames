@@ -1,0 +1,373 @@
+{
+ "id": "a0837",
+ "domain": "science",
+ "sub": "maths",
+ "titleEn": "The Map of Mathematics: Five Branches and What They Study",
+ "titleDe": "Die Landkarte der Mathematik: Fünf Teilgebiete und was sie untersuchen",
+ "titleRu": "Карта математики: пять разделов и что они изучают",
+ "bodyEn": "Mathematics is not one subject but a federation of them. A modern university course splits the field into a dozen or more branches, each with its own objects, questions and famous problems. Five of them turn up again and again – in school, in engineering, in computer science and in quiz questions.\n\n**Number theory**, the oldest of the five, studies the integers – whole numbers and their negatives – and above all the prime numbers, which can be divided only by 1 and themselves. Euclid proved around 300 BC, in his „Elements“, that there are infinitely many primes; Fermat, Euler and Gauss built the modern theory between the seventeenth and the early nineteenth century, and Gauss called it \"the queen of mathematics\". For two thousand years it had no practical use at all. Then, in the 1970s, cryptographers discovered that the difficulty of factoring large numbers into primes could protect bank transfers and e-mails, and number theory became the basis of internet security.\n\n**Linear algebra** deals with vectors, matrices and systems of linear equations. A system of equations with many unknowns can be written as a single matrix equation and solved with the method that Gauss again gave his name to, Gaussian elimination. Matrices themselves became objects of calculation when Arthur Cayley, in his 1858 memoir on the theory of matrices, set out matrix multiplication and the inverse matrix. Because almost anything – a rotation in space, a colour, a neural network, a Google search ranking – can be represented as a matrix, linear algebra is the workhorse of computer graphics, physics and machine learning.\n\n**Combinatorics** is the art of counting: it deals with counting, arranging and selecting elements of finite sets. How many ways can six people sit at a round table? How many five-card hands can be dealt from 52 cards? Its basic tools – permutations, combinations and the binomial coefficients of Pascal's triangle – are the foundation on which probability is built; Pascal's „Treatise on the Arithmetical Triangle“ was published posthumously in 1665.\n\nWhich brings us to **stochastics**, the umbrella term that covers both probability theory and statistics. Probability theory, founded by Pascal and Fermat in 1654 in letters about gambling and made rigorous by Kolmogorov in 1933, describes random processes mathematically: dice, coin tosses, the decay of atoms, the movement of share prices. Statistics goes the other way, drawing conclusions about the world from observed data. German schools and universities group the two under the single heading \"Stochastik\", from the Greek *stochazesthai*, \"to aim at\" or \"to guess\".\n\n**Topology**, the last of the five, studies those properties of geometric objects that survive continuous deformation – stretching, bending and twisting, but not tearing or gluing. To a topologist a coffee mug and a doughnut are the same object – homeomorphic – since each has exactly one hole: the mug's handle can be squeezed and stretched into the doughnut's ring without cutting or gluing. A bowl, with no hole at all, is topologically different from both and belongs with a ball instead. That is why topology is nicknamed \"rubber-sheet geometry\". The subject began with Euler's puzzle of the seven bridges of Königsberg in 1736 and with Möbius's one-sided strip; its most famous problem, the Poincaré conjecture, was solved by Grigori Perelman in 2003.\n\n| Branch | Objects | Founding figures |\n|---|---|---|\n| Number theory | integers, primes | Euclid, Fermat, Gauss |\n| Linear algebra | vectors, matrices | Gauss, Cayley |\n| Combinatorics | finite arrangements | Pascal, Euler |\n| Stochastics | probability, statistics | Pascal, Fermat, Kolmogorov |\n| Topology | shapes under deformation | Euler, Möbius, Poincaré |",
+ "bodyDe": "Mathematik ist nicht ein Fach, sondern ein Bund von Fächern. Ein modernes Universitätsstudium teilt das Gebiet in ein Dutzend oder mehr Teilgebiete, jedes mit eigenen Objekten, Fragen und berühmten Problemen. Fünf davon tauchen immer wieder auf – in der Schule, im Ingenieurwesen, in der Informatik und in Quizfragen.\n\nDie **Zahlentheorie**, das älteste der fünf, untersucht die ganzen Zahlen – natürliche Zahlen und ihre negativen Gegenstücke – und vor allem die Primzahlen, die nur durch 1 und sich selbst teilbar sind. Euklid bewies um 300 v. Chr. in seinen „Elementen“, dass es unendlich viele Primzahlen gibt; Fermat, Euler und Gauß bauten zwischen dem 17. und dem frühen 19. Jahrhundert die moderne Theorie auf, und Gauß nannte sie „die Königin der Mathematik“. Zweitausend Jahre lang hatte sie überhaupt keinen praktischen Nutzen. Dann entdeckten Kryptografen in den 1970er-Jahren, dass die Schwierigkeit, große Zahlen in Primfaktoren zu zerlegen, Banküberweisungen und E-Mails schützen kann, und die Zahlentheorie wurde zur Grundlage der Sicherheit im Internet.\n\nDie **Lineare Algebra** befasst sich mit Vektoren, Matrizen und linearen Gleichungssystemen. Ein Gleichungssystem mit vielen Unbekannten lässt sich als eine einzige Matrixgleichung schreiben und mit dem Verfahren lösen, dem Gauß abermals seinen Namen gab, dem Gauß-Verfahren. Zu eigenständigen Rechenobjekten wurden Matrizen, als Arthur Cayley 1858 in seiner Abhandlung über die Theorie der Matrizen die Matrizenmultiplikation und die inverse Matrix darlegte. Weil sich fast alles – eine Drehung im Raum, eine Farbe, ein neuronales Netz, ein Google-Ranking – als Matrix darstellen lässt, ist die Lineare Algebra das Arbeitspferd von Computergrafik, Physik und maschinellem Lernen.\n\nDie **Kombinatorik** ist die Kunst des Zählens: Sie beschäftigt sich mit dem Abzählen, Anordnen und Auswählen von Elementen endlicher Mengen. Auf wie viele Arten können sechs Personen an einem runden Tisch sitzen? Wie viele Fünf-Karten-Blätter lassen sich aus 52 Karten geben? Ihre Grundwerkzeuge – Permutationen, Kombinationen und die Binomialkoeffizienten des Pascalschen Dreiecks – sind das Fundament, auf dem die Wahrscheinlichkeitsrechnung ruht; Pascals „Traité du triangle arithmétique“ erschien 1665 postum.\n\nWomit wir bei der **Stochastik** wären, dem Oberbegriff, der Wahrscheinlichkeitstheorie und Statistik zusammenfasst. Die Wahrscheinlichkeitstheorie, 1654 von Pascal und Fermat in Briefen über das Glücksspiel begründet und 1933 von Kolmogorow streng axiomatisiert, beschreibt Zufallsprozesse mathematisch: Würfel, Münzwürfe, den Zerfall von Atomen, die Bewegung von Aktienkursen. Die Statistik geht den umgekehrten Weg und zieht aus beobachteten Daten Schlüsse über die Welt. Deutsche Schulen und Universitäten fassen beide unter der einen Überschrift „Stochastik“ zusammen, vom griechischen *stochazesthai*, „zielen“ oder „vermuten“.\n\nDie **Topologie**, das letzte der fünf, untersucht jene Eigenschaften geometrischer Objekte, die stetige Verformungen überstehen – Dehnen, Biegen und Verdrehen, aber nicht Zerreißen oder Zusammenkleben. Für einen Topologen sind eine Kaffeetasse mit Henkel und ein Donut dasselbe Objekt – homöomorph –, da beide genau ein Loch haben: Der Henkel der Tasse lässt sich ohne Schneiden oder Kleben zum Ring des Donuts quetschen und dehnen. Eine Schüssel ohne jedes Loch ist dagegen von beiden topologisch verschieden und gehört zur Kugel. Deshalb nennt man die Topologie auch „Gummituchgeometrie“. Das Fach begann mit Eulers Rätsel der sieben Brücken von Königsberg 1736 und mit Möbius' einseitigem Band; sein berühmtestes Problem, die Poincaré-Vermutung, löste Grigori Perelman 2003.\n\n| Teilgebiet | Objekte | Gründerfiguren |\n|---|---|---|\n| Zahlentheorie | ganze Zahlen, Primzahlen | Euklid, Fermat, Gauß |\n| Lineare Algebra | Vektoren, Matrizen | Gauß, Cayley |\n| Kombinatorik | endliche Anordnungen | Pascal, Euler |\n| Stochastik | Wahrscheinlichkeit, Statistik | Pascal, Fermat, Kolmogorow |\n| Topologie | Formen unter Verformung | Euler, Möbius, Poincaré |",
+ "bodyRu": "Математика — не один предмет, а целая федерация предметов. Современный университетский курс делит её на дюжину или больше разделов, у каждого из которых свои объекты, вопросы и знаменитые задачи. Пять из них встречаются снова и снова — в школе, в инженерном деле, в информатике и в вопросах викторин.\n\n**Теория чисел**, старейший из пяти разделов, изучает целые числа — натуральные числа, ноль и отрицательные числа — и прежде всего простые числа, которые делятся только на 1 и на самих себя. Около 300 года до н. э. Евклид доказал в своих «Началах», что простых чисел бесконечно много; Ферма, Эйлер и Гаусс построили современную теорию между XVII и началом XIX века, и Гаусс назвал её «царицей математики». Две тысячи лет она не имела вообще никакого практического применения. Затем, в 1970-х годах, криптографы обнаружили, что трудность разложения больших чисел на простые множители может защищать банковские переводы и электронную почту, и теория чисел стала основой интернет-безопасности.\n\n**Линейная алгебра** занимается векторами, матрицами и системами линейных уравнений. Систему уравнений со многими неизвестными можно записать в виде одного матричного уравнения и решить методом, которому Гаусс опять-таки дал своё имя, — методом Гаусса. Сами матрицы стали объектами вычислений, когда Артур Кэли в своём «Мемуаре о теории матриц» 1858 года изложил умножение матриц и обратную матрицу. Поскольку почти всё — поворот в пространстве, цвет, нейронную сеть, ранжирование поиска Google — можно представить матрицей, линейная алгебра стала рабочей лошадкой компьютерной графики, физики и машинного обучения.\n\n**Комбинаторика** — это искусство счёта: она занимается подсчётом, упорядочиванием и выбором элементов конечных множеств. Сколькими способами шесть человек могут сесть за круглый стол? Сколько разных раздач по пять карт можно получить из колоды в 52 карты? Её основные инструменты — перестановки, сочетания и биномиальные коэффициенты треугольника Паскаля — служат фундаментом, на котором построена теория вероятностей; «Трактат об арифметическом треугольнике» Паскаля вышел посмертно в 1665 году.\n\nЭто подводит нас к следующему разделу. **Стохастика** — общее понятие, охватывающее и теорию вероятностей, и статистику. Теория вероятностей, основанная Паскалем и Ферма в 1654 году в письмах об азартных играх и строго аксиоматизированная Колмогоровым в 1933 году, математически описывает случайные процессы: игральные кости, подбрасывание монеты, распад атомов, движение курсов акций. Статистика идёт обратным путём и делает выводы о мире по наблюдаемым данным. Немецкие школы и университеты объединяют обе дисциплины под одним заголовком «Stochastik», от греческого *stochazesthai* — «целиться» или «угадывать».\n\n**Топология**, последний из пяти разделов, изучает те свойства геометрических объектов, которые сохраняются при непрерывной деформации — растяжении, изгибании и скручивании, но не при разрывании или склеивании. Для тополога кофейная кружка и бублик — один и тот же объект, они гомеоморфны, потому что у каждого ровно одно отверстие: ручку кружки можно сжать и растянуть в кольцо бублика, ничего не разрезая и не склеивая. Миска же, у которой нет ни одного отверстия, топологически отличается от них обоих и относится к одному классу с шаром. Поэтому топологию в шутку называют «геометрией на резиновом листе». Начало предмету положили задача Эйлера о семи кёнигсбергских мостах 1736 года и односторонняя лента Мёбиуса; её самую знаменитую задачу, гипотезу Пуанкаре, решил Григорий Перельман в 2003 году.\n\n| Раздел | Объекты | Основатели |\n|---|---|---|\n| Теория чисел | целые числа, простые числа | Евклид, Ферма, Гаусс |\n| Линейная алгебра | векторы, матрицы | Гаусс, Кэли |\n| Комбинаторика | конечные расстановки | Паскаль, Эйлер |\n| Стохастика | вероятность, статистика | Паскаль, Ферма, Колмогоров |\n| Топология | формы при деформации | Эйлер, Мёбиус, Пуанкаре |",
+ "notesEn": "Any other hole-free vessel without a handle, such as a plate, is topologically like the bowl too; the card means the bowl.",
+ "notesDe": "Auch jedes andere lochlose Gefäß ohne Henkel, etwa ein Teller, ist topologisch wie die Schüssel; die Karte meint die Schüssel.",
+ "notesRu": "Любая другая посуда без отверстий и ручки, например тарелка, топологически тоже подобна миске; на карточке имеется в виду миска.",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/M%C3%B6bius_Strip.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/M%C3%B6bius_strip",
+   "width": 2000,
+   "height": 1240,
+   "alt": {
+    "en": "A paper Möbius strip",
+    "de": "Ein Möbiusband aus Papier",
+    "ru": "Бумажная лента Мёбиуса"
+   },
+   "caption": {
+    "en": "A Möbius strip: a band with a half-twist that has only one side and one edge – one of the founding objects of topology, which studies properties that survive stretching and bending.",
+    "de": "Ein Möbiusband: ein Streifen mit einer halben Drehung, der nur eine Seite und eine Kante hat – eines der Gründungsobjekte der Topologie, die Eigenschaften untersucht, die Dehnen und Biegen überstehen.",
+    "ru": "Лента Мёбиуса: полоса с полуоборотом, у которой лишь одна сторона и один край, — один из основополагающих объектов топологии, изучающей свойства, сохраняющиеся при растяжении и изгибании."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f04181",
+   "answerEn": "Stochastics",
+   "answerDe": "Stochastik",
+   "answerRu": "стохастика",
+   "spans": {
+    "en": [
+     2094,
+     11
+    ],
+    "de": [
+     2289,
+     10
+    ],
+    "ru": [
+     2151,
+     10
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1654",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pascal and Fermat found probability theory in letters on gambling",
+    "labelDe": "Pascal und Fermat begründen in Briefen über das Glücksspiel die Wahrscheinlichkeitstheorie",
+    "labelRu": "Паскаль и Ферма основывают теорию вероятностей в письмах об азартных играх"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Problem_of_points",
+    "title": "Problem of points – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04181",
+     "en": "Which branch of mathematics serves as the umbrella term covering the fields of probability theory and statistics?",
+     "de": "Welches Teilgebiet der Mathematik fasst als Oberbegriff die Gebiete Wahrscheinlichkeitstheorie und Statistik zusammen?",
+     "ru": "Какой раздел математики служит общим понятием, охватывающим теорию вероятностей и статистику?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c070",
+      "category": 9
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q1071239",
+     "label": "stochastic",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04182",
+   "answerEn": "Number theory",
+   "answerDe": "Zahlentheorie",
+   "answerRu": "теория чисел",
+   "spans": {
+    "en": [
+     302,
+     13
+    ],
+    "de": [
+     325,
+     13
+    ],
+    "ru": [
+     304,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "-300",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Euclid proves in the „Elements“ that there are infinitely many primes",
+    "labelDe": "Euklid beweist in den „Elementen“, dass es unendlich viele Primzahlen gibt",
+    "labelRu": "Евклид доказывает в «Началах», что простых чисел бесконечно много"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Euclid%27s_theorem",
+    "title": "Euclid's theorem – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04182",
+     "en": "Which branch of mathematics deals with the properties of the integers, in particular the prime numbers?",
+     "de": "Welches Teilgebiet der Mathematik beschäftigt sich mit den Eigenschaften der ganzen Zahlen, insbesondere der Primzahlen?",
+     "ru": "Какой раздел математики занимается свойствами целых чисел, в особенности простых?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q12479",
+     "label": "number theory",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04183",
+   "answerEn": "Topology",
+   "answerDe": "Topologie",
+   "answerRu": "топология",
+   "spans": {
+    "en": [
+     2649,
+     8
+    ],
+    "de": [
+     2910,
+     9
+    ],
+    "ru": [
+     2727,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1736",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Euler solves the Seven Bridges of Königsberg",
+    "labelDe": "Euler löst das Königsberger Brückenproblem",
+    "labelRu": "Эйлер решает задачу о семи кёнигсбергских мостах"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg",
+    "title": "Seven Bridges of Königsberg – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04183",
+     "en": "Which branch of mathematics studies properties of geometric objects that are preserved under continuous deformations such as stretching or bending?",
+     "de": "Welches Teilgebiet der Mathematik untersucht Eigenschaften geometrischer Objekte, die unter stetigen Verformungen wie Dehnen oder Verbiegen erhalten bleiben?",
+     "ru": "Какой раздел математики изучает свойства геометрических объектов, сохраняющиеся при непрерывных деформациях, таких как растяжение или изгибание?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q42989",
+     "label": "topology",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04184",
+   "answerEn": "Linear algebra",
+   "answerDe": "Lineare Algebra",
+   "answerRu": "линейная алгебра",
+   "spans": {
+    "en": [
+     985,
+     14
+    ],
+    "de": [
+     1077,
+     15
+    ],
+    "ru": [
+     996,
+     16
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1858",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Arthur Cayley's memoir on the theory of matrices sets out matrix multiplication and the inverse matrix",
+    "labelDe": "Arthur Cayleys Abhandlung über die Theorie der Matrizen legt Matrizenmultiplikation und inverse Matrix dar",
+    "labelRu": "«Мемуар о теории матриц» Артура Кэли излагает умножение матриц и обратную матрицу"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Matrix_(mathematics)",
+    "title": "Matrix (mathematics) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04184",
+     "en": "Which branch of mathematics deals with vectors, matrices and systems of linear equations?",
+     "de": "Welches Teilgebiet der Mathematik befasst sich mit Vektoren, Matrizen und linearen Gleichungssystemen?",
+     "ru": "Какой раздел математики занимается векторами, матрицами и системами линейных уравнений?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q82571",
+     "label": "linear algebra",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04185",
+   "answerEn": "Combinatorics",
+   "answerDe": "Kombinatorik",
+   "answerRu": "комбинаторика",
+   "spans": {
+    "en": [
+     1622,
+     13
+    ],
+    "de": [
+     1759,
+     12
+    ],
+    "ru": [
+     1613,
+     13
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1665",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pascal's „Treatise on the Arithmetical Triangle“ is published",
+    "labelDe": "Pascals „Traité du triangle arithmétique“ erscheint",
+    "labelRu": "Выходит «Трактат об арифметическом треугольнике» Паскаля"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pascal%27s_triangle",
+    "title": "Pascal's triangle – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04185",
+     "en": "Which branch of mathematics deals with counting, arranging and selecting elements of finite sets?",
+     "de": "Welches Teilgebiet der Mathematik beschäftigt sich mit dem Abzählen, Anordnen und Auswählen von Elementen endlicher Mengen?",
+     "ru": "Какой раздел математики занимается подсчётом, упорядочиванием и выбором элементов конечных множеств?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q76592",
+     "label": "combinatorics",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f25398",
+   "answerEn": "Bowl",
+   "answerDe": "Schüssel",
+   "answerRu": "миска",
+   "spans": {
+    "en": [
+     3043,
+     4
+    ],
+    "de": [
+     3343,
+     8
+    ],
+    "ru": [
+     3147,
+     5
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1895",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Henri Poincaré publishes Analysis Situs, a founding paper of topology; he named the notion of homeomorphism",
+    "labelDe": "Henri Poincaré veröffentlicht „Analysis Situs“, eine Gründungsschrift der Topologie; von ihm stammt der Begriff Homöomorphismus",
+    "labelRu": "Анри Пуанкаре публикует «Analysis Situs», одну из основополагающих работ топологии; ему принадлежит понятие гомеоморфизма"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Homeomorphism",
+    "title": "Homeomorphism",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w24760",
+     "en": "A donut and a coffee mug are topologically the same, since each has exactly one hole. Which hole-less kitchen vessel, used for soup or cereal, is topologically different from both?",
+     "de": "Ein Donut und eine Kaffeetasse sind topologisch dasselbe, da beide genau ein Loch haben. Welches lochlose Küchengefäß für Suppe oder Müsli ist topologisch von beiden verschieden?",
+     "ru": "Бублик и кофейная кружка топологически одинаковы: у каждого ровно одно отверстие. Какая посуда без отверстий, из которой едят суп или хлопья, топологически отличается от них обоих?",
+     "origin": "printed",
+     "printed": {
+      "source": "publish-or-perish",
+      "card": "pp-068",
+      "category": 1
+     },
+     "cardText": "[Mathematics] Which of the following is topologically different from the other two?\nA. A donut  B. A bowl  C. A coffee mug\nAnswer: B. In topology, a donut and a coffee mug are considered topologically equivalent (or homeomorphic) because they both have one hole. This concept is part of the “rubber sheet geometry” of topology, where shapes can be stretched and bent without cutting or gluing."
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:mathematics/concepts",
+  "audience:international"
+ ]
+}

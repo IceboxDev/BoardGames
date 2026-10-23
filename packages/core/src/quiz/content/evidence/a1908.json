@@ -1,0 +1,249 @@
+{
+ "article": "a1908",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Breitbart_News",
+   "title": "Breitbart News – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:34.702Z",
+   "snapshot": "dc5f68aa90e84d3c6e6a9a72345c5d46c886a7603e4773db87267de39a267621"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/HuffPost",
+   "title": "HuffPost – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:35.596Z",
+   "snapshot": "1eb1a084e43ce994b7a7d8d8da148a22b49c1964932833f636ce0e3d25553b17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal",
+   "title": "Clinton–Lewinsky scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:36.656Z",
+   "snapshot": "167c4063a19011e8c7c236cdb8a0a5b77cab730a310f5730a296a2eb03abc25d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/BuzzFeed",
+   "title": "BuzzFeed – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:37.701Z",
+   "snapshot": "89d9229bd6d2ad13738ed7a176b8dee9983ebc94858b55e639b9adbdc90f5fc0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Politico",
+   "title": "Politico – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:38.547Z",
+   "snapshot": "10443aeb4467e8e14892491098ca2e1d0b040b96fb0615d2485a18853cab3ba5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Matt_Drudge",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:39.533Z",
+   "snapshot": "f60cb576d6417fad8557d25697661b3010a98e2e009d02ebe9c3b878ce2e8339"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breitbart News",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Huffington Post",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Drudge Report",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "BuzzFeed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Politico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:43.113Z",
+   "target": "f09536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breitbart News Network ( BRYTE-bart; known commonly as Breitbart News, Breitbart, or Breitbart.com) is an American far-right news, opinion, and commentary website founded in 2007 by American conservative commentator Andrew Breitbart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breitbart News” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:43.113Z",
+   "target": "f09537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "HuffPost (The Huffington Post until 2017, itself often abbreviated as HuffPo), a division of Buzzfeed, is a United States progressive news website, with localized and international editions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Huffington Post” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:43.113Z",
+   "target": "f09538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "News of the scandal first broke on January 17, 1998, on the Drudge Report, which reported that Newsweek editors were sitting on a story by investigative reporter Michael Isikoff exposing the affair.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Drudge Report” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:43.113Z",
+   "target": "f09539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Based in New York City, BuzzFeed was founded in 2006 by Jonah Peretti and John S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BuzzFeed” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:43.113Z",
+   "target": "f09540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Politico (stylized as POLITICO in all caps), known originally as The Politico, is an American political digital newspaper company founded by American banker and media executive Robert Allbritton in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.113Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Politico” is on the snapshot of s5"
+  }
+ ]
+}

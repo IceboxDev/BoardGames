@@ -15,6 +15,8 @@ export interface InfoLine {
   readonly bound: boolean;
   readonly nodes: number | null;
   readonly nps: number | null;
+  /** How full the hash table is, per mille. */
+  readonly hashfull: number | null;
   readonly timeMs: number | null;
   readonly pv: readonly string[];
   /** Win/draw/loss per mille, side to move (`UCI_ShowWDL`). */
@@ -42,10 +44,56 @@ export function parseInfo(line: string): InfoLine | null {
     bound: / (lowerbound|upperbound)/.test(line),
     nodes: num(line, "nodes"),
     nps: num(line, "nps"),
+    hashfull: num(line, "hashfull"),
     timeMs: num(line, "time"),
     pv,
     wdl: wdl ? [Number(wdl[1]), Number(wdl[2]), Number(wdl[3])] : null,
   };
+}
+
+/** A running search's progress, for a long search's log line. */
+export interface SearchProgress {
+  /** The deepest exact depth so far, and when it was reached. */
+  depth: number;
+  depthAt: number;
+  readonly startedAt: number;
+  /** The latest score line, a fail-high/low guess included, and when it came. */
+  latest: InfoLine | null;
+  latestAt: number;
+  /** Fail-high/low lines since the depth last went up: the root move keeps changing. */
+  bounds: number;
+  /** The root move being searched (`currmove`, after the first seconds) and its number. */
+  currmove: string | null;
+  currmoveNumber: number | null;
+}
+
+const hoursText = (ms: number) => `${(ms / 3_600_000).toFixed(1)} h`;
+
+/**
+ * One line on a running search: `d48 (6.1 h at it, sel 71) after 77.9 h ·
+ * 2.4e+11 nodes 0.9 Mn/s · hash 100% · e2e4 +0.31 · 3 fail-high/low · root move 5
+ * c2c3 · engine last spoke 4 min ago`.
+ */
+export function progressText(p: SearchProgress, now: number): string {
+  const l = p.latest;
+  const parts = [
+    `d${p.depth} (${hoursText(now - p.depthAt)} at it${l?.seldepth ? `, sel ${l.seldepth}` : ""}) after ${hoursText(now - p.startedAt)}`,
+  ];
+  if (l?.nodes != null)
+    parts.push(
+      `${l.nodes.toExponential(1)} nodes${l.nps != null ? ` ${(l.nps / 1e6).toFixed(1)} Mn/s` : ""}`,
+    );
+  if (l?.hashfull != null) parts.push(`hash ${Math.round(l.hashfull / 10)}%`);
+  if (l?.pv[0]) {
+    const score = l.mate !== null ? `#${l.mate}` : l.cp !== null ? (l.cp / 100).toFixed(2) : "?";
+    parts.push(
+      `${l.pv[0]} ${score.startsWith("-") || score.startsWith("#") ? score : `+${score}`}`,
+    );
+  }
+  if (p.bounds > 0) parts.push(`${p.bounds} fail-high/low`);
+  if (p.currmove) parts.push(`root move ${p.currmoveNumber ?? "?"} ${p.currmove}`);
+  parts.push(`engine last spoke ${Math.round((now - p.latestAt) / 60_000)} min ago`);
+  return parts.join(" · ");
 }
 
 export interface SearchResult {
@@ -125,8 +173,8 @@ export class UciEngine {
     this.send(`setoption name ${name} value ${value}`);
   }
 
-  /** The running search's deepest exact depth so far, and when the search began. */
-  progress: { depth: number; startedAt: number } | null = null;
+  /** The running search's progress, `null` between searches. */
+  progress: SearchProgress | null = null;
 
   /**
    * Search `fen` with `go …`, collecting every exact score line, until
@@ -146,7 +194,16 @@ export class UciEngine {
     const strings: string[] = [];
     let bestmove: string | null = null;
     const start = Date.now();
-    this.progress = { depth: 0, startedAt: start };
+    this.progress = {
+      depth: 0,
+      depthAt: start,
+      startedAt: start,
+      latest: null,
+      latestAt: start,
+      bounds: 0,
+      currmove: null,
+      currmoveNumber: null,
+    };
     this.send(`position fen ${fen}`);
     return new Promise<SearchResult>((resolve, reject) => {
       let asked: number | null = null;
@@ -204,10 +261,27 @@ export class UciEngine {
           strings.push(line.slice("info string ".length));
           return;
         }
+        const p = this.progress;
+        const currmove = / currmove (\S+)/.exec(line);
+        if (p && currmove) {
+          p.currmove = currmove[1] ?? null;
+          p.currmoveNumber = num(line, "currmovenumber");
+          return;
+        }
         const info = parseInfo(line);
-        if (info && !info.bound) {
+        if (!info) return;
+        if (p) {
+          p.latest = info;
+          p.latestAt = Date.now();
+          if (info.bound) p.bounds++;
+          else if (info.depth > p.depth) {
+            p.depth = info.depth;
+            p.depthAt = p.latestAt;
+            p.bounds = 0;
+          }
+        }
+        if (!info.bound) {
           infos.push(info);
-          if (this.progress && info.depth > this.progress.depth) this.progress.depth = info.depth;
           opts.onInfo?.(info);
         }
       };

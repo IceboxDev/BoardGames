@@ -1,0 +1,195 @@
+{
+ "article": "a2422",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_120_Days_of_Sodom",
+   "title": "The 120 Days of Sodom",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:08.060Z",
+   "snapshot": "25c60f943e16c86ec0a3aeadb3f367c093663ad8b0c6c2bd892ec9266c89194f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Pilgrim%27s_Progress",
+   "title": "The Pilgrim's Progress – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:44.580Z",
+   "snapshot": "b2d9bfe93877ac2d2767c5c8166ecf2b93110b9249983cc6b5e265856f9df0d4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/De_Profundis_(letter)",
+   "title": "De Profundis (letter) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:45.319Z",
+   "snapshot": "cbb14074b108898fd9d1f98e269b990fcd13e0044f4ddb666db632e040696ad6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Travels_of_Marco_Polo",
+   "title": "The Travels of Marco Polo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:46.368Z",
+   "snapshot": "1df71576752b27a8b3cb0f6fa6f53969cb808bf4becf3a91bf6972adaff92a50"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marquis de Sade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-230"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Bunyan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oscar Wilde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rustichello da Pisa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:18.172Z",
+   "target": "f12701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 120 Days of Sodom, or the School of Libertinage (French: Les 120 Journées de Sodome ou l'école du libertinage) is an unfinished novel by the French writer and nobleman Donatien Alphonse François, Marquis de Sade, written in 1785 and published in 1904 after its manuscript was rediscovered.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marquis de Sade” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:18.172Z",
+   "target": "f12703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Pilgrim's Progress from This World, to That Which Is to Come is a 1678 Christian allegory written by the English nonconformist preacher John Bunyan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Bunyan” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:18.172Z",
+   "target": "f12704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "De Profundis (Latin: \"from the depths\") is a letter written by Oscar Wilde during his imprisonment in Reading Gaol, to his friend and lover Lord Alfred \"Bosie\" Douglas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oscar Wilde” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:18.172Z",
+   "target": "f12705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Travels of Marco Polo, also known as The Book of the Marvels of the World (French: Livres des Merveilles du Monde) and by its Italian name Il Milione (\"The Million\"), is a 13th-century travelogue written down by Rustichello da Pisa from stories told by the Venetian explorer Marco Polo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rustichello da Pisa” is on the snapshot of s4"
+  }
+ ]
+}

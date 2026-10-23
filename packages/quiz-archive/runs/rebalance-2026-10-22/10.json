@@ -1,0 +1,2385 @@
+{
+ "subs": {
+  "belief": [
+   {
+    "slug": "religion",
+    "en": "World Religions & Belief",
+    "de": "Weltreligionen & Glaube",
+    "ru": "Мировые религии и вера"
+   },
+   {
+    "slug": "christianity",
+    "en": "Christianity & the Bible",
+    "de": "Christentum & Bibel",
+    "ru": "Христианство и Библия"
+   },
+   {
+    "slug": "philosophy",
+    "en": "Philosophy",
+    "de": "Philosophie",
+    "ru": "Философия"
+   },
+   {
+    "slug": "mythology",
+    "en": "Mythology & Legends",
+    "de": "Mythologie & Sagen",
+    "ru": "Мифология и легенды"
+   }
+  ],
+  "science": [
+   {
+    "slug": "physics",
+    "en": "Physics",
+    "de": "Physik",
+    "ru": "Физика"
+   },
+   {
+    "slug": "chemistry",
+    "en": "Chemistry",
+    "de": "Chemie",
+    "ru": "Химия"
+   },
+   {
+    "slug": "maths",
+    "en": "Mathematics & Units",
+    "de": "Mathematik & Einheiten",
+    "ru": "Математика и единицы"
+   },
+   {
+    "slug": "energy",
+    "en": "Energy & Materials",
+    "de": "Energie & Werkstoffe",
+    "ru": "Энергия и материалы"
+   }
+  ],
+  "body-health": [
+   {
+    "slug": "biology",
+    "en": "Biology & the Human Body",
+    "de": "Biologie & Körper",
+    "ru": "Биология и тело человека"
+   },
+   {
+    "slug": "medicine",
+    "en": "Medicine & Health",
+    "de": "Medizin & Gesundheit",
+    "ru": "Медицина и здоровье"
+   },
+   {
+    "slug": "psychology",
+    "en": "Psychology & the Mind",
+    "de": "Psychologie & Psyche",
+    "ru": "Психология и психика"
+   }
+  ],
+  "geography": [
+   {
+    "slug": "countries",
+    "en": "Countries & Capitals",
+    "de": "Länder & Hauptstädte",
+    "ru": "Страны и столицы"
+   },
+   {
+    "slug": "cities",
+    "en": "Cities & Landmarks",
+    "de": "Städte & Sehenswürdigkeiten",
+    "ru": "Города и достопримечательности"
+   },
+   {
+    "slug": "physical",
+    "en": "Mountains, Rivers & Islands",
+    "de": "Berge, Flüsse & Inseln",
+    "ru": "Горы, реки и острова"
+   }
+  ],
+  "sport-games": [
+   {
+    "slug": "football",
+    "en": "Football",
+    "de": "Fußball",
+    "ru": "Футбол"
+   },
+   {
+    "slug": "olympics",
+    "en": "Olympics & Athletics",
+    "de": "Olympia & Leichtathletik",
+    "ru": "Олимпиады и лёгкая атлетика"
+   },
+   {
+    "slug": "ball-sports",
+    "en": "Other Ball & Racket Sports",
+    "de": "Weitere Ball- & Rückschlagsportarten",
+    "ru": "Другие игры с мячом и ракеткой"
+   },
+   {
+    "slug": "combat",
+    "en": "Combat Sports & Martial Arts",
+    "de": "Kampfsport & Kampfkunst",
+    "ru": "Единоборства и боевые искусства"
+   },
+   {
+    "slug": "motor-winter",
+    "en": "Motor, Cycling, Winter & Water Sports",
+    "de": "Motor-, Rad-, Winter- & Wassersport",
+    "ru": "Авто- и велоспорт, зимние и водные виды"
+   }
+  ]
+ },
+ "assign": {
+  "a0008": {
+   "sub": "religion"
+  },
+  "a0009": {
+   "sub": "medicine"
+  },
+  "a0010": {
+   "sub": "physical"
+  },
+  "a0017": {
+   "sub": "ball-sports"
+  },
+  "a0020": {
+   "sub": "philosophy"
+  },
+  "a0021": {
+   "sub": "medicine"
+  },
+  "a0029": {
+   "sub": "olympics"
+  },
+  "a0032": {
+   "sub": "mythology"
+  },
+  "a0033": {
+   "sub": "maths"
+  },
+  "a0034": {
+   "sub": "cities"
+  },
+  "a0041": {
+   "sub": "olympics"
+  },
+  "a0044": {
+   "sub": "religion"
+  },
+  "a0045": {
+   "sub": "maths"
+  },
+  "a0046": {
+   "sub": "countries"
+  },
+  "a0053": {
+   "sub": "motor-winter"
+  },
+  "a0056": {
+   "sub": "religion"
+  },
+  "a0057": {
+   "sub": "medicine"
+  },
+  "a0065": {
+   "sub": "football"
+  },
+  "a0068": {
+   "sub": "religion"
+  },
+  "a0069": {
+   "sub": "maths"
+  },
+  "a0070": {
+   "sub": "physical"
+  },
+  "a0077": {
+   "sub": "football"
+  },
+  "a0080": {
+   "sub": "religion"
+  },
+  "a0081": {
+   "sub": "medicine"
+  },
+  "a0089": {
+   "sub": "football"
+  },
+  "a0092": {
+   "sub": "religion"
+  },
+  "a0093": {
+   "sub": "chemistry"
+  },
+  "a0094": {
+   "sub": "physical"
+  },
+  "a0104": {
+   "sub": "mythology"
+  },
+  "a0105": {
+   "sub": "maths"
+  },
+  "a0116": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Blessed Sacrament and Its Vessels) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0117": {
+   "sub": "physics"
+  },
+  "a0128": {
+   "sub": "mythology"
+  },
+  "a0129": {
+   "sub": "biology"
+  },
+  "a0140": {
+   "sub": "religion"
+  },
+  "a0152": {
+   "sub": "philosophy"
+  },
+  "a0153": {
+   "sub": "biology"
+  },
+  "a0164": {
+   "sub": "mythology"
+  },
+  "a0166": {
+   "sub": "mythology"
+  },
+  "a0176": {
+   "sub": "religion"
+  },
+  "a0177": {
+   "sub": "physics"
+  },
+  "a0178": {
+   "sub": "physical"
+  },
+  "a0185": {
+   "sub": "football"
+  },
+  "a0188": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Who Is Who in the Catholic Church) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0189": {
+   "sub": "chemistry"
+  },
+  "a0190": {
+   "sub": "physical"
+  },
+  "a0197": {
+   "sub": "olympics"
+  },
+  "a0200": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Servants, Overseers and Hinges: Who Does What in a Church) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0201": {
+   "sub": "physics"
+  },
+  "a0202": {
+   "sub": "cities"
+  },
+  "a0209": {
+   "sub": "ball-sports"
+  },
+  "a0212": {
+   "sub": "religion"
+  },
+  "a0221": {
+   "sub": "ball-sports"
+  },
+  "a0224": {
+   "sub": "religion"
+  },
+  "a0225": {
+   "sub": "biology"
+  },
+  "a0226": {
+   "sub": "cities"
+  },
+  "a0233": {
+   "sub": "olympics"
+  },
+  "a0236": {
+   "sub": "philosophy"
+  },
+  "a0237": {
+   "sub": "biology"
+  },
+  "a0238": {
+   "sub": "physical"
+  },
+  "a0248": {
+   "sub": "mythology"
+  },
+  "a0250": {
+   "sub": "physical"
+  },
+  "a0260": {
+   "sub": "philosophy"
+  },
+  "a0261": {
+   "sub": "physics"
+  },
+  "a0262": {
+   "sub": "physical"
+  },
+  "a0270": {
+   "sub": "medicine"
+  },
+  "a0272": {
+   "sub": "philosophy"
+  },
+  "a0273": {
+   "sub": "chemistry"
+  },
+  "a0284": {
+   "sub": "religion"
+  },
+  "a0286": {
+   "sub": "physical"
+  },
+  "a0293": {
+   "sub": "olympics"
+  },
+  "a0297": {
+   "sub": "biology"
+  },
+  "a0298": {
+   "sub": "countries"
+  },
+  "a0305": {
+   "sub": "ball-sports"
+  },
+  "a0309": {
+   "sub": "medicine"
+  },
+  "a0310": {
+   "sub": "physical"
+  },
+  "a0320": {
+   "sub": "mythology"
+  },
+  "a0321": {
+   "sub": "physics"
+  },
+  "a0322": {
+   "sub": "physical",
+   "reason": "US national parks (Yellowstone, Grand Canyon, Yosemite) are landscapes, not cities — moved from Cities to Mountains, Rivers & Islands beside the other national-park article."
+  },
+  "a0332": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Strict Ones: Reform Movements Inside the Churches) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0333": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Mind Traps: Seven Ways the Brain Fools Its Owner) — moved from Biology to the new Psychology & the Mind sub."
+  },
+  "a0344": {
+   "sub": "mythology"
+  },
+  "a0345": {
+   "sub": "medicine"
+  },
+  "a0353": {
+   "sub": "motor-winter"
+  },
+  "a0356": {
+   "sub": "philosophy"
+  },
+  "a0357": {
+   "sub": "biology"
+  },
+  "a0365": {
+   "sub": "ball-sports"
+  },
+  "a0368": {
+   "sub": "philosophy"
+  },
+  "a0369": {
+   "sub": "physics"
+  },
+  "a0377": {
+   "sub": "motor-winter"
+  },
+  "a0380": {
+   "sub": "religion"
+  },
+  "a0381": {
+   "sub": "chemistry"
+  },
+  "a0389": {
+   "sub": "ball-sports"
+  },
+  "a0392": {
+   "sub": "religion"
+  },
+  "a0393": {
+   "sub": "medicine"
+  },
+  "a0394": {
+   "sub": "physical"
+  },
+  "a0401": {
+   "sub": "football"
+  },
+  "a0404": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Vicars, Auxiliaries and Abbots: Who Deputises for Whom in the Catholic Church) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0405": {
+   "sub": "chemistry"
+  },
+  "a0413": {
+   "sub": "olympics"
+  },
+  "a0416": {
+   "sub": "mythology"
+  },
+  "a0417": {
+   "sub": "chemistry"
+  },
+  "a0418": {
+   "sub": "countries"
+  },
+  "a0428": {
+   "sub": "philosophy"
+  },
+  "a0429": {
+   "sub": "maths"
+  },
+  "a0437": {
+   "sub": "motor-winter"
+  },
+  "a0440": {
+   "sub": "religion"
+  },
+  "a0441": {
+   "sub": "medicine"
+  },
+  "a0452": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Binding Promises: Vows That Shape a Religious Life) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0453": {
+   "sub": "medicine"
+  },
+  "a0461": {
+   "sub": "motor-winter"
+  },
+  "a0464": {
+   "sub": "mythology"
+  },
+  "a0473": {
+   "sub": "ball-sports"
+  },
+  "a0476": {
+   "sub": "philosophy"
+  },
+  "a0477": {
+   "sub": "medicine"
+  },
+  "a0478": {
+   "sub": "cities"
+  },
+  "a0485": {
+   "sub": "olympics"
+  },
+  "a0488": {
+   "sub": "philosophy"
+  },
+  "a0489": {
+   "sub": "maths"
+  },
+  "a0500": {
+   "sub": "philosophy"
+  },
+  "a0501": {
+   "sub": "medicine"
+  },
+  "a0502": {
+   "sub": "physical"
+  },
+  "a0509": {
+   "sub": "football"
+  },
+  "a0512": {
+   "sub": "philosophy"
+  },
+  "a0513": {
+   "sub": "physics"
+  },
+  "a0514": {
+   "sub": "countries"
+  },
+  "a0524": {
+   "sub": "mythology"
+  },
+  "a0525": {
+   "sub": "medicine"
+  },
+  "a0533": {
+   "sub": "ball-sports"
+  },
+  "a0536": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (A Walk Through the Cloister: The Rooms of a Medieval Monastery) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0537": {
+   "sub": "physics"
+  },
+  "a0545": {
+   "sub": "motor-winter"
+  },
+  "a0548": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Parchment and Power: Documents That Defined the Papacy's Claim to Rule) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0549": {
+   "sub": "physics"
+  },
+  "a0550": {
+   "sub": "cities"
+  },
+  "a0560": {
+   "sub": "philosophy"
+  },
+  "a0561": {
+   "sub": "biology"
+  },
+  "a0562": {
+   "sub": "countries"
+  },
+  "a0564": {
+   "sub": "energy"
+  },
+  "a0569": {
+   "sub": "motor-winter"
+  },
+  "a0571": {
+   "sub": "countries"
+  },
+  "a0572": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Seven Days of Creation) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0573": {
+   "sub": "maths"
+  },
+  "a0584": {
+   "sub": "philosophy"
+  },
+  "a0585": {
+   "sub": "biology"
+  },
+  "a0588": {
+   "sub": "energy"
+  },
+  "a0593": {
+   "sub": "football"
+  },
+  "a0596": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Rites of Cleansing: Five Practices of the Christian Church) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0597": {
+   "sub": "biology"
+  },
+  "a0605": {
+   "sub": "olympics"
+  },
+  "a0608": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Numbers of the Bible) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0609": {
+   "sub": "chemistry"
+  },
+  "a0610": {
+   "sub": "physical"
+  },
+  "a0617": {
+   "sub": "ball-sports"
+  },
+  "a0620": {
+   "sub": "philosophy"
+  },
+  "a0621": {
+   "sub": "medicine"
+  },
+  "a0622": {
+   "sub": "physical"
+  },
+  "a0624": {
+   "sub": "physics"
+  },
+  "a0629": {
+   "sub": "football"
+  },
+  "a0632": {
+   "sub": "philosophy"
+  },
+  "a0633": {
+   "sub": "medicine"
+  },
+  "a0635": {
+   "sub": "maths"
+  },
+  "a0639": {
+   "sub": "cities"
+  },
+  "a0641": {
+   "sub": "motor-winter"
+  },
+  "a0644": {
+   "sub": "philosophy"
+  },
+  "a0645": {
+   "sub": "physics"
+  },
+  "a0653": {
+   "sub": "motor-winter",
+   "reason": "Figure-skating jumps — moved from Olympics to the winter-sports sub, beside the figure-skating stars article."
+  },
+  "a0657": {
+   "sub": "medicine"
+  },
+  "a0658": {
+   "sub": "countries"
+  },
+  "a0668": {
+   "sub": "philosophy"
+  },
+  "a0669": {
+   "sub": "chemistry"
+  },
+  "a0677": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Oaks, Rocks and Kaisers: The Nicknames of the Strong) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a0680": {
+   "sub": "mythology"
+  },
+  "a0681": {
+   "sub": "chemistry"
+  },
+  "a0692": {
+   "sub": "mythology"
+  },
+  "a0693": {
+   "sub": "biology"
+  },
+  "a0704": {
+   "sub": "mythology"
+  },
+  "a0705": {
+   "sub": "physics"
+  },
+  "a0713": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Kings of the Ring: Five Heavyweight Champions and Their Records) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a0716": {
+   "sub": "philosophy"
+  },
+  "a0717": {
+   "sub": "medicine"
+  },
+  "a0728": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (From Palm Branches to Tongues of Fire: The Easter Cycle) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0729": {
+   "sub": "chemistry"
+  },
+  "a0737": {
+   "sub": "olympics"
+  },
+  "a0740": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (A Walk Through the Church: What the Rooms Are For) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0741": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (What the Names Say: Greek and Latin Inside Psychiatry) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a0749": {
+   "sub": "motor-winter"
+  },
+  "a0752": {
+   "sub": "philosophy"
+  },
+  "a0753": {
+   "sub": "chemistry"
+  },
+  "a0761": {
+   "sub": "ball-sports"
+  },
+  "a0764": {
+   "sub": "religion"
+  },
+  "a0765": {
+   "sub": "medicine"
+  },
+  "a0766": {
+   "sub": "physical"
+  },
+  "a0773": {
+   "sub": "olympics"
+  },
+  "a0776": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Language and Signs of the Papacy) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0777": {
+   "sub": "medicine"
+  },
+  "a0778": {
+   "sub": "physical"
+  },
+  "a0788": {
+   "sub": "mythology"
+  },
+  "a0789": {
+   "sub": "medicine"
+  },
+  "a0800": {
+   "sub": "mythology"
+  },
+  "a0801": {
+   "sub": "biology"
+  },
+  "a0806": {
+   "sub": "maths"
+  },
+  "a0809": {
+   "sub": "motor-winter"
+  },
+  "a0812": {
+   "sub": "philosophy"
+  },
+  "a0813": {
+   "sub": "physics"
+  },
+  "a0824": {
+   "sub": "philosophy"
+  },
+  "a0825": {
+   "sub": "chemistry"
+  },
+  "a0826": {
+   "sub": "physical"
+  },
+  "a0833": {
+   "sub": "football"
+  },
+  "a0836": {
+   "sub": "philosophy"
+  },
+  "a0837": {
+   "sub": "maths"
+  },
+  "a0838": {
+   "sub": "countries"
+  },
+  "a0845": {
+   "sub": "ball-sports"
+  },
+  "a0848": {
+   "sub": "mythology"
+  },
+  "a0849": {
+   "sub": "medicine"
+  },
+  "a0852": {
+   "sub": "maths"
+  },
+  "a0857": {
+   "sub": "football"
+  },
+  "a0860": {
+   "sub": "mythology"
+  },
+  "a0861": {
+   "sub": "biology"
+  },
+  "a0862": {
+   "sub": "countries"
+  },
+  "a0869": {
+   "sub": "motor-winter"
+  },
+  "a0872": {
+   "sub": "religion"
+  },
+  "a0873": {
+   "sub": "biology"
+  },
+  "a0874": {
+   "sub": "physical"
+  },
+  "a0876": {
+   "sub": "maths"
+  },
+  "a0884": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Sevens, Fours and Fives: The Numbered Lists of Faith) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0885": {
+   "sub": "physics"
+  },
+  "a0886": {
+   "sub": "cities"
+  },
+  "a0896": {
+   "sub": "mythology"
+  },
+  "a0897": {
+   "sub": "biology"
+  },
+  "a0905": {
+   "sub": "olympics"
+  },
+  "a0908": {
+   "sub": "philosophy"
+  },
+  "a0909": {
+   "sub": "medicine"
+  },
+  "a0910": {
+   "sub": "physical"
+  },
+  "a0920": {
+   "sub": "mythology"
+  },
+  "a0921": {
+   "sub": "physics"
+  },
+  "a0922": {
+   "sub": "countries"
+  },
+  "a0929": {
+   "sub": "ball-sports"
+  },
+  "a0932": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Ten Words on Two Tablets: The Commandments and How They Are Counted) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a0933": {
+   "sub": "chemistry"
+  },
+  "a0941": {
+   "sub": "olympics"
+  },
+  "a0944": {
+   "sub": "philosophy"
+  },
+  "a0945": {
+   "sub": "chemistry"
+  },
+  "a0946": {
+   "sub": "physical"
+  },
+  "a0953": {
+   "sub": "olympics"
+  },
+  "a0954": {
+   "sub": "cities"
+  },
+  "a0956": {
+   "sub": "religion"
+  },
+  "a0957": {
+   "sub": "chemistry"
+  },
+  "a0965": {
+   "sub": "olympics"
+  },
+  "a0966": {
+   "sub": "cities"
+  },
+  "a0969": {
+   "sub": "medicine"
+  },
+  "a0971": {
+   "sub": "mythology"
+  },
+  "a0977": {
+   "sub": "ball-sports"
+  },
+  "a0980": {
+   "sub": "mythology"
+  },
+  "a0981": {
+   "sub": "chemistry"
+  },
+  "a0982": {
+   "sub": "countries"
+  },
+  "a0984": {
+   "sub": "energy"
+  },
+  "a0989": {
+   "sub": "olympics"
+  },
+  "a0992": {
+   "sub": "philosophy"
+  },
+  "a0993": {
+   "sub": "medicine"
+  },
+  "a1001": {
+   "sub": "ball-sports"
+  },
+  "a1004": {
+   "sub": "philosophy"
+  },
+  "a1005": {
+   "sub": "medicine"
+  },
+  "a1006": {
+   "sub": "countries"
+  },
+  "a1013": {
+   "sub": "football"
+  },
+  "a1016": {
+   "sub": "mythology"
+  },
+  "a1017": {
+   "sub": "biology"
+  },
+  "a1018": {
+   "sub": "countries"
+  },
+  "a1025": {
+   "sub": "football"
+  },
+  "a1028": {
+   "sub": "philosophy"
+  },
+  "a1029": {
+   "sub": "medicine"
+  },
+  "a1030": {
+   "sub": "physical"
+  },
+  "a1040": {
+   "sub": "mythology"
+  },
+  "a1041": {
+   "sub": "biology"
+  },
+  "a1048": {
+   "sub": "football"
+  },
+  "a1052": {
+   "sub": "philosophy"
+  },
+  "a1053": {
+   "sub": "chemistry"
+  },
+  "a1054": {
+   "sub": "countries"
+  },
+  "a1065": {
+   "sub": "physics"
+  },
+  "a1073": {
+   "sub": "olympics"
+  },
+  "a1076": {
+   "sub": "religion"
+  },
+  "a1077": {
+   "sub": "biology"
+  },
+  "a1078": {
+   "sub": "countries"
+  },
+  "a1085": {
+   "sub": "ball-sports"
+  },
+  "a1088": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Sylvester, Gregory, Valentine: The Names Behind the Calendar) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1089": {
+   "sub": "medicine"
+  },
+  "a1090": {
+   "sub": "physical"
+  },
+  "a1097": {
+   "sub": "football"
+  },
+  "a1100": {
+   "sub": "religion"
+  },
+  "a1101": {
+   "sub": "medicine"
+  },
+  "a1104": {
+   "sub": "energy"
+  },
+  "a1112": {
+   "sub": "philosophy"
+  },
+  "a1113": {
+   "sub": "physics"
+  },
+  "a1121": {
+   "sub": "ball-sports"
+  },
+  "a1124": {
+   "sub": "philosophy"
+  },
+  "a1125": {
+   "sub": "biology"
+  },
+  "a1136": {
+   "sub": "mythology"
+  },
+  "a1137": {
+   "sub": "physics"
+  },
+  "a1138": {
+   "sub": "physical"
+  },
+  "a1148": {
+   "sub": "mythology"
+  },
+  "a1149": {
+   "sub": "physics"
+  },
+  "a1160": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Counting the Reformation: Luther's Theses, Sacraments and Household) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1161": {
+   "sub": "biology"
+  },
+  "a1172": {
+   "sub": "mythology"
+  },
+  "a1173": {
+   "sub": "medicine"
+  },
+  "a1184": {
+   "sub": "philosophy"
+  },
+  "a1185": {
+   "sub": "medicine"
+  },
+  "a1186": {
+   "sub": "physical"
+  },
+  "a1193": {
+   "sub": "olympics"
+  },
+  "a1196": {
+   "sub": "mythology"
+  },
+  "a1197": {
+   "sub": "biology"
+  },
+  "a1198": {
+   "sub": "cities"
+  },
+  "a1208": {
+   "sub": "religion"
+  },
+  "a1209": {
+   "sub": "physics"
+  },
+  "a1217": {
+   "sub": "ball-sports"
+  },
+  "a1220": {
+   "sub": "religion"
+  },
+  "a1221": {
+   "sub": "maths"
+  },
+  "a1222": {
+   "sub": "countries"
+  },
+  "a1232": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Miraculous Meals of the Bible) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1233": {
+   "sub": "physics"
+  },
+  "a1234": {
+   "sub": "physical"
+  },
+  "a1241": {
+   "sub": "ball-sports"
+  },
+  "a1244": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Five Words That Define Christian Doctrine) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1245": {
+   "sub": "medicine"
+  },
+  "a1246": {
+   "sub": "physical"
+  },
+  "a1253": {
+   "sub": "olympics"
+  },
+  "a1256": {
+   "sub": "religion"
+  },
+  "a1257": {
+   "sub": "physics"
+  },
+  "a1265": {
+   "sub": "motor-winter",
+   "reason": "German speed skaters — a winter sport, moved from Olympics to Motor, Cycling, Winter & Water Sports."
+  },
+  "a1268": {
+   "sub": "religion"
+  },
+  "a1269": {
+   "sub": "medicine"
+  },
+  "a1270": {
+   "sub": "physical"
+  },
+  "a1277": {
+   "sub": "olympics"
+  },
+  "a1280": {
+   "sub": "philosophy"
+  },
+  "a1281": {
+   "sub": "medicine"
+  },
+  "a1289": {
+   "sub": "ball-sports"
+  },
+  "a1290": {
+   "sub": "countries"
+  },
+  "a1292": {
+   "sub": "religion"
+  },
+  "a1293": {
+   "sub": "biology"
+  },
+  "a1294": {
+   "sub": "physical"
+  },
+  "a1302": {
+   "sub": "countries"
+  },
+  "a1304": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Nicknames That Stuck: Five Names for Christian Dissenters) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1305": {
+   "sub": "biology"
+  },
+  "a1313": {
+   "sub": "ball-sports"
+  },
+  "a1316": {
+   "sub": "mythology"
+  },
+  "a1317": {
+   "sub": "biology"
+  },
+  "a1327": {
+   "sub": "countries"
+  },
+  "a1328": {
+   "sub": "mythology"
+  },
+  "a1329": {
+   "sub": "physics"
+  },
+  "a1330": {
+   "sub": "physical"
+  },
+  "a1337": {
+   "sub": "motor-winter",
+   "reason": "A cycling article (Tour de France winners by nation) — moved from Olympics to Motor, Cycling, Winter & Water Sports, beside the other Tour de France articles."
+  },
+  "a1340": {
+   "sub": "philosophy"
+  },
+  "a1341": {
+   "sub": "medicine"
+  },
+  "a1344": {
+   "sub": "energy"
+  },
+  "a1349": {
+   "sub": "olympics"
+  },
+  "a1352": {
+   "sub": "philosophy"
+  },
+  "a1353": {
+   "sub": "chemistry"
+  },
+  "a1361": {
+   "sub": "olympics"
+  },
+  "a1364": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Crowns, Rings and Wool: The Insignia of the Papacy) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1365": {
+   "sub": "chemistry"
+  },
+  "a1366": {
+   "sub": "countries"
+  },
+  "a1376": {
+   "sub": "religion"
+  },
+  "a1377": {
+   "sub": "medicine"
+  },
+  "a1378": {
+   "sub": "cities"
+  },
+  "a1385": {
+   "sub": "ball-sports"
+  },
+  "a1389": {
+   "sub": "biology"
+  },
+  "a1397": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Three Letters in the Cage: MMA and the Alphabet of Combat Sports) — moved from Motor, Winter & Water Sports to the new Combat Sports & Martial Arts sub."
+  },
+  "a1400": {
+   "sub": "religion"
+  },
+  "a1401": {
+   "sub": "medicine"
+  },
+  "a1402": {
+   "sub": "physical"
+  },
+  "a1409": {
+   "sub": "olympics"
+  },
+  "a1412": {
+   "sub": "philosophy"
+  },
+  "a1413": {
+   "sub": "chemistry"
+  },
+  "a1424": {
+   "sub": "philosophy"
+  },
+  "a1425": {
+   "sub": "chemistry"
+  },
+  "a1426": {
+   "sub": "countries"
+  },
+  "a1433": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Grades, Halls and Forms: The Vocabulary of Japanese Martial Arts) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a1436": {
+   "sub": "philosophy"
+  },
+  "a1437": {
+   "sub": "medicine"
+  },
+  "a1438": {
+   "sub": "cities"
+  },
+  "a1445": {
+   "sub": "olympics"
+  },
+  "a1448": {
+   "sub": "philosophy"
+  },
+  "a1449": {
+   "sub": "physics"
+  },
+  "a1457": {
+   "sub": "ball-sports"
+  },
+  "a1460": {
+   "sub": "philosophy"
+  },
+  "a1461": {
+   "sub": "biology"
+  },
+  "a1469": {
+   "sub": "ball-sports"
+  },
+  "a1472": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Four Letters and a Creed: Latin Abbreviations of the Church) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1473": {
+   "sub": "maths"
+  },
+  "a1474": {
+   "sub": "physical"
+  },
+  "a1481": {
+   "sub": "ball-sports"
+  },
+  "a1485": {
+   "sub": "physics"
+  },
+  "a1493": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Judo and the Martial Arts of East Asia) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a1496": {
+   "sub": "mythology"
+  },
+  "a1497": {
+   "sub": "maths"
+  },
+  "a1508": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Torah, Prophets, Writings: The Books of Judaism) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1509": {
+   "sub": "biology"
+  },
+  "a1520": {
+   "sub": "philosophy"
+  },
+  "a1521": {
+   "sub": "maths"
+  },
+  "a1522": {
+   "sub": "countries"
+  },
+  "a1526": {
+   "sub": "mythology"
+  },
+  "a1529": {
+   "sub": "combat",
+   "reason": "A combat-sport article (En garde, prêts, allez: The Language of the Fencing Piste) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a1532": {
+   "sub": "philosophy"
+  },
+  "a1533": {
+   "sub": "maths"
+  },
+  "a1534": {
+   "sub": "physical"
+  },
+  "a1545": {
+   "sub": "chemistry"
+  },
+  "a1553": {
+   "sub": "combat",
+   "reason": "A combat-sport article (The Ways of Japan: Five Martial Arts and Their Philosophies) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a1556": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Books of the Church: Catechism, Missal, Breviary, Lectionary and Hymnal) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1557": {
+   "sub": "medicine"
+  },
+  "a1558": {
+   "sub": "physical"
+  },
+  "a1568": {
+   "sub": "religion"
+  },
+  "a1569": {
+   "sub": "medicine"
+  },
+  "a1571": {
+   "sub": "medicine"
+  },
+  "a1580": {
+   "sub": "mythology"
+  },
+  "a1581": {
+   "sub": "biology"
+  },
+  "a1582": {
+   "sub": "physical"
+  },
+  "a1589": {
+   "sub": "football"
+  },
+  "a1592": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Long-Lived Patriarchs of Genesis) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1593": {
+   "sub": "biology"
+  },
+  "a1604": {
+   "sub": "religion"
+  },
+  "a1605": {
+   "sub": "chemistry"
+  },
+  "a1613": {
+   "sub": "motor-winter",
+   "reason": "Cycling abbreviations (BMX, MTB, UCI) — moved from Other Ball & Racket Sports to Motor, Cycling, Winter & Water Sports."
+  },
+  "a1616": {
+   "sub": "philosophy"
+  },
+  "a1618": {
+   "sub": "countries"
+  },
+  "a1625": {
+   "sub": "olympics"
+  },
+  "a1628": {
+   "sub": "religion"
+  },
+  "a1629": {
+   "sub": "chemistry"
+  },
+  "a1630": {
+   "sub": "physical"
+  },
+  "a1637": {
+   "sub": "olympics"
+  },
+  "a1640": {
+   "sub": "philosophy"
+  },
+  "a1641": {
+   "sub": "biology"
+  },
+  "a1649": {
+   "sub": "combat",
+   "reason": "A combat-sport article (The Language of the Piste: Fencing's French Vocabulary) — moved from Other Ball & Racket Sports to the new Combat Sports & Martial Arts sub."
+  },
+  "a1652": {
+   "sub": "religion"
+  },
+  "a1653": {
+   "sub": "chemistry"
+  },
+  "a1661": {
+   "sub": "combat",
+   "reason": "A combat-sport article (From the Podium to the Ballot Box) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a1664": {
+   "sub": "religion"
+  },
+  "a1665": {
+   "sub": "physics"
+  },
+  "a1673": {
+   "sub": "ball-sports"
+  },
+  "a1676": {
+   "sub": "religion"
+  },
+  "a1677": {
+   "sub": "physics"
+  },
+  "a1682": {
+   "sub": "chemistry"
+  },
+  "a1688": {
+   "sub": "religion"
+  },
+  "a1689": {
+   "sub": "biology"
+  },
+  "a1692": {
+   "sub": "energy"
+  },
+  "a1697": {
+   "sub": "olympics"
+  },
+  "a1700": {
+   "sub": "philosophy"
+  },
+  "a1701": {
+   "sub": "biology"
+  },
+  "a1709": {
+   "sub": "football"
+  },
+  "a1712": {
+   "sub": "philosophy"
+  },
+  "a1713": {
+   "sub": "medicine"
+  },
+  "a1714": {
+   "sub": "countries"
+  },
+  "a1721": {
+   "sub": "motor-winter"
+  },
+  "a1724": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Biblical Figures Who Became Words) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1725": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Phobias: When Fear Has a Name) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a1726": {
+   "sub": "mythology"
+  },
+  "a1733": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Asia's Fighting Arts and the Bodies That Practise Them) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a1736": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (How the Catholic Church Is Organised: From Parish to Archdiocese) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1737": {
+   "sub": "medicine"
+  },
+  "a1738": {
+   "sub": "cities"
+  },
+  "a1740": {
+   "sub": "energy"
+  },
+  "a1748": {
+   "sub": "philosophy"
+  },
+  "a1749": {
+   "sub": "chemistry"
+  },
+  "a1750": {
+   "sub": "physical"
+  },
+  "a1757": {
+   "sub": "ball-sports"
+  },
+  "a1760": {
+   "sub": "philosophy"
+  },
+  "a1761": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Naming the Troubled Mind: Five Terms from Psychiatry) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a1769": {
+   "sub": "football"
+  },
+  "a1772": {
+   "sub": "philosophy"
+  },
+  "a1773": {
+   "sub": "biology"
+  },
+  "a1781": {
+   "sub": "football"
+  },
+  "a1784": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Founders of the Great Religious Orders) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1785": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Sleepwalking, Jamais Vu and Other Phenomena with Learned Names) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a1793": {
+   "sub": "ball-sports"
+  },
+  "a1796": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Host, Chalice, Monstrance: Objects of the Eucharist) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1797": {
+   "sub": "chemistry"
+  },
+  "a1805": {
+   "sub": "ball-sports"
+  },
+  "a1808": {
+   "sub": "religion"
+  },
+  "a1809": {
+   "sub": "physics"
+  },
+  "a1810": {
+   "sub": "physical"
+  },
+  "a1817": {
+   "sub": "olympics"
+  },
+  "a1820": {
+   "sub": "philosophy"
+  },
+  "a1821": {
+   "sub": "medicine"
+  },
+  "a1824": {
+   "sub": "energy"
+  },
+  "a1829": {
+   "sub": "motor-winter"
+  },
+  "a1830": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (A Million Pilgrims: The Story of World Youth Day) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1832": {
+   "sub": "philosophy"
+  },
+  "a1833": {
+   "sub": "medicine"
+  },
+  "a1834": {
+   "sub": "physical"
+  },
+  "a1844": {
+   "sub": "mythology"
+  },
+  "a1845": {
+   "sub": "chemistry"
+  },
+  "a1846": {
+   "sub": "countries"
+  },
+  "a1853": {
+   "sub": "football"
+  },
+  "a1856": {
+   "sub": "philosophy"
+  },
+  "a1857": {
+   "sub": "medicine"
+  },
+  "a1865": {
+   "sub": "football"
+  },
+  "a1868": {
+   "sub": "philosophy"
+  },
+  "a1869": {
+   "sub": "physics"
+  },
+  "a1880": {
+   "sub": "mythology"
+  },
+  "a1881": {
+   "sub": "physics"
+  },
+  "a1884": {
+   "sub": "energy"
+  },
+  "a1889": {
+   "sub": "olympics"
+  },
+  "a1892": {
+   "sub": "religion"
+  },
+  "a1893": {
+   "sub": "maths"
+  },
+  "a1901": {
+   "sub": "motor-winter"
+  },
+  "a1904": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (War in Heaven: The Archangels of the Bible and the Angel Who Fell) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1905": {
+   "sub": "chemistry"
+  },
+  "a1916": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (The Magi of Bethlehem: Gifts, Names and a Feast Day) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1917": {
+   "sub": "biology"
+  },
+  "a1918": {
+   "sub": "cities"
+  },
+  "a1928": {
+   "sub": "philosophy"
+  },
+  "a1929": {
+   "sub": "biology"
+  },
+  "a1937": {
+   "sub": "ball-sports",
+   "reason": "An American-football article (positions of the gridiron) — moved from Football (soccer) to Other Ball & Racket Sports, where American football lives."
+  },
+  "a1940": {
+   "sub": "religion"
+  },
+  "a1941": {
+   "sub": "biology"
+  },
+  "a1949": {
+   "sub": "football"
+  },
+  "a1952": {
+   "sub": "philosophy"
+  },
+  "a1953": {
+   "sub": "chemistry"
+  },
+  "a1964": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Hidden, Translated, Debated: How the Bible Got Its Shape) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1965": {
+   "sub": "chemistry"
+  },
+  "a1973": {
+   "sub": "motor-winter"
+  },
+  "a1976": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Patron Saints and the Things Named After Them) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a1977": {
+   "sub": "biology"
+  },
+  "a1978": {
+   "sub": "physical"
+  },
+  "a1988": {
+   "sub": "religion"
+  },
+  "a1989": {
+   "sub": "biology"
+  },
+  "a1997": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Gentlemen and Tigers: Five German Boxing Champions) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a2000": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Communities Apart: Five Christian Groups and the Customs That Define Them) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a2001": {
+   "sub": "physics"
+  },
+  "a2002": {
+   "sub": "physical"
+  },
+  "a2012": {
+   "sub": "philosophy"
+  },
+  "a2013": {
+   "sub": "medicine"
+  },
+  "a2014": {
+   "sub": "physical"
+  },
+  "a2021": {
+   "sub": "ball-sports"
+  },
+  "a2024": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Hinges, Overseers and Servants: What Church Titles Really Mean) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a2025": {
+   "sub": "maths"
+  },
+  "a2026": {
+   "sub": "physical"
+  },
+  "a2033": {
+   "sub": "combat",
+   "reason": "A combat-sport article (From Battlefield to Dojo: Japan's Martial Arts as Modern Sports) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a2036": {
+   "sub": "mythology"
+  },
+  "a2037": {
+   "sub": "biology"
+  },
+  "a2038": {
+   "sub": "physical"
+  },
+  "a2045": {
+   "sub": "motor-winter"
+  },
+  "a2048": {
+   "sub": "philosophy"
+  },
+  "a2049": {
+   "sub": "medicine"
+  },
+  "a2050": {
+   "sub": "physical"
+  },
+  "a2057": {
+   "sub": "ball-sports"
+  },
+  "a2060": {
+   "sub": "philosophy"
+  },
+  "a2061": {
+   "sub": "physics"
+  },
+  "a2062": {
+   "sub": "physical"
+  },
+  "a2069": {
+   "sub": "ball-sports"
+  },
+  "a2072": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Fathers of Nations: How Biblical Names Became Peoples) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a2073": {
+   "sub": "chemistry"
+  },
+  "a2081": {
+   "sub": "olympics"
+  },
+  "a2084": {
+   "sub": "religion"
+  },
+  "a2085": {
+   "sub": "physics"
+  },
+  "a2086": {
+   "sub": "cities"
+  },
+  "a2093": {
+   "sub": "olympics"
+  },
+  "a2096": {
+   "sub": "mythology"
+  },
+  "a2097": {
+   "sub": "medicine"
+  },
+  "a2105": {
+   "sub": "ball-sports"
+  },
+  "a2108": {
+   "sub": "religion"
+  },
+  "a2109": {
+   "sub": "physics"
+  },
+  "a2110": {
+   "sub": "physical"
+  },
+  "a2117": {
+   "sub": "football"
+  },
+  "a2120": {
+   "sub": "religion"
+  },
+  "a2121": {
+   "sub": "chemistry"
+  },
+  "a2141": {
+   "sub": "mythology"
+  },
+  "a2142": {
+   "sub": "mythology"
+  },
+  "a2143": {
+   "sub": "mythology"
+  },
+  "a2144": {
+   "sub": "mythology"
+  },
+  "a2145": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Candlemas and St Blaise: The Church's Early February) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a2146": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Relics of Christendom: Shroud, Robe and Golden Shrines) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a2147": {
+   "sub": "christianity",
+   "reason": "Christian/biblical article (Popes on the Bookshelf) — moved from Religion to the new Christianity & the Bible sub when the 86-article Religion sub was split."
+  },
+  "a2284": {
+   "sub": "cities"
+  },
+  "a2285": {
+   "sub": "cities"
+  },
+  "a2286": {
+   "sub": "cities"
+  },
+  "a2287": {
+   "sub": "cities"
+  },
+  "a2288": {
+   "sub": "cities"
+  },
+  "a2289": {
+   "sub": "cities"
+  },
+  "a2290": {
+   "sub": "cities"
+  },
+  "a2291": {
+   "sub": "cities"
+  },
+  "a2292": {
+   "sub": "cities"
+  },
+  "a2293": {
+   "sub": "cities"
+  },
+  "a2294": {
+   "sub": "cities"
+  },
+  "a2295": {
+   "sub": "cities"
+  },
+  "a2296": {
+   "sub": "cities"
+  },
+  "a2297": {
+   "sub": "cities"
+  },
+  "a2298": {
+   "sub": "cities"
+  },
+  "a2299": {
+   "sub": "cities"
+  },
+  "a2300": {
+   "sub": "cities"
+  },
+  "a2301": {
+   "sub": "cities"
+  },
+  "a2302": {
+   "sub": "cities"
+  },
+  "a2303": {
+   "sub": "countries"
+  },
+  "a2304": {
+   "sub": "countries"
+  },
+  "a2305": {
+   "sub": "countries"
+  },
+  "a2306": {
+   "sub": "countries"
+  },
+  "a2307": {
+   "sub": "countries"
+  },
+  "a2308": {
+   "sub": "countries"
+  },
+  "a2309": {
+   "sub": "countries"
+  },
+  "a2310": {
+   "sub": "countries"
+  },
+  "a2311": {
+   "sub": "countries"
+  },
+  "a2312": {
+   "sub": "countries"
+  },
+  "a2313": {
+   "sub": "countries"
+  },
+  "a2314": {
+   "sub": "countries"
+  },
+  "a2315": {
+   "sub": "countries"
+  },
+  "a2316": {
+   "sub": "countries"
+  },
+  "a2317": {
+   "sub": "countries"
+  },
+  "a2327": {
+   "sub": "physical"
+  },
+  "a2520": {
+   "sub": "biology"
+  },
+  "a2521": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Opening the Skull: Five Bestsellers About the Brain) — moved from Biology to the new Psychology & the Mind sub."
+  },
+  "a2522": {
+   "sub": "biology"
+  },
+  "a2523": {
+   "sub": "biology"
+  },
+  "a2524": {
+   "sub": "biology"
+  },
+  "a2525": {
+   "sub": "biology"
+  },
+  "a2526": {
+   "sub": "biology"
+  },
+  "a2527": {
+   "sub": "biology"
+  },
+  "a2528": {
+   "sub": "chemistry"
+  },
+  "a2529": {
+   "sub": "chemistry"
+  },
+  "a2530": {
+   "sub": "chemistry"
+  },
+  "a2531": {
+   "sub": "maths"
+  },
+  "a2532": {
+   "sub": "maths"
+  },
+  "a2533": {
+   "sub": "maths"
+  },
+  "a2534": {
+   "sub": "medicine"
+  },
+  "a2535": {
+   "sub": "medicine"
+  },
+  "a2536": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Florence, Paris, Jerusalem: Syndromes Named After Cities) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a2537": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Measuring the Mind: Intelligence Tests and Inkblots) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a2538": {
+   "sub": "medicine"
+  },
+  "a2539": {
+   "sub": "medicine"
+  },
+  "a2540": {
+   "sub": "physics"
+  },
+  "a2569": {
+   "sub": "ball-sports"
+  },
+  "a2570": {
+   "sub": "ball-sports"
+  },
+  "a2571": {
+   "sub": "ball-sports"
+  },
+  "a2572": {
+   "sub": "ball-sports"
+  },
+  "a2573": {
+   "sub": "ball-sports"
+  },
+  "a2574": {
+   "sub": "ball-sports"
+  },
+  "a2575": {
+   "sub": "ball-sports"
+  },
+  "a2576": {
+   "sub": "ball-sports"
+  },
+  "a2577": {
+   "sub": "ball-sports"
+  },
+  "a2578": {
+   "sub": "ball-sports"
+  },
+  "a2579": {
+   "sub": "ball-sports"
+  },
+  "a2580": {
+   "sub": "football"
+  },
+  "a2581": {
+   "sub": "football"
+  },
+  "a2582": {
+   "sub": "football"
+  },
+  "a2583": {
+   "sub": "football"
+  },
+  "a2584": {
+   "sub": "football"
+  },
+  "a2585": {
+   "sub": "football"
+  },
+  "a2586": {
+   "sub": "football"
+  },
+  "a2587": {
+   "sub": "football"
+  },
+  "a2588": {
+   "sub": "football"
+  },
+  "a2589": {
+   "sub": "football"
+  },
+  "a2590": {
+   "sub": "football"
+  },
+  "a2591": {
+   "sub": "football"
+  },
+  "a2597": {
+   "sub": "motor-winter"
+  },
+  "a2598": {
+   "sub": "motor-winter"
+  },
+  "a2599": {
+   "sub": "motor-winter"
+  },
+  "a2600": {
+   "sub": "motor-winter"
+  },
+  "a2601": {
+   "sub": "motor-winter"
+  },
+  "a2602": {
+   "sub": "motor-winter"
+  },
+  "a2603": {
+   "sub": "motor-winter"
+  },
+  "a2604": {
+   "sub": "motor-winter"
+  },
+  "a2605": {
+   "sub": "motor-winter"
+  },
+  "a2606": {
+   "sub": "motor-winter"
+  },
+  "a2607": {
+   "sub": "motor-winter"
+  },
+  "a2608": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Iron Mike: The Rise and Fall of Mike Tyson) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a2609": {
+   "sub": "combat",
+   "reason": "A combat-sport article (The Manassa Mauler and the Million-Dollar Gate) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a2610": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Dr. Ironfist and Dr. Steelhammer: The Klitschko Brothers) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a2611": {
+   "sub": "combat",
+   "reason": "A combat-sport article (Gloves at the Games: A Short History of Olympic Boxing) — moved from Olympics & Athletics to the new Combat Sports & Martial Arts sub."
+  },
+  "a2612": {
+   "sub": "olympics"
+  },
+  "a2613": {
+   "sub": "olympics"
+  },
+  "a2614": {
+   "sub": "olympics"
+  },
+  "a2615": {
+   "sub": "olympics"
+  },
+  "a2616": {
+   "sub": "olympics"
+  },
+  "a2617": {
+   "sub": "olympics"
+  },
+  "a2618": {
+   "sub": "olympics"
+  },
+  "a2619": {
+   "sub": "olympics"
+  },
+  "a2620": {
+   "sub": "olympics"
+  },
+  "a2627": {
+   "sub": "energy"
+  },
+  "a2628": {
+   "sub": "energy"
+  },
+  "a2667": {
+   "sub": "religion"
+  },
+  "a2671": {
+   "sub": "cities"
+  },
+  "a2672": {
+   "sub": "cities"
+  },
+  "a2673": {
+   "sub": "cities"
+  },
+  "a2674": {
+   "sub": "physical",
+   "reason": "North America's lake and coastline records — physical geography, moved from Countries to Mountains, Rivers & Islands."
+  },
+  "a2675": {
+   "sub": "countries"
+  },
+  "a2676": {
+   "sub": "countries"
+  },
+  "a2687": {
+   "sub": "physics"
+  },
+  "a2695": {
+   "sub": "olympics"
+  },
+  "a2697": {
+   "sub": "religion"
+  },
+  "a2715": {
+   "sub": "biology"
+  },
+  "a2716": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Nature and Nurture: What Twins Reveal About Heredity) — moved from Biology to the new Psychology & the Mind sub."
+  },
+  "a2717": {
+   "sub": "medicine"
+  },
+  "a2718": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Changing Minds: The Schools of Modern Psychotherapy) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a2719": {
+   "sub": "medicine"
+  },
+  "a2720": {
+   "sub": "medicine"
+  },
+  "a2721": {
+   "sub": "physics"
+  },
+  "a2722": {
+   "sub": "physics"
+  },
+  "a2729": {
+   "sub": "energy"
+  },
+  "a2730": {
+   "sub": "energy"
+  },
+  "a2735": {
+   "sub": "mythology"
+  },
+  "a2736": {
+   "sub": "religion"
+  },
+  "a2737": {
+   "sub": "religion"
+  },
+  "a2743": {
+   "sub": "countries"
+  },
+  "a2744": {
+   "sub": "physical"
+  },
+  "a2768": {
+   "sub": "biology"
+  },
+  "a2769": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Bells, Boxes and Bobo Dolls: Classic Findings of Psychology) — moved from Biology to the new Psychology & the Mind sub."
+  },
+  "a2770": {
+   "sub": "chemistry"
+  },
+  "a2771": {
+   "sub": "maths"
+  },
+  "a2772": {
+   "sub": "maths"
+  },
+  "a2773": {
+   "sub": "medicine"
+  },
+  "a2774": {
+   "sub": "medicine"
+  },
+  "a2775": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (The Genuine Smile: How Science Reads the Face) — moved from Medicine to the new Psychology & the Mind sub."
+  },
+  "a2776": {
+   "sub": "physics"
+  },
+  "a2777": {
+   "sub": "physics"
+  },
+  "a2793": {
+   "sub": "biology"
+  },
+  "a2794": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (One Number for the Mind? Spearman's g and Its Rivals) — moved from Biology to the new Psychology & the Mind sub."
+  },
+  "a2795": {
+   "sub": "psychology",
+   "reason": "A psychology/psychiatry article (Smiles, Red Kit and Testosterone: The Psychology of the Fight) — moved from Biology to the new Psychology & the Mind sub."
+  }
+ },
+ "outgoing": {
+  "a0656": {
+   "domain": "body-health",
+   "suggestedSub": "psychology",
+   "reason": "Founders of depth psychology (Jung, Freud, Adler) — psychology, not philosophy; goes to the new Psychology & the Mind sub defined in this file."
+  },
+  "a1064": {
+   "domain": "music-stage",
+   "suggestedSub": "classical",
+   "reason": "Musical forms of church music (requiem, passion, magnificat) — a classical-music topic rather than religion."
+  },
+  "a0165": {
+   "domain": "earth-space",
+   "suggestedSub": "weather",
+   "reason": "Aurora, rainbow, halo — atmospheric light phenomena, an Earth & Space (weather) topic."
+  },
+  "a1617": {
+   "domain": "earth-space",
+   "suggestedSub": "astronomy",
+   "reason": "Copernicus, Kepler, Brahe and planetary motion — history of astronomy."
+  },
+  "a1985": {
+   "domain": "stage-tv",
+   "suggestedSub": "tv",
+   "reason": "German TV comedians' comic characters (Else Stratmann, Cindy aus Marzahn) — only the hook is the Olympics."
+  },
+  "a1601": {
+   "domain": "cultures",
+   "suggestedSub": "language",
+   "reason": "German words with a sailing and an everyday meaning — wordplay/vocabulary, not sport."
+  }
+ }
+}

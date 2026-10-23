@@ -1,0 +1,392 @@
+{
+ "source": "publish-or-perish-mge",
+ "bucket": "society/society",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-132",
+    "category": 1
+   },
+   "factId": "f10230"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-151",
+    "category": 1
+   },
+   "factId": "f01662"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2046",
+   "baseHash": "db1a1c443aa9",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-046",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Sex, Gender and the Vocabulary of Social Science",
+    "titleDe": "Sex, Gender und das Vokabular der Sozialwissenschaften",
+    "bodyEn": "Every social science builds its own vocabulary, and a handful of its terms have travelled from seminar rooms into newspapers, parliaments and quiz cards. Six of them describe how societies sort people and how those sorting mechanisms are challenged.\n\nGender is the concept that separates the socially constructed side of being a man or a woman from the biological facts of sex. The distinction was first drawn in 1955 by the psychologist John Money with the term \"gender role\", was taken up by Robert Stoller in 1968 and became a key term of the social sciences with Ann Oakley's book \"Sex, Gender and Society\" in 1972. Sex refers to chromosomes, hormones and anatomy; gender to the roles, expectations, clothes and behaviour that a society attaches to them and that vary from one culture and century to the next. Even the colours have moved: in 1927 Time magazine printed an overview of what major US department stores recommended for babies, and most of them – six against four – advised pink for boys and blue for girls. Pink only became firmly a girls' colour in the 1950s. Because German has only the one word \"Geschlecht\", the English term was adopted untranslated.\n\nIntersectionality was coined in 1989 by the American legal scholar Kimberlé Crenshaw. Analysing court cases brought by Black women against employers, she showed that their discrimination could be explained neither as sexism alone nor as racism alone: the two overlapped, like traffic at an intersection, and produced a disadvantage of its own. The concept has since been extended to class, disability, age, sexuality and religion.\n\nPatriarchy, from the Greek for \"rule of the father\", originally described the authority of the oldest man over a household. Anthropologists and, from the 1960s, feminist theorists widened it to mean a whole social order in which men hold the decisive positions in family, state, religion and economy and pass them on to other men. Kate Millett's \"Sexual Politics\" (1970) made it a central term of the women's movement.\n\nFeminism is the movement that seeks to end that order. Its history is usually told in waves: a first wave in the nineteenth and early twentieth century fought for the vote, education and property rights; a second, from the 1960s, for equality at work, reproductive rights and an end to violence against women; later waves have focused on diversity and, indeed, intersectionality. Women gained the vote in Germany in 1918. The first wave is often dated from the women's rights convention at Seneca Falls, New York, on 19–20 July 1848.\n\nEthnocentrism became a standard term through the American sociologist William Graham Sumner's 1906 book \"Folkways\", although the Polish-Austrian sociologist Ludwig Gumplowicz had probably used the word before him. It describes the tendency to treat one's own group as the centre of everything and to measure all other cultures by its standards, usually finding them wanting.\n\nCultural relativism was the anthropologists' answer: the principle that a culture should be understood and interpreted by its own standards rather than judged by those of the observer. The idea goes back to Franz Boas, who argued in 1887 that civilisation is not something absolute but something relative, and it was spread by his pupils; Boas himself never used the phrase, which is first recorded in 1924 in the writing of the philosopher Alain Locke. It became a foundation of modern anthropology, yet it still raises hard questions about human rights and universal standards.\n\n| Term | Coined or defined by | Year |\n|---|---|---|\n| Gender | John Money / Ann Oakley | 1955 / 1972 |\n| Intersectionality | Kimberlé Crenshaw | 1989 |\n| Patriarchy | Greek antiquity; feminist theory | 1960s |\n| Feminism | \"first wave\" | 19th century |\n| Ethnocentrism | William Graham Sumner | 1906 |\n| Cultural relativism | Franz Boas / Alain Locke | 1887 / 1924 |",
+    "bodyDe": "Jede Sozialwissenschaft baut ihr eigenes Vokabular, und eine Handvoll ihrer Begriffe ist aus den Seminarräumen in Zeitungen, Parlamente und auf Quizkarten gewandert. Sechs davon beschreiben, wie Gesellschaften Menschen einordnen und wie diese Einordnungen infrage gestellt werden.\n\nGender ist das Konzept, das die gesellschaftlich konstruierte Seite des Mann- oder Frauseins von den biologischen Tatsachen des Geschlechts trennt. Die Unterscheidung wurde 1955 erstmals vom Psychologen John Money mit dem Begriff „gender role“ getroffen, 1968 von Robert Stoller aufgegriffen und mit Ann Oakleys Buch „Sex, Gender and Society“ von 1972 zum Schlüsselbegriff der Sozialwissenschaften. Sex meint Chromosomen, Hormone und Anatomie; Gender die Rollen, Erwartungen, Kleidung und Verhaltensweisen, die eine Gesellschaft daran knüpft und die sich von Kultur zu Kultur und von Jahrhundert zu Jahrhundert unterscheiden. Selbst die Farben sind gewandert: 1927 druckte das Magazin Time eine Übersicht darüber, was große US-Kaufhäuser für Babys empfahlen, und die meisten – sechs gegen vier – rieten zu Rosa für Jungen und Blau für Mädchen. Zur festen Mädchenfarbe wurde Rosa erst in den 1950er-Jahren. Weil das Deutsche nur das eine Wort „Geschlecht“ kennt, wurde der englische Begriff unübersetzt übernommen.\n\nIntersektionalität prägte 1989 die amerikanische Rechtswissenschaftlerin Kimberlé Crenshaw. Bei der Analyse von Klagen schwarzer Frauen gegen Arbeitgeber zeigte sie, dass deren Diskriminierung weder allein als Sexismus noch allein als Rassismus zu erklären war: Beides überschnitt sich wie der Verkehr an einer Kreuzung und erzeugte eine eigene Benachteiligung. Das Konzept wurde seither auf Klasse, Behinderung, Alter, Sexualität und Religion ausgeweitet.\n\nPatriarchat, vom griechischen Wort für „Herrschaft des Vaters“, bezeichnete ursprünglich die Autorität des ältesten Mannes über einen Haushalt. Anthropologen und ab den 1960er-Jahren feministische Theoretikerinnen weiteten den Begriff auf eine ganze Gesellschaftsordnung aus, in der Männer die entscheidenden Positionen in Familie, Staat, Religion und Wirtschaft innehaben und an andere Männer weitergeben. Kate Milletts Buch „Sexual Politics“ (1970) machte ihn zu einem Schlüsselbegriff der Frauenbewegung.\n\nFeminismus ist die Bewegung, die diese Ordnung beenden will. Ihre Geschichte wird meist in Wellen erzählt: Eine erste Welle im 19. und frühen 20. Jahrhundert kämpfte für Wahlrecht, Bildung und Eigentumsrechte; eine zweite ab den 1960er-Jahren für Gleichstellung im Beruf, reproduktive Rechte und ein Ende der Gewalt gegen Frauen; spätere Wellen rückten Vielfalt und eben Intersektionalität in den Mittelpunkt. In Deutschland erhielten Frauen 1918 das Wahlrecht. Als Beginn der ersten Welle gilt oft die Frauenrechtskonferenz von Seneca Falls im Staat New York am 19. und 20. Juli 1848.\n\nEthnozentrismus wurde durch das 1906 erschienene Buch „Folkways“ des amerikanischen Soziologen William Graham Sumner zum Fachbegriff, auch wenn der polnisch-österreichische Soziologe Ludwig Gumplowicz das Wort wohl schon vor ihm verwendet hatte. Der Begriff beschreibt die Neigung, die eigene Gruppe als Mittelpunkt von allem zu betrachten und alle anderen Kulturen an ihren Maßstäben zu messen, wobei diese meist schlecht abschneiden.\n\nDie Antwort der Ethnologie darauf war der Kulturrelativismus: das Prinzip, eine Kultur nach ihren eigenen Maßstäben zu verstehen und zu deuten, statt sie an denen des Betrachters zu messen. Die Idee geht auf Franz Boas zurück, der 1887 schrieb, Zivilisation sei nichts Absolutes, sondern etwas Relatives, und wurde von seinen Schülern verbreitet; Boas selbst gebrauchte den Ausdruck nie – belegt ist er erstmals 1924 bei dem Philosophen Alain Locke. Er wurde zu einer Grundlage der modernen Ethnologie, wirft aber bis heute schwierige Fragen nach Menschenrechten und universellen Maßstäben auf.\n\n| Begriff | Geprägt oder definiert von | Jahr |\n|---|---|---|\n| Gender | John Money / Ann Oakley | 1955 / 1972 |\n| Intersektionalität | Kimberlé Crenshaw | 1989 |\n| Patriarchat | griechische Antike; feministische Theorie | 1960er |\n| Feminismus | „erste Welle“ | 19. Jahrhundert |\n| Ethnozentrismus | William Graham Sumner | 1906 |\n| Kulturrelativismus | Franz Boas / Alain Locke | 1887 / 1924 |",
+    "notesEn": "The 1927 Time chart is documented (six stores pink for boys, four the opposite), but historians such as Jo Paoletti find no consistent pink/blue coding before the 1950s rather than a clean \"reversal\".",
+    "notesDe": "Die Time-Übersicht von 1927 ist belegt (sechs Kaufhäuser Rosa für Jungen, vier umgekehrt), doch Historikerinnen wie Jo Paoletti sehen vor den 1950er-Jahren eher gar keine feste Rosa-Blau-Zuordnung als eine saubere „Umkehrung“."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2728",
+   "baseHash": "db068cab9fb9",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-025",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "What a Signature Says: Size, Flourishes, Seals and Signing Machines",
+    "titleDe": "Was eine Unterschrift verrät: Größe, Schnörkel, Stempel und Unterschriftenmaschinen",
+    "bodyEn": "A signature is the most personal thing most people ever write, and for centuries people have tried to read character in it.\n\nThe oldest attempt is graphology, the analysis of handwriting in an attempt to determine the writer's personality. It took shape in nineteenth-century France, where the priest Jean-Hippolyte Michon became fascinated by handwriting around 1830 and founded the Société Graphologique in 1871. Graphology was long used by employers to screen job applicants, but it is a pseudoscience: a review of some 200 studies found graphologists did no better than untrained amateurs, and the British Psychological Society gives it \"zero validity\".\n\nScience has looked at one feature that is easy to measure: size. In 2016 Alvaro Mailhos, Abraham Buunk and Álvaro Cabana published a study in the Journal of Research in Personality based on 340 Uruguayan psychology students. Larger signatures signalled social dominance – what the authors called \"sociable dominance\", the confident, outgoing kind – in both men and women, and narcissism only among women. Contrary to popular belief, signature size showed no link to self-esteem or to aggressive dominance, and the effects, though consistent, were modest.\n\nThe most famous big signature in history belongs to John Hancock. As President of the Continental Congress he signed the engrossed Declaration of Independence in large, flamboyant letters, visibly bigger than everyone else's names. The story that he wrote so big so that King George could read it without his spectacles is apocryphal, but the result stuck: in the United States \"put your John Hancock here\" means \"sign here\".\n\nHancock's sweeping underline is an example of a paraph, a French term meaning flourish, initial or signature. Notaries and scribes once used elaborate paraphs to make their signatures hard to forge, and graphologists still read meaning into them. In some countries \"paraphing\" also means initialling every page of a contract.\n\nIn Japan the handwritten signature has traditionally mattered far less. To sign a formal document, people use a personal seal (hanko / inkan): a small stamp carved with the owner's name and pressed in red ink. Seals reached Japan from China in antiquity, but they spread through the whole of society only after modernisation began around 1870. A person's officially registered seal, the jitsuin, is lodged with the local authority and needed for contracts, property and cars, while cheap everyday seals serve for parcels and office paperwork.\n\nAt the other extreme is the signature no hand has touched. Thomas Jefferson already used a \"polygraph\", patented by John Isaac Hawkins in 1803, in which a second pen copied every stroke of the first. In 1942 Robert M. De Shazo Jr. developed the first commercially successful autopen, a machine whose arm traces a stored signature with a real pen. Harry Truman may have been the first president to use one; Gerald Ford was the first to admit it openly, and Barack Obama the first to sign a law with it.\n\n| Feature | Fact |\n|---|---|\n| Graphology | Société Graphologique founded 1871 |\n| Larger signature | Social dominance (both sexes), narcissism (women) – 2016 study |\n| Biggest signature | John Hancock, Declaration of Independence |\n| Flourish | Paraph |\n| Japanese substitute | Personal seal (hanko), registered as the jitsuin |\n| Signing machine | Autopen, 1942 |",
+    "bodyDe": "Die Unterschrift ist das Persönlichste, was die meisten Menschen je schreiben, und seit Jahrhunderten versucht man, den Charakter darin zu lesen.\n\nDer älteste Versuch ist die Graphologie, die Deutung der Handschrift mit dem Ziel, die Persönlichkeit des Schreibers zu bestimmen. Sie entstand im Frankreich des 19. Jahrhunderts, wo sich der Priester Jean-Hippolyte Michon um 1830 für Handschriften zu begeistern begann und 1871 die Société Graphologique gründete. Lange nutzten Arbeitgeber die Graphologie, um Bewerber auszuwählen, doch sie ist eine Pseudowissenschaft: Eine Auswertung von rund 200 Studien ergab, dass Graphologen nicht besser abschnitten als ungeschulte Laien, und die British Psychological Society bescheinigt ihr „null Validität“.\n\nDie Wissenschaft hat sich ein Merkmal angesehen, das leicht zu messen ist: die Größe. 2016 veröffentlichten Alvaro Mailhos, Abraham Buunk und Álvaro Cabana im Journal of Research in Personality eine Studie mit 340 uruguayischen Psychologiestudierenden. Größere Unterschriften signalisierten bei Männern wie Frauen soziale Dominanz – von den Autoren „sociable dominance“ genannt, die selbstbewusste, gesellige Art –, Narzissmus dagegen nur bei Frauen. Entgegen der landläufigen Meinung zeigte sich kein Zusammenhang mit dem Selbstwertgefühl oder mit aggressiver Dominanz, und die Effekte waren zwar beständig, aber bescheiden.\n\nDie berühmteste große Unterschrift der Geschichte stammt von John Hancock. Als Präsident des Kontinentalkongresses unterzeichnete er die Reinschrift der Unabhängigkeitserklärung in großen, schwungvollen Buchstaben, deutlich größer als alle anderen Namen. Die Geschichte, er habe so groß geschrieben, damit König Georg sie ohne Brille lesen könne, ist erfunden, doch das Ergebnis blieb: In den USA heißt „put your John Hancock here“ so viel wie „unterschreiben Sie hier“.\n\nHancocks ausladender Unterstrich ist ein Beispiel für eine Paraphe, nach einem französischen Wort für Schnörkel, Namenszug oder Unterschrift. Notare und Schreiber setzten einst kunstvolle Paraphen, um ihre Unterschriften fälschungssicher zu machen, und Graphologen deuten sie noch heute. Im Deutschen bezeichnet die Paraphe außerdem das Namenskürzel, mit dem man etwa jede Seite eines Vertrags abzeichnet.\n\nIn Japan zählt die handschriftliche Unterschrift traditionell weit weniger. Um ein offizielles Dokument zu unterzeichnen, verwendet man einen persönlichen Namensstempel (Hanko / Inkan): einen kleinen Stempel mit dem eingravierten Namen des Besitzers, der mit roter Stempelfarbe aufgedrückt wird. Siegel kamen schon in der Antike aus China nach Japan, setzten sich in der ganzen Gesellschaft aber erst durch, als um 1870 die Modernisierung begann. Den amtlich registrierten Stempel, das Jitsuin, hinterlegt man bei der Gemeinde; er wird für Verträge, Grundstücke und Autos gebraucht, während einfache Alltagsstempel für Pakete und Büroformulare genügen.\n\nAm anderen Extrem steht die Unterschrift, die keine Hand berührt hat. Schon Thomas Jefferson nutzte einen „Polygraphen“, 1803 von John Isaac Hawkins patentiert, bei dem eine zweite Feder jeden Strich der ersten nachzog. 1942 entwickelte Robert M. De Shazo Jr. den ersten kommerziell erfolgreichen Autopen, eine Maschine, deren Arm eine gespeicherte Unterschrift mit einem echten Stift nachfährt. Harry Truman war womöglich der erste Präsident, der einen benutzte; Gerald Ford gab es als Erster offen zu, und Barack Obama unterzeichnete als Erster ein Gesetz damit.\n\n| Merkmal | Fakt |\n|---|---|\n| Graphologie | Société Graphologique gegründet 1871 |\n| Größere Unterschrift | Soziale Dominanz (beide Geschlechter), Narzissmus (Frauen) – Studie 2016 |\n| Größte Unterschrift | John Hancock, Unabhängigkeitserklärung |\n| Schnörkel | Paraphe |\n| Japanischer Ersatz | Namensstempel (Hanko), registriert als Jitsuin |\n| Unterschriftenmaschine | Autopen, 1942 |",
+    "notesEn": "The printed card claimed larger signatures indicate higher self-esteem; the 2016 study it describes (Mailhos, Buunk and Cabana, 'Signature size signals sociable dominance and narcissism') found no such link.",
+    "notesDe": "Die gedruckte Karte behauptete, größere Unterschriften zeigten ein höheres Selbstwertgefühl; die von ihr beschriebene Studie von 2016 (Mailhos, Buunk und Cabana, „Signature size signals sociable dominance and narcissism“) fand keinen solchen Zusammenhang."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-043",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-021",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-041",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which German sociologist contrasted Gemeinschaft and Gesellschaft – community and society – in his book of 1887?",
+      "de": "Welcher deutsche Soziologe stellte in seinem Buch von 1887 Gemeinschaft und Gesellschaft einander gegenüber?",
+      "answerEn": "Ferdinand Tönnies",
+      "answerDe": "Ferdinand Tönnies",
+      "timeline": {
+       "kind": "creation",
+       "start": "1887",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ferdinand Tönnies publishes Gemeinschaft und Gesellschaft",
+       "labelDe": "Ferdinand Tönnies veröffentlicht „Gemeinschaft und Gesellschaft“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Gemeinschaft_and_Gesellschaft",
+       "title": "Gemeinschaft and Gesellschaft",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which sociologist described the rationalised order of modern capitalism as a 'stahlhartes Gehäuse', known in English as the 'iron cage'?",
+      "de": "Welcher Soziologe beschrieb die rationalisierte Ordnung des modernen Kapitalismus als „stahlhartes Gehäuse“, englisch „iron cage“?",
+      "answerEn": "Max Weber",
+      "answerDe": "Max Weber",
+      "timeline": {
+       "kind": "creation",
+       "start": "1904",
+       "end": "1905",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Max Weber publishes The Protestant Ethic and the Spirit of Capitalism, ending with the image of the iron cage",
+       "labelDe": "Max Weber veröffentlicht „Die protestantische Ethik und der Geist des Kapitalismus“ mit dem Bild vom stahlharten Gehäuse"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Iron_cage",
+       "title": "Iron cage",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the title of Robert D. Putnam's 2000 book on the decline of social capital in the United States?",
+      "de": "Wie heißt Robert D. Putnams Buch von 2000 über den Rückgang des sozialen Kapitals in den USA?",
+      "answerEn": "Bowling Alone",
+      "answerDe": "Bowling Alone",
+      "timeline": {
+       "kind": "creation",
+       "start": "2000",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Robert D. Putnam publishes Bowling Alone: The Collapse and Revival of American Community",
+       "labelDe": "Robert D. Putnam veröffentlicht „Bowling Alone: The Collapse and Revival of American Community“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bowling_Alone",
+       "title": "Bowling Alone",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Iron Cages and Golden Arches: Sociology's Diagnoses of Modern Life",
+    "titleDe": "Stahlharte Gehäuse und goldene Bögen: Soziologische Diagnosen der Moderne",
+    "bodyEn": "Since the nineteenth century sociologists have tried to name what modern life does to people. Six of their diagnoses have become standard vocabulary, and several describe the same unease: a world that grows more efficient and more anonymous at once.\n\nThe earliest is the pair Gemeinschaft and Gesellschaft, \"community and society\", from the 1887 book of the German sociologist Ferdinand Tönnies. Gemeinschaft is the world of family, village and personal loyalty; Gesellschaft the world of contracts, markets and rational self-interest which, in Tönnies's view, was steadily weakening those older bonds.\n\nÉmile Durkheim gave the danger a name. In \"The Division of Labour in Society\" (1893) and again in \"Suicide\" (1897) he described anomie – a lack of social regulation, often glossed as normlessness, in which shared rules lose their grip, the bonds between individual and community break down and people are left without moral guidance. Durkheim found it behind rising suicide rates in times of rapid economic change, and some sociologists now see new forms of it in life online.\n\nMax Weber saw rationalisation as the master trend of the age. At the end of \"The Protestant Ethic and the Spirit of Capitalism\" (1904–05) he wrote that the modern economic order, once chosen freely, had become a \"stahlhartes Gehäuse\" – rendered by Talcott Parsons in 1930 as the \"iron cage\" – a system of efficiency, calculation and control that traps everyone born into it.\n\nThe American sociologist George Ritzer updated Weber for the age of fast food. In a 1983 article and his 1993 book \"The McDonaldization of Society\" he argued that the principles of the fast-food restaurant – efficiency, calculability, predictability and control – were coming to dominate ever more sectors of society, from universities to hospitals, sometimes at the expense of creativity and tradition. He called the process McDonaldization.\n\nNot every diagnosis concerns a loss of control. Social capital names the resources a person can draw from their network of social relationships – the friend who knows of a job, the neighbour who lends a hand. The term was used in 1916 by the American educator L. J. Hanifan, and Pierre Bourdieu defined it in 1986 as resources linked to a durable network of relationships. Yet it, too, could be lost: in \"Bowling Alone\" (2000), grown out of a 1995 essay, the political scientist Robert D. Putnam traced the decline of social capital in the United States since 1950 – Americans still went bowling, but no longer in leagues.\n\n| Concept | Thinker | Year |\n|---|---|---|\n| Gemeinschaft and Gesellschaft | Ferdinand Tönnies | 1887 |\n| Anomie | Émile Durkheim | 1893 |\n| Iron cage | Max Weber | 1904–05 |\n| Social capital | L. J. Hanifan / Pierre Bourdieu | 1916 / 1986 |\n| McDonaldization | George Ritzer | 1983 / 1993 |\n| Decline of social capital | Robert D. Putnam, \"Bowling Alone\" | 2000 |",
+    "bodyDe": "Seit dem 19. Jahrhundert versuchen Soziologen zu benennen, was das moderne Leben mit den Menschen macht. Sechs ihrer Diagnosen sind zum Standardvokabular geworden, und mehrere beschreiben dasselbe Unbehagen: eine Welt, die zugleich effizienter und anonymer wird.\n\nDie früheste ist das Begriffspaar Gemeinschaft und Gesellschaft aus dem Buch des deutschen Soziologen Ferdinand Tönnies von 1887. Gemeinschaft ist die Welt von Familie, Dorf und persönlicher Treue; Gesellschaft die Welt der Verträge, Märkte und des rationalen Eigeninteresses, die nach Tönnies' Ansicht diese älteren Bindungen stetig schwächte.\n\nÉmile Durkheim gab der Gefahr einen Namen. In „Über soziale Arbeitsteilung“ (1893) und erneut in „Der Selbstmord“ (1897) beschrieb er die Anomie – einen Mangel an sozialer Regulierung, oft als Normlosigkeit übersetzt, bei dem gemeinsame Regeln ihren Halt verlieren, die Bindungen zwischen Individuum und Gemeinschaft zerfallen und Menschen ohne moralische Orientierung bleiben. Durkheim sah sie hinter steigenden Selbstmordraten in Zeiten raschen wirtschaftlichen Wandels, und manche Soziologen erkennen heute neue Formen davon im Leben im Netz.\n\nMax Weber sah in der Rationalisierung den Grundzug des Zeitalters. Am Ende von „Die protestantische Ethik und der Geist des Kapitalismus“ (1904/05) schrieb er, die moderne Wirtschaftsordnung, einst frei gewählt, sei zu einem „stahlharten Gehäuse“ geworden – von Talcott Parsons 1930 als „iron cage“ (eiserner Käfig) übersetzt –, einem System aus Effizienz, Berechnung und Kontrolle, das jeden gefangen hält, der in es hineingeboren wird.\n\nDer amerikanische Soziologe George Ritzer übertrug Weber ins Zeitalter des Fast Food. In einem Aufsatz von 1983 und seinem Buch „The McDonaldization of Society“ von 1993 legte er dar, dass die Prinzipien des Schnellrestaurants – Effizienz, Berechenbarkeit, Vorhersagbarkeit und Kontrolle – immer mehr Bereiche der Gesellschaft beherrschten, von Universitäten bis zu Krankenhäusern, mitunter auf Kosten von Kreativität und Tradition. Er nannte den Vorgang McDonaldisierung.\n\nNicht jede Diagnose handelt vom Verlust der Kontrolle. Soziales Kapital bezeichnet die Ressourcen, die ein Mensch aus seinem Netzwerk sozialer Beziehungen schöpfen kann – die Freundin, die von einer Stelle weiß, den Nachbarn, der mit anpackt. Der Begriff findet sich 1916 bei dem amerikanischen Pädagogen L. J. Hanifan, und Pierre Bourdieu definierte ihn 1986 als Ressourcen, die mit einem dauerhaften Netz von Beziehungen verbunden sind. Doch auch dieses Kapital kann schwinden: In „Bowling Alone“ (2000), hervorgegangen aus einem Aufsatz von 1995, verfolgte der Politikwissenschaftler Robert D. Putnam den Rückgang des sozialen Kapitals in den USA seit 1950 – die Amerikaner gingen weiter kegeln, aber nicht mehr in Vereinen.\n\n| Begriff | Denker | Jahr |\n|---|---|---|\n| Gemeinschaft und Gesellschaft | Ferdinand Tönnies | 1887 |\n| Anomie | Émile Durkheim | 1893 |\n| Stahlhartes Gehäuse | Max Weber | 1904/05 |\n| Soziales Kapital | L. J. Hanifan / Pierre Bourdieu | 1916 / 1986 |\n| McDonaldisierung | George Ritzer | 1983 / 1993 |\n| Rückgang des sozialen Kapitals | Robert D. Putnam, „Bowling Alone“ | 2000 |",
+    "notesEn": "The McDonaldization card is labelled Economics, but the concept is sociological. Weber's own phrase is \"stahlhartes Gehäuse\" (shell as hard as steel); \"iron cage\" is Talcott Parsons's 1930 translation.",
+    "notesDe": "Die Karte zur McDonaldisierung ist mit Economics beschriftet, der Begriff ist aber soziologisch. Webers eigener Ausdruck lautet „stahlhartes Gehäuse“; „iron cage“ ist Talcott Parsons' Übersetzung von 1930."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-087",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-150",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the Malagasy funeral tradition, the 'turning of the bones', in which families take their ancestors' remains from the crypt, rewrap them in fresh cloth and dance with them?",
+      "de": "Wie heißt der madagassische Totenbrauch, die „Umwendung der Gebeine“, bei dem Familien die Überreste ihrer Ahnen aus der Gruft holen, neu einhüllen und mit ihnen tanzen?",
+      "answerEn": "Famadihana",
+      "answerDe": "Famadihana",
+      "timeline": {
+       "kind": "era",
+       "start": "1601",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Famadihana, the Malagasy turning of the bones, takes its present form, perhaps from the 17th century",
+       "labelDe": "Die Famadihana, die madagassische Umwendung der Gebeine, nimmt wohl ab dem 17. Jahrhundert ihre heutige Form an"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Famadihana",
+       "title": "Famadihana",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which orange flowers, called cempasúchil in Mexico, are heaped on the altars and graves of the Day of the Dead?",
+      "de": "Welche orangefarbenen Blumen, in Mexiko Cempasúchil genannt, schmücken am Tag der Toten Altäre und Gräber?",
+      "answerEn": "Marigolds",
+      "answerDe": "Studentenblumen",
+      "timeline": {
+       "kind": "event",
+       "start": "2008",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "UNESCO adds Mexico's Day of the Dead to the Intangible Cultural Heritage of Humanity",
+       "labelDe": "Die UNESCO nimmt Mexikos Tag der Toten in das immaterielle Kulturerbe der Menschheit auf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+       "title": "Day of the Dead",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Ghanaian carpenter, whose workshop in Teshie made figurative 'fantasy coffins' famous, had his coffins shown at the Paris exhibition 'Les Magiciens de la terre' in 1989?",
+      "de": "Welcher ghanaische Schreiner, dessen Werkstatt in Teshie die figürlichen „Fantasiesärge“ berühmt machte, war 1989 mit seinen Särgen in der Pariser Ausstellung „Les Magiciens de la terre“ vertreten?",
+      "answerEn": "Kane Kwei",
+      "answerDe": "Kane Kwei",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1922",
+       "end": "1992",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Kane Kwei, Ghanaian carpenter who made fantasy coffins famous",
+       "labelDe": "Kane Kwei, ghanaischer Schreiner, der die Fantasiesärge berühmt machte"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fantasy_coffin",
+       "title": "Fantasy coffin",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Fantasy Coffins and Cemetery Picnics: How the World Lives with Its Dead",
+    "titleDe": "Fantasiesärge und Friedhofspicknicks: Wie die Welt mit ihren Toten lebt",
+    "bodyEn": "Every culture has to decide what to do with its dead, and some of the answers look startling from the outside. Several of them turn the cemetery and the funeral into something closer to a celebration.\n\nIn the Greater Accra Region of Ghana, among the Ga people above all, a coffin can be shaped like almost anything: a fish for a fisherman, a cocoa pod for a farmer, a Mercedes for a businessman, a smartphone or even a packet of cigarettes. These fantasy coffins, which grew out of figurative palanquins and came into use from around the 1950s, are made to resemble something that mattered to the deceased and is meant to accompany them into the next life. The carpenter Kane Kwei (1922–1992) and his workshop in Teshie made them famous; in 1989 his coffins were shown to a wider Western public at the exhibition \"Les Magiciens de la terre\" in Paris, and today they stand in art museums as well as in graves.\n\nIn Madagascar the dead come back out. In Famadihana, the \"turning of the bones\", families take the remains of their ancestors from the family crypt, rewrap them in fresh silk shrouds, write their names on the cloth again and dance with them to live music before returning them to the tomb. The custom, perhaps only since the seventeenth century in its present form, is usually held every five to seven years and brings scattered families together; it is declining because the shrouds are expensive and many Evangelical Christians reject it.\n\nMexico welcomes its dead home once a year. On the Day of the Dead, at the start of November, families clean and decorate the graves and build ofrendas, altars with food, photographs and candles, heaped with orange marigolds – cempasúchil, from the Nahuatl for \"twenty flowers\" – whose colour and scent are said to guide the souls. UNESCO added the festival to its list of the Intangible Cultural Heritage of Humanity in 2008.\n\nNorthern Europe has a quieter version. Copenhagen's Assistens Cemetery, laid out in 1760 as a burial ground for the poor outside the city walls, became fashionable in the Danish Golden Age; Hans Christian Andersen and Søren Kierkegaard are buried there. Around the 1820s excursions to the cemetery with picnic baskets and tea became a popular pastime of ordinary citizens, because such cemeteries were among the best-kept green spaces a city had. The habit never quite stopped: today Assistens is the most important park of the Nørrebro district, and picnicking, sunbathing and reading among the graves are a normal part of a Copenhagen summer.\n\n| Custom | Country | Feature |\n|---|---|---|\n| Fantasy coffins | Ghana | Coffin shaped like a fish, car or phone |\n| Famadihana | Madagascar | Ancestors rewrapped every 5–7 years |\n| Day of the Dead | Mexico | Altars covered in marigolds |\n| Picnicking in cemeteries | Denmark | Assistens Cemetery, Copenhagen |",
+    "bodyDe": "Jede Kultur muss entscheiden, was sie mit ihren Toten tut, und manche Antworten wirken von außen verblüffend. Einige machen aus Friedhof und Begräbnis eher ein Fest.\n\nIn der Region Greater Accra in Ghana, vor allem beim Volk der Ga, kann ein Sarg fast jede Form haben: ein Fisch für einen Fischer, eine Kakaofrucht für einen Bauern, ein Mercedes für einen Geschäftsmann, ein Smartphone oder sogar eine Zigarettenschachtel. Diese Fantasiesärge, die aus figürlichen Sänften hervorgingen und etwa ab den 1950er-Jahren in Gebrauch kamen, stellen etwas dar, das dem Verstorbenen etwas bedeutete und ihn ins Jenseits begleiten soll. Der Schreiner Kane Kwei (1922–1992) und seine Werkstatt in Teshie machten sie berühmt; 1989 wurden seine Särge in der Ausstellung „Les Magiciens de la terre“ in Paris einem breiteren westlichen Publikum gezeigt, und heute stehen sie in Kunstmuseen ebenso wie in Gräbern.\n\nAuf Madagaskar kehren die Toten zurück. Bei der Famadihana, der „Umwendung der Gebeine“, holen Familien die Überreste ihrer Ahnen aus der Familiengruft, hüllen sie in frische Seidentücher, schreiben ihre Namen erneut auf den Stoff und tanzen mit ihnen zu Livemusik, bevor sie sie ins Grab zurückbringen. Der Brauch, in seiner heutigen Form vielleicht erst seit dem 17. Jahrhundert üblich, findet meist alle fünf bis sieben Jahre statt und führt verstreute Familien zusammen; er geht zurück, weil die Tücher teuer sind und viele evangelikale Christen ihn ablehnen.\n\nMexiko holt seine Toten einmal im Jahr nach Hause. Am Tag der Toten Anfang November säubern und schmücken Familien die Gräber und bauen Ofrendas, Altäre mit Speisen, Fotos und Kerzen, überhäuft mit orangefarbenen Studentenblumen – Cempasúchil, nach dem Nahuatl-Wort für „zwanzig Blumen“ –, deren Farbe und Duft den Seelen den Weg weisen sollen. Die UNESCO nahm das Fest 2008 in ihre Liste des immateriellen Kulturerbes der Menschheit auf.\n\nNordeuropa kennt eine stillere Variante. Der Kopenhagener Assistenzfriedhof, 1760 als Armenfriedhof vor den Stadtmauern angelegt, wurde im dänischen Goldenen Zeitalter zur vornehmen Adresse; Hans Christian Andersen und Søren Kierkegaard liegen hier begraben. Um die 1820er-Jahre wurden Ausflüge mit Picknickkorb und Tee zum Friedhof bei einfachen Bürgern beliebt, denn solche Friedhöfe gehörten zu den gepflegtesten Grünflächen einer Stadt. Ganz aufgehört hat das nie: Heute ist Assistens die wichtigste Grünanlage des Viertels Nørrebro, und Picknicken, Sonnenbaden und Lesen zwischen den Gräbern gehören zum Kopenhagener Sommer.\n\n| Brauch | Land | Merkmal |\n|---|---|---|\n| Fantasiesärge | Ghana | Sarg in Form von Fisch, Auto oder Handy |\n| Famadihana | Madagaskar | Ahnen alle 5–7 Jahre neu eingehüllt |\n| Tag der Toten | Mexiko | Altäre voller Studentenblumen |\n| Picknicken auf Friedhöfen | Dänemark | Assistenzfriedhof, Kopenhagen |",
+    "notesEn": "The cemetery-picnic card says the custom is common in Denmark; the documented tradition is Copenhagen's, above all Assistens Cemetery.",
+    "notesDe": "Die Karte zum Friedhofspicknick nennt den Brauch in Dänemark verbreitet; belegt ist die Tradition für Kopenhagen, vor allem den Assistenzfriedhof."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-145",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the Amharic name of the Ethiopian New Year, celebrated on 11 September (12 September in the year before a Gregorian leap year)?",
+      "de": "Wie heißt auf Amharisch das äthiopische Neujahr, das am 11. September gefeiert wird (im Jahr vor einem gregorianischen Schaltjahr am 12. September)?",
+      "answerEn": "Enkutatash",
+      "answerDe": "Enkutatash",
+      "timeline": {
+       "kind": "event",
+       "start": "2005-09-11",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The year 1998 of the Ethiopian calendar begins on Enkutatash, 11 September 2005",
+       "labelDe": "Das Jahr 1998 des äthiopischen Kalenders beginnt mit Enkutatash am 11. September 2005"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ethiopian_calendar",
+       "title": "Ethiopian calendar",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the New Year's Day of the Iranian Solar Hijri calendar called, which falls on the day of the March equinox?",
+      "de": "Wie heißt der Neujahrstag des iranischen Sonnenkalenders, der auf den Tag der März-Tagundnachtgleiche fällt?",
+      "answerEn": "Nowruz",
+      "answerDe": "Nowruz",
+      "timeline": {
+       "kind": "event",
+       "start": "1925-03-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Iran legally adopts the Solar Hijri calendar, whose year begins with Nowruz at the March equinox",
+       "labelDe": "Iran führt gesetzlich den Sonnenkalender ein, dessen Jahr mit Nowruz zur März-Tagundnachtgleiche beginnt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Solar_Hijri_calendar",
+       "title": "Solar Hijri calendar",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which era does Thailand's official solar calendar count its years, running 543 years ahead of the Gregorian calendar?",
+      "de": "Nach welcher Ära zählt der offizielle thailändische Sonnenkalender seine Jahre, die dem gregorianischen Kalender 543 Jahre voraus sind?",
+      "answerEn": "Buddhist Era",
+      "answerDe": "Buddhistische Ära",
+      "timeline": {
+       "kind": "event",
+       "start": "1888",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "King Chulalongkorn adopts the Thai solar calendar as Siam's version of the Gregorian calendar",
+       "labelDe": "König Chulalongkorn führt den thailändischen Sonnenkalender als siamesische Fassung des gregorianischen Kalenders ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Thai_solar_calendar",
+       "title": "Thai solar calendar",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Thirteen Months of Sunshine: Calendars That Count the Year Differently",
+    "titleDe": "13 Monate Sonnenschein: Kalender, die das Jahr anders zählen",
+    "bodyEn": "Most of the world dates its letters by the Gregorian calendar, but several countries still run their public life on calendars of their own – and their years, months and New Year's Days fall quite differently.\n\nEthiopia is the best known. Its calendar has 13 months: twelve of 30 days each and a short thirteenth month, Pagume, of five days, or six in a leap year – which is why the tourist board advertises \"thirteen months of sunshine\". The year is also seven to eight years behind the Gregorian count, because the Ethiopian Church kept an older calculation of the year of Christ's incarnation when the West adopted the one of Dionysius Exiguus in the sixth century. Ethiopia therefore celebrated its Millennium, the start of the year 2000, on 11 September 2007.\n\nThe Ethiopian New Year falls on 1 Mäskäräm, which is 11 September in the Gregorian calendar, or 12 September in the year before a Gregorian leap year. In Amharic, the official language, it is called Enkutatash, \"gift of jewels\"; the year 1998 of the Ethiopian calendar, for example, began on 11 September 2005.\n\nIran starts its year in spring. The Solar Hijri calendar, legally adopted on 31 March 1925 and also the most widely used calendar in Afghanistan, counts from Muhammad's migration to Medina like the Islamic calendar, but by solar years, and each year begins on the day of the March equinox. That day is Nowruz, the Persian New Year, usually between 19 and 22 March and celebrated far beyond Iran by Persianate cultures from the Caucasus to Central Asia.\n\nThailand changed its months but kept its own era. In 1888 King Chulalongkorn introduced the Thai solar calendar as the Siamese version of the Gregorian one, replacing the old lunar calendar. Its years, however, are counted in the Buddhist Era (B.E.), which runs 543 years ahead of the Gregorian calendar – so 2026 is the year 2569 on a Thai newspaper.\n\n| Calendar | Special feature | New Year |\n|---|---|---|\n| Ethiopian | 13 months, 7–8 years behind | Enkutatash, 11/12 September |\n| Solar Hijri (Iran) | Solar years from 622 | Nowruz, March equinox |\n| Thai solar | Buddhist Era, +543 years | 1 January (since 1941) |",
+    "bodyDe": "Die meisten Länder datieren ihre Briefe nach dem gregorianischen Kalender, doch einige führen ihr öffentliches Leben noch nach eigenen Kalendern – und deren Jahre, Monate und Neujahrstage fallen ganz anders.\n\nAm bekanntesten ist Äthiopien. Sein Kalender hat 13 Monate: zwölf zu je 30 Tagen und einen kurzen dreizehnten Monat, Pagume, mit fünf Tagen, in Schaltjahren sechs – weshalb das Fremdenverkehrsamt mit „13 Monaten Sonnenschein“ wirbt. Zudem liegt die Jahreszählung sieben bis acht Jahre hinter der gregorianischen zurück, weil die äthiopische Kirche an einer älteren Berechnung des Jahres der Menschwerdung Christi festhielt, als der Westen im 6. Jahrhundert die des Dionysius Exiguus übernahm. Äthiopien feierte sein Millennium, den Beginn des Jahres 2000, deshalb am 11. September 2007.\n\nDas äthiopische Neujahr fällt auf den 1. Mäskäräm, im gregorianischen Kalender der 11. September, im Jahr vor einem gregorianischen Schaltjahr der 12. September. Auf Amharisch, der Amtssprache, heißt es Enkutatash, „Geschenk der Juwelen“; das Jahr 1998 des äthiopischen Kalenders etwa begann am 11. September 2005.\n\nIran beginnt sein Jahr im Frühling. Der Sonnenkalender nach der Hidschra, gesetzlich eingeführt am 31. März 1925 und auch in Afghanistan der meistgenutzte Kalender, zählt wie der islamische Kalender ab Mohammeds Auswanderung nach Medina, aber in Sonnenjahren, und jedes Jahr beginnt am Tag der März-Tagundnachtgleiche. Dieser Tag ist Nowruz, das persische Neujahr, meist zwischen dem 19. und 22. März, das weit über Iran hinaus von persisch geprägten Kulturen vom Kaukasus bis Zentralasien gefeiert wird.\n\nThailand änderte seine Monate, behielt aber seine eigene Ära. 1888 führte König Chulalongkorn den thailändischen Sonnenkalender als siamesische Fassung des gregorianischen ein und ersetzte damit den alten Mondkalender. Die Jahre werden jedoch nach der Buddhistischen Ära (B.E.) gezählt, die dem gregorianischen Kalender 543 Jahre voraus ist – 2026 steht auf einer thailändischen Zeitung also als Jahr 2569.\n\n| Kalender | Besonderheit | Neujahr |\n|---|---|---|\n| Äthiopisch | 13 Monate, 7–8 Jahre zurück | Enkutatash, 11./12. September |\n| Persischer Sonnenkalender (Iran) | Sonnenjahre ab 622 | Nowruz, März-Tagundnachtgleiche |\n| Thailändischer Sonnenkalender | Buddhistische Ära, +543 Jahre | 1. Januar (seit 1941) |",
+    "notesEn": "The card's explanation is wrong for its question: the different dating of Christ's incarnation explains why Ethiopian years run 7–8 years behind, not why there are 13 months; the thirteenth month (Pagume) holds the five or six days left over after twelve 30-day months.",
+    "notesDe": "Die Erklärung der Karte passt nicht zur Frage: Die abweichende Datierung der Menschwerdung Christi erklärt, warum die äthiopischen Jahre 7–8 Jahre zurückliegen, nicht die 13 Monate; der dreizehnte Monat (Pagume) fasst die fünf oder sechs Tage, die nach zwölf Monaten zu 30 Tagen übrig bleiben."
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "ppm-065",
+   "category": 1,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Psychology: the bank's psychology articles live in science/biology (a0333 'Mind Traps' on cognitive biases, and this run's new 'Classic Findings of Psychology' article, which already covers operant conditioning)."
+  },
+  {
+   "card": "ppm-066",
+   "category": 1,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Psychology: the bank's psychology articles live in science/biology (a0333 'Mind Traps' on cognitive biases, and this run's new 'Classic Findings of Psychology' article, which already covers operant conditioning)."
+  },
+  {
+   "card": "ppm-148",
+   "category": 1,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Psychology: the bank's psychology articles live in science/biology (a0333 'Mind Traps' on cognitive biases, and this run's new 'Classic Findings of Psychology' article, which already covers operant conditioning)."
+  },
+  {
+   "card": "ppm-043",
+   "category": 2,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Psychology: the bank's psychology articles live in science/biology (a0333 'Mind Traps' on cognitive biases, and this run's new 'Classic Findings of Psychology' article, which already covers operant conditioning)."
+  },
+  {
+   "card": "ppm-035",
+   "category": 2,
+   "domain": "science",
+   "sub": "biology",
+   "why": "Psychology: the bank's psychology articles live in science/biology (a0333 'Mind Traps' on cognitive biases, and this run's new 'Classic Findings of Psychology' article, which already covers operant conditioning)."
+  },
+  {
+   "card": "ppm-053",
+   "category": 1,
+   "domain": "geography",
+   "sub": "peoples",
+   "why": "Naming custom: fits a2322 'Daughters, Sons and Two Surnames: How Names Work Around the World' (geography/peoples, 4/8), the bank's article on naming customs."
+  }
+ ]
+}

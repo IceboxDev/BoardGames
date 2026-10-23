@@ -1,0 +1,241 @@
+{
+ "article": "a1613",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cycling_at_the_2008_Summer_Olympics_%E2%80%93_Men%27s_BMX",
+   "title": "Cycling at the 2008 Summer Olympics – Men's BMX – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:56.507Z",
+   "snapshot": "764a0309587ca32ca2342821e732cc76dd160779d1d395012e4ae382be57f424"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/BMX",
+   "title": "BMX",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:57.436Z",
+   "snapshot": "3c47518b509c81dd796de36eddf143e91335c3860147ea6489aef49a8a91ce69"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cross-country_cycling",
+   "title": "Cross-country cycling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:58.453Z",
+   "snapshot": "b47fe8d9d546aacfcaada0747383d7c72bcf620b36a5e102559deda23252c032"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Union_Cycliste_Internationale",
+   "title": "Union Cycliste Internationale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:59.528Z",
+   "snapshot": "34e1d6ed1b92f822fb387aea254faa68666890b114de1e1186ea833e2b5adcb3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/NASCAR",
+   "title": "NASCAR – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:00.679Z",
+   "snapshot": "a2bddfd888a61fe34303cb059f3cc9bdceec68ced60b4a458c3847c2ee091fac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bicycle Motocross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bicycle Motocross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-020"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mountain Bike",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Union Cycliste Internationale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "National Association for Stock Car Auto Racing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:51.130Z",
+   "target": "f08061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bicycle Motocross",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bicycle Motocross”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:51.130Z",
+   "target": "f08061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Esser founded the National Bicycle League as a non-profit bicycle motocross sanctioning organization.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bicycle Motocross” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:51.130Z",
+   "target": "f08062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cross-country (XC) cycling is a discipline of mountain biking and mountain bike racing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mountain Bike” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:51.130Z",
+   "target": "f08063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Union Cycliste Internationale (French pronunciation: [ynjɔ̃ siklist ɛ̃tɛʁnɑsjɔnal]; UCI; English: International Cycling Union) is the world governing body for sports cycling and oversees international competitive cycling events.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Union Cycliste Internationale” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:51.130Z",
+   "target": "f08065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The National Association for Stock Car Auto Racing, LLC (NASCAR) is an American auto racing sanctioning and operating company that is best known for stock car racing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “National Association for Stock Car Auto Racing” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "article": "a1974",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+   "title": "Nikita Khrushchev – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:07.135Z",
+   "snapshot": "534352926a445abba3cdfcdf046dc5451776140e974179d1e96479e9b268c5d4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Strategic_Arms_Limitation_Talks",
+   "title": "Strategic Arms Limitation Talks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:07.616Z",
+   "snapshot": "3fed57f8f1415595b441a45e02512e4aee4606af206dcdd4e73da9992f05253a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk_Summit",
+   "title": "Reykjavík Summit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:08.609Z",
+   "snapshot": "9c8b9df2a781856fc391efb1b4c64764b7c0086c151700ff02cc1d408e42cc13"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt",
+   "title": "Franklin D. Roosevelt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:09.876Z",
+   "snapshot": "3fa9d9baf6b5d2edf1908894c1d1737f2f634eaea52d871edd08efdb4e0059cb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nikita Khrushchev",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Leonid Brezhnev",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mikhail Gorbachev",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Franklin D. Roosevelt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jimmy Carter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:57.821Z",
+   "target": "f09866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leonid's daughter, Yulia, was raised by Nikita Khrushchev and his wife.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nikita Khrushchev” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:57.821Z",
+   "target": "f09867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "President Richard Nixon and Soviet General Secretary Leonid Brezhnev signed both the Anti-Ballistic Missile Treaty and the Interim Agreement Between the United States of America and the Union of Soviet Socialist Republics on Certain Measures With Respect to the Limitation of Strategic Offensive",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonid Brezhnev” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:57.821Z",
+   "target": "f09868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "president Ronald Reagan and Soviet general secretary Mikhail Gorbachev, held in Reykjavík, Iceland, on 11–12 October 1986.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Gorbachev” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:57.821Z",
+   "target": "f09869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The carrier USS Franklin D. Roosevelt, launched shortly after his death, served from 1945 to 1977.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franklin D. Roosevelt” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:57.821Z",
+   "target": "f09870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "However, the United States preserved its most essential programs like the Trident missile, along with the cruise missiles President Jimmy Carter wished to use as his main defensive weapon as they were too slow to have first strike capability.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:57.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jimmy Carter” is on the snapshot of s2"
+  }
+ ]
+}

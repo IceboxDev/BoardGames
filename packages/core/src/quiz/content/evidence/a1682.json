@@ -1,0 +1,274 @@
+{
+ "article": "a1682",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vitamin_C",
+   "title": "Vitamin C – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:20.201Z",
+   "snapshot": "1259681e97ac226db61dc8bef641c9ecaaa26d0854a58cd100ff339e48dcba70"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kupfer",
+   "title": "Kupfer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:41.139Z",
+   "snapshot": "19af8420e7267b7036b03da423cf3e95e89416c360edc08c22289bb2fff0f2d4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Polonium",
+   "title": "Polonium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:38.502Z",
+   "snapshot": "0c461b717d462082ed56073a8bd4d32ce0b4b620167c84b6fdd45bbc8fc1d769"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Polonium",
+   "title": "Polonium",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:41.915Z",
+   "snapshot": "4c8f2e89b4ce78e481042b13ddd22d843efd39965d7eca5d8900f67af65bf421"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Uranium",
+   "title": "Uranium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:43.509Z",
+   "snapshot": "c37f2721b5e7ac19576d13cfa7e08c2b02c8702ecef7045ea5e682cab05aa898"
+  },
+  "s6": {
+   "url": "https://www.britannica.com/science/polonium",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scurvy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zypern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Polen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-219"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Uranus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-219/3, u09: Polonium (1898) is named after Poland, Marie Curie's partitioned homeland, not a dog."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:05.173Z",
+   "target": "f08408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:05.173Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:05.173Z",
+   "target": "f08406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As a therapy, it is used to prevent and treat scurvy, a disease caused by vitamin C deficiency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.173Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scurvy” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:05.173Z",
+   "target": "f08407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der lateinische Name cuprum ist abgeleitet von (aes) cyprium „Erz von der griechischen Insel Zypern“, auf der im Altertum Kupfer gewonnen wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.173Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zypern” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:05.173Z",
+   "target": "f08408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Polonium was named after Marie Skłodowska-Curie's homeland of Poland, which at the time was partitioned between three countries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.173Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poland” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:05.173Z",
+   "target": "f08408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Trotzdem waren sie überzeugt, dass hier ein neues Element vorhanden war und nannten es nach Polen, der Heimat von Marie Curie, Polonium.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.173Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:05.173Z",
+   "target": "f08410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 1789 discovery of uranium in the mineral pitchblende is credited to Martin Heinrich Klaproth, who named the new element after the recently discovered planet Uranus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.173Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uranus” is on the snapshot of s5"
+  }
+ ]
+}

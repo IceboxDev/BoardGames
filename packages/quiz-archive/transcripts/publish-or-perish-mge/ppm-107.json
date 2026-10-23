@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-107",
+ "image": "IMG20261022154411.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which one of the following is never part of a mosquito’s diet in its entire life cycle?\nA. Algae B. Nectar C. Leaves\nAnswer: C. Mosquito larvae feed on algae and other microorganisms in the water. Adult mosquitoes primarily feed on nectar for energy, while female mosquitoes also feed on blood after mating to obtain the necessary nutrients for egg production.",
+   "de": "Wovon ernähren sich erwachsene Stechmücken beiderlei Geschlechts, um Energie zu gewinnen?",
+   "en": "What do adult mosquitoes of both sexes feed on for energy?",
+   "reworked": true,
+   "answerDe": "Nektar",
+   "answerEn": "Nectar",
+   "timeline": {
+    "kind": "era",
+    "start": "-145000000",
+    "end": "-66000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Mosquitoes diversify during the Cretaceous period",
+    "labelDe": "Die Stechmücken diversifizieren sich in der Kreidezeit"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mosquito",
+    "title": "Mosquito",
+    "lang": "en"
+   },
+   "notes": "Negative 'never part of the diet' question reworked to the positive fact. Wikipedia: all mosquitoes drink nectar (also honeydew and plant juices); larvae eat aquatic algae and organic material; females of many species also drink blood.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 2,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] Which of the following does NOT contain the organic compound indole?\nA. Poop B. Brick C. Flower\nAnswer: B. The concentration of indole affects its smell significantly. At low concentrations, it has a pleasant floral scent, making it useful in perfumes, while at high concentrations, it has a foul odor, as found in feces.",
+   "de": "Welche organische Verbindung riecht in sehr geringer Konzentration blumig, etwa nach Jasmin, und wird in Parfüms verwendet, in hoher Konzentration aber nach Fäkalien?",
+   "en": "Which organic compound smells floral, like jasmine, at very low concentrations and is used in perfumes, but smells of feces at high concentrations?",
+   "reworked": true,
+   "answerDe": "Indol",
+   "answerEn": "Indole",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1866",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Adolf von Baeyer first obtains indole by reducing oxindole with zinc dust",
+    "labelDe": "Adolf von Baeyer gewinnt erstmals Indol durch Reduktion von Oxindol mit Zinkstaub"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Indole",
+    "title": "Indole",
+    "lang": "en"
+   },
+   "notes": "Negative 'does NOT contain' question reworked to the positive fact from the explanation. Wikipedia: indole occurs in human feces with an intense fecal odor; at very low concentrations it smells flowery (jasmine-like).",
+   "domain": "science",
+   "sub": "chemistry"
+  }
+ ]
+}

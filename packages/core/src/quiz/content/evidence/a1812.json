@@ -1,0 +1,335 @@
+{
+ "article": "a1812",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+   "title": "Light-emitting diode – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:06.301Z",
+   "snapshot": "f9ae82c5c74df933f981cfe73cdbcc84be6924194c161be4fe5e0ff92534c955"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/George_H._Heilmeier",
+   "title": "George H. Heilmeier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:06.424Z",
+   "snapshot": "417da30f8670ca0368e3dfb9fd19e3f0159eefa17616fec2d55db187f819c694"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/POWER4",
+   "title": "POWER4 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:07.428Z",
+   "snapshot": "c8e4c4ea9a79beb148c526b1120f8016f1d8ec1042347664d5e99b1f2c5cbbba"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Robert_H._Dennard",
+   "title": "Robert H. Dennard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:08.440Z",
+   "snapshot": "4bda220aa241e60d90e5eb09bf552ca39ece0353ab60e2277e43f5e28e816e09"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/USB",
+   "title": "USB – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:49.534Z",
+   "snapshot": "c0468cc31e96018e4ebe19fb97763839c3c13873d1f3a0d0f4c195f09efbe551"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Central_processing_unit",
+   "title": "Central processing unit – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:40.637Z",
+   "snapshot": "a709a3c12600e18e874f3b468301e28695ca1c001de3fd2097f19037e78b4e39"
+  },
+  "s7": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/cpu",
+   "title": "CPU | English meaning – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:28.018Z",
+   "snapshot": "4bbab4115387c8e9c6d3bed54c006db62f93a82dfc12e38c4712a4b9f31a4c97"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Diode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Crystal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Processing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Random",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Serial",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:26.328Z",
+   "target": "f09056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A light-emitting diode (LED) is an electronic component that uses a semiconductor to emit light when current flows through it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diode” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:26.328Z",
+   "target": "f09057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Harry Heilmeier (May 22, 1936 – April 21, 2014) was an American engineer, manager, and a pioneering contributor to liquid crystal displays (LCDs), for which he was inducted into the National Inventors Hall of Fame.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crystal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:26.328Z",
+   "target": "f09058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Processing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Processing”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:26.328Z",
+   "target": "f09059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It became the basis for today's dynamic random-access memory (DRAM) and almost all other memory types such as SRAM and FLASH memory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Random” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:26.328Z",
+   "target": "f09060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Universal Serial Bus (USB) is an industry standard, developed by USB Implementers Forum (USB-IF), for digital data transmission and power delivery between many types of electronics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Serial” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:06:17Z",
+   "target": "f09058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A central processing unit ( CPU ), also known as a central processor , main processor , or simply processor , is the primary processor in a given computer .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:06:20Z",
+   "target": "f09058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for central processing unit : the part of a computer that controls all the other parts",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:14.348Z",
+   "target": "f09058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A central processing unit (CPU), also known as a central processor, main processor, or simply processor, is the primary processor in a given computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:14.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Processing” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:14.348Z",
+   "target": "f09058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for central processing unit: the part of a computer that controls all the other parts",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:14.348Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Processing” is on the snapshot of s7"
+  }
+ ]
+}

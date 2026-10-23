@@ -1,0 +1,249 @@
+{
+ "article": "a1951",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jeans",
+   "title": "Jeans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:44.687Z",
+   "snapshot": "627f12d0c3d5f2f8ea9800413d8c44dc2f5205ee03e60808d3f15393a49fba7b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bikini",
+   "title": "Bikini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:18.319Z",
+   "snapshot": "b59625ae4b3fac5a2a92d457aa534dc31356ad3b7f5de22f7dedefe028c6b955"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gabardine",
+   "title": "Gabardine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:45.586Z",
+   "snapshot": "6ca738ae1438cc93ae55c19d4e1a1e19caefc185b01cbe341df50a7e0a698d3a"
+  },
+  "s4": {
+   "url": "https://www.ebsco.com/research-starters/history/charles-macintosh",
+   "title": "Charles Macintosh – EBSCO Research Starters",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:43.245Z",
+   "snapshot": "49e84ad3389b3f9d21821dfc8f405480cdac1095809597298103ae228180503e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nylon",
+   "title": "Nylon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:10.613Z",
+   "snapshot": "3f2854405e30bebd5131a099241e0cb9dd6f1f615bc82782d20ee0c7447fce3d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Levi_Strauss",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:46.571Z",
+   "snapshot": "6c42ce943b28fd71a800fee35cdeab2cc708be235b958de857f3777fd6363db0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Levi Strauss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis Réard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Burberry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles Macintosh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wallace Carothers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:52.336Z",
+   "target": "f09751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Davis in 1871 and patented by Davis and Levi Strauss on May 20, 1873.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Levi Strauss” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:52.336Z",
+   "target": "f09752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The modern bikini swimsuit was introduced by French clothing designer Louis Réard in July 1946, and was named after the Bikini Atoll, where the first public test of a nuclear bomb had taken place four days before.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Réard” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:52.336Z",
+   "target": "f09753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Burberry created the fabric in the late 1870s and patented it in 1888.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Burberry” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:52.336Z",
+   "target": "f09754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles Macintosh | History | Research Starters | EBSCOhost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Macintosh” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:52.336Z",
+   "target": "f09755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wallace Carothers at DuPont patented nylon 66.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wallace Carothers” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,818 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "film-media/animation",
+ "operations": [
+  {
+   "op": "add-facts",
+   "articleId": "a2092",
+   "baseHash": "04c5cd98d740",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-004",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Big Animation Studios",
+    "titleDe": "Die großen Animationsstudios",
+    "bodyEn": "For most of the twentieth century \"animation studio\" meant Walt Disney. Since the 1990s a handful of other houses have built brands strong enough that audiences go to see \"a Pixar film\" or \"a Ghibli film\" regardless of the title. Five of them stand out.\n\nPixar began as the computer graphics division of Lucasfilm, the company of the „Star Wars“ filmmaker George Lucas, whose Graphics Group was set up in 1979 – which is why quiz books often name Lucas as Pixar's founder. Steve Jobs bought the division in 1986 and, after years of losses, the studio released „Toy Story“ (in US cinemas from 22 November 1995), the first feature film animated entirely on computers. „A Bug's Life“, „Monsters, Inc.“ (2001; German title „Die Monster AG“), „Finding Nemo“, „The Incredibles“ (2004; „Die Unglaublichen“), „Up“ and „Inside Out“ followed, most of them directed by the studio's own \"brain trust\" around John Lasseter, Pete Docter and Andrew Stanton. In January 2006 the Walt Disney Company agreed to buy Pixar for about 7.4 billion dollars in stock and completed the takeover in May 2006, making Jobs Disney's largest individual shareholder. Pixar remains a separate studio in Emeryville, California.\n\nDreamWorks Animation grew out of the DreamWorks SKG studio founded in 1994 by Steven Spielberg, Jeffrey Katzenberg and David Geffen. „Shrek“ (released in the United States on 18 May 2001) won the first ever Academy Award for Best Animated Feature; „Madagascar“ (2005), „Kung Fu Panda“ (2008) and „How to Train Your Dragon“ (2010) became franchises. In 2016 Comcast's NBCUniversal bought the studio for 3.8 billion dollars, and its films are now released by Universal Pictures.\n\nStudio Ghibli was founded in Tokyo on 15 June 1985 by the directors Hayao Miyazaki and Isao Takahata and the producer Toshio Suzuki, after the success of „Nausicaä of the Valley of the Wind“. Its hand-drawn features – „My Neighbor Totoro“ (1988), „Princess Mononoke“ (1997), „Spirited Away“ (2001), which won the Oscar in 2003, and „The Boy and the Heron“ (2023), which won it again in 2024 – are among the most successful animated films in Japanese history.\n\nAardman Animations, founded in 1972 by Peter Lord and David Sproxton and based in Bristol, is the home of stop-motion clay animation. Nick Park's „Wallace & Gromit“ films won three Oscars; „Chicken Run“ (2000) is still the highest-grossing stop-motion film ever made, and „Shaun the Sheep“ became a worldwide television series.\n\nThe youngest of the five is Illumination, founded in 2007 by the producer Chris Meledandri and financed by Universal. Its first film, „Despicable Me“ (2010; German „Ich – Einfach unverbesserlich“), introduced the yellow Minions, whose 2015 spin-off earned more than a billion dollars; „The Secret Life of Pets“, „Sing“ and „The Super Mario Bros. Movie“ (2023) followed. The animation itself is made at Illumination Mac Guff in Paris.\n\n| Studio | Founded | Owner | Signature films |\n|---|---|---|---|\n| Pixar | 1986 | Disney (since 2006) | Toy Story, Monsters, Inc., The Incredibles |\n| DreamWorks Animation | 1994 | NBCUniversal (since 2016) | Shrek, Madagascar, Kung Fu Panda |\n| Studio Ghibli | 1985 | independent | Totoro, Mononoke, Spirited Away |\n| Aardman Animations | 1972 | independent | Wallace & Gromit, Chicken Run |\n| Illumination | 2007 | Universal | Despicable Me, Minions |",
+    "bodyDe": "Fast das ganze zwanzigste Jahrhundert hindurch bedeutete „Animationsstudio“ Walt Disney. Seit den 1990er-Jahren haben einige andere Häuser Marken aufgebaut, die so stark sind, dass das Publikum „einen Pixar-Film“ oder „einen Ghibli-Film“ sehen geht, unabhängig vom Titel. Fünf von ihnen ragen heraus.\n\nPixar begann als Computergrafik-Abteilung von Lucasfilm, der Firma des „Star Wars“-Regisseurs George Lucas, deren Graphics Group 1979 entstand – weshalb Quizbücher Lucas oft als Gründer von Pixar nennen. Steve Jobs kaufte die Abteilung 1986, und nach Jahren der Verluste brachte das Studio „Toy Story“ (in den US-Kinos ab 22. November 1995) heraus, den ersten vollständig am Computer animierten Spielfilm. „Das große Krabbeln“, „Die Monster AG“ (2001), „Findet Nemo“, „Die Unglaublichen“ (2004), „Oben“ und „Alles steht Kopf“ folgten, die meisten inszeniert vom hauseigenen „Brain Trust“ um John Lasseter, Pete Docter und Andrew Stanton. Im Januar 2006 vereinbarte die Walt Disney Company den Kauf von Pixar für rund 7,4 Milliarden Dollar in Aktien und schloss die Übernahme im Mai 2006 ab, womit Jobs zum größten Einzelaktionär von Disney wurde. Pixar ist bis heute ein eigenständiges Studio in Emeryville, Kalifornien.\n\nDreamWorks Animation ging aus dem 1994 von Steven Spielberg, Jeffrey Katzenberg und David Geffen gegründeten Studio DreamWorks SKG hervor. „Shrek“ (am 18. Mai 2001 in den USA gestartet) gewann den allerersten Oscar für den besten Animationsfilm; „Madagascar“ (2005), „Kung Fu Panda“ (2008) und „Drachenzähmen leicht gemacht“ (2010) wurden zu Franchises. 2016 kaufte Comcasts NBCUniversal das Studio für 3,8 Milliarden Dollar, und seine Filme erscheinen seither bei Universal Pictures.\n\nStudio Ghibli wurde am 15. Juni 1985 in Tokio von den Regisseuren Hayao Miyazaki und Isao Takahata und dem Produzenten Toshio Suzuki gegründet, nach dem Erfolg von „Nausicaä aus dem Tal der Winde“. Seine handgezeichneten Filme – „Mein Nachbar Totoro“ (1988), „Prinzessin Mononoke“ (1997), „Chihiros Reise ins Zauberland“ (2001), das 2003 den Oscar gewann, und „Der Junge und der Reiher“ (2023), der ihn 2024 erneut gewann – gehören zu den erfolgreichsten Animationsfilmen der japanischen Geschichte.\n\nAardman Animations, 1972 von Peter Lord und David Sproxton gegründet und in Bristol ansässig, ist die Heimat der Knetfiguren-Stop-Motion. Nick Parks „Wallace & Gromit“-Filme gewannen drei Oscars; „Chicken Run – Hennen rennen“ (2000) ist bis heute der erfolgreichste Stop-Motion-Film aller Zeiten, und „Shaun das Schaf“ wurde zu einer weltweit ausgestrahlten Fernsehserie.\n\nDas jüngste der fünf ist Illumination, 2007 vom Produzenten Chris Meledandri gegründet und von Universal finanziert. Sein erster Film „Ich – Einfach unverbesserlich“ (2010) führte die gelben Minions ein, deren Spin-off 2015 mehr als eine Milliarde Dollar einspielte; „Pets“, „Sing“ und „Der Super Mario Bros. Film“ (2023) folgten. Die Animation selbst entsteht bei Illumination Mac Guff in Paris.\n\n| Studio | Gründung | Eigentümer | Bekannteste Filme |\n|---|---|---|---|\n| Pixar | 1986 | Disney (seit 2006) | Toy Story, Die Monster AG, Die Unglaublichen |\n| DreamWorks Animation | 1994 | NBCUniversal (seit 2016) | Shrek, Madagascar, Kung Fu Panda |\n| Studio Ghibli | 1985 | unabhängig | Totoro, Mononoke, Chihiro |\n| Aardman Animations | 1972 | unabhängig | Wallace & Gromit, Chicken Run |\n| Illumination | 2007 | Universal | Ich – Einfach unverbesserlich, Minions |",
+    "notesEn": "The card prints „Monster AG“; the official German title is „Die Monster AG“ (Monsters, Inc.). Full studio name: Pixar Animation Studios.",
+    "notesDe": "Die Karte schreibt „Monster AG“; der offizielle deutsche Titel lautet „Die Monster AG“. Vollständiger Studioname: Pixar Animation Studios."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0016",
+   "baseHash": "31eb5615ba49",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-242",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-170",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Dream Factories: The Studios Behind the World's Best-Loved Animation",
+    "titleDe": "Traumfabriken: Die Studios hinter den beliebtesten Trickfilmen der Welt",
+    "bodyEn": "After the success of \"Nausicaä of the Valley of the Wind\", the directors Hayao Miyazaki and Isao Takahata and the producer Toshio Suzuki founded Studio Ghibli in Tokyo on 15 June 1985. Its name comes from an Italian word for a hot Saharan wind, and the founders hoped to blow a fresh breeze through Japanese animation. They did. \"My Neighbor Totoro\" (released on 16 April 1988) gave the studio its round, furry mascot; \"Princess Mononoke\" (1997) became the highest-grossing Japanese film of its time; \"Spirited Away\" (2001) won the Academy Award for Best Animated Feature in March 2003, the first Japanese animated film ever to win an Oscar; and \"Ponyo\" (2008) retold \"The Little Mermaid\" with hand-drawn waves. Miyazaki has announced his retirement several times and has always returned, most recently with \"The Boy and the Heron\" in 2023, which brought the studio a second Oscar.\n\nGhibli is famous for hand-drawn frames and patient storytelling, but it shares Japan with a far older giant. Toei Animation, founded on 23 January 1948 as Nihon Dōga and part of the Toei film company since 1956, is the country's oldest major animation studio and produced its first colour feature, \"The Tale of the White Serpent\", in 1958. Miyazaki and Takahata both began their careers there. Toei's television output shaped childhoods around the globe: \"Dragon Ball\", \"Sailor Moon\", \"Digimon\", \"Slam Dunk\" and \"One Piece\", which has been running since 1999 and has passed a thousand episodes.\n\nIn the United States the modern era of computer animation began with Pixar. Founded on 3 February 1986 when Steve Jobs bought the computer graphics division of Lucasfilm, the studio released \"Toy Story\" in 1995, the first feature film made entirely with computer-generated imagery. \"Finding Nemo\", \"The Incredibles\", \"Up\" and \"Inside Out\" followed, and Disney acquired the company in 2006.\n\nIts great rival was born partly out of a grudge. Jeffrey Katzenberg left Disney in 1994 and, with Steven Spielberg and David Geffen, founded DreamWorks on 12 October 1994; its animation arm became DreamWorks Animation. \"Shrek\" (2001) won the first ever Oscar for an animated feature, and the studio went on to build franchises around \"Madagascar\", \"Kung Fu Panda\" and \"How to Train Your Dragon\".\n\nBritain's contribution is made of clay. Aardman Animations was founded in Bristol in 1972 by Peter Lord and David Sproxton, and Nick Park's inventor Wallace and his silent dog Gromit, first seen in „A Grand Day Out“ on 4 November 1989, turned the studio into a household name. In that first film the cheese-loving inventor Wallace (of Wallace & Gromit) builds a rocket in his cellar and flies to the moon with his four-legged friend, because, as he tells Gromit, \"everybody knows the moon's made of cheese\". \"Chicken Run\" (2000) remains the highest-grossing stop-motion film ever made, and \"Shaun the Sheep\" has become a worldwide television export.\n\n| Studio | Country | Founded | Signature works |\n|---|---|---|---|\n| Toei Animation | Japan | 1948 | \"Dragon Ball\", \"One Piece\" |\n| Aardman Animations | United Kingdom | 1972 | \"Wallace & Gromit\" |\n| Studio Ghibli | Japan | 1985 | \"My Neighbor Totoro\", \"Ponyo\" |\n| Pixar | United States | 1986 | \"Toy Story\", \"Finding Nemo\" |\n| DreamWorks Animation | United States | 1994 | \"Shrek\", \"Kung Fu Panda\" |\n\nFive studios, three countries and three techniques: pencil, pixel and plasticine. Between them they have defined what animation means to the last four generations of viewers.",
+    "bodyDe": "Nach dem Erfolg von „Nausicaä aus dem Tal der Winde“ gründeten die Regisseure Hayao Miyazaki und Isao Takahata und der Produzent Toshio Suzuki am 15. Juni 1985 in Tokio das Studio Ghibli. Der Name stammt von einem italienischen Wort für einen heißen Saharawind, und die Gründer hofften, einen frischen Wind durch die japanische Animation wehen zu lassen. Das taten sie. „Mein Nachbar Totoro“ (Kinostart am 16. April 1988) bescherte dem Studio sein rundes, pelziges Maskottchen; „Prinzessin Mononoke“ (1997) wurde zum erfolgreichsten japanischen Film seiner Zeit; „Chihiros Reise ins Zauberland“ (2001) gewann im März 2003 den Oscar für den besten Animationsfilm – als erster japanischer Zeichentrickfilm überhaupt, der einen Oscar erhielt; und „Ponyo“ (2008) erzählte „Die kleine Meerjungfrau“ mit handgezeichneten Wellen neu. Miyazaki hat mehrfach seinen Rückzug angekündigt und ist immer zurückgekehrt, zuletzt 2023 mit „Der Junge und der Reiher“, der dem Studio einen zweiten Oscar einbrachte.\n\nGhibli ist berühmt für handgezeichnete Bilder und geduldiges Erzählen, doch es teilt sich Japan mit einem viel älteren Riesen. Toei Animation, am 23. Januar 1948 als Nihon Dōga gegründet und seit 1956 Teil des Filmkonzerns Toei, ist das älteste große Animationsstudio des Landes und produzierte 1958 mit „Die Legende von der weißen Schlange“ seinen ersten farbigen Spielfilm. Miyazaki und Takahata begannen dort beide ihre Laufbahn. Toeis Fernsehproduktionen prägten Kindheiten rund um den Globus: „Dragon Ball“, „Sailor Moon“, „Digimon“, „Slam Dunk“ und „One Piece“, das seit 1999 läuft und die tausendste Folge längst überschritten hat.\n\nIn den Vereinigten Staaten begann die moderne Ära der Computeranimation mit Pixar. Gegründet am 3. Februar 1986, als Steve Jobs die Computergrafik-Abteilung von Lucasfilm kaufte, veröffentlichte das Studio 1995 „Toy Story“, den ersten vollständig am Computer erzeugten abendfüllenden Film. „Findet Nemo“, „Die Unglaublichen“, „Oben“ und „Alles steht Kopf“ folgten, und 2006 übernahm Disney das Unternehmen.\n\nDer große Rivale entstand zum Teil aus einem Groll. Jeffrey Katzenberg verließ Disney 1994 und gründete mit Steven Spielberg und David Geffen am 12. Oktober 1994 DreamWorks; dessen Trickfilmsparte wurde zu DreamWorks Animation. „Shrek“ (2001) gewann den allerersten Oscar für einen Animationsfilm, und das Studio baute anschließend Franchises um „Madagascar“, „Kung Fu Panda“ und „Drachenzähmen leicht gemacht“ auf.\n\nGroßbritanniens Beitrag besteht aus Knete. Aardman Animations wurde 1972 in Bristol von Peter Lord und David Sproxton gegründet, und Nick Parks Erfinder Wallace und sein stummer Hund Gromit, erstmals am 4. November 1989 in „Alles Käse“ („A Grand Day Out“) zu sehen, machten das Studio zu einem Begriff. In diesem ersten Film baut der käseverliebte Erfinder Wallace (aus Wallace & Gromit) im Keller eine Rakete und fliegt mit seinem vierbeinigen Freund zum Mond, denn, so erklärt er Gromit: „Jeder weiß, dass der Mond aus Käse ist.“ „Chicken Run“ (2000) ist bis heute der erfolgreichste Stop-Motion-Film aller Zeiten, und „Shaun das Schaf“ wurde zu einem weltweiten Fernseh-Exportschlager.\n\n| Studio | Land | Gegründet | Bekannte Werke |\n|---|---|---|---|\n| Toei Animation | Japan | 1948 | „Dragon Ball“, „One Piece“ |\n| Aardman Animations | Großbritannien | 1972 | „Wallace & Gromit“ |\n| Studio Ghibli | Japan | 1985 | „Mein Nachbar Totoro“, „Ponyo“ |\n| Pixar | USA | 1986 | „Toy Story“, „Findet Nemo“ |\n| DreamWorks Animation | USA | 1994 | „Shrek“, „Kung Fu Panda“ |\n\nFünf Studios, drei Länder und drei Techniken: Bleistift, Pixel und Plastilin. Gemeinsam haben sie bestimmt, was Animation für die letzten vier Zuschauergenerationen bedeutet.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0892",
+   "baseHash": "2aaf0fe221fc",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-235",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-277",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-274",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The golden decade of the animated series: creators and their shows, 1989 to 1999",
+    "titleDe": "Das goldene Jahrzehnt der Zeichentrickserie: Schöpfer und ihre Serien, 1989 bis 1999",
+    "bodyEn": "Between 1989 and 1999 American television produced a wave of animated series that are still running, still quoted and still shaping the humour of viewers who grew up with them. Unusually for a genre that had long been dominated by studios, most of these shows are associated with a single named creator whose background explains the personality of the programme.\n\nThe decade opened with The Simpsons. Matt Groening, a cartoonist from Portland known for the comic strip Life in Hell, had drawn the family as short filler segments for The Tracey Ullman Show in 1987. When the Fox network gave them a half-hour slot of their own on 17 December 1989, The Simpsons became the first animated prime-time hit since The Flintstones, and it has since grown into the longest-running scripted series in American television history. Its town of Springfield, its yellow-skinned inhabitants and its catchphrases have entered the language.\n\nEight years later the tone got rougher. Trey Parker and Matt Stone, two film students from Colorado, had made a crude cut-out animation as a Christmas card, and Comedy Central turned it into South Park, which premiered on 13 August 1997. Set in a snowy mountain town and built around four foul-mouthed boys, South Park is deliberately cheap-looking, produced in six days per episode so that it can react to the news of the week. Unlike the Simpsons, its boys do grow up a little: in the episode \"Fourth Grade\" in Season 4 (first shown on 8 November 2000), Cartman, Kenny, Stan and Kyle move up from third to fourth grade. Real people are fair game too – in the Season 15 episode \"1%\" (2011), Cartman's doll \"Muscleman Marc\" is modelled on the fashion designer Marc Jacobs, who later sold a limited-edition Muscleman Marc doll himself.\n\nThe following year Cartoon Network launched The Powerpuff Girls, created by Craig McCracken, an animator who had developed the concept as a student film called Whoopass Stew. Broadcast from 18 November 1998, The Powerpuff Girls follows Blossom, Bubbles and Buttercup, three superheroines accidentally created by Professor Utonium in his laboratory when he added Chemical X to sugar, spice and everything nice. The stylised, retro-modern look of the series influenced a whole school of flat-graphic animation.\n\nThe year 1999 brought two more shows. The first arrived on 31 January, when Fox broadcast Family Guy immediately after the Super Bowl. The show follows the Griffin family of Quahog, a fictional town in the state of Rhode Island. Its creator, Seth MacFarlane, was only 25 and voices most of the characters himself, including Peter Griffin, the baby Stewie and the dog Brian. The show was cancelled twice and revived in 2005 after strong DVD sales, and Family Guy became famous for its cutaway gags, which interrupt the plot with unrelated jokes.\n\nThe most surprising creator of the decade never planned to work in television. Stephen Hillenburg (1961–2018) was a marine biologist who taught at the Orange County Marine Institute and had drawn an educational comic about tide-pool creatures. After studying animation he pitched a series about a cheerful sea sponge, and SpongeBob SquarePants premiered on Nickelodeon on 1 May 1999. Set in the underwater town of Bikini Bottom, SpongeBob SquarePants became the network's most successful programme and one of the most profitable franchises in television history.\n\n| Creator | Series | First broadcast |\n|---|---|---|\n| Matt Groening | The Simpsons | 1989 |\n| Trey Parker and Matt Stone | South Park | 1997 |\n| Craig McCracken | The Powerpuff Girls | 1998 |\n| Seth MacFarlane | Family Guy | 1999 |\n| Stephen Hillenburg | SpongeBob SquarePants | 1999 |",
+    "bodyDe": "Zwischen 1989 und 1999 brachte das amerikanische Fernsehen eine Welle von Zeichentrickserien hervor, die bis heute laufen, zitiert werden und den Humor jener Zuschauer prägen, die mit ihnen aufgewachsen sind. Ungewöhnlich für ein Genre, das lange von Studios beherrscht worden war, werden die meisten dieser Serien mit einem einzelnen namentlich bekannten Schöpfer verbunden, dessen Werdegang die Persönlichkeit der Sendung erklärt.\n\nDas Jahrzehnt begann mit Die Simpsons. Matt Groening, ein Zeichner aus Portland, der für den Comicstrip Life in Hell bekannt war, hatte die Familie 1987 als kurze Füllstücke für die Tracey Ullman Show gezeichnet. Als der Sender Fox ihr am 17. Dezember 1989 einen eigenen halbstündigen Sendeplatz gab, wurden Die Simpsons zum ersten Zeichentrick-Hit zur Hauptsendezeit seit den Flintstones, und die Serie ist seither zur am längsten laufenden Serie mit Drehbuch in der amerikanischen Fernsehgeschichte herangewachsen. Ihre Stadt Springfield, ihre gelbhäutigen Bewohner und ihre Sprüche sind in die Sprache eingegangen.\n\nAcht Jahre später wurde der Ton rauer. Trey Parker und Matt Stone, zwei Filmstudenten aus Colorado, hatten eine grobe Legetrick-Animation als Weihnachtskarte gemacht, und Comedy Central machte daraus South Park, das am 13. August 1997 Premiere hatte. In einer verschneiten Bergstadt angesiedelt und um vier Jungen mit loser Zunge gebaut, sieht South Park absichtlich billig aus und wird in sechs Tagen pro Folge produziert, damit die Serie auf die Nachrichten der Woche reagieren kann. Anders als bei den Simpsons werden die Jungen ein wenig älter: In der Folge „Fourth Grade“ der 4. Staffel (erstmals am 8. November 2000 gezeigt) kommen Cartman, Kenny, Stan und Kyle von der dritten in die vierte Klasse. Auch echte Menschen bekommen ihr Fett weg – in der Folge „1%“ der 15. Staffel (2011) ist Cartmans Kraftprotz-Marc-Puppe dem Modedesigner Marc Jacobs nachempfunden, der später selbst eine limitierte Ausgabe der Puppe verkaufte.\n\nIm folgenden Jahr startete Cartoon Network die Powerpuff Girls, geschaffen von Craig McCracken, einem Animator, der das Konzept als Studentenfilm mit dem Titel Whoopass Stew entwickelt hatte. Ab dem 18. November 1998 ausgestrahlt, folgen die Powerpuff Girls Blossom, Bubbles und Buttercup, drei Superheldinnen, die Professor Utonium versehentlich in seinem Labor erschuf, als er Chemikalie X zu Zucker, Gewürzen und allem, was lieb ist, hinzufügte. Der stilisierte, retro-moderne Look der Serie beeinflusste eine ganze Schule flächiger Grafik-Animation.\n\nDas Jahr 1999 brachte zwei weitere Serien. Die erste kam am 31. Januar, als Fox unmittelbar nach dem Super Bowl Family Guy ausstrahlte. Die Serie handelt von der Familie Griffin aus Quahog, einer fiktiven Stadt im Bundesstaat Rhode Island. Ihr Schöpfer, Seth MacFarlane, war erst 25 und spricht die meisten Figuren selbst, darunter Peter Griffin, das Baby Stewie und den Hund Brian. Die Serie wurde zweimal abgesetzt und 2005 nach starken DVD-Verkäufen wiederbelebt, und Family Guy wurde berühmt für seine Cutaway-Gags, die die Handlung mit zusammenhanglosen Witzen unterbrechen.\n\nDer überraschendste Schöpfer des Jahrzehnts hatte nie vor, fürs Fernsehen zu arbeiten. Stephen Hillenburg (1961–2018) war Meeresbiologe, der am Orange County Marine Institute unterrichtete und einen Lehrcomic über Lebewesen in Gezeitentümpeln gezeichnet hatte. Nach einem Animationsstudium schlug er eine Serie über einen fröhlichen Meeresschwamm vor, und SpongeBob Schwammkopf hatte am 1. Mai 1999 auf Nickelodeon Premiere. In der Unterwasserstadt Bikini Bottom angesiedelt, wurde SpongeBob Schwammkopf zur erfolgreichsten Sendung des Senders und zu einem der profitabelsten Franchises der Fernsehgeschichte.\n\n| Schöpfer | Serie | Erstausstrahlung |\n|---|---|---|\n| Matt Groening | Die Simpsons | 1989 |\n| Trey Parker und Matt Stone | South Park | 1997 |\n| Craig McCracken | Powerpuff Girls | 1998 |\n| Seth MacFarlane | Family Guy | 1999 |\n| Stephen Hillenburg | SpongeBob Schwammkopf | 1999 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1840",
+   "baseHash": "b757ac3fb9ac",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-317",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Permit A38: The Asterix Animated Films",
+    "titleDe": "Passierschein A38: Die Asterix-Zeichentrickfilme",
+    "bodyEn": "The Gaulish village that still holds out against the Romans was created by the writer René Goscinny and the artist Albert Uderzo and first appeared in the magazine “Pilote” on 29 October 1959. Within a decade the comic albums had become so popular in France that they were turned into animated films, and it is through the films, dubbed into dozens of languages, that many people first met the small, clever warrior and his enormous friend.\n\nThe recurring cast is quickly introduced. Asterix gets his superhuman strength from a magic potion brewed by the village druid, called Miraculix in German and **Getafix** in the English versions; in the very first film, “Asterix the Gaul” (released in France on 20 December 1967), the Romans kidnap him to learn the recipe. Obelix fell into the cauldron as a baby and needs no potion; he carves menhirs, eats whole wild boars and is followed everywhere by a tiny white dog, Idefix in the original, **Dogmatix** in English, who first turned up in the album “Asterix and the Banquet” (1963) and howls whenever a tree is uprooted; in 2021 he even got his own animated series, “Dogmatix and the Indomitables”. The chief Vitalstatistix (Majestix) is carried around on a shield, and the bard Cacofonix (Troubadix) is tied up before every banquet.\n\nThe second film, “Asterix and Cleopatra”, released in France on 19 December 1968, follows the album of the same name. Cleopatra bets Caesar that her people can still build great things, and her architect Edifis (Numerobis in German) is ordered to complete a magnificent **palace** within three months or be thrown to the crocodiles. Asterix, Obelix and Getafix travel to Egypt to help him, and the potion lets the workers move stone blocks by hand.\n\nThe third film, released in France on 20 October 1976, was written directly for the screen rather than adapted from an album – the first Asterix film not based on a comic. Its French title is “Les Douze Travaux d'Astérix”, in English “The Twelve Tasks of Asterix”, in German “Asterix erobert Rom”; with 7.2 million viewers it was the most successful film in German cinemas in 1976. Caesar, told that the Gauls must be gods, sets them twelve labours in the manner of Hercules: outrun a champion sprinter, wrestle a German, resist the Isle of Pleasure, eat a Belgian chef's gigantic meal, survive the Cave of the Beast and finally the Circus Maximus.\n\nThe most famous task is the one with no monster at all. Asterix and Obelix are sent to a Roman administrative building, **The Place That Sends You Mad** (in German “Das Haus, das Verrückte macht”), to obtain **Permit A38**. Every clerk sends them to another window, to another floor, to fetch another form, until Obelix is close to tears. Asterix wins by turning the bureaucracy on itself: he demands a non-existent Permit A39 “as required by the new circular B65”, the entire office collapses into chaos, and a distraught official hands over Permit A38 just to be rid of them. The scene has become a byword for red tape in France and Germany, where “Passierschein A38” is used as shorthand for any pointless administrative procedure.\n\n| Film | Year | Basis |\n|---|---|---|\n| Asterix the Gaul | 1967 | first album |\n| Asterix and Cleopatra | 1968 | album of 1965 |\n| The Twelve Tasks of Asterix | 1976 | original screenplay |\n\nGoscinny died in 1977, but the films continued, and Permit A38 remains the one that everybody remembers.",
+    "bodyDe": "Das gallische Dorf, das den Römern noch immer Widerstand leistet, wurde vom Texter René Goscinny und dem Zeichner Albert Uderzo erfunden und erschien erstmals am 29. Oktober 1959 in der Zeitschrift „Pilote“. Innerhalb eines Jahrzehnts waren die Comic-Alben in Frankreich so beliebt, dass sie zu Zeichentrickfilmen wurden – und über die in Dutzende Sprachen synchronisierten Filme lernten viele den kleinen, schlauen Krieger und seinen riesigen Freund überhaupt erst kennen.\n\nDie feste Besetzung ist schnell vorgestellt. Asterix bezieht seine übermenschliche Kraft aus einem Zaubertrank, den der Druide des Dorfes braut: **Miraculix**, in den englischen Fassungen Getafix; im allerersten Film, „Asterix der Gallier“ (in Frankreich am 20. Dezember 1967 gestartet), entführen ihn die Römer, um an das Rezept zu kommen. Obelix ist als Kind in den Kessel gefallen und braucht keinen Trank; er behaut Hinkelsteine, verspeist ganze Wildschweine und wird überall von einem winzigen weißen Hund begleitet, **Idefix** (englisch Dogmatix), der 1963 im Album „Tour de France“ erstmals auftauchte und jedes Mal jault, wenn ein Baum entwurzelt wird; 2021 bekam er sogar eine eigene Zeichentrickserie, „Idefix und die Unbeugsamen“. Der Häuptling Majestix wird auf einem Schild herumgetragen, und der Barde Troubadix wird vor jedem Festmahl gefesselt.\n\nDer zweite Film, „Asterix und Kleopatra“, am 19. Dezember 1968 in Frankreich gestartet, folgt dem gleichnamigen Album. Kleopatra wettet mit Cäsar, dass ihr Volk noch immer Großes bauen kann, und ihr Architekt Numerobis erhält den Auftrag, innerhalb von drei Monaten einen prächtigen **Palast** zu vollenden – sonst wird er den Krokodilen vorgeworfen. Asterix, Obelix und Miraculix reisen nach Ägypten, um ihm zu helfen, und dank des Zaubertranks bewegen die Arbeiter die Steinblöcke mit bloßen Händen.\n\nDer dritte Film, am 20. Oktober 1976 in Frankreich gestartet, wurde direkt fürs Kino geschrieben und nicht aus einem Album adaptiert – der erste Asterix-Film ohne Comicvorlage. Sein französischer Titel lautet „Les Douze Travaux d'Astérix“, der englische „The Twelve Tasks of Asterix“, der deutsche „Asterix erobert Rom“; mit 7,2 Millionen Zuschauern war er der erfolgreichste Film des Jahres 1976 in den deutschen Kinos. Cäsar, dem man einredet, die Gallier müssten Götter sein, stellt ihnen nach dem Vorbild des Herkules zwölf Aufgaben: einen Meisterläufer überholen, mit einem Germanen ringen, der Insel der Freuden widerstehen, das gigantische Menü eines belgischen Kochs verspeisen, die Höhle der Bestie überleben und schließlich den Circus Maximus.\n\nDie berühmteste Aufgabe kommt ganz ohne Ungeheuer aus. Asterix und Obelix werden in ein römisches Verwaltungsgebäude geschickt, **Das Haus, das Verrückte macht**, um dort den **Passierschein A38** zu besorgen. Jeder Beamte schickt sie zu einem anderen Schalter, in ein anderes Stockwerk, nach einem weiteren Formular, bis Obelix den Tränen nahe ist. Asterix gewinnt, indem er die Bürokratie gegen sich selbst wendet: Er verlangt einen nicht existierenden Passierschein A39 „gemäß dem neuen Rundschreiben B65“, das ganze Amt versinkt im Chaos, und ein verzweifelter Beamter händigt den Passierschein A38 aus, nur um die beiden loszuwerden. Die Szene ist in Frankreich und Deutschland zum Sinnbild für Amtsschimmel geworden; „Passierschein A38“ steht bis heute als Kürzel für jedes sinnlose Verwaltungsverfahren.\n\n| Film | Jahr | Grundlage |\n|---|---|---|\n| Asterix der Gallier | 1967 | erstes Album |\n| Asterix und Kleopatra | 1968 | Album von 1965 |\n| Asterix erobert Rom | 1976 | Originaldrehbuch |\n\nGoscinny starb 1977, doch die Filme gingen weiter – und der Passierschein A38 bleibt der, an den sich alle erinnern.",
+    "notesEn": "“Asterix erobert Rom” is the German title of “Les Douze Travaux d'Astérix” (1976), known in English as “The Twelve Tasks of Asterix”. The permit is also written “Passierschein A 38”.",
+    "notesDe": "„Asterix erobert Rom“ ist der deutsche Titel von „Les Douze Travaux d'Astérix“ (1976), englisch „The Twelve Tasks of Asterix“. Der Passierschein wird auch „Passierschein A 38“ geschrieben."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-087",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-250",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-059",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-047",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the Simpsons' greyhound, whom Homer brings home from the dog track in the very first episode?",
+      "de": "Wie heißt der Windhund der Simpsons, den Homer in der allerersten Folge von der Hunderennbahn mit nach Hause bringt?",
+      "answerEn": "Santa's Little Helper",
+      "answerDe": "Knecht Ruprecht",
+      "timeline": {
+       "kind": "event",
+       "start": "1989-12-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first Simpsons episode, in which the family adopts its greyhound, airs on Fox",
+       "labelDe": "Die erste Simpsons-Folge, in der die Familie ihren Windhund adoptiert, läuft auf Fox"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Santa%27s_Little_Helper",
+       "title": "Santa's Little Helper – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Who owns the Springfield Nuclear Power Plant, where Homer Simpson works?",
+      "de": "Wem gehört das Atomkraftwerk von Springfield, in dem Homer Simpson arbeitet?",
+      "answerEn": "Mr. Burns",
+      "answerDe": "Mr. Burns",
+      "timeline": {
+       "kind": "event",
+       "start": "1989-12-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Mr. Burns, owner of Springfield's nuclear plant, appears in the first Simpsons episode",
+       "labelDe": "Mr. Burns, Besitzer des Atomkraftwerks von Springfield, tritt in der ersten Simpsons-Folge auf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mr._Burns",
+       "title": "Mr. Burns – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which bar, run by Moe Szyslak, does Homer Simpson drink beer after work?",
+      "de": "In welcher Kneipe, die Moe Szyslak betreibt, trinkt Homer Simpson nach der Arbeit sein Bier?",
+      "answerEn": "Moe's Tavern",
+      "answerDe": "Moes Taverne",
+      "timeline": {
+       "kind": "event",
+       "start": "1989-12-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Moe's Tavern appears in the first Simpsons episode on Fox",
+       "labelDe": "Moes Taverne ist in der ersten Simpsons-Folge auf Fox zu sehen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Die_Simpsons_(Familie)",
+       "title": "Die Simpsons (Familie) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Springfield's First Family: The Simpsons at Home",
+    "titleDe": "Springfields erste Familie: Die Simpsons zu Hause",
+    "bodyEn": "When the Simpson family got its own half-hour series on Fox on 17 December 1989, its creator Matt Groening had already been drawing it for two years as short filler segments for The Tracey Ullman Show. The household he invented is small and instantly recognisable: the father Homer, a lazy but loving safety inspector; the mother Marge with her towering blue hair; and the three children Bart, Lisa and Maggie – the ten-year-old troublemaker Bart, his clever, saxophone-playing sister Lisa and the baby Maggie, who says almost nothing and sucks her dummy.\n\nThe names are personal. According to Groening, Homer, Marge, Lisa and Maggie are named after members of his own family (his parents and sisters): his father Homer and his mother Margaret, and his younger sisters Lisa and Margaret, known as Maggie. Bart, the only name not borrowed from a relative, is an anagram of \"brat\".\n\nThe family pet arrived in the very first episode, \"Simpsons Roasting on an Open Fire\". On Christmas Eve Homer takes Bart to the dog track and bets his last money on a greyhound because of its festive name, Santa's Little Helper. The dog finishes last, its owner abandons it, and Bart begs his father to keep it – so the Simpsons got a greyhound for Christmas.\n\nHomer works at the Springfield Nuclear Power Plant, which belongs to the ancient and scheming billionaire Mr. Burns – in full Charles Montgomery Burns – who can never remember his employee's name. After his shift Homer drinks beer with his friends at Moe's Tavern, the gloomy bar run by Moe Szyslak; both the boss and the bar appeared as early as the first episode.\n\nHomer also has his views on the wider world. When German investors buy the power plant in a third-season episode of 1991, German trivia cards quote him with the line \"Oh, those Germans … you just can't be angry with them\" – the English original has \"Yeah, those Germans aren't so bad\". So the cartoon character Homer Simpson ended up with a favourite quotation in German pub quizzes.\n\nAnd where is Springfield? The show deliberately never says, and over the years the town has been given neighbours in contradictory states. In a 2012 interview with Smithsonian magazine Groening said that the name came from Springfield, Oregon, and that he had imagined the town in Oregon, the state where he grew up in Portland. Elsewhere he has stressed that he only borrowed the name, so the running joke lives on.\n\n| Character | Role | Named after |\n|---|---|---|\n| Homer | father, safety inspector | Groening's father Homer |\n| Marge | mother | Groening's mother Margaret |\n| Bart | son | an anagram of \"brat\" |\n| Lisa | daughter | Groening's sister Lisa |\n| Maggie | baby | Groening's sister Margaret |",
+    "bodyDe": "Als die Familie Simpson am 17. Dezember 1989 auf Fox ihre eigene halbstündige Serie bekam, zeichnete ihr Schöpfer Matt Groening sie bereits seit zwei Jahren für kurze Einspieler in der Tracey Ullman Show. Der Haushalt, den er erfand, ist klein und sofort wiederzuerkennen: der Vater Homer, ein fauler, aber liebevoller Sicherheitsinspektor; die Mutter Marge mit ihrer hoch aufgetürmten blauen Frisur; und die drei Kinder Bart, Lisa und Maggie – der zehnjährige Unruhestifter Bart, seine kluge, Saxofon spielende Schwester Lisa und das Baby Maggie, das kaum etwas sagt und an seinem Schnuller nuckelt.\n\nDie Namen sind persönlich. Laut Groening sind Homer, Marge, Lisa und Maggie nach Mitgliedern seiner eigenen Familie (Eltern und Schwestern) benannt: nach seinem Vater Homer und seiner Mutter Margaret sowie nach seinen jüngeren Schwestern Lisa und Margaret, genannt Maggie. Bart, der einzige nicht von Verwandten entliehene Name, ist ein Anagramm von „brat“ (englisch für Göre).\n\nDas Haustier kam schon in der allerersten Folge, „Simpsons Roasting on an Open Fire“, in die Familie. An Heiligabend nimmt Homer Bart mit zur Hunderennbahn und setzt sein letztes Geld wegen des festlichen Namens auf einen Windhund – im Original Santa's Little Helper, auf Deutsch Knecht Ruprecht. Der Hund wird Letzter, sein Besitzer jagt ihn davon, und Bart bettelt, ihn behalten zu dürfen – so bekamen die Simpsons zu Weihnachten einen Windhund.\n\nHomer arbeitet im Atomkraftwerk von Springfield, das dem uralten, intriganten Milliardär Mr. Burns gehört – mit vollem Namen Charles Montgomery Burns –, der sich den Namen seines Angestellten nie merken kann. Nach Feierabend trinkt Homer mit seinen Freunden Bier in Moes Taverne, der düsteren Kneipe von Moe Szyslak; Chef und Kneipe tauchten schon in der ersten Folge auf.\n\nHomer hat auch zur weiten Welt seine Meinung. Als in einer Folge der dritten Staffel von 1991 deutsche Investoren das Kraftwerk kaufen, zitieren deutsche Quizkarten ihn mit dem Satz „Ach, diese Deutschen … Man kann ihnen einfach nicht böse sein.“ – im englischen Original heißt es „Yeah, those Germans aren't so bad“. So kam die Zeichentrickfigur Homer Simpson zu einem Lieblingszitat deutscher Quizrunden.\n\nUnd wo liegt Springfield? Die Serie verrät es absichtlich nie, und im Lauf der Jahre wurden der Stadt Nachbarn in widersprüchlichen Bundesstaaten angedichtet. In einem Interview mit dem Smithsonian Magazine sagte Groening 2012, der Name stamme von Springfield in Oregon, und er habe sich die Stadt in Oregon vorgestellt, dem Bundesstaat, in dem er in Portland aufwuchs. An anderer Stelle betonte er, er habe nur den Namen entliehen – und so lebt der Running Gag weiter.\n\n| Figur | Rolle | Benannt nach |\n|---|---|---|\n| Homer | Vater, Sicherheitsinspektor | Groenings Vater Homer |\n| Marge | Mutter | Groenings Mutter Margaret |\n| Bart | Sohn | Anagramm von „brat“ |\n| Lisa | Tochter | Groenings Schwester Lisa |\n| Maggie | Baby | Groenings Schwester Margaret |",
+    "notesEn": "The German quotation attributed to Homer is the trivia card's wording; the English original line in the third-season episode is \"Yeah, those Germans aren't so bad\". Groening's statement placing Springfield in Oregon comes from a 2012 Smithsonian interview; the show itself keeps the state unknown.",
+    "notesDe": "Das Homer zugeschriebene deutsche Zitat ist der Wortlaut der Quizkarte; im englischen Original der Folge aus der dritten Staffel heißt es „Yeah, those Germans aren't so bad“. Groenings Aussage, Springfield liege in Oregon, stammt aus einem Smithsonian-Interview von 2012; die Serie selbst lässt den Bundesstaat offen."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-321",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-056",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Japanese director, later a co-founder of Studio Ghibli, was the series director of the 1974 anime Heidi?",
+      "de": "Welcher japanische Regisseur, später Mitgründer des Studio Ghibli, führte bei der Anime-Serie Heidi von 1974 Regie?",
+      "answerEn": "Isao Takahata",
+      "answerDe": "Isao Takahata",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1935-10-29",
+       "end": "2018-04-05",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Isao Takahata, director of the anime series Heidi and co-founder of Studio Ghibli",
+       "labelDe": "Isao Takahata, Regisseur der Anime-Serie Heidi und Mitgründer des Studio Ghibli"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Isao_Takahata",
+       "title": "Isao Takahata – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Swiss writer created the novel on which the anime series Heidi is based?",
+      "de": "Welche Schweizer Schriftstellerin schrieb den Roman, auf dem die Anime-Serie Heidi beruht?",
+      "answerEn": "Johanna Spyri",
+      "answerDe": "Johanna Spyri",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1827-06-12",
+       "end": "1901-07-07",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Johanna Spyri, Swiss author of the Heidi novels",
+       "labelDe": "Johanna Spyri, Schweizer Autorin der Heidi-Romane"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Johanna_Spyri",
+       "title": "Johanna Spyri – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which insect heroine of a novel by Waldemar Bonsels became the title character of a Japanese anime series co-produced with ZDF in 1975?",
+      "de": "Welche Heldin eines Romans von Waldemar Bonsels wurde 1975 zur Titelfigur einer mit dem ZDF koproduzierten japanischen Zeichentrickserie?",
+      "answerEn": "Maya the Bee",
+      "answerDe": "Biene Maja",
+      "timeline": {
+       "kind": "event",
+       "start": "1975-04-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The anime series „Maya the Bee“ is first shown in Japan",
+       "labelDe": "Die Zeichentrickserie „Die Biene Maja“ läuft erstmals in Japan"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Die_Biene_Maja_(Zeichentrickserie)",
+       "title": "Die Biene Maja (Anime) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the yellow electric Pokémon that accompanies Ash Ketchum in the anime?",
+      "de": "Wie heißt das gelbe Elektro-Pokémon, das Ash Ketchum im Anime begleitet?",
+      "answerEn": "Pikachu",
+      "answerDe": "Pikachu",
+      "timeline": {
+       "kind": "creation",
+       "start": "1996",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Pikachu first appears in the Game Boy games Pokémon Red and Green",
+       "labelDe": "Pikachu erscheint erstmals in den Game-Boy-Spielen Pokémon Rot und Grün"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pikachu",
+       "title": "Pikachu – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Made in Japan: The Anime Behind Europe's Children's Television",
+    "titleDe": "Made in Japan: Die Anime hinter dem europäischen Kinderfernsehen",
+    "bodyEn": "Generations of children in German-speaking Europe grew up with a girl from the Swiss Alps and a curious little bee without ever suspecting that their favourite cartoons had been drawn in Tokyo. Long before the word \"anime\" was known in the West, Japanese studios were making some of the best-loved children's series on European television.\n\nThe most famous of them began with a Swiss novel. Johanna Spyri (1827–1901) published her two books about the orphan Heidi, who goes to live with her gruff grandfather on an Alpine pasture, in 1880–81. Almost a century later the cartoon series Heidi was first broadcast in Japan, on Fuji TV, from 6 January to 29 December 1974 – the first own production of the young studio Zuiyo Enterprise. Its series director was Isao Takahata (1935–2018), and his colleague Hayao Miyazaki was responsible for the scene layout; it was one of the early collaborations of the two men who would found Studio Ghibli in 1985.\n\nEurope took the series to its heart. The German-language premiere came on Austria's ORF on 28 May 1977, and ZDF showed it from 18 September 1977; for many viewers Heidi's cartoon Alps became more familiar than Spyri's text.\n\nZDF had already discovered the Japanese studios. Waldemar Bonsels' novel about a curious young bee was a German classic, and Zuiyo, soon renamed Nippon Animation, turned it into a series co-produced with ZDF and the Austrian broadcaster ORF. Maya the Bee was first shown in Japan on 1 April 1975 and on ZDF from 9 September 1976, and its title song became as famous as its heroine.\n\nTwo decades later the traffic ran on an even larger scale. In 1996 the Game Boy games Pokémon Red and Green introduced 151 collectible creatures, whose designs were created or finalised by the artist Ken Sugimori. An anime series followed in 1997 and carried Pokémon around the world; its hero, the young trainer Ash Ketchum, is accompanied everywhere by Pikachu, the yellow electric mouse that Atsuko Nishida designed at Sugimori's request and that became the face of the whole franchise.\n\n| Series | First shown in Japan | Based on | Key creative |\n|---|---|---|---|\n| Heidi | 1974 | novels by Johanna Spyri | Isao Takahata |\n| Maya the Bee | 1975 | novels by Waldemar Bonsels | Nippon Animation |\n| Pokémon | 1997 | Game Boy games of 1996 | Ken Sugimori |",
+    "bodyDe": "Generationen von Kindern im deutschsprachigen Raum wuchsen mit einem Mädchen aus den Schweizer Alpen und einer neugierigen kleinen Biene auf, ohne zu ahnen, dass ihre Lieblingszeichentrickserien in Tokio gezeichnet worden waren. Lange bevor man im Westen das Wort „Anime“ kannte, schufen japanische Studios einige der beliebtesten Kinderserien des europäischen Fernsehens.\n\nDie berühmteste von ihnen begann mit einem Schweizer Roman. Johanna Spyri (1827–1901) veröffentlichte ihre beiden Bücher über das Waisenkind Heidi, das zu seinem brummigen Großvater auf die Alm zieht, 1880/81. Fast ein Jahrhundert später wurde die Zeichentrickserie Heidi zum ersten Mal in Japan ausgestrahlt, vom 6. Januar bis 29. Dezember 1974 auf Fuji TV – als erste eigene Produktion des jungen Studios Zuiyo Enterprise. Regie führte Isao Takahata (1935–2018), und sein Kollege Hayao Miyazaki war für Szenenrahmen und Bildaufbau zuständig; es war eine der frühen Zusammenarbeiten der beiden Männer, die 1985 das Studio Ghibli gründen sollten.\n\nEuropa schloss die Serie ins Herz. Die deutschsprachige Erstausstrahlung lief ab dem 28. Mai 1977 im österreichischen ORF, das ZDF zeigte sie ab dem 18. September 1977; für viele Zuschauer wurden Heidis gezeichnete Alpen vertrauter als Spyris Text.\n\nDas ZDF hatte die japanischen Studios da schon entdeckt. Waldemar Bonsels' Roman über eine neugierige junge Biene war ein deutscher Klassiker, und Zuiyo, bald in Nippon Animation umbenannt, machte daraus eine Serie, koproduziert mit dem ZDF und dem österreichischen ORF. Die Biene Maja lief in Japan erstmals am 1. April 1975 und im ZDF ab dem 9. September 1976, und ihr Titellied wurde so berühmt wie ihre Heldin.\n\nZwei Jahrzehnte später lief der Austausch in noch größerem Maßstab. 1996 stellten die Game-Boy-Spiele Pokémon Rot und Grün 151 Sammelwesen vor, deren Entwürfe der Künstler Ken Sugimori schuf oder vollendete. 1997 folgte eine Anime-Serie, die Pokémon in die ganze Welt trug; ihr Held, der junge Trainer Ash Ketchum, wird überallhin von Pikachu begleitet, der gelben Elektromaus, die Atsuko Nishida auf Sugimoris Wunsch entwarf und die zum Gesicht der ganzen Marke wurde.\n\n| Serie | Erstausstrahlung in Japan | Vorlage | Prägende Person |\n|---|---|---|---|\n| Heidi | 1974 | Romane von Johanna Spyri | Isao Takahata |\n| Biene Maja | 1975 | Romane von Waldemar Bonsels | Nippon Animation |\n| Pokémon | 1997 | Game-Boy-Spiele von 1996 | Ken Sugimori |",
+    "notesEn": "Ken Sugimori's 151 original designs were made for the 1996 video games; the anime followed in 1997.",
+    "notesDe": "Ken Sugimoris 151 ursprüngliche Entwürfe entstanden für die Videospiele von 1996; der Anime folgte 1997."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-137",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-158",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-283",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "Which two British animators created the children's series Peppa Pig?",
+      "de": "Welche zwei britischen Animatoren erfanden die Kinderserie Peppa Wutz?",
+      "answerEn": "Neville Astley and Mark Baker",
+      "answerDe": "Neville Astley und Mark Baker",
+      "timeline": {
+       "kind": "event",
+       "start": "2004-05-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Neville Astley and Mark Baker's „Peppa Pig“ is first shown on Channel 5",
+       "labelDe": "„Peppa Wutz“ von Neville Astley und Mark Baker läuft erstmals auf Channel 5"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Peppa_Pig",
+       "title": "Peppa Pig – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Dutch singer, songwriter and clown came up with the cartoon duck Alfred J. Kwak?",
+      "de": "Welcher niederländische Sänger, Liedermacher und Clown erfand die Zeichentrickente Alfred J. Kwak?",
+      "answerEn": "Herman van Veen",
+      "answerDe": "Herman van Veen",
+      "timeline": {
+       "kind": "event",
+       "start": "1989-04-03",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The animated series „Alfred J. Kwak“, based on Herman van Veen's fable, starts on TV Tokyo",
+       "labelDe": "Die Zeichentrickserie „Alfred J. Kwak“ nach Herman van Veens Fabel startet auf TV Tokyo"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Alfred_J._Kwak",
+       "title": "Alfred J. Kwak – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which British author wrote the novels on which the animated series The Animals of Farthing Wood is based?",
+      "de": "Welcher britische Autor schrieb die Romane, auf denen die Zeichentrickserie „Als die Tiere den Wald verließen“ beruht?",
+      "answerEn": "Colin Dann",
+      "answerDe": "Colin Dann",
+      "timeline": {
+       "kind": "event",
+       "start": "1993-01-06",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "„The Animals of Farthing Wood“, after Colin Dann's novels, is first broadcast",
+       "labelDe": "„Als die Tiere den Wald verließen“ nach Colin Danns Romanen wird erstmals ausgestrahlt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Animals_of_Farthing_Wood_(TV_series)",
+       "title": "The Animals of Farthing Wood (TV series) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Czech animator created the Little Mole (Krtek), first seen in a short film in 1957?",
+      "de": "Welcher tschechische Animator erfand den kleinen Maulwurf (Krtek), der 1957 erstmals in einem Kurzfilm zu sehen war?",
+      "answerEn": "Zdeněk Miler",
+      "answerDe": "Zdeněk Miler",
+      "timeline": {
+       "kind": "creation",
+       "start": "1957",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Zdeněk Miler's short „How Mole Got His Trousers“ introduces the Little Mole",
+       "labelDe": "Zdeněk Milers Kurzfilm „Jak krtek ke kalhotkám přišel“ stellt den kleinen Maulwurf vor"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Krtek",
+       "title": "Krtek – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Pigs, Ducks and Foxes: Animal Heroes of Children's Cartoons",
+    "titleDe": "Schweine, Enten und Füchse: Tierhelden des Kinder-Zeichentricks",
+    "bodyEn": "Children's cartoons have always preferred animals to people, and some of their animal heroes have travelled further than any human star. Four of them show how wide the range is – from a muddy British piglet to a wordless Czech mole.\n\nThe most successful pig in television history is a little girl. Peppa Pig was created by the British animators Neville Astley and Mark Baker, made by their studio Astley Baker Davies and first shown on Channel 5 in Britain on 31 May 2004. Each short episode follows Peppa, who lives with Mummy Pig, Daddy Pig and her little brother George, and whose family loves nothing more than splashing in muddy puddles. In German she is called Peppa Wutz, and her brother is Schorsch.\n\nAn older duck had a mission. Alfred J. Kwak – Alfred Jodocus Kwak in full – is an orphaned duckling taken in by the mole Henk. He began as a musical fable by the Dutch singer, songwriter and clown Herman van Veen and became an animated series made in Japan with Dutch, Spanish and Japanese broadcasters, first shown on TV Tokyo from 3 April 1989 and on ZDF from 13 October 1990. The series did not shy away from serious subjects, and in the 2000s the little duck was even named a UNICEF ambassador for children's rights in Austria.\n\nFrom Britain and France came a darker story. The Animals of Farthing Wood, based on the novels of the British author Colin Dann, was broadcast from 6 January 1993 to 21 December 1995. When humans begin to destroy their wood, its animals swear an oath to protect one another and set off together on a dangerous journey to White Deer Park, a nature reserve where they will be safe. The leader of the journey is the Fox, whose courage and good sense hold the group together.\n\nThe oldest hero of the four needs no words at all. The Czech animator Zdeněk Miler drew the Little Mole (Krtek) for the short film \"How Mole Got His Trousers\" in 1957, and the series of almost wordless shorts that followed made the cheerful mole – in German Der kleine Maulwurf – a favourite far beyond Czechoslovakia.\n\n| Hero | Animal | Created by | First on screen |\n|---|---|---|---|\n| Little Mole | mole | Zdeněk Miler | 1957 |\n| Alfred J. Kwak | duck | Herman van Veen | 1989 |\n| The Fox of Farthing Wood | fox | Colin Dann (novels) | 1993 |\n| Peppa Pig | pig | Neville Astley and Mark Baker | 2004 |",
+    "bodyDe": "Kinder-Zeichentrickserien haben Tiere schon immer Menschen vorgezogen, und manche ihrer Tierhelden sind weiter gereist als jeder menschliche Star. Vier von ihnen zeigen, wie groß die Spannweite ist – vom schlammverliebten britischen Ferkel bis zum wortlosen tschechischen Maulwurf.\n\nDas erfolgreichste Schwein der Fernsehgeschichte ist ein kleines Mädchen. Peppa Wutz (im Original Peppa Pig) wurde von den britischen Animatoren Neville Astley und Mark Baker erfunden, in ihrem Studio Astley Baker Davies produziert und am 31. Mai 2004 erstmals auf Channel 5 in Großbritannien gezeigt. Jede kurze Folge handelt von Peppa, die mit Mama Wutz, Papa Wutz und ihrem kleinen Bruder Schorsch zusammenlebt und deren Familie nichts lieber tut, als in matschige Pfützen zu springen.\n\nEine ältere Ente hatte eine Mission. Alfred J. Kwak – mit vollem Namen Alfred Jodocus Kwak – ist ein Waisen-Entlein, das der Maulwurf Henk bei sich aufnimmt. Er begann als musikalische Fabel des niederländischen Sängers, Liedermachers und Clowns Herman van Veen und wurde zu einer in Japan mit niederländischen, spanischen und japanischen Sendern produzierten Zeichentrickserie, die ab dem 3. April 1989 auf TV Tokyo und ab dem 13. Oktober 1990 im ZDF lief. Die Serie scheute keine ernsten Themen, und in den 2000er-Jahren wurde die kleine Ente in Österreich sogar zum UNICEF-Botschafter für Kinderrechte ernannt.\n\nAus Großbritannien und Frankreich kam eine düsterere Geschichte. Als die Tiere den Wald verließen, nach den Romanen des britischen Autors Colin Dann, lief vom 6. Januar 1993 bis zum 21. Dezember 1995. Als Menschen ihren Wald zu zerstören beginnen, schwören die Tiere einen Eid, einander zu beschützen, und brechen gemeinsam zu einer gefährlichen Reise in das Naturschutzgebiet White Deer Park auf, wo sie sicher sein werden. Zum Anführer der Reise wird der Fuchs, dessen Mut und Besonnenheit die Gruppe zusammenhalten.\n\nDer älteste Held der vier braucht überhaupt keine Worte. Der tschechische Animator Zdeněk Miler zeichnete den kleinen Maulwurf (Krtek) 1957 für den Kurzfilm „Jak krtek ke kalhotkám přišel“, in dem der Maulwurf zu einer Hose kommt, und die Reihe fast wortloser Kurzfilme, die folgte, machte den fröhlichen Maulwurf weit über die Tschechoslowakei hinaus zum Liebling.\n\n| Held | Tier | Erfunden von | Erstmals zu sehen |\n|---|---|---|---|\n| Der kleine Maulwurf | Maulwurf | Zdeněk Miler | 1957 |\n| Alfred J. Kwak | Ente | Herman van Veen | 1989 |\n| Der Fuchs aus „Als die Tiere den Wald verließen“ | Fuchs | Colin Dann (Romane) | 1993 |\n| Peppa Wutz | Schwein | Neville Astley und Mark Baker | 2004 |",
+    "notesEn": "Sources differ on Alfred J. Kwak's UNICEF role: an Austrian newspaper says since 2003, the designer Harald Siepermann's site says he was officially appointed in Austria in 2006.",
+    "notesDe": "Zu Alfred J. Kwaks UNICEF-Rolle gibt es unterschiedliche Angaben: Laut OÖN seit 2003, laut der Website des Zeichners Harald Siepermann wurde er 2006 in Österreich offiziell ernannt."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-284",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-264",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Stone Age town do the Flintstones live?",
+      "de": "In welcher Steinzeitstadt lebt die Familie Feuerstein?",
+      "answerEn": "Bedrock",
+      "answerDe": "Steintal",
+      "timeline": {
+       "kind": "event",
+       "start": "1965-10-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "„The Flintstones“, with Bedrock renamed Steintal, is first shown on German television",
+       "labelDe": "„Familie Feuerstein“ mit der Stadt Steintal läuft erstmals im deutschen Fernsehen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Familie_Feuerstein",
+       "title": "Familie Feuerstein – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which animation studio produced The Flintstones, the first animated series in American prime time?",
+      "de": "Welches Zeichentrickstudio produzierte Familie Feuerstein, die erste Zeichentrickserie zur amerikanischen Hauptsendezeit?",
+      "answerEn": "Hanna-Barbera",
+      "answerDe": "Hanna-Barbera",
+      "timeline": {
+       "kind": "period",
+       "start": "1960-09-30",
+       "end": "1966-04-01",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Original run of Hanna-Barbera's „The Flintstones“ on ABC",
+       "labelDe": "Erstausstrahlung von Hanna-Barberas „Familie Feuerstein“ auf ABC"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Flintstones",
+       "title": "The Flintstones – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American television network first broadcast The Flintstones in 1960?",
+      "de": "Welcher amerikanische Fernsehsender strahlte Familie Feuerstein 1960 als erster aus?",
+      "answerEn": "ABC",
+      "answerDe": "ABC",
+      "timeline": {
+       "kind": "event",
+       "start": "1960-09-30",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "„The Flintstones“ premieres in prime time on ABC",
+       "labelDe": "„Familie Feuerstein“ startet zur Hauptsendezeit auf ABC"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Flintstones",
+       "title": "The Flintstones – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the first name of the father of the Flintstone family, who works at a quarry?",
+      "de": "Wie lautet der Vorname des Vaters der Familie Feuerstein, der in einem Steinbruch arbeitet?",
+      "answerEn": "Fred",
+      "answerDe": "Fred",
+      "timeline": {
+       "kind": "creation",
+       "start": "1960-09-30",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Fred Flintstone first appears as „The Flintstones“ premieres on ABC",
+       "labelDe": "Fred Feuerstein ist zum ersten Mal zu sehen, als „Familie Feuerstein“ auf ABC startet"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Familie_Feuerstein",
+       "title": "Familie Feuerstein – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Bedrock's Modern Stone Age Family: The Flintstones",
+    "titleDe": "Die moderne Steinzeitfamilie aus Steintal: Familie Feuerstein",
+    "bodyEn": "On 30 September 1960 the American network ABC put a cartoon into prime time, the evening slot until then reserved for live-action comedies. The Flintstones, produced by the studio Hanna-Barbera, was the first animated series with a prime-time slot and the first animated sitcom, and its original episodes ran until 1 April 1966. The formula was simple: an ordinary suburban family comedy of the early 1960s, moved back to the Stone Age.\n\nThe family lives in Bedrock, a Stone Age town of about 2,500 inhabitants. Fred Flintstone works at a quarry and drives a car powered by his own feet; his wife Wilma keeps the house, and their daughter Pebbles later joins the family. Next door live their best friends, Barney and Betty Rubble, whose adopted son Bamm-Bamm is so strong that he swings a club at everything in sight. Dino, a pet dinosaur who behaves like a dog, completes the household.\n\nMuch of the comedy comes from the house itself. In The Flintstones the household appliances are animals: a small mammoth serves as a tap or dishwasher, a turtle as a lawnmower, a heron as a hedge trimmer and a woodpecker as a record player, scratching out the music with its beak. Often the animal turns to the camera between jobs and complains about its lot – a gag repeated in almost every episode.\n\nGerman viewers met the family as Familie Feuerstein. The series was first shown on German television on 12 October 1965, and the dub gave the characters new names: Fred and Wilma became Feuerstein, the Rubbles became the Geröllheimers and Bedrock became Steintal (Felsental in newer dubs). Repeats kept the series on German screens until 1990.\n\n| Original | German | Role |\n|---|---|---|\n| Fred Flintstone | Fred Feuerstein | father, quarry worker |\n| Wilma Flintstone | Wilma Feuerstein | mother |\n| Pebbles | Pebbles | daughter |\n| Barney and Betty Rubble | Barney und Betty Geröllheimer | neighbours |\n| Bamm-Bamm | Bamm-Bamm | the Rubbles' son |\n| Bedrock | Steintal | home town |",
+    "bodyDe": "Am 30. September 1960 setzte der amerikanische Sender ABC einen Zeichentrickfilm in die Hauptsendezeit, den Abendplatz, der bis dahin Komödien mit echten Schauspielern vorbehalten war. Familie Feuerstein (im Original The Flintstones), produziert vom Studio Hanna-Barbera, war die erste Zeichentrickserie zur Hauptsendezeit und die erste Zeichentrick-Sitcom; die Originalfolgen liefen bis zum 1. April 1966. Das Rezept war einfach: eine gewöhnliche Vorstadt-Familienkomödie der frühen 1960er-Jahre, zurückversetzt in die Steinzeit.\n\nDie Familie lebt in Steintal (im Original Bedrock), einer Steinzeitstadt mit etwa 2500 Einwohnern. Fred Feuerstein arbeitet in einem Steinbruch und fährt ein Auto, das er mit den eigenen Füßen antreibt; seine Frau Wilma führt den Haushalt, und später kommt Tochter Pebbles dazu. Nebenan wohnen die besten Freunde, Barney und Betty Geröllheimer, deren Adoptivsohn Bamm-Bamm so stark ist, dass er mit seiner Keule auf alles einschlägt. Dino, ein Haus-Dinosaurier, der sich wie ein Hund benimmt, vervollständigt den Haushalt.\n\nViel Komik steckt im Haus selbst. In Familie Feuerstein sind die Haushaltsgeräte Tiere: Ein kleines Mammut dient als Wasserhahn oder Geschirrspüler, eine Schildkröte als Rasenmäher, ein Reiher als Heckenschere und ein Specht als Plattenspieler, der die Musik mit dem Schnabel abtastet. Oft wendet sich das Tier zwischen zwei Einsätzen an die Kamera und beklagt sein Los – ein Gag, der in fast jeder Folge wiederkehrt.\n\nDas deutsche Publikum lernte die Familie unter dem Titel Familie Feuerstein kennen. Die Serie lief am 12. Oktober 1965 erstmals im deutschen Fernsehen, und die Synchronisation gab den Figuren neue Namen: Fred und Wilma Flintstone wurden zu Feuersteins, die Rubbles zu Geröllheimers und Bedrock zu Steintal (in neueren Fassungen Felsental). Wiederholungen hielten die Serie bis 1990 im deutschen Fernsehen.\n\n| Original | Deutsch | Rolle |\n|---|---|---|\n| Fred Flintstone | Fred Feuerstein | Vater, Steinbrucharbeiter |\n| Wilma Flintstone | Wilma Feuerstein | Mutter |\n| Pebbles | Pebbles | Tochter |\n| Barney and Betty Rubble | Barney und Betty Geröllheimer | Nachbarn |\n| Bamm-Bamm | Bamm-Bamm | Sohn der Geröllheimers |\n| Bedrock | Steintal | Heimatstadt |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-280",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-288",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-385",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the palace guard captain's horse that chases Flynn Rider in Disney's Tangled?",
+      "de": "Wie heißt das Pferd des Hauptmanns der Palastwache, das in Disneys „Rapunzel – Neu verföhnt“ Flynn Rider verfolgt?",
+      "answerEn": "Maximus",
+      "answerDe": "Maximus",
+      "timeline": {
+       "kind": "creation",
+       "start": "2010-11-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Disney's „Tangled“ opens in US cinemas",
+       "labelDe": "Disneys „Rapunzel – Neu verföhnt“ kommt in die US-Kinos"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tangled",
+       "title": "Tangled – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which country is the Pixar film Brave, about Princess Merida, set?",
+      "de": "In welchem Land spielt der Pixar-Film „Merida – Legende der Highlands“?",
+      "answerEn": "Scotland",
+      "answerDe": "Schottland",
+      "timeline": {
+       "kind": "creation",
+       "start": "2012-06-22",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Pixar's „Brave“, set in medieval Scotland, opens in US cinemas",
+       "labelDe": "Pixars „Merida – Legende der Highlands“, angesiedelt im mittelalterlichen Schottland, startet in den USA"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Brave_(2012_film)",
+       "title": "Brave (2012 film) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the snowman in Disney's Frozen who dreams of experiencing summer?",
+      "de": "Wie heißt der Schneemann in Disneys „Die Eiskönigin – Völlig unverfroren“, der davon träumt, den Sommer zu erleben?",
+      "answerEn": "Olaf",
+      "answerDe": "Olaf",
+      "timeline": {
+       "kind": "creation",
+       "start": "2013-11-27",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Disney's „Frozen“ goes on general release in US cinemas",
+       "labelDe": "Disneys „Die Eiskönigin – Völlig unverfroren“ läuft in den US-Kinos an"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+       "title": "Frozen (2013 film) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which song from Disney's Frozen won the Academy Award for Best Original Song?",
+      "de": "Welcher Song aus Disneys „Die Eiskönigin – Völlig unverfroren“ gewann den Oscar für den besten Filmsong (Originaltitel)?",
+      "answerEn": "Let It Go",
+      "answerDe": "Let It Go",
+      "timeline": {
+       "kind": "event",
+       "start": "2014",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "„Let It Go“ from „Frozen“ wins the Oscar for Best Original Song",
+       "labelDe": "„Let It Go“ aus „Die Eiskönigin“ gewinnt den Oscar für den besten Filmsong"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+       "title": "Frozen (2013 film) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Chameleons, Bears and Snowmen: The Princesses of Tangled, Brave and Frozen",
+    "titleDe": "Chamäleons, Bären und Schneemänner: Die Prinzessinnen aus Rapunzel, Merida und der Eiskönigin",
+    "bodyEn": "Between 2010 and 2013 Disney and its sister studio Pixar reinvented the fairy-tale princess in three computer-animated films. Each heroine has a companion who never speaks, each film rewrites its source freely, and each found an audience far beyond the children it was made for.\n\nTangled (German title: Rapunzel – Neu verföhnt) opened in the United States on 24 November 2010 and was described as Disney's 50th animated feature. It is loosely based on the Brothers Grimm's \"Rapunzel\". Locked in her tower, Rapunzel has one friend, the silent chameleon Pascal, who accompanies her on her adventures once she escapes with the charming thief Flynn Rider. The two are pursued by Maximus, the palace guard captain's horse, who tracks Flynn more like a bloodhound than a steed.\n\nPixar's Brave, released in the United States on 22 June 2012 and known in German as Merida – Legende der Highlands, was the studio's first film with a female lead. It is set in the Highlands of medieval Scotland, where Princess Merida of Clan DunBroch refuses the tradition of an arranged marriage. A witch sells her a spell meant to change her mother's mind, but instead it turns Queen Elinor into a bear, and Merida has to \"mend the bond, torn by pride\" before the change becomes permanent. Brave won the Oscar for Best Animated Feature.\n\nDisney's next fairy tale came from Denmark. Hans Christian Andersen's \"The Snow Queen\" (1844) inspired Frozen, which went on general release in American cinemas on 27 November 2013 and in Germany on 28 November 2013 as Die Eiskönigin – Völlig unverfroren. Little of Andersen survives beyond snow, ice and a queen: Elsa, whose magic freezes her kingdom, and her sister Anna, who sets out to find her with the cheerful snowman Olaf, who dreams of experiencing summer. Elsa's song \"Let It Go\" (in German \"Lass jetzt los\"), written by Robert Lopez and Kristen Anderson-Lopez, won the Oscar for Best Original Song, and the film also took Best Animated Feature.\n\n| Film | Year | Source | Silent companion |\n|---|---|---|---|\n| Tangled | 2010 | \"Rapunzel\" (Brothers Grimm) | the chameleon Pascal |\n| Brave | 2012 | original story | the horse Angus |\n| Frozen | 2013 | \"The Snow Queen\" (Andersen) | the reindeer Sven |",
+    "bodyDe": "Zwischen 2010 und 2013 erfanden Disney und sein Schwesterstudio Pixar die Märchenprinzessin in drei computeranimierten Filmen neu. Jede Heldin hat einen Begleiter, der nie spricht, jeder Film geht frei mit seiner Vorlage um, und jeder fand ein Publikum weit über die Kinder hinaus, für die er gemacht war.\n\nRapunzel – Neu verföhnt (im Original Tangled) kam am 24. November 2010 in die US-Kinos und galt als Disneys 50. abendfüllender Zeichentrickfilm. Er beruht lose auf dem Grimm'schen Märchen „Rapunzel“. In ihrem Turm eingesperrt, hat Rapunzel nur einen Freund, das stumme Chamäleon Pascal, das sie auf ihren Abenteuern begleitet, als sie mit dem charmanten Dieb Flynn Rider entkommt. Verfolgt werden die beiden von Maximus, dem Pferd des Hauptmanns der Palastwache, der Flynn eher wie ein Spürhund als wie ein Ross nachstellt.\n\nPixars Merida – Legende der Highlands (im Original Brave), am 22. Juni 2012 in den USA gestartet, war der erste Film des Studios mit einer weiblichen Hauptfigur. Er spielt in den Highlands des mittelalterlichen Schottland, wo sich Prinzessin Merida aus dem Clan DunBroch der Tradition der arrangierten Ehe verweigert. Eine Hexe verkauft ihr einen Zauber, der die Meinung ihrer Mutter ändern soll – stattdessen verwandelt er Königin Elinor in einen Bären, und Merida muss das vom Stolz zerrissene Band zwischen ihnen flicken, bevor die Verwandlung endgültig wird. Der Film gewann den Oscar für den besten Animationsfilm.\n\nDisneys nächstes Märchen kam aus Dänemark. Hans Christian Andersens „Die Schneekönigin“ (1844) inspirierte den Film Die Eiskönigin – Völlig unverfroren, der am 27. November 2013 in den amerikanischen und am 28. November 2013 in den deutschen Kinos anlief. Von Andersen bleibt wenig mehr als Schnee, Eis und eine Königin: Elsa, deren Zauberkraft ihr Königreich gefrieren lässt, und ihre Schwester Anna, die sie mit dem fröhlichen Schneemann Olaf sucht, der davon träumt, einmal den Sommer zu erleben. Elsas Lied „Let It Go“ (deutsch „Lass jetzt los“) von Robert Lopez und Kristen Anderson-Lopez gewann den Oscar für den besten Filmsong, und der Film erhielt außerdem den Oscar für den besten Animationsfilm.\n\n| Film | Jahr | Vorlage | Stummer Begleiter |\n|---|---|---|---|\n| Rapunzel – Neu verföhnt | 2010 | „Rapunzel“ (Brüder Grimm) | das Chamäleon Pascal |\n| Merida – Legende der Highlands | 2012 | eigene Geschichte | das Pferd Angus |\n| Die Eiskönigin | 2013 | „Die Schneekönigin“ (Andersen) | das Rentier Sven |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-347",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American cartoonist created Popeye, who first appeared in his comic strip Thimble Theatre in 1929?",
+      "de": "Welcher amerikanische Comiczeichner erfand Popeye, der 1929 erstmals in seinem Comicstrip Thimble Theatre auftrat?",
+      "answerEn": "E. C. Segar",
+      "answerDe": "E. C. Segar",
+      "timeline": {
+       "kind": "creation",
+       "start": "1929-01-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Popeye first appears in E. C. Segar's comic strip „Thimble Theatre“",
+       "labelDe": "Popeye tritt erstmals in E. C. Segars Comicstrip „Thimble Theatre“ auf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Popeye",
+       "title": "Popeye – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of Popeye's girlfriend, who was in the comic strip even before he was?",
+      "de": "Wie heißt Popeyes Freundin, die schon vor ihm in dem Comicstrip vorkam?",
+      "answerEn": "Olive Oyl",
+      "answerDe": "Olivia Öl",
+      "timeline": {
+       "kind": "creation",
+       "start": "1919-12-19",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Olive Oyl appears on the first day of E. C. Segar's strip „Thimble Theatre“",
+       "labelDe": "Olivia Öl erscheint am ersten Tag von E. C. Segars Comicstrip „Thimble Theatre“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Popeye",
+       "title": "Popeye – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of Popeye's bearded arch-rival, introduced in 1932?",
+      "de": "Wie heißt Popeyes bärtiger Erzrivale, der 1932 eingeführt wurde?",
+      "answerEn": "Bluto",
+      "answerDe": "Bluto",
+      "timeline": {
+       "kind": "creation",
+       "start": "1932-09-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Bluto, Popeye's bearded rival, is introduced in „Thimble Theatre“",
+       "labelDe": "Bluto, Popeyes bärtiger Rivale, wird in „Thimble Theatre“ eingeführt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Popeye",
+       "title": "Popeye – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which animation studio brought Popeye to the cinema screen in 1933?",
+      "de": "Welches Zeichentrickstudio brachte Popeye 1933 auf die Kinoleinwand?",
+      "answerEn": "Fleischer Studios",
+      "answerDe": "Fleischer Studios",
+      "timeline": {
+       "kind": "event",
+       "start": "1933",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Fleischer Studios release the first Popeye cartoon",
+       "labelDe": "Die Fleischer Studios bringen den ersten Popeye-Cartoon heraus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Popeye",
+       "title": "Popeye – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Strong to the Finish: Popeye the Sailor Man",
+    "titleDe": "Stark bis zum Schluss: Popeye, der Seemann",
+    "bodyEn": "Popeye began as a walk-on. The American cartoonist E. C. Segar (Elzie Crisler Segar) had been drawing the newspaper comic strip Thimble Theatre since 19 December 1919, built around Olive Oyl and her boyfriend Ham Gravy, when a one-eyed, pipe-smoking sailor first appeared in it on 17 January 1929 as a minor character. Readers took to him at once, and within a short time the strip was his.\n\nThe rest of the cast fell into place around him. Olive Oyl, who had been in the strip since its first day, became Popeye's girlfriend in March 1930. Spinach entered the story in July 1931 as the source of his superhuman strength, and his great rival, the bearded bully Bluto (also known as Brutus), followed on 12 September 1932, ready to fight Popeye for Olive in story after story.\n\nAnimation made Popeye a world star. In November 1932 Max Fleischer's Fleischer Studios agreed to bring the sailor to the cinema, and the first Popeye cartoon was released in 1933. The Fleischer shorts made the can of spinach – squeezed open and swallowed in one gulp before the decisive punch – into Popeye's signature, and his song \"I'm Popeye the Sailor Man\" into one of the best-known cartoon tunes.\n\nThe spinach growers took notice. Crystal City in Texas, which calls itself the \"Spinach Capital of the World\", unveiled a statue of Popeye on 26 March 1937 to honour the cartoon character credited with making children eat their spinach.\n\n| Year | Event |\n|---|---|\n| 1919 | E. C. Segar starts „Thimble Theatre“ with Olive Oyl |\n| 1929 | Popeye's first appearance |\n| 1931 | spinach becomes his source of strength |\n| 1932 | Bluto is introduced |\n| 1933 | first Fleischer Studios cartoon |\n| 1937 | Popeye statue in Crystal City, Texas |",
+    "bodyDe": "Popeye begann als Nebenfigur. Der amerikanische Comiczeichner E. C. Segar (Elzie Crisler Segar) zeichnete schon seit dem 19. Dezember 1919 den Zeitungscomic Thimble Theatre, in dessen Mittelpunkt Olivia Öl (im Original Olive Oyl) und ihr Freund Ham Gravy standen, als am 17. Januar 1929 ein einäugiger, Pfeife rauchender Seemann als Nebenfigur auftauchte. Die Leser schlossen ihn sofort ins Herz, und nach kurzer Zeit gehörte der Comic ihm.\n\nDer Rest der Besetzung ordnete sich um ihn herum. Olivia Öl, die seit dem ersten Tag dabei war, wurde im März 1930 Popeyes Freundin. Im Juli 1931 kam der Spinat als Quelle seiner übermenschlichen Kraft in die Geschichte, und sein großer Rivale, der bärtige Rüpel Bluto (auch Brutus genannt), folgte am 12. September 1932 – bereit, in einer Geschichte nach der anderen mit Popeye um Olivia zu kämpfen.\n\nDer Zeichentrickfilm machte Popeye zum Weltstar. Im November 1932 vereinbarten Max Fleischers Fleischer Studios, den Seemann ins Kino zu bringen, und 1933 erschien der erste Popeye-Cartoon. Die Fleischer-Filme machten die Spinatdose – aufgedrückt und in einem Zug hinuntergeschluckt vor dem entscheidenden Schlag – zu Popeyes Markenzeichen und sein Lied „I'm Popeye the Sailor Man“ zu einer der bekanntesten Zeichentrickmelodien.\n\nDie Spinatbauern wurden aufmerksam. Crystal City in Texas, das sich „Spinathauptstadt der Welt“ nennt, enthüllte am 26. März 1937 eine Statue von Popeye, um die Zeichentrickfigur zu ehren, der man zuschrieb, Kinder zum Spinatessen gebracht zu haben.\n\n| Jahr | Ereignis |\n|---|---|\n| 1919 | E. C. Segar beginnt „Thimble Theatre“ mit Olivia Öl |\n| 1929 | erster Auftritt Popeyes |\n| 1931 | Spinat wird zur Quelle seiner Kraft |\n| 1932 | Bluto wird eingeführt |\n| 1933 | erster Cartoon der Fleischer Studios |\n| 1937 | Popeye-Statue in Crystal City, Texas |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-105",
+   "category": 2,
+   "domain": "sport-games",
+   "sub": "games",
+   "why": "Piggy Island is the setting of the Angry Birds video games (the 2016 film came later); it belongs beside f09000 (Angry Birds) in a1800 'Five Games Everybody Has Played' as a new fact, not an alias."
+  }
+ ]
+}

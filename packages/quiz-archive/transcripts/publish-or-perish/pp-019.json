@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-019",
+ "image": "IMG20261022010805.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardText": "[Medical Sciences] Which of the following can be a non-inflammatory cause of itchiness in eczema?\nA. Viruses B. Bacteria C. Fungus\nAnswer: B. Recent research has shown that a type of bacteria can release a chemical that directly acts on nerve cells in the skin, leading to itchiness.",
+   "discipline": "Medical Sciences",
+   "de": "Welches Bakterium löst, wie 2023 gezeigt wurde, Juckreiz direkt aus, indem es ein Enzym (die V8-Protease) freisetzt, das auf Nervenzellen der Haut wirkt – eine nicht entzündliche Ursache des Juckreizes bei Ekzemen?",
+   "en": "Which bacterium was shown in 2023 to cause itch directly, by releasing an enzyme (the V8 protease) that acts on nerve cells in the skin, a non-inflammatory cause of itching in eczema?",
+   "reworked": true,
+   "answerDe": "Staphylococcus aureus",
+   "answerEn": "Staphylococcus aureus",
+   "timeline": {
+    "kind": "discovery",
+    "start": "2023",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A study in Cell shows Staphylococcus aureus drives itch through its V8 protease acting on PAR1 on nerve cells",
+    "labelDe": "Eine Studie in Cell zeigt, dass Staphylococcus aureus über seine V8-Protease und den PAR1-Rezeptor der Nervenzellen Juckreiz auslöst"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Itch",
+    "title": "Itch",
+    "lang": "en"
+   },
+   "notes": "The card answers only \"bacteria\"; the research (Deng et al., Cell 2023) names Staphylococcus aureus, so the open question asks for that species. Accept \"golden staph\" / \"Staph aureus\".",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 2,
+   "cardText": "[Religious Studies] What is a mezuzah?\nA. A prayer shawl\nB. A scroll containing biblical verses\nC. A ceremonial cup\nAnswer: B. A mezuzah contains parchment inscribed with verses from the Torah. It’s placed inside a decorative case and affixed to the doorframes of many Jewish people’s homes. Many Jewish people touch or kiss the mezuzah when passing through the doorway as a sign of respect and devotion.",
+   "discipline": "Religious Studies",
+   "de": "Wie heißt das mit Versen aus der Tora beschriftete Pergament, das Juden in einer kleinen Kapsel am Türpfosten ihrer Wohnungen anbringen und beim Durchgehen oft berühren oder küssen?",
+   "en": "What is the name of the parchment inscribed with Torah verses that Jews place in a small case on the doorposts of their homes, and often touch or kiss when passing through?",
+   "reworked": true,
+   "answerDe": "Mesusa",
+   "answerEn": "Mezuzah",
+   "timeline": {
+    "kind": "creation",
+    "start": "-700",
+    "end": "-601",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The core of Deuteronomy, whose verses command the mezuzah (Deut. 6:9), is composed in Jerusalem",
+    "labelDe": "Der Kern des Deuteronomiums, dessen Verse die Mesusa gebieten (Dtn 6,9), entsteht in Jerusalem"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Mezuzah",
+    "title": "Mezuzah",
+    "lang": "en"
+   },
+   "notes": "The verses are Deuteronomy 6:4–9 and 11:13–21 (part of the Shema). German spellings Mesusa / Mezuza both occur.",
+   "domain": "belief",
+   "sub": "religion"
+  }
+ ]
+}

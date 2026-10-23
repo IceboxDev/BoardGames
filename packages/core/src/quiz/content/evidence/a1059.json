@@ -1,0 +1,242 @@
+{
+ "article": "a1059",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe",
+   "title": "Arc de Triomphe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:09.703Z",
+   "snapshot": "54a4d9348e6fb49e121c031a749319e92ffadc00f67a2a34bea4423f09f06b20"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Place_Vend%C3%B4me",
+   "title": "Place Vendôme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:10.591Z",
+   "snapshot": "fbd67221a2cd3be60eddd0a1b8c8b3ecafd08757f9f53a8147047c228541a23c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe_du_Carrousel",
+   "title": "Arc de Triomphe du Carrousel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:11.647Z",
+   "snapshot": "395447d3eff109af97f1d1eac7846b187b6e5ad3ece1d29f261e082359826891"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/La_Madeleine,_Paris",
+   "title": "La Madeleine, Paris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:12.775Z",
+   "snapshot": "02551120c1fe2398010a7abdfb33aaeee9da8ca2b391f34e86147d9637f088c2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Grande_Arche",
+   "title": "Grande Arche – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:13.593Z",
+   "snapshot": "465e4de14e1c1cb39d29535d7d03ff9d53ae2a8359e6aa485034c0f9753f6195"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arc de Triomphe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vendôme Column",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arc de Triomphe du Carrousel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La Madeleine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grande Arche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:26.585Z",
+   "target": "f05291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Arc de Triomphe de l'Étoile (UK: , US: , French: [aʁk də tʁijɔ̃f də letwal] ; \"Triumphal Arch of the Star\"), often simply called the Arc de Triomphe, is one of the most famous monuments in Paris, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arc de Triomphe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:26.585Z",
+   "target": "f05292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The original Vendôme Column at the centre of the square was erected by Napoleon I to commemorate the Battle of Austerlitz; it was torn down on 16 May 1871, by decree of the Paris Commune, but subsequently re-erected and remains a prominent feature on the square today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vendôme Column” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:26.585Z",
+   "target": "f05293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Arc de Triomphe du Carrousel (French: [aʁk də tʁijɔ̃f dy kaʁuzɛl]; \"Triumphal Arch of the Carousel\") is a triumphal arch in Paris, located in the Place du Carrousel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arc de Triomphe du Carrousel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:26.585Z",
+   "target": "f05294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Church of Saint Mary Magdalene (French: église Sainte-Marie-Madeleine [eɡliz sɛ̃t maʁi madlɛn]), less formally called La Madeleine ([la madlɛn]), is a Catholic parish church on Place de la Madeleine in the eighth arrondissement of Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Madeleine” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:26.585Z",
+   "target": "f05295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "La Grande Arche de la Défense (French: [la ɡʁɑ̃d aʁʃ d(ə) la defɑ̃s]; \"The Great Arch of the Defense\"), originally called La Grande Arche de la Fraternité (French: [fʁatɛʁnite]; \"Fraternity\"), is a monument and building in the business district of La Défense and in the commune of Puteaux, to the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:26.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grande Arche” is on the snapshot of s5"
+  }
+ ]
+}

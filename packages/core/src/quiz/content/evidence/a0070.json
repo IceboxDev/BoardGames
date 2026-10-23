@@ -1,0 +1,249 @@
+{
+ "article": "a0070",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Uluru",
+   "title": "Uluru – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:23.679Z",
+   "snapshot": "0ec73f5db5791e3089fd8d9f53d332dd1c2154b7935b0bac675ffe18528bdd1d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Kailash",
+   "title": "Mount Kailash – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:24.497Z",
+   "snapshot": "e92952a3bcc0d523a10382f92c879c91fac54a8e0668ac8e3d1c726b24449bc4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Everest",
+   "title": "Mount Everest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:28.627Z",
+   "snapshot": "9c1355381e8397ef9ce19a2a17cac9dbc9b85fa5bf06a20cd6f74248265bbfe7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Fuji",
+   "title": "Mount Fuji – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:25.587Z",
+   "snapshot": "c9137a4829b6ffb026c0fb72574216001ae822f84d1469efaafbd8d3a3cee386"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Popocat%C3%A9petl",
+   "title": "Popocatépetl",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:22.915Z",
+   "snapshot": "389bc44ef56ea2996bc091c0c5495e45d9360af09dcdd6644c792ca7c0726a70"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Popocat%C3%A9petl",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:26.599Z",
+   "snapshot": "855e0edac25edc78ce7ee468bb5734298d119129850565fc1e1cf7e876ec08dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uluru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kailash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mount Everest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mount Fuji",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mexiko-Stadt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-008"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:45.748Z",
+   "target": "f00346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uluru (; Pitjantjatjara: Uluṟu [ˈʊlʊɻʊ]), also known as Ayers Rock ( AIRS) and officially gazetted as Uluru / Ayers Rock, is a large sandstone monolith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uluru” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:45.748Z",
+   "target": "f00347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mount Kailash is a mountain in Ngari Prefecture, Tibet Autonomous Region of China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kailash” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:45.748Z",
+   "target": "f00348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mount Everest (known in Nepali as Sagarmāthā, in Sherpa as Chamolangma, and in Tibetan  as Jomolangma/Čhomolangma) is the highest mountain on Earth above sea level.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Everest” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:45.748Z",
+   "target": "f00349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mount Fuji (富士山・富士の山, Fujisan, Fuji no Yama) is an active stratovolcano located on the Japanese island of Honshu, with a summit elevation of 3,776.24 m (12,389 ft 3 in).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Fuji” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:45.748Z",
+   "target": "f12080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Popocatépetl befindet sich zwischen Mexiko-Stadt und Puebla und ist über den Paso de Cortés mit dem Schwestervulkan Iztaccíhuatl (5286 m) verbunden, welcher nördlich des Popocatépetl liegt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.748Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mexiko-Stadt” is on the snapshot of s5"
+  }
+ ]
+}

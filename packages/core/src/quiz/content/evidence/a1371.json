@@ -1,0 +1,671 @@
+{
+ "article": "a1371",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Documenta_1",
+   "title": "Documenta 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:35:28.803Z",
+   "snapshot": "506ca4bcaad006454c2c3363a98dc734b30b2d12c7d69b4fd20248c483330b6c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Venice_Biennale",
+   "title": "Venice Biennale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:31.339Z",
+   "snapshot": "55d62d5415d11b88f7840591f05a754716ffdec9606471d900517a9876b8b85d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Skulptur_Projekte",
+   "title": "Skulptur Projekte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:29.866Z",
+   "snapshot": "1296a4112da90bd45a31155156f0ab8b96768ce552046d65fd80f4ae548e0faa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Art_Basel",
+   "title": "Art Basel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:32.209Z",
+   "snapshot": "66562b9a26fc2c183a740f06f55ee246c9587db9c9a9e8df2f767d50c9687a28"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Manifesta",
+   "title": "Manifesta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:33.274Z",
+   "snapshot": "eb067a0474ac3eb456fa4d2dba224a8335872e9f64dd6867762e775b74ec3ea4"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Documenta",
+   "title": "documenta",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:31.535Z",
+   "snapshot": "1c0bcafea82771af3ed2cf4ca6e67dde0920d6b05bfb590304703c04c608494d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Documenta",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:34.229Z",
+   "snapshot": "7f8237fe51025547d14170c3208686ed621bd31d368dd655fa9b3196d076710e"
+  },
+  "s8": {
+   "url": "https://www.documenta.de/en/about",
+   "title": "documenta – About",
+   "publisher": "documenta und Museum Fridericianum gGmbH",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:42.383Z",
+   "snapshot": "690969f85adbeabef4cd4631a14f63454ea2156f5f5e44e7989c831057b17c6d"
+  },
+  "s9": {
+   "url": "https://www.artbasel.com/about",
+   "title": "About | Art Basel",
+   "publisher": "Art Basel (official)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:42.800Z",
+   "snapshot": "ef11b85103af01d4363801783ef9f2043fa03fccaba3f8a69aba4f5239da4a1d"
+  },
+  "s10": {
+   "url": "https://www.artbasel.com/basel",
+   "title": "Art Basel | Basel",
+   "publisher": "Art Basel (official)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:43.703Z",
+   "snapshot": "60f0e21160b5f75e44202ff4026f00401d5d280f8d06ad4dd3575af029719c8b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "documenta",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Venice Biennale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Skulptur Projekte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Art Basel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Manifesta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "alle 5 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-382"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:15.383Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ausstellungskatalog, documenta, kunst des XX.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “documenta” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:15.383Z",
+   "target": "f06852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Venice Biennale ( BEE-en-AH-lay, -⁠lee; Italian: la Biennale di Venezia [la bi.enˈnaːle di veˈnɛttsja]) is an international cultural exhibition hosted every two years in Venice, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venice Biennale” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:15.383Z",
+   "target": "f06853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Skulptur Projekte sind eine internationale Kunstausstellung von Skulpturen und Plastiken im öffentlichen Raum, die seit 1977 im Abstand von zehn Jahren im westfälischen Münster stattfindet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skulptur Projekte” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:15.383Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Art Basel is a for-profit, privately owned and managed, international series of art fairs whose annual flagship event has long been considered the largest and most prestigious fair of the contemporary and modern art market.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Art Basel” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:15.383Z",
+   "target": "f06855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Manifesta, also known as the European Nomadic Biennial, is a European pan-regional contemporary cultural biennale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manifesta” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:15.383Z",
+   "target": "f10747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "alle 5 Jahre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“alle 5 Jahre”, “every 5 years”, “каждые 5 лет”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:27Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "documenta 13 (2012) - Carolyn Christov-Bakargiev documenta 14 (2017) - Adam Szymczyk documenta 15 (2022) - ruangrupa documenta 16 (2027) - Naomi Beckwith",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23",
+   "note": "The official edition list shows the five-year rhythm (2012, 2017, 2022, 2027); as of 2026."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:32Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie findet alle fünf Jahre statt (ursprünglich alle vier Jahre) und dauert jeweils 100 Tage; sie wird daher auch als Museum der 100 Tage bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:48:35Z",
+   "target": "f10747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "documenta 13 (2012) - Carolyn Christov-Bakargiev documenta 14 (2017) - Adam Szymczyk documenta 15 (2022) - ruangrupa documenta 16 (2027) - Naomi Beckwith",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23",
+   "note": "The official edition list shows the five-year rhythm (2012, 2017, 2022, 2027); as of 2026."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:48:38Z",
+   "target": "f10747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie findet alle fünf Jahre statt (ursprünglich alle vier Jahre) und dauert jeweils 100 Tage; sie wird daher auch als Museum der 100 Tage bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:48:42Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Founded by gallerists in 1970, Art Basel is the leading global platform connecting collectors, galleries, and artists.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:48:45Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "whose annual flagship event has long been considered the largest and most prestigious fair of the contemporary and modern art market",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:48:48Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Art Basel June 17 - 20, 2027 Basel",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23",
+   "note": "The Basel show is held in June."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "documenta 13 (2012) - Carolyn Christov-Bakargiev documenta 14 (2017) - Adam Szymczyk documenta 15 (2022) - ruangrupa documenta 16 (2027) - Naomi Beckwith",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie findet alle fünf Jahre statt (ursprünglich alle vier Jahre) und dauert jeweils 100 Tage; sie wird daher auch als Museum der 100 Tage bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f10747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "documenta 13 (2012) - Carolyn Christov-Bakargiev documenta 14 (2017) - Adam Szymczyk documenta 15 (2022) - ruangrupa documenta 16 (2027) - Naomi Beckwith",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f10747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie findet alle fünf Jahre statt (ursprünglich alle vier Jahre) und dauert jeweils 100 Tage; sie wird daher auch als Museum der 100 Tage bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Founded by gallerists in 1970, Art Basel is the leading global platform connecting collectors, galleries, and artists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "whose annual flagship event has long been considered the largest and most prestigious fair of the contemporary and modern art market",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Art Basel June 17 - 20, 2027 Basel",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die documenta ist die weltweit bedeutendste Reihe von Ausstellungen für zeitgenössische Kunst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “documenta” is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "documenta und Museum Fridericianum gGmbH is a non-profit organization supported by the City of Kassel and the State of Hesse as shareholders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “documenta” is on the snapshot of s8"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Founded by gallerists in 1970, Art Basel is the leading global platform connecting collectors, galleries, and artists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Art Basel” is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:00.491Z",
+   "target": "f06854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Art Basel | Art Basel",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:00.491Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Art Basel” is on the snapshot of s10"
+  }
+ ]
+}

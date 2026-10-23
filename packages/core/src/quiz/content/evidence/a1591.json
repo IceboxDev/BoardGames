@@ -1,0 +1,286 @@
+{
+ "article": "a1591",
+ "sources": {
+  "s1": {
+   "url": "https://hdr.undp.org/system/files/documents/2018summaryhumandevelopmentstatisticalupdateen.pdf",
+   "title": "Human Development Indices and Indicators: 2018 Statistical Update (Summary) – UNDP",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Human_Development_Report",
+   "title": "Human Development Report – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:28.023Z",
+   "snapshot": "cc66c17db1c3a6a99012852274bef9b750687420e3c88c229f447cd86ee73208"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Human_Development_Index",
+   "title": "Human Development Index – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:29.027Z",
+   "snapshot": "f6adfed7493f8e345d2a2ec633d3272a613d8e6ffd3c581c3c40e7f42b4bff83"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Republic_of_Ireland",
+   "title": "Republic of Ireland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:30.573Z",
+   "snapshot": "e98a984b2743584a34efefae033ce07296d3a174ee91773322c4b72b9986bebd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Norway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ireland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Niger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:47.952Z",
+   "target": "f07952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Switzerland”, “die Schweiz”, “Швейцария”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.952Z",
+   "target": "f07953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Australia”, “Australien”, “Австралия”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.952Z",
+   "target": "f07954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ireland (Irish: Éire [ˈeːɾʲə] ), also known as the Republic of Ireland (Poblacht na hÉireann), is a country in Northwestern Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.952Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ireland” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:19:28Z",
+   "target": "f07951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The top five countries in the global HDI ranking are Norway (0.953), Switzerland (0.944), Australia (0.939), Ireland (0.938) and Germany (0.936)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 2018 Statistical Update reports HDI values for 2017; Ireland, 4th, is the highest-ranked EU member (Germany 5th)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:19:30Z",
+   "target": "f07952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The top five countries in the global HDI ranking are Norway (0.953), Switzerland (0.944), Australia (0.939), Ireland (0.938) and Germany (0.936)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 2018 Statistical Update reports HDI values for 2017; Ireland, 4th, is the highest-ranked EU member (Germany 5th)."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:19:31Z",
+   "target": "f07953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The top five countries in the global HDI ranking are Norway (0.953), Switzerland (0.944), Australia (0.939), Ireland (0.938) and Germany (0.936)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 2018 Statistical Update reports HDI values for 2017; Ireland, 4th, is the highest-ranked EU member (Germany 5th)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:19:33Z",
+   "target": "f07954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The top five countries in the global HDI ranking are Norway (0.953), Switzerland (0.944), Australia (0.939), Ireland (0.938) and Germany (0.936)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 2018 Statistical Update reports HDI values for 2017; Ireland, 4th, is the highest-ranked EU member (Germany 5th)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:19:34Z",
+   "target": "f07955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The bottom five are Burundi (0.417), Chad (0.404), South Sudan (0.388), the Central African Republic (0.367) and Niger (0.354).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Niger is ranked 189th of 189 in statistical table 1 of the same report."
+  }
+ ]
+}

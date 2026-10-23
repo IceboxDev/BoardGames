@@ -1,0 +1,202 @@
+{
+ "article": "a1412",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Theses_on_Feuerbach",
+   "title": "Theses on Feuerbach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:46.283Z",
+   "snapshot": "b465d9fb41c609ecefd1aceb4f72b722e68f254abcdb17aef6c2c7bdabf3d84b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Metaphysics_of_Morals",
+   "title": "Metaphysics of Morals – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:47.337Z",
+   "snapshot": "0cc0d4c677c9da786756b6302c882ac31a20609963b68dc7cdb61b744f112716"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Schopenhauer",
+   "title": "Arthur Schopenhauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:21.623Z",
+   "snapshot": "e2a23966aa94879d745e378ef81553a217ef7ff29ed4b6d3b3e9dc328f62a79a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Elements_of_the_Philosophy_of_Right",
+   "title": "Elements of the Philosophy of Right – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:57.833Z",
+   "snapshot": "05d558bc098ed93ce2d5101c92ac725f2730bb0df28b794d80b44c65b585cbc5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Immanuel_Kant",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:26.283Z",
+   "snapshot": "ff46395601755a2d7f25710d13a2c17b158356985754fb4e5e515f15089ddcb1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Marx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Immanuel Kant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Schopenhauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georg Wilhelm Friedrich Hegel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:21.563Z",
+   "target": "f07056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Theses on Feuerbach are eleven short philosophical notes written by Karl Marx as a basic outline for the first chapter of the book The German Ideology in 1845.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:21.563Z",
+   "target": "f07058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Metaphysics of Morals (German: Die Metaphysik der Sitten) is a 1797 work of political and moral philosophy by Immanuel Kant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:21.563Z",
+   "target": "f07059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Schopenhauer (22 February 1788 – 21 September 1860), also known as the “Philosopher of Pessimism”, was a German philosopher and writer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Schopenhauer” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:21.563Z",
+   "target": "f07060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elements of the Philosophy of Right (or Outlines of the Philosophy of Right; German: Grundlinien der Philosophie des Rechts) is a work by Georg Wilhelm Friedrich Hegel published in 1820, though the book's original title page dates it to 1821.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:21.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Wilhelm Friedrich Hegel” is on the snapshot of s4"
+  }
+ ]
+}

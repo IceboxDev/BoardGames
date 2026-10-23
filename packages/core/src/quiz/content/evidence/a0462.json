@@ -1,0 +1,234 @@
+{
+ "article": "a0462",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wir_haben_abgetrieben!",
+   "title": "Wir haben abgetrieben! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:55.036Z",
+   "snapshot": "95eb62004eb07d44928a9f465820c96aefc695c467e7cdbee7bf3bce47e6a640"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Alice_Schwarzer",
+   "title": "Alice Schwarzer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:56.255Z",
+   "snapshot": "2a6b9feff15d6b8a97ee3a363d5263362be5d744f2068a6c379416340f3c631a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Manifesto_of_the_343",
+   "title": "Manifesto of the 343 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:57.783Z",
+   "snapshot": "d72bc076e3335a7d9f90ad03e98b34c8c9e326f01550937b5412f591d131bbff"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Emma_(Zeitschrift)",
+   "title": "Emma (Zeitschrift) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:57.118Z",
+   "snapshot": "03b84472171141a7ed63769786b256946801f1fa4047a00a85d077567929c2a1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wir haben abgetrieben!",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alice Schwarzer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Le Nouvel Observateur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mein Bauch gehört mir",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Emma",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:52.274Z",
+   "target": "f02306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wir haben abgetrieben! war die Titelschlagzeile der Zeitschrift Stern am 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wir haben abgetrieben!” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:52.274Z",
+   "target": "f02307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alice Schwarzer wurde 1942 unehelich in Wuppertal-Elberfeld geboren und wuchs bei ihren Großeltern auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alice Schwarzer” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:52.274Z",
+   "target": "f02308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The manifesto was published under the title, \"Un appel de 343 femmes\" ('An appeal by 343 women'), on 5 April 1971, in issue 334 of Le Nouvel Observateur, a social democratic French weekly magazine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Le Nouvel Observateur” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:52.274Z",
+   "target": "f02309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Slogan der dieses Recht einfordernden Frauen lautete: „Mein Bauch gehört mir“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mein Bauch gehört mir” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:52.274Z",
+   "target": "f02310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Emma ist eine deutschsprachige feministische Zeitschrift.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emma” is on the snapshot of s4"
+  }
+ ]
+}

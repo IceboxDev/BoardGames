@@ -1,0 +1,249 @@
+{
+ "article": "a2217",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ghostbusters_%E2%80%93_Die_Geisterj%C3%A4ger",
+   "title": "Ghostbusters – Die Geisterjäger",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:16.636Z",
+   "snapshot": "26df6ed090ee36ac23f33a5c7754244c7f5ba8fb47c8e54322dccae85acd9b5c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Clash_of_the_Titans_(1981_film)",
+   "title": "Clash of the Titans (1981 film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:19.781Z",
+   "snapshot": "da93d3e05a13d11f546a1159d51193c7ab2b010b512f907cc8210e5e39613253"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Departed",
+   "title": "The Departed – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:20.768Z",
+   "snapshot": "ae96e4e9dbcdec52795490f7cebda031c9becfa22cd4367eebf806f67e6322b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ocean%27s_Eleven",
+   "title": "Ocean's Eleven – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:21.793Z",
+   "snapshot": "2c1b149bcd82b4314d8eedd651302f49f6cdf02dd11527bf3fcee933daeddb4e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Scarface_(1983_film)",
+   "title": "Scarface (1983 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:22.855Z",
+   "snapshot": "38d837bbd98c61d8bb6c56ed5ec6ba4b057e04cfd8233b012f7c7da2b70a24e1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/John_Sturges",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:23.747Z",
+   "snapshot": "6c07b45fc4b4f255f19e3eeaeac3240abcc9ece403eeba7e25ff1f61224a7f63"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ghostbusters – Die Geisterjäger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Clash of the Titans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-381"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Departed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ocean's Eleven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Scarface",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:38.277Z",
+   "target": "f11305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ghostbusters – Die Geisterjäger ist eine US-amerikanische Science-Fiction-Fantasy-Komödie des Regisseurs Ivan Reitman aus dem Jahr 1984.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ghostbusters – Die Geisterjäger” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:38.277Z",
+   "target": "f11306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Clash of the Titans is a 1981 epic fantasy adventure film directed by Desmond Davis and written by Beverley Cross, loosely based on the Greek myth of Perseus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clash of the Titans” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:38.277Z",
+   "target": "f11307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Departed is a 2006 neo-noir crime thriller film, directed by Martin Scorsese and written by William Monahan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Departed” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:38.277Z",
+   "target": "f11309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ocean's Eleven is a 2001 American heist comedy film directed by Steven Soderbergh from a screenplay by Ted Griffin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ocean's Eleven” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:38.277Z",
+   "target": "f11310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Scarface is a 1983 American epic crime drama film directed by Brian De Palma from a screenplay by Oliver Stone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.277Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scarface” is on the snapshot of s5"
+  }
+ ]
+}

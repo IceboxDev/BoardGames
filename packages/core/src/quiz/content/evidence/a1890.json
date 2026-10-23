@@ -1,0 +1,242 @@
+{
+ "article": "a1890",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Becket",
+   "title": "Thomas Becket – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:25.494Z",
+   "snapshot": "54e812cd0fb6319cded5f6ec78fa3ad761268a9886121bef3a9e0a40c421b04b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Engelbert_I._von_K%C3%B6ln",
+   "title": "Engelbert I. von Köln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:28:22.919Z",
+   "snapshot": "cfa8a90a80086103841450878f6ad6cb3dd3769980970bef825f9b9e645d5462"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Philip_of_Swabia",
+   "title": "Philip of Swabia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:26.828Z",
+   "snapshot": "2429e0662292516a5ff2c3c16a5de87f33bd0fa61c5d1df69e4a77a2bb21a97c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_More",
+   "title": "Thomas More – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:27.777Z",
+   "snapshot": "1d0387195c2a3dd822ebcf6a37c5b65148fd0c7015b86417387de87aa7511bfa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Henry_IV_of_France",
+   "title": "Henry IV of France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:28.603Z",
+   "snapshot": "768ed84dfe1b5ee1a4d4ad455151a58756448ac26bd2a23fb98c593a73a86779"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Archbishop of Canterbury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erzbischof von Köln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "King of Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lord Chancellor of England",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "King of France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:39.803Z",
+   "target": "f09446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "( ), also known as Saint Thomas of Canterbury, Thomas of London and later Thomas à Becket (21 December 1119 or 1120 – 29 December 1170), was an English cleric and statesman who served as Lord Chancellor from 1155 to 1162, and then as Archbishop of Canterbury from 1162 until his death in 1170.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Archbishop of Canterbury” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:39.803Z",
+   "target": "f09447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Februar 1216 die Wahl zum Erzbischof von Köln, wofür man zuvor wohl die Zustimmung des Papstes wie auch die des Königs Friedrich II.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erzbischof von Köln” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:39.803Z",
+   "target": "f09448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Philip of Swabia (German: Philipp von Schwaben; February/March 1177 – 21 June 1208), styled Philip II in his charters, was a member of the House of Hohenstaufen and King of Germany from 1198 until his assassination.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “King of Germany” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:39.803Z",
+   "target": "f09449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "From 1490 to 1492, More served John Morton, the Archbishop of Canterbury and Lord Chancellor of England, as a household page.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lord Chancellor of England” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:39.803Z",
+   "target": "f09450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Henry IV (French: Henri IV; 13 December 1553 – 14 May 1610), also known by the epithets Good King Henry (le Bon Roi Henri) or Henry the Great (Henri le Grand), was King of Navarre (as Henry III) from 1572 and King of France from 1589 to 1610.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “King of France” is on the snapshot of s5"
+  }
+ ]
+}

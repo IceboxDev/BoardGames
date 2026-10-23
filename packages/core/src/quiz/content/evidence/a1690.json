@@ -1,0 +1,467 @@
+{
+ "article": "a1690",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Eclipse_of_Thales",
+   "title": "Eclipse of Thales – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:02.313Z",
+   "snapshot": "30c593161ffbbde2ff41f85fd49e65b39464418067d096a64c8f73cd80c0e3e6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Meteorology_(Aristotle)",
+   "title": "Meteorology (Aristotle) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:03.395Z",
+   "snapshot": "c0ac842b934fbf4c5162edaea98dd1e97fd901305cac8a049bd5713e6ea178b0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Astrolabium",
+   "title": "Astrolabium",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:16:00.715Z",
+   "snapshot": "4a7caa8cc8a4fed114f5cf3c748daccec988f0bb50ce80c4034ffa64772bcb25"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Saros_(astronomy)",
+   "title": "Saros (astronomy) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:04.316Z",
+   "snapshot": "63d063d47aa0da02bcef9020f365d0265bfe2434b326420705b5abbde2bedf17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ensisheim_meteorite",
+   "title": "Ensisheim meteorite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:05.303Z",
+   "snapshot": "86d096bfec3f9c9d85eb685725e2d940658ef87575bf48a1ec08186a31d7a8e7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:10.519Z",
+   "snapshot": "2caff9b4ebc855894732793f4c2b5cd8cfd34c41a6e2782aa86c20e48e4239bf"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/meteor",
+   "title": "meteor – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:32.777Z",
+   "snapshot": "f4b2730eb0e3d4c2c4fc2bf4781d443010b0a91a11babe29bb5260803dca88de"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Meteor",
+   "title": "Meteor – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:32.879Z",
+   "snapshot": "b9e815038c1bad301e763ad2dec26d2cd1763c050c6e8b337bf5a804b0079c0a"
+  },
+  "s9": {
+   "url": "https://science.nasa.gov/solar-system/meteors-meteorites/",
+   "title": "Meteors and Meteorites",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:18.160Z",
+   "snapshot": "f595fa9d9fac27bb0591909e11e0a73c57572098301b4a92930a0aeea99e12c1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eclipse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Meteor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Astrolabium",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-319"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "saros",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "meteorite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:06.523Z",
+   "target": "f08446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The eclipse of Thales was a solar eclipse, which was, according to the ancient Greek historian Herodotus (writing about 150 years later), accurately predicted by the Greek philosopher Thales of Miletus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eclipse” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:06.523Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Meteor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Meteor”, “метеор”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:06.523Z",
+   "target": "f10860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ein Astrolabium (auch Astrolab, griechisch für „Stern-Nehmer“) oder Planisphärum ist ein in der Antike  entstandenes und bis in die frühe Neuzeit gebrauchtes scheibenförmiges astronomisches Gerät zum Beobachten und Ausmessen des Sternenhimmels.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Astrolabium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:06.523Z",
+   "target": "f20722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In astronomy, the saros ( ) is a length of time covering exactly 223 synodic months (18 years 11 days and 8 hours), nearly 242 draconic months, and nearly 239 anomalistic months.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “saros” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:06.523Z",
+   "target": "f20723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Ensisheim meteorite is a stony meteorite that fell on November 7, 1492 in a wheat field outside the walled town of Ensisheim in then Alsace, Further Germany (now France).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “meteorite” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:04Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from Greek metéōron “meteor, a thing in the air,” noun use of neuter of metéōros “raised in the air,”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:21:06Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a transient fiery streak in the sky produced by a meteoroid passing through the earth's atmosphere; a shooting star or bolide.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:21:09Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "leuchtende Erscheinung am Himmelsgewölbe",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:21:11Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Meteors and meteorites are often called “shooting stars” — bright lights streaking across the sky.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:52.727Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a transient fiery streak in the sky produced by a meteoroid passing through the earth's atmosphere; a shooting star or bolide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:52.727Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "leuchtende Erscheinung am Himmelsgewölbe",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:52.727Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Meteors and meteorites are often called “shooting stars” — bright lights streaking across the sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:52.727Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "METEOR Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Meteor” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:52.727Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Meteor – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Meteor” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:52.727Z",
+   "target": "f08448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Meteoroid, a meteor, or meteorite?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:52.727Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Meteor” is on the snapshot of s9"
+  }
+ ]
+}

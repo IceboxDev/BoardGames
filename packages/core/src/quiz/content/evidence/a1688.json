@@ -1,0 +1,242 @@
+{
+ "article": "a1688",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zoroaster",
+   "title": "Zoroaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:17.730Z",
+   "snapshot": "fb90dcb0b538548768e78f348ac981d414a7455af8d812eb15c0b52c7e9c7c7d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mani_(prophet)",
+   "title": "Mani (prophet) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:54.396Z",
+   "snapshot": "b8a192126a15608e8ac599072941f566cab07f5375c2f9699227cfa96a39beca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Buddha",
+   "title": "The Buddha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:55.633Z",
+   "snapshot": "e95621278402f5086a4ffdb1b5a37eb712938439cebcdf6946692dc39c65d2f1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Muhammad%27s_first_revelation",
+   "title": "Muhammad's first revelation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:26.445Z",
+   "snapshot": "c5bc382a6b2d2abb123cef75b117c8b308ce128a09979f2b81bacd1e01990dd0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Guru_Nanak",
+   "title": "Guru Nanak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:16.857Z",
+   "snapshot": "4ddc31bb4235b0b7fe9d3cab5cc0daf6baaeb8959a79329e4d2e725f1234d8c8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zarathustra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buddha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Muhammad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Guru Nanak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:06.106Z",
+   "target": "f08436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zarathushtra Spitama, more commonly known as Zoroaster or Zarathustra, was an Iranian religious reformer who challenged the tenets of the contemporary Ancient Iranian religion, becoming the spiritual founder of Zoroastrianism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zarathustra” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:06.106Z",
+   "target": "f08437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mani was born in or near Ctesiphon (south of modern Baghdad) in Mesopotamia, at the time part of the Parthian Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mani” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:06.106Z",
+   "target": "f08438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Siddhartha Gautama, most commonly referred to as the Buddha (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buddha” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:06.106Z",
+   "target": "f08439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In Islam, the exact date of Muhammad's first revelation is disputed, but it is generally believed by Muslims to have occurred in 610.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muhammad” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:06.106Z",
+   "target": "f08440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gurū Nānak (15 April 1469 – 22 September 1539; Gurmukhi: ਗੁਰੂ ਨਾਨਕ), also known as Bābā Nānak (Father Nanak), was an Indian spiritual teacher, mystic and poet, who is regarded as the founder of Sikhism and is the first of the ten Sikh gurus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guru Nanak” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "article": "a1526",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Morphine",
+   "title": "Morphine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:07.474Z",
+   "snapshot": "f45e35043830d4d5a18e514c79e39fbcc3d21f20494c8ebd9e704831030cc90a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Helium",
+   "title": "Helium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:12.245Z",
+   "snapshot": "32a6e81d98a0a6e7a8128fcd35ea5604658f3924dccaf6da4ccf44b90270d983"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Promethium",
+   "title": "Promethium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:32.941Z",
+   "snapshot": "dc6e335d85333e7ce55adcece6d02dac3c8bc010aca0b8c7ff800db808fb94e7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Sert%C3%BCrner",
+   "title": "Friedrich Sertürner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:08.390Z",
+   "snapshot": "4bb937c490d3f57ceee1319ba99d62da179ba71b237da360e93628909b428575"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Titanium",
+   "title": "Titanium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:49.179Z",
+   "snapshot": "f4737286e75212a0ea2001ea9547ece91fcb17658f120f76d4bb32dad32036b4"
+  },
+  "s6": {
+   "url": "https://www.livescience.com/279-200th-birthday-morphine.html",
+   "title": "The 200th Birthday of Morphine – Live Science",
+   "publisher": "Live Science",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:23.821Z",
+   "snapshot": "0ec666b7d932a20d42bde708be4fdc336b3dda000e8e3fb137074e3e4a9aaf5d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "morphine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "helium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "promethium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich Sertürner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "titanium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:39.202Z",
+   "target": "f07626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Morphine, formerly known as morphium, is an opiate found naturally in opium, a dark brown resin produced by drying the latex of opium poppies (Papaver somniferum).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “morphine” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:39.202Z",
+   "target": "f07627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helium (from Ancient Greek: ἥλιος, romanized: helios, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “helium” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:39.202Z",
+   "target": "f07628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Promethium is a generally synthetic chemical element; it has symbol Pm and atomic number 61.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “promethium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:39.202Z",
+   "target": "f20386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich Sertürner",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Sertürner” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:39.202Z",
+   "target": "f20387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Titanium is a chemical element; it has symbol Ti and atomic number 22.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.202Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “titanium” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:03:47Z",
+   "target": "f20386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He called the isolated alkaloid \"morphium\" after the Greek god of dreams, Morpheus.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:03:48Z",
+   "target": "f20386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He called it morphine, after Morpheus, the Greek god of dreams, for its tendency to cause sleep.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "Live Science dates the isolation to 1805; most sources give 1804"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:25.413Z",
+   "target": "f20386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He called the isolated alkaloid \"morphium\" after the Greek god of dreams, Morpheus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.413Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:25.413Z",
+   "target": "f20386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He called it morphine, after Morpheus, the Greek god of dreams, for its tendency to cause sleep.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.413Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

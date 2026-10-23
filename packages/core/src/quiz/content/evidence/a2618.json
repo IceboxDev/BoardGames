@@ -1,0 +1,339 @@
+{
+ "article": "a2618",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Highland_games",
+   "title": "Highland games",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:37.130Z",
+   "snapshot": "bb4c9c6fd60b2f3787c2cdda041431b73c09464912145120ffda3e2d9d04af60"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Caber_toss",
+   "title": "Caber toss",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:38.071Z",
+   "snapshot": "7afdf498ba046667968f674d8485b5d2118d259cc0380bcab4a5cf43c81a8b72"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Braemar_Gathering",
+   "title": "Braemar Gathering – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:39.026Z",
+   "snapshot": "792625bb52528615e34c4f31770f88d1ce98e9de9bc0e48a3ef00d3dbc692b6f"
+  },
+  "s4": {
+   "url": "https://braemargathering.org/",
+   "title": "The Braemar Gathering",
+   "publisher": "Braemar Royal Highland Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:53.956Z",
+   "snapshot": "b219d654cee555e6881d4301f3ce94002bcdfa6dbee7d77e198c84c48a70c7c5"
+  },
+  "s5": {
+   "url": "https://www.abdn.ac.uk/elphinstone/kist/search-the-doric/display/477/",
+   "title": "The Origins of the Braemar Games Hill Race",
+   "publisher": "Elphinstone Institute, University of Aberdeen",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:53.691Z",
+   "snapshot": "e00a45b0b9aed10232d5d352b55de4214abb8199a76d4b8b630477828dd043b4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14139",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Highland games",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-196"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "caber toss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-186"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Braemar Gathering",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sheaf toss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Malcolm III",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:47.870Z",
+   "target": "f14139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Highland games (Scottish Gaelic: geamannan Gàidhealach) is a competitive strength sport with events held in spring and summer in Scotland and several other countries with a large Scottish diaspora as a way of celebrating Scottish and Celtic culture, especially that of the Scottish Highlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Highland games” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:47.870Z",
+   "target": "f14140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The caber toss (Scottish Gaelic: tilgeil a' chabair) is a traditional Scottish athletic event in which competitors toss a large tapered pole called a \"caber\" (), normally practiced at the Scottish Highland Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “caber toss” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:47.870Z",
+   "target": "f14141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1866, Royal was added to Braemar Highland Society and in 1906, the Duke of Fife presented 12 acres (5 hectares) of Mar Estate to the society, and the Princess Royal and Duke of Fife Memorial Park, the current home of the Braemar Gathering, was created.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Braemar Gathering” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:47.870Z",
+   "target": "f14142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Certain aspects of the games are so well known as to have become emblematic of Scotland, such as the bagpipes, the kilt, and the heavy events, especially the stone put, Scottish hammer throw, weight throw, weight over bar, caber toss, keg toss and sheaf toss.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sheaf toss” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:47.870Z",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first historical reference to the type of events held at Highland games in Scotland was made during the time of King Malcolm III (Scottish Gaelic: Máel Coluim, c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:47.870Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malcolm III” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:19:15Z",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "one that can be traced back to the time of King Malcolm Canmore, over 900 years ago",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:19:32Z",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Back in the days fan Malcolm Canmore wis king o Scotland he thocht it wid be a gweed idea tae hae a kind o 'royal postal service'.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23",
+   "note": "Text in Doric (Scots); Malcolm Canmore = Malcolm III. A tradition, not documented history — the wording says \"is said to\"."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:19:33Z",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "There wid be a race up tae the summit o Craig Choinnich an the first een at the tap wid be the winner.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:32.941Z",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "one that can be traced back to the time of King Malcolm Canmore, over 900 years ago",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:32.941Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:32.941Z",
+   "target": "f14143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "There wid be a race up tae the summit o Craig Choinnich an the first een at the tap wid be the winner.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:32.941Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  }
+ ]
+}

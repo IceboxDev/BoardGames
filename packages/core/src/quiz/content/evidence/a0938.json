@@ -1,0 +1,242 @@
+{
+ "article": "a0938",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ottoman_(furniture)",
+   "title": "Ottoman (furniture) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:27.468Z",
+   "snapshot": "0e899839228808011090d8a99c58c744a4d254b5e6109730ad6c8d003642aa2f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Juliette_R%C3%A9camier",
+   "title": "Juliette Récamier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:28.337Z",
+   "snapshot": "e09338c0d2cea8f6850c677ee9148d96625fb3da849fe6b490c5f0a61daec816"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Philip_Stanhope,_4th_Earl_of_Chesterfield",
+   "title": "Philip Stanhope, 4th Earl of Chesterfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:30.173Z",
+   "snapshot": "efc5f17f6dbb5c2062c2de9828dd1a10cf25fa50790dcfef0dc03c97695cccc0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Chippendale",
+   "title": "Thomas Chippendale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:30.388Z",
+   "snapshot": "2cbd85ac4db864d33fdaadbe644d332989f9679a8cdad141f0cd54acd5f9a940"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Biedermeier",
+   "title": "Biedermeier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:27.772Z",
+   "snapshot": "91d3447cbc4af50a3264a6bdbc5cd87982c8063b7ff9d05519c15a181bb01921"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ottoman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "récamier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chesterfield",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chippendale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Biedermeier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:07.829Z",
+   "target": "f04686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An ottoman is a piece of furniture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ottoman” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:07.829Z",
+   "target": "f04687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jeanne Françoise Julie Adélaïde Récamier (French: [ʒan fʁɑ̃swaz ʒyli adela.id ʁekamje]; 3 December 1777 – 11 May 1849), known as Juliette (French: [ʒyljɛt]), was a French socialite whose salon drew people from the leading literary and political circles of early 19th-century Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “récamier” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:07.829Z",
+   "target": "f04688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Philip Stanhope, 4th Earl of Chesterfield",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chesterfield” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:07.829Z",
+   "target": "f04689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thomas Chippendale (June 1718 – 1779) was an English woodworker in London, designing furniture in the mid-Georgian, English Rococo, and Neoclassical styles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chippendale” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:07.829Z",
+   "target": "f04690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Biedermeier wird die Zeitspanne vom Ende des Wiener Kongresses 1815 bis zum Beginn der bürgerlichen Revolution 1848 in den Ländern des Deutschen Bundes bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.829Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biedermeier” is on the snapshot of s5"
+  }
+ ]
+}

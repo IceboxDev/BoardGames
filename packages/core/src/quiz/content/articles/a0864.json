@@ -1,0 +1,337 @@
+{
+ "id": "a0864",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "What's in a Name: Programming Languages and Their Namesakes",
+ "titleDe": "Was ein Name verrät: Programmiersprachen und ihre Namensgeber",
+ "titleRu": "Что в имени: языки программирования и их тёзки",
+ "bodyEn": "Niklaus Wirth, a computer scientist at ETH Zurich, was dissatisfied with the languages available for teaching at the end of the 1960s. ALGOL 68 had become too complicated, and FORTRAN and BASIC encouraged sloppy habits. Between 1968 and 1970 he therefore designed a small, strictly structured language whose main purpose was to teach good programming: structured control flow, strong typing, records and pointers, and a syntax that a compiler could process in a single pass. He named it Pascal after Blaise Pascal, the 17th-century French mathematician and philosopher who in 1642 had built one of the first mechanical calculators, the Pascaline, to help his father with tax accounts.\n\nPascal outgrew the classroom. On 20 November 1983 Borland released Turbo Pascal, a compiler that fitted on a single floppy disk, cost less than 50 dollars and turned Pascal into the most popular language on the personal computers of the 1980s; its descendant Delphi, released in 1995, is still in use. Wirth went on to create Modula-2 and Oberon and received the Turing Award in 1984.\n\nSeveral other languages honour people from the history of mathematics and logic.\n\nAda was commissioned by the US Department of Defense in the 1970s to replace the hundreds of languages used in its embedded systems. A team led by Jean Ichbiah won the design competition, and the language was standardised in 1980 as MIL-STD-1815 – the number chosen because 1815 was the birth year of its namesake, Augusta Ada King, Countess of Lovelace, Lord Byron's daughter, whose notes of 1843 on Charles Babbage's Analytical Engine contain what is often called the first computer program.\n\nHaskell, defined in 1990 by a committee of researchers who wanted a common, purely functional language, is named after Haskell Curry, the American logician whose work on combinatory logic underlies the technique of \"currying\" – turning a function of several arguments into a chain of single-argument functions.\n\nErlang was developed at Ericsson's laboratory in Sweden from 1986 by Joe Armstrong, Robert Virding and Mike Williams for telephone switches that must never stop. Its name honours Agner Krarup Erlang, the Danish mathematician who founded queueing theory in 1909 to calculate how many lines a telephone exchange needs; the unit of telephone traffic is also called the erlang, and insiders liked to read the name as \"Ericsson Language\" as well. Open-sourced in 1998, the language later powered WhatsApp.\n\nJava, finally, is named not after a person but after coffee. James Gosling's team at Sun Microsystems originally called it Oak, after a tree outside his office; when that name proved to be taken, the developers settled on Java, the coffee from the Indonesian island, and released it on 23 May 1995 with the promise \"write once, run anywhere\".\n\n| Language | Year | Named after |\n|---|---|---|\n| Pascal | 1970 | Blaise Pascal, mathematician |\n| Ada | 1980 | Ada Lovelace, mathematician |\n| Erlang | 1986 | Agner Krarup Erlang, mathematician |\n| Haskell | 1990 | Haskell Curry, logician |\n| Java | 1995 | Java coffee |\n\nThe habit says something about the culture of computing: a field barely eighty years old that likes to remind itself how much older its ideas are.",
+ "bodyDe": "Niklaus Wirth, Informatiker an der ETH Zürich, war Ende der 1960er-Jahre mit den für die Lehre verfügbaren Sprachen unzufrieden. ALGOL 68 war zu kompliziert geworden, und FORTRAN und BASIC förderten schlampige Gewohnheiten. Zwischen 1968 und 1970 entwarf er daher eine kleine, streng strukturierte Sprache, deren Hauptzweck es war, gutes Programmieren zu lehren: strukturierter Kontrollfluss, strenge Typisierung, Records und Zeiger sowie eine Syntax, die ein Compiler in einem einzigen Durchgang verarbeiten konnte. Er nannte sie Pascal nach Blaise Pascal, dem französischen Mathematiker und Philosophen des 17. Jahrhunderts, der 1642 mit der Pascaline eine der ersten mechanischen Rechenmaschinen gebaut hatte, um seinem Vater bei der Steuerabrechnung zu helfen.\n\nPascal wuchs über das Klassenzimmer hinaus. Am 20. November 1983 veröffentlichte Borland Turbo Pascal, einen Compiler, der auf eine einzige Diskette passte, weniger als 50 Dollar kostete und Pascal zur beliebtesten Sprache auf den Personalcomputern der 1980er-Jahre machte; sein Nachfahre Delphi, 1995 erschienen, ist bis heute in Gebrauch. Wirth schuf anschließend Modula-2 und Oberon und erhielt 1984 den Turing Award.\n\nMehrere andere Sprachen ehren Personen aus der Geschichte der Mathematik und Logik.\n\nAda wurde in den 1970er-Jahren vom US-Verteidigungsministerium in Auftrag gegeben, um die Hunderte von Sprachen in seinen eingebetteten Systemen zu ersetzen. Ein Team unter Jean Ichbiah gewann den Entwurfswettbewerb, und die Sprache wurde 1980 als MIL-STD-1815 standardisiert – die Nummer gewählt, weil 1815 das Geburtsjahr ihrer Namensgeberin war: Augusta Ada King, Countess of Lovelace, Lord Byrons Tochter, deren Anmerkungen von 1843 zu Charles Babbages Analytical Engine enthalten, was oft als erstes Computerprogramm bezeichnet wird.\n\nHaskell, 1990 von einem Komitee von Forschern definiert, die eine gemeinsame, rein funktionale Sprache wollten, ist nach Haskell Curry benannt, dem amerikanischen Logiker, dessen Arbeit zur kombinatorischen Logik der Technik des „Currying“ zugrunde liegt – der Umwandlung einer Funktion mit mehreren Argumenten in eine Kette einstelliger Funktionen.\n\nErlang wurde ab 1986 im Labor von Ericsson in Schweden von Joe Armstrong, Robert Virding und Mike Williams für Telefonvermittlungen entwickelt, die niemals stehen bleiben dürfen. Der Name ehrt Agner Krarup Erlang, den dänischen Mathematiker, der 1909 die Warteschlangentheorie begründete, um zu berechnen, wie viele Leitungen eine Telefonzentrale braucht; auch die Einheit des Telefonverkehrs heißt Erlang, und Eingeweihte lasen den Namen gern zugleich als „Ericsson Language“. 1998 als Open Source freigegeben, trieb die Sprache später WhatsApp an.\n\nJava schließlich ist nicht nach einer Person benannt, sondern nach Kaffee. James Goslings Team bei Sun Microsystems nannte die Sprache ursprünglich Oak, nach einem Baum vor seinem Büro; als sich dieser Name als vergeben erwies, einigten sich die Entwickler auf Java, den Kaffee von der indonesischen Insel, und veröffentlichten sie am 23. Mai 1995 mit dem Versprechen „write once, run anywhere“.\n\n| Sprache | Jahr | Benannt nach |\n|---|---|---|\n| Pascal | 1970 | Blaise Pascal, Mathematiker |\n| Ada | 1980 | Ada Lovelace, Mathematikerin |\n| Erlang | 1986 | Agner Krarup Erlang, Mathematiker |\n| Haskell | 1990 | Haskell Curry, Logiker |\n| Java | 1995 | Java-Kaffee |\n\nDie Gewohnheit sagt etwas über die Kultur der Informatik: ein Fach, das kaum achtzig Jahre alt ist und sich gern daran erinnert, wie viel älter seine Ideen sind.",
+ "bodyRu": "Никлаус Вирт, специалист по информатике из Швейцарской высшей технической школы Цюриха (ETH), в конце 1960-х годов был недоволен языками, которые можно было использовать в обучении. ALGOL 68 стал слишком сложным, а FORTRAN и BASIC поощряли небрежные привычки. Поэтому в 1968–1970 годах он разработал небольшой, строго структурированный язык, главной целью которого было учить хорошему программированию: структурное управление, строгая типизация, записи и указатели, а также синтаксис, который компилятор мог обработать за один проход. Он назвал язык «Паскаль» в честь Блеза Паскаля – французского математика и философа XVII века, который в 1642 году построил одну из первых механических вычислительных машин, паскалину, чтобы помочь отцу со сбором налогов.\n\nПаскаль перерос школьный класс. 20 ноября 1983 года компания Borland выпустила Turbo Pascal – компилятор, который помещался на одну дискету, стоил меньше 50 долларов и сделал Паскаль самым популярным языком персональных компьютеров 1980-х; его потомок Delphi, вышедший в 1995 году, используется до сих пор. Затем Вирт создал Modula-2 и Oberon, а в 1984 году получил премию Тьюринга.\n\nЕщё несколько языков чтят людей из истории математики и логики.\n\nЯзык Ада был заказан Министерством обороны США в 1970-х годах, чтобы заменить сотни языков, использовавшихся в его встроенных системах. Конкурс проектов выиграла команда под руководством Жана Ишбиа, и в 1980 году язык был стандартизирован как MIL-STD-1815 – номер выбрали потому, что 1815 год был годом рождения его тёзки, Огасты Ады Кинг, графини Лавлейс, дочери лорда Байрона, чьи заметки 1843 года об аналитической машине Чарльза Бэббиджа содержат то, что часто называют первой компьютерной программой.\n\nHaskell, определённый в 1990 году комитетом исследователей, которым был нужен общий чисто функциональный язык, назван в честь Хаскелла Карри – американского логика, чьи работы по комбинаторной логике лежат в основе приёма «каррирования», то есть превращения функции нескольких аргументов в цепочку функций одного аргумента.\n\nErlang разрабатывали с 1986 года в лаборатории Ericsson в Швеции Джо Армстронг, Роберт Вирдинг и Майк Уильямс для телефонных коммутаторов, которые никогда не должны останавливаться. Название чтит Агнера Крарупа Эрланга – датского математика, который в 1909 году основал теорию массового обслуживания, чтобы рассчитать, сколько линий нужно телефонной станции; единица телефонной нагрузки тоже называется эрланг, а посвящённые охотно читали название ещё и как «Ericsson Language». Став в 1998 году открытым, язык позднее стал основой WhatsApp.\n\nНаконец, Java назван не в честь человека, а в честь кофе. Команда Джеймса Гослинга в Sun Microsystems сначала назвала язык Oak («дуб») – по дереву у его офиса; когда оказалось, что это имя занято, разработчики остановились на Java – кофе с индонезийского острова Ява – и выпустили язык 23 мая 1995 года с обещанием «написано однажды – работает везде».\n\n| Язык | Год | Назван в честь |\n|---|---|---|\n| Паскаль | 1970 | Блез Паскаль, математик |\n| Ада | 1980 | Ада Лавлейс, математик |\n| Erlang | 1986 | Агнер Краруп Эрланг, математик |\n| Haskell | 1990 | Хаскелл Карри, логик |\n| Java | 1995 | кофе с Явы |\n\nЭта привычка кое-что говорит о культуре информатики: область, которой едва восемьдесят лет, любит напоминать себе, насколько старше её идеи.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Pascaline-CnAM_823-1-IMG_1506-black.jpg/3840px-Pascaline-CnAM_823-1-IMG_1506-black.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Pascaline",
+   "width": 4500,
+   "height": 3000,
+   "alt": {
+    "en": "A Pascaline calculating machine",
+    "de": "Eine Pascaline-Rechenmaschine",
+    "ru": "Вычислительная машина паскалина"
+   },
+   "caption": {
+    "en": "A Pascaline, the mechanical calculator Blaise Pascal built from 1642 to help his father with tax accounts – the reason a teaching language of 1970 bears his name.",
+    "de": "Eine Pascaline, die mechanische Rechenmaschine, die Blaise Pascal ab 1642 baute, um seinem Vater bei der Steuerabrechnung zu helfen – der Grund, warum eine Lehrsprache von 1970 seinen Namen trägt.",
+    "ru": "Паскалина – механический арифмометр, который Блез Паскаль построил в 1642 году, чтобы помочь отцу с налоговыми расчётами; поэтому учебный язык 1970 года носит его имя."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843_-_cropped.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+   "width": 957,
+   "height": 1239,
+   "alt": {
+    "en": "Daguerreotype portrait of Ada Lovelace",
+    "de": "Daguerreotypie-Porträt von Ada Lovelace",
+    "ru": "Дагеротипный портрет Ады Лавлейс"
+   },
+   "caption": {
+    "en": "Ada Lovelace, photographed by Antoine Claudet in 1843, the year of her notes on the Analytical Engine; the US Department of Defense named its language Ada after her.",
+    "de": "Ada Lovelace, 1843 von Antoine Claudet fotografiert, im Jahr ihrer Anmerkungen zur Analytical Engine; das US-Verteidigungsministerium benannte seine Sprache Ada nach ihr.",
+    "ru": "Ада Лавлейс на снимке Антуана Клоде 1843 года – года её заметок об аналитической машине; в её честь Министерство обороны США назвало свой язык Ада."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f04316",
+   "answerEn": "Pascal",
+   "answerDe": "Pascal",
+   "answerRu": "Паскаль",
+   "spans": {
+    "en": [
+     487,
+     6
+    ],
+    "de": [
+     531,
+     6
+    ],
+    "ru": [
+     551,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1983-11-20",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Borland releases Turbo Pascal, which makes Pascal a PC favourite",
+    "labelDe": "Borland veröffentlicht Turbo Pascal und macht Pascal zum PC-Liebling",
+    "labelRu": "Borland выпускает Turbo Pascal, и Паскаль становится любимцем владельцев ПК"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Turbo_Pascal",
+    "title": "Turbo Pascal – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04316",
+     "en": "Which programming language, named after a mathematician, was developed by Niklaus Wirth at the end of the 1960s as a teaching language?",
+     "de": "Welche nach einem Mathematiker benannte Programmiersprache wurde von Niklaus Wirth Ende der 1960er-Jahre als Lehrsprache entwickelt?",
+     "ru": "Какой язык программирования, названный в честь математика, Никлаус Вирт разработал в конце 1960-х годов как учебный?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c072",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q81571",
+     "label": "Pascal",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04317",
+   "answerEn": "Ada",
+   "answerDe": "Ada",
+   "answerRu": "Ада",
+   "spans": {
+    "en": [
+     1154,
+     3
+    ],
+    "de": [
+     1273,
+     3
+    ],
+    "ru": [
+     1212,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1980",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ada is standardised as MIL-STD-1815",
+    "labelDe": "Ada wird als MIL-STD-1815 standardisiert",
+    "labelRu": "Язык Ада стандартизирован как MIL-STD-1815"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ada_(programming_language)",
+    "title": "Ada (programming language) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04317",
+     "en": "Which programming language, named after the mathematician and daughter of Lord Byron, was developed in the 1970s on behalf of the US Department of Defense?",
+     "de": "Welche nach der Mathematikerin und Tochter Lord Byrons benannte Programmiersprache wurde in den 1970er-Jahren im Auftrag des US-Verteidigungsministeriums entwickelt?",
+     "ru": "Какой язык программирования, названный в честь математика и дочери лорда Байрона, был разработан в 1970-х годах по заказу Министерства обороны США?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q154755",
+     "label": "Ada",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04318",
+   "answerEn": "Haskell",
+   "answerDe": "Haskell",
+   "answerRu": "Haskell",
+   "spans": {
+    "en": [
+     1649,
+     7
+    ],
+    "de": [
+     1813,
+     7
+    ],
+    "ru": [
+     1714,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1990",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A research committee defines Haskell 1.0",
+    "labelDe": "Ein Forscherkomitee definiert Haskell 1.0",
+    "labelRu": "Комитет исследователей определяет Haskell 1.0"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Haskell",
+    "title": "Haskell – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04318",
+     "en": "Which functional programming language, named after an American logician, was defined by a committee of researchers in 1990?",
+     "de": "Welche nach einem amerikanischen Logiker benannte funktionale Programmiersprache wurde 1990 von einem Komitee von Wissenschaftlern definiert?",
+     "ru": "Какой функциональный язык программирования, названный в честь американского логика, был определён комитетом учёных в 1990 году?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q34010",
+     "label": "Haskell",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04319",
+   "answerEn": "Erlang",
+   "answerDe": "Erlang",
+   "answerRu": "Erlang",
+   "spans": {
+    "en": [
+     1961,
+     6
+    ],
+    "de": [
+     2164,
+     6
+    ],
+    "ru": [
+     2039,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1986",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ericsson begins developing Erlang",
+    "labelDe": "Bei Ericsson beginnt die Entwicklung von Erlang",
+    "labelRu": "В Ericsson начинается разработка Erlang"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Erlang_(programming_language)",
+    "title": "Erlang (programming language) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04319",
+     "en": "Which programming language developed at Ericsson is named after a Danish mathematician who founded queueing theory?",
+     "de": "Welche bei Ericsson entwickelte Programmiersprache ist nach einem dänischen Mathematiker benannt, der die Warteschlangentheorie begründete?",
+     "ru": "Какой язык программирования, созданный в Ericsson, назван в честь датского математика, основавшего теорию массового обслуживания?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q334879",
+     "label": "Erlang",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f04320",
+   "answerEn": "Java",
+   "answerDe": "Java",
+   "answerRu": "Java",
+   "spans": {
+    "en": [
+     2463,
+     4
+    ],
+    "de": [
+     2715,
+     4
+    ],
+    "ru": [
+     2591,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1995-05-23",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Sun Microsystems releases Java",
+    "labelDe": "Sun Microsystems veröffentlicht Java",
+    "labelRu": "Sun Microsystems выпускает Java"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+    "title": "Java (programming language) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w04320",
+     "en": "Which programming language released by Sun Microsystems in 1995 is named after a variety of coffee?",
+     "de": "Welche 1995 von Sun Microsystems veröffentlichte Programmiersprache ist nach einer Kaffeesorte benannt?",
+     "ru": "Какой язык программирования, выпущенный Sun Microsystems в 1995 году, назван в честь сорта кофе?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q251",
+     "label": "Java",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/programming",
+  "topic:language/eponyms",
+  "audience:international"
+ ]
+}

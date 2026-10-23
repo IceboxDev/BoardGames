@@ -1,0 +1,242 @@
+{
+ "article": "a2683",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Predator_Free_2050",
+   "title": "Predator Free 2050",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:37.242Z",
+   "snapshot": "406626699024c024ce9755ca706d0569b89b0336c409b92b9fcf31dd55466142"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stoats_in_New_Zealand",
+   "title": "Stoats in New Zealand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:38.149Z",
+   "snapshot": "dafb524ced8bbf6770972afac383568fb58af6c3d0957d134e8c6113ed771d80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cane_toads_in_Australia",
+   "title": "Cane toads in Australia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:39.284Z",
+   "snapshot": "9064adea73c092361eebbb061231dd113ebd38fa397d25ab627c62eeeeb6fb14"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Brown_tree_snake",
+   "title": "Brown tree snake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:40.277Z",
+   "snapshot": "641a85634a9bef9998d80e5d7a3c5f8a4c4f3c2584d574e73b1078245b75c67d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands",
+   "title": "South Georgia and the South Sandwich Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:41.269Z",
+   "snapshot": "5cad059da39576da1e66a259f9a67292ad955a8728c514d6ddfc1fd7f4240ace"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Zealand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-201"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "stoat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cane toad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "brown tree snake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "South Georgia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:57.463Z",
+   "target": "f14597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Predator Free 2050 is a plan put forth by the New Zealand government with the goal of eradicating possums, rats, stoats, and feral cats, all introduced predators, by 2050.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Zealand” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:57.463Z",
+   "target": "f14598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The stoat (Mustela erminea) was introduced into New Zealand to control introduced rabbits and hares, but turned out to be a major threat to the native bird population.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “stoat” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:57.463Z",
+   "target": "f14599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The cane toad (Rhinella marina, formerly Bufo marinus) in Australia is regarded as an exemplary case of an invasive species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cane toad” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:57.463Z",
+   "target": "f14600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The brown tree snake (Boiga irregularis), also known as the brown catsnake, is an arboreal rear-fanged colubrid snake native to eastern and northern coastal Australia, eastern Indonesia (Sulawesi to Papua), Papua New Guinea, and many islands in northwestern Melanesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “brown tree snake” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:57.463Z",
+   "target": "f14601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "South Georgia and the South Sandwich Islands",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Georgia” is on the snapshot of s5"
+  }
+ ]
+}

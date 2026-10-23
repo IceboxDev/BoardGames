@@ -1,0 +1,461 @@
+{
+ "article": "a1329",
+ "sources": {
+  "s1": {
+   "url": "https://www.nasa.gov/image-article/candle-flame-1g-vs-microgravity/",
+   "title": "Candle Flame – 1g vs Microgravity – NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:03.757Z",
+   "snapshot": "39562322fd029b37efade441bdb16f3e06763e35a2b59db952c1adb0f4faebdd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bucket_argument",
+   "title": "Bucket argument – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:07.253Z",
+   "snapshot": "17ad3f684390d3614144e539f1b72045c5fc201f596e58e00360c784b272a9b4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Astronomia_nova",
+   "title": "Astronomia nova – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:31.302Z",
+   "snapshot": "54368b11131f5c82dc5c63e1126098dc64d021becbecda6b6cc0ccddcff0e1a3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Catenary",
+   "title": "Catenary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:08.407Z",
+   "snapshot": "987e43bd1f5b860619d3f355a5c32a5aadde5ea3fac2d4c7359ab88efaf27d64"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Two_New_Sciences",
+   "title": "Two New Sciences – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:32.015Z",
+   "snapshot": "e9d32a3b488bbd1dbdb44f0b9dd7f083a732c23bbbc13953c4f02e6e18ac2f33"
+  },
+  "s6": {
+   "url": "https://ntrs.nasa.gov/citations/20010074076",
+   "title": "Candle Flames in Microgravity (NTRS 20010074076)",
+   "publisher": "NASA Technical Reports Server",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:27.006Z",
+   "snapshot": "1584893002c223e156c5dd9c3481a80504f20d4aef1d6d73bfc004f752c15556"
+  },
+  "s7": {
+   "url": "https://physicsworld.com/a/telescopes-on-the-cheap/",
+   "title": "Telescopes on the cheap?",
+   "publisher": "Physics World (IOP)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:26.342Z",
+   "snapshot": "f291b65cee7fde0a8cd93d1c8edd420897658cec630b397fb7381b907a9b4835"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Liquid-mirror_telescope",
+   "title": "Liquid-mirror telescope – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:26.307Z",
+   "snapshot": "c13cf86c734a0fba8bfe3668513dccde7b2e4961036a36ed9b0b76bfab1a23c8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "paraboloid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ellipse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "catenary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "parabola",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:08.078Z",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sphere”, “Kugel”, “шар”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:08.078Z",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "paraboloid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“paraboloid”, “Paraboloid”, “параболоид”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:08.078Z",
+   "target": "f06643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kepler approximates the oval as an ellipse, noting that the area should not differ significantly from the oval.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ellipse” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:08.078Z",
+   "target": "f06644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In physics and geometry, a catenary (UK:  kə-TEE-nər-ee, US:  KAT-ən-err-ee) is the curve that an idealized hanging chain or cable assumes under its own weight when supported only at its ends in a uniform gravitational field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “catenary” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:08.078Z",
+   "target": "f06645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "[310] A cord or chain stretched out is never level but also approximates to a parabola.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “parabola” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:36Z",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In microgravity, where convective flows are absent, the flame is spherical, soot-free and blue.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23",
+   "note": "NASA caption says spherical; the experiment reports (NTRS 20010074076) describe the flame as hemispherical — accept both"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:38Z",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Two space experiments (Shuttle and Mir) have shown the candle flame in microgravity to be small (approximately 1.5 cm diameter), dim blue, and hemispherical.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23",
+   "note": "primary research says hemispherical (the wick/candle blocks the lower part); a rounded ball either way, so \"sphere\" is accepted with \"hemisphere\" as alternative"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:39Z",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "As the liquid spins, gravitational forces cause the liquid to deform into the shape of a perfect parabolic mirror",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:17:41Z",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The liquid and its container are rotated at a constant speed around a vertical axis, which causes the surface of the liquid to assume a paraboloidal shape.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:51.691Z",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In microgravity, where convective flows are absent, the flame is spherical, soot-free and blue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:51.691Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:51.691Z",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Two space experiments (Shuttle and Mir) have shown the candle flame in microgravity to be small (approximately 1.5 cm diameter), dim blue, and hemispherical.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:51.691Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:51.691Z",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "As the liquid spins, gravitational forces cause the liquid to deform into the shape of a perfect parabolic mirror",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:51.691Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:51.691Z",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The liquid and its container are rotated at a constant speed around a vertical axis, which causes the surface of the liquid to assume a paraboloidal shape.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:51.691Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:51.691Z",
+   "target": "f06641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In a previous model of candle flame in microgravity, a porous sphere wetted with liquid fuel simulated the evaporating wick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:51.691Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sphere” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:51.691Z",
+   "target": "f06642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Isaac Newton noted that the free surface of a rotating liquid forms a circular paraboloid and can therefore be used as a telescope, but he could not build one because he had no way to stabilize the speed of rotation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:51.691Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “paraboloid” is on the snapshot of s8"
+  }
+ ]
+}

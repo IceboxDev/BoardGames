@@ -1,0 +1,437 @@
+{
+ "article": "a0267",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hundertwasserhaus",
+   "title": "Hundertwasserhaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:02.783Z",
+   "snapshot": "591ee2b41e37e0af1ec2a7afc2cdfd57436b3a5993ce7ef81611087548d62faa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Antoni_Gaud%C3%AD",
+   "title": "Antoni Gaudí – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:05.802Z",
+   "snapshot": "04d9c4298805d048153b960b01f02467df0f76a307293b9f6e40cf9b0eef2e2f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Friedensreich_Hundertwasser",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:06.890Z",
+   "snapshot": "19c41c1490a5d5ddd04d15de5d436c3e9e7b40721c7c203e5164db5c0158fa23"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Otto_Wagner",
+   "title": "Otto Wagner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:07.903Z",
+   "snapshot": "779012f325269198ac7e15e98e4433a95b0d6c494538ed0f5195715ab4073c03"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Vienna_Secession",
+   "title": "Vienna Secession – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:08.901Z",
+   "snapshot": "979440256503cd7d46d7fc653cf085efd363f0cddd1e01b59fe50af214f5a60a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ornament_and_Crime",
+   "title": "Ornament and Crime – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:09.785Z",
+   "snapshot": "a6979434de78950f832f361083bef2e4170e61d3a1a447f5063a4b35a7534299"
+  },
+  "s7": {
+   "url": "https://sagradafamilia.org/en/history-of-the-temple",
+   "title": "History of the Temple – Sagrada Família",
+   "publisher": "Basílica de la Sagrada Família",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:12.073Z",
+   "snapshot": "b6aa46cebbdb0c9c3be9e0813814335cae59e16da4d54ac3e847772da89f2f0d"
+  },
+  "s8": {
+   "url": "https://whc.unesco.org/en/list/320/",
+   "title": "Works of Antoni Gaudí",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:02:16Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedensreich Hundertwasser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Antoni Gaudí",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Antoni Gaudí",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Otto Wagner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gustav Klimt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Adolf Loos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:21.891Z",
+   "target": "f01331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Hundertwasserhaus (\"Hundertwasser house\") is an apartment house in Vienna, Austria, completed in 1985, after the idea and concept of Austrian artist Friedensreich Hundertwasser.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedensreich Hundertwasser” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:21.891Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Antoni Gaudí i Cornet ( gow-DEE,  GOW-dee; Catalan: [ənˈtɔni‿ɣəwˈði]; 25 June 1852 – 10 June 1926) was a Catalan architect and designer, widely known as the greatest exponent of Catalan Modernisme.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antoni Gaudí” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:21.891Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He remains sui generis, although his architectural work is comparable to Antoni Gaudí (1852–1926) in its use of biomorphic forms and the use of tile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antoni Gaudí” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:21.891Z",
+   "target": "f01333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Another student of Wagner's was Rudolph Schindler, who said \"Modern Architecture began with Mackintosh in Scotland, Otto Wagner in Vienna, and Louis Sullivan in Chicago.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Wagner” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:21.891Z",
+   "target": "f01334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Union of Austrian Artists or Vereinigung Bildender Künstler Österreichs) is an art movement, closely related to Art Nouveau, that was formed in 1897 by a group of Austrian painters, graphic artists, sculptors and architects, including Josef Hoffman, Koloman Moser, Otto Wagner and Gustav Klimt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustav Klimt” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:21.891Z",
+   "target": "f01335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"Ornament and Crime\" is an essay and lecture by modernist architect Adolf Loos that criticizes ornament in useful objects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:21.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolf Loos” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:02:13Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the result of the work of genius architect Antoni Gaudí. Today, more than 135 years after the laying of the cornerstone, construction continues on the Basilica.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:02:15Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Antoni Gaudí takes over the project, while still working on other buildings.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:02:16Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Gaudí’s work on the Nativity façade and Crypt of La Sagrada Familia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:02:43Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gaudí completely changed the initial design and imbued it with his own distinctive",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:41.808Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Antoni Gaudí takes over the project, while still working on other buildings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:41.808Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gaudí completely changed the initial design and imbued it with his own distinctive",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:41.808Z",
+   "target": "f01332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Fruit of the work of genius architect Antoni Gaudí, the project was promoted by the people for the people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:41.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Antoni Gaudí” is on the snapshot of s7"
+  }
+ ]
+}

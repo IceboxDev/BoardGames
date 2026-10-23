@@ -1,0 +1,442 @@
+{
+ "article": "a0008",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Animism",
+   "title": "Animism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:16.618Z",
+   "snapshot": "a218ba9685412a2ad751ed92a4478dfe5d440fa45d23e0eaf1c4709a9486d187"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Atenism",
+   "title": "Atenism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:17.670Z",
+   "snapshot": "4d28e668c27683adfb8148b9f21bc998d8b24c866284b1657cd011d116ba60e5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Theogony",
+   "title": "Theogony – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:18.535Z",
+   "snapshot": "4c3142af3ac451c1aadb60f3c49581e938616a92405983f730936036050f9570"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spinoza's_Ethics",
+   "title": "Spinoza's Ethics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:19.606Z",
+   "snapshot": "6e310ff566cbd4cd7acc8fe2e06825a17100adc5ce027fffa4f453f6b1a77d90"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Totem",
+   "title": "Totem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:20.731Z",
+   "snapshot": "02de94485d1fa53b081d51ab2312a6a9d2b1eb033959a0e1f71012841887ec91"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Polytheism",
+   "title": "Polytheism",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:15.777Z",
+   "snapshot": "b55250d0b20e6d9e5bd06d362c6fddf14152f1c0d2e5f85da5654508ed995ffe"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/polytheism",
+   "title": "Polytheism Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:16.180Z",
+   "snapshot": "f8d3ddd2a2ed1617cd26a2e211aadfcae1ecc5bae9c59237477eb82f0a7981ee"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/polytheism",
+   "title": "POLYTHEISM | English meaning",
+   "publisher": "Cambridge Dictionary (Cambridge University Press)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:16.097Z",
+   "snapshot": "013a3637ce53bc9c458986cccb524386b1693c3ffdc51c669beacde70a53ada2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "animism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "monotheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "polytheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pantheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "totemism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:36.656Z",
+   "target": "f00036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Animism (from Latin: anima, meaning 'breath', 'spirit', or 'life') is the worldview or perception that various types of natural phenomena, including non-human organisms and often even landforms and inanimate objects, possess distinct spiritual essences, souls, or personhood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “animism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:36.656Z",
+   "target": "f00037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For example, psychoanalyst Sigmund Freud assumed Akhenaten to be the pioneer of monotheistic religion and Moses as Akhenaten's follower in his book Moses and Monotheism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monotheism” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:36.656Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "polytheism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“polytheism”, “Polytheismus”, “политеизм”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:36.656Z",
+   "target": "f00039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This constitutes Spinoza's Pantheism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pantheism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:36.656Z",
+   "target": "f00040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Early anthropologists sometimes attributed Aboriginal and Torres Strait Islander totemism to ignorance about procreation, with the entrance of an ancestral spirit individual (the \"totem\") into the woman believed to be the cause of pregnancy (rather than insemination).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.656Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “totemism” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:08:54Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Polytheism is the belief in or worship of more than one deity",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:08:57Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The belief in more than one god. The ancient Greeks, for example, were polytheists; their gods included Apollo, Athena, Dionysus, and Zeus.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:00Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the belief in or worship of more than one god",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:51.114Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Polytheism is the belief in or worship of more than one deity",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:51.114Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The belief in more than one god. The ancient Greeks, for example, were polytheists; their gods included Apollo, Athena, Dionysus, and Zeus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:51.114Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the belief in or worship of more than one god",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:51.114Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Polytheism is the belief in or worship of more than one deity, a type of theism; it contrasts with monotheism, the belief in only one deity that is, in most cases, transcendent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polytheism” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:51.114Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "POLYTHEISM Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polytheism” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:51.114Z",
+   "target": "f00038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "POLYTHEISM | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:51.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “polytheism” is on the snapshot of s8"
+  }
+ ]
+}

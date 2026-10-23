@@ -1,0 +1,288 @@
+{
+ "article": "a0863",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gemeine_Fichte",
+   "title": "Gemeine Fichte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:17.740Z",
+   "snapshot": "65e078f26e74b6c44cc2f1fbc252b793a6eefd315c26651f8f42fc1222a492ff"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Waldkiefer",
+   "title": "Waldkiefer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:18.684Z",
+   "snapshot": "f90b312b00de2c12a7f5e89c67e4effec04a041ecd47855091e7943a630d0d27"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/O_Tannenbaum",
+   "title": "O Tannenbaum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:21.292Z",
+   "snapshot": "c922392eb48db6b5fb05807995044bf00150f2dc270b07bb6f6d41a93213397a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/English_longbow",
+   "title": "English longbow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:22.239Z",
+   "snapshot": "4863035a741a7c6b44ced566289fbba81c45537f7a974a15bd3d8b4d759799a0"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Wei%C3%9Ftanne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:20.926Z",
+   "snapshot": "f0bdb0c5c6a255d6df28e0f281720ca14e516423b2252a5f0d5ba9838cde9cb0"
+  },
+  "s6": {
+   "url": "https://www.bmel.de/DE/themen/wald/wald-in-deutschland/bundeswaldinventur.html",
+   "title": "Bundeswaldinventur",
+   "publisher": "Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:17.465Z",
+   "snapshot": "7c3590b83d15b2d87c9ef035dab64834852c673b47f25a8927f0e922e32fda51"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fichte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kiefer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yew",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:56.661Z",
+   "target": "f04311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Gemeine Fichte (Picea abies), auch Gewöhnliche Fichte, Rotfichte oder Rottanne, früher auch Schwarztanne oder Pechtanne genannt, ist eine Pflanzenart in der Gattung der Fichten (Picea).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fichte” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:56.661Z",
+   "target": "f04312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Waldkiefer (Pinus sylvestris), auch Gewöhnliche oder Gemeine Kiefer, Wald-Föhre, Rotföhre, Weißkiefer oder Forche genannt, ist eine Pflanzenart in der Gattung der Kiefern (Pinus) aus der Familie der Kieferngewächse (Pinaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kiefer” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:56.661Z",
+   "target": "f04314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"O Tannenbaum\" (German: [oː ˈtanənbaʊm]; \"O fir tree\"), known in English as \"O Christmas Tree\", is a German Christmas song.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fir” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:56.661Z",
+   "target": "f04315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard Bartelot, of the Royal Artillery Institution, said that the bow was of yew, 6 feet (1.8 m) long, with a 3-foot (910 mm) arrow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:56.661Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yew” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:14:49Z",
+   "target": "f04312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23",
+   "note": "Fourth Federal Forest Inventory (reference year 2022, published 2024); next inventory expected around 2032."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:14:53Z",
+   "target": "f04312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "So ist sie heute die häufigste Baumart in den deutschen Wäldern .",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:54:25.589Z",
+   "target": "f04312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:25.589Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:25.589Z",
+   "target": "f04312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:25.589Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kiefer” is on the snapshot of s6"
+  }
+ ]
+}

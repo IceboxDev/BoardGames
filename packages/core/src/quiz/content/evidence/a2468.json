@@ -1,0 +1,242 @@
+{
+ "article": "a2468",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Wildsch%C3%BCtz",
+   "title": "Der Wildschütz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:45.374Z",
+   "snapshot": "121723dc706b82b540b416cf5f109ab1ab5e8dd0b4379a395db1b41dcd61f3c3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Zar_und_Zimmermann",
+   "title": "Zar und Zimmermann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:49.040Z",
+   "snapshot": "3bd04b6a545f9c918cafbfea19fc5bd56f6be7692eae0331d41aec81623f9cef"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Undine_(Lortzing)",
+   "title": "Undine (Lortzing) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:50.045Z",
+   "snapshot": "af1a45f9aed2adb252ee621636cdb89a91bd998c72f305dab8197487f069df5e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Merry_Wives_of_Windsor_(opera)",
+   "title": "The Merry Wives of Windsor (opera) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:51.091Z",
+   "snapshot": "6d36bfd56b13e553bc677a5ffff090c89ccf45c3477f3c407edf933cad6e8474"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Martha_(opera)",
+   "title": "Martha (opera) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:52.012Z",
+   "snapshot": "ef51fb44394095630e1f0e3ea126f2e5d0c68641fa72240982e1f195bae99e13"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Wildschütz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-234"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zar und Zimmermann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Undine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Otto Nicolai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Martha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:24.795Z",
+   "target": "f13006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Wildschütz oder die Stimme der Natur ist eine komische Oper in drei Akten von Albert Lortzing.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Wildschütz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:24.795Z",
+   "target": "f13007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zar und Zimmermann (Tsar and Carpenter) is a comic opera in three acts, music by Albert Lortzing, libretto by the composer after Georg Christian Römer's Der Bürgermeister von Saardam, oder Die zwei Peter, itself based on the French play Le Bourgmestre de Saardam, ou Les deux Pierre by Mélésville,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zar und Zimmermann” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:24.795Z",
+   "target": "f13008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Undine is an opera in four acts by Albert Lortzing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Undine” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:24.795Z",
+   "target": "f13009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die lustigen Weiber von Windsor, or The Merry Wives of Windsor, is an 1849 opera in three acts by Otto Nicolai to a German libretto by Salomon Hermann Mosenthal based on Shakespeare's play.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Nicolai” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:24.795Z",
+   "target": "f13010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Martha, oder Der Markt zu Richmond (Martha, or The Market at Richmond) is a romantic comic opera in four acts by Friedrich von Flotow set to a German libretto by Friedrich Wilhelm Riese and based on a story by Jules-Henri Vernoy de Saint-Georges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martha” is on the snapshot of s5"
+  }
+ ]
+}

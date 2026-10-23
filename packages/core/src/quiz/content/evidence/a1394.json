@@ -1,0 +1,383 @@
+{
+ "article": "a1394",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Little_Prince",
+   "title": "The Little Prince – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:41.398Z",
+   "snapshot": "4c0b168cbf300b1c5e934e791e155598972868bc6a4a3b091f6e9d102681b7d1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pippi_Longstocking",
+   "title": "Pippi Longstocking – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:17.684Z",
+   "snapshot": "9b8876459cfacdae3f614528b8a705cf5b48ecae93ecd6249e9e31ba6aedbfbd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Winnie-the-Pooh_(book)",
+   "title": "Winnie-the-Pooh (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:42.369Z",
+   "snapshot": "071cf3ce9ee1602e99e59612dc399077288b0cfbdb6dd93a189eddda5a4f0946"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Pan_(play_and_novel)",
+   "title": "Peter Pan (play and novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:43.371Z",
+   "snapshot": "ac2e9fd0db141fe6c556195cf6e955f6ae90f3b2508b9295d5fa4757ef8b19b7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Very_Hungry_Caterpillar",
+   "title": "The Very Hungry Caterpillar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:44.239Z",
+   "snapshot": "6bab3f0169feee787e05beb04188ed986e1914d5ce48e8986e11afbe08cf2134"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Doktor_Dolittle_und_seine_Tiere",
+   "title": "Doktor Dolittle und seine Tiere",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:41.755Z",
+   "snapshot": "170746b3c32681f8bb4092ba0b93bba56c5019703a6870b991ddb3581f345b1c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Der_Zauberer_von_Oz",
+   "title": "Der Zauberer von Oz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:42.849Z",
+   "snapshot": "87f2f075903d27f897361a626aeff578817bf683b1fa49cc4dcef2f07def7203"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Wendy",
+   "title": "Wendy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:45.262Z",
+   "snapshot": "349d95e569ae1985d1d2655b21b4c7e1a4390f16c15f81561af79c543c22d846"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Little Prince",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pippi Longstocking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winnie-the-Pooh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peter Pan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Very Hungry Caterpillar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Doktor Dolittle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-014"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Zauberer von Oz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-128"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Margaret Henley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript tp-235"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f06966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Little Prince (French: Le Petit Prince, pronounced [lə p(ə)ti pʁãs]) is a novella written and illustrated by French writer and aviator Antoine de Saint-Exupéry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Little Prince” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f06967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pippi Longstocking (Swedish: Pippi Långstrump) is the fictional main character in a series of children's books by Swedish author Astrid Lindgren (1907–2002).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pippi Longstocking” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f06968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winnie-the-Pooh is a 1926 children's book by English author A.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winnie-the-Pooh” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f06969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peter Pan; or, The Boy Who Wouldn't Grow Up, often known simply as Peter Pan, is a work by British novelist J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Pan” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f06970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Very Hungry Caterpillar is a 1969 children's picture book by American author and illustrator Eric Carle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Very Hungry Caterpillar” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f12607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Doktor Dolittle und seine Tiere ist ein Kinderbuch des englischen Schriftstellers Hugh Lofting, das 1920 erstmals unter dem Titel The Story of Doctor Dolittle veröffentlicht wurde und den Auftakt einer ganzen Buchreihe bildete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doktor Dolittle” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f12608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Zauberer von Oz ist ein Kinderbuch des US-amerikanischen Schriftstellers Lyman Frank Baum.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Zauberer von Oz” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:18.506Z",
+   "target": "f12609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The name was inspired by young Margaret Henley, daughter of Barrie's poet friend W.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:18.506Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margaret Henley” is on the snapshot of s8"
+  }
+ ]
+}

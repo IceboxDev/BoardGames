@@ -1,0 +1,570 @@
+{
+ "article": "a0839",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sachertorte",
+   "title": "Sachertorte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:36.862Z",
+   "snapshot": "dc0b9e8f4076ca8a2bcf28adfdb644932376cbadf89e4b902f4d9018a87b9f59"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Rote_Johannisbeere",
+   "title": "Rote Johannisbeere – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:37.771Z",
+   "snapshot": "1c0efbd23c7b2b41942be537694ba292e750261ef7baac311bbd9fd99fe02bc8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%BCrbiskern%C3%B6l",
+   "title": "Kürbiskernöl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:38.766Z",
+   "snapshot": "5564ef6d6e25e071fdca4d50e2f8de4ed2bd2f17b71c65e5e265743e65d36a1a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Slivovitz",
+   "title": "Slivovitz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:14.093Z",
+   "snapshot": "afdf279d2d6706fa3df85832b145c2775344496b590ed50b7d1fff7311a89b18"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hugo_(Cocktail)",
+   "title": "Hugo (Cocktail) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:39.767Z",
+   "snapshot": "3b7c020deb8409c8be07057f0b10f613baa857cef620cd7c074628cbae444b2c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Aprikose",
+   "title": "Aprikose – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:05.544Z",
+   "snapshot": "e902016bb50212718b852080fbd0242f0ac3a0eac37561294f6052d22450af13"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Marille",
+   "title": "Marille – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:06.044Z",
+   "snapshot": "6a3c0bafa61cf60bec5204c5a37833b7f7ba7d5eb1d4b0e07ff41df3f2cb9246"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Wachauer_Marille",
+   "title": "Wachauer Marille – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:13:14Z"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Ribisel",
+   "title": "Ribisel – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:07.161Z",
+   "snapshot": "e002b81586759df41dc30006d56c6d7ecf04bf5dc217bdaa3c4cf6af6609c965"
+  },
+  "s10": {
+   "url": "https://de.wikipedia.org/wiki/Johannisbeeren",
+   "title": "Johannisbeeren – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:41.371Z",
+   "snapshot": "8c6826da4a45c5339fe853f9034bcea98dddf77e2cdf2771476d1f4e0b20165d"
+  },
+  "s11": {
+   "url": "https://www.steirisches-kuerbiskernoel.eu/kuerbiskern/",
+   "title": "Kürbiskern – Steirisches Kürbiskernöl g.g.A.",
+   "publisher": "Gemeinschaft Steirisches Kürbiskernöl g.g.A.",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:06.197Z",
+   "snapshot": "a8d28e7db2c8730d05e005c04982bc7fd89cec496c158283ea7824a7544aeb7f"
+  },
+  "s12": {
+   "url": "https://www.duden.de/rechtschreibung/Holler",
+   "title": "Holler – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:08.115Z",
+   "snapshot": "c3c2b1066fc4948d08bc7301b4984583a5d0afe8dddaecee62657671e9b9aa01"
+  },
+  "s13": {
+   "url": "https://de.wikipedia.org/wiki/Schwarzer_Holunder",
+   "title": "Schwarzer Holunder – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:13:34Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Marille",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Johannisbeere",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Kürbis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The plum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Holunder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:53.106Z",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Marille",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Die Marille”, “The apricot”, “Абрикос”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:53.106Z",
+   "target": "f04192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Johannisbeere",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Die Johannisbeere”, “The currant”, “Смородина”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:53.106Z",
+   "target": "f04193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Kürbis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Der Kürbis”, “The pumpkin”, “Тыква”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:53.106Z",
+   "target": "f04194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The plum has always been an essential produce in this region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The plum” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:53.106Z",
+   "target": "f04195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Holunder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Der Holunder”, “The elderberry”, “Бузина”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:08Z",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "im bairisch-österreichischen Sprachraum (Ober- und Niederbayern, Oberpfalz, Österreich und Südtirol) Marille",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:11Z",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bedeutung ⓘ Aprikose",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:14Z",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Zu den weiterverarbeiteten Produkten zählen Marmelade , Konfitüre , Chutney , Saft , Schnaps , Likör und Essig",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:17Z",
+   "target": "f04192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bedeutung ⓘ Johannisbeere",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:20Z",
+   "target": "f04192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "oder Ribiseln ( österreichisches Schriftdeutsch , auch in Bayern und Südtirol ; Ribes )",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:13:23Z",
+   "target": "f04193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "durch die Böden, auf denen der Steirische Ölkürbis wächst.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:13:27Z",
+   "target": "f04193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kürbiskernöl wird bevorzugt aus den Samen des Steirischen Ölkürbisses ( Cucurbita pepo var. styriaca ) gewonnen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:13:30Z",
+   "target": "f04195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Bedeutung ⓘ Holunder",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:13:34Z",
+   "target": "f04195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Holler ( bairisch-österreichisch )",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:21.105Z",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "im bairisch-österreichischen Sprachraum (Ober- und Niederbayern, Oberpfalz, Österreich und Südtirol) Marille",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:21.105Z",
+   "target": "f04193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "durch die Böden, auf denen der Steirische Ölkürbis wächst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:21.105Z",
+   "target": "f04191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "die Marille; Genitiv: der Marille, Plural: die Marillen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Die Marille” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:21.105Z",
+   "target": "f04192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Es existiert eine Vielzahl von weiteren, mitunter landschaftlichen Bezeichnungen für die Johannisbeere/Ribisel, darunter:",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Die Johannisbeere” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:21.105Z",
+   "target": "f04193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Jahr­hunderts kam der Kürbis nach Europa, zu dieser Zeit waren die Kürbis­kerne jedoch noch hart beschalt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Der Kürbis” is on the snapshot of s11"
+  }
+ ]
+}

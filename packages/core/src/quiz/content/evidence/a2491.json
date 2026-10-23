@@ -1,0 +1,242 @@
+{
+ "article": "a2491",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tommy_the_Clown",
+   "title": "Tommy the Clown",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:20.998Z",
+   "snapshot": "e2ae42c0ca190a9274891a341b0ba570fdae9369b39820237e6e95d278f5062c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hustle_(dance)",
+   "title": "Hustle (dance)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:21.618Z",
+   "snapshot": "4345155f0aab5861f12c901425c967a9ce35f9bb4ee2740cac88e2ee00343b40"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rize_(film)",
+   "title": "Rize (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:22.611Z",
+   "snapshot": "16e1573e49aef0eb6652d78174d69a14298d93f5e2c35d6b693eecf755291c1c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vogue_(dance)",
+   "title": "Vogue (dance)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:23.692Z",
+   "snapshot": "ab6160c4e2d5289439110d7b3b4bfc2ae458e9e356ddfa09b448b9aa1992b193"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Breakdancing_at_the_2024_Summer_Olympics",
+   "title": "Breakdancing at the 2024 Summer Olympics",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:24.595Z",
+   "snapshot": "9ba1c3dff8bdfce539ba80e8323dc3aae15f93716957515af8338a6b632311fa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Clowning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Disco dance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13; transcript tp-111"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rize",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Voguing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Place de la Concorde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:28.615Z",
+   "target": "f13203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thomas Johnson, also known as Tommy the Clown, is an American dancer best known as the inventor of the \"clowning\" style of dance, which evolved into krumping.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.615Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clowning” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.615Z",
+   "target": "f13204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "One of the first shows featured a young Billy Fajardo and the Disco Dance Dimensions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.615Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Disco dance” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.615Z",
+   "target": "f13205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rize is an American documentary film by David LaChapelle, starring Lil' C, Tommy the Clown and Miss Prissy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.615Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rize” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.615Z",
+   "target": "f13206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vogue, or voguing, is a highly stylized, modern house dance originating in the late 1980s that evolved out of the Harlem ballroom scene of the 1960s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.615Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Voguing” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.615Z",
+   "target": "f13207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Breakdancing competitions at the 2024 Summer Olympics ran from 9 to 10 August at Place de la Concorde, making it the first dancesport discipline to appear in a Summer Olympics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.615Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Place de la Concorde” is on the snapshot of s5"
+  }
+ ]
+}

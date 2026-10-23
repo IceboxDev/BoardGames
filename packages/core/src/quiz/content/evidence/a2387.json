@@ -1,0 +1,421 @@
+{
+ "article": "a2387",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/London_Underground",
+   "title": "London Underground",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:11.078Z",
+   "snapshot": "4c52509adc53b16dd9a21d14b8468100f9c3e88c6095f9aba3cbbd36cf6f85aa"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Blitz",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:13.337Z",
+   "snapshot": "6649173782a8e0dc618db28e58621ff8db2389ade2835a412a88eab4a85bd380"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nylon",
+   "title": "Nylon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:10.613Z",
+   "snapshot": "3f2854405e30bebd5131a099241e0cb9dd6f1f615bc82782d20ee0c7447fce3d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Boiling_vessel",
+   "title": "Boiling vessel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:14.163Z",
+   "snapshot": "9400bf208afc1a805c5995c9ad31c553a17c984273c92c7942d5274927d727f7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Paper_clip",
+   "title": "Paper clip",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:15.166Z",
+   "snapshot": "8abe80f01152b7aa882642f039dae998b9594c2106c6d6a66e400ae89af4f307"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Martini_(cocktail)",
+   "title": "Martini (cocktail)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:16.151Z",
+   "snapshot": "9005fd6845d7b13f04fbc3bb56f762dd2fab9814d5ddf3069154735587c8145d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Victory_garden",
+   "title": "Victory garden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:17.170Z",
+   "snapshot": "51ef6d7650f2df3161375a5633ceac95a017724efcf0d07b0cf6679f073ada51"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Rosie_the_Riveter",
+   "title": "Rosie the Riveter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:18.370Z",
+   "snapshot": "e140442551f41c94f7411a7cf71076156415d2ad788e886bd153b2e418b2f000"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Londoner U-Bahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-222"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "London Underground",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Parachutes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-353"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Centurion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-313"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Norway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-121"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Winston Churchill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-140"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "victory gardens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; history entry seq 40"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Benghazi burner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f27504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Rosie the Riveter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 58"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Londoner U-Bahn-Netz ist 402 km lang, hat 272 Stationen und besteht aus 11 Linien, die zum Teil mehrfach verzweigt sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Londoner U-Bahn” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The most important existing communal shelters were the London Underground stations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London Underground” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "During World War II, almost all nylon production was diverted to the military for use in parachutes and parachute cord.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parachutes” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The \"Vessel Boiling Electric\" or \"BV\" was an innovation at the very end of World War II, when the Centurion tank was introduced with the device fitted inside the turret.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Centurion” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Because it was more complicated to insert into the paper, Vaaler probably did not know that a better product was already on the market, although not yet in Norway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norway” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "made by filling a glass with gin, then waving it in the general direction of Italy.\" Similarly, the Churchill martini supposedly favored by Winston Churchill uses no vermouth, and is prepared with gin straight from the freezer and a \"glance\" at a bottle of vermouth, or a \"bow in the direction of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winston Churchill” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Victory gardens, also called war gardens or food gardens for defense, were vegetable, fruit, and herb gardens planted at private residences and public parks in  the United States, United Kingdom, Canada, Australia and Germany during World War I and World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “victory gardens” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f12476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Previously, British tank crews had disembarked when they wanted to \"brew-up\" (make tea), using a petrol cooker improvised from empty fuel cans called a \"Benghazi burner\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benghazi burner” is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:30:11.422Z",
+   "target": "f27504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The idea of Rosie the Riveter originated in a song written in 1942 by Redd Evans and John Jacob Loeb.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:11.422Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosie the Riveter” is on the snapshot of s8"
+  }
+ ]
+}

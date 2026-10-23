@@ -1,0 +1,481 @@
+{
+ "article": "a2777",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pitch_(music)",
+   "title": "Pitch (music)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:56.173Z",
+   "snapshot": "f5b90e2bb479a01bc0615f76d46f6c651f2056ff13630eb6955033404d630f32"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Timbre",
+   "title": "Timbre",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:57.172Z",
+   "snapshot": "4619258b6ec82ea1f28df75985ea90f216d6a05f48b1c6107538336e589cf3dc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Loudness",
+   "title": "Loudness",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:58.095Z",
+   "snapshot": "d414bfeb4e6b3fe4c38d2819075e40b4e5874bd8ccf35f833168338f3d303c10"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Decibel",
+   "title": "Decibel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:59.279Z",
+   "snapshot": "13acd8f458330154af420a25c4c43a7a0a527f97f73835f49d699e500aed8454"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ultrasound",
+   "title": "Ultrasound",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:00.179Z",
+   "snapshot": "a266d7f93d32a32a22a4f000902fa9a538fb56aed63c1ed5ca854fb11228f79f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Speed_of_sound",
+   "title": "Speed of sound",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:01.295Z",
+   "snapshot": "bbf5f162c3aa9b8d6399774b07f9e627ea00503a755aede043d159aff35ae85f"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Peitsche",
+   "title": "Peitsche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:20:58.418Z",
+   "snapshot": "afe9f368dda34251b269f3d546428bcac0438deccb925f14f44185857107e02a"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Harmonic_series_(music)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:02.122Z",
+   "snapshot": "ea648d1b2e0d1b598a48eb71e09a1c9a2c6cf40bf66bc3c811379ae8ddd9930c"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Equal-loudness_contour",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:21:03.070Z",
+   "snapshot": "c6efede57dca62859bf13755d036ae6a14f263743b29c3ecb44e64d5c65901a3"
+  },
+  "s10": {
+   "url": "https://sengpielaudio.com/TemperatureSound.htm",
+   "title": "Temperature dependency of speed of sound",
+   "publisher": "sengpielaudio (Eberhard Sengpiel)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:19.726Z",
+   "snapshot": "6bcfa8618b2a49bfa7f560f6378d1d3bac9d16595d6ac8bf81e98d1867b82c98"
+  },
+  "s11": {
+   "url": "https://hypertextbook.com/facts/2000/CheukWong.shtml",
+   "title": "Speed of Sound in Air – The Physics Factbook",
+   "publisher": "The Physics Factbook (Glenn Elert)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:20.299Z",
+   "snapshot": "c0d09ee5a7f1a63e45068f9998e1540bcf77cb75d04051417aef84a8dd514aa5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frequency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Waveform",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript ppm-056"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amplitude",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "decibel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ultrasound",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "about 343 metres per second",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f26014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Peitsche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 54; transcript tp-221"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f25884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pitch is a perceptual property that allows sounds to be ordered on a frequency-related scale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frequency” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f25885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"[C]ertain strong regularities in the acoustic waveform of the above instruments must exist which are invariant with respect to the above variables\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Waveform” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f25886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Historically, loudness was measured using an ear-balancing method with an audiometer in which the amplitude of a sine wave was adjusted by the user to equal the perceived loudness of the sound being evaluated.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amplitude” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f25887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The decibel (symbol: dB) is a relative unit of measurement equal to one tenth of a bel (B).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “decibel” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f25888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ultrasound is sound with frequencies greater than 20 kilohertz.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ultrasound” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "about 343 metres per second",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“about 343 metres per second”, “etwa 343 Meter pro Sekunde”, “Около 343 метров в секунду”) on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:12.021Z",
+   "target": "f26014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Eine Peitsche ist je nach Typ ein Gerät zum Schlagen, eine Schlagwaffe, ein Sportgerät, ein Kommunikationsmittel, ein Perkussionsinstrument oder ein Spielzeug, das aus einem schmalen Lederriemen oder Strick an einem mehr oder weniger langen Stiel besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:12.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peitsche” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:56:46Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "giving a value of 343.2 m/s",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:56:48Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "At 20° Celsius the speed of sound is then 343.21 m/s, rounded 343 m/s.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:56:49Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The speed of sound through air is approximately 343 m/s at normal room temperature, which is at 20 °C.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T13:00:00.822Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "giving a value of 343.2 m/s",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:00.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T13:00:00.822Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "At 20° Celsius the speed of sound is then 343.21 m/s, rounded 343 m/s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:00.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T13:00:00.822Z",
+   "target": "f25889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The speed of sound through air is approximately 343 m/s at normal room temperature, which is at 20 °C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:00.822Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  }
+ ]
+}

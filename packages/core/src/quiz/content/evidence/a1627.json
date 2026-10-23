@@ -1,0 +1,733 @@
+{
+ "article": "a1627",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Grundgesetz_f%C3%BCr_die_Bundesrepublik_Deutschland",
+   "title": "Grundgesetz für die Bundesrepublik Deutschland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:29.934Z",
+   "snapshot": "94d530911409360bc44ab58a1addb5a9d3a58f7b80d93159159a5ccdb01525cd"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Parlamentarischer_Rat",
+   "title": "Parlamentarischer Rat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:31.221Z",
+   "snapshot": "69ea29e5e008d3aab67bbecb6824fd1122750753c902c1fca26f67f3579b9c2e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Basic_Law_for_the_Federal_Republic_of_Germany",
+   "title": "Basic Law for the Federal Republic of Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:29.840Z",
+   "snapshot": "e932342a8944089c4bcb9afb57b1ac08485df191cdb4146ffa0b308219632fdb"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Verfassungskonvent_auf_Herrenchiemsee",
+   "title": "Verfassungskonvent auf Herrenchiemsee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:31.839Z",
+   "snapshot": "6d7d5b1dd25cd69cc7e8b2305fa1ea431fcf31e41e04852fcda19df40bfaf85b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Notstandsgesetze_(Deutschland)",
+   "title": "Notstandsgesetze (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:33.256Z",
+   "snapshot": "1e2bf45da9a8c8b5b39ff655504db28337e3e859b0dc207091788980a04425ef"
+  },
+  "s6": {
+   "url": "https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:31.033Z",
+   "snapshot": "37b8ff0ea37bf1ca6169112540a266c3505bc2141b9ac3bca03a25861b1d1757"
+  },
+  "s7": {
+   "url": "https://www.btg-bestellservice.de/pdf/80201000.pdf",
+   "title": "Basic Law for the Federal Republic of Germany (Bundestag edition)",
+   "publisher": "Deutscher Bundestag",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:19:52Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Würde des Menschen ist unantastbar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "All persons shall be equal before the law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08134",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Bundesrepublik Deutschland ist ein demokratischer und sozialer Bundesstaat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alle Staatsgewalt geht vom Volke aus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:53.683Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Würde des Menschen ist unantastbar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Die Würde des Menschen ist unantastbar”, “Human dignity shall be inviolable”, “Достоинство человека неприкосновенно”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:53.683Z",
+   "target": "f08132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt”, “To respect and protect it shall be the duty of all state authority”, “Уважать и защищать его — обязанность всякой государственной власти”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:53.683Z",
+   "target": "f08133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "All persons shall be equal before the law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“All persons shall be equal before the law”, “Alle Menschen sind vor dem Gesetz gleich”, “Все люди равны перед законом”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:53.683Z",
+   "target": "f08134",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Bundesrepublik Deutschland ist ein demokratischer und sozialer Bundesstaat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Die Bundesrepublik Deutschland ist ein demokratischer und sozialer Bundesstaat”, “The Federal Republic of Germany is a democratic and social federal state”, “Федеративная Республика Германия является демократическим и социальным федеративным государством”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:53.683Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alle Staatsgewalt geht vom Volke aus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Alle Staatsgewalt geht vom Volke aus”, “All state authority is derived from the people”, “Вся государственная власть исходит от народа”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:19:50Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Human dignity shall be inviolable.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official English translation; German: „Die Würde des Menschen ist unantastbar.“"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:19:52Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Human dignity shall be inviolable.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:19:53Z",
+   "target": "f08132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To respect and protect it shall be the duty of all state authority.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official English translation; German: „Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.“"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:19:55Z",
+   "target": "f08132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "To respect and protect it shall be the duty of all state authority.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:19:56Z",
+   "target": "f08133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "All persons shall be equal before the law.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official English translation; German: „Alle Menschen sind vor dem Gesetz gleich.“"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:19:58Z",
+   "target": "f08133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "All persons shall be equal before the law.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:19:59Z",
+   "target": "f08134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Federal Republic of Germany is a democratic and social federal state.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official English translation; German: „Die Bundesrepublik Deutschland ist ein demokratischer und sozialer Bundesstaat.“"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:20:01Z",
+   "target": "f08134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Federal Republic of Germany is a democratic and social federal state.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:20:02Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "All state authority is derived from the people.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official English translation; German: „Alle Staatsgewalt geht vom Volke aus.“"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:20:03Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "All state authority is derived from the people.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:20:05Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Article 1, sentence 1: \"Human dignity shall be inviolable\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:20:06Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Article 20 states that \"All state authority is derived from the people\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Human dignity shall be inviolable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To respect and protect it shall be the duty of all state authority.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "All persons shall be equal before the law.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Federal Republic of Germany is a democratic and social federal state.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "All state authority is derived from the people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Article 20 states that \"All state authority is derived from the people\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s3"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Article 1 of these fundamental rights, which states that human dignity shall be inviolable and all state authority shall respect and protect it, cannot be changed or removed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Human dignity shall be inviolable” is on the snapshot of s3"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(1) Human dignity shall be inviolable.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Human dignity shall be inviolable” is on the snapshot of s6"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To respect and protect it shall be the duty of all state authority.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “To respect and protect it shall be the duty of all state authority” is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(1) All persons shall be equal before the law.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “All persons shall be equal before the law” is on the snapshot of s6"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(1) The Federal Republic of Germany is a democratic and social federal state.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Federal Republic of Germany is a democratic and social federal state” is on the snapshot of s6"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the preamble to the Basic Law, its adoption was declared an act of the \"German people\", and Article 20 states that \"All state authority is derived from the people\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “All state authority is derived from the people” is on the snapshot of s3"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:56:41.381Z",
+   "target": "f08135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(2) All state authority is derived from the people.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:41.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “All state authority is derived from the people” is on the snapshot of s6"
+  }
+ ]
+}

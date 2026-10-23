@@ -1,0 +1,386 @@
+{
+ "article": "a0069",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Richter",
+   "title": "Charles Richter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:19.500Z",
+   "snapshot": "56545e8a5cd237352b0239f1f5971a327d694629b1f870b6e8c7228d9f3604c9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Francis_Beaufort",
+   "title": "Francis Beaufort – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:20.507Z",
+   "snapshot": "b06829f28bbf4507af26f3486899e5521636663e4e1868d33a7ffc72d314760d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Beaufortskala",
+   "title": "Beaufortskala",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:17.853Z",
+   "snapshot": "c34b07b66ffd3d2a337879a4d0bd53ce4e8f2422d61b33265016fcc424a3ba8f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Talc",
+   "title": "Talc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:21.603Z",
+   "snapshot": "4ffa801c7b5638b140e61d8d438a3d4ac0a7fce85b035a3c9ec7db51dab804d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/S._P._L._S%C3%B8rensen",
+   "title": "S. P. L. Sørensen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:25.447Z",
+   "snapshot": "34f593ec04c5f3361410b8f8fd59bcf02b829e27be5d8792f586a4aa28393435"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moment_magnitude_scale",
+   "title": "Moment magnitude scale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:22.598Z",
+   "snapshot": "8b5814530a1062406e0751c5e316ba6744b29bc47b300d697ff653e66e5d4b29"
+  },
+  "s7": {
+   "url": "https://lex.dk/S.P.L._S%C3%B8rensen",
+   "title": "S.P.L. Sørensen",
+   "publisher": "Den Store Danske (lex.dk)",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:30:40.952Z",
+   "snapshot": "8e7eb51791e271e70003e86c4baf25a63e7ffde861e490b93cbe54fec1315dbe"
+  },
+  "s8": {
+   "url": "https://biografiskleksikon.lex.dk/S.P.L._S%C3%B8rensen",
+   "title": "S.P.L. Sørensen",
+   "publisher": "Dansk Biografisk Leksikon (lex.dk)",
+   "kind": "reference",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:30:41.056Z",
+   "snapshot": "f538a5fa5af2b5c1d150ea03360060b9c8e94ccf464e718240264365d2683927"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/PH",
+   "title": "pH – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:16:39Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Richter scale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Beaufort scale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beaufortskala",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-224"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23320",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Talc",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Søren Sørensen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f23322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "moment magnitude scale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:45.638Z",
+   "target": "f00341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He is one of the creators of the Richter scale, which, until the development of the moment magnitude scale in 1979, was widely used to quantify the size of earthquakes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richter scale” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:45.638Z",
+   "target": "f00342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sir Francis Beaufort  ( BOH-fərt; 27 May 1774 – 17 December 1857) was an Irish hydrographer and naval officer who created the Beaufort cipher and the Beaufort scale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beaufort scale” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:45.638Z",
+   "target": "f00342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Beaufortskala (, Bft) ist eine Skala zur Einteilung der Windstärke in 13 Stärkenbereiche von 0 (Windstille) bis 12 (Orkan).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beaufortskala” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:45.638Z",
+   "target": "f23320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Talc, or talcum, is a clay mineral composed of hydrated magnesium silicate, with the chemical formula Mg3Si4O10(OH)2.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Talc” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:45.638Z",
+   "target": "f23321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Søren Sørensen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Søren Sørensen”, “Сёрен Сёренсен”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:45.638Z",
+   "target": "f23322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The moment magnitude scale (MMS; denoted explicitly with Mw or Mwg and generally implied with use of a single M for magnitude) is a measure of an earthquake's magnitude (\"size\" or strength) based on its seismic moment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:45.638Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “moment magnitude scale” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:16:20Z",
+   "target": "f23321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "indførte i 1909 betegnelsen pH som et mål for denne.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:16:26Z",
+   "target": "f23321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "dansk kemiker, direktør for Carlsberg Laboratoriets kemiske afdeling 1901-38.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:16:32Z",
+   "target": "f23321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Han indførte som den første begrebet pH",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:16:39Z",
+   "target": "f23321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1909, the Danish chemist Søren Peter Lauritz Sørensen introduced the concept of pH at the Carlsberg Laboratory",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

@@ -1,0 +1,331 @@
+{
+ "article": "a2790",
+ "sources": {
+  "s1": {
+   "url": "https://www.centuryspring.com/resources/square-and-rectangular-springs",
+   "title": "Square and Rectangular Springs – Century Spring",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:05.015Z",
+   "snapshot": "1d7c8a2fa3b8764a18d4f6c74b2286c2153e360ab40e38b65d908c2d3a88a1c7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hooke%27s_law",
+   "title": "Hooke's law",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:08.426Z",
+   "snapshot": "8e83906451d3a155cbb61756edd4a00a5c13e52a13c2886a114786354fd7da93"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Leaf_spring",
+   "title": "Leaf spring",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:09.257Z",
+   "snapshot": "517c016849dd20fb6964e7f4624a8b4332ca7730b17714abf7e8426bbd19536d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mainspring",
+   "title": "Mainspring",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:10.097Z",
+   "snapshot": "197d4908713b4dba1e2a272e5c495f7204e51085f3af23a5b843f6ad0bdadad9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Balance_spring",
+   "title": "Balance spring",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:11.199Z",
+   "snapshot": "33d0b8ef848c297e9c30c0bbd682db0aac9eb729035b393d4a1890c8aa7a2158"
+  },
+  "s6": {
+   "url": "https://tacrockford.com/technical/roehrs-flat-wire-compression-springs",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:09.008Z",
+   "snapshot": "687b9295e2c28dd5f7d02d67330fc95ec7f2130d3a8a61c088090bc9c10293cc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robert Hooke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "leaf spring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "mainspring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "balance spring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greater load-bearing capacity",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Greater load-bearing capacity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-109/1, u10: Square/rectangular wire puts more steel in the same space: higher rate, lower stress, 'more force in less space', flat faces add stability. The card's 'more surface contact' explanation is not in our text; the body gives the correct reason."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:13.861Z",
+   "target": "f25967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The law is named after 17th-century British physicist Robert Hooke.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Hooke” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:13.861Z",
+   "target": "f25968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A leaf spring is a simple form of spring commonly used for suspension in wheeled vehicles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “leaf spring” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:13.861Z",
+   "target": "f25969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A mainspring is a spiral torsion spring of metal ribbon—commonly spring steel—used as a power source in mechanical watches, some clocks, and other clockwork mechanisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mainspring” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:13.861Z",
+   "target": "f25970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A balance spring, or hairspring, is a spring attached to the balance wheel in mechanical timepieces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:13.861Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “balance spring” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:33:12Z",
+   "target": "f25966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The basic idea behind why you would consider a rectangular or square spring for your application can be summarized as “more force in less space”.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r084",
+   "run": "provenance-research-2026-10-23",
+   "note": "Manufacturer page: larger cross-section gives higher spring rate and load capacity in the same space."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:33:14Z",
+   "target": "f25966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rectangular springs have larger spring rates than comparable circular wire springs because they have a larger cross-sectional area, allowing them to accommodate more force per unit of deflection.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r084",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:33:16Z",
+   "target": "f25966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Compression springs made from flat wire - wound to the spring axis - offer the advantage of higher energy absorption at the same installation space compared to round wire compression springs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r084",
+   "run": "provenance-research-2026-10-23",
+   "note": "Independent manufacturer (Roehrs via TAC Rockford); also lists 'Higher spring force'."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T13:00:02.546Z",
+   "target": "f25966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rectangular springs have larger spring rates than comparable circular wire springs because they have a larger cross-sectional area, allowing them to accommodate more force per unit of deflection.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:02.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T13:00:02.546Z",
+   "target": "f25966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Compression springs made from flat wire - wound to the spring axis - offer the advantage of higher energy absorption at the same installation space compared to round wire compression springs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T13:00:02.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

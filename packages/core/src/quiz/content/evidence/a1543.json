@@ -1,0 +1,248 @@
+{
+ "article": "a1543",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Deutsche_Bahn",
+   "title": "Deutsche Bahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:25.045Z",
+   "snapshot": "9abd04398269456d379a0772e8b18caf2b4477f90250116a82418ce9017bae7d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dirk_Niebel",
+   "title": "Dirk Niebel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:23.087Z",
+   "snapshot": "4ea50321bdf93213dd22cec9b32c69f9197f5f5936e0251a5a011fbe9698f9f7"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Merz",
+   "title": "Friedrich Merz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:18.804Z",
+   "snapshot": "af7526a9ea03e3fefe441ae4bf4e209b712b8a1e0806b4db397744ef205fe0c4"
+  },
+  "s4": {
+   "url": "https://www.aerztezeitung.de/Politik/Neuer-Job-fuer-Philipp-Roesler-292721.html",
+   "title": "Neuer Job für Philipp Rösler – Ärzte Zeitung",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:23.657Z",
+   "snapshot": "9c22d46a3181ce3c73a1de7fae1b954142c4f22c1cf8975e1f8457f02c34d353"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Philipp_R%C3%B6sler",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:23.395Z",
+   "snapshot": "f453ca03c793baa07eabd1115b60406bca7e97494129a541a99484cd4ddd5b79"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Nord_Stream",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:24.845Z",
+   "snapshot": "c0a031bff859fc310f6755ca76995bbf2f19fbc285cd05185aa6fbb7da11aeec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deutsche Bahn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rheinmetall",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "BlackRock",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f28904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Weltwirtschaftsforum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Weltwirtschaftsforum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:41.593Z",
+   "target": "f07711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Deutsche Bahn AG (DB) is the national railway company of Germany, and a state-owned enterprise under the control of the German government.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutsche Bahn” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:41.593Z",
+   "target": "f07714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Von 2015 bis 2026 war er beim Rüstungs- und Automobilzulieferunternehmen Rheinmetall als Berater tätig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rheinmetall” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:41.593Z",
+   "target": "f07715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "BlackRock Asset Management Deutschland (Aufsichtsratsvorsitz von 2016 bis 2020)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BlackRock” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:41.593Z",
+   "target": "f28904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der frühere FDP-Vorsitzende, Bundeswirtschafts- und Bundesgesundheitsminister Philipp Rösler kommt beim Weltwirtschaftsforum in der Schweiz unter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weltwirtschaftsforum” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:41.593Z",
+   "target": "f28904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "November 2017 wurde bekannt, dass Rösler das Weltwirtschaftsforum zum Ende des Monats verlassen würde, um sich neuen beruflichen Aufgaben zu widmen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.593Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weltwirtschaftsforum” is on the snapshot of s5"
+  }
+ ]
+}

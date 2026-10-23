@@ -1,0 +1,460 @@
+{
+ "article": "a0890",
+ "sources": {
+  "s1": {
+   "url": "https://www.dwds.de/wb/ausflippen",
+   "title": "ausflippen – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:04.848Z",
+   "snapshot": "04d16a61d8c930926da9222b1db76003e19c2e2511588dd297b49594310dbd09"
+  },
+  "s2": {
+   "url": "https://www.dwds.de/wb/Tohuwabohu",
+   "title": "Tohuwabohu – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:05.785Z",
+   "snapshot": "971912cacb27a953344e74946a01047988c6d2e3444966301d2b8af4574c985e"
+  },
+  "s3": {
+   "url": "https://www.dwds.de/wb/kiebitzen",
+   "title": "kiebitzen – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:06.770Z",
+   "snapshot": "e8d542eff06e5fe34ad57cae2d3f64ee47a10cfb97e9bb01d712940f7f8e2ddc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Boycott",
+   "title": "Charles Boycott – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:07.177Z",
+   "snapshot": "9504593d3b5205509a727b6d05fa447d298784b1cfad4d487717197db2959950"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/kaputt",
+   "title": "kaputt – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:07.804Z",
+   "snapshot": "9c12a00329438b00d52c278845535cade3b09406a8b8b5e8fbb18f1738da0423"
+  },
+  "s6": {
+   "url": "https://www.dbnl.org/tekst/_taa006189301_01/_taa006189301_01_0073.php",
+   "title": "Taal en Letteren, Jaargang 3 (G. A. Nauta, 1893)",
+   "kind": "reference",
+   "lang": "nl",
+   "retrievedAt": "2026-10-23T04:27:07.002Z",
+   "snapshot": "b7f9b29700d823a3512a636711d6b6dde56d1ab86a4022fc6fe25432bf36a54f"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Boykott",
+   "title": "Boykott ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:28.143Z",
+   "snapshot": "14d78ca0de70a9a712302fa1346d30c857fc838604df57423b4690e80a6c2fc5"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Boykott",
+   "title": "Boykott – DWDS",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:28.293Z",
+   "snapshot": "3bd048b421f9191b82d2672c4852bb537ca9d29ef08f2a183061a82bd9299db2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ausflippen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tohuwabohu",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kiebitz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Boykott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "kaputt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12723",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A bushel of salt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-113"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:00.672Z",
+   "target": "f04446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ausflippen – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ausflippen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:00.672Z",
+   "target": "f04447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tohuwabohu – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tohuwabohu” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:00.672Z",
+   "target": "f04448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kiebitz",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kiebitz” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:00.672Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Boykott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Boykott”, “бойкот”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:00.672Z",
+   "target": "f04450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "kaputt – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kaputt” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:00.672Z",
+   "target": "f12723",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Het is voorts niet ondienstig er op te wijzen, dat in 't Fransch ook bekend is de spreekwijze: Nous ne mangerons pas un minot de sel,Ga naar voetnoot4) en eveneens in 't Duitsch: Mit jemand einen Scheffel Salz essen = längere Zeit nähern Umgang pflegen, en bij Göthe (40, 297):",
+     "quoteLang": "nl",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Einen Scheffel Salz” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:02:16Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "englisch boycott, nach dem britischen Hauptmann und Gutsverwalter Ch. C. Boycott (1832–1897), der sich in Irland durch Arroganz und Strenge so verhasst machte",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:02:18Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Diese Kampfmaßnahme wird 1880 von irischen Bauern gegenüber dem englischen Gutsverwalter Charles Boycott angewandt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:02:20Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "was an English land agent whose ostracism by his local community in Ireland gave the English language the term boycott.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:29.733Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "englisch boycott, nach dem britischen Hauptmann und Gutsverwalter Ch. C. Boycott (1832–1897), der sich in Irland durch Arroganz und Strenge so verhasst machte",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:29.733Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Diese Kampfmaßnahme wird 1880 von irischen Bauern gegenüber dem englischen Gutsverwalter Charles Boycott angewandt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:29.733Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "was an English land agent whose ostracism by his local community in Ireland gave the English language the term boycott.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:29.733Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Boykott ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Boykott” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:29.733Z",
+   "target": "f04449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Boykott – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Boykott” is on the snapshot of s8"
+  }
+ ]
+}

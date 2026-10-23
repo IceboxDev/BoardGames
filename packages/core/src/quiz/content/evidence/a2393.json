@@ -1,0 +1,321 @@
+{
+ "article": "a2393",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Home_Secretary",
+   "title": "Home Secretary",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:36.222Z",
+   "snapshot": "63662b89ca49db82ad6f185e19b6f883aeadc6f0d135178d136fef45ad688e74"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Warming-pan_scandal",
+   "title": "Warming-pan scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:37.254Z",
+   "snapshot": "80389d3ff88506726ab83718b1cd892c05459aa130a2001b3823772eaf61e448"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Princess_Alexandra,_The_Honourable_Lady_Ogilvy",
+   "title": "Princess Alexandra, The Honourable Lady Ogilvy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:38.428Z",
+   "snapshot": "f53cbfbdf4e3cf4993a62071c221071d0f2b636e9bc42699b7c8b8eb19fa38ba"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/St_Mary's_Hospital,_London",
+   "title": "St Mary's Hospital, London – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:39.309Z",
+   "snapshot": "1e25f0ff138613d763cd980c5614d607ac0ca9bd639535930bcbc3d63788a3b1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/James_Francis_Edward_Stuart",
+   "title": "James Francis Edward Stuart",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:04.993Z",
+   "snapshot": "3bd7a481250c64f916188689ce325089fa9836383decc25cfa5ddaf8c5c88326"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Home Secretary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "warming pan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "42 witnesses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Princess Alexandra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lindo Wing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:12.998Z",
+   "target": "f12502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The secretary of state for the Home Department, more commonly known as the home secretary, is a senior minister of the Crown in the Government of the United Kingdom and the head of the Home Office, equivalent to  an interior minister.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Home Secretary” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:12.998Z",
+   "target": "f12503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The warming-pan scandal centered on the 1688 birth of James Francis Edward Stuart, the Catholic son of England's then-king and queen James II and Mary of Modena.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “warming pan” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:12.998Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James II responded to these rumors by calling a meeting at Whitehall, where 42 witnesses testified that they had seen the prince's birth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “42 witnesses” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:12.998Z",
+   "target": "f12505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Princess Alexandra, The Honourable Lady Ogilvy (Alexandra Helen Elizabeth Olga Christabel; born 25 December 1936), is a member of the British royal family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Princess Alexandra” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:12.998Z",
+   "target": "f12506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The private Lindo wing, where there have been several royal and celebrity births, opened in November 1937; it was financed by businessman and hospital board member Frank Charles Lindo, who made a large donation before his death in 1938.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:12.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lindo Wing” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:03Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In an attempt to quash these rumours, James published the testimonies of over seventy witnesses to the birth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Cites the ODNB; a different count from the 42 deponents given (after Rachel Weil, Political Passions 1999) in the warming-pan article. Likely counts differently (published testimonies vs. witnesses heard at the council of 22 Oct 1688); the 1688 'Depositions' OCR on archive.org was too poor to count."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:06Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "At this meeting, 42 people who had been present at the birth testified that James Francis Edward Stuart really was the son of Mary of Modena and James II.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Kept as the bank's answer (cited to Weil 1999, a scholarly monograph) with the 'over seventy' count recorded as an alternative in the notes."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:56.387Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In an attempt to quash these rumours, James published the testimonies of over seventy witnesses to the birth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:56.387Z",
+   "target": "f12504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "At this meeting, 42 people who had been present at the birth testified that James Francis Edward Stuart really was the son of Mary of Modena and James II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  }
+ ]
+}

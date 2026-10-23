@@ -1,0 +1,273 @@
+{
+ "article": "a0268",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Pittiplatsch_und_Schnatterinchen",
+   "title": "Pittiplatsch und Schnatterinchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:07.127Z",
+   "snapshot": "6688aad2715a9fffbb2e5cc47dff65519c648d42a8c56882db9b3b95c810d20e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Herr_Fuchs_und_Frau_Elster",
+   "title": "Herr Fuchs und Frau Elster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:08.055Z",
+   "snapshot": "4a614b438a5a2ffa931fba580ae2c232ea462c3ecfdbc05df0debf6656bca995"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Unser_Sandm%C3%A4nnchen",
+   "title": "Unser Sandmännchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:09.145Z",
+   "snapshot": "4257d8705371ee2c88592482950b3552c57ebae6c9c2a1c55e70ed8028be947f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Jim_Knopf_und_Lukas_der_Lokomotivf%C3%BChrer",
+   "title": "Jim Knopf und Lukas der Lokomotivführer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:10.871Z",
+   "snapshot": "0cefa63e3b001f88394c3503d9e82da8e2c1e72e8a884995f94143ea6a315d2e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schnatterinchen und Moppi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Herr Fuchs und Frau Elster",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gerhard Behrendt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lukas und Emma",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schnatterinchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-019"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unser Sandmännchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 46; transcript tp-249"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:22.011Z",
+   "target": "f01336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Pitti schneller wachsen wollte und andere Geschichten mit Pittiplatsch, Schnatterinchen und Moppi, sechs Hörspiele, LP, MC und CD, LITERA und LITERA junior",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schnatterinchen und Moppi” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:22.011Z",
+   "target": "f01337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Herr Fuchs und Frau Elster waren zwei Figuren im Kinderprogramm des Deutschen Fernsehfunks, deren Folgen regelmäßig im Sandmännchen im Fernsehen auf MDR, RBB und KiKA wiederholt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herr Fuchs und Frau Elster” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:22.011Z",
+   "target": "f01338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Bühnen- und Kostümbildner Gerhard Behrendt wurde beauftragt, die gewünschte Sandmann-Figur in nur zwei Wochen mit aufwendiger Stop-Motion-Animation zustande zu bringen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhard Behrendt” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:22.011Z",
+   "target": "f01339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eines Tages bestellt der König Lukas und Emma zu sich ins Schloss.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lukas und Emma” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:22.011Z",
+   "target": "f11734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pittiplatsch (Koseform Pitti) und Schnatterinchen (Koseform Schnattchen oder Schnatterente) waren Puppenfiguren des Deutschen Fernsehfunks in der DDR.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schnatterinchen” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:22.011Z",
+   "target": "f11735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unser Sandmännchen (kurz auch Sandmann) ist eine deutsche Kindersendung, die seit 1959 produziert wird und die Fernsehserie mit den meisten Folgen ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:22.011Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Unser Sandmännchen” is on the snapshot of s3"
+  }
+ ]
+}

@@ -1,0 +1,392 @@
+{
+ "article": "a2699",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sunset",
+   "title": "Sunset",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:35.162Z",
+   "snapshot": "7f1c22162dcfb50b1a8abb7b445e4be4c363f4866e5de0700dd2bba0b397b05d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gravity_of_Mars",
+   "title": "Gravity of Mars",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:36.328Z",
+   "snapshot": "9505475f8f4d525d3598c590ae144655efe97c3fbf64d309628cd99f9f2b570b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Timekeeping_on_Mars",
+   "title": "Timekeeping on Mars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:37.326Z",
+   "snapshot": "28274db85240a147989a679e0fb961d665d6a5427771dfa52ccb59784c632f23"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Phobos_(moon)",
+   "title": "Phobos (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:38.311Z",
+   "snapshot": "6b65c238effd88d2cd6f3328f94b008c898fb4abacc265310eebebc3549b166e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Valles_Marineris",
+   "title": "Valles Marineris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:39.277Z",
+   "snapshot": "75be3b41f90ba4cd17b03d867a049507ed9ac137eff442b5a3a0aabe1301d331"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mars",
+   "title": "Mars",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:40.314Z",
+   "snapshot": "4364901fbc8b3c4465f61a679daff9f9f631e12c67402a0ff3d2ca6196560e66"
+  },
+  "s7": {
+   "url": "https://commons.wikimedia.org/wiki/File:MarsSunset.jpg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:37.922Z",
+   "snapshot": "e5dc061b66e0d93a62e3dd445a1c51677e56e4b93089f5cede7eb99fa3ae1bdd",
+   "cloneOf": "wikipedia.org"
+  },
+  "s8": {
+   "url": "https://coolcosmos.ipac.caltech.edu/ask/73-How-strong-is-the-gravity-on-Mars",
+   "title": "How strong is the gravity on Mars?",
+   "publisher": "Caltech IPAC (Cool Cosmos)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:39.201Z",
+   "snapshot": "8e6358a670509400cba0f1514156518c7c3dbbefdcc724898cd8399379ed1687"
+  },
+  "s9": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "title": "Mars Fact Sheet",
+   "publisher": "NASA Space Science Data Coordinated Archive",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:38.506Z",
+   "snapshot": "23424b1a376d56b4e943e5a82e110be56fa7300d547be3a67ac90cd4ac2088be"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "About 38%",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-026"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Phobos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25253",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Valles Marineris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript ppm-055"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:59.237Z",
+   "target": "f25249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Because the shorter wavelength components, such as blue and green, scatter more strongly, these colors are preferentially removed from the beam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:59.237Z",
+   "target": "f25250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The average gravitational acceleration on Mars is 3.721 m/s2 (about 38% of the gravity of Earth), with a global variation range of ~0.059 m/s2.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “About 38%” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:59.237Z",
+   "target": "f25251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A sol, or Martian day, is not that different from an Earth day: less than an hour longer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sol” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:59.237Z",
+   "target": "f25252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Phobos () is the innermost and larger of the two natural satellites of Mars, the other being Deimos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phobos” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:59.237Z",
+   "target": "f25253",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Valles Marineris (; Latin for Mariner Valleys, named after the Mariner 9 Mars orbiter of 1971–72 which discovered it) is a system of canyons that runs along the Martian surface east of the Tharsis region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valles Marineris” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:59.237Z",
+   "target": "f25563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mars is the fourth planet from the Sun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mars” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:59:39Z",
+   "target": "f25250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The surface gravity on Mars is only about 38% of the surface gravity on Earth, so if you weigh 100 pounds on Earth, you would weigh only 38 pounds on Mars.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:59:40Z",
+   "target": "f25250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Surface gravity (mean) (m/s 2 ) 3.73 9.82 0.380",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "Mars/Earth ratio column: 0.380"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:46.751Z",
+   "target": "f25250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The surface gravity on Mars is only about 38% of the surface gravity on Earth, so if you weigh 100 pounds on Earth, you would weigh only 38 pounds on Mars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:46.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:46.751Z",
+   "target": "f25250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The surface gravity on Mars is only about 38% of the surface gravity on Earth, so if you weigh 100 pounds on Earth, you would weigh only 38 pounds on Mars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:46.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “About 38%” is on the snapshot of s8"
+  }
+ ]
+}

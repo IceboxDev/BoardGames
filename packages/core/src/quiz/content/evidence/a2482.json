@@ -1,0 +1,187 @@
+{
+ "article": "a2482",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chris_Hadfield",
+   "title": "Chris Hadfield",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:04.987Z",
+   "snapshot": "82242a555879dd53fb711fa23a0b30ac552020353488b7c7bf22d8d4dfca4613"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gemini_6A",
+   "title": "Gemini 6A – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:46.756Z",
+   "snapshot": "237a65a7ece2bf680fa0503c19a68feea3b48d69ac003385b09b55e0ca4079cd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Voyager_Golden_Record",
+   "title": "Voyager Golden Record – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:43.909Z",
+   "snapshot": "10f320e6d63953badb20d400cdfaa0862bfde83dd7510aedb777ad3d2eda2691"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In space",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; history entry seq 8; transcript tp-213"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jingle Bells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johnny B. Goode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Sagan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:27.420Z",
+   "target": "f13116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He first flew in space in November 1995 as a mission specialist aboard STS-74, visiting the Russian space station Mir.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.420Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “In space” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:27.420Z",
+   "target": "f13118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "At that point, the sound of \"Jingle Bells\" was heard played on an eight-note Hohner \"Little Lady\" harmonica and a handful of small bells.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.420Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jingle Bells” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:27.420Z",
+   "target": "f13119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The inclusion of Berry's \"Johnny B. Goode\" was controversial, with Lomax claiming that rock music was \"adolescent\", to which Sagan replied, \"There are a lot of adolescents on the planet.\" It also included the sounds of humpbacked whales from the 1970 album by Roger Payne, Songs of the Humpback",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.420Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnny B. Goode” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:27.420Z",
+   "target": "f13120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Sagan noted that \"The spacecraft will be encountered and the record played only if there are advanced space-faring civilizations in interstellar space, but the launching of this 'bottle' into the cosmic 'ocean' says something very hopeful about life on this planet.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.420Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Sagan” is on the snapshot of s3"
+  }
+ ]
+}

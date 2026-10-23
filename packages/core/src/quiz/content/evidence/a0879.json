@@ -1,0 +1,561 @@
+{
+ "article": "a0879",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+   "title": "Impression, Sunrise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:21.186Z",
+   "snapshot": "7d2ef4568af08ad1040a3dd729b5c35c960dbb089cf1d872cf343bd3344f6c3f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/A_Sunday_Afternoon_on_the_Island_of_La_Grande_Jatte",
+   "title": "A Sunday Afternoon on the Island of La Grande Jatte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:20.034Z",
+   "snapshot": "e8ecd0942fb38ff84253d54a7a20606f5c26a21b5c36a994914e305876c0c609"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon",
+   "title": "Les Demoiselles d'Avignon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:57.756Z",
+   "snapshot": "20a8773f302cc57ac74f290f5198840d24267367c51ae1db7f32a19074667a4c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Scream",
+   "title": "The Scream",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:33.123Z",
+   "snapshot": "9f484b8e7e825e2747ea0801611fe23b60be33a120661633567c84d77a6cb355"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Divisionism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:23.226Z",
+   "snapshot": "65587a4dc922e1f73a2faad8f41eb6f2c24a8b89bf6a9bd626407e582e277b90"
+  },
+  "s6": {
+   "url": "https://www.visitnorway.com/places-to-go/eastern-norway/oslo/the-echo-of-the-scream/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s7": {
+   "url": "https://edition.cnn.com/2003/TECH/space/12/10/scream.munch.reut/",
+   "title": "CNN.com - Why the sky was red in Munch's 'The Scream' - Dec. 10, 2003",
+   "publisher": "CNN (Reuters wire)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:22.835Z",
+   "snapshot": "b256c5f6ebe26b3c3916d05e6c9dc50f27ce41075bcef0858f2d48c12f2635b4"
+  },
+  "s8": {
+   "url": "https://www.theage.com.au/national/krakatoa-provided-backdrop-to-munchs-scream-20031211-gdwwuj.html",
+   "title": "Krakatoa provided backdrop to Munch's scream | The Age",
+   "publisher": "The Age",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:23.520Z",
+   "snapshot": "14cf80953263c9595f9e023b7685c75fdef270aebe33f947065fae997f8ec1e5"
+  },
+  "s9": {
+   "url": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939",
+   "title": "Edvard Munch, The Scream – Nasjonalmuseet – Collection",
+   "publisher": "Nasjonalmuseet (National Museum of Norway)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:23.391Z",
+   "snapshot": "a1995283b12641bf749138fd6c38f81f69907f6fa0d8cf244773813cc385842f"
+  },
+  "s10": {
+   "url": "http://colourlex.com/project/edvard-munch-the-scream/",
+   "title": "Edvard Munch, The Scream - ColourLex",
+   "publisher": "ColourLex",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:23.160Z",
+   "snapshot": "5f02f23404cc8254bb578bed4637a901f91db3625a55bf4e6ec25062ebf048f6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Claude Monet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Georges Seurat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pablo Picasso",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Krakatoa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-096"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Krakatoa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 51; history entry seq 52"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Munch himself",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 53; history entry seq 55"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Munch himself",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Munch himself",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (ppm-092/1, u06): The card asks who the subject of The Scream is; the fact asked for the 'infinite scream' quote instead. By Munch's own notes the scene is his own experience on a walk with two friends, so the answer is Munch himself; the Munch Museum stresses the figure isn't a literal self-portrait (nature screams), so the wording asks whose experience it depicts."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:58.827Z",
+   "target": "f04391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Impression, Sunrise (French: Impression, soleil levant) is an 1872 painting by Claude Monet first shown at what would become known as the \"Exhibition of the Impressionists\" in Paris in April, 1874.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claude Monet” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:58.827Z",
+   "target": "f04392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Sunday Afternoon on the Island of La Grande Jatte (French: Un dimanche après-midi à l'Île de la Grande Jatte) was painted from 1884 to 1886 and is Georges Seurat's most famous work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georges Seurat” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:58.827Z",
+   "target": "f04394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Demoiselles d'Avignon (pronounced [le demwazɛl d‿aviɲɔ̃]; The Young Ladies of Avignon, originally titled The Brothel of Avignon) is a large oil painting created in 1907 by the Spanish artist Pablo Picasso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pablo Picasso” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:58.827Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "theories advanced to account for the reddish sky in the background is the artist's memory of the effects of the powerful volcanic eruption of Krakatoa, which deeply tinted sunset skies red in parts of the Western hemisphere for months during 1883 and 1884, about a decade before Munch painted The",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:58.827Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Krakatoa” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:58.827Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Krakatoa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Krakatoa”, “Krakatau”, “Кракатау”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:58.827Z",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Munch himself",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Munch himself”, “Munch selbst”, “сам Мунк”) on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:20:02Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Krakatoa eruption created vivid red twilights in Europe at the time Munch is thought to have painted this masterpiece.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Reports the Olson et al. (Sky & Telescope, 2003) theory; the wording frames it as a popular, unproven theory, and a 2017 study proposes nacreous clouds instead."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:20:05Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "created vivid red twilights in Europe from November 1883 until February 1884",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same Reuters wire as CNN, published separately; supports the theory the wording asks about."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:20:08Z",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "my friends walked on, and I stood there trembling with anxiety -- and I sensed an infinite scream passing through nature.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Munch's own account (emunch.no MM.T.2367): the scene is his own experience."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:20:10Z",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "My friends went on but I just stood trembling with an open wound",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Munch's account quoted via Sue Prideaux: the experience is his own."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Krakatoa eruption created vivid red twilights in Europe at the time Munch is thought to have painted this masterpiece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "created vivid red twilights in Europe from November 1883 until February 1884",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "my friends walked on, and I stood there trembling with anxiety -- and I sensed an infinite scream passing through nature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "My friends went on but I just stood trembling with an open wound",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Krakatoa eruption created vivid red twilights in Europe at the time Munch is thought to have painted this masterpiece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Krakatoa” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f10716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Krakatoa provided backdrop to Munch's scream",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Krakatoa” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:27.759Z",
+   "target": "f25526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "literature about Munch from the first half of the 20th century, The Scream is reproduced only relatively rarely, but analysis of the painting's exhibition history clearly shows that both Munch himself, and later the National Gallery, regarded the work as central to the artist's development.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:27.759Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Munch himself” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a2774",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hormesis",
+   "title": "Hormesis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:45.084Z",
+   "snapshot": "e30731a801ca96b9619599dd5580ced14cd583106f3bc5f1729f70c4d9bcf005"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Median_lethal_dose",
+   "title": "Median lethal dose – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:46.059Z",
+   "snapshot": "962fba877eb9d6de5f11a2b51061bb76c25c28352e21856144e129e0d84730d6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mithridatism",
+   "title": "Mithridatism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:47.115Z",
+   "snapshot": "1ffc7ac836d667884cc0aab441bebfb3fe23f15e33e555234b5bc1d9fb0497d8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mathieu_Orfila",
+   "title": "Mathieu Orfila – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:48.057Z",
+   "snapshot": "e4e30c75eecb270440e890544e489d40822c319680e101e56d5180b7ea504fcf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Acetylcysteine",
+   "title": "Acetylcysteine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:49.174Z",
+   "snapshot": "bfa469f88b6132dfce31d800c895604e191564062d11d2cb9cfa95d81649c1cb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Paracelsus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:23.396Z",
+   "snapshot": "60eaba431ca8b7deec3f1b2ad8617a4787dd90fa5a000073900dccefa7255c17"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hormesis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "LD50",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "mithridatism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mathieu Orfila",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "acetylcysteine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:11.699Z",
+   "target": "f25860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hormesis is a two-phased dose-response relationship whereby low-dose exposures have a beneficial effect and high-dose amounts are either inhibitory to function or toxic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hormesis” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:11.699Z",
+   "target": "f25861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In toxicology, the median lethal dose, LD50 (abbreviation for \"lethal dose, 50%\"), LC50 (lethal concentration, 50%) or LCt50 is a toxic unit that measures the lethal dose of a given substance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LD50” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:11.699Z",
+   "target": "f25862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mithridatism is the practice of protecting oneself against a poison by gradually self-administering non-lethal amounts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mithridatism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:11.699Z",
+   "target": "f25863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mathieu Orfila",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mathieu Orfila” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:11.699Z",
+   "target": "f25864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Acetylcysteine or N-acetylcysteine (NAC) is a mucolytic that is used to treat paracetamol (acetaminophen) overdose and to loosen thick mucus in individuals with chronic bronchopulmonary disorders, such as pneumonia and bronchitis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “acetylcysteine” is on the snapshot of s5"
+  }
+ ]
+}

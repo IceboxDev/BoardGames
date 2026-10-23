@@ -1,0 +1,202 @@
+{
+ "article": "a1930",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kimberley_Process_Certification_Scheme",
+   "title": "Kimberley Process Certification Scheme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:15.653Z",
+   "snapshot": "7670771e26d4d1d0118e79108e30ba37378b4fe5bcfed51c258d550610572e36"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kashmir_Sapphire",
+   "title": "Kashmir Sapphire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:16.562Z",
+   "snapshot": "efacb3a032ec10db061477fd92e875e0d6a651b42b6b3568f7bdf1f1bac328dc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tanzanite",
+   "title": "Tanzanite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:17.539Z",
+   "snapshot": "1f3e5bb3f395f82d809dc3861dc793e58ce2439b4c31d6fe9d2ce609fe0b5ee0"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Korund",
+   "title": "Korund",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:31:16.750Z",
+   "snapshot": "7833510d136a26d769f48272b753a175e5a3ba36ad241692d435f5be44d56239"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mogok",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:18.551Z",
+   "snapshot": "7bcd2a6f97cd502c6a8042bcae409e76368f0adbfe7935d3496b4bebf8086fd6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "diamonds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sapphire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tanzanite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Korund",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-019"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:47.859Z",
+   "target": "f09646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Kimberley Process Certification Scheme (KPCS) is the process established in 2003 to prevent \"conflict diamonds\" from entering the mainstream rough diamond market.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diamonds” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:47.859Z",
+   "target": "f09648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kashmir sapphire is a rare and highly prized variety of blue sapphire known for its rich, velvety hue and exceptional transparency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sapphire” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:47.859Z",
+   "target": "f09650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tanzanite is the blue and violet variety of the mineral zoisite (a calcium aluminium hydroxyl sorosilicate).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tanzanite” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:47.859Z",
+   "target": "f10927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Korund ist ein relativ häufig vorkommendes Mineral aus der Mineralklasse der Oxide und Hydroxide.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Korund” is on the snapshot of s4"
+  }
+ ]
+}

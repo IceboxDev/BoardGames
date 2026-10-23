@@ -1,0 +1,281 @@
+{
+ "article": "a2469",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Les_Paul",
+   "title": "Les Paul",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:49.667Z",
+   "snapshot": "204699229fbf5af2718583fb58fece2d0de71438422a6a194bde589dcaa62204"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Leo_Fender",
+   "title": "Leo Fender",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:50.270Z",
+   "snapshot": "02a38ae6ee6ed7a246de54e7757e59f6382e1900ddbd45b3c7d77ae6f6fee675"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Frying_pan_(guitar)",
+   "title": "Frying pan (guitar) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:53.037Z",
+   "snapshot": "f7eef9e54e5c13292efc74a300f1d6d7cd6db548c759f6d052011843c3e0a272"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Les_Paul",
+   "title": "Les Paul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:54.306Z",
+   "snapshot": "c88a3ef7115a30651bd60f6e485c1fea0906da794642359341c7fc5ed000c49c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fender_Telecaster",
+   "title": "Fender Telecaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:55.188Z",
+   "snapshot": "64a0eba6b5b7eacb481d9995dc1f03de6e590bae22d75de2d93b807303cb7001"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Les Paul",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-322"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saxophon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-239"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Frying Pan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Log",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Telecaster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gibson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:24.867Z",
+   "target": "f13019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Außerdem war er maßgeblich an der Weiterentwicklung der elektrischen Gitarre beteiligt; die von ihm entworfene und von der Firma Gibson gebaute Solidbody-E-Gitarre zählt zu den berühmtesten Modellen überhaupt und wird nach ihm Gibson Les Paul genannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.867Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Paul” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:24.867Z",
+   "target": "f13020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Leo Fender wollte selbst nie Gitarre spielen lernen, hatte aber in der Highschool Saxophon gespielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.867Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saxophon” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:24.867Z",
+   "target": "f13021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rickenbacker Electro A-22, nicknamed the \"Frying Pan\", is the first electric lap steel guitar, also widely considered the first commercially successful electric guitar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.867Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frying Pan” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:24.867Z",
+   "target": "f13022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He was one of the pioneers of the solid-body electric guitar, and his prototype, called the Log, served as inspiration for the Gibson Les Paul.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.867Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Log” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:24.867Z",
+   "target": "f13023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Fender Telecaster, colloquially known as the Tele, is an electric guitar produced by Fender.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.867Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telecaster” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:24.867Z",
+   "target": "f13024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He was one of the pioneers of the solid-body electric guitar, and his prototype, called the Log, served as inspiration for the Gibson Les Paul.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.867Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gibson” is on the snapshot of s4"
+  }
+ ]
+}

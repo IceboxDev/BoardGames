@@ -1,0 +1,249 @@
+{
+ "article": "a1441",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/West_Side_Story",
+   "title": "West Side Story – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:35.430Z",
+   "snapshot": "25ee58f1913805bba341b843169ccdafb0c718123284e1f8e6f007e73e8b91b7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/On_the_Town_(musical)",
+   "title": "On the Town (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:36.477Z",
+   "snapshot": "527a3a35bd662fd01b525b21617ea14564b134749bc7162fd63423e099119250"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/My_Fair_Lady",
+   "title": "My Fair Lady – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:37.478Z",
+   "snapshot": "e3a84db60ad45b10fceaebe5f63a69bfa29ddeed1f14c797d8674d1b07f9fade"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fiddler_on_the_Roof",
+   "title": "Fiddler on the Roof – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:38.471Z",
+   "snapshot": "e4ae6b46f0d60e17d7ecbd2c6c84898e1dd488fe27e62751b1612206a0de2c46"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Evita_(musical)",
+   "title": "Evita (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:34.328Z",
+   "snapshot": "1939a0904d048538c45af45e2e20866dcf05eb4edfcfcf8310443338e59229be"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Frederick_Loewe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:39.342Z",
+   "snapshot": "5494b70ae492bf19bb3906bd55241bf0c897e933a672bf5dd1bef8f2724a8dbd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "West Side Story",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On the Town",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "My Fair Lady",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fiddler on the Roof",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Evita",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:26.704Z",
+   "target": "f07201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "West Side Story is a musical conceived by Jerome Robbins with music by Leonard Bernstein, lyrics by Stephen Sondheim, and a book by Arthur Laurents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “West Side Story” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:26.704Z",
+   "target": "f07202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On the Town is a musical with music by Leonard Bernstein and book and lyrics by Betty Comden and Adolph Green, based on Jerome Robbins' idea for his  1944 ballet Fancy Free, which he had set to Bernstein's music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “On the Town” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:26.704Z",
+   "target": "f07203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "My Fair Lady is a musical with a book and lyrics by Alan Jay Lerner and music by Frederick Loewe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “My Fair Lady” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:26.704Z",
+   "target": "f07204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fiddler on the Roof is a musical with music by Jerry Bock, lyrics by Sheldon Harnick, and book by Joseph Stein, set in the Pale of Settlement of Imperial Russia in or around 1905.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fiddler on the Roof” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:26.704Z",
+   "target": "f07205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Evita is a sung-through musical with music by Andrew Lloyd Webber and lyrics by Tim Rice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:26.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evita” is on the snapshot of s5"
+  }
+ ]
+}

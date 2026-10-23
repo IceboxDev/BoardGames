@@ -1,0 +1,249 @@
+{
+ "article": "a1144",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day",
+   "title": "Terminator 2: Judgment Day – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:36.362Z",
+   "snapshot": "78b17023e5fe814b9e36f044a9268c091d0efc2b23cda1afbf7bce0ccb5e953a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hasta_la_vista,_baby",
+   "title": "Hasta la vista, baby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:37.177Z",
+   "snapshot": "b244175520b25a3fdbaf806ff2c1de932a3d8b39018c9a5095c49d02429179c8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Winston_Groom",
+   "title": "Winston Groom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:38.201Z",
+   "snapshot": "aef17418a33cf83e237b4e2dce4a879f0445e4d1e5d70e7d05e1f031416e32ae"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Forrest_Gump",
+   "title": "Forrest Gump – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:22.244Z",
+   "snapshot": "fd650f7ffab9e1de7ae233e672f8a3bd0f2c40682de1f505af43c64277c3c45c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Sixth_Sense",
+   "title": "The Sixth Sense – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:39.613Z",
+   "snapshot": "9199398b60ae5929a0573a126bb12d27dc70316418913175a1604b7aff255af3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Godfather",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:25.310Z",
+   "snapshot": "45c0145f83fb312c311368ec0879a53231324353cbba5f8c1f065359c246eee3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Terminator 2: Judgment Day",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f21080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jody Watley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f21081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winston Groom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Savannah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "M. Night Shyamalan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:39.472Z",
+   "target": "f05716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Terminator 2: Judgment Day is a 1991 American science fiction action film directed by James Cameron, who co-wrote the script with William Wisher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Terminator 2: Judgment Day” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:39.472Z",
+   "target": "f21080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "This term, with the added word \"baby\"—\"Hasta la vista, baby\"—was later used in a popular hit song from 1987, \"Looking for a New Love\" by Grammy Award winner Jody Watley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jody Watley” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:39.472Z",
+   "target": "f21081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Audio interview with Winston Groom at National Review Online",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winston Groom” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:39.472Z",
+   "target": "f21082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1981, a feather lands at a bus stop in Savannah, Georgia; Forrest Gump collects it, then recounts his life story to strangers on a bus bench.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Savannah” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:39.472Z",
+   "target": "f21083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Sixth Sense is a 1999 American psychological thriller film written and directed by M. Night Shyamalan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:39.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “M. Night Shyamalan” is on the snapshot of s5"
+  }
+ ]
+}

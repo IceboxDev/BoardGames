@@ -1,0 +1,242 @@
+{
+ "article": "a1313",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Andre_Agassi",
+   "title": "Andre Agassi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:11.376Z",
+   "snapshot": "f9e1566abf7451005b518b4128ec2c03b12ae1c04ed61d9f51e5aea3a4be505d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Brooke_Shields",
+   "title": "Brooke Shields – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:12.374Z",
+   "snapshot": "dfda66fb0d0db779b9d333885e3370cbf511f68d8177f09e6271b282789319e3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chris_Evert",
+   "title": "Chris Evert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:13.228Z",
+   "snapshot": "6d1cc24c1ab8f6b5284079d4857c6af354d5c8ed661a774ca8fcffb16a9e18f9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mariana_Simionescu",
+   "title": "Mariana Simionescu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:14.140Z",
+   "snapshot": "724ce7647e178597f7a036d761b0c490c121dcbfc7f4215e2b989e4161c324e3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Alexis_Ohanian",
+   "title": "Alexis Ohanian – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:15.286Z",
+   "snapshot": "b64f0b6f4875bfaf3085ff025595ce6904fdb7ab3e30f1b19d4b2f44b9ae8edd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andre Agassi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brooke Shields",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Lloyd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mariana Simionescu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alexis Ohanian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:04.800Z",
+   "target": "f06561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Outside of tennis, he is the founder of the Andre Agassi Charitable Foundation, which has raised over $60 million for at-risk children in Southern Nevada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andre Agassi” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:04.800Z",
+   "target": "f06562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The main headline on the cover read, \"Meet Teri and Brooke Shields\" while the subtitle read, \"Brooke is twelve.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brooke Shields” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:04.800Z",
+   "target": "f06563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1979, Evert married British tennis player John Lloyd and changed her name to Chris Evert Lloyd.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Lloyd” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:04.800Z",
+   "target": "f06564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mariana Simionescu (born 27 November 1956) is a retired tennis player from Romania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mariana Simionescu” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:04.800Z",
+   "target": "f06565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The following day, a moderator of IAmA posted that \"Chooter (Victoria) was let go as an admin by u/kn0thing [Alexis Ohanian]\", an assertion that was not widely reported on.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:04.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexis Ohanian” is on the snapshot of s5"
+  }
+ ]
+}

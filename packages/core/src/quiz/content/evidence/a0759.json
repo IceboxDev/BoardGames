@@ -1,0 +1,249 @@
+{
+ "article": "a0759",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Friedrich_Schinkel",
+   "title": "Karl Friedrich Schinkel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:20.278Z",
+   "snapshot": "7f1b2b9d9c426126c3abf995a8e039feb08cb8537564c690e5c7d484673fd829"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Carl_Gotthard_Langhans",
+   "title": "Carl Gotthard Langhans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:17.475Z",
+   "snapshot": "d4d899a71ea306084300a6241adcf0b5e64fdf3e850517df7426f273ab80fd50"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Wenzeslaus_von_Knobelsdorff",
+   "title": "Georg Wenzeslaus von Knobelsdorff – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:21.366Z",
+   "snapshot": "f3204c426c22fd672915c6bdbb578aff29c790cc91b55a3506a0d4153fb578fb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Neues_Museum",
+   "title": "Neues Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:22.303Z",
+   "snapshot": "e845baf4e114a580922c8de54dd9c9017f0b9d1085bea7688bd40fa05d7dd0cc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Walhalla_(memorial)",
+   "title": "Walhalla (memorial) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:23.423Z",
+   "snapshot": "74615d31b085dcd9497893a18b1faab1d05bffc945ae16abb9aca54db1bf46c6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/New_Synagogue_(Berlin)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:24.320Z",
+   "snapshot": "63e6ff12306474155f240b54ec959d5a2a65909a6d68703638fcb17fe0187cca"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Friedrich Schinkel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Gotthard Langhans",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georg Wenzeslaus von Knobelsdorff",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich August Stüler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leo von Klenze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:40.611Z",
+   "target": "f03791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karl Friedrich Schinkel (German pronunciation: [ˈkaʁl ˈfʁiːdʁɪç ˈʃɪŋkl̩]; 13 March 1781 – 9 October 1841) was a Prussian architect, city planner and painter who also designed furniture and stage sets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.611Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Friedrich Schinkel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:40.611Z",
+   "target": "f03792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Gotthard Langhans war ein Sohn des Konrektors, später Prorektors, Gottfried Langhans († 1763) der evangelischen Schulen in Landeshut und Schweidnitz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.611Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Gotthard Langhans” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:40.611Z",
+   "target": "f03793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "(Hans) Georg Wenzeslaus von Knobelsdorff (17 February 1699 – 16 September 1753) was a painter, military officer, and architect in Prussia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.611Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Wenzeslaus von Knobelsdorff” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:40.611Z",
+   "target": "f03794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Built from 1843 to 1855 by order of King Frederick William IV of Prussia in Neoclassical and Renaissance Revival styles, it is considered as the major work of Friedrich August Stüler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.611Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich August Stüler” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:40.611Z",
+   "target": "f03795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Following his accession to the throne of Bavaria, construction took place between 1830 and 1842 under the supervision of the architect Leo von Klenze.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.611Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leo von Klenze” is on the snapshot of s5"
+  }
+ ]
+}

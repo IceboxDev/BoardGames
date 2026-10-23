@@ -1,0 +1,249 @@
+{
+ "article": "a0760",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Miami_Vice_(film)",
+   "title": "Miami Vice (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:25.315Z",
+   "snapshot": "e8e88580bc111bb9c9fccc6c710d9fd5605dae81ce4b8a73b26a0209225b284b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Starsky_%26_Hutch",
+   "title": "Starsky & Hutch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:26.407Z",
+   "snapshot": "29ab0d4b22d8b1af836d0cfd9a9978f12c7b425483a7437db9cecf405fd9c346"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_A-Team",
+   "title": "The A-Team – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:27.395Z",
+   "snapshot": "69321b70b99cb519c36fd25b4013e9ae3cb9eaa1e5935a1acc5c695e5b1be11f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/21_Jump_Street_(film)",
+   "title": "21 Jump Street (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:28.283Z",
+   "snapshot": "12263596a8e2498e98fa1c9f9c46639d8e16c9e6cc07039b1d21c9942090dd51"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charlie%27s_Angels",
+   "title": "Charlie's Angels – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:29.321Z",
+   "snapshot": "1b50af0a7a11d1f3947122b9d2ddb9bec44b935a8d0889237c81a945e598c74b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Miami_Vice",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:30.487Z",
+   "snapshot": "7e173c7bf8681acf1b00bd5fcbb7c6082f38e8e556153704ccff6a9e5b625d4d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Miami Vice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Starsky & Hutch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The A-Team",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "21 Jump Street",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charlie's Angels",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:40.778Z",
+   "target": "f03796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Miami Vice is a 2006 crime action film produced, written, and directed by Michael Mann.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miami Vice” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:40.778Z",
+   "target": "f03797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Starsky & Hutch is an American action television series, which consisted of a 72-minute pilot movie (originally aired as a Movie of the Week entry) and 92 episodes of 50 minutes each.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Starsky & Hutch” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:40.778Z",
+   "target": "f03798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The A‑Team is an American action‑adventure television series that aired on NBC from January 23, 1983 to March 8, 1987.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The A-Team” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:40.778Z",
+   "target": "f03799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "21 Jump Street is a 2012 American buddy cop action comedy film directed by Phil Lord and Christopher Miller in their live-action directorial debuts and written by Michael Bacall, based on a story by Bacall and Jonah Hill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “21 Jump Street” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:40.778Z",
+   "target": "f03800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charlie's Angels is an American crime drama television series created by Ivan Goff and Ben Roberts for ABC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:40.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlie's Angels” is on the snapshot of s5"
+  }
+ ]
+}

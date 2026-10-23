@@ -1,0 +1,262 @@
+{
+ "article": "a2772",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kurtosis",
+   "title": "Kurtosis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:35.443Z",
+   "snapshot": "6be8f60a4ccbed3d4705485d747e5bd3e06d379720ded643f598fa8aac1dd993"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mode_(statistics)",
+   "title": "Mode (statistics)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:36.188Z",
+   "snapshot": "15a14719d8089f302b8dceba7f6ca6f095496677ad7b5629fdc73e2acf043217"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Median",
+   "title": "Median",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:37.300Z",
+   "snapshot": "90652c2d62c58cacf28d74ccb5cfe0b298336773ba77838e5a67773c522cf061"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Standard_deviation",
+   "title": "Standard deviation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:38.408Z",
+   "snapshot": "2770ab013e2a0b80d3f9701a9dc23952ce3778da99acc15220789fe5ce90ef30"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Pearson",
+   "title": "Karl Pearson",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:39.243Z",
+   "snapshot": "6dd898840805a3470f5945bf52cdc9a54f9bfa6dea62980de24ec512f6666558"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25844",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Median",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "standard deviation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Karl Pearson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurtosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-022/2, u03: Kurtosis (fourth standardized moment) measures tailedness. The card's 'flatness/peakedness' reading is a known misconception (Westfall 2014). Our wording and notes already say so."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:11.439Z",
+   "target": "f25843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurtosis",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:31:11.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:11.439Z",
+   "target": "f25843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurtosis (from Greek: κυρτός (kyrtos or kurtos), meaning 'curved, arching') refers to the degree of tailedness in the probability distribution of a real-valued, random variable in probability theory and statistics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurtosis” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:11.439Z",
+   "target": "f25844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In statistics, the mode is the value that appears most often in a set of data values.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mode” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:11.439Z",
+   "target": "f25845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The median of a set of numbers is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Median” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:11.439Z",
+   "target": "f25846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In statistics, the standard deviation is a measure of the amount of variation of the values of a variable about its (arithmetic) average.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “standard deviation” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:11.439Z",
+   "target": "f25848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Karl Pearson (; 27 March 1857 – 27 April 1936) was an English biostatistician and mathematician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:11.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Pearson” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,355 @@
+{
+ "article": "a0961",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky",
+   "title": "Pyotr Ilyich Tchaikovsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:59.037Z",
+   "snapshot": "108bfd4ddde03b95294386a747c45caa8217f81194d572e1c20749ffb4306b45"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet_(Prokofiev)",
+   "title": "Romeo and Juliet (Prokofiev) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:00.076Z",
+   "snapshot": "76f1ac5c92e02b5e7a85f74917b6cf369cdf4f09c8d6068878b9deb9db616fb4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Rite_of_Spring",
+   "title": "The Rite of Spring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:01.217Z",
+   "snapshot": "6497c9d1fcff485de46beb9f78067d0d1b7096661ddeb5d962f668cdb755f9fa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Copp%C3%A9lia",
+   "title": "Coppélia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:01.976Z",
+   "snapshot": "c9eb9789e0085cb96ab50330a1bfabed177ef33c04cec7e10ee929f193992481"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Giselle",
+   "title": "Giselle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:03.215Z",
+   "snapshot": "ed0055879d2730e39b13db860cd665d4798b43614892e170d7cbe15f2a48041b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Swan_Lake",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:04.243Z",
+   "snapshot": "c652b154800f676f73cee1dd850bc0456a7233ba5a94a496eef3f2de7e2d7bee"
+  },
+  "s7": {
+   "url": "https://www.abt.org/ballet/giselle/",
+   "title": "Giselle – American Ballet Theatre",
+   "publisher": "American Ballet Theatre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:53.677Z",
+   "snapshot": "ed2c11d12f9545a3e2624a7d7a92ac554a22b3a4ac8d4e785f24ef1ef8fa88d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Swan Lake, The Sleeping Beauty and The Nutcracker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Romeo and Juliet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rite of Spring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Coppélia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giselle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:11.712Z",
+   "target": "f04801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "most popular concert and theatrical music in the classical repertoire, including the 1812 Overture, his First Piano Concerto, the Violin Concerto, the Romeo and Juliet Overture-Fantasy, several symphonies, the opera Eugene Onegin, and the ballets Swan Lake, The Sleeping Beauty and The Nutcracker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Swan Lake, The Sleeping Beauty and The Nutcracker” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:11.712Z",
+   "target": "f04802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Romeo and Juliet (Russian: Ромео и Джульетта, romanized: Romeo i Dzhulyetta), Op.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romeo and Juliet” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:11.712Z",
+   "target": "f04803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rite of Spring (French: Le Sacre du printemps) is a ballet and orchestral concert work by the Russian composer Igor Stravinsky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Rite of Spring” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:11.712Z",
+   "target": "f04804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Coppélia (sometimes subtitled: La Fille aux Yeux d'Émail (The Girl with the Enamel Eyes)) is a comic ballet from 1870 originally choreographed by Arthur Saint-Léon to the music of Léo Delibes, with libretto by Charles-Louis-Étienne Nuitter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coppélia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:11.712Z",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giselle ( jiz-EL, French: [ʒizɛl] ), originally titled Giselle, ou les Wilis (French: [ʒizɛl u le vili]; Giselle, or The Wilis), is a romantic ballet (ballet-pantomime) in two acts with music by Adolphe Adam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.712Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giselle” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:59:55Z",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Giselle A Romantic Ballet in Two Acts Choreography after Jean Coralli, Jules Perrot, and Marius Petipa",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Identity (Adam, 1841, Wilis) is unambiguous; the 'most famous' superlative is evaluative but uncontroversial."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:59:58Z",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is a romantic ballet (ballet-pantomime) in two acts with music by Adolphe Adam. Considered a masterwork in the classical ballet performance canon",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:41.557Z",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Giselle A Romantic Ballet in Two Acts Choreography after Jean Coralli, Jules Perrot, and Marius Petipa",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:41.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:41.557Z",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is a romantic ballet (ballet-pantomime) in two acts with music by Adolphe Adam. Considered a masterwork in the classical ballet performance canon",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:41.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:41.557Z",
+   "target": "f04805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Christine Shevchenko in Giselle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:41.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Giselle” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,409 @@
+{
+ "article": "a2533",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Abakus_(Rechenhilfsmittel)",
+   "title": "Abakus (Rechenhilfsmittel)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:51.066Z",
+   "snapshot": "ec14fb4b6c79d2ecb6ba02a8674b9d240e04f7723c0af98acd6fbaea8f21b355"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system",
+   "title": "Hindu–Arabic numeral system",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:52.687Z",
+   "snapshot": "b7c88e9bfc4c681836adef4c47083899b5eed5bef5e693f35be3b3b55cc873e3"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Multiplikation",
+   "title": "Multiplikation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:52.310Z",
+   "snapshot": "26123b01ede7f433bc9dcb03dadaf6c3cd8caa2c5918e5b3a2443863a25e25d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Obelus",
+   "title": "Obelus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:53.634Z",
+   "snapshot": "c28b4da23361a453e00d64701946a4d510391492591eee95172658130a5be32b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fibonacci",
+   "title": "Fibonacci – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:54.671Z",
+   "snapshot": "b6163cad6cfc2258b0845b4d9edee49044d54aa2748a820b015c49eae79356dc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Riemann_sphere",
+   "title": "Riemann sphere",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:55.945Z",
+   "snapshot": "01e3f18b3489f401c74856488695c325b730c7dab759bd6a51eb90e5714b55e5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Multiplication_sign",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:56.674Z",
+   "snapshot": "26eb17ffb50b34c7ac1ca5dea59e29174e7521372ef201c0a627323085b483e2"
+  },
+  "s8": {
+   "url": "https://www.mathsisfun.com/definitions/quotient.html",
+   "title": "Quotient – Definition",
+   "publisher": "Math is Fun",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.425Z",
+   "snapshot": "c98226f8c3c20bf7e16c9d38af11820ac45a044814db925093a6916cecac47cd"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Quotient",
+   "title": "Quotient",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:58.792Z",
+   "snapshot": "79f44bed0fcf74f0379481cd706c642df2c3e400628df35bfa6b03af92dbc260"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abakus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-163"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Multiplikation",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-184"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "quotient",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fibonacci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The extended complex plane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-087"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.397Z",
+   "target": "f13512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Abakus (Mehrzahl Abakusse oder Abaki) ist ein einfaches mechanisches Rechenhilfsmittel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abakus” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.397Z",
+   "target": "f13513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Indian numerals in use with scripts of the Brahmic family in India and Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.397Z",
+   "target": "f13514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Multiplikation (lateinisch multiplicatio, von multiplicare ‚vervielfachen‘, auch Malnehmen genannt) ist eine der vier Grundrechenarten in der Arithmetik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Multiplikation” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.397Z",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "quotient",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“quotient”, “Quotient”, “частное”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:35.397Z",
+   "target": "f13517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1240-50), commonly known as Fibonacci, was an Italian mathematician from the Republic of Pisa, considered to be \"the most talented Western mathematician of the Middle Ages\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fibonacci” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:35.397Z",
+   "target": "f25399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In mathematics, the Riemann sphere, named after Bernhard Riemann, is a model of the extended complex plane (also called the closed complex plane): the complex plane plus one point at infinity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The extended complex plane” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:12:53Z",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The answer after we divide one value by another. dividend ÷ divisor = quotient.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:12:54Z",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is a quantity produced by the division of two numbers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:19.144Z",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is a quantity produced by the division of two numbers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:19.144Z",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Quotient Definition (Illustrated Mathematics Dictionary)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “quotient” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:19.144Z",
+   "target": "f13516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In arithmetic, a quotient (from Latin: quotiens 'how many times', pronounced ) is a quantity produced by the division of two numbers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “quotient” is on the snapshot of s9"
+  }
+ ]
+}

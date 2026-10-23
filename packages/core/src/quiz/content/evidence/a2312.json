@@ -1,0 +1,558 @@
+{
+ "article": "a2312",
+ "sources": {
+  "s1": {
+   "url": "https://es.wikipedia.org/wiki/Agricultura_intensiva_de_la_provincia_de_Almer%C3%ADa",
+   "title": "Agricultura intensiva de la provincia de Almería – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:53:13.890Z",
+   "snapshot": "626ef9932ffd936ae368c37dd6eed15d464322bb2bad6ffc2b2753fff8c2b750"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/El_Ejido",
+   "title": "El Ejido – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:14.116Z",
+   "snapshot": "c0ff05af985c93761585e006c05781b47220943558a3811969a04294d25526c8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Province_of_Almer%C3%ADa",
+   "title": "Province of Almería – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:17.560Z",
+   "snapshot": "348b987914598322c2270625e1434553bfb101ca8040fdb0b3cfb50e68538ceb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tabernas_Desert",
+   "title": "Tabernas Desert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:18.586Z",
+   "snapshot": "454306bc8005392e324ccaaee13f6b553aab3881878c3247a5e618b4a1483b44"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/El_Ejido",
+   "title": "El Ejido – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:19.510Z",
+   "snapshot": "f8355a9d37968eaf9c7d03663ad260bd189d695819f218f393d069b598d8d025"
+  },
+  "s6": {
+   "url": "https://www.theguardian.com/global-development/2020/sep/20/we-pick-your-food-migrant-workers-speak-out-from-spains-plastic-sea",
+   "title": "We pick your food: migrant workers speak out from Spain’s Plastic Sea",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:14.659Z",
+   "snapshot": "22f0f8211280dfacd6990fb9cca255da2f74202f65e6f51927c9e1c46685b133"
+  },
+  "s7": {
+   "url": "https://www.nationalgeographic.com/travel/article/tabernas-spain-desert-wild-west-town",
+   "title": "Why visit Tabernas, home to Europe's only desert",
+   "publisher": "National Geographic",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:15.490Z",
+   "snapshot": "b8d9f387faea8dd94baab2da7aafa6d5bf80eaf733e3df8d0acdb1442b071dc1"
+  },
+  "s8": {
+   "url": "http://www.andalucia.com/environment/protect/tabernas.htm",
+   "title": "Desierto de Tabernas Natural Area",
+   "publisher": "Andalucia.com",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:15.112Z",
+   "snapshot": "5749eece87a5534d0b2c8e9a86a2c8fbf3d4c279d3e8e6972c2f6acc42f202e9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greenhouses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gewächshäuser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7; transcript tp-071"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Andalusia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tabernas Desert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "El Ejido",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sea of Plastic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:54.555Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greenhouses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Greenhouses”, “Gewächshäuser”, “теплицы”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:54.555Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gewächshäuser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Gewächshäuser”, “Greenhouses”, “теплицы”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:54.555Z",
+   "target": "f11967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Province of Almería (, also US: ; Spanish: [almeˈɾi.a]) is a province of the autonomous community of Andalusia in Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andalusia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:54.555Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Tabernas Desert (Spanish: Desierto de Tabernas) is a desert located within Spain's south-eastern province of Almería.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tabernas Desert” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:54.555Z",
+   "target": "f11969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "El Ejido (Spanish pronunciation: [el eˈxiðo]) is a municipality of Almería province, in the autonomous community of Andalusia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Ejido” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:54.555Z",
+   "target": "f11970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Currently, the greenhouse area of El Ejido and the rest of Poniente Almeria is known as La Huerta de Europa (The Garden of Europe) and El Mar de Plastico (The Sea of Plastic).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sea of Plastic” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:49:54Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La superficie invernada ha ido creciendo desde 2009 y en 2015 superó las 30.230 hectáreas.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Greenhouse area >30,000 ha since 2015, so \"more than 26,000 hectares\" holds."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:49:58Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the 31,000 hectares (76,600 acres) of farms and greenhouses in the region of Andalucía known as “Europe’s garden”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:50:03Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tabernas is the only desert within Europe, since most of its area has a desert climate.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:50:06Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "home to Europe’s only desert — now sees the landscape sharing equal billing with the old spaghetti westerns.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:50:09Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the desert has been the scene of many a spaghetti western",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Calls it \"the only semi-desert in Europe\" — the \"only desert\" label is common but some say semi-desert; the wording says \"considered\"."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La superficie invernada ha ido creciendo desde 2009 y en 2015 superó las 30.230 hectáreas.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the 31,000 hectares (76,600 acres) of farms and greenhouses in the region of Andalucía known as “Europe’s garden”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tabernas is the only desert within Europe, since most of its area has a desert climate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "home to Europe’s only desert — now sees the landscape sharing equal billing with the old spaghetti westerns.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the desert has been the scene of many a spaghetti western",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is the end of another day for Hassan, a migrant worker from Morocco who has spent the past 12 hours under a sweltering late summer sun harvesting vegetables in one of the vast greenhouses of Almería, southern Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Greenhouses” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tabernas Desert — the only in Europe — has served as the backdrop to many notable films throughout the decades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tabernas Desert” is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:40.299Z",
+   "target": "f11968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tabernas desert is one of the most geologically interesting landscapes in Europe, since it clearly shows the process of natural desertification and erosion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:40.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tabernas Desert” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "article": "a0217",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Andrew_Lloyd_Webber",
+   "title": "Andrew Lloyd Webber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:10.030Z",
+   "snapshot": "0b68b6b184b053e1fa691dd7cbc3cf0c4b33114d67499d9e4396513020c4d5ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables_(musical)",
+   "title": "Les Misérables (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:11.066Z",
+   "snapshot": "c76ed00131ec072b274567262354403d5cec59d73b317d55487bd666d14573b5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Candide_(operetta)",
+   "title": "Candide (operetta) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:11.901Z",
+   "snapshot": "f93c33e0d60413db991c85514b5cef6d16b90a4c6bf233e8bc6320fb1afae068"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Stephen_Sondheim",
+   "title": "Stephen Sondheim – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:13.353Z",
+   "snapshot": "c45e9e0452ec2708d6290025299c264e0b794dc6ed6a54d837c8f88b0faa5ce3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Oklahoma!",
+   "title": "Oklahoma! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:14.112Z",
+   "snapshot": "6bf5ba56a15016ad5b7956985cc4b7428a61bc870f7ed1a5ee50e4800d98ce09"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hair",
+   "title": "Hair",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:11.334Z",
+   "snapshot": "7f37739f0dbcd59ecedbd7d363ed209b3b05ce56f3f4c8478ac5f5fad7be0825"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Leonard_Bernstein",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:15.072Z",
+   "snapshot": "de232d57bedf81cae5af4780b76c4109977579574192acb9445f2a463d798bd8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andrew Lloyd Webber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Claude-Michel Schönberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonard Bernstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stephen Sondheim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Richard Rodgers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Galt MacDermot",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-236"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:13.583Z",
+   "target": "f01081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andrew Lloyd Webber, Baron Lloyd-Webber (born 22 March 1948) is an English composer and impresario of musical theatre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andrew Lloyd Webber” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:13.583Z",
+   "target": "f01082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The musical was conceived in the late 1970s by French librettist Alain Boublil, and the original French work features music by Claude-Michel Schönberg, lyrics by Boublil and Jean-Marc Natel, and a book by Boublil and Schönberg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claude-Michel Schönberg” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:13.583Z",
+   "target": "f01083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Candide is an operetta with music composed by Leonard Bernstein and lyrics primarily by the poet Richard Wilbur, based on the 1759 novella of the same name by Voltaire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonard Bernstein” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:13.583Z",
+   "target": "f01084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The only child of affluent parents living in the San Remo at 145 Central Park West, he was described in Stephen Sondheim: A Life as an isolated, emotionally neglected child.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stephen Sondheim” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:13.583Z",
+   "target": "f01085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She contacted Richard Rodgers and Lorenz Hart, whose first successful collaboration, The Garrick Gaieties, had been produced by the Theatre Guild in 1925.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Rodgers” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:13.583Z",
+   "target": "f13184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Buch und Liedtexte stammen von Gerome Ragni und James Rado, die Musik ist von Galt MacDermot.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galt MacDermot” is on the snapshot of s6"
+  }
+ ]
+}

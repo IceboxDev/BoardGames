@@ -1,0 +1,241 @@
+{
+ "article": "a2691",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Climate_Reality_Project",
+   "title": "The Climate Reality Project",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:01.214Z",
+   "snapshot": "4fac92a9ce14f8bce4a370501503a7f20987ef5464a621682ce02134ea06101d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Carter_Center",
+   "title": "The Carter Center – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:02.152Z",
+   "snapshot": "8db3acc759f6ce524cce038e67a0611e161e40a0f98b7731398658d8b9c10bdd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gorbachev_Foundation",
+   "title": "Gorbachev Foundation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:03.169Z",
+   "snapshot": "557c66f3cec02feaa71fc0421cd97a4cfd9de39f1902df1cf2dfdfe0bb135a14"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tony_Blair_Institute_for_Global_Change",
+   "title": "Tony Blair Institute for Global Change – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:04.320Z",
+   "snapshot": "ebbda181be3626fc78a050edca77845d30337ff0fe2946de83486e4f0845bbc9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dracunculiasis",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:05.237Z",
+   "snapshot": "3b17c829a067e50c1496088be2ca86fe34394481c3d01440e8ba583891dc7804"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Al Gore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-392"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jimmy Carter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guinea worm disease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mikhail Gorbachev",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tony Blair",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:58.198Z",
+   "target": "f14652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Climate Reality Project came into being in July 2011 as the consolidation of two environmental groups, the Alliance for Climate Protection and The Climate Project, both of which were founded by Al Gore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Al Gore” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:58.198Z",
+   "target": "f14653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The center is located in a shared building adjacent to the Jimmy Carter Library and Museum on 37 acres (150,000 m2) of parkland, on the site of the razed neighborhood of Copenhill, two miles (3 km) from downtown Atlanta, Georgia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jimmy Carter” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:58.198Z",
+   "target": "f14654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1993, John Hardman was appointed executive director, and during the 1990s the center received several multimillion-dollar donations to fight Guinea worm disease and to prevent blindness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guinea worm disease” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:58.198Z",
+   "target": "f14655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Gorbachev Foundation (GF, officially the Non-Governmental Foundation for Socio-Economic and Political Studies) is a non-profit organization headquartered in Moscow, founded by the former Soviet leader Mikhail Gorbachev in December 1991.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Gorbachev” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:58.198Z",
+   "target": "f14656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tony Blair Institute for Global Change",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.198Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tony Blair” is on the snapshot of s4"
+  }
+ ]
+}

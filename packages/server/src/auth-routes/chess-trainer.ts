@@ -13,7 +13,10 @@
 //   GET    /library              the member's folders and saved lines
 //   PUT    /library              save them whole (409 when another tab saved first)
 //   POST   /evals {items}        deep evaluations for tree positions: known ones now, the rest queued
+//   POST   /evals/queue {items}  where waiting positions stand in the farm's queue (for an ETA)
 //                                for the analysis farm (see chess-farm.ts)
+//   POST   /explorer/lookup {fens}   the shared lichess explorer answers we already have
+//   POST   /explorer {entries}       keep answers this browser fetched from lichess
 //
 // The browser does all lichess traffic itself (export, explorer, cloud eval);
 // stored games are only shape-checked here — the tree builder replays them
@@ -21,6 +24,10 @@
 
 import { BEST_MOVE_SPEC } from "@boardgames/core/games/chess/trainer/eval-policy";
 import {
+  ChessExplorerLookupBodySchema,
+  ChessExplorerLookupResponseSchema,
+  ChessExplorerSaveBodySchema,
+  ChessExplorerSaveResponseSchema,
   ChessGamesPageSchema,
   ChessGamesQuerySchema,
   ChessLinkBodySchema,
@@ -28,6 +35,8 @@ import {
   ChessUploadGamesBodySchema,
   ChessUploadGamesResponseSchema,
   CreateRepertoireBodySchema,
+  EvalQueueBodySchema,
+  EvalQueueResponseSchema,
   EvalRequestBodySchema,
   EvalRequestResponseSchema,
   LibraryResponseSchema,
@@ -39,7 +48,8 @@ import {
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { farmStats, requestEvals } from "../lib/chess-trainer/farm-store.ts";
+import { lookupExplorer, saveExplorer } from "../lib/chess-trainer/explorer-cache.ts";
+import { farmStats, queuePlaces, requestEvals } from "../lib/chess-trainer/farm-store.ts";
 import {
   createRepertoire,
   deleteLink,
@@ -175,4 +185,22 @@ chessTrainerRoutes.post("/evals", zJsonBody(EvalRequestBodySchema), async (c) =>
   const { results, queued } = await requestEvals(db, c.get("user").id, BEST_MOVE_SPEC, items);
   const { done: _d, failed: _f, ...farm } = await farmStats(db);
   return c.json(EvalRequestResponseSchema.parse({ results, queued, farm }));
+});
+
+chessTrainerRoutes.post("/evals/queue", zJsonBody(EvalQueueBodySchema), async (c) => {
+  const { items } = c.req.valid("json");
+  const out = await queuePlaces(getDb(), BEST_MOVE_SPEC, items);
+  return c.json(EvalQueueResponseSchema.parse(out));
+});
+
+chessTrainerRoutes.post("/explorer/lookup", zJsonBody(ChessExplorerLookupBodySchema), async (c) => {
+  const { fens } = c.req.valid("json");
+  const found = await lookupExplorer(getDb(), fens);
+  return c.json(ChessExplorerLookupResponseSchema.parse({ results: Object.fromEntries(found) }));
+});
+
+chessTrainerRoutes.post("/explorer", zJsonBody(ChessExplorerSaveBodySchema), async (c) => {
+  const { entries } = c.req.valid("json");
+  const saved = await saveExplorer(getDb(), entries);
+  return c.json(ChessExplorerSaveResponseSchema.parse({ ok: true, saved }));
 });

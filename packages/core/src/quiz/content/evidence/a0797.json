@@ -1,0 +1,202 @@
+{
+ "article": "a0797",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Munchkin_(card_game)",
+   "title": "Munchkin (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:57.325Z",
+   "snapshot": "33033927571d632cca64fe7099efc7510ef8cc24708e7bd7a627df6dbb68f3ec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Exploding_Kittens",
+   "title": "Exploding Kittens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:12.096Z",
+   "snapshot": "78df6d20007b3dcbb10098fb566d87d845176d8c95a5cb067d69d7539525e42a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Uno_(card_game)",
+   "title": "Uno (card game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:09.225Z",
+   "snapshot": "769ceed359083eaa2b610de7eaedb755b44b87ff743bcefc446644fd68b402ab"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Charizard",
+   "title": "Charizard",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:58.330Z",
+   "snapshot": "cecf5e3b8763366af75d0464d5ddf31c258489ef001df3c03ac8e8ea760ee7d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Magic:_The_Gathering",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:10.272Z",
+   "snapshot": "bd720061fc79b16cb0adc0dc30c0b4d011a98e3ace5c0564f37164bf320ea6cb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Munchkin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Exploding Kittens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "UNO",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pokémon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-259"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:46.905Z",
+   "target": "f03981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Munchkin is a dedicated deck card game by Steve Jackson Games, written by Steve Jackson and illustrated by John Kovalic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Munchkin” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:46.905Z",
+   "target": "f03984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Exploding Kittens is a casual dedicated deck card game designed by Matthew Inman of The Oatmeal webcomic, Elan Lee and Shane Small, and first published in 2015.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exploding Kittens” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:46.905Z",
+   "target": "f03985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Uno ( ; from Spanish and Italian for 'one'), stylized in all caps as UNO, is a proprietary American shedding-type card game originally developed in 1971 by Merle Robbins in Reading, Ohio, a suburb of Cincinnati, that housed International Inc., a gaming company acquired by Mattel on January 23, 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “UNO” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:46.905Z",
+   "target": "f13947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charizard ( ), known in Japan as Lizardon (Japanese: リザードン, Hepburn: Rizādon), is a Pokémon in Nintendo and Game Freak's Pokémon franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pokémon” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "article": "a0328",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bob_the_Builder",
+   "title": "Bob the Builder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:25.301Z",
+   "snapshot": "89176f71479fc8a65343a9541d4bf63f79c6e24e557b61f3b9f28a604f5d2112"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sesamstra%C3%9Fe",
+   "title": "Sesamstraße – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:24.427Z",
+   "snapshot": "628fd50da3525c867b2688024e4b314708d588577dc93f9ddd160ca084d3538d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Benjamin_Bl%C3%BCmchen",
+   "title": "Benjamin Blümchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:23.596Z",
+   "snapshot": "9b04d973f80132248cafb6b41347d68def81ac74cb5d039d423b4641b7baaaec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Flintstones",
+   "title": "The Flintstones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:26.483Z",
+   "snapshot": "c0b108516331ce40d50b750c487bbe5b305474bcaf48f7615ff6066f8117e2ce"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/SpongeBob_SquarePants",
+   "title": "SpongeBob SquarePants – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:27.541Z",
+   "snapshot": "56916c3bdb2c3dee9a222b686575bfd7c30643d8d466508d16570731f03c1931"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bob_der_Baumeister",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:48:24.625Z",
+   "snapshot": "cf5f511bf1e37eb8e733d31851588dcba401f0a4dd632a82f31f3a063eff41d1"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Fred_Flintstone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:28.425Z",
+   "snapshot": "b1f5ef765c7438b29413db09a6cb5973f6e4d4c0e71c93ded1ce395fb8082144"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bob the Builder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sesamstraße",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Benjamin Blümchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Flintstones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SpongeBob SquarePants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:30.479Z",
+   "target": "f01636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bob the Builder is a British animated children's television series created by Keith Chapman for HIT Entertainment which ran from 12 April 1999 (1999-04-12) to 31 December 2011 (2011-12-31) in the United Kingdom on the BBC, first on BBC One and later CBeebies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bob the Builder” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:30.479Z",
+   "target": "f01637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sesamstraße ist eine der erfolgreichsten Fernsehserien für Kinder im Vorschulalter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sesamstraße” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:30.479Z",
+   "target": "f01638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Benjamin Blümchen ist eine Hörspiel- und Zeichentrickfigur aus der Feder von Elfie Donnelly.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benjamin Blümchen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:30.479Z",
+   "target": "f01639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Flintstones is an American animated sitcom by Hanna-Barbera Productions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Flintstones” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:30.479Z",
+   "target": "f01640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SpongeBob SquarePants, also known simply as SpongeBob, is an American animated comedy television series created by marine science educator and animator Stephen Hillenburg for Nickelodeon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:30.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “SpongeBob SquarePants” is on the snapshot of s5"
+  }
+ ]
+}

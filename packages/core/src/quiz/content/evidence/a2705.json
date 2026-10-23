@@ -1,0 +1,355 @@
+{
+ "article": "a2705",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Haitian_Revolution",
+   "title": "Haitian Revolution",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:03.462Z",
+   "snapshot": "50663ce7d0344cc5527995600e0a0e800cfd2532b1727a923b8b3936499cdb8f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Toussaint_Louverture",
+   "title": "Toussaint Louverture",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:04.314Z",
+   "snapshot": "da3c43e9399763771e733d905bd78e35ce521a33f4001af3a48572a1aec7fa59"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Jacques_Dessalines",
+   "title": "Jean-Jacques Dessalines",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:05.283Z",
+   "snapshot": "fde87953b8356914132f4b0a17f44effe13f1d47f31a92a50a518e5634830f29"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Saint-Domingue",
+   "title": "Saint-Domingue",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:06.315Z",
+   "snapshot": "f6907b83020e3d56ba8bfe7962071062fd447f6d48622e1f71961cf4aafc980f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Verti%C3%A8res",
+   "title": "Battle of Vertières",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:07.188Z",
+   "snapshot": "4739875cdd316121d72f8065454b1e6cc5e75395d3cf76e4e6e7cb29f5d34257"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_Haiti",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:08.167Z",
+   "snapshot": "c1bde54da3af847a698c80a1bfb810d5363632ab7d92e323da7d0a1512bb6302"
+  },
+  "s7": {
+   "url": "https://history.state.gov/milestones/1784-1800/haitian-rev",
+   "title": "The United States and the Haitian Revolution, 1791–1804",
+   "publisher": "U.S. Department of State, Office of the Historian",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:41.113Z",
+   "snapshot": "eeeee05c94a407ca594e06f1932f9982080d6b8262874ec049dde44a8d05160f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Haiti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Toussaint Louverture",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean-Jacques Dessalines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saint-Domingue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Battle of Vertières",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:00.557Z",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Haitian Revolution, also known as the Haitian War of Independence, was an armed conflict and insurrection by enslaved Black Africans against French colonial rule in Saint-Domingue, now the sovereign state of Haiti.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haiti” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:00.557Z",
+   "target": "f25294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "François-Dominique Toussaint Louverture (English:  LOO-vər-TURE, French: [fʁɑ̃swa dɔminik tusɛ̃ luvɛʁtyʁ]; 20 May 1743 – 7 April 1803), also known as Toussaint L'Ouverture or Toussaint Bréda, was a Haitian general and the most prominent leader of the Haitian Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toussaint Louverture” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:00.557Z",
+   "target": "f25295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean-Jacques Dessalines (French pronunciation: [ʒɑ̃ ʒak dɛsalin]; Haitian Creole: Jan-Jak Desalin; 20 September 1758 – 17 October 1806) was the first Haitian Emperor, leader of the Haitian Revolution, and the first ruler of an independent Haiti under the 1805 constitution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Jacques Dessalines” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:00.557Z",
+   "target": "f25296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saint-Domingue (French: [sɛ̃ dɔmɛ̃ɡ] ) was a French colony in the western portion of the Caribbean island of Hispaniola, in the area of modern-day Haiti, from 1659 to 1803.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint-Domingue” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:00.557Z",
+   "target": "f25297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Battle of Vertières (French: Bataille de Vertières; Haitian Creole: Batay Vètyè) was the last major battle of the Saint-Domingue expedition and the final phase of the Haitian Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Battle of Vertières” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:58:35Z",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the first post-colonial independent Black-led nation in the world, and the only nation whose independence was gained as part of a successful slave rebellion.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:58:38Z",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "reacted to the emergence of Haiti as a state borne out of a slave revolt with ambivalence",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms Haiti as the state born of a slave revolt; the 'only' superlative rests on the encyclopedia sources."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:48.038Z",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the first post-colonial independent Black-led nation in the world, and the only nation whose independence was gained as part of a successful slave rebellion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:48.038Z",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "reacted to the emergence of Haiti as a state borne out of a slave revolt with ambivalence",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:48.038Z",
+   "target": "f25293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "of them slaveowners, reacted to the emergence of Haiti as a state borne out of a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Haiti” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,295 @@
+{
+ "article": "a2202",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Crochet",
+   "title": "Crochet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:45.401Z",
+   "snapshot": "4e63a789af6eb9ffe32925db3844e11ad4360e65aba0c04d1c457bfa9555482e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/H%C3%A4keln",
+   "title": "Häkeln",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:42.609Z",
+   "snapshot": "6334b1041536ad0d519d86a8f2ad33b7c0a277f8bdd3e99fea23762819d88903"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/H%C3%A4kelnadel",
+   "title": "Häkelnadel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:43.696Z",
+   "snapshot": "27f1e0fe006155653f81ab15ddc239376f18c073c82c8df6cef88bca4f9829c7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Hexenstich",
+   "title": "Hexenstich",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:44.658Z",
+   "snapshot": "1fbb27d8d776504128e2d108f4f151e24978a6f83a17b3a389feb8f9f89cd9e7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tatting",
+   "title": "Tatting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:46.193Z",
+   "snapshot": "02818e04462ad0b5aef45abd10ac84baba446e06f84c162a096cb4c34bd38452"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Macram%C3%A9",
+   "title": "Macramé – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:47.217Z",
+   "snapshot": "455a901bcea627846dad963a1401129eb4c637768ccd9b1c587ace34309530e8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crochet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Häkeln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6; transcript tp-077"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hexenstich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-295"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "tatting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "macramé",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Einen Haken",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "A hook",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-156/6, u02: Crochet uses a single hooked tool, knitting two pointed needles; statement false."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.974Z",
+   "target": "f11195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crochet (English:  ; French: [kʁɔʃɛ]) is a process of creating textiles by using a crochet hook to interlock loops of yarn, thread, or strands of other materials.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crochet” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.974Z",
+   "target": "f11195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Häkeln ist die Verarbeitung eines Fadens aus Garn mit einer einzelnen Häkelnadel; es entstehen Maschen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Häkeln” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.974Z",
+   "target": "f11196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The earliest dated reference in English to garments made of cloth produced by looping yarn with a hook—shepherd's knitting—is in The Memoirs of a Highland Lady by Elizabeth Grant (1797–1830).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A hook” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.974Z",
+   "target": "f11197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Hexenstich (englisch: herringbone stitch) wird unter anderem in der Stickerei als Zierstich oder in der Schneiderei als Saumstich (Säumen) zum Befestigen von offenen Kanten angewandt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hexenstich” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:35.974Z",
+   "target": "f11199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tatting is a technique for handcrafting a particularly durable lace from a series of knots and loops.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tatting” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:35.974Z",
+   "target": "f11200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Macramé is a form of textile produced using knotting (rather than weaving or knitting) techniques.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “macramé” is on the snapshot of s6"
+  }
+ ]
+}

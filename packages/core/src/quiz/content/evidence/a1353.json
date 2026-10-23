@@ -1,0 +1,390 @@
+{
+ "article": "a1353",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alkali_metal",
+   "title": "Alkali metal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:24.231Z",
+   "snapshot": "6a091a9cc732ae04d34ef03c5f334fbea738f64438dc6b93d4b45b1a52be0d95"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Radium",
+   "title": "Radium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:25.386Z",
+   "snapshot": "785cfbfc6b0ea7a798a114837f5754036b92a08f1855e9d59d29376225a80ab0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Halogen",
+   "title": "Halogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:26.309Z",
+   "snapshot": "1d976ba3e76d77cc1b095a7915a3a6129280c37ab4ded3580fed88242f58b130"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Argon",
+   "title": "Argon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:27.330Z",
+   "snapshot": "333abc774e9a7cb161a289b535043db3027277de3286afd87cb041a3e10ea3f3"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Edelgase",
+   "title": "Edelgase",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:24.462Z",
+   "snapshot": "f8b28dd6b3c3c762eb9b2451d3610d8008e92404406d8116ca3d13f2aac201da"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Chalcogen",
+   "title": "Chalcogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:28.372Z",
+   "snapshot": "dc6e6a61841439af06fca152918b96af5d05f21ecc2b53691b78775cc1c33304"
+  },
+  "s7": {
+   "url": "https://www.npr.org/sections/krulwich/2013/07/12/201481293/the-hardest-thing-to-find-in-the-universe",
+   "title": "The Hardest Thing To Find In The Universe – NPR (Krulwich Wonders)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9859440/",
+   "title": "Astatine-211 based radionuclide therapy: Current clinical trial landscape (Front Med 2023)",
+   "publisher": "Frontiers in Medicine / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:32.911Z",
+   "snapshot": "67eb44d5ba4b35c5c15d256b1b3d8719907fe10ce781865faf58742fe904d39a"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Astatine",
+   "title": "Astatine – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:15:55Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "alkali metals",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06762",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "alkaline earth metals",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "halogens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "noble gases",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edelgase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-049"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "chalcogens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Guinea pig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-015"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:12.886Z",
+   "target": "f06761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The alkali metals consist of the chemical elements lithium (Li), sodium (Na), potassium (K), rubidium (Rb), caesium (Cs), and francium (Fr).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “alkali metals” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:12.886Z",
+   "target": "f06762",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the sixth element in group 2 of the periodic table, also known as the alkaline earth metals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “alkaline earth metals” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:12.886Z",
+   "target": "f06763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The halogens are a group in the periodic table consisting of six chemically related elements, fluorine (F), chlorine (Cl), bromine (Br), iodine (I), and the radioactive elements astatine (At) and tennessine (Ts), though some authors would exclude tennessine as its chemistry is unknown and is",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “halogens” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:12.886Z",
+   "target": "f06764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Before 1962, argon and the other noble gases were considered to be chemically inert and unable to form compounds; however, compounds of the heavier noble gases have since been synthesized.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “noble gases” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:12.886Z",
+   "target": "f06764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Edelgase, auch inerte Gase oder Inertgase bilden eine Gruppe im Periodensystem der Elemente, die mindestens sechs Elemente umfasst: Helium, Neon, Argon, Krypton, Xenon und das radioaktive Radon.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edelgase” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:12.886Z",
+   "target": "f06765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The chalcogens (, KAL-kə-jənz) are the chemical elements in group 16 of the periodic table.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chalcogens” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:15:54Z",
+   "target": "f25390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the same year that 211At was discovered in 1940, it was investigated for potential accumulation in thyroid tissues in guinea pigs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23",
+   "note": "original study: Hamilton & Soley, PNAS 26(8):483 (1940), scanned PDF only"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:15:55Z",
+   "target": "f25390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Animal studies show that astatine, similarly to iodine",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the iodine-like thyroid uptake; the guinea-pig detail is in the scholarly source"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:57.749Z",
+   "target": "f25390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the same year that 211At was discovered in 1940, it was investigated for potential accumulation in thyroid tissues in guinea pigs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:57.749Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

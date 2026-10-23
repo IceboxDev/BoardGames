@@ -1,0 +1,1341 @@
+{
+ "subs": {
+  "art": [
+   {
+    "slug": "painting",
+    "en": "Old Masters & Painting",
+    "de": "Alte Meister & Malerei",
+    "ru": "Старые мастера и живопись"
+   },
+   {
+    "slug": "modern-art",
+    "en": "Modern Art & Avant-Garde",
+    "de": "Moderne & Avantgarde",
+    "ru": "Модернизм и авангард"
+   },
+   {
+    "slug": "art-world",
+    "en": "Contemporary Art & Art World",
+    "de": "Gegenwartskunst & Kunstbetrieb",
+    "ru": "Современное искусство и арт-мир"
+   },
+   {
+    "slug": "sculpture",
+    "en": "Sculpture & Photography",
+    "de": "Skulptur & Fotografie",
+    "ru": "Скульптура и фотография"
+   },
+   {
+    "slug": "architecture",
+    "en": "Architectural Styles & Architects",
+    "de": "Baustile & Architekten",
+    "ru": "Архитектурные стили и зодчие"
+   },
+   {
+    "slug": "historic-buildings",
+    "en": "Palaces, Castles & Cathedrals",
+    "de": "Schlösser, Burgen & Kathedralen",
+    "ru": "Дворцы, замки и соборы"
+   },
+   {
+    "slug": "world-monuments",
+    "en": "Ancient & World Monuments",
+    "de": "Antike & Weltmonumente",
+    "ru": "Древние и мировые памятники"
+   },
+   {
+    "slug": "modern-arch",
+    "en": "Modern Architecture & Skyscrapers",
+    "de": "Moderne Architektur & Wolkenkratzer",
+    "ru": "Современная архитектура и небоскрёбы"
+   }
+  ],
+  "everyday": [
+   {
+    "slug": "food",
+    "en": "Food & Drink",
+    "de": "Essen & Trinken",
+    "ru": "Еда и напитки"
+   },
+   {
+    "slug": "leisure",
+    "en": "Hobbies, Toys & Leisure",
+    "de": "Hobbys, Spielzeug & Freizeit",
+    "ru": "Хобби, игрушки и досуг"
+   },
+   {
+    "slug": "games",
+    "en": "Classic Games, Cards & Puzzles",
+    "de": "Klassische Spiele, Karten & Rätsel",
+    "ru": "Классические игры, карты и головоломки"
+   },
+   {
+    "slug": "board-games",
+    "en": "Modern Board & Card Games",
+    "de": "Moderne Brett- & Kartenspiele",
+    "ru": "Современные настольные и карточные игры"
+   },
+   {
+    "slug": "video-games",
+    "en": "Video & Computer Games",
+    "de": "Video- & Computerspiele",
+    "ru": "Видео- и компьютерные игры"
+   },
+   {
+    "slug": "design",
+    "en": "Fashion & Design",
+    "de": "Mode & Design",
+    "ru": "Мода и дизайн"
+   },
+   {
+    "slug": "symbols",
+    "en": "Symbols & Superstitions",
+    "de": "Symbole & Aberglaube",
+    "ru": "Символы и суеверия"
+   }
+  ]
+ },
+ "assign": {
+  "a0003": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a0005": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0015": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a0027": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0039": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0051": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a0063": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0075": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0087": {
+   "sub": "sculpture"
+  },
+  "a0099": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0101": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0111": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0113": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0123": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0135": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0147": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a0159": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0171": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0173": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0183": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0195": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a0207": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0213": {
+   "sub": "food"
+  },
+  "a0219": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0227": {
+   "sub": "food"
+  },
+  "a0231": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0234": {
+   "sub": "design"
+  },
+  "a0243": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a0255": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a0257": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0267": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0269": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0279": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a0281": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0285": {
+   "sub": "food"
+  },
+  "a0291": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a0303": {
+   "sub": "design"
+  },
+  "a0315": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0327": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0329": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0339": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0341": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0351": {
+   "sub": "sculpture"
+  },
+  "a0363": {
+   "sub": "design"
+  },
+  "a0375": {
+   "sub": "design"
+  },
+  "a0387": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a0399": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a0411": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a0423": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0425": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0435": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0447": {
+   "sub": "sculpture"
+  },
+  "a0449": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0459": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/architecture to the new Contemporary Art & Art World sub."
+  },
+  "a0467": {
+   "sub": "food"
+  },
+  "a0479": {
+   "sub": "food"
+  },
+  "a0483": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a0490": {
+   "sub": "symbols"
+  },
+  "a0492": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a0494": {
+   "sub": "food"
+  },
+  "a0495": {
+   "sub": "sculpture"
+  },
+  "a0497": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0499": {
+   "sub": "design"
+  },
+  "a0507": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0519": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0528": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a0531": {
+   "sub": "sculpture"
+  },
+  "a0543": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0555": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0557": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0567": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a0579": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a0581": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0586": {
+   "sub": "food"
+  },
+  "a0591": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0599": {
+   "sub": "food"
+  },
+  "a0603": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0615": {
+   "sub": "sculpture"
+  },
+  "a0627": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a0651": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0660": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a0663": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0665": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0675": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0687": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0689": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0699": {
+   "sub": "sculpture"
+  },
+  "a0701": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a0711": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a0723": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0725": {
+   "sub": "leisure"
+  },
+  "a0732": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a0735": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0743": {
+   "sub": "food"
+  },
+  "a0747": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0759": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0771": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0783": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0785": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0787": {
+   "sub": "design"
+  },
+  "a0791": {
+   "sub": "food"
+  },
+  "a0795": {
+   "sub": "design"
+  },
+  "a0797": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0802": {
+   "sub": "food"
+  },
+  "a0807": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0819": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0821": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0831": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0843": {
+   "sub": "design"
+  },
+  "a0855": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0867": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a0879": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0881": {
+   "sub": "leisure"
+  },
+  "a0891": {
+   "sub": "sculpture"
+  },
+  "a0893": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a0900": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a0903": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0915": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0917": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a0927": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a0939": {
+   "sub": "sculpture"
+  },
+  "a0951": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0963": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a0968": {
+   "sub": "symbols"
+  },
+  "a0975": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a0987": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — everyday/design → the narrowed Painting sub \"Old Masters & Painting Terms\". (Comes over from the Everyday domain into Art.)"
+  },
+  "a0999": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1011": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1023": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1035": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1047": {
+   "sub": "sculpture"
+  },
+  "a1049": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1059": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1061": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1071": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1083": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1095": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1107": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1109": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1119": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1131": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1133": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1143": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1145": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1155": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1157": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1167": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1169": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1179": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1181": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1191": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1203": {
+   "sub": "sculpture"
+  },
+  "a1205": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1215": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1227": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1229": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1235": {
+   "sub": "food"
+  },
+  "a1239": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1248": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a1251": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1259": {
+   "sub": "food"
+  },
+  "a1263": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1271": {
+   "sub": "food"
+  },
+  "a1275": {
+   "sub": "sculpture"
+  },
+  "a1287": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1299": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1301": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1311": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1314": {
+   "sub": "symbols"
+  },
+  "a1323": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1325": {
+   "sub": "leisure"
+  },
+  "a1335": {
+   "sub": "sculpture"
+  },
+  "a1347": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1359": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from everyday/design to the new Modern Art sub. (Comes over from the Everyday domain into Art.)"
+  },
+  "a1368": {
+   "sub": "design"
+  },
+  "a1371": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1373": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1383": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1388": {
+   "sub": "symbols"
+  },
+  "a1395": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1407": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1419": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1431": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1439": {
+   "sub": "food"
+  },
+  "a1443": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1455": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1466": {
+   "sub": "food"
+  },
+  "a1467": {
+   "sub": "sculpture"
+  },
+  "a1475": {
+   "sub": "food"
+  },
+  "a1478": {
+   "sub": "food"
+  },
+  "a1479": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1484": {
+   "sub": "symbols"
+  },
+  "a1491": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1500": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a1503": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1505": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1515": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/sculpture to the new Contemporary Art & Art World sub."
+  },
+  "a1517": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1527": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1535": {
+   "sub": "food"
+  },
+  "a1539": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1541": {
+   "sub": "leisure",
+   "reason": "A pastime rather than a game (bowling/minigolf numbers, oddball world championships) — moved from everyday/games to Hobbies, Toys & Leisure."
+  },
+  "a1547": {
+   "sub": "food"
+  },
+  "a1551": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1563": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1565": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1575": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1577": {
+   "sub": "leisure"
+  },
+  "a1587": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1599": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1611": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1623": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1635": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1647": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1659": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1671": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1683": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1685": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1695": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1707": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a1716": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a1719": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1731": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1743": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1745": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1755": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1767": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1775": {
+   "sub": "food"
+  },
+  "a1779": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/sculpture to the new Contemporary Art & Art World sub."
+  },
+  "a1791": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from everyday/design to the new Contemporary Art & Art World sub. (Comes over from the Everyday domain into Art.)"
+  },
+  "a1800": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a1803": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1815": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1827": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a1839": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1841": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1851": {
+   "sub": "architecture",
+   "reason": "Architectural styles, vocabulary or historic architects (Schinkel, Semper, Gaudí, Speer) — stays in the narrowed Architecture sub \"Styles, Terms & Architects\"."
+  },
+  "a1863": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1875": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1877": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1887": {
+   "sub": "sculpture"
+  },
+  "a1899": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1911": {
+   "sub": "design"
+  },
+  "a1913": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1923": {
+   "sub": "sculpture"
+  },
+  "a1925": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a1935": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a1947": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a1959": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1961": {
+   "sub": "board-games",
+   "reason": "Modern hobby board and card games (designers, awards, mechanisms, Catan/Uno/Pandemic) — moved from everyday/games to the new Modern Board & Card Games sub."
+  },
+  "a1968": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a1971": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a1983": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a1995": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a2007": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a2009": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a2015": {
+   "sub": "food"
+  },
+  "a2019": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a2031": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a2043": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from everyday/design to the new Modern Art sub. (Comes over from the Everyday domain into Art.)"
+  },
+  "a2055": {
+   "sub": "sculpture"
+  },
+  "a2067": {
+   "sub": "modern-arch",
+   "reason": "Modern (19th–21st c.) buildings, skyscrapers, museums, bridges or star architects — moved from art/architecture to the new Modern Architecture sub."
+  },
+  "a2079": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a2087": {
+   "sub": "food"
+  },
+  "a2091": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a2103": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a2115": {
+   "sub": "sculpture"
+  },
+  "a2125": {
+   "sub": "design"
+  },
+  "a2126": {
+   "sub": "design"
+  },
+  "a2127": {
+   "sub": "design"
+  },
+  "a2128": {
+   "sub": "design"
+  },
+  "a2129": {
+   "sub": "design"
+  },
+  "a2130": {
+   "sub": "design"
+  },
+  "a2131": {
+   "sub": "design"
+  },
+  "a2132": {
+   "sub": "design"
+  },
+  "a2133": {
+   "sub": "design"
+  },
+  "a2134": {
+   "sub": "design"
+  },
+  "a2135": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a2136": {
+   "sub": "art-world",
+   "reason": "Post-1945 / contemporary art or the art world (museums, auctions, thefts, biennials, collectors) — moved from art/painting to the new Contemporary Art & Art World sub."
+  },
+  "a2137": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a2138": {
+   "sub": "sculpture"
+  },
+  "a2139": {
+   "sub": "sculpture"
+  },
+  "a2140": {
+   "sub": "sculpture"
+  },
+  "a2148": {
+   "sub": "symbols"
+  },
+  "a2149": {
+   "sub": "symbols"
+  },
+  "a2150": {
+   "sub": "symbols"
+  },
+  "a2151": {
+   "sub": "symbols"
+  },
+  "a2175": {
+   "sub": "food"
+  },
+  "a2176": {
+   "sub": "food"
+  },
+  "a2177": {
+   "sub": "food"
+  },
+  "a2178": {
+   "sub": "food"
+  },
+  "a2179": {
+   "sub": "food"
+  },
+  "a2180": {
+   "sub": "food"
+  },
+  "a2181": {
+   "sub": "food"
+  },
+  "a2182": {
+   "sub": "food"
+  },
+  "a2183": {
+   "sub": "food"
+  },
+  "a2184": {
+   "sub": "food"
+  },
+  "a2185": {
+   "sub": "food"
+  },
+  "a2186": {
+   "sub": "food"
+  },
+  "a2187": {
+   "sub": "food"
+  },
+  "a2188": {
+   "sub": "food"
+  },
+  "a2189": {
+   "sub": "food"
+  },
+  "a2190": {
+   "sub": "food"
+  },
+  "a2191": {
+   "sub": "food"
+  },
+  "a2192": {
+   "sub": "food"
+  },
+  "a2193": {
+   "sub": "food"
+  },
+  "a2194": {
+   "sub": "food"
+  },
+  "a2201": {
+   "sub": "leisure"
+  },
+  "a2202": {
+   "sub": "leisure"
+  },
+  "a2203": {
+   "sub": "leisure"
+  },
+  "a2204": {
+   "sub": "leisure"
+  },
+  "a2205": {
+   "sub": "leisure"
+  },
+  "a2206": {
+   "sub": "leisure"
+  },
+  "a2592": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a2593": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  },
+  "a2594": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a2595": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a2596": {
+   "sub": "leisure",
+   "reason": "A pastime rather than a game (bowling/minigolf numbers, oddball world championships) — moved from everyday/games to Hobbies, Toys & Leisure."
+  },
+  "a2662": {
+   "sub": "historic-buildings",
+   "reason": "Historic European palaces, castles, churches, towers, gates or bridges — moved from art/architecture to the new Palaces, Castles & Cathedrals sub."
+  },
+  "a2663": {
+   "sub": "world-monuments",
+   "reason": "Ancient sites or great non-European monuments — moved from art/architecture to the new Ancient & World Monuments sub."
+  },
+  "a2664": {
+   "sub": "modern-art",
+   "reason": "Modern art 1860–1945 (Impressionism to Surrealism, its movements, groups and painters) — moved from art/painting to the new Modern Art sub."
+  },
+  "a2665": {
+   "sub": "sculpture"
+  },
+  "a2666": {
+   "sub": "sculpture"
+  },
+  "a2694": {
+   "sub": "video-games",
+   "reason": "Video and computer games — moved from everyday/games to the new Video Games sub."
+  },
+  "a2734": {
+   "sub": "painting",
+   "reason": "Old-master / classic painting (pre-Impressionism, or art terms and techniques across eras) — art/painting → the narrowed Painting sub \"Old Masters & Painting Terms\"."
+  },
+  "a2788": {
+   "sub": "games",
+   "reason": "Classic/traditional game, card game, casino or puzzle — stays in Games, now labelled \"Classic Games, Cards & Puzzles\"."
+  }
+ },
+ "outgoing": {
+  "a0125": {
+   "domain": "cultures",
+   "suggestedSub": "language",
+   "reason": "German idioms that came from sport (throwing in the towel etc.) — a language article, not a game; was Everyday › Games."
+  },
+  "a0137": {
+   "domain": "sport-games",
+   "suggestedSub": "ball-sports",
+   "reason": "The invention dates of basketball, volleyball and other team sports — sport history; was Everyday › Games."
+  },
+  "a0149": {
+   "domain": "sport-games",
+   "suggestedSub": "olympics",
+   "reason": "Athletes known under other names (Muhammad Ali, Kareem Abdul-Jabbar) — sport; was Everyday › Games."
+  },
+  "a0161": {
+   "domain": "sport-games",
+   "suggestedSub": "olympics",
+   "reason": "Sporting techniques (Eskimo roll, Fosbury flop, skating step) — sport; was Everyday › Games."
+  },
+  "a0245": {
+   "domain": "sport-games",
+   "suggestedSub": "olympics",
+   "reason": "Etymology of sporting terms (jockey, marathon, birdie) — sport; was Everyday › Games."
+  },
+  "a0317": {
+   "domain": "sport-games",
+   "suggestedSub": "olympics",
+   "reason": "What the names of martial arts (kung fu, karate, taekwondo) mean — combat sports; was Everyday › Games."
+  },
+  "a1037": {
+   "domain": "sport-games",
+   "suggestedSub": "olympics",
+   "reason": "Sports families grouped by their equipment (disc sports, shooting disciplines) — sport; was Everyday › Games."
+  },
+  "a0521": {
+   "domain": "cultures",
+   "suggestedSub": "society",
+   "reason": "The three acts and fighters of a Spanish bullfight — a cultural tradition, not a game; was Everyday › Games."
+  }
+ }
+}

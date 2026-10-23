@@ -1,0 +1,336 @@
+{
+ "article": "a0702",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Waldseem%C3%BCller_map",
+   "title": "Waldseemüller map – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:11.269Z",
+   "snapshot": "77d6e4427e92471e655fd1e9d99365bb578054459b58221b982a248a619f2f70"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Amerigo_Vespucci",
+   "title": "Amerigo Vespucci",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:09.545Z",
+   "snapshot": "a0a733861cdcabba246055783e1375cfec27dadcb004591563fae44f378a61a8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gran_Colombia",
+   "title": "Gran Colombia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:12.292Z",
+   "snapshot": "30f5431bcf33b67f65422fa70437f8f4706ac0617fde7e6530be26123bc7a348"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Mactan",
+   "title": "Battle of Mactan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:13.234Z",
+   "snapshot": "cbad5b524f383de375b9d21354a28489aee0eea24a028861e591ed6a707b6898"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Vitus_Bering",
+   "title": "Vitus Bering – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:14.195Z",
+   "snapshot": "469298dfa08509d07a9e0efd4cf6f397cbace7f25eb6849c828d0b076e73e522"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Abel_Tasman",
+   "title": "Abel Tasman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:15.247Z",
+   "snapshot": "b50e655af858ad3ff6de506f64fd085406263b72017ef324a228aba0cf88677a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/New_Holland_(Australia)",
+   "title": "New Holland (Australia)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:16.202Z",
+   "snapshot": "6763a511af18285634724a5fabe223d630840f6d482a2ac757ae9d70c9eb3052"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amerigo Vespucci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c059"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Amerigo Vespucci",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-308"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christopher Columbus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ferdinand Magellan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Vitus Bering",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abel Tasman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-097"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f03506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As explained in Cosmographiae Introductio, the name was bestowed in honor of the Italian Amerigo Vespucci.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amerigo Vespucci” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f03506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Amerigo Vespucci [ameˈriːɡo vesˈputtʃi] (in kastilischen Dokumenten auch Américo Vespucio, * 9.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amerigo Vespucci” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f03507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The word \"Colombia\" is the Castilian version of the eighteenth-century Neo-Latin word \"Columbia\" which derives from the family name of the Genoese explorer Christopher Columbus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christopher Columbus” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f03508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Labanan sa Mactan; Spanish: Batalla de Mactán) was fought on a beach in Mactan Island (now part of Cebu, Philippines) between Spanish forces led by the Portuguese explorer Ferdinand Magellan, along with local allies, and Lapulapu, a chieftain of the island, on the early morning of April 27, 1521.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ferdinand Magellan” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f03509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Vitus Bering was born in the port town of Horsens in Denmark to Anne Pedderdatter and her husband Jonas Svendsen (a \"customs inspector and churchwarden\") and was baptized in the Lutheran church there on 5 August 1681.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vitus Bering” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f03510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abel Tasman was likely born in 1602 or 1603 in Lutjegast, a village in the province of Groningen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abel Tasman” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:29.059Z",
+   "target": "f12258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "New Holland (Dutch: Het Niew Holland or Nieuw-Holland) is a historical European name for mainland Australia, first encountered by Europeans in 1606, by Dutch navigator Willem Janszoon aboard Duyfken.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australia” is on the snapshot of s7"
+  }
+ ]
+}

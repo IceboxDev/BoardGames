@@ -1,0 +1,242 @@
+{
+ "article": "a1863",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bacchus_(Caravaggio)",
+   "title": "Bacchus (Caravaggio) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:48.473Z",
+   "snapshot": "0b01b5e6370c2dfbce51d7a50ec60c3e28e37066232a5f057cb529f22b22697a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Birth_of_Venus",
+   "title": "The Birth of Venus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:48.645Z",
+   "snapshot": "d327f23a01c71a5f3b71f3654b40aec5ed105bbf864fb4ca8ed5b98d339f1732"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Apollo_and_Daphne_(Bernini)",
+   "title": "Apollo and Daphne (Bernini) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:49.539Z",
+   "snapshot": "e5806b8aa89b0239100ae3ad294eb36a2b298bd2b290f3287ccc4e2b1413c4d0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mars_Resting",
+   "title": "Mars Resting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:50.483Z",
+   "snapshot": "d9406d8612cb46df78177359b815c390f7825dd479deceb26e97279508cf3828"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son",
+   "title": "Saturn Devouring His Son – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:51.485Z",
+   "snapshot": "25ebbaa930eaf2ffb8312e848ae55827a3300d10e42ea351bcf8ea141a137665"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bacchus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Venus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Apollo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Saturn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:36.068Z",
+   "target": "f09311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The painting shows a youthful Bacchus reclining in classical fashion with grapes and vine leaves in his hair, fingering the drawstring of his loosely draped robe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bacchus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:36.068Z",
+   "target": "f09312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Birth of Venus (Italian: Nascita di Venere [ˈnaʃʃita di ˈvɛːnere]) is a painting by the Italian artist Sandro Botticelli, probably executed in the mid-1480s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:36.068Z",
+   "target": "f09313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Apollo and Daphne is a life-sized marble sculpture by the Italian artist Gian Lorenzo Bernini, which was executed between 1622 and ‘25.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apollo” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:36.068Z",
+   "target": "f09314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mars or Resting Mars (Descanso de Marte, literally The Rest of Mars) is a 1640 painting by Diego Velázquez.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mars” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:36.068Z",
+   "target": "f09315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Saturn Devouring His Son (Spanish: Saturno devorando a su hijo; also known as Saturn) is a painting by Spanish artist Francisco Goya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:36.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturn” is on the snapshot of s5"
+  }
+ ]
+}

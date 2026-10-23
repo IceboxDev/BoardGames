@@ -1,0 +1,377 @@
+{
+ "article": "a2406",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Oh,_wie_sch%C3%B6n_ist_Panama",
+   "title": "Oh, wie schön ist Panama",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:09.507Z",
+   "snapshot": "d87870ff32de54df31b88515b2556b13240bd315800477223958077b761b06cd"
+  },
+  "s2": {
+   "url": "https://sv.wikipedia.org/wiki/Pettson_och_Findus",
+   "title": "Pettson och Findus",
+   "kind": "encyclopedia",
+   "lang": "sv",
+   "retrievedAt": "2026-10-23T05:58:09.441Z",
+   "snapshot": "2f34273be98afdd92a5a4fe421fc912f10f6f3d27f115be60f38912eebc28a90"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Sams_(Buchreihe)",
+   "title": "Sams (Buchreihe)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:10.537Z",
+   "snapshot": "06379936a4971aadc7eaa37170c6f3e53de3a7cfe84d0b049b68d6659f7f986d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pettersson_und_Findus",
+   "title": "Pettersson und Findus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:11.604Z",
+   "snapshot": "242dbceb6d92cc82bccb3436f30429fb4e918af587cd3b9be34913d2aecd3dc3"
+  },
+  "s5": {
+   "url": "https://opal.se/bocker/nar-findus-var-liten-och-forsvann/",
+   "title": "När Findus var liten och försvann – Opal",
+   "publisher": "Bokförlaget Opal",
+   "kind": "primary",
+   "lang": "sv",
+   "retrievedAt": "2026-10-23T12:47:07.802Z",
+   "snapshot": "8147d416cd37dd3546a49f346b361fa4a8d2bcedaaa5b34ff57577f7a8c89de2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Panama",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Green peas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-055"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Sams",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-251"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tigerente",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pettersson",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Samstag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Taschenbier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oh, wie schön ist Panama (Die Geschichte, wie der kleine Tiger und der kleine Bär nach Panama reisen) ist eine mit dem Deutschen Jugendbuchpreis ausgezeichnete illustrierte Kindergeschichte von Janosch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Panama” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Green peas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Green peas”, “Grüne Erbsen”, “зелёный горошек”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Sams ist die Hauptfigur einer zwölfbändigen Kinderbuchreihe von Paul Maar, deren erster Band 1973 erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Sams” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Am nächsten Tag machen sich die beiden mit einem Kochtopf, einer Fischerrute, einem Hut und der Tigerente auf den Weg nach Panama.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tigerente” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pettersson und Findus – im schwedischen Original Pettson och Findus – ist eine Kinderbuchreihe von Sven Nordqvist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pettersson” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Und als Herr Taschenbier am Freitag dann auch noch frei hat, geht er am Samstag, neugierig auf das, was ihn erwarten könnte, in die Stadt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samstag” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:15.220Z",
+   "target": "f12605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Außerdem verfasst es gerne Lieder, die allerdings bei Herrn Taschenbier selten auf große Gegenliebe stoßen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taschenbier” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:55:11Z",
+   "target": "f12600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Findus var en liten kattunge som låg i en kartong från Findus gröna ärter, och så fick han sitt namn.",
+     "quoteLang": "sv",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Nordqvist's Swedish publisher, blurb of the book that tells how Findus got his name."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:55:13Z",
+   "target": "f12600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Namnet har han fått eftersom det var i en tom låda Findus Gröna ärtor han kom i och sedermera använde som säng första tiden.",
+     "quoteLang": "sv",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:58.585Z",
+   "target": "f12600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Namnet har han fått eftersom det var i en tom låda Findus Gröna ärtor han kom i och sedermera använde som säng första tiden.",
+     "quoteLang": "sv",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:58.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  }
+ ]
+}

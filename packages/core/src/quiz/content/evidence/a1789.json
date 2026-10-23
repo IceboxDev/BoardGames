@@ -1,0 +1,249 @@
+{
+ "article": "a1789",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hotel_California_(album)",
+   "title": "Hotel California (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:43.575Z",
+   "snapshot": "6fbf8fe1b1bd7fb1f56d62868529fe981a1612d7e10fb81db0ed6ef00892e65b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Wall",
+   "title": "The Wall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:44.528Z",
+   "snapshot": "2595aab36ca4b020c62d177f6343ffa1d6cbf44a03b840d534f285e407d9764f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bon_Scott",
+   "title": "Bon Scott – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:45.512Z",
+   "snapshot": "c3a294dd71d3ecf7d6fdfb0809e7d777ccc75e004b18a15a6257785cc1b3d76e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/MTV_Unplugged_in_New_York",
+   "title": "MTV Unplugged in New York – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:46.544Z",
+   "snapshot": "8a032506d0ccbc9e7164c3084f8f25eab310113d4c4518b66b33d69a6efd0371"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Endless_River",
+   "title": "The Endless River – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:47.569Z",
+   "snapshot": "94345d843b6c1172ded71689495e3ef827dd267e86f5f51c091c6a1570188347"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Animals_(Pink_Floyd_album)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:48.593Z",
+   "snapshot": "07fa0fa24a46ec2539afab84c7f4af5f303b0085417c0026c4b2a50468c09fc9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eagles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pink Floyd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "AC/DC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nirvana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stephen Hawking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-045"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:23.253Z",
+   "target": "f08941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hotel California is the fifth studio album by the American rock band the Eagles, released on December 8, 1976, by Asylum Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eagles” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:23.253Z",
+   "target": "f08943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wall is the eleventh studio album by the English rock band Pink Floyd, released on 30 November 1979 by Harvest/EMI and Columbia/CBS Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pink Floyd” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:23.253Z",
+   "target": "f08944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ronald Belford \"Bon\" Scott (9 July 1946 – 19 February 1980) was an Australian singer who was the second lead vocalist and lyricist of the hard rock band AC/DC from 1974 until his death in 1980.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “AC/DC” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:23.253Z",
+   "target": "f08945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "MTV Unplugged in New York is the first live album by the American rock band Nirvana, released by DGC Records on November 1, 1994, nearly seven months after the suicide of Kurt Cobain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nirvana” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:23.253Z",
+   "target": "f13125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Talkin' Hawkin'\" contains a sample of scientist Stephen Hawking's speech taken from a British Telecom commercial, which was also sampled for The Division Bell on \"Keep Talking\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:23.253Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stephen Hawking” is on the snapshot of s5"
+  }
+ ]
+}

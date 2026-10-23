@@ -1,0 +1,296 @@
+{
+ "article": "a2285",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Leadenhall_Building",
+   "title": "Leadenhall Building",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:29.498Z",
+   "snapshot": "d7fea94f24504b876cca2a3de5f833e50bace9201ae0c6bb3db103defde158fc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral",
+   "title": "St Paul's Cathedral",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:27.233Z",
+   "snapshot": "485dabf025dce6b2e3edcc69261b97c5c867b94a4f55ab37d8e0b1abe18421fc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wedding_of_Prince_William_and_Catherine_Middleton",
+   "title": "Wedding of Prince William and Catherine Middleton",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:31.448Z",
+   "snapshot": "9d1bb326a274179e59cc13b3c48c166374bc4c1909bf417ab050450f00ca9685"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Christopher_Wren",
+   "title": "Christopher Wren – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:29.199Z",
+   "snapshot": "6a35b279b7d2ee9ac54d041b931462101a047aef9ed441181495791e8cabe40f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/30_St_Mary_Axe",
+   "title": "30 St Mary Axe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:30.050Z",
+   "snapshot": "508007145359f5d9d84471afa7a6a5cae9e05972806db97e78cb5fe000709ca2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Elizabeth_Tower",
+   "title": "Elizabeth Tower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:31.166Z",
+   "snapshot": "56c68a69c9ddb129f456c6ca7fb18fed231cd7a6a736b58250725380f1b69865"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/The_Shard",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:40.189Z",
+   "snapshot": "51be75575dfa62150bb14bdfd26316417d1c2d8a16d1e871af6b26c05fa55f4f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11783",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "London",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11784",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pineapple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-130"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11785",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Westminster Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-216"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Christopher Wren",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "30 St Mary Axe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Elizabeth Tower",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:48.493Z",
+   "target": "f11783",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "122 Leadenhall Street, auch einfach Leadenhall Building genannt, ist ein Hochhaus mit einer Höhe von 225 m im Londoner Finanzbezirk der City of London.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:48.493Z",
+   "target": "f11784",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The cap, an ogee-shaped dome, supports a gilded finial in the form of a pineapple.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pineapple” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:48.493Z",
+   "target": "f11785",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The wedding of Prince William and Catherine Middleton took place on Friday, 29 April 2011 at Westminster Abbey in London, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Westminster Abbey” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:48.493Z",
+   "target": "f11786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sir Christopher Wren (; 30 October 1632 [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christopher Wren” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:48.493Z",
+   "target": "f11787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "30 St Mary Axe, previously known as the Swiss Re Building, is a commercial skyscraper in London's primary financial district, the City of London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “30 St Mary Axe” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:48.493Z",
+   "target": "f11789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Originally named the Clock Tower, the structure was renamed the Elizabeth Tower in 2012 to mark the Diamond Jubilee of Queen Elizabeth II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elizabeth Tower” is on the snapshot of s6"
+  }
+ ]
+}

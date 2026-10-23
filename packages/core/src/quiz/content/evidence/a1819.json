@@ -1,0 +1,209 @@
+{
+ "article": "a1819",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Einigungsvertrag",
+   "title": "Einigungsvertrag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:20.619Z",
+   "snapshot": "a22128ed3e4ab44098d4c0b19ddcf0cc9a4fb2fbe2b0557282364819a15eeba4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Oskar_Lafontaine",
+   "title": "Oskar Lafontaine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:25.657Z",
+   "snapshot": "6093da8b63076fb8c5f732499282725917b3cb898824688c968b7bc0fe02c137"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Attentat_auf_Henriette_Reker",
+   "title": "Attentat auf Henriette Reker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:22.083Z",
+   "snapshot": "81b9ed5291561ae17e9c53d14dcc85db7c6eaef017a6c85033291df3e05fc627"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Andreas_Hollstein",
+   "title": "Andreas Hollstein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:22.668Z",
+   "snapshot": "04a7d562a7900da50629dceda48633629b0b109ebbdd3f656980ef0c6615d6d9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Wolfgang_Sch%C3%A4uble",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:23.719Z",
+   "snapshot": "28b4f9de2f2ed2a192e494e200f20904ae95532502bd6da835b11d2f3e628afb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Rudi_Dutschke",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:24.913Z",
+   "snapshot": "280fa2a84145786b5961f59ac578a1339a1fbfbb9b82f01c2eaffa88122ee66a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wolfgang Schäuble",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oskar Lafontaine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Henriette Reker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Andreas Hollstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:27.353Z",
+   "target": "f09091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Verhandlungsführer und Unterzeichner auf der Seite der Bundesrepublik war der damalige Bundesminister des Innern Wolfgang Schäuble und auf der Seite der Deutschen Demokratischen Republik der Parlamentarische Staatssekretär Günther Krause.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Schäuble” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:27.353Z",
+   "target": "f09092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Oskar Lafontaine [ˌʔɔs.kʰaɐ̯ 'la.fɔn.tʰɛːn] (* 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oskar Lafontaine” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:27.353Z",
+   "target": "f09094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "November 2015 bedankte sich Henriette Reker unter anderem bei „den Menschen, die sich in höchster Gefahr schützend vor mich gestellt […] und geholfen haben, den Angreifer abzuwehren“, und stellte ihren Amtsantritt in Aussicht, sobald es ihr gesundheitlich möglich sei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henriette Reker” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:27.353Z",
+   "target": "f09095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "September sprachen die Grünen eine Wahlempfehlung für Andreas Hollstein aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.353Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andreas Hollstein” is on the snapshot of s4"
+  }
+ ]
+}

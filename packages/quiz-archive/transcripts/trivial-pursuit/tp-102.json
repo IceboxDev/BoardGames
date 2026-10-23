@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-102",
+ "image": "IMG20261007181709.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Deutsch ist die meistgesprochene Muttersprache in Europa. Richtig oder falsch?",
+   "de": "Welche Sprache ist die meistgesprochene Muttersprache in der Europäischen Union?",
+   "en": "Which language is the most widely spoken native language in the European Union?",
+   "reworked": true,
+   "answerDe": "Deutsch",
+   "answerEn": "German",
+   "timeline": {
+    "kind": "event",
+    "start": "2012",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Eurobarometer 'Europeans and their languages' survey: German is the EU's most common mother tongue",
+    "labelDe": "Eurobarometer-Umfrage „Die europäischen Bürger und ihre Sprachen“: Deutsch ist die häufigste Muttersprache der EU"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Languages_of_the_European_Union",
+    "title": "Languages of the European Union",
+    "lang": "en"
+   },
+   "notes": "Reworked to the EU, where the card's 'Richtig' holds (German, then French and Italian). For geographic Europe including European Russia, Russian has more native speakers, so the card's statement is debatable.",
+   "domain": "geography",
+   "sub": "peoples"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher schwarze Schauspieler gewann 2002 den Oscar als bester Hauptdarsteller?",
+   "de": "Welcher schwarze Schauspieler gewann 2002 den Oscar als bester Hauptdarsteller?",
+   "en": "Which Black actor won the Academy Award for Best Actor in 2002?",
+   "reworked": false,
+   "answerDe": "Denzel Washington",
+   "answerEn": "Denzel Washington",
+   "timeline": {
+    "kind": "event",
+    "start": "2002-03-24",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Denzel Washington wins the Best Actor Oscar for Training Day at the 74th Academy Awards",
+    "labelDe": "Denzel Washington gewinnt bei der 74. Oscarverleihung den Oscar als bester Hauptdarsteller für „Training Day“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Denzel_Washington",
+    "title": "Denzel Washington",
+    "lang": "de"
+   },
+   "notes": "For Training Day (2001); second African-American Best Actor winner after Sidney Poitier.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Joschka Fischer ist der Erfinder einer vegetarischen Sojawurst. Richtig oder falsch?",
+   "de": "Welcher deutsche Politiker erfand im Ersten Weltkrieg eine fleischlose Sojawurst?",
+   "en": "Which German politician invented a meatless soy sausage during the First World War?",
+   "reworked": true,
+   "answerDe": "Konrad Adenauer",
+   "answerEn": "Konrad Adenauer",
+   "timeline": {
+    "kind": "creation",
+    "start": "1916",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Konrad Adenauer, then responsible for Cologne's food supply, invents a soy sausage (patented in Britain in 1918)",
+    "labelDe": "Konrad Adenauer, damals für Kölns Lebensmittelversorgung zuständig, erfindet eine Sojawurst (1918 in England patentiert)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer",
+    "title": "Konrad Adenauer",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: the soy sausage ('Kölner Wurst') was Konrad Adenauer's invention, not Joschka Fischer's. The German patent office rejected it; British patent GB131402.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Die berühmte Büste der Nofretete ist aus Gips und Kalkstein gefertigt. Richtig oder falsch?",
+   "de": "Aus welchem Gestein ist die berühmte, mit bemaltem Stuck überzogene Büste der Nofretete gefertigt?",
+   "en": "What stone is the famous bust of Nefertiti, coated in painted stucco, made of?",
+   "reworked": true,
+   "answerDe": "Kalkstein",
+   "answerEn": "Limestone",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1912-12-06",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bust of Nefertiti found at Amarna in the workshop of the sculptor Thutmose",
+    "labelDe": "Die Büste der Nofretete wird in Amarna in der Werkstatt des Bildhauers Thutmosis gefunden"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/B%C3%BCste_der_Nofretete",
+    "title": "Büste der Nofretete",
+    "lang": "de"
+   },
+   "notes": "Card statement is true: limestone core with layers of painted (gypsum) stucco; the eye inlay is rock crystal.",
+   "domain": "art",
+   "sub": "sculpture"
+  },
+  {
+   "category": 5,
+   "cardDe": "Auch der Mensch kann vom Hundebandwurm befallen werden. Richtig oder falsch?",
+   "de": "Welche Krankheit löst der Hundebandwurm beim Menschen aus?",
+   "en": "Which disease does the dog tapeworm cause in humans?",
+   "reworked": true,
+   "answerDe": "Zystische Echinokokkose",
+   "answerEn": "Cystic echinococcosis",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1786",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "August Batsch describes the dog tapeworm, Echinococcus granulosus",
+    "labelDe": "August Batsch beschreibt den Hundebandwurm, Echinococcus granulosus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Dreigliedriger_Hundebandwurm",
+    "title": "Dreigliedriger Hundebandwurm",
+    "lang": "de"
+   },
+   "notes": "Card statement is true: humans can be infected as accidental intermediate hosts. Also called hydatid disease.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welcher Stadt findet das erste der vier Grand-Slam-Tennisturniere statt?",
+   "de": "In welcher Stadt findet das erste der vier Grand-Slam-Tennisturniere statt?",
+   "en": "In which city is the first of the four Grand Slam tennis tournaments held?",
+   "reworked": false,
+   "answerDe": "Melbourne",
+   "answerEn": "Melbourne",
+   "timeline": {
+    "kind": "founding",
+    "start": "1905-11",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Australasian Championships, forerunner of the Australian Open, held in Melbourne",
+    "labelDe": "Erste Australasian Championships, Vorläufer der Australian Open, in Melbourne ausgetragen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Australian_Open",
+    "title": "Australian Open",
+    "lang": "de"
+   },
+   "notes": "The Australian Open is the first Grand Slam of the season (January).",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

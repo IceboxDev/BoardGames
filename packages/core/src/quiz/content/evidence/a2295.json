@@ -1,0 +1,195 @@
+{
+ "article": "a2295",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Anne-Frank-Haus",
+   "title": "Anne-Frank-Haus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:02.801Z",
+   "snapshot": "42a9952815afef78788da47daeeca379ed13c1fbad7cb1be3209dfe92e31d882"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/J._Paul_Getty_Museum",
+   "title": "J. Paul Getty Museum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:03.793Z",
+   "snapshot": "6c8dc051e05b72865bd5d7fd38b8e7843a87daac143fc5711e0bcf3a3c71c2e9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Acropolis_Museum",
+   "title": "Acropolis Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:05.436Z",
+   "snapshot": "b1ed2074e684453d8be91310b05a2e57a6dba2ee56237b495c5890cc67fd93ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kunsthistorisches_Museum",
+   "title": "Kunsthistorisches Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:06.494Z",
+   "snapshot": "30a24b592e208ec457d477d7c863f69ef11e8e1cd57135aa1838119a7c28094e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amsterdam",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Los Angeles",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-242"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11857",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Athens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:50.626Z",
+   "target": "f11855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mai 1960 im Haus Prinsengracht 263–267 in Amsterdam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amsterdam” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:50.626Z",
+   "target": "f11856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Getty Museum ist ein US-amerikanisches Kunstmuseum in Los Angeles mit Standorten in Brentwood (Getty Center) und Pacific Palisades (Getty Villa).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Los Angeles” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:50.626Z",
+   "target": "f11857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Acropolis Museum (Greek: Μουσείο Ακρόπολης, Mouseio Akropolis) is an archaeological museum focused on the findings of the archaeological site of the Acropolis of Athens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Athens” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:50.626Z",
+   "target": "f11858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Vienna Museum of Art History\", often referred to as the \"Museum of Fine Arts, Vienna\") is an art museum in Vienna, Austria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.626Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s4"
+  }
+ ]
+}

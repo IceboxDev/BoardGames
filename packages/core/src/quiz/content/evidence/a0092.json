@@ -1,0 +1,430 @@
+{
+ "article": "a0092",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Brahma_Temple,_Pushkar",
+   "title": "Brahma Temple, Pushkar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:51.081Z",
+   "snapshot": "142b59fca96a7e94e2605f1d9eaa2c0b95b39dd9d89fc56ec64c6da762201909"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ganesha",
+   "title": "Ganesha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:52.145Z",
+   "snapshot": "ca53e8c06fbf3bbc85d1e54bd1802e8871e5620cb6091db07084e9aa6a913925"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ganesha",
+   "title": "Ganesha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:51.370Z",
+   "snapshot": "9848f1d489dece6a2a9ed03203562ec473c87b98603fcc3c850636027b36d3eb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lakshmi",
+   "title": "Lakshmi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:53.245Z",
+   "snapshot": "92568669868b8fd371a6945bdb88fcaffeb8c5336a2f31164590221447393f8c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ramayana",
+   "title": "Ramayana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:54.148Z",
+   "snapshot": "266395d2d07f96d3c41f4e9be0a445a100b906de76a61ee5f2cdaaa8e65211a4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Trimurti",
+   "title": "Trimurti – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:54.964Z",
+   "snapshot": "143d8c422e4cddf7fd25e4b4296284939c9ab3a91d17158f788075ed14cc0126"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Veda",
+   "title": "Veda",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:52.290Z",
+   "snapshot": "4c4cb83d626e4a1209d90bbf1df5e6a7ebb28f1afcc74bbdefef22e178142d29"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Holi",
+   "title": "Holi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:56.075Z",
+   "snapshot": "b5134fb0d45ddf1a8fa8e89a3aa4c3fa2932360d32ff05aa5ab25bc8f5d85216"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Nandi_(Hinduism)",
+   "title": "Nandi (Hinduism) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:56.922Z",
+   "snapshot": "d56e9f800f14468c636838787eb97d4c2ea4979ed97af9510b9f26ddfb1bd891"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brahma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ganesha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ganesha",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-065"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00458",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lakshmi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00459",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hanuman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trimurti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sanskrit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-400"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Krishna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-155"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f28300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Nandi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 69"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f00456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brahma Temple, Pushkar (also known as Jagatpita Brahma Mandir) is a Hindu temple situated at Pushkar in the Indian state of Rajasthan, close to the sacred Pushkar Lake to which its legend has an indelible link.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brahma” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f00457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ganesha, or Ganesh (Sanskrit: गणेश, IAST: Gaṇeśa, IPA: [ɡɐˈɳeːɕɐ]), also known as Ganapati, Vinayaka and Pillaiyar, is one of the best-known and most revered and worshipped deities in the Hindu pantheon and is the Supreme god in the Ganapatya sect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ganesha” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f00457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ganesha (Sanskrit गणेश Gaṇeśa [gʌˈɳeːɕʌ] ) (gaṇa: ‚Gefolge‘, ‚Schar‘, īś: ‚Gebieter‘, also „Herr der Scharen“) ist eine der beliebtesten Formen des Göttlichen im Hinduismus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ganesha” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f00458",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lakshmi (; Sanskrit: लक्ष्मी, IAST: Lakṣmī, sometimes spelled Laxmi), also known as Shri (Sanskrit: श्री, IAST: Śrī), is one of the principal goddesses in Hinduism, revered as the goddess of fortune, wealth, prosperity, beauty, fertility,  sovereignty, and abundance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lakshmi” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f00459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Indian subcontinent with his wife Sita and brother Lakshmana; the kidnapping of Sita by Ravana, the king of Lanka; meeting with Vānaras, where Hanuman becomes Rama's biggest devotee; winning the battle against Ravaṇa; and Rama's eventual return to Ayodhya along with Sita to be crowned king amidst",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanuman” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f00460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Trimurti is the triple deity of supreme divinity in Hinduism, in which the cosmic functions of creation, preservation, and destruction are personified as a triad of deities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trimurti” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f10806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Veda (auch Weda) oder die Veden (Sanskrit, m., वेद, veda „Wissen“, „heilige Lehre“) ist eine zunächst mündlich überlieferte, später verschriftlichte Sammlung religiöser Texte im Hinduismus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sanskrit” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f25544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It celebrates the love between the deities Radha and Krishna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Krishna” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:23:48.756Z",
+   "target": "f28300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Nandi (Sanskrit: नन्दि), also known as Nandikeshvara or Nandideva, is the bull vahana (mount) of the Hindu god Shiva.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nandi” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,448 @@
+{
+ "article": "a1597",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Paint_It_Black",
+   "title": "Paint It Black – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:59.051Z",
+   "snapshot": "fb54d670da3402eb9313ae062453e031b195f72c16855817f684f22ede01ceba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Norwegian_Wood_(This_Bird_Has_Flown)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:00.055Z",
+   "snapshot": "7d68293ebf61e74696c58dd10bc9a7f1a0baa88a35ac33a5bc5d6f6b7ef272cf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sgt._Pepper%27s_Lonely_Hearts_Club_Band",
+   "title": "Sgt. Pepper's Lonely Hearts Club Band – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:01.176Z",
+   "snapshot": "afe56c931b437b49273147d6e906bc156af2ef31f470093976f86cf254c7be6c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Revolver_(Beatles_album)",
+   "title": "Revolver (Beatles album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:22.390Z",
+   "snapshot": "49bcc7222906dad6ff4e0a60f549f6c10f37122760863dad05d5663c9de4d67b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/George_Harrison",
+   "title": "George Harrison – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:02.162Z",
+   "snapshot": "fa6cafe6293a95ded664da823bf7737a3aa51b451d924d438ff5c824a57f1994"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ukulele",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:15.261Z",
+   "snapshot": "7428ebbfc100389ac6637ae5785cdf33d25e176bec4ac30b06b9c76b8d65cb62"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Yellow_Submarine_(song)",
+   "title": "Yellow Submarine (song)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:03.075Z",
+   "snapshot": "ffd02dc7da8c9902e283b26378ed8854d8c2970ca4b8d1134030b64cd6e873fb"
+  },
+  "s8": {
+   "url": "https://www.darbar.org/article/tanpura",
+   "title": "Tanpura - Darbar",
+   "publisher": "Darbar Arts Culture Heritage Trust",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:05.982Z",
+   "snapshot": "176919f4cbae79ea0c13bec01dcc5355558da18a17741c12d29c6ee986888d46"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Tomorrow_Never_Knows",
+   "title": "Tomorrow Never Knows – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:04.627Z",
+   "snapshot": "69c868c40d8e4bf210f2a3980f1fdadc4756cc4d5aa30ddb8554ad085ee141ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tabla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "tanpura",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ukulele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ukulele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Beatles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; transcript tp-275"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f07981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Originating from a series of improvisational melodies played by Brian Jones on the sitar, the song features all five members of the band contributing to the final arrangement although only Jagger and Richards were credited as songwriters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sitar” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f07981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The track features a sitar part, played by lead guitarist George Harrison, that marked the first appearance of the Indian string instrument on a Western rock recording.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sitar” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f07982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harrison's Hindustani classical music-inspired \"Within You Without You\" reflects his immersion in the teachings of the Hindu Vedas, while its musical form and Indian instrumentation, such as sitar, tabla, dilrubas and tamburas, recalls the Hindu devotional tradition known as bhajan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tabla” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "tanpura",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“tanpura”, “Tanpura”, “танпура”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f07985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A Hawaiian influence is notable in much of Harrison's music, ranging from his slide guitar work on Gone Troppo (1982) to his televised performance of the Cab Calloway standard \"Between the Devil and the Deep Blue Sea\" on ukulele in 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ukulele” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f07985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The ukulele ( YOO-kə-LAY-lee; Hawaiian: [ʔukulele]), also called a uke (informally), is a member of the lute (ancestor of the guitar) family of instruments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ukulele” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:48.801Z",
+   "target": "f14570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"Yellow Submarine\" is a song by the English rock band the Beatles from their 1966 album Revolver.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:48.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beatles” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:09:45Z",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Tanpura, a vital drone instrument in Indian classical music, is known for its continuous, resonant sound that provides a harmonic foundation for vocal and instrumental performances.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:09:49Z",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "It features an Indian-inspired modal backing of tambura and sitar drone and bass guitar",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23",
+   "note": "Tambura = tanpura."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:36.595Z",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Tanpura, a vital drone instrument in Indian classical music, is known for its continuous, resonant sound that provides a harmonic foundation for vocal and instrumental performances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:36.595Z",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "It features an Indian-inspired modal backing of tambura and sitar drone and bass guitar",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:36.595Z",
+   "target": "f07983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Tanpura, a vital drone instrument in Indian classical music, is known for its continuous, resonant sound that provides a harmonic foundation for vocal and instrumental performances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:36.595Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tanpura” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0596",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Roman_Ritual",
+   "title": "Roman Ritual – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:05.341Z",
+   "snapshot": "b8513ae9ac5a6c53439598ad311f8e2b6bee7ee1edc125e536da7373909e65c4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anabaptism",
+   "title": "Anabaptism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:06.481Z",
+   "snapshot": "218b0d17007476d05399a599768cbf2acca5f8a3700f891c852400ae6694ab87"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Decet_Romanum_Pontificem",
+   "title": "Decet Romanum Pontificem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:07.332Z",
+   "snapshot": "789cb5c2d76217a572b2eb4029fd647cedf1d1a1cd9d8322dacd4372acbaac63"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fourth_Council_of_the_Lateran",
+   "title": "Fourth Council of the Lateran – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:08.376Z",
+   "snapshot": "0529cb5ee26d0ad518f4aa2ae72b9ab076de12e5c9b83dfbde45caddab7d86a0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lent",
+   "title": "Lent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:09.564Z",
+   "snapshot": "abc7b2117ffd670fe8af9516ab0ba8febec7f4ee47c2d194b943ae62d28bdf16"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "exorcism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "baptism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "excommunication",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "confession",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:12.112Z",
+   "target": "f02976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Rite of Exorcism also underwent a series of revisions and was finally promulgated in 1999 as De exorcismis et supplicationibus quibusdam (Concerning Exorcisms and Certain Supplications).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.112Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “exorcism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.112Z",
+   "target": "f02977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anabaptism (from Neo-Latin anabaptista, from the Greek ἀναβαπτισμός: ἀνά 're-' and βαπτισμός 'baptism'; German: Täufer, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.112Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “baptism” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:12.112Z",
+   "target": "f02978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "With Luther's excommunication, the path of an internal church reform movement was definitively blocked.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.112Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “excommunication” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:12.112Z",
+   "target": "f02979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The decree mandating annual confession has been called \"perhaps the most important legislative act in the history of the church.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.112Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “confession” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:12.112Z",
+   "target": "f02980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lent (Latin: Quadragesima, 'Fortieth') is the solemn Christian religious observance in the liturgical year in preparation for Easter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.112Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lent” is on the snapshot of s5"
+  }
+ ]
+}

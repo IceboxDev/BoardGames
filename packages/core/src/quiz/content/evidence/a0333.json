@@ -1,0 +1,449 @@
+{
+ "article": "a0333",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Procrastination",
+   "title": "Procrastination – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:46.430Z",
+   "snapshot": "4f442ffa7707076a1c0350c65711bcc7ccbdbcb999b38d0e6194c2f16d432ce9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect",
+   "title": "Dunning–Kruger effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:47.407Z",
+   "snapshot": "9baefabbda296e0642d1f6262d08606b034832ba7e372749eca89d0fb0135d59"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Placebo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:48.407Z",
+   "snapshot": "1003cb5e941e6c479ac35bd3198bd62819090d6164be23ab7efe3c6a410ae66f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Cathcart_Wason",
+   "title": "Peter Cathcart Wason – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:49.323Z",
+   "snapshot": "ab6c67b719369e868b2b958e7e7784fc0e56ea0d596c7a40d3276ab2aa4ff3ea"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Impostor_syndrome",
+   "title": "Impostor syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:50.414Z",
+   "snapshot": "71607a0f62172e8a95592739b8ccac4e694fe7cf5152678c74d967b05de5aed4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cognitive_dissonance",
+   "title": "Cognitive dissonance",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:51.521Z",
+   "snapshot": "bb50d6beee91b2cda598096bb0f583b7d91e84cd01b646625754e5b9d29c39fe"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Na%C3%AFve_realism_(psychology)",
+   "title": "Naïve realism (psychology)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:52.423Z",
+   "snapshot": "ec5dda069880687527ed531d2344c533a3963dc6e7906dff6b6bd006e380f077"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "procrastination",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dunning-Kruger effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-151"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dunning-Kruger effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 45"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "placebo effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "confirmation bias",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "impostor syndrome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cognitive dissonance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-065"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cognitive dissonance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 49; history entry seq 51"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Naïve realism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-148"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23",
+   "target": "f25988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Naïve realism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 52; history entry seq 54"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f01661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Procrastination is an avoidance coping behavior that involves unnecessarily delaying or postponing something despite knowing that there could be negative consequences for doing so.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “procrastination” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f01662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Dunning–Kruger effect is a cognitive bias that describes the systematic tendency of people with low ability in a specific area to give overly positive assessments of their ability.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dunning-Kruger effect” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f01662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dunning-Kruger effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dunning-Kruger effect”, “Dunning-Kruger-Effekt”, “эффект Даннинга — Крюгера”) on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f01663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In a placebo-controlled trial, any change in the control group is known as the placebo response, and the difference between this and the result of no treatment is the placebo effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “placebo effect” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f01664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He also coined the term \"confirmation bias\" to describe the tendency for people to immediately favor information that validates their preconceptions, hypotheses and personal beliefs regardless of whether they are true or not.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “confirmation bias” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f01665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Impostor syndrome, also known as impostor phenomenon, impostorism, or impostor thoughts, is a psychological experience in which a person suffers from feelings of intellectual and/or professional fraudulence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “impostor syndrome” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f25987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cognitive dissonance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cognitive dissonance”, “Kognitive Dissonanz”, “когнитивный диссонанс”) on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f25987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In the field of psychology, cognitive dissonance is described as a mental phenomenon in which people unknowingly or subconsciously hold fundamentally conflicting cognitions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cognitive dissonance” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f25988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Naïve realism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Naïve realism”, “Naiver Realismus”, “наивный реализм”) on the snapshot of s3"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:24:31.313Z",
+   "target": "f25988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In social psychology, naïve realism is the human tendency to believe that we see the world around us objectively, and that people who disagree with us must be uninformed, irrational, or biased.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:31.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Naïve realism” is on the snapshot of s7"
+  }
+ ]
+}

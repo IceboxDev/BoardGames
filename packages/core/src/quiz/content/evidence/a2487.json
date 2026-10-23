@@ -1,0 +1,289 @@
+{
+ "article": "a2487",
+ "sources": {
+  "s1": {
+   "url": "https://www.timeout.com/los-angeles/music/barry-manilow",
+   "title": "Barry Manilow | Music in Los Angeles",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:02.121Z",
+   "snapshot": "a588757fcd7511257d09faf1be3037b5e1e92433acfba503a0ec17ba06a86d8a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Brandy_(Scott_English_song)",
+   "title": "Brandy (Scott English song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:05.613Z",
+   "snapshot": "58f4443db0cf5a1d231e14eac62bd3addfb8092c3bc042d338191883365775bd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mandy_(Scott_English_and_Richard_Kerr_song)",
+   "title": "Mandy (Scott English and Richard Kerr song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:06.598Z",
+   "snapshot": "58f4443db0cf5a1d231e14eac62bd3addfb8092c3bc042d338191883365775bd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Copacabana_(song)",
+   "title": "Copacabana (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:07.589Z",
+   "snapshot": "e1f44f3b78f94c374536b99f70fbd884ceb74a4c9f3fd9678082f0a5420a3959"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/I_Write_the_Songs",
+   "title": "I Write the Songs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:08.580Z",
+   "snapshot": "8d4e1b3b46dcef5cbb250495464b6f79df0606b1a2e71f7b9c060a9f62dc5b8f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Barry_Manilow",
+   "title": "Barry Manilow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:09.686Z",
+   "snapshot": "7fb81f5799cefd6a3a4a22600bcf35fc7533b89ba699e4a8b88713c10010422f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Barry Manilow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-369"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mandy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mandy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Copacabana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bruce Johnston",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bette Midler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.247Z",
+   "target": "f13175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Following a successful six-week run of shows on Broadway, self-proclaimed “Justin Bieber of the 70s” Barry Manilow is now touring the same show all over the nation, packed full of easy-listening hits from his massive catalogue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barry Manilow” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.247Z",
+   "target": "f13176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Brandy\", later called \"Mandy\", is a song written by Scott English and Richard Kerr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mandy” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.247Z",
+   "target": "f13176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Brandy\", later called \"Mandy\", is a song written by Scott English and Richard Kerr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mandy” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.247Z",
+   "target": "f13177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Copacabana\", also known as \"Copacabana (At the Copa)\", is a song recorded by Barry Manilow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Copacabana” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:28.247Z",
+   "target": "f13178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"I Write the Songs\" is a popular song written by Bruce Johnston.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruce Johnston” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:28.247Z",
+   "target": "f13179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He has also produced Grammy-nominated albums for Bette Midler, Dionne Warwick, Nancy Wilson, and Sarah Vaughan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.247Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bette Midler” is on the snapshot of s6"
+  }
+ ]
+}

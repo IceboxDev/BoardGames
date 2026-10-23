@@ -1,0 +1,425 @@
+{
+ "article": "a0512",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Communist_Manifesto",
+   "title": "The Communist Manifesto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:27.159Z",
+   "snapshot": "a99953be066489728b33515db6c8e728738d48927f436110bc6cfd541d97d76e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bund_der_Kommunisten",
+   "title": "Bund der Kommunisten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:01:24.257Z",
+   "snapshot": "8ac111d5f7c0460ffdf020be51994ac5903f699123129b41470fecbe75896fbf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Discourse_on_the_Method",
+   "title": "Discourse on the Method – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:28.102Z",
+   "snapshot": "2c6b71a0ba7c7bfdda08573812e1219d6644af25876a8251ba62be8c1c32ad03"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Gay_Science",
+   "title": "The Gay Science – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:29.027Z",
+   "snapshot": "50782b31df97cb639cc6a632a1dc02dd1a5e3466081dc60fd9ea9c26ffb6fca1"
+  },
+  "s5": {
+   "url": "https://www.gutenberg.org/files/61/61-h/61-h.htm",
+   "title": "The Communist Manifesto – Project Gutenberg (Moore/Engels translation, 1888)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:45.726Z",
+   "snapshot": "98d82f30473bea772ebc124a64da33708a4dac45cc5a4436be8225f2ce1f03b0"
+  },
+  "s6": {
+   "url": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/ch01.htm",
+   "title": "Communist Manifesto (Chapter 1) – Marxists Internet Archive",
+   "publisher": "Marxists Internet Archive",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:45.695Z",
+   "snapshot": "2853a68ecc07b9534cfe12bce775d5d7e5a04aac59af661ce965a1a8ec6a8fad"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "class struggles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "vereinigt euch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "I am",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "communism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Gay Science",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:59.905Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "by the two founders of scientific socialism to codify for wide consumption the historical materialist idea; namely, that \"the history of all hitherto existing society is the history of class struggles\", in which social classes are defined by the relationship of people to the means of production.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “class struggles” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:59.905Z",
+   "target": "f02557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das von Marx stammende Motto Proletarier aller Länder, vereinigt euch!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vereinigt euch” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:59.905Z",
+   "target": "f02560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is best known as the source of the famous quotation \"Je pense, donc je suis\" (\"I think, therefore I am\", or \"I am thinking, therefore I exist\"), which occurs in Part IV of the work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I am” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:59.905Z",
+   "target": "f20422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"A spectre is haunting Europe — the spectre of communism.\" and \"Workers of the world, unite!\" stand as two iconic lines that frame the text, marking its opening and its close, respectively, with the latter being reworked and popularized into a famous slogan of working-class solidarity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “communism” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:59.905Z",
+   "target": "f20423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Gay Science (German: Die fröhliche Wissenschaft; sometimes translated as The Joyful Wisdom or The Joyous Science) is a book by Friedrich Nietzsche published in 1882, and was followed by a second edition in 1887, after the completion of Thus Spoke Zarathustra and Beyond Good and Evil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.905Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Gay Science” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:57:24Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The history of all hitherto existing societies is the history of class struggles.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:57:26Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is the history of class struggles.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Opening sentence of Chapter I, 'Bourgeois and Proletarians'."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:57:27Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first section of the document, \"Bourgeois and Proletarians\", outlines historical materialism, and states that \"the history of all hitherto existing society is the history of class st",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:57:35Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "namely, that \"the history of all hitherto existing society is the history of class struggles\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:23.546Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The history of all hitherto existing societies is the history of class struggles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:23.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:23.546Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is the history of class struggles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:23.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:23.546Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "namely, that \"the history of all hitherto existing society is the history of class struggles\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:23.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:23.546Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The history of all hitherto existing societies is the history of class\nstruggles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:23.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “class struggles” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:23.546Z",
+   "target": "f02556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The history of all hitherto existing society(2) is the history of class struggles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:23.546Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “class struggles” is on the snapshot of s6"
+  }
+ ]
+}

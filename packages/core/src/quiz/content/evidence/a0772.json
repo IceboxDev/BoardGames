@@ -1,0 +1,242 @@
+{
+ "article": "a0772",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Downton_Abbey",
+   "title": "Downton Abbey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:14.425Z",
+   "snapshot": "6027ba11355af50f661fb0904a645b7ec13e68919734b507848d77e6c0bc53cc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+   "title": "Peaky Blinders (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:01.843Z",
+   "snapshot": "30327086da77671f41d5bec1c4471d15bf0edc178bee64591738bb9c3d0deaca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Upstairs,_Downstairs_(1971_TV_series)",
+   "title": "Upstairs, Downstairs (1971 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:15.395Z",
+   "snapshot": "9e13adcba7b9808137da3f65ea600b5e4b6289a9f14816ddbc6f0ef27b73c62f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Crown_(TV_series)",
+   "title": "The Crown (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:12.397Z",
+   "snapshot": "dd9937c92ee2386fd158bfdb9741d3bfdfa3924a2508e6a8738d49ff7a5ef321"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Poldark_(2015_TV_series)",
+   "title": "Poldark (2015 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:16.277Z",
+   "snapshot": "a7925e2e7583568739356d5dcd46db9a34bec0d46888cb082d82e3d2f5838278"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Downton Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03857",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peaky Blinders",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Upstairs, Downstairs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Crown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Poldark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:42.966Z",
+   "target": "f03856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Downton Abbey is a British historical drama television series set in the early 20th century, created and co-written by Julian Fellowes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.966Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Downton Abbey” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:42.966Z",
+   "target": "f03857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peaky Blinders is a British historical crime drama television series created by Steven Knight.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.966Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peaky Blinders” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:42.966Z",
+   "target": "f03858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Upstairs, Downstairs is a British drama television series produced by London Weekend Television (LWT) for ITV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.966Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Upstairs, Downstairs” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:42.966Z",
+   "target": "f03859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Crown is a historical drama television series about the reign of Queen Elizabeth II, created and principally written by Peter Morgan and produced by Left Bank Pictures and Sony Pictures Television for Netflix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.966Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Crown” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:42.966Z",
+   "target": "f03860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Poldark is a British historical drama television series created and written by Debbie Horsfield and based on the novel series of the same name by Winston Graham.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.966Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poldark” is on the snapshot of s5"
+  }
+ ]
+}

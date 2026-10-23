@@ -1,0 +1,242 @@
+{
+ "article": "a1364",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Papal_tiara",
+   "title": "Papal tiara – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:05.334Z",
+   "snapshot": "15f4840a5630b1bfee82560298d00ef418efca6d787d8e8b09a2b967142ab6d5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mitre",
+   "title": "Mitre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:06.311Z",
+   "snapshot": "e86df88309d147f5ff98493c253870d90d36c9a21feb11a597df653dcac885fc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pallium",
+   "title": "Pallium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:07.370Z",
+   "snapshot": "52d5648b19789a57e2d71aa6b4e1e01f149f363d44b6c0ebcd5e85a0a9570f88"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ring_of_the_Fisherman",
+   "title": "Ring of the Fisherman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:08.234Z",
+   "snapshot": "bd8f93c12adbace911c6574ba4cb9133511938d7e54331eb10d650e3d6f28890"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sedia_gestatoria",
+   "title": "Sedia gestatoria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:09.217Z",
+   "snapshot": "82df513fc42f40b29b2ba6ee574c817d9955c25dd143084874ef9177a9f3c9be"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tiara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mitre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pallium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ring of the Fisherman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sedia gestatoria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:14.681Z",
+   "target": "f06816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The papal tiara is a crown that was worn by popes of the Catholic Church from as early as the 8th century to the mid–20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tiara” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:14.681Z",
+   "target": "f06817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The mitre (Commonwealth English) or miter (American English; see spelling differences; both pronounced  MY-tər; Greek: μίτρα, romanized: mítra, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mitre” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:14.681Z",
+   "target": "f06818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The pallium (derived from the Roman pallium or palla, a woolen cloak; pl.: pallia) is an ecclesiastical vestment in the Catholic Church, originally peculiar to the pope, but for many centuries bestowed by the Holy See upon metropolitans and primates as a symbol of their conferred jurisdictional",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pallium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:14.681Z",
+   "target": "f06819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ring of the Fisherman (Latin: Anulus piscatoris; Italian: Anello Piscatorio), also known as the Piscatory Ring, is an official part of the regalia worn by the pope, who according to Catholic practice and tradition is the head of the Catholic Church and successor of Saint Peter, who was a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ring of the Fisherman” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:14.681Z",
+   "target": "f06820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The sedia gestatoria (Italian: [ˈsɛːdja dʒestaˈtɔːrja], literally 'chair for carrying') or gestatorial chair is a ceremonial throne on which popes were carried on shoulders of Sediari pontifici until 1978, which was later replaced outdoors in part with the popemobile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sedia gestatoria” is on the snapshot of s5"
+  }
+ ]
+}

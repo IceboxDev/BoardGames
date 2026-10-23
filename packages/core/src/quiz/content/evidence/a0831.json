@@ -1,0 +1,309 @@
+{
+ "article": "a0831",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dove_(Picasso)",
+   "title": "Dove (Picasso) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:11.447Z",
+   "snapshot": "80c71ce190d8a2389995821d0739f831665e3943594c51b1aa409dd0c8c5e6a3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+   "title": "Guernica (Picasso) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:17.994Z",
+   "snapshot": "7bf071052fd019a2be92424df0f296ca7875ee22806f5115ea171f949eb9cb2b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon",
+   "title": "Les Demoiselles d'Avignon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:57.756Z",
+   "snapshot": "20a8773f302cc57ac74f290f5198840d24267367c51ae1db7f32a19074667a4c"
+  },
+  "s4": {
+   "url": "https://fr.wikipedia.org/wiki/T%C3%AAte_de_taureau",
+   "title": "Tête de taureau – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:23:09.061Z",
+   "snapshot": "242aa97939c235a102ce7fc381c501476c6b817a8940895f8dcb65140662a5e9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Three_Musicians_(Picasso)",
+   "title": "Three Musicians (Picasso) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:12.478Z",
+   "snapshot": "f1f78b140181e60f3a03684c25c4e46fe100b3b9c429034a10160d733eef0b00"
+  },
+  "s6": {
+   "url": "https://www.pablopicasso.org/bull-head.jsp",
+   "title": "Bull's Head, 1942 by Pablo Picasso",
+   "publisher": "PabloPicasso.org",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:02.106Z",
+   "snapshot": "f1ef7e44d699f3f18cfbc66a65830d5dde0dee9fbbcb3587d690e94f278be647"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Dove of Peace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guernica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Demoiselles d'Avignon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bull's Head",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04155",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Three Musicians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:51.525Z",
+   "target": "f04151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The image was used to illustrate a poster at the 1949 Paris Peace Congress and also became an iconographic image of the period, known as \"The dove of peace\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Dove of Peace” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:51.525Z",
+   "target": "f04152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guernica is a large 1937 oil painting by Spanish artist Pablo Picasso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guernica” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:51.525Z",
+   "target": "f04153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Les Demoiselles d'Avignon (pronounced [le demwazɛl d‿aviɲɔ̃]; The Young Ladies of Avignon, originally titled The Brothel of Avignon) is a large oil painting created in 1907 by the Spanish artist Pablo Picasso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Demoiselles d'Avignon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:51.525Z",
+   "target": "f04154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bull's Head",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bull's Head”, “Stierkopf”, “Голова быка”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:51.525Z",
+   "target": "f04155",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Three Musicians, also known as Musicians with Masks or Musicians in Masks, is a large oil painting created by Spanish artist Pablo Picasso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Three Musicians” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:30Z",
+   "target": "f04154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "I found an old bicycle seat right next to a rusty set of handlebars. In a flash, they joined together in my head.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Picasso's own account (as told to Brassaï) of making Bull's Head from a bicycle saddle and handlebars; the site's intro text copies Wikipedia, the quote is Picasso's."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:19.409Z",
+   "target": "f04154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "I found an old bicycle seat right next to a rusty set of handlebars. In a flash, they joined together in my head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:19.409Z",
+   "target": "f04154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bull's Head is a found object artwork by Pablo Picasso, created in 1942 from seat and handlebars of a bicycle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bull's Head” is on the snapshot of s6"
+  }
+ ]
+}

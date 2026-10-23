@@ -1,0 +1,457 @@
+{
+ "article": "a0762",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2001_anthrax_attacks",
+   "title": "2001 anthrax attacks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:36.394Z",
+   "snapshot": "024dae2787049cea76efa23603d324f2fefc882573ad5b6ea9f90652477b48c0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Black_Death",
+   "title": "Black Death – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:37.505Z",
+   "snapshot": "156fe1c5a611ef14f57f723ce157f411e075cf4dac91adb38b2009d25445f2cf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Yambuku",
+   "title": "Yambuku – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:38.347Z",
+   "snapshot": "d0e6c49e45e9909277b66cac13a57e28a3e60c4754d9cef47f58edfded64fc6b"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ebolafieber",
+   "title": "Ebolafieber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:38.125Z",
+   "snapshot": "3a5d3f86047c4b8a2f0dcaa54d6830733dcd846aaf59bf3eaa0e10e644488d7b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1984_Rajneeshee_bioterror_attack",
+   "title": "1984 Rajneeshee bioterror attack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:39.274Z",
+   "snapshot": "feb9d921073a53766194a5ebfc7e5dc26048b3d12a9e106dfabecd72321a5125"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Choleraepidemie_von_1892",
+   "title": "Choleraepidemie von 1892 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:37.710Z",
+   "snapshot": "dc4d0bbfe46ae8ee7ad38040a046c2ac7e7048a994ca620ddfe403c4c1c7edf8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Alexandre_Yersin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:40.276Z",
+   "snapshot": "0ec991af69ea5fc4f78c2198d96fdb1da918c355774681eb6c69d51a69294a8e"
+  },
+  "s8": {
+   "url": "https://www.ndr.de/geschichte/schauplaetze/1892-Die-Cholera-wuetet-in-Hamburg,choleraepidemie100.html",
+   "title": "Als die Cholera-Epidemie in Hamburg wütete",
+   "publisher": "NDR",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:30.575Z",
+   "snapshot": "dedc74983665dc73c0af1e253027e531523a4c30f15d4ff41c2ca7c19cc666aa"
+  },
+  "s9": {
+   "url": "https://snl.no/kolera",
+   "title": "kolera",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:35:29.376Z",
+   "snapshot": "4b2e967dd3b1e43b4f12834eb869b4244af3d9647b4a908472dc91476017412a"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Cholera_outbreaks_and_pandemics",
+   "title": "Cholera outbreaks and pandemics",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:30.016Z",
+   "snapshot": "e59db5d69d1a07b65c7ebbf72757aa1faa123d03d61d19c27f96a0bb8cfdc4c4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03806",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "anthrax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03807",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yersinia pestis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ebola virus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ebolavirus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-074"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03809",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Salmonella",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vibrio cholerae",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:41.373Z",
+   "target": "f03806",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 2001 anthrax attacks, also known as Amerithrax (a portmanteau of \"America\" and \"anthrax\", from its FBI case name), occurred in the United States over the course of several weeks beginning on September 18, 2001, one week after the September 11 attacks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “anthrax” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:41.373Z",
+   "target": "f03807",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The disease was caused by the bacterium Yersinia pestis, which is primarily spread by flea bites, though it may also spread through contact with infected tissues or fluids and, in pneumonic cases, through respiratory droplets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yersinia pestis” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:41.373Z",
+   "target": "f03808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was the center of the first documented outbreak of Ebola virus disease, in 1976, with the World Health Organization identifying a man from Yambuku as the index case.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ebola virus” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:41.373Z",
+   "target": "f03808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ebolafieber (auch: Ebolakrankheit) ist eine Infektionskrankheit, die durch Viren der Gattung Orthoebolavirus (früher Ebolavirus) hervorgerufen wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ebolavirus” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:41.373Z",
+   "target": "f03809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1984, 751 people suffered food poisoning in The Dalles, Oregon, United States, due to the deliberate contamination of salad bars at ten local restaurants with Salmonella.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:41.373Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salmonella” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:41.373Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vibrio cholerae",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Vibrio cholerae”, “холерный вибрион”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:16:01Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "8.605 Menschen sterben in der Stadt infolge der Krankheit.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "NDR: 1892 cholera epidemic in Hamburg, 8,605 deaths."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:16:05Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kolera forårsakes av bakterien Vibrio cholerae",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:16:09Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The 1892 outbreak in Hamburg killed 8,600 people.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:10.120Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kolera forårsakes av bakterien Vibrio cholerae",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:10.120Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:10.120Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The 1892 outbreak in Hamburg killed 8,600 people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:10.120Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:10.120Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Kolera forårsakes av bakterien Vibrio cholerae og det giftstoffet (toksinet) den utskiller.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:10.120Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vibrio cholerae” is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:10.120Z",
+   "target": "f03810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Late in this period (particularly 1879–1883), major scientific breakthroughs toward the treatment of cholera develop: the first immunization by Louis Pasteur, the development of the first cholera vaccine, and identification of the bacterium Vibrio cholerae by Filippo Pacini and Robert Koch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:10.120Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vibrio cholerae” is on the snapshot of s10"
+  }
+ ]
+}

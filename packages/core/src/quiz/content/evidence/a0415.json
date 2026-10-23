@@ -1,0 +1,249 @@
+{
+ "article": "a0415",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/%C3%9Cberhangmandat",
+   "title": "Überhangmandat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:26.868Z",
+   "snapshot": "92a31ed4213fe425355970082bd216e71164ea82227995f66a5fec1a2a6522a0"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ausgleichsmandat",
+   "title": "Ausgleichsmandat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:27.750Z",
+   "snapshot": "b913e8f71a3d24e227b37e617339ac47f3283c67fc71802ccf1bb4a7cd3a085e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Direktmandat",
+   "title": "Direktmandat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:28.753Z",
+   "snapshot": "e431eb829c74aa3c3bc82c8be25f035c138f33c27ddc59fb14dd68d861292e5d"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Sperrklausel",
+   "title": "Sperrklausel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:29:14.311Z",
+   "snapshot": "b98e6ec4a163a6eb8301344bc1ab3efc5f721fe74b2e76626cf467fc08784a45"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Grundmandatsklausel",
+   "title": "Grundmandatsklausel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:29.750Z",
+   "snapshot": "5390f6b3931bec3728c6569d5c3f705f77c648b75cddf88665b0f6fb08e26e5f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bundestagswahl_1949",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:30.735Z",
+   "snapshot": "4840c4aa9a6c48817447200066bb07fee2ac9f5557eb466f6c659fd2a73e14ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Überhangmandate",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ausgleichsmandate",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Direktmandat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fünf-Prozent-Hürde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grundmandatsklausel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:45.001Z",
+   "target": "f02071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Überhangmandate können in Wahlsystemen auftreten, die auf einer durch Direktwahl in Wahlkreisen personalisierten Verhältniswahl beruhen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Überhangmandate” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:45.001Z",
+   "target": "f02072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ausgleichsmandate dienen dazu, die bei bestimmten Wahlsystemen zustande kommenden Überhangmandate so auszugleichen, dass andere Parteien, die keine oder weniger Überhangmandate bekommen haben, nicht benachteiligt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ausgleichsmandate” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:45.001Z",
+   "target": "f02073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Als Direktmandat wird in Deutschland ein Parlamentsmandat bezeichnet, das der Bewerber erringt, der bei einer Parlamentswahl in einem Wahlkreis die meisten Stimmen erhält.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Direktmandat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:45.001Z",
+   "target": "f02074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Einführung der Fünf-Prozent-Hürde wurde in der Bundesrepublik Deutschland damit begründet, dass das Fehlen einer Sperrklausel in der Weimarer Republik die Zersplitterung gefördert habe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fünf-Prozent-Hürde” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:45.001Z",
+   "target": "f02075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eine Grundmandatsklausel kann bei der mit der Personenwahl verbundenen Verhältniswahl bestimmen, dass eine Partei bei der Verteilung der Sitze nach ihrem Stimmenanteil berücksichtigt wird, wenn sie eine festgelegte Mindestanzahl von Direktmandaten gewinnt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grundmandatsklausel” is on the snapshot of s5"
+  }
+ ]
+}

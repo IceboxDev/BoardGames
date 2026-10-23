@@ -1,0 +1,289 @@
+{
+ "article": "a1338",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vladimir_Lenin",
+   "title": "Vladimir Lenin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:10.891Z",
+   "snapshot": "60674281f315cafc6d740b618479c7db6d293378ecf91eb74c8562cea2796a64"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Stalin",
+   "title": "Joseph Stalin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:25.797Z",
+   "snapshot": "f27576ee8970ef12b750a6e75156933d67f316843fa42a5cce88814927f78cf6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Josef_Stalin",
+   "title": "Josef Stalin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:37.760Z",
+   "snapshot": "e151bc0ce200271653b52a6bea810b4f066ab0e4106408826679561d36841943"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+   "title": "Leon Trotsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:24.811Z",
+   "snapshot": "5282b9aa00de104e5d509bd6c39f888bc3d8d1c7b1e1786530e093d99a08b98c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Vyacheslav_Molotov",
+   "title": "Vyacheslav Molotov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:41.366Z",
+   "snapshot": "0d3681d8f58d205f60940b1b91f766551673c4862e2badd5cfd239bd7a79cfc6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Josip_Broz_Tito",
+   "title": "Josip Broz Tito – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:42.785Z",
+   "snapshot": "3b038f7494f35e6b1f1fc750bd75cea4b6e3fb1ad41fb36225b5696a82dc5582"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lenin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stalin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stalin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-315"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Trotsky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Molotov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tito",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:09.660Z",
+   "target": "f06686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "10 April] 1870 – 21 January 1924), better known as Vladimir Lenin, was a Russian revolutionary, politician, and political theorist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:09.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lenin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:09.660Z",
+   "target": "f06687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Vissarionovich Stalin (born Ioseb Besarionis dze Jughashvili; 18 December 1878 – 5 March 1953) was a Soviet politician and revolutionary who ruled the Soviet Union from 1922 until his death in 1953, holding the titles of General Secretary of the Communist Party of the Soviet Union from 1922",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:09.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stalin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:09.660Z",
+   "target": "f06687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Josef Wissarionowitsch Stalin (russisch Иосиф Виссарионович Сталин, wissenschaftliche Transliteration Iosif Vissarionovič Stalin; geboren als Iosseb Bessarionis dse Dschughaschwili, georgisch იოსებ ბესარიონის ძე ჯუღაშვილი, russisch Иосиф Виссарионович Джугашвили Iossif Wissarionowitsch",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:09.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stalin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:09.660Z",
+   "target": "f06688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lev Davidovich Trotsky (né Bronstein; 7 November [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:09.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trotsky” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:09.660Z",
+   "target": "f06689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Vyacheslav Mikhaylovich Molotov (né Skryabin; 9 March [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:09.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Molotov” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:09.660Z",
+   "target": "f06690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Josip Broz (7 May 1892 – 4 May 1980), commonly known as Tito, was a Yugoslav communist revolutionary and politician who led Yugoslavia as prime minister from 1943 to 1963 and as president from 1953 until his death in 1980.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:09.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tito” is on the snapshot of s6"
+  }
+ ]
+}

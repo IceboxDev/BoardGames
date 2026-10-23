@@ -50,7 +50,7 @@ export const GreetingKindSchema = z.enum(GREETING_KINDS);
 export type GreetingKind = z.infer<typeof GreetingKindSchema>;
 
 /** Trainer decks that log study activity. */
-export const TRAINER_DECKS = ["quiztopia", "geography"] as const;
+export const TRAINER_DECKS = ["quiz", "quiztopia", "geography"] as const;
 export type TrainerDeck = (typeof TRAINER_DECKS)[number];
 
 const TrainDaySchema = z.object({ localDate: DateKey });
@@ -69,7 +69,7 @@ const TrainerResetSchema = z.object({
 });
 
 /** A content report: what was flagged and why (ids, not text — the admin queue has the rest). */
-const QuiztopiaReportSchema = z.object({
+const QuizReportSchema = z.object({
   targetId: z.string(),
   issue: z.string(),
 });
@@ -240,10 +240,15 @@ export const ActivityMetaSchemas = {
 
   // ── Trainers ──
   /** First trainer review of the member's local date. */
+  "quiz-train": TrainDaySchema,
+  "quiz-settings": TrainerSettingsSchema,
+  "quiz-reset": TrainerResetSchema,
+  "quiz-report": QuizReportSchema,
+  /** LEGACY (before the quiz platform, 2026-10): the Quiztopia-only trainer. */
   "quiztopia-train": TrainDaySchema,
   "quiztopia-settings": TrainerSettingsSchema,
   "quiztopia-reset": TrainerResetSchema,
-  "quiztopia-report": QuiztopiaReportSchema,
+  "quiztopia-report": QuizReportSchema,
   "geography-train": TrainDaySchema,
   "geography-settings": TrainerSettingsSchema,
   "geography-reset": TrainerResetSchema,
@@ -258,7 +263,13 @@ export type ActivityType = keyof MetaSchemas;
 export const ACTIVITY_TYPES = Object.keys(ActivityMetaSchemas) as ActivityType[];
 
 /** Types kept only so old rows render; the server can no longer log them. */
-export const LEGACY_ACTIVITY_TYPES = ["profile-view"] as const satisfies readonly ActivityType[];
+export const LEGACY_ACTIVITY_TYPES = [
+  "profile-view",
+  "quiztopia-train",
+  "quiztopia-settings",
+  "quiztopia-reset",
+  "quiztopia-report",
+] as const satisfies readonly ActivityType[];
 export type WritableActivityType = Exclude<ActivityType, (typeof LEGACY_ACTIVITY_TYPES)[number]>;
 
 /** What a call site passes to `logActivity(type, meta)`. */

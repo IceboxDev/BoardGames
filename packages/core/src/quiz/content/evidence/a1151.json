@@ -1,0 +1,545 @@
+{
+ "article": "a1151",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Citrus_taxonomy",
+   "title": "Citrus taxonomy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:59.197Z",
+   "snapshot": "5ffad47bf9d776ceaf14d056a8e8d5517765d424682d34cdf60bc5cc33acd708"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Grapefruit",
+   "title": "Grapefruit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:36.085Z",
+   "snapshot": "eeddcfd2b936187d0ba3b093d461f1cdcaac64ac9a1438bab8c73b704836e1ad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Orange_(fruit)",
+   "title": "Orange (fruit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:00.243Z",
+   "snapshot": "d63d9e92d3e19312dd65931050c69bd5777eb5d151ac7fbd484522175067daca"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lemon",
+   "title": "Lemon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:01.221Z",
+   "snapshot": "6b8710fb5b9eedd6682f31796994fe98271526cc30afac681328a7b7b57b6514"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Citrus_%C3%97_deliciosa",
+   "title": "Citrus × deliciosa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:02.164Z",
+   "snapshot": "1379626ebeba87072beb84b070a10309010b1c698105b6fbd00885a4a6539ea3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Clementine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:35.036Z",
+   "snapshot": "99478277d73ea63d7324310c5dc543bbcba2f6bc6a35c1833e9de16018a4594c"
+  },
+  "s7": {
+   "url": "https://www.nature.com/articles/nbt.2906",
+   "title": "Sequencing of diverse mandarin, pummelo and orange genomes reveals complex history of admixture during citrus domestication (Wu et al., Nature Biotechnology 32, 2014)",
+   "publisher": "Nature Biotechnology (Springer Nature)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:17.916Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s8": {
+   "url": "https://www.nature.com/articles/nature25447",
+   "title": "Genomics of the origin and evolution of Citrus (Wu et al., Nature 554, 2018)",
+   "publisher": "Nature (Springer Nature)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:57.384Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "grapefruit, orange and bitter orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pomelo and sweet orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "pomelo and mandarin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bitter orange and citron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "mandarin and sweet orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.330Z",
+   "target": "f05751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "grapefruit, orange and bitter orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“grapefruit, orange and bitter orange”, “Grapefruit, Orange und Bitterorange”, “грейпфрут, апельсин и померанец”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.330Z",
+   "target": "f05752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pomelo and sweet orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pomelo and sweet orange”, “Pampelmuse und Orange”, “помело и апельсин”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.330Z",
+   "target": "f05753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "pomelo and mandarin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pomelo and mandarin”, “Pampelmuse und Mandarine”, “помело и мандарин”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:40.330Z",
+   "target": "f05754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bitter orange and citron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“bitter orange and citron”, “Bitterorange und Zitronatzitrone”, “померанец и цитрон”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:40.330Z",
+   "target": "f05755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "mandarin and sweet orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“mandarin and sweet orange”, “Mandarine und Orange”, “мандарин и апельсин”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:21Z",
+   "target": "f05751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Botanically, this is the hybrid Citrus × sinensis, between the pomelo (Citrus maxima) and the mandarin orange (Citrus reticulata).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:10:25Z",
+   "target": "f05752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are a citrus hybrid that was created through an accidental cross between the sweet orange (C. × sinensis) and the pomelo (C. maxima)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:10:30Z",
+   "target": "f05754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A true lemon is a hybrid of the citron and the bitter orange.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:10:36Z",
+   "target": "f05755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a tangor, a citrus fruit hybrid between a willowleaf mandarin orange (C. × deliciosa) and a sweet orange (C. × sinensis)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:10:41Z",
+   "target": "f05753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The most widely cultivated citrus, sweet orange, is the offspring of previously admixed individuals",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "the admixture is of pummelo (C. maxima) and mandarin (C. reticulata); a complex cross rather than a simple F1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:10:47Z",
+   "target": "f05753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Botanically, this is the hybrid Citrus × sinensis, between the pomelo (Citrus maxima) and the mandarin orange (Citrus reticulata).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:11:03Z",
+   "target": "f05751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the origins of grapefruit (a pummelo–sweet orange hybrid), lemon (a sour orange–citron hybrid)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "pomelo parent of grapefruit; sour orange (bitter orange) is a pummelo–mandarin hybrid (same paper); sweet orange carries pomelo ancestry"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:11:08Z",
+   "target": "f05752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the origins of grapefruit (a pummelo–sweet orange hybrid), lemon (a sour orange–citron hybrid)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:11:12Z",
+   "target": "f05754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the origins of grapefruit (a pummelo–sweet orange hybrid), lemon (a sour orange–citron hybrid)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "sour orange = bitter orange"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:11:16Z",
+   "target": "f05755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "consistent with the historical records for Clementine and Kiyomi (both mandarin–sweet orange hybrids)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:18.301Z",
+   "target": "f05751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Botanically, this is the hybrid Citrus × sinensis, between the pomelo (Citrus maxima) and the mandarin orange (Citrus reticulata).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:18.301Z",
+   "target": "f05752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are a citrus hybrid that was created through an accidental cross between the sweet orange (C. × sinensis) and the pomelo (C. maxima)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:18.301Z",
+   "target": "f05754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A true lemon is a hybrid of the citron and the bitter orange.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:18.301Z",
+   "target": "f05755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a tangor, a citrus fruit hybrid between a willowleaf mandarin orange (C. × deliciosa) and a sweet orange (C. × sinensis)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:18.301Z",
+   "target": "f05753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Botanically, this is the hybrid Citrus × sinensis, between the pomelo (Citrus maxima) and the mandarin orange (Citrus reticulata).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:18.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  }
+ ]
+}

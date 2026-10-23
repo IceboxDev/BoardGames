@@ -1,0 +1,410 @@
+{
+ "article": "a0444",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cursor_(user_interface)",
+   "title": "Cursor (user interface) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:35.775Z",
+   "snapshot": "be79976c224d28109cdb624b79f29fc255ea3d26f19378c2ee22a0f381135fc4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/IBM_5151",
+   "title": "IBM 5151 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:36.717Z",
+   "snapshot": "e2e37a5987e6046f8018ca5df142943ab286e4c00035d59841f1cdfdc23986fa"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/processor",
+   "title": "processor – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Algorithm",
+   "title": "Algorithm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:37.730Z",
+   "snapshot": "9f91c37f70d9c95dbb21b65223b9742e30c9fe73080f6550a9bec8a7f1b9e81b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fred_Cohen",
+   "title": "Fred Cohen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:38.680Z",
+   "snapshot": "bf64e33e55ff3515386b7765a78984c5150547238b527e4b4cd8774dc5133e70"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Brain_(computer_virus)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:39.669Z",
+   "snapshot": "60fa23f067a5ef8754b3dd7f8a1279564162d6257fb8d042d4a6afef729f8613"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/processor",
+   "title": "Processor – Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:11.850Z",
+   "snapshot": "a0172e1aff086f338d5295577eff1b2063c16474780eab201bab40d1bea20b26"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/process",
+   "title": "Process – Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:12.847Z",
+   "snapshot": "018321ae2372a84ef8ff7d9b95a05afd31f080241bdfa8347ecaa1620eb38ef2"
+  },
+  "s9": {
+   "url": "https://www.dwds.de/wb/Prozess",
+   "title": "Prozess – DWDS (Etymologisches Wörterbuch nach Pfeifer)",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:12.030Z",
+   "snapshot": "cff31bdd55bfe3ef872a8138ea7a48796f1c92ff13374f1f41a7af3574bac9fe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cursor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c037"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "monitor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "processor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "algorithm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "virus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:48.998Z",
+   "target": "f02216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In human–computer interaction, a cursor is an indicator used to show the current position on a computer monitor or other display device that will respond to input, such as a text cursor or a mouse pointer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cursor” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:48.998Z",
+   "target": "f02217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The IBM 5151 is a 12\" transistor–transistor logic (TTL) monochrome monitor, shipped with the original IBM Personal Computer for use with the IBM Monochrome Display Adapter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monitor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:48.998Z",
+   "target": "f02219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In mathematics and computer science, an algorithm ( ) is any well-defined set of instructions that when followed terminates after a finite number of steps that comprise a solution to a given computational problem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “algorithm” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:48.998Z",
+   "target": "f02220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cohen (born 1956) is an American computer scientist and best known as the inventor of computer virus defense techniques.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:48.998Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “virus” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:34:45Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Computer processors control and move vast amounts of data. The Latin root means \"advance or progress.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:34:46Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "from Latin prōcessus “a going forward,”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23",
+   "note": "processor = process + -or (Dictionary.com, 'processor')"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:34:48Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Verbalabstraktum zu lat. prōcēdere (prōcessum) ‘vorwärts gehen, vorankommen, Fortschritte machen, vonstatten gehen’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:10.971Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Computer processors control and move vast amounts of data. The Latin root means \"advance or progress.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:10.971Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:10.971Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "from Latin prōcessus “a going forward,”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:10.971Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:10.971Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Verbalabstraktum zu lat. prōcēdere (prōcessum) ‘vorwärts gehen, vorankommen, Fortschritte machen, vonstatten gehen’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:10.971Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:10.971Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "PROCESSOR Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:10.971Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “processor” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:10.971Z",
+   "target": "f02218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "to prepare (food) using a food processor",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:10.971Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “processor” is on the snapshot of s8"
+  }
+ ]
+}

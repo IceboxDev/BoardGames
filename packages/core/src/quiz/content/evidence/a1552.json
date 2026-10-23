@@ -1,0 +1,467 @@
+{
+ "article": "a1552",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
+   "title": "Blade Runner 2049 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:53.091Z",
+   "snapshot": "f85d1f4d83e74e0f726424fcd04e28268aa5e8d9e91cca56e0ee08537e084c21"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Star_Wars:_The_Force_Awakens",
+   "title": "Star Wars: The Force Awakens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:54.128Z",
+   "snapshot": "c0c9650e707e81c5c10cecafa918872d89ba212f2de85a5bd02ba2cac1817b04"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day",
+   "title": "Terminator 2: Judgment Day – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:36.362Z",
+   "snapshot": "78b17023e5fe814b9e36f044a9268c091d0efc2b23cda1afbf7bce0ccb5e953a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aliens_(film)",
+   "title": "Aliens (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:55.067Z",
+   "snapshot": "158575a386ae37fcb0df1ae527c0b2d0b10bb548f5d2bf83e40901c72ea7cc7a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tron:_Legacy",
+   "title": "Tron: Legacy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:56.093Z",
+   "snapshot": "2ba0727c30871c0e9c50b5bdcb45cc4f3f8e67029f36d968547fa0ac62e7054f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Terminator_2_%E2%80%93_Tag_der_Abrechnung",
+   "title": "Terminator 2 – Tag der Abrechnung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:54.837Z",
+   "snapshot": "c7985a89d22e8380b56f9251554c8c57e57738c368705f25b26a2f768e7c7b70"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/BB-8",
+   "title": "BB-8 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:56.905Z",
+   "snapshot": "5796574a04a62ef1030560436b5a6ecb5d041246f58bf368ce3560f9fa897c9e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mark_Hamill",
+   "title": "Mark Hamill",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:17.250Z",
+   "snapshot": "46b7fd82c6cab3e84ddbff6b471caf104a2eff890a8ce4770e5d110e49e29e17"
+  },
+  "s9": {
+   "url": "https://www.inverse.com/article/40133-star-wars-luke-skywalker-force-last-jedi-force-awakens-ending",
+   "title": "Inverse – Luke Skywalker's Force Awakens ending",
+   "publisher": "Inverse",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:35.983Z",
+   "snapshot": "a202758da135870a0b6adc3fde81dac6cc7be951f3d6bee16dec4a0793658a4c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07756",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blade Runner 2049",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07757",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Star Wars: The Force Awakens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07758",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Terminator 2: Judgment Day",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aliens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tron: Legacy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "T-1000",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-017"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "BB-8",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-041"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "zero",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; history entry seq 48; transcript tp-377"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f07756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blade Runner 2049 is a 2017 American science fiction film directed by Denis Villeneuve from a screenplay by Hampton Fancher and Michael Green, based on a story by Fancher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blade Runner 2049” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f07757",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Star Wars: The Force Awakens, also known as Star Wars: Episode VII – The Force Awakens,  is a 2015 American epic space opera film produced, co-written, and directed by J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Star Wars: The Force Awakens” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f07758",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Terminator 2: Judgment Day is a 1991 American science fiction action film directed by James Cameron, who co-wrote the script with William Wisher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Terminator 2: Judgment Day” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f07759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aliens is a 1986 science fiction-action film written and directed by James Cameron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aliens” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f07760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tron: Legacy is a 2010 American science fiction action film directed by Joseph Kosinski, and written by Adam Horowitz and Edward Kitsis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tron: Legacy” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f11277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Skynet hat einen neuartigen Terminator vom Typ T-1000 durch die Zeit ins Jahr 1994 zurückgeschickt, um den zehnjährigen John Connor zu töten, den zukünftigen Anführer der Menschheit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “T-1000” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f11278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "BB-8 (or Beebee-Ate) is a droid character in the Star Wars franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BB-8” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:42.932Z",
+   "target": "f11279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "zero",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“zero”, “null”, “ноль”) on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:34:09Z",
+   "target": "f11279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hamill only appears briefly at the end of the film (with no dialogue) in a cliffhanger set-up for the sequel.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:34:13Z",
+   "target": "f11279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Luke Skywalker and Rey had their emotional, wordless meeting on the remote planet Ahch-To",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:29.844Z",
+   "target": "f11279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Hamill only appears briefly at the end of the film (with no dialogue) in a cliffhanger set-up for the sequel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:29.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:29.844Z",
+   "target": "f11279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Luke Skywalker and Rey had their emotional, wordless meeting on the remote planet Ahch-To",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:29.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  }
+ ]
+}

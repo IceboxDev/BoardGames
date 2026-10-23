@@ -1,0 +1,234 @@
+{
+ "article": "a2355",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gro%C3%9F_Friedrichsburg_(Kolonie)",
+   "title": "Groß Friedrichsburg (Kolonie)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:49.156Z",
+   "snapshot": "b73d88760a8835b860880d1831cbe8d5972c3068cda5460d9609180802ac1ceb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Klein-Venedig",
+   "title": "Klein-Venedig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:52.301Z",
+   "snapshot": "41dd2e0e475e8034e92edda43de6811866f9f48db8bd873a345ce7947cee79eb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arguin",
+   "title": "Arguin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:53.251Z",
+   "snapshot": "05dd6203f76624de12b1dff4b18ae8ad78d09129c2b216f076f802f39fc8c56c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Brandenburger_Gold_Coast",
+   "title": "Brandenburger Gold Coast – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:54.260Z",
+   "snapshot": "34a0c0430ccdccc1708f0fd3b3b608d36bfc87aa9c6170145770fc4b997edee4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ghana",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Welser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mauritania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Frederick William",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dutch West India Company",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:03.791Z",
+   "target": "f12273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sie bestand aus mehreren durch Befestigungen geschützten Niederlassungen an einem rund 30 Kilometer langen Küstenstreifen am Kap der drei Spitzen (Cabo tres Puntas, Cape Three Points) im heutigen Princes Town in Ghana.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ghana” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:03.791Z",
+   "target": "f12274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Klein-Venedig (German for 'Little Venice') or Welserland (German pronunciation: [ˈvɛlzɐlant]) was the name of the Province of Venezuela between 1528 to 1546 when it was under the rule of the wealthy  Welser banking and patrician family of the Free Imperial Cities of Augsburg and Nuremberg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Welser” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:03.791Z",
+   "target": "f12275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arguin (Arabic: أرغين : Arghīn; Portuguese: Arguim) is an island off the western coast of Mauritania in the Bay of Arguin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mauritania” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:03.791Z",
+   "target": "f12276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1721, King Frederick William I of Prussia sold it for 7,200 ducats and 12 slaves to the Dutch West India Company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frederick William” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:03.791Z",
+   "target": "f12277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1721, King Frederick William I of Prussia sold it for 7,200 ducats and 12 slaves to the Dutch West India Company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.791Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dutch West India Company” is on the snapshot of s4"
+  }
+ ]
+}

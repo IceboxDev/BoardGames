@@ -1194,7 +1194,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     status: "production",
     platform: "BackerKit",
     campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
-    pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closure not yet announced
+    pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closing expected Nov '26
     // No wave-4 promise survives in the accessible updates; the earliest
     // documented estimate (May '24) put RPG freight + fulfilment at Oct/Nov
     // 2024, used here as a conservative original. The June '26 conservative
@@ -1282,6 +1282,30 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "unchanged.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/52120",
       },
+      {
+        id: "gloomhaven-festival-rpg-e07",
+        occurredOn: "2026-09-30",
+        type: "campaign-update",
+        title: "Printed RPG drying before packing — PDF to follow after SPIEL",
+        details:
+          "The printed RPG components are drying before boxing and shrink-wrap, and a real " +
+          "production-line copy arrived for review. The RPG PDF will reach backers via the " +
+          "pledge manager after SPIEL, before the physical product; the miniatures may arrive " +
+          "early enough to ship in the same wave. Timeline chart unchanged. (Date approximate.)",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/53197",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e08",
+        occurredOn: "2026-10-14",
+        type: "campaign-update",
+        title: "RPG in assembly — packing into containers starts Oct 15",
+        details:
+          "Assembly is underway (with some drying still going) and packing into cases and " +
+          "containers was set to start that Thursday; each Deluxe set ships in its own thick, " +
+          "foam-padded carton. The PDF is expected early November, the pledge manager should " +
+          "close in November, and the timeline chart is unchanged. (Date approximate.)",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/54265",
+      },
     ],
   },
   {
@@ -1295,7 +1319,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     status: "production",
     platform: "BackerKit",
     campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
-    pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closure not yet announced
+    pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closing expected Nov '26
     // No wave-5 promise survives in the accessible updates; waves 4–5 were
     // originally sequenced to follow wave 3 (orig. March '24) within 2024, so
     // the wave-4 Oct/Nov '24 anchor is used as a conservative original here
@@ -1384,6 +1408,29 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "production through October, sea freight Oct–Dec, land freight Dec–Jan and " +
           "fulfilment Jan–Feb.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/52120",
+      },
+      {
+        id: "gloomhaven-festival-minis-e07",
+        occurredOn: "2026-09-30",
+        type: "campaign-update",
+        title: "Minis may arrive early enough to ship with the RPG",
+        details:
+          "Factory photos show bins of finished miniatures waiting to be trayed and packaged. " +
+          "The minis may arrive a little earlier than expected, letting them ship in the same " +
+          "wave as the RPG — depending on ships and routes. (Date approximate.)",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/53197",
+      },
+      {
+        id: "gloomhaven-festival-minis-e08",
+        occurredOn: "2026-10-14",
+        type: "campaign-update",
+        title: "All minis made — hand-trayed, onto ships in the next few weeks",
+        details:
+          "Every set in the line is in production; minis, trays and boxes were sent to a " +
+          "central site where ~1.5 million miniatures are being placed into trays by hand, " +
+          "with ship loading expected in the next few weeks. Timeline chart unchanged " +
+          "(sea freight Oct–Dec, fulfilment Jan–Feb). (Date approximate.)",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/54265",
       },
     ],
   },

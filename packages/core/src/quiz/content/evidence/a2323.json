@@ -1,0 +1,756 @@
+{
+ "article": "a2323",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hymn_to_Liberty",
+   "title": "Hymn to Liberty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:00.567Z",
+   "snapshot": "eece7b290a99cc54dcfc0e3c5f1519ffa7d2009d39a265be0b83c9fdd88f0529"
+  },
+  "s2": {
+   "url": "https://www.worldatlas.com/articles/which-country-has-the-longest-national-anthem.html",
+   "title": "Which Country Has the Longest National Anthem? – WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:58.418Z",
+   "snapshot": "7c38b0d4101f4ee88a77c3a072dad3fa492f8030a947d866fe473c5c97b8492c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wilhelmus",
+   "title": "Wilhelmus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:01.627Z",
+   "snapshot": "08e76a6b151935cf2ea21b74f23dae4966c4f56895251da653b90684f609ff60"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/National_Anthem_of_Uruguay",
+   "title": "National Anthem of Uruguay – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:02.615Z",
+   "snapshot": "03de58fb48041d401064a2812057569fff5f496c5baa0864aa8d799fd0382df5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Marcha_Real",
+   "title": "Marcha Real – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:03.594Z",
+   "snapshot": "16d2ac2378201cc26f371c21b5747531351eacd7b5a9ee55e34687bf8cfc576b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Kimigayo",
+   "title": "Kimigayo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:04.664Z",
+   "snapshot": "aec3803e30cf965bd94a16ccf3123cb89bb7afad30356eb24b0423693f9a1490"
+  },
+  "s7": {
+   "url": "https://historiek.net/wilhelmus-geschiedenis-volkslied-nederland/67968/",
+   "title": "Het Wilhelmus – De geschiedenis van ons volkslied",
+   "publisher": "Historiek",
+   "kind": "press",
+   "lang": "nl",
+   "retrievedAt": "2026-10-23T07:50:21Z"
+  },
+  "s8": {
+   "url": "http://www.national-anthems.org/facts.htm",
+   "title": "Facts About National Anthems",
+   "publisher": "National Anthems of the World (national-anthems.org)",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:17.157Z",
+   "snapshot": "4fc16bcee2df421b37f20b8cf2616f7def18614c27d21d1bf35f73130f1c30f5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uruguay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greece",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Greece",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-138/1, u06: Greece's Hymn to Liberty (158 stanzas) has the longest text; Uruguay's is longest in playing time; Albania holds neither record."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greece",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Greece",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Consisting of 158 stanzas in total, its two first stanzas officially became the national anthem of Greece in 1864 and Cyprus in 1966.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greece” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "By words, the longest national anthem on Earth belongs to Greece, whose Hymn to Liberty runs 158 stanzas, a length no crowd has ever been asked to survive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greece” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Wilhelmus van Nassouwe\", known simply as the \"Wilhelmus\", is the national anthem of the Netherlands and the Kingdom of the Netherlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Netherlands” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The \"Himno Nacional del Uruguay\" (English: \"National Anthem of Uruguay\"), also known by its incipit \"Orientales, la Patria o la Tumba\" (English: \"Easterners, the Country or the Tomb\"), is the longest national anthem in terms of duration with 105 bars of music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uruguay” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "'Grenadier March'), is the national anthem of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spain” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:56.460Z",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "'your reign') is the national anthem of Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:50:18Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It dates back to at least 1572, making it the oldest national anthem in use today, based on the continuous coexistence of its original melody and lyrics.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:50:21Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Het Wilhelmus wordt door het Guinness Book of Records beschouwd als het oudste volkslied ter wereld.",
+     "quoteLang": "nl",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:50:23Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "THE NETHERLANDS - oldest music - melody known before 1572",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Splits the record: Japan has the oldest words, the Netherlands the oldest music; the wording says \"considered the oldest national anthem in use\", which is the usual Guinness view."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:50:26Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is the longest national anthem in terms of duration with 105 bars of music.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:50:28Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "URUGUAY - music - 105 bars of music",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:50:32Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "By music, the champion is Uruguay",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:50:35Z",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "making the lyrics of \"Kimigayo\" the oldest lyrics of any national anthem.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:50:37Z",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "JAPAN - oldest words - dating from the 9th Century",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:50:41Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "GREECE - lyrics - has a total of 158 verses!",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It dates back to at least 1572, making it the oldest national anthem in use today, based on the continuous coexistence of its original melody and lyrics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "THE NETHERLANDS - oldest music - melody known before 1572",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "is the longest national anthem in terms of duration with 105 bars of music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "URUGUAY - music - 105 bars of music",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "By music, the champion is Uruguay",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s2"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "making the lyrics of \"Kimigayo\" the oldest lyrics of any national anthem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "JAPAN - oldest words - dating from the 9th Century",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "GREECE - lyrics - has a total of 158 verses!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s8"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "GREECE - lyrics - has a total of 158 verses!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Greece” is on the snapshot of s8"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "THE NETHERLANDS - oldest music - melody known before 1572",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Netherlands” is on the snapshot of s8"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "By music, the champion is Uruguay, whose anthem stretches 105 bars and roughly five minutes when performed in full, complete with an operatic aria in the middle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uruguay” is on the snapshot of s2"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "URUGUAY - music - 105 bars of music",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Uruguay” is on the snapshot of s8"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:58:41.686Z",
+   "target": "f12049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "JAPAN - oldest words - dating from the 9th Century",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:41.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Japan” is on the snapshot of s8"
+  }
+ ]
+}

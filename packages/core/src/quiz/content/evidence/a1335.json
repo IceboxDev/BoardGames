@@ -1,0 +1,346 @@
+{
+ "article": "a1335",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fountain_(Duchamp)",
+   "title": "Fountain (Duchamp) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:30.286Z",
+   "snapshot": "4f13a78d0805a51d043337452942379e87e29a09f7579319ccffea4a52479a81"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/In_Advance_of_the_Broken_Arm",
+   "title": "In Advance of the Broken Arm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:31.213Z",
+   "snapshot": "ede12c2e8685cef454768c7b210c7cbffac63f6d158f172e45c9e4f9b0d948a2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bottle_Rack",
+   "title": "Bottle Rack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:32.194Z",
+   "snapshot": "c7f1194e309a3e57f2614145a08b687643f6e2a21559b3a5ad1199e72e070ea9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Gift_(sculpture)",
+   "title": "The Gift (sculpture) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:33.236Z",
+   "snapshot": "79c76f563d00fefa6ef8f4c7571152da438d3efb16bb22ead3c1ea3ffb9d4047"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_en_fourrure",
+   "title": "Le Déjeuner en fourrure – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:34.184Z",
+   "snapshot": "f6e1cabeaa8cbcbe30321f147d603f6abd9b207b18be516baa2bcc485bfa0f95"
+  },
+  "s6": {
+   "url": "https://www.artic.edu/artworks/199055/cadeau-gift",
+   "title": "Cadeau (Gift) – The Art Institute of Chicago",
+   "publisher": "The Art Institute of Chicago",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:27.741Z",
+   "snapshot": "6e6f2bc8a56cf99200a69f0dd52b07d1093b172e0cbcb2eb7cd3593d5e59fe0c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Urinal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Snow shovel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bottle rack",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flatiron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Teacup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:08.819Z",
+   "target": "f06671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fountain was a readymade sculpture attributed to Marcel Duchamp in 1917, consisting of a porcelain urinal signed \"R.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Urinal” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:08.819Z",
+   "target": "f06672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Advance of the Broken Arm, also called Prelude to a Broken Arm, is a 1915 sculpture by Dada artist Marcel Duchamp that consisted of a snow shovel with \"from Marcel Duchamp 1915\" painted on the handle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snow shovel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:08.819Z",
+   "target": "f06673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Bottle Rack (also called Bottle Dryer or Hedgehog) (Egouttoir or Porte-bouteilles or Hérisson)  is a proto-Dada artwork created in 1914 by Marcel Duchamp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bottle rack” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:08.819Z",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flatiron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Flatiron”, “Bügeleisen”, “Утюг”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:08.819Z",
+   "target": "f06675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Object (\"The Luncheon in Fur\"), known in English as Fur Breakfast or Breakfast in Fur, is a 1936 sculpture by the surrealist Méret Oppenheim, consisting of a fur-covered teacup, saucer and spoon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.819Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Teacup” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:59Z",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Flatiron and 14 iron tacks",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:02Z",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "consisting of an iron with fourteen thumb tacks glued to its sole",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:53.161Z",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Flatiron and 14 iron tacks",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:53.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:53.161Z",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "consisting of an iron with fourteen thumb tacks glued to its sole",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:53.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:53.161Z",
+   "target": "f06674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Flatiron and 14 iron tacks",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:53.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Flatiron” is on the snapshot of s6"
+  }
+ ]
+}

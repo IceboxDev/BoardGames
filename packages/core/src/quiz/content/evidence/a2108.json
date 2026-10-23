@@ -1,0 +1,465 @@
+{
+ "article": "a2108",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+   "title": "Salt Lake City – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:06.214Z",
+   "snapshot": "c320ebbd1995a3c462172aaf7ec229d9d4b2d4c6015944c02c36160c2923a0d7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Watchtower",
+   "title": "The Watchtower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:58.786Z",
+   "snapshot": "77ab61713a0872e623a337f0aecf1f50dfa3e72174be7054ccebcb66d5990962"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Seventh-day_Adventist_Church",
+   "title": "Seventh-day Adventist Church – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:59.997Z",
+   "snapshot": "3c507843f912daed781359d456935c7914505d9112cfdfc3f93ef047f5b10b22"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/L._Ron_Hubbard",
+   "title": "L. Ron Hubbard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:01.014Z",
+   "snapshot": "df76caf762568f3c3457d5e91d109fe0a02b6f7d55d58d204902a2912b8d3728"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Millerism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:01.881Z",
+   "snapshot": "bd6fe877faded70371c8b090a24278334c4c540d33bff4f417ee2d541e28ed84"
+  },
+  "s6": {
+   "url": "https://www.newadvent.org/cathen/10570c.htm",
+   "title": "Mormons – Catholic Encyclopedia",
+   "publisher": "New Advent (Catholic Encyclopedia, 1911)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:41.701Z",
+   "snapshot": "288640d56999baeb009ad8c748c175320c7c0c78062355090e70b75a03e432a0"
+  },
+  "s7": {
+   "url": "https://www.nps.gov/mopi/learn/historyculture/stories.htm",
+   "title": "Stories – Mormon Pioneer National Historic Trail",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:41.558Z",
+   "snapshot": "6f788b797c09db7de93b3f03e28e0c6d5788e6a14a3283f7c71d58c625a6d6d7"
+  },
+  "s8": {
+   "url": "https://whiteestate.org/about/egwbio/",
+   "title": "Ellen G. White: A Brief Biography",
+   "publisher": "Ellen G. White Estate",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:43.328Z",
+   "snapshot": "7e601257ada6dad6dfee2e865834fb06c207a25688f6500e8f4921261faf9bc8"
+  },
+  "s9": {
+   "url": "https://www.newadvent.org/cathen/01166a.htm",
+   "title": "Adventists – Catholic Encyclopedia",
+   "publisher": "New Advent (Catholic Encyclopedia, 1907)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:42.135Z",
+   "snapshot": "18c8b9602310109cf49d923830cd0de5d49275bec341c5498e1c952d8e747f11"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Mormons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jehovah's Witnesses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Seventh-day Adventists",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Scientology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:23.844Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Mormons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Mormons”, “die Mormonen”, “мормоны”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:23.844Z",
+   "target": "f10537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jehovah's Witnesses distribute The Watchtower—Public Edition, along with its companion magazine, Awake!",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jehovah's Witnesses” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:23.844Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Seventh-day Adventists",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Seventh-day Adventists”, “die Siebenten-Tags-Adventisten”, “адвентисты седьмого дня”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:23.844Z",
+   "target": "f10540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lafayette Ronald Hubbard (March 13, 1911 – January 24, 1986) was an American author and the founder of Scientology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scientology” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:49:13Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Mormon pioneers, marching from the Missouri River in April, 1847, arrived in Salt Lake Valley on 24 July.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:49:18Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A few days after their arrival they laid out Salt Lake City.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:22Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Brigham Young executed a flawless trek to the Salt Lake Valley in 1847.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:25Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The climax was reached in the organization of the General Conference of Seventh-day Adventists in May, 1863.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:49:28Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "in Battle Creek, Michigan, so liberally provided",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:49:32Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These hold to the observance of the seventh day of the week as the Sabbath.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23",
+   "note": "CE also names Mrs. E.G. White as their prophetic figure; its 'formed into a body in 1845' refers to the early movement, the General Conference was organised in 1863."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:10.534Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A few days after their arrival they laid out Salt Lake City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:10.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:10.534Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Brigham Young executed a flawless trek to the Salt Lake Valley in 1847.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:10.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:10.534Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "in Battle Creek, Michigan, so liberally provided",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:10.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:10.534Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These hold to the observance of the seventh day of the week as the Sabbath.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:10.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:10.534Z",
+   "target": "f10536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Mormons are equally emphatic in their denial of the identity of the \"Book of Mormon\" with Spaulding's \"Manuscript Story\", now in Oberlin College; they quote in this connection James H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:10.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Mormons” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:10.534Z",
+   "target": "f10539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Otherwise they resemble the Seventh Day Adventists, They became an independent body in 1864-65.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:10.534Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Seventh-day Adventists” is on the snapshot of s9"
+  }
+ ]
+}

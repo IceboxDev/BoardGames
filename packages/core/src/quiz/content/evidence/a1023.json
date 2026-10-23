@@ -1,0 +1,415 @@
+{
+ "article": "a1023",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Coronation_of_Napoleon",
+   "title": "Coronation of Napoleon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:59.041Z",
+   "snapshot": "28b5b669ba18cacbd4b8eea7ef95204789f122efa70e1c46918ca4fb7fe27955"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Iron_Crown",
+   "title": "Iron Crown – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:00.141Z",
+   "snapshot": "35b3ee640b2f8b47711bf280cee5a8d870ec11005d40d20c4824c2270bdb8aff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Charles_X_of_France",
+   "title": "Charles X of France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:01.194Z",
+   "snapshot": "843ecb3da03004bb33e3649eb99eaac47462eb58a9ec3b38e82a0f8049455652"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/William_the_Conqueror",
+   "title": "William the Conqueror – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:02.237Z",
+   "snapshot": "abb9dc42d47783d8e70e6ad5e9c359214f9ba6a8c7adff21313e261fa95427d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Otto_the_Great",
+   "title": "Otto the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:03.285Z",
+   "snapshot": "224ea832bb21251006636bdeb68ae0bce4feae2bbe689dc863bdc31bbfb06e98"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Reims_Cathedral",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:04.168Z",
+   "snapshot": "5cff0e8211c4e45a2bf0dcd5eb2c8031a853ca51d8afa7f7a3c2ecbd728aeb53"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Aachener_Dom",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:03.367Z",
+   "snapshot": "ed38cc6ea302afc2db0f286431e2f2ad855f12965c0f63582ea865fcce0eec15"
+  },
+  "s8": {
+   "url": "https://www.historyhit.com/locations/reims-cathedral/",
+   "title": "Reims Cathedral - History and Facts | History Hit",
+   "publisher": "History Hit",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:16.436Z",
+   "snapshot": "daec19796e812737f1ea447a601a97fa2d4aa65edbd8d779d965ffee2852b811"
+  },
+  "s9": {
+   "url": "https://www.connexionfrance.com/magazine/secrets-and-rituals-of-the-french-monarchy-in-reims/395131",
+   "title": "Secrets and rituals of the French monarchy in Reims | Connexion France",
+   "publisher": "The Connexion",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:17.370Z",
+   "snapshot": "1746e36195b5a4c317bb2de3c5f2f17eb4adfb3915738943efc10dad4dffb78a"
+  },
+  "s10": {
+   "url": "https://whc.unesco.org/en/list/601/",
+   "title": "Cathedral of Notre-Dame, Former Abbey of Saint-Rémi and Palace of Tau, Reims - UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:20:27Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Notre-Dame de Paris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Milan Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Reims Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Westminster Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Aachen Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:21.634Z",
+   "target": "f05111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Napoleon was crowned Emperor of the French on December 2, 1804 (11 Frimaire, Year XIII according to the French Republican calendar, commonly used at the time in France), at Notre-Dame de Paris in Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.634Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Notre-Dame de Paris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:21.634Z",
+   "target": "f05112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 26 May 1805, Napoleon Bonaparte crowned himself King of Italy at the Milan Cathedral.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.634Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milan Cathedral” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:21.634Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Reims Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Reims Cathedral”, “Kathedrale von Reims”, “Реймсский собор”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:21.634Z",
+   "target": "f05114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harold was crowned on 6 January 1066 in Edward's new Norman-style Westminster Abbey, although some controversy surrounds who performed the ceremony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.634Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Westminster Abbey” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:21.634Z",
+   "target": "f05115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At the Imperial Diet at Worms in May 961, Otto named his six-year-old son Otto II as heir apparent and co-ruler, and had him crowned at Aachen Cathedral on 26 May 961.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.634Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aachen Cathedral” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:20:21Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The final monarch to be crowned there was Charles X in 1825.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:20:24Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Twenty-five kings were crowned in the cathedral, from Louis VIII in 1223 to Charles X in 1825.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:20:27Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "These places involved in the coronation ceremony recall the balance between public authority and sacred function",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:54.463Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The final monarch to be crowned there was Charles X in 1825.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:54.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:54.463Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Twenty-five kings were crowned in the cathedral, from Louis VIII in 1223 to Charles X in 1825.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:54.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:54.463Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Reims Cathedral - History and Facts | History Hit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:54.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Reims Cathedral” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:54.463Z",
+   "target": "f05113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 816, Louis I the Pious, the son of Charlemagne, was crowned emperor in Reims cathedral by Pope Etienne IV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:54.463Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Reims Cathedral” is on the snapshot of s9"
+  }
+ ]
+}

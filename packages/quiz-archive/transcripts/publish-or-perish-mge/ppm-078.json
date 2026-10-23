@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-078",
+ "image": "IMG20261022154141.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] Which planet in our solar system has the shortest day?\nA. Jupiter B. Mercury C. Venus\nAnswer: A. Jupiter has the shortest day of all the planets in our solar system, completing a rotation in just about 10 hours.",
+   "de": "Welcher Planet unseres Sonnensystems hat den kürzesten Tag und dreht sich in knapp zehn Stunden einmal um sich selbst?",
+   "en": "Which planet in our solar system has the shortest day, rotating once in just under ten hours?",
+   "reworked": true,
+   "answerDe": "Jupiter",
+   "answerEn": "Jupiter",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1665",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Giovanni Cassini sees spots on Jupiter and estimates its rotation period",
+    "labelDe": "Giovanni Cassini beobachtet Flecken auf Jupiter und schätzt seine Rotationsdauer"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Jupiter",
+    "title": "Jupiter",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed (rotation about 9 h 50 min to 9 h 56 min, the fastest of the planets).",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] How can sharks be temporarily paralyzed?\nA. By applying pressure to their gills\nB. By flipping them upside down\nC. By shining a light on their eyes\nAnswer: B. Flipping a shark upside down induces a state known as tonic immobility, where the shark becomes temporarily paralyzed and enters a trance-like state. This phenomenon, also referred to as “playing dead,” is used by researchers to safely handle and tag sharks. This behavior is observed in many other vertebrates as well.",
+   "de": "Was machen Forscher mit einem Hai, um ihn in tonische Immobilität, eine vorübergehende tranceartige Starre, zu versetzen?",
+   "en": "What do researchers do to a shark to put it into tonic immobility, a temporary trance-like paralysis?",
+   "reworked": true,
+   "answerDe": "Sie drehen ihn auf den Rücken",
+   "answerEn": "Turn it upside down",
+   "timeline": {
+    "kind": "event",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A. D. Henningsen documents tonic immobility in 12 species of sharks and rays as an aid to captive husbandry",
+    "labelDe": "A. D. Henningsen beschreibt die tonische Immobilität bei 12 Hai- und Rochenarten als Hilfe bei der Haltung in Gefangenschaft"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Apparent_death#Tonic_immobility",
+    "title": "Apparent death",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed: some sharks (dogfish, lemon, whitetip reef sharks) enter tonic immobility when inverted and restrained.",
+   "domain": "nature",
+   "sub": "animals"
+  }
+ ]
+}

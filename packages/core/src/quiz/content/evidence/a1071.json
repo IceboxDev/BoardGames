@@ -1,0 +1,242 @@
+{
+ "article": "a1071",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Approximately_Infinite_Universe",
+   "title": "Approximately Infinite Universe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:47.078Z",
+   "snapshot": "72c4fffb0f7fa672bf62a03b0b1550f5c9dc16c8d4701c4f5f48663937c67aa4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Marina_Abramovi%C4%87",
+   "title": "Marina Abramović – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:09.461Z",
+   "snapshot": "d899998f42ff751d4fced13d6ba8566b4ac1ee22f1c35ac9ce7e2e12a5258018"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Yayoi_Kusama",
+   "title": "Yayoi Kusama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:48.179Z",
+   "snapshot": "1eaedcd6335aa5005d4b6e88b40244da85a52a75bfceee67251a5aec4f4527e4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Barbara_Kruger",
+   "title": "Barbara Kruger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:49.230Z",
+   "snapshot": "85a279074b839e834fc6af86974763ac5da0c244fe94e327dcfe71cd42ac86fa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jenny_Holzer",
+   "title": "Jenny Holzer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:51.562Z",
+   "snapshot": "72956e9986eb3e3fde0505be59448035c587964baeffc5a50edd5be6a99f027d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yoko Ono",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marina Abramović",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Yayoi Kusama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barbara Kruger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jenny Holzer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:28.086Z",
+   "target": "f05351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Approximately Infinite Universe is the third solo album by Yoko Ono, released in early 1973 on Apple Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yoko Ono” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:28.086Z",
+   "target": "f05352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marina Abramović (Serbian Cyrillic: Марина Абрамовић, pronounced [marǐːna abrǎːmovitɕ]; born November 30, 1946) is a Serbian conceptual and performance artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marina Abramović” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:28.086Z",
+   "target": "f05353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Yayoi Kusama (草間 彌生, Kusama Yayoi; 22 March 1929 – 14 August 2026) was a Japanese artist who worked primarily in sculpture and installation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yayoi Kusama” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:28.086Z",
+   "target": "f05354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barbara Kruger (born January 26, 1945) is an American conceptual artist and collagist associated with the Pictures Generation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barbara Kruger” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:28.086Z",
+   "target": "f05355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jenny Holzer (born July 29, 1950) is an American neo-conceptual artist based in Hoosick, New York and New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:28.086Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jenny Holzer” is on the snapshot of s5"
+  }
+ ]
+}

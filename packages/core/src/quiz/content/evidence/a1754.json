@@ -1,0 +1,195 @@
+{
+ "article": "a1754",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Catch-22",
+   "title": "Catch-22 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:17.426Z",
+   "snapshot": "c36b77190f6554a561b553cc55aa2ed27be213ce32662bb5a2031aa00ccf2887"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Slaughterhouse-Five",
+   "title": "Slaughterhouse-Five – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:18.502Z",
+   "snapshot": "17943567ba48370b205699e8d700bc00f7717c6d9fec79fae68e17e12a4ddf32"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Norman_Mailer",
+   "title": "Norman Mailer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:19.638Z",
+   "snapshot": "dc1a19775d993f1b397187471d17466ce2cc443a84556a81f14590755b371f68"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_Farewell_to_Arms",
+   "title": "A Farewell to Arms – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:20.522Z",
+   "snapshot": "4a974b89a4fae579fe044f17b3edb13ff08077c145d5ba9d8375eb77af3bcb5f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catch-22",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c147"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Slaughterhouse-Five",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Naked and the Dead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Farewell to Arms",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:17.299Z",
+   "target": "f08766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catch-22 is a satirical war novel by American author Joseph Heller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catch-22” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:17.299Z",
+   "target": "f08767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Slaughterhouse-Five, or, The Children's Crusade: A Duty-Dance with Death is a 1969 semi-autobiographic science fiction-infused anti-war novel by Kurt Vonnegut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slaughterhouse-Five” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:17.299Z",
+   "target": "f08769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "His novel The Naked and the Dead was published in 1948 and brought him early renown.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Naked and the Dead” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:17.299Z",
+   "target": "f08770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Farewell to Arms is a novel by American writer Ernest Hemingway, set during the Italian campaign of World War I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Farewell to Arms” is on the snapshot of s4"
+  }
+ ]
+}

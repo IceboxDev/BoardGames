@@ -1,0 +1,249 @@
+{
+ "article": "a2606",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Klemheist_knot",
+   "title": "Klemheist knot",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:52.087Z",
+   "snapshot": "137f084691c7266c869d9db8005381c243b7e68221007908b05ace4a93346693"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Prusik",
+   "title": "Prusik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:53.078Z",
+   "snapshot": "cb24d42665bb60c21da65aa0d0917442581238a68fe08c988332047cf05ee9df"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Munter_hitch",
+   "title": "Munter hitch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:54.080Z",
+   "snapshot": "1794221998066f13063699a4d35e6416dfdebbe77090c2423a9d138de024a114"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Figure-eight_loop",
+   "title": "Figure-eight loop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:55.026Z",
+   "snapshot": "79eaccac4d65394ed251029fcbaf465cdc2946b8cc460cfff9a0834b036f6204"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bowline",
+   "title": "Bowline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:56.028Z",
+   "snapshot": "08d7a4d1191a3b0a83984ac13941cf7097778ec21c978313d39b2a82a72eac98"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Halbmastwurf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:53.647Z",
+   "snapshot": "fdfc260fe67b44eb8f09863f417136a8555b395eb11e01eb7947b1aee69e1f94"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Knots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Prusik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Munter hitch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "figure-eight knot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bowline",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:46.402Z",
+   "target": "f14046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A scientific study of common friction knots Archived 2013-12-12 at the Wayback Machine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knots” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:46.402Z",
+   "target": "f14047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Prusik hitch is named after its putative inventor, the Austrian mountaineer Karl Prusik.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Prusik” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:46.402Z",
+   "target": "f14048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Munter hitch, also known as the Italian hitch, mezzo barcaiolo is a simple adjustable knot, commonly used by climbers, cavers, and rescuers to control friction in a life-lining or belay system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Munter hitch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:46.402Z",
+   "target": "f14049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A figure-eight loop is created by doubling the rope into a bight, then tying the standard figure-eight knot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “figure-eight knot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:46.402Z",
+   "target": "f14050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The bowline () is an ancient and simple knot used to form a fixed loop at the end of a rope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.402Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bowline” is on the snapshot of s5"
+  }
+ ]
+}

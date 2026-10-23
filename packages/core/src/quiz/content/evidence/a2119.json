@@ -1,0 +1,249 @@
+{
+ "article": "a2119",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bernd_Lucke",
+   "title": "Bernd Lucke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:39.808Z",
+   "snapshot": "cd4564ff4d4eb34f585072fb0b0aee06f2d359e6ee6a866a1aa91a6b02deac28"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Heuschreckendebatte",
+   "title": "Heuschreckendebatte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:37.237Z",
+   "snapshot": "883a78dbffdc16081f0a803d3ba1cfbed00cdf1d9e08f6a098ec35df087fb115"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mario_Draghi",
+   "title": "Mario Draghi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:40.916Z",
+   "snapshot": "6d0fa5087211a1e7d05c85373f9bb7ca87fbe8a7b4d00d1604edafd81eeaed7e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Bl%C3%BChende_Landschaften",
+   "title": "Blühende Landschaften – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:38.200Z",
+   "snapshot": "5e9f89f1cbec2b31a887fb2ac77b700206b3290204c556efedda0aa873686e6b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Peer_Steinbr%C3%BCck",
+   "title": "Peer Steinbrück – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:39.300Z",
+   "snapshot": "52772052dd6c38dfb00c64d0f8bd817bf5f9e47803c8814bf8bc14e436824f96"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hans-Olaf_Henkel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:40.324Z",
+   "snapshot": "01efe22c85321e3f607e6e4fa83ce3b6ec0d454cf5f6033e2a118fd95a0a1405"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the AfD",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Finanzinvestoren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the euro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "die neuen Bundesländer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "die Schweiz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:25.664Z",
+   "target": "f10591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He had been elected a member of the European Parliament (MEP) for the AfD in 2014 and served the five-year full term as a member of various other new parties, similar to some other former AfD MEPs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the AfD” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:25.664Z",
+   "target": "f10592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "„Manche Finanzinvestoren verschwenden keinen Gedanken an die Menschen, deren Arbeitsplätze sie vernichten – sie bleiben anonym, haben kein Gesicht, fallen wie Heuschreckenschwärme über Unternehmen her, grasen sie ab und ziehen weiter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Finanzinvestoren” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:25.664Z",
+   "target": "f10593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He presided over the institution during the Eurozone crisis, becoming famous throughout Europe for saying that he would be prepared to do \"whatever it takes\" to prevent the euro from failing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the euro” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:25.664Z",
+   "target": "f10594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blühende Landschaften ist ein 1990 vom damaligen deutschen Bundeskanzler Helmut Kohl geprägtes Schlagwort, das eine ökonomische Zukunftsperspektive für die neuen Bundesländer beschreibt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die neuen Bundesländer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:25.664Z",
+   "target": "f10595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zudem verglich er die Schweizer mit einem Indianervolk, und die Drohung, die Schweiz auf die schwarze Liste der OECD zu setzen, um sie als Steueroase an den Pranger zu stellen, mit der „7.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Schweiz” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-257",
+ "image": "IMG20261007181700.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie viele Zeitzonen werden in China genutzt: eine, fünf oder sieben?",
+   "de": "Wie viele Zeitzonen werden in China offiziell genutzt?",
+   "en": "How many time zones are officially used in China?",
+   "reworked": true,
+   "answerDe": "1",
+   "answerEn": "1",
+   "timeline": {
+    "kind": "event",
+    "start": "1949",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "China moves to a single nationwide time, Beijing Time (UTC+8)",
+    "labelDe": "China führt eine landesweit einheitliche Zeit ein, die Pekinger Zeit (UTC+8)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Time_in_China",
+    "title": "Time in China",
+    "lang": "en"
+   },
+   "notes": "China spans five geographical time zones but officially observes only UTC+8; in Xinjiang an unofficial local time (UTC+6) is also used.",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der Schauspieler, der als Jugendlicher die Hauptrolle in Timm Thaler und Manni, der Libero spielte?",
+   "de": "Wie heißt der Schauspieler, der als Jugendlicher die Hauptrolle in Timm Thaler und Manni, der Libero spielte?",
+   "en": "What is the name of the actor who, as a teenager, played the lead role in Timm Thaler and Manni, der Libero?",
+   "reworked": false,
+   "answerDe": "Thomas Ohrner",
+   "answerEn": "Thomas Ohrner",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1965-06-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Thomas „Tommi“ Ohrner, German actor and TV presenter",
+    "labelDe": "Thomas „Tommi“ Ohrner, deutscher Schauspieler und Fernsehmoderator"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Thomas_Ohrner",
+    "title": "Thomas Ohrner",
+    "lang": "de"
+   },
+   "notes": "Known as a youth as „Tommi“ Ohrner. Timm Thaler: ZDF series 1979; Manni, der Libero: 1982.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie lauten die Vornamen der beiden Dassler-Brüder, die Adidas und Puma gegründet haben?",
+   "de": "Wie lauten die Vornamen der beiden Dassler-Brüder, die Adidas und Puma gegründet haben?",
+   "en": "What are the first names of the two Dassler brothers who founded Adidas and Puma?",
+   "reworked": false,
+   "answerDe": "Adolf („Adi“) und Rudolf",
+   "answerEn": "Adolf (“Adi”) and Rudolf",
+   "timeline": {
+    "kind": "founding",
+    "start": "1948",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "After the Dassler brothers split, Rudolf founds Puma and Adolf the firm that becomes Adidas",
+    "labelDe": "Nach der Trennung der Dassler-Brüder gründet Rudolf Puma und Adolf die spätere Firma Adidas"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Adolf_Dassler",
+    "title": "Adolf Dassler",
+    "lang": "de"
+   },
+   "notes": "Adolf „Adi“ Dassler founded Adidas; his elder brother Rudolf founded Puma (registered 1948).",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 4,
+   "cardDe": "Das Gemälde Les femmes d’Alger wurde 2015 für 179 Millionen US-Dollar versteigert. Wie heißt der Maler des Bildes?",
+   "de": "Das Gemälde Les femmes d’Alger wurde 2015 für 179 Millionen US-Dollar versteigert. Wie heißt der Maler des Bildes?",
+   "en": "The painting Les femmes d’Alger was auctioned in 2015 for 179 million US dollars. Who painted it?",
+   "reworked": false,
+   "answerDe": "Pablo Picasso",
+   "answerEn": "Pablo Picasso",
+   "timeline": {
+    "kind": "event",
+    "start": "2015-05",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Picasso's Les femmes d'Alger (Version O) sells at Christie's New York for $179.4 million, an auction record",
+    "labelDe": "Picassos Les femmes d'Alger (Version O) erzielt bei Christie's New York 179,4 Mio. US-Dollar, ein Auktionsrekord"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Les_Femmes_d%27Alger",
+    "title": "Les Femmes d'Alger",
+    "lang": "en"
+   },
+   "notes": "Version O (1955), the last of Picasso's series of 15 paintings.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches Motorbauteil nutzt die Abgase zur Steigerung der Leistung, was zu einer schnelleren Beschleunigung eines Wagens führt?",
+   "de": "Welches Motorbauteil nutzt die Abgase zur Steigerung der Leistung, was zu einer schnelleren Beschleunigung eines Wagens führt?",
+   "en": "Which engine component uses the exhaust gases to increase power, giving a car faster acceleration?",
+   "reworked": false,
+   "answerDe": "Turbolader",
+   "answerEn": "Turbocharger",
+   "timeline": {
+    "kind": "creation",
+    "start": "1905-11-16",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Swiss engineer Alfred Büchi files the patent for the exhaust-gas turbocharger",
+    "labelDe": "Der Schweizer Alfred Büchi meldet das Patent für den Abgasturbolader an"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Turbolader",
+    "title": "Turbolader",
+    "lang": "de"
+   },
+   "notes": "Also called Abgasturbolader.",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt der deutsche Skispringer, der dreimal olympisches Gold gewann und danach ein Hotel im Erzgebirge eröffnete?",
+   "de": "Wie heißt der deutsche Skispringer, der dreimal olympisches Gold gewann und danach ein Hotel im Erzgebirge eröffnete?",
+   "en": "What is the name of the German ski jumper who won Olympic gold three times and then opened a hotel in the Ore Mountains?",
+   "reworked": false,
+   "answerDe": "Jens Weißflog",
+   "answerEn": "Jens Weißflog",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1964-07-21",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Jens Weißflog, German ski jumper, three-time Olympic champion (1984, 1994)",
+    "labelDe": "Jens Weißflog, deutscher Skispringer, dreifacher Olympiasieger (1984, 1994)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Jens_Wei%C3%9Fflog",
+    "title": "Jens Weißflog",
+    "lang": "de"
+   },
+   "notes": "Golds: 1984 normal hill; 1994 large hill and team. Opened his hotel in Oberwiesenthal in 1996, the year he retired.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

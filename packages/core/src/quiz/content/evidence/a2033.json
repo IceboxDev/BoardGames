@@ -1,0 +1,209 @@
+{
+ "article": "a2033",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/International_Kendo_Federation",
+   "title": "International Kendo Federation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:16.433Z",
+   "snapshot": "3a6752a33b550985580d30855036bfef83723bb0a0d7d95db1946cfd0dd96c33"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Judo_at_the_1964_Summer_Olympics",
+   "title": "Judo at the 1964 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:50.332Z",
+   "snapshot": "a3224adecde37ceba1b1e628511471dfe03755be8dd4e88187aadae381980212"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sumo",
+   "title": "Sumo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:59.058Z",
+   "snapshot": "69151b562e6740701943605b6b00c7704775ab610add38d07568986cc4510179"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/All_Nippon_Kyudo_Federation",
+   "title": "All Nippon Kyudo Federation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:17.287Z",
+   "snapshot": "14840861e3cbbc96fe41f5c2f3a7512660d29ce5743f594f32e451ce6170b950"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rank_in_judo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:52.470Z",
+   "snapshot": "a18183a7f47ee22b9464a652ecdf762e68e9f30fdf0843b883cc49b69fa9c4b5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Karate",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:36.474Z",
+   "snapshot": "a6b12d2154af2b4c3290319771470e4a80cf5f0d6197913ff0172cd2b4f6df64"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "kendo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "judo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sumo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "kyudo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:09.778Z",
+   "target": "f10161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "International Kendo Federation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kendo” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:09.778Z",
+   "target": "f10162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Judo at the 1964 Summer Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “judo” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:09.778Z",
+   "target": "f10164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sumo (Japanese: 相撲, Hepburn: sumō; pronounced [sɯmoː], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sumo” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:09.778Z",
+   "target": "f10165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The All Nippon Kyudo Federation  (ANKF) (Japanese: 全日本弓道連盟) (全弓連) is a public interest incorporated foundation and sports governing body that presides over the martial art of Kyūdō in Japan by organising standards seminars and events for the majority of kyudo practitioners in the country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kyudo” is on the snapshot of s4"
+  }
+ ]
+}

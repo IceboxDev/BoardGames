@@ -1,0 +1,453 @@
+{
+ "article": "a0479",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jenever",
+   "title": "Jenever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:12.011Z",
+   "snapshot": "47d4635a7731a9d6ef8879aa3e6cff0aa1b6f102ea0308d48f98e8c46566b49d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tequila",
+   "title": "Tequila – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:13.070Z",
+   "snapshot": "7d29e0fd853983bb8c6a33653630545589368d1f2004156f18faa78dac201588"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rum",
+   "title": "Rum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:14.133Z",
+   "snapshot": "c0a916e93742811f04b6bb220b763d510c5a0414a2cc94e1091319f3029fec7e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Calvados",
+   "title": "Calvados – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:13.077Z",
+   "snapshot": "d30dea8b89a65e47af64accf8ed90894e7e224f23fb770364abdb6961bcdb96d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bourbon_whiskey",
+   "title": "Bourbon whiskey",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:15.043Z",
+   "snapshot": "0ca9d0241338263e5af4bc23ffe2bce11979ad3200ceb5725ec8c8ecc078e263"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Pulque",
+   "title": "Pulque",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:12.228Z",
+   "snapshot": "e29853b4960a7897a52b0f377a6e5756559c357f1a4a2c5bc1a67b9a93677fd6"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pulque",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:16.107Z",
+   "snapshot": "316039fb838d237155769b113b7ebcf5570fdefaadb711da680f23e10339e1f2"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Calvados_(brandy)",
+   "title": "Calvados (brandy)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:06:56Z"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/calvados",
+   "title": "Calvados – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:28.795Z",
+   "snapshot": "64804ba591a1aae62cfeefee2c7404709b68e2bc948a9bd00b0f5d1d0b6f01bd"
+  },
+  "s10": {
+   "url": "https://www.duden.de/rechtschreibung/Calvados",
+   "title": "Calvados – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:24.095Z",
+   "snapshot": "ba610e70836f95e38be2fc171f15ad0c227f7de5b0f14be6f64a7af7bd0ee519"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "juniper berries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "blue agave",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sugar cane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "apples",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bourbon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-349"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mexiko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-294"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mexico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 41"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f02391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He described how to mix crushed juniper berries with wine and distill it afterwards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “juniper berries” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f02392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tequila (; Spanish: [teˈkila] ) is a distilled beverage made from the blue agave plant, primarily in the area surrounding the town of Tequila 65 km (40 mi) northwest of Guadalajara, and in the Jaliscan Highlands (Los Altos de Jalisco) of the central western Mexican state of Jalisco.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blue agave” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f02394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The most widely accepted hypothesis is that it is related to \"rumbullion\", a beverage made from boiling sugar cane stalks, or possibly \"rumbustion\", which was a slang word for \"uproar\" or \"tumult\"; a noisy uncontrollable exuberance, though the origin of those words and the nature of the relationship",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sugar cane” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "apples",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“apples”, “Äpfel”, “Яблоки”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f11022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bourbon whiskey (; also simply bourbon) is a barrel-aged American whiskey made primarily from corn (maize).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bourbon” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f11023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mexiko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mexiko”, “Mexico”, “Мексика”) on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:55.474Z",
+   "target": "f11023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is traditional in central Mexico, where it has been produced for millennia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mexico” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:06:56Z",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a brandy from Normandy in France , made from cider apples or pears .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:06:57Z",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a strong alcoholic drink made from apples , produced in northern France",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:06:59Z",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "französischer Apfelbranntwein",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:17.816Z",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "französischer Apfelbranntwein",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:17.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:17.816Z",
+   "target": "f02395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a strong alcoholic drink made from apples, produced in northern France",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:17.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “apples” is on the snapshot of s9"
+  }
+ ]
+}

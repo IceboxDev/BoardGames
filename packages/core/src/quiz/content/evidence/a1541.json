@@ -1,0 +1,617 @@
+{
+ "article": "a1541",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Minigolf",
+   "title": "Minigolf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:15.253Z",
+   "snapshot": "81dd0bcd0df8e9cc05b1dbe41752239c33f595773b0a575c2b62cc318cbf4268"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tenpin_bowling",
+   "title": "Tenpin bowling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:58.122Z",
+   "snapshot": "be15acb90b922c13694d486fe393dd9c37f4d5b22d5852729cd87acfe5063e2f"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kegeln",
+   "title": "Kegeln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:01.762Z",
+   "snapshot": "71402dcbf5f32ebaae3bf70003830e4c488936693ad06a919393ef2f6c8b9171"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Eight-ball",
+   "title": "Eight-ball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:44.552Z",
+   "snapshot": "2ca0dcaf45ed0875b09f733ddded2836791e6949db77732684b03d4484a2561f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Darts",
+   "title": "Darts – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:18.973Z",
+   "snapshot": "b91a7b947a7ac07740f6b05fef2c35ebfa14ce9ff666fb42c517d3244614569b"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Bowling",
+   "title": "Bowling – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:29.721Z",
+   "snapshot": "b394321f45cecda3cc537573845af018f36f69784265dc07d0f43766ee0e7e3b"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Bowling",
+   "title": "Bowling – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:30.980Z",
+   "snapshot": "5cf2bd540fd6d09350d60cef46fc47795025989bff3a44171dabc4107ec3061d"
+  },
+  "s8": {
+   "url": "https://www.colorado.edu/umc/sites/default/files/attached-files/8-ball_rules_bca.pdf",
+   "title": "8-Ball rules (Billiard Congress of America), University of Colorado",
+   "publisher": "Billiard Congress of America (hosted by University of Colorado Boulder)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:15:55Z"
+  },
+  "s9": {
+   "url": "https://dartswdf.com/storage/uploads/fb05b306-c92c-4f08-b512-affb092a1b3d/2018-02-28_WDF_Playing_and_Tournament_Rules_rev20.pdf",
+   "title": "WDF Playing and Tournament Rules (rev. 20)",
+   "publisher": "World Darts Federation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:16:01Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "18 Bahnen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "10 pins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "9 Kegel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "16 balls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "20 numbered segments",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:41.326Z",
+   "target": "f07701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die 18 Bahnen sind je 12 m lang und 1,25 m breit, mit Ausnahme der ca.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.326Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “18 Bahnen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:41.326Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A spare is 10 pins, plus the pinfall on first roll of the current frame.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.326Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “10 pins” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:41.326Z",
+   "target": "f07703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anwurf: Erster Wurf auf das gesamte Bild (alle 9 Kegel) beim Abräumen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:41.326Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “9 Kegel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:41.326Z",
+   "target": "f07704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "16 balls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“16 balls”, “16 Kugeln”, “16 шаров”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:41.326Z",
+   "target": "f07705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "20 numbered segments",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“20 numbered segments”, “20 Zahlensegmente”, “20 пронумерованных секторов”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:15:38Z",
+   "target": "f07701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die 18 Bahnen sind je 12 m lang und 1,25 m breit",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "Only the Wikipedia family states the count in prose; 18 lanes is the standard Bongni (Minigolf) and Eternit course size."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:15:40Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "toward ten pins positioned evenly in four rows in an equilateral triangle",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:15:43Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "aus Amerika stammende Art des Kegelns mit zehn Kegeln und einer Kugel mit Grifflöchern",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:15:45Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "amerikanische Art des Kegelspiels mit 10 Kegeln",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:15:48Z",
+   "target": "f07703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "um die am anderen Ende der Bahn aufgestellten neun Kegel umzulegen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:15:51Z",
+   "target": "f07703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Um das Verbot listig zu umgehen, wurde den neun Kegeln ein zehnter hinzugefügt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "DWDS corpus citation from Der Standard, 28.10.2010."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:15:53Z",
+   "target": "f07704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sixteen billiard balls (a cue ball and fifteen object balls)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:15:55Z",
+   "target": "f07704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Eight Ball is a call shot game played with a cue ball and fifteen object balls, numbered 1 through 15.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:15:59Z",
+   "target": "f07705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The standard dartboard is divided into 20 numbered sections, scoring from 1 to 20 points",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:16:01Z",
+   "target": "f07705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Be of the '1 - 20' clock pattern,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "WDF approved dartboard specification; scoring is per numbered segment."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die 18 Bahnen sind je 12 m lang und 1,25 m breit",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "toward ten pins positioned evenly in four rows in an equilateral triangle",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "aus Amerika stammende Art des Kegelns mit zehn Kegeln und einer Kugel mit Grifflöchern",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "amerikanische Art des Kegelspiels mit 10 Kegeln",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "um die am anderen Ende der Bahn aufgestellten neun Kegel umzulegen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Um das Verbot listig zu umgehen, wurde den neun Kegeln ein zehnter hinzugefügt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sixteen billiard balls (a cue ball and fifteen object balls)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:27.655Z",
+   "target": "f07705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The standard dartboard is divided into 20 numbered sections, scoring from 1 to 20 points",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:27.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s5"
+  }
+ ]
+}

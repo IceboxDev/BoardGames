@@ -1,0 +1,422 @@
+{
+ "article": "a0456",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/PAL",
+   "title": "PAL – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:28.899Z",
+   "snapshot": "cdaa7831519e52074d0be5600132c7881397eae1a49629e466b0c38398a688d6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/NTSC",
+   "title": "NTSC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:29.890Z",
+   "snapshot": "b897b609d1470dbb8db55655f96e74e45f8a3fa8c67e5cb6de3c1ba7b45c64f7"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Walter_Bruch",
+   "title": "Walter Bruch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:27.473Z",
+   "snapshot": "c51ebfdcc4d1d25a1507976fe686c16b337ffe77fe17cf20fbac13182fedbae8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/SECAM",
+   "title": "SECAM – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:32.593Z",
+   "snapshot": "cabe64729b3905726b0c2d5bc383fa52ee291633f939510fd5c52f0b6b340c44"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Farbfernsehen",
+   "title": "Farbfernsehen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:28.143Z",
+   "snapshot": "915e22eac9c37b632689c5c286f6132eed1cc8354bf7b67e5a4ec41ffbf7f7f5"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Kabelfernsehen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:30.012Z",
+   "snapshot": "c967a20761c35dbaebd825c121e6c754117a5838540145d30afc4594ac362b2a"
+  },
+  "s7": {
+   "url": "https://www.earlytelevision.org/color.html",
+   "title": "Color Television",
+   "publisher": "Early Television Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.947Z",
+   "snapshot": "a06d6dcf55c92a578a0530558b69a64227cde3fcc716a403c1b50920771d5251"
+  },
+  "s8": {
+   "url": "https://ethw.org/Milestones:Monochrome-Compatible_Electronic_Color_Television,_1946-1953",
+   "title": "Milestones: Monochrome-Compatible Electronic Color Television, 1946-1953",
+   "publisher": "IEEE History Center (ETHW)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.537Z",
+   "snapshot": "ada345b2e9828326f8d14f6aeb6051d22723193fa3a208b4be777027c69a9eb4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "PAL and SECAM",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "NTSC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Walter Bruch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1967",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:50.894Z",
+   "target": "f02276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "To overcome NTSC's shortcomings, alternative standards were devised, resulting in the development of the PAL and SECAM standards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PAL and SECAM” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:50.894Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "NTSC (an acronym of National Television System Committee) was the first American standard for analog television, published and adopted in 1941.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NTSC” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:50.894Z",
+   "target": "f02278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Von Beginn der 1930er Jahre an war Walter Bruch an der Entwicklung der Fernsehtechnik beteiligt: 1933 präsentierte er einen „Volksfernsehempfänger“ mit einem selbstgebauten Filmabtaster.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Bruch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:50.894Z",
+   "target": "f02279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "SECAM, also written SÉCAM (French pronunciation: [sekam], Séquentiel couleur à mémoire, French for sequential colour system with memory), is an analogue colour television system that was used in France, Russia, and some other countries or territories of Europe and Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:50.894Z",
+   "target": "f02280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "August 1967 um 10:57 Uhr mit der Betätigung eines großen roten Tasters (der eine Attrappe war) durch Vizekanzler Willy Brandt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1967” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:38:43Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In late 1953, the FCC adopted the RCA compatible system, commonly referred to as the NTSC system.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23",
+   "note": "the FCC had briefly approved CBS's incompatible field-sequential colour system in 1950 (broadcast 1951); NTSC (1953) was the first compatible colour standard and the first of the three analogue colour systems NTSC/PAL/SECAM"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:38:44Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They worked with other engineers in the industry for three years to develop a national analog standard based on this system, which lasted until the transition to digital broadcasting.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:38:45Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In December 1953, the FCC unanimously approved what became the NTSC color-television standard",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:12.869Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In late 1953, the FCC adopted the RCA compatible system, commonly referred to as the NTSC system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:12.869Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They worked with other engineers in the industry for three years to develop a national analog standard based on this system, which lasted until the transition to digital broadcasting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:12.869Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In December 1953, the FCC unanimously approved what became the NTSC color-television standard",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:12.869Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In late 1953, the FCC adopted the RCA compatible system, commonly referred to as the NTSC system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “NTSC” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:12.869Z",
+   "target": "f02277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The second National Television System Committee (NTSC) , comprised of engineers from all the interested parties, was organized in January 1950.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.869Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “NTSC” is on the snapshot of s8"
+  }
+ ]
+}

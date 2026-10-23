@@ -1,0 +1,383 @@
+{
+ "article": "a2700",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Star",
+   "title": "Star",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:41.407Z",
+   "snapshot": "afb7e28ada2c76b55ee6eac13b2ea30f0e4103b950c867cbef91535a0ece2642"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Constellation",
+   "title": "Constellation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:42.202Z",
+   "snapshot": "0182d1ea35631e1aef3802804f23e2a772e596831c538429d7663d818f3aca65"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Asterism_(astronomy)",
+   "title": "Asterism (astronomy) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:43.187Z",
+   "snapshot": "62c15731731ff3d229f2025b29b9d81f2f2037f55541a98f11fcd7b595a73580"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/IAU_designated_constellations",
+   "title": "IAU designated constellations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:44.154Z",
+   "snapshot": "a504db0da80d92a96c615e33221cfc037f8cb7f088d67874e8566dd8c02274f6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nebula",
+   "title": "Nebula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:45.175Z",
+   "snapshot": "e3c12f6cc8b44af37d1d35354712c5bd8c59e0b65c9f11df807a21fb5593b88b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Galaxy",
+   "title": "Galaxy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:46.393Z",
+   "snapshot": "be5f5956f2206e493b2abb5c5c5c9071cde7f3874cbd8d8ef212b5253395e30e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Orion_(constellation)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:47.288Z",
+   "snapshot": "94fe90eba54d0d616b7526a1e2a4cb798abdb8ace0601759ce519886d6ba612d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Big_Dipper",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:48.258Z",
+   "snapshot": "0e5013d17e11060ab646c8e1d13ab570d0100fa0a703b368667fe9d80ae6cbac"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Orion_Nebula",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:58.598Z",
+   "snapshot": "e37c7b984cc44402a7674e7907ccd48dce60e861d58b9b6ead9859b492c634c0"
+  },
+  "s10": {
+   "url": "https://www.iau.org/IAU/IAU/Astronomy-FAQs/Constellations.aspx",
+   "title": "The Constellations",
+   "publisher": "International Astronomical Union",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:00:28Z"
+  },
+  "s11": {
+   "url": "https://www.astronomy.com/observing/where-did-the-constellation-come-from/",
+   "title": "Where did the constellations come from?",
+   "publisher": "Astronomy Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:38.641Z",
+   "snapshot": "84081cdba6620a727ccd9c32ff35a7a442d95837bdab6fc107ce086971609a4b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Star",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Constellation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-043"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "asterism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "88",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "nebula",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "galaxy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52; transcript ppm-128"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:59.469Z",
+   "target": "f25254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A star is a luminous spheroid of plasma held together by self-gravity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Star” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:59.469Z",
+   "target": "f25255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A constellation is an area on the celestial sphere in which a group of visible stars forms a perceived pattern or outline, typically representing an animal, mythological subject, or inanimate object.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Constellation” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:59.469Z",
+   "target": "f25256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An asterism is an observed pattern or group of stars in the sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “asterism” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:59.469Z",
+   "target": "f25257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In contemporary astronomy, 88 constellations are recognized by the International Astronomical Union (IAU).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “88” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:59.469Z",
+   "target": "f25259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nebula (Latin for 'cloud, fog'; pl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nebula” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:59.469Z",
+   "target": "f25568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A galaxy is a physical system of stars, planetary systems, stellar remnants, substellar objects, interstellar gas, dust, and dark matter bound together by gravity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:59.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “galaxy” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:00:28Z",
+   "target": "f25257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "agreed on a list of 88 constellations covering the entire sky, with three-letter abbreviations of their Latin names. These are the 88 IAU constellations that are still recognised today",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:00:31Z",
+   "target": "f25257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Today, astronomers recognize 88 official constellations",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:46.970Z",
+   "target": "f25257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "This book, Délimitation Scientifique des Constellations, authored by Belgian astronomer Eugène Delporte and published in 1930, established the boundaries of the 88 present-day constellations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:46.970Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “88” is on the snapshot of s11"
+  }
+ ]
+}

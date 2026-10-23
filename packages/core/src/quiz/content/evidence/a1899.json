@@ -1,0 +1,241 @@
+{
+ "article": "a1899",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kunsthaus_Graz",
+   "title": "Kunsthaus Graz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:01.499Z",
+   "snapshot": "88962c99723a1a7f1441a4eebf6a468826f0124ab386dba66c2392d0183eabc1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Elbphilharmonie",
+   "title": "Elbphilharmonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:52.459Z",
+   "snapshot": "6314f3d6b68355cfe6d10f3750f0774c4c3a77642f613d92b096a697e87ae8e1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bergiselschanze",
+   "title": "Bergiselschanze – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:40.365Z",
+   "snapshot": "9bebdcfeca795944e3444da014f55a578a469a78c9004656f4fc019eb1a70bf6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Guggenheim_Museum_Bilbao",
+   "title": "Guggenheim Museum Bilbao – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:27.659Z",
+   "snapshot": "1251758fb4e2011a701374c3cdd240a26b33263577544dca140eed43f713d028"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Phaeno_Science_Center",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:02.489Z",
+   "snapshot": "c935112ae72b8de6df92f4b68e0ff34ea88f5bcb276f5ea755e3062a43103fb3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Graz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hamburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Innsbruck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bilbao effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "BIX",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:41.404Z",
+   "target": "f09491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Kunsthaus Graz, Grazer Kunsthaus, or Graz Art Museum was built as part of the European Capital of Culture celebrations in 2003 and has since become an architectural landmark in Graz, Austria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Graz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:41.404Z",
+   "target": "f09493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Elbphilharmonie (German pronunciation: [ˈɛlpfɪlhaʁmoˌniː] ; \"Elbe Philharmonic Hall\"), popularly nicknamed Elphi, is a concert hall in the HafenCity quarter of Hamburg, Germany, on the Grasbrook peninsula of the Elbe River.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburg” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:41.404Z",
+   "target": "f09494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Bergiselschanze ist eine Skisprungschanze auf dem Bergisel in Innsbruck, Österreich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Innsbruck” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:41.404Z",
+   "target": "f20104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The museum was opened as part of a revitalization effort for the city of Bilbao, and its impact on the city quarter became known as the Bilbao effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bilbao effect” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:41.404Z",
+   "target": "f20105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The big pixel (BIX) façade of the museum is based on a concept of the Berlin architects realities:united.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BIX” is on the snapshot of s1"
+  }
+ ]
+}

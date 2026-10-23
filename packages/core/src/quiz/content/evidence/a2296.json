@@ -1,0 +1,289 @@
+{
+ "article": "a2296",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Franziskus_(Papst)",
+   "title": "Franziskus (Papst)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:42.660Z",
+   "snapshot": "8b43ff308d174d8608f7b2f70d5e3e90dd796bb621b4eab4c1fc32bfe765a648"
+  },
+  "s2": {
+   "url": "https://es.wikipedia.org/wiki/Parque_John_Lennon",
+   "title": "Parque John Lennon",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:52:04.856Z",
+   "snapshot": "0e14a25b4431fdffb595edd2b30cfdae939219f05ca1660b27bc453ac03133bb"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Machu_Picchu",
+   "title": "Machu Picchu",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:28.284Z",
+   "snapshot": "3ffc76d1fd27fc58cb9fd6b2379c7527a826ced9ff5b3eae5cf729d37d3ceb76"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Montevideo",
+   "title": "Montevideo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:07.444Z",
+   "snapshot": "e00c9eefc06212d3035b3e393e596f1032309131d8da2d9593eb3de598c6ce90"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Malec%C3%B3n,_Havana",
+   "title": "Malec%C3%B3n, Havana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:08.442Z",
+   "snapshot": "c254059b68effca35b19a40ee684656532a710335a6839a14f7e884311fdd4bb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hiram_Bingham_III",
+   "title": "Hiram Bingham III – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:09.533Z",
+   "snapshot": "375b0f7ae4c14222fb5d84e6134ee87d21be0b49fa820330ad60b91101453d8a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buenos Aires",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-199"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Lennon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-105"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Peru",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-307"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Montevideo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Malecón",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hiram Bingham",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:50.757Z",
+   "target": "f11859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dezember 1936 in Buenos Aires, Argentinien; † 21.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buenos Aires” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:50.757Z",
+   "target": "f11860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "El Parque John Lennon es un parque urbano público establecido en la primera mitad del siglo XX y que está situado en el barrio El Vedado, La Habana, Cuba, ocupando toda una manzana exactamente en la calle 17, entre las calles 6 y 8, renombrado así a partir de la colocación en el de una estatua de",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Lennon” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:50.757Z",
+   "target": "f11861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Machu Picchu [ˌmɑtʃu ˈpiktʃu] (spanisch Machu Picchu (RAE), in Peru amtlich Machupicchu; Quechua Machupijchu (AMLQ) oder Machupikchu (im normierten Cusco-Collao-Quechua); deutsch Machu Picchu  ‚alter Berg‘, veraltet Macchu Picchu (DDR-Literatur)) ist eine gut erhaltene Ruinenstadt in Peru.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peru” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:50.757Z",
+   "target": "f11862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Montevideo (, US also ; Spanish: [monteβiˈðeo] ) is the capital and largest city of Uruguay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montevideo” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:50.757Z",
+   "target": "f11863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Malecón (officially Avenida de Maceo) is a broad esplanade, roadway, and seawall that stretches for 8 km (5 miles) along the coast in Havana, Cuba, from the mouth of Havana Harbor in Old Havana, along the north side of the Centro Habana neighborhood and the Vedado neighborhood, ending at the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malecón” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:50.757Z",
+   "target": "f11864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hiram Bingham III (November 19, 1875 – June 6, 1956) was an American academic, explorer and politician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.757Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hiram Bingham” is on the snapshot of s6"
+  }
+ ]
+}

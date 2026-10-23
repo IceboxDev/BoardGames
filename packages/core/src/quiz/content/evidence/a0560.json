@@ -1,0 +1,287 @@
+{
+ "article": "a0560",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus",
+   "title": "The Myth of Sisyphus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:50.099Z",
+   "snapshot": "7306953b8148ca4e7dc73d1fe7500cb073f06315d77ff3448eda81776e78a919"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Prometheus",
+   "title": "Prometheus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:50.275Z",
+   "snapshot": "78fd8e7391fcd34e3b46436bda2b09fa7efbcc19b0ffed60597e3add31a315ce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oedipus_complex",
+   "title": "Oedipus complex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:51.177Z",
+   "snapshot": "a76c92360c4af1f8bf828a27448600ce7db67f3bf961e1b3c11b2d8abaa232d8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/On_Narcissism",
+   "title": "On Narcissism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:52.183Z",
+   "snapshot": "78df0c38fd83575e30c204b7bf127c79544f22651efa49b5959b49a97bc13b44"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Narcissism",
+   "title": "Narcissism – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:04.893Z",
+   "snapshot": "c2e55a7bd1d5bf126d6bb7157cbb26b135ec53cd77e6cc686f192e37699cd1cf"
+  },
+  "s6": {
+   "url": "https://www.encyclopedia.com/medicine/psychology/psychology-and-psychiatry/narcissism",
+   "title": "Narcissism | Encyclopedia.com (International Dictionary of Psychoanalysis)",
+   "publisher": "Gale / Encyclopedia.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:59:37Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sisyphus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prometheus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oedipus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Narcissus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:07.318Z",
+   "target": "f02796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Myth of Sisyphus (French: Le mythe de Sisyphe, pronounced [lə mit də sizif]) is a 1942 philosophical work by Albert Camus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sisyphus” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:07.318Z",
+   "target": "f02797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prometheus (altgriechisch Προμηθεύς Promētheús, deutsch ‚der Vorausdenkende‘, ‚der Vorbedenker‘; Betonung lateinisch und deutsch Prométheus, [pʁoˈmeːtɔɪ̯s] ) ist eine Gestalt der griechischen Mythologie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prometheus” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:07.318Z",
+   "target": "f02798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In classical psychoanalytic theory, the Oedipus complex is a son's sexual desire for his mother and concomitant hostility toward his father, first formed during the phallic stage of psychosexual development.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oedipus” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:07.318Z",
+   "target": "f02799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Narcissus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Narcissus”, “Narziss”, “Нарцисс”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:59:34Z",
+   "target": "f02799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Named after the Greek mythological figure Narcissus who fell in love with his own reflection",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:59:37Z",
+   "target": "f02799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The term narcissism, in keeping with the Greek myth of Narcissus, refers to self-love. The concept was introduced in Freud's work shortly before the publication of \"On Narcissism: An Introduction\" (1914c).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:53:31.575Z",
+   "target": "f02799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Named after the Greek mythological figure Narcissus who fell in love with his own reflection",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:31.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:53:31.575Z",
+   "target": "f02799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Named after the Greek mythological figure Narcissus who fell in love with his own reflection, narcissism has evolved into a psychological concept studied extensively since the early 20th century, and it has been deemed highly relevant in various societal domains.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:31.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Narcissus” is on the snapshot of s5"
+  }
+ ]
+}

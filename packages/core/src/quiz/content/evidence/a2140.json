@@ -1,0 +1,249 @@
+{
+ "article": "a2140",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Anne_Geddes",
+   "title": "Anne Geddes",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:48.215Z",
+   "snapshot": "a3d0bbd9dd777f3e10085cb8aeeaf4f60d1d4fb7f0ca6f01165ed5ae31cd1f05"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ansel_Adams",
+   "title": "Ansel Adams – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:52.108Z",
+   "snapshot": "12dd5c3011c04e15a1e697936220a456da4136d6c1619e6190491629f59ac83b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Afghan_Girl",
+   "title": "Afghan Girl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:52.851Z",
+   "snapshot": "13eeacdc96599f664ecfaabeb490533f67a39815e176f3bacbb6116e686938e2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Roaring_Lion",
+   "title": "The Roaring Lion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:53.846Z",
+   "snapshot": "da2661b44888ee117bf0d0938c08cdd332e996d9c45be7dab08a5a1fe1dcd14b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Yann_Arthus-Bertrand",
+   "title": "Yann Arthus-Bertrand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:54.856Z",
+   "snapshot": "c81be9ba23f8144c231c2e2e6af47232b4478594875fbac9f2a80fe8c82ed96a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Anne_Geddes",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:55.894Z",
+   "snapshot": "c2c4c813f4ad4a7a12188a5c5cacc18191023709925d5713b64502624d0a130c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anne Geddes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-372"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ansel Adams",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Steve McCurry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yousuf Karsh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yann Arthus-Bertrand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:28.756Z",
+   "target": "f10769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anne Geddes, Céline Dion: Miracle: a celebration of new life.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anne Geddes” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:28.756Z",
+   "target": "f10770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The studio became known as the Ansel Adams Gallery and remains owned by the Adams family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ansel Adams” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:28.756Z",
+   "target": "f10771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The photograph, taken by American photojournalist Steve McCurry near the Pakistani city of Peshawar, appeared on the June 1985 cover of National Geographic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steve McCurry” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:28.756Z",
+   "target": "f10772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The portrait was taken in 1941 by Yousuf Karsh in the Centre Block on Parliament Hill in Ottawa, Ontario, Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yousuf Karsh” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:28.756Z",
+   "target": "f10773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yann Arthus-Bertrand (French pronunciation: [jan aʁtys bɛʁtʁɑ̃]; born 13 March 1946) is a French environmentalist, activist, journalist and photographer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.756Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yann Arthus-Bertrand” is on the snapshot of s5"
+  }
+ ]
+}

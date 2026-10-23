@@ -1,0 +1,270 @@
+{
+ "article": "a1834",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hochwasser_in_Mitteleuropa_2002",
+   "title": "Hochwasser in Mitteleuropa 2002 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:07.358Z",
+   "snapshot": "141efe55fc96ab27a701f9f98e4017120ce61c34c957952d1c9deeb93219b77d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/M%C3%BCnchen",
+   "title": "München – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:08.521Z",
+   "snapshot": "050a630f638fa0fcd5233069afac59fd46b9c19ff4dcc094728f48a85f624549"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Alte_Br%C3%BCcke_(Heidelberg)",
+   "title": "Alte Brücke (Heidelberg) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:09.286Z",
+   "snapshot": "0b9846909558b2edb747f48df5d148f7310f55b76e602d1206b711b895ac3910"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%B6ln",
+   "title": "Köln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:10.328Z",
+   "snapshot": "13120dfc12c9d377296e7e1cd488f19a7bec4c1547d073b8f363a6fb0b384811"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gera_(Fluss)",
+   "title": "Gera (Fluss)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:11.235Z",
+   "snapshot": "bb57ab78c0872b3232e28d9b11c3a7dca3f30081e24e83bc833b78163afe690e"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Dresden_vom_rechten_Elbufer_unterhalb_der_Augustusbr%C3%BCcke",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:12.181Z",
+   "snapshot": "5dcf23c25eb0bf64772dbe9a09b82b4df02204adc7eb67b9a8ddc1f8df44b3f1"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Bremerhaven",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:13.356Z",
+   "snapshot": "15ae6019013430973182ec1b418ea4ba0a8062ae1e24e996e4ef38e5acfdd7b5"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Neckar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:14.422Z",
+   "snapshot": "d4938e0126d9476ab4c58660a9d37fd870e29f931197fb49b8042949d8b41694"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Rhein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:15.541Z",
+   "snapshot": "1f5a993ea104209a40e0bb234b92dcabbc69f1af0de1b2c2b238d9b6a0eddd7a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Elbe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09167",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Isar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neckar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rhein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gera",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-393"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:30.039Z",
+   "target": "f09166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es kam dabei zu schweren Überflutungen, in Ost- und Norddeutschland insbesondere an der Elbe, in Bayern und Österreich an der Donau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elbe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:30.039Z",
+   "target": "f09167",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im Süden der Ebene sind die Flüsse, insbesondere die Isar, tief eingeschnitten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isar” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:30.039Z",
+   "target": "f09169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Karl-Theodor-Brücke  in Heidelberg, besser bekannt als die Alte Brücke, ist eine Brücke über den Neckar.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neckar” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:30.039Z",
+   "target": "f09170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Stadt am Rhein gehört zum Regierungsbezirk Köln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhein” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:30.039Z",
+   "target": "f12083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Gera ist ein 85 Kilometer langer rechter (südlicher) Nebenfluss der Unstrut in Thüringen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.039Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gera” is on the snapshot of s5"
+  }
+ ]
+}

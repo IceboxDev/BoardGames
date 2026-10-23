@@ -1,0 +1,241 @@
+{
+ "article": "a2753",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Linguistic_relativity",
+   "title": "Linguistic relativity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:14.222Z",
+   "snapshot": "b486541d395ea7bf7c5ff3e3df96abbc692282cdd86cb55248343734f4b5e09c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hopi_time_controversy",
+   "title": "Hopi time controversy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:15.125Z",
+   "snapshot": "362c1cffdbffb3796553dc10e320274ac39335065d661b8630d4836f7d0b819b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Grimm's_law",
+   "title": "Grimm's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:16.025Z",
+   "snapshot": "e6c1eb030508a53e6f57a286e1fcbe6b0927f5893062c24d863a93b0b0dea635"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ferdinand_de_Saussure",
+   "title": "Ferdinand de Saussure – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:17.136Z",
+   "snapshot": "f19971d9214ef3256e95b27b33e707578af2f2305dd711276abb331766ccdc45"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Benjamin_Lee_Whorf",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:18.202Z",
+   "snapshot": "08a6af077803d70cf20ef0b6fd0868746e77a7457555109881be744c7f5f080a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sapir–Whorf hypothesis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benjamin Lee Whorf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hopi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grimm's law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the signified",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:07.980Z",
+   "target": "f25686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Various colloquialisms refer to linguistic relativism: the Whorf hypothesis; the Sapir–Whorf hypothesis ( sə-PEER WHORF); the Whorf–Sapir hypothesis; and Whorfianism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sapir–Whorf hypothesis” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:07.980Z",
+   "target": "f25687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edward Sapir (1884–1939) and Benjamin Lee Whorf (1897–1941) never stated their ideas in terms of a hypothesis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benjamin Lee Whorf” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:07.980Z",
+   "target": "f25688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hopi time controversy is the academic debate about how the Hopi language grammaticizes the concept of time, and about whether the differences between the ways the English and Hopi languages describe time are an example of linguistic relativity or not.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hopi” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:07.980Z",
+   "target": "f25689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grimm's law, also known as the First Germanic Consonant Shift or First Germanic Sound Shift, is a set of sound laws describing the Proto-Indo-European (PIE) stop consonants as they developed in Proto-Germanic in the first millennium BCE, first discovered by Rasmus Rask but systematically put forward",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grimm's law” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:07.980Z",
+   "target": "f25690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Examples of these elements include his notion of the linguistic sign, which is composed of the signifier and the signified.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:07.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the signified” is on the snapshot of s4"
+  }
+ ]
+}

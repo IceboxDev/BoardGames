@@ -1,0 +1,353 @@
+{
+ "article": "a0549",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Proton%E2%80%93proton_chain",
+   "title": "Proton–proton chain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:12.151Z",
+   "snapshot": "16843ee5e09ffae8a48cb1f2ac1f35c9efd8cd946a758b4ef8ed8276a1332bb9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nuclear_fission",
+   "title": "Nuclear fission – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:13.243Z",
+   "snapshot": "ea0b817ba7ef38c3ac7c16b2c22e7a63aa3f11630d7dc71e177b2d37ddb93410"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+   "title": "Photosynthesis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:31.358Z",
+   "snapshot": "b013f418f8bc3fc7ed4d1a446d20514995c2c90183d0b7aeb6f8de9e46b4e387"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jan_Ingenhousz",
+   "title": "Jan Ingenhousz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:14.090Z",
+   "snapshot": "ee7c14880f2eb27e39153789e62609a098ea73b276705284f2fd39429aac6e3a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Citric_acid_cycle",
+   "title": "Citric acid cycle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:32.294Z",
+   "snapshot": "c31f0b6dfc8c0ce22ef5faa626727ada192f44817ca6fef59580fc2a612c01ec"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nuclear_power",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:15.284Z",
+   "snapshot": "cd71d2afdca52bc6e1a049d599097f26bd1fd6b2c7aa88aefeee9d61ae4b93d5"
+  },
+  "s7": {
+   "url": "https://www.nobelprize.org/prizes/medicine/1953/krebs/facts/",
+   "title": "Hans Krebs – Facts - NobelPrize.org",
+   "publisher": "Nobel Prize Outreach",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:02.142Z",
+   "snapshot": "8bfc418c707cda800e4345c6d1315fa0baeaf7e35725af6731e98595fc907d0c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "nuclear fusion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "nuclear fission",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "photosynthesis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jan Ingenhousz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans Krebs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:05.351Z",
+   "target": "f02741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The proton–proton chain, also commonly referred to as the p–p chain, is one of two known sets of nuclear fusion reactions by which stars convert hydrogen to helium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nuclear fusion” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:05.351Z",
+   "target": "f02742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nuclear fission is a reaction in which the nucleus of an atom splits into two or more smaller nuclei.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nuclear fission” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:05.351Z",
+   "target": "f02743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Photosynthesis is a system of biological processes by which photopigment-bearing autotrophic organisms, such as most plants, algae and cyanobacteria, convert light energy—typically from sunlight—into the chemical energy necessary to fuel their metabolism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “photosynthesis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:05.351Z",
+   "target": "f23460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jan Ingenhousz  (8 December 1730 – 7 September 1799) was a Dutch-British physiologist, biologist and chemist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:05.351Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jan Ingenhousz” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:05.351Z",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans Krebs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Hans Krebs”, “Ханс Кребс”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:59Z",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "in 1937 Hans Krebs was able to present a complete picture of an important part of metabolism—the citric acid cycle.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:11:01Z",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The citric acid cycle itself was finally identified in 1937 by Hans Adolf Krebs and William Arthur Johnson while at the University of Sheffield,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:29.740Z",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "in 1937 Hans Krebs was able to present a complete picture of an important part of metabolism—the citric acid cycle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:29.740Z",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The citric acid cycle itself was finally identified in 1937 by Hans Adolf Krebs and William Arthur Johnson while at the University of Sheffield,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:29.740Z",
+   "target": "f23461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hans Krebs – Facts - NobelPrize.org",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:29.740Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hans Krebs” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "article": "a1447",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Don_Quixote",
+   "title": "Don Quixote – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:05.401Z",
+   "snapshot": "e3d9c38b2e44f84161cbaf0fa6f0e8b4e73ce6d96f7465f3ed891acdba7cc424"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+   "title": "Wolfgang Amadeus Mozart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:00.571Z",
+   "snapshot": "fdf3122831e582b18afae0d55243f5f911021b90ad0ca1a0cc325fe3c42885a4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vitruvian_Man",
+   "title": "Vitruvian Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:42.942Z",
+   "snapshot": "395c7af7046e19178778a20256bc795484996e0e28a7d572039da4b1c7797116"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Luc_Luycx",
+   "title": "Luc Luycx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:02.289Z",
+   "snapshot": "732beab4b8af7691282fd9e16815e916e4afb0afeecb10358e2696ab09806971"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_euro_coins",
+   "title": "Spanish euro coins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:02.390Z",
+   "snapshot": "8770781bc113f7231d2101f6d495760161d84a22120e8225247229bfe695ebb6"
+  },
+  "s6": {
+   "url": "https://it.wikipedia.org/wiki/Monete_euro_italiane",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T05:01:59.721Z",
+   "snapshot": "6b859774d06b7e44c9a0e7f38c75ee8bf035e543245c32417296cc6d363e0195"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bertha_von_Suttner",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:08.220Z",
+   "snapshot": "920ace50ac18b05e6e785a9bddb69bf4482adaa44fd20a09822824b526eb3dcb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Miguel de Cervantes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wolfgang Amadeus Mozart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leonardo da Vinci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luc Luycx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Juan Carlos I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.633Z",
+   "target": "f07231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Don Quixote is a novel by Miguel de Cervantes, written in Early Modern Spanish and published in two parts in 1605 and 1615.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miguel de Cervantes” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.633Z",
+   "target": "f07232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wolfgang Amadeus Mozart (27 January 1756 – 5 December 1791) was a Classical composer and musician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolfgang Amadeus Mozart” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.633Z",
+   "target": "f07235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vitruvian Man (Italian: L'uomo vitruviano) is a drawing by the Italian Renaissance artist and scientist Leonardo da Vinci, dated to c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonardo da Vinci” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:27.633Z",
+   "target": "f23780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Luc Luycx (Dutch pronunciation: [lyk ˈlœyks]; born 11 April 1958) is the designer of the common side of the euro coins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luc Luycx” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:27.633Z",
+   "target": "f23781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the €1 and €2 coins, the same portrait of king Juan Carlos I was used, but the year position was placed in the inner part of the coin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juan Carlos I” is on the snapshot of s5"
+  }
+ ]
+}

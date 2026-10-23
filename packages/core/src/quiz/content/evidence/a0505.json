@@ -1,0 +1,242 @@
+{
+ "article": "a0505",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tremolo",
+   "title": "Tremolo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:54.988Z",
+   "snapshot": "19a8f8951db39c141ec0657d5baf41a5e7068076fe9151f83b374982599a10d6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vibrato",
+   "title": "Vibrato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:56.152Z",
+   "snapshot": "174f98f832e52b58e9c6929fdf5e93a649c896967519ab82f510a4854a54b572"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pizzicato",
+   "title": "Pizzicato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:57.008Z",
+   "snapshot": "5ea278f45755ad02d4f79f27e22357e8174483bffd2d5e640242eccd90854495"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Legato",
+   "title": "Legato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:57.993Z",
+   "snapshot": "69590c1fc98b770aae04d0c22b9cb29ae174686a007bc24c4bc578ff4c9d230c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Staccato",
+   "title": "Staccato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:58.979Z",
+   "snapshot": "82aca4a8523e5313270fd710dabbaeca7bdd43ea78f9f02e0418208316981957"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tremolo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vibrato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pizzicato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Legato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Staccato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:59.171Z",
+   "target": "f02521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In music, tremolo (Italian pronunciation: [ˈtrɛːmolo]), or tremolando ([tremoˈlando]), is a trembling effect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tremolo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:59.171Z",
+   "target": "f02522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vibrato (Italian, from past participle of \"vibrare\", to vibrate) is a musical effect consisting of a regular, pulsating change of pitch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vibrato” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:59.171Z",
+   "target": "f02523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pizzicato (, Italian: [pittsiˈkaːto]; translated as 'pinched', and sometimes roughly as 'plucked') is a playing technique that involves plucking the strings of a string instrument.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pizzicato” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:59.171Z",
+   "target": "f02524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In music performance and notation, legato ([leˈɡaːto]; Italian for \"tied together\"; French lié; German gebunden) indicates that musical notes are played or sung smoothly, such that the transition from note to note is made with no intervening silence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Legato” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:59.171Z",
+   "target": "f02525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Staccato ([stakˈkaːto]; Italian for 'detached') is a form of musical articulation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:59.171Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Staccato” is on the snapshot of s5"
+  }
+ ]
+}

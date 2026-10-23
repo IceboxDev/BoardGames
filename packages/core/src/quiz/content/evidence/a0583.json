@@ -1,0 +1,856 @@
+{
+ "article": "a0583",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/tycoon",
+   "title": "tycoon – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/mogul",
+   "title": "mogul – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/magnate",
+   "title": "magnate – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/boss",
+   "title": "boss – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/manage",
+   "title": "manage – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://ahdictionary.com/word/search.html?q=tycoon",
+   "title": "tycoon – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:14.306Z",
+   "snapshot": "eca219aa04a832fd7cd4cc2373540d2350c9bd57fe128a21b1e12610e549cf9e"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/tycoon",
+   "title": "tycoon – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:14.801Z",
+   "snapshot": "23b65aa8da01e70ae1d05efb6c71bdd5e3b5dbeecbfe04b0cc2037d34006731c"
+  },
+  "s8": {
+   "url": "https://ahdictionary.com/word/search.html?q=mogul",
+   "title": "mogul – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:15.093Z",
+   "snapshot": "bbd151d6c1fda6dda375b899be41db3d38339e93c7057fbb75c2922cd365440a"
+  },
+  "s9": {
+   "url": "https://www.dictionary.com/browse/mogul",
+   "title": "mogul – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:15.374Z",
+   "snapshot": "c45da64aa0bf016f8bc996649780eaf630f8565f763d589eff7fe8635d5e58db"
+  },
+  "s10": {
+   "url": "https://ahdictionary.com/word/search.html?q=magnate",
+   "title": "magnate – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:16.157Z",
+   "snapshot": "3f9d5e1542007522755e743d9139dd9aa1ee47149e826e9133bb62296dfb3a2a"
+  },
+  "s11": {
+   "url": "https://www.dictionary.com/browse/magnate",
+   "title": "magnate – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:16.870Z",
+   "snapshot": "aa29a9da4bcca266b0c2dfbd91f647f42262d339d4e57bd8bd8e169a8a421b63"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Magnate",
+   "title": "Magnate – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:15.281Z",
+   "snapshot": "21cb574d20d34e6dee7514106d675a1fadf9ef5f47df2da2a15138b2dfdf2582"
+  },
+  "s13": {
+   "url": "https://ahdictionary.com/word/search.html?q=boss",
+   "title": "boss – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:17.101Z",
+   "snapshot": "0d73b1396a1c5df7ee678dc5d520455d799e6864eed248dbe19596ca4e0725d2"
+  },
+  "s14": {
+   "url": "https://www.dictionary.com/browse/boss",
+   "title": "boss – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:17.744Z",
+   "snapshot": "810636ddf08892a056d99e6c1cea9144b3e469fc77a3ea58a54f5c58d4e8cb3c"
+  },
+  "s15": {
+   "url": "https://ahdictionary.com/word/search.html?q=manage",
+   "title": "manage – The American Heritage Dictionary",
+   "publisher": "HarperCollins (American Heritage Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:18.110Z",
+   "snapshot": "171d0275a93ee3519da2be03d79eef98aa5786da38d64367b18544d273e63428"
+  },
+  "s16": {
+   "url": "https://www.dictionary.com/browse/manage",
+   "title": "manage – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:18.793Z",
+   "snapshot": "93f1a114fd95b503254c4dc6086426bbca108d49c981e54300312a3ae8c788d3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tycoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mogul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "magnate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "boss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "manager",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T08:21:45Z",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "using a title of Chinese origin that literally means \"great prince.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T08:21:50Z",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Middle Chinese, equivalent to Chinese dà great + jūn prince",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T08:21:56Z",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A member of the Muslim dynasty founded by Baber that ruled India until 1857.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:22:02Z",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "First recorded in 1580–90; from Persian mughul Mongol",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the Mughal/Mongol origin; the dynasty link comes from the AHD entry."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:22:09Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "great man, both from Latin magnus, great",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:22:16Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "back formation from Middle English magnates (plural)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:22:22Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "'magnat' refers to the richest nobles, or nobles of the nobility",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Polish usage of the term."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:22:27Z",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Dutch baas, master",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:22:32Z",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "from Dutch baas “master, foreman”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:22:35Z",
+   "target": "f02915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Italian maneggiare, from Vulgar Latin",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:22:39Z",
+   "target": "f02915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "from Italian maneggiare “to handle, train (horses),”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "using a title of Chinese origin that literally means \"great prince.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Middle Chinese, equivalent to Chinese dà great + jūn prince",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e7 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A member of the Muslim dynasty founded by Baber that ruled India until 1857.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "First recorded in 1580–90; from Persian mughul Mongol",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "great man, both from Latin magnus, great",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "back formation from Middle English magnates (plural)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "'magnat' refers to the richest nobles, or nobles of the nobility",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s12"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Dutch baas, master",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s13"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "from Dutch baas “master, foreman”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s14"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Italian maneggiare, from Vulgar Latin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s15"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s16",
+     "quote": "from Italian maneggiare “to handle, train (horses),”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s16"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "American Heritage Dictionary Entry: tycoon",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tycoon” is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "TYCOON Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “tycoon” is on the snapshot of s7"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "American Heritage Dictionary Entry: mogul",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “mogul” is on the snapshot of s8"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "MOGUL Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “mogul” is on the snapshot of s9"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "American Heritage Dictionary Entry: magnate",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “magnate” is on the snapshot of s10"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "MAGNATE Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “magnate” is on the snapshot of s11"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "A magnate was a man from the higher nobility, a man who belonged to the high office-holders, or a man in a high social position, by birth, wealth or other qualities in Western Christian countries since the medieval period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “magnate” is on the snapshot of s12"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "American Heritage Dictionary Entry: boss",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “boss” is on the snapshot of s13"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "BOSS Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “boss” is on the snapshot of s14"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:53:35.725Z",
+   "target": "f02915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "To act as the manager of (a performer, for example).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.725Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “manager” is on the snapshot of s15"
+  }
+ ]
+}

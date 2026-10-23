@@ -1,0 +1,296 @@
+{
+ "article": "a1731",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pergamon_Museum",
+   "title": "Pergamon Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:40.373Z",
+   "snapshot": "5da0e9d5ed4a61d9f93a64686e480e9fb48fab588aa7447dce5feec0dbb29e96"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Altes_Museum",
+   "title": "Altes Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:41.397Z",
+   "snapshot": "9ac953acf017d144f77bf18def8a3c39ba260fb8f5f0f194788c0444563a5494"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Neues_Museum",
+   "title": "Neues Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:22.303Z",
+   "snapshot": "e845baf4e114a580922c8de54dd9c9017f0b9d1085bea7688bd40fa05d7dd0cc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Neues_Museum_(Berlin)",
+   "title": "Neues Museum (Berlin)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:40.030Z",
+   "snapshot": "ff1f61f30e9a415ce450015995ea78c527a5d70db5e130a1165d972416fb8593"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/David_Chipperfield",
+   "title": "David Chipperfield – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:42.529Z",
+   "snapshot": "b5ef1e232f4fe17468bcb5ebb2b40a954382b7ccbbd313842dcea7dd5647a7ba"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bode_Museum",
+   "title": "Bode Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:43.360Z",
+   "snapshot": "112d6599dd99d207f0d328d76c30d55812c08a828a19b94ff357523b89810a41"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Pergamonmuseum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:18:41.651Z",
+   "snapshot": "fce6687828df19371b8f395526c17340919cbcc9eb6503c70f5e06a1af53828d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pergamon Museum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karl Friedrich Schinkel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neues Museum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neues Museum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-015"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Chipperfield",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bode Museum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:13.236Z",
+   "target": "f08651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Pergamon Museum (German: Pergamonmuseum; pronounced [ˈpɛʁ.ɡa.mɔn.muˌzeː.ʊm] ) is a listed building on the Museum Island in the historic centre of Berlin, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pergamon Museum” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:13.236Z",
+   "target": "f08652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Built between 1825 and 1830 by order of King Frederick William III of Prussia according to plans by Karl Friedrich Schinkel, it is considered a major work of German Neoclassical architecture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Friedrich Schinkel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:13.236Z",
+   "target": "f08653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Neues Museum (German pronunciation: [ˈnɔʏəs muˈzeːʊm], New Museum) is a listed building on the Museum Island  of Berlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neues Museum” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:13.236Z",
+   "target": "f08653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Auf dieser Ebene bekommen die Bezeichnungen Altes Museum – Neues Museum eine weitere Bedeutung als Ausdruck alter Pfade und neuer Wege.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neues Museum” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:13.236Z",
+   "target": "f08654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He established David Chipperfield Architects in 1985, which grew into a global architectural practice with offices in London, Berlin, Milan, Shanghai, and Santiago de Compostela.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Chipperfield” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:13.236Z",
+   "target": "f08655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Bode Museum (German: Bode-Museum), formerly called the Emperor Frederick Museum (German: Kaiser-Friedrich-Museum), is a listed building on the Museum Island in the historic centre of Berlin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:13.236Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bode Museum” is on the snapshot of s6"
+  }
+ ]
+}

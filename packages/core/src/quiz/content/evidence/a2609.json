@@ -1,0 +1,398 @@
+{
+ "article": "a2609",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jack_Dempsey_vs._Georges_Carpentier",
+   "title": "Jack Dempsey vs. Georges Carpentier",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:03.084Z",
+   "snapshot": "11537f9081cab8a85097175e827bd3aa98a6ad30ed1ef7dcff94a71cab201791"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Long_Count_Fight",
+   "title": "The Long Count Fight – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:04.061Z",
+   "snapshot": "d6f472ace6861103d90c723357ce576a02c148a10d37926964d629aa872f7474"
+  },
+  "s3": {
+   "url": "https://web.archive.org/web/20150620113105/http://www.njcu.edu/programs/jchistory/Pages/D_Pages/Dempsey_Carpentier_Fight.htm",
+   "title": "Dempsey–Carpentier Fight (Jersey City Past and Present)",
+   "publisher": "New Jersey City University",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:36.256Z",
+   "snapshot": "eecf23638f43f89d964cb7ccb8ef6023484d8b6875175fc22893da6a507b4931"
+  },
+  "s4": {
+   "url": "https://earlyradiohistory.us/WJY.htm",
+   "title": "\"Battle of the Century\": The WJY Story",
+   "publisher": "Thomas H. White, United States Early Radio History",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:35.106Z",
+   "snapshot": "98c366b4215678dcf69296455b8d85b60c9a3fc73333407f000914bd342f32d7"
+  },
+  "s5": {
+   "url": "http://www.pophistorydig.com/topics/dempsey-vs-carpentier-1921/",
+   "title": "Dempsey vs. Carpentier, July 1921",
+   "publisher": "PopHistoryDig",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:35.446Z",
+   "snapshot": "8f3d34891dca9134b9112fb4410cc70df347bfe9ef006c4bd76856a114238dfb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jack Dempsey vs. Georges Carpentier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-213"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tex Rickard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jersey City",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gene Tunney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Long Count",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:46.722Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jack Dempsey vs. Georges Carpentier, billed as Fight of the Century, was a professional boxing match contested on July 2, 1921, for the undisputed heavyweight championship.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.722Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jack Dempsey vs. Georges Carpentier” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:46.722Z",
+   "target": "f14067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tex Rickard, Dempsey's promoter, built up the fight, using the public's view of both fighters as a way to promote the bout.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.722Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tex Rickard” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:46.722Z",
+   "target": "f14068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carpentier was the world Light-Heavyweight champion, having beaten Battling Levinsky by a fourth-round knockout in his previous bout to win the title at Westside Ballpark in Jersey City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.722Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jersey City” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:46.722Z",
+   "target": "f14069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In March 2011, the family of Gene Tunney donated the gloves he wore in the fight to The Smithsonian's National Museum of American History.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.722Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gene Tunney” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:46.722Z",
+   "target": "f14070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jack Dempsey II, retroactively known as Long Count Fight, or the Battle of the Long Count, was a professional boxing match contested on September 22, 1927, for the undisputed heavyweight championship.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.722Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Long Count” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:36:54Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is also celebrated as the first sports event broadcast on the radio, the new mass communications medium of the decade.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23",
+   "note": "Overstates (first sports event); supports first radio broadcast of a title fight."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:36:56Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On July 2, 1921, Julius Hopp's \"brilliant idea\", to broadcast the Dempsey-Carpentier heavyweight championship prize fight, was realized.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:36:57Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the 300,000 or so people estimated to have heard one of the first radio broadcasts of a special event — the outdoor heavyweight championship boxing match between American Jack Dempsey and French challenger, Georges Carpentier.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:36:59Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The fight became the first world title fight to be carried over radio",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:31.340Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is also celebrated as the first sports event broadcast on the radio, the new mass communications medium of the decade.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:31.340Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On July 2, 1921, Julius Hopp's \"brilliant idea\", to broadcast the Dempsey-Carpentier heavyweight championship prize fight, was realized.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:31.340Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the 300,000 or so people estimated to have heard one of the first radio broadcasts of a special event — the outdoor heavyweight championship boxing match between American Jack Dempsey and French challenger, Georges Carpentier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:31.340Z",
+   "target": "f14066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The fight became the first world title fight to be carried over radio",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:31.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  }
+ ]
+}

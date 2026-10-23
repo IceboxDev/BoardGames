@@ -1,0 +1,442 @@
+{
+ "article": "a1020",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wikipedia",
+   "title": "Wikipedia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:42.318Z",
+   "snapshot": "cae401c79d4503206d6993f0678466bb14ca8424c82eecc142fa043d7ac03018"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Deutschsprachige_Wikipedia",
+   "title": "Deutschsprachige Wikipedia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:39.948Z",
+   "snapshot": "9c266831c2e450c7e953789154a4358de2346ca5cde792ae5942c15b9c452a70"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wikipedia",
+   "title": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:40.562Z",
+   "snapshot": "6966b7c12fc71df7e67adc162f3c7217bf314a8c8934a82c217275b0604b3d5c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nupedia",
+   "title": "Nupedia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:43.042Z",
+   "snapshot": "57597e4e7174da712c29b312ba4877b39870534940ff1c7aee9c38954121ed7c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Instagram",
+   "title": "Instagram – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:44.265Z",
+   "snapshot": "fa19a516985ae9b7c22118ae8e4c4e444d02531e79ff527fa93152a5688edf8b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Kickstarter",
+   "title": "Kickstarter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:45.182Z",
+   "snapshot": "4219aeeb567829c1254d231d917df0a5d38b4e0a1deb74591f7352f6d3807fd5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/WeChat",
+   "title": "WeChat",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:46.277Z",
+   "snapshot": "9939abe3305f5beb4fc20757f4c5e494f60bdf5d7ebfe0635a326891cdf108a1"
+  },
+  "s8": {
+   "url": "https://datareportal.com/reports/digital-2026-china",
+   "title": "Digital 2026: China — DataReportal",
+   "publisher": "DataReportal (Kepios)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:16.346Z",
+   "snapshot": "c599c30370d1b4e7c990fc5c9856bf4ea6833ddf8de2d47796093dca96d1f914"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wikipedia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wikipedia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c085"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wikipedia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-249"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nupedia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Instagram",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-274"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kickstarter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-140"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "WeChat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; history entry seq 46; transcript tp-163"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f05096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wikipedia is a free online encyclopedia written and maintained by a community of volunteer editors, known as Wikipedians, through open collaboration and the wiki software MediaWiki.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wikipedia” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f05096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die deutschsprachige Wikipedia ist die Ausgabe der freien Online-Enzyklopädie Wikipedia in deutscher Sprache.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wikipedia” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f05096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wikipedia [ˌvɪkiˈpeːdia] () ist ein gemeinnütziges Projekt zur Erstellung einer freien Enzyklopädie auf Basis des sogenannten Wiki-Prinzips und der freien Wiki-Software-Plattform MediaWiki.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wikipedia” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f05097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nupedia was a multi-language online encyclopedia whose articles were written by volunteer contributors with relevant subject-matter expertise, reviewed by expert editors before publication, and licensed as free content.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nupedia” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f05100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Instagram is an American photo and short-form video sharing social networking service owned by Meta Platforms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Instagram” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f14187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kickstarter, PBC is an American public benefit corporation based in Brooklyn, New York City, that maintains a global crowdfunding platform focused on creativity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kickstarter” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:20.841Z",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "WeChat (Chinese: 微信; pinyin: Wēixìn ; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:20.841Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “WeChat” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:24:01Z",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First released in 2011, it became the world's largest standalone mobile app in 2018 with over 1 billion monthly active users.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:24:02Z",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "微信: Weixin, a messenger platform that is also known as WeChat outside of China.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "listed first among the most popular social media platforms in China"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:53.359Z",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First released in 2011, it became the world's largest standalone mobile app in 2018 with over 1 billion monthly active users.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:53.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:53.359Z",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "微信: Weixin, a messenger platform that is also known as WeChat outside of China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:53.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:53.359Z",
+   "target": "f14188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "微信: Weixin, a messenger platform that is also known as WeChat outside of China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:53.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “WeChat” is on the snapshot of s8"
+  }
+ ]
+}

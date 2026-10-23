@@ -1,0 +1,242 @@
+{
+ "article": "a0949",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Plectrum",
+   "title": "Plectrum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:04.945Z",
+   "snapshot": "b4605ea5ebf6782ade99916866ff8fbb8a439faff7ebd9a0e3d63eb8388bb77c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Tourte",
+   "title": "François Tourte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:05.943Z",
+   "snapshot": "1f011a17d6773d27a377704c54bdf5a1feb8a09f9a65617578d2ce907e1dcbe0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Capo_(musical_device)",
+   "title": "Capo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:06.994Z",
+   "snapshot": "dac8bd5951ba6960393a33f5ef72b9b7d009fdc73aebd329970996769096c098"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tuning_fork",
+   "title": "Tuning fork – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:07.949Z",
+   "snapshot": "6aa7416d648d421f93d54c2ef8ff890e7ea6b74e292da11018f25aab8d293b89"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Metronome",
+   "title": "Metronome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:08.954Z",
+   "snapshot": "226f4983eca4a9bbdc7fec43bcaeb1b7e2eaa74c7d072c50f886f9fe3895a2b7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Plectrum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c080"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Capo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tuning fork",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Metronome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:09.802Z",
+   "target": "f04741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A plectrum is a small flat tool used for plucking or strumming of a stringed instrument.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Plectrum” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:09.802Z",
+   "target": "f04742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "François Xavier Tourte (1747 – 25 April 1835) was a French bow maker who made a number of significant contributions to the development of the bow of stringed instruments, and is considered to be the most important figure in the development of the modern bow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bow” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:09.802Z",
+   "target": "f04743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A capo ( KAH-poh; short for capodastro, capo tasto, copypasto or capotasto [ˌkapoˈtasto], Italian for \"head of fretboard\") is a device a musician uses on the neck of a stringed (typically fretted) instrument to transpose and shorten the playable length of the strings—hence raising the pitch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Capo” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:09.802Z",
+   "target": "f04744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A tuning fork is an acoustic resonator in the form of a two-pronged fork with the prongs (tines) formed from a U-shaped bar of elastic metal (usually steel).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tuning fork” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:09.802Z",
+   "target": "f04745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A metronome (from Ancient Greek  μέτρον (métron) 'measure' and  νόμος (nómos) 'law') is a device that produces an audible click or other sound at a uniform interval that can be set by the user, typically in beats per minute (BPM).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.802Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metronome” is on the snapshot of s5"
+  }
+ ]
+}

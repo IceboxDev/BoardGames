@@ -1,0 +1,769 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "literature/modern-lit",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-048",
+    "category": 2
+   },
+   "factId": "f00009"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-142",
+    "category": 4
+   },
+   "factId": "f00006"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-050",
+    "category": 4
+   },
+   "factId": "f09787"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-226",
+    "category": 4
+   },
+   "factId": "f05106"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-324",
+    "category": 4
+   },
+   "factId": "f09318"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-366",
+    "category": 4
+   },
+   "factId": "f03126"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1214",
+   "baseHash": "54c9a92f42f0",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-010",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Don't Panic: A Field Guide to The Hitchhiker's Guide to the Galaxy",
+    "titleDe": "Keine Panik: Ein Feldführer durch „Per Anhalter durch die Galaxis“",
+    "bodyEn": "Douglas Adams (1952–2001) began \"The Hitchhiker's Guide to the Galaxy\" as a BBC radio comedy, first broadcast on 8 March 1978; the novel followed on 12 October 1979 and grew into a \"trilogy\" of five books (Adams' own joke), a television series, a computer game and a film. Its hero is Arthur Dent, an ordinary Englishman in a dressing gown, who is saved by his friend Ford Prefect seconds before the planet is destroyed. Ford, it turns out, is not from Guildford but from a small planet somewhere in the vicinity of Betelgeuse, and he is a roving researcher for the Guide itself, an electronic book that is the most successful publication of the great publishing houses of Ursa Minor. Part of that success is its cover, on which the words Don't Panic are printed in large friendly letters; the German translation renders them as \"Keine Panik\". Adams later said the phrase was the best advice ever given to humanity.\n\nThe demolition of the Earth is carried out by the Vogons, a bureaucratic, bad-tempered species whose constructor fleet needs the space for a hyperspace bypass. The plans, they point out, had been on display at the local planning office in Alpha Centauri for fifty Earth years. The Vogons are also the third-worst poets in the universe and torture their prisoners by reading verse to them. In the second book of the series, \"The Restaurant at the End of the Universe\" (October 1980), the Vogon captain is sent after the survivors of the demolition.\n\nAdams' most enduring invention may be the answer to the Ultimate Question of Life, the Universe and Everything. A race of hyper-intelligent pan-dimensional beings builds the supercomputer Deep Thought, which calculates for seven and a half million years and finally announces that the answer is 42. The problem, Deep Thought explains, is that nobody actually knows what the question was; a still larger computer, the Earth, is built to find it, and is demolished five minutes before finishing its run. Adams always insisted that 42 was chosen because it was an ordinary, unremarkable, funny number.\n\nTwo more items belong in any hitchhiker's luggage. The first is a towel, which the Guide calls the most massively useful thing an interstellar hitchhiker can have: you can wrap it around you for warmth, sleep under it on the sands of Kakrafoon, wet it for hand-to-hand combat, and, above all, a man who knows where his towel is will be assumed to be a person to be reckoned with. Since 2001, when it was first held two weeks after Adams' death, fans have marked Towel Day on 25 May each year. The second is the Babel fish, a small, yellow, leech-like creature that feeds on brainwave energy; put into the ear, it lets you instantly understand anything said to you in any form of language (in 1997 one of the first free online translation services, AltaVista's Babel Fish, borrowed its name). The Guide notes that by removing all barriers to communication it has caused more and bloodier wars than anything else in the history of creation.",
+    "bodyDe": "Douglas Adams (1952–2001) begann „Per Anhalter durch die Galaxis“ als Hörspielkomödie für die BBC, die am 8. März 1978 erstmals gesendet wurde; der Roman folgte am 12. Oktober 1979 und wuchs zu einer „Trilogie“ aus fünf Bänden (Adams' eigener Witz), einer Fernsehserie, einem Computerspiel und einem Kinofilm. Sein Held ist Arthur Dent, ein gewöhnlicher Engländer im Bademantel, der von seinem Freund Ford Prefect Sekunden vor der Zerstörung des Planeten gerettet wird. Ford stammt, wie sich herausstellt, nicht aus Guildford, sondern von einem kleinen Planeten irgendwo in der Nähe von Beteigeuze, und er ist reisender Mitarbeiter des Reiseführers selbst, eines elektronischen Buches, das die erfolgreichste Veröffentlichung der großen Verlagshäuser des Kleinen Bären ist. Zu diesem Erfolg trägt sein Umschlag bei, auf dem in großen, freundlichen Buchstaben die Worte Keine Panik stehen (im Original „Don't Panic“). Adams sagte später, es sei der beste Rat, der der Menschheit je gegeben wurde.\n\nDie Sprengung der Erde besorgen die Vogonen, eine bürokratische, übellaunige Spezies, deren Bauflotte den Platz für eine Hyperraum-Umgehungsstraße braucht. Die Pläne, so betonen sie, hätten fünfzig Erdenjahre lang im örtlichen Planungsbüro auf Alpha Centauri ausgelegen. Die Vogonen sind außerdem die drittschlechtesten Dichter des Universums und foltern ihre Gefangenen, indem sie ihnen Verse vorlesen. Im zweiten Band der Reihe, „Das Restaurant am Ende des Universums“ (Oktober 1980), wird der Vogonen-Kapitän den Überlebenden der Sprengung hinterhergeschickt.\n\nAdams' dauerhafteste Erfindung ist vielleicht die Antwort auf die große Frage nach dem Leben, dem Universum und dem ganzen Rest. Eine Rasse hyperintelligenter pandimensionaler Wesen baut den Supercomputer Deep Thought, der siebeneinhalb Millionen Jahre rechnet und schließlich verkündet, die Antwort laute 42. Das Problem sei nur, erklärt Deep Thought, dass niemand die Frage wirklich kenne; ein noch größerer Computer, die Erde, wird gebaut, um sie zu finden, und fünf Minuten vor dem Ende seines Programmlaufs gesprengt. Adams beharrte stets darauf, 42 sei gewählt worden, weil es eine gewöhnliche, unauffällige, komische Zahl sei.\n\nZwei weitere Dinge gehören in das Gepäck jedes Anhalters. Das erste ist ein Handtuch, das der Reiseführer als das ungeheuer Nützlichste bezeichnet, was ein interstellarer Anhalter besitzen kann: Man kann sich darin wärmen, unter ihm im Sand von Kakrafoon schlafen, es für den Nahkampf nass machen, und vor allem hält man einen Mann, der weiß, wo sein Handtuch ist, für jemanden, mit dem zu rechnen ist. Seit 2001, als er zwei Wochen nach Adams' Tod zum ersten Mal begangen wurde, feiern Fans jedes Jahr am 25. Mai den Handtuchtag. Das zweite ist der Babelfisch, ein kleines, gelbes, blutegelartiges Wesen, das sich von Gehirnwellenenergie ernährt; ins Ohr gesteckt, lässt es einen augenblicklich alles verstehen, was in irgendeiner Sprache gesagt wird (1997 lieh sich einer der ersten kostenlosen Online-Übersetzungsdienste, Babel Fish von AltaVista, seinen Namen). Der Reiseführer merkt an, dass er durch die Beseitigung aller Verständigungsbarrieren mehr und blutigere Kriege verursacht habe als irgendetwas sonst in der Geschichte der Schöpfung.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1958",
+   "baseHash": "0cf512c21afe",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-338",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-374",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-254",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Soma, Big Brother and the Fire Brigade: The Great Dystopian Novels",
+    "titleDe": "Soma, der Große Bruder und die Feuerwehr: Die großen dystopischen Romane",
+    "bodyEn": "In Aldous Huxley's Brave New World (1932) nobody needs to be forced into obedience. The citizens of the World State are bred in bottles, conditioned in their sleep and kept content with Soma, a drug that produces „a holiday from reality“ without hangover or guilt. Huxley's point was uncomfortable: a society could be enslaved not by pain but by pleasure. The novel became the counter-model to the other great dystopia of the twentieth century, and together the two novels still frame every debate about surveillance, consumption and control.\n\nThat other book is George Orwell's Nineteen Eighty-Four, published on 8 June 1949. In the superstate of Oceania the Party watches its citizens through telescreens, rewrites the past in the Ministry of Truth and shrinks the language to Newspeak so that dissent becomes unthinkable. The face of Big Brother on every wall, Room 101 and the slogan „War is Peace“ have entered everyday language. The very first sentence warns that something is wrong: \"It was a bright cold day in April, and the clocks were striking thirteen\" – 13 strokes, on clocks that ought to stop at twelve. Orwell, dying of tuberculosis on the Scottish island of Jura, finished the manuscript only months before his death. The name on the cover was itself a mask: the author was Eric Arthur Blair, who had adopted his pen name for his first book in 1933. George was as English as a name could be, and for the surname he borrowed a landscape he loved – the River Orwell in Suffolk, the county where his parents lived.\n\nOrwell had read an earlier Russian model. Yevgeny Zamyatin's We, written in 1920–21, first published in English in New York in 1924 and banned in the Soviet Union until 1988, describes the One State, where people have numbers instead of names, live in apartments with glass walls and follow the Table of Hours. The narrator D-503, a mathematician building a spaceship, falls in love and discovers that he has a soul – a disease the state cures by surgery. Huxley denied having read it; Orwell admitted the debt openly.\n\nRay Bradbury's Fahrenheit 451, published on 19 October 1953, turns the threat around: here the enemy of thought is not the police but entertainment. Firemen no longer put out fires; they start them, burning the books that a distracted population has stopped reading anyway – a fireman's job is to burn books, and the houses that hide them. The title is the temperature at which paper supposedly ignites. Guy Montag, a fireman who begins to read, escapes to join a community of people who have each memorised a book.\n\nMargaret Atwood's The Handmaid's Tale (1985) brought the genre to religious totalitarianism and to the female body. In the Republic of Gilead, a theocracy in the former United States, fertile women are assigned as handmaids to the ruling class; the narrator has lost even her name and is called Offred, „of Fred“. Atwood insisted that every cruelty in the book had a historical precedent somewhere. The television series from 2017 gave the red cloak and white bonnet a second life as a protest symbol.\n\n| Novel | Author | Year | Instrument of control |\n|---|---|---|---|\n| We | Yevgeny Zamyatin | 1920/21 | glass walls, numbers |\n| Brave New World | Aldous Huxley | 1932 | Soma, conditioning |\n| Nineteen Eighty-Four | George Orwell | 1949 | telescreens, Newspeak |\n| Fahrenheit 451 | Ray Bradbury | 1953 | book burning, screens |\n| The Handmaid's Tale | Margaret Atwood | 1985 | theocracy, forced fertility |",
+    "bodyDe": "In Aldous Huxleys Schöne neue Welt (1932) muss niemand zum Gehorsam gezwungen werden. Die Bürger des Weltstaats werden in Flaschen gezüchtet, im Schlaf konditioniert und mit Soma zufrieden gehalten, einer Droge, die „Urlaub von der Wirklichkeit“ ohne Kater und ohne Schuldgefühle verschafft. Huxleys Pointe war unbequem: Eine Gesellschaft lässt sich nicht nur durch Schmerz versklaven, sondern auch durch Vergnügen. Der Roman wurde zum Gegenmodell der anderen großen Dystopie des zwanzigsten Jahrhunderts, und gemeinsam rahmen die beiden Romane bis heute jede Debatte über Überwachung, Konsum und Kontrolle.\n\nDieses andere Buch ist George Orwells 1984, erschienen am 8. Juni 1949. Im Superstaat Ozeanien beobachtet die Partei ihre Bürger über Teleschirme, schreibt im Ministerium für Wahrheit die Vergangenheit um und schrumpft die Sprache zum Neusprech, damit Widerspruch undenkbar wird. Das Gesicht des Großen Bruders an jeder Wand, Raum 101 und die Parole „Krieg ist Frieden“ sind in die Alltagssprache eingegangen. Schon der erste Satz warnt, dass etwas nicht stimmt: „Es war ein klarer, kalter Tag im April, und die Uhren schlugen dreizehn“ – 13 Schläge auf Uhren, die bei zwölf aufhören sollten. Orwell, auf der schottischen Insel Jura an Tuberkulose sterbend, vollendete das Manuskript nur Monate vor seinem Tod. Schon der Name auf dem Umschlag war eine Maske: Der Autor hieß Eric Arthur Blair und hatte sich sein Pseudonym 1933 für sein erstes Buch zugelegt. George war so englisch, wie ein Vorname nur sein kann, und für den Nachnamen lieh er sich eine Landschaft, die er liebte – Pate stand der Fluss Orwell in Suffolk, der Grafschaft, in der seine Eltern lebten.\n\nOrwell hatte ein älteres russisches Vorbild gelesen. Jewgeni Samjatins Wir, 1920/21 geschrieben, 1924 zuerst auf Englisch in New York erschienen und in der Sowjetunion bis 1988 verboten, beschreibt den Einzigen Staat, in dem Menschen Nummern statt Namen tragen, in Wohnungen mit gläsernen Wänden leben und der Stundentafel folgen. Der Erzähler D-503, ein Mathematiker, der ein Raumschiff baut, verliebt sich und entdeckt, dass er eine Seele hat – eine Krankheit, die der Staat operativ heilt. Huxley bestritt, den Roman gekannt zu haben; Orwell bekannte sich offen zu der Anleihe.\n\nRay Bradburys Fahrenheit 451, erschienen am 19. Oktober 1953, dreht die Bedrohung um: Hier ist der Feind des Denkens nicht die Polizei, sondern die Unterhaltung. Feuerwehrmänner löschen keine Brände mehr, sie legen sie und verbrennen die Bücher, die eine abgelenkte Bevölkerung ohnehin nicht mehr liest – Bücher zu verbrennen, samt den Häusern, die sie verstecken, ist die Aufgabe eines Feuerwehrmanns. Der Titel nennt die Temperatur, bei der Papier angeblich Feuer fängt. Guy Montag, ein Feuerwehrmann, der zu lesen beginnt, flieht zu einer Gemeinschaft von Menschen, die je ein Buch auswendig gelernt haben.\n\nMargaret Atwoods Der Report der Magd (1985) führte das Genre zum religiösen Totalitarismus und zum weiblichen Körper. In der Republik Gilead, einer Theokratie in den ehemaligen Vereinigten Staaten, werden fruchtbare Frauen der herrschenden Klasse als Mägde zugeteilt; die Erzählerin hat selbst ihren Namen verloren und heißt Desfred, „des Fred“. Atwood betonte, dass jede Grausamkeit des Buches irgendwo ein historisches Vorbild habe. Die Fernsehserie von 2017 verschaffte dem roten Umhang und der weißen Haube ein zweites Leben als Protestsymbol.\n\n| Roman | Autor | Jahr | Instrument der Kontrolle |\n|---|---|---|---|\n| Wir | Jewgeni Samjatin | 1920/21 | Glaswände, Nummern |\n| Schöne neue Welt | Aldous Huxley | 1932 | Soma, Konditionierung |\n| 1984 | George Orwell | 1949 | Teleschirme, Neusprech |\n| Fahrenheit 451 | Ray Bradbury | 1953 | Bücherverbrennung, Bildschirme |\n| Der Report der Magd | Margaret Atwood | 1985 | Theokratie, Gebärzwang |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-107",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the title of the children's book about Bilbo Baggins with which J. R. R. Tolkien first took readers to Middle-earth in 1937?",
+      "de": "Wie heißt das Kinderbuch über Bilbo Beutlin, mit dem J. R. R. Tolkien seine Leser 1937 zum ersten Mal nach Mittelerde führte?",
+      "answerEn": "The Hobbit",
+      "answerDe": "Der Hobbit",
+      "timeline": {
+       "kind": "creation",
+       "start": "1937-09-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "George Allen & Unwin publishes Tolkien's „The Hobbit, or There and Back Again“",
+       "labelDe": "George Allen & Unwin veröffentlicht Tolkiens „Der Hobbit oder Hin und zurück“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Hobbit",
+       "title": "The Hobbit – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which son of J. R. R. Tolkien assembled „The Silmarillion“ from his father's drafts and published it in 1977?",
+      "de": "Welcher Sohn J. R. R. Tolkiens stellte „Das Silmarillion“ aus den Entwürfen seines Vaters zusammen und veröffentlichte es 1977?",
+      "answerEn": "Christopher Tolkien",
+      "answerDe": "Christopher Tolkien",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1924-11-21",
+       "end": "2020-01-16",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Christopher Tolkien, editor of his father's Middle-earth writings",
+       "labelDe": "Christopher Tolkien, Herausgeber der Mittelerde-Schriften seines Vaters"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Christopher_Tolkien",
+       "title": "Christopher Tolkien – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which volcano in Mordor, where it was forged, must the One Ring be destroyed in „The Lord of the Rings“?",
+      "de": "In welchem Vulkan in Mordor, in dem er geschmiedet wurde, muss der Eine Ring im „Herrn der Ringe“ zerstört werden?",
+      "answerEn": "Mount Doom",
+      "answerDe": "Schicksalsberg",
+      "timeline": {
+       "kind": "creation",
+       "start": "1955",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "„The Return of the King“, the last volume of „The Lord of the Rings“, is published",
+       "labelDe": "„Die Rückkehr des Königs“, der letzte Band des „Herrn der Ringe“, erscheint"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mount_Doom",
+       "title": "Mount Doom – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Oxford pub, nicknamed „the Bird and Baby“, did Tolkien, C. S. Lewis and the Inklings meet?",
+      "de": "In welchem Oxforder Pub mit dem Spitznamen „the Bird and Baby“ trafen sich Tolkien, C. S. Lewis und die Inklings?",
+      "answerEn": "The Eagle and Child",
+      "answerDe": "The Eagle and Child",
+      "timeline": {
+       "kind": "period",
+       "start": "1930",
+       "end": "1959",
+       "precision": "decade",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Inklings, Oxford's literary circle around Tolkien and C. S. Lewis, meet",
+       "labelDe": "Die Inklings, der Oxforder Literatenkreis um Tolkien und C. S. Lewis, treffen sich"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Inklings",
+       "title": "Inklings – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From the Silmarillion to Mount Doom: Tolkien's Middle-earth on the Page",
+    "titleDe": "Vom Silmarillion zum Schicksalsberg: Tolkiens Mittelerde im Buch",
+    "bodyEn": "J. R. R. Tolkien (1892–1973), professor of Anglo-Saxon at Oxford, spent more than half a century inventing a world, and the book that holds its deepest history is The Silmarillion. Its first drafts date from 1917, when Tolkien, home from the Western Front with trench fever, began writing down the legends of the Elves; he was still revising them in 1973, shortly before his death. It is therefore both his first and his last work on the history of Middle-earth – the creation of the world, the war of the Elves against the dark lord Morgoth, and the three jewels, the Silmarils, that give the book its name.\n\nYet the world reached readers through a side door. On 21 September 1937 George Allen & Unwin published The Hobbit, or There and Back Again, a children's book about Bilbo Baggins, a comfort-loving hobbit who is talked by the wizard Gandalf and thirteen dwarves into a journey to the mountain of the dragon Smaug. On the way Bilbo finds a magic ring in Gollum's cave. The publisher asked for a sequel, and what Tolkien delivered, after more than a decade of work, was The Lord of the Rings, published in three volumes in 1954 and 1955.\n\nIn that sequel the little ring turns out to be the One Ring of the dark lord Sauron, and it can be unmade only where it was forged: in the fires of Mount Doom, the volcano the Elves call Orodruin, in the land of Mordor. Frodo Baggins and his gardener Sam carry it there, and in the last volume, The Return of the King (1955), the Ring finally falls into the fire.\n\nMuch of this was first heard aloud. From the early 1930s Tolkien belonged to the Inklings, an informal circle of Oxford writers around his friend C. S. Lewis. On Thursday evenings they read their manuscripts to each other in Lewis's rooms at Magdalen College; on Tuesday mornings they met in a pub on St Giles', The Eagle and Child, which its regulars called \"the Bird and Baby\".\n\nThe Silmarillion itself Tolkien never finished. After his death his son Christopher Tolkien (1924–2020), helped by the young Canadian writer Guy Gavriel Kay, shaped decades of drafts into a single coherent book and published it in 1977. Christopher spent the rest of his long life editing his father's papers, from the twelve volumes of \"The History of Middle-earth\" to stand-alone tales such as \"Beren and Lúthien\" (2017).",
+    "bodyDe": "J. R. R. Tolkien (1892–1973), Professor für Angelsächsisch in Oxford, verbrachte mehr als ein halbes Jahrhundert damit, eine Welt zu erfinden, und das Buch, das ihre tiefste Geschichte enthält, ist Das Silmarillion. Seine ersten Entwürfe stammen von 1917, als Tolkien, mit Grabenfieber von der Westfront heimgekehrt, begann, die Legenden der Elben aufzuschreiben; noch 1973, kurz vor seinem Tod, überarbeitete er sie. Es ist damit zugleich sein erstes und sein letztes Werk zur Geschichte Mittelerdes – die Erschaffung der Welt, der Krieg der Elben gegen den dunklen Herrscher Morgoth und die drei Juwelen, die Silmaril, denen das Buch seinen Namen verdankt.\n\nDoch die Welt erreichte die Leser durch eine Seitentür. Am 21. September 1937 veröffentlichte George Allen & Unwin Der Hobbit oder Hin und zurück, ein Kinderbuch über Bilbo Beutlin, einen gemütlichen Hobbit, den der Zauberer Gandalf und dreizehn Zwerge zu einer Reise zum Berg des Drachen Smaug überreden. Unterwegs findet Bilbo in Gollums Höhle einen Zauberring. Der Verlag wünschte sich eine Fortsetzung, und was Tolkien nach mehr als einem Jahrzehnt Arbeit ablieferte, war Der Herr der Ringe, 1954 und 1955 in drei Bänden erschienen.\n\nIn dieser Fortsetzung entpuppt sich der kleine Ring als der Eine Ring des dunklen Herrschers Sauron, und er kann nur dort vernichtet werden, wo er geschmiedet wurde: im Feuer des Schicksalsbergs, des Vulkans, den die Elben Orodruin nennen, im Land Mordor. Frodo Beutlin und sein Gärtner Sam tragen ihn dorthin, und im letzten Band, Die Rückkehr des Königs (1955), fällt der Ring schließlich ins Feuer.\n\nVieles davon wurde zuerst laut vorgelesen. Seit den frühen 1930er-Jahren gehörte Tolkien zu den Inklings, einem losen Kreis Oxforder Schriftsteller um seinen Freund C. S. Lewis. Donnerstagabends lasen sie einander in Lewis' Räumen im Magdalen College ihre Manuskripte vor; dienstagmorgens trafen sie sich in einem Pub in St Giles', The Eagle and Child, das die Stammgäste „the Bird and Baby“ nannten.\n\nDas Silmarillion selbst hat Tolkien nie vollendet. Nach seinem Tod formte sein Sohn Christopher Tolkien (1924–2020), unterstützt von dem jungen kanadischen Schriftsteller Guy Gavriel Kay, aus Jahrzehnten von Entwürfen ein einziges zusammenhängendes Buch und veröffentlichte es 1977. Christopher verbrachte den Rest seines langen Lebens damit, die Papiere seines Vaters herauszugeben, von den zwölf Bänden der „History of Middle-earth“ bis zu Einzelgeschichten wie „Beren und Lúthien“ (2017).",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-383",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-275",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-328",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the mathematician in Isaac Asimov's Foundation series who invents psychohistory and foresees the fall of the Galactic Empire?",
+      "de": "Wie heißt der Mathematiker in Isaac Asimovs Foundation-Zyklus, der die Psychohistorik erfindet und den Untergang des Galaktischen Imperiums vorhersieht?",
+      "answerEn": "Hari Seldon",
+      "answerDe": "Hari Seldon",
+      "timeline": {
+       "kind": "creation",
+       "start": "1942-05",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Asimov's first Foundation story appears in „Astounding Science-Fiction“",
+       "labelDe": "Asimovs erste Foundation-Erzählung erscheint in „Astounding Science-Fiction“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Foundation_(book_series)",
+       "title": "Foundation (book series) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Under what title were Isaac Asimov's robot stories, built around his Three Laws of Robotics, collected in 1950?",
+      "de": "Unter welchem Titel wurden Isaac Asimovs Robotergeschichten rund um seine drei Robotergesetze 1950 gesammelt veröffentlicht?",
+      "answerEn": "I, Robot",
+      "answerDe": "I, Robot",
+      "timeline": {
+       "kind": "creation",
+       "start": "1950-12-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Gnome Press publishes Isaac Asimov's story collection „I, Robot“",
+       "labelDe": "Gnome Press veröffentlicht Isaac Asimovs Erzählband „I, Robot“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/I,_Robot",
+       "title": "I, Robot – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which editor of the magazine „Astounding Science Fiction“ shaped the Golden Age of science fiction and published early work by Asimov and Hubbard?",
+      "de": "Welcher Herausgeber des Magazins „Astounding Science Fiction“ prägte das Goldene Zeitalter der Science-Fiction und druckte frühe Werke von Asimov und Hubbard?",
+      "answerEn": "John W. Campbell",
+      "answerDe": "John W. Campbell",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1910-06-08",
+       "end": "1971-07-11",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "John W. Campbell, editor of „Astounding Science Fiction“ from 1937",
+       "labelDe": "John W. Campbell, ab 1937 Herausgeber von „Astounding Science Fiction“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/John_W._Campbell",
+       "title": "John W. Campbell – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Psychohistory and Pulp: Asimov, Hubbard and the Golden Age of Science Fiction",
+    "titleDe": "Psychohistorik und Pulp: Asimov, Hubbard und das Goldene Zeitalter der Science-Fiction",
+    "bodyEn": "The so-called Golden Age of science fiction has an address: the magazine Astounding Science Fiction, edited from its October 1937 issue by John W. Campbell (1910–1971). Campbell wanted stories that took science seriously and its consequences more seriously still, and he found a generation of young writers willing to supply them – none more prolific than Isaac Asimov, whose early story \"Trends\" he printed in July 1939.\n\nBetween May 1942 and January 1950 Astounding serialised Asimov's stories about the decline of a Galactic Empire spanning millions of worlds. Their central figure is the mathematician Hari Seldon, who invents psychohistory, a science that predicts the behaviour of vast populations statistically, and foresees thirty thousand years of barbarism after the Empire's fall. To shorten them to a single millennium he plants a colony of scholars at the edge of the galaxy. Gathered as Foundation (1951), Foundation and Empire (1952) and Second Foundation (1953), the books became known as the Foundation trilogy, and in 1966 they won a one-off Hugo Award as the Best All-Time Series. Remarkably for a space epic, its galaxy contains no aliens at all – only humans.\n\nAsimov's other great series was about machines. The robot stories, built around his Three Laws of Robotics, were collected on 2 December 1950 by Gnome Press as I, Robot; the 2004 film with Will Smith borrowed the title and the Laws but invented its own plot. Fame brought unusual offers. In 1974 Paul McCartney, by then a former Beatle, asked Asimov to write the screenplay for a science-fiction movie musical about a band impersonated by aliens; Asimov wrote a treatment, McCartney turned it down, and the film was never made.\n\nCampbell's most consequential discovery, though, was another pulp writer. L. Ron Hubbard had written adventure stories and science fiction for the magazines; in 1950 Astounding carried the first account of his self-help therapy, which Campbell enthusiastically promoted, and Hubbard went on to found the Scientology organisation. He returned to fiction three decades later with the enormous novel Battlefield Earth (1982), in which the last humans rise against alien conquerors a thousand years in the future. Its film version of 2000, starring John Travolta, collected seven Golden Raspberry Awards, including Worst Picture.",
+    "bodyDe": "Das sogenannte Goldene Zeitalter der Science-Fiction hat eine Adresse: das Magazin Astounding Science Fiction, ab der Ausgabe vom Oktober 1937 herausgegeben von John W. Campbell (1910–1971). Campbell wollte Geschichten, die die Wissenschaft ernst nahmen und ihre Folgen noch ernster, und er fand eine Generation junger Autoren, die sie lieferten – keiner produktiver als Isaac Asimov, dessen frühe Erzählung „Trends“ er im Juli 1939 druckte.\n\nZwischen Mai 1942 und Januar 1950 brachte Astounding in Fortsetzungen Asimovs Geschichten über den Niedergang eines Galaktischen Imperiums, das Millionen Welten umspannt. Ihre zentrale Figur ist der Mathematiker Hari Seldon, der die Psychohistorik erfindet, eine Wissenschaft, die das Verhalten riesiger Bevölkerungen statistisch vorhersagt, und nach dem Fall des Imperiums dreißigtausend Jahre Barbarei voraussieht. Um sie auf ein einziges Jahrtausend zu verkürzen, gründet er am Rand der Galaxis eine Kolonie von Gelehrten. Gesammelt als Foundation (1951), Foundation and Empire (1952) und Second Foundation (1953), wurden die Bücher als die Foundation-Trilogie bekannt und erhielten 1966 einen einmalig vergebenen Hugo Award als beste Serie aller Zeiten. Bemerkenswert für ein Weltraumepos: In seiner Galaxis gibt es überhaupt keine Außerirdischen – nur Menschen.\n\nAsimovs andere große Reihe handelte von Maschinen. Die Robotergeschichten rund um seine drei Robotergesetze erschienen am 2. Dezember 1950 bei Gnome Press gesammelt als I, Robot (deutsch „Ich, der Robot“); der Film von 2004 mit Will Smith übernahm Titel und Gesetze, erfand aber eine eigene Handlung. Der Ruhm brachte ungewöhnliche Angebote. 1974 bat Paul McCartney, damals schon Ex-Beatle, Asimov um das Drehbuch für ein Science-Fiction-Filmmusical über eine Band, deren Platz Außerirdische einnehmen; Asimov schrieb einen Entwurf, McCartney lehnte ab, und der Film wurde nie gedreht.\n\nCampbells folgenreichste Entdeckung war jedoch ein anderer Pulp-Autor. L. Ron Hubbard hatte Abenteuergeschichten und Science-Fiction für die Magazine geschrieben; 1950 brachte Astounding die erste Darstellung seiner Selbsthilfe-Therapie, die Campbell begeistert bewarb, und Hubbard gründete später die Scientology-Organisation. Drei Jahrzehnte danach kehrte er mit dem dickleibigen Roman Kampf um die Erde (Battlefield Earth, 1982) zur Fiktion zurück, in dem sich die letzten Menschen tausend Jahre in der Zukunft gegen außerirdische Eroberer erheben. Die Verfilmung von 2000 mit John Travolta erhielt sieben Goldene Himbeeren, darunter die für den schlechtesten Film.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-043",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-034",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "To which planet is Billy Pilgrim abducted by a flying saucer in Kurt Vonnegut's novel „Slaughterhouse-Five“?",
+      "de": "Auf welchen Planeten wird Billy Pilgrim in Kurt Vonneguts Roman „Schlachthof 5“ von einer fliegenden Untertasse entführt?",
+      "answerEn": "Tralfamadore",
+      "answerDe": "Tralfamadore",
+      "timeline": {
+       "kind": "creation",
+       "start": "1969-03-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Kurt Vonnegut's „Slaughterhouse-Five“ is published",
+       "labelDe": "Kurt Vonneguts „Schlachthof 5“ erscheint"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Slaughterhouse-Five",
+       "title": "Slaughterhouse-Five – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "On which ice-bound planet, also called Winter, is Ursula K. Le Guin's 1969 novel „The Left Hand of Darkness“ set?",
+      "de": "Auf welchem vereisten Planeten, auch Winter genannt, spielt Ursula K. Le Guins Roman „Die linke Hand der Dunkelheit“ von 1969?",
+      "answerEn": "Gethen",
+      "answerDe": "Gethen",
+      "timeline": {
+       "kind": "creation",
+       "start": "1969",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ursula K. Le Guin publishes „The Left Hand of Darkness“",
+       "labelDe": "Ursula K. Le Guin veröffentlicht „Die linke Hand der Dunkelheit“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Left_Hand_of_Darkness",
+       "title": "The Left Hand of Darkness – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which 1968 novel by Philip K. Dick, about the bounty hunter Rick Deckard, was loosely filmed as „Blade Runner“?",
+      "de": "Welcher Roman von Philip K. Dick aus dem Jahr 1968 über den Kopfgeldjäger Rick Deckard wurde frei als „Blade Runner“ verfilmt?",
+      "answerEn": "Do Androids Dream of Electric Sheep?",
+      "answerDe": "Träumen Androiden von elektrischen Schafen?",
+      "timeline": {
+       "kind": "creation",
+       "start": "1968",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Philip K. Dick publishes „Do Androids Dream of Electric Sheep?“",
+       "labelDe": "Philip K. Dick veröffentlicht „Träumen Androiden von elektrischen Schafen?“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Do_Androids_Dream_of_Electric_Sheep%3F",
+       "title": "Do Androids Dream of Electric Sheep? – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the sealed-off coastal zone that the twelfth expedition explores in Jeff VanderMeer's „Annihilation“?",
+      "de": "Wie heißt das abgeriegelte Küstengebiet, das die zwölfte Expedition in Jeff VanderMeers „Auslöschung“ erkundet?",
+      "answerEn": "Area X",
+      "answerDe": "Area X",
+      "timeline": {
+       "kind": "event",
+       "start": "2018-02-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Alex Garland's film of VanderMeer's „Annihilation“ is released",
+       "labelDe": "Alex Garlands Verfilmung von VanderMeers „Auslöschung“ kommt heraus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Annihilation_(VanderMeer_novel)",
+       "title": "Annihilation (VanderMeer novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Tralfamadore, Gethen, Area X: Science Fiction on the Literary Shelf",
+    "titleDe": "Tralfamadore, Gethen, Area X: Science-Fiction im Literaturregal",
+    "bodyEn": "For a long time science fiction was kept on a shelf of its own, and some of its finest writers spent their careers proving that it belonged among serious literature.\n\nKurt Vonnegut was one of them, and he took his revenge with a character. Kilgore Trout, a hopelessly prolific and miserably paid science-fiction author whose brilliant ideas end up in the back pages of dubious magazines, first appears in God Bless You, Mr. Rosewater (1965) and returns in several later books; critics came to read him as Vonnegut's literary alter ego. His name nods to the real writer Theodore Sturgeon – a sturgeon being, like a trout, a fish. In Slaughterhouse-Five (31 March 1969) Trout befriends Billy Pilgrim, the soldier who survives the bombing of Dresden and who is abducted by a flying saucer to the planet Tralfamadore, whose inhabitants see all moments of time at once.\n\nThe same year Ursula K. Le Guin published The Left Hand of Darkness (1969). An envoy from a league of worlds arrives on the ice-bound planet Gethen, which outsiders call Winter, and must learn to deal with people who are neither men nor women but become one or the other for only a few days each month. The novel won both the Hugo and the Nebula Award in 1970 and is still read as a thought experiment about gender.\n\nPhilip K. Dick asked a different question: what makes us human? In Do Androids Dream of Electric Sheep? (1968) the bounty hunter Rick Deckard hunts escaped androids in a radioactive, half-empty San Francisco, where owning a real animal is the highest status symbol. Ridley Scott turned the book, loosely, into the film Blade Runner (1982).\n\nThe tradition continues. Jeff VanderMeer's Annihilation (February 2014), the first book of his Southern Reach series, sends a twelfth expedition – a biologist, an anthropologist, a surveyor and a psychologist, none of them named – into Area X, a stretch of coast closed to the public for three decades, where nature has begun to transform everything that enters it. The novel won the Nebula Award, and Alex Garland filmed it in 2018 with Natalie Portman as the biologist.",
+    "bodyDe": "Lange stand die Science-Fiction in einem eigenen Regal, und einige ihrer besten Autoren verbrachten ihre Laufbahn damit zu beweisen, dass sie zur ernsthaften Literatur gehört.\n\nKurt Vonnegut war einer von ihnen, und er rächte sich mit einer Figur. Kilgore Trout, ein hoffnungslos produktiver und miserabel bezahlter Science-Fiction-Autor, dessen geniale Einfälle auf den hinteren Seiten zweifelhafter Magazine landen, tritt zuerst in Gott segne Sie, Mr. Rosewater (1965) auf und kehrt in mehreren späteren Büchern wieder; die Kritik las ihn bald als Vonneguts literarisches Alter Ego. Sein Name spielt auf den realen Autor Theodore Sturgeon an – ein Stör ist, wie eine Forelle, ein Fisch. In Schlachthof 5 (31. März 1969) freundet sich Trout mit Billy Pilgrim an, dem Soldaten, der die Bombardierung Dresdens überlebt und von einer fliegenden Untertasse auf den Planeten Tralfamadore entführt wird, dessen Bewohner alle Augenblicke der Zeit zugleich sehen.\n\nIm selben Jahr veröffentlichte Ursula K. Le Guin Die linke Hand der Dunkelheit (1969). Ein Gesandter eines Bundes von Welten kommt auf den vereisten Planeten Gethen, den Außenstehende Winter nennen, und muss lernen, mit Menschen umzugehen, die weder Männer noch Frauen sind, sondern nur für wenige Tage im Monat das eine oder das andere werden. Der Roman gewann 1970 sowohl den Hugo als auch den Nebula Award und wird bis heute als Gedankenexperiment über das Geschlecht gelesen.\n\nPhilip K. Dick stellte eine andere Frage: Was macht uns menschlich? In Träumen Androiden von elektrischen Schafen? (1968) jagt der Kopfgeldjäger Rick Deckard entflohene Androiden in einem verstrahlten, halb leeren San Francisco, in dem der Besitz eines echten Tieres das höchste Statussymbol ist. Ridley Scott machte daraus, frei, den Film Blade Runner (1982).\n\nDie Tradition lebt weiter. Jeff VanderMeers Auslöschung (im Original Annihilation, Februar 2014), der erste Band seiner Southern-Reach-Reihe, schickt eine zwölfte Expedition – eine Biologin, eine Anthropologin, eine Landvermesserin und eine Psychologin, allesamt namenlos – in die Area X, einen seit drei Jahrzehnten für die Öffentlichkeit gesperrten Küstenstreifen, in dem die Natur alles zu verwandeln begonnen hat, was ihn betritt. Der Roman gewann den Nebula Award, und Alex Garland verfilmte ihn 2018 mit Natalie Portman als Biologin.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-298",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-290",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-394",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American author turned Jane Austen's novel into the 2009 mash-up „Pride and Prejudice and Zombies“?",
+      "de": "Welcher amerikanische Autor machte aus Jane Austens Roman 2009 das Mash-up „Stolz und Vorurteil und Zombies“?",
+      "answerEn": "Seth Grahame-Smith",
+      "answerDe": "Seth Grahame-Smith",
+      "timeline": {
+       "kind": "creation",
+       "start": "2009-04-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Quirk Books publishes „Pride and Prejudice and Zombies“",
+       "labelDe": "Quirk Books veröffentlicht „Stolz und Vorurteil und Zombies“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice_and_Zombies",
+       "title": "Pride and Prejudice and Zombies – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which US president secretly hunts vampires in Seth Grahame-Smith's 2010 novel?",
+      "de": "Welcher US-Präsident jagt in Seth Grahame-Smiths Roman von 2010 heimlich Vampire?",
+      "answerEn": "Abraham Lincoln",
+      "answerDe": "Abraham Lincoln",
+      "timeline": {
+       "kind": "creation",
+       "start": "2010",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Seth Grahame-Smith publishes „Abraham Lincoln: Vampire Hunter“",
+       "labelDe": "Seth Grahame-Smith veröffentlicht „Abraham Lincoln: Vampirjäger“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln:_Vampire_Hunter",
+       "title": "Abraham Lincoln: Vampire Hunter – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which 2006 novel by Max Brooks tells a global war against the undead as an oral history of survivors' interviews?",
+      "de": "Welcher Roman von Max Brooks aus dem Jahr 2006 erzählt einen weltweiten Krieg gegen die Untoten als Oral History aus Interviews mit Überlebenden?",
+      "answerEn": "World War Z",
+      "answerDe": "World War Z",
+      "timeline": {
+       "kind": "creation",
+       "start": "2006",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Max Brooks publishes „World War Z: An Oral History of the Zombie War“",
+       "labelDe": "Max Brooks veröffentlicht „World War Z: An Oral History of the Zombie War“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/World_War_Z",
+       "title": "World War Z – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Zombies, Jedi and Mr Darcy: The Literary Mash-Up",
+    "titleDe": "Zombies, Jedi und Mr Darcy: Das literarische Mash-up",
+    "bodyEn": "In April 2009 a small Philadelphia publisher, Quirk Books, put an unexpected name on the cover of a new novel: Jane Austen, sharing the credit with Seth Grahame-Smith. The idea had come from the Quirk editor Jason Rekulak; Grahame-Smith carried it out by keeping most of Austen's 1813 text and adding a plague of the undead. In Pride and Prejudice and Zombies Elizabeth Bennet and her sisters are trained in the martial arts, Mr Darcy is a celebrated zombie slayer, and the famous first sentence now declares it a truth universally acknowledged that a zombie in possession of brains must be in want of more brains. The book reached number three on the New York Times bestseller list, and a film with Lily James followed in 2016.\n\nIts success launched a genre, the literary mash-up, in which a classic is crossed with pulp. Imitators soon offered Sense and Sensibility and Sea Monsters, and Grahame-Smith turned from novels to history: Abraham Lincoln: Vampire Hunter (2010) reveals that the sixteenth president of the United States secretly spent his life hunting vampires. Timur Bekmambetov filmed it in 2012 from Grahame-Smith's own screenplay.\n\nThe zombie had been ready for the role. In 2003 Max Brooks, son of the comedian Mel Brooks, published The Zombie Survival Guide, a deadpan handbook of weapons, hiding places and escape routes in case the dead should rise. Three years later he followed it with World War Z: An Oral History of the Zombie War (2006), a novel told as interviews with survivors, collected by a United Nations investigator after a global war against the undead; the 2013 film with Brad Pitt kept little but the title.\n\nShakespeare got his turn as well. In 2013 Ian Doescher retold the first Star Wars film in iambic pentameter, complete with soliloquies, a chorus and rhyming couplets, as William Shakespeare's Star Wars: Verily, a New Hope. Luke, Leia and Darth Vader speak in blank verse, and the book's success led Doescher to versify the rest of the saga, film by film.",
+    "bodyDe": "Im April 2009 setzte ein kleiner Verlag aus Philadelphia, Quirk Books, einen unerwarteten Namen auf den Umschlag eines neuen Romans: Jane Austen, die sich die Autorschaft mit Seth Grahame-Smith teilte. Die Idee stammte vom Quirk-Lektor Jason Rekulak; Grahame-Smith setzte sie um, indem er den größten Teil von Austens Text von 1813 beibehielt und eine Plage von Untoten hinzufügte. In Stolz und Vorurteil und Zombies sind Elizabeth Bennet und ihre Schwestern in den Kampfkünsten ausgebildet, Mr Darcy ist ein gefeierter Zombiejäger, und der berühmte erste Satz erklärt es nun zur allgemein anerkannten Wahrheit, dass ein Zombie, der im Besitz von Gehirnen ist, nach weiteren Gehirnen verlangen muss. Das Buch erreichte Platz drei der Bestsellerliste der New York Times, 2016 folgte ein Film mit Lily James.\n\nSein Erfolg begründete ein Genre, das literarische Mash-up, in dem ein Klassiker mit Groschenliteratur gekreuzt wird. Nachahmer boten bald Sinn und Sinnlichkeit und Seeungeheuer an, und Grahame-Smith wandte sich von Romanen der Geschichte zu: Abraham Lincoln: Vampirjäger (2010) enthüllt, dass der sechzehnte Präsident der Vereinigten Staaten sein Leben lang heimlich Vampire jagte. Timur Bekmambetov verfilmte es 2012 nach Grahame-Smiths eigenem Drehbuch.\n\nDer Zombie war für die Rolle bereit. 2003 veröffentlichte Max Brooks, Sohn des Komikers Mel Brooks, Der Zombie Survival Guide, ein todernstes Handbuch über Waffen, Verstecke und Fluchtwege für den Fall, dass die Toten auferstehen. Drei Jahre später ließ er World War Z: An Oral History of the Zombie War (2006) folgen, einen Roman aus Interviews mit Überlebenden, die ein Ermittler der Vereinten Nationen nach einem weltweiten Krieg gegen die Untoten gesammelt hat; der Film von 2013 mit Brad Pitt behielt davon kaum mehr als den Titel.\n\nAuch Shakespeare kam an die Reihe. 2013 erzählte Ian Doescher den ersten Star Wars-Film in fünfhebigen Jamben nach, samt Monologen, Chor und Reimpaaren, als William Shakespeares Star Wars: Fürwahr, eine neue Hoffnung. Luke, Leia und Darth Vader sprechen in Blankversen, und der Erfolg des Buches brachte Doescher dazu, auch den Rest der Saga Film für Film in Verse zu setzen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-243",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "Which young Highland warrior does the time traveller Claire marry in Diana Gabaldon's „Outlander“?",
+      "de": "Welchen jungen Highland-Krieger heiratet die Zeitreisende Claire in Diana Gabaldons „Feuer und Stein“ (Outlander)?",
+      "answerEn": "Jamie Fraser",
+      "answerDe": "Jamie Fraser",
+      "timeline": {
+       "kind": "event",
+       "start": "2014-08-09",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Starz television series „Outlander“ premieres in the US",
+       "labelDe": "Die Starz-Fernsehserie „Outlander“ startet in den USA"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Outlander_(novel)",
+       "title": "Outlander (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the ancient stone circle through which Claire falls back in time in „Outlander“?",
+      "de": "Wie heißt der uralte Steinkreis, durch den Claire in „Feuer und Stein“ (Outlander) in die Vergangenheit stürzt?",
+      "answerEn": "Craigh na Dun",
+      "answerDe": "Craigh na Dun",
+      "timeline": {
+       "kind": "creation",
+       "start": "1991-06-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Diana Gabaldon's first novel „Outlander“ is published",
+       "labelDe": "Diana Gabaldons erster Roman „Outlander“ (deutsch „Feuer und Stein“) erscheint"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Outlander_(novel)",
+       "title": "Outlander (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Under what title was Diana Gabaldon's first novel „Outlander“ originally published in the United Kingdom?",
+      "de": "Unter welchem Titel erschien Diana Gabaldons erster Roman „Outlander“ ursprünglich in Großbritannien?",
+      "answerEn": "Cross Stitch",
+      "answerDe": "Cross Stitch",
+      "timeline": {
+       "kind": "creation",
+       "start": "1991-06-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Diana Gabaldon's first novel „Outlander“ is published",
+       "labelDe": "Diana Gabaldons erster Roman „Outlander“ (deutsch „Feuer und Stein“) erscheint"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Outlander_(novel)",
+       "title": "Outlander (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Into which year of the eighteenth century is Claire carried back in the first „Outlander“ novel?",
+      "de": "In welches Jahr des 18. Jahrhunderts wird Claire im ersten „Outlander“-Roman zurückversetzt?",
+      "answerEn": "1743",
+      "answerDe": "1743",
+      "timeline": {
+       "kind": "creation",
+       "start": "1991-06-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Diana Gabaldon's first novel „Outlander“ is published",
+       "labelDe": "Diana Gabaldons erster Roman „Outlander“ (deutsch „Feuer und Stein“) erscheint"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Outlander_(novel)",
+       "title": "Outlander (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Through the Stones: Diana Gabaldon's Outlander",
+    "titleDe": "Durch die Steine: Diana Gabaldons Highland-Saga",
+    "bodyEn": "Diana Gabaldon was an American university scientist with a doctorate in ecology when she decided to write a novel purely as practice – a historical one, because research was something she knew how to do. The result, Outlander, was published on 1 June 1991. In Britain it first appeared under the title Cross Stitch; only later editions there took over the American name.\n\nIts heroine is Claire Randall, née Beauchamp, a former British Army nurse who has come through the Second World War and is on a second honeymoon in the Scottish Highlands with her husband Frank, a historian. When she touches a stone in the ancient circle of Craigh na Dun, she falls through time and wakes in 1743, among Highland clansmen who suspect her of being an English spy. Worse, Frank's ancestor, the sadistic Captain Jonathan \"Black Jack\" Randall, wears her husband's face.\n\nTo place her beyond his reach, the clan's war chief Dougal arranges her marriage to a young warrior, Jamie Fraser, which makes her a Scot in the eyes of the law. Claire, torn between two husbands in two centuries, works as a healer at Castle Leoch, and the story drifts towards the Jacobite plots to restore the Stuart kings – a cause whose catastrophe the reader, like Claire, knows is coming.\n\nWhat began as practice became a saga of nine novels so far, shelved at once under romance, history, adventure and fantasy; German readers know it as the Highland-Saga, and the first volume there as \"Feuer und Stein\". On 9 August 2014 the American cable channel Starz premiered a television series of the books, which turned their Scottish locations into places of pilgrimage for fans.",
+    "bodyDe": "Diana Gabaldon war eine amerikanische Universitätswissenschaftlerin mit einem Doktor in Ökologie, als sie beschloss, rein zur Übung einen Roman zu schreiben – einen historischen, weil sie mit Recherche umzugehen wusste. Das Ergebnis, Outlander, erschien am 1. Juni 1991. In Großbritannien kam es zuerst unter dem Titel Cross Stitch heraus; erst spätere Ausgaben übernahmen dort den amerikanischen Namen.\n\nSeine Heldin ist Claire Randall, geborene Beauchamp, eine ehemalige Krankenschwester der britischen Armee, die den Zweiten Weltkrieg überstanden hat und mit ihrem Mann Frank, einem Historiker, zweite Flitterwochen in den schottischen Highlands verbringt. Als sie einen Stein im uralten Kreis von Craigh na Dun berührt, stürzt sie durch die Zeit und erwacht im Jahr 1743, unter Highland-Clansmännern, die sie für eine englische Spionin halten. Schlimmer noch: Franks Vorfahr, der sadistische Captain Jonathan „Black Jack“ Randall, trägt das Gesicht ihres Mannes.\n\nUm sie seinem Zugriff zu entziehen, arrangiert der Kriegsführer des Clans, Dougal, ihre Heirat mit einem jungen Krieger, Jamie Fraser, die sie vor dem Gesetz zur Schottin macht. Claire, hin- und hergerissen zwischen zwei Ehemännern in zwei Jahrhunderten, arbeitet als Heilerin auf Castle Leoch, und die Geschichte treibt auf die jakobitischen Pläne zu, die Stuart-Könige zurückzubringen – eine Sache, deren Katastrophe der Leser wie Claire kommen sieht.\n\nWas als Übung begann, wurde eine Saga aus bislang neun Romanen, die zugleich unter Liebesroman, Geschichte, Abenteuer und Fantasy einsortiert wird; deutsche Leser kennen sie als Highland-Saga und den ersten Band als „Feuer und Stein“. Am 9. August 2014 startete der amerikanische Kabelsender Starz eine Fernsehserie nach den Büchern, die ihre schottischen Schauplätze zu Pilgerorten der Fans machte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-209",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the baker's son from District 12 who is chosen as a tribute alongside Katniss in „The Hunger Games“?",
+      "de": "Wie heißt der Bäckerssohn aus Distrikt 12, der in „Die Tribute von Panem“ zusammen mit Katniss als Tribut ausgewählt wird?",
+      "answerEn": "Peeta Mellark",
+      "answerDe": "Peeta Mellark",
+      "timeline": {
+       "kind": "creation",
+       "start": "2008-09-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Scholastic publishes Suzanne Collins' „The Hunger Games“",
+       "labelDe": "Scholastic veröffentlicht Suzanne Collins' „Die Tribute von Panem“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+       "title": "The Hunger Games (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which drunken former victor from District 12 mentors Katniss and Peeta in „The Hunger Games“?",
+      "de": "Welcher trinkfreudige frühere Sieger aus Distrikt 12 ist in „Die Tribute von Panem“ der Mentor von Katniss und Peeta?",
+      "answerEn": "Haymitch Abernathy",
+      "answerDe": "Haymitch Abernathy",
+      "timeline": {
+       "kind": "creation",
+       "start": "2008-09-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Scholastic publishes Suzanne Collins' „The Hunger Games“",
+       "labelDe": "Scholastic veröffentlicht Suzanne Collins' „Die Tribute von Panem“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+       "title": "The Hunger Games (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Capitol escort, famous for her wigs and her punctuality, accompanies the District 12 tributes in „The Hunger Games“?",
+      "de": "Welche Betreuerin aus dem Kapitol, bekannt für ihre Perücken und ihre Pünktlichkeit, begleitet in „Die Tribute von Panem“ die Tribute aus Distrikt 12?",
+      "answerEn": "Effie Trinket",
+      "answerDe": "Effie Trinket",
+      "timeline": {
+       "kind": "creation",
+       "start": "2008-09-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Scholastic publishes Suzanne Collins' „The Hunger Games“",
+       "labelDe": "Scholastic veröffentlicht Suzanne Collins' „Die Tribute von Panem“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+       "title": "The Hunger Games (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the title of the third Hunger Games novel by Suzanne Collins, published in 2010?",
+      "de": "Wie heißt der dritte Roman der „Tribute von Panem“ von Suzanne Collins, erschienen 2010?",
+      "answerEn": "Mockingjay",
+      "answerDe": "Flammender Zorn",
+      "timeline": {
+       "kind": "creation",
+       "start": "2010",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Suzanne Collins publishes „Mockingjay“, the third Hunger Games novel",
+       "labelDe": "Suzanne Collins veröffentlicht „Flammender Zorn“, den dritten Band der „Tribute von Panem“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(novel)",
+       "title": "The Hunger Games (novel) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Show Must Go On: Behind the Scenes of The Hunger Games",
+    "titleDe": "Die Show muss weitergehen: Hinter den Kulissen der Tribute von Panem",
+    "bodyEn": "Suzanne Collins has said that the idea for The Hunger Games came to her while flicking through television channels late at night: on one, young people competed in a reality show; on another, young soldiers were fighting a war; and the two images began to blur. The novel, published by Scholastic on 14 September 2008, is set in Panem, a nation built on the ruins of North America, where the wealthy Capitol punishes twelve poor districts for an old rebellion by taking a boy and a girl from each every year to fight to the death on live television.\n\nThe games are above all a show, and the show has a host. Caesar Flickerman, with his dyed hair, glittering suit and endlessly sympathetic smile, has been their master of ceremonies for decades; he interviews every tribute before the games begin, turning children about to die into celebrities. In the films Stanley Tucci played him with blue hair. He is not to be confused with the Gamemakers, such as Seneca Crane, who design the arena and its deadly traps.\n\nFrom the coal-mining District 12 come Katniss Everdeen, who volunteers in place of her little sister, and the baker's son Peeta Mellark, who once saved her from starving and confesses on Caesar's stage that he loves her. Their mentor is Haymitch Abernathy, a drunken cynic and the district's only living victor, who knows that sponsors reward a good story. Their chaperone from the Capitol is Effie Trinket, with her wigs, her timetable and her cheerful wish that the odds be ever in their favour.\n\nTwo sequels followed, Catching Fire (2009) and Mockingjay (2010), named after the hybrid songbird that becomes the symbol of the rebellion. Together with the four films starring Jennifer Lawrence (2012–2015), they made Panem one of the best-known dystopias of the twenty-first century.",
+    "bodyDe": "Suzanne Collins hat erzählt, die Idee zu den Tributen von Panem sei ihr spätabends beim Zappen durch die Fernsehkanäle gekommen: Auf dem einen traten junge Leute in einer Reality-Show gegeneinander an, auf dem anderen kämpften junge Soldaten in einem Krieg, und die beiden Bilder begannen zu verschwimmen. Der Roman, am 14. September 2008 bei Scholastic erschienen, spielt in Panem, einem auf den Ruinen Nordamerikas errichteten Staat, in dem das reiche Kapitol zwölf arme Distrikte für einen alten Aufstand bestraft, indem es jedes Jahr aus jedem einen Jungen und ein Mädchen holt, die vor laufenden Kameras bis zum Tod kämpfen müssen.\n\nDie Spiele sind vor allem eine Show, und die Show hat einen Moderator. Caesar Flickerman mit gefärbtem Haar, glitzerndem Anzug und unerschöpflich mitfühlendem Lächeln ist seit Jahrzehnten ihr Zeremonienmeister; er interviewt jeden Tribut vor Beginn der Spiele und macht aus Kindern, die bald sterben sollen, Berühmtheiten. In den Filmen spielte ihn Stanley Tucci mit blauen Haaren. Er ist nicht zu verwechseln mit den Spielmachern wie Seneca Crane, die die Arena und ihre tödlichen Fallen entwerfen.\n\nAus dem Kohlebergbau-Distrikt 12 kommen Katniss Everdeen, die sich an Stelle ihrer kleinen Schwester freiwillig meldet, und der Bäckerssohn Peeta Mellark, der sie einst vor dem Verhungern bewahrt hat und auf Caesars Bühne gesteht, dass er sie liebt. Ihr Mentor ist Haymitch Abernathy, ein trinkender Zyniker und der einzige noch lebende Sieger des Distrikts, der weiß, dass Sponsoren eine gute Geschichte belohnen. Ihre Betreuerin aus dem Kapitol ist Effie Trinket mit ihren Perücken, ihrem Zeitplan und ihrem fröhlichen Wunsch, das Glück möge stets mit ihnen sein.\n\nZwei Fortsetzungen folgten, Gefährliche Liebe (Catching Fire, 2009) und Flammender Zorn (Mockingjay, 2010), benannt nach dem Spotttölpel, dem gekreuzten Singvogel, der zum Symbol des Aufstands wird. Zusammen mit den vier Filmen mit Jennifer Lawrence (2012–2015) machten sie Panem zu einer der bekanntesten Dystopien des einundzwanzigsten Jahrhunderts.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-165",
+   "category": 4,
+   "domain": "literature",
+   "sub": "modern-lit",
+   "why": "Its answer \"100\" repeats fact f02826 in a0566 (an article may not hold the same answer twice). Alias it to f02826 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

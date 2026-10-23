@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-082",
+ "image": "IMG20261022154201.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Physics",
+   "cardText": "[Physics] If you throw a ball forward while giving it a clockwise spin (from an aerial view), in which direction will the ball go?\nA. Left B. Right C. Straight\nAnswer: B. The Magnus effect causes a spinning ball to curve in the direction of the spin. This effect is also applied in industries such as aviation, shipping, and sports.",
+   "de": "Welcher Effekt lässt einen Ball, der mit Drall im Uhrzeigersinn (von oben gesehen) nach vorn geworfen wird, nach rechts abbiegen?",
+   "en": "Which effect makes a ball thrown forward with a clockwise spin (seen from above) curve to the right?",
+   "reworked": true,
+   "answerDe": "Der Magnus-Effekt",
+   "answerEn": "The Magnus effect",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1852",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Heinrich Gustav Magnus demonstrates the effect with a rotating brass cylinder in an air stream",
+    "labelDe": "Heinrich Gustav Magnus führt den Effekt mit einem rotierenden Messingzylinder im Luftstrom vor"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Magnus_effect",
+    "title": "Magnus effect",
+    "lang": "en"
+   },
+   "notes": "Card’s answer (right) checked: the Magnus force deflects a ball towards the side its leading surface moves (topspin → downward swerve, per Wikipedia), and clockwise spin seen from above moves the front surface to the right. The card’s “curve in the direction of the spin” is vague; reworded to ask for the effect, the direction given.",
+   "domain": "science",
+   "sub": "physics"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which of the following animals is difficult to capture on an infrared camera?\nA. Polar bear B. Bat C. Koala\nAnswer: A. Polar Bears’ thick fur and a layer of blubber insulate them so well that they emit very little heat, making them difficult to capture using infrared detection.",
+   "de": "Welches Tier ist durch sein dichtes Fell und seine Fettschicht so gut isoliert, dass es für Infrarot-(Wärmebild-)Kameras nahezu unsichtbar ist?",
+   "en": "Which animal is insulated so well by its thick fur and blubber that it is virtually invisible to infrared (thermal) cameras?",
+   "reworked": true,
+   "answerDe": "Der Eisbär",
+   "answerEn": "The polar bear",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1774",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Constantine Phipps formally describes the polar bear as a species (Ursus maritimus)",
+    "labelDe": "Constantine Phipps beschreibt den Eisbären als eigene Art (Ursus maritimus)"
+   },
+   "source": {
+    "url": "https://www.guinnessworldrecords.com/world-records/118885-most-efficient-insulation-in-a-bear",
+    "title": "Most efficient insulation in a bear",
+    "lang": "en"
+   },
+   "notes": "Guinness World Records says the polar bear is “virtually invisible under infrared photography”. Some experts call this overstated (polar bears can be detected by IR cameras, e.g. their faces and breath); the question keeps “virtually”. Timeline: Phipps 1774 is the species authority on Wikipedia’s Polar bear page.",
+   "domain": "nature",
+   "sub": "mammals"
+  }
+ ]
+}

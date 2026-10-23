@@ -1,0 +1,295 @@
+{
+ "article": "a0377",
+ "sources": {
+  "s1": {
+   "url": "https://www.dwds.de/wb/Loipe",
+   "title": "Loipe – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:54.334Z",
+   "snapshot": "ad3ad03350826ab2aa51124e6c5896b208ddf5623dad0dfbdb1ccf80b1203fec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nordic_combined_at_the_1924_Winter_Olympics",
+   "title": "Nordic combined at the 1924 Winter Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:52.880Z",
+   "snapshot": "916e0a75682637fec78c81a44f0af5db40af676f479a78222715e1ccf4a2aeec"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Biathlon_at_the_1960_Winter_Olympics",
+   "title": "Biathlon at the 1960 Winter Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:53.942Z",
+   "snapshot": "8c0ba51d27c38ca9cf4b7e43e5e195b2f3706c9e35eb0425b87d67dc6e7c9586"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Biathlon",
+   "title": "Biathlon",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:52.563Z",
+   "snapshot": "908abf4d24ca24555079863bf9dbe8aefbae960a05b734d534ed83490e4cccbc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ski_flying",
+   "title": "Ski flying – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:55.072Z",
+   "snapshot": "b66932ded65ed6a56a7ffba04da168858399465ebb1dcc48254584d88fc0287c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Skiflugschanze",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:53.129Z",
+   "snapshot": "8bdfa335d92e85f68eeb4afa889345986c3d278bf1f360cd2c42e284a3a46fa5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Cross-country_skiing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:08.124Z",
+   "snapshot": "7c79b56c0ca2f175456d3be857602c1a9250a0f6a90cf5532c815dcbd6078b44"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Loipe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c032"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nordic combined",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "biathlon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Biathlon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-168"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ski flying hill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Skiflugschanze",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:38.574Z",
+   "target": "f01881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Loipe – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loipe” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:38.574Z",
+   "target": "f01882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nordic combined at the 1924 Winter Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nordic combined” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:38.574Z",
+   "target": "f01883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Biathlon at the 1960 Winter Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “biathlon” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:38.574Z",
+   "target": "f01883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Biathlon (lateinisch/griechisch für Zwei(fach)-Kampf, von lateinisch bi‑ und athlon, dies von griechisch ἆθλον) ist eine vornehmlich im Winter ausgetragene Sportart, die als Kombinationssportart die Disziplinen Skilanglauf und Schießen kombiniert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biathlon” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:38.574Z",
+   "target": "f01885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A challenger to Planica arrived in 1949 with the construction of Heini-Klopfer-Skiflugschanze (\"Heini Klopfer ski flying hill\") in Oberstdorf, West Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ski flying hill” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:38.574Z",
+   "target": "f01885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das letzte Weltcupfliegen der Saison findet meist in Planica (Letalnica) statt, in der Woche zuvor die Wettkämpfe in Vikersund (Vikersundbakken) im Rahmen der Raw Air, die weiteren Skiflugereignisse abwechselnd auf den Schanzen in Tauplitz (Kulm) und Oberstdorf (Heini-Klopfer-Skiflugschanze).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skiflugschanze” is on the snapshot of s6"
+  }
+ ]
+}

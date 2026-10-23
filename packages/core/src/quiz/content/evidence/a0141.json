@@ -1,0 +1,277 @@
+{
+ "article": "a0141",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wernher_von_Braun",
+   "title": "Wernher von Braun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:02.395Z",
+   "snapshot": "ec7462496b9d975a6d74c60bd267c5f0f3ea05ac077a5ca31acad02a13be9fa1"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Arthur_Rudolph",
+   "title": "Arthur Rudolph – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:03.148Z",
+   "snapshot": "cee3c08a92b3d38c0764fef4081e74ce9ed6324e3a831460868e74c9894fef90"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hubertus_Strughold",
+   "title": "Hubertus Strughold – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:04.429Z",
+   "snapshot": "f15699c8b65f6409bb2cf47edebd16f89984aaa424551cf7dfc9b382e44f44ad"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kurt_Heinrich_Debus",
+   "title": "Kurt Heinrich Debus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:05.160Z",
+   "snapshot": "43b4a5239ab586c6bb467b90fedd19ab8ac1a545d3b843594034a46c3027741a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Walter_Dornberger",
+   "title": "Walter Dornberger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:06.359Z",
+   "snapshot": "2e43208ab6ac3fd77f512f72f6149f46ee4ef046aab0e10f36f4de1bcd2d4023"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mittelbau-Dora",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:04.419Z",
+   "snapshot": "c1b81f730f0adce0ba9d0a21510d3e0b850fe9d9c4eb256c95a95e7ab2bc1652"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Rudolph",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:05.404Z",
+   "snapshot": "57d398f9c64cc72dbde7f4500e4395dd6bb2906d5fc6b533a4726db149a65175"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_H._Debus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:06.319Z",
+   "snapshot": "c2676d9178d53a33e7cb65cbd7b147dd34c9b182ab36310a134df077a9cbf2ba"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Walter_Dornberger",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:07.305Z",
+   "snapshot": "418a4d26ec1e5f753882e57b4c9fcaf742295e9c290515cdaad5441676751fe7"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Hubertus_Strughold",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:08.463Z",
+   "snapshot": "c55367a1138b389f50d42154d615fd214e1850752716190f24b7220bf8a26bb3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wernher von Braun",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arthur Rudolph",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hubertus Strughold",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kurt Debus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Walter Dornberger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:59.342Z",
+   "target": "f00701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im selben Jahr 1934 erreichte das von Wernher von Braun konzipierte Aggregat 2, gestartet von der Nordseeinsel Borkum aus, eine Höhe von 2200 Metern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wernher von Braun” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:59.342Z",
+   "target": "f00702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arthur Rudolph stammte aus einer traditionellen Bauernfamilie aus Stepfershausen in Thüringen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Rudolph” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:59.342Z",
+   "target": "f00703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ihm zu Ehren wurde 1985 vom Senat in Texas ein Hubertus-Strughold-Tag erklärt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hubertus Strughold” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:59.342Z",
+   "target": "f00704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kurt Debus war der Sohn von Heinrich Peter Jacob Debus und dessen Frau Melly Frida Debus (geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Debus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:59.342Z",
+   "target": "f00705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Walter Dornberger, Sohn von Hermann Dornberger und Hedwig Dornberger, geborene Roltsch, wurde in eine Apothekerfamilie in Gießen geboren, die von 1898 bis 1984 in drei Generationen die Pelikan-Apotheke betrieb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.342Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Dornberger” is on the snapshot of s5"
+  }
+ ]
+}

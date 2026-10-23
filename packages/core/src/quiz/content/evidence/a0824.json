@@ -1,0 +1,195 @@
+{
+ "article": "a0824",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment",
+   "title": "Age of Enlightenment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:46.717Z",
+   "snapshot": "250753d314493da89c75942bd2ddfe3281f5092d31300470b2b72c8126cbd3f9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Renaissance",
+   "title": "Renaissance – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:24.166Z",
+   "snapshot": "32b748298911d117e9a0889c64c24110b07ee8267304d8e2cb49a9b071789805"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Novum_Instrumentum_omne",
+   "title": "Novum Instrumentum omne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:49.923Z",
+   "snapshot": "82caa79d6ac39238e4282c5f8f6b0e4faa7177cb6be57d7284341be601e6e56c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Diet_of_Worms",
+   "title": "Diet of Worms – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:48.408Z",
+   "snapshot": "b8311e60a421c77e7699d8646202482c229f7e046873e48d058df481f8b76a61"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Enlightenment",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Renaissance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Humanism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Reformation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:50.341Z",
+   "target": "f04116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Age of Enlightenment, also known as the Age of Reason or simply the Enlightenment, was a period of intellectual and cultural flourishing in Europe and Western civilization, emerging in the late 17th century in Western and Central Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enlightenment” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:50.341Z",
+   "target": "f04117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Renaissance (UK:  rin-AY-sənss, US:   REN-ə-sahnss, \"rebirth\") was a European period of history and cultural movement taking place at the end of the Late Middle Ages and the beginning of the early modern era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Renaissance” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:50.341Z",
+   "target": "f04118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Furthermore, apocalypticism was diametrically opposed to the spirituality and mentality of Erasmus' Renaissance humanism; Erasmus' relative disinterest may be gauged from that he did not write a paraphrase of Revelation and provided only brief notes in the Annotations: only five pages in the first",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Humanism” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:50.341Z",
+   "target": "f04119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Although the Reformation is usually considered to have begun in 1517, this edict is the first overt schism associated with it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:50.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reformation” is on the snapshot of s4"
+  }
+ ]
+}

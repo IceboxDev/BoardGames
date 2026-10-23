@@ -1,0 +1,432 @@
+{
+ "id": "a0096",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "A Ledger without a Bank: How Bitcoin and the Blockchain Work",
+ "titleDe": "Ein Kassenbuch ohne Bank: Wie Bitcoin und die Blockchain funktionieren",
+ "titleRu": "Бухгалтерская книга без банка: как работают биткойн и блокчейн",
+ "bodyEn": "On 31 October 2008, in the middle of the global financial crisis, a nine-page paper appeared on a cryptography mailing list under the title „Bitcoin: A Peer-to-Peer Electronic Cash System“. Its author signed as Satoshi Nakamoto, a name that, as of 2026, has never been reliably matched to a real person or group; whoever it was stopped communicating in 2011 and left behind roughly a million untouched bitcoins. The paper solved a problem that had defeated digital-cash projects for two decades: how to let strangers transfer money over the internet without a bank or any other trusted middleman to prevent the same coin being spent twice.\n\nThe answer is the blockchain, a decentralised database that is copied to thousands of computers around the world. Transactions are gathered into blocks; each block contains a cryptographic hash of the previous one, so that the blocks form a chain in which no entry can be altered without changing every block that follows. Because every participant holds the same copy and checks every new block, there is no central server to hack, switch off or corrupt. Bitcoin itself, a currency issued and controlled by no state, started on 3 January 2009, when Nakamoto mined the first block, the „genesis block“, which contains a newspaper headline about bank bailouts. For more than a year the new coins had no price at all; the first known purchase of real goods came on 22 May 2010, when the Florida programmer Laszlo Hanyecz paid 10,000 bitcoins for two pizzas, worth about 41 dollars at the time – a date celebrated ever since as Bitcoin Pizza Day. The idea of linking records with cryptographic hashes was older: Stuart Haber and W. Scott Stornetta had described such a chain of blocks in 1991.\n\nNew blocks are added through mining. Computers all over the world compete to find a number that, hashed together with the block's contents, produces a result below a certain target – a lottery that can only be won by trying trillions of guesses. The winner appends the block, roughly every ten minutes, and receives newly created bitcoins as a reward. This „proof of work“ makes rewriting history prohibitively expensive, but it also consumes as much electricity as a medium-sized country. The reward halves every 210,000 blocks, so that no more than 21 million bitcoins will ever exist.\n\nOwning bitcoin means owning a private key – a secret number that authorises transfers from an address. Keys are stored in a wallet, which may be an app on a phone, a small hardware device or simply a piece of paper. The first wallet program, released by Nakamoto in January 2009, was simply called „Bitcoin“. The blockchain itself is public; the wallet is what makes it yours, and a lost key means coins that are locked forever.\n\nEthereum, proposed by Vitalik Buterin and launched on 30 July 2015, extended the idea from money to programs. Its blockchain runs smart contracts: pieces of code that execute automatically when their conditions are met – releasing a payment on a delivery date, say, or settling a bet on the outcome of a match – without any party being able to interfere. The term was coined by the computer scientist Nick Szabo in the 1990s, but it took a blockchain to make it practical.\n\n| Term | Meaning |\n|---|---|\n| blockchain | tamper-proof, decentralised chain of transaction blocks |\n| mining | proof-of-work competition that creates new blocks |\n| Satoshi Nakamoto | pseudonymous author of the Bitcoin white paper |\n| wallet | software or device holding the private keys |\n| smart contracts | self-executing programs on a blockchain |",
+ "bodyDe": "Am 31. Oktober 2008, mitten in der globalen Finanzkrise, erschien auf einer Kryptografie-Mailingliste ein neunseitiges Papier mit dem Titel „Bitcoin: A Peer-to-Peer Electronic Cash System“. Sein Autor zeichnete als Satoshi Nakamoto, ein Name, der bis 2026 nie verlässlich einer realen Person oder Gruppe zugeordnet werden konnte; wer immer es war, stellte 2011 jede Kommunikation ein und hinterließ rund eine Million unangetastete Bitcoins. Das Papier löste ein Problem, an dem digitale Bargeldprojekte zwei Jahrzehnte lang gescheitert waren: wie Fremde über das Internet Geld übertragen können, ohne dass eine Bank oder ein anderer vertrauenswürdiger Mittelsmann verhindert, dass dieselbe Münze zweimal ausgegeben wird.\n\nDie Antwort ist die Blockchain, eine dezentrale Datenbank, die auf Tausende von Computern rund um die Welt kopiert wird. Transaktionen werden zu Blöcken zusammengefasst; jeder Block enthält einen kryptografischen Hash des vorherigen, sodass die Blöcke eine Kette bilden, in der kein Eintrag verändert werden kann, ohne jeden nachfolgenden Block zu ändern. Weil jeder Teilnehmer dieselbe Kopie hält und jeden neuen Block prüft, gibt es keinen zentralen Server, den man hacken, abschalten oder manipulieren könnte. Bitcoin selbst, eine Währung, die kein Staat ausgibt oder kontrolliert, startete am 3. Januar 2009, als Nakamoto den ersten Block schürfte, den „Genesis-Block“, der eine Zeitungsschlagzeile über Bankenrettungen enthält. Mehr als ein Jahr lang hatten die neuen Münzen überhaupt keinen Preis; der erste bekannte Kauf echter Ware folgte am 22. Mai 2010, als der Programmierer Laszlo Hanyecz aus Florida 10.000 Bitcoins für zwei Pizzen bezahlte, damals etwa 41 Dollar wert – ein Datum, das seither als Bitcoin Pizza Day gefeiert wird. Die Idee, Einträge über kryptografische Hashes zu verketten, war älter: Stuart Haber und W. Scott Stornetta hatten eine solche Blockkette bereits 1991 beschrieben.\n\nNeue Blöcke werden durch Mining angefügt. Computer auf der ganzen Welt wetteifern darum, eine Zahl zu finden, die zusammen mit dem Inhalt des Blocks gehasht ein Ergebnis unter einem bestimmten Zielwert liefert – eine Lotterie, die nur durch Billionen von Versuchen gewonnen werden kann. Der Gewinner hängt den Block an, etwa alle zehn Minuten, und erhält als Belohnung neu erzeugte Bitcoins. Dieser „Proof of Work“ macht das Umschreiben der Geschichte unerschwinglich teuer, verbraucht aber auch so viel Strom wie ein mittelgroßes Land. Die Belohnung halbiert sich alle 210.000 Blöcke, sodass niemals mehr als 21 Millionen Bitcoins existieren werden.\n\nBitcoin zu besitzen heißt, einen privaten Schlüssel zu besitzen – eine geheime Zahl, die Überweisungen von einer Adresse autorisiert. Schlüssel werden in einer Wallet aufbewahrt, die eine App auf dem Handy, ein kleines Hardwaregerät oder schlicht ein Stück Papier sein kann. Das erste Wallet-Programm, das Nakamoto im Januar 2009 veröffentlichte, hieß schlicht „Bitcoin“. Die Blockchain selbst ist öffentlich; die Wallet ist das, was sie zu deiner macht, und ein verlorener Schlüssel bedeutet Münzen, die für immer gesperrt sind.\n\nEthereum, von Vitalik Buterin erdacht und am 30. Juli 2015 gestartet, erweiterte die Idee vom Geld auf Programme. Seine Blockchain führt Smart Contracts aus: Codestücke, die automatisch ausgeführt werden, wenn ihre Bedingungen erfüllt sind – etwa eine Zahlung am Liefertermin freigeben oder eine Wette über den Ausgang eines Spiels abrechnen –, ohne dass eine Partei eingreifen könnte. Der Begriff wurde in den 1990er-Jahren vom Informatiker Nick Szabo geprägt, aber erst eine Blockchain machte ihn praktikabel.\n\n| Begriff | Bedeutung |\n|---|---|\n| Blockchain | fälschungssichere, dezentrale Kette von Transaktionsblöcken |\n| Mining | Proof-of-Work-Wettbewerb, der neue Blöcke erzeugt |\n| Satoshi Nakamoto | pseudonymer Autor des Bitcoin-Whitepapers |\n| Wallet | Software oder Gerät, das die privaten Schlüssel verwahrt |\n| Smart Contracts | selbstausführende Programme auf einer Blockchain |",
+ "bodyRu": "31 октября 2008 года, в разгар мирового финансового кризиса, в одной криптографической рассылке появилась девятистраничная статья под названием «Bitcoin: A Peer-to-Peer Electronic Cash System». Её автор подписался как Сатоси Накамото – имя, которое по состоянию на 2026 год так и не удалось достоверно связать ни с реальным человеком, ни с группой; кто бы это ни был, в 2011 году он прекратил всякое общение и оставил около миллиона нетронутых биткойнов. Статья решала проблему, о которую два десятилетия разбивались проекты цифровых наличных: как позволить незнакомым людям переводить деньги через интернет так, чтобы помешать дважды потратить одну и ту же монету, без банка или другого доверенного посредника.\n\nОтвет – блокчейн, децентрализованная база данных, копии которой хранятся на тысячах компьютеров по всему миру. Транзакции собираются в блоки; каждый блок содержит криптографический хеш предыдущего, так что блоки образуют цепочку, в которой ни одну запись нельзя изменить, не изменив все последующие блоки. Поскольку у каждого участника одна и та же копия и каждый проверяет каждый новый блок, нет центрального сервера, который можно взломать, отключить или подкупить. Сам биткойн – валюта, которую не выпускает и не контролирует ни одно государство, – начал работу 3 января 2009 года, когда Накамото добыл первый блок, «генезис-блок», содержащий газетный заголовок о спасении банков. Больше года новые монеты вообще не имели цены; первой известной покупкой настоящего товара стали две пиццы: 22 мая 2010 года программист из Флориды Ласло Ханеч заплатил за них 10 000 биткойнов, стоивших тогда около 41 доллара, — с тех пор этот день отмечают как Bitcoin Pizza Day. Идея связывать записи криптографическими хешами была старше: Стюарт Хабер и У. Скотт Сторнетта описали такую цепочку блоков ещё в 1991 году.\n\nНовые блоки добавляются в ходе процесса, который называется майнинг. Компьютеры по всему миру соревнуются в поиске числа, которое вместе с содержимым блока даёт хеш ниже определённого порога, – лотерея, выиграть которую можно, лишь перебрав триллионы вариантов. Победитель примерно каждые десять минут добавляет блок и получает в награду новые биткойны. Это «доказательство работы» (proof of work) делает переписывание истории непомерно дорогим, но и потребляет столько электроэнергии, сколько средняя страна. Награда уменьшается вдвое каждые 210 000 блоков, так что биткойнов никогда не будет больше 21 миллиона.\n\nВладеть биткойнами – значит владеть закрытым ключом, секретным числом, которое разрешает переводы с адреса. Ключи хранит кошелёк – это может быть приложение в телефоне, небольшое аппаратное устройство или просто листок бумаги. Первая программа-кошелёк, выпущенная Накамото в январе 2009 года, называлась просто «Bitcoin». Сам блокчейн общедоступен; кошелёк – то, что делает монеты вашими, а потерянный ключ означает монеты, заблокированные навсегда.\n\nEthereum, предложенный Виталиком Бутериным и запущенный 30 июля 2015 года, распространил идею с денег на программы. В его блокчейне работают смарт-контракты: фрагменты кода, которые выполняются автоматически при выполнении их условий – например, перечисляют платёж в день поставки или рассчитывают пари на исход матча, – и ни одна сторона не может вмешаться. Термин в 1990-х годах ввёл информатик Ник Сабо, но сделать его практичным удалось только с блокчейном.\n\n| Термин | Значение |\n|---|---|\n| блокчейн | защищённая от подделки децентрализованная цепочка блоков транзакций |\n| майнинг | соревнование «доказательства работы», создающее новые блоки |\n| Сатоси Накамото | псевдонимный автор white paper биткойна |\n| кошелёк | программа или устройство, хранящие закрытые ключи |\n| смарт-контракты | самоисполняющиеся программы в блокчейне |",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Blockchain.svg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Blockchain",
+   "width": 102,
+   "height": 271,
+   "alt": {
+    "en": "Diagram of a blockchain",
+    "de": "Schema einer Blockchain",
+    "ru": "Схема блокчейна"
+   },
+   "caption": {
+    "en": "A blockchain in outline: each block refers to the one before it, so the main chain cannot be altered without changing every later block.",
+    "de": "Eine Blockchain im Schema: Jeder Block verweist auf den vorherigen, sodass die Hauptkette nicht verändert werden kann, ohne jeden späteren Block zu ändern.",
+    "ru": "Схема блокчейна: каждый блок ссылается на предыдущий, поэтому основную цепочку нельзя изменить, не изменив все последующие блоки."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Bust_of_Satoshi_Nakamoto_in_Budapest.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
+   "width": 3224,
+   "height": 4299,
+   "alt": {
+    "en": "Bust of Satoshi Nakamoto in Budapest",
+    "de": "Büste von Satoshi Nakamoto in Budapest",
+    "ru": "Бюст Сатоси Накамото в Будапеште"
+   },
+   "caption": {
+    "en": "A bust honouring Satoshi Nakamoto in Budapest: its faceless, reflective surface stands for the unknown author of the 2008 Bitcoin white paper.",
+    "de": "Eine Büste zu Ehren Satoshi Nakamotos in Budapest: Ihre gesichtslose, spiegelnde Oberfläche steht für den unbekannten Autor des Bitcoin-Whitepapers von 2008.",
+    "ru": "Бюст в честь Сатоси Накамото в Будапеште: его безликая зеркальная поверхность символизирует неизвестного автора white paper биткойна 2008 года."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f00476",
+   "answerEn": "blockchain",
+   "answerDe": "Blockchain",
+   "answerRu": "блокчейн",
+   "spans": {
+    "en": [
+     659,
+     10
+    ],
+    "de": [
+     742,
+     10
+    ],
+    "ru": [
+     721,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1991",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Haber and Stornetta describe a cryptographically secured chain of blocks",
+    "labelDe": "Haber und Stornetta beschreiben eine kryptografisch gesicherte Kette von Blöcken",
+    "labelRu": "Хабер и Сторнетта описывают криптографически защищённую цепочку блоков"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Blockchain",
+    "title": "Blockchain – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00476",
+     "en": "What is the decentralised database on which cryptocurrencies such as Bitcoin are based called?",
+     "de": "Wie nennt man die dezentrale Datenbank, auf der Kryptowährungen wie Bitcoin basieren?",
+     "ru": "Как называется децентрализованная база данных, на которой основаны криптовалюты, например биткойн?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c008",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f00477",
+   "answerEn": "mining",
+   "answerDe": "Mining",
+   "answerRu": "майнинг",
+   "spans": {
+    "en": [
+     1762,
+     6
+    ],
+    "de": [
+     1956,
+     6
+    ],
+    "ru": [
+     1880,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2009-01-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Satoshi Nakamoto mines the Bitcoin genesis block",
+    "labelDe": "Satoshi Nakamoto schürft den Genesis-Block von Bitcoin",
+    "labelRu": "Сатоси Накамото добывает генезис-блок биткойна"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bitcoin",
+    "title": "Bitcoin – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00477",
+     "en": "What is the computationally intensive process by which new blocks are created and transactions confirmed in the Bitcoin network called?",
+     "de": "Wie nennt man das rechenintensive Verfahren, mit dem im Bitcoin-Netzwerk neue Blöcke erzeugt und Transaktionen bestätigt werden?",
+     "ru": "Как называется ресурсоёмкий процесс, с помощью которого в сети биткойна создаются новые блоки и подтверждаются транзакции?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f00478",
+   "answerEn": "Satoshi Nakamoto",
+   "answerDe": "Satoshi Nakamoto",
+   "answerRu": "Сатоси Накамото",
+   "spans": {
+    "en": [
+     211,
+     16
+    ],
+    "de": [
+     215,
+     16
+    ],
+    "ru": [
+     218,
+     15
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "2008-10-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Satoshi Nakamoto publishes the Bitcoin white paper",
+    "labelDe": "Satoshi Nakamoto veröffentlicht das Bitcoin-Whitepaper",
+    "labelRu": "Сатоси Накамото публикует white paper биткойна"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
+    "title": "Satoshi Nakamoto – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00478",
+     "en": "Under which pseudonym did the still unidentified inventor of Bitcoin publish the white paper in 2008?",
+     "de": "Unter welchem Pseudonym veröffentlichte der bis heute unbekannte Erfinder von Bitcoin 2008 das Whitepaper?",
+     "ru": "Под каким псевдонимом до сих пор не установленный изобретатель биткойна опубликовал в 2008 году white paper?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q13382352",
+     "label": "Satoshi Nakamoto",
+     "role": "answer"
+    }
+   ],
+   "reviewBy": "2027-10-23"
+  },
+  {
+   "id": "f00479",
+   "answerEn": "wallet",
+   "answerDe": "Wallet",
+   "answerRu": "кошелёк",
+   "spans": {
+    "en": [
+     2446,
+     6
+    ],
+    "de": [
+     2743,
+     6
+    ],
+    "ru": [
+     2556,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "2009-01",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nakamoto releases the first Bitcoin wallet program",
+    "labelDe": "Nakamoto veröffentlicht das erste Bitcoin-Wallet-Programm",
+    "labelRu": "Накамото выпускает первую программу-кошелёк для биткойна"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cryptocurrency_wallet",
+    "title": "Cryptocurrency wallet – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00479",
+     "en": "What is the digital purse in which the keys for accessing cryptocurrencies are kept called?",
+     "de": "Wie nennt man die digitale Geldbörse, in der die Schlüssel für den Zugriff auf Kryptowährungen verwahrt werden?",
+     "ru": "Как называется цифровой бумажник, в котором хранятся ключи для доступа к криптовалютам?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f00480",
+   "answerEn": "smart contracts",
+   "answerDe": "Smart Contracts",
+   "answerRu": "смарт-контракты",
+   "spans": {
+    "en": [
+     2882,
+     15
+    ],
+    "de": [
+     3251,
+     15
+    ],
+    "ru": [
+     3027,
+     15
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2015-07-30",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ethereum, the blockchain for smart contracts, goes live",
+    "labelDe": "Ethereum, die Blockchain für Smart Contracts, geht online",
+    "labelRu": "Запускается Ethereum – блокчейн для смарт-контрактов"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ethereum",
+    "title": "Ethereum – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00480",
+     "en": "What are programs on blockchains such as Ethereum that execute contract terms automatically called?",
+     "de": "Wie nennt man Programme auf Blockchains wie Ethereum, die Vertragsbedingungen automatisch ausführen?",
+     "ru": "Как называются программы в блокчейнах вроде Ethereum, которые автоматически исполняют условия договора?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f14181",
+   "answerEn": "Bitcoin",
+   "answerDe": "Bitcoin",
+   "answerRu": "биткойн",
+   "spans": {
+    "en": [
+     1097,
+     7
+    ],
+    "de": [
+     1235,
+     7
+    ],
+    "ru": [
+     1185,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "2009-01-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Bitcoin network starts with the genesis block (block 0)",
+    "labelDe": "Das Bitcoin-Netzwerk startet mit dem Genesisblock (Block 0)",
+    "labelRu": "Сеть биткойна запускается с генезис-блока (блок 0)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bitcoin",
+    "title": "Bitcoin",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w14473",
+     "en": "What is the name of the digital currency that was introduced in 2009 without any state control?",
+     "de": "Wie heißt die digitale Währung, die 2009 ohne irgendeine staatliche Kontrolle eingeführt wurde?",
+     "ru": "Как называется цифровая валюта, введённая в 2009 году без какого-либо государственного контроля?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-007",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "risk:superlative",
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q131723",
+     "label": "Bitcoin",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f28207",
+   "answerEn": "two pizzas",
+   "answerDe": "zwei Pizzen",
+   "answerRu": "две пиццы",
+   "spans": {
+    "en": [
+     1485,
+     10
+    ],
+    "de": [
+     1655,
+     11
+    ],
+    "ru": [
+     1494,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2010-05-22",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First known purchase of goods with bitcoin: two pizzas",
+    "labelDe": "Erster bekannter Warenkauf mit Bitcoin: zwei Pizzen",
+    "labelRu": "Первая известная покупка товара за биткойны: две пиццы"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bitcoin_Pizza_Day",
+    "title": "Bitcoin Pizza Day – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w27207",
+     "en": "What did the programmer Laszlo Hanyecz buy for 10,000 bitcoins on 22 May 2010, the first known purchase of real goods with the currency?",
+     "de": "Was kaufte der Programmierer Laszlo Hanyecz am 22. Mai 2010 für 10.000 Bitcoins – der erste bekannte Kauf echter Ware mit der Währung?",
+     "ru": "Что купил программист Ласло Ханеч 22 мая 2010 года за 10 000 биткойнов — первая известная покупка настоящего товара за эту валюту?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "risk:superlative",
+    "difficulty:hard"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/cryptocurrency",
+  "topic:business/finance",
+  "audience:international"
+ ],
+ "entities": [
+  {
+   "qid": "Q131723",
+   "label": "Bitcoin",
+   "role": "subject"
+  },
+  {
+   "qid": "Q20514253",
+   "label": "blockchain",
+   "role": "subject"
+  }
+ ]
+}

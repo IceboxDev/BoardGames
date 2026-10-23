@@ -1,0 +1,422 @@
+{
+ "article": "a1675",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Newly_industrialized_country",
+   "title": "Newly industrialized country – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:16.291Z",
+   "snapshot": "a3b931914dddef40e2584eb6420b596201184cee3bc295c270526478576f2433"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/OECD",
+   "title": "OECD – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:17.418Z",
+   "snapshot": "7b7d8a5a2c912ae27c63d46e0e7edba014790d84e2ec6d4e0f9f7c3e62e7c001"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Four_Asian_Tigers",
+   "title": "Four Asian Tigers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:18.372Z",
+   "snapshot": "b8357ca2c735e9453aeda48eb1c8e321ee3300da55dd7185ccbfd23523f31b67"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/BRICS",
+   "title": "BRICS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:19.458Z",
+   "snapshot": "549fe577d78016245f8ab5aca71f1dabfb1676009468fa7f8b52915a843275d6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Banana_republic",
+   "title": "Banana republic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:20.388Z",
+   "snapshot": "032ff53e9dc8254dbbf8255ab76bbed6148d64b2bd55b686c30207af9bcde5ae"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Least_developed_countries",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:21.308Z",
+   "snapshot": "b1efb0c3e500c948c396127c97417596d9ef80513f83d184bd0e090f915f3a4a"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Industriestaat",
+   "title": "Industriestaat – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:29.508Z",
+   "snapshot": "e0961102b59472ae857bf2d3a69d6fcf2292d97a5aebf8a1bfe5a374e4fc58cb"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Developed_country",
+   "title": "Developed country – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:29.482Z",
+   "snapshot": "137e82bbcd25cf8beafe6b49c0512c8482f20c01658f1fc7e6910ecbc1643b32"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "newly industrialized country",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "industrialized country",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Asian Tigers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "BRICS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "banana republic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-136"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Taiwan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-049"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:03.558Z",
+   "target": "f08371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The category of newly industrialized country (NIC), newly industrialized economy (NIE) or middle-income country is a socioeconomic classification applied to several countries around the world by political scientists and economists.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “newly industrialized country” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:03.558Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "industrialized country",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“industrialized country”, “Industrieland”, “индустриальная страна”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:03.558Z",
+   "target": "f08373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Other sources have noted that all of the Four Asian Tigers practiced authoritarianism during the peak of their economic growth, although they have since moved to hybrid or liberal democratic regimes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asian Tigers” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:03.558Z",
+   "target": "f08374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "BRICS is an international organization currently comprising ten countries: Brazil, China, Egypt, Ethiopia, India, Indonesia, Iran, Russia, South Africa and the United Arab Emirates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BRICS” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:03.558Z",
+   "target": "f08375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In political science, the term banana republic describes a politically and economically unstable country with an economy dependent upon the export of natural resources.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “banana republic” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:03.558Z",
+   "target": "f25445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Four Asian Dragons or Four Little Dragons in Korean and Chinese) are the developed Asian economies of Hong Kong, Singapore, South Korea, and Taiwan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:03.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taiwan” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:22:13Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Industriestaat (englisch industrialized state; oder Industrieland, veraltet auch Staaten der Ersten Welt) ist ein Staat, dessen Wirtschaftsstruktur durch Technologie und Industrie beherrscht wird",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:22:15Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "One such criterion is the income per capita; countries with the high gross domestic product (GDP) per capita would thus be described as developed countries.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same article: 'industrialized country' is listed as a term linked to developed country."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:50.211Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Industriestaat (englisch industrialized state; oder Industrieland, veraltet auch Staaten der Ersten Welt) ist ein Staat, dessen Wirtschaftsstruktur durch Technologie und Industrie beherrscht wird",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:50.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:50.211Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "One such criterion is the income per capita; countries with the high gross domestic product (GDP) per capita would thus be described as developed countries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:50.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:50.211Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Industriestaat (englisch industrialized state; oder Industrieland, veraltet auch Staaten der Ersten Welt) ist ein Staat, dessen Wirtschaftsstruktur durch Technologie und Industrie beherrscht wird und die Industrieproduktion einen hohen Anteil am gesamten Bruttoinlandsprodukt (BIP) oder",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:50.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Industrieland” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:50.211Z",
+   "target": "f08372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Terms linked to the concept developed country include \"advanced country\", \"industrialized country\", \"more developed country\" (MDC), \"more economically developed country\" (MEDC), \"Global North country\", \"first world country\", and \"post-industrial country\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:50.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “industrialized country” is on the snapshot of s8"
+  }
+ ]
+}

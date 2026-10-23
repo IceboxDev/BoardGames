@@ -1,0 +1,289 @@
+{
+ "article": "a1179",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Seagram_murals",
+   "title": "Seagram murals – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:34.868Z",
+   "snapshot": "64d2582739b40c2563bc4d5903a8c2fe89537b6aa47d55b2ff14ce00ef9855bd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jackson_Pollock",
+   "title": "Jackson Pollock – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:35.953Z",
+   "snapshot": "05e56c8f643ba5f8aacc712fd3e4ea782f9bf67f61a8ed7051ba9b672dcee7b0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Woman_I",
+   "title": "Woman I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:37.428Z",
+   "snapshot": "fec5373afd7008699d99ccbaebe524d006666b2b6726f7adc4110ec53b0d38b6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vir_Heroicus_Sublimis",
+   "title": "Vir Heroicus Sublimis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:37.908Z",
+   "snapshot": "6789fc8458481478af6835211205fc2eb24491b60f86b6fd36cb05162d2fff86"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mountains_and_Sea",
+   "title": "Mountains and Sea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:38.858Z",
+   "snapshot": "e07e002a29aec5b6a8b526de074a07843384e6bb020d4fb5bf6e0c5356402610"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Yves_Klein",
+   "title": "Yves Klein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:36.161Z",
+   "snapshot": "a116b53529e51a497ed7b7bcd3beec53bc9817984751e265b98cc6c24e5b2222"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05891",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mark Rothko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jackson Pollock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Willem de Kooning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barnett Newman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helen Frankenthaler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ultramarinblau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-365"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:44.558Z",
+   "target": "f05891",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Seagram Murals are a series of large-scale paintings by abstract expressionist artist Mark Rothko.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Rothko” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:44.558Z",
+   "target": "f05892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Jackson Pollock (; January 28, 1912 – August 11, 1956) was an American painter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jackson Pollock” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:44.558Z",
+   "target": "f05893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Woman I is a 1950 abstract expressionist painting by American artist Willem de Kooning.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willem de Kooning” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:44.558Z",
+   "target": "f05894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vir Heroicus Sublimis is a 1951 painting by Barnett Newman, an American painter who was a key part of the abstract expressionist movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barnett Newman” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:44.558Z",
+   "target": "f05895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mountains and Sea  is a 1952 painting by American abstract expressionist painter Helen Frankenthaler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helen Frankenthaler” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:44.558Z",
+   "target": "f10739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1955 zog er nach Paris und begründete die Monochromien, monochrome Bilder, in denen er zunehmend ein monochromes Ultramarinblau einsetzte, dessen  „Erfindung“ er 1960 unter der Bezeichnung International Klein Blue (I.K.B.) durch Einsendung eines Soleau-Umschlags (französisch Enveloppe Solau) beim",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.558Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ultramarinblau” is on the snapshot of s6"
+  }
+ ]
+}

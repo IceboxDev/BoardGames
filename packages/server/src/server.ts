@@ -28,7 +28,8 @@ import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { adminPurchaseVoteRoutes } from "./auth-routes/admin-purchase-vote.ts";
-import { adminQuiztopiaReportRoutes } from "./auth-routes/admin-quiztopia-reports.ts";
+import { adminQuizDeskRoutes } from "./auth-routes/admin-quiz-desk.ts";
+import { adminQuizReportRoutes } from "./auth-routes/admin-quiz-reports.ts";
 import { adminSkillsRoutes } from "./auth-routes/admin-skills.ts";
 import { agentRoutes } from "./auth-routes/agent.ts";
 import { announcementRoutes } from "./auth-routes/announcements.ts";
@@ -44,6 +45,7 @@ import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
+import { chessDrillRoutes } from "./auth-routes/chess-drill.ts";
 import { chessFarmRoutes } from "./auth-routes/chess-farm.ts";
 import { chessTrainerRoutes } from "./auth-routes/chess-trainer.ts";
 import { collectionRoutes } from "./auth-routes/collection.ts";
@@ -57,7 +59,7 @@ import { profileRoutes } from "./auth-routes/profile.ts";
 import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
 import { purchaseVoteRoutes } from "./auth-routes/purchase-vote.ts";
 import { purchaseRoutes } from "./auth-routes/purchases.ts";
-import { quiztopiaRoutes } from "./auth-routes/quiztopia.ts";
+import { quizRoutes } from "./auth-routes/quiz.ts";
 import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
@@ -68,7 +70,7 @@ import { probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { errorResponse } from "./lib/error-response.ts";
 import { allowedOrigins } from "./lib/origins.ts";
-import { peekContentStore } from "./lib/quiztopia/content-store.ts";
+import { peekContentStore } from "./lib/quiz/content-store.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
 import { LATEST_VERSION } from "./migrations/registry.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
@@ -181,10 +183,10 @@ app.get("/api/health", async (c) => {
     commit: process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7) ?? "dev",
     schemaVersion: LATEST_VERSION,
     games: getRegisteredSlugs(),
-    // The Quiztopia content version this build loaded at boot (null before
-    // boot finishes), so a stale trainer client can be told apart from a
-    // stale deploy.
-    quiztopiaContent: peekContentStore()?.version ?? null,
+    // The quiz bank version this build loaded at boot (null before boot
+    // finishes), so a stale trainer client can be told apart from a stale
+    // deploy.
+    quizContent: peekContentStore()?.version ?? null,
     // Room games in progress — a deploy ends them (see scripts/check-live-games.mjs).
     liveGames: liveRoomGames(),
     db,
@@ -230,7 +232,8 @@ app.route("/api/admin/users", adminPasswordResetRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
 app.route("/api/admin", adminAnnouncementRoutes);
-app.route("/api/admin", adminQuiztopiaReportRoutes);
+app.route("/api/admin", adminQuizReportRoutes);
+app.route("/api/admin", adminQuizDeskRoutes);
 app.route("/api/admin", adminAiCallRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
@@ -347,21 +350,21 @@ app.use(
 );
 app.route("/api/dnd", dndCampaignRoutes);
 
-// Quiztopia trainer + wiki + search. A play-area feature, gated like the
+// Quiz trainer + wiki + search. A play-area feature, gated like the
 // games. A study session posts one small review every few seconds and the
 // offline queue flushes in bulk, so writes are metered generously; reads
 // (queue, overview, search) are unmetered.
 app.use(
-  "/api/quiztopia/*",
+  "/api/trainers/quiz/*",
   requireAuth,
   requireOnline,
   bodyLimit({
     maxSize: 256 * 1024,
     onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
   }),
-  rateLimit({ name: "quiztopia-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
+  rateLimit({ name: "quiz-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
 );
-app.route("/api/quiztopia", quiztopiaRoutes);
+app.route("/api/trainers/quiz", quizRoutes);
 
 // World Geography trainer (the first of the generic trainer decks): gated
 // and metered exactly like Quiztopia's trainer.
@@ -377,6 +380,7 @@ app.use(
 );
 app.route("/api/trainers/geography", geographyRoutes);
 
+const EXPLORER_PATH = "/api/trainers/chess/explorer";
 // Chess opening trainer: imported lichess games arrive in batches and opening
 // trees are saved whole (several MB for a big one), hence the larger body cap.
 app.use(
@@ -387,8 +391,21 @@ app.use(
     maxSize: 8 * 1024 * 1024,
     onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
   }),
-  rateLimit({ name: "chess-trainer-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
+  rateLimit({
+    name: "chess-trainer-write",
+    windowMs: 60_000,
+    max: 120,
+    skipSafeMethods: true,
+    skip: (c) => c.req.path.startsWith(EXPLORER_PATH),
+  }),
 );
+// The shared explorer cache: a build looks positions up one after another (a
+// few a second), and those lookups must never crowd out saving the tree.
+app.use(
+  `${EXPLORER_PATH}*`,
+  rateLimit({ name: "chess-explorer", windowMs: 60_000, max: 2_000, skipSafeMethods: true }),
+);
+app.route("/api/trainers/chess/drill", chessDrillRoutes);
 app.route("/api/trainers/chess", chessTrainerRoutes);
 
 // The chess analysis farm (a worker on ws21, bearer token, no cookie): claims

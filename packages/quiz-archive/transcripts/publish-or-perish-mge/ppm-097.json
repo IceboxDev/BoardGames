@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-097",
+ "image": "IMG20261022154307.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Engineering and Inventions",
+   "cardText": "[Engineering and Inventions] If a commercial airplane suddenly runs out of fuel during a flight, what will most likely happen?\nA. It will lose directional thrust and follow an erratic flight path\nB. It will glide\nC. It will slow down and then plummet\nAnswer: B. Modern airplanes are designed to glide without engine power. Pilots are trained to handle such emergencies by finding the best possible landing site and safely gliding the aircraft to the ground. Most commercial aircraft today have a glide ratio of around 15:1, meaning they can travel 15 miles horizontally for every mile they descend.",
+   "de": "Was tut ein Verkehrsflugzeug, wenn ihm während des Flugs plötzlich der Treibstoff ausgeht, wie 1983 der Boeing 767 „Gimli Glider“?",
+   "en": "What does a commercial airliner do if it suddenly runs out of fuel in flight, as the \"Gimli Glider\" Boeing 767 did in 1983?",
+   "reworked": true,
+   "answerDe": "Es gleitet",
+   "answerEn": "It glides",
+   "timeline": {
+    "kind": "event",
+    "start": "1983-07-23",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Air Canada Flight 143, the \"Gimli Glider\", runs out of fuel and glides to an emergency landing at Gimli, Manitoba",
+    "labelDe": "Air-Canada-Flug 143, der „Gimli Glider“, hat keinen Treibstoff mehr und gleitet zur Notlandung in Gimli, Manitoba"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gimli_Glider",
+    "title": "Gimli Glider",
+    "lang": "en"
+   },
+   "notes": "The Gimli Glider glided from 41,000 ft to a safe landing. The card's 15:1 glide ratio is a rough typical figure, not checked against a source.",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 2,
+   "discipline": "History",
+   "cardText": "[History] What ancient civilization is known for building the Chichen Itza?\nA. Aztec B. Maya C. Inca\nAnswer: B",
+   "de": "Welche alte Zivilisation erbaute Chichén Itzá auf der Halbinsel Yucatán?",
+   "en": "Which ancient civilization built Chichen Itza on the Yucatán Peninsula?",
+   "reworked": true,
+   "answerDe": "Die Maya",
+   "answerEn": "The Maya",
+   "timeline": {
+    "kind": "founding",
+    "start": "0750",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Chichen Itza, a city of the Maya in Yucatán, is founded (c. 750 AD)",
+    "labelDe": "Chichén Itzá, eine Stadt der Maya in Yucatán, wird gegründet (um 750 n. Chr.)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Chichen_Itza",
+    "title": "Chichen Itza",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "ancient"
+  }
+ ]
+}

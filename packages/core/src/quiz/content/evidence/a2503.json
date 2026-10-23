@@ -1,0 +1,372 @@
+{
+ "article": "a2503",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Geckos",
+   "title": "Geckos",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:54.791Z",
+   "snapshot": "cf02f65014f61adcba0e9c11436ef5afe0922fb915a279d8758737aaf0dcf8c3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Cham%C3%A4leons",
+   "title": "Chamäleons",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:55.919Z",
+   "snapshot": "ed6ac3ccf3dbddba95ff02dd7d7b88bf1e796a23c562a8dc7068c439aacac441"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Common_basilisk",
+   "title": "Common basilisk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:58.638Z",
+   "snapshot": "c4e8ed6da0580558c83356df8dd96bc323b747894e03a211d88735fda2d80bc4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Helmbasilisk",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:56.837Z",
+   "snapshot": "b22c34a54f4fb3da4a6e3b5b5199cf6958c80e4ae8e73db01a227308dd88cd09"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Autotomy",
+   "title": "Autotomy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:59.719Z",
+   "snapshot": "d5bdb6f3ce0329c7831b92614d855e51c1621f1d3fe4175a1b87f3d995785e34"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Horned_lizard",
+   "title": "Horned lizard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:00.639Z",
+   "snapshot": "11c874dd4af224294c884e299b98878d954fe50ec8fc82e4462ccc1ad02fec22"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Gecko_feet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:01.732Z",
+   "snapshot": "83546e56fe7e467fee18d7c62ee7d237460446457813d685f795f9acf7fd99ba"
+  },
+  "s8": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:10864324%20AND%20SRC:MED&resultType=core&format=json",
+   "title": "Adhesive force of a single gecko foot-hair (Nature, 2000)",
+   "publisher": "Europe PMC (abstract)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:18:29Z"
+  },
+  "s9": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:12776092%20AND%20SRC:MED&resultType=core&format=json",
+   "title": "Microfabricated adhesive mimicking gecko foot-hair (Nature Materials, 2003)",
+   "publisher": "Europe PMC (abstract)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:18:33Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kommunikation mit Artgenossen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-383"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "common basilisk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helmbasilisk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "autotomy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "horned lizards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 64; transcript ppm-084"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hafthärchen",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "adhesive hairs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-236/5, u08: The statement (suction cups) is false. Geckos stick by van der Waals forces of millions of setae that split into spatulae (Autumn et al. 2002)."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:30.575Z",
+   "target": "f13282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Farbwechsel dient bei Chamäleons nicht in erster Linie der Tarnung, sondern vor allem zur Kommunikation mit Artgenossen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kommunikation mit Artgenossen” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:30.575Z",
+   "target": "f13283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The common basilisk (Basiliscus basiliscus) is a species of lizard in the family Corytophanidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “common basilisk” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:30.575Z",
+   "target": "f13283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Helmbasilisk (Basiliscus basiliscus) ist eine Art der Basilisken in der Familie der Corytophanidae.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmbasilisk” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:30.575Z",
+   "target": "f13284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Autotomy ('self-amputation', from the Ancient Greek auto-, \"self-\" and tome, \"severing\") is the behaviour whereby an animal sheds or discards an appendage, usually as a self-preservation mechanism to elude a predator's grasp or to distract the predator and thereby allow escape.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “autotomy” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:30.575Z",
+   "target": "f13285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phrynosoma, whose members are known as the horned lizards, horny toads, or horntoads, is a genus of North American lizards and the type genus of the family Phrynosomatidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “horned lizards” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:30.575Z",
+   "target": "f25729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is possible that their diet of large quantities of venomous harvester ants could be a factor; however, the origin and structure of the chemicals responsible are still unknown.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.575Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ants” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:18:29Z",
+   "target": "f13281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Microscopy has shown that a gecko's foot has nearly five hundred thousand keratinous hairs or setae.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:18:33Z",
+   "target": "f13281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "which relies on submicrometre keratin hairs covering the soles of geckos",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

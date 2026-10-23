@@ -1,0 +1,274 @@
+{
+ "article": "a2488",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Starlight_Express_Theater",
+   "title": "Starlight Express Theater",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:06.801Z",
+   "snapshot": "7c266178c522f35b833636465f7bc5f1e9831ba07a7e6fed5409e5b4b34e1ad0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Starlight_Express",
+   "title": "Starlight Express",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:10.934Z",
+   "snapshot": "c78bacac71ca19f557fb2143fc65eed45905f2b2447e4f17c7cded8d97e7d6cd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hinterm_Horizont_(Musical)",
+   "title": "Hinterm Horizont (Musical)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:07.763Z",
+   "snapshot": "e3d5ade87fc4bb4cc7d84751b6033791fed1dd6d093cb10f4728659cb1ee45f8"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Starlight_Express",
+   "title": "Starlight Express",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:08.859Z",
+   "snapshot": "46f3bacac06a93eb38a87c4aa6e2cb3bec49a59bcc0a11f42ccb8eecc3c6e891"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Arlene_Phillips",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:11.610Z",
+   "snapshot": "e303db748fb82e3dcde295bf17f020c978d5af2887df03b309d8fb657a77b577"
+  },
+  "s6": {
+   "url": "https://uni-freiburg.de/musicallexikon/starlight-express/",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:09.278Z",
+   "snapshot": "21edbd47fc127f6eb31fd9f41d816ee8a6df5382621bc5cbd2bf335e31a57d66"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Starlight Express",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-329"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hinterm Horizont",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-060"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rollschuhe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Brussig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arlene Phillips",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Arlene Phillips",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-006/4, u05: Arlene Phillips created the original roller-skating choreography of Starlight Express (London 1984) and is credited for Bochum; Pina Bausch had nothing to do with it."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:28.346Z",
+   "target": "f13187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arlene Phillips",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:28.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:28.346Z",
+   "target": "f13186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Starlight Express Theater in Bochum ist eine 1988 eröffnete Spielstätte, in der das Musical Starlight Express von Andrew Lloyd Webber und Richard Stilgoe aufgeführt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Starlight Express” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:28.346Z",
+   "target": "f13187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The choreographer Arlene Phillips was brought on board along with the designer John Napier, who suggested staging the show on roller skates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arlene Phillips” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:28.346Z",
+   "target": "f13188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hinterm Horizont ist ein Musical, das anhand von Liedern des Sängers Udo Lindenberg eine Liebesgeschichte erzählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hinterm Horizont” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:28.346Z",
+   "target": "f13189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im Oktober 2006 bekam „Greaseball“ brennende Rollschuhe und die E-Lok „Electra“ Funkenfontänen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rollschuhe” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:28.346Z",
+   "target": "f13191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Buch wurde von Thomas Brussig (Sonnenallee) in enger Zusammenarbeit mit Udo Lindenberg und Ulrich Waller geschrieben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:28.346Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Brussig” is on the snapshot of s3"
+  }
+ ]
+}

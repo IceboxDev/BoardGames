@@ -1,0 +1,289 @@
+{
+ "article": "a1307",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chondrichthyes",
+   "title": "Chondrichthyes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:44.125Z",
+   "snapshot": "3bb96e7ed53feff1fd62070a8f228a422bf1b49c83db8297c1a86b9321bfa850"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Amphibian",
+   "title": "Amphibian – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:45.379Z",
+   "snapshot": "c574aad1fdc901d9792e680106449a8d8c47faa7ab110ed2026d7546340cd82b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arachnid",
+   "title": "Arachnid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:46.237Z",
+   "snapshot": "9aaa005357e4b52989bd952a44f07b9a2385d1cbebcbd09c0e580f8adb449d84"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cephalopod",
+   "title": "Cephalopod – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:47.347Z",
+   "snapshot": "93c8ac3dff3d3a39027da0699ef097e29158c261ca1395ae5248131e95e79c49"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tierl%C3%A4use",
+   "title": "Tierläuse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:44.324Z",
+   "snapshot": "0829936573efe74bc84e43cedb8401bbbf8dfcadfc07ba30a116e2244656e9d2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sponge",
+   "title": "Sponge",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:48.328Z",
+   "snapshot": "7ed1feeee905a16906be82eba753d8c3e5b1104a900cc6a4a452f81751915d36"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cartilaginous fish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "amphibians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "arachnids",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cephalopods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Insekten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-127"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Animals",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 57; transcript pp-058"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:03.931Z",
+   "target": "f06531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chondrichthyes (; from Ancient Greek  χόνδρος (khóndros) 'cartilage' and  ἰχθύς (ikhthús) 'fish') is a class of jawed fish that contains the cartilaginous fish or chondrichthyans, which all have skeletons primarily composed of cartilage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cartilaginous fish” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:03.931Z",
+   "target": "f06533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Amphibians are ectothermic, anamniotic, four-limbed vertebrate animals that constitute the class Amphibia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “amphibians” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:03.931Z",
+   "target": "f06534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arachnids are arthropods in the class Arachnida () of the subphylum Chelicerata.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “arachnids” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:03.931Z",
+   "target": "f06535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fishers sometimes call cephalopods \"inkfish\", referring to their common ability to squirt ink.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cephalopods” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:03.931Z",
+   "target": "f13223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Tierläuse (Phthiraptera), auch bekannt als Lauskerfe oder Läuslinge, sind eine parasitisch lebende Insekten-Ordnung innerhalb der Neuflügler (Neoptera).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Insekten” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:03.931Z",
+   "target": "f25330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sponges may be the sister group to all other animals, although the evidence for this relationship remains inconclusive, and different studies may recover different placements between sponges and other animal clades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Animals” is on the snapshot of s6"
+  }
+ ]
+}

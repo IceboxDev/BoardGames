@@ -1,0 +1,366 @@
+{
+ "article": "a0525",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Four_temperaments",
+   "title": "Four temperaments – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:22.061Z",
+   "snapshot": "79073450c49c5c8e60b656905baee673862ba47f74f5557ecc7ca014cca23fe7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Humorism",
+   "title": "Humorism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:23.128Z",
+   "snapshot": "ce4a3e3ffa25418bd63b68b2da4a1744ef009fbaf00223ceb16f34e8247775e8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Classical_element",
+   "title": "Classical element – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:24.115Z",
+   "snapshot": "17fdc26b08b47f712a2d4431d078f5049d07faa80d30b81bf37eaa916fb6d5bc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aristotle",
+   "title": "Aristotle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:41.977Z",
+   "snapshot": "84b96866df751bc7bcf8c0df2411a04dd3c0f8506f1e2857a2330519329d3f9d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Eysenck",
+   "title": "Hans Eysenck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:25.189Z",
+   "snapshot": "f2ae24d8881df345ba7baa8cb78cc5ee6012ab70befc2375857fbe99040d370e"
+  },
+  "s6": {
+   "url": "https://flexikon.doccheck.com/de/Humoralpathologie",
+   "title": "Humoralpathologie – DocCheck Flexikon",
+   "publisher": "DocCheck Flexikon",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:47.280Z",
+   "snapshot": "d0bda4223acf948917e2d7da61f8dcbed1192b4f3e034cb9a389789c78817d67"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02621",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "phlegmatic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "phlegm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02623",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "air",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "moist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02625",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "extraversion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:02.089Z",
+   "target": "f02621",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The four temperament theory is a proto-psychological theory which suggests that there are four fundamental personality types: sanguine, choleric, melancholic, and phlegmatic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:02.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “phlegmatic” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:02.089Z",
+   "target": "f02622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In contrast to Alcmaeon, Hippocrates suggested that humors are the vital bodily fluids: blood, phlegm, yellow bile, and black bile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:02.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “phlegm” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:02.089Z",
+   "target": "f02623",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The classical elements typically refer to earth, water, fire, air, and (later) aether which were proposed to explain the nature and complexity of all matter in terms of simpler substances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:02.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “air” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:02.089Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "moist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“moist”, “feucht”, “влажное”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:02.089Z",
+   "target": "f02625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eysenck suggests that the latter is a result of a person's introversion or extraversion respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:02.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “extraversion” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:53Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Primärqualitäten: heiß versus kalt - trocken versus feucht",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:58Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Galen identified four temperaments in which one of the qualities (warm, cold, moist, or dry) predominated",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:25.505Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Primärqualitäten: heiß versus kalt - trocken versus feucht",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:25.505Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Galen identified four temperaments in which one of the qualities (warm, cold, moist, or dry) predominated",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:25.505Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Galen identified four temperaments in which one of the qualities (warm, cold, moist, or dry) predominated, and four more in which a combination of two (warm and moist, warm and dry, cold and dry, or cold and moist) dominated.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “moist” is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:25.505Z",
+   "target": "f02624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Primärqualitäten: heiß versus kalt - trocken versus feucht",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:25.505Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “feucht” is on the snapshot of s6"
+  }
+ ]
+}

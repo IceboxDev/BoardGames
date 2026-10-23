@@ -1,0 +1,249 @@
+{
+ "article": "a1861",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fidelio",
+   "title": "Fidelio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:38.445Z",
+   "snapshot": "9b4d68e1986402f518b1905e330d20dd9783f56617775e718080df85bb2356a9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pell%C3%A9as_et_M%C3%A9lisande_(opera)",
+   "title": "Pelléas et Mélisande (opera) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:39.717Z",
+   "snapshot": "c3c89366be0e3963fbeec59cdcb7606a85f6ec42278167c6f38b09021b29b2ca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bluebeard's_Castle",
+   "title": "Bluebeard's Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:40.632Z",
+   "snapshot": "0afe304b68c9f3940dc48f853ad038a10377fab7f6dc0cb5bfce89e1c5b61243"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Genoveva",
+   "title": "Genoveva – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:41.552Z",
+   "snapshot": "afd14f579d730a04228715ba6cebdf7d589cdf57c56b62c6a2fcddb9a4fb36ba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ariane_et_Barbe-bleue",
+   "title": "Ariane et Barbe-bleue – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:42.482Z",
+   "snapshot": "e83f3c4014be4d6e8ea23c8d2f52cebd5ba6bb4d25d58f6c1e72dca4f487d139"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bluebeard%27s_Castle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:43.601Z",
+   "snapshot": "0afe304b68c9f3940dc48f853ad038a10377fab7f6dc0cb5bfce89e1c5b61243"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fidelio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09302",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pelléas et Mélisande",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bluebeard's Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Genoveva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ariane et Barbe-bleue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:35.769Z",
+   "target": "f09301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fidelio (; German: [fiˈdeːlio]), originally titled Leonore, oder Der Triumph der ehelichen Liebe (Leonore, or The Triumph of Marital Love), Op.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fidelio” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:35.769Z",
+   "target": "f09302",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pelléas et Mélisande (Pelléas and Mélisande) is an opera in five acts with music by Claude Debussy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pelléas et Mélisande” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:35.769Z",
+   "target": "f09303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Duke Bluebeard's Castle (Hungarian: A kékszakállú herceg vára, literally The Blue-Bearded Duke's Castle) is a one-act Symbolist opera by Béla Bartók to a Hungarian libretto by poet Béla Balázs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bluebeard's Castle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:35.769Z",
+   "target": "f09304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Genoveva is based on the story of Genevieve of Brabant, a medieval legend set in the 8th century that is reputedly based on the 13th century life of Marie of Brabant, wife of Louis II, Duke of Bavaria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Genoveva” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:35.769Z",
+   "target": "f09305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ariane et Barbe-bleue (French pronunciation: [aʁjan e baʁb blø], Ariadne and Bluebeard) is an opera in three acts by Paul Dukas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ariane et Barbe-bleue” is on the snapshot of s5"
+  }
+ ]
+}

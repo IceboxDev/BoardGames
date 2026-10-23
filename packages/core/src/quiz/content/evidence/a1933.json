@@ -1,0 +1,279 @@
+{
+ "article": "a1933",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/R.E.M.",
+   "title": "R.E.M. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:26.708Z",
+   "snapshot": "a59ddbd86bc4dacc2e823a695281ecf344945f48ae0e3c0307f20e98d3a33778"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/UB40",
+   "title": "UB40 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:27.679Z",
+   "snapshot": "bb5dfd2322af1d31f7dde96efb3c12a558e355cebb10500498f4b36750332f6a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Electric_Light_Orchestra",
+   "title": "Electric Light Orchestra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:28.704Z",
+   "snapshot": "33a1d775b0d833b8be2a921588f55627a6cb620516badba62021cc93cfeec6db"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Orchestral_Manoeuvres_in_the_Dark",
+   "title": "Orchestral Manoeuvres in the Dark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:29.718Z",
+   "snapshot": "57ec4d68faa6948fb1e4fb598bbdbef2886292613f14f40ceedc740273ec1847"
+  },
+  "s5": {
+   "url": "https://ub40.global/history/",
+   "title": "History – UB40 official website",
+   "publisher": "UB40",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:28.731Z",
+   "snapshot": "52837e37ea1107c7f52470a892bf81f72464e39917ec0afa632b0b8544deaa2d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rapid Eye Movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unemployment Benefit Form 40",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Electric Light Orchestra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Orchestral Manoeuvres in the Dark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:48.539Z",
+   "target": "f09661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is well known as an abbreviation for rapid eye movement, the dream stage of sleep; however, sleep researcher Rafael Pelayo reports that when his colleague William C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rapid Eye Movement” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:48.539Z",
+   "target": "f09663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Unemployment Benefit Form 40",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Unemployment Benefit Form 40”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:48.539Z",
+   "target": "f09664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Electric Light Orchestra (ELO) are an English rock band formed in Birmingham in 1970 by multi-instrumentalists Jeff Lynne and Roy Wood and drummer Bev Bevan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Electric Light Orchestra” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:48.539Z",
+   "target": "f09665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Orchestral Manoeuvres in the Dark (OMD) are an English electronic band formed in Meols, Merseyside in 1978 by Andy McCluskey (vocals, bass guitar) and Paul Humphreys (keyboards, vocals).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:48.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orchestral Manoeuvres in the Dark” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:12:17Z",
+   "target": "f09663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The designation UB40 stood for Unemployment Benefit, Form 40.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:12:22Z",
+   "target": "f09663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The group had nailed their colours to the mast by naming themselves after an unemployment benefit form.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:57:39.040Z",
+   "target": "f09663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The designation UB40 stood for Unemployment Benefit, Form 40.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:39.040Z",
+   "target": "f09663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The group had nailed their colours to the mast by naming themselves after an unemployment benefit form.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:39.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  }
+ ]
+}

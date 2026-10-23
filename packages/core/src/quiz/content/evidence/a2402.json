@@ -1,0 +1,328 @@
+{
+ "article": "a2402",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gipsy_House",
+   "title": "Gipsy House – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:04.281Z",
+   "snapshot": "3e2659c84cfc025cad1540235d9c86b3896a89873eaa27d9d1066817b10cb3c7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/You_Only_Live_Twice_(film)",
+   "title": "You Only Live Twice (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:37.850Z",
+   "snapshot": "759b6a6512ddf2365811771fbfa53aebf9ee6bb1d2c5380d8d6dc0d2056caef3"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/James_Bond_007_%E2%80%93_Man_lebt_nur_zweimal",
+   "title": "James Bond 007 – Man lebt nur zweimal",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:03.126Z",
+   "snapshot": "d3fff96f3a94cbd73c114268ad0f30b8b14a31e084a0c521acf44e30a3bed2cc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/James_und_der_Riesenpfirsich_(Roman)",
+   "title": "James und der Riesenpfirsich (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:02.487Z",
+   "snapshot": "bbc5a621cdd467297a7f7e279ae109badd26fe6266742bd961a0a03a3e1e3072"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Roald_Dahl",
+   "title": "Roald Dahl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:05.699Z",
+   "snapshot": "40d2f090a95ad499e75f8e7eb33cad6419f29d0dc399724eb7a41ad11e1c4097"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Charlie_and_the_Chocolate_Factory",
+   "title": "Charlie and the Chocolate Factory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:06.408Z",
+   "snapshot": "0871588971226355c02b273660820b0d385943582f18db033216fbb5c0fefaf6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Roald Dahl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Roald Dahl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Roald Dahl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-193"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James und der Riesenpfirsich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-092"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Royal Air Force",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Great Missenden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willy Wonka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f12577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was the home of the writer Roald Dahl and his family for several decades.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roald Dahl” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f25009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The film's screenplay was written by Roald Dahl, and was loosely based on Ian Fleming's 1964 novel You Only Live Twice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roald Dahl” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f25009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das von Roald Dahl verfasste Drehbuch weicht erstmals in der Reihe erheblich von seiner Vorlage, Ian Flemings gleichnamigem Roman, ab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roald Dahl” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f12578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James und der Riesenpfirsich ist ein Kinderbuch von Roald Dahl, das 1961 erstmals erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James und der Riesenpfirsich” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f12579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He served in the Royal Air Force (RAF) during the Second World War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Royal Air Force” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f12580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Felicity gave up her job and moved into Gipsy House, Great Missenden, Buckinghamshire, which had been Dahl's home since 1954.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Missenden” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:14.594Z",
+   "target": "f12581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It follows young Charlie Bucket inside the chocolate factory of an eccentric chocolatier named Willy Wonka.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:14.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Wonka” is on the snapshot of s6"
+  }
+ ]
+}

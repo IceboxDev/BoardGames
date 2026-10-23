@@ -1,0 +1,308 @@
+{
+ "article": "a0996",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+   "title": "Alan Turing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:14.400Z",
+   "snapshot": "a5b57b2051ea6bbba5a5417f1371c01b6a7630915a535c98febff8a94d9b8ca0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Babbage",
+   "title": "Charles Babbage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:15.200Z",
+   "snapshot": "13af1f15e0871440be7612c2dc79c6d0b7df3b435bbe60ada0f61698adebef83"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/John_von_Neumann",
+   "title": "John von Neumann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:16.362Z",
+   "snapshot": "365ff12e9eb3f81a76a90b83dc3ccc67612303a55cf068f6e6e613292b29f35f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+   "title": "Ada Lovelace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:17.154Z",
+   "snapshot": "734bda64b1b16034c268de889c4b622769ab219c3c089ace02c6290ec20f4a7e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Difference_engine",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:18.113Z",
+   "snapshot": "eaecdf73b087c46ea03afad83362516e3bd2d2eebc421ef52e6d111e295439ca"
+  },
+  "s6": {
+   "url": "https://www.computerhistory.org/babbage/adalovelace/",
+   "title": "Ada Lovelace – The Babbage Engine",
+   "publisher": "Computer History Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:08.668Z",
+   "snapshot": "2f9758095c14aec0037ba4606ad93fb09e3cea7826d95eb2ba212bb252fdeb60"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alan Turing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Babbage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John von Neumann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ada Lovelace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:17.160Z",
+   "target": "f04976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Alan Turing law refers to part of a 2017 UK law that retroactively pardoned men cautioned or convicted under the criminalisation of homosexual acts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Turing” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:17.160Z",
+   "target": "f04978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Babbage (; 26 December 1791 – 18 October 1871) was an English polymath.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Babbage” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:17.160Z",
+   "target": "f04979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John von Neumann ( von NOY-mən; Hungarian: Neumann János Lajos; December 28, 1903 – February 8, 1957) was a Hungarian and American mathematician, physicist, computer scientist and engineer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John von Neumann” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:17.160Z",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Augusta Ada King, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852), also known as Ada Lovelace, was an English mathematician and writer chiefly known for work on Charles Babbage's proposed mechanical general-purpose computer, the analytical engine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ada Lovelace” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:48:38Z",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Notes included the first published description of a stepwise sequence of operations for solving certain mathematical problems and Ada is often referred to as 'the first programmer'.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "CHM adds that biographers debate the extent and originality of her contribution; the wording says 'is regarded as', which holds."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:48:44Z",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lovelace is often considered the first computer programmer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:54:48.355Z",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Notes included the first published description of a stepwise sequence of operations for solving certain mathematical problems and Ada is often referred to as 'the first programmer'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:48.355Z",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lovelace is often considered the first computer programmer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:48.355Z",
+   "target": "f04980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ada Lovelace | Babbage Engine | Computer History Museum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:48.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ada Lovelace” is on the snapshot of s6"
+  }
+ ]
+}

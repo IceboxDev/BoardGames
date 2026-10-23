@@ -1,0 +1,242 @@
+{
+ "article": "a0688",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mark_Hamill",
+   "title": "Mark Hamill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:17.250Z",
+   "snapshot": "46b7fd82c6cab3e84ddbff6b471caf104a2eff890a8ce4770e5d110e49e29e17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carrie_Fisher",
+   "title": "Carrie Fisher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:18.256Z",
+   "snapshot": "3c09c973c558ba279d8deccf6f6257d0f996f65a6fe3d30971b725cb151df7b0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Mayhew",
+   "title": "Peter Mayhew – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:19.263Z",
+   "snapshot": "c6dc32082b6cdd02aae0f7d0c4bb2896070f37276350248b3e4beef99c214bd8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/David_Prowse",
+   "title": "David Prowse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:20.235Z",
+   "snapshot": "cce3ca20671be2ee04e52fdc55b0e048de1e347b802944c4b5e9cdc1ffe6fcea"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Harrison_Ford",
+   "title": "Harrison Ford",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:17.983Z",
+   "snapshot": "5728b1f9b3b0e4363940fa7cd69b5ae23a5597f33932df82831318f4998a9b01"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Luke Skywalker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Princess Leia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chewbacca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Darth Vader",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harrison Ford",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-306"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:26.945Z",
+   "target": "f03436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He rose to fame as Luke Skywalker in the original Star Wars trilogy (1977–1983), leading to further lead parts in films like Corvette Summer (1978) and Samuel Fuller's The Big Red One (1980).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.945Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luke Skywalker” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:26.945Z",
+   "target": "f03437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She starred as Princess Leia in the original Star Wars films (1977–1983) and reprised the role in The Force Awakens (2015), The Last Jedi (2017)—a posthumous release that was dedicated to her—and The Rise of Skywalker (2019), the latter using unreleased footage from The Force Awakens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.945Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Princess Leia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.945Z",
+   "target": "f03439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He was best known for portraying Chewbacca in the Star Wars film series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.945Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chewbacca” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.945Z",
+   "target": "f03440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He portrayed Darth Vader in the original Star Wars trilogy and a manservant in Stanley Kubrick's 1971 film A Clockwork Orange.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.945Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darth Vader” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.945Z",
+   "target": "f11285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harrison Ford wurde 1942 in Chicago geboren und wuchs dort auch auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.945Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harrison Ford” is on the snapshot of s5"
+  }
+ ]
+}

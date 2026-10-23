@@ -1,0 +1,242 @@
+{
+ "article": "a0805",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Exile_on_Main_St.",
+   "title": "Exile on Main St. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:28.339Z",
+   "snapshot": "1f5fc64faeee4081478860ff0951f24c368cec73946f3a75b31ec6ee51a0aee9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sticky_Fingers",
+   "title": "Sticky Fingers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:29.334Z",
+   "snapshot": "20aa2aa207037853ca9991a8c75011785b1e52701dd4a31d7c80a6d49b114ad5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Let_It_Bleed",
+   "title": "Let It Bleed – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:30.313Z",
+   "snapshot": "c76ba5c7de26762cb31d17e3871b634a39e3d772682562d5794574794409aab8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Beggars_Banquet",
+   "title": "Beggars Banquet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:31.428Z",
+   "snapshot": "ef2de094259237184865736aba1faa0af53039983948dc53b7410a59ccac2f99"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mick_Jagger",
+   "title": "Mick Jagger",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:32.571Z",
+   "snapshot": "217fcdff95e6fa9c19c7bdd68cbda533883ef403fe8e6796b67098029fbfd1e8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Exile on Main St.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sticky Fingers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Let It Bleed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Beggars Banquet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mick Jagger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-338"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:47.689Z",
+   "target": "f04021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Exile on Main St. is the tenth studio album by the English rock band the Rolling Stones, released on 12 May 1972, by Rolling Stones Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exile on Main St.” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:47.689Z",
+   "target": "f04022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sticky Fingers is the ninth studio album by the English rock band the Rolling Stones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sticky Fingers” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:47.689Z",
+   "target": "f04023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Let It Bleed is the eighth studio album by the English rock band the Rolling Stones, released on 28 November 1969 by London Records in the United States and on 5 December 1969 by Decca Records in the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Let It Bleed” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:47.689Z",
+   "target": "f04024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Beggars Banquet is the seventh studio album by the English rock band the Rolling Stones, released on 6 December 1968 by Decca Records in the United Kingdom and London Records in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beggars Banquet” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:47.689Z",
+   "target": "f13130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The same year he passed the eleven-plus examination and attended Dartford Grammar School, which now has the Mick Jagger Centre performing arts venue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.689Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mick Jagger” is on the snapshot of s5"
+  }
+ ]
+}

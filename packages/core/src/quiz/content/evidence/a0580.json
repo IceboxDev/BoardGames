@@ -1,0 +1,242 @@
+{
+ "article": "a0580",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Phoenix_(Fernsehsender)",
+   "title": "Phoenix (Fernsehsender) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:05.961Z",
+   "snapshot": "064800479ad458b7b9e1b787954b9252021b0c65ba30808da5d7682b756f676b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/KiKA",
+   "title": "KiKA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:06.834Z",
+   "snapshot": "31546d2e33e146447221cf88f223235b408bacd436df54eba5d84a044861da8b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Arte",
+   "title": "Arte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:08.694Z",
+   "snapshot": "9ea8b4d57a3e37565701eac8b265ddf445a5f9b76397299070f09d579cfb3d40"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/3sat",
+   "title": "3sat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:08.590Z",
+   "snapshot": "5e8c8e29d2ad1fd3281014b91e42867b411ab08160e4160ebba9502be5d4341e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/ARD",
+   "title": "ARD",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:11.431Z",
+   "snapshot": "c000d12efc53dfa1c5b1b0cc69625c4625da58bbbb7738fefb015f69b7f84fff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Phoenix",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "KiKA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-391"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "arte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "3sat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-243"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:09.868Z",
+   "target": "f02896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Phoenix (eigene Schreibweise phoenıx) ist ein deutscher öffentlich-rechtlicher Fernsehsender, der als Gemeinschaftseinrichtung von ARD und ZDF betrieben wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phoenix” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:09.868Z",
+   "target": "f02897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kika [ˈkiːkaː] (Eigenschreibweise KiKA, zuvor KI.KA) ist ein seit 1997 bestehendes öffentlich-rechtliches Kindermedienangebot von ARD und ZDF, das ein werbefreies Programm für Kinder und Jugendliche sendet und online bereitstellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “KiKA” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:09.868Z",
+   "target": "f02898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arte (Eigenschreibweise ARTE oder arte; Abkürzung für französisch Association Relative à la Télévision Européenne „Zusammenschluss bezüglich des europäischen Fernsehens“) ist ein öffentlich-rechtlicher Rundfunkveranstalter mit Hauptsitz im französischen Straßburg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “arte” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:09.868Z",
+   "target": "f02899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "3sat ist ein werbefreies deutschsprachiges öffentlich-rechtliches Fernsehprogramm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “3sat” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:09.868Z",
+   "target": "f11739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die ARD (Abkürzung für Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland) ist ein Rundfunkverbund, der aus den Landesrundfunkanstalten und der Deutschen Welle besteht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.868Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland” is on the snapshot of s5"
+  }
+ ]
+}

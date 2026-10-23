@@ -1,0 +1,550 @@
+{
+ "article": "a0948",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/CMYK_color_model",
+   "title": "CMYK color model – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:58.938Z",
+   "snapshot": "f2a160129c16d8477feeb95109a0b7be23fa240dbc1a08dda3406e6eeb62a0a3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/RGB_color_model",
+   "title": "RGB color model – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:00.053Z",
+   "snapshot": "83ada76b61d5fd70061d0a651f84b783e3d9ace8fcc61fabffeecf7f8c0645e7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/HP_LaserJet",
+   "title": "HP LaserJet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:01.058Z",
+   "snapshot": "4fb5169cc9706d83482fa093d67ba6c2e153405adea0cb0bf01a1175f0427e93"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Joint_Photographic_Experts_Group",
+   "title": "Joint Photographic Experts Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:02.009Z",
+   "snapshot": "a69f7fe82696964014a8dcee1af614c5958dfaae8b87d2134dbad735b16f1881"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/PNG",
+   "title": "PNG – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:03.035Z",
+   "snapshot": "a5f3e0126d6b52a8eab76d0d2c4b01c2c5bb6728f4649e80719c392ae475a510"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jacob_Christoph_Le_Blon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:03.950Z",
+   "snapshot": "ca10b15f68c59fab9dde59c85b348e31a7b4895d503ffcc885e98f2601623ffc"
+  },
+  "s7": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/cmyk",
+   "title": "CMYK – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:47.255Z",
+   "snapshot": "ff11cbfdf6efc60abfc430af1c546c08b78191019401c78e14bc21d48569706c"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/rgb",
+   "title": "RGB – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:48.198Z",
+   "snapshot": "ae5aaaa2fe8e2422367e48244b47db67fe4a94ae5753734168a46c0afee755e5"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/dpi",
+   "title": "dpi – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:49.143Z",
+   "snapshot": "c16b0826167be957d5fabd0e603abc72fd653771d862c4aacf339b9bfe2eb397"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Dots_per_inch",
+   "title": "Dots per inch – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:48.476Z",
+   "snapshot": "6bc6844e8c18b7ee53318593df6487471eef40cb306012a3a0e34e2c0b908529"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cyan, Magenta and Yellow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Red, Green and Blue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dots per inch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joint Photographic Experts Group",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Portable Network Graphics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:09.718Z",
+   "target": "f04736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cyan, Magenta and Yellow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cyan, Magenta and Yellow”, “Cyan, Magenta und Yellow”, “Cyan, Magenta и Yellow”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:09.718Z",
+   "target": "f04737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Red, Green and Blue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Red, Green and Blue”, “Rot, Grün und Blau”, “красный, зелёный и синий”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:09.718Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dots per inch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“dots per inch”, “Dots per Inch”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:09.718Z",
+   "target": "f04739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Joint Photographic Experts Group (JPEG) is an international standards committee that created and maintains widely used digital image compression formats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.718Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joint Photographic Experts Group” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:09.718Z",
+   "target": "f04740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Portable Network Graphics (PNG, officially pronounced  PING, colloquially pronounced  PEE-en-JEE) is a raster-graphics file format that supports lossless data compression.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.718Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Portable Network Graphics” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:47:45Z",
+   "target": "f04736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for cyan, magenta, yellow, black: the system of colour printing that uses four colours of ink",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:47:48Z",
+   "target": "f04736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The abbreviation CMYK refers to the four color components used in printing: cyan, magenta, yellow, and black (the key plate).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:50Z",
+   "target": "f04737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "RGB is short for red, green, and blue",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:47:52Z",
+   "target": "f04737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The name of the model comes from the initials of the three additive primary colors— red, green, and blue.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:47:55Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for dots per inch: the number of dots (= small spots) of ink a printer, etc., can produce in each line measuring one inch",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:47:57Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Dots per inch (DPI or dpi) is a measure of spatial printing, video or image scanner dot density",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "abbreviation for cyan, magenta, yellow, black: the system of colour printing that uses four colours of ink",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The abbreviation CMYK refers to the four color components used in printing: cyan, magenta, yellow, and black (the key plate).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "RGB is short for red, green, and blue",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The name of the model comes from the initials of the three additive primary colors— red, green, and blue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for dots per inch: the number of dots (= small spots) of ink a printer, etc., can produce in each line measuring one inch",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Dots per inch (DPI or dpi) is a measure of spatial printing, video or image scanner dot density",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "abbreviation for dots per inch: the number of dots (= small spots) of ink a printer, etc., can produce in each line measuring one inch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “dots per inch” is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:39.455Z",
+   "target": "f04738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Dots per inch (DPI or dpi) is a measure of spatial printing, video or image scanner dot density, in particular the number of individual dots that can be placed in a line within the span of 1 inch (25.4 mm).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:39.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “dots per inch” is on the snapshot of s10"
+  }
+ ]
+}

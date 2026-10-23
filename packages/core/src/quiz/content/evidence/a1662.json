@@ -1,0 +1,508 @@
+{
+ "article": "a1662",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gilgamesh",
+   "title": "Gilgamesh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:29.396Z",
+   "snapshot": "23987e672273ba8b24a7f207046289a2e16086646b90e9cfc7f8ecced4e61403"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hammurabi",
+   "title": "Hammurabi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:30.537Z",
+   "snapshot": "f857a1ac7f471c034ddbf6aec44545d644a5941aa83932614d482390062da397"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Code_of_Hammurabi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:31.381Z",
+   "snapshot": "1fc374078b6d7452364700bec6ccf0893266364f083652477f0c6bd5e657644f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sargon_of_Akkad",
+   "title": "Sargon of Akkad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:32.364Z",
+   "snapshot": "4ab1bc6551eb9c739dad81adf72cc34e14ee1da1b56501f1b4639f3d8a5ea012"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Library_of_Ashurbanipal",
+   "title": "Library of Ashurbanipal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:33.282Z",
+   "snapshot": "303bddeebfe1e4efbcf179dc953826c038d43ade1855a396283c08d8ba1409d9"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(587_BC)",
+   "title": "Siege of Jerusalem (587 BC) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:34.351Z",
+   "snapshot": "d29729aa62f52ca1cf4326cb6b2423b9d83af0dac8b93c2c4c46cd35abf46e19"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mesopotamia",
+   "title": "Mesopotamia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:35.511Z",
+   "snapshot": "707671f470a78c2e5e716297ae895881b4709af233dd338a2d4b9ccc0a582c1b"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Wiege_der_Zivilisation",
+   "title": "Wiege der Zivilisation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:14:32.823Z",
+   "snapshot": "8b8476272e7bc31b4fab741fde9aa17854e7c193ae6e29e63cc8d42b0ffa1862"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Cradle_of_civilization",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:36.372Z",
+   "snapshot": "94952577a9fab1595f51a7c888bc05747338ec55f4a8cdbd604b8ba670094e09"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Babylon",
+   "title": "Babylon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:13.138Z",
+   "snapshot": "a3d55764cea3387cd63528808c6df23f185e1d37368482c6db3fc5d3249f378e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gilgamesh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c139"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hammurabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hammurabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sargon of Akkad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ashurbanipal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nebuchadnezzar II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Iraq",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-095"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Iraq",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-020"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f12094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Asien",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Asia",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Asia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-366/3, u05): The card asks for a CONTINENT; the bank answered with a region. The classic 'cradle of civilisation' is Mesopotamia, a region of West Asia, so the answer is Asia; other cradles (Nile valley in Africa etc.) and the 'cradle of humankind' (Africa) are noted."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f12094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Asia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e9 is on the snapshot of s9"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f12094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Asia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f08306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gilgamesh (, ; Akkadian: 𒀭𒄑𒂆𒈦, romanized: Gilgāmeš; originally Sumerian: 𒀭𒄑𒉋𒂵𒎌, romanized: Bilgames) was a hero in ancient Mesopotamian mythology and the protagonist of the Epic of Gilgamesh, an epic poem written in Akkadian during the late 2nd millennium BC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gilgamesh” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f08307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hammurabi (; Old Babylonian Akkadian: 𒄩𒄠𒈬𒊏𒁉, romanized: Ḫammu-rāpi; Akkadian: [xammuˈraːpʰi]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hammurabi” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f08307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Code of Hammurabi is a Babylonian legal text composed c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hammurabi” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f08308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sargon of Akkad (; Akkadian: 𒊬𒊒𒄀, romanized: Šarrugi; died c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sargon of Akkad” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f08309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Royal Library of Ashurbanipal, named after Ashurbanipal, the last great king of the Assyrian Empire, is a collection of more than 30,000 clay tablets and fragments containing texts of all kinds and in various languages from the 7th century BCE.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ashurbanipal” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f08310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nebuchadnezzar II, king of the Neo-Babylonian Empire, besieged Judah's capital city for approximately 30 months.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nebuchadnezzar II” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f12094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mesopotamia is a historical region of West Asia situated within the Tigris–Euphrates river system, in the northern part of the Fertile Crescent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asia” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f12094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The earliest proto-urban settlements with several thousand inhabitants emerged in the Neolithic which began in Western Asia in 10,000 BC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asia” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f25281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It corresponds roughly to the territory of modern Iraq.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iraq” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:28:01.107Z",
+   "target": "f25631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Babylon ( BAB-il-on) was an ancient city located on the lower Euphrates river in southern Mesopotamia, within modern-day Hillah, Iraq, about 85 kilometres (53 miles) south of modern-day Baghdad.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:01.107Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iraq” is on the snapshot of s10"
+  }
+ ]
+}

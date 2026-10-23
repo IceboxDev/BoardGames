@@ -1,0 +1,449 @@
+{
+ "article": "a1306",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rainbow",
+   "title": "Rainbow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:40.327Z",
+   "snapshot": "d4884d5ec3442bc42c3e4df706e2b9fc62dae287e822726e832d640b4393bd3c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rayleigh_scattering",
+   "title": "Rayleigh scattering – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:41.204Z",
+   "snapshot": "3e98686930fceb9382884d250745757d9fbf8638a9694af3fbf330856ced1a42"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/March_1504_lunar_eclipse",
+   "title": "March 1504 lunar eclipse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:42.125Z",
+   "snapshot": "8f76a547237d65cf55f38b874bbcb4bc700055974bb1193e2e09d515713d0689"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aurora",
+   "title": "Aurora – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:43.375Z",
+   "snapshot": "02bd7fadde9bc114af85d190b34d9e528dd084e9bf77b34e7f1e9e0f967c54ac"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Opticks",
+   "title": "Opticks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:55.950Z",
+   "snapshot": "bc57137c1ef2cad9aa1ee5cf268cfe08299c24c4c009dab3985d454068df9b97"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Sonne",
+   "title": "Sonne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:18.575Z",
+   "snapshot": "64227a7e7422a8706a1b4faadf68e775d6ef6c4b4f6bf49898ba299eeef620e3"
+  },
+  "s7": {
+   "url": "https://science.nasa.gov/solar-system/moon/what-you-need-to-know-about-the-march-2025-total-lunar-eclipse/",
+   "title": "What You Need To Know About the March 2025 Total Lunar Eclipse",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:20.720Z",
+   "snapshot": "fcf19b42e158702827f4d2181f76e945560ed14a3bcc31532a05ccff52428dfe"
+  },
+  "s8": {
+   "url": "https://www.rmg.co.uk/stories/space-astronomy/lunar-eclipse-guide",
+   "title": "Lunar eclipse guide",
+   "publisher": "Royal Museums Greenwich",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:21.997Z",
+   "snapshot": "22c0b33ccdc56ace11c9b2a4296d9dbcca4638999cc3e5bfed11f8bb6d1e32dc"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Lunar_eclipse",
+   "title": "Lunar eclipse – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:20.579Z",
+   "snapshot": "e6c7d0ddf01555c5f3da9be2bf730604367821862df82b0d70cef1b555d6789d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "red and violet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06527",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "blue",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "copper-red",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "green",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "white",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Weiß",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-002"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:03.709Z",
+   "target": "f06526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Moreover, rainbows have bands beyond red and violet in the respective near infrared and ultraviolet regions; however, these bands are not visible to humans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red and violet” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:03.709Z",
+   "target": "f06527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For light frequencies well below the resonance frequency of the scattering medium (normal dispersion regime), the amount of scattering is inversely proportional to the fourth power of the wavelength (e.g., a blue color is scattered much more than a red color as light propagates through air).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blue” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:03.709Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "copper-red",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“copper-red”, “Kupferrot”, “медно-красный”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:03.709Z",
+   "target": "f06529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "These collisions excite oxygen and nitrogen, which then emit light of different colours such as green, red, and purple.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “green” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:03.709Z",
+   "target": "f06530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "that it overturned the dogma, attributed to Aristotle or Theophrastus and accepted by scholars in Newton's time, that \"pure\" light (such as the light attributed to the Sun) is fundamentally white or colourless, and is altered into color by mixture with darkness caused by interactions with matter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “white” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:03.709Z",
+   "target": "f06530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Strahlungsmaximum der Sonne liegt im sichtbaren Licht (keineswegs im Infrarot), und die Strahlung wird vom menschlichen Auge in der Summe als reines Weiß wahrgenommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weiß” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:22Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The entire Moon is now in the Earth’s umbra. The Moon is tinted a coppery red.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:17:29Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "People sometimes refer to a lunar eclipse as a ‘blood moon’ because the Moon can turn a deep coppery red colour during an eclipse.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:17:30Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "This causes the resulting coppery-red hue of the Moon to vary from one eclipse to the next.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:46.923Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The entire Moon is now in the Earth’s umbra. The Moon is tinted a coppery red.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:46.923Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "People sometimes refer to a lunar eclipse as a ‘blood moon’ because the Moon can turn a deep coppery red colour during an eclipse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:46.923Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "This causes the resulting coppery-red hue of the Moon to vary from one eclipse to the next.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:46.923Z",
+   "target": "f06528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "L = 4: Very bright copper-red or orange eclipse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.923Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “copper-red” is on the snapshot of s9"
+  }
+ ]
+}

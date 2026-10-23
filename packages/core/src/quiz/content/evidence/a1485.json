@@ -1,0 +1,355 @@
+{
+ "article": "a1485",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Philosoph%C3%A6_Naturalis_Principia_Mathematica",
+   "title": "Philosophiæ Naturalis Principia Mathematica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Momentum",
+   "title": "Momentum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:27.053Z",
+   "snapshot": "76c93962d14d67810ddf31e35c7a7e69243b1c79f73f34cfbeefdaef81379f19"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/James_Watt",
+   "title": "James Watt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:27.957Z",
+   "snapshot": "e6ccdbeabbe47a97269b084ffc6ee4ee0dc8fdd85d29f9eb1e28edb5b33bc861"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Archimedes",
+   "title": "Archimedes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:20.245Z",
+   "snapshot": "360c793e32d916c1074185af4e1d22a3223bc184e7ec9a5261471a771d3299b6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Boyle%27s_law",
+   "title": "Boyle's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:28.870Z",
+   "snapshot": "df7d6098787feffaf663667d5499826b536a9f84c6a5637040fad85819de19e1"
+  },
+  "s6": {
+   "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/newtons-laws-of-motion/",
+   "title": "Newton's Laws of Motion",
+   "publisher": "NASA Glenn Research Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:09.131Z",
+   "snapshot": "adb2e56b0d0eb247f059d1179a5f5765913e9797c3815b93465c80977b626180"
+  },
+  "s7": {
+   "url": "https://www.physicsclassroom.com/class/newtlaws/Lesson-3/Newton-s-Second-Law",
+   "title": "Newton's Second Law",
+   "publisher": "The Physics Classroom",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:08.273Z",
+   "snapshot": "dcb9265b7cd10da85f9d4f5260c59d4077b54ea192b4df2f5b3ae1f0b8f3bc99"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "force",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "momentum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "power",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "density",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "pressure",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:33.166Z",
+   "target": "f07422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Newtonian mechanics, momentum (pl.: momenta or momentums; more specifically linear momentum or translational momentum) is the product of the mass and velocity of an object.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “momentum” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:33.166Z",
+   "target": "f07423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Watt introduced a design enhancement, the separate condenser, which avoided this waste of energy and radically improved the power, efficiency, and cost-effectiveness of steam engines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “power” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:33.166Z",
+   "target": "f07424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In this poem, the lumps of gold and silver were placed on the scales of a balance, and then the entire apparatus was immersed in water; the difference in density between the gold and the silver, or between the gold and the crown, causes the scale to tip accordingly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “density” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:33.166Z",
+   "target": "f07425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Boyle's law, also referred to as the Boyle–Mariotte law or Mariotte's law (especially in France), is an empirical gas law that describes the relationship between pressure and volume of a confined gas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pressure” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:18:57Z",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The second law then reduces to the more familiar product of a mass and an acceleration:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:59Z",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The net force is equated to the product of the mass times the acceleration.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:19.031Z",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The second law then reduces to the more familiar product of a mass and an acceleration:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:19.031Z",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The net force is equated to the product of the mass times the acceleration.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:19.031Z",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An object at rest remains at rest, and an object in motion remains in motion at constant speed and in a straight line unless acted on by an unbalanced force.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “force” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:19.031Z",
+   "target": "f07421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "According to Newton, an object will only accelerate if there is a net or unbalanced force acting upon it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “force” is on the snapshot of s7"
+  }
+ ]
+}

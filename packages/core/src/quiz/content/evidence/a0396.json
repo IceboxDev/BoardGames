@@ -1,0 +1,471 @@
+{
+ "article": "a0396",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hindenburg_disaster",
+   "title": "Hindenburg disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:12.624Z",
+   "snapshot": "64155ac62ef135cb512cefcbc496a8ebb9e35c9101fc357cc1a600e6da544055"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Titanic",
+   "title": "Titanic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:13.749Z",
+   "snapshot": "36043a706303124561cb6a1bfc8d683bd7eeb1ed1ebafcc2ce31e3a4aff8ce3f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sputnik_1",
+   "title": "Sputnik 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:14.580Z",
+   "snapshot": "307058c44f27ac87d84e790d27fdb1c81ad910f71f0f72237974cada2ad9af13"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster",
+   "title": "Space Shuttle Challenger disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:15.675Z",
+   "snapshot": "873f9a973e31765dc1f3d750f68b9dd9861bd07132cbc769ad8192416b1ed270"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1984_(advertisement)",
+   "title": "1984 (advertisement) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:16.555Z",
+   "snapshot": "c4758944f4ce9f6233fbdefc9fa88484b272ac039de013173309a520910e1deb"
+  },
+  "s6": {
+   "url": "https://lex.dk/Hindenburg",
+   "title": "Hindenburg – lex.dk",
+   "publisher": "Den Store Danske (lex.dk)",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:32:52.924Z",
+   "snapshot": "e22ad4ff0c843f2749b9d6bfd4ea4525bfb1ecffa9df7ddefb7b030201b003a2"
+  },
+  "s7": {
+   "url": "https://www.wissen.de/luftschiff-hindenburg",
+   "title": "Luftschiff Hindenburg – wissen.de",
+   "publisher": "wissen.de (Konradin Medien)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:53.314Z",
+   "snapshot": "3f359dccce045f5286c5b7f6c295ffd9f9d40b7eb9b899293f86b98fa6abe97f"
+  },
+  "s8": {
+   "url": "https://www.nasa.gov/wp-content/uploads/static/history/sputnik.html",
+   "title": "Sputnik and the Dawn of the Space Age",
+   "publisher": "NASA History Office",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:53.466Z",
+   "snapshot": "f828ef243ffac944be1db1815298e36aa5a92b612a6d2507a8acaaf284de1559"
+  },
+  "s9": {
+   "url": "https://www.guinnessworldrecords.com/world-records/first-artificial-satellite",
+   "title": "First artificial satellite",
+   "publisher": "Guinness World Records",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:53.565Z",
+   "snapshot": "23fd2277884952839d6adc98a7d922e85a66f6e0fd0e2f939f90cc874092a906"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hindenburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01977",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Titanic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sputnik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01979",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Challenger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Macintosh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:42.230Z",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Hindenburg disaster was an airship accident that occurred on May 6, 1937, in Manchester Township, New Jersey, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hindenburg” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:42.230Z",
+   "target": "f01977",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "RMS Titanic was a British ocean liner that sank in the early hours of 15 April 1912 after striking an iceberg on her maiden voyage from Southampton, England, to New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titanic” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:42.230Z",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sputnik 1  (, Russian: Спутник-1, Satellite 1), often referred to as simply Sputnik, was the first artificial Earth satellite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sputnik” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:42.230Z",
+   "target": "f01979",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On January 28, 1986, Space Shuttle Challenger broke apart 73 seconds into its flight, killing all seven crew members.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Challenger” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:42.230Z",
+   "target": "f01980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"1984\" is an American television commercial that introduced the Apple Macintosh personal computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:42.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macintosh” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:32:18Z",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hindenburg var verdens største luftskib, bygget af det tyske Luftschiffbau Zeppelin.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23",
+   "note": "its sister LZ 130 Graf Zeppelin II had the same 245 m hull, so 'largest' is shared; the answer is unambiguous"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:32:19Z",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die 245 Meter lange \"Hindenburg\" ist das größte jemals gebaute Luftschiff.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:32:20Z",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "History changed on October 4, 1957, when the Soviet Union successfully launched Sputnik I. The world's first artificial satellite was about the size of a beach ball",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:32:21Z",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The first artificial satellite was Sputnik 1, which was launched on 4 October 1957 from the Tyuratam Missile Range",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r077",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:04.062Z",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die 245 Meter lange \"Hindenburg\" ist das größte jemals gebaute Luftschiff.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:04.062Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:04.062Z",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The first artificial satellite was Sputnik 1, which was launched on 4 October 1957 from the Tyuratam Missile Range",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:04.062Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:04.062Z",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hindenburg – Lex",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:04.062Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hindenburg” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:04.062Z",
+   "target": "f01976",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das Luftschiff \"Hindenburg\" ist die Krönung der Zeppelin-Ära - und gleichzeitig ihr Ende.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:04.062Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hindenburg” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:04.062Z",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Sputnik: The Beep Heard Round the World, The Birth of the Space Age",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:04.062Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sputnik” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:04.062Z",
+   "target": "f01978",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The first artificial satellite was Sputnik 1, which was launched on 4 October 1957 from the Tyuratam Missile Range (now known as the Baikonur Cosmodrome) in a remote part of the Kazakh SSR (then part of the Soviet Union, now Kazakhstan).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:04.062Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sputnik” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "article": "a2212",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rapunzel_%E2%80%93_Neu_verf%C3%B6hnt",
+   "title": "Rapunzel – Neu verföhnt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:08.619Z",
+   "snapshot": "4573c973feab1924bc99127a10aa75e5586f23dfe97e938b8e34f2026da1c12e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Merida_%E2%80%93_Legende_der_Highlands",
+   "title": "Merida – Legende der Highlands",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:10.152Z",
+   "snapshot": "a3c8d9affcbf7829085bc17ca0bb11345cdfe77f01c69b8aa996b30eca576d4c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_Eisk%C3%B6nigin_%E2%80%93_V%C3%B6llig_unverfroren",
+   "title": "Die Eiskönigin – Völlig unverfroren",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:10.589Z",
+   "snapshot": "e7c884aa9fcd80c91b6f7248db303dfbcc11483303ed636a5a1610ac2cabfb82"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tangled",
+   "title": "Tangled – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:09.825Z",
+   "snapshot": "67bac1a7fb60cf68f27ebd7d50e0f7dea1a1a9929e03b1ca5495b778aa3aa61d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Brave_(2012_film)",
+   "title": "Brave (2012 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:10.786Z",
+   "snapshot": "e37cedeb7a43558263a4077f7733e0bc71e037e3fd5b62a1906dca4328c8609e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+   "title": "Frozen (2013 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:17.806Z",
+   "snapshot": "cff68ef50b447f4bc11f8f2eff0146deab093abf91e1ab425d238b08ab7f64b8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pascal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-280"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bär",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-288"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Eiskönigin – Völlig unverfroren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-385"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Maximus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Scotland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Olaf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Let It Go",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dann zieht sie zusammen mit Rider und dem Chamäleon Pascal (das ihr immer zur Seite steht) los, später auch begleitet von dem Pferd Maximus, das sich aber eher wie ein Hund verhält.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pascal” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im nächsten Moment bricht der zweite Morgen an; trotz des während des Ritts geflickten Wandteppichs bleibt ihre Mutter jedoch ein Bär.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bär” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Eiskönigin – Völlig unverfroren (Originaltitel Frozen) ist ein Computeranimationsfilm von Walt Disney Pictures und der 53.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Eiskönigin – Völlig unverfroren” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Meanwhile, a runaway common thief, Flynn Rider, steals the lost princess's tiara from the palace, betrays the Stabbington brothers, his partners-in-crime, and is pursued by royal guard-horse Maximus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maximus” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Set in the highlands of Scotland, the film tells the story of Princess Merida of DunBroch (Macdonald) who defies an age-old custom, causing chaos in the kingdom by expressing the desire not to be betrothed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scotland” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The film follows Anna (Bell), the princess of Arendelle, who sets off on a journey with the iceman Kristoff (Groff), his reindeer Sven, and the snowman Olaf (Gad), to find her estranged sister Elsa (Menzel) after she accidentally traps their kingdom in eternal winter with her icy powers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Olaf” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:37.024Z",
+   "target": "f11267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Among its accolades, it won Academy Awards for Best Animated Feature and Best Original Song with \"Let It Go,\" the Golden Globe Award for Best Animated Feature Film, the BAFTA Award for Best Animated Film, and two Grammy Awards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Let It Go” is on the snapshot of s6"
+  }
+ ]
+}

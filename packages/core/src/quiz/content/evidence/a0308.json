@@ -1,0 +1,242 @@
+{
+ "article": "a0308",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Congregation_for_the_Evangelization_of_Peoples",
+   "title": "Congregation for the Evangelization of Peoples – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:39.144Z",
+   "snapshot": "b6f1b152dfae39b570898991fb71692ffe971bdb691130d8916d049df91735bb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Devil%27s_advocate",
+   "title": "Devil's advocate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:40.167Z",
+   "snapshot": "a28112161885b60bb548289e82b0cc3e95fbc4fb2fbe28f3b58be2beb69b910e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Scapegoat_(painting)",
+   "title": "The Scapegoat (painting) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:41.144Z",
+   "snapshot": "1f5b7d37c7d498d1c1e2322930d68c0df0503ff50ee9e5cdfec18fe14994e05e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Zealots",
+   "title": "Zealots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:16.557Z",
+   "snapshot": "3c781dc1165433ca9d697258d12b1d2ecfd9bbed17a0672fd1991461f98dd75a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Philistinism",
+   "title": "Philistinism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:42.141Z",
+   "snapshot": "218c335f9d200bddec99b87c66eb71b990ba47e9ee929f7366611f0123c53cdf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01536",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "propaganda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01537",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "devil's advocate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01538",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "scapegoat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "zealot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01540",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Philistine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:27.711Z",
+   "target": "f01536",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is also known by its former title, the Sacred Congregation for the Propagation of the Faith (Latin: Sacra Congregatio de Propaganda Fide), or simply the Propaganda Fide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “propaganda” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:27.711Z",
+   "target": "f01537",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The advocatus diaboli (Latin for Devil's advocate) is the common name for the official position within the Catholic Church of the Promoter of the Faith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “devil's advocate” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:27.711Z",
+   "target": "f01538",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Scapegoat (1854–1856) is a painting by William Holman Hunt which depicts the \"scapegoat\" described in the Book of Leviticus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “scapegoat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:27.711Z",
+   "target": "f01539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The term zealot, the common translation of the Hebrew kanai (קנאי, frequently used in plural form, קנאים, kana'im), means one who is zealous on behalf of God.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “zealot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:27.711Z",
+   "target": "f01540",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As a derogatory term, philistine describes a person who is narrow-minded and hostile to the life of the mind, whose materialistic and wealth-oriented worldview and tastes indicate an indifference to cultural and aesthetic values.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:27.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philistine” is on the snapshot of s5"
+  }
+ ]
+}

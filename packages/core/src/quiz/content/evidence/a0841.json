@@ -1,0 +1,289 @@
+{
+ "article": "a0841",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ozzy_Osbourne",
+   "title": "Ozzy Osbourne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:45.562Z",
+   "snapshot": "c4ee39f7f02e78783d355e6d9685aeab487872a4ff6b9bc15635f9e700a4cee9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ian_Gillan",
+   "title": "Ian Gillan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:48.109Z",
+   "snapshot": "29db406ee85df4059b9099543c8e7111ab30dfa648d910a1910b5eaf868947d8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bruce_Dickinson",
+   "title": "Bruce Dickinson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:47.630Z",
+   "snapshot": "3d8216f204d7f76d0586702176f8616913ad1d5bc6214a89c3ec344e4d7ec0d1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Back_in_Black",
+   "title": "Back in Black – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:04.332Z",
+   "snapshot": "4eab52a21d733eb2a56a641e493ee56c721e94ac722919ca8ae734d86830ac2c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rob_Halford",
+   "title": "Rob Halford – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:48.459Z",
+   "snapshot": "0d4a363ba52cf135bcc287f00731ed2f5ec384dff9f737172b2b634b47101cbf"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Axl_Rose",
+   "title": "Axl Rose",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:45.793Z",
+   "snapshot": "cb573ecc8897f093c7908dbdbe7ec681522a7ca605460e9cb789c4dac4ead0ba"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ozzy Osbourne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ian Gillan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bruce Dickinson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brian Johnson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rob Halford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Axl Rose",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-135"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:53.412Z",
+   "target": "f04201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the 2011 documentary God Bless Ozzy Osbourne, Osbourne said that the Beatles made him realize that \"[he] was going to be a rock star the rest of [his] life\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ozzy Osbourne” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:53.412Z",
+   "target": "f04202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ian Gillan (born 19 August 1945) is an English singer who is best known as the lead singer and lyricist for the rock band Deep Purple.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ian Gillan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:53.412Z",
+   "target": "f04203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paul Bruce Dickinson (born 7 August 1958) is an English heavy metal singer best known as the frontman of Iron Maiden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruce Dickinson” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:53.412Z",
+   "target": "f04204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was the band's first album to feature Brian Johnson as lead singer, following the death of their previous vocalist Bon Scott.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brian Johnson” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:53.412Z",
+   "target": "f04205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rob Halford interview @ Metalpaths.com 2010",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rob Halford” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:53.412Z",
+   "target": "f13126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Literatur von und über Axl Rose im Katalog der Deutschen Nationalbibliothek",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Axl Rose” is on the snapshot of s6"
+  }
+ ]
+}

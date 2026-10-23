@@ -1,0 +1,202 @@
+{
+ "article": "a0076",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Handmaid's_Tale_(TV_series)",
+   "title": "The Handmaid's Tale (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:48.604Z",
+   "snapshot": "3a514524bca14b0cae45fabf29519b1dbfddc414c2886a40826b9c4863c8cc68"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Man_in_the_High_Castle_(TV_series)",
+   "title": "The Man in the High Castle (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:49.514Z",
+   "snapshot": "f5cb05973142c0023ef7ca3f5cf08de9b030f1ce71545863835847911fa3f143"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Game_of_Thrones",
+   "title": "Game of Thrones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:50.673Z",
+   "snapshot": "59680a6a47d0ae69a8afb360a07538bb64b6b5b91bae49380589c36c3e7e9cba"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/3_Body_Problem_(TV_series)",
+   "title": "3 Body Problem (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:51.527Z",
+   "snapshot": "9b9293ce554aaf03c84b6a01cdc1bbf844aa8d6d05d6bfec057f918b01ba4896"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Liu_Cixin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:52.606Z",
+   "snapshot": "a1fd1581035aeb9d6a3d7f5932ff26e21edafe699035c50880216e169d72d5ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Handmaid's Tale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Man in the High Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Game of Thrones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "3 Body Problem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:46.537Z",
+   "target": "f00376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Handmaid's Tale is an American dystopian television series created by Bruce Miller, based on the 1985 novel The Handmaid's Tale by Canadian author Margaret Atwood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Handmaid's Tale” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:46.537Z",
+   "target": "f00377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Man in the High Castle is an American dystopian alternate history television series created for the streaming service Amazon Prime Video, depicting a parallel universe in which the Axis powers of Nazi Germany and the Empire of Japan rule the world after their victory in World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Man in the High Castle” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:46.537Z",
+   "target": "f00378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Game of Thrones is an American fantasy drama television series created by David Benioff and D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Game of Thrones” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:46.537Z",
+   "target": "f00379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "3 Body Problem is an American science fiction television series created by David Benioff, D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “3 Body Problem” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "source": "publish-or-perish-mge",
+ "bucket": "technology/transport",
+ "operations": [
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-012",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "Which English inventor built an electric car in Wolverhampton in 1884?",
+      "de": "Welcher englische Erfinder baute 1884 in Wolverhampton ein Elektroauto?",
+      "answerEn": "Thomas Parker",
+      "answerDe": "Thomas Parker",
+      "timeline": {
+       "kind": "creation",
+       "start": "1884",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Thomas Parker builds an electric car in Wolverhampton",
+       "labelDe": "Thomas Parker baut in Wolverhampton ein Elektroauto"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/History_of_the_electric_vehicle",
+       "title": "History of the electric vehicle",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which German engineer built the Elektrowagen of 1888, often called the first real electric car?",
+      "de": "Welcher deutsche Ingenieur baute den Elektrowagen von 1888, der oft als erstes echtes Elektroauto bezeichnet wird?",
+      "answerEn": "Andreas Flocken",
+      "answerDe": "Andreas Flocken",
+      "timeline": {
+       "kind": "creation",
+       "start": "1888",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Andreas Flocken builds his Elektrowagen in Coburg",
+       "labelDe": "Andreas Flocken baut in Coburg seinen Elektrowagen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/History_of_the_electric_vehicle",
+       "title": "History of the electric vehicle",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Belgian driver became the first to exceed 100 km/h in a road vehicle, in the electric car La Jamais Contente in 1899?",
+      "de": "Welcher belgische Fahrer überschritt 1899 im Elektroauto La Jamais Contente als Erster in einem Straßenfahrzeug 100 km/h?",
+      "answerEn": "Camille Jenatzy",
+      "answerDe": "Camille Jenatzy",
+      "timeline": {
+       "kind": "event",
+       "start": "1899",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Camille Jenatzy passes 100 km/h in La Jamais Contente near Paris",
+       "labelDe": "Camille Jenatzy überschreitet bei Paris in La Jamais Contente 100 km/h"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/La_Jamais_Contente",
+       "title": "La Jamais Contente",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Whose electric starter of 1912 did away with the hand crank and hastened the decline of the early electric car?",
+      "de": "Wessen elektrischer Anlasser von 1912 schaffte die Handkurbel ab und beschleunigte den Niedergang des frühen Elektroautos?",
+      "answerEn": "Charles Kettering",
+      "answerDe": "Charles Kettering",
+      "timeline": {
+       "kind": "event",
+       "start": "1912",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Charles Kettering's electric starter removes the need to hand-crank petrol cars",
+       "labelDe": "Charles Ketterings elektrischer Anlasser macht das Ankurbeln von Benzinautos überflüssig"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/History_of_the_electric_vehicle",
+       "title": "History of the electric vehicle",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Electric Before Petrol: The First Electric Cars",
+    "titleDe": "Elektrisch vor Benzin: Die ersten Elektroautos",
+    "bodyEn": "The electric car is not a newcomer. Around 1900 battery cars were a serious rival to petrol – quiet, clean, free of gear changes and of the dangerous starting crank – and for a few years they held the speed record too.\n\nThe pioneers came from England and Germany. In 1884 the English inventor Thomas Parker built an electric car in Wolverhampton; it survives only in a photograph of 1895. Four years later, in 1888, the German engineer Andreas Flocken built his Elektrowagen in Coburg, a four-wheeled carriage that is often called the first real electric car.\n\nAmerica turned the idea into a business. In Philadelphia the mechanical engineer Henry G. Morris and the chemist Pedro G. Salom patented the Electrobat on 31 August 1894. The first version, with a 1,600-pound lead battery, was slow and impractical, but lighter versions reached about 32 km/h and ran some 40 km on a charge. Morris and Salom built about a dozen electric hansom cabs that competed with horse-drawn cabs on the streets of New York City; in 1897 they sold the cabs and the concept to Isaac L. Rice, who reorganised the enterprise as the Electric Vehicle Company.\n\nIn Europe electric cars went racing. On the road at Achères near Paris in the spring of 1899 – on 29 April or 1 May, sources differ – the Belgian driver Camille Jenatzy, nicknamed \"the Red Devil\" for his beard, became the first person to exceed 100 km/h in a road vehicle. His torpedo-shaped electric car, La Jamais Contente (\"the never satisfied\"), had a body of a light alloy called partinium and Michelin tyres and reached 105.88 km/h.\n\nThen the tide turned. Better roads demanded more range than batteries could give, cheap oil made petrol cheap, and Henry Ford's mass production made petrol cars affordable – by 1912 an electric car cost almost twice as much. The final blow came from the electrical engineer Charles Kettering, whose electric starter, introduced on Cadillacs in 1912, removed the hated hand crank, the electric car's last great advantage. It took almost a century for battery cars to return.\n\n| Year | Milestone |\n|---|---|\n| 1884 | Thomas Parker's electric car, Wolverhampton |\n| 1888 | Andreas Flocken's Elektrowagen, Coburg |\n| 1894 | Electrobat patented in Philadelphia |\n| 1899 | La Jamais Contente passes 100 km/h |\n| 1912 | Kettering's electric starter |",
+    "bodyDe": "Das Elektroauto ist kein Neuling. Um 1900 waren Batteriewagen eine ernsthafte Konkurrenz zum Benziner – leise, sauber, ohne Schalten und ohne die gefährliche Anlasskurbel –, und für einige Jahre hielten sie sogar den Geschwindigkeitsrekord.\n\nDie Pioniere kamen aus England und Deutschland. 1884 baute der englische Erfinder Thomas Parker in Wolverhampton ein Elektroauto; es ist nur auf einem Foto von 1895 überliefert. Vier Jahre später, 1888, baute der deutsche Ingenieur Andreas Flocken in Coburg seinen Elektrowagen, eine vierrädrige Kutsche, die oft als erstes echtes Elektroauto bezeichnet wird.\n\nAmerika machte aus der Idee ein Geschäft. In Philadelphia ließen sich der Maschinenbauingenieur Henry G. Morris und der Chemiker Pedro G. Salom am 31. August 1894 das Electrobat patentieren. Die erste Version mit einer 1600 Pfund schweren Bleibatterie war langsam und unpraktisch, doch leichtere Versionen erreichten etwa 32 km/h und fuhren rund 40 km mit einer Ladung. Morris und Salom bauten etwa ein Dutzend elektrische Hansom-Cabs, die in New York City mit den Pferdedroschken konkurrierten; 1897 verkauften sie die Wagen und das Konzept an Isaac L. Rice, der das Unternehmen als Electric Vehicle Company neu gründete.\n\nIn Europa fuhren Elektroautos Rennen. Auf der Straße bei Achères nahe Paris überschritt im Frühjahr 1899 – am 29. April oder 1. Mai, die Quellen sind sich uneinig – der Belgier Camille Jenatzy, wegen seines Bartes „der rote Teufel“ genannt, als erster Mensch in einem Straßenfahrzeug 100 km/h. Sein torpedoförmiges Elektroauto La Jamais Contente („die nie Zufriedene“) hatte eine Karosserie aus der Leichtmetalllegierung Partinium und Michelin-Reifen und erreichte 105,88 km/h.\n\nDann kippte die Lage. Bessere Straßen verlangten mehr Reichweite, als Batterien liefern konnten, billiges Öl machte Benzin billig, und Henry Fords Massenproduktion machte Benzinautos erschwinglich – 1912 kostete ein Elektroauto fast doppelt so viel. Den letzten Schlag versetzte ihm der Elektroingenieur Charles Kettering, dessen elektrischer Anlasser, 1912 bei Cadillac eingeführt, die verhasste Handkurbel und damit den letzten großen Vorteil des Elektroautos abschaffte. Es dauerte fast ein Jahrhundert, bis Batterieautos zurückkehrten.\n\n| Jahr | Meilenstein |\n|---|---|\n| 1884 | Thomas Parkers Elektroauto, Wolverhampton |\n| 1888 | Andreas Flockens Elektrowagen, Coburg |\n| 1894 | Patent für das Electrobat in Philadelphia |\n| 1899 | La Jamais Contente überschreitet 100 km/h |\n| 1912 | Ketterings elektrischer Anlasser |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-097",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Using which wrong unit instead of kilograms did the crew of Air Canada Flight 143 work out their fuel in 1983, so that the 767 took on only half the fuel it needed?",
+      "de": "Mit welcher falschen Einheit statt Kilogramm berechnete die Besatzung von Air-Canada-Flug 143 im Jahr 1983 ihren Treibstoff, sodass die 767 nur die Hälfte des nötigen Treibstoffs tankte?",
+      "answerEn": "Pounds",
+      "answerDe": "Pfund",
+      "timeline": {
+       "kind": "event",
+       "start": "1983-07-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Air Canada Flight 143 runs out of fuel after a pounds-for-kilograms error",
+       "labelDe": "Air-Canada-Flug 143 geht nach einer Verwechslung von Pfund und Kilogramm der Treibstoff aus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Gimli_Glider",
+       "title": "Gimli Glider",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the small propeller-driven generator called that drops out of an airliner into the airstream to supply emergency power when both engines fail?",
+      "de": "Wie heißt der kleine propellergetriebene Generator, der bei Ausfall beider Triebwerke aus einem Verkehrsflugzeug in den Fahrtwind klappt und Notstrom liefert?",
+      "answerEn": "Ram air turbine",
+      "answerDe": "Staudruckturbine",
+      "timeline": {
+       "kind": "event",
+       "start": "1983-07-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The ram air turbine powers the controls of the gliding \"Gimli Glider\"",
+       "labelDe": "Die Staudruckturbine versorgt die Steuerung des gleitenden „Gimli Glider“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Gimli_Glider",
+       "title": "Gimli Glider",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which flight's Airbus A330 glided about 120 kilometres to the Azores in 2001, the longest glide of a passenger aircraft without engines?",
+      "de": "Der Airbus A330 welches Fluges glitt 2001 etwa 120 Kilometer weit zu den Azoren, der längste Gleitflug eines Passagierflugzeugs ohne Triebwerke?",
+      "answerEn": "Air Transat Flight 236",
+      "answerDe": "Air-Transat-Flug 236",
+      "timeline": {
+       "kind": "event",
+       "start": "2001-08-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Air Transat Flight 236 glides to Lajes in the Azores after losing all fuel",
+       "labelDe": "Air-Transat-Flug 236 gleitet nach dem Verlust allen Treibstoffs nach Lajes auf den Azoren"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Air_Transat_Flight_236",
+       "title": "Air Transat Flight 236",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "On which river did Chesley Sullenberger land US Airways Flight 1549 in 2009 after a bird strike knocked out both engines?",
+      "de": "Auf welchem Fluss landete Chesley Sullenberger 2009 US-Airways-Flug 1549, nachdem ein Vogelschlag beide Triebwerke ausgeschaltet hatte?",
+      "answerEn": "Hudson River",
+      "answerDe": "Hudson River",
+      "timeline": {
+       "kind": "event",
+       "start": "2009-01-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "US Airways Flight 1549 ditches in the Hudson River, the \"Miracle on the Hudson\"",
+       "labelDe": "US-Airways-Flug 1549 landet auf dem Hudson River, das „Wunder vom Hudson“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/US_Airways_Flight_1549",
+       "title": "US Airways Flight 1549",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Engines Out: When Airliners Glide",
+    "titleDe": "Triebwerke aus: Wenn Verkehrsflugzeuge gleiten",
+    "bodyEn": "Passengers tend to imagine that an airliner whose engines stop simply falls out of the sky. It does not. A wing keeps producing lift as long as air flows over it, so an aircraft without power trades height for distance: it glides. How far depends on its glide ratio – the ratio of forward travel to height lost, which in zero wind equals the lift-to-drag ratio. For a cruising Boeing 747 it is about 17:1 and for an Airbus A380 about 20:1, so from cruising altitude a big jet can cover well over 100 kilometres. Pilots train for exactly this: pick the best reachable field and fly the glide to it.\n\nThe most famous proof is the \"Gimli Glider\". On 23 July 1983 Air Canada Flight 143, a new Boeing 767, ran dry at about 41,000 feet over Red Lake, Ontario. The fuel gauges had failed, and in the switch to metric units the crew had worked out the fuel load using pounds instead of kilograms – the density in lb/L used as if it were kg/L – so the aircraft had taken on only about half the fuel it needed. With both engines dead, the only hydraulic power for the controls came from the ram air turbine, a small propeller-driven generator that drops out of the fuselage into the airstream. Captain Bob Pearson, an experienced glider pilot, and First Officer Maurice Quintal steered for a former air force base at Gimli, Manitoba, whose old runway was being used as a drag strip that day, and Pearson lost the last height with a forward slip. All 69 people on board survived.\n\nThe record for the longest glide belongs to Air Transat Flight 236. On 24 August 2001 the Airbus A330, flying from Toronto to Lisbon, lost its fuel through a cracked fuel line on one engine, a leak the crew made worse by cross-feeding fuel into it. Both engines flamed out over the Atlantic, and the aircraft glided about 120 kilometres to Lajes Air Base on Terceira in the Azores. All 306 people on board survived.\n\nEngines can also be lost to birds. On 15 January 2009 US Airways Flight 1549 struck a flock of Canada geese shortly after leaving LaGuardia Airport, and both engines failed. Captain Chesley \"Sully\" Sullenberger glided the Airbus A320 down onto the Hudson River beside Midtown Manhattan, and all on board were rescued – the \"Miracle on the Hudson\".\n\n| Flight | Date | What happened |\n|---|---|---|\n| Air Canada 143 | 23 July 1983 | out of fuel, glided to Gimli |\n| Air Transat 236 | 24 August 2001 | fuel leak, glided about 120 km to the Azores |\n| US Airways 1549 | 15 January 2009 | bird strike, landed on the Hudson River |",
+    "bodyDe": "Passagiere stellen sich gern vor, dass ein Verkehrsflugzeug, dessen Triebwerke ausfallen, einfach vom Himmel fällt. Das tut es nicht. Ein Flügel erzeugt Auftrieb, solange Luft um ihn strömt, also tauscht ein Flugzeug ohne Antrieb Höhe gegen Strecke – es gleitet. Wie weit, hängt von seiner Gleitzahl ab, dem Verhältnis von zurückgelegter Strecke zu verlorener Höhe, das bei Windstille dem Verhältnis von Auftrieb zu Widerstand entspricht. Für eine Boeing 747 im Reiseflug liegt es bei etwa 17:1, für einen Airbus A380 bei etwa 20:1, sodass ein großer Jet aus Reiseflughöhe weit über 100 Kilometer schafft. Piloten üben genau das: den besten erreichbaren Landeplatz wählen und den Gleitflug dorthin fliegen.\n\nDer berühmteste Beweis ist der „Gimli Glider“. Am 23. Juli 1983 ging Air-Canada-Flug 143, einer neuen Boeing 767, in etwa 41.000 Fuß Höhe über Red Lake, Ontario, der Treibstoff aus. Die Tankanzeige war ausgefallen, und bei der Umstellung auf metrische Einheiten hatte die Besatzung die Treibstoffmenge mit Pfund statt Kilogramm berechnet – die Dichte in lb/L, als wäre sie kg/L –, sodass nur etwa die Hälfte des nötigen Treibstoffs an Bord war. Mit beiden Triebwerken außer Betrieb kam die einzige Hydraulikkraft für die Steuerung von der Staudruckturbine (Ram Air Turbine), einem kleinen propellergetriebenen Generator, der aus dem Rumpf in den Fahrtwind klappt. Kapitän Bob Pearson, ein erfahrener Segelflieger, und Erster Offizier Maurice Quintal steuerten einen früheren Luftwaffenstützpunkt in Gimli, Manitoba, an, dessen alte Piste an diesem Tag als Rennstrecke diente, und Pearson baute die letzte Höhe mit einem Slip ab. Alle 69 Menschen an Bord überlebten.\n\nDer Rekord für den längsten Gleitflug gehört Air-Transat-Flug 236. Am 24. August 2001 verlor der Airbus A330 auf dem Weg von Toronto nach Lissabon seinen Treibstoff durch eine gerissene Kraftstoffleitung an einem Triebwerk, ein Leck, das die Besatzung noch verschlimmerte, indem sie Treibstoff zu diesem Triebwerk umpumpte. Über dem Atlantik fielen beide Triebwerke aus, und die Maschine glitt etwa 120 Kilometer weit zur Lajes Air Base auf Terceira in den Azoren. Alle 306 Menschen an Bord überlebten.\n\nTriebwerke können auch durch Vögel ausfallen. Am 15. Januar 2009 geriet US-Airways-Flug 1549 kurz nach dem Start vom Flughafen LaGuardia in einen Schwarm Kanadagänse, und beide Triebwerke fielen aus. Kapitän Chesley „Sully“ Sullenberger brachte den Airbus A320 im Gleitflug auf dem Hudson River neben Midtown Manhattan herunter, und alle an Bord wurden gerettet – das „Wunder vom Hudson“.\n\n| Flug | Datum | Was geschah |\n|---|---|---|\n| Air Canada 143 | 23. Juli 1983 | ohne Treibstoff, Gleitflug nach Gimli |\n| Air Transat 236 | 24. August 2001 | Treibstoffleck, etwa 120 km Gleitflug zu den Azoren |\n| US Airways 1549 | 15. Januar 2009 | Vogelschlag, Landung auf dem Hudson River |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

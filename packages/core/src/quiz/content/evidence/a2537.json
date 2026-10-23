@@ -1,0 +1,249 @@
+{
+ "article": "a2537",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Stanford-Binet-Test",
+   "title": "Stanford-Binet-Test",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:03.931Z",
+   "snapshot": "b923d4b4f7cce50241731a6448d51f7e61f08dc5910e7eccd868f4f2a7932d60"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_Binet",
+   "title": "Alfred Binet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:07.787Z",
+   "snapshot": "d0606acf2e06821aaa05f317a121e6030a990693c598f445be1c15790984176b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lewis_Terman",
+   "title": "Lewis Terman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:08.761Z",
+   "snapshot": "24f98ac14d2c2e99b08b3bd6f57710ef4dd403056e70d2ce0f06d5e23a012ab2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/William_Stern_(psychologist)",
+   "title": "William Stern (psychologist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:10.110Z",
+   "snapshot": "dc0e2ea421b6b9d9f8c1bd2e3e68f1e065a94fec3dbbbcf9dd0522a9c78c07e7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rorschach_test",
+   "title": "Rorschach test – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:10.821Z",
+   "snapshot": "6423fa7c48bde4cf3680dd9089ba48ab4fd18d76c40ea2bb13b98b41fd48e627"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stanford%E2%80%93Binet_Intelligence_Scales",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:11.774Z",
+   "snapshot": "d080614b7424f41b1490edcc9035c1f7d362447fbec80a4ef8117d2b6da265d4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Intelligenz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-362"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alfred Binet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lewis Terman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William Stern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "inkblots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:35.847Z",
+   "target": "f13547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Intelligenz",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Intelligenz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.847Z",
+   "target": "f13548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alfred Binet (; French: [binɛ]; 8 July 1857 – 18 October 1911), born Alfredo Binetti, was a French psychologist who together with Théodore Simon invented the first practical intelligence test, the Binet–Simon Intelligence Test.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Binet” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.847Z",
+   "target": "f13549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lewis Terman was a man of his less-than-enlightened time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lewis Terman” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.847Z",
+   "target": "f13550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Louis William Stern (born Ludwig Wilhelm Stern; April 29, 1871 – March 27, 1938) was a German American psychologist and philosopher who originated personalistic psychology, which placed emphasis on the individual by examining measurable personality traits as well as the interaction of those traits",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Stern” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.847Z",
+   "target": "f13551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Rorschach test is a projective psychological test in which subjects' perceptions of inkblots are recorded and then analyzed using psychological interpretation, complex algorithms, or both.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.847Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “inkblots” is on the snapshot of s5"
+  }
+ ]
+}

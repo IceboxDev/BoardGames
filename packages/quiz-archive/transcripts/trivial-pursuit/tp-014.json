@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-014",
+ "image": "IMG20261007180216.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Wahrzeichen trägt den Spitznamen „La Dame de fer“ und ist eine der meistbesuchten Touristenattraktionen der Welt?",
+   "de": "Welches Wahrzeichen trägt den Spitznamen „La Dame de fer“ und ist eine der meistbesuchten Touristenattraktionen der Welt?",
+   "en": "Which landmark bears the nickname 'La Dame de fer' (the Iron Lady) and is one of the most visited tourist attractions in the world?",
+   "reworked": false,
+   "answerDe": "Eiffelturm",
+   "answerEn": "Eiffel Tower",
+   "timeline": {
+    "kind": "creation",
+    "start": "1887",
+    "end": "1889",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Eiffel Tower is built in Paris for the 1889 World's Fair",
+    "labelDe": "Der Eiffelturm wird in Paris für die Weltausstellung 1889 errichtet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Eiffelturm",
+    "title": "Eiffelturm",
+    "lang": "de"
+   },
+   "notes": "About six million paying visitors a year (de.wikipedia). The nickname 'la dame de fer' appears on https://fr.wikipedia.org/wiki/Tour_Eiffel.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt keines der Mainzelmännchen: Anton, Conni oder Fred?",
+   "de": "Wie heißt das Mainzelmännchen, dessen Name mit F beginnt?",
+   "en": "What is the name of the Mainzelmännchen whose name begins with F?",
+   "reworked": true,
+   "answerDe": "Fritzchen",
+   "answerEn": "Fritzchen",
+   "timeline": {
+    "kind": "creation",
+    "start": "1963-04-02",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The ZDF's Mainzelmännchen cartoon figures premiere",
+    "labelDe": "Die Mainzelmännchen des ZDF haben Premiere"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Mainzelm%C3%A4nnchen",
+    "title": "Mainzelmännchen",
+    "lang": "de"
+   },
+   "notes": "The six are Anton, Berti, Conni, Det, Edi and Fritzchen, so the card's answer is Fred. Reworked into an open question about the real F-name.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt der mächtigste Herrscher des 13. Jahrhunderts, der Genetikern zufolge heute 16 Millionen Nachkommen haben soll?",
+   "de": "Wie heißt der mächtigste Herrscher des 13. Jahrhunderts, der Genetikern zufolge heute 16 Millionen Nachkommen haben soll?",
+   "en": "What is the name of the most powerful ruler of the 13th century who, according to geneticists, is said to have 16 million descendants today?",
+   "reworked": false,
+   "answerDe": "Dschingis Khan",
+   "answerEn": "Genghis Khan",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1162",
+    "end": "1227-08-18",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Genghis Khan, founder of the Mongol Empire (born c. 1155–1167, died 1227)",
+    "labelDe": "Dschingis Khan, Begründer des Mongolischen Reiches (geboren um 1155–1167, gestorben 1227)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Dschingis_Khan",
+    "title": "Dschingis Khan",
+    "lang": "de"
+   },
+   "notes": "The estimate (about 16 million men) is not universally accepted (de.wikipedia). Birth year uncertain: c. 1155, 1162 or 1167.",
+   "domain": "history",
+   "sub": "medieval"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt die literarische Figur, der Papageiendame Polynesia Sprachunterricht gibt?",
+   "de": "Wie heißt die literarische Figur, der Papageiendame Polynesia Sprachunterricht gibt?",
+   "en": "What is the name of the literary character who is given language lessons by the parrot Polynesia?",
+   "reworked": false,
+   "answerDe": "Doktor Dolittle",
+   "answerEn": "Doctor Dolittle",
+   "timeline": {
+    "kind": "creation",
+    "start": "1920",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hugh Lofting's 'The Story of Doctor Dolittle' is first published",
+    "labelDe": "Hugh Loftings „Doktor Dolittle und seine Tiere“ erscheint erstmals"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Doktor_Dolittle_und_seine_Tiere",
+    "title": "Doktor Dolittle und seine Tiere",
+    "lang": "de"
+   },
+   "notes": "Polynesia teaches the doctor the language of animals.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie viele Pixel hat ein Megapixel?",
+   "de": "Wie viele Pixel hat ein Megapixel?",
+   "en": "How many pixels does a megapixel have?",
+   "reworked": false,
+   "answerDe": "1.000.000",
+   "answerEn": "1,000,000",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1965",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The word 'pixel' is first published",
+    "labelDe": "Das Wort „Pixel“ wird erstmals veröffentlicht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Megapixel",
+    "title": "Megapixel",
+    "lang": "de"
+   },
+   "notes": "One million pixels, after the SI prefix mega-. Timeline from https://en.wikipedia.org/wiki/Pixel.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welchen Beruf hatte der Sieger der ersten schriftlich belegten Olympischen Spiele im Jahr 776 v. Chr.: Soldat, Koch oder Schauspieler?",
+   "de": "Welchen Beruf hatte der Sieger der ersten schriftlich belegten Olympischen Spiele im Jahr 776 v. Chr.?",
+   "en": "What was the profession of the winner of the first recorded Olympic Games in 776 BC?",
+   "reworked": true,
+   "answerDe": "Koch",
+   "answerEn": "Cook",
+   "timeline": {
+    "kind": "event",
+    "start": "-776",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Koroibos of Elis wins the stadion race, the first recorded Olympic victory",
+    "labelDe": "Koroibos von Elis gewinnt den Stadionlauf, der erste aufgezeichnete Olympiasieg"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Coroebus_of_Elis",
+    "title": "Coroebus of Elis",
+    "lang": "en"
+   },
+   "notes": "Coroebus (Koroibos) of Elis is described as a cook/baker; de.wikipedia calls him a 'mageiros' (sacrificial cook/priest). Options dropped to make it open.",
+   "domain": "history",
+   "sub": "ancient"
+  }
+ ]
+}

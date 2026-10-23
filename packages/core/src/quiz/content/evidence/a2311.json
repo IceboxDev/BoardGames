@@ -1,0 +1,249 @@
+{
+ "article": "a2311",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/.tv",
+   "title": ".tv",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:11.495Z",
+   "snapshot": "a41986136b12f0ed310eff5db5114c3a9b3fb23158adc545d465bc18d0c477ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/.ai",
+   "title": ".ai – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:12.517Z",
+   "snapshot": "c4342508558e5f290098dc2763d8ebd013cb0a27388fa94ca51aa4047d9efd1e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/.fm",
+   "title": ".fm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:13.516Z",
+   "snapshot": "a04da874878e7124d54c7576f7cb82c10cafce1d479b1b670022059b07494fa5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/.me",
+   "title": ".me – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:14.565Z",
+   "snapshot": "a82f5058c1521a850654b04264a2167d8e990f892964b9d1d828564c29c8095b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/.io",
+   "title": ".io – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:15.501Z",
+   "snapshot": "63eda12eb2a03dbb76cb8eef782e0e932a178c28b15cebd5be47e4f44d127d10"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tuvalu",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:16.727Z",
+   "snapshot": "68f72712338b9005b14084f3ffa2e16ffc23dc7df4691d5eeb97fbf9a59fd748"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tuvalu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-322"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11962",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anguilla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11963",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Federated States of Micronesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11964",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Montenegro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11965",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "British Indian Ocean Territory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:54.516Z",
+   "target": "f11961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": ".tv is the Internet country code top-level domain (ccTLD) for Tuvalu.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tuvalu” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:54.516Z",
+   "target": "f11962",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": ".ai is the Internet country code top-level domain (ccTLD) for Anguilla, a British Overseas Territory in the Caribbean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anguilla” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:54.516Z",
+   "target": "f11963",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": ".fm is the country code top-level domain (ccTLD) for the Federated States of Micronesia, an independent island nation located in the Pacific Ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Federated States of Micronesia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:54.516Z",
+   "target": "f11964",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": ".me is the Internet country code top-level domain (ccTLD) for Montenegro.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montenegro” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:54.516Z",
+   "target": "f11965",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Internet country code top-level domain (ccTLD) .io is nominally assigned to the British Indian Ocean Territory, but in practice used typically by technology organisations and websites because of its connection with the computer science term input/output.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:54.516Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “British Indian Ocean Territory” is on the snapshot of s5"
+  }
+ ]
+}

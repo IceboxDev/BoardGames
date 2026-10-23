@@ -1,0 +1,428 @@
+{
+ "article": "a2070",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Execution_of_Mary,_Queen_of_Scots",
+   "title": "Execution of Mary, Queen of Scots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:29.862Z",
+   "snapshot": "b2b1126d26bf72ef6d58e8b6d026a5ef0edb9baf87c212a9cbd41844627a4ff5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Execution_of_Charles_I_of_England",
+   "title": "Execution of Charles I of England – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:30.852Z",
+   "snapshot": "49bbcf0f686ec03cf1e1664ac6800bbe3d18203f0db6d80838f75f63fed3a515"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Louis_XVI",
+   "title": "Louis XVI – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:27:14.785Z",
+   "snapshot": "a11d23f81d7ddef71388e27dba27665f657d9ed6c0db8b60f15c2b8065b75e7e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marie_Antoinette",
+   "title": "Marie Antoinette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:31.949Z",
+   "snapshot": "f47f4320fd00e7f3a9c85c7b4975b1446c6bf6e47dd1474c08cffb02d0795283"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Anne_Boleyn",
+   "title": "Anne Boleyn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:32.924Z",
+   "snapshot": "36d91a2c9340892b49fb43712e72bfbd9448c5244b74f03708c1a48e271574c2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Jakobiner",
+   "title": "Jakobiner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:30.664Z",
+   "snapshot": "9722441981e38fdaf0705bf10defd63b496d1df52162333912fdbf3ea93ae54b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Reign_of_Terror",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:33.852Z",
+   "snapshot": "a83c390a5e306ba98c3dc7f8b857adf4159bde4f87832624ad7278c04e59c8f5"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Marie_Tussaud",
+   "title": "Marie Tussaud",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:31.428Z",
+   "snapshot": "7c446464233268cd10a68cf7e3ba2d3ab86fc72b7d1527be8295994c9955da6a"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Lady_Jane_Grey",
+   "title": "Lady Jane Grey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:34.822Z",
+   "snapshot": "38ec5911e8b9dff97b16cb2b720783d07d9c87ff7d720ba4a2b97dbe898b2137"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mary, Queen of Scots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c173"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Louis XVI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marie Antoinette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anne Boleyn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jakobiner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-161"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jacobins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Marie Tussaud",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-149"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f27500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Lady Jane Grey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f10346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The execution of Mary, Queen of Scots took place on 8 February 1587 at Fotheringhay Castle, Northamptonshire, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mary, Queen of Scots” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f10347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles I, King of England, Scotland and Ireland, was publicly executed on 30 January 1649 outside the Banqueting House on Whitehall, London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles I” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f10348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Louis XVI (Louis-Auguste; French: [lwi sɛːz]; 23 August 1754 – 21 January 1793) was the last king of France before the fall of the monarchy during the French Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis XVI” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f10349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Marie Antoinette (Marie Antoinette Josèphe Jeanne; 2 November 1755 – 16 October 1793) was Queen of France as the wife of Louis XVI from 10 May 1774 until the abolition of the French monarchy in 1792 during the French Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marie Antoinette” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f10350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Henry, fearful the dispute could ignite civil war in Ireland, sought to resolve the matter by arranging an alliance between Piers's son James and Anne Boleyn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anne Boleyn” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f12265",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Jakobiner (franz: les Jacobins) waren im formellen Sinn die Mitglieder eines politischen Klubs während der Französischen Revolution.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jakobiner” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f12265",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jacobins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Jacobins”, “Jakobiner”, “якобинцы”) on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f12266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Marie Tussaud  (* Dezember 1761 (nach unterschiedlichen Quellen am 1., 7.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marie Tussaud” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:29:17.483Z",
+   "target": "f27500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Lady Jane Grey (1536/1537 – 12 February 1554), also known as Lady Jane Dudley after her marriage, and nicknamed the \"Nine Days Queen\", was an English noblewoman who was proclaimed Queen of England and Ireland on 10 July 1553 and reigned until she was deposed by the Privy Council of England, which",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lady Jane Grey” is on the snapshot of s9"
+  }
+ ]
+}

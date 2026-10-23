@@ -1,0 +1,354 @@
+{
+ "article": "a2539",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pulse",
+   "title": "Pulse",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:15.663Z",
+   "snapshot": "fbd09e44af5d4775db348bc3cd3548e910e4672bc1fca81f8762736018540222"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Laennec",
+   "title": "René Laennec – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:16.687Z",
+   "snapshot": "c4746b4f7aefa05a84d16a1390dce289143466a5acaf1da2a31d4c81a79dd61f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Scipione_Riva-Rocci",
+   "title": "Scipione Riva-Rocci – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:17.663Z",
+   "snapshot": "cb78572901f31585452ea9bb8f4b1c4b7944a5fb6ffa5ec1f6ef487112fdf271"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nikolai_Korotkov",
+   "title": "Nikolai Korotkov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:18.674Z",
+   "snapshot": "d406c1a9b6b0214237c72f6c51e1a6d390d53ca941fece54741773886e84c0f8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Takuo_Aoyagi",
+   "title": "Takuo Aoyagi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:20.040Z",
+   "snapshot": "ec7aec8615b479eb1c89035996dcfd7570eff1a0520b638523837b28b55c4728"
+  },
+  "s6": {
+   "url": "https://www.bhf.org.uk/informationsupport/how-a-healthy-heart-works/your-heart-rate",
+   "title": "Your heart rate",
+   "publisher": "British Heart Foundation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:00.894Z",
+   "snapshot": "f2bacc430f52d830f263b58b892034d02301b4c4f874028326cd2cf7c880db6e"
+  },
+  "s7": {
+   "url": "https://medlineplus.gov/ency/article/003399.htm",
+   "title": "Pulse: MedlinePlus Medical Encyclopedia",
+   "publisher": "MedlinePlus (U.S. National Library of Medicine)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:59.789Z",
+   "snapshot": "b88ea72e0858106ee69f51c0d1b160ce55ac5615062f7ef152d4581c660614ee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wrist and neck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-200"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "René Laennec",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13559",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Scipione Riva-Rocci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Korotkov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Takuo Aoyagi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:35.985Z",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wrist and neck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Wrist and neck”, “Handgelenk und Hals”, “запястье и шея”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.985Z",
+   "target": "f13558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "René Laennec wrote in the classic treatise De l'Auscultation Médiate,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.985Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Laennec” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.985Z",
+   "target": "f13559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Scipione Riva Rocci (7 August 1863 in Almese, Piedmont – 15 March 1937 in Rapallo, Liguria) was an Italian internist, pathologist and pediatrician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.985Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scipione Riva-Rocci” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.985Z",
+   "target": "f13560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nikolai Sergeyevich Korotkov, also Korotkoff (Russian: Никола́й Серге́евич Коротко́в; 26 February [O.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.985Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Korotkov” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.985Z",
+   "target": "f13561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Takuo Aoyagi (青柳卓雄, Aoyagi Takuo; February 14, 1936 — April 18, 2020) was a Japanese engineer, known for his work leading to the modern pulse oximeter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.985Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Takuo Aoyagi” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:14:46Z",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The pulse is most commonly measured at the wrist or neck for adults",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:14:47Z",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "You can feel this “pulse” in places on your body, like your wrist or neck.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:14:48Z",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "To measure the pulse at your wrist, place your index and middle finger over the underside of your opposite",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Lists the pulse sites and gives instructions for exactly two: the wrist and the neck."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:19.672Z",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The pulse is most commonly measured at the wrist or neck for adults",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:19.672Z",
+   "target": "f13557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "To measure the pulse at your wrist, place your index and middle finger over the underside of your opposite",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  }
+ ]
+}

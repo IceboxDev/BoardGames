@@ -1,0 +1,616 @@
+{
+ "article": "a2460",
+ "sources": {
+  "s1": {
+   "url": "https://shakespeare-online.com/faq/mostlinesf.html",
+   "title": "Which female character has the most lines in Shakespeare?",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:22.921Z",
+   "snapshot": "641c989a7664074a176a67bc3fb4e5a4bfc3b44ca321b60a4b8a4358768cd927"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Macbeth",
+   "title": "Macbeth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:26.188Z",
+   "snapshot": "61e15c4cd180eabe3e1ec323efdf1ff542e778bc810ad187881e1b765a817976"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hamlet",
+   "title": "Hamlet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:58.367Z",
+   "snapshot": "73c276bbe0bccc2746d0e183a7b82d9f0d6af555ba54a3201e7b03a7c94b9ac3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Antony_and_Cleopatra",
+   "title": "Antony and Cleopatra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:27.206Z",
+   "snapshot": "3e72bb259a411cd852fb26351bcd302886b647dd6c4bd91ae12f5e1582fcaf51"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Titus_Andronicus",
+   "title": "Titus Andronicus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:28.363Z",
+   "snapshot": "7503e8805c9ce06b5ead180650733153328e750493e42237cf2616fb34bcf621"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/To_be,_or_not_to_be",
+   "title": "To be, or not to be",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:54.479Z",
+   "snapshot": "5b37d2ead035915d2226a56334b8fbbd95d9eff140303287ec22719c38958572"
+  },
+  "s7": {
+   "url": "https://www.folger.edu/explore/shakespeares-works/macbeth/",
+   "title": "Macbeth",
+   "publisher": "Folger Shakespeare Library",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:28.063Z",
+   "snapshot": "a374d9c6ffd52cb8c387fadd87fc5092d9ec0d4dd42755cb4e167a81489574d3"
+  },
+  "s8": {
+   "url": "https://www.folger.edu/explore/shakespeares-works/titus-andronicus/",
+   "title": "Titus Andronicus",
+   "publisher": "Folger Shakespeare Library",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:29.009Z",
+   "snapshot": "fc1d1f5e2356ac4fb7bc64c14e6c184440d3e003b68153b95e50cb034d684b32"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cleopatra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; history entry seq 5; transcript tp-017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Macbeth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-094"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hamlet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-170"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Claudius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Duncan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mark Antony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Titus Andronicus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hamlet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-081"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cleopatra comes in second with 670 lines and third place belongs to Imogen (Cymbeline), with 591 lines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cleopatra” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Tragedy of Macbeth, often shortened to Macbeth (), is a tragedy by William Shakespeare, estimated to have been first performed in 1606.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macbeth” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tragedy of Hamlet, Prince of Denmark, often shortened to Hamlet (), is a tragedy written by William Shakespeare sometime between 1599 and 1601.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamlet” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Set in Denmark, the play depicts Prince Hamlet and his attempts to exact revenge against his uncle, Claudius, who has murdered Hamlet's father in order to seize his throne and marry Hamlet's mother.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claudius” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Consumed by his latent ambition and spurred to violence by his wife, Macbeth murders King Duncan and takes the Scottish throne for himself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Duncan” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The plot is based on Thomas North's 1579 English translation of Plutarch's Lives (in Ancient Greek) and follows the relationship between Cleopatra and Mark Antony from the time of the Sicilian revolt to Cleopatra's suicide during the War of Actium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Antony” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Lamentable Tragedy of Titus Andronicus ( ), often shortened to Titus Andronicus, is a tragedy by William Shakespeare, believed to have been written between 1588 and 1593.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titus Andronicus” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:23.166Z",
+   "target": "f25704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"To be, or not to be\" is a monologue given by Prince Hamlet in the so-called \"nunnery scene\" of William Shakespeare's play Hamlet (Act 3, Scene 1).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamlet” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:03:13Z",
+   "target": "f12953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rosalind, the heroine of As You Like It, has more lines than any of Shakespeare's female characters. Cleopatra comes in second with 670 lines",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Rosalind (comedy) is first overall, so Cleopatra leads among the tragedies; no second independent line count found online that the crawler can read"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:03:18Z",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Shakespeare’s shortest tragedy, Macbeth, tells a story of ambition, violent murder, and its crippling psychological aftereffects",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:03:28Z",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was first published in the Folio of 1623, possibly from a prompt book, and is Shakespeare's shortest tragedy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:03:30Z",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Titus Andronicus is the earliest tragedy and the earliest Roman play attributed to Shakespeare.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:03:32Z",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is thought to be Shakespeare's first tragedy",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rosalind, the heroine of As You Like It, has more lines than any of Shakespeare's female characters. Cleopatra comes in second with 670 lines",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Shakespeare’s shortest tragedy, Macbeth, tells a story of ambition, violent murder, and its crippling psychological aftereffects",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was first published in the Folio of 1623, possibly from a prompt book, and is Shakespeare's shortest tragedy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s2"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Titus Andronicus is the earliest tragedy and the earliest Roman play attributed to Shakespeare.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is thought to be Shakespeare's first tragedy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s5"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Macbeth | Folger Shakespeare Library",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Macbeth” is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:59:06.044Z",
+   "target": "f12959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Titus Andronicus | Folger Shakespeare Library",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.044Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Titus Andronicus” is on the snapshot of s8"
+  }
+ ]
+}

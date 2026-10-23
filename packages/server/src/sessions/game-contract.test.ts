@@ -31,7 +31,7 @@ import type { AnyGameMachineSpec } from "@boardgames/core/machines/types";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { type AnyActorRef, createActor } from "xstate";
 import { getRegisteredSlugs, getServerGame } from "../games/registry.ts";
-import { getContentStore } from "../lib/quiztopia/content-store.ts";
+import { getContentStore } from "../lib/quiz/content-store.ts";
 import { prepareStart } from "./start.ts";
 
 /** Bounds a runaway game: a finished game never needs this many moves. */

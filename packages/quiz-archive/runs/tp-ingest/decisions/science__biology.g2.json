@@ -1,0 +1,722 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "science/biology",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-027",
+    "category": 5
+   },
+   "factId": "f00762"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-121",
+    "category": 5
+   },
+   "factId": "f00654"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0357",
+   "baseHash": "757e65a7b9ed",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-075",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Blood Groups: Who Can Give to Whom",
+    "titleDe": "Blutgruppen: Wer wem spenden darf",
+    "bodyEn": "In 1901 the Viennese physician Karl Landsteiner (1868–1943) noticed that the blood of some of his colleagues clumped when mixed with that of others. The discovery of the ABO system, for which he received the Nobel Prize in 1930, turned transfusion from a gamble into a routine treatment. The letters stand for the antigens on the surface of the red blood cells: group A carries antigen A, group B antigen B, group AB both, and group O (written 0, \"zero\", in German) neither. The name dates from 1910, when Ludwik Hirszfeld and Emil von Dungern renamed Landsteiner's group C \"0\" (null) for its lack of antigens. Landsteiner himself found only three groups; the fourth, AB, was discovered in 1902 by his students Alfred von Decastello and Adriano Sturli. Together they make up the 4 main blood groups of the ABO system: A, B, AB and O. The plasma contains antibodies against whichever antigens the body lacks, which is why the wrong transfusion can be fatal.\n\nThe second most important system is the Rhesus factor, which Landsteiner and Alexander Wiener identified in human blood in 1940. People whose red cells carry the D antigen are Rhesus positive; the roughly fifteen per cent of Europeans without it are Rhesus negative. Combining the two systems gives the eight familiar groups printed on blood donor cards.\n\nTheir frequency varies from country to country. In Germany, according to the German Red Cross, the distribution is roughly as follows:\n\n| Blood group | Share of population |\n|---|---|\n| A positive | 37 % |\n| O positive | 35 % |\n| B positive | 9 % |\n| A negative | 6 % |\n| O negative | 6 % |\n| AB positive | 4 % |\n| B negative | 2 % |\n| AB negative | 1 % |\n\nThe most common group in Germany is therefore A positive, and group A as a whole accounts for about 43 per cent of the population, narrowly ahead of group O with 41 per cent. That is unusual: worldwide, O positive is the most common group, and group O dominates in the Americas and much of Africa and Asia. The rarest group in Germany is AB negative, shared by only about one person in a hundred, which is why blood banks keep it in especially careful reserve. Being Rhesus negative matters most in pregnancy: since the first anti-D injection, RhoGAM, was given on 29 May 1968, Rhesus-negative mothers can be protected from forming antibodies against a positive baby.\n\nRarity is not the same as usefulness. Red cells from O negative donors carry neither A, B nor D antigens and therefore provoke no reaction in any recipient. This makes O negative the universal donor for red blood cell concentrates, the group that emergency departments reach for when there is no time to test the patient. The American physician Reuben Ottenberg, who began testing donors and recipients for compatibility in 1907, was among the first to recognise the universal value of group O donors. The mirror image is AB positive: its owners have no antibodies against A, B or D and can receive red cells from anyone, which is why AB positive is called the universal recipient. For plasma, incidentally, the roles are reversed, since plasma carries the antibodies rather than the antigens: AB plasma can be given to all patients.\n\nNone of this changes the daily arithmetic of the blood banks. Germany needs about 15,000 donations every working day, and because the common groups are needed most often, a donor with A positive or O positive blood is just as valuable as a rare one. The letters on the card matter mainly for one thing: making sure the right blood goes to the right person.",
+    "bodyDe": "1901 bemerkte der Wiener Arzt Karl Landsteiner (1868–1943), dass das Blut einiger seiner Kollegen verklumpte, wenn es mit dem anderer vermischt wurde. Die Entdeckung des AB0-Systems, für die er 1930 den Nobelpreis erhielt, machte aus der Transfusion ein Routineverfahren statt eines Glücksspiels. Die Buchstaben stehen für die Antigene auf der Oberfläche der roten Blutkörperchen: Gruppe A trägt Antigen A, Gruppe B Antigen B, Gruppe AB beide und Gruppe 0 (Null) keines von beiden. Die Bezeichnung stammt von 1910, als Ludwik Hirszfeld und Emil von Dungern Landsteiners Gruppe C wegen der fehlenden Antigene in „0“ (Null) umbenannten. Landsteiner selbst fand nur drei Gruppen; die vierte, AB, entdeckten 1902 seine Schüler Alfred von Decastello und Adriano Sturli. Zusammen bilden sie die 4 Hauptblutgruppen des AB0-Systems: A, B, AB und 0. Das Plasma enthält Antikörper gegen die Antigene, die dem Körper fehlen, weshalb die falsche Transfusion tödlich sein kann.\n\nDas zweitwichtigste System ist der Rhesusfaktor, den Landsteiner und Alexander Wiener 1940 im menschlichen Blut nachwiesen. Menschen, deren rote Blutkörperchen das Antigen D tragen, sind Rhesus-positiv; die rund fünfzehn Prozent der Europäer ohne dieses Antigen sind Rhesus-negativ. Die Kombination beider Systeme ergibt die acht vertrauten Gruppen, die auf Blutspendeausweisen stehen.\n\nIhre Häufigkeit ist von Land zu Land verschieden. In Deutschland sieht die Verteilung nach Angaben des Deutschen Roten Kreuzes ungefähr so aus:\n\n| Blutgruppe | Anteil der Bevölkerung |\n|---|---|\n| A positiv | 37 % |\n| 0 positiv | 35 % |\n| B positiv | 9 % |\n| A negativ | 6 % |\n| 0 negativ | 6 % |\n| AB positiv | 4 % |\n| B negativ | 2 % |\n| AB negativ | 1 % |\n\nDie häufigste Blutgruppe in Deutschland ist demnach A positiv, und die Gruppe A insgesamt macht etwa 43 Prozent der Bevölkerung aus, knapp vor Gruppe 0 mit 41 Prozent. Das ist ungewöhnlich: Weltweit ist 0 positiv die häufigste Gruppe, und Gruppe 0 dominiert in Amerika und weiten Teilen Afrikas und Asiens. Die seltenste Blutgruppe in Deutschland ist AB negativ, die nur etwa einer von hundert Menschen hat, weshalb Blutbanken sie besonders sorgfältig in Reserve halten. Rhesus-negativ zu sein zählt vor allem in der Schwangerschaft: Seit am 29. Mai 1968 erstmals die Anti-D-Spritze RhoGAM verabreicht wurde, lassen sich Rhesus-negative Mütter davor schützen, Antikörper gegen ein positives Kind zu bilden.\n\nSeltenheit ist nicht dasselbe wie Nützlichkeit. Rote Blutkörperchen von Spendern mit 0 negativ tragen weder A- noch B- noch D-Antigene und lösen daher bei keinem Empfänger eine Reaktion aus. Das macht 0 negativ zum Universalspender für Erythrozytenkonzentrate, zur Gruppe, nach der Notaufnahmen greifen, wenn keine Zeit bleibt, den Patienten zu testen. Der amerikanische Arzt Reuben Ottenberg, der ab 1907 Spender und Empfänger auf Verträglichkeit testete, erkannte als einer der Ersten den universellen Wert von Spendern der Gruppe 0. Das Spiegelbild ist AB positiv: Ihre Träger haben keine Antikörper gegen A, B oder D und können rote Blutkörperchen von jedem empfangen, weshalb AB positiv als Universalempfänger gilt. Beim Plasma sind die Rollen übrigens vertauscht, da das Plasma die Antikörper statt der Antigene trägt: AB-Plasma kann allen Patienten gegeben werden.\n\nNichts davon ändert die tägliche Rechnung der Blutbanken. Deutschland braucht an jedem Werktag etwa 15.000 Spenden, und weil die häufigen Gruppen am öftesten gebraucht werden, ist ein Spender mit A positiv oder 0 positiv genauso wertvoll wie ein seltener. Die Buchstaben auf dem Ausweis sind vor allem für eines wichtig: dass das richtige Blut zum richtigen Menschen gelangt.",
+    "notesEn": "German Red Cross figures: A+ 37 %, O+ 35 %; ABO group A overall 43 % vs O 41 %, so A is the answer with or without the Rhesus factor.",
+    "notesDe": "DRK-Zahlen: A+ 37 %, 0+ 35 %; AB0-Gruppe A insgesamt 43 % gegenüber 0 mit 41 %, daher ist A die Antwort mit oder ohne Rhesusfaktor."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1593",
+   "baseHash": "b923c5a9727b",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-182",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Building Blocks We Cannot Make: Essential Nutrients",
+    "titleDe": "Die Bausteine, die wir nicht herstellen können: Essentielle Nährstoffe",
+    "bodyEn": "Human cells are extraordinary chemical factories. From a few simple inputs they manufacture most of the thousands of molecules that keep us alive. But there are gaps in the catalogue, and those gaps define what we have to eat.\n\nThe clearest example concerns proteins – the name was coined by Jöns Jacob Berzelius in 1838 for the substances Gerardus Mulder had analysed – the long chains that build muscle, skin, enzymes and antibodies. Each chain is assembled from twenty different amino acids, linked one after another by a peptide bond, the covalent link between the carboxyl group of one amino acid and the amino group of the next; Emil Fischer's group made the first free dipeptide, glycylglycine, in 1901. When we eat protein, digestive enzymes cut those bonds and release the free amino acids into the blood, where the body reuses them to build its own proteins. Eleven of the twenty can be synthesised from other molecules, but nine cannot: histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan and valine. These are the essential amino acids – threonine, the last of the twenty to be discovered, was found by William Cumming Rose in 1935 – and because the body cannot store a reserve of them, they must be supplied regularly through food. Animal proteins and soy contain all nine in useful proportions; most plant proteins are low in one or two, which is why traditional diets combine, for instance, beans with rice or lentils with bread.\n\nThe same logic applies to fats. Human enzymes cannot insert double bonds beyond a certain position in a fatty-acid chain, so two polyunsaturated acids – linoleic acid (omega-6) and alpha-linolenic acid (omega-3) – have to come from vegetable oils, nuts, seeds or fish. They are the essential fatty acids – first called „vitamin F“, until experiments on rats in 1929 showed that they are better classed as fats – and from them the body makes the longer omega-3 molecules EPA and DHA that are concentrated in the brain and retina.\n\nA third group of indispensable nutrients was identified in the early twentieth century, when scientists realised that scurvy, beriberi, rickets and pellagra were diseases of absence. Casimir Funk called the missing substances „vital amines“ in 1912, and the shortened word vitamins survived even after it turned out that most of them are not amines. Thirteen are recognised today: the fat-soluble A, D, E and K and the water-soluble C and the eight B vitamins. Folic acid, whose name comes from the Latin folium, leaf, because it was first obtained from spinach leaves in 1941, belongs to the B vitamins (vitamin B9); it is especially important before and during pregnancy, when it helps prevent neural tube defects in the unborn child. Only two can be made in any quantity by the body itself – vitamin D in sun-exposed skin and niacin from tryptophan – and even those often fall short.\n\n| Essential group | Members | Typical sources |\n|---|---|---|\n| essential amino acids | 9 (histidine to valine) | meat, eggs, dairy, soy, legumes with grains |\n| essential fatty acids | linoleic and alpha-linolenic acid | vegetable oils, nuts, seeds, fish |\n| vitamins | 13 | fruit, vegetables, dairy, liver, whole grains |\n| minerals and trace elements | e.g. iron, iodine, zinc | varied diet |\n\nThe word „essential“ in nutrition therefore has a precise meaning: not merely important, but impossible to produce ourselves. Everything on the list above has to arrive, in the right amounts, on the plate.",
+    "bodyDe": "Menschliche Zellen sind außergewöhnliche chemische Fabriken. Aus wenigen einfachen Ausgangsstoffen erzeugen sie die meisten der tausenden Moleküle, die uns am Leben halten. Doch der Katalog hat Lücken, und diese Lücken bestimmen, was wir essen müssen.\n\nDas klarste Beispiel betrifft die Proteine – den Namen prägte Jöns Jacob Berzelius 1838 für die von Gerardus Mulder untersuchten Stoffe –, die langen Ketten, aus denen Muskeln, Haut, Enzyme und Antikörper aufgebaut sind. Jede Kette wird aus zwanzig verschiedenen Aminosäuren zusammengesetzt, die nacheinander durch eine Peptidbindung verknüpft sind, die kovalente Verbindung zwischen der Carboxylgruppe der einen und der Aminogruppe der nächsten Aminosäure; Emil Fischers Arbeitsgruppe stellte 1901 das erste freie Dipeptid her, Glycylglycin. Wenn wir Eiweiß essen, spalten Verdauungsenzyme diese Bindungen und setzen die freien Aminosäuren ins Blut frei, wo der Körper sie zum Aufbau eigener Proteine wiederverwendet. Elf der zwanzig können aus anderen Molekülen synthetisiert werden, neun jedoch nicht: Histidin, Isoleucin, Leucin, Lysin, Methionin, Phenylalanin, Threonin, Tryptophan und Valin. Diese neun heißen essentielle Aminosäuren – das Threonin, die zuletzt entdeckte der zwanzig, fand William Cumming Rose 1935 –, und weil der Körper keinen Vorrat davon anlegen kann, müssen sie regelmäßig über die Nahrung zugeführt werden. Tierische Proteine und Soja enthalten alle neun in brauchbaren Anteilen; die meisten pflanzlichen Proteine sind arm an einer oder zwei, weshalb traditionelle Küchen etwa Bohnen mit Reis oder Linsen mit Brot kombinieren.\n\nDieselbe Logik gilt für Fette. Menschliche Enzyme können in einer Fettsäurekette Doppelbindungen nur bis zu einer bestimmten Position einfügen, sodass zwei mehrfach ungesättigte Säuren – Linolsäure (Omega-6) und Alpha-Linolensäure (Omega-3) – aus Pflanzenölen, Nüssen, Samen oder Fisch stammen müssen. Man nennt sie essentielle Fettsäuren – zunächst als „Vitamin F“ bezeichnet, bis Versuche an Ratten 1929 zeigten, dass sie eher zu den Fetten gehören –, und aus ihnen bildet der Körper die längeren Omega-3-Moleküle EPA und DHA, die sich in Gehirn und Netzhaut konzentrieren.\n\nEine dritte Gruppe unverzichtbarer Nährstoffe wurde im frühen 20. Jahrhundert erkannt, als Wissenschaftler begriffen, dass Skorbut, Beriberi, Rachitis und Pellagra Mangelkrankheiten sind. Casimir Funk nannte die fehlenden Substanzen 1912 „Vitalamine“, und das verkürzte Wort Vitamine überlebte, auch nachdem sich herausstellte, dass die meisten von ihnen keine Amine sind. Heute sind dreizehn anerkannt: die fettlöslichen A, D, E und K sowie das wasserlösliche C und die acht B-Vitamine. Die Folsäure, deren Name vom lateinischen folium, Blatt, kommt, weil sie 1941 erstmals aus Spinatblättern gewonnen wurde, gehört zur Gruppe der B-Vitamine (Vitamin B9); besonders wichtig ist sie vor und während der Schwangerschaft, weil sie Neuralrohrdefekten beim ungeborenen Kind vorbeugt. Nur zwei kann der Körper in nennenswerter Menge selbst herstellen – Vitamin D in sonnenbeschienener Haut und Niacin aus Tryptophan –, und selbst die reichen oft nicht aus.\n\n| Essentielle Gruppe | Mitglieder | Typische Quellen |\n|---|---|---|\n| essentielle Aminosäuren | 9 (Histidin bis Valin) | Fleisch, Eier, Milchprodukte, Soja, Hülsenfrüchte mit Getreide |\n| essentielle Fettsäuren | Linol- und Alpha-Linolensäure | Pflanzenöle, Nüsse, Samen, Fisch |\n| Vitamine | 13 | Obst, Gemüse, Milchprodukte, Leber, Vollkorn |\n| Mineralstoffe und Spurenelemente | z. B. Eisen, Jod, Zink | abwechslungsreiche Kost |\n\nDas Wort „essentiell“ hat in der Ernährungslehre also eine präzise Bedeutung: nicht bloß wichtig, sondern vom Körper nicht selbst herstellbar. Alles auf der obigen Liste muss in der richtigen Menge auf dem Teller landen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1689",
+   "baseHash": "0a35fc6b0812",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-187",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-103",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Building Blocks of DNA",
+    "titleDe": "Die Bausteine der DNA",
+    "bodyEn": "Deoxyribonucleic acid, DNA, is the molecule in which every living cell stores its hereditary information. Its chemistry is surprisingly simple: a very long chain built from only four kinds of repeating unit, the nucleotides.\n\nEach nucleotide has three parts. A phosphate group and a five-carbon sugar, deoxyribose (identified by Phoebus Levene in 1929), alternate to form the backbone of the strand, rather like the rail of a ladder. Attached to every sugar is one of four nitrogen-containing bases, which stick out sideways and form the rungs. Two of the bases, adenine (A) and guanine (G), are the larger purines; the other two, cytosine (C) and thymine (T), are the smaller pyrimidines. The German biochemist Albrecht Kossel named adenine in 1885 and, with Albert Neumann, isolated thymine from calf thymus glands in 1893. The order of these four letters along the chain is the genetic code, and the human genome runs to about 3.1 billion of them. Reading every one of them was the goal of the Human Genome Project, the international research effort launched in 1990 that declared the sequence essentially complete in 2003; the last gaps were closed only in 2022.\n\nThe decisive insight came in 1953. Building on Erwin Chargaff's observation that in any DNA the amount of A equals the amount of T and the amount of G equals the amount of C, and on X-ray diffraction photographs taken by Rosalind Franklin and Maurice Wilkins in London, above all „Photo 51“, taken in Franklin's lab on 2 May 1952, James Watson and Francis Crick (1916–2004) in Cambridge worked out, in a paper published in Nature on 25 April 1953, that DNA consists of two strands running in opposite directions and wound around each other in a double helix. The bases of one strand pair with those of the other in a fixed way: adenine and thymine are joined by two hydrogen bonds, guanine and cytosine by three. Because each base has exactly one partner, either strand contains all the information needed to rebuild the other, which is how the molecule is copied before every cell division. Watson, Crick and Wilkins received the Nobel Prize in 1962; Franklin had died in 1958. Her part is recognised today: the English scientist was the first person to capture an image of DNA that revealed its helical shape.\n\nThe double helix makes one full turn every ten base pairs, about 3.4 nanometres, and is only two nanometres wide, yet the DNA in a single human cell would stretch to some two metres if unwound.\n\nDNA's close relative RNA, ribonucleic acid, differs in three ways. Its sugar is ribose, which carries an extra oxygen atom that deoxyribose lacks; it is usually single-stranded; and in place of thymine it uses the base uracil (U), first isolated from yeast in 1900, which pairs with adenine in the same way. RNA is the working copy of the genetic text: messenger RNA carries a gene's sequence to the ribosomes, where transfer RNA and ribosomal RNA translate it into protein.\n\n| Component | In DNA | In RNA |\n|---|---|---|\n| Sugar | deoxyribose | ribose |\n| Purine bases | adenine, guanine | adenine, guanine |\n| Pyrimidine bases | cytosine, thymine | cytosine, uracil |\n| Strands | two, double helix | usually one |\n\nWhoever is asked to name two DNA bases therefore has six correct combinations to choose from; the pair that everyone learns first, because it opens the alphabet and the ladder alike, is adenine and thymine.",
+    "bodyDe": "Die Desoxyribonukleinsäure, DNA, ist das Molekül, in dem jede lebende Zelle ihre Erbinformation speichert. Ihre Chemie ist überraschend einfach: eine sehr lange Kette, die aus nur vier Arten sich wiederholender Einheiten aufgebaut ist, den Nukleotiden.\n\nJedes Nukleotid besteht aus drei Teilen. Eine Phosphatgruppe und ein Zucker mit fünf Kohlenstoffatomen, die Desoxyribose (1929 von Phoebus Levene identifiziert), wechseln sich ab und bilden das Rückgrat des Strangs, ähnlich dem Holm einer Leiter. An jedem Zucker hängt eine von vier stickstoffhaltigen Basen, die seitlich abstehen und die Sprossen bilden. Zwei der Basen, Adenin (A) und Guanin (G), sind die größeren Purine; die anderen beiden, Cytosin (C) und Thymin (T), sind die kleineren Pyrimidine. Der deutsche Biochemiker Albrecht Kossel benannte 1885 das Adenin und isolierte 1893 mit Albert Neumann das Thymin aus Kälberthymus. Die Reihenfolge dieser vier Buchstaben entlang der Kette ist der genetische Code, und das menschliche Genom umfasst etwa 3,1 Milliarden davon. Sie alle zu lesen war das Ziel des Humangenomprojekts, des 1990 gestarteten internationalen Forschungsvorhabens, das die Sequenz 2003 für im Wesentlichen vollständig erklärte; die letzten Lücken wurden erst 2022 geschlossen.\n\nDie entscheidende Einsicht kam 1953. Aufbauend auf Erwin Chargaffs Beobachtung, dass in jeder DNA die Menge an A der Menge an T und die Menge an G der Menge an C entspricht, sowie auf Röntgenbeugungsaufnahmen von Rosalind Franklin und Maurice Wilkins in London, vor allem dem am 2. Mai 1952 in Franklins Labor entstandenen „Photo 51“, erkannten James Watson und Francis Crick (1916–2004) in Cambridge in einem am 25. April 1953 in Nature erschienenen Aufsatz, dass die DNA aus zwei gegenläufigen Strängen besteht, die in einer Doppelhelix umeinander gewunden sind. Die Basen des einen Strangs paaren sich auf feste Weise mit denen des anderen: Adenin und Thymin sind durch zwei Wasserstoffbrücken verbunden, Guanin und Cytosin durch drei. Weil jede Base genau einen Partner hat, enthält jeder der beiden Stränge die gesamte Information, um den anderen wieder aufzubauen, und genau so wird das Molekül vor jeder Zellteilung kopiert. Watson, Crick und Wilkins erhielten 1962 den Nobelpreis; Franklin war 1958 gestorben. Ihr Anteil ist heute anerkannt: Der englischen Wissenschaftlerin gelang als erstem Menschen ein Bild der DNA, das ihre Schraubenform verriet.\n\nDie Doppelhelix macht alle zehn Basenpaare, etwa 3,4 Nanometer, eine volle Windung und ist nur zwei Nanometer breit, und doch würde die DNA einer einzigen menschlichen Zelle entwunden rund zwei Meter messen.\n\nDie nahe Verwandte der DNA, die RNA oder Ribonukleinsäure, unterscheidet sich in drei Punkten. Ihr Zucker ist die Ribose, die ein zusätzliches Sauerstoffatom trägt, das der Desoxyribose fehlt; sie ist meist einzelsträngig; und anstelle von Thymin verwendet sie die Base Uracil (U), die 1900 erstmals aus Hefe isoliert wurde, die sich auf dieselbe Weise mit Adenin paart. Die RNA ist die Arbeitskopie des genetischen Textes: Boten-RNA trägt die Sequenz eines Gens zu den Ribosomen, wo Transfer-RNA und ribosomale RNA sie in Protein übersetzen.\n\n| Bestandteil | In der DNA | In der RNA |\n|---|---|---|\n| Zucker | Desoxyribose | Ribose |\n| Purinbasen | Adenin, Guanin | Adenin, Guanin |\n| Pyrimidinbasen | Cytosin, Thymin | Cytosin, Uracil |\n| Stränge | zwei, Doppelhelix | meist einer |\n\nWer zwei DNA-Basen nennen soll, hat also sechs richtige Kombinationen zur Auswahl; das Paar, das jeder zuerst lernt, weil es das Alphabet und die Leiter zugleich eröffnet, ist Adenin und Thymin.",
+    "notesEn": "The card asks for any two of the four DNA bases; adenine, thymine, guanine and cytosine in any pairing are all correct. The answer given is one representative pair.",
+    "notesDe": "Die Karte fragt nach zwei beliebigen der vier DNA-Basen; Adenin, Thymin, Guanin und Cytosin sind in jeder Kombination richtig. Die angegebene Antwort ist ein repräsentatives Paar."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1989",
+   "baseHash": "ff2a2559e010",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-263",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-399",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Peas, Pigeons and a Double Helix: Five Publications That Founded Modern Biology",
+    "titleDe": "Erbsen, Tauben und eine Doppelhelix: fünf Veröffentlichungen, die die moderne Biologie begründeten",
+    "bodyEn": "The history of the life sciences can be told through a handful of publications, each of which changed what a biologist could know. Surprisingly, several of them were ignored when they appeared.\n\nThe most famous case of neglect is **Gregor Mendel**. An Augustinian friar in the abbey of St Thomas in Brünn (today Brno), Mendel spent eight years crossing some 28,000 pea plants and counting how traits such as seed shape and flower colour were passed on. He read his results to the Brünn Natural History Society in 1865 and published them in 1866 as „Versuche über Pflanzen-Hybriden“ (Experiments on Plant Hybrids). The paper set out what are now called Mendel's laws: traits are carried by discrete factors, one inherited from each parent; some factors are dominant over others; and different traits are inherited independently. Almost nobody read it. Only in 1900, sixteen years after Mendel's death, did three botanists rediscover his rules, and the word „genetics“ was coined a few years later.\n\nMendel had in fact read the work of **Charles Darwin**, whose „On the Origin of Species“ appeared in London on 24 November 1859 and sold out on the first day. Darwin argued that species change over time through natural selection acting on small inherited variations, an idea he supported with evidence from pigeon breeding, fossils, geography and his voyage on the Beagle. That voyage nearly did not happen: Darwin's father opposed it, and it was his uncle, the pottery manufacturer Josiah Wedgwood II, who in 1831 talked him round, so that the 22-year-old could sail as the ship's naturalist. What Darwin lacked was a mechanism of inheritance, and it is one of the ironies of science that the answer lay unread in a Moravian journal.\n\nBoth men worked within a framework created a century earlier by **Carl Linnaeus**. The Swedish naturalist's „Systema Naturae“, first published in Leiden in 1735 as a pamphlet of eleven pages, grew through twelve editions into the system of kingdoms, classes, orders, genera and species still used today. The science of sorting living things into such ranked categories is called taxonomy, and Linnaeus is regarded as its father. Its tenth edition of 1758 introduced consistent two-part Latin names, such as Homo sapiens, and is the formal starting point of zoological nomenclature.\n\nMuch earlier, in 1628, the English physician **William Harvey** had published „Exercitatio anatomica de motu cordis et sanguinis in animalibus“ in Frankfurt. By measuring how much blood the heart pumps, he showed that blood must circulate continuously through arteries and veins rather than being consumed by the tissues, overturning the teaching of Galen that had stood for 1,400 years.\n\nThe chain closes on 25 April 1953, when **James Watson and Francis Crick** published a one-page letter in the journal Nature proposing that DNA is a double helix whose paired bases explain how genetic information is copied. Their model relied on X-ray photographs taken by Rosalind Franklin at King's College London; Watson, Crick and Maurice Wilkins received the Nobel Prize in 1962, four years after Franklin's death.\n\n| Year | Author(s) | Work | Contribution |\n|---|---|---|---|\n| 1628 | William Harvey | De motu cordis | Circulation of the blood |\n| 1735 | Carl Linnaeus | Systema Naturae | Biological classification |\n| 1859 | Charles Darwin | On the Origin of Species | Natural selection |\n| 1866 | Gregor Mendel | Versuche über Pflanzen-Hybriden | Laws of heredity |\n| 1953 | James Watson and Francis Crick | Nature letter | Structure of DNA |",
+    "bodyDe": "Die Geschichte der Lebenswissenschaften lässt sich anhand einer Handvoll Veröffentlichungen erzählen, von denen jede veränderte, was ein Biologe wissen konnte. Erstaunlicherweise wurden mehrere von ihnen bei ihrem Erscheinen ignoriert.\n\nDer berühmteste Fall von Nichtbeachtung ist **Gregor Mendel**. Als Augustinermönch im Kloster St. Thomas in Brünn (heute Brno) verbrachte Mendel acht Jahre damit, rund 28.000 Erbsenpflanzen zu kreuzen und zu zählen, wie Merkmale wie Samenform und Blütenfarbe weitergegeben wurden. Er trug seine Ergebnisse 1865 dem Naturforschenden Verein in Brünn vor und veröffentlichte sie 1866 als „Versuche über Pflanzen-Hybriden“. Die Arbeit legte dar, was heute Mendelsche Regeln heißt: Merkmale werden von diskreten Faktoren getragen, je einer von jedem Elternteil vererbt; manche Faktoren sind gegenüber anderen dominant; und verschiedene Merkmale werden unabhängig voneinander vererbt. Fast niemand las sie. Erst 1900, sechzehn Jahre nach Mendels Tod, entdeckten drei Botaniker seine Regeln wieder, und das Wort „Genetik“ wurde wenige Jahre später geprägt.\n\nMendel hatte tatsächlich die Arbeit von **Charles Darwin** gelesen, dessen „Über die Entstehung der Arten“ am 24. November 1859 in London erschien und am ersten Tag ausverkauft war. Darwin argumentierte, dass Arten sich im Lauf der Zeit durch natürliche Selektion verändern, die auf kleine vererbte Variationen wirkt, eine Idee, die er mit Belegen aus der Taubenzucht, aus Fossilien, aus der Geografie und von seiner Reise auf der Beagle stützte. Beinahe hätte diese Reise nicht stattgefunden: Darwins Vater war dagegen, und erst sein Onkel, der Keramikfabrikant Josiah Wedgwood II, stimmte ihn 1831 um, sodass der 22-Jährige als Naturforscher an Bord gehen konnte. Was Darwin fehlte, war ein Mechanismus der Vererbung, und es gehört zu den Ironien der Wissenschaft, dass die Antwort ungelesen in einer mährischen Zeitschrift lag.\n\nBeide Männer arbeiteten in einem Rahmen, den ein Jahrhundert zuvor **Carl von Linné** geschaffen hatte. Das „Systema Naturae“ des schwedischen Naturforschers, 1735 in Leiden zunächst als elfseitige Schrift veröffentlicht, wuchs über zwölf Auflagen zu dem System aus Reichen, Klassen, Ordnungen, Gattungen und Arten, das bis heute verwendet wird. Die Wissenschaft, Lebewesen in solche Rangstufen einzuordnen, heißt Taxonomie, und Linné gilt als ihr Vater. Seine zehnte Auflage von 1758 führte einheitliche zweiteilige lateinische Namen wie Homo sapiens ein und ist der formale Ausgangspunkt der zoologischen Nomenklatur.\n\nViel früher, 1628, hatte der englische Arzt **William Harvey** in Frankfurt „Exercitatio anatomica de motu cordis et sanguinis in animalibus“ veröffentlicht. Indem er maß, wie viel Blut das Herz pumpt, zeigte er, dass Blut ständig durch Arterien und Venen kreisen muss, statt vom Gewebe verbraucht zu werden, und stürzte damit die 1400 Jahre alte Lehre Galens.\n\nDie Kette schließt sich am 25. April 1953, als **James Watson und Francis Crick** in der Zeitschrift Nature einen einseitigen Brief veröffentlichten, in dem sie vorschlugen, dass die DNA eine Doppelhelix ist, deren gepaarte Basen erklären, wie genetische Information kopiert wird. Ihr Modell stützte sich auf Röntgenaufnahmen von Rosalind Franklin am King's College London; Watson, Crick und Maurice Wilkins erhielten 1962 den Nobelpreis, vier Jahre nach Franklins Tod.\n\n| Jahr | Autor(en) | Werk | Beitrag |\n|---|---|---|---|\n| 1628 | William Harvey | De motu cordis | Blutkreislauf |\n| 1735 | Carl von Linné | Systema Naturae | Biologische Klassifikation |\n| 1859 | Charles Darwin | Über die Entstehung der Arten | Natürliche Selektion |\n| 1866 | Gregor Mendel | Versuche über Pflanzen-Hybriden | Vererbungsregeln |\n| 1953 | James Watson und Francis Crick | Brief in Nature | Struktur der DNA |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1641",
+   "baseHash": "c5d5dc3eabb9",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-398",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-308",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Bacteria, Dishes and Processes That Bear a Scientist's Name",
+    "titleDe": "Bakterien, Schalen und Verfahren, die den Namen eines Forschers tragen",
+    "bodyEn": "Botanists and zoologists have named species after people for centuries, and bacteriologists followed suit as soon as they had organisms to name. The result is that some of the most feared germs in medicine and the kitchen carry the surnames of the men who first isolated them – or, in one famous case, of the boss of the man who did.\n\nSalmonella is the best-known example. The bacterium behind most food poisoning from eggs and poultry was isolated in 1885 from pigs by Theobald Smith, a young researcher in the US Bureau of Animal Industry. The bureau's chief, the veterinarian Daniel Elmer Salmon, published the finding under his own name, and when the French bacteriologist Joseph Lignières proposed a genus name in 1900 he chose Salmonella. There are now more than 2,500 serotypes; Salmonella Enteritidis and Salmonella Typhimurium cause most human infections, and Salmonella Typhi causes typhoid fever.\n\nEscherichia coli honours a paediatrician. In 1885 Theodor Escherich, a German-born professor working in Munich and later Vienna, described a rod-shaped organism in the stools of healthy infants that he called „Bacterium coli commune“. Renamed after him in 1919, E. coli is the workhorse of molecular biology, a harmless resident of every human gut and – in strains such as O157:H7 – a dangerous cause of bloody diarrhoea.\n\nShigella is named after Kiyoshi Shiga, who in 1897, during an epidemic in Japan that killed more than 20,000 people, identified the bacillus responsible for bacillary dysentery. Shigella is spread by contaminated water and hands, needs only a few dozen cells to cause infection, and produces the Shiga toxin later found in dangerous E. coli strains.\n\nYersinia commemorates Alexandre Yersin, the Swiss-French physician who, working for the Pasteur Institute in Hong Kong in June 1894, isolated the plague bacillus within days of the Japanese scientist Kitasato. The genus, named in 1944, also includes Yersinia enterocolitica, a common cause of diarrhoea from undercooked pork.\n\nListeria was named in 1940 in honour of Joseph Lister, the pioneer of antiseptic surgery, although Lister himself had nothing to do with its discovery. Listeria monocytogenes grows even in the refrigerator, survives in raw-milk cheese, smoked fish and cold cuts, and while healthy adults barely notice it, in pregnant women it can cause miscarriage and stillbirth.\n\nMicrobiology's eponyms do not stop at the germs themselves. The shallow glass dish with a loose lid in which bacteria are grown on a layer of nutrient agar is the Petri dish, introduced in 1887 by Julius Richard Petri, an assistant of Robert Koch in Berlin; it protects the culture from airborne contamination and lets it be examined under the microscope without being disturbed. And the gentle heating of milk, juice or wine to kill harmful microorganisms is called pasteurisation, after Louis Pasteur, who in 1864 showed that briefly heating wine to a moderate temperature kept it from spoiling. Unlike sterilisation, pasteurisation stays below the boiling point and does not kill every spore, which is why pasteurised milk still has to be kept cold.\n\n| Genus | Named after | Profession | Typical illness |\n|---|---|---|---|\n| Salmonella | Daniel Elmer Salmon | US veterinarian | Salmonellosis, typhoid |\n| Escherichia coli | Theodor Escherich | Paediatrician | Diarrhoea, urinary infections |\n| Shigella | Kiyoshi Shiga | Japanese bacteriologist | Bacillary dysentery |\n| Yersinia | Alexandre Yersin | Swiss-French bacteriologist | Plague, yersiniosis |\n| Listeria | Joseph Lister | British surgeon | Listeriosis |\n\nThe naming convention has one odd consequence: a scientist's surest route to immortality is to have a disease – or a piece of laboratory glassware – named after him.",
+    "bodyDe": "Botaniker und Zoologen benennen seit Jahrhunderten Arten nach Personen, und die Bakteriologen zogen nach, sobald sie Organismen zu benennen hatten. Das Ergebnis: Einige der gefürchtetsten Keime in Medizin und Küche tragen die Nachnamen der Männer, die sie zuerst isolierten – oder, in einem berühmten Fall, des Vorgesetzten desjenigen, der es tat.\n\nSalmonellen sind das bekannteste Beispiel. Das Bakterium hinter den meisten Lebensmittelvergiftungen durch Eier und Geflügel wurde 1885 von Theobald Smith, einem jungen Forscher im US-Bureau of Animal Industry, aus Schweinen isoliert. Der Leiter der Behörde, der Veterinärmediziner Daniel Elmer Salmon, veröffentlichte den Befund unter seinem eigenen Namen, und als der französische Bakteriologe Joseph Lignières 1900 einen Gattungsnamen vorschlug, wählte er Salmonella. Heute kennt man mehr als 2500 Serotypen; Salmonella Enteritidis und Salmonella Typhimurium verursachen die meisten Infektionen beim Menschen, Salmonella Typhi den Typhus.\n\nEscherichia coli ehrt einen Kinderarzt. 1885 beschrieb Theodor Escherich, ein aus Deutschland stammender Professor, der in München und später in Wien arbeitete, im Stuhl gesunder Säuglinge ein stäbchenförmiges Bakterium, das er „Bacterium coli commune“ nannte. 1919 nach ihm umbenannt, ist E. coli das Arbeitspferd der Molekularbiologie, ein harmloser Bewohner jedes menschlichen Darms und – in Stämmen wie O157:H7 – ein gefährlicher Erreger blutiger Durchfälle.\n\nShigellen sind nach Kiyoshi Shiga benannt, der 1897 während einer Epidemie in Japan, die mehr als 20.000 Menschen tötete, den Erreger der Bakterienruhr identifizierte. Shigellen werden über verunreinigtes Wasser und Hände übertragen, brauchen nur wenige Dutzend Zellen für eine Infektion und bilden das Shiga-Toxin, das später auch in gefährlichen E.-coli-Stämmen gefunden wurde.\n\nYersinien erinnern an Alexandre Yersin, den schweizerisch-französischen Arzt, der im Juni 1894 im Auftrag des Pasteur-Instituts in Hongkong den Pesterreger isolierte – nur Tage nach dem japanischen Forscher Kitasato. Zur 1944 benannten Gattung gehört auch Yersinia enterocolitica, ein häufiger Auslöser von Durchfall durch nicht durchgegartes Schweinefleisch.\n\nListerien wurden 1940 zu Ehren von Joseph Lister benannt, dem Pionier der antiseptischen Chirurgie, obwohl Lister selbst mit ihrer Entdeckung nichts zu tun hatte. Listeria monocytogenes wächst sogar im Kühlschrank, überlebt in Rohmilchkäse, Räucherfisch und Aufschnitt, und während gesunde Erwachsene sie kaum bemerken, kann sie bei Schwangeren Fehl- und Totgeburten auslösen.\n\nDie Eponyme der Mikrobiologie hören bei den Keimen nicht auf. Die flache Glasschale mit lose aufliegendem Deckel, in der Bakterien auf einer Schicht Nähragar gezüchtet werden, ist die Petrischale, 1887 von Julius Richard Petri eingeführt, einem Assistenten Robert Kochs in Berlin; sie schützt die Kultur vor Verunreinigungen aus der Luft und lässt sich unter dem Mikroskop untersuchen, ohne dass man sie stören muss. Und das schonende Erhitzen von Milch, Saft oder Wein, um schädliche Mikroorganismen abzutöten, heißt Pasteurisierung – nach Louis Pasteur, der 1864 zeigte, dass kurzes Erwärmen auf eine mäßige Temperatur Wein vor dem Verderben bewahrt. Anders als die Sterilisation bleibt die Pasteurisierung unter dem Siedepunkt und tötet nicht jede Spore ab, weshalb pasteurisierte Milch trotzdem gekühlt werden muss.\n\n| Gattung | Benannt nach | Beruf | Typische Krankheit |\n|---|---|---|---|\n| Salmonellen | Daniel Elmer Salmon | US-Veterinärmediziner | Salmonellose, Typhus |\n| Escherichia coli | Theodor Escherich | Kinderarzt | Durchfall, Harnwegsinfekte |\n| Shigellen | Kiyoshi Shiga | Japanischer Bakteriologe | Bakterienruhr |\n| Yersinien | Alexandre Yersin | Schweizerisch-französischer Bakteriologe | Pest, Yersiniose |\n| Listerien | Joseph Lister | Britischer Chirurg | Listeriose |\n\nDie Benennungspraxis hat eine seltsame Folge: Der sicherste Weg eines Forschers zur Unsterblichkeit ist, dass eine Krankheit – oder ein Stück Laborglas – nach ihm benannt wird.",
+    "notesEn": "Salmonella was isolated in 1885 by Theobald Smith, an assistant of the veterinarian Daniel Elmer Salmon, after whom the genus was named in 1900.",
+    "notesDe": "Salmonellen wurden 1885 von Theobald Smith isoliert, einem Mitarbeiter des Veterinärmediziners Daniel Elmer Salmon, nach dem die Gattung 1900 benannt wurde."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1929",
+   "baseHash": "e9ada1f46136",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-342",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Organs and Their Cells",
+    "titleDe": "Organe und ihre Zellen",
+    "bodyEn": "Every organ has a signature cell, and knowing the cell usually tells you what the organ does.\n\nThe liver is the body's largest internal organ, a reddish-brown wedge of about 1.5 kilograms tucked under the right ribs. Roughly 80 percent of its volume is made up of hepatocytes, the polygonal epithelial cells that do almost all of its chemistry: they store glucose as glycogen, manufacture albumin and the clotting factors, break down alcohol and drugs, turn ammonia into urea and secrete up to a litre of bile a day. The remaining fifth is shared by the blood vessels, the bile ductules, the Kupffer cells that eat bacteria and old red cells, and the stellate cells that store vitamin A and, when the liver is injured, lay down scar tissue. Hepatocytes are arranged in hexagonal lobules around a central vein, and they can regenerate: a liver that has lost two thirds of its mass grows back within weeks, which is why living donors can give a lobe, as first done successfully by Silvano Raia in São Paulo in July 1989. Thomas Starzl attempted the first human liver transplant in 1963.\n\nThe heart is built from cardiomyocytes, striated muscle cells that are joined end to end by intercalated discs so that an electrical impulse from the sinus node sweeps across them as one. They are among the most durable cells in the body, contracting about 100,000 times a day for a lifetime, and among the least replaceable; only about one percent of them are renewed each year in adults, as Olaf Bergmann's team showed with carbon-14 dating in 2009, which is why the scar left by a heart attack does not beat. The first human heart transplant was performed by Christiaan Barnard in Cape Town on 3 December 1967.\n\nEach kidney contains about one million nephrons, each a filtering ball of capillaries – the glomerulus – followed by a long tubule. Together the two kidneys filter about 180 litres of primary urine a day and reabsorb almost all of it, returning water, salt, glucose and bicarbonate to the blood and leaving roughly 1.5 litres of urine. To do so they receive about 1,800 litres of blood a day, so that the body's entire blood volume passes through the kidneys about 300 times every day. The kidney was also the first organ to be transplanted successfully, in Boston on 23 December 1954.\n\nThe lung is mostly air. Its 300 million or so alveoli, thin-walled sacs at the ends of the bronchial tree, present a gas-exchange surface of about 70 to 100 square metres. Type I pneumocytes form the wafer-thin wall through which oxygen diffuses; the plumper type II cells make surfactant, the detergent that keeps the sacs from collapsing on each exhalation. The first lung transplant with long-term success was carried out by Joel Cooper in Toronto on 7 November 1983.\n\nThe pancreas is two organs in one. Ninety-eight percent of it is exocrine tissue that pumps digestive enzymes into the duodenum. Scattered through it are around a million islets of Langerhans, first described by the Berlin medical student Paul Langerhans in 1869, whose beta cells secrete insulin and alpha cells glucagon. When Frederick Banting and Charles Best isolated insulin from dog pancreases in Toronto in 1921, diabetes stopped being a death sentence: on 11 January 1922 the 13-year-old Leonard Thompson became the first patient to receive an insulin injection.\n\n| Organ | Signature cell or unit |\n|---|---|\n| liver | hepatocyte (80 percent of volume) |\n| heart | cardiomyocyte |\n| kidney | nephron (about one million per kidney) |\n| lung | alveolus, type I and type II pneumocytes |\n| pancreas | islets of Langerhans, beta cells |",
+    "bodyDe": "Jedes Organ hat eine charakteristische Zelle, und wer die Zelle kennt, weiß meist, was das Organ tut.\n\nDie Leber ist das größte innere Organ des Körpers, ein rotbrauner Keil von etwa 1,5 Kilogramm unter den rechten Rippen. Rund 80 Prozent ihres Volumens bestehen aus Hepatozyten, den vieleckigen Epithelzellen, die fast ihre gesamte Chemie erledigen: Sie speichern Glukose als Glykogen, stellen Albumin und die Gerinnungsfaktoren her, bauen Alkohol und Medikamente ab, wandeln Ammoniak in Harnstoff um und sondern täglich bis zu einen Liter Galle ab. Das restliche Fünftel teilen sich die Blutgefäße, die Gallenkanälchen, die Kupffer-Zellen, die Bakterien und alte rote Blutkörperchen fressen, und die Sternzellen, die Vitamin A speichern und bei Verletzungen der Leber Narbengewebe bilden. Die Hepatozyten sind in sechseckigen Läppchen um eine Zentralvene angeordnet, und sie können sich regenerieren: Eine Leber, die zwei Drittel ihrer Masse verloren hat, wächst binnen Wochen nach, weshalb Lebendspender einen Lappen abgeben können – erstmals erfolgreich im Juli 1989 durch Silvano Raia in São Paulo. Die erste Lebertransplantation beim Menschen versuchte Thomas Starzl 1963.\n\nDas Herz ist aus Kardiomyozyten aufgebaut, quergestreiften Muskelzellen, die durch Glanzstreifen Ende an Ende verbunden sind, sodass ein elektrischer Impuls aus dem Sinusknoten wie über eine einzige Zelle hinwegfegt. Sie gehören zu den ausdauerndsten Zellen des Körpers – sie ziehen sich ein Leben lang etwa 100.000-mal am Tag zusammen – und zu den am wenigsten ersetzbaren; bei Erwachsenen wird jährlich nur rund ein Prozent von ihnen erneuert, wie das Team um Olaf Bergmann 2009 mit der C-14-Methode zeigte, weshalb die Narbe eines Herzinfarkts nicht schlägt. Die erste Herztransplantation beim Menschen gelang Christiaan Barnard am 3. Dezember 1967 in Kapstadt.\n\nJede Niere enthält etwa eine Million Nephrone, jedes ein filterndes Kapillarknäuel – das Glomerulum – gefolgt von einem langen Kanälchen. Zusammen filtern die beiden Nieren täglich rund 180 Liter Primärharn und nehmen fast alles davon wieder auf; Wasser, Salz, Glukose und Bikarbonat kehren ins Blut zurück, übrig bleiben etwa 1,5 Liter Urin. Dazu strömen täglich rund 1800 Liter Blut durch sie, sodass das gesamte Blut des Körpers rund 300 Mal am Tag die Nieren passiert. Die Niere war auch das erste erfolgreich verpflanzte Organ – am 23. Dezember 1954 in Boston.\n\nDie Lunge ist überwiegend Luft. Ihre rund 300 Millionen Alveolen, dünnwandige Bläschen an den Enden des Bronchialbaums, bieten eine Gasaustauschfläche von etwa 70 bis 100 Quadratmetern. Pneumozyten vom Typ I bilden die hauchdünne Wand, durch die der Sauerstoff diffundiert; die rundlicheren Typ-II-Zellen erzeugen Surfactant, das Netzmittel, das die Bläschen bei jedem Ausatmen vor dem Zusammenfallen bewahrt. Die erste auf Dauer erfolgreiche Lungentransplantation gelang Joel Cooper am 7. November 1983 in Toronto.\n\nDie Bauchspeicheldrüse ist zwei Organe in einem. Zu 98 Prozent besteht sie aus exokrinem Gewebe, das Verdauungsenzyme in den Zwölffingerdarm pumpt. Darin verstreut liegen rund eine Million Langerhans-Inseln, 1869 vom Berliner Medizinstudenten Paul Langerhans erstmals beschrieben, deren Betazellen Insulin und deren Alphazellen Glukagon ausschütten. Als Frederick Banting und Charles Best 1921 in Toronto Insulin aus Hundepankreas isolierten, hörte Diabetes auf, ein Todesurteil zu sein: Am 11. Januar 1922 erhielt der 13-jährige Leonard Thompson als erster Patient eine Insulinspritze.\n\n| Organ | Charakteristische Zelle oder Einheit |\n|---|---|\n| Leber | Hepatozyt (80 Prozent des Volumens) |\n| Herz | Kardiomyozyt |\n| Niere | Nephron (etwa eine Million je Niere) |\n| Lunge | Alveole, Pneumozyten Typ I und II |\n| Bauchspeicheldrüse | Langerhans-Inseln, Betazellen |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-145",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-135",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "After which video-game character did scientists name a gene that shapes the limbs and brain of vertebrate embryos?",
+      "de": "Nach welcher Videospielfigur benannten Wissenschaftler ein Gen, das Gliedmaßen und Gehirn von Wirbeltierembryonen formt?",
+      "answerEn": "Sonic the Hedgehog",
+      "answerDe": "Sonic the Hedgehog",
+      "timeline": {
+       "kind": "event",
+       "start": "1993",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Robert Riddle in Cliff Tabin's lab names the vertebrate gene sonic hedgehog after the Sega game character",
+       "labelDe": "Robert Riddle aus dem Labor von Cliff Tabin benennt das Wirbeltier-Gen Sonic hedgehog nach der Sega-Spielfigur"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sonic_hedgehog_protein",
+       "title": "Sonic hedgehog protein",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "After which character from The Wizard of Oz did scientists name a fruit-fly gene without which no heart forms?",
+      "de": "Nach welcher Figur aus dem Zauberer von Oz benannten Wissenschaftler ein Fruchtfliegen-Gen, ohne das sich kein Herz bildet?",
+      "answerEn": "the Tin Man",
+      "answerDe": "der Blechmann",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1993",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The fruit-fly gene tinman, without which no heart forms, is described",
+       "labelDe": "Das Fruchtfliegen-Gen tinman, ohne das sich kein Herz bildet, wird beschrieben"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tinman_gene",
+       "title": "tinman (gene)",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "After which Pokémon did Japanese scientists name a retinal protein, discovered in 2008, that is needed for the fast transmission of visual signals?",
+      "de": "Nach welchem Pokémon benannten japanische Wissenschaftler ein 2008 entdecktes Protein der Netzhaut, das für die schnelle Weiterleitung von Sehsignalen nötig ist?",
+      "answerEn": "Pikachu",
+      "answerDe": "Pikachu",
+      "timeline": {
+       "kind": "discovery",
+       "start": "2008",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Shigeru Sato and colleagues discover the retinal protein pikachurin, named after Pikachu",
+       "labelDe": "Shigeru Sato und Kollegen entdecken das Netzhautprotein Pikachurin, benannt nach Pikachu"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pikachurin",
+       "title": "Pikachurin",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Kenny, Sonic and Pac-Man: Pop Culture in the Laboratory",
+    "titleDe": "Kenny, Sonic und Pac-Man: Popkultur im Labor",
+    "bodyEn": "Scientists name what they find, and when the find is a gene in a fruit fly, the name is often a joke. Fly geneticists in particular have a long tradition of naming genes after what goes wrong when the gene is broken, and pop culture supplies an endless stock of characters to choose from.\n\nThe most macabre example comes from Strasbourg. In 2000 the researcher Sophie Rutschmann and her colleagues described mutant fruit flies that could not fight off certain bacteria: once infected, flies with the faulty gene died within two days. The team named the gene kenny, after Kenny, the boy in the cartoon series South Park who dies in almost every episode. Behind the joke lies serious biology: kenny is the fly's version of a protein that helps switch on the immune response in humans too.\n\nFly embryos with a broken hedgehog gene are covered in spiky bristles, which is how that gene got its name. When Robert Riddle, a postdoctoral researcher in Cliff Tabin's laboratory at Harvard, found one of its vertebrate relatives in the early 1990s, he named it after Sonic the Hedgehog, the hero of a Sega video game whose advertisement his wife had brought home in a magazine. Sonic hedgehog turned out to be one of the most important signals in the embryo, shaping the limbs, the brain and the spinal cord – a name doctors now have to use when explaining serious birth defects to parents.\n\nAnother fly gene owes its name to The Wizard of Oz. Without tinman, a fly embryo never forms a heart – just like the Tin Man, who travels to the Emerald City to ask the wizard for one. Its human counterpart, NKX2-5, is needed to build the heart as well.\n\nJapanese researchers turned to Pokémon. In 2008 Shigeru Sato and his colleagues discovered a protein in the retina that links the light-sensing cells to the next nerve cells and is needed for the fast transmission of visual signals. Because of that speed they named it pikachurin, after Pikachu and his lightning-fast moves.\n\nSometimes it is not a name but a whole game that ends up in the lab. In 2016 researchers at the University College of Southeast Norway built a tiny maze modelled on Pac-Man to study how microbes hunt one another: single-celled euglena and ciliates played the part of Pac-Man, while larger rotifers took the role of the ghosts.\n\n| Lab find | Named after | From |\n|---|---|---|\n| kenny gene | Kenny | South Park |\n| sonic hedgehog gene | Sonic the Hedgehog | Sega video game |\n| tinman gene | the Tin Man | The Wizard of Oz |\n| pikachurin | Pikachu | Pokémon |\n| microbe maze | Pac-Man | Namco arcade game |",
+    "bodyDe": "Wissenschaftler benennen, was sie finden, und wenn der Fund ein Gen einer Fruchtfliege ist, ist der Name oft ein Scherz. Gerade Fliegengenetiker haben eine lange Tradition, Gene danach zu benennen, was schiefgeht, wenn das Gen defekt ist – und die Popkultur liefert einen unerschöpflichen Vorrat an Figuren.\n\nDas makaberste Beispiel stammt aus Straßburg. Im Jahr 2000 beschrieben die Forscherin Sophie Rutschmann und ihre Kollegen mutierte Fruchtfliegen, die sich gegen bestimmte Bakterien nicht wehren konnten: Nach einer Infektion starben Fliegen mit dem defekten Gen innerhalb von zwei Tagen. Das Team nannte das Gen kenny, nach Kenny, dem Jungen aus der Zeichentrickserie South Park, der in fast jeder Folge stirbt. Hinter dem Witz steckt ernsthafte Biologie: kenny ist die Fliegenversion eines Proteins, das auch beim Menschen hilft, die Immunantwort einzuschalten.\n\nFliegenembryonen mit defektem hedgehog-Gen sind mit stacheligen Borsten bedeckt, daher der Name dieses Gens. Als Robert Riddle, Postdoktorand im Labor von Cliff Tabin in Harvard, Anfang der 1990er-Jahre einen seiner Verwandten bei Wirbeltieren fand, benannte er ihn nach Sonic the Hedgehog, dem Helden eines Sega-Videospiels, dessen Werbung seine Frau in einer Zeitschrift mit nach Hause gebracht hatte. Sonic hedgehog erwies sich als eines der wichtigsten Signale im Embryo, das Gliedmaßen, Gehirn und Rückenmark formt – ein Name, den Ärzte heute verwenden müssen, wenn sie Eltern schwere Fehlbildungen erklären.\n\nEin weiteres Fliegengen verdankt seinen Namen dem Zauberer von Oz. Ohne tinman bildet ein Fliegenembryo nie ein Herz – genau wie der Blechmann, der in die Smaragdstadt reist, um den Zauberer um eines zu bitten. Auch sein menschliches Gegenstück, NKX2-5, wird für den Aufbau des Herzens gebraucht.\n\nJapanische Forscher griffen zu Pokémon. 2008 entdeckten Shigeru Sato und seine Kollegen ein Protein in der Netzhaut, das die lichtempfindlichen Zellen mit den nachgeschalteten Nervenzellen verbindet und für die schnelle Weiterleitung von Sehsignalen nötig ist. Wegen dieser Schnelligkeit nannten sie es Pikachurin, nach Pikachu und seinen blitzschnellen Bewegungen.\n\nManchmal landet nicht nur ein Name, sondern ein ganzes Spiel im Labor. 2016 bauten Forscher am University College of Southeast Norway ein winziges Labyrinth nach dem Vorbild von Pac-Man, um zu untersuchen, wie Mikroben einander jagen: Einzellige Euglenen und Wimpertierchen spielten Pac-Man, größere Rädertierchen übernahmen die Rolle der Geister.\n\n| Laborfund | Benannt nach | Herkunft |\n|---|---|---|\n| Gen kenny | Kenny | South Park |\n| Gen Sonic hedgehog | Sonic the Hedgehog | Sega-Videospiel |\n| Gen tinman | der Blechmann | Der Zauberer von Oz |\n| Pikachurin | Pikachu | Pokémon |\n| Mikroben-Labyrinth | Pac-Man | Namco-Arcadespiel |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-063",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-270",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What German word, meaning 'chamber of wonders', names the Renaissance collections from which natural history museums grew?",
+      "de": "Mit welchem deutschen Wort bezeichnet man die Sammlungen der Renaissance, aus denen die Naturkundemuseen hervorgingen?",
+      "answerEn": "Wunderkammer",
+      "answerDe": "Wunderkammer",
+      "timeline": {
+       "kind": "era",
+       "start": "1550",
+       "end": "1750",
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Heyday of the cabinets of curiosities (Wunderkammern) in Europe",
+       "labelDe": "Blütezeit der Wunderkammern in Europa"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Cabinet_of_curiosities",
+       "title": "Cabinet of curiosities",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Danish physician's cabinet of curiosities in Copenhagen was described in the 'Museum Wormianum', published in 1655?",
+      "de": "Welcher dänische Arzt beschrieb seine Kopenhagener Wunderkammer im 1655 erschienenen „Museum Wormianum“?",
+      "answerEn": "Ole Worm",
+      "answerDe": "Ole Worm",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1588-05-13",
+       "end": "1654-08-31",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of Ole Worm, Danish physician and collector",
+       "labelDe": "Leben von Ole Worm, dänischer Arzt und Sammler"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Ole_Worm",
+       "title": "Ole Worm",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which physician and collector bequeathed some 71,000 objects to the British nation in 1753, laying the foundation of the British Museum?",
+      "de": "Welcher Arzt und Sammler vermachte 1753 der britischen Nation rund 71.000 Objekte und legte damit den Grundstock des British Museum?",
+      "answerEn": "Hans Sloane",
+      "answerDe": "Hans Sloane",
+      "timeline": {
+       "kind": "event",
+       "start": "1753",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Parliament accepts Hans Sloane's bequest of about 71,000 objects, the founding collection of the British Museum",
+       "labelDe": "Das Parlament nimmt Hans Sloanes Vermächtnis von rund 71.000 Objekten an, den Grundstock des British Museum"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hans_Sloane",
+       "title": "Hans Sloane",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Cabinets of Curiosities: Where Natural History Museums Began",
+    "titleDe": "Wunderkammern: Wo die Naturkundemuseen begannen",
+    "bodyEn": "Long before there were natural history museums, there were rooms full of wonders. In the sixteenth and seventeenth centuries princes, physicians and scholars all over Europe filled cabinets and whole chambers with shells, minerals, stuffed animals, dried plants, fossils, antiquities and curious objects made by human hands. In German such a collection was called a Wunderkammer, a \"chamber of wonders\", or Kunstkammer; in English it became the cabinet of curiosities. Nothing was sorted the way a modern museum sorts it – a narwhal tusk might lie next to a clock – but these rooms were where the systematic study of nature began.\n\nThe oldest natural history museum still in existence grew out of this world. In 1591 Grand Duke Ferdinando I de' Medici founded a gallery of natural objects beside the botanical garden of the University of Pisa; today the museum of the University of Pisa is housed in the old Charterhouse of Calci just outside the city. Private collections in Verona and Zurich were older, but they have not survived, which is why Pisa is usually named as the oldest.\n\nOne way to keep animals for such a collection was to skin them and mount the skin over a frame or stuffing – the craft of taxidermy. Early specimens rarely lasted, since insects and damp destroyed them, but one famous piece has: a rhinoceros prepared in the sixteenth century for the collection of the Bologna naturalist Ulisse Aldrovandi and later displayed in Florence is often cited as the oldest surviving example of taxidermy in a museum.\n\nThe best-known picture of a cabinet of curiosities shows the collection of the Danish physician Ole Worm in Copenhagen. Its catalogue, the Museum Wormianum, was published in 1655, a year after his death, with an engraving of the room: stuffed animals hang from the ceiling, skeletons and antlers cover the walls, and shells, stones and plants fill the labelled boxes on the shelves.\n\nIn England the physician Hans Sloane assembled about 71,000 objects – books, coins, plants, animals and antiquities. When he died in 1753 he bequeathed them to the nation, Parliament accepted the gift in the same year, and Sloane's collection became the foundation of the British Museum; its natural history specimens later moved to the Natural History Museum in London.\n\n| Collection | Place | Date |\n|---|---|---|\n| University museum | Pisa | 1591 |\n| Aldrovandi's rhinoceros | Bologna, later Florence | 16th century |\n| Museum Wormianum | Copenhagen | catalogue 1655 |\n| Sloane's bequest | London | 1753 |",
+    "bodyDe": "Lange bevor es Naturkundemuseen gab, gab es Räume voller Wunder. Im 16. und 17. Jahrhundert füllten Fürsten, Ärzte und Gelehrte in ganz Europa Schränke und ganze Kammern mit Muscheln, Mineralien, ausgestopften Tieren, getrockneten Pflanzen, Fossilien, Altertümern und kuriosen Gegenständen aus Menschenhand. Eine solche Sammlung hieß Wunderkammer oder Kunstkammer; im Englischen wurde daraus das „cabinet of curiosities“. Nichts war so geordnet, wie ein modernes Museum ordnet – ein Narwalzahn konnte neben einer Uhr liegen –, doch in diesen Räumen begann die systematische Erforschung der Natur.\n\nDas älteste noch bestehende Naturkundemuseum ist aus dieser Welt hervorgegangen. 1591 gründete Großherzog Ferdinando I. de' Medici neben dem Botanischen Garten der Universität Pisa eine Galerie der Naturdinge; heute ist das Museum der Universität Pisa in der alten Kartause von Calci kurz vor der Stadt untergebracht. Private Sammlungen in Verona und Zürich waren älter, sind aber nicht erhalten, weshalb meist Pisa als ältestes genannt wird.\n\nUm Tiere für eine solche Sammlung aufzubewahren, konnte man sie häuten und die Haut über ein Gestell oder eine Füllung ziehen – das Handwerk der Taxidermie (Ausstopfen). Frühe Präparate hielten selten lange, weil Insekten und Feuchtigkeit sie zerstörten, doch ein berühmtes Stück hat überdauert: Ein Nashorn, das im 16. Jahrhundert für die Sammlung des Bologneser Naturforschers Ulisse Aldrovandi präpariert und später in Florenz ausgestellt wurde, gilt oft als ältestes erhaltenes Beispiel der Taxidermie in einem Museum.\n\nDas bekannteste Bild einer Wunderkammer zeigt die Sammlung des dänischen Arztes Ole Worm in Kopenhagen. Ihr Katalog, das Museum Wormianum, erschien 1655, ein Jahr nach seinem Tod, mit einem Kupferstich des Raums: Ausgestopfte Tiere hängen von der Decke, Skelette und Geweihe bedecken die Wände, und Muscheln, Steine und Pflanzen füllen die beschrifteten Kästen in den Regalen.\n\nIn England trug der Arzt Hans Sloane rund 71.000 Objekte zusammen – Bücher, Münzen, Pflanzen, Tiere und Altertümer. Als er 1753 starb, vermachte er sie der Nation, das Parlament nahm das Geschenk noch im selben Jahr an, und Sloanes Sammlung wurde zum Grundstock des British Museum; seine naturkundlichen Stücke zogen später in das Natural History Museum in London um.\n\n| Sammlung | Ort | Datum |\n|---|---|---|\n| Universitätsmuseum | Pisa | 1591 |\n| Aldrovandis Nashorn | Bologna, später Florenz | 16. Jahrhundert |\n| Museum Wormianum | Kopenhagen | Katalog 1655 |\n| Sloanes Vermächtnis | London | 1753 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-046",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the tomato that in 1994 became the first genetically engineered food approved for sale?",
+      "de": "Wie hieß die Tomate, die 1994 als erstes gentechnisch verändertes Lebensmittel für den Verkauf zugelassen wurde?",
+      "answerEn": "Flavr Savr",
+      "answerDe": "Flavr Savr",
+      "timeline": {
+       "kind": "event",
+       "start": "1994-05-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The US FDA concludes that Calgene's Flavr Savr tomato is as safe as conventional tomatoes",
+       "labelDe": "Die US-Behörde FDA erklärt Calgenes Flavr-Savr-Tomate für so sicher wie herkömmliche Tomaten"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Flavr_Savr",
+       "title": "Flavr Savr",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which soil bacterium supplies the insect-killing toxin genes built into Bt maize and Bt cotton?",
+      "de": "Welches Bodenbakterium liefert die insektentötenden Giftgene, die in Bt-Mais und Bt-Baumwolle eingebaut sind?",
+      "answerEn": "Bacillus thuringiensis",
+      "answerDe": "Bacillus thuringiensis",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1911",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ernst Berliner rediscovers the bacterium in Thuringia and names it Bacillus thuringiensis",
+       "labelDe": "Ernst Berliner entdeckt das Bakterium in Thüringen erneut und nennt es Bacillus thuringiensis"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bacillus_thuringiensis",
+       "title": "Bacillus thuringiensis",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the genetically modified rice called that produces beta-carotene, a precursor of vitamin A, in its grains?",
+      "de": "Wie heißt der gentechnisch veränderte Reis, der in seinen Körnern Beta-Carotin bildet, eine Vorstufe von Vitamin A?",
+      "answerEn": "Golden Rice",
+      "answerDe": "Goldener Reis",
+      "timeline": {
+       "kind": "event",
+       "start": "2000",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ingo Potrykus and Peter Beyer publish the details of Golden Rice",
+       "labelDe": "Ingo Potrykus und Peter Beyer veröffentlichen die Einzelheiten des Goldenen Reises"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Golden_rice",
+       "title": "Golden rice",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which gene-editing tool, known as 'genetic scissors', earned Emmanuelle Charpentier and Jennifer Doudna the 2020 Nobel Prize in Chemistry?",
+      "de": "Für welches als „Genschere“ bekannte Werkzeug erhielten Emmanuelle Charpentier und Jennifer Doudna 2020 den Nobelpreis für Chemie?",
+      "answerEn": "CRISPR-Cas9",
+      "answerDe": "CRISPR-Cas9",
+      "timeline": {
+       "kind": "event",
+       "start": "2020",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Emmanuelle Charpentier and Jennifer Doudna receive the Nobel Prize in Chemistry for CRISPR-Cas9",
+       "labelDe": "Emmanuelle Charpentier und Jennifer Doudna erhalten für CRISPR-Cas9 den Nobelpreis für Chemie"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/CRISPR_gene_editing",
+       "title": "CRISPR gene editing",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Flavr Savr to CRISPR: Genetic Engineering on the Plate",
+    "titleDe": "Von Flavr Savr bis CRISPR: Gentechnik auf dem Teller",
+    "bodyEn": "For thousands of years farmers changed plants and animals the slow way, by choosing the best and breeding from them. Genetic engineering does it directly: a gene is taken from one organism and inserted into another, or an existing gene is switched off or rewritten. An organism changed in this way is called a genetically modified organism, abbreviated GMO (in German GVO, for gentechnisch veränderter Organismus), and food produced from it has to be labelled as genetically modified in the European Union.\n\nThe first such food on supermarket shelves was a tomato. The Californian company Calgene engineered the Flavr Savr to soften more slowly, so that it could ripen on the vine and still survive long transport; on 18 May 1994 the US Food and Drug Administration concluded that it was as safe as conventionally bred tomatoes. It was a commercial flop and disappeared within a few years, but it opened the door.\n\nFar more successful were crops that defend themselves. The soil bacterium Bacillus thuringiensis, first found in silkworms in Japan in 1902 and named after the German region of Thuringia, where Ernst Berliner rediscovered it in 1911, produces proteins that are deadly to certain caterpillars and beetles but harmless to people. Gardeners had sprayed it for decades; genetic engineers moved its toxin genes into the plants themselves. Bt maize, approved in 1996, and Bt cotton now grow on millions of hectares.\n\nGenetic engineering can also aim at nutrition. Golden Rice, developed by Ingo Potrykus in Zurich and Peter Beyer in Freiburg and described in detail in 2000, makes beta-carotene, the precursor of vitamin A, in its grains, which gives them their yellow colour. It was meant to fight vitamin A deficiency, a major cause of childhood blindness; the Philippines approved its cultivation in 2021, though courts there later halted it.\n\nThe newest tool is far more precise. CRISPR-Cas9, adapted from a bacterial defence system, works like genetic scissors that cut DNA at exactly the chosen place. Emmanuelle Charpentier and Jennifer Doudna showed in 2012 how to program it and received the Nobel Prize in Chemistry for it in 2020. Whether plants edited this way should count as GMOs at all is one of the big regulatory arguments of the 2020s.\n\n| Milestone | Year |\n|---|---|\n| Bacillus thuringiensis named after Thuringia | 1911 |\n| Flavr Savr tomato approved | 1994 |\n| Bt maize approved | 1996 |\n| Golden Rice described | 2000 |\n| Nobel Prize for CRISPR-Cas9 | 2020 |",
+    "bodyDe": "Jahrtausendelang veränderten Bauern Pflanzen und Tiere auf dem langsamen Weg, indem sie die besten auswählten und mit ihnen weiterzüchteten. Die Gentechnik tut es direkt: Ein Gen wird einem Organismus entnommen und in einen anderen eingesetzt, oder ein vorhandenes Gen wird abgeschaltet oder umgeschrieben. Ein so veränderter Organismus heißt gentechnisch veränderter Organismus, abgekürzt GVO (englisch GMO, für genetically modified organism), und Lebensmittel, die daraus hergestellt werden, müssen in der Europäischen Union als gentechnisch verändert gekennzeichnet werden.\n\nDas erste solche Lebensmittel im Supermarktregal war eine Tomate. Die kalifornische Firma Calgene veränderte die Flavr Savr so, dass sie langsamer weich wurde und deshalb am Strauch reifen und trotzdem lange Transporte überstehen konnte; am 18. Mai 1994 kam die US-Arzneimittelbehörde FDA zu dem Schluss, dass sie so sicher sei wie herkömmlich gezüchtete Tomaten. Kommerziell war sie ein Reinfall und verschwand nach wenigen Jahren, doch sie öffnete die Tür.\n\nWeit erfolgreicher waren Pflanzen, die sich selbst verteidigen. Das Bodenbakterium Bacillus thuringiensis, 1902 in Japan erstmals in Seidenraupen gefunden und nach Thüringen benannt, wo Ernst Berliner es 1911 erneut entdeckte, bildet Proteine, die für bestimmte Raupen und Käfer tödlich, für Menschen aber harmlos sind. Gärtner hatten es jahrzehntelang versprüht; Gentechniker verlegten seine Giftgene in die Pflanzen selbst. Bt-Mais, 1996 zugelassen, und Bt-Baumwolle wachsen heute auf Millionen Hektar.\n\nGentechnik kann auch auf die Ernährung zielen. Der Goldene Reis, von Ingo Potrykus in Zürich und Peter Beyer in Freiburg entwickelt und im Jahr 2000 ausführlich beschrieben, bildet in seinen Körnern Beta-Carotin, die Vorstufe von Vitamin A, die ihnen ihre gelbe Farbe gibt. Er sollte den Vitamin-A-Mangel bekämpfen, eine der Hauptursachen für Erblindung bei Kindern; die Philippinen ließen seinen Anbau 2021 zu, doch Gerichte stoppten ihn dort später.\n\nDas neueste Werkzeug ist weit präziser. CRISPR-Cas9, einem Abwehrsystem von Bakterien nachempfunden, arbeitet wie eine Genschere, die die DNA genau an der gewünschten Stelle schneidet. Emmanuelle Charpentier und Jennifer Doudna zeigten 2012, wie man sie programmiert, und erhielten dafür 2020 den Nobelpreis für Chemie. Ob so bearbeitete Pflanzen überhaupt als GVO gelten sollen, ist einer der großen Regulierungsstreite der 2020er-Jahre.\n\n| Meilenstein | Jahr |\n|---|---|\n| Bacillus thuringiensis nach Thüringen benannt | 1911 |\n| Flavr-Savr-Tomate zugelassen | 1994 |\n| Bt-Mais zugelassen | 1996 |\n| Goldener Reis beschrieben | 2000 |\n| Nobelpreis für CRISPR-Cas9 | 2020 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-142",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-190",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-047",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-120",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the reflex called that makes some people sneeze when they step into bright sunlight?",
+      "de": "Wie heißt der Reflex, der manche Menschen niesen lässt, wenn sie in helles Sonnenlicht treten?",
+      "answerEn": "photic sneeze reflex",
+      "answerDe": "der photische Niesreflex",
+      "timeline": {
+       "kind": "event",
+       "start": "1964",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Henry Everett names the 'photic sneeze effect', sneezing triggered by bright light",
+       "labelDe": "Henry Everett benennt den „photic sneeze effect“, das durch helles Licht ausgelöste Niesen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Photic_sneeze_reflex",
+       "title": "Photic sneeze reflex",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Sneezes, Scars and Breathing Skin: Surprises of the Human Body",
+    "titleDe": "Niesen, Narben und atmende Haut: Überraschungen des menschlichen Körpers",
+    "bodyEn": "The human body is the thing we know best and understand least. Some of what everybody \"knows\" about it is wrong, and some of what sounds like a myth turns out to be true.\n\nTake sneezing. A widespread superstition, going back at least to the Renaissance, holds that the heart stops for a split second when you sneeze. It does not: the deep breath and the sudden pressure in the chest can briefly change the heart's rhythm, but the electrical signals that drive it carry on. What is real, and much stranger, is the photic sneeze reflex: somewhere between a fifth and a third of all people sneeze when they step out of the dark into bright sunlight. Aristotle already wondered why the sun makes people sneeze, and in 1964 the American doctor Henry Everett gave the effect its name; because it runs in families, it is also known by the jokey acronym ACHOO syndrome.\n\nAnother belief is that identical twins, who share the same DNA, must have identical fingerprints. They do not. The pattern of papillary ridges forms in the womb, roughly between the tenth and sixteenth week, and it depends not only on genes but on tiny differences in pressure, position and growth at each fingertip. Twins' fingerprints are similar, but never the same, which is why the police can tell them apart.\n\nThe womb holds another surprise. When an unborn baby is injured during the first two thirds of pregnancy, the wound usually heals without leaving a scar: the skin is rebuilt so perfectly that the injury cannot be found later. Only towards the end of pregnancy do fetal wounds begin to heal the way adult wounds do, with a patch of coarse collagen fibres. Researchers hope that understanding this scarless repair will one day help adults heal better.\n\nFinally, the skin breathes – a little. Frogs take up much of their oxygen through the skin, and humans do it too: cutaneous respiration, first demonstrated in people by the German anatomist Joseph von Gerlach in 1851, supplies the outer layers of the skin with oxygen straight from the air. For the body as a whole it hardly matters, accounting for only about one to two per cent of our gas exchange.\n\n| Claim | Verdict |\n|---|---|\n| The heart stops when you sneeze | myth |\n| Bright light can make you sneeze | true |\n| Identical twins have identical fingerprints | myth |\n| Fetal wounds heal without a scar | true, early in pregnancy |\n| Humans breathe through their skin | true, but only 1–2 % |",
+    "bodyDe": "Der menschliche Körper ist das, was wir am besten kennen und am wenigsten verstehen. Manches, was alle über ihn zu „wissen“ glauben, ist falsch, und manches, was wie ein Mythos klingt, stimmt.\n\nNehmen wir das Niesen. Ein verbreiteter Aberglaube, der mindestens bis in die Renaissance zurückreicht, besagt, dass beim Niesen für einen Sekundenbruchteil das Herz stehen bleibt. Das tut es nicht: Das tiefe Einatmen und der plötzliche Druck im Brustkorb können den Herzrhythmus kurz verändern, doch die elektrischen Signale, die das Herz antreiben, laufen weiter. Echt und viel merkwürdiger ist dagegen der photische Niesreflex: Zwischen einem Fünftel und einem Drittel aller Menschen niesen, wenn sie aus dem Dunkeln in helles Sonnenlicht treten. Schon Aristoteles fragte sich, warum die Sonne zum Niesen reizt, und 1964 gab der amerikanische Arzt Henry Everett dem Effekt seinen Namen; weil er in Familien gehäuft auftritt, ist er auch unter dem scherzhaften Kürzel ACHOO-Syndrom bekannt.\n\nEin anderer Glaube lautet, dass eineiige Zwillinge, die dieselbe DNA haben, identische Fingerabdrücke haben müssten. Haben sie nicht. Das Muster der Papillarleisten entsteht im Mutterleib, etwa zwischen der zehnten und sechzehnten Woche, und es hängt nicht nur von den Genen ab, sondern auch von winzigen Unterschieden in Druck, Lage und Wachstum jeder Fingerkuppe. Die Fingerabdrücke von Zwillingen ähneln sich, sind aber nie gleich, weshalb die Polizei sie unterscheiden kann.\n\nDer Mutterleib birgt noch eine Überraschung. Wird ein ungeborenes Kind in den ersten zwei Dritteln der Schwangerschaft verletzt, heilt die Wunde meist, ohne eine Narbe zu hinterlassen: Die Haut wird so vollkommen wiederhergestellt, dass sich die Verletzung später nicht mehr finden lässt. Erst gegen Ende der Schwangerschaft beginnen fetale Wunden so zu heilen wie die von Erwachsenen, mit einem Flecken aus groben Kollagenfasern. Forscher hoffen, dass das Verständnis dieser narbenfreien Heilung eines Tages auch Erwachsenen helfen wird.\n\nSchließlich atmet die Haut – ein wenig. Frösche nehmen einen großen Teil ihres Sauerstoffs über die Haut auf, und auch der Mensch tut es: Die Hautatmung, beim Menschen erstmals 1851 von dem deutschen Anatomen Joseph von Gerlach nachgewiesen, versorgt die äußeren Hautschichten direkt aus der Luft mit Sauerstoff. Für den Körper als Ganzes spielt sie kaum eine Rolle; sie macht nur etwa ein bis zwei Prozent unseres Gasaustauschs aus.\n\n| Behauptung | Urteil |\n|---|---|\n| Beim Niesen bleibt das Herz stehen | Mythos |\n| Helles Licht kann Niesen auslösen | stimmt |\n| Eineiige Zwillinge haben identische Fingerabdrücke | Mythos |\n| Fetale Wunden heilen ohne Narbe | stimmt, früh in der Schwangerschaft |\n| Der Mensch atmet über die Haut | stimmt, aber nur 1–2 % |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-126",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Croatian-born official of the Argentine police set up the first fingerprint files in 1891?",
+      "de": "Welcher in Kroatien geborene Beamte der argentinischen Polizei legte 1891 die ersten Fingerabdruckkarteien an?",
+      "answerEn": "Juan Vucetich",
+      "answerDe": "Juan Vucetich",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1858-07-20",
+       "end": "1925-01-25",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of Juan Vucetich (Ivan Vučetić), pioneer of fingerprint identification in Argentina",
+       "labelDe": "Leben von Juan Vucetich (Ivan Vučetić), Pionier der Fingerabdruck-Identifizierung in Argentinien"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Juan_Vucetich",
+       "title": "Juan Vucetich",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which British scientist published the book 'Finger Prints' in 1892?",
+      "de": "Welcher britische Wissenschaftler veröffentlichte 1892 das Buch „Finger Prints“?",
+      "answerEn": "Francis Galton",
+      "answerDe": "Francis Galton",
+      "timeline": {
+       "kind": "event",
+       "start": "1892",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Francis Galton publishes 'Finger Prints', a statistical model of fingerprint identification",
+       "labelDe": "Francis Galton veröffentlicht „Finger Prints“, ein statistisches Modell der Fingerabdruck-Identifizierung"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fingerprint",
+       "title": "Fingerprint",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Scottish surgeon, working in Tokyo, proposed in 1880 to identify people by fingerprints recorded with printing ink?",
+      "de": "Welcher schottische Chirurg schlug 1880 in Tokio vor, Menschen anhand von mit Druckerschwärze abgenommenen Fingerabdrücken zu identifizieren?",
+      "answerEn": "Henry Faulds",
+      "answerDe": "Henry Faulds",
+      "timeline": {
+       "kind": "event",
+       "start": "1880",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Henry Faulds publishes his first paper on identifying people by their fingerprints",
+       "labelDe": "Henry Faulds veröffentlicht seinen ersten Aufsatz über die Identifizierung von Menschen anhand ihrer Fingerabdrücke"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fingerprint",
+       "title": "Fingerprint",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the technical term for identifying people by their fingerprints?",
+      "de": "Wie lautet der Fachbegriff für die Identifizierung von Menschen anhand ihrer Fingerabdrücke?",
+      "answerEn": "dactyloscopy",
+      "answerDe": "Daktyloskopie",
+      "timeline": {
+       "kind": "event",
+       "start": "1891",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Juan Vucetich starts the first fingerprint files in Argentina",
+       "labelDe": "Juan Vucetich legt in Argentinien die ersten Fingerabdruckkarteien an"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fingerprint",
+       "title": "Fingerprint",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Lines on Our Fingertips: How Fingerprints Solved Their First Crime",
+    "titleDe": "Die Linien auf unseren Fingerkuppen: Wie der Fingerabdruck sein erstes Verbrechen aufklärte",
+    "bodyEn": "Every person carries a unique signature on their fingertips. The papillary ridges form patterns – loops, whorls and arches – that stay the same from before birth until death, and since the late nineteenth century they have been the police's most famous way of telling people apart. The technical name for identification by fingerprints is dactyloscopy, from the Greek daktylos, finger.\n\nThe idea took shape in several places at once. In 1880 the Scottish surgeon Henry Faulds, working at a hospital in Tokyo, published the first paper proposing that fingerprints could identify people, and suggested recording them with printing ink. In England the scientist Francis Galton, a half-cousin of Charles Darwin, studied thousands of prints and in 1892 published the book Finger Prints, in which he estimated that the chance of two people sharing the same prints was about one in 64 billion.\n\nThe breakthrough in practice came in Argentina. Juan Vucetich, born Ivan Vučetić on the island of Hvar in today's Croatia, had emigrated to Argentina and worked for the police of Buenos Aires Province. Building on Galton's ideas, he started the first fingerprint files in 1891 and devised his own system of classifying them. A year later, in 1892, the method passed its first real test: in the town of Necochea two children were found murdered, and their mother, Francisca Rojas, blamed a neighbour. A bloody print on a door matched her right thumb, she confessed, and the fingerprint became the first piece of forensic evidence of its kind to solve a murder.\n\nArgentina adopted Vucetich's system nationwide, and much of Latin America followed. In Britain, Scotland Yard began fingerprinting individuals in 1901, using a classification developed in India and named after Edward Henry. Today fingerprints are read by scanners at borders and on mobile phones, but the principle is still the one the pioneers described: no two sets of ridges are alike.\n\n| Pioneer | Where | Contribution |\n|---|---|---|\n| Henry Faulds | Tokyo | first paper on identification, 1880 |\n| Juan Vucetich | Argentina | first fingerprint files, 1891; first murder solved, 1892 |\n| Francis Galton | England | the book Finger Prints, 1892 |",
+    "bodyDe": "Jeder Mensch trägt eine einzigartige Signatur auf seinen Fingerkuppen. Die Papillarleisten bilden Muster – Schleifen, Wirbel und Bögen –, die von vor der Geburt bis zum Tod gleich bleiben, und seit dem späten 19. Jahrhundert sind sie das berühmteste Mittel der Polizei, Menschen voneinander zu unterscheiden. Der Fachbegriff für die Identifizierung anhand von Fingerabdrücken lautet Daktyloskopie, vom griechischen daktylos, Finger.\n\nDie Idee nahm an mehreren Orten zugleich Gestalt an. 1880 veröffentlichte der schottische Chirurg Henry Faulds, der an einem Krankenhaus in Tokio arbeitete, den ersten Aufsatz mit dem Vorschlag, Menschen anhand von Fingerabdrücken zu identifizieren, und regte an, sie mit Druckerschwärze abzunehmen. In England untersuchte der Wissenschaftler Francis Galton, ein Halbcousin von Charles Darwin, Tausende Abdrücke und veröffentlichte 1892 das Buch Finger Prints, in dem er die Wahrscheinlichkeit, dass zwei Menschen dieselben Abdrücke haben, auf etwa eins zu 64 Milliarden schätzte.\n\nDer Durchbruch in der Praxis gelang in Argentinien. Juan Vucetich, als Ivan Vučetić auf der Insel Hvar im heutigen Kroatien geboren, war nach Argentinien ausgewandert und arbeitete für die Polizei der Provinz Buenos Aires. Aufbauend auf Galtons Ideen legte er 1891 die ersten Fingerabdruckkarteien an und entwickelte ein eigenes System, sie zu ordnen. Ein Jahr später, 1892, bestand die Methode ihre erste echte Probe: In der Stadt Necochea wurden zwei Kinder ermordet aufgefunden, und ihre Mutter, Francisca Rojas, beschuldigte einen Nachbarn. Ein blutiger Abdruck an einer Tür passte zu ihrem rechten Daumen, sie gestand, und der Fingerabdruck wurde zum ersten Beweismittel seiner Art, mit dem ein Mord aufgeklärt wurde.\n\nArgentinien führte Vucetichs System landesweit ein, und große Teile Lateinamerikas folgten. In Großbritannien begann Scotland Yard 1901, Fingerabdrücke von Personen zu nehmen, mit einer in Indien entwickelten Klassifikation, die nach Edward Henry benannt ist. Heute lesen Scanner an Grenzen und in Mobiltelefonen Fingerabdrücke, doch das Prinzip ist noch immer das der Pioniere: Keine zwei Leistenmuster gleichen sich.\n\n| Pionier | Wo | Beitrag |\n|---|---|---|\n| Henry Faulds | Tokio | erster Aufsatz zur Identifizierung, 1880 |\n| Juan Vucetich | Argentinien | erste Fingerabdruckkarteien, 1891; erster aufgeklärter Mord, 1892 |\n| Francis Galton | England | das Buch Finger Prints, 1892 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-333",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-357",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the largest artery of the human body?",
+      "de": "Wie heißt die größte Arterie des menschlichen Körpers?",
+      "answerEn": "the aorta",
+      "answerDe": "die Aorta",
+      "timeline": {
+       "kind": "discovery",
+       "start": "-350",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Aristotle gives the aorta its name, from a Greek word for something lifted or suspended",
+       "labelDe": "Aristoteles gibt der Aorta ihren Namen, nach einem griechischen Wort für etwas Hochgehobenes"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Aorta",
+       "title": "Aorta",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the longest and widest single nerve of the human body?",
+      "de": "Wie heißt der längste und dickste einzelne Nerv des menschlichen Körpers?",
+      "answerEn": "the sciatic nerve",
+      "answerDe": "der Ischiasnerv",
+      "timeline": {
+       "kind": "event",
+       "start": "1451",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "First known modern use of the word 'sciatica', the pain along the sciatic nerve",
+       "labelDe": "Erster bekannter neuzeitlicher Beleg des Wortes „sciatica“ für Schmerzen entlang des Ischiasnervs"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sciatic_nerve",
+       "title": "Sciatic nerve",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Body's Record Holders: Largest Organ, Longest Nerve, Biggest Artery",
+    "titleDe": "Die Rekordhalter des Körpers: größtes Organ, längster Nerv, größte Arterie",
+    "bodyEn": "Ask which is the largest organ of the human body and most people think of something inside it. The answer is on the outside.\n\nSkin is the largest and heaviest human organ. Spread out, an adult's skin covers about one and a half to two square metres, and it makes up roughly 16 per cent of body mass – some four to five kilograms, or far more if the fat beneath it is counted. It is an organ in every sense: it keeps water in and germs out, regulates temperature through sweat and blood flow, senses touch, heat and pain, and makes vitamin D in sunlight. Its layers were first studied under the microscope by Marcello Malpighi in the 1660s, which is why one of them still carries his name.\n\nThe largest internal organ is the liver, a reddish-brown wedge of about one and a half kilograms beneath the right ribs. It stores sugar, makes bile and most of the proteins in the blood plasma, and breaks down alcohol and drugs; it is also the only internal organ that can grow back after much of it has been removed.\n\nThe largest artery is the aorta. It leaves the left ventricle of the heart with a diameter of around two and a half centimetres in adults, arches over the heart and runs down in front of the spine into the abdomen, where it divides into the arteries of the legs. All the oxygen-rich blood for the body passes through it. Aristotle is credited with giving it its name, from a Greek word for something lifted, because it seems to hang suspended above the heart.\n\nThe longest and widest single nerve is the sciatic nerve. Formed from nerve roots of the lower spine, it runs through the buttock and down the back of the thigh, almost as thick as a finger at its start, and with its branches it reaches the sole of the foot. When one of its roots is pinched, the shooting pain down the leg is called sciatica, a word in use since at least 1451.\n\n| Record | Holder |\n|---|---|\n| largest organ | skin |\n| largest internal organ | liver |\n| largest artery | aorta |\n| longest nerve | sciatic nerve |\n| largest muscle | gluteus maximus |\n| smallest bone | stapes |\n\nRecords like these are the trivia of anatomy, but they also explain the body's design: the biggest structures are the ones that have to cover, filter, carry or reach the most.",
+    "bodyDe": "Fragt man nach dem größten Organ des menschlichen Körpers, denken die meisten an etwas in seinem Inneren. Die Antwort liegt jedoch außen.\n\nDie Haut ist das größte und schwerste Organ des Menschen. Ausgebreitet bedeckt die Haut eines Erwachsenen etwa eineinhalb bis zwei Quadratmeter, und sie macht rund 16 Prozent der Körpermasse aus – etwa vier bis fünf Kilogramm, mit dem darunterliegenden Fett weit mehr. Sie ist ein Organ in jeder Hinsicht: Sie hält Wasser drinnen und Keime draußen, regelt über Schweiß und Durchblutung die Temperatur, nimmt Berührung, Wärme und Schmerz wahr und bildet im Sonnenlicht Vitamin D. Ihre Schichten untersuchte Marcello Malpighi in den 1660er-Jahren als Erster unter dem Mikroskop, weshalb eine davon noch heute seinen Namen trägt.\n\nDas größte innere Organ ist die Leber, ein rotbrauner Keil von etwa eineinhalb Kilogramm unter den rechten Rippen. Sie speichert Zucker, bildet Galle und die meisten Eiweiße des Blutplasmas und baut Alkohol und Medikamente ab; außerdem ist sie das einzige innere Organ, das nachwachsen kann, nachdem ein großer Teil entfernt wurde.\n\nDie größte Arterie ist die Aorta. Sie verlässt die linke Herzkammer bei Erwachsenen mit einem Durchmesser von rund zweieinhalb Zentimetern, wölbt sich über das Herz und zieht vor der Wirbelsäule hinab in den Bauch, wo sie sich in die Beinarterien teilt. Das gesamte sauerstoffreiche Blut für den Körper strömt durch sie. Aristoteles soll ihr den Namen gegeben haben, nach einem griechischen Wort für etwas Hochgehobenes, weil sie über dem Herzen zu schweben scheint.\n\nDer längste und dickste einzelne Nerv ist der Ischiasnerv. Aus Nervenwurzeln der unteren Wirbelsäule gebildet, zieht er durch das Gesäß und an der Rückseite des Oberschenkels hinab, an seinem Anfang fast fingerdick, und mit seinen Ästen erreicht er die Fußsohle. Wird eine seiner Wurzeln eingeklemmt, heißt der einschießende Schmerz im Bein Ischias – im Englischen „sciatica“, ein Wort, das seit mindestens 1451 belegt ist.\n\n| Rekord | Rekordhalter |\n|---|---|\n| größtes Organ | Haut |\n| größtes inneres Organ | Leber |\n| größte Arterie | Aorta |\n| längster Nerv | Ischiasnerv |\n| größter Muskel | großer Gesäßmuskel |\n| kleinster Knochen | Steigbügel |\n\nSolche Rekorde sind die Trivia der Anatomie, doch sie erklären auch den Bauplan des Körpers: Die größten Strukturen sind jene, die am meisten bedecken, filtern, befördern oder erreichen müssen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-284",
+   "category": 5,
+   "domain": "science",
+   "sub": "chemistry",
+   "why": "Abundance of chemical elements (by mass in the human body) is element chemistry; its natural home is a0609 \"The Most Abundant Elements: Crust, Air and Cosmos\" (science/chemistry), which asks the same 'most abundant element in X' question for crust, air and cosmos and lacks the human body."
+  }
+ ]
+}

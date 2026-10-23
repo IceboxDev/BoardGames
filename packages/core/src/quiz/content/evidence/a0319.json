@@ -1,0 +1,242 @@
+{
+ "article": "a0319",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2008_in_Kenya",
+   "title": "2008 in Kenya – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:45.297Z",
+   "snapshot": "c979887c7191e579f15f1b74bf96182596cd84ae8c649778f1df4c1c1875c64b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Early_life_and_career_of_Barack_Obama",
+   "title": "Early life and career of Barack Obama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:46.312Z",
+   "snapshot": "53eabaa1e32b340b4d4f23a7a8b07eeeccfb1c2ae1e8a41fe355b101577b5f03"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Moneygall",
+   "title": "Moneygall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:47.276Z",
+   "snapshot": "45ee67b5ed5d73c0604e5a6fb0f9fdc463091629457b7ae33e1d5973c07e505f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2009_Nobel_Peace_Prize",
+   "title": "2009 Nobel Peace Prize – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:48.386Z",
+   "snapshot": "010cbde0e755bb480defba05836061f1f29cfdb09f9bcb377c77254276fb9a10"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cuban_thaw",
+   "title": "Cuban thaw – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:49.296Z",
+   "snapshot": "cf7d11af4207ac6668f0a514a5c1540690d768daf6e6ef7e34d7198c7b5910ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kenya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Indonesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ireland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Norway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cuba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:29.325Z",
+   "target": "f01591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The following lists events that happened during 2008 in Kenya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kenya” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:29.325Z",
+   "target": "f01592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1965, his mother remarried to Lolo Soetoro from Indonesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Indonesia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:29.325Z",
+   "target": "f01593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moneygall (Irish: Muine Gall, meaning 'foreigners' thicket') is a village in County Offaly, bordering County Tipperary, in Ireland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ireland” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:29.325Z",
+   "target": "f01594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 2009 Committee comprised two members of the Norwegian Labour Party, one from the left-wing Socialist Left Party, one from the Conservative Party of Norway and one from the right-wing Progress Party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norway” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:29.325Z",
+   "target": "f01595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Cuban thaw (Spanish: deshielo cubano, pronounced [desˈʝelo kuˈβano]) was a normalization of Cuba–United States relations from July 2015 to June 2017, ending a 54-year stretch of hostility between the nations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:29.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cuba” is on the snapshot of s5"
+  }
+ ]
+}

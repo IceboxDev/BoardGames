@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-246",
+ "image": "IMG20261007181853.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Durch welches Gewässer verläuft die Grenze zwischen der Schweiz und Frankreich?",
+   "de": "Durch welches Gewässer verläuft die Grenze zwischen der Schweiz und Frankreich?",
+   "en": "Through which body of water does the border between Switzerland and France run?",
+   "reworked": false,
+   "answerDe": "Genfersee",
+   "answerEn": "Lake Geneva",
+   "timeline": {
+    "kind": "event",
+    "start": "1815",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Congress of Vienna recognises Geneva, Valais and Neuchâtel as Swiss, fixing the Franco-Swiss border",
+    "labelDe": "Der Wiener Kongress erkennt Genf, Wallis und Neuenburg als schweizerisch an und legt damit die Grenze zu Frankreich fest"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Grenze_zwischen_Frankreich_und_der_Schweiz",
+    "title": "Grenze zwischen Frankreich und der Schweiz",
+    "lang": "de"
+   },
+   "notes": "The 585 km border runs from Basel along the Jura and through Lake Geneva (Lac Léman). Shorter stretches also follow the Doubs river in the Jura, so Doubs is a defensible alternative; Lake Geneva is the expected answer.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welches Tier stand nicht Pate für eine in Deutschland verliehene Auszeichnung im Bereich Film und Fernsehen: Reh, Bär oder Wolf?",
+   "de": "Welches Tier stellt die Trophäe des Bambi dar, des in Deutschland verliehenen Medien- und Fernsehpreises?",
+   "en": "Which animal does the trophy of the Bambi, the media and television award presented in Germany, depict?",
+   "reworked": true,
+   "answerDe": "Reh",
+   "answerEn": "Roe deer",
+   "timeline": {
+    "kind": "founding",
+    "start": "1948",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Bambi award is founded in Karlsruhe as a prize for the most popular film stars",
+    "labelDe": "Der Bambi wird in Karlsruhe als Preis für die beliebtesten Filmstars gegründet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bambi_(Auszeichnung)",
+    "title": "Bambi (Auszeichnung)",
+    "lang": "de"
+   },
+   "notes": "Reworked from a multiple-choice 'which is NOT' question (Reh, Bär, Wolf; card answer: Wolf). The Bambi is a roe-deer fawn (Rehkitz), named after Felix Salten's Bambi; the bear is the Berlinale's Golden Bear.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Tony Blair prägte 1997, nach Prinzessin Dianas Tod, in einer Rede den Begriff von der „Königin der Herzen“. Richtig oder falsch?",
+   "de": "Als was bezeichnete Tony Blair Diana 1997, nach Prinzessin Dianas Tod, in einer Rede?",
+   "en": "What did Tony Blair call Diana in a speech in 1997, after Princess Diana's death?",
+   "reworked": true,
+   "answerDe": "Prinzessin des Volkes",
+   "answerEn": "The people's princess",
+   "timeline": {
+    "kind": "event",
+    "start": "1997-08-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tony Blair calls Diana \"the people's princess\" in a speech on the day of her death",
+    "labelDe": "Tony Blair nennt Diana am Tag ihres Todes in einer Rede „die Prinzessin des Volkes“"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/People%27s_princess",
+    "title": "People's princess",
+    "lang": "en"
+   },
+   "notes": "The card's claim is false: 'queen of people's hearts' was Diana's own phrase in her 1995 Panorama interview; Blair spoke of 'the people's princess'. That term had already been used by Julie Burchill in 1992, so Blair popularised rather than coined it.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie lautet Harry Potters Mittelname?",
+   "de": "Wie lautet Harry Potters Mittelname?",
+   "en": "What is Harry Potter's middle name?",
+   "reworked": false,
+   "answerDe": "James",
+   "answerEn": "James",
+   "timeline": {
+    "kind": "creation",
+    "start": "1997-06-26",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "\"Harry Potter and the Philosopher's Stone\" is published, introducing Harry James Potter",
+    "labelDe": "„Harry Potter und der Stein der Weisen“ erscheint und stellt Harry James Potter vor"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Harry_Potter_(character)",
+    "title": "Harry Potter (character)",
+    "lang": "en"
+   },
+   "notes": "Named after his father, James Potter.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Astronauten im All erhalten kein Brot als Verpflegung. Richtig oder falsch?",
+   "de": "Was essen Astronauten im All wegen der Krümelgefahr meist anstelle von Brot?",
+   "en": "What do astronauts in space usually eat instead of bread because of the risk of crumbs?",
+   "reworked": true,
+   "answerDe": "Tortillas",
+   "answerEn": "Tortillas",
+   "timeline": {
+    "kind": "event",
+    "start": "1985",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Tortillas first fly to space, requested by Mexican payload specialist Rodolfo Neri Vela",
+    "labelDe": "Tortillas fliegen erstmals ins All, auf Wunsch des mexikanischen Nutzlastspezialisten Rodolfo Neri Vela"
+   },
+   "source": {
+    "url": "https://www.thetakeout.com/1999883/staple-food-iss-1998-tortillas/",
+    "title": "The Staple Food That's Been Served On The ISS Since 1985",
+    "lang": "en"
+   },
+   "notes": "Floating crumbs can damage equipment in microgravity, so NASA sends tortillas instead of sliced bread (also confirmed by Space Center Houston). Bread is not strictly banned; projects such as Bake In Space test baking in orbit.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt die seit 2009 jährlich in Köln stattfindende große Messe für Video- und Computerspiele?",
+   "de": "Wie heißt die seit 2009 jährlich in Köln stattfindende große Messe für Video- und Computerspiele?",
+   "en": "What is the name of the large video and computer game fair held annually in Cologne since 2009?",
+   "reworked": false,
+   "answerDe": "Gamescom",
+   "answerEn": "Gamescom",
+   "timeline": {
+    "kind": "founding",
+    "start": "2009",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Gamescom held at Koelnmesse in Cologne, succeeding Leipzig's Games Convention",
+    "labelDe": "Erste Gamescom auf dem Gelände der Koelnmesse in Köln, Nachfolgerin der Leipziger Games Convention"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gamescom",
+    "title": "Gamescom",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "games"
+  }
+ ]
+}

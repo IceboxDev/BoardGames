@@ -1,0 +1,249 @@
+{
+ "article": "a1925",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Crossword",
+   "title": "Crossword – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:52.762Z",
+   "snapshot": "a19333c528085ddb6c23744273c961edbfe4e1b9eeacab30736690034cefe34f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sudoku",
+   "title": "Sudoku – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:19.231Z",
+   "snapshot": "1a9b1b74dc8ad1d07472f63aa01e69e86a4076b6b163fc3a1a86cfd5143d6fab"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Wynne",
+   "title": "Arthur Wynne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:53.538Z",
+   "snapshot": "df7e5e94ed8e424721d3bc32cebdc29c1893f73b43ab0649b2e5214315b5a3bd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Howard_Garns",
+   "title": "Howard Garns – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:54.555Z",
+   "snapshot": "65cfc875c163b2c451c461342921621c5369ca9b008713fa99053ff2406a1dd4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Darrow",
+   "title": "Charles Darrow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:04.356Z",
+   "snapshot": "309a2701ed693b19f9dcbf1802a5309a341f30ac91c9995de219441680110206"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_Mosher_Butts",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:21.220Z",
+   "snapshot": "ed14e001f936225e276196f503bf139cd4a52dc3e93ccb0bec5205077956af80"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09621",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "crossword puzzle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09622",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sudoku",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Wynne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Howard Garns",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles Darrow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:46.429Z",
+   "target": "f09621",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "For example, many weekday newspaper puzzles (such as the American New York Times crossword puzzle) are 15×15 squares, while weekend puzzles may be 21×21, 23×23, or 25×25.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “crossword puzzle” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:46.429Z",
+   "target": "f09622",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sudoku (; Japanese: 数独, romanized: sūdoku, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sudoku” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:46.429Z",
+   "target": "f24140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Wynne (; June 22, 1871 – January 14, 1945) was the Liverpool-born inventor of the modern crossword puzzle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Wynne” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:46.429Z",
+   "target": "f24141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Howard Garns (March 2, 1905 – October 6, 1989) was an American architect who gained fame only after his death as the creator of Number Place, the number puzzle that became a worldwide phenomenon under the name Sudoku.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Howard Garns” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:46.429Z",
+   "target": "f24142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prior to his board game career, Charles Darrow worked as a heating sales engineer in Philadelphia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.429Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Darrow” is on the snapshot of s5"
+  }
+ ]
+}

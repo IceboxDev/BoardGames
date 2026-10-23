@@ -1,0 +1,934 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "history/modern-history",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-102",
+    "category": 3
+   },
+   "factId": "f03091"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-248",
+    "category": 3
+   },
+   "factId": "f09991"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0810",
+   "baseHash": "a5f50ba6b38b",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-384",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Pillar Saint of Berlin: Ernst Litfaß and the Rise of the Printed City",
+    "titleDe": "Der Säulenheilige von Berlin: Ernst Litfaß und der Aufstieg der gedruckten Stadt",
+    "bodyEn": "In the middle of the nineteenth century Berlin was drowning in paper. Handbills, theatre notices and political proclamations were pasted onto every wall, fence and tree, torn down by rivals and replaced overnight. The printer Ernst Litfaß, owner of a large press on the Adlerstraße, saw both a nuisance and a business. In 1854 he obtained a concession from the Berlin police president to put up freestanding columns on which all public notices would be posted, in return for a monopoly on the advertising space. On 1 July 1855 the first hundred pillars went up, and the Litfaßsäule was born. Berlin was thus the first city with such columns, and other German and European cities soon followed its example. The police liked the arrangement because it let them control what was posted; Litfaß liked it because it made him rich. He printed the first Berlin war bulletins on his columns during the wars of 1864 and 1866, and the wits of the city nicknamed him the „Säulenheiliger“, the pillar saint.\n\nLitfaß was one of many printers and publishers who turned Berlin into the press capital of Germany. The trade itself was a German invention. Around 1450 Johannes Gutenberg (c. 1400–1468), a goldsmith from Mainz, combined a hand mould for casting metal type, an oil-based ink and a modified wine press into the first practical printing system in Europe. His 42-line Bible of about 1455 is still regarded as the finest book ever printed. The next revolution also came from Germany: Friedrich Koenig, a printer from Eisleben, built a steam-driven cylinder press in London, and on 29 November 1814 „The Times“ became the first newspaper printed on it, at more than a thousand sheets an hour instead of two hundred and fifty.\n\nIn Litfaß's Berlin, cheap printing and mass advertising fed a new kind of newspaper. Rudolf Mosse, who had made a fortune with an advertising agency that sold space in hundreds of papers, founded the liberal „Berliner Tageblatt“ in 1872. Five years later Leopold Ullstein, a paper merchant from Fürth, bought his first newspaper and started the house that would launch the „Berliner Morgenpost“ in 1898 and the „B.Z. am Mittag“ in 1904, Germany's first paper sold on the street rather than by subscription. Together with August Scherl's „Berliner Lokal-Anzeiger“ these firms made Berlin the city with more daily newspapers than any other in the world before 1914.\n\n| Year | Milestone | Name |\n|---|---|---|\n| c. 1450 | Movable metal type | Johannes Gutenberg |\n| 1814 | Steam cylinder press | Friedrich Koenig |\n| 1855 | First advertising pillars | Ernst Litfaß |\n| 1872 | „Berliner Tageblatt“ | Rudolf Mosse |\n| 1877 | Ullstein publishing house | Leopold Ullstein |\n\nLitfaß died in 1874, but his columns outlived every regime that ruled the city. Around 2,500 of them still stand in Berlin, and the word Litfaßsäule remains the ordinary German term for an advertising pillar, one of the few inventions that carries the name of a printer rather than an engineer.",
+    "bodyDe": "Mitte des 19. Jahrhunderts ertrank Berlin in Papier. Handzettel, Theateranschläge und politische Proklamationen wurden an jede Wand, jeden Zaun und jeden Baum geklebt, von Konkurrenten abgerissen und über Nacht ersetzt. Der Buchdrucker Ernst Litfaß, Inhaber einer großen Druckerei in der Adlerstraße, sah darin ein Ärgernis und ein Geschäft zugleich. 1854 erhielt er vom Berliner Polizeipräsidenten die Konzession, freistehende Säulen aufzustellen, an denen alle öffentlichen Anschläge angebracht werden sollten, im Gegenzug für ein Monopol auf die Werbeflächen. Am 1. Juli 1855 wurden die ersten hundert Säulen aufgestellt, und die Litfaßsäule war geboren. Berlin war damit die erste Stadt mit solchen Säulen, und andere deutsche und europäische Städte folgten bald seinem Beispiel. Der Polizei gefiel die Regelung, weil sie damit kontrollieren konnte, was plakatiert wurde; Litfaß gefiel sie, weil sie ihn reich machte. In den Kriegen von 1864 und 1866 druckte er die ersten Berliner Kriegsdepeschen auf seine Säulen, und die Spötter der Stadt nannten ihn den „Säulenheiligen“.\n\nLitfaß war einer von vielen Druckern und Verlegern, die Berlin zur Pressehauptstadt Deutschlands machten. Das Gewerbe selbst war eine deutsche Erfindung. Um 1450 verband Johannes Gutenberg (um 1400–1468), ein Goldschmied aus Mainz, ein Handgießinstrument zum Gießen von Metalllettern, eine Druckfarbe auf Ölbasis und eine umgebaute Weinpresse zum ersten praktikablen Drucksystem Europas. Seine 42-zeilige Bibel von etwa 1455 gilt bis heute als das schönste je gedruckte Buch. Auch die nächste Revolution kam aus Deutschland: Friedrich Koenig, ein Drucker aus Eisleben, baute in London eine dampfgetriebene Zylinderpresse, und am 29. November 1814 wurde „The Times“ als erste Zeitung darauf gedruckt, mit mehr als tausend Bogen in der Stunde statt zweihundertfünfzig.\n\nIm Berlin von Litfaß nährten billiger Druck und Massenwerbung eine neue Art von Zeitung. Rudolf Mosse, der mit einer Annoncen-Expedition, die Anzeigenraum in Hunderten von Blättern verkaufte, ein Vermögen gemacht hatte, gründete 1872 das liberale „Berliner Tageblatt“. Fünf Jahre später kaufte Leopold Ullstein, ein Papierhändler aus Fürth, seine erste Zeitung und gründete das Haus, das 1898 die „Berliner Morgenpost“ und 1904 die „B.Z. am Mittag“ herausbringen sollte, Deutschlands erste Zeitung, die auf der Straße statt im Abonnement verkauft wurde. Zusammen mit August Scherls „Berliner Lokal-Anzeiger“ machten diese Firmen Berlin vor 1914 zur Stadt mit mehr Tageszeitungen als jede andere der Welt.\n\n| Jahr | Meilenstein | Name |\n|---|---|---|\n| um 1450 | Bewegliche Metalllettern | Johannes Gutenberg |\n| 1814 | Dampfgetriebene Zylinderpresse | Friedrich Koenig |\n| 1855 | Erste Plakatsäulen | Ernst Litfaß |\n| 1872 | „Berliner Tageblatt“ | Rudolf Mosse |\n| 1877 | Verlagshaus Ullstein | Leopold Ullstein |\n\nLitfaß starb 1874, doch seine Säulen überlebten jedes Regime, das die Stadt beherrschte. Rund 2.500 von ihnen stehen noch heute in Berlin, und das Wort Litfaßsäule ist bis heute der gewöhnliche deutsche Begriff für eine Plakatsäule, eine der wenigen Erfindungen, die den Namen eines Druckers und nicht eines Ingenieurs trägt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1230",
+   "baseHash": "697f372a8d89",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-305",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-255",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Six Dates That Changed the World",
+    "titleDe": "Sechs Daten, die die Welt veränderten",
+    "bodyEn": "Some days are remembered not for what happened to one person but for what happened to everyone afterwards. Here are six of them.\n\n14 July 1789 – The storming of the Bastille. On a hot summer day in Paris, a crowd searching for gunpowder attacked the medieval fortress-prison that symbolised royal arbitrary power. The garrison surrendered after a few hours; only seven prisoners were inside, but the fall of the Bastille announced that the king no longer controlled his capital. It is counted as the beginning of the French Revolution, and 14 July has been France's national holiday since 1880.\n\n4 July 1776 – The United States Declaration of Independence. In Philadelphia the Second Continental Congress adopted the text drafted mainly by Thomas Jefferson, declaring the thirteen colonies \"free and independent states\" and proclaiming that \"all men are created equal\". The war with Britain lasted another seven years, but the date became the birthday of the United States and the model for later declarations around the world.\n\n28 June 1914 – The assassination of Archduke Franz Ferdinand. The heir to the Austro-Hungarian throne (born 1863) and his wife Sophie were shot in their open car in Sarajevo by Gavrilo Princip, a nineteen-year-old Bosnian Serb nationalist. Within five weeks the alliance system had turned a Balkan crisis into the First World War, which killed some 17 million people and swept away four empires.\n\n6 June 1944 – D-Day. In the early hours of a Tuesday, after a 24-hour postponement because of storms, more than 150,000 American, British, Canadian and other Allied soldiers landed on five beaches in Normandy, code-named Utah, Omaha, Gold, Juno and Sword, supported by some 7,000 ships and landing craft and thousands of aircraft. Operation Overlord opened the long-awaited second front in the west; less than a year later Nazi Germany surrendered.\n\n20 July 1969 – The first Moon landing. At 20:17 UTC the lunar module Eagle of Apollo 11 touched down in the Sea of Tranquillity; a few hours later Neil Armstrong stepped onto the surface with the words \"That's one small step for man, one giant leap for mankind\", followed by Buzz Aldrin, while Michael Collins orbited above. Around 600 million people watched on television – the largest audience in history at the time. The crew splashed down safely in the Pacific on 24 July 1969.\n\n9 November 1989 – The fall of the Berlin Wall. After weeks of mass demonstrations in East Germany, a Politburo spokesman, Günter Schabowski, announced at a press conference that the new travel rules applied \"immediately\". That Thursday evening crowds gathered at the border crossings; late that evening Harald Jäger, commanding the Bornholmer Straße checkpoint, gave way first, the other guards followed, and by midnight East and West Berliners were dancing on the wall that had divided the city since 1961. The official demolition of the Wall began on 13 June 1990, and German reunification followed less than a year after its fall, on 3 October 1990.\n\n| Date | Event | Place |\n|---|---|---|\n| 4 July 1776 | The United States Declaration of Independence | Philadelphia |\n| 14 July 1789 | The storming of the Bastille | Paris |\n| 28 June 1914 | The assassination of Archduke Franz Ferdinand | Sarajevo |\n| 6 June 1944 | D-Day, the Allied landings | Normandy |\n| 20 July 1969 | The first Moon landing | Sea of Tranquillity |\n| 9 November 1989 | The fall of the Berlin Wall | Berlin |\n\nSix dates, six places, and in each case a world that looked different the next morning.",
+    "bodyDe": "Manche Tage bleiben nicht wegen dessen in Erinnerung, was einem Einzelnen geschah, sondern wegen dessen, was danach allen geschah. Hier sind sechs davon.\n\n14. Juli 1789 – Der Sturm auf die Bastille. An einem heißen Sommertag in Paris griff eine Menge auf der Suche nach Schießpulver die mittelalterliche Festung und das Gefängnis an, die die königliche Willkür symbolisierten. Die Besatzung ergab sich nach wenigen Stunden; nur sieben Gefangene saßen darin, doch der Fall der Bastille verkündete, dass der König seine Hauptstadt nicht mehr kontrollierte. Er gilt als Beginn der Französischen Revolution, und der 14. Juli ist seit 1880 Frankreichs Nationalfeiertag.\n\n4. Juli 1776 – Die Unabhängigkeitserklärung der Vereinigten Staaten. In Philadelphia nahm der Zweite Kontinentalkongress den vor allem von Thomas Jefferson entworfenen Text an, der die dreizehn Kolonien zu „freien und unabhängigen Staaten“ erklärte und verkündete, dass „alle Menschen gleich geschaffen“ seien. Der Krieg mit Großbritannien dauerte noch sieben Jahre, aber das Datum wurde zum Geburtstag der Vereinigten Staaten und zum Vorbild späterer Erklärungen in aller Welt.\n\n28. Juni 1914 – Das Attentat von Sarajevo. Der österreichisch-ungarische Thronfolger Erzherzog Franz Ferdinand (geboren 1863) und seine Frau Sophie wurden in ihrem offenen Wagen in Sarajevo von Gavrilo Princip erschossen, einem neunzehnjährigen bosnisch-serbischen Nationalisten. Binnen fünf Wochen hatte das Bündnissystem aus einer Balkankrise den Ersten Weltkrieg gemacht, der rund 17 Millionen Menschen tötete und vier Kaiserreiche hinwegfegte.\n\n6. Juni 1944 – Der D-Day. In den frühen Morgenstunden eines Dienstags landeten nach einer sturmbedingten Verschiebung um 24 Stunden mehr als 150.000 amerikanische, britische, kanadische und weitere alliierte Soldaten an fünf Stränden der Normandie mit den Decknamen Utah, Omaha, Gold, Juno und Sword, unterstützt von rund 7.000 Schiffen und Landungsbooten und Tausenden Flugzeugen. Die Operation Overlord eröffnete die lang erwartete zweite Front im Westen; weniger als ein Jahr später kapitulierte das nationalsozialistische Deutschland.\n\n20. Juli 1969 – Die erste Mondlandung. Um 20:17 Uhr UTC setzte die Mondlandefähre Eagle von Apollo 11 im Meer der Ruhe auf; wenige Stunden später betrat Neil Armstrong die Oberfläche mit den Worten „Das ist ein kleiner Schritt für einen Menschen, aber ein riesiger Sprung für die Menschheit“, gefolgt von Buzz Aldrin, während Michael Collins darüber kreiste. Rund 600 Millionen Menschen sahen am Fernseher zu – das bis dahin größte Publikum der Geschichte. Am 24. Juli 1969 wasserte die Besatzung sicher im Pazifik.\n\n9. November 1989 – Der Fall der Berliner Mauer. Nach wochenlangen Massendemonstrationen in der DDR verkündete der Politbürosprecher Günter Schabowski auf einer Pressekonferenz, die neue Reiseregelung gelte „sofort, unverzüglich“. An jenem Donnerstagabend sammelten sich an den Grenzübergängen Menschenmengen; am späten Abend gab Harald Jäger, Kommandant des Übergangs Bornholmer Straße, als Erster nach, die anderen Grenzer folgten, und um Mitternacht tanzten Ost- und Westberliner auf der Mauer, die die Stadt seit 1961 geteilt hatte. Am 13. Juni 1990 begann der offizielle Abriss der Mauer, und die deutsche Wiedervereinigung folgte weniger als ein Jahr nach ihrem Fall, am 3. Oktober 1990.\n\n| Datum | Ereignis | Ort |\n|---|---|---|\n| 4. Juli 1776 | Die Unabhängigkeitserklärung der Vereinigten Staaten | Philadelphia |\n| 14. Juli 1789 | Der Sturm auf die Bastille | Paris |\n| 28. Juni 1914 | Das Attentat von Sarajevo | Sarajevo |\n| 6. Juni 1944 | D-Day, die Landung der Alliierten | Normandie |\n| 20. Juli 1969 | Die erste Mondlandung | Meer der Ruhe |\n| 9. November 1989 | Der Fall der Berliner Mauer | Berlin |\n\nSechs Daten, sechs Orte, und jedes Mal eine Welt, die am nächsten Morgen anders aussah.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-118",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-110",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-207",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "Which playwright, author of „The Deputy“, was the main target of Ludwig Erhard's 1965 remark about „very small pinschers“?",
+      "de": "Welcher Dramatiker, Autor des „Stellvertreters“, war 1965 das Hauptziel von Ludwig Erhards Bemerkung über „ganz kleine Pinscher“?",
+      "answerEn": "Rolf Hochhuth",
+      "answerDe": "Rolf Hochhuth",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1931-04-01",
+       "end": "2020-05-13",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Rolf Hochhuth, playwright of „The Deputy“",
+       "labelDe": "Rolf Hochhuth, Dramatiker des „Stellvertreters“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rolf_Hochhuth",
+       "title": "Rolf Hochhuth – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which village near Bad Honnef did Konrad Adenauer live from 1935 until his death?",
+      "de": "In welchem Ort bei Bad Honnef lebte Konrad Adenauer von 1935 bis zu seinem Tod?",
+      "answerEn": "Rhöndorf",
+      "answerDe": "Rhöndorf",
+      "timeline": {
+       "kind": "period",
+       "start": "1935",
+       "end": "1967",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Konrad Adenauer lives in Rhöndorf on the Rhine",
+       "labelDe": "Konrad Adenauer lebt in Rhöndorf am Rhein"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rh%C3%B6ndorf",
+       "title": "Rhöndorf – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Adenauer and Erhard: The First Two Chancellors",
+    "titleDe": "Adenauer und Erhard: Die ersten beiden Bundeskanzler",
+    "bodyEn": "The Federal Republic's first two heads of government could hardly have been more different. Konrad Adenauer was a Catholic Rhinelander and a veteran of city politics; Ludwig Erhard was a cigar-smoking economist from Franconia who never felt at home in party life. Between them they governed West Germany from 1949 to 1966.\n\nAdenauer (1876–1967) made his first career in Cologne. He became the city's Lord Mayor in 1917 and held the office until the Nazis drove him out in 1933. In those years he re-founded the University of Cologne, laid out the green belt around the city and brought the Ford works to the Rhine, which is why the people of Cologne still remember him as one of their best mayors. Briefly reinstated by the Americans in 1945, he was dismissed by the British a few months later and turned to building the new Christian Democratic Union. At the party conference of the CDU of the British zone in Recklinghausen on 28 August 1948 he declared: „Personal freedom is and remains the highest good of man!“ – a sentence still quoted as the core of his political creed.\n\nAs president of the Parliamentary Council, which drafted the Basic Law, Adenauer also had a hand in the choice of a capital. On 10 May 1949 the council voted by secret ballot: 33 votes went to Bonn, 29 to Frankfurt am Main. Bonn lay a few kilometres from Rhöndorf near Bad Honnef, the village where Adenauer lived from 1935 until his death and where he is buried. The little university town was meant to be a provisional seat; it remained the capital for four decades.\n\nErhard (1897–1977), Minister of Economics from 1949 and celebrated as the father of the economic miracle, succeeded the 87-year-old Adenauer on 16 October 1963. Unusually, he took office without belonging to a party: his CDU membership is disputed, and the date of his entry was apparently backdated later. He became party chairman only in 1966. His relations with intellectuals were frosty. On 9 July 1965, in the middle of the election campaign, he told an economic conference in Düsseldorf that where the poet stops, „the very small pinscher begins“. The jibe was aimed above all at the playwright Rolf Hochhuth, author of „The Deputy“, who had criticised the government, and it became a byword for the gulf between Bonn and the writers.\n\nErhard won the 1965 election, but a year later his coalition partner, the FDP, walked out, and at the end of 1966 he made way for the grand coalition of Kurt Georg Kiesinger.\n\n| Chancellor | In office | Remembered for |\n|---|---|---|\n| Konrad Adenauer | 1949–1963 | Lord Mayor of Cologne, „highest good of man“ |\n| Ludwig Erhard | 1963–1966 | economic miracle, „very small pinscher“ |",
+    "bodyDe": "Die ersten beiden Regierungschefs der Bundesrepublik hätten kaum unterschiedlicher sein können. Konrad Adenauer war ein katholischer Rheinländer und ein Veteran der Kommunalpolitik; Ludwig Erhard war ein Zigarre rauchender Ökonom aus Franken, der sich im Parteileben nie heimisch fühlte. Gemeinsam regierten sie Westdeutschland von 1949 bis 1966.\n\nAdenauer (1876–1967) machte seine erste Karriere in Köln. 1917 wurde er Oberbürgermeister der Stadt und blieb es, bis ihn die Nationalsozialisten 1933 aus dem Amt jagten. In diesen Jahren gründete er die Universität zu Köln neu, legte den Grüngürtel um die Stadt an und holte die Ford-Werke an den Rhein – weshalb die Kölner ihn bis heute als einen ihrer besten Oberbürgermeister in Erinnerung haben. 1945 von den Amerikanern kurz wieder eingesetzt, wurde er wenige Monate später von den Briten entlassen und widmete sich dem Aufbau der neuen Christlich Demokratischen Union. Auf dem Parteitag der CDU der britischen Zone in Recklinghausen erklärte er am 28. August 1948: „Die persönliche Freiheit ist und bleibt das höchste Gut des Menschen!“ – ein Satz, der bis heute als Kern seines politischen Credos zitiert wird.\n\nAls Präsident des Parlamentarischen Rates, der das Grundgesetz ausarbeitete, wirkte Adenauer auch an der Wahl der Hauptstadt mit. Am 10. Mai 1949 stimmte der Rat geheim ab: 33 Stimmen entfielen auf Bonn, 29 auf Frankfurt am Main. Bonn lag wenige Kilometer von Rhöndorf bei Bad Honnef entfernt, dem Ort, in dem Adenauer von 1935 bis zu seinem Tod lebte und in dem er begraben ist. Die kleine Universitätsstadt sollte nur ein provisorischer Sitz sein; sie blieb vier Jahrzehnte lang Hauptstadt.\n\nErhard (1897–1977), seit 1949 Wirtschaftsminister und als Vater des Wirtschaftswunders gefeiert, folgte dem 87-jährigen Adenauer am 16. Oktober 1963 nach. Ungewöhnlicherweise kam er als Parteiloser ins Amt: Seine CDU-Mitgliedschaft ist umstritten, sein Eintrittsdatum wurde offenbar nachträglich zurückdatiert. Parteivorsitzender wurde er erst 1966. Sein Verhältnis zu den Intellektuellen war frostig. Am 9. Juli 1965, mitten im Wahlkampf, sagte er auf einem Wirtschaftstag in Düsseldorf, wo der Dichter aufhöre, fange „der ganz kleine Pinscher“ an. Der Seitenhieb zielte vor allem auf den Dramatiker Rolf Hochhuth, den Autor des „Stellvertreters“, der die Regierung kritisiert hatte, und wurde zum Inbegriff der Kluft zwischen Bonn und den Schriftstellern.\n\nErhard gewann die Wahl von 1965, doch ein Jahr später verließ sein Koalitionspartner, die FDP, die Regierung, und Ende 1966 machte er Platz für die Große Koalition unter Kurt Georg Kiesinger.\n\n| Kanzler | Amtszeit | In Erinnerung durch |\n|---|---|---|\n| Konrad Adenauer | 1949–1963 | Kölner Oberbürgermeister, „höchstes Gut des Menschen“ |\n| Ludwig Erhard | 1963–1966 | Wirtschaftswunder, „ganz kleine Pinscher“ |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-247",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-319",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-389",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-015",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "Who claimed at a press conference on 15 June 1961: „Nobody has any intention of building a wall“?",
+      "de": "Wer behauptete am 15. Juni 1961 auf einer Pressekonferenz: „Niemand hat die Absicht, eine Mauer zu errichten“?",
+      "answerEn": "Walter Ulbricht",
+      "answerDe": "Walter Ulbricht",
+      "timeline": {
+       "kind": "event",
+       "start": "1961-06-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Walter Ulbricht: „Nobody has any intention of building a wall“",
+       "labelDe": "Walter Ulbricht: „Niemand hat die Absicht, eine Mauer zu errichten“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Walter_Ulbricht",
+       "title": "Walter Ulbricht – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the young East German border policeman who jumped over the barbed wire on Bernauer Straße into West Berlin on 15 August 1961?",
+      "de": "Wie hieß der junge DDR-Grenzpolizist, der am 15. August 1961 an der Bernauer Straße über den Stacheldraht nach West-Berlin sprang?",
+      "answerEn": "Conrad Schumann",
+      "answerDe": "Conrad Schumann",
+      "timeline": {
+       "kind": "event",
+       "start": "1961-08-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Conrad Schumann leaps over the barbed wire into West Berlin",
+       "labelDe": "Conrad Schumann springt über den Stacheldraht nach West-Berlin"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Conrad_Schumann",
+       "title": "Conrad Schumann – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the 18-year-old who was shot near Checkpoint Charlie on 17 August 1962 and bled to death at the foot of the Berlin Wall?",
+      "de": "Wie hieß der 18-Jährige, der am 17. August 1962 nahe dem Checkpoint Charlie angeschossen wurde und am Fuß der Berliner Mauer verblutete?",
+      "answerEn": "Peter Fechter",
+      "answerDe": "Peter Fechter",
+      "timeline": {
+       "kind": "event",
+       "start": "1962-08-17",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Peter Fechter is shot at the Berlin Wall and bleeds to death",
+       "labelDe": "Peter Fechter wird an der Berliner Mauer angeschossen und verblutet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Peter_Fechter",
+       "title": "Peter Fechter – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "13 August 1961: The Wall Goes Up",
+    "titleDe": "13. August 1961: Die Mauer entsteht",
+    "bodyEn": "On 15 June 1961 Walter Ulbricht, head of the SED and of the East German state, held an international press conference in East Berlin. When the journalist Annamarie Doherr of the Frankfurter Rundschau asked whether the Brandenburg Gate would become a state border, he replied: „Nobody has any intention of building a wall!“ Nobody had asked about a wall. Every month tens of thousands of East Germans were leaving for the West through the still open sector border in Berlin.\n\nThe answer came 59 days later. In the night of 12 to 13 August 1961 – the 13th was a Sunday – police, factory militia groups and soldiers sealed the border between East and West Berlin with barbed wire and fences. Streets were torn up and S-Bahn and U-Bahn lines cut. In the days that followed the wire was replaced by concrete blocks and walls: the Berlin Wall had been built. The SED called it the „Anti-Fascist Protection Rampart“, supposedly erected against Western aggressors; in reality it was directed against the GDR's own citizens.\n\nTwo days later, on 15 August 1961, the 19-year-old border policeman Conrad Schumann jumped over the barbed wire at the corner of Bernauer Straße and Ruppiner Straße into West Berlin. Peter Leibing's photograph of his „leap into freedom“ became one of the most famous images of the Cold War.\n\nThe crossing point for Allied personnel, diplomats and foreigners lay on Friedrichstraße. The Americans called it Checkpoint Charlie, after the letter C in the NATO spelling alphabet; Checkpoint Alpha stood at Helmstedt, Checkpoint Bravo at Dreilinden. From 22 to 28 October 1961 American and Soviet tanks faced each other there at a distance of a few hundred metres. A year later, on 17 August 1962, the 18-year-old Peter Fechter was shot while trying to climb the Wall on Zimmerstraße near the checkpoint. He bled to death in the death strip for about an hour, in full view of Western onlookers, while no one came to his aid.\n\nThe Wall stood for 28 years, until the night of 9 November 1989.\n\n| Date | Event |\n|---|---|\n| 15 June 1961 | Ulbricht: „Nobody has any intention of building a wall“ |\n| 13 Aug 1961 | the sector border is sealed |\n| 15 Aug 1961 | Conrad Schumann's leap |\n| 22–28 Oct 1961 | tank stand-off at Checkpoint Charlie |\n| 17 Aug 1962 | death of Peter Fechter |",
+    "bodyDe": "Am 15. Juni 1961 gab Walter Ulbricht, Chef der SED und des ostdeutschen Staates, in Ost-Berlin eine internationale Pressekonferenz. Als die Journalistin Annamarie Doherr von der Frankfurter Rundschau fragte, ob das Brandenburger Tor zur Staatsgrenze werde, antwortete er: „Niemand hat die Absicht, eine Mauer zu errichten!“ Nach einer Mauer hatte niemand gefragt. Jeden Monat verließen Zehntausende Ostdeutsche das Land über die noch offene Sektorengrenze in Berlin.\n\nDie Antwort kam 59 Tage später. In der Nacht vom 12. auf den 13. August 1961 – der 13. war ein Sonntag – riegelten Volkspolizei, Kampfgruppen der Arbeiterklasse und Soldaten die Grenze zwischen Ost- und West-Berlin mit Stacheldraht und Zäunen ab. Straßen wurden aufgerissen, S- und U-Bahn-Linien unterbrochen. In den folgenden Tagen ersetzten Betonblöcke und Mauern den Draht: Die Berliner Mauer war gebaut. Die SED nannte sie den „antifaschistischen Schutzwall“, angeblich gegen westliche Aggressoren errichtet; in Wirklichkeit richtete sie sich gegen die eigenen Bürger der DDR.\n\nZwei Tage später, am 15. August 1961, sprang der 19-jährige Bereitschaftspolizist Conrad Schumann an der Ecke Bernauer Straße/Ruppiner Straße über den Stacheldraht nach West-Berlin. Peter Leibings Foto seines „Sprungs in die Freiheit“ wurde zu einem der berühmtesten Bilder des Kalten Krieges.\n\nDer Übergang für alliiertes Personal, Diplomaten und Ausländer lag in der Friedrichstraße. Die Amerikaner nannten ihn Checkpoint Charlie, nach dem Buchstaben C im NATO-Buchstabieralphabet; Checkpoint Alpha lag in Helmstedt, Checkpoint Bravo in Dreilinden. Vom 22. bis 28. Oktober 1961 standen sich dort amerikanische und sowjetische Panzer auf wenige hundert Meter gegenüber. Ein Jahr später, am 17. August 1962, wurde der 18-jährige Peter Fechter in der Zimmerstraße nahe dem Kontrollpunkt beim Versuch, die Mauer zu überklettern, angeschossen. Er verblutete etwa eine Stunde lang im Todesstreifen vor den Augen westlicher Zuschauer, ohne dass ihm jemand half.\n\nDie Mauer stand 28 Jahre lang, bis zur Nacht des 9. November 1989.\n\n| Datum | Ereignis |\n|---|---|\n| 15. Juni 1961 | Ulbricht: „Niemand hat die Absicht, eine Mauer zu errichten“ |\n| 13. Aug. 1961 | Abriegelung der Sektorengrenze |\n| 15. Aug. 1961 | Conrad Schumanns Sprung |\n| 22.–28. Okt. 1961 | Panzerkonfrontation am Checkpoint Charlie |\n| 17. Aug. 1962 | Tod von Peter Fechter |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-283",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-367",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-272",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-296",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the parliament of the GDR, which met in the Palace of the Republic from 1976?",
+      "de": "Wie hieß das Parlament der DDR, das ab 1976 im Palast der Republik tagte?",
+      "answerEn": "Volkskammer",
+      "answerDe": "Volkskammer",
+      "timeline": {
+       "kind": "founding",
+       "start": "1949-10-07",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Volkskammer, parliament of the GDR, is constituted",
+       "labelDe": "Die Volkskammer, das Parlament der DDR, konstituiert sich"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Volkskammer",
+       "title": "Volkskammer – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the title of the national anthem of the GDR, whose words were no longer sung from about 1970?",
+      "de": "Wie heißt die Nationalhymne der DDR, deren Text ab etwa 1970 nicht mehr gesungen wurde?",
+      "answerEn": "Auferstanden aus Ruinen",
+      "answerDe": "Auferstanden aus Ruinen",
+      "timeline": {
+       "kind": "event",
+       "start": "1949-11-05",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The GDR government adopts „Auferstanden aus Ruinen“ as its anthem",
+       "labelDe": "Die DDR-Regierung beschließt „Auferstanden aus Ruinen“ als Hymne"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Auferstanden_aus_Ruinen",
+       "title": "Auferstanden aus Ruinen – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the SED-controlled alliance of parties and mass organisations that drew up the single list of candidates for GDR elections?",
+      "de": "Wie hieß das von der SED gelenkte Bündnis aus Parteien und Massenorganisationen, das die Einheitsliste für die Wahlen in der DDR aufstellte?",
+      "answerEn": "National Front",
+      "answerDe": "Nationale Front",
+      "timeline": {
+       "kind": "founding",
+       "start": "1950-01-07",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The National Front of the GDR holds its constituent session",
+       "labelDe": "Die Nationale Front der DDR tritt zu ihrer konstituierenden Sitzung zusammen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Nationale_Front_(DDR)",
+       "title": "Nationale Front (DDR) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Hammer, Compass and Wreath: How the GDR Staged Its Statehood",
+    "titleDe": "Hammer, Zirkel und Ährenkranz: Wie die DDR ihre Staatlichkeit inszenierte",
+    "bodyEn": "The German Democratic Republic, founded on 7 October 1949, spent four decades presenting itself as a normal state, with a parliament, several parties, a flag and an anthem. Behind each of them stood the leading role of the Socialist Unity Party, the SED.\n\nThe anthem came first. On 5 November 1949 the government adopted „Auferstanden aus Ruinen“ („Risen from Ruins“), with words by Johannes R. Becher and music by Hanns Eisler. Its line about „Germany, united fatherland“ soon became an embarrassment for a state that had given up on unity, and from about 1970 the anthem was played only without words.\n\nThe parliament, the Volkskammer, also constituted in 1949, looked pluralist. Besides the SED it held the bloc parties – the CDU, the liberal LDPD, the farmers' DBD and the national NDPD – together with mass organisations such as the youth league FDJ and the trade union federation FDGB. Bloc parties had seats and even ministers, but they never competed with the SED. All of them were joined in the National Front, constituted on 7 January 1950, which drew up a single list of candidates. Voters merely folded the ballot paper and dropped it into the box, and the list routinely won more than 99 per cent.\n\nThe flag came last. For its first ten years the GDR flew the same black, red and gold tricolour as the Federal Republic. On 1 October 1959 the state coat of arms was added in the centre: a hammer and a compass surrounded by a wreath of wheat ears, standing for the alliance of workers, intelligentsia and peasants. West German authorities called it the „splitters' flag“, and until 1969 the police removed it from public view.\n\nFrom 1976 the Volkskammer met in a showpiece on Marx-Engels-Platz, the Palace of the Republic, opened on 23 April 1976, which also housed concert halls, restaurants and a bowling alley. Its lavishly lit foyer earned it the nickname „Erich's lamp shop“, after Erich Honecker. Closed because of asbestos in September 1990, it was demolished between 2006 and 2008; the rebuilt Berlin Palace with the Humboldt Forum now stands on the site.\n\nSport and youth had a stage of their own nearby. The Walter-Ulbricht-Stadion in Berlin-Mitte, opened in 1950 for a national youth rally, was rebuilt and renamed the Stadion der Weltjugend (Stadium of World Youth) for the World Festival of Youth and Students in 1973. It was torn down in 1992, and since 2018 the headquarters of the Federal Intelligence Service, the BND, has occupied the site.\n\n| Symbol | Since |\n|---|---|\n| anthem „Auferstanden aus Ruinen“ | 1949 |\n| Volkskammer | 1949 |\n| National Front | 1950 |\n| flag with hammer, compass and wreath | 1959 |\n| Palace of the Republic | 1976 |",
+    "bodyDe": "Die Deutsche Demokratische Republik, gegründet am 7. Oktober 1949, präsentierte sich vier Jahrzehnte lang als normaler Staat mit Parlament, mehreren Parteien, Flagge und Hymne. Hinter allem stand die führende Rolle der Sozialistischen Einheitspartei, der SED.\n\nDie Hymne kam zuerst. Am 5. November 1949 beschloss die Regierung „Auferstanden aus Ruinen“ mit dem Text von Johannes R. Becher und der Musik von Hanns Eisler. Die Zeile „Deutschland, einig Vaterland“ wurde für einen Staat, der die Einheit aufgegeben hatte, bald peinlich, und ab etwa 1970 wurde die Hymne nur noch ohne Text gespielt.\n\nDas Parlament, die ebenfalls 1949 konstituierte Volkskammer, wirkte pluralistisch. Neben der SED saßen dort die Blockparteien – die CDU, die liberale LDPD, die Bauernpartei DBD und die nationale NDPD – sowie Massenorganisationen wie der Jugendverband FDJ und der Gewerkschaftsbund FDGB. Die Blockparteien hatten Sitze und sogar Minister, traten aber nie in Konkurrenz zur SED. Zusammengeschlossen waren sie alle in einem Bündnis namens Nationale Front, konstituiert am 7. Januar 1950, das eine Einheitsliste der Kandidaten aufstellte. Die Wähler falteten den Stimmzettel nur und warfen ihn in die Urne, und die Liste erhielt regelmäßig mehr als 99 Prozent.\n\nDie Flagge kam zuletzt. In ihren ersten zehn Jahren führte die DDR dieselbe schwarz-rot-goldene Trikolore wie die Bundesrepublik. Am 1. Oktober 1959 kam in der Mitte das Staatswappen hinzu: Hammer und Zirkel, um die sich ein Ährenkranz legt, als Zeichen des Bündnisses von Arbeitern, Intelligenz und Bauern. Westdeutsche Behörden nannten sie die „Spalterflagge“, und bis 1969 entfernte die Polizei sie aus der Öffentlichkeit.\n\nAb 1976 tagte die Volkskammer in einem Prestigebau am Marx-Engels-Platz, dem am 23. April 1976 eröffneten Palast der Republik, der auch Säle für Konzerte, Restaurants und eine Bowlingbahn beherbergte. Sein verschwenderisch beleuchtetes Foyer brachte ihm in Anspielung auf Erich Honecker den Spitznamen „Erichs Lampenladen“ ein. Im September 1990 wegen Asbest geschlossen, wurde er zwischen 2006 und 2008 abgerissen; heute steht dort das wiederaufgebaute Berliner Schloss mit dem Humboldt Forum.\n\nSport und Jugend hatten ganz in der Nähe eine eigene Bühne. Das Walter-Ulbricht-Stadion in Berlin-Mitte, 1950 für das Deutschlandtreffen der Jugend eröffnet, wurde für die Weltfestspiele der Jugend und Studenten 1973 umgebaut und in Stadion der Weltjugend umbenannt. Es wurde 1992 abgerissen, und seit 2018 steht auf dem Gelände die Zentrale des Bundesnachrichtendienstes, des BND.\n\n| Symbol | Seit |\n|---|---|\n| Hymne „Auferstanden aus Ruinen“ | 1949 |\n| Volkskammer | 1949 |\n| Nationale Front | 1950 |\n| Flagge mit Hammer, Zirkel und Ährenkranz | 1959 |\n| Palast der Republik | 1976 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-065",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-004",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "What was a grilled chicken called in the GDR, after the young fattened chickens imported from Bulgaria from 1961?",
+      "de": "Wie nannte man in der DDR ein Brathähnchen, nach den ab 1961 aus Bulgarien eingeführten Jungmasthähnchen?",
+      "answerEn": "Broiler",
+      "answerDe": "Broiler",
+      "timeline": {
+       "kind": "event",
+       "start": "1961",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "„Broiler“ becomes the GDR word for a grilled chicken",
+       "labelDe": "„Broiler“ wird zum DDR-Wort für das Brathähnchen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Broiler",
+       "title": "Broiler – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which cola with citrus oils was developed near Leipzig in 1958 as the GDR's own cola?",
+      "de": "Welche Cola mit Zitrusölen wurde 1958 bei Leipzig als eigene Cola der DDR entwickelt?",
+      "answerEn": "Vita Cola",
+      "answerDe": "Vita Cola",
+      "timeline": {
+       "kind": "creation",
+       "start": "1958-10",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Vita Cola, the GDR's own cola, is launched",
+       "labelDe": "Vita Cola, die eigene Cola der DDR, kommt auf den Markt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Vita_Cola",
+       "title": "Vita Cola – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the sparkling wine from Freyburg on the Unstrut that was the market leader in the GDR?",
+      "de": "Wie heißt der Sekt aus Freyburg an der Unstrut, der in der DDR Marktführer war?",
+      "answerEn": "Rotkäppchen",
+      "answerDe": "Rotkäppchen",
+      "timeline": {
+       "kind": "creation",
+       "start": "1894",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Rotkäppchen sparkling-wine brand is launched in Freyburg",
+       "labelDe": "Die Sektmarke Rotkäppchen wird in Freyburg eingeführt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rotk%C3%A4ppchen_Sektkellerei",
+       "title": "Rotkäppchen Sektkellerei – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which small car with a Duroplast body was built at the Sachsenring works in Zwickau from 1958 to 1991?",
+      "de": "Welcher Kleinwagen mit Karosserie aus Duroplast wurde von 1958 bis 1991 im Sachsenring-Werk in Zwickau gebaut?",
+      "answerEn": "Trabant",
+      "answerDe": "Trabant",
+      "timeline": {
+       "kind": "period",
+       "start": "1958",
+       "end": "1991",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Trabant is built in Zwickau",
+       "labelDe": "Der Trabant wird in Zwickau gebaut"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Trabant_(Pkw)",
+       "title": "Trabant (Pkw) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Take One More Egg: Food, Drink and Cars of the GDR",
+    "titleDe": "Nimm ein Ei mehr: Essen, Trinken und Autos in der DDR",
+    "bodyEn": "„Nimm ein Ei mehr!“ – „Take one more egg!“ – was one of the best-known advertising slogans of the GDR. It promoted the produce of a planned economy that was often short of meat but rich in poultry farms. Campaigns for egg dishes ran from as early as 1958, and from 1967 they carried the name of the Kombinat Industrielle Mast (Industrial Fattening Combine), KIM for short. Its giant farms raised broiler chickens, geese, pigs and cattle and above all produced eggs; in advertising the abbreviation was even reinterpreted as „Köstlich! Immer marktfrisch!“ – „Delicious! Always market-fresh!“.\n\nThe chicken acquired an East German name of its own. From 1961, fattened young chickens from Bulgaria, sold there under the brand name „brojleri“, reached East German shops, and the English word Broiler became the everyday GDR term for a grilled chicken. The state restaurant chain „Zum Goldbroiler“ served it in every district town, and wits spoke of „silver“ and „bronze broilers“ when the bird was tough.\n\nTo go with it there was a home-grown cola. In 1958 the chemical factory in Miltitz near Leipzig developed Vita Cola, whose recipe added citrus oils and vitamin C. It almost disappeared after 1990 but came back and is today one of the best-selling cola brands in Germany. For celebrations East Germans reached for Rotkäppchen, a sparkling wine from Freyburg on the Unstrut sold under that name since 1894. Nationalised in 1948, the cellar led the GDR market and after reunification became the leading sparkling-wine brand in the whole of Germany.\n\nAnd to drive to the shop – after a wait of many years, if one was lucky – there was the Trabant, built at the Sachsenring works in Zwickau from 1958 to 1991 with outer body panels made of Duroplast. Just over three million were made, and the little car with the two-stroke engine became the symbol of the open border in November 1989.\n\n| Product | Maker | Since |\n|---|---|---|\n| eggs and broilers | KIM | 1967 |\n| Vita Cola | VEB Chemische Fabrik Miltitz | 1958 |\n| Rotkäppchen sparkling wine | cellar in Freyburg | 1894 |\n| Trabant | VEB Sachsenring Zwickau | 1958 |",
+    "bodyDe": "„Nimm ein Ei mehr!“ war einer der bekanntesten Werbesprüche der DDR. Er warb für die Erzeugnisse einer Planwirtschaft, der es oft an Fleisch mangelte, die aber reich an Geflügelfarmen war. Kampagnen für Eierspeisen liefen schon ab 1958, und ab 1967 trugen sie den Namen des Kombinats Industrielle Mast, kurz KIM. Seine riesigen Anlagen mästeten Broiler, Gänse, Schweine und Rinder und erzeugten vor allem Eier; in der Werbung wurde die Abkürzung sogar zu „Köstlich! Immer marktfrisch!“ umgedeutet.\n\nDas Hähnchen bekam einen eigenen ostdeutschen Namen. Ab 1961 kamen gemästete Jungmasthähnchen aus Bulgarien, die dort unter dem Markennamen „brojleri“ verkauft wurden, in die Läden der DDR, und das englische Wort Broiler wurde zur Alltagsbezeichnung für ein Brathähnchen. Die HO-Gaststättenkette „Zum Goldbroiler“ servierte es in jeder Kreisstadt, und der Volksmund sprach von „Silber-“ und „Bronzebroilern“, wenn das Tier zäh war.\n\nDazu gab es eine eigene Cola. 1958 entwickelte die Chemische Fabrik Miltitz bei Leipzig die Vita Cola, deren Rezept Zitrusöle und Vitamin C enthielt. Nach 1990 verschwand sie beinahe, kehrte aber zurück und gehört heute zu den meistverkauften Colamarken Deutschlands. Zum Feiern griffen die Ostdeutschen zu Rotkäppchen, einem Sekt aus Freyburg an der Unstrut, der seit 1894 unter diesem Namen verkauft wird. 1948 verstaatlicht, war die Kellerei Marktführer in der DDR und wurde nach der Wiedervereinigung zur führenden Sektmarke ganz Deutschlands.\n\nUnd um zum Laden zu fahren – nach vielen Jahren Wartezeit, wenn man Glück hatte – gab es den Trabant, gebaut von 1958 bis 1991 im Sachsenring-Werk in Zwickau, mit Außenteilen der Karosserie aus Duroplast. Gut drei Millionen Stück wurden hergestellt, und der kleine Wagen mit dem Zweitaktmotor wurde im November 1989 zum Symbol der offenen Grenze.\n\n| Produkt | Hersteller | Seit |\n|---|---|---|\n| Eier und Broiler | KIM | 1967 |\n| Vita Cola | VEB Chemische Fabrik Miltitz | 1958 |\n| Rotkäppchen-Sekt | Kellerei in Freyburg | 1894 |\n| Trabant | VEB Sachsenring Zwickau | 1958 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-214",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-159",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-034",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year was women's suffrage proclaimed in Germany by the Council of the People's Deputies?",
+      "de": "In welchem Jahr verkündete der Rat der Volksbeauftragten das Frauenwahlrecht in Deutschland?",
+      "answerEn": "1918",
+      "answerDe": "1918",
+      "timeline": {
+       "kind": "event",
+       "start": "1918-11-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Women's suffrage is proclaimed in Germany",
+       "labelDe": "In Deutschland wird das Frauenwahlrecht verkündet"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Frauenwahlrecht",
+       "title": "Frauenwahlrecht – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year did the West German Equal Rights Act come into force, abolishing the husband's final say in marriage?",
+      "de": "In welchem Jahr trat in der Bundesrepublik das Gleichberechtigungsgesetz in Kraft, das das Letztentscheidungsrecht des Ehemanns abschaffte?",
+      "answerEn": "1958",
+      "answerDe": "1958",
+      "timeline": {
+       "kind": "event",
+       "start": "1958-07-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Equal Rights Act comes into force in West Germany",
+       "labelDe": "Das Gleichberechtigungsgesetz tritt in der Bundesrepublik in Kraft"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Gleichberechtigungsgesetz",
+       "title": "Gleichberechtigungsgesetz – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Who became the first woman federal minister of West Germany in 1961, as Minister of Health?",
+      "de": "Wer wurde 1961 als Gesundheitsministerin die erste Bundesministerin der Bundesrepublik?",
+      "answerEn": "Elisabeth Schwarzhaupt",
+      "answerDe": "Elisabeth Schwarzhaupt",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1901-01-07",
+       "end": "1986-10-29",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Elisabeth Schwarzhaupt, first woman federal minister",
+       "labelDe": "Elisabeth Schwarzhaupt, erste Bundesministerin"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Elisabeth_Schwarzhaupt",
+       "title": "Elisabeth Schwarzhaupt – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Milestones of Equality in Germany, 1903–1977",
+    "titleDe": "Meilensteine der Gleichberechtigung in Deutschland, 1903–1977",
+    "bodyEn": "For much of the twentieth century German law treated women – and young adults – as not quite full citizens. The milestones of their emancipation are spread over three quarters of a century.\n\nThe first woman in German police service started work in Stuttgart on 1 February 1903. Henriette Arendt (1874–1922), born in Königsberg and an aunt of the philosopher Hannah Arendt, was taken on as a police assistant to look after women and girls held by the police. She carried no weapon and was in effect a welfare worker; after conflicts with her superiors she handed in her notice in 1908.\n\nPolitical equality arrived with the revolution. On 12 November 1918 the Council of the People's Deputies proclaimed that all elections would henceforth be held by equal, secret, direct and universal suffrage for men and women, and on 19 January 1919 women voted for the first time in a national election. The Basic Law of 1949 stated plainly that men and women have equal rights, but civil law took years to follow. Only the Equal Rights Act, in force from 1 July 1958, abolished the husband's final say in marital matters and his right to give notice on his wife's job. Even then the family came first: a wife could take paid work only if it was compatible with her duties in marriage and family. On 14 November 1961 Konrad Adenauer appointed Elisabeth Schwarzhaupt (1901–1986) Minister of Health, the first woman in a federal cabinet.\n\nThe decisive reforms came in the 1970s. A law of 31 July 1974 lowered the age of majority from 21 to 18 with effect from 1 January 1975 – a quarter of a century after the GDR, which had taken the step on 22 May 1950. Then the First Act to Reform Marriage and Family Law, mostly in force from 1 July 1977, replaced the model of the „housewife marriage“ with partnership: since then the law prescribes no division of roles between spouses, and divorce no longer depends on who was at fault.\n\n| Year | Milestone |\n|---|---|\n| 1903 | first female police assistant, Stuttgart |\n| 1918 | women's suffrage proclaimed |\n| 1958 | Equal Rights Act in force |\n| 1961 | first female federal minister |\n| 1975 | age of majority lowered to 18 |\n| 1977 | end of the „housewife marriage“ |",
+    "bodyDe": "Einen Großteil des 20. Jahrhunderts behandelte das deutsche Recht Frauen – und junge Erwachsene – nicht als vollwertige Bürger. Die Meilensteine ihrer Emanzipation verteilen sich über ein Dreivierteljahrhundert.\n\nDie erste Frau im deutschen Polizeidienst trat am 1. Februar 1903 in Stuttgart ihren Dienst an. Henriette Arendt (1874–1922), geboren in Königsberg und eine Tante der Philosophin Hannah Arendt, wurde als Polizeiassistentin eingestellt, um sich um Frauen und Mädchen in Polizeigewahrsam zu kümmern. Sie trug keine Waffe und war eigentlich Fürsorgerin; nach Konflikten mit ihren Vorgesetzten kündigte sie 1908.\n\nDie politische Gleichheit kam mit der Revolution. Am 12. November 1918 verkündete der Rat der Volksbeauftragten, dass alle Wahlen künftig nach dem gleichen, geheimen, direkten und allgemeinen Wahlrecht für Männer und Frauen stattfinden sollten, und am 19. Januar 1919 wählten Frauen erstmals bei einer landesweiten Wahl. Das Grundgesetz von 1949 stellte klar, dass Männer und Frauen gleichberechtigt sind, doch das Zivilrecht folgte erst Jahre später. Erst das Gleichberechtigungsgesetz, in Kraft ab dem 1. Juli 1958, schaffte das Letztentscheidungsrecht des Ehemanns in Eheangelegenheiten und sein Recht ab, die Arbeitsstelle seiner Frau zu kündigen. Auch danach ging die Familie vor: Eine Ehefrau durfte nur dann berufstätig sein, wenn dies mit ihren Pflichten in Ehe und Familie vereinbar war. Am 14. November 1961 ernannte Konrad Adenauer Elisabeth Schwarzhaupt (1901–1986) zur Gesundheitsministerin, der ersten Frau in einem Bundeskabinett.\n\nDie entscheidenden Reformen kamen in den 1970er-Jahren. Ein Gesetz vom 31. Juli 1974 senkte das Volljährigkeitsalter mit Wirkung vom 1. Januar 1975 von 21 auf 18 Jahre – ein Vierteljahrhundert nach der DDR, die diesen Schritt am 22. Mai 1950 vollzogen hatte. Dann ersetzte das Erste Gesetz zur Reform des Ehe- und Familienrechts, größtenteils in Kraft ab dem 1. Juli 1977, das Leitbild der „Hausfrauenehe“ durch das der Partnerschaft: Seitdem schreibt das Gesetz keine Aufgabenteilung zwischen den Ehegatten mehr vor, und eine Scheidung hängt nicht mehr von der Schuldfrage ab.\n\n| Jahr | Meilenstein |\n|---|---|\n| 1903 | erste Polizeiassistentin, Stuttgart |\n| 1918 | Frauenwahlrecht verkündet |\n| 1958 | Gleichberechtigungsgesetz in Kraft |\n| 1961 | erste Bundesministerin |\n| 1975 | Volljährigkeit mit 18 |\n| 1977 | Ende der „Hausfrauenehe“ |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-286",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "With which country did West Germany conclude its first recruitment agreement for workers, in December 1955?",
+      "de": "Mit welchem Land schloss die Bundesrepublik im Dezember 1955 ihr erstes Anwerbeabkommen für Arbeitskräfte?",
+      "answerEn": "Italy",
+      "answerDe": "Italien",
+      "timeline": {
+       "kind": "event",
+       "start": "1955-12-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "West Germany signs its first recruitment agreement, with Italy",
+       "labelDe": "Die Bundesrepublik schließt ihr erstes Anwerbeabkommen, mit Italien"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Anwerbeabkommen",
+       "title": "Anwerbeabkommen – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the name of the Portuguese man welcomed at Köln-Deutz station in 1964 as West Germany's one-millionth guest worker?",
+      "de": "Wie hieß der Portugiese, der 1964 am Bahnhof Köln-Deutz als millionster Gastarbeiter der Bundesrepublik begrüßt wurde?",
+      "answerEn": "Armando Rodrigues de Sá",
+      "answerDe": "Armando Rodrigues de Sá",
+      "timeline": {
+       "kind": "event",
+       "start": "1964-09-10",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Armando Rodrigues de Sá is welcomed in Cologne as the millionth guest worker",
+       "labelDe": "Armando Rodrigues de Sá wird in Köln als millionster Gastarbeiter begrüßt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Armando_Rodrigues_de_S%C3%A1",
+       "title": "Armando Rodrigues de Sá – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What vehicle did the millionth guest worker receive as a welcome gift in Cologne in 1964?",
+      "de": "Welches Fahrzeug erhielt der millionste Gastarbeiter 1964 in Köln als Begrüßungsgeschenk?",
+      "answerEn": "a moped",
+      "answerDe": "ein Moped",
+      "timeline": {
+       "kind": "event",
+       "start": "1964-09-10",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The millionth guest worker receives a Zündapp moped in Cologne",
+       "labelDe": "Der millionste Gastarbeiter erhält in Köln ein Zündapp-Moped"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Armando_Rodrigues_de_S%C3%A1",
+       "title": "Armando Rodrigues de Sá – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year did West Germany impose a stop on recruiting foreign workers, citing the oil crisis?",
+      "de": "In welchem Jahr verhängte die Bundesrepublik unter Berufung auf die Ölkrise einen Anwerbestopp für ausländische Arbeitskräfte?",
+      "answerEn": "1973",
+      "answerDe": "1973",
+      "timeline": {
+       "kind": "event",
+       "start": "1973-11-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "West Germany stops recruiting foreign workers",
+       "labelDe": "Die Bundesrepublik verhängt den Anwerbestopp"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Anwerbestopp",
+       "title": "Anwerbestopp – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Guest Workers: West Germany's Recruitment Agreements",
+    "titleDe": "Gastarbeiter: Die Anwerbeabkommen der Bundesrepublik",
+    "bodyEn": "By the mid-1950s the West German economic miracle was running out of workers. Reconstruction, export industries and the mines needed hands, so Bonn began to sign recruitment agreements with countries around the Mediterranean. The first was concluded with Italy on 20 December 1955. Spain and Greece followed in March 1960, and on 30 October 1961 – a few weeks after the Berlin Wall had cut off the flow of workers from East Germany – the agreement with Turkey was signed. Morocco, South Korea, Portugal, Tunisia and Yugoslavia followed by 1968.\n\nThe idea was rotation. The men and women, soon known everywhere as Gastarbeiter (guest workers), were supposed to work for a few years and then return home. German liaison offices abroad examined applicants, and special trains brought them to Munich and other cities. Many lived in hostels beside the factories, sent much of their wages home and did the heaviest, dirtiest and worst-paid jobs.\n\nThe symbolic high point came on 10 September 1964 at Köln-Deutz station. Armando Rodrigues de Sá, a 38-year-old from Portugal, was welcomed there as the one-millionth guest worker. He received carnations, a certificate and a moped – a two-seat Zündapp Sport Combinette – and the photograph of him sitting on it appeared in newspapers across the country.\n\nThe oil crisis ended the era. On 23 November 1973 the government of Willy Brandt imposed a recruitment stop; by then around 2.6 million foreign workers were employed in West Germany. Instead of leaving, many brought their families over. The largest group came from Turkey, and the „guests“ became immigrants whose children and grandchildren are part of German society today.\n\n| Country | Agreement signed |\n|---|---|\n| Italy | 20 Dec 1955 |\n| Spain | 29 Mar 1960 |\n| Greece | 30 Mar 1960 |\n| Turkey | 30 Oct 1961 |\n| Portugal | 17 Mar 1964 |\n| Yugoslavia | 12 Oct 1968 |",
+    "bodyDe": "Mitte der 1950er-Jahre gingen dem westdeutschen Wirtschaftswunder die Arbeitskräfte aus. Wiederaufbau, Exportindustrie und Bergbau brauchten Hände, und so begann Bonn, Anwerbeabkommen mit Ländern rund um das Mittelmeer zu schließen. Das erste wurde am 20. Dezember 1955 mit Italien geschlossen. Spanien und Griechenland folgten im März 1960, und am 30. Oktober 1961 – wenige Wochen nachdem die Berliner Mauer den Zustrom von Arbeitskräften aus der DDR abgeschnitten hatte – wurde das Abkommen mit der Türkei unterzeichnet. Marokko, Südkorea, Portugal, Tunesien und Jugoslawien folgten bis 1968.\n\nDie Idee war die Rotation. Die Männer und Frauen, bald überall Gastarbeiter genannt, sollten ein paar Jahre arbeiten und dann in ihre Heimat zurückkehren. Deutsche Verbindungsstellen im Ausland prüften die Bewerber, und Sonderzüge brachten sie nach München und in andere Städte. Viele wohnten in Wohnheimen neben den Fabriken, schickten einen großen Teil ihres Lohns nach Hause und verrichteten die schwersten, schmutzigsten und am schlechtesten bezahlten Arbeiten.\n\nDen symbolischen Höhepunkt brachte der 10. September 1964 am Bahnhof Köln-Deutz. Armando Rodrigues de Sá, ein 38-Jähriger aus Portugal, wurde dort als millionster Gastarbeiter begrüßt. Er erhielt Nelken, eine Urkunde und ein Moped – eine zweisitzige Zündapp Sport Combinette –, und das Foto, auf dem er darauf sitzt, erschien in Zeitungen im ganzen Land.\n\nDie Ölkrise beendete die Ära. Am 23. November 1973 verhängte die Regierung Willy Brandt einen Anwerbestopp; zu diesem Zeitpunkt waren rund 2,6 Millionen ausländische Arbeitskräfte in der Bundesrepublik beschäftigt. Statt zu gehen, holten viele ihre Familien nach. Die größte Gruppe kam aus der Türkei, und aus den „Gästen“ wurden Einwanderer, deren Kinder und Enkel heute Teil der deutschen Gesellschaft sind.\n\n| Land | Abkommen unterzeichnet |\n|---|---|\n| Italien | 20. Dez. 1955 |\n| Spanien | 29. März 1960 |\n| Griechenland | 30. März 1960 |\n| Türkei | 30. Okt. 1961 |\n| Portugal | 17. März 1964 |\n| Jugoslawien | 12. Okt. 1968 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-356",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which state did the British military government create in August 1946 by merging Westphalia with the northern Rhine Province?",
+      "de": "Welches Land schuf die britische Militärregierung im August 1946 durch die Vereinigung Westfalens mit der nördlichen Rheinprovinz?",
+      "answerEn": "North Rhine-Westphalia",
+      "answerDe": "Nordrhein-Westfalen",
+      "timeline": {
+       "kind": "founding",
+       "start": "1946-08-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The British found the state of North Rhine-Westphalia",
+       "labelDe": "Die Briten gründen das Land Nordrhein-Westfalen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/North_Rhine-Westphalia",
+       "title": "North Rhine-Westphalia – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which state was formed on 1 November 1946 from Hanover, Brunswick, Oldenburg and Schaumburg-Lippe?",
+      "de": "Welches Land entstand am 1. November 1946 aus Hannover, Braunschweig, Oldenburg und Schaumburg-Lippe?",
+      "answerEn": "Lower Saxony",
+      "answerDe": "Niedersachsen",
+      "timeline": {
+       "kind": "founding",
+       "start": "1946-11-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The state of Lower Saxony is founded",
+       "labelDe": "Das Land Niedersachsen wird gegründet"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Niedersachsen",
+       "title": "Niedersachsen – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which state did the French military governor Pierre Kœnig create in August 1946, with Koblenz as its first seat of government?",
+      "de": "Welches Land schuf der französische Militärgouverneur Pierre Kœnig im August 1946, mit Koblenz als erstem Regierungssitz?",
+      "answerEn": "Rhineland-Palatinate",
+      "answerDe": "Rheinland-Pfalz",
+      "timeline": {
+       "kind": "founding",
+       "start": "1946-08-30",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The French found the state of Rhineland-Palatinate",
+       "labelDe": "Die Franzosen gründen das Land Rheinland-Pfalz"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rheinland-Pfalz",
+       "title": "Rheinland-Pfalz – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which port city did the Americans take over inside the British zone to supply their troops, re-establishing it as a state in 1947?",
+      "de": "Welche Hafenstadt übernahmen die Amerikaner innerhalb der britischen Zone zur Versorgung ihrer Truppen und stellten sie 1947 als Land wieder her?",
+      "answerEn": "Bremen",
+      "answerDe": "Bremen",
+      "timeline": {
+       "kind": "founding",
+       "start": "1947",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Bremen is re-established as a state under US occupation",
+       "labelDe": "Bremen wird unter US-Besatzung als Land wiederhergestellt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Free_Hanseatic_City_of_Bremen",
+       "title": "Free Hanseatic City of Bremen – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Made by the Occupiers: How the Allies Founded Germany's Länder",
+    "titleDe": "Von den Besatzern gegründet: Wie die Alliierten die deutschen Länder schufen",
+    "bodyEn": "Most of today's German states are not ancient territories but creations of the years 1945 to 1947. After the surrender, Prussia was finished as a political unit – the Allies formally abolished it in February 1947 – and the four occupying powers drew new internal borders in their zones, largely to suit their own administrative needs.\n\nIn the south the Americans restored a state with a long history. With Proclamation No. 2, signed by General Dwight D. Eisenhower in September 1945, the US military government officially re-established Bavaria as a state, and created Württemberg-Baden and Greater Hesse beside it. Bavaria lost only the Palatinate west of the Rhine, which lay in the French zone.\n\nThe British reorganised their zone in the north-west more radically. On 23 August 1946, by Military Government Ordinance No. 46, they merged the Prussian province of Westphalia with the northern part of the Rhine Province to form North Rhine-Westphalia, a move nicknamed „Operation Marriage“; the small state of Lippe joined on 21 January 1947. On 1 November 1946 Ordinance No. 55 united the short-lived state of Hanover with Brunswick, Oldenburg and Schaumburg-Lippe to form Lower Saxony.\n\nThe French followed a week after the British. On 30 August 1946 Ordinance No. 57 of the French military governor Pierre Kœnig created Rhineland-Palatinate from the Palatinate, Rhenish Hesse and the southern parts of the Prussian Rhine Province. Its first seat of government was Koblenz, because Mainz lacked undamaged buildings; the move to Mainz came only in 1950.\n\nOne city-state owes its revival to American logistics. The Americans needed a port of their own to supply their zone and West Berlin, and took over Bremen, an enclave inside the British zone; in 1947 Bremen, together with Bremerhaven, was re-established as a state.\n\nWhen the Federal Republic was founded in 1949, these Länder became its building blocks, joined later by Baden-Württemberg (1952) and the Saarland (1957).\n\n| State | Founded | Occupying power |\n|---|---|---|\n| Bavaria | September 1945 | United States |\n| North Rhine-Westphalia | 23 Aug 1946 | Britain |\n| Rhineland-Palatinate | 30 Aug 1946 | France |\n| Lower Saxony | 1 Nov 1946 | Britain |\n| Bremen | 1947 | United States |",
+    "bodyDe": "Die meisten heutigen deutschen Länder sind keine alten Territorien, sondern Schöpfungen der Jahre 1945 bis 1947. Nach der Kapitulation war Preußen als politische Einheit am Ende – die Alliierten lösten es im Februar 1947 auch formell auf –, und die vier Besatzungsmächte zogen in ihren Zonen neue innere Grenzen, vor allem nach ihren eigenen Verwaltungsbedürfnissen.\n\nIm Süden stellten die Amerikaner einen Staat mit langer Geschichte wieder her. Mit der Proklamation Nr. 2, im September 1945 von General Dwight D. Eisenhower unterzeichnet, stellte die US-Militärregierung Bayern offiziell als Staat wieder her und schuf daneben Württemberg-Baden und Groß-Hessen. Bayern verlor nur die linksrheinische Pfalz, die in der französischen Zone lag.\n\nDie Briten ordneten ihre Zone im Nordwesten radikaler neu. Am 23. August 1946 vereinigten sie mit der Verordnung Nr. 46 der Militärregierung die preußische Provinz Westfalen und den nördlichen Teil der Rheinprovinz zu Nordrhein-Westfalen, ein Schritt mit dem Spitznamen „Operation Marriage“; das kleine Land Lippe kam am 21. Januar 1947 hinzu. Am 1. November 1946 vereinigte die Verordnung Nr. 55 das kurzlebige Land Hannover mit Braunschweig, Oldenburg und Schaumburg-Lippe zu Niedersachsen.\n\nDie Franzosen folgten eine Woche nach den Briten. Am 30. August 1946 schuf die Verordnung Nr. 57 des französischen Militärgouverneurs Pierre Kœnig das Land Rheinland-Pfalz aus der Pfalz, Rheinhessen und den südlichen Teilen der preußischen Rheinprovinz. Erster Regierungssitz war Koblenz, weil es in Mainz an unzerstörten Gebäuden fehlte; der Umzug nach Mainz folgte erst 1950.\n\nEin Stadtstaat verdankt seine Wiedergeburt der amerikanischen Logistik. Die Amerikaner brauchten einen eigenen Hafen zur Versorgung ihrer Zone und West-Berlins und übernahmen Bremen, eine Enklave in der britischen Zone; 1947 wurde Bremen zusammen mit Bremerhaven als Land wiederhergestellt.\n\nAls 1949 die Bundesrepublik gegründet wurde, wurden diese Länder ihre Bausteine, später ergänzt durch Baden-Württemberg (1952) und das Saarland (1957).\n\n| Land | Gegründet | Besatzungsmacht |\n|---|---|---|\n| Bayern | September 1945 | USA |\n| Nordrhein-Westfalen | 23. Aug. 1946 | Großbritannien |\n| Rheinland-Pfalz | 30. Aug. 1946 | Frankreich |\n| Niedersachsen | 1. Nov. 1946 | Großbritannien |\n| Bremen | 1947 | USA |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-282",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "On which day did the currency reform that introduced the Deutsche Mark take effect in the western zones?",
+      "de": "An welchem Tag trat die Währungsreform, die die Deutsche Mark einführte, in den Westzonen in Kraft?",
+      "answerEn": "20 June 1948",
+      "answerDe": "20. Juni 1948",
+      "timeline": {
+       "kind": "event",
+       "start": "1948-06-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Currency reform: the Deutsche Mark replaces the Reichsmark in the western zones",
+       "labelDe": "Währungsreform: Die Deutsche Mark ersetzt in den Westzonen die Reichsmark"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/W%C3%A4hrungsreform_1948_(Westdeutschland)",
+       "title": "Währungsreform 1948 (Westdeutschland) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How much cash did every person in the western zones receive as „Kopfgeld“ at the currency reform of 1948?",
+      "de": "Wie viel Bargeld erhielt jeder Einwohner der Westzonen bei der Währungsreform 1948 als „Kopfgeld“?",
+      "answerEn": "40 Deutsche Mark",
+      "answerDe": "40 Deutsche Mark",
+      "timeline": {
+       "kind": "event",
+       "start": "1948-06-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Every West German receives 40 Deutsche Mark as „Kopfgeld“",
+       "labelDe": "Jeder Westdeutsche erhält 40 Deutsche Mark als „Kopfgeld“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/W%C3%A4hrungsreform_1948_(Westdeutschland)",
+       "title": "Währungsreform 1948 (Westdeutschland) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which central bank issued the Deutsche Mark until the Deutsche Bundesbank took over in 1957?",
+      "de": "Welche Zentralbank gab die Deutsche Mark aus, bis 1957 die Deutsche Bundesbank an ihre Stelle trat?",
+      "answerEn": "Bank deutscher Länder",
+      "answerDe": "Bank deutscher Länder",
+      "timeline": {
+       "kind": "founding",
+       "start": "1948-03",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Bank deutscher Länder is founded",
+       "labelDe": "Die Bank deutscher Länder wird gegründet"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/W%C3%A4hrungsreform_1948_(Westdeutschland)",
+       "title": "Währungsreform 1948 (Westdeutschland) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American officer proposed the name „Deutsche Mark“ for West Germany's new currency?",
+      "de": "Welcher amerikanische Offizier schlug den Namen „Deutsche Mark“ für die neue westdeutsche Währung vor?",
+      "answerEn": "Edward A. Tenenbaum",
+      "answerDe": "Edward A. Tenenbaum",
+      "timeline": {
+       "kind": "event",
+       "start": "1948-06-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Deutsche Mark, named by Edward A. Tenenbaum, becomes legal tender",
+       "labelDe": "Die von Edward A. Tenenbaum benannte Deutsche Mark wird gesetzliches Zahlungsmittel"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Deutsche_Mark",
+       "title": "Deutsche Mark – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Deutsche Mark: From the Currency Reform to the Euro",
+    "titleDe": "Die D-Mark: Von der Währungsreform bis zum Euro",
+    "bodyEn": "On Sunday 20 June 1948 the people of the three western zones queued at ration offices to collect new money. The currency reform replaced the worthless Reichsmark with the Deutsche Mark, which became the only legal tender the following day. Every person received 40 Deutsche Mark in cash, the so-called Kopfgeld (per-capita money), with a further 20 a month later; savings were cut to a fraction, ending at roughly 6.50 marks for every 100 Reichsmarks.\n\nThe reform had been prepared in secret. The banknotes were printed in the United States and flown to Germany in early 1948, and the name of the new currency was proposed by the American officer Edward A. Tenenbaum. It was issued by the Bank deutscher Länder, founded in March 1948, which the Deutsche Bundesbank replaced in 1957. Ludwig Erhard, economics director of the Bizone, seized the moment to lift price controls and rationing without waiting for Allied approval – and almost overnight the shop windows filled. The Soviet Union answered on 24 June 1948 with the blockade of West Berlin.\n\nThe coins followed. Pfennig pieces were struck in values of 1, 2, 5 and 10 pfennigs and, as the highest, the 50-pfennig coin, which shows a kneeling woman planting an oak sapling; above them came coins of 1, 2 and 5 marks and, from 1972, commemorative 10-mark pieces. A 20-pfennig coin never existed.\n\nThe Deutsche Mark became the symbol of the economic miracle and of stability. On 1 July 1990 it was introduced in the GDR as well. On 1 January 1999 the euro replaced it as book money at a fixed rate of 1.95583 marks, and with the arrival of euro notes and coins on 1 January 2002 the mark's life as cash ended – although billions of marks have never been exchanged.\n\n| Date | Event |\n|---|---|\n| 20 June 1948 | currency reform in the western zones |\n| 24 June 1948 | start of the Berlin blockade |\n| 1957 | the Bundesbank replaces the Bank deutscher Länder |\n| 1 July 1990 | the Deutsche Mark comes to the GDR |\n| 1 Jan 2002 | euro cash replaces the Deutsche Mark |",
+    "bodyDe": "Am Sonntag, dem 20. Juni 1948, standen die Menschen in den drei Westzonen vor den Lebensmittelkartenstellen Schlange, um neues Geld abzuholen. Die Währungsreform ersetzte die wertlose Reichsmark durch die Deutsche Mark, die ab dem folgenden Tag einziges gesetzliches Zahlungsmittel war. Jeder erhielt 40 Deutsche Mark in bar, das sogenannte Kopfgeld, einen Monat später weitere 20; Ersparnisse wurden auf einen Bruchteil zusammengestrichen, am Ende auf etwa 6,50 Mark für je 100 Reichsmark.\n\nDie Reform war im Geheimen vorbereitet worden. Die Banknoten wurden in den Vereinigten Staaten gedruckt und Anfang 1948 nach Deutschland geflogen, und den Namen der neuen Währung schlug der amerikanische Offizier Edward A. Tenenbaum vor. Ausgegeben wurde sie von der im März 1948 gegründeten Bank deutscher Länder, an deren Stelle 1957 die Deutsche Bundesbank trat. Ludwig Erhard, Wirtschaftsdirektor der Bizone, nutzte den Moment, um Preisbindung und Bewirtschaftung ohne Zustimmung der Alliierten aufzuheben – und fast über Nacht füllten sich die Schaufenster. Die Sowjetunion antwortete am 24. Juni 1948 mit der Blockade West-Berlins.\n\nDie Münzen folgten. Pfennigstücke wurden zu 1, 2, 5 und 10 Pfennig geprägt und als höchste die 50-Pfennig-Münze, die eine kniende Frau beim Pflanzen eines Eichensetzlings zeigt; darüber kamen Münzen zu 1, 2 und 5 Mark und ab 1972 Gedenkmünzen zu 10 Mark. Eine 20-Pfennig-Münze gab es nie.\n\nDie D-Mark wurde zum Symbol des Wirtschaftswunders und der Stabilität. Am 1. Juli 1990 wurde sie auch in der DDR eingeführt. Am 1. Januar 1999 löste der Euro sie als Buchgeld zum festen Kurs von 1,95583 Mark ab, und mit dem Euro-Bargeld endete am 1. Januar 2002 ihr Leben als Bargeld – auch wenn Milliarden Mark nie umgetauscht wurden.\n\n| Datum | Ereignis |\n|---|---|\n| 20. Juni 1948 | Währungsreform in den Westzonen |\n| 24. Juni 1948 | Beginn der Berlin-Blockade |\n| 1957 | die Bundesbank löst die Bank deutscher Länder ab |\n| 1. Juli 1990 | die D-Mark kommt in die DDR |\n| 1. Jan. 2002 | Euro-Bargeld ersetzt die D-Mark |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-335",
+   "category": 3,
+   "domain": "society",
+   "sub": "politics",
+   "why": "Joschka Fischer's 1985 swearing-in in trainers is already told in a0031 \"Firsts in German Politics\" (society/politics), where f00152 asks for Fischer himself; the brand of his trainers (Nike) belongs there as a new fact, not in 19th/20th-century history."
+  },
+  {
+   "card": "tp-361",
+   "category": 3,
+   "domain": "history",
+   "sub": "modern-history",
+   "why": "Its answer \"Konrad Adenauer\" repeats fact f12379 in a2366 (an article may not hold the same answer twice). Alias it to f12379 if it asks the same thing; otherwise place it in another or a new article."
+  },
+  {
+   "card": "tp-005",
+   "category": 3,
+   "domain": "history",
+   "sub": "modern-history",
+   "why": "Its answer \"Ludwig Erhard\" repeats fact f12382 in a2366 (an article may not hold the same answer twice). Alias it to f12382 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

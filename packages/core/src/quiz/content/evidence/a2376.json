@@ -1,0 +1,232 @@
+{
+ "article": "a2376",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Provisorische_Zentralgewalt",
+   "title": "Provisorische Zentralgewalt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:53.799Z",
+   "snapshot": "9639b4c8d48c2e76111c2d4207ce01434dcb1fbd17f16c3e96dc7905c8f7bed7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Frankfurt_Parliament",
+   "title": "Frankfurt Parliament – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:51.285Z",
+   "snapshot": "8f11fe70e0d94d7250a9da9ef56d9186c0ad10f50e6092ed4d617594828d0252"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Archduke_John_of_Austria",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:52.289Z",
+   "snapshot": "78dd8617d579eb6b59e80daddc8a9bdcb7ed74fb45f78a1cf7c9b0affd60ad7b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/St._Paul%27s_Church,_Frankfurt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:53.129Z",
+   "snapshot": "b50dbbab47c58d799036bd56577adf13e02f093176fed71d4ffd006e0b86f937"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12402",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Reichsminister",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "St Paul's Church",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Heinrich von Gagern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Erzherzog Johann von Österreich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frederick William IV",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:08.181Z",
+   "target": "f12402",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Bezüge für die Reichsminister und Unterstaatssekretäre wurden von der Nationalversammlung festgesetzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Reichsminister” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:08.181Z",
+   "target": "f12403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The session was held from 18 May 1848 to 30 May 1849 in the Paulskirche at Frankfurt am Main.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paulskirche” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:08.181Z",
+   "target": "f12404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Heinrich von Gagern, one of the best-known liberals throughout Germany, was elected president of the parliament.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich von Gagern” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:08.181Z",
+   "target": "f12405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Zentralgewalt bestand aus einem Reichsverweser, dem Erzherzog Johann von Österreich als einem Ersatz-Monarchen, und den vom Reichsverweser ernannten Reichsministern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erzherzog Johann von Österreich” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:08.181Z",
+   "target": "f12406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Prussian king Frederick William IV refused to accept the office of \"Emperor of the Germans\" when it was offered to him on the grounds that such a constitution and such an offer were an abridgment of the rights of the princes of the individual German states.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:08.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frederick William IV” is on the snapshot of s2"
+  }
+ ]
+}

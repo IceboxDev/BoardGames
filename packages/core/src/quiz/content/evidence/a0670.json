@@ -1,0 +1,242 @@
+{
+ "article": "a0670",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/MESSENGER",
+   "title": "MESSENGER – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:06.183Z",
+   "snapshot": "e96b273c7eb03d47365383e6601935a6733c4a26637a9a15e78062ec322994d3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens",
+   "title": "Cassini–Huygens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:07.297Z",
+   "snapshot": "dc4ed0ad0329ba2a789bef99d4fb86baa7dc1f529bfa7e4f80e6802720c96e08"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Magellan_(spacecraft)",
+   "title": "Magellan (spacecraft) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:08.092Z",
+   "snapshot": "659032dd64c9fe313c98776e52d7bbc79347d4f269700cba3bb8e91012f61b6e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Voyager_2",
+   "title": "Voyager 2 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:09.218Z",
+   "snapshot": "5e26488fdc0d2e7fb7fc7e510fbd38ae1dbed2b041ac0026fa519bb46d741bf0"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Juno_(Raumsonde)",
+   "title": "Juno (Raumsonde)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:08.103Z",
+   "snapshot": "13ba8008b770e70e70416de09daf97d31bfbd14abe56351d7d59e18cc6ff6e47"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mercury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03348",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saturn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Venus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uranus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Juno",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-086"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:23.991Z",
+   "target": "f03346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MESSENGER was a NASA robotic space probe that orbited the planet Mercury between 2011 and 2015, studying Mercury's chemical composition, geology, and magnetic field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mercury” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:23.991Z",
+   "target": "f03348",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cassini–Huygens ( kə-SEE-nee HOY-gənz), commonly called Cassini, was a joint space-research mission by NASA, the European Space Agency (ESA), and the Italian Space Agency (ASI) to send a space probe to study the planet Saturn and its system, including its rings and natural satellites.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturn” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:23.991Z",
+   "target": "f03349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Its mission objectives were to map the surface of Venus by using synthetic-aperture radar and to measure the planetary gravitational field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Venus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:23.991Z",
+   "target": "f03350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was launched on a trajectory towards the gas giants (Jupiter and Saturn) and enabled further encounters with the ice giants (Uranus and Neptune).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uranus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:23.991Z",
+   "target": "f10890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Juno (auch Jupiter Polar Orbiter) ist eine Raumsonde der NASA, die den Gasplaneten Jupiter aus einer polaren Umlaufbahn erforscht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.991Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juno” is on the snapshot of s5"
+  }
+ ]
+}

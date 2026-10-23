@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-095",
+ "image": "IMG20261022154258.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Agronomy",
+   "cardText": "[Agronomy] Which of the following currently does NOT have a genetically modified (GMO) version commercially available?\nA. Apple B. Broccoli C. Papaya\nAnswer: B. Despite the prevalence of GMO crops like maize and soybeans, many common vegetables, including broccoli and carrots, remain commercially non-GMO.",
+   "de": "Welche Frucht hat eine gentechnisch veränderte Sorte, 'SunUp' (eingekreuzt in 'Rainbow'), die gegen das Ringfleckenvirus resistent ist und 1998 auf Hawaii zugelassen wurde?",
+   "en": "Which fruit has a genetically modified cultivar, 'SunUp' (crossed into the 'Rainbow'), engineered to resist the ringspot virus and approved in 1998 in Hawaii?",
+   "reworked": true,
+   "answerDe": "Die Papaya",
+   "answerEn": "Papaya",
+   "timeline": {
+    "kind": "event",
+    "start": "1998",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Genetically modified ringspot-resistant papaya is approved in Hawaii",
+    "labelDe": "Gentechnisch veränderte, ringfleckenresistente Papaya wird auf Hawaii zugelassen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Genetically_modified_food",
+    "title": "Genetically modified food",
+    "lang": "en"
+   },
+   "notes": "A 'which is NOT' question: asked the positive fact it hinges on (papaya, like the Arctic apple approved in 2015, has a commercial GM version; broccoli has none). Source: Wikipedia, Genetically modified food (papaya section).",
+   "domain": "nature",
+   "sub": "plants"
+  },
+  {
+   "category": 2,
+   "discipline": "Botany",
+   "cardText": "[Botany] What are xylem and phloem?\nA. Plant tissues that transport water and nutrients\nB. Types of plant hormones that regulate their growth\nC. Fungal infections in plants\nAnswer: A. These tissues are like the circulatory system in animals. Xylem moves water from roots to leaves, and phloem distributes sugars from photosynthesis.",
+   "de": "Welches Pflanzengewebe leitet Wasser von den Wurzeln nach oben in Stängel und Blätter, neben dem Phloem, das die Zucker aus der Photosynthese verteilt?",
+   "en": "Which plant tissue carries water upward from the roots to the stems and leaves, alongside phloem, which distributes the sugars from photosynthesis?",
+   "reworked": true,
+   "answerDe": "Das Xylem",
+   "answerEn": "Xylem",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1858",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Carl Nägeli introduces the term xylem",
+    "labelDe": "Carl Nägeli führt den Begriff Xylem ein"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Xylem",
+    "title": "Xylem",
+    "lang": "en"
+   },
+   "notes": "Reworked to one tissue to get a single short answer. Wikipedia: xylem transports water upward from the roots; phloem transports products of photosynthesis.",
+   "domain": "nature",
+   "sub": "plants"
+  }
+ ]
+}

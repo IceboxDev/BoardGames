@@ -1,0 +1,310 @@
+{
+ "article": "a1742",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mentor_(Odyssey)",
+   "title": "Mentor (Odyssey) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:28.434Z",
+   "snapshot": "b3de3327b46247d948d2c902423a43a9c95218547266c64ebbe3f87e1df626da"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Siren_(alarm)",
+   "title": "Siren (alarm) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:19.947Z",
+   "snapshot": "6c953f368ec0525da48a1f3bb6408ed6fb19739163b987fd4872dda31986ef43"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Trojan_horse_(computing)",
+   "title": "Trojan horse (computing) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:29.438Z",
+   "snapshot": "f0b09dd9b478e4bf2ea906213e24257426544ddfc0c93e043a505eb196042fd2"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/odyssey",
+   "title": "odyssey – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/Odyssee",
+   "title": "Odyssee – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:03.415Z",
+   "snapshot": "74b9d42b36c7c423bee511ca488425327d6f66d34cd89c0d875e7cf445f07746"
+  },
+  "s6": {
+   "url": "https://www.dictionary.com/browse/odyssey",
+   "title": "ODYSSEY Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com (incl. Collins English Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:03.868Z",
+   "snapshot": "6cabb212537192ab4ff48dc7b50ba24d8513e173a9fef1d0386fc3031c6b406c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mentor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "siren",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Trojan horse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "odyssey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:15.486Z",
+   "target": "f08706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mentor (Greek: Μέντωρ, Méntōr) is a figure in Greek mythology who plays a significant role in Homer’s Odyssey as the advisor to Odysseus’s son Telemachus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mentor” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:15.486Z",
+   "target": "f08707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A siren is a noise-making warning device.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “siren” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:15.486Z",
+   "target": "f08709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In computing, a trojan horse or trojan is a kind of malware that misleads users as to its true intent by disguising itself as a normal program.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.486Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trojan horse” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:45:41Z",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ist als Titel des homerischen Epos, das die Irrfahrten und die Heimkehr des griechischen Sagenhelden Odysseus beschreibt, und in der übertragenen Bedeutung ‘lange, abenteuerliche Irrfahrt’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Pfeifer etymological dictionary: title of Homer's epic, figurative sense 'long adventurous wandering'."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:45Z",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(often not capital) any long eventful journey",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Entry: Odyssey, Greek epic attributed to Homer; (often not capital) any long eventful journey."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:57:03.196Z",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ist als Titel des homerischen Epos, das die Irrfahrten und die Heimkehr des griechischen Sagenhelden Odysseus beschreibt, und in der übertragenen Bedeutung ‘lange, abenteuerliche Irrfahrt’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:57:03.196Z",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(often not capital) any long eventful journey",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:03.196Z",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Odyssee – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Odyssee” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:03.196Z",
+   "target": "f08710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ODYSSEY Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:03.196Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “odyssey” is on the snapshot of s6"
+  }
+ ]
+}

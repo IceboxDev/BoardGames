@@ -1,0 +1,249 @@
+{
+ "article": "a0062",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/D%C3%B6rte_Hansen",
+   "title": "Dörte Hansen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:50.701Z",
+   "snapshot": "7448d2d4c39976f83c01fe45852bbe057f97aa24993a8752e141eb09528d7c85"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Der_Schimmelreiter",
+   "title": "Der Schimmelreiter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:51.870Z",
+   "snapshot": "de48df51da859b44ff3ac5e19b8d8a1e9679b489ddf13c88a18754cbfbbaa498"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Unterleuten_%E2%80%93_Das_zerrissene_Dorf",
+   "title": "Unterleuten – Das zerrissene Dorf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:52.661Z",
+   "snapshot": "9e2aa2a07b54b2bba8f6610871cc096a0124b0fbf2f4955dd785b2bf1391630e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_Zauberberg",
+   "title": "Der Zauberberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:53.855Z",
+   "snapshot": "1d1ff1909fd13955b71e6195584b31467ac465f8ce1c8d5f583b1dec1751a9f2"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Junges_Licht_(Roman)",
+   "title": "Junges Licht (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:54.660Z",
+   "snapshot": "718de62e201e6aa327480ee35b071e3b87c6ec855a1f2599f25eab7931675b14"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Unterleuten",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:56.182Z",
+   "snapshot": "a6554c2bbc78522b8e348fbf4a7d41c67db26689986eb31a3dbb6805f4ab34d3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Altes Land",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nordfriesland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brandenburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Davos",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ruhrgebiet",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:44.909Z",
+   "target": "f00306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ab 2005 lebte sie mit ihrer Familie in Steinkirchen (Altes Land) und seit 2016 wieder in Husum.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Altes Land” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:44.909Z",
+   "target": "f00307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Deiche in Nordfriesland, Handlungsort der Geschichte, spielen in Haukes Leben eine bedeutende Rolle.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nordfriesland” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:44.909Z",
+   "target": "f00308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unterleuten – Das zerrissene Dorf ist ein dreiteiliger deutscher Fernsehfilm, der nach der Romanvorlage von Juli Zeh fast ausschließlich im fiktiven Dorf Unterleuten in Brandenburg im Juli/August 2010 spielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brandenburg” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:44.909Z",
+   "target": "f00309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im Alter von 23 Jahren, vor dem geplanten Eintritt als Ingenieur-Volontär bei einer Schiffswerft, reist er im Sommer in die Schweizer Alpen, um dort im Internationalen Sanatorium Berghof nahe Davos seinen Vetter Joachim Ziemßen zu besuchen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Davos” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:44.909Z",
+   "target": "f00310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 30 Abschnitten erzählt ein Icherzähler undefinierten Alters chronologisch etwa ein Vierteljahr (Sommermonate) aus seiner, der Kindheit des 12-jährigen Julian in einer Bergarbeitersiedlung im Ruhrgebiet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ruhrgebiet” is on the snapshot of s5"
+  }
+ ]
+}

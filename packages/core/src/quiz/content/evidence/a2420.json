@@ -1,0 +1,327 @@
+{
+ "article": "a2420",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Honor%C3%A9_de_Balzac",
+   "title": "Honoré de Balzac",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:41.497Z",
+   "snapshot": "324d73f832c8fc593e5914455b9df9f8cbe480744950cbd79109b2fee64395b5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/G%C3%A9rard_de_Nerval",
+   "title": "Gérard de Nerval",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:40.308Z",
+   "snapshot": "d2ccddba4cdb9fe4622b95c70358fb2f17848ab402019dda6320c7a17f5a949e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Friedrich_Schiller",
+   "title": "Friedrich Schiller",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:02.097Z",
+   "snapshot": "b61f43932390f4f276e4310c3e18afe4503641f8ade2ae3c6f7e251190ac0185"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Charlotte_von_Schiller",
+   "title": "Charlotte von Schiller",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:38.329Z",
+   "snapshot": "2df027e08a8b7ce83b2346b176b14736feb57745897d69e9942feae09a3f6566"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dante_Gabriel_Rossetti",
+   "title": "Dante Gabriel Rossetti – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:41.351Z",
+   "snapshot": "10141cd0a69869a1d75e412f436529019f6e86a15953d5ed2ac6ab0be9c2f5bc"
+  },
+  "s6": {
+   "url": "https://projekt-gutenberg.org/authors/johann-peter-eckermann/books/johann-peter-eckermann-gespraeche-mit-goethe/chapter/277",
+   "title": "Eckermann: Gespräche mit Goethe, Dritter Teil, 1827 (Projekt Gutenberg)",
+   "publisher": "Projekt Gutenberg-DE",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:11.365Z",
+   "snapshot": "ef54727032602697c1e960261a4dc3bccfef1dbb38eddc110623391a6ab3e25a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Coffee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gérard de Nerval",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-159"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Faule Äpfel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-161"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich Schiller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-284"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "wombat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:17.806Z",
+   "target": "f12689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He then rose and wrote for many hours, fueled by innumerable cups of black coffee.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coffee” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:17.806Z",
+   "target": "f12690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gérard de Nerval (French: [ʒeʁaʁ də nɛʁval]; 22 May 1808 – 26 January 1855) was the pen name of Gérard Labrunie, a French writer of poetry and prose, essayist, and translator.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gérard de Nerval” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:17.806Z",
+   "target": "f12691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Faule Äpfel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Faule Äpfel”, “Rotten apples”, “гнилые яблоки”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:17.806Z",
+   "target": "f12692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Karl Ludwig Friedrich Schiller (1793–1857), später Freiherr",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Schiller” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:17.806Z",
+   "target": "f12694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rossetti was fascinated with wombats, asking friends to meet him at the \"Wombat's Lair\" at the London Zoo in Regent's Park, and spending hours there.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wombat” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:06:13Z",
+   "target": "f12691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "die mir sagte, daß die Schieblade immer mit faulen Äpfeln gefüllt sein müsse, indem dieser Geruch Schillern wohl tue und er ohne ihn nicht leben und arbeiten könne.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Goethe to Eckermann, 7 October 1827; the source of the 'nicht leben und arbeiten' phrase on the card."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:06:16Z",
+   "target": "f12691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dass Schiller in seinem Schreibtisch immer eine Schublade gefüllt mit faulen Äpfeln hatte, weil ihm deren Geruch wohltat",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:00.855Z",
+   "target": "f12691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "die mir sagte, daß die Schieblade immer mit faulen Äpfeln gefüllt sein müsse, indem dieser Geruch Schillern wohl tue und er ohne ihn nicht leben und arbeiten könne.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:00.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:00.855Z",
+   "target": "f12691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dass Schiller in seinem Schreibtisch immer eine Schublade gefüllt mit faulen Äpfeln hatte, weil ihm deren Geruch wohltat",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:00.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  }
+ ]
+}

@@ -1,0 +1,426 @@
+{
+ "article": "a1086",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Defenestrations_of_Prague",
+   "title": "Defenestrations of Prague – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:13.830Z",
+   "snapshot": "1bfefbda3aa094dc11df5186c88c74f2b2f91bd54692653fc71b4c2ef85cde1a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Archduke_Franz_Ferdinand",
+   "title": "Assassination of Archduke Franz Ferdinand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:52.253Z",
+   "snapshot": "ce697e0bb03df62b41d13b6709f3a38816bb11ec96bee9ef4fc0cb9d18160138"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ems_dispatch",
+   "title": "Ems dispatch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:53.074Z",
+   "snapshot": "e9076f96130c2bfbde30c96c4857493fe1b7c90a488f384be2367548260a83b2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/USS_Maine_(1890)",
+   "title": "USS Maine (1890) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:54.276Z",
+   "snapshot": "e67e54e9d3a66370428b3e42510a05d9e2295182ecf9ec37ae56a7c583f28a35"
+  },
+  "s5": {
+   "url": "https://www.hrad.cz/en/prague-castle-for-visitors/objects-for-visitors/old-royal-palace-10332",
+   "title": "Old Royal Palace – Prague Castle",
+   "publisher": "Prague Castle Administration",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:51:24Z"
+  },
+  "s6": {
+   "url": "https://www.bbc.com/news/world-europe-28033613",
+   "title": "Gavrilo Princip: Bosnian Serbs remember an assassin – BBC News",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:52.196Z",
+   "snapshot": "3387effd6e9c4956c91bfe40741d7bc7323d3fdaf61e1e3972f4dac2b5ca2804"
+  },
+  "s7": {
+   "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+   "title": "The Spanish-American War, 1898",
+   "publisher": "U.S. Department of State, Office of the Historian",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:52.134Z",
+   "snapshot": "fb05b4fa1ea7e43197fa7177cd9164d138e1f117a9e5ee3c53372e6d8e0d6282"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Defenestration of Prague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the assassination of Archduke Franz Ferdinand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Ems Dispatch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the explosion of the USS Maine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:30.565Z",
+   "target": "f05426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Defenestration of Prague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Defenestration of Prague”, “der Prager Fenstersturz”, “Пражская дефенестрация”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:30.565Z",
+   "target": "f05427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the assassination of Archduke Franz Ferdinand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the assassination of Archduke Franz Ferdinand”, “das Attentat von Sarajevo”, “убийство эрцгерцога Франца Фердинанда”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:30.565Z",
+   "target": "f05429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Ems dispatch (French: Dépêche d'Ems, German: Emser Depesche), sometimes called the Ems telegram, was published on 13 July 1870; it incited the Second French Empire to declare war on the Kingdom of Prussia on 19 July 1870, starting the Franco-Prussian War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:30.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Ems Dispatch” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:30.565Z",
+   "target": "f05430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the explosion of the USS Maine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the explosion of the USS Maine”, “die Explosion der USS Maine”, “взрыв броненосца «Мэн»”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:51:21Z",
+   "target": "f05426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This defenestration significantly influenced the history of Europe, by causing the Bohemian Estates' Revolt and thus led to the Thirty Years' War.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:51:24Z",
+   "target": "f05426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1618, its second room witnessed the beginning of the uprising of the Czech Estates when two governors and a scribe were thrown into the Castle ditch from its window. The uprising of the Czech Estates was the first conflict of the Thirty Years' War",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:27Z",
+   "target": "f05427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The assassination precipitated the July Crisis, which led to Austria-Hungary declaring war on Serbia and the start of World War I.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:51:30Z",
+   "target": "f05427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "paying tribute to the 19-year-old man whose actions triggered World War One",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:43Z",
+   "target": "f05430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "USS Maine was a United States Navy ship that sank in Havana Harbor on February 15, 1898, contributing to the outbreak of the Spanish–American War in April.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:51:47Z",
+   "target": "f05430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "After the U.S. battleship Maine exploded and sank in Havana harbor under mysterious circumstances on February 15, 1898, U.S. military intervention in Cuba became likely.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:06.792Z",
+   "target": "f05426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This defenestration significantly influenced the history of Europe, by causing the Bohemian Estates' Revolt and thus led to the Thirty Years' War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:06.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:06.792Z",
+   "target": "f05427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The assassination precipitated the July Crisis, which led to Austria-Hungary declaring war on Serbia and the start of World War I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:06.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:06.792Z",
+   "target": "f05427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "paying tribute to the 19-year-old man whose actions triggered World War One",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:06.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:06.792Z",
+   "target": "f05430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "USS Maine was a United States Navy ship that sank in Havana Harbor on February 15, 1898, contributing to the outbreak of the Spanish–American War in April.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:06.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:06.792Z",
+   "target": "f05430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "After the U.S. battleship Maine exploded and sank in Havana harbor under mysterious circumstances on February 15, 1898, U.S. military intervention in Cuba became likely.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:06.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

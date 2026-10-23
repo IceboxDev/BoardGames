@@ -1,4 +1,5 @@
 /** Words for the build and the analysis farm (rail status line, settings dialog). */
+import { lichessQueue } from "../lichess/client";
 import type { TreeBuild } from "../useTreeBuild";
 
 /** The farm's progress on this tree, with a rough time left. */
@@ -21,8 +22,19 @@ function formatHours(h: number): string {
   return `${(h / 24).toFixed(1)} days`;
 }
 
-/** One line on where a tree's build stands. */
-export function buildLabel(build: TreeBuild): string {
+/** What a running build is waiting on, when it isn't just working: the farm or lichess. */
+function waitText(build: TreeBuild, now: number): string | null {
+  if (build.askingFarm) return "Fetching the farm's results";
+  const lichess = lichessQueue();
+  if (lichess.rateLimitedUntil !== null)
+    return `lichess rate limit, retrying in ${Math.max(0, Math.ceil((lichess.rateLimitedUntil - now) / 1000))} s`;
+  // lichess takes one explorer request every three seconds.
+  if (lichess.waiting > 1) return `Asking lichess · ${lichess.waiting} waiting`;
+  return null;
+}
+
+/** One line on where a tree's build stands (`now` for countdowns). */
+export function buildLabel(build: TreeBuild, now = Date.now()): string {
   const p = build.progress;
   const tree = build.tree;
   switch (build.phase) {
@@ -32,14 +44,19 @@ export function buildLabel(build: TreeBuild): string {
       return `Indexing your games… ${build.indexing?.done.toLocaleString() ?? 0} / ${build.indexing?.total.toLocaleString() ?? "?"}`;
     case "stopping":
       return "Pausing…";
-    case "building":
-      return p
+    case "building": {
+      const base = p
         ? `Building · ${p.nodes.toLocaleString()} positions · ${p.settled.toLocaleString()} of ${p.games.toLocaleString()} games placed`
         : "Building…";
+      // The wait first: the rail is narrow and the end of the line gets cut off.
+      const wait = waitText(build, now);
+      return wait ? `${wait} · ${base.replace(/^Building · /, "")}` : base;
+    }
     default:
+      // Nothing to say once a tree is built: the farm's progress is the map's
+      // business (its chips), not a status line's.
       if (!tree) return "Not built yet.";
-      if (tree.status === "analysing") return "Built; waiting for the analysis farm.";
       if (tree.status === "generating") return "Paused part-way.";
-      return `Built · ${Object.keys(tree.nodes).length.toLocaleString()} positions`;
+      return "";
   }
 }

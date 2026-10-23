@@ -1,0 +1,515 @@
+{
+ "article": "a1823",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Archaea",
+   "title": "Archaea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:33.682Z",
+   "snapshot": "005a768b566aaa8313084d90d2fe02e156b93619088ecd2185573222f28dfe25"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Thermus_aquaticus",
+   "title": "Thermus aquaticus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:34.431Z",
+   "snapshot": "64b8cfe44ef6db6f7619de4c78ac3cb411945ca52f4d28844831eb5136607bc5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Halobacterium_salinarum",
+   "title": "Halobacterium salinarum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:35.499Z",
+   "snapshot": "85aa16f977a19e9f01cb53db7b695cd4ec05de2144df4defa16e6adb04b93097"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Antifreeze_protein",
+   "title": "Antifreeze protein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:36.625Z",
+   "snapshot": "ddeb71d8d973689d92fade8b45e902cb891633291cabea4a70d16a8df73f40d2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Earliest_known_life_forms",
+   "title": "Earliest known life forms",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:37.545Z",
+   "snapshot": "a5b295bb42e1bda9b11e8cdc3ca026dce59bcc385b1eaf8b7886390261b7906b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pyrolobus_fumarii",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:38.569Z",
+   "snapshot": "69f37c1193939281cbe11fa27f28508397eaef170a6b6e6295b90c675e483fdf"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Psychrophile",
+   "title": "Psychrophile – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:43.543Z",
+   "snapshot": "3f967e64e54b5c8d7d8562174f53ac539e9653b819744efc77428bf21fb937f8"
+  },
+  "s8": {
+   "url": "https://ahdictionary.com/word/search.html?q=psychrophile",
+   "title": "psychrophile – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:43.695Z",
+   "snapshot": "709fc378c284be41cc03f0f1108574e37a764c7902318ca3bc7acee1353c055e"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Stromatolite",
+   "title": "Stromatolite – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:44.569Z",
+   "snapshot": "129becc06f451838cda37b1d6034d5edd893286bf207c0359fc58b85e6902d60"
+  },
+  "s10": {
+   "url": "https://news.wisc.edu/oldest-fossils-ever-found-show-life-on-earth-began-before-3-5-billion-years-ago/",
+   "title": "Oldest fossils ever found show life on Earth began before 3.5 billion years ago",
+   "publisher": "University of Wisconsin–Madison News",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:45.187Z",
+   "snapshot": "088363ba047b507c813247d8f0fecd8da8d193bc38ebd391b3e3d92a77a03516"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Extremophiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thermophiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Halophiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Psychrophiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bacteria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-148"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:28.237Z",
+   "target": "f09111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The first observed archaea were extremophiles, living in extreme environments such as hot springs and salt lakes with no other organisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Extremophiles” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:28.237Z",
+   "target": "f09112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Studies of this extreme thermophilic bacterium that could be grown in cell culture was initially centered on attempts to understand how enzymes, which are normally inactive at high temperature, can function at high temperature in thermophiles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thermophiles” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:28.237Z",
+   "target": "f09113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As these salterns reach the minimum salinity limits for extreme halophiles, their waters become purple or reddish due to the high densities of halophilic Archaea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halophiles” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:28.237Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Psychrophiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Psychrophiles”, “Psychrophile”, “Психрофилы”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:28.237Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "More recently, studies conducted on the International Space Station found that bacteria could survive in outer space.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bacteria” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:37Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "are extremophilic organisms that are capable of growth and reproduction in low temperatures",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:07:40Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Any of various organisms, especially certain archaea, bacteria, and fungi, that thrive at low temperatures",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:07:42Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "are formed mainly by photosynthetic microorganisms such as cyanobacteria, sulfate-reducing bacteria, and Pseudomonadota",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:07:43Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The earliest, directly known life on Earth are stromatolite fossils which have been found in 3.480-billion-year-old geyserite uncovered in the Dresser Formation of the Pilbara Craton of Western Australia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:07:45Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Some represent now-extinct bacteria and microbes from a domain of life called Archaea",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23",
+   "note": "the oldest microfossils (Apex chert, 3.465 Ga) include bacteria AND archaea: 'bacteria' is right in the broad sense of prokaryotic microbes; notes accept microbes/prokaryotes"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "are extremophilic organisms that are capable of growth and reproduction in low temperatures",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Any of various organisms, especially certain archaea, bacteria, and fungi, that thrive at low temperatures",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "are formed mainly by photosynthetic microorganisms such as cyanobacteria, sulfate-reducing bacteria, and Pseudomonadota",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The earliest, directly known life on Earth are stromatolite fossils which have been found in 3.480-billion-year-old geyserite uncovered in the Dresser Formation of the Pilbara Craton of Western Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f13293",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Some represent now-extinct bacteria and microbes from a domain of life called Archaea",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The cold environments that psychrophiles inhabit are ubiquitous on Earth, as a large fraction of the planetary surface experiences temperatures lower than 10 °C (50 °F).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Psychrophiles” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:16.768Z",
+   "target": "f09114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "American Heritage Dictionary Entry: psychrophile",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:16.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Psychrophile” is on the snapshot of s8"
+  }
+ ]
+}

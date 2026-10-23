@@ -1,0 +1,381 @@
+{
+ "article": "a0077",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lothar_Matth%C3%A4us",
+   "title": "Lothar Matthäus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:53.504Z",
+   "snapshot": "6d5a0f803b0f25a5453446b99d19af016b1626b8d325f7592841d255c9e39b32"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Giovanni_Trapattoni",
+   "title": "Giovanni Trapattoni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:51.425Z",
+   "snapshot": "0929faeb5e450fd36f9d11e27ac3b2a2b53df2b2f001bd19f57d718ff3a74cdb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Andreas_M%C3%B6ller",
+   "title": "Andreas Möller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:54.586Z",
+   "snapshot": "69720c4524cf27b7ea7e5a9d795a569a149ac402fe1fc8fdbeab1acc6c961983"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Andreas_M%C3%B6ller",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:51.947Z",
+   "snapshot": "ba2e6ae1629bd2aebc5989f1fce0701f126515764023d2981f6feea323873d28"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Oliver_Kahn",
+   "title": "Oliver Kahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:52.847Z",
+   "snapshot": "e0db1a58c32f4770148d02522b67f9b4a75b41a16c589087d4aa5bb7e9753329"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Beckenbauer",
+   "title": "Franz Beckenbauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:55.585Z",
+   "snapshot": "b67246b1508aaf58ea35a2872b621a96d820bd54199168ed026eb5b6f9b12928"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Franz_Beckenbauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:57.047Z",
+   "snapshot": "6d412fa41ba6079fa3e077af8fe1ca32ca7500576c635d0aa5046e90e83f542f"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Deutscher_Fu%C3%9Fball-Kulturpreis",
+   "title": "Deutscher Fußball-Kulturpreis",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:54.965Z",
+   "snapshot": "356aa962c32c4f47f529379d71a4b3c43f3bf586d8549a74b6fa505c65661ca3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lothar Matthäus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Giovanni Trapattoni",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Andreas Möller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Andreas Möller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Oliver Kahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f00385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Lukas Podolski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-288"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lothar Matthäus at DFB (also available in German)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lothar Matthäus” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Als Fußballprofi bestritt Giovanni Trapattoni 367 Partien für die AC Mailand und den Varese FC.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giovanni Trapattoni” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Andreas Möller (born 2 September 1967) is a German former professional footballer who played as an attacking midfielder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andreas Möller” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dirk Graalmann: Das ungerechte Leben des Andreas Möller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andreas Möller” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Oliver Kahn ist der jüngere Sohn des in Lettland geborenen Deutsch-Balten und ehemaligen Karlsruher Bundesliga-Fußballspielers Rolf Kahn.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oliver Kahn” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Franz Anton Beckenbauer was born on 11 September 1945 at a clinic in the Maxvorstadt borough of Munich, the second son of postal-worker Franz Beckenbauer Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f00385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Franz Anton Beckenbauer wurde 1945 als zweiter Sohn des mittleren Postbeamten und gelernten Maschinenschlossers Franz Beckenbauer (1905–1977) und dessen Frau Antonie Hupfauf (* 23.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:46.670Z",
+   "target": "f13886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Manchmal gewinnt der Bessere.“ von Lukas Podolski",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:46.670Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lukas Podolski” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "article": "a1139",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/March_of_the_Penguins",
+   "title": "March of the Penguins – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:09.326Z",
+   "snapshot": "971c053d8b10c4a2d3832ef0a1cea8889b22a9dbc3fba43badb29e52920e57cc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Seahorse",
+   "title": "Seahorse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:42.415Z",
+   "snapshot": "7194e3e028942c31cb92ae1e1211406d8f6783f8a1f209b330735e3c2538c935"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Worst_Journey_in_the_World",
+   "title": "The Worst Journey in the World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:10.143Z",
+   "snapshot": "3280d5624327f1d9ee009361729c60488625eb7ea0302aa962b986891fac5483"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Emu",
+   "title": "Emu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:10.588Z",
+   "snapshot": "e1a992f2c8e481fbf39a3585ac08d2574e51b62f357d8dce01fdda160bbb7a5a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ad%C3%A9lie_penguin",
+   "title": "Adélie penguin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:11.368Z",
+   "snapshot": "c28f758c758173aa053b4f78601535ae0f4bc834c07d805310cc1ae806065846"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Emperor_penguin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:12.192Z",
+   "snapshot": "fcdc70f08bc340a31afef2d1b9990cc0c04686ce89eafad93fe80c4ef451953c"
+  },
+  "s7": {
+   "url": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/",
+   "title": "Emperor penguin – Australian Antarctic Program",
+   "publisher": "Australian Antarctic Division (Australian Government)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:10.092Z",
+   "snapshot": "186d6eb6c13f99346265d7c7d79025beb770dc5860c383936028f6e1cb2e5698"
+  },
+  "s8": {
+   "url": "https://animaldiversity.org/accounts/Hippocampus/",
+   "title": "Hippocampus – Animal Diversity Web",
+   "publisher": "University of Michigan Museum of Zoology (Animal Diversity Web)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:08.980Z",
+   "snapshot": "8f018f485f4f46e14513b74bdb7858972277d7664da4b70c743da7403e076d59"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On their feet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In a brood pouch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the Antarctic winter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The male",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-149"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:38.622Z",
+   "target": "f05691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On their feet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“On their feet”, “Auf ihre Füße”, “на лапах”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:38.622Z",
+   "target": "f05693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In a brood pouch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“In a brood pouch”, “In einer Bruttasche”, “в выводковой сумке”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:38.622Z",
+   "target": "f05694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the Antarctic winter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“In the Antarctic winter”, “Im antarktischen Winter”, “зимой”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:38.622Z",
+   "target": "f05695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The male incubates the eggs; during this process he hardly eats or drinks and loses a significant amount of weight.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The male” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:38.622Z",
+   "target": "f25725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adélies build rough nests of stones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stones” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:09:19Z",
+   "target": "f05691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "One-by-one they peel off the mob and shuffle, egg on feet, down the flanks of the huddle to join it again on the leeward side.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:09:22Z",
+   "target": "f05691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "There he balances it on the tops of his feet, engulfing it with loose skin and feathers for around 65–75 days until hatching.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:09:27Z",
+   "target": "f05694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They not only survive the Antarctic winter, but they breed during the worst weather conditions on earth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:09:32Z",
+   "target": "f05694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The only penguin species that breeds during the Antarctic winter",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:09:38Z",
+   "target": "f05693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "During copulation, female seahorses release unfertilized eggs and males bring the eggs into their brood pouch before fertilizing them.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:09:43Z",
+   "target": "f05693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "When mating, the female seahorse deposits up to 1,500 eggs in the male's pouch.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:16.547Z",
+   "target": "f05691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "One-by-one they peel off the mob and shuffle, egg on feet, down the flanks of the huddle to join it again on the leeward side.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:16.547Z",
+   "target": "f05691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "There he balances it on the tops of his feet, engulfing it with loose skin and feathers for around 65–75 days until hatching.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:16.547Z",
+   "target": "f05694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "They not only survive the Antarctic winter, but they breed during the worst weather conditions on earth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:16.547Z",
+   "target": "f05694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The only penguin species that breeds during the Antarctic winter",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:16.547Z",
+   "target": "f05693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "During copulation, female seahorses release unfertilized eggs and males bring the eggs into their brood pouch before fertilizing them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:16.547Z",
+   "target": "f05693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "When mating, the female seahorse deposits up to 1,500 eggs in the male's pouch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.547Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  }
+ ]
+}

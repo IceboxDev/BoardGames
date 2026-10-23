@@ -1,0 +1,455 @@
+{
+ "article": "a0090",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ruck-Rede",
+   "title": "Ruck-Rede – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:46.046Z",
+   "snapshot": "892171fceb0542db987bdf6b09f1bd9e532b2ae99c9735a1785243dfb1f2ba6e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Horst_K%C3%B6hler",
+   "title": "Horst Köhler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:47.874Z",
+   "snapshot": "2015393b71be1c328fffa48d866c08b5bf4e69786a5dc0d4316614b846ffba28"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Christian_Wulff",
+   "title": "Christian Wulff – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:48.202Z",
+   "snapshot": "51a55bb66325b7eb97fae48d946209ec017edb2d670598963baec15a4ec9b6ed"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Hoch_auf_dem_gelben_Wagen",
+   "title": "Hoch auf dem gelben Wagen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:49.079Z",
+   "snapshot": "5ae58399691ba7a3a1e03180c10bb0a87d2b062498f600bf2589fa1109c53ee5"
+  },
+  "s5": {
+   "url": "https://www.bundespraesident.de/DE/amt-und-aufgaben/ehemalige-bundespraesidenten/ehemalige-bundespraesidenten_node.html",
+   "title": "Ehemalige Bundespräsidenten",
+   "publisher": "Bundespräsidialamt",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:43.034Z",
+   "snapshot": "aed96aa46eea2b75ea8716f9138fdb8f151852f0a19633c2a90f56ae1a7014b3"
+  },
+  "s6": {
+   "url": "https://www.hdg.de/lemo/biografie/joachim-gauck.html",
+   "title": "Joachim Gauck – LeMO Biografie",
+   "publisher": "Stiftung Haus der Geschichte der Bundesrepublik Deutschland",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:43.163Z",
+   "snapshot": "cee3672c9ca3f419da1dacd37f05ced6fa20fb0e716f68efdea979b65da7bd84"
+  },
+  "s7": {
+   "url": "https://www.hdg.de/lemo/biografie/richard-von-weizsaecker.html",
+   "title": "Richard von Weizsäcker – LeMO Biografie",
+   "publisher": "Stiftung Haus der Geschichte der Bundesrepublik Deutschland",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:44.197Z",
+   "snapshot": "a4ad059c7809af251d3e5478ed388b4e3d705693f3af08f8be3fa8700b52232a"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Bundespräsident_(Deutschland)",
+   "title": "Bundespräsident (Deutschland) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:43.687Z",
+   "snapshot": "7605b61654905412970e594abb1eb1a73c4e035402db0cb81a94adbf16772330"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Theodor Heuss, Richard von Weizsäcker, Roman Herzog und Joachim Gauck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Horst Köhler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Wulff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walter Scheel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:48.606Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Theodor Heuss, Richard von Weizsäcker, Roman Herzog und Joachim Gauck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Theodor Heuss, Richard von Weizsäcker, Roman Herzog und Joachim Gauck”, “Theodor Heuss, Richard von Weizsäcker, Roman Herzog and Joachim Gauck”, “Теодор Хойс, Рихард фон Вайцзеккер, Роман Херцог и Йоахим Гаук”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:48.606Z",
+   "target": "f00447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Horst Köhler wurde als siebtes von acht Kindern einer bessarabiendeutschen Bauernfamilie in dem polnischen Dorf Skierbieszów, das während der deutschen Besetzung Polens bis 1944 Heidenstein hieß, in der heutigen Woiwodschaft Lublin geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horst Köhler” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:48.606Z",
+   "target": "f00448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Wulff wurde 1959 in Osnabrück als zweites Kind des Juristen und Kaufmanns Rudolf Wulff (1913–1998) und dessen Ehefrau Dagmar Evers (1929–1996) geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Wulff” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:48.606Z",
+   "target": "f00449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Lied erreichte eine enorme Popularität, nachdem  Walter Scheel, damals noch Bundesaußenminister, es am 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.606Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Scheel” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:20:12Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hier finden Sie alle bisherigen Amtsinhaber im Überblick.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "the official list of former Federal Presidents: Heuss (1949–1959), Lübke, Heinemann, Scheel, Carstens, Weizsäcker (1984–1994), Herzog (1994–1999), Rau, Köhler, Wulff, Gauck (2012–2017); any four count"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:20:19Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1949 – 1959 Theodor Heuss",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:20:28Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1984 – 1994 Richard von Weizsäcker",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:20:41Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1994 – 1999 Roman Herzog",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:21:03Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "2012 – 2017 Joachim Gauck",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:21:27Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Joachim Gauck ist von 2012 bis 2017 der 11. Bundespräsident der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:21:36Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Richard von Weizsäcker ist Jurist, CDU-Politiker und von 1984 bis 1994 der sechste Bundespräsident der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:21:42Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bis zur Wahl des ersten Bundespräsidenten Theodor Heuss am 12. September 1949",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:07.799Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "2012 – 2017 Joachim Gauck",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:07.799Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Joachim Gauck ist von 2012 bis 2017 der 11. Bundespräsident der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:07.799Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Richard von Weizsäcker ist Jurist, CDU-Politiker und von 1984 bis 1994 der sechste Bundespräsident der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:07.799Z",
+   "target": "f00446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bis zur Wahl des ersten Bundespräsidenten Theodor Heuss am 12. September 1949",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:07.799Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  }
+ ]
+}

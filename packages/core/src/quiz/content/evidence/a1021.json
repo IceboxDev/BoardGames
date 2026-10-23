@@ -1,0 +1,289 @@
+{
+ "article": "a1021",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Daisuke_Inoue",
+   "title": "Daisuke Inoue – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:47.060Z",
+   "snapshot": "8506869e0ba31b724bf1fb97a23c8cb76a6e31a46e93f1ed00760be3899cc0ee"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kabuki",
+   "title": "Kabuki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:48.051Z",
+   "snapshot": "70d09fd59e76a7bb3482c05a6c36d331a9844458114111dc88c3081bac80058e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Zeami_Motokiyo",
+   "title": "Zeami Motokiyo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:49.113Z",
+   "snapshot": "fa311ca9e3064a88fcb15aab68a9f9ec8493b978ba3a2f5a1bc1b7e8903b00db"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hanamichi",
+   "title": "Hanamichi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:50.038Z",
+   "snapshot": "c7cdb1bf2a9d95a3064f2bd3a46de8f664c76fedc1eb9a4700cdfc5d54d92908"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Daihachi_Oguchi",
+   "title": "Daihachi Oguchi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:51.156Z",
+   "snapshot": "5c4299904139df67598063c425d2f4cd76545ba36b494344a59b06b62a300858"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Noh",
+   "title": "Noh",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:52.145Z",
+   "snapshot": "46222ed92e7c12410d742290ef74fde854a7fccd6bf4fb31379bc8b539f2f676"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Karaoke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kabuki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Noh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hanamichi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Taiko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Supernatural beings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-105"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:21.136Z",
+   "target": "f05101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Daisuke Inoue (井上 大佑, Inoue Daisuke; born May 10, 1940) is a Japanese businessman best known as an inventor of the karaoke machine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karaoke” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:21.136Z",
+   "target": "f05102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kabuki (歌舞伎; Japanese pronunciation: [ka.bɯ.kʲi]) is a classical form of Japanese theatre, mixing dramatic performance with traditional dance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kabuki” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:21.136Z",
+   "target": "f05103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "His father, Kan'ami Kiyotsugu, introduced him to Noh theater performance at a young age, and found that he was a skilled actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Noh” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:21.136Z",
+   "target": "f05104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The hanamichi (花道) is an extra stage section used in Japanese kabuki theater.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanamichi” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:21.136Z",
+   "target": "f05105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Daihachi Oguchi (小口 大八, Oguchi Daihachi; February 27, 1924 – June 27, 2008) was a Japanese drummer best known for popularizing taiko.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taiko” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:21.136Z",
+   "target": "f25720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yeats wrote four plays heavily influenced by Noh, using ghosts or supernatural beings as the central dramatis personae for the first time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Supernatural beings” is on the snapshot of s6"
+  }
+ ]
+}

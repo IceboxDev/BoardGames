@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-400",
+ "image": "IMG20261007174153.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wo liegen die Inseln Islay, Mull und St. Kilda: in Irland, Schottland oder Island?",
+   "de": "In welchem Land liegen die Inseln Islay, Mull und St. Kilda?",
+   "en": "In which country are the islands of Islay, Mull and St Kilda?",
+   "reworked": true,
+   "answerDe": "Schottland",
+   "answerEn": "Scotland",
+   "timeline": {
+    "kind": "event",
+    "start": "1930-08-29",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The last 36 inhabitants of the Scottish archipelago St Kilda are evacuated to the mainland",
+    "labelDe": "Die letzten 36 Bewohner des schottischen Archipels St. Kilda werden aufs Festland evakuiert"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/St_Kilda,_Scotland",
+    "title": "St Kilda, Scotland",
+    "lang": "en"
+   },
+   "notes": "Multiple-choice card reworked to an open question. Islay and Mull are in the Inner Hebrides, St Kilda in the Outer Hebrides; all are Scottish.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Das russische Fernsehen zeigt auch seit Jahrzehnten Dinner for One zu Silvester. Richtig oder falsch?",
+   "de": "Welcher sowjetische Fernsehfilm gehört so sehr zum russischen Neujahrs-Fernsehprogramm wie Dinner for One zum deutschen Silvester?",
+   "en": "Which Soviet TV film is as much a part of Russian New Year's television as Dinner for One is of German New Year's Eve?",
+   "reworked": true,
+   "answerDe": "Ironie des Schicksals",
+   "answerEn": "The Irony of Fate",
+   "timeline": {
+    "kind": "event",
+    "start": "1976-01-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Eldar Ryazanov's TV film The Irony of Fate is first broadcast on Soviet television",
+    "labelDe": "Eldar Rjasanows Fernsehfilm Ironie des Schicksals wird erstmals im sowjetischen Fernsehen ausgestrahlt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Ironie_des_Schicksals",
+    "title": "Ironie des Schicksals",
+    "lang": "de"
+   },
+   "notes": "True/false card reworked to an open question. Russia is not among the countries where Dinner for One is a New Year cult (de.wikipedia 'Dinner for One' lists Germany, Austria, Scandinavia, Estonia etc.), so the statement is presumably false; Russia's New Year TV classic is \"Ironija sudby\" (1975).",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "In welcher uralten südasiatischen Sprache ist die Textsammlung der Veden verfasst?",
+   "de": "In welcher uralten südasiatischen Sprache ist die Textsammlung der Veden verfasst?",
+   "en": "In which ancient South Asian language is the collection of texts known as the Vedas written?",
+   "reworked": false,
+   "answerDe": "Sanskrit",
+   "answerEn": "Sanskrit",
+   "timeline": {
+    "kind": "creation",
+    "start": "-1200",
+    "end": "-1000",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Rigveda, the oldest of the Vedas, arises as the first oral Sanskrit tradition (c. 1200–1000 BC)",
+    "labelDe": "Der Rigveda, der älteste der Veden, entsteht als erste mündliche Sanskrit-Überlieferung (um 1200–1000 v. Chr.)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Veda",
+    "title": "Veda",
+    "lang": "de"
+   },
+   "notes": "Strictly the Vedas are in Vedic Sanskrit, the oldest form of the language.",
+   "domain": "belief",
+   "sub": "religion"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie lautete kein Pseudonym des Schriftstellers und Journalisten Kurt Tucholsky: Theobald Tiger, Peter Panter oder Leonard Luchs?",
+   "de": "Welches Pseudonym des Schriftstellers und Journalisten Kurt Tucholsky trägt den Vornamen Theobald?",
+   "en": "Which pseudonym of the writer and journalist Kurt Tucholsky has the first name Theobald?",
+   "reworked": true,
+   "answerDe": "Theobald Tiger",
+   "answerEn": "Theobald Tiger",
+   "timeline": {
+    "kind": "event",
+    "start": "1913",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Kurt Tucholsky adopts the pseudonyms Ignaz Wrobel, Theobald Tiger and Peter Panter, which he keeps for the rest of his career",
+    "labelDe": "Kurt Tucholsky legt sich die Pseudonyme Ignaz Wrobel, Theobald Tiger und Peter Panter zu, die er bis zum Ende seines Schaffens beibehält"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Kurt_Tucholsky",
+    "title": "Kurt Tucholsky",
+    "lang": "de"
+   },
+   "notes": "\"Which is NOT\" multiple-choice card reworked to a positive open question. Tucholsky's pseudonyms were Kaspar Hauser, Peter Panter, Theobald Tiger and Ignaz Wrobel; \"Leonard Luchs\" (the card's intended answer) was not one of them.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welches weitverbreitete, nichtalkoholische Getränk wird von der Weltgesundheitsorganisation als Suchtmittel eingestuft?",
+   "de": "Welches weitverbreitete, nichtalkoholische Getränk wird von der Weltgesundheitsorganisation als Suchtmittel eingestuft?",
+   "en": "Which widespread non-alcoholic drink is classified by the World Health Organization as an addictive substance?",
+   "reworked": false,
+   "answerDe": "Kaffee",
+   "answerEn": "Coffee",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1819",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "At Goethe's suggestion, Friedlieb Ferdinand Runge first isolates caffeine from coffee beans",
+    "labelDe": "Auf Anregung Goethes isoliert Friedlieb Ferdinand Runge erstmals Coffein aus Kaffeebohnen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Caffeine",
+    "title": "Caffeine",
+    "lang": "en"
+   },
+   "notes": "The card's premise is loose: the WHO's ICD-10 lists caffeine (the stimulant in coffee) under F15 (disorders due to other stimulants, including caffeine) and includes a classification of caffeine addiction; the WHO does not list the drink itself, and whether caffeine is truly addictive is disputed. The 1819 date is from de.wikipedia 'Coffein'.",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 6,
+   "cardDe": "Bei welchem Kartenspiel sitzen neun Finalisten, die sogenannten „November Nine“, an einem Tisch und spielen um den Weltmeistertitel?",
+   "de": "Bei welchem Kartenspiel sitzen neun Finalisten, die sogenannten „November Nine“, an einem Tisch und spielen um den Weltmeistertitel?",
+   "en": "In which card game do nine finalists, the so-called \"November Nine\", sit at one table and play for the world championship title?",
+   "reworked": false,
+   "answerDe": "Poker",
+   "answerEn": "Poker",
+   "timeline": {
+    "kind": "period",
+    "start": "2008",
+    "end": "2016",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The final table of the World Series of Poker Main Event is played as the \"November Nine\" (2008–2016)",
+    "labelDe": "Der Finaltisch des Main Events der World Series of Poker wird als „November Nine“ ausgespielt (2008–2016)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/November_Nine",
+    "title": "November Nine",
+    "lang": "en"
+   },
+   "notes": "The \"November Nine\" format of the WSOP Main Event ran from 2008 to 2016.",
+   "domain": "sport-games",
+   "sub": "games"
+  }
+ ]
+}

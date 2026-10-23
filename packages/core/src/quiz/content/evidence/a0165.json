@@ -1,0 +1,580 @@
+{
+ "article": "a0165",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carrington_Event",
+   "title": "Carrington Event – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:04.174Z",
+   "snapshot": "df06026ab67edcadf1372e72607c66923b10839bb89d6df5bae901318d9734f8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/V%C3%A4dersolstavlan",
+   "title": "Vädersolstavlan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:05.263Z",
+   "snapshot": "032dcd8e46e660bc6a957db32f09310760d355ae9bc96506add6c2b32482fb55"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Tempest",
+   "title": "The Tempest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:02.315Z",
+   "snapshot": "9fb5942ea0f1562603331f29cf9a6faf7430b30c781e75a9278c7b43df816c2c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Leonids",
+   "title": "Leonids – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:03.145Z",
+   "snapshot": "4ccc80f6e7c9f14c942282a56ffccf12878d487868b484c676cadbc7842bbe82"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lightning",
+   "title": "Lightning",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:06.336Z",
+   "snapshot": "aa90d6dee8976888ab4cef177dd21aa689ada4c134fd1dec07233c16d6e8961b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Kite_experiment",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:07.211Z",
+   "snapshot": "34fe02b154b6a462b430aeaa16fbfe6d02d936b37f33525f251113775d7b2bcc"
+  },
+  "s7": {
+   "url": "https://www.dwd.de/DE/service/lexikon/Functions/glossar.html?lv2=102248&lv3=102390",
+   "title": "Glossar: Sankt-Elms-Feuer",
+   "publisher": "Deutscher Wetterdienst",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:19.521Z",
+   "snapshot": "9373e29273fcf7922b9dfb04143982401b9bcca06e338ed66093aabf341fb3b6"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/St._Elmo%27s_fire",
+   "title": "St. Elmo's fire - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:18.191Z",
+   "snapshot": "8569cd23495fd2608c548647ff9a0583fde502769b3b9d7959918ff10288ad1c"
+  },
+  "s9": {
+   "url": "https://science.nasa.gov/solar-system/meteors-meteorites/",
+   "title": "Meteors and Meteorites",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:18.160Z",
+   "snapshot": "f595fa9d9fac27bb0591909e11e0a73c57572098301b4a92930a0aeea99e12c1"
+  },
+  "s10": {
+   "url": "https://www.amsmeteors.org/faq/",
+   "title": "Meteor Shower FAQ",
+   "publisher": "American Meteor Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:18.406Z",
+   "snapshot": "cbd62ad3ca7be2b592e7e2558480db70b7230274263e3294ce411500020ca9dc"
+  },
+  "s11": {
+   "url": "https://www.weather.gov/safety/lightning-temperature",
+   "title": "How Hot Is Lightning?",
+   "publisher": "US National Weather Service (NOAA)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:18.775Z",
+   "snapshot": "5e86044ca5925a83da2e1e3863033908e1360ec3f85e951afa918a16e65f8066"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00821",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aurora",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c014"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00823",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Halo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "St. Elmo's fire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shooting star",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "About 30,000 °C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-072"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "About 30,000 °C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 50"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:03.089Z",
+   "target": "f00821",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Typical CMEs take several days to arrive at Earth, but it is believed that the relatively high speed of this CME was made possible by a prior CME, perhaps the cause of the large aurora event on 29 August that \"cleared the way\" of ambient solar wind plasma for the Carrington Event.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aurora” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:03.089Z",
+   "target": "f00823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vädersolstavlan (Swedish for 'The Sundog Painting'; ) is an oil-on-panel painting depicting a halo display, an atmospheric optical phenomenon, observed over Stockholm on 20 April 1535.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halo” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:03.089Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "St. Elmo's fire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“St. Elmo's fire”, “Elmsfeuer”, “Огни святого Эльма”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:03.089Z",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shooting star",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Shooting star”, “Sternschnuppe”, “Падающая звезда”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:03.089Z",
+   "target": "f25424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The air around the lightning flash rapidly heats to temperatures of about 30,000 °C (54,000 °F).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:03.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “About 30,000 °C” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:03.089Z",
+   "target": "f25424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "About 30,000 °C",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 30,000 °C”, “Etwa 30.000 °C”, “Около 30 000 °C”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:29:32Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dabei gehen Entladungen schwacher bis mäßiger Intensität von emporragenden Gegenständen aus - auf der Erdoberfläche von Blitzableitern, Windfahnen oder Schiffsmasten",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:30:20Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a weather phenomenon in which luminous plasma is created by a corona discharge from a rod-like object such as a mast , spire, chimney, or animal horn",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:30:29Z",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "When meteoroids enter Earth’s atmosphere (or that of another planet, like Mars) at high speed and burn up, the fireballs, or “shooting stars,” are called meteors.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:30:37Z",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "A meteor is the streak of light produced when a meteoroid enters the atmosphere. “Shooting star” is a popular name for the same phenomenon; no actual star is involved.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:30:42Z",
+   "target": "f25424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "lightning can heat the air it passes through to 50,000 degrees Fahrenheit (5 times hotter than the surface of the sun)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "50,000 °F ≈ 27,800 °C; 'about 30,000 °C' is the rounded common figure (Wikipedia: ~30,000 K); notes accept ~27,000 °C"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:39:32Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a weather phenomenon in which luminous plasma is created by a corona discharge from a rod-like object such as a mast, spire, chimney, or animal horn",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted to match the page text exactly"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dabei gehen Entladungen schwacher bis mäßiger Intensität von emporragenden Gegenständen aus - auf der Erdoberfläche von Blitzableitern, Windfahnen oder Schiffsmasten",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "When meteoroids enter Earth’s atmosphere (or that of another planet, like Mars) at high speed and burn up, the fireballs, or “shooting stars,” are called meteors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "A meteor is the streak of light produced when a meteoroid enters the atmosphere. “Shooting star” is a popular name for the same phenomenon; no actual star is involved.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f25424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "lightning can heat the air it passes through to 50,000 degrees Fahrenheit (5 times hotter than the surface of the sun)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a weather phenomenon in which luminous plasma is created by a corona discharge from a rod-like object such as a mast, spire, chimney, or animal horn",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f00824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "St. Elmo's fire (also called corposant, Hermes fire, furole, witchfire or witch's fire) is a weather phenomenon in which luminous plasma is created by a corona discharge from a rod-like object such as a mast, spire, chimney, or animal horn in an atmospheric electric field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “St. Elmo's fire” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:22.554Z",
+   "target": "f00825",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "“Shooting star” is a popular name for the same phenomenon; no actual star is involved.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:22.554Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Shooting star” is on the snapshot of s10"
+  }
+ ]
+}

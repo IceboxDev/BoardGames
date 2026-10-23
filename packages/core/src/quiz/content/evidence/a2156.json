@@ -1,0 +1,459 @@
+{
+ "article": "a2156",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Virgin_Galactic",
+   "title": "Virgin Galactic",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:44:53.137Z",
+   "snapshot": "7aeb750a891645697a6d9154b5fbcbe7b08a0acac9fbd88dcd0f053cc696c132"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Soyuz_TMA-16",
+   "title": "Soyuz TMA-16",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:56.894Z",
+   "snapshot": "5f4da06fd809ed7d1d2666e4258119aff3ade01e97a4299e9c0d09e8582e3631"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Dragon_1",
+   "title": "SpaceX Dragon 1",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:58.068Z",
+   "snapshot": "d007214984c3bb1af9700aa5f33cfe2821a1baea804bae0e1f61f656f5d552d0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Origin",
+   "title": "Blue Origin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:59.026Z",
+   "snapshot": "3e5ad24db9923f0dbc6fbabfd56fe840de2ca91ae1ba0bf93bc7b7b44324512a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Inspiration4",
+   "title": "Inspiration4 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:59.883Z",
+   "snapshot": "4582fef001461346789dd054786238b70fb7ee5a7fcd37c5b84f298cf8da6c69"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Space_Adventures",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:00.891Z",
+   "snapshot": "29c2a72c34c1435a1852c7e3253c253e874703532c3431854c56922758d6a588"
+  },
+  "s7": {
+   "url": "https://www.foxnews.com/science/dragon-returns-to-earth-starts-new-chapter-for-spaceflight",
+   "title": "Dragon returns to Earth, starts new chapter for spaceflight – Fox News",
+   "publisher": "Fox News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:02.665Z",
+   "snapshot": "7b1b8325bc6b456eef845d5917c2fae97617976e36005a316af9ab80ca0e5469"
+  },
+  "s8": {
+   "url": "https://inspiration4.com/press/inspiration4-crew-launches-first-all-civilian-orbital/",
+   "title": "Inspiration4 Crew Launches First All-Civilian Orbital Mission to Space – Inspiration4",
+   "publisher": "Inspiration4 (mission press office)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:02.106Z",
+   "snapshot": "faef73a9b2e2671431fbf4179f8ff32d61f623af7733b86957d8229fdc5026a5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Virgin Galactic",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "International Space Station",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-117"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dragon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-108"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Blue Origin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Inspiration4",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:31.269Z",
+   "target": "f10892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im September 2004 wurde Virgin Galactic vom britischen Unternehmer Richard Branson und dem US-amerikanischen Ingenieur Burt Rutan mit dem Ziel gegründet, suborbitale Raumflüge für Weltraumtouristen anzubieten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.269Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virgin Galactic” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:31.269Z",
+   "target": "f10893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Soyuz TMA-16 (Russian: Союз TMA-16) was a crewed flight to and from the International Space Station (ISS).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.269Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “International Space Station” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:31.269Z",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "SpaceX Dragon 1 is a class of fourteen partially reusable cargo spacecraft developed by SpaceX, an American private space transportation company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.269Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dragon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:31.269Z",
+   "target": "f10896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In addition to producing engines for its own rockets, Blue Origin supplies engines for other vehicles, including United Launch Alliance's Vulcan Centaur.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.269Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue Origin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:31.269Z",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Inspiration4 (stylized as Inspirati④n) was a 2021 human spaceflight operated by SpaceX on behalf of Shift4 Payments CEO Jared Isaacman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.269Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inspiration4” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:31Z",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "During its maiden flight in December 2010, Dragon became the first commercially built and operated spacecraft to be recovered successfully from orbit.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:35Z",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "first commercial spacecraft to re-enter Earth’s atmosphere",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:38Z",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the world’s first all-civilian human spaceflight mission to orbit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:09:41Z",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The trip was the first orbital spaceflight with only private citizens aboard",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:17.925Z",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "During its maiden flight in December 2010, Dragon became the first commercially built and operated spacecraft to be recovered successfully from orbit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:17.925Z",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "first commercial spacecraft to re-enter Earth’s atmosphere",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:17.925Z",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the world’s first all-civilian human spaceflight mission to orbit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:17.925Z",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The trip was the first orbital spaceflight with only private citizens aboard",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:17.925Z",
+   "target": "f10894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dragon Returns to Earth, Starts New Chapter for Spaceflight | Fox News",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dragon” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:17.925Z",
+   "target": "f10897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Inspiration4 Crew Launches First All-Civilian Orbital Mission to Space",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:17.925Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Inspiration4” is on the snapshot of s8"
+  }
+ ]
+}

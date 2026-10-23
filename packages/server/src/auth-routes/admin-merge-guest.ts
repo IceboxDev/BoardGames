@@ -113,16 +113,13 @@ export const GUEST_MERGE_COVERAGE = {
     "dnd_node_templates.user_id",
     "dnd_history.user_id",
     "dnd_combats.user_id",
-    // Quiztopia trainer: a personal study programme a guest stub never starts.
-    "quiztopia_srs.user_id",
-    "quiztopia_reviews.user_id",
-    "quiztopia_settings.user_id",
-    "quiztopia_wiki_reads.user_id",
-    "quiztopia_wiki_read_log.user_id",
+    // Quiz trainer: a personal study programme a guest stub never starts.
+    "quiz_wiki_reads.user_id",
+    "quiz_wiki_read_log.user_id",
     // Content reports: a guest stub never studies, so never reports; only an
     // admin resolves one (SET NULL like resolved_by elsewhere).
-    "quiztopia_reports.user_id",
-    "quiztopia_reports.resolved_by",
+    "quiz_reports.user_id",
+    "quiz_reports.resolved_by",
     // Trainer decks (World Geography, …): same reasoning.
     "trainer_srs.user_id",
     "trainer_reviews.user_id",

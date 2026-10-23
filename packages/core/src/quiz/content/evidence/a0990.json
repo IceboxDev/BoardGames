@@ -1,0 +1,242 @@
+{
+ "article": "a0990",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Munich_massacre",
+   "title": "Munich massacre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:17.618Z",
+   "snapshot": "9b31e11fbdca8f7be7dd59a2acafb75f2d478491e520d7ca24b68e600a414b7b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lufthansa_Flight_181",
+   "title": "Lufthansa Flight 181 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:53.848Z",
+   "snapshot": "5220dc83a258ebd8bad42786825b5f14e10a388777ddb1a86fa2bb5905a9c292"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oktoberfest_bombing",
+   "title": "Oktoberfest bombing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:53.087Z",
+   "snapshot": "32f6bd4aeeeb557a5c87e6e6391c92b1d7e43400d0ffd7604e4fefd6da872651"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Germany_in_Autumn",
+   "title": "Germany in Autumn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:54.009Z",
+   "snapshot": "355433b495741139aa6ce14db7bde77b95fa2e58ca3d3fe912f4d2cf7e06c632"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Entebbe_raid",
+   "title": "Entebbe raid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:55.127Z",
+   "snapshot": "74344abac3b1b809092113a6f7aa9ac336c5e76c05b70016793ce356575d7fe8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Munich massacre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Landshut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oktoberfest bombing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "German Autumn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Operation Entebbe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:15.990Z",
+   "target": "f04946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Munich massacre was a terrorist attack during the 1972 Summer Olympics in Munich, West Germany, carried out by eight members of the Palestinian militant organisation Black September.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Munich massacre” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:15.990Z",
+   "target": "f04947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "D-ABCE) named Landshut, was hijacked on 13 October 1977 by four militants of the Popular Front for the Liberation of Palestine while en route from Palma de Mallorca, Spain, to Frankfurt am Main, West Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Landshut” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:15.990Z",
+   "target": "f04948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Oktoberfest bombing (German: Oktoberfest-Attentat) was a far-right terrorist attack.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oktoberfest bombing” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:15.990Z",
+   "target": "f04949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Germany in Autumn (German: Deutschland im Herbst) is a 1978 West German anthology film about the period of 1977 known as the German Autumn, which was dominated by incidents of terrorism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “German Autumn” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:15.990Z",
+   "target": "f04950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Entebbe raid, also known as Operation Entebbe and officially codenamed Operation Thunderbolt (subsequently Operation Yonatan), was a 3 July 1976 Israeli counter-terrorist mission in Uganda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Operation Entebbe” is on the snapshot of s5"
+  }
+ ]
+}

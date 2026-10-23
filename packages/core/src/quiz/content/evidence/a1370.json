@@ -1,0 +1,327 @@
+{
+ "article": "a1370",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tohuwabohu",
+   "title": "Tohuwabohu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:26.602Z",
+   "snapshot": "f04f2c6df1769b312235bbb986eee9bb214298c4299712be7869c2804c5059a8"
+  },
+  "s2": {
+   "url": "https://www.dwds.de/wb/Tohuwabohu",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:05.785Z",
+   "snapshot": "971912cacb27a953344e74946a01047988c6d2e3444966301d2b8af4574c985e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chutzpah",
+   "title": "Chutzpah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:29.282Z",
+   "snapshot": "cc7e2a92a9ece62c3bd75db6a8bf5ddf775769625dba8d01592aaec139a7b753"
+  },
+  "s4": {
+   "url": "https://www.dwds.de/wb/Schlamassel",
+   "title": "Schlamassel – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:10:50.199Z",
+   "snapshot": "1be5d657a02abede61fe3c7f618aebd2cc80ee719682e08603de2fff72771bb1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kunsthaus_Tacheles",
+   "title": "Kunsthaus Tacheles – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:27.615Z",
+   "snapshot": "c6e415e5291d17ddd8739760bd5c54311cb589224f1867dbc99fec0aa3a6f973"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hallelujah",
+   "title": "Hallelujah",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:30.316Z",
+   "snapshot": "11d7c3678686e4adccd757354904332891db0d5a8c0f6aa33c6e2cb53f4feca0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tohuwabohu",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tohuwabohu",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "chutzpah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 60"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schlamassel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tacheles",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Genesis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-015"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Praise the Lord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 71; transcript ppm-030"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f06846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tohuwabohu ist ein Lehnwort aus dem Hebräischen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tohuwabohu” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f06846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tohuwabohu – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tohuwabohu” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f06847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chutzpah (; Yiddish: חוצפּה, romanized: khutspe) is the quality of audacity, for good or for bad.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chutzpah” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f06848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schlamassel – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schlamassel” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f06849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Kunsthaus Tacheles war ein Kunst- und Veranstaltungszentrum in der Oranienburger Straße im Berliner Ortsteil Mitte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tacheles” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f12718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zu Beginn des ersten Schöpfungsberichtes in der Genesis heißt es: „Die Erde war wüst und wirr und Finsternis lag über der Urflut und Gottes Geist schwebte über dem Wasser.“ (Gen 1,2 ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Genesis” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:15.290Z",
+   "target": "f25663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In day-to-day situations, the expressions of \"Hallelujah\" and \"Praise the Lord\" are used by Christians as spontaneous expressions of joy, thanksgiving and praise towards God.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Praise the Lord” is on the snapshot of s6"
+  }
+ ]
+}

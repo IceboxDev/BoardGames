@@ -1,0 +1,402 @@
+{
+ "article": "a1573",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Saxophone",
+   "title": "Saxophone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:17.008Z",
+   "snapshot": "42bc27670a396bbc6b70973d41c2fd3cc30aaf031d6294de1ba4f4ae3ece43f6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Piano",
+   "title": "Piano – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:18.145Z",
+   "snapshot": "103b8a834a1e9281edd9f57f3262976289e9bfb457de872515efabe39118e928"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tuba",
+   "title": "Tuba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:19.121Z",
+   "snapshot": "680f8111f66eed01b5d8aa1fa0a2ddfea67e5192479e04311438db8df8147cb9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Celesta",
+   "title": "Celesta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:19.938Z",
+   "snapshot": "e7b628790ec8fcec76e0863af94cf03b5a01288d6892e74461b2fcc50d623bff"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Adolphe_Sax",
+   "title": "Adolphe Sax",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:03.188Z",
+   "snapshot": "d2b1f720f991339f2a553b83a0c7991dea9f38ffcc3a71a1d6ce5ad486827da2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Christian_Friedrich_Ludwig_Buschmann",
+   "title": "Christian Friedrich Ludwig Buschmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:09:17.274Z",
+   "snapshot": "beed293f9a00df34d742b2f7576ddc59040a3906cdd545391f0d2654b61749f7"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Harmonica",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:21.027Z",
+   "snapshot": "4b3f0c38c652dfb5aaa953b7dd4128fab008a1e10788bc7785bab6d57e5dbc32"
+  },
+  "s8": {
+   "url": "https://www.patmissin.com/history/western.html",
+   "title": "The Western free reeds – Pat Missin harmonica history",
+   "publisher": "Pat Missin",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:49.090Z",
+   "snapshot": "fc9c965ea6b191270740f70d9813efd09c4cb8a97a999a2678002c4809dfce3c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "saxophone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "piano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tuba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "celesta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adolphe Sax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-148"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aura",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-045"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:45.708Z",
+   "target": "f07861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The saxophone (often referred to colloquially as the sax) is a type of single-reed woodwind instrument with a conical body, usually made of brass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “saxophone” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:45.708Z",
+   "target": "f07862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A piano is a keyboard instrument that produces sound when its keys are pressed, activating an action mechanism where hammers strike strings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “piano” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:45.708Z",
+   "target": "f07863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The tuba (Latin, \"trumpet\"; UK: ; US: ) is a large brass instrument in the bass-to-contrabass range.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tuba” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:45.708Z",
+   "target": "f07864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The celesta () or celeste (), also called a bell-piano, is a struck idiophone operated by a keyboard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “celesta” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:45.708Z",
+   "target": "f13017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The advances made by Adolphe Sax were soon followed by the British brass band movement, which exclusively adopted the saxhorn family of instruments.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolphe Sax” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:45.708Z",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nach mündlicher Überlieferung soll Buschmann vor der Aeoline 1821 eine Stimmhilfe gebaut haben, die er Aura genannt hat, das Gerät soll 4 Zoll groß gewesen sein und 15 Stimmzungen gehabt haben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:45.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aura” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:09:06Z",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "first calling his instrument the aura (a name which had been used just a few years earlier by Johann Heinrich Schleiber to describe a multiple guimbarde instrument), later changing its name to mundaeoline",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23",
+   "note": "Harmonica historian's account; agrees with de.wikipedia's oral-tradition 'Aura' (Hohner's own history page names only the later 'mundaeoline')."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:09:08Z",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nach mündlicher Überlieferung soll Buschmann vor der Aeoline 1821 eine Stimmhilfe gebaut haben, die er Aura genannt hat",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:32.883Z",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "first calling his instrument the aura (a name which had been used just a few years earlier by Johann Heinrich Schleiber to describe a multiple guimbarde instrument), later changing its name to mundaeoline",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:32.883Z",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nach mündlicher Überlieferung soll Buschmann vor der Aeoline 1821 eine Stimmhilfe gebaut haben, die er Aura genannt hat",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:32.883Z",
+   "target": "f13018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The person usually credited with being the first to do this is Christian Friedrich Ludwig Buschmann in 1821, first calling his instrument the aura (a name which had been used just a few years earlier by Johann Heinrich Schleiber to describe a multiple guimbarde instrument), later changing its name",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:32.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aura” is on the snapshot of s8"
+  }
+ ]
+}

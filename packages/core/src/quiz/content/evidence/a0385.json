@@ -1,0 +1,242 @@
+{
+ "article": "a0385",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Apeshit",
+   "title": "Apeshit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:23.496Z",
+   "snapshot": "8612108b0cb53576c10974a91263aef064a2ef5d08acb4ae29a2c21699423cbc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Beatles'_rooftop_concert",
+   "title": "The Beatles' rooftop concert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:24.439Z",
+   "snapshot": "007a8fcd5dc242796336867a3c0fef93e236e92cfde002268e3c0495de629bcb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Picasso_Baby",
+   "title": "Picasso Baby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:25.467Z",
+   "snapshot": "e6b84bca9f3db93489e3017b82a0656600fb4a6ba633a1efc3b41612d70dae11"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Famous_(Kanye_West_song)",
+   "title": "Famous (Kanye West song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:26.505Z",
+   "snapshot": "0f4c7541059f3126316885ccede0c63f12cc96c89443744d2d4bd3f4dd0f705f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Viva_la_Vida_or_Death_and_All_His_Friends",
+   "title": "Viva la Vida or Death and All His Friends – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:27.815Z",
+   "snapshot": "52d7e38d8d0cac266036c660f70be9cf1ea6a9495b397324756584180283910a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beyoncé and Jay-Z",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01922",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Beatles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01923",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jay-Z",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kanye West",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Coldplay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:39.707Z",
+   "target": "f01921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Apeshit\" (stylized in all caps) is a  song by American musical duo The Carters, composed of Beyoncé and Jay-Z.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beyoncé and Jay-Z” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:39.707Z",
+   "target": "f01922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 30 January 1969, the Beatles performed a concert from the rooftop of their Apple Corps headquarters at 3 Savile Row, in central London's office and fashion district.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beatles” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:39.707Z",
+   "target": "f01923",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Picasso Baby\" is a song by American hip hop artist Jay-Z from his twelfth studio album Magna Carta...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jay-Z” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:39.707Z",
+   "target": "f01924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Famous\" is a song by American rapper Kanye West, produced and co-written by fellow American hip-hop artist/producer Havoc.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kanye West” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:39.707Z",
+   "target": "f01925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Viva la Vida or Death and All His Friends, often referred to as simply Viva la Vida, is the fourth studio album by the British rock band Coldplay, released on 12 June 2008 by Parlophone in the United Kingdom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:39.707Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coldplay” is on the snapshot of s5"
+  }
+ ]
+}

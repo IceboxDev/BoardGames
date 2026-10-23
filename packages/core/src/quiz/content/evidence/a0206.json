@@ -1,0 +1,249 @@
+{
+ "article": "a0206",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Leon_Trotsky",
+   "title": "Leon Trotsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:24.811Z",
+   "snapshot": "5282b9aa00de104e5d509bd6c39f888bc3d8d1c7b1e1786530e093d99a08b98c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Stalin",
+   "title": "Joseph Stalin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:25.797Z",
+   "snapshot": "f27576ee8970ef12b750a6e75156933d67f316843fa42a5cce88814927f78cf6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Marx",
+   "title": "Karl Marx – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:26.772Z",
+   "snapshot": "e5a88222ed9f513be0382ba1d26fc12d7188c744016b10e4b5de4eead7b8b64f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nicholas_II",
+   "title": "Nicholas II – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:05.836Z",
+   "snapshot": "24340d8280c23a167216b3dc18940953b0c97bc871852d3409b84d2e56a69f59"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Barbarossa",
+   "title": "Operation Barbarossa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:27.769Z",
+   "snapshot": "b76285975670df6cae24fe02c6088b6d0ebdf4538719d59e05881943fc00dedb"
+  },
+  "s6": {
+   "url": "https://gutenberg.net.au/ebooks01/0100011h.html",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:26.520Z",
+   "snapshot": "e60b09a271855c6f24eca55f02e7338f055f6a42191d426954a4893a419cefe9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leon Trotsky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01027",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Stalin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Marx",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01029",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nicholas II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Adolf Hitler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:11.412Z",
+   "target": "f01026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "26 October] 1879 – 21 August 1940), better known as Leon Trotsky, was a Russian revolutionary, Soviet politician, and political theorist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leon Trotsky” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:11.412Z",
+   "target": "f01027",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Widely considered to be one of the most significant figures of the 20th century, Joseph Stalin was the subject of a pervasive personality cult within the international Marxist–Leninist movement, for whom he was a champion of socialism and the working class.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Stalin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:11.412Z",
+   "target": "f01028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Marx (German: [ˈkaʁl ˈmaʁks]; 5 May 1818 – 14 March 1883) was a German philosopher, social and political theorist, journalist, and revolutionary socialist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:11.412Z",
+   "target": "f01029",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alexander died ten days later, aged 49, and Nicholas was consecrated that evening as Tsar Nicholas II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicholas II” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:11.412Z",
+   "target": "f01030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Following the Soviet occupation of Bessarabia and Northern Bukovina in July 1940, the German High Command began planning an invasion of the country, which was approved by Adolf Hitler in December.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:11.412Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adolf Hitler” is on the snapshot of s5"
+  }
+ ]
+}

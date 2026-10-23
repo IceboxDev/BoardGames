@@ -1,0 +1,242 @@
+{
+ "article": "a0830",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Petersburg_Soviet",
+   "title": "Saint Petersburg Soviet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:09.399Z",
+   "snapshot": "ccb4417f864c0541fc29a987ffd2f9276f6db74b86ee04f8fe78c72af2784df2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Perestroika",
+   "title": "Perestroika – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:11.310Z",
+   "snapshot": "dfc23658e2f620f54a9af84b92880e0ffb0533c2e8062993f79771bd23376c0d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sputnik_1",
+   "title": "Sputnik 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:14.580Z",
+   "snapshot": "307058c44f27ac87d84e790d27fdb1c81ad910f71f0f72237974cada2ad9af13"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vodka",
+   "title": "Vodka – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:10.466Z",
+   "snapshot": "af548cdc6ba753fcc8bcb4a0e1f8c29b2d2f222948eec98ec22049b164c07822"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Wodka",
+   "title": "Wodka",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:07.901Z",
+   "snapshot": "3e4ff7a8355ac1cfc684eaa1cddbc7f7d2a9e936f51c63bfa1027be8e928eb22"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Council",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Restructuring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Companion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Little water",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wässerchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-122"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:51.434Z",
+   "target": "f04146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Petersburg Soviet of Workers' Delegates (Russian: Петербургский совет рабочих депутатов, romanized: Peterburgskiy sovet rabochikh deputatov; later the Petersburg Soviet of Workers' Deputies) was a workers' council, or soviet, in Saint Petersburg in 1905.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.434Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Council” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:51.434Z",
+   "target": "f04147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Perestroika literally means \"restructuring\", referring to the restructuring of the political economy of the Soviet Union in an attempt to end the Era of Stagnation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.434Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Restructuring” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:51.434Z",
+   "target": "f04149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The word sputnik is Russian for satellite when interpreted in an astronomical context; its other meanings are spouse or travelling companion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.434Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Companion” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:51.434Z",
+   "target": "f04150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The word vodka in English was borrowed from Russian and it can be literally translated as 'little water'; it is a diminutive of the Russian word voda ('water').",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.434Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Little water” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:51.434Z",
+   "target": "f04150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wodka oder auch Vodka (aus dem Slawischen, polnisch wódka [ˈvutka], russisch водка wodka [ˈvotkə], nordsamisch vodka [vɔdka]; Diminutiv von woda  ‚Wasser‘, also ‚Wässerchen‘) ist eine meist farblose Spirituose mit einem Alkoholgehalt von idealerweise 40 Volumenprozent.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.434Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wässerchen” is on the snapshot of s5"
+  }
+ ]
+}

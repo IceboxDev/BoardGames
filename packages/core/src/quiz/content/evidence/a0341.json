@@ -1,0 +1,514 @@
+{
+ "article": "a0341",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jeton",
+   "title": "Jeton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:19.345Z",
+   "snapshot": "c33b6339183f881159f3977d9e5ff385c26444f303c4cd3a890c8bc893715a16"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/croupier",
+   "title": "croupier – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino",
+   "title": "Monte Carlo Casino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:20.342Z",
+   "snapshot": "3242e2e358369e6e1c2c342bd45e1474e4e3fe55c282add30c61486a71b60dad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Roulette",
+   "title": "Roulette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:39.114Z",
+   "snapshot": "38cd440ca77400e40d2f02eaba100632c63ea913545b795fb8d48b45e2690024"
+  },
+  "s5": {
+   "url": "https://www.duden.de/rechtschreibung/Croupier",
+   "title": "Croupier – Duden",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:47.252Z",
+   "snapshot": "d160707336d95ebfb43edb2d5072195ed2c82b8b3950bad0188832147563eac4"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/croupier",
+   "title": "CROUPIER – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:47.092Z",
+   "snapshot": "476a2ce767b2d4401b42f50ae0d1a052491241a5340f738f9d99eadc3848626b"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Croupier",
+   "title": "Croupier – DWDS",
+   "publisher": "DWDS (Berlin-Brandenburgische Akademie der Wissenschaften)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:32:24.389Z",
+   "snapshot": "21331332c282265497f9bde7b8cc91b5559ecfbcbaad15f2ee859e6fc3578bec"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Roulette",
+   "title": "Roulette",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:00:24Z"
+  },
+  "s9": {
+   "url": "https://www.pokernews.com/casino/roulette/french-roulette.htm",
+   "title": "French Roulette: a Beginner's Guide",
+   "publisher": "PokerNews",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:24.676Z",
+   "snapshot": "ab5702ade7d539c2aef5fb3825c8080c7bbf4821b57fd3c51fd3c8063f31d065"
+  },
+  "s10": {
+   "url": "https://www.casinos.com/games/french-roulette",
+   "title": "French Roulette: Strategy Tips",
+   "publisher": "Casinos.com",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:25.015Z",
+   "snapshot": "16cf30e046f7cddab6cb6f958613408dd1151d5448c80b56349de6adfaa492df"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01701",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jetons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Croupier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Plein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01705",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Manque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:32.585Z",
+   "target": "f01701",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jetons or jettons are tokens or coin-like medals produced across Europe from the 13th through the 18th centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jetons” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:32.585Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Plein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Plein”, “Плен”) on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:32.585Z",
+   "target": "f01705",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1 to 18 (low or manqué, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.585Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manque” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:59:11Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Angestellter einer Spielbank, der die Einsätze einzieht, die Gewinne auszahlt und den äußeren Ablauf des Spiels überwacht",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:59:14Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a person who works in a casino (= a place where people risk money in games ) who is responsible for a particular table and whose job is to collect and pay out money",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:59:16Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Croupier m. ‘Assistent einer Spielbank, Spielleiter am Rouletttisch’, Übernahme (18. Jh.) von gleichbed. frz. croupier",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:00:24Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Plein, engl. full number: Man setzt auf eine der 37 Zahlen, die Auszahlungsquote beträgt 35 : 1.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:00:25Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Can be placed as either finales en plein (single number) or finales a cheval (either of two numbers).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:00:27Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Straight (En Plein) 1 number 35:1",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Angestellter einer Spielbank, der die Einsätze einzieht, die Gewinne auszahlt und den äußeren Ablauf des Spiels überwacht",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Croupier m. ‘Assistent einer Spielbank, Spielleiter am Rouletttisch’, Übernahme (18. Jh.) von gleichbed. frz. croupier",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Can be placed as either finales en plein (single number) or finales a cheval (either of two numbers).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Straight (En Plein) 1 number 35:1",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s10"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Croupier ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Croupier” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "CROUPIER | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Croupier” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Croupier – Schreibung, Definition, Bedeutung, Etymologie, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Croupier” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "This can be played as orphelins en cheval, costing five chips as four splits and a straight bet on 1, or as orphelins en plein, costing eight chips as straight bets on each number",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Plein” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:52.730Z",
+   "target": "f01704",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Straight (En Plein) 1 number 35:1 High",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:52.730Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Plein” is on the snapshot of s10"
+  }
+ ]
+}

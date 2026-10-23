@@ -1,0 +1,517 @@
+{
+ "article": "a1536",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/John_Boyd_Dunlop",
+   "title": "John Boyd Dunlop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:48.078Z",
+   "snapshot": "7d7698e5ccfcf957fec389ae972cdbd61c942732a9618591528e1ecd0d7bf76d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Goodyear",
+   "title": "Charles Goodyear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:03.119Z",
+   "snapshot": "5c40005a7d444f4424209af53c87fde40ae02e10b725eb263f7b78081456414b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Drais",
+   "title": "Karl Drais – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:44.090Z",
+   "snapshot": "331609c08de79ed65645b16a39cf737476cde6b0ecba581ea65c33d394c0079c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Benz",
+   "title": "Carl Benz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:50.060Z",
+   "snapshot": "cd4a639d510279f9eb22e289d1b26507a8bfc9feca186afe4716798ea904d11c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nils_Bohlin",
+   "title": "Nils Bohlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:59.853Z",
+   "snapshot": "e488c9c13ce09faf07ba3f9b6aaa7c5f28d6f14cb8104fc0228bae349ef96c59"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Seat_belt",
+   "title": "Seat belt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:00.962Z",
+   "snapshot": "4800a247257866eec32d3115c09215380d26473afff22201c3668d4b31e8ff40"
+  },
+  "s7": {
+   "url": "https://lemelson.mit.edu/resources/nils-bohlin",
+   "title": "Nils Bohlin | Lemelson-MIT",
+   "publisher": "Lemelson-MIT Program, Massachusetts Institute of Technology",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:28.238Z",
+   "snapshot": "cbb466ee399503af5b2252f9415d9377e8270e86d9010c9f4c7233811118d004"
+  },
+  "s8": {
+   "url": "https://patents.google.com/patent/US3043625A/en",
+   "title": "US3043625A – Safety belt – Google Patents",
+   "publisher": "United States Patent Office (via Google Patents)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:28.144Z",
+   "snapshot": "6089e124ac59a1302cef1fb2e9611ccc9e1f2690c38d8eda765a2490c3e7b6dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "John Boyd Dunlop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Goodyear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl Drais",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carl Benz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nils Bohlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Volvo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-097"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:40.557Z",
+   "target": "f07676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "John Boyd Dunlop (5 February 1840 – 23 October 1921) was a Scottish inventor and veterinary surgeon who spent most of his career in Ireland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Boyd Dunlop” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:40.557Z",
+   "target": "f07677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Goodyear (December 29, 1800 – July 1, 1860) was an American self-taught chemist and manufacturing engineer who developed vulcanized rubber, for which he received patent number 3633 from the United States Patent Office on June 15, 1844.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Goodyear” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:40.557Z",
+   "target": "f07678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Drais's undoing had been the fact that he had publicly renounced his noble title in 1848, and adopted the name \"Citizen Karl Drais\" as a tribute to the French Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Drais” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:40.557Z",
+   "target": "f07679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carl Benz was born Karl Friedrich Michael Vaillant on 25 November 1844 in Mühlburg, Grand-Duchy of Baden, today a part of Karlsruhe, Baden-Württemberg, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Benz” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:40.557Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Three-point seatbelt inventor Nils Bohlin born\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nils Bohlin” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:40.557Z",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Their work was presented to Swedish manufacturer Volvo in the late 1950s, and set the standard for seat belts in Swedish cars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:40.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volvo” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:36:01Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was a Swedish mechanical engineer and inventor who invented the three-point safety belt while working at Volvo .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:36:02Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nils Ivar Bohlin, creator of the three-point lap/shoulder automobile seatbelt, was born on July 17, 1920 in Harnosand, Sweden.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:36:04Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "SAFETY BELT Nils Ivar Bohlin, Goteborg, Sweden, assignor to Aktiebolaget Volvo, Goteborg, Sweden, a corporation of Sweden Filed Aug. 17, 1959",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:36:06Z",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The three-point seat belt was developed to its modern form by Swedish inventor Nils Bohlin for Volvo, which introduced it in 1959 as standard equipment.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:36:08Z",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1959, Volvo became the first automaker to introduce Bohlin’s three-point safety belt design.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:26.948Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nils Ivar Bohlin, creator of the three-point lap/shoulder automobile seatbelt, was born on July 17, 1920 in Harnosand, Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:26.948Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "SAFETY BELT Nils Ivar Bohlin, Goteborg, Sweden, assignor to Aktiebolaget Volvo, Goteborg, Sweden, a corporation of Sweden Filed Aug. 17, 1959",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:26.948Z",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The three-point seat belt was developed to its modern form by Swedish inventor Nils Bohlin for Volvo, which introduced it in 1959 as standard equipment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:26.948Z",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1959, Volvo became the first automaker to introduce Bohlin’s three-point safety belt design.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:26.948Z",
+   "target": "f07680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nils Bohlin | Lemelson",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nils Bohlin” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:26.948Z",
+   "target": "f14374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1958, Bohlin was hired as a safety engineer for AB Volvo in Gothenburg, Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:26.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Volvo” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+ "article": "a1304",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/French_Wars_of_Religion",
+   "title": "French Wars of Religion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:32.229Z",
+   "snapshot": "83fefe44d9c37b83f823c10ec1eedef71906da6158d96b55c3c0b202f7e1b850"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Waldensians",
+   "title": "Waldensians – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:33.517Z",
+   "snapshot": "12e19861750b7401bd3fadddec2085286d147863cbbf1403ad945c0996030c67"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jan_Hus",
+   "title": "Jan Hus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:34.312Z",
+   "snapshot": "eada7a7745677c7728fa578a6c0888823a98dd467eaf890c3051164ed3b10b0a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Puritans",
+   "title": "Puritans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:35.403Z",
+   "snapshot": "bd6ca029949f21131362b7fc66c6d0edcc61f831f42b1778eebdb9f9e6f8156f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Huguenots",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:36.382Z",
+   "snapshot": "092bf666fdca4ca97556e12ff2907fd1ba64679dd82aa5cb571995f0b35fc81d"
+  },
+  "s6": {
+   "url": "https://www.treccani.it/enciclopedia/valdesi/",
+   "title": "Valdési – Enciclopedia Treccani",
+   "publisher": "Istituto della Enciclopedia Italiana (Treccani)",
+   "kind": "encyclopedia",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:39:18.697Z",
+   "snapshot": "54562fd131b4616ba69a0e29993faa512ddff4683fd98d41212fe0ab8d7d63a5"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/waldenses",
+   "title": "WALDENSES Definition & Meaning – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:19.349Z",
+   "snapshot": "b29759ad9e59926ef98f39147380f6934ee90833c43e408b39493bfd60382141"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Huguenots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Waldensians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hussites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Puritans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:03.479Z",
+   "target": "f06516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The French Wars of Religion (French: Guerres de Religion en France) were a series of civil wars between French Catholics and Protestants (called Huguenots) from 1562 to 1598.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Huguenots” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:03.479Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Waldensians, also known as Waldenses (), Vallenses, Valdesi, or Vaudois, are adherents of a church tradition that began as an ascetic movement within Western Christianity before the Reformation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Waldensians” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:03.479Z",
+   "target": "f06518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After Hus was executed, the followers of his religious teachings (known as Hussites) refused to elect another Catholic monarch and defeated five consecutive papal crusades between 1420 and 1431 in what became known as the Hussite Wars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hussites” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:03.479Z",
+   "target": "f06519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Puritans were English Protestants of the reformed theology in the 16th and 17th centuries who sought to rid the Church of England of what they considered to be Roman Catholic practices, maintaining that the Church of England had not been fully reformed and should become more Protestant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Puritans” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:01:32Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Appartenenti al movimento di rinnovamento religioso nato nel 12° sec. dalla predicazione di Valdo o Valdesio.",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:01:34Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "riuscirono a sopravvivere come comunità religiosa in alcune vallate del Piemonte",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:36Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the members of a Christian sect that arose after 1170 in southern France under the leadership of Pierre Waldo, a merchant of Lyons",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:01:38Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Congregations continue to be active in Europe (particularly in the Piedmont region of Northern Italy)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:46.625Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "riuscirono a sopravvivere come comunità religiosa in alcune vallate del Piemonte",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:46.625Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the members of a Christian sect that arose after 1170 in southern France under the leadership of Pierre Waldo, a merchant of Lyons",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:46.625Z",
+   "target": "f06517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Congregations continue to be active in Europe (particularly in the Piedmont region of Northern Italy)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.625Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  }
+ ]
+}

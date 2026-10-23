@@ -1,0 +1,303 @@
+{
+ "article": "a2396",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Cecil_Rhodes",
+   "title": "Cecil Rhodes",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:39.487Z",
+   "snapshot": "0049412eb3ba4fabec8da324ca7f63cfbc6ceabff2f3ba8dfe9e0a8d7d6c8a77"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Rhodesien",
+   "title": "Rhodesien",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:40.505Z",
+   "snapshot": "4ab76bccfbc5d1422c8622b48d105bbb202b8441a024608de0966d615cfecee0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/De_Beers",
+   "title": "De Beers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:43.287Z",
+   "snapshot": "1015727c370205960fad7a42e4a3e2fb2d5202bd145e9fd776e6f77dc05ffeff"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cecil_Rhodes",
+   "title": "Cecil Rhodes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:44.391Z",
+   "snapshot": "efb14618c98626e4d0ccef2156139da4fb8d1c8584825310390c0e54be25cb65"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Unilateral_Declaration_of_Independence_(Rhodesia)",
+   "title": "Unilateral Declaration of Independence (Rhodesia) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:45.443Z",
+   "snapshot": "86185869b17e015741270a648d5019bf4d4996e6ebec6e5b9584a0eecd38f1ca"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Northern_Rhodesia",
+   "title": "Northern Rhodesia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:46.209Z",
+   "snapshot": "134e55ebba623940fc60edf0ed073c98a51123dc1bddef6b2da1e439a0452a0c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Rhodesia_(name)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:47.183Z",
+   "snapshot": "cc40611dc5044df6043472be77e3366055ef5252ceb1a82030c6bb33bcaac234"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Rhodesian_Bush_War",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:48.627Z",
+   "snapshot": "da1099d889c1ee51b74994b877366c33010f3d10da35300582e921ba619002f1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cecil Rhodes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-023"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhodesien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-237"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "De Beers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cape Colony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ian Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zambia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:13.447Z",
+   "target": "f12529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cecil Rhodes war ein Sohn des anglikanischen Pfarrers Francis William Rhodes und dessen Frau Louisa, geborene Peacock.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.447Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cecil Rhodes” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:13.447Z",
+   "target": "f12530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhodesien war die Bezeichnung des Gebietes der ehemaligen britischen Kolonie Südrhodesien, der heutigen Republik Simbabwe im Süden Afrikas, nachdem das Protektorat Nordrhodesien am 24.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.447Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhodesien” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:13.447Z",
+   "target": "f12531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "De Beers Group is a British multinational diamond company that specialises in the mining, trading and marketing of diamonds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.447Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “De Beers” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:13.447Z",
+   "target": "f12532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cecil John Rhodes ( SES-əl ROHDZ; 5 July 1853 – 26 March 1902) was a British mining magnate and politician in southern Africa who served as Prime Minister of the Cape Colony from 1890 to 1896.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.447Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cape Colony” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:13.447Z",
+   "target": "f12533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A stalemate developed between the British and Rhodesian prime ministers, Harold Wilson and Ian Smith respectively, between 1964 and 1965.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.447Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ian Smith” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:13.447Z",
+   "target": "f12534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Northern Rhodesia was a British protectorate in Southern Africa, now the independent country of Zambia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.447Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zambia” is on the snapshot of s6"
+  }
+ ]
+}

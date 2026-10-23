@@ -1,0 +1,241 @@
+{
+ "article": "a0472",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Supernatural_(American_TV_series)",
+   "title": "Supernatural (American TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:41.028Z",
+   "snapshot": "0a5f21fdf50582740654dd406f6c4a4af26c6fe15292e9003a18c929ccb27703"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Chosen_(Buffy_the_Vampire_Slayer)",
+   "title": "Chosen (Buffy the Vampire Slayer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:42.273Z",
+   "snapshot": "6291015f5562d7bb5b75b2914a508d4017fee50533cac16b3499c7d4490f690a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Stranger_Things:_The_First_Shadow",
+   "title": "Stranger Things: The First Shadow – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:42.818Z",
+   "snapshot": "10cd36bdeebe02d5c2ce615f8df75ffeb88ecc15b077805438642ce31e01ed4c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer",
+   "title": "Buffy the Vampire Slayer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:43.894Z",
+   "snapshot": "b15e22a92407406786c877ae13bdbfe45bfdb39df0e31d11110d870b3b77e6dd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Walking_Dead_(TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:23.079Z",
+   "snapshot": "d50708d77ea802a1302625f4333ab99b06bbda5175fa93e6190ae90c92ef8fb0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02356",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Supernatural",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02358",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Buffy the Vampire Slayer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02359",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stranger Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chevrolet Impala",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Joss Whedon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:53.809Z",
+   "target": "f02356",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Supernatural is an American dark fantasy television series created by Eric Kripke.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Supernatural” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:53.809Z",
+   "target": "f02358",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Chosen\" is the series finale of the American television series Buffy the Vampire Slayer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buffy the Vampire Slayer” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:53.809Z",
+   "target": "f02359",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stranger Things: The First Shadow is a play written by Kate Trefry from an original story by the Duffer Brothers, Jack Thorne, and Trefry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stranger Things” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:53.809Z",
+   "target": "f21280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sam and Dean travel around the US in a 1967 Chevrolet Impala, which they consider their \"real home\", where they share personal struggles, bicker, and exchange banter such as \"bitch\" and \"jerk\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chevrolet Impala” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:53.809Z",
+   "target": "f21281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Buffy the Vampire Slayer is an American supernatural horror drama television series created by Joss Whedon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joss Whedon” is on the snapshot of s4"
+  }
+ ]
+}

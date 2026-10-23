@@ -1,0 +1,442 @@
+{
+ "article": "a1832",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pythagoras",
+   "title": "Pythagoras – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:01.363Z",
+   "snapshot": "8d167fffe3c56c09cc65195a3d05424f2b0a80b1aa0691a309fd6f33c6ec8e06"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Republic_(Plato)",
+   "title": "Republic (Plato) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:11.330Z",
+   "snapshot": "3c4baf88504a46760a2c4ebc0ea650666b353a04a4421423434015fc44ef9f13"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gospel_of_John",
+   "title": "Gospel of John – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:51.333Z",
+   "snapshot": "a2a3f65d9e3adf557e2c239afbf98d63303f2d7bfd65a6cb77063e98deabf07c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aristotle",
+   "title": "Aristotle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:41.977Z",
+   "snapshot": "84b96866df751bc7bcf8c0df2411a04dd3c0f8506f1e2857a2330519329d3f9d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Revelation",
+   "title": "Book of Revelation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:09.374Z",
+   "snapshot": "ac14f01cfe1c330b6c13575655fde8669ea6b15112d0eac7b167a52fe0eb10b1"
+  },
+  "s6": {
+   "url": "https://www.newadvent.org/cathen/14580a.htm",
+   "title": "Dogmatic Theology – Catholic Encyclopedia",
+   "publisher": "New Advent (Catholic Encyclopedia, 1912)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:48.468Z",
+   "snapshot": "d22ea57fe3bb9c49a1556c35aca780e2cad0e63409a094f71243fe5ff2766035"
+  },
+  "s7": {
+   "url": "https://lsj.gr/wiki/%CE%B8%CE%B5%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1",
+   "title": "θεολογία – LSJ",
+   "publisher": "LSJ.GR",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:48.187Z",
+   "snapshot": "c496efa234d636cea0e94b104fbc0a0ebe74b0ee1be5ad68e9cd33cea19b0f3b"
+  },
+  "s8": {
+   "url": "https://www.vocabulary.com/dictionary/theology",
+   "title": "Theology – Dictionary",
+   "publisher": "Vocabulary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:48.877Z",
+   "snapshot": "3128020124357c1e67e423620d68137431eb11632fdb219bfa126ef7e9e14aed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Philosophy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Theology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Logos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eudaimonia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Apocalypse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:29.522Z",
+   "target": "f09156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "His political and religious teachings were well known in Magna Graecia and influenced the philosophies of Plato, Aristotle, and, through them, Western philosophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philosophy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:29.522Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Theology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Theology”, “Theologie”, “Теология”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:29.522Z",
+   "target": "f09158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It contains the clearest identifications of Jesus with the God of Israel in the Christian texts, with Jesus in the form of the Logos being paralleled in Greek philosophy and Targumic concepts of the divine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Logos” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:29.522Z",
+   "target": "f09159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aristotle identified such an optimum activity (the virtuous mean, between the accompanying vices of excess or deficiency) of the soul as the aim of all human deliberate action, eudaimonia, generally translated as \"happiness\" or sometimes \"well-being\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eudaimonia” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:29.522Z",
+   "target": "f09160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Book of Revelation, also known as the Book of the Apocalypse or the Apocalypse of John, is canonically the last book of the New Testament.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apocalypse” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:46:44Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Considered etymologically, theology (Gr. Theologia, i.e. peri Theou logos) means objectively the science treating of God",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:46:48Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A theology, science of things divine, Pl.R. 379a",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:46:53Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The first half of theology is theo-, which means god in Greek.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:18.553Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Considered etymologically, theology (Gr. Theologia, i.e. peri Theou logos) means objectively the science treating of God",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:18.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:18.553Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A theology, science of things divine, Pl.R. 379a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:18.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:18.553Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The first half of theology is theo-, which means god in Greek.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:18.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:18.553Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "CATHOLIC ENCYCLOPEDIA: Dogmatic Theology",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:18.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Theology” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:18.553Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A theology, science of things divine, Pl.R.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:18.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Theology” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:18.553Z",
+   "target": "f09157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Theology - Definition, Meaning & Synonyms | Vocabulary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:18.553Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Theology” is on the snapshot of s8"
+  }
+ ]
+}

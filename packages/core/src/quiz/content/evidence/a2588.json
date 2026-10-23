@@ -1,0 +1,457 @@
+{
+ "article": "a2588",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Joachim_L%C3%B6w",
+   "title": "Joachim Löw",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:07:34.604Z",
+   "snapshot": "896463a5acdcfa8d4d210682835250d5402953f55f80ff0bf8278d6ce74b3bfd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alexandru_Maxim",
+   "title": "Alexandru Maxim",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:33.457Z",
+   "snapshot": "ada8c16ed4b0c7e29529006ece272b93a8c224988022384641896e57b11e03ea"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/VfB_Stuttgart",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:07:35.764Z",
+   "snapshot": "320b2e76141ff0c6c5a94ebcd52dc10b71ec86d3ce9d74ceb19947b38dadd258"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/DFB-Pokal_1996/97",
+   "title": "DFB-Pokal 1996/97 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:07:36.351Z",
+   "snapshot": "09136eaaa8b769457d9ab81d6bc832422acf7eb9b19b15cb901a065324262087"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Krasimir_Balakov",
+   "title": "Krasimir Balakov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:34.853Z",
+   "snapshot": "ab9eda7093a90db50eb67f62f8c078487f41c8388846d82055c5e2d364861d7f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Joachim_L%C3%B6w",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:16.397Z",
+   "snapshot": "d1d2195b726077e0487f8d90aef1175dc5ab5867ad2c5fe3668506b0bdf4540b"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Giovane_%C3%89lber",
+   "title": "Giovane Élber",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:25.285Z",
+   "snapshot": "f991a48f8aa1707df39e4867d32e25c43ee83cdce6cb95d910d6406c3f497e3a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Espanyol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Espanyol Barcelona",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Energie Cottbus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Krassimir Balakov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Armin Veh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "VfB Stuttgart",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "VfB Stuttgart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-220/6, u01: Löw's clubs: VfB Stuttgart (DFB-Pokal 1997), Fenerbahçe, Karlsruhe, Adanaspor, Tirol, Austria Wien – never Bayern Munich. Statement false, answer right."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "VfB Stuttgart",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "VfB Stuttgart",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Trainer war Löw zunächst in der Schweiz tätig, bevor er 1995 beim VfB Stuttgart erst Co-Trainer und anschließend Cheftrainer wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “VfB Stuttgart” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1980, Löw joined VfB Stuttgart in the Bundesliga, but he had difficulties establishing himself in the starting lineup and played only four matches.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “VfB Stuttgart” is on the snapshot of s6"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Maxim recorded his professional debut for the reserve team of Espanyol in 2009, and also had a loan spell at Badalona before returning to Romania with Pandurii Târgu Jiu in 2011.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Espanyol” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Espanyol Barcelona",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Espanyol Barcelona”, “Espanyol”, “Эспаньол”) on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juni 1997 2:0 gegen den damaligen Regionalligisten Energie Cottbus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Energie Cottbus” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Krassimir Balakov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Krassimir Balakov”, “Krassimir Balakow”, “Красимир Балаков”) on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:44.206Z",
+   "target": "f13919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Schwaben verpflichteten daraufhin Armin Veh als neuen Cheftrainer, der zu Beginn vom Aufsichtsratsvorsitzenden Dieter Hundt als Übergangslösung bis zur Sommerpause bezeichnet wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Armin Veh” is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:45:32Z",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The trio were known as the \"magic triangle\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:45:34Z",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "wo er mit Fredi Bobic und Krassimir Balakow das so genannte magische Dreieck bildete",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23",
+   "note": "no non-Wikipedia page could be fetched with the term (web search budget exhausted)"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:28.794Z",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The trio were known as the \"magic triangle\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:28.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:28.794Z",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "wo er mit Fredi Bobic und Krassimir Balakow das so genannte magische Dreieck bildete",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:28.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:28.794Z",
+   "target": "f13918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zur Saison 1994/95 wechselte er zum Bundesligisten VfB Stuttgart, für den er drei Spielzeiten aktiv war und wo er mit Fredi Bobic und Krassimir Balakow das so genannte magische Dreieck bildete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:28.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Krassimir Balakow” is on the snapshot of s7"
+  }
+ ]
+}

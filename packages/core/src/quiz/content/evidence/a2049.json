@@ -1,0 +1,242 @@
+{
+ "article": "a2049",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
+   "title": "COVID-19 pandemic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:16.507Z",
+   "snapshot": "cf58bf7bc4c8c6500e7b11229e94e16ee5054a17dd385eba1536bfadcc84459c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Choleraepidemie_von_1892",
+   "title": "Choleraepidemie von 1892 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:37.710Z",
+   "snapshot": "dc4d0bbfe46ae8ee7ad38040a046c2ac7e7048a994ca620ddfe403c4c1c7edf8"
+  },
+  "s3": {
+   "url": "https://www.voanews.com/a/european-region-first-malaria-free/3293908.html",
+   "title": "WHO: European Region World's First Malaria-Free – VOA",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:13.936Z",
+   "snapshot": "ce146a90d333943078193e3e47c99a19f902f936efb9a2504af1fd1251ea36ef"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Measles",
+   "title": "Measles – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:13.587Z",
+   "snapshot": "d2eaf30baf3e9c4585ddd8ff76b07cd2b084cc756dc5744e2502ed77dad2b735"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Quarantine",
+   "title": "Quarantine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:17.506Z",
+   "snapshot": "e9459f2bd2f19c8fe9316dec2a778a2312d8f99ca360842a1df166473973b3b4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pandemic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Epidemie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Endemic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Incubation period",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Quarantine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:13.518Z",
+   "target": "f10241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The global COVID-19 pandemic (also known as the coronavirus pandemic), caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), began with an outbreak in Wuhan, China, in December 2019.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pandemic” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:13.518Z",
+   "target": "f10242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Epidemie brach während eines heißen Sommers aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epidemie” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:13.518Z",
+   "target": "f10243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The WHO recognizes however, that the European region remains prone of a reappearance of the disease due to importation of cases from areas of the world where malaria is endemic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Endemic” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:13.518Z",
+   "target": "f10244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Symptoms of measles begin after an incubation period of about 10 days after exposure to the measles virus; they comprise fever, cough, runny nose, and conjunctivitis that worsen in severity over 4 days of appearing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Incubation period” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:13.518Z",
+   "target": "f10245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A quarantine is a restriction on the movement of people, animals, and goods which is intended to prevent the spread of disease or pests.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quarantine” is on the snapshot of s5"
+  }
+ ]
+}

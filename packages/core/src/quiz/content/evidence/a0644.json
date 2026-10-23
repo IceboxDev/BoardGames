@@ -1,0 +1,335 @@
+{
+ "article": "a0644",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Clouds",
+   "title": "The Clouds – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:24.267Z",
+   "snapshot": "fa2e8e54d729ad10aba145c8b18a6af06972d3410fd82817b96f1eb3f42b6598"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anaxagoras",
+   "title": "Anaxagoras – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:25.050Z",
+   "snapshot": "407e35c8e391cc595f0e938fa2cd621312e7120a387a7ea73c20c75fe191e0c3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Seneca_the_Younger",
+   "title": "Seneca the Younger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:26.138Z",
+   "snapshot": "c6d68d7cdb557fcfe5d107d05236141ed67f180e22b9d0fb477fcff34cad9e1f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Boethius",
+   "title": "Boethius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:27.167Z",
+   "snapshot": "cf236367ef656e1d7abe762b9f3ab92c5192498252864d98a6331294110fb009"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Giordano_Bruno",
+   "title": "Giordano Bruno – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:28.168Z",
+   "snapshot": "c747072697e30cbfc8a38653edc6e13a050aed3279cb9e0eae9d84f1e1cb4016"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bertrand_Russell",
+   "title": "Bertrand Russell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:29.116Z",
+   "snapshot": "d609791bb229c9aaa2404f486921f191421e4bb1b17bde9ff3c596140bc8a0c8"
+  },
+  "s7": {
+   "url": "https://plato.stanford.edu/entries/russell/",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:27.304Z",
+   "snapshot": "8fd01625c2b5e32b51262bd31956728766c3fef5e1a3171a3c5e0af69da50e97"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Socrates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anaxagoras",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Seneca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Boethius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giordano Bruno",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bertrand Russell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bertrand Russell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f03216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The play also, however, remains notorious for its caricature of Socrates, and is  cited by Plato in the Apology as a contributing factor to the philosopher's trial and execution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Socrates” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f03217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anaxagoras (; Ancient Greek: Ἀναξαγόρας, Anaxagóras; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anaxagoras” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f03218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lucius Annaeus Seneca the Younger ( SEN-ik-ə; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seneca” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f03219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anicius Manlius Severinus Boethius, commonly known simply as Boethius (; Latin: Boetius; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boethius” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f03220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giordano Bruno ( jor-DAH-noh BROO-noh; Italian: [dʒorˈdaːno ˈbruːno]; Latin: Iordanus Brunus Nolanus; born Filippo Bruno; February 1548 – 17 February 1600) was an Italian philosopher, Dominican friar and priest, poet, alchemist, astronomer, cosmological theorist, and esotericist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giordano Bruno” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f28412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Despite her religious conservatism, she held progressive views in other areas (accepting Darwinism and supporting Irish Home Rule), and her influence on Bertrand Russell's outlook on social justice and standing up for principle remained with him throughout his life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertrand Russell” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:19.792Z",
+   "target": "f28412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bertrand Russell (Stanford Encyclopedia of Philosophy)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:19.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertrand Russell” is on the snapshot of s7"
+  }
+ ]
+}

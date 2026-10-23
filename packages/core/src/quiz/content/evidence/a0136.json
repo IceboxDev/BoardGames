@@ -1,0 +1,490 @@
+{
+ "article": "a0136",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Life_Is_Beautiful",
+   "title": "Life Is Beautiful – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:12.309Z",
+   "snapshot": "51261d3bdb72954ddd0ccc98e5df1db681c6060eb18bcfe39e1998385042cf0c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jack_Palance",
+   "title": "Jack Palance – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:13.212Z",
+   "snapshot": "173a55d4056049627a4583ee3d25896c19409e6c0cbb9574e1806c51ff04b26c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Pianist_(memoir)",
+   "title": "The Pianist (memoir) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:14.238Z",
+   "snapshot": "e0b0104ee83f172af671d4fc3fd5552b546186cb788d7bc875119bbd168c8573"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/69th_Academy_Awards",
+   "title": "69th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:15.202Z",
+   "snapshot": "38735c04e7c91765f032a59b3a6ae2037d111738029c6329ace7dfb9f03a7ca3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/74th_Academy_Awards",
+   "title": "74th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:16.284Z",
+   "snapshot": "cdd3156dee1e6a3bf115e71b603b1ca4e14090fe64021c74b8fc7717ff59b700"
+  },
+  "s6": {
+   "url": "https://gulfnews.com/entertainment/jennifer-lawrence-falls-over-at-the-oscars-1.1150751",
+   "title": "Jennifer Lawrence falls over at the Oscars",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:13.904Z",
+   "snapshot": "7d96f0b264d81040f7d7e68af5c7543ece5075c49c67fa6b337f65c8c0a05ecf"
+  },
+  "s7": {
+   "url": "https://www.oscars.org/oscars/ceremonies/2002",
+   "title": "The 74th Academy Awards | 2002",
+   "publisher": "Academy of Motion Picture Arts and Sciences",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:07.158Z",
+   "snapshot": "91ed27d344e99b8103d4f6df73a2dfc93df6a99a17ba8ddf1a1a441c580138a1"
+  },
+  "s8": {
+   "url": "https://www.foxnews.com/story/halle-berry-denzel-washington-win-big",
+   "title": "Halle Berry, Denzel Washington Win Big",
+   "publisher": "Fox News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:07.813Z",
+   "snapshot": "4fcbaccf743861cde72cddb515affbafe1ce6e7a684e0216794f53b44086d596"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Halle_Berry",
+   "title": "Halle Berry – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:07.626Z",
+   "snapshot": "57e42e3b9feaebed34b1660b419da9b7e0f24b8c85f19c80ca6b1aeab2216857"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Life Is Beautiful",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "City Slickers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Pianist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jerry Maguire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Monster's Ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jennifer Lawrence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-361"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:57.942Z",
+   "target": "f00676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Life Is Beautiful (Italian: La vita è bella, pronounced [la ˈviːta ˌɛ bˈbɛlla]) is a 1997 Italian period comedy-drama film directed by and starring Roberto Benigni, who co-wrote the film with Vincenzo Cerami.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Life Is Beautiful” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:57.942Z",
+   "target": "f00677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He was nominated for three Academy Awards, all for Best Actor in a Supporting Role, for his roles in Sudden Fear (1952) and Shane (1953), and winning almost 40 years later for City Slickers (1991).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “City Slickers” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:57.942Z",
+   "target": "f00678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Pianist, originally published as Śmierć Miasta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Pianist” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:57.942Z",
+   "target": "f00679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Other winners included Fargo with two awards and Breathing Lessons: The Life and Work of Mark O'Brien, Dear Diary, Emma, Evita, The Ghost and the Darkness, Independence Day, Jerry Maguire, Kolya, The Nutty Professor, Quest, Shine, Sling Blade, and When We Were Kings with one.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jerry Maguire” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:57.942Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with two, and The Accountant, For the Birds, Gosford Park, Iris, Monster's Ball, Monsters, Inc., Murder on a Sunday Morning, No Man's Land, Pearl Harbor, Shrek, Thoth, and Training Day with one.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monster's Ball” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:57.942Z",
+   "target": "f14494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jennifer Lawrence falls over at the Oscars",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.942Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jennifer Lawrence” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:35:54Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Actress in a Leading Role Winner Halle Berry Monster's Ball",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:35:55Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Halle Berry became the first African American woman to win an Academy Award for best actress for her part in Monster's Ball",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:35:57Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "She became the first African-American woman to win the Academy Award for Best Actress.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:16.468Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Actress in a Leading Role Winner Halle Berry Monster's Ball",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:16.468Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Halle Berry became the first African American woman to win an Academy Award for best actress for her part in Monster's Ball",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:16.468Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "She became the first African-American woman to win the Academy Award for Best Actress.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:16.468Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Best Actress winner for Monster's Ball and Best Actor winner for Training Day",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Monster's Ball” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:16.468Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Halle Berry became the first African American woman to win an Academy Award for best actress for her part in Monster's Ball — and Denzel Washington became the second African American man to win for a leading role for his portrayal of a bad cop in Training Day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Monster's Ball” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:16.468Z",
+   "target": "f00680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Berry won the Academy Award for Best Actress for her portrayal of a struggling widow in the romantic drama Monster's Ball (2001).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.468Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Monster's Ball” is on the snapshot of s9"
+  }
+ ]
+}

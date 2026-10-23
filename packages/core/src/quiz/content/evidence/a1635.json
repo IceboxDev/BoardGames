@@ -1,0 +1,320 @@
+{
+ "article": "a1635",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Amedeo_Modigliani",
+   "title": "Amedeo Modigliani – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:56.355Z",
+   "snapshot": "91ed39e6f4cb8b1e347be2ad815acc9701be29698eac716b2f8bcebfbce2d47b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+   "title": "Vincent van Gogh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:48.506Z",
+   "snapshot": "f1ce872a000b8e7a37aa79954094c7acfa4b38f16c6f18363a2c92aebfe62bae"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Vincent_van_Gogh",
+   "title": "Vincent van Gogh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:53.775Z",
+   "snapshot": "678945a4917355e633a49ae7740a18adb824811de10a71ab37de23879d448f25"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+   "title": "Guernica (Picasso) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:17.994Z",
+   "snapshot": "7bf071052fd019a2be92424df0f296ca7875ee22806f5115ea171f949eb9cb2b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gustav_Klimt",
+   "title": "Gustav Klimt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:57.323Z",
+   "snapshot": "971661e16e4f4e4904d23114cdf0ffeab51759d8d051f71cd0bd748efa8ceefe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amedeo Modigliani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vincent van Gogh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vincent van Gogh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-224"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pablo Picasso",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gustav Klimt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paul Gauguin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-032"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gabrielle Berlatier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-045"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f08171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amedeo Modigliani was the fourth child, whose birth coincided with the disastrous financial collapse of his father's business interests.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amedeo Modigliani” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f08172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "even though the populace has not crowded to a magnificent funeral, and poor Vincent van Gogh, whose demise means the extinction of a beautiful flame of genius, has gone to his death as obscure and neglected as he lived.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vincent van Gogh” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f08172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vincent van Gogh führte – vor allem mit seinem Bruder Theo van Gogh, dem Händler seiner Bilder – einen umfangreichen Briefwechsel, der eine Fülle von Hinweisen auf sein malerisches Werk enthält und selbst von literarischem Rang ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vincent van Gogh” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f08173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Guernica is a large 1937 oil painting by Spanish artist Pablo Picasso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pablo Picasso” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f08174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gustav Klimt (14 July 1862 – 6 February 1918) was an Austrian symbolist painter and a founding member of the Vienna Secession movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gustav Klimt” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f14438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Theo protegierte sehr zum Leidwesen seiner Chefs aufstrebende junge Maler der Avantgarde (zum Beispiel den Impressionisten Claude Monet, aber auch Paul Gauguin) und kaufte ihnen Bilder ab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Gauguin” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:55.354Z",
+   "target": "f25220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Van Gogh researcher and art historian Bernadette Murphy discovered the true identity of the woman named Gabrielle Berlatier, who died in Arles at the age of 80 in 1952, and whose descendants still lived (as of 2020) just outside Arles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gabrielle Berlatier” is on the snapshot of s2"
+  }
+ ]
+}

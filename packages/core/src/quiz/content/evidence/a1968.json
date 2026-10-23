@@ -1,0 +1,242 @@
+{
+ "article": "a1968",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island",
+   "title": "The Secret of Monkey Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:45.715Z",
+   "snapshot": "75c6708835d7ab1f5eff1c0213d0e4d8de52e19203d60fa483627af8e0317165"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Day_of_the_Tentacle",
+   "title": "Day of the Tentacle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:46.755Z",
+   "snapshot": "2f9cfb164a569456bc56cc2997505a295f451b17cc3a6ed74b98bbe54614f6a6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Fate_of_Atlantis",
+   "title": "Indiana Jones and the Fate of Atlantis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:47.747Z",
+   "snapshot": "43cddbf9988370e3355758fc64b8dbbcae1d4805c6b1df9333385ae7a44f4b02"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sam_%26_Max_Hit_the_Road",
+   "title": "Sam & Max Hit the Road – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:48.719Z",
+   "snapshot": "c818fcb08f059d7ea0de5d4f10278acb214a6075a5fe84c95568948f1fc26be1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Grim_Fandango",
+   "title": "Grim Fandango – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:48.382Z",
+   "snapshot": "1dbad771de786dbd304d809641145eb1a93365287e7fb3006a4e957682283440"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Secret of Monkey Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Day of the Tentacle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Indiana Jones and the Fate of Atlantis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sam & Max Hit the Road",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grim Fandango",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:36:57.148Z",
+   "target": "f09836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Secret of Monkey Island is a 1990 point-and-click graphic adventure game developed and published by Lucasfilm Games.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Secret of Monkey Island” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:36:57.148Z",
+   "target": "f09837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Day of the Tentacle, also known as Maniac Mansion II: Day of the Tentacle, is a 1993 graphic adventure game developed and published by LucasArts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Day of the Tentacle” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:36:57.148Z",
+   "target": "f09838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Indiana Jones and the Fate of Atlantis is a point-and-click adventure game developed and published by LucasArts and released in June 1992 for Amiga, DOS, and Macintosh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Indiana Jones and the Fate of Atlantis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:36:57.148Z",
+   "target": "f09839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sam & Max Hit the Road is a 1993 graphic adventure video game released by LucasArts during the company's adventure games era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sam & Max Hit the Road” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:36:57.148Z",
+   "target": "f09840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grim Fandango is a 1998 adventure game directed by Tim Schafer and developed and published by LucasArts for Microsoft Windows.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:36:57.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grim Fandango” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,295 @@
+{
+ "article": "a2054",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Mann",
+   "title": "Thomas Mann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:13.384Z",
+   "snapshot": "10ed38707a0deb26f85c96b40ab0f946a5d95873efe72c3a7aa253aed7be5871"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Thomas_Mann",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:38:32.681Z",
+   "snapshot": "f14a205ad6c4764ae2e4f45ed035552670bacbf5f91fdc9b35a2d70407c3cd39"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Heinrich_Mann",
+   "title": "Heinrich Mann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:26.363Z",
+   "snapshot": "d2f697e3f279254df0d309aa953d2b3a5dc45a0eab603123cd1545d653b164ca"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Mephisto_(Roman)",
+   "title": "Mephisto (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:24:48.828Z",
+   "snapshot": "8cf31d00eb84a6640351d171a41e09cc425dc6c9b98a75f06399e5d5cf9221d0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Frank_Wedekind",
+   "title": "Frank Wedekind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:27.304Z",
+   "snapshot": "f23e00141eddad97fca754756154bb0315ddd76b6060b11ea00df3fd4bae71e5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bertolt_Brecht",
+   "title": "Bertolt Brecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:05.248Z",
+   "snapshot": "28d5fe309471386778d6df924b89ea26ba8920341ebefe2df74df6f7c9f133ea"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Mann_(Literaturwissenschaftler)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:28.512Z",
+   "snapshot": "fb916f771f24c56846df13e7e6dc0eac06186cd7b74898d88913d84b015ba038"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thomas Mann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Mann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heinrich Mann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Klaus Mann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frank Wedekind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:14.504Z",
+   "target": "f10266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paul Thomas Mann (6 June 1875 – 12 August 1955) was a German novelist, short story writer, social critic, philanthropist, essayist, and the 1929 Nobel Prize in Literature laureate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Mann” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:14.504Z",
+   "target": "f10266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Mann entstammte der angesehenen Lübecker Patrizier- und Kaufmannsfamilie Mann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Mann” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:14.504Z",
+   "target": "f10267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luiz Heinrich Mann (German: [ˈhaɪnʁɪç ˈman] ; March 27, 1871 – March 11, 1950), best known as simply Heinrich Mann, was a German-American writer known for his sociopolitical novels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Mann” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:14.504Z",
+   "target": "f10268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mephisto – Roman einer Karriere ist der sechste Roman des Schriftstellers Klaus Mann, der 1936 im Exilverlag Querido in Amsterdam erschienen ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klaus Mann” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:14.504Z",
+   "target": "f10269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Introduction to Frank Wedekind: Four Major Plays, Vol 1.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank Wedekind” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:14.504Z",
+   "target": "f10270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugen Berthold Friedrich Brecht (10 February 1898 – 14 August 1956), known as Bertolt Brecht and Bert Brecht, was a German theatre practitioner, playwright, and poet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s6"
+  }
+ ]
+}

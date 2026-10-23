@@ -1,0 +1,383 @@
+{
+ "article": "a1608",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Trabant",
+   "title": "Trabant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:38.086Z",
+   "snapshot": "90c432c8c8a12456ecf4ef22650c8d962a5cd7bc1c923ca0a87dda7487383086"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Volkswagen_Golf",
+   "title": "Volkswagen Golf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:39.100Z",
+   "snapshot": "2c92e87b832627cf02f78207bed6b7f58cb1cf2c33c4588488b1d94aea9a8323"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Volkswagen_Passat",
+   "title": "Volkswagen Passat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:40.067Z",
+   "snapshot": "7fd8678683a27130f0022f9c4ef57bb821a194d05ed1583d94b8e151196717de"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Volkswagen_Polo",
+   "title": "Volkswagen Polo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:41.018Z",
+   "snapshot": "5b233df52f4d05e7146a1acd690c97c99966949ca4ddf21b5cb6416266835cba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wartburg",
+   "title": "Wartburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:42.086Z",
+   "snapshot": "c055992073d97979f3bfa4ddab1f9dcf3844d74a58c6e90998c6e41a899a8e33"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wartburg_353",
+   "title": "Wartburg 353 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:39.352Z",
+   "snapshot": "0607fb4bb62e03591deab1cb7419a117f4d954b4e8f0b10132091d95134b4fe3"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Goggomobil",
+   "title": "Goggomobil",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:40.254Z",
+   "snapshot": "40dc27fa342422ef1fc1bf61c8c3b2fb2bcb933aff8d6e1a2964d07969cc6ee5"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Gran_Turismo",
+   "title": "Gran Turismo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:41.286Z",
+   "snapshot": "9d17ee1e93dde820248571e80da600877d7381b56b3ef123b424f6630eaf0cd9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Trabant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Golf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Passat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Polo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wartburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wartburg Knight",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-062"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Goggomobil",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-091"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Gran Turismo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-329"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f08036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Trabant (German: [tʁaˈbant] ) is a series of small cars produced from 1957 until 1991 by former East German car manufacturer VEB Sachsenring Automobilwerke Zwickau.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trabant” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f08037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Volkswagen Golf () is a compact car/small family car (C-segment) produced by the German automotive manufacturer Volkswagen since 1974, marketed worldwide across eight generations, in various body configurations and under various nameplates – including as the Volkswagen Rabbit in the United",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golf” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f08038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Volkswagen Passat is a nameplate of large family cars (D-segment) manufactured and marketed by the German automobile manufacturer Volkswagen since 1973 and also marketed variously as the Dasher, Santana, Quantum, Magotan, Corsar and Carat — in saloon, estate, and hatchback body styles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Passat” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f08039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Volkswagen Polo is a supermini car (B-segment) produced by the German car manufacturer Volkswagen since 1975.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polo” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f08040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Wartburg (German pronunciation: [ˈvaʁtbʊʁk])  is a castle originally built in the Middle Ages.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wartburg” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f14371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Als Rechtslenkerausführung wurde das Fahrzeug in Großbritannien unter der Bezeichnung Wartburg Knight (zu deutsch: „Wartburg-Ritter“) vermarktet, bis er später wegen des nicht mehr zeitgemäßen Zweitaktmotors nicht mehr importiert werden durfte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wartburg Knight” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f14372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das Goggomobil (kurz: Goggo) ist ein Kleinstwagen der Hans Glas GmbH in Dingolfing, der von 1955 bis 1969 in verschiedenen Versionen hergestellt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Goggomobil” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:50.397Z",
+   "target": "f14373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Gran Turismo (italienisch granturismo oder gran turismo), englisch grand touring, französisch grand tourisme, kurz GT und frei übersetzt „große Tour“ (vgl.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:50.397Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gran Turismo” is on the snapshot of s8"
+  }
+ ]
+}

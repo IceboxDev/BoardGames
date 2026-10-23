@@ -1,0 +1,281 @@
+{
+ "article": "a1379",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/J%C3%A4gersprache",
+   "title": "Jägersprache – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:53.955Z",
+   "snapshot": "d3c9dc16f8b726574882276edd7acc925f1c1c263723957179a3d731ebe8bd7f"
+  },
+  "s2": {
+   "url": "https://www.dwds.de/wb/dwb/L%C3%B6ffel",
+   "title": "löffel – Deutsches Wörterbuch von Jacob und Wilhelm Grimm (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:54.181Z",
+   "snapshot": "7c7a899f0560964847a688b0d645b057599a4f75198208ad7c2334f05c37fa71"
+  },
+  "s3": {
+   "url": "https://www.dwds.de/wb/dwb/Licht",
+   "title": "licht – Deutsches Wörterbuch von Jacob und Wilhelm Grimm (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:55.193Z",
+   "snapshot": "c84527866a9b5eaab3d08c62903a8b987f8f309da7012e12214f1f3d72d0fd36"
+  },
+  "s4": {
+   "url": "https://www.dwds.de/wb/Schwei%C3%9F",
+   "title": "Schweiß – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:56.027Z",
+   "snapshot": "026fba695fe4f1c09195759f72503187b12b0b0aa58df8db205239835998d0a4"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/dwb/B%C3%BCrzel",
+   "title": "bürzel – Deutsches Wörterbuch von Jacob und Wilhelm Grimm (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:57.062Z",
+   "snapshot": "e379bdfeddf406189c23ec132b18c461d48ccdebe684dd607b2ce0cdfe07e84a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06891",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blume",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Löffel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lichter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schweiß",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pürzel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mönch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-159"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:16.540Z",
+   "target": "f06891",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blume: Schwanz des Feldhasen und das Ende der Lunte beim Rotfuchs",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blume” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:16.540Z",
+   "target": "f06892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "›löffel‹ in: Deutsches Wörterbuch (¹DWB) | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Löffel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:16.540Z",
+   "target": "f06893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vor seinem schöpfer sich in lichter ordnung drängt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lichter” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:16.540Z",
+   "target": "f06894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schweiß – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schweiß” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:16.540Z",
+   "target": "f06895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "und nennt mich den ausbund drolliger purzel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pürzel” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:16.540Z",
+   "target": "f14605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Plattkopf oder Mönch: Rothirsch ohne Trophäe",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mönch” is on the snapshot of s1"
+  }
+ ]
+}

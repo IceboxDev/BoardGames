@@ -1,0 +1,249 @@
+{
+ "article": "a2529",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Darmstadtium",
+   "title": "Darmstadtium",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:40.142Z",
+   "snapshot": "696f09e58e4f143343c32f4d59c751c332d12cbe68352f2c87f4b7c8ad7d8013"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hassium",
+   "title": "Hassium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:43.254Z",
+   "snapshot": "b9f03c3158bcbed125608c8ce39583242736780922c5c7a9b93006500fb0b474"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Berkelium",
+   "title": "Berkelium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:44.061Z",
+   "snapshot": "cd43fc4cd2a42228a85a97b7d373f40afa3260a830b84f2f7beeb0fb0f0a2ca2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dubnium",
+   "title": "Dubnium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:44.786Z",
+   "snapshot": "fb90263237a751718afe77ad56ad3cf80da16e492e052ebea13b175cc2dc123b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hafnium",
+   "title": "Hafnium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:45.780Z",
+   "snapshot": "6dc758d02555c24e7182dda8823addbe637b19dc041474d5f8a7bc9a1d7a5035"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Darmstadtium",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:46.935Z",
+   "snapshot": "841c68290dec47ddebf3d02b56ad1caf735e1efe98da73687852462495134579"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Darmstadtium",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hassium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "berkelium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "dubnium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "hafnium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:34.809Z",
+   "target": "f13484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Darmstadtium ist ein ausschließlich künstlich erzeugtes chemisches Element mit dem Elementsymbol Ds und der Ordnungszahl 110.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darmstadtium” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:34.809Z",
+   "target": "f13485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hassium is a synthetic chemical element; it has symbol Hs and atomic number 108.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hassium” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:34.809Z",
+   "target": "f13486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Berkelium is a synthetic chemical element; it has symbol Bk and atomic number 97.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “berkelium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:34.809Z",
+   "target": "f13487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dubnium is a synthetic chemical element; it has symbol Db and atomic number 105.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dubnium” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:34.809Z",
+   "target": "f13488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hafnium is a chemical element; it has symbol Hf and atomic number 72.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hafnium” is on the snapshot of s5"
+  }
+ ]
+}

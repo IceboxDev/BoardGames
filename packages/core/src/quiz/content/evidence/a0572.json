@@ -1,0 +1,707 @@
+{
+ "article": "a0572",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Creation_of_the_Sun,_Moon,_and_Plants",
+   "title": "The Creation of the Sun, Moon, and Plants – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:35.076Z",
+   "snapshot": "4506b5e202ee2189e789bb27115c1dec2e5cf56dfbd49ad2d724993139c32be5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Creation_(Haydn)",
+   "title": "The Creation (Haydn) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:30.568Z",
+   "snapshot": "e2ef47dfecff607ff57d5c0f2d2684ac208eacbf1eafe8d1f6ebe2fbabdc8a2d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Genesis_creation_narrative",
+   "title": "Genesis creation narrative – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:36.364Z",
+   "snapshot": "10aa17f1c9d81b2891f078042ebe4bd05c56dc5b5194e7e3fb5e5be46011dd62"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hexaemeron",
+   "title": "Hexaemeron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:37.249Z",
+   "snapshot": "0c11c0771c876544cc2269ce9fdcf54b8a3e29b6c39515c2e6fa5b75d1fc1e3a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
+   "title": "The Creation of Adam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:47.474Z",
+   "snapshot": "f098f64ba523b41dfac3b5de5a82ab06c034616e4ec6b962ea3a52a70812e408"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Firmament",
+   "title": "Firmament – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:38.226Z",
+   "snapshot": "d24e217247c7bf2974c560b9fe74869f2e6754dee7e6055ab3370c3bc9fbe8e6"
+  },
+  "s7": {
+   "url": "https://www.biblegateway.com/passage/?search=Genesis+1%3A6-8&version=NRSVUE",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:35.283Z",
+   "snapshot": "dfbfc7ca06de6bfd6d86a268450c6f505f25a4acca6a00d925a78b090d576b3d"
+  },
+  "s8": {
+   "url": "https://www.biblegateway.com/passage/?search=Genesis+1&version=NRSVUE",
+   "title": "Genesis 1 (NRSVUE) – Bible Gateway",
+   "publisher": "Bible Gateway (NRSVue text)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:12.286Z",
+   "snapshot": "7b9be395aeee7ab2eabe3ff26cb38a6152a230b7f744c56f192d268609e792a4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sun, moon and stars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c048"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02857",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "light",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "land, sea and plants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fish and birds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "land animals and humans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the firmament",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the firmament",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sun, moon and stars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sun, moon and stars”, “Sonne, Mond und Sterne”, “Солнце, Луна и звёзды”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f02857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "According to one account, the audience broke into spontaneous applause at the coming of \"light\" and Haydn, in a typical gesture, weakly pointed upwards and said: \"Not from me—everything comes from up there!\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “light” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f02858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "land, sea and plants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“land, sea and plants”, “Land, Meer und Pflanzen”, “суша, море и растения”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fish and birds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“fish and birds”, “Fische und Vögel”, “рыбы и птицы”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "land animals and humans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“land animals and humans”, “Landtiere und Menschen”, “наземные животные и люди”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f28400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In Ancient Near Eastern cosmology, the firmament is a celestial barrier  that separates the Heavenly waters above from the Earth below.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.131Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the firmament” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:09.131Z",
+   "target": "f28400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the firmament",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the firmament”, “die Feste”, “твердь”) on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:00:01Z",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "God made the two great lights—the greater light to rule the day and the lesser light to rule the night—and the stars.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Genesis 1:16; v.19 closes 'the fourth day'."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:00:02Z",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "God creates light on the first day and the light-producing heavenly bodies on the fourth day.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:00:03Z",
+   "target": "f02858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "God called the dry land Earth, and the waters that were gathered together he called Seas.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Genesis 1:9–13: land and seas, then vegetation, closing 'the third day'."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:00:04Z",
+   "target": "f02858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Earth, seas, and vegetation (day 3)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:00:05Z",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "So God created the great sea monsters and every living creature that moves, of every kind, with which the waters swarm and every winged bird of every kind.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Genesis 1:21; v.23 closes 'the fifth day'."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:00:06Z",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the fifth day, God creates animals of the sea and air.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:00:13Z",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "God made the wild animals of the earth of every kind and the cattle of every kind and everything that creeps upon the ground of every kind.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Genesis 1:25; humans follow in 1:27, and v.31 closes 'the sixth day'."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:00:14Z",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "and land animals and humans (day 6)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "God made the two great lights—the greater light to rule the day and the lesser light to rule the night—and the stars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "God creates light on the first day and the light-producing heavenly bodies on the fourth day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "God called the dry land Earth, and the waters that were gathered together he called Seas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Earth, seas, and vegetation (day 3)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "So God created the great sea monsters and every living creature that moves, of every kind, with which the waters swarm and every winged bird of every kind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s8"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the fifth day, God creates animals of the sea and air.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s3"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "God made the wild animals of the earth of every kind and the cattle of every kind and everything that creeps upon the ground of every kind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "and land animals and humans (day 6)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s3"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The sun, moon and stars are underneath the firmament.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sun, moon and stars” is on the snapshot of s3"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The second triad describes the peopling of the three elements of the first: sun, moon, and stars for the day and night (Genesis 1:14–19), fish and birds for the heavens and seas (Genesis 1:20–23), and finally animals and man for the vegetated land (24–31).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “fish and birds” is on the snapshot of s3"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:34.708Z",
+   "target": "f02860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first creation account is divided into seven days during which God creates light (day 1); the sky (day 2); the Earth, seas, and vegetation (day 3); the Sun and Moon (day 4); animals of the air and sea (day 5); and land animals and humans (day 6).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:34.708Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “land animals and humans” is on the snapshot of s3"
+  }
+ ]
+}

@@ -1,0 +1,422 @@
+{
+ "article": "a0561",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lymphatic_system",
+   "title": "Lymphatic system – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:53.068Z",
+   "snapshot": "885f18d9ee41f4c2e426e648105ec9f02374a50f16e3b52dbe2f9336a79da799"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Blood_plasma",
+   "title": "Blood plasma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:54.062Z",
+   "snapshot": "0dc4aace4dc4253163dc01872440105c3432172de3b065be045f7f81b4966f36"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cerebrospinal_fluid",
+   "title": "Cerebrospinal fluid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:55.181Z",
+   "snapshot": "0534dabfb6b373454fe44e06551facfc27498713ed4469e1c811edfe109028da"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Synovia",
+   "title": "Synovia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:52.370Z",
+   "snapshot": "01539f77bd7c6e6ec34aa28127e2c92821142f3a4f45e352b08e6044b6bd67a0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Synovial_fluid",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:56.095Z",
+   "snapshot": "7f7ce78ded513f7a9849975913db4b1576bb49e4804c33f362875541ac343da8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Glaucoma",
+   "title": "Glaucoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:57.194Z",
+   "snapshot": "03aa86349ef11a78865b2e1ec12ff4ff572cbbba20d8e40fa189f5fd663305e2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aqueous_humour",
+   "title": "Aqueous humour – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:05.763Z",
+   "snapshot": "6c1c677ac59c018803518743f0ac0fa6ec459fede25c6ef6ddeb3a7f207c53ff"
+  },
+  "s8": {
+   "url": "https://flexikon.doccheck.com/de/Kammerwasser",
+   "title": "Kammerwasser – DocCheck Flexikon",
+   "publisher": "DocCheck Flexikon",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:05.405Z",
+   "snapshot": "24d9f1de90345e8e8ee17b98c3e6ac014ec4f2709c666446ddf41a68b6a60d41"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "lymph",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "blood plasma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cerebrospinal fluid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Synovia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02804",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "synovial fluid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "aqueous humour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:07.482Z",
+   "target": "f02801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It consists of a large network of lymphatic vessels, lymph nodes, lymphoid organs, lymphatic tissue and lymph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.482Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lymph” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:07.482Z",
+   "target": "f02802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blood plasma is a light amber-colored liquid component of blood in which blood cells are absent, but which contains proteins and other constituents of whole blood in suspension.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.482Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blood plasma” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:07.482Z",
+   "target": "f02803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cerebrospinal fluid (CSF) is a clear, colorless transcellular body fluid found within the meningeal tissue that surrounds the vertebrate, brain and spinal cord, and in the ventricles of the brain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.482Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cerebrospinal fluid” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:07.482Z",
+   "target": "f02804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Synovia (auch Synovialflüssigkeit oder Gelenkschmiere) ist eine viskose, fadenziehende, klare Körperflüssigkeit in Gelenken und Sehnenscheiden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.482Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Synovia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:07.482Z",
+   "target": "f02804",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Synovial fluid, also called synovia,[help 1] is a viscous, non-Newtonian fluid found in the cavities of synovial joints.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:07.482Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “synovial fluid” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:07.482Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "aqueous humour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“aqueous humour”, “Kammerwasser”, “водянистая влага”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:35Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It fills both the anterior and the posterior chambers of the eye",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:39Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kammerwasser ist die von den Epithelzellen des Ziliarkörpers sezernierte seröse Flüssigkeit im Bereich der Augenkammern.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "same page gives the English name: 'Englisch: intraocular fluid, aqueous humour'"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:31.769Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It fills both the anterior and the posterior chambers of the eye",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:31.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:31.769Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kammerwasser ist die von den Epithelzellen des Ziliarkörpers sezernierte seröse Flüssigkeit im Bereich der Augenkammern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:31.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:31.769Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The aqueous humour is a transparent water-like fluid similar to blood plasma, but containing low protein concentrations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:31.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “aqueous humour” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:31.769Z",
+   "target": "f02805",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Abrufbar unter: https://flexikon.doccheck.com/de/Kammerwasser",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:31.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kammerwasser” is on the snapshot of s8"
+  }
+ ]
+}

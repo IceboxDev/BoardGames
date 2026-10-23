@@ -1,0 +1,383 @@
+{
+ "article": "a1989",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Experiments_on_Plant_Hybridization",
+   "title": "Experiments on Plant Hybridization – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:53.213Z",
+   "snapshot": "a868da463510694bca8b5e27d4bf63f43f38875aaddb5fb9c5045d0127864d0d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Systema_Naturae",
+   "title": "Systema Naturae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:54.198Z",
+   "snapshot": "293684397aa3b60ea08ade3ce55e25a0c0d87a1e94218bbc64fdee1dea6e3687"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Molecular_Structure_of_Nucleic_Acids:_A_Structure_for_Deoxyribose_Nucleic_Acid",
+   "title": "Molecular Structure of Nucleic Acids – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:55.225Z",
+   "snapshot": "87f163d38710e1f5b3a83fa3449737f673f0036b738007ae38ff82265386f238"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/William_Harvey",
+   "title": "William Harvey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:18.912Z",
+   "snapshot": "eafe15e845aaff2698c4bff7ad010875a1b4c11c5af7819a6b5726844f9f7bd9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Taxonomie",
+   "title": "Taxonomie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:55.942Z",
+   "snapshot": "bb41222eeec307158a64c44c81de5966d123d301dcbeac05a24fe2116902f439"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Darwin",
+   "title": "Charles Darwin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:36.690Z",
+   "snapshot": "481376653d5e7f3dcd92714a200eb4f5d3efd30ac8da433be5b9f2135420315f"
+  },
+  "s7": {
+   "url": "https://www.nature.com/articles/171737a0",
+   "title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+   "publisher": "Nature",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:52.541Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s8": {
+   "url": "https://www.sciencehistory.org/education/scientific-biographies/james-watson-francis-crick-maurice-wilkins-and-rosalind-franklin/",
+   "title": "Francis Crick, Rosalind Franklin, James Watson, and Maurice Wilkins",
+   "publisher": "Science History Institute",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:53.205Z",
+   "snapshot": "fe7806390e69a6f4bb08cead44deb18b145a1de233a57638a48a02b95e78c7d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09941",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gregor Mendel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Linnaeus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "James Watson and Francis Crick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William Harvey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Taxonomie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-263"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Josiah Wedgwood II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-399"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:01.159Z",
+   "target": "f09941",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Experiments on Plant Hybridization\" (German: Versuche über Pflanzen-Hybriden) is a seminal paper written in 1865 and published in 1866 by Gregor Mendel, an Augustinian friar considered to be the founder of modern genetics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.159Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gregor Mendel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:01.159Z",
+   "target": "f09943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Systema Naturae (originally in Latin written Systema Naturæ with the ligature æ) is one of the major works of Swedish botanist, zoologist, and physician Carl Linnaeus (1707–1778) and introduced the Linnaean taxonomy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.159Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Linnaeus” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:01.159Z",
+   "target": "f09944",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "James Watson and Francis Crick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“James Watson and Francis Crick”, “James Watson und Francis Crick”, “Джеймс Уотсон и Фрэнсис Крик”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:01.159Z",
+   "target": "f09945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William Harvey (1 April 1578 – 3 June 1657) was an English physician who made influential contributions to anatomy and physiology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.159Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Harvey” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:01.159Z",
+   "target": "f13436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eine Taxonomie (altgriechisch τάξις táxis ,Ordnung’ und νόμος nómos ,Gesetz’) ist ein einheitliches Verfahren oder Klassifikationsschema, mit dem Objekte nach bestimmten Kriterien klassifiziert, das heißt in Kategorien oder Klassen (auch Taxa genannt) eingeordnet werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.159Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taxonomie” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:01.159Z",
+   "target": "f13437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Robert Darwin objected to his son's planned two-year voyage, regarding it as a waste of time, but was persuaded by his brother-in-law, Josiah Wedgwood II, to agree to (and fund) his son's participation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.159Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Josiah Wedgwood II” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:28:39Z",
+   "target": "f09944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "WE wish to suggest a structure for the salt of deoxyribose nucleic acid",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23",
+   "note": "The paper itself (Nature 171, 737–738), published 25 April 1953 by J. D. Watson and F. H. C. Crick."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:28:44Z",
+   "target": "f09944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1953, Watson and Crick published a short, strongly worded article in Nature announcing the double helix.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:49.300Z",
+   "target": "f09944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "In 1953, Watson and Crick published a short, strongly worded article in Nature announcing the double helix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.300Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:49.300Z",
+   "target": "f09944",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The stereochemistry and modelling of DNA are particularly associated with James Watson and Francis Crick, both of whom were working at Cambridge University’s Cavendish Laboratory in the early 1950s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.300Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “James Watson and Francis Crick” is on the snapshot of s8"
+  }
+ ]
+}

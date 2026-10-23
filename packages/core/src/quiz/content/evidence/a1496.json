@@ -1,0 +1,249 @@
+{
+ "article": "a1496",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Klabautermann",
+   "title": "Klabautermann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:58.005Z",
+   "snapshot": "6c343d77c01ccc46202c9ae27f53e1abdcf74245664892f00c6ccd90397be7e4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/R%C3%BCbezahl",
+   "title": "Rübezahl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:55.290Z",
+   "snapshot": "e29961117c0c401fe086f037f7e01cabf2d98bf1b3e4349dc07687bea5d821d9"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_Lore-Ley",
+   "title": "Die Lore-Ley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:43.074Z",
+   "snapshot": "aa3482be8d4e8ad8676f7e9262a412c12c02a75e8070256f81d8f8c49fd1de85"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Heinzelm%C3%A4nnchen",
+   "title": "Heinzelmännchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:56.184Z",
+   "snapshot": "84d6109bd342118e695d9e881d9fda9fcc5707c3edc8d43ce52ac3effc912079"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Banshee",
+   "title": "Banshee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:58.866Z",
+   "snapshot": "c842ab77bf83dd41e73d95b4dc69859287feac03f2b51bedc1ecb29f6b66ba98"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Klabautermann",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:57.229Z",
+   "snapshot": "06ce585e73a0903e785f179673046af4b62f44f2ab6fd9cf37d581e01a1c505e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Klabautermann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rübezahl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Loreley",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heinzelmännchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Banshee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:34.910Z",
+   "target": "f07476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A Klabautermann (German: [klaˈbaʊtɐˌman] ) \"hobgoblin\"; or Kalfater (\"caulker\") is a water kobold in Frisian, German and Dutch folklore that assists sailors and fishermen on the North Sea in their duties.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klabautermann” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:34.910Z",
+   "target": "f07477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rübezahl (früher auch: Rübenzahl, tschechisch Krakonoš, polnisch Liczyrzepa) ist der Berggeist (Schrat) des Riesengebirges.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rübezahl” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:34.910Z",
+   "target": "f07478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lied von der Loreley ist ein Gedicht von Heinrich Heine aus dem Jahre 1824, das in einer Liedfassung Friedrich Silchers (1837) anhaltende Verbreitung fand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loreley” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:34.910Z",
+   "target": "f07479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Heinzelmännchen waren der Sage nach Kölner Hausgeister.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinzelmännchen” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:34.910Z",
+   "target": "f07480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A banshee ( BAN-shee; Modern Irish bean sí [bʲanˠ ˈʃiː], from Old Irish: ben síde [bʲen ˈʃiːðʲe], \"woman of the fairy mound\" or \"fairy woman\") is a female spirit in Irish folklore who heralds the death of a family member, usually by screaming, wailing, shrieking, or keening.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Banshee” is on the snapshot of s5"
+  }
+ ]
+}

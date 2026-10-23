@@ -1,0 +1,38 @@
+{
+ "id": "tp-enrich",
+ "title": "Bank-wide enrich after the Trivial Pursuit merge (Russian, proofreading, corrections, timelines)",
+ "startedAt": "2026-10-20",
+ "endedAt": "2026-10-21",
+ "kind": "enrich",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (233 enrich batches)"
+ ],
+ "brief": "repo scripts/quiz-ingest/ENRICH.md",
+ "inputs": [
+  "bank after tp-ingest + tp-dedupe"
+ ],
+ "outputs": [
+  "bank (history 'enrich batch N', 2026-10-21)"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/enrich-report",
+  "~/Downloads/quiz-cards/trivial-pursuit/enrich-notes.md",
+  "~/Downloads/quiz-cards/trivial-pursuit/enrich_launched.txt",
+  "~/Downloads/quiz-cards/trivial-pursuit/enrich_queue.txt",
+  "~/Downloads/quiz-cards/trivial-pursuit/nextenrich.sh"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 237,
+  "bytes": 1328351,
+  "byExt": {
+   ".md": 234,
+   ".sh": 1,
+   ".txt": 2
+  },
+  "batches": 233,
+  "historyEntries": 57955
+ },
+ "notes": "enrich-report/<first>-<last>.md is one batch's report; history refs 'enrich-report/...' resolve here. enrich-notes.md lists the known issues the batches were asked to fix."
+}

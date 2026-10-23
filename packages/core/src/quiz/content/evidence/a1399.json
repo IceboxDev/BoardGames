@@ -1,0 +1,511 @@
+{
+ "article": "a1399",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Maggi",
+   "title": "Maggi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:02.583Z",
+   "snapshot": "37bd4491ea47701ccd7ac6a99acb2f532f6f18efbcbcdf1ff6f01e3ca08f0739"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nestl%C3%A9",
+   "title": "Nestlé – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:05.029Z",
+   "snapshot": "74bf261b7e64bdd063c0f09792afa0f0ba5f7feb496bf30581fd7f2fe83ea604"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lindt",
+   "title": "Lindt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:06.295Z",
+   "snapshot": "4ca4c2da9e5c709441d6e1112f02f564e206e1be6a95ad3170e669f75b6a74bf"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ricola",
+   "title": "Ricola – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:04.497Z",
+   "snapshot": "c125321d469a97ed3645a843e0e20a2bfc3bc9efcf62e16ef1460eaa477ca3a5"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Emmi_AG",
+   "title": "Emmi AG – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:05.641Z",
+   "snapshot": "2203c9b25047cbed95edac444d7944602107b69d91974a107f8e8f205eeae23a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nestl%C3%A9",
+   "title": "Nestlé – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:47.590Z",
+   "snapshot": "530a81d6d906856823df4a1ae19ea140168b70ac42d1262b1142e1b2439ba086"
+  },
+  "s7": {
+   "url": "https://fortune.com/2025/09/02/nestle-picks-insider-to-replace-ceo-fired-over-affair",
+   "title": "Nestlé picks insider to replace CEO fired over affair – Fortune (Bloomberg)",
+   "publisher": "Fortune / Bloomberg",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:48.213Z",
+   "snapshot": "33c2a31be86084540ea69874bc8adccea6cae2a29a21adb28c74bd46f1ce32db"
+  },
+  "s8": {
+   "url": "https://www.swissinfo.ch/eng/business/nestl%C3%A9-becomes-global-top-three-consumer-company/38431174",
+   "title": "Nestlé becomes global top three consumer company – swissinfo.ch",
+   "publisher": "swissinfo.ch (SRG SSR)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:48.484Z",
+   "snapshot": "e856f42952ec9c70f9bbdae208d06f147fef2c7f6838300965735282565a003b"
+  },
+  "s9": {
+   "url": "https://www.hl.co.uk/news/nestle-reports-better-than-expected-sales-growth-with-new-ceo-at-the-helm",
+   "title": "Nestle reports better-than-expected sales growth with new CEO at the helm – Hargreaves Lansdown (Reuters)",
+   "publisher": "Hargreaves Lansdown / Reuters",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:50.011Z",
+   "snapshot": "59ced7b74254e4d8190387c71ba448bd1f38167612b94482e96ebdb9af091eb6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maggi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nestlé",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lindt & Sprüngli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ricola",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Emmi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:19.439Z",
+   "target": "f06991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maggi (in Deutschland und Österreich [ˈmagi:], in der Schweiz [ˈmadʒ:i]) ist ein nach seinem Gründer Julius Maggi benanntes Schweizer Unternehmen der Lebensmittelindustrie, das vor allem für Instantsuppen, Brühwürfel, Flüssigwürze, Fertigsaucen und Fertiggerichte bekannt ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maggi” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:19.439Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nestlé betrieb im Jahre 2025 weltweit 335 Produktionsstätten und war in 185 Ländern tätig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nestlé” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:19.439Z",
+   "target": "f06993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chocoladefabriken Lindt & Sprüngli AG, doing business as Lindt, is a Swiss chocolatier and confectionery company founded in 1845 and known for its chocolate truffles and chocolate bars, among other sweets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lindt & Sprüngli” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:19.439Z",
+   "target": "f06994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Ricola AG ist ein Schweizer Hersteller von Kräuterbonbons, -perlen, -pastillen, Instant- und Beuteltees mit Sitz im basellandschaftlichen Laufen und Tochtergesellschaften in Italien, Großbritannien, Asien und den USA.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ricola” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:19.439Z",
+   "target": "f06995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Emmi AG mit Sitz in Luzern ist die grösste Molkerei der Schweiz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.439Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emmi” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:14:20Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been the largest publicly held food company in the world, measured by revenue and other metrics, since 2014.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:14:21Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "to try and steady the world’s largest food business after it was rocked by the second CEO firing in a little over a year.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:14:23Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nestlé, the world’s largest food company, has moved into the top three of a worldwide ranking of consumer product companies",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "2013 article; the 2025 Fortune/Bloomberg piece confirms it still holds."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:14:24Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "maintained its outlook for 2025 as the world's largest packaged food company reported results for the first time since appointing Philipp Navratil as CEO.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been the largest publicly held food company in the world, measured by revenue and other metrics, since 2014.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "to try and steady the world’s largest food business after it was rocked by the second CEO firing in a little over a year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nestlé, the world’s largest food company, has moved into the top three of a worldwide ranking of consumer product companies",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "maintained its outlook for 2025 as the world's largest packaged food company reported results for the first time since appointing Philipp Navratil as CEO.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nestlé's products include coffee and tea, candy and confectionery, bottled water, infant formula and baby food, dairy products and ice cream, frozen foods, breakfast cereals, dry packaged foods and snacks, pet foods, and medical food.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nestlé” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nestlé picks insider to replace CEO fired over affair | Fortune",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nestlé” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nestlé becomes global top three consumer company - SWI swissinfo.ch",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nestlé” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:04.680Z",
+   "target": "f06992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Nestle reports better-than-expected sales growth with new CEO at the helm | HL",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nestlé” is on the snapshot of s9"
+  }
+ ]
+}

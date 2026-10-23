@@ -1,0 +1,480 @@
+{
+ "article": "a1521",
+ "sources": {
+  "s1": {
+   "url": "https://arxiv.org/abs/1512.00734",
+   "title": "Proof of the theorem that a surface area of a ball is smaller than of any other body of the same volume, by Hermann Schwarz – arXiv",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:12.001Z",
+   "snapshot": "ba211f030b8db66ca1a907f4d3c74063a8413729490721d031c3a8482dbfa8ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eudoxus_of_Cnidus",
+   "title": "Eudoxus of Cnidus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:15.924Z",
+   "snapshot": "32ce5296a3929d898e78ebcdf4b8adb75c994701b63d37b559c87e13dff662ff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/On_the_Sphere_and_Cylinder",
+   "title": "On the Sphere and Cylinder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:16.854Z",
+   "snapshot": "d98afa3e78aafe7070430486ca1b25406be1a131a95cbe3d0ade675bd48da498"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Pyramide_(Geometrie)",
+   "title": "Pyramide (Geometrie) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:14.334Z",
+   "snapshot": "b253f51c17e9ebaa8bbc2bf47fbc9263234035b7601126810a4a268a37440835"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sphere",
+   "title": "Sphere – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:22.391Z",
+   "snapshot": "1f55048f9af1fff76305e3c25d5e7a90d576331b377125c9277d1c596b770144"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Square_pyramid",
+   "title": "Square pyramid – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:23.481Z",
+   "snapshot": "45b56b4f9feec324a57c67c8afad0bd2573ae9826d46eb5d28c2fdb5fc9909f3"
+  },
+  "s7": {
+   "url": "https://www.mathsisfun.com/geometry/square-pyramid.html",
+   "title": "Square Pyramid",
+   "publisher": "Math is Fun",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:23.125Z",
+   "snapshot": "e0adc173b3afd368593bcac515fd0b093e272c0c51ca85c422c5694c979463df"
+  },
+  "s8": {
+   "url": "https://www.cuemath.com/geometry/square-pyramid/",
+   "title": "Square Pyramid - Properties, Definition, Types, Examples",
+   "publisher": "Cuemath",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:23.299Z",
+   "snapshot": "e20c50ea065bd88e13d2c070cbc371eb250e6d0ad61d37c14be8aee03baa0be5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cylinder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "8 Kanten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-073"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:38.572Z",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "sphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sphere”, “Kugel”, “шар”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:38.572Z",
+   "target": "f07602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "areas of circles are to one another as the squares of their radii, volumes of spheres are to one another as the cubes of their radii, the volume of a pyramid is one-third the volume of a prism with the same base and altitude, and the volume of a cone is one-third that of the corresponding cylinder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cone” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:38.572Z",
+   "target": "f07603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On the Sphere and Cylinder (Greek: Περὶ σφαίρας καὶ κυλίνδρου; Perì sphaíras kaì kulíndrou) is a treatise that was published by Archimedes in two volumes c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.572Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cylinder” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:38.572Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "8 Kanten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“8 Kanten”, “8 edges”, “8 рёбер”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:22:18Z",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The sphere has the smallest surface area of all surfaces that enclose a given volume",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:22:24Z",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Proof of the theorem that a surface area of a ball is smaller than of any other body of the same volume",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23",
+   "note": "English translation of H. A. Schwarz (1884), the classical proof of the isoperimetric property of the sphere."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:22:30Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A square pyramid has five vertices, eight edges, and five faces.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:22:34Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It has 8 edges",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:22:37Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It has 8 edges.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The sphere has the smallest surface area of all surfaces that enclose a given volume",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Proof of the theorem that a surface area of a ball is smaller than of any other body of the same volume",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A square pyramid has five vertices, eight edges, and five faces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It has 8 edges",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It has 8 edges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f07601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A sphere (from Ancient Greek  σφαῖρα (sphaîra) 'ball') is a surface analogous to the circle, a curve.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sphere” is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It has 8 edges",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “8 edges” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:24.684Z",
+   "target": "f13498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It has 8 edges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:24.684Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “8 edges” is on the snapshot of s8"
+  }
+ ]
+}

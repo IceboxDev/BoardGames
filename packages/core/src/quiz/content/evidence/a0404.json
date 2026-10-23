@@ -1,0 +1,242 @@
+{
+ "article": "a0404",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Vicar",
+   "title": "Vicar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:45.465Z",
+   "snapshot": "b19b78aee7899503cd158865befdba7063d5aa182e7d6ad33ccd7875e43209cd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vicar_general",
+   "title": "Vicar general – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:46.479Z",
+   "snapshot": "8caab5c634a4b250ba8ede3ca81db39ae16a3fc6350170f35c64810bc7d9e473"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Auxiliary_bishop",
+   "title": "Auxiliary bishop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:47.450Z",
+   "snapshot": "12dce4178f431efee7a844f9096a1ba54ba3c72da4a9a9d76185dd485f04b10a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Coadjutor_bishop",
+   "title": "Coadjutor bishop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:48.461Z",
+   "snapshot": "0401074ddc40f2ba865e29692232e45f43874ff87bf96c224ab1ba39e5bd5ba1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Abbot_Primate",
+   "title": "Abbot Primate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:49.655Z",
+   "snapshot": "ab3fe8a626673155f4fdabe650791ab74015e4b7765ef28e471d0eb469d8f6ae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vicar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vicar general",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Auxiliary bishop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Coadjutor bishop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Abbot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:43.550Z",
+   "target": "f02016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A vicar (; Latin: vicarius) is a representative, deputy or substitute; anyone acting \"in the person of\" or agent for a superior (compare \"vicarious\" in the sense of \"at second hand\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vicar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:43.550Z",
+   "target": "f02017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A vicar general (previously, archdeacon) is the principal deputy of the bishop or archbishop of a diocese or an archdiocese for the exercise of administrative authority and possesses the title of local ordinary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vicar general” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:43.550Z",
+   "target": "f02018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An auxiliary bishop is a Catholic or Eastern Orthodox bishop assigned to assist a diocesan bishop in meeting the pastoral and administrative needs of the diocese.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auxiliary bishop” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:43.550Z",
+   "target": "f02019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A coadjutor bishop (or bishop coadjutor) (\"co-assister\" in Latin) is a bishop in the Latin Catholic, Anglican and (historically) Eastern Orthodox churches whose main role is to assist the diocesan bishop in administering the diocese.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coadjutor bishop” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:43.550Z",
+   "target": "f02020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The abbot primate of the Order of St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:43.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abbot” is on the snapshot of s5"
+  }
+ ]
+}

@@ -15,6 +15,8 @@ import { LICHESS } from "./oauth";
 
 const EXPLORER = "https://explorer.lichess.org";
 const RATE_LIMIT_WAIT_MS = 60_000;
+/** A request (body included) that takes longer fails, so it can't hold the queue forever. */
+const REQUEST_TIMEOUT_MS = 30_000;
 
 export class LichessAuthError extends Error {
   constructor() {
@@ -31,21 +33,97 @@ const sleep = (ms: number, signal?: AbortSignal) =>
     });
   });
 
-let tail: Promise<unknown> = Promise.resolve();
+/**
+ * Who is waiting: what's on screen first (`now`), then the tree build
+ * (`build`), then lookups nobody is looking at yet (`background`).
+ */
+export type LichessPriority = "now" | "build" | "background";
+const RANK: Record<LichessPriority, number> = { now: 0, build: 1, background: 2 };
 
-/** One lichess request at a time; a 429 waits a minute and tries again. */
-function queued(url: string, token: string, signal?: AbortSignal): Promise<Response> {
-  const run = async (): Promise<Response> => {
-    for (let attempt = 0; ; attempt++) {
-      const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` }, signal });
-      if (res.status === 401) throw new LichessAuthError();
-      if (res.status !== 429 || attempt >= 3) return res;
-      await sleep(RATE_LIMIT_WAIT_MS, signal);
+/**
+ * lichess refuses explorer requests faster than about one every three
+ * seconds (measured 2026-10-20: a 429 after ~6 back to back, and still every
+ * third at one per two seconds); its other endpoints get a second.
+ */
+const gapFor = (url: string) => (url.startsWith(EXPLORER) ? 3_000 : 1_000);
+
+interface Job {
+  readonly url: string;
+  readonly token: string;
+  readonly signal?: AbortSignal;
+  readonly rank: number;
+  readonly seq: number;
+  readonly resolve: (r: Response) => void;
+  readonly reject: (e: unknown) => void;
+}
+
+const jobs: Job[] = [];
+let running = false;
+let seq = 0;
+let lastRequestAt = 0;
+let rateLimitedUntil: number | null = null;
+
+/** What the lichess queue is doing, for a status line: requests waiting, and a 429's wait. */
+export function lichessQueue(): {
+  readonly waiting: number;
+  readonly rateLimitedUntil: number | null;
+} {
+  return { waiting: jobs.length + (running ? 1 : 0), rateLimitedUntil };
+}
+
+async function runJob(job: Job): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    const wait = lastRequestAt + gapFor(job.url) - Date.now();
+    if (wait > 0) await sleep(wait, job.signal);
+    lastRequestAt = Date.now();
+    const timeout = AbortSignal.timeout(REQUEST_TIMEOUT_MS);
+    const res = await fetch(job.url, {
+      headers: { Authorization: `Bearer ${job.token}` },
+      signal: job.signal ? AbortSignal.any([job.signal, timeout]) : timeout,
+    });
+    if (res.status === 401) throw new LichessAuthError();
+    if (res.status !== 429 || attempt >= 3) return res;
+    rateLimitedUntil = Date.now() + RATE_LIMIT_WAIT_MS;
+    try {
+      await sleep(RATE_LIMIT_WAIT_MS, job.signal);
+    } finally {
+      rateLimitedUntil = null;
     }
-  };
-  const next = tail.then(run, run);
-  tail = next.catch(() => undefined);
-  return next;
+  }
+}
+
+async function pump(): Promise<void> {
+  if (running) return;
+  running = true;
+  try {
+    while (jobs.length > 0) {
+      jobs.sort((a, b) => a.rank - b.rank || a.seq - b.seq);
+      const job = jobs.shift() as Job;
+      try {
+        job.resolve(await runJob(job));
+      } catch (err) {
+        job.reject(err);
+      }
+    }
+  } finally {
+    running = false;
+  }
+}
+
+/**
+ * One lichess request at a time, the most urgent first, paced to what lichess
+ * accepts; a 429 waits a minute and tries again; 30 s at most each.
+ */
+function queued(
+  url: string,
+  token: string,
+  signal?: AbortSignal,
+  priority: LichessPriority = "now",
+): Promise<Response> {
+  return new Promise<Response>((resolve, reject) => {
+    jobs.push({ url, token, signal, rank: RANK[priority], seq: seq++, resolve, reject });
+    void pump();
+  });
 }
 
 const UserSchema = z.object({ count: z.object({ all: z.number() }).optional() });
@@ -176,16 +254,20 @@ export interface ExplorerMove extends PopularMove {
 }
 
 /** The lichess database's moves here (every rating, every speed), most played first. */
-export async function explorerMoves(fen: string, token: string): Promise<ExplorerMove[]> {
+export async function explorerMoves(
+  fen: string,
+  token: string,
+  priority: LichessPriority = "now",
+): Promise<ExplorerMove[]> {
   const url = new URL(`${EXPLORER}/lichess`);
   url.search = new URLSearchParams({
     variant: "standard",
     fen,
-    moves: "12",
+    moves: "30",
     topGames: "0",
     recentGames: "0",
   }).toString();
-  const res = await queued(url.toString(), token);
+  const res = await queued(url.toString(), token, undefined, priority);
   if (!res.ok) throw new Error(`explorer failed (${res.status})`);
   return ExplorerSchema.parse(await res.json())
     .moves.map((m) => ({

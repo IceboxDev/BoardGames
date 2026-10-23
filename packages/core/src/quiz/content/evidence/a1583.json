@@ -1,0 +1,242 @@
+{
+ "article": "a1583",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Red_raspberry_leaf",
+   "title": "Red raspberry leaf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:58.908Z",
+   "snapshot": "b830bef1ef4db38764e230aa3e3a5907ed7666262ce20dd7c976deed95b7b204"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peppermint",
+   "title": "Peppermint – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:59.976Z",
+   "snapshot": "5bc84c8102dec2c3ab0fcc962e880ad97c9f83bf6005fba8daf92a297a299e85"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Matricaria_chamomilla",
+   "title": "Matricaria chamomilla – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:00.908Z",
+   "snapshot": "f6d43e497f51c92799dcf9a3c1f52cbd4e8926a9c0e288600d74de78f68afdcc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Winterlinde",
+   "title": "Winterlinde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:09:58.179Z",
+   "snapshot": "bcd67f8c604031d5a307ebd2e6e9064012ae83ebe135eeaf6978c83cf9e9dd98"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Schwarzer_Holunder",
+   "title": "Schwarzer Holunder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:09:59.261Z",
+   "snapshot": "6eea5111ae19c29c270a4c59c5dcf176029cdeab85385a509df4050f0ae0bfbb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07911",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "raspberry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07912",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "peppermint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07913",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "chamomile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07914",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07915",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Holunder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:47.021Z",
+   "target": "f07911",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The red raspberry leaf (Rubus idaeus), also known as garden raspberry leaf, is produced by the deciduous raspberry plant and used in folk remedies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “raspberry” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.021Z",
+   "target": "f07912",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peppermint (Mentha × piperita) is a hybrid species of mint, a cross between watermint and spearmint.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “peppermint” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.021Z",
+   "target": "f07913",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Matricaria chamomilla (synonym: Matricaria recutita), commonly known as chamomile (also spelled camomile), German chamomile, Hungarian chamomile (kamilla), wild chamomile, blue chamomile, or scented mayweed, is an annual plant of the composite family Asteraceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chamomile” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:47.021Z",
+   "target": "f07914",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Winterlinde (Tilia cordata), auch Steinlinde, Kleinblättrige Linde, „Herzblättrige Linde“ oder auch „Herzblattlinde“ genannt, ist eine Pflanzenart aus der Gattung der Linden (Tilia) in der Unterfamilie der Lindengewächse (Tilioideae) innerhalb der Familie der Malvengewächse (Malvaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linde” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:47.021Z",
+   "target": "f07915",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Schwarze Holunder (Sambucus nigra) ist ein Strauch oder kleiner Baum aus der Gattung Holunder (Sambucus), der im größten Teil Europas natürlich vorkommt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.021Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holunder” is on the snapshot of s5"
+  }
+ ]
+}

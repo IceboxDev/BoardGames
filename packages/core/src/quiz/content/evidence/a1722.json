@@ -1,0 +1,296 @@
+{
+ "article": "a1722",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Charlemagne",
+   "title": "Charlemagne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:16.150Z",
+   "snapshot": "f7ce713e71658d9ffb8afaaf8b8f1895c660bfea82299899519aa19cea1c69db"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+   "title": "Battle of Tours – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:06.574Z",
+   "snapshot": "943aaf143240e55f3d22e94952adda3e9836a83a97db3af43d1d8de61ee0f542"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pepin_the_Short",
+   "title": "Pepin the Short – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:07.449Z",
+   "snapshot": "55e58f2a450311d03bc4bd99f123b070d3edcda3095947f189be26ded470f902"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Clovis_I",
+   "title": "Clovis I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:42.372Z",
+   "snapshot": "10cd650d3da8d61a2dc4b0aec150a57da28edeff00deec163e41229f7a83d7f0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Louis_the_Pious",
+   "title": "Louis the Pious – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:18:08.470Z",
+   "snapshot": "2f39a5ea8f84764f30fd91b37f515b4919f1918e46954cff5227f21826751b5b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Donareiche",
+   "title": "Donareiche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:43.573Z",
+   "snapshot": "79197fb28e102f3b4663ba32640115fd14aee2d77c9a6715d08a018527097664"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Reims_Cathedral",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:04.168Z",
+   "snapshot": "5cff0e8211c4e45a2bf0dcd5eb2c8031a853ca51d8afa7f7a3c2ecbd728aeb53"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charlemagne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Martel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pepin the Short",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Clovis I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Louis the Pious",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Donar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-326"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:11.909Z",
+   "target": "f08606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charlemagne ( SHAR-lə-mayn; 2 April 748 – 28 January 814) was King of the Franks from 768, King of the Lombards from 774, and Emperor of what is now known as the Carolingian Empire from 800.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlemagne” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:11.909Z",
+   "target": "f08607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It resulted in victory for the Frankish and Aquitanian forces, led by Charles Martel, over the invading Umayyad forces, led by Abd al-Rahman al-Ghafiqi, governor of al-Andalus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Martel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:11.909Z",
+   "target": "f08608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pepin the Short (Latin: Pipinus; French: Pépin le Bref; German: Pippin der Kurze; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pepin the Short” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:11.909Z",
+   "target": "f08609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Clovis I (Latin: Chlodovechus; reconstructed Frankish: *Hlodowig c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clovis I” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:11.909Z",
+   "target": "f08610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Louis the Pious (Latin: Ludovicus Pius; French: Louis le Pieux; German: Ludwig der Fromme; 778 – 20 June 840), also called the Fair and the Debonaire, was King of the Franks and co-emperor with his father, Charlemagne, from 813.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis the Pious” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:11.909Z",
+   "target": "f12306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Donareiche war der Überlieferung zufolge ein dem germanischen Gott Donar bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:11.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donar” is on the snapshot of s6"
+  }
+ ]
+}

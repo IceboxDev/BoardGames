@@ -1,0 +1,390 @@
+{
+ "article": "a0037",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Moog_synthesizer",
+   "title": "Moog synthesizer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:38.466Z",
+   "snapshot": "ee6b4df5d737f48ebe008fc25aa00a78e65395f581898726c63fac48f290dc02"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Day_the_Earth_Stood_Still",
+   "title": "The Day the Earth Stood Still – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:39.537Z",
+   "snapshot": "7beb425777a984878cd26efd936ab727330165a1c2303763ec4b49a62ed356bc"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Theremin",
+   "title": "Theremin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:37.349Z",
+   "snapshot": "946b344188a7f8df14bc34c44de5bef6cf77a3681d40014c351c092aa0b3e8ff"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hammond_organ",
+   "title": "Hammond organ – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:40.677Z",
+   "snapshot": "89ab7f50589d6990ec21bf6ea14e80d66c705db9db90fa208b49b2e09f319a89"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mellotron",
+   "title": "Mellotron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:41.636Z",
+   "snapshot": "83cb4927a1dd49339d62add523b8df82a18ea4e2fd201f8ba39e305bbd196d26"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Roland_TR-808",
+   "title": "Roland TR-808 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:42.535Z",
+   "snapshot": "ff036cd358f56cae03b3d714a6e2dce80663f558d23ecf23ac99015e3868ce9a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Good_Vibrations",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:43.646Z",
+   "snapshot": "f436d6aae6560182bd3780d53e0819a4dff7b27578badc0b916dc3984a41f35c"
+  },
+  "s8": {
+   "url": "https://lemelson.mit.edu/resources/leon-theremin",
+   "title": "Leon Theremin",
+   "publisher": "Lemelson-MIT Program",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:26.596Z",
+   "snapshot": "e1b24331b440fdb006046d2e8851d1f6cf603764e473f8f5952e4927bc8fe54a"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Theremin",
+   "title": "Theremin",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:20:09Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Synthesizer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Theremin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Theremin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-314"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hammond organ",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mellotron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Drum machine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.569Z",
+   "target": "f00181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Moog synthesizer ( MOHG) is a modular synthesizer invented by the American engineer Robert Moog in 1964.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Synthesizer” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.569Z",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Herrmann chose unusual instrumentation for the film: violin, cello, and bass (all three electric), two theremin electronic instruments (played by Dr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theremin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.569Z",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Theremin (ursprünglich Aetherophon, weitere Synonyme: Thereminvox, Thereminovox, Termenvox, Ätherwelleninstrument und Ätherwellengeige) ist ein 1920 erfundenes elektronisches Musikinstrument, bei dem Tonhöhe und Lautstärke durch die Position der Hände gegenüber zwei Elektroden gesteuert werden,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theremin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.569Z",
+   "target": "f00183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Hammond organ is an electric organ invented by Laurens Hammond and John M.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hammond organ” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:40.569Z",
+   "target": "f00184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Mellotron is an electro-mechanical musical instrument developed in Birmingham, England, in 1963.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mellotron” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:40.569Z",
+   "target": "f00185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Roland TR-808 Rhythm Composer, commonly known as the 808, is a drum machine manufactured by Roland Corporation between 1980 and 1983.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Drum machine” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:20:04Z",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Theremin’s invention is still the only musical instrument, which is played without any physical contact.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:20:09Z",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is an electronic musical instrument controlled without physical contact by the performer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "The bank's 'only instrument in common use' hedge is right: other contactless controllers exist, but the theremin is the established one"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:56.177Z",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Theremin’s invention is still the only musical instrument, which is played without any physical contact.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:56.177Z",
+   "target": "f00182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Just a few years after the invention of the vacuum tube, Leon Theremin invented one of the world’s first and most unique electronic musical intruments: the aetherphone, better known as the Theremin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.177Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Theremin” is on the snapshot of s8"
+  }
+ ]
+}

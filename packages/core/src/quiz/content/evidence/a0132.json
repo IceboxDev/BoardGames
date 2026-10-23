@@ -1,0 +1,242 @@
+{
+ "article": "a0132",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/MG_08",
+   "title": "MG 08 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:30.324Z",
+   "snapshot": "5d6f11781b3556a3b9a629d27d8b28bf5d1eb29ca7c8e5d0b8f6463b52baaa27"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bluetooth",
+   "title": "Bluetooth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:12.059Z",
+   "snapshot": "c44f2c501ad9c8fbde3509d547dc83d4317be5025df8a84ee1f128398f312759"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/History_of_Python",
+   "title": "History of Python – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:31.088Z",
+   "snapshot": "4c90aff07afec2ef4bd686dda1329ba89570d7a199eac7eac1bb63cfac9f2b00"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Linux_kernel",
+   "title": "Linux kernel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:32.192Z",
+   "snapshot": "11379a648d1fc60b846a85655d259c06bd57adc0b10013392fe83ac3f50e2950"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rudolf_Diesel",
+   "title": "Rudolf Diesel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:33.197Z",
+   "snapshot": "99ed286b9ea50191a1668f0271a85a239578fb41fe4580630d829a25aece4689"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MG 08/15 machine gun",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harald Bluetooth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monty Python",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linus Torvalds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rudolf Diesel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:57.458Z",
+   "target": "f00656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The MG 08/15 (German: Maschinengewehr 08/15, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maschinengewehr 08/15” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:57.458Z",
+   "target": "f00657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bengtsson's The Long Ships, a historical novel about Vikings and the 10th-century Danish king Harald Bluetooth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harald Bluetooth” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:57.458Z",
+   "target": "f00658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Python was named after the BBC TV show Monty Python's Flying Circus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monty Python” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:57.458Z",
+   "target": "f00659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The kernel was created by Linus Torvalds in 1991 and was soon adopted as the kernel for the GNU operating system (OS), which was created to be a free replacement for Unix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linus Torvalds” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:57.458Z",
+   "target": "f00660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At the time, the Diesel family suffered from financial difficulties, thus young Rudolf Diesel had to work in his father's workshop and deliver leather goods to customers using a barrow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudolf Diesel” is on the snapshot of s5"
+  }
+ ]
+}

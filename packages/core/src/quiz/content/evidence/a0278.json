@@ -1,0 +1,387 @@
+{
+ "article": "a0278",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Fall_of_the_House_of_Usher",
+   "title": "The Fall of the House of Usher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:10.024Z",
+   "snapshot": "30d836893371f9b5eb3d15f28fc0b3a76b99266f445e7def631460793534d561"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Moonstone",
+   "title": "The Moonstone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:10.993Z",
+   "snapshot": "8e4bcef1a5cb5ba7f9485b5763b1027df127963fefceb34da9acc23778a733a2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+   "title": "Arthur Conan Doyle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:12.079Z",
+   "snapshot": "8675ef452b70d510bd92b97aa46a204f6f9cc89410331237d1159e4fb4cf7837"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Big_Sleep",
+   "title": "The Big Sleep – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:12.987Z",
+   "snapshot": "23f806d31f3473f1ceaae5568913f46b2c79b1fdb57083e13d3eafe10e857cab"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Arthur_Conan_Doyle",
+   "title": "Arthur Conan Doyle",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:10.377Z",
+   "snapshot": "08b6eac70612ee8ed6cff396459aba998f60f3a7e9755d2f0d2acdb4de41b35d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Canon_of_Sherlock_Holmes",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:14.005Z",
+   "snapshot": "88fab4cd1c5639a51779ab8481d26cc4b503ae29238af00e3014172d0692eae7"
+  },
+  "s7": {
+   "url": "https://www.poetryfoundation.org/poets/edgar-allan-poe",
+   "title": "Edgar Allan Poe",
+   "publisher": "Poetry Foundation",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:08:05Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe",
+   "title": "Edgar Allan Poe",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:08:07Z"
+  },
+  "s9": {
+   "url": "https://www.wilkie-collins.info/books_moonstone.htm",
+   "title": "The Moonstone – Wilkie Collins Information Pages",
+   "publisher": "Wilkie Collins Information Pages (Andrew Gasson)",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:02.693Z",
+   "snapshot": "efbed18b7fec26bae9d4aaec62a494cef1bb023d13c5c2b4a59fbf6fdb171637"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edgar Allan Poe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wilkie Collins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Conan Doyle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Raymond Chandler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12808",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Arzt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-203"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:23.387Z",
+   "target": "f01386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"The Fall of the House of Usher\" is a short story by American writer Edgar Allan Poe, first published in 1839 in Burton's Gentleman's Magazine, then included in the collection Tales of the Grotesque and Arabesque in 1840.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edgar Allan Poe” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:23.387Z",
+   "target": "f01387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Moonstone: A Romance by Wilkie Collins is an 1868 British epistolary novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilkie Collins” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:23.387Z",
+   "target": "f01388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Doyle is often referred to as \"Sir Arthur Conan Doyle\" or \"Conan Doyle\", implying that \"Conan\" is part of a compound surname rather than a middle name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Conan Doyle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:23.387Z",
+   "target": "f01390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Big Sleep is a 1939 hardboiled crime novel by American-British writer Raymond Chandler, the first to feature the detective Philip Marlowe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raymond Chandler” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:23.387Z",
+   "target": "f12808",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Juli 1930 in Crowborough, Sussex, England) war ein britischer Arzt und Schriftsteller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arzt” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:08:05Z",
+   "target": "f01386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In addition to his achievement as creator of the modern horror tale, Poe is also credited with parenting two other popular genres: science fiction and the detective story.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:08:07Z",
+   "target": "f01386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is generally considered to be one of the pioneers of the detective fiction genre.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:08:09Z",
+   "target": "f01387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Moonstone was described by T. S. Eliot as 'the first and\n greatest of English detective novels' although priority is now usually given\n to The Notting Hill Mystery.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Answer (Wilkie Collins) confirmed; the 'first' label is Eliot's and is disputed in favour of The Notting Hill Mystery (1862–63) — the wording's 'often described as' hedges this."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:08:11Z",
+   "target": "f01387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Moonstone: A Romance by Wilkie Collins is an 1868 British epistolary novel. It is an early example of the modern detective novel",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:43.709Z",
+   "target": "f01387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Moonstone was described by T. S. Eliot as 'the first and\n greatest of English detective novels' although priority is now usually given\n to The Notting Hill Mystery.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:43.709Z",
+   "target": "f01387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Moonstone: A Romance by Wilkie Collins is an 1868 British epistolary novel. It is an early example of the modern detective novel",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:43.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  }
+ ]
+}

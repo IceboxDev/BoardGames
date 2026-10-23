@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-056",
+ "image": "IMG20261022154002.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Art History",
+   "cardText": "[Art History] What was the first fresco painting that Michelangelo created?\nA. The Last Judgment\nB. The Doni Tondo\nC. The Sistine Chapel Ceiling\nAnswer: C. Michelangelo initially resisted the commission because he had never done a fresco painting before and considered himself a sculptor rather than a painter.",
+   "de": "Welchen Freskoauftrag, gemalt von 1508 bis 1512, übernahm Michelangelo widerwillig als sein erstes großes Fresko, da er sich eher als Bildhauer denn als Maler sah?",
+   "en": "Which fresco commission, painted from 1508 to 1512, did Michelangelo reluctantly take on as his first major fresco, considering himself a sculptor rather than a painter?",
+   "reworked": true,
+   "answerDe": "Die Decke der Sixtinischen Kapelle",
+   "answerEn": "The Sistine Chapel ceiling",
+   "timeline": {
+    "kind": "creation",
+    "start": "1508",
+    "end": "1512",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Michelangelo paints the Sistine Chapel ceiling in fresco for Pope Julius II",
+    "labelDe": "Michelangelo malt im Auftrag von Papst Julius II. die Decke der Sixtinischen Kapelle in Fresko"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
+    "title": "Sistine Chapel ceiling",
+    "lang": "en"
+   },
+   "notes": "Card overstated: Wikipedia says Bramante doubted Michelangelo could take on so large a fresco 'as he had limited experience in the medium' — not none; he had trained in Domenico Ghirlandaio's fresco workshop and his Battle of Cascina fresco (1504) was never painted beyond the cartoon. The ceiling (1508–1512) is his first major fresco; the Doni Tondo is a panel painting and the Last Judgment came later (1536–1541). Asked as his first major fresco.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 2,
+   "discipline": "Physics",
+   "cardText": "[Physics] What property of a sound wave is primarily responsible for determining its timbre, allowing us to distinguish between different instruments playing the same note?\nA. Amplitude\nB. Waveform\nC. Frequency\nAnswer: B. On the topic of sound, a clap of thunder is actually a shock wave created by the rapid expansion of air heated by a lightning bolt.",
+   "de": "Welche Eigenschaft einer Schallwelle, bestimmt durch ihre Mischung von Obertönen, ist vor allem für ihre Klangfarbe verantwortlich, sodass wir verschiedene Instrumente unterscheiden, die denselben Ton spielen?",
+   "en": "What property of a sound wave, set by its mix of overtones, is primarily responsible for its timbre, letting us tell apart different instruments playing the same note?",
+   "reworked": true,
+   "answerDe": "Ihre Wellenform (ihr Frequenzspektrum)",
+   "answerEn": "Its waveform (frequency spectrum)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1863",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hermann von Helmholtz publishes On the Sensations of Tone, a foundational work on music acoustics",
+    "labelDe": "Hermann von Helmholtz veröffentlicht „Die Lehre von den Tonempfindungen“, ein Grundlagenwerk der musikalischen Akustik"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Timbre",
+    "title": "Timbre",
+    "lang": "en"
+   },
+   "notes": "Card correct; its explanation (thunder as a shock wave) is unrelated to the question. Wikipedia (Timbre): the physical characteristics governing timbre are the frequency spectrum and envelope; ANSI: timbre depends primarily on the frequency spectrum. Timeline: Helmholtz, who named timbre Klangfarbe; Sensations of Tone first published 1863 (Wikipedia: On the Sensations of Tone).",
+   "domain": "science",
+   "sub": "physics"
+  }
+ ]
+}

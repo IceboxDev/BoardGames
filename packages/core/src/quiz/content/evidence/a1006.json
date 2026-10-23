@@ -1,0 +1,427 @@
+{
+ "article": "a1006",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Serbia_and_Montenegro",
+   "title": "Serbia and Montenegro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:51.149Z",
+   "snapshot": "ce932d7d7830e230628e30601bddf5e931812ecc29d6e78350f1f9a88d6060a4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Baltic_states",
+   "title": "Baltic states – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:52.136Z",
+   "snapshot": "f2e67156078f82bda218159934f07af7a1b0c7bf56ddf37a3b32753d546c89d5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/South_Caucasus",
+   "title": "South Caucasus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:53.222Z",
+   "snapshot": "e8a7263d780b2fe7e2ad3eadd0b5053ec1e2e8192e947540e35948d1dfd91330"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lake_Constance",
+   "title": "Lake Constance – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:24.114Z",
+   "snapshot": "fdf1530efe5ec582b4d29edf4726de192840ac736d76518ffdcfeaf86b025478"
+  },
+  "s5": {
+   "url": "https://lex.dk/Jugoslavien",
+   "title": "Jugoslavien – Den Store Danske (lex.dk)",
+   "publisher": "Lex.dk / Den Store Danske",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:37:10.485Z",
+   "snapshot": "8d086caea585b05181992c4ad88a57d1003131b71435a1c429afd879b00ec3cd"
+  },
+  "s6": {
+   "url": "https://snl.no/Jugoslavia",
+   "title": "Jugoslavia – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:10.669Z",
+   "snapshot": "028396bdeb418c3ca8563d153c92ef3f96e50d56cade7c3bb50bcc22ce762ef9"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Breakup_of_Yugoslavia",
+   "title": "Breakup of Yugoslavia – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:10.877Z",
+   "snapshot": "d8943439f4039c1e70ed259a205b7fdb4cb83a10dcf04e4de67585dd099c3819"
+  },
+  "s8": {
+   "url": "https://lex.dk/Transkaukasien",
+   "title": "Transkaukasien – Den Store Danske (lex.dk)",
+   "publisher": "Lex.dk / Den Store Danske",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:37:11.618Z",
+   "snapshot": "3548490fca663326312978368aa1f0e63e948edea0e12281e59ccf5e39477257"
+  },
+  "s9": {
+   "url": "https://snl.no/Kaukasia",
+   "title": "Kaukasia – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:11.556Z",
+   "snapshot": "37ce30cbcbaef8b88b4a12eb237207151c24ab7b79172ca556a6728d17d1ade2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Slovenia, Croatia and Serbia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05027",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Estonia, Latvia and Lithuania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georgia, Armenia and Azerbaijan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05030",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Germany, Austria and Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:18.808Z",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Slovenia, Croatia and Serbia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Slovenia, Croatia and Serbia”, “Slowenien, Kroatien und Serbien”, “Словения, Хорватия и Сербия”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:18.808Z",
+   "target": "f05027",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Baltic Times, an independent weekly newspaper that covers the latest political, economic, business, and cultural events in Estonia, Latvia and Lithuania",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Estonia, Latvia and Lithuania” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:18.808Z",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georgia, Armenia and Azerbaijan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Georgia, Armenia and Azerbaijan”, “Georgien, Armenien und Aserbaidschan”, “Грузия, Армения и Азербайджан”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:18.808Z",
+   "target": "f05030",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 260 kilometers long Lake Constance circular route, signposted as \"Bodensee Rundwanderweg\", leads around Lake Constance through the territories of Germany, Austria and Switzerland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:18.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Germany, Austria and Switzerland” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:37:23Z",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Indtil begyndelsen af 1990'erne bestod Jugoslavien af de områder, der i dag udgøres af staterne Slovenien, Kroatien, Bosnien-Hercegovina, Serbien, Kosovo, Montenegro og Nordmakedonien.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23",
+   "note": "Kosovo (2008) is only partly recognised, leaving six generally recognised successor states."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:37:26Z",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "fra 2003 til 2006 med navnet Statsunionen Serbia og Montenegro (oppløst og delt i to selvstendige stater fra 2006).",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:37:31Z",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "six republics, with borders drawn along ethnic and historical lines: Bosnia and Herzegovina, Croatia, Macedonia, Montenegro, Serbia, and Slovenia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:37:34Z",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The South Caucasus roughly corresponds to modern Armenia, Georgia, and Azerbaijan.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:37:38Z",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Den opløstes i 1936 i Sovjetrepublikkerne Aserbajdsjan, Georgien og Armenien.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:37:41Z",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "ligger i landene Russland, Georgia, Armenia og Aserbajdsjan.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:50.639Z",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "fra 2003 til 2006 med navnet Statsunionen Serbia og Montenegro (oppløst og delt i to selvstendige stater fra 2006).",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:50.639Z",
+   "target": "f05026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "six republics, with borders drawn along ethnic and historical lines: Bosnia and Herzegovina, Croatia, Macedonia, Montenegro, Serbia, and Slovenia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:50.639Z",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The South Caucasus roughly corresponds to modern Armenia, Georgia, and Azerbaijan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:50.639Z",
+   "target": "f05028",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "ligger i landene Russland, Georgia, Armenia og Aserbajdsjan.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  }
+ ]
+}

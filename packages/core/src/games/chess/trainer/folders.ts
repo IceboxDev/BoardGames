@@ -396,13 +396,15 @@ const SECOND_MOVES: readonly {
 ];
 
 /**
- * Your third move where the folders go one level deeper (the position before it
- * as moves from the start), with every reply your games met after it.
+ * Your move where the folders go one level deeper (the position before it as
+ * moves from the start), with every reply your games met after it. From the
+ * third move on; a reply's folder goes deeper again when an entry starts there.
  */
 const THIRD_MOVES: readonly {
   at: readonly string[];
   pick: string;
   name: string;
+  note?: string;
   replies: readonly Reply[];
 }[] = [
   {
@@ -431,6 +433,60 @@ const THIRD_MOVES: readonly {
         "h7h6",
         "3…h6 Late Carr",
         "Coined: no name found. 1…h6 is the Carr Defence; here it comes two moves late. The same position as 2…h6 Late Carr 3.e5 d5.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "d7d6"],
+    pick: "d2d4",
+    name: "4.d4 Main Line",
+    note: "Named from the literature: 4.d4 is the book answer to the Steinitz Defence, striking at e5 at once. lichess files the position under the Steinitz Defense itself.",
+    replies: [
+      [
+        "e5d4",
+        "4…exd4 Exchange",
+        "Coined: no name found. Black gives up the centre at once, as in the Philidor's 3…exd4 Exchange.",
+      ],
+      [
+        "c8d7",
+        "4…Bd7 Strongpoint",
+        "Coined: no name found. Black unpins and keeps the pawn on e5, the classical way to hold the centre in the Steinitz.",
+      ],
+      [
+        "a7a6",
+        "4…a6 Late Morphy",
+        "Coined: no name found. 3…a6 is the Morphy Defence; here it comes a move later, after …d6 and 4.d4.",
+      ],
+      [
+        "c8g4",
+        "4…Bg4 Counter-Pin",
+        "Coined: no name found. Black answers the pin on c6 by pinning the f3 knight in turn.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6"],
+    pick: "b5a4",
+    name: "4.Ba4 Retreat",
+    note: "Named from the literature: the bishop steps back to a4 and keeps the pin on the c6 knight alive; with 4.Bxc6 (the Exchange) the other main choice.",
+    replies: [
+      [
+        "g8f6",
+        "4…Nf6 Main Line",
+        "Named from the literature: lichess lists no name for this exact position; 4…Nf6 is the book main line of the Morphy Defence, heading for the Closed and Open Ruy.",
+      ],
+      ["b7b5", "4…b5 Caro", "lichess: Ruy Lopez: Morphy Defense, Caro Variation."],
+      ["d7d6", "4…d6 Modern Steinitz"],
+      ["f8c5", "4…Bc5 Classical Deferred"],
+      [
+        "f8e7",
+        "4…Be7 Quiet Bishop",
+        "Coined: no name found. The bishop develops modestly to e7 before the knight comes to f6.",
+      ],
+      [
+        "f8d6",
+        "4…Bd6 Late Self-Block",
+        "Coined: no name found. As 2…Bd6 Self-Block, the bishop stands in front of the d-pawn, here two moves later.",
       ],
     ],
   },
@@ -563,34 +619,22 @@ const deeper = (moves: readonly string[]): TrainerFolder[] =>
     folder(
       t.name,
       [...moves, t.pick],
-      t.replies.map(([reply, name, note]) => folder(name, [...moves, t.pick, reply], [], note)),
+      t.replies.map(([reply, name, note]) =>
+        folder(name, [...moves, t.pick, reply], deeper([...moves, t.pick, reply]), note),
+      ),
+      t.note,
     ),
   );
 
 /**
  * The folders the analysis farm works on (their positions and everything
- * below). Positions elsewhere in the tree wait: the trainer only asks the farm
- * about these, and the farm's own follow-ups stay below them.
+ * below). Since 2026-10-20 that is the whole tree for both colours: every
+ * position of yours waiting for an evaluation is queued, so nothing stays
+ * "not queued". Kept as a list so a colour can be narrowed again.
  */
 export const FARM_FOCUS: Readonly<Record<"w" | "b", readonly (readonly string[])[]>> = {
-  w: [
-    ["e2e4", "c7c6", "d2d4"],
-    ["e2e4", "e7e5", "g1f3", "f7f6"],
-    ["e2e4", "g7g6"],
-    ["e2e4", "b7b6"],
-    ["e2e4", "b8c6"],
-    ["e2e4", "g8f6"],
-    ["e2e4", "a7a6"],
-    ["e2e4", "h7h5"],
-    ["e2e4", "h7h6"],
-    ["e2e4", "a7a5"],
-    ["e2e4", "f7f5"],
-    ["e2e4", "b7b5"],
-    ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5"],
-    ["e2e4", "e7e5", "g1f3", "g8f6", "f3e5"],
-    ["e2e4", "e7e5", "g1f3", "d7d6", "d2d4"],
-  ],
-  b: [],
+  w: [[]],
+  b: [[]],
 };
 
 /** Your moves fixed by hand, applied to the tree: position (moves from the start) → your move. */
@@ -600,9 +644,368 @@ export const FIXED_CHOICES: Readonly<
   w: [
     { moves: [], uci: "e2e4" },
     { moves: ["e2e4", "e7e5"], uci: "g1f3" },
+    // Your moves into the folders the farm started with (Caro-Kann, Ruy Lopez,
+    // Petrov, Philidor): fixed, so widening the farm never hands them to the engine.
+    { moves: ["e2e4", "c7c6"], uci: "d2d4" },
+    { moves: ["e2e4", "e7e5", "g1f3", "b8c6"], uci: "f1b5" },
+    { moves: ["e2e4", "e7e5", "g1f3", "g8f6"], uci: "f3e5" },
+    { moves: ["e2e4", "e7e5", "g1f3", "d7d6"], uci: "d2d4" },
   ],
   b: [],
 };
+
+/**
+ * Every move of yours the tree takes as given: `FIXED_CHOICES`, plus your
+ * moves on the way into each of the farm's folders (`FARM_FOCUS`). Those
+ * folders are named for your move into them ("3.Bb5 Ruy Lopez"), so it is
+ * your repertoire; and the position before it lies outside every focus folder,
+ * so the farm would never be asked about it and the tree could never grow
+ * into the folder.
+ */
+export function fixedChoices(
+  color: "w" | "b",
+): readonly { moves: readonly string[]; uci: string }[] {
+  const out = [...FIXED_CHOICES[color]];
+  const yours = color === "w" ? 0 : 1;
+  for (const root of FARM_FOCUS[color]) {
+    root.forEach((uci, ply) => {
+      if (ply % 2 !== yours) return;
+      const moves = root.slice(0, ply);
+      if (!out.some((o) => o.moves.join(" ") === moves.join(" "))) out.push({ moves, uci });
+    });
+  }
+  return out;
+}
+
+/** White's first moves, as Black meets them: move, folder name (lichess list, shortened). */
+const WHITE_FIRST_MOVES: readonly [uci: string, name: string][] = [
+  ["e2e4", "1.e4 King's Pawn"],
+  ["d2d4", "1.d4 Queen's Pawn"],
+  ["c2c4", "1.c4 English"],
+  ["g1f3", "1.Nf3 Zukertort"],
+  ["e2e3", "1.e3 Van't Kruijs"],
+  ["g2g3", "1.g3 Hungarian"],
+  ["f2f4", "1.f4 Bird"],
+  ["b2b3", "1.b3 Nimzo-Larsen Attack"],
+  ["d2d3", "1.d3 Mieses"],
+  ["b1c3", "1.Nc3 Van Geet"],
+  ["b2b4", "1.b4 Polish"],
+  ["g2g4", "1.g4 Grob"],
+  ["c2c3", "1.c3 Saragossa"],
+  ["h2h4", "1.h4 Kádas"],
+  ["h2h3", "1.h3 Clemenz"],
+  ["a2a4", "1.a4 Ware"],
+  ["f2f3", "1.f3 Barnes"],
+  ["a2a3", "1.a3 Anderssen"],
+  ["g1h3", "1.Nh3 Amar"],
+  ["b1a3", "1.Na3 Sodium Attack"],
+];
+
+/**
+ * Black's own replies to a first move, as folders (your move into them), each
+ * holding White's second moves your games met (5 games or more).
+ */
+const BLACK_REPLIES: Readonly<
+  Record<string, { pick: string; name: string; note?: string; replies: readonly Reply[] }>
+> = {
+  e2e4: {
+    pick: "e7e6",
+    name: "1…e6 French",
+    replies: [
+      ["d2d4", "2.d4 Normal"],
+      ["g1f3", "2.Nf3 Knight"],
+      ["b1c3", "2.Nc3 Queen's Knight"],
+      ["f2f4", "2.f4 La Bourdonnais"],
+      [
+        "f1c4",
+        "2.Bc4 Bishop's Opening",
+        "Coined: no name in the lichess list. The bishop goes to c4 as in the Bishop's Opening (1.e4 e5 2.Bc4), here against 1…e6, where …d5 hits it at once.",
+      ],
+      ["c2c4", "2.c4 Steiner"],
+      ["e4e5", "2.e5 Steinitz Attack"],
+      ["d2d3", "2.d3 King's Indian Attack"],
+      [
+        "d1f3",
+        "2.Qf3 Early Queen",
+        "Coined: no name found. The queen comes out before any minor piece, eyeing f7 and b7.",
+      ],
+      [
+        "c2c3",
+        "2.c3 Late Saragossa",
+        "Coined: no name found. 1.c3 is the Saragossa Opening; here White plays it a move later.",
+      ],
+      ["b2b3", "2.b3 Horwitz Attack"],
+      ["g2g3", "2.g3 Réti-Spielmann"],
+      [
+        "d1h5",
+        "2.Qh5 Parham",
+        "Coined: no name in the lichess list for this position. The same queen sortie as the Parham Attack (1.e4 e5 2.Qh5), here against 1…e6.",
+      ],
+      ["d1e2", "2.Qe2 Chigorin"],
+    ],
+  },
+  d2d4: {
+    pick: "e7e6",
+    name: "1…e6 Horwitz",
+    replies: [
+      [
+        "c2c4",
+        "2.c4 Normal",
+        "Named by analogy: lichess calls 1.d4 Nf6 2.c4 the Normal Variation; 2.c4 is the main line here too, mostly heading for the Queen's Gambit Declined or the Nimzo-Indian.",
+      ],
+      [
+        "c1f4",
+        "2.Bf4 Accelerated London",
+        "Named by analogy: lichess calls 1.d4 d5 2.Bf4 the Accelerated London System, the same early bishop.",
+      ],
+      [
+        "e2e4",
+        "2.e4 French",
+        "A transposition: the French Defense, Normal Variation (1.e4 e6 2.d4).",
+      ],
+      [
+        "g1f3",
+        "2.Nf3 Zukertort",
+        "Named by analogy: lichess calls 1.d4 d5 2.Nf3 the Zukertort Variation.",
+      ],
+      [
+        "e2e3",
+        "2.e3 Colle Setup",
+        "Coined: no name found. d4 and e3 are the Colle System's pawns; the full system follows with Nf3 and Bd3.",
+      ],
+      [
+        "b1c3",
+        "2.Nc3 Chigorin",
+        "Named by analogy: lichess calls 1.d4 d5 2.Nc3 the Chigorin Variation.",
+      ],
+      [
+        "g2g3",
+        "2.g3 Catalan Setup",
+        "Coined: no name found. g3 with d4 is the Catalan's setup, usually with c4 and Bg2 to follow.",
+      ],
+      [
+        "d4d5",
+        "2.d5 Space Grab",
+        "Coined: no name found. The pawn pushes on at once, taking space and cramping …e6.",
+      ],
+      [
+        "a2a3",
+        "2.a3 Late Anderssen",
+        "Coined: no name found. 1.a3 is Anderssen's Opening; here White plays it a move later.",
+      ],
+    ],
+  },
+};
+
+/**
+ * Black's own moves one level further down (the position before as moves from
+ * the start), each holding White's replies your games met (5 games or more).
+ * A reply's folder goes deeper again when an entry starts there.
+ */
+const BLACK_MOVES: readonly {
+  at: readonly string[];
+  pick: string;
+  name: string;
+  note?: string;
+  replies: readonly Reply[];
+}[] = [
+  {
+    at: ["e2e4", "e7e6", "d2d4"],
+    pick: "d7d5",
+    name: "2…d5 Main Line",
+    note: "Named from the literature: 2…d5 is the French proper; lichess files the position under the French Defense itself.",
+    replies: [
+      ["e4e5", "3.e5 Advance"],
+      ["e4d5", "3.exd5 Exchange"],
+      ["b1c3", "3.Nc3 Paulsen"],
+      ["b1d2", "3.Nd2 Tarrasch"],
+      ["f1d3", "3.Bd3 Schlechter"],
+      ["c2c4", "3.c4 Diemer-Duhm Gambit"],
+      ["g1f3", "3.Nf3 Perseus Gambit"],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e6", "g1f3"],
+    pick: "d7d5",
+    name: "2…d5 Main Line",
+    note: "Named from the literature: …d5 is the French's main answer; lichess lists no name for this exact position.",
+    replies: [
+      [
+        "e4d5",
+        "3.exd5 Exchange",
+        "Named by analogy: the same capture as the French Exchange Variation (1.e4 e6 2.d4 d5 3.exd5), here before d4.",
+      ],
+      [
+        "e4e5",
+        "3.e5 Advance",
+        "Named by analogy: the same push as the French Advance Variation (1.e4 e6 2.d4 d5 3.e5), here before d4.",
+      ],
+      ["b1c3", "3.Nc3 Two Knights"],
+      [
+        "d2d3",
+        "3.d3 King's Indian Attack",
+        "Named by analogy: Nf3 with d3 is the King's Indian Attack's setup (lichess: French Defense: King's Indian Attack, 1.e4 e6 2.d3).",
+      ],
+      [
+        "d2d4",
+        "3.d4 Perseus Gambit",
+        "A transposition: the French Defense, Perseus Gambit (1.e4 e6 2.d4 d5 3.Nf3).",
+      ],
+      [
+        "f1b5",
+        "3.Bb5+ Spite Check",
+        "Coined: no name found. A check that achieves little: …c6 or …Bd7 blocks it with tempo.",
+      ],
+      [
+        "f1c4",
+        "3.Bc4 Late Bishop's",
+        "Coined: no name found. 2.Bc4 is the Bishop's Opening against the French; here it comes a move later, walking into …dxe4 or …dxc4.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e6", "d2d4", "d7d5", "e4e5"],
+    pick: "c7c5",
+    name: "3…c5 Main Line",
+    note: "Named from the literature: 3…c5 is the main answer to the Advance; lichess files it under the Advance Variation itself.",
+    replies: [
+      [
+        "c2c3",
+        "4.c3 Classical",
+        "Named from the literature: the classical way to hold d4, the Advance's main line; lichess files it under the Advance Variation.",
+      ],
+      ["g1f3", "4.Nf3 Nimzowitsch System"],
+      ["d4c5", "4.dxc5 Steinitz"],
+      [
+        "f1b5",
+        "4.Bb5+ Spite Check",
+        "Coined: no name found. A check that achieves little: …Bd7 or …Nc6 blocks it with tempo.",
+      ],
+      [
+        "c1e3",
+        "4.Be3 Bishop Guard",
+        "Coined: no name found. The bishop guards d4 in place of the usual c3.",
+      ],
+      [
+        "f2f4",
+        "4.f4 Pawn Wall",
+        "Coined: no name found. White backs the e5 pawn with f4, building a wall in front of the king.",
+      ],
+      [
+        "c2c4",
+        "4.c4 Flank Strike",
+        "Coined: no name found. White hits d5 from the side instead of supporting d4.",
+      ],
+      ["d1g4", "4.Qg4 Nimzowitsch Attack"],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e6", "g1f3", "d7d5", "e4d5"],
+    pick: "e6d5",
+    name: "3…exd5 Main Line",
+    note: "Named from the literature: the natural recapture, opening the c8 bishop; lichess lists no name for this exact position.",
+    replies: [
+      [
+        "d2d4",
+        "4.d4 Exchange French",
+        "A transposition: the French Exchange Variation (1.e4 e6 2.d4 d5 3.exd5 exd5 4.Nf3). Games reach the same position from both sides.",
+      ],
+      [
+        "b1c3",
+        "4.Nc3 Two Knights",
+        "Named by analogy: Nf3 and Nc3 against …d5, as in the French Two Knights (1.e4 e6 2.Nf3 d5 3.Nc3).",
+      ],
+      [
+        "d1e2",
+        "4.Qe2+ Queen Check",
+        "Coined: no name found. The check asks …Qe7 (offering a queen trade) or …Be7.",
+      ],
+      [
+        "f1b5",
+        "4.Bb5+ Spite Check",
+        "Coined: no name found. A check that achieves little: …c6 or …Bd7 blocks it with tempo.",
+      ],
+      [
+        "f1e2",
+        "4.Be2 Quiet Bishop",
+        "Coined: no name found. The bishop develops modestly to e2, ready to castle.",
+      ],
+      [
+        "d2d3",
+        "4.d3 Small Center",
+        "Coined: no name found. White settles for d3 instead of d4, as in the Philidor's 2…d6 Small Center on the other side.",
+      ],
+      [
+        "c2c4",
+        "4.c4 Monte Carlo",
+        "Named by analogy: lichess calls the same c4 strike in the Exchange Variation (4.c4, with d4) the Monte Carlo Variation.",
+      ],
+    ],
+  },
+  {
+    at: ["e2e4", "e7e6", "d2d4", "d7d5", "e4d5"],
+    pick: "e6d5",
+    name: "3…exd5 Main Line",
+    note: "Named from the literature: the natural recapture; lichess files the position under the Exchange Variation itself.",
+    replies: [
+      [
+        "g1f3",
+        "4.Nf3 Knight Line",
+        "Coined: lichess files it under the Exchange Variation. The same position as 2.Nf3 d5 3.exd5 exd5 4.d4; games reach it from both sides.",
+      ],
+      [
+        "b1c3",
+        "4.Nc3 Queen's Knight",
+        "Named by analogy: the French Queen's Knight (2.Nc3), here after the exchange.",
+      ],
+      [
+        "f1d3",
+        "4.Bd3 Classical",
+        "Named from the literature: 4.Bd3 is the classical development in the Exchange Variation.",
+      ],
+      ["c2c4", "4.c4 Monte Carlo"],
+      [
+        "d1e2",
+        "4.Qe2+ Queen Check",
+        "Coined: no name found. The check asks …Qe7 (offering a queen trade) or …Be7.",
+      ],
+      [
+        "h2h3",
+        "4.h3 Waiting Move",
+        "Coined: no name found. A quiet pawn move that keeps …Bg4 out before developing.",
+      ],
+      [
+        "c1f4",
+        "4.Bf4 London Setup",
+        "Named by analogy: d4 with an early Bf4 is the London System's setup.",
+      ],
+      [
+        "f1b5",
+        "4.Bb5+ Spite Check",
+        "Coined: no name found. A check that achieves little: …c6 or …Bd7 blocks it with tempo.",
+      ],
+    ],
+  },
+];
+
+const deeperBlack = (moves: readonly string[]): TrainerFolder[] =>
+  BLACK_MOVES.filter((t) => t.at.join(" ") === moves.join(" ")).map((t) =>
+    folder(
+      t.name,
+      [...moves, t.pick],
+      t.replies.map(([reply, name, note]) =>
+        folder(name, [...moves, t.pick, reply], deeperBlack([...moves, t.pick, reply]), note),
+      ),
+      t.note,
+    ),
+  );
+
+/** A Black folder: ids carry the colour, since White's tree has folders at the same moves. */
+const blackIds = (f: TrainerFolder): TrainerFolder => ({
+  ...f,
+  id: `b-${f.moves.join("-")}`,
+  children: f.children.map(blackIds),
+});
 
 export const TRAINER_FOLDERS: Readonly<Record<"w" | "b", readonly TrainerFolder[]>> = {
   w: [
@@ -648,5 +1051,25 @@ export const TRAINER_FOLDERS: Readonly<Record<"w" | "b", readonly TrainerFolder[
       ),
     ),
   ],
-  b: [],
+  b: WHITE_FIRST_MOVES.map(([uci, name]) => {
+    const mine = BLACK_REPLIES[uci];
+    const inside = mine
+      ? [
+          folder(
+            mine.name,
+            [uci, mine.pick],
+            mine.replies.map(([reply, replyName, note]) =>
+              folder(
+                replyName,
+                [uci, mine.pick, reply],
+                deeperBlack([uci, mine.pick, reply]),
+                note,
+              ),
+            ),
+            mine.note,
+          ),
+        ]
+      : [];
+    return blackIds(folder(name, [uci], inside));
+  }),
 };

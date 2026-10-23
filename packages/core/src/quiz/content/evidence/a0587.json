@@ -1,0 +1,242 @@
+{
+ "article": "a0587",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Heidschnucke",
+   "title": "Heidschnucke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:26.386Z",
+   "snapshot": "872fdb31795959c8596e7a9de5ad6e7f4b077fcb13d1bf1bda3fdd651852df21"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Highland_cattle",
+   "title": "Highland cattle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:27.308Z",
+   "snapshot": "0ac592157e2417813f12274f4b1bb56ae45d3a51743184b7a1a8a62da6761a96"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lipizzan",
+   "title": "Lipizzan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:28.324Z",
+   "snapshot": "a58398b75e8e3ec70f953d8f4d3817529b75adf927b8408d81ecb9e3f571f5c4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Merino",
+   "title": "Merino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:29.410Z",
+   "snapshot": "d720c8db11b9d3a05e1d24caac227f4057079c41fa3088fd290acad53ef7717b"
+  },
+  "s5": {
+   "url": "https://hereford.org/about/history/",
+   "title": "History – American Hereford Association",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:28.277Z",
+   "snapshot": "6d03cad979a251712c85a1cd8a9234168e45d2ddd9cd165df2756bcb9fadcc29"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heidschnucke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Highland cattle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lipizzaner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Merino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hereford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:10.330Z",
+   "target": "f02931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Heidschnucke ist eine Rasse des Hausschafs.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heidschnucke” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:10.330Z",
+   "target": "f02932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Although a group of cattle is generally called a herd, a group of Highland cattle is known as a \"fold\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Highland cattle” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:10.330Z",
+   "target": "f02933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Lipizzan or Lipizzaner (Croatian: Lipicanac, Czech: Lipicán, German: Lipizzaner, Hungarian: Lipicai, Italian: Lipizzano, Serbian: Lipicaner, Slovene: Lipicanec) is a European breed of riding horse developed in the Habsburg Empire in the sixteenth century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lipizzaner” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:10.330Z",
+   "target": "f02934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Merino is a breed or group of breeds of domestic sheep, characterised by very fine soft wool.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merino” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:10.330Z",
+   "target": "f02935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "History - American Hereford Association",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hereford” is on the snapshot of s5"
+  }
+ ]
+}

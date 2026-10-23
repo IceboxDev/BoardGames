@@ -1,0 +1,474 @@
+{
+ "article": "a0913",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wannabe",
+   "title": "Wannabe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:38.488Z",
+   "snapshot": "cc2b2d479f3fc68bab56e23c0c38030ffdc664c6360e11b6bd72948f51635e84"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/...Baby_One_More_Time",
+   "title": "...Baby One More Time – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:39.392Z",
+   "snapshot": "6491a9eb22cfc51ee0d7f961e0399755bc71ee60580365825f47afc6e89f2ab8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Barbie_Girl",
+   "title": "Barbie Girl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:40.379Z",
+   "snapshot": "4d3e1d7eecebc6d2e0fc03595991d3632dc72b1cedd0d542c10c3724f36be196"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/MMMBop",
+   "title": "MMMBop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:41.272Z",
+   "snapshot": "8c870b6a719fecec29ed9e0c2419a5c64de341b0e874dcc02da50783e5602cbd"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Spice_Girls",
+   "title": "Spice Girls",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:38.891Z",
+   "snapshot": "05fbb61807f4788bc555123c2cd02965a8a1c5768ab62fc4438bf0ba8563be92"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Right_Said_Fred",
+   "title": "Right Said Fred",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:39.697Z",
+   "snapshot": "b4d60809f820218fe29235414feef64f2dd0df8f04d10078be5400a8e963ef3b"
+  },
+  "s7": {
+   "url": "https://www.songfacts.com/facts/lou-bega/mambo-no-5-a-little-bit-of/1000",
+   "title": "Mambo No 5 (A Little Bit Of) by Lou Bega – Songfacts",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:40.252Z",
+   "snapshot": "d1b9ab17eecb2e57a5d4594941cd4b8d877742113f58be2dc697ba39cca2f762"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mambo_No._5",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:42.290Z",
+   "snapshot": "89c2331aa3adf904ac37de0d2267962e93a07509d9ab61f6cd60d0168f2a4392"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Spice_Girls",
+   "title": "Spice Girls – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:35.422Z",
+   "snapshot": "9ea6901b2b0aec254141ba15e51c7e16645c6c24d3dbd1b91aac17e7cb004c21"
+  },
+  "s10": {
+   "url": "https://news.bbc.co.uk/2/hi/entertainment/7021976.stm",
+   "title": "Spice Girls – BBC News",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:35.515Z",
+   "snapshot": "f0acbcd574fdf5e3582629b70af18e68863604d770678c93c82da53eec09d337"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wannabe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "...Baby One More Time",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Barbie Girl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "MMMBop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Scary Spice, Sporty Spice, Baby Spice, Ginger Spice und Posh Spice",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-120"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Right Said Fred",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-132"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary and Jessica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-311"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary and Jessica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 41"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f04561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Wannabe\" is the debut single by the British girl group the Spice Girls, released on 26 June 1996.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wannabe” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f04562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"...Baby One More Time\" is the debut single by the American singer Britney Spears, from her 1999 debut album of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “...Baby One More Time” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f04563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Barbie Girl\" is a song by Danish-Norwegian dance-pop group Aqua.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barbie Girl” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f04565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"MMMBop\" is a song written and performed by American pop rock band Hanson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MMMBop” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f13140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Scary Spice, Sporty Spice, Baby Spice, Ginger Spice und Posh Spice",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Scary Spice, Sporty Spice, Baby Spice, Ginger Spice und Posh Spice”, “Scary Spice, Sporty Spice, Baby Spice, Ginger Spice and Posh Spice”, “Scary Spice, Sporty Spice, Baby Spice, Ginger Spice и Posh Spice”) on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f13141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Right Said Fred ist eine britische Pop-Band, die im Jahr 1989 von den Brüdern Fred (Christopher Abbott Bernard) Fairbrass und Richard Fairbrass gegründet wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Right Said Fred” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f13142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1999, the German pop musician Lou Bega added lyrics to it, transforming it into a love song for several women, namely Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary and Jessica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary and Jessica” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:03.640Z",
+   "target": "f13142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary and Jessica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary and Jessica”, “Angela, Pamela, Sandra, Rita, Monica, Erica, Tina, Mary und Jessica”, “Анджела, Памела, Сандра, Рита, Моника, Эрика, Тина, Мэри и Джессика”) on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:59:19Z",
+   "target": "f13140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "consisting of Mel B (\"Scary Spice\"), Melanie C (\"Sporty Spice\"), Emma Bunton (\"Baby Spice\"), Geri Halliwell (\"Ginger Spice\"), and Victoria Beckham (\"Posh Spice\")",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:59:22Z",
+   "target": "f13140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Emma Bunton, Melanie Brown, Melanie Chisholm, Victoria Adams and Geri Halliwell quickly became household names - although they were better known as Baby, Scary, Sporty, Posh and Ginger.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:32.976Z",
+   "target": "f13140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "consisting of Mel B (\"Scary Spice\"), Melanie C (\"Sporty Spice\"), Emma Bunton (\"Baby Spice\"), Geri Halliwell (\"Ginger Spice\"), and Victoria Beckham (\"Posh Spice\")",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:32.976Z",
+   "target": "f13140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Emma Bunton, Melanie Brown, Melanie Chisholm, Victoria Adams and Geri Halliwell quickly became household names - although they were better known as Baby, Scary, Sporty, Posh and Ginger.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.976Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  }
+ ]
+}

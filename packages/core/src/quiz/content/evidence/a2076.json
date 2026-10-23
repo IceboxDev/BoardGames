@@ -1,0 +1,289 @@
+{
+ "article": "a2076",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Korabl-Sputnik_5",
+   "title": "Korabl-Sputnik 5 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:50.741Z",
+   "snapshot": "9cc813ed4b57806d28e64242af61c133ccdf81d739ed8e31f9fcd41acbfcb457"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Explorer_1",
+   "title": "Explorer 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:51.748Z",
+   "snapshot": "0944d030b37bf8eaf5ff0b8d3ce62673689195ee3f0e57ce78348ff028c6e4f3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Telstar_1",
+   "title": "Telstar 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:52.742Z",
+   "snapshot": "2d289d12a30184605d3c127bc5aeaf56a90abca08cd3e39d0fd754e1b406f8be"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Telstar",
+   "title": "Telstar",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:50.022Z",
+   "snapshot": "d35f5738043866d433cb9acfa9433cfd0aafa0d6678df4dfb8fb3bf4f7c90ba4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ast%C3%A9rix_(satellite)",
+   "title": "Astérix (satellite) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:53.796Z",
+   "snapshot": "15ad04c81d9d1902ae30be586c063566390749222979b226b8d1bbeafb4730fb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Azur_(satellite)",
+   "title": "Azur (satellite) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:54.741Z",
+   "snapshot": "25c5c167fe5ab6acebe514d9d52f05fb2356f2497ae8e930af9c5c84b0933034"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sputnik",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c173"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Explorer 1",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Telstar 1",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Telstar 1",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-341"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Astérix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Azur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:18.381Z",
+   "target": "f10376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Korabl-Sputnik 5 (Russian: Корабль-Спутник 5 meaning Ship-Satellite 5) or Vostok-3KA No.2, also known as Sputnik 10 in the West, was a Soviet spacecraft which was launched in 1961, as part of the Vostok programme.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sputnik” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:18.381Z",
+   "target": "f10377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Explorer 1 was the first satellite launched by the United States and was part of the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Explorer 1” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:18.381Z",
+   "target": "f10378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Telstar 1 is a defunct communications satellite launched by NASA on July 10th, 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telstar 1” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:18.381Z",
+   "target": "f10378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juli 1962 wurde der Satellit Telstar 1 von Cape Canaveral aus mit einer Rakete des Typs Delta DM-19 ins All geschossen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telstar 1” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:18.381Z",
+   "target": "f10379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Astérix or A-1 (initially conceptualized as FR.2 or FR-2) is the first French satellite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Astérix” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:18.381Z",
+   "target": "f10380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Azur (also called GRS-A) was West Germany's first scientific satellite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.381Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Azur” is on the snapshot of s6"
+  }
+ ]
+}

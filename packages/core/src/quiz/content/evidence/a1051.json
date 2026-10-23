@@ -1,0 +1,242 @@
+{
+ "article": "a1051",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Jamal_Khashoggi",
+   "title": "Assassination of Jamal Khashoggi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:36.822Z",
+   "snapshot": "a034d200a8e031119f04e8b23b82c594ee16dbc41b4dd35c9a04bd9a6bcfdb75"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Boris_Nemtsov",
+   "title": "Assassination of Boris Nemtsov – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:37.679Z",
+   "snapshot": "ef85bed33e535173f2447b17cb6451fbcf5d70d7dda51daeeda66f471b6120b6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Poisoning_of_Alexander_Litvinenko",
+   "title": "Poisoning of Alexander Litvinenko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:38.705Z",
+   "snapshot": "892f5db352f044e7061af471be3f264201318985599640b6e71341a26a216238"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Poisoning_of_Sergei_and_Yulia_Skripal",
+   "title": "Poisoning of Sergei and Yulia Skripal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:39.760Z",
+   "snapshot": "959102f8d6ae91c3837dde4ba645d7e84d53376faaf00598a55f031d80a7e99a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Mordfall_Selimchan_Changoschwili",
+   "title": "Mordfall Selimchan Changoschwili – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:37:37.141Z",
+   "snapshot": "adab965f8f7074ed96fa7ba529359fa9a4004c96d8422b5ebb05cfe5f1b1984c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Istanbul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c088"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Moscow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05253",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "London",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salisbury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:25.279Z",
+   "target": "f05251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 2 October 2018, Jamal Khashoggi, a Saudi dissident journalist, was killed by agents of the Saudi government at the Saudi consulate in Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Istanbul” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:25.279Z",
+   "target": "f05252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 27 February 2015, Boris Nemtsov, a Russian politician opposed to the government of Vladimir Putin, was assassinated as he crossed the Bolshoy Moskvoretsky Bridge in central Moscow at 23:31 local time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moscow” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:25.279Z",
+   "target": "f05253",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Upon his arrival in London, he continued to support the Russian oligarch in exile, Boris Berezovsky, in his media campaign against the Russian government.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:25.279Z",
+   "target": "f05254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 4 March 2018 in the city of Salisbury, Sergei Skripal and his daughter Yulia became victim of an assassination attempt through a Novichok nerve agent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salisbury” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:25.279Z",
+   "target": "f05255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diese Einstufung sei aufgegeben worden, da er in Berlin wenig aktiv gewesen sei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:25.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-054",
+ "image": "IMG20261022153950.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] Where is an earthquake’s epicenter?\nA. The point in the Earth’s mantle where the quake occurs\nB. The deepest point of the quake\nC. The location on the Earth’s surface directly above where the quake occurs\nAnswer: C.",
+   "de": "Wie heißt der Punkt an der Erdoberfläche direkt über dem Hypozentrum, in dem ein Erdbeben seinen Ursprung hat?",
+   "en": "What is the name of the point on the Earth's surface directly above the hypocenter, where an earthquake originates?",
+   "reworked": true,
+   "answerDe": "Das Epizentrum",
+   "answerEn": "The epicenter",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1810-06-03",
+    "end": "1881-11-05",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Robert Mallet, Irish “father of seismology”, who coined the term epicentre",
+    "labelDe": "Robert Mallet, irischer „Vater der Seismologie“, der den Begriff Epizentrum prägte"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Epicenter",
+    "title": "Epicenter",
+    "lang": "en"
+   },
+   "notes": "Card correct: the epicenter is the point on the Earth's surface directly above the hypocenter or focus, where an earthquake originates (Wikipedia: Epicenter). Reversed into a naming question because the definition is the answer. Term coined by Robert Mallet (1810–1881; dates from Wikipedia: Robert Mallet).",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] What does the Maillard reaction primarily involve?\nA. Lipids and proteins\nB. Sugars and proteins\nC. Sugars and lipids\nAnswer: B. Maillard reaction is responsible for the browning and flavor development in a variety of cooked foods, including bread crusts and grilled meats, and it is why many recipes that have some types of protein often call for sugar. This reaction also plays a role in the aroma of many beverages like coffee and beer.",
+   "de": "Die Maillard-Reaktion, die Brotkruste und angebratenem Fleisch Bräune und Aroma gibt, ist eine Reaktion zwischen reduzierenden Zuckern und welchen anderen Verbindungen?",
+   "en": "The Maillard reaction, behind the browning and flavour of bread crusts and seared meat, is a reaction between reducing sugars and which other compounds?",
+   "reworked": true,
+   "answerDe": "Aminosäuren (aus Proteinen)",
+   "answerEn": "Amino acids (from proteins)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1912",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "French chemist Louis Camille Maillard first describes the browning reaction named after him",
+    "labelDe": "Der französische Chemiker Louis Camille Maillard beschreibt erstmals die nach ihm benannte Bräunungsreaktion"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Maillard_reaction",
+    "title": "Maillard reaction",
+    "lang": "en"
+   },
+   "notes": "Card essentially right: Wikipedia defines the Maillard reaction as between amino acids and reducing sugars (the sugar's carbonyl group reacts with the amino group); 'proteins' is the loose card wording. Described by Maillard in 1912.",
+   "domain": "science",
+   "sub": "chemistry"
+  }
+ ]
+}

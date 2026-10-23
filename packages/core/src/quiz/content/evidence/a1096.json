@@ -1,0 +1,249 @@
+{
+ "article": "a1096",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Blue_Angel",
+   "title": "The Blue Angel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:30.160Z",
+   "snapshot": "588e58bb8c7117f5c4a7484d254770e1f927f3e55bb91dbe1c55764121030626"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Witness_for_the_Prosecution_(1957_film)",
+   "title": "Witness for the Prosecution (1957 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:31.059Z",
+   "snapshot": "c06b449c28d5ab984d7e256cda8438a3f98e366bb000d4178b8ce11f8a61d63c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Metropolis_(1927_film)",
+   "title": "Metropolis (1927 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:32.169Z",
+   "snapshot": "879702380e0ec4471079b1245901fc47b9a6b0f022dbc58590d67a13236a8efa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Eyes_Wide_Shut",
+   "title": "Eyes Wide Shut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:58.175Z",
+   "snapshot": "120052ad684ffb5a8ae0ecec175b29e92eb641bb9bb2ddc67804f8a25ffd1a5b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cabaret_(1972_film)",
+   "title": "Cabaret (1972 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:33.171Z",
+   "snapshot": "d0d14fb9fba28933007e21e4f4edff8f0876360968cb192dfc977cc2303bde41"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Metropolis_(Film)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:30.577Z",
+   "snapshot": "a71b2956f1b01111d7249844a8fc90c3d115fa47465a41cc97f10872a71d5966"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Blue Angel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Witness for the Prosecution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Metropolis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eyes Wide Shut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cabaret",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:32.350Z",
+   "target": "f05476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Blue Angel (German: Der blaue Engel) is a 1930 German musical comedy-drama film directed by Josef von Sternberg and starring Marlene Dietrich, Emil Jannings and Kurt Gerron.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Blue Angel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:32.350Z",
+   "target": "f05477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Witness for the Prosecution is a 1957 American legal mystery melodrama film directed by Billy Wilder and starring Tyrone Power, Marlene Dietrich, and Charles Laughton, with Elsa Lanchester and John Williams.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Witness for the Prosecution” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:32.350Z",
+   "target": "f05478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Metropolis is a 1927 German expressionist science-fiction silent film directed by Fritz Lang and written by Thea von Harbou in collaboration with Lang, based on von Harbou's 1925 novel of the same name (which was written as a treatment).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metropolis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:32.350Z",
+   "target": "f05479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eyes Wide Shut is a 1999 erotic psychological mystery thriller film directed, produced, and co-written by Stanley Kubrick, and starring Tom Cruise and Nicole Kidman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eyes Wide Shut” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:32.350Z",
+   "target": "f05480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cabaret is a 1972 American musical drama film directed and choreographed by Bob Fosse from a screenplay by Jay Presson Allen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cabaret” is on the snapshot of s5"
+  }
+ ]
+}

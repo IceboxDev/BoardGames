@@ -1,0 +1,566 @@
+{
+ "article": "a2048",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nihilism",
+   "title": "Nihilism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:13.618Z",
+   "snapshot": "8caffe2d3720b93f7d6ba61d1973243a4416a87437bc7141a61fa5951e82a221"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Zeno_of_Citium",
+   "title": "Zeno of Citium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:14.394Z",
+   "snapshot": "5959b91bc12cacf4d7fa9538893489cd319075de02f1d7c0e3dc49c2222bd093"
+  },
+  "s3": {
+   "url": "https://fr.wikipedia.org/wiki/L'existentialisme_est_un_humanisme",
+   "title": "L'existentialisme est un humanisme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:38:11.538Z",
+   "snapshot": "d34a0920d45c6d764871ce75338074f94f6c1692ab4042fdffa72d5bc37aab7d"
+  },
+  "s4": {
+   "url": "https://plato.stanford.edu/entries/existentialism/",
+   "title": "Existentialism – Stanford Encyclopedia of Philosophy",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:12.519Z",
+   "snapshot": "8030bf69dc196366436e11e6420e050cabab926eb21b37374f094c0f5cd427b1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Existentialism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:15.514Z",
+   "snapshot": "1ec5221df56b630455798f5f42a8a08be1f500400e9c008e8fa93c199d86830d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Either/Or_(Kierkegaard_book)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:48.426Z",
+   "snapshot": "75f18cc746151d229950dd091741a7359f240201480f67317d7f497ff01db74c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Henry_Huxley",
+   "title": "Thomas Henry Huxley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:29.131Z",
+   "snapshot": "4c3da30a7dc1fb262b71af7078a1a6387c3f8fd15b772b0753f2217112a632d3"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Fathers_and_Sons_(novel)",
+   "title": "Fathers and Sons (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:12.930Z",
+   "snapshot": "7db80a806743e5caa6d6866164b0b98e7648d2e670342b13ffe5375ac5dea518"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Epictetus",
+   "title": "Epictetus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:18.443Z",
+   "snapshot": "54ca7086d7fd669ca51d9d0b2e68fd793820283b0ed06830ccc95182209c6cb9"
+  },
+  "s10": {
+   "url": "https://www.marxists.org/reference/archive/sartre/works/exist/sartre.htm",
+   "title": "Existentialism Is a Humanism (Jean-Paul Sartre, 1946; tr. Philip Mairet)",
+   "publisher": "Marxists Internet Archive",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:13.654Z",
+   "snapshot": "7b1fce6e71e3d368516dd28b9d5431e01cb298f11556df4f71e21796e434ef11"
+  },
+  "s11": {
+   "url": "https://iep.utm.edu/sartre-ex/",
+   "title": "Jean Paul Sartre: Existentialism – Internet Encyclopedia of Philosophy",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:14.182Z",
+   "snapshot": "c07e0a2e4617b9a3875fe7c0e234985ce6c5663b75b617a86b1849cc2412b0af"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nihilism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10238",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stoicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Existentialism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f26100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "individual choice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 36"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Thomas Henry Huxley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bazarov",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Epictetus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f26100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "individual choice",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "individual choice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (pp-066/2, u01): The printed wording sat on f10240 (\"which movement…? → Existentialism\"), but the card asks what existentialism focuses on (individual choice). It moved to a new fact f26100 with that answer; f10240 keeps its question through the restored homebrew wording w10240, which had been retired only because of this card."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f10236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nihilism is a family of philosophical views that reject the existence of any objectively meaningful purpose, moral value, truth, knowledge, or related concepts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nihilism” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f10238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Based on the moral ideas of the Cynics, Stoicism laid great emphasis on goodness and peace of mind gained from living a life of virtue in accordance with nature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stoicism” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Existentialism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Existentialism”, “Existenzialismus”, “Экзистенциализм”) on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f26100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The dialectic structure of becoming renders existence far too easy, in Hegel's theory, because conflicts are eventually mediated and disappear through a natural process that requires no individual choice other than a submission to the Will of the Idea or Geist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “individual choice” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f20506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Thomas Henry Huxley (4 May 1825 – 29 June 1895) was an English biologist and anthropologist who specialised in comparative anatomy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Henry Huxley” is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f20507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Arkady brings his friend, Yevgeny Bazarov.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bazarov” is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:13.161Z",
+   "target": "f28322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Epictetus ( EH-pick-TEE-təss; Ancient Greek: Ἐπίκτητος, Epíktētos; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:13.161Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epictetus” is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:48:45Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "That is what I mean when I say that man is condemned to be free.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:48:48Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The philosophical career of Jean Paul Sartre (1905-1980) focuses, in its first phase, upon the construction of a philosophy of existence known as existentialism.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:48:51Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "whereby we are always in the process of making or creating who we are",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:59.481Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "That is what I mean when I say that man is condemned to be free.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:59.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:59.481Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The philosophical career of Jean Paul Sartre (1905-1980) focuses, in its first phase, upon the construction of a philosophy of existence known as existentialism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:59.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:59.481Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "whereby we are always in the process of making or creating who we are",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:59.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:59.481Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Existentialism (Stanford Encyclopedia of Philosophy)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:59.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Existentialism” is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:59.481Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Existentialism is a Humanism, Jean-Paul Sartre 1946",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:59.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Existentialism” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:59.481Z",
+   "target": "f10240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Sartre, Jean Paul: Existentialism | Internet Encyclopedia of Philosophy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:59.481Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Existentialism” is on the snapshot of s11"
+  }
+ ]
+}

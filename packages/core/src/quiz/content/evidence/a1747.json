@@ -1,0 +1,249 @@
+{
+ "article": "a1747",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Perestroika",
+   "title": "Perestroika – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:11.310Z",
+   "snapshot": "dfc23658e2f620f54a9af84b92880e0ffb0533c2e8062993f79771bd23376c0d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Glasnost",
+   "title": "Glasnost – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:29.172Z",
+   "snapshot": "da9e8eeb9eb2c4c48e97ca47a5df1cc01e58c9c878fb1c1697cf93eb0648e3d7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lenin%27s_Mausoleum",
+   "title": "Lenin's Mausoleum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:46.421Z",
+   "snapshot": "740e0cbc387f70bb946e306d0131cdd4c474db36f9142ad46bdf63d44c50a97d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Reform_and_opening_up",
+   "title": "Reform and opening up – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:47.586Z",
+   "snapshot": "0a2cf91a5571d44db17c27b2f38defab8f74eb1f90e0001482acc5dd17803f69"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Michail_Sergejewitsch_Gorbatschow",
+   "title": "Michail Sergejewitsch Gorbatschow",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:45.556Z",
+   "snapshot": "ea77a52b1fc5aefbd6cde0fe51a0d54521fa43e2f6662553cce4d434a339cc6d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/De-Stalinization",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:48.376Z",
+   "snapshot": "b3ec5a80ae6a3d8af655ffc14f03c82ade5612b71dd66dd0d23c2399543d73a0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Perestroika",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Glasnost",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "de-Stalinization",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Reform and Opening-up",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Michail Gorbatschow",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; transcript tp-114"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:16.040Z",
+   "target": "f08731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Perestroika ( PERR-ə-STROY-kə; Russian: перестройка, romanized: perestroyka, IPA: [pʲɪrʲɪˈstrojkə] ) was a political reform movement within the Communist Party of the Soviet Union (CPSU) during the late 1980s, widely associated with CPSU general secretary Mikhail Gorbachev and his glasnost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perestroika” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:16.040Z",
+   "target": "f08732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Glasnost ( GLAZ-nost; Russian: гласность, IPA: [ˈɡlasnəsʲtʲ] ) is a concept relating to openness and transparency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glasnost” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:16.040Z",
+   "target": "f08734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Between 1953 and 1961, the embalmed body of Joseph Stalin shared a spot next to Lenin's; Stalin's body was eventually removed as part of de-Stalinization and Khrushchev's Thaw, and buried in the Kremlin Wall Necropolis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “de-Stalinization” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:16.040Z",
+   "target": "f08735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Reform and opening-up, also known as the Chinese economic reform or Chinese Economic Miracle or Chinese Growth Miracle, refers to a variety of economic reforms in the People's Republic of China (PRC) that began in the late 20th century, after Mao Zedong's death in 1976.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reform and Opening-up” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:16.040Z",
+   "target": "f12521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An diesem Ort wuchs Michail Gorbatschow heran, wobei er viel Zeit bei seinen Großeltern mütterlicherseits verbrachte, die in ihre Enkelkinder vernarrt waren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.040Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michail Gorbatschow” is on the snapshot of s5"
+  }
+ ]
+}

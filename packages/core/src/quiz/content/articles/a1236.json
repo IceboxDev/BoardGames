@@ -1,0 +1,351 @@
+{
+ "id": "a1236",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "When the Machines Won: Milestones of Game-Playing AI",
+ "titleDe": "Als die Maschinen gewannen: Meilensteine der spielenden KI",
+ "titleRu": "Когда машины победили: вехи игрового искусственного интеллекта",
+ "bodyEn": "Games have always been the proving ground of artificial intelligence. They have clear rules, a definite winner, and human champions whose defeat makes headlines. Five of those defeats mark the road from brute-force search to deep learning.\n\nChess fell first. In May 1997 IBM's Deep Blue, a purpose-built machine evaluating some 200 million positions per second, beat world champion Garry Kasparov at chess; their six-game match in New York ended 3½–2½ on 11 May 1997. Kasparov had won their first encounter a year earlier and accused IBM of human interference in the second; IBM refused a rematch and dismantled the machine. Deep Blue relied on search and hand-tuned evaluation rather than learning, but the symbolic barrier was broken.\n\nIn February 2011 IBM returned with Watson, a question-answering system that played the quiz show Jeopardy! against its two greatest champions, Ken Jennings and Brad Rutter, over three broadcast days. Watson parsed the puns and misdirection of the clues from text alone, buzzed in faster than humans could and won $77,147 to Jennings's $24,000. Jennings's final answer read: \"I, for one, welcome our new computer overlords.\"\n\nThe last classical stronghold was the board game Go, in which Lee Sedol, one of the world's strongest players, lost to a Google program in 2016. With roughly 10^170 legal positions, the ancient Chinese game of black and white stones could not be searched the way chess had been, and experts expected computers to need another decade. Between 9 and 15 March 2016 AlphaGo, developed by Google's subsidiary DeepMind and combining deep neural networks with Monte Carlo tree search, played the South Korean professional Lee Sedol, winner of 18 international titles, in Seoul. It won four games to one; its 37th move in game two was described as a move no human would have played. A year later a successor beat the world number one, Ke Jie, and AlphaGo Zero learned the game from scratch with no human examples at all.\n\nPoker added hidden information and bluffing. From 11 to 31 January 2017 Libratus, built at Carnegie Mellon University, beat four top professionals over 120,000 hands of heads-up no-limit Texas hold'em poker, and in 2019 its successor Pluribus did the same at a six-player table – the first AI to win a multi-player game of imperfect information.\n\nFinally, in 2019 DeepMind's AlphaStar reached the Grandmaster league of StarCraft II, Blizzard's real-time strategy game, playing anonymously on the European ladder and ranking above 99.8 per cent of human players with all three races.\n\n| Year | Game | Program | Beaten |\n|---|---|---|---|\n| 1997 | Chess | Deep Blue (IBM) | Garry Kasparov |\n| 2011 | Jeopardy! | Watson (IBM) | Ken Jennings, Brad Rutter |\n| 2016 | Go | AlphaGo (Google DeepMind) | Lee Sedol |\n| 2017 / 2019 | Poker | Libratus / Pluribus (CMU) | professional players |\n| 2019 | StarCraft II | AlphaStar (DeepMind) | 99.8 % of ladder players |\n\nEach victory moved the goalposts for what \"intelligence\" was supposed to mean – and each time the goalposts moved again.",
+ "bodyDe": "Spiele waren immer das Prüffeld der künstlichen Intelligenz. Sie haben klare Regeln, einen eindeutigen Sieger und menschliche Champions, deren Niederlage Schlagzeilen macht. Fünf dieser Niederlagen markieren den Weg von der rohen Suche zum tiefen Lernen.\n\nSchach fiel zuerst. Im Mai 1997 schlug IBMs Deep Blue, eine eigens gebaute Maschine, die rund 200 Millionen Stellungen pro Sekunde bewertete, Weltmeister Garri Kasparow im Schach; ihr Wettkampf über sechs Partien in New York endete am 11. Mai 1997 mit 3,5:2,5. Kasparow hatte die erste Begegnung ein Jahr zuvor gewonnen und warf IBM in der zweiten menschliche Einmischung vor; IBM lehnte eine Revanche ab und zerlegte die Maschine. Deep Blue beruhte auf Suche und handjustierter Bewertung, nicht auf Lernen, aber die symbolische Schranke war gebrochen.\n\nIm Februar 2011 kehrte IBM mit Watson zurück, einem Frage-Antwort-System, das an drei Sendetagen in der Quizshow Jeopardy! gegen deren beide größte Champions Ken Jennings und Brad Rutter antrat. Watson entschlüsselte die Wortspiele und Irreführungen der Hinweise allein aus dem Text, drückte schneller auf den Buzzer als ein Mensch und gewann mit 77.147 Dollar gegenüber 24.000 Dollar für Jennings. Jennings' letzte Antwort lautete: „Ich für meinen Teil heiße unsere neuen Computer-Herrscher willkommen.“\n\nDie letzte klassische Bastion war das Brettspiel Go, in dem Lee Sedol, einer der weltbesten Spieler, 2016 gegen ein Programm von Google verlor. Mit rund 10^170 legalen Stellungen ließ sich das alte chinesische Spiel mit schwarzen und weißen Steinen nicht durchsuchen wie Schach, und Experten erwarteten, dass Computer noch ein Jahrzehnt brauchen würden. Vom 9. bis 15. März 2016 spielte AlphaGo, entwickelt von Googles Tochterfirma DeepMind und eine Verbindung tiefer neuronaler Netze mit Monte-Carlo-Baumsuche, in Seoul gegen den südkoreanischen Profi Lee Sedol, Gewinner von 18 internationalen Titeln. Es gewann vier Partien zu eins; sein 37. Zug in der zweiten Partie wurde als Zug beschrieben, den kein Mensch gespielt hätte. Ein Jahr später schlug ein Nachfolger die Nummer eins der Welt, Ke Jie, und AlphaGo Zero lernte das Spiel ganz ohne menschliche Vorbilder von Grund auf.\n\nPoker fügte verdeckte Information und Bluffen hinzu. Vom 11. bis 31. Januar 2017 schlug Libratus von der Carnegie Mellon University vier Spitzenprofis im Poker, über 120.000 Hände Heads-up No-Limit Texas Hold'em, und 2019 tat sein Nachfolger Pluribus dasselbe an einem Sechsertisch – die erste KI, die ein Mehrspielerspiel mit unvollständiger Information gewann.\n\nSchließlich erreichte 2019 DeepMinds AlphaStar die Großmeister-Liga von StarCraft II, Blizzards Echtzeit-Strategiespiel, indem es anonym auf der europäischen Rangliste spielte und mit allen drei Rassen über 99,8 Prozent der menschlichen Spieler lag.\n\n| Jahr | Spiel | Programm | Geschlagen |\n|---|---|---|---|\n| 1997 | Schach | Deep Blue (IBM) | Garri Kasparow |\n| 2011 | Jeopardy! | Watson (IBM) | Ken Jennings, Brad Rutter |\n| 2016 | Go | AlphaGo (Google DeepMind) | Lee Sedol |\n| 2017 / 2019 | Poker | Libratus / Pluribus (CMU) | Profispieler |\n| 2019 | StarCraft II | AlphaStar (DeepMind) | 99,8 % der Ranglistenspieler |\n\nJeder Sieg verschob die Torpfosten dessen, was „Intelligenz“ bedeuten sollte – und jedes Mal wurden sie erneut verschoben.",
+ "bodyRu": "Игры всегда были испытательным полигоном искусственного интеллекта. У них чёткие правила, определённый победитель и чемпионы-люди, чьё поражение попадает в заголовки. Пять таких поражений отмечают путь от перебора грубой силой к глубокому обучению.\n\nПервыми пали шахматы. В мае 1997 года компьютер IBM Deep Blue, специально построенная машина, оценивавшая около 200 миллионов позиций в секунду, обыграл в шахматы чемпиона мира Гарри Каспарова; их матч из шести партий в Нью-Йорке завершился 11 мая 1997 года со счётом 3½ : 2½. Каспаров выиграл их первую встречу годом ранее и обвинил IBM во вмешательстве людей во второй; IBM отказалась от матча-реванша и разобрала машину. Deep Blue опирался на перебор и вручную настроенную оценку, а не на обучение, но символический барьер был сломан.\n\nВ феврале 2011 года IBM вернулась с Watson — вопросно-ответной системой, которая в течение трёх эфирных дней играла в телевикторину Jeopardy! против двух её величайших чемпионов, Кена Дженнингса и Брэда Раттера. Watson разбирал каламбуры и ловушки подсказок только по тексту, нажимал на кнопку быстрее людей и выиграл 77 147 долларов против 24 000 у Дженнингса. Последний ответ Дженнингса гласил: «Я, со своей стороны, приветствую наших новых компьютерных повелителей».\n\nПоследним классическим бастионом оказалась настольная игра го, в которой Ли Седоль, один из сильнейших игроков мира, в 2016 году проиграл программе Google. Древнюю китайскую игру чёрными и белыми камнями с её примерно 10^170 допустимыми позициями нельзя было перебрать так, как шахматы, и эксперты ожидали, что компьютерам понадобится ещё десятилетие. С 9 по 15 марта 2016 года AlphaGo, разработанная дочерней компанией Google DeepMind и сочетавшая глубокие нейронные сети с поиском по дереву методом Монте-Карло, играла в Сеуле с южнокорейским профессионалом Ли Седолем, обладателем 18 международных титулов. Она выиграла со счётом 4 : 1; её 37-й ход во второй партии назвали ходом, который не сыграл бы ни один человек. Годом позже её преемница обыграла первого номера мирового рейтинга Кэ Цзе, а AlphaGo Zero освоила игру с нуля, вовсе без человеческих примеров.\n\nПокер добавил скрытую информацию и блеф. С 11 по 31 января 2017 года программа Libratus, созданная в Университете Карнеги — Меллона, обыграла четырёх ведущих профессионалов в покер — за 120 000 раздач безлимитного техасского холдема один на один, а в 2019 году её преемница Pluribus добилась того же за столом на шестерых — первый ИИ, победивший в многопользовательской игре с неполной информацией.\n\nНаконец, в 2019 году AlphaStar от DeepMind достиг лиги грандмастеров в StarCraft II, стратегии в реальном времени от Blizzard: играя анонимно на европейском рейтинговом сервере, он обошёл более 99,8 процента игроков-людей за все три расы.\n\n| Год | Игра | Программа | Побеждённые |\n|---|---|---|---|\n| 1997 | Шахматы | Deep Blue (IBM) | Гарри Каспаров |\n| 2011 | Jeopardy! | Watson (IBM) | Кен Дженнингс, Брэд Раттер |\n| 2016 | Го | AlphaGo (Google DeepMind) | Ли Седоль |\n| 2017 / 2019 | Покер | Libratus / Pluribus (CMU) | профессиональные игроки |\n| 2019 | StarCraft II | AlphaStar (DeepMind) | 99,8 % рейтинговых игроков |\n\nКаждая победа сдвигала ворота того, что должно было означать слово «интеллект», — и каждый раз их сдвигали снова.",
+ "notesEn": "The software was AlphaGo by Google DeepMind. The card called Lee Sedol the world's best player; he was one of the world's strongest players but not the top-ranked one in 2016 (that was Ke Jie).",
+ "notesDe": "Die Software war AlphaGo von Google DeepMind. Die Karte nannte Lee Sedol den weltbesten Spieler; er war einer der weltbesten Spieler, 2016 aber nicht die Nummer eins (das war Ke Jie).",
+ "notesRu": "Программа называлась AlphaGo (Google DeepMind). На карточке Ли Седоль назван лучшим игроком мира; он был одним из сильнейших, но в 2016 году не первым номером рейтинга (им был Кэ Цзе).",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Deep_Blue.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+   "width": 400,
+   "height": 601,
+   "alt": {
+    "en": "A cabinet of IBM's Deep Blue chess computer",
+    "de": "Ein Schrank des IBM-Schachcomputers Deep Blue",
+    "ru": "Стойка шахматного компьютера IBM Deep Blue"
+   },
+   "caption": {
+    "en": "One of the two cabinets of Deep Blue, the IBM machine that beat Garry Kasparov at chess in May 1997, now in the Computer History Museum.",
+    "de": "Einer der beiden Schränke von Deep Blue, der IBM-Maschine, die Garri Kasparow im Mai 1997 im Schach schlug, heute im Computer History Museum.",
+    "ru": "Одна из двух стоек Deep Blue — машины IBM, обыгравшей Гарри Каспарова в шахматы в мае 1997 года; сейчас в Музее компьютерной истории."
+   }
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lee_Se-Dol_-_2016_%28cropped%29.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Lee_Sedol",
+   "width": 367,
+   "height": 550,
+   "alt": {
+    "en": "Portrait of the Go professional Lee Sedol in 2016",
+    "de": "Porträt des Go-Profis Lee Sedol im Jahr 2016",
+    "ru": "Портрет профессионального игрока в го Ли Седоля, 2016 год"
+   },
+   "caption": {
+    "en": "Lee Sedol in 2016, the year he lost four of five games of Go to DeepMind's AlphaGo in Seoul.",
+    "de": "Lee Sedol im Jahr 2016, in dem er in Seoul vier von fünf Go-Partien gegen DeepMinds AlphaGo verlor.",
+    "ru": "Ли Седоль в 2016 году, когда он проиграл в Сеуле четыре партии в го из пяти программе AlphaGo от DeepMind."
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "f06176",
+   "answerEn": "the board game Go",
+   "answerDe": "das Brettspiel Go",
+   "answerRu": "игра го",
+   "spans": {
+    "en": [
+     1197,
+     17
+    ],
+    "de": [
+     1350,
+     17
+    ],
+    "ru": [
+     1314,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2016-03-09",
+    "end": "2016-03-15",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "AlphaGo beats Lee Sedol 4–1 at Go in Seoul",
+    "labelDe": "AlphaGo schlägt Lee Sedol in Seoul im Go mit 4:1",
+    "labelRu": "AlphaGo побеждает Ли Седоля в го со счётом 4 : 1 в Сеуле"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+    "title": "AlphaGo versus Lee Sedol – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06176",
+     "en": "In which Chinese board game was Lee Sedol, one of the world's strongest players, beaten in four out of five games in 2016 by a piece of software from the internet company Google?",
+     "de": "In welchem chinesischen Brettspiel wurde Lee Sedol, einer der weltbesten Spieler, 2016 in vier von fünf Partien von einer Software des Internetunternehmens Google geschlagen?",
+     "ru": "В какой китайской настольной игре Ли Седоль, один из сильнейших игроков мира, в 2016 году проиграл четыре партии из пяти программе интернет-компании Google?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c103",
+      "category": 12
+     },
+     "cardText": "In welchem chinesischen Brettspiel wurde dessen weltbester Spieler Lee Sedol 2016 in vier von fünf Partien von einer Software des Internetunternehmens Google geschlagen?"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q11413",
+     "label": "go",
+     "role": "answer"
+    },
+    {
+     "qid": "Q22329209",
+     "label": "AlphaGo",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f06177",
+   "answerEn": "Chess",
+   "answerDe": "Schach",
+   "answerRu": "шахматы",
+   "spans": {
+    "en": [
+     400,
+     5
+    ],
+    "de": [
+     428,
+     6
+    ],
+    "ru": [
+     405,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1997-05-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Deep Blue clinches its chess match against Garry Kasparov",
+    "labelDe": "Deep Blue entscheidet das Schachmatch gegen Garri Kasparow für sich",
+    "labelRu": "Deep Blue выигрывает шахматный матч у Гарри Каспарова"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov",
+    "title": "Deep Blue versus Garry Kasparov – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06177",
+     "en": "In which game did world champion Garry Kasparov lose to the IBM computer Deep Blue in 1997?",
+     "de": "In welchem Spiel unterlag Weltmeister Garri Kasparow 1997 dem IBM-Computer Deep Blue?",
+     "ru": "В какой игре чемпион мира Гарри Каспаров проиграл в 1997 году компьютеру IBM Deep Blue?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q718",
+     "label": "chess",
+     "role": "answer"
+    },
+    {
+     "qid": "Q187899",
+     "label": "Deep Blue",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f06178",
+   "answerEn": "Jeopardy!",
+   "answerDe": "Jeopardy!",
+   "answerRu": "Jeopardy!",
+   "spans": {
+    "en": [
+     835,
+     9
+    ],
+    "de": [
+     923,
+     9
+    ],
+    "ru": [
+     921,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2011-02",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "IBM's Watson defeats Ken Jennings and Brad Rutter on Jeopardy!",
+    "labelDe": "IBMs Watson besiegt Ken Jennings und Brad Rutter bei Jeopardy!",
+    "labelRu": "Watson от IBM побеждает Кена Дженнингса и Брэда Раттера в Jeopardy!"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/IBM_Watson",
+    "title": "IBM Watson – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06178",
+     "en": "In which US quiz show did the IBM computer Watson defeat the record champions Ken Jennings and Brad Rutter in 2011?",
+     "de": "In welcher US-Quizshow besiegte der IBM-Computer Watson 2011 die Rekordchampions Ken Jennings und Brad Rutter?",
+     "ru": "В какой американской телевикторине компьютер IBM Watson победил в 2011 году рекордных чемпионов Кена Дженнингса и Брэда Раттера?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q499767",
+     "label": "Jeopardy!",
+     "role": "answer"
+    },
+    {
+     "qid": "Q12253",
+     "label": "Watson",
+     "role": "mentioned"
+    }
+   ]
+  },
+  {
+   "id": "f06179",
+   "answerEn": "Poker",
+   "answerDe": "Poker",
+   "answerRu": "покер",
+   "spans": {
+    "en": [
+     2178,
+     5
+    ],
+    "de": [
+     2354,
+     5
+    ],
+    "ru": [
+     2302,
+     5
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2017-01-11",
+    "end": "2017-01-31",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Libratus beats four poker professionals at heads-up no-limit hold'em",
+    "labelDe": "Libratus schlägt vier Pokerprofis im Heads-up No-Limit Hold'em",
+    "labelRu": "Libratus обыгрывает четырёх профессионалов в безлимитный холдем один на один"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Libratus",
+    "title": "Libratus – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06179",
+     "en": "In which card game did the programs Libratus (2017) and Pluribus (2019) defeat professional players?",
+     "de": "In welchem Kartenspiel besiegten die Programme Libratus (2017) und Pluribus (2019) professionelle Spieler?",
+     "ru": "В какой карточной игре программы Libratus (2017) и Pluribus (2019) победили профессиональных игроков?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q80131",
+     "label": "poker",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f06180",
+   "answerEn": "StarCraft II",
+   "answerDe": "StarCraft II",
+   "answerRu": "StarCraft II",
+   "spans": {
+    "en": [
+     2396,
+     12
+    ],
+    "de": [
+     2636,
+     12
+    ],
+    "ru": [
+     2598,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2019",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "DeepMind's AlphaStar reaches Grandmaster level in StarCraft II",
+    "labelDe": "DeepMinds AlphaStar erreicht in StarCraft II Großmeister-Niveau",
+    "labelRu": "AlphaStar от DeepMind достигает уровня грандмастера в StarCraft II"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/AlphaStar_(software)",
+    "title": "AlphaStar (software) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06180",
+     "en": "In which real-time strategy game did DeepMind's program AlphaStar reach Grandmaster level in 2019?",
+     "de": "In welchem Echtzeit-Strategiespiel erreichte DeepMinds Programm AlphaStar 2019 Großmeister-Niveau?",
+     "ru": "В какой стратегии в реальном времени программа AlphaStar от DeepMind достигла в 2019 году уровня грандмастера?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q239288",
+     "label": "StarCraft II: Wings of Liberty",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/ai",
+  "topic:games/board-games",
+  "audience:international"
+ ]
+}

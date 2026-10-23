@@ -1,0 +1,430 @@
+{
+ "article": "a1976",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lazzaretto_Vecchio",
+   "title": "Lazzaretto Vecchio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:10.623Z",
+   "snapshot": "fc8d8eafc335d42d283b9e615f94cc7effb6996f86d3ef90a41e8f9b7fa51eba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Patrick",
+   "title": "Saint Patrick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:11.823Z",
+   "snapshot": "10aa15192d0471b19eb91e96a56cf914dcb6ce9dc97900b3c634ab2bdfd42a2c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Barbara",
+   "title": "Saint Barbara – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:12.723Z",
+   "snapshot": "5e903c56f5fb33372559425f552d31a14919f3702bbc8fd464ca3c93ca6c5599"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Christopher",
+   "title": "Saint Christopher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:13.716Z",
+   "snapshot": "72874648310267128fcc0f481473872fc5b55dc4f56fbd31d8ff909af1a1d7c7"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Honorius_von_Amiens",
+   "title": "Honorius von Amiens",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:11.394Z",
+   "snapshot": "c85040e8f4a132c76a5b9ab73096a23fafc97a6dd68cf0274548286fda39ae64"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Lazarett",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:12.317Z",
+   "snapshot": "bcf7798143d800b8dc2863e99046f49c60bf7a62e2e10db3174946da5807ef3d"
+  },
+  "s7": {
+   "url": "https://www.pbs.org/wgbh/nova/typhoid/quar-03.html",
+   "title": "History of Quarantine – NOVA",
+   "publisher": "PBS NOVA",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:46.488Z",
+   "snapshot": "bba6182d3e7f8c2a2a69880d3c30b39628f459c23d381de2c9c969a05bba3369"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/lazaretto",
+   "title": "Lazaretto – Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:46.658Z",
+   "snapshot": "bb4b943c2699d035f4dd64f255da7e9af77e83c964b0c16553f142040f99ebac"
+  },
+  "s9": {
+   "url": "https://www.dictionary.com/browse/lazar",
+   "title": "Lazar – Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:47.573Z",
+   "snapshot": "7516ac0d21a84057abae2b8eb8e0ae563cbcb87d8bf329a86ed4d92fa43d5244"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lazarus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saint Patrick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09878",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Saint Barbara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saint Christopher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10807",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Honoratus von Amiens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28; transcript tp-079"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:58.664Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lazarus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Lazarus”, “Лазарь”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:58.664Z",
+   "target": "f09877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saint Patrick was a fifth-century Romano-British Christian missionary and bishop in Ireland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint Patrick” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:58.664Z",
+   "target": "f09878",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Saint Barbara (Ancient Greek: Ἁγία Βαρβάρα; Coptic: Ϯⲁⲅⲓⲁ Ⲃⲁⲣⲃⲁⲣⲁ; Church Slavonic: Великомученица Варва́ра Илиопольская; Arabic: القديسة الشهيدة بربارة), known in the Eastern Orthodox Church as the Great Martyr Barbara, was an early Christian and martyr of Phoenician origin from Heliopolis",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint Barbara” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:58.664Z",
+   "target": "f09880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saint Christopher (Greek: Ἅγιος Χριστόφορος, romanized: Hágios Christóphoros, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint Christopher” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:58.664Z",
+   "target": "f10807",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Honorius von Amiens, manchmal auch Honoratus von Amiens (* Port-le-Grand, Ponthieu; † 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Honoratus von Amiens” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:27Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term \"lazaretto,\" which refers to a quarantine hospital or station, may be a combination of his name and Santa Maria di Nazareth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23",
+   "note": "Lazaretto is usually explained as a blend of Lazarus (patron of lepers) and the Venetian Santa Maria di Nazareth; the article's notes already say so."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:32Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "blend of lazzaro lazar and Nazareto popular name of a hospital maintained in Venice by the Church of Santa Maria di Nazaret",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:35Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Medieval Latin lazarus leper, special use of Late Latin Lazarus Lazarus",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:47.477Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term \"lazaretto,\" which refers to a quarantine hospital or station, may be a combination of his name and Santa Maria di Nazareth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:47.477Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "blend of lazzaro lazar and Nazareto popular name of a hospital maintained in Venice by the Church of Santa Maria di Nazaret",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:47.477Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Medieval Latin lazarus leper, special use of Late Latin Lazarus Lazarus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:47.477Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Lazarus, the sore-covered leper in Christ's parable, became the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Lazarus” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:47.477Z",
+   "target": "f09876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "1300–50; Middle English < Medieval Latin lazarus leper, special use of Late Latin Lazarus Lazarus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Lazarus” is on the snapshot of s9"
+  }
+ ]
+}

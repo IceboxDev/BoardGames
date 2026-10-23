@@ -1,0 +1,382 @@
+{
+ "article": "a0172",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Karen_Blixen",
+   "title": "Karen Blixen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:35.301Z",
+   "snapshot": "69ddb1aa19339ee78ae715c2dff8354e2912fdb3940238c08df224fb43ea75ea"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Karisoke_Research_Center",
+   "title": "Karisoke Research Center – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:36.169Z",
+   "snapshot": "6658ec78feaf3c2ed7dfa47d3b3259f7fb3a64efbcf22635b6aaec510639e632"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lost_in_Translation",
+   "title": "Lost in Translation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:37.283Z",
+   "snapshot": "f0fee30c0a1776c2744f80a789f096761535f49567db69368f4979d31ac00ef5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/81st_Academy_Awards",
+   "title": "81st Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:38.183Z",
+   "snapshot": "658cb83458d19d1ec8c8d32f739517ade0619c1635d2fd87f16c6fbd7c4e6431"
+  },
+  "s5": {
+   "url": "https://www.cineserie.com/news/cinema/out-of-africa-dimanche-23-aout-sur-arte-sydney-pollack-ne-voulait-pas-de-meryl-streep-3689254/amp/",
+   "title": "Out of Africa : Sydney Pollack ne voulait pas de Meryl Streep",
+   "kind": "other",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T03:30:35.543Z",
+   "snapshot": "6f9b8d5c0b53071012e146f24eb254259955c265f7a1b1524325f514603bb4a2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Puyi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:03.516Z",
+   "snapshot": "f0b417c69e3a5e221d1f5ab9b5ed8db77f27a6d0a6f61c2015210e6edcbaa801"
+  },
+  "s7": {
+   "url": "https://www.theguardian.com/film/2009/jan/09/slumdog-millionaire-review-danny-boyle",
+   "title": "Slumdog Millionaire",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:21.438Z",
+   "snapshot": "ca7a4ba1661690904853f079c8632bca9ab165abe3285992e97e6fadc2c22494"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Slumdog_Millionaire",
+   "title": "Slumdog Millionaire – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:22.300Z",
+   "snapshot": "55afd8059624cebafa3f389e1b441f497f056bb03bcb39493e4aa0467df841b0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kenya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rwanda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00859",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11470",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lions",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-216"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:04.433Z",
+   "target": "f00856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blixen is best known for Out of Africa, an account of her life while in Kenya, and for one of her stories, \"Babette's Feast\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kenya” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:04.433Z",
+   "target": "f00858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Karisoke Research Center is a research institute in Rwanda's Volcanoes National Park.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rwanda” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:04.433Z",
+   "target": "f00859",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The film explores themes of alienation and disconnection against a backdrop of cultural displacement in Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:04.433Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“India”, “Indien”, “Индия”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:04.433Z",
+   "target": "f11470",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Le gouvernement du pays interdisant de tourner avec des animaux sauvages, la production est obligée de faire venir des lions de Californie.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:04.433Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lions” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:38:02Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The movie is about the Indian version of the hit TV show Who Wants to Be a Millionaire? Dev Patel plays Jamal Malik, a former Mumbai street-kid who has a job making tea at a call centre.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:38:05Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Starring Dev Patel in his film debut, it narrates the story of 18-year-old Jamal Malik from the Juhu slums of Mumbai.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r023",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:23.716Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The movie is about the Indian version of the hit TV show Who Wants to Be a Millionaire? Dev Patel plays Jamal Malik, a former Mumbai street-kid who has a job making tea at a call centre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:23.716Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Starring Dev Patel in his film debut, it narrates the story of 18-year-old Jamal Malik from the Juhu slums of Mumbai.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:23.716Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "He astonishes all of India by entering the show as a contestant and triumphantly getting question after question right.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “India” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:23.716Z",
+   "target": "f00860",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "its world premiere at the Telluride Film Festival and later screenings at the Toronto International Film Festival and the London Film Festival, Slumdog Millionaire had a nationwide release in United Kingdom on 9 January 2009, in India on 23 January 2009, and in the United States on 25 January 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:23.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “India” is on the snapshot of s8"
+  }
+ ]
+}

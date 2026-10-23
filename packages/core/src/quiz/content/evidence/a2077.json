@@ -1,0 +1,242 @@
+{
+ "article": "a2077",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Happy_(Pharrell_Williams_song)",
+   "title": "Happy (Pharrell Williams song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:55.844Z",
+   "snapshot": "e956037a3eb28c7e2fa05cd8f9d6597c9a8dbfce3b1434b615aa69ff557be6f3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Get_Lucky_(Daft_Punk_song)",
+   "title": "Get Lucky (Daft Punk song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:56.846Z",
+   "snapshot": "ffa62155cf2689a8c5d17d96d125c44dee53937f9f08ab2ce9dca41dc1481d33"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Blurred_Lines",
+   "title": "Blurred Lines – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:57.894Z",
+   "snapshot": "495e98bfaa8091baaaa711ccc8fc15ad06933fb065d8e79421b86cbd5623db2e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Somebody_That_I_Used_to_Know",
+   "title": "Somebody That I Used to Know – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:58.883Z",
+   "snapshot": "5b7097c206989c92664ca810ffc974d8813e16d23275ea19c9496bb0bbffd1d3"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Meghan_Trainor",
+   "title": "Meghan Trainor",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:56.108Z",
+   "snapshot": "f6239336a700c9c8eb72a510238673e569aafb995b85d3ddeb3e690fd425dfbc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Happy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Get Lucky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Blurred Lines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Somebody That I Used to Know",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Meghan Trainor",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-152"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:18.449Z",
+   "target": "f10381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Happy (Pharrell Williams song)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Happy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:18.449Z",
+   "target": "f10382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Get Lucky\" is a song by French electronic music duo Daft Punk featuring American musician Pharrell Williams and American guitarist Nile Rodgers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Get Lucky” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:18.449Z",
+   "target": "f10383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Blurred Lines\" is a song by American singer Robin Thicke featuring American rapper T.I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blurred Lines” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:18.449Z",
+   "target": "f10385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Somebody That I Used to Know\" is a song written, produced, and performed by the Belgian-Australian singer-songwriter Gotye (aka Wally de Backer), featuring vocals from the New Zealand singer Kimbra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Somebody That I Used to Know” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:18.449Z",
+   "target": "f13143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Meghan Trainor wuchs in einer sehr musikalischen Umgebung auf und stand in der Jugend in einer Band mit mehreren Familienmitgliedern auf der Bühne.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meghan Trainor” is on the snapshot of s5"
+  }
+ ]
+}

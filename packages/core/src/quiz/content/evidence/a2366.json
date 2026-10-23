@@ -1,0 +1,410 @@
+{
+ "article": "a2366",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:31.363Z",
+   "snapshot": "b5d347a36acd4991120d6ae1593261a8dda3ac39df4cfc0326c3376828801b63"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hauptstadtfrage_der_Bundesrepublik_Deutschland",
+   "title": "Hauptstadtfrage der Bundesrepublik Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:18.940Z",
+   "snapshot": "98978800d747c64a5bbb4eccc5769b05ad88a1c43d63ce6a64999357871eeb38"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ludwig_Erhard",
+   "title": "Ludwig Erhard",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:19.888Z",
+   "snapshot": "aa66f0d8a3719a40d11080f7f8a98893c40600426896faca777b34fff5453377"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Rolf_Hochhuth",
+   "title": "Rolf Hochhuth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:20.858Z",
+   "snapshot": "af109d5a1718d2553a0f1aa76526ae68f472e57799d15c787d84aa0d78bc7203"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Rh%C3%B6ndorf",
+   "title": "Rhöndorf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:21.695Z",
+   "snapshot": "5c1f6a020f738cc0c10f42fbe71514122e9549b1cd64db049e990aca93592c2e"
+  },
+  "s6": {
+   "url": "https://www.konrad-adenauer.de/seite/28-august-1948/",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:20.888Z",
+   "snapshot": "07d099e20c4f6d86695342b69ab187f56ec41d033e9b5474029aea1c7dbacff8"
+  },
+  "s7": {
+   "url": "https://www.dhm.de/lemo/biografie/konrad-adenauer",
+   "title": "LeMO Biografie Konrad Adenauer",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:53.812Z",
+   "snapshot": "dad0529e71e3aff0830422ab9c9587f5a2d91488d3dbdf765b0b149afa8ce418"
+  },
+  "s8": {
+   "url": "https://www.kas.de/de/web/geschichte-der-cdu/personen/biogramm-detail/-/content/konrad-adenauer-v1",
+   "title": "Konrad Adenauer – Geschichte der CDU",
+   "publisher": "Konrad-Adenauer-Stiftung",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:54.781Z",
+   "snapshot": "9a5e181d09f9a5df277a9c478db926704c752d845803609291d0a47b6c2ab7c9"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:44:00Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frankfurt am Main",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-110"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ludwig Erhard",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-207"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rolf Hochhuth",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rhöndorf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:06.000Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konrad Adenauer wurde 1876 in Köln als Conrad Hermann Joseph Adenauer und drittes von fünf Kindern des Justizsekretärs am damaligen Appellationsgericht und späteren Kanzleirats Johann Konrad Adenauer (1833–1906) und dessen Ehefrau Helena Scharfenberg (1849–1919) geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:06.000Z",
+   "target": "f12340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zunächst bewarben sich zwei westdeutsche Städte, Bonn und Frankfurt am Main.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frankfurt am Main” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:06.000Z",
+   "target": "f12341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ludwig Erhard wurde als Sohn des Textilwarenhändlers und Weißwarengeschäftsbesitzers Philipp Wilhelm Erhard und dessen Frau Augusta Friederik Anna, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Erhard” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:06.000Z",
+   "target": "f12342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rolf Hochhuth war der Sohn des hessischen Schuhfabrikanten Friedrich Ernst Walter Hochhuth und dessen Ehefrau Ilse Hochhuth, geborene Holzapfel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rolf Hochhuth” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:06.000Z",
+   "target": "f12343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rhöndorf ist ein Stadtteil von Bad Honnef im nordrhein-westfälischen Rhein-Sieg-Kreis und liegt am Fuße des Siebengebirges.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.000Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhöndorf” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:43:56Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Konrad Adenauer ist von 1949 bis 1963 der erste Bundeskanzler der Bundesrepublik Deutschland. Der Jurist und Zentrums-Partei-Politiker ist von 1917 bis 1933 Oberbürgermeister Kölns.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23",
+   "note": "The card's 'still remembered as one of the best mayors' is evaluative framing; the identifying facts (Cologne mayor 1917–33, later chancellor; university, green belt, Ford works) are well sourced."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:43:58Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Im gleichen Jahr zum Bürgermeister von Köln gewählt, verlieh ihm Wilhelm II. den Titel Oberbürgermeister und berief ihn in das Preußische Herrenhaus.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:44:00Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "he masterminded the construction of a bridge across the Rhine and an electrical plant",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:50.262Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Konrad Adenauer ist von 1949 bis 1963 der erste Bundeskanzler der Bundesrepublik Deutschland. Der Jurist und Zentrums-Partei-Politiker ist von 1917 bis 1933 Oberbürgermeister Kölns.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:50.262Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Im gleichen Jahr zum Bürgermeister von Köln gewählt, verlieh ihm Wilhelm II. den Titel Oberbürgermeister und berief ihn in das Preußische Herrenhaus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:50.262Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Konrad Adenauer ist von 1949 bis 1963 der erste Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:50.262Z",
+   "target": "f12339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Konrad Adenauer - Geschichte der CDU - Konrad-Adenauer-Stiftung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s8"
+  }
+ ]
+}

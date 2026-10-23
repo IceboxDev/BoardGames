@@ -1,0 +1,294 @@
+{
+ "article": "a2014",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Balearic_Islands",
+   "title": "Balearic Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:04.447Z",
+   "snapshot": "d1b46f54bb108912dc0fcbf1fffff69238979edd324e14a0c70b580979a17f5c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Conquest_of_the_Canary_Islands",
+   "title": "Conquest of the Canary Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:05.473Z",
+   "snapshot": "594f75e715a1df56a9a473e6073b4a9b2e740725950d5c60e69819269b8ed494"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kanarische_Inseln",
+   "title": "Kanarische Inseln",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:02.911Z",
+   "snapshot": "f9f2959e391d9259a7d13fa66b72496cbed0032d5f4a63305445f6aa24f32bb1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dodecanese",
+   "title": "Dodecanese – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:06.392Z",
+   "snapshot": "ba322d4d61974574f030be7fce2a3c0c76126e13bd87be2a66c902cdb47ecf1a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Teide",
+   "title": "Teide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:18.367Z",
+   "snapshot": "12fc648b0c21aa7a85ca1fe68a1649f4d7813680cea586caaa6757213289b5a2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hindenburgdamm",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:03.576Z",
+   "snapshot": "2598e8b88e45eb472791a60754d7dfe5e574cdfe6f528b61b6ffa092797240e7"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/1258/",
+   "title": "Teide National Park – UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:07:05Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Balearic Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canary Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kanarische Inseln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-017"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dodecanese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Teide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:06.228Z",
+   "target": "f10066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Balearic Islands are an archipelago in the western Mediterranean Sea, off the eastern coast of the Iberian Peninsula, constituting an autonomous community and province of Spain, with Palma as their capital and largest city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Balearic Islands” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:06.228Z",
+   "target": "f10067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Crown of Castile conquered the Canary Islands place between 1402 and 1496 in two periods: the Conquista señorial, carried out by Castilian nobility in exchange for a covenant of allegiance to the crown, and the Conquista realenga, carried out by the Spanish crown itself during the reign of the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canary Islands” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:06.228Z",
+   "target": "f10067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kanarische Inseln als fester Bestandteil Spaniens",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kanarische Inseln” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:06.228Z",
+   "target": "f10069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Dodecanese (UK: , US: ; Greek: Δωδεκάνησα, Dodekánisa [ðoðeˈkanisa], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dodecanese” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:06.228Z",
+   "target": "f21660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Teide (Spanish: El Teide) or Mount Teide (Pico del Teide, pronounced [ˈpiko ðel ˈtejðe]; 'Peak of Teide') is an active stratovolcano on the Spanish island of Tenerife, part of the Canary Islands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Teide” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:07:02Z",
+   "target": "f21660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Its summit (at 3,715 m (12,188 ft))[1][a] is the highest point in Spain",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:07:05Z",
+   "target": "f21660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Teide-Pico Viejo stratovolcano that, at 3,718 m, is the highest peak on Spanish soil",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "UNESCO gives the older 3,718 m figure; Wikipedia/IGN give 3,715 m. The answer (Teide, highest mountain in Spain) is unaffected."
+  }
+ ]
+}

@@ -1,0 +1,456 @@
+{
+ "article": "a2237",
+ "sources": {
+  "s1": {
+   "url": "https://uk.news.yahoo.com/oui-oui-james-cameron-really-150000735.html",
+   "title": "Oui oui, James Cameron is really the one sketching naked Rose in Titanic",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:08.054Z",
+   "snapshot": "fa6e4f6cdc6d357eda0f3f6418560ac8372071a3abfc3e088f90219fcafaa898"
+  },
+  "s2": {
+   "url": "https://www.foxnews.com/auto/stolen-pulp-fiction-car-found-19-years-later.print",
+   "title": "Stolen 'Pulp Fiction' car found 19 years later",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:08.003Z",
+   "snapshot": "6df197ac42a30a57eaef0d1bdf0f306062213961f2bbc38337f05f73b3789bae"
+  },
+  "s3": {
+   "url": "https://moviemistakes.com/film1025/trivia",
+   "title": "Pulp Fiction trivia – Movie Mistakes",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:08.732Z",
+   "snapshot": "1f04ff5e13d54fc470df849b9882989ea1cdcf381b3c465310238afa154874b1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Saving_Private_Ryan",
+   "title": "Saving Private Ryan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:08.865Z",
+   "snapshot": "989b76af96a09529d081594e6a79abc3e8805fabde830a287253999af04d1934"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Alan_Smithee",
+   "title": "Alan Smithee",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:09.039Z",
+   "snapshot": "ea8fcac983ff9885c89d93d7eb1b8c25e851c8adcfb09a9b22f074e25fd1a168"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/MacGuffin",
+   "title": "MacGuffin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:09.728Z",
+   "snapshot": "2970ee50c2aa3be4e9dcff0e90e419486f6342e11af7c589a43c0696f8598a75"
+  },
+  "s7": {
+   "url": "https://www.thedigitalfix.com/titanic/james-cameron-drew-the-rose-nude",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s8": {
+   "url": "https://www.cbr.com/movie-legends-revealed-are-all-of-the-clocks-in-pulp-fiction-set-to-420/",
+   "title": "Movie Legends Revealed: Are All of the Clocks in 'Pulp Fiction' Set to 4:20?",
+   "publisher": "CBR (Comic Book Resources)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:35.477Z",
+   "snapshot": "2d31402ed825b26f00e1103a3716a7c1572465e9613c4d68835fb1fe1029ba13"
+  },
+  "s9": {
+   "url": "https://fr.wikipedia.org/wiki/420_(cannabis)",
+   "title": "420 (cannabis) – Wikipédia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:45:35.336Z",
+   "snapshot": "4e8effe15b7b8021eb9a3921d5b059a8061a5473c18dacd5705f4574d2d1a3b2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Quentin Tarantino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13; transcript tp-278"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "4:20",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-268"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saving Private Ryan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; history entry seq 25; transcript tp-286"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11457",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alan Smithee",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-285"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MacGuffin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-108"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "James Cameron",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "James Cameron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-133/2, u04: Statement false: Kate Winslet said on Colbert (2017) that director James Cameron drew the sketch; his hands appear in the close-ups."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f11453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "James Cameron",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f11453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oui oui, James Cameron is really the one sketching naked Rose in Titanic - Yahoo News UK",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Cameron” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f11454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The San Bernardino County Sun reports movie director Quentin Tarantino's 1964 Chevelle Malibu was recovered in the San Francisco Bay area earlier this week.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quentin Tarantino” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Trivia: Most of the clocks in the pawnshop are set to 4:20.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4:20” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f11456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saving Private Ryan is a 1998 American war film directed by Steven Spielberg and written by Robert Rodat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saving Private Ryan” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f11457",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alan Smithee steht als Pseudonym für einen fiktiven Regisseur, der Filme verantwortet, bei denen der eigentliche Regisseur seinen Namen nicht mit dem Werk in Verbindung gebracht haben möchte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Smithee” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:41.792Z",
+   "target": "f25611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In fiction, a MacGuffin (sometimes McGuffin) is an object, device, or event that is necessary to the plot and the motivation of the characters, but insignificant, unimportant, or irrelevant in itself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:41.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MacGuffin” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:40:30Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "There are a couple in the pawn shop where Butch Coolidge is going to rescue Marcellus Wallace, for instance. However, even in those very scenes, there’s also a clock that’s not set to 4:20.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "several pawnshop clocks show 4:20 but not all — 'most' was not supported; wording and body changed to 'several'"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:40:33Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "ce ne sont que les horloges dans le magasin de prêteur sur gage qui affichent 4 h 20 dans le film Pulp Fiction de Quentin Tarantino (1994) et non pas toutes les horloges",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:28.240Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "There are a couple in the pawn shop where Butch Coolidge is going to rescue Marcellus Wallace, for instance. However, even in those very scenes, there’s also a clock that’s not set to 4:20.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:28.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:28.240Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "ce ne sont que les horloges dans le magasin de prêteur sur gage qui affichent 4 h 20 dans le film Pulp Fiction de Quentin Tarantino (1994) et non pas toutes les horloges",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:28.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:28.240Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Movie Legends Revealed | Are All of the Clocks in 'Pulp Fiction' Set to 4:20?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:28.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4:20” is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:28.240Z",
+   "target": "f11455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "420, 4:20 ou 4/20 (prononcé four-twenty en anglais) est une expression utilisée en Amérique du Nord comme une référence à la consommation de cannabis et, par extension, une manière de s'identifier à la contre-culture entourant le cannabis.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:28.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4:20” is on the snapshot of s9"
+  }
+ ]
+}

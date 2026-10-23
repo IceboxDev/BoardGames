@@ -1,0 +1,289 @@
+{
+ "article": "a1326",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pella",
+   "title": "Pella – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:53.238Z",
+   "snapshot": "f3ef803d09cb3f665a41fee79a82a3d0966abf33e075f63d8a10404aedd39e3c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Chaeronea_(338_BC)",
+   "title": "Battle of Chaeronea (338 BC) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:54.239Z",
+   "snapshot": "c399b78bf1ddfba7f843b9ec097103d4d015b25950487b4feb290190d8083dcc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Constantine_the_Great",
+   "title": "Constantine the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:55.198Z",
+   "snapshot": "a738e2668db23f6b65b2e2a2ffcfcf595f627804dfc7aec5fdf35d0489aaadb7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hannibal",
+   "title": "Hannibal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:56.369Z",
+   "snapshot": "5d50edcd5f6b2e128cecb7f0de140d383cc1afbbc3f8ab72de58e240c6aef2d5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charles_V,_Holy_Roman_Emperor",
+   "title": "Charles V, Holy Roman Emperor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:57.473Z",
+   "snapshot": "20199ada155598085b70ea3a2b3ab0235c99a6d153402689868d2bbf3da6ef54"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Trajan",
+   "title": "Trajan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:58.385Z",
+   "snapshot": "90ebafd667c3e37190eae63f0bfdf4b7f7477bebe9eb140c6374898e99d9e228"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greece",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Greece",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c111"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06627",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Serbia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06628",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tunisia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06629",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Belgium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06630",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:07.197Z",
+   "target": "f06626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is located 1 km outside the modern town of Pella in Central Macedonia, Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greece” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:07.197Z",
+   "target": "f06626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Philip had brought peace to a war-torn Greece in 346 BC by ending the Third Sacred War and separately concluding his ten-year conflict with Athens for supremacy in the north Aegean with the Peace of Philocrates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greece” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:07.197Z",
+   "target": "f06627",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Born in Naissus, a city located in the province of Moesia Superior (now Niš, Serbia), Constantine was the son of Flavius Constantius, a Roman army officer from Moesia Superior, who would become one of the four emperors of the Tetrarchy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Serbia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:07.197Z",
+   "target": "f06628",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Due to his origin and connection with the territory belonging to modern-day Tunisia, he is widely revered as a national hero in the country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tunisia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:07.197Z",
+   "target": "f06629",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Burgundian inheritance included the Habsburg Netherlands, which consisted of a large number of lordships in the Low Countries and covered modern-day Belgium, Netherlands and Luxembourg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Belgium” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:07.197Z",
+   "target": "f06630",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trajan was born in the municipium of Italica in the present-day Andalusian province of Seville in southern Spain, an Italic settlement in Hispania Baetica; his gens Ulpia came from the town of Tuder in the Umbria region of central Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.197Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spain” is on the snapshot of s6"
+  }
+ ]
+}

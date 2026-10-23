@@ -1,0 +1,296 @@
+{
+ "article": "a0640",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)",
+   "title": "Iron Man (2008 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:02.162Z",
+   "snapshot": "586684d471a9a09a539dba32a00703c1a8ce27c40741e7422efc57054d094d03"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Man_of_Steel_(film)",
+   "title": "Man of Steel (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:03.257Z",
+   "snapshot": "e5fbc4808ba07b7ba7975589f9e3f2c0fc2f8e04c72ce4f4741eeeaeeeb3d977"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/68th_Academy_Awards",
+   "title": "68th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:04.067Z",
+   "snapshot": "542f707e9beadb599613d22d7c170141b470cebfd77370eb4dea519cd615e037"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring",
+   "title": "The Lord of the Rings: The Fellowship of the Ring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:20.252Z",
+   "snapshot": "2ce6851e3a28ffce203467bb4c651f06822b2308a32f763dcf0dd4039ec3f846"
+  },
+  "s5": {
+   "url": "https://abcnews.com/blogs/entertainment/2011/11/exclusive-daniel-radcliffe-was-allergic-to-harry-potter",
+   "title": "Exclusive: Daniel Radcliffe Was Allergic to 'Harry Potter'",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:01.364Z",
+   "snapshot": "cc0b72252967538d6dfdad93a1b9d5041895a134f573fcd1137f0e1ac5ef27d0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/W%C4%93t%C4%81_Workshop",
+   "title": "Wētā Workshop",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:05.131Z",
+   "snapshot": "c0bdd8563594428e2a608c793cfbed5c5a2bd6eeeae8b14abe138965e424bbd0"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:06.187Z",
+   "snapshot": "bfcdc83eb653ac62ca438673e9fc6003aeeb6a065362c6c211d6b8dd968e2f72"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iron Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Man of Steel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Toy Story",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Fellowship of the Ring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Daniel Radcliffe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-108"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Lord of the Rings",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-161"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:18.876Z",
+   "target": "f03196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iron Man is a 2008 American superhero film based on the Marvel Comics character Iron Man.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iron Man” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:18.876Z",
+   "target": "f03197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Man of Steel is a 2013 superhero film based on the DC Comics character Superman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Man of Steel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:18.876Z",
+   "target": "f03198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "To John Lasseter, for his inspired leadership of the Pixar Toy Story team, resulting in the first feature-length computer-animated film.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toy Story” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:18.876Z",
+   "target": "f03200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Fellowship of the Ring” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:18.876Z",
+   "target": "f11273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Exclusive: Daniel Radcliffe Was Allergic to ‘Harry Potter’ - ABC News",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daniel Radcliffe” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:18.876Z",
+   "target": "f11274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The studio became well known for its Academy Award-winning work on The Lord of the Rings film trilogy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.876Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Lord of the Rings” is on the snapshot of s6"
+  }
+ ]
+}

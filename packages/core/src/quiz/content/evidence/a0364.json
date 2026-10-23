@@ -1,0 +1,288 @@
+{
+ "article": "a0364",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Drew_Barrymore",
+   "title": "Drew Barrymore – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:49.862Z",
+   "snapshot": "2483f22cb38e030adc3a6856009e7c797fa229b091906b76f03ffe7ff9f8cb05"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial",
+   "title": "E.T. the Extra-Terrestrial – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:51.079Z",
+   "snapshot": "91a57273afb8a0391af208716e2f34f0b577ffe23da29ac90b1c5acd499741ea"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Home_Alone",
+   "title": "Home Alone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:51.927Z",
+   "snapshot": "a8d9b28dc80482108bdd76e8ee3d6f69df15a5241c67d2330c2f47418df12305"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Macaulay_Culkin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:52.944Z",
+   "snapshot": "0d9a31a5b1c97f9a99b7aa9bc0ed15153d766238683b0ba792f828d0ea8d58b1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Danny_Lloyd",
+   "title": "Danny Lloyd – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:53.934Z",
+   "snapshot": "04c7c03efd5aae82cf8c1e26db3a3d0645af36bb5088f13db168cdcd04122fcf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Haley_Joel_Osment",
+   "title": "Haley Joel Osment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:54.911Z",
+   "snapshot": "fa3f7fad34609602452e0fafc20cb4e9ce5f2e1427c5b33d6df9619f3f2cccc5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Drew Barrymore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Henry Thomas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Macaulay Culkin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Macaulay Culkin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Danny Lloyd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Haley Joel Osment",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:36.372Z",
+   "target": "f01816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She also starred in the Netflix series Santa Clarita Diet (2017–2019) and currently hosts the daytime talk show The Drew Barrymore Show (2020–present).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Drew Barrymore” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:36.372Z",
+   "target": "f01817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The film stars Dee Wallace, Henry Thomas, Peter Coyote, Robert MacNaughton, and Drew Barrymore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Thomas” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:36.372Z",
+   "target": "f01818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first film in the Home Alone franchise, the film stars Macaulay Culkin as Kevin McCallister, an eight-year-old boy who defends his suburban Chicago home from a home invasion by a pair of robbers after his family accidentally leaves him behind on their Christmas vacation to Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macaulay Culkin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:36.372Z",
+   "target": "f01818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Macaulay Macaulay Culkin Culkin (born Macaulay Carson Culkin; August 26, 1980 (1980-08-26)) is an American actor and musician.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macaulay Culkin” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:36.372Z",
+   "target": "f01819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Danny Lloyd",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Danny Lloyd” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:36.372Z",
+   "target": "f01820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Haley Joel Osment (born April 10, 1988) is an American actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:36.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haley Joel Osment” is on the snapshot of s6"
+  }
+ ]
+}

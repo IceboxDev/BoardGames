@@ -1,0 +1,267 @@
+{
+ "article": "a1501",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Distel",
+   "title": "Die Distel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:13.972Z",
+   "snapshot": "64fa6ad5e72dd65790e87fd373524248ce3f35a1714982a50d9e7c0720371bdb"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Stachelschweine",
+   "title": "Die Stachelschweine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:14.385Z",
+   "snapshot": "eeda9967bb2515efd2131a15777a1752fe97d3e688f62a8f32e80a733b1699e0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Leipziger_Pfefferm%C3%BChle",
+   "title": "Leipziger Pfeffermühle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:15.267Z",
+   "snapshot": "8715f0d8525941368b19929fe4192bf07f91f6c3885b9d51dfc473710c788c48"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/M%C3%BCnchner_Lach-_und_Schie%C3%9Fgesellschaft",
+   "title": "Münchner Lach- und Schießgesellschaft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:16.248Z",
+   "snapshot": "3d768078a2327986a902984951edc754db58e1309bb629a4562e8659da53fcec"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kom(m)%C3%B6dchen",
+   "title": "Kom(m)ödchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:17.256Z",
+   "snapshot": "7fde4b50c256fb57baf50c19a6680a38295d150b72305b150e1055ddc1ae697b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Kom(m)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-21"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Distel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Stachelschweine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leipziger Pfeffermühle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Münchner Lach- und Schießgesellschaft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kom(m)ödchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kom(m)ödchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:35.557Z",
+   "target": "f07501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Distel wurde 1953 als Ost-Berliner Gegenpol zu älteren West-Berliner Kabaretts gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Distel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:35.557Z",
+   "target": "f07502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Kabarett-Theater Die Stachelschweine ist das älteste Berliner Kabarett und das zweitälteste in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Stachelschweine” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:35.557Z",
+   "target": "f07503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Leipziger Pfeffermühle ist ein Kabarett-Ensemble in Leipzig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leipziger Pfeffermühle” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:35.557Z",
+   "target": "f07504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Münchner Lach- und Schießgesellschaft, auch die Lach und Schieß, wurde als politisches Kabarett 1956 vom Journalisten Sammy Drechsel und Dieter Hildebrandt gegründet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Münchner Lach- und Schießgesellschaft” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:35.557Z",
+   "target": "f07505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Kom(m)ödchen ist eine Kabarettbühne in Düsseldorf mit gleichnamigem Kabarett-Ensemble.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kom(m)ödchen” is on the snapshot of s5"
+  }
+ ]
+}

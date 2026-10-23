@@ -1,0 +1,397 @@
+{
+ "article": "a2769",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Classical_conditioning",
+   "title": "Classical conditioning",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:16.158Z",
+   "snapshot": "697c860da17b9bacbf24d8ba87d3dfd9fc85b24bbbcd665d08c172685391ec9c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Perception",
+   "title": "Perception",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:17.177Z",
+   "snapshot": "55c8b55e64282db83d2f6075809e0a7a024312110626c2c68a3e6f86d647b11b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aggression",
+   "title": "Aggression",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:18.275Z",
+   "snapshot": "70879a222f1b510405a530b57cf8560bb5be929b797b8318bddbbef33d8cb4da"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Parental_investment",
+   "title": "Parental investment",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:19.135Z",
+   "snapshot": "02faaed9619ebe127cdce58cc3220b339867881ffdac07d3d5da097b13fb2232"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/B._F._Skinner",
+   "title": "B. F. Skinner",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:20.269Z",
+   "snapshot": "dac9d3a5004e341682a2519953db3edb574852bdbf037445d9573d0a60fc1bab"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bobo_doll_experiment",
+   "title": "Bobo doll experiment",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:21.145Z",
+   "snapshot": "b66fcd07d4811152a8cc88709acf5aed9032576bb4e4de3af9d6c1049df3b210"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Little_Albert_experiment",
+   "title": "Little Albert experiment",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:22.146Z",
+   "snapshot": "10d21a67882ee443027552b85bf5a87d8cc328ad8bf481573f722060f205165e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Operant_conditioning",
+   "title": "Operant conditioning",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:23.141Z",
+   "snapshot": "53b75c856a72815b249bb01fab39cc41270c8d7f3ae7187cdd8eedde1bd46a71"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ivan_Pavlov",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:11.030Z",
+   "snapshot": "55faf4136ca71ef3b37e7a6a3539673ecb60051c26d776942935134e4392e760"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Operant_conditioning_chamber",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:24.046Z",
+   "snapshot": "7b61d653cd818c5bc4389237e39f0bf10bc1f37a154f8a5ae1f2000fac148069"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Classical conditioning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Perception",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript ppm-053"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amygdala",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-137"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Parental investment theory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-089"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "B. F. Skinner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bobo doll experiment",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25821",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "John B. Watson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Operant conditioning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-066"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Classical conditioning (also respondent conditioning and Pavlovian conditioning) is a behavioral procedure in which a biologically potent stimulus (e.g.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Classical conditioning” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Perception (from Latin  perceptio 'gathering, receiving') is the identification, interpretation and organization of sensory information, in order to represent and understand the presented information or environment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perception” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Midbrain areas involved in aggression have direct connections with both the brainstem nuclei controlling these functions, and with structures such as the amygdala and prefrontal cortex.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amygdala” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Parental investment theory, a term coined by Robert Trivers in 1972, predicts that the sex that invests more in its offspring will be more selective when choosing a mate, and the less-invested sex will have intra-sexual competition for access to mates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parental investment theory” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the 2018 interview, Grandin further stated, \"I talked to somebody just recently about it that worked with B. F. Skinner years ago, and they said, 'Oh, yeah, that's B.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “B. F. Skinner” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Bobo doll experiment was used by psychologist Albert Bandura to test his social learning theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bobo doll experiment” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25821",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was carried out by John B. Watson and his graduate student, Rosalie Rayner, at Johns Hopkins University.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John B. Watson” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:31:10.832Z",
+   "target": "f25989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Operant conditioning, also called instrumental conditioning, is a learning process in which voluntary behaviors are modified by association with the addition (or removal) of reward or aversive stimuli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Operant conditioning” is on the snapshot of s8"
+  }
+ ]
+}

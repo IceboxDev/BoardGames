@@ -1,0 +1,256 @@
+{
+ "article": "a0850",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Agate",
+   "title": "Agate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:23.551Z",
+   "snapshot": "d94bef3c6fae79ee838e439bd2e96c9fab697855c2431b116618c7089a2bae54"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Big_Hole",
+   "title": "Big Hole – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:24.430Z",
+   "snapshot": "05dc32030bb8a1c4cd220abf7282f1dd99fcd427291687de7bd43a472da685cc"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Jantarny",
+   "title": "Jantarny – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:21.694Z",
+   "snapshot": "fd769a4f42a0da78e0c341733bf4b5d8cb4835d54e943e4d32b95a4d6493c888"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trajan%27s_Column",
+   "title": "Trajan's Column – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:25.503Z",
+   "snapshot": "3dd4fa2220206c56a98dd7f4c84ef920c4856b642881c06c76ae24406454465a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Freiberg",
+   "title": "Freiberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:26.429Z",
+   "snapshot": "2e8941a760cfd7ccdafe0001ced3fd0a17e40d3f15d122e9bef1b4d7e1c03426"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Idar-Oberstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:24:24.937Z",
+   "snapshot": "33bfa31fd5e1d627550aa86094edccc13ad7f36e56fcc04f6fcface9613e8c97"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Freiberg_University_of_Mining_and_Technology",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:27.426Z",
+   "snapshot": "1c34b3758cd4093fde95d80114507932427f3e695b90f40fa7dc59e8a5e5f3fd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "agate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "diamond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bernstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "marble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "silver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:54.614Z",
+   "target": "f04246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Agate ( AG-it) is a banded variety of fibrous chalcedony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “agate” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:54.614Z",
+   "target": "f04247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "By 2005, however, it was reported that a researcher had re-examined mine records and found that the hand-dug portions of the Jagersfontein and Bultfontein diamond mines, also in South Africa, may have been deeper and/or larger in excavated volume.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diamond” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:54.614Z",
+   "target": "f04248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Im Juni 1947 wurde für Palmnicken die Ortsbezeichnung  Jantarny eingeführt, angelehnt an das russische Wort für Bernstein, jantar.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bernstein” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:54.614Z",
+   "target": "f04249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The shaft is made from a series of 20 colossal Carrara marble drums, each weighing about 32 tons, with a diameter of 3.7 metres (12.1 feet).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “marble” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:54.614Z",
+   "target": "f04250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The entire historic center of the Silver City is under monument protection, and together with local monuments of mining history such as the Reiche Zeche ore mine, it has been part of the UNESCO World Heritage Site Erzgebirge/Krušnohoří Mining Region since 2019 due to its exceptional testimony to the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.614Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “silver” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,375 @@
+{
+ "article": "a1397",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mixed_martial_arts_rules",
+   "title": "Mixed martial arts rules – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:56.368Z",
+   "snapshot": "edf54eb5acff65417e7c915247c44274c76216bd7fd7cb19bb55ae16d4715567"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship",
+   "title": "Ultimate Fighting Championship – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:57.595Z",
+   "snapshot": "1a52bc76da38af12b7d72e3fb92d6dcdeb654b4fdc2364c2bfbc81932c03a2bc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu",
+   "title": "Brazilian jiu-jitsu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:58.438Z",
+   "snapshot": "5b0208c8581d43779997b3d293bb1ff063fe8b279fcfa5952b230251f52aef07"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Taekwondo_at_the_1988_Summer_Olympics",
+   "title": "Taekwondo at the 1988 Summer Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:59.394Z",
+   "snapshot": "23d69fe191f56b21e46bfc94ed2b9b598f41f49fd1900b3c4e8a7223b1a60816"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/World_Boxing_Council",
+   "title": "World Boxing Council – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:00.366Z",
+   "snapshot": "583a026f21e99c029ae34ff1006066ff26341f07ab0c14eb62efaf9b17b1c2d1"
+  },
+  "s6": {
+   "url": "https://www.ufc.com/about",
+   "title": "About UFC",
+   "publisher": "UFC (Zuffa / TKO Group)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:46.434Z",
+   "snapshot": "1ba21dd53a4fb05f8847513edbeff613fe25e68cb9847b6d29e6603c75d72544"
+  },
+  "s7": {
+   "url": "https://www.tkogrp.com/",
+   "title": "TKO Group Holdings",
+   "publisher": "TKO Group Holdings",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:46.655Z",
+   "snapshot": "e808a2ca8af0d16cbabd619245a20ca750897dc990c305f49f7fe4c6f7f3601b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mixed Martial Arts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ultimate Fighting Championship",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brazilian Jiu-Jitsu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taekwondo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "World Boxing Council",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:19.093Z",
+   "target": "f06981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Most rule sets for mixed martial arts (MMA) competitions have evolved since the early days of Vale Tudo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mixed Martial Arts” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:19.093Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Ultimate Fighting Championship (UFC) is an American mixed martial arts (MMA) promotion company based in the Las Vegas, Nevada, area.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ultimate Fighting Championship” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:19.093Z",
+   "target": "f06983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brazilian jiu-jitsu (Portuguese: jiu-jitsu brasileiro [ʒiw ˈʒitsu bɾaziˈlejɾu, ʒu -]), commonly abbreviated as BJJ, is a self-defense system, martial art, and combat sport based on grappling, ground fighting, and submission holds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brazilian Jiu-Jitsu” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:19.093Z",
+   "target": "f06984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Taekwondo at the 1988 Summer Olympics",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taekwondo” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:19.093Z",
+   "target": "f06985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The World Boxing Council (WBC) is an international professional boxing organization.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “World Boxing Council” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:47:27Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Starting in 1993 as a professional mixed martial arts (MMA) organization, UFC® has revolutionized the fight business",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:47:29Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "TKO owns iconic properties including UFC, the world’s premier mixed martial arts organization",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "owner company; \"premier\" rather than \"largest\""
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:47:30Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The largest MMA promotion in the world,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:04.281Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Starting in 1993 as a professional mixed martial arts (MMA) organization, UFC® has revolutionized the fight business",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:04.281Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "TKO owns iconic properties including UFC, the world’s premier mixed martial arts organization",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:04.281Z",
+   "target": "f06982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The largest MMA promotion in the world,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:04.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a2059",
+ "sources": {
+  "s1": {
+   "url": "https://fr.wikipedia.org/wiki/Guerre_d'Alg%C3%A9rie",
+   "title": "Guerre d'Algérie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:38:39.536Z",
+   "snapshot": "0f020621a1a1ff7a022d15b8f90fc5c8d26ecb1696b668c983b7b87a690663fa"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/V%C3%B6lkermord_an_den_Armeniern",
+   "title": "Völkermord an den Armeniern – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:41.741Z",
+   "snapshot": "2a948f5c5a7fff1b5964f5dc94525b4f6465977881937f6a92914ddc7935243d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Apology_to_Australia's_Indigenous_peoples",
+   "title": "Apology to Australia's Indigenous peoples – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:42.863Z",
+   "snapshot": "a9ff54c473228b847ebed2cb9ab213ae443685917d38021986e6fb5a233911ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Canadian_Indian_residential_school_system",
+   "title": "Canadian Indian residential school system – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:44.023Z",
+   "snapshot": "ea61cdfa3afc3c93d6322eeb7c93f0692a931517aecb25fa374d3820a3d58f30"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Civil_Liberties_Act_of_1988",
+   "title": "Civil Liberties Act of 1988 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:44.746Z",
+   "snapshot": "8f99fc59cb3732c10e1131ca6ba881b58b94b57543672b8e030565a3ab688f17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_of_Canada",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:46.029Z",
+   "snapshot": "df2f36cbffebf04ac1213fb198ab9d1558aabfd120f6d13a085621986913595a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10293",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Canada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "United States",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:15.474Z",
+   "target": "f10291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "En tant que guerre d'indépendance et de décolonisation, elle oppose des indépendantistes algériens, principalement réunis sous la bannière du Front de libération nationale (FLN), à la France.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:15.474Z",
+   "target": "f10292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie hatten sich dem Prozess jedoch durch Flucht nach Deutschland entzogen und wurden in Abwesenheit zum Tode verurteilt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutschland” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:15.474Z",
+   "target": "f10293",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Apology to Australia's Indigenous peoples",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:15.474Z",
+   "target": "f10294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Truth and Reconciliation Commission of Canada was established in 2008, concluding in 2015 by labeling the system as a cultural genocide of Indigenous peoples in Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canada” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:15.474Z",
+   "target": "f10295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "§ 1989b et seq.) is a United States federal law that granted reparations to Japanese Americans who had been wrongly interned by the United States government during World War II and to \"discourage the occurrence of similar injustices and violations of civil liberties in the future\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.474Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “United States” is on the snapshot of s5"
+  }
+ ]
+}

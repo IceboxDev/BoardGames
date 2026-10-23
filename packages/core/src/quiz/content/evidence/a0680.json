@@ -1,0 +1,202 @@
+{
+ "article": "a0680",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Numa_Pompilius",
+   "title": "Numa Pompilius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:44.191Z",
+   "snapshot": "0df07102669f2c33495ec58a5f7596cd6811885b78c39a97d3761285817aec44"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fasti_(poem)",
+   "title": "Fasti (poem) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:45.209Z",
+   "snapshot": "3a322578ff5f51323597934d6f4a36a3610ba94746fbc9fe69c0f4a0c4b75ea0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/July",
+   "title": "July – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:46.193Z",
+   "snapshot": "bf79f3369ca5bcb50b396ade036b876e2c21573cd4250abae1c491cd6d046e5a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/August",
+   "title": "August – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:47.228Z",
+   "snapshot": "990477e80515f441c1c08d1d090447cd49a2517bab914d2fe817766d2c5b9f1d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mars_(mythology)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:48.366Z",
+   "snapshot": "009bbb2a2299d9f4fd115b13ef80ccc0f8b30a6f6085fc39b15ed80e465210f6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Janus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juno",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Julius Caesar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Augustus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:25.886Z",
+   "target": "f03396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "One of Numa's first acts was the construction of a temple of Janus as an indicator of peace and war.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Janus” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:25.886Z",
+   "target": "f03398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the next section the goddess Flora appears and discusses her origin, her help in Juno's conceiving of a child, and the political origin of her games (159–378).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juno” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:25.886Z",
+   "target": "f03399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was named by the Roman Senate in honour of Roman general and statesman Julius Caesar in 44 B.C., being the month of his birth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Julius Caesar” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:25.886Z",
+   "target": "f03400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 8 BC, the month was renamed in honor of Emperor Augustus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:25.886Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augustus” is on the snapshot of s4"
+  }
+ ]
+}

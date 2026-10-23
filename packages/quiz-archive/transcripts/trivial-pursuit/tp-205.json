@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-205",
+ "image": "IMG20261007181210.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In was wurde die russische Stadt Sankt Petersburg während des Ersten Weltkriegs umbenannt?",
+   "de": "In was wurde die russische Stadt Sankt Petersburg während des Ersten Weltkriegs umbenannt?",
+   "en": "What was the Russian city of Saint Petersburg renamed during the First World War?",
+   "reworked": false,
+   "answerDe": "Petrograd",
+   "answerEn": "Petrograd",
+   "timeline": {
+    "kind": "period",
+    "start": "1914-08-18",
+    "end": "1924-01-26",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Saint Petersburg bears the Russianised name Petrograd, from the First World War until it becomes Leningrad",
+    "labelDe": "Sankt Petersburg trägt den russifizierten Namen Petrograd, vom Ersten Weltkrieg bis zur Umbenennung in Leningrad"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Sankt_Petersburg",
+    "title": "Sankt Petersburg",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wer spielte den englischen König George VI. im Film The King’s Speech – Die Rede des Königs?",
+   "de": "Wer spielte den englischen König George VI. im Film The King’s Speech – Die Rede des Königs?",
+   "en": "Who played the English King George VI in the film The King's Speech?",
+   "reworked": false,
+   "answerDe": "Colin Firth",
+   "answerEn": "Colin Firth",
+   "timeline": {
+    "kind": "creation",
+    "start": "2010",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The King's Speech, Tom Hooper's film with Colin Firth as King George VI",
+    "labelDe": "The King’s Speech – Die Rede des Königs, Tom Hoopers Film mit Colin Firth als König Georg VI."
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/The_King%E2%80%99s_Speech",
+    "title": "The King’s Speech",
+    "lang": "de"
+   },
+   "notes": "Firth won the Academy Award for Best Actor for the role.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welches Kleidungsstück verdankt den Soldaten des Ersten Weltkriegs seine Popularität: der Trenchcoat, die Schirmmütze oder der Gürtel?",
+   "de": "Welcher nach dem Schützengraben benannte Mantel verdankt den Soldaten des Ersten Weltkriegs seine Popularität?",
+   "en": "Which coat, named after the trenches, owes its popularity to the soldiers of the First World War?",
+   "reworked": true,
+   "answerDe": "Trenchcoat",
+   "answerEn": "Trench coat",
+   "timeline": {
+    "kind": "period",
+    "start": "1914",
+    "end": "1918",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First World War, when British and French officers wore the trench coat in the trenches",
+    "labelDe": "Erster Weltkrieg, in dem britische und französische Offiziere den Trenchcoat im Schützengraben trugen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Trenchcoat",
+    "title": "Trenchcoat",
+    "lang": "de"
+   },
+   "notes": "Invented by Burberry and Aquascutum in the late 19th century as an army coat; named after its use in the WWI trenches.",
+   "domain": "art",
+   "sub": "design"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Maler stand 1911 zeitweise unter Verdacht, die Mona Lisa gestohlen zu haben: Pablo Picasso, Henri Matisse oder Salvador Dalí?",
+   "de": "Welcher Maler stand 1911 zeitweise unter Verdacht, die Mona Lisa gestohlen zu haben?",
+   "en": "Which painter was briefly suspected in 1911 of having stolen the Mona Lisa?",
+   "reworked": true,
+   "answerDe": "Pablo Picasso",
+   "answerEn": "Pablo Picasso",
+   "timeline": {
+    "kind": "event",
+    "start": "1911-08-21",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Vincenzo Peruggia steals the Mona Lisa from the Louvre; Picasso is questioned by police in September",
+    "labelDe": "Vincenzo Peruggia stiehlt die Mona Lisa aus dem Louvre; Picasso wird im September von der Polizei verhört"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Mona_Lisa",
+    "title": "Mona Lisa",
+    "lang": "de"
+   },
+   "notes": "Picasso was questioned on 9 September 1911 (not arrested) after Guillaume Apollinaire, who was arrested, named him; the actual thief was Vincenzo Peruggia.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie werden die Gruppen genannt, in denen Delfine leben: Schwärme, Schulen oder Verbände?",
+   "de": "Wie werden die Gruppen genannt, in denen Delfine leben?",
+   "en": "What are the groups that dolphins live in called?",
+   "reworked": true,
+   "answerDe": "Schulen",
+   "answerEn": "Schools (pods)",
+   "timeline": {
+    "kind": "era",
+    "start": "-25000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Oceanic dolphins (Delphinidae), social toothed whales living in groups, first appear in the fossil record in the Late Oligocene",
+    "labelDe": "Delfine (Delphinidae), in Gruppen lebende soziale Zahnwale, erscheinen erstmals im Spätoligozän im Fossilbericht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Delfine",
+    "title": "Delfine",
+    "lang": "de"
+   },
+   "notes": "In English the usual term is 'pod'; 'school' is also used. German Wikipedia calls the groups 'Schulen'.",
+   "domain": "nature",
+   "sub": "mammals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welcher Fußballer eröffnete 2013 ein Museum zu seinen eigenen Ehren: Ronaldinho, Cristiano Ronaldo oder Lionel Messi?",
+   "de": "Welcher Fußballer eröffnete 2013 ein Museum zu seinen eigenen Ehren?",
+   "en": "Which footballer opened a museum in his own honour in 2013?",
+   "reworked": true,
+   "answerDe": "Cristiano Ronaldo",
+   "answerEn": "Cristiano Ronaldo",
+   "timeline": {
+    "kind": "founding",
+    "start": "2013-12-15",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Museu CR7, Cristiano Ronaldo's museum in Funchal, Madeira, opens",
+    "labelDe": "Das Museu CR7, Cristiano Ronaldos Museum in Funchal auf Madeira, wird eröffnet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Museu_CR7",
+    "title": "Museu CR7",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

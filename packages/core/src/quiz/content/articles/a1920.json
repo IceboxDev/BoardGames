@@ -1,0 +1,471 @@
+{
+ "id": "a1920",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "The Singularity and the Vocabulary of Artificial Intelligence",
+ "titleDe": "Die Singularität und das Vokabular der künstlichen Intelligenz",
+ "titleRu": "Сингулярность и словарь искусственного интеллекта",
+ "bodyEn": "Every field invents words for the things it fears and hopes for, and artificial intelligence has produced more of them than most. The grandest is the technological singularity: a hypothetical moment at which machines become able to improve themselves, progress accelerates beyond human control, and nothing beyond that point can be predicted – just as physics breaks down at the singularity inside a black hole. The mathematician Stanislaw Ulam recalled John von Neumann using the word in this sense in the 1950s; the statistician I. J. Good described an \"intelligence explosion\" in 1965; and the science-fiction author Vernor Vinge gave the idea its name in a 1993 essay, \"The Coming Technological Singularity\". Ray Kurzweil's bestseller \"The Singularity Is Near\" (2005) put a date on it – 2045 – and turned it into a Silicon Valley creed, while many researchers regard the whole notion as speculative.\n\nThe singularity also has its prophets of doom. The most famous was the astrophysicist Stephen Hawking, who told the BBC on 2 December 2014 that “the development of full artificial intelligence could spell the end of the human race”: a machine that redesigned itself ever faster would outrun humans, who are limited by slow biological evolution. Elon Musk and many researchers signed open letters in the same spirit, and Hawking repeated the warning until his death in 2018.\n\n| Term | Coined / popularised | Meaning |\n|---|---|---|\n| Turing test | Alan Turing, 1950 | can a machine pass for a human in conversation? |\n| technological singularity | Vinge 1993, Kurzweil 2005 | runaway, unpredictable AI-driven progress |\n| deep learning | 2000s; breakthrough 2012 | learning with many-layered neural networks |\n| artificial general intelligence | 2000s | human-level ability across all tasks |\n| hallucination | 2020s | fluent but fabricated model output |\n\nThe oldest term in the vocabulary is the Turing test. In his 1950 paper \"Computing Machinery and Intelligence\", Alan Turing replaced the unanswerable question \"Can machines think?\" with an \"imitation game\": an interrogator exchanges typed messages with a hidden human and a hidden computer, and the machine passes if it cannot be told apart. Chatbots from ELIZA in 1966 to today's large language models have been measured against it ever since.\n\nThose models are the product of deep learning – machine learning with artificial neural networks many layers deep. A neural network is a computational model made of connected artificial neurons, loosely inspired by the brain's networks of signalling nerve cells: each unit sums the signals it receives and passes a result on, and learning means adjusting the strengths of the connections. Warren McCulloch and Walter Pitts proposed the first mathematical model of such a neuron in 1943. The technique had existed since the backpropagation algorithm of the 1980s, but it exploded in 2012 when, on 30 September, a deep network called AlexNet crushed the ImageNet image-recognition contest, and Geoffrey Hinton, Yann LeCun and Yoshua Bengio shared the 2018 Turing Award for it. Today's language models rest on a later design: the transformer, an architecture built around the \"attention\" mechanism that eight Google researchers introduced in the 2017 paper \"Attention Is All You Need\" – it is the T in GPT, short for \"generative pre-trained transformer\".\n\nDeep learning also brought a new failure mode. Because a language model predicts plausible text rather than looking facts up, it can produce a fluent, confident and entirely invented answer – a hallucination. The word entered everyday vocabulary in 2023: on 22 June that year a federal judge in New York sanctioned lawyers for filing a brief full of court cases that ChatGPT had made up.\n\nThe goal that all this is supposed to lead to is artificial general intelligence, or AGI: a system that can learn and perform any intellectual task at least as well as a person, in contrast to the \"narrow\" AI that plays Go or translates text. The term was first used by Mark Gubrud in 1997 and popularised by Shane Legg and Ben Goertzel around 2002. Whether AGI is decades away or already impossible in principle remains the central argument of the field – and the singularity is simply the question of what happens the day after.",
+ "bodyDe": "Jedes Fachgebiet erfindet Wörter für das, was es fürchtet und erhofft, und die künstliche Intelligenz hat mehr davon hervorgebracht als die meisten. Das gewaltigste ist die technologische Singularität: ein hypothetischer Moment, in dem Maschinen fähig werden, sich selbst zu verbessern, der Fortschritt sich jeder menschlichen Kontrolle entzieht und nichts jenseits dieses Punktes mehr vorhersagbar ist – so wie die Physik in der Singularität eines Schwarzen Lochs versagt. Der Mathematiker Stanislaw Ulam erinnerte sich, dass John von Neumann das Wort in den 1950er-Jahren in diesem Sinn benutzte; der Statistiker I. J. Good beschrieb 1965 eine „Intelligenzexplosion“; und der Science-Fiction-Autor Vernor Vinge gab der Idee 1993 in seinem Essay „The Coming Technological Singularity“ ihren Namen. Ray Kurzweils Bestseller „The Singularity Is Near“ (2005) nannte ein Datum – 2045 – und machte daraus ein Glaubensbekenntnis des Silicon Valley, während viele Forscher die ganze Vorstellung für spekulativ halten.\n\nDie Singularität hat auch ihre Unheilspropheten. Der berühmteste war der Astrophysiker Stephen Hawking, der am 2. Dezember 2014 der BBC sagte, „die Entwicklung voller künstlicher Intelligenz könnte das Ende der Menschheit bedeuten“: Eine Maschine, die sich selbst immer schneller neu entwirft, würde die Menschen überholen, die durch die langsame biologische Evolution begrenzt sind. Elon Musk und viele Forscher unterzeichneten offene Briefe im selben Sinn, und Hawking wiederholte die Warnung bis zu seinem Tod 2018.\n\n| Begriff | Geprägt / verbreitet | Bedeutung |\n|---|---|---|\n| Turing-Test | Alan Turing, 1950 | Kann eine Maschine im Gespräch als Mensch durchgehen? |\n| Technologische Singularität | Vinge 1993, Kurzweil 2005 | unkontrollierbarer, unvorhersehbarer KI-getriebener Fortschritt |\n| Deep Learning | 2000er; Durchbruch 2012 | Lernen mit vielschichtigen neuronalen Netzen |\n| Künstliche allgemeine Intelligenz | 2000er | menschliches Niveau bei allen Aufgaben |\n| Halluzination | 2020er | flüssige, aber erfundene Modellausgabe |\n\nDer älteste Begriff des Vokabulars ist der Turing-Test. In seinem Aufsatz „Computing Machinery and Intelligence“ von 1950 ersetzte Alan Turing die unbeantwortbare Frage „Können Maschinen denken?“ durch ein „Imitationsspiel“: Ein Fragesteller tauscht getippte Nachrichten mit einem verborgenen Menschen und einem verborgenen Computer aus, und die Maschine besteht, wenn sie nicht zu unterscheiden ist. Chatbots von ELIZA im Jahr 1966 bis zu den heutigen großen Sprachmodellen werden seither daran gemessen.\n\nDiese Modelle sind das Produkt von Deep Learning – maschinellem Lernen mit künstlichen neuronalen Netzen, die viele Schichten tief sind. Ein neuronales Netz ist ein Rechenmodell aus verbundenen künstlichen Neuronen, lose den Netzen signalübertragender Nervenzellen im Gehirn nachempfunden: Jede Einheit summiert die Signale, die sie empfängt, und gibt ein Ergebnis weiter, und Lernen bedeutet, die Stärke der Verbindungen anzupassen. Warren McCulloch und Walter Pitts stellten 1943 das erste mathematische Modell eines solchen Neurons vor. Die Technik existierte seit dem Backpropagation-Algorithmus der 1980er-Jahre, explodierte aber 2012, als am 30. September ein tiefes Netz namens AlexNet den Bilderkennungswettbewerb ImageNet haushoch gewann; Geoffrey Hinton, Yann LeCun und Yoshua Bengio teilten sich dafür 2018 den Turing Award. Die heutigen Sprachmodelle beruhen auf einer späteren Bauweise: dem Transformer, einer um den „Aufmerksamkeits“-Mechanismus gebauten Architektur, die acht Google-Forscher 2017 in dem Aufsatz „Attention Is All You Need“ vorstellten – er ist das T in GPT, kurz für „generative pre-trained transformer“.\n\nDeep Learning brachte auch eine neue Art des Versagens. Weil ein Sprachmodell plausiblen Text vorhersagt, statt Fakten nachzuschlagen, kann es eine flüssige, selbstbewusste und vollständig erfundene Antwort liefern – eine Halluzination. Das Wort ging 2023 in den Alltagswortschatz ein: Am 22. Juni jenes Jahres bestrafte ein New Yorker Bundesrichter Anwälte, weil sie einen Schriftsatz voller Gerichtsfälle eingereicht hatten, die ChatGPT erfunden hatte.\n\nDas Ziel, zu dem all das führen soll, ist die künstliche allgemeine Intelligenz, kurz AGI: ein System, das jede intellektuelle Aufgabe mindestens so gut wie ein Mensch lernen und ausführen kann – im Gegensatz zur „schwachen“ KI, die Go spielt oder Texte übersetzt. Der Begriff wurde 1997 erstmals von Mark Gubrud verwendet und um 2002 von Shane Legg und Ben Goertzel populär gemacht. Ob AGI Jahrzehnte entfernt oder grundsätzlich unmöglich ist, bleibt der zentrale Streit des Fachs – und die Singularität ist schlicht die Frage, was am Tag danach geschieht.",
+ "bodyRu": "Каждая область придумывает слова для того, чего она боится и на что надеется, и искусственный интеллект породил их больше, чем большинство других. Самый грандиозный из них — технологическая сингулярность: гипотетический момент, когда машины научатся сами себя улучшать, прогресс выйдет из-под человеческого контроля и ничего за этой точкой уже нельзя будет предсказать — так же, как физика перестаёт работать в сингулярности внутри чёрной дыры. Математик Станислав Улам вспоминал, что Джон фон Нейман употреблял это слово в таком смысле ещё в 1950-х годах; статистик И. Дж. Гуд в 1965 году описал «интеллектуальный взрыв»; а писатель-фантаст Вернор Виндж дал идее имя в эссе 1993 года «Грядущая технологическая сингулярность». Бестселлер Рэя Курцвейла «Сингулярность близко» (2005) назвал дату — 2045 год — и превратил идею в символ веры Кремниевой долины, хотя многие исследователи считают всё это понятие спекулятивным.\n\nУ сингулярности есть и свои пророки гибели. Самым известным был астрофизик Стивен Хокинг, который 2 декабря 2014 года сказал Би-би-си, что «развитие полноценного искусственного интеллекта может означать конец человеческой расы»: машина, всё быстрее перестраивающая саму себя, обгонит людей, ограниченных медленной биологической эволюцией. Илон Маск и многие исследователи подписывали открытые письма в том же духе, а Хокинг повторял своё предупреждение до самой смерти в 2018 году.\n\n| Термин | Введён / популяризирован | Значение |\n|---|---|---|\n| Тест Тьюринга | Алан Тьюринг, 1950 | может ли машина сойти за человека в разговоре? |\n| Технологическая сингулярность | Виндж 1993, Курцвейл 2005 | неуправляемый, непредсказуемый прогресс, движимый ИИ |\n| Глубокое обучение | 2000-е; прорыв 2012 | обучение многослойных нейронных сетей |\n| Общий искусственный интеллект | 2000-е | уровень человека во всех задачах |\n| Галлюцинация | 2020-е | гладкий, но выдуманный ответ модели |\n\nСамый старый термин этого словаря — тест Тьюринга. В статье 1950 года «Вычислительные машины и разум» Алан Тьюринг заменил неразрешимый вопрос «Могут ли машины мыслить?» «игрой в имитацию»: экзаменатор обменивается напечатанными сообщениями со скрытым от него человеком и скрытым компьютером, и машина проходит испытание, если её невозможно отличить. С тех пор по нему мерили чат-ботов — от ELIZA 1966 года до нынешних больших языковых моделей.\n\nЗа этими моделями стоит глубокое обучение — машинное обучение с помощью искусственных нейронных сетей глубиной во много слоёв. Нейронная сеть — это вычислительная модель из связанных между собой искусственных нейронов, отдалённо напоминающая сети передающих сигналы нервных клеток мозга: каждый элемент суммирует полученные сигналы и передаёт результат дальше, а обучение означает подстройку силы связей. Уоррен Мак-Каллок и Уолтер Питтс предложили первую математическую модель такого нейрона в 1943 году. Метод существовал со времён алгоритма обратного распространения ошибки 1980-х годов, но пережил взрыв в 2012 году, когда 30 сентября глубокая сеть AlexNet с разгромным счётом выиграла конкурс по распознаванию изображений ImageNet; Джеффри Хинтон, Ян Лекун и Йошуа Бенджио разделили за это премию Тьюринга 2018 года. Нынешние языковые модели опираются на более позднюю конструкцию — архитектуру, построенную вокруг механизма «внимания», которую восемь исследователей Google представили в статье 2017 года «Attention Is All You Need» и назвали «трансформер»; это та самая буква T в GPT — generative pre-trained transformer.\n\nГлубокое обучение принесло и новый вид сбоя. Поскольку языковая модель предсказывает правдоподобный текст, а не ищет факты, она может выдать гладкий, уверенный и полностью выдуманный ответ — галлюцинация. В повседневный язык это слово вошло в 2023 году: 22 июня того года федеральный судья в Нью-Йорке наказал адвокатов, подавших записку, полную судебных дел, которые выдумал ChatGPT.\n\nЦель, к которой всё это должно привести, — общий искусственный интеллект, или AGI: система, способная научиться любой интеллектуальной задаче и выполнять её по меньшей мере так же хорошо, как человек, в отличие от «узкого» ИИ, который играет в го или переводит тексты. Термин впервые употребил Марк Губруд в 1997 году, а около 2002 года его популяризировали Шейн Легг и Бен Гёрцель. Отделяют ли нас от AGI десятилетия или он в принципе невозможен — главный спор этой области, а сингулярность — это попросту вопрос о том, что случится на следующий день.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Turing_test_diagram.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Turing_test",
+   "width": 661,
+   "height": 504,
+   "alt": {
+    "en": "Diagram of the Turing test with an interrogator, a human and a computer",
+    "de": "Schema des Turing-Tests mit Fragesteller, Mensch und Computer",
+    "ru": "Схема теста Тьюринга: допрашивающий, человек и компьютер"
+   },
+   "caption": {
+    "en": "The Turing test: an interrogator (C) exchanges typed messages with a hidden human (B) and a hidden machine (A) and must decide which is which.",
+    "de": "Der Turing-Test: Ein Fragesteller (C) tauscht getippte Nachrichten mit einem verborgenen Menschen (B) und einer verborgenen Maschine (A) aus und muss entscheiden, wer wer ist.",
+    "ru": "Тест Тьюринга: допрашивающий (C) переписывается со скрытым человеком (B) и скрытой машиной (A) и должен определить, кто есть кто."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Stephen_Hawking",
+   "width": 250,
+   "height": 359,
+   "alt": {
+    "en": "Portrait of Stephen Hawking",
+    "de": "Porträt von Stephen Hawking",
+    "ru": "Портрет Стивена Хокинга"
+   },
+   "caption": {
+    "en": "Stephen Hawking, who warned the BBC in December 2014 that full artificial intelligence could spell the end of the human race.",
+    "de": "Stephen Hawking, der im Dezember 2014 in der BBC warnte, volle künstliche Intelligenz könnte das Ende der Menschheit bedeuten.",
+    "ru": "Стивен Хокинг, в декабре 2014 года предупредивший в эфире Би-би-си, что полноценный искусственный интеллект может означать конец человечества."
+   },
+   "credit": "NASA, Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f09596",
+   "answerEn": "technological singularity",
+   "answerDe": "Technologische Singularität",
+   "answerRu": "технологическая сингулярность",
+   "spans": {
+    "en": [
+     150,
+     25
+    ],
+    "de": [
+     173,
+     27
+    ],
+    "ru": [
+     174,
+     29
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1993",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Vernor Vinge publishes „The Coming Technological Singularity“",
+    "labelDe": "Vernor Vinge veröffentlicht „The Coming Technological Singularity“",
+    "labelRu": "Вернор Виндж публикует «Грядущую технологическую сингулярность»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Technological_singularity",
+    "title": "Technological singularity – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w09596",
+     "en": "What do AI researchers call the point in time at which technological progress driven by AI accelerates so much that the future beyond this event becomes unpredictable?",
+     "de": "Wie nennen KI-Forscher den Zeitpunkt, an dem sich der technologische Fortschritt durch KI dermaßen beschleunigt, dass die Zukunft hinter diesem Ereignis nicht vorhersehbar ist?",
+     "ru": "Как исследователи ИИ называют момент, когда технологический прогресс, движимый ИИ, ускоряется настолько, что будущее после этого события становится непредсказуемым?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c160",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f09597",
+   "answerEn": "Turing test",
+   "answerDe": "Turing-Test",
+   "answerRu": "тест Тьюринга",
+   "spans": {
+    "en": [
+     1902,
+     11
+    ],
+    "de": [
+     2103,
+     11
+    ],
+    "ru": [
+     1937,
+     13
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1950",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alan Turing proposes the imitation game (Turing test)",
+    "labelDe": "Alan Turing schlägt das Imitationsspiel (Turing-Test) vor",
+    "labelRu": "Алан Тьюринг предлагает игру в имитацию (тест Тьюринга)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Turing_test",
+    "title": "Turing test – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w09597",
+     "en": "What do AI researchers call a test in which a human, in written dialogue, cannot tell whether they are talking to a person or a machine?",
+     "de": "Wie nennen KI-Forscher einen Test, bei dem ein Mensch im schriftlichen Dialog nicht unterscheiden kann, ob er mit einem Menschen oder einer Maschine spricht?",
+     "ru": "Как исследователи ИИ называют испытание, в котором человек в письменном диалоге не может понять, общается он с человеком или с машиной?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q189223",
+     "label": "Turing test",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f09598",
+   "answerEn": "deep learning",
+   "answerDe": "Deep Learning",
+   "answerRu": "глубокое обучение",
+   "spans": {
+    "en": [
+     2339,
+     13
+    ],
+    "de": [
+     2602,
+     13
+    ],
+    "ru": [
+     2371,
+     17
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2012-09-30",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "AlexNet wins the ImageNet contest, launching the deep-learning boom",
+    "labelDe": "AlexNet gewinnt den ImageNet-Wettbewerb – Beginn des Deep-Learning-Booms",
+    "labelRu": "AlexNet побеждает в конкурсе ImageNet — начало бума глубокого обучения"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/AlexNet",
+    "title": "AlexNet – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w09598",
+     "en": "What do AI researchers call machine learning with many-layered artificial neural networks?",
+     "de": "Wie nennen KI-Forscher das maschinelle Lernen mit vielschichtigen künstlichen neuronalen Netzen?",
+     "ru": "Как исследователи ИИ называют машинное обучение с многослойными искусственными нейронными сетями?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f09599",
+   "answerEn": "hallucination",
+   "answerDe": "Halluzination",
+   "answerRu": "галлюцинация",
+   "spans": {
+    "en": [
+     3554,
+     13
+    ],
+    "de": [
+     3927,
+     13
+    ],
+    "ru": [
+     3667,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2023-06-22",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A US court sanctions lawyers for citing cases invented by ChatGPT",
+    "labelDe": "Ein US-Gericht bestraft Anwälte, die von ChatGPT erfundene Fälle zitierten",
+    "labelRu": "Суд США наказывает адвокатов, ссылавшихся на выдуманные ChatGPT дела"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+    "title": "Hallucination (artificial intelligence) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w09599",
+     "en": "What do AI researchers call the phenomenon of a language model confidently presenting invented information as fact?",
+     "de": "Wie nennen KI-Forscher das Phänomen, dass ein Sprachmodell erfundene Informationen überzeugend als Fakten präsentiert?",
+     "ru": "Как исследователи ИИ называют явление, когда языковая модель уверенно выдаёт выдуманную информацию за факты?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f09600",
+   "answerEn": "artificial general intelligence",
+   "answerDe": "Künstliche allgemeine Intelligenz",
+   "answerRu": "общий искусственный интеллект",
+   "spans": {
+    "en": [
+     3798,
+     31
+    ],
+    "de": [
+     4207,
+     33
+    ],
+    "ru": [
+     3905,
+     29
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1997",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The term „artificial general intelligence“ is first used (Mark Gubrud)",
+    "labelDe": "Der Begriff „artificial general intelligence“ wird erstmals verwendet (Mark Gubrud)",
+    "labelRu": "Впервые употреблён термин «общий искусственный интеллект» (Марк Губруд)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Artificial_general_intelligence",
+    "title": "Artificial general intelligence – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w09600",
+     "en": "What do AI researchers call a hypothetical AI that can perform any intellectual task at least as well as a human?",
+     "de": "Wie nennen KI-Forscher eine hypothetische KI, die jede intellektuelle Aufgabe mindestens so gut wie ein Mensch bewältigen kann?",
+     "ru": "Как исследователи ИИ называют гипотетический ИИ, способный выполнить любую интеллектуальную задачу по меньшей мере так же хорошо, как человек?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f14698",
+   "answerEn": "Stephen Hawking",
+   "answerDe": "Stephen Hawking",
+   "answerRu": "Стивен Хокинг",
+   "spans": {
+    "en": [
+     991,
+     15
+    ],
+    "de": [
+     1100,
+     15
+    ],
+    "ru": [
+     998,
+     13
+    ]
+   },
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1942-01-08",
+    "end": "2018-03-14",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Stephen Hawking, British theoretical physicist and cosmologist",
+    "labelDe": "Stephen Hawking, britischer theoretischer Physiker und Kosmologe",
+    "labelRu": "Стивен Хокинг, британский физик-теоретик и космолог"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Stephen_Hawking",
+    "title": "Stephen Hawking",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w15015",
+     "en": "What is the name of the famous astrophysicist who warns that the further development of artificial intelligence could mean the end of humanity?",
+     "de": "Wie heißt der berühmte Astrophysiker, der davor warnt, dass die weitere Entwicklung der künstlichen Intelligenz das Ende der Menschheit bedeuten könnte?",
+     "ru": "Как зовут знаменитого астрофизика, предупреждавшего, что дальнейшее развитие искусственного интеллекта может означать конец человечества?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-300",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q17714",
+     "label": "Stephen Hawking",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f25956",
+   "answerEn": "Neural network",
+   "answerDe": "Neuronales Netz",
+   "answerRu": "нейронная сеть",
+   "spans": {
+    "en": [
+     2424,
+     14
+    ],
+    "de": [
+     2708,
+     15
+    ],
+    "ru": [
+     2474,
+     14
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1943-12",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Warren McCulloch and Walter Pitts publish the first mathematical model of a neural network",
+    "labelDe": "Warren McCulloch und Walter Pitts veröffentlichen das erste mathematische Modell eines neuronalen Netzes",
+    "labelRu": "Уоррен Мак-Каллок и Уолтер Питтс публикуют первую математическую модель нейронной сети"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
+    "title": "Neural network (machine learning)",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w25382",
+     "en": "What is the term for a computational model, inspired by the brain's networks of signalling neurons, made of connected artificial neurons?",
+     "de": "Wie nennt man ein Rechenmodell aus verbundenen künstlichen Neuronen, das den Netzen signalübertragender Nervenzellen im Gehirn nachempfunden ist?",
+     "ru": "Как называется вычислительная модель из связанных между собой искусственных нейронов, созданная по образцу сетей передающих сигналы нервных клеток мозга?",
+     "origin": "printed",
+     "printed": {
+      "source": "publish-or-perish-mge",
+      "card": "ppm-073",
+      "category": 2
+     },
+     "cardText": "[Computer Science] What is the term for an algorithmic structure that mimics the signaling mechanism of the human brain?\nA. Artificial intelligence\nB. Blockchain\nC. Neural network\nAnswer: C."
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f28204",
+   "answerEn": "transformer",
+   "answerDe": "Transformer",
+   "answerRu": "трансформер",
+   "spans": {
+    "en": [
+     3134,
+     11
+    ],
+    "de": [
+     3471,
+     11
+    ],
+    "ru": [
+     3396,
+     11
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "2017-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "\"Attention Is All You Need\" introduces the transformer",
+    "labelDe": "„Attention Is All You Need“ stellt den Transformer vor",
+    "labelRu": "Статья «Attention Is All You Need» представляет трансформер"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+    "title": "Attention Is All You Need – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w27204",
+     "en": "What do AI researchers call the neural-network architecture that eight Google researchers introduced in the 2017 paper \"Attention Is All You Need\" – the T in GPT?",
+     "de": "Wie nennen KI-Forscher die Architektur neuronaler Netze, die acht Google-Forscher 2017 in dem Aufsatz „Attention Is All You Need“ vorstellten – das T in GPT?",
+     "ru": "Как исследователи ИИ называют архитектуру нейронных сетей, которую восемь исследователей Google представили в 2017 году в статье «Attention Is All You Need», — ту самую букву T в GPT?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/ai",
+  "topic:language/terminology",
+  "audience:international"
+ ]
+}

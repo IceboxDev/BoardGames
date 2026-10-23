@@ -1,0 +1,432 @@
+{
+ "article": "a2093",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Pilates",
+   "title": "Joseph Pilates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:04.297Z",
+   "snapshot": "8bff62d59683d01063fe3af981f1cfdbe44db80449eb2db8063a693f0dad78a2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cooper_test",
+   "title": "Cooper test – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:53.763Z",
+   "snapshot": "f3472e509bc4974041f09bf5d293c93ac70f8c99bbe2322e2977dfaf60f2b164"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mosh%C3%A9_Feldenkrais",
+   "title": "Moshé Feldenkrais – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:54.758Z",
+   "snapshot": "4a30dde348b0d8aa7e5a83f505e632c0fea5dc5da36356e07600212ecbf7089c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pilates",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:55.773Z",
+   "snapshot": "4193af7e26797fc885344c8a05c4dfdd43d281f17b511216acecfff4953e2bae"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Joseph_H._Pilates",
+   "title": "Joseph H. Pilates",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:53.086Z",
+   "snapshot": "9c5688cf55b78faced35d44c2522a63285353a1210dce1fe5f6f17656cc31b5e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jane_Fonda%27s_Workout",
+   "title": "Jane Fonda's Workout – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:56.863Z",
+   "snapshot": "57af4c336390491a941cf29c6c2a9cde4785bbd73b79b0c098c5e96536610825"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pilates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cooper test",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Feldenkrais Method",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Contrology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Contrology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f24281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Reformer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f08185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Aerobics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-223/6, u05: Joseph Pilates was born 9 Dec 1883 in Mönchengladbach (Prussia, German Empire); no source links him to Poland. Statement false."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f14682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Deutschland",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e8 is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f14682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Germany",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e8 is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f10461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Joseph Hubertus Pilates (December 9, 1883 – October 9, 1967) was a German physical trainer, writer, and inventor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pilates” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f10464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Cooper test is a physical fitness test that measures an individual's cardiovascular endurance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cooper test” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f10465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moshé Pinchas Feldenkrais (Hebrew: משה פנחס פלדנקרייז; May 6, 1904 – July 1, 1984) was an engineer and physicist, known as the founder of the Feldenkrais method.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Feldenkrais Method” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f24280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was there that he began refining and teaching his minimal-equipment system of mat exercises that later became \"Contrology\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Contrology” is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f24280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pilates called his method \"Contrology\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Contrology” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f24281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The best-known and most popular apparatus today, the Reformer, was originally called the Universal Reformer, aptly named for \"universally reforming the body\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reformer” is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f14682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After World War I, Pilates returned to Germany and collaborated with experts in dance and physical exercise such as Rudolf Laban.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Germany” is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f14682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Er kehrte nach dem Krieg nach Deutschland zurück und arbeitete dort mit den wichtigsten Vertretern der Bewegungslehre zusammen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutschland” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:29:21.068Z",
+   "target": "f08185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Video Aerobics, featuring Leslie Lilien and Julie Lavin and available on videotape in 1979, was the first in the home video category of exercise tapes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:21.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aerobics” is on the snapshot of s6"
+  }
+ ]
+}

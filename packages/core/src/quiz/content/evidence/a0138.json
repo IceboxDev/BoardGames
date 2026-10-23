@@ -1,0 +1,249 @@
+{
+ "article": "a0138",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Durrani_Empire",
+   "title": "Durrani Empire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:23.192Z",
+   "snapshot": "7757ee9a588074c5b98d834dd5434bea3d9352e1e20ba58a199deb2762320add"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sri_Lankan_civil_war",
+   "title": "Sri Lankan civil war – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:24.517Z",
+   "snapshot": "16620b061393d46bcae399b2bdf86e9845ec768ad122700324bd3f0c7c9481dd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Burma_Independence_Act_1947",
+   "title": "Burma Independence Act 1947 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:25.259Z",
+   "snapshot": "06d293c647ae75f51caf17f301e6f605e78111d4a83564ccefa980ea938b7cbc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/List_of_ethnic_groups_in_Vietnam",
+   "title": "List of ethnic groups in Vietnam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:26.201Z",
+   "snapshot": "1e1c2d726bb052be9cd875bbd3a7a094d3adfc8dca97fc5c07022bbc7fbd9365"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rwandan_genocide",
+   "title": "Rwandan genocide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:27.894Z",
+   "snapshot": "e2c78c84fa032d324820a1a74e3308429ba00baa3adb50f2a91b3eea5c835c6b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rohingya_people",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:28.855Z",
+   "snapshot": "2f25166113e8f84bf3caa589bf8013b8c360390fe9c5215b1ccc6c00af5474e0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Afghanistan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sri Lanka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Myanmar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vietnam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rwanda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:58.489Z",
+   "target": "f00686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Durrani Empire, colloquially known as the Kingdom of Afghanistan, the Afghan Empire, or the Sadozai Kingdom, was an Afghan empire founded in 1747 by Ahmad Shah Durrani, of the Pashtun Durrani tribe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afghanistan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:58.489Z",
+   "target": "f00687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sri Lankan civil war was an armed conflict fought in Sri Lanka from 1983 to 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sri Lanka” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:58.489Z",
+   "target": "f00688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "3) was an act of the Parliament of the United Kingdom that conferred independence on Burma, today called Myanmar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Myanmar” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:58.489Z",
+   "target": "f00689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "List of ethnic groups in Vietnam",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vietnam” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:58.489Z",
+   "target": "f00690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hostilities were then exacerbated further due to the Rwandan Civil War, which began in 1990 when the Rwandan Patriotic Front (RPF), a predominantly Tutsi rebel group, invaded Rwanda from Uganda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.489Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rwanda” is on the snapshot of s5"
+  }
+ ]
+}

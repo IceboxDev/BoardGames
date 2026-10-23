@@ -1,0 +1,289 @@
+{
+ "article": "a1515",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Marina_Abramovi%C4%87",
+   "title": "Marina Abramović – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:09.461Z",
+   "snapshot": "d899998f42ff751d4fced13d6ba8566b4ac1ee22f1c35ac9ce7e2e12a5258018"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/I_Like_America_and_America_Likes_Me",
+   "title": "I Like America and America Likes Me – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:56.859Z",
+   "snapshot": "ee6c1f91af0a05966bfcaab0fe1adce2f258730749c205c056ec4e3d8cab3e33"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Shoot_(Burden)",
+   "title": "Shoot (Burden) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:57.882Z",
+   "snapshot": "f925baf5d84a0babb7df7a7c2caf318c0db3fc52a8c6355e10906a5fcb7a8849"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cut_Piece",
+   "title": "Cut Piece – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:58.972Z",
+   "snapshot": "976df17ea26a285b48143c26952198b0826f99cb0c59c604b06df040c1cfd1d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tehching_Hsieh",
+   "title": "Tehching Hsieh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:59.920Z",
+   "snapshot": "903cfecd24f5081bf7f3fd1f56a090f6c2e3d923b23207407ef01f950ee27133"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rhythm_0",
+   "title": "Rhythm 0",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:00.831Z",
+   "snapshot": "e437e4828ea15ca004f443bae905e0250cbb6ae1d98df18c5f34f616f35a723f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marina Abramović",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Beuys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chris Burden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07574",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yoko Ono",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tehching Hsieh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Marina Abramović",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-006"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:37.650Z",
+   "target": "f07571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marina Abramović (Serbian Cyrillic: Марина Абрамовић, pronounced [marǐːna abrǎːmovitɕ]; born November 30, 1946) is a Serbian conceptual and performance artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.650Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marina Abramović” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:37.650Z",
+   "target": "f07572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "I Like America and America Likes Me (also known as Coyote) was an artistic action staged by German avant-garde artist Joseph Beuys in May 1974, during which he spent three consecutive days confined in a gallery enclosure with a live coyote.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.650Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Beuys” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:37.650Z",
+   "target": "f07573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shoot was a 1971 performance by Chris Burden, in which he arranged to have himself non-lethally shot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.650Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chris Burden” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:37.650Z",
+   "target": "f07574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cut Piece 1964 is a piece of performance art and participatory work conceived of and first performed by Japanese-American multimedia avant-garde artist, musician and peace activist Yoko Ono on July 20, 1964, at the Yamaichi Concert Hall in Kyoto, Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.650Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yoko Ono” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:37.650Z",
+   "target": "f07575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tehching Hsieh (Chinese: 謝德慶; born December 31, 1950), sometimes known as Sam Hsieh, is a Taiwanese-born painter and performance artist who lives in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.650Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tehching Hsieh” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:37.650Z",
+   "target": "f25533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rhythm 0 was a six-hour-long endurance art performance by the Serbian performance artist Marina Abramović performed in the Galleria Studio Morra in Naples in 1974.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:37.650Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marina Abramović” is on the snapshot of s6"
+  }
+ ]
+}

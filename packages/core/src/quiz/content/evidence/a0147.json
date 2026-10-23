@@ -1,0 +1,626 @@
+{
+ "article": "a0147",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+   "title": "Sydney Opera House – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:26.864Z",
+   "snapshot": "497a6954eb184144f19b9922d947fe54c385387355d920b2520221ad57737f2d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Guggenheim_Museum_Bilbao",
+   "title": "Guggenheim Museum Bilbao – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:27.659Z",
+   "snapshot": "1251758fb4e2011a701374c3cdd240a26b33263577544dca140eed43f713d028"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Centre_Georges-Pompidou",
+   "title": "Centre Georges-Pompidou – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:30.527Z",
+   "snapshot": "5b66c9ddb93199ebbfc185e46829cc0bacbfc8077c3c9ffe25836a34ce82233c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Centre_Pompidou",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:28.764Z",
+   "snapshot": "77e9995ded7ebaa7d3b5bf35d010bf9b16fb869a80a5dcef2934e2293336eceb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+   "title": "Sagrada Família – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:29.767Z",
+   "snapshot": "d4d352e3c3a6c57215042063ad65f3f88ebd09020da4b4ee192b9c0ed22865dd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Burj_Khalifa",
+   "title": "Burj Khalifa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:30.892Z",
+   "snapshot": "4b2fb5935f2b3da78bfc8d3bd6798967ad7bb6fbce807f8ddb8d664fac7c0248"
+  },
+  "s7": {
+   "url": "https://sagradafamilia.org/en/history-of-the-temple",
+   "title": "History of the Temple – Sagrada Família",
+   "publisher": "Basílica de la Sagrada Família",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:12.073Z",
+   "snapshot": "b6aa46cebbdb0c9c3be9e0813814335cae59e16da4d54ac3e847772da89f2f0d"
+  },
+  "s8": {
+   "url": "https://whc.unesco.org/en/list/320/",
+   "title": "Works of Antoni Gaudí",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:02:11Z"
+  },
+  "s9": {
+   "url": "https://www.som.com/projects/burj-khalifa/",
+   "title": "Burj Khalifa – SOM",
+   "publisher": "Skidmore, Owings & Merrill",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:12.463Z",
+   "snapshot": "6d7ed2b2a78d745c0bdd723fdabaf352fa7a081d33acb3fc082c90f18a3e3bb0"
+  },
+  "s10": {
+   "url": "https://www.skyscrapercenter.com/building/burj-khalifa/3",
+   "title": "Burj Khalifa – The Skyscraper Center",
+   "publisher": "Council on Tall Buildings and Urban Habitat (CVU)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:12.502Z",
+   "snapshot": "bb32704145ecf5d175213a927e79a4c04befef4217460d5730b2b61cb5bc07a6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sydney Opera House",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guggenheim Museum Bilbao",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Centre Pompidou",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Centre Pompidou",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sagrada Família",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-074"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Burj Khalifa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:00.320Z",
+   "target": "f00731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sydney Opera House” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:00.320Z",
+   "target": "f00732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Guggenheim Museum Bilbao is a museum of modern and contemporary art in Bilbao, Biscay, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guggenheim Museum Bilbao” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:00.320Z",
+   "target": "f00733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Centre national d’art et de culture Georges-Pompidou, umgangssprachlich auch Centre Pompidou oder Beaubourg, von den Einheimischen auch La Raffinerie genannt, ist ein staatliches Kunst- und Kulturzentrum im 4.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Centre Pompidou” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:00.320Z",
+   "target": "f00733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Centre Pompidou (French pronunciation: [sɑ̃tʁ pɔ̃pidu]), more fully the Centre national d'art et de culture Georges-Pompidou (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Centre Pompidou” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:00.320Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Basílica i Temple Expiatori de la Sagrada Família, or simply Sagrada Família, is a Catholic Basilica in the Eixample district of Barcelona, Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sagrada Família” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:00.320Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Burj Khalifa (previously known as Burj Dubai prior to inauguration) is a megatall skyscraper in Dubai, United Arab Emirates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burj Khalifa” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:02:07Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the result of the work of genius architect Antoni Gaudí. Today, more than 135 years after the laying of the cornerstone, construction continues on the Basilica.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:02:09Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Antoni Gaudí takes over the project, while still working on other buildings.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:02:11Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Gaudí’s work on the Nativity façade and Crypt of La Sagrada Familia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:02:19Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On 19 March 1882, construction of Sagrada Família began under the architect Francisco de Paula del Villar. In 1883, when Villar resigned,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:02:20Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Soaring 828 meters above Dubai, the Burj Khalifa—the world's tallest building—is a feat of design and engineering",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:02:23Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Y-shaped floor plan maximizes views of the Arabian Gulf.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:02:25Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Global Height rank Burj Khalifa Dubai",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:02:27Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been the tallest building in the wor",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:02:42Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been the tallest building in the world since its complete inauguration in 2011, surpassing Taipei 101, which had held the record since 2004.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supersedes the previous truncated quote from the same page."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Antoni Gaudí takes over the project, while still working on other buildings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On 19 March 1882, construction of Sagrada Família began under the architect Francisco de Paula del Villar. In 1883, when Villar resigned,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Global Height rank Burj Khalifa Dubai",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been the tallest building in the world since its complete inauguration in 2011, surpassing Taipei 101, which had held the record since 2004.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "History of the Temple - Sagrada Família - Sagrada Familia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sagrada Família” is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Burj Khalifa – SOM",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Burj Khalifa” is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:18.914Z",
+   "target": "f00735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "<a href='//images.skyscrapercenter.com/building/burj-khalifa_ext-satellite_(c)geoeyesatellite.jpg'></a>\">",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.914Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Burj Khalifa” is on the snapshot of s10"
+  }
+ ]
+}

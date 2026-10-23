@@ -1,0 +1,195 @@
+{
+ "article": "a0868",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Game_of_Thrones",
+   "title": "Game of Thrones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:50.673Z",
+   "snapshot": "59680a6a47d0ae69a8afb360a07538bb64b6b5b91bae49380589c36c3e7e9cba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vince_Gilligan",
+   "title": "Vince Gilligan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:41.205Z",
+   "snapshot": "ee1b8ee1238c913c2653804f042317c0decda91a32b20626120238718ed4c657"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Wire",
+   "title": "The Wire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:59.569Z",
+   "snapshot": "8c674078b79919b18153407cf61e495c0997a1c4c10e5b981513373cd7f0e0c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/House_of_the_Dragon",
+   "title": "House of the Dragon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:42.331Z",
+   "snapshot": "485af8186750b95fcc8378b7334dfdd3cf313570d180f0bb2f1cfc9b6c3549c7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04336",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Game of Thrones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Breaking Bad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04339",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04340",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "House of the Dragon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:57.093Z",
+   "target": "f04336",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Game of Thrones is an American fantasy drama television series created by David Benioff and D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Game of Thrones” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:57.093Z",
+   "target": "f04337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He is the creator, showrunner, and executive producer of the AMC crime series Breaking Bad (2008–2013) and its spin-off prequel series Better Call Saul (2015–2022).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breaking Bad” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:57.093Z",
+   "target": "f04339",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wire is an American crime drama television series created and primarily written by American author and former police reporter David Simon for the cable network HBO.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Wire” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:57.093Z",
+   "target": "f04340",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "House of the Dragon is an American fantasy drama television series created by George R.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “House of the Dragon” is on the snapshot of s4"
+  }
+ ]
+}

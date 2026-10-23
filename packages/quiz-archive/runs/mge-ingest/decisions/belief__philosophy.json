@@ -1,0 +1,77 @@
+{
+ "source": "publish-or-perish-mge",
+ "bucket": "belief/philosophy",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-061",
+    "category": 1
+   },
+   "factId": "f01838"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-096",
+    "category": 2
+   },
+   "factId": "f04178"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-100",
+    "category": 2
+   },
+   "factId": "f07178"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-115",
+    "category": 2
+   },
+   "factId": "f08800"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-125",
+    "category": 1
+   },
+   "factId": "f06040"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "ppm-160",
+    "category": 2
+   },
+   "factId": "f03577"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1280",
+   "baseHash": "e1bc34d20764",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-007",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "From the Particular to the General and Back: The Logic of Scientific Reasoning",
+    "titleDe": "Vom Besonderen zum Allgemeinen und zurück: Die Logik wissenschaftlichen Schließens",
+    "bodyEn": "Every scientific argument moves in one of a few directions, and philosophers have been naming those directions since antiquity. Five terms cover most of what happens when a scientist reasons from data to theory and back again.\n\nThe oldest is the syllogism, described by Aristotle in the „Prior Analytics“ around 350 BC. A syllogism draws one conclusion from two premises that share a middle term: all men are mortal, Socrates is a man, therefore Socrates is mortal. For two thousand years it was the model of what a valid argument looked like, and the medieval universities taught its figures and moods by heart.\n\nThe syllogism is the classic example of deduction, reasoning from the general to the particular. If the premises are true and the form is valid, the conclusion cannot be false; deduction is truth-preserving but adds no new information, because everything in the conclusion was already contained in the premises. Mathematics is the deductive science par excellence: Euclid's „Elements“, written around 300 BC, derived the whole of classical geometry from a handful of axioms, and Whitehead and Russell's „Principia Mathematica“ (1910–1913) set out to deduce all of mathematics from logic.\n\nEmpirical science needs the opposite movement. Induction reasons from the particular to the general: from many observed swans that are white to the law that all swans are white. Francis Bacon made induction the programme of the new science in his „Novum Organum“ of 1620, and it remains the way statistical generalisations are formed. Its weakness was exposed by David Hume in the eighteenth century: no finite number of observations can guarantee the next one, so inductive conclusions are probable at best. This is the problem of induction.\n\nCharles Sanders Peirce (1839–1914), the American founder of pragmatism, added a third mode in the 1860s, first calling it hypothesis and later abduction. Abduction begins with a surprising fact and asks which hypothesis would best explain it: the lawn is wet, rain would explain that, so it probably rained. It is the logic of diagnosis, detective work and hypothesis formation, and Peirce argued that it is the only kind of inference that introduces genuinely new ideas.\n\nKarl Popper, in his „Logik der Forschung“ published in Vienna in 1934 (in English, as „The Logic of Scientific Discovery“, in 1959), attacked induction from another side. Since no number of white swans proves the law but one black swan refutes it, he proposed that science advance by falsification: a theory is scientific only if it forbids something and could in principle be shown false, and the scientist's job is to test it as hard as possible rather than to confirm it. Theories that survive severe tests are „corroborated“, never proven. Falsifiability – a theory's capacity to be proven false by an empirical observation – became Popper's criterion for separating science from pseudo-science, with astrology and psychoanalysis as his examples of the latter.\n\n| Term | Direction | Associated with |\n|---|---|---|\n| syllogism | two premises to one conclusion | Aristotle |\n| deduction | general to particular | Aristotle, Euclid |\n| induction | particular to general | Francis Bacon, David Hume |\n| abduction | observation to best explanation | Charles Sanders Peirce |\n| falsification | theory to attempted refutation | Karl Popper |\n\nIn practice a working scientist uses all five in a single afternoon: abduction to guess, deduction to derive a prediction, observation to gather instances, induction to generalise, and falsification to find out where the guess was wrong.",
+    "bodyDe": "Jedes wissenschaftliche Argument bewegt sich in eine von wenigen Richtungen, und Philosophen benennen diese Richtungen seit der Antike. Fünf Begriffe decken das meiste ab, was geschieht, wenn ein Wissenschaftler von Daten zur Theorie und wieder zurück schließt.\n\nDer älteste ist der Syllogismus, den Aristoteles um 350 v. Chr. in der „Ersten Analytik“ beschrieb. Ein Syllogismus zieht aus zwei Prämissen, die einen Mittelbegriff teilen, eine Konklusion: Alle Menschen sind sterblich, Sokrates ist ein Mensch, also ist Sokrates sterblich. Zweitausend Jahre lang war er das Muster eines gültigen Arguments, und die mittelalterlichen Universitäten lehrten seine Figuren und Modi auswendig.\n\nDer Syllogismus ist das klassische Beispiel für die Deduktion, das Schließen vom Allgemeinen auf das Besondere. Sind die Prämissen wahr und ist die Form gültig, kann die Konklusion nicht falsch sein; die Deduktion bewahrt die Wahrheit, fügt aber keine neue Information hinzu, weil alles in der Konklusion bereits in den Prämissen enthalten war. Die Mathematik ist die deduktive Wissenschaft schlechthin: Euklids „Elemente“, um 300 v. Chr. verfasst, leiteten die gesamte klassische Geometrie aus wenigen Axiomen ab, und Whiteheads und Russells „Principia Mathematica“ (1910–1913) wollten die gesamte Mathematik aus der Logik deduzieren.\n\nDie empirische Wissenschaft braucht die umgekehrte Bewegung. Die Induktion schließt vom Besonderen auf das Allgemeine: von vielen beobachteten weißen Schwänen auf das Gesetz, dass alle Schwäne weiß sind. Francis Bacon machte die Induktion 1620 in seinem „Novum Organum“ zum Programm der neuen Wissenschaft, und sie bleibt der Weg, auf dem statistische Verallgemeinerungen entstehen. Ihre Schwäche legte David Hume im 18. Jahrhundert offen: Keine endliche Zahl von Beobachtungen kann die nächste garantieren, induktive Schlüsse sind also bestenfalls wahrscheinlich. Das ist das Induktionsproblem.\n\nCharles Sanders Peirce (1839–1914), der amerikanische Begründer des Pragmatismus, fügte in den 1860er-Jahren einen dritten Modus hinzu, den er zunächst Hypothese und später Abduktion nannte. Die Abduktion beginnt mit einer überraschenden Tatsache und fragt, welche Hypothese sie am besten erklären würde: Der Rasen ist nass, Regen würde das erklären, also hat es wahrscheinlich geregnet. Sie ist die Logik der Diagnose, der Detektivarbeit und der Hypothesenbildung, und Peirce argumentierte, sie sei die einzige Schlussart, die wirklich neue Ideen hervorbringt.\n\nKarl Popper griff die Induktion 1934 in seiner in Wien erschienenen „Logik der Forschung“ (englisch 1959 als „The Logic of Scientific Discovery“) von einer anderen Seite an. Da keine Zahl weißer Schwäne das Gesetz beweist, ein einziger schwarzer Schwan es aber widerlegt, schlug er vor, dass die Wissenschaft durch Falsifikation voranschreitet: Eine Theorie ist nur dann wissenschaftlich, wenn sie etwas verbietet und im Prinzip als falsch erwiesen werden könnte, und die Aufgabe des Wissenschaftlers ist es, sie so hart wie möglich zu prüfen, statt sie zu bestätigen. Theorien, die strenge Prüfungen überstehen, sind „bewährt“, nie bewiesen. Die Falsifizierbarkeit – die Eigenschaft einer Theorie, durch eine empirische Beobachtung widerlegt werden zu können – wurde zu Poppers Kriterium für die Abgrenzung von Wissenschaft und Pseudowissenschaft, mit Astrologie und Psychoanalyse als seinen Beispielen für Letztere.\n\n| Begriff | Richtung | Verbunden mit |\n|---|---|---|\n| Syllogismus | zwei Prämissen zu einer Konklusion | Aristoteles |\n| Deduktion | vom Allgemeinen zum Besonderen | Aristoteles, Euklid |\n| Induktion | vom Besonderen zum Allgemeinen | Francis Bacon, David Hume |\n| Abduktion | von der Beobachtung zur besten Erklärung | Charles Sanders Peirce |\n| Falsifikation | von der Theorie zum Widerlegungsversuch | Karl Popper |\n\nIn der Praxis nutzt ein Wissenschaftler alle fünf an einem einzigen Nachmittag: Abduktion zum Raten, Deduktion zum Ableiten einer Vorhersage, Beobachtung zum Sammeln von Fällen, Induktion zum Verallgemeinern und Falsifikation, um herauszufinden, wo die Vermutung falsch war.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

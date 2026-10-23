@@ -1,0 +1,543 @@
+{
+ "article": "a2674",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_coastline",
+   "title": "List of U.S. states and territories by coastline",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:16.130Z",
+   "snapshot": "ea5d1d700522bcc00bf5d74cf36a7247aed772896292bb07a34615a08c6ae043"
+  },
+  "s2": {
+   "url": "https://www.cbc.ca/news/science/canada-has-the-most-lakes-of-any-country-but-we-know-very-little-1.3898162",
+   "title": "Canada has the most lakes of any country, but we know very little",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-20"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Great_Bear_Lake",
+   "title": "Great Bear Lake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:17.134Z",
+   "snapshot": "bade61c08228abf8eece584522d07adf8267bb3cf523be5af23110c1e058d715"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Minnesota",
+   "title": "Minnesota – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:18.345Z",
+   "snapshot": "6b61a50c7585c38303eefcde20089ae5ecd64e80f72d03f82315cdf2ee16129a"
+  },
+  "s5": {
+   "url": "https://www.worldatlas.com/articles/us-states-by-length-of-coastline.html",
+   "title": "10 US States With The Longest Shorelines",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:27.386Z",
+   "snapshot": "41bb5f8d351f53a9dcc46485af715da8b97f4eac838f3f56487a98dcc94e4e87"
+  },
+  "s6": {
+   "url": "https://www.infoplease.com/us/geography/coastline-united-states",
+   "title": "Coastline of the United States",
+   "publisher": "Infoplease (NOAA figures)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:10:20Z"
+  },
+  "s7": {
+   "url": "https://www.snopes.com/fact-check/canada-lakes/",
+   "title": "Canada Has More Lakes Than All Other Countries Combined?",
+   "publisher": "Snopes",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:27.600Z",
+   "snapshot": "d68ddfcd5c9dac4934e465b5efd86c15e8191a74637a30910b86bc2423af266d"
+  },
+  "s8": {
+   "url": "https://www.hydrosheds.org/products/hydrolakes",
+   "title": "HydroLAKES",
+   "publisher": "HydroSHEDS (WWF / McGill University)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:27.698Z",
+   "snapshot": "dc68a8cb52ccf6bc73de385819b3737c0fa0219c0534fe1fdc356fb50e4450c2"
+  },
+  "s9": {
+   "url": "https://www.thecanadianencyclopedia.ca/en/article/great-bear-lake",
+   "title": "Great Bear Lake",
+   "publisher": "The Canadian Encyclopedia (Historica Canada)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:11:57Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alaska",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-308"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Canada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-267"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Hampshire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Bear Lake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Minnesota",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.537Z",
+   "target": "f14519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alaska",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Alaska”, “Аляска”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.537Z",
+   "target": "f14521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "For example, method 2 counts the Great Bay as part of New Hampshire's coastline, but method 1 does not.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Hampshire” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.537Z",
+   "target": "f14523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Great Bear Lake (North Slavey: Sahtú; French: Grand lac de l'Ours) in the boreal forest of Canada is the largest lake entirely in Canada (Lake Superior and Lake Huron are larger but straddle the Canada–US border), the fourth-largest in North America, and the eighth-largest in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Great Bear Lake” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:56.537Z",
+   "target": "f14524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Minnesota is a state in the Upper Midwestern region of the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minnesota” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:10:16Z",
+   "target": "f14519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At the top of the US ranking, Alaska leads the nation with 33,904 miles of shoreline, followed by Florida (8,436 mi) and Louisiana (7,721 mi).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:20Z",
+   "target": "f14519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alaska (Pacific) 5,580 31,383",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "NOAA general coastline: Alaska Pacific 5,580 + Arctic 1,060 = 6,640 miles, far ahead of every other state"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:10:23Z",
+   "target": "f14521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "New Hampshire 13 131",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "NOAA general coastline table: New Hampshire 13 statute miles, the smallest of all ocean states (Pennsylvania and Connecticut have none listed as general coastline)"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:49Z",
+   "target": "f14520",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "While Canada is not home to \"more lakes than the rest of the world combined\" like some social media posts claim, it has more lakes than any other individual country.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "'more than half of all natural lakes' holds only for lakes of 10 ha or more (HydroLAKES: 863,550 in Canada of ~1.42 million); counting smaller lakes the share is far lower. Wording and body narrowed to lakes of 10 ha+."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:11:51Z",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The study focused on those that are 10 hectares and larger. And of those, Canada is home to a whopping 62 per cent.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the narrowed wording (lakes of 10 ha or more)"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:11:53Z",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hydrolakes reported Canada has 863,550 lakes measuring over 24 acres",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer Canada confirmed: most lakes of any country; HydroLAKES total ~1.42 million lakes >=10 ha (hydrosheds.org), so Canada holds ~61%"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:11:55Z",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The global coverage of HydroLAKES encompasses 1.4 million individual lakes or reservoirs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "denominator for the 62% share"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:11:57Z",
+   "target": "f14523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "With a surface area of 31,328 km 2 , Great Bear Lake is the largest lake located entirely inside Canadian borders.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:12:05Z",
+   "target": "f14523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Great Bear Lake is the largest lake located entirely inside Canadian borders.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:41.965Z",
+   "target": "f14519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At the top of the US ranking, Alaska leads the nation with 33,904 miles of shoreline, followed by Florida (8,436 mi) and Louisiana (7,721 mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:41.965Z",
+   "target": "f14520",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "While Canada is not home to \"more lakes than the rest of the world combined\" like some social media posts claim, it has more lakes than any other individual country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:41.965Z",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hydrolakes reported Canada has 863,550 lakes measuring over 24 acres",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:41.965Z",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The global coverage of HydroLAKES encompasses 1.4 million individual lakes or reservoirs",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:41.965Z",
+   "target": "f14519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "At the top of the US ranking, Alaska leads the nation with 33,904 miles of shoreline, followed by Florida (8,436 mi) and Louisiana (7,721 mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alaska” is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:41.965Z",
+   "target": "f14520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Canada Has More Lakes Than All Other Countries Combined?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:41.965Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Canada” is on the snapshot of s7"
+  }
+ ]
+}

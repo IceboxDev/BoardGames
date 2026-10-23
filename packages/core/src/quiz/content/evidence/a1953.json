@@ -1,0 +1,242 @@
+{
+ "article": "a1953",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Catalysis",
+   "title": "Catalysis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:49.707Z",
+   "snapshot": "4fcb148746c37858e621b5f1a4ad8ec2f398d947e1a5883290773eb3067c400b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aspirin",
+   "title": "Aspirin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:05.556Z",
+   "snapshot": "b5d737773d3eccb78cbb40cff906f1000dd7b0cef476919363707760c6800e4b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Enzyme",
+   "title": "Enzyme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:45.491Z",
+   "snapshot": "33ca266c40e844a5d46291de32f90d09f7db39bdce8fc25a0d631d9de89c39b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Activation_energy",
+   "title": "Activation energy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:50.679Z",
+   "snapshot": "eda572ab99698c9f0aba45a5ab85e6d78da0d2c1c8ab872348b6532d2a7b8733"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Exothermic_process",
+   "title": "Exothermic process",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:51.625Z",
+   "snapshot": "3e6f97cc1164782903169ff15035509804623716ef4c06be83e394462cc8afe0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catalyst",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09762",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Inhibitor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Enzyme",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Activation energy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25823",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Exothermic reaction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-063"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:52.806Z",
+   "target": "f09761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catalysis (, kə-TAL-iss-iss) is the increase in rate of a chemical reaction due to an added substance known as a catalyst ( KAT-əl-ist).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catalyst” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:52.806Z",
+   "target": "f09762",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frequently, aspirin is combined with an ADP receptor inhibitor, such as clopidogrel, prasugrel, or ticagrelor to prevent blood clots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Inhibitor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:52.806Z",
+   "target": "f09763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An enzyme is a biological macromolecule, usually a protein, that acts as a biological catalyst, accelerating chemical reactions without being consumed in the process.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enzyme” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:52.806Z",
+   "target": "f09764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the Arrhenius model of reaction rates, activation energy is the minimum amount of energy that must be available to reactants for a chemical reaction to occur.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Activation energy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:52.806Z",
+   "target": "f25823",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An exothermic reaction occurs when heat is released to the surroundings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exothermic reaction” is on the snapshot of s5"
+  }
+ ]
+}

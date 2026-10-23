@@ -1,0 +1,242 @@
+{
+ "article": "a1981",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Buena_Vista_Social_Club_(film)",
+   "title": "Buena Vista Social Club (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:33.669Z",
+   "snapshot": "e26ed67c71b81a7bca9b68ab29898c1029137e7e609c684b53ce6500fa0845dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Woodstock_(film)",
+   "title": "Woodstock (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:34.607Z",
+   "snapshot": "4daa7169d6b5f75f8e763200bf136ee306d8c8ed66277d7a591bad2784dbde28"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Last_Waltz",
+   "title": "The Last Waltz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:35.729Z",
+   "snapshot": "38eea44f3d760c720ec0012f3e03776457847fc82612eee80ec4b50014165169"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gimme_Shelter_(1970_film)",
+   "title": "Gimme Shelter (1970 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:36.636Z",
+   "snapshot": "d3ceca4a18a78a2399a56624f3c365357b07bc0d2a8a77a728fa719add8f187f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Searching_for_Sugar_Man",
+   "title": "Searching for Sugar Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:37.727Z",
+   "snapshot": "58fca78170a9ab341b3570dc3415f0fafdefc3f0699e339fed5bad8f566d8450"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buena Vista Social Club",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Woodstock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09903",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Last Waltz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09904",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gimme Shelter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09905",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Searching for Sugar Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:59.639Z",
+   "target": "f09901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buena Vista Social Club is a 1999 documentary film directed by Wim Wenders about the music of Cuba, featuring the musicians who recorded the 1997 album Buena Vista Social Club.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buena Vista Social Club” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:59.639Z",
+   "target": "f09902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Woodstock is a 1970 American documentary concert film of the watershed counterculture Woodstock Festival which took place in August 1969 near Bethel, New York.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Woodstock” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:59.639Z",
+   "target": "f09903",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Last Waltz was a concert by the Canadian-American rock group the Band, held on American Thanksgiving Day, November 25, 1976, at Winterland Ballroom in San Francisco.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Last Waltz” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:59.639Z",
+   "target": "f09904",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gimme Shelter is a 1970 American documentary film directed by Albert and David Maysles and Charlotte Zwerin chronicling the last weeks of the Rolling Stones' 1969 US tour which culminated in the disastrous Altamont Free Concert and the killing of Meredith Hunter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gimme Shelter” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:59.639Z",
+   "target": "f09905",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Searching for Sugar Man is a 2012 documentary film, written and directed by Malik Bendjelloul, which details the efforts in the late 1990s of two Cape Town fans, Stephen \"Sugar\" Segerman and Craig Bartholomew Strydom, to find out whether the rumoured death of 1970s Mexican-American musician Sixto",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:59.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Searching for Sugar Man” is on the snapshot of s5"
+  }
+ ]
+}

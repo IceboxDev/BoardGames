@@ -1,0 +1,242 @@
+{
+ "article": "a1455",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Look_Mickey",
+   "title": "Look Mickey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:25.427Z",
+   "snapshot": "ab91fdba13234f0afe0388f6ae10a4dad440b3025f099fb04f703c79620bea59"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Roy_Lichtenstein",
+   "title": "Roy Lichtenstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:24.737Z",
+   "snapshot": "6cabf34d64a714a5d309ed8dd778a98272f5e3ef2e781893a8fc6f46e451ac92"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Claes_Oldenburg",
+   "title": "Claes Oldenburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:27.563Z",
+   "snapshot": "a365ff35d38a387834f88d68f2e1c944c8e42c90c88bff9c2e0839aaf0fabc84"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Love_(image)",
+   "title": "Love (image) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:26.392Z",
+   "snapshot": "5950d67fe778e9a0b219b72090c7b65912f725bc05d67c3cfadf7af9a74874c1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/A_Bigger_Splash",
+   "title": "A Bigger Splash – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:27.344Z",
+   "snapshot": "e835f9079bcac3594ee6378908ff758ef3610c98cd708282cd609861a78c284b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Roy Lichtenstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Roy Lichtenstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-306"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Claes Oldenburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Robert Indiana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "David Hockney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:28.690Z",
+   "target": "f07271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Look Mickey (also known as Look Mickey!) is a 1961 oil on canvas painting by Roy Lichtenstein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roy Lichtenstein” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:28.690Z",
+   "target": "f07271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bereits im Jahr 1949 heiratete Roy Lichtenstein Isabel Wilson.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roy Lichtenstein” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:28.690Z",
+   "target": "f07273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Claes Oldenburg (January 28, 1929 – July 18, 2022) was a Swedish-born American sculptor best known for his public art installations, typically featuring large replicas of everyday objects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claes Oldenburg” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:28.690Z",
+   "target": "f07274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Love is a pop art image by American artist Robert Indiana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Indiana” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:28.690Z",
+   "target": "f07275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A Bigger Splash is a large pop art painting by British artist David Hockney.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.690Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Hockney” is on the snapshot of s5"
+  }
+ ]
+}

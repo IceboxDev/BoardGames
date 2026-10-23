@@ -1,0 +1,440 @@
+{
+ "article": "a0610",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rio_Negro_(Amazon)",
+   "title": "Rio Negro (Amazon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:00.375Z",
+   "snapshot": "c353adaf4834102e61770ee0a05c3b0fab011ec9acd347eed1f25a1eedc14522"
+  },
+  "s2": {
+   "url": "https://pt.wikipedia.org/wiki/Forte_de_S%C3%A3o_Joaquim_do_Rio_Branco",
+   "title": "Forte de São Joaquim do Rio Branco – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "pt",
+   "retrievedAt": "2026-10-23T04:07:57.590Z",
+   "snapshot": "9e016b617734fc8387c816504b57b08b5a7f33aff1b1d94a003a8018cafe8814"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Branco_River",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:01.381Z",
+   "snapshot": "488ee19bc6655cc9d20df1a5769cecfe1426738d8921778936870931de5c23c7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Casiquiare_canal",
+   "title": "Casiquiare canal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:02.352Z",
+   "snapshot": "3a65616b03f1b98eb06a09275aa24af83ecec160a4eafcbcb7af0561d50bebcd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Madeira-Mamor%C3%A9_Railroad",
+   "title": "Madeira-Mamoré Railroad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:03.365Z",
+   "snapshot": "0bac6b0db050ea7a1968f1d7dfce216487a00881ed92dac9bee8c48584547c6e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Madeira_River",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:04.392Z",
+   "snapshot": "382f3e09553b6389eac01927bb8a364e2a4f97af725d10f8da14ea72e05f8ef5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Itaipu_Dam",
+   "title": "Itaipu Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:05.375Z",
+   "snapshot": "13c8abe5f42b2360846cad672d2a07860d78390dce45cc1ed87cc45759133938"
+  },
+  "s8": {
+   "url": "https://en.aguasamazonicas.org/basins/main-river-basins/madeira-basin",
+   "title": "Madeira | Amazon Waters",
+   "publisher": "Amazon Waters Alliance (Wildlife Conservation Society)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:31.628Z",
+   "snapshot": "e8ea4acab4ca8a30064496a366da96fc5cdffa2845da1ee3714c25918adf6a3b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rio Negro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rio Branco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rio Branco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Orinoco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Madeira River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Madeira River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22; history entry seq 23"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f03050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Paraná",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Rio Negro (Spanish: Río Negro [ˈri.o ˈneɣɾo], Portuguese: Rio Negro [ˈʁi.u ˈneɡɾu], \"Black River\"), or Guainía as it is known in its upper part, is the largest left tributary of the Amazon River (accounting for about 14% of the water in the Amazon basin), the largest blackwater river in the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio Negro” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "O Forte de São Joaquim do Rio Branco localizava-se no estado de Roraima, no Brasil.",
+     "quoteLang": "pt",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio Branco” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Branco River (Portuguese: Rio Branco; Engl: White River) is the principal affluent of the Rio Negro from the north.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio Branco” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Casiquiare river or canal (Spanish pronunciation: [kasiˈkjaɾe]) is a natural distributary of the upper Orinoco flowing southward into the Rio Negro in Venezuela.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orinoco” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gibbon's study concluded that a railroad along the Madeira River rapids would allow efficient transport of goods from the Bolivian capital of La Paz to US markets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madeira River” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Madeira River (Portuguese: Rio Madeira [maˈdejɾɐ]) is a major waterway in South America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madeira River” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:13.639Z",
+   "target": "f03050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Itaipu Dam (Guarani: Yjoko Itaipu [itajˈpu]; Portuguese: Barragem de Itaipu [itajˈpu]; Spanish: Represa de Itaipú [itajˈpu]) is a hydroelectric dam on the Paraná River located on the border between Brazil and Paraguay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:13.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paraná” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:20:46Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Madeira is the longest tributary in the Amazon Basin and accounts for approximately15 percent of the Amazon River’s total discharge to the Atlantic.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:20:50Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "while the Madeira-Mamoré is estimated near 3,250 km (2,020 mi)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Length with the Mamoré is 3,250 or 3,380 km depending on the measurer."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:40.316Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Madeira is the longest tributary in the Amazon Basin and accounts for approximately15 percent of the Amazon River’s total discharge to the Atlantic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:40.316Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "while the Madeira-Mamoré is estimated near 3,250 km (2,020 mi)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:40.316Z",
+   "target": "f03049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The headwaters of the Madeira River arise in the southernmost Andes within the Amazon Basin, in the eastern Bolivian lowlands and on the Brazilian Shield.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:40.316Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Madeira River” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2021",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/O._J._Simpson",
+   "title": "O. J. Simpson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:29.461Z",
+   "snapshot": "a89cbdf5e47c6bfdf880669186d0265b06e902d20ee99fa289546d84408e1a70"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aaron_Hernandez",
+   "title": "Aaron Hernandez – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:30.695Z",
+   "snapshot": "df5577d464fc1263bf55b46ec70013cbc64f7e240304705966278157af47e5a6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Michael_Vick",
+   "title": "Michael Vick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:31.637Z",
+   "snapshot": "5fbca681015c0ed1cf578ea3a762fef80720ae4eb821b0ff1a863b1731917a75"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Colin_Kaepernick",
+   "title": "Colin Kaepernick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:32.637Z",
+   "snapshot": "d8425e8851b1cc4faf0a71b9abbfc10d36734cce42a7049a3aa2b5d819a00ab2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Deflategate",
+   "title": "Deflategate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:33.592Z",
+   "snapshot": "b3bf4f75d757a6972fec759d71d2164fbdc7d04ec5ff12c2e16c8e6c0e087f48"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "O. J. Simpson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aaron Hernandez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Michael Vick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Colin Kaepernick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tom Brady",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:07.767Z",
+   "target": "f10101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "O. J. Simpson: American Crime Story – told the Los Angeles Times the studio's decision not to air it or release it on home video and forgo an estimated $14 million in profits, was \"just about the only proof you have that there is some dignity in the advertising and television business.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “O. J. Simpson” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:07.767Z",
+   "target": "f10102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hernandez tried to get his friend out of trouble by saying, \"Trooper, I am Aaron Hernandez.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aaron Hernandez” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:07.767Z",
+   "target": "f10103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vick has been a principal in two charitable foundations, the Michael Vick Foundation and The Vick Foundation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Vick” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:07.767Z",
+   "target": "f10104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The model was subsequently withdrawn after Colin Kaepernick told the brand he and others found the flag offensive because they associated it with slavery.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colin Kaepernick” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:07.767Z",
+   "target": "f10105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "scandal was a National Football League (NFL) controversy in the United States involving the allegation that New England Patriots quarterback Tom Brady ordered the deliberate deflation of footballs that were used in the Patriots' victory against the Indianapolis Colts during the 2014 AFC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Brady” is on the snapshot of s5"
+  }
+ ]
+}

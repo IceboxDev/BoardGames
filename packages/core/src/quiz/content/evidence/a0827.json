@@ -1,0 +1,445 @@
+{
+ "article": "a0827",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Emu_War",
+   "title": "Emu War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:58.363Z",
+   "snapshot": "b556773a752255e3ab37b1f96dea21d4efedffc2bc63b7c48d4f5bd35dc46fd7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Darwin%27s_rhea",
+   "title": "Darwin's rhea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:59.359Z",
+   "snapshot": "94e1695d58031fdf7c8dc27c63e471bb6c79e401272e643a78d46a5e4a0a588f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kiwi_(bird)",
+   "title": "Kiwi (bird) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:00.475Z",
+   "snapshot": "45f76de17886dd26d068ec643a136c207cf62060cb803f623de08d79689da8ef"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Southern_cassowary",
+   "title": "Southern cassowary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:01.375Z",
+   "snapshot": "349d465122e2c9294c7658e5d63c0b839ee0d846ef41ff24c36665d374c89c5d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dodo",
+   "title": "Dodo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:02.572Z",
+   "snapshot": "d8c678bd7521fcf88cd01ca98670fdb31292705446b6629d7c7ab440a414cba7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Palaeeudyptes_klekowskii",
+   "title": "Palaeeudyptes klekowskii",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:03.360Z",
+   "snapshot": "81e2036780fc8499192f818d1072dc17c99180d441cfa1064e3ffcd53d25e3b2"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Emu",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:10.588Z",
+   "snapshot": "e1a992f2c8e481fbf39a3585ac08d2574e51b62f357d8dce01fdda160bbb7a5a"
+  },
+  "s8": {
+   "url": "https://savethekiwi.nz/about-kiwi/kiwi-facts/an-unusual-beak/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:00.587Z",
+   "snapshot": "c13382b68f56ed511e989e55bedb5993757c1757d69067106bb37438e372335c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "emu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "rhea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04134",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cassowary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "dodo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "penguin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-260"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kiwi",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "kiwi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-185/5, u09: Birds do have nostrils; kiwi are the only birds with nostrils at the tip of the bill. Statement false, rework right."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kiwi",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "kiwi",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s8"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Emu War (or Great Emu War) was a nuisance wildlife management operation undertaken by the Australian Army in late 1932.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “emu” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Darwin's rhea or the lesser rhea (Rhea pennata) is a large flightless bird, the smaller of the two extant species of rheas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rhea” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kiwi are flightless birds endemic to New Zealand of the order Apterygiformes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kiwi” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "An unusual beak - Save the Kiwi",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kiwi” is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04134",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The southern cassowary (Casuarius casuarius), also known as double-wattled cassowary, Australian cassowary, or two-wattled cassowary, is a large, flightless, mostly black bird, found in Indonesia, Papua New Guinea, and northeastern Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cassowary” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f04135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The dodo (Raphus cucullatus) is an extinct flightless bird that was endemic to Mauritius,  an island east of Madagascar in the Indian Ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dodo” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:51.058Z",
+   "target": "f13249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Palaeeudyptes klekowskii is an extinct species of the penguin genus Palaeeudyptes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “penguin” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:13:04Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Our national icon is also the only bird in the world with external nostrils at the tip of its long beak.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:16:55Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "are the only birds with nostrils at the end of their long beaks.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:18.972Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Our national icon is also the only bird in the world with external nostrils at the tip of its long beak.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:18.972Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:18.972Z",
+   "target": "f04133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "are the only birds with nostrils at the end of their long beaks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:18.972Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s3"
+  }
+ ]
+}

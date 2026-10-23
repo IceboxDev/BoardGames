@@ -1,0 +1,308 @@
+{
+ "article": "a1320",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Booting",
+   "title": "Booting – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:37.460Z",
+   "snapshot": "7b93468f3f5eac0c4dcb9639919d9fb18499f1948e06ed51df17f8e7ec804d2a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Spam_(Monty_Python_sketch)",
+   "title": "Spam (Monty Python sketch) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:19.333Z",
+   "snapshot": "bf05a8bcc6190e0defe2be04bb155ffdd61319bdc631328d4d4d9fcd6a8e7e5c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Spam_(food)",
+   "title": "Spam (food) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:37.292Z",
+   "snapshot": "e1c35c6b5e764e092c46d065978ef750b787978856839d573b8a37d9ab3020d2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/HTTP_cookie",
+   "title": "HTTP cookie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:05.408Z",
+   "snapshot": "a67e42948778e7aed2ba55df79e259b18452cb67ee2fc14a2dd793b9f11d4ebe"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spamming",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:20.448Z",
+   "snapshot": "3e7e6f15ef67a0375f30277cc76353eee0f3e584923e82819bc2f4e2fd68b19e"
+  },
+  "s6": {
+   "url": "http://www.catb.org/jargon/html/B/boot.html",
+   "title": "boot – The Jargon File",
+   "publisher": "The Jargon File (Eric S. Raymond, catb.org)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:24.286Z",
+   "snapshot": "e72d3e640796424ab801c4c76eb6fc532fc4f60558c7504a3fbbc2a88bacff95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Booting",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f24404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hormel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lou Montulli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:05.764Z",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In computing, booting is the process of starting a computer as initiated via hardware such as a physical button on the computer or by a software command.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Booting” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:05.764Z",
+   "target": "f06598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Spam\" is a Monty Python sketch, first televised in 1970 on Monty Python's Flying Circus (series 2, episode 12, \"Spam\") and written by Terry Jones and Michael Palin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spam” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:05.764Z",
+   "target": "f24404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spam (stylized in all caps) is a brand of lunch meat (processed canned pork and ham) made by Hormel Foods Corporation, an American multinational food processing company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hormel” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:05.764Z",
+   "target": "f24405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The term cookie was coined by web-browser programmer Lou Montulli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lou Montulli” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:42:37Z",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Booting was first described in the 1950s as the \"bootstrap technique\", so is short for bootstrap and derives from the phrase to pull oneself up by one's bootstraps.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23",
+   "note": "card premise 'putting on boots' is a simplification of bootstrap (the strap for pulling a boot on); notes already say so"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:42:39Z",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[techspeak; from ‘by one's bootstraps’] To load and initialize the operating system on a machine.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:55:49.406Z",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Booting was first described in the 1950s as the \"bootstrap technique\", so is short for bootstrap and derives from the phrase to pull oneself up by one's bootstraps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:49.406Z",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "[techspeak; from ‘by one's bootstraps’] To load and initialize the operating system on a machine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:49.406Z",
+   "target": "f06596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sun.” “I recommend booting it hard.” One often",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.406Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Booting” is on the snapshot of s6"
+  }
+ ]
+}

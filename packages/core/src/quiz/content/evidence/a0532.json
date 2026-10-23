@@ -1,0 +1,296 @@
+{
+ "article": "a0532",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wes_Anderson",
+   "title": "Wes Anderson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:01.053Z",
+   "snapshot": "9d5bc77d18ecfbf216dbfd06d742e28b879941f22f3649b5302ea734a3554aa3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Paul_Thomas_Anderson",
+   "title": "Paul Thomas Anderson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:02.208Z",
+   "snapshot": "31714229bd69e167a56cef0e493052b3dcfd5ebbdc0abeca542f85ead08875ba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Greta_Gerwig",
+   "title": "Greta Gerwig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:03.130Z",
+   "snapshot": "0172cc4f233261c594db66990c287bfcc804b761dac2d16d4041ce2190d84828"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jordan_Peele",
+   "title": "Jordan Peele – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:04.111Z",
+   "snapshot": "b813d9aed8f9742ce0543e2e0cde01f9c0f0497f153a8aa7b61047992cb71314"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Owen_Wilson",
+   "title": "Owen Wilson",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:05.026Z",
+   "snapshot": "eed434bc73ab2fe7466c580cacaeb19ec9d40a08aa41d3d22a0111228c6d64f6"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bottle_Rocket",
+   "title": "Bottle Rocket",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:03:02.417Z",
+   "snapshot": "0fedf98c8c8e9d66115408e627f3fa66af6a03d37ddfa4a1027948cbfc9a2201"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bottle_Rocket",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:06.074Z",
+   "snapshot": "4a1cf7c072b6abf052b265b3db027a10034e42cce51dcc6c98d6052ac1c836d4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wes Anderson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c045"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Thomas Anderson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Greta Gerwig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jordan Peele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Owen Wilson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-005"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bottle Rocket",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-028"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:03.386Z",
+   "target": "f02656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "At the 96th Academy Awards, The Wonderful Story of Henry Sugar was nominated for Best Live Action Short Film and won, earning Wes Anderson's first Oscar win; however, he did not appear in-person to accept the Oscar due to his filming schedule.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wes Anderson” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:03.386Z",
+   "target": "f02658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Thomas Anderson (born June 26, 1970), also known by his initials PTA, is an American filmmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Thomas Anderson” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:03.386Z",
+   "target": "f02659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Greta Gerwig",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Greta Gerwig” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:03.386Z",
+   "target": "f02660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On November 3, 2015, it was reported that Henry Selick was developing Wendell & Wild, a new stop-motion feature with Jordan Peele and Keegan-Michael Key based on an original story by Selick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jordan Peele” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:03.386Z",
+   "target": "f11438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Owen Wilson at the TCM Movie Database (archived)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Owen Wilson” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:03.386Z",
+   "target": "f11439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Durchgeknallt (Originaltitel: Bottle Rocket) ist eine US-amerikanische Filmkomödie aus dem Jahre 1996 von Wes Anderson mit den Schauspielern Owen und Luke Wilson sowie Robert Musgrave.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bottle Rocket” is on the snapshot of s6"
+  }
+ ]
+}

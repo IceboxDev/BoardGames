@@ -1,0 +1,560 @@
+{
+ "article": "a0344",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Dreaming",
+   "title": "The Dreaming – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:28.419Z",
+   "snapshot": "ad3eab7911feec8f73be7ac4f5faa0261d4b253f87ec074baeafe774bda2995d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Codex_Regius",
+   "title": "Codex Regius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:29.315Z",
+   "snapshot": "156f1ab5f90eddbd0c9e0c3d15291deebbfc6010f013c47eaf14b43a9a2fce74"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Creation_(Haydn)",
+   "title": "The Creation (Haydn) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:30.568Z",
+   "snapshot": "e2ef47dfecff607ff57d5c0f2d2684ac208eacbf1eafe8d1f6ebe2fbabdc8a2d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chaos_(cosmogony)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:31.504Z",
+   "snapshot": "5571d5b5402a1f0ace1d041136833f7817430d08a8c95b6f61dc91f5f5c4c31b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Popol_Vuh",
+   "title": "Popol Vuh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:32.528Z",
+   "snapshot": "41ce27c35da9b0091903142b4602519ac49f0ec2cb0eb3c6aa646ca292f74958"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/En%C5%ABma_Eli%C5%A1",
+   "title": "Enūma Eliš – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:33.430Z",
+   "snapshot": "cc82767e60e77cab0d3c2bcd9c75f631c60f9a24e411bb20e1186147f9ab7b4b"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ymir",
+   "title": "Ymir – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:34.474Z",
+   "snapshot": "c666550bbcd7101a039a7dc5272c775000c77cc73540c8ab31427233b5a7749d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Izanagi",
+   "title": "Izanagi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:35.320Z",
+   "snapshot": "6b84406ca077cf45e9b9ee40355828bf48de79148825eca421838efd89595ca5"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Kojiki",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:36.501Z",
+   "snapshot": "9d6a094a0422c6c7409be8aa222dd666868fa409d086604829e62218b41490d3"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Ginnungagap",
+   "title": "Ginnungagap",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:26.743Z",
+   "snapshot": "4b8b61bc4f341a8675e900370d8ddcc2fe36966207960dab63f25feeb84d76cf"
+  },
+  "s11": {
+   "url": "https://sacred-texts.com/neu/pre/pre04.htm",
+   "title": "The Prose Edda: Gylfaginning (trans. Brodeur, 1916)",
+   "publisher": "Internet Sacred Text Archive (Snorri Sturluson, Prose Edda)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:11:39Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dreamtime",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ginnungagap",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chaos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Chaos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Popol Vuh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Enuma Elish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Maize",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-116"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28305",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ymir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 59"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f28306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Izanagi and Izanami",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 61"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23",
+   "target": "f28306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Izanagi and Izanami",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 61"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f01716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Dreaming (also The Dreamtime or Dreamtime) is a term devised by early anthropologists to refer to a religio-cultural worldview attributed to Australian Aboriginal mythology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dreamtime” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f01717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ginnungagap",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ginnungagap”, “Гиннунгагап”) on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f01718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The orchestra often plays alone, notably in the episodes of tone painting: the appearance of the Sun, the creation of various beasts, and above all in the overture, the famous depiction of the Chaos before the creation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chaos” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f01718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the context of religious cosmogony, Chaos (Ancient Greek: χάος, romanized: kháos) refers to the division of reality outside or in contrast to the ordered cosmos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chaos” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f01719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Popol Vuh (also  Popul Vuh or Pop Vuj) is a text recounting the mythology and history of the Kʼicheʼ people of Guatemala, one of the Maya peoples who also inhabit the Mexican states of Chiapas, Campeche, Yucatan and Quintana Roo, as well as areas of Belize, Honduras and El Salvador.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Popol Vuh” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f01720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Enūma Eliš (Akkadian Cuneiform: 𒂊𒉡𒈠𒂊𒇺, also spelled \"Enuma Elish\"), meaning \"When on High\", is a Babylonian creation myth (named after its opening words) from the late 2nd millennium BCE and the only complete surviving account of ancient near eastern cosmology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enuma Elish” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f25534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Humans are successfully created from maize.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maize” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f28305",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In Norse mythology, Ymir (), also called Aurgelmir, Brimir, or Bláinn, is the ancestor of all jötnar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ymir” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f28306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Izanagi and Izanami are held to be the creators of the Japanese archipelago and the progenitors of many deities, which include the sun goddess Amaterasu, the moon deity Tsukuyomi, and the storm god Susanoo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Izanagi and Izanami” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:24:33.510Z",
+   "target": "f28306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Making their home on the island, Izanagi and Izanami marry and beget the islands of Japan as well as numerous other kami.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.510Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Izanagi and Izanami” is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:11:38Z",
+   "target": "f01717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ginnungagap (old Norse: [ˈɡinːoŋɡɑˌɡɑp]; \"gaping abyss\", \"yawning void\") is the primordial, magical void",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:11:39Z",
+   "target": "f01717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "but Ginnungagap was as mild as windless air, and when the breath of heat met the rime",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same passage: rime from Niflheim reaches 'even into Ginnungagap, the Yawning Void', sparks from Múspellheim light its southern part."
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:53.619Z",
+   "target": "f01717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ginnungagap (old Norse: [ˈɡinːoŋɡɑˌɡɑp]; \"gaping abyss\", \"yawning void\") is the primordial, magical void",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:53.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:53.619Z",
+   "target": "f01717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "In Norse mythology, Ginnungagap (old Norse: [ˈɡinːoŋɡɑˌɡɑp]; \"gaping abyss\", \"yawning void\") is the primordial, magical void mentioned in three poems from the Poetic Edda and the Gylfaginning, the Eddaic text recording Norse cosmogony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:53.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ginnungagap” is on the snapshot of s10"
+  }
+ ]
+}

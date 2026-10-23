@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-240",
+ "image": "IMG20261007173336.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie viele Tordurchgänge hat das Brandenburger Tor in Berlin?",
+   "de": "Wie viele Tordurchgänge hat das Brandenburger Tor in Berlin?",
+   "en": "How many passageways does the Brandenburg Gate in Berlin have?",
+   "reworked": false,
+   "answerDe": "5",
+   "answerEn": "5",
+   "timeline": {
+    "kind": "creation",
+    "start": "1789",
+    "end": "1793",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Construction of the Brandenburg Gate in Berlin by Carl Gotthard Langhans",
+    "labelDe": "Bau des Brandenburger Tors in Berlin durch Carl Gotthard Langhans"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor",
+    "title": "Brandenburger Tor",
+    "lang": "de"
+   },
+   "notes": "Six rows of columns and walls form five passageways; the middle one is wider.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Privatsender sendete erstmals am 2. Januar 1984 vom luxemburgischen Dudelange aus: RTL, ProSieben oder Kabel eins?",
+   "de": "Welcher Privatsender sendete erstmals am 2. Januar 1984 vom luxemburgischen Dudelange aus?",
+   "en": "Which private TV channel first went on air on 2 January 1984, broadcasting from Dudelange in Luxembourg?",
+   "reworked": true,
+   "answerDe": "RTL",
+   "answerEn": "RTL",
+   "timeline": {
+    "kind": "founding",
+    "start": "1984-01-02",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RTL plus (today RTL) starts broadcasting to Germany from Luxembourg",
+    "labelDe": "RTL plus (heute RTL) nimmt aus Luxemburg den Sendebetrieb für Deutschland auf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/RTL_Television",
+    "title": "RTL Television",
+    "lang": "de"
+   },
+   "notes": "Started as RTL plus, broadcast via the Dudelange (Düdelingen) transmitter on VHF channel 7. Multiple-choice options removed.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie heißt die Stadt, in der die Geistesgrößen Goethe, Schiller, Herder und Wieland ein sogenanntes „Viergestirn“ bildeten?",
+   "de": "Wie heißt die Stadt, in der die Geistesgrößen Goethe, Schiller, Herder und Wieland ein sogenanntes „Viergestirn“ bildeten?",
+   "en": "In which city did the great minds Goethe, Schiller, Herder and Wieland form a so-called “constellation of four”?",
+   "reworked": false,
+   "answerDe": "Weimar",
+   "answerEn": "Weimar",
+   "timeline": {
+    "kind": "era",
+    "start": "1786",
+    "end": "1832",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Weimar Classicism, from Goethe's Italian journey to his death",
+    "labelDe": "Weimarer Klassik, von Goethes Italienreise bis zu seinem Tod"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Weimarer_Klassik",
+    "title": "Weimarer Klassik",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher kubistische Maler schaffte es mit einem Gemälde bis auf die deutsche Briefmarke für Standardbriefe: Lyonel Feininger, Pablo Picasso oder Juan Gris?",
+   "de": "Welcher kubistische Maler schaffte es mit einem Gemälde bis auf die deutsche Briefmarke für Standardbriefe?",
+   "en": "Which Cubist painter made it onto the German stamp for standard letters with one of his paintings?",
+   "reworked": true,
+   "answerDe": "Lyonel Feininger",
+   "answerEn": "Lyonel Feininger",
+   "timeline": {
+    "kind": "event",
+    "start": "2002-12-05",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Deutsche Post issues a 55-cent stamp showing Lyonel Feininger's painting of the Marktkirche in Halle",
+    "labelDe": "Die Deutsche Post gibt eine 55-Cent-Marke mit Lyonel Feiningers Gemälde der Marktkirche von Halle heraus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Briefmarken-Jahrgang_2002_der_Bundesrepublik_Deutschland",
+    "title": "Briefmarken-Jahrgang 2002 der Bundesrepublik Deutschland",
+    "lang": "de"
+   },
+   "notes": "Series 'Deutsche Malerei des 20. Jahrhunderts', 55 cents = standard-letter rate from 1 January 2003, print run 130 million. Multiple-choice options removed.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißt das chinesische Heilverfahren, das nach dem lateinischen Wort für „Nadelstich“ benannt ist?",
+   "de": "Wie heißt das chinesische Heilverfahren, das nach dem lateinischen Wort für „Nadelstich“ benannt ist?",
+   "en": "What is the name of the Chinese healing method named after the Latin word for “needle prick”?",
+   "reworked": false,
+   "answerDe": "Akupunktur",
+   "answerEn": "Acupuncture",
+   "timeline": {
+    "kind": "creation",
+    "start": "-200",
+    "end": "200",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Huangdi Neijing, the oldest Chinese medical classic, first surveys needling therapies",
+    "labelDe": "Der Huangdi Neijing, älteste Sammlung chinesischer Medizinschriften, beschreibt erstmals die Stichtherapien"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Akupunktur",
+    "title": "Akupunktur",
+    "lang": "de"
+   },
+   "notes": "From Latin acus (needle) and punctura (pricking).",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wer stand bei der Fußball-WM 1974 nicht im deutschen Tor: Wolfgang Kleff, Sepp Maier oder Rudi Kargus?",
+   "de": "Welcher Torhüter stand bei der Fußball-WM 1974 in allen sieben Spielen im deutschen Tor?",
+   "en": "Which goalkeeper played in goal for West Germany in all seven matches of the 1974 World Cup?",
+   "reworked": true,
+   "answerDe": "Sepp Maier",
+   "answerEn": "Sepp Maier",
+   "timeline": {
+    "kind": "event",
+    "start": "1974-06-13",
+    "end": "1974-07-07",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "1974 FIFA World Cup in West Germany, won by the hosts",
+    "labelDe": "Fußball-Weltmeisterschaft 1974 in der Bundesrepublik, Sieger: Gastgeber Deutschland"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Fußball-Weltmeisterschaft_1974/Deutschland",
+    "title": "Fußball-Weltmeisterschaft 1974/Deutschland",
+    "lang": "de"
+   },
+   "notes": "Card (a 'not' question, bold 'nicht') expected Rudi Kargus, who was not in the squad; but Wolfgang Kleff, the squad's reserve keeper, also never played (0 matches). Reworked to the positive fact: Maier played all 7.",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1249",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Lady_of_the_Camellias",
+   "title": "The Lady of the Camellias – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:48.427Z",
+   "snapshot": "8ff3f944d7e11c023e9ecfb44549e8a148f047f5796db4f808887d451a3cd350"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Le_roi_s%27amuse",
+   "title": "Le roi s'amuse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:49.422Z",
+   "snapshot": "472657f5fb163819c8adc875de0797b5d5a8405ad238695fcfefe24c0946a99d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Luisa_Miller",
+   "title": "Luisa Miller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:50.555Z",
+   "snapshot": "8d106b9f79bcaf3ce0ed199bcb269d907b1ff42c4de11bc2fd268d6b006437b5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/La_boh%C3%A8me",
+   "title": "La bohème – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:51.539Z",
+   "snapshot": "cd75acb813c49abb9541594d6d02bfbcfb777edc1b2e45b11e3b99a4cdf93be0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Carmen",
+   "title": "Carmen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:52.533Z",
+   "snapshot": "fd47e85bb2a763577a7c46034124bab69b283c60d5201a0d89906d0674e1d192"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La traviata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06242",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rigoletto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luisa Miller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La Bohème",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Carmen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:54.809Z",
+   "target": "f06241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shortly thereafter, Italian composer Giuseppe Verdi set about putting the story to music in the 1853 opera La traviata, with female protagonist Marguerite Gautier renamed  Violetta Valéry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La traviata” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:54.809Z",
+   "target": "f06242",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "First performed on 22 November 1832 but banned by the government after one evening, the play was used for Giuseppe Verdi's 1851 opera Rigoletto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rigoletto” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:54.809Z",
+   "target": "f06243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luisa Miller is an opera in three acts by Giuseppe Verdi to an Italian libretto by Salvadore Cammarano, based on the play Kabale und Liebe (Intrigue and Love) by the German dramatist Friedrich von Schiller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luisa Miller” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:54.809Z",
+   "target": "f06244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La bohème ( LAH boh-EM, Italian: [la boˈɛm]) is an opera in four acts, composed by Giacomo Puccini between 1893 and 1895 to an Italian libretto by Luigi Illica and Giuseppe Giacosa, based on Scènes de la vie de bohème (1851) by Henri Murger.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Bohème” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:54.809Z",
+   "target": "f06245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Carmen (French: [kaʁmɛn] ) is an opera in four acts by the French composer Georges Bizet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carmen” is on the snapshot of s5"
+  }
+ ]
+}

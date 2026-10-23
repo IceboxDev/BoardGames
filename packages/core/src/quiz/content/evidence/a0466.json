@@ -1,0 +1,394 @@
+{
+ "article": "a0466",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus",
+   "title": "Nicolaus Copernicus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:15.012Z",
+   "snapshot": "4a69077e894e76b18dabf866e4da8269a8a7748aae7228ba251f1bffeca1e088"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aristarchus_of_Samos",
+   "title": "Aristarchus of Samos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:15.817Z",
+   "snapshot": "f877dc17d133e405dc1f7e199a9cce5abfc05d946d2d8ad3e074ce252de07cdb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Almagest",
+   "title": "Almagest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:16.817Z",
+   "snapshot": "d8ae67164c0a3c7d988b460cec1a09cb5fb8e890878a23bb163ecc0482d036fb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Harmonice_Mundi",
+   "title": "Harmonice Mundi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:17.807Z",
+   "snapshot": "ab8bd8caed62cc1f02e2cfc49dab31fc2c5685ff6dc3c4f54a12c13992a51b93"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Galilean_moons",
+   "title": "Galilean moons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:18.941Z",
+   "snapshot": "8bfdf30f87d1e172b6f085dbc0fe2bb1e281fd3ed1dcb9f7fcd73c8440aebe1a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Spherical_Earth",
+   "title": "Spherical Earth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:19.789Z",
+   "snapshot": "f2afd54cb3ec6af63a7e852274e086a4886b2790d4e5d272cc3e4c89e2595add"
+  },
+  "s7": {
+   "url": "https://antigonejournal.com/2023/09/ancient-greeks-earth-round/",
+   "title": "Who First Realised the Earth was Round?",
+   "publisher": "Antigone – An Open Forum for Classics",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:20.409Z",
+   "snapshot": "376675cc5eeb3b2adb6efb4c82808ff95fe006ecd78b83e11708903c1a0b7e72"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nicolaus Copernicus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aristarchus of Samos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ptolemy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johannes Kepler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Galileo Galilei",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The ancient Greeks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-157"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:52.834Z",
+   "target": "f02326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nicolaus Copernicus (19 February 1473 – 24 May 1543) was a Renaissance polymath who formulated a model of the universe that placed the Sun rather than Earth at its center.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicolaus Copernicus” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:52.834Z",
+   "target": "f02327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aristarchus of Samos (; Ancient Greek: Ἀρίσταρχος ὁ Σάμιος, Aristarkhos ho Samios; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aristarchus of Samos” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:52.834Z",
+   "target": "f02328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Almagest ( AL-mə-jest) is a 2nd-century mathematical and astronomical treatise on the apparent motions of the stars and planetary paths, written by Claudius Ptolemy (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ptolemy” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:52.834Z",
+   "target": "f02329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harmonice Mundi (Latin: The Harmony of the World, 1619) is a book by Johannes Kepler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johannes Kepler” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:52.834Z",
+   "target": "f02330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Galilean moons are named after Galileo Galilei, who observed them in either December 1609 or January 1610, and recognized them as satellites of Jupiter in March 1610; they remained the only known moons of Jupiter until the discovery of the fifth largest moon of Jupiter Amalthea in 1892.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galileo Galilei” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:52.834Z",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The ancient Greeks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The ancient Greeks”, “Die alten Griechen”, “древние греки”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:30Z",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the earliest extant reference to the Earth being a globe comes from 200 years after Pythagoras was born, in a dialogue by Plato (427–347 BC) called the Phaedo (108e).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23",
+   "note": "Greeks undisputed; exact first proponent (Pythagoras/Parmenides) and century are debated."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:10:32Z",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The earliest documented mention of the concept dates from around the 5th century BC, when it appears in the writings of Greek philosophers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:15.305Z",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the earliest extant reference to the Earth being a globe comes from 200 years after Pythagoras was born, in a dialogue by Plato (427–347 BC) called the Phaedo (108e).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:15.305Z",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The earliest documented mention of the concept dates from around the 5th century BC, when it appears in the writings of Greek philosophers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:15.305Z",
+   "target": "f25981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "My book The Globe: How the Earth became Round (Reaktion, London, 2023) traces the development of the Ancient Greeks’ ideas about the Earth and how the theory that it is a sphere spread around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.305Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The ancient Greeks” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,434 @@
+{
+ "article": "a2161",
+ "sources": {
+  "s1": {
+   "url": "https://www.aps.org/apsnews/2023/01/fruit-flies-space",
+   "title": "February 20, 1947: Fruit flies launched into space – APS News",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:13.387Z",
+   "snapshot": "efbddf7f44314ea58ed2be0c374f25e7b06282c7a7ab1825d3de171df54b5b64"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fruit_flies_in_space",
+   "title": "Fruit flies in space",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:16.877Z",
+   "snapshot": "98e80a1a9c2990fc1daeb61270373edb7061b4eebb2fb5a0972d8a54618f9238"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Albert_II_(monkey)",
+   "title": "Albert II (monkey) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:17.892Z",
+   "snapshot": "d488140bf2dd2b4eeba9862c50baf3c75e7cec1d2234b2fee41d8406d229aa1a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Soviet_space_dogs",
+   "title": "Soviet space dogs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:18.902Z",
+   "snapshot": "b2faa84b05fcdc4c5dbfac5ed95bafe2a544d51346b13f3bda513dc11a2dce3b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ham_(chimpanzee)",
+   "title": "Ham (chimpanzee) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:19.966Z",
+   "snapshot": "752b5778fa93a49b553ea646b7b29435af4e953c7e04c645eed28e177b695c1e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/F%C3%A9licette",
+   "title": "Félicette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:20.900Z",
+   "snapshot": "cdb6cbd33639e51b9cea6370891489a2698f020af2373a804ac0b71d109a969a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/List_of_V-2_test_launches",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:21.948Z",
+   "snapshot": "34171a52c04e1d7fc4d860054947468eab4f400d0ca525499cb6def286c64215"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Animals_in_space",
+   "title": "Animals in space – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:04.250Z",
+   "snapshot": "e761fe0e21b450beceac7a48517af89589fcb4e28a3c6c2b3c1901a17dbde490"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10923",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Belka and Strelka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ham",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Félicette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fruit flies",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Fruit flies",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Fruit flies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-360/3, u06): Statement false: fruit flies on a V-2 preceded any dog. The well-documented flight is 20 February 1947 (109 km, recovered alive); the 9 July 1946 flight rests mainly on Wikipedia, so the body now leads with 1947 and mentions 1946 as 'some accounts'."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fruit flies",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fruit flies",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Before John Glenn, Neil Armstrong, or Sally Ride could step into a spacesuit and rocket into the annals of history, an intrepid bunch of fruit flies had to pave the way.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fruit flies” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On a July 9, 1946, suborbital V-2 rocket flight, fruit flies became the first living organisms to go to space, and on February 20, 1947, fruit flies safely returned from a suborbital space flight, which paved the way for human exploration.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fruit flies” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10923",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Albert II was a male rhesus macaque monkey who was the first mammal and first primate to travel to outer space.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert II” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Belka and Strelka",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Belka and Strelka” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ham (July 1957 – January 19, 1983), a chimpanzee also known as Ham the Chimp and Ham the Astrochimp, was the first ape launched into space.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ham” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:31.833Z",
+   "target": "f10926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Félicette (French pronunciation: [felisɛt]; died 1963) was a Parisian cat that became the first feline launched into space on 18 October 1963 as part of the French space program.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:31.833Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Félicette” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:10:32Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Up they went on Feb. 20, 1947. The flies reached an altitude of 109 kilometers in 190 seconds",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:10:34Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The US launched the first living beings into space, with fruit flies surviving a 1947 flight, followed by primates in 1949.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:18.592Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Up they went on Feb. 20, 1947. The flies reached an altitude of 109 kilometers in 190 seconds",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:18.592Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The US launched the first living beings into space, with fruit flies surviving a 1947 flight, followed by primates in 1949.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:18.592Z",
+   "target": "f10922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The US launched the first living beings into space, with fruit flies surviving a 1947 flight, followed by primates in 1949.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:18.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Fruit flies” is on the snapshot of s8"
+  }
+ ]
+}

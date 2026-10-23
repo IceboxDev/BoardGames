@@ -1,0 +1,195 @@
+{
+ "article": "a1885",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pina_(film)",
+   "title": "Pina (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:07.469Z",
+   "snapshot": "b2c58dd318b29fe5273b7a81a3161e3e3a173f24c96676e3e6833eaf926be711"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Green_Table",
+   "title": "The Green Table – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:08.500Z",
+   "snapshot": "1f9487dfb65e0cf2cefe59e98039cfe20e12d49f88e403b46faeee4dd919c90b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Onegin_(Cranko)",
+   "title": "Onegin (Cranko) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:09.485Z",
+   "snapshot": "13b68924d80f5dac2b5956aaf06965f17a9ecfab5a2cb268a9f33a967daa376e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Merce_Cunningham",
+   "title": "Merce Cunningham – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:10.578Z",
+   "snapshot": "4fc7af958e3484ed467bbc4e611bbba358b63b20046af033628aa376c6131fef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pina Bausch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kurt Jooss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John Cranko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Merce Cunningham",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:39.191Z",
+   "target": "f09421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pina is a 2011 German 3D documentary film directed by Wim Wenders, about German dancer and choreographer Pina Bausch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.191Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pina Bausch” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:39.191Z",
+   "target": "f09422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Green Table is a ballet by the German choreographer Kurt Jooss.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.191Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Jooss” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:39.191Z",
+   "target": "f09423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Onegin is a ballet created by John Cranko for the Stuttgart Ballet that premiered on 13 April 1965 at Staatstheater Stuttgart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.191Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Cranko” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:39.191Z",
+   "target": "f09425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As a choreographer, teacher, and leader of the Merce Cunningham Dance Company, Cunningham had a profound influence on modern dance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.191Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Merce Cunningham” is on the snapshot of s4"
+  }
+ ]
+}

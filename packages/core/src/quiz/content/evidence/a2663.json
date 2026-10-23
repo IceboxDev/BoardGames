@@ -1,0 +1,344 @@
+{
+ "article": "a2663",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Chinesische_Mauer",
+   "title": "Chinesische Mauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:41.401Z",
+   "snapshot": "6155d6436e81a7d7fcc4121c6b9edbffa42ed7c4cde7c78d2a7e9c50145de22e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+   "title": "Great Wall of China – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:43.193Z",
+   "snapshot": "70973d088f41853ef0de19778f62ce39b34af62740db8fe24a97310a4f7b7320"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Shanhai_Pass",
+   "title": "Shanhai Pass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:44.107Z",
+   "snapshot": "c9a4739d047bce5e9153012e92cbc9d0e6c96e3399afb90850fda424b28ce18f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jiayu_Pass",
+   "title": "Jiayu Pass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:45.193Z",
+   "snapshot": "6e54314d5755d70d7ce820a7ff56a1773a65d9343768e62d1d37414bd25791a9"
+  },
+  "s5": {
+   "url": "https://english.visitbeijing.com.cn/article/47ONeMxjwn2",
+   "title": "Great Wall (Visit Beijing)",
+   "publisher": "Beijing Municipal Bureau of Culture and Tourism (Visit Beijing)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:26.805Z",
+   "snapshot": "4ab4b029b4105c91fabbf319453c599fa6327c59b04dc852361b6fd2976175c4"
+  },
+  "s6": {
+   "url": "https://www.cbc.ca/news/world/great-wall-of-china-even-longer-than-previously-thought-1.1263111",
+   "title": "Great Wall of China even longer than previously thought",
+   "publisher": "CBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:01:38Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Klebreis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-249"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ming dynasty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Old Dragon's Head",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jiayu Pass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "21,196 kilometres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:55.061Z",
+   "target": "f14425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der verwendete Mörtel besteht aus gebranntem Kalk und etwa drei Prozent Klebreis, wobei das in diesem frühen Verbundmaterial enthaltene Amylopektin für die besonders hohe Beständigkeit sorgt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klebreis” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:55.061Z",
+   "target": "f14426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Successive dynasties expanded the wall system; the best-known sections were built by the Ming dynasty (1368–1644).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ming dynasty” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:55.061Z",
+   "target": "f14427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The pass is a popular tourist destination nowadays, especially the location where the end of the Great Wall meets the Bohai Sea, nicknamed \"Old Dragon's Head\" (老龙头).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Old Dragon's Head” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:55.061Z",
+   "target": "f14428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jiayu Pass or  (simplified Chinese: 嘉峪关; traditional Chinese: 嘉峪關; pinyin: Jiāyù Guān) is the first frontier fortress at the west end of the Ming dynasty Great Wall, near the city of Jiayuguan in Gansu province.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.061Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jiayu Pass” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:55.061Z",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "21,196 kilometres",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“21,196 kilometres”, “21.196 Kilometer”, “21 196 километров”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:34Z",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "with the walls and trenches spanning a total length of 21,196.18 km",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:01:36Z",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On June 5th, 2012, the State Administration of Cultural Heritage announced that the official length of the Great Wall is 21,196.18 km",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:01:38Z",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The results of an archaeological survey have found that the historic structure, comprised of a series of fortifications and built over centuries, is 21,196 kilometers long.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:40.808Z",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "with the walls and trenches spanning a total length of 21,196.18 km",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:40.808Z",
+   "target": "f14429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On June 5th, 2012, the State Administration of Cultural Heritage announced that the official length of the Great Wall is 21,196.18 km",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  }
+ ]
+}

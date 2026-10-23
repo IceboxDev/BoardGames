@@ -1,0 +1,195 @@
+{
+ "article": "a2610",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Vitali_Klitschko",
+   "title": "Vitali Klitschko",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:37:22.639Z",
+   "snapshot": "732f1b9e3064115e3eb1111b147e49ba96e1e6de94519b50ca20ae2b18b78b7c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wladimir_Klitschko",
+   "title": "Wladimir Klitschko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:05.773Z",
+   "snapshot": "175dec35280efd975d2d36c7e653dc78a83750e4f784b41270167e7acfea8ce3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wladimir_Klitschko_vs._Tyson_Fury",
+   "title": "Wladimir Klitschko vs. Tyson Fury – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:06.185Z",
+   "snapshot": "4639359e665bdb156f1b97fbd62d9643758c5b3c53df4f56a446909df39645e1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Anthony_Joshua_vs._Wladimir_Klitschko",
+   "title": "Anthony Joshua vs. Wladimir Klitschko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:07.124Z",
+   "snapshot": "af1b4705188f18a65e8190bf77df653ef8df388d1b5d788b18ec62bdd99dc7b9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vitali",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-254"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wladimir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tyson Fury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anthony Joshua",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:46.821Z",
+   "target": "f14071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vitali Wladimirowitsch Klitschko (russisch Вита́лий Влади́мирович Кличко́, deutsche Transkription des Vornamens eigentlich Witali; ukrainisch Віталій Володи́мирович Кличко́, Witalij Wolodymyrowytsch Klytschko; * 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vitali” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:46.821Z",
+   "target": "f14072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wladimir Klitschko (born 25 March 1976) is a Ukrainian former professional boxer who competed from 1996 to 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wladimir” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:46.821Z",
+   "target": "f14074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tyson Fury, billed as Kollisionskurs (German for Collision Course), was a professional boxing match contested between WBA (Unified), IBF, WBO, IBO, and The Ring heavyweight champion, Wladimir Klitschko, and Tyson Fury.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tyson Fury” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:46.821Z",
+   "target": "f14075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Anthony Joshua vs Wladimir Klitschko was a professional boxing match contested on 29 April 2017 at Wembley Stadium in London, with Joshua's IBF and the vacant WBA (Super) and IBO heavyweight titles on the line.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.821Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anthony Joshua” is on the snapshot of s4"
+  }
+ ]
+}

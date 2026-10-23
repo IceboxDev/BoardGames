@@ -1,0 +1,242 @@
+{
+ "article": "a2515",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Pomologie",
+   "title": "Pomologie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:40.972Z",
+   "snapshot": "06e21dee3463cc797e50f5c9e244bb84f100431440744b250b146d4a3b432b79"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Lambada_(Erdbeere)",
+   "title": "Lambada (Erdbeere)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:41.960Z",
+   "snapshot": "379af43fbde9c6b7e392a63f72f0830ed714c73b1bb249687b194309676a9ac7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Beetroot",
+   "title": "Beetroot",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:16.246Z",
+   "snapshot": "98969cce44136805bea061481364d90483cbf48bd1346dc69ecb5d3b2aa8d662"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Granny_Smith",
+   "title": "Granny Smith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:40.672Z",
+   "snapshot": "4c815a277f92d8a020446783ec1e664e2f29429079eb55a6aa7197ad84ecab1a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Williams_pear",
+   "title": "Williams pear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:41.670Z",
+   "snapshot": "6037b211cb68238e68f7a743aa7423d6719b7f8972421058fc3aae5108ed65f3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Obstbau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lambada",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-069"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beetroot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-321"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Granny Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Williams",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:33.070Z",
+   "target": "f13371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Höhere Bundeslehranstalt und Bundesamt für Wein- und Obstbau Klosterneuburg, Österreich",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Obstbau” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:33.070Z",
+   "target": "f13372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Erdbeersorte Lambada ist eine sehr süße Erdbeere, die von Allergikern sehr häufig gut vertragen wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lambada” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.070Z",
+   "target": "f13373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Beetroot or beet is the taproot portion of a Beta vulgaris subsp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beetroot” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.070Z",
+   "target": "f13374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Granny Smith is an apple cultivar that originated in Australia in 1868.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Granny Smith” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.070Z",
+   "target": "f13376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Williams' bon chrétien pear, commonly called the Williams pear, or the Bartlett pear in the United States and Canada, is a cultivar (cultivated variety) of the species Pyrus communis, commonly known as the European pear.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Williams” is on the snapshot of s5"
+  }
+ ]
+}

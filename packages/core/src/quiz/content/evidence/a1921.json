@@ -1,0 +1,202 @@
+{
+ "article": "a1921",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cold_Sweat",
+   "title": "Cold Sweat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:38.517Z",
+   "snapshot": "235e2e8f183979a83eca48ad279058a671e4621d13d6499f1a31903c0bba0d87"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Genius_of_Ray_Charles",
+   "title": "The Genius of Ray Charles – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:39.620Z",
+   "snapshot": "da5ff2397ad1b9ad630ec9e6c9183d02c17aaf8f3b519b719e3b3d4f2f4e1c78"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/What's_Going_On_(album)",
+   "title": "What's Going On (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:40.631Z",
+   "snapshot": "342029f09555e9f5f8cfefe9ed16e4562a419ae9373dcf215a293865d1c16571"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Otis_Redding",
+   "title": "Otis Redding – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:41.671Z",
+   "snapshot": "9a84c43b89f5921c603297eab19bea553c4f0301989859cb2085b12828d1de1a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pervis_Spann",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:42.532Z",
+   "snapshot": "d7952a74d4ecbe82de7bb9fef815200a944e135e0ed8f71154b978ff7b15b71b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "James Brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09603",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ray Charles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09604",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marvin Gaye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09605",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Otis Redding",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:45.830Z",
+   "target": "f09601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Cold Sweat\" is a song performed by James Brown and written with his bandleader Alfred \"Pee Wee\" Ellis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.830Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Brown” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:45.830Z",
+   "target": "f09603",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Genius of Ray Charles is an album by Ray Charles, released in October 1959 by Atlantic Records, the seventh album since the debut Ray Charles in 1957.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.830Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ray Charles” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:45.830Z",
+   "target": "f09604",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "What's Going On is the eleventh studio album by the American soul singer Marvin Gaye.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.830Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marvin Gaye” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:45.830Z",
+   "target": "f09605",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Redding was born in Dawson, Georgia, on September 9, 1941, the fourth of six children, and the first son of Otis Redding Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:45.830Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otis Redding” is on the snapshot of s4"
+  }
+ ]
+}

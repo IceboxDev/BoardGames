@@ -1,0 +1,435 @@
+{
+ "article": "a2662",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Aachener_Dom",
+   "title": "Aachener Dom",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:03.367Z",
+   "snapshot": "ed38cc6ea302afc2db0f286431e2f2ad855f12965c0f63582ea865fcce0eec15"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/World_Heritage_Site",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:40.106Z",
+   "snapshot": "1197d15edce25cc67dd2cc3097d9bd366f2d762b651837487d399c58cc1ac3eb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Speyer_Cathedral",
+   "title": "Speyer Cathedral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:02.333Z",
+   "snapshot": "2b5da6da82c4e7baa8ab0676bd1afba0f1684125a95026ec720b45e86ccff40a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/W%C3%BCrzburg_Residence",
+   "title": "Würzburg Residence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:30.353Z",
+   "snapshot": "187c937d30491b8f9e7b8a703a0ab777c99259395f7f00209397bbe520c7f145"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wieskirche",
+   "title": "Wieskirche – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:41.083Z",
+   "snapshot": "ab3e7c66e6a19012075dd441c97c259b6e47b48d314a969afab6bf7631891512"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cologne_Cathedral",
+   "title": "Cologne Cathedral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:53.542Z",
+   "snapshot": "b38d9d2924f09091e6316f5dadbcdca56bb0f2a3d69689466a2d8cc0c142c3d3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Dresden_Elbe_Valley",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:42.093Z",
+   "snapshot": "204cd840d0a698710bba6b071a1a0e2018c7ec4f7f3dfdfc9a4822cc108bb5b0"
+  },
+  "s8": {
+   "url": "https://whc.unesco.org/en/list/3/",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s9": {
+   "url": "https://whc.unesco.org/en/list/292/",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23"
+  },
+  "s10": {
+   "url": "https://www.unesco.de/kultur-und-natur/welterbe/welterbe-deutschland/aachener-dom",
+   "title": "Aachener Dom",
+   "publisher": "Deutsche UNESCO-Kommission",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:22.053Z",
+   "snapshot": "8988bdd9fc22f0499fed43b955d87573e392f6ed1551fd86c27591663ba34d54"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aachener Dom",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-238"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aachen Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Speyer Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Würzburg Residence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wieskirche",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cologne Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Aachen Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Aachen Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-238/3, u10: False: Aachen Cathedral was inscribed in 1978 as Germany's first site; Cologne Cathedral only in 1996."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:54.806Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marien zu Aachen, kurz der Aachener Dom, ist die Bischofskirche des Bistums Aachen und das bedeutendste Wahrzeichen der Stadt Aachen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aachener Dom” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:54.806Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aachen Cathedral",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Aachen Cathedral”, “Aachener Dom”, “Ахенский собор”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:54.806Z",
+   "target": "f14421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Speyer Cathedral, officially the Imperial Cathedral Basilica of the Assumption and St Stephen, in Latin: Domus sanctae Mariae Spirae (German: Domkirche St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Speyer Cathedral” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:54.806Z",
+   "target": "f14422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Würzburg Residence (German: Würzburger Residenz) is a palace in Würzburg, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Würzburg Residence” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:54.806Z",
+   "target": "f14423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wieskirche (\"Meadow Church\")) is a Roman Catholic oval Rococo church, designed in the late 1740s and completed in 1754.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wieskirche” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:54.806Z",
+   "target": "f14424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cologne Cathedral (German: Kölner Dom, pronounced [ˌkœlnɐ ˈdoːm] ) is a Catholic cathedral in Cologne, North Rhine-Westphalia, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:54.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cologne Cathedral” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:01:28Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Date of Inscription: 1978",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Aachen Cathedral is list no. 3, inscribed at the 2nd session (1978); no other German site was inscribed before 1981."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:01:30Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "wurde der Aachener Dom 1978 als erste Kulturstätte Deutschlands in die UNESCO",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:01:32Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1978 wurde die Kathedrale als eine der weltweit ersten acht und erstes deutsches Kulturdenkmal in die UNESCO-Welterbeliste aufgenommen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:40.573Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1978 wurde die Kathedrale als eine der weltweit ersten acht und erstes deutsches Kulturdenkmal in die UNESCO-Welterbeliste aufgenommen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.573Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:40.573Z",
+   "target": "f14420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Aachener Dom - Deutsche UNESCO-Kommission",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:40.573Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aachener Dom” is on the snapshot of s10"
+  }
+ ]
+}

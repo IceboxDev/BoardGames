@@ -1,0 +1,242 @@
+{
+ "article": "a0595",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2011_South_Sudanese_independence_referendum",
+   "title": "2011 South Sudanese independence referendum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:00.518Z",
+   "snapshot": "7ab8cd67e0206120639732591959df9c033e6679ff3247923cfc0dbdfce3076a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Namibia",
+   "title": "Namibia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:01.480Z",
+   "snapshot": "b41b5403ccf0f037c332b0ea805fb04352987461ffb934b530a870540a9d2d23"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lancaster_House_Agreement",
+   "title": "Lancaster House Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:02.327Z",
+   "snapshot": "6da0fbe1e3a7cf3342a53ad77383de39cacff7fa9c41f947b5a95cb93103e720"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ghana",
+   "title": "Ghana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:03.506Z",
+   "snapshot": "cf2f532417431788f47560f68ec55407712d747fe67038b9198ebdd9ad516c4d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Canaan_Banana",
+   "title": "Canaan Banana",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:04.361Z",
+   "snapshot": "29af2f49dcbcd0ffeec72d50bc443f7d1fa44750b5b18d949f47c0c86cd34c66"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sudan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Namibia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zimbabwe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ghana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Banana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-197"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:11.960Z",
+   "target": "f02971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A referendum took place in Southern Sudan from 9 to 15 January 2011, on whether the region should remain a part of Sudan or become independent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.960Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sudan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:11.960Z",
+   "target": "f02973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Namibia, officially the Republic of Namibia, is a country in Southern Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.960Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Namibia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:11.960Z",
+   "target": "f02974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Lancaster House Agreement is an agreement signed on 21 December 1979 in Lancaster House, following the conclusion of a constitutional conference where different parties discussed the future of Zimbabwe Rhodesia, formerly known as Rhodesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.960Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zimbabwe” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:11.960Z",
+   "target": "f02975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ghana, officially the Republic of Ghana, is a country in West Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.960Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ghana” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:11.960Z",
+   "target": "f12203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Canaan Sodindo Banana (5 March 1936 – 10 November 2003) was a Zimbabwean Methodist minister, theologian, and politician who served as the first President of Zimbabwe from 1980 to 1987.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.960Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Banana” is on the snapshot of s5"
+  }
+ ]
+}

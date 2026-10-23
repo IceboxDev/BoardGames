@@ -1,0 +1,489 @@
+{
+ "article": "a2349",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Penny_(Canadian_coin)",
+   "title": "Penny (Canadian coin) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:31.577Z",
+   "snapshot": "c5fa36e8f561a2df007b50008d67ae7e84bf850ebe00c6f81684c5bd965169e6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Loonie",
+   "title": "Loonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:32.320Z",
+   "snapshot": "2c75bc49832333ac0a7677e8140360ce2f5787de789515b1c8fdcb9d7612d9df"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cash_rounding",
+   "title": "Cash rounding – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:33.251Z",
+   "snapshot": "3585540592d1bc85c6ecaf358deeda1df1384129d7dd6b8e3f8f044f42cd4729"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Australian_one-cent_coin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:34.245Z",
+   "snapshot": "5dd1bfa660e4e8c4d3629fc380cb9493b1fdd97a45a6d124472a3294c1cae099"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Australian_two-cent_coin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:35.241Z",
+   "snapshot": "47f925858f0ff7864fcb9e1cb6c42962ceb14ff92f85634b664bc39f9e598e76"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Penny_(United_States_coin)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:36.315Z",
+   "snapshot": "3f4646e5a1c81c3a74208820062e5e5f00796e5d85fcbd5d1a27731ccad6e4d5"
+  },
+  "s7": {
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2000/890/fin@",
+   "title": "Laki euromääräisten maksujen pyöristämisestä 890/2000",
+   "publisher": "Finlex (Ministry of Justice, Finland)",
+   "kind": "primary",
+   "lang": "fi",
+   "retrievedAt": "2026-10-23T12:46:50.013Z",
+   "snapshot": "086b4c8ca284d3a5f479d0eb07f2bad398fa436ae092365afe5b82ca20399a4c"
+  },
+  "s8": {
+   "url": "https://web.archive.org/web/20170106122037/http://www.centralbank.ie/press-area/press-releases/Pages/CentralBankannouncesrolloutofroundingof1cand2ccoinsnationally.aspx",
+   "title": "Central Bank announces rollout of rounding of 1c and 2c coins nationally",
+   "publisher": "Central Bank of Ireland",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:51.461Z",
+   "snapshot": "9cff61933787a8a651341115d29abbbd57668fffe1980a4859af6876dcb34f00"
+  },
+  "s9": {
+   "url": "https://www.ramint.gov.au/one-cent",
+   "title": "One Cent | Royal Australian Mint",
+   "publisher": "Royal Australian Mint",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:51.198Z",
+   "snapshot": "d757184cc16a434edc70241c4fdc187ca321d9138a3b25dbf0ba020b1b01ec5d"
+  },
+  "s10": {
+   "url": "https://banknotes.rba.gov.au/legal/legal-tender/",
+   "title": "RBA Banknotes: Legal Tender",
+   "publisher": "Reserve Bank of Australia",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:51.053Z",
+   "snapshot": "27c11e0c3ed047b116123fe3e23e78917d086130684aa0f4f13f6389343530a8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Canada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Loonie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Toonie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:02.526Z",
+   "target": "f12232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Canada, the penny, officially the one-cent coin, is a coin worth one cent, or 1⁄100 of a Canadian dollar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canada” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:02.526Z",
+   "target": "f12233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Canada, the loonie (French: huard), formally the one-dollar coin, is a gold-coloured Canadian coin introduced in 1987 that is worth one dollar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loonie” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:02.526Z",
+   "target": "f12234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "When the Canadian two-dollar coin was introduced in 1996, it was in turn nicknamed the \"toonie\" (a portmanteau of \"two\" and \"loonie\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toonie” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:02.526Z",
+   "target": "f12235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Finland”, “Finnland”, “Финляндия”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:02.526Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Australia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Australia”, “Australien”, “Австралия”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:10Z",
+   "target": "f12235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Suomessa suoritettava euromääräinen maksu pyöristetään seuraavasti: 1) jos suoritettava määrä päättyy yhteen tai kahteen senttiin, se pyöristetään lähinnä pienempään kymmenellä jaolliseen senttimäärään",
+     "quoteLang": "fi",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:39:13Z",
+   "target": "f12235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Six EU Member States have already adopted a symmetrical rounding policy; The Netherlands, Sweden, Finland, Denmark, Hungary and Belgium.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:39:14Z",
+   "target": "f12235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "When Finland introduced euro notes and coins in 2002, cash payments were rounded to the nearest five cents,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:39:16Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Both coins were withdrawn from circulation commencing in February 1992.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:18Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was introduced on 14 February 1966 in the decimalisation of Australian currency and was withdrawn from circulation in 1992 (along with the two-cent coin",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:39:20Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "these coins have been withdrawn from circulation, but are still legal tender",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r066",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:47.333Z",
+   "target": "f12235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Suomessa suoritettava euromääräinen maksu pyöristetään seuraavasti: 1) jos suoritettava määrä päättyy yhteen tai kahteen senttiin, se pyöristetään lähinnä pienempään kymmenellä jaolliseen senttimäärään",
+     "quoteLang": "fi",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:47.333Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Both coins were withdrawn from circulation commencing in February 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:47.333Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was introduced on 14 February 1966 in the decimalisation of Australian currency and was withdrawn from circulation in 1992 (along with the two-cent coin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:47.333Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "these coins have been withdrawn from circulation, but are still legal tender",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:47.333Z",
+   "target": "f12236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Australian banknotes are a legal tender throughout Australia (this is provided in section 36(1)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:47.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Australia” is on the snapshot of s10"
+  }
+ ]
+}

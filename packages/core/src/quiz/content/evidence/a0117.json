@@ -1,0 +1,382 @@
+{
+ "article": "a0117",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Atomism",
+   "title": "Atomism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:51.144Z",
+   "snapshot": "0d6b66da05eb67c55a2af3ce54ff0d6deb97b65f05f3cacccca0243ee54171da"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Electron",
+   "title": "Electron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:52.253Z",
+   "snapshot": "19bb134c54bbd7f1691e30d03d3c641d43c54fea4e81abf5f15fa2f404aa9a62"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Proton",
+   "title": "Proton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:53.214Z",
+   "snapshot": "955ce59b88965861e2a34766a93a424016dfb5bf4c7d9bf2ff81df1e9445c1b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Isotope",
+   "title": "Isotope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:54.104Z",
+   "snapshot": "89b899bd03f5d0c572ebc8f9840dad8c410193bc467573a6e923b2254a7ce22e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Molecule",
+   "title": "Molecule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:54.962Z",
+   "snapshot": "c118477c7d3fbeb1ff84a6e2430692ca8f08df7d0cf2442a56e24c9b9b240edb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Electricity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:56.087Z",
+   "snapshot": "1c1705abfc4ac2a4de2d2aa2e0a4e8f82c64a389954ef1a4279abc3daccb7feb"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Molek%C3%BCl",
+   "title": "Molekül – DWDS (Etymologisches Wörterbuch, Pfeifer)",
+   "publisher": "DWDS / Berlin-Brandenburgische Akademie der Wissenschaften",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:52.088Z",
+   "snapshot": "024d7d978e2a9b9d1cf8b8c91450d32a05d185762e6265f9bb2afed1db3ab34c"
+  },
+  "s8": {
+   "url": "https://www.dictionary.com/browse/molecule",
+   "title": "Molecule Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:52.715Z",
+   "snapshot": "b59b117d6acb1751a164998daeb777b387eb2a40933690e788d1e42139ac5dd7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "indivisible",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "amber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the first",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "same place",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "small mass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:54.526Z",
+   "target": "f00581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Atomism (from Ancient Greek  ἄτομον (atomon) 'uncuttable, indivisible') is a natural philosophy proposing that the physical universe is composed of fundamental indivisible components known as atoms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “indivisible” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:54.526Z",
+   "target": "f00582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The ancient Greeks noticed that amber attracted small objects when rubbed with fur.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “amber” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:54.526Z",
+   "target": "f00583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Van den Broek speculated that the nucleus contained alpha particles with four positive charges and two electrons, the first version of the nuclear-electron hypothesis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the first” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:54.526Z",
+   "target": "f00584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The term isotope comes from the Greek roots isos (ἴσος \"equal\") and topos (τόπος \"place\"), meaning \"the same place\": different isotopes of an element occupy the same place on the periodic table.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “same place” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:54.526Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "small mass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“small mass”, “kleine Masse”, “маленькая масса”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:25:10Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "einer gelehrten Bildung (vgl. nlat. molecula ) mit deminutivem Suffix zu lat. mōlēs ‘Last, Masse’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "diminutive of Latin moles 'mass' = small mass"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:25:12Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "earlier molecula, from New Latin, from Latin mōlē(s) “mass” ( cf. molar 2 ( def. ) ) + -cula -cule 1",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "-cule is the diminutive suffix"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:39:22Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "einer gelehrten Bildung (vgl. nlat. molecula) mit deminutivem Suffix zu lat. mōlēs ‘Last, Masse’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted to match the page text exactly; diminutive of moles 'mass' = small mass"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:39:27Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "earlier molecula, from New Latin, from Latin mōlē(s) “mass”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r010",
+   "run": "provenance-research-2026-10-23",
+   "note": "re-quoted; the suffix -cula/-cule is the Latin diminutive"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:13.144Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "einer gelehrten Bildung (vgl. nlat. molecula) mit deminutivem Suffix zu lat. mōlēs ‘Last, Masse’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:13.144Z",
+   "target": "f00585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "earlier molecula, from New Latin, from Latin mōlē(s) “mass”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:13.144Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

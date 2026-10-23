@@ -1,0 +1,341 @@
+{
+ "article": "a2300",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ferrari_World",
+   "title": "Ferrari World",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:25.438Z",
+   "snapshot": "9cbd55b86672c34d8ffc5bbf0f5e11050c692757754bda30009e30f310332159"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sheikh_Zayed_Grand_Mosque",
+   "title": "Sheikh Zayed Grand Mosque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:26.438Z",
+   "snapshot": "e9cf6f2fa6ec483e9d0c479c1ac35c8986b09ac460558bf629659154c557d753"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palm_Jumeirah",
+   "title": "Palm Jumeirah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:27.443Z",
+   "snapshot": "6c686e9d6bfaec982756be6d6a00702be05c462f55105e9867e43b2071370455"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lusail_Stadium",
+   "title": "Lusail Stadium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:10.448Z",
+   "snapshot": "3408b5691469d9db9e45f2fb4c9aa829bbc1218a537cdf79c8da7abdbf5b0038"
+  },
+  "s5": {
+   "url": "https://www.szgmc.gov.ae/en/",
+   "title": "Sheikh Zayed Grand Mosque Center",
+   "publisher": "Sheikh Zayed Grand Mosque Center (Abu Dhabi government)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:02.375Z",
+   "snapshot": "103f86787a20d3d1a9d51dd3bd551c69a647e18eca426cb247d420d7b5173bda"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abu Dhabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-198"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yas Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sheikh Zayed Grand Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palm Jumeirah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lusail",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:51.192Z",
+   "target": "f11881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferrari World Abu Dhabi  (Arabic: عالم فيراري أبوظبي) is a mostly indoors theme park located on Yas Island in Abu Dhabi, United Arab Emirates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abu Dhabi” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:51.192Z",
+   "target": "f11882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ferrari World Abu Dhabi  (Arabic: عالم فيراري أبوظبي) is a mostly indoors theme park located on Yas Island in Abu Dhabi, United Arab Emirates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yas Island” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:51.192Z",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sheikh Zayed Grand Mosque (Arabic: جَامِع ٱلشَّيْخ زَايِد ٱلْكَبِيْر Jāmiʿ Aš-Šaykh Zāyid Al-Kabīr) is a mosque located in Abu Dhabi, the capital city of the United Arab Emirates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sheikh Zayed Grand Mosque” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:51.192Z",
+   "target": "f11884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Palm Jumeirah, also known as the Palm Islands,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palm Jumeirah” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:51.192Z",
+   "target": "f11885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lusail Stadium (Arabic: استاد لوسيل, ALA-LC: Istād Lūsayl) is a football stadium in Lusail, Qatar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.192Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lusail” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:35:01Z",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the country's largest mosque, and is the key place of worship for daily Islamic prayers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: inaugurated in December 2007."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:35:04Z",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the construction of the Sheikh Zayed Grand Mosque, one of the largest mosques in the world and a prominent landmark in the Emirates of Abu Dhabi",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official site: one of the largest mosques in the world, hence the largest in the UAE."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:36.340Z",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the country's largest mosque, and is the key place of worship for daily Islamic prayers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:36.340Z",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the construction of the Sheikh Zayed Grand Mosque, one of the largest mosques in the world and a prominent landmark in the Emirates of Abu Dhabi",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:36.340Z",
+   "target": "f11883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sheikh Zayed Grand Mosque Centre Prepares to Welcome Its Guests with Interactive Experiences and Cultural Programs in a Joyful Eid Al‑Adha Atmosphere",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.340Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sheikh Zayed Grand Mosque” is on the snapshot of s5"
+  }
+ ]
+}

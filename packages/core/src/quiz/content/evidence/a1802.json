@@ -1,0 +1,376 @@
+{
+ "article": "a1802",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Exlibris",
+   "title": "Exlibris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:23:23.764Z",
+   "snapshot": "493dd3e4f0f470ebe95e6a7b27bc0104848e4d1dbcbcf1c5a87e297d396da870"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Kells",
+   "title": "Book of Kells – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:27.633Z",
+   "snapshot": "5d9ecef2efcbc357d149bbc48b6e99fe5bf7e4f42a58491093ee5c6590eb6a95"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Watermark",
+   "title": "Watermark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:28.402Z",
+   "snapshot": "fe494a1f0e87c608588c1a552d681780a9cdcd376a622d84f0e0c243f269d008"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mainz_Psalter",
+   "title": "Mainz Psalter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:29.448Z",
+   "snapshot": "4d5783aed746c264655e212f1db49ca1d5de5c4f1e3b32317777355feadc0b44"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/ISBN",
+   "title": "ISBN – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:52.242Z",
+   "snapshot": "8f874d8a0adf94cf81d3c588fe987a09875284b623a18efffd0de477fc9f944e"
+  },
+  "s6": {
+   "url": "https://www.isbn-international.org/content/what-isbn/10",
+   "title": "What is an ISBN? – International ISBN Agency",
+   "publisher": "International ISBN Agency",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:34.404Z",
+   "snapshot": "33a4406fc7c2ab8be481ad0f9c95d1ea804df325c3283a03a645249a9fc19704"
+  },
+  "s7": {
+   "url": "https://www.loc.gov/catdir/cpso/13digit.html",
+   "title": "Library of Congress Plan to Accommodate 13-Digit ISBN",
+   "publisher": "Library of Congress",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:34.624Z",
+   "snapshot": "0acf4fe5ce4e20c41aaa08c6a30e221eb6dc1718758c84c85b2afe7fd31a285a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Exlibris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Initial",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Watermark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Colophon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ISBN",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:24.570Z",
+   "target": "f09006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Exlibris (von lateinisch ex „aus“, und libris „den Büchern“; wörtlich „aus den Büchern [von …]“) ist ein in Bücher eingeklebter Zettel, ein Stempel oder eine Inschrift zur Kennzeichnung des Eigentümers.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Exlibris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:24.570Z",
+   "target": "f09007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Compare, for example, the incipit pages of the Gospel of Matthew in the Lindisfarne Gospels and in the Book of Kells, both of which feature intricate decorative knotwork patterns inside the outlines formed by the enlarged initial letters of the text.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Initial” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:24.570Z",
+   "target": "f09008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A watermark is an identifying image or pattern in paper that appears as varying shades of light and dark when viewed by either transmitted light or reflected light.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Watermark” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:24.570Z",
+   "target": "f09009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Psalter introduced several innovations: it was the first book to feature a printed date of publication, a printed colophon, two sizes of type, printed decorative initials, and the first to be printed in three colours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colophon” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:24.570Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The International Standard Book Number (ISBN) is a numeric commercial book identifier that is intended to be unique.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.570Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ISBN” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:26Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ISBNs were 10 digits in length up to the end of December 2006, but since 1 January 2007 they now always consist of 13 digits.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:30Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The date for fully adopting ISBN 13 is January 1, 2007.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:12.636Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ISBNs were 10 digits in length up to the end of December 2006, but since 1 January 2007 they now always consist of 13 digits.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:12.636Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The date for fully adopting ISBN 13 is January 1, 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:12.636Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An ISBN is an International Standard Book Number.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ISBN” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:12.636Z",
+   "target": "f09010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Library of Congress Plan to Accommodate 13-Digit ISBN",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “ISBN” is on the snapshot of s7"
+  }
+ ]
+}

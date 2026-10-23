@@ -1,0 +1,390 @@
+{
+ "article": "a2354",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Wilhelm_von_Steuben",
+   "title": "Friedrich Wilhelm von Steuben",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:43.476Z",
+   "snapshot": "623f1b976dff1b687af0d7266fcfa1608ea5faccaea40d665f8f85c04338bbb6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington",
+   "title": "First inauguration of George Washington",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:44.260Z",
+   "snapshot": "8758ea4ce3dafd9f59e1fa16d15e576877f58ea856375aaf94303be76eef0cb6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Trenton",
+   "title": "Battle of Trenton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:45.412Z",
+   "snapshot": "2069668d6ec211fcddd8046ec5a277b0daa7e7ec503877df669e1f5c0dfe7971"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Valley_Forge",
+   "title": "Valley Forge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:46.464Z",
+   "snapshot": "9f93531c57615739560b61795898b1e4a5cabb695cdcfe8943c4cbcf60f98fd6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Siege_of_Yorktown",
+   "title": "Siege of Yorktown – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:47.480Z",
+   "snapshot": "5445f4c36bb7ba1c39c8f78f32e5229ae027ceb06f2bed448adcb7031c8f71e6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Vernon",
+   "title": "Mount Vernon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:48.427Z",
+   "snapshot": "8315a90b3ae65edc3d20c95bb40592080889bedc2582b10521a2562cc5efc633"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/John_Adams",
+   "title": "John Adams",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:49.576Z",
+   "snapshot": "d94f44c7ed1002c1cdff0579f21cb85d43d10cf6b20601972a04fc22f56b7905"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Washington_Crossing_the_Delaware_(1851_paintings)",
+   "title": "Washington Crossing the Delaware (1851 paintings) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:50.342Z",
+   "snapshot": "cd25cb5f5af87a06637f7230015f0a10668f8a58bcea40cc2b7e16f65c67526c"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/George_Washington",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:51.621Z",
+   "snapshot": "bc2616142e6a23d60281b4a51adf055cf101917e7024f9de3ae70d66a429f01c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Friedrich Wilhelm von Steuben",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-212"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "New York City",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-274"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Trenton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Valley Forge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles Cornwallis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Potomac",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "John Adams",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-090"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f27501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Emanuel Leutze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 65"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f12267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Guide to the Friedrich Wilhelm von Steuben Papers at the New-York Historical Society",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Wilhelm von Steuben” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f12268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first inauguration of George Washington as the first president of the United States was held on Thursday, April 30, 1789, on the balcony of Federal Hall in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New York City” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f12269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Battle of Trenton was a short but pivotal American Revolutionary War battle on the morning of December 26, 1776, in Trenton, New Jersey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trenton” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f12270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Valley Forge was the winter encampment of the Continental Army, under the command of George Washington, during the Philadelphia campaign of the American Revolutionary War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valley Forge” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f12271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "by the Continental Army, led by George Washington, with support from the Marquis de Lafayette and French Army troops, led by Comte de Rochambeau, and a French Navy force commanded by the Comte de Grasse, defeating the British Army commanded by British Lieutenant General Charles Cornwallis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Cornwallis” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f12272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An American landmark, the estate lies on the banks of the Potomac River in Fairfax County, Virginia, approximately 15 miles (25 km) south of Washington, D.C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Potomac” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f25637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "John Adams (October 30, 1735 – July 4, 1826) was a Founding Father and the second president of the United States from 1797 to 1801.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Adams” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:03.566Z",
+   "target": "f27501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Washington Crossing the Delaware is the title of three 1851 oil-on-canvas paintings by the German-American artist Emanuel Leutze depicting  General George Washington's crossing of the Delaware River with the Continental Army on the night of December 25–26, 1776, during the American Revolutionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.566Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emanuel Leutze” is on the snapshot of s8"
+  }
+ ]
+}

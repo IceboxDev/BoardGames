@@ -1,0 +1,383 @@
+{
+ "article": "a2563",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Plumeria",
+   "title": "Plumeria",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:23.158Z",
+   "snapshot": "d799465e6f7087410645453cfb9cdeead5073aeca40ceb8132f30c8d8812cc63"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Head_bobble",
+   "title": "Head bobble",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:24.149Z",
+   "snapshot": "2a01358112897f3cf0e2432cc0bb4d04e0b2cd5b282c90406ca16db1385948a4"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gl%C3%BCckauf",
+   "title": "Glückauf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:26.298Z",
+   "snapshot": "c7c7bb92785722ef02f46ff41e509c757696d2f523b8523886cb2fb8642e87fa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Wai_(gesture)",
+   "title": "Wai (gesture) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:25.222Z",
+   "snapshot": "27de4d729de47a01cd9943452c5ae0823259c7b4329761e9c9aff4d912efd7ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wai_(greeting)",
+   "title": "Wai (greeting) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:26.148Z",
+   "snapshot": "27de4d729de47a01cd9943452c5ae0823259c7b4329761e9c9aff4d912efd7ef"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hongi",
+   "title": "Hongi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:27.156Z",
+   "snapshot": "a86ce7c2c43aa9295d703ff929d8d78000779bbdf6bcefa1268bb1120d8dfe4a"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Petri_Heil",
+   "title": "Petri Heil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:26.900Z",
+   "snapshot": "2a18763444023fb516b10cfac47d5d5b02c61fd2a7de7031751402d443572d77"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Noren",
+   "title": "Noren",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:28.203Z",
+   "snapshot": "bba3c9d9e57db5c7d83e40875182a8cbd3574ac8086d14aa5f2ed769ca2e316f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Over the right ear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-077"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Head wobble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-164"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Glückauf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-330"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hongi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Petri Heil",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f26007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Open for business",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 69; transcript ppm-047"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In modern Polynesian culture, the flower can be worn by women to indicate their relationship status—over the right ear if seeking a relationship, and over the left if taken.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Over the right ear” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The head bobble, head wobble, or Indian head shake is a common gesture found in South Asian cultures, most notably in India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Head wobble” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Glückauf (als Ausruf „Glück auf!“) ist der deutschsprachige Bergmannsgruß.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glückauf” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The wai (Thai: ไหว้, pronounced [wâːj]) is a greeting in Thailand that consists of a slight bow, with the palms pressed together in a prayer-like fashion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wai” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The wai (Thai: ไหว้, pronounced [wâːj]) is a greeting in Thailand that consists of a slight bow, with the palms pressed together in a prayer-like fashion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wai” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The hongi (Māori pronunciation: [ˈhɔŋi]) is a traditional Māori greeting performed by two people pressing their noses together, often including the touching of the foreheads.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hongi” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f13730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "„Petri Heil!“ ist die traditionelle Grußformel der Fischer und Angler.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Petri Heil” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:38.949Z",
+   "target": "f26007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "They are also hung in the front entrance to a shop to signify that the establishment is open for business, and they are always taken down at the end of the business day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Open for business” is on the snapshot of s8"
+  }
+ ]
+}

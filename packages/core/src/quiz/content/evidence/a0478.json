@@ -1,0 +1,289 @@
+{
+ "article": "a0478",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bibliotheca_Alexandrina",
+   "title": "Bibliotheca Alexandrina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:06.933Z",
+   "snapshot": "ea89b632c21562458d1dc25e2695874805f529b7aa4a06c7c31ad0e2a5ddc746"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Petersburg",
+   "title": "Saint Petersburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:08.140Z",
+   "snapshot": "1422bf9f29da91ebc3fa6d6d479dd768f2d724598cb4184fbfd46d07eda5981c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Residence_Act",
+   "title": "Residence Act – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:09.042Z",
+   "snapshot": "bfa74ed72b95fa72401e09ac93035279b096b9d10f3d99830ddcfb4605482ffa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monrovia",
+   "title": "Monrovia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:09.924Z",
+   "snapshot": "f0797255e22aa80c01e93cbb851c074270695dd6df171755108de276c6b5ff94"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Monrovia",
+   "title": "Monrovia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:07.702Z",
+   "snapshot": "9fdade8386aea06f6e33e967086f485adfcf14d43270a38e6628e0edabd68cf6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City",
+   "title": "Ho Chi Minh City – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:11.030Z",
+   "snapshot": "835a689ff4b7ff8a95e9dd124c9c3737f9b9e61173404b39ae07cea5b1a7ee73"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alexandria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saint Petersburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Washington, D.C.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monrovia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Monrovia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-054"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02390",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ho Chi Minh City",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:55.281Z",
+   "target": "f02386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Bibliotheca Alexandrina (Latin, 'Library of Alexandria'; Egyptian Arabic: مكتبة الإسكندريه, romanized: Maktabat al-’Iskandariyya, Egyptian Arabic pronunciation: [mækˈtæb(e)t eskendeˈɾejjæ]) (BA) is a major library and cultural center on the shore of the Mediterranean Sea in Alexandria, Egypt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexandria” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:55.281Z",
+   "target": "f02387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Saint Petersburg, formerly known as Petrograd (Петроград), and later Leningrad (Ленинград), is the second-largest city in Russia, after Moscow, the nation's capital.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saint Petersburg” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:55.281Z",
+   "target": "f02388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Index of Washington, D.C.–related articles",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Washington, D.C.” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:55.281Z",
+   "target": "f02389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monrovia is the capital and largest city of the African country of Liberia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monrovia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:55.281Z",
+   "target": "f02389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Monrovia [mɔnˈroːvi̯a] ist die Hauptstadt des westafrikanischen Staates Liberia.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monrovia” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:55.281Z",
+   "target": "f02390",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ho Chi Minh City (HCMC; Vietnamese: Thành phố Hồ Chí Minh, [tʰaɲ˨˩ fow˦˥ ho˨˩ cɪj˦˥ mɨn˧˧] ), formerly Saigon (Sài Gòn, [ʂaj˨˩ ɣɔŋ˨˩]), is the most populous city and centrally-governed city of Vietnam, with a population of more than 14 million in 2025.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:55.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ho Chi Minh City” is on the snapshot of s6"
+  }
+ ]
+}

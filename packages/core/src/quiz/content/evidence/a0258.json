@@ -1,0 +1,202 @@
+{
+ "article": "a0258",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Boston_Tea_Party",
+   "title": "Boston Tea Party – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:01.720Z",
+   "snapshot": "22b33a40a7ded941bccf115ae01e30e16ca07a9a8b2a75b1027b536b3f4ecb31"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Storming_of_the_Bastille",
+   "title": "Storming of the Bastille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:02.753Z",
+   "snapshot": "1e824bb7d13a10bb6c02d5cf512c117ac35254a6d73dc32a349b719a030f4903"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter",
+   "title": "Battle of Fort Sumter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:05.755Z",
+   "snapshot": "18d42598246625a61d1279ce617a76834e17605f0de968f2364de9b8bd9884ce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Battles_of_Lexington_and_Concord",
+   "title": "Battles of Lexington and Concord – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:06.856Z",
+   "snapshot": "35073283345201cbf790db4fdeb7e28836c2dcd0bffbed003bd91d9934e98673"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Defenestrations_of_Prague",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:13.830Z",
+   "snapshot": "1bfefbda3aa094dc11df5186c88c74f2b2f91bd54692653fc71b4c2ef85cde1a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Boston Tea Party",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "storming of the Bastille",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-049"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "attack on Fort Sumter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Battles of Lexington and Concord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:20.291Z",
+   "target": "f01286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Boston Tea Party was an act of protest that took place on December 16, 1773, during the American Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boston Tea Party” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:20.291Z",
+   "target": "f01288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Storming of the Bastille (French: Prise de la Bastille [pʁiz də la bastij]), also known as Fall of the Bastille, which occurred in Paris, France, on 14 July 1789, was an act of political violence by revolutionary insurgents who attempted to storm and seize control of the medieval armoury,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “storming of the Bastille” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:20.291Z",
+   "target": "f01289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Battle of Fort Sumter (also the Attack on Fort Sumter or the Fall of Fort Sumter) (April 12–13, 1861) was the bombardment of Fort Sumter near Charleston, South Carolina, by the South Carolina militia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “attack on Fort Sumter” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:20.291Z",
+   "target": "f01290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Battles of Lexington and Concord on April 19, 1775, were the first major military actions between the British Army and Patriot militias from British America's Thirteen Colonies during the American Revolutionary War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.291Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Battles of Lexington and Concord” is on the snapshot of s4"
+  }
+ ]
+}

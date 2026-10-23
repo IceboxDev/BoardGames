@@ -1,0 +1,257 @@
+{
+ "source": "publish-or-perish",
+ "bucket": "technology/energy",
+ "operations": [
+  {
+   "op": "add-facts",
+   "articleId": "a1824",
+   "baseHash": "62c813ef551a",
+   "facts": [
+    {
+     "printed": {
+      "card": "pp-047",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "pp-051",
+      "category": 2
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "From Electrode to Transistor: The Vocabulary of Current",
+    "titleDe": "Von der Elektrode zum Transistor: Das Vokabular des Stroms",
+    "bodyEn": "A conductor – a piece of metal or carbon – through which electric current enters or leaves a liquid, a gas, a vacuum or a semiconductor is called an electrode. The word is younger than it sounds. In 1833 and 1834 Michael Faraday, needing terms for his laws of electrolysis, coined electrode (from the Greek hodos, „way“), electrolyte and electrolysis, and asked the Cambridge polymath William Whewell for help, who supplied anode, cathode and ion. Carbon electrodes are older than the name: Humphry Davy's arc lamp, shown to the Royal Society by 1806, burned between two rods of charcoal, the Leclanché cell and its descendant, the zinc–carbon battery, have a carbon rod at their centre, and today's electric-arc furnaces melt scrap steel with graphite electrodes as thick as a tree trunk. Metal electrodes in the form of adhesive pads record the heart's signals in an ECG.\n\nNot every conductor is equally good. Of all metals, silver conducts electricity best, with copper only a few per cent behind it. Because silver is expensive and tarnishes, copper carries the current in household wiring and power cables, while gold, which conducts a little less well but never corrodes, coats the contacts of plugs, connectors and chips where reliability matters most.\n\nEvery cell, battery and electrolytic bath has two electrodes with fixed roles. The anode (Greek anodos, „way up“) is the electrode at which oxidation takes place and electrons leave the cell; the cathode (kathodos, „way down“) is the electrode at which reduction takes place and electrons enter. Whether the anode is the positive or the negative pole depends on whether the cell is producing current or consuming it, which is why chemists define the two by the reaction rather than by the sign. The cathode also gave its name to cathode rays, which J. J. Thomson showed in 1897 to consist of electrons. In a discharging lithium-ion battery the graphite electrode is the anode; while charging, the roles swap.\n\nElectronics kept the vocabulary. The diode, from the Greek di- („two“) and -ode, is a component with just two electrodes that lets current flow in one direction only; the physicist William Eccles coined the word in 1919. John Ambrose Fleming's vacuum diode of 1904 – the „Fleming valve“, a heated cathode and an anode in an evacuated bulb – was the first electronic component and rectified radio signals; the semiconductor diode, a p–n junction in silicon or germanium, replaced it after 1950 and today converts alternating into direct current in every charger, while the light-emitting diode (LED) has replaced the light bulb. The same junction also works in reverse: a solar cell is a large, flat diode in which sunlight knocks electrons loose at the p–n junction and drives a current. Bell Labs demonstrated the first practical silicon solar cell on 25 April 1954, and silicon is still the material of almost all commercial solar cells – crystalline silicon holds about 95 per cent of the market for today's solar panels.\n\nThe transistor added a third electrode. On 16 December 1947 John Bardeen and Walter Brattain at Bell Laboratories in New Jersey built the first transistor, a germanium crystal with two gold contacts that amplified a signal; William Shockley's junction transistor followed in 1948, and all three shared the 1956 Nobel Prize in Physics. A transistor switches or amplifies the current between two of its electrodes according to a small voltage on the third, and because it can be etched at nanometre size, a modern processor packs tens of billions of them onto a single chip. Electrodes, then, run from Faraday's beakers to every computer on earth.",
+    "bodyDe": "Ein Leiter – ein Stück Metall oder Kohle –, durch den elektrischer Strom in eine Flüssigkeit, ein Gas, ein Vakuum oder einen Halbleiter hinein- oder aus ihm herausgeführt wird, heißt Elektrode. Das Wort ist jünger, als es klingt. 1833 und 1834 prägte Michael Faraday, der Begriffe für seine Gesetze der Elektrolyse brauchte, die Wörter Elektrode (vom griechischen hodos, „Weg“), Elektrolyt und Elektrolyse und bat den Cambridger Universalgelehrten William Whewell um Hilfe, der Anode, Kathode und Ion beisteuerte. Kohleelektroden sind älter als der Name: Humphry Davys Bogenlampe, die er bis 1806 der Royal Society vorführte, brannte zwischen zwei Holzkohlestäben, das Leclanché-Element und sein Nachfahre, die Zink-Kohle-Batterie, haben einen Kohlestab in der Mitte, und die heutigen Lichtbogenöfen schmelzen Stahlschrott mit Graphitelektroden, so dick wie ein Baumstamm. Metallelektroden in Form von Klebepads zeichnen beim EKG die Signale des Herzens auf.\n\nNicht jeder Leiter ist gleich gut. Von allen Metallen leitet Silber den Strom am besten, Kupfer liegt nur wenige Prozent dahinter. Weil Silber teuer ist und anläuft, führt Kupfer den Strom in Hausinstallationen und Stromkabeln, während Gold, das etwas schlechter leitet, aber nie korrodiert, die Kontakte von Steckern, Steckverbindern und Chips überzieht, wo es auf Zuverlässigkeit ankommt.\n\nJede Zelle, jede Batterie und jedes Elektrolysebad hat zwei Elektroden mit festen Rollen. Die Anode (griechisch anodos, „Aufweg“) ist die Elektrode, an der die Oxidation stattfindet und die Elektronen die Zelle verlassen; die Kathode (kathodos, „Abweg“) ist die Elektrode, an der die Reduktion stattfindet und Elektronen eintreten. Ob die Anode der Plus- oder der Minuspol ist, hängt davon ab, ob die Zelle Strom liefert oder verbraucht – weshalb Chemiker beide über die Reaktion und nicht über das Vorzeichen definieren. Nach der Kathode sind auch die Kathodenstrahlen benannt, die J. J. Thomson 1897 als Ströme von Elektronen erkannte. In einer sich entladenden Lithium-Ionen-Batterie ist die Graphitelektrode die Anode; beim Laden tauschen die Rollen.\n\nDie Elektronik behielt das Vokabular bei. Die Diode, aus dem griechischen di- („zwei“) und -ode, ist ein Bauelement mit nur zwei Elektroden, das den Strom nur in einer Richtung durchlässt; der Physiker William Eccles prägte das Wort 1919. John Ambrose Flemings Vakuumdiode von 1904 – das „Fleming-Ventil“, eine geheizte Kathode und eine Anode in einem evakuierten Glaskolben – war das erste elektronische Bauelement und richtete Funksignale gleich; die Halbleiterdiode, ein p-n-Übergang in Silizium oder Germanium, verdrängte sie nach 1950 und wandelt heute in jedem Ladegerät Wechsel- in Gleichstrom, während die Leuchtdiode (LED) die Glühbirne abgelöst hat. Derselbe Übergang funktioniert auch umgekehrt: Eine Solarzelle ist eine große, flache Diode, in der Sonnenlicht am p-n-Übergang Elektronen herauslöst und einen Strom antreibt. Die Bell Labs führten am 25. April 1954 die erste praxistaugliche Solarzelle aus Silizium vor, und Silizium ist bis heute das Material fast aller kommerziellen Solarzellen – kristallines Silizium hält rund 95 Prozent des Marktes für heutige Solarmodule.\n\nDer Transistor fügte eine dritte Elektrode hinzu. Am 16. Dezember 1947 bauten John Bardeen und Walter Brattain in den Bell Laboratories in New Jersey den ersten Transistor, einen Germaniumkristall mit zwei Goldkontakten, der ein Signal verstärkte; William Shockleys Flächentransistor folgte 1948, und alle drei teilten sich 1956 den Physik-Nobelpreis. Ein Transistor schaltet oder verstärkt den Strom zwischen zwei seiner Elektroden je nach einer kleinen Spannung an der dritten, und weil er sich in Nanometergröße ätzen lässt, packt ein moderner Prozessor Dutzende Milliarden davon auf einen einzigen Chip. Elektroden reichen also von Faradays Bechergläsern bis zu jedem Computer der Erde.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "pp-028",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Wasserkraftwerk am Paraná an der Grenze zwischen Brasilien und Paraguay stellte 2016 mit 103,1 Terawattstunden einen Weltrekord der Jahresstromerzeugung auf?",
+      "en": "Which hydroelectric plant on the Paraná, on the border between Brazil and Paraguay, set a world record for annual electricity production with 103.1 terawatt-hours in 2016?",
+      "answerDe": "Itaipu",
+      "answerEn": "Itaipu",
+      "timeline": {
+       "kind": "event",
+       "start": "2016",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Itaipu sets the world record for annual hydropower output, 103.1 TWh",
+       "labelDe": "Itaipu stellt mit 103,1 TWh den Weltrekord der jährlichen Wasserkrafterzeugung auf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Itaipu_Dam",
+       "title": "Itaipu Dam – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Talsperre am Jinsha in China ist mit sechzehn Turbinen zu je 1000 Megawatt das nach installierter Leistung zweitgrößte Wasserkraftwerk der Welt?",
+      "en": "Which dam on the Jinsha River in China, with sixteen turbines of 1,000 megawatts each, is the world's second-largest hydroelectric plant by installed capacity?",
+      "answerDe": "Baihetan-Talsperre",
+      "answerEn": "Baihetan Dam",
+      "timeline": {
+       "kind": "event",
+       "start": "2022-12-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "All sixteen 1,000-MW units of the Baihetan Dam are fully operational",
+       "labelDe": "Alle sechzehn 1000-MW-Einheiten der Baihetan-Talsperre sind voll in Betrieb"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Baihetan_Dam",
+       "title": "Baihetan Dam – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Talsperre am Columbia River im Bundesstaat Washington ist nach Nennleistung das größte Kraftwerk der Vereinigten Staaten?",
+      "en": "Which dam on the Columbia River in Washington State is the largest power station in the United States by nameplate capacity?",
+      "answerDe": "Grand-Coulee-Talsperre",
+      "answerEn": "Grand Coulee Dam",
+      "timeline": {
+       "kind": "creation",
+       "start": "1933-07-16",
+       "end": "1943-01-31",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Grand Coulee Dam built, from groundbreaking to official completion",
+       "labelDe": "Bau der Grand-Coulee-Talsperre, vom Baubeginn bis zur offiziellen Fertigstellung"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Grand_Coulee_Dam",
+       "title": "Grand Coulee Dam – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welchen Stausee am Colorado River staut der Hoover Dam an der Grenze zwischen Nevada und Arizona?",
+      "en": "Which reservoir on the Colorado River is held back by the Hoover Dam on the border between Nevada and Arizona?",
+      "answerDe": "Lake Mead",
+      "answerEn": "Lake Mead",
+      "timeline": {
+       "kind": "creation",
+       "start": "1931",
+       "end": "1936",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Hoover Dam is built on the Colorado River, creating Lake Mead",
+       "labelDe": "Der Hoover Dam wird am Colorado River gebaut und staut den Lake Mead"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hoover_Dam",
+       "title": "Hoover Dam – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Concrete Giants: The World's Greatest Hydroelectric Dams",
+    "titleDe": "Riesen aus Beton: Die größten Wasserkraftwerke der Welt",
+    "bodyEn": "The largest power station on Earth, of any kind, is a wall of concrete across the Yangtze. The Three Gorges Dam in Hubei province, China, is about 2.3 kilometres long and 181 metres high; construction began on 14 December 1994, and when the last of its 32 main turbines of 700 megawatts each came online in 2012, its installed capacity – together with two small house generators – reached 22,500 MW. Besides electricity, the dam was built to tame the Yangtze's floods and to let large ships travel upriver to Chongqing; its reservoir drowned towns and archaeological sites and displaced well over a million people.\n\nInstalled capacity, however, is not the same as the electricity actually produced, which depends on how much water flows through the turbines all year. For years the champion by output was Itaipu, on the Paraná River on the border between Brazil and Paraguay. Its 20 units of 700 MW give it 14,000 MW – far less than Three Gorges – but the steady flow of the Paraná let it set a world record for annual production with 103.1 terawatt-hours in 2016. Three Gorges only overtook it in 2020, with 111.8 TWh in a wet year.\n\nChina also holds second place. The Baihetan Dam on the Jinsha River, the upper course of the Yangtze between Sichuan and Yunnan, has sixteen generating units of 1,000 megawatts each – the largest turbines in the world – for a total of 16,000 MW, which makes it the world's second-largest hydroelectric plant by capacity. All its units were fully operational on 20 December 2022. Further down the same river stand Xiluodu and Wudongde, each over 10,000 MW.\n\nIn the United States, the giants were built during the Great Depression. The Grand Coulee Dam on the Columbia River in Washington State, begun on 16 July 1933 and completed on 31 January 1943, is the largest power station in the United States by nameplate capacity, at 6,809 MW; its reservoir is named Franklin Delano Roosevelt Lake after the president who championed the high dam. The more famous Hoover Dam on the Colorado River, on the border between Nevada and Arizona, was built between 1931 and 1936 and dedicated by Roosevelt on 30 September 1935. It holds back Lake Mead, the largest reservoir in the United States by capacity when full, which supplies water to millions of people in Nevada, Arizona and California.\n\nBig hydropower remains controversial: it produces electricity without burning fuel, but it floods valleys, blocks fish migration and traps the sediment that rivers would carry to their deltas.",
+    "bodyDe": "Das größte Kraftwerk der Erde, gleich welcher Art, ist eine Betonmauer quer über den Jangtsekiang. Der Drei-Schluchten-Damm in der chinesischen Provinz Hubei ist rund 2,3 Kilometer lang und 181 Meter hoch; der Bau begann am 14. Dezember 1994, und als 2012 die letzte seiner 32 Hauptturbinen mit je 700 Megawatt ans Netz ging, erreichte seine installierte Leistung – zusammen mit zwei kleinen Eigenbedarfsgeneratoren – 22.500 MW. Neben der Stromerzeugung sollte der Damm die Hochwasser des Jangtse bändigen und großen Schiffen die Fahrt flussaufwärts bis Chongqing ermöglichen; sein Stausee überflutete Städte und archäologische Stätten und vertrieb weit über eine Million Menschen.\n\nInstallierte Leistung ist allerdings nicht dasselbe wie der tatsächlich erzeugte Strom, der davon abhängt, wie viel Wasser übers Jahr durch die Turbinen fließt. Jahrelang war hier Itaipu der Spitzenreiter, am Paraná an der Grenze zwischen Brasilien und Paraguay. Seine 20 Maschinensätze zu je 700 MW ergeben 14.000 MW – weit weniger als die Drei Schluchten –, doch der gleichmäßige Abfluss des Paraná erlaubte 2016 einen Weltrekord der Jahreserzeugung mit 103,1 Terawattstunden. Erst 2020, in einem wasserreichen Jahr, überholte ihn der Drei-Schluchten-Damm mit 111,8 TWh.\n\nAuch den zweiten Platz hält China. Die Baihetan-Talsperre am Jinsha, dem Oberlauf des Jangtse zwischen Sichuan und Yunnan, besitzt sechzehn Maschinensätze mit je 1000 Megawatt – die größten Turbinen der Welt – und damit insgesamt 16.000 MW, was sie zum nach Leistung zweitgrößten Wasserkraftwerk der Welt macht. Seit dem 20. Dezember 2022 sind alle Einheiten voll in Betrieb. Weiter flussabwärts am selben Strom stehen Xiluodu und Wudongde mit jeweils über 10.000 MW.\n\nIn den Vereinigten Staaten entstanden die Riesen während der Weltwirtschaftskrise. Die Grand-Coulee-Talsperre am Columbia River im Bundesstaat Washington, begonnen am 16. Juli 1933 und vollendet am 31. Januar 1943, ist mit 6809 MW nach Nennleistung das größte Kraftwerk der USA; ihr Stausee heißt Franklin Delano Roosevelt Lake, nach dem Präsidenten, der sich für den hohen Damm einsetzte. Der berühmtere Hoover Dam am Colorado River an der Grenze zwischen Nevada und Arizona wurde von 1931 bis 1936 gebaut und am 30. September 1935 von Roosevelt eingeweiht. Er staut den Lake Mead, gefüllt der nach Volumen größte Stausee der USA, der Millionen Menschen in Nevada, Arizona und Kalifornien mit Wasser versorgt.\n\nGroße Wasserkraft bleibt umstritten: Sie erzeugt Strom, ohne Brennstoff zu verbrennen, doch sie überflutet Täler, versperrt Fischen die Wanderwege und hält die Sedimente zurück, die Flüsse sonst bis in ihre Deltas tragen würden.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "pp-031",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem Gasfeld nahe Urtabulak verschloss fast zwei Jahre nach dem ersten Versuch eine nukleare Explosion von 47 Kilotonnen eine weitere undichte Bohrung?",
+      "en": "At which gas field near Urtabulak did a 47-kiloton nuclear explosion seal another leaking well almost two years after the first attempt?",
+      "answerDe": "Pamuk",
+      "answerEn": "Pamuk",
+      "timeline": {
+       "kind": "event",
+       "start": "1968",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "A 47-kiloton nuclear blast seals a leaking well at the Pamuk gas field in Uzbekistan",
+       "labelDe": "Eine nukleare Explosion von 47 Kilotonnen verschließt eine undichte Bohrung im usbekischen Gasfeld Pamuk"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Urtabulak_gas_field",
+       "title": "Urtabulak gas field – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß das amerikanische Programm, das von 1957 bis 1977 den Einsatz von Kernsprengungen für friedliche Bau- und Gasförderzwecke erprobte?",
+      "en": "What was the name of the US programme that from 1957 to 1977 tested nuclear explosions for peaceful construction and gas-production purposes?",
+      "answerDe": "Operation Plowshare",
+      "answerEn": "Operation Plowshare",
+      "timeline": {
+       "kind": "period",
+       "start": "1957",
+       "end": "1977",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Operation Plowshare, the US programme of peaceful nuclear explosions",
+       "labelDe": "Operation Plowshare, das US-Programm friedlicher Kernsprengungen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Operation_Plowshare",
+       "title": "Operation Plowshare – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher texanische Ölquellen-Feuerwehrmann half 1988 beim Löschen der Plattform Piper Alpha und 1991 bei den kuwaitischen Ölquellenbränden und inspirierte den John-Wayne-Film „Hellfighters“?",
+      "en": "Which Texan oil-well firefighter helped put out the Piper Alpha platform fire in 1988 and the Kuwaiti oil-well fires in 1991, and inspired the John Wayne film 'Hellfighters'?",
+      "answerDe": "Red Adair",
+      "answerEn": "Red Adair",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1915-06-18",
+       "end": "2004-08-07",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of the oil-well firefighter Paul Neal 'Red' Adair",
+       "labelDe": "Leben des Ölquellen-Feuerwehrmanns Paul Neal „Red“ Adair"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Red_Adair",
+       "title": "Red Adair – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem Land brennt in der Karakum-Wüste der Gaskrater von Darvaza, genannt das „Tor zur Hölle“?",
+      "en": "In which country does the Darvaza gas crater, nicknamed the 'Door to Hell', burn in the Karakum Desert?",
+      "answerDe": "Turkmenistan",
+      "answerEn": "Turkmenistan",
+      "timeline": {
+       "kind": "event",
+       "start": "1971",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The Darvaza gas crater, the 'Door to Hell', starts burning",
+       "labelDe": "Der Gaskrater von Darvaza, das „Tor zur Hölle“, beginnt zu brennen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Darvaza_gas_crater",
+       "title": "Darvaza gas crater – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Fighting Fire with the Atom: Gas Wells That Would Not Stop Burning",
+    "titleDe": "Feuer mit dem Atom bekämpfen: Gasquellen, die nicht aufhören wollten zu brennen",
+    "bodyEn": "On 1 December 1963 drillers at well No. 11 of the Urtabulak gas field in southern Uzbekistan, near the border with Turkmenistan, lost control of their bore at a depth of about 2,450 metres. Gas under enormous pressure, laced with hydrogen sulphide, burst out and caught fire. For almost three years – 1,064 days – a column of flame roared out of the desert, burning some 12 million cubic metres of gas a day, enough to supply a large city. Every conventional method of capping it failed.\n\nIn 1966, with the approval of Leonid Brezhnev, Soviet engineers tried something no one had attempted before. They drilled an inclined borehole that approached the burning well at a depth of about 1,500 metres and lowered into it a 30-kiloton nuclear device, built by the weapons laboratory at Sarov – twice the yield of the Hiroshima bomb. On 30 September 1966 it was detonated. The blast shifted the surrounding rock and squeezed the bore shut: it collapsed and sealed the well, and roughly twenty seconds later the flame went out. The method worked again almost two years later at the nearby Pamuk gas field, where a 47-kiloton explosion sealed another leaking well.\n\nThese blasts belonged to the Soviet programme of \"Nuclear Explosions for the National Economy\", which between 1965 and 1989 used well over a hundred nuclear charges to dig reservoirs and canals, to seismically probe the Earth's crust and to stimulate oil and gas fields; five of them were used to extinguish burning gas fountains. Its American counterpart was Operation Plowshare, organised in 1957 as part of \"Atoms for Peace\" and named after the biblical swords beaten into ploughshares. Until it was ended in 1977, largely because of public opposition, Plowshare detonated 35 warheads in 27 tests – the Sedan shot of 1962 in Nevada blasted a crater 390 metres wide, and Gasbuggy in New Mexico in 1967 tried to free natural gas from tight rock.\n\nMost well fires, though, are fought with water, dynamite and nerve. The most famous of the specialists was the Texan Paul Neal \"Red\" Adair, whose company fought hundreds of blowouts around the world. He helped put out the fire on the Piper Alpha platform in the North Sea in 1988 and, at the age of 75, the Kuwaiti oil-well fires set by retreating Iraqi troops in 1991; the John Wayne film \"Hellfighters\" of 1968 was loosely based on his exploits. Red Adair died in his home town of Houston in 2004, at the age of 89.\n\nSome fires are never put out at all. In the Karakum Desert of Turkmenistan, the Darvaza gas crater – nicknamed the \"Door to Hell\" – has been burning since about 1971, when, according to the usual account, geologists set light to a gas-filled collapse to stop it releasing methane. The crater is some 60 to 70 metres wide; in 2022 the country's president called for the fire to be extinguished, but it still burns.",
+    "bodyDe": "Am 1. Dezember 1963 verloren Bohrleute an der Bohrung Nr. 11 des Gasfelds Urtabulak im Süden Usbekistans, nahe der Grenze zu Turkmenistan, in rund 2450 Metern Tiefe die Kontrolle über ihr Bohrloch. Gas unter gewaltigem Druck, mit Schwefelwasserstoff versetzt, schoss heraus und entzündete sich. Fast drei Jahre lang – 1064 Tage – fauchte eine Flammensäule aus der Wüste und verbrannte täglich etwa 12 Millionen Kubikmeter Gas, genug für eine Großstadt. Alle herkömmlichen Methoden, sie zu ersticken, scheiterten.\n\n1966 versuchten sowjetische Ingenieure mit Zustimmung Leonid Breschnews etwas, das noch niemand gewagt hatte. Sie bohrten ein schräges Loch, das sich der brennenden Bohrung in etwa 1500 Metern Tiefe näherte, und senkten darin einen nuklearen Sprengsatz von 30 Kilotonnen ab, gebaut im Waffenlabor von Sarow – doppelt so stark wie die Hiroshima-Bombe. Am 30. September 1966 wurde er gezündet. Die Explosion verschob das umgebende Gestein und quetschte die Bohrung zu: Sie brachte das Bohrloch zum Einsturz und verschloss es, und rund zwanzig Sekunden später erlosch die Flamme. Fast zwei Jahre später gelang dasselbe im nahen Gasfeld Pamuk, wo eine Explosion von 47 Kilotonnen eine weitere undichte Bohrung verschloss.\n\nDiese Sprengungen gehörten zum sowjetischen Programm der „Kernexplosionen für die Volkswirtschaft“, das zwischen 1965 und 1989 weit über hundert nukleare Ladungen einsetzte, um Stauseen und Kanäle auszuheben, die Erdkruste seismisch zu durchleuchten und Öl- und Gasfelder zu stimulieren; fünf davon dienten dazu, brennende Gasfontänen zu löschen. Das amerikanische Gegenstück war die Operation Plowshare („Pflugschar“), 1957 im Rahmen von „Atoms for Peace“ ins Leben gerufen und nach den biblischen Schwertern benannt, die zu Pflugscharen geschmiedet werden. Bis zu ihrem Ende 1977, vor allem wegen öffentlichen Widerstands, zündete Plowshare 35 Sprengköpfe in 27 Versuchen – der Sedan-Test von 1962 in Nevada riss einen Krater von 390 Metern Breite, und Gasbuggy in New Mexico versuchte 1967, Erdgas aus dichtem Gestein freizusetzen.\n\nDie meisten Bohrlochbrände werden jedoch mit Wasser, Dynamit und Nerven bekämpft. Der berühmteste dieser Spezialisten war der Texaner Paul Neal „Red“ Adair, dessen Firma Hunderte von Blowouts in aller Welt bekämpfte. Er half 1988, den Brand auf der Plattform Piper Alpha in der Nordsee zu löschen, und mit 75 Jahren 1991 die kuwaitischen Ölquellenbrände, die abziehende irakische Truppen gelegt hatten; der John-Wayne-Film „Die Unerschrockenen“ („Hellfighters“) von 1968 beruht lose auf seinen Taten. Red Adair starb 2004 mit 89 Jahren in seiner Heimatstadt Houston.\n\nManche Feuer werden nie gelöscht. In der Karakum-Wüste in Turkmenistan brennt der Gaskrater von Darvaza – genannt das „Tor zur Hölle“ – seit etwa 1971, als Geologen nach der üblichen Darstellung einen gasgefüllten Einsturztrichter anzündeten, damit kein Methan mehr austrat. Der Krater ist etwa 60 bis 70 Meter breit; 2022 forderte der Präsident des Landes, das Feuer zu löschen, doch es brennt noch immer.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

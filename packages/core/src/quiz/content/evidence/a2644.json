@@ -1,0 +1,544 @@
+{
+ "article": "a2644",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Topsy_(elephant)",
+   "title": "Topsy (elephant)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:10:45.186Z",
+   "snapshot": "fcc0a3d415c5b6749e27740773b4b0eba3c29ecf23c25cc3d407a95c2d1b8596"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/War_of_the_currents",
+   "title": "War of the currents – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:02.287Z",
+   "snapshot": "3c15218b7bebd8a294be0855943efea1609cdccc6a40f5b37489ed2003fae4fc"
+  },
+  "s3": {
+   "url": "https://edison.rutgers.edu/life-of-edison/essaying-edison/essay/myth-buster-topsy-the-elephant",
+   "title": "Myth Buster – Topsy the Elephant",
+   "publisher": "Thomas A. Edison Papers, Rutgers University",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:07.372Z",
+   "snapshot": "8f33885574389abe3464e161e89febfbf32e9fc8b3822750bc63221744134197"
+  },
+  "s4": {
+   "url": "https://www.wired.com/2008/01/dayintech-0104/",
+   "title": "Jan. 4, 1903: Edison Fries an Elephant to Prove His Point",
+   "publisher": "WIRED",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:06.665Z",
+   "snapshot": "7818a1a207c63e39573d2ef99fadbb5222a9289d68484f54f79d10847a8878ad"
+  },
+  "s5": {
+   "url": "http://www.correctionhistory.org/auburn&osborne/miskell/html/auburnchair_moran.html",
+   "title": "The Strange Origin of the Electric Chair (Boston Sunday Globe, 5 Aug 1990)",
+   "publisher": "New York Correction History Society",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:07.417Z",
+   "snapshot": "14937d771b288c9ea9c503ad183ed4a11da4656abb33ce3bcc2516e5582c07a5"
+  },
+  "s6": {
+   "url": "https://web.archive.org/web/20191205003049/https://www.washingtonpost.com/news/retropolis/wp/2017/04/26/thomas-edison-the-electric-chair-and-a-botched-execution-a-death-penalty-primer/",
+   "title": "‘Great God, he is alive!’ The first man executed by electric chair",
+   "publisher": "The Washington Post",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:08.521Z",
+   "snapshot": "8d5db28b5a74270a3ba846d9cfe874604738ed6b12a88c0a3062e3c82a135a51"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thomas Edison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-326"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Topsy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Westinghouse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nikola Tesla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "General Electric",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "William Kemmler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:50.672Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In popular culture, Thompson and Dundy's killing of Topsy has switched attribution, with false claims that it was an anti-alternating current demonstration organized by Thomas Edison during the war of the currents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Edison” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:50.672Z",
+   "target": "f14308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Born in Southeast Asia around 1875, Topsy was secretly brought into the United States soon thereafter and added to the herd of performing elephants at the Forepaugh Circus, who fraudulently advertised her as the first elephant born in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Topsy” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:50.672Z",
+   "target": "f14309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1886, the Edison system was faced with new competition: an alternating current system initially introduced by George Westinghouse's company that used transformers to step down from a high voltage so AC could be used for indoor lighting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Westinghouse” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:50.672Z",
+   "target": "f14310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In July 1888 Westinghouse paid a substantial amount to license Nikola Tesla's US patents for a poly-phase AC induction motor and obtained a patent option on Galileo Ferraris' induction motor design.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nikola Tesla” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:50.672Z",
+   "target": "f14311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mergers reduced competition between companies, including the merger of Edison Electric with their largest competitor, Thomson-Houston, forming General Electric in 1892.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “General Electric” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:50.672Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In May 1889 when New York had its first criminal sentenced to be executed in the electric chair, a street merchant named William Kemmler, there was a great deal of discussion in the editorial column of the New York Times as to what to call the then-new form of execution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:50.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Kemmler” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:48:44Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "But was Edison to blame? Did he have anything to do with the execution of Topsy? The answer is an emphatic “no.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:48:46Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Did Edison really electrocute Topsy the Elephant?",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:48:48Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Captured on film by Thomas Edison, the event was one of a string of animal electrocutions Edison staged to discredit a new form of electricity: alternating current.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23",
+   "note": "an example of the popular (wrong) attribution the question asks about; supports the answer 'Thomas Edison' as the inventor wrongly blamed"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:48:50Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On May 13,1889, the day after the Westinghouse generators arrived at Auburn prison, William Kemmler, \"a brute who chopped a woman to bits with an axe\" was sentenced to death by electrocution.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:48:52Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first victim: William Kemmler, a drunk who killed his common-law wife with a hatchet.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r082",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Did Edison really electrocute Topsy the Elephant?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Captured on film by Thomas Edison, the event was one of a string of animal electrocutions Edison staged to discredit a new form of electricity: alternating current.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On May 13,1889, the day after the Westinghouse generators arrived at Auburn prison, William Kemmler, \"a brute who chopped a woman to bits with an axe\" was sentenced to death by electrocution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first victim: William Kemmler, a drunk who killed his common-law wife with a hatchet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Was Thomas Edison anti-Semitic",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Thomas Edison” is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Captured on film by Thomas Edison, the event was one of a string of animal electrocutions Edison staged to discredit a new form of electricity: alternating current.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Thomas Edison” is on the snapshot of s4"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "One hundred years ago tomorrow, William Kemmler became the first person electrocuted in America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “William Kemmler” is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:36.105Z",
+   "target": "f14312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An electric chair used in 1908 at Auburn Prison in New York, where William Kemmler was executed by electrocution in 1890.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:36.105Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “William Kemmler” is on the snapshot of s6"
+  }
+ ]
+}

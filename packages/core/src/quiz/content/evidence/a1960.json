@@ -1,0 +1,234 @@
+{
+ "article": "a1960",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/4_Blocks",
+   "title": "4 Blocks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:11.696Z",
+   "snapshot": "a142019c4f6adeb42967ad0e639155014e2d3e9bd9557aa2e0c50f319ce59755"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Binge_Watching",
+   "title": "Binge Watching",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:09.179Z",
+   "snapshot": "fc1c8db5c50c16ef8dbd3a31f01added4de8d45cc65fb86473000092f5b4b472"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Deutschland_83",
+   "title": "Deutschland 83 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:20.283Z",
+   "snapshot": "acbd55117fcd7e8ddc6fb45673dc7708476396b538be9a3d6a3b79c8ec472d40"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/How_to_Sell_Drugs_Online_(Fast)",
+   "title": "How to Sell Drugs Online (Fast) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:10.077Z",
+   "snapshot": "49dfaaeb5558f74c11020937be0fedb02f1de283498b67fc713d963b46890de4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09796",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "4 Blocks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Komaglotzen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; history entry seq 14; transcript tp-020"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f21360",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kida Khodr Ramadan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jonas Nay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shiny Flakes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:54.471Z",
+   "target": "f09796",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "4 Blocks is a German drama series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4 Blocks” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:54.471Z",
+   "target": "f11707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "„binge“ = „Gelage“), auch Komaglotzen oder Serienmarathon genannt, versteht man das Schauen von mehreren Folgen einer Fernsehserie am Stück.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Komaglotzen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:54.471Z",
+   "target": "f21360",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It stars Kida Khodr Ramadan as Ali \"Toni\" Hamadi, the leader of a drug cartel in Berlin-Neukölln which has strong connections with the Arab crime families including his clan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kida Khodr Ramadan” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:54.471Z",
+   "target": "f21361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Deutschland 83 is a 2015 German spy thriller television series starring Jonas Nay as a 24-year-old native of East Germany who is sent to West Germany in 1983 as an undercover spy for the HVA, the foreign intelligence agency of the Stasi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jonas Nay” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:54.471Z",
+   "target": "f21362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sie basiert lose auf der Geschichte des damals 18-jährigen Maximilian Schmidt, der Ende 2013 bis 2015 von seinem Jugendzimmer in Leipzig-Gohlis heraus unter dem Decknamen „Shiny Flakes“ einen Online-Drogenhandel startete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.471Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shiny Flakes” is on the snapshot of s4"
+  }
+ ]
+}

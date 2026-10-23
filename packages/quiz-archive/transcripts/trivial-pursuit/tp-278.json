@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-278",
+ "image": "IMG20261007175620.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welcher Großstadt fuhr die erste U-Bahn der Welt?",
+   "de": "In welcher Großstadt fuhr die erste U-Bahn der Welt?",
+   "en": "In which major city did the world's first underground railway run?",
+   "reworked": false,
+   "answerDe": "London",
+   "answerEn": "London",
+   "timeline": {
+    "kind": "founding",
+    "start": "1863-01-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Metropolitan Railway, the world's first underground railway, opens to the public in London",
+    "labelDe": "Die Metropolitan Railway in London, die erste U-Bahn der Welt, wird für Fahrgäste eröffnet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Metropolitan_Railway",
+    "title": "Metropolitan Railway",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "technology",
+   "sub": "transport"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wem gehörte der 1964er Chevrolet Chevelle Malibu, den Vincent Vega im Film Pulp Fiction fährt?",
+   "de": "Wem gehörte der 1964er Chevrolet Chevelle Malibu, den Vincent Vega im Film Pulp Fiction fährt?",
+   "en": "Who owned the 1964 Chevrolet Chevelle Malibu that Vincent Vega drives in the film Pulp Fiction?",
+   "reworked": false,
+   "answerDe": "Quentin Tarantino",
+   "answerEn": "Quentin Tarantino",
+   "timeline": {
+    "kind": "event",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Quentin Tarantino's 1964 Chevelle Malibu from Pulp Fiction is reported stolen",
+    "labelDe": "Quentin Tarantinos 1964er Chevelle Malibu aus Pulp Fiction wird als gestohlen gemeldet"
+   },
+   "source": {
+    "url": "https://www.foxnews.com/auto/stolen-pulp-fiction-car-found-19-years-later.print",
+    "title": "Stolen 'Pulp Fiction' car found 19 years later",
+    "lang": "en"
+   },
+   "notes": "The car was the director's own; stolen in 1994, it was recovered in 2013 in the Oakland area with a cloned VIN. Within the story the car is Vincent's own; the question means the real-life owner.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Gorch Fock, der Namensgeber des Segelschulschiffs der Deutschen Marine, hat als Seefahrer Madagaskar entdeckt. Richtig oder falsch?",
+   "de": "Was war Gorch Fock, der Namensgeber des Segelschulschiffs der Deutschen Marine, von Beruf?",
+   "en": "What was the profession of Gorch Fock, after whom the German Navy's sail training ship is named?",
+   "reworked": true,
+   "answerDe": "Schriftsteller",
+   "answerEn": "writer",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1880-08-22",
+    "end": "1916-05-31",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gorch Fock (Johann Kinau), Low German writer, killed at the Battle of Jutland",
+    "labelDe": "Gorch Fock (Johann Kinau), niederdeutscher Schriftsteller, gefallen in der Skagerrakschlacht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gorch_Fock_(Schriftsteller)",
+    "title": "Gorch Fock (Schriftsteller)",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: Gorch Fock was the pen name of the writer Johann Wilhelm Kinau, not a seafarer who discovered Madagascar.",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welche Nationalität hatte Bram Stoker, der Autor von Dracula: die schweizerische, irische oder englische?",
+   "de": "Welche Nationalität hatte Bram Stoker, der Autor von Dracula?",
+   "en": "What nationality was Bram Stoker, the author of Dracula?",
+   "reworked": true,
+   "answerDe": "irisch",
+   "answerEn": "Irish",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1847-11-08",
+    "end": "1912-04-20",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bram Stoker, Irish author of Dracula (1847–1912)",
+    "labelDe": "Bram Stoker, irischer Autor von Dracula (1847–1912)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bram_Stoker",
+    "title": "Bram Stoker",
+    "lang": "en"
+   },
+   "notes": "Born in Clontarf, Dublin; died in London.",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 5,
+   "cardDe": "Es ist nicht möglich, auf dem Mount Everest ein hartgekochtes Ei zuzubereiten. Richtig oder falsch?",
+   "de": "Bei welcher Temperatur siedet Wasser ungefähr auf dem Gipfel des Mount Everest?",
+   "en": "At roughly what temperature does water boil on the summit of Mount Everest?",
+   "reworked": true,
+   "answerDe": "etwa 71 °C",
+   "answerEn": "about 71 °C",
+   "timeline": {
+    "kind": "event",
+    "start": "1953-05-29",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Edmund Hillary and Tenzing Norgay make the first documented ascent of Mount Everest",
+    "labelDe": "Edmund Hillary und Tenzing Norgay gelingt die erste dokumentierte Besteigung des Mount Everest"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Boiling_point",
+    "title": "Boiling point",
+    "lang": "en"
+   },
+   "notes": "The card's true/false premise hinges on the low boiling point; reworked to the measurable fact. Accept about 70 °C.",
+   "domain": "science",
+   "sub": "physics"
+  },
+  {
+   "category": 6,
+   "cardDe": "Lauda Air war die erste Fluggesellschaft von Ex-Formel-1-Fahrer Niki Lauda, doch wie hieß die zweite: Niki Airways, Niki Luftfahrt oder Niki Aviation?",
+   "de": "Lauda Air war die erste Fluggesellschaft von Ex-Formel-1-Fahrer Niki Lauda, doch wie hieß die zweite?",
+   "en": "Lauda Air was the first airline of former Formula One driver Niki Lauda, but what was the second one called?",
+   "reworked": true,
+   "answerDe": "Niki Luftfahrt",
+   "answerEn": "Niki Luftfahrt",
+   "timeline": {
+    "kind": "founding",
+    "start": "2003-11-28",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Niki Lauda's airline NIKI (NIKI Luftfahrt GmbH) starts scheduled flights",
+    "labelDe": "Niki Laudas Fluggesellschaft NIKI (NIKI Luftfahrt GmbH) nimmt den Linienbetrieb auf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Niki_(airline)",
+    "title": "Niki (airline)",
+    "lang": "en"
+   },
+   "notes": "The company was NIKI Luftfahrt GmbH, flying under the brand \"Niki\"; accept \"Niki\". Lauda later also founded Lauda Motion (Laudamotion).",
+   "domain": "technology",
+   "sub": "transport"
+  }
+ ]
+}

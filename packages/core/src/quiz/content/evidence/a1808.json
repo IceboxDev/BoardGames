@@ -1,0 +1,242 @@
+{
+ "article": "a1808",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Septuagint",
+   "title": "Septuagint – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:37.930Z",
+   "snapshot": "aa121c56e73a2e5467dd5defbae5979f7d796b01b3e500e3704d95953b901375"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Parinirvana",
+   "title": "Parinirvana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:54.417Z",
+   "snapshot": "d953485e549a6a986d5eb43c6ef30591d2d8559b71995de0a2ac53b875db7b3f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Muhammad",
+   "title": "Muhammad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:41.513Z",
+   "snapshot": "e44aa1ccb2730b792b0052056d376285b139f7bfa0df7afb6f995e9c5968d28e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Genesis",
+   "title": "Book of Genesis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:55.564Z",
+   "snapshot": "077b8526f8f6e21d498a3b466efcdc3621a80d6971587bf11ee17d5630f989c5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Daniel",
+   "title": "Book of Daniel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:56.589Z",
+   "snapshot": "3d68e3eeaf69d108194633e247301dc9f1d253c1604d49fe048ee3d4bf8a17e5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Christ",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Buddha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Muhammad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abraham",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Michael",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:25.622Z",
+   "target": "f09036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the early Christian Church, the presumption that the LXX was translated by Jews before the time of Christ and that it lends itself more to a Christological interpretation than 2nd-century Hebrew texts in certain places was taken as evidence that \"Jews\" had changed the Hebrew text in a way that",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christ” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:25.622Z",
+   "target": "f09037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Buddhist art, the event is represented by a reclining Buddha figure, often surrounded by disciples.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buddha” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:25.622Z",
+   "target": "f09038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "According to the traditional account, Muhammad was born in Mecca to the aristocratic Banu Hashim clan of the Quraysh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Muhammad” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:25.622Z",
+   "target": "f09039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At God's command, Noah's descendant Abraham journeys from his birthplace (described as Ur of the Chaldeans and whose identification with Sumerian Ur is tentative in modern scholarship) into God-given land of Canaan, where he dwells as a sojourner, as does his son Isaac and his grandson Jacob.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:25.622Z",
+   "target": "f09040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "sees in his vision an angel (called \"a man\", but clearly a supernatural being) who explains that he is in the midst of a war with the \"prince of Persia\", assisted only by Michael, \"your prince.\" The \"prince of Greece\" will shortly come, but first he will reveal what will happen to Daniel's people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.622Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael” is on the snapshot of s5"
+  }
+ ]
+}

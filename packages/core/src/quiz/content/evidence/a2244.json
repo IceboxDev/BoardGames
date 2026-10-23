@@ -1,0 +1,242 @@
+{
+ "article": "a2244",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Taffe_M%C3%A4dels",
+   "title": "Taffe Mädels",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:18.045Z",
+   "snapshot": "15fecf68c5b60cf2b0a0b74c0e99e0fb9e8d6c3e9b64b6f39a6915c0b566e7af"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dumm_und_D%C3%BCmmehr",
+   "title": "Dumm und Dümmehr",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:19.069Z",
+   "snapshot": "49c9d63044c3d62bf87b5cc596f52863701a207055e82b4b3c44523d84f2a384"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rush_Hour_(1998_film)",
+   "title": "Rush Hour (1998 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:18.861Z",
+   "snapshot": "6cc6da7ac44424f9683a2e03f1410c1667696bd04aaa907be6c98fc480b1205b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bad_Boys_(1995_film)",
+   "title": "Bad Boys (1995 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:19.788Z",
+   "snapshot": "c1d750f7858564d06d13d2901327f98f80b9b2d3948ed824986e4d358bc49d6d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/21_Jump_Street_(film)",
+   "title": "21 Jump Street (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:28.283Z",
+   "snapshot": "12263596a8e2498e98fa1c9f9c46639d8e16c9e6cc07039b1d21c9942090dd51"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Taffe Mädels",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-225"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dumm und Dümmehr",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-245"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rush Hour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bad Boys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "21 Jump Street",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:42.792Z",
+   "target": "f11497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Taffe Mädels (Originaltitel: The Heat) ist eine US-amerikanische Filmkomödie aus dem Jahr 2013 von Regisseur Paul Feig, die am 4.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taffe Mädels” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:42.792Z",
+   "target": "f11498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dumm und Dümmehr (Originaltitel: Dumb and Dumber To) ist eine US-amerikanische Filmkomödie von Peter und Bobby Farrelly.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dumm und Dümmehr” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:42.792Z",
+   "target": "f11499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rush Hour is a 1998 American buddy cop action comedy film directed by Brett Ratner from a screenplay by Jim Kouf and Ross LaManna and a story by LaManna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rush Hour” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:42.792Z",
+   "target": "f11500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bad Boys is a 1995 American action comedy film directed by Michael Bay (in his feature directorial debut) and produced by Don Simpson and Jerry Bruckheimer, from a screenplay written by Doug Richardson and the writing team of Michael Barrie and Jim Mulholland, and a story conceived by George Gallo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bad Boys” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:42.792Z",
+   "target": "f11501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "21 Jump Street is a 2012 American buddy cop action comedy film directed by Phil Lord and Christopher Miller in their live-action directorial debuts and written by Michael Bacall, based on a story by Bacall and Jonah Hill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.792Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “21 Jump Street” is on the snapshot of s5"
+  }
+ ]
+}

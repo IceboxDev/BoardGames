@@ -1,0 +1,242 @@
+{
+ "article": "a0897",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Down_syndrome",
+   "title": "Down syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:35.474Z",
+   "snapshot": "6ca89964c77a1e457ec6be1f4630a3eec0017ff4e3e35d8cbaa67ce187feefee"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Turner_syndrome",
+   "title": "Turner syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:36.342Z",
+   "snapshot": "ea8480aaa1f7fcc6ea8e092bae9605fe9c768f6b2fe6995ddb81df141d79972b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Polyploidy",
+   "title": "Polyploidy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:37.358Z",
+   "snapshot": "f034d2a8f82385c2e987049dde15968494caba4049dc554ab2c620ba81454f11"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nondisjunction",
+   "title": "Nondisjunction – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:38.248Z",
+   "snapshot": "8ec6760dd182f6af942956c6f0b2c52f9c1936fb45b5a04e60099a6456bd6eeb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Janet_Rowley",
+   "title": "Janet Rowley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:39.246Z",
+   "snapshot": "db5d887c3b914f45143c7519d1f9ba4a74c90fce4a460205c6c5f47daa8ed74d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "trisomy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "monosomy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "polyploidy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "nondisjunction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "translocation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:01.741Z",
+   "target": "f04481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Down syndrome or Down's syndrome, also known as trisomy 21, is a genetic disorder caused by the presence of all or part of a third copy of chromosome 21.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “trisomy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:01.741Z",
+   "target": "f04482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a chromosomal disorder in which cells of females have only one X chromosome instead of two, or are partially missing an X chromosome (sex chromosome monosomy) leading to the complete or partial deletion of the (PAR1, PAR2) in the affected X chromosome (these are called pseudoautosomal regions).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monosomy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:01.741Z",
+   "target": "f04483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Polyploidy is a condition in which the cells of an organism have more than two paired sets of (homologous) chromosomes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “polyploidy” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:01.741Z",
+   "target": "f04484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nondisjunction is the failure of homologous chromosomes or sister chromatids to separate properly during cell division (mitosis/meiosis).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nondisjunction” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:01.741Z",
+   "target": "f04485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Janet Davison Rowley (April 5, 1925 – December 17, 2013) was an American human geneticist and the first scientist to identify a chromosomal translocation as the cause of leukemia and other cancers, thus proving that cancer is a genetic disease.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:01.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “translocation” is on the snapshot of s5"
+  }
+ ]
+}

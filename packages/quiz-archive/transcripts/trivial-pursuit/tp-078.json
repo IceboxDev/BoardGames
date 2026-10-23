@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-078",
+ "image": "IMG20261007174952.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißen in der römischen Mythologie die Zwillingsbrüder, die Rom gegründet haben?",
+   "de": "Wie heißen in der römischen Mythologie die Zwillingsbrüder, die Rom gegründet haben?",
+   "en": "In Roman mythology, what are the names of the twin brothers who founded Rome?",
+   "reworked": false,
+   "answerDe": "Romulus und Remus",
+   "answerEn": "Romulus and Remus",
+   "timeline": {
+    "kind": "founding",
+    "start": "-753",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Legendary founding of Rome by Romulus and Remus",
+    "labelDe": "Sagenhafte Gründung Roms durch Romulus und Remus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Romulus_und_Remus",
+    "title": "Romulus und Remus",
+    "lang": "de"
+   },
+   "notes": "753 BC is the traditional, legendary date.",
+   "domain": "belief",
+   "sub": "mythology"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welche kleinen Zeichentrickfiguren sind laut ihrem Schöpfer, dem belgischen Zeichner Peyo, nur so groß wie drei Äpfel?",
+   "de": "Welche kleinen Zeichentrickfiguren sind laut ihrem Schöpfer, dem belgischen Zeichner Peyo, nur so groß wie drei Äpfel?",
+   "en": "Which little cartoon characters are, according to their creator, the Belgian artist Peyo, only as tall as three apples?",
+   "reworked": false,
+   "answerDe": "Die Schlümpfe",
+   "answerEn": "The Smurfs",
+   "timeline": {
+    "kind": "creation",
+    "start": "1958",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Peyo creates the Smurfs as side characters in the comic series Johan et Pirlouit",
+    "labelDe": "Peyo erschafft die Schlümpfe als Nebenfiguren der Comicserie Johan et Pirlouit"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Die_Schl%C3%BCmpfe",
+    "title": "Die Schlümpfe",
+    "lang": "de"
+   },
+   "notes": "French original 'haut comme trois pommes', an idiom like the German 'Dreikäsehoch'.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 3,
+   "cardDe": "Offiziell war es für Frauen von 1799 bis 2013 verboten, in Moskau Hosen zu tragen. Richtig oder falsch?",
+   "de": "In welcher Stadt war es Frauen offiziell bis 2013 verboten, Hosen zu tragen?",
+   "en": "In which city were women officially forbidden to wear trousers until 2013?",
+   "reworked": true,
+   "answerDe": "Paris",
+   "answerEn": "Paris",
+   "timeline": {
+    "kind": "event",
+    "start": "2013-01-31",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The old Paris ban on women wearing trousers is officially revoked",
+    "labelDe": "Das alte Pariser Hosenverbot für Frauen wird offiziell aufgehoben"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hose",
+    "title": "Hose",
+    "lang": "de"
+   },
+   "notes": "The card's answer is 'false' (it was Paris, not Moscow). The Paris ordinance dates from the French Revolution era (1800) and exempted women cycling or riding.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches von zwei Brüdern geschriebene Buch, hieß ursprünglich Kinder- und Hausmärchen, obwohl es für erwachsene Leser gedacht war?",
+   "de": "Welches von zwei Brüdern geschriebene Buch, hieß ursprünglich Kinder- und Hausmärchen, obwohl es für erwachsene Leser gedacht war?",
+   "en": "Which book written by two brothers was originally called Kinder- und Hausmärchen (Children's and Household Tales), although it was meant for adult readers?",
+   "reworked": false,
+   "answerDe": "Grimms Märchen",
+   "answerEn": "Grimms' Fairy Tales",
+   "timeline": {
+    "kind": "creation",
+    "start": "1812",
+    "end": "1858",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Brothers Grimm publish the editions of their Kinder- und Hausmärchen",
+    "labelDe": "Die Brüder Grimm geben die Auflagen ihrer Kinder- und Hausmärchen heraus"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Grimms_M%C3%A4rchen",
+    "title": "Grimms Märchen",
+    "lang": "de"
+   },
+   "notes": "Card prints the title in italics and has a stray comma after 'Buch'. The collection by Jacob and Wilhelm Grimm is still officially titled Kinder- und Hausmärchen; 'Grimms Märchen' is the popular name.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Saluki, Barsoi und Komondor sind Rassen welcher Tierart?",
+   "de": "Saluki, Barsoi und Komondor sind Rassen welcher Tierart?",
+   "en": "Saluki, Borzoi and Komondor are breeds of which animal?",
+   "reworked": false,
+   "answerDe": "Hund",
+   "answerEn": "Dog",
+   "timeline": {
+    "kind": "era",
+    "start": "-12000",
+    "end": null,
+    "precision": "millennium",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Dogs become the first domesticated species, over 14,000 years ago",
+    "labelDe": "Der Hund wird vor über 14.000 Jahren als erste Tierart domestiziert"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Barsoi",
+    "title": "Barsoi",
+    "lang": "de"
+   },
+   "notes": "Saluki and Barsoi are sighthounds (FCI group 10); the Komondor is a Hungarian livestock guardian dog. Timeline from en.wikipedia 'Dog'.",
+   "domain": "nature",
+   "sub": "mammals"
+  },
+  {
+   "category": 6,
+   "cardDe": "An welchem Kleidungsstück kann man einen sogenannten „Button-Fly“ finden: Lederjacke, Leinenhemd oder Jeans?",
+   "de": "An welchem Kleidungsstück kann man einen sogenannten „Button-Fly“ finden?",
+   "en": "On which garment can you find a so-called button fly?",
+   "reworked": true,
+   "answerDe": "Jeans",
+   "answerEn": "Jeans",
+   "timeline": {
+    "kind": "event",
+    "start": "1873-05-20",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Jacob W. Davis and Levi Strauss receive the US patent for riveted jeans",
+    "labelDe": "Jacob W. Davis und Levi Strauss erhalten das US-Patent für die genietete Jeans"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Jeans",
+    "title": "Jeans",
+    "lang": "de"
+   },
+   "notes": "Jeans were originally closed with buttons (button fly); most now use a zip fly.",
+   "domain": "everyday",
+   "sub": "brands"
+  }
+ ]
+}

@@ -1,0 +1,528 @@
+{
+ "article": "a0455",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cochineal",
+   "title": "Cochineal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:23.800Z",
+   "snapshot": "0ec725483f15ed6105524cab9a11bd8781c0b96148aecb1cf32d4f0f1aac21de"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tyrian_purple",
+   "title": "Tyrian purple – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:24.914Z",
+   "snapshot": "48749822e804fc1e74b380210b55d613b57bddbc78fc9815475203104e60d544"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Indigo_dye",
+   "title": "Indigo dye – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:25.819Z",
+   "snapshot": "e359d5a83d00d4488ee0118d8883a375a883c391230b2aaafc6a066d54c2504e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Saffron",
+   "title": "Saffron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:26.906Z",
+   "snapshot": "8cd63e257ed2a5a525e39e405f5f150bf989f9eff5dbf2ab4b7c1bf62bea67b5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Alizarin",
+   "title": "Alizarin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:27.802Z",
+   "snapshot": "921b07ef2d9f99a8cd5f0ae4620d4edb26dbffaca03af8f46b5f86023642d05e"
+  },
+  "s6": {
+   "url": "https://www.nature.com/articles/s41467-017-02031-z",
+   "title": "Identification of a membrane-bound glycosyltransferase involved in carminic acid biosynthesis",
+   "publisher": "Nature Communications (2017)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.115Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6083691/",
+   "title": "Carminic acid derivatives (Royal Society Open Science 2018)",
+   "publisher": "Royal Society Open Science via PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:17.975Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s8": {
+   "url": "https://www.worldhistory.org/Tyrian_Purple/",
+   "title": "Tyrian Purple: The Super-Expensive Dye of Antiquity",
+   "publisher": "World History Encyclopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.159Z",
+   "snapshot": "e41f73c4d92f86f73beaaf19089929f59aed73f9cbdb67d260a90fa9932afa6a"
+  },
+  "s9": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5023320/",
+   "title": "The 6000-year-old use of indigo (Science Advances 2016)",
+   "publisher": "Science Advances via PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.914Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s10": {
+   "url": "http://www.wildcolours.co.uk/html/indigo_history.html",
+   "title": "History of Indigo & Indigo Dyeing",
+   "publisher": "Wild Colours",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:18.135Z",
+   "snapshot": "6446b24da5af1771d4ada8ea6398c33264d017df4e5daf081c79d529d0584832"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cochineal scale insects",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "murex sea snails",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "indigo plant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "saffron crocus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "madder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:50.751Z",
+   "target": "f02271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cochineal scale insects",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cochineal scale insects”, “Cochenilleschildläuse”, “кошенильные червецы”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:50.751Z",
+   "target": "f02272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "murex sea snails",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“murex sea snails”, “Purpurschnecken”, “иглянки”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:50.751Z",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "indigo plant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“indigo plant”, “Indigopflanze”, “индигофера”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:50.751Z",
+   "target": "f02274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Saffron ( SAF-rən, -⁠ron; Persian: زعفران, romanized: zafarān) is a spice derived from the sterile  autumn-blooming flower of Crocus sativus, commonly known as the \"saffron crocus\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “saffron crocus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:50.751Z",
+   "target": "f02275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Historically it was derived from the roots of plants of the madder genus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:50.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “madder” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:26Z",
+   "target": "f02271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Carminic acid (CA) is a natural red pigment found in some scale insects including the American cochineals (Dactylopius coccus Costa)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:31Z",
+   "target": "f02271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "extracted from cochineal insects (Dactylopius coccus)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:36Z",
+   "target": "f02271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "can be extracted from the body and eggs, then mixed with aluminium or calcium salts to make carmine dye, also known as cochineal",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:41Z",
+   "target": "f02272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tyrian purple (aka Royal purple or Imperial purple) is a dye extracted from the murex shellfish which was first produced by the Phoenician city of Tyre in the Bronze Age.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:12:46Z",
+   "target": "f02272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The dye substance is a mucous secretion from the hypobranchial gland of one of several species of medium-sized predatory sea snails that are found in the eastern Mediterranean Sea",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:12:52Z",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Indigo is a natural dye obtained from the leaves of some plants of the Indigofera genus, in particular Indigofera tinctoria.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:12:57Z",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Indigoid dyes may be prepared from different plants, such as those belonging to the Indigofera, Strobilanthes, Isatis, and Polygonum genera.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:13:01Z",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "there is evidence for the use of indigo from woad or Indigofera from the third millennium BC",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:12.699Z",
+   "target": "f02271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "can be extracted from the body and eggs, then mixed with aluminium or calcium salts to make carmine dye, also known as cochineal",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:12.699Z",
+   "target": "f02272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tyrian purple (aka Royal purple or Imperial purple) is a dye extracted from the murex shellfish which was first produced by the Phoenician city of Tyre in the Bronze Age.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:12.699Z",
+   "target": "f02272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The dye substance is a mucous secretion from the hypobranchial gland of one of several species of medium-sized predatory sea snails that are found in the eastern Mediterranean Sea",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:12.699Z",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Indigo is a natural dye obtained from the leaves of some plants of the Indigofera genus, in particular Indigofera tinctoria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:12.699Z",
+   "target": "f02273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "there is evidence for the use of indigo from woad or Indigofera from the third millennium BC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:12.699Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  }
+ ]
+}

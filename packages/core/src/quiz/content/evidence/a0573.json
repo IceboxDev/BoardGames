@@ -1,0 +1,202 @@
+{
+ "article": "a0573",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pythagorean_theorem",
+   "title": "Pythagorean theorem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:39.483Z",
+   "snapshot": "88a28d8efa7ae84dd60f85edccd15f62a02fd198559ad73833a2bcf44269bdc2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Plimpton_322",
+   "title": "Plimpton 322 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:40.298Z",
+   "snapshot": "70b419fb43f6c8420d773b4e05e2f192fe2fcbf6afc2ba3f91accf93081dccf1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Euclid%27s_Elements",
+   "title": "Euclid's Elements – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:05.721Z",
+   "snapshot": "3edd7525af62181283bdf7a0d8c5d457f536f7fe62be56dc95ec7102fa7c6265"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pons_asinorum",
+   "title": "Pons asinorum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:41.194Z",
+   "snapshot": "c251dba98732cb9ed247b007acf130c4158e6d9f8456eea6045d43666c9f9e28"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Zhoubi_Suanjing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:05:42.153Z",
+   "snapshot": "f2440e74181aec805764a517a1c053c1f534a7e57a4354c604970e11010f6223"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hypotenuse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c048"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "legs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "equilateral triangle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "isosceles triangle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:09.264Z",
+   "target": "f02861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It states that the area of the square whose side is the hypotenuse (the side opposite the right angle) is equal to the sum of the areas of the squares on the other two sides.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.264Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hypotenuse” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:09.264Z",
+   "target": "f02862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": ", the rule that equates the sum of the squares of the legs of a right triangle to the square of the hypotenuse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.264Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “legs” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:09.264Z",
+   "target": "f02863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "For example, in the first construction of Book 1, of an equilateral triangle, Euclid used a premise that was neither postulated nor proved: that two circles sharing the same line segment as a radius will cross each other in two points, rather than somehow not crossing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.264Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “equilateral triangle” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:09.264Z",
+   "target": "f02864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In geometry, the theorem that the angles opposite the equal sides of an isosceles triangle are themselves equal is known as the pons asinorum ( PONZ ass-ih-NOR-əm), Latin for \"bridge of asses\", or more descriptively as the isosceles triangle theorem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.264Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “isosceles triangle” is on the snapshot of s4"
+  }
+ ]
+}

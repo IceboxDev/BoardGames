@@ -1,0 +1,242 @@
+{
+ "article": "a2737",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jain_vegetarianism",
+   "title": "Jain vegetarianism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:03.026Z",
+   "snapshot": "cadeb5733bd32640b181b6e81a1922ddee25eabfe33e11a194621b0208f2a374"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kashrut",
+   "title": "Kashrut",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:04.067Z",
+   "snapshot": "b23e04ef0db6a9968e58fb938a889d585d40540dea4a201b20feb5d86c5cc379"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Halal",
+   "title": "Halal",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:05.046Z",
+   "snapshot": "a2d2f4faf811f222a02cd8b53a8610b04668d895ea9c201c0f0122b05572a45b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Langar_(Sikhism)",
+   "title": "Langar (Sikhism)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:05.939Z",
+   "snapshot": "590ed66f838bf9d145b25fdd4e607d44f70a6ca02feef1f48a937952f29fd4e1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ital",
+   "title": "Ital",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:06.947Z",
+   "snapshot": "ab4cb1a7e510ec6558dda7ddb0ed5be3b2f6ff62abb341e224b7e77b673adef5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jainism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kosher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Halal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Langar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ital",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:05.787Z",
+   "target": "f25554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jain vegetarianism is the mandatory, spiritually motivated diet practiced by the followers of Jainism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jainism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:05.787Z",
+   "target": "f25555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Foods that may be consumed are deemed kosher (  in English, Yiddish: כּשר), from the Ashkenazi pronunciation of the term that in Sephardi or Modern Hebrew is pronounced kashér (כָּשֵׁר), meaning \"fit\" (in this context, \"fit for consumption\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kosher” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:05.787Z",
+   "target": "f25556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Halal ( ; Arabic: حلال ḥalāl [ħaˈlaːl]) is an Arabic word that translates to 'permissible' in English.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Halal” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:05.787Z",
+   "target": "f25557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In Sikhism, a langar (Punjabi: ਲੰਗਰ, pronunciation: [lʌŋɾ], 'kitchen') is the community kitchen of a gurdwara, which serves meals to all free of charge, regardless of religion, caste, gender, economic status, or ethnicity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Langar” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:05.787Z",
+   "target": "f25558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ital, also spelled I-tal (), is food often celebrated by those in the Rastafari movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ital” is on the snapshot of s5"
+  }
+ ]
+}

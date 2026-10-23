@@ -1,0 +1,296 @@
+{
+ "article": "a0599",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Curry_powder",
+   "title": "Curry powder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:20.355Z",
+   "snapshot": "1072db9738271f5d29baf47b2c86ace46e6fad2b8f2250e2f8d2c4962831b0d9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kurkuma",
+   "title": "Kurkuma",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:17.635Z",
+   "snapshot": "33c0b1c6b4429290736a6fc7c16edde100f55f6727831bf6d26970eaa842aa8a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ginger",
+   "title": "Ginger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:21.347Z",
+   "snapshot": "62d2608b3e09ba284ae5c0c6ebe5c6df0925c6a9aa631debb1ecd0ea80c01883"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Baiersdorf",
+   "title": "Baiersdorf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:18.633Z",
+   "snapshot": "dfd32bd5b8bf18ebd4b5fbc42442d98408e3375785f7ffcdd6f0b1d1941a659c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wasabi",
+   "title": "Wasabi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:22.467Z",
+   "snapshot": "4a2579778815fbba3e12c4522055aa06748e8d0fe5dd7b0d7deea8f38317e009"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pontefract_cake",
+   "title": "Pontefract cake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:23.323Z",
+   "snapshot": "a29303490702ca5c4cd5907b401dc6c7072add9be437f644c709e533dfddf415"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Liquorice",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:24.336Z",
+   "snapshot": "48b616c4321356fea574c5280b50d5254c075b8453ce6e6afa93195c35e1608c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "turmeric",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kurkuma",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-077"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "ginger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Meerrettich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "wasabi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "liquorice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.449Z",
+   "target": "f02991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The \"Bombay\" recipe used coriander, cumin, turmeric, mustard seed, pepper, chillies, and a little fenugreek.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “turmeric” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:12.449Z",
+   "target": "f02991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Kurkuma oder Kurkume (Curcuma longa), auch Gelber Ingwer, Safranwurz(el), Gelbwurz(el), Gilbwurz(el) oder Curcuma genannt, ist eine Pflanzenart aus der Gattung Curcuma innerhalb der Familie der Ingwergewächse (Zingiberaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurkuma” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:12.449Z",
+   "target": "f02992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ginger (Zingiber officinale) is a flowering plant whose rhizome, ginger root or ginger, is widely used as a spice and a folk medicine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ginger” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:12.449Z",
+   "target": "f02993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Baiersdorf hat einen großen Anteil am europäischen Meerrettich-Anbau und dessen Verarbeitung; es gibt dort zwei weitbekannte Firmen, die Meerrettich-Produkte herstellen und vertreiben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meerrettich” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:12.449Z",
+   "target": "f02994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wasabi (Japanese: ワサビ, わさび, or 山葵, pronounced [waꜜsabi]) or Japanese horseradish (Eutrema japonicum syn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wasabi” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:12.449Z",
+   "target": "f02995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pontefract cakes (also known as Pomfret cakes and Pomfrey cakes) are a type of small, roughly circular black liquorice sweet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.449Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “liquorice” is on the snapshot of s6"
+  }
+ ]
+}

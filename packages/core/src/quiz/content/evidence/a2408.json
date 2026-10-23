@@ -1,0 +1,326 @@
+{
+ "article": "a2408",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Schl%C3%BCmpfe",
+   "title": "Die Schlümpfe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:14.248Z",
+   "snapshot": "caa588f30d42c364e336409c8890978a56755d4768a786ba280f339d3f98c392"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Smurfs_(1981_TV_series)",
+   "title": "The Smurfs (1981 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:15.363Z",
+   "snapshot": "6d145db016a09efb85a49d46c1683fed17baee142824144429e7ddd879538660"
+  },
+  "s3": {
+   "url": "https://www.kino.de/film/die-schluempfe-3-2017/news/schluempfe-namen-aller-einwohner-schlumpfhausens-samt-katze-auf-deutsch/",
+   "title": "Schlümpfe: Namen aller Einwohner Schlumpfhausens auf Deutsch",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:13.380Z",
+   "snapshot": "f286137c24c20b3cea69c2c3eaebb48fa2a96175edc49e58dc6c85341e581107"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Smurfs",
+   "title": "The Smurfs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:16.385Z",
+   "snapshot": "c095a14a411383ed991ed4b93099f2dc360baf92203dd39c233401f0a4e6cda3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Peyo",
+   "title": "Peyo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:17.178Z",
+   "snapshot": "52aa717dd2bb596159d3d4015c9373d47c3a663f5f996a0cc6d9fd897b0c1f4b"
+  },
+  "s6": {
+   "url": "https://smurfs.fandom.com/wiki/Wooly_Smurf",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Schlümpfe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Smurfs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Schlümpfe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 37"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Schlümpfe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-391"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johan and Peewit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pierre Culliford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Les Schtroumpfs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f12616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Schlümpfe (im französischsprachigen Original: Les Schtroumpfs) sind Comicfiguren, die 1958 vom belgischen Zeichner und Autor Peyo (Pierre Culliford, 1928–1992) zunächst als koboldartige Nebenfiguren für seine Comicserie Johan et Pirlouit (dt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Schlümpfe” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f25112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Schlümpfe (im französischsprachigen Original: Les Schtroumpfs) sind Comicfiguren, die 1958 vom belgischen Zeichner und Autor Peyo (Pierre Culliford, 1928–1992) zunächst als koboldartige Nebenfiguren für seine Comicserie Johan et Pirlouit (dt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Schlümpfe” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f25112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Smurfs (originally broadcast as Smurfs and syndicated as Smurfs' Adventures) is an animated sitcom that originally aired on NBC from September 12, 1981 to December 2, 1989.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Smurfs” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f25112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Teil 3 der animierten Kinofilmreihe „Die Schlümpfe - Das verlorene Dorf“ startet am 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Schlümpfe” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f12617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At the time he came up with the idea for the Smurfs, Peyo was the creator, artist, and writer of the Franco-Belgian comics series titled Johan et Pirlouit (translated to English as Johan and Peewit), set in Europe during the Middle Ages and including elements of sword-and-sorcery.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johan and Peewit” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f12618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pierre Culliford (French: [kylifɔʁd]; 25 June 1928 – 24 December 1992) was a Belgian comics writer and artist who worked under the pseudonym Peyo ([pejo]).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pierre Culliford” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:15.659Z",
+   "target": "f12619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Smurfs (French: Les Schtroumpfs; Dutch: De Smurfen) is a Belgian comic franchise centered on a fictional colony of small, blue, humanoid creatures who live in mushroom-shaped houses in the forest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Les Schtroumpfs” is on the snapshot of s4"
+  }
+ ]
+}

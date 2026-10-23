@@ -1,0 +1,296 @@
+{
+ "article": "a1000",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/A_Bug%27s_Life",
+   "title": "A Bug's Life – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:31.130Z",
+   "snapshot": "bccd3d415e0734cc3cf1edd695862ae25c9ba866bcc505b3d5d252bed635bca0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Yojimbo",
+   "title": "Yojimbo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:32.012Z",
+   "snapshot": "8976abdae2da79a40d091aa7d9bcb0a83281523717ae60721eded13c6ecf32f6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Hidden_Fortress",
+   "title": "The Hidden Fortress – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:33.153Z",
+   "snapshot": "76d90e2ef6e6cfca9c53bd7905398e4515cb978b7bcb22248faa9717b22b2373"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rashomon",
+   "title": "Rashomon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:34.357Z",
+   "snapshot": "4c983edd7d8342dafd1a01d6618dde5096190de295042fc0dc547a97e1391340"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ikiru",
+   "title": "Ikiru – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:35.071Z",
+   "snapshot": "309be95d581689b9738546f83830547cac7a1459c8b85f38d7f5c70db71f3b56"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Die_glorreichen_Sieben_(2016)",
+   "title": "Die glorreichen Sieben (2016)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:32.309Z",
+   "snapshot": "6f28fe87caac8f19e5abfb683a141c9e1fe4f8a710bcabe9c86f7d8aa3815b55"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/A_Fistful_of_Dollars",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:49.300Z",
+   "snapshot": "9f701c3239d0a27587b503722b663b518afabc692dd469010e8ecaefbefeb499"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seven Samurai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yojimbo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hidden Fortress",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rashomon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ikiru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die glorreichen Sieben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-345"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:17.981Z",
+   "target": "f04996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michael Wilmington of the Chicago Tribune gave the film three and a half stars out of four, and compared the movie to \"Akira Kurosawa's Seven Samurai (with a little of another art-film legend, Federico Fellini, tossed in),\" where \"As in Samurai, the colony here is plagued every year by the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seven Samurai” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:17.981Z",
+   "target": "f04997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yojimbo (Japanese: 用心棒, Hepburn: Yōjinbō; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yojimbo” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:17.981Z",
+   "target": "f04998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Hidden Fortress (Japanese: 隠し砦の三悪人, Hepburn: Kakushi Toride no San Akunin; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hidden Fortress” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:17.981Z",
+   "target": "f04999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rashomon (Japanese: 羅生門, Hepburn: Rashōmon) is a 1950 Japanese jidaigeki (period drama) psychological thriller film directed by Akira Kurosawa from a screenplay he co-wrote with Shinobu Hashimoto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rashomon” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:17.981Z",
+   "target": "f05000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ikiru (Japanese: 生きる; 'To Live') is a 1952 Japanese drama film directed by Akira Kurosawa from a screenplay co-written with Shinobu Hashimoto and Hideo Oguni.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ikiru” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:17.981Z",
+   "target": "f11445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die glorreichen Sieben (Originaltitel: The Magnificent Seven) ist ein US-amerikanischer Western von Antoine Fuqua aus dem Jahr 2016.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:17.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die glorreichen Sieben” is on the snapshot of s6"
+  }
+ ]
+}

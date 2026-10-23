@@ -1,0 +1,35 @@
+# kind: Q = question side (photo check by user), R = answer side (research)
+import re
+TF="003/5 006/4 006/6 007/6 008/4 010/3 010/6 011/4 016/6 018/4 019/4 021/4 029/3 032/2 032/6 033/3 033/5 034/3 037/3 039/6 041/1 042/3 045/2 052/3 053/3 054/4 061/2 080/1 085/3 088/3 097/1 100/3 102/3 110/6 115/3 115/6 119/5 122/3 125/1 126/1 127/3 133/2 137/5 138/1 139/3 139/4 142/5 142/6 155/1 156/2 156/6 157/5 158/6 159/5 163/4 170/1 179/2 180/1 182/5 185/5 189/1 189/3 190/5 197/1 203/4 206/3 209/2 211/6 212/4 212/6 218/1 219/3 220/3 220/6 222/5 223/1 223/3 223/6 226/3 232/4 236/5 238/2 238/3 239/6 241/4 242/3 244/1 246/3 247/1 248/5 258/2 261/1 263/3 273/6 278/3 279/6 281/5 292/5 293/1 299/4 311/1 311/6 312/6 314/1 315/6 326/6 327/3 336/3 338/5 351/1 356/3 356/4 357/6 360/3 363/3 365/5 366/6 367/3 373/5 374/1 374/5 375/6 376/2 378/3 378/4 378/5 379/6 380/3 386/4 391/3 392/4 393/2 393/3 394/6 398/3".split()
+R_TP_UNSURE={"145/6":"Olympics hosted by states that no longer exist: 2 (USSR, Yugoslavia) or 3 (W. Germany)?",
+"178/3":"who emancipated the Jews without reservation: Napoleon or Hardenberg?",
+"279/1":"most popular fruit: banana, mango or tomato?",
+"291/5":"NASA craft that found a new type of black hole: Chandra or Hubble?",
+"366/3":"card asks which CONTINENT is the cradle of civilisation; bank answers Mesopotamia",
+"283/6":"which is NOT a yoga pose (Drache/Fackel/Stuhl)",
+"240/6":"who was NOT in goal at the 1974 World Cup (Kargus? Kleff also never played)",
+"226/6":"trot ridden in English, classical and Western styles alike?",
+"196/2":"Mario breaks blocks with head or fist?",
+"187/1":"which is NOT a German village name (Philadelphia/Rom/Moskau)",
+"375/4":"which word has no double meaning (Zeit/Mangel/Service)",
+"371/1":"Austrian spelling alphabet word for Ü: Übel or Übung?",
+"068/1":"India vs China population (answer outdated?)","245/5":"Pluto vs Russia surface (answer outdated?)",
+"376/1":"card asks whose ambassador alone has an official embassy bike (Denmark/Netherlands/Lithuania); fact asks #BotschaftenOnBike 2025 winner",
+"379/4":"card asks which crime writer runs a yearly village seminar (Marklund/Walters/Leon); fact asks Marklund's birthplace",
+"309/3":"card asks only what the N in NATO stands for; fact asks full expansion",
+"086/2":"'which is NOT' card; fact asks Schätzen Sie mal! subtitle","146/5":"'which is NOT' card (Falke?); fact is Habicht",
+"092/3":"'which is NOT' card (Helmut?); fact is Elefant","087/5":"'which is NOT' card (Toupiermaschine?); fact is rifle patent"}
+for k in "009/5 059/2 072/2 172/5 191/6 346/3 352/3 363/5 370/6 379/3 398/2 400/2".split(): R_TP_UNSURE[k]="answer only presumed"
+for k in TF: R_TP_UNSURE.setdefault(k,"true/false judged FALSE: verify")
+R_PP={"097/1":"signature size: self-esteem vs social dominance","088/1":"'bug' etymology","040/2":"pulsars from black holes?","012/2":"Venus 'only' retrograde planet","031/1":"gas fire 'over three years'","027/1":"'over 200' Nubian pyramids","030/2":"comet smell urine vs horse stable","017/1":"strongest muscle","016/1":"Turkish 'unique' evidential","078/2":"'Earth's supercontinent'","079/2":"vitamin C option A","025/1":"hiring predictor (2022 meta-analysis)","053/2":"Guru Nanak and the turban","045/2":"QWERTY jamming story","066/2":"answer only works among options","086/2":"answer only works among options","068/1":"card asks topologically different shape (bowl); fact asks donut-equivalent (mug)","094/1":"Moon orientation; timeline event mismatch"}
+R_PPM={"100/2":"Locke vs Hobbes equally correct","028/2":"lipids vs fats backwards","005/2":"Vladimir folk etymology","139/1":"birch tar: Neanderthals vs modern humans","136/2":"diapause 'unique to kangaroos'","026/2":"urine tooth-washing Celtiberian not Roman","159/1":"tigers roar to share kill; fact about kill-sharing","146/1":"Uyghur lengthening, no source; loosely tied fact","007/1":"mummy brown '16th century'","024/1":"yoga as 'Hinduism'","145/1":"Ethiopian 13 months explanation","022/2":"kurtosis 'peakedness'","119/1":"tritone at Simpsons theme start","092/1":"card asks subject of The Scream; fact is the scream quote","157/1":"card asks which language tonal; fact asks White Hmong tone count","110/1":"'domains become misaligned' accepted via notes only","027/1":"mucus vs saliva"}
+for k in "005/1 031/2 032/1 036/2 044/2 045/2 051/1 070/1 072/1 077/2 079/1 080/2 094/1 098/1 106/2 109/1 117/1 120/1 121/1 124/1 143/2 021/1".split(): R_PPM.setdefault(k,"overstated or simplified")
+# Question side
+Q_TP={}
+for k,v in {"326/5":"Edison/Topsy","335/4":"Amadeus Tony year","370/1":"Berlin illuminated ad","035/4":"Bilbo and Frodo","032/4":"Van Gogh ear 'fight'","012/4":"dwarves 'fight' Smaug","256/5":"CD '75 min'","267/3":"ransom US dollars vs Swiss francs","261/6":"Olympic bronze 1998","253/6":"world champion 'at 18'","226/4":"Clockwork Orange '1963'","161/2":"'12.5 million rings'","193/5":"titan arum 'every 5-10 years'","017/2":"T-1000 'cyborg' (kept)","158/4":"22,000 people / 1,000 elephants (kept)","364/5":"one bee species (kept)","234/3":"Harvard/Body Shop (kept)","400/5":"WHO caffeine (reworked premise)"}.items(): Q_TP[k]="corrected premise: "+v
+for k in "001/3 004/5 007/4 011/1 019/3 023/1 023/3 024/6 025/3 031/5 038/1 040/1 048/4 049/1 051/5 056/4 059/5 063/2 077/2 089/3 091/3 092/4 093/6 094/3 113/5 117/1 136/1 141/5 151/4 160/4 161/3 165/3 166/5 176/3 176/5 189/6 199/1 201/5 204/3 205/2 208/1 213/4 218/6 220/2 222/3 223/5 229/2 231/5 233/6 235/5 239/2 239/3 244/5 245/5 247/2 253/2 260/2 264/3 266/2 270/3 276/6 286/2 294/1 296/1 296/5 316/4 319/1 323/5 337/3 354/2 377/5 381/6 387/4 392/5".split(): Q_TP.setdefault(k,"corrected premise (routine)")
+E="005/5 einzigartig|016/5 gallopieren|019/5 Saphire|050/4 James Orwell|057/1 der Piazza|078/4 comma|106/5 Deutschand|114/5 missing comma|117/1 Laliberte|132/2 semicolon or speck|140/3 drank|141/2 Zyklonen|147/4 einzel|178/1 bestaft|179/4 Hubschrauberflotte no umlaut|180/1 in in|180/4 im Rahmen vom|180/6 Fussball|196/2 über ihn|198/4 missing im|202/5 zur gelangen|203/5 Buchtaben|206/4 Tutenchamun|222/2 Muscial|225/3 Zogo|235/4 Barry|250/2 comma|264/6 Kricket|265/4 Ballon Dog|277/3 English and|314/1 Glückspiel|320/6 Klischko|321/5 Chiogga / Detroit Rot|324/4 wude|336/4 just Ronald|351/1 ein Schale|362/4 broken grammar|374/2 kürte|382/3 in einen|392/4 der oberste Reihe|393/6 der Rumba|309/2 song title We Are Never Getting Back Together|031/6 farbige/schwarze|079/2 50 km around LA|080/3 Nescafé|103/5 entdeckte|187/5 Rosalind Franklin|210/4 book title|277/6 Kraftprotz-Marc-Puppe|352/1 card words"
+for e in E.split("|"):
+  k,v=e.split(" ",1); Q_TP[k]=(Q_TP.get(k,"")+"; " if k in Q_TP else "")+"misprint? "+v
+Q_PP={"028/1":"misprint 'Plazma'","077/1":"misprint discipline 'Metereology'"}
+Q_PPM={"007/2":"misprint 'transience nature'","108/2":"misprint 'macguffin'","141/1":"mixed straight/curly quotes","145/1":"misprint 'Ethiopian' option","151/2":"misprint 'A hundred increase'","152/1":"misprint 'Most commercial non-contact thermometer'"}

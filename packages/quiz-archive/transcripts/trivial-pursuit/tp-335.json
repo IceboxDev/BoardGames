@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-335",
+ "image": "IMG20261007173901.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie viele Einwohner hatte die kleinste Stadt Deutschlands im Jahr 2015: 60, 280 oder 830?",
+   "de": "Wie heißt die nach Einwohnerzahl kleinste Stadt Deutschlands?",
+   "en": "What is the name of Germany's smallest town by population?",
+   "reworked": true,
+   "answerDe": "Arnis",
+   "answerEn": "Arnis",
+   "timeline": {
+    "kind": "founding",
+    "start": "1667",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Arnis on the Schlei is founded by 65 families from Kappeln",
+    "labelDe": "Arnis an der Schlei wird von 65 Familien aus Kappeln gegründet"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Arnis",
+    "title": "Arnis",
+    "lang": "de"
+   },
+   "notes": "The card asks for the population (intended answer 280), which could not be verified for 2015 on a fetched page, so it was reworked to the town itself. Arnis (Schleswig-Holstein) has fewer than 300 inhabitants: 314 in 2005 (state statistics office), 251 on 31 Dec 2024 (Destatis). It is also Germany's smallest town by area (0.45 km²).",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die deutsche Comedyserie, in der die Figur Heiko Schotte eine zentrale Rolle spielt?",
+   "de": "Wie heißt die deutsche Comedyserie, in der die Figur Heiko Schotte eine zentrale Rolle spielt?",
+   "en": "What is the name of the German comedy series in which the character Heiko Schotte plays a central role?",
+   "reworked": false,
+   "answerDe": "Der Tatortreiniger",
+   "answerEn": "Der Tatortreiniger (The Crime Scene Cleaner)",
+   "timeline": {
+    "kind": "creation",
+    "start": "2011-12-23",
+    "end": "2018-12-19",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "NDR comedy series Der Tatortreiniger with Bjarne Mädel airs",
+    "labelDe": "NDR-Comedyserie Der Tatortreiniger mit Bjarne Mädel wird ausgestrahlt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Der_Tatortreiniger",
+    "title": "Der Tatortreiniger",
+    "lang": "de"
+   },
+   "notes": "Heiko „Schotty“ Schotte is played by Bjarne Mädel.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Von welcher Marke waren die Turnschuhe, in denen sich Joschka Fischer 1985 provokativ zum ersten grünen Minister Deutschlands vereidigen ließ?",
+   "de": "Von welcher Marke waren die Turnschuhe, in denen sich Joschka Fischer 1985 provokativ zum ersten grünen Minister Deutschlands vereidigen ließ?",
+   "en": "What brand were the sneakers Joschka Fischer provocatively wore when he was sworn in as Germany's first Green minister in 1985?",
+   "reworked": false,
+   "answerDe": "Nike",
+   "answerEn": "Nike",
+   "timeline": {
+    "kind": "event",
+    "start": "1985-12-12",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Joschka Fischer is sworn in as Hesse's environment minister in sneakers, the first Green minister in Germany",
+    "labelDe": "Joschka Fischer wird in Turnschuhen als hessischer Umweltminister vereidigt, Deutschlands erster grüner Minister"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Joschka_Fischer",
+    "title": "Joschka Fischer",
+    "lang": "de"
+   },
+   "notes": "His white Nike sneakers are on display in the Deutsches Ledermuseum in Offenbach.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Theaterstück, in dem es um die Rivalität zwischen Salieri und Mozart geht, gewann 1980 den US-amerikanischen Tony Award?",
+   "de": "Welches Theaterstück, in dem es um die Rivalität zwischen Salieri und Mozart geht, gewann 1980 den US-amerikanischen Tony Award?",
+   "en": "Which play about the rivalry between Salieri and Mozart won the American Tony Award in 1980?",
+   "reworked": false,
+   "answerDe": "Amadeus",
+   "answerEn": "Amadeus",
+   "timeline": {
+    "kind": "event",
+    "start": "1981",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Peter Shaffer's Amadeus wins the Tony Award for Best Play",
+    "labelDe": "Peter Shaffers Amadeus gewinnt den Tony Award als bestes Theaterstück"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Amadeus_(play)",
+    "title": "Amadeus (play)",
+    "lang": "en"
+   },
+   "notes": "The card's year is off. Amadeus by Peter Shaffer premiered in London in 1979 and opened on Broadway in December 1980; it won the 1981 Tony for Best Play (five Tonys in all).",
+   "domain": "literature",
+   "sub": "poetry"
+  },
+  {
+   "category": 5,
+   "cardDe": "Das Wort „Arktis“ leitet sich vom griechischen Wort für „Bär“ ab. Richtig oder falsch?",
+   "de": "Vom griechischen Wort für welches Tier leitet sich das Wort „Arktis“ ab?",
+   "en": "The word “Arctic” derives from the Greek word for which animal?",
+   "reworked": true,
+   "answerDe": "Bär",
+   "answerEn": "Bear",
+   "timeline": {
+    "kind": "era",
+    "start": "-500",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ancient Greeks name the north “arktikos”, after the Great Bear constellation (arktos = bear)",
+    "labelDe": "Die alten Griechen nennen den Norden „arktikos“, nach dem Sternbild Großer Bär (arktos = Bär)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Arktis",
+    "title": "Arktis",
+    "lang": "de"
+   },
+   "notes": "Original card: true. From Ancient Greek ἄρκτος (árktos), 'bear'; ἄρκτικός meant 'northern', the region under the Great Bear. The timeline date is a rough placeholder for classical Greek usage.",
+   "domain": "literature",
+   "sub": "language"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt die inoffizielle Auszeichnung, die der letztplatzierte Fahrer in der Gesamtwertung der Tour de France erhält?",
+   "de": "Wie heißt die inoffizielle Auszeichnung, die der letztplatzierte Fahrer in der Gesamtwertung der Tour de France erhält?",
+   "en": "What is the name of the unofficial distinction given to the last-placed rider in the Tour de France general classification?",
+   "reworked": false,
+   "answerDe": "Lanterne rouge (Rote Laterne)",
+   "answerEn": "Lanterne rouge (red lantern)",
+   "timeline": {
+    "kind": "event",
+    "start": "1903",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Tour de France, whose last finisher is later known as the lanterne rouge",
+    "labelDe": "Erste Tour de France, deren Letztplatzierter später „Lanterne rouge“ genannt wird"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Lanterne_Rouge",
+    "title": "Lanterne Rouge",
+    "lang": "de"
+   },
+   "notes": "The name comes from the red tail light on the last carriage of a train. Wim Vansevenant holds the record with three (2006–2008).",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a0146",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Todesfuge",
+   "title": "Todesfuge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:24.737Z",
+   "snapshot": "6221c4f6be4ee815222de32887cabec1546dc5b1054cb6dd0bee728d607653a4"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_gestundete_Zeit_(Gedicht)",
+   "title": "Die gestundete Zeit (Gedicht) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:25.554Z",
+   "snapshot": "00c0cb27614a3677f585eefc455ffe46cb977624bcb5685623f2c0481d1fee67"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Svendborger_Gedichte",
+   "title": "Svendborger Gedichte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:26.510Z",
+   "snapshot": "296d6f27eefd3f93628e00bf2fdd017c73bc283f021a57c5018b3581b201f017"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/G%C3%BCnter_Eich",
+   "title": "Günter Eich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:27.668Z",
+   "snapshot": "2eb6a67362b7722f83a44469f8a58f4dc877271f48162322c00780bd06d6eb4d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gottfried_Benn",
+   "title": "Gottfried Benn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:28.794Z",
+   "snapshot": "df44965dd51ded355bc5029d608caab02bc1cee13263706f75b56370543a2fe8"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Inventur_(G%C3%BCnter_Eich)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:29.585Z",
+   "snapshot": "4bbec6ec3ea9c89637ab4aa837f59573342362bcf08bc6f6fb5311d8f9c904e6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paul Celan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ingeborg Bachmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Günter Eich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gottfried Benn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:00.115Z",
+   "target": "f00726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Todesfuge ist ein Gedicht des deutschsprachigen Lyrikers Paul Celan, das mit lyrischen Mitteln die nationalsozialistische Judenvernichtung thematisiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Celan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:00.115Z",
+   "target": "f00727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die gestundete Zeit ist ein Gedicht der österreichischen Schriftstellerin Ingeborg Bachmann, das 1953 erstmals veröffentlicht wurde und dem im selben Jahr erschienenen ersten Lyrikband der Dichterin den Titel gab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ingeborg Bachmann” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:00.115Z",
+   "target": "f00728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Svendborger Gedichte ist eine Gedichtsammlung des deutschen Dichters und Dramatikers Bertolt Brecht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:00.115Z",
+   "target": "f00729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ingeborg Bachmann, Günter Eich und Ilse Aichinger: „halten wir einander fest und halten wir alles fest!“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Eich” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:00.115Z",
+   "target": "f00730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gottfried Benn war zu keinem Zeitpunkt Mitglied der NSDAP.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:00.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gottfried Benn” is on the snapshot of s5"
+  }
+ ]
+}

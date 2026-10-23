@@ -1,0 +1,393 @@
+{
+ "article": "a0911",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Grapholita_funebrana",
+   "title": "Grapholita funebrana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:31.272Z",
+   "snapshot": "59de5a58d9d445abf49b85e8b52ef3888a75e65bfcf576e0c279dc5806dc7690"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Codling_moth",
+   "title": "Codling moth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:32.378Z",
+   "snapshot": "9df10eb1903578f45288700cd437aff37ba8eb3a6297ac6199b4f4b512f23448"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rhagoletis_cerasi",
+   "title": "Rhagoletis cerasi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:33.259Z",
+   "snapshot": "bebf7fa716ee8dd75542e4b3dc75639c97d3d25f18e2f8739f963d5a47b81d26"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kirschessigfliege",
+   "title": "Kirschessigfliege – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:30.528Z",
+   "snapshot": "915e92c72ca3c1a2b28d95816149b884fdcf2b1d84bcb200ed5adc37c02fab4c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Kartoffelk%C3%A4fer",
+   "title": "Kartoffelkäfer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:31.431Z",
+   "snapshot": "a072b5742d71feed9aba3b3c7d539bd6ce865aa7a9eb9d8b46dd3309e63fc6ec"
+  },
+  "s6": {
+   "url": "https://www.rhs.org.uk/biodiversity/plum-moth",
+   "title": "Plum moth",
+   "publisher": "Royal Horticultural Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:34.967Z",
+   "snapshot": "840699c396d70fc77e41eab8a1ae1cba9ea7866c0af22f5a3fc813a11f22ab40"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Pflaumenwickler",
+   "title": "Pflaumenwickler – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:35.604Z",
+   "snapshot": "83c11cb6a8e52380068badd3b092f8ed5f03cf2b5bbc313114bb85d563693993"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "plum moth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "codling moth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cherry fruit fly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kirschessigfliege",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kartoffelkäfer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:03.430Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "plum moth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“plum moth”, “Pflaumenwickler”, “сливовая плодожорка”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:03.430Z",
+   "target": "f04552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The codling moth or (especially Australia) codlin moth (Cydia pomonella) is a member of the Lepidopteran family Tortricidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “codling moth” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:03.430Z",
+   "target": "f04553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhagoletis cerasi (the cherry fruit fly or European cherry fruit fly) is a species of fruit fly in the family Tephritidae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cherry fruit fly” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:03.430Z",
+   "target": "f04554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Kirschessigfliege (Drosophila suzukii), Schweizerdeutsch Chriesessigflüüge und Baseldeutsch Girschessigfliäge, ist eine Art aus der Familie der Taufliegen (Drosophilidae) und ist eng mit Drosophila melanogaster verwandt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kirschessigfliege” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:03.430Z",
+   "target": "f04555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Kartoffelkäfer (Leptinotarsa decemlineata – etwa: „Zehnstreifen-Leichtfuß“), auch Erdäpfelkäfer oder Coloradokäfer genannt, ist eine Art aus der Familie der Blattkäfer.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:03.430Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kartoffelkäfer” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:17Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The newly hatched caterpillars tunnel into the fruits and feed around the stone until late summer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:22Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Weibchen legen ihre Eier auf der unteren Seite der Früchte ab.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:15:27Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the plum fruit moth or red plum maggot , is a moth of the family Tortricidae .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:32.741Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The newly hatched caterpillars tunnel into the fruits and feed around the stone until late summer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:32.741Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Weibchen legen ihre Eier auf der unteren Seite der Früchte ab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:32.741Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Plum moth is a moth in the family Tortricidae, there are around 400 species of moths in this family in Britain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “plum moth” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:32.741Z",
+   "target": "f04551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Pflaumenwickler (Grapholita funebrana, Syn.: Cydia funebrana) ist ein Schmetterling (Nachtfalter) aus der Familie der Wickler (Tortricidae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:32.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pflaumenwickler” is on the snapshot of s7"
+  }
+ ]
+}

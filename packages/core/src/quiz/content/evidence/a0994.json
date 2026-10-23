@@ -1,0 +1,679 @@
+{
+ "article": "a0994",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Sudan",
+   "title": "Languages of Sudan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:06.023Z",
+   "snapshot": "ed47be9e0b741634fdd896dc87be5380f9135399e1d52b0d5eaf524b1d0bf78c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Language_legislation_in_Belgium",
+   "title": "Language legislation in Belgium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:07.014Z",
+   "snapshot": "ede93673a2c951e1830f60514b865b2f17fcf6f480e91acf0be58df757f9230e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Finland",
+   "title": "Languages of Finland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:08.346Z",
+   "snapshot": "7203da026a505ab6dbf59f9b85b2ad07aeee86915b6d1567a85e8eb3cce713be"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Fidschi",
+   "title": "Fidschi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:05.410Z",
+   "snapshot": "4f6403e243df12ff37103da46c436dac49cfb99bbd75a5943137ec0d168659f7"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Simbabwe",
+   "title": "Simbabwe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:06.606Z",
+   "snapshot": "500dec3ef86672b6c8fb04978c4c7f918c17c01a1f8277b62eb4f376492ef7bd"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Senegal",
+   "title": "Senegal",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:07.589Z",
+   "snapshot": "c348e24b45e92259131e308f47022470ef861ef5be9ee8acab3c7ab021b439dc"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Belgium",
+   "title": "Languages of Belgium – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:06.552Z",
+   "snapshot": "c4774ae0cf1159a513160ea271854230855ad0c07f6af746d022fd597ad609b0"
+  },
+  "s8": {
+   "url": "https://lex.dk/Belgien",
+   "title": "Belgien – Den Store Danske (lex.dk)",
+   "publisher": "Lex.dk / Den Store Danske",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:37:06.705Z",
+   "snapshot": "584f556d3575214d2bffe565166dce421152c38969038e51f4282cecab6dcc92"
+  },
+  "s9": {
+   "url": "https://snl.no/Belgia",
+   "title": "Belgia – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:06.980Z",
+   "snapshot": "3559840e956afb5f8cf0572c568a7c5b0e8ef9cdcc18a6b0520c4dbcc72790e0"
+  },
+  "s10": {
+   "url": "https://www.constituteproject.org/constitution/Zimbabwe_2013",
+   "title": "Zimbabwe's Constitution of 2013 – Constitute Project",
+   "publisher": "Constitute Project",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:07.301Z",
+   "snapshot": "65615e11497008b0505ea54a49aafcfe716ae9abd75b6de115f531e645724e01"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Zimbabwe",
+   "title": "Languages of Zimbabwe – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:07.629Z",
+   "snapshot": "d8c0c4152c7dd45dc99521f08a65b045dc805c6f1c2c5afcdb153ff778fe7fb7"
+  },
+  "s12": {
+   "url": "https://snl.no/Zimbabwe",
+   "title": "Zimbabwe – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:37:07.780Z",
+   "snapshot": "579b0e852dd6f3e489bfc1e6fa1ec00a83fc06494955e010674647c4d5eb8fad"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Bolivia",
+   "title": "Languages of Bolivia – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:08.598Z",
+   "snapshot": "2d38e2733c4a986415182d1c1d6fe7417606e576a217bea6705995ff94ab5134"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arabic and English",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dutch, French and German",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Finnish and Swedish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fidschi-Hindi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-070"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Simbabwe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-132"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Französisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-342"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:16.810Z",
+   "target": "f04966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the 2005 constitution of the Republic of Sudan, the official languages of Sudan are Literary Arabic and English.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arabic and English” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:16.810Z",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dutch, French and German",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dutch, French and German”, “Niederländisch, Französisch und Deutsch”, “Нидерландский, французский и немецкий”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:16.810Z",
+   "target": "f04970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The two main official languages of Finland are Finnish and Swedish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Finnish and Swedish” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:16.810Z",
+   "target": "f12014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Amtssprachen sind Fidschianisch (Bauanisch, der Dialekt der Insel Bau), das zu den austronesischen malayo-polynesischen Sprachen zählt, Fidschi-Hindi und Englisch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fidschi-Hindi” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:16.810Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Simbabwe (deutsch üblicherweise [zɪmˈbaːpvə] ausgesprochen; lokale Sprachen und englisch Zimbabwe [zɪmˈbɑːbweɪ]; übersetzt „Steinhäuser“ in der Sprache der Shona) ist ein Binnenstaat im Südlichen Afrika, der als ehemalige britische Kronkolonie Südrhodesien sowie als Sezessionsterritorium kurzzeitig",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simbabwe” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:16.810Z",
+   "target": "f12016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Senegal ([ˈsenegal], amtlich französisch République du Sénégal  ‚Republik Senegal‘) ist ein Staat des frankophonen Afrikas und liegt an der westlichen Spitze Kontinentalafrikas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:16.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Französisch” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:35:16Z",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Kingdom of Belgium has three official languages: Dutch, French, and German.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:35:19Z",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Belgien har tre officielle sprog, som er nederlandsk, fransk og tysk, sproggrænserne følger delstatsgrænserne.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:35:22Z",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "nederlandsk, fransk, tysk",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23",
+   "note": "Fact box: Offisielle språk – nederlandsk, fransk, tysk."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:35:25Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The following languages, namely Chewa, Chibarwe, English, Kalanga, Koisan, Nambya, Ndau, Ndebele, Shangani, Shona, sign language, Sotho, Tonga, Tswana, Venda and Xhosa, are the officially recognised languages of Zimbabwe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:35:29Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Since the adoption of its 2013 Constitution, Zimbabwe has 16 official languages",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23",
+   "note": "The same page says Zimbabwe has the second-largest number of official languages after Bolivia: the body's old 'holds the record' claim was corrected."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:35:32Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "16: engelsk, tegnspråk, chewa, chibarwe, kalanga, khoisan, nambya, ndau, ndebele, shangani, shona, sotho, tonga, tswana, venda, xhosa",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:35:35Z",
+   "target": "f12015",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The constitution says that all indigenous languages are official, listing 36 specific indigenous languages, of which some are extinct.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23",
+   "note": "Bolivia (Spanish + 36 indigenous languages) has more official languages than Zimbabwe; the body now says so."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the Kingdom of Belgium has three official languages: Dutch, French, and German.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The following languages, namely Chewa, Chibarwe, English, Kalanga, Koisan, Nambya, Ndau, Ndebele, Shangani, Shona, sign language, Sotho, Tonga, Tswana, Venda and Xhosa, are the officially recognised languages of Zimbabwe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Since the adoption of its 2013 Constitution, Zimbabwe has 16 official languages",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "16: engelsk, tegnspråk, chewa, chibarwe, kalanga, khoisan, nambya, ndau, ndebele, shangani, shona, sotho, tonga, tswana, venda, xhosa",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s12"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "body-number",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The constitution says that all indigenous languages are official, listing 36 specific indigenous languages, of which some are extinct.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s13"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f04969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "For those public authorities, there is extensive language legislation concerning Dutch, French and German, even though the Belgian Constitution does not explicitly mention which languages enjoy official status.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dutch, French and German” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Zimbabwe 2013 Constitution - Constitute",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Zimbabwe” is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Many languages are spoken, or historically have been spoken, in Zimbabwe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Zimbabwe” is on the snapshot of s11"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Zimbabwe – les om historie, språk, politikk – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:47.769Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Zimbabwe” is on the snapshot of s12"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:54:47.769Z",
+   "target": "f12015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Zimbabwe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“Zimbabwe”, “Simbabwe”, “Зимбабве”) on the snapshot of s13"
+  }
+ ]
+}

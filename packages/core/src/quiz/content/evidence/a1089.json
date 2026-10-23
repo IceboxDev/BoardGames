@@ -1,0 +1,256 @@
+{
+ "article": "a1089",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heroin",
+   "title": "Heroin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:56.195Z",
+   "snapshot": "32ab8ba4c07bcbebc9d94fc28a8f280ebe81db53b664b5af0b122415729a30b0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Karl_Koller_(ophthalmologist)",
+   "title": "Karl Koller (ophthalmologist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:04.083Z",
+   "snapshot": "c6c4dc9bd581026ec85fd19d0618fcfe791df36ea4dddeb110e4282d718b9698"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/LSD",
+   "title": "LSD – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:05.299Z",
+   "snapshot": "ff881dc458ccbca55f32857c6f61218b17df453d9a80f4d47070941744e72d80"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Methamphetamin",
+   "title": "Methamphetamin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:02.486Z",
+   "snapshot": "3e6f2efbef879fab8928fa2df17dfa8afb5b2136103c4317957279ede2228ef4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/MDMA",
+   "title": "MDMA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:06.243Z",
+   "snapshot": "1b5d5e93129b84fe6d47c5a126ea95dae442992b56369435cdb98afbfb8b9115"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Aspirin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:05.556Z",
+   "snapshot": "b5d737773d3eccb78cbb40cff906f1000dd7b0cef476919363707760c6800e4b"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Heroin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:04.578Z",
+   "snapshot": "16258b837f50952ded4c20cb7abf60ceba266f562058525607951d94867185d4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "heroin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cocaine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "LSD",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Methamphetamin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "MDMA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:31.179Z",
+   "target": "f05441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heroin, also known as diacetylmorphine and diamorphine among other names, is a morphinan opioid substance synthesized from the dried latex of the opium poppy; it is mainly used as a recreational drug for its euphoric effects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “heroin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:31.179Z",
+   "target": "f05442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Koller introduced cocaine as a local anaesthetic for eye surgery.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cocaine” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:31.179Z",
+   "target": "f05443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lysergic acid diethylamide, commonly known as LSD (from German Lysergsäurediethylamid) and by the nicknames acid and Lucy, is a semisynthetic psychedelic drug derived from ergot, known for its potent psychological effects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LSD” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:31.179Z",
+   "target": "f05444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Methamphetamin (N-Methyl-alpha-methylphenethylamin) ist eine synthetisch hergestellte Substanz aus der Stoffgruppe der Phenylethylamine.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Methamphetamin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:31.179Z",
+   "target": "f05445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "3,4-Methylenedioxymethamphetamine (MDMA), commonly known as ecstasy in tablet form, and molly in crystal form, is an entactogen with stimulant and minor psychedelic properties.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MDMA” is on the snapshot of s5"
+  }
+ ]
+}

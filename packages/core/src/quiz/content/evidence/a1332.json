@@ -1,0 +1,414 @@
+{
+ "article": "a1332",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Harvard_University",
+   "title": "Harvard University – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:18.453Z",
+   "snapshot": "ca92e9369df8f4b4dee41ab4f8210585a3c0fbd92cf5f1e1b84410a7f2e6d9b7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/History_of_Google",
+   "title": "History of Google – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:11.481Z",
+   "snapshot": "6941988533496806337ed11c4299fdabba61809a92cc1174e6e2f384bd06a758"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/ARPANET",
+   "title": "ARPANET – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:19.312Z",
+   "snapshot": "7b5e6a3c11d89fdb30be717ddc13c07bf4358ae4501518681d7859e0133e00ea"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/NCSA_Mosaic",
+   "title": "NCSA Mosaic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:20.271Z",
+   "snapshot": "780a4cd1e2a9e8c2388f3ebea3f5310d169a2cb444b11261f635f39d5261e146"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Spacewar!",
+   "title": "Spacewar! – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:21.298Z",
+   "snapshot": "c5483ab904408c4deb09ef58ad6f329292d480ef2b9d6548aca3fce073d50135"
+  },
+  "s6": {
+   "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+   "title": "Brief History of the Internet",
+   "publisher": "Internet Society (Leiner, Cerf, Clark, Kahn, Kleinrock et al.)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:27.559Z",
+   "snapshot": "70c2380f2d1ac84eb9732db7d406a3bee71a6424944651356f121214a2e1c065"
+  },
+  "s7": {
+   "url": "https://samueli.ucla.edu/internet50/",
+   "title": "Internet50 – Birthplace of the Internet",
+   "publisher": "UCLA Samueli School of Engineering",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:27.374Z",
+   "snapshot": "62391173f831359f4350dd447562dce184a9ac26314c1a84099ecff8d8bba97c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harvard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stanford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "UCLA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "University of Illinois",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "MIT",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:08.400Z",
+   "target": "f06656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harvard University is a private Ivy League research university in Cambridge, Massachusetts, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harvard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:08.400Z",
+   "target": "f06657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Larry Page and Sergey Brin, students at Stanford University in California, developed a search algorithm first (1996) known as \"BackRub\", with the help of Scott Hassan and Alan Steremberg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stanford” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:08.400Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Roberts engaged Leonard Kleinrock at UCLA to develop mathematical methods for analyzing the packet network technology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “UCLA” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:08.400Z",
+   "target": "f06659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mosaic was developed at the National Center for Supercomputing Applications (NCSA) at the University of Illinois at Urbana–Champaign beginning in December 1992, released in January 1993, with official development and support until January 1997.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “University of Illinois” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:08.400Z",
+   "target": "f06660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ran on and as entertainment products; these were generally created by undergraduate and graduate students and university employees, such as at the Massachusetts Institute of Technology (MIT), where staff and students were allowed on occasion to develop programs for the TX-0 experimental computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.400Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MIT” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:43:08Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "his Network Measurement Center at UCLA was selected to be the first node on the ARPANET. All this came together in September 1969 when BBN installed the first IMP at UCLA and the first host computer was connected.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:43:12Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Few cultural revolutions can trace their origins as precisely as the one that was born on October 29, 1969, in 3420 Boelter Hall at UCLA.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:43:16Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first node was created at UCLA, where Leonard Kleinrock could evaluate network performance and examine his theories on message delay.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:52.147Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "his Network Measurement Center at UCLA was selected to be the first node on the ARPANET. All this came together in September 1969 when BBN installed the first IMP at UCLA and the first host computer was connected.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:52.147Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Few cultural revolutions can trace their origins as precisely as the one that was born on October 29, 1969, in 3420 Boelter Hall at UCLA.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:52.147Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first node was created at UCLA, where Leonard Kleinrock could evaluate network performance and examine his theories on message delay.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:52.147Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bob Kahn playing a major role in the overall ARPANET architectural design, the network topology and economics were designed and optimized by Roberts working with Howard Frank and his team at Network Analysis Corporation, and the network measurement system was prepared by Kleinrock’s team at UCLA.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “UCLA” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:52.147Z",
+   "target": "f06658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Internet50 | UCLA Samueli School Of Engineering",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:52.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “UCLA” is on the snapshot of s7"
+  }
+ ]
+}

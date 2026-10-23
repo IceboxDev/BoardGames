@@ -1,0 +1,755 @@
+{
+ "article": "a0029",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Usain_Bolt",
+   "title": "Usain Bolt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:01.569Z",
+   "snapshot": "894f9bfae43ce35355a8a8e6059fd4258fd8a376b4315ea38b4bca6361cf627b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jim_Hines",
+   "title": "Jim Hines – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:02.596Z",
+   "snapshot": "e2dd0f263ebaee6fff8f198c2b2c3af11094fcd6c2a0c5f825dd748bdf5d627f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Men's_100_metres_world_record_progression",
+   "title": "Men's 100 metres world record progression – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:03.436Z",
+   "snapshot": "3d9b33e93333515529430ba65556c1f9dadb2b120c150cd18c6b7f445baea58b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Asafa_Powell",
+   "title": "Asafa Powell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:04.550Z",
+   "snapshot": "f581191df2f13eef9b58dc3f2265c794dbed66bb6812ad81198ef0019cbfb33a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Florence_Griffith-Joyner",
+   "title": "Florence Griffith-Joyner",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:02.425Z",
+   "snapshot": "0b59fbe212811e6e8a5d44ea141d98bd55cb3fa206d6bd87c335fedaecbf3409"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/400-Meter-Lauf",
+   "title": "400-Meter-Lauf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:02.976Z",
+   "snapshot": "65a881a6e3597fd1a5b469f5c897e2a8aefdf00179eeebbe2ce92353ab92f3e9"
+  },
+  "s7": {
+   "url": "https://worldathletics.org/disciplines/sprints/100-metres",
+   "title": "100 Metres – Sprints",
+   "publisher": "World Athletics",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:21.210Z",
+   "snapshot": "e9cd647b120f28fcbcc3892a1973d5a0ff368be75df00f3edc7683028a46eaf5"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Lewis",
+   "title": "Carl Lewis – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:43:47Z"
+  },
+  "s9": {
+   "url": "https://worldathletics.org/disciplines/sprints/400-metres",
+   "title": "400 Metres – Sprints",
+   "publisher": "World Athletics",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:22.333Z",
+   "snapshot": "a0ca0504e85d08354274a2c9cfe8b30870b26cefda1b0d6f7dc9ca85e3995175"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Usain Bolt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jim Hines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Lewis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Asafa Powell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Florence Griffith-Joyner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-111"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "400-Meter-Lauf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-346"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:39.588Z",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Usain Bolt's countryman, Yohan Blake, won in a comparatively slow 9.92 seconds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Usain Bolt” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:39.588Z",
+   "target": "f00142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jim Hines wins the 1968 Olympics men's 100 meters final in 9.95 seconds via the Olympic Channel on YouTube",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jim Hines” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:39.588Z",
+   "target": "f00143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carl Lewis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Carl Lewis”, “Карл Льюис”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:39.588Z",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Asafa Powell CD (born 23 November 1982) is a Jamaican retired sprinter who specialised in the 100 metres.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asafa Powell” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:39.588Z",
+   "target": "f14094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Florence Griffith-Joyner wuchs mit zehn Geschwistern in Los Angeles auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florence Griffith-Joyner” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:39.588Z",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der 400-Meter-Lauf ist die längste olympische Sprintdisziplin in der Leichtathletik und wird sowohl bei Freiluft- als auch bei Hallenwettkämpfen ausgetragen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.588Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “400-Meter-Lauf” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:43:36Z",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Just a few months later, in August of that year, Bolt broke his own record with 9.69. One year later, he broke it again with a time of 9.58.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23",
+   "note": "9.69 (2008) was the record before; 9.58 (Berlin, 16 Aug 2009) is the first time under 9.6."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:43:39Z",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bolt improved upon his second 100 m world record of 9.69 with 9.58 seconds in 2009",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:43:41Z",
+   "target": "f00142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first athlete to achieve a time of under 10 seconds was Jim Hines, who ran 9.95 in 1968.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:43:44Z",
+   "target": "f00142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jim Hines: First sprinter to run 100m in under 10 seconds dies",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:43:46Z",
+   "target": "f00143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In August 1991, US athlete Carl Lewis achieved the first-ever sub-9.90 time, with 9.86.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:43:47Z",
+   "target": "f00143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "he reclaimed the world record with a clocking of 9.86",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:43:49Z",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Powell went on to match that record a further two times before he improved it to 9.74 in 2007.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:43:50Z",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 9 September 2007, in the opening heats of the IAAF Grand Prix in Rieti, Italy, Powell ran a new world record time of 9.74 s",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:43:52Z",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Often referred to as the one-lap race or the long sprint, the 400m sprint and the 400m dash",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:43:53Z",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der 400-Meter-Lauf ist die längste olympische Sprintdisziplin in der Leichtathletik",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Just a few months later, in August of that year, Bolt broke his own record with 9.69. One year later, he broke it again with a time of 9.58.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bolt improved upon his second 100 m world record of 9.69 with 9.58 seconds in 2009",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first athlete to achieve a time of under 10 seconds was Jim Hines, who ran 9.95 in 1968.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In August 1991, US athlete Carl Lewis achieved the first-ever sub-9.90 time, with 9.86.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Powell went on to match that record a further two times before he improved it to 9.74 in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 9 September 2007, in the opening heats of the IAAF Grand Prix in Rieti, Italy, Powell ran a new world record time of 9.74 s",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s4"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Often referred to as the one-lap race or the long sprint, the 400m sprint and the 400m dash",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der 400-Meter-Lauf ist die längste olympische Sprintdisziplin in der Leichtathletik",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s6"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In May 2008, his fellow Jamaican runner and one of the biggest names in athletics history, Usain Bolt, claimed the world record with a time of 9.72.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Usain Bolt” is on the snapshot of s7"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first athlete to achieve a time of under 10 seconds was Jim Hines, who ran 9.95 in 1968.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jim Hines” is on the snapshot of s7"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In August 1991, US athlete Carl Lewis achieved the first-ever sub-9.90 time, with 9.86.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Carl Lewis” is on the snapshot of s7"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f00145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The year 2005 saw the start of Jamaica’s dominance in the men’s 100m sprint, when Asafa Powell broke the world record with a time of 9.77.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Asafa Powell” is on the snapshot of s7"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:51:54.918Z",
+   "target": "f14690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The modern event evolved from the ‘diaulos’, a two-mark race that was contested at the Ancient Olympics – this length was akin to 400 metres",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:54.918Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “400 metres” is on the snapshot of s9"
+  }
+ ]
+}

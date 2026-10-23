@@ -1,0 +1,343 @@
+{
+ "article": "a0447",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Easter_Island",
+   "title": "Easter Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:49.853Z",
+   "snapshot": "5a59099d281fcd649784f4fc9ff35c47fe2dfcef50c0b0feebd63ce35d594ca0"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Osterinsel",
+   "title": "Osterinsel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:56:47.173Z",
+   "snapshot": "0a9944b08bb2e3c634857a720855cfd527a8b1f386323277de023e591594cb32"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Terracotta_Army",
+   "title": "Terracotta Army – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:50.792Z",
+   "snapshot": "9be48b73fb9c2b748b112cffc01693b595c7c47530e0422f3f931a443fbcd01f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
+   "title": "Christ the Redeemer (statue) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:51.682Z",
+   "snapshot": "92ccd03e3869ce09a79432a0af9e53a2c1b90eed4dc240df6aca6abd60fa6321"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Cristo_Redentor_(Rio_de_Janeiro)",
+   "title": "Cristo Redentor (Rio de Janeiro) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:56:49.284Z",
+   "snapshot": "9a868ec68a1dbb5c2b3af6b0d74c1fe64a5c1e982cf4dabf3c7ab27bd01ed131"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue)",
+   "title": "The Little Mermaid (statue) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:52.672Z",
+   "snapshot": "5fa1757ea2f44831443c8ddbbadd3f4f085eef803fedf17f8e7ba448dfd3848d"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Venus_von_Milo",
+   "title": "Venus von Milo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:56:50.002Z",
+   "snapshot": "ecd29b989bdbc61eea69441275165b2ec007e3e72a5a8ea4e8c3e9f263eb9a8e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Venus_de_Milo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:20.503Z",
+   "snapshot": "76bb26904d5376cb0da4544a4c8e47a2c4e6ee146737df63ad00f194812a5f8b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Easter Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Osterinsel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-290"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Xi'an",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rio de Janeiro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rio de Janeiro",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-063"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Copenhagen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Louvre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-315"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f02231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Easter Island (Spanish: Isla de Pascua, [ˈisla ðe ˈpaskwa]; Rapa Nui: Rapa Nui, [ˈɾapa ˈnu.i]) is an island and special territory of Chile in the southeastern Pacific Ocean, at the southeasternmost point of the Polynesian Triangle in Oceania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Easter Island” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f02231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Osterinsel (spanisch Isla de Pascua, rapanui Rapa Nui) ist eine isoliert gelegene Insel im Südostpazifik, die politisch zu Chile gehört, geographisch jedoch zu Polynesien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Osterinsel” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f02232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The figures, dating from approximately the late 200s BCE, were discovered in 1974 by local farmers in Lintong County, outside Xi'an, Shaanxi, China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xi'an” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f02233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Christ the Redeemer (Portuguese: Cristo Redentor, standard Brazilian Portuguese: [ˈkɾistu ʁedẽˈtoʁ]) is an Art Deco statue of Jesus in Rio de Janeiro, Brazil, created by French-Polish sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio de Janeiro” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f02233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Bau der Statue begann 1922; Finanzierungsprobleme verzögerten den Bau aber um fast zehn Jahre, ehe nach der Unterstützung des Erzbistums Rio de Janeiro, des Heiligen Stuhls und Frankreichs schließlich die Einweihung am 12.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio de Janeiro” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f02234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The sculpture is displayed on a rock by the waterside at the Langelinie promenade in Copenhagen, Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Copenhagen” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:49.501Z",
+   "target": "f10755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sie befindet sich heute im Louvre; der Name des Künstlers ist nicht überliefert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louvre” is on the snapshot of s7"
+  }
+ ]
+}

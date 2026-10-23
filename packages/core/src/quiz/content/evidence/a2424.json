@@ -1,0 +1,273 @@
+{
+ "article": "a2424",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_drei_Musketiere",
+   "title": "Die drei Musketiere",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:45.062Z",
+   "snapshot": "6283f9338bed487437cf101e27a5b45e533d1f838f670bfbb32dce63d428d9d8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Alexandre_Dumas_der_%C3%84ltere",
+   "title": "Alexandre Dumas der Ältere",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:45.847Z",
+   "snapshot": "957d84d2658ca07551413a3b78df527232ff855daf55730c16670cac0f8143ce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Three_Musketeers",
+   "title": "The Three Musketeers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:10.073Z",
+   "snapshot": "00c3143447cc27c6ea681f126088a396bbf0cdba1d8131ad842cad5d3ca63988"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
+   "title": "The Count of Monte Cristo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:48.413Z",
+   "snapshot": "78bb39eed34191677daf5ffa84ec0c75548e9a7de0fef336c9b1ef2c9cd844f0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Athos, Porthos und Aramis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-287"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12712",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexandre Dumas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; history entry seq 12; transcript tp-373"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12713",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Milady de Winter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Auguste Maquet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Château d'If",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abbé Faria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:18.458Z",
+   "target": "f12711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Er wurde 1844 veröffentlicht und ist der erste Teil einer Trilogie über d’Artagnan und seine drei Freunde Athos, Porthos und Aramis, die zu den Musketieren der Garde gehören.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Athos, Porthos und Aramis” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:18.458Z",
+   "target": "f12712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dezember 1870 in Puys bei Dieppe, Département Seine-Maritime), im Deutschen auch bekannt als Alexandre Dumas der Ältere, war ein französischer Schriftsteller und Vater von Alexandre Dumas dem Jüngeren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexandre Dumas” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:18.458Z",
+   "target": "f12713",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "D'Artagnan resolves to avenge himself upon the older man, who is actually the Comte de Rochefort, an agent of Cardinal Richelieu, who is passing the latter's orders to his spy, Milady de Winter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Milady de Winter” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:18.458Z",
+   "target": "f12714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As with some of his other works, he wrote it in collaboration with ghostwriter Auguste Maquet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auguste Maquet” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:18.458Z",
+   "target": "f12715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It follows the life of Edmond Dantès, a young sailor who is falsely accused of treason, and imprisoned in the prison Château d’If.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Château d'If” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:18.458Z",
+   "target": "f12716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "There, he meets Abbé Faria, who educates him and reveals the location of a hidden treasure on the island of Monte Cristo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:18.458Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abbé Faria” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,422 @@
+{
+ "article": "a2367",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+   "title": "Berlin Wall",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:11.416Z",
+   "snapshot": "ddfc507696701de7d2b7313c169aded7a233eedfcd5af28e9ff5add13eb75b26"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Mauer",
+   "title": "Berliner Mauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:38.372Z",
+   "snapshot": "f3c000083fa9ed36798bc48a0b73c783fddbff3160100b07c0a3f066a48eb17d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Checkpoint_Charlie",
+   "title": "Checkpoint Charlie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:22.802Z",
+   "snapshot": "e0b5b53c3677aa8febd2a5f33a818ad5f2f0950ea2b50792695d1b47aa9e8caa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Conrad_Schumann",
+   "title": "Conrad Schumann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:22.276Z",
+   "snapshot": "237b53ca6fbb869aecac1423e3808899e9f555cdfca967af9fbdba3cfc85f98c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Fechter",
+   "title": "Peter Fechter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:23.292Z",
+   "snapshot": "d0181693e134420e779dcca122da06190a4314763322876b09654efad8775a90"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Checkpoint_Charlie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:24.269Z",
+   "snapshot": "b28c948ed592b5bfb4f0cbd1d257bae19860c5ae34c709df831bc3f223a166e9"
+  },
+  "s7": {
+   "url": "https://www.lpb-bw.de/mauerbau",
+   "title": "Bau der Berliner Mauer",
+   "publisher": "Landeszentrale für politische Bildung Baden-Württemberg",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:54.433Z",
+   "snapshot": "417178654443a7ca83bce4a90bb3496ecf003d0699e6672d88c4a4f192c88380"
+  },
+  "s8": {
+   "url": "https://www.bpb.de/kurz-knapp/hintergrund-aktuell/337560/1961-bau-der-berliner-mauer/",
+   "title": "1961: Bau der Berliner Mauer",
+   "publisher": "Bundeszentrale für politische Bildung",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:55.421Z",
+   "snapshot": "a6386696e6221f7969eed97259308df8cbb1b97640458aacfc0f5fe2003110a3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sunday",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-247"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "59 Tage",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-319"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12346",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berliner Mauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-389"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12347",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Checkpoint Charlie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-015"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12349",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Conrad Schumann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Fechter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:06.242Z",
+   "target": "f12344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "At midnight, the police and units of the East German army began to close the border and, by Sunday morning, 13 August, the border with West Berlin was closed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sunday” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:06.242Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "59 Tage",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“59 Tage”, “59 days”, “59 дней”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:06.242Z",
+   "target": "f12346",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Berliner Mauer war während der Teilung Deutschlands ein Grenzbefestigungssystem der Deutschen Demokratischen Republik (DDR), das vom 13.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berliner Mauer” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:06.242Z",
+   "target": "f12347",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Checkpoint Charlie war einer der Berliner Grenzübergänge durch die Berliner Mauer zwischen 1961 und 1990.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Checkpoint Charlie” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:06.242Z",
+   "target": "f12349",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hans Conrad Schumann, also known as Konrad Schumann (28 March 1942 – 20 June 1998), was an East German Bereitschaftspolizist who escaped to West Germany during the construction of the Berlin Wall in 1961.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Conrad Schumann” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:06.242Z",
+   "target": "f12350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peter Fechter (14 January 1944 – 17 August 1962) was an East German bricklayer who became the twenty-seventh known person to die at the Berlin Wall.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:06.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Fechter” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:33:43Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das sagte der DDR-Staatsratsvorsitzende Walter Ulbricht am 15. Juni 1961 auf einer Pressekonferenz in Berlin (Ost). Knapp zwei Monate später, am 13. August 1961, begannen die Arbeiten am Mauerbau.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "15 June -> 13 August 1961 = 59 days (15 days of June after the 15th + 31 + 13)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:33:48Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Am 15. Juni 1961, vor dem Hintergrund der sich wieder zuspitzenden Zweiten Berlinkrise, wurde Walter Ulbricht bei einer Pressekonferenz von der westdeutschen Journalistin Annamarie Doherr (Frankfurter Rundschau) gefragt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Date of the remark; construction began 13 August 1961 → 59 days later."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:33:52Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "entgegen den Beteuerungen des Staatsratsvorsitzenden der DDR, Walter Ulbricht, auf einer internationalen Pressekonferenz am 15. Juni 1961",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Construction began 13 August 1961, 59 days after 15 June."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:50.532Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Das sagte der DDR-Staatsratsvorsitzende Walter Ulbricht am 15. Juni 1961 auf einer Pressekonferenz in Berlin (Ost). Knapp zwei Monate später, am 13. August 1961, begannen die Arbeiten am Mauerbau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:50.532Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Am 15. Juni 1961, vor dem Hintergrund der sich wieder zuspitzenden Zweiten Berlinkrise, wurde Walter Ulbricht bei einer Pressekonferenz von der westdeutschen Journalistin Annamarie Doherr (Frankfurter Rundschau) gefragt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:50.532Z",
+   "target": "f12345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "entgegen den Beteuerungen des Staatsratsvorsitzenden der DDR, Walter Ulbricht, auf einer internationalen Pressekonferenz am 15. Juni 1961",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  }
+ ]
+}

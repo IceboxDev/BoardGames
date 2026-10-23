@@ -1,0 +1,262 @@
+{
+ "article": "a1290",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ruy_L%C3%B3pez_de_Villalobos",
+   "title": "Ruy López de Villalobos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:24.205Z",
+   "snapshot": "85760f7c6e8fc2497cf60da797ff3784ae09580eb8ec3fb99b4322fcb36a2db7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/%C3%81lvaro_de_Menda%C3%B1a_de_Neira",
+   "title": "Álvaro de Mendaña de Neira – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:25.078Z",
+   "snapshot": "a59407482fd9c1455164929fa58aca3b96f24c49d78a2b5c530f63f576544074"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Solomon_Islands",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:26.686Z",
+   "snapshot": "c5dc38d0d4b2b7598e6d5a5e0bfc76c1fc295cb02c257d9bfac2e73d4531b552"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mauritius",
+   "title": "Mauritius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:27.203Z",
+   "snapshot": "65a1585591898c11e04ed2da8da0ffa63cd9bb7e10664edd2064b8963981a31a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gran_Colombia",
+   "title": "Gran Colombia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:12.292Z",
+   "snapshot": "30f5431bcf33b67f65422fa70437f8f4706ac0617fde7e6530be26123bc7a348"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Maurice,_Prince_of_Orange",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:28.162Z",
+   "snapshot": "d7d3a4944ba417696300909c7f3b1bd00a707075f70fedc91323b68fd8f3cb8a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bolivia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:29.611Z",
+   "snapshot": "290ebe5125d3d9cbb34ac257ded7a53057f6fea82b6489c1588c567562323c1b"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Colombia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:30.295Z",
+   "snapshot": "e6db822b88bb963c952a4319c388fe579469451f86897177501d82248cd4c021"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Philippines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Solomon Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Solomon Islands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06448",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mauritius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Colombia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:01.103Z",
+   "target": "f06446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1500 – 23 April 1546) was a Spanish explorer who led a failed attempt to colonize the Philippines in 1543, attempting to assert Spanish control there under the terms of the treaties of Tordesillas and Zaragoza.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philippines” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:01.103Z",
+   "target": "f06447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The expedition had discovered the Solomon Islands which were named Islas Salomon on the expedition's return.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solomon Islands” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:01.103Z",
+   "target": "f06447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Solomon Islands is an archipelagic country consisting of six major islands and over 1,000 smaller islands in Melanesia, Oceania, to the north-east of Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solomon Islands” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:01.103Z",
+   "target": "f06448",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mauritius, officially the Republic of Mauritius, is an island country in the Indian Ocean, located about 1,100 nautical miles (2,000 km; 1,300 mi) off the southeastern coast of Africa, east of Madagascar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mauritius” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:01.103Z",
+   "target": "f06450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gran Colombia (Spanish pronunciation: [ˈɡɾaŋ koˈlombja] , \"Great Colombia\"), also known as Greater Colombia and officially the Republic of Colombia (Spanish: República de Colombia), was the Colombian state that encompassed much of northern South America and parts of Central America from 1819 to",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colombia” is on the snapshot of s5"
+  }
+ ]
+}

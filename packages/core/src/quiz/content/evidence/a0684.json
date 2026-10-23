@@ -1,0 +1,242 @@
+{
+ "article": "a0684",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Filter_bubble",
+   "title": "Filter bubble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:01.177Z",
+   "snapshot": "77c3d87cf028a80ea3d2bc314bab8b535078da8f94d2c9bc534f78653a6c62b0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Echo_chamber_(media)",
+   "title": "Echo chamber (media) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:02.255Z",
+   "snapshot": "8deac361ee29bb36af2dc89586ab34ff568135eb5e62e9841d9c05bfd5d6aaa2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Clickbait",
+   "title": "Clickbait – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:03.140Z",
+   "snapshot": "303f20d0040274e0f356f0a66d8e5344a6f354b0408edfded7489da19c28cd18"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Social_bot",
+   "title": "Social bot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:04.216Z",
+   "snapshot": "f56112a5d6a71724cb37fd880db597991226556ba9e43f0277b8dc2d6bcab852"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/HTTP_cookie",
+   "title": "HTTP cookie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:05.408Z",
+   "snapshot": "a67e42948778e7aed2ba55df79e259b18452cb67ee2fc14a2dd793b9f11d4ebe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Filter bubble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Echo chamber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Clickbait",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Social bots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cookies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:26.461Z",
+   "target": "f03416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A filter bubble is a state of intellectual isolation that arises when personalized searches, recommendation systems, and algorithmic curation selectively presents information to each user; the search results are based on information about the user, such as their location, past click-behavior, and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.461Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Filter bubble” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:26.461Z",
+   "target": "f03417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the context of news media and social media, an echo chamber is defined as an environment or ecosystem in which participants encounter beliefs that amplify or reinforce their preexisting beliefs, by communication and repetition inside a closed system and insulated from rebuttal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.461Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Echo chamber” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.461Z",
+   "target": "f03418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Clickbait (also known as link bait or linkbait) is a text or a thumbnail link that is designed to attract attention and to entice users to follow (\"click\") that link and view, read, stream or listen to the linked piece of online content, being typically deceptive, sensationalized, or otherwise",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.461Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clickbait” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.461Z",
+   "target": "f03419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Although their levels of autonomy vary, and often include a human-in-the-loop, social bots can use artificial intelligence to perform social media actions and can use large language models to mimic human dialogue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.461Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Social bots” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.461Z",
+   "target": "f03420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user's device during a session.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.461Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cookies” is on the snapshot of s5"
+  }
+ ]
+}

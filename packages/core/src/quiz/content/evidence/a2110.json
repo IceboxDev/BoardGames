@@ -1,0 +1,582 @@
+{
+ "article": "a2110",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1931_China_floods",
+   "title": "1931 China floods – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:05.777Z",
+   "snapshot": "0b465ef820b28d8672f22ff782dc71b0a6ec683d3ec5b5930498cf1aad300bc0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mekong",
+   "title": "Mekong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:07.020Z",
+   "snapshot": "bb6d2f693d51825dd696c40fe60d964de1e721fe707010d37423287c45c6eaf1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Mekong",
+   "title": "Mekong",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:04.100Z",
+   "snapshot": "55a58c9e5224be026d660235591c17231434fa20061aaf1967b21af131e4c9cc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Indus_Waters_Treaty",
+   "title": "Indus Waters Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:07.942Z",
+   "snapshot": "88622ca76f4bf4d81317964d7b281843ed10c66e8baea293768e03f3a4e15e92"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Medog_Hydropower_Station",
+   "title": "Medog Hydropower Station – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:08.863Z",
+   "snapshot": "dd2ec27b1125aac8a1e5cead43a72e507aa0c9071ffb0c32fae61d949f130b84"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Farakka_Barrage",
+   "title": "Farakka Barrage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:09.792Z",
+   "snapshot": "fe80d01ab091861201b85a141daa095d8c21f95c20ed79923f654a86f442510a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Yellow_River",
+   "title": "Yellow River",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:10.997Z",
+   "snapshot": "d1b2805213c31f849e0d3afb886fbd877d4e05ca244745fc1e7af1d0361168e6"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Yangtze",
+   "title": "Yangtze – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:14.571Z",
+   "snapshot": "d46d5952513ec864a169197909910d5ceccae4993fc00992fd12d634307bc3fa"
+  },
+  "s9": {
+   "url": "https://www.worldatlas.com/rivers/yellow-river.html",
+   "title": "Yellow River – WorldAtlas",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:45.841Z",
+   "snapshot": "37842c2682581c275f75801c45a8b80b827c483d30fb0fc155a6cfa3f7f375f0"
+  },
+  "s10": {
+   "url": "https://www.worldatlas.com/rivers/yangtze-river.html",
+   "title": "Yangtze River – WorldAtlas",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:14.834Z",
+   "snapshot": "da1c0643517d3e5137f2919210f2cf9e423b47d3d57d2e19e98abd731b472243"
+  },
+  "s11": {
+   "url": "https://www.ebsco.com/research-starters/science/yellow-river/",
+   "title": "Yellow River – EBSCO Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:45.936Z",
+   "snapshot": "497667867b599e7d4c5ccf9b4b18bc88e62d900b784ed6c47bddfad0a3e88a48"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yangtze and Yellow River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mekong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 49"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mekong",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-399"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Indus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Brahmaputra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ganges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Yellow River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-114"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yangtze and Yellow River",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Yangtze and Yellow River”, “Jangtsekiang und Gelber Fluss”, “Янцзы и Хуанхэ”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f25008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Mekong or Mekong River (UK:  mee-KONG, US:  may-KAWNG) is a transboundary river in East Asia and Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mekong” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f25008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Mekong ([ˈmeːkɔŋ] oder [meˈkɔŋ]) ist ein Strom in Südostasien, der sechs Länder durchquert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mekong” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f10548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Indus Waters Treaty (IWT) is a water-distribution treaty between India and Pakistan to use the water available in the Indus River system in the territories of the two countries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Indus” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f10549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This watercourse continues into India as the Brahmaputra River and into Bangladesh as the Jamuna River, serving as a crucial water source for these regions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brahmaputra” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f10550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The purpose of the barrage is to divert 1,800 cubic metres per second (64,000 cu ft/s) of water from the Ganges to the Hooghly River for flushing out sediment deposition from Kolkata harbour without the need of regular mechanical dredging.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ganges” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:24.165Z",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Yellow River, also known as Huang He, is the second-longest river in China and the sixth-longest in the world, with an estimated length of 5,464 km (3,395 mi) and a drainage basin of 795,000 km2 (307,000 sq mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.165Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yellow River” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:08:12Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It rises at Jari Hill in the Tanggula Mountains of the Tibetan Plateau",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:08:14Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Yellow River sources from the Bayan Har Mountains adjacent to the eastern edge of Qinghai’s Yushu Tibetan Autonomous Prefecture",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:08:15Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Yangtze River is the world’s third longest river after the Nile and Amazon Rivers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:08:17Z",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "For every 35 cubic feet (1 cubic meter) of water from the river, there are 75 pounds (34 kilograms) of sediment.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: \"the only major river in the world that comes close is the Colorado\"; also \"Cradle of Chinese Civilization\" and \"Mother of China\"."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:08:19Z",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "One estimate gives 34 kilograms of silt per cubic meter, as opposed to 10 for the Colorado and 1 for the Nile.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:11.089Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It rises at Jari Hill in the Tanggula Mountains of the Tibetan Plateau",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:11.089Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Yellow River sources from the Bayan Har Mountains adjacent to the eastern edge of Qinghai’s Yushu Tibetan Autonomous Prefecture",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:11.089Z",
+   "target": "f10546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Yangtze River is the world’s third longest river after the Nile and Amazon Rivers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:11.089Z",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "For every 35 cubic feet (1 cubic meter) of water from the river, there are 75 pounds (34 kilograms) of sediment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:11.089Z",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "One estimate gives 34 kilograms of silt per cubic meter, as opposed to 10 for the Colorado and 1 for the Nile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:11.089Z",
+   "target": "f12081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Yellow River | Science | Research Starters | EBSCOhost",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.089Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yellow River” is on the snapshot of s11"
+  }
+ ]
+}

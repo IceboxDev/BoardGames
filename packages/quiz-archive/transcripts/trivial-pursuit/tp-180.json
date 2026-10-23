@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-180",
+ "image": "IMG20261007173554.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Das Croissant wurde in in der Schweiz erfunden. Richtig oder falsch?",
+   "de": "In welchem Land wurde das moderne Croissant aus dem österreichischen Kipferl entwickelt?",
+   "en": "In which country was the modern croissant developed from the Austrian kipferl?",
+   "reworked": true,
+   "answerDe": "Frankreich",
+   "answerEn": "France",
+   "timeline": {
+    "kind": "event",
+    "start": "1838",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Austrian officer August Zang opens his Viennese bakery in Paris, bringing the kipferl to France",
+    "labelDe": "Der österreichische Offizier August Zang eröffnet in Paris seine Wiener Bäckerei und bringt das Kipferl nach Frankreich"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Croissant",
+    "title": "Croissant",
+    "lang": "en"
+   },
+   "notes": "Card statement is false: the croissant is French, inspired by the Austrian kipferl; French bakers developed the laminated-dough croissant in the early 20th century. Zang's bakery opened in 1838 or 1839. The card prints 'in in' (sic).",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der Schauspieler, der mit seinem Auftritt in Endstation Sehnsucht dem T-Shirt zum Durchbruch verhalf?",
+   "de": "Wie heißt der Schauspieler, der mit seinem Auftritt in Endstation Sehnsucht dem T-Shirt zum Durchbruch verhalf?",
+   "en": "What is the name of the actor whose appearance in A Streetcar Named Desire helped the T-shirt make its breakthrough?",
+   "reworked": false,
+   "answerDe": "Marlon Brando",
+   "answerEn": "Marlon Brando",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1924-04-03",
+    "end": "2004-07-01",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of the American actor Marlon Brando",
+    "labelDe": "Lebensdaten des US-amerikanischen Schauspielers Marlon Brando"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Marlon_Brando",
+    "title": "Marlon Brando",
+    "lang": "de"
+   },
+   "notes": "As Stanley Kowalski (Broadway 1947, film 1951) costume designer Lucinda Ballard dressed him in tight jeans and T-shirts.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welcher Lendenschurzträger wurde zwar fünfmal für den Friedensnobelpreis nominiert, erhielt ihn aber nie?",
+   "de": "Welcher Lendenschurzträger wurde zwar fünfmal für den Friedensnobelpreis nominiert, erhielt ihn aber nie?",
+   "en": "Which loincloth wearer was nominated five times for the Nobel Peace Prize but never received it?",
+   "reworked": false,
+   "answerDe": "Mahatma Gandhi",
+   "answerEn": "Mahatma Gandhi",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1869-10-02",
+    "end": "1948-01-30",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of Mahatma Gandhi, leader of India's non-violent independence movement",
+    "labelDe": "Lebensdaten von Mahatma Gandhi, Anführer der gewaltfreien indischen Unabhängigkeitsbewegung"
+   },
+   "source": {
+    "url": "https://www.nobelprize.org/prizes/themes/mahatma-gandhi-the-missing-laureate/",
+    "title": "Mahatma Gandhi, the missing laureate",
+    "lang": "en"
+   },
+   "notes": "Nominated in 1937, 1938, 1939, 1947 and 1948 (five years; twelve nominations in all per the nomination archive).",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Titel wurde im Rahmen vom Reclams Universal-Bibliothek als erster veröffentlicht: Faust, Die Räuber oder Die Verwandlung?",
+   "de": "Welcher Titel wurde im Rahmen von Reclams Universal-Bibliothek als erster veröffentlicht?",
+   "en": "Which title was the first to be published in Reclam's Universal-Bibliothek series?",
+   "reworked": true,
+   "answerDe": "Faust I (Goethe)",
+   "answerEn": "Faust, Part One (Goethe)",
+   "timeline": {
+    "kind": "event",
+    "start": "1867-11-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Reclam's Universal-Bibliothek starts in Leipzig with Goethe's Faust I and II as numbers 1 and 2",
+    "labelDe": "Reclams Universal-Bibliothek startet in Leipzig mit Goethes Faust I und II als Nummern 1 und 2"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Reclams_Universal-Bibliothek",
+    "title": "Reclams Universal-Bibliothek",
+    "lang": "de"
+   },
+   "notes": "Faust I was no. 1 and Faust II no. 2, both issued on 10 November 1867. Card reads 'im Rahmen vom' (sic).",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche US-Behörde erfand kratzfeste Brillengläser?",
+   "de": "Welche US-Behörde erfand kratzfeste Brillengläser?",
+   "en": "Which US agency invented scratch-resistant eyeglass lenses?",
+   "reworked": false,
+   "answerDe": "NASA",
+   "answerEn": "NASA",
+   "timeline": {
+    "kind": "founding",
+    "start": "1958-07-29",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "NASA is established by the signing of the National Aeronautics and Space Act",
+    "labelDe": "Die NASA wird mit der Unterzeichnung des National Aeronautics and Space Act gegründet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/NASA_spin-off_technologies",
+    "title": "NASA spin-off technologies",
+    "lang": "en"
+   },
+   "notes": "The coating was developed to protect space equipment such as helmet visors; Foster Grant first licensed it.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 6,
+   "cardDe": "In welchem Turnus findet die Fussballweltmeisterschaft statt?",
+   "de": "In welchem Turnus findet die Fussballweltmeisterschaft statt?",
+   "en": "How often is the FIFA World Cup held?",
+   "reworked": false,
+   "answerDe": "Alle vier Jahre",
+   "answerEn": "Every four years",
+   "timeline": {
+    "kind": "event",
+    "start": "1930-07-13",
+    "end": "1930-07-30",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First FIFA World Cup, held in Uruguay",
+    "labelDe": "Erste Fußball-Weltmeisterschaft, ausgetragen in Uruguay"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft",
+    "title": "Fußball-Weltmeisterschaft",
+    "lang": "de"
+   },
+   "notes": "Card spells 'Fussballweltmeisterschaft' with ss; kept verbatim.",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

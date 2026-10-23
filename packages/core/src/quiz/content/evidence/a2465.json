@@ -1,0 +1,373 @@
+{
+ "article": "a2465",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Johann_Strauss_II",
+   "title": "Johann Strauss II",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:37.124Z",
+   "snapshot": "3e5dc1bc197eb0c63bb7c0d0b6ba8cddea843f001894889a28701f820fe5d76d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Richard_Strauss",
+   "title": "Richard Strauss",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:37.857Z",
+   "snapshot": "e45811cefba5a7198c2bda3d8d1cf34f05be29ac60af4b982e7e215270967ad2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Radetzky_March",
+   "title": "Radetzky March – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:38.080Z",
+   "snapshot": "90435676b0b4813c4627f7df9c3c77e6502e336d93b4c33cfe7530df9fe6201b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Die_Fledermaus",
+   "title": "Die Fledermaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:54.179Z",
+   "snapshot": "03c20eba5f35c5ef03eea7af3d63047a295e3b6ccfbbfa60ae3951e18f3facf0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Also_sprach_Zarathustra_(Strauss)",
+   "title": "Also sprach Zarathustra (Strauss) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:39.006Z",
+   "snapshot": "07e78b46c6d477a4f58fc2cc570e7f1e97d69280b10aa8d7eafc104570b27a40"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Der_Rosenkavalier",
+   "title": "Der Rosenkavalier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:40.098Z",
+   "snapshot": "03e0ed0c87057add4ef82f6a3b97d08c8fce61c8f02b2f5f813e09f11a03cbc7"
+  },
+  "s7": {
+   "url": "https://www.musiklexikon.ac.at/ml/musik_S/Strauss_Familie_JOHANN.xml",
+   "title": "Strauss, Familie: Johann (Vater) – Oesterreichisches Musiklexikon online",
+   "publisher": "Austrian Academy of Sciences",
+   "kind": "scholarly",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:31.270Z",
+   "snapshot": "88794b4ed458d326402703babba1180673d3539beafd235786afa9621824924d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johann Strauss II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Richard Strauss",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-272"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johann Strauss I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Fledermaus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Also sprach Zarathustra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Rosenkavalier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:24.359Z",
+   "target": "f12987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hanns (together with Alice) took an active role in managing Johann Strauss II's legacy and estate, later inheriting many associated artefacts and prized possessions after the death of his mother, Alice (Johann II's direct heir).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Strauss II” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:24.359Z",
+   "target": "f12988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Richard Strauss war außerdem ein weltberühmter Dirigent, Kapellmeister und Operndirektor sowie ein Kämpfer für eine Reform des Urheberrechts.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Strauss” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:24.359Z",
+   "target": "f12989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johann Strauss I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Johann Strauss I”, “Johann Strauss (Vater)”, “Иоганн Штраус-отец”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:24.359Z",
+   "target": "f12990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Fledermaus (German: [diː ˈfleːdɐˌmaʊs], The Bat, sometimes called The Revenge of the Bat) is an operetta composed by Johann Strauss II to a German libretto by Karl Haffner and Richard Genée, which premiered in 1874.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Fledermaus” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:24.359Z",
+   "target": "f12991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Brazilian musician Eumir Deodato's jazz-funk styled arrangement of the opening fanfare Sunrise theme, titled \"Also Sprach Zarathustra (2001)\", reached No.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Also sprach Zarathustra” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:24.359Z",
+   "target": "f12992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Rosenkavalier (The Knight of the Rose or The Rose-Bearer), Op.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.359Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Rosenkavalier” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:31Z",
+   "target": "f12989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ländler, Märsche (Radetzkymarsch), Polkas",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:35Z",
+   "target": "f12989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a march composed by Johann Strauss Sr.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:07.167Z",
+   "target": "f12989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ländler, Märsche (Radetzkymarsch), Polkas",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:07.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:07.167Z",
+   "target": "f12989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a march composed by Johann Strauss Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:07.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  }
+ ]
+}

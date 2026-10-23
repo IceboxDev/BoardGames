@@ -1,0 +1,195 @@
+{
+ "article": "a1351",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1977_Nestl%C3%A9_boycott",
+   "title": "1977 Nestlé boycott – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:21.294Z",
+   "snapshot": "8a6916de8d1c313419e1b62c6dcb1db448bf804a0e58df0e10ca8d5988c3ca11"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Enron_scandal",
+   "title": "Enron scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:22.414Z",
+   "snapshot": "28ae25c0938aaaaf4d37c111149646fa71de84cd982d10df09aa575af51c7fdb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bhopal_disaster",
+   "title": "Bhopal disaster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:23.381Z",
+   "snapshot": "c0c0bba4b8a1478875a7bf6085a82c3de98a8de62927c15e6c2787a0db49cfc9"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Contergan-Skandal",
+   "title": "Contergan-Skandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:20.626Z",
+   "snapshot": "02f53723cfbb7eecd42fa5ebbd2b9a2e3781864c602d9957486b26a10a04d976"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nestlé",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Enron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Union Carbide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grünenthal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:12.388Z",
+   "target": "f06751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A boycott against the Swiss-based multinational food and drink processing corporation Nestlé was launched in the United States on 4 July 1977.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nestlé” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:12.388Z",
+   "target": "f06753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Enron scandal was an accounting scandal sparked by American energy company Enron Corporation filing for bankruptcy after news of widespread internal fraud became public in October 2001, which led to the dissolution of its accounting firm, Arthur Andersen, previously one of the five largest in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enron” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:12.388Z",
+   "target": "f06754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 3 December 1984, over 500,000 people in the vicinity of the Union Carbide India Limited pesticide plant in Bhopal, Madhya Pradesh, India, were exposed to the highly toxic gas methyl isocyanate, in what is considered the world's worst industrial disaster.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Union Carbide” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:12.388Z",
+   "target": "f06755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erst Ende 1961 wurde der Zusammenhang zwischen Contergan und den Fehlbildungen erkannt und das Medikament vom Hersteller, der Grünenthal GmbH in Stolberg, vom Markt genommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:12.388Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grünenthal” is on the snapshot of s4"
+  }
+ ]
+}

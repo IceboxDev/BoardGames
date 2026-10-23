@@ -1,0 +1,242 @@
+{
+ "article": "a1632",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Transistor",
+   "title": "Transistor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:47.424Z",
+   "snapshot": "329f9cb1cc8a1ae55e729c23927fd9e7ade06fb51f0661d0ccffc937e2f97d53"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/P%E2%80%93n_junction",
+   "title": "p–n junction – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:48.325Z",
+   "snapshot": "bd364f1da4abb99e88c2efd9c6f2ed61925f909306833c13607d527671fc9026"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Doping_(semiconductor)",
+   "title": "Doping (semiconductor) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:49.336Z",
+   "snapshot": "3839007a057cdf3174bcecc5a82477f9bc794e1696c302499738cd61f8ca45d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Integrated_circuit",
+   "title": "Integrated circuit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:50.438Z",
+   "snapshot": "f12e3068d6eef22fa633767c0fcd316c355653b6f6c14dced88ef6a06183c533"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/MOSFET",
+   "title": "MOSFET – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:51.336Z",
+   "snapshot": "8223828ec8337f06c5437ea4cb18e0d93f4c2973178745954d74d3814116122e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "transistors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08157",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "diodes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08158",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "doping",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08159",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "integrated circuit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08160",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "MOSFET",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:54.765Z",
+   "target": "f08156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Some transistors are packaged individually, but many more in miniature form are found embedded in integrated circuits.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “transistors” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:54.765Z",
+   "target": "f08157",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Solar cells and light-emitting diodes (LEDs) are essentially p–n junctions where the semiconductor materials are chosen, and the component's geometry designed, to maximise the desired effect (light absorption or emission).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “diodes” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:54.765Z",
+   "target": "f08158",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In semiconductor production, doping is the  intentional introduction of impurities into an intrinsic (undoped) semiconductor for the purpose of modulating its electrical, optical and structural properties.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “doping” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:54.765Z",
+   "target": "f08159",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An integrated circuit (IC), also known as a microchip or simply chip, is a compact assembly of electronic circuits formed from various electronic components, such as transistors, resistors, and capacitors, and their interconnections.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “integrated circuit” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:54.765Z",
+   "target": "f08160",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In electronics, the metal–oxide–semiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation of silicon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MOSFET” is on the snapshot of s5"
+  }
+ ]
+}

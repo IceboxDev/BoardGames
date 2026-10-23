@@ -1,0 +1,637 @@
+{
+ "article": "a1105",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Nathan_der_Weise",
+   "title": "Nathan der Weise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:02.935Z",
+   "snapshot": "d2e284ebb935b334d3a9f9a9f07a7da098f4d0bbfd9920d3ecb91838a71c8ceb"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Wilhelm_Tell_(Schiller)",
+   "title": "Wilhelm Tell (Schiller) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:03.929Z",
+   "snapshot": "db2fb00e869c1d243e4da8c2b3d1723b67c6a6f508fa5ff9ae076549cdff3126"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Goethe%27s_Faust",
+   "title": "Goethe's Faust – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:06.194Z",
+   "snapshot": "2f209279d6867a901c3e88adbdd5ca9c1df1b61845d097eaa59a652857786053"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Faust._Eine_Trag%C3%B6die",
+   "title": "Faust. Eine Tragödie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:04.705Z",
+   "snapshot": "fe40d8ab46e483800293131a62d251d40b371f1c12a896d57cd17ea8447d887d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Dreigroschenoper",
+   "title": "Die Dreigroschenoper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:41:06.014Z",
+   "snapshot": "3485a3c63768fb8a116f32dbece779a270463c8f23a0f2316ac10d4120bec7e7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Deutsches_Theater_Berlin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:14.722Z",
+   "snapshot": "b48c4db40310a192532ab7d91c39090eaeb291aeb516999c1ed2a808264736c4"
+  },
+  "s7": {
+   "url": "https://www.friedrich-schiller-archiv.de/inhaltsangaben/inhalt-hintergrund-und-zusammenfassung-wilhelm-tell/",
+   "title": "Wilhelm Tell – Inhalt, Hintergrund und Zusammenfassung",
+   "publisher": "Friedrich-Schiller-Archiv",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:01.719Z",
+   "snapshot": "080bd1068c388ee89ae2942f707bbdf48633b394906e396e55bcd52bbaacbd57"
+  },
+  "s8": {
+   "url": "https://www.heise.de/tp/features/716-Jahre-Ruetlischwur-3414622.html",
+   "title": "716 Jahre Rütlischwur",
+   "publisher": "Telepolis (heise)",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:57.395Z",
+   "snapshot": "c171235dd06b029f61b23a77c87bc487640c90a42172aca94c6a3fc69d5b11c1"
+  },
+  "s9": {
+   "url": "https://www.gutenberg.org/cache/epub/2229/pg2229.txt",
+   "title": "Faust: Der Tragödie erster Teil (Project Gutenberg eBook #2229)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:58.168Z",
+   "snapshot": "97d2d8abcc99e5ece97ebcfac6411700f35a9b55403b7b2867c46a26ddcff707"
+  },
+  "s10": {
+   "url": "https://de.wikipedia.org/wiki/Faust._Eine_Tragödie",
+   "title": "Faust. Eine Tragödie – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:58.126Z",
+   "snapshot": "fe40d8ab46e483800293131a62d251d40b371f1c12a896d57cd17ea8447d887d"
+  },
+  "s11": {
+   "url": "https://www.deutschelyrik.de/osterspaziergang.html",
+   "title": "Osterspaziergang (1801) – Deutsche Lyrik",
+   "publisher": "deutschelyrik.de",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:58.658Z",
+   "snapshot": "d6365d980c0dab32172a6ccb6c28c3e93ed4db97604eb30b21c098e207422a59"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Ringparabel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "der Rütlischwur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Prologue in Heaven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "der Osterspaziergang",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "die Moritat von Mackie Messer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:33.526Z",
+   "target": "f05521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Berühmt wurde die Ringparabel im dritten Aufzug des Dramas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Ringparabel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:33.526Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "der Rütlischwur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“der Rütlischwur”, “the Rütli Oath”, “клятва на Рютли”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:33.526Z",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Prologue in Heaven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Prologue in Heaven”, “der Prolog im Himmel”, “Пролог на небесах”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:33.526Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "der Osterspaziergang",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“der Osterspaziergang”, “the Easter Walk”, “Пасхальная прогулка”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:33.526Z",
+   "target": "f05525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das „Stück mit Musik in einem Vorspiel und acht Bildern“ wurde die erfolgreichste deutsche Theateraufführung bis 1933, einige Musiknummern wie Die Moritat von Mackie Messer (englisch Mack the Knife) wurden Welthits.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Moritat von Mackie Messer” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:06:51Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "die Entstehungsgeschichte der Schweiz samt Nationalmythos, Rütlischwur und Befreiung aus der Herrschaft der Österreicher (Habsburger)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:06:54Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Es nimmt den Stoff des Schweizer Nationalmythos um Wilhelm Tell und den Rütlischwur auf.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:06:58Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Besonders eindrucksvoll schilderte den Mythos der früher in einem Atemzug mit Goethe genannte Friedrich Schiller in seinem Drama Wilhelm Tell.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:07:03Z",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "MEPHISTOPHELES. Was wettet Ihr? den sollt Ihr noch verlieren!",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "The line is spoken in the 'Prolog im Himmel', the scene that follows 'Vorspiel auf dem Theater' in the text."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:07:06Z",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Darauf folgend schließen Mephisto und der Herr eine Wette ab, die an die Hiobswette im Alten Testament angelehnt ist.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:07:09Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Osterspaziergang Johann Wolfgang von Goethe Aufnahme 2013 Vom Eise befreit sind Strom und Bäche",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:07:12Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "FAUST. Vom Eise befreit sind Strom und Bäche Durch des Frühlings holden, belebenden Blick;",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Primary text: Faust's speech in the scene 'Vor dem Tor' (the Easter walk)."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:07:15Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Vor dem Tor - Osterspaziergang Am nächsten Tag, dem Ostersonntag, unternimmt Faust mit Wagner einen festtäglichen Frühlingsspaziergang",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "die Entstehungsgeschichte der Schweiz samt Nationalmythos, Rütlischwur und Befreiung aus der Herrschaft der Österreicher (Habsburger)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Es nimmt den Stoff des Schweizer Nationalmythos um Wilhelm Tell und den Rütlischwur auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Besonders eindrucksvoll schilderte den Mythos der früher in einem Atemzug mit Goethe genannte Friedrich Schiller in seinem Drama Wilhelm Tell.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "MEPHISTOPHELES. Was wettet Ihr? den sollt Ihr noch verlieren!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Darauf folgend schließen Mephisto und der Herr eine Wette ab, die an die Hiobswette im Alten Testament angelehnt ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Osterspaziergang Johann Wolfgang von Goethe Aufnahme 2013 Vom Eise befreit sind Strom und Bäche",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "FAUST. Vom Eise befreit sind Strom und Bäche Durch des Frühlings holden, belebenden Blick;",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Vor dem Tor - Osterspaziergang Am nächsten Tag, dem Ostersonntag, unternimmt Faust mit Wagner einen festtäglichen Frühlingsspaziergang",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hintergrund Schweizer Nationalmythen (II): Der Rütlischwur",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “der Rütlischwur” is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:10.772Z",
+   "target": "f05523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Der Prolog im Himmel beginnt mit einer Verherrlichung der Werke des Herrn (Gottes) durch die Dreiergruppe der Erzengel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:10.772Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “der Prolog im Himmel” is on the snapshot of s10"
+  }
+ ]
+}

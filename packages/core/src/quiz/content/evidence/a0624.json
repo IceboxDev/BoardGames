@@ -1,0 +1,303 @@
+{
+ "article": "a0624",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dioptre",
+   "title": "Dioptre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:55.021Z",
+   "snapshot": "2efd94be67980a2f8dbfc2846cdb4af849da0b357ef56b738483b47a5832e57f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Candela",
+   "title": "Candela – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:56.108Z",
+   "snapshot": "bfd035e7052c1fcf663e403edb3bccf8649983048a3aebf6fcee55135c961f50"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Candela",
+   "title": "Candela – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:53.376Z",
+   "snapshot": "5a1a4414efda1efc9829c64bd39941f333907f6bcf24de09130de6c4f156c153"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lumen_(unit)",
+   "title": "Lumen (unit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:57.033Z",
+   "snapshot": "170fc868ea52dbbc54919ab4cf5e2d6d17c26157dd8f9bae12fbe827648482e9"
+  },
+  "s5": {
+   "url": "https://fr.wikipedia.org/wiki/Lux_(unit%C3%A9)",
+   "title": "Lux (unité) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:08:54.499Z",
+   "snapshot": "ad4ad3fa65130bfab97dd3cf608a26199109b0ceb199ba39d68c37de78905eae"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Heinrich_Hertz",
+   "title": "Heinrich Hertz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:18.465Z",
+   "snapshot": "c8c461cb9ee2625e16da070b4db8572b443e4ccedb7ffd617e5616f98ace21fe"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Andr%C3%A9_Blondel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:57.994Z",
+   "snapshot": "58b33f1b1ae67e2415fedfe27f0e0091fc05754f4fe52d852cb2e5272f182390"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Lux_(Einheit)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:08:55.203Z",
+   "snapshot": "a32d98a10db79e9c72ab297abfd0f8966c82e3f5cd881f90ec920ccf8bbe6927"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dioptre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c052"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "candela",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Candela",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-042"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "lumen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "lux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "hertz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:16.125Z",
+   "target": "f03116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A dioptre (British spelling) or diopter (American spelling), symbol dpt or D, is a unit of measurement with dimension of reciprocal length, equivalent to one reciprocal metre, 1 dpt = 1 m−1.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dioptre” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:16.125Z",
+   "target": "f03117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Candela (symbol: cd) is the SI unit of luminous intensity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “candela” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:16.125Z",
+   "target": "f03117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Candela (lateinisch für ‚Kerze‘, Betonung auf der zweiten Silbe: [kanˈdeːla]) ist die SI-Einheit der Lichtstärke, also des auf den Raumwinkel bezogenen Lichtstroms.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Candela” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:16.125Z",
+   "target": "f03118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The lumen (symbol: lm) is the SI unit of luminous flux, which quantifies the perceived power of visible light emitted by a source.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lumen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:16.125Z",
+   "target": "f03119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Le lux, de symbole lx, est l'unité de mesure d'éclairement lumineux du Système international.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lux” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:16.125Z",
+   "target": "f03120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Heinrich Rudolf Hertz ( hurts; German: [hɛʁts] ; 22 February 1857 – 1 January 1894) was a German physicist who first conclusively proved the existence of the electromagnetic waves proposed by James Clerk Maxwell's equations of electromagnetism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hertz” is on the snapshot of s6"
+  }
+ ]
+}

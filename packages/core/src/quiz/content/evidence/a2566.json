@@ -1,0 +1,514 @@
+{
+ "article": "a2566",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Catherine,_Princess_of_Wales",
+   "title": "Catherine, Princess of Wales",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:34.342Z",
+   "snapshot": "f19dfb6bd4ee78955519d1253298dad0e64e096ac6a0fee813cab1f345d428d4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Queen_Silvia_of_Sweden",
+   "title": "Queen Silvia of Sweden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:04.261Z",
+   "snapshot": "05ada249e00c5b17b36e1089e39f990aeccd637111d04e054ac1a1eef61f9f80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Queen_Letizia_of_Spain",
+   "title": "Queen Letizia of Spain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:35.247Z",
+   "snapshot": "b376b286d71258e6e6a9817cadf895cf69fea96fbf6544aeb121d04186ff163d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Queen_M%C3%A1xima_of_the_Netherlands",
+   "title": "Queen Máxima of the Netherlands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:05.349Z",
+   "snapshot": "92f06b5a1d447d969b4b1e823cf16dad22996eb69dc700a44ae0c030da498e27"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Queen_Mary_of_Denmark",
+   "title": "Queen Mary of Denmark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:06.375Z",
+   "snapshot": "4d531f8d2aa6c900713174fdc10865c46ab6a48c943b5148f6ec6dff928fd8f9"
+  },
+  "s6": {
+   "url": "https://www.kungahuset.se/english/royal-house/hm-the-queen",
+   "title": "H.M. The Queen | Kungahuset",
+   "publisher": "The Royal Court of Sweden (Kungahuset)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:15.080Z",
+   "snapshot": "2b6ad793a82a85c2508c87add4b15539b9c08843b59fd14a77cef0678ee72c11"
+  },
+  "s7": {
+   "url": "https://www.kongehuset.dk/en/the-royal-family/hm-the-queen/",
+   "title": "HM The Queen | Kongehuset",
+   "publisher": "The Danish Royal House (Kongehuset)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:15.257Z",
+   "snapshot": "e94ea85a1720f918bd3d126092adcde6758a0471f85ac28eadb4657cf483bebd"
+  },
+  "s8": {
+   "url": "https://www.theage.com.au/articles/2002/11/04/1036308258205.html",
+   "title": "Sydney lass plays lady in waiting",
+   "publisher": "The Age",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:16.035Z",
+   "snapshot": "0dfbf7fca916fb74863d6b22e181f1346ed8a23913d744e699cc429f244a0a1f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catherine, Princess of Wales",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-239"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Silvia Sommerlath",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Letizia Ortiz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Máxima Zorreguieta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mary Donaldson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:39.223Z",
+   "target": "f13743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Catherine, Princess of Wales (born Catherine Elizabeth Middleton; 9 January 1982) is a member of the British royal family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catherine, Princess of Wales” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:39.223Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Silvia Sommerlath",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Silvia Sommerlath”, “Сильвия Зоммерлат”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:39.223Z",
+   "target": "f13745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Letizia Ortiz Rocasolano (pronounced [leˈtiθja oɾˈtiθ rokasoˈlano]; born 15 September 1972) is Queen of Spain as the wife of King Felipe VI.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Letizia Ortiz” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:39.223Z",
+   "target": "f13746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Máxima (born Máxima Zorreguieta Cerruti, 17 May 1971) is Queen of the Netherlands as the wife of King Willem-Alexander.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Máxima Zorreguieta” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:39.223Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mary Donaldson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mary Donaldson”, “Мэри Дональдсон”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:07Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "From 1971 to 1973, Silvia Sommerlath worked as a training manager for Olympic hostesses at the 1972 Munich Olympic Games,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official biography: she trained the Olympic hostesses (often described as the chief hostess) and met Crown Prince Carl Gustaf during those Games."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:09Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It was during the 1972 Munich Olympic Games that Silvia Sommerlath met the then Crown",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:11Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sommerlath and the other Olympic hostesses wore sky-blue dirndls to promote Bavarian cultural identity.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:52:13Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "took a position as Account Director with the international advertising agency Young and Rubicam in Sydney.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:52:16Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Her Majesty later became Sales Director and a member of the Management Team with Belle Property.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:52:18Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in Sydney during the 2000 Summer Olympics in Sydney.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:52:19Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "finds and kisses his princess, a Sydney real estate agent, amid the smoky informality of a crowded pub.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:23.781Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It was during the 1972 Munich Olympic Games that Silvia Sommerlath met the then Crown",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:23.781Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sommerlath and the other Olympic hostesses wore sky-blue dirndls to promote Bavarian cultural identity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:23.781Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in Sydney during the 2000 Summer Olympics in Sydney.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:23.781Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "finds and kisses his princess, a Sydney real estate agent, amid the smoky informality of a crowded pub.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:23.781Z",
+   "target": "f13744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "From 1971 to 1973, Silvia Sommerlath worked as a training manager for Olympic hostesses at the 1972 Munich Olympic Games, and in 1973 she became Head of Protocol for the Organising Committee for the 1976 Olympic Games in Innsbruck, Austria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Silvia Sommerlath” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:23.781Z",
+   "target": "f13747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The flatmate was Mary Donaldson, a vivacious brown- eyed former law student from Tasmania who had spent the past seven years living in Sydney's eastern suburbs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mary Donaldson” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0907",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Quelle_(Versandhandel)",
+   "title": "Quelle (Versandhandel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:16.480Z",
+   "snapshot": "d05bf2cd4e34952aeb75c4b900644a490e2d0a6dc91b91ea9b83e009c4d9f883"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Arcandor",
+   "title": "Arcandor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:17.111Z",
+   "snapshot": "029556f9b43c582e8c26d8d31b29dc485bd08773dfdf5b990dcfc02be365bf50"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Neckermann_(Versandhandel)",
+   "title": "Neckermann (Versandhandel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:18.501Z",
+   "snapshot": "cc9596a89e1103d3c873e57430fdc9f854e668b0d4c46656d60abfa95370d9ab"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Schlecker",
+   "title": "Schlecker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:28:19.836Z",
+   "snapshot": "9d21de7eb1f0940db999cabb45cc1dce8921523dd76bb54f7906fddc53717047"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Air_Berlin",
+   "title": "Air Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:18.418Z",
+   "snapshot": "8ad9860575b3b4579f06fc0b88fd45512679f042d30283716a0cc494884f3a2c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Quelle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karstadt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neckermann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Schlecker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Air Berlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:02.932Z",
+   "target": "f04531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Quelle GmbH (Name ab 2006) ist seit dem 2.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quelle” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:02.932Z",
+   "target": "f04532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Geschäftsbereiche Warenhaus Karstadt und die Versandhandelssparte Primondo trugen jeweils rund 20 Prozent zum Konzernumsatz bei.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karstadt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:02.932Z",
+   "target": "f04533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neckermann war eines der führenden Versandhandelsunternehmen in Europa.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neckermann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:02.932Z",
+   "target": "f04534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "war ein 1975 von Anton Schlecker gegründetes Unternehmen mit Sitz in Ehingen (Donau), das bis 2012 die Drogeriemarktketten Schlecker und Ihr Platz, einen Versandhandel per Onlineshop und Katalog, Bau- und Möbelmärkte sowie Tankstellen betrieb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schlecker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:02.932Z",
+   "target": "f04535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Air Berlin, branded as airberlin or airberlin.com was a major German airline.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.932Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Air Berlin” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,351 @@
+{
+ "article": "a0159",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+   "title": "Brandenburg Gate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:25.084Z",
+   "snapshot": "331e14cc4219c4b4b95af17241329c6313c9bcf6435fe090e990667503236f3a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Pantheon_(Rom)",
+   "title": "Pantheon (Rom) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:22.675Z",
+   "snapshot": "647554d1aa41a1dbf637958ddb8e3084b9ec3def87d2f54b4e611bd194a8f207"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pantheon,_Rome",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:26.581Z",
+   "snapshot": "beade322230ade0dde4bb69b21bf534f92e7f77a0493b89ddfb775eec71f7a84"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kathedrale_von_Autun",
+   "title": "Kathedrale von Autun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:23.600Z",
+   "snapshot": "aa845f90ed2679a7fa5ba24dc1c713dd4d25c185a513033af99b873d5a08bca8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Erechtheion",
+   "title": "Erechtheion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Arch_of_Titus",
+   "title": "Arch of Titus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:09.025Z",
+   "snapshot": "10350e1d0b43c3c2f0ff68ae4e2dd3e51e3b7fdda8a3adf35c4ad43cfa0c86bb"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/files/20239/20239-h/20239-h.htm",
+   "title": "Vitruvius, The Ten Books on Architecture (tr. M. H. Morgan, 1914)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:15.563Z",
+   "snapshot": "295b1482c935111541bab35e2ee6e3d64cdddd2650fe2d902f6fa3c43fe2625b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Quadriga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c014"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Portikus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Portico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tympanon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Caryatid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00795",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Triumphal arch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:02.511Z",
+   "target": "f00791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The bronze sculpture of the quadriga crowning the gate is a work by the sculptor Johann Gottfried Schadow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.511Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quadriga” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:02.511Z",
+   "target": "f00792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Portikus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Portikus”, “Portico”, “портик”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:02.511Z",
+   "target": "f00792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The building is round in plan, except for the portico with large granite Corinthian columns (eight in the first rank and two groups of four behind) under a pediment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.511Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Portico” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:02.511Z",
+   "target": "f00793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das berühmte Tympanon, also das Bogenfeld über dem Westportal gilt als die „bedeutendste Weltgerichtsdarstellung, welche die Epoche geschaffen hat“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.511Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tympanon” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:02.511Z",
+   "target": "f00795",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Arch of Constantine – 4th-century triumphal arch in Rome, Italy",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.511Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Triumphal arch” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:03:11Z",
+   "target": "f00794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "women in long robes, called Caryatides, to take the place of columns,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:03:13Z",
+   "target": "f00794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Porch of the Maidens (or Caryatid Porch, or Korai Porch), a prostyle tetrastyle porch, or pteron, having six sculpted female figures as supports",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:21.248Z",
+   "target": "f00794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "women in long robes, called Caryatides, to take the place of columns,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:21.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:21.248Z",
+   "target": "f00794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Caryatid in Villa Albani, Rome 7",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:21.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Caryatid” is on the snapshot of s7"
+  }
+ ]
+}

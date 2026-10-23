@@ -1,0 +1,280 @@
+{
+ "article": "a2545",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Harrods",
+   "title": "Harrods – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:37.674Z",
+   "snapshot": "e5da9dcc9c5e8602aafd70bb88c93566d287a3ae3508af88cfdbaeb75778d910"
+  },
+  "s2": {
+   "url": "https://www.famouscampaigns.com/?p=10123",
+   "title": "Harrod’s Green Man Dancing",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:36.898Z",
+   "snapshot": "24181d7de20650056a32fb8ace4a4a3691649e70814fa3b7e54c2b745f884665"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Selfridges",
+   "title": "Selfridges",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:36.529Z",
+   "snapshot": "12924370671a8acbdbb028529ae37ebaa6a43f097a6db5feceb228f6e11c7199"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Galeries_Lafayette",
+   "title": "Galeries Lafayette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:38.720Z",
+   "snapshot": "1a73a25ee12cb0517632cb99d070d44fe706b69c30e5f65009cd8e711159564b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Macy%27s_Thanksgiving_Day_Parade",
+   "title": "Macy's Thanksgiving Day Parade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:39.788Z",
+   "snapshot": "57471e09c69c462c32c057b5f2c97012728eb70820006bbada2a3e011d2c3b58"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harrods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harrods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7; transcript tp-189"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Selfridges",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-318"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Galeries Lafayette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Macy's",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mohamed Al-Fayed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:36.903Z",
+   "target": "f13609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harrods is a luxury department store on Brompton Road in Knightsbridge, London, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harrods” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:36.903Z",
+   "target": "f13609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harrods",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Harrods”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:36.903Z",
+   "target": "f13610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Selfridges ist eine britische Kaufhauskette und ein Tochterunternehmen der Selfridges Group.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Selfridges” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:36.903Z",
+   "target": "f13612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Galeries Lafayette  (French pronunciation: [ɡalʁi lafajɛt]) is an upmarket French department store chain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galeries Lafayette” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:36.903Z",
+   "target": "f13613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Macy's Thanksgiving Day Parade, the world's largest parade, is an annual parade in New York City presented by the American department store chain Macy's.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macy's” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:36.903Z",
+   "target": "f13614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Following the deaths of Diana, Princess of Wales, and Dodi Fayed, Mohamed Al-Fayed's son, two memorials to the couple commissioned by Al-Fayed were erected inside Harrods.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mohamed Al-Fayed” is on the snapshot of s1"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2536",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Stendhal_syndrome",
+   "title": "Stendhal syndrome",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:02.656Z",
+   "snapshot": "21f489de4357019457842b41d39aa5accd83ce7c253c80aa852703800754947c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stockholm_syndrome",
+   "title": "Stockholm syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:03.693Z",
+   "snapshot": "e488eb0de8a689a88b68553212677415de55ce279c497a73ba5fbb5e78fa6492"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Paris_syndrome",
+   "title": "Paris syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:04.671Z",
+   "snapshot": "52c2d02b99bf8bb94240a5a9cb56dd29ea51dff7716de4a171ae7f29de44d4b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jerusalem_syndrome",
+   "title": "Jerusalem syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:05.667Z",
+   "snapshot": "f951d2c592c2adc0f33f586b619fb9617bbac11dee3969903414de75dcdb7804"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lima_syndrome",
+   "title": "Lima syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:06.690Z",
+   "snapshot": "e488eb0de8a689a88b68553212677415de55ce279c497a73ba5fbb5e78fa6492"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Florence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-190"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stockholm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jerusalem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lima",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:35.767Z",
+   "target": "f13542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stendhal syndrome, Stendhal's syndrome or Florence syndrome is a psychosomatic condition involving rapid heartbeat, confusion, hallucinations, and even fainting, allegedly occurring when individuals become exposed to objects, artworks, or phenomena of great beauty.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Florence” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:35.767Z",
+   "target": "f13543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stockholm syndrome is a disputed disorder in pop psychology characterized by the tendency of hostages to develop a psychological bond with their captors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stockholm” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:35.767Z",
+   "target": "f13544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paris syndrome (in Japanese: パリ症候群, Pari shōkōgun) is a sense of extreme disappointment exhibited by many individuals when visiting Paris, who feel that the city does not live up to their expectations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:35.767Z",
+   "target": "f13545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jerusalem syndrome is a group of mental phenomena involving the presence of religiously themed ideas or experiences that are triggered by a visit to the city of Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jerusalem” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:35.767Z",
+   "target": "f13546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "An inversion of Stockholm syndrome, termed Lima syndrome, has been proposed, in which abductors develop sympathy for their hostages.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:35.767Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lima” is on the snapshot of s5"
+  }
+ ]
+}

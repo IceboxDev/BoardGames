@@ -1,0 +1,281 @@
+{
+ "article": "a2137",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/L._S._Lowry",
+   "title": "L. S. Lowry",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:40.965Z",
+   "snapshot": "5122932f23356196de06cc6263666fb8f5ce76b00f0c0285afa9fea1419454d7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Madame_X_(Gem%C3%A4lde)",
+   "title": "Madame X (Gemälde)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:38.052Z",
+   "snapshot": "e631b5465f27cba7252542555f9363d1e63bc0053c72c38738c426d5ca39d3c4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Whistler%27s_Mother",
+   "title": "Whistler's Mother – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:41.866Z",
+   "snapshot": "340c00c94ca476572c217e8aadde74e16dd0b938b6e13f7050b425f364f206fb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Blue_Boy",
+   "title": "The Blue Boy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:42.843Z",
+   "snapshot": "b9032747b6d55c9a70ee5c970d10faa2b38ba11541d23883a9b5696f2ddc91e3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/John_Singer_Sargent",
+   "title": "John Singer Sargent – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:44.059Z",
+   "snapshot": "884beab38f3bcee40133b52b50babcf1386dc167c4cee67d0a239fc1a76f2592"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Laurence Stephen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-075"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Madame X",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-322"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "matchstick men",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10734",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arrangement in Grey and Black No. 1",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Blue Boy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "London",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:28.472Z",
+   "target": "f10731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Laurence Stephen Lowry  ( LAO-ree; 1 November 1887 – 23 February 1976) was an English artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laurence Stephen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:28.472Z",
+   "target": "f10732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Madame X, Madame Pierre Gautreau oder auch Porträt der Madame X ist der informelle Titel eines Porträts von John Singer Sargent.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madame X” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:28.472Z",
+   "target": "f10733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He developed a distinctive style of painting and is best known for his urban landscapes peopled with human figures, often referred to as \"matchstick men\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “matchstick men” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:28.472Z",
+   "target": "f10734",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arrangement in Grey and Black No. 1, best known under its colloquial name Whistler's Mother or Portrait of Artist's Mother, is an oil painting on canvas painted by the American-born painter James McNeill Whistler in 1871.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arrangement in Grey and Black No. 1” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:28.472Z",
+   "target": "f10735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Blue Boy is a full-length oil on canvas portrait in oil by English artist Thomas Gainsborough, from c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Blue Boy” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:28.472Z",
+   "target": "f10736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Born in Florence to American parents, he was trained there and in Paris before moving to London, living most of his life in Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “London” is on the snapshot of s5"
+  }
+ ]
+}

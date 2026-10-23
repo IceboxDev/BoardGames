@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-008",
+ "image": "IMG20261007180940.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Der aktive Vulkan Popocatépetl liegt rund 65 Kilometer von welcher Hauptstadt entfernt?",
+   "de": "Der aktive Vulkan Popocatépetl liegt rund 65 Kilometer von welcher Hauptstadt entfernt?",
+   "en": "The active volcano Popocatépetl lies about 65 kilometres from which capital city?",
+   "reworked": false,
+   "answerDe": "Mexiko-Stadt",
+   "answerEn": "Mexico City",
+   "timeline": {
+    "kind": "event",
+    "start": "1994-12-21",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Popocatépetl erupts, ending 47 years of dormancy and starting its current active phase",
+    "labelDe": "Ausbruch des Popocatépetl beendet eine 47-jährige Ruhephase und leitet seine aktive Phase ein"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Popocat%C3%A9petl",
+    "title": "Popocatépetl",
+    "lang": "de"
+   },
+   "notes": "German Wikipedia gives about 70 km to Mexico City; the card's 65 km is a rounder figure for the same fact.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Zeitung, in deren Magazin Axel Hackes Kolumne Der kleine Erziehungsberater veröffentlicht wurde, bevor daraus ein Buch entstand?",
+   "de": "Wie heißt die Zeitung, in deren Magazin Axel Hackes Kolumne Der kleine Erziehungsberater veröffentlicht wurde, bevor daraus ein Buch entstand?",
+   "en": "What is the name of the newspaper in whose magazine Axel Hacke's column Der kleine Erziehungsberater (“The Little Parenting Adviser”) was published before it became a book?",
+   "reworked": false,
+   "answerDe": "Süddeutsche Zeitung",
+   "answerEn": "Süddeutsche Zeitung",
+   "timeline": {
+    "kind": "creation",
+    "start": "1990",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Axel Hacke's column „Der kleine Erziehungsberater“ first appears in the SZ-Magazin (book 1992)",
+    "labelDe": "Axel Hackes Kolumne „Der kleine Erziehungsberater“ erscheint erstmals im SZ-Magazin (Buch 1992)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Axel_Hacke",
+    "title": "Axel Hacke",
+    "lang": "de"
+   },
+   "notes": "Published in the SZ-Magazin of the Süddeutsche Zeitung from 1990; the book (Kunstmann) followed in 1992.",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 3,
+   "cardDe": "Rom war die erste Millionenstadt der Welt. Richtig oder falsch?",
+   "de": "Welche Stadt war die erste Millionenstadt der Welt?",
+   "en": "Which city was the first in the world to reach a million inhabitants?",
+   "reworked": true,
+   "answerDe": "Rom",
+   "answerEn": "Rome",
+   "timeline": {
+    "kind": "era",
+    "start": "1",
+    "end": "100",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ancient Rome becomes the world's first city of a million people, 1st century AD",
+    "labelDe": "Das antike Rom wird im 1. Jahrhundert n. Chr. die erste Millionenstadt der Welt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Millionenstadt",
+    "title": "Millionenstadt",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true per German Wikipedia (citing Frank Kolb). Ancient population figures are estimates; some sources propose other early candidates.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 4,
+   "cardDe": "George Orwell schrieb den Karneval der Tiere. Richtig oder falsch?",
+   "de": "Wer komponierte den Karneval der Tiere?",
+   "en": "Who composed The Carnival of the Animals?",
+   "reworked": true,
+   "answerDe": "Camille Saint-Saëns",
+   "answerEn": "Camille Saint-Saëns",
+   "timeline": {
+    "kind": "creation",
+    "start": "1886",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Camille Saint-Saëns composes the suite „Le Carnaval des animaux“",
+    "labelDe": "Camille Saint-Saëns komponiert die Suite „Der Karneval der Tiere“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Karneval_der_Tiere",
+    "title": "Karneval der Tiere",
+    "lang": "de"
+   },
+   "notes": "Card's statement is false: Orwell wrote „Farm der Tiere“ (Animal Farm); „Der Karneval der Tiere“ is a suite by Saint-Saëns. Reworked into an open question about its composer.",
+   "domain": "music-stage",
+   "sub": "classical"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie heißt die App, die am Anfang den Namen „Picaboo“ trug?",
+   "de": "Wie heißt die App, die am Anfang den Namen „Picaboo“ trug?",
+   "en": "What is the name of the app that was originally called “Picaboo”?",
+   "reworked": false,
+   "answerDe": "Snapchat",
+   "answerEn": "Snapchat",
+   "timeline": {
+    "kind": "founding",
+    "start": "2011-07-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Snapchat launches on iOS under the name “Picaboo”",
+    "labelDe": "Snapchat startet unter dem Namen „Picaboo“ auf iOS"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Snapchat",
+    "title": "Snapchat",
+    "lang": "en"
+   },
+   "notes": "Launched by Evan Spiegel, Bobby Murphy and Reggie Brown.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Mit wie vielen Kugeln wird die Billard-Variante Karambol gespielt?",
+   "de": "Mit wie vielen Kugeln wird die Billard-Variante Karambol gespielt?",
+   "en": "How many balls is the billiards variant carom played with?",
+   "reworked": false,
+   "answerDe": "3",
+   "answerEn": "3",
+   "timeline": {
+    "kind": "era",
+    "start": "1700",
+    "end": "1799",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Carom billiards traced to 18th-century France",
+    "labelDe": "Karambolage-Billard geht auf das Frankreich des 18. Jahrhunderts zurück"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Karambolage_(Billard)",
+    "title": "Karambolage (Billard)",
+    "lang": "de"
+   },
+   "notes": "Three balls (red, white, yellow); a rare four-ball game also exists.",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

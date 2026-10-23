@@ -1,0 +1,539 @@
+{
+ "article": "a2255",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Wiener_Zeitung",
+   "title": "Wiener Zeitung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:56.331Z",
+   "snapshot": "1d32a93ba76ae2d44c03abb872c4b4ce27bfeaa981f35caadbd48d1befc9844b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/De_Telegraaf",
+   "title": "De Telegraaf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:56.938Z",
+   "snapshot": "a05bf76a91a3f09a89175b5cfdb9711756b4e8136a688d0a928458b94da8b6ed"
+  },
+  "s3": {
+   "url": "https://www.villamedia.nl/artikel/nom-cijfers-ad-houdt-hoogste-bereik-in-print",
+   "kind": "press",
+   "lang": "nl",
+   "retrievedAt": "2026-10-23T05:50:00.561Z",
+   "snapshot": "c0ced968c30f579bfea9bfda3cc96c96acdded2384f8f2b27969c3d3353c56da"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/De_Telegraaf",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:57.162Z",
+   "snapshot": "d89444dbb010246ecd540e30def81661598766e4769271b4c9566a15b24d15ff"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/The_Washington_Post",
+   "title": "The Washington Post",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:58.011Z",
+   "snapshot": "58661d8a38ff4ffa02f74d3307c5c67ebcd229a7fe371e55899c592b41030fdd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Washington_Post",
+   "title": "The Washington Post – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:58.392Z",
+   "snapshot": "0fed08d91b80cc0952742ed2e8d5f780b29163215a682e7c5d4789c0154c2474"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Democracy_Dies_in_Darkness",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:59.210Z",
+   "snapshot": "2454aa091acfced7dd8df5a90eb232ea5616af1c0d191928a18ea85b99ac6578"
+  },
+  "s8": {
+   "url": "https://www.theguardian.com/media/2023/jul/01/worlds-oldest-newspaper-prints-final-edition-after-320-years",
+   "title": "World's oldest national newspaper prints final edition after 320 years",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:43.326Z",
+   "snapshot": "97d4130db7777faca34ff77cb3b614a6ba08885667cdb4d36d346f2de592ea72"
+  },
+  "s9": {
+   "url": "https://www.dw.com/en/austrias-wiener-zeitung-goes-to-print-1-last-time/a-66084050",
+   "title": "Austria's Wiener Zeitung goes to print 1 last time",
+   "publisher": "Deutsche Welle",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:43.829Z",
+   "snapshot": "090626cf9dfeb840b5fe4d52d74fd833cb1f513d3b4bfd764a034cefef6d16ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-204"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Washington Post",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-290"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wiennerisches Diarium",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Democracy Dies in Darkness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Democracy Dies in Darkness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Niederlande",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-247/1, u05): De Telegraaf is a Dutch (Amsterdam) daily, not Danish, so the statement is false. But it is no longer clearly the largest: NOM figures give the Algemeen Dagblad the larger readership since 2020, so 'is the best-selling daily' was outdated."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Netherlands",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Niederlande",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auf Plänen von Wien aus jener Zeit scheint ebenfalls die Bezeichnung „Wienn“ auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wien” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "De Telegraaf ist die einzige überregionale Boulevardzeitung der Niederlande und beinhaltet viele „Sensationsberichte“ sowie einen großen Sportteil.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Niederlande” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "During World War I, when the Netherlands was officially neutral, Holdert's French sympathies and his pro-British standpoint caused De Telegraaf to be the focus of some controversy, as the Netherlands were usually pro-German at the time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Netherlands” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Washington Post ist die größte Tageszeitung in Washington, D.C., der Hauptstadt und dem Regierungssitz der USA.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Washington Post” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Wiener Zeitung wurde 1703 als Wiennerisches Diarium von Johann Baptist Schönwetter gegründet und war ab ihrer Gründung rund eineinhalb Jahrhunderte lang führend auf dem österreichischen Zeitungsmarkt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wiennerisches Diarium” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "After Donald Trump was elected in 2016, the Post adopted the slogan \"Democracy Dies in Darkness\" for its masthead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Democracy Dies in Darkness” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:43.975Z",
+   "target": "f11563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "\"Democracy Dies in Darkness\" is the official slogan of the American newspaper The Washington Post, adopted in 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:43.975Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Democracy Dies in Darkness” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:17:01Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als älteste bis dahin noch gedruckt erscheinende Tageszeitung der Welt nahm die Wiener Zeitung in der Mediengeschichte Österreichs eine besondere Stellung ein.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:17:04Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The world's oldest national newspaper has printed its last daily edition almost 320 years after it began. Wiener Zeitung, a Vienna-based daily newspaper",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "Guardian notes the title is contested by the Gazzetta di Mantova (1664, not daily); the wording says \"considered\", so Vienna stands"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:17:07Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The paper, founded in 1703, had been in print daily ever since and is one of the oldest left in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:30.050Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als älteste bis dahin noch gedruckt erscheinende Tageszeitung der Welt nahm die Wiener Zeitung in der Mediengeschichte Österreichs eine besondere Stellung ein.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:30.050Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The world's oldest national newspaper has printed its last daily edition almost 320 years after it began. Wiener Zeitung, a Vienna-based daily newspaper",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:30.050Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The paper, founded in 1703, had been in print daily ever since and is one of the oldest left in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:30.050Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The last edition of Wiener Zeitung rolls off the presses in Vienna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vienna” is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:30.050Z",
+   "target": "f11558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "After 320 years, the Vienna-based newspaper is discontinuing its daily print editionImage: Matthias Röder/dpa/picture alliance",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.050Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vienna” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,546 @@
+{
+ "article": "a2004",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Macintosh_128K",
+   "title": "Macintosh 128K – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:38.335Z",
+   "snapshot": "35eaab32e38af426b8c6c91d3146f34b38e55cd0cfc7c3693f271a7df60aa7a7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Apple_Lisa",
+   "title": "Apple Lisa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:39.331Z",
+   "snapshot": "06086ae924cc4b9c212d1801075e231cf5dfce2a72f9ce3d1c2b8016952de4ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amiga",
+   "title": "Amiga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:40.573Z",
+   "snapshot": "49fbc6015c579716733a90b66a6e6a114a4ae004b1db3b3c52ed17589d3f75ed"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Xerox_Alto",
+   "title": "Xerox Alto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:31.235Z",
+   "snapshot": "2388fbb4c7eed2b3c5c3a53e99acb4e8d2fd8b5af98095e0905fb9aa68bd7257"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Xerox_Alto",
+   "title": "Xerox Alto",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:37.841Z",
+   "snapshot": "b8bc10bc0854ae4e66d547f00c27867b79c17d84fae7edc9e8cd83ea7f32846b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Foundation",
+   "title": "Raspberry Pi Foundation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:41.239Z",
+   "snapshot": "d832e900dcd2cac113b02c5da24443903f01dec14e2900242756d613c9de1b31"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Raspberry_Pi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:44.073Z",
+   "snapshot": "b696e5ca22279f2f15eb2550ddaf787aabb1cebbac39a0868610342e457a43ac"
+  },
+  "s8": {
+   "url": "https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/",
+   "title": "The Lisa: Apple's Most Influential Failure",
+   "publisher": "Computer History Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:58.679Z",
+   "snapshot": "6451ae6b0f90adeefe7219c8634ef5d3caedfc284c9a14c009886f1eefef7ca9"
+  },
+  "s9": {
+   "url": "https://www.computerhistory.org/revolution/input-output/14/347",
+   "title": "Xerox Alto – CHM Revolution",
+   "publisher": "Computer History Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:59.077Z",
+   "snapshot": "bb1754091e82db84a81e3a643d9785d66302043017e7641c60b57b3121c97942"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Macintosh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Apple Lisa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amiga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Xerox Alto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Xerox Alto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-021"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Raspberry Pi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:03.997Z",
+   "target": "f10016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Macintosh, later rebranded as the Macintosh 128K, is the original Macintosh personal computer from Apple.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macintosh” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:03.997Z",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Before Macintosh: The Apple Lisa\" Full Documentary Film, Free on YouTube",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apple Lisa” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:03.997Z",
+   "target": "f10018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amiga is a family of personal computers produced by Commodore from 1985 until the company's bankruptcy in 1994, with production by others afterward.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amiga” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:03.997Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Xerox Alto is a computer system developed at Xerox PARC (Palo Alto Research Center) in the 1970s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xerox Alto” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:03.997Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Xerox Alto wurde 1973 am Forschungszentrum Xerox PARC entwickelt und war die erste Workstation mit einer grafischen Benutzeroberfläche (engl.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xerox Alto” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:03.997Z",
+   "target": "f10020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Raspberry Pi Foundation is a UK-based educational charity founded in 2008 to promote the study of computer science and related subjects globally, particularly among young people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raspberry Pi” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:43:10Z",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Decades later, Jobs told his biographer Walter Isaacson: \"Obviously it was named for my daughter.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:43:14Z",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was code-named “Lisa” after Lisa Brennan (now Brennan-Jobs), Steve Jobs’ child with a former high school girlfriend, whom he initially refused to acknowledge as his own.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Museum curator's article; Apple's acronym was a backronym."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:43:18Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The advances include graphical user interface (GUI), computer mouse, Ethernet networking, and the ability to run multiple applications simultaneously.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Alto was a TTL-based personal computer, not a microprocessor-based microcomputer; wording narrowed to 'personal computers'."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:43:22Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The invention of the GUI, especially in the form of windows, icons, menus, and pointer (WIMP), controlled by a mouse, occurred at Xerox PARC in the 1970s, on the Alto,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:43:25Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Alto for the first time combined these and other now-familiar elements in one small computer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Decades later, Jobs told his biographer Walter Isaacson: \"Obviously it was named for my daughter.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "It was code-named “Lisa” after Lisa Brennan (now Brennan-Jobs), Steve Jobs’ child with a former high school girlfriend, whom he initially refused to acknowledge as his own.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The advances include graphical user interface (GUI), computer mouse, Ethernet networking, and the ability to run multiple applications simultaneously.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The invention of the GUI, especially in the form of windows, icons, menus, and pointer (WIMP), controlled by a mouse, occurred at Xerox PARC in the 1970s, on the Alto,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Alto for the first time combined these and other now-familiar elements in one small computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "What is the Apple Lisa computer, and why was its release on January 19, 1983, an important date in computer history?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Apple Lisa” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:51.320Z",
+   "target": "f10019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Xerox Alto: Computers for “Regular Folks”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.320Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Xerox Alto” is on the snapshot of s9"
+  }
+ ]
+}

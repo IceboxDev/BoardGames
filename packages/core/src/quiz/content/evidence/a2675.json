@@ -1,0 +1,389 @@
+{
+ "article": "a2675",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Welterbe_in_Monaco",
+   "title": "Welterbe in Monaco",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:16.375Z",
+   "snapshot": "79dd138086492bbc0ed256de8e8d1bfb66d4978df775b20826b13e2362161ba6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_San_Marino",
+   "title": "List of World Heritage Sites in San Marino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:19.109Z",
+   "snapshot": "86e18f8efde6a1b5044b71f7cebd2cee231135fc21687c72f91ee78d4abfbdf0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_Andorra",
+   "title": "List of World Heritage Sites in Andorra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:20.115Z",
+   "snapshot": "64a9f49477b08da9e79ec808e0e41d7d3cce4e93997e888529f234d057f186f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_Malta",
+   "title": "List of World Heritage Sites in Malta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:21.128Z",
+   "snapshot": "9026ea485abe75993c5ec6e1bd2e70fa1de37529222bb9b4012e78c65c52376f"
+  },
+  "s5": {
+   "url": "https://whc.unesco.org/en/statesparties/mc",
+   "title": "Monaco - UNESCO World Heritage Convention",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:52:49Z"
+  },
+  "s6": {
+   "url": "https://whc.unesco.org/en/list/1160",
+   "title": "Madriu-Perafita-Claror Valley - UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:52:54Z"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/statesparties/ad",
+   "title": "Andorra - UNESCO World Heritage Convention",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:52:57Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Monaco",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-211"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mount Titano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14527",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madriu-Perafita-Claror Valley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Valletta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ħal Saflieni Hypogeum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.594Z",
+   "target": "f14525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Monaco hat die Welterbekonvention 1978 ratifiziert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monaco” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.594Z",
+   "target": "f14526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was inscribed as a UNESCO World Heritage Site in 2008 under the combined title \"San Marino Historic Centre and Mount Titano\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Titano” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.594Z",
+   "target": "f14527",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madriu-Perafita-Claror Valley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Madriu-Perafita-Claror Valley”, “Madriu-Perafita-Claror-Tal”, “Долина Мадриу-Перафита-Кларор”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:56.594Z",
+   "target": "f14528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At that session, all three current sites were added to the list: the Ħal Saflieni Hypogeum, City of Valletta, and Ġgantija Temples.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valletta” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:56.594Z",
+   "target": "f14529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At that session, all three current sites were added to the list: the Ħal Saflieni Hypogeum, City of Valletta, and Ġgantija Temples.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ħal Saflieni Hypogeum” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:49Z",
+   "target": "f14525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0 Property inscribed on the World Heritage List",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "UNESCO state-party page: Monaco has 0 properties inscribed (still none in 2026, so also true as of 2017)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:51Z",
+   "target": "f14525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "wurde noch keine Stätte in Monaco in das UNESCO-Welterbe aufgenommen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:54Z",
+   "target": "f14527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Madriu-Perafita-Claror Valley is an exceptional geographical unit located in the south-eastern part of the Principality of Andorra, in the heart of the Pyrenees.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:52:57Z",
+   "target": "f14527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1 Property inscribed on the World Heritage List",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Andorra has exactly one inscribed property, the Madriu-Perafita-Claror Valley."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:53:00Z",
+   "target": "f14527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As of 2026, Andorra has only one World Heritage Site.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:42.034Z",
+   "target": "f14525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "wurde noch keine Stätte in Monaco in das UNESCO-Welterbe aufgenommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.034Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:42.034Z",
+   "target": "f14527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As of 2026, Andorra has only one World Heritage Site.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.034Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  }
+ ]
+}

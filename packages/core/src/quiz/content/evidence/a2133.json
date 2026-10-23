@@ -1,0 +1,234 @@
+{
+ "article": "a2133",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jony_Ive",
+   "title": "Jony Ive",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:25.948Z",
+   "snapshot": "e1d2b665fc4f9b29e4d3fab89c9b69bc615ed80fdb2fca3c477a2a74b23c6541"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Red_Dot_Design_Award",
+   "title": "Red Dot Design Award",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:24.134Z",
+   "snapshot": "63ad7194e29857ebdcc35065443237b71c58cada9eea10117859d7c8f8a00857"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dieter_Rams",
+   "title": "Dieter Rams – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:26.845Z",
+   "snapshot": "70ce2f4ca4396ec8984fab83117e97e85f671f5525cfbfda978c13ead90a616d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Juicy_Salif",
+   "title": "Juicy Salif – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:27.816Z",
+   "snapshot": "4a791b8699f0120b82a673ca38483fe585768ce250ebe79de81f26cbe8beffd5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "iPhone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Design",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-384"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Braun",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alessi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Essen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:27.949Z",
+   "target": "f10693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Working closely with Jobs, Ive played a vital role in the designs of products including the Apple Watch, iMac, Power Mac G4 Cube, iPod, iPhone, iPad, MacBook, and the user interface of Apple's mobile operating system iOS.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “iPhone” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:27.949Z",
+   "target": "f10694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Red Dot Design Award ist ein jährlich ausgeschriebener Designwettbewerb für Produkt- und Industriedesign, Marken- und Kommunikationsdesign sowie Designkonzepte, bei dem der Red Dot als Qualitätslabel verliehen wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Design” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.949Z",
+   "target": "f10695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dieter Rams (born 20 May 1932) is a German industrial designer who is most closely associated with the consumer products company Braun, the furniture company Vitsœ, and the functionalist school of industrial design.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Braun” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.949Z",
+   "target": "f10696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Made of cast and polished aluminum by the Italian kitchenware company Alessi, the tool measures 14 centimetres (5.5 in) in diameter, and 29 cm (11 in) in height.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alessi” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.949Z",
+   "target": "f10697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juli 1954 in Essen gegründet wurde und ab Oktober 1955 im kleinen Haus der Villa Hügel die Ausstellung Industrieform – Ständige Schau formschöner Industrieerzeugnisse zeigte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.949Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Essen” is on the snapshot of s2"
+  }
+ ]
+}

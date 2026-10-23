@@ -1,0 +1,373 @@
+{
+ "article": "a2231",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Leonardo_DiCaprio",
+   "title": "Leonardo DiCaprio",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:51.832Z",
+   "snapshot": "52200a350e6357a10bd1ce28cffa033b37d202d8de85fb24709719d2b596d669"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/The_Revenant_%E2%80%93_Der_R%C3%BCckkehrer",
+   "title": "The Revenant – Der Rückkehrer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:52.140Z",
+   "snapshot": "2814beff4cf6a9c32489db29b3ad353388f4f70fd8e3c9a440b173b0409982eb"
+  },
+  "s3": {
+   "url": "https://time.com/4240647/the-revenant-bear-oscars",
+   "title": "The Revenant bear (TIME)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:52.230Z",
+   "snapshot": "cd662956e131087dc7e2b92352f569824b01a6659e225d4ccf300e02c9a91cd6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Catch_Me_If_You_Can",
+   "title": "Catch Me If You Can",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:53.403Z",
+   "snapshot": "2d6431b52cd5dd5eb4360011670797596055d4d09e55cdb36d34dfe60fb69d1e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Martin_Scorsese",
+   "title": "Martin Scorsese – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:54.974Z",
+   "snapshot": "3d27328411759abdadc6f34d159f1325f5d13a1f90692fa13cff3282294f73a4"
+  },
+  "s6": {
+   "url": "https://vancouversun.com/entertainment/movies/former-b-c-rugby-star-glenn-ennis-turns-heads-as-the-bear-in-the-revenant",
+   "title": "Former B.C. rugby star Glenn Ennis turns heads as the bear in 'The Revenant'",
+   "publisher": "Vancouver Sun",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:29.793Z",
+   "snapshot": "1fb7ddfab6e14d020a1e8ed861d592ab550c3263c92b0417c4fbbd938d67bf31"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Glenn_Ennis",
+   "title": "Glenn Ennis – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:29.998Z",
+   "snapshot": "5a2dd5649e115eb0850dab595eae8c61b5a7157445d59c800cf985c108fc6548"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Leonardo DiCaprio",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-348"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Revenant – Der Rückkehrer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-223"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the grizzly bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-277"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Catch Me If You Can",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-134"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Martin Scorsese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:40.181Z",
+   "target": "f11405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Einem breiten Publikum wurde Leonardo DiCaprio durch die Rolle des geistig behinderten Jungen Arnie Grape in Gilbert Grape – Irgendwo in Iowa bekannt, für die er 1994 seine erste Oscar-Nominierung erhielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonardo DiCaprio” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:40.181Z",
+   "target": "f11406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Revenant – Der Rückkehrer (Originaltitel: The Revenant) ist ein US-amerikanischer Historien-Western-Thriller des mexikanischen Regisseurs Alejandro G.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Revenant – Der Rückkehrer” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:40.181Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the grizzly bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the grizzly bear”, “den Grizzlybären”, “медведь-гризли”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:40.181Z",
+   "target": "f11408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Catch Me If You Can (englisch für ‚Fangt mich, wenn ihr könnt‘) ist eine US-amerikanische Gaunerkomödie aus dem Jahr 2002.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catch Me If You Can” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:40.181Z",
+   "target": "f11410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He has also made several documentaries focusing on rock music such as The Last Waltz (1978), No Direction Home (2005), and Shine a Light (2008) as well as film history with A Personal Journey with Martin Scorsese Through American Movies (1995) and My Voyage to Italy (1999).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.181Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Scorsese” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:32:22Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stuntman Glenn Ennis, who stood in for the computer-generated bear during filming",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:32:27Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the 51-year-old is fielding calls from afar for his part in helping bring the murderous bear in \"The Revenant\" to life.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:32:32Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "playing the role of a vicious grizzly bear in the 2015 Western film The Revenant",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:26.681Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stuntman Glenn Ennis, who stood in for the computer-generated bear during filming",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:26.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:26.681Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the 51-year-old is fielding calls from afar for his part in helping bring the murderous bear in \"The Revenant\" to life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:26.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:26.681Z",
+   "target": "f11407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "playing the role of a vicious grizzly bear in the 2015 Western film The Revenant",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:26.681Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  }
+ ]
+}

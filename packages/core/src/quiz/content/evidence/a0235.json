@@ -1,0 +1,242 @@
+{
+ "article": "a0235",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/McCarthyism",
+   "title": "McCarthyism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:20.348Z",
+   "snapshot": "e3c3c90877b3d892ff5bbb735c3d643f7d15710591cc0ef7ec289b90a1836e3e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+   "title": "Harry S. Truman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:21.456Z",
+   "snapshot": "2ed1e16e207890873f0d5e477dc03da8d06d7b959945999ffaf16cb4a76a95b6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Marshall_Plan",
+   "title": "Marshall Plan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:22.379Z",
+   "snapshot": "277c36de4d259408f9115f95a54a21de413939dab53e292840e2bdc1591c69c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monroe_Doctrine",
+   "title": "Monroe Doctrine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:23.309Z",
+   "snapshot": "a89b6625e97246066ec67f2b24fbb60f25063bd9156f5aecca5ac8d985d90b71"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Konrad_Adenauer",
+   "title": "Konrad Adenauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:24.350Z",
+   "snapshot": "71c85c667e0ca62b442ccc6d734a968afe959de78411c2d83ed0ea182b361fbf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Joseph McCarthy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harry S. Truman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George C. Marshall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James Monroe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:16.698Z",
+   "target": "f01171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "senator Joseph McCarthy, who had spearheaded the campaign, gradually lost his public popularity after several of his accusations were found to be false.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph McCarthy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:16.698Z",
+   "target": "f01172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Harry S. Truman  (May 8, 1884 – December 26, 1972) was the 33rd president of the United States, serving from 1945 to 1953.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry S. Truman” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:16.698Z",
+   "target": "f01173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The initiative was named after United States secretary of state George C. Marshall.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George C. Marshall” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:16.698Z",
+   "target": "f01174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "President James Monroe first articulated the doctrine on December 2, 1823, during his seventh annual State of the Union Address to Congress (though it was not named after him until 1850).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Monroe” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:16.698Z",
+   "target": "f01175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Konrad Adenauer was born on 5 January 1876 in Cologne, Rhenish Prussia, as the third of five children of Johann Konrad Adenauer (1833–1906) and his wife Helene (née Scharfenberg; 1849–1919).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s5"
+  }
+ ]
+}

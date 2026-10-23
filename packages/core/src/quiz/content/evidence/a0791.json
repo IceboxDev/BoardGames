@@ -1,0 +1,488 @@
+{
+ "article": "a0791",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chili_pepper",
+   "title": "Chili pepper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:28.380Z",
+   "snapshot": "69330c2ea2ebee5d4c07aff2c48ea757154758415b1d31b66714d434609fa4ac"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vanilla",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:29.412Z",
+   "snapshot": "0e78588cd99ff758b048491e38f9eaca4fba71cbd4f9e4cb6614c45b933be6c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/History_of_saffron",
+   "title": "History of saffron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:30.458Z",
+   "snapshot": "7fb06f003f04877a61f41b6e405ec3a4d270808f61fec4f10612890daec62ac2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cinnamon",
+   "title": "Cinnamon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:31.411Z",
+   "snapshot": "9cfcea3f7d460e341fdc06f9b7b3aac8b85c484403411ef75b1db1816099a748"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Edmond_Albius",
+   "title": "Edmond Albius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:32.317Z",
+   "snapshot": "e42a4b797dce6fdf7934f95c14cfd5c407c69d25de74fb244016d2b2423a38c3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Black_pepper",
+   "title": "Black pepper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:33.433Z",
+   "snapshot": "745b808ac108bd3b5081df0ac2cb049cb6d93cf3cb36a85677300024f81cfc61"
+  },
+  "s7": {
+   "url": "https://www.nccih.nih.gov/health/cinnamon",
+   "title": "Cinnamon: Usefulness and Safety | NCCIH",
+   "publisher": "National Center for Complementary and Integrative Health (NIH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:39.752Z",
+   "snapshot": "eb36eab10fdb50fc7dfd1bceedb99dbf9b974a8e7e5f8969e2cf311d14559a94"
+  },
+  "s8": {
+   "url": "https://www.mccormickscienceinstitute.com/resources/culinary-spices/herbs-spices/cinnamon",
+   "title": "Cinnamon - McCormick Science Institute",
+   "publisher": "McCormick Science Institute",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:39.667Z",
+   "snapshot": "681e546917cd7e2b4c341f23b14171f7cb0712e00d198aada8a4aa6ec484296f"
+  },
+  "s9": {
+   "url": "https://www.indianspices.com/spice-catalog/cinnamon.html",
+   "title": "Cinnamon | Spices Board",
+   "publisher": "Spices Board India (Ministry of Commerce)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:02:09Z"
+  },
+  "s10": {
+   "url": "https://www.mccormickscienceinstitute.com/resources/culinary-spices/herbs-spices/black-pepper",
+   "title": "Black Pepper - McCormick Science Institute",
+   "publisher": "McCormick Science Institute",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:40.520Z",
+   "snapshot": "bbb769216c7335de2e5735866636287a218d3bc9ef27e59aa48684a095c70699"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chili pepper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c066"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chili pepper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Crocus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cinnamon tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Orchid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pepper vine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:46.046Z",
+   "target": "f03951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The earliest known mention of the chili pepper in Chinese writing dates to 1591, though the pepper is thought to have entered the country in the 1570s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chili pepper” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:46.046Z",
+   "target": "f03951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chili pepper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Chili pepper”, “Chili”, “Перец чили”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:46.046Z",
+   "target": "f03952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Saffron, a spice derived from the dried stigmas of the saffron crocus (Crocus sativus), has through history remained among the world's most costly substances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crocus” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:46.046Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cinnamon tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cinnamon tree”, “Zimtbaum”, “Коричное дерево”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:46.046Z",
+   "target": "f03954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1841, Albius invented a method to quickly pollinate the vanilla orchid using a thin stick or blade of grass and a simple thumb gesture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:46.046Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orchid” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:46.046Z",
+   "target": "f03955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pepper vine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pepper vine”, “Pfefferstrauch”, “Перечная лиана”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:02:05Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Cinnamon is a spice that comes from the dried bark of various species of Cinnamomum trees. Ceylon cinnamon (Cinnamomum verum), known as “true” cinnamon, grows primarily in Sri Lanka.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:02:07Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Cinnamon is the dried inner bark of various evergreen trees belonging to the genus Cinnamomum.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:02:09Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The \"True Cinnamon\" or Sri Lankan Cinnamon is the dried inner stem bark of Cinnamomum Verum.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:02:11Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cinnamon is a spice obtained from the inner bark of several tree species from the genus Cinnamomum.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:02:13Z",
+   "target": "f03955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Black pepper (peppercorns) and white pepper are both obtained from the small dried berries of the vine Piper nigrum.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:02:15Z",
+   "target": "f03955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Black pepper (Piper nigrum) is a flowering vine in the family Piperaceae, cultivated for its fruit (the peppercorn), which is usually dried and used as a spice and seasoning.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:14.140Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Cinnamon is a spice that comes from the dried bark of various species of Cinnamomum trees. Ceylon cinnamon (Cinnamomum verum), known as “true” cinnamon, grows primarily in Sri Lanka.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:14.140Z",
+   "target": "f03953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cinnamon is a spice obtained from the inner bark of several tree species from the genus Cinnamomum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:14.140Z",
+   "target": "f03955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Black pepper (Piper nigrum) is a flowering vine in the family Piperaceae, cultivated for its fruit (the peppercorn), which is usually dried and used as a spice and seasoning.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:14.140Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s6"
+  }
+ ]
+}

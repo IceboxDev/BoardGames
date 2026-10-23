@@ -1,0 +1,449 @@
+{
+ "article": "a0419",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wheat",
+   "title": "Wheat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:43:39.921Z",
+   "snapshot": "6065e6ed23ba5495b13b74185cc060b381e0d0498c36462f1be9c4a5a6720aec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rhizobium",
+   "title": "Rhizobium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:46.589Z",
+   "snapshot": "a7ff562e469bad4266a45cec428f09799809869afc55c039c8fe70034368fc24"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Potato",
+   "title": "Potato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:47.604Z",
+   "snapshot": "5dd8e83ed91515d752c02698cb5551984790f71763360f95e7083cf4c281778d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Arabidopsis_thaliana",
+   "title": "Arabidopsis thaliana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:48.492Z",
+   "snapshot": "775d284e2f7b056e040113f2fe39f963709520c6bf5056eda4c87216331de3b0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Antoine_Laurent_de_Jussieu",
+   "title": "Antoine Laurent de Jussieu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:49.514Z",
+   "snapshot": "02d889266e0accc59484691eb11d6f7582e2abe44b6ceb055f74d3620ad6e46e"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Rosengew%C3%A4chse",
+   "title": "Rosengewächse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:46.842Z",
+   "snapshot": "dce92a50eb1cdbdc36d4f6b996afbcd9fdef3ff856f0079d729d8cba6c62cbb4"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Gartenbohne",
+   "title": "Gartenbohne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:54:48.645Z",
+   "snapshot": "088fa18a876e0d3692834d89aa4ac8a4584f35e6ca110cfe8af21cf0e5938071"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Brassicaceae",
+   "title": "Brassicaceae",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:03.181Z",
+   "snapshot": "474a5435edee8095bf799e2bcb60e0498a4a706bb61454cbc831a9f0b125e5cb"
+  },
+  "s9": {
+   "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Cruciferae",
+   "title": "Cruciferae (1911 Encyclopædia Britannica)",
+   "publisher": "Encyclopædia Britannica, 11th ed. (1911), via Wikisource",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:01.972Z",
+   "snapshot": "63c780957950e5030b0c458b658ef1204eaad580b66d5c5f0f9ea35d558261b5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "grasses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c035"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "legumes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nightshades",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "crucifers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "rose family",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rosengewächse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-345"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13362",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Phasin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; history entry seq 45; transcript tp-155"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f02091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wheat is a group of wild and domesticated grasses of the genus Triticum ().",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “grasses” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f02092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhizobium species form an endosymbiotic nitrogen-fixing association with roots of (primarily) legumes and other flowering plants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “legumes” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f02093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Like the tomato and the nightshades, the potato is in the genus Solanum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nightshades” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "crucifers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“crucifers”, “Kreuzblütler”, “крестоцветные”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f02095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "rose family",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“rose family”, “Rosengewächse”, “розовые”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f02095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Rosengewächse (Rosaceae) sind eine Pflanzenfamilie in der Ordnung der Rosenartigen (Rosales) innerhalb der Kerneudikotyledonen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosengewächse” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:45.501Z",
+   "target": "f13362",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hauptwirkstoff ist das zu den Lektinen gehörende Toxalbumin Phasin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:45.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phasin” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:12:15Z",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a medium-sized and economically important family of flowering plants commonly known as the mustards, the crucifers, or the cabbage family",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:12:20Z",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Brassica (cabbage and mustard)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23",
+   "note": "The 1911 Britannica's Cruciferae (crucifer family) article lists Brassica: cabbage, mustard, turnip and swede (B. napus, the rape species)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:07.569Z",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a medium-sized and economically important family of flowering plants commonly known as the mustards, the crucifers, or the cabbage family",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:07.569Z",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Brassica (cabbage and mustard)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:07.569Z",
+   "target": "f02094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Brassicaceae () or (the older but equally valid) Cruciferae () is a medium-sized and economically important family of flowering plants commonly known as the mustards, the crucifers, or the cabbage family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:07.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “crucifers” is on the snapshot of s8"
+  }
+ ]
+}

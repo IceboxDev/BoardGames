@@ -1,0 +1,242 @@
+{
+ "article": "a2066",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Exile_of_Ovid",
+   "title": "Exile of Ovid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:11.887Z",
+   "snapshot": "942fe42e699f2d0bf4de431c7b1e836a6fcebcf1912c0332630697f9c0d83b92"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Virgil",
+   "title": "Virgil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:12.874Z",
+   "snapshot": "2bf2abe5dcfdc6a2b049333f51bc94dcc21cb3b63aa35f60f40f047f13905bb5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Odes_(Horace)",
+   "title": "Odes (Horace) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:13.988Z",
+   "snapshot": "42d26e2c39c56ee69da86775acaee6c12b30b56c9e63d0a5f610ef420bbe297e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/De_rerum_natura",
+   "title": "De rerum natura – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:14.833Z",
+   "snapshot": "26c523a5a7cc83ba2cb0da996f9d173f3d434996d27ea7031a1b4877472ee929"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Catullus",
+   "title": "Catullus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:15.833Z",
+   "snapshot": "34c37e540653c6a0d1faacc29d74619fd6a80daad205e61111ac70cdee4da64d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ovid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c173"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Virgil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Horace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lucretius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Catullus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:16.601Z",
+   "target": "f10326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ovid, the Latin poet of the Roman Empire, was banished in 8 AD from Rome to Tomis (now Constanța, Romania) by decree of the emperor Augustus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ovid” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:16.601Z",
+   "target": "f10327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Publius Vergilius Maro (Classical Latin: [ˈpuːbliʊs wɛrˈɡɪliʊs ˈmaroː]; 15 October 70 BC – 21 September 19 BC), usually called Virgil or Vergil ( VUR-jil) in English, was an ancient Roman poet of the Augustan period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virgil” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:16.601Z",
+   "target": "f10328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Odes (Latin: Carmina) are a collection in four books of Latin lyric poems by Horace.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horace” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:16.601Z",
+   "target": "f10329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "De rerum natura (Latin: [deː ˈreːrʊn naːˈtuːraː]; On the Nature of Things) is a first-century BCE didactic poem by the Roman poet and philosopher Lucretius (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lucretius” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:16.601Z",
+   "target": "f10330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gaius Valerius Catullus (Classical Latin: [ˈɡaːius waˈlɛrius kaˈtullus]; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:16.601Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catullus” is on the snapshot of s5"
+  }
+ ]
+}

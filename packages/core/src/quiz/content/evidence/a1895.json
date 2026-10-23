@@ -1,0 +1,248 @@
+{
+ "article": "a1895",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mandarin_orange",
+   "title": "Mandarin orange – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:21.014Z",
+   "snapshot": "c7bb5f69c2d591935921d2f1ca6456041c0cfbbd9439e45e6f682bf2f64e3d4e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Clementine",
+   "title": "Clementine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:35.036Z",
+   "snapshot": "99478277d73ea63d7324310c5dc543bbcba2f6bc6a35c1833e9de16018a4594c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Grapefruit",
+   "title": "Grapefruit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:36.085Z",
+   "snapshot": "eeddcfd2b936187d0ba3b093d461f1cdcaac64ac9a1438bab8c73b704836e1ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mary_Isabel_Fraser",
+   "title": "Mary Isabel Fraser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:47.492Z",
+   "snapshot": "cd1d8061d4f5b9098f768bbab5c3d0a1c5e10591fd9599de1f12db6b9c5f26c5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Peach",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:33.541Z",
+   "snapshot": "dc18fed9534df576d9741075f4a0893924eff90558e799c7b23775da302c245b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Kiwifruit",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:24.151Z",
+   "snapshot": "0ca58a6623b1eefd562708fcf335ae53f22383071679ec6aee6fd43154ec67e2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mandarin orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "clementine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "grapefruit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Barbados",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Isabel Fraser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:40.683Z",
+   "target": "f09471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A mandarin orange (Citrus reticulata), often simply called mandarin, is a small, rounded citrus tree fruit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.683Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mandarin orange” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:40.683Z",
+   "target": "f09472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A clementine (Citrus × clementina) is a tangor, a citrus fruit hybrid between a willowleaf mandarin orange (C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.683Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “clementine” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:40.683Z",
+   "target": "f09475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The grapefruit (Citrus × paradisi) is a subtropical citrus tree known for its relatively large, sour to semi-sweet, somewhat bitter fruit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.683Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “grapefruit” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:40.683Z",
+   "target": "f23143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grapefruits originated in Barbados in the 18th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.683Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barbados” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:40.683Z",
+   "target": "f23144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mary Isabel Fraser (20 March 1863 – 18 April 1942) was a New Zealand teacher, school principal and educationalist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:40.683Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isabel Fraser” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,544 @@
+{
+ "article": "a1008",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/World_Wide_Web",
+   "title": "World Wide Web – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:55.284Z",
+   "snapshot": "3ed83023d17bb32c4b1541ab761bba0d528f143493ed265649f8dc71f4839716"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Internet_protocol_suite",
+   "title": "Internet protocol suite – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:56.088Z",
+   "snapshot": "3b29d3d8bf87df0f0a1399b1da6c99c774a5be399c9f0c3c3163ceeff2584b7d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ray_Tomlinson",
+   "title": "Ray Tomlinson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:57.093Z",
+   "snapshot": "51ffb1ed86c4e6be9a00306563c9608d3ccc552084e85f4adb108e7498b0d5a6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Mother_of_All_Demos",
+   "title": "The Mother of All Demos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:58.130Z",
+   "snapshot": "e982661705a15cf007edf4ed85ae7593df2e1e00f9b3069f83f9fc5d1bab9617"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/History_of_Linux",
+   "title": "History of Linux – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:59.201Z",
+   "snapshot": "a876c82bdebb18a2648b9979bd9cdff33fa0fe2b025ed4851dadc9ad67034e92"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Ray_Tomlinson",
+   "title": "Ray Tomlinson",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:56.267Z",
+   "snapshot": "360b448c5e0145a366cb4033c641288e3a6cab5bace9edee1f9c16acba369bff"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Tim_Berners-Lee",
+   "title": "Tim Berners-Lee",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:57.259Z",
+   "snapshot": "af70de08efc2be02de18a54fb483f59a28e0f62e1559cc7173bf8c4bebb5f6b5"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Computer_mouse",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:38.868Z",
+   "snapshot": "4b227b7d41e28b1df4c867321688fe820ead6bd96f942b241ab35d05cfcf93b1"
+  },
+  "s9": {
+   "url": "http://www.internethalloffame.org/official-biography-raymond-tomlinson",
+   "title": "Official Biography: Raymond Tomlinson",
+   "publisher": "Internet Hall of Fame (Internet Society)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:12.061Z",
+   "snapshot": "f1e0863ca037b98fd2d0922c0b456b411ca8a366e296bc4fc80922961af34ca1"
+  },
+  "s10": {
+   "url": "https://www.theverge.com/2016/3/6/11168718/ray-tomlinson-dead-inventor-of-email-obituary",
+   "title": "Ray Tomlinson, inventor of email, has died",
+   "publisher": "The Verge",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:11.659Z",
+   "snapshot": "84769bdda4d3a55aa43eb434a1e8554e6dfff3c8938b460029167ef4783a8daf"
+  },
+  "s11": {
+   "url": "https://www.bbc.com/news/business-35741116",
+   "title": "Email inventor Ray Tomlinson dies",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:11.702Z",
+   "snapshot": "2a603403b8113908159c639a4e3ac7f97d8b252ce72748cdda7c17d8001f632b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "World Wide Web",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c084"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "TCP/IP",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "email",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "computer mouse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Linux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1971",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-194"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tim Berners-Lee",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-386"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f05036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The World Wide Web (also known as WWW, W3, or simply the Web) is a global interconnected information system that enables content sharing over the Internet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “World Wide Web” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f05037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Internet protocol suite, commonly known as TCP/IP, is a framework for organizing the communication protocols used in the Internet and similar computer networks according to functional criteria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “TCP/IP” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f05038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Raymond Samuel Tomlinson (April 23, 1941 – March 5, 2016) was an American computer programmer who invented the first email program on the ARPANET system, the precursor to the Internet, in 1971; it was the first system able to send mail between users on different hosts connected to ARPANET.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “email” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f05039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "for the first time many of the fundamental elements of modern personal computing, including windows, hypertext, graphics, efficient navigation and command input, video conferencing, the computer mouse, word processing, dynamic file linking, revision control, and a collaborative real-time editor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “computer mouse” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f05040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Linux began in 1991 as a personal project by Finnish student Linus Torvalds to create a new free operating system kernel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linux” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1971 präsentierte Tomlinson seinen Mitarbeitern das Programm und versandte die erste E-Mail.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1971” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:19.023Z",
+   "target": "f14183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tim Berners-Lee ist der Sohn des Mathematiker-Ehepaares Mary Lee Woods und Conway Berners-Lee, das den Manchester Mark I mit entwickelte, und der Bruder des Ökologie-Professors Mike Berners-Lee.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.023Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tim Berners-Lee” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:49:14Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1971, he developed ARPANET’s first application for network email by combining the SNDMSG and CPYNET programs, allowing messages to be sent to users on other computers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:49:16Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Tomlinson sent the very first email back in 1971",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:49:18Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The US computer programmer came up with the idea of electronic messages that could be sent from one network to another in 1971.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:50.940Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1971, he developed ARPANET’s first application for network email by combining the SNDMSG and CPYNET programs, allowing messages to be sent to users on other computers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:50.940Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Tomlinson sent the very first email back in 1971",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:50.940Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The US computer programmer came up with the idea of electronic messages that could be sent from one network to another in 1971.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s11"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:50.940Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "In 1971, he developed ARPANET’s first application for network email by combining the SNDMSG and CPYNET programs, allowing messages to be sent to users on other computers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1971” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:50.940Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Tomlinson sent the very first email back in 1971; at the time, he was working in Boston at Bolt, Beranek, and Newman (BBN), a company that was instrumental in the development of a very early version of the internet, called ARPANET.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1971” is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:50.940Z",
+   "target": "f14182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The US computer programmer came up with the idea of electronic messages that could be sent from one network to another in 1971.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:50.940Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1971” is on the snapshot of s11"
+  }
+ ]
+}

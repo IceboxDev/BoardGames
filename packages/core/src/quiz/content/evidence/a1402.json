@@ -1,0 +1,476 @@
+{
+ "article": "a1402",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lofoten_Mainland_Connection",
+   "title": "Lofoten Mainland Connection – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:12.255Z",
+   "snapshot": "7e0e498ec849a26f8dc72724a42cb036157888a8b74d7860910fb0f7de4b5b5d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gotland",
+   "title": "Gotland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:06.545Z",
+   "snapshot": "1a3f0fc40e4b556a7836479f43dbf2522975775b351e6667d4e56c49a7765be1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aeolian_Islands",
+   "title": "Aeolian Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:13.280Z",
+   "snapshot": "f5a1bea43370ec3c1370a537ca877d33b0fddf9710a53bfc568013fd57440dc7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tanzania",
+   "title": "Tanzania – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:14.861Z",
+   "snapshot": "e313963b94abc884c6f2197a5dc37bb594808fb0d0789035fbfe81a70311c804"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands",
+   "title": "Galápagos Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:11.242Z",
+   "snapshot": "b89752c2ba2813750843a59648d5cf5de8ebd83bde85f1273bd219a4854087cb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Vulcano",
+   "title": "Vulcano",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:11.576Z",
+   "snapshot": "cf1617f0ec979f5b758dd05e570e5dfe0324057072f48f6e1864c7e7f3598a69"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/St_Kilda,_Scotland",
+   "title": "St Kilda, Scotland",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:15.390Z",
+   "snapshot": "b52dc8ffaa10b32a019624164b38c28f053db2e9e71a2ce268e30fc14286177e"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Great_Barrier_Reef",
+   "title": "Great Barrier Reef",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:12.585Z",
+   "snapshot": "56aa2be058888f482ac5e5310d113fdac0da9ed3d4a33dbedee1a4d2b54da78b"
+  },
+  "s9": {
+   "url": "https://whc.unesco.org/en/list/154/",
+   "title": "Great Barrier Reef – UNESCO World Heritage Centre",
+   "publisher": "UNESCO",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:18:20Z"
+  },
+  "s10": {
+   "url": "https://www.barrierreef.org/the-reef",
+   "title": "The Reef",
+   "publisher": "Great Barrier Reef Foundation",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:49.686Z",
+   "snapshot": "2fc58f9ec7782ef961ccd8e5a789f303d9c733e65d3bda458bdaf68e73b3f2d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07006",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Norway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c117"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sweden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07008",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Italy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07009",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tanzania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07010",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ecuador",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vulcano",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-203"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Scotland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-400"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14539",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Australien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript tp-033"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f07006",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This means that after the construction of Lofast most of Lofoten is now connected to the mainland of Norway.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norway” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f07007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gotland (; Swedish: [ˈɡɔ̌tːland] ; Gutland in Gutnish), also historically spelled Gottland or Gothland (), is Sweden's largest island.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sweden” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f07008",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Status as a World Heritage Site was threatened by Italy's failure to close the pumice quarry as well as its failure to prevent the building of 4 new harbours.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Italy” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f07009",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tanzania, officially the United Republic of Tanzania, is a country in East Africa within the African Great Lakes region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tanzania” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f07010",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "They form the Galápagos Province of the Republic of Ecuador, with a population of slightly over 33,450 in 2020.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ecuador” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f12074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vulcano ist eine Insel der Liparischen Inseln im Tyrrhenischen Meer vor der Nordküste Siziliens.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vulcano” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f12075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It contains the westernmost islands of the Outer Hebrides of Scotland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scotland” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:19.871Z",
+   "target": "f14539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Jahre in Australien eine breite öffentliche Bewegung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:19.871Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australien” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:18:20Z",
+   "target": "f14539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Great Barrier Reef is a site of remarkable variety and beauty on the north-east coast of Australia. It contains the world’s largest collection of coral reefs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:18:21Z",
+   "target": "f14539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Great Barrier Reef is Australia's unique living icon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:05.095Z",
+   "target": "f14539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Great Barrier Reef is Australia's unique living icon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:05.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:05.095Z",
+   "target": "f14539",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Great Barrier Reef is Australia's unique living icon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:05.095Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Australia” is on the snapshot of s10"
+  }
+ ]
+}

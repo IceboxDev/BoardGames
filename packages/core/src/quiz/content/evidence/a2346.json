@@ -1,0 +1,234 @@
+{
+ "article": "a2346",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Internationaler_Milit%C3%A4reinsatz_in_Libyen_2011",
+   "title": "Internationaler Militäreinsatz in Libyen 2011",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:24.795Z",
+   "snapshot": "ff774ab9774f061a2c3353e0141a5a0ee9efc0fef366721c956a6be83eb697f8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/First_Libyan_Civil_War",
+   "title": "First Libyan Civil War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:25.885Z",
+   "snapshot": "0a50264db0998001182d8b069ec6e242f99ed21bd7dca5c8ad0fad26cfb16ab8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2011_military_intervention_in_Libya",
+   "title": "2011 military intervention in Libya – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:26.546Z",
+   "snapshot": "694236e8b98707fcbe0e0f770a1412f5f7cbb3e0e4a9a7ef223dca608ba5e919"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/National_Transitional_Council",
+   "title": "National Transitional Council – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:27.404Z",
+   "snapshot": "47979d94a993a2370c5122861edaf8e514fafd5119d279d60650291ba57bba47"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frankreich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-210"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Benghazi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Resolution 1973",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Operation Odyssey Dawn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "National Transitional Council",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:02.115Z",
+   "target": "f12218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frankreich sei strikt gegen einen Bodeneinsatz in Libyen und halte bei jeder Entscheidung die Zustimmung der Arabischen Liga für unerlässlich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frankreich” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:02.115Z",
+   "target": "f12219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The war was ignited by protests in Benghazi beginning on 15 February 2011 inspired by the Arab Spring, which led to clashes with security forces and armed protesters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benghazi” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:02.115Z",
+   "target": "f12220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 19 March 2011, a NATO-led coalition began a military intervention into the ongoing Libyan Civil War to implement United Nations Security Council Resolution 1973 (UNSCR 1973).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Resolution 1973” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:02.115Z",
+   "target": "f12221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The official names for the interventions by the coalition members were Opération Harmattan by France; Operation Ellamy by the United Kingdom; Operation Mobile for the Canadian participation and Operation Odyssey Dawn for the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Operation Odyssey Dawn” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:02.115Z",
+   "target": "f12222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The National Transitional Council (NTC) was a transitional government established in the 2011 Libyan civil war.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “National Transitional Council” is on the snapshot of s4"
+  }
+ ]
+}

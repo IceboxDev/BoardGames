@@ -1,0 +1,351 @@
+{
+ "article": "a2211",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Familie_Feuerstein",
+   "title": "Familie Feuerstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:07.606Z",
+   "snapshot": "dcd41445ad4140559f7a143d580f958d3df96e5b574ddeab2b6702f2bb73abb2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Flintstones",
+   "title": "The Flintstones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:48:26.483Z",
+   "snapshot": "c0b108516331ce40d50b750c487bbe5b305474bcaf48f7615ff6066f8117e2ce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bamm-Bamm_Rubble",
+   "title": "Bamm-Bamm Rubble – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:23.059Z",
+   "snapshot": "e1052565f57ee5205f852d6ce6df10972d1a28ee28f1b69c8de5506f63bb6bf0"
+  },
+  "s4": {
+   "url": "https://interviews.televisionacademy.com/shows/flintstones-the",
+   "title": "Flintstones, The | Television Academy Interviews",
+   "publisher": "Television Academy Foundation",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:21.657Z",
+   "snapshot": "153636fc90fdc85ddff0250adfd85fa59aecc4fdd77bf38713ccbc65e0ef9567"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Familie Feuerstein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-284"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Barney und Betty Geröllheimer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-264"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Steintal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hanna-Barbera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ABC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:36.865Z",
+   "target": "f11255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Familie Feuerstein (englisch The Flintstones; wörtlich übersetzt: Die Feuersteins) ist eine US-amerikanische, von Hanna-Barbera produzierte Zeichentrickserie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Familie Feuerstein” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:36.865Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Barney und Betty Geröllheimer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Barney und Betty Geröllheimer”, “Barney and Betty Rubble”, “Барни и Бетти Раббл”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.865Z",
+   "target": "f11257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Serie spielt in der steinzeitlichen Stadt Steintal (in den neuen Synchronfassungen Felsental, OT: Bedrock), deren Gesellschaft mit der amerikanischen Mittelschicht des 20.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steintal” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.865Z",
+   "target": "f11258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Flintstones is an American animated sitcom by Hanna-Barbera Productions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanna-Barbera” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.865Z",
+   "target": "f11259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was originally broadcast on ABC from September 30, 1960, to April 1, 1966 as the first animated series with a prime-time slot on television, as well as the first animated sitcom.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.865Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ABC” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:13Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a fictional character in the Flintstones franchise, the adopted son of Barney and Betty Rubble.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:21:16Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1962 and 1963, Pebbles and Bamm Bamm appeared as the daughter and adopted son of the Flintstones and Rubbles respectively.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:23.881Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a fictional character in the Flintstones franchise, the adopted son of Barney and Betty Rubble.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.881Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:23.881Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1962 and 1963, Pebbles and Bamm Bamm appeared as the daughter and adopted son of the Flintstones and Rubbles respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.881Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:23.881Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bamm-Bamm Rubble (sometimes spelled Bam-Bam Rubble) is a fictional character in the Flintstones franchise, the adopted son of Barney and Betty Rubble.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.881Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Barney and Betty Rubble” is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:23.881Z",
+   "target": "f11256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fred and Wilma Flintstone and their best friends, Barney and Betty Rubble, lived in the prehistoric city of Bedrock but faced the problems of contemporary working-class life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.881Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Barney and Betty Rubble” is on the snapshot of s4"
+  }
+ ]
+}

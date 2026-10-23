@@ -1,0 +1,249 @@
+{
+ "article": "a1778",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind",
+   "title": "Sapiens: A Brief History of Humankind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:54.397Z",
+   "snapshot": "5c257415d99f188712e67981365100bb2c1cd112969d590ae9dc03676a7cfac4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/A_Brief_History_of_Time",
+   "title": "A Brief History of Time – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:31.452Z",
+   "snapshot": "eabe464db76633a5140ca6e3d7faeec377801423d8ad369e8b9f24023d17d9ea"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Selfish_Gene",
+   "title": "The Selfish Gene – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:55.446Z",
+   "snapshot": "18a1bcff9c14b672e550d83ea1c0e1cc4ec6f220dbc30624d753211ac1d1ec32"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Daniel_Kahneman",
+   "title": "Daniel Kahneman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:56.576Z",
+   "snapshot": "2126eb3a573c1c5420990d94e0293eadd9e5083a0859ad86d1065c2d5fec23cb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel",
+   "title": "Guns, Germs, and Steel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:57.498Z",
+   "snapshot": "eeb6c3c224409e0661c06e51291ffbd6cedd29887e37c7473da07a157e47002b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Yuval_Noah_Harari",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:58.519Z",
+   "snapshot": "780621a388c908bb80d869dd1eab2c7b04477cf954cb0aadc9be8249d06c188a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yuval Noah Harari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stephen Hawking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Richard Dawkins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Daniel Kahneman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jared Diamond",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:20.934Z",
+   "target": "f08886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sapiens: A Brief History of Humankind (Hebrew: קיצור תולדות האנושות, Qitzur Toldot ha-Enoshut) is a 2011 book by the Israeli military historian Yuval Noah Harari, based on a series of lectures he gave at the Hebrew University of Jerusalem.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yuval Noah Harari” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:20.934Z",
+   "target": "f08887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Brief History of Time: From the Big Bang to Black Holes is a book on cosmology by the physicist Stephen Hawking, first published in 1988.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stephen Hawking” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:20.934Z",
+   "target": "f08888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Selfish Gene is a 1976 popular science book by Richard Dawkins that espouses the gene-centred view of evolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Dawkins” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:20.934Z",
+   "target": "f08889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Daniel Kahneman (; Hebrew: דניאל כהנמן; March 5, 1934 – March 27, 2024) was an Israeli-American psychologist best known for his work on the psychology of judgment and decision-making as well as behavioral economics, for which he was awarded the 2002 Nobel Memorial Prize in Economic Sciences together",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daniel Kahneman” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:20.934Z",
+   "target": "f08890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Guns, Germs, and Steel: The Fates of Human Societies (subtitled A Short History of Everybody for the Last 13,000 Years in Britain) is a 1997 transdisciplinary nonfiction book by the American author Jared Diamond.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:20.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jared Diamond” is on the snapshot of s5"
+  }
+ ]
+}

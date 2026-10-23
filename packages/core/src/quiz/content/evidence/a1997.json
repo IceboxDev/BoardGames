@@ -1,0 +1,195 @@
+{
+ "article": "a1997",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Maske",
+   "title": "Henry Maske – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:18.939Z",
+   "snapshot": "ff29460e1b8a0a4f1ce80a999b97cd7f04d7bf810ec378cae4d6dba65b793a36"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dariusz_Michalczewski",
+   "title": "Dariusz Michalczewski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:18.916Z",
+   "snapshot": "208fed9874204b5fd7ea3c7444f661997e043d8fc97031f244c224a3adc22cda"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sven_Ottke",
+   "title": "Sven Ottke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:20.032Z",
+   "snapshot": "3f57c1b5b1d64d2f646b3dbd787846b4453c0ab5cea4003a3b8cc48e34a19264"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Axel_Schulz",
+   "title": "Axel Schulz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:21.436Z",
+   "snapshot": "18c0e669cbcb5f3fa6e1efc0fe86e8dd38db39591a37afa63d6681ce6a5ebf3b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henry Maske",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c167"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dariusz Michalczewski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sven Ottke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Axel Schulz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:02.630Z",
+   "target": "f09981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henry Maske (German pronunciation: [ˈhɛnʁi ˈmaskə], ; born 6 January 1964) is a German former professional boxer and one of Germany's most popular sports figures.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Maske” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.630Z",
+   "target": "f09983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dariusz Michalczewski struck a friendship with performer Mark Wahlberg, known at the time by his stage name Marky Mark of the formation Marky Mark and the Funky Bunch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dariusz Michalczewski” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.630Z",
+   "target": "f09984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sven Ottke (born 3 June 1967)  is a German former professional boxer who competed from 1997 to 2004.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sven Ottke” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.630Z",
+   "target": "f09985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Axel Schulz (born 9 November 1968) is a German former professional boxer who competed between 1990 and 2006.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Axel Schulz” is on the snapshot of s4"
+  }
+ ]
+}

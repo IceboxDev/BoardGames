@@ -119,6 +119,17 @@ describe("wording", () => {
     );
   });
 
+  it("spells the quiz trainer's main + second language", () => {
+    expect(
+      describeSettingsChanges("quiz", {
+        language: {
+          from: { primary: "en", secondary: null },
+          to: { primary: "ru", secondary: "de" },
+        },
+      }),
+    ).toBe("language English → Russian + German");
+  });
+
   it("describes greeting answers with what the card was about", () => {
     expect(
       line("greeting-response", { kind: "spotlight", action: "later", subjectUserId: "u-mel" }),

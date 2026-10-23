@@ -1,0 +1,326 @@
+{
+ "article": "a2170",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rolex",
+   "title": "Rolex",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:53.169Z",
+   "snapshot": "22419cd790820c36a873ca7d9dcedd080618c92d1b8b0a0283ae16b0e119a237"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rolex_Cosmograph_Daytona",
+   "title": "Rolex Cosmograph Daytona",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:57.034Z",
+   "snapshot": "dbb3f4a3ecfe7d5968fffa27786b190616413e6849b6e7ace00d43d81a7add2e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Wilsdorf",
+   "title": "Hans Wilsdorf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:57.955Z",
+   "snapshot": "17f5bc5e6937cc87f7e379c73a129002478147de6821c15880ffdf308d35bddf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rolex",
+   "title": "Rolex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:58.943Z",
+   "snapshot": "225bddeb8593617a86085160e3156defcf155233399edd34dd26cbf8f985d249"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mercedes_Gleitze",
+   "title": "Mercedes Gleitze – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:00.005Z",
+   "snapshot": "c7d5550db90d70bfd91d3fc137ac37fe09cc1c7fd880d9f8ae3d51201efcee64"
+  },
+  "s6": {
+   "url": "https://1000logos.net/rolex-logo/",
+   "title": "Rolex Logo – 1000 Logos",
+   "publisher": "1000 Logos",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:09.816Z",
+   "snapshot": "d3368503d5d356013e6600506ff376cbbe96a592944a18bff57a33498c457da0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "5 Zacken",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-316"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Newman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-369"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Wilsdorf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oyster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mercedes Gleitze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:33.057Z",
+   "target": "f10991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "5 Zacken",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“5 Zacken”, “5 points”, “5 зубцов”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.057Z",
+   "target": "f10992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first series included an \"exotic\" variant dial known as the Rolex \"Paul Newman\" Daytona, named after the famed actor, who received the watch as a gift from his wife, Joanne Woodward, and popularized it by wearing it consistently while pursuing his racing career.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Newman” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.057Z",
+   "target": "f10993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hans Wilsdorf (22 March 1881 – 6 July 1960) was a German watchmaker, best known as the founder of Rolex and Tudor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Wilsdorf” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.057Z",
+   "target": "f10994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "To address this problem, a third-party casemaker produced a waterproof and dustproof wristwatch for Rolex in 1926, giving it the name \"Oyster\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oyster” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.057Z",
+   "target": "f10995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The name of Mercedes Gleitze was used to market Rolex's new waterproof case, the \"Oyster\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mercedes Gleitze” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:30:47Z",
+   "target": "f10991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seit Ende der 1950er-Jahre ist die fünfzackige Krone, die sich über dem Schriftzug Rolex im Logo befindet, nicht verändert worden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:30:51Z",
+   "target": "f10991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Above the inscription, there was a sophisticated golden crown placed with five elongated peaks.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:19.911Z",
+   "target": "f10991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seit Ende der 1950er-Jahre ist die fünfzackige Krone, die sich über dem Schriftzug Rolex im Logo befindet, nicht verändert worden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:19.911Z",
+   "target": "f10991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Above the inscription, there was a sophisticated golden crown placed with five elongated peaks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  }
+ ]
+}

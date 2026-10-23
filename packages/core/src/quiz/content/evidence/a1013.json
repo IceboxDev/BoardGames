@@ -1,0 +1,328 @@
+{
+ "article": "a1013",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wankdorf_Stadium",
+   "title": "Wankdorf Stadium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:14.085Z",
+   "snapshot": "a3efa3a56cea1e4efeef9abd572d5ffe8a1a2a5a2786dcb29e6e33d8abb9f288"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_Group_A",
+   "title": "2006 FIFA World Cup Group A – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:15.349Z",
+   "snapshot": "bfa7f89998c1d471bdcf74124681819283c0011042ab63cf6c2fa73a633dcb48"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+   "title": "Stadio Olimpico – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:16.135Z",
+   "snapshot": "6ef703133ea54c2e58a3eb0fd0f8c7ff0521cbfc83087d75221bbb6d8d8744ab"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_final",
+   "title": "2014 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:17.178Z",
+   "snapshot": "e29fb6131b439d1fcc503054df94457ff2bde1499850562a9d24655bd335589d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft_2014",
+   "title": "Fußball-Weltmeisterschaft 2014",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:35:18.633Z",
+   "snapshot": "2e364fb1d723b4d82d3215ad1f971d92040ee59ebf4fcdfe730119284f01994a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_final",
+   "title": "2006 FIFA World Cup final",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:35:18.241Z",
+   "snapshot": "e6d28035230dd8fc90325d87020cbf4a5fea398c4c2d3f7d50937f40fb8406a1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Munich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rio de Janeiro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rio de Janeiro",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-241"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zinedine Zidane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-350"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mario Götze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-384"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f05061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wankdorf Stadium (German: Wankdorfstadion, pronounced [ˈvaŋkdɔʁfˌʃtaːdi̯ɔn] ) was a football stadium in Bern, Switzerland, and the home of Swiss club BSC Young Boys.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bern” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f05062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His team were considered one of the favourites to win the competition with bookmakers offering odds of around 13/2, but had received criticism in the country, notably from Bayern Munich general manager Uli Hoeneß who had labelled the side \"a disaster\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Munich” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f05063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stadio Olimpico (pronounced [ˈstaːdjo oˈlimpiko]; English: Olympic Stadium), colloquially known as l'Olimpico (The Olympic), is an Italian multi-purpose sports venue located in Rome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rome” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f05065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The final match of the 2014 FIFA World Cup, the 20th edition of FIFA's competition for national football teams, was played at the Maracanã Stadium in Rio de Janeiro, Brazil, on 13 July 2014, and was contested by Germany and Argentina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio de Janeiro” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f05065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dabei wurden fünf der 18 möglichen Spielorte besucht, in Rio de Janeiro präsentierten sich zudem die übrigen möglichen Austragungsorte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rio de Janeiro” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f13849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The match was focused mostly on France's Zinedine Zidane and Italy's Marco Materazzi: this was the last match of Zidane's career, they each scored their team's only goal of the game, and they were also involved in an incident in extra time that led to Zidane being sent off for headbutting Materazzi",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zinedine Zidane” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:19.674Z",
+   "target": "f13850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mario Götze, who had come on as a substitute shortly before the end of normal time, received Schürrle's cross from the left on his chest before volleying a left-footed shot into the net to secure a 1–0 victory for Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:19.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mario Götze” is on the snapshot of s4"
+  }
+ ]
+}

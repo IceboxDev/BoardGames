@@ -1,0 +1,274 @@
+{
+ "article": "a2462",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rainer_Maria_Rilke",
+   "title": "Rainer Maria Rilke",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:29.454Z",
+   "snapshot": "ae7302d7a2bcf112c49b5389aff95135381b79d0e6d1801bfb8f6c65e74dd357"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lord_Byron",
+   "title": "Lord Byron",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:33.182Z",
+   "snapshot": "6e10601f8f70330b70c01d1e18401886b40c312eab763b82bb47d3d79254359a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wilhelm_Busch",
+   "title": "Wilhelm Busch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:31.243Z",
+   "snapshot": "320dea752452b1e4ee79f532757f424354c8d94ae4dd4b055e370d32ad196f58"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/No_Thanks_(poetry_collection)",
+   "title": "No Thanks (poetry collection)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:34.051Z",
+   "snapshot": "c0d0e2652feabf5d68db1cfbbf7e3a362bbf109378d5dd206c16d378d2223ca5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/G%C3%A9rard_de_Nerval",
+   "title": "Gérard de Nerval – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:40.308Z",
+   "snapshot": "d2ccddba4cdb9fe4622b95c70358fb2f17848ab402019dda6320c7a17f5a949e"
+  },
+  "s6": {
+   "url": "https://www.mentalfloss.com/article/49171/7-book-dedications-basically-say-screw-you",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:31.900Z",
+   "snapshot": "96354a0a948e064d6002d772bf4546c8536114cf2b5399243c84d9f00c28abb4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Mädchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13; transcript tp-162"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schweinefleisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-130"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A lobster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 14 publishers who had rejected it",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "The 14 publishers who had rejected it",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-212/4, u07: False: Cummings self-published No Thanks (1935) and dedicated it to the fourteen publishers who had turned it down."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:23.837Z",
+   "target": "f12967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bis zu seinem sechsten Lebensjahr fand sich Rilke so als Mädchen erzogen; frühe Fotografien zeigen ihn mit langem Haar im Kleidchen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Als Mädchen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:23.837Z",
+   "target": "f12968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Byron also kept a tame bear while he was a student at Trinity out of resentment for rules forbidding pet dogs like his beloved Boatswain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bear” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:23.837Z",
+   "target": "f12969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das kindliche Miterleben der „schauderhaft anziehenden“ „Metamorphose in Wurst“ prägte Wilhelm Busch so nachhaltig, dass er sich während seines gesamten Lebens vor Schweinefleisch ekelte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schweinefleisch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:23.837Z",
+   "target": "f12971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Why should a lobster be any more ridiculous than a dog?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A lobster” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:05:08Z",
+   "target": "f12970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He self-published the collection with the help of his mother and dedicated it to the fourteen publishing houses who turned the collection down.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Well-known dedication (list of the 14 publishers printed in the book); no second crawlable non-Wikipedia page found (Poetry Foundation, Marginalian, Mental Floss block the crawler)"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:59:06.672Z",
+   "target": "f12970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He self-published the collection with the help of his mother and dedicated it to the fourteen publishing houses who turned the collection down.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,255 @@
+{
+ "article": "a0001",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kinderhymne",
+   "title": "Kinderhymne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:46.471Z",
+   "snapshot": "48fbaf4d5a472e64f9ff66df608c58edcbbc6c8da7ecd8b6fbbe97d8a83ea8a8",
+   "archiveUrl": "https://web.archive.org/web/20261023064300/https://de.wikipedia.org/wiki/Kinderhymne"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen",
+   "title": "Das Lied der Deutschen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:47.516Z",
+   "snapshot": "cec3d10b81b5dddf99b29c620d95121703a95b7ae4149c0751c8e301127a25f9",
+   "archiveUrl": "https://web.archive.org/web/20261023064320/https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser",
+   "title": "Gott erhalte Franz den Kaiser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:13:46.571Z",
+   "snapshot": "d1882fb57ac39669dc0d52b3dfad7e664df35a219d7420c5a4a8b392c4d7147f",
+   "archiveUrl": "https://web.archive.org/web/20261023064341/https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hanns_Eisler",
+   "title": "Hanns Eisler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:13:47.488Z",
+   "snapshot": "89520f1590576ff5997070a3f5f53ff4adaadb468daac401ed42caedd13109f3",
+   "archiveUrl": "https://web.archive.org/web/20261023064359/https://en.wikipedia.org/wiki/Hanns_Eisler"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Auferstanden_aus_Ruinen",
+   "title": "Auferstanden aus Ruinen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:48.517Z",
+   "snapshot": "966383e64c9e99ec81e90f4519e254db3bee66b45260ede9434ea06c38efd961",
+   "archiveUrl": "https://web.archive.org/web/20261023064420/https://de.wikipedia.org/wiki/Auferstanden_aus_Ruinen"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Deutschlandlied",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:13:48.532Z",
+   "snapshot": "cb41be7867a3f12d415b3a2a1c42f0e61f1d813e3febb7d17e276519544d83ef",
+   "archiveUrl": "https://web.archive.org/web/20261023064439/https://en.wikipedia.org/wiki/Deutschlandlied"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "August Heinrich Hoffmann von Fallersleben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joseph Haydn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hanns Eisler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Johannes R. Becher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:35.738Z",
+   "target": "f00001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Constantart: Hanns Eisler singt die Kinderhymne von Bertolt Brecht auf YouTube, 27.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:35.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:35.738Z",
+   "target": "f00002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Lied der Deutschen, auch Deutschlandlied genannt, wurde von August Heinrich Hoffmann von Fallersleben am 26.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:35.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “August Heinrich Hoffmann von Fallersleben” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:35.738Z",
+   "target": "f00003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Gott erhalte Franz den Kaiser\" also called the \"Kaiserhymne\", is an anthem composed in 1797 by Joseph Haydn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:35.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Haydn” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:35.738Z",
+   "target": "f00004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hanns Eisler (German pronunciation: [ˈhans ˈaɪslɐ]; 6 July 1898 – 6 September 1962) was an Austrian and German composer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:35.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hanns Eisler” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:35.738Z",
+   "target": "f00005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Im Auftrag des Politbüros der Sozialistischen Einheitspartei Deutschlands (SED) und des Präsidenten der DDR, Wilhelm Pieck, schuf im Herbst 1949 Johannes R. Becher den Text und Hanns Eisler komponierte die Melodie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:35.738Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johannes R. Becher” is on the snapshot of s5"
+  }
+ ]
+}

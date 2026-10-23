@@ -80,3 +80,13 @@ export function shuffle<T>(arr: readonly T[], rng: Rng = defaultRng): T[] {
   shuffleInPlace(a, rng);
   return a;
 }
+
+/** FNV-1a over a string → a 32-bit seed for `createRng`. */
+export function hashSeed(text: string): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}

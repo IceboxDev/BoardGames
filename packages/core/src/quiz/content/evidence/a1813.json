@@ -1,0 +1,202 @@
+{
+ "article": "a1813",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/George_Gershwin",
+   "title": "George Gershwin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:09.491Z",
+   "snapshot": "e888ee44266e4b0365976f48bfe840ee71ba7a1d05cc56f4632be693087c742d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rise_and_Fall_of_the_City_of_Mahagonny",
+   "title": "Rise and Fall of the City of Mahagonny – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:10.461Z",
+   "snapshot": "45a55e62bffdf0beb8089199c7827ec41918ad71defc75dff4bafdbaca713755"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Giacomo_Puccini",
+   "title": "Giacomo Puccini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:11.654Z",
+   "snapshot": "1ee2079bf93a9daa04e19ca602738aa83d0584e0a17f17dfaa1ab161064a6dca"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Georges_Bizet",
+   "title": "Georges Bizet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:12.639Z",
+   "snapshot": "b30e10893804c7611cf4b8eed63626c6c8e3ba43fc0a7f9171c870108511124d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Porgy_and_Bess",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:13.649Z",
+   "snapshot": "bf324510242877a1bfbd5a71aed2aeb5c54b53a1a589c35f476b5810e81fc299"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Gershwin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kurt Weill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Giacomo Puccini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georges Bizet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:26.545Z",
+   "target": "f09061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Gershwin (; born Jacob Gershwine; September 26, 1898 – July 11, 1937) was an American composer and pianist whose compositions spanned jazz, popular and classical music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Gershwin” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:26.545Z",
+   "target": "f09063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rise and Fall of the City of Mahagonny (German: Aufstieg und Fall der Stadt Mahagonny) is a political-satirical opera composed by Kurt Weill to a German libretto by Bertolt Brecht and Elisabeth Hauptmann.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Weill” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:26.545Z",
+   "target": "f09064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This first Giacomo Puccini, though often referred to as Jacopo, was maestro di cappella of the Cattedrale di San Martino in Lucca.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giacomo Puccini” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:26.545Z",
+   "target": "f09065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georges Bizet (né Alexandre César Léopold Bizet; 25 October 1838 – 3 June 1875) was a French composer of the Romantic era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:26.545Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georges Bizet” is on the snapshot of s4"
+  }
+ ]
+}

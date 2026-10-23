@@ -1,0 +1,482 @@
+{
+ "article": "a0157",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Burgtheater",
+   "title": "Burgtheater – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:14.388Z",
+   "snapshot": "e487bde9ee201b557885bf941ce026d1c38c455eb4e5d82c993dd84bc5094983"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Wiener_Staatsoper",
+   "title": "Wiener Staatsoper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:15.315Z",
+   "snapshot": "411e93e1bc070445fa2cdd9693f94bbb68b529e1fd47710673aff49e7bd1b69a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Wiener_Musikverein",
+   "title": "Wiener Musikverein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:16.075Z",
+   "snapshot": "2e5f94e71c1bec44bb7b342b1eba0ac733eba5c21c1f5adc1fcc4703d5151326"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/La_Scala",
+   "title": "La Scala – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:17.899Z",
+   "snapshot": "837cc2f607dcd2dd3748a0c44219368580844f88a69d7e51211c0b742631cf21"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Ensemble",
+   "title": "Berliner Ensemble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:28:17.150Z",
+   "snapshot": "bd1dc6cfccfae1ec0a8c013575dbf1160524e243ada3b46f220c9bf954aeaf72"
+  },
+  "s6": {
+   "url": "https://www.burgtheater.at/haus-historie-fuehrungen",
+   "title": "Haus, Historie & Führungen – Burgtheater",
+   "publisher": "Burgtheater",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:14.122Z",
+   "snapshot": "571805fb663e8ff996b3242694dfab6f0e9ab9be5100a700eed3d36c2686cffa"
+  },
+  "s7": {
+   "url": "https://austria-forum.org/af/AEIOU/Burgtheater",
+   "title": "Burgtheater – Austria-Forum (AEIOU)",
+   "publisher": "Austria-Forum",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:14.209Z",
+   "snapshot": "829961ddfec6e248bbc66e74e9b0a0fc1af1aa92681df8723affe4bbbf4a062c"
+  },
+  "s8": {
+   "url": "https://www.musiklexikon.ac.at/ml/musik_B/Burgtheater.xml",
+   "title": "Burgtheater – Oesterreichisches Musiklexikon online",
+   "publisher": "Österreichische Akademie der Wissenschaften",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:14.468Z",
+   "snapshot": "a1ba70c1f793b306806546b1be92b9595209877cf904078254b3ecab796b9e70"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Burgtheater",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c014"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00782",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wiener Staatsoper",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00783",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Musikverein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00784",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Teatro alla Scala",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00785",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Berliner Ensemble",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:02.115Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Burgtheater ist ein Schauspielhaus an der Ringstraße in der österreichischen Hauptstadt Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Burgtheater” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:02.115Z",
+   "target": "f00782",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Wiener Staatsoper ist ein Opernhaus an der Ringstraße in der österreichischen Hauptstadt Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wiener Staatsoper” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:02.115Z",
+   "target": "f00783",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Wiener Musikverein ist ein Konzertgebäude am Musikvereinsplatz in der österreichischen Hauptstadt Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Musikverein” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:02.115Z",
+   "target": "f00784",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La Scala (UK: , US: , Italian: [la ˈskaːla]; officially Teatro alla Scala [teˈaːtro alla ˈskaːla], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Teatro alla Scala” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:02.115Z",
+   "target": "f00785",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Berliner Ensemble (abgekürzt: BE, zu Zeiten der vormaligen DDR teilweise auch synonym mit Brecht-Ensemble) ist eine der bekanntesten Bühnen der deutschen Hauptstadt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:02.115Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berliner Ensemble” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:35Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willkommen im größten deutschsprachigen Sprechtheater!",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:39Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ist es das größte Schauspielhaus des deutschsprachigen Raumes und eines der bedeutendsten Schauspielhäuser der Welt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:49:43Z",
+   "target": "f00781",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Am 14. März 1741 überließ Kaiserin Maria Theresia dem Theaterunternehmer Joseph Selliers ein neben der Hofburg leerstehendes Ballhaus zur Verpachtung an Schauspielertruppen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23",
+   "note": "Founding is dated 1741 (Maria Theresia's licence) by the Österreichisches Musiklexikon and Austria-Forum; de.wikipedia's lead dates the reopened 'Theater nächst der Burg' to 1748."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:49:47Z",
+   "target": "f00781",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wiener Theater 1741–1888 situiert am Michaelerplatz",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Willkommen im größten deutschsprachigen Sprechtheater!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ist es das größte Schauspielhaus des deutschsprachigen Raumes und eines der bedeutendsten Schauspielhäuser der Welt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Am 14. März 1741 überließ Kaiserin Maria Theresia dem Theaterunternehmer Joseph Selliers ein neben der Hofburg leerstehendes Ballhaus zur Verpachtung an Schauspielertruppen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wiener Theater 1741–1888 situiert am Michaelerplatz",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Haus, Historie & Führungen | Burgtheater",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Burgtheater” is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Burgtheater | AEIOU Österreich-Lexikon im Austria-Forum",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Burgtheater” is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:20.522Z",
+   "target": "f00781",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1777/78 führte er das deutsche Nationalsingspiel ein: „Die deutsche komische Oper, die der Kaiser im Burgtheater zu errichten willens, sei dermalen der Versuch, ob mit den Deutschen in diesem Fache etwas anzufangen sei.“ Am 18.1.1778 wurden Die Bergknappen (T: P.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:20.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Burgtheater” is on the snapshot of s8"
+  }
+ ]
+}

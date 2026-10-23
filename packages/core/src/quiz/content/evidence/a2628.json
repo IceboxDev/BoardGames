@@ -1,0 +1,325 @@
+{
+ "article": "a2628",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gasflasche",
+   "title": "Gasflasche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:10.916Z",
+   "snapshot": "2c9d2d2974d1eba257b23d023fb87a210f79a6609f50c5fe03a5dec4be0dfe45"
+  },
+  "s2": {
+   "url": "https://www.m.gewinde-normen.de/gasflaschen-gewinde.html",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:10:11.034Z",
+   "snapshot": "d56b852278a4439db171e95dd07c055040a18ffa92ea400c204f6ea06b5edd5b"
+  },
+  "s3": {
+   "url": "https://www.industriegaseverband.de/auszug-der-wichtigsten-industriegase",
+   "title": "Auszug der wichtigsten Industriegase",
+   "publisher": "Industriegaseverband e.V. (IGV)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:56.940Z",
+   "snapshot": "458ea9a7f15b27eabae886ce16e86bfd5872829c71c3530ebe7c02622501b489"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "weiß",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "schwarz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dunkelgrün",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brenngase",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Brenngase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-137/5, u05: DIN 477 prescribes left-hand outlet threads for fuel/flammable gases (propane, butane, hydrogen, acetylene …); non-flammable gases such as argon, CO2, nitrogen and oxygen use right-hand threads. Statement 'all' false."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:49.012Z",
+   "target": "f14217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brenngase",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:49.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:49.012Z",
+   "target": "f14217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bei einigen Gasen, vor allem Brenngase, sind (siehe Tabelle unten) Ventilausgangsanschlüsse und sonstiges Zubehör mit Linksgewinde vorgeschrieben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brenngase” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:49.012Z",
+   "target": "f14218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Industriegase: grau oder gleich wie die Schulter, jedoch nicht weiß",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:49.012Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “weiß” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:49.012Z",
+   "target": "f14219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "schwarz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“schwarz”, “black”, “чёрный”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:49.012Z",
+   "target": "f14220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dunkelgrün",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“dunkelgrün”, “dark green”, “тёмно-зелёный”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:16:53Z",
+   "target": "f14219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stickstoff wird gasförmig in Druckgasflaschen (schwarze Flaschenschulter) oder tiefkalt verflüssigt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:16:54Z",
+   "target": "f14220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Argon wird gasförmig in Druckgasflaschen (dunkelgrüne Flaschenschulter)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:16:55Z",
+   "target": "f14219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stickstoff (N2) dunkelgrün schwarz",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Table row: old marking (whole cylinder) dark green, new EN 1089-3 marking (shoulder only) black."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:16:56Z",
+   "target": "f14220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Argon (Ar) grau dunkelgrün",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Table row: old marking grey, new EN 1089-3 shoulder dark green."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:34.135Z",
+   "target": "f14219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stickstoff wird gasförmig in Druckgasflaschen (schwarze Flaschenschulter) oder tiefkalt verflüssigt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:34.135Z",
+   "target": "f14220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Argon wird gasförmig in Druckgasflaschen (dunkelgrüne Flaschenschulter)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:34.135Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  }
+ ]
+}

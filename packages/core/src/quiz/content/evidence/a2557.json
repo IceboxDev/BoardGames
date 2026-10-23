@@ -1,0 +1,332 @@
+{
+ "article": "a2557",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Artikel_12a_des_Grundgesetzes_f%C3%BCr_die_Bundesrepublik_Deutschland",
+   "title": "Artikel 12a des Grundgesetzes für die Bundesrepublik Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:08.907Z",
+   "snapshot": "1a48e5d8257bbf092518d7bed5a0a6e1f5766c82f65fab5fe1c3817c471334e2"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tanja_Kreil",
+   "title": "Tanja Kreil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:09.889Z",
+   "snapshot": "a5a78de13f884b51dfab6fa19dc62a3a12376ec35860b1b86ce0a554b8577318"
+  },
+  "s3": {
+   "url": "https://curia.europa.eu/en/actu/communiques/cp00/aff/cp0001en.htm",
+   "title": "Press release No 1/2000: Judgment of the Court of Justice in Case C-285/98 (Kreil)",
+   "publisher": "Court of Justice of the European Communities",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:09.991Z",
+   "snapshot": "921c3a0cb40ab90a4349156ed95e9d6085eb9af0ca6d6e3bc312d8b5f47f5eec"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Kreil-Entscheidung",
+   "title": "Kreil-Entscheidung",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:10.355Z",
+   "snapshot": "3fc7acf00a1e970267667948373199cf3f3d7762ed18da9ad6f3c826ef523405"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Grundgesetz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-261"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13676",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tanja Kreil",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "der Europäische Gerichtshof",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13678",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Artikel 12a",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13679",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Waffenelektronik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:38.214Z",
+   "target": "f13675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Artikel 12a Grundgesetz für die Bundesrepublik Deutschland (GG) normiert die Dienstverpflichtungen und gehört zum ersten Abschnitt Grundrechte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grundgesetz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:38.214Z",
+   "target": "f13676",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tanja Kreil (* 1977 in Hannover) ist eine deutsche Elektronikerin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tanja Kreil” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:38.214Z",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "der Europäische Gerichtshof",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“der Europäische Gerichtshof”, “the European Court of Justice”, “Европейский суд”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:38.214Z",
+   "target": "f13678",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Artikel 12a des Grundgesetzes für die Bundesrepublik Deutschland",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Artikel 12a” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:38.214Z",
+   "target": "f13679",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sie bewarb sich beim Zentrum für Nachwuchsgewinnung Nord für den freiwilligen Dienst in der Bundeswehr im Bereich der Instandsetzung (Waffenelektronik).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.214Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Waffenelektronik” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:40:42Z",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "German legislation barring women outright from army jobs involving the use of arms is contrary to the Community principle of equal treatment for men and women.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23",
+   "note": "Press release dated 11 January 2000."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:40:44Z",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mit der Kreil-Entscheidung schuf der Europäische Gerichtshof (EuGH) am 11. Januar 2000 die rechtliche Voraussetzung dafür",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:22.653Z",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "German legislation barring women outright from army jobs involving the use of arms is contrary to the Community principle of equal treatment for men and women.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.653Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:22.653Z",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mit der Kreil-Entscheidung schuf der Europäische Gerichtshof (EuGH) am 11. Januar 2000 die rechtliche Voraussetzung dafür",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.653Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:22.653Z",
+   "target": "f13677",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mit der Kreil-Entscheidung schuf der Europäische Gerichtshof (EuGH) am 11.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:22.653Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “der Europäische Gerichtshof” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,613 @@
+{
+ "article": "a2206",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Dyrehavsbakken",
+   "title": "Dyrehavsbakken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:52.585Z",
+   "snapshot": "0a8bebac2c380a991685b3423aec0e4411fefbc52e832e920c4a235e831e04d5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tivoli_Gardens",
+   "title": "Tivoli Gardens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:56.299Z",
+   "snapshot": "b4d0ffb3af861b892584a466555a1a64eba0cf444dfd6e171ed4b7b6ee33f3de"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Disneyland",
+   "title": "Disneyland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:57.438Z",
+   "snapshot": "246cdade1622d87fad565df847904910a7cd62433fa126c179d269fbb9e4e5af"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Efteling",
+   "title": "Efteling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:58.374Z",
+   "snapshot": "b15b2f4b352860767f4989acf336d274c24d82ba8731d9399d9e471c34af577a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Europa-Park",
+   "title": "Europa-Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:59.468Z",
+   "snapshot": "66becc2bb96a5cb4a8474ff3a35ed884c91a7f111fbee36f0f558090461653a2"
+  },
+  "s6": {
+   "url": "https://www.bakken.dk/",
+   "title": "Bakken – Dyrehavsbakken",
+   "publisher": "Dyrehavsbakken",
+   "kind": "primary",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:45:20.896Z",
+   "snapshot": "892f8ecc872bc46707f1256e57ffeec4580c8948cf7c42d1fbd92a36cecdd631"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Dyrehavsbakken",
+   "title": "Dyrehavsbakken",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:21.036Z",
+   "snapshot": "d3b4c16df5b583130ed4b8be2f074ccb4f07da9d2048336e4358290d7d04da04"
+  },
+  "s8": {
+   "url": "https://www.tivoli.dk/da/om/tivolis-historie",
+   "title": "Tivolis historie",
+   "publisher": "Tivoli A/S",
+   "kind": "primary",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:45:21.328Z",
+   "snapshot": "d6156b2dff04898e63944d5e212e7a8faf0c55d3e66958b434cdce45a3720d48"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Wurstelprater",
+   "title": "Wurstelprater",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:22.047Z",
+   "snapshot": "61af9d6d7f244f2e192c984c2ef6e9acc5119b43cf3c112b98ab3d6c70e89ac6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tivoli Gardens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anaheim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rust",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dyrehavsbakken",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Dyrehavsbakken",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-126/1, u02: Bakken (1583) is the oldest operating amusement park; Tivoli opened 1843; statement false."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dyrehavsbakken",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dyrehavsbakken",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dyrehavsbakken [ˈdyːʀəhɑu̯sbɑgən] (dän.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dyrehavsbakken” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The park opened on 15 August 1843 and is the second-oldest operating amusement park in the world, after Dyrehavsbakken in nearby Klampenborg, also in Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dyrehavsbakken” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tivoli Gardens, also known simply as Tivoli (Danish pronunciation: [ˈtsʰiwoli]), is an amusement park and pleasure garden in Copenhagen, Denmark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tivoli Gardens” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Disneyland is a theme park at the Disneyland Resort in Anaheim, California, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anaheim” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Efteling is a fantasy-themed theme park in Kaatsheuvel, a town in the Netherlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Netherlands” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:36.460Z",
+   "target": "f11223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Europa-Park is a theme park and resort in Rust, Baden-Württemberg, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rust” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:20Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hold årets julefrokost i verdens ældste forlystelsespark",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:34:24Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the world's oldest operating amusement park",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:34:28Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "15. august 1843 slog Haven portene op.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:34:32Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The park opened on 15 August 1843 and is the second-oldest operating amusement park in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:34:37Z",
+   "target": "f11220",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They found new venues within the Prater, which had been opened to the public by Emperor Joseph II in 1766.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "the 'second-oldest' ranking is disputed by Vienna's Wurstelprater (1766); wording now says 'usually called'"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:35:09Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "15. august 1843 slog Haven portene op.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer confirmed after rewording: the question now says 'usually called the second-oldest' (the Wurstelprater claim is recorded as contested premise)"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hold årets julefrokost i verdens ældste forlystelsespark",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the world's oldest operating amusement park",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The park opened on 15 August 1843 and is the second-oldest operating amusement park in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11220",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "They found new venues within the Prater, which had been opened to the public by Emperor Joseph II in 1766.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "15. august 1843 slog Haven portene op.",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The origins of Dyrehavsbakken can be traced back to 1583 when Kirsten Piil discovered a natural spring in what is now known as Jægersborg Dyrehave or Dyrehaven, a large forest park north of Copenhagen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dyrehavsbakken” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tivolis historie - Kom på en tidsrejse med Tivoli",
+     "quoteLang": "da",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.540Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tivoli” is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:23.540Z",
+   "target": "f11220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tivoli Gardens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“Tivoli Gardens”, “Tivoli”, “Тиволи”) on the snapshot of s9"
+  }
+ ]
+}

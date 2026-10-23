@@ -1,0 +1,392 @@
+{
+ "article": "a1168",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fargo_(1996_film)",
+   "title": "Fargo (1996 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:55.727Z",
+   "snapshot": "32ef4fe3fbb8e225756fb7b7a5cbc1952b519dc4496cd46d68d2ffef299e66f9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fame_(1980_film)",
+   "title": "Fame (1980 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:54.989Z",
+   "snapshot": "42952621d20b346dfd7f33a3c0a1eec05ceee2755f6ceab34604a96643993fa1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer",
+   "title": "Buffy the Vampire Slayer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:43.894Z",
+   "snapshot": "b15e22a92407406786c877ae13bdbfe45bfdb39df0e31d11110d870b3b77e6dd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Buffy_%E2%80%93_Der_Vampir-Killer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:54.182Z",
+   "snapshot": "b98565361a7690306c2b4dcad7006b9bb840f2f1a67d2c988317dc51abfbd063"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fargo_(TV_series)",
+   "title": "Fargo (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:55.981Z",
+   "snapshot": "49d0f8c5d3bd05c8f9b76cbed68f8b3692ce035e7fcf609ec74825231afd2c04"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)",
+   "title": "M*A*S*H (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:03.576Z",
+   "snapshot": "4850e8a50f4f5345721e71a7595759db9fac5ce922f5191174903c672fd35ccf"
+  },
+  "s7": {
+   "url": "https://www.emmys.com/bios/alan-alda",
+   "title": "Alan Alda | Emmy Awards and Nominations | Television Academy",
+   "publisher": "Television Academy",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:28.868Z",
+   "snapshot": "0f8e8442f3cb53c68a9d54ee2fbdeb6a46e15b8c0b1a8f57e3fa0101ae882c09"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fargo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fame",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buffy the Vampire Slayer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Buffy – Der Vampir-Killer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21303",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Noah Hawley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hawkeye Pierce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:42.895Z",
+   "target": "f05836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fargo is a 1996 crime comedy film written, directed, produced and edited by Joel and Ethan Coen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fargo” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:42.895Z",
+   "target": "f05838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fame is a 1980 American musical drama film directed by Alan Parker and written by Christopher Gore.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fame” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:42.895Z",
+   "target": "f05839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buffy the Vampire Slayer is an American supernatural horror drama television series created by Joss Whedon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buffy the Vampire Slayer” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:42.895Z",
+   "target": "f05839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Buffy – Der Vampir-Killer ist eine US-amerikanische Horrorkomödie der Regisseurin Fran Rubel Kuzui aus dem Jahr 1992.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buffy – Der Vampir-Killer” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:42.895Z",
+   "target": "f21303",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fargo is an American black comedy crime drama television series created by Noah Hawley for FX.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:42.895Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Noah Hawley” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:42.895Z",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hawkeye Pierce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Hawkeye Pierce”, “Хокай Пирс”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:31:38Z",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The ensemble cast originally featured Alan Alda and Wayne Rogers as surgeons Benjamin \"Hawkeye\" Pierce and \"Trapper\" John McIntyre",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:31:42Z",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "he is best known for his starring roles as Captain Hawkeye Pierce in the TV series M*A*S*H",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:22.250Z",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The ensemble cast originally featured Alan Alda and Wayne Rogers as surgeons Benjamin \"Hawkeye\" Pierce and \"Trapper\" John McIntyre",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:22.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:22.250Z",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "he is best known for his starring roles as Captain Hawkeye Pierce in the TV series M*A*S*H",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:22.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:22.250Z",
+   "target": "f21304",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A six-time Emmy Award and Golden Globe Award winner, he is best known for his starring roles as Captain Hawkeye Pierce in the TV series M*A*S*H and Arnold Vinick in The West Wing, and his supporting role in the 2004 film The Aviator, for which he was nominated for an Academy Award.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:22.250Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hawkeye Pierce” is on the snapshot of s7"
+  }
+ ]
+}

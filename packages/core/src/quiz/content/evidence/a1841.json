@@ -1,0 +1,529 @@
+{
+ "article": "a1841",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Castling",
+   "title": "Castling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:51.304Z",
+   "snapshot": "e8de34749d597131e4deb1340a545c4c62848ed64ec134ae2de635b60a5cc4e2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/En_passant",
+   "title": "En passant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:35.401Z",
+   "snapshot": "42476ab05076843bf17b08adcde4db783b9a8f708ca0cc3eeb406a2fa07c394a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Promotion_(chess)",
+   "title": "Promotion (chess) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:36.719Z",
+   "snapshot": "bfc798937214fc2f96e13e5bf248148ed8ab7bd041cd754e3b71d78ebee206e1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Opera_Game",
+   "title": "Opera Game – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:37.377Z",
+   "snapshot": "dae204a56d58a5599a01af415de4b987e1d5c1caeda9a00d1a6fd5555b11f49c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Schachfigur",
+   "title": "Schachfigur",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:25:34.660Z",
+   "snapshot": "8ef74a68d0df8a7f70bb9c2d4ce21fc73d3f306c8448ee64d9ccc01cce680692"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Stalemate",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:52.390Z",
+   "snapshot": "61883ed0a2f0896042b15d4dc62ccf888d567cbb445d1936a51e12c5bac52fd8"
+  },
+  "s7": {
+   "url": "https://www.chess.com/terms/pin-chess",
+   "title": "What is a pin in chess? – Chess Terms",
+   "publisher": "Chess.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:51.804Z",
+   "snapshot": "1403f6ce04027dc5055f1b908882c6bb32b47502d6b304eb97454403bc871854"
+  },
+  "s8": {
+   "url": "https://www.chessprogramming.org/Pin",
+   "title": "Pin – Chess Programming Wiki",
+   "publisher": "Chess Programming Wiki",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:51.617Z",
+   "snapshot": "04b0c97c7d1777864eb7fd3d9e1a497eef0d751560fccd05734cac6a9102d331"
+  },
+  "s9": {
+   "url": "https://handbook.fide.com/chapter/E012023",
+   "title": "FIDE Laws of Chess taking effect from 1 January 2023",
+   "publisher": "FIDE",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:32.053Z",
+   "snapshot": "3a0c61d7465cbd556d98b8e9b7a323bc241ada1a5e551a1f7308b454a55ac1c0"
+  },
+  "s10": {
+   "url": "https://www.chess.com/terms/chess-pieces",
+   "title": "Chess Pieces Names, Moves & Values",
+   "publisher": "Chess.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:52.687Z",
+   "snapshot": "9ba0ec3ec2773bb0c020950d80aa291e8ba6ddddbc9ad6bbc7a9ddfbcaf570f7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "castling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "en passant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "promotion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "König, Dame, Läufer und Bauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-100"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:31.760Z",
+   "target": "f09201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Castling is permitted only if neither the king nor the rook has previously moved; the squares between the king and the rook are vacant; and the king does not leave, cross over, or finish on a square attacked by an enemy piece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “castling” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:31.760Z",
+   "target": "f09202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In chess, en passant (French for 'in passing') describes the capture by a pawn of an enemy pawn on the same rank and an adjacent file that has just made an initial two-square advance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “en passant” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:31.760Z",
+   "target": "f09204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In chess, promotion is the replacement of a pawn with a new piece when the pawn is moved to its last rank.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.760Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “promotion” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:31.760Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pin”, “Fesselung”, “связка”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:31.760Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "König, Dame, Läufer und Bauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“König, Dame, Läufer und Bauer”, “king, queen, bishop and pawn”, “король, ферзь, слон и пешка”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:35:04Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Usually, the pinned piece blocks an attack to a more valuable piece",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:35:07Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A Pin is a X-ray related situation where a sliding piece, a bishop, a rook or a queen indirectly attacks an opponent king or piece potentially en prise, shielded by another directly attacked opponent",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:35:09Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "3.4 The queen may move to any square along the file, the rank or a diagonal on which it stands.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:35:12Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the pawn may move to a square occupied by an opponent’s piece diagonally in front of it on an adjacent file, capturing that piece.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:35:15Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "King - Moves one square in any direction.\nQueen - Moves any number of squares diagonally, horizontally, or vertically.\nRook - Moves any number of squares horizontally or vertically.\nBishop - Moves any number of squares diagonally.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:35:25Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Queen - Moves any number of squares diagonally, horizontally, or vertically.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:35:28Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It captures diagonally one square forward.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r072",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:21.274Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Usually, the pinned piece blocks an attack to a more valuable piece",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:21.274Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A Pin is a X-ray related situation where a sliding piece, a bishop, a rook or a queen indirectly attacks an opponent king or piece potentially en prise, shielded by another directly attacked opponent",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:21.274Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the pawn may move to a square occupied by an opponent’s piece diagonally in front of it on an adjacent file, capturing that piece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:21.274Z",
+   "target": "f13939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It captures diagonally one square forward.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:21.274Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Among the basic tactics, the pin is one of the most common you can use to surprise your opponent and win the game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “pin” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:21.274Z",
+   "target": "f09205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Pin - Chess Programming Wiki",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:21.274Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “pin” is on the snapshot of s8"
+  }
+ ]
+}

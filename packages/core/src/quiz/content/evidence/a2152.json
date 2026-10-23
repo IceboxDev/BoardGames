@@ -1,0 +1,649 @@
+{
+ "article": "a2152",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Uranus_(Planet)",
+   "title": "Uranus (Planet)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:44:39.213Z",
+   "snapshot": "bd858931100ff3c074ba8564280cee62be8995c67b78fd15f7eb0a8c9a2034a5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Neptun_(Planet)",
+   "title": "Neptun (Planet)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:34:57.122Z",
+   "snapshot": "23915f4b50e6518feb5eda97698029c550c4396ab2888592ae2916b2bde59015"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Umbriel",
+   "title": "Umbriel",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:42.952Z",
+   "snapshot": "b379794b89bf81a17883bd6cddfd7de15c5dd0c7ea775f81c6cd41bf02ab46d0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Uranus",
+   "title": "Uranus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:10.379Z",
+   "snapshot": "f106d685cb71e13e95e9ea03286a5a393403545d65271f41d5e953449f4f2b59"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Titania_(moon)",
+   "title": "Titania (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:44.140Z",
+   "snapshot": "d2c478b07d3855afba701dbf1ad88b6f6493b9fa8f786cc13ba8237943d16b23"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Proteus_(moon)",
+   "title": "Proteus (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:44.899Z",
+   "snapshot": "ddbe100c78989a2d89a78840deb64adb0dc9c465ace4eb974b4f76ec359514d5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Moons_of_Neptune",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:45.970Z",
+   "snapshot": "5e952e99c82f563fdc558bafc3bfc782cd46e8206d52783caf55051199055d77"
+  },
+  "s8": {
+   "url": "https://science.nasa.gov/uranus/moons/",
+   "title": "Uranus Moons – NASA Science",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:58.758Z",
+   "snapshot": "cd7ef57cdd7fd1ce045ad81b079dff7ab72f2af022bfb769bebcacc6788d70f5"
+  },
+  "s9": {
+   "url": "https://planetarynames.wr.usgs.gov/Page/Categories",
+   "title": "Categories for Naming Features on Planets and Satellites – IAU/USGS Gazetteer of Planetary Nomenclature",
+   "publisher": "IAU / USGS Gazetteer of Planetary Nomenclature",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:59.295Z",
+   "snapshot": "f4c46a6d8c8135ebe346b40bb5cccef960a9a3dfab65af4fb5575f252e3cc7b7"
+  },
+  "s10": {
+   "url": "https://science.nasa.gov/uranus/moons/titania/",
+   "title": "Titania – NASA Science",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:59.686Z",
+   "snapshot": "1ac9a80bfca6973c92a1c7963fd62b9285b5b6c10f46fce58879b07e6767607e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Uranus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-265"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neptun",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-105"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "William Shakespeare",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-144"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Evil or dark spirits",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-179"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10865",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georgium Sidus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johann Elert Bode",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Titania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f10868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Proteus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Uranus (IPA: [ˈuːʁanʊs] ) (Latinisierung von altgriechisch οὐρανός uranós, deutsch ‚Himmel‘) ist von der Sonne aus mit einer durchschnittlichen Sonnenentfernung von 2,9 Milliarden Kilometern der siebte Planet im Sonnensystem und wird zu den Eisriesen gerechnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uranus” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Neptun ist der achte und äußerste bekannte Planet unseres Sonnensystems.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neptun” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "William Shakespeare",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“William Shakespeare”, “Уильям Шекспир”) on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Evil or dark spirits",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Evil or dark spirits”, “Böse oder dunkle Geister”, “Злые или тёмные духи”) on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10865",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In response to Maskelyne's request, Herschel decided to name the object Georgium Sidus (George's Star), or the \"Georgian Planet\", in honour of his new patron, King George III.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georgium Sidus” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Berlin astronomer Johann Elert Bode described Herschel's discovery as \"a moving star that can be deemed a hitherto unknown planet-like object circulating beyond the orbit of Saturn\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Elert Bode” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Titania () is the largest moon of Uranus and the eighth-largest moon in the Solar System, with a diameter of 1,577 km (980 mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titania” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:30.444Z",
+   "target": "f10868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Proteus ( PROH-tee-əs), also known as Neptune VIII, is the second-largest moon of Neptune and the planet's largest inner satellite.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Proteus” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:08:39Z",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "because they are named for Shakespearean characters, along with a couple of the moons being named for characters from the works of Alexander Pope",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:08:41Z",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "it is named after the queen of the fairies in Shakespeare's A Midsummer Night's Dream",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the Shakespeare naming for the largest moon; NASA covers the system as a whole."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:08:44Z",
+   "target": "f10864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Dark spirits (individual)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23",
+   "note": "The naming category listed for Umbriel under \"Satellites of Uranus\"."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:08:46Z",
+   "target": "f10864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Surface features on Umbriel are named for evil or dark spirits taken from various mythologies.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:08:47Z",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Titania is Uranus' largest moon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:08:49Z",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is the largest moon of Uranus and the eighth-largest moon in the Solar System, with a diameter of 1,577 km",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r016",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "because they are named for Shakespearean characters, along with a couple of the moons being named for characters from the works of Alexander Pope",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "it is named after the queen of the fairies in Shakespeare's A Midsummer Night's Dream",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Dark spirits (individual)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Titania is Uranus' largest moon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is the largest moon of Uranus and the eighth-largest moon in the Solar System, with a diameter of 1,577 km",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "All of Uranus's moons are named after characters created by William Shakespeare or Alexander Pope.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “William Shakespeare” is on the snapshot of s5"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:16.891Z",
+   "target": "f10867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This high-resolution color composite of Titania was made from Voyager 2 images taken Jan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.891Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Titania” is on the snapshot of s10"
+  }
+ ]
+}

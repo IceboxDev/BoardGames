@@ -1,0 +1,242 @@
+{
+ "article": "a1843",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Teddy_bear",
+   "title": "Teddy bear – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:38.375Z",
+   "snapshot": "f23a385ae712833c181637bc717782ac2a6111d8c2af68d7669404bc1760e119"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Washington,_D.C.",
+   "title": "Washington, D.C. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:39.635Z",
+   "snapshot": "fd965361ea68e33399f933065a8d2975f398256d213f2b12d67910479e8adc8b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hoover_Dam",
+   "title": "Hoover Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:40.627Z",
+   "snapshot": "c0da4e6a2b644086b8dd3b762b11a07d7ba695fade587b194b595d438de06cf3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_F._Kennedy_International_Airport",
+   "title": "John F. Kennedy International Airport – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:41.595Z",
+   "snapshot": "8d5993ec6f2d38e38c551f95ebaee5f59789bc3799f5e479e896550e40ea44b0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lincoln,_Nebraska",
+   "title": "Lincoln, Nebraska – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:42.603Z",
+   "snapshot": "364bdf757fd3b6f8107e578a4640244320ffb20e805868d8decf08eb852b66d9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09211",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Theodore Roosevelt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09212",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Washington",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Herbert Hoover",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John F. Kennedy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:32.286Z",
+   "target": "f09211",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The teddy bear was named by Morris Michtom after the 26th president of the United States, Theodore Roosevelt; it was developed apparently simultaneously in the first decade of the 20th century by two toymakers: Richard Steiff in Germany and Michtom in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodore Roosevelt” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:32.286Z",
+   "target": "f09212",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Washington\" is a more recent addition to the city's common name, and is from the name of George Washington, the first U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Washington” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:32.286Z",
+   "target": "f09213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bills passed by Congress during its construction referred to it as Hoover Dam (after President Herbert Hoover), but the Roosevelt administration named it Boulder Dam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herbert Hoover” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:32.286Z",
+   "target": "f09214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John F. Kennedy International Airport (IATA: JFK, ICAO: KJFK, FAA LID: JFK) is the primary international airport serving the New York metropolitan area.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John F. Kennedy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:32.286Z",
+   "target": "f09215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Renamed after President Abraham Lincoln, it became Nebraska's state capital in 1869.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:32.286Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Lincoln” is on the snapshot of s5"
+  }
+ ]
+}

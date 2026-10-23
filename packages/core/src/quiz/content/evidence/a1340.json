@@ -1,0 +1,202 @@
+{
+ "article": "a1340",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Martin_Heidegger",
+   "title": "Martin Heidegger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:03.902Z",
+   "snapshot": "86e05dcabcd88787326952a51033bcc9cf97e40372a35176f3e0a863728fcd58"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hans-Georg_Gadamer",
+   "title": "Hans-Georg Gadamer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:47.292Z",
+   "snapshot": "8192f15417110ba4eb953ee7ada8912a30b85f816ff0729aa44e3877d9ebe759"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Either/Or_(Kierkegaard_book)",
+   "title": "Either/Or (Kierkegaard book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:48.426Z",
+   "snapshot": "75f18cc746151d229950dd091741a7359f240201480f67317d7f497ff01db74c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Logical_Investigations_(Husserl)",
+   "title": "Logical Investigations (Husserl) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:49.235Z",
+   "snapshot": "aade2daccb8266bcf237dfbc1c591033e30f8c19e1d043c08dddc3ba31a8466a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Being_and_Nothingness",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:13.865Z",
+   "snapshot": "6ad07b2c5624a41b3c8c54641b17fa9e2ea631499a6fb86167ba1078bdec366f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Martin Heidegger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans-Georg Gadamer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Søren Kierkegaard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edmund Husserl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:10.336Z",
+   "target": "f06696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Martin Heidegger (26 September 1889 – 26 May 1976) was a German philosopher whose work was central to the development of phenomenology, hermeneutics, and existentialism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Heidegger” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:10.336Z",
+   "target": "f06698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans-Georg Gadamer (; German: [ˈɡaːdamɐ]; 11 February 1900 – 13 March 2002) was a German philosopher of the continental tradition best known for his work on hermeneutics, including Truth and Method (Wahrheit und Methode, 1960), which argues that understanding is shaped by history, language, and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans-Georg Gadamer” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:10.336Z",
+   "target": "f06699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Either/Or (Danish: Enten – Eller) is the first published work of Danish philosopher Søren Kierkegaard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Søren Kierkegaard” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:10.336Z",
+   "target": "f06700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Logical Investigations (German: Logische Untersuchungen) is a book by the philosopher Edmund Husserl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.336Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edmund Husserl” is on the snapshot of s4"
+  }
+ ]
+}

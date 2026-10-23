@@ -1,0 +1,520 @@
+{
+ "article": "a1191",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Atomium",
+   "title": "Atomium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:17.203Z",
+   "snapshot": "8cd42b9098951062d84d9957fac64610a3015098bfadec3720f9650e04fa039a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Space_Needle",
+   "title": "Space Needle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:24.078Z",
+   "snapshot": "ac14027e261215a1e991dde51b96aecabf123a44d20ab0f521ae15197d83d92d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Barcelona_Pavilion",
+   "title": "Barcelona Pavilion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:11.043Z",
+   "snapshot": "cb95814a9627fc7b68ffef26adf30bd93294033da66fc2e5ca1551b454f2b7c3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Atomium",
+   "title": "Atomium",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:21.121Z",
+   "snapshot": "389233c18472f629d4e764d8b439d5503fba8a0e069b402f5a432ce0eafdcf23"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+   "title": "Eiffel Tower",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:35.581Z",
+   "snapshot": "63abb8494f55b99433bf6fd2c59a8117771db29ada5a006fee3415ec86671aa1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Olympiastadion_M%C3%BCnchen",
+   "title": "Olympiastadion München",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:22.904Z",
+   "snapshot": "9cd5f697f1e7b8c0a4796541dd7505ccc78db82d30610998fc74f4ef9f49616a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Olympiastadion_(Munich)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:25.014Z",
+   "snapshot": "dd70f7285588b70089fe0274dcdfc899bcff1d98ad1bddc1cf4194f0b0f27d0f"
+  },
+  "s8": {
+   "url": "https://www.ingenieur.de/technik/fachbereiche/bau/olympiastadion-muenchen-so-entstand-das-legendaere-zeltdach/",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:23.354Z",
+   "snapshot": "3a8a11033f24bd40f44c3ebdd2bbd13c32a0e7773fb3d2eb6361f25068d6d319"
+  },
+  "s9": {
+   "url": "https://www.nationalgeographic.com/travel/article/behind-the-scenes-eiffel-tower-paris",
+   "title": "How to Clean the Eiffel Tower",
+   "publisher": "National Geographic",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:33.962Z",
+   "snapshot": "36a441d0e20d4dbfc7c4225ab13cb4cefef5f31e1ec48bbbdc3be6b23e5b2c12"
+  },
+  "s10": {
+   "url": "https://csmonitor.com/2001/1129/p7s1-woeu.html",
+   "title": "Eiffel Tower awaits monumental paint job",
+   "publisher": "The Christian Science Monitor",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:33.489Z",
+   "snapshot": "2554875d5f117d5d6c1fdc94a05d3baba380ba86d63728402cf154648fdcde70"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Atomium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Space Needle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Barcelona Pavilion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10624",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eisen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-094"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "three shades",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; history entry seq 34; transcript tp-229"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Frei Otto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-299"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Frei Otto",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Frei Otto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-299/4, u06: Statement false: the Munich roof was designed by Behnisch & Partner with Frei Otto, whose Montreal Expo 67 pavilion served as the model; Mies van der Rohe had nothing to do with it."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Frei Otto",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s7"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Frei Otto",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f05951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Atomium ( ə-TOH-mee-əm, French: [atɔmjɔm], Dutch: [aːˈtoːmijəm]) is a landmark modernist building in Brussels, Belgium, originally constructed as the centrepiece of the 1958 Brussels World's Fair (Expo 58).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atomium” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f05954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Space Needle is an observation tower in Seattle, Washington, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Space Needle” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f05955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Barcelona Pavilion (Catalan: Pavelló alemany; Spanish: Pabellón alemán; \"German Pavilion\") is a structure designed by Ludwig Mies van der Rohe and Lilly Reich.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barcelona Pavilion” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10624",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eisen oder Wolfram.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eisen” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The tower is painted in three shades: lighter at the top, getting progressively darker towards the bottom to complement the Parisian sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “three shades” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Behnisch verpflichtete als Partnerarchitekt Frei Otto, dessen Zeltdachkonstruktion auf der Weltausstellung 1967 in Montreal Vorbild für das Olympia-Zeltdach war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frei Otto” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Designed by the German architect Günther Behnisch and the engineer Frei Otto, with the assistance of John Argyris, the lightweight tent construction of the Olympiastadion was considered revolutionary for its time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frei Otto” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:26:46.067Z",
+   "target": "f10626",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Behnisch holte Frei Otto ins Team.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.067Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frei Otto” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:46:53Z",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The tower is painted in three shades: lighter at the top, getting progressively darker towards the bottom to complement the Parisian sky.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:46:57Z",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Now the Iron Lady's three different shades of specially made \"Eiffel Tower Brown\" paint-darkest at the bottom and lighter at the top-perfectly compliments the Parisian sky.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:47:00Z",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Eiffel Tower is painted three different colors, or at least three different shades of a specially mixed \"Eiffel Tower Brown\" exclusive to Paris's icon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:28.203Z",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Now the Iron Lady's three different shades of specially made \"Eiffel Tower Brown\" paint-darkest at the bottom and lighter at the top-perfectly compliments the Parisian sky.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.203Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:28.203Z",
+   "target": "f10625",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Eiffel Tower is painted three different colors, or at least three different shades of a specially mixed \"Eiffel Tower Brown\" exclusive to Paris's icon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:28.203Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a1898",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/V_for_Vendetta",
+   "title": "V for Vendetta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:57.543Z",
+   "snapshot": "e665ffd3fe89d58473af1f9a965887d43512c1c80a0ecb0b9581e1c1587fb129"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Alan_Moore",
+   "title": "Alan Moore",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:28:54.688Z",
+   "snapshot": "f5f2f155bd3d00c6d6ff0016ea92db234f1bbb783e2d590f0c4f95cd41bbc745"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Sandman_(comic_book)",
+   "title": "The Sandman (comic book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:58.705Z",
+   "snapshot": "48889e746577ea0906c486d61027554e40d7f73ea62f673a309aaa4b5937560b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Watchmen",
+   "title": "Watchmen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:25.150Z",
+   "snapshot": "84e80fbfab33cbdd565b7088171bcd1e3af33381b2b8df5c309bec6bb5c53dd5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Dark_Knight_Returns",
+   "title": "The Dark Knight Returns – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:28:59.717Z",
+   "snapshot": "6914bb00f78c3380494a8c8419c50f93dd21eb26422133d9a991b2a832165b16"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Arkham_Asylum:_A_Serious_House_on_Serious_Earth",
+   "title": "Arkham Asylum: A Serious House on Serious Earth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:00.638Z",
+   "snapshot": "e5d01b0ef1fab21c46e6de29c45136261272587d63f57d601cbce79350b3dc95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alan Moore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alan Moore",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-314"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neil Gaiman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dave Gibbons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frank Miller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f09490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Grant Morrison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:41.240Z",
+   "target": "f09486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "V for Vendetta is a British graphic novel written by Alan Moore and illustrated by David Lloyd (with additional art by Tony Weare).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Moore” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:41.240Z",
+   "target": "f09486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Biografie Alan Moore – Portrait of an Extraordinary Gentleman erschien in seinem fünfzigsten Lebensjahr.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Moore” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:41.240Z",
+   "target": "f09487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sandman is a dark fantasy comic book series written by Neil Gaiman and published by DC Comics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neil Gaiman” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:41.240Z",
+   "target": "f09488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Watchmen is a comic book limited series created by the British creative team of writer Alan Moore, artist Dave Gibbons, and colorist John Higgins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dave Gibbons” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:41.240Z",
+   "target": "f09489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Dark Knight Returns (alternatively titled Batman: The Dark Knight Returns but originally titled Batman: The Dark Knight) is a 1986 four-issue superhero comic book miniseries written by Frank Miller and illustrated by Miller and Klaus Janson, with color by Lynn Varley, and published by DC Comics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank Miller” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:41.240Z",
+   "target": "f09490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Arkham Asylum: A Serious House on Serious Earth (often shortened to Batman: Arkham Asylum) is a 1989 superhero horror graphic novel written by Grant Morrison and illustrated by Dave McKean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:41.240Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grant Morrison” is on the snapshot of s6"
+  }
+ ]
+}

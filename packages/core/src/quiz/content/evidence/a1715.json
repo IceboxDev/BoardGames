@@ -1,0 +1,287 @@
+{
+ "article": "a1715",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Forsythien",
+   "title": "Forsythien – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:34.855Z",
+   "snapshot": "54498efa9ade5c76e84a3bf2609249d288a2dfe6a0c37904b3720e1cfd01ecd8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/William_Forsyth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:38.323Z",
+   "snapshot": "78e28e61e1694bd56390b4ca7f43c7efba20c914e0aeaa257e020cfe5fe2fd13"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Antoine_de_Bougainville",
+   "title": "Louis Antoine de Bougainville – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:39.446Z",
+   "snapshot": "23f28bf0fe03c77a28c063b02ad2f1b372329f91cbec27e683b09e49b16b9b55"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dahlia",
+   "title": "Dahlia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:40.368Z",
+   "snapshot": "88c9c56da01863e29491a9cbb2f6050aaa91fa4caeaa9a2ad7bf66537ba36fe0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Leonhart_Fuchs",
+   "title": "Leonhart Fuchs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:41.392Z",
+   "snapshot": "a0f5cceec3aabc76399bf31158da7ac138eafde0b1f83130b4096c4202fee3c4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pierre_Magnol",
+   "title": "Pierre Magnol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:42.361Z",
+   "snapshot": "e972589177d9882d87d60d0a47aec14b017669856cf9865ec3b20711dbeabed1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Forsythie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Forsythia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bougainvillea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dahlia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08574",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fuchsia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Magnolia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:10.696Z",
+   "target": "f08571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Europäische Forsythie (Forsythia europaea Degen & Bald.): Sie wurde erst 1897 von dem italienischen Botaniker Antonio Baldacci an ihren bergigen Standorten auf dem Balkan entdeckt und ist von Montenegro über das Kosovo bis ins nördliche Albanien verbreitet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.696Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Forsythie” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:10.696Z",
+   "target": "f08571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Forsythia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Forsythia”, “Forsythie”, “форзиция”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:10.696Z",
+   "target": "f08572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bougainville Island of Papua New Guinea as well as the flowering plant Bougainvillea are named in his honour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.696Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bougainvillea” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:10.696Z",
+   "target": "f08573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dahlia (UK:  DAY-lee-ə, US:  DA(H)L-yə, DAYL-yə) is a genus of bushy, tuberous, herbaceous perennial plants native to Mexico and Central America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.696Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dahlia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:10.696Z",
+   "target": "f08574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fuchs's name is commemorated in many ways in his home town of Wemding, which has adopted the nickname of Fuchsienstadt (Fuchsia City), used the colour Fuchsia as its theme and decorated public places with plantings of Fuchsia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.696Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fuchsia” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:10.696Z",
+   "target": "f08575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1703 Charles Plumier (1646–1704) named a flowering tree from the island of Martinique Magnolia, after Magnol.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.696Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magnolia” is on the snapshot of s6"
+  }
+ ]
+}

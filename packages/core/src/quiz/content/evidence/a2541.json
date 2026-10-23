@@ -1,0 +1,356 @@
+{
+ "article": "a2541",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Fernsehwerbung",
+   "title": "Fernsehwerbung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:19.410Z",
+   "snapshot": "cacfe9eaae0314a96ffda1b5bdf489c92927bddebe78b38cfacd14a53f1657f9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Geschichte_der_Leuchtreklame_in_Deutschland",
+   "title": "Geschichte der Leuchtreklame in Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:19.856Z",
+   "snapshot": "d3745a4bd3635bb03ba4f27d8fce2844dcc857ce3bed8b3568302859f5ffc3aa"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Radeberger_Exportbierbrauerei",
+   "title": "Radeberger Exportbierbrauerei",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:20.851Z",
+   "snapshot": "8358748fa2c7e52ec1a21c66ceb0828273b26f5bf52612101957ad0dad9c7c66"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/HB-M%C3%A4nnchen",
+   "title": "HB-Männchen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:21.953Z",
+   "snapshot": "b55e249a8ab1dc3b514b80bd1a0c4b85c2a82a438f4763908a48f3f0d8ef1d1b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Leuchtreklame",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:22.850Z",
+   "snapshot": "8fef48c2f067aee448541b4c7c44d7078af1003d7dfc7f98a68801452df6def7"
+  },
+  "s6": {
+   "url": "https://www1.wdr.de/themen/archiv/stichtag/stichtag1582.html",
+   "title": "Stichtag: 3. November 1956 – Erster Werbespot im deutschen Fernsehen",
+   "publisher": "WDR",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:00.789Z",
+   "snapshot": "e6beb28bd5aef42e0c85b760dce5c3baa8884455282fc3644850c860767dd039"
+  },
+  "s7": {
+   "url": "https://www.persil.de/de.html",
+   "title": "Persil | Tiefenrein. Das ist Persil.",
+   "publisher": "Henkel (Persil)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:00.957Z",
+   "snapshot": "286f9c76c9a9d4f3e30247ea19edad7acd9ff8629f266564e0323ddcdc2d147d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Persil",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-370"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Semperoper",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-253"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bruno",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:36.074Z",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In der Sendung Zwischen halb und acht wurde ein 55 Sekunden langer Werbespot für das Waschmittel Persil mit Liesl Karlstadt und Beppo Brem ausgestrahlt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Persil” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:36.074Z",
+   "target": "f13588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In der Leipziger Straße in Berlin wurde 1897 eine Lichtwerbeanlage installiert, die in den Farben Rot und Weiß leuchtete.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berlin” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:36.074Z",
+   "target": "f13589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Laut Auskunft des Unternehmens besteht seit 1992 eine Werbepartnerschaft mit der Dresdner Semperoper.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Semperoper” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:36.074Z",
+   "target": "f13592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bruno, so der inoffizielle Name der Figur, ist eine der bekanntesten Werbefiguren in der Geschichte des deutschen Werbefernsehens.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruno” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:29:13Z",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "dass ausgerechnet ein Waschmittel, dessen Name sich aus seinen Bestandteilen PERborat und SILikat ableitet, als erstes Produkt im deutschen Werbefernsehen präsentiert wird",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "WDR: \"sendet der Bayerische Rundfunk am 3. November 1956 den ersten Werbespot im deutschen Fernsehen\""
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:29:27Z",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In der Sendung Zwischen halb und acht wurde ein 55 Sekunden langer Werbespot für das Waschmittel Persil mit Liesl Karlstadt und Beppo Brem ausgestrahlt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:30:33Z",
+   "target": "f13587",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hier findest du das passende Persil-Produkt für dich!",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "Persil still sold in 2026 (premise \"still on sale today\")"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:59:19.809Z",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "dass ausgerechnet ein Waschmittel, dessen Name sich aus seinen Bestandteilen PERborat und SILikat ableitet, als erstes Produkt im deutschen Werbefernsehen präsentiert wird",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:19.809Z",
+   "target": "f13587",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hier findest du das passende Persil-Produkt für dich!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:19.809Z",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"Dafür gibt's ja gottseidank Persil.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Persil” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:19.809Z",
+   "target": "f13587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hier findest du das passende Persil-Produkt für dich!",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:19.809Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Persil” is on the snapshot of s7"
+  }
+ ]
+}

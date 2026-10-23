@@ -1,0 +1,403 @@
+{
+ "article": "a0934",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
+   "title": "Great Barrier Reef – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:02.416Z",
+   "snapshot": "15b77ed2a10b4961d6a42fc08fc38260f5f11d345c1f66e980fb01c1c63838ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mesoamerican_Barrier_Reef_System",
+   "title": "Mesoamerican Barrier Reef System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:14.332Z",
+   "snapshot": "c4cc500d742862d2a38a1e582e6431e28e89110ab34cb2ae92bbc8541a37c34a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ningaloo_Coast",
+   "title": "Ningaloo Coast – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:15.325Z",
+   "snapshot": "ff4bd5eca66a06e5700c453d659c090bc52c4ea24dcff190539e087126024885"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bikini_Atoll",
+   "title": "Bikini Atoll – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:16.726Z",
+   "snapshot": "00b0ddb4de9eb2f70f2f302c66c454bb2c69d67d06f4216fb65b1ef2df835fc3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Great_Blue_Hole",
+   "title": "Great Blue Hole – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:17.421Z",
+   "snapshot": "adc7f02bfbc4dffbbf356b923eb7d86c042dd4dd129bca6e04af36025f9c76fb"
+  },
+  "s6": {
+   "url": "https://marfund.org/en/",
+   "title": "MAR Fund – Protecting the Mesoamerican Reef",
+   "publisher": "MAR Fund",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:42.734Z",
+   "snapshot": "4807742ddbc228ed3653ad3f5591410f73516efcfd2f9be95dc807e5eb3ea4f1"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/764/",
+   "title": "Belize Barrier Reef Reserve System",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:22:37Z"
+  },
+  "s8": {
+   "url": "https://whc.unesco.org/en/list/1115/",
+   "title": "Lagoons of New Caledonia: Reef Diversity and Associated Ecosystems",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:22:39Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Great Barrier Reef",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Mesoamerican Reef",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ningaloo Reef",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bikini Atoll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Great Blue Hole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:07.304Z",
+   "target": "f04666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres (1,400 mi) over an area of approximately 344,400 square kilometres (133,000 mi2).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Great Barrier Reef” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:07.304Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Organizations such as the Mesoamerican Reef Fund, the Healthy Reefs Initiative, and the World Wildlife Fund implement strategies to address erosion, pollution, and overfishing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Mesoamerican Reef” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:07.304Z",
+   "target": "f04668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The distinctive Ningaloo Reef that fringes the Ningaloo Coast is 260 kilometres (160 mi) long and is Australia's largest fringing coral reef and the only large reef positioned very close to a landmass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ningaloo Reef” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:07.304Z",
+   "target": "f04669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bikini Atoll ( BIK-in-ee or  bih-KEE-nee; Marshallese: Pikinni [pʲiɡinnʲi], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bikini Atoll” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:07.304Z",
+   "target": "f04670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Great Blue Hole is a large marine sinkhole off the coast of Belize.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Great Blue Hole” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:22:33Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The MAR region encompasses the largest coral reef in the Atlantic",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Basis for the reworded question (largest coral reef in the Atlantic)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:22:35Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the second-longest reef system in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Off Mexico, Belize, Guatemala and Honduras."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:22:37Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "consisting of the largest barrier reef in the northern hemisphere",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "The Belize Barrier Reef is the core of the Mesoamerican Reef."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:22:39Z",
+   "target": "f04667",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The barrier reefs and atolls in New Caledonia form one of the three most extensive reef systems in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "The old premise 'second-largest barrier reef in the world' is disputed (New Caledonia's barrier reef is also given that rank); the wording now asks for the largest coral reef in the Atlantic."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:36.997Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The MAR region encompasses the largest coral reef in the Atlantic",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:36.997Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the second-longest reef system in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:36.997Z",
+   "target": "f04667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Honduras, and Mexico) initiated the\nMesoamerican Reef Fund (MAR Fund).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Mesoamerican Reef” is on the snapshot of s6"
+  }
+ ]
+}

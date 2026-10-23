@@ -1,0 +1,664 @@
+{
+ "article": "a2712",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Temperature-dependent_sex_determination",
+   "title": "Temperature-dependent sex determination",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:38.293Z",
+   "snapshot": "5afd98c268c2d8e8753c3c8dcf4534e25ed7daa007bf7e8422afb35aa9e392bd"
+  },
+  "s2": {
+   "url": "https://doi.org/10.1016/j.cub.2017.11.057",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/American_alligator",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:26.717Z",
+   "snapshot": "9d57c1b9ad130482f5b2cb4d45966634bf10d5e8faad000d7aa4999e464f2ba5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tuatara",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:59.362Z",
+   "snapshot": "d70a21c570fae963f184a314cafeaef11b8c29aa3546d0ee0a02f18ac8fdbfee"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Raine_Island",
+   "title": "Raine Island – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:39.202Z",
+   "snapshot": "69d7d153b3c3035ce53e2fa35c0060862638281983bca99e103149d0b0dcfd27"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Green_sea_turtle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:40.418Z",
+   "snapshot": "be888df2f0ef93f618a80d3f4e573cb41b008af50a523592525d54406ae3f581"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sex ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript pp-003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sex ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sex ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sex ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 14"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pivotal temperature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pivotal temperature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "pivotal temperature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pivotal temperature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "American alligator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "American alligator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "American alligator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "American alligator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23",
+   "target": "f25354",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "tuatara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "density, pH, and environmental background color, are also observed to alter sex ratio, which could be classified either as temperature-dependent sex determination or temperature-dependent sex differentiation, depending on the involved mechanisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sex ratio” is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sex ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sex ratio”, “Geschlechterverhältnis”, “Соотношение полов”) on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25350",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sex ratio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sex ratio”, “Geschlechterverhältnis”, “Соотношение полов”) on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mixed sex ratios and (more rarely) intersex individuals have been observed at or near the pivotal temperature of sex determination.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pivotal temperature” is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "pivotal temperature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pivotal temperature”, “Pivottemperatur”, “Пороговая температура”) on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "pivotal temperature",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pivotal temperature”, “Pivottemperatur”, “Пороговая температура”) on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Raine Island”, “Остров Рейн”) on the snapshot of s1"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Raine Island”, “Остров Рейн”) on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Raine Island",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Raine Island”, “Остров Рейн”) on the snapshot of s4"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Raine Island is an island in the Shire of Cook in Queensland, Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raine Island” is on the snapshot of s5"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Research from 2020 identified the timing of gonadal commitment in the American alligator to understand the effects of estrogen-signaling in TSD.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “American alligator” is on the snapshot of s1"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The American alligator (Alligator mississippiensis), sometimes referred to as a common alligator or just gator, is a large crocodilian reptile native to the Southeastern United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “American alligator” is on the snapshot of s3"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "American alligator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“American alligator”, “Mississippi-Alligator”, “Миссисипский аллигатор”) on the snapshot of s4"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T06:31:01.642Z",
+   "target": "f25354",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tuatara (, Māori: [ˈtʉ.a.ta.ɾa]; Sphenodon punctatus) is a species of reptile endemic to New Zealand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:01.642Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tuatara” is on the snapshot of s4"
+  }
+ ]
+}

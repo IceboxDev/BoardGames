@@ -1,0 +1,510 @@
+{
+ "article": "a2740",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Active_volcano",
+   "title": "Active volcano",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:20.105Z",
+   "snapshot": "d3c9cdc5b1b89734a6485814b84964bb4f8091bf5148211286798a6afda8ac10"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Nyiragongo",
+   "title": "Mount Nyiragongo",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:20.963Z",
+   "snapshot": "9041f123c26f935039274f2ea6d3a4d970817037e57c1df7a4f2bf10ebf33c67"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Haleakal%C4%81",
+   "title": "Haleakalā",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:21.974Z",
+   "snapshot": "fc4eb5dd60b3493f29c19945aae5805df9722298744b3872d83c1f1323010993"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Erta_Ale",
+   "title": "Erta Ale",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:22.972Z",
+   "snapshot": "d06a479c222421e8536079e5a697307052418615a682d30ef537ce644b9ef1d4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Erebus",
+   "title": "Mount Erebus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:24.070Z",
+   "snapshot": "e3b2583dc97180aad5e673fe42722b845a285b8914dcc6d873606a52d363c84f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/K%C4%ABlauea",
+   "title": "Kīlauea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:25.203Z",
+   "snapshot": "5ca51368ea818f2d477949e3b8bef81e72aa9997e6dcf1f5508a90c88e6b8c6f"
+  },
+  "s7": {
+   "url": "https://www.volcanodiscovery.com/indonesia.html",
+   "title": "Volcanoes, Eruptions and Earthquakes in Indonesia",
+   "publisher": "VolcanoDiscovery",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:05.331Z",
+   "snapshot": "5e8e45b5520e57d062fad0ac0923f5e2fe6d245e58aa335599d343df52749f7b"
+  },
+  "s8": {
+   "url": "https://www.volcanodiscovery.com/nyiragongo.html",
+   "title": "Nyiragongo Volcano: Facts & Information",
+   "publisher": "VolcanoDiscovery",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:06.236Z",
+   "snapshot": "9e130a2081295b3c75ef9309de4c5bc73cecd07dcfe1c23b1d8136dc77a4fb98"
+  },
+  "s9": {
+   "url": "https://www.volcanodiscovery.com/erta-ale.html",
+   "title": "Erta Ale Volcano, Danakil Depression, Ethiopia: Facts & Information",
+   "publisher": "VolcanoDiscovery (quoting Smithsonian GVP)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:07.714Z",
+   "snapshot": "866d25dfa7f97b39d2328fee79230621fbe2a8b4e0f81c66c6eaacf094199770"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Indonesia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mount Nyiragongo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; history entry seq 23; transcript ppm-130"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Haleakalā",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-140"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erta Ale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mount Erebus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kīlauea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:06.172Z",
+   "target": "f25589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mount Ibu, a stratovolcano in Indonesia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Indonesia” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:06.172Z",
+   "target": "f25590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mount Nyiragongo ( neer-ə-GONG-go) is an active stratovolcano with an elevation of 3,470 m (11,385 ft) in the Virunga Mountains associated with the Albertine Rift.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Nyiragongo” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:06.172Z",
+   "target": "f25591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Haleakalā (; Hawaiian: Hawaiian pronunciation: [ˈhɐlɛˈjɐkəˈlaː]), or the East Maui Volcano, is a massive, active shield volcano that forms more than 75% of the Hawaiian Island of Maui.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haleakalā” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:06.172Z",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erta Ale (or Ertale or Irta'ale;  Amharic: ኤርታሌ) is a continuously active shield volcano in the Afar Region of northeastern Ethiopia, which is itself part of the wider Afar Triangle (a barren desert region straddling Djibouti, Ethiopia and Eritrea).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erta Ale” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:06.172Z",
+   "target": "f25593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mount Erebus () is the southernmost active volcano on Earth, located on Ross Island in the Ross Dependency in Antarctica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Erebus” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:06.172Z",
+   "target": "f25594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kīlauea (US:   KIL-ə-WAY-ə, Hawaiian: [kiːlɐwˈwɛjə]) is an active shield volcano in the Hawaiian Islands, located along the southeastern shore of Hawaii Island.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.172Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kīlauea” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:23:51Z",
+   "target": "f25589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is the country with the greatest number and density of active volcanoes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "Smithsonian GVP (source of the 55-since-1960 count) blocks automated fetches"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:23:53Z",
+   "target": "f25590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On 10 January 1977, fissures opened on several sides of the volcano and rapidly drained the summit lake. Extremely fluid lava travelled downslope at reported speeds of up to 60 km/h",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:23:55Z",
+   "target": "f25592",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The summit caldera usually also holds at least one long-term lava lake that has been active since at least 1967, and possibly since 1906.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "Smithsonian GVP data: lake active since at least 1967, possibly since 1906 — 'since at least 1906' (Wikipedia) overstates; wording and body corrected"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:23:57Z",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erta Ale means \"smoking mountain\" in the local Afar language",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer confirmed; premise narrowed to 'active since at least 1967 and possibly since 1906'"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:23:58Z",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The summit caldera is renowned for one, or sometimes two long-term lava lakes that have been active since at least 1967, or possibly since 1906.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the corrected wording"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:53.409Z",
+   "target": "f25592",
+   "claim": "premise",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The summit caldera usually also holds at least one long-term lava lake that has been active since at least 1967, and possibly since 1906.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:53.409Z",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Erta Ale means \"smoking mountain\" in the local Afar language",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:53.409Z",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The summit caldera is renowned for one, or sometimes two long-term lava lakes that have been active since at least 1967, or possibly since 1906.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:53.409Z",
+   "target": "f25589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Volcanoes, Eruptions and Earthquakes in Indonesia - Facts and Information",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Indonesia” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:53.409Z",
+   "target": "f25592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Erta Ale Volcano, Danakil Depression, Ethiopia: Facts & Information | VolcanoDiscovery",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Erta Ale” is on the snapshot of s9"
+  }
+ ]
+}

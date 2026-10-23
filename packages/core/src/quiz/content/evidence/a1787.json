@@ -1,0 +1,523 @@
+{
+ "article": "a1787",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Linnaeus",
+   "title": "Carl Linnaeus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:35.528Z",
+   "snapshot": "af36d40a88f121baae46616495336f16f50c21970969a43c9ffb826c7ee4c953"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Darwin",
+   "title": "Charles Darwin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:36.690Z",
+   "snapshot": "481376653d5e7f3dcd92714a200eb4f5d3efd30ac8da433be5b9f2135420315f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alexander_von_Humboldt",
+   "title": "Alexander von Humboldt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:37.611Z",
+   "snapshot": "769fd411f900d863b8759e22c939e12f06c74cc7f3dd19bc7303ce967dcce483"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+   "title": "Gregor Mendel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:38.398Z",
+   "snapshot": "0e89d0da54b1f987311a8719fb174e6436097ebda89db714f2f6048c5e585e3d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Philosophie_zoologique",
+   "title": "Philosophie zoologique – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:39.481Z",
+   "snapshot": "c30b1428fbc221b973609cc994823f5c8609c4ce43293ec5ef54b6458171f9f8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lamarck",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:40.513Z",
+   "snapshot": "5465c92cb430f7f05c80cc86a462dbb89ec99fe659c6d20acb9ce776903da131"
+  },
+  "s7": {
+   "url": "https://ucmp.berkeley.edu/history/linnaeus.html",
+   "title": "Carl Linnaeus",
+   "publisher": "University of California Museum of Paleontology",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:25.088Z",
+   "snapshot": "71c186c83fe75622e1b75987f3b4185d5b93c93d4396f0a884da214c2d70466f"
+  },
+  "s8": {
+   "url": "https://www.linnean.org/learning/who-was-linnaeus",
+   "title": "Who was Linnaeus?",
+   "publisher": "The Linnean Society of London",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:24.798Z",
+   "snapshot": "275ba3006151527a5ec8a01aa304515cb40a3fc692e4a794a1baa215c43ea909"
+  },
+  "s9": {
+   "url": "https://ucmp.berkeley.edu/history/lamarck.html",
+   "title": "Jean-Baptiste Lamarck (1744-1829)",
+   "publisher": "University of California Museum of Paleontology",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:25.370Z",
+   "snapshot": "423d8137fa4f1a3075668f3dd2bc963517fae21200fa82e02f390c204eed9ce5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carl Linnaeus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c149"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Darwin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexander von Humboldt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gregor Mendel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jean-Baptiste de Lamarck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:22.728Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carl Linnaeus (23 May 1707 – 10 January 1778), also known after ennoblement in 1761 as Carl von Linné, was a Swedish biologist and physician who formalised binomial nomenclature, the modern system of naming organisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Linnaeus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:22.728Z",
+   "target": "f08932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Smithsonian National Museum of Natural History has a bronze statue of Charles Darwin in its Deep Time Hall, which features Darwin seated on a bench with a notebook containing his \"tree of life\" sketch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Darwin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:22.728Z",
+   "target": "f08933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Friedrich Wilhelm Heinrich Alexander von Humboldt (14 September 1769 – 6 May 1859) was a German polymath, geographer, naturalist, explorer, and proponent of Romantic philosophy and science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander von Humboldt” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:22.728Z",
+   "target": "f08934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Gardener of God, an Italian docudrama about the life and works of Gregor Mendel",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:22.728Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gregor Mendel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:22.728Z",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jean-Baptiste de Lamarck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Jean-Baptiste de Lamarck”, “Жан-Батист де Ламарк”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:27:28Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "What has survived of the Linnean system is its method of hierarchical classification and custom of binomial nomenclature.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:27:29Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "was a Swedish biologist and physician who formalised binomial nomenclature",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:27:31Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Carl Linnaeus came up with the 'binomial' naming system, which means two names.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:27:33Z",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "most clearly states Lamarck's theories of evolution",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:27:35Z",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is now often used in a rather derogatory sense to refer to the theory that acquired traits can be inherited",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:27:37Z",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He outlined his theories regarding evolution first in his Floreal lecture of 1800, and then in three later published works",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "What has survived of the Linnean system is its method of hierarchical classification and custom of binomial nomenclature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "was a Swedish biologist and physician who formalised binomial nomenclature",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Carl Linnaeus came up with the 'binomial' naming system, which means two names.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is now often used in a rather derogatory sense to refer to the theory that acquired traits can be inherited",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "He outlined his theories regarding evolution first in his Floreal lecture of 1800, and then in three later published works",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Carl Linnaeus, also known as Carl von Linné or Carolus Linnaeus, is often called the Father of Taxonomy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Carl Linnaeus” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:10.562Z",
+   "target": "f08931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Carl Linnaeus is famous for his work in taxonomy: the science of identifying, naming and classifying organisms (plants, animals, bacteria, fungi and more).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:10.562Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Carl Linnaeus” is on the snapshot of s8"
+  }
+ ]
+}

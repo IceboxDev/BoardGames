@@ -1,0 +1,439 @@
+{
+ "article": "a2151",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2012_phenomenon",
+   "title": "2012 phenomenon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:44:42.075Z",
+   "snapshot": "58b09fdb2db0d55351cd5c632ac8d4cc585daf3f931b55e5e7bc7479db1aa085"
+  },
+  "s2": {
+   "url": "https://www.webexhibits.org/calendars/calendar-mayan.html",
+   "title": "Mayan Calendar – Calendars through the Ages",
+   "publisher": "WebExhibits (Calendars through the Ages, after Claus Tøndering's Calendar FAQ)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:58.432Z",
+   "snapshot": "3a179fec030255c43bd34466a2e23eb9c4c7f3399f7a95ce13adfa92e02eb5d4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mesoamerican_Long_Count_calendar",
+   "title": "Mesoamerican Long Count calendar – Wikipedia",
+   "publisher": "Wikipedia (en)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:58.632Z",
+   "snapshot": "08e5959e7f3437be07c4e8fbc8606a32305bd883f6281ab2a70403bc74414c09"
+  },
+  "s4": {
+   "url": "https://mayadecipherment.com/2012/06/30/notes-on-a-new-text-from-la-corona/",
+   "title": "Notes on a New Text from La Corona (David Stuart)",
+   "publisher": "Maya Decipherment (David Stuart, University of Texas at Austin)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:59.888Z",
+   "snapshot": "8198b07ace1935c7a6132a5625d5f5a597bf70c564d848f0be5cd4d9f00e329a"
+  },
+  "s5": {
+   "url": "https://mayadecipherment.com/2011/10/04/more-on-tortugueros-monument-6-and-the-prophecy-that-wasnt/",
+   "title": "More on Tortuguero's Monument 6 and the Prophecy that Wasn't (David Stuart)",
+   "publisher": "Maya Decipherment (David Stuart, University of Texas at Austin)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:00.687Z",
+   "snapshot": "b392d8b11a3116b20d8870ff1fde322770312a6e25d88aa2b56828589e03e37e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "21 December 2012",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-394"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Long Count",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "144,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nibiru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tortuguero",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:30.166Z",
+   "target": "f10845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The 2012 phenomenon was a range of eschatological beliefs that cataclysmic or transformative events would occur on or around 21 December 2012.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “21 December 2012” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:30.166Z",
+   "target": "f10846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This date was regarded as the end-date of a 5,126-year-long cycle in the Mesoamerican Long Count calendar, and festivities took place on 21 December 2012 to commemorate the event in the countries that were part of the Maya civilization (Mexico, Belize, Guatemala, Honduras and El Salvador), with main",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Long Count” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:30.166Z",
+   "target": "f10847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the 260-day tzolkʼin which is still used today among the Maya, the Long Count was linear rather than cyclical, and kept time roughly in units of 20: 20 days made a uinal, 18 uinals (360 days) made a tun, 20 tuns made a kʼatun, and 20 kʼatuns (144,000 days or roughly 394 years) made up a bʼakʼtun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “144,000” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:30.166Z",
+   "target": "f10848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the world included the arrival of the next solar maximum; an interaction between Earth and Sagittarius A*, the supermassive black hole at the center of the Milky Way Galaxy; the Nibiru cataclysm, in which Earth would collide with a mythical planet called Nibiru; or even the heating of Earth's core.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nibiru” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:30.166Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Two items in the Maya classical corpus do mention the end of the 13th bʼakʼtun: Tortuguero Monument 6 and La Corona Hieroglyphic Stairway 12.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:30.166Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tortuguero” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:51:05Z",
+   "target": "f10847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "baktun (1 baktun = 20 katun = 144,000 days = approx. 394 years)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:51:09Z",
+   "target": "f10847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1 Bʼakʼtun 20 Kʼatun 144,000 394",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:51:13Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This is the second ancient source known to mention the period ending 13.0.0.0.0 4 Ahaw 3 K'ank'in (December 23, 2012). The other, Monument 6 from Tortuguero, Mexico, has been known since the 1980s",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23",
+   "note": "La Corona Block V only mentions the date (its message is about a royal visit in 696); Tortuguero Monument 6 is the only text that says anything about the b'ak'tun ending — the wording's 'detailed' holds."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:51:17Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Many of course claim that the last few glyphs of its long inscription contain the only record of what the ancient Maya had to say or prophesize about the coming end of the Bak'tun in late 2012.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:16.550Z",
+   "target": "f10847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "baktun (1 baktun = 20 katun = 144,000 days = approx. 394 years)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:16.550Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This is the second ancient source known to mention the period ending 13.0.0.0.0 4 Ahaw 3 K'ank'in (December 23, 2012). The other, Monument 6 from Tortuguero, Mexico, has been known since the 1980s",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:16.550Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Many of course claim that the last few glyphs of its long inscription contain the only record of what the ancient Maya had to say or prophesize about the coming end of the Bak'tun in late 2012.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:16.550Z",
+   "target": "f10847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "baktun (1 baktun = 20 katun = 144,000 days = approx.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “144,000” is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:16.550Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The other, Monument 6 from Tortuguero, Mexico, has been known since the 1980s, and in the last couple of years has received a good deal of attention.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tortuguero” is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:16.550Z",
+   "target": "f10849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "More on Tortuguero’s Monument 6 and the Prophecy that Wasn’t – Maya Decipherment",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:16.550Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tortuguero” is on the snapshot of s5"
+  }
+ ]
+}

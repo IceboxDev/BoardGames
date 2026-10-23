@@ -1,0 +1,242 @@
+{
+ "article": "a2442",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Das_Silmarillion",
+   "title": "Das Silmarillion",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:28.507Z",
+   "snapshot": "40caa2cbd8153e59d65f615f22ec30b926a7838e1731a21a947400166f4f7eaf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Hobbit",
+   "title": "The Hobbit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:08.334Z",
+   "snapshot": "c490568c52433e89596e6518c7f9653eecc75ba559ad5ec3fe8161091cc9a5a3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Christopher_Tolkien",
+   "title": "Christopher Tolkien – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:32.053Z",
+   "snapshot": "402d1735744de937d73a19f0e72048dc3c86043b4fa837f7ec58eda0c3337d1f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Doom",
+   "title": "Mount Doom – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:33.158Z",
+   "snapshot": "d3d94a6f02081dcb0058ffd1c6985aae46979e96112cf329377b800c4e1548b9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Inklings",
+   "title": "Inklings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:33.983Z",
+   "snapshot": "6eb2f5ab8cf941fada19c8f72c386e2e712fd49b5a0dd0cb301bda48524e65a4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Silmarillion",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-107"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hobbit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christopher Tolkien",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mount Doom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Eagle and Child",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:20.807Z",
+   "target": "f12848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Silmarillion (Von den Silmaril, Originaltitel: englisch The Silmarillion) ist eine Sammlung unvollendeter Werke J.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Silmarillion” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:20.807Z",
+   "target": "f12849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hobbit, or There and Back Again is a children's fantasy novel by the English author J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hobbit” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:20.807Z",
+   "target": "f12850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christopher Tolkien was born on 21 November 1924 in Leeds, England, the third of four children and the youngest son of J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christopher Tolkien” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:20.807Z",
+   "target": "f12851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Within Mordor lies Mount Doom (Sindarin: Orodruin, \"Fire Mountain\"; also  Amon Amarth, \"Mount Doom\"), the volcano central to the destruction of the One Ring.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mount Doom” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:20.807Z",
+   "target": "f12852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Members of the Inklings and other friends also gathered informally on Tuesdays at midday at a local public house, The Eagle and Child, familiarly and alliteratively known in the Oxford community as The Bird and Baby, or simply The Bird.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:20.807Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Eagle and Child” is on the snapshot of s5"
+  }
+ ]
+}

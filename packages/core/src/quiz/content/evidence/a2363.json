@@ -1,0 +1,565 @@
+{
+ "article": "a2363",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Myth_of_the_flat_Earth",
+   "title": "Myth of the flat Earth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:14.402Z",
+   "snapshot": "51519bd334b445f8630f9620df3cc877281f8d8e03d9b141aea6d89048c747a5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Emil_Doepler",
+   "title": "Carl Emil Doepler",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:15.253Z",
+   "snapshot": "e5a5875af39fc831c0f4afcb7e7221968485d15facb0a827d90cf9beb475a5e6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Hexenhammer",
+   "title": "Hexenhammer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:12.667Z",
+   "snapshot": "e13c8d53f77dfdd6e9507111616c0d24cd04b06d59fc697e7037ce904f372749"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Schnuller",
+   "title": "Schnuller",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:13.563Z",
+   "snapshot": "ac526163832740cc20c386694a0e8f07eb0d47324f623065c27fb1697f10c80b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Malleus_Maleficarum",
+   "title": "Malleus Maleficarum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:16.467Z",
+   "snapshot": "19d7dbed18c122f84b344398ccd6c6f1ff56a6d55dc1330aab8fc01d38841054"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Horned_helmet",
+   "title": "Horned helmet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:17.250Z",
+   "snapshot": "d0f157ebf872190791e69d4b0409a5e6e897db17a7b204e1e42b5d2201968044"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Christian_August_Struve",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:14.609Z",
+   "snapshot": "a3f6d856a51d2b60136e0835494a8f4cbb64ddc259b77d07600f4cd3a4898f5d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Spherical_Earth",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:19.789Z",
+   "snapshot": "f2afd54cb3ec6af63a7e852274e086a4886b2790d4e5d272cc3e4c89e2595add"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lutschbeutel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; history entry seq 24; transcript tp-350"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Washington Irving",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Innocent VIII",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Speyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Heinrich Kramer",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Heinrich Kramer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-037/3, u01: The Hexenhammer is a book (Malleus Maleficarum, Speyer 1486) by Heinrich Kramer (Institoris), not a hammer for nailing amulets. Sprenger's co-authorship (credited from 1519) is disputed, as the body says."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Emil Doepler",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Carl Emil Doepler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-122/3, u01: Viking Age helmets had no horns; the image comes from Doepler's 1876 Bayreuth Ring costumes. Statement false, answer right."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A sphere",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "A sphere",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-336/3, u01: Medieval scholarship (Sacrobosco etc.) taught a spherical Earth; the \"medieval flat Earth\" belief is a 19th-century myth (Irving, Draper, White). Statement false, answer right."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Horned helmets",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Horned helmets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-106/2, u01: The card's \"limited evidence\" understates it – there is no evidence Vikings wore horned helmets in battle – but our wording (\"did not actually wear\") and the body state it correctly; axes and spears were standard."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Heinrich Kramer",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heinrich Kramer",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Emil Doepler",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A sphere",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f25645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Horned helmets",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e8 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Galileo was sent to the inquisition for affirming that the Earth was a sphere: the government had declared it to be as flat as a trencher, and Galileo was obliged to abjure his error.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A sphere” is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Spherical Earth or Earth's curvature refers to the approximation of the figure of the Earth as a sphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A sphere” is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12319",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Emil Doepler (1824–1905) was a German painter, illustrator and costume designer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Emil Doepler” is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Malleus maleficarum (lateinisch), deutsch (Der) Hexenhammer, ist ein Werk des deutschen Dominikaners, Hexentheoretikers und Inquisitors Heinrich Kramer (latinisiert Henricus Institoris), das die Hexenverfolgung legitimierte und wesentlich förderte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Kramer” is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12320",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was written by German Catholic clergyman Heinrich Kramer (under his Latinized name Henricus Institor) and first published in the German city of Speyer in 1486.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Kramer” is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Diese Lutschbeutel waren als Stoffschnuller vom Spätmittelalter bis ins 18.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lutschbeutel” is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "onward believed that the Earth was flat\", and ascribes popularization of the flat-Earth myth to histories by John William Draper, Andrew Dickson White, and Washington Irving.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Washington Irving” is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1484, two years before the work’s publication, Pope Innocent VIII authorised Kramer to investigate alleged witchcraft in the papal bull Summis desiderantes affectibus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Innocent VIII” is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f12324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It was written by German Catholic clergyman Heinrich Kramer (under his Latinized name Henricus Institor) and first published in the German city of Speyer in 1486.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Speyer” is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f25645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "These costumes included horned helmets and are widely credited with starting the popular myth that Viking warriors wore horned helmets, even though there is no direct archaeological evidence to support this.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horned helmets” is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T06:30:05.223Z",
+   "target": "f25645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Horned helmets were worn by many people around the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horned helmets” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,473 @@
+{
+ "article": "a1385",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Jugger",
+   "title": "Jugger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:09.877Z",
+   "snapshot": "d0f2eee407bef311b3fc37ca5370ee5e9f1affbab36f928862d97e34c8471fef"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Deutscher_Quadballbund",
+   "title": "Deutscher Quadballbund – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:10.549Z",
+   "snapshot": "2dc575c3ec23a8c529fdefa5ca28c9506de6ca4b4ac880f96c8552de9f67a22f"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Radball",
+   "title": "Radball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:11.516Z",
+   "snapshot": "713fae9f7401e7c339780d502ecb443a75f28e584b8c0bd581f2eaf6048fa76f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ultimate_frisbee",
+   "title": "Ultimate frisbee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:12.440Z",
+   "snapshot": "474e762169ce2c82aa4cfae911f947da21a168179b2c71833829ad4c9499b4df"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ultimate",
+   "title": "Ultimate",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:12.674Z",
+   "snapshot": "cfa551f62a088199696fb18afac943f08a12e05162b3370b699f066f9d10a6ba"
+  },
+  "s6": {
+   "url": "https://web.archive.org/web/20190522032907/http://deutscherquidditchbund.de/index.php/de/quidditch/deutsche-liga",
+   "title": "Deutsche Liga – Deutscher Quidditchbund (archived 2019)",
+   "publisher": "Deutscher Quidditchbund e.V. (now Deutscher Quadballbund)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:48.452Z",
+   "snapshot": "a6190613f7e62d27024f7c57f1dff0510a551bdc44004939e6af5424408e5b96"
+  },
+  "s7": {
+   "url": "https://usaultimate.org/rules/",
+   "title": "Official Rules of Ultimate",
+   "publisher": "USA Ultimate",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:44.947Z",
+   "snapshot": "9848a5b033c60f52c80ddafe3418714f67448f444e397ad823a3123356b9d7a8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jugger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Quidditch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 58; transcript tp-309"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Radball",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ultimate Frisbee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13830",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hundeschädel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-047"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "14 Spieler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-233"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:17.394Z",
+   "target": "f06921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jugger [ˈdʒʌɡə(r)] ist eine moderne Sportart, welche die Eigenschaften von Mannschaftssport mit Elementen verschiedener Individualsportarten wie Fechten oder Ringen miteinander verbindet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jugger” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:17.394Z",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(DQB, bis 2023 Deutscher Quidditchbund) ist der nationale Dachverband der Sportart Quadball (auch Quidditch) in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quidditch” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:17.394Z",
+   "target": "f06924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Radball ist eine Radsportart, bei der mit speziellen Fahrrädern in Mannschaften auf Tore gespielt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Radball” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:17.394Z",
+   "target": "f06925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ultimate frisbee, officially known as ultimate, is a non-contact team sport played with a disc thrown by hand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ultimate Frisbee” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:17.394Z",
+   "target": "f13830",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Im Film wird ein Hundeschädel als Spielball genutzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.394Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hundeschädel” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:17.394Z",
+   "target": "f13831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "14 Spieler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“14 Spieler”, “14 players”, “14 игроков”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:46:45Z",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seit der Saison 2016/17 wird in Deutschland neben den großen jährlichen Turnieren auch ein Ligabetrieb unterhalten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:46:46Z",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Seit 2016 wird eine deutsche Quadballliga ausgetragen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "the sport has been called Quadball since 2022/23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:47:05Z",
+   "target": "f13831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ultimate is a non-contact, self-officiated disc sport played by two teams of seven players.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "2 × 7 = 14 on the field (outdoor field Ultimate)"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:47:07Z",
+   "target": "f13831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Es spielen zwei Mannschaften mit je sieben Spielern gegeneinander.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "2 × 7 = 14"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:02.417Z",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seit der Saison 2016/17 wird in Deutschland neben den großen jährlichen Turnieren auch ein Ligabetrieb unterhalten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:02.417Z",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Seit 2016 wird eine deutsche Quadballliga ausgetragen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:02.417Z",
+   "target": "f13831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ultimate is a non-contact, self-officiated disc sport played by two teams of seven players.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:02.417Z",
+   "target": "f13831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Es spielen zwei Mannschaften mit je sieben Spielern gegeneinander.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:02.417Z",
+   "target": "f25103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Deutsche Quidditch-Liga",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:02.417Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Quidditch” is on the snapshot of s6"
+  }
+ ]
+}

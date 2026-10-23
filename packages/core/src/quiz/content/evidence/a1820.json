@@ -1,0 +1,355 @@
+{
+ "article": "a1820",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Athenian_coup_of_411_BC",
+   "title": "Athenian coup of 411 BC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:24.463Z",
+   "snapshot": "e2e3a8588b6f4bc5893563fc51203c10ddaa71ad1dfe5951063f4d01116214be"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/aristocracy",
+   "title": "aristocracy – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pisistratus",
+   "title": "Pisistratus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:25.552Z",
+   "snapshot": "cf77f78559f8074e79bf297b5ed2c4cc5327cd6f8c71c17a73cf8e86b1ee1843"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Theocracy",
+   "title": "Theocracy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:31.132Z",
+   "snapshot": "69d8b98d4c1970d92a6b902436b786d1faec11fc040ca789602110ff23f24e6c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Plutocracy",
+   "title": "Plutocracy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:29.999Z",
+   "snapshot": "4830a0d482fa299d95d4a6f61578d9db31249efce697a4c9d8e311c88bc2875f"
+  },
+  "s6": {
+   "url": "https://classics.mit.edu/Aristotle/politics.3.three.html",
+   "title": "Politics, Book III (Aristotle, tr. Benjamin Jowett) – The Internet Classics Archive",
+   "publisher": "MIT Internet Classics Archive",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:43.043Z",
+   "snapshot": "e3fb4d6059e3e367acbb9d8ba508696f1a883af128489b2cc1ae3c3dc0ca17d3"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/aristocracy",
+   "title": "Aristocracy – Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:43.319Z",
+   "snapshot": "4e8b7db661a759f723357419642dfc35e6b0f743021d14ae6c811bb413d3b419"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oligarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aristocracy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tyranny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theocracy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Plutocracy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:27.472Z",
+   "target": "f09096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The coup overthrew the democratic government of ancient Athens and replaced it with a short-lived oligarchy known as the Four Hundred.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oligarchy” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:27.472Z",
+   "target": "f09098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the first documented instance of Athenian tyranny, Herodotus notes the story of Cylon, an ancient Olympic Games champion, who gathered supporters, in either 636 or 632 BC, in an attempt to seize power by occupying the Acropolis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tyranny” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:27.472Z",
+   "target": "f09099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theocracy is a form of government in which one or more deities are recognized as supreme ruling authorities giving divine guidance to human intermediaries with executive, legislative or judicial power who manage the government's daily affairs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theocracy” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:27.472Z",
+   "target": "f09100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A plutocracy (from Ancient Greek  πλοῦτος (ploûtos) 'wealth' and  κράτος (krátos) 'power') or plutarchy is a society that is ruled or controlled by people of great wealth or income.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:27.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Plutocracy” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:46:36Z",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "rule, aristocracy; and it is so called, either because the rulers are the best men, or because they have at heart the best interests of the state and of the citizens.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:46:40Z",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from Greek aristokratía \"rule of the best\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:15.641Z",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "rule, aristocracy; and it is so called, either because the rulers are the best men, or because they have at heart the best interests of the state and of the citizens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:15.641Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:15.641Z",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "from Greek aristokratía \"rule of the best\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:15.641Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:15.641Z",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "as, for example, in aristocracy or the so-called government of the best",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:15.641Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aristocracy” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:15.641Z",
+   "target": "f09097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "ARISTOCRACY Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:15.641Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Aristocracy” is on the snapshot of s7"
+  }
+ ]
+}

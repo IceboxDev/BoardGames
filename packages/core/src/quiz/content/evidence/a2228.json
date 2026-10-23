@@ -1,0 +1,288 @@
+{
+ "article": "a2228",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Drei_Haseln%C3%BCsse_f%C3%BCr_Aschenbr%C3%B6del",
+   "title": "Drei Haselnüsse für Aschenbrödel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:41.182Z",
+   "snapshot": "b8e7066e2eeaeb85512d7453452b3ca1272a9360249b7c9bf72e4022ab8f5c2a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Little_Lord_Fauntleroy_(1980_film)",
+   "title": "Little Lord Fauntleroy (1980 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:45.450Z",
+   "snapshot": "b48b9e9f5e9169cedaf141c4ba3f19763d0a0f7ddcaee616910197865ff6c0ad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Die_Feuerzangenbowle_(1944_film)",
+   "title": "Die Feuerzangenbowle (1944 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:45.690Z",
+   "snapshot": "50ec50baa88ef8fbdfad36b0b8e906540604a7afa2ddf0bf904bc811b3d7d4d5"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_Feuerzangenbowle_(1944)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:42.893Z",
+   "snapshot": "408a8ce782e6a34d811f9b67c2c8e2a5d272f23b67424438516129d0037f04c2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sissi_(film)",
+   "title": "Sissi (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:46.713Z",
+   "snapshot": "420f3cd40e905b4e4d8b746bcd5716e6d661dd787518ffe48e6866219240cce1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Three_Wishes_for_Cinderella_(1973_film)",
+   "title": "Three Wishes for Cinderella (1973 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:47.735Z",
+   "snapshot": "6a13b7baec643b5ab2111d074a174e8a6840488a3be6b9caf21bffd56a372c9d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11375",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Drei Haselnüsse für Aschenbrödel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-241"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alec Guinness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heinz Rühmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heinz Rühmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Romy Schneider",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Moritzburg Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:39.954Z",
+   "target": "f11375",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Drei Haselnüsse für Aschenbrödel (Originaltitel: Tři oříšky pro Popelku) ist ein Märchenfilm nach dem Märchen O Popelce (deutsch: Über Aschenputtel) von Božena Němcová sowie Grimms Aschenputtel in der Version von 1819.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Drei Haselnüsse für Aschenbrödel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:39.954Z",
+   "target": "f11376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The film stars Alec Guinness, Ricky Schroder, Eric Porter, Connie Booth, and Colin Blakely.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alec Guinness” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:39.954Z",
+   "target": "f11377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The film was produced and released in Germany during the last years of World War II and has been called a \"masterpiece of timeless, cheerful escapism.\" The film stars Heinz Rühmann in the role of the student Hans Pfeiffer, which is remarkable as Rühmann was already 42 years old at that time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinz Rühmann” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:39.954Z",
+   "target": "f11377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Feuerzangenbowle ist eine deutsche Filmkomödie aus dem Jahr 1944 mit Heinz Rühmann in der Hauptrolle.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinz Rühmann” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:39.954Z",
+   "target": "f11378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sissi is a 1955 Austrian historical romance film written and directed by Ernst Marischka and starring Romy Schneider, Karlheinz Böhm, Magda Schneider, Uta Franz, Gustav Knuth, Josef Meinrad, Vilma Degischer and Peter Weck.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romy Schneider” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:39.954Z",
+   "target": "f11379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The film was shot between December 11, 1972 and March 29, 1973 at the DEFA studios in Potsdam-Babelsberg (Brandenburg), Moritzburg Castle in Saxony, in the Barrandov studios in Prague, and in various places in Bohemia in what was then Czechoslovakia, including the Švihov castle in western Bohemia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:39.954Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moritzburg Castle” is on the snapshot of s6"
+  }
+ ]
+}

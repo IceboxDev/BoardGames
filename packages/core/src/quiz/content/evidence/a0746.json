@@ -1,0 +1,606 @@
+{
+ "article": "a0746",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Pillars_of_the_Earth",
+   "title": "The Pillars of the Earth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:23.404Z",
+   "snapshot": "b7a74cfd01c87e85b453bfdf696f94a0a50236163bc07cefec561dcc2935bbb9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/It_(novel)",
+   "title": "It (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:24.390Z",
+   "snapshot": "f1f1339406d7a46b6891453db7c37609233c06478ff70d5cfd806bf293e8ebbb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude_(TV_series)",
+   "title": "One Hundred Years of Solitude (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:25.231Z",
+   "snapshot": "3157e58822a48be5a0dd5009b7e2efde2e687952cfca65da1ae00e738ff9361f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Murder_at_the_Vicarage",
+   "title": "The Murder at the Vicarage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:26.239Z",
+   "snapshot": "6d930f801096bdf468dc4dd680940fb4efa525870e1d1a99b8295927f525b559"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury",
+   "title": "The Sound and the Fury – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:27.350Z",
+   "snapshot": "008eb120a21fc9bc984e4a6abd2fb4b1df5f85cc5b68382add4ee918b16e7da3"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Die_S%C3%A4ulen_der_Erde",
+   "title": "Die Säulen der Erde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:17:24.714Z",
+   "snapshot": "0f68343afd1c0fc6912529f8862a4198d5c3063218d22585c672d4f1899b02cc"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude",
+   "title": "One Hundred Years of Solitude",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:10.528Z",
+   "snapshot": "8ed752ddb7fa9401b79a027be2755e867b912a72d1804f6c4e466d055a526004"
+  },
+  "s8": {
+   "url": "https://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:25.556Z",
+   "snapshot": "552a072b69258265b69b46fb96f8e91c7095ff353e48a760c8e082833bbcfee0"
+  },
+  "s9": {
+   "url": "https://www.agathachristie.com/characters/miss-marple",
+   "title": "Miss Marple – Agatha Christie (official site)",
+   "publisher": "Agatha Christie Limited",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:41.531Z",
+   "snapshot": "9093549287f7eaf464c2bdfcd2a5725a0ec1477788f9ef3d64b2283618b511d8"
+  },
+  "s10": {
+   "url": "https://www.agathachristie.com/stories/the-murder-at-the-vicarage",
+   "title": "The Murder at the Vicarage – Agatha Christie (official site)",
+   "publisher": "Agatha Christie Limited",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:40.801Z",
+   "snapshot": "352e159ae9df758b2aadfe9cb6c8089a9b3ab3a9043156eae82e23c3bd3fd1af"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/St_Mary_Mead",
+   "title": "St Mary Mead – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:24.437Z",
+   "snapshot": "6b1ae97b0ce4cd6fd8a1693be30487285017a9089adb78c6e33bc7f6c7b2a48d"
+  },
+  "s12": {
+   "url": "https://www.nobelprize.org/prizes/literature/1982/marquez/facts/",
+   "title": "Gabriel García Márquez – Facts – NobelPrize.org",
+   "publisher": "Nobel Prize Outreach",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:23.636Z",
+   "snapshot": "75347eeac08040d4f0040e2f39e30ead80c7e39576a7d35e824a94d97b598e7a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kingsbridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c063"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Derry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Macondo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St. Mary Mead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Yoknapatawpha County",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mittelalter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-137"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "100 years",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-165"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f03726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Pillars of the Earth is a historical novel by Welsh author Ken Follett published in 1989 about the building of a cathedral in the fictional town of Kingsbridge, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kingsbridge” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f03727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It chronicles \"the Losers' Club\", a group of seven outcast children in the fictional town of Derry, Maine, during the late 1950s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Derry” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f03728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The fictional town of Macondo was built near Alvarado, Tolima, by 1,100 workers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Macondo” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St. Mary Mead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“St. Mary Mead”, “Сент-Мэри-Мид”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f03730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Faulkner's fourth novel, it is the second to be set in Yoknapatawpha County and the first featuring the Compson family, both of which would reappear in his later fiction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yoknapatawpha County” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f12882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ein Teil der Geschichte widmet sich vor allem der Entwicklung der Architektur in der Errichtung von Kirchen im Mittelalter, die sehr anschaulich und bildhaft dargestellt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mittelalter” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:38.083Z",
+   "target": "f14556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "She lives to be well over 100 years old and she oversees the Buendía household through six of the seven generations documented in the novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:38.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “100 years” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:44:28Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the first novel to feature the character of Miss Marple and her village of St Mary Mead.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:51:00Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "For a woman who has spent her life in the small village of St Mary Mead, Miss Marple is surprisingly worldly.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:51:04Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Not only are we formally introduced to the village of St Mary Mead",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:51:26Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Miss Marple's St Mary Mead is described in The Murder at the Vicarage as being in the fictional county of Downshire",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:57:03Z",
+   "target": "f14556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Gabriel García Márquez’s international breakthrough came with the novel Cien años de soledad (1967) (One Hundred Years of Solitude).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:57:04Z",
+   "target": "f14556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictitious town of Macondo.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:07.379Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the first novel to feature the character of Miss Marple and her village of St Mary Mead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:07.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:07.379Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "For a woman who has spent her life in the small village of St Mary Mead, Miss Marple is surprisingly worldly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:07.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:07.379Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Not only are we formally introduced to the village of St Mary Mead",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:07.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:07.379Z",
+   "target": "f03729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Miss Marple's St Mary Mead is described in The Murder at the Vicarage as being in the fictional county of Downshire",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:07.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:07.379Z",
+   "target": "f14556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Gabriel García Márquez’s international breakthrough came with the novel Cien años de soledad (1967) (One Hundred Years of Solitude).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:07.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:07.379Z",
+   "target": "f14556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is a 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictitious town of Macondo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:07.379Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s7"
+  }
+ ]
+}

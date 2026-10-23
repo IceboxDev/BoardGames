@@ -1,0 +1,296 @@
+{
+ "article": "a1426",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dissolution_of_Czechoslovakia",
+   "title": "Dissolution of Czechoslovakia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:35.449Z",
+   "snapshot": "1aaad0b618ca33893be255dda0f1167b97f6bfb2f682c83f9c0367777078eeef"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bratislava",
+   "title": "Bratislava",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:32.806Z",
+   "snapshot": "6dac503752f2e382482617903ca7ab6a085277ae2200bffbb8461934b98ed7df"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Slovenia",
+   "title": "Slovenia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:36.841Z",
+   "snapshot": "85dbb41c53ec50a1fe8b2462485a7cd09414ff43bccda9471dae255cb84ab74c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vilnius",
+   "title": "Vilnius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:37.555Z",
+   "snapshot": "00c625e41168fdafdbb39e5c8cf2bd9f1ef10bc153c00c931e4c34885efc685b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Prespa_Agreement",
+   "title": "Prespa Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:38.407Z",
+   "snapshot": "ed3aecb814902f0eb6b6c8682011fbbffd61ec720581ac080715dda40450e246"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moldova",
+   "title": "Moldova – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:39.841Z",
+   "snapshot": "53e9de9fab0916c914ebd6629cc600c1a47b77ded5edc0a2ef9c8071a0653dc4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Revolutions_of_1989",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:40.643Z",
+   "snapshot": "b90f1b86dc86e9baaf87501143ff5da766a3d655463b4425f95022ada82e7b01"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Slovakia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Slowakei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-333"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Slovenia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lithuania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "North Macedonia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Moldova",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:23.973Z",
+   "target": "f07126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The dissolution of Czechoslovakia, which took effect on 31 December 1992, was the self-determined partition of the Czech and Slovak Federative Republic into the independent countries of the Czech Republic and Slovakia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slovakia” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:23.973Z",
+   "target": "f07126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bratislava ( ['bracislava], bis 1919 slowakisch Prešporok, deutsch Pressburg, vor der Rechtschreibreform 1996 Preßburg geschrieben, ungarisch Pozsony) ist die Hauptstadt der Slowakei und mit 479.389 Einwohnern (Stand 31.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slowakei” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:23.973Z",
+   "target": "f07127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Slovenia, officially the Republic of Slovenia, is a country in Central Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slovenia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:23.973Z",
+   "target": "f07128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vilnius (  VIL-nee-əs; Lithuanian: [ˈvʲɪlʲnʲʊs] ) is the capital and largest city of Lithuania and the most-populous city in the Baltic states.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lithuania” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:23.973Z",
+   "target": "f07129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prespa, from which it took its name, and ratified by the parliaments of both countries, the agreement went into force on 12 February 2019, when the two countries notified the UN of the deal's completion, following the ratification of the NATO accession protocol for North Macedonia on 8 February.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “North Macedonia” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:23.973Z",
+   "target": "f07130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Moldova, officially the Republic of Moldova, is a landlocked country in Eastern Europe, with an area of 33,843 km2 (13,067 sq mi) and a population of 2.38 million.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.973Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moldova” is on the snapshot of s6"
+  }
+ ]
+}

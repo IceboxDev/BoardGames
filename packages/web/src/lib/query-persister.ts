@@ -21,7 +21,7 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 //     for the cell to read.
 // v9: the chess trainer's queries stopped being persisted; dropping the old
 //     snapshot clears stale trees a reload would otherwise rehydrate once.
-const BUSTER = "v9";
+const BUSTER = "v10";
 
 export const queryPersister =
   typeof window === "undefined"

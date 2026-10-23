@@ -1,0 +1,575 @@
+{
+ "article": "a1956",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Josef_%C4%8Capek",
+   "title": "Josef Čapek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:59.612Z",
+   "snapshot": "d65550e9b4a1bee37abf72b7257f89e373d5adb33876ffd87be22e42e10bc548"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cyborg",
+   "title": "Cyborg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:00.781Z",
+   "snapshot": "a52fd08f729d635f4e797958df010cca071deefbf9f533058b284082ad5051e7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+   "title": "Dartmouth workshop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:01.595Z",
+   "snapshot": "39e726cc0336ae893d06df288a26a1e9b6532e83d06bad17a03cfc1b6ff15459"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Software_bug",
+   "title": "Software bug – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:02.695Z",
+   "snapshot": "6cbbe508c0c932457c3f8c0d4861a8d7637a379256e7c6617c676fc227e983aa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+   "title": "Bug (engineering)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:36.286Z",
+   "snapshot": "87f751fa5d1e835ee581f17d843ccb91cf65394328887b41d1b1683f38cdac3d"
+  },
+  "s6": {
+   "url": "https://grahamcluley.com/first-actual-computer-bug/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:00.836Z",
+   "snapshot": "3c8311fe7d035992b8f89d8737db8a3b662ec1776d9caef8b8509360ac298487"
+  },
+  "s7": {
+   "url": "https://www.sciencefocus.com/future-technology/where-does-the-word-robot-come-from",
+   "title": "Where does the word ‘robot’ come from?",
+   "publisher": "BBC Science Focus",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:36.518Z",
+   "snapshot": "ee121f69fbaf5a1940d76f0f14f7b1da9600fd163bc10aa3991ba39765f1a6c7"
+  },
+  "s8": {
+   "url": "https://www.sciencefriday.com/segments/the-origin-of-the-word-robot/",
+   "title": "The Origin Of The Word ‘Robot’",
+   "publisher": "Science Friday",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:37.131Z",
+   "snapshot": "7c1a96149b4bb5d81d9330b51837f4bc02ea73138e57c72ca424c20e27574ed1"
+  },
+  "s9": {
+   "url": "https://www.computerhistory.org/tdih/september/9/",
+   "title": "September 9: First Instance of Actual Computer Bug Being Found",
+   "publisher": "Computer History Museum",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:37.099Z",
+   "snapshot": "667aca9642b686656948a51a651cff5b28f9277fe00fea4b180cf0ce437e9c7a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Robot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cyborg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Artificial intelligence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bug",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A moth",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "A moth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "pp-088/1, u06: The 1947 Mark II moth is real, but the card's answer is wrong: engineers used 'bug' for faults since the 19th century (Edison 1878), and the log entry was a joke on that. Our open wording asks for the insect, which is right; notes now say the card's etymology is wrong."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f25485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A moth",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s6"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He invented the word 'robot', which was introduced into literature by his brother, Karel Čapek.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robot” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f09778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A cyborg () is a being with both organic and biomechatronic body parts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cyborg” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f09779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Dartmouth Summer Research Project on Artificial Intelligence was a 1956 summer workshop widely considered to be the founding event of artificial intelligence as a field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Artificial intelligence” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A software bug is a defect (bug) in computer software.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bug” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f25485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Grace Hopper, a computer pioneer, popularized a story about a moth that caused a problem in an early electromechanical computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A moth” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:53.180Z",
+   "target": "f25485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A moth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:53.180Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A moth” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:40:23Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He invented the word 'robot', which was introduced into literature by his brother, Karel Čapek.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:40:24Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Karel Čapek always made a point of crediting his brother, Josef, an artist, as the true originator of the term.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: Josef's suggestion derived from the Czech word 'robota', a system of forced serf labour."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:40:26Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "At the suggestion of his brother, Josef, Čapek ultimately opted for roboti, or in English, robots.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:40:28Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "U.S. Navy Rear Adm. Grace Hopper, a computer pioneer, popularized a story about a moth that caused a problem in an early electromechanical computer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "The term itself predates 1947; wording reworded so it no longer says the term became popular after the moth."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:40:30Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Originating with Thomas Edison in the 1800s, the term “bug” is still used widely to describe a mistake or failure in a technical system.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: Hopper 'was present and made the incident famous later on in her many public lectures'."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Karel Čapek always made a point of crediting his brother, Josef, an artist, as the true originator of the term.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "At the suggestion of his brother, Josef, Čapek ultimately opted for roboti, or in English, robots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "U.S. Navy Rear Adm. Grace Hopper, a computer pioneer, popularized a story about a moth that caused a problem in an early electromechanical computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Originating with Thomas Edison in the 1800s, the term “bug” is still used widely to describe a mistake or failure in a technical system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Where does the word 'robot' come from?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Robot” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Origin Of The Word 'Robot'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Robot” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In engineering, a bug is a design defect in an engineered system—such as software, computer hardware, electronics, circuitry, genome, or machinery—that causes an undesired result.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bug” is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:42.235Z",
+   "target": "f09780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "September 9: First Instance of Actual Computer Bug Being Found | This Day in History | Computer History Museum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:42.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bug” is on the snapshot of s9"
+  }
+ ]
+}

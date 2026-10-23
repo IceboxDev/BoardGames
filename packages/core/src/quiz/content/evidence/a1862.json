@@ -1,0 +1,242 @@
+{
+ "article": "a1862",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kamikaze",
+   "title": "Kamikaze – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:44.589Z",
+   "snapshot": "34b6601fa2f7d2b25d4b6daec8b563b226a0d67b1d328468f8729a617d7747a4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Origami",
+   "title": "Origami – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:45.589Z",
+   "snapshot": "4c0c30398ce95a78e2c2986d4d5ba8bf856f758720cab52af112f442642514fd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tsunami",
+   "title": "Tsunami – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:46.458Z",
+   "snapshot": "d809509fe291af981a0212d5fd6314d90e579e7bfab50167089aef24a7f967dd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Karate",
+   "title": "Karate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:36.474Z",
+   "snapshot": "a6b12d2154af2b4c3290319771470e4a80cf5f0d6197913ff0172cd2b4f6df64"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/One_thousand_origami_cranes",
+   "title": "One thousand origami cranes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:47.452Z",
+   "snapshot": "4c1a3aae492f38e953c0db2eee3b2e21635561c8767c72fc584cd805c64fa392"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kamikaze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c156"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Origami",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f22282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "harbour wave",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "empty hand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f22284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "senbazuru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:35.916Z",
+   "target": "f09306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kamikaze (神風; pronounced [kamiꜜkaze]; 'divine wind' or 'spirit wind'), officially Shinpū Tokubetsu Kōgekitai (神風特別攻撃隊; 'Divine Wind Special Attack Unit'), were a part of the Japanese Special Attack Units of military aviators who flew suicide attacks for the Empire of Japan against Allied naval",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kamikaze” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:35.916Z",
+   "target": "f09310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Origami (折り紙) is the art and technique of folding paper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Origami” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:35.916Z",
+   "target": "f22282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "'harbour wave', pronounced [tsɯnami]) is a series of waves in a water body caused by the displacement of a large volume of water, generally in an ocean or a large lake.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “harbour wave” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:35.916Z",
+   "target": "f22283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In this era of escalating Japanese militarism, the name was changed from 唐手 (\"Chinese hand\" or \"Tang hand\") to 空手 (\"empty hand\") – both of which are pronounced karate in Japanese – to indicate that the Japanese wished to develop the combat form in Japanese style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “empty hand” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:35.916Z",
+   "target": "f22284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The folding of one thousand origami cranes (千羽鶴, senbazuru; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “senbazuru” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,509 @@
+{
+ "article": "a0837",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Problem_of_points",
+   "title": "Problem of points – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:27.373Z",
+   "snapshot": "20442a22d23d8364fbd3125d2cbbc3f461d80c5a1d9c2f95d7c8202158bbbf62"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Euclid%27s_theorem",
+   "title": "Euclid's theorem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:28.449Z",
+   "snapshot": "ef0861cc51b30aa7fdd48c24705f7650ae3a36362a637fe25f032fd993892f89"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg",
+   "title": "Seven Bridges of Königsberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:29.368Z",
+   "snapshot": "c236c514bd56cbbf1a3978a795c3792a5e374d8b0125d93a00b880614b0946f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Matrix_(mathematics)",
+   "title": "Matrix (mathematics) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:30.710Z",
+   "snapshot": "e635221c61353ad04524f9fe7575fdba134b09cf6648f1f38d33f8bae1ded9c2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pascal%27s_triangle",
+   "title": "Pascal's triangle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:31.559Z",
+   "snapshot": "bc707978f978785f1698265e586010a62105700f8a7eeef6d4ecf6f12dce65cd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Homeomorphism",
+   "title": "Homeomorphism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:32.544Z",
+   "snapshot": "f0c66aec6e403ee8ac95f188269542d95d94385bcbd918447b6fbb26f0bdf534"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Topology",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:33.391Z",
+   "snapshot": "38ca9b5a70b4760c13df0550cb321247b66e590c1179dbe3ca307eae2df1d222"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Stochastik",
+   "title": "Stochastik",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:02.503Z",
+   "snapshot": "c02cb55a4fba60c167f43e356c59098e8c05bf9d12da663ffed1625f8e2a25e3"
+  },
+  "s9": {
+   "url": "https://www.duden.de/rechtschreibung/Stochastik",
+   "title": "Stochastik",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:03.280Z",
+   "snapshot": "9ec384cd915355ee9cd7f091d5901edab39ccae97a4bd5d85311a4b0e095f968"
+  },
+  "s10": {
+   "url": "https://mathworld.wolfram.com/Topology.html",
+   "title": "Topology",
+   "publisher": "Wolfram MathWorld",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:03.207Z",
+   "snapshot": "58a1eec46c4f5304e3767364f3923346f277a94fec449081617e132a92019646"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Genus_(mathematics)",
+   "title": "Genus (mathematics)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:02.895Z",
+   "snapshot": "9f732a633cb18d2bc6340dffdc7547677a0af24ab3305d0d4c96fd7f19c73a85"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stochastics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Number theory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Topology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Linear algebra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Combinatorics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bowl",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Bowl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (pp-068/1, u02): The card asks which of donut/bowl/mug is topologically different: the bowl (no hole, genus 0), while donut and mug are homeomorphic (one hole). The fact had been asking for the mug instead."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:52.658Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stochastics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Stochastics”, “Stochastik”, “стохастика”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:52.658Z",
+   "target": "f04182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Euclid's theorem is a fundamental statement in number theory that asserts that there are infinitely many prime numbers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Number theory” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:52.658Z",
+   "target": "f04183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Its mathematical formalization and proof of impossibility by Leonhard Euler, in 1736, laid the foundations of graph theory and foreshadowed the idea of topology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Topology” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:52.658Z",
+   "target": "f04184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In linear algebra, matrices are used as linear maps.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linear algebra” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:52.658Z",
+   "target": "f04185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In mathematics, Pascal's triangle is an infinite triangular array of the binomial coefficients which play a crucial role in probability theory, combinatorics, and algebra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:52.658Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Combinatorics” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:52Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "fasst als Oberbegriff die Gebiete Wahrscheinlichkeitstheorie und mathematische Statistik zusammen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:16:57Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Teilgebiet der Mathematik, das die Wahrscheinlichkeitstheorie und die Statistik",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:02Z",
+   "target": "f25398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Someone who cannot distinguish between a doughnut and a coffee cup.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "Mug and doughnut are homeomorphic."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:05Z",
+   "target": "f25398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "A sphere has genus 0, while a torus has genus 1.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "A bowl has no hole (genus 0, like a disc/ball), so it differs from the genus-1 doughnut and mug."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:17:08Z",
+   "target": "f25398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The coffee cup and donut shown in this animation both have genus one.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:20.313Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "fasst als Oberbegriff die Gebiete Wahrscheinlichkeitstheorie und mathematische Statistik zusammen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:20.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:20.313Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Teilgebiet der Mathematik, das die Wahrscheinlichkeitstheorie und die Statistik",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:20.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:20.313Z",
+   "target": "f25398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Someone who cannot distinguish between a doughnut and a coffee cup.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:20.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:20.313Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Stochastik (von altgriechisch στοχαστικὴ τέχνη stochastikē technē, lateinisch ars conjectandi  ‚Kunst des Vermutens‘, ‚Ratekunst‘) ist die Mathematik des Zufalls oder die Mathematik der Daten und des Zufalls, also ein Teilgebiet der Mathematik, und fasst als Oberbegriff die Gebiete",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:20.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stochastik” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:20.313Z",
+   "target": "f04181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Stochastik ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:20.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Stochastik” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2309",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Prefectures_of_Japan",
+   "title": "Prefectures of Japan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:00.581Z",
+   "snapshot": "2400d728c4ac435200dd9e62936fa021e0f3629498c3c3572271c3f77f7f3f9f"
+  },
+  "s2": {
+   "url": "https://www.foxnews.com/science/50-million-trees-were-planted-in-just-24-hours",
+   "title": "50 million trees were planted in just 24 hours",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:58.850Z",
+   "snapshot": "c9a487df977d614d90f1d6e46c6895070ad2b8999b880eb31e6636021b3df4fc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cantons_of_Switzerland",
+   "title": "Cantons of Switzerland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:01.619Z",
+   "snapshot": "bb07b25ab86e174c42b027e2eba85ebf32458ae4b2fc632d28bbd249da5bb485"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Voivodeships_of_Poland",
+   "title": "Voivodeships of Poland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:02.605Z",
+   "snapshot": "42314c269cc587f08faae4f4487ae3634e9e303c1ca77c65cf44ccd93ab22e4b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Departments_of_France",
+   "title": "Departments of France – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:03.599Z",
+   "snapshot": "a40d8db89f26c46640d47badd2faebc32241c37956d51be80ced7abd9f43d7ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-171"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:53.456Z",
+   "target": "f11948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan is divided into 47 prefectures (都道府県, todōfuken; [tò̞.dó̞ó̞.ɸɯ̥̈.kè̞ɴ̀, -kéɴ̀] ), which rank immediately below the national government and form the country's first level of jurisdiction and administrative division.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:53.456Z",
+   "target": "f11949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Indian women plant saplings on the outskirts of Allahabad, India, on July 11.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:53.456Z",
+   "target": "f11950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The 26 cantons of Switzerland are the member states of the Swiss Confederation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Switzerland” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:53.456Z",
+   "target": "f11951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A voivodeship (, VOY-vohd-ship), or voivodship (Polish: województwo [vɔjɛˈvut͡stfɔ] ; plural: województwa [vɔjɛˈvut͡stfa]), is the highest-level administrative division of Poland, corresponding to a province in many other countries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poland” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:53.456Z",
+   "target": "f11952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the administrative divisions of France, the department (French: département, pronounced [depaʁtəmɑ̃] ) is one of the three levels of government under the national level (\"territorial collectivities\"), between the administrative regions and the communes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s5"
+  }
+ ]
+}

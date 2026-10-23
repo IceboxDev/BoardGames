@@ -1,0 +1,328 @@
+{
+ "article": "a0840",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Firefox",
+   "title": "Firefox – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:40.457Z",
+   "snapshot": "27f5c15354aa22dd8581b83c0a9a0c259d28400a1fac907e427e7265ee38e787"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Google_Chrome",
+   "title": "Google Chrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:41.561Z",
+   "snapshot": "235f0244255b69883e4dfe76ba5c98bac95a5b8921464d7d4aa5d0e5bea38113"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Safari_(web_browser)",
+   "title": "Safari (web browser) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:42.757Z",
+   "snapshot": "1adbc626f93c87db99425f60b9807567772a626c9f353c80c8aef22dc051f9cb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Internet_Explorer",
+   "title": "Internet Explorer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:43.481Z",
+   "snapshot": "3178d4636ca00d422d65b27339576714a0f125ec1730e4e334de537025cd78f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Netscape_Navigator",
+   "title": "Netscape Navigator – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:44.525Z",
+   "snapshot": "2fe3db6caff4c02e78174f3bf102eaaacc9444ddbfb5566c5e27fe1d5d4ccce3"
+  },
+  "s6": {
+   "url": "https://gs.statcounter.com/browser-market-share",
+   "title": "Browser Market Share Worldwide",
+   "publisher": "StatCounter Global Stats",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:07.194Z",
+   "snapshot": "69389312e5d4947963cb19519f7c8ac1413dae23e77988336efcca1660441b29"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Firefox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c070"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Google Chrome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Safari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Internet Explorer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Netscape Navigator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:53.211Z",
+   "target": "f04196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Firefox” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:53.211Z",
+   "target": "f04197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Google Chrome is a cross-platform web browser developed by Google.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Google Chrome” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:53.211Z",
+   "target": "f04198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Safari is a web browser developed by Apple.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Safari” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:53.211Z",
+   "target": "f04199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Internet Explorer (formerly Microsoft Internet Explorer and Windows Internet Explorer, commonly abbreviated as IE or MSIE) is  a retired series of graphical web browsers developed by Microsoft that were used in the Windows line of operating systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Internet Explorer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:53.211Z",
+   "target": "f04200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Netscape Navigator was a brand of web browsers first developed and sold by Netscape Communications Corporation in 1994 that was progressively developed until its discontinuation in the late 1990s before the brand was briefly revived for the release of Netscape Navigator 9 under AOL in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Netscape Navigator” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:45:04Z",
+   "target": "f04197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Browser Market Share Worldwide - September 2026 Chrome 66.36% Safari 18.27%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Monthly figure (Sept 2026): Chrome first with ~66%, Safari second; time-sensitive."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:45:07Z",
+   "target": "f04197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With a market share of 71.22% across all platforms combined as of December 2025, Chrome is the most used web browser in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:21.256Z",
+   "target": "f04197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Browser Market Share Worldwide - September 2026 Chrome 66.36% Safari 18.27%",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.256Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:21.256Z",
+   "target": "f04197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With a market share of 71.22% across all platforms combined as of December 2025, Chrome is the most used web browser in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.256Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  }
+ ]
+}

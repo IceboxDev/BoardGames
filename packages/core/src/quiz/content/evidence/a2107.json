@@ -1,0 +1,249 @@
+{
+ "article": "a2107",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/CumEx-Files",
+   "title": "CumEx-Files – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:54.771Z",
+   "snapshot": "bfc6371896991bf46ea7caa342c7db48da34a75167180eb606423c74cfcd13bf"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dividendenstripping",
+   "title": "Dividendenstripping – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:41:54.099Z",
+   "snapshot": "ea97900e97201c8dc5b13eb36ff90758a517ff84fa232c5c7d72bc3b0dfd6db5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wirecard_scandal",
+   "title": "Wirecard scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:55.869Z",
+   "snapshot": "f2dd7e5577a755172f1f7fa4bf5b11579fece71441bd581608579aa7e146695b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hypo_Real_Estate",
+   "title": "Hypo Real Estate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:56.783Z",
+   "snapshot": "8c4955c80a2909f3e047999f3e779328e823fc6ac1fa2697f95fb05c4b865429"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Volkswagen_emissions_scandal",
+   "title": "Volkswagen emissions scandal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:58.011Z",
+   "snapshot": "ff0faa6e80b2a48f84c6cfd2cae2e342b3953ac926487d8ffa98c3352b4e0d6c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hypo_Real_Estate",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:41:55.919Z",
+   "snapshot": "c2ef41fa8b7a2ea0f9cb2c36493d15ea64a81aa445e7aa6874e8b7cd980782b2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cum-ex trades",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cum-Cum-Geschäfte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10533",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wirecard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10534",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hypo Real Estate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10535",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dieselgate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:23.598Z",
+   "target": "f10531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In cum-ex trades, shares with and without dividend rights were quickly traded between various market participants just before the payout date for the dividend, allowing traders to reclaim double the taxes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.598Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cum-ex trades” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:23.598Z",
+   "target": "f10532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Euro an Steuereinnahmen entgangen (siehe auch #Cum-Cum-Geschäfte).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.598Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cum-Cum-Geschäfte” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:23.598Z",
+   "target": "f10533",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Wirecard scandal (German: Wirecard-Skandal) was a series of corrupt business practices and fraudulent financial reporting that led to the insolvency of Wirecard, a payment processor and financial services provider, headquartered in Munich, Germany together with the failure of watchdogs over a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.598Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wirecard” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:23.598Z",
+   "target": "f10534",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Hypo Real Estate Holding AG is a holding company based in Munich, Germany which comprises many real estate financing banks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.598Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hypo Real Estate” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:23.598Z",
+   "target": "f10535",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Volkswagen emissions scandal, sometimes known as Dieselgate or Emissionsgate, began in September 2015, when the United States Environmental Protection Agency (EPA) issued a notice of violation of the Clean Air Act to German automaker Volkswagen Group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.598Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dieselgate” is on the snapshot of s5"
+  }
+ ]
+}

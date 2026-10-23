@@ -1,0 +1,597 @@
+{
+ "article": "a2461",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sonett",
+   "title": "Sonett",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:25.193Z",
+   "snapshot": "d2e3b33a5b717924f01f567851d4c7531eeb2d7367f076402e516997b70f4b8a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Limerick_(Gedicht)",
+   "title": "Limerick (Gedicht) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:26.216Z",
+   "snapshot": "74c15732522a8d152e696057aaa5c8864a87eee05955967550807c9258dd7b44"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Limerick_(poetry)",
+   "title": "Limerick (poetry)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:28.992Z",
+   "snapshot": "3a9d6b5e5652becfef428b166efa10b24756f777146c53c22bb59ced3bca4912"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Haiku",
+   "title": "Haiku – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:29.993Z",
+   "snapshot": "e813987b498fac929f80b91bd69867ace8edc8dd3973e90b67f5a2d7e609d633"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sonnet",
+   "title": "Sonnet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:31.217Z",
+   "snapshot": "0c832af20d37e97dad321fff15e0713047160be00cf02a5d418dc866a570e727"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Matsuo_Bash%C5%8D",
+   "title": "Matsuo Bashō",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:32.093Z",
+   "snapshot": "5b37458665222161e30d7411ddee70c04d0d68d3127b10a05f6a0a575d69c45f"
+  },
+  "s7": {
+   "url": "https://poets.org/glossary/limerick",
+   "title": "Limerick",
+   "publisher": "Academy of American Poets",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:28.524Z",
+   "snapshot": "04f29f255d6ced6381f56314506d0174f4017481472f4b2b83a19caa577c7433"
+  },
+  "s8": {
+   "url": "https://poets.org/glossary/sonnet",
+   "title": "Sonnet",
+   "publisher": "Academy of American Poets",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:29.469Z",
+   "snapshot": "04148fea86b960b06b0b60fc88b1a9efff779cb5c093db356e7c63ac1800b48a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sonett",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-188"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "fünf Zeilen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13; transcript tp-071"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12962",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Limerick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-196"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12963",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Haiku",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12964",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Edward Lear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12965",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Petrarch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25702",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Haiku",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 64; transcript ppm-048"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "14",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-143"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f12960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ein Sonett (Plural: Sonette, von lateinisch sonare ‚tönen, klingen‘, sonus ‚Klang, Schall‘ und italienisch sonetto) ist eine Gedichtform aus 14 metrisch gegliederten Verszeilen, die in unterschiedlich lange Abschnitte eingeteilt ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sonett” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ein Limerick ist ein kurzes, in aller Regel scherzhaftes Gedicht in fünf Zeilen mit dem Reimschema aabba und einem (relativ) festen metrischen Schema.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fünf Zeilen” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f12962",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A limerick (  LIM-ər-ik) is a form of verse that appeared in England in the early years of the 18th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Limerick” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f12963",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Haiku (俳句; English: , Japanese: [hä̀í.kɯ̈́] ) is a type of short-form poetry that originated in Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haiku” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f12964",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was popularized by Edward Lear in the 19th century, although he did not use the term.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edward Lear” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f12965",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Among the host of other Italian poets that followed, the sonnets of Dante Alighieri and Guido Cavalcanti stand out, but later the most famous and widely influential was Petrarch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Petrarch” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f25702",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "During his lifetime, Bashō was recognized for his works in the collaborative haikai no renga form; today, after centuries of commentary, he is recognized as the greatest master of haiku (then called hokku).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haiku” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:23.583Z",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "To this, da Lentini (or whoever else invented the form) added two tercets to the Strambotto in order to create the new 14-line sonnet form.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:23.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “14” is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:03:55Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Composed of five lines or five-line stanzas, the limerick adheres to a strict rhyme scheme and bouncy rhythm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:03:57Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is written in five-line, predominantly anapestic and amphibrach trimeter with a strict rhyme scheme",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:03:59Z",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Traditionally, the sonnet is a fourteen-line poem written in iambic pentameter",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:04:01Z",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A sonnet is a fixed poetic form with a structure traditionally consisting of fourteen lines adhering to a set rhyming scheme.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Composed of five lines or five-line stanzas, the limerick adheres to a strict rhyme scheme and bouncy rhythm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is written in five-line, predominantly anapestic and amphibrach trimeter with a strict rhyme scheme",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Traditionally, the sonnet is a fourteen-line poem written in iambic pentameter",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A sonnet is a fixed poetic form with a structure traditionally consisting of fourteen lines adhering to a set rhyming scheme.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The standard form of a limerick is a stanza of five lines, with the first, second and fifth rhyming with one another and having three feet of three syllables each; and the shorter third and fourth lines also rhyming with each other, but having only two feet of three syllables.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “five lines” is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f12961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Composed of five lines or five-line stanzas, the limerick adheres to a strict rhyme scheme and bouncy rhythm, making it easy to memorize.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “five lines” is on the snapshot of s7"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:06.426Z",
+   "target": "f25703",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Stretched and teased formally and thematically, today’s sonnet can often only be identified by the ghost imprint that haunts it, recognizable by the presence of 14 lines or even by name only.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:06.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “14” is on the snapshot of s8"
+  }
+ ]
+}

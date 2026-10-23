@@ -1,0 +1,341 @@
+{
+ "article": "a2111",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cougar",
+   "title": "Cougar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:05.428Z",
+   "snapshot": "2c7e72565af05bef89823286179dc6f3a8804d01d76fddd0c6f210de116071b7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Project_Cheetah",
+   "title": "Project Cheetah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:11.895Z",
+   "snapshot": "fd26ec4bf6fd80fe344dd108492113fe54adfec2258423ceb18a6bbe160e5cb1"
+  },
+  "s3": {
+   "url": "https://phys.org/news/2017-09-long-endangered-leopard-vulnerable-status.html",
+   "title": "Long-endangered snow leopard upgraded to 'vulnerable' status – Phys.org",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:09.329Z",
+   "snapshot": "d209ef21e3cd7adc3b4f4a41e3d9acd276caf4809ddc7ea5454f1734dcf4ebfa"
+  },
+  "s4": {
+   "url": "https://blog.nature.org/2019/03/12/the-conservation-story-of-the-kenya-black-leopard/",
+   "title": "The Conservation Story of the Kenya Black Leopard – The Nature Conservancy",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:09.750Z",
+   "snapshot": "16d857b05f639fded4241fc10b31801b4b04bd5f044dff818d6b36d3bb78263e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Caracal",
+   "title": "Caracal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:12.894Z",
+   "snapshot": "a55f998ff5c392310a4c9eddbec6518fff85bc97f5d5d7da32ecb0f210bbe330"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cheetah",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:04.149Z",
+   "snapshot": "7c6c9636ee43b5ae780c0a5ad6fa1770b4887d28b5e75c0ef3ff9e3c07961707"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Puma",
+   "title": "Puma",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:46.178Z",
+   "snapshot": "796c0c97b64c584019edb2d16af9d9119aaffb1ce35012f6493685aefe3b2f7f"
+  },
+  "s8": {
+   "url": "https://wildlife.ca.gov/Conservation/Mammals/Mountain-Lion",
+   "title": "Mountain Lions in California",
+   "publisher": "California Department of Fish and Wildlife",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:15:53Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cheetahs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "snow leopards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "leopards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "caracals",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:24.350Z",
+   "target": "f10551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pumas”, “Pumas”, “пумы”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:24.350Z",
+   "target": "f10552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the early modern era,  tame cheetahs had been kept for the pursuit of game by Indian nobility.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cheetahs” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:24.350Z",
+   "target": "f10553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Snow leopards had been listed as endangered since 1972.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “snow leopards” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:24.350Z",
+   "target": "f10554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The “black panther” (as these leopards are also known) is indeed a striking beast, as the video trail camera footage attests.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “leopards” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:24.350Z",
+   "target": "f10555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The average lifespan of captive caracals is nearly 16 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “caracals” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:47Z",
+   "target": "f10551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "für viele davon gibt es auch im Deutschen eine Entsprechung: Silberlöwe, Berglöwe oder Kuguar",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:53Z",
+   "target": "f10551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "People often call them mountain lions in California, cougars across western North America, panthers in Florida, and pumas in Mexico, Central and South America.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:11.341Z",
+   "target": "f10551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "für viele davon gibt es auch im Deutschen eine Entsprechung: Silberlöwe, Berglöwe oder Kuguar",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:11.341Z",
+   "target": "f10551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "So sind die in der Äquatorregion verbreiteten Pumas die kleinsten, während jene im extremen Norden und Süden des Verbreitungsgebietes am größten sind.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:11.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pumas” is on the snapshot of s7"
+  }
+ ]
+}

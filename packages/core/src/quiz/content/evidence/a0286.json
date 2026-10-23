@@ -1,0 +1,242 @@
+{
+ "article": "a0286",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mainz",
+   "title": "Mainz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:38.218Z",
+   "snapshot": "8f75edf4155380c7c287b72a851a19b2ad0006e90a2d80c363b4adfd662a7f70"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Koblenz",
+   "title": "Koblenz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:39.004Z",
+   "snapshot": "15e2fbc058e15c163e4b729c3fbeb074bd03c4f428713c84099459884dd5f93a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Mannheim",
+   "title": "Mannheim – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:36.378Z",
+   "snapshot": "eb014aaabfc969ba92a7e8e088592dd0c6219b442d605cdf8ef24fc39aa113a9"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Duisburg-Ruhrorter_H%C3%A4fen",
+   "title": "Duisburg-Ruhrorter Häfen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:37.228Z",
+   "snapshot": "499916d43da3531393d99c3ea41d9182be5d09577ed41c54f0f44160268cd90f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Passau",
+   "title": "Passau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:41.738Z",
+   "snapshot": "02a52df8ce1af3958c71667048c4f5c6dd14b07a0114a8ad8d92d87e3f06b8cf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mainz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Koblenz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mannheim",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Duisburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Donau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-186"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.472Z",
+   "target": "f01426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mainz (German: [maɪnts] ; see below) is the capital and largest city of the German state of Rhineland-Palatinate, and with around 223,000 inhabitants, it is Germany's 35th-largest city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mainz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.472Z",
+   "target": "f01427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Koblenz (UK:  koh-BLENTS, US:  KOH-blents, German: [ˈkoːblɛnts] ; Moselle Franconian: Kowelenz) is a city in the German state of Rhineland-Palatinate, on the banks of the rivers Rhine (Middle Rhine) and Moselle, a multinational tributary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Koblenz” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.472Z",
+   "target": "f01428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mannheim (, kurpfälzisch Mannem, auch Monnem [mɒnəm] ) ist ein Stadtkreis mit 319.536 Einwohnern (31.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mannheim” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:24.472Z",
+   "target": "f01430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Duisburg-Ruhrorter Häfen befinden sich in Duisburg an der Mündung der Ruhr in den Rhein.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Duisburg” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:24.472Z",
+   "target": "f12084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sie liegt an der Grenze zu Österreich sowie am Zusammenfluss von Donau, Inn und Ilz und wird deshalb auch Dreiflüssestadt genannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donau” is on the snapshot of s5"
+  }
+ ]
+}

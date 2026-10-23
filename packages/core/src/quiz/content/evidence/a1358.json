@@ -1,0 +1,195 @@
+{
+ "article": "a1358",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kassandra_(Christa_Wolf)",
+   "title": "Kassandra (Christa Wolf) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:40.950Z",
+   "snapshot": "1726bb340f36419902f77aaa85c45821b1da23092a5829fe5258b0a95de666fd"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Das_siebte_Kreuz",
+   "title": "Das siebte Kreuz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:56:41.513Z",
+   "snapshot": "55fa8fab43e387ca798350d003c2ebedc864705074c2b7a6cadf51afc1051d51"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Malina_(novel)",
+   "title": "Malina (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:43.201Z",
+   "snapshot": "29c4a48186d7d33ef19b9b069ce22ae4eaa7cabca9b418a8065d3b37c30578cc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Elfriede_Jelinek",
+   "title": "Elfriede Jelinek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:27.191Z",
+   "snapshot": "b2d4182337e611a67d68f315c24e7096c86841640fb5c723820294a223421ddd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Christa Wolf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anna Seghers",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ingeborg Bachmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elfriede Jelinek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:13.579Z",
+   "target": "f06786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kassandra ist eine Erzählung der ostdeutschen Schriftstellerin Christa Wolf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christa Wolf” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:13.579Z",
+   "target": "f06787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das siebte Kreuz ist ein Roman von Anna Seghers über die Flucht von sieben Häftlingen aus einem Konzentrationslager während der Zeit des Nationalsozialismus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anna Seghers” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:13.579Z",
+   "target": "f06788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Malina is a 1971 novel by the Austrian writer Ingeborg Bachmann.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ingeborg Bachmann” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:13.579Z",
+   "target": "f06789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Elfriede Jelinek (German: [ɛlˈfʁiːdə ˈjɛlinɛk]; born 20 October 1946) is an Austrian playwright and novelist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elfriede Jelinek” is on the snapshot of s4"
+  }
+ ]
+}

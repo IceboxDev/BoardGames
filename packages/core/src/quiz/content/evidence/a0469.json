@@ -1,0 +1,346 @@
+{
+ "article": "a0469",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/London_Calling",
+   "title": "London Calling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:28.922Z",
+   "snapshot": "99fe9a2cad73cabdb719f7474ad986be476486d630a29ea24804d3a4bb846190"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pete_Townshend",
+   "title": "Pete Townshend – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:30.096Z",
+   "snapshot": "55a06cb7ad71b7d1e9eaa7538d0a5660ac729782506dcd3c038e4fd2d239455b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Keith_Moon",
+   "title": "Keith Moon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:31.003Z",
+   "snapshot": "f575882e00df8ee992b2a418fed5a3d7678c049dd914ec80b104844b6c390311"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Clarence_Clemons",
+   "title": "Clarence Clemons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:31.890Z",
+   "snapshot": "42345aa0829e204f87c2bb6d195ba196a1078962dc0850517cf062f91f4cca0e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ian_Anderson",
+   "title": "Ian Anderson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:32.910Z",
+   "snapshot": "ccdf957835dd1246c89beab2f3973355a897059f882e6a22fb3a9a37c7bba39b"
+  },
+  "s6": {
+   "url": "http://www.vam.ac.uk/content/articles/p/pete-townshends-guitar/",
+   "title": "Guitar – Pete Townshend – V&A Explore The Collections",
+   "publisher": "Victoria and Albert Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:21.477Z",
+   "snapshot": "baf38ba41dcc866a50f56fdda194b38dc5a718c82818044b7f7d339ceca83956"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "bass guitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c040"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "electric guitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "drums",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "saxophone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "flute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:53.248Z",
+   "target": "f02341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "revealed in a 2011 interview with Fender that he smashed the bass out of frustration when he learned that the bouncers at the concert would not allow the audience members to stand up from their seats, explaining: \"I wasn't taking it out on the bass guitar, cos there ain't anything wrong with it\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bass guitar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:53.248Z",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "electric guitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“electric guitar”, “E-Gitarre”, “электрогитара”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:53.248Z",
+   "target": "f02343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moon grew up in Wembley and took up the drums during the early 1960s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “drums” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:53.248Z",
+   "target": "f02344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "When he was nine, his father gave him an alto saxophone as a Christmas present and paid for music lessons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “saxophone” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:53.248Z",
+   "target": "f02345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anderson initially played electric guitar, but soon abandoned the instrument in favour of the flute, which would become his signature instrument and a defining component of Jethro Tull's sound.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:53.248Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flute” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:00:58Z",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Townshend accidentally broke the top of his guitar on the low ceiling and proceeded to destroy the entire instrument",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:00:59Z",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pete Townshend was the first guitar-smashing rock artist.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:16.130Z",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Townshend accidentally broke the top of his guitar on the low ceiling and proceeded to destroy the entire instrument",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:16.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:16.130Z",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pete Townshend was the first guitar-smashing rock artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:16.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:16.130Z",
+   "target": "f02342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Electric guitar broken on stage by Pete Townshend (b.1945) of 'The Who' who smashed guitars in concert as part of the performance.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:16.130Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “electric guitar” is on the snapshot of s6"
+  }
+ ]
+}

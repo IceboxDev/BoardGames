@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-140",
+ "image": "IMG20261022154644.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] Which of the following volcanoes has been dormant the longest since its last eruption?\nA. Haleakalā of Hawaii\nB. Mount Fuji of Japan\nC. Mount Fuego of Guatemala\nAnswer: A. According to Hawaiian legend, the demigod Maui lassoed the sun from Haleakalā’s summit to slow its descent, thereby lengthening the day. Haleakalā’s most recent eruption was in 1600 or earlier. Mount Fuji has been quiet since 1707, and Mount Fuego in Guatemala is one of the most active volcanoes in the world with frequent eruptions; its most recent eruption occurred in 2018.",
+   "de": "Welcher Vulkan auf Maui – das „Haus der Sonne“, von dessen Gipfel aus der Halbgott Māui der hawaiischen Sage nach die Sonne einfing – brach zuletzt irgendwann zwischen 1480 und 1600 aus?",
+   "en": "Which volcano on Maui – the \"house of the sun\", from whose summit the demigod Māui captured the sun in Hawaiian legend – last erupted sometime between 1480 and 1600?",
+   "reworked": true,
+   "answerDe": "Haleakalā",
+   "answerEn": "Haleakalā",
+   "timeline": {
+    "kind": "event",
+    "start": "1480",
+    "end": "1600",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Haleakalā on Maui last erupts, sometime between 1480 and 1600 by radiocarbon dating",
+    "labelDe": "Der Haleakalā auf Maui bricht zuletzt aus, laut Radiokarbondatierung irgendwann zwischen 1480 und 1600"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Haleakal%C4%81",
+    "title": "Haleakalā",
+    "lang": "en"
+   },
+   "notes": "Card asks which of three volcanoes has slept longest; the open question asks the name with its legend and last-eruption window (USGS radiocarbon dating: 1480–1600, earlier thought c. 1790). Card's 'in 1600 or earlier' agrees. Dated detail: Fuego erupts near-continuously, so 'most recent eruption in 2018' is out of date (2018 was its deadly major eruption).",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "discipline": "Art History",
+   "cardText": "[Art History] Which current-day country can be attributed to as starting the “Renaissance”?\nA. France\nB. Italy\nC. England\nAnswer: B.",
+   "de": "In welchem heutigen Land begann die Renaissance?",
+   "en": "In which present-day country did the Renaissance begin?",
+   "reworked": true,
+   "answerDe": "Italien",
+   "answerEn": "Italy",
+   "timeline": {
+    "kind": "era",
+    "start": "1300",
+    "end": "1700",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Renaissance, starting in Florence and spreading from Italy across Europe",
+    "labelDe": "Die Renaissance, die in Florenz beginnt und sich von Italien aus über Europa ausbreitet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Renaissance",
+    "title": "Renaissance",
+    "lang": "en"
+   },
+   "notes": "The Renaissance began in Italy, first centred in the Republic of Florence (Wikipedia: 14th to 17th century).",
+   "domain": "history",
+   "sub": "early-modern"
+  }
+ ]
+}

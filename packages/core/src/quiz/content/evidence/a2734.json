@@ -1,0 +1,242 @@
+{
+ "article": "a2734",
+ "sources": {
+  "s1": {
+   "url": "https://static.artmuseum.princeton.edu/asian-art/china/resources/landscape-painting/",
+   "title": "Chinese Landscape Painting during the Song Dynasty",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:45.645Z",
+   "snapshot": "516d75442ad8fb042c549d3463bbef2e13ddf88dbd197ddfadc506df60c32a97"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Shan_shui",
+   "title": "Shan shui",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:48.954Z",
+   "snapshot": "f2705e19b9c63dad7bb86a359483f9c2f927ce2cd08b4d0f1982dfd94a56be04"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fan_Kuan",
+   "title": "Fan Kuan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:49.936Z",
+   "snapshot": "84127699b965a483dcabfab1160c09a9b45422bc4f7f0498ca39ff5023bd451d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Early_Spring_(painting)",
+   "title": "Early Spring (painting)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:50.944Z",
+   "snapshot": "c24a65715a610a4b424cbc93f011a819972a707f19946dfe3ee8b9745af2e7e8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Along_the_River_During_the_Qingming_Festival",
+   "title": "Along the River During the Qingming Festival",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:17:52.059Z",
+   "snapshot": "a3a4ce2ccdf473ca425734c31e3c95cd0991cee83052892fffedb0cd36f7442a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shifting perspective",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shan shui",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fan Kuan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25531",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Guo Xi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25532",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zhang Zeduan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:05.289Z",
+   "target": "f25528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Describe the concept of shifting perspective (see below) and why artists used it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shifting perspective” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:05.289Z",
+   "target": "f25529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shan shui or shanshui (Chinese: 山水; pinyin: shān shuǐ; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shan shui” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:05.289Z",
+   "target": "f25530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1030), courtesy name Zhongli, better known by his pseudonym Fan Kuan (Chinese: 范寬; pinyin: Fàn Kuān; Wade–Giles: Fan K’uan), was a Chinese landscape painter of the Song dynasty.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fan Kuan” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:05.289Z",
+   "target": "f25531",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Early Spring is a hanging scroll painting by Guo Xi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guo Xi” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:05.289Z",
+   "target": "f25532",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "'Clear bright up river image') is a handscroll painting by the Song dynasty painter Zhang Zeduan (1085–1145) and copied or recreated many times in the following centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:05.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zhang Zeduan” is on the snapshot of s5"
+  }
+ ]
+}

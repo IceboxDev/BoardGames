@@ -14,7 +14,7 @@ vi.mock("react-router-dom", async (importOriginal) => {
   return { ...actual, useNavigate: () => navigate };
 });
 
-vi.mock("../../api", () => ({
+vi.mock("../../../../trainers/quiz/api", () => ({
   myReportsQuery: () => async () => ({ reports: [], unread: 0 }),
 }));
 
@@ -28,9 +28,9 @@ function entry(
 ): QuestionLogEntry {
   return {
     turn,
-    cardRef: questionId.slice(0, 4),
+    cardRef: "c001",
     questionId,
-    categoryIndex: Number(questionId.slice(6, 8)) - 1,
+    categoryIndex: turn % 12,
     en: `Question ${turn}?`,
     de: `Frage ${turn}?`,
     answerEn: correct === null ? "" : `Answer ${turn}`,
@@ -50,11 +50,11 @@ function entry(
 }
 
 const LOG: QuestionLogEntry[] = [
-  entry(1, "c001-s04-q0", true, 0),
-  entry(2, "c002-s07-q1", false, 1),
+  entry(1, "f00016", true, 0),
+  entry(2, "f00092", false, 1),
   entry(3, "f001-s02-q0", false, 2), // fixture id — never a review, never practised
-  entry(4, "c003-s01-q0", null, 0), // redrawn — never judged
-  entry(5, "c002-s07-q1", false, 1), // the same miss twice practises once
+  entry(4, "f00121", null, 0), // redrawn — never judged
+  entry(5, "f00092", false, 1), // the same miss twice practises once
 ];
 
 const BUILDINGS: QuiztopiaPlayerView["buildings"] = [
@@ -175,7 +175,7 @@ describe("QuiztopiaGameOver", () => {
   it("practises only the real misses, each once", () => {
     renderScreen();
     fireEvent.click(screen.getByRole("button", { name: "Practice 1 miss" }));
-    expect(navigate).toHaveBeenCalledWith("/play/quiztopia/solo/study?ids=c002-s07-q1");
+    expect(navigate).toHaveBeenCalledWith("/trainer/quiz/study?ids=f00092");
   });
 
   it("names the outcome and the table", () => {

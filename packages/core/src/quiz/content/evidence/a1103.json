@@ -1,0 +1,242 @@
+{
+ "article": "a1103",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Preiselbeere",
+   "title": "Preiselbeere – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:56.548Z",
+   "snapshot": "0909e525d2d8e68f67d288ba5707eeea0d66115cf23779cd9cf3426b474236e9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cherry",
+   "title": "Cherry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:59.176Z",
+   "snapshot": "84a2b4b7f1bffe83bf34790b3912685bdc4d8c363c18c2593f53e04b7da602ca"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nativity_of_John_the_Baptist",
+   "title": "Nativity of John the Baptist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:00.102Z",
+   "snapshot": "58d61865e259852af2fefc598c405693af0762cf009b4ae74b170bdf567e17dc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Orange_(Frucht)",
+   "title": "Orange (Frucht) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:57.562Z",
+   "snapshot": "68cded24e10ad8547b6ca51b810446fc58b7d88b2a44c9f9127f68b4d52457ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Giresun",
+   "title": "Giresun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:01.119Z",
+   "snapshot": "47218854a66fc529db4cd798063d92bc3523834eebc7cff685fbe0e54a434888"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Preiselbeere",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cherry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "John the Baptist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Apfelsine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giresun",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:33.330Z",
+   "target": "f05511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Preiselbeere (Vaccinium vitis-idaea) ist eine Pflanzenart aus der Gattung der Heidelbeeren (Vaccinium).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Preiselbeere” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:33.330Z",
+   "target": "f05514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cherry” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:33.330Z",
+   "target": "f23080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Nativity of John the Baptist (or Birth of John the Baptist, or Nativity of the Forerunner, or colloquially Johnmas or St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John the Baptist” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:33.330Z",
+   "target": "f23081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Orange (Aussprache: [oˈʁaŋʒə] oder [oˈʁɑ̃ːʒə]), nördlich der Speyerer Linie auch die Apfelsine (von niederdeutsch appelsina, wörtlich „Apfel aus China/Sina“) genannt, ist ein immergrüner Baum, im Speziellen wird auch dessen Frucht so genannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apfelsine” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:33.330Z",
+   "target": "f23082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giresun (pronounced [giˈɾesun]) is a city in the Black Sea Region of northeastern Turkey, about 175 km (109 mi) west of the city of Trabzon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:33.330Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giresun” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a2357",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Festina_lente",
+   "title": "Festina lente – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:57.258Z",
+   "snapshot": "b75c5c0ee5ebf884ada3978a744bd4236f46b0d6ac06a4b417c9626ca3a13e59"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pazzi_conspiracy",
+   "title": "Pazzi conspiracy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:58.325Z",
+   "snapshot": "f949dab7836ffffac11ac5d44c86e0499d8dcde2acd999d5b0df88056ee9cc94"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lorenzo_de%27_Medici",
+   "title": "Lorenzo de' Medici – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:59.351Z",
+   "snapshot": "918be20ec064326e3fe5dac56e46eb577a856e655f4e56dc233bd8cdda2125db"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pope_Leo_X",
+   "title": "Pope Leo X – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:00.301Z",
+   "snapshot": "b403725a2ba2b82f29276cddc6aa368607d1789590982c6609f4fea640264c05"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Uffizi",
+   "title": "Uffizi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:36.565Z",
+   "snapshot": "a285179853948207aba946b1cbfd7047f7a5e0439cdd3de83558f3a81dfb85ea"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Renaissance",
+   "title": "Renaissance",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:24.166Z",
+   "snapshot": "32b748298911d117e9a0889c64c24110b07ee8267304d8e2cb49a9b071789805"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tortoise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pazzi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Magnificent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Leo X",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giorgio Vasari",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Italy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-140"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:04.302Z",
+   "target": "f12284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cosimo I de' Medici, Grand Duke of Tuscany took festina lente as his motto and symbolised it with a sail-backed tortoise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tortoise” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:04.302Z",
+   "target": "f12285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Pazzi conspiracy (Italian: Congiura dei Pazzi) was a failed plot by members of the Pazzi family and others to displace the Medici family as rulers of Renaissance Florence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pazzi” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:04.302Z",
+   "target": "f12286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lorenzo di Piero de' Medici (Italian: [loˈrɛntso de ˈmɛːditʃi]), known as Lorenzo the Magnificent (Italian: Lorenzo il Magnifico; 1 January 1449 – 8 April 1492), was an Italian statesman, de facto ruler of the Florentine Republic, and the most powerful patron of Renaissance culture in Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Magnificent” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:04.302Z",
+   "target": "f12287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pope Leo X (Italian: Leone X; born Giovanni di Lorenzo de' Medici, 11 December 1475 – 1 December 1521) was head of the Catholic Church and leader of the Papal States from 9 March 1513 to his death in December 1521.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leo X” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:04.302Z",
+   "target": "f12288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The building of the Uffizi complex was begun by Giorgio Vasari in 1560 for Cosimo I de' Medici as a means to consolidate his administrative control of the various committees, agencies, and guilds established in Florence's Republican past so as to accommodate them all in one place, hence the name",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giorgio Vasari” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:04.302Z",
+   "target": "f25638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Associated with great change in art, architecture, politics, literature, exploration and technology, the Renaissance was first centered in the Republic of Florence, then spread to the rest of Italy and later throughout Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.302Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Italy” is on the snapshot of s6"
+  }
+ ]
+}

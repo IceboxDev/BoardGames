@@ -1,0 +1,234 @@
+{
+ "article": "a2568",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Postleitzahl_(Deutschland)",
+   "title": "Postleitzahl (Deutschland)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:36.568Z",
+   "snapshot": "5e3593e96a3593fe520a527fd7a3d4972ada874cd4f2e8a3e8cbfca0b8501dbb"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Reform_der_deutschen_Rechtschreibung_von_1996",
+   "title": "Reform der deutschen Rechtschreibung von 1996 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:19:49.426Z",
+   "snapshot": "154312da891ca5c48b3321f082c7ed0adb5b0c6e7c7c00fcf26fc06a18e8a8b1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/J%C3%BCrgen_Trittin",
+   "title": "Jürgen Trittin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:36.672Z",
+   "snapshot": "f7ac1bd7ab3605b8b10e00737b0c88d10bc93a840efe3c73902477112a974ed1"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Fahreignungsregister",
+   "title": "Fahreignungsregister – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:37.552Z",
+   "snapshot": "7cef8038b3fed0f5db5cf908cc0cdf895994bfa422993b9b9ef9c6bf03d870d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Postleitzahlen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-269"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rolf",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13756",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jürgen Trittin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13757",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flensburg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:39.660Z",
+   "target": "f13753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neben den Postleitzahlen für geografische Zustellgebiete gibt es eigene Postleitzahlen für Großempfänger und Postfächer.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Postleitzahlen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:39.660Z",
+   "target": "f13754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es wurde die einer Hand ähnliche Comicfigur Rolf (Synchronsprecher: Rolf Zacher) mit dem Spruch „Fünf ist Trümpf“, von Ully Arndt, erfunden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rolf” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:39.660Z",
+   "target": "f13755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "August 2004 Vertreter Österreichs, der Schweiz und Deutschlands im Rahmen eines Treffens auf Beamtenebene in Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wien” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:39.660Z",
+   "target": "f13756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jürgen Trittin wurde als Sohn des Prokuristen Klaus Trittin (1923–1998) und dessen Frau Helene Anna, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jürgen Trittin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:39.660Z",
+   "target": "f13757",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "April 2014 Verkehrszentralregister (VZR), ist ein deutsches Register beim Kraftfahrt-Bundesamt in Flensburg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flensburg” is on the snapshot of s4"
+  }
+ ]
+}

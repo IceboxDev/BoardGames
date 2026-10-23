@@ -1,0 +1,555 @@
+{
+ "article": "a0662",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Tin_Drum",
+   "title": "The Tin Drum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:30.093Z",
+   "snapshot": "7a4aec7b6c2d13178fd7e0d6622f6d3358cd3cb76fe5c090ac2a86bf6663a48c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mario_Adorf",
+   "title": "Mario Adorf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:38.466Z",
+   "snapshot": "9889e7b67767c6f158e8ce092c6935041342d386c3100286cd2b40335f3601ce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Angela_Winkler",
+   "title": "Angela Winkler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:42.090Z",
+   "snapshot": "951d9f0a83674b25e20daef3e4e32e2bb47f047ef028ba21517e220b0844ad94"
+  },
+  "s4": {
+   "url": "https://www.nobelprize.org/prizes/literature/1999/grass/facts/",
+   "title": "Günter Grass – Facts – NobelPrize.org",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:39.855Z",
+   "snapshot": "68f02314cbe8426a4dc0830cf1c72b7eca9c6b3ec7629e7a8ae101a7dc090579"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Blechtrommel_(Film)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:40.109Z",
+   "snapshot": "a9c21cd052d84159baa6d62664eaf90293a28ce1b0e741caa16494a9d3dbda90"
+  },
+  "s6": {
+   "url": "https://www.getabstract.com/de/zusammenfassung/die-blechtrommel/3947",
+   "title": "Die Blechtrommel – Zusammenfassung (getAbstract)",
+   "publisher": "getAbstract",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:07.009Z",
+   "snapshot": "6de91bdcb2d7e3367002e43a94301ba129d34b11f604240c92666fc8ffed7c60"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Die_Blechtrommel",
+   "title": "Die Blechtrommel – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:07.855Z",
+   "snapshot": "e1c86aeb4863254964949691b8a99b782022d2abc09cd2b2bd264d1d7fe45f6f"
+  },
+  "s8": {
+   "url": "https://www.ebsco.com/research-starters/literature-and-writing/tin-drum-analysis-major-characters",
+   "title": "Tin Drum: Analysis of Major Characters – EBSCO Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:07.424Z",
+   "snapshot": "9003bf82accd298d308a8f1a31bba59675db784df99acf5b592e14046a42c9fe"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a tin drum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kolonialwarenhändler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Agnes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1999",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:22.899Z",
+   "target": "f03306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "To \"beat a tin drum\" means to create a disturbance in order to bring attention to a cause.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “a tin drum” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:22.899Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kolonialwarenhändler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Kolonialwarenhändler”, “grocer”, “бакалейщик”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:22.899Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Agnes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Agnes”, “Агнес”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:22.899Z",
+   "target": "f03310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nobel Prize in Literature 1999",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:22.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1999” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:07Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "he decides never to grow up when he hears his father declare that he would become a grocer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:46:13Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alfred und Agnes übernehmen einen Kolonialwarenladen, der allerdings nicht besonders gut läuft.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:46:17Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zusammen eröffnen sie einen kleinen Lebensmittelladen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:46:20Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Erzählung beginnt mit der Zeugung von Oskars Mutter Agnes an einem verregneten Tag im Oktober 1899.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:46:24Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Agnes Matzerath, Oscar's mother, who carries on a love affair with her cousin throughout the first part of the novel.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:46:30Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Joseph nutzt diese Situation aus und zeugt Oskars Mutter Agnes, während Anna die Polizisten abwimmelt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "he decides never to grow up when he hears his father declare that he would become a grocer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alfred und Agnes übernehmen einen Kolonialwarenladen, der allerdings nicht besonders gut läuft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zusammen eröffnen sie einen kleinen Lebensmittelladen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Erzählung beginnt mit der Zeugung von Oskars Mutter Agnes an einem verregneten Tag im Oktober 1899.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Agnes Matzerath, Oscar's mother, who carries on a love affair with her cousin throughout the first part of the novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Joseph nutzt diese Situation aus und zeugt Oskars Mutter Agnes, während Anna die Polizisten abwimmelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Born in 1924 in the Free City of Danzig (now Gdańsk, Poland), with an adult's capacity for thought and perception, he decides never to grow up when he hears his father declare that he would become a grocer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “grocer” is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Er gibt den Plan auf, Politiker oder Kolonialwarenhändler zu werden und weigert sich zu wachsen - mit Erfolg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kolonialwarenhändler” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Joseph nutzt diese Situation aus und zeugt Oskars Mutter Agnes, während Anna die Polizisten abwimmelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Agnes” is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Erzählung beginnt mit der Zeugung von Oskars Mutter Agnes an einem verregneten Tag im Oktober 1899.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Agnes” is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:51.605Z",
+   "target": "f03309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "His mother, Agnes, illustrates the struggles faced by women during this tumultuous time, engaging in a forbidden love affair that highlights the complexities of familial relationships.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:51.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Agnes” is on the snapshot of s8"
+  }
+ ]
+}

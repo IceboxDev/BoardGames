@@ -1,0 +1,242 @@
+{
+ "article": "a0738",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/NATO_Double-Track_Decision",
+   "title": "NATO Double-Track Decision – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:52.229Z",
+   "snapshot": "6640db4e9ab8705e343972d49cd212fce082f823f553c80297bee8e4944cf652"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Intermediate-Range_Nuclear_Forces_Treaty",
+   "title": "Intermediate-Range Nuclear Forces Treaty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:53.443Z",
+   "snapshot": "bb43cd2269cb938de14a82fb53d0892691fa8e58e43443e66d117ec3f3e4c5a9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons",
+   "title": "Treaty on the Non-Proliferation of Nuclear Weapons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:54.483Z",
+   "snapshot": "a60b9d8d9dc886c90ad0b4696b973f55bac794c1130ceadface15a8524a7a4b7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Helsinki_Accords",
+   "title": "Helsinki Accords – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:55.227Z",
+   "snapshot": "98426405f89f8a5fc52bf1ad217705c64812eb964fee9761efd32c1bfde8ea01"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_on_the_Final_Settlement_with_Respect_to_Germany",
+   "title": "Treaty on the Final Settlement with Respect to Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:56.326Z",
+   "snapshot": "b0c8efe2298d04476621eff1a4521131dd29ec984995f4918ae226d5493285ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "NATO Double-Track Decision",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c062"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "INF Treaty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nuclear Non-Proliferation Treaty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helsinki Final Act",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Two Plus Four Treaty",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:36.906Z",
+   "target": "f03686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The NATO Double-Track Decision was a decision by NATO made on December 12, 1979, to resolve the Euromissile Crisis involving the deployment of advanced Soviet and American missiles in Europe through the late 1970s to the early 1980s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NATO Double-Track Decision” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:36.906Z",
+   "target": "f03687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Intermediate-Range Nuclear Forces Treaty (INF Treaty) was an arms control treaty between the United States and the Soviet Union (and its successor state, the Russian Federation).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “INF Treaty” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:36.906Z",
+   "target": "f03688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Despite its status outside the Nuclear Non-Proliferation Treaty, nuclear cooperation with India was permitted on the basis of its clean non-proliferation record, and India's need for energy fueled by its rapid industrialization and a billion-plus population.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nuclear Non-Proliferation Treaty” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:36.906Z",
+   "target": "f03689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Helsinki Final Act, also known as Helsinki Accords or Helsinki Declaration, was the document signed at the closing meeting of the third phase of the Conference on Security and Co-operation in Europe (CSCE) held in Helsinki, Finland, between 30 July and 1 August 1975, following two years of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helsinki Final Act” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:36.906Z",
+   "target": "f03690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "more commonly referred to as the Two Plus Four Agreement (Zwei-plus-Vier-Vertrag),",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:36.906Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zwei-plus-Vier-Vertrag” is on the snapshot of s5"
+  }
+ ]
+}

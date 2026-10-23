@@ -1,0 +1,264 @@
+{
+ "article": "a2526",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ivan_Vu%C4%8Deti%C4%87",
+   "title": "Ivan Vučetić",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:31.192Z",
+   "snapshot": "7526f47b068863194ee6043e313ac703fbf3006ad80f745b04efa0458be260bb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Juan_Vucetich",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:33.674Z",
+   "snapshot": "f76d44732a5318e497a571eb21f541c21417a9b48a2c5696438f5b29160b83ad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fingerprint",
+   "title": "Fingerprint",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:26.915Z",
+   "snapshot": "b11e9da38401c515e1edc6dc0f9ebd1a316989d178b3c572b8469ed6d4b3ce20"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fingerabdruck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-126"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fingerprint",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 5"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juan Vucetich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Francis Galton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13464",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Henry Faulds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dactyloscopy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:34.162Z",
+   "target": "f13461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hierbei fiel ihm auf, dass kein Fingerabdruck dem anderen gleicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fingerabdruck” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:34.162Z",
+   "target": "f13461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juan Vucetich Kovacevich (born Ivan Vučetić; 20 July 1858 – 25 January 1925) was an Argentine-Croatian anthropologist and police official who pioneered the use of dactyloscopy (fingerprint identification).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fingerprint” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:34.162Z",
+   "target": "f13462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juan Vucetich Kovacevich (born Ivan Vučetić; 20 July 1858 – 25 January 1925) was an Argentine-Croatian anthropologist and police official who pioneered the use of dactyloscopy (fingerprint identification).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juan Vucetich” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:34.162Z",
+   "target": "f13463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Francis Galton published a detailed statistical model of fingerprint analysis and identification in his 1892 book Finger Prints.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francis Galton” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:34.162Z",
+   "target": "f13464",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1880, Henry Faulds, a Scottish surgeon in a Tokyo hospital, published his first paper on the usefulness of fingerprints for identification and proposed a method to record them with printing ink.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Faulds” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:34.162Z",
+   "target": "f13465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fingerprint identification, known as dactyloscopy, ridgeology, or hand print identification, is the process of comparing two instances of friction ridge skin impressions (see minutiae), from human fingers or toes, or even the palm of the hand or sole of the foot, to determine whether these",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dactyloscopy” is on the snapshot of s3"
+  }
+ ]
+}

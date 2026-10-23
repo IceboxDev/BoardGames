@@ -1,0 +1,242 @@
+{
+ "article": "a1423",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Frankfurter_Nationalversammlung",
+   "title": "Frankfurter Nationalversammlung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:19.824Z",
+   "snapshot": "54a92de69f8b5aa2e8e19f9925817ee26f9421ef421a5f513e3c09566650228c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Koalitionsvertrag",
+   "title": "Koalitionsvertrag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:20.552Z",
+   "snapshot": "3f0eb033ed186e75a361bdc5cb5a77150e9f1e2ff676fd46f4a27ea3268876f5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Loyal_opposition",
+   "title": "Loyal opposition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:23.360Z",
+   "snapshot": "d9bff01c84c38940d6f4f3108ac11563b940618cf6ccc2910a9b4e2032cb1131"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Whip_(politics)",
+   "title": "Whip (politics) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:24.420Z",
+   "snapshot": "87293e143965b28920fa13093bc8e701978b1ef7c7d495680d82840085bc95a8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Constructive_vote_of_no_confidence",
+   "title": "Constructive vote of no confidence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:55.668Z",
+   "snapshot": "980c9fe5b92674491102fff592b286453c40129bc931a28f441a698af2023587"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fraktion",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Koalitionsvertrag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Opposition",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Whip",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Constructive vote of no confidence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:23.325Z",
+   "target": "f07111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Etwa ein Drittel der Abgeordneten gehörte keiner Fraktion an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fraktion” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:23.325Z",
+   "target": "f07112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ein Koalitionsvertrag (auch Koalitionsvereinbarung) wird zwischen zwei oder mehreren Parteien geschlossen, um die mittel- bis langfristige Zusammenarbeit einer gemeinsamen Koalitionsregierung während der anstehenden Legislaturperiode zu regeln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Koalitionsvertrag” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:23.325Z",
+   "target": "f07113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In parliamentary systems of government, the loyal opposition is the opposition parties in the legislature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Opposition” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:23.325Z",
+   "target": "f07114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A whip is an official of a political party whose task is to ensure party discipline (that members of the party vote according to the party platform rather than their constituents, individual conscience or donors) in a legislature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Whip” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:23.325Z",
+   "target": "f07115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The constructive vote of no confidence (German: konstruktives Misstrauensvotum, Spanish: moción de censura constructiva) is a variation on the motion of no confidence that allows a parliament to withdraw confidence from a head of government only if there is a positive majority for a prospective",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Constructive vote of no confidence” is on the snapshot of s5"
+  }
+ ]
+}

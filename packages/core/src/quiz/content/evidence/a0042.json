@@ -1,0 +1,195 @@
+{
+ "article": "a0042",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great",
+   "title": "Peter the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:02.548Z",
+   "snapshot": "ff9fa0ada8d8f2eb868a264b65ebff9651f43d8e4c36c0ff4cdf45688f9a9be4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+   "title": "Catherine the Great – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:03.644Z",
+   "snapshot": "a52995ec9d2a5a88b733b0ea5c050bc9b0df5cac2e5390e6be0a522fa8c3666b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Emancipation_reform_of_1861",
+   "title": "Emancipation reform of 1861 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:04.555Z",
+   "snapshot": "7b83e56482978846947cd187f5f4079e15412563ed3734527377b698810d9c71"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nicholas_II",
+   "title": "Nicholas II – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:05.836Z",
+   "snapshot": "24340d8280c23a167216b3dc18940953b0c97bc871852d3409b84d2e56a69f59"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Peter the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Catherine the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alexander II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nicholas II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:40.994Z",
+   "target": "f00206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "By hard daily work (according to the figurative expression of Peter the Great himself, he was simultaneously \"forced to hold a sword and a quill in one right hand\") and courageous behavior he demonstrated to his subjects his personal positive example, showed how to act, fully devoting himself to the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter the Great” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:40.994Z",
+   "target": "f00208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Catherine II (born Sophie Auguste Friederike von Anhalt-Zerbst; 2 May 1729 – 17 November 1796), known as Catherine the Great, was Empress of Russia from 9 July 1762 until her death in 1796.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Catherine the Great” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.994Z",
+   "target": "f00209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1861 in Russia, also known as the Edict of Emancipation of Russia, (Russian: Крестьянская реформа 1861 года, romanized: Krestyanskaya reforma 1861 goda – \"peasants' reform of 1861\") was the first and most important of the liberal reforms enacted during the reign of Emperor Alexander II of Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander II” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.994Z",
+   "target": "f00210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alexander died ten days later, aged 49, and Nicholas was consecrated that evening as Tsar Nicholas II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicholas II” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,440 @@
+{
+ "article": "a1028",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Immanuel_Kant",
+   "title": "Immanuel Kant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:26.283Z",
+   "snapshot": "ff46395601755a2d7f25710d13a2c17b158356985754fb4e5e515f15089ddcb1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard",
+   "title": "Søren Kierkegaard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:25.407Z",
+   "snapshot": "2df71edc439466b76399c9798c83822179fc2f8657d77603e4d8beee9bd5f71e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Arthur_Schopenhauer",
+   "title": "Arthur Schopenhauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:21.623Z",
+   "snapshot": "e2a23966aa94879d745e378ef81553a217ef7ff29ed4b6d3b3e9dc328f62a79a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel",
+   "title": "Georg Wilhelm Friedrich Hegel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:21.888Z",
+   "snapshot": "2b215530572419788346608e85f3d7f1ad4384d596023378f902136dd18b598f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Baruch_Spinoza",
+   "title": "Baruch Spinoza – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:20.285Z",
+   "snapshot": "f7575ca935cd7d337ded34d0ab739e76dba66e73dd8d0ed9582f6aae3a33a24b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Grach_(Weingutsbesitzer)",
+   "title": "Grach (Weingutsbesitzer)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:18.322Z",
+   "snapshot": "b84cb40101e53d0642b4c11fd179aa75e8a64bfe9ef61ad5537b4f84f610e420"
+  },
+  "s7": {
+   "url": "https://plato.stanford.edu/entries/spinoza/",
+   "title": "Baruch Spinoza (Stanford Encyclopedia of Philosophy)",
+   "publisher": "Stanford Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:18.540Z",
+   "snapshot": "7619da1baf2f239afd745f7d80fa91d68f31742fff6831c441167835fe5311f4"
+  },
+  "s8": {
+   "url": "https://iep.utm.edu/spinoza/",
+   "title": "Spinoza, Benedict De | Internet Encyclopedia of Philosophy",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:18.845Z",
+   "snapshot": "1a650f6e3b2f275141b9388db9c702f73a683f66d164498f8a1e3778291c620a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05136",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Immanuel Kant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05137",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Søren Kierkegaard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05138",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Schopenhauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05139",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georg Wilhelm Friedrich Hegel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Baruch de Spinoza",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14460",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Karl Marx",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-169"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:22.411Z",
+   "target": "f05136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Immanuel Kant (born Emanuel Kant; 22 April 1724 – 12 February 1804) was a German philosopher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Immanuel Kant” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:22.411Z",
+   "target": "f05137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Repetition is about a Young Man (Søren Kierkegaard) who has anxiety and depression because he feels he has to sacrifice his love for a girl (Regine Olsen) to God.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Søren Kierkegaard” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:22.411Z",
+   "target": "f05138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Arthur Schopenhauer (22 February 1788 – 21 September 1860), also known as the “Philosopher of Pessimism”, was a German philosopher and writer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arthur Schopenhauer” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:22.411Z",
+   "target": "f05139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georg Wilhelm Friedrich Hegel (27 August 1770 – 14 November 1831) was a German philosopher and a major figure in the tradition of German idealism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Wilhelm Friedrich Hegel” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:22.411Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Baruch de Spinoza",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Baruch de Spinoza”, “Барух Спиноза”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:22.411Z",
+   "target": "f14460",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1818 stellte Grach als stellvertretender Bürgermeister die Geburtsurkunde für Karl Marx aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:22.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl Marx” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:06:32Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "And then, on July 27, 1656, Spinoza was issued the harshest writ of herem, ban or excommunication, ever pronounced by the Sephardic community of Amsterdam",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:06:34Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it was most likely at this time that he took up lens grinding as an occupation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:06:37Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "permanent expulsion from his Jewish community in 1656. Following that expulsion, he distanced himself from all religious affiliations and devoted himself to philosophical inquiry, supporting himself by lens grinding.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:55.964Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "And then, on July 27, 1656, Spinoza was issued the harshest writ of herem, ban or excommunication, ever pronounced by the Sephardic community of Amsterdam",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:55.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:55.964Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it was most likely at this time that he took up lens grinding as an occupation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:55.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:55.964Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "permanent expulsion from his Jewish community in 1656. Following that expulsion, he distanced himself from all religious affiliations and devoted himself to philosophical inquiry, supporting himself by lens grinding.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:55.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:55.964Z",
+   "target": "f05140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Baruch de Spinoza.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:55.964Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baruch de Spinoza” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,327 @@
+{
+ "article": "a1883",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Mufflon",
+   "title": "Europäischer Mufflon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:54.050Z",
+   "snapshot": "04ddbbdf3361e012e27c8b2179e64a4d67cbaee5aedee3f67878de631e816cc2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gran_Paradiso_National_Park",
+   "title": "Gran Paradiso National Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:57.533Z",
+   "snapshot": "b90bfcce1fc9684a9ffda0c1ff2e149bf772fd46778c9cd783e83c5964976f88"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/G%C3%A4mse",
+   "title": "Gämse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:54.725Z",
+   "snapshot": "4a71772da9f62fea73dfeafd2a2222a8cf0e664bee817dda08b85200eefef2fc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bighorn_sheep",
+   "title": "Bighorn sheep – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:58.577Z",
+   "snapshot": "598b5321dcfa57ca4d0cd255310b83dfbfe3e9acd7968c3a22d2a0a5451be031"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Argali",
+   "title": "Argali – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:59.467Z",
+   "snapshot": "af69c70195d4835557de9eb524e4d57be33e65429515afda6053eb4f7815b8df"
+  },
+  "s6": {
+   "url": "https://animaldiversity.org/accounts/Ovis_ammon/",
+   "title": "Ovis ammon (argali) – Animal Diversity Web",
+   "publisher": "Animal Diversity Web (University of Michigan Museum of Zoology)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:07.738Z",
+   "snapshot": "4b225b78f9004ce30713be940335872667a5fd50313056d1502ad1ff9620227f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mufflon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alpine ibex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gämse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bighorn sheep",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "argali",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:39.079Z",
+   "target": "f09411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Europäische Mufflon (Ovis gmelini musimon, Syn.: Ovis orientalis musimon, Ovis aries musimon), jägersprachlich Muffelwild oder kurz Muffel genannt, ist die westlichste und kleinste Unterart des Mufflons.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.079Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mufflon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:39.079Z",
+   "target": "f09412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The land the park encompasses was initially protected in order to protect the Alpine ibex from poachers, as it was a personal hunting ground for King Victor Emmanuel II, but now also protects other species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.079Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alpine ibex” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:39.079Z",
+   "target": "f09413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die (Alpen-)Gämse (Rupicapra rupicapra), vor der Rechtschreibreform Gemse geschrieben und in der Jägersprache mit Gams oder Gamswild bezeichnet, ist eine in Europa und Kleinasien beheimatete Art der Ziegenartigen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.079Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gämse” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:39.079Z",
+   "target": "f09414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The bighorn sheep (Ovis canadensis) or bighorn is a species of sheep native to North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.079Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bighorn sheep” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:39.079Z",
+   "target": "f09415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The argali (Ovis ammon), also known as the mountain sheep, is the largest species of wild sheep.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:39.079Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “argali” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:08:05Z",
+   "target": "f09415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is the largest of the world’s sheep, weighing in between 60 and 185 kg.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:08:07Z",
+   "target": "f09415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The argali (Ovis ammon), also known as the mountain sheep, is the largest species of wild sheep.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:28.682Z",
+   "target": "f09415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is the largest of the world’s sheep, weighing in between 60 and 185 kg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:28.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:28.682Z",
+   "target": "f09415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ovis ammon (argali) | INFORMATION | Animal Diversity Web",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:28.682Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “argali” is on the snapshot of s6"
+  }
+ ]
+}

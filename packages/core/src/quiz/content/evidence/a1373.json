@@ -1,0 +1,195 @@
+{
+ "article": "a1373",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Keltis",
+   "title": "Keltis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:35.425Z",
+   "snapshot": "0af8b1d792432fa5c77f936fff94e110d739e0c53eb5b6a768f6dd1e003e505c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Einfach_Genial_(Legespiel)",
+   "title": "Einfach Genial (Legespiel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:36.444Z",
+   "snapshot": "8a69598907984fcc0aab4d2167f72839192e355114e6df77b371d25f70b43552"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tigris_and_Euphrates",
+   "title": "Tigris and Euphrates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:39.317Z",
+   "snapshot": "ac78f14cc7776a5ac616545daa7ebfce6facc239f1b5bd7f83f2e640fa2462e0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Catan",
+   "title": "Catan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:01.408Z",
+   "snapshot": "9a26392b2d36ed52d5115cf07c97eda50bef3908e188b2d9ed66638f32339e68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Keltis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Einfach Genial",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tigris & Euphrates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Settlers of Catan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:15.565Z",
+   "target": "f06861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Keltis (Untertitel „Der Weg der Steine“) ist ein Brettspiel von Reiner Knizia aus dem Kosmos-Verlag (redaktionelle Bearbeitung: TM-Spiele).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Keltis” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:15.565Z",
+   "target": "f06862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Einfach Genial ist ein abstraktes Legespiel von Reiner Knizia.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Einfach Genial” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:15.565Z",
+   "target": "f06863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Lehmann comments: \"If you are looking for a tactically rich, intense strategy game with lots of conflict (unusual in a German game), try Tigris & Euphrates and see why so many players consider this game Reiner Knizia's masterpiece.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tigris & Euphrates” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:15.565Z",
+   "target": "f06864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Catan (), previously known as The Settlers of Catan or simply Settlers, is a multiplayer board game designed by Klaus Teuber.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Settlers of Catan” is on the snapshot of s4"
+  }
+ ]
+}

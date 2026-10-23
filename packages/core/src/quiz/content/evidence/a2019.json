@@ -1,0 +1,289 @@
+{
+ "article": "a2019",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mumtaz_Mahal",
+   "title": "Mumtaz Mahal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:22.371Z",
+   "snapshot": "c4504307c379440aaf70c284bc17448710a3d573c0c30a7c14a4a6e50394960d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tadsch_Mahal",
+   "title": "Tadsch Mahal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:19.499Z",
+   "snapshot": "1999b32a81baed20d780f26a9f3065fd6a14c99459f771b3ed72f598758ad59e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Taj_Mahal",
+   "title": "Taj Mahal",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:30:30.523Z",
+   "snapshot": "1999b32a81baed20d780f26a9f3065fd6a14c99459f771b3ed72f598758ad59e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Humayun%27s_tomb",
+   "title": "Humayun's tomb – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:23.378Z",
+   "snapshot": "16f1fb11a75bcba3fbe4a0895024e2f3c1919df91e098644aa314c25d9b7189c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gur-e-Amir",
+   "title": "Gur-e-Amir – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:24.310Z",
+   "snapshot": "dbbfe93724a5aa4d592dfa627df4e3c7c73a0e4a23c770eda03eb6b316d5549d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Taj_Mahal",
+   "title": "Taj Mahal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:33.169Z",
+   "snapshot": "55ebe389f9a11eb44cfa7ddf3e136ee56f132901271e998fe0dcb19e779ea917"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Taj Mahal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tadsch Mahal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25007",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tadsch Mahal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-158"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humayun's Tomb",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gur-e-Amir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f20120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Yamuna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:07.354Z",
+   "target": "f10091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Taj Mahal in Agra, often cited as one of the Wonders of the World, was commissioned by her husband to act as her tomb.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Taj Mahal” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:07.354Z",
+   "target": "f25007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Taj Mahal,  auch Tadsch Mahal (persisch: تاج محل, DMG tāǧ maḥall) ist ein im Jahre 1648 fertiggestelltes Mausoleum (Grabgebäude) am Südufer des Flusses Yamuna am Stadtrand von Agra im indischen Bundesstaat Uttar Pradesh.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tadsch Mahal” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:07.354Z",
+   "target": "f25007",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Taj Mahal,  auch Tadsch Mahal (persisch: تاج محل, DMG tāǧ maḥall) ist ein im Jahre 1648 fertiggestelltes Mausoleum (Grabgebäude) am Südufer des Flusses Yamuna am Stadtrand von Agra im indischen Bundesstaat Uttar Pradesh.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tadsch Mahal” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:07.354Z",
+   "target": "f10092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humayun's tomb (Persian: Maqbara-i Humayun) is the tomb of the Mughal Emperor Humayun located in Delhi, India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Humayun's Tomb” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:07.354Z",
+   "target": "f10093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Gur-e-Amir, also transcribed Gūr-i Amīr or Guri Amir (Uzbek: Amir Temur maqbarasi, Goʻri Amir, Persian: گورِ امیر) is a mausoleum of the Turco-Mongol conqueror Timur (also known as Tamerlane) in Samarkand, Uzbekistan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gur-e-Amir” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:07.354Z",
+   "target": "f20120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "'Crown of the Palace') is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, Uttar Pradesh, India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.354Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yamuna” is on the snapshot of s6"
+  }
+ ]
+}

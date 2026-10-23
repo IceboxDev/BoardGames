@@ -1,0 +1,195 @@
+{
+ "article": "a1652",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bois_Ca%C3%AFman",
+   "title": "Bois Caïman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:31:18.286Z",
+   "snapshot": "f333fd23828cbb1cd00f5aa901a985ac7f80aad93a5eb6ebe418c4d088dcd48c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Santer%C3%ADa",
+   "title": "Santería – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:53.832Z",
+   "snapshot": "01701291e4d5be444d5515ffbd171c9c4cc6ac09c4eb638067fbc2502904640c"
+  },
+  "s3": {
+   "url": "https://pt.wikipedia.org/wiki/Casa_Branca_do_Engenho_Velho",
+   "title": "Casa Branca do Engenho Velho – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "pt",
+   "retrievedAt": "2026-10-23T05:13:50.639Z",
+   "snapshot": "763a3be64059406d07fc8e37e38c0a5a993aa5d4ef4680706a52e98e98ecc707"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Umbanda",
+   "title": "Umbanda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:54.492Z",
+   "snapshot": "e97cbfce9d2034f6985efbdaf3ae383dcc69c586f9db012efafe8df298e33e74"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08256",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Voodoo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c138"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08257",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Santería",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08258",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Candomblé",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08259",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Umbanda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:58.885Z",
+   "target": "f08256",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This meeting took the form of a Voodoo ceremony in the Bois Caïman in the northern mountains of the island.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Voodoo” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:58.885Z",
+   "target": "f08257",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Santería (Spanish pronunciation: [san.te.ˈɾi.a]), also known as Regla de Ocha, Regla Lucumí, or Lucumí, is an African diaspora religion that developed in Cuba during the late 19th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santería” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:58.885Z",
+   "target": "f08258",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "O terreiro da Casa Branca do Engenho Velho (Ilê Axé Iyá Nassô Oká), representado pela Sociedade São Jorge do Engenho Velho, é um templo de candomblé do município de Salvador, no estado da Bahia.",
+     "quoteLang": "pt",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Candomblé” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:58.885Z",
+   "target": "f08259",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Umbanda (Portuguese pronunciation: [ũˈbɐ̃dɐ]) is a religion that emerged in Brazil during the 1920s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:58.885Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Umbanda” is on the snapshot of s4"
+  }
+ ]
+}

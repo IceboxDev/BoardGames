@@ -1,0 +1,130 @@
+{
+ "source": "publish-or-perish-mge",
+ "bucket": "music-stage/instruments",
+ "operations": [
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "ppm-021",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-051",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "ppm-106",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which note does the bass clef fix on the fourth line of the staff, the line between its two dots?",
+      "de": "Welchen Ton legt der Bassschlüssel auf der vierten Notenlinie fest, der Linie zwischen seinen beiden Punkten?",
+      "answerEn": "F",
+      "answerDe": "F",
+      "timeline": {
+       "kind": "era",
+       "start": "1001",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Key-letters F, C and G on the lines of chant notation develop into the modern clefs",
+       "labelDe": "Schlüsselbuchstaben F, C und G auf den Linien der Choralnotation entwickeln sich zu den heutigen Notenschlüsseln"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Clef",
+       "title": "Clef",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which clef, a C clef that places middle C on the third line of the staff, is the usual clef of the viola?",
+      "de": "Welcher Schlüssel, ein C-Schlüssel, der das eingestrichene C auf die dritte Notenlinie legt, ist der gewöhnliche Schlüssel der Bratsche?",
+      "answerEn": "Alto clef",
+      "answerDe": "Altschlüssel",
+      "timeline": {
+       "kind": "era",
+       "start": "1001",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "C clefs on the lines of chant notation, ancestors of the alto clef, come into use",
+       "labelDe": "C-Schlüssel auf den Linien der Choralnotation, Vorläufer des Altschlüssels, kommen in Gebrauch"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Clef",
+       "title": "Clef",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which church mode, the sixth mode of the major scale, is equivalent to today's natural minor scale?",
+      "de": "Welcher Kirchenton, der sechste Modus der Dur-Tonleiter, entspricht der heutigen natürlichen Moll-Tonleiter?",
+      "answerEn": "Aeolian",
+      "answerDe": "Äolisch",
+      "timeline": {
+       "kind": "creation",
+       "start": "1547",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Heinrich Glarean names the Aeolian mode in his Dodecachordon",
+       "labelDe": "Heinrich Glarean benennt in seinem Dodekachordon den äolischen Modus"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Aeolian_mode",
+       "title": "Aeolian mode",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Swiss humanist expanded the system of church modes from eight to twelve in his treatise Dodecachordon, printed in Basel in 1547?",
+      "de": "Welcher Schweizer Humanist erweiterte in seinem 1547 in Basel gedruckten Traktat Dodekachordon das System der Kirchentöne von acht auf zwölf?",
+      "answerEn": "Heinrich Glarean",
+      "answerDe": "Heinrich Glarean",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1488",
+       "end": "1563",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of Heinrich Glarean, Swiss music theorist and humanist",
+       "labelDe": "Leben von Heinrich Glarean, Schweizer Musiktheoretiker und Humanist"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Heinrich_Glarean",
+       "title": "Heinrich Glarean",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Scales, Modes and Clefs: The Grammar of Written Music",
+    "titleDe": "Tonleitern, Modi und Schlüssel: Die Grammatik der notierten Musik",
+    "bodyEn": "Before a musician plays a single note from a score, two decisions have already been made on the page: which notes the piece is built from, and where on the five lines each of them sits. The first is the business of scales and modes, the second of clefs – and both go back to the music of the medieval church.\n\nA scale is a ladder of notes inside an octave, defined not by where it starts but by the steps between its rungs. The major scale, the scale most people hear as happy and bright, climbs in the sequence whole, whole, half, whole, whole, whole, half: on the white keys of a piano from C to C, the two half steps fall between E and F and between B and C. A scale of whole steps only is something else again – the dreamy whole-tone scale of Debussy.\n\nLong before major and minor, medieval singers sorted melodies into eight church modes, each using the same white-note ladder but resting on a different final note. In 1547 the Swiss humanist Heinrich Glarean (1488–1563) printed his treatise Dodecachordon in Basel and argued that there were really twelve. He added four, in authentic and plagal forms, and gave them names borrowed from the peoples of ancient Greece. The mode he called Ionian, after the Ionian Greeks, runs from C to C and is identical to today's major scale. It is the mode of \"Happy Birthday to You\", whose tune, first published by the sisters Patty and Mildred Hill as \"Good Morning to All\" in 1893, uses only the notes of a major scale. Its partner, the Aeolian mode, runs from A to A with the steps whole, half, whole, whole, half, whole, whole: it is the sixth mode of the major scale and equivalent to the natural minor scale.\n\nClefs began as letters. Medieval scribes writing chant on lines of a staff marked one line with the name of its note – F, C or G – and those key-letters were stylised over centuries into the modern signs. The treble clef is a G clef: its curl spirals around the second line of the staff, fixing the note G there, which is why it is also called the G clef. The bass clef is an F clef that fixes F on the fourth line, the line that runs between its two dots. The C clef can move: placed on the third line it is the alto clef, which puts middle C in the centre of the staff and is the usual clef of the viola; on the fourth line it becomes the tenor clef, read by cellos, bassoons and trombones in their high registers.\n\n| Sign or scale | Pattern or line | Where it is used |\n|---|---|---|\n| Major scale (Ionian) | W–W–H–W–W–W–H | Most Western tunes |\n| Natural minor (Aeolian) | W–H–W–W–H–W–W | Minor-key music |\n| Treble clef (G clef) | G on line 2 | Violin, flute, right hand of the piano |\n| Bass clef (F clef) | F on line 4 | Cello, double bass, left hand of the piano |\n| Alto clef (C clef) | Middle C on line 3 | Viola |",
+    "bodyDe": "Bevor ein Musiker auch nur einen Ton aus einer Partitur spielt, sind auf dem Papier schon zwei Entscheidungen gefallen: aus welchen Tönen das Stück gebaut ist und wo auf den fünf Linien jeder von ihnen sitzt. Das Erste ist Sache der Tonleitern und Modi, das Zweite der Notenschlüssel – und beide gehen auf die Musik der mittelalterlichen Kirche zurück.\n\nEine Tonleiter ist eine Leiter von Tönen innerhalb einer Oktave, bestimmt nicht durch ihren Anfangston, sondern durch die Schritte zwischen ihren Sprossen. Die Dur-Tonleiter, die die meisten Menschen als fröhlich und hell empfinden, steigt in der Folge ganz, ganz, halb, ganz, ganz, ganz, halb: Auf den weißen Tasten eines Klaviers von C bis C liegen die beiden Halbtonschritte zwischen E und F und zwischen H und C. Eine Tonleiter nur aus Ganztonschritten ist wieder etwas anderes – die träumerische Ganztonleiter Debussys.\n\nLange vor Dur und Moll ordneten mittelalterliche Sänger Melodien in acht Kirchentöne, die alle dieselbe Leiter der weißen Tasten nutzten, aber auf verschiedenen Schlusstönen ruhten. 1547 ließ der Schweizer Humanist Heinrich Glarean (1488–1563) in Basel sein Traktat Dodekachordon drucken und vertrat darin, dass es eigentlich zwölf seien. Er fügte vier hinzu, in authentischer und plagaler Form, und gab ihnen Namen, die er den Völkern des alten Griechenland entlieh. Der Modus, den er nach den ionischen Griechen Ionisch nannte, reicht von C bis C und ist mit der heutigen Dur-Tonleiter identisch. Es ist der Modus von „Happy Birthday to You“, dessen Melodie die Schwestern Patty und Mildred Hill 1893 als „Good Morning to All“ veröffentlichten und die nur Töne einer Dur-Tonleiter verwendet. Sein Gegenstück, der Modus Äolisch, reicht von A bis A mit den Schritten ganz, halb, ganz, ganz, halb, ganz, ganz: Er ist der sechste Modus der Dur-Tonleiter und entspricht der natürlichen Moll-Tonleiter.\n\nNotenschlüssel begannen als Buchstaben. Mittelalterliche Schreiber, die Choräle auf Notenlinien schrieben, kennzeichneten eine Linie mit dem Namen ihres Tons – F, C oder G –, und diese Schlüsselbuchstaben wurden über Jahrhunderte zu den heutigen Zeichen stilisiert. Der Violinschlüssel ist ein G-Schlüssel: Seine Windung umkreist die zweite Notenlinie und legt dort den Ton G fest, weshalb er auch G-Schlüssel heißt. Der Bassschlüssel ist ein F-Schlüssel, der F auf der vierten Linie festlegt, der Linie, die zwischen seinen beiden Punkten verläuft. Der C-Schlüssel kann wandern: Auf der dritten Linie ist er der Altschlüssel, der das eingestrichene C in die Mitte des Systems legt und der gewöhnliche Schlüssel der Bratsche ist; auf der vierten Linie wird er zum Tenorschlüssel, den Celli, Fagotte und Posaunen in ihren hohen Lagen lesen.\n\n| Zeichen oder Tonleiter | Schrittfolge oder Linie | Wo verwendet |\n|---|---|---|\n| Dur-Tonleiter (Ionisch) | G–G–H–G–G–G–H | Die meisten westlichen Melodien |\n| Natürliches Moll (Äolisch) | G–H–G–G–H–G–G | Musik in Moll |\n| Violinschlüssel (G-Schlüssel) | G auf Linie 2 | Violine, Flöte, rechte Hand am Klavier |\n| Bassschlüssel (F-Schlüssel) | F auf Linie 4 | Cello, Kontrabass, linke Hand am Klavier |\n| Altschlüssel (C-Schlüssel) | Eingestrichenes C auf Linie 3 | Bratsche |",
+    "notesEn": "The major-scale pattern also accepted as \"tone, tone, semitone, tone, tone, tone, semitone\" or \"W-W-H-W-W-W-H\"; alto clef also as \"viola clef\"; Glarean also as \"Glareanus\".",
+    "notesDe": "Die Dur-Schrittfolge auch als „Ganzton, Ganzton, Halbton, Ganzton, Ganzton, Ganzton, Halbton“; Altschlüssel auch als „Bratschenschlüssel“; Glarean auch als „Glareanus“."
+   }
+  }
+ ],
+ "handoff": []
+}

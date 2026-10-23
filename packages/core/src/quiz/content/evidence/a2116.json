@@ -1,0 +1,202 @@
+{
+ "article": "a2116",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1899_(TV_series)",
+   "title": "1899 (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:27.831Z",
+   "snapshot": "7dc5e332772a422cf6c30b0086fddb17e1b10704c40732976f217c43254900c2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_5",
+   "title": "Stranger Things season 5 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:28.931Z",
+   "snapshot": "5afac96d9e0fd6305f7de15fe9217e8aea660e84d600361594f3e253ffd111e9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Twin_Peaks",
+   "title": "Twin Peaks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:30.011Z",
+   "snapshot": "34552a3f5aeff430d46573c54292f5d3ff3ad7c62c319b7bc7311975fb937b8e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Springfield_(The_Simpsons)",
+   "title": "Springfield (The Simpsons) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:30.909Z",
+   "snapshot": "73cc1f738846981d400c74186115de42d3db49ec2ed55b0da309c224d7ebb3ae"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/How_to_Sell_Drugs_Online_(Fast)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:10.077Z",
+   "snapshot": "49dfaaeb5558f74c11020937be0fedb02f1de283498b67fc713d963b46890de4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stranger Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Twin Peaks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Simpsons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:25.081Z",
+   "target": "f10576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "On 13 November 2018, it was announced that Dark creators Jantje Friese and Baran bo Odar were developing the project for Netflix under their overall deal at the streaming service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dark” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:25.081Z",
+   "target": "f10577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The fifth and final season of the American science fiction horror drama television series Stranger Things, marketed as Stranger Things 5, was released on the streaming service Netflix in two volumes and the finale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stranger Things” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:25.081Z",
+   "target": "f10579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Twin Peaks is an American surrealist mystery-horror-drama television series created by David Lynch and Mark Frost.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twin Peaks” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:25.081Z",
+   "target": "f10580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Springfield is the primary fictional setting of the American animated sitcom The Simpsons and related media.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.081Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Simpsons” is on the snapshot of s4"
+  }
+ ]
+}

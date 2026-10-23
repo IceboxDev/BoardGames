@@ -1,0 +1,430 @@
+{
+ "article": "a2528",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Perle",
+   "title": "Perle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:38.255Z",
+   "snapshot": "3cee280da0ce4ac1c06002195657c7e57b48397380edc5a309cf44e178ede0b7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Maillard-Reaktion",
+   "title": "Maillard-Reaktion",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:04:39.153Z",
+   "snapshot": "02357060cd57e5686ef4f20d99fba104b8eed067966f12a0d7afa26c74689a80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lecithin",
+   "title": "Lecithin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:23.958Z",
+   "snapshot": "b3fbc7597fd1d97305648cb2c31f46436cdcf96ba57bdf1e563561a84010c7fb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Emulsion",
+   "title": "Emulsion",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:33:04.264Z",
+   "snapshot": "90783b6e5b7ee49f251bce3b02526348471bdb24df85c49d4c5956d398ff1aeb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Acetic_acid",
+   "title": "Acetic acid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:39.771Z",
+   "snapshot": "912d4812d32d5c0266995b033089212cfa7705e6330857a51b3d0bbed424c514"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Baking_powder",
+   "title": "Baking powder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:40.766Z",
+   "snapshot": "61ed73376b2b2cd19ae0916b13405cc30044bca7cf0d7941cba9cb6a22016bd8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Monosodium_glutamate",
+   "title": "Monosodium glutamate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:50.184Z",
+   "snapshot": "96dae9ca62e9357ab69e9b9ab1488f7ea3be0631cdf3cf24848415d4eb1e4dd9"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Margarine",
+   "title": "Margarine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:49.308Z",
+   "snapshot": "ad09909f6e1c10a383edf31ed1e382d3110b4f7fe31d3ba76dfcec35794e9fa1"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Maillard_reaction",
+   "title": "Maillard reaction",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:41.653Z",
+   "snapshot": "adb60f0569d09955a96f5e584b499cc98547de238906cce303d4b2cdb97bb7fd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Essig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13478",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zucker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-084"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "oil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "oil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 15; transcript tp-107"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "acetic acid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "carbon dioxide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "monosodium glutamate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "margarine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25824",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Amino acids",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 62; transcript ppm-054"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In Europa wurden Flussperlen zur Herstellung von Perlmilch verarbeitet, und das „aqua perlata“ des Mittelalters bestand aus Perlenpulver, Essig oder Zitronensaft, Zucker und Kräutern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Essig” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13478",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "So bildet die Kombination der Aminosäure Cystein mit dem Zucker Glukose bei langer Erwärmung das Aroma von Bratzwiebeln, bei kurzer Erwärmungsdauer das Aroma von Braten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zucker” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Common sources include egg yolk, marine foods, soybeans, milk, rapeseed, cottonseed, and sunflower oil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oil” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As an example, oil and water can form, first, an oil-in-water emulsion, in which the oil is the dispersed phase, and water is the continuous phase.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oil” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Acetic acid , systematically named ethanoic acid , is an acidic, colourless liquid and organic compound with the chemical formula CH3COOH (also written as CH3CO2H, C2H4O2, or HC2H3O2).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “acetic acid” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It works by releasing carbon dioxide gas into a batter or dough through an acid–base reaction, causing bubbles in the wet mixture to expand and thus leavening the mixture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carbon dioxide” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Monosodium glutamate (MSG), also known as sodium glutamate,  is a sodium salt of glutamic acid.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “monosodium glutamate” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f13483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Margarine is a spread used for flavoring, baking, and cooking.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “margarine” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:30:34.623Z",
+   "target": "f25824",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Maillard reaction ( MY-ar(d); French: [majaʁ]) is a chemical reaction between amino acids and reducing sugars to create melanoidins, the compounds that give browned food its distinctive flavor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:34.623Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amino acids” is on the snapshot of s9"
+  }
+ ]
+}

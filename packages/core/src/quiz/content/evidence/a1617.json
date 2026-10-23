@@ -1,0 +1,195 @@
+{
+ "article": "a1617",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rudolphine_Tables",
+   "title": "Rudolphine Tables – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:05.570Z",
+   "snapshot": "de928d1b912c2ebc7935f68c6e1c780e0c8f3f8bae21cfa9afeb18e520dd79ae"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium",
+   "title": "De revolutionibus orbium coelestium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:06.664Z",
+   "snapshot": "44b44a026ab533740aa92b1e07a78730389190c88aaca4e4def197cc2bf3d4d8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tycho_Brahe",
+   "title": "Tycho Brahe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:07.806Z",
+   "snapshot": "ba886fd9d5cb08e2735ca198ee46aa6298601c3a8ad5206668b0845b5f5e529e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+   "title": "Philosophiæ Naturalis Principia Mathematica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:19.686Z",
+   "snapshot": "13e68e98920299a2af24aba8a15aa86fdf5e7795e40a92e377c9a529198e691e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johannes Kepler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nicolaus Copernicus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tycho Brahe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Isaac Newton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:51.903Z",
+   "target": "f08081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Rudolphine Tables (Latin: Tabulae Rudolphinae) consist of a star catalogue and planetary tables published by Johannes Kepler in 1627, using observational data collected by Tycho Brahe (1546–1601).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johannes Kepler” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:51.903Z",
+   "target": "f08082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "De revolutionibus orbium coelestium (On the Revolutions of the Heavenly Spheres) is the seminal work on the heliocentric theory of the astronomer Nicolaus Copernicus (1473–1543 CE).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicolaus Copernicus” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:51.903Z",
+   "target": "f08083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tycho Brahe ( TY-koh BRAH-(h)ee, -⁠ BRAH(-hə); Danish: [ˈtsʰykʰo ˈpʁɑːə] ; born Tyge Ottesen Brahe, Danish: [ˈtsʰyːjə ˈʌtəsn̩ ˈpʁɑːə]; 14 December 1546 – 24 October 1601), generally called Tycho for short, was a Danish astronomer known for his comprehensive and unprecedentedly accurate astronomical",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tycho Brahe” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:51.903Z",
+   "target": "f08085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Philosophiæ Naturalis Principia Mathematica (English: The Mathematical Principles of Natural Philosophy), often called simply the Principia (), is a book by Sir Isaac Newton that expounds Newton's laws of motion and his law of universal gravitation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isaac Newton” is on the snapshot of s4"
+  }
+ ]
+}

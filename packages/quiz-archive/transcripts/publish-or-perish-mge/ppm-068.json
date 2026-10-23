@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-068",
+ "image": "IMG20261022154100.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] Which of the following planets has a hexagon-shaped storm?\nA. Jupiter B. Saturn C. Neptune\nAnswer: B.",
+   "de": "Welcher Planet hat um seinen Nordpol ein dauerhaftes sechseckiges Wolkenmuster?",
+   "en": "Which planet has a persistent hexagon-shaped cloud pattern around its north pole?",
+   "reworked": true,
+   "answerDe": "Saturn",
+   "answerEn": "Saturn",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1981",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Voyager discovers Saturn's hexagon, a six-sided cloud pattern around the planet's north pole",
+    "labelDe": "Voyager entdeckt das Saturn-Sechseck, ein sechseckiges Wolkenmuster um den Nordpol des Planeten"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Saturn%27s_hexagon",
+    "title": "Saturn's hexagon",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed. Wikipedia calls it a persistent approximately hexagonal cloud pattern (a jet stream) around the north pole at ~78°N rather than a storm, so the open question avoids 'storm'.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] What is the primary function of sutures in human skulls?\nA. To help cushion impacts\nB. To help the bones move for birth and growth\nC. To accommodate minor temperature changes\nAnswer: B. Sutures are fibrous joints that connect the bones of the skull. These joints are flexible in infants and young children, allowing for the expansion of the skull as the brain grows. They also enable the skull bones to overlap slightly during childbirth, facilitating the passage through the birth canal.",
+   "de": "Wie heißen die faserigen Gelenke, die die Knochen des menschlichen Schädels verbinden und es ihnen erlauben, sich bei der Geburt leicht zu überlappen und mit dem wachsenden Gehirn auszudehnen?",
+   "en": "What are the fibrous joints called that connect the bones of the human skull, letting them overlap slightly during childbirth and the skull expand as the brain grows?",
+   "reworked": true,
+   "answerDe": "Schädelnähte",
+   "answerEn": "Sutures (cranial sutures)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1851",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Rudolf Virchow describes how skull growth changes when sutures fuse too early (Virchow's law)",
+    "labelDe": "Rudolf Virchow beschreibt, wie sich das Schädelwachstum bei vorzeitig verschlossenen Nähten verändert (Virchow-Gesetz)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fontanelle",
+    "title": "Fontanelle",
+    "lang": "en"
+   },
+   "notes": "Card's answer B confirmed: sutures allow movement that facilitates childbirth and brain growth (Fontanelle; Fibrous joint pages). Asked as the term since the function needs the options. Timeline year for Virchow's law (1851) from general knowledge, marked approx; Virchow's law itself is on the Rudolf Virchow / Craniosynostosis pages.",
+   "domain": "science",
+   "sub": "medicine"
+  }
+ ]
+}

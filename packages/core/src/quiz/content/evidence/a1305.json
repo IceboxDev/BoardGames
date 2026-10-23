@@ -1,0 +1,355 @@
+{
+ "article": "a1305",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Myringotomy",
+   "title": "Myringotomy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:37.140Z",
+   "snapshot": "8d95111dc0fa5fcf29ba99d4c7f137457fa1b000ab381b5b427bf686716da3b9"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/diaphragm",
+   "title": "diaphragm – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Septumplastik",
+   "title": "Septumplastik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:34.576Z",
+   "snapshot": "48d75732b6fc7482741f4a7bae8be448cfbb6edd80205903e8a99fe527e3d000"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Philibert_Joseph_Roux",
+   "title": "Philibert Joseph Roux – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:38.145Z",
+   "snapshot": "248c1c7337029925be3550bd9600d92d402c5955b88669e47d7ab541a0e91c1a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Blood%E2%80%93brain_barrier",
+   "title": "Blood–brain barrier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:39.141Z",
+   "snapshot": "125dadb372f42f22e30cc543f97562a9fddc89a2257fe01b18abc60a458c0c02"
+  },
+  "s6": {
+   "url": "https://my.clevelandclinic.org/health/body/21578-diaphragm",
+   "title": "Diaphragm",
+   "publisher": "Cleveland Clinic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:19.403Z",
+   "snapshot": "4ba86ae575a2376f0c270ee0a5e271517bbccdc89a549dac780ea452ce1281d9"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Thoracic_diaphragm",
+   "title": "Thoracic diaphragm – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:19.655Z",
+   "snapshot": "e0a32b70703be261288a25cc10bcefa26fc6dc65ccacec9722b593a4d3b6e89d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "eardrum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "diaphragm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06523",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nasenscheidewand",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "palate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "blood-brain barrier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:03.616Z",
+   "target": "f06521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A myringotomy is a surgical procedure in which an incision is created in the eardrum (tympanic membrane) to relieve pressure caused by excessive buildup of fluid, or to drain pus from the middle ear.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.616Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “eardrum” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:03.616Z",
+   "target": "f06523",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Laut American Academy of Otolaryngology – Head and Neck Surgery haben 80 Prozent der Menschen eine geringfügig aus der Medianebene verlagerte Nasenscheidewand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.616Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nasenscheidewand” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:03.616Z",
+   "target": "f06524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Remembered for his pioneer work in plastic surgery, in 1819 he performed one of the earliest staphylorrhaphies (surgical repair of a cleft palate).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.616Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “palate” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:03.616Z",
+   "target": "f06525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The blood–brain barrier (BBB) is a highly selective semipermeable border of endothelial cells that regulates the transfer of solutes and chemicals between the circulatory system and the central nervous system, thus protecting the brain from harmful or unwanted substances in the blood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.616Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blood-brain barrier” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:15:50Z",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It sits under your lungs and separates your chest cavity from your abdomen.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:15:51Z",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "separates the thoracic cavity, containing the heart and lungs, from the abdominal cavity",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:46.787Z",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It sits under your lungs and separates your chest cavity from your abdomen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:46.787Z",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "separates the thoracic cavity, containing the heart and lungs, from the abdominal cavity",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:46.787Z",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The diaphragm is a muscle that helps you breathe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “diaphragm” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:46.787Z",
+   "target": "f06522",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The thoracic diaphragm, or simply the diaphragm (; Ancient Greek: διάφραγμα, romanized: diáphragma, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:46.787Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “diaphragm” is on the snapshot of s7"
+  }
+ ]
+}

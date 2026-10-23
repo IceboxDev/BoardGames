@@ -1,0 +1,476 @@
+{
+ "article": "a0584",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cogito,_ergo_sum",
+   "title": "Cogito, ergo sum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:14.400Z",
+   "snapshot": "27d12c78d29bd2d056a5044f598aaf4e241dcfe0dc8c028ec17b50f79b600796"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Panta_rhei",
+   "title": "Panta rhei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:15.529Z",
+   "snapshot": "7f5e0939bae33105def506613b608df12d9bc4feed714050214faa382aaad9fa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Apology_(Plato)",
+   "title": "Apology (Plato) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:15.449Z",
+   "snapshot": "af8282297547d8bbc0bdb9aceb1d3662108f3069bf3807f15e5107080cac0b24"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Benedict_of_Nursia",
+   "title": "Benedict of Nursia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:16.420Z",
+   "snapshot": "1284ed0035a272d7f935a29a491f4b1e014b8ba4ec5ebd7d9c7737035e78383a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Homo_homini_lupus",
+   "title": "Homo homini lupus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:17.290Z",
+   "snapshot": "3bb9ac201b537e9db2193fcad9e763274715ae467af88e5b47c476ab16c53fe5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/I_know_that_I_know_nothing",
+   "title": "I know that I know nothing – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:01:48Z"
+  },
+  "s7": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0170%3Atext%3DApol.%3Asection%3D21d",
+   "title": "Plato, Apology 21d (Fowler translation) – Perseus Digital Library",
+   "publisher": "Perseus Digital Library, Tufts University",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:17.639Z",
+   "snapshot": "4bbaebcf313fa96ea7d256002f49262ac41178f67ead64775c398c153fa635e7"
+  },
+  "s8": {
+   "url": "https://www.thecollector.com/all-i-know-is-that-i-know-nothing-socrates/",
+   "title": "“All I Know Is That I Know Nothing”: What Did Socrates Mean? – TheCollector",
+   "publisher": "TheCollector",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:17.781Z",
+   "snapshot": "2adf0f4e1278944c1a8600b2ba1ccd21979f7c5dbe82701f3ed4e3c02ff89ac0"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ora_et_labora",
+   "title": "Ora et labora – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:17.925Z",
+   "snapshot": "62f5a12f9fcfbb9d2da965d4c7a7185282e37de2348eaa3bacce9103a8a91b57"
+  },
+  "s10": {
+   "url": "https://christdesert.org/?p=10746",
+   "title": "November 19th: Work – Benedictine Abbey of Christ in the Desert",
+   "publisher": "Benedictine Abbey of Christ in the Desert",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:20.482Z",
+   "snapshot": "81da119809ef0f80bd0022ba44076578b9ade2e9a9a752678e2ff817991f57d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I think, therefore I am",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alles fließt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "I know that I know nothing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pray and work",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Man is a wolf to man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:10.132Z",
+   "target": "f02916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Latin cogito, ergo sum, usually translated into English as \"I think, therefore I am\", is the \"first principle\" of the philosophy of the French scientist and philosopher René Descartes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.132Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I think, therefore I am” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:10.132Z",
+   "target": "f02917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Formel panta rhei (altgriechisch πάντα ῥεῖ  ‚alles fließt‘) ist ein Aphorismus zur Kennzeichnung der heraklitischen Lehre.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.132Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alles fließt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:10.132Z",
+   "target": "f02918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "I know that I know nothing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“I know that I know nothing”, “Ich weiß, dass ich nichts weiß”, “Я знаю, что ничего не знаю”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:10.132Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pray and work",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pray and work”, “Bete und arbeite”, “Молись и трудись”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:10.132Z",
+   "target": "f02920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Homo homini lupus, or in its unabridged form Homo homini lupus est, is a Latin proverb meaning literally 'man is a wolf to man'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.132Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Man is a wolf to man” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:48Z",
+   "target": "f02918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "\"I know that I know nothing\" is a saying derived from Plato's account of the Greek philosopher Socrates",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Paraphrase; occurs nowhere in Plato in exactly this form (the bank body says so)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:01:50Z",
+   "target": "f02918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "whereas I, as I do not know anything, do not think I do either",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23",
+   "note": "Source passage (Greek οὐκ εἰδώς) of which 'I know that I know nothing' is the compressed paraphrase."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:01:51Z",
+   "target": "f02918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "famously stated “all I know is that I know nothing”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:01:53Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The phrases \"pray and work\" (or \"pray and labor\"; Latin: ora et labora)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:01:55Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "An unofficial motto of Benedictines is “Ora et Labora,” pray and work.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r006",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:35.816Z",
+   "target": "f02918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "whereas I, as I do not know anything, do not think I do either",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:35.816Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The phrases \"pray and work\" (or \"pray and labor\"; Latin: ora et labora)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:35.816Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "An unofficial motto of Benedictines is “Ora et Labora,” pray and work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:35.816Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The phrases \"pray and work\" (or \"pray and labor\"; Latin: ora et labora) and to work is to pray (laborare est orare) refer to the monastic practice of working and praying, generally associated with its use in the Rule of Saint Benedict.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pray and work” is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:35.816Z",
+   "target": "f02919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "An unofficial motto of Benedictines is “Ora et Labora,” pray and work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.816Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pray and work” is on the snapshot of s10"
+  }
+ ]
+}

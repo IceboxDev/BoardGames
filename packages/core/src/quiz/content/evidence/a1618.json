@@ -1,0 +1,691 @@
+{
+ "article": "a1618",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Time_in_the_United_States",
+   "title": "Time in the United States – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:10.064Z",
+   "snapshot": "657014dadb2082bccd004171e1a39ed3099dd56330e2bd5b88a51dab8920df8d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Standard_Time_Act",
+   "title": "Standard Time Act – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:09.593Z",
+   "snapshot": "192676939c5c7e6c7ec8f28ad2e72bca13f863e5f3ea9ba43a5abf3a07a08aff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Alaska_Time_Zone",
+   "title": "Alaska Time Zone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:10.557Z",
+   "snapshot": "307ad51c878410940ed60bd2cd0ef70975e96285607ec748dba828ef72e1cb50"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hawaii%E2%80%93Aleutian_Time_Zone",
+   "title": "Hawaii–Aleutian Time Zone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:11.559Z",
+   "snapshot": "5edd39bf90ce7e252150e756fea56f6c5eb6302e325b4b294ecc85067dad23d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Time_in_China",
+   "title": "Time in China",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:12.544Z",
+   "snapshot": "3888e5cb0b0f38843a8ee89328e594f40b922db51accb6be0fb27c0402c975a0"
+  },
+  "s6": {
+   "url": "https://www.law.cornell.edu/uscode/text/15/261",
+   "title": "15 U.S. Code § 261 – Standard time zones (LII)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:11.122Z",
+   "snapshot": "ad6a91a013b3cc783eea610d07b211c8ba523bb2514c785ab891db21d2bed198"
+  },
+  "s7": {
+   "url": "https://www.law.cornell.edu/uscode/text/15/263",
+   "title": "15 U.S. Code § 263 – Designation of zone standard times (LII)",
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:11.783Z",
+   "snapshot": "bbd327143ccff429eb34aa1bdfed9c346291a6ed6ab3fe9ff604b84445d5d503"
+  },
+  "s8": {
+   "url": "https://www.latimes.com/archives/la-xpm-2009-mar-31-fg-china-timezone31-story.html",
+   "title": "In China's far west, time zones divide – Los Angeles Times",
+   "publisher": "Los Angeles Times",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:11.436Z",
+   "snapshot": "27477321ccbb353866ed41f85cea77f36322dcf2a5bed2906b0fb0ae97bb5d46"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "3 hours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1 hour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "4 hours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "5 hours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "one time zone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-257"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:52.025Z",
+   "target": "f08086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "3 hours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“3 hours”, “3 Stunden”, “3 часа”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:52.025Z",
+   "target": "f08087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1 hour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1 hour”, “1 Stunde”, “1 час”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:52.025Z",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Even without daylight saving time, another anomaly is that on the winter solstice in Nome, the sunrise is after \"noon\" clock time, at 12:02 p.m., about 4 hours before sunset at 3:56 p.m.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4 hours” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:52.025Z",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "5 hours",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“5 hours”, “5 Stunden”, “5 часов”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:52.025Z",
+   "target": "f11934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is the largest sovereign nation in the world that officially observes only one time zone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “one time zone” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:09Z",
+   "target": "f08086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the second zone retarded by 5 hours",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Eastern = 2nd zone (UTC−5) per § 263; Pacific = 5th zone (UTC−8); both observe DST on the same dates, so Seattle–New York is 3 h."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:12Z",
+   "target": "f08086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "that of the fifth zone shall be known and designated as Pacific standard time",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:15Z",
+   "target": "f08087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the second zone retarded by 5 hours; that of the third zone retarded by 6 hours",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Eastern (2nd zone, UTC−5) vs Central (3rd zone, UTC−6), Chicago being Central: 1 hour."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:18Z",
+   "target": "f08087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "that of the third zone shall be known and designated as central standard time",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:48:22Z",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the sixth zone retarded by 9 hours",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Alaska = 6th zone (UTC−9) vs Eastern UTC−5: 4 hours (both observe DST)."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:48:26Z",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The largest city in the Alaskan Time Zone is Anchorage, Alaska.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:48:31Z",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the seventh zone retarded by 10 hours",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Hawaii–Aleutian = 7th zone (UTC−10) vs Eastern Standard UTC−5: 5 hours in winter."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:48:34Z",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hawaii has not observed daylight saving time since September 1945.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:48:38Z",
+   "target": "f11934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "When communist China was formed in 1949, Mao Tse-tung decreed that everybody should follow a single time zone",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "Unofficial 'Xinjiang time' exists, hence the wording says 'officially'."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:48:41Z",
+   "target": "f11934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is the largest sovereign nation in the world that officially observes only one time zone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the second zone retarded by 5 hours",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "that of the fifth zone shall be known and designated as Pacific standard time",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the second zone retarded by 5 hours; that of the third zone retarded by 6 hours",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "that of the third zone shall be known and designated as central standard time",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the sixth zone retarded by 9 hours",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The largest city in the Alaskan Time Zone is Anchorage, Alaska.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "that of the seventh zone retarded by 10 hours",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hawaii has not observed daylight saving time since September 1945.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f11934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "When communist China was formed in 1949, Mao Tse-tung decreed that everybody should follow a single time zone",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Except as provided in section 260a(a) of this title, the standard time of the first zone shall be Coordinated Universal Time retarded by 4 hours; that of the second zone retarded by 5 hours; that of the third zone retarded by 6 hours; that of the fourth zone retarded by 7 hours; that of the fifth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4 hours” is on the snapshot of s6"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f08090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "of this title, the standard time of the first zone shall be Coordinated Universal Time retarded by 4 hours; that of the second zone retarded by 5 hours; that of the third zone retarded by 6 hours; that of the fourth zone retarded by 7 hours; that of the fifth zone retarded [1] 8 hours; that of the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “5 hours” is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:56:39.744Z",
+   "target": "f11934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "“That is the totalitarian nature of the Chinese government that they try to impose one time zone.”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:39.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “one time zone” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,725 @@
+{
+ "article": "a0030",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus",
+   "title": "Voyages of Christopher Columbus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:05.718Z",
+   "snapshot": "48e332a5668efdef276ebae43245ea13d854dc2d0d3e4bd81712f9f225eb5c0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Santa_Mar%C3%ADa_(ship)",
+   "title": "Santa María (ship) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:06.565Z",
+   "snapshot": "dba566e026e307ad9fa5065a5650a09ed5062e886f7e455fbcd84b0a07239ee5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bartolomeu_Dias",
+   "title": "Bartolomeu Dias – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:07.451Z",
+   "snapshot": "cfff754f9355b4b57fdc984ef939c12657b540b1b673f030751c4f38c90b84aa"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vasco_da_Gama",
+   "title": "Vasco da Gama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:08.563Z",
+   "snapshot": "447515d698b600cb0873c85b3ffef46f5f12036308b8d6dcd7ac1c1022182616"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pedro_%C3%81lvares_Cabral",
+   "title": "Pedro Álvares Cabral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:09.453Z",
+   "snapshot": "4d370dca82ee3db70d401b1b673b755b5191b6152e0977cc37da98e045a606fa"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Elcano",
+   "title": "Juan Sebastián Elcano – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:10.660Z",
+   "snapshot": "d7269f2efc60f3420acb046b391b97035507c42da87701b564ac3436b85e5f26"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Guanahani",
+   "title": "Guanahani",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:07.633Z",
+   "snapshot": "38e6b28138844b8405399a86aed237a679410a7c0ec8bd9092f8c067780fe7dc"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Tordesillas",
+   "title": "Treaty of Tordesillas",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:11.577Z",
+   "snapshot": "1e3b03c5a8027faab86c36aebc4a97f0ead3d99a1b1b3c4cd6e5a578dafdd413"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Magellan_expedition",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:12.695Z",
+   "snapshot": "69782f4ec599a222c5a26a1258b8d6a4866d4febce8cdf80bef6f35d4ce2a524"
+  },
+  "s10": {
+   "url": "https://exploration.marinersmuseum.org/subject/christopher-columbus/",
+   "title": "Christopher Columbus – Ages of Exploration",
+   "publisher": "The Mariners' Museum and Park",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:21.510Z",
+   "snapshot": "7d92412c49337dd36ff1bdd956e44b51e34f3a457897dd5b83ea5efbe1813739"
+  },
+  "s11": {
+   "url": "https://exploration.marinersmuseum.org/subject/bartolomeu-dias/",
+   "title": "Bartolomeu Dias – Ages of Exploration",
+   "publisher": "The Mariners' Museum and Park",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:22.791Z",
+   "snapshot": "8a0ca844e4793038a37967ba26d0b731d8756a1540a4b9257de0a4322d8070f6"
+  },
+  "s12": {
+   "url": "https://exploration.marinersmuseum.org/subject/vasco-da-gama/",
+   "title": "Vasco da Gama – Ages of Exploration",
+   "publisher": "The Mariners' Museum and Park",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:23.415Z",
+   "snapshot": "c7782af2a8770510449280278d4c1ccf282109a3f3e501d266ae328367c5346c"
+  },
+  "s13": {
+   "url": "https://exploration.marinersmuseum.org/subject/pedro-alvares-cabral/",
+   "title": "Pedro Álvares Cabral – Ages of Exploration",
+   "publisher": "The Mariners' Museum and Park",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:24.454Z",
+   "snapshot": "ac7a84938aadc2e9978256f33a6b67075c212480376e889c34ed384f82420efa"
+  },
+  "s14": {
+   "url": "https://exploration.marinersmuseum.org/subject/ferdinand-magellan/",
+   "title": "Ferdinand Magellan – Ages of Exploration",
+   "publisher": "The Mariners' Museum and Park",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:25.435Z",
+   "snapshot": "8da1ed1135c5c2658a9ea28d49549d60b235165639145206471d63907d99ee2d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1492",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1492",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c003"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1488",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1498",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1500",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f00150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1522",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "San Salvador",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-343"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Treaty of Tordesillas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-081"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Between 1492 and 1504, the Italian explorer and navigator Christopher Columbus led four transatlantic maritime expeditions to the Americas in the name of the Catholic Monarchs of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1492” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "or La Santa María (Spanish: [la ˈsãn̪.t̪a maˈɾi.a]), originally La Gallega (Spanish: [la ɡaˈʝe.ɣ̞a]), The Galician, was the largest of the three small ships sailed by Christopher Columbus in his first expedition across the Atlantic Ocean in 1492, with the backing of the Catholic Monarchs of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1492” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f00147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In February 1488, he became the first European navigator to round the southern tip of Africa and to demonstrate that the most effective southward route for ships is to go diagonally southwest in the open ocean, well to the west of the African coast.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1488” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f00148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Da Gama finally accomplished the feat when he landed at Kozhikode on 20 May 1498.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1498” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f00149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He was the first human in history to ever be on four continents, uniting all of them in his famous voyage of 1500, where he also conducted the first substantial exploration of the northeast coast of South America and claimed it for Portugal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1500” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f00150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Magellan-Elcano expedition (1519 - 1522), which completed the first circumnavigation of the Earth, started with 5 ships (Trinidad, San Antonio, Concepción, Victoria and Santiago) along with 234 crewmen (some sources raise the number of sailors to 247.) Although Elcano had departed Spain aboard",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1522” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f12260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Er gab der Insel, die nach seinen Angaben von den Einheimischen Guanahani genannt wurde, aus Dankbarkeit für die gelungene Überfahrt den neuen Namen San Salvador (span.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “San Salvador” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:23:39.779Z",
+   "target": "f25287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Treaty of Tordesillas, signed in Tordesillas, Spain, on 7 June 1494, and ratified in Setúbal, Portugal, divided the newly discovered lands outside Europe between the Kingdom of Portugal and the Crown of Castile, along a meridian 370 leagues (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:39.779Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Tordesillas” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:25:16Z",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "He is credited for discovering the Americas in 1492, although we know today people were there long before him",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:25:17Z",
+   "target": "f00147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Finally, on February 3, 1488, Dias reached Mossel Bay, South Africa. He had passed Africa’s southern tip.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:25:19Z",
+   "target": "f00148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "They sailed for 23 days, and on May 20, 1498 they reached India.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:25:21Z",
+   "target": "f00149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "leader of the Portuguese expedition that discovered the land that would later be known as Brazil in 1500",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:25:23Z",
+   "target": "f00150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "September 6, 1522, they arrived with only 18 men at Sanlúcar de Barrameda on the coast of Spain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "He is credited for discovering the Americas in 1492, although we know today people were there long before him",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Finally, on February 3, 1488, Dias reached Mossel Bay, South Africa. He had passed Africa’s southern tip.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "They sailed for 23 days, and on May 20, 1498 they reached India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "leader of the Portuguese expedition that discovered the land that would later be known as Brazil in 1500",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s13"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "September 6, 1522, they arrived with only 18 men at Sanlúcar de Barrameda on the coast of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s14"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "He is credited for discovering the Americas in 1492, although we know today people were there long before him; his real achievement was that he opened the door for more exploration to a New World.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1492” is on the snapshot of s10"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "In 1488, Dias proved that a sea trading route from Europe to Asia was possible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1488” is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "They sailed for 23 days, and on May 20, 1498 they reached India.7 They headed for Kappad, India near the large city of Calicut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1498” is on the snapshot of s12"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "It depicts Pedro Álvares Cabral, leader of the Portuguese expedition that discovered the land that would later be known as Brazil in 1500.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1500” is on the snapshot of s13"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:51:55.147Z",
+   "target": "f00150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "September 6, 1522, they arrived with only 18 men at Sanlúcar de Barrameda on the coast of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:55.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1522” is on the snapshot of s14"
+  }
+ ]
+}

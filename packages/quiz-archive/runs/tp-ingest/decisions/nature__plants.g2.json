@@ -1,0 +1,612 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "nature/plants",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-122",
+    "category": 5
+   },
+   "factId": "f02811"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-167",
+    "category": 5
+   },
+   "factId": "f10612"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-258",
+    "category": 5
+   },
+   "factId": "f04431"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-289",
+    "category": 5
+   },
+   "factId": "f01071"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-298",
+    "category": 5
+   },
+   "factId": "f05931"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1979",
+   "baseHash": "347e92c979d1",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-025",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Medicinal Plants That Ended Up in the Kitchen",
+    "titleDe": "Heilpflanzen, die in der Küche gelandet sind",
+    "bodyEn": "The line between medicine and food was drawn late. For most of history the plants that healed were the plants that seasoned, and several of the best-known ingredients of Mediterranean and Asian cooking still appear in pharmacopoeias today.\n\nThe artichoke, which Filippo Strozzi brought from Naples to Florence in 1466, is the strangest of them, because what we eat is the unopened flower bud of a giant thistle, Cynara cardunculus var. scolymus. The \"head\" is the whole bud with its tough scales; the \"heart\" is the fleshy base on which the scales and the inedible \"choke\" of immature florets sit. Roman cooks fry whole buds as carciofi alla giudia, and marinated artichoke hearts are a classic topping on pizza capricciosa and quattro stagioni. The medicine is in the leaves: extracts rich in cynarin and other caffeoylquinic acids stimulate the flow of bile, which is why artichoke preparations are sold for indigestion, bloating and mildly raised cholesterol, and why the Italian liqueur Cynar tastes the way it does.\n\nOregano, Origanum vulgare, grows wild on dry Mediterranean hillsides and is the herb most people smell first in a pizzeria. Its essential oil is dominated by carvacrol and thymol, both strongly antimicrobial, and oregano tea was a traditional remedy for coughs and stomach complaints long before it became a pizza garnish; in the United States it only became popular after 1945, when soldiers returning from the Second World War brought home a taste for the \"pizza herb\".\n\nGarlic, Allium sativum, was fed to the builders of the Egyptian pyramids for strength and is now one of the best-studied medicinal plants in the world. When a clove is crushed, the enzyme alliinase produces allicin, first isolated in 1944 by Chester Cavallito, the compound behind both the smell and most of the pharmacology. Clinical trials show modest reductions in blood pressure and cholesterol, and the German Commission E approved garlic preparations against raised blood lipids.\n\nGinger, Zingiber officinale, is a rhizome rather than a root, although everyone calls it one; traders carried it from India to the Mediterranean by the 1st century AD. Its pungent gingerols and shogaols make it indispensable in Chinese, Indian and Thai cooking, and they are also the reason ginger is one of the few herbal remedies for nausea with solid evidence: it is recommended against motion sickness, morning sickness and the queasiness that follows chemotherapy.\n\nSage, Salvia officinalis, named by Carl Linnaeus in 1753, carries its reputation in its name, from the Latin salvere, to be well. Its leaves contain rosmarinic acid and the essential oil thujone, and a sage infusion is still the standard gargle for sore throats and inflamed gums; in 2023 it was Germany's Medicinal Plant of the Year. In the kitchen it is fried in butter over pasta and pinned with prosciutto to veal escalopes for saltimbocca alla romana.\n\nHyssop, Hyssopus officinalis, is another member of the mint family that Linnaeus described in 1753: a small, woody shrub of southern Europe and western Asia with narrow dark leaves and spikes of blue flowers. Herbalists have long used it as an expectorant against coughs and colds, and its bitter, minty leaves season soups, stews and liqueurs, though only in small doses, because its essential oil, like that of sage, contains thujone. The \"hyssop\" of the Bible, with which the Israelites sprinkled water and blood, was probably a different plant, most likely a wild oregano.\n\n| Plant | Botanical name | Traditional use | Kitchen role |\n|---|---|---|---|\n| artichoke | Cynara cardunculus var. scolymus | digestion, bile flow | pizza, antipasti |\n| oregano | Origanum vulgare | coughs, antimicrobial | pizza herb |\n| garlic | Allium sativum | blood pressure, cholesterol | universal seasoning |\n| ginger | Zingiber officinale | nausea | Asian cooking |\n| sage | Salvia officinalis | sore throat | saltimbocca, sage butter |\n| hyssop | Hyssopus officinalis | coughs, expectorant | soups, liqueurs |",
+    "bodyDe": "Die Grenze zwischen Medizin und Nahrung wurde spät gezogen. Die längste Zeit der Geschichte waren die Pflanzen, die heilten, dieselben, die würzten, und mehrere der bekanntesten Zutaten der mediterranen und asiatischen Küche stehen bis heute in den Arzneibüchern.\n\nDie Artischocke, die Filippo Strozzi 1466 von Neapel nach Florenz brachte, ist die seltsamste von ihnen, denn was wir essen, ist die ungeöffnete Blütenknospe einer riesigen Distel, Cynara cardunculus var. scolymus. Der „Kopf“ ist die ganze Knospe mit ihren zähen Schuppen; das „Herz“ ist der fleischige Blütenboden, auf dem die Schuppen und das ungenießbare „Heu“ aus unreifen Blütchen sitzen. Römische Köche frittieren ganze Knospen als Carciofi alla giudia, und marinierte Artischockenherzen sind ein klassischer Belag auf Pizza Capricciosa und Quattro Stagioni. Die Medizin steckt in den Blättern: Extrakte, reich an Cynarin und anderen Kaffeoylchinasäuren, regen den Gallenfluss an, weshalb Artischockenpräparate gegen Verdauungsbeschwerden, Blähungen und leicht erhöhtes Cholesterin verkauft werden und weshalb der italienische Likör Cynar schmeckt, wie er schmeckt.\n\nOregano, Origanum vulgare, wächst wild an trockenen Mittelmeerhängen und ist das Kraut, das die meisten in einer Pizzeria zuerst riechen. Sein ätherisches Öl wird von Carvacrol und Thymol bestimmt, beide stark antimikrobiell, und Oreganotee war ein traditionelles Mittel gegen Husten und Magenbeschwerden, lange bevor er zur Pizzagarnitur wurde; in den USA wurde er erst nach 1945 populär, als heimkehrende Soldaten des Zweiten Weltkriegs den Geschmack am „Pizzakraut“ mitbrachten.\n\nKnoblauch, Allium sativum, wurde den Erbauern der ägyptischen Pyramiden zur Stärkung gereicht und ist heute eine der bestuntersuchten Heilpflanzen der Welt. Wird eine Zehe zerdrückt, erzeugt das Enzym Alliinase das Allicin, 1944 erstmals von Chester Cavallito isoliert, die Verbindung hinter dem Geruch wie hinter dem Großteil der Wirkung. Klinische Studien zeigen eine mäßige Senkung von Blutdruck und Cholesterin, und die deutsche Kommission E hat Knoblauchpräparate gegen erhöhte Blutfettwerte positiv bewertet.\n\nIngwer, Zingiber officinale, ist ein Rhizom und keine Wurzel, auch wenn alle ihn so nennen; Händler brachten ihn bis zum 1. Jahrhundert n. Chr. aus Indien in den Mittelmeerraum. Seine scharfen Gingerole und Shogaole machen ihn in der chinesischen, indischen und thailändischen Küche unentbehrlich, und sie sind auch der Grund, warum Ingwer eines der wenigen pflanzlichen Mittel gegen Übelkeit mit solider Evidenz ist: Er wird gegen Reisekrankheit, Schwangerschaftsübelkeit und die Übelkeit nach einer Chemotherapie empfohlen.\n\nSalbei, Salvia officinalis, 1753 von Carl von Linné benannt, trägt seinen Ruf im Namen, vom lateinischen salvere, gesund sein. Seine Blätter enthalten Rosmarinsäure und das ätherische Öl Thujon, und ein Salbeiaufguss ist bis heute das Standard-Gurgelmittel bei Halsschmerzen und entzündetem Zahnfleisch; 2023 war er Arzneipflanze des Jahres. In der Küche wird er in Butter über Pasta gebraten und mit Rohschinken auf Kalbsschnitzel gesteckt, für Saltimbocca alla romana.\n\nYsop, Hyssopus officinalis, ist ein weiterer Lippenblütler, den Linné 1753 beschrieb: ein kleiner, verholzender Strauch Südeuropas und Westasiens mit schmalen dunklen Blättern und Ähren aus blauen Blüten. Kräuterkundige nutzen ihn seit Langem als schleimlösendes Mittel gegen Husten und Erkältung, und seine bitteren, minzigen Blätter würzen Suppen, Eintöpfe und Liköre, allerdings nur in kleinen Mengen, denn sein ätherisches Öl enthält wie das des Salbeis Thujon. Der „Ysop“ der Bibel, mit dem die Israeliten Wasser und Blut versprengten, war wohl eine andere Pflanze, am ehesten ein wilder Oregano.\n\n| Pflanze | Botanischer Name | Traditionelle Anwendung | Rolle in der Küche |\n|---|---|---|---|\n| Artischocke | Cynara cardunculus var. scolymus | Verdauung, Gallenfluss | Pizza, Antipasti |\n| Oregano | Origanum vulgare | Husten, antimikrobiell | Pizzagewürz |\n| Knoblauch | Allium sativum | Blutdruck, Cholesterin | universelles Gewürz |\n| Ingwer | Zingiber officinale | Übelkeit | asiatische Küche |\n| Salbei | Salvia officinalis | Halsschmerzen | Saltimbocca, Salbeibutter |\n| Ysop | Hyssopus officinalis | Husten, schleimlösend | Suppen, Liköre |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0215",
+   "baseHash": "c9811d2b21c3",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-193",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-226",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Record-Breaking Plants: Tallest, Fastest, Biggest, Oldest",
+    "titleDe": "Rekordpflanzen: Die höchste, die schnellste, die größte, die älteste",
+    "bodyEn": "The plant kingdom keeps its own book of records, and some of its entries are hard to believe. The fastest growing of all is bamboo, which is not a tree but a giant grass: the roughly 1,400 species of the subfamily Bambusoideae are relatives of wheat and rice. Native above all to South and East Asia, the giant species such as Dendrocalamus giganteus, described by the British botanist William Munro in his bamboo monograph of 1868, send up hollow, woody culms that reach 30 to 40 metres, the height of a ten-storey building. What makes bamboo unique is the speed at which it gets there. A new shoot emerges from the ground at its final thickness and simply stretches upward, its stacked segments lengthening at the same time; growth of 70 centimetres in a single day is well documented, and one species in Japan was measured growing more than 90 centimetres in 24 hours. The culm reaches full height in a single season and then stops growing for good. Its strangest habit is flowering: many species bloom only once every 60 to 130 years, all individuals of the species at once, and then die.\n\n| Record | Plant | Figure | Where |\n|---|---|---|---|\n| Fastest growth | Bamboo | Up to 70–90 cm per day; culms up to 40 m | South and East Asia |\n| Tallest living plant | Coast redwood (Sequoia sempervirens) | Hyperion, 115.9 m | Northern California |\n| Largest single flower | Rafflesia (Rafflesia arnoldii) | Up to 1 m across, 10 kg | Sumatra and Borneo |\n| Largest unbranched inflorescence | Titan arum (Amorphophallus titanum) | Up to 3 m tall | Sumatra |\n| Largest floating leaves | Giant water lily (Victoria amazonica) | Leaves up to 3 m across | Amazon basin |\n| Oldest living individual | Bristlecone pine (Pinus longaeva) | Methuselah, about 4,850 years | White Mountains, California |\n| Oldest root system | Norway spruce \"Old Tjikko\" | Roots about 9,550 years | Fulufjället, Sweden |\n\nThe title of tallest plant belongs to the coast redwood of northern California. These conifers grow in the fog belt along the Pacific, where moisture condenses on their needles year-round. The tallest known specimen, named Hyperion and discovered on 25 August 2006 in Redwood National Park, established on 2 October 1968, measures 115.9 metres; its exact location is kept secret to protect it from visitors. Coast redwoods can live for more than 2,000 years and resprout from their stumps after fire or felling.\n\nThe largest flower is produced by a plant that has no leaves, stems or roots of its own. Rafflesia arnoldii, named after the surgeon Joseph Arnold, who collected it in Sumatra in 1818, lives as a parasite inside the tissues of Tetrastigma vines in the rainforests of Sumatra and Borneo and reveals itself only when its bud bursts into a fleshy red bloom up to a metre across and ten kilograms in weight. It smells of rotting meat to attract the carrion flies that pollinate it, which has earned it the name corpse flower. Sumatra holds a second floral record as well: the titan arum, Amorphophallus titanum, discovered by the Italian botanist Odoardo Beccari in 1878, produces the largest unbranched inflorescence in the world, a spike up to three metres tall wrapped in a frilled purple sheath. It too reeks of carrion, warms itself to spread the stench, and blooms only rarely, in many glasshouses just every five to ten years, so a flowering draws queues.\n\nThe giant water lily of the Amazon, Victoria amazonica, was named after the young Queen Victoria by the botanist John Lindley in October 1837 and became a sensation in Victorian glasshouses. Its circular leaves, up to three metres across and ribbed underneath like the vault of a cathedral, can carry a small child. The flowers open white on the first evening, trap their beetle pollinators overnight and reopen pink on the second.\n\nThe oldest of all is the bristlecone pine of the White Mountains of California. Gnarled, slow-growing and stunted by cold and wind, these trees add a fraction of a millimetre of wood in a bad year. The specimen called Methuselah has been dated by its rings at about 4,850 years, which means it germinated around 2833 BC, before the pyramids of Giza were built.\n\nMethuselah is the oldest single trunk, but not the oldest root system. On the bare slopes of Fulufjället in Dalarna, Sweden, stands a Norway spruce only four to five metres tall that Leif Kullman and Lisa Öberg named Old Tjikko after their dog. Carbon dating of its roots, announced in April 2008, gave about 9,550 years: the trunk is young, but the tree has kept sprouting new stems from the same roots since the end of the last Ice Age.",
+    "bodyDe": "Das Pflanzenreich führt sein eigenes Rekordbuch, und manche seiner Einträge sind kaum zu glauben. Die am schnellsten wachsende Pflanze überhaupt ist der Bambus, der kein Baum ist, sondern ein Riesengras: Die rund 1.400 Arten der Unterfamilie Bambusoideae sind Verwandte von Weizen und Reis. Vor allem in Süd- und Ostasien heimisch, treiben die Riesenarten wie Dendrocalamus giganteus – 1868 vom britischen Botaniker William Munro in seiner Bambus-Monografie beschrieben – hohle, verholzte Halme, die 30 bis 40 Meter erreichen – die Höhe eines zehnstöckigen Gebäudes. Einzigartig am Bambus ist die Geschwindigkeit, mit der er dorthin gelangt. Ein neuer Spross tritt bereits in seiner endgültigen Dicke aus dem Boden und streckt sich einfach nach oben, wobei sich seine übereinanderliegenden Segmente gleichzeitig verlängern; ein Wachstum von 70 Zentimetern an einem einzigen Tag ist gut belegt, und bei einer Art in Japan wurden mehr als 90 Zentimeter in 24 Stunden gemessen. Der Halm erreicht seine volle Höhe in einer einzigen Saison und hört dann für immer auf zu wachsen. Seine seltsamste Gewohnheit ist das Blühen: Viele Arten blühen nur alle 60 bis 130 Jahre, alle Individuen der Art gleichzeitig – und sterben dann.\n\n| Rekord | Pflanze | Wert | Wo |\n|---|---|---|---|\n| Schnellstes Wachstum | Bambus | Bis zu 70–90 cm pro Tag; Halme bis 40 m | Süd- und Ostasien |\n| Höchste lebende Pflanze | Küstenmammutbaum (Sequoia sempervirens) | Hyperion, 115,9 m | Nordkalifornien |\n| Größte Einzelblüte | Rafflesia (Rafflesia arnoldii) | Bis zu 1 m Durchmesser, 10 kg | Sumatra und Borneo |\n| Größter unverzweigter Blütenstand | Titanenwurz (Amorphophallus titanum) | Bis zu 3 m hoch | Sumatra |\n| Größte Schwimmblätter | Riesenseerose (Victoria amazonica) | Blätter bis 3 m Durchmesser | Amazonasbecken |\n| Ältestes lebendes Individuum | Langlebige Kiefer (Pinus longaeva) | Methuselah, etwa 4.850 Jahre | White Mountains, Kalifornien |\n| Ältestes Wurzelsystem | Gemeine Fichte „Old Tjikko“ | Wurzeln etwa 9.550 Jahre | Fulufjället, Schweden |\n\nDer Titel der höchsten Pflanze gehört dem Küstenmammutbaum Nordkaliforniens. Diese Nadelbäume wachsen im Nebelgürtel entlang des Pazifiks, wo das ganze Jahr über Feuchtigkeit an ihren Nadeln kondensiert. Das höchste bekannte Exemplar, Hyperion genannt und am 25. August 2006 im 1968 gegründeten Redwood-Nationalpark entdeckt, misst 115,9 Meter; sein genauer Standort wird geheim gehalten, um es vor Besuchern zu schützen. Küstenmammutbäume können über 2.000 Jahre alt werden und nach Feuer oder Fällung aus dem Stumpf wieder austreiben.\n\nDie größte Blüte bringt eine Pflanze hervor, die weder eigene Blätter noch Stängel noch Wurzeln besitzt. Rafflesia arnoldii, benannt nach dem Chirurgen Joseph Arnold, der sie 1818 auf Sumatra sammelte, lebt als Schmarotzer im Gewebe von Tetrastigma-Lianen in den Regenwäldern Sumatras und Borneos und zeigt sich erst, wenn ihre Knospe zu einer fleischigen roten Blüte von bis zu einem Meter Durchmesser und zehn Kilogramm Gewicht aufbricht. Sie riecht nach verwesendem Fleisch, um die Aasfliegen anzulocken, die sie bestäuben – was ihr den Namen Leichenblume eingebracht hat. Sumatra hält noch einen zweiten Blütenrekord: Die Titanenwurz, Amorphophallus titanum, 1878 vom italienischen Botaniker Odoardo Beccari entdeckt, bildet den größten unverzweigten Blütenstand der Welt, einen bis zu drei Meter hohen Kolben in einem gekräuselten purpurnen Hüllblatt. Auch sie stinkt nach Aas, heizt sich auf, um den Geruch zu verbreiten, und blüht nur selten, in vielen Gewächshäusern bloß alle fünf bis zehn Jahre, weshalb sich bei einer Blüte Schlangen bilden.\n\nDie Riesenseerose des Amazonas, Victoria amazonica, wurde im Oktober 1837 vom Botaniker John Lindley nach der jungen Königin Victoria benannt und wurde zur Sensation der viktorianischen Gewächshäuser. Ihre kreisrunden Blätter, bis zu drei Meter im Durchmesser und auf der Unterseite gerippt wie das Gewölbe einer Kathedrale, können ein kleines Kind tragen. Die Blüten öffnen sich am ersten Abend weiß, schließen ihre Käferbestäuber über Nacht ein und öffnen sich am zweiten Abend rosa.\n\nDie älteste von allen ist die Langlebige Kiefer aus den White Mountains Kaliforniens. Knorrig, langsam wachsend und von Kälte und Wind verkrüppelt, legen diese Bäume in einem schlechten Jahr nur den Bruchteil eines Millimeters Holz zu. Das Exemplar namens Methuselah wurde anhand seiner Jahresringe auf etwa 4.850 Jahre datiert – es keimte also um 2833 v. Chr., bevor die Pyramiden von Gizeh gebaut wurden.\n\nMethuselah ist der älteste einzelne Stamm, aber nicht das älteste Wurzelsystem. An den kahlen Hängen des Fulufjället in Dalarna, Schweden, steht eine nur vier bis fünf Meter hohe Fichte, die Leif Kullman und Lisa Öberg nach ihrem Hund Old Tjikko tauften. Die 2008 bekannt gegebene Radiokarbondatierung ihrer Wurzeln ergab etwa 9.550 Jahre: Der Stamm ist jung, doch der Baum treibt seit dem Ende der letzten Eiszeit immer neue Stämme aus denselben Wurzeln.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1175",
+   "baseHash": "213da3b92b24",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-092",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Trees by Their Latin Names",
+    "titleDe": "Bäume und ihre lateinischen Namen",
+    "bodyEn": "Every tree has two names: the one people call it and the Latin binomial that botanists use so that a beech in Bavaria and a beech in Belgium are recognisably the same plant. The genus names are often older than the science - most are simply the Roman words.\n\nPopulus is the poplar (a name Carl Linnaeus adopted for the genus in his *Species Plantarum* of 1753), a genus of about thirty fast-growing species that includes the black poplar, the white poplar and the aspen. The aspen (*Populus tremula*, in German *Zitterpappel*) is responsible for the poplar's reputation as the nervous tree of the forest: its round leaves hang on stalks that are flattened sideways, so the blade pivots at the slightest breath of air and the whole crown shivers and rustles when no other tree moves. \"To tremble like an aspen leaf\" is a proverb in German as in English. Poplar wood is soft and pale and goes into matches, pallets and plywood; Lombardy poplars line the roads of Europe, and the Roman name is thought to come from *arbor populi*, the \"people's tree\" planted in public squares. In 2006 the western balsam poplar (Populus trichocarpa) became the first tree to have its genome sequenced.\n\nBetula is the birch, the tree of the north. Its white bark, which peels in papery strips and is waterproof enough to have made canoes and roofing – and in medieval Novgorod served as writing material, as the first birch-bark letter, found on 26 July 1951, revealed – owes its colour to betulin, a white crystalline substance in the outer layer. Birches are pioneer trees that seed into any open ground, and the sap can be tapped in early spring. In Scandinavia the birch belongs to midsummer; in Germany it is the maypole of many villages.\n\nFagus is the beech. The European beech (*Fagus sylvatica*) is the most common broadleaved tree in German forests, making up about fifteen percent of all trees, and without human interference it would dominate most of Central Europe; in 2011 five old German beech forests joined the UNESCO World Heritage site of Europe's primeval beech forests. Its smooth grey bark, deep shade and carpets of copper leaves define the \"beech cathedral\"; its nuts fed pigs and, in hard times, people; and its wood gave German the word *Buch* (book), because early runes were carved on beech tablets.\n\nQuercus is the oak, the tree of kings, ships and barrels. European oaks (the pedunculate and the sessile oak) can live for a thousand years; their acorns fattened swine in the medieval woods; and their hard, tannin-rich timber built the fleets of England and the half-timbered houses of Germany. Today the most valuable use of oak may be the cask: the wood lends vanilla and spice to wine, cognac and whisky as they age, and under the Scotch Whisky Regulations of 2009 Scotch must mature in oak casks for at least three years.\n\nSalix is the willow, the tree of wet places, whose pliant shoots are woven into baskets and whose bark contains salicin, from which Raffaele Piria obtained salicylic acid in 1838. Chewing willow bark against fever was known to Hippocrates; in 1897 Felix Hoffmann at Bayer synthesised the related acetylsalicylic acid, sold as Aspirin from 1899.\n\nIlex is the holly, and it breaks the pattern of this list: no deciduous forest tree and, despite its needle-sharp leaf tips, no conifer either, but an evergreen broadleaf, a shrub or small tree whose glossy, spiny leaves stay green all winter. Linnaeus described the European holly as Ilex aquifolium in 1753, borrowing the Roman name of another evergreen, the holm oak, Quercus ilex. Only female hollies bear the red berries, which are poisonous to people but feed birds through the winter, and the branches have decorated homes at Christmas for centuries.\n\n| Latin genus | English | German |\n|---|---|---|\n| Populus | poplar | Pappel |\n| Betula | birch | Birke |\n| Fagus | beech | Buche |\n| Quercus | oak | Eiche |\n| Salix | willow | Weide |\n| Ilex | holly | Stechpalme |",
+    "bodyDe": "Jeder Baum hat zwei Namen: den, den die Leute ihm geben, und den lateinischen Doppelnamen, den die Botaniker benutzen, damit eine Buche in Bayern und eine Buche in Belgien als dieselbe Pflanze erkennbar sind. Die Gattungsnamen sind oft älter als die Wissenschaft – meist sind es schlicht die römischen Wörter.\n\nPopulus ist die Pappel (den römischen Namen übernahm Carl von Linné 1753 in seinen „Species Plantarum“ für die Gattung), eine Gattung von rund dreißig schnellwüchsigen Arten, zu der die Schwarzpappel, die Silberpappel und die Espe gehören. Die Espe (Populus tremula, die Zitterpappel) ist für den Ruf der Pappel als nervösester Baum des Waldes verantwortlich: Ihre runden Blätter hängen an seitlich abgeflachten Stielen, sodass die Blattspreite beim geringsten Luftzug kippt und die ganze Krone zittert und raschelt, während sich kein anderer Baum rührt. „Zittern wie Espenlaub“ ist im Deutschen wie im Englischen sprichwörtlich. Pappelholz ist weich und hell und wird zu Streichhölzern, Paletten und Sperrholz verarbeitet; Pyramidenpappeln säumen Europas Landstraßen, und der römische Name soll von arbor populi stammen, dem „Baum des Volkes“, der auf öffentlichen Plätzen gepflanzt wurde. 2006 wurde die Westliche Balsam-Pappel (Populus trichocarpa) der erste Baum mit vollständig sequenziertem Genom.\n\nBetula ist die Birke, der Baum des Nordens. Ihre weiße Rinde, die sich in papierdünnen Streifen ablöst und wasserdicht genug ist, um Kanus und Dächer zu decken – und im mittelalterlichen Nowgorod als Schreibmaterial diente, wie der erste Birkenrindenbrief zeigte, der am 26. Juli 1951 gefunden wurde –, verdankt ihre Farbe dem Betulin, einer weißen kristallinen Substanz in der äußeren Schicht. Birken sind Pionierbäume, die jede offene Fläche besiedeln, und ihr Saft lässt sich im zeitigen Frühjahr zapfen. In Skandinavien gehört die Birke zum Mittsommer; in Deutschland ist sie der Maibaum vieler Dörfer.\n\nFagus ist die Buche. Die Rotbuche (Fagus sylvatica) ist der häufigste Laubbaum in den deutschen Wäldern, sie stellt etwa fünfzehn Prozent aller Bäume, und ohne menschlichen Eingriff würde sie den größten Teil Mitteleuropas beherrschen; 2011 wurden fünf alte deutsche Buchenwälder in das UNESCO-Welterbe der europäischen Buchenurwälder aufgenommen. Ihre glatte graue Rinde, ihr tiefer Schatten und ihre Teppiche aus kupferfarbenem Laub prägen den „Buchendom“; ihre Bucheckern mästeten Schweine und in Notzeiten Menschen; und ihr Holz gab dem Deutschen das Wort „Buch“, weil frühe Runen auf Buchentafeln geritzt wurden.\n\nQuercus ist die Eiche, der Baum der Könige, Schiffe und Fässer. Die europäischen Eichen (Stieleiche und Traubeneiche) können tausend Jahre alt werden; ihre Eicheln mästeten in den mittelalterlichen Wäldern die Schweine, und ihr hartes, gerbstoffreiches Holz baute die Flotten Englands und die Fachwerkhäuser Deutschlands. Heute ist die wertvollste Verwendung der Eiche vielleicht das Fass: Das Holz gibt Wein, Cognac und Whisky beim Reifen Vanille und Würze mit, und nach den Scotch Whisky Regulations von 2009 muss Scotch mindestens drei Jahre in Eichenfässern reifen.\n\nSalix ist die Weide, der Baum der nassen Stellen, deren biegsame Ruten zu Körben geflochten werden und deren Rinde Salicin enthält, aus dem Raffaele Piria 1838 Salicylsäure gewann. Weidenrinde gegen Fieber zu kauen, kannte schon Hippokrates; 1897 synthetisierte Felix Hoffmann bei Bayer die verwandte Acetylsalicylsäure, seit 1899 als Aspirin verkauft.\n\nIlex ist die Stechpalme, und sie fällt aus der Reihe: kein sommergrüner Waldbaum und trotz ihrer nadelspitzen Blattzähne auch kein Nadelbaum, sondern ein immergrünes Laubgehölz, ein Strauch oder kleiner Baum, dessen glänzende, stachelige Blätter den ganzen Winter grün bleiben. Linné beschrieb die Europäische Stechpalme 1753 als Ilex aquifolium und lieh sich dafür den römischen Namen eines anderen Immergrünen, der Steineiche, Quercus ilex. Nur weibliche Stechpalmen tragen die roten Beeren, die für Menschen giftig sind, den Vögeln aber im Winter als Futter dienen, und ihre Zweige schmücken seit Jahrhunderten zu Weihnachten die Häuser.\n\n| Lateinische Gattung | Deutsch | Englisch |\n|---|---|---|\n| Populus | Pappel | poplar |\n| Betula | Birke | birch |\n| Fagus | Buche | beech |\n| Quercus | Eiche | oak |\n| Salix | Weide | willow |\n| Ilex | Stechpalme | holly |",
+    "notesEn": "Populus is the poplar genus; the rustling specifically describes the aspen (Populus tremula), which also counts as a correct answer.",
+    "notesDe": "Populus ist die Gattung der Pappeln; das Rascheln beschreibt genau genommen die Zitterpappel oder Espe (Populus tremula), die ebenfalls als richtige Antwort gilt."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1955",
+   "baseHash": "4ad41dcba62d",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-204",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Beautiful but Deadly: Poisonous Plants in the Garden",
+    "titleDe": "Schön, aber tödlich: Giftpflanzen im Garten",
+    "bodyEn": "Some of the most popular garden plants in Europe are also among the most poisonous, and several hide behind harmless-sounding folk names. Knowing what is growing in the flowerbed is the first step to keeping children, dogs and grazing animals safe.\n\nThe Oleander, Nerium oleander, is the Mediterranean's favourite shrub: evergreen, drought-proof and covered all summer in pink, white or red flowers. In German it is often called „Rosenlorbeer“, rose laurel, because its narrow leathery leaves resemble those of the bay tree, but every part of the plant contains oleandrin, a cardiac glycoside that acts on the heart like a massive overdose of digitalis. A few leaves can kill a horse, and even the smoke of burning branches is toxic. Yet it is also a symbol of survival: it is the official flower of Hiroshima, having been the first plant to bloom there after the atomic bombing of 1945.\n\nThe most poisonous plant in Europe is a garden perennial. Aconitum napellus, sold as Monkshood for its hooded blue flowers and known in German as „Eisenhut“, „Sturmhut“ or „Venuswagen“, contains aconitine, first isolated by the German pharmacists Philipp Lorenz Geiger and Ludwig Hesse in 1833, which can be absorbed through the skin from handling the roots. Two to four grams of the tuber are a lethal dose for an adult; in antiquity it was used to poison arrows and wolves, hence the older name wolfsbane, and gardeners are advised to wear gloves.\n\nThe Castor oil plant, Ricinus communis, is grown for its enormous palmate leaves and red, spiky seed capsules, and the German name „Wunderbaum“ reflects how fast it shoots up in a single season; in 2018 it was named Poisonous Plant of the Year. The oil pressed from its beans is harmless once heated, but the seeds also contain ricin, one of the most toxic proteins known, which on 7 September 1978 was used to murder the Bulgarian dissident Georgi Markov with a pellet fired from an umbrella.\n\nLaburnum, Laburnum anagyroides (scientifically described by Friedrich Kasimir Medikus in 1787), is the „Goldregen“ or golden rain of May, a small tree hung with yellow flower clusters like a wisteria. Its folk name „Bohnenbaum“, bean tree, points to the danger: the flat pods look like pea pods, and children who eat the seeds get a dose of cytisine, an alkaloid related to nicotine that causes vomiting, convulsions and, rarely, death. It is one of the most frequent causes of plant poisoning calls in Central Europe.\n\nThe Spindle tree, Euonymus europaeus, described by Linnaeus in 1753, is a native hedgerow shrub grown for its autumn display of pink, four-lobed capsules that split to reveal orange seeds. The German name „Pfaffenhütchen“, little priest's cap, describes the fruit; the alternative „Spindelstrauch“ recalls that the hard wood was used for spindles. All parts contain evonoside and other cardiac glycosides, and the attractive fruits are the usual source of poisoning.\n\nThe most widespread of them all is the first to flower. The Daffodil, Narcissus pseudonarcissus, described by Linnaeus in 1753 and known in German as „Osterglocke“ (Easter bell) or „Gelbe Narzisse“, contains lycorine and related alkaloids in every part, above all in the bulb. Daffodil bulbs are regularly mistaken for onions, and a bulb put into soup by mistake has sent schoolchildren to hospital with vomiting; the leaves should never be eaten either.\n\n| Plant | Botanical name | German folk names | Main toxin |\n|---|---|---|---|\n| Oleander | Nerium oleander | Rosenlorbeer | Oleandrin |\n| Monkshood | Aconitum napellus | Eisenhut, Sturmhut, Venuswagen | Aconitine |\n| Castor oil plant | Ricinus communis | Rizinus, Wunderbaum | Ricin |\n| Laburnum | Laburnum anagyroides | Goldregen, Bohnenbaum | Cytisine |\n| Spindle tree | Euonymus europaeus | Pfaffenhütchen, Spindelstrauch | Evonoside |\n| Daffodil | Narcissus pseudonarcissus | Osterglocke, Gelbe Narzisse | Lycorine |\n\nNone of these needs to be banished from the garden, but all of them deserve respect, and a call to the poison centre is never wasted.",
+    "bodyDe": "Einige der beliebtesten Gartenpflanzen Europas gehören zugleich zu den giftigsten, und mehrere verstecken sich hinter harmlos klingenden Volksnamen. Zu wissen, was im Beet wächst, ist der erste Schritt, um Kinder, Hunde und Weidetiere zu schützen.\n\nDer Oleander, Nerium oleander, ist der Lieblingsstrauch des Mittelmeerraums: immergrün, trockenheitsfest und den ganzen Sommer über mit rosa, weißen oder roten Blüten bedeckt. Im Deutschen heißt er oft „Rosenlorbeer“, weil seine schmalen, ledrigen Blätter denen des Lorbeerbaums ähneln, doch jeder Teil der Pflanze enthält Oleandrin, ein Herzglykosid, das auf das Herz wie eine massive Überdosis Digitalis wirkt. Wenige Blätter können ein Pferd töten, und sogar der Rauch verbrannter Zweige ist giftig. Zugleich ist er ein Symbol des Überlebens: Als offizielle Blume Hiroshimas erinnert er daran, dass er nach dem Atombombenabwurf 1945 als erste Pflanze dort wieder blühte.\n\nDie giftigste Pflanze Europas ist eine Gartenstaude. Aconitum napellus, wegen seiner kapuzenförmigen blauen Blüten als Eisenhut verkauft und auch „Sturmhut“ oder „Venuswagen“ genannt, enthält Aconitin, 1833 erstmals von Philipp Lorenz Geiger und Ludwig Hesse dargestellt, das beim Hantieren mit den Wurzeln über die Haut aufgenommen werden kann. Zwei bis vier Gramm der Knolle sind für einen Erwachsenen eine tödliche Dosis; in der Antike diente die Pflanze zum Vergiften von Pfeilen und Wölfen, daher der ältere Name Wolfswurz, und Gärtnern wird geraten, Handschuhe zu tragen.\n\nDer Rizinus, Ricinus communis, wird wegen seiner riesigen handförmigen Blätter und roten, stacheligen Samenkapseln gepflanzt, und der deutsche Name „Wunderbaum“ spiegelt wider, wie schnell er in einer einzigen Saison in die Höhe schießt; 2018 war er Giftpflanze des Jahres. Das aus seinen Bohnen gepresste Öl ist nach dem Erhitzen harmlos, doch die Samen enthalten auch Rizin, eines der giftigsten bekannten Proteine, mit dem am 7. September 1978 der bulgarische Dissident Georgi Markow durch ein aus einem Regenschirm abgefeuertes Kügelchen ermordet wurde.\n\nDer Goldregen, Laburnum anagyroides (1787 von Friedrich Kasimir Medikus wissenschaftlich beschrieben), ist der goldene Regen des Mai, ein kleiner Baum, an dem gelbe Blütentrauben wie bei einer Glyzinie hängen. Sein Volksname „Bohnenbaum“ deutet auf die Gefahr hin: Die flachen Hülsen sehen aus wie Erbsenschoten, und Kinder, die die Samen essen, bekommen eine Dosis Cytisin, ein mit dem Nikotin verwandtes Alkaloid, das Erbrechen, Krämpfe und in seltenen Fällen den Tod verursacht. Er gehört zu den häufigsten Anlässen für Anrufe bei den Giftnotrufzentralen Mitteleuropas.\n\nDas Pfaffenhütchen, Euonymus europaeus, 1753 von Linné beschrieben, ist ein heimischer Heckenstrauch, der wegen seines Herbstschmucks aus rosaroten, vierlappigen Kapseln gepflanzt wird, die aufspringen und orangefarbene Samen freigeben. Der deutsche Name beschreibt die Frucht; der alternative Name „Spindelstrauch“ erinnert daran, dass das harte Holz für Spindeln verwendet wurde. Alle Teile enthalten Evonosid und andere Herzglykoside, und die hübschen Früchte sind die übliche Quelle von Vergiftungen.\n\nDie verbreitetste von allen blüht als erste. Die Osterglocke (Gelbe Narzisse), Narcissus pseudonarcissus, 1753 von Linné beschrieben, enthält in allen Teilen Lycorin und verwandte Alkaloide, am meisten in der Zwiebel. Narzissenzwiebeln werden immer wieder mit Speisezwiebeln verwechselt, und eine versehentlich in die Suppe geratene Zwiebel hat schon Schulkinder mit Erbrechen ins Krankenhaus gebracht; auch die Blätter dürfen nie gegessen werden.\n\n| Pflanze | Botanischer Name | Deutsche Volksnamen | Hauptgift |\n|---|---|---|---|\n| Oleander | Nerium oleander | Rosenlorbeer | Oleandrin |\n| Eisenhut | Aconitum napellus | Sturmhut, Venuswagen | Aconitin |\n| Rizinus | Ricinus communis | Wunderbaum | Rizin |\n| Goldregen | Laburnum anagyroides | Bohnenbaum | Cytisin |\n| Pfaffenhütchen | Euonymus europaeus | Spindelstrauch | Evonosid |\n| Osterglocke | Narcissus pseudonarcissus | Gelbe Narzisse | Lycorin |\n\nKeine dieser Pflanzen muss aus dem Garten verbannt werden, aber alle verdienen Respekt, und ein Anruf beim Giftnotruf ist nie vergebens.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-028",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-076",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-380",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "Which kidney-destroying toxin, first isolated in 1962, makes the deadly webcap and the fool's webcap among the most dangerous mushrooms in Europe?",
+      "de": "Welches nierenzerstörende Gift, 1962 erstmals isoliert, macht den Spitzgebuckelten und den Orangefuchsigen Raukopf zu den gefährlichsten Pilzen Europas?",
+      "answerEn": "orellanine",
+      "answerDe": "Orellanin",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1962",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Stanisław Grzymała isolates orellanine, the kidney toxin of the webcap mushrooms",
+       "labelDe": "Stanisław Grzymała isoliert Orellanin, das Nierengift der Raukopf-Pilze"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Orellanine",
+       "title": "Orellanine – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which US state does the \"Humongous Fungus\" grow, a single dark honey fungus covering about nine square kilometres of forest?",
+      "de": "In welchem US-Bundesstaat wächst der „Humongous Fungus“, ein einzelner Dunkler Hallimasch, der rund neun Quadratkilometer Wald bedeckt?",
+      "answerEn": "Oregon",
+      "answerDe": "Oregon",
+      "timeline": {
+       "kind": "era",
+       "start": "-6000",
+       "end": null,
+       "precision": "millennium",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The Humongous Fungus in Oregon's Malheur National Forest starts to grow, an estimated 8,000 years ago",
+       "labelDe": "Der Humongous Fungus im Malheur National Forest in Oregon beginnt zu wachsen, geschätzt vor 8.000 Jahren"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Armillaria_ostoyae",
+       "title": "Armillaria ostoyae – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the composite organism formed by a fungus living in partnership with an alga, as Simon Schwendener proposed in 1867?",
+      "de": "Wie heißt der Doppelorganismus aus einem Pilz, der in Partnerschaft mit einer Alge lebt, wie Simon Schwendener 1867 vorschlug?",
+      "answerEn": "lichen",
+      "answerDe": "Flechte",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1867",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Simon Schwendener proposes that lichens are partnerships of a fungus and an alga",
+       "labelDe": "Simon Schwendener erkennt Flechten als Partnerschaften aus Pilz und Alge"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Simon_Schwendener",
+       "title": "Simon Schwendener – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Near which city in north-eastern France grows one of the largest known fairy rings, about 300 metres in radius and more than 700 years old?",
+      "de": "Bei welcher Stadt im Nordosten Frankreichs wächst einer der größten bekannten Hexenringe, mit rund 300 Metern Radius und über 700 Jahre alt?",
+      "answerEn": "Belfort",
+      "answerDe": "Belfort",
+      "timeline": {
+       "kind": "era",
+       "start": "1300",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The giant fairy ring near Belfort begins to spread (more than 700 years old)",
+       "labelDe": "Der Riesen-Hexenring bei Belfort beginnt sich auszubreiten (über 700 Jahre alt)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fairy_ring",
+       "title": "Fairy ring – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Fairy Rings and Humongous Fungi: The Hidden Kingdom Under the Forest Floor",
+    "titleDe": "Hexenringe und Riesenpilze: Das verborgene Reich unter dem Waldboden",
+    "bodyEn": "A mushroom is only the tip of the fungus. What we pick in autumn is the fruiting body, a short-lived structure for spreading spores; the organism itself is the mycelium, a web of fine threads running through soil, leaf litter or wood, sometimes for centuries. Fungi are neither plants nor animals but a kingdom of their own, and several of their strangest habits only make sense once you picture that hidden network.\n\nThe most visible of those habits is the fairy ring. A mycelium that starts from a single spore grows outward in every direction, using up the nutrients as it goes; the exhausted centre dies back, and the living edge becomes a widening circle. In summer and autumn it betrays itself as a ring of mushrooms, or as a band of grass greener or browner than the lawn around it. Folklore everywhere had an explanation. In England, Scandinavia and the Celtic lands the circles marked where elves or fairies had danced; in Germany each was a Hexenring, a witches' ring, trampled by witches dancing on Walpurgis Night, and stepping inside one was asking for trouble. Rings can be ancient: one of the largest known, near Belfort in north-eastern France, has a radius of about 300 metres and is thought to be more than 700 years old.\n\nThe record for the largest living organism of all, measured by area, also belongs to a fungus. In the Malheur National Forest in eastern Oregon, a single individual of the dark honey fungus (Armillaria ostoyae) covers roughly nine square kilometres; genetic tests showed that the honey-coloured mushrooms scattered over the whole area are one and the same organism, perhaps 8,000 years old. It is no gentle giant: its black, bootlace-like strands creep from root to root and kill the conifers they infect. The whale may be the largest animal, but by area this \"Humongous Fungus\" dwarfs every creature on Earth.\n\nNot every fungus is so easy to admire. The deadly webcap, Cortinarius rubellus, described by Mordecai Cubitt Cooke in 1883, grows in damp, acidic spruce forests and looks like an unremarkable rust-brown toadstool. Anyone puzzling over what this forest dweller might be should know the answer: a (deadly poisonous) mushroom. It and its relative, the fool's webcap, contain orellanine, a toxin first isolated by Stanisław Grzymała in 1962, ten years after a mass poisoning in Konin, Poland. Its symptoms arrive days or even weeks after the meal, when the kidneys may already be failing.\n\nSome fungi have given up living alone altogether. A lichen is a partnership of a fungus with an alga or a cyanobacterium: the fungus provides shelter, the partner makes food by photosynthesis. When the Swiss botanist Simon Schwendener proposed this dual nature in 1867, most lichenologists rejected the idea; today lichens are the textbook example of symbiosis, a word first used in biology for them.\n\n| Fungus | Claim to fame |\n|---|---|\n| Fairy-ring mushrooms | Circles of mushrooms, up to 300 m in radius near Belfort |\n| Dark honey fungus | Largest organism by area, about 9 km² in Oregon |\n| Deadly webcap | Kidney poison orellanine |\n| Lichen fungi | Live in partnership with algae |",
+    "bodyDe": "Ein Pilz, wie wir ihn sammeln, ist nur die Spitze des Pilzes. Was wir im Herbst pflücken, ist der Fruchtkörper, ein kurzlebiges Gebilde zum Verbreiten der Sporen; der eigentliche Organismus ist das Myzel, ein Geflecht feiner Fäden, das Boden, Laubstreu oder Holz durchzieht, manchmal über Jahrhunderte. Pilze sind weder Pflanzen noch Tiere, sondern ein eigenes Reich, und einige ihrer seltsamsten Eigenheiten versteht man erst, wenn man sich dieses verborgene Netz vorstellt.\n\nDie auffälligste davon ist der Hexenring. Ein Myzel, das aus einer einzigen Spore hervorgeht, wächst nach allen Seiten, und unterwegs verbraucht es die Nährstoffe; die erschöpfte Mitte stirbt ab, und der lebende Rand wird zu einem sich weitenden Kreis. Im Sommer und Herbst verrät er sich als Ring aus Pilzen oder als Streifen Gras, der grüner oder brauner ist als der Rasen ringsum. Die Volksüberlieferung hatte überall eine Erklärung. In England, Skandinavien und den keltischen Ländern tanzten dort Elfen oder Feen, weshalb man im Englischen vom Feenring spricht; in Deutschland war es ein Hexenring, festgetreten von Hexen, die in der Walpurgisnacht tanzten, und wer hineintrat, forderte das Unglück heraus. Solche Ringe können uralt sein: Einer der größten bekannten, bei Belfort im Nordosten Frankreichs, hat einen Radius von rund 300 Metern und soll über 700 Jahre alt sein.\n\nAuch der Rekord für das größte Lebewesen überhaupt, gemessen an der Fläche, gehört einem Pilz. Ein Dunkler Hallimasch (Armillaria ostoyae) im Malheur National Forest im Osten Oregons bedeckt rund neun Quadratkilometer; genetische Tests zeigten, dass die honigfarbenen Pilze, die über das ganze Gebiet verstreut stehen, ein und derselbe Organismus sind, vielleicht 8.000 Jahre alt. Ein sanfter Riese ist er nicht: Seine schwarzen, schnürsenkelartigen Stränge kriechen von Wurzel zu Wurzel und töten die Nadelbäume, die sie befallen. Der Wal mag das größte Tier sein, doch an Fläche stellt dieser „Humongous Fungus“ jedes Geschöpf der Erde in den Schatten.\n\nNicht jeder Pilz ist so leicht zu bewundern. Der Spitzgebuckelte Raukopf, Cortinarius rubellus, 1883 von Mordecai Cubitt Cooke beschrieben, wächst in feuchten, sauren Fichtenwäldern und sieht aus wie ein unscheinbarer rostbrauner Blätterpilz. Wer rätselt, was dieser Waldbewohner wohl ist, sollte die Antwort kennen: ein (tödlich giftiger) Pilz. Er und sein Verwandter, der Orangefuchsige Raukopf, enthalten Orellanin, ein Gift, das Stanisław Grzymała 1962 erstmals isolierte, zehn Jahre nach einer Massenvergiftung im polnischen Konin. Die Beschwerden setzen erst Tage oder sogar Wochen nach der Mahlzeit ein, wenn die Nieren womöglich schon versagen.\n\nManche Pilze haben das Alleinsein ganz aufgegeben. Eine Flechte ist eine Partnerschaft eines Pilzes mit einer Alge oder einem Cyanobakterium: Der Pilz bietet Schutz, der Partner erzeugt durch Photosynthese Nahrung. Als der Schweizer Botaniker Simon Schwendener 1867 diese Doppelnatur vorschlug, lehnten die meisten Flechtenkundler die Idee ab; heute sind Flechten das Lehrbuchbeispiel der Symbiose, ein Wort, das in der Biologie zuerst für sie gebraucht wurde.\n\n| Pilz | Berühmt für |\n|---|---|\n| Hexenring-Pilze | Pilzkreise, bei Belfort bis 300 m Radius |\n| Dunkler Hallimasch | Größtes Lebewesen nach Fläche, rund 9 km² in Oregon |\n| Spitzgebuckelter Raukopf | Nierengift Orellanin |\n| Flechtenpilze | Leben in Partnerschaft mit Algen |",
+    "notesEn": "The fairy ring is also called a fairy circle or elf ring; the deadly webcap is a gilled mushroom, so 'a fungus' or 'a toadstool' is also correct.",
+    "notesDe": "Der Hexenring heißt auch Feenring; der Spitzgebuckelte Raukopf ist ein Blätterpilz, „ein Pilz“ ist also ebenso richtig."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-149",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-154",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which thickener with the E number E 407, found in ice cream, puddings and plant-based desserts, takes its name from the Irish word for Irish moss?",
+      "de": "Welches Verdickungsmittel mit der E-Nummer E 407, enthalten in Speiseeis, Pudding und pflanzlichen Desserts, ist nach dem irischen Wort für Irisch Moos benannt?",
+      "answerEn": "carrageenan",
+      "answerDe": "Carrageen",
+      "timeline": {
+       "kind": "era",
+       "start": "400",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Irish moss, the original source of carrageenan, is used in Ireland as food and medicine from around 400 AD",
+       "labelDe": "Irisch Moos, die ursprüngliche Quelle des Carrageens, wird in Irland ab etwa 400 n. Chr. als Nahrung und Heilmittel genutzt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Carrageenan",
+       "title": "Carrageenan – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which gelling agent from red algae did Fanny Hesse suggest in 1882 as a solid medium for growing bacteria in Robert Koch's laboratory?",
+      "de": "Welches Geliermittel aus Rotalgen schlug Fanny Hesse 1882 als festen Nährboden für Bakterien im Labor von Robert Koch vor?",
+      "answerEn": "agar",
+      "answerDe": "Agar",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1882",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Fanny Hesse suggests agar as a solid culture medium for bacteria in Robert Koch's laboratory",
+       "labelDe": "Fanny Hesse schlägt Agar als festen Nährboden für Bakterien im Labor von Robert Koch vor"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Agar",
+       "title": "Agar – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which Japanese city do nori farmers hold a festival every 14 April at a monument to the British phycologist Kathleen Drew-Baker?",
+      "de": "In welcher japanischen Stadt feiern Nori-Bauern jedes Jahr am 14. April an einem Denkmal für die britische Algenforscherin Kathleen Drew-Baker ein Fest?",
+      "answerEn": "Uto",
+      "answerDe": "Uto",
+      "timeline": {
+       "kind": "creation",
+       "start": "1963",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A monument to Kathleen Drew-Baker is erected at the Sumiyoshi Shrine in Uto, Kumamoto",
+       "labelDe": "Am Sumiyoshi-Schrein in Uto (Kumamoto) wird ein Denkmal für Kathleen Drew-Baker errichtet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Kathleen_Mary_Drew-Baker",
+       "title": "Kathleen Mary Drew-Baker – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the Japanese name of the pressed, paper-thin sheets of red algae that are wrapped around sushi rolls?",
+      "de": "Wie heißen auf Japanisch die gepressten, hauchdünnen Blätter aus Rotalgen, in die Sushi-Rollen gewickelt werden?",
+      "answerEn": "nori",
+      "answerDe": "Nori",
+      "timeline": {
+       "kind": "creation",
+       "start": "1750",
+       "end": null,
+       "precision": "decade",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Makers in Asakusa, Edo, begin pressing nori into paper-thin sheets",
+       "labelDe": "Hersteller in Asakusa (Edo) beginnen, Nori zu hauchdünnen Blättern zu pressen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Nori",
+       "title": "Nori – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Irish Moss and Nori: The Red Algae on Our Plates",
+    "titleDe": "Irisch Moos und Nori: Die Rotalgen auf unseren Tellern",
+    "bodyEn": "Irish moss is a name that gets almost everything wrong. Chondrus crispus, the dark, parsley-like seaweed that clings to the rocks of the North Atlantic shore, is not a moss and not a lichen but a red alga, one of the thousands of species of Rhodophyta, whose red pigments let them photosynthesise in the dim blue light of deeper water. John Stackhouse described it scientifically in 1797, but people on the Irish coast had gathered it for food, fodder and medicine since around 400 AD, boiling it in milk into a pudding that sets by itself. The reason it sets is carrageenan, a family of gelling sugars named after carraigín, the Irish word for the seaweed. Today most carrageenan comes from farmed tropical seaweeds, and as E 407 it thickens ice cream, chocolate milk, puddings and plant-based desserts.\n\nA second red-algal gel made modern microbiology possible. Agar, boiled out of Gelidium and Gracilaria seaweeds, was being made in Japan by the 17th century. In 1882 Fanny Hesse, whose husband Walther worked in Robert Koch's laboratory in Berlin, suggested using the agar from her kitchen, which stays firm at body temperature where gelatine melts, as a solid ground for growing bacteria. Petri dishes have been filled with it ever since.\n\nThe best-known red alga, though, is the one wrapped around sushi. Nori is made from Pyropia species, formerly called Porphyra; it already appears in Japan's Taihō Code of 701 as a form of tax, and around 1750 makers in Asakusa in Edo began pressing it into paper-thin sheets with the methods of Japanese paper-making. For centuries the harvest depended on luck, because nobody knew where the young plants came from each autumn.\n\nThe answer came from Manchester. Kathleen Drew-Baker, a phycologist at the University of Manchester in the United Kingdom, studied a British species, Porphyra umbilicalis. In a paper in Nature in 1949 she showed that a tiny alga living inside old seashells, until then classified as a separate genus, Conchocelis, was in fact a hidden stage in the life cycle of the nori plant. Japanese scientists turned her discovery into artificial seeding on shells, and within a few years nori farming became reliable and productive. Drew-Baker died in 1957, but in Japan she is remembered as the \"Mother of the Sea\": in 1963 a monument to her was unveiled at the Sumiyoshi Shrine in Uto, Kumamoto Prefecture, where nori farmers hold a festival in her honour every 14 April.\n\n| Red alga product | Made from | Used for |\n|---|---|---|\n| carrageenan (E 407) | Irish moss and tropical seaweeds | ice cream, puddings |\n| agar | Gelidium, Gracilaria | Petri dishes, desserts |\n| nori | Pyropia (Porphyra) | sushi |",
+    "bodyDe": "Irisch Moos ist ein Name, der fast alles falsch macht. Chondrus crispus, der dunkle, petersilienartige Tang, der sich an die Felsen der nordatlantischen Küste klammert, ist weder ein Moos noch eine Flechte, sondern eine Rotalge, eine der Tausenden Arten der Rhodophyta, deren rote Farbstoffe ihnen die Photosynthese im schwachen blauen Licht tieferen Wassers erlauben. John Stackhouse beschrieb sie 1797 wissenschaftlich, doch die Menschen an der irischen Küste sammelten sie schon seit etwa 400 n. Chr. als Nahrung, Viehfutter und Heilmittel und kochten sie in Milch zu einem Pudding, der von selbst fest wird. Der Grund dafür ist Carrageen, eine Familie gelierender Zucker, benannt nach carraigín, dem irischen Wort für den Tang. Heute stammt das meiste Carrageen aus gezüchteten tropischen Algen, und als E 407 dickt es Speiseeis, Kakaomilch, Puddings und pflanzliche Desserts an.\n\nEin zweites Rotalgen-Gel machte die moderne Mikrobiologie möglich. Agar, aus Gelidium- und Gracilaria-Algen ausgekocht, wurde in Japan bereits im 17. Jahrhundert hergestellt. 1882 schlug Fanny Hesse, deren Mann Walther im Labor von Robert Koch in Berlin arbeitete, vor, den Agar aus ihrer Küche, der anders als Gelatine bei Körpertemperatur fest bleibt, als festen Nährboden für Bakterien zu verwenden. Seither werden Petrischalen damit gefüllt.\n\nDie bekannteste Rotalge ist aber die, die um Sushi gewickelt wird. Nori wird aus Pyropia-Arten gewonnen, früher Porphyra genannt; schon im japanischen Taihō-Kodex von 701 erscheint sie als Steuerabgabe, und um 1750 begannen Hersteller in Asakusa in Edo, sie nach den Methoden der japanischen Papierherstellung zu hauchdünnen Blättern zu pressen. Jahrhundertelang hing die Ernte vom Glück ab, denn niemand wusste, woher die jungen Pflanzen jeden Herbst kamen.\n\nDie Antwort kam aus Manchester. Kathleen Drew-Baker, Algenforscherin an der Universität Manchester in Großbritannien, untersuchte eine britische Art, Porphyra umbilicalis. In einem Aufsatz in Nature zeigte sie 1949, dass eine winzige Alge, die in alten Muschelschalen lebt und bis dahin als eigene Gattung Conchocelis galt, in Wahrheit ein verborgenes Stadium im Lebenszyklus der Nori-Pflanze ist. Japanische Forscher machten aus ihrer Entdeckung die künstliche Aussaat auf Muschelschalen, und binnen weniger Jahre wurde der Nori-Anbau verlässlich und ertragreich. Drew-Baker starb 1957, doch in Japan verehrt man sie als „Mutter des Meeres“: 1963 wurde am Sumiyoshi-Schrein in Uto in der Präfektur Kumamoto ein Denkmal für sie enthüllt, wo die Nori-Bauern jedes Jahr am 14. April ein Fest zu ihren Ehren feiern.\n\n| Rotalgen-Produkt | Gewonnen aus | Verwendet für |\n|---|---|---|\n| Carrageen (E 407) | Irisch Moos und tropischen Algen | Speiseeis, Pudding |\n| Agar | Gelidium, Gracilaria | Petrischalen, Desserts |\n| Nori | Pyropia (Porphyra) | Sushi |",
+    "notesEn": "Irish moss: 'a seaweed' is also accepted. Drew-Baker's discovery was made in England (University of Manchester); its effect was felt in Japan's nori farms.",
+    "notesDe": "Irisch Moos: „Seetang“ gilt ebenfalls. Drew-Bakers Entdeckung gelang in England (Universität Manchester); ihre Wirkung zeigte sich in Japans Nori-Zucht."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-067",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-172",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-363",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-397",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-331",
+      "category": 4
+     }
+    },
+    {
+     "generated": {
+      "en": "Which active ingredient of Viagra, first synthesised by Pfizer in 1989, keeps cut flowers fresh when dissolved in vase water?",
+      "de": "Welcher Wirkstoff von Viagra, 1989 erstmals bei Pfizer hergestellt, hält Schnittblumen frisch, wenn man ihn im Vasenwasser auflöst?",
+      "answerEn": "sildenafil",
+      "answerDe": "Sildenafil",
+      "timeline": {
+       "kind": "creation",
+       "start": "1989",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Pfizer chemists first synthesise sildenafil, later sold as Viagra",
+       "labelDe": "Chemiker bei Pfizer stellen erstmals Sildenafil her, das später als Viagra verkauft wird"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sildenafil",
+       "title": "Sildenafil – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the science of dating wood by its annual growth rings called, a term coined by the astronomer A. E. Douglass?",
+      "de": "Wie heißt die Wissenschaft, Holz anhand seiner Jahresringe zu datieren, ein Begriff des Astronomen A. E. Douglass?",
+      "answerEn": "dendrochronology",
+      "answerDe": "Dendrochronologie",
+      "timeline": {
+       "kind": "event",
+       "start": "1928",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A. E. Douglass coins the term dendrochronology for tree-ring dating",
+       "labelDe": "A. E. Douglass prägt den Begriff Dendrochronologie für die Jahresringdatierung"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Dendrochronology",
+       "title": "Dendrochronology – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "On which Pacific atoll without soil did Pan American Airways grow vegetables for its passengers by hydroponics in the 1930s?",
+      "de": "Auf welchem Pazifikatoll ohne Boden zog Pan American Airways in den 1930er-Jahren Gemüse für seine Passagiere in Hydrokultur?",
+      "answerEn": "Wake Island",
+      "answerDe": "Wake Island",
+      "timeline": {
+       "kind": "period",
+       "start": "1930",
+       "end": null,
+       "precision": "decade",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Pan Am grows hydroponic vegetables on Wake Island, a refuelling stop for its Pacific flying boats",
+       "labelDe": "Pan Am zieht auf Wake Island, einem Tankstopp seiner Pazifik-Flugboote, Gemüse in Hydrokultur"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hydroponics",
+       "title": "Hydroponics – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Fever, Air Filters and Viagra in the Vase: Surprising Plant Science",
+    "titleDe": "Fieber, Luftfilter und Viagra in der Vase: Überraschende Pflanzenforschung",
+    "bodyEn": "Plants cannot speak, walk away or run a temperature the way we do, and yet some of the most surprising findings of botany sound as if they could. A few of them have become favourite quiz questions, and a few have become myths.\n\nTake fever. When a plant is infected, for example by a root-rotting fungus, it often closes its stomata and transpires less water; with less evaporation to cool it, the leaf warms up. A raised leaf temperature, picked up with an infrared camera, can therefore reveal that a plant is sick days or weeks before any wilting or spotting is visible, as US Department of Agriculture researchers showed in 2007 with geraniums whose roots had been infected. Strictly speaking it is no fever, which in animals is an active defence, and some infections cool the leaves instead, but the comparison has stuck.\n\nVase life gave the world a stranger headline. In 1999 the British Medical Journal reported experiments in which a small dose of Viagra dissolved in the water kept cut flowers upright and fresh for up to a week longer than usual. The active ingredient, sildenafil, first synthesised by Pfizer chemists in 1989 and approved as a drug in 1998, seems to slow wilting through the plant's own signalling chemistry, though no florist has made it standard practice.\n\nHouseplants owe their reputation as air purifiers to a space agency. In 1989 NASA, together with the Associated Landscape Contractors of America, published the Clean Air Study led by B. C. Wolverton, which tested whether common houseplants could remove benzene, formaldehyde and trichloroethylene from sealed chambers, a question that mattered for future space stations. In the lab they could. In a real home, however, ordinary ventilation clears these compounds far faster: matching it would take somewhere between ten and a thousand plants per square metre.\n\nPlants grown without any soil at all are another research favourite. Hydroponics, the cultivation of plants in a nutrient solution instead of earth, got its name in 1937 from William Frederick Gericke of the University of California, Berkeley, built from the Greek words for water and labour. One of its first practical successes came on Wake Island, a Pacific atoll with no soil to speak of, where Pan American Airways grew fresh vegetables for the passengers of its transpacific flying boats in the 1930s.\n\nEven the oldest of these discoveries comes from an unexpected direction. That a tree adds one ring of wood each year, and that a wide ring records a good season and a narrow ring a poor one, was first written down not by a botanist but by Leonardo da Vinci, in the notes later collected as his Treatise on Painting. Centuries later the American astronomer A. E. Douglass, looking for traces of the sunspot cycle in old timber, turned the idea into a science and named it dendrochronology.",
+    "bodyDe": "Pflanzen können weder sprechen noch weglaufen noch Fieber bekommen wie wir, und doch klingen einige der überraschendsten Befunde der Botanik, als könnten sie es. Manche sind zu beliebten Quizfragen geworden, manche zu Mythen.\n\nNehmen wir das Fieber. Ist eine Pflanze infiziert, etwa durch einen Wurzelfäulepilz, schließt sie oft ihre Spaltöffnungen und verdunstet weniger Wasser; mit weniger Verdunstungskühlung erwärmt sich das Blatt. Eine erhöhte Blatttemperatur, mit einer Infrarotkamera gemessen, kann daher Tage oder Wochen vor jedem sichtbaren Welken oder Fleck verraten, dass eine Pflanze krank ist, wie Forscher des US-Landwirtschaftsministeriums 2007 an Geranien mit infizierten Wurzeln zeigten. Streng genommen ist es kein Fieber, das bei Tieren eine aktive Abwehr ist, und manche Infektionen kühlen die Blätter sogar ab, doch der Vergleich hat sich gehalten.\n\nDie Haltbarkeit von Schnittblumen lieferte eine noch seltsamere Schlagzeile. 1999 berichtete das British Medical Journal über Versuche, bei denen eine kleine Dosis Viagra im Vasenwasser Schnittblumen bis zu eine Woche länger aufrecht und frisch hielt. Der Wirkstoff Sildenafil, 1989 erstmals von Chemikern bei Pfizer hergestellt und 1998 als Arzneimittel zugelassen, scheint das Welken über die pflanzeneigenen Botenstoffe zu verlangsamen, auch wenn kein Florist daraus Standard gemacht hat.\n\nIhren Ruf als Luftreiniger verdanken Zimmerpflanzen einer Raumfahrtbehörde. 1989 veröffentlichte die NASA zusammen mit dem Verband amerikanischer Landschaftsgärtner (ALCA) die von B. C. Wolverton geleitete Clean Air Study, die prüfte, ob gewöhnliche Zimmerpflanzen Benzol, Formaldehyd und Trichlorethen aus abgeschlossenen Kammern entfernen können, eine Frage, die für künftige Raumstationen wichtig war. Im Labor konnten sie es. In einer echten Wohnung beseitigt jedoch schon das normale Lüften diese Stoffe weit schneller: Um mitzuhalten, bräuchte man zehn bis tausend Pflanzen pro Quadratmeter.\n\nPflanzen ganz ohne Erde sind ein weiteres Lieblingsthema der Forschung. Die Hydrokultur, der Anbau von Pflanzen in einer Nährlösung statt in Erde, erhielt ihren englischen Namen „hydroponics“ 1937 von William Frederick Gericke von der University of California in Berkeley, gebildet aus den griechischen Wörtern für Wasser und Arbeit. Einer ihrer ersten praktischen Erfolge gelang auf Wake Island, einem Pazifikatoll fast ohne Boden, wo Pan American Airways in den 1930er-Jahren frisches Gemüse für die Passagiere ihrer Transpazifik-Flugboote zog.\n\nSelbst die älteste dieser Entdeckungen kommt aus unerwarteter Richtung. Dass ein Baum jedes Jahr einen Holzring ansetzt und dass ein breiter Ring ein gutes, ein schmaler ein schlechtes Jahr verzeichnet, schrieb zuerst kein Botaniker auf, sondern Leonardo da Vinci, in den später als Traktat über die Malerei gesammelten Notizen. Jahrhunderte später machte der amerikanische Astronom A. E. Douglass, der in altem Holz nach Spuren des Sonnenfleckenzyklus suchte, daraus eine Wissenschaft und nannte sie Dendrochronologie.",
+    "notesEn": "Plants have no true fever response; the warming comes from reduced transpiration. The NASA study's lab results do not carry over to ordinary homes. 'Hydroponik' is also accepted for hydroponics.",
+    "notesDe": "Pflanzen haben kein echtes Fieber; die Erwärmung kommt von verringerter Verdunstung. Die Laborergebnisse der NASA-Studie lassen sich nicht auf normale Wohnungen übertragen. Für Hydrokultur gilt auch „Hydroponik“."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-391",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What are the usually green, leaf-like parts of a flower that enclose and protect the bud before it opens called?",
+      "de": "Wie heißen die meist grünen, blattartigen Teile einer Blüte, die die Knospe vor dem Aufblühen umhüllen und schützen?",
+      "answerEn": "sepals",
+      "answerDe": "Kelchblätter",
+      "timeline": {
+       "kind": "event",
+       "start": "1790",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Noël Martin Joseph de Necker coins the botanical term sepalum (sepal)",
+       "labelDe": "Noël Martin Joseph de Necker prägt den botanischen Fachbegriff sepalum (Kelchblatt)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Sepal",
+       "title": "Sepal – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the often sticky tip of a flower's pistil, on which the pollen must land, called?",
+      "de": "Wie heißt die oft klebrige Spitze des Blütenstempels, auf der der Pollen landen muss?",
+      "answerEn": "stigma",
+      "answerDe": "Narbe",
+      "timeline": {
+       "kind": "event",
+       "start": "1761",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Joseph Gottlieb Kölreuter publishes the first report of his hand-pollination and hybridisation experiments",
+       "labelDe": "Joseph Gottlieb Kölreuter veröffentlicht den ersten Bericht über seine Bestäubungs- und Kreuzungsversuche"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Joseph_Gottlieb_K%C3%B6lreuter",
+       "title": "Joseph Gottlieb Kölreuter – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which sugary liquid do many flowers offer visiting insects as a reward, as Christian Konrad Sprengel showed in 1793?",
+      "de": "Welche zuckerhaltige Flüssigkeit bieten viele Blüten Insekten als Belohnung an, wie Christian Konrad Sprengel 1793 zeigte?",
+      "answerEn": "nectar",
+      "answerDe": "Nektar",
+      "timeline": {
+       "kind": "creation",
+       "start": "1793",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Christian Konrad Sprengel publishes his book on the structure and pollination of flowers",
+       "labelDe": "Christian Konrad Sprengel veröffentlicht sein Buch über Bau und Befruchtung der Blumen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Christian_Konrad_Sprengel",
+       "title": "Christian Konrad Sprengel – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "By the number of which male flower organs did Carl Linnaeus sort plants into the classes of his sexual system?",
+      "de": "Nach der Zahl welcher männlichen Blütenorgane ordnete Carl von Linné die Pflanzen in die Klassen seines Sexualsystems?",
+      "answerEn": "stamens",
+      "answerDe": "Staubblätter",
+      "timeline": {
+       "kind": "creation",
+       "start": "1735",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Linnaeus publishes Systema Naturae, classifying plants by their stamens and pistils",
+       "labelDe": "Linné veröffentlicht das Systema Naturae und ordnet die Pflanzen nach Staubblättern und Stempeln"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Linnaean_taxonomy",
+       "title": "Linnaean taxonomy – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Anatomy of a Flower: From Sepal to Stigma",
+    "titleDe": "Anatomie einer Blüte: Vom Kelchblatt bis zur Narbe",
+    "bodyEn": "Behind their colours and scents, almost all flowers are built to the same plan: four rings of organs stacked on the tip of a shoot. Learning their names turns any walk through a garden into a botany lesson.\n\nThe outermost ring is the calyx, made up of the sepals: usually green, leaf-like parts that wrap and protect the bud before it opens and often sit like a small collar beneath the open flower. The word is surprisingly young: the botanist Noël Martin Joseph de Necker coined the Latin sepalum in 1790, from a Greek word for covering. Inside the sepals comes the corolla, the ring of petals, whose colours, patterns and scents are advertising aimed at pollinators.\n\nThe next ring holds the male organs, the stamens. Each consists of a slender stalk, the filament, topped by the anther, the part of the flower in which the pollen is produced; when it is ripe, the anther splits open and releases its pollen grains, often as a fine yellow dust. Stamens are so easy to count that Carl Linnaeus built his famous sexual system on them: in Systema Naturae of 1735 he sorted plants into classes by the number of their stamens and into orders by the number of their pistils. It was meant only as an aid to identification, and some contemporaries were scandalised to hear flowers described as marriages.\n\nAt the centre stands the female organ, the pistil. At its base sits the ovary, which holds the ovules and after fertilisation swells into the fruit; above it rises the style, and on top is the stigma, often sticky or feathery, where the pollen must land. That pollen is needed at all was first demonstrated by the German botanist Rudolf Jakob Camerarius in 1694, and from 1761 Joseph Gottlieb Kölreuter published his experiments in which he dusted pollen onto stigmas by hand to cross tobacco plants, producing the first scientifically documented plant hybrids.\n\nHow the pollen travels from anther to stigma was the question that absorbed Christian Konrad Sprengel, a school rector in Spandau. In his book of 1793, The Secret of Nature Discovered in the Structure and Fertilisation of Flowers, he showed that many flowers offer nectar, a sugary liquid, as a reward to visiting insects, that coloured lines on the petals guide them to it, and that the insects pick up pollen on the way in and carry it to the next flower. Largely ignored in his lifetime, the book founded the study of pollination.\n\n| Ring (outside to inside) | Parts | Job |\n|---|---|---|\n| calyx | sepals | protects the bud |\n| corolla | petals | attracts pollinators |\n| androecium | stamens: filament and anther | makes pollen |\n| gynoecium | pistil: stigma, style, ovary | receives pollen, forms seeds |",
+    "bodyDe": "Hinter ihren Farben und Düften sind fast alle Blüten nach demselben Plan gebaut: vier Kreise von Organen, übereinander an der Spitze eines Sprosses. Wer ihre Namen kennt, macht aus jedem Gartenspaziergang eine Botanikstunde.\n\nDer äußerste Kreis ist der Kelch, gebildet aus den Kelchblättern: meist grüne, blattartige Teile, die die Knospe vor dem Aufblühen umhüllen und schützen und oft wie ein kleiner Kragen unter der offenen Blüte sitzen. Das Fachwort ist erstaunlich jung: Der Botaniker Noël Martin Joseph de Necker prägte 1790 das lateinische sepalum, nach einem griechischen Wort für Hülle. Innerhalb der Kelchblätter folgt die Krone, der Kreis der Blütenblätter, deren Farben, Muster und Düfte Werbung für die Bestäuber sind.\n\nDer nächste Kreis trägt die männlichen Organe, die Staubblätter. Jedes besteht aus einem schlanken Stiel, dem Staubfaden, und dem darauf sitzenden Staubbeutel, dem Teil der Blüte, in dem der Pollen gebildet wird; ist er reif, springt der Staubbeutel auf und entlässt seine Pollenkörner, oft als feinen gelben Staub. Staubblätter lassen sich so leicht zählen, dass Carl von Linné sein berühmtes Sexualsystem auf ihnen aufbaute: In seinem Systema Naturae von 1735 ordnete er die Pflanzen nach der Zahl ihrer Staubblätter in Klassen und nach der Zahl ihrer Stempel in Ordnungen. Es war nur als Bestimmungshilfe gedacht, und manche Zeitgenossen empörten sich, Blüten als Ehen beschrieben zu sehen.\n\nIn der Mitte steht das weibliche Organ, der Stempel. An seinem Grund sitzt der Fruchtknoten, der die Samenanlagen birgt und nach der Befruchtung zur Frucht heranwächst; darüber erhebt sich der Griffel, und obenauf sitzt die Narbe, oft klebrig oder federig, auf der der Pollen landen muss. Dass es überhaupt Pollen braucht, wies der deutsche Botaniker Rudolf Jakob Camerarius 1694 als Erster nach, und ab 1761 veröffentlichte Joseph Gottlieb Kölreuter seine Versuche, bei denen er Pollen von Hand auf Narben stäubte, um Tabakpflanzen zu kreuzen, und so die ersten wissenschaftlich dokumentierten Pflanzenhybriden erzeugte.\n\nWie der Pollen vom Staubbeutel zur Narbe gelangt, beschäftigte Christian Konrad Sprengel, einen Schulrektor in Spandau. In seinem Buch von 1793, „Das entdeckte Geheimniss der Natur im Bau und in der Befruchtung der Blumen“, zeigte er, dass viele Blüten Insekten Nektar, eine zuckerhaltige Flüssigkeit, als Belohnung anbieten, dass farbige Linien auf den Blütenblättern sie dorthin leiten und dass die Insekten dabei Pollen aufnehmen und zur nächsten Blüte tragen. Zu Lebzeiten kaum beachtet, begründete das Buch die Bestäubungsforschung.\n\n| Kreis (von außen nach innen) | Teile | Aufgabe |\n|---|---|---|\n| Kelch | Kelchblätter | schützt die Knospe |\n| Krone | Blütenblätter | lockt Bestäuber an |\n| Andrözeum | Staubblätter: Staubfaden und Staubbeutel | bildet Pollen |\n| Gynözeum | Stempel: Narbe, Griffel, Fruchtknoten | empfängt Pollen, bildet Samen |",
+    "notesEn": "The anther sits on the filament; together they form the stamen, so 'stamen' is also acceptable for the pollen question.",
+    "notesDe": "Der Staubbeutel sitzt auf dem Staubfaden; zusammen bilden sie das Staubblatt, das für die Pollenfrage ebenfalls gilt."
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-309",
+   "category": 5,
+   "domain": "nature",
+   "sub": "plants",
+   "why": "Its answer \"Oak\" repeats fact f10254 in a2051 (an article may not hold the same answer twice). Alias it to f10254 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

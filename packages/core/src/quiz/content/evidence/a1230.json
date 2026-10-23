@@ -1,0 +1,467 @@
+{
+ "article": "a1230",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Storming_of_the_Bastille",
+   "title": "Storming of the Bastille – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:02.753Z",
+   "snapshot": "1e824bb7d13a10bb6c02d5cf512c117ac35254a6d73dc32a349b719a030f4903"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bastille_Day",
+   "title": "Bastille Day – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:37.928Z",
+   "snapshot": "e21f8008f2557099d2a6296df8cdd597bc4be582bad32567db21bf0be3c048e6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall",
+   "title": "Fall of the Berlin Wall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:36.366Z",
+   "snapshot": "aac8a20548edbcb5e15d64446667dd421a04127ec7da340b72798771101a4a46"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence",
+   "title": "United States Declaration of Independence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:39.244Z",
+   "snapshot": "3e3ac869c16fd9b28cd1466e0d97a674ec94e2e7438c2cd10d852729712e40dc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Assassination_of_Archduke_Franz_Ferdinand",
+   "title": "Assassination of Archduke Franz Ferdinand – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:52.253Z",
+   "snapshot": "ce697e0bb03df62b41d13b6709f3a38816bb11ec96bee9ef4fc0cb9d18160138"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Apollo_11",
+   "title": "Apollo 11 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:40.133Z",
+   "snapshot": "b3b46148e354d973415fce9b1893053a67cd5afeae934e053e8ea37333022e14"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/June_1944",
+   "title": "June 1944",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:41.144Z",
+   "snapshot": "cad7f4a5500e35884bd06d0349ef2e47885a30f0c1596e455a06c38c4d0e354d"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Mauer",
+   "title": "Berliner Mauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:38.372Z",
+   "snapshot": "f3c000083fa9ed36798bc48a0b73c783fddbff3160100b07c0a3f066a48eb17d"
+  },
+  "s9": {
+   "url": "https://www.bbc.com/news/world-europe-28033613",
+   "title": "Gavrilo Princip: Bosnian Serbs remember an assassin – BBC News",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:52.196Z",
+   "snapshot": "3387effd6e9c4956c91bfe40741d7bc7323d3fdaf61e1e3972f4dac2b5ca2804"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The storming of the Bastille",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The storming of the Bastille",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c103"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The fall of the Berlin Wall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The United States Declaration of Independence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The assassination of Archduke Franz Ferdinand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first Moon landing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12337",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tuesday",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-305"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12338",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Donnerstag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-255"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f06146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Storming of the Bastille (French: Prise de la Bastille [pʁiz də la bastij]), also known as Fall of the Bastille, which occurred in Paris, France, on 14 July 1789, was an act of political violence by revolutionary insurgents who attempted to storm and seize control of the medieval armoury,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The storming of the Bastille” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f06146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "French National Day is the anniversary of the Storming of the Bastille on 14 July 1789, a major event of the French Revolution, as well as the Fête de la Fédération that celebrated the unity of the French people on 14 July 1790.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The storming of the Bastille” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f06147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Fall of the Berlin Wall and the fortified inner German border occurred immediately...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The fall of the Berlin Wall” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f06148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Historian  Andrew Roberts wrote about the United States Declaration of Independence that only two (justifications) stand up  …",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The United States Declaration of Independence” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f06149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The assassination of Archduke Franz Ferdinand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The assassination of Archduke Franz Ferdinand”, “Das Attentat von Sarajevo”, “убийство эрцгерцога Франца Фердинанда”) on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f06150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The bag contained various items, which should have been left behind in the Lunar Module Eagle, including the 16mm Data Acquisition Camera that had been used to capture images of the first Moon landing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The first Moon landing” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f12337",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "June 6, 1944 (Tuesday)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tuesday” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:26:51.926Z",
+   "target": "f12338",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Zum Fall der Berliner Mauer kam es für alle Welt überraschend in der Nacht von Donnerstag, dem 9.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.926Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donnerstag” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:51:34Z",
+   "target": "f06149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "were assassinated by Bosnian Serb student Gavrilo Princip in Sarajevo on 28 June 1914.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:51:39Z",
+   "target": "f06149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the young Bosnian who shot Archduke Franz Ferdinand on 28 June 1914",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:34.212Z",
+   "target": "f06149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "were assassinated by Bosnian Serb student Gavrilo Princip in Sarajevo on 28 June 1914.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:34.212Z",
+   "target": "f06149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the young Bosnian who shot Archduke Franz Ferdinand on 28 June 1914",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:34.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  }
+ ]
+}

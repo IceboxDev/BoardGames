@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-216",
+ "image": "IMG20261007182747.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Wie heißt die Londoner Kirche, in der Prinz William und Kate Middleton heirateten?",
+   "de": "Wie heißt die Londoner Kirche, in der Prinz William und Kate Middleton heirateten?",
+   "en": "What is the name of the London church in which Prince William and Kate Middleton were married?",
+   "reworked": false,
+   "answerDe": "Westminster Abbey",
+   "answerEn": "Westminster Abbey",
+   "timeline": {
+    "kind": "event",
+    "start": "2011-04-29",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Wedding of Prince William and Catherine Middleton at Westminster Abbey",
+    "labelDe": "Hochzeit von Prinz William und Catherine Middleton in der Westminster Abbey"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Wedding_of_Prince_William_and_Catherine_Middleton",
+    "title": "Wedding of Prince William and Catherine Middleton",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Was wurde für den Film Jenseits von Afrika von Kalifornien nach Kenia gebracht: Massai-Darsteller, Löwen oder Akazienbäume?",
+   "de": "Welche Tiere wurden für den Film Jenseits von Afrika von Kalifornien nach Kenia gebracht?",
+   "en": "Which animals were brought from California to Kenya for the film Out of Africa?",
+   "reworked": true,
+   "answerDe": "Löwen",
+   "answerEn": "Lions",
+   "timeline": {
+    "kind": "creation",
+    "start": "1985-12-18",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Release of Sydney Pollack's film Out of Africa, shot on location in Kenya",
+    "labelDe": "Kinostart von Sydney Pollacks in Kenia gedrehtem Film Jenseits von Afrika"
+   },
+   "source": {
+    "url": "https://www.cineserie.com/news/cinema/out-of-africa-dimanche-23-aout-sur-arte-sydney-pollack-ne-voulait-pas-de-meryl-streep-3689254/amp/",
+    "title": "Out of Africa : Sydney Pollack ne voulait pas de Meryl Streep",
+    "lang": "fr"
+   },
+   "notes": "Card offered Maasai extras / lions / acacia trees; reworked to an open question. Kenya banned filming with wild animals, so trained lions were brought from California.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welchen Schuhverschluss ließ sich Whitcomb Judson in den 1890er-Jahren patentieren: Schnürsenkel, Schnallengurt oder Reißverschluss?",
+   "de": "Welchen Schuhverschluss ließ sich Whitcomb Judson in den 1890er-Jahren patentieren?",
+   "en": "Which shoe fastener did Whitcomb Judson patent in the 1890s?",
+   "reworked": true,
+   "answerDe": "Reißverschluss",
+   "answerEn": "Zip fastener (zipper)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1893",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Whitcomb Judson patents his 'clasp locker', the forerunner of the zip fastener",
+    "labelDe": "Whitcomb Judson patentiert seinen „Clasp Locker“, den Vorläufer des Reißverschlusses"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Whitcomb_L._Judson",
+    "title": "Whitcomb L. Judson",
+    "lang": "en"
+   },
+   "notes": "Card offered shoelace / buckle strap / zip fastener; reworked to an open question. Judson called it a 'clasp locker'; its first use was on shoes and high boots.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher Knolle widmete der chilenische Literaturnobelpreisträger Pablo Neruda eine Ode: der Tulpe, Zwiebel oder Kartoffel?",
+   "de": "Welcher Knolle, die aus Südamerika nach Europa kam, widmete der chilenische Literaturnobelpreisträger Pablo Neruda eine Ode?",
+   "en": "To which tuber, which came to Europe from South America, did the Chilean Nobel laureate in literature Pablo Neruda dedicate an ode?",
+   "reworked": true,
+   "answerDe": "Kartoffel",
+   "answerEn": "Potato",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1904-07-12",
+    "end": "1973-09-23",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pablo Neruda, Chilean poet and 1971 Nobel laureate in literature",
+    "labelDe": "Pablo Neruda, chilenischer Dichter und Literaturnobelpreisträger 1971"
+   },
+   "source": {
+    "url": "https://www.tiposinfames.com/libros/odas-a-la-comida-y-otros-placeres-elementales/68649/",
+    "title": "Odas a la comida y otros placeres elementales",
+    "lang": "es"
+   },
+   "notes": "Card offered tulip / onion / potato; reworked to an open question. Neruda wrote both an 'Oda a la cebolla' (Odas elementales, 1954) and an 'Oda a la papa', so the card's options are ambiguous; only the potato is botanically a tuber (Knolle), and the reworded question narrows to it.",
+   "domain": "literature",
+   "sub": "poetry"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wie viele Zeichen kann bei Twitter eine Kurznachricht maximal enthalten?",
+   "de": "Wie viele Zeichen kann bei Twitter eine Kurznachricht maximal enthalten?",
+   "en": "What is the maximum number of characters a short message on Twitter can contain?",
+   "reworked": false,
+   "answerDe": "280",
+   "answerEn": "280",
+   "timeline": {
+    "kind": "event",
+    "start": "2017",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Twitter doubles its character limit for tweets from 140 to 280",
+    "labelDe": "Twitter verdoppelt das Zeichenlimit für Tweets von 140 auf 280"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/X_(soziales_Netzwerk)",
+    "title": "X (soziales Netzwerk)",
+    "lang": "de"
+   },
+   "notes": "Dated premise: the card was probably written for the old limit of 140 characters, raised to 280 in 2017. Twitter is now called X, and paying subscribers may post up to 4,000 characters.",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wer bouldert, betreibt welchen Sport: Klettern, Gewichtheben oder Segeln?",
+   "de": "Wer bouldert, betreibt welchen Sport?",
+   "en": "Someone who boulders practises which sport?",
+   "reworked": true,
+   "answerDe": "Klettern",
+   "answerEn": "Climbing",
+   "timeline": {
+    "kind": "era",
+    "start": "1970",
+    "end": null,
+    "precision": "decade",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bouldering becomes a discipline of its own within sport climbing",
+    "labelDe": "Bouldern wird zu einer eigenen Disziplin des Sportkletterns"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bouldern",
+    "title": "Bouldern",
+    "lang": "de"
+   },
+   "notes": "Card offered climbing / weightlifting / sailing; reworked to an open question. Bouldering is climbing without rope or harness up to jump-off height.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

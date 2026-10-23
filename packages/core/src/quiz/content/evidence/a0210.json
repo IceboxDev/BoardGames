@@ -1,0 +1,472 @@
+{
+ "article": "a0210",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Catherine_of_Aragon",
+   "title": "Catherine of Aragon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:08.694Z",
+   "snapshot": "67d9e6fa2b41187c24912115ad3797581684b45ed782f6abd79fb0a4a9354b30"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ninety-five_Theses",
+   "title": "Ninety-five Theses – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:09.800Z",
+   "snapshot": "3b669956a9d8334f9409458591825d92be0ffd991bdccd65aa87cfa11525a406"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Edict_of_Fontainebleau",
+   "title": "Edict of Fontainebleau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:10.712Z",
+   "snapshot": "b469ef1fe4ec9475a1e5c4f7f65fd5488c17a966b0d916351d0613888879e904"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Acts_of_Supremacy",
+   "title": "Acts of Supremacy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:11.720Z",
+   "snapshot": "70aef18b35312214d93d756e4412566b0d3682cba792f88c31780b0c038a24ff"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gunpowder_Plot",
+   "title": "Gunpowder Plot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:36:09.180Z",
+   "snapshot": "955642c96f34d445a86069d6f70a1e5a6bdc823c044d4390f56784e953621145"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Henry_VIII",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:12.929Z",
+   "snapshot": "7d3fa45612a96d6b9f7b04488cf3dcb4dc09894f3cf19ee2e0f2891a6ca4da2e"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Defenestrations_of_Prague",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:13.830Z",
+   "snapshot": "1bfefbda3aa094dc11df5186c88c74f2b2f91bd54692653fc71b4c2ef85cde1a"
+  },
+  "s8": {
+   "url": "https://www.churchofengland.org/about/history-church-england",
+   "title": "A history of the Church of England",
+   "publisher": "The Church of England",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:36.462Z",
+   "snapshot": "cd23485f34d21324c8fc021fb2eb43f65e2e040ebf164ff64ad9ba19e5ccb910"
+  },
+  "s9": {
+   "url": "https://www.luther.de/en/anschlag.html",
+   "title": "The Posting of the 95 Theses",
+   "publisher": "luther.de",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:36.584Z",
+   "snapshot": "d0782ba028879eecee437ec215a75d01f18addbafbd0365aea979a0b8f046e08"
+  },
+  "s10": {
+   "url": "https://www.gutenberg.org/cache/epub/274/pg274.txt",
+   "title": "Disputation of Doctor Martin Luther on the Power and Efficacy of Indulgences",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:37.103Z",
+   "snapshot": "c3f3269e59e494252794c25a1f43ff64a551dc6bcb7b62129b21c2031e9d3799"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Pope's refusal to annul his marriage to Catherine of Aragon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The sale of indulgences",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The revocation of the Edict of Nantes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Act of Supremacy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12262",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "das House of Lords",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-041"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:12.328Z",
+   "target": "f01046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Pope's refusal to annul his marriage to Catherine of Aragon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Pope's refusal to annul his marriage to Catherine of Aragon”, “Die Weigerung des Papstes, seine Ehe mit Katharina von Aragón zu annullieren”, “Отказ папы аннулировать его брак с Екатериной Арагонской”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:12.328Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The sale of indulgences",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The sale of indulgences”, “Der Ablasshandel”, “Торговля индульгенциями”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:12.328Z",
+   "target": "f01049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Edict of Fontainebleau (18 October 1685, published 22 October 1685), also known as the Revocation of the Edict of Nantes, was an edict issued by King Louis XIV of France, repealing the rights and freedoms afforded to the Huguenots and all non-catholic religions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The revocation of the Edict of Nantes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:12.328Z",
+   "target": "f01050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first Act of Supremacy, the Act of Supremacy 1534 (26 Hen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Act of Supremacy” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:12.328Z",
+   "target": "f12262",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "November 1605 das House of Lords während der Parlamentseröffnung in die Luft zu sprengen, den protestantischen Herrscher zu töten und eine katholische Restauration in England einzuleiten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:12.328Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “das House of Lords” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:34:25Z",
+   "target": "f01046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The catalyst for this decision was the Pope's refusal to annul the marriage of Henry VIII and Catherine of Aragon",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:34:29Z",
+   "target": "f01046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "When Pope Clement VII refused to annul the marriage, Henry defied him by assuming supremacy over religious matters in England and marrying Anne secretly in 1532.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:34:33Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "This was triggered by the scandal of certain Catholic clergy who were supposedly selling plenary indulgences in Germany",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:38Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The practice of buying indulgences, which quasi replaced confession and allowed people to buy their salvation, was completely repulsive to Luther.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:34:42Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Title: Disputation of Doctor Martin Luther on the Power and Efficacy of Indulgences",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "The text of the 95 Theses itself: its title names indulgences as the subject."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:31.093Z",
+   "target": "f01046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The catalyst for this decision was the Pope's refusal to annul the marriage of Henry VIII and Catherine of Aragon",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:31.093Z",
+   "target": "f01046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "When Pope Clement VII refused to annul the marriage, Henry defied him by assuming supremacy over religious matters in England and marrying Anne secretly in 1532.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:31.093Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "This was triggered by the scandal of certain Catholic clergy who were supposedly selling plenary indulgences in Germany",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:31.093Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The practice of buying indulgences, which quasi replaced confession and allowed people to buy their salvation, was completely repulsive to Luther.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:31.093Z",
+   "target": "f01047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Title: Disputation of Doctor Martin Luther on the Power and Efficacy of Indulgences",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:31.093Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  }
+ ]
+}

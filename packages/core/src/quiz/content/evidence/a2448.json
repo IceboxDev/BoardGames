@@ -1,0 +1,440 @@
+{
+ "article": "a2448",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Wolkenatlas",
+   "title": "Der Wolkenatlas",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:49.102Z",
+   "snapshot": "95451706d12093ef000904d5479d2862c2c69c0c4d3275054d3248d79feb8cf3"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Raum_(Roman)",
+   "title": "Raum (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:49.933Z",
+   "snapshot": "3caf470231e2820da5ea3b275e64db57bf4320d0d84578b65c3b8969539bc4f2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/All_the_King%27s_Men_(2006_film)",
+   "title": "All the King's Men (2006 film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:52.020Z",
+   "snapshot": "590eb9b9a6e19d909419d865e4130414972b017bb5681087ed5fd7d495d13fbe"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Alles_Licht,_das_wir_nicht_sehen",
+   "title": "Alles Licht, das wir nicht sehen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:51.181Z",
+   "snapshot": "dcc45579fe785b015a43e6c077df6bf3913010c686560bbdd8862edf0a27ef8a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_(novel)",
+   "title": "The Devil Wears Prada (novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:53.044Z",
+   "snapshot": "d81d01002e79395ef3b6e2d1d975ea362a22e7b68a80a11c3492b578564e4349"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_(film)",
+   "title": "The Devil Wears Prada (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:54.196Z",
+   "snapshot": "6adc794f4f658b523220c601149788e227e79e9eef362acb0703c65d9378c32e"
+  },
+  "s7": {
+   "url": "https://www.litcharts.com/lit/all-the-light-we-cannot-see/symbols/the-sea-of-flames",
+   "title": "The Sea of Flames Symbol in All the Light We Cannot See",
+   "publisher": "LitCharts",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:22.061Z",
+   "snapshot": "65cb809cfaa5d96dc9a7e4a4ba7908b16454365e41eace80b87c40dda1dcbb2e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/All_the_Light_We_Cannot_See",
+   "title": "All the Light We Cannot See",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:22.011Z",
+   "snapshot": "e44f30e35020214826694d2b3450ffb7207d377dae8bb1a8dfe0a9dc84aea1dd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Wolkenatlas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9; transcript tp-318"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "All the King's Men",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-150"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein blauer Diamant",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-176"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anna Wintour",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-160"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Meryl Streep",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:21.644Z",
+   "target": "f12884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Wolkenatlas, englischer Originaltitel Cloud Atlas, ist ein 2004 erschienener Roman des englischen Schriftstellers David Mitchell.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Wolkenatlas” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:21.644Z",
+   "target": "f12885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raum (englisch Room) ist ein Roman der irisch-kanadischen Schriftstellerin Emma Donoghue aus dem Jahr 2010.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raum” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:21.644Z",
+   "target": "f12886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "All the King's Men is a 2006 American political drama film written, directed and produced by Steven Zaillian based on the 1946 Pulitzer Prize–winning novel of the same name by Robert Penn Warren.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “All the King's Men” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:21.644Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein blauer Diamant",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ein blauer Diamant”, “A blue diamond”, “Голубой бриллиант”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:21.644Z",
+   "target": "f12888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Before writing the novel, Weisberger had worked as a personal assistant to American Vogue editor Anna Wintour, much like the novel's protagonist works for a powerful fashion magazine editor, who also happens to be British like Wintour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anna Wintour” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:21.644Z",
+   "target": "f12890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The film stars Meryl Streep, Anne Hathaway, Stanley Tucci, and Emily Blunt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meryl Streep” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:54:14Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The beautiful, priceless diamond known at the Sea of Flames could be termed the “MacGuffin” of All the Light We Cannot See",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page quotes the novel's 'blue stone as big as a pigeon's egg'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:54:16Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "produces a “blue stone as pig as a pigeon’s egg” from the safe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Colour: blue (LitCharts' typo 'pig' for 'big' is verbatim)"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:54:20Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Um diesen unermesslich wertvollen blauen Diamanten mit tanzenden „roten Flammen“ in seinem Zentrum rankt sich jedoch eine Legende",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:54:24Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Marie-Laure hears stories about a diamond known as the Sea of Flames that is hidden within the museum",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:04.627Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "produces a “blue stone as pig as a pigeon’s egg” from the safe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:04.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:04.627Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Um diesen unermesslich wertvollen blauen Diamanten mit tanzenden „roten Flammen“ in seinem Zentrum rankt sich jedoch eine Legende",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:04.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:04.627Z",
+   "target": "f12887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Marie-Laure hears stories about a diamond known as the Sea of Flames that is hidden within the museum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:04.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  }
+ ]
+}

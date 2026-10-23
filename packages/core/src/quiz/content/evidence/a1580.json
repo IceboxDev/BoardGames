@@ -1,0 +1,406 @@
+{
+ "article": "a1580",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Berserker",
+   "title": "Berserker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:48.000Z",
+   "snapshot": "c202e660080e1cc8496fe1a994dbb86a7740393de838b28bf6f69dd0ac6f51dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/H%C3%A1konarm%C3%A1l",
+   "title": "Hákonarmál – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:48.917Z",
+   "snapshot": "0c2221e3911a3b1b1f2b88a61c618d5b76a10db50181b417688aeb8bf2f86cf3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Huginn_and_Muninn",
+   "title": "Huginn and Muninn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:12.470Z",
+   "snapshot": "29b69cf8fabc5fbd6008009bece56cee7fb3251ca523b9d9ec422231e99d0347"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Hugin_und_Munin",
+   "title": "Hugin und Munin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:09:46.479Z",
+   "snapshot": "f13fa70a7a23033270020eaa9d00965d30fc589ca3536fc4fe51982d10ee5ac5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Geri_and_Freki",
+   "title": "Geri and Freki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:49.941Z",
+   "snapshot": "4cbea1f3c2b4a778b02a096f883d7127447f4379f70445c5b6fe623a44676ec6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gr%C3%ADmnism%C3%A1l",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:09:50.926Z",
+   "snapshot": "49cdf15fc99871a0a7650daa7bdc7b6d97c35fe9335ccfd9af1d89fa0b7316ca"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Einherjar",
+   "title": "Einherjar – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:03:49Z"
+  },
+  "s8": {
+   "url": "https://norse-mythology.org/the-einherjar/",
+   "title": "The Einherjar – Norse Mythology for Smart People",
+   "publisher": "Norse Mythology for Smart People (Daniel McCoy)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:53.242Z",
+   "snapshot": "3d1871c5ddd68afeccbd50351a29ffb3ea1bd3c85a6dd2fa9beedef2dfcfde8f"
+  },
+  "s9": {
+   "url": "https://sacred-texts.com/neu/pre/pre04.htm",
+   "title": "Gylfaginning – The Prose Edda (tr. Brodeur 1916)",
+   "publisher": "sacred-texts.com",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:03:52Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "berserkers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c132"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Einherjar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hugin and Munin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Raben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-152"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Geri and Freki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Geri and Freki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 39"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:46.744Z",
+   "target": "f07896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the Old Norse written corpus, berserkers (Old Norse: berserkir) were Scandinavian warriors who were said to have fought in a trance-like fury, a characteristic which later gave rise to the modern English adjective berserk 'furiously violent or out of control'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “berserkers” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:46.744Z",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Einherjar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Einherjar”, “Einherjer”, “эйнхерии”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:46.744Z",
+   "target": "f07900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Norse mythology, Huginn and Muninn (sometimes anglicized as Hugin and Munin;  or ; roughly \"mind and will\" – see § Etymology) are a pair of ravens that serve under the god Odin, flying around the world (Midgard) and bringing him information and gossip.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hugin and Munin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:46.744Z",
+   "target": "f10777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hugin und Munin sind in der nordischen Mythologie die zwei Raben Odins, der den Beinamen Hrafnáss „Rabengott“ trägt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raben” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:46.744Z",
+   "target": "f28513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In Norse mythology, Geri and Freki (roughly \"Greed\" and \"Glutton\") are two wolves which are said to accompany the god Odin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:46.744Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geri and Freki” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:46.744Z",
+   "target": "f28513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Geri and Freki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Geri and Freki”, “Geri und Freki”, “Гери и Фреки”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:03:49Z",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "are those who have died in battle and are brought to Valhalla by valkyries",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:03:51Z",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "are the band of the spirits of deceased elite warriors who dwell in Valhalla, the magnificent hall of the god Odin",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:03:52Z",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These bear the Einherjar ale.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gylfaginning 36: the Valkyries serve the Einherjar in Valhall"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:34.230Z",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "are the band of the spirits of deceased elite warriors who dwell in Valhalla, the magnificent hall of the god Odin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:34.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:34.230Z",
+   "target": "f07899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Einherjar - Norse Mythology for Smart People",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:34.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Einherjar” is on the snapshot of s8"
+  }
+ ]
+}

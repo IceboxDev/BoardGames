@@ -1,0 +1,281 @@
+{
+ "article": "a1959",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Meisterh%C3%A4user_Dessau",
+   "title": "Meisterhäuser Dessau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:33:07.958Z",
+   "snapshot": "46f5e2be65f23f112eebfa3ff507fd317f72b73ea805c03610e95495c34b4580"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wassily_chair",
+   "title": "Wassily chair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:10.560Z",
+   "snapshot": "a1a89cc90da392b9413199fdee319592406165507971a21185f6ca2c21fd5132"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bauhaus",
+   "title": "Bauhaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:45.873Z",
+   "snapshot": "3c4a71c91a284426fff40bf09fdfbdafbb86c2e0698f979581ea222c320c0847"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hannes_Meyer",
+   "title": "Hannes Meyer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:55.377Z",
+   "snapshot": "0e7c3ccc85d33517b323fd1aa9de2b4a5e76fb2651a5d02a20a790f29ae4f156"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bauhaus",
+   "title": "Bauhaus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:43.128Z",
+   "snapshot": "a81040a24cbea491e39651418e6689948f9f554bcbf1fbb5a01e3f49ce3c928b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wassily Kandinsky",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marcel Breuer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ludwig Mies van der Rohe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hannes Meyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Walter Gropius",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-124"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dessau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-251"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:54.312Z",
+   "target": "f09791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Direktorenhaus wurde von Walter Gropius genutzt, die Doppelhäuser wurden von László Moholy-Nagy und Lyonel Feininger, Georg Muche und Oskar Schlemmer, sowie von Wassily Kandinsky und Paul Klee bewohnt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wassily Kandinsky” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:54.312Z",
+   "target": "f09792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wassily chair, also known as the Model B3 chair, was designed by Marcel Breuer in 1925–1926 while he was the head of the cabinet-making workshop at the Bauhaus, in Dessau, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marcel Breuer” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:54.312Z",
+   "target": "f09793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "During this period, it had three architect-directors: Walter Gropius from 1919 to 1928; Hannes Meyer from 1928 to 1930; and Ludwig Mies van der Rohe from 1930 until 1933, when the school was closed by its own leadership under pressure from the Nazi regime, having been painted as a centre of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Mies van der Rohe” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:54.312Z",
+   "target": "f09794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "PART 1: Podcast about Hannes Meyer's way to the Bauhaus and his changes in teaching at the Bauhaus (1889–1930) with Dara Kiese and Thomas Flierl on bauhaus faces podcast, host: Dr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannes Meyer” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:54.312Z",
+   "target": "f10634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Staatliche Bauhaus, inzwischen meist nur Bauhaus, war eine 1919 von Walter Gropius in Weimar gegründete Kunstschule.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walter Gropius” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:54.312Z",
+   "target": "f10635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1925 erfolgte der Umzug nach Dessau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.312Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dessau” is on the snapshot of s5"
+  }
+ ]
+}

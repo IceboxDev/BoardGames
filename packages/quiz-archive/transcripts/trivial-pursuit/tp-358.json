@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-358",
+ "image": "IMG20261007174428.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Über welcher Stadt lag 2013 nach einer Verdampfung in einer Lebensmittelaromafabrik stundenlang ein Maggiduft: Leipzig, Köln oder Braunschweig?",
+   "de": "Über welcher Stadt lag 2013 nach einem Zwischenfall in einer Lebensmittelaromafabrik stundenlang ein Maggiduft?",
+   "en": "Over which city did a smell of Maggi seasoning hang for hours in 2013 after an incident at a food-flavouring factory?",
+   "reworked": true,
+   "answerDe": "Köln",
+   "answerEn": "Cologne",
+   "timeline": {
+    "kind": "event",
+    "start": "2013-06-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A fire at a food-flavouring plant near Neuss and Dormagen makes Cologne smell of Maggi",
+    "labelDe": "Ein Brand in einer Aromenfabrik bei Neuss und Dormagen lässt Köln nach Maggi riechen"
+   },
+   "source": {
+    "url": "https://www.handelsblatt.com/arts_und_style/maggikalypse-koeln-stinkt-nach-suppe/8331668.html",
+    "title": "„Maggikalypse“: Köln stinkt nach Suppe",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked. Handelsblatt reports a night-time fire (not an evaporation, as the card says) at a flavouring producer on the Neuss/Dormagen border, north of Cologne; the smell lay over Cologne from the early morning of 11 June 2013. 'Verdampfung' was generalised to 'Zwischenfall'.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der bekannte deutsche Musiker, dessen ebenfalls bekannter Bruder Dietrich ein Mediziner und Autor ist?",
+   "de": "Wie heißt der bekannte deutsche Musiker, dessen ebenfalls bekannter Bruder Dietrich ein Mediziner und Autor ist?",
+   "en": "What is the name of the well-known German musician whose equally well-known brother Dietrich is a physician and author?",
+   "reworked": false,
+   "answerDe": "Herbert Grönemeyer",
+   "answerEn": "Herbert Grönemeyer",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1956-04-12",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Herbert Grönemeyer, German singer, songwriter and actor (born 1956)",
+    "labelDe": "Herbert Grönemeyer, deutscher Sänger, Komponist und Schauspieler (geboren 1956)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Dietrich_Grönemeyer",
+    "title": "Dietrich Grönemeyer",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie alt ist das Universum: rund 14 Millionen, 14 Milliarden oder 14 Billionen Jahre?",
+   "de": "Wie alt ist das Universum nach den Messungen des Weltraumteleskops Planck ungefähr?",
+   "en": "Roughly how old is the universe according to measurements by the Planck space telescope?",
+   "reworked": true,
+   "answerDe": "13,8 Milliarden Jahre",
+   "answerEn": "13.8 billion years",
+   "timeline": {
+    "kind": "event",
+    "start": "-13800000000",
+    "end": null,
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Big Bang, about 13.8 billion years ago",
+    "labelDe": "Der Urknall vor etwa 13,8 Milliarden Jahren"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Universum",
+    "title": "Universum",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked; card answer: about 14 billion (Milliarden) years. Planck measured 13.81 ± 0.04 billion years.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wie heißt der Verlegersohn, der als Übersetzer und Sprecher von Pu der Bär sowie als Seriendarsteller in der Lindenstraße bekannt wurde?",
+   "de": "Wie heißt der Verlegersohn, der als Übersetzer und Sprecher von Pu der Bär sowie als Seriendarsteller in der Lindenstraße bekannt wurde?",
+   "en": "What is the name of the publisher's son who became known as the translator and reader of Winnie-the-Pooh (\"Pu der Bär\") and as an actor in the series \"Lindenstraße\"?",
+   "reworked": false,
+   "answerDe": "Harry Rowohlt",
+   "answerEn": "Harry Rowohlt",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1945-03-27",
+    "end": "2015-06-15",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Harry Rowohlt, German translator, columnist and reader (1945–2015)",
+    "labelDe": "Harry Rowohlt, deutscher Übersetzer, Kolumnist und Vorleser (1945–2015)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Harry_Rowohlt",
+    "title": "Harry Rowohlt",
+    "lang": "de"
+   },
+   "notes": "He played the homeless Harry in Lindenstraße; his father was the publisher Ernst Rowohlt.",
+   "domain": "literature",
+   "sub": "children-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Bei welchem vor langer Zeit verstorbenen König fand man mittels Computertomografie heraus, dass er Hasenzähne, einen Klumpfuß und eine „weibliche“ Hüfte hatte?",
+   "de": "Bei welchem vor langer Zeit verstorbenen König fand man mittels Computertomografie heraus, dass er Hasenzähne, einen Klumpfuß und eine „weibliche“ Hüfte hatte?",
+   "en": "In which long-dead king did computed tomography reveal buck teeth, a club foot and \"female\" hips?",
+   "reworked": false,
+   "answerDe": "Tutanchamun",
+   "answerEn": "Tutankhamun",
+   "timeline": {
+    "kind": "event",
+    "start": "2005-01-06",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "CT scan of Tutankhamun's mummy, estimating his age at death at 18 to 20",
+    "labelDe": "CT-Untersuchung der Mumie Tutanchamuns, die ein Todesalter von 18 bis 20 Jahren ergibt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Tutanchamun",
+    "title": "Tutanchamun",
+    "lang": "de"
+   },
+   "notes": "The buck teeth / club foot / wide hips picture comes from the 2014 'virtual autopsy' built from CT scans (documentary 'Tutankhamun: The Truth Uncovered', 2014); the club-foot diagnosis remains disputed.",
+   "domain": "history",
+   "sub": "ancient"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welches Bundesland hatte auch nach 50 Jahren Fußball-Bundesliga noch keinen Erstligisten: Niedersachsen, Saarland oder Schleswig-Holstein?",
+   "de": "Welcher Verein stieg zur Saison 2024/25 als erste Mannschaft aus Schleswig-Holstein in die Fußball-Bundesliga auf?",
+   "en": "Which club was promoted to the Bundesliga for the 2024–25 season as the first team from Schleswig-Holstein?",
+   "reworked": true,
+   "answerDe": "Holstein Kiel",
+   "answerEn": "Holstein Kiel",
+   "timeline": {
+    "kind": "event",
+    "start": "2024",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Holstein Kiel are promoted as the first Bundesliga club from Schleswig-Holstein",
+    "labelDe": "Holstein Kiel steigt als erster Verein aus Schleswig-Holstein in die Bundesliga auf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Holstein_Kiel",
+    "title": "Holstein Kiel",
+    "lang": "de"
+   },
+   "notes": "Multiple choice reworked; card answer: Schleswig-Holstein. Asking the open 'which state' question would be ambiguous (in 2013 Saxony-Anhalt and Thuringia had never had a Bundesliga club either), so the question now asks for the club that ended Schleswig-Holstein's wait.",
+   "domain": "sport-games",
+   "sub": "football"
+  }
+ ]
+}

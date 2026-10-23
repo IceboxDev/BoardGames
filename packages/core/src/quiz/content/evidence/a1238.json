@@ -1,0 +1,242 @@
+{
+ "article": "a1238",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Homo_faber_(Roman)",
+   "title": "Homo faber (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:10.262Z",
+   "snapshot": "42a33774e795e7dcd45e36cdfa330873462c205c21ef9bb26617f4be2fe97d9f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Stiller_(Roman)",
+   "title": "Stiller (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:11.247Z",
+   "snapshot": "3a53b3e26bc167ead1f02f1e745d615aef56d86affad109afa593c7e88684c6b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Mein_Name_sei_Gantenbein",
+   "title": "Mein Name sei Gantenbein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:12.246Z",
+   "snapshot": "5727440072a58c3d920917d7d06baeae156ba8a48d5a6db13606eead9d780fbe"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_Richter_und_sein_Henker",
+   "title": "Der Richter und sein Henker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:13.152Z",
+   "snapshot": "2634b04bcf122b8fa627c7e58c8211e67ec56b4e4d63154631645a336519cddd"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Das_Versprechen_(D%C3%BCrrenmatt)",
+   "title": "Das Versprechen (Dürrenmatt) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:14.085Z",
+   "snapshot": "d8b198655d0fc552a05cd700de9b4bc15ec812f9d872e5c7275ac019e81c0b9e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Homo faber",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stiller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mein Name sei Gantenbein",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Richter und sein Henker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Versprechen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:52.916Z",
+   "target": "f06186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eine Verfilmung Volker Schlöndorffs kam 1991 als Homo Faber in die Kinos.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Homo faber” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:52.916Z",
+   "target": "f06187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stiller ist ein Roman des Schweizer Schriftstellers Max Frisch, der im Jahr 1954 veröffentlicht wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stiller” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:52.916Z",
+   "target": "f06188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mein Name sei Gantenbein ist ein Roman des Schweizer Schriftstellers Max Frisch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mein Name sei Gantenbein” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:52.916Z",
+   "target": "f06189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Richter und sein Henker ist ein Roman des Schweizer Schriftstellers Friedrich Dürrenmatt und erschien zuerst vom 15.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Richter und sein Henker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:52.916Z",
+   "target": "f06190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Versprechen (1958) ist ein Kriminalroman des Schweizer Autors Friedrich Dürrenmatt, der aus seiner Drehbuchvorlage zum Film Es geschah am hellichten Tag entstand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:52.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Das Versprechen” is on the snapshot of s5"
+  }
+ ]
+}

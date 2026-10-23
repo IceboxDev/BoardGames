@@ -1,0 +1,343 @@
+{
+ "article": "a1408",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Polizeiruf_110",
+   "title": "Polizeiruf 110 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:30.060Z",
+   "snapshot": "b741596ed14d430e389341ad69a773ec8498ec76a6024b19be97ec57b621fda0"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Der_Kommissar",
+   "title": "Der Kommissar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:30.683Z",
+   "snapshot": "0ffa6b5162e4843039228f8a7ba693b2f2c62a173f41b0e2775b7ccd31fed677"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_Alte",
+   "title": "Der Alte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:31.652Z",
+   "snapshot": "3711f89f14f5995f344da6bb735eb2f23d2090e25773af34c137b01cf6d991b3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ein_Fall_f%C3%BCr_zwei",
+   "title": "Ein Fall für zwei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:32.755Z",
+   "snapshot": "7876bf338c46fc49f8583ac1fd0c7e8b485a9ffc3920227e5c7ca9ce6d852b3c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tatort:_Reifezeugnis",
+   "title": "Tatort: Reifezeugnis",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:33.669Z",
+   "snapshot": "a33d40515f8385e9370ceb97e95485d74f01666e078a213460fa946a02dc27fd"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Tatort_(Fernsehreihe)",
+   "title": "Tatort (Fernsehreihe)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:33:45.667Z",
+   "snapshot": "7cb303ae4f30d74ecfb678115a5ec429fba2b91b2e76519c355da0797218dcea"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Rosa_Roth",
+   "title": "Rosa Roth",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:34.683Z",
+   "snapshot": "631dad24aba716688339679921de78d99a92ff647748edeea832de88ea766796"
+  },
+  "s8": {
+   "url": "https://www.abendzeitung-muenchen.de/tv/tatort-abschied-in-muenchen-fans-feiern-und-weinen-beim-letzten-fall-art-1123604",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:59:32.809Z",
+   "snapshot": "e93d5cd3967ddaf0d732d2e34e32ba954c9a9446047d6fef78b0203e57a22764"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Polizeiruf 110",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Kommissar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Alte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Fall für zwei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reifezeugnis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-025"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "München",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-220"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Iris Berben",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-381"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f07036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Polizeiruf 110 ist eine deutschsprachige Kriminalfilmreihe, die ab 1971 im Deutschen Fernsehfunk (DFF; 1972–1990: Fernsehen der DDR) produziert wurde und nach Auflösung des DFF seit 1993 von verschiedenen ARD-Anstalten fortgeführt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polizeiruf 110” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f07038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Kommissar ist der Titel einer deutschen Fernsehkrimiserie aus den Jahren 1969 bis 1976 mit Erik Ode in der Titelrolle.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Kommissar” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f07039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Alte ist eine deutschsprachige Fernseh-Krimiserie, produziert von der Neuen Münchner Fernsehproduktion für ZDF, SRF und ORF.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Alte” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f07040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Fall für zwei ist eine Krimiserie im ZDF und im SRF.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ein Fall für zwei” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f11696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Reifezeugnis ist ein deutscher Fernsehfilm der Krimireihe Tatort aus dem Jahr 1977.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reifezeugnis” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f11697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Darsteller im 1970 in München gedrehten Vorspann (durch einen Schlitz blickende Augen und eine flüchtende Person) ist der bayerische Schauspieler Horst Lettenmayer, der für den Dreh einmalig 400 DM bekam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “München” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:20.963Z",
+   "target": "f11698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Protagonistin ist die gleichnamige Kriminalkommissarin, verkörpert von Iris Berben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iris Berben” is on the snapshot of s7"
+  }
+ ]
+}

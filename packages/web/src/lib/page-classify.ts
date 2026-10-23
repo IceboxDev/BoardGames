@@ -13,8 +13,17 @@ export interface ClassifiedView {
   detail?: string;
 }
 
-/** Games whose `/play/<slug>/solo` shell is a study trainer, not a game vs AI. */
-const TRAINER_SOLO_GAMES: Readonly<Record<string, TrainerDeck>> = { quiztopia: "quiztopia" };
+/**
+ * Games whose `/play/<slug>/solo` shell is only a redirect into a trainer
+ * (`/trainer/<deck>`): not a look of its own, the trainer route logs it.
+ */
+const REDIRECTING_SOLO_GAMES: ReadonlySet<string> = new Set(["quiztopia"]);
+
+/** Trainers mounted under `/trainer/<deck>`. */
+const TRAINER_ROUTES: Readonly<Record<string, TrainerDeck>> = {
+  quiz: "quiz",
+  geography: "geography",
+};
 
 /** Game-shell sub-routes (`/play/:slug/<rest>`), first segment → page. */
 const PLAY_SUBROUTES: Readonly<Record<string, PageViewPage>> = {
@@ -37,11 +46,10 @@ function trainerView(deck: TrainerDeck, rest: readonly string[]): ClassifiedView
   return { page: (sub && TRAINER_SUBROUTES[sub]) || "trainer", detail: deck };
 }
 
-function playView(slug: string, rest: readonly string[]): ClassifiedView {
-  const deck = TRAINER_SOLO_GAMES[slug];
+function playView(slug: string, rest: readonly string[]): ClassifiedView | null {
   const [first, second] = rest;
   if (first === undefined) return { page: "play", detail: slug };
-  if (first === "solo" && deck) return trainerView(deck, rest.slice(1));
+  if (first === "solo" && REDIRECTING_SOLO_GAMES.has(slug)) return null;
   if (first === "mp") {
     if (second === "join") return { page: "play-join", detail: slug };
     if (second === "lobby") return { page: "play-lobby", detail: slug };
@@ -88,12 +96,16 @@ export function classifyRoute(pathname: string, search: string): ClassifiedView 
     case "settings":
       return { page: "appearance" };
     // Admin is tabbed (?tab=vote etc.) — log which tab, "users" being the default.
+    // The Quiz desk is its own page under /admin and logs as one tab.
     case "admin":
-      return { page: "admin", detail: params.get("tab") ?? "users" };
+      if (second === "quiz-desk") return { page: "admin", detail: "quiz-desk" };
+      return second ? null : { page: "admin", detail: params.get("tab") ?? "users" };
     case "play":
       return second ? playView(second, rest) : null;
-    case "trainer":
-      return second === "geography" ? trainerView("geography", rest) : null;
+    case "trainer": {
+      const deck = second ? TRAINER_ROUTES[second] : undefined;
+      return deck ? trainerView(deck, rest) : null;
+    }
     case "go":
       if (second !== "review") return null;
       return rest[0] ? { page: "go-review", detail: rest[0] } : { page: "go-review" };
@@ -108,8 +120,9 @@ export function classifyRoute(pathname: string, search: string): ClassifiedView 
       const page = PROFILE_SUBPAGES[sub];
       return page ? { page, detail: second } : null;
     }
-    // Deliberately not logged: /login and /reset-password (signed out), and
-    // /dev/* previews (dev builds only).
+    // Deliberately not logged: /login and /reset-password (signed out),
+    // /dev/* previews (dev builds only) and `/play/quiztopia/solo/*` (a
+    // redirect into `/trainer/quiz`, which logs itself).
     default:
       return null;
   }

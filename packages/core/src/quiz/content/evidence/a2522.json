@@ -1,0 +1,382 @@
+{
+ "article": "a2522",
+ "sources": {
+  "s1": {
+   "url": "https://www.thenakedscientists.com/node/174283",
+   "title": "Gene of the Month - Kenny",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:56.407Z",
+   "snapshot": "659719ce78c2aedd4fd476da7f9c2b8b1db928b08620770d301162fcfae2d6db"
+  },
+  "s2": {
+   "url": "https://csmonitor.com/Science/2016/0705/Why-are-these-microbes-playing-Pac-Man",
+   "title": "Why are these microbes playing 'Pac-Man'?",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:02.246Z",
+   "snapshot": "11af6a35b2a2d533a21d689d2ff0542218857920e9af5f2a9be2744171ed273d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sonic_hedgehog_protein",
+   "title": "Sonic hedgehog protein",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:03.807Z",
+   "snapshot": "f6ec937060699f85e7d9d21c4f010aabf0b303d5bef492face979393306ae7b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tinman_gene",
+   "title": "tinman (gene)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:04.708Z",
+   "snapshot": "9eca4d2db637ee4792826337f86b6533393ec84f6790c910010f571e1c086790"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pikachurin",
+   "title": "Pikachurin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:04:05.703Z",
+   "snapshot": "7a197d75aa8ce34c422406ed44b5c856ea69375ea2eb9c06227de0a0bc5175fa"
+  },
+  "s6": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7595695/",
+   "title": "The developing heart: from The Wizard of Oz to congenital heart disease",
+   "publisher": "Development (Company of Biologists) / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:54.353Z",
+   "snapshot": "3749ff072884305560ec997803211c996006ff40fc1ee7713a060062f4ded9d7"
+  },
+  "s7": {
+   "url": "https://www.thenakedscientists.com/node/175802",
+   "title": "Gene of the month - Tinman",
+   "publisher": "The Naked Scientists",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:54.487Z",
+   "snapshot": "4b9bd4a200190da5301432183b8ad0a1c19e1e5b4a4436ce18942b4e366a4823"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Tinman_(gene)",
+   "title": "Tinman (gene)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:54.693Z",
+   "snapshot": "9eca4d2db637ee4792826337f86b6533393ec84f6790c910010f571e1c086790"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kenny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-145"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pac-Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-135"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sonic the Hedgehog",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Tin Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pikachu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:33.582Z",
+   "target": "f13441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gene of the Month - Kenny | Interviews",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kenny” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:33.582Z",
+   "target": "f13442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Why are these microbes playing 'Pac-Man'?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pac-Man” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.582Z",
+   "target": "f13443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Two of these genes, desert hedgehog and Indian hedgehog, were named for species of hedgehogs,  while sonic hedgehog was named after the video game character Sonic the Hedgehog.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sonic the Hedgehog” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.582Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Tin Man",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Tin Man”, “der Blechmann”, “Железный Дровосек”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.582Z",
+   "target": "f13445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "and named after Pikachu, a species of the Pokémon franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pikachu” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:43Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the tinman mutant – named after The Wizard of Oz character with a similar phenotype – did not form any cardiac mesoderm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:48Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "our gene of the month is the hollow-sounding Tinman, whimsically named after the character in the Wizard of Oz who’s rather lacking in the heart department.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:54Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This gene is named after the character Tin Woodman who lacks a heart, as flies with nonfunctional tinman genes have cardiac deformities.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:17.456Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the tinman mutant – named after The Wizard of Oz character with a similar phenotype – did not form any cardiac mesoderm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:17.456Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "our gene of the month is the hollow-sounding Tinman, whimsically named after the character in the Wizard of Oz who’s rather lacking in the heart department.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:17.456Z",
+   "target": "f13444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This gene is named after the character Tin Woodman who lacks a heart, as flies with nonfunctional tinman genes have cardiac deformities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.456Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  }
+ ]
+}

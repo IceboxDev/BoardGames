@@ -1,0 +1,420 @@
+{
+ "article": "a2205",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Starrer_Gang",
+   "title": "Starrer Gang",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:50.905Z",
+   "snapshot": "700b8462713c528cdc90a56319a1f48c27398a14e96c0f19260237f4c054d62e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dab_(dance)",
+   "title": "Dab (dance)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:52.241Z",
+   "snapshot": "54d9cb71801efb3eec20022447f5ead225252f0c07c80a325f421e44ff618277"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bottle_flipping",
+   "title": "Bottle flipping",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:53.199Z",
+   "snapshot": "90c43a2c31ca8b3ebbafe50e6d079af17b2711a9fc8dd0d380e5faee2bb40729"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Cosplay",
+   "title": "Cosplay",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:51.578Z",
+   "snapshot": "20ad24b01d598636e5facabdad7c04170234fe645ffd896f54e10de97d5f580b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cat_caf%C3%A9",
+   "title": "Cat café",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:54.319Z",
+   "snapshot": "4b7d31b9d764cebbe7fae2ccd199c603646103d4e0415ce8a84e98402d5317c3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ice_Bucket_Challenge",
+   "title": "Ice Bucket Challenge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:55.328Z",
+   "snapshot": "a54baa89f164b724eb794b25668b6f6f332a66749619f28dae4b4d1227306ab9"
+  },
+  "s7": {
+   "url": "https://www.vox.com/2016/5/26/11785562/water-bottle-flip-physics",
+   "title": "The physics of the water bottle flip",
+   "publisher": "Vox",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:19.617Z",
+   "snapshot": "fce936daf93fbb3a27fa1fac104e4f38c583e15d4e5551786f462eee4fec9c8f"
+  },
+  "s8": {
+   "url": "https://www.scientificamerican.com/article/the-physics-of-bottle-flipping/",
+   "title": "The Physics of Bottle-Flipping",
+   "publisher": "Scientific American",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:20.924Z",
+   "snapshot": "4ba9f15fdc20bd20978c00d00f6ee8749132d1ee41e0eecef33feeafd3d1c5d0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fixie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11214",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dab",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-054"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "About one third full",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-076"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cosplay",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-274"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cats",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; transcript tp-200"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ALS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:36.357Z",
+   "target": "f11213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fahrräder mit starrem Gang wurden früher auch als Ewigtreter bezeichnet, in jüngerer Zeit wurde der Begriff Fixie gebräuchlich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fixie” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.357Z",
+   "target": "f11214",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dab, or dabbing, is a gesture in which a person leans forward into the bent crook of a slanted, upward angled arm, while raising the opposite arm out straight in a parallel direction.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dab” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.357Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "About one third full",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About one third full”, “Etwa zu einem Drittel”, “примерно на треть”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.357Z",
+   "target": "f11216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cosplay (japanisch コスプレ kosupure) ist eine in Japan geprägte Fanpraxis, die in den 1980er und 1990er Jahren mit dem Manga- und Animeboom auch in die USA und nach Europa kam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cosplay” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:36.357Z",
+   "target": "f11217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A cat café is a theme café, whose attractions are cats that can be watched and played with.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cats” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:36.357Z",
+   "target": "f11218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Ice Bucket Challenge, sometimes called the ALS Ice Bucket Challenge, is an activity involving the pouring of a bucket of ice water over a person's head, either by another person or self-administered, to promote awareness of the disease amyotrophic lateral sclerosis (ALS, also known as motor",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.357Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ALS” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:34:10Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "I would find a water bottle and fill it to about a third.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:14Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fill a plastic water bottle about one quarter to one third full with water",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:34:17Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it has been shown empirically that filling the bottle about one-third of the way improves the rate of success",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:23.407Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "I would find a water bottle and fill it to about a third.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:23.407Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fill a plastic water bottle about one quarter to one third full with water",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:23.407Z",
+   "target": "f11215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it has been shown empirically that filling the bottle about one-third of the way improves the rate of success",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:23.407Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  }
+ ]
+}

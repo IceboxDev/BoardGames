@@ -1,0 +1,242 @@
+{
+ "article": "a1251",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ernst_Ludwig_Kirchner",
+   "title": "Ernst Ludwig Kirchner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:53.551Z",
+   "snapshot": "0f56bdbef5fab82cf435abf376b01310bc93e02c5a4fd16d0267a5b1ece0bfdb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wassily_Kandinsky",
+   "title": "Wassily Kandinsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:56.521Z",
+   "snapshot": "71f2ca0d2aaad62bd5fca881bdfa717a3a9a2a6376289eb13aa8545f2b73b723"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/De_Stijl",
+   "title": "De Stijl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:47.832Z",
+   "snapshot": "19ce3bb50cb02aa48c927e3f9b5e34a44ffb6b7905f01c6f61bcfbf516e3e029"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fauvism",
+   "title": "Fauvism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:57.492Z",
+   "snapshot": "3eabb7aec2798e58b3cb2414f5f9404fc38e6440fa50905560a6fd7040d7c244"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pre-Raphaelite_Brotherhood",
+   "title": "Pre-Raphaelite Brotherhood – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:58.531Z",
+   "snapshot": "0e28308bf72647be34114cbd0c7a62474f22fbe91ae63af0f5c3449cea531705"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ernst Ludwig Kirchner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wassily Kandinsky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06253",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Piet Mondrian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06254",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Henri Matisse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06255",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dante Gabriel Rossetti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:54.961Z",
+   "target": "f06251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ernst Ludwig Kirchner (6 May 1880 – 15 June 1938) was a German expressionist painter and printmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernst Ludwig Kirchner” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:54.961Z",
+   "target": "f06252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1909, Wassily Kandinsky witnessed a presentation Aleksandra Unkovskaya made (at the Theosophical Congress in Budapest) regarding her innovative system in music education,  sound-to-colour synesthesia or Chromesthesia which is a type of synesthesia in which sound involuntarily evokes an experience",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wassily Kandinsky” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:54.961Z",
+   "target": "f06253",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oud), Voorburg (Vilmos Huszár, Jan Wils) and Laren (Piet Mondrian, Bart van der Leck).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Piet Mondrian” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:54.961Z",
+   "target": "f06254",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The leaders of the movement were André Derain and Henri Matisse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henri Matisse” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:54.961Z",
+   "target": "f06255",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pre-Raphaelites, was a group of English painters, poets, and art critics, founded in 1848 by William Holman Hunt, John Everett Millais, Dante Gabriel Rossetti, William Michael Rossetti, James Collinson, Frederic George Stephens and Thomas Woolner who formed a seven-member \"Brotherhood\" partly",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.961Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dante Gabriel Rossetti” is on the snapshot of s5"
+  }
+ ]
+}

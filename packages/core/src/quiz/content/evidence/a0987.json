@@ -1,0 +1,555 @@
+{
+ "article": "a0987",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89tienne_de_Silhouette",
+   "title": "Étienne de Silhouette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:43.051Z",
+   "snapshot": "6c294191daa31983a650361b1637205c8df3fcb39f9ef6cddc9a67d9c4aafa74"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Daguerreotype",
+   "title": "Daguerreotype – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:44.203Z",
+   "snapshot": "385b1a7bae9e1074b15037a59c6c9352372b50a5bac51831779c639b164c6588"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Maisons",
+   "title": "Château de Maisons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:45.102Z",
+   "snapshot": "86c168feb6c955bf7c7669263a7ddc73b83b5f0e9d4248e91bda1af70204d796"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/I_quattro_libri_dell'architettura",
+   "title": "I quattro libri dell'architettura – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:46.028Z",
+   "snapshot": "ee02ab784785ddb4af239d8945e92518f406bee96e6858e607983d13ce1081cf"
+  },
+  "s5": {
+   "url": "https://heritage.kent.gov.uk/ThesaurusTerm/137974",
+   "title": "Thesaurus Term/Concept: MANSARD ROOF – Kent HER",
+   "publisher": "Kent County Council (Historic England thesaurus)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:01.669Z",
+   "snapshot": "ff8844f56b7da241dd3c8b734311a4b61a51f8dffee81bcebe61f509005ff747"
+  },
+  "s6": {
+   "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/francois-mansart",
+   "title": "Mansart, François (1598–1666) | Encyclopedia.com",
+   "publisher": "Encyclopedia.com (Gale)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:59:46Z"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/mansard",
+   "title": "Mansard Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:02.189Z",
+   "snapshot": "7ab5a10a7b7a4c971ea4f9b0cecdad962091465f87e4cebfa3a2e25e9ce2dd35"
+  },
+  "s8": {
+   "url": "https://www.duden.de/rechtschreibung/Mansarde",
+   "title": "Mansarde – Rechtschreibung, Bedeutung, Definition | Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:02.911Z",
+   "snapshot": "33525a57cf71f47d25558934368e9c8889613aed14144b910356c0ab38963b05"
+  },
+  "s9": {
+   "url": "http://vocab.getty.edu/page/aat/300021161",
+   "title": "Palladian (AAT) – Art & Architecture Thesaurus Full Record Display",
+   "publisher": "Getty Research Institute",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:03.884Z",
+   "snapshot": "9e32b875f2e491973d56ba3bb929afcea0f7a09550410cc5b922c31845e3fd58"
+  },
+  "s10": {
+   "url": "https://www.duden.de/rechtschreibung/Palladianismus",
+   "title": "Palladianismus – Rechtschreibung, Bedeutung, Definition | Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:03.676Z",
+   "snapshot": "efac2de8e6c856f72c72d3d53ed8d4e06ee219d34d6b91284a67eb34fe284604"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "silhouette",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "daguerreotype",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "mansard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Palladianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:15.249Z",
+   "target": "f04931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Étienne de Silhouette (5 July 1709 – 20 January 1767) was a French Ancien Régime Controller-General of Finances under Louis XV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.249Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “silhouette” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:15.249Z",
+   "target": "f04932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daguerreotype was the first publicly available photographic process, widely used from the 1830s to 1850s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.249Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “daguerreotype” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:15.249Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "mansard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“mansard”, “Mansarde”, “мансарда”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:15.249Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Palladianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Palladianism”, “Palladianismus”, “палладианство”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:59:44Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Named after the French Classical architect F. Mansart.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:59:46Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Although he did not invent the mansard roof, it is aptly named after him.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:59:47Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "named after N. F. Mansart",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:59:49Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Raum im ausgebauten Dachgeschoss [mit schräger, vom Dach gebildeter Wand]",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden itself derives Mansarde from Jules Hardouin-Mansart (1646–1708), François Mansart's great-nephew; most references credit François Mansart. The answer 'mansard/Mansarde' is unaffected."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:59:50Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Includes works influenced by the architectural style of Andrea Palladio; excludes works by Palladio himself.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:59:51Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "der von Palladio beeinflusste Architekturstil (17. und 18. Jahrhundert), besonders in Westeuropa und England",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Named after the French Classical architect F. Mansart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "named after N. F. Mansart",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Raum im ausgebauten Dachgeschoss [mit schräger, vom Dach gebildeter Wand]",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Includes works influenced by the architectural style of Andrea Palladio; excludes works by Palladio himself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "der von Palladio beeinflusste Architekturstil (17. und 18. Jahrhundert), besonders in Westeuropa und England",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "137974 - MANSARD ROOF - Historic Environment Record",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “mansard” is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "MANSARD Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “mansard” is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mansarde ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mansarde” is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Palladianism (Renaissance-Baroque style) (C,U,English,AD,U,U)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Palladianism” is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:45.844Z",
+   "target": "f04935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Palladianismus ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.844Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Palladianismus” is on the snapshot of s10"
+  }
+ ]
+}

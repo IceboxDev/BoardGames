@@ -28,6 +28,8 @@ export interface RateLimitOptions {
    * side effect (an AI generation, an email) rather than the request itself.
    */
   skipSafeMethods?: boolean;
+  /** Requests this limiter doesn't count (another limiter has them). */
+  skip?: (c: Context) => boolean;
 }
 
 const SAFE_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
@@ -76,6 +78,7 @@ export function rateLimit(options: RateLimitOptions): MiddlewareHandler {
     if (options.skipSafeMethods && SAFE_METHODS.has(c.req.method.toUpperCase())) {
       return next();
     }
+    if (options.skip?.(c)) return next();
 
     const now = Date.now();
     const key = `${name}:${keyOf(c)}`;

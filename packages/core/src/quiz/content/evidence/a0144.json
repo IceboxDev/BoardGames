@@ -1,0 +1,683 @@
+{
+ "article": "a0144",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Moore%27s_law",
+   "title": "Moore's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:19.424Z",
+   "snapshot": "33401efd2c5a2c91b9f153222d3ef42665598635343a9033ac0f3fe3fa068059"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Metcalfe%27s_law",
+   "title": "Metcalfe's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:20.345Z",
+   "snapshot": "b8914baa96ac9cf8461f94fa6790c16d41c0f20e82276a75918c66fbaff8b11b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wirth%27s_law",
+   "title": "Wirth's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:21.340Z",
+   "snapshot": "a66fa99695d364e2e666613ddc5046c167dd15aa9045cc16907f303eda988baf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Amdahl%27s_law",
+   "title": "Amdahl's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:22.336Z",
+   "snapshot": "db97a294d79c3208ee7eaa486c6e4b44e875cf3affe1232502f3000ed293ee81"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Koomey%27s_law",
+   "title": "Koomey's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:23.347Z",
+   "snapshot": "c58a96ca9c486e4b6409c0d134307dc94335d9a2fbd8e46d12badae87b46e39e"
+  },
+  "s6": {
+   "url": "https://www.intel.com/content/www/us/en/newsroom/resources/moores-law.html",
+   "title": "Moore's Law – Intel Newsroom",
+   "publisher": "Intel",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:11.593Z",
+   "snapshot": "600f20a5e1967f77d4aafb8eb271a18b63b44f9bf3c3c9a487a80eaeabd3acc0"
+  },
+  "s7": {
+   "url": "https://spectrum.ieee.org/metcalfes-law-is-wrong",
+   "title": "Metcalfe’s Law is Wrong",
+   "publisher": "IEEE Spectrum",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:11.900Z",
+   "snapshot": "941d34a2ef6f6d10dfe7d99a9dfce1839a3d8cd6c9624f9c8dbda4a935fc7441"
+  },
+  "s8": {
+   "url": "https://ethz.ch/en/news-and-events/eth-news/news/2024/01/computer-pioneer-niklaus-wirth-has-died.html",
+   "title": "Computer pioneer Niklaus Wirth has died",
+   "publisher": "ETH Zurich",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:11.864Z",
+   "snapshot": "105238c2be98b8ba14de72a316530effcfb428abf5f7d0168ea8a17c2f0c6ca7"
+  },
+  "s9": {
+   "url": "https://www.techtarget.com/whatis/definition/Amdahls-law",
+   "title": "What is Amdahl's law? – TechTarget",
+   "publisher": "TechTarget",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:11.933Z",
+   "snapshot": "4b2e3913440fec82e1e83284a12da91737632a0ba8aa6f4188dfa5d08e18c299"
+  },
+  "s10": {
+   "url": "https://spectrum.ieee.org/moores-law-might-be-slowing-down-but-not-energy-efficiency",
+   "title": "Moore’s Law Might Be Slowing Down, But Not Energy Efficiency",
+   "publisher": "IEEE Spectrum (J. Koomey & S. Naffziger)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:12.824Z",
+   "snapshot": "a3dcabc94304314cdc03624b4d5c6f7ae02ad99ecbf4aeb98236bbdba1dff56a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It doubles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The square of the number of users",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Software slows down faster than hardware speeds up",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The task's sequential portion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Computing energy efficiency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:59.695Z",
+   "target": "f00716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It doubles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“It doubles”, “Sie verdoppelt sich”, “оно удваивается”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:59.695Z",
+   "target": "f00717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The square of the number of users",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The square of the number of users”, “Das Quadrat der Nutzerzahl”, “квадрат числа пользователей”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:59.695Z",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Software slows down faster than hardware speeds up",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Software slows down faster than hardware speeds up”, “Software verlangsamt sich schneller, als Hardware sich beschleunigt”, “программы замедляются быстрее, чем ускоряется аппаратура”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:59.695Z",
+   "target": "f00719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The task's sequential portion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The task's sequential portion”, “Der sequenzielle Anteil der Aufgabe”, “последовательная часть задачи”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:59.695Z",
+   "target": "f00720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Computing energy efficiency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Computing energy efficiency”, “Die Energieeffizienz von Computern”, “энергоэффективность вычислений”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:41:10Z",
+   "target": "f00716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Moore’s Law is the observation that the number of transistors on an integrated circuit will double every two years with minimal rise in cost.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:41:13Z",
+   "target": "f00716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is the observation that the number of transistors in an integrated circuit (IC) doubles about every two years, with minimal increase in cost.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:41:16Z",
+   "target": "f00717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Simply put, it says that the value of a communications network is proportional to the square of the number of its users.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:41:19Z",
+   "target": "f00717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is proportional to the square of the number of connected users of the system",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:41:22Z",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wirth’s law, which states that software slows down faster than hardware speeds up, is named after him.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:41:24Z",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wirth's law is an adage on computer performance which states that software is getting slower more rapidly than hardware is becoming faster.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:41:26Z",
+   "target": "f00719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the observation is that the performance improvement that can be gained through parallel processing is limited by the part of a system that's inherently sequential",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:41:28Z",
+   "target": "f00719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An implication of Amdahl's law is that to speed up real applications which have both serial and parallel portions, heterogeneous computing techniques are required.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:41:30Z",
+   "target": "f00720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "it doubled like clockwork every year and a half or so for more than five decades",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "By Koomey himself: computations per kWh (computing energy efficiency). The trend slowed after ~2000."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:41:32Z",
+   "target": "f00720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the number of computations per joule of energy dissipated doubled about every 1.57 years",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Moore’s Law is the observation that the number of transistors on an integrated circuit will double every two years with minimal rise in cost.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is the observation that the number of transistors in an integrated circuit (IC) doubles about every two years, with minimal increase in cost.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Simply put, it says that the value of a communications network is proportional to the square of the number of its users.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is proportional to the square of the number of connected users of the system",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wirth’s law, which states that software slows down faster than hardware speeds up, is named after him.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wirth's law is an adage on computer performance which states that software is getting slower more rapidly than hardware is becoming faster.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the observation is that the performance improvement that can be gained through parallel processing is limited by the part of a system that's inherently sequential",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An implication of Amdahl's law is that to speed up real applications which have both serial and parallel portions, heterogeneous computing techniques are required.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "it doubled like clockwork every year and a half or so for more than five decades",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the number of computations per joule of energy dissipated doubled about every 1.57 years",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s5"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:52:18.478Z",
+   "target": "f00718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Wirth’s law, which states that software slows down faster than hardware speeds up, is named after him.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:18.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Software slows down faster than hardware speeds up” is on the snapshot of s8"
+  }
+ ]
+}

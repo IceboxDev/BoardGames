@@ -1,0 +1,345 @@
+{
+ "id": "a1257",
+ "domain": "earth-space",
+ "sub": "physics",
+ "titleEn": "Why Perpetual Motion Fails: Thermodynamics in Five Ideas",
+ "titleDe": "Warum das Perpetuum mobile scheitert: Thermodynamik in fünf Ideen",
+ "titleRu": "Почему вечный двигатель невозможен: термодинамика в пяти идеях",
+ "bodyEn": "For eight centuries inventors have sketched wheels, pumps and pendulums that would run forever and even deliver useful work while doing so. The Indian mathematician Bhaskara drew an overbalanced wheel in the twelfth century, the French architect Villard de Honnecourt another in the thirteenth, and the patent offices of the world still receive proposals every year. All of them fail, and the reasons why are the foundations of thermodynamics.\n\nA device of this kind is called a perpetual motion machine, in Latin a \"perpetuum mobile\". Physicists distinguish two kinds. A perpetual motion machine of the first kind would produce more energy than it consumes; one of the second kind would merely run without loss, turning ambient heat completely into work. On 3 May 1775 the French Academy of Sciences decided that it would no longer examine any such proposal, and the United States Patent Office today demands a working model before it will consider one.\n\nThe first kind is forbidden by the law of conservation of energy, the first law of thermodynamics. Energy can be converted from one form into another – chemical into heat, heat into motion, motion into electricity – but the total in a closed system never changes. The principle was established in the 1840s by the Heilbronn physician Julius Robert Mayer, the Manchester brewer James Prescott Joule, who measured the mechanical equivalent of heat with a paddle wheel in a bucket of water, and Hermann von Helmholtz, whose 1847 lecture gave it its general form.\n\nThe second kind is forbidden by the second law, and here the key concept is entropy, a word coined by Rudolf Clausius in 1865 from the Greek for \"transformation\". Entropy measures how dispersed or disordered the energy in a system is – in 1877 Ludwig Boltzmann tied it to the number of microscopic arrangements of the molecules – and in a closed system it never decreases. Heat flows spontaneously from hot to cold, never the other way, and a machine cannot extract work from a single reservoir at uniform temperature. Clausius summarised the two laws in a famous pair of sentences: the energy of the universe is constant; the entropy of the universe tends to a maximum.\n\nBoltzmann's statistics also say how the molecules share out the energy among them. In the Boltzmann distribution, first formulated in 1868, the share of atoms in a state of energy E falls off as e^(−E/kT): at low temperature nearly all of them crowd into the lowest states, and the hotter the gas, the more the higher states fill up. As the temperature approaches infinity, the atoms end up distributed evenly across all states – every state equally likely, the condition of maximum entropy.\n\nHow much work can a heat engine extract at best? The answer was given in 1824, before either law was stated, by the young French engineer Sadi Carnot. His ideal engine, the Carnot cycle, consists of two isothermal and two adiabatic steps, and its efficiency depends only on the temperatures of the hot and cold reservoirs: 1 − T_cold / T_hot. No real engine – steam, petrol or nuclear – can beat it, and every real engine falls short of it because of friction and heat leaks.\n\nThe most elegant challenge to the second law came from James Clerk Maxwell in a letter of 11 December 1867. Imagine a tiny being guarding a trapdoor between two halves of a box of gas, letting fast molecules pass one way and slow ones the other. One side would heat up and the other cool down with no work done – entropy would fall. Lord Kelvin named the creature Maxwell's demon, and it took a century to exorcise: Leó Szilárd (1929), Rolf Landauer (1961) and Charles Bennett (1982) showed that the demon must gather information about each molecule and sooner or later erase it, and erasing information has an unavoidable entropy cost that restores the balance.\n\n| Idea | Who | When |\n|---|---|---|\n| Perpetual motion machine | Bhaskara, Villard de Honnecourt and many others | 12th century onwards |\n| Law of conservation of energy | Mayer, Joule, Helmholtz | 1842–1847 |\n| Entropy | Rudolf Clausius | 1865 |\n| Carnot cycle | Sadi Carnot | 1824 |\n| Maxwell's demon | James Clerk Maxwell | 1867 |\n\nThe moral of the perpetual motion machine is not that inventors are foolish but that nature keeps accounts: every joule is counted, and every ordered arrangement is paid for with disorder somewhere else.",
+ "bodyDe": "Seit acht Jahrhunderten skizzieren Erfinder Räder, Pumpen und Pendel, die ewig laufen und dabei sogar nutzbare Arbeit liefern sollen. Der indische Mathematiker Bhaskara zeichnete im 12. Jahrhundert ein Rad mit ungleich verteilten Gewichten, der französische Baumeister Villard de Honnecourt im 13. ein weiteres, und die Patentämter der Welt erhalten noch immer jedes Jahr neue Vorschläge. Alle scheitern, und die Gründe dafür sind die Grundlagen der Thermodynamik.\n\nEine Maschine dieser Art heißt Perpetuum mobile, lateinisch für „das sich ständig Bewegende“. Physiker unterscheiden zwei Arten. Ein Perpetuum mobile erster Art würde mehr Energie erzeugen, als es verbraucht; eines zweiter Art würde lediglich ohne Verlust laufen und Umgebungswärme vollständig in Arbeit verwandeln. Am 3. Mai 1775 beschloss die französische Akademie der Wissenschaften, keinen derartigen Vorschlag mehr zu prüfen, und das US-Patentamt verlangt heute ein funktionierendes Modell, bevor es sich damit befasst.\n\nDie erste Art verbietet der Energieerhaltungssatz, der erste Hauptsatz der Thermodynamik. Energie kann von einer Form in eine andere umgewandelt werden – chemische in Wärme, Wärme in Bewegung, Bewegung in Elektrizität –, doch die Gesamtmenge in einem abgeschlossenen System ändert sich nie. Das Prinzip wurde in den 1840er Jahren vom Heilbronner Arzt Julius Robert Mayer, vom Manchester Brauer James Prescott Joule, der das mechanische Wärmeäquivalent mit einem Schaufelrad in einem Wassereimer maß, und von Hermann von Helmholtz begründet, dessen Vortrag von 1847 ihm seine allgemeine Form gab.\n\nDie zweite Art verbietet der zweite Hauptsatz, und hier ist der Schlüsselbegriff die Entropie, ein Wort, das Rudolf Clausius 1865 aus dem Griechischen für „Verwandlung“ prägte. Die Entropie misst, wie verteilt oder ungeordnet die Energie in einem System ist – 1877 verknüpfte Ludwig Boltzmann sie mit der Zahl der mikroskopischen Anordnungen der Moleküle –, und in einem abgeschlossenen System nimmt sie niemals ab. Wärme fließt von selbst vom Warmen zum Kalten, nie umgekehrt, und eine Maschine kann aus einem einzigen Reservoir gleichmäßiger Temperatur keine Arbeit gewinnen. Clausius fasste die beiden Hauptsätze in einem berühmten Satzpaar zusammen: Die Energie der Welt ist konstant; die Entropie der Welt strebt einem Maximum zu.\n\nBoltzmanns Statistik sagt auch, wie die Moleküle die Energie unter sich aufteilen. Nach der Boltzmann-Verteilung, erstmals 1868 formuliert, nimmt der Anteil der Atome in einem Zustand der Energie E wie e^(−E/kT) ab: Bei tiefer Temperatur drängen sich fast alle in den niedrigsten Zuständen, und je heißer das Gas, desto stärker füllen sich die höheren. Geht die Temperatur gegen unendlich, verteilen sich die Atome schließlich gleichmäßig auf alle Zustände – jeder Zustand ist gleich wahrscheinlich, der Zustand maximaler Entropie.\n\nWie viel Arbeit kann eine Wärmekraftmaschine bestenfalls gewinnen? Die Antwort gab 1824, noch bevor einer der beiden Hauptsätze formuliert war, der junge französische Ingenieur Sadi Carnot. Seine ideale Maschine, der Carnot-Prozess, besteht aus zwei isothermen und zwei adiabatischen Schritten, und ihr Wirkungsgrad hängt allein von den Temperaturen des warmen und des kalten Reservoirs ab: 1 − T_kalt / T_warm. Keine reale Maschine – ob Dampf, Benzin oder Kernkraft – kann ihn übertreffen, und jede reale Maschine bleibt wegen Reibung und Wärmeverlusten darunter.\n\nDie eleganteste Herausforderung des zweiten Hauptsatzes kam am 11. Dezember 1867 in einem Brief von James Clerk Maxwell. Man stelle sich ein winziges Wesen vor, das eine Klappe zwischen den beiden Hälften eines gasgefüllten Kastens bewacht und schnelle Moleküle in die eine, langsame in die andere Richtung durchlässt. Die eine Seite würde sich erwärmen, die andere abkühlen, ohne dass Arbeit verrichtet würde – die Entropie würde sinken. Lord Kelvin gab dem Geschöpf den Namen „Maxwellscher Dämon“, und es dauerte ein Jahrhundert, ihn auszutreiben: Leó Szilárd (1929), Rolf Landauer (1961) und Charles Bennett (1982) zeigten, dass der Dämon Informationen über jedes Molekül sammeln und früher oder später löschen muss, und das Löschen von Information hat unvermeidlich einen Entropiepreis, der die Bilanz wiederherstellt.\n\n| Idee | Wer | Wann |\n|---|---|---|\n| Perpetuum mobile | Bhaskara, Villard de Honnecourt und viele andere | ab dem 12. Jahrhundert |\n| Energieerhaltungssatz | Mayer, Joule, Helmholtz | 1842–1847 |\n| Entropie | Rudolf Clausius | 1865 |\n| Carnot-Prozess | Sadi Carnot | 1824 |\n| Maxwellscher Dämon | James Clerk Maxwell | 1867 |\n\nDie Moral des Perpetuum mobile ist nicht, dass Erfinder töricht sind, sondern dass die Natur Buch führt: Jedes Joule wird gezählt, und jede geordnete Anordnung wird mit Unordnung an anderer Stelle bezahlt.",
+ "bodyRu": "Восемь веков изобретатели чертят колёса, насосы и маятники, которые работали бы вечно и вдобавок совершали бы полезную работу. Индийский математик Бхаскара нарисовал колесо с неуравновешенными грузами в XII веке, французский зодчий Виллар де Оннекур — другое в XIII, и патентные ведомства мира до сих пор ежегодно получают подобные предложения. Все они терпят неудачу, и причины этого составляют основы термодинамики.\n\nУстройство такого рода — вечный двигатель, по-латыни «perpetuum mobile». Физики различают два рода. Вечный двигатель первого рода производил бы больше энергии, чем потребляет; двигатель второго рода просто работал бы без потерь, полностью превращая теплоту окружающей среды в работу. 3 мая 1775 года Французская академия наук постановила больше не рассматривать подобных предложений, а Патентное ведомство США сегодня требует действующую модель, прежде чем вообще возьмётся за такую заявку.\n\nДвигатель первого рода запрещает закон сохранения энергии — первое начало термодинамики. Энергия может превращаться из одной формы в другую — химическая в тепловую, тепловая в механическую, механическая в электрическую, — но её общее количество в замкнутой системе никогда не меняется. Принцип был установлен в 1840-х годах хайльбронским врачом Юлиусом Робертом Майером, манчестерским пивоваром Джеймсом Прескоттом Джоулем, который измерил механический эквивалент теплоты с помощью лопастного колеса в ведре воды, и Германом фон Гельмгольцем, чей доклад 1847 года придал ему общую форму.\n\nДвигатель второго рода запрещает второе начало, и здесь ключевое понятие — энтропия, слово, которое Рудольф Клаузиус в 1865 году образовал от греческого «превращение». Энтропия измеряет, насколько рассеяна или неупорядочена энергия в системе, — в 1877 году Людвиг Больцман связал её с числом микроскопических расположений молекул, — и в замкнутой системе она никогда не убывает. Теплота сама собой переходит от горячего к холодному, но никогда наоборот, и машина не может извлекать работу из одного резервуара с одинаковой температурой. Клаузиус подытожил оба начала знаменитой парой фраз: энергия мира постоянна; энтропия мира стремится к максимуму.\n\nСтатистика Больцмана говорит и о том, как молекулы делят энергию между собой. Согласно распределению Больцмана, впервые сформулированному в 1868 году, доля атомов в состоянии с энергией E убывает как e^(−E/kT): при низкой температуре почти все они теснятся в самых низких состояниях, а чем горячее газ, тем сильнее заполняются высокие. Когда температура стремится к бесконечности, атомы в итоге распределяются равномерно по всем состояниям — каждое состояние одинаково вероятно, это и есть состояние максимальной энтропии.\n\nСколько работы может в лучшем случае извлечь тепловая машина? Ответ дал в 1824 году, ещё до того, как было сформулировано хотя бы одно из начал, молодой французский инженер Сади Карно. Его идеальная машина, цикл Карно, состоит из двух изотермических и двух адиабатических стадий, и её КПД зависит только от температур горячего и холодного резервуаров: 1 − T_хол / T_гор. Ни одна реальная машина — паровая, бензиновая или ядерная — не может его превзойти, и каждая реальная машина не дотягивает до него из-за трения и утечек тепла.\n\nСамый изящный вызов второму началу бросил Джеймс Клерк Максвелл в письме от 11 декабря 1867 года. Представим себе крошечное существо, которое сторожит дверцу между двумя половинами ящика с газом и пропускает быстрые молекулы в одну сторону, а медленные — в другую. Одна сторона нагревалась бы, другая охлаждалась, и никакой работы при этом не совершалось бы — энтропия уменьшилась бы. Лорд Кельвин дал этому созданию имя: демон Максвелла, и изгнать его удалось лишь через столетие: Лео Силард (1929), Рольф Ландауэр (1961) и Чарльз Беннет (1982) показали, что демон должен собирать сведения о каждой молекуле и рано или поздно стирать их, а стирание информации неизбежно стоит энтропии, что и восстанавливает баланс.\n\n| Идея | Кто | Когда |\n|---|---|---|\n| Вечный двигатель | Бхаскара, Виллар де Оннекур и многие другие | с XII века |\n| Закон сохранения энергии | Майер, Джоуль, Гельмгольц | 1842–1847 |\n| Энтропия | Рудольф Клаузиус | 1865 |\n| Цикл Карно | Сади Карно | 1824 |\n| Демон Максвелла | Джеймс Клерк Максвелл | 1867 |\n\nМораль вечного двигателя не в том, что изобретатели глупы, а в том, что природа ведёт счёт: каждый джоуль учтён, и за каждое упорядоченное расположение платят беспорядком где-то в другом месте.",
+ "notesEn": "The even spread holds strictly for a system with a limited number of energy states; for a real gas with unbounded translational states it is an idealised limit.",
+ "notesDe": "Die gleichmäßige Verteilung gilt streng für ein System mit einer begrenzten Zahl von Energiezuständen; für ein reales Gas mit unbegrenzt vielen Translationszuständen ist sie ein idealisierter Grenzfall.",
+ "notesRu": "Равномерное распределение строго выполняется для системы с конечным числом энергетических состояний; для реального газа с неограниченным числом поступательных состояний это идеализированный предел.",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/WaterScrewPerpetualMotion.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Perpetual_motion",
+   "width": 535,
+   "height": 692,
+   "alt": {
+    "en": "Old engraving of a water-screw perpetual motion machine driving a mill",
+    "de": "Alter Stich eines Perpetuum mobile mit Wasserschraube, das eine Mühle antreibt",
+    "ru": "Старинная гравюра вечного двигателя с водяным винтом, приводящего в движение мельницу"
+   },
+   "caption": {
+    "en": "Robert Fludd's 1618 „water screw“ perpetual motion machine in a 1660 engraving: the water lifted by the screw was supposed to drive the wheel that turns the screw – the first law forbids it.",
+    "de": "Robert Fludds Perpetuum mobile mit „Wasserschraube“ von 1618 in einem Stich von 1660: Das von der Schraube gehobene Wasser sollte das Rad antreiben, das die Schraube dreht – der erste Hauptsatz verbietet es.",
+    "ru": "Вечный двигатель Роберта Фладда с «водяным винтом» (1618) на гравюре 1660 года: поднятая винтом вода должна была вращать колесо, которое крутит винт, — первое начало термодинамики это запрещает."
+   },
+   "credit": "Georg Andreas Böckler, via Wikimedia Commons"
+  },
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Maxwell%27s_demon.svg/960px-Maxwell%27s_demon.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Maxwell%27s_demon",
+   "width": 608,
+   "height": 224,
+   "alt": {
+    "en": "Diagram of Maxwell's demon sorting fast and slow gas molecules through a trapdoor",
+    "de": "Schema des Maxwellschen Dämons, der schnelle und langsame Gasmoleküle durch eine Klappe sortiert",
+    "ru": "Схема демона Максвелла, сортирующего быстрые и медленные молекулы газа через заслонку"
+   },
+   "caption": {
+    "en": "Maxwell's demon: by opening the trapdoor only for fast molecules in one direction, it would make one side hot and the other cold without doing work.",
+    "de": "Der Maxwellsche Dämon: Öffnet er die Klappe nur für schnelle Moleküle in eine Richtung, würde die eine Seite warm und die andere kalt, ohne dass Arbeit verrichtet wird.",
+    "ru": "Демон Максвелла: открывая заслонку только для быстрых молекул в одну сторону, он сделал бы одну половину горячей, а другую холодной без затраты работы."
+   },
+   "credit": "Htkym, via Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f06281",
+   "answerEn": "Perpetual motion machine",
+   "answerDe": "Perpetuum mobile",
+   "answerRu": "вечный двигатель",
+   "spans": {
+    "en": [
+     479,
+     24
+    ],
+    "de": [
+     497,
+     16
+    ],
+    "ru": [
+     444,
+     16
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1775-05-03",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Paris Academy of Sciences stops examining perpetual motion machines",
+    "labelDe": "Die Pariser Akademie der Wissenschaften prüft keine Perpetua mobilia mehr",
+    "labelRu": "Парижская академия наук перестаёт рассматривать вечные двигатели"
+   },
+   "source": {
+    "url": "https://fr.wikipedia.org/wiki/Mouvement_perp%C3%A9tuel",
+    "title": "Mouvement perpétuel – Wikipédia",
+    "lang": "fr"
+   },
+   "wordings": [
+    {
+     "id": "w06281",
+     "en": "What do you call a machine that moves while gaining energy, or at least without losing any?",
+     "de": "Wie nennt man eine Maschine, die sich unter Energiegewinn oder zumindest ohne Energieverlust bewegt?",
+     "ru": "Как называют машину, которая движется, получая энергию или хотя бы не теряя её?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c105",
+      "category": 9
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f06282",
+   "answerEn": "Law of conservation of energy",
+   "answerDe": "Energieerhaltungssatz",
+   "answerRu": "закон сохранения энергии",
+   "spans": {
+    "en": [
+     991,
+     29
+    ],
+    "de": [
+     1020,
+     21
+    ],
+    "ru": [
+     944,
+     24
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1842",
+    "end": "1847",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Mayer, Joule and Helmholtz establish the conservation of energy",
+    "labelDe": "Mayer, Joule und Helmholtz begründen den Energieerhaltungssatz",
+    "labelRu": "Майер, Джоуль и Гельмгольц устанавливают закон сохранения энергии"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Conservation_of_energy",
+    "title": "Conservation of energy – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06282",
+     "en": "What do you call the physical principle according to which the total energy of a closed system remains constant?",
+     "de": "Wie nennt man den physikalischen Grundsatz, wonach die Gesamtenergie eines abgeschlossenen Systems konstant bleibt?",
+     "ru": "Как называется физический принцип, согласно которому полная энергия замкнутой системы остаётся постоянной?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f06284",
+   "answerEn": "Carnot cycle",
+   "answerDe": "Carnot-Prozess",
+   "answerRu": "цикл Карно",
+   "spans": {
+    "en": [
+     2855,
+     12
+    ],
+    "de": [
+     3076,
+     14
+    ],
+    "ru": [
+     2883,
+     10
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1824",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Sadi Carnot describes the ideal heat-engine cycle",
+    "labelDe": "Sadi Carnot beschreibt den idealen Kreisprozess der Wärmekraftmaschine",
+    "labelRu": "Сади Карно описывает идеальный цикл тепловой машины"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Carnot_cycle",
+    "title": "Carnot cycle – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06284",
+     "en": "What do you call the ideal cycle that describes the highest possible efficiency of a heat engine working between two temperatures?",
+     "de": "Wie nennt man den idealen Kreisprozess, der den höchstmöglichen Wirkungsgrad einer Wärmekraftmaschine zwischen zwei Temperaturen beschreibt?",
+     "ru": "Как называется идеальный круговой процесс, задающий наибольший возможный КПД тепловой машины, работающей между двумя температурами?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f06285",
+   "answerEn": "Maxwell's demon",
+   "answerDe": "Maxwellscher Dämon",
+   "answerRu": "демон Максвелла",
+   "spans": {
+    "en": [
+     3523,
+     15
+    ],
+    "de": [
+     3904,
+     18
+    ],
+    "ru": [
+     3630,
+     15
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1867-12-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Maxwell describes his „demon“ in a letter to Peter Guthrie Tait",
+    "labelDe": "Maxwell beschreibt seinen „Dämon“ in einem Brief an Peter Guthrie Tait",
+    "labelRu": "Максвелл описывает своего «демона» в письме Питеру Гатри Тэту"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Maxwell%27s_demon",
+    "title": "Maxwell's demon – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06285",
+     "en": "What do you call the thought experiment in which a tiny being sorts gas molecules by their speed and so appears to violate the second law?",
+     "de": "Wie nennt man das Gedankenexperiment, in dem ein winziges Wesen Gasmoleküle nach ihrer Geschwindigkeit sortiert und so scheinbar den zweiten Hauptsatz verletzt?",
+     "ru": "Как называется мысленный эксперимент, в котором крошечное существо сортирует молекулы газа по скорости и тем самым будто бы нарушает второе начало термодинамики?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f25427",
+   "answerEn": "Evenly across all states",
+   "answerDe": "Gleichmäßig auf alle Zustände",
+   "answerRu": "Равномерно по всем состояниям",
+   "spans": {
+    "en": [
+     2592,
+     24
+    ],
+    "de": [
+     2753,
+     29
+    ],
+    "ru": [
+     2562,
+     29
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1868",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ludwig Boltzmann first formulates the Boltzmann distribution",
+    "labelDe": "Ludwig Boltzmann formuliert erstmals die Boltzmann-Verteilung",
+    "labelRu": "Людвиг Больцман впервые формулирует распределение Больцмана"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Negative_temperature",
+    "title": "Negative temperature",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w24795",
+     "en": "According to the Boltzmann distribution, how are atoms distributed over the available energy states as the temperature approaches infinity?",
+     "de": "Wie verteilen sich Atome laut der Boltzmann-Verteilung auf die verfügbaren Energiezustände, wenn die Temperatur gegen unendlich geht?",
+     "ru": "Как, согласно распределению Больцмана, распределяются атомы по доступным энергетическим состояниям, когда температура стремится к бесконечности?",
+     "origin": "printed",
+     "printed": {
+      "source": "publish-or-perish",
+      "card": "pp-089",
+      "category": 2
+     },
+     "cardText": "[Physics] If you heat a gas to infinitely high temperatures, what is the distribution of the atoms' energy states?\nA. Most atoms are in low-energy states\nB. Most atoms are in high-energy states\nC. Atoms are evenly distributed across all energy states\nAnswer: C. According to the Boltzmann distribution, the energy levels of the atoms in a gas are equally populated at infinitely high temperatures. This means that each energy state has the same number of atoms, leading to a state of maximum entropy or disorder."
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f06283",
+   "answerEn": "Entropy",
+   "answerDe": "Entropie",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1877",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ludwig Boltzmann links entropy to the number of microscopic arrangements",
+    "labelDe": "Ludwig Boltzmann verknüpft die Entropie mit der Zahl mikroskopischer Anordnungen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula",
+    "title": "Boltzmann's entropy formula – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06283",
+     "en": "What do you call the measure of a system's disorder which, according to the second law of thermodynamics, never decreases in a closed system?",
+     "de": "Wie nennt man das Maß für die Unordnung eines Systems, das nach dem zweiten Hauptsatz der Thermodynamik in einem abgeschlossenen System niemals abnimmt?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f06045; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f06045"
+    ]
+   }
+  }
+ ],
+ "tags": [
+  "topic:science/physics/thermodynamics",
+  "audience:international"
+ ]
+}

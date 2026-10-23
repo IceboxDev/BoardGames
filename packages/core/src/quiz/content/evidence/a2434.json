@@ -1,0 +1,312 @@
+{
+ "article": "a2434",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Russendisko",
+   "title": "Russendisko",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:03.805Z",
+   "snapshot": "bed3890747d8b05c376470036c874fbc15f556f9dc9869dff785cb87912475aa"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_K%C3%A4nguru-Chroniken",
+   "title": "Die Känguru-Chroniken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:04.965Z",
+   "snapshot": "8600258134c4e50971b912b90399d92e2a16a72b10a6e173544c7c2cdc4b3bbe"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Axolotl_Roadkill",
+   "title": "Axolotl Roadkill",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:06.515Z",
+   "snapshot": "4424c5f49a1ee2d614e3fa7f13fb150dd3cb324743bd22154d568bd07809876b"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Wladimir_Kaminer",
+   "title": "Wladimir Kaminer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:06.789Z",
+   "snapshot": "11966419693b9ca8af7ff4b219df1688251699d2e3cb91be52efeccf34db6335"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Russendisko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-052"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Känguru",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-347"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Axolotl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-013"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12791",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moskau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12792",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nirvana",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12793",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mifti",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12794",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Airen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Russendisko bezeichnet einen Musikstil der Neuen Volksmusik, der traditionelle Elemente russischer Folklore mit modernen musikalischen Elementen verbindet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russendisko” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Känguru-Chroniken sind fünf Textsammlungen des deutschen Autors, Liedermachers und Kabarettisten Marc-Uwe Kling.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Känguru” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Axolotl Roadkill ist der erste Roman von Helene Hegemann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Axolotl” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12791",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Juli 1967 in Moskau, Russische SFSR, Sowjetunion) ist ein russisch-deutscher Schriftsteller und Kolumnist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moskau” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12792",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Känguru liebt Schnapspralinen, Schnitzelbrötchen und Eierkuchen mit Hackfleisch, außerdem die Band Nirvana und Spielfilme mit Bud Spencer, aber am liebsten ohne Terence Hill.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nirvana” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12793",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Buch handelt von der sechzehnjährigen schulschwänzenden Mifti, Tochter eines kulturschaffenden Vaters, die zusammen mit ihren älteren Geschwistern Annika und Edmond in einer WG wohnt, wo sie sich u.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mifti” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:19.544Z",
+   "target": "f12794",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Buch wurde anfangs als Sensation der Literatursaison gefeiert, allerdings wurden schnell Vorwürfe laut, Hegemann habe weite Teile ihres Buches von dem Berliner Autor Airen aus dessen Werk Strobo ohne Quellenangabe abgeschrieben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:19.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Airen” is on the snapshot of s3"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0301",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Eckart_von_Hirschhausen",
+   "title": "Eckart von Hirschhausen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:06.539Z",
+   "snapshot": "6a27e7e02ecb99b070fc90a550120fdc425ecf965079da7f8c385793ca27b496"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Loriot",
+   "title": "Loriot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:07.600Z",
+   "snapshot": "c2fff60d9990eb993272c3039ef3447ab794382c183b11194fc6206c4a0c945a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Otto_Waalkes",
+   "title": "Otto Waalkes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:08.627Z",
+   "snapshot": "9e87f5d1fc1ad2c9f1948ca27e2cf6cd8964cc3694a000b4625106a6b8dfb60c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Vince_Ebert",
+   "title": "Vince Ebert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:09.470Z",
+   "snapshot": "ef7996372dc77dba5bd688b698a949e2e0715716bf407e3f4228edf50b8cd74d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Dieter_Nuhr",
+   "title": "Dieter Nuhr",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:12.421Z",
+   "snapshot": "3d3023929a03c5773d22197ec32dc0d568c00406dd6f8e800c653a215eb13e45"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01501",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eckart von Hirschhausen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c026"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Loriot",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Otto Waalkes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vince Ebert",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dieter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-279"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:26.808Z",
+   "target": "f01501",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eckart von Hirschhausen entstammt der deutschbaltischen Gelehrtenfamilie Hirschhausen, die im Jahr 1835 mit Jacob Johann Anton Hirschhausen in den erblichen russischen Adelsstand erhoben wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eckart von Hirschhausen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:26.808Z",
+   "target": "f01502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Loriot [lo.ʀi̯ˈ.o], eigentlich Bernhard-Viktor Christoph-Carl von Bülow [ˈbyː.lo], genannt Vicco von Bülow  (* 12.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loriot” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:26.808Z",
+   "target": "f01503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Otto Waalkes wurde als zweiter Sohn des Malermeisters Karl Waalkes (1912–1993) und seiner Frau Adele, geborene Lüpkes (1910–1996), in Emden geboren und wuchs dort zusammen mit seinem älteren Bruder Karl-Heinz im Arbeiterstadtteil Transvaal auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Waalkes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:26.808Z",
+   "target": "f01505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Von 1995 bis 1997 arbeitete Vince Ebert als Consultant bei der Unternehmensberatung Ogilvy & Mather Dataconsult in Frankfurt am Main.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vince Ebert” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:26.808Z",
+   "target": "f13182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dieter Nuhr wurde 1960 in eine katholische Beamtenfamilie geboren und wuchs bis zu seinem vierten Lebensjahr in Wesel auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:26.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dieter” is on the snapshot of s5"
+  }
+ ]
+}

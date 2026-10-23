@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-073",
+ "image": "IMG20261022154119.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Food Science",
+   "cardText": "[Food Science] How are oranges in fruit cups prepared so that they don’t have the white pith or skins?\nA. By peeling and soaking the oranges in a chemical solution\nB. By using high-pressure steam to blast them away\nC. By using equipment that mechanically removes them in large batches\nAnswer: A. The chemical solution works by breaking down the pectin, which is a structural carbohydrate found in the cell walls of plants.",
+   "de": "Worin werden die geschälten Orangenspalten für Fruchtbecher aus der Dose eingeweicht, um die weiße Haut und die Segmenthäute zu entfernen?",
+   "en": "In what are the peeled orange segments for canned fruit cups soaked to strip away their white pith and segment skins?",
+   "reworked": true,
+   "answerDe": "Ein Chemikalienbad: erst Säure, dann Natronlauge",
+   "answerEn": "A chemical bath: acid, then caustic soda (lye)",
+   "timeline": {
+    "kind": "event",
+    "start": "1979-02-13",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "US patent 4,139,651 describes the conventional acid-then-caustic-soda bath for stripping mandarin segment membranes",
+    "labelDe": "Das US-Patent 4.139.651 beschreibt das übliche Bad aus Säure und dann Natronlauge zum Entfernen der Häute von Mandarinenspalten"
+   },
+   "source": {
+    "url": "https://patents.google.com/patent/US4139651A/en",
+    "title": "US4139651A - Method of removing citrus-fruit-pulp-segment membranes",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed: the conventional canning process soaks segments in sulphuric or hydrochloric acid (~40 min), rinses, then soaks them in caustic soda (~20 min) (US4139651A, 1979). The card's pectin explanation is not stated by that source; the answer is phrased as the acid/alkali bath. Fruit-cup oranges are usually mandarin segments.",
+   "domain": "everyday",
+   "sub": "food"
+  },
+  {
+   "category": 2,
+   "discipline": "Computer Science",
+   "cardText": "[Computer Science] What is the term for an algorithmic structure that mimics the signaling mechanism of the human brain?\nA. Artificial intelligence\nB. Blockchain\nC. Neural network\nAnswer: C.",
+   "de": "Wie nennt man ein Rechenmodell aus verbundenen künstlichen Neuronen, das den Netzen signalübertragender Nervenzellen im Gehirn nachempfunden ist?",
+   "en": "What is the term for a computational model, inspired by the brain's networks of signalling neurons, made of connected artificial neurons?",
+   "reworked": true,
+   "answerDe": "Neuronales Netz",
+   "answerEn": "Neural network",
+   "timeline": {
+    "kind": "creation",
+    "start": "1943-12",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Warren McCulloch and Walter Pitts publish the first mathematical model of a neural network",
+    "labelDe": "Warren McCulloch und Walter Pitts veröffentlichen das erste mathematische Modell eines neuronalen Netzes"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Neural_network_(machine_learning)",
+    "title": "Neural network (machine learning)",
+    "lang": "en"
+   },
+   "notes": "Card's answer confirmed.",
+   "domain": "technology",
+   "sub": "computing"
+  }
+ ]
+}

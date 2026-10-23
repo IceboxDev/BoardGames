@@ -1,0 +1,195 @@
+{
+ "article": "a0844",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Twin_Peaks_(2017_TV_series)",
+   "title": "Twin Peaks (2017 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:58.478Z",
+   "snapshot": "1bea916a273d92b483e4cb8b673870e0a53bec3afdedd4ecb0ffdfe42644f5e2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/True_Detective_season_1",
+   "title": "True Detective season 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:48.542Z",
+   "snapshot": "d9a8670f998d430645a9f587d68279b74a39deaf472c62d6cac56be9de0d74ac"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Columbo",
+   "title": "Columbo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:59.473Z",
+   "snapshot": "a95f878e1327bebdbcb166f4ba89760ac63ee7bdcdeee50f3a57d9f75cbd0ccf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Log_Lady",
+   "title": "Log Lady",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:00.396Z",
+   "snapshot": "d97df4a8f4009fb3f4c06ade5bead0fb935ee9dad50702c216fc52023db41f68"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Twin Peaks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "True Detective",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Columbo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Log Lady",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-138"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:53.786Z",
+   "target": "f04216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The third and final season of the surrealist mystery horror drama television series Twin Peaks, billed as Twin Peaks: The Return and Twin Peaks: A Limited Event Series, premiered on May 21, 2017, and concluded on September 3, 2017.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twin Peaks” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:53.786Z",
+   "target": "f04218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first season of True Detective, an American anthology crime drama television series created by Nic Pizzolatto, aired in eight episodes between January 12 and March 9, 2014 on the premium cable network HBO.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “True Detective” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:53.786Z",
+   "target": "f04220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Columbo is an American crime drama television series starring Peter Falk as Lieutenant Columbo, a homicide detective with the Los Angeles Police Department.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Columbo” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:53.786Z",
+   "target": "f11614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Margaret Lanterman (née Coulson), better known as the Log Lady, is a fictional character in the television series Twin Peaks (1990–2017), created by Mark Frost and David Lynch.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:53.786Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Log Lady” is on the snapshot of s4"
+  }
+ ]
+}

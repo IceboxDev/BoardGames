@@ -1,0 +1,469 @@
+{
+ "article": "a2714",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Seed",
+   "title": "Seed",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:49.446Z",
+   "snapshot": "ee50f16b2c8904cf2fbbec38238e31a9e2aaf7d2f75518c151f3467726828a0e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cooksonia",
+   "title": "Cooksonia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:50.228Z",
+   "snapshot": "e57680ffcd23f4e088dfe83e4df15d911fd3c88b7dea760ef41d03e325b773aa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rhynie_chert",
+   "title": "Rhynie chert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:51.237Z",
+   "snapshot": "5d24cdc24e77863d4179cbf6d50821c1b272d8ba86734027c43dcdccb1a1d6c2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gymnosperm",
+   "title": "Gymnosperm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:52.231Z",
+   "snapshot": "90433e099b230437a0c3badd91f555b45241989064208005a00f855268f1f575"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Flowering_plant",
+   "title": "Flowering plant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:53.303Z",
+   "snapshot": "08abba9734f9c3dc6c445af979ceb3193a8ef1edb1d7063e0cde85da160b7801"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Xylem",
+   "title": "Xylem",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:54.360Z",
+   "snapshot": "a0c36b2c348c34d009caceb7f23f0766d5be92c29d6f9ab0b2cddf81d3e50085"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Salteropterus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:55.249Z",
+   "snapshot": "68970700a420e3434d5ecabb34898c2eacd962bb90d711aa5c23741dac1eb3be"
+  },
+  "s8": {
+   "url": "https://www.mapress.com/pt/article/view/phytotaxa.261.3.1",
+   "title": "The number of known plants species in the world and its annual increase (Christenhusz & Byng, Phytotaxa 261(3), 2016)",
+   "publisher": "Phytotaxa (Magnolia Press)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:43.953Z",
+   "snapshot": "f18d7a8e97513de3e29d54fb013053b8f3aca0d80cb3353213a69e8f801fcdf7"
+  },
+  "s9": {
+   "url": "https://ucmp.berkeley.edu/anthophyta/anthophyta.html",
+   "title": "Introduction to the Anthophyta",
+   "publisher": "UC Museum of Paleontology, Berkeley",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:44.896Z",
+   "snapshot": "abefac356dc141b24fd189bc73f4a09a5d7ff111691150f6f03aed50ba2d9958"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25370",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The seed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-006"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cooksonia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25372",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rhynie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "gymnosperms",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "flowering plants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Xylem",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript ppm-095"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:02.146Z",
+   "target": "f25370",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The formation of the seed is the defining part of the process of reproduction in seed plants (spermatophytes).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The seed” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:02.146Z",
+   "target": "f25371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cooksonia is an extinct group of primitive land plants, treated as a genus, although probably not monophyletic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cooksonia” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:02.146Z",
+   "target": "f25372",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rhynie chert is a Lower Devonian sedimentary deposit exhibiting extraordinary fossil detail or completeness (a Lagerstätte).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhynie” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:02.146Z",
+   "target": "f25373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The gymnosperms (  nə-spurmz, -⁠noh-; from Ancient Greek γυμνός, gymnós 'naked' and σπέρμα, spérma 'seed', thus 'naked seed') are a group of woody, perennial seed-producing plants, typically lacking the protective outer covering which surrounds the seeds in flowering plants, that include conifers,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gymnosperms” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:02.146Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Flowering plants are plants that bear flowers and fruits, and form the clade Angiospermae () or Magnoliophyta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flowering plants” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:02.146Z",
+   "target": "f25801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Xylem is one of the two types of transport tissue in vascular plants, the other being phloem; both of these are part of the vascular bundle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.146Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xylem” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:21:03Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "meaning that the seeds are enclosed within a fruit. Angiosperms are by far the most diverse group of land plants",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:21:27Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "with 295,383 flowering plants (angiosperms; monocots: 74,273; eudicots: 210,008)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Of ~308,312 vascular plants; ferns 10,560, gymnosperms 1,079 — flowering plants are by far the largest group, ~300,000."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:21:36Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "you are familiar with the largest group of plants",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:49.374Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "meaning that the seeds are enclosed within a fruit. Angiosperms are by far the most diverse group of land plants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:49.374Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "with 295,383 flowering plants (angiosperms; monocots: 74,273; eudicots: 210,008)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:49.374Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "you are familiar with the largest group of plants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:49.374Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "We have counted the currently known, described and accepted number of plant species as ca 374,000, of which approximately 308,312 are vascular plants, with 295,383 flowering plants (angiosperms; monocots: 74,273; eudicots: 210,008).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “flowering plants” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:49.374Z",
+   "target": "f25374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The flowering plants are important in many ways above and beyond",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.374Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “flowering plants” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,360 @@
+{
+ "article": "a2308",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/-stan",
+   "title": "-stan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:55.581Z",
+   "snapshot": "8cfff9fe48edfda048e64e999a03c59fd3bee1f115af4ccace497ed9cb7766ac"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ashgabat",
+   "title": "Ashgabat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:56.687Z",
+   "snapshot": "959dd30c3eb8f57b3079b97c286b22340bc08de458f0cd43ff4c9e720c0b6196"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bishkek",
+   "title": "Bishkek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:57.576Z",
+   "snapshot": "8909f0185129d288e852d7d85059a1000761fa28d9912399f3944a1f19985ec7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dushanbe",
+   "title": "Dushanbe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:58.691Z",
+   "snapshot": "c96fb7029012461785eca1cf31f5e901e3c4cc4c2b5509ac324c9bf761e225c1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mikhail_Frunze",
+   "title": "Mikhail Frunze – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:59.492Z",
+   "snapshot": "d750a8ad53bff04906dc14c93aa4d2c56f3ee9930a1ba1c2caaf35a0787cab00"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Uzbekistan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:26.739Z",
+   "snapshot": "3281d565e92314ca5b354d1fde6281f06c0a9e4f16a25d0aec225195dc858688"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bhutan",
+   "title": "Bhutan",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:45:47Z"
+  },
+  "s8": {
+   "url": "https://www.un.org/ohrlls/content/list-lldcs",
+   "title": "List of LLDCs",
+   "publisher": "UN-OHRLLS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:45:50Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "eight",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; history entry seq 9; transcript tp-101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ashgabat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bishkek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21520",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dushanbe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mikhail Frunze",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:53.287Z",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "eight",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“eight”, “acht”, “восемь”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:53.287Z",
+   "target": "f11946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ashgabat is the capital and largest city of Turkmenistan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ashgabat” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:53.287Z",
+   "target": "f11947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bishkek, formerly known as Pishpek (until 1926), and then Frunze (1926–1991), is the capital and largest city of Kyrgyzstan, and the capital of the Chüy Region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bishkek” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:53.287Z",
+   "target": "f21520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dushanbe is the capital and largest city of Tajikistan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dushanbe” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:53.287Z",
+   "target": "f21521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Newspaper clippings about Mikhail Frunze in the 20th Century Press Archives of the ZBW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:53.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mikhail Frunze” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:45:43Z",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Countries adopting the -stan suffix in both English and their national languages include:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Seven -stan states (Afghanistan, Kazakhstan, Kyrgyzstan, Pakistan, Tajikistan, Turkmenistan, Uzbekistan) + Bhutan, which ends in -tan = eight; the notes already accept seven if only -stan is meant."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:45:47Z",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Traditionally, it is taken to be a transcription of the Sanskrit Bhoṭa-anta",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Bhutan ends in -tan but is not a -stan name (Sanskrit Bhoṭa-anta, \"end of Tibet\"), making the count eight."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:45:50Z",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "4. Bhutan",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Independent confirmation that Bhutan is a sovereign Asian state (with six of the -stan states on the same list; Pakistan is coastal)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:57:11Z",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Countries adopting the -stan suffix in both English and their national languages include:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Summary: the list gives exactly seven -stan states, all in Asia; with Bhutan the count of Asian countries ending in \"tan\" is eight (also eight in German: Afghanistan, Bhutan, Kasachstan, Kirgisistan, Pakistan, Tadschikistan, Turkmenistan, Usbekistan)."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:38.872Z",
+   "target": "f11943",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Countries adopting the -stan suffix in both English and their national languages include:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:38.872Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  }
+ ]
+}

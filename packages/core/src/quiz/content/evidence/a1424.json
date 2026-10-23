@@ -1,0 +1,249 @@
+{
+ "article": "a1424",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Thomas_Aquinas",
+   "title": "Thomas Aquinas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:25.576Z",
+   "snapshot": "8e0da9c50059350b00853bd86ece239d44494fb0ca9f43ef32803ef440a1fba1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Albertus_Magnus",
+   "title": "Albertus Magnus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:22.470Z",
+   "snapshot": "aa5db1c5b7c77e20fa0ff3cd9a1e7f39331a6b45add05b72bc5c13f99b4d0c21"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anselm_of_Canterbury",
+   "title": "Anselm of Canterbury – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:26.558Z",
+   "snapshot": "efbd928f719706f87d493fae3da0cfaef49fb2e95130df7f12c7e59db93c6a59"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Abelard",
+   "title": "Peter Abelard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:27.528Z",
+   "snapshot": "50674e9a441c964129697d4bd90163023f983b50435b6b646a915603c7ec5e0e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/William_of_Ockham",
+   "title": "William of Ockham – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:00.993Z",
+   "snapshot": "657ecb9fd006be159e966da7633e3f77922464c3e6b1b7160a5e08b0d671aed6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Proslogion",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:28.321Z",
+   "snapshot": "1d7305d8e69bc36ade44629f52cc93d407e13898b3a806305161c06633ca1313"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thomas Aquinas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Albertus Magnus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anselm of Canterbury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peter Abelard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William of Ockham",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:23.493Z",
+   "target": "f07116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thomas Aquinas (  ə-KWY-nəs; Italian: Tommaso d'Aquino, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Aquinas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:23.493Z",
+   "target": "f07117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It seems likely that Albertus Magnus was born sometime before 1200, given well-attested evidence that he was aged over 80 on his death in 1280.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albertus Magnus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:23.493Z",
+   "target": "f07118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anselm of Canterbury (; 1033/4–1109), also known as Anselm of Aosta (French: Anselme d'Aoste, Italian: Anselmo d'Aosta) after his birthplace and Anselm of Bec (French: Anselme du Bec) after his monastery, was a Benedictine abbot, philosopher and theologian who served as Archbishop of Canterbury from",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anselm of Canterbury” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:23.493Z",
+   "target": "f07119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Peter Abelard (12 February 1079 – 21 April 1142) was a French philosopher, logician, theologian, composer, and poet, regarded as one of the most brilliant and controversial theologians of his time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Abelard” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:23.493Z",
+   "target": "f07120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William of Ockham or Occam ( OK-əm; Latin: Guillelmus de Ockham; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William of Ockham” is on the snapshot of s5"
+  }
+ ]
+}

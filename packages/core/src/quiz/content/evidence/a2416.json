@@ -1,0 +1,415 @@
+{
+ "article": "a2416",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Edgar_Allan_Poe",
+   "title": "Edgar Allan Poe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:29.729Z",
+   "snapshot": "274b359bf5a342cd361f31e813329cf91a551663ffc3fc01883de11944914311"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Raven",
+   "title": "The Raven – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:34.012Z",
+   "snapshot": "955989a117e21b4c997d426d32be5f0c22fd7522004f9e437bcfdf2f49473bb4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe",
+   "title": "Edgar Allan Poe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:33.346Z",
+   "snapshot": "938beb82c15afbbdcad3ac0d82b173e89bcece2264bbecb0859cccf34adcb15f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Tell-Tale_Heart",
+   "title": "The Tell-Tale Heart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:34.281Z",
+   "snapshot": "556f4ee910a73f3fe2cb9a0009a8bd9166733039deae8d9e036e8556fdb4b300"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Das_verr%C3%A4terische_Herz",
+   "title": "Das verräterische Herz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:31.787Z",
+   "snapshot": "3f3aefe243df987620d7e158456ad9e49f4e7e78d725490f353558e0444f85b0"
+  },
+  "s6": {
+   "url": "https://www.nps.gov/edal/learn/historyculture/index.htm",
+   "title": "History & Culture – Edgar Allan Poe National Historic Site",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:10.775Z",
+   "snapshot": "70c86ebcce72eeec991b1e180c2b39c272164378c69591d8f7ff4f836f170bef"
+  },
+  "s7": {
+   "url": "https://www.eapoe.org/geninfo/poedeath.htm",
+   "title": "The Mysterious Death of Edgar Allan Poe",
+   "publisher": "Edgar Allan Poe Society of Baltimore",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:12.038Z",
+   "snapshot": "25dadd186d8157b5214e18bfaaf9c8b488af9590b1852e46e906825319bcaebf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edgar Allan Poe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nevermore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Baltimore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Virginia Clemm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edgar Allan Poe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edgar Allan Poe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-301"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:16.909Z",
+   "target": "f12667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edgar Allan Poe (geboren als Edgar Poe) wurde als Sohn der in England geborenen Schauspielerin Elizabeth „Eliza“ Arnold Hopkins Poe (* 1787, † 8.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edgar Allan Poe” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:16.909Z",
+   "target": "f12668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It tells of a distraught lover who is paid a visit by a mysterious raven that repeatedly speaks a single word: \"nevermore\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nevermore” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:16.909Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "His work forced him to move between several cities, including Baltimore, Philadelphia, and New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baltimore” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:16.909Z",
+   "target": "f12671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1836, when he was 27, he married his 13-year-old cousin, Virginia Clemm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Virginia Clemm” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:16.909Z",
+   "target": "f25215",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"The Tell-Tale Heart\" is a short story by American writer Edgar Allan Poe, first published in 1843.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:16.909Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edgar Allan Poe” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:16.909Z",
+   "target": "f25215",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Edgar Allan Poe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Edgar Allan Poe”, “Эдгар Аллан По”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:04:15Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Edgar Allan Poe died in October 1849 in Baltimore, but the circumstances surrounding his death remain a mystery over a century later.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:04:16Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Depending on which account one accepts, Poe died at about 3:00 a.m. or 5:00 a.m. on October 7, 1849.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: Poe arrived in Baltimore on 28 September 1849 and died in Washington College Hospital there."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:00.205Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Edgar Allan Poe died in October 1849 in Baltimore, but the circumstances surrounding his death remain a mystery over a century later.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:00.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:00.205Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Depending on which account one accepts, Poe died at about 3:00 a.m. or 5:00 a.m. on October 7, 1849.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:00.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:00.205Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Edgar Allan Poe died in October 1849 in Baltimore, but the circumstances surrounding his death remain a mystery over a century later.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:00.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baltimore” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:00.205Z",
+   "target": "f12669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Edgar Allan Poe Society of Baltimore - General Topics - The Mysterious Death of Edgar Allan Poe",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:00.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baltimore” is on the snapshot of s7"
+  }
+ ]
+}

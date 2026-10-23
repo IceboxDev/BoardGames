@@ -1,0 +1,328 @@
+{
+ "article": "a1684",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Breakfast_at_Tiffany%27s_(novella)",
+   "title": "Breakfast at Tiffany's (novella) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:46.397Z",
+   "snapshot": "d05b99d474b6041e96f9f0a5afbd76407b11785a292ff8d793e7f429078bfc7e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Breakfast_at_Tiffany%27s_(song)",
+   "title": "Breakfast at Tiffany's (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:47.317Z",
+   "snapshot": "06c53b5cbcad0fc46a3f17f64061734b58fcb70f26e2ccc3c3a38586abe05e1e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Go_Set_a_Watchman",
+   "title": "Go Set a Watchman – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:48.420Z",
+   "snapshot": "0e9e27872ab421adc9197b84c6cd3b27d2f62e33f61d8d555bd094ae88224197"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mario_Puzo",
+   "title": "Mario Puzo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:49.367Z",
+   "snapshot": "9269a4d203eb5950cfa1f06547a2d4d23114836d0583e60ed278f3a89b9a3db9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(film)",
+   "title": "The Silence of the Lambs (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:37.551Z",
+   "snapshot": "397499631b1e3afd55f4ef0f15f1b7e83de4d86b67c7bf2137f54752eee61053"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(novel)",
+   "title": "Gone with the Wind (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:47.701Z",
+   "snapshot": "4c2ae38f7805c41b3569e83c3c03d45c8b1f662fb371796637273d0f38ed5ccb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breakfast at Tiffany's",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Breakfast at Tiffany's",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breakfast at Tiffany's",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-059"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "To Kill a Mockingbird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-068"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Godfather",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Silence of the Lambs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f08420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gone with the Wind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f08416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breakfast at Tiffany's  is a novella by Truman Capote published in 1958.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breakfast at Tiffany's” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f25106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Breakfast at Tiffany's  is a novella by Truman Capote published in 1958.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breakfast at Tiffany's” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f25106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Breakfast at Tiffany's\" is a song by American alternative rock band Deep Blue Something.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breakfast at Tiffany's” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f25107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Written before her only other published novel, To Kill a Mockingbird (1960), Go Set a Watchman was initially promoted as a sequel by its publishers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “To Kill a Mockingbird” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f08418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He wrote crime novels about the Italian-American Mafia and Sicilian Mafia, most notably The Godfather (1969), which he later co-adapted into a film trilogy directed by Francis Ford Coppola.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Godfather” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f08419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Silence of the Lambs is a 1991 American psychological horror thriller film directed by Jonathan Demme and written by Ted Tally, adapted from Thomas Harris's 1988 novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Silence of the Lambs” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:05.563Z",
+   "target": "f08420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gone with the Wind is a novel by American writer Margaret Mitchell, first published in 1936.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gone with the Wind” is on the snapshot of s6"
+  }
+ ]
+}

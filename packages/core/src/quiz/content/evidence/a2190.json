@@ -1,0 +1,336 @@
+{
+ "article": "a2190",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chimichurri",
+   "title": "Chimichurri",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:05.194Z",
+   "snapshot": "49f60f45e45febb47fbfb610d6f3d2e9723cc056bf3ede882be5031e1458e93a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Smorgasbord",
+   "title": "Smorgasbord",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:06.232Z",
+   "snapshot": "9fec927742aa0600d9f687277d28933bcea92194b30db6a74df750178229e857"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Vegemite",
+   "title": "Vegemite",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:03.582Z",
+   "snapshot": "e021990e95c3a2a64ee0a66a7a123e3746fadf56ce74104c59a9f4f2353fee7a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Haggis",
+   "title": "Haggis",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:04.385Z",
+   "snapshot": "3db66264ac05c27713db88a5f835e99578d380fb28c0b8556f47cd58483ec206"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hausmeerschweinchen",
+   "title": "Hausmeerschweinchen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:05.655Z",
+   "snapshot": "55f7b5e40b2c1559e7ba113ec48fe2cb8d6a0e831051a8c35c5f17e8b6f64842"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Biryani",
+   "title": "Biryani",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:06.420Z",
+   "snapshot": "38ed3e1764bd2c8f80f016666b6fe7cd781d4607ac942cf6e9f027de13b25d32"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pho",
+   "title": "Pho – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:07.310Z",
+   "snapshot": "47a089e3f8a3ac25294e607eb62b7508f3e1524d1e83d3e322dcff7700e62f69"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Argentina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-260"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sweden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-268"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Australien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-271"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Haggis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-292"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Meerschweinchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26; transcript tp-135"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Reis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-320"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Vietnam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Found originally in Argentina and used in Argentine, Uruguayan, Paraguayan and Brazilian cuisines, it has become widely adopted in most of Latin America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Argentina” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Sweden, the term att bre(da) smörgåsar (\"to spread butter on open-faced sandwiches\") has been used since at least the 16th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sweden” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1922 von Cyril Callister entwickelt, wird es in Port Melbourne, Australien, hergestellt: bis 2016 von Mondelez International, seit Januar 2017 vom australischen Milchprodukte-Unternehmen Bega Cheese.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Australien” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Haggis ist eine Spezialität aus der schottischen Küche und besteht aus dem Magen eines Schafes, paunch genannt, der mit Herz, Leber, Lunge, Nierenfett vom Schaf, Hafermehl, Zwiebeln und manchmal auch Graupen gefüllt wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haggis” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "domestica) ist die Haustierform eines Säugetiers der Familie der Meerschweinchen (Caviidae) und vermutlich eng mit dem Tschudi-Meerschweinchen (Cavia tschudii) verwandt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Meerschweinchen” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im Unterschied zum Pilaw zeichnet sich das Gericht dadurch aus, dass Reis vor dem Garen angebraten wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reis” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:34.878Z",
+   "target": "f11129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pho is a popular food in Vietnam where it is served in households, street-stalls, and restaurants nationwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.878Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vietnam” is on the snapshot of s7"
+  }
+ ]
+}

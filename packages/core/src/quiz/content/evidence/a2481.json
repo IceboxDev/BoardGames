@@ -1,0 +1,441 @@
+{
+ "article": "a2481",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Don%27t_Eat_the_Yellow_Snow",
+   "title": "Don't Eat the Yellow Snow",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:42.580Z",
+   "snapshot": "a43ee1b2a3b9eef059b9d6bbab9a88581002145a775194765ca4746206bfc62f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Frank_Zappa",
+   "title": "Frank Zappa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:43.714Z",
+   "snapshot": "fcae4a22b9de832714d5c5f568e6214de9954cac259330e9cea8ab1b4158442e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Apostrophe_(%27)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:44.614Z",
+   "snapshot": "a50524b9f3c87488e5ec1bb0680bfa9a6b6de5f38794319bdc2e9b7f1575ce18"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Valley_Girl_(song)",
+   "title": "Valley Girl (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:45.572Z",
+   "snapshot": "fd627af9cb8b3719da7c90b96f6da9417a3aac3d4569ec0b8c10a779b7ece85c"
+  },
+  "s5": {
+   "url": "https://www.latimes.com/entertainment/music/la-et-ms-frank-zappa-children-where-are-they-now-20160628-snap-htmlstory.html",
+   "title": "Frank Zappa's children: where are they now",
+   "publisher": "Los Angeles Times",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:37.622Z",
+   "snapshot": "1cd5595da0747a2498ecc2e523d77c9fc298b1da0beea22a484551fef9656c93"
+  },
+  "s6": {
+   "url": "http://www.filmreference.com/film/80/Moon-Unit-Zappa.html",
+   "title": "Moon Unit Zappa Biography",
+   "publisher": "Film Reference",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:37.912Z",
+   "snapshot": "16fca65273efe5f2362919466e9bb15faaa747654dad8bed024b978208226148"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13111",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frank Zappa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-139"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13112",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Mothers of Invention",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Apostrophe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13113",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Apostrophe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 18"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13114",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Montreux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moon Zappa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:27.186Z",
+   "target": "f13111",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Don't Eat the Yellow Snow\" is a suite by the American musician Frank Zappa, made up of the first four tracks of his fifth solo album Apostrophe (') (1974): \"Don't Eat the Yellow Snow\", \"Nanook Rubs It\", \"St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frank Zappa” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:27.186Z",
+   "target": "f13112",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In a career spanning more than 30 years, Zappa composed rock, pop, jazz, jazz fusion, orchestral and musique concrète works; he additionally produced nearly all the 60-plus albums he released with his band the Mothers of Invention and as a solo artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Mothers of Invention” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:27.186Z",
+   "target": "f13113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zappa continued a high rate of production through the first half of the 1970s, including the album Apostrophe (') (1974), which reached a career-high No.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apostrophe” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:27.186Z",
+   "target": "f13113",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Apostrophe (') is the fifth solo album and eighteenth in total by Frank Zappa, released in March 1974 in both stereo and quadraphonic formats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apostrophe” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:27.186Z",
+   "target": "f13114",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "While performing at Casino de Montreux in Switzerland, the Mothers' equipment was destroyed when a flare set off by an audience member started a fire that burned down the casino.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:27.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montreux” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:27.186Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moon Zappa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Moon Zappa”, “Мун Заппа”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:58:42Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The eldest Zappa child is arguably the most well-known, due in large part to her teenage star turn on “Valley Girl.”",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:58:44Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "and featuring his then-14-year-old daughter Moon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:58:46Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The song was Zappa's only Top 40 single in North America, peaking at #32 on the U.S. Billboard Hot 100 chart",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:58:47Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Performed on the song \"Valley Girl\" with Frank Zappa, 1982.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:09.857Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The eldest Zappa child is arguably the most well-known, due in large part to her teenage star turn on “Valley Girl.”",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:09.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:09.857Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The song was Zappa's only Top 40 single in North America, peaking at #32 on the U.S. Billboard Hot 100 chart",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:09.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:09.857Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Performed on the song \"Valley Girl\" with Frank Zappa, 1982.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:09.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:09.857Z",
+   "target": "f13115",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "(As Moon Zappa) Longnecker, Listen to Me, Columbia, 1989",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:09.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Moon Zappa” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,502 @@
+{
+ "article": "a0639",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Marienplatz",
+   "title": "Marienplatz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:59.046Z",
+   "snapshot": "06fa3acaba0bf32aa06ba02a93c0be7094324f3b20844c20d0961d0e89e058bd"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gendarmenmarkt",
+   "title": "Gendarmenmarkt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:56.413Z",
+   "snapshot": "c2e03757f1d17917daa29e736a2bebad141253ade6fae4c976ce0d51183ead86"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/R%C3%B6merberg_(Frankfurt_am_Main)",
+   "title": "Römerberg (Frankfurt am Main) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:57.761Z",
+   "snapshot": "4ac1666a4fe62be28f1ffae8846d9c1135e2a72532a53bf6f13d4ebd813948a6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/St_Mark%27s_Campanile",
+   "title": "St Mark's Campanile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:00.160Z",
+   "snapshot": "acb1431f373dbc8bee998d4fdb0e172aab5e2b034f94788d550682eb2117f866"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Torre_del_Mangia",
+   "title": "Torre del Mangia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:01.029Z",
+   "snapshot": "557559ca43188f37cb0d3c96e763a69ca7970b4704b63d937341036bb52e1b21"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nelson%27s_Column",
+   "title": "Nelson's Column",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:06.870Z",
+   "snapshot": "4604fe650229be1e9beb5fa0d573ec85394e000cd4ce3f7c995ac774332d90a2"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Basilius-Kathedrale",
+   "title": "Basilius-Kathedrale",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:58.324Z",
+   "snapshot": "a1b0ba9ad422e5313418c87297a55a86843197540ab4b5df7dfbe10b88029a77"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Konzerthaus_Berlin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:59.459Z",
+   "snapshot": "842752419e661201e07307589b2ec447b8ac1cc09c36b565ce483968f303ea7d"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Piazza_San_Marco",
+   "title": "Piazza San Marco – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:50.013Z",
+   "snapshot": "7d685802fed51f37d2e830c15011c30bfe7958e14e9230d434644a22301f5c91"
+  },
+  "s10": {
+   "url": "https://correr.visitmuve.it/en/il-museo/",
+   "title": "The Correr Museum – Building and history",
+   "publisher": "Fondazione Musei Civici di Venezia",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:50.799Z",
+   "snapshot": "735d434a966f7be32f7c9aa4647f3de2c5a2be73ec1f5aba6eee9c1e1445df5f"
+  },
+  "s11": {
+   "url": "https://whc.unesco.org/en/list/394/",
+   "title": "Venice and its Lagoon – UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:27:18Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marienplatz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c054"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gendarmenmarkt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Römerberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St Mark's Square",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Piazza del Campo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trafalgar Square",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32; transcript tp-038"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Moskau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-012"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f03191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marienplatz (English: Mary's Square, i.e., St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marienplatz” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f03192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Gendarmenmarkt ist ein – nach dem ursprünglich hier angesiedelten Kürassierregiment Gens d’armes benannter – Platz im Berliner Ortsteil Mitte des gleichnamigen Bezirks.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gendarmenmarkt” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f03193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Römerberg ist der Rathausplatz von Frankfurt am Main und seit dem Hochmittelalter das Zentrum der Altstadt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Römerberg” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "St Mark's Square",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“St Mark's Square”, “Markusplatz”, “Площадь Сан-Марко”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f03195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Built in 1338–1348, it is located in the Piazza del Campo, Siena's main square, next to the Palazzo Pubblico (Town Hall).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Piazza del Campo” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f11773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nelson's Column is a monument in Trafalgar Square in the City of Westminster, Central London, England, United Kingdom, built to commemorate British Royal Navy officer Horatio Nelson's decisive victory at the Battle of Trafalgar over the combined French and Spanish navies, during which he was killed",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trafalgar Square” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:18.724Z",
+   "target": "f11774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Basiliuskathedrale (russisch Храм Василия Блаженного), offiziell Mariä-Schutz-und-Fürbitte-Kathedrale am Graben (russisch Собор Покрова Пресвятой Богородицы, что на Рву), ist eine orthodoxe Kathedrale am Roten Platz in der russischen Hauptstadt Moskau.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:18.724Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moskau” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:27:14Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The square is dominated at its eastern end by St Mark's Basilica.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:27:16Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the Procuratie Vecchie and Nuove, the two long arcades of buildings which extend the length of St. Mark’s Square",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:27:18Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "From great monuments such as Piazza San Marco and Piazzetta (the cathedral, Palazzo Ducale, Marciana, Museo Correr Procuratie Vecchie)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:47.218Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The square is dominated at its eastern end by St Mark's Basilica.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:47.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:47.218Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "the Procuratie Vecchie and Nuove, the two long arcades of buildings which extend the length of St. Mark’s Square",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:47.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:47.218Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Piazza San Marco (Italian pronunciation: [ˈpjattsa sam ˈmarko]; Venetian: Piasa San Marco), often known in English as St Mark's Square, is the principal public square of Venice, Italy, where it is generally known just as la Piazza (\"the Square\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:47.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “St Mark's Square” is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:47.218Z",
+   "target": "f03194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The collection has been housed since 1922 in St Mark’s Square, in the spaces of the Napoleonic Wing and part of the Procuratie Nuove.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:47.218Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “St Mark's Square” is on the snapshot of s10"
+  }
+ ]
+}

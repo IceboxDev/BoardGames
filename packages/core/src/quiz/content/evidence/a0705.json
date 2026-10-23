@@ -1,0 +1,280 @@
+{
+ "article": "a0705",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tesla_(unit)",
+   "title": "Tesla (unit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:27.256Z",
+   "snapshot": "bd11d1a71bafd3464a08f1623aed3e59dd2bdb3f7676e5eced527e23a51c8bed"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Liste_von_Gr%C3%B6%C3%9Fenordnungen_der_magnetischen_Flussdichte",
+   "title": "Liste von Größenordnungen der magnetischen Flussdichte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:24.377Z",
+   "snapshot": "73a0227e3da35761efbe410327737d208c97bb6149826e537e1346775383b209"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gauss_(unit)",
+   "title": "Gauss (unit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:28.184Z",
+   "snapshot": "441761ce8848f500682d46f9294c2abaa69146543f534f923aeeb89c0721476b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Watt",
+   "title": "Watt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:25.040Z",
+   "snapshot": "e7c354a539db0fed1b3a28e80d06b088307e34ffc9cd9d6aacc0c0b364dba39d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/William_Stukeley",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:29.368Z",
+   "snapshot": "67def27dd8b255717fa7563cb3072765f5b2d95de56397ffe3ce83075c34068c"
+  },
+  "s6": {
+   "url": "https://spektrum.de/sixcms/media.php/1308/WIS-2006-06-OS-Erdmagnetfeld.pdf",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23"
+  },
+  "s7": {
+   "url": "https://snl.no/jordmagnetisme",
+   "title": "jordmagnetisme",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:35:09.308Z",
+   "snapshot": "0b3bc3dac7be3ce01ce7ae68d37cd7f4fe9fe8dffdd95aa2283f9001fd0d123e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03521",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tesla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c059"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f23480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "gauss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William Siemens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "etwa 50 Mikrotesla",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "etwa 50 Mikrotesla",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-373/5, u01: Earth's field in Germany is ~49–50 µT (typical German value 50 µT; PTB Braunschweig measured 49.7 µT); a fridge magnet (mT) or MRI (T) is far stronger, so the statement is false and the answer right."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:29.731Z",
+   "target": "f03521",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The tesla (symbol: T) is the unit of magnetic flux density (B) (also called magnetic B-field) in the International System of Units (SI).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tesla” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:29.731Z",
+   "target": "f23480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The gauss (symbol: G, sometimes Gs) is a unit of measurement of magnetic flux density, B (also known as magnetic induction or magnetic field).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gauss” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:29.731Z",
+   "target": "f23482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William Siemens in August 1882 in his President's Address to the Fifty-Second Congress of the British Association for the Advancement of Science.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Siemens” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T08:14:07Z",
+   "target": "f13564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "50 μT – Erdmagnetfeld in Deutschland",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:14:10Z",
+   "target": "f13564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ved jordoverflaten varierer den magnetiske feltstyrken mellom cirka 30 og 60 mikrotesla.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "Global range 30–60 µT; mid-latitude Germany sits near 48–50 µT."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:53:57.884Z",
+   "target": "f13564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "50 μT – Erdmagnetfeld in Deutschland",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:53:57.884Z",
+   "target": "f13564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ved jordoverflaten varierer den magnetiske feltstyrken mellom cirka 30 og 60 mikrotesla.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:57.884Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0291",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Neue_Nationalgalerie",
+   "title": "Neue Nationalgalerie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:10.025Z",
+   "snapshot": "aab8de53120caff5654f5d2881a09fcb6228facea7f5178f68d89fd33d172e20"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Barcelona_Pavilion",
+   "title": "Barcelona Pavilion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:11.043Z",
+   "snapshot": "cb95814a9627fc7b68ffef26adf30bd93294033da66fc2e5ca1551b454f2b7c3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Villa_Tugendhat",
+   "title": "Villa Tugendhat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:12.048Z",
+   "snapshot": "d0a9cba0755f9dcf3cf460366bbbb8eeaf82a25ffb59d134acfe68284a81d5fe"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Seagram_Building",
+   "title": "Seagram Building – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:13.216Z",
+   "snapshot": "2a511fdaa5f839dde4f5234ea7aeba23e4682ba5cd91995115ff6f13e96039c3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Berliner_Philharmonie",
+   "title": "Berliner Philharmonie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:13.995Z",
+   "snapshot": "1fe878f2cd06e543a081dbd41e219eb88661eb3b78fbbb1ecb4df2c8b3a2c887"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neue Nationalgalerie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Barcelona Pavilion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Villa Tugendhat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Seagram Building",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Berliner Philharmonie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.922Z",
+   "target": "f01451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Neue Nationalgalerie (New National Gallery) at the Kulturforum is an art museum in Berlin, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neue Nationalgalerie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.922Z",
+   "target": "f01452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Barcelona Pavilion (Catalan: Pavelló alemany; Spanish: Pabellón alemán; \"German Pavilion\") is a structure designed by Ludwig Mies van der Rohe and Lilly Reich.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barcelona Pavilion” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.922Z",
+   "target": "f01453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Villa Tugendhat (Czech: Vila Tugendhat) is an architecturally significant building in Brno, Czech Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Villa Tugendhat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:24.922Z",
+   "target": "f01454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Seagram Building is a skyscraper at 375 Park Avenue, between 52nd and 53rd streets, in the Midtown Manhattan neighborhood of New York City, New York, United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seagram Building” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:24.922Z",
+   "target": "f01455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Berliner Philharmonie (German: [bɛʁˌliːnɐ fɪlhaʁmoˈniː] ) is a concert hall in Berlin, Germany, and home to the Berlin Philharmonic Orchestra.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berliner Philharmonie” is on the snapshot of s5"
+  }
+ ]
+}

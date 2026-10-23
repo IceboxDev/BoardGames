@@ -1,0 +1,289 @@
+{
+ "article": "a0880",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+   "title": "Mahatma Gandhi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:24.481Z",
+   "snapshot": "76de9b09a5d69452cec19cdc25ef159bc8055b435ca1ecaf3557e546f3917d83"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Invictus_(film)",
+   "title": "Invictus (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:25.232Z",
+   "snapshot": "86b654c8c8ef23018b2d353fde49d8c426f5c72c2e22ecdffd9e745b52772eb7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+   "title": "Winston Churchill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:34.139Z",
+   "snapshot": "c3f6004da290616ff56dde74821f194a1515ed9053b769f2cbb6682cffcf443b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+   "title": "Abraham Lincoln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:26.385Z",
+   "snapshot": "42a49c89d9738c81ef91da41b51a9a21de3d166bd04b372f6b3b817ada69ccf0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+   "title": "J. Robert Oppenheimer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:27.476Z",
+   "snapshot": "d373180b0eb110977bd0c1f83ae8c5066c2bd1a5311b9d9860acf82fdda55d18"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Chaplin_(film)",
+   "title": "Chaplin (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:28.250Z",
+   "snapshot": "70e607b458af2a9d433f49208d0c41a507096a78957caf44bb616241e48ec0ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mahatma Gandhi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nelson Mandela",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Winston Churchill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "J. Robert Oppenheimer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hannah Chaplin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-214"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:59.068Z",
+   "target": "f04396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gandhi's complete works were published by the Indian government under the name The Collected Works of Mahatma Gandhi in the 1960s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mahatma Gandhi” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:59.068Z",
+   "target": "f04397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The story is based on the 2008 John Carlin book Playing the Enemy: Nelson Mandela and the Game That Made a Nation about the events in South Africa before and during the 1995 Rugby World Cup.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nelson Mandela” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:59.068Z",
+   "target": "f04398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In May 1945, Winston Churchill commissioned the Chiefs of Staff Committee to provide its thoughts on a possible military campaign against the USSR, code-named Operation Unthinkable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Winston Churchill” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:59.068Z",
+   "target": "f04399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abraham Lincoln (February 12, 1809 – April 15, 1865) was the 16th president of the United States, from 1861 until his assassination in 1865.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Lincoln” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:59.068Z",
+   "target": "f04400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "J. Robert Oppenheimer (born Julius Robert Oppenheimer  ; April 22, 1904 – February 18, 1967) was an American theoretical physicist who served as the director of the Manhattan Project's Los Alamos Laboratory during World War II.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “J. Robert Oppenheimer” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:59.068Z",
+   "target": "f11466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It also features Charlie Chaplin's own daughter, Geraldine Chaplin, in the role of his mother, Hannah Chaplin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:59.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannah Chaplin” is on the snapshot of s6"
+  }
+ ]
+}

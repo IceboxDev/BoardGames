@@ -1,8 +1,8 @@
 import { geoCatalog } from "@boardgames/core/trainers/geography/deck";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
-import { todayKey } from "../../games/quiztopia/api";
 import { qk } from "../../lib/query-keys";
+import { todayKey } from "../quiz/api";
 import { overviewQuery } from "./api";
 import { loadWorld } from "./globe/world";
 

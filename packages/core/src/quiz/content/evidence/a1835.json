@@ -1,0 +1,436 @@
+{
+ "article": "a1835",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Francis_Willughby",
+   "title": "Francis Willughby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:12.602Z",
+   "snapshot": "d3f9d5476d3c83c5b815c739c3996f112a77e2ec68b4101e63a90969dae9a4e3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Royal_Entomological_Society",
+   "title": "Royal Entomological Society – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:13.372Z",
+   "snapshot": "b84c494502ad12475951869447a058995af30a8d3800457b4ac5e22a0e50a2a5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Artedi",
+   "title": "Peter Artedi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:14.381Z",
+   "snapshot": "ba9a8bde6ac6e02d54255742dc0b5bb3dbef0360e9446daaac942deeade7f4ea"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Josephus_Nicolaus_Laurenti",
+   "title": "Josephus Nicolaus Laurenti – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:15.360Z",
+   "snapshot": "247865649a533d514c0d520077925d8ab4e5f4c731dda64441e382bc4896b44a"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/botany",
+   "title": "botany – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ornithology",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:16.491Z",
+   "snapshot": "517c8271462b74345b7840be2abedb030621f13784d277d32eb7ddcf353ad136"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Ichthyology",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:17.362Z",
+   "snapshot": "abfc4a14e25d71f17e8d2f3fcd6ae345377de2608a0fc136d50507c94ff404f9"
+  },
+  "s8": {
+   "url": "https://www.dwds.de/wb/Botanik",
+   "title": "Botanik – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:48.591Z",
+   "snapshot": "c8d6f7c99fee8b94d083f7317c7b3060e13b1061f5859f714c9a6bf6c11f3c93"
+  },
+  "s9": {
+   "url": "https://www.dictionary.com/browse/botany",
+   "title": "botany – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:48.919Z",
+   "snapshot": "224946076ef9d6c47f2fc29ee2fc7208d94ea5622957e4a8adb92221d148cd03"
+  },
+  "s10": {
+   "url": "https://ahdictionary.com/word/search.html?q=botany",
+   "title": "botany – American Heritage Dictionary",
+   "publisher": "American Heritage Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:49.110Z",
+   "snapshot": "adbc1e808d6241050d5c7081eda91d338ebf4bd18ac4bf6363e7304302a7f9ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ornithology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Entomology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ichthyology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Herpetology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Botany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:30.401Z",
+   "target": "f09171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Ornithology was also published in an expanded form in English.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ornithology” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:30.401Z",
+   "target": "f09172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They decided that a society should be created for the promotion of the science of entomology in its various branches and it should be called the Entomological Society of London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Entomology” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:30.401Z",
+   "target": "f09173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He is sometimes known as the \"father of ichthyology\" for his pioneering work in classifying the fishes into groups.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ichthyology” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:30.401Z",
+   "target": "f09174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "This was an important book in herpetology, defining thirty genera of reptiles; Carl Linnaeus's 10th edition of Systema Naturae in 1758 defined only ten genera.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:30.401Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herpetology” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:07:47Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "aus griech. botánē (βοτάνη) ‘Weide, Futterkraut, Gras’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:07:50Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The origin of the word botany came from the Greek word botane, which means \"grass\" or \"pasture.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:07:52Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The science or study of plants.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r051",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:19.635Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "aus griech. botánē (βοτάνη) ‘Weide, Futterkraut, Gras’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s8"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:19.635Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The origin of the word botany came from the Greek word botane, which means \"grass\" or \"pasture.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s9"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:19.635Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The science or study of plants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s10"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:19.635Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Botanik – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Botanik” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:19.635Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "BOTANY Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Botany” is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:19.635Z",
+   "target": "f09175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "American Heritage Dictionary Entry: botany",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:19.635Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Botany” is on the snapshot of s10"
+  }
+ ]
+}

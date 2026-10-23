@@ -1,0 +1,249 @@
+{
+ "article": "a1520",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pierre-Joseph_Proudhon",
+   "title": "Pierre-Joseph Proudhon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:29.469Z",
+   "snapshot": "e97b0d58fb1539bfcbd811f6ff568dec712d6fcc911b614728fa0f85df3081ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Epicurus",
+   "title": "Epicurus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:30.359Z",
+   "snapshot": "d291e5de93dd151e9e6049628b020974cd46da7ee3ce123d517e913b2988f339"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fathers_and_Sons_(novel)",
+   "title": "Fathers and Sons (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:12.930Z",
+   "snapshot": "7db80a806743e5caa6d6866164b0b98e7648d2e670342b13ffe5375ac5dea518"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Agnosticism",
+   "title": "Agnosticism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:30.002Z",
+   "snapshot": "18fd49981397edaf492d4c879dba608414e10a703d772024e556a117894f86f5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jeremy_Bentham",
+   "title": "Jeremy Bentham – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:13.958Z",
+   "snapshot": "8ccf965b501dab870cd2e1018c7487bf76ef8de39f7c0e627bcd159dbd40332b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mikhail_Bakunin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:14.850Z",
+   "snapshot": "fec4d2982cc527938613039d889d37362232183c6addc6640fb308ab44660528"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anarchism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hedonism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nihilism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Agnosticism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Utilitarianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:38.415Z",
+   "target": "f07596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pierre-Joseph Proudhon (, also US: ; French: [pjɛʁ ʒozɛf pʁudɔ̃]; 15 January 1809 – 19 January 1865) was a French anarchist, socialist, philosopher, and economist who founded mutualist philosophy and is considered by many to be the \"father of anarchism\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.415Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anarchism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:38.415Z",
+   "target": "f07597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 19th century Britain, Jeremy Bentham, John Stuart Mill, and Henry Sidgwick adapted Epicurus's psychological hedonism to their own ethical theories of Utilitarianism, which sought to maximize overall happiness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.415Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hedonism” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:38.415Z",
+   "target": "f07598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "His father, Nikolay, gladly receives the two young men at his estate, but Nikolay's brother, Pavel, soon becomes upset by the strange new philosophy called \"nihilism\" that the young men advocate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.415Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nihilism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:38.415Z",
+   "target": "f07599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Agnosticism is a position that questions the existence of God or the divine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.415Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Agnosticism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:38.415Z",
+   "target": "f07600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "[15 February 1748 N.S.] – 6 June 1832) was an English philosopher, jurist, and social reformer regarded as the founder of modern utilitarianism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.415Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utilitarianism” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,469 @@
+{
+ "article": "a2124",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Watt_steam_engine",
+   "title": "Watt steam engine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:14.576Z",
+   "snapshot": "02deecf60e65e1cdbf93b487789995dea03d0c413143b5c788f9e1fec96a6252"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Spinning_jenny",
+   "title": "Spinning jenny – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:52.968Z",
+   "snapshot": "1082fd091a7563a8828b02dfb79aa87040d29c89dce1fe3b6d0dd1e47269dcd5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cromford_Mill",
+   "title": "Cromford Mill – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:50.819Z",
+   "snapshot": "f53aab6fc92cafce96a399f1139648a43cf98390bd9765f7a3871c9929b722ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Richard_Trevithick",
+   "title": "Richard Trevithick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:51.906Z",
+   "snapshot": "54a6aa492e1dceaabf894cf423d8c09f13e514aa81df7ba1070a5bff14eac722"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Rainhill_trials",
+   "title": "Rainhill trials – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:52.847Z",
+   "snapshot": "57c6ab67e4094fd98e10610248b958239cda405147cb58bf4047b0c99dae47f0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Water_frame",
+   "title": "Water frame – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:50:49Z"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/1030/",
+   "title": "Derwent Valley Mills – UNESCO World Heritage Centre",
+   "publisher": "UNESCO",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:50:50Z"
+  },
+  "s8": {
+   "url": "https://www.gracesguide.co.uk/Richard_Arkwright",
+   "title": "Richard Arkwright – Grace's Guide to British Industrial History",
+   "publisher": "Grace's Guide",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:48.795Z",
+   "snapshot": "92045b73ee0559b9ac14f256acfeedcd58d2414b004401c77fb5ed0b7c56d692"
+  },
+  "s9": {
+   "url": "https://www.gracesguide.co.uk/Richard_Trevithick",
+   "title": "Richard Trevithick – Grace's Guide to British Industrial History",
+   "publisher": "Grace's Guide",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:49.707Z",
+   "snapshot": "4288c4f2cb2e9e02cea63de4a583cf4797e4abe25fe5f45dcef9cd6c462ce4aa"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "James Watt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Hargreaves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Richard Arkwright",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard Trevithick",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "George Stephenson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:27.030Z",
+   "target": "f10616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Watt steam engine was an invention of James Watt that was a driving force of the Industrial Revolution.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Watt” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:27.030Z",
+   "target": "f10617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It was invented in 1764–1765 by James Hargreaves in Stanhill, Oswaldtwistle, Lancashire in England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Hargreaves” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:27.030Z",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cromford Mill is the world's first water-powered cotton spinning mill, developed by Richard Arkwright in 1771 in Cromford, Derbyshire, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Arkwright” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:27.030Z",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Richard Trevithick (13 April 1771 – 22 April 1833) was a British inventor and mining engineer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Trevithick” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:27.030Z",
+   "target": "f10620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Rainhill trials were a competition run from 6 to 14 October 1829 to test George Stephenson's argument that locomotives would have the best motive power for the nearly-completed Liverpool and Manchester Railway (L&MR).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:27.030Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Stephenson” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:50:49Z",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Richard Arkwright, who patented the technology in 1769,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:50:50Z",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The modern factory owes its origins to the mills at Cromford, where Richard Arkwright's inventions were first put into industrial-scale production.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: Arkwright 'constructed a water-powered spinning mill at Cromford in 1771'."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:50:52Z",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1769 Arkwright patented the Water Frame",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Grace's Guide notes the claim that Thomas Highs invented the spinning frame; the wording asks who patented it."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:50:53Z",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The world's first locomotive-hauled railway journey took place on 21 February 1804, when Trevithick's unnamed steam locomotive hauled a train along the tramway of the Penydarren Ironworks,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:50:55Z",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "was made use of to convey along the tram-road 10 tons long weight of bar-iron, from Penydarran iron-works,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Contemporary 1804 newspaper account reproduced; Grace's Guide also notes a 1802–03 Coalbrookdale locomotive built to Trevithick's design, so the answer holds either way."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:13.500Z",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1769 Arkwright patented the Water Frame",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.500Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:13.500Z",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The world's first locomotive-hauled railway journey took place on 21 February 1804, when Trevithick's unnamed steam locomotive hauled a train along the tramway of the Penydarren Ironworks,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.500Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:13.500Z",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "was made use of to convey along the tram-road 10 tons long weight of bar-iron, from Penydarran iron-works,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.500Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:13.500Z",
+   "target": "f10618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Richard Arkwright (23 December 1732 – 3 August 1792) was an Englishman credited with the spinning frame — later renamed the water frame following the transition to water power.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.500Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Richard Arkwright” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:13.500Z",
+   "target": "f10619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Designed by Richard Trevithick, castings made by the Coalbrookdale Co.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.500Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Richard Trevithick” is on the snapshot of s9"
+  }
+ ]
+}

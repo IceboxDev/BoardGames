@@ -1,0 +1,281 @@
+{
+ "article": "a2570",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Stade_Roland_Garros",
+   "title": "Stade Roland Garros",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:39.637Z",
+   "snapshot": "ee906cb6615420df7545ce9d585a350c5c289981b5ace1ab658f1c96b42acd0d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Australian_Open",
+   "title": "Australian Open",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:40.724Z",
+   "snapshot": "422a5c5f5dcb0c66a883333d515c1387fcb4f0c5ef4fb52de328aef3b8e874dc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wimbledon_Championships",
+   "title": "Wimbledon Championships",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:39.393Z",
+   "snapshot": "ebc6c6b7060add32fe567f3a1fde8902f3a5840a5a334e9f44ed805aff59ba2d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/US_Open_(tennis)",
+   "title": "US Open (tennis) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:42.257Z",
+   "snapshot": "8353bc9d85e75133833553d250a022284a10752aab6976cbadc70680de8387eb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/French_Open",
+   "title": "French Open – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:43.156Z",
+   "snapshot": "395fc0d7e329eb25d19bd8caac6d6dbaf85346f755f3361c280e1cc0c96f69f7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stade Roland Garros",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13770",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Melbourne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-102"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "2007",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-280"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flushing Meadows",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "clay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "aviator",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:40.235Z",
+   "target": "f13769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Stade Roland Garros ist ein Tenniskomplex im 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stade Roland Garros” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:40.235Z",
+   "target": "f13770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Tennisturnier wird seit 1987 jeweils im Januar in Melbourne, der zweitgrößten Stadt Australiens (Stand 2026), ausgetragen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Melbourne” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:40.235Z",
+   "target": "f13771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Previously, the lowest seeded female champion was Venus Williams, who won in 2007 as the 23rd seed; Williams was returning from an injury that had prevented her playing in previous tournaments, giving her a lower ranking than she would normally have had.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2007” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:40.235Z",
+   "target": "f13772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Since 1978, the tournament has been played on acrylic hardcourts at the USTA Billie Jean King National Tennis Center in Flushing Meadows–Corona Park, Queens, New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flushing Meadows” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:40.235Z",
+   "target": "f13773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The French Open is the premier clay court tournament in the world and the only Grand Slam tournament currently held on this surface.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “clay” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:40.235Z",
+   "target": "f13774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Stade Français president Émile Lesieur had offered the tennis authorities three hectares of land with the condition that the new stadium must be named after the World War I aviator hero Roland Garros, who was also a former HEC Paris business school classmate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:40.235Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aviator” is on the snapshot of s5"
+  }
+ ]
+}

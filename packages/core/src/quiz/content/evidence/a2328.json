@@ -1,0 +1,400 @@
+{
+ "article": "a2328",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/T%C3%A4towierung",
+   "title": "Tätowierung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:21.171Z",
+   "snapshot": "d8d3f108099242240977e4e8362d585586d49fd2fb840a2d8a3783ae0465c0ba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/%C3%96tzi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:17.670Z",
+   "snapshot": "a49198db5bc847437ee8c3dfb40c98a09a64d7f894b0b60346d6c7ea0bc6e87e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/%C3%96tzi",
+   "title": "Ötzi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:21.033Z",
+   "snapshot": "82f1405bdc795ad813163c09557c382d9a375b5c2299a0aebb2c4fbd81bb86a4"
+  },
+  "s4": {
+   "url": "https://www.redorbit.com/news/science/1113410697/its-official-otzi-the-iceman-has-the-oldest-tattoos-in-the-world-111115/",
+   "title": "It's official: Ötzi the Iceman has the oldest tattoos in the world",
+   "publisher": "Redorbit (article by tattoo archaeologist Aaron Deter-Wolf)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:40.222Z",
+   "snapshot": "9f78fe24ad1f87f902f8afcdf17b8359211bda4f6e95dee684b24aa60a67da99"
+  },
+  "s5": {
+   "url": "https://www.iceman.it/en/oetzi/the-body",
+   "title": "The body – Ötzi",
+   "publisher": "South Tyrol Museum of Archaeology",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:40.408Z",
+   "snapshot": "efd4fd13e25d9b619de328bf1935caab60ee358a29f12303d2e6214247ebad2a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ötzi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-106"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ötzi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ötztaler Alpen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-291"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Laktoseintoleranz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-031"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bolzano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "arrowhead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:57.289Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lange galt die 5300 Jahre alte Gletschermumie Ötzi als ältester Fund eines Menschen mit Tätowierung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ötzi” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:57.289Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ötzi's remains were discovered on 19 September 1991 in the Ötztal Alps (hence the nickname \"Ötzi\") at the Austria–Italy border.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ötzi” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:57.289Z",
+   "target": "f12099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kupfersteinzeit, die 1991 im Südtiroler Anteil der Ötztaler Alpen gefunden wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ötztaler Alpen” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:57.289Z",
+   "target": "f12100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Diese Tatsache berechtigt aber noch nicht zu der – teils in der Presse kolportierten – Vermutung einer generellen Unangepasstheit an eine bäuerliche Wirtschaftsform, da Laktoseintoleranz als der wahrscheinlichere Befund auch noch für spätneolithische Bevölkerungen gewertet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Laktoseintoleranz” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:57.289Z",
+   "target": "f12103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His remains and personal belongings are on exhibit at the South Tyrol Museum of Archaeology in Bolzano, South Tyrol, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bolzano” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:57.289Z",
+   "target": "f12104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Because of the presence of an arrowhead embedded in his left shoulder and various other wounds, researchers believe that Ötzi was killed by another person.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.289Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “arrowhead” is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:45Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The oldest tattoos belong to Ötzi, aka the Iceman, who died and was frozen beneath an Alpine glacier along the Austrian-Italian border between about 3370 and 3100 BC.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "2016 summary of Deter-Wolf et al., Journal of Archaeological Science: Reports; later (2018) Gebelein mummies are of overlapping date, hence 'long considered'."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:48Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "61 tattoos were found on Ötzi’s body, all in the form of lines or crosses.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official museum page confirms the tattoos (61); the 'oldest' ranking comes from the Redorbit/JAS Reports source."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:42.470Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The oldest tattoos belong to Ötzi, aka the Iceman, who died and was frozen beneath an Alpine glacier along the Austrian-Italian border between about 3370 and 3100 BC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:42.470Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "61 tattoos were found on Ötzi’s body, all in the form of lines or crosses.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:42.470Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It's official: Ötzi the Iceman has the oldest tattoos in the world - Redorbit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ötzi” is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:42.470Z",
+   "target": "f12098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ötzi | The mummy in the South Tyrol Museum of Archaeology",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.470Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ötzi” is on the snapshot of s5"
+  }
+ ]
+}

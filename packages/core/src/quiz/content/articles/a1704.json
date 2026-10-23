@@ -1,0 +1,301 @@
+{
+ "id": "a1704",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "Inside the Case: The Parts of a Desktop PC",
+ "titleDe": "Im Gehäuse: Die Bauteile eines Desktop-PCs",
+ "titleRu": "Внутри корпуса: компоненты настольного ПК",
+ "bodyEn": "Open a desktop computer and the first thing you see is a large green or black circuit board to which everything else is attached. That is the **motherboard**, also called the mainboard or system board. It is a multi-layer printed circuit board carrying the socket for the processor, the slots for memory modules, expansion slots (today mostly PCI Express), connectors for storage drives (SATA and M.2), the rear panel with USB, network and audio ports, and the chipset that routes traffic between all of them. A small flash chip on the board holds the firmware – once called the BIOS, now UEFI – which tests the hardware at power-on and loads the operating system, and a coin cell keeps the clock running when the machine is unplugged. Motherboards come in standard sizes so that they fit standard cases: the ATX format introduced by Intel in July 1995 is still the reference, with microATX and Mini-ITX for smaller machines.\n\nSitting in the board's largest socket is the **processor**, or central processing unit (CPU): the chip that fetches instructions from memory, decodes them and executes them, billions of times a second. The first commercial microprocessor, the Intel 4004, released on 15 November 1971, contained 2,300 transistors; a modern desktop CPU packs billions, often spread over several chiplets and divided among many cores that work in parallel. Almost all PCs use the x86 architecture from Intel or AMD, which goes back to Intel's 8086 processor of 8 June 1978, while phones and an increasing number of laptops use ARM designs.\n\nThe processor keeps its working data in **RAM**, random-access memory, plugged into the motherboard as DIMM modules. The first commercially available dynamic RAM chip, the Intel 1103, appeared in October 1970. RAM is fast and volatile: it can be read and written in nanoseconds, but it forgets everything when the power goes off, which is why documents must be saved to a drive. Capacity is measured in gigabytes, and the current standard, DDR5, moves data at tens of gigabytes per second.\n\nDrawing the picture on the screen is the job of the **graphics card**, an expansion card carrying its own processor, the GPU (a term Nvidia coined for the GeForce 256, released on 11 October 1999), and its own video memory. A GPU consists of thousands of small cores optimised for doing the same calculation on huge amounts of data at once – ideal for rendering 3-D games, and, as it turned out, equally ideal for training neural networks, which has made graphics cards the most sought-after component of the AI era. Office PCs often get by with a graphics unit integrated into the processor instead.\n\nFeeding all of this is the **power supply unit** (PSU), the metal box with the fan at the back of the case. It converts the 230-volt alternating current from the wall socket into the low direct-current voltages the components need – 12, 5 and 3.3 volts – and supplies anywhere from 300 to more than 1,000 watts, depending on the graphics card. The 80 PLUS certification scheme, introduced in 2004, rates how much of the drawn power actually reaches the components rather than being lost as heat.\n\n| Component | Role | Typical spec |\n|---|---|---|\n| motherboard | Connects everything | ATX, microATX, Mini-ITX |\n| processor | Executes instructions | 4–24 cores, 3–5 GHz |\n| RAM | Working memory | 16–64 GB DDR5 |\n| graphics card | Renders images, parallel computing | 8–24 GB video memory |\n| power supply unit | Converts mains to DC | 500–1,000 W, 80 PLUS |",
+ "bodyDe": "Öffnet man einen Desktop-Computer, sieht man als Erstes eine große grüne oder schwarze Platine, an der alles andere befestigt ist. Das ist die **Hauptplatine**, auch Mainboard oder Motherboard genannt. Sie ist eine mehrlagige Leiterplatte, die den Sockel für den Prozessor trägt, die Steckplätze für Speichermodule, Erweiterungssteckplätze (heute meist PCI Express), Anschlüsse für Laufwerke (SATA und M.2), das rückseitige Anschlussfeld mit USB-, Netzwerk- und Audiobuchsen sowie den Chipsatz, der den Datenverkehr zwischen all dem lenkt. Ein kleiner Flash-Chip auf der Platine enthält die Firmware – früher BIOS genannt, heute UEFI –, die beim Einschalten die Hardware prüft und das Betriebssystem lädt, und eine Knopfzelle hält die Uhr am Laufen, wenn der Rechner vom Netz getrennt ist. Hauptplatinen gibt es in Standardgrößen, damit sie in Standardgehäuse passen: Das im Juli 1995 von Intel eingeführte ATX-Format ist bis heute die Referenz, mit microATX und Mini-ITX für kleinere Rechner.\n\nIm größten Sockel der Platine sitzt der **Prozessor**, die zentrale Verarbeitungseinheit (CPU): der Chip, der Befehle aus dem Speicher holt, decodiert und ausführt, milliardenfach pro Sekunde. Der erste kommerzielle Mikroprozessor, der am 15. November 1971 erschienene Intel 4004, enthielt 2.300 Transistoren; eine moderne Desktop-CPU packt Milliarden davon, oft verteilt auf mehrere Chiplets und auf viele Kerne, die parallel arbeiten. Fast alle PCs nutzen die x86-Architektur von Intel oder AMD, die auf Intels Prozessor 8086 vom 8. Juni 1978 zurückgeht, während Smartphones und immer mehr Laptops auf ARM-Designs setzen.\n\nSeine Arbeitsdaten hält der Prozessor im **Arbeitsspeicher**, dem RAM (Random Access Memory), der als DIMM-Module in die Hauptplatine gesteckt wird. Der erste kommerziell erhältliche dynamische RAM-Chip, der Intel 1103, kam im Oktober 1970 auf den Markt. RAM ist schnell und flüchtig: Er lässt sich in Nanosekunden lesen und beschreiben, vergisst aber alles, sobald der Strom weg ist – weshalb Dokumente auf ein Laufwerk gespeichert werden müssen. Die Kapazität wird in Gigabyte gemessen, und der aktuelle Standard DDR5 bewegt Daten mit Dutzenden Gigabyte pro Sekunde.\n\nDas Bild auf den Schirm zu zeichnen ist Aufgabe der **Grafikkarte**, einer Steckkarte mit eigenem Prozessor, der GPU (ein Begriff, den Nvidia für die am 11. Oktober 1999 erschienene GeForce 256 prägte), und eigenem Videospeicher. Eine GPU besteht aus Tausenden kleiner Kerne, die darauf optimiert sind, dieselbe Rechnung auf riesige Datenmengen gleichzeitig anzuwenden – ideal für 3-D-Spiele und, wie sich herausstellte, ebenso ideal für das Training neuronaler Netze, was Grafikkarten zum begehrtesten Bauteil des KI-Zeitalters gemacht hat. Büro-PCs kommen oft mit einer im Prozessor integrierten Grafikeinheit aus.\n\nVersorgt wird all das vom **Netzteil**, dem Metallkasten mit Lüfter an der Rückseite des Gehäuses. Es wandelt den 230-Volt-Wechselstrom aus der Steckdose in die niedrigen Gleichspannungen um, die die Bauteile brauchen – 12, 5 und 3,3 Volt – und liefert je nach Grafikkarte zwischen 300 und mehr als 1.000 Watt. Das 2004 eingeführte Zertifikat 80 PLUS bewertet, wie viel der aufgenommenen Leistung tatsächlich bei den Bauteilen ankommt, statt als Wärme verloren zu gehen.\n\n| Bauteil | Aufgabe | Typische Daten |\n|---|---|---|\n| Hauptplatine | Verbindet alles | ATX, microATX, Mini-ITX |\n| Prozessor | Führt Befehle aus | 4–24 Kerne, 3–5 GHz |\n| Arbeitsspeicher | Arbeitsdaten | 16–64 GB DDR5 |\n| Grafikkarte | Bildberechnung, Parallelrechnen | 8–24 GB Videospeicher |\n| Netzteil | Wandelt Netzstrom in Gleichstrom | 500–1.000 W, 80 PLUS |",
+ "bodyRu": "Откройте настольный компьютер — и первым делом увидите большую зелёную или чёрную печатную плату, к которой крепится всё остальное. Это **материнская плата**, её также называют системной платой. Это многослойная печатная плата, на которой расположены разъём (сокет) для процессора, слоты для модулей памяти, слоты расширения (сегодня в основном PCI Express), разъёмы для накопителей (SATA и M.2), задняя панель с USB-, сетевыми и аудиоразъёмами, а также чипсет, распределяющий потоки данных между всем этим. Небольшая флеш-микросхема на плате хранит прошивку — раньше её называли BIOS, теперь UEFI, — которая при включении проверяет оборудование и загружает операционную систему, а батарейка-таблетка поддерживает ход часов, когда компьютер отключён от сети. Материнские платы выпускаются стандартных размеров, чтобы подходить к стандартным корпусам: формат ATX, представленный Intel в июле 1995 года, до сих пор остаётся эталоном, а для компактных машин есть microATX и Mini-ITX.\n\nВ самом большом разъёме платы стоит **процессор**, или центральное процессорное устройство (CPU): микросхема, которая извлекает команды из памяти, декодирует и выполняет их миллиарды раз в секунду. Первый коммерческий микропроцессор, Intel 4004, выпущенный 15 ноября 1971 года, содержал 2300 транзисторов; современный настольный процессор вмещает миллиарды транзисторов, часто распределённых по нескольким чиплетам и многим ядрам, работающим параллельно. Почти все ПК используют архитектуру x86 от Intel или AMD, восходящую к процессору Intel 8086 от 8 июня 1978 года, тогда как смартфоны и всё больше ноутбуков используют разработки ARM.\n\nРабочие данные процессор держит под рукой: это **оперативная память** (RAM, random-access memory — память с произвольным доступом), модули DIMM которой вставляются в материнскую плату. Первая коммерчески доступная микросхема динамической памяти, Intel 1103, появилась в октябре 1970 года. Оперативная память быстрая и энергозависимая: читать и записывать её можно за наносекунды, но при отключении питания она всё забывает, поэтому документы нужно сохранять на накопитель. Её объём измеряется в гигабайтах, а нынешний стандарт DDR5 передаёт десятки гигабайт в секунду.\n\nИзображение на экране рисует **видеокарта** — плата расширения со своим процессором, GPU (термин, придуманный Nvidia для GeForce 256, выпущенной 11 октября 1999 года), и собственной видеопамятью. GPU состоит из тысяч небольших ядер, оптимизированных для того, чтобы выполнять одно и то же вычисление над огромными массивами данных одновременно, — идеально для 3D-игр и, как выяснилось, столь же идеально для обучения нейросетей, что сделало видеокарты самым востребованным компонентом эпохи ИИ. Офисным ПК часто хватает графики, встроенной в процессор.\n\nВсё это питает **блок питания** (БП) — металлическая коробка с вентилятором на задней стенке корпуса. Блок питания преобразует переменный ток напряжением 230 вольт из розетки в низкие постоянные напряжения, нужные компонентам, — 12, 5 и 3,3 вольта — и выдаёт от 300 до более чем 1000 ватт в зависимости от видеокарты. Сертификация 80 PLUS, введённая в 2004 году, оценивает, какая доля потребляемой мощности действительно доходит до компонентов, а не теряется в виде тепла.\n\n| Компонент | Роль | Типичные характеристики |\n|---|---|---|\n| материнская плата | соединяет всё | ATX, microATX, Mini-ITX |\n| процессор | выполняет команды | 4–24 ядра, 3–5 ГГц |\n| оперативная память | рабочая память | 16–64 ГБ DDR5 |\n| видеокарта | строит изображение, параллельные вычисления | 8–24 ГБ видеопамяти |\n| блок питания | преобразует сетевой ток в постоянный | 500–1000 Вт, 80 PLUS |",
+ "notesEn": "„Mainboard“ and „system board“ are also accepted.",
+ "notesDe": "Mainboard und Motherboard sind im Deutschen ebenso gebräuchlich und sollten neben Hauptplatine akzeptiert werden.",
+ "notesRu": "Также принимаются «системная плата» и «материнка».",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Personal_computer%2C_exploded_5.svg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Personal_computer,_exploded_5.svg",
+   "width": 800,
+   "height": 860,
+   "alt": {
+    "en": "Exploded diagram of a desktop PC showing its components",
+    "de": "Explosionszeichnung eines Desktop-PCs mit seinen Bauteilen",
+    "ru": "Схема настольного ПК в разобранном виде с его компонентами"
+   },
+   "caption": {
+    "en": "An exploded view of a desktop PC: the motherboard with processor and RAM, the expansion card, the power supply unit and the drives, each in its place in the case.",
+    "de": "Explosionszeichnung eines Desktop-PCs: die Hauptplatine mit Prozessor und Arbeitsspeicher, die Steckkarte, das Netzteil und die Laufwerke, jedes an seinem Platz im Gehäuse.",
+    "ru": "Настольный ПК в разобранном виде: материнская плата с процессором и оперативной памятью, плата расширения, блок питания и накопители — каждый на своём месте в корпусе."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Abit-kt7-large.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/ATX",
+   "width": 2208,
+   "height": 1071,
+   "alt": {
+    "en": "An ATX motherboard",
+    "de": "Eine ATX-Hauptplatine",
+    "ru": "Материнская плата формата ATX"
+   },
+   "caption": {
+    "en": "An ATX motherboard (Abit KT7): the processor socket, memory slots and expansion slots sit in positions fixed by the format Intel introduced in 1995.",
+    "de": "Eine ATX-Hauptplatine (Abit KT7): Prozessorsockel, Speicher- und Erweiterungssteckplätze sitzen an Positionen, die das 1995 von Intel eingeführte Format festlegt.",
+    "ru": "Материнская плата ATX (Abit KT7): сокет процессора, слоты памяти и расширения расположены там, где их предписывает формат, представленный Intel в 1995 году."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f08516",
+   "answerEn": "motherboard",
+   "answerDe": "Hauptplatine",
+   "answerRu": "материнская плата",
+   "spans": {
+    "en": [
+     144,
+     11
+    ],
+    "de": [
+     145,
+     12
+    ],
+    "ru": [
+     138,
+     17
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1995-07",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Intel introduces the ATX motherboard format",
+    "labelDe": "Intel führt das ATX-Format für Hauptplatinen ein",
+    "labelRu": "Intel представляет формат материнских плат ATX"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/ATX",
+    "title": "ATX – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w08516",
+     "en": "What is the central circuit board of a computer called?",
+     "de": "Wie wird die zentrale Platine eines Computers genannt?",
+     "ru": "Как называется главная печатная плата компьютера?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c142",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f08517",
+   "answerEn": "processor",
+   "answerDe": "Prozessor",
+   "answerRu": "процессор",
+   "spans": {
+    "en": [
+     974,
+     9
+    ],
+    "de": [
+     1037,
+     9
+    ],
+    "ru": [
+     1020,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1978-06-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Intel's 8086 launches the x86 processor architecture",
+    "labelDe": "Intels 8086 begründet die x86-Prozessorarchitektur",
+    "labelRu": "Intel 8086 открывает процессорную архитектуру x86"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Intel_8086",
+    "title": "Intel 8086 – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w08517",
+     "en": "What is the chip called that, as the central processing unit, executes the instructions of a program?",
+     "de": "Wie wird der Chip genannt, der als zentrale Recheneinheit die Befehle eines Programms ausführt?",
+     "ru": "Как называется микросхема, которая как центральное вычислительное устройство выполняет команды программы?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f08518",
+   "answerEn": "RAM",
+   "answerDe": "Arbeitsspeicher",
+   "answerRu": "оперативная память",
+   "spans": {
+    "en": [
+     1591,
+     3
+    ],
+    "de": [
+     1663,
+     15
+    ],
+    "ru": [
+     1671,
+     18
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1970-10",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Intel 1103, the first commercial DRAM chip, is introduced",
+    "labelDe": "Der Intel 1103, der erste kommerzielle DRAM-Chip, erscheint",
+    "labelRu": "Выходит Intel 1103 — первая коммерческая микросхема DRAM"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Random-access_memory",
+    "title": "Random-access memory – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w08518",
+     "en": "What is the volatile memory called in which a computer holds the programs currently running and their data?",
+     "de": "Wie wird der flüchtige Speicher genannt, in dem ein Computer die gerade laufenden Programme und ihre Daten hält?",
+     "ru": "Как называется энергозависимая память, в которой компьютер держит запущенные программы и их данные?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f08519",
+   "answerEn": "graphics card",
+   "answerDe": "Grafikkarte",
+   "answerRu": "видеокарта",
+   "spans": {
+    "en": [
+     2094,
+     13
+    ],
+    "de": [
+     2244,
+     11
+    ],
+    "ru": [
+     2223,
+     10
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1999-10-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nvidia releases the GeForce 256, marketed as the first „GPU“",
+    "labelDe": "Nvidia bringt die GeForce 256 heraus, vermarktet als erste „GPU“",
+    "labelRu": "Nvidia выпускает GeForce 256, рекламируемую как первый «GPU»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/GeForce_256",
+    "title": "GeForce 256 – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w08519",
+     "en": "What is the expansion card called that computes the image output and delivers the signal to the monitor?",
+     "de": "Wie wird die Steckkarte genannt, die die Bildausgabe berechnet und das Signal an den Monitor liefert?",
+     "ru": "Как называется плата расширения, которая рассчитывает изображение и передаёт сигнал на монитор?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f08520",
+   "answerEn": "power supply unit",
+   "answerDe": "Netzteil",
+   "answerRu": "блок питания",
+   "spans": {
+    "en": [
+     2671,
+     17
+    ],
+    "de": [
+     2836,
+     8
+    ],
+    "ru": [
+     2763,
+     12
+    ]
+   },
+   "timeline": {
+    "kind": "founding",
+    "start": "2004",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The 80 PLUS efficiency certification for power supplies is launched",
+    "labelDe": "Das Effizienzzertifikat 80 PLUS für Netzteile startet",
+    "labelRu": "Появляется сертификат энергоэффективности 80 PLUS для блоков питания"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)",
+    "title": "Power supply unit (computer) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w08520",
+     "en": "What is the component called that converts the mains voltage into the DC voltages the computer needs?",
+     "de": "Wie wird das Bauteil genannt, das die Netzspannung in die vom Computer benötigten Gleichspannungen umwandelt?",
+     "ru": "Как называется компонент, который преобразует сетевое напряжение в постоянные напряжения, нужные компьютеру?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/hardware",
+  "audience:international"
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1458",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Wars_of_the_Roses",
+   "title": "Wars of the Roses – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:36.626Z",
+   "snapshot": "7863d4582a04c486aee8162e525eb2f8085be844c14bf9ac1867010cadf45f76"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_England",
+   "title": "Coat of arms of England – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:37.506Z",
+   "snapshot": "76e9d2baca9853dff28948bf332182317b27a9c189ba64416081e27a3396893d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fleur-de-lis",
+   "title": "Fleur-de-lis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:38.498Z",
+   "snapshot": "a3a21d0727389dc0fa169d7701e48af12dc96ba81ffc7bcf178c2f0a52c27c04"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Doppeladler",
+   "title": "Doppeladler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:35.764Z",
+   "snapshot": "a7184d1dc9bcda60ba946f18519f329c059b3d35120414fa4737f31a557d7d90"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Ireland",
+   "title": "Coat of arms of Ireland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:39.452Z",
+   "snapshot": "dd6a328833d48caf7806f913fc5e21529c289c4670acdf8c9f12b27f8b093af8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rose",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fleur-de-lis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Doppeladler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:29.133Z",
+   "target": "f07286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The conflict was fought between supporters of the House of York (whose emblem was a white rose) and the House of Lancaster (whose emblem, by 1485, was a red rose), two rival cadet branches of the royal House of Plantagenet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.133Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rose” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:29.133Z",
+   "target": "f07287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The first example of a crest on the royal arms was on Edward III's third great seal, which shows a helm above the arms, on which is a crowned gold lion standing upon a chapeau.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.133Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lion” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:29.133Z",
+   "target": "f07288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The fleur-de-lis, also spelled fleur-de-lys (plural fleurs-de-lis or fleurs-de-lys), is a common heraldic charge in the (stylized) shape of a lily (French fleur 'flower' and lis 'lily').",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.133Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fleur-de-lis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:29.133Z",
+   "target": "f07289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Von einem Doppeladler spricht man bei einem Adler, der zumindest zwei getrennte Köpfe, meist aber sogar zwei getrennte Hälse hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.133Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doppeladler” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:29.133Z",
+   "target": "f07290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The coat of arms of Ireland is blazoned as Azure a harp Or, stringed Argent (a gold harp with silver strings on a blue background).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.133Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harp” is on the snapshot of s5"
+  }
+ ]
+}

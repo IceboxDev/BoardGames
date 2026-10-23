@@ -1,0 +1,242 @@
+{
+ "article": "a0239",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pinus_pinea",
+   "title": "Pinus pinea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:41.168Z",
+   "snapshot": "2074e67f2c5fa1ba1d39b0a310130e4515b0cf916d021caf3054d8d280094cbb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Almond",
+   "title": "Almond – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:42.264Z",
+   "snapshot": "37669aaaf7339226031d3ffa00fadeeadbc052e15a98f895334acb7845f3eaaf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pistachio",
+   "title": "Pistachio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:43.181Z",
+   "snapshot": "9cf0bc7a1a5e97596edcac7a85940184b215fe9f7baa3b05b78d84c1b86b8bf1"
+  },
+  "s4": {
+   "url": "https://www.bmluk.gv.at/themen/lebensmittel/trad-lebensmittel/oel/steir_kuerbiskernoel.html",
+   "title": "Steirisches Kürbiskernöl g.g.A. – Bundesministerium für Land- und Forstwirtschaft",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:39:41.032Z",
+   "snapshot": "cd13ac0c79d86a6153427bf149f96537f6f7dc34d3dbad6fa78847a56e66c418"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cocoa_bean",
+   "title": "Cocoa bean – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:44.213Z",
+   "snapshot": "1eb1d9eef4763ee38f9da116c095e26d447ee0ea3ad99b426aaa6ab1b6c88fda"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pine nuts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "almonds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "pistachios",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kürbiskerne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cocoa beans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:17.494Z",
+   "target": "f01191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stone pines have been used and cultivated for their edible pine nuts since prehistoric times.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.494Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pine nuts” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:17.494Z",
+   "target": "f01192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shelling almonds refers to removing the shell to reveal the seed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.494Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “almonds” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:17.494Z",
+   "target": "f01193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pistachios can be used as an ingredient in desserts, chocolate, candy, ice cream, and as a paste or butter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.494Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pistachios” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:17.494Z",
+   "target": "f01194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Es handelte sich dabei um sogenannte beschalte Kürbiskerne, welche auch heute noch in vielen Regionen der Welt kultiviert werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.494Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kürbiskerne” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:17.494Z",
+   "target": "f01195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cocoa beans, cocoa butter, and cocoa powder are traded on futures markets, with London focusing on West African cocoa and New York on Southeast Asian cocoa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:17.494Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cocoa beans” is on the snapshot of s5"
+  }
+ ]
+}

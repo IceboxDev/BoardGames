@@ -1,0 +1,351 @@
+{
+ "article": "a2179",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Toast_(honor)",
+   "title": "Toast (honor)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:30.084Z",
+   "snapshot": "f8e10aa370fa02afb316205cb7305ad276330684e553eede898ba77c7cacd774"
+  },
+  "s2": {
+   "url": "https://ja.wikipedia.org/wiki/%E4%B9%BE%E6%9D%AF%E6%9D%A1%E4%BE%8B",
+   "title": "乾杯条例 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "ja",
+   "retrievedAt": "2026-10-23T05:46:29.145Z",
+   "snapshot": "4bff9cb50cfb6e23202c1404c970357938e5a16e74dc66bc03d76e50dab02d56"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kanpai",
+   "title": "Kanpai – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:12.818Z",
+   "snapshot": "2241ae34d229ea14001b6c3cb4870ab139e22de139f81d34b82c00d2c85969dc"
+  },
+  "s4": {
+   "url": "https://jisho.org/word/%E4%B9%BE%E6%9D%AF",
+   "title": "乾杯 – Jisho.org",
+   "publisher": "Jisho.org (JMdict, Electronic Dictionary Research and Development Group)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:13.098Z",
+   "snapshot": "caff1453c4da52ae1ede64a93efd597729635cced55be6ab42bb8fb6010d7836"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11047",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Skål",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Prost",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kanpai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "L'chaim",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:34.007Z",
+   "target": "f11047",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Danish: \"Skål\" (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Skål” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:34.007Z",
+   "target": "f11048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Prosit is a Latin word, meaning roughly \"be well\", which is a toast in Latin and modern Italian, from which the German short form \"prost\" is derived.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prost” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:34.007Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kanpai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Kanpai”, “Канпай”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.007Z",
+   "target": "f11050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "L'Chaim in Hebrew is a toast meaning \"to life\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “L'chaim” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:47:12Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "or Kampai, is a common toast in the Japanese language.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:47:14Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cheers; bottoms-up; prosit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:17Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "similar to \"bottoms up\" in English",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Line: Japanese: '乾杯' (kanpai, lit. 'Empty the glass', similar to 'bottoms up' in English)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:58:21.013Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "or Kampai, is a common toast in the Japanese language.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:21.013Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cheers; bottoms-up; prosit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:21.013Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "similar to \"bottoms up\" in English",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:21.013Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Filipino: \"Mabuhay\" (long live); \"Tagay\" ([let us] drink); \"Kampay\" (from Japanese kanpai); the Philippines does not historically have a toast, because social drinking of alcohol traditionally involves the sharing of one cup among participants (a tagayan)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kanpai” is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:21.013Z",
+   "target": "f11049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kanpai (album), a 1980 album by Tsuyoshi Nagabuchi",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.013Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kanpai” is on the snapshot of s3"
+  }
+ ]
+}

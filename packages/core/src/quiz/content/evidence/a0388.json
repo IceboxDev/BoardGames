@@ -1,0 +1,334 @@
+{
+ "article": "a0388",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(film)",
+   "title": "The Silence of the Lambs (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:37.551Z",
+   "snapshot": "397499631b1e3afd55f4ef0f15f1b7e83de4d86b67c7bf2137f54752eee61053"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Hunger_Games_(film)",
+   "title": "The Hunger Games (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:38.487Z",
+   "snapshot": "70be20c43f4c1ba0a9aa5c331f83f99b36eb09088cd303afd8095c5b136b6f1a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Sixth_Sense",
+   "title": "The Sixth Sense – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:39.613Z",
+   "snapshot": "9199398b60ae5929a0573a126bb12d27dc70316418913175a1604b7aff255af3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/The_Sixth_Sense",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:52:36.828Z",
+   "snapshot": "d7859d78dbdabac8008f762e210159ed6e35d31b2d26bba8350d2c1adf9894f6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Star_Wars_(film)",
+   "title": "Star Wars (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:40.579Z",
+   "snapshot": "a1f48bf74d9651a4b1d2a6096e33d89348afd077f00cd7d4e0c91a5cbbb9ca8b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Krieg_der_Sterne",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:52:41.443Z",
+   "snapshot": "6e2c0608bd6d09f515c8a821cc3aa3c2d242a02c1298488a16dfe26bd3f32db8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/AFI%27s_100_Years...100_Movie_Quotes",
+   "title": "AFI's 100 Years...100 Movie Quotes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:41.456Z",
+   "snapshot": "a1d20f7020052dc47a2af0b47cff3db2232c3ddc1decf8fe88ffba6d3ce360e2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Silence of the Lambs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01937",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hunger Games",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sixth Sense",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sixth Sense",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Star Wars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Star Wars",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f01940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Gone with the Wind",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Silence of the Lambs is a 1991 American psychological horror thriller film directed by Jonathan Demme and written by Ted Tally, adapted from Thomas Harris's 1988 novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Silence of the Lambs” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hunger Games is a 2012 American dystopian film directed by Gary Ross, who co-wrote the screenplay with Suzanne Collins and Billy Ray, based on the 2008 novel of the same name by Collins.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Hunger Games” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Sixth Sense is a 1999 American psychological thriller film written and directed by M.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sixth Sense” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sixth Sense [ðə sɪksθ sɛns] (englisch für ‚Der sechste Sinn‘) ist ein US-amerikanischer Spielfilm des Regisseurs M.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Sixth Sense” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Star Wars (later retitled as Star Wars: Episode IV – A New Hope) is a 1977 American epic space opera film written and directed by George Lucas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Star Wars” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Krieg der Sterne (Originaltitel Star Wars) ist ein US-amerikanischer Space-Opera-Film des Drehbuchautors und Regisseurs George Lucas aus dem Jahr 1977.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Star Wars” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:40.070Z",
+   "target": "f01940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A jury consisting of 1,500 film artists, critics, and historians selected \"Frankly, my dear, I don't give a damn\", spoken by Clark Gable as Rhett Butler in the 1939 American Civil War epic Gone with the Wind, as the most memorable American movie quotation of all time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:40.070Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gone with the Wind” is on the snapshot of s7"
+  }
+ ]
+}

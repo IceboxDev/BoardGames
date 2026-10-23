@@ -1,0 +1,242 @@
+{
+ "article": "a1113",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)",
+   "title": "Trinity (nuclear test) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:32.321Z",
+   "snapshot": "d8739d16f757726cec562f353a51bd46059598bf367d53dca40926fd450e1f91"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Enrico_Fermi",
+   "title": "Enrico Fermi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:57.458Z",
+   "snapshot": "393fe5f6db6ed5d25a6330cf5e4aa02fff30220ed2509ded834ba1c589dcc596"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Einstein%E2%80%93Szilard_letter",
+   "title": "Einstein–Szilard letter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:33.275Z",
+   "snapshot": "361317bed4b67d95093842009592d398444c8715a755cfddb08eacdf61ff1a47"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Edward_Teller",
+   "title": "Edward Teller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:34.225Z",
+   "snapshot": "ee19b02152db9428e7aab5e8b0222d428ab7e22150b9204b431b4f70b9a2474f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Werner_Heisenberg",
+   "title": "Werner Heisenberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:35.343Z",
+   "snapshot": "27db766f05bbd3645d297b6e79efdcb6fcb23e85dbd34300c2d815e232c18a26"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "J. Robert Oppenheimer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Enrico Fermi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leó Szilárd",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edward Teller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Werner Heisenberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:34.828Z",
+   "target": "f05561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The code name \"Trinity\" was assigned by J. Robert Oppenheimer, the director of the Los Alamos Laboratory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “J. Robert Oppenheimer” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:34.828Z",
+   "target": "f05562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Enrico Fermi (Italian: [enˈriːko ˈfermi]; 29 September 1901 – 28 November 1954) was an Italian and naturalized-American physicist, renowned for being the creator of the world's first artificial nuclear reactor, Chicago Pile-1, and a member of the Manhattan Project.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enrico Fermi” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:34.828Z",
+   "target": "f05563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A letter written by Leo Szilard and signed by Albert Einstein on August 2, 1939, was sent to President of the United States Franklin D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leó Szilárd” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:34.828Z",
+   "target": "f05564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Edward Teller (Hungarian: Teller Ede; 15 January 1908 – 9 September 2003) was a Hungarian-American theoretical physicist and chemical engineer who is known colloquially as \"the father of the hydrogen bomb\" and one of the creators of the Teller–Ulam design inspired by Stanisław Ulam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edward Teller” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:34.828Z",
+   "target": "f05565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Werner Heisenberg Die Möglichkeit der technischer Energiegewinnung aus der Uranspaltung G-39 (6 December 1939)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.828Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werner Heisenberg” is on the snapshot of s5"
+  }
+ ]
+}

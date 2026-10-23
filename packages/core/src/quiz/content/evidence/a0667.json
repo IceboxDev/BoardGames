@@ -1,0 +1,403 @@
+{
+ "article": "a0667",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Vertrauensfrage",
+   "title": "Vertrauensfrage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:53.202Z",
+   "snapshot": "6deb372ab2596fbb54308d44a59955773bb3c17ec8c742c3bf0484e667c25fb1"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Misstrauensvotum",
+   "title": "Misstrauensvotum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:54.253Z",
+   "snapshot": "8b29a8a058589ef10e6b4b9ef669c8ddb6a15940567e2b35d752e7ddb57f1546"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rainer_Barzel",
+   "title": "Rainer Barzel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:56.099Z",
+   "snapshot": "1ffabb666f48132ac91a7a7c2ecf2da2034af0e65cd01752258277ef78a851db"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Schmidt",
+   "title": "Helmut Schmidt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:39.615Z",
+   "snapshot": "3c1f7cc6d4e9754449891d30459073c5fe2363028e3dd1c44744d478df6a39b7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1983_West_German_federal_election",
+   "title": "1983 West German federal election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:57.102Z",
+   "snapshot": "d74b996c6d5b40f9d890737508da5c1730a738f21bdfaa4701ea4af6387f3f80"
+  },
+  "s6": {
+   "url": "https://www.hdg.de/lemo/biografie/helmut-schmidt.html",
+   "title": "Biografie Helmut Schmidt – LeMO",
+   "publisher": "Stiftung Haus der Geschichte / Deutsches Historisches Museum",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:03.396Z",
+   "snapshot": "e19980fd88b910f2f966bbcf2e2b4d96be645d2cf2c8de7d73283af16bbac75d"
+  },
+  "s7": {
+   "url": "https://www.hdg.de/lemo/biografie/helmut-kohl.html",
+   "title": "Biografie Helmut Kohl – LeMO",
+   "publisher": "Stiftung Haus der Geschichte / Deutsches Historisches Museum",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:01.024Z",
+   "snapshot": "0f0339e8f586f7564d3bd1ee42a72a4b9ef62f4be5222a4231ab3e1f3c7c66d0"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Constructive_vote_of_no_confidence",
+   "title": "Constructive vote of no confidence – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:20:40Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der Bundeskanzler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Willy Brandt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rainer Barzel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helmut Kohl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:23.557Z",
+   "target": "f03331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "68 Grundgesetz (GG), wenn der Bundeskanzler beim Bundestag den Antrag stellt, ihm das Vertrauen auszusprechen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “der Bundeskanzler” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:23.557Z",
+   "target": "f03332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daher war das Misstrauensvotum gegen Willy Brandt knapp gescheitert, obwohl es nur zehn Nein-Stimmen gab.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Willy Brandt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:23.557Z",
+   "target": "f03333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rainer Barzel",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rainer Barzel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:23.557Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Helmut Schmidt was the elder of two sons to Ludovica Koch (10 November 1890 – 29 November 1968) and Gustav Ludwig Schmidt (18 April 1888 – 26 March 1981) in Barmbek, a working-class district of Hamburg, in 1918.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:23.557Z",
+   "target": "f03335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The CDU/CSU alliance led by Helmut Kohl remained the largest faction in parliament, with Kohl remaining Chancellor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:20:38Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nach dem Bruch der sozial-liberalen Koalition wird Schmidt mit einem konstruktiven Misstrauensvotum als Bundeskanzler abgewählt; sein Nachfolger wird Helmut Kohl (CDU).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:20:39Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Bundestag wählt durch ein konstruktives Misstrauensvotum Helmut Kohl zum 6. Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:20:40Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "On 1 October 1982, Helmut Schmidt was voted out of office in favor of Helmut Kohl",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "Its table of federal votes lists only 1972 (failed) and 1982 (successful)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:52.523Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nach dem Bruch der sozial-liberalen Koalition wird Schmidt mit einem konstruktiven Misstrauensvotum als Bundeskanzler abgewählt; sein Nachfolger wird Helmut Kohl (CDU).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:52.523Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Bundestag wählt durch ein konstruktives Misstrauensvotum Helmut Kohl zum 6. Bundeskanzler der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:52.523Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Offizielles Porträt von Bundeskanzler Helmut Schmidt, Bonn 1977.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:52.523Z",
+   "target": "f03334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "September: Die CDU/CSU und die FDP nehmen Koalitionsgespräche auf und einigen sich darauf, Bundeskanzler Helmut Schmidt am 1.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.523Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2222",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Mann,_der_vom_Himmel_fiel",
+   "title": "Der Mann, der vom Himmel fiel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:29.554Z",
+   "snapshot": "d9cb503c5a248ad94a425c6c3a300769732b387c0f6d9cd1d5e69773fc5e5772"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Labyrinth_(1986_film)",
+   "title": "Labyrinth (1986 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:51.410Z",
+   "snapshot": "90a185dc8722fc74d67c28f40bf8b4016bc34b487e053433b711cbf924bee8de"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mad_Max_Beyond_Thunderdome",
+   "title": "Mad Max Beyond Thunderdome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:29.822Z",
+   "snapshot": "3d14a9577676a1939e604e215f51fd2809f3652423f27e1b0e09ec2642338cf9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dune_(1984_film)",
+   "title": "Dune (1984 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:30.855Z",
+   "snapshot": "dfcba92bc9363f148e7a1ba92636687a83044e5d663323b3926e6c9868b84ffd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Performance_(film)",
+   "title": "Performance (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:31.823Z",
+   "snapshot": "ab8b4186d0c89f2b3c37a6458a8af8d4f46abb253b4df16b2166cb6513618074"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Mann, der vom Himmel fiel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-330"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Labyrinth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mad Max Beyond Thunderdome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dune",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Performance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:38.928Z",
+   "target": "f11331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Mann, der vom Himmel fiel (Originaltitel: The Man Who Fell to Earth) ist ein britischer Science-Fiction-Film aus dem Jahr 1976.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.928Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Mann, der vom Himmel fiel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:38.928Z",
+   "target": "f11332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Labyrinth is a 1986 musical fantasy film directed by Jim Henson from a screenplay by Terry Jones based on a story conceived by Henson and Dennis Lee.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.928Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Labyrinth” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:38.928Z",
+   "target": "f11333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mad Max Beyond Thunderdome is a 1985 Australian post-apocalyptic dystopian action film directed by George Miller and George Ogilvie and written by Terry Hayes and Miller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.928Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mad Max Beyond Thunderdome” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:38.928Z",
+   "target": "f11334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dune is a 1984 American epic space opera film written and directed by David Lynch, and based on the 1965 novel of the same name by Frank Herbert.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.928Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dune” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:38.928Z",
+   "target": "f11335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Performance is a 1970 British crime drama film directed by Donald Cammell and Nicolas Roeg, written by Cammell and filmed by Roeg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.928Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Performance” is on the snapshot of s5"
+  }
+ ]
+}

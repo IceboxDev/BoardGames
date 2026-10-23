@@ -1,0 +1,202 @@
+{
+ "article": "a0020",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Frankfurt_School",
+   "title": "Frankfurt School – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:16.439Z",
+   "snapshot": "d5369da2be54ed75db7b33cced7b3a4cfaad72bf04e2ca2a39574c2100c42d55"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vienna_Circle",
+   "title": "Vienna Circle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:17.550Z",
+   "snapshot": "08504fa6f939139a4e526606bfb90c03f234eff863b0eeb3e6c59070d17a4fa3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Epictetus",
+   "title": "Epictetus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:18.443Z",
+   "snapshot": "54ca7086d7fd669ca51d9d0b2e68fd793820283b0ed06830ccc95182209c6cb9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pragmatism",
+   "title": "Pragmatism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:19.672Z",
+   "snapshot": "9dd16ecc3eeea7bc3dc759642d3409d8f648d589e3d483f9a520be1bb61fa632"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Sozialforschung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:15:17.271Z",
+   "snapshot": "90ae306d50187a8035e24fc5b342589d46a7b66de32dc3afbe1ce3b42b07e398"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frankfurt School",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vienna Circle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Stoicism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pragmatism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:38.139Z",
+   "target": "f00096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Frankfurt School is a school of thought in sociology and critical theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frankfurt School” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:38.139Z",
+   "target": "f00097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Vienna Circle (German: Wiener Kreis) of logical empiricism was a group of philosophers and scientists drawn from the natural and social sciences, logic and mathematics who met regularly from 1924 to 1936 at the University of Vienna, chaired by Moritz Schlick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna Circle” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:38.139Z",
+   "target": "f00098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johnson, The Role Ethics of Epictetus: Stoicism in Ordinary Life, Lanham: Lexington Books, 2014 ISBN 978-0739179673.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stoicism” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:38.139Z",
+   "target": "f00100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pragmatism is a philosophical tradition that views language and thought as tools for prediction, problem solving, and action, rather than describing, representing, or mirroring reality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pragmatism” is on the snapshot of s4"
+  }
+ ]
+}

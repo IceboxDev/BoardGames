@@ -1,0 +1,529 @@
+{
+ "article": "a2015",
+ "sources": {
+  "s1": {
+   "url": "https://en.wiktionary.org/wiki/fruitarian",
+   "title": "fruitarian – Wiktionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:04.042Z",
+   "snapshot": "4ef499c7ac7bb87cdd0cbd4385f43200232549a989ee02737036730a392a2a5c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pescetarianism",
+   "title": "Pescetarianism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:07.296Z",
+   "snapshot": "aec0fd6de846f328559ee03eb1fa8311b5be66371c61f90169c85b5fb7ac06bb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flexitarianism",
+   "title": "Flexitarianism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:08.440Z",
+   "snapshot": "733676ff873a844f592ff1ea1def1ec8a0a422f801baa139c07b4a93f2e1a508"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maximilian_Bircher-Benner",
+   "title": "Maximilian Bircher-Benner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:09.256Z",
+   "snapshot": "52276861141a71c9fa1fc50e131e120d2702997d3b2cf8dcd9c39753ddb797da"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Freeganismus",
+   "title": "Freeganismus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:06.595Z",
+   "snapshot": "d03717100d1e8c24f1ffe074de4598529f8a0de00f6ccbac639a773a0e6239b8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Paleolithic_diet",
+   "title": "Paleolithic diet",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:10.385Z",
+   "snapshot": "7aba35e6204c8aff99ab47cad338ffc413c059865d5bbe759559989086de1621"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Flexitarismus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:07.577Z",
+   "snapshot": "831b992590606f0331892df82d0439b696a4531316a3ff60b276eb67398f51b1"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Freeganism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:11.409Z",
+   "snapshot": "5e8cf30e99d435be393be5e173127a84a53ce0cacf2283b6eaf61c8cbd84c338"
+  },
+  "s9": {
+   "url": "https://www.ebsco.com/research-starters/economics/freeganism",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:09.070Z",
+   "snapshot": "2b7f2104c2fcc694fc42756133fa88f3ea64d4f6e12d358509943294c4613ffe"
+  },
+  "s10": {
+   "url": "https://www.utopia.de/ratgeber/rohkost-ernaehrung/",
+   "title": "Rohkost-Ernährung – Utopia",
+   "publisher": "Utopia",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:04.225Z",
+   "snapshot": "69a3ed60c38cf5c7bd7c606581df140bfca241ddabd1544ca571dcb4fdd636ba"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Raw_foodism",
+   "title": "Raw foodism",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:04.288Z",
+   "snapshot": "8670f7cf7512ccb81fe1cbe39922dc4af56400b14e9c3bf844b8e2a5c924c528"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "fruitarians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pescetarians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "flexitarians",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "raw foodists",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Freeganer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-279"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Legumes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-086"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "freegans",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "freegans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-279/6, u02: Freeganism is defined by anti-waste, not diet; the term was even used for non-vegans who never pay for animal products and some freegans eat discarded meat — statement false."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "freegans",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "freegans",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s9"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f10071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The purest fruitarians do not want to destroy even the seeds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fruitarians” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f10073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Several orders of monks in medieval Europe restricted or banned the consumption of meat for ascetic reasons, but none of them abstained from the consumption of fish; these monks were not vegetarians, but some were pescetarians.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pescetarians” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f10074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Dutch food health authority, Voedingscentrum states that flexitarians do not eat meat (but can eat fish) three or more days a week in between or with a hot meal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flexitarians” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "raw foodists",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“raw foodists”, “Rohköstler”, “сыроеды”) on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Im Gegensatz zu Menschen, die aus wirtschaftlichen Zwängen einer Notwendigkeit unterliegen, von Spenden oder „Müll“ anderer zu leben, begeben sich Freeganer mehr oder weniger bewusst in diese Situation.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Freeganer” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "While vegans avoid buying, consuming, using, and wearing animal products, freegans—at least in theory—avoid buying anything as an act of protest against the food system in general.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “freegans” is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f11098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Adherents, known as freegans, often scavenge for food and materials that would otherwise be discarded, utilizing methods like dumpster diving, foraging, bartering, and sharing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “freegans” is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:06.493Z",
+   "target": "f11099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The diet avoids food processing and typically includes vegetables, fruits, nuts, roots and meat and excludes dairy products, grains, sugar, legumes, processed oils, salt, alcohol, and coffee.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:06.493Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Legumes” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:29:03Z",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Als „erhitzt“ gelten Lebensmittel, die eine Temperatur über 42 Grad überschritten haben",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:29:06Z",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "That heating food above 104–118 °F (40–48 °C) degrades enzymes in raw food that aid digestion.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "raw-food proponents' threshold given as a 40–48 °C range; ~42 °C is the usual German figure"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:53.571Z",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Als „erhitzt“ gelten Lebensmittel, die eine Temperatur über 42 Grad überschritten haben",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:53.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:53.571Z",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "That heating food above 104–118 °F (40–48 °C) degrades enzymes in raw food that aid digestion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:53.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s11"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:53.571Z",
+   "target": "f10075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Es ist zwar möglich, sich als Rohköstler:in vegan oder vegetarisch zu ernähren, jedoch nicht nötig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:53.571Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rohköstler” is on the snapshot of s10"
+  }
+ ]
+}

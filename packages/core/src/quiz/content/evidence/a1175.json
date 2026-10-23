@@ -1,0 +1,416 @@
+{
+ "article": "a1175",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Populus",
+   "title": "Populus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:19.956Z",
+   "snapshot": "b256a0bcf71a51554f436a3e142afa7925ea8dc4f460787e6af0cca4e74c0305"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Birch_bark_manuscript",
+   "title": "Birch bark manuscript – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:20.853Z",
+   "snapshot": "256850d448cabbe2143d18371e7d82352cd945d97cc9bcdef2ffabd0792bb234"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Alte_Buchenw%C3%A4lder_und_Buchenurw%C3%A4lder_der_Karpaten_und_anderer_Regionen_Europas",
+   "title": "Alte Buchenwälder und Buchenurwälder der Karpaten und anderer Regionen Europas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:18.401Z",
+   "snapshot": "038acede9d458abb980caf0fcd87209f4c9cb8e4239246eff881e6b408842384"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Scotch_whisky",
+   "title": "Scotch whisky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:21.968Z",
+   "snapshot": "88b2907cfd34947f7d6d488e9ec72fcaad440fc75f72b317292565786ccf3ea5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Salicylic_acid",
+   "title": "Salicylic acid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:22.869Z",
+   "snapshot": "8d120e87ff471aa1a7dc81b94f6236fd0cc6c704bcbc53bf0b51cb9e569865b6"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Europ%C3%A4ische_Stechpalme",
+   "title": "Europäische Stechpalme",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:20.248Z",
+   "snapshot": "335211af2112b1355fa3129d0ba166ddfc4c5b7d90c69127ada49b9e82a6150c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Wald_in_Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:45:22.570Z",
+   "snapshot": "2a6757b900e3f8c568499336be2446836a1c7b955b70789611bd448f861571ad"
+  },
+  "s8": {
+   "url": "https://www.bmel.de/DE/themen/wald/wald-in-deutschland/bundeswaldinventur.html",
+   "title": "Wald in Deutschland – Ergebnisse der vierten Bundeswaldinventur",
+   "publisher": "Bundesministerium für Landwirtschaft, Ernährung und Heimat (BMLEH)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:17.465Z",
+   "snapshot": "7c3590b83d15b2d87c9ef035dab64834852c673b47f25a8927f0e922e32fda51"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Rotbuche",
+   "title": "Rotbuche – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:13:50Z"
+  },
+  "s10": {
+   "url": "https://www.bundeswaldinventur.de/fileadmin/Projekte/2025/Bundeswaldinventur/BWI-2022_Broschuere_bf-neu.pdf",
+   "title": "Der Wald in Deutschland – Ausgewählte Ergebnisse der vierten Bundeswaldinventur (BWI 2022)",
+   "publisher": "BMEL / Fachagentur Nachwachsende Rohstoffe",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:13:55Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "poplar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05872",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "birch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05874",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "oak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "willow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Ilex",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-092"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:44.106Z",
+   "target": "f05871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "English names variously applied to different species include poplar ( ), aspen, and cottonwood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “poplar” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:44.106Z",
+   "target": "f05872",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A birch bark manuscript is a document written on the outer layer of birch bark, which was commonly used for writing before the mass production of paper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “birch” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:44.106Z",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Buche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Buche”, “beech”, “бук”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:44.106Z",
+   "target": "f05874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "All Scotch whisky must be aged immediately after distillation in oak barrels for at least three years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oak” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:44.106Z",
+   "target": "f05875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is a plant hormone, and the name is from Latin salix for willow tree, from which it was initially identified and derived.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “willow” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:44.106Z",
+   "target": "f13380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Europäische Stechpalme (Ilex aquifolium), auch Gewöhnliche Stechpalme, Gemeine Stechpalme, Hülse (englisch: Holly) oder nach dem botanischen Namen Ilex genannt, ist die einzige in Mitteleuropa heimische Pflanzenart der Gattung der Stechpalmen (Ilex) innerhalb der Familie der Stechpalmengewächse",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.106Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ilex” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:45Z",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Buche (17 Prozent ) und Eiche (12 Prozent )",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "beech 17 % vs oak 12 %: the most common broadleaved tree (only conifers pine 22 % and spruce 21 % are commoner)"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:50Z",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Sie ist damit die häufigste Laubbaumart in den deutschen Wäldern.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:13:55Z",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Anteil von 16,6 % an der Holzbodenfläche",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "PDF brochure; 1.82 million ha of beech"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:25.341Z",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Buche (17 Prozent ) und Eiche (12 Prozent )",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:25.341Z",
+   "target": "f05873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:25.341Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Buche” is on the snapshot of s8"
+  }
+ ]
+}

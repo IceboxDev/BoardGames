@@ -372,6 +372,18 @@ export const EVENT_LABELS: EventLabels = {
   },
 
   // ── Trainers ──
+  "quiz-train": trainDay("quiz"),
+  "quiz-settings": trainerSettings("quiz"),
+  "quiz-reset": trainerReset("quiz"),
+  "quiz-report": {
+    tone: "study",
+    describe: ({ targetId, issue }) => {
+      // Fact ids start with "f", article ids with "a".
+      const what = targetId?.startsWith("f") ? "question" : targetId ? "article" : "item";
+      const why = issue ? ` (${issue.replace(/-/g, " ")})` : "";
+      return `Reported a problem with a quiz ${what}${targetId ? ` ${targetId}` : ""}${why}`;
+    },
+  },
   "quiztopia-train": trainDay("quiztopia"),
   "quiztopia-settings": trainerSettings("quiztopia"),
   "quiztopia-reset": trainerReset("quiztopia"),

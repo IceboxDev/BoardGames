@@ -1,0 +1,548 @@
+{
+ "article": "a1200",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Laptop",
+   "title": "Laptop – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:51.071Z",
+   "snapshot": "2401d17892ddd65547f5efa017dac47ca1c64664aea47a968b985627c4421bb4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Atari_Portfolio",
+   "title": "Atari Portfolio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:51.943Z",
+   "snapshot": "a789a9777146eeeb8f185f662304d238cb67a4a883e87a1f8c6e01b2fe574648"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amazon_S3",
+   "title": "Amazon S3 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:52.891Z",
+   "snapshot": "ca039dc36769e3418f0675a5917a3453414843b214355e18f1c2e5a9b83403a8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Apple_Watch",
+   "title": "Apple Watch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:54.102Z",
+   "snapshot": "7cb7e54a142bb01222652288167976442e2df0481ffe1f5592806c11ee5faedc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cloud_computing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:29.615Z",
+   "snapshot": "e972a839c2fea5ca50286802a67b7fb308c4e8c875f9833d341110ee8512bebd"
+  },
+  "s6": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/palmtop",
+   "title": "palmtop noun – Oxford Advanced Learner's Dictionary",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:36.108Z",
+   "snapshot": "4e6df43be444a24d5ff108093e20c1f4ffe985a4ef9059392e10b6f75312fbc8"
+  },
+  "s7": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/palmtop",
+   "title": "PALMTOP | English meaning – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:36.417Z",
+   "snapshot": "f27241174c0c624d7de27cd9a9bafe9118aabad58784fb91e2d72cdec56e92ae"
+  },
+  "s8": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/cloud_1",
+   "title": "cloud noun – Oxford Advanced Learner's Dictionary",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:37.134Z",
+   "snapshot": "9066293767dc36741f7b714a59fa679fadad1ffb4a98ec2d9143577d2c20a31f"
+  },
+  "s9": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/cloud-computing",
+   "title": "cloud computing noun – Oxford Advanced Learner's Dictionary",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:38.107Z",
+   "snapshot": "6f65f0f6765aa4ad7bb4876b1ad25816e90293806c63f9a991cca9926f2c2b33"
+  },
+  "s10": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/cloud",
+   "title": "CLOUD | English meaning – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:37.632Z",
+   "snapshot": "4f196c770f284f372dc96486c4b8a0ac549e143ad1fea3edb65980a1dadbb19a"
+  },
+  "s11": {
+   "url": "https://www.oxfordlearnersdictionaries.com/definition/english/wearable_2",
+   "title": "wearable noun – Oxford Advanced Learner's Dictionary",
+   "publisher": "Oxford University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:39.122Z",
+   "snapshot": "f1fd088dff4c9bfab716c7d2e85bb702fe2744d100fca5e150b3cc1231f72c45"
+  },
+  "s12": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/wearable",
+   "title": "WEARABLE | English meaning – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:38.335Z",
+   "snapshot": "5efc0c6462bcb8fce1fcd9cb8939a320cdbc926bea4c675cb2361ac4a521cc7a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "on the lap",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in the palm of the hand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "in the cloud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "on the body",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:47.249Z",
+   "target": "f05996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heat generated from using a laptop on the lap can also cause skin discoloration on the thighs known as \"toasted skin syndrome\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.249Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “on the lap” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:47.249Z",
+   "target": "f05998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "in the palm of the hand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“in the palm of the hand”, “in der Handfläche”, “На ладони”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.249Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "in the cloud",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“in the cloud”, “in der Wolke”, “В облаке”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.249Z",
+   "target": "f06000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "on the body",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“on the body”, “am Körper”, “На теле”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:40:28Z",
+   "target": "f05998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a small computer that can be held in the palm of one hand",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:40:31Z",
+   "target": "f05998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a type of computer that is small enough to hold with one hand",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:40:32Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Key company documents are now stored in the cloud, so you no longer need to save them to your computer’s hard drive.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:40:34Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a way of using computers in which data and software are stored or managed on a network of servers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:40:36Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a computer network where files and programs can be stored, especially the internet",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:40:38Z",
+   "target": "f06000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "a small computing device that you can wear, for example on your wrist",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:40:40Z",
+   "target": "f06000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "wearable technology consists of things that can be worn, such as clothing or glasses, that contain computer technology or can connect to the internet",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f05998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a small computer that can be held in the palm of one hand",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f05998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a type of computer that is small enough to hold with one hand",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Key company documents are now stored in the cloud, so you no longer need to save them to your computer’s hard drive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a way of using computers in which data and software are stored or managed on a network of servers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "a computer network where files and programs can be stored, especially the internet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f06000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "a small computing device that you can wear, for example on your wrist",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s11"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f06000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "wearable technology consists of things that can be worn, such as clothing or glasses, that contain computer technology or can connect to the internet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s12"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:29.380Z",
+   "target": "f05999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Key company documents are now stored in the cloud, so you no longer need to save them to your computer’s hard drive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:29.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “in the cloud” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,569 @@
+{
+ "article": "a0649",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bolshoi_Theatre",
+   "title": "Bolshoi Theatre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:50.078Z",
+   "snapshot": "125179a432c2ff496cc7a7e457744a58dc7d656d370e8408f2d38593fcf65e08"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Metropolitan_Opera",
+   "title": "Metropolitan Opera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:51.315Z",
+   "snapshot": "1953cae09417e84505ac450928ac8a0366f6d212ed8b0884dfc603981acdce8c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mariinsky_Theatre",
+   "title": "Mariinsky Theatre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:52.078Z",
+   "snapshot": "dcf827457286f866d97444134f65364bc4e72de323c1846ad94f1c1a3245ee34"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+   "title": "Sydney Opera House",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:26.864Z",
+   "snapshot": "497a6954eb184144f19b9922d947fe54c385387355d920b2520221ad57737f2d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bolschoi-Theater",
+   "title": "Bolschoi-Theater – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:53.213Z",
+   "snapshot": "e83b06be43e6f2c8cb302505bf261d9bf8f918d01360eb4811200306bd5ac309"
+  },
+  "s6": {
+   "url": "https://operawire.com/top-10-most-historic-opera-houses-in-the-world/",
+   "title": "Top 10 Most Historic Opera Houses in the World",
+   "publisher": "OperaWire",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:53.597Z",
+   "snapshot": "a2e5292009512bc165ed33a60dfdc359d99ce485a7755aee13ca90e3cf6f4cb3"
+  },
+  "s7": {
+   "url": "https://www.guinnessworldrecords.com/world-records/69667-largest-opera-house",
+   "title": "Largest opera house",
+   "publisher": "Guinness World Records",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:53.378Z",
+   "snapshot": "8836cf7d6b9c95046233dec0223633785a2dceedc7b2f7b7b37cdf2a983dddb2"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Metropolitan_Opera_House_(Lincoln_Center)",
+   "title": "Metropolitan Opera House (Lincoln Center) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:53.456Z",
+   "snapshot": "f545bd46f0fbe85e7b0547e851638bd6333ac65e6c36ff871e72490fe366a12d"
+  },
+  "s9": {
+   "url": "https://www.abc.net.au/news/2013-10-20/40-years-of-the-sydney-opera-house/5025816",
+   "title": "40 years of the Sydney Opera House",
+   "publisher": "ABC News (Australian Broadcasting Corporation)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:54.244Z",
+   "snapshot": "53f04fe1def5cf64184ed820d704976b5f6ba3eb4c27e36ea58c212ccc2136ff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bolshoi Theatre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c055"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Metropolitan Opera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mariinsky Theatre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "War and Peace",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-214"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:20.590Z",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Bolshoi Theatre (Russian: Большой театр, romanized: Bol'shoy teatr, IPA: [bɐlʲˈʂoj tʲɪˈat(ə)r], lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bolshoi Theatre” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:20.590Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Metropolitan Opera is an American opera company based in New York City, currently resident at the Metropolitan Opera House at Lincoln Center, situated on the Upper West Side of Manhattan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metropolitan Opera” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:20.590Z",
+   "target": "f03245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Mariinsky Theatre (Russian: Мариинский театр, romanized: Mariinskiy teatr, also transcribed as Maryinsky or Mariyinsky) is a historic opera house in Saint Petersburg, Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mariinsky Theatre” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:20.590Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first opera to be performed in what was then known as the Opera Theatre was Sergei Prokofiev's War and Peace, on 28 September 1973, conducted by the Australian Opera's Music Director, Edward Downes and produced by Sam Wanamaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:20.590Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “War and Peace” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:53:50Z",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in Moskau ist das bedeutendste Theater für Oper und Ballett in Russland",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Superlative is evaluative; St Petersburg's Mariinsky is the only serious rival claim."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:53:53Z",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it remains Russia’s greatest theater and continues to stage operas and ballets throughout the year",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:53:55Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The largest opera house in the world by capacity is the Metropolitan Opera House at the Lincoln Center in New York, USA, with a total capacity of 3,975",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Largest in the world by capacity, hence also the largest in the USA."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:53:57Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the house is the largest repertory opera house in the world",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:53:59Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a production of Sergei Prokofiev's War and Peace is given in the Opera Theatre on September 28, 1973 - the first public performance in the Sydney Opera House",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:54:01Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first opera to be performed in what was then known as the Opera Theatre was Sergei Prokofiev 's War and Peace , on 28 September 1973",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:55:17Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first opera to be performed in what was then known as the Opera Theatre was Sergei Prokofiev's War and Peace, on 28 September 1973",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Replaces e14, whose quote carried extraction spacing."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "in Moskau ist das bedeutendste Theater für Oper und Ballett in Russland",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "it remains Russia’s greatest theater and continues to stage operas and ballets throughout the year",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The largest opera house in the world by capacity is the Metropolitan Opera House at the Lincoln Center in New York, USA, with a total capacity of 3,975",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the house is the largest repertory opera house in the world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "a production of Sergei Prokofiev's War and Peace is given in the Opera Theatre on September 28, 1973 - the first public performance in the Sydney Opera House",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first opera to be performed in what was then known as the Opera Theatre was Sergei Prokofiev's War and Peace, on 28 September 1973",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Staatliche Akademische Große Theater Russlands (russisch Государственный академический Большой театр России), kurz Bolschoi-Theater („Großes Theater“) in Moskau ist das bedeutendste Theater für Oper und Ballett in Russland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bolschoi-Theater” is on the snapshot of s5"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The largest opera house in the world by capacity is the Metropolitan Opera House at the Lincoln Center in New York, USA, with a total capacity of 3,975 – based on 3,800 seats and 175 standing room places.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Metropolitan Opera” is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f03243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Metropolitan Opera House (also known as The Met) is an opera house located on Broadway at Lincoln Square on the Upper West Side of Manhattan in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Metropolitan Opera” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:48.910Z",
+   "target": "f12986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "After a number of test performances, a production of Sergei Prokofiev's War and Peace is given in the Opera Theatre on September 28, 1973 - the first public performance in the Sydney Opera House.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:48.910Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “War and Peace” is on the snapshot of s9"
+  }
+ ]
+}

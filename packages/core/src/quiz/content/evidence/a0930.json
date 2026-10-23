@@ -1,0 +1,457 @@
+{
+ "article": "a0930",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Philipp_Scheidemann",
+   "title": "Philipp Scheidemann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:26.098Z",
+   "snapshot": "028586c15d4b84fed0972449478b91b410034b44144e9f1de8216423ad460109"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/G%C3%BCnter_Schabowski",
+   "title": "Günter Schabowski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:57.328Z",
+   "snapshot": "451a117ff5e555e1f1fe8369a69622b3fa7d8d8b127c320aec9a7a875cdeeddb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kristallnacht",
+   "title": "Kristallnacht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:58.483Z",
+   "snapshot": "e75ce19e6d30e7d661d44c5e399a65ddbcdeb4ee42c87adcb16f7f181ec8d344"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Beer_Hall_Putsch",
+   "title": "Beer Hall Putsch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:59.358Z",
+   "snapshot": "da7f719b14040f4b076ed873b1dbd7fe2884a094ebe44132557aa3e0172ec712"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Blum",
+   "title": "Robert Blum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:01.416Z",
+   "snapshot": "7167062c217bc96c0448731df50690f69f2813097c3c74035d747485b399b1cd"
+  },
+  "s6": {
+   "url": "https://www.dhm.de/lemo/biografie/philipp-scheidemann.html",
+   "title": "LeMO Biografie: Philipp Scheidemann",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:38.564Z",
+   "snapshot": "5cc340d6cfc0ac00329b3b7480318c27b37b892d9ecdc39021467af7026a5ae1"
+  },
+  "s7": {
+   "url": "https://www.deutsche-biographie.de/sfz4791.html",
+   "title": "Blum, Robert – Deutsche Biographie (NDB)",
+   "publisher": "Deutsche Biographie",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:38.812Z",
+   "snapshot": "295f7cb0034b8655a75e873c64e082d34bf5052b3924b28b92c6fea67c291185"
+  },
+  "s8": {
+   "url": "https://www.dhm.de/lemo/bestand/objekt/erschiessung-robert-blums-am-9-november-1848.html",
+   "title": "Erschießung Robert Blums am 9. November 1848 – LeMO",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:39.451Z",
+   "snapshot": "4107952a6542eca80655deb33334f646a0d2d56c5dc37844908d715f5277feb7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the proclamation of the republic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the fall of the Berlin Wall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kristallnacht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Beer Hall Putsch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the execution of Robert Blum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:06.507Z",
+   "target": "f04646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the proclamation of the republic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the proclamation of the republic”, “die Ausrufung der Republik”, “провозглашение республики”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:06.507Z",
+   "target": "f04647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The fall of the Berlin Wall was the key event leading to the end of the East German regime, a state that had been crumbling for many weeks as citizens had been fleeing through intermediate countries surrounding East Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the fall of the Berlin Wall” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:06.507Z",
+   "target": "f04648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kristallnacht (German: [kʁɪsˈtalnaχt] ; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kristallnacht” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:06.507Z",
+   "target": "f04649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Beer Hall Putsch, also known as the Munich Putsch, was a failed coup d'état led by Nazi Party leader Adolf Hitler, General Erich Ludendorff, and other Kampfbund leaders in Munich, Bavaria, on 8–9 November 1923, during the Weimar Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.507Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Beer Hall Putsch” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:06.507Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the execution of Robert Blum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the execution of Robert Blum”, “die Hinrichtung Robert Blums”, “казнь Роберта Блюма”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:50:40Z",
+   "target": "f04646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scheidemann proclaimed the German Republic from a balcony of the Reichstag building.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:43Z",
+   "target": "f04646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Er ruft vom Reichstag die \"deutsche Republik\" aus. Etwa zwei Stunden später verkündet Karl Liebknecht die \"freie sozialistische Republik\".",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:50:46Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He was executed on 9 November.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:50:49Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Politiker, * 10.11.1807 Köln, erschossen 9.11.1848 Wien (Brigittenau).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:50:52Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Robert Blum ging als Abgeordneter des Frankfurter Parlaments nach Wien.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:36.055Z",
+   "target": "f04646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Scheidemann proclaimed the German Republic from a balcony of the Reichstag building.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:36.055Z",
+   "target": "f04646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Er ruft vom Reichstag die \"deutsche Republik\" aus. Etwa zwei Stunden später verkündet Karl Liebknecht die \"freie sozialistische Republik\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:36.055Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He was executed on 9 November.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:36.055Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Politiker, * 10.11.1807 Köln, erschossen 9.11.1848 Wien (Brigittenau).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:36.055Z",
+   "target": "f04650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Robert Blum ging als Abgeordneter des Frankfurter Parlaments nach Wien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:36.055Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  }
+ ]
+}

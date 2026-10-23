@@ -1,0 +1,354 @@
+{
+ "article": "a1633",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Emanuel_Schikaneder",
+   "title": "Emanuel Schikaneder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:52.323Z",
+   "snapshot": "2a783909d599d251d3e2ebf26b148b99309483d8ba58d924585bda459824cd14"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Xaver_Gerl",
+   "title": "Franz Xaver Gerl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:43.580Z",
+   "snapshot": "2d2b5f7f033db60704b313a29cb26299d2e1d13e84ee5f4ee81b54793511fbf3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Don_Giovanni_Tenorio",
+   "title": "Don Giovanni Tenorio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:53.237Z",
+   "snapshot": "4f7a845dd39d9c4a6334f9fffcdf2fb43f9ae70d5118afbc3d03cbed256752f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_Fischer_(bass)",
+   "title": "Ludwig Fischer (bass) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:54.389Z",
+   "snapshot": "95175d449168a3f2d2b7c1784c3199f7f98336ce479dc32a497a80563236c3f9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Don_Giovanni",
+   "title": "Don Giovanni – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:10:00Z"
+  },
+  "s6": {
+   "url": "https://www.opera-guide.ch/operas/don+giovanni/",
+   "title": "Don Giovanni von Wolfgang Amadeus Mozart – Opera-Guide",
+   "publisher": "Opera-Guide",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:14.974Z",
+   "snapshot": "3ee4f558152c440f4252aaa70086800cc2f73b84069c4da808ffd87216a71519"
+  },
+  "s7": {
+   "url": "https://www.operone.de/opern/dongiovanni.html",
+   "title": "Don Giovanni von Mozart - Operone",
+   "publisher": "Operone",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:18.162Z",
+   "snapshot": "c38a8bb9f24f439888225fbf753edb022a1133c208d455cdcd3135223bc2190f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Papageno",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sarastro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leporello",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Osmin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:54.919Z",
+   "target": "f08161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schikaneder took the role of Papageno—a character reflecting the Hanswurst tradition, and thus suited to his skills—at the premiere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Papageno” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:54.919Z",
+   "target": "f08162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He sang the role of Sarastro in the premiere of Mozart's opera The Magic Flute.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sarastro” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:54.919Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Leporello",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Leporello”, “Лепорелло”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:54.919Z",
+   "target": "f08164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fischer is perhaps best remembered today for the role of Osmin in Die Entführung aus dem Serail, a part \"tailor made\" for him by Mozart and which he sang in the premiere production (first performance 16 July 1782,) during the Vienna phase of his career.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:54.919Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Osmin” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:10:00Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leporello's \"Catalogue Aria\" provided the name \"Leporello list\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:10:03Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LEPORELLO, Don Giovannis Diener (Bass)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:06Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Leporello (Don Giovannis Diener)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:43.058Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LEPORELLO, Don Giovannis Diener (Bass)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:43.058Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Leporello (Don Giovannis Diener)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:43.058Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "LEPORELLO, Don Giovannis Diener (Bass)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Leporello” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:43.058Z",
+   "target": "f08163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Leporello (Don Giovannis Diener) - Baß buffo, auch Charakterbaß, Spielbaß",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.058Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Leporello” is on the snapshot of s7"
+  }
+ ]
+}

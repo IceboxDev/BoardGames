@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-133",
+ "image": "IMG20261022154606.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] If you are in Alaska right outside of the Arctic Circle, where does the sun rise and set on the summer solstice?\nA. North to North\nB. West to East\nC. South to North\nAnswer: A. Just outside the Arctic Circle in Alaska, the sun travels a circular trajectory around the sky, and barely dips below the horizon on the summer solstice, resulting in almost 24 hours of daylight. This phenomenon is known as the “midnight sun.”",
+   "de": "In welcher Himmelsrichtung geht die Sonne in Alaska knapp südlich des Polarkreises zur Sommersonnenwende sowohl unter als auch wieder auf?",
+   "en": "In Alaska just south of the Arctic Circle, in which compass direction does the sun both set and rise again on the summer solstice?",
+   "reworked": true,
+   "answerDe": "Norden",
+   "answerEn": "North",
+   "timeline": {
+    "kind": "event",
+    "start": "-320",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Pytheas of Massalia, active around 320 BC, becomes the first person on record to describe the midnight sun",
+    "labelDe": "Pytheas von Massalia, um 320 v. Chr. tätig, beschreibt als Erster überliefert die Mitternachtssonne"
+   },
+   "source": {
+    "url": "https://pass.lawrencehallofscience.org/?p=94",
+    "title": "Seasons and Sunsets Above the Arctic Circle: Predicting Sunsets",
+    "lang": "en"
+   },
+   "notes": "Card correct: the source says that near the Arctic at the edges of summer the Sun rises and sets almost due north; by the standard rise/set azimuth formula (cos A = sin δ / cos φ) at 65–66°N on the solstice the sun sets about 12–16° west of north and rises the same east of north, shortly after. Timeline from Wikipedia’s Pytheas article.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "discipline": "Economics",
+   "cardText": "[Economics] How is the Gini coefficient interpreted?\nA. Higher values indicate more equality\nB. Higher values indicate less equality\nC. The midpoint value indicates more equality\nAnswer: B.",
+   "de": "Was zeigt ein höherer Gini-Koeffizient über die Verteilung von Einkommen oder Vermögen an?",
+   "en": "What does a higher Gini coefficient indicate about the distribution of income or wealth?",
+   "reworked": true,
+   "answerDe": "Größere Ungleichheit",
+   "answerEn": "Greater inequality",
+   "timeline": {
+    "kind": "creation",
+    "start": "1912",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Corrado Gini publishes Variabilità e mutabilità, introducing his measure of inequality",
+    "labelDe": "Corrado Gini veröffentlicht „Variabilità e mutabilità“ und führt sein Ungleichheitsmaß ein"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Gini_coefficient",
+    "title": "Gini coefficient",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: 0 = perfect equality, 1 (100%) = maximal inequality (one person has all the income).",
+   "domain": "society",
+   "sub": "business"
+  }
+ ]
+}

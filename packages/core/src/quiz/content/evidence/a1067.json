@@ -1,0 +1,549 @@
+{
+ "article": "a1067",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Porcelain",
+   "title": "Porcelain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:37.176Z",
+   "snapshot": "45cd75469a0d87e63ce97e6e24e1d9d721874f297c49fb0128dba943b2f2b1b8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Canary_Islands",
+   "title": "Canary Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:38.324Z",
+   "snapshot": "40a4d3426bc65decd394b375578c159f05eabc7491691788e5a8c4e0e75891e8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wouri_River",
+   "title": "Wouri River – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:39.090Z",
+   "snapshot": "e2c7833affa5bf6ddd5dc27f7f8d9a577136e2c4fe690ffcd06428a2acfe066f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Common_cuttlefish",
+   "title": "Common cuttlefish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:38:40.095Z",
+   "snapshot": "7f95b000fc2490bd2c7ac498f40ee7ffa281b300c411dd13a344186e02d2a38d"
+  },
+  "s5": {
+   "url": "https://www.dictionary.com/browse/porcelain",
+   "title": "Porcelain – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:37.699Z",
+   "snapshot": "2ba611e3123ec65c757c31943a98e3c427c7b5409aecd917cf1737a5f8edd141"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Porzellan",
+   "title": "Porzellan – DWDS",
+   "publisher": "Berlin-Brandenburgische Akademie der Wissenschaften (DWDS)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:37.671Z",
+   "snapshot": "bce07f554c8e54f87ceb262302ab75682ba5acccd2913f41dda3e659ea18a7d1"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Porzellan",
+   "title": "Porzellan – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:38.275Z",
+   "snapshot": "1640167bf674e47d6dda150ac28df953ad8c6f7060b038061881f5192c03a4d2"
+  },
+  "s8": {
+   "url": "https://www.encyclopedia.com/places/africa/cameroon-political-geography/cameroon",
+   "title": "Cameroon – Encyclopedia.com (Countries and Their Cultures)",
+   "publisher": "Encyclopedia.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:59:58Z"
+  },
+  "s9": {
+   "url": "https://www.nationsonline.org/oneworld/cameroon.htm",
+   "title": "Cameroon – Country Profile – Nations Online Project",
+   "publisher": "Nations Online Project",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:00:01Z"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Cameroon",
+   "title": "Cameroon – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:38.437Z",
+   "snapshot": "01a52208453cbab69bfc42ab1ee8f188eeb221aede3a686af38aaab7faa4c825"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cowries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "dogs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "shrimp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cuttlefish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:27.565Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cowries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cowries”, “Porzellanschnecken”, “каури”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:27.565Z",
+   "target": "f05332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The name Islas Canarias is likely derived from the Latin name Canariae Insulae, meaning 'Islands of the Dogs', perhaps because monk seals or sea dogs were abundant, a name that was evidently generalised from the ancient name of one of these islands, Canaria – presumably Gran Canaria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dogs” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:27.565Z",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "shrimp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“shrimp”, “Garnelen”, “креветки”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:27.565Z",
+   "target": "f05335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The common cuttlefish or European common cuttlefish (Sepia officinalis) is one of the largest and best-known cuttlefish species.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:27.565Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cuttlefish” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:58:02Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Italian porcellana originally, a type of cowry shell",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:58:05Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "aus gleichbedeutend porcellana ital , ursprünglich ‘Kaurischnecke, Porzellanschnecke’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:58:08Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "italienisch porcellana, eigentlich = eine Meeresschnecke mit weiß glänzender Schale",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:58:11Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "comes from the old Italian porcellana ( cowrie shell ) because of its resemblance to the surface of the shell.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:59:21Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The word comes from the Italian word for \"cowrie shell,\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "supersedes earlier quote (markup-safe)"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:59:23Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ursprünglich ‘Kaurischnecke, Porzellanschnecke’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "supersedes earlier quote (markup-safe)"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:59:25Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "comes from the old Italian porcellana (cowrie shell) because of its resemblance to the surface of the shell.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "supersedes earlier quote (markup-safe)"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:59:58Z",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "those explorers named the river Rio dos Camaroes (\"River of Prawns\")",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:00:01Z",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The name Cameroon is derived from the Portuguese word, Camaroes, meaning shrimps.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:00:03Z",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "which they called Rio dos Camarões meaning 'river of shrimps' or 'shrimp river', referring to the then abundant Cameroon ghost shrimp.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23",
+   "note": "the animal was a ghost shrimp / mud lobster (Lepidophthalmus turneranus), named 'camarões' (shrimp/prawns)"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:03.078Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "italienisch porcellana, eigentlich = eine Meeresschnecke mit weiß glänzender Schale",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:03.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:03.078Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The word comes from the Italian word for \"cowrie shell,\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:03.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:03.078Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "ursprünglich ‘Kaurischnecke, Porzellanschnecke’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:03.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:03.078Z",
+   "target": "f05331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "comes from the old Italian porcellana (cowrie shell) because of its resemblance to the surface of the shell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:03.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:03.078Z",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "which they called Rio dos Camarões meaning 'river of shrimps' or 'shrimp river', referring to the then abundant Cameroon ghost shrimp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:03.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:03.078Z",
+   "target": "f05334",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Originally, Cameroon was the exonym given by the Portuguese to the Wouri River, which they called Rio dos Camarões meaning 'river of shrimps' or 'shrimp river', referring to the then abundant Cameroon ghost shrimp.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:03.078Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “shrimp” is on the snapshot of s10"
+  }
+ ]
+}

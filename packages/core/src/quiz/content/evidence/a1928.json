@@ -1,0 +1,409 @@
+{
+ "article": "a1928",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gordian_Knot",
+   "title": "Gordian Knot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:04.563Z",
+   "snapshot": "445b0a1c37995af6e80e234c0cfadb6c025cfd3ce57929a74ae32104400d76cb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Zeno's_paradoxes",
+   "title": "Zeno's paradoxes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:05.645Z",
+   "snapshot": "d453c3eb2cce12533abede564b8957d666da49517c6a3b680856ab13681f2678"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ship_of_Theseus",
+   "title": "Ship of Theseus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:06.554Z",
+   "snapshot": "bd08c8f928c124459fd8c329d6850b1c39a43fb7f161ad1ba13ebd9c7384eeb4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Liar_paradox",
+   "title": "Liar paradox – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:07.634Z",
+   "snapshot": "b2f9a55f5c5acea51ea92b7f3fe5c55e0c647e3eedabe57f7463b5038e288790"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Buridan's_ass",
+   "title": "Buridan's ass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:08.532Z",
+   "snapshot": "470c4c4f4b521945f14f794fb6fdfe532c47f5d7f90917f4ca4452ed7ad5a43b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Gordischer_Knoten",
+   "title": "Gordischer Knoten",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:31:05.830Z",
+   "snapshot": "be04b768e65060f3e073460d221d0732ae0a95a093f0438efc2fcd9875428c7a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Sorites_paradox",
+   "title": "Sorites paradox – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:09.651Z",
+   "snapshot": "84da46a1bf96def5176054709ea3f7137a7ad4d32d64cddaff1e86742678cc54"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Buridan%27s_ass",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:31:10.532Z",
+   "snapshot": "470c4c4f4b521945f14f794fb6fdfe532c47f5d7f90917f4ca4452ed7ad5a43b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gordian Knot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Achilles and the tortoise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ship of Theseus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "liar paradox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Buridan's ass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "sorites paradox",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alexander der Große",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "Alexander the Great",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-019/4, u08: The statement (Odysseus) is false; Arrian and Plutarch tell of Alexander at Gordium in 333 BC."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f14459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Alexander der Große",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s6"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f14459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alexander the Great",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f09636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The cutting of the Gordian Knot is an ancient Greek legend associated with Alexander the Great in Gordium in Phrygia, regarding a complex knot that tied an oxcart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gordian Knot” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f09637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Diogenes Laërtius, citing Favorinus, says that Zeno's teacher Parmenides was the first to introduce the paradox of Achilles and the tortoise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Achilles and the tortoise” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f09638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Ship of Theseus, also known as Theseus's Paradox, is a paradox and common thought experiment questioning whether an object (in the most common stating of the paradox, a ship) remains the same when all of its original components are gradually replaced over time, with no single part being",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ship of Theseus” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f09639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In philosophy and logic, the classical liar paradox or liar's paradox or antinomy of the liar is the statement of a liar that they are lying: for instance, declaring that \"I am lying\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “liar paradox” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f09640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Buridan's ass is an illustration of a paradox in philosophy in the conception of free will.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buridan's ass” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f14459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The cutting of the Gordian Knot is an ancient Greek legend associated with Alexander the Great in Gordium in Phrygia, regarding a complex knot that tied an oxcart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander the Great” is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f14459",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bekannt wurde der aus dem Bast der Kornelkirsche bestehende Knoten, weil Alexander der Große ihn mit seinem Schwert durchschlagen haben soll und somit den Knoten gelöst hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander der Große” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:28:47.460Z",
+   "target": "f28321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Sorites paradox (), sometimes known as the paradox of the heap, is a paradox that results from vague predicates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:47.460Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sorites paradox” is on the snapshot of s7"
+  }
+ ]
+}

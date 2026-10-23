@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-072",
+ "image": "IMG20261022154115.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] What is the largest nerve in the human body?\nA. Sciatic nerve\nB. Vagus nerve\nC. Spinal nerve\nAnswer: A. The sciatic nerve runs from the lower back down the legs. It controls the muscles of the lower legs and provides sensation to the thighs, legs, and soles of the feet.",
+   "de": "Wie heißt der größte Nerv des menschlichen Körpers, der vom unteren Rücken das Bein hinab verläuft?",
+   "en": "What is the largest nerve in the human body, running from the lower back down the leg?",
+   "reworked": true,
+   "answerDe": "Ischiasnerv",
+   "answerEn": "Sciatic nerve",
+   "timeline": {
+    "kind": "creation",
+    "start": "1764",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Domenico Cotugno publishes his classic monograph on sciatic neuralgia",
+    "labelDe": "Domenico Cotugno veröffentlicht seine klassische Monografie über die Ischiasneuralgie"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sciatic_nerve",
+    "title": "Sciatic nerve",
+    "lang": "en"
+   },
+   "notes": "Confirmed: longest and widest single nerve in the human body. Card's explanation slightly off: Wikipedia says the sciatic nerve has no cutaneous branches for the thigh (thigh sensation comes from other nerves). Timeline from the Domenico Cotugno page.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 2,
+   "discipline": "Finance",
+   "cardText": "[Finance] How is the interest rate of a Treasury Bill (T-Bill) determined?\nA. By a vote from the Federal Reserve\nB. Based on the stock market performance\nC. Through an auction process\nAnswer: C. Treasury Bills are sold at a discount to their face value during auctions. The difference between the purchase price and the face value at maturity constitutes the interest.",
+   "de": "Durch welches Verfahren wird der Zinssatz eines US-Schatzwechsels (Treasury Bill), der unter seinem Nennwert verkauft wird, bestimmt?",
+   "en": "Through what process is the interest rate of a US Treasury bill, sold at a discount to its face value, determined?",
+   "reworked": true,
+   "answerDe": "Auktion",
+   "answerEn": "Auction",
+   "timeline": {
+    "kind": "event",
+    "start": "1929",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The US Treasury switches from fixed-price subscriptions to selling Treasury bills at auction",
+    "labelDe": "Das US-Finanzministerium stellt beim Verkauf von Treasury Bills von Festpreiszeichnung auf Auktionen um"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/United_States_Treasury_security",
+    "title": "United States Treasury security",
+    "lang": "en"
+   },
+   "notes": "Confirmed: T-bills are zero-coupon, bought at a discount to par and sold in auctions (conducted via the Federal Reserve Bank of New York) since 1929.",
+   "domain": "society",
+   "sub": "business"
+  }
+ ]
+}

@@ -1,0 +1,582 @@
+{
+ "article": "a1188",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/HTTP",
+   "title": "HTTP – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:43.110Z",
+   "snapshot": "e34816437562f5a5e63a2ddb61b1cb6e0845b7c11baf1a62087eef6c25ade118"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/HTTP_cookie",
+   "title": "HTTP cookie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:05.408Z",
+   "snapshot": "a67e42948778e7aed2ba55df79e259b18452cb67ee2fc14a2dd793b9f11d4ebe"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/HTTP-Cookie",
+   "title": "HTTP-Cookie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:12.976Z",
+   "snapshot": "7cd7bea635ac98c52d3fdc1bf398f23ad05ba2617c6eb3bbcf48d1525253bd3d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Williams_tube",
+   "title": "Williams tube – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:36.662Z",
+   "snapshot": "56e9d97626df8e379b48ed21b6e4c52c112999c4c22cde74f0145e450e11d5b6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cut,_copy,_and_paste",
+   "title": "Cut, copy, and paste – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:13.953Z",
+   "snapshot": "1cd3a3c8ff82c769b3444ebdca641a85e8f1561b52dce44ca8ccc7f0f9957b32"
+  },
+  "s6": {
+   "url": "https://web.archive.org/web/20161009061935/http://courses.cs.vt.edu/~cs4244/spring.09/documents/Proxies.pdf",
+   "title": "Luotonen & Altis: World-Wide Web Proxies (CERN, April 1994)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:12.805Z",
+   "snapshot": "3819a1ea647f42cc75ba5ab3494f73f99115f25aaf39f362d270bbdeccbda9de"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Random-access_memory",
+   "title": "Random-access memory – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:32.944Z",
+   "snapshot": "aa140e2c3cfc40318b77b2a5d1ac5de6cdad26539787865a177700dc7a78f097"
+  },
+  "s8": {
+   "url": "https://www.intel.com/content/www/us/en/tech-tips-and-tricks/computer-ram.html",
+   "title": "What Is Computer and Laptop RAM and Why Does It Matter?",
+   "publisher": "Intel",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:32.829Z",
+   "snapshot": "b90df4fe09c759494ffbf8f780d7db26ca4b473cc519338e60d44e11d64457d5"
+  },
+  "s9": {
+   "url": "https://developer.mozilla.org/en-US/docs/Glossary/Proxy_server",
+   "title": "Proxy server – MDN Web Docs Glossary",
+   "publisher": "Mozilla (MDN Web Docs)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:32.975Z",
+   "snapshot": "b17f7145710cb25ebc28c3f6c4a8267ca89e5323a9508ac432c08488e07dee63"
+  },
+  "s10": {
+   "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+   "title": "RFC 9110: HTTP Semantics",
+   "publisher": "IETF / RFC Editor",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:33.273Z",
+   "snapshot": "18c3f94bed6cce62acae4eaa777f02b2ade8cdde06d0dec5078415101150b217"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05936",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "cache",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "RAM",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05939",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "clipboard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "proxy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cookie",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Cookie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-281/5, u03: A cookie is only the small piece of data a website stores in the browser. Text files in general are not called cookies."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cookie",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:45.673Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cookie",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:45.673Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05936",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "High-traffic websites often benefit from web cache servers that deliver content on behalf of upstream servers to improve response time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.673Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cache” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An HTTP cookie (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small block of data created by a web server while a user is browsing a website and placed on the user's computer or other device by the user's web browser.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.673Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cookie” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05937",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ein Cookie ([ˈkʊki]; englisch für „Keks“) ist eine Textinformation, die im Browser auf dem Computer des Benutzers jeweils zu einer besuchten Website gespeichert werden kann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.673Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cookie” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "RAM",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“RAM”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05939",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The cut command removes the selected data from its original position, and the copy command creates a duplicate; in both cases the selected data is kept in temporary storage called the clipboard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.673Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “clipboard” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:45.673Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "proxy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“proxy”, “Proxy”, “Прокси”) on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:39:24Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "RAM is normally associated with volatile types of memory where stored information is lost if power is removed.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:26Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "RAM is a common computing acronym that stands for random-access memory. Sometimes it’s called PC memory or just memory. In essence, RAM is your computer or laptop’s short-term memory.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:39:29Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A proxy intercepts requests and serves back responses; it may forward the requests, or not (for example in the case of a cache)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:39:31Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "A \"proxy\" is a message-forwarding agent that is chosen by the client, usually via local configuration rules, to receive requests for some type(s) of absolute URI and attempt to satisfy those requests via translation through the HTTP interface.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "RAM is normally associated with volatile types of memory where stored information is lost if power is removed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "RAM is a common computing acronym that stands for random-access memory. Sometimes it’s called PC memory or just memory. In essence, RAM is your computer or laptop’s short-term memory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A proxy intercepts requests and serves back responses; it may forward the requests, or not (for example in the case of a cache)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "A \"proxy\" is a message-forwarding agent that is chosen by the client, usually via local configuration rules, to receive requests for some type(s) of absolute URI and attempt to satisfy those requests via translation through the HTTP interface.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Random-access memory (RAM; ) is a form of electronic computer memory that can be read and changed in any order, typically used to store working data and machine code.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “RAM” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05938",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "What Is Computer and Laptop RAM and Why Does It Matter?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “RAM” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A proxy server is an intermediate program or computer used when navigating through different networks of the Internet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “proxy” is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:27.425Z",
+   "target": "f05940",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "HTTP Authentication-Info and Proxy-Authentication-Info",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:27.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “proxy” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,843 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "film-media/media",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-075",
+    "category": 2
+   },
+   "factId": "f00176"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-093",
+    "category": 6
+   },
+   "factId": "f01620"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-249",
+    "category": 4
+   },
+   "factId": "f05096"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-337",
+    "category": 5
+   },
+   "factId": "f07376"
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-178",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-173",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie lautet der Titel des ersten Videos, das 2005 auf YouTube hochgeladen wurde?",
+      "en": "What is the title of the first video uploaded to YouTube in 2005?",
+      "answerDe": "Me at the zoo",
+      "answerEn": "Me at the zoo",
+      "timeline": {
+       "kind": "event",
+       "start": "2005-04-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "\"Me at the zoo\", the first YouTube video, is uploaded by Jawed Karim",
+       "labelDe": "„Me at the zoo“, das erste YouTube-Video, wird von Jawed Karim hochgeladen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Me_at_the_zoo",
+       "title": "Me at the zoo – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wer schickte im März 2006 mit „just setting up my twttr“ den ersten Tweet ab?",
+      "en": "Who sent the first tweet, \"just setting up my twttr\", in March 2006?",
+      "answerDe": "Jack Dorsey",
+      "answerEn": "Jack Dorsey",
+      "timeline": {
+       "kind": "event",
+       "start": "2006-03-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Jack Dorsey posts the first tweet: \"just setting up my twttr\"",
+       "labelDe": "Jack Dorsey setzt den ersten Tweet ab: „just setting up my twttr“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/History_of_Twitter",
+       "title": "History of Twitter – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "An welcher Forschungseinrichtung ging 1990 die erste Website der Welt online?",
+      "en": "At which research institution did the world's first website go online in 1990?",
+      "answerDe": "CERN",
+      "answerEn": "CERN",
+      "timeline": {
+       "kind": "event",
+       "start": "1990-12-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The first website, info.cern.ch, goes online at CERN",
+       "labelDe": "Die erste Website, info.cern.ch, geht am CERN online"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Info.cern.ch",
+       "title": "info.cern.ch – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher japanische Designer entwarf Ende der 1990er-Jahre für NTT Docomo den ersten weit verbreiteten Emoji-Satz?",
+      "en": "Which Japanese designer created the first widespread emoji set for NTT Docomo in the late 1990s?",
+      "answerDe": "Shigetaka Kurita",
+      "answerEn": "Shigetaka Kurita",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1972-05-09",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Shigetaka Kurita, designer of NTT Docomo's 176 emoji",
+       "labelDe": "Shigetaka Kurita, Gestalter der 176 Emoji von NTT Docomo"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Shigetaka_Kurita",
+       "title": "Shigetaka Kurita – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Firsts of the Internet: The Website, the Video, the Tweet",
+    "titleDe": "Premieren des Internets: Die Website, das Video, der Tweet",
+    "bodyEn": "Every everyday habit of the internet started with one modest first attempt. Most of these firsts looked unremarkable at the time; only later did they become pieces of history.\n\n**The first website.** The World Wide Web was born at CERN, the European particle physics laboratory near Geneva. Tim Berners-Lee and his team put the first website online on 20 December 1990 at the address info.cern.ch. It explained the web project itself: what hypertext was and how to set up a server.\n\n**The first emoji.** In 1999 the mobile operator NTT Docomo launched its i-mode service in Japan, and the designer Shigetaka Kurita drew 176 tiny pictograms for it on a grid of just 12 by 12 pixels — hearts, weather symbols, faces. The set is now in the collection of the Museum of Modern Art in New York.\n\n**The first YouTube video.** On 23 April 2005 the YouTube co-founder Jawed Karim uploaded an 18-second clip filmed by a school friend. Titled \"Me at the zoo\", it shows Karim at the San Diego Zoo, standing in front of two elephants and remarking that they have \"really, really long trunks\". The video is still online and has been watched hundreds of millions of times.\n\n**The first tweet.** On 21 March 2006 Jack Dorsey typed \"just setting up my twttr\" — the very first message on the service that would become Twitter. In 2021 he sold it as an NFT for about 2.9 million dollars.\n\n**A royal first.** Even the oldest institutions eventually went online. On 24 October 2014, opening the \"Information Age\" gallery at London's Science Museum, Queen Elizabeth II sent her first tweet from the @BritishMonarchy account. She praised the exhibition and signed the message \"Elizabeth R\" — the royal signature, R standing for Regina, queen.\n\nTogether these moments mark the stages of the internet: from a research tool at a physics lab to a medium on which even a monarch introduces herself in 140 characters.",
+    "bodyDe": "Jede Gewohnheit des Internets begann mit einem bescheidenen ersten Versuch. Die meisten dieser Premieren wirkten damals unscheinbar; erst später wurden sie zu Geschichte.\n\n**Die erste Website.** Das World Wide Web entstand am CERN, dem europäischen Teilchenphysik-Labor bei Genf. Tim Berners-Lee und sein Team stellten am 20. Dezember 1990 die erste Website unter der Adresse info.cern.ch online. Sie erklärte das Web-Projekt selbst: was Hypertext ist und wie man einen Server einrichtet.\n\n**Die ersten Emoji.** 1999 startete der Mobilfunkanbieter NTT Docomo in Japan seinen Dienst i-mode, und der Designer Shigetaka Kurita zeichnete dafür 176 winzige Piktogramme auf einem Raster von nur 12 mal 12 Pixeln – Herzen, Wettersymbole, Gesichter. Der Satz gehört heute zur Sammlung des Museum of Modern Art in New York.\n\n**Das erste YouTube-Video.** Am 23. April 2005 lud YouTube-Mitgründer Jawed Karim einen 18 Sekunden langen Clip hoch, den ein Schulfreund gefilmt hatte. Er trägt den Titel „Me at the zoo“ und zeigt Karim im San Diego Zoo vor zwei Elefanten, über deren „wirklich, wirklich lange Rüssel“ er staunt. Das Video ist bis heute online und wurde Hunderte Millionen Mal angesehen.\n\n**Der erste Tweet.** Am 21. März 2006 tippte Jack Dorsey „just setting up my twttr“ – die allererste Nachricht des Dienstes, aus dem Twitter werden sollte. 2021 verkaufte er sie als NFT für rund 2,9 Millionen Dollar.\n\n**Eine königliche Premiere.** Auch die ältesten Institutionen gingen irgendwann online. Am 24. Oktober 2014 eröffnete Queen Elizabeth II. die Galerie „Information Age“ im Londoner Wissenschaftsmuseum und schickte dabei vom Konto @BritishMonarchy ihren ersten Tweet. Sie lobte die Ausstellung und unterschrieb mit „Elizabeth R“ – der königlichen Signatur, R für Regina, Königin.\n\nZusammen markieren diese Momente die Stationen des Internets: vom Forschungswerkzeug eines Physiklabors zum Medium, in dem sich selbst eine Monarchin in 140 Zeichen vorstellt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-020",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-270",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-310",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-304",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Myspace-Mitgründer wurde jedem neuen Mitglied automatisch als erster Freund zugeteilt?",
+      "en": "Which Myspace co-founder was automatically assigned to every new member as their first friend?",
+      "answerDe": "Tom Anderson",
+      "answerEn": "Tom Anderson",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1970-11-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Tom Anderson, Myspace co-founder known as everyone's first friend \"Tom\"",
+       "labelDe": "Tom Anderson, Myspace-Mitgründer und als „Tom“ jedermanns erster Freund"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tom_Anderson",
+       "title": "Tom Anderson – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches deutsche soziale Netzwerk für Studierende machte ab 2005 das Wort „gruscheln“ bekannt?",
+      "en": "Which German social network for students made the word \"gruscheln\" popular from 2005 on?",
+      "answerDe": "StudiVZ",
+      "answerEn": "StudiVZ",
+      "timeline": {
+       "kind": "founding",
+       "start": "2005-11-11",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The German student network StudiVZ goes online",
+       "labelDe": "Das deutsche Studentennetzwerk StudiVZ geht online"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/StudiVZ",
+       "title": "StudiVZ – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Nach welchem Basketballstar wurde der Vogel im Twitter-Logo „Larry“ getauft?",
+      "en": "After which basketball star was the bird in the Twitter logo nicknamed \"Larry\"?",
+      "answerDe": "Larry Bird",
+      "answerEn": "Larry Bird",
+      "timeline": {
+       "kind": "creation",
+       "start": "2009",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Twitter introduces its cartoon bird logo, nicknamed Larry",
+       "labelDe": "Twitter führt sein Vogel-Logo ein, Spitzname Larry"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Twitter",
+       "title": "Twitter – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Rise and Fall of the Social Networks",
+    "titleDe": "Aufstieg und Fall der sozialen Netzwerke",
+    "bodyEn": "Social networks come and go faster than almost any other business. Platforms that millions once visited every day can be forgotten within a few years — and a few have survived only by reinventing themselves.\n\n**Myspace.** Launched in 2003, Myspace was the first giant of the social web. Every new member found one friend already waiting: the co-founder Tom Anderson, known to millions simply as \"Tom from Myspace\". In 2005 News Corp bought the site for 580 million dollars, but Facebook soon overtook it. In June 2011 the advertising company Specific Media bought the fading network for about 35 million dollars, and the pop star Justin Timberlake took a stake to help relaunch it as a home for music.\n\n**The German networks.** Germany built its own. StudiVZ, launched on 11 November 2005 for university students, made the word \"gruscheln\" famous — its version of Facebook's poke, usually read as a blend of grüßen (greet) and kuscheln (cuddle). In October 2006 two students in Koblenz founded wer-kennt-wen, known for short as \"wkw\"; RTL bought it and at its peak it counted almost ten million registered users. Both lost out to Facebook: wer-kennt-wen closed in June 2014, StudiVZ finally in 2022.\n\n**The bird.** Twitter, the microblogging platform launched in 2006, was recognised everywhere by the little bird in its logo. Introduced in 2009, the bird was nicknamed Larry after the Boston Celtics star Larry Bird. When Elon Musk renamed the service X in July 2023, the bird was replaced by a black X.\n\n**The ghost.** Snapchat, launched in 2011 by Stanford students and known for messages that vanish, grew at astonishing speed among young users. In 2016 reports said the instant-messaging app had passed 150 million daily users — more than Twitter. Its ghost mascot is called Ghostface Chillah.\n\nThe pattern repeats: a network becomes the place where everyone is, until a newer one is where everyone goes.",
+    "bodyDe": "Soziale Netzwerke kommen und gehen schneller als fast jedes andere Geschäft. Plattformen, die Millionen einst täglich besuchten, können binnen weniger Jahre vergessen sein – und manche überlebten nur, weil sie sich neu erfanden.\n\n**Myspace.** Das 2003 gestartete Myspace war der erste Riese des sozialen Netzes. Jedes neue Mitglied fand bereits einen Freund vor: den Mitgründer Tom Anderson, für Millionen einfach „Tom von Myspace“. 2005 kaufte News Corp die Seite für 580 Millionen Dollar, doch Facebook zog bald vorbei. Im Juni 2011 übernahm die Werbefirma Specific Media das schwächelnde Netzwerk für rund 35 Millionen Dollar, und der Popstar Justin Timberlake beteiligte sich, um es als Plattform für Musik neu zu starten.\n\n**Die deutschen Netzwerke.** Deutschland baute eigene. StudiVZ, am 11. November 2005 für Studierende gestartet, machte das Wort „gruscheln“ berühmt – seine Version von Facebooks „Anstupsen“, meist als Mischung aus grüßen und kuscheln gedeutet. Im Oktober 2006 gründeten zwei Studenten in Koblenz wer-kennt-wen, kurz „wkw“ genannt; RTL kaufte es, und auf dem Höhepunkt zählte es fast zehn Millionen registrierte Nutzer. Beide unterlagen Facebook: wer-kennt-wen schloss im Juni 2014, StudiVZ endgültig 2022.\n\n**Der Vogel.** Twitter, die 2006 gestartete Mikroblogging-Plattform, erkannte man überall an dem kleinen Vogel im Logo. Der 2009 eingeführte Vogel bekam den Spitznamen Larry, nach dem Star der Boston Celtics Larry Bird. Als Elon Musk den Dienst im Juli 2023 in X umbenannte, wurde der Vogel durch ein schwarzes X ersetzt.\n\n**Das Gespenst.** Snapchat, 2011 von Stanford-Studenten gestartet und bekannt für Nachrichten, die sich selbst löschen, wuchs unter jungen Nutzern rasant. 2016 hieß es, die Instant-Messaging-App habe mehr als 150 Millionen tägliche Nutzer – mehr als Twitter. Ihr Gespenster-Maskottchen heißt Ghostface Chillah.\n\nDas Muster wiederholt sich: Ein Netzwerk wird zu dem Ort, an dem alle sind – bis ein neueres der Ort ist, an den alle gehen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-079",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-230",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-367",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Anwalt und Journalist gründete 2005 die Klatschwebseite TMZ?",
+      "en": "Which lawyer-turned-journalist founded the gossip website TMZ in 2005?",
+      "answerDe": "Harvey Levin",
+      "answerEn": "Harvey Levin",
+      "timeline": {
+       "kind": "founding",
+       "start": "2005-11-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The celebrity news site TMZ, founded by Harvey Levin, goes online",
+       "labelDe": "Die Promi-Nachrichtenseite TMZ, gegründet von Harvey Levin, geht online"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/TMZ",
+       "title": "TMZ – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Von welcher Hotelerbin leitete Mario Lavandeira seinen Künstlernamen ab?",
+      "en": "From which hotel heiress did Mario Lavandeira derive his pen name?",
+      "answerDe": "Paris Hilton",
+      "answerEn": "Paris Hilton",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1978-03-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Perez Hilton (Mario Lavandeira), gossip blogger named after Paris Hilton",
+       "labelDe": "Perez Hilton (Mario Lavandeira), Klatschblogger, benannt nach Paris Hilton"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Perez_Hilton",
+       "title": "Perez Hilton – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher Wrestler trieb 2016 mit seiner Klage den Blog Gawker in den Bankrott?",
+      "en": "Which wrestler drove the blog Gawker into bankruptcy with his lawsuit in 2016?",
+      "answerDe": "Hulk Hogan",
+      "answerEn": "Hulk Hogan",
+      "timeline": {
+       "kind": "event",
+       "start": "2016-03-18",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A Florida jury awards Hulk Hogan damages against Gawker; bankruptcy follows",
+       "labelDe": "Eine Jury in Florida spricht Hulk Hogan Schadenersatz gegen Gawker zu; die Insolvenz folgt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Gawker",
+       "title": "Gawker – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Von welchem Coldplay-Sänger trennte sich Gwyneth Paltrow 2014 durch „bewusste Entpaarung“?",
+      "en": "Which Coldplay singer did Gwyneth Paltrow \"consciously uncouple\" from in 2014?",
+      "answerDe": "Chris Martin",
+      "answerEn": "Chris Martin",
+      "timeline": {
+       "kind": "event",
+       "start": "2014-03",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Gwyneth Paltrow and Chris Martin announce their \"conscious uncoupling\" on Goop",
+       "labelDe": "Gwyneth Paltrow und Chris Martin verkünden auf Goop ihre „bewusste Entpaarung“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Goop_(company)",
+       "title": "Goop (company) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Gossip Goes Online: TMZ, Perez Hilton and the Celebrity Web",
+    "titleDe": "Klatsch im Netz: TMZ, Perez Hilton und das Promi-Internet",
+    "bodyEn": "In the 2000s celebrity gossip moved from the supermarket magazine rack to the internet. Websites could publish a photo minutes after it was taken — and stars learned to use the same channels to speak for themselves.\n\n**TMZ.** The site went online on 8 November 2005, founded by Harvey Levin, a lawyer who had become a TV journalist. Its name is Hollywood jargon: TMZ stands for \"thirty-mile zone\", the studio zone of roughly 50 kilometres around the centre of Los Angeles within which film crews work at standard rates. TMZ became known for breaking stories first, among them the death of Michael Jackson in 2009, and added a TV show.\n\n**Perez Hilton.** The blogger Mario Armando Lavandeira Jr., born in Miami in 1978, took his pen name from the hotel heiress Paris Hilton. As Perez Hilton he scrawled crude doodles over paparazzi photos and called himself the \"Queen of All Media\". In the mid-2000s his blog was one of the most-read gossip sites on the web.\n\n**Gawker.** Founded in New York in 2002 by Nick Denton, Gawker mixed media gossip with sharp commentary. In 2016 the wrestler Hulk Hogan won a privacy lawsuit over a sex tape the site had published; a Florida jury awarded him 140 million dollars, Gawker Media filed for bankruptcy and the site shut down that August.\n\n**Goop.** The stars answered with sites of their own. The actress Gwyneth Paltrow started Goop as a lifestyle newsletter in 2008. In March 2014 she used it to announce her separation from the Coldplay singer Chris Martin, describing it as \"conscious uncoupling\" — a phrase that was mocked for months and then entered everyday language.\n\nTwo decades on, much of celebrity news happens on social media, where stars post first and gossip sites follow.",
+    "bodyDe": "In den 2000er-Jahren wanderte der Promi-Klatsch vom Zeitschriftenregal im Supermarkt ins Internet. Webseiten konnten ein Foto Minuten nach der Aufnahme veröffentlichen – und Stars lernten, über dieselben Kanäle selbst zu sprechen.\n\n**TMZ.** Die Seite ging am 8. November 2005 online, gegründet von Harvey Levin, einem Anwalt, der Fernsehjournalist geworden war. Ihr Name ist Hollywood-Jargon: TMZ steht für „thirty-mile zone“, die Studiozone von rund 50 Kilometern um das Stadtzentrum von Los Angeles, innerhalb der Filmteams zu Standardtarifen arbeiten. TMZ wurde dafür bekannt, Nachrichten als Erste zu bringen, darunter 2009 den Tod von Michael Jackson, und bekam eine eigene Fernsehsendung.\n\n**Perez Hilton.** Der Blogger Mario Armando Lavandeira Jr., 1978 in Miami geboren, entlehnte seinen Künstlernamen der Hotelerbin Paris Hilton. Als Perez Hilton kritzelte er derbe Zeichnungen auf Paparazzi-Fotos und nannte sich selbst „Königin aller Medien“. Mitte der 2000er-Jahre war sein Blog eine der meistgelesenen Klatschseiten im Netz.\n\n**Gawker.** Das 2002 in New York von Nick Denton gegründete Gawker mischte Medienklatsch mit bissigem Kommentar. 2016 gewann der Wrestler Hulk Hogan eine Klage wegen eines Sexvideos, das die Seite veröffentlicht hatte; eine Jury in Florida sprach ihm 140 Millionen Dollar zu, Gawker Media meldete Insolvenz an, und die Seite wurde im August eingestellt.\n\n**Goop.** Die Stars antworteten mit eigenen Seiten. Die Schauspielerin Gwyneth Paltrow startete Goop 2008 als Lifestyle-Newsletter. Im März 2014 verkündete sie dort ihre Trennung vom Coldplay-Sänger Chris Martin und nannte sie „bewusste Entpaarung“ (conscious uncoupling) – eine Formulierung, über die monatelang gespottet wurde und die dann in die Alltagssprache einging.\n\nZwei Jahrzehnte später spielt sich ein Großteil der Promi-Nachrichten in sozialen Medien ab: Die Stars posten zuerst, die Klatschseiten ziehen nach.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-295",
+      "category": 2
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-252",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß die Shiba-Inu-Hündin, deren Foto zum „Doge“-Meme wurde?",
+      "en": "What was the name of the Shiba Inu whose photo became the \"Doge\" meme?",
+      "answerDe": "Kabosu",
+      "answerEn": "Kabosu",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "2005",
+       "end": "2024-05-24",
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Kabosu, the Shiba Inu behind the Doge meme (died 24 May 2024)",
+       "labelDe": "Kabosu, die Shiba-Inu-Hündin hinter dem Doge-Meme (gestorben am 24. Mai 2024)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Doge_(meme)",
+       "title": "Doge (meme) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Aus welchem Gebäck besteht der Körper der fliegenden Katze im Internet-Meme „Nyan Cat“?",
+      "en": "Which pastry forms the body of the flying cat in the internet meme \"Nyan Cat\"?",
+      "answerDe": "Pop-Tart",
+      "answerEn": "Pop-Tart",
+      "timeline": {
+       "kind": "creation",
+       "start": "2011-04-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Christopher Torres posts the animation that becomes Nyan Cat",
+       "labelDe": "Christopher Torres veröffentlicht die Animation, aus der Nyan Cat wird"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Nyan_Cat",
+       "title": "Nyan Cat – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie hieß Grumpy Cat mit richtigem Namen?",
+      "en": "What was Grumpy Cat's real name?",
+      "answerDe": "Tardar Sauce",
+      "answerEn": "Tardar Sauce",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "2012-04-04",
+       "end": "2019-05-14",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Tardar Sauce, the cat known as Grumpy Cat",
+       "labelDe": "Tardar Sauce, die als Grumpy Cat bekannte Katze"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Grumpy_Cat",
+       "title": "Grumpy Cat – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie heißt der japanische Kater, der auf YouTube berühmt wurde, weil er sich in kleine Pappkartons zwängt?",
+      "en": "What is the name of the Japanese cat who became famous on YouTube for squeezing into small cardboard boxes?",
+      "answerDe": "Maru",
+      "answerEn": "Maru",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "2007-05-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Maru, the box-loving Japanese YouTube cat",
+       "labelDe": "Maru, der kartonverliebte japanische YouTube-Kater"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Maru_(cat)",
+       "title": "Maru (cat) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Internet Animal Stars: From Grumpy Cat to Pizza Rat",
+    "titleDe": "Tierstars des Internets: Von Grumpy Cat bis Pizza Rat",
+    "bodyEn": "If the internet has a favourite subject, it is animals. A single photo or a few seconds of video can turn a pet — or a pest — into a worldwide celebrity.\n\n**Grumpy Cat.** Her real name was Tardar Sauce, a cat from Morristown, Arizona, whose dwarfism and underbite gave her a permanently sour face. After her brother posted a photo on Reddit in September 2012, she became a social-media sensation as Grumpy Cat: books, a film, advertising deals. In 2015 she became the first cat to be immortalised in wax at Madame Tussauds, as an animatronic figure in San Francisco. She died in 2019.\n\n**Doge.** A 2010 blog photo of the Shiba Inu Kabosu, glancing sideways at the camera, became the \"Doge\" meme in 2013, captioned in broken English such as \"such wow\". It even inspired the cryptocurrency Dogecoin. Kabosu died in May 2024 at the age of 18.\n\n**Nyan Cat.** In April 2011 the artist Christopher Torres posted a pixel animation of a cat whose body is a Pop-Tart, flying through space and leaving a rainbow trail. Set to a looping Japanese pop tune, the video became one of the most-watched clips of the year.\n\n**Maru.** The Japanese cat Maru has been on YouTube since 2008, famous for one passion: jumping and squeezing into cardboard boxes far too small for him.\n\n**Pizza Rat.** In September 2015 a commuter filmed a rat dragging a slice of pizza almost as big as itself down a subway staircase in New York. The clip of the Rat (\"Pizza Rat\") spread within hours, and New Yorkers adopted it as the perfect symbol of their city's hustle.\n\nMost of these stars never knew they were famous — which is perhaps exactly why people loved them.",
+    "bodyDe": "Wenn das Internet ein Lieblingsthema hat, dann sind es Tiere. Ein einziges Foto oder wenige Sekunden Video können ein Haustier – oder einen Schädling – zur weltweiten Berühmtheit machen.\n\n**Grumpy Cat.** Mit richtigem Namen hieß sie Tardar Sauce, eine Katze aus Morristown in Arizona, der Kleinwuchs und ein Unterbiss ein dauerhaft mürrisches Gesicht verliehen. Nachdem ihr Bruder im September 2012 ein Foto auf Reddit gestellt hatte, wurde sie als Grumpy Cat zur Social-Media-Sensation: Bücher, ein Film, Werbeverträge. 2015 wurde sie als erste Katze bei Madame Tussauds in Wachs verewigt, als bewegliche Figur in San Francisco. Sie starb 2019.\n\n**Doge.** Ein Blogfoto der Shiba-Inu-Hündin Kabosu von 2010, die seitlich in die Kamera schielt, wurde 2013 zum „Doge“-Meme, beschriftet mit gebrochenem Englisch wie „such wow“. Es inspirierte sogar die Kryptowährung Dogecoin. Kabosu starb im Mai 2024 im Alter von 18 Jahren.\n\n**Nyan Cat.** Im April 2011 veröffentlichte der Künstler Christopher Torres eine Pixel-Animation einer Katze, deren Körper ein Pop-Tart ist und die mit einer Regenbogenspur durchs All fliegt. Mit einem endlos wiederholten japanischen Popsong unterlegt, wurde das Video zu einem der meistgesehenen Clips des Jahres.\n\n**Maru.** Der japanische Kater Maru ist seit 2008 auf YouTube, berühmt für eine Leidenschaft: in Pappkartons zu springen und sich hineinzuzwängen, die viel zu klein für ihn sind.\n\n**Pizza Rat.** Im September 2015 filmte ein Pendler, wie eine Ratte ein Stück Pizza, fast so groß wie sie selbst, eine U-Bahn-Treppe in New York hinunterbugsierte. Das Video der Ratte („Pizza Rat“) verbreitete sich binnen Stunden, und die New Yorker erkoren sie zum perfekten Symbol für die Betriebsamkeit ihrer Stadt.\n\nDie meisten dieser Stars wussten nie, dass sie berühmt waren – vielleicht liebte man sie gerade deshalb.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-233",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "de": "Wofür steht die Internet-Abkürzung „LOL“?",
+      "en": "What does the internet abbreviation \"LOL\" stand for?",
+      "answerDe": "Laughing out loud",
+      "answerEn": "Laughing out loud",
+      "timeline": {
+       "kind": "event",
+       "start": "2011-03-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "\"LOL\" is added to the Oxford English Dictionary",
+       "labelDe": "„LOL“ wird ins Oxford English Dictionary aufgenommen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/LOL",
+       "title": "LOL – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wofür steht die Abkürzung „FOMO“?",
+      "en": "What does the abbreviation \"FOMO\" stand for?",
+      "answerDe": "Fear of missing out",
+      "answerEn": "Fear of missing out",
+      "timeline": {
+       "kind": "creation",
+       "start": "2004",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Patrick McGinnis popularises \"FOMO\" in a Harvard Business School magazine",
+       "labelDe": "Patrick McGinnis macht „FOMO“ in einem Magazin der Harvard Business School bekannt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fear_of_missing_out",
+       "title": "Fear of missing out – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wofür steht die Abkürzung „TL;DR“ unter langen Texten im Internet?",
+      "en": "What does the abbreviation \"TL;DR\" below long texts on the internet stand for?",
+      "answerDe": "Too long; didn't read",
+      "answerEn": "Too long; didn't read",
+      "timeline": {
+       "kind": "event",
+       "start": "2002",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Earliest known use of \"TL;DR\", in a Usenet newsgroup post",
+       "labelDe": "Früheste bekannte Verwendung von „TL;DR“, in einem Usenet-Beitrag"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/TL;DR",
+       "title": "TL;DR – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wofür steht die Abkürzung „AMA“ für Frage-Runden auf Reddit?",
+      "en": "What does the abbreviation \"AMA\" for question sessions on Reddit stand for?",
+      "answerDe": "Ask me anything",
+      "answerEn": "Ask me anything",
+      "timeline": {
+       "kind": "founding",
+       "start": "2009-05",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Reddit's r/IAmA forum for \"AMA\" sessions is founded",
+       "labelDe": "Reddits Forum r/IAmA für „AMA“-Runden wird gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/R/IAmA",
+       "title": "r/IAmA – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "LOL, FOMO, #TBT: The Shorthand of the Internet",
+    "titleDe": "LOL, FOMO, #TBT: Die Kurzsprache des Internets",
+    "bodyEn": "Online, people write fast — and the internet has developed its own vocabulary of abbreviations. Most come from English and are used the same way in German chats and comments.\n\n**LOL.** The oldest of them stands for Laughing out loud. It is said to have been typed first in a 1980s chat room and was listed among common online abbreviations in 1989. In March 2011 the Oxford English Dictionary officially added it.\n\n**FOMO.** Short for Fear of missing out — the worry that others are having better experiences without you. The Harvard student Patrick McGinnis popularised it in 2004, and social media, with its endless stream of other people's holidays and parties, made it a household word.\n\n**TL;DR.** Too long; didn't read: first a dismissive reply to a long post, today mostly a one-line summary placed above or below a long text. Its earliest known use is a Usenet post from 2002.\n\n**AMA.** Ask me anything: on Reddit's r/IAmA forum, founded in 2009, someone introduces themselves and answers the crowd's questions. When Barack Obama did one in August 2012, the traffic briefly brought parts of the site down.\n\n**#TBT.** The hashtag stands for Throwback Thursday: every Thursday, people post old photos of themselves — childhood pictures, holidays, forgotten hairstyles. The sneaker blog Nice Kicks used the title for old basketball shoes in 2006, and from 2012 the trend took off on Instagram, where the tag has been used hundreds of millions of times.\n\nAbbreviations like these show how quickly the internet builds its own language — and how much of it ends up in the dictionary.",
+    "bodyDe": "Im Netz schreibt man schnell – und das Internet hat ein eigenes Vokabular an Abkürzungen entwickelt. Die meisten stammen aus dem Englischen und werden in deutschen Chats und Kommentaren genauso benutzt.\n\n**LOL.** Die älteste von ihnen steht für Laughing out loud („laut lachen“). Sie soll in den 1980er-Jahren erstmals in einem Chatraum getippt worden sein und wurde 1989 unter den gängigen Online-Abkürzungen aufgeführt. Im März 2011 nahm das Oxford English Dictionary sie offiziell auf.\n\n**FOMO.** Kurz für Fear of missing out („Angst, etwas zu verpassen“) – die Sorge, dass andere ohne einen selbst Besseres erleben. Der Harvard-Student Patrick McGinnis machte den Begriff 2004 bekannt, und die sozialen Medien mit ihrem endlosen Strom fremder Urlaube und Partys machten ihn zum Alltagswort.\n\n**TL;DR.** Too long; didn't read („zu lang, nicht gelesen“): zuerst eine abschätzige Antwort auf einen langen Beitrag, heute meist eine Zusammenfassung in einer Zeile über oder unter einem langen Text. Die früheste bekannte Verwendung ist ein Usenet-Beitrag von 2002.\n\n**AMA.** Ask me anything („Frag mich alles“): Im 2009 gegründeten Reddit-Forum r/IAmA stellt sich jemand vor und beantwortet die Fragen der Menge. Als Barack Obama im August 2012 eine solche Runde gab, legte der Andrang Teile der Seite kurzzeitig lahm.\n\n**#TBT.** Das Hashtag steht für Throwback Thursday („Rückblick-Donnerstag“): Jeden Donnerstag posten Leute alte Fotos von sich – Kinderbilder, Urlaube, vergessene Frisuren. Der Sneaker-Blog Nice Kicks verwendete den Titel 2006 für alte Basketballschuhe, und ab 2012 hob der Trend auf Instagram ab, wo das Tag Hunderte Millionen Mal benutzt wurde.\n\nAbkürzungen wie diese zeigen, wie schnell das Internet eine eigene Sprache bildet – und wie viel davon im Wörterbuch landet.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-046",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Filmemacherin gründete die modernen Webby Awards?",
+      "en": "Which filmmaker founded the modern Webby Awards?",
+      "answerDe": "Tiffany Shlain",
+      "answerEn": "Tiffany Shlain",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1970-04-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Tiffany Shlain, filmmaker and founder of the Webby Awards",
+       "labelDe": "Tiffany Shlain, Filmemacherin und Gründerin der Webby Awards"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tiffany_Shlain",
+       "title": "Tiffany Shlain – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher frühere US-Vizepräsident sagte 2005 bei den Webby Awards in seiner Dankesrede „Please don't recount this vote“?",
+      "en": "Which former US vice president said \"Please don't recount this vote\" in his Webby Awards acceptance speech in 2005?",
+      "answerDe": "Al Gore",
+      "answerEn": "Al Gore",
+      "timeline": {
+       "kind": "event",
+       "start": "2005",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Al Gore receives a Webby Lifetime Achievement Award: \"Please don't recount this vote\"",
+       "labelDe": "Al Gore erhält einen Webby für sein Lebenswerk: „Please don't recount this vote“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Webby_Awards",
+       "title": "Webby Awards – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie heißt der Webby-Preis, über den in jeder Kategorie das Publikum online abstimmt?",
+      "en": "What is the name of the Webby award in each category that is chosen by the public in an online vote?",
+      "answerDe": "People's Voice",
+      "answerEn": "People's Voice",
+      "timeline": {
+       "kind": "event",
+       "start": "2009",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "More than 500,000 votes are cast in the Webbys' People's Voice poll",
+       "labelDe": "Mehr als 500.000 Stimmen werden bei der People's-Voice-Abstimmung der Webbys abgegeben"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Webby_Awards",
+       "title": "Webby Awards – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Organisation mit mehr als 3000 Fachleuten wählt die Gewinner der Webby Awards aus?",
+      "en": "Which organisation of more than 3,000 industry experts selects the winners of the Webby Awards?",
+      "answerDe": "International Academy of Digital Arts and Sciences",
+      "answerEn": "International Academy of Digital Arts and Sciences",
+      "timeline": {
+       "kind": "founding",
+       "start": "1998",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The International Academy of Digital Arts and Sciences, the Webbys' jury, is founded",
+       "labelDe": "Die International Academy of Digital Arts and Sciences, die Jury der Webbys, wird gegründet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Webby_Awards",
+       "title": "Webby Awards – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Webby Awards: The Internet's Oscars in Five Words",
+    "titleDe": "Die Webby Awards: Die Oscars des Internets in fünf Wörtern",
+    "bodyEn": "Every spring the Webby Awards honour the best of the internet — websites, apps, videos, podcasts and social media campaigns. The New York Times once called them \"the internet's highest honor\", and the ceremony has one famous rule: an acceptance speech may contain no more than 5 words.\n\n**Beginnings.** The modern Webbys were first held in San Francisco in 1997. The filmmaker Tiffany Shlain founded them and ran them with Maya Draisin into the 2000s. From 2005 to 2019 the ceremony took place in New York.\n\n**Two winners.** Each category has two winners. The Webby itself is chosen by the International Academy of Digital Arts and Sciences, a body of more than 3,000 experts from technology, media and design. A second prize, the People's Voice award, goes to the entry that wins a public online vote — often drawing millions of votes.\n\n**Five words.** The rule forces winners to be brief and clever, and some speeches became famous in themselves. In 2005 the former US vice president Al Gore, honoured for his support of the early internet, said: \"Please don't recount this vote\" — a joke about the disputed 2000 presidential election. Others have been just as pointed: the rule turns a long evening of thank-yous into a string of punchlines.\n\nBecause the internet changes so quickly, the categories change every year too — from early websites to mobile apps, podcasts and, more recently, artificial intelligence.",
+    "bodyDe": "Jedes Frühjahr ehren die Webby Awards das Beste des Internets – Websites, Apps, Videos, Podcasts und Social-Media-Kampagnen. Die New York Times nannte sie einmal die „höchste Auszeichnung des Internets“, und die Verleihung hat eine berühmte Regel: Eine Dankesrede darf aus höchstens 5 Wörtern bestehen.\n\n**Anfänge.** Die modernen Webbys wurden 1997 erstmals in San Francisco verliehen. Die Filmemacherin Tiffany Shlain gründete sie und leitete sie bis in die 2000er-Jahre gemeinsam mit Maya Draisin. Von 2005 bis 2019 fand die Verleihung in New York statt.\n\n**Zwei Gewinner.** Jede Kategorie hat zwei Gewinner. Den eigentlichen Webby wählt die International Academy of Digital Arts and Sciences, ein Gremium aus mehr als 3000 Fachleuten aus Technik, Medien und Design. Ein zweiter Preis, der People's Voice Award, geht an den Beitrag, der eine öffentliche Online-Abstimmung gewinnt – oft mit Millionen Stimmen.\n\n**Fünf Wörter.** Die Regel zwingt die Gewinner zu Kürze und Witz, und manche Reden wurden selbst berühmt. 2005 sagte der frühere US-Vizepräsident Al Gore, geehrt für seine Förderung des frühen Internets: „Please don't recount this vote“ („Bitte zählt diese Abstimmung nicht nach“) – eine Anspielung auf die umstrittene Präsidentschaftswahl von 2000. Andere waren ebenso pointiert: Die Regel verwandelt einen langen Abend voller Danksagungen in eine Reihe von Pointen.\n\nWeil sich das Internet so schnell verändert, ändern sich auch die Kategorien jedes Jahr – von frühen Websites über mobile Apps und Podcasts bis zuletzt zur künstlichen Intelligenz.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-365",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "de": "Auf welchem Musiksender lief die Videospiel-Sendung „Game One“, deren Moderatoren später Rocket Beans TV gründeten?",
+      "en": "On which music channel did the video game show \"Game One\" air, whose presenters later founded Rocket Beans TV?",
+      "answerDe": "MTV",
+      "answerEn": "MTV",
+      "timeline": {
+       "kind": "period",
+       "start": "2006-09-27",
+       "end": "2014-12-24",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Game One, the video game show of the later Rocket Beans founders, airs on MTV Germany",
+       "labelDe": "Game One, die Videospiel-Sendung der späteren Rocket-Beans-Gründer, läuft auf MTV Deutschland"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV",
+       "title": "Rocket Beans TV – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welcher Stadt hat Rocket Beans TV seinen Sitz?",
+      "en": "In which city is Rocket Beans TV based?",
+      "answerDe": "Hamburg",
+      "answerEn": "Hamburg",
+      "timeline": {
+       "kind": "founding",
+       "start": "2012-06-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Rocket Beans Entertainment is founded in Hamburg",
+       "labelDe": "Rocket Beans Entertainment wird in Hamburg gegründet"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV",
+       "title": "Rocket Beans TV – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Über welche Streaming-Plattform sendete Rocket Beans TV ab 2015 sein 24-Stunden-Programm?",
+      "en": "On which streaming platform did Rocket Beans TV broadcast its 24-hour programme from 2015?",
+      "answerDe": "Twitch",
+      "answerEn": "Twitch",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-01-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Rocket Beans TV starts broadcasting around the clock on Twitch",
+       "labelDe": "Rocket Beans TV beginnt sein Rund-um-die-Uhr-Programm auf Twitch"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV",
+       "title": "Rocket Beans TV – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem Jahr beendete Rocket Beans TV sein durchgehendes 24-Stunden-Programm?",
+      "en": "In which year did Rocket Beans TV end its round-the-clock 24-hour programme?",
+      "answerDe": "2021",
+      "answerEn": "2021",
+      "timeline": {
+       "kind": "event",
+       "start": "2021-11-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Rocket Beans TV ends its 24/7 schedule for live shows on set days and on-demand",
+       "labelDe": "Rocket Beans TV beendet das 24/7-Programm zugunsten von Live-Shows an festen Tagen und Abrufinhalten"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rocket_Beans_TV",
+       "title": "Rocket Beans TV – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Rocket Beans TV: When Games Television Moved to the Internet",
+    "titleDe": "Rocket Beans TV: Als Spielefernsehen ins Internet zog",
+    "bodyEn": "For years German television had a home for video games — and when it closed, the presenters simply built their own channel on the internet.\n\n**From GIGA to Game One.** Daniel Budiman, Etienne Gardé, Nils Bomhoff and Simon Krätschmer came from the games scene of German TV. Several had worked on GIGA Games, and together they made Game One, a humorous video game magazine that aired on MTV from 2006. When the broadcaster's parent company Viacom cancelled the show at the end of 2014, the team had already prepared the next step.\n\n**A channel of their own.** In June 2012 they founded Rocket Beans Entertainment, based in Hamburg, and started with videos on YouTube. On 15 January 2015 they went live as Rocket Beans TV — Germany's first 24-hour internet TV channel, streamed on Twitch. Fans watched live shows about games, pen-and-paper role-playing sessions, talk and quiz formats, with reruns filling the night. A chat ran beside every programme, and viewers financed much of the channel through subscriptions and donations.\n\n**Changing the format.** Round-the-clock broadcasting was expensive, and viewing habits shifted towards on-demand. On 1 November 2021 the channel ended its 24/7 schedule and moved to live shows on fixed days, with everything else available to watch later.\n\nRocket Beans TV showed that a small team with a loyal community could run a whole station without a broadcasting licence — and paved the way for many German streamers who followed.",
+    "bodyDe": "Jahrelang hatte das deutsche Fernsehen einen Platz für Videospiele – und als er wegfiel, bauten sich die Moderatoren einfach einen eigenen Sender im Internet.\n\n**Von GIGA zu Game One.** Daniel Budiman, Etienne Gardé, Nils Bomhoff und Simon Krätschmer kamen aus der Spieleszene des deutschen Fernsehens. Mehrere hatten bei GIGA Games gearbeitet, und gemeinsam machten sie Game One, ein humorvolles Videospielmagazin, das ab 2006 auf MTV lief. Als der Mutterkonzern Viacom die Sendung Ende 2014 einstellte, hatte das Team den nächsten Schritt schon vorbereitet.\n\n**Ein eigener Sender.** Im Juni 2012 gründeten sie in Hamburg Rocket Beans Entertainment und starteten mit Videos auf YouTube. Am 15. Januar 2015 gingen sie als Rocket Beans TV live – Deutschlands erster 24-Stunden-Internetsender, gestreamt über Twitch. Fans sahen Live-Shows über Spiele, Pen-and-Paper-Rollenspielrunden, Talk- und Quizformate, nachts liefen Wiederholungen. Neben jeder Sendung lief ein Chat, und die Zuschauer finanzierten einen Großteil des Senders über Abonnements und Spenden.\n\n**Neues Format.** Das Programm rund um die Uhr war teuer, und die Sehgewohnheiten verschoben sich zum Abruf. Am 1. November 2021 beendete der Sender sein 24/7-Programm und setzte auf Live-Shows an festen Tagen, alles andere zum späteren Ansehen.\n\nRocket Beans TV zeigte, dass ein kleines Team mit treuer Community einen ganzen Sender ohne Rundfunklizenz betreiben kann – und ebnete vielen deutschen Streamern den Weg.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-196",
+   "category": 2,
+   "domain": "sport-games",
+   "sub": "games",
+   "why": "Super Mario game mechanics (how Mario breaks blocks) are a video game question; sport-games/games already holds the Mario article a0732."
+  }
+ ]
+}

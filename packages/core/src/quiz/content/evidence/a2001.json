@@ -1,0 +1,288 @@
+{
+ "article": "a2001",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Electromagnetic_induction",
+   "title": "Electromagnetic induction – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:53.256Z",
+   "snapshot": "110001e3614d976c09e188e3d102721492077f044f100e85c10b92b1f9eb9721"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lenz%27s_law",
+   "title": "Lenz's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:27.228Z",
+   "snapshot": "415c339412a0ec0df19adb0e524bb5a2bee58a360650fe76029df264e32db199"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Photoelectric_effect",
+   "title": "Photoelectric effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:28.405Z",
+   "snapshot": "5abb9a2af80e355710d4c9844cc60893331739ea59bd577d4dc9bd9c30e27c6e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Doppler_effect",
+   "title": "Doppler effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:04.235Z",
+   "snapshot": "4ec7986aa2d0e4c8f9d2ae5c3af9a06ddef91d812116c3d9b53f5a3364206681"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Superconductivity",
+   "title": "Superconductivity – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:29.323Z",
+   "snapshot": "5cb8e6ea373eb80116dc762b26d581f2741a6fc5f321b337c187893310b89cc2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hall_effect",
+   "title": "Hall effect – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:30.451Z",
+   "snapshot": "d3d73a8841f03ddfe7c53ba13157dbb6c63b31b1c615be17dab9561e0bd97b48"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electromagnetic induction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Electromagnetic induction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c167"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Photoelectric effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Doppler effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Superconductivity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10005",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hall effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:03.569Z",
+   "target": "f10001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electromagnetic induction or magnetic induction is the production of an electromotive force (emf) across an electrical conductor in a changing magnetic field.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Electromagnetic induction” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:03.569Z",
+   "target": "f10001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Electromagnetic induction",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Electromagnetic induction”, “Elektromagnetische Induktion”, “электромагнитная индукция”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:03.569Z",
+   "target": "f10002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The photoelectric effect is the emission of electrons from a material caused by electromagnetic radiation such as ultraviolet light.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Photoelectric effect” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:03.569Z",
+   "target": "f10003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Doppler effect (also Doppler shift) is the change in the frequency or, equivalently, the period of a wave in relation to an observer who is moving relative to the source of the wave.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doppler effect” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:03.569Z",
+   "target": "f10004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Superconductivity is a set of physical properties observed in superconductors: materials where electrical resistance is exactly zero and magnetic fields are expelled from the material.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Superconductivity” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:03.569Z",
+   "target": "f10005",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Hall effect is the production of a potential difference, across an electrical conductor, that is transverse to an electric current in the conductor and to an applied magnetic field perpendicular to the current.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:03.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hall effect” is on the snapshot of s6"
+  }
+ ]
+}

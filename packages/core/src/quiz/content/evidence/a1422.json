@@ -1,0 +1,315 @@
+{
+ "article": "a1422",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Third_Punic_War",
+   "title": "Third Punic War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:19.372Z",
+   "snapshot": "fc49b5fbd6870f2c934189f34eead2fa3c7af8aacb15ae057746babccc7558f7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_the_Teutoburg_Forest",
+   "title": "Battle of the Teutoburg Forest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:20.540Z",
+   "snapshot": "3cdbd2e69051c49918ff2cd66f23315b7dbb1cf48ba5a97ed9ca10cc9933778f"
+  },
+  "s3": {
+   "url": "https://fr.wikipedia.org/wiki/Vespasienne",
+   "title": "Vespasienne – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:00:17.665Z",
+   "snapshot": "c40ca5232f7e357e43f0d9abfd97802a5144bfd8a377d14705b9b1500fc375bc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Arminius",
+   "title": "Arminius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:21.405Z",
+   "snapshot": "ac64970cedd94ca485f6fd1a2d9e39e626017be52484bfa416777db03bfda6d9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Twelve_Caesars",
+   "title": "The Twelve Caesars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:22.419Z",
+   "snapshot": "9808bd2e923b877808ff87a201ef93f212760392dfad4a45fc663bacbca18a62"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Carthago_delenda_est",
+   "title": "Carthago delenda est – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:52:40Z"
+  },
+  "s7": {
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Cato_Major*.html",
+   "title": "Plutarch, Life of Cato the Elder (Loeb translation)",
+   "publisher": "LacusCurtius (University of Chicago)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:52.738Z",
+   "snapshot": "785dd578b9864df80cd2c24206cc141c8057a2197ddf60e09e48388d46f2ba26"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ceterum censeo Carthaginem esse delendam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Quintili Vare, legiones redde!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pecunia non olet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21680",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arminius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Suetonius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:23.188Z",
+   "target": "f07106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ceterum censeo Carthaginem esse delendam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ceterum censeo Carthaginem esse delendam”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:23.188Z",
+   "target": "f07109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Quintili Vare, legiones redde! (Quintilius Varus, give me back my legions!)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quintili Vare, legiones redde!” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:23.188Z",
+   "target": "f07110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Moqué pour cet impôt, l'empereur Vespasien aurait répondu : « L'argent n'a pas d'odeur » (« pecunia non olet »), phrase devenue proverbiale.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pecunia non olet” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:23.188Z",
+   "target": "f21680",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arminius (; 18/17 BC–AD 21) was a German chieftain of the Germanic Cherusci tribe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arminius” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:23.188Z",
+   "target": "f21681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Twelve Caesars was written in 121 AD by Gaius Suetonius Tranquillus (called \"Suetonius\" by scholars) while he served as a personal secretary to the emperor Hadrian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:23.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Suetonius” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:40Z",
+   "target": "f07106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cato is said to have used the phrase as the conclusion to all of his speeches to push for the war, even when the speech was otherwise unrelated to Carthage or foreign affairs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:42Z",
+   "target": "f07106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "in adding to his vote on any question whatsoever these words: \"In my opinion, Carthage must be destroyed.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Ancient source (Plutarch, Cato Major 27) for the habit; the Latin wording \"Ceterum censeo…\" is a later reconstruction (noted in the body)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:08.365Z",
+   "target": "f07106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "in adding to his vote on any question whatsoever these words: \"In my opinion, Carthage must be destroyed.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:08.365Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

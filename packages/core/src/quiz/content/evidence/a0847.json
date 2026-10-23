@@ -1,0 +1,256 @@
+{
+ "article": "a0847",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Guardian_Council",
+   "title": "Guardian Council – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:04.369Z",
+   "snapshot": "947bd6f28316d8f3a11a771541b9795152d839aeeaecf5114ddf3121d68dc5c7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Politburo_Standing_Committee_of_the_Chinese_Communist_Party",
+   "title": "Politburo Standing Committee of the Chinese Communist Party – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:05.472Z",
+   "snapshot": "3b512954fccbff4c0360c09d214df2ab29ecea177535f0287ad314b05973153a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Constitution_of_Russia",
+   "title": "Constitution of Russia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:06.451Z",
+   "snapshot": "cf89172781973013c98cfe17bdfcff911ad2cb1898ab863350c5e239919bf7ef"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Federal_Council_(Switzerland)",
+   "title": "Federal Council (Switzerland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:08.503Z",
+   "snapshot": "2bd7fb74d6a4e436742cea65155bf9667f80b065557c81d5731af415d73d86de"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/United_States_Electoral_College",
+   "title": "United States Electoral College – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:18.869Z",
+   "snapshot": "e31b0e7bd1d52f93e8412d0f5a95424b136c08bfe4d9a033afc2cecbaa18334e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Supreme_Leader_of_Iran",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:08.486Z",
+   "snapshot": "5392abeafd39a75eadafab1491ad179038fd6742b7e35e31868a5e345e8bdaa4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Federation_Council_(Russia)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:09.475Z",
+   "snapshot": "549fad08e3967aa55107995bbb18b6f3fa57117beab20615a5f50df8bd6f756a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04231",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04232",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04233",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04234",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "United States",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:54.201Z",
+   "target": "f04231",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Guardian Council (also called Council of Guardians or Constitutional Council, Persian: شورای نگهبان, romanized: Shourā-ye Negahbān) is a 12-member council that wields considerable power and influence in the Islamic Republic of Iran.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:54.201Z",
+   "target": "f04232",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Politburo Standing Committee (PSC), officially the Standing Committee of the Political Bureau of the Central Committee of the Communist Party of China, is a committee consisting of the top leadership of the Chinese Communist Party (CCP) and the state, as some of its members concurrently hold the",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:54.201Z",
+   "target": "f04233",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The latest significant reform occurred in 2020, marked by extensive amendments that altered various sections, including those relating to presidential terms, social policies, and the primacy of Russian law over international law (see 2020 amendments to the Constitution of Russia).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:54.201Z",
+   "target": "f04234",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Its seven members also serve as the collective head of state and government of Switzerland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Switzerland” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:54.201Z",
+   "target": "f04235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the United States, the Electoral College is the group of presidential electors that is formed every four years for the sole purpose of voting for the president and vice president in the presidential election.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “United States” is on the snapshot of s5"
+  }
+ ]
+}

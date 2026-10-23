@@ -1,0 +1,688 @@
+{
+ "article": "a0395",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Blue_whale",
+   "title": "Blue whale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:07.597Z",
+   "snapshot": "19da902a2cb4121aa372a7dcaf44db6707e9a4ac49e75d8f9a6250cc1252386b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/African_bush_elephant",
+   "title": "African bush elephant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:08.592Z",
+   "snapshot": "82836f4523eca913ce8a862b00b8b779ce85daf061fff089cb587f882b40f21f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Giraffe",
+   "title": "Giraffe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:09.589Z",
+   "snapshot": "0fc8382836d4547256f39cd00c2017a1fe8337a51e00678d85d501bbc6f71a2a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Giant_panda",
+   "title": "Giant panda – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:10.669Z",
+   "snapshot": "e73f0ff1ceef7cba3a28fa03033278cd3d5e5b565ae0455dd552b716664bb83a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eastern_grey_kangaroo",
+   "title": "Eastern grey kangaroo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:53:11.461Z",
+   "snapshot": "62532538da4cf876f6731cbd97ef7ab0c6e2bbe1a95b19d09b043140a91703c0"
+  },
+  "s6": {
+   "url": "https://nationalzoo.si.edu/animals/asian-elephant",
+   "title": "Asian elephant",
+   "publisher": "Smithsonian's National Zoo",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:52.249Z",
+   "snapshot": "af2cb9f6c1f53d1be1be64e6cbb4ba3c9f6214485689fdbd9c92ed00c7941733"
+  },
+  "s7": {
+   "url": "https://www.nationalgeographic.com/animals/mammals/facts/african-elephant",
+   "title": "African elephant, facts and photos",
+   "publisher": "National Geographic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:52.972Z",
+   "snapshot": "fc6080a9d38276c8c3c094070b767a1f1b3c93d571f76207e601fdc21a63a49c"
+  },
+  "s8": {
+   "url": "https://animals.sandiegozoo.org/animals/giraffe",
+   "title": "Giraffe",
+   "publisher": "San Diego Zoo Wildlife Alliance",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:52.753Z",
+   "snapshot": "182faaeed7a519da2e0ed723945aaf2522f97074e35c361af298f3437c1fd731"
+  },
+  "s9": {
+   "url": "https://www.nationalgeographic.com/animals/mammals/facts/giraffe",
+   "title": "Giraffe, facts and photos",
+   "publisher": "National Geographic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:54.113Z",
+   "snapshot": "ba9a233ddedbcdbe90e05bd4a46e5a9c05e3a4925805ca1ddd3d35b6099d0cc1"
+  },
+  "s10": {
+   "url": "https://nationalzoo.si.edu/animals/giant-panda",
+   "title": "Giant panda",
+   "publisher": "Smithsonian's National Zoo",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:12:02Z"
+  },
+  "s11": {
+   "url": "https://www.nationalgeographic.com/animals/mammals/facts/giant-panda",
+   "title": "Giant panda, facts and photos",
+   "publisher": "National Geographic",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:54.961Z",
+   "snapshot": "c7c37fa27959ef7feeca107b3374a3fcccc72322d823b6d3293b40f3450e6d3e"
+  },
+  "s12": {
+   "url": "https://australian.museum/learn/animals/mammals/red-kangaroo/",
+   "title": "Red Kangaroo",
+   "publisher": "Australian Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:47.037Z",
+   "snapshot": "1615e2e792e3fa7b5a7167fa5b798eecb98b47752f9b56169e1bba89e1da923f"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Red_kangaroo",
+   "title": "Red kangaroo",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:12:12Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Blue whale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c033"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elephant calf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Giraffe calf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giant panda cub",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kangaroo joey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:41.967Z",
+   "target": "f01971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The blue whale (Balaenoptera musculus) is a species of baleen whale and the largest marine mammal in the rorqual family Balaenopteridae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:41.967Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blue whale” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:41.967Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elephant calf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Elephant calf”, “Elefantenkalb”, “слонёнок”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:41.967Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Giraffe calf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Giraffe calf”, “Giraffenkalb”, “жирафёнок”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:41.967Z",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giant panda cub",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Giant panda cub”, “Pandajunges”, “детёныш большой панды”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:41.967Z",
+   "target": "f01975",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kangaroo joey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Kangaroo joey”, “Känguru-Junges”, “детёныш кенгуру”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:11:41Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Captive-born calves weigh between 100 and 120 kg (220 and 260 lb) at birth and gain about 0.5 kg (1.1 lb) weight per day.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:11:44Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Usually one calf (occasionally two) is born and weighs between 150 and 350 pounds (68 to 158 kilograms).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23",
+   "note": "Elephant calves weigh roughly 70-160 kg at birth (Asian), 100-120 kg (African bush, captive); no other land mammal's newborn approaches this, though no source found states the superlative verbatim."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:11:47Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "At birth, elephants already weigh some 200 pounds and stand about three feet tall.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:11:50Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A newborn giraffe is 1.7–2 m (5 ft 7 in – 6 ft 7 in) tall.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:11:53Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The calf can stand up and walk after about an hour",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:11:56Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These infants can stand in half an hour and run with their mothers an incredible ten hours after birth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:11:59Z",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "weighing only 90 to 130 g (3.2 to 4.6 oz)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:12:02Z",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "A newborn cub weighs 3-5 ounces and is about the size of a stick of butter. Pink, hairless, and blind, the cub is 1/900th the size of its mother.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23",
+   "note": "Smithsonian gives 1/900 of the mother's size where Wikipedia gives about 1/800; the answer is unaffected."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:12:05Z",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The blind infants weigh only 5 ounces at birth and cannot crawl until they reach three months of age.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:12:09Z",
+   "target": "f01975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Females have one baby at a time, which at birth is the size of a jellybean. The infant immediately climbs into its mother's pouch and the gestation period is around 33 days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:12:12Z",
+   "target": "f01975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The neonate emerges after only 33 days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Captive-born calves weigh between 100 and 120 kg (220 and 260 lb) at birth and gain about 0.5 kg (1.1 lb) weight per day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Usually one calf (occasionally two) is born and weighs between 150 and 350 pounds (68 to 158 kilograms).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "At birth, elephants already weigh some 200 pounds and stand about three feet tall.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A newborn giraffe is 1.7–2 m (5 ft 7 in – 6 ft 7 in) tall.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The calf can stand up and walk after about an hour",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01973",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "These infants can stand in half an hour and run with their mothers an incredible ten hours after birth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "weighing only 90 to 130 g (3.2 to 4.6 oz)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s4"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01974",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The blind infants weigh only 5 ounces at birth and cannot crawl until they reach three months of age.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s11"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:03.804Z",
+   "target": "f01975",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Females have one baby at a time, which at birth is the size of a jellybean. The infant immediately climbs into its mother's pouch and the gestation period is around 33 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:03.804Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s12"
+  }
+ ]
+}

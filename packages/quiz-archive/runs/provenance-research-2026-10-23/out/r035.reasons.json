@@ -1,0 +1,96 @@
+{
+ "a1242": {
+  "kind": "corrected",
+  "reason": "Muhammad Ali was not arrested in Houston on 28 April 1967: the contemporary New York Times report says there was no immediate government action and that an arrest would only follow months later; he was indicted, stripped of his title the same day and convicted by a federal jury on 20 June 1967. The Ali sentence now says so in all three languages. Notes added: Ali's case, Gandhi's 1930 detention without trial under an 1827 Bombay regulation (Gandhian sources give the salt-law violation as the reason), and the King Institute's description of King's 1963 charge as violating Alabama's law against mass demonstrations.",
+  "sources": [
+   {
+    "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Muhammad_Ali"
+   },
+   {
+    "url": "https://www.mkgandhi.org/chrono/arrestofmahatma.php"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+   },
+   {
+    "url": "https://kinginstitute.stanford.edu/letter-birmingham-jail"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu",
+   "notesEn",
+   "notesDe",
+   "notesRu"
+  ]
+ },
+ "f06208": {
+  "kind": "marked",
+  "reason": "The answer's span moved with the rewritten Ali sentence (indicted rather than arrested) in all three bodies.",
+  "sources": [
+   {
+    "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "w06208": {
+  "kind": "reworded",
+  "reason": "The question asked why Ali was arrested in Houston on 28 April 1967, but he was not arrested that day (NYT, 29 April 1967: 'There was no immediate Government action'). It now asks for what act that day he was stripped of his title and later convicted; the answer, refusing induction into the US Army, is unchanged.",
+  "sources": [
+   {
+    "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Muhammad_Ali"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "f06209": {
+  "kind": "marked",
+  "reason": "Span offsets shifted because the Muhammad Ali sentence earlier in the body was rewritten; the mark still sits on the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f06210": {
+  "kind": "marked",
+  "reason": "Span offsets shifted because the Muhammad Ali sentence earlier in the body was rewritten; the mark still sits on the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "f25649": {
+  "kind": "marked",
+  "reason": "Span offsets shifted because the Muhammad Ali sentence earlier in the body was rewritten; the mark still sits on the same answer in the same sentence.",
+  "sources": [
+   {
+    "url": "https://archive.nytimes.com/www.nytimes.com/books/98/10/25/specials/ali-army.html"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ }
+}

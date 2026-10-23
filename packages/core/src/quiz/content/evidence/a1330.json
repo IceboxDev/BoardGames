@@ -1,0 +1,242 @@
+{
+ "article": "a1330",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/1970_Bhola_cyclone",
+   "title": "1970 Bhola cyclone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:09.199Z",
+   "snapshot": "c0fad947654a590a02a64a5b49085c005660cd79ba846295a504e05fe3ec5f81"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fall_of_Nineveh",
+   "title": "Fall of Nineveh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:10.179Z",
+   "snapshot": "f24aace90f60dd601516c007e5102257bef1f9b817ade3ac9c03d2b428ccdeae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Juan_D%C3%ADaz_de_Sol%C3%ADs",
+   "title": "Juan Díaz de Solís – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:11.246Z",
+   "snapshot": "c2e14d95c0f3c58be5ca0fe71456a07369e0aac5281356a4c4bd5722050ba752"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition",
+   "title": "Lewis and Clark Expedition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:12.280Z",
+   "snapshot": "69a0ec6af6f8295daeb3dcba4080d6112897e6ee4685498c9e0085a87eb4ffc8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Confluence",
+   "title": "Confluence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:13.319Z",
+   "snapshot": "3c6570a3d9c8afe5703b18894d9e09caca3a1eb63c9877e37782fc4e8dabefed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ganges",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tigris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paraná",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Missouri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Confluence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-013"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:08.211Z",
+   "target": "f06646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "At least 300,000 people died in the storm, possibly as many as 500,000, primarily as a result of the storm surge that flooded much of the low-lying islands of the Ganges Delta.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ganges” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:08.211Z",
+   "target": "f06647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "According to tradition laid out in Diodorus, the Tigris river flooded the city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tigris” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:08.211Z",
+   "target": "f06648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He reached and named the Río de la Plata in 1516, sailing upriver to the confluence of the Uruguay River and the Paraná River with two officers and seven men.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paraná” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:08.211Z",
+   "target": "f06650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles, Missouri, then went up the Missouri River.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Missouri” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:08.211Z",
+   "target": "f25280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In geography, a confluence (also conflux) occurs where two or more watercourses join to form a single channel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:08.211Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Confluence” is on the snapshot of s5"
+  }
+ ]
+}

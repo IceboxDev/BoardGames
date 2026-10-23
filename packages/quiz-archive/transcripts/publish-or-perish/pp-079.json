@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-079",
+ "image": "IMG20261022011403.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] Who was the first woman to fly solo across the Atlantic Ocean?\nA. Amelia Earhart\nB. Bessie Coleman\nC. Harriet Quimby\nAnswer: A. Amelia Earhart’s solo transatlantic flight in 1932 made her the first woman to fly nonstop across the Atlantic Ocean, which she did in just under 15 hours.",
+   "en": "Who became the first woman to fly solo nonstop across the Atlantic Ocean, in 1932?",
+   "de": "Wer flog 1932 als erste Frau allein und nonstop über den Atlantik?",
+   "reworked": true,
+   "answerEn": "Amelia Earhart",
+   "answerDe": "Amelia Earhart",
+   "timeline": {
+    "kind": "event",
+    "start": "1932-05-20",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Amelia Earhart takes off from Harbour Grace, Newfoundland, on the first solo nonstop transatlantic flight by a woman",
+    "labelDe": "Amelia Earhart startet in Harbour Grace (Neufundland) zum ersten Nonstop-Alleinflug einer Frau über den Atlantik"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Amelia_Earhart",
+    "title": "Amelia Earhart",
+    "lang": "en"
+   },
+   "notes": "The flight took 14 h 56 min (departed 20 May 1932, landed in Northern Ireland the next day).",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 2,
+   "discipline": "Medical Sciences",
+   "cardText": "[Medical Sciences] Which of the following is Vitamin C essential for?\nA. Production of hormones\nB. Blood clotting\nC. Collagen synthesis\nAnswer: C. Scurvy, a disease caused by a deficiency of Vitamin C, was a historical problem for sailors on long voyages, leading to the British Navy adopting the practice of giving sailors limes, hence the nickname “limeys.”",
+   "en": "The body needs vitamin C to make which structural protein — without it, the protein is too unstable, which causes scurvy?",
+   "de": "Zur Bildung welches Strukturproteins benötigt der Körper Vitamin C – ohne es ist dieses Protein zu instabil, was Skorbut verursacht?",
+   "reworked": true,
+   "answerEn": "Collagen",
+   "answerDe": "Kollagen",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1928",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Vitamin C is isolated for the first time",
+    "labelDe": "Vitamin C wird erstmals isoliert"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Vitamin_C",
+    "title": "Vitamin C",
+    "lang": "en"
+   },
+   "notes": "Vitamin C also takes part in making some hormones/neurotransmitters, so the card's option A is not strictly false; the open question asks the collagen fact. The Royal Navy first issued lemon juice and only later limes.",
+   "domain": "science",
+   "sub": "medicine"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1203",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Thinker",
+   "title": "The Thinker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:02.892Z",
+   "snapshot": "5bd51eda98668d0ee24ef1218089212f6e98f19f16020ee5581aad065460dbbf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Gates_of_Hell",
+   "title": "The Gates of Hell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:03.924Z",
+   "snapshot": "c12513497bf30d28a320174c9966280940c2ea730602450c6aa24423d29c1186"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Kiss_(Rodin_sculpture)",
+   "title": "The Kiss (Rodin sculpture) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:04.899Z",
+   "snapshot": "499a765a95491cbc1ea93308f4d77c1717ef5808d6a2bbb33395118c2272a221"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Burghers_of_Calais",
+   "title": "The Burghers of Calais – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:05.937Z",
+   "snapshot": "81e6d3cfcddab8c19f6a1bc33e2e7aa31c262d65325b560d1c85bfd27584a097"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Michelangelo",
+   "title": "Michelangelo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:04.387Z",
+   "snapshot": "2a78aa0e3c849c6111967f64db20434f660c2b9a9776169e4ac3e4777dc5d6a6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06011",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Thinker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Gates of Hell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06013",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Kiss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Burghers of Calais",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Buonarroti",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-062"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:47.532Z",
+   "target": "f06011",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Thinker (French: Le Penseur), by Auguste Rodin, is a bronze sculpture depicting a nude male figure of heroic size, seated on a large rock, leaning forward, his right elbow placed upon his left thigh, with the back of his right hand supporting his chin in a posture evocative of deep thought and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Thinker” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:47.532Z",
+   "target": "f06012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Gates of Hell (French: La Porte de l'Enfer) is a monumental bronze sculptural group work by the French artist Auguste Rodin that depicts a scene from the Inferno, the first section of Dante Alighieri's Divine Comedy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Gates of Hell” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:47.532Z",
+   "target": "f06013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Kiss (French: Le Baiser) is an 1882 marble sculpture by the French sculptor Auguste Rodin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Kiss” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:47.532Z",
+   "target": "f06014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Burghers of Calais (French: Les Bourgeois de Calais) is a sculpture by Auguste Rodin in 12 original castings and numerous copies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Burghers of Calais” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:47.532Z",
+   "target": "f10751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Michelangelo Buonarroti [mikeˈlanʤelo buonarˈrɔːti] (vollständiger Name Michelagniolo di Lodovico di Lionardo di Buonarroto Simoni; * 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:47.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buonarroti” is on the snapshot of s5"
+  }
+ ]
+}

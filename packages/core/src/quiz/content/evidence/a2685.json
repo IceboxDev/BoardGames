@@ -1,0 +1,405 @@
+{
+ "article": "a2685",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Purr",
+   "title": "Purr",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:22.649Z",
+   "snapshot": "c070a950914cf309575083ce43d2955fa5f53693245060d8f4c327dc7c460587"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lion",
+   "title": "Lion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:45.364Z",
+   "snapshot": "bb92bcd137740d39d45ff378b98ed2124a35a42f0f67abc867ed8cf6183b8baa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gir_National_Park",
+   "title": "Gir National Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:46.152Z",
+   "snapshot": "77b620feebaea0578c754aa7eb62f70f1e57210de985d046e968794936a2115c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Asiatic_lion",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:47.161Z",
+   "snapshot": "dfb07964b7ca4f4cb3a68242946527a74503b1df3278deac384f1a5013b6e6b8"
+  },
+  "s5": {
+   "url": "https://nationalzoo.si.edu/animals/news/do-lions-actually-purr-and-other-questions-answered",
+   "title": "Do Lions Actually Purr? And Other Questions, Answered",
+   "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:33.075Z",
+   "snapshot": "01e7b1d104a21f86573b926e7b4693e3c10342d022eb2f8513f8f23fff6d1cd7"
+  },
+  "s6": {
+   "url": "https://nationalzoo.si.edu/animals/lion",
+   "title": "Lion",
+   "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:33.908Z",
+   "snapshot": "3a9fe72b6ca227070f7fc36a4040ee440bffd21152b4ea10630155e2a2b99dcd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Purring",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "8 km",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gujarat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gujarat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "mane",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:57.662Z",
+   "target": "f14611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Although true purring is exclusive to felids and viverrids, other animals such as raccoons produce vocalizations that sound similar to true purring.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Purring” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:57.662Z",
+   "target": "f14613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lions most often roar at night, a sound that can be heard from a distance of 8 km (5.0 mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “8 km” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:57.662Z",
+   "target": "f14614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gir National Park and Wildlife Sanctuary, also known as Sasan Gir, is a national park and wildlife sanctuary in Gujarat, India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gujarat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:57.662Z",
+   "target": "f14614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The surviving population of these lions is restricted to the Indian state of Gujarat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gujarat” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:57.662Z",
+   "target": "f14615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is sexually dimorphic; adult male lions are larger than females and have a prominent mane that extends from the head to the shoulders and chest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mane” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:14:12Z",
+   "target": "f14611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "No, big cats, like lions and tigers, cannot purr to show contentment. This is due to an anatomical difference in the hyoid apparatus that lies in the base of the animal’s throat.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:14:16Z",
+   "target": "f14611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "have an incompletely ossified hyoid, which, according to this hypothesis, enables them to roar but not to purr",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Lions make short purr-like exhalations (Lion article: 'exhalations similar to purring'); continuous purring is what they lack — the notes say so."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:21Z",
+   "target": "f14613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lions most often roar at night, a sound that can be heard from a distance of 8 km",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:25Z",
+   "target": "f14613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "both males and females mark their territories by roaring — which can be heard up to five miles away",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Five miles ≈ 8 km. San Diego Zoo gives a lower 'up to 3 miles (4.8 kilometers)'; 8 km is the usual maximum."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:43.001Z",
+   "target": "f14611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "No, big cats, like lions and tigers, cannot purr to show contentment. This is due to an anatomical difference in the hyoid apparatus that lies in the base of the animal’s throat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:43.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:43.001Z",
+   "target": "f14611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "have an incompletely ossified hyoid, which, according to this hypothesis, enables them to roar but not to purr",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:43.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:43.001Z",
+   "target": "f14613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lions most often roar at night, a sound that can be heard from a distance of 8 km",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:43.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:43.001Z",
+   "target": "f14613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "both males and females mark their territories by roaring — which can be heard up to five miles away",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:43.001Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  }
+ ]
+}

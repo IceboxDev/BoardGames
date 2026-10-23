@@ -1,0 +1,374 @@
+{
+ "article": "a2756",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+   "title": "Ludwig van Beethoven",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:31.308Z",
+   "snapshot": "f7cafcb56277ed294198d7ce8f5af34ff826b16b340f558698da8f0767442936"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sonata",
+   "title": "Sonata",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:24.170Z",
+   "snapshot": "ebe0709730600c74423e624d29bc138aad7d32783e58a0949eaca205cbc070ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Haydn",
+   "title": "Joseph Haydn",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:46.190Z",
+   "snapshot": "77799d4054ba8ee5527f184ed32fd0d9f089ce1a3a231d0ebb27dfa454a99387"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Piano_Sonata_No._14_(Beethoven)",
+   "title": "Piano Sonata No. 14 (Beethoven)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:25.041Z",
+   "snapshot": "0233e116dcfb965d60bf663e0d5658c7d91dfebb500509c8655be14a13429701"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Classical_period_(music)",
+   "title": "Classical period (music)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:26.219Z",
+   "snapshot": "aaa9c791ba21617efcfc2249771d81efb438673f65d5923c68904508439e077a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/First_Viennese_School",
+   "title": "First Viennese School",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:27.027Z",
+   "snapshot": "6c02f952ee5ffa8820f4ee6450b252464de200a7948e82415130d5ba386875e3"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/cache/epub/65865/pg65865-images.html",
+   "title": "The Art of Music, Vol. 2: Classicism and Romanticism (ed. Daniel Gregory Mason, 1915)",
+   "publisher": "Project Gutenberg (National Society of Music, 1915)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:13.585Z",
+   "snapshot": "e9f6c6a08ac422d0c835600c2758d8ab2dc6f9fd98b530f4e847f3586b2b9063"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Classical period",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sonata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-062"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joseph Haydn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moonlight Sonata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eroica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:08.479Z",
+   "target": "f25706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Classical period",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Classical period”, “Klassik”, “классицизм”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:08.479Z",
+   "target": "f25707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sonata is a vague term, with varying meanings depending on the context and time period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sonata” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:08.479Z",
+   "target": "f25708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Joseph Haydn ( HY-dən; German: [ˈfʁants ˈjoːzɛf ˈhaɪdn̩] ; 31 March 1732 – 31 May 1809) was an Austrian composer of the Classical period.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Haydn” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:08.479Z",
+   "target": "f25709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Although known throughout the world as the Moonlight Sonata (German: Mondscheinsonate), it was not Beethoven who named it so.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moonlight Sonata” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:08.479Z",
+   "target": "f25710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The force of these shifts became apparent with Beethoven's 3rd Symphony, given the name Eroica, which is Italian for \"heroic\", by the composer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eroica” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:08.479Z",
+   "target": "f25711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The First Viennese School is a name mostly used to refer to three composers of the Classical period in Western art music in late-18th-century to early-19th-century Vienna: Joseph Haydn, Wolfgang Amadeus Mozart and the first period of Ludwig van Beethoven.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:08.479Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:04:56Z",
+   "target": "f25706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "his personal style was a key driver of the transition from Classical to Romantic music.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:05:09Z",
+   "target": "f25706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the gulf between eighteenth century classicism and nineteenth century romanticism.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23",
+   "note": "context: Beethoven 'stands, like a colossus, bridging the gulf between eighteenth century classicism and nineteenth century romanticism'"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:56.583Z",
+   "target": "f25706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "his personal style was a key driver of the transition from Classical to Romantic music.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:56.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:56.583Z",
+   "target": "f25706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the gulf between eighteenth century classicism and nineteenth century romanticism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:56.583Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

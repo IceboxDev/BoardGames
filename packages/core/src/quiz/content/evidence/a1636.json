@@ -1,0 +1,289 @@
+{
+ "article": "a1636",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/89th_Academy_Awards",
+   "title": "89th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:58.349Z",
+   "snapshot": "b7778d01b6d16e1a50bb55614f4113101226d145cbbae9ec216fca0c40c474b5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/83rd_Academy_Awards",
+   "title": "83rd Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:59.379Z",
+   "snapshot": "bff50297ec246f79bb61cb10f91eec7e16ae47434df12d92c7ecac8ea3b5062a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/93rd_Academy_Awards",
+   "title": "93rd Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:29:05.100Z",
+   "snapshot": "95ff7992e547d0b63af475567b61d6e80604d73b972b676fe79da09a196d1a90"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/96th_Academy_Awards",
+   "title": "96th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:00.348Z",
+   "snapshot": "0f1f2730b583ac1f29e0672ebd4715858688c002b15a9d8ac7384ff6b58ae3aa"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Julie_Andrews",
+   "title": "Julie Andrews – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:57.641Z",
+   "snapshot": "c407025dabd0b196ec1dd10428ac3354340946797a38afce728c056b7ed451b1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Helen_Mirren",
+   "title": "Helen Mirren",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:58.598Z",
+   "snapshot": "818fbf720dc5b5ea99de7b07738df3ea8baffe63ee65aba99f8550e5838a4c05"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La La Land",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Black Swan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nomadland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Poor Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Julie Andrews",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-064"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Helen Mirren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-315"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:55.720Z",
+   "target": "f08176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the main ceremony, Moonlight won three awards including Best Picture—after La La Land was mistakenly announced as the winner—as well as Best Supporting Actor for Mahershala Ali.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La La Land” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:55.720Z",
+   "target": "f08177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Other winners included Inception with four awards, The Social Network with three, Alice in Wonderland, The Fighter, and Toy Story 3 with two, and Black Swan, God of Love, In a Better World, Inside Job, The Lost Thing, Strangers No More, and The Wolfman with one.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Swan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:55.720Z",
+   "target": "f08179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nomadland won three awards at the main ceremony, including Best Picture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nomadland” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:55.720Z",
+   "target": "f08180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Other winners included Poor Things with four awards, The Zone of Interest with two, and 20 Days in Mariupol, American Fiction, Anatomy of a Fall, Barbie, The Boy and the Heron, Godzilla Minus One, The Holdovers, The Last Repair Shop, War Is Over!, and The Wonderful Story of Henry Sugar with one.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poor Things” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:55.720Z",
+   "target": "f11395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dame Julie Elizabeth Andrews, DBE, bürgerlich Julie Andrews Edwards (* 1.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Julie Andrews” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:55.720Z",
+   "target": "f11396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Seit 1998 ist Helen Mirren Botschafterin der Entwicklungshilfeorganisation Oxfam und setzt sich vor allem für deren Kampagne Control Arms ein.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:55.720Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helen Mirren” is on the snapshot of s6"
+  }
+ ]
+}

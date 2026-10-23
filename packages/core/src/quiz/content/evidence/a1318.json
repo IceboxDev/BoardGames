@@ -1,0 +1,381 @@
+{
+ "article": "a1318",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Luke_Howard_(meteorologist)",
+   "title": "Luke Howard (meteorologist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:29.675Z",
+   "snapshot": "d10b9cde392f0cc6238d6813c6646072f59608df7389eb0c11aa0870abb44800"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/William_Rankin",
+   "title": "William Rankin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:33.138Z",
+   "snapshot": "c1539600e31c89cdce2dd9e954f0ba07f072652bd9cc9db45927ddcb6857f980"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cirrus_cloud",
+   "title": "Cirrus cloud – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:34.245Z",
+   "snapshot": "8b23a3bf0e194ec06ee750542d98df0aab56e5865615f751c3bf62ad0c6cc5f6"
+  },
+  "s4": {
+   "url": "https://cloudatlas.wmo.int/en/appendix-3-history-of-cloud-nomenclature.html",
+   "title": "International Cloud Atlas – Appendix 3: History of cloud nomenclature (WMO)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:31.421Z",
+   "snapshot": "391e2150d09d56b4a608a67fee78bffb4030bbbf8100fc39cc754dcdccdb9b58"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/International_Cloud_Atlas",
+   "title": "International Cloud Atlas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:35.151Z",
+   "snapshot": "2769830c84802a0bf8f17f1150bcf0a968b55e43771825aec74a609ee061dad5"
+  },
+  "s6": {
+   "url": "https://glossary.ametsoc.org/wiki/Cumulus_humilis",
+   "title": "cumulus humilis – Glossary of Meteorology",
+   "publisher": "American Meteorological Society",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:17:32Z"
+  },
+  "s7": {
+   "url": "https://cloudatlas.wmo.int/en/cumulus-cu.html",
+   "title": "Cumulus – International Cloud Atlas",
+   "publisher": "World Meteorological Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:23.859Z",
+   "snapshot": "ce23686672c4d8160b4310113add8a6589cf8f5cc99b932aede4d86fed5f8a61"
+  },
+  "s8": {
+   "url": "https://www.whatsthiscloud.com/cloud-species/humilis",
+   "title": "Cumulus Humilis Cloud Description",
+   "publisher": "What's This Cloud",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:24.819Z",
+   "snapshot": "28fa84546447ff1f4053eee7c016ba795dd831e941bc804727641202664d30b1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stratus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cumulonimbus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cirrus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06589",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nimbostratus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cumulus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:05.633Z",
+   "target": "f06586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Howard named the three principal categories of clouds – cumulus, stratus, and cirrus, as well as a series of intermediate and compound modifications, such as cirrostratus and cirrocumulus, in order to accommodate the transitions occurring between the forms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stratus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:05.633Z",
+   "target": "f06587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lieutenant Colonel William Henry Rankin (October 16, 1920 – July 6, 2009) was the first person to survive a fall from the top of a cumulonimbus thunderstorm cloud.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cumulonimbus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:05.633Z",
+   "target": "f06588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cirrus (cloud classification symbol: Ci) is a genus of high-altitude cloud made of ice crystals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cirrus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:05.633Z",
+   "target": "f06589",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nimbostratus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nimbostratus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:05.633Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cumulus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cumulus”, “кучевые облака”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:32Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Also called fair-weather cumulus",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:33Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "developing vertically in the form of rising mounds, domes or towers, of which the bulging upper part often resembles a cauliflower",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:34Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Flat as a pancake, this would be your typical fair-weather cloud.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:49.281Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Flat as a pancake, this would be your typical fair-weather cloud.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:49.281Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Cumulus (Cu) | International Cloud Atlas",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cumulus” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:49.281Z",
+   "target": "f06590",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Cumulus Humilis Cloud Description | What's This Cloud",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cumulus” is on the snapshot of s8"
+  }
+ ]
+}

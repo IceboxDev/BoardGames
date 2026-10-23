@@ -1,0 +1,521 @@
+{
+ "article": "a2289",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor",
+   "title": "Brandenburger Tor",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:07.615Z",
+   "snapshot": "9b601a50cbe31d5abf3423276c3044336b6fa1093fb58c1150bd684573de9ad7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:25.084Z",
+   "snapshot": "331e14cc4219c4b4b95af17241329c6313c9bcf6435fe090e990667503236f3a"
+  },
+  "s3": {
+   "url": "https://www.bundestag.de/besuche/kuppel-dachterrasseunddachgartenrestaurant/kuppel/244990",
+   "title": "Dachterrasse und Kuppel des Reichstagsgebäudes - Deutscher Bundestag",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:36.764Z",
+   "snapshot": "209de946892992690e891395023183f682af924724f4ea1e65ba3a8fe5281cc0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Berlin_Victory_Column",
+   "title": "Berlin Victory Column – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:37.042Z",
+   "snapshot": "8694e45e9dfdae711f00b0e8b40278e6dadf5e4b3d0b49de8dde860600d0af00"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Reichstag_building",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:51.465Z",
+   "snapshot": "49a98a3b0e511c6b48d5520122189b178309555e339faa2549469381ba50b4a6"
+  },
+  "s6": {
+   "url": "https://www.visitberlin.de/en/brandenburg-gate",
+   "title": "Brandenburg Gate in Berlin",
+   "publisher": "visitBerlin (Berlin Tourismus & Kongress GmbH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:54.570Z",
+   "snapshot": "3c34c73ba902bd75b1222b5851e2aae1fe0b8f67da6cf54c935db8201fe5920a"
+  },
+  "s7": {
+   "url": "https://www.bundestag.de/en/visittheBundestag/dome/registration-245686",
+   "title": "Registering to visit the dome of the Reichstag Building – German Bundestag",
+   "publisher": "Deutscher Bundestag",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:54.709Z",
+   "snapshot": "2b47d0b346fd670983315be6160f6c39b8392c93c7bc90ad233029a43b26cb4c"
+  },
+  "s8": {
+   "url": "https://www.visitberlin.de/de/reichstag",
+   "title": "Reichstag in Berlin",
+   "publisher": "visitBerlin (Berlin Tourismus & Kongress GmbH)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:55.602Z",
+   "snapshot": "8e5c2727e11c80548ea7915bb18678e0728d1beb5887756e4eec3fb8aec28eeb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "fünf Durchgänge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-240"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "five passageways",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Victoria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Victoria",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11819",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Goldelse",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nichts",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "nothing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-197/1, u02: The Reichstag dome and roof terrace are free with advance registration; no inflation-linked fee."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:49.083Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es wurde beschlossen, die fünf Durchgänge je Seite mit zwei Reliefs, also in Summe mit 20 Reliefs, auszuschmücken.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fünf Durchgänge” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:49.083Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The gate is supported by twelve fluted  Doric columns, six to each side, forming five passageways.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “five passageways” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:49.083Z",
+   "target": "f11817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mit dem Einzug der (römischen) Siegesgöttin Victoria im Streitwagen sollte der Einzug des Friedens nach Berlin dargestellt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Victoria” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:49.083Z",
+   "target": "f11817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "This was initially intended to represent Eirene, the Greek goddess of peace, but after the Napoleonic Wars was rebranded as Victoria, the Roman goddess of victory, and given an Iron Cross standard with a crowned Imperial eagle perched on top, rather than a wreath.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Victoria” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:49.083Z",
+   "target": "f11819",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Berliners have given the statue the nickname Goldelse, meaning something like \"Golden Lizzy\", named after an 1866 novel by E.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.083Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Goldelse” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:40Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The gate is supported by twelve fluted Doric columns, six to each side, forming five passageways.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:43Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "supported by two rows of six Doric columns",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Six columns per row leave five openings."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:47Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die fünf Durchgänge je Seite mit zwei Reliefs, also in Summe mit 20 Reliefs, auszuschmücken",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:48:50Z",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kuppel und Dachterrasse können kostenlos besichtigt werden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:48:52Z",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Admission is free; advance registration required.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:48:55Z",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "die Reichstagskuppel und die Dachterrasse kostenlos besuchen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:34.265Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The gate is supported by twelve fluted Doric columns, six to each side, forming five passageways.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:34.265Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "supported by two rows of six Doric columns",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:34.265Z",
+   "target": "f11815",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die fünf Durchgänge je Seite mit zwei Reliefs, also in Summe mit 20 Reliefs, auszuschmücken",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:34.265Z",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kuppel und Dachterrasse können kostenlos besichtigt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:34.265Z",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Admission is free; advance registration required.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:34.265Z",
+   "target": "f11816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "die Reichstagskuppel und die Dachterrasse kostenlos besuchen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  }
+ ]
+}

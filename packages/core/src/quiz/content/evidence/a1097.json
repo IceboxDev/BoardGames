@@ -1,0 +1,249 @@
+{
+ "article": "a1097",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/East_Germany_v_West_Germany_(1974_FIFA_World_Cup)",
+   "title": "East Germany v West Germany (1974 FIFA World Cup) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:34.149Z",
+   "snapshot": "ddd4585e8ef6caa6227f323624d537fd8fb1046951792228e5861a3f23c6fe6f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1978_FIFA_World_Cup_final",
+   "title": "1978 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:35.110Z",
+   "snapshot": "5262021a653fd67acdb875739d039b12f8d2bf29965baf402e92e5b9dd08983e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup_final",
+   "title": "1966 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:36.134Z",
+   "snapshot": "2117dc5b7d76e24c00fb34fc7cf3292154581489636bfa7a2336b3373c63f47b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Match_of_the_Century_(1953_England_v_Hungary_football_match)",
+   "title": "Match of the Century (1953 England v Hungary football match) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:37.160Z",
+   "snapshot": "57dc47f53d3577d53badc0d30cdcab826ddc0b2eda179fea91c53b9ccd9a6cc1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1990_FIFA_World_Cup_final",
+   "title": "1990 FIFA World Cup final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:38.081Z",
+   "snapshot": "fe5c428632fb4d3971404e11e0dca6a21b287affb677ba6b5646f23e85db3546"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/1974_FIFA_World_Cup_final",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:18.024Z",
+   "snapshot": "0af091aa80033dc2511bb52c970a93f11b76e10535055835512f28f34a45391a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "East Germany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Netherlands",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "England",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05484",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hungary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Argentina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:32.469Z",
+   "target": "f05481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "East Germany v West Germany (1974 FIFA World Cup)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “East Germany” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:32.469Z",
+   "target": "f05482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The final match of the 1978 FIFA World Cup, the eleventh edition of FIFA's football compilation for men's national teams, was played at the Estadio Monumental in Buenos Aires, Argentina, on 25 June 1978, and was contested by Argentina and the Netherlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Netherlands” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:32.469Z",
+   "target": "f05483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The match was contested by England and West Germany, with England winning 4–2 after extra time to claim the Jules Rimet Trophy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “England” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:32.469Z",
+   "target": "f05484",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Match of the Century (1953 England v Hungary football match)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hungary” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:32.469Z",
+   "target": "f05485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 1990 FIFA World Cup final was a football match played between West Germany and Argentina to determine the winner of the 1990 FIFA World Cup.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.469Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Argentina” is on the snapshot of s5"
+  }
+ ]
+}

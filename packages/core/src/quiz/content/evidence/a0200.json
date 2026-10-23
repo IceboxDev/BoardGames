@@ -1,0 +1,444 @@
+{
+ "article": "a0200",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Deacon",
+   "title": "Deacon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:26.458Z",
+   "snapshot": "54915c259470cb8532983ce130f677d24504f805231c2a6796ce40e7fd25929a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Pickwick_Papers",
+   "title": "The Pickwick Papers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:27.318Z",
+   "snapshot": "a1765bf2075d72f8293ac9343373822a46a35651873e7040319cc1c60bf8b161"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Altar_server",
+   "title": "Altar server – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:28.308Z",
+   "snapshot": "40a5ecc8e41d4ffa7c6d065dbdc7da67287c96359e3b40fdf6ad155c6feed045"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ecclesiae_Sanctae",
+   "title": "Ecclesiae Sanctae – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:29.199Z",
+   "snapshot": "b20a9a50eca1eb322c9b7ca324c8afe92383a1a111d7cf72e000237dfba9a1c4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cardinal_(Catholic_Church)",
+   "title": "Cardinal (Catholic Church) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:30.433Z",
+   "snapshot": "54c943fe0c2bb3fb2dd14ebf0029369510d2c860907d5344a621fcc5225066ba"
+  },
+  "s6": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/sexton",
+   "title": "SEXTON | English meaning",
+   "publisher": "Cambridge Dictionary (Cambridge University Press)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:33.094Z",
+   "snapshot": "0e40ee6c99ca5d1f72f6cc03b96e53f0e614c914602f0a02d58646706672c7bb"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/sexton",
+   "title": "Sexton Definition & Meaning",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:33.239Z",
+   "snapshot": "6cffe0b330a9a597cc9126ca6d27ccf8b19d49cf7b5a61da5c761986119e5a03"
+  },
+  "s8": {
+   "url": "https://www.duden.de/rechtschreibung/Kuester",
+   "title": "Küster",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:33.885Z",
+   "snapshot": "bb1ab68e3329d807687700358c913a71cc19b9d2f8b29f2c3270cea6bd19a66f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "deacon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sexton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "altar server",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bishop",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cardinal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:09.535Z",
+   "target": "f00996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A deacon (from Greek \"assistant\", \"servant\") is a member of the diaconate, an office in Christian churches that is generally associated with service of some kind, but which varies among theological and denominational traditions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deacon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:09.535Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sexton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“sexton”, “Küster”, “ризничий”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:09.535Z",
+   "target": "f00998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "An altar server is a lay assistant to a member of the clergy during a Christian liturgy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “altar server” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:09.535Z",
+   "target": "f00999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Both are advisory to the bishop and have only a consultative vote.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bishop” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:09.535Z",
+   "target": "f01000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A cardinal is a senior member of the clergy of the Catholic Church.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.535Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cardinal” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:11Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a person whose job is to take care of a church building and its graveyard, and sometimes to ring the church bells",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:10:15Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "an official of a church charged with taking care of the edifice and its contents, ringing the bell, etc., and sometimes with burying the dead.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Sacristan and verger are accepted near-synonyms (see notes)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:20Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kirchendiener, Kirchendienerin, Sakristan, Sakristanin",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r005",
+   "run": "provenance-research-2026-10-23",
+   "note": "Duden defines Küster as Kirchendiener; confirms the German answer."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:28.501Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "a person whose job is to take care of a church building and its graveyard, and sometimes to ring the church bells",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:28.501Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "an official of a church charged with taking care of the edifice and its contents, ringing the bell, etc., and sometimes with burying the dead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:28.501Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Kirchendiener, Kirchendienerin, Sakristan, Sakristanin",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:28.501Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "SEXTON | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sexton” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:28.501Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "SEXTON Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “sexton” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:28.501Z",
+   "target": "f00997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Küster ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:28.501Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Küster” is on the snapshot of s8"
+  }
+ ]
+}

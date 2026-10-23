@@ -1,0 +1,381 @@
+{
+ "article": "a1317",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Insulin",
+   "title": "Insulin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:29.332Z",
+   "snapshot": "f0cc611947b0ace1d7f28941a4b59d1c5f4596d5044bb3e8b6d967491225a1be"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Glucagon",
+   "title": "Glucagon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:30.162Z",
+   "snapshot": "dc5d227943e835f798ee6f6be3b5da7e751bb8ad7cad41f0ffe5f986e900f642"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Adrenaline",
+   "title": "Adrenaline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:31.312Z",
+   "snapshot": "819d9c8a7c516dcc3ff2fdd2ee477e5a56f3f51d07f9201e5464117e8c14b612"
+  },
+  "s4": {
+   "url": "https://history.mayoclinic.org/wp-content/uploads/2022/11/1914.pdf",
+   "title": "1914: A Christmas discovery to treat thyroid disease – Mayo Clinic",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Melatonin",
+   "title": "Melatonin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:32.258Z",
+   "snapshot": "f63c1105c596afc85a126c645b392bfd36eebb5b801ef33ec0fe1ccd1f365aa2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Thyroid_hormones",
+   "title": "Thyroid hormones – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:15:53Z"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11503427/",
+   "title": "Changes in Central Sensitivity to Thyroid Hormones vs. Urine Iodine during Pregnancy (2024)",
+   "publisher": "PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:23.688Z",
+   "snapshot": "b2729f9c4ed0534094e14b752898667998f1be5f45362897b9a02d926a4d7a9d"
+  },
+  "s8": {
+   "url": "https://medlineplus.gov/lab-tests/thyroxine-t4-test/",
+   "title": "Thyroxine (T4) Test",
+   "publisher": "MedlinePlus (U.S. National Library of Medicine)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:13.681Z",
+   "snapshot": "8fef261ca5650f412355ee878d5615d5cd1d4520168efec49d60da8be104d153"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Insulin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c110"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Glucagon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Adrenaline",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thyroxine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Melatonin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:05.522Z",
+   "target": "f06581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Insulin ( ; from Latin  insula 'island') is a peptide hormone produced by beta cells of the pancreatic islets encoded in humans by the insulin (INS) gene.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Insulin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:05.522Z",
+   "target": "f06582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Glucagon is a peptide hormone, produced by alpha cells of the pancreas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glucagon” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:05.522Z",
+   "target": "f06583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Adrenaline, also known as epinephrine and alternatively spelled adrenalin, is a hormone and medication which is involved in regulating visceral functions (e.g., respiration).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adrenaline” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:05.522Z",
+   "target": "f06585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Melatonin, an indoleamine, is a natural compound produced by various organisms, including bacteria and eukaryotes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:05.522Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Melatonin” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:15:53Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "thyroxine (T4) contains four iodine atoms, while triiodothyronine (T3), otherwise identical to T4, has one less iodine atom per molecule.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:16:25Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Each molecule of T4 contains four iodine atoms, while T3, the more metabolically active form, contains three.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:16:27Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Thyroxine is also called T4. T4 is a hormone that your thyroid gland makes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:49.137Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Each molecule of T4 contains four iodine atoms, while T3, the more metabolically active form, contains three.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:49.137Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Thyroxine is also called T4. T4 is a hormone that your thyroid gland makes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:49.137Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Introduction/Aim: Central sensitivity to thyroid hormones refers to the responsiveness of the hypothalamic–pituitary–thyroid (HPT) axis to changes in circulating free thyroxine (fT4).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Thyroxine” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:49.137Z",
+   "target": "f06584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Thyroxine (T4) Test: MedlinePlus Medical Test",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:49.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Thyroxine” is on the snapshot of s8"
+  }
+ ]
+}

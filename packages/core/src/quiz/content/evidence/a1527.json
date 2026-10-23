@@ -1,0 +1,382 @@
+{
+ "article": "a1527",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Reichsparteitagsgel%C3%A4nde",
+   "title": "Reichsparteitagsgelände – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:31.989Z",
+   "snapshot": "b6d7c77a2b30c9f49ad1d594a5d2536a82eeb4ba8322c9cf3d1d9bcbb2716d37"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Reich_Chancellery",
+   "title": "Reich Chancellery – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:33.851Z",
+   "snapshot": "231fd56d2a40aa44e91dc1a68692b01bbf2a10e8031575f8b35953145c844da0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Zeppelinfeld",
+   "title": "Zeppelinfeld – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:32.484Z",
+   "snapshot": "323942f1d708fa4d11692df9d170505b276e96a79a954b924592afe548ce8c4f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Dokumentationszentrum_Reichsparteitagsgel%C3%A4nde",
+   "title": "Dokumentationszentrum Reichsparteitagsgelände – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:32.989Z",
+   "snapshot": "b33bb90ccee360be561a10056150b31262d875072eb535e2735524244836cb7a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Schwerbelastungsk%C3%B6rper",
+   "title": "Schwerbelastungskörper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:14.414Z",
+   "snapshot": "7a6563c3ad05c901eb71ca7444afe1cc6bfd1c157e17dc303fb4f6ec765c4604"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Kongresshalle_(N%C3%BCrnberg)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:06:34.754Z",
+   "snapshot": "2f0ff9d413f75e94f6a5e29a6639a26c23afaf83c33432edf3c04ea4cccf1bb6"
+  },
+  "s7": {
+   "url": "https://www.dhm.de/lemo/kapitel/ns-regime/kunst-und-kultur/architektur.html",
+   "title": "LeMO – NS-Regime – NS-Architektur",
+   "publisher": "Deutsches Historisches Museum (LeMO)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:23.860Z",
+   "snapshot": "9fd1b2a99f5ebad11df0ee7ec92786fff18a0f7f72b6c1dfeb844e6a3797f65e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Volkshalle",
+   "title": "Volkshalle – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:25.439Z",
+   "snapshot": "066399b8a4a744adb1d031b410f34274cddac54043431cdc7d57ac8cf7ba1e55"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07631",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Reichsparteitagsgelände",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c128"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "New Reich Chancellery",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07633",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zeppelintribüne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07634",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kongresshalle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Great Hall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:39.362Z",
+   "target": "f07631",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Reichsparteitagsgelände wurde das Areal im Südosten Nürnbergs genannt, auf dem von 1933 bis 1938 die Reichsparteitage der NSDAP stattfanden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.362Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reichsparteitagsgelände” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:39.362Z",
+   "target": "f07632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Both the palace and a new Reich Chancellery building (completed in early 1939) were seriously damaged during World War II and subsequently demolished.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.362Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Reich Chancellery” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:39.362Z",
+   "target": "f07633",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Zeppelintribüne ist eine von 1935 bis 1937 errichtete Tribüne auf dem Reichsparteitagsgelände in Nürnberg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.362Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zeppelintribüne” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:39.362Z",
+   "target": "f07634",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Es gehört zum Verbund der Museen der Stadt Nürnberg und befindet sich im Nordflügel der von den Nationalsozialisten konzipierten, unvollendet gebliebenen Kongresshalle des ehemaligen Reichsparteitagsgeländes.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:39.362Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kongresshalle” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:39.362Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Great Hall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Great Hall”, “Große Halle”, “Большой зал”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:51Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bauliches Zentrum und weltgrößtes Gebäude sollte die \"Große Halle\" mit 290 Metern Höhe und 230 Metern Durchmesser werden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:56Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "From here he would address 180,000 listeners",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:25.605Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bauliches Zentrum und weltgrößtes Gebäude sollte die \"Große Halle\" mit 290 Metern Höhe und 230 Metern Durchmesser werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:25.605Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "From here he would address 180,000 listeners",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:25.605Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Bauliches Zentrum und weltgrößtes Gebäude sollte die \"Große Halle\" mit 290 Metern Höhe und 230 Metern Durchmesser werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Große Halle” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:25.605Z",
+   "target": "f07635",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Volkshalle (German pronunciation: [ˈfɔlksˌhalə], \"People's Hall\"), also called Große Halle ([ˌɡʁoːsə ˈhalə], \"Great Hall\") or Ruhmeshalle ([ˈʁuːməsˌhalə], \"Hall of Glory\"), was a proposal for a monumental, domed building to be built in a reconstituted Berlin (renamed as Germania) in Nazi",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:25.605Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Great Hall” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,546 @@
+{
+ "subs": {
+  "film-media": [
+   {
+    "slug": "film",
+    "en": "Hollywood Stars & Classics",
+    "de": "Hollywood-Stars & Filmklassiker",
+    "ru": "Звёзды и классика Голливуда"
+   },
+   {
+    "slug": "franchises",
+    "en": "Franchises & Blockbusters",
+    "de": "Filmreihen & Blockbuster",
+    "ru": "Франшизы и блокбастеры"
+   },
+   {
+    "slug": "film-makers",
+    "en": "Directors & Awards",
+    "de": "Regie & Filmpreise",
+    "ru": "Режиссёры и кинопремии"
+   },
+   {
+    "slug": "world-cinema",
+    "en": "German & World Cinema",
+    "de": "Deutsches & internationales Kino",
+    "ru": "Немецкое и мировое кино"
+   },
+   {
+    "slug": "animation",
+    "en": "Animation",
+    "de": "Animation",
+    "ru": "Анимация"
+   }
+  ]
+ },
+ "assign": {
+  "a0112": {
+   "sub": "film-makers",
+   "reason": "\"The Godfather and the Oscars Nobody Wanted\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0160": {
+   "sub": "film-makers",
+   "reason": "\"When the Oscars Had to Wait: Postponed Academy Awards\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0292": {
+   "sub": "film-makers",
+   "reason": "\"Repeat Winners: Actors Who Took Home More Than One Oscar\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0340": {
+   "sub": "film-makers",
+   "reason": "\"Frozen Bullets and Digital Dinosaurs: Effects That Changed the Movies\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0412": {
+   "sub": "film-makers",
+   "reason": "\"Actor-Directors: Stars Who Took the Chair Behind the Camera\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0436": {
+   "sub": "film-makers",
+   "reason": "\"Five Directors Who Shaped Modern American Cinema\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0460": {
+   "sub": "film-makers",
+   "reason": "\"Ben-Hur, the Godfather and the Gladiator: Roles that Won the Oscar\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0532": {
+   "sub": "film-makers",
+   "reason": "\"The Writer-Directors: Five American Filmmakers Who Sign Their Own Scripts\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0724": {
+   "sub": "film-makers",
+   "reason": "\"My Best Fiend: Directors and the Actors They Could Not Do Without\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0748": {
+   "sub": "film-makers",
+   "reason": "\"Famous Lines and the Directors Who Filmed Them\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0784": {
+   "sub": "film-makers",
+   "reason": "\"Steven Spielberg and His Leading Men\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0832": {
+   "sub": "film-makers",
+   "reason": "\"Five Directors, Five Signatures: Reading a Filmography\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0904": {
+   "sub": "film-makers",
+   "reason": "\"Directors Defined by Three Films\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a1180": {
+   "sub": "film-makers",
+   "reason": "\"How the Oscar Got Its Name, and Other Film Prizes\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a1240": {
+   "sub": "film-makers",
+   "reason": "\"The Oscar Record Books: Who Has Been Honoured Most Often\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a1324": {
+   "sub": "film-makers",
+   "reason": "\"Exiles and Informers: Hollywood in the Age of the Blacklist\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a1444": {
+   "sub": "film-makers",
+   "reason": "\"The Composers behind the Movies\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a1636": {
+   "sub": "film-makers",
+   "reason": "\"Best Actress: Five Winning Roles\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a1780": {
+   "sub": "film-makers",
+   "reason": "\"Actors Behind the Camera: Best Director Oscars\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a2215": {
+   "sub": "film-makers",
+   "reason": "\"Kubrick the Perfectionist: Doors, Lenses and the Bomb\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a2233": {
+   "sub": "film-makers",
+   "reason": "\"Written By: Screenwriters Who Won the Oscar\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a2236": {
+   "sub": "film-makers",
+   "reason": "\"Firsts and Records: Milestones of Film History\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a2237": {
+   "sub": "film-makers",
+   "reason": "\"Behind the Scenes: Secrets of Famous Productions\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a2248": {
+   "sub": "film-makers",
+   "reason": "\"Fake Snow and Real Piglets: Tricks of the Film Trade\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0676": {
+   "sub": "film-makers",
+   "reason": "\"Hollywood's Reckoning: How #MeToo Began\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a2238": {
+   "sub": "film-makers",
+   "reason": "\"Apocalypse Now: The War Film That Became a War\" is about directors, the craft behind the camera, the film industry or the Oscars — moved from Film to the new Directors & Awards sub."
+  },
+  "a0064": {
+   "sub": "world-cinema",
+   "reason": "\"Germany at the Oscars: Five Films That Made the Shortlist\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0232": {
+   "sub": "world-cinema",
+   "reason": "\"German-Speaking Actors Between Home and Hollywood\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0316": {
+   "sub": "world-cinema",
+   "reason": "\"Breakthrough Films of German Actors\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0352": {
+   "sub": "world-cinema",
+   "reason": "\"Breakthrough Roles in German Cinema\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0424": {
+   "sub": "world-cinema",
+   "reason": "\"From VJ Booth to Film Set: German Actors' Unlikely First Careers\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0448": {
+   "sub": "world-cinema",
+   "reason": "\"Lola, Lenin and the Manitou: German Box-Office Hits of the 1990s and 2000s\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0520": {
+   "sub": "world-cinema",
+   "reason": "\"From Page and Stage to Screen: German Writers Behind Famous Films\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0568": {
+   "sub": "world-cinema",
+   "reason": "\"Breakthrough Roles of German Cinema\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0604": {
+   "sub": "world-cinema",
+   "reason": "\"German-Language Winners of the Foreign Film Oscar\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0628": {
+   "sub": "world-cinema",
+   "reason": "\"German Directors on the World's Award Stages\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0808": {
+   "sub": "world-cinema",
+   "reason": "\"Tarantino's German Ensemble: The Cast of Inglourious Basterds\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1036": {
+   "sub": "world-cinema",
+   "reason": "\"Behind the Stage Name: Germany's Comedians and Their Real Names\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1096": {
+   "sub": "world-cinema",
+   "reason": "\"From Page to Screen: Literary Adaptations from Weimar Berlin to Hollywood\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1192": {
+   "sub": "world-cinema",
+   "reason": "\"Fritz Lang's German Masterpieces\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1276": {
+   "sub": "world-cinema",
+   "reason": "\"From Page to Screen: German Directors and the Novels They Filmed\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1384": {
+   "sub": "world-cinema",
+   "reason": "\"The Other Half of the Joke\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1672": {
+   "sub": "world-cinema",
+   "reason": "\"German Novels on Screen\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a2226": {
+   "sub": "world-cinema",
+   "reason": "\"Babelsberg: A Century of Film in Potsdam\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a2227": {
+   "sub": "world-cinema",
+   "reason": "\"Bambi, Lola and the Golden Bear: Germany's Film Prizes\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a2228": {
+   "sub": "world-cinema",
+   "reason": "\"Hazelnuts, a Little Lord and Sissi: The Films of a German Christmas\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a2229": {
+   "sub": "world-cinema",
+   "reason": "\"Fish, Food and Plastic: The New Austrian Documentary\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a2230": {
+   "sub": "world-cinema",
+   "reason": "\"From Berlin and Swabia to Hollywood: German Directors in America\" is about German-language cinema (German/Austrian films, actors, directors, studios or prizes) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0796": {
+   "sub": "world-cinema",
+   "reason": "\"From Neorealism to the Spaghetti Western: Five Italian Directors\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1000": {
+   "sub": "world-cinema",
+   "reason": "\"Kurosawa's Long Shadow: The Japanese Films Hollywood Kept Remaking\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1084": {
+   "sub": "world-cinema",
+   "reason": "\"Directors of the Spanish-Speaking Screen\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1288": {
+   "sub": "world-cinema",
+   "reason": "\"Five European Auteurs and the Countries That Shaped Them\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1648": {
+   "sub": "world-cinema",
+   "reason": "\"Hollywood, Bollywood, Nollywood: The World's Film Factories\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a1804": {
+   "sub": "world-cinema",
+   "reason": "\"One Film to Fame: How French Cinema Made Its Stars\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a2218": {
+   "sub": "world-cinema",
+   "reason": "\"Godzilla: How Japan's Monster Was Born\" is about non-Hollywood national cinema (European, Japanese or other film industries) — moved from Film to the new German & World Cinema sub."
+  },
+  "a0124": {
+   "sub": "franchises",
+   "reason": "\"Counting the Comebacks: Rocky, Rambo and the Long-Running Hero\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a0640": {
+   "sub": "franchises",
+   "reason": "\"First Films: How Franchises Begin\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a0688": {
+   "sub": "franchises",
+   "reason": "\"A Galaxy of Newcomers: The Cast of the First Star Wars\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a0700": {
+   "sub": "franchises",
+   "reason": "\"Out of the Shire: The Second Lives of Peter Jackson's Cast\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a1420": {
+   "sub": "franchises",
+   "reason": "\"Rise of the Machines: Science Fiction's Great Artificial Enemies\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a1552": {
+   "sub": "franchises",
+   "reason": "\"Coming Back for More: Science-Fiction Sequels and Their Returning Heroes\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a1900": {
+   "sub": "franchises",
+   "reason": "\"The Name Is Bond: Six Actors and One Licence to Kill\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a1912": {
+   "sub": "franchises",
+   "reason": "\"Katniss, Hermione, Bella: Actresses Made by Film Franchises\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a1936": {
+   "sub": "franchises",
+   "reason": "\"The Crew of the Black Pearl\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2214": {
+   "sub": "franchises",
+   "reason": "\"Alien (1979): Building a Nightmare in Space\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2216": {
+   "sub": "franchises",
+   "reason": "\"Transformers: From Toy Box to Blockbuster\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2219": {
+   "sub": "franchises",
+   "reason": "\"Wand Work: What the Spells of Harry Potter Do\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2220": {
+   "sub": "franchises",
+   "reason": "\"Stranded in Space: Survival Films of the 2010s\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2221": {
+   "sub": "franchises",
+   "reason": "\"Playing Panem: The Cast of The Hunger Games\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2223": {
+   "sub": "franchises",
+   "reason": "\"Jurassic Park: How the Dinosaurs Came Back\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2224": {
+   "sub": "franchises",
+   "reason": "\"Birds, Mottos and Villains: How the World of 007 Was Built\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a2225": {
+   "sub": "franchises",
+   "reason": "\"Doubles and Gadgets: The Stunts Behind 007\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a0760": {
+   "sub": "franchises",
+   "reason": "\"From Prime Time to Multiplex: Cop Shows That Became Movies\" is about a film series/franchise or blockbuster sci-fi (Bond, Star Wars, Middle-earth, Jurassic Park, …) — moved from Film to the new Franchises & Blockbusters sub."
+  },
+  "a0016": {
+   "sub": "animation"
+  },
+  "a0172": {
+   "sub": "film"
+  },
+  "a0196": {
+   "sub": "film"
+  },
+  "a0244": {
+   "sub": "film"
+  },
+  "a0304": {
+   "sub": "film"
+  },
+  "a0364": {
+   "sub": "film"
+  },
+  "a0376": {
+   "sub": "film"
+  },
+  "a0388": {
+   "sub": "film"
+  },
+  "a0484": {
+   "sub": "film"
+  },
+  "a0496": {
+   "sub": "film"
+  },
+  "a0508": {
+   "sub": "film"
+  },
+  "a0544": {
+   "sub": "film"
+  },
+  "a0616": {
+   "sub": "film"
+  },
+  "a0736": {
+   "sub": "film"
+  },
+  "a0820": {
+   "sub": "film"
+  },
+  "a0880": {
+   "sub": "film"
+  },
+  "a0892": {
+   "sub": "animation"
+  },
+  "a0916": {
+   "sub": "film"
+  },
+  "a0928": {
+   "sub": "film"
+  },
+  "a0976": {
+   "sub": "film"
+  },
+  "a1132": {
+   "sub": "film"
+  },
+  "a1144": {
+   "sub": "film"
+  },
+  "a1216": {
+   "sub": "film"
+  },
+  "a1228": {
+   "sub": "film"
+  },
+  "a1252": {
+   "sub": "film"
+  },
+  "a1300": {
+   "sub": "film"
+  },
+  "a1312": {
+   "sub": "film"
+  },
+  "a1360": {
+   "sub": "film"
+  },
+  "a1396": {
+   "sub": "film"
+  },
+  "a1421": {
+   "sub": "film"
+  },
+  "a1564": {
+   "sub": "film"
+  },
+  "a1612": {
+   "sub": "film"
+  },
+  "a1624": {
+   "sub": "film"
+  },
+  "a1684": {
+   "sub": "film"
+  },
+  "a1708": {
+   "sub": "film"
+  },
+  "a1720": {
+   "sub": "film"
+  },
+  "a1732": {
+   "sub": "film"
+  },
+  "a1816": {
+   "sub": "film"
+  },
+  "a1828": {
+   "sub": "film"
+  },
+  "a1840": {
+   "sub": "animation"
+  },
+  "a1864": {
+   "sub": "film"
+  },
+  "a1948": {
+   "sub": "film"
+  },
+  "a2008": {
+   "sub": "film"
+  },
+  "a2020": {
+   "sub": "film"
+  },
+  "a2044": {
+   "sub": "film"
+  },
+  "a2080": {
+   "sub": "film"
+  },
+  "a2092": {
+   "sub": "animation"
+  },
+  "a2208": {
+   "sub": "animation"
+  },
+  "a2209": {
+   "sub": "animation"
+  },
+  "a2210": {
+   "sub": "animation"
+  },
+  "a2211": {
+   "sub": "animation"
+  },
+  "a2212": {
+   "sub": "animation"
+  },
+  "a2213": {
+   "sub": "animation"
+  },
+  "a2217": {
+   "sub": "film"
+  },
+  "a2222": {
+   "sub": "film"
+  },
+  "a2231": {
+   "sub": "film"
+  },
+  "a2232": {
+   "sub": "film"
+  },
+  "a2234": {
+   "sub": "film"
+  },
+  "a2235": {
+   "sub": "film"
+  },
+  "a2239": {
+   "sub": "film"
+  },
+  "a2240": {
+   "sub": "film"
+  },
+  "a2241": {
+   "sub": "film"
+  },
+  "a2242": {
+   "sub": "film"
+  },
+  "a2243": {
+   "sub": "film"
+  },
+  "a2244": {
+   "sub": "film"
+  },
+  "a2245": {
+   "sub": "film"
+  },
+  "a2246": {
+   "sub": "film"
+  },
+  "a2247": {
+   "sub": "film"
+  }
+ },
+ "outgoing": {
+  "a0280": {
+   "domain": "stage-tv",
+   "suggestedSub": "tv",
+   "reason": "About German TV series modelled on foreign formats (Stromberg/The Office, Ein Herz und eine Seele, Lindenstraße, Verliebt in Berlin) — television, not film."
+  },
+  "a1432": {
+   "domain": "stage-tv",
+   "suggestedSub": "tv",
+   "reason": "About TV series' title sequences (Breaking Bad, Better Call Saul, Stranger Things, Game of Thrones, Money Heist) — television, not film."
+  }
+ }
+}

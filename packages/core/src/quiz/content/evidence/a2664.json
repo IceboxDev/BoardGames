@@ -1,0 +1,242 @@
+{
+ "article": "a2664",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Paul_Gauguin",
+   "title": "Paul Gauguin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:11:42.965Z",
+   "snapshot": "f9062b4b035783fcf8e7ac6df393ad643895eee835e052ccd84d996d279bebcf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Henri_Rousseau",
+   "title": "Henri Rousseau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:11:46.217Z",
+   "snapshot": "8a6a8373f72eb68ba93f2f3e814a6de26a1cee3cd6f5b14975204b4490451c0f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte",
+   "title": "René Magritte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:41.987Z",
+   "snapshot": "bb8f81f891d172e400d99d488d470d7a4739d900b1b6d1bf751ecf0893b006e9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+   "title": "Vincent van Gogh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:48.506Z",
+   "snapshot": "f1ce872a000b8e7a37aa79954094c7acfa4b38f16c6f18363a2c92aebfe62bae"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Andy_Warhol",
+   "title": "Andy Warhol – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:31.565Z",
+   "snapshot": "524dcba87b772562c7fa3eed869b1e0f112cf4d7cdcb60ee6b06700a138bdb84"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paul Gauguin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Henri Rousseau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "René Magritte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vincent van Gogh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Andy Warhol",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:55.222Z",
+   "target": "f14443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eugène Henri Paul Gauguin [øʒˌɛn ɑ̃ˌʁi ˌpol ɡoˈɡɛ̃] (* 7.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Gauguin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:55.222Z",
+   "target": "f14444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "here one evening in the year 1908 unrolled the pageantry of the first and last banquet offered by his admirers to the painter Henri Rousseau called the Douanier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henri Rousseau” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:55.222Z",
+   "target": "f14445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "René Magritte was born in Lessines, in the province of Hainaut in Belgium, in 1898.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “René Magritte” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:55.222Z",
+   "target": "f14446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "even though the populace has not crowded to a magnificent funeral, and poor Vincent van Gogh, whose demise means the extinction of a beautiful flame of genius, has gone to his death as obscure and neglected as he lived.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vincent van Gogh” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:55.222Z",
+   "target": "f14447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Andy Warhol ( ; born Andrew Warhola Jr.; August 6, 1928 – February 22, 1987) was an American artist and filmmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:55.222Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andy Warhol” is on the snapshot of s5"
+  }
+ ]
+}

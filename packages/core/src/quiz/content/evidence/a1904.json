@@ -1,0 +1,375 @@
+{
+ "article": "a1904",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Revelation",
+   "title": "Book of Revelation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:09.374Z",
+   "snapshot": "ac14f01cfe1c330b6c13575655fde8669ea6b15112d0eac7b167a52fe0eb10b1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Annunciation_(Fra_Angelico,_Madrid)",
+   "title": "Annunciation (Fra Angelico, Madrid) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:17.507Z",
+   "snapshot": "081a8501e666d69c83960e9283d6f3de21c5311548482de25426db2afd9f0c80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Book_of_Tobit",
+   "title": "Book of Tobit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:18.591Z",
+   "snapshot": "68c000d2ea1de73f7c0a96ad2b80b954096ba3c14d6e3f0be539ebbe0ca211f8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Uriel",
+   "title": "Uriel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:19.555Z",
+   "snapshot": "f06328a529b6f34ff3089aefac05d6d3f83571d393e0d32696b638aee74f187c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Satan",
+   "title": "Satan",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:20.720Z",
+   "snapshot": "36e738b421cbaaedaa293b8cfd7fd08e3b6dbeaebf61b20bd25a2aa5af265f55"
+  },
+  "s6": {
+   "url": "https://www.biblegateway.com/passage/?search=Luke+1%3A26-31&version=KJV",
+   "title": "Luke 1:26-31 (King James Version)",
+   "publisher": "Bible Gateway",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:17.468Z",
+   "snapshot": "44e5f3a714741aa91cad8b2834350c019d475e6c91ea0f7928f427d7634d35bf"
+  },
+  "s7": {
+   "url": "https://www.newadvent.org/cathen/06330a.htm",
+   "title": "St. Gabriel the Archangel – Catholic Encyclopedia",
+   "publisher": "New Advent (Catholic Encyclopedia, 1909)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:17.889Z",
+   "snapshot": "326dbb7bc1f64fec33d3c8e4ae05128cbdf370fca1717221e52a2a67ae9c81f3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michael",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c159"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gabriel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Raphael",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uriel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The lake of fire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-037"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:42.599Z",
+   "target": "f09516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "War breaks out in heaven between Michael and the Dragon, identified as that old Serpent, the Devil, or Satan (12:9).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.599Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:42.599Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gabriel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Gabriel”, “Гавриил”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:42.599Z",
+   "target": "f09518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tobit’s son Tobias is sent to recover ten silver talents once deposited in Rhages in Media, and on his journey—guided by the angel Raphael—he meets Sarah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.599Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raphael” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:42.599Z",
+   "target": "f09519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uriel , Auriel (Hebrew: אוּרִיאֵל ʾŪrīʾēl, \"El/God is my Flame\"; Greek: Οὐριήλ Oúriḗl; Coptic: ⲟⲩⲣⲓⲏⲗ Ouriēl; Italian: Uriele; Geʽez and Amharic: ዑራኤል ʿUraʾēl or ዑርኤል ʿUriʾēl) or Oriel (Hebrew: אוֹרִיאֵל ʾÓrīʾēl, \"El/God is my Light\") is the name of one of the archangels who is mentioned in Rabbinic",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.599Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uriel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:42.599Z",
+   "target": "f25542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He is later bound for one thousand years, but is briefly set free before being ultimately defeated and cast into the Lake of Fire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:42.599Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The lake of fire” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:51Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:47:54Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In the New Testament he foretells to Zachary the birth of the Precursor, and to Mary that of the Saviour.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:34.142Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:34.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:34.142Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In the New Testament he foretells to Zachary the birth of the Precursor, and to Mary that of the Saviour.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:34.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:34.142Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "26 And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:34.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gabriel” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:34.142Z",
+   "target": "f09517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Only four appearances of Gabriel are recorded: In Daniel 8, he explains the vision of the horned ram as portending the destruction of the Persian Empire by the Macedonian Alexander the Great, after whose death the kingdom will be divided up among his generals, from one of whom will spring Antiochus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:34.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Gabriel” is on the snapshot of s7"
+  }
+ ]
+}

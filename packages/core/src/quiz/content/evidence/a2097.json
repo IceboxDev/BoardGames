@@ -1,0 +1,302 @@
+{
+ "article": "a2097",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis",
+   "title": "Ignaz Semmelweis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:07.950Z",
+   "snapshot": "b5d22e90e02145a23317af3cd402fa4daa91368ffeb0aa755211f8f543f36b2e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Lister",
+   "title": "Joseph Lister – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:09.265Z",
+   "snapshot": "8ac896efa6ddc5b56db9baae905e588227a5ae883e794b73b237ef9f281aa622"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Joseph_Meister",
+   "title": "Joseph Meister – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:48.005Z",
+   "snapshot": "15878d3955aafd730a772db5438d5e21a7c9364cced41aed7ea7f63aef30d0de"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+   "title": "1854 Broad Street cholera outbreak – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:09.864Z",
+   "snapshot": "cc9ea5eabf9c5b02b63343ccda8713e3e8111c4c6f9b2b6dc95048f35a8542ca"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Autoclave",
+   "title": "Autoclave",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:10.875Z",
+   "snapshot": "79adfd191d7a0e8b5b604ee407c9197823ac82c1cdc3055c57f4f5e0b5d072dc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Koch",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:05.051Z",
+   "snapshot": "63f2c34a04695bb91e92db3c6cb4b91d296411e4d3ffd59617dba2a7ca63dbd8"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Chamberland",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:11.803Z",
+   "snapshot": "25b623df0a698587f466bec8116433cbd3fa7c6831ceea1fd823fef6993acc5a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10481",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ignaz Semmelweis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10482",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Lister",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Louis Pasteur",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10485",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Snow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-032"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sterilization",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Sterilization",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-143/2, u08: An autoclave sterilises with pressurised steam, typically at 121 °C, killing even spores. It was invented by Chamberland in 1879. The card's 'kills all forms of life' is a slight overstatement (prions resist standard cycles), but the open question is unaffected."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f25854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sterilization",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f10481",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ignaz Semmelweis was born on 1 July 1818 in the Tabán neighbourhood of Buda, Kingdom of Hungary, Austrian Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ignaz Semmelweis” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f10482",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Joseph Lister, 1st Baron Lister (5 April 1827 – 10 February 1912) was an English surgeon, medical scientist, experimental pathologist and pioneer of antiseptic surgery and preventive healthcare.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joseph Lister” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f10483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joseph Meister (21 February 1876 – 24 June 1940) was the first person to be inoculated against rabies by Louis Pasteur, and likely the first person to be successfully treated for the infection, which has a >99% fatality rate once symptoms set in.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Pasteur” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f10485",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The outbreak (also known as Golden Square outbreak), which killed 420 people, is best known for the physician John Snow's study of its causes and his hypothesis that germ-contaminated water was the cause, rather than something in the air called \"miasma\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Snow” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f25854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sterilization autoclaves are widely used in microbiology and mycology, medicine and prosthetics fabrication, tattooing and body piercing, and funerary practice, and a wide range of industries (including food production).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sterilization” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:22.015Z",
+   "target": "f25854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This was the starting point for his work on the sterilization of culture media, which led him to design a disinfection oven that bears his name: the Autoclave.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:22.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sterilization” is on the snapshot of s7"
+  }
+ ]
+}

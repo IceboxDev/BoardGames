@@ -1,0 +1,356 @@
+{
+ "article": "a1463",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dormancy",
+   "title": "Dormancy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:00.376Z",
+   "snapshot": "36bf8c5fbc0e66e8da8a8831e0120304b76d9b6e8a6c17931a523ae837067d46"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Arctic_ground_squirrel",
+   "title": "Arctic ground squirrel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:01.508Z",
+   "snapshot": "bf2fe1c424615cba926620bd16e44adaf340b63a166bb9977cc3b04cd88c6457"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/West_African_lungfish",
+   "title": "West African lungfish – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:02.379Z",
+   "snapshot": "35c589f01f64cd3c7e7768d0dbdda668058a4334af515dfc9b81ee8607f0f498"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monarch_butterfly_migration",
+   "title": "Monarch butterfly migration – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:03.625Z",
+   "snapshot": "23baa18359d3db2d45e3d276a28f7f0cc441490106d52a5c88a6ce5488cfb9c9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tardigrade",
+   "title": "Tardigrade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:04.499Z",
+   "snapshot": "c77fa016ce762ca67596a92cc0382edf3753404229a68489db132db960df1ffd"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Eremina_desertorum",
+   "title": "Eremina desertorum",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:05.364Z",
+   "snapshot": "c457b490f6caeb9be6aea85c922f77a4f4c6aaeeb0ca72d718d872d590836d62"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12731239/",
+   "title": "Genome-Wide Identification and Expression Analysis of the Aquaporin Gene Family in the Qinghai Toad-Headed Agama (Phrynocephalus vlangalii) and Responses to Acute Cold Stress - PMC",
+   "publisher": "PubMed Central (NLM)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:03.323Z",
+   "snapshot": "91029ec910bc54f4b7af5d42cb270f35ea8e8ae1542c4ff59e4ef0ccf8d1661b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cold torpor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hibernation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aestivation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Diapause",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cryptobiosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Snails",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 47; transcript pp-093"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:29.899Z",
+   "target": "f07311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cold torpor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cold torpor”, “Kältestarre”, “холодовое оцепенение”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:29.899Z",
+   "target": "f07312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arctic ground squirrels molt twice a year, in spring after emerging from hibernation and in fall before hibernating.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hibernation” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:29.899Z",
+   "target": "f07313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "During this time period the lung fish enters a dormancy stage called aestivation, which is similar to hibernation but occurs in the summer instead of winter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aestivation” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:29.899Z",
+   "target": "f07314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In most individual adult butterflies, diapause begins with its southern migration, but unlike other insects in this state, it remains active.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diapause” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:29.899Z",
+   "target": "f07315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tardigrades are capable of suspending their metabolism, going into a state of cryptobiosis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cryptobiosis” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:29.899Z",
+   "target": "f25515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eremina desertorum (formerly Helix desertorum) is a species of land snails in the genus Eremina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:29.899Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snails” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:11:42Z",
+   "target": "f07311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "P. vlangalii can enter a state of cold torpor with apparent freezing tolerance during non-hibernation seasons when triggered by sudden temperature drops and recover normal physiological activity upon warming.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23",
+   "note": "Peer-reviewed use of \"cold torpor\" for a reptile (the ectotherm state the card calls Kältestarre)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:15.620Z",
+   "target": "f07311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "P. vlangalii can enter a state of cold torpor with apparent freezing tolerance during non-hibernation seasons when triggered by sudden temperature drops and recover normal physiological activity upon warming.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:15.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:15.620Z",
+   "target": "f07311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "vlangalii can enter a state of cold torpor with apparent freezing tolerance during non-hibernation seasons when triggered by sudden temperature drops and recover normal physiological activity upon warming.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:15.620Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Cold torpor” is on the snapshot of s7"
+  }
+ ]
+}

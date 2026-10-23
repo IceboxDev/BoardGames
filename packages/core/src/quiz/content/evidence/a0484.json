@@ -1,0 +1,242 @@
+{
+ "article": "a0484",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tanz_der_Vampire_(Musical)",
+   "title": "Tanz der Vampire (Musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:59:23.785Z",
+   "snapshot": "041f16618e9c4b8029be92b4ff27faf79900da4c3da079d4c5a842077f3c2e3c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Producers_(musical)",
+   "title": "The Producers (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:27.061Z",
+   "snapshot": "9511f785dbad16bf2fea2c3e3b001a0c1131b0c6d0104e43b2c0c5fdabe85fec"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hairspray_(musical)",
+   "title": "Hairspray (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:28.054Z",
+   "snapshot": "7530203833e8a4fca2cbd2d617e915cd0e083fe0bbc3b8198c3b82b7aa97ebb8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Billy_Elliot_the_Musical",
+   "title": "Billy Elliot the Musical – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:29.156Z",
+   "snapshot": "433a8e55527cd9781809286674300d88458e801c562ad4a396d5d04c682a5691"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Moulin_Rouge!_(musical)",
+   "title": "Moulin Rouge! (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:30.042Z",
+   "snapshot": "4d5872061787aab38c3ca2349780462067619fc159c8e84260ef47183e9ddbda"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tanz der Vampire",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Producers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hairspray",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02419",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Billy Elliot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Moulin Rouge!",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:56.080Z",
+   "target": "f02416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tanz der Vampire ist ein deutschsprachiges Musical in zwei Akten von Jim Steinman und Michael Kunze, eine gemeinsame Idee von Roman Polański, Andrew Braunsberg und Rudi Klausnitzer, basierend auf Roman Polańskis gleichnamigem Film von 1967.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tanz der Vampire” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:56.080Z",
+   "target": "f02417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Producers is a musical comedy with music and lyrics by Mel Brooks and a book by Brooks and Thomas Meehan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Producers” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:56.080Z",
+   "target": "f02418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hairspray is an American musical with music by Marc Shaiman and lyrics by Shaiman and Scott Wittman, with a book by Mark O'Donnell and Thomas Meehan, based on John Waters's 1988 film of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hairspray” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:56.080Z",
+   "target": "f02419",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Billy Elliot the Musical is a coming-of-age stage musical based on the 2000 film of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Billy Elliot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:56.080Z",
+   "target": "f02420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Moulin Rouge! The Musical is a jukebox musical with a book by John Logan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.080Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moulin Rouge!” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,311 @@
+{
+ "article": "a2270",
+ "sources": {
+  "s1": {
+   "url": "https://www.elespanol.com/corazon/bluper/20240110/curiosidades-soprano-aniversario-estreno-cameo-lady-gaga-mafiosos-reales/823418004_0.html",
+   "title": "20 datos curiosos sobre 'Los Soprano' por el 25 aniversario de su estreno",
+   "kind": "press",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:50:40.813Z",
+   "snapshot": "88d3b50c42ffdda9f93e7998ecd0ed0fe9a440ce837bb94ffb7c57c37498a8ac"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Made_in_America_(The_Sopranos)",
+   "title": "Made in America (The Sopranos)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:44.329Z",
+   "snapshot": "a24b443240ec0a241bdc5cd4f2f95f1da4f2f3a825eefa947f177faa520bb75e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/David_Chase",
+   "title": "David Chase – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:45.291Z",
+   "snapshot": "e7b4a2b2163804b9d6ec9c5fbbed6598ce91a07c8c60cd8220e20b25be7cc23d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Sopranos",
+   "title": "The Sopranos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:58.626Z",
+   "snapshot": "597bca4e5f4feac7c0500fe0e00e7e7fda7f54f92bb2764a942c178a2a505366"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sopranos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-188"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11665",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Don't Stop Believin'",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-382"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "David Chase",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jennifer Melfi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bada Bing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Woke Up This Morning",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:46.477Z",
+   "target": "f11664",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sopranos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Sopranos”, “Die Sopranos”, “Клан Сопрано”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:46.477Z",
+   "target": "f11665",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The song \"Don't Stop Believin'\" by Journey then plays throughout the rest of the scene.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Don't Stop Believin'” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:46.477Z",
+   "target": "f11666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In September 2024, HBO released a two-part documentary called Wise Guy: David Chase and the Sopranos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Chase” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:46.477Z",
+   "target": "f11667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jennifer Melfi (Lorraine Bracco), who encourages him to open up about his difficulties balancing his family life with his criminal activities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jennifer Melfi” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:46.477Z",
+   "target": "f11668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The majority of the exterior scenes took place in New Jersey and were filmed on location, with the majority of the interior shots filmed at Silvercup Studios in New York City, including most indoor shots of the Soprano residence, the back room of the strip club Bada Bing!, and Dr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bada Bing” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:46.477Z",
+   "target": "f11669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The show's opening theme is \"Woke Up This Morning\" (Chosen One Mix), written by, remixed and performed by British band Alabama 3.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Woke Up This Morning” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:18:25Z",
+   "target": "f11664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "HBO no estaba muy convencida con el título de la serie y le preocupaba que los espectadores pensaran que iba sobre cantantes de ópera y no sobre mafiosos, por eso decidieron cambiar la \"r\" por una pistola en el logo.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23",
+   "note": "The gun-shaped r in the logo is visible on every title card; the opera motive is a production anecdote (reportedly), so the wording's premise is hedged in the body. Web search quota was exhausted before a second press source could be found."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:31.958Z",
+   "target": "f11664",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "HBO no estaba muy convencida con el título de la serie y le preocupaba que los espectadores pensaran que iba sobre cantantes de ópera y no sobre mafiosos, por eso decidieron cambiar la \"r\" por una pistola en el logo.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.958Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  }
+ ]
+}

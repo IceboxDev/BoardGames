@@ -1,0 +1,242 @@
+{
+ "article": "a2034",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_Civil_War",
+   "title": "Spanish Civil War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:18.285Z",
+   "snapshot": "8132f716b4a23800b322dbb1ced67a80a9d4ef5a704d8a9322c7c4c3ee5aa9fc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Miguel_Primo_de_Rivera",
+   "title": "Miguel Primo de Rivera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:18.444Z",
+   "snapshot": "0ed96f2d4cf022da0d386316876e567668ac77245c81181251ef63fd0d899342"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Greek_junta",
+   "title": "Greek junta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:19.601Z",
+   "snapshot": "93e84eaf5df6e828b4e7d6a60b1b6ad2a0dd3008280e6c1510ec31a0f16d4a14"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/1973_Chilean_coup_d%27%C3%A9tat",
+   "title": "1973 Chilean coup d'état – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:20.622Z",
+   "snapshot": "3f50e4d3c228844c6316d01056035301189742f964f99eccbdbacfa3942a4c92"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1976_Argentine_coup_d%27%C3%A9tat",
+   "title": "1976 Argentine coup d'état – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:22:11.611Z",
+   "snapshot": "d3f5776967efd153abb40b6b25170f424609bf257fbec76b62351c4fe25d8a80"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Francisco Franco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10167",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miguel Primo de Rivera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georgios Papadopoulos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salvador Allende",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f22001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Isabel Perón",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:09.944Z",
+   "target": "f10166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Nationalists were initially led by a military junta, until General Francisco Franco was appointed supreme leader on 1 October 1936 of what he called the Spanish State.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francisco Franco” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:09.944Z",
+   "target": "f10167",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miguel Primo de Rivera y Orbaneja, 2nd Marquis of Estella, GE (8 January 1870 – 16 March 1930), was a Spanish dictator and military officer who ruled as prime minister of Spain from 1923 to 1930 during the last years of the Bourbon Restoration.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miguel Primo de Rivera” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:09.944Z",
+   "target": "f10170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was ruled by Georgios Papadopoulos from 1967 to 1973, but an attempt to renew popular support in a 1973 referendum on the monarchy and gradual democratisation by Papadopoulos was ended by another coup by the hardliner Dimitrios Ioannidis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georgios Papadopoulos” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:09.944Z",
+   "target": "f22000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The 1973 Chilean coup d'état (Spanish: Golpe de Estado en Chile de 1973) was a military overthrow of the socialist president of Chile Salvador Allende and his Popular Unity coalition government.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salvador Allende” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:09.944Z",
+   "target": "f22001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A coup d'état overthrew Isabel Perón as President of Argentina on 24 March 1976.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.944Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isabel Perón” is on the snapshot of s5"
+  }
+ ]
+}

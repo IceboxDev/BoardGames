@@ -42,6 +42,8 @@ interface Props {
   readonly providers: TrainerProviders | null;
   readonly evaluation: PositionEval | null;
   readonly evalLoading: boolean;
+  /** Pinned to the rail's foot (the board's one decision, `ChoiceCard`). */
+  readonly footer?: ReactNode;
   /** Your games here and how many came by another move order (the explorer's header). */
   readonly transposition:
     | ((fen: string, moves: readonly string[]) => Promise<{ games: number; transposed: number }>)
@@ -79,6 +81,7 @@ export function ExplorerRail({
   evaluation,
   evalLoading,
   transposition,
+  footer,
 }: Props) {
   const yours = useLookup<MoveStat[]>(fen, positionStats);
   const db = useLookup<ExplorerMove[]>(
@@ -129,6 +132,7 @@ export function ExplorerRail({
           db: providers !== null && db === null,
         }}
       />
+      {footer && <div className="mt-auto flex flex-col">{footer}</div>}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { helpCardDef } from "@boardgames/core/games/quiztopia/help-cards";
-import { parseCardRef } from "@boardgames/core/games/quiztopia/ids";
 import type { HelpCardId, QuiztopiaDeck } from "@boardgames/core/games/quiztopia/types";
 import { TIP_CARDS_BY_TIER } from "@boardgames/core/games/quiztopia/types";
 import {
@@ -7,8 +6,9 @@ import {
   QUIZTOPIA_REQUIRED,
   quiztopiaLossAt,
 } from "@boardgames/core/history/coop-challenge";
-import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
-import { TRAINER_BASE, trainerPaths } from "../paths";
+import type { QuizLanguage, QuizLanguages } from "@boardgames/core/protocol";
+import { FACT_ID_RE } from "@boardgames/core/quiz/ids";
+import { TRAINER_BASE, trainerPaths } from "../../../trainers/quiz/paths";
 
 // Labels and small derivations shared by the lobby, board, rules and game
 // over. Everything numeric comes from the core constants so the copy can
@@ -41,10 +41,15 @@ export function deckLabel(deck: QuiztopiaDeck): string {
 }
 
 /** The board's local language: the room default, else English. */
-export type BoardLanguage = QuiztopiaLanguage;
+export type BoardLanguage = QuizLanguage;
 
 export function cycleLanguage(lang: BoardLanguage): BoardLanguage {
   return lang === "en" ? "de" : lang === "de" ? "both" : "en";
+}
+
+/** The board language as the trainer components' main + second language. */
+export function boardLanguages(lang: BoardLanguage): QuizLanguages {
+  return lang === "both" ? { primary: "en", secondary: "de" } : { primary: lang, secondary: null };
 }
 
 /** Which texts to show for a language choice, primary first. */
@@ -86,12 +91,10 @@ export function cardRefLabel(cardRef: string, categoryIndex: number): string {
   return `${cardRef} · Q${categoryIndex + 1}`;
 }
 
-/** The wiki route for a question's set — from a card ref, not a question id,
- *  so fixture refs simply yield null. */
-export function wikiPathFor(cardRef: string, categorySlug: string): string | null {
-  const parsed = parseCardRef(cardRef);
-  if (!parsed) return null;
-  return trainerPaths(TRAINER_BASE).wikiArticle(categorySlug, parsed.cardId);
+/** The wiki route for a question's fact; fixture questions (not quiz facts) yield null. */
+export function wikiPathFor(questionId: string): string | null {
+  if (!FACT_ID_RE.test(questionId)) return null;
+  return trainerPaths(TRAINER_BASE).wikiFact(questionId);
 }
 
 /**

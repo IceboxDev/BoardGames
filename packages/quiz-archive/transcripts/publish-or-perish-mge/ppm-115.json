@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-115",
+ "image": "IMG20261022154442.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] What was the largest empire in history?\nA. The Russian Empire\nB. The British Empire\nC. The Mongol Empire\nAnswer: B. The British Empire, spanning across the globe at its peak, significantly influenced British cuisine. Indian curries, Caribbean spices, and Chinese tea became staples in Britain. This influence is so strong that Chicken Tikka Masala is often considered the national dish of England.",
+   "de": "Welches war gemessen an der Gesamtfläche das größte Reich der Geschichte, das 1920 rund 35,5 Millionen km² umfasste?",
+   "en": "Which was the largest empire in history by total area, covering about 35.5 million km² in 1920?",
+   "reworked": true,
+   "answerDe": "Das Britische Weltreich",
+   "answerEn": "The British Empire",
+   "timeline": {
+    "kind": "event",
+    "start": "1920",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The British Empire covers about 35.5 million km², roughly a quarter of Earth's land area",
+    "labelDe": "Das Britische Weltreich umfasst rund 35,5 Millionen km², etwa ein Viertel der Landfläche der Erde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/British_Empire",
+    "title": "British Empire",
+    "lang": "en"
+   },
+   "notes": "Correct by total area; the Mongol Empire (2nd largest overall) was the largest contiguous land empire. The card's cuisine explanation (chicken tikka masala) was not checked.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 2,
+   "discipline": "Philosophy",
+   "cardText": "[Philosophy] What is the study of being and reality called?\nA. Ethics\nB. Epistemology\nC. Metaphysics\nAnswer: C. The term “metaphysics” was originally used to describe the works of Aristotle.",
+   "de": "Welcher Zweig der Philosophie untersucht das Sein und die grundlegende Beschaffenheit der Wirklichkeit; sein Name geht auf den Titel zurück, den ein Herausgeber einem Werk des Aristoteles gab?",
+   "en": "Which branch of philosophy studies being and the fundamental nature of reality, its name coming from the title an editor gave to a work of Aristotle?",
+   "reworked": true,
+   "answerDe": "Metaphysik",
+   "answerEn": "Metaphysics",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "-384",
+    "end": "-322",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Aristotle, whose book later titled Metaphysics gave the discipline its name",
+    "labelDe": "Aristoteles, dessen später „Metaphysik“ betiteltes Werk der Disziplin ihren Namen gab"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Metaphysics",
+    "title": "Metaphysics",
+    "lang": "en"
+   },
+   "notes": "Aristotle did not use the term himself; a later editor (likely Andronicus of Rhodes) coined it ('after physics'). The study of being specifically is ontology (general metaphysics).",
+   "domain": "belief",
+   "sub": "philosophy"
+  }
+ ]
+}

@@ -1,0 +1,343 @@
+{
+ "article": "a2739",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rock_(geology)",
+   "title": "Rock (geology)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:11.960Z",
+   "snapshot": "779b6881738a3ac6094054f9bbcb5044106755393593e8fa31d2337a89846884"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Metamorphic_rock",
+   "title": "Metamorphic rock",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:13.082Z",
+   "snapshot": "46366065f29fee5ca0fff1e2929ea1c0a528451eae9b63475de0b67f1eb32cad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pumice",
+   "title": "Pumice",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:14.037Z",
+   "snapshot": "6be8638806110d97a690b08cac5a78868b7f4ecabeace32d1396982aa09e147e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Granite",
+   "title": "Granite",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:15.062Z",
+   "snapshot": "90bb1d97eafc889078cc738904414a36ecfc7cbb3382dac34e804c7638734633"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Obsidian",
+   "title": "Obsidian",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:15.970Z",
+   "snapshot": "8151fc7d8496099b803e5d445b63ebb566265ac38e86ee0a6579b5b7b0271f7f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Marble",
+   "title": "Marble",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:17.061Z",
+   "snapshot": "2b4bfde9c3d94df4b1f4d3e0575069fd7a77a5e43bd28f6511bf45f0c144f86c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Slate",
+   "title": "Slate",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:17.965Z",
+   "snapshot": "1243945f1e56600ee03b21a85112a3960beaf6df6e7fc50ecb9c6affffbb6921"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Rock_cycle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:19.064Z",
+   "snapshot": "546912a127f8e8f4ea446ed75051f1357f42355f535bf74a37d8923639818f35"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Metamorphic rock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-055"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pumice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript ppm-099"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Granite",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25586",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Obsidian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25587",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Marble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25588",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Slate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In geology, a rock (also called a stone) is any naturally occurring solid mass or aggregate of minerals or mineraloid matter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A rock” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The protolith may be an igneous, sedimentary, or existing metamorphic rock.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metamorphic rock” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pumice ( ), called pumicite in its powdered or dust form, is a volcanic rock that consists of extremely vesicular rough-textured volcanic glass, which may or may not contain crystals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pumice” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Granite (, GRAN-it or , GRAN-eye-t) is a coarse-grained (phaneritic) intrusive igneous rock composed mostly of quartz, alkali feldspar, mica and plagioclase.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Granite” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25586",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Obsidian (, əb-SID-ee-ən ob-) is a naturally occurring volcanic glass formed when lava extruded from a volcano cools rapidly with minimal crystal growth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Obsidian” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25587",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Marble is a metamorphic rock consisting of carbonate minerals, most commonly calcite  (CaCO3) or dolomite (CaMg(CO3)2), that have recrystallized under the influence of heat and pressure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marble” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:31:06.024Z",
+   "target": "f25588",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Slate is a fine-grained, foliated, homogeneous, metamorphic rock derived from an original shale-type sedimentary rock composed of clay or volcanic ash through low-grade, regional metamorphism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.024Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slate” is on the snapshot of s7"
+  }
+ ]
+}

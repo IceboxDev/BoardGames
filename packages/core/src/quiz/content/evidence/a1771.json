@@ -1,0 +1,647 @@
+{
+ "article": "a1771",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Big_Tech",
+   "title": "Big Tech – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:27.591Z",
+   "snapshot": "e2ae41063cc60edde660d94a4d4096353cec7514892d1156f0501e8276fc143e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Xiaomi",
+   "title": "Xiaomi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:28.518Z",
+   "snapshot": "7d5e6d9ae14adb3ebc08485b0bf21a88b80ad52135061250f511d8c338617950"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/BRICS",
+   "title": "BRICS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:19.458Z",
+   "snapshot": "549fe577d78016245f8ab5aca71f1dabfb1676009468fa7f8b52915a843275d6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Euro_area_crisis",
+   "title": "Euro area crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:29.769Z",
+   "snapshot": "9f6d14f17f6a69fd34964e62854455ffdbe8eb7a137ca99c24f3b1485b4cded7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/BRIC_(economics_term)",
+   "title": "BRIC (economics term)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:21:30.770Z",
+   "snapshot": "af15aa62a62971730d3d83721f61c12115423b8b7feff838944db9afcc32e02d"
+  },
+  "s6": {
+   "url": "https://www.investopedia.com/terms/f/faamg-stocks.asp",
+   "title": "FAAMG Stocks – Investopedia",
+   "publisher": "Investopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:23:54Z"
+  },
+  "s7": {
+   "url": "https://www.investopedia.com/terms/f/fang-stocks-fb-amzn.asp",
+   "title": "FANG Stocks – Investopedia",
+   "publisher": "Investopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:23:57Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/BATX",
+   "title": "BATX – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:16.313Z",
+   "snapshot": "be8c724ba2cd919341f2d249db09fa3055598989c9d30cc6798b6dd01b41ad49"
+  },
+  "s9": {
+   "url": "https://www.investopedia.com/terms/b/brics.asp",
+   "title": "BRICS – Investopedia",
+   "publisher": "Investopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:24:00Z"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/PIGS_(economics)",
+   "title": "PIGS (economics) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:17.226Z",
+   "snapshot": "f19026c54144e15ef7a050a01cb50c8ecaf6a9b48200e1c5448ac2849c3b5a70"
+  },
+  "s11": {
+   "url": "https://www.investopedia.com/terms/p/piigs.asp",
+   "title": "PIIGS – Investopedia",
+   "publisher": "Investopedia",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:24:03Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Facebook, Apple, Amazon, Microsoft and Google",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c148"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Facebook, Amazon, Netflix and Google",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Baidu, Alibaba, Tencent and Xiaomi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brazil, Russia, India, China and South Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; history entry seq 47; history entry seq 48"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Portugal, Italy, Greece and Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Brazil, Russia, India and China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-076"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brazil, Russia, India and China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 50; history entry seq 52"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f08851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Facebook, Apple, Amazon, Microsoft and Google",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Facebook, Apple, Amazon, Microsoft and Google”, “Facebook, Apple, Amazon, Microsoft und Google”, “Facebook, Apple, Amazon, Microsoft и Google”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f08852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Facebook, Amazon, Netflix and Google",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Facebook, Amazon, Netflix and Google”, “Facebook, Amazon, Netflix und Google”, “Facebook, Amazon, Netflix и Google”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f08853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Baidu, Alibaba, Tencent and Xiaomi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Baidu, Alibaba, Tencent and Xiaomi”, “Baidu, Alibaba, Tencent und Xiaomi”, “Baidu, Alibaba, Tencent и Xiaomi”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f08854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brazil, Russia, India, China and South Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Brazil, Russia, India, China and South Africa”, “Brasilien, Russland, Indien, China und Südafrika”, “Бразилия, Россия, Индия, Китай и Южная Африка”) on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f08855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Portugal, Italy, Greece and Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Portugal, Italy, Greece and Spain”, “Portugal, Italien, Griechenland und Spanien”, “Португалия, Италия, Греция и Испания”) on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f25893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brazil, Russia, India and China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Brazil, Russia, India and China”, “Brasilien, Russland, Indien und China”, “Бразилия, Россия, Индия и Китай”) on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:19.711Z",
+   "target": "f25893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2001, Jim O'Neill, a global economist at Goldman Sachs at the time, proposed that the economic potential of Brazil, Russia, India and China is such that they could become among the most dominant economies by 2050.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:19.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brazil, Russia, India and China” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:23:54Z",
+   "target": "f08851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "FAAMG is an abbreviation coined by Goldman Sachs for five top-performing tech stocks: Meta (formerly Facebook), Amazon, Apple, Microsoft, and Alphabet’s Google.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:23:55Z",
+   "target": "f08851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Acronyms including FANG, FAANG, GAFA, GAFAM, MAGA, and MAMAA have been used to refer to Big Tech companies.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Context only: the Big Tech article covers the acronym family; FAAMG itself is confirmed by Investopedia."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:23:56Z",
+   "target": "f08852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jim Cramer coined the acronym FANG in 2013, referring to Facebook, Amazon, Netflix, and Google.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:23:57Z",
+   "target": "f08852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The acronym FANG was coined by The Street's Bob Lang and popularized by Jim Cramer on his CNBC TV show Mad Money. This acronym refers to the stocks of four prominent American technology companies—Meta (META) (formerly Facebook), Amazon (AMZN), Netflix (NFLX), and Alphabet (GOOG).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the four companies; credits the coinage to Bob Lang with Cramer as popularizer — body now says so."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:23:58Z",
+   "target": "f08853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "BATX is an acronym standing for Baidu, Alibaba, Tencent, and Xiaomi, the four biggest[1] tech firms in China",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:23:59Z",
+   "target": "f08853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 6 April 2010, Xiaomi was co-founded by Lei Jun and six others:",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the founding date in the body."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:24:00Z",
+   "target": "f08854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "BRICS is an acronym for Brazil, Russia, India, China, and South Africa.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T10:24:01Z",
+   "target": "f08854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The bloc's inaugural summit was held in 2009 and featured the founding countries of Brazil, Russia, India, and China",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T10:24:02Z",
+   "target": "f08855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "PIGS is a derogatory acronym that has been used to designate the economies of the Southern European countries of Portugal, Italy, Greece, and Spain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T10:24:03Z",
+   "target": "f08855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "The first recorded use was in 1978 when it was used to identify the underperforming European countries of Portugal, Italy, Greece, and Spain (PIGS).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r065",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:07.398Z",
+   "target": "f08851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Acronyms including FANG, FAANG, GAFA, GAFAM, MAGA, and MAMAA have been used to refer to Big Tech companies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:07.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s1"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:07.398Z",
+   "target": "f08852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jim Cramer coined the acronym FANG in 2013, referring to Facebook, Amazon, Netflix, and Google.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:07.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:57:07.398Z",
+   "target": "f08853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 6 April 2010, Xiaomi was co-founded by Lei Jun and six others:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:07.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s2"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:57:07.398Z",
+   "target": "f08854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The bloc's inaugural summit was held in 2009 and featured the founding countries of Brazil, Russia, India, and China",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:07.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s3"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:57:07.398Z",
+   "target": "f08855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "PIGS is a derogatory acronym that has been used to designate the economies of the Southern European countries of Portugal, Italy, Greece, and Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:07.398Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s10"
+  }
+ ]
+}

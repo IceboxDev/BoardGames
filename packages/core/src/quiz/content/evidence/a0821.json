@@ -1,0 +1,242 @@
+{
+ "article": "a0821",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kennerspiel_des_Jahres",
+   "title": "Kennerspiel des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:37.130Z",
+   "snapshot": "bf8af3e8343459119103397d6e2adef47b3311bb7a7f970e347d7fe56077cd5b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kinderspiel_des_Jahres",
+   "title": "Kinderspiel des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:38.195Z",
+   "snapshot": "89676883dbcdac95467697e84fca2c718d33cfff360d88976f5edae127962330"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Spiel_des_Jahres",
+   "title": "Spiel des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:38.923Z",
+   "snapshot": "addba3542cb5bdb6551e5215b8893a9e3862a965b166a54f71c86c1e133f37f4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Deutscher_Spiele_Preis",
+   "title": "Deutscher Spiele Preis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:40.442Z",
+   "snapshot": "821d56aff4f58b7aa51935eb4ab3590f187e836291a747f556982a74a3ad5585"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/%C3%80-la-carte-Kartenspielpreis",
+   "title": "À-la-carte-Kartenspielpreis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:40.109Z",
+   "snapshot": "e58a7fd2cd8dc0bdcee20523d3f90783450467785393215b3bae9424b207eb5c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kennerspiel des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069; transcript tp-293"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kinderspiel des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spiel des Jahres",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Deutscher Spielepreis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "À la carte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:49.889Z",
+   "target": "f04101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Kritikerpreis Kennerspiel des Jahres wird seit 2011 jährlich vom Verein Spiel des Jahres verliehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kennerspiel des Jahres” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.889Z",
+   "target": "f04102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Kinderspiel des Jahres wird seit 2001 jährlich vom Verein Spiel des Jahres e.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kinderspiel des Jahres” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.889Z",
+   "target": "f04103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Kritikerpreis Spiel des Jahres ist ein vom Verein Spiel des Jahres e.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spiel des Jahres” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:49.889Z",
+   "target": "f04104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Deutscher Spielepreis (German: [ˈdɔʏtʃɐ ˈʃpiːləˌpʁaɪs], German Game Prize) (DSP) is an important award for boardgames.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Deutscher Spielepreis” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:49.889Z",
+   "target": "f04105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der À-la-carte-Kartenspielpreis ist ein Spielepreis, der seit 1991 von der Fachzeitschrift Fairplay für das beste Kartenspiel eines Jahres verliehen wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.889Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “À la carte” is on the snapshot of s5"
+  }
+ ]
+}

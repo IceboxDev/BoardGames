@@ -1,0 +1,357 @@
+{
+ "article": "a1549",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Xaver_Gerl",
+   "title": "Franz Xaver Gerl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:43.580Z",
+   "snapshot": "2d2b5f7f033db60704b313a29cb26299d2e1d13e84ee5f4ee81b54793511fbf3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nancy_Storace",
+   "title": "Nancy Storace – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:44.043Z",
+   "snapshot": "58a257a7c28aeced9e7b8aa27f049b6174438726e85de65f4bd8b183da08adbc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Don_Giovanni",
+   "title": "Don Giovanni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:06.246Z",
+   "snapshot": "a7b00214d5d4a394a4bfcd20bc56d95e95d7d1d22f8510a228aacac48a462177"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cos%C3%AC_fan_tutte",
+   "title": "Così fan tutte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:08.215Z",
+   "snapshot": "1204f37df67034ef4319d877c2d30ae469dafed1754789932081f915ea72db3d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Therese_Teyber",
+   "title": "Therese Teyber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:07:44.944Z",
+   "snapshot": "353cc4669633e2c5b971097e9f1a31c8ac1cf527e4dc3268cc9ff6d937e8d37a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Soubrette",
+   "title": "Soubrette – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:33.091Z",
+   "snapshot": "dda799c57fc3b6f3d5f52ede06f0f4fb6c2f3fd3e35ebfdcd9df755acf1f00a2"
+  },
+  "s7": {
+   "url": "https://www.operone.de/opern/entfuehrung.html",
+   "title": "Die Entführung aus dem Serail von Mozart - Operone",
+   "publisher": "Operone",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:35.754Z",
+   "snapshot": "741c1f37c344e7b5ad7a31b14a4408566d8df080ad5ab394a34454f8956eec7c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Papagena",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Susanna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zerlina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Despina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Blondchen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:42.563Z",
+   "target": "f07741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She also sang in the Schikaneder troupe, and performed the role of Papagena at the Magic Flute premiere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Papagena” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:42.563Z",
+   "target": "f07742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The role of Susanna in Mozart's Le nozze di Figaro (The Marriage of Figaro) was written for and first performed by her.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Susanna” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:42.563Z",
+   "target": "f07743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "540c, composed on 30 April for the soprano Caterina Cavalieri) – and the duet between Leporello and Zerlina \"Per queste tue manine\" (K.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zerlina” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:42.563Z",
+   "target": "f07744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Despina is occasionally performed by a mezzo-soprano, such as Cecilia Bartoli, Frederica von Stade, Agnes Baltsa, Ann Murray and Ginger Costa-Jackson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.563Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Despina” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:42.563Z",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Blondchen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Blondchen”, “Блондхен”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:09:01Z",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blonde, Die Entführung aus dem Serail (Mozart), auch Koloratursoubrette",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23",
+   "note": "Listed among typical soubrette roles; the libretto names her Blonde, the diminutive Blondchen is the usual stage name."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:09:04Z",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Blondchen (ihre Zofe) - Lyrischer Koloratursopran/Soubrette",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r044",
+   "run": "provenance-research-2026-10-23",
+   "note": "Opera guide's cast list with the German Fach of each role."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:29.386Z",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Blonde, Die Entführung aus dem Serail (Mozart), auch Koloratursoubrette",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:29.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:29.386Z",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Blondchen (ihre Zofe) - Lyrischer Koloratursopran/Soubrette",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:29.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:29.386Z",
+   "target": "f07745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Blondchen (ihre Zofe) - Lyrischer Koloratursopran/Soubrette",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:29.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Blondchen” is on the snapshot of s7"
+  }
+ ]
+}

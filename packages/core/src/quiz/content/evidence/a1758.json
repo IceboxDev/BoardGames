@@ -1,0 +1,330 @@
+{
+ "article": "a1758",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rubicon",
+   "title": "Rubicon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:31.479Z",
+   "snapshot": "7ffee6486f4d9f931f3fc380fbd67622870f2fd21c33b272ca352c80163e1b19"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Zela_(47_BC)",
+   "title": "Battle of Zela (47 BC) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:55.035Z",
+   "snapshot": "d9df21f998fdab2834b13cae037bba8f8178773a26c2ab1ede047fe5542a0bb0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vespasian",
+   "title": "Vespasian – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:32.503Z",
+   "snapshot": "45555d8c6f5e2618b71787c46d7cdb3787942ed3b906a94d4853aa3ea99b6ffb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Catilinarian_orations",
+   "title": "Catilinarian orations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:33.378Z",
+   "snapshot": "7732894317d74e5d6d43bcfa462fd50d53586ea731416968a76874fbd2feec51"
+  },
+  "s5": {
+   "url": "https://www.thelatinlibrary.com/cicero/cat1.shtml",
+   "title": "Cicero: In Catilinam I",
+   "publisher": "The Latin Library",
+   "kind": "primary",
+   "lang": "la",
+   "retrievedAt": "2026-10-23T12:42:10.549Z",
+   "snapshot": "18fe3e082c6cbd267a1a21767c9e148ccc9e097f66f48c49d5f0c967abf1a9d4"
+  },
+  "s6": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0010:text=Catil.:speech=1:section=1",
+   "title": "M. Tullius Cicero, Orationes: In Catilinam, speech 1, section 1",
+   "publisher": "Perseus Digital Library, Tufts University",
+   "kind": "primary",
+   "lang": "la",
+   "retrievedAt": "2026-10-23T12:42:10.993Z",
+   "snapshot": "5a1d75657442d6d57551f2f669ba4be563533050cc3d1dce6ac9efc393a2f6bb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alea iacta est",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c147"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Veni, vidi, vici",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pecunia non olet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Quo usque tandem abutere, Catilina, patientia nostra?",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:17.768Z",
+   "target": "f08786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "According to Suetonius, Caesar uttered the famous phrase alea iacta est ('the die is cast') upon crossing the Rubicon, signifying that his action was irreversible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alea iacta est” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:17.768Z",
+   "target": "f08787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Following his swift victory, Caesar famously declared, Veni, Vidi, Vici (\"I came, I saw, I conquered\"), emphasizing the speed and decisiveness of his triumph.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Veni, vidi, vici” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:17.768Z",
+   "target": "f08789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it was Vespasian's new imposition of this tax around 70 AD which we still remember to this day, possibly giving origin to the Latin proverb Pecunia non olet (\"Money does not stink\"): Writing about Vespasian in their history books, Dio Cassius and Suetonius mentioned \"When [Vespasian's] son Titus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.768Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pecunia non olet” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:17.768Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Quo usque tandem abutere, Catilina, patientia nostra?",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Quo usque tandem abutere, Catilina, patientia nostra?”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:39:48Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I. Quo usque tandem abutere, Catilina, patientia nostra? quam diu etiam furor iste tuus nos eludet?",
+     "quoteLang": "la",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Opening words of the First Catilinarian (section 1)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:39:58Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "quo usque tandem abutere, Catilina, patientia nostra?",
+     "quoteLang": "la",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Perseus text (Clark OCT) of Cat. 1.1."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:57:05.272Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I. Quo usque tandem abutere, Catilina, patientia nostra? quam diu etiam furor iste tuus nos eludet?",
+     "quoteLang": "la",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:05.272Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "quo usque tandem abutere, Catilina, patientia nostra?",
+     "quoteLang": "la",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:05.272Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Quo usque tandem abutere, Catilina, patientia nostra? quam diu etiam furor iste tuus nos eludet?",
+     "quoteLang": "la",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Quo usque tandem abutere, Catilina, patientia nostra?” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:05.272Z",
+   "target": "f08790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "quo usque tandem abutere, Catilina, patientia nostra?",
+     "quoteLang": "la",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:05.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Quo usque tandem abutere, Catilina, patientia nostra?” is on the snapshot of s6"
+  }
+ ]
+}

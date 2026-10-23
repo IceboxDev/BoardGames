@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-214",
+ "image": "IMG20261007175448.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welchen Namen hat im islamischen Kalender der neunte Monat?",
+   "de": "Welchen Namen hat im islamischen Kalender der neunte Monat?",
+   "en": "What is the name of the ninth month of the Islamic calendar?",
+   "reworked": false,
+   "answerDe": "Ramadan",
+   "answerEn": "Ramadan",
+   "timeline": {
+    "kind": "event",
+    "start": "0624",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Quran verses (Sura 2:183–185) establish fasting in Ramadan, in the 2nd year after the Hijra (623–624)",
+    "labelDe": "Koranverse (Sure 2,183–185) begründen das Fasten im Ramadan, im 2. Jahr nach der Hidschra (623–624)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Ramadan",
+    "title": "Ramadan",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "belief",
+   "sub": "religion"
+  },
+  {
+   "category": 2,
+   "cardDe": "Charlie Chaplins Tochter Geraldine spielte im biografischen Film Chaplin von 1992 ihre eigene Großmutter. Richtig oder falsch?",
+   "de": "Welche Rolle spielte Charlie Chaplins Tochter Geraldine im biografischen Film Chaplin von 1992?",
+   "en": "Which role did Charlie Chaplin's daughter Geraldine play in the 1992 biographical film Chaplin?",
+   "reworked": true,
+   "answerDe": "Hannah Chaplin, Charlies Mutter (ihre eigene Großmutter)",
+   "answerEn": "Hannah Chaplin, Charlie's mother (her own grandmother)",
+   "timeline": {
+    "kind": "creation",
+    "start": "1992",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Richard Attenborough's biopic 'Chaplin', with Robert Downey Jr. as Charlie Chaplin",
+    "labelDe": "Richard Attenboroughs Filmbiografie „Chaplin“ mit Robert Downey Jr. als Charlie Chaplin"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Chaplin_(film)",
+    "title": "Chaplin (film)",
+    "lang": "en"
+   },
+   "notes": "Card statement is true: Geraldine Chaplin played Hannah Chaplin, Charlie's mother.",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "In welcher Stadt trat 1903 die erste Polizistin Deutschlands ihren Dienst an: in Stuttgart, Berlin oder Kiel?",
+   "de": "In welcher Stadt trat 1903 die erste Polizistin Deutschlands ihren Dienst an?",
+   "en": "In which city did Germany's first policewoman take up her post in 1903?",
+   "reworked": true,
+   "answerDe": "Stuttgart",
+   "answerEn": "Stuttgart",
+   "timeline": {
+    "kind": "event",
+    "start": "1903-02-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Henriette Arendt starts in Stuttgart as Germany's first police assistant",
+    "labelDe": "Henriette Arendt tritt in Stuttgart als erste Polizeiassistentin Deutschlands ihren Dienst an"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Henriette_Arendt",
+    "title": "Henriette Arendt",
+    "lang": "de"
+   },
+   "notes": "Henriette Arendt (1874–1922), aunt of Hannah Arendt; strictly a 'Polizeiassistentin' / police welfare worker.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Stück wurde 1973 als erstes im neueröffneten Sydney Opera House gespielt: Carmen, Krieg und Frieden oder Tosca?",
+   "de": "Welche Oper wurde 1973 als erste im neueröffneten Sydney Opera House gespielt?",
+   "en": "Which opera was the first to be performed in the newly opened Sydney Opera House in 1973?",
+   "reworked": true,
+   "answerDe": "Krieg und Frieden (Prokofjew)",
+   "answerEn": "War and Peace (Prokofiev)",
+   "timeline": {
+    "kind": "event",
+    "start": "1973-09-28",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Prokofiev's 'War and Peace' is the first opera performed at the Sydney Opera House",
+    "labelDe": "Prokofjews „Krieg und Frieden“ ist die erste im Sydney Opera House aufgeführte Oper"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+    "title": "Sydney Opera House",
+    "lang": "en"
+   },
+   "notes": "Australian Opera production conducted by Edward Downes. (Paul Robeson had already sung to construction workers there in 1960.)",
+   "domain": "music-stage",
+   "sub": "classical"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Galaxie ist unserer Milchstraße am nächsten?",
+   "de": "Welche Spiralgalaxie ist unserer Milchstraße am nächsten?",
+   "en": "Which spiral galaxy is closest to our Milky Way?",
+   "reworked": true,
+   "answerDe": "Andromedagalaxie",
+   "answerEn": "Andromeda Galaxy",
+   "timeline": {
+    "kind": "discovery",
+    "start": "0964",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Persian astronomer al-Sufi gives the first secure description of the Andromeda Galaxy, 'the little cloud'",
+    "labelDe": "Der persische Astronom al-Sufi liefert die erste gesicherte Beschreibung der Andromedagalaxie, „die kleine Wolke“"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Andromedagalaxie",
+    "title": "Andromedagalaxie",
+    "lang": "de"
+   },
+   "notes": "Card is ambiguous: the nearest galaxy of any kind is a dwarf galaxy (Canis Major Dwarf, ~25,000 ly, or the Sagittarius Dwarf; the Magellanic Clouds are also closer than Andromeda). Narrowed to 'spiral galaxy' so the classic answer, Andromeda (~2.5 million ly), is unique. Al-Sufi's description is in his Book of Fixed Stars (c. 964).",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welcher Tennisspieler prägte den Satz: „Das kann nicht Ihr Ernst sein!”?",
+   "de": "Welcher Tennisspieler prägte den Satz: „Das kann nicht Ihr Ernst sein!”?",
+   "en": "Which tennis player coined the phrase \"You cannot be serious!\"?",
+   "reworked": false,
+   "answerDe": "John McEnroe",
+   "answerEn": "John McEnroe",
+   "timeline": {
+    "kind": "event",
+    "start": "1981",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "At Wimbledon 1981 John McEnroe rages at the umpire; 'You cannot be serious' becomes his catchphrase",
+    "labelDe": "In Wimbledon 1981 tobt John McEnroe gegen den Schiedsrichter; „You cannot be serious“ wird sein Markenzeichen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/John_McEnroe",
+    "title": "John McEnroe",
+    "lang": "en"
+   },
+   "notes": "Original English: \"You cannot be serious!\", later the title of his autobiography.",
+   "domain": "sport-games",
+   "sub": "ball-sports"
+  }
+ ]
+}

@@ -1,0 +1,539 @@
+{
+ "article": "a0666",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Philanthropie",
+   "title": "Philanthropie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:11:50.825Z",
+   "snapshot": "a7aee01c0562e1976bd4943ff76cb680a676597a4ad0b96860f2be3978d1aaf3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Prometheus_Bound",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:18.175Z",
+   "snapshot": "afe2bc8b0a15fe2d298e490a674633f561fecdd3d4ae43b9a2508255148cc765"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/misanthrope",
+   "title": "Misanthrope – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Athenian_democracy",
+   "title": "Athenian democracy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:54.341Z",
+   "snapshot": "c6f90952f90deb1924982d41c488333062a7b40af2c2a98199c20467c9972db0"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/oligarchy",
+   "title": "Oligarchy – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Oligarchy",
+   "title": "Oligarchy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:55.171Z",
+   "snapshot": "1590ca0615d41107dad5d2046722ab692eed4d9609615c7585e0f9d479eb89cc"
+  },
+  "s7": {
+   "url": "https://www.etymonline.com/word/xenophobia",
+   "title": "xenophobia – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Misanthropy",
+   "title": "Misanthropy – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:03.939Z",
+   "snapshot": "a90e03b1f5c4ccb69c1b17815d3685ba93bbd1a5038c9dd9512aeaa48ef0f598"
+  },
+  "s9": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/misanthrope",
+   "title": "misanthrope – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:03.064Z",
+   "snapshot": "ed8dd82777d3008f3dcafa1eacf0ca6c670d79e52ab7e750024522b1a08647c0"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Xenophobia",
+   "title": "Xenophobia – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:04.957Z",
+   "snapshot": "689bf1e9e4c71161e9eebf5fdc550b991213a2bdc479217d1c96e695c2ca48da"
+  },
+  "s11": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/xenophobia",
+   "title": "xenophobia – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:04.071Z",
+   "snapshot": "34844913ba052d7a1122b204f97f060ef96abcef55ad989f28bb121956361220"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Philanthrop",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "philanthropist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "misanthrope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03328",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "democracy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "oligarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "oligarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-024"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "xenophobia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:23.333Z",
+   "target": "f03326",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Für das Philanthropieverständnis der gesamten Antike ist charakteristisch, dass der Philanthrop fast immer eine Person von hohem sozialem Rang war und seine Haltung gegenüber den Begünstigten wohlwollend und herablassend war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Philanthrop” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:23.333Z",
+   "target": "f03326",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "philanthropist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“philanthropist”, “Philanthrop”, “филантроп”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:23.333Z",
+   "target": "f03328",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Athenian democracy developed around the 6th century BC in the Greek city-state (known as a polis) of Athens.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “democracy” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:23.333Z",
+   "target": "f03329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oligarchy (from Ancient Greek  ὀλιγαρχία (oligarkhía) 'rule by few'; from  ὀλίγος (olígos) 'few' and  ἄρχω (árkhō) 'to rule, command') is a form of government in which power rests with a small number of people.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.333Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “oligarchy” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:32:20Z",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Misanthropy is the general hatred, dislike, or distrust of the human species, human behavior, or human nature.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:32:25Z",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "someone who dislikes and avoids other people",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:32:30Z",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "is the fear or dislike of people who are perceived as being foreign or strange.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:32:34Z",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "extreme dislike or fear of foreigners, their customs, their religions, etc.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r028",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Misanthropy is the general hatred, dislike, or distrust of the human species, human behavior, or human nature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "someone who dislikes and avoids other people",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "is the fear or dislike of people who are perceived as being foreign or strange.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s10"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "extreme dislike or fear of foreigners, their customs, their religions, etc.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s11"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A misanthrope or misanthropist is someone who holds such views or feelings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “misanthrope” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03327",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "MISANTHROPE | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “misanthrope” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Xenophobia (from Ancient Greek  ξένος (xénos) 'strange, foreign, or alien' and  φόβος (phóbos) 'fear') is the fear or dislike of people who are perceived as being foreign or strange.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “xenophobia” is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:52.220Z",
+   "target": "f03330",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "XENOPHOBIA | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:52.220Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “xenophobia” is on the snapshot of s11"
+  }
+ ]
+}

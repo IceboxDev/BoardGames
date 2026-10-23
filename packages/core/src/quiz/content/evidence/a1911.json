@@ -1,0 +1,289 @@
+{
+ "article": "a1911",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hermann,_F%C3%BCrst_von_P%C3%BCckler-Muskau",
+   "title": "Hermann, Fürst von Pückler-Muskau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:52.409Z",
+   "snapshot": "1e5ad7bd3b91e7eceb84ae10c4adc84671d5bfa853116481425c1bbd7124a347"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peter_Joseph_Lenn%C3%A9",
+   "title": "Peter Joseph Lenné – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:52.583Z",
+   "snapshot": "b028fbb1a4b638171a5f484720e43e7bd576a0b7684d4587e674c2050d307d2d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Capability_Brown",
+   "title": "Capability Brown – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:53.635Z",
+   "snapshot": "4ef5d2a9a0ecf2db0043d0f773d7f27ff0047b8d2edc56fc8367e081093f9fb3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Andr%C3%A9_Le_N%C3%B4tre",
+   "title": "André Le Nôtre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:54.528Z",
+   "snapshot": "c0bf39dbfe970050e1106069dfdb74a125afa84de32e662f8c6fed222a04579b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Central_Park",
+   "title": "Central Park – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:55.769Z",
+   "snapshot": "470773c1a76c82189e028d65a5be4835eb97c08e1ad40a4bde2c380bd51e4d60"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Branitzer_Park",
+   "title": "Branitzer Park",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:29:52.890Z",
+   "snapshot": "6035f674eb8b0982f51e1a6b738c036c5cbe1a44b3efdff5315b7894f1ef910d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hermann von Pückler-Muskau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peter Joseph Lenné",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Capability Brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "André Le Nôtre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Frederick Law Olmsted",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14430",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pyramide",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-018"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:43.557Z",
+   "target": "f09551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Briefwechsel und Tagebücher des Fürsten Hermann von Pückler-Muskau (letters and diaries), 9 vols, ed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermann von Pückler-Muskau” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:43.557Z",
+   "target": "f09552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peter Joseph Lenné (the Younger) (29 September 1789 – 23 January 1866) was a Prussian gardener and landscape architect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter Joseph Lenné” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:43.557Z",
+   "target": "f09553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Capability Brown produced more than 100 architectural drawings, and his work in the field of architecture was a natural outgrowth of his unified picture of the English country house in its setting:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Capability Brown” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:43.557Z",
+   "target": "f09554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "André Le Nôtre (French pronunciation: [ɑ̃dʁe lə notʁ]; 12 March 1613 – 15 September 1700), originally rendered as André Le Nostre, was a French landscape architect and the principal gardener of King Louis XIV of France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “André Le Nôtre” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:43.557Z",
+   "target": "f09555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1858, landscape architects Frederick Law Olmsted and Calvert Vaux won a design competition for the park with their \"Greensward Plan\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frederick Law Olmsted” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:43.557Z",
+   "target": "f14430",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Pücklerforscher Helmut Rippl interpretierte die Verwendung der religiösen Sinnbilder: Pyramide, Davidsstern, Mondsichel mit Stern, Kreuz und Maria mit Jesuskind als symbolische Zusammenführung von vier großen monotheistischen Religionen im Branitzer Park.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.557Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pyramide” is on the snapshot of s6"
+  }
+ ]
+}

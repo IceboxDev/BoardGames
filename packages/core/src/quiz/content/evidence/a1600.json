@@ -1,0 +1,241 @@
+{
+ "article": "a1600",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Knight_Rider_(1982_TV_series)",
+   "title": "Knight Rider (1982 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:08.942Z",
+   "snapshot": "8d70a8815c4fbf4f4431a5517dda7b22bc82271bd319766d84d282885a787996"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/KITT",
+   "title": "KITT – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:09.990Z",
+   "snapshot": "6604422aceba51cf79e5736b40a0c24f66750a75401ce7f251bbf3edb7be6625"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/MASH:_A_Novel_About_Three_Army_Doctors",
+   "title": "MASH: A Novel About Three Army Doctors – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:10.930Z",
+   "snapshot": "f31b7d84d8d3232842fd4163ce4e8e26592351b5016b03fa2285535646a82dc0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/CSI:_Crime_Scene_Investigation",
+   "title": "CSI: Crime Scene Investigation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:11:12.027Z",
+   "snapshot": "db3466c398a71320cfe2ffa50a61c73a297da1ecdf848cd3592ca30c94e3ffc5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:03.576Z",
+   "snapshot": "4850e8a50f4f5345721e71a7595759db9fac5ce922f5191174903c672fd35ccf"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Knight Industries Two Thousand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Knight Automated Roving Robot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Foundation for Law and Government",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mobile Army Surgical Hospital",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Crime Scene Investigation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:49.229Z",
+   "target": "f07996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The other half of this program is the Knight Industries Two Thousand (KITT), a heavily modified, technologically advanced Pontiac Firebird Trans Am with numerous features, including a highly durable shell and frame, controlled by a computer with artificial intelligence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knight Industries Two Thousand” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:49.229Z",
+   "target": "f07997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "KARR (Knight Automated Roving Robot) is the name of a fictional, automated, prototype vehicle featured as a major antagonist of KITT (Knight Industries Two Thousand), in two episodes of the 1982 original series, and was part of a multi-episode story arc in the 2008 revived series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knight Automated Roving Robot” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:49.229Z",
+   "target": "f07998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Wilton selects Michael as the primary field agent in the pilot program of his public justice organization, the Foundation for Law and Government (FLAG).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Foundation for Law and Government” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:49.229Z",
+   "target": "f07999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mobile Army Surgical Hospital in South Korea during the Korean War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mobile Army Surgical Hospital” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:49.229Z",
+   "target": "f08000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "CSI: Crime Scene Investigation is an American police procedural drama television series that aired on CBS from October 6, 2000, to September 27, 2015, spanning 15 seasons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.229Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crime Scene Investigation” is on the snapshot of s4"
+  }
+ ]
+}

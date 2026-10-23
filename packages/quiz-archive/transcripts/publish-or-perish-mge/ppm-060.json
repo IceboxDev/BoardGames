@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-060",
+ "image": "IMG20261022154021.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Mathematics",
+   "cardText": "[Mathematics] What is the name of the sequence where each number is the sum of the two preceding ones, starting from 0 and 1?\nA. Euler’s Number\nB. Prime Number Sequence\nC. Fibonacci Sequence\nAnswer: C. This sequence also appears in many biological settings, such as branching in trees, the arrangement of leaves on a stem, the fruitlets of a pineapple, the flowering of an artichoke, and the arrangement of a pine cone’s bracts.",
+   "de": "Wie heißt die Zahlenfolge, in der jede Zahl die Summe der beiden vorhergehenden ist, beginnend mit 0 und 1?",
+   "en": "What is the name of the sequence in which each number is the sum of the two preceding ones, starting from 0 and 1?",
+   "reworked": true,
+   "answerDe": "Fibonacci-Folge",
+   "answerEn": "Fibonacci sequence",
+   "timeline": {
+    "kind": "creation",
+    "start": "1202",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leonardo of Pisa (Fibonacci) introduces the sequence to Western Europe in his book Liber Abaci",
+    "labelDe": "Leonardo von Pisa (Fibonacci) macht die Folge mit seinem Buch Liber Abaci in Westeuropa bekannt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fibonacci_sequence",
+    "title": "Fibonacci sequence",
+    "lang": "en"
+   },
+   "notes": "Confirmed: F0 = 0, F1 = 1, Fn = Fn−1 + Fn−2. Only the options are dropped; the question was already open.",
+   "domain": "science",
+   "sub": "maths"
+  },
+  {
+   "category": 2,
+   "discipline": "Geography",
+   "cardText": "[Geography] Which country has the most number of islands?\nA. Indonesia B. Norway C. Sweden\nAnswer: C. Sweden has around 267,570 islands, the highest number of any country in the world. The Stockholm Archipelago alone contains around 30,000 islands.",
+   "de": "Welches Land hat die meisten Inseln der Welt, laut einer Zählung seines Statistikamts von 2013 etwa 267.570?",
+   "en": "Which country has the most islands in the world, about 267,570 according to a 2013 count by its statistics office?",
+   "reworked": true,
+   "answerDe": "Schweden",
+   "answerEn": "Sweden",
+   "timeline": {
+    "kind": "event",
+    "start": "2013",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Statistics Sweden counts 267,570 islands in Sweden, fewer than 1,000 of them inhabited",
+    "labelDe": "Das schwedische Statistikamt zählt 267.570 Inseln in Schweden, davon weniger als 1.000 bewohnt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/List_of_islands_of_Sweden",
+    "title": "List of islands of Sweden",
+    "lang": "en"
+   },
+   "notes": "Confirmed the 267,570 figure (Statistiska centralbyrån 2013 report). Island counts depend on the definition used, and the Wikipedia list carries an 'inaccurate' update tag; Norway and Finland also report six-figure counts.",
+   "domain": "geography",
+   "sub": "physical"
+  }
+ ]
+}

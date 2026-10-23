@@ -1,0 +1,242 @@
+{
+ "article": "a0025",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Angus_Young",
+   "title": "Angus Young – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:43.572Z",
+   "snapshot": "567bc6da7b250d8f20eff4d171b54d129b7e002d4ab631f64d53cfd381c4224f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jimmy_Page",
+   "title": "Jimmy Page – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:44.676Z",
+   "snapshot": "1b631fc0bfbbcd0de9d563542534f08727f681d4ca5b8d6fa7dbdb24060fde0c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Brian_May",
+   "title": "Brian May – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:45.676Z",
+   "snapshot": "daaebbf5b0148e9a3fc46752b41d2d7950ef14b289ce95f681eac19142392d69"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kirk_Hammett",
+   "title": "Kirk Hammett – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:46.574Z",
+   "snapshot": "dd4324fa32002adc4dc2beb5bd795121453afda85115b76c2328c6b0cd1c6706"
+  },
+  "s5": {
+   "url": "https://www.needsomefun.net/?p=51763",
+   "title": "Robert Plant on Stairway to Heaven (needsomefun.net)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:43.757Z",
+   "snapshot": "56de2f1d61263c944311c102bf9e9425c62a303b0ff4dc54010add4466aef974"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angus Young",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c003"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jimmy Page",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brian May",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00124",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kirk Hammett",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stairway to Heaven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-190"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:38.887Z",
+   "target": "f00121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Prior to forming AC/DC, Angus Young played in a local group called Kantuckee.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angus Young” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:38.887Z",
+   "target": "f00122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Several early tracks were compiled on the twin album release Jimmy Page: Session Man.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jimmy Page” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:38.887Z",
+   "target": "f00123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In late 1992, the Brian May Band was officially formed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brian May” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:38.887Z",
+   "target": "f00124",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kirk Von Hammett's Fear FestEvil is an annual horror convention created by Kirk Hammett.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kirk Hammett” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:38.887Z",
+   "target": "f13127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "NOVEMBER 10, 1994 Jimmy Page and Robert Plant \"Stairway To Heaven\" Japanese talk show",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.887Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stairway to Heaven” is on the snapshot of s5"
+  }
+ ]
+}

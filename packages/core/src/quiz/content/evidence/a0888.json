@@ -1,0 +1,396 @@
+{
+ "article": "a0888",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Magnetic-core_memory",
+   "title": "Magnetic-core memory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:02.356Z",
+   "snapshot": "d88586233b47b4222604f09d1eaa0eeebd3c0dad4a306e21d911cde3405e3919"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Read-only_memory",
+   "title": "Read-only memory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:03.387Z",
+   "snapshot": "07c584c8f731fc125d1efcb0fb55a2c18725506dd45583164eeb4e3bc1506eb0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Intel_4004",
+   "title": "Intel 4004 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:04.310Z",
+   "snapshot": "fd30d937e0ce35cef982768495344a353fc8ae3d56168c87dda2282befe31668"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/CD-ROM",
+   "title": "CD-ROM",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:05.265Z",
+   "snapshot": "3c4179043e78c1d815aab36defe28cf895803e2fd402936abb643647feff0012"
+  },
+  "s5": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/cpu",
+   "title": "CPU – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:28.018Z",
+   "snapshot": "4bbab4115387c8e9c6d3bed54c006db62f93a82dfc12e38c4712a4b9f31a4c97"
+  },
+  "s6": {
+   "url": "https://csrc.nist.gov/glossary/term/central_processing_unit",
+   "title": "Central Processing Unit – NIST CSRC Glossary",
+   "publisher": "National Institute of Standards and Technology",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:28.436Z",
+   "snapshot": "e6b7d8ddc888741ec93e608d08c98c3ef1ad1f76c6d78832f5821a9bca18ccdb"
+  },
+  "s7": {
+   "url": "https://www.ibm.com/think/topics/central-processing-unit",
+   "title": "What is a central processing unit (CPU)?",
+   "publisher": "IBM",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:29.165Z",
+   "snapshot": "ed4853ec2e148d671f59bb351e09c0009eddaaadff8701d31bdb869354a8374c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Random Access Memory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Read-Only Memory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Central Processing Unit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14156",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Read",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-183"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:00.504Z",
+   "target": "f04436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In computing, magnetic-core memory is a form of random-access memory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Random Access Memory” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:00.504Z",
+   "target": "f04437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Read-only memory (ROM) is a form of non-volatile memory used in computers and other electronic devices.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Read-Only Memory” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:00.504Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Central Processing Unit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Central Processing Unit”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:00.504Z",
+   "target": "f14156",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A CD-ROM (, compact disc read-only memory) is a type of read-only memory consisting of a pre-pressed optical compact disc that contains data computers can read, but not write or erase.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.504Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Read” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:45:36Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "abbreviation for central processing unit: the part of a computer that controls all the other parts",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:45:38Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abbreviations / Acronyms / Synonyms: CPU",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23",
+   "note": "Glossary entry titled 'Central Processing Unit' gives CPU as its abbreviation."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:45:40Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A central processing unit (CPU) is the primary functional component of a comput",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r078",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:29.549Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "abbreviation for central processing unit: the part of a computer that controls all the other parts",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:29.549Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abbreviations / Acronyms / Synonyms: CPU",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:29.549Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A central processing unit (CPU) is the primary functional component of a comput",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:29.549Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "abbreviation for central processing unit: the part of a computer that controls all the other parts",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Central Processing Unit” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:29.549Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Central Processing Unit - Glossary | CSRC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Central Processing Unit” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:29.549Z",
+   "target": "f04438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A central processing unit (CPU) is the primary functional component of a computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:29.549Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Central Processing Unit” is on the snapshot of s7"
+  }
+ ]
+}

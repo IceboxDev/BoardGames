@@ -1,0 +1,202 @@
+{
+ "article": "a1328",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Theogony",
+   "title": "Theogony – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:18.535Z",
+   "snapshot": "4c3142af3ac451c1aadb60f3c49581e938616a92405983f730936036050f9570"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rhea_(moon)",
+   "title": "Rhea (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:04.288Z",
+   "snapshot": "acd79ba8df015b90385a0a6924561bd531035b60ad73e70070b6a9e41827af37"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Atlas_(statue)",
+   "title": "Atlas (statue) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:05.283Z",
+   "snapshot": "b6f8a329541c1cc82e2ad1a271d68040e4d5a1a8423421d2ed3b72df8172a2bd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Delos",
+   "title": "Delos – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:03.663Z",
+   "snapshot": "acdbe168af32eca08cd807a7ca7382cd6b7c3debce5c73d5920ed39606cd20e6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Atlas_(mythology)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:06.155Z",
+   "snapshot": "71660f603edc2111cbf49b52075f25376d70a8adb181ad753ff5409d3f4e3e16"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cronus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c111"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Atlas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Leto",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:07.974Z",
+   "target": "f06636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The decipherment of Hittite mythical texts, notably the Kingship in Heaven text first presented in 1946, with its castration mytheme, offers in the figure of Kumarbi an Anatolian parallel to Hesiod's Uranus–Cronus conflict.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cronus” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:07.974Z",
+   "target": "f06637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rhea () is the second-largest natural satellite of Saturn and the ninth-largest moon in the Solar System, with a diameter of 1,528 kilometres (949 mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rhea” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:07.974Z",
+   "target": "f06638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Atlas is a bronze statue in Rockefeller Center, within the International Building's courtyard, in Midtown Manhattan in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atlas” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:07.974Z",
+   "target": "f06640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nur hier konnte die von Hera verfolgte und an der Niederkunft auf jederlei festem Boden gehinderte Leto niederkommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:07.974Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leto” is on the snapshot of s4"
+  }
+ ]
+}

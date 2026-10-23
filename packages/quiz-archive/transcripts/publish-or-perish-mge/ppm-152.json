@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-152",
+ "image": "IMG20261022154743.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Engineering and Invention",
+   "cardText": "[Engineering and Invention] How does a non-contact thermometer measure temperature?\nA. By projecting a beam of light onto an object and measuring how it refracts\nB. By measuring the radiation naturally emitted by an object\nC. By using a laser\nAnswer: B. Most commercial non-contact thermometer only passively captures the infrared radiation emitted by an object using a lens to focus the radiation onto a detector.",
+   "de": "Was bündelt ein berührungsloses (Infrarot-)Thermometer auf seinen Detektor, um daraus die Temperatur eines Gegenstands abzuleiten?",
+   "en": "What does a non-contact (infrared) thermometer focus onto its detector to infer an object's temperature?",
+   "reworked": true,
+   "answerDe": "Die vom Gegenstand abgegebene Infrarotstrahlung",
+   "answerEn": "The infrared radiation the object emits",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1800",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "William Herschel discovers infrared radiation through its effect on a thermometer",
+    "labelDe": "William Herschel entdeckt die Infrarotstrahlung durch ihre Wirkung auf ein Thermometer"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Infrared_thermometer",
+    "title": "Infrared thermometer",
+    "lang": "en"
+   },
+   "notes": "Wikipedia: a lens focuses the infrared thermal radiation onto a detector. Laser dots on such devices only aid aiming. Card grammar slip: 'Most commercial non-contact thermometer'. Timeline from the Infrared article.",
+   "domain": "technology",
+   "sub": "inventions"
+  },
+  {
+   "category": 2,
+   "discipline": "Literature",
+   "cardText": "[Literature] Which famous fictional character lived at 221B Baker Street?\nA. Hercule Poirot\nB. Sherlock Holmes\nC. Miss Marple\nAnswer: B.",
+   "de": "Welcher berühmte fiktive Detektiv wohnte in der Londoner Baker Street 221B?",
+   "en": "Which famous fictional detective lived at 221B Baker Street in London?",
+   "reworked": true,
+   "answerDe": "Sherlock Holmes",
+   "answerEn": "Sherlock Holmes",
+   "timeline": {
+    "kind": "creation",
+    "start": "1887",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Arthur Conan Doyle's novel A Study in Scarlet introduces Sherlock Holmes's lodgings at 221B Baker Street",
+    "labelDe": "Arthur Conan Doyles Roman „Eine Studie in Scharlachrot“ führt Sherlock Holmes' Wohnung in der Baker Street 221B ein"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/221B_Baker_Street",
+    "title": "221B Baker Street",
+    "lang": "en"
+   },
+   "notes": "Open once the options are dropped; Holmes shared the rooms with Dr Watson.",
+   "domain": "literature",
+   "sub": "classics"
+  }
+ ]
+}

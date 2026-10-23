@@ -1,0 +1,537 @@
+{
+ "article": "a2007",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Acropolis_of_Athens",
+   "title": "Acropolis of Athens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:45.218Z",
+   "snapshot": "be98f975d9f6ffcc7434726f6964e45eb383d522593f2b0ef883d02268416f7d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Parthenon",
+   "title": "Parthenon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:39.089Z",
+   "snapshot": "b1ce9a88d51f3d4b2662c5c6a140161edd9c1c2aa5a4a3eea557608a21351416"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Erechtheion",
+   "title": "Erechtheion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Colosseum",
+   "title": "Colosseum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:59.292Z",
+   "snapshot": "95f3f7d0d6eddedea086dac15eaf4350b8e4b87bf75639dfbcb2c08a5757f913"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Weltwunder",
+   "title": "Weltwunder",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:43.761Z",
+   "snapshot": "8bb1e77de456f77198b3a1cf15dbe12001f2eddad4d045cbabda08185cd45074"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pantheon,_Rome",
+   "title": "Pantheon, Rome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:26.581Z",
+   "snapshot": "beade322230ade0dde4bb69b21bf534f92e7f77a0493b89ddfb775eec71f7a84"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/New_7_Wonders_of_the_World",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:46.217Z",
+   "snapshot": "d1d88becd2180f8cbe2a9cd93ea2cf14d5241a76991810e9637c1507dd1dd51a"
+  },
+  "s8": {
+   "url": "https://learningenglish.voanews.com/amp/a-23-2007-07-10-voa3-83132932/127221.html",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:43.953Z",
+   "snapshot": "b064fe8f97d8d5b38b1bbaa91c484e202c16cbe93822ce42123036fcdaed5827"
+  },
+  "s9": {
+   "url": "https://www.theacropolismuseum.gr/en/exhibit-halls/other-monuments-periklean-building-programme",
+   "title": "Other monuments of the Periklean building programme – Acropolis Museum",
+   "publisher": "Acropolis Museum",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:02.558Z",
+   "snapshot": "d7338ab21fbe22fe3beffae4cb31756fa488a04f0c4fc227f79cf8ea6facb90e"
+  },
+  "s10": {
+   "url": "https://www.pantheonroma.com/en/2026/02/11/the-pantheon-dome-a-marvel-of-ancient-roman-architecture/",
+   "title": "The Pantheon Dome: A Marvel of Ancient Roman Architecture",
+   "publisher": "Basilica di Santa Maria ad Martyres – Pantheon di Roma",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:02.849Z",
+   "snapshot": "2299766e2148d68a3e74ef19416f0ef2f831d27f5f050ec44a068dcc89bf9663"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Acropolis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c168"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Parthenon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Erechtheion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Colosseum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Neue sieben Weltwunder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-346"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pantheon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 45; transcript tp-394"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "New Seven Wonders of the World",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "New Seven Wonders of the World",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-346/3, u04: The printed statement is actually TRUE in the modern sense (the Colosseum was named one of the New7Wonders on 7 July 2007 in Lisbon; it was never an ancient wonder). The bank already asks the open question about that 2007 list, which fits either way; no change needed."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f10632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "New Seven Wonders of the World",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:04.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f10031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Acropolis of Athens (Ancient Greek: Ἡ Ἀκρόπολις τῶν Ἀθηνῶν, romanized: Hē Akropolis tōn Athēnōn; Modern Greek: Η Ακρόπολη των Αθηνών, romanized: I Akrópoli ton Athinón) is an ancient citadel located on a rocky outcrop above the city of Athens, Greece, and contains the remains of several ancient",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Acropolis” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f10032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Parthenon (; Ancient Greek: Παρθενών, romanised: Parthenōn [par.tʰe.nɔ̌ːn]; Greek: Παρθενώνας, romanised: Parthenónas [parθeˈnonas]) is a former temple on the Athenian Acropolis, Greece, that was dedicated to the goddess Athena.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parthenon” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f10034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Colosseum ( KOL-ə-SEE-əm; Italian: Colosseo [kolosˈsɛːo]) is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Colosseum” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f10632",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Neue sieben Weltwunder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Neue sieben Weltwunder”, “New Seven Wonders of the World”, “Новые семь чудес света”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f10632",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "New Seven Wonders of the World Are Announced After Voting Campaign",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Seven Wonders of the World” is on the snapshot of s8"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:04.418Z",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Pantheon (UK: , US: ; Latin: Pantheum, from Ancient Greek  Πάνθειον (Pantheion) '[temple] of all the gods') is an ancient Polytheist temple in Rome, Italy, originally built under Roman emperor Augustus (27 BC–AD 14) and reconstructed under Hadrian (117–138).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:04.418Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pantheon” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:12:13Z",
+   "target": "f10033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "leads to the higher Porch of the Maidens (or Caryatid Porch, or Korai Porch), a prostyle tetrastyle porch, or pteron, having six sculpted female figures as supports, all facing south and standing on a low wall.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:12:14Z",
+   "target": "f10033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Erechtheion. Karyatid. Kore B",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23",
+   "note": "the museum's caption ties the Karyatids (korai) to the Erechtheion; the count of six comes from the other source"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:12:16Z",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Almost two thousand years after it was built, the Pantheon's dome is still the world's largest unreinforced concrete dome.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:12:18Z",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It remains the largest unreinforced concrete dome in the world, a staggering achievement for an structure completed around 126 AD during the reign of Emperor Hadrian.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:51.912Z",
+   "target": "f10033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Erechtheion. Karyatid. Kore B",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:51.912Z",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Almost two thousand years after it was built, the Pantheon's dome is still the world's largest unreinforced concrete dome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:51.912Z",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It remains the largest unreinforced concrete dome in the world, a staggering achievement for an structure completed around 126 AD during the reign of Emperor Hadrian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:51.912Z",
+   "target": "f10033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The exhibition includes sculptures and architectural members from the Propylaia, the temple of Athena Nike and the Erechtheion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Erechtheion” is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:51.912Z",
+   "target": "f25213",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Discover the Pantheon Dome: Design, Structure, and Significance",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:51.912Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pantheon” is on the snapshot of s10"
+  }
+ ]
+}

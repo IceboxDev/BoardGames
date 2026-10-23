@@ -1,0 +1,394 @@
+{
+ "article": "a1445",
+ "sources": {
+  "s1": {
+   "url": "https://www.etymonline.com/word/regatta",
+   "title": "regatta – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Slalom_skiing",
+   "title": "Slalom skiing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:54.348Z",
+   "snapshot": "49c3b58653bbe6f093b7d41ceb7eb1d260ad6928845b9a1ab9b276a1744bc7b6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Calcutta_Polo_Club",
+   "title": "Calcutta Polo Club – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:55.421Z",
+   "snapshot": "fc3ddfdb8f66a436ab8d13509fe0c3f066be13e5d9d56d64221ae3a51b4b2b0d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Arnold_Lunn",
+   "title": "Arnold Lunn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:56.334Z",
+   "snapshot": "d307c4a20c3518c099c53ddd51136b0538c787ed7903480aafbbaaf71c721ff6"
+  },
+  "s5": {
+   "url": "https://www.treccani.it/vocabolario/regata/",
+   "title": "regata – Vocabolario Treccani",
+   "publisher": "Istituto della Enciclopedia Italiana (Treccani)",
+   "kind": "reference",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:39:59.496Z",
+   "snapshot": "dd67779475c102d58b375955e15bde5784e2b49e8857566a02e6349f0c32b331"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Regatta",
+   "title": "Regatta – DWDS",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW), Etymologisches Wörterbuch nach Pfeifer",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:39:59.055Z",
+   "snapshot": "00ae2780147d74fc885f3ec40b8b35e2af9e5578f62c1b274ee08f06627ec825"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Regatta",
+   "title": "Regatta – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:00.112Z",
+   "snapshot": "80376daa19728d551763469e5a6f68c6adb1a6cbebe5a6b09163827645a10715"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Regatta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Slalom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Polo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arnold Lunn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Telemark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.378Z",
+   "target": "f07223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Slalom is an alpine skiing and alpine snowboarding discipline, involving skiing between poles or gates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Slalom” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.378Z",
+   "target": "f07225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Calcutta Polo Club is a polo club located in Kolkata, West Bengal, India.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polo” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.378Z",
+   "target": "f24240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Arnold Lunn was born in Madras, eldest of three sons and a daughter of Sir Henry Simpson Lunn (1859–1939) and Mary Ethel, née Moore, daughter of a canon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arnold Lunn” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:27.378Z",
+   "target": "f24241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Slalåm was a trail used in Telemark by boys and girls not yet able to try themselves on the more challenging runs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.378Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Telemark” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:49:36Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "dal venez. regata, der. di regatar «gareggiare»",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:49:37Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Übernahme von ital. (venezian.) regata ‘Gondelwettfahrt’",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:49:38Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term comes from the Venetian language, with regata meaning \"contest, contention for mastery\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:12.879Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "dal venez. regata, der. di regatar «gareggiare»",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:12.879Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Übernahme von ital. (venezian.) regata ‘Gondelwettfahrt’",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:12.879Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The term comes from the Venetian language, with regata meaning \"contest, contention for mastery\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:12.879Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Regatta – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Regatta” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:12.879Z",
+   "target": "f07221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Boat racing (Regatta) is a sport in which boats, or other types of watercraft, race on water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:12.879Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Regatta” is on the snapshot of s7"
+  }
+ ]
+}

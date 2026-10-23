@@ -1,0 +1,470 @@
+{
+ "article": "a1186",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sinai_Peninsula",
+   "title": "Sinai Peninsula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:07.988Z",
+   "snapshot": "afe1b71fb1ca7e518b0f177446018cac62f41e575e01817bdd594e774edbb710"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Arabian_plate",
+   "title": "Arabian plate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:08.886Z",
+   "snapshot": "0b8abb27a150853116c4eba8353b993a2a49a38191d5a3de72da0c1f49b90c17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anatolia",
+   "title": "Anatolia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:09.966Z",
+   "snapshot": "4780da1ccf3bfd5502006ac5f715e73e5ea72164479e91977aecaf44f0b731dc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Jutland",
+   "title": "Battle of Jutland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:10.938Z",
+   "snapshot": "091633559387163f67630bc5bb18ba27c571910ad1b2e1cb61312d325c6f84fb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Corinth_Canal",
+   "title": "Corinth Canal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:37.822Z",
+   "snapshot": "0f82c0fd1216414a3f082420aaabee65ccf18ddce99a7615993caf2b4a32563b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Red_Sea",
+   "title": "Red Sea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:11.907Z",
+   "snapshot": "f648527ca25d8353d05e709df691a4caa2e95572d97b8d81e28ff732f5b9a565"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Balaklawa",
+   "title": "Balaklawa",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:09.139Z",
+   "snapshot": "f14bc580bd1676897892226f5f7b23052607db37153d236bb810b82bab2c0d0e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Arabian_Peninsula",
+   "title": "Arabian Peninsula – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:31.994Z",
+   "snapshot": "a7a249a922bf48a59fe777d3e2c6f11ff5ad1b3647275f8e1562c96b2723a4ab"
+  },
+  "s9": {
+   "url": "http://www.worldatlas.com/articles/15-largest-peninsulas-in-the-world.html",
+   "title": "15 Largest Peninsulas In The World",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:32.787Z",
+   "snapshot": "50170ab9096733ade6908cde91077e34ef78c5bef171704da34c4b3f27c56d72"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sinai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Arabian Peninsula",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anatolia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jutland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the Peloponnese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12067",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Red Sea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; history entry seq 37; transcript tp-019"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Krim",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-050"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f05926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Sinai Peninsula, or simply Sinai ( SY-ny; Arabic: سيناء, romanized: Seynāʾ or Sīnāʾ; Egyptian Arabic: سينا, romanized: Sīna), is a peninsula in Egypt, and the only part of the country located in West Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sinai” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Arabian plate consists mostly of the Arabian Peninsula; it extends westward to the Sinai Peninsula and the Red Sea and northward to the Levant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Arabian Peninsula” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f05928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anatolia (Greek: Ανατολή, Turkish: Anadolu), also known as Asia Minor, is a peninsula in West Asia that makes up the majority of the land area of Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anatolia” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f05929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Battle of Jutland was a naval battle between Britain's Royal Navy Grand Fleet, under Admiral Sir John Jellicoe, and the Imperial German Navy's High Seas Fleet, under Vice-Admiral Reinhard Scheer, during the First World War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jutland” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f05930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Completed in 1893, it cuts through the narrow Isthmus of Corinth and separates the Peloponnese peninsula from the Greek mainland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Peloponnese” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f12067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Red Sea is a mediterranean sea lying between the Arabian Peninsula and Africa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red Sea” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:45.367Z",
+   "target": "f12068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Balaklawa (ukrainisch und russisch Балаклава; krimtatarisch Balıqlava) ist wie Chersones eine altgriechische Siedlung auf der ukrainischen Halbinsel Krim und seit 1957 ein Stadtteil von Sewastopol.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.367Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Krim” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:16:16Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it is the world's largest peninsula—roughly comparable in size to India",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:16:18Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the Arabian Peninsula is not just the largest peninsula on Earth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:26.811Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it is the world's largest peninsula—roughly comparable in size to India",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:26.811Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the Arabian Peninsula is not just the largest peninsula on Earth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:26.811Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Arabian Peninsula, or simply Arabia, is a peninsula in West Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Arabian Peninsula” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:26.811Z",
+   "target": "f05927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "At roughly 1,250,000 square miles, the Arabian Peninsula is not just the largest peninsula on Earth, it is larger than Greenland, the largest island on Earth, which is a polite way of saying it is really a subcontinent that never filed the paperwork.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the Arabian Peninsula” is on the snapshot of s9"
+  }
+ ]
+}

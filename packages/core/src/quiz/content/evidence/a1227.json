@@ -1,0 +1,202 @@
+{
+ "article": "a1227",
+ "sources": {
+  "s1": {
+   "url": "https://fr.wikipedia.org/wiki/Abbaye_du_Mont-Saint-Michel",
+   "title": "Abbaye du Mont-Saint-Michel – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:48:26.677Z",
+   "snapshot": "ce47bd1aa06142b1347fef5223a44822fc1caa361f67fc3467eaee4c3f9a4b48"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Neuschwanstein_Castle",
+   "title": "Neuschwanstein Castle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:30.022Z",
+   "snapshot": "f8a6ec6ddaf544d3a1e172f98cf7f34e47de84774a5aae077a47ebbcc37b6ca9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Monte_Cassino",
+   "title": "Monte Cassino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:31.044Z",
+   "snapshot": "ce8822eb7d9539371bd8e5a8b929e192be2ab0acb7328c25c7300925dc3df10e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Melk_Abbey",
+   "title": "Melk Abbey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:31.880Z",
+   "snapshot": "dcfff9cfa8ac360f1f7535e680ca820ce84894415734d250098667936ef7b3b6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mont-Saint-Michel_Abbey",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:33.000Z",
+   "snapshot": "147120d4ce04fc378add615df7b084082c55a53930da14b2925ea2f88ba23d10"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mont-Saint-Michel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c103"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neuschwanstein Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monte Cassino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Melk Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:51.512Z",
+   "target": "f06131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "L'abbaye du Mont-Saint-Michel est un établissement monastique encore en activité.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mont-Saint-Michel” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:51.512Z",
+   "target": "f06132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neuschwanstein Castle (German: Schloss Neuschwanstein, pronounced [ˈʃlɔs nɔʏˈʃvaːnʃtaɪn]; Southern Bavarian: Schloss Neischwanstoa; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neuschwanstein Castle” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:51.512Z",
+   "target": "f06133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Abbey of Monte Cassino (today usually spelled Montecassino) is a Benedictine monastery on a rocky hill about 130 kilometres (80 mi) southeast of Rome, in the Latin Valley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monte Cassino” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:51.512Z",
+   "target": "f06135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Melk Abbey (German: Stift Melk) is a Benedictine abbey above the town of Melk, Lower Austria, on a rocky outcrop overlooking the Danube river, adjoining the Wachau valley, that belongs to the Austrian Congregation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:51.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Melk Abbey” is on the snapshot of s4"
+  }
+ ]
+}

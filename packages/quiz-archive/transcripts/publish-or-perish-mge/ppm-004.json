@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-004",
+ "image": "IMG20261022153152.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] For what discovery was Albert Einstein awarded the Nobel Prize in Physics in 1921?\nA. Theory of Relativity\nB. Quantum Theory\nC. Explanation of the Photoelectric Effect\nAnswer: C. Although Einstein is best known for his theory of relativity, it was his work on the photoelectric effect that earned him the Nobel Prize. This discovery was fundamental in establishing the concept of photons and the quantum nature of light, influencing the development of quantum mechanics.",
+   "de": "Für die Entdeckung des Gesetzes welches Effekts erhielt Albert Einstein den Nobelpreis für Physik 1921?",
+   "en": "For the discovery of the law of which effect was Albert Einstein awarded the 1921 Nobel Prize in Physics?",
+   "reworked": true,
+   "answerDe": "Der photoelektrische Effekt",
+   "answerEn": "The photoelectric effect",
+   "timeline": {
+    "kind": "event",
+    "start": "1922",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Albert Einstein is awarded the 1921 Nobel Prize in Physics for the law of the photoelectric effect",
+    "labelDe": "Albert Einstein erhält den Nobelpreis für Physik 1921 für das Gesetz des photoelektrischen Effekts"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+    "title": "Albert Einstein",
+    "lang": "en"
+   },
+   "notes": "The 1921 prize was awarded in 1922 (Wikipedia): 'for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect'.",
+   "domain": "science",
+   "sub": "physics"
+  },
+  {
+   "category": 2,
+   "discipline": "Ecology",
+   "cardText": "[Ecology] Which of the following is an effect of global climate change on the ocean?\nA. Increased ocean acidity\nB. Oceans becoming less salty\nC. Increase in the size of marine animals\nAnswer: A.",
+   "de": "Wie heißt die fortschreitende Abnahme des pH-Werts der Meere durch die Aufnahme von Kohlendioxid aus menschlichen Emissionen?",
+   "en": "What is the name for the ongoing fall in the ocean's pH caused by its uptake of carbon dioxide from human emissions?",
+   "reworked": true,
+   "answerDe": "Ozeanversauerung",
+   "answerEn": "Ocean acidification",
+   "timeline": {
+    "kind": "period",
+    "start": "1750",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": true,
+    "labelEn": "Ocean acidification since the start of the industrial era",
+    "labelDe": "Ozeanversauerung seit Beginn des Industriezeitalters"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ocean_acidification",
+    "title": "Ocean acidification",
+    "lang": "en"
+   },
+   "notes": "Strictly, acidification is caused by the ocean absorbing CO2, not by warming itself; it is usually grouped with the effects of climate change on oceans (Wikipedia). Start of the industrial era is approximate.",
+   "domain": "earth-space",
+   "sub": "oceans"
+  }
+ ]
+}

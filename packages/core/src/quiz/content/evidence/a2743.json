@@ -1,0 +1,226 @@
+{
+ "article": "a2743",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Transylvania",
+   "title": "Transylvania",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:08.808Z",
+   "snapshot": "2f1985f81854dd2b62c3b90f682a3ff0adc3cfb825c1782bc0e1c25928085ea1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vlad_the_Impaler",
+   "title": "Vlad the Impaler",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:33.184Z",
+   "snapshot": "d716a6d5fd0f7e24d6f79cd9e1f19d140288fa6eef19a0cce185fe5a37049091"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bran_Castle",
+   "title": "Bran Castle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:33.990Z",
+   "snapshot": "ddcb384c17ebfeb934e8a32c67256ba58fa0e25b43ac2f44cfe3b730128b0075"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Romania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript ppm-064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wallachia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bran Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sighișoara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alba Iulia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:06.639Z",
+   "target": "f25615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Transylvania is a historical and cultural region in Central Europe, encompassing central Romania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romania” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:06.639Z",
+   "target": "f25616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vlad III (1428–31 – 1476/77), commonly known as Vlad the Impaler (Romanian: Vlad Țepeș [ˈvlad ˈtsepeʃ]) or Vlad Dracula ( DRAK-yuu-lə, -⁠yə-; Romanian: Vlad Drăculea [ˈdrəkule̯a]), was Voivode of Wallachia during three separate reigns (1448, 1456–1462, and 1476).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wallachia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:06.639Z",
+   "target": "f25617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bran Castle (Romanian: Castelul Bran; German: Schloss Bran or Die Törzburg; ) is a castle in Bran, 25 kilometres (16 mi) southwest of Brașov.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bran Castle” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:06.639Z",
+   "target": "f25618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Historian Radu Florescu writes that Vlad was born in the Transylvanian Saxon town of Segesvár, Kingdom of Hungary (now Sighișoara, Romania), where his father lived in a three-story stone house from 1431 to 1435.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sighișoara” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:06.639Z",
+   "target": "f25619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It also contains Romania's second-largest city, Cluj-Napoca, and other very well preserved medieval iconic cities and towns such as Brașov, Sibiu, Târgu Mureș, Bistrița, Alba Iulia, Mediaș, and Sighișoara.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.639Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alba Iulia” is on the snapshot of s1"
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "article": "a0929",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Dirk_Nowitzki",
+   "title": "Dirk Nowitzki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:52.487Z",
+   "snapshot": "c85d3b050f83ee568b0a73a8ae53e861d3a04818a9ae91ea4949c6fd89ca4e0d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Michael_Jordan",
+   "title": "Michael Jordan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:53.748Z",
+   "snapshot": "eab7861ff438f8e3dd3bf09029a3f1517af75ebc307927aa931ad35c514e720f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kobe_Bryant",
+   "title": "Kobe Bryant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:54.627Z",
+   "snapshot": "2ee9301375c5bcab02f5e1378132c541502c80d0ef1f7a27914cf9a590303a1b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/2016_NBA_Finals",
+   "title": "2016 NBA Finals – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:55.444Z",
+   "snapshot": "e6845e203585e972acbcc0b4c5ba81c38dccfa7743cd74ec44c0d962331f0421"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/2021_NBA_Finals",
+   "title": "2021 NBA Finals – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:56.329Z",
+   "snapshot": "e0f28ba919c6fe8405e7912de823de02882534933fa99e44c126f491bdc03378"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Dirk_Nowitzki",
+   "title": "Dirk Nowitzki",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:29:54.310Z",
+   "snapshot": "7c866d7ed5c03557992a9c07246668859a0a10bd30b5ca7b3188ec07987b1ddb"
+  },
+  "s7": {
+   "url": "https://www.cbssports.com/nba/news/mavericks-announce-plans-to-retire-dirk-nowitzkis-no-41-jersey-on-jan-5",
+   "title": "Mavericks announce plans to retire Dirk Nowitzki's No. 41 jersey on Jan. 5",
+   "publisher": "CBS Sports",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:39.362Z",
+   "snapshot": "e8db52ff16331da4f9f5d9f9bb455cb38deef568b1852b0934c00f0f37c0ea86"
+  },
+  "s8": {
+   "url": "https://www.nba.com/news/dallas-mavericks-retire-dirk-nowitzkis-no-41-after-win-over-curry-warriors",
+   "title": "Mavericks retire Dirk Nowitzki's No. 41 in emotional ceremony",
+   "publisher": "NBA.com (The Associated Press)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:38.886Z",
+   "snapshot": "d046d56a67dd9faf7da77a2fb4573f904d3d3c7dc727e3acdbfd5ce5a78b23c9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04641",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dirk Nowitzki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04642",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Michael Jordan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04643",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kobe Bryant",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "LeBron James",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Giannis Antetokounmpo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nummer 41",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-263"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:06.257Z",
+   "target": "f04641",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After German national basketball coach Dirk Bauermann saw him score 24 points in a DJK game, he said, \"Dirk Nowitzki is the greatest German basketball talent of the last 10, maybe 15 years.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dirk Nowitzki” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:06.257Z",
+   "target": "f04642",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "At the end of Game 1, Orlando's Nick Anderson stripped Jordan from behind, leading to the game-winning basket for the Magic; he later commented that Jordan \"didn't look like the old Michael Jordan\", and said, \"No.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Jordan” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:06.257Z",
+   "target": "f04643",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tributes and memorials followed his death, including murals throughout Los Angeles, Kobe Bryant Day (8/24), and two statues outside Crypto.com Arena.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kobe Bryant” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:06.257Z",
+   "target": "f04644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cleveland's LeBron James was unanimously voted the NBA Finals Most Valuable Player (MVP), after averaging 29.7 points, 11.3 rebounds, 8.9 assists, 2.6 steals, and 2.3 blocks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LeBron James” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:06.257Z",
+   "target": "f04645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Milwaukee's Giannis Antetokounmpo was named NBA Finals Most Valuable Player (MVP).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giannis Antetokounmpo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:06.257Z",
+   "target": "f13828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Anfang Januar 2022 wurde Nowitzkis Nummer 41 bei den Mavericks im Rahmen eines NBA-Spiels gegen die Golden State Warriors geschützt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:06.257Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nummer 41” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:44:23Z",
+   "target": "f13828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Dallas Mavericks will retire Dirk Nowitzki's No. 41 jersey when they host the Golden State Warriors on Jan. 5, 2022, the team officially announced on Friday.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:44:24Z",
+   "target": "f13828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "DALLAS (AP) — Dirk Nowitzki wiped a tear as his No. 41 rose slowly above the court",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r070",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:35.741Z",
+   "target": "f13828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Dallas Mavericks will retire Dirk Nowitzki's No. 41 jersey when they host the Golden State Warriors on Jan. 5, 2022, the team officially announced on Friday.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:35.741Z",
+   "target": "f13828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "DALLAS (AP) — Dirk Nowitzki wiped a tear as his No. 41 rose slowly above the court",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:35.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

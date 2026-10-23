@@ -17,6 +17,24 @@ export const FARM_PREFER_MAX = 64;
  * `error: FARM_NODE_LIMIT_PREFIX + worker + ": …"`; that worker never claims it again.
  */
 export const FARM_NODE_LIMIT_PREFIX = "node limit on ";
+/**
+ * A job handed to the heavy lane (a search that blew up, or a decided position
+ * screened before it could) carries `error: heavyMark(…)` until it is done:
+ * normal lanes never claim it; the heavy lane takes the smallest estimate first.
+ */
+export const FARM_HEAVY_PREFIX = "heavy lane: ~";
+
+/** The marker of a job handed to the heavy lane: its estimated normal-lane hours, and why. */
+export function heavyMark(estHours: number, why: string): string {
+  return `${FARM_HEAVY_PREFIX}${estHours.toFixed(1)} h · ${why}`.slice(0, 500);
+}
+
+/** The estimate in a heavy-lane marker, or `null` when `error` isn't one. */
+export function heavyEstimate(error: string | null): number | null {
+  if (!error?.startsWith(FARM_HEAVY_PREFIX)) return null;
+  const h = Number.parseFloat(error.slice(FARM_HEAVY_PREFIX.length));
+  return Number.isFinite(h) ? h : 0;
+}
 export const EVAL_REQUEST_MAX = 400;
 
 /** A FEN as the trainer stores it (board, side, castling, ep, clocks). */
@@ -103,6 +121,31 @@ export const EvalRequestResponseSchema = z.object({
 });
 export type EvalRequestResponse = z.infer<typeof EvalRequestResponseSchema>;
 
+/** Positions a queue-place request may ask about (a colour's waiting positions). */
+export const EVAL_QUEUE_MAX = 3000;
+export const EvalQueueBodySchema = z.object({
+  items: z
+    .array(z.object({ fen: FenSchema, kind: EvalKindSchema }))
+    .min(1)
+    .max(EVAL_QUEUE_MAX),
+});
+/** Where each asked position stands at the farm, for an ETA. */
+export const EvalQueueResponseSchema = z.object({
+  /**
+   * Keyed by the request's FEN: running now, or queued with `ahead` jobs the
+   * farm takes first; a position with no job is left out.
+   */
+  places: z.record(
+    z.string(),
+    z.object({ status: z.enum(["queued", "running"]), ahead: z.number().int().nonnegative() }),
+  ),
+  /** Searches running at once (busy lanes). */
+  lanes: z.number().int().nonnegative(),
+  /** Mean seconds per finished job over the last day, if any. */
+  avgSeconds: z.number().nonnegative().nullable(),
+});
+export type EvalQueueResponse = z.infer<typeof EvalQueueResponseSchema>;
+
 // ── Farm ───────────────────────────────────────────────────────────────
 
 export const FarmClaimBodySchema = z.object({
@@ -124,6 +167,11 @@ export const FarmClaimBodySchema = z.object({
    * first, then the deepest waiting one — a worker that finishes lines.
    */
   order: z.enum(["reach", "deep"]).optional(),
+  /**
+   * `normal` (default) never takes a job handed to the heavy lane; `heavy`
+   * takes only those, its own unfinished one first, then the smallest estimate.
+   */
+  lane: z.enum(["normal", "heavy"]).optional(),
 });
 export const FarmJobSchema = z.object({
   id: z.number().int(),
@@ -156,6 +204,11 @@ export const FarmFailBodySchema = z.object({
   retry: z.boolean(),
   /** The worker was stopped, nothing went wrong: back in the queue, the attempt not counted. */
   released: z.boolean().optional(),
+  /**
+   * Hand the job to the heavy lane instead (back in the queue, the attempt not
+   * counted): how long it would take on a normal lane, in hours, and why.
+   */
+  heavy: z.object({ estHours: z.number().nonnegative(), why: z.string().max(200) }).optional(),
 });
 export const FarmOkSchema = z.object({ ok: z.literal(true) });
 
@@ -195,4 +248,9 @@ export const FarmPopularResponseSchema = z.object({
 export const FarmStatusSchema = EvalRequestResponseSchema.shape.farm.extend({
   done: z.number().int().nonnegative(),
   failed: z.number().int().nonnegative(),
+  /** Jobs handed to the heavy lane: waiting, and being searched. */
+  heavy: z.object({
+    queued: z.number().int().nonnegative(),
+    running: z.number().int().nonnegative(),
+  }),
 });

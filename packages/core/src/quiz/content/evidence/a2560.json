@@ -1,0 +1,242 @@
+{
+ "article": "a2560",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Verdienstorden_der_Bundesrepublik_Deutschland",
+   "title": "Verdienstorden der Bundesrepublik Deutschland",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:17.999Z",
+   "snapshot": "5c7d8e103838fc3514eb53303144480dbac8f5addf5db687aeb06a6d6e84f540"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bundeswappen_Deutschlands",
+   "title": "Bundeswappen Deutschlands",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:06.557Z",
+   "snapshot": "ca40b3ba62a24dba70fb10d205cf94837bac9b3be9be14eb7aa76b87889162c3"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Ludwig_Gies",
+   "title": "Ludwig Gies – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:19.207Z",
+   "snapshot": "ff38a267882d7dbbba9e49ce6e7ef926a279c382c97ea8896345b1ad7dab1c7e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Order_of_Merit_of_the_Federal_Republic_of_Germany",
+   "title": "Order of Merit of the Federal Republic of Germany – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:16.411Z",
+   "snapshot": "791405afe277f3ec30070b536d5fd7018e825b25bb0a879c624122b12bb8042b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Flagge_Deutschlands",
+   "title": "Flagge Deutschlands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:19.956Z",
+   "snapshot": "06912ffdc525c1f1295486b8a980ea4e63bb4290d4d9f05a6c60e7818d8f5d0f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sonderstufe des Großkreuzes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-090"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fette Henne",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-323"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ludwig Gies",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13709",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1951",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Artikel 22",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:38.574Z",
+   "target": "f13706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schließlich kam 1955 als unterste Stufe die Verdienstmedaille hinzu und als oberste Stufe die Sonderstufe des Großkreuzes, die jedoch schon 1953 verliehen worden war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sonderstufe des Großkreuzes” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:38.574Z",
+   "target": "f13707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der etwas füllig geratene Vogel, der bald den Spitznamen „Fette Henne“ bekam, wurde tausendfach auf Fotos, in Zeichnungen und auf Karikaturen abgebildet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fette Henne” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:38.574Z",
+   "target": "f13708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Von 1950 bis 1962 übernahm Ludwig Gies in Köln die Professur für Bildhauerei, Steinmetz- und Friedhofskunst.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig Gies” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:38.574Z",
+   "target": "f13709",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was created by the first President of the Federal Republic of Germany, Theodor Heuss, on 7 September 1951.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1951” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:38.574Z",
+   "target": "f13710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Artikel 22 bestimmt: „Die Bundesflagge ist schwarz-rot-gold.“ Die Bevölkerung hatte die neue Flagge jedoch noch nicht vollständig angenommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:38.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Artikel 22” is on the snapshot of s5"
+  }
+ ]
+}

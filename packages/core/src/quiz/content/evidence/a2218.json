@@ -1,0 +1,350 @@
+{
+ "article": "a2218",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Godzilla",
+   "title": "Godzilla",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:24.918Z",
+   "snapshot": "a0ff6a9a069be6e17d59d0962d035853926a5a774c271af72c4767b72042cd51"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Godzilla_(1954_film)",
+   "title": "Godzilla (1954 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:29.347Z",
+   "snapshot": "31221334ca7a220cbe121cce3c7ab4a9b9b290885ba99922db9aeb919bb21a1b"
+  },
+  "s3": {
+   "url": "https://www.hollywoodreporter.com/news/general-news/godzilla-first-set-a-path-destruction-1954-1213607/",
+   "title": "Hollywood Flashback: Godzilla First Set Off on a Path to Destruction in 1954",
+   "publisher": "The Hollywood Reporter",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:23.478Z",
+   "snapshot": "d5d18719728d0f04e807951e4729871d6003162831cf2263c4d9333415bbeb95"
+  },
+  "s4": {
+   "url": "https://www.scifijapan.com/godzilla-toho/godzilla-50th-anniversary-pressbook",
+   "title": "GODZILLA 50th Anniversary Pressbook",
+   "publisher": "SciFi Japan (Toho pressbook)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:23.631Z",
+   "snapshot": "a1045d789acac513dd3b3bf2877ce04fb9a7937d332dd5253e1fe06f2e8bd666"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11311",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Godzilla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11312",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ishirō Honda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11313",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Toho",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "gorilla and whale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11315",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Daigo Fukuryū Maru",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:38.385Z",
+   "target": "f11311",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Godzilla ( ɡod-ZIL-ə) is a fictional giant monster, or daikaijū, that first appeared in the 1954 film of the same name, directed by Ishirō Honda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Godzilla” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:38.385Z",
+   "target": "f11312",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Godzilla (Japanese: ゴジラ, Hepburn: Gojira) is a 1954 Japanese epic kaiju film directed and co-written by Ishirō Honda, with special effects by Eiji Tsuburaya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ishirō Honda” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:38.385Z",
+   "target": "f11313",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Produced and distributed by Toho, it is the first film in the Godzilla franchise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toho” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:38.385Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "gorilla and whale",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“gorilla and whale”, “Gorilla und Wal”, “горилла и кит”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:38.385Z",
+   "target": "f11315",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On March 1, 1954, just a few months before the film was made, the Japanese fishing vessel Daigo Fukuryū Maru (\"Lucky Dragon No.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.385Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Daigo Fukuryū Maru” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:21:57Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a portmanteau of the Japanese words gorira (ゴリラ, \"gorilla\") and kujira",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "the nickname origin story is disputed by Honda's widow, but the gorilla+whale etymology itself is not"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:22:00Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Japan, the gender-neutral creature was called Gojira (a mix of words for “gorilla” and “whale”).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:22:01Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "he originally imagined a gigantic gorilla-whale, as its name suggested (an amalgam of Gorilla-kujira, the latter the Japanese word for “whale”).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:25.025Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "a portmanteau of the Japanese words gorira (ゴリラ, \"gorilla\") and kujira",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:25.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:25.025Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In Japan, the gender-neutral creature was called Gojira (a mix of words for “gorilla” and “whale”).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:25.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:25.025Z",
+   "target": "f11314",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "he originally imagined a gigantic gorilla-whale, as its name suggested (an amalgam of Gorilla-kujira, the latter the Japanese word for “whale”).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:25.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  }
+ ]
+}

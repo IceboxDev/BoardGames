@@ -1,0 +1,242 @@
+{
+ "article": "a0517",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Imaginary_Invalid",
+   "title": "The Imaginary Invalid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:50.112Z",
+   "snapshot": "7c233ab661396e2a22b414ff7d6d61a0c0c54c17b1a754f3575dd1e122cba223"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tartuffe",
+   "title": "Tartuffe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:50.998Z",
+   "snapshot": "cad671d3801a0321f4e11db2e1898eccf66544d164f9cd4d93bc5bc36c377d19"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Miser",
+   "title": "The Miser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:52.084Z",
+   "snapshot": "62b9990df7062f3b6d32918e100349a482369e258b397bacd22c67934db09be6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Le_Bourgeois_gentilhomme",
+   "title": "Le Bourgeois gentilhomme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:53.032Z",
+   "snapshot": "567f4a8c4fe3c50c476fd0269401b287ab8dad07072835670041fa0da9910600"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Misanthrope",
+   "title": "The Misanthrope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:54.018Z",
+   "snapshot": "464330b84300191b4e2cb4c7c548a0c93531a5a43c76bfbd5885c9a3caee0ff8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Imaginary Invalid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c044; transcript tp-142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tartuffe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Miser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Bourgeois Gentleman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Misanthrope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:00.920Z",
+   "target": "f02581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Imaginary Invalid, The Hypochondriac, or The Would-Be Invalid (French title Le Malade imaginaire, [lə malad imaʒinɛːʁ]) is a three-act comédie-ballet by the French playwright Molière with dance sequences and musical interludes (H.495, H.495 a, H.495 b)  by Marc-Antoine Charpentier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Imaginary Invalid” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:00.920Z",
+   "target": "f02582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tartuffe, or The Impostor, or The Hypocrite (; French: Tartuffe, ou l'Imposteur, pronounced [taʁtyf u lɛ̃pɔstœʁ]), first performed in 1664, is a theatrical comedy and farce by Molière, written in poetic verse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tartuffe” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:00.920Z",
+   "target": "f02583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Miser (French: L'Avare; pronounced [lavaʁ]) is a five-act comedy in prose by the French playwright Molière.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Miser” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:00.920Z",
+   "target": "f02584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Le Bourgeois gentilhomme (French pronunciation: [lə buʁʒwa ʒɑ̃tijɔm], variously translated as The Bourgeois Gentleman, The Middle-Class Aristocrat or The Would-Be Noble) is a five-act comédie-ballet — a play with music, dance and singing — first performed on 14 October 1670 for the court of Louis",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Bourgeois Gentleman” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:00.920Z",
+   "target": "f02585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Misanthrope, or the Cantankerous Lover (French: Le Misanthrope ou l'Atrabilaire amoureux; French pronunciation: [lə mizɑ̃tʁɔp u latʁabilɛːʁ amuʁø]) is a 17th-century comedy in verse written by Molière.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.920Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Misanthrope” is on the snapshot of s5"
+  }
+ ]
+}

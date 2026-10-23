@@ -3,7 +3,7 @@ import { applyMove } from "../engine/apply";
 import { parseFen, START_FEN } from "../engine/fen";
 import { legalMoves } from "../engine/movegen";
 import { moveToUci } from "../engine/uci";
-import { TRAINER_FOLDERS, type TrainerFolder } from "./folders";
+import { fixedChoices, TRAINER_FOLDERS, type TrainerFolder } from "./folders";
 
 const all = (list: readonly TrainerFolder[]): TrainerFolder[] =>
   list.flatMap((f) => [f, ...all(f.children)]);
@@ -31,5 +31,14 @@ describe("trainer folders", () => {
     for (const name of ["1…b5 Pawn Gift", "2…Qh4 Queen Drop", "2…Ke7 Bongcloud"]) {
       expect(folders.find((f) => f.name === name)?.note).toMatch(/^Coined/);
     }
+  });
+
+  it("fixes your moves on the way into the farm's folders", () => {
+    const fixed = fixedChoices("w").map((f) => `${f.moves.join(" ")}|${f.uci}`);
+    expect(fixed).toContain("|e2e4");
+    expect(fixed).toContain("e2e4 e7e5 g1f3 b8c6|f1b5");
+    expect(fixed).toContain("e2e4 c7c6|d2d4");
+    expect(fixed).toContain("e2e4 e7e5 g1f3 g8f6|f3e5");
+    expect(new Set(fixed.map((f) => f.split("|")[0])).size).toBe(fixed.length);
   });
 });

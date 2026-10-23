@@ -1,0 +1,202 @@
+{
+ "article": "a1152",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bikini",
+   "title": "Bikini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:39:18.319Z",
+   "snapshot": "b59625ae4b3fac5a2a92d457aa534dc31356ad3b7f5de22f7dedefe028c6b955"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Adolphe_Sax",
+   "title": "Adolphe Sax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:03.188Z",
+   "snapshot": "d2b1f720f991339f2a553b83a0c7991dea9f38ffcc3a71a1d6ce5ad486827da2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tupperware",
+   "title": "Tupperware – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:04.211Z",
+   "snapshot": "a3b0b23e6645f01a19324f9f3d8c153a9702a1c5479f29813b850bb20a6571eb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ice_resurfacer",
+   "title": "Ice resurfacer",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:05.237Z",
+   "snapshot": "e25831e0c785b21600096eaaa00625fa642264afa1c19897ac7de670eae4247a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ern%C5%91_Rubik",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:06.217Z",
+   "snapshot": "a29b35fd3d23e7578aba4b5e7a49c475520414f8b36f16fb45a941896dc5497d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05756",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the bikini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c096"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05758",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the saxophone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tupperware",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-247"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:40.409Z",
+   "target": "f05756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The modern bikini swimsuit was introduced by French clothing designer Louis Réard in July 1946, and was named after the Bikini Atoll, where the first public test of a nuclear bomb had taken place four days before.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the bikini” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.409Z",
+   "target": "f05758",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Antoine-Joseph \"Adolphe\" Sax (French: [ɑ̃twan ʒozɛf adɔlf saks]; 6 November 1814 –  7 February 1894) was a Belgian inventor and musician who invented the saxophone in the early 1840s, patenting it in 1846.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the saxophone” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.409Z",
+   "target": "f05760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tupperware is an American company that manufactures and internationally distributes preparation, storage, and serving containers for the kitchen and home.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tupperware” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.409Z",
+   "target": "f14222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An ice resurfacer is a vehicle or hand-pushed device for cleaning and smoothing the surface of a sheet of ice, usually in an ice rink.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.409Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ice” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "article": "a1303",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Melitta_(Unternehmen)",
+   "title": "Melitta (Unternehmen) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:27.493Z",
+   "snapshot": "963db3661b9b840ffd4251e86e0240c2c4757e882fe9dacef9a71911b5c4e820"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Melitta_Bentz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:10:47.235Z",
+   "snapshot": "28847cb60f892e05fcb8b643dcc06debb3fe0084ad0da74dc194054b854f2de8"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Benz_Patent-Motorwagen_Nummer_1",
+   "title": "Benz Patent-Motorwagen Nummer 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:28.378Z",
+   "snapshot": "cf91526a75cc388aed721a680df51098b89e57b9fbde67af51d1d63246110ce3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Dieselmotor",
+   "title": "Dieselmotor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:30.508Z",
+   "snapshot": "0fa51b5ed5a41b656b67b78f774e35dba06a5dd9eb27b25a49118ed8b57b3342"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/King_C._Gillette",
+   "title": "King C. Gillette – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:31.202Z",
+   "snapshot": "311b762553f77eacd4a5740e1195ae9c96f9e880c53eb69fb70e0067b468d799"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kaffeefilter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kaffeefilter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 5"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Motorwagen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dieselmotor",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "safety razor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:03.294Z",
+   "target": "f06511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Melitta ist für den von ihr patentierten Kaffeefilter bekannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.294Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kaffeefilter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:03.294Z",
+   "target": "f06511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juni 1950 in Holzhausen an der Porta Westfalica) war eine deutsche Unternehmerin und entwickelte 1908 den vorgefertigten Einweg-Kaffeefilter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.294Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kaffeefilter” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:03.294Z",
+   "target": "f06512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Benz Patent-Motorwagen Nummer 1 ist das erste von Carl Benz gebaute Automobil mit Verbrennungsmotor.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.294Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Motorwagen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:03.294Z",
+   "target": "f06513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ein Dieselmotor ist ein Verbrennungsmotor mit Kompressionszündung (Selbstzündung ohne Zündkerze), dessen Kraftstoffluftgemisch innerhalb der Brennkammer gebildet wird (innere Gemischbildung) und dessen Drehmoment über die Menge des eingespritzten Kraftstoffes eingestellt wird (qualitative",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.294Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dieselmotor” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:03.294Z",
+   "target": "f06514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "King Camp Gillette (January 5, 1855 – July 9, 1932) was an American businessman who invented a bestselling safety razor and was the founder of the Gillette razor company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:03.294Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “safety razor” is on the snapshot of s5"
+  }
+ ]
+}

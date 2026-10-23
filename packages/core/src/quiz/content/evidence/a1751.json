@@ -1,0 +1,242 @@
+{
+ "article": "a1751",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Atropine",
+   "title": "Atropine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:19.249Z",
+   "snapshot": "cd92a1b91dd583a02c40695a96637f982602e5a19b287170444141bb87b1764b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Conium_maculatum",
+   "title": "Conium maculatum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:04.470Z",
+   "snapshot": "ecafe6be27d4bd40108aa574feb87a11633b78c4820f5f1363897efa0f1c8065"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mandrake",
+   "title": "Mandrake – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:05.552Z",
+   "snapshot": "2b2ec2d3ad63b829a7d060006d780e46e1d038a8d00a66b0e447ed3c30b38c4c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Coniine",
+   "title": "Coniine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:06.493Z",
+   "snapshot": "c9bd54c7d3e41f2c90ea4f945bed37f8cc981ca5b9053a67273adef31f3939b3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/George_Henry_Lamson",
+   "title": "George Henry Lamson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:07.926Z",
+   "snapshot": "f60a11b3e77180e25024ed9422c6269c5b4304a684794833a1203d435ebf00ac"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "deadly nightshade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "hemlock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "mandrake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "coniine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "aconitine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:16.698Z",
+   "target": "f08751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Atropine occurs naturally in a number of plants of the nightshade family, including deadly nightshade (Atropa belladonna), jimsonweed (Datura stramonium), mandrake (Mandragora officinarum) and angel's trumpet (Brugmansia).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deadly nightshade” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:16.698Z",
+   "target": "f08752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Conium maculatum, commonly known as hemlock (British English) or poison hemlock (in North America), is a highly poisonous flowering plant  and a nitrophile weed species in the carrot family Apiaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hemlock” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:16.698Z",
+   "target": "f08755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A mandrake is one of several toxic plant species with \"man-shaped\" roots and some uses in folk remedies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mandrake” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:16.698Z",
+   "target": "f23120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Coniine is a poisonous chemical compound, an alkaloid present in and isolable from poison hemlock (Conium maculatum), where its presence has been a source of significant economic, medical, and historico-cultural interest; coniine is also produced by the yellow pitcher plant (Sarracenia flava), and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coniine” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:16.698Z",
+   "target": "f23121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bedbrook, Lamson brought a rich Dundee cake, already cut into portions, which the three shared, and also gave Percy a capsule, which he persuaded the lad to swallow, from a batch that were later tested and found to contain the poison aconitine, as recorded in the case history at Old Bailey Online.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.698Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aconitine” is on the snapshot of s5"
+  }
+ ]
+}

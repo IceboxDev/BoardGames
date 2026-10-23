@@ -1,0 +1,249 @@
+{
+ "article": "a1524",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fordism",
+   "title": "Fordism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:23.965Z",
+   "snapshot": "a61f0e20cf8fb314bc2080fdffdc0d7f3699683ef1bff9a4880e75c86e1868ab"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Principles_of_Scientific_Management",
+   "title": "The Principles of Scientific Management – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:24.851Z",
+   "snapshot": "b034e13d09bef60d6a270b8801895a608a4ad90fe9f78a11064842b67b8ac088"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bessemer_process",
+   "title": "Bessemer process – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:25.947Z",
+   "snapshot": "ecfe7a93105e39da32c443986f164bd33c2a5bafb68f5e6e66d9840044721591"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rudolf_Diesel",
+   "title": "Rudolf Diesel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:33.197Z",
+   "snapshot": "99ed286b9ea50191a1668f0271a85a239578fb41fe4580630d829a25aece4689"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Moore%27s_law",
+   "title": "Moore's law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:19.424Z",
+   "snapshot": "33401efd2c5a2c91b9f153222d3ef42665598635343a9033ac0f3fe3fa068059"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gordon_Moore",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:06:26.844Z",
+   "snapshot": "c91aded981c9cfcb5f14e163db172cf4ce8b66ccee0082dd39903cf4f1ecdd3d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Henry Ford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c127"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frederick Winslow Taylor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Henry Bessemer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rudolf Diesel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gordon Moore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:38.963Z",
+   "target": "f07616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The concept is named after Henry Ford.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Ford” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:38.963Z",
+   "target": "f07617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Principles of Scientific Management (1911) is a monograph published by Frederick Winslow Taylor where he laid out his views on principles of scientific management, or industrial era organization and decision theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frederick Winslow Taylor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:38.963Z",
+   "target": "f07618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The modern process is named after its inventor, the Englishman Henry Bessemer, who took out a patent on the process in 1856.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Bessemer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:38.963Z",
+   "target": "f07619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At the time, the Diesel family suffered from financial difficulties, thus young Rudolf Diesel had to work in his father's workshop and deliver leather goods to customers using a barrow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudolf Diesel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:38.963Z",
+   "target": "f07620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The observation is named after Gordon Moore, the co-founder of Fairchild Semiconductor and Intel and former Chief Executive Officer of the latter, who in 1965 noted that the number of components per integrated circuit had been doubling every year, and projected that this rate of growth would",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:38.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gordon Moore” is on the snapshot of s5"
+  }
+ ]
+}

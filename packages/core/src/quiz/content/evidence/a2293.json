@@ -1,0 +1,617 @@
+{
+ "article": "a2293",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rome",
+   "title": "Rome",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:53.656Z",
+   "snapshot": "3581504126f39efd0ae83fa9b45021c5813cd2b740381c33043a40c29049d3e9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/New_York_City",
+   "title": "New York City",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:54.647Z",
+   "snapshot": "f68608e45bbc68c03f7a7585b05540888c7be5d61657e51120b1534ad239fcce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Amsterdam",
+   "title": "Amsterdam",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:55.648Z",
+   "snapshot": "ff95687314b53c2756a1db6fb54a84aec8d19d59f347aa095d370afa1693f1d8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nairobi",
+   "title": "Nairobi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:56.618Z",
+   "snapshot": "af4422e86f0e3d9853b6dcd39ab70042161344d4bd21b1a2cb026acbb9dc8d61"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Nairobi",
+   "title": "Nairobi",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:55.618Z",
+   "snapshot": "160dc0a18e3ef4a947aae8b603f4e623a41257ed9512ad5acb6ccf39106f3609"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Madrid",
+   "title": "Madrid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:34.972Z",
+   "snapshot": "e1de263fd1635ad67fdde0d81128b2fd37e31ea5ab8aedfd68c05d0c8fe06d11"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Montreal",
+   "title": "Montreal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:57.638Z",
+   "snapshot": "a02a4d93f1b08f29d2b5be77cb34520a33558427f8fb365e0b34ef5f62735645"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Edinburgh",
+   "title": "Edinburgh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:58.618Z",
+   "snapshot": "28d1ace9334b2ca6c621522782ddb2d41f18c519107532af7dcc4c4434df851a"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Detroit_River",
+   "title": "Detroit River",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:59.533Z",
+   "snapshot": "06ae546f183fc12dcddf9c26d71be01f549173d0082bf8dd5ca57ee69f67ce30"
+  },
+  "s10": {
+   "url": "https://www.geonames.org/5128581",
+   "title": "New York City, United States",
+   "publisher": "GeoNames",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:58.812Z",
+   "snapshot": "ff9653d050a82223121615b61e2b805e11324021e24a3c6920c50da7d4ef3a17"
+  },
+  "s11": {
+   "url": "https://www.geonames.org/3172394",
+   "title": "Naples, Italy",
+   "publisher": "GeoNames",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:59.634Z",
+   "snapshot": "7d0411d3981c9011b440a99db854f6f086b29779925df3b96362923ad99f1632"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Naples",
+   "title": "Naples",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:31:47Z"
+  },
+  "s13": {
+   "url": "https://www.geonames.org/2759794",
+   "title": "Amsterdam, Netherlands",
+   "publisher": "GeoNames",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:00.721Z",
+   "snapshot": "fadf96e4e6eb2fedd43bfee2e6ae02bbf23c332e797b0473a3e83eabb143f5a1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11842",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-225"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "about 41 degrees north",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-277"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11844",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "52° north",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-116"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nairobi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11845",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nairobi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 24; transcript tp-026"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Madrid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Montreal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11848",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Edinburgh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Canada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-126"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11842",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rome is the capital and largest city of Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rome” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "about 41 degrees north",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“about 41 degrees north”, “rund 41 Grad nördlicher Breite”, “около 41 градуса северной широты”) on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11844",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "52° north",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“52° north”, “52° nördlicher Breite”, “52° северной широты”) on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nairobi (  ny-ROH-bee) (Jiji kuu la Nairobi, in Swahili),  is the capital and largest city of Kenya, located in the south-central part of the country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nairobi” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11845",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nairobi [[na͜iˈroːbi] ] ist die Hauptstadt Kenias mit 4.906.000 Einwohnern (Schätzung für 2025), die auf einer Fläche von etwa 704 Quadratkilometern leben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nairobi” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Madrid is the capital and largest city of Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madrid” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Montreal (French: Montréal) is the largest city in the province of Quebec, the second-largest in Canada, and the eighth-largest in North America.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montreal” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f11848",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Edinburgh is the capital city of Scotland and one of its 32 council areas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edinburgh” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:29:50.036Z",
+   "target": "f25612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Detroit River forms a major element of the international border between the United States and Canada.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:50.036Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Canada” is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:31:37Z",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Coordinates 40.71427, -74.00597",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "New York 40.71° N."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:31:42Z",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Coordinates 40.85216, 14.26811",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Naples 40.85° N; both cities round to about 41° N, 0.14° apart."
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:31:47Z",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "40°50′09″N",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Naples 40.84° N vs New York 40°42′46″ N (40.71°) on the New York City page."
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T07:31:53Z",
+   "target": "f11844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Coordinates 52.37403, 4.88969",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "52.37° N = 52° north in whole degrees."
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T07:31:59Z",
+   "target": "f11844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "52°22′22″N",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:35.325Z",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Coordinates 40.71427, -74.00597",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:35.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:35.325Z",
+   "target": "f11843",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Coordinates 40.85216, 14.26811",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:35.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s11"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:35.325Z",
+   "target": "f11844",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Coordinates 52.37403, 4.88969",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:35.325Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s13"
+  }
+ ]
+}

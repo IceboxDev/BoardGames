@@ -1,0 +1,289 @@
+{
+ "article": "a1378",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tabasco_sauce",
+   "title": "Tabasco sauce – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:52.346Z",
+   "snapshot": "cbe47585af30ae3b348945fed2190bac74c96b872e4cec72c7e439ba2dc03ddf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tabasco",
+   "title": "Tabasco",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:53.458Z",
+   "snapshot": "2426e91745905d4bc40c6b840cf5500a82fa8afdf7bc1105c1993550e1095a54"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chihuahua_(dog_breed)",
+   "title": "Chihuahua (dog breed) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:54.234Z",
+   "snapshot": "e4a5c959d0893eeee153b54761b217cd9c5c4a0733ae998ccbdf65e649885489"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Agave_Landscape_and_Ancient_Industrial_Facilities_of_Tequila",
+   "title": "Agave Landscape and Ancient Industrial Facilities of Tequila – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:55.233Z",
+   "snapshot": "6da7c11d2673dc687fd4a570ade124db6046f59d9028940826b8f0ac995f3569"
+  },
+  "s5": {
+   "url": "https://es.wikipedia.org/wiki/Queso_Oaxaca",
+   "title": "Queso Oaxaca – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T04:57:52.583Z",
+   "snapshot": "3e8788b95dc51006f13d38588d0383da130b53690a2d129a733ecc153376370c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Puebla_(city)",
+   "title": "Puebla (city) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:56.330Z",
+   "snapshot": "a401e9f9036daa23aac31df503258281b93da5f622744a24840ab18285f48d34"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tabasco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tabasco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-141"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chihuahua",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tequila",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Oaxaca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Puebla",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:16.392Z",
+   "target": "f06886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tabasco is an American brand of hot sauce made from vinegar, tabasco peppers, and salt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tabasco” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:16.392Z",
+   "target": "f06886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tabasco, officially the Free and Sovereign State of Tabasco, is one of the 32 federal entities of Mexico.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tabasco” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:16.392Z",
+   "target": "f06887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Chihuahua or Chihuahueño is a Mexican breed of toy dog and the smallest recognized dog breed in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chihuahua” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:16.392Z",
+   "target": "f06888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Agave Landscape and Ancient Industrial Facilities of Tequila",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tequila” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:16.392Z",
+   "target": "f06889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "El queso Oaxaca, quesillo o queso de hebra es un queso, fresco y suave, originario de los Valles Centrales del estado de Oaxaca.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oaxaca” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:16.392Z",
+   "target": "f06890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Puebla de Zaragoza (Spanish pronunciation: [ˈpweβla] ; Nahuatl languages: Cuetlaxcoapan; Mezquital Otomi: Nde'ma), formally Heroica Puebla de Zaragoza, formerly Puebla de los Ángeles during colonial times, or known simply as Puebla, is the seat of Puebla Municipality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:16.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Puebla” is on the snapshot of s6"
+  }
+ ]
+}

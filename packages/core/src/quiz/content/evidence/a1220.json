@@ -1,0 +1,202 @@
+{
+ "article": "a1220",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sakrileg_(Roman)",
+   "title": "Sakrileg (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:48:00.234Z",
+   "snapshot": "6076b6e2f8822c18b48af730990292294f8c72976f03e29398e55235f31e69ad"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sanhedrin_trial_of_Jesus",
+   "title": "Sanhedrin trial of Jesus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:03.924Z",
+   "snapshot": "59b1abb052898443cdea9ffdad1e642b7f4664a8a68c302dc461e534aa69fa43"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pope_Gregory_VII",
+   "title": "Pope Gregory VII – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:04.912Z",
+   "snapshot": "6bcf0da62eb9b4d5ab6a31b6bb6f0cc5690131e362093ac1fd4cd48a6e2ccef3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Medieval_Inquisition",
+   "title": "Medieval Inquisition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:05.981Z",
+   "snapshot": "c9b827aeed1c0a90a0a381dfd706854249a2c8595c3f0297c9158cce670ac390"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Simony",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:48:06.903Z",
+   "snapshot": "b732756ee716a6cf4889dbf450f895080d7936eab4af18cc71baa521aba51a55"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sakrileg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c102"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blasphemy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Simony",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heresy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:50.212Z",
+   "target": "f06096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sakrileg ist der Titel der 2004 erschienenen Übersetzung eines Thrillers von Dan Brown, der 2003 unter dem englischen Titel The Da Vinci Code erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sakrileg” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:50.212Z",
+   "target": "f06097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "quiet, does not defend himself, rarely responds to the accusations, and is found guilty of: violating the Sabbath law (by healing on the Sabbath); threatening to destroy the Jewish Temple; practicing sorcery, exorcising people by the power of demons; blasphemy; and claiming to be the Messiah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blasphemy” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:50.212Z",
+   "target": "f06098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He was the first pope to introduce a policy of obligatory celibacy for the clergy, which had until then commonly married, and also attacked the practice of simony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simony” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:50.212Z",
+   "target": "f06099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Medieval Inquisition was a series of inquisitions (Catholic Church bodies charged with suppressing heresy) from around 1184, including the Episcopal Inquisition (1184–1230s) and later the Papal Inquisition (1230s).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:50.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heresy” is on the snapshot of s4"
+  }
+ ]
+}

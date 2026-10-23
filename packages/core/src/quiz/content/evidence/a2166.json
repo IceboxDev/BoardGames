@@ -1,0 +1,468 @@
+{
+ "article": "a2166",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ozone_layer",
+   "title": "Ozone layer",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:44.046Z",
+   "snapshot": "d1762f89e578c34a6967ddd85910b7d7e36a8996e1a3096033c3c9abeff93fe2"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Montreal-Protokoll",
+   "title": "Montreal-Protokoll",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:41.171Z",
+   "snapshot": "c80bccdad05de2cd254f55cff73b4263e8de4b4bb92a88392724cf0f0c6d02f7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+   "title": "Montreal Protocol",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:04.153Z",
+   "snapshot": "54e6583ce3c0d7ad6ecefeedde76911e7b84bca7301a1732ccac0410f307e8ca"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Paul_J._Crutzen",
+   "title": "Paul J. Crutzen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:44.906Z",
+   "snapshot": "ecaa77ab862606495f018fa0a12cf3ba186f21f84cfe0a011eedfe80cb2b730a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dobson_unit",
+   "title": "Dobson unit",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:45.880Z",
+   "snapshot": "d0eb514fa4c0f4dbabeaccc022d2efbf169af88a04ac66cdd444439c4be03d55"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Ozone_depletion",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:47.188Z",
+   "snapshot": "27360e6a627118eb304c5cf35b8d934491b32f0918f7a66a5a8152160bfba49b"
+  },
+  "s7": {
+   "url": "https://www.nobelprize.org/prizes/chemistry/1995/press-release/",
+   "title": "Press release: The 1995 Nobel Prize in Chemistry",
+   "publisher": "Royal Swedish Academy of Sciences / NobelPrize.org",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:05.172Z",
+   "snapshot": "47b3bdfe13a4dc40f395bc2f95231170ed144c01627596ef690c6fbca871821f"
+  },
+  "s8": {
+   "url": "https://www.nobelprize.org/prizes/chemistry/1995/crutzen/facts/",
+   "title": "Paul J. Crutzen – Facts",
+   "publisher": "NobelPrize.org",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:06.076Z",
+   "snapshot": "9a14b3aff0e4dc07174c91c0911cd96407a6725be581cca2aa08e3a3995871ce"
+  },
+  "s9": {
+   "url": "https://www.mpg.de/16360356/obituary-paul-j-crutzen",
+   "title": "Nobel Laureate Paul J. Crutzen has died",
+   "publisher": "Max Planck Society",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:06.028Z",
+   "snapshot": "8bdfde4bb3626bb51b291e5b50ac5ac979efebd90f54a620cec3caec822ec54a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10965",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ozone layer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-347"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10966",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Montreal-Protokoll",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-168"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10967",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vienna Convention",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paul Crutzen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dobson unit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:32.636Z",
+   "target": "f10965",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The ozone layer or ozone shield is a region of Earth's stratosphere that absorbs most of the Sun's ultraviolet radiation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ozone layer” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:32.636Z",
+   "target": "f10966",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "September 2009 das Wiener Übereinkommen und das Montreal-Protokoll die ersten Vertragswerke in der Geschichte der Vereinten Nationen, die von allen Mitgliedsstaaten ratifiziert wurden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montreal-Protokoll” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:32.636Z",
+   "target": "f10967",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Protocol, guided by the SAP, EEAP, and TEAP expert groups, continue to address ozone and climate challenges through Meetings of the Parties (MOP) to the Montreal Protocol, combined Conference of the Parties to the Vienna Convention (COP)-MOP meetings, and Open-ended Working Group (OEWG) meetings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna Convention” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:32.636Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Paul Crutzen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Paul Crutzen”, “Пауль Крутцен”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:32.636Z",
+   "target": "f10970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Dobson unit (DU) is a unit of measurement of the amount of a trace gas in a vertical column through the Earth's atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.636Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dobson unit” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:20Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "for their work in atmospheric chemistry, particularly concerning the formation and decomposition of ozone",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "Laureates: Paul Crutzen (Max-Planck-Institute for Chemistry, Mainz; Dutch citizen), Mario Molina, F. Sherwood Rowland"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:01:22Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Max-Planck-Institute for Chemistry, Mainz, Germany (Dutch citizen)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:01:56Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Paul Crutzen was born in Amsterdam, Netherlands, where he studied to become an engineer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:01:58Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Dutchman was Director of the Atmospheric Chemistry Department at the Max Planck Institute for Chemistry in Mainz, Germany, from 1980 to 2000. Together with Mario J. Molina and F. Sherwood Rowland he received the 1995 Nobel Prize for Chemistry",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:19.477Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Max-Planck-Institute for Chemistry, Mainz, Germany (Dutch citizen)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:19.477Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Paul Crutzen was born in Amsterdam, Netherlands, where he studied to become an engineer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:19.477Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Dutchman was Director of the Atmospheric Chemistry Department at the Max Planck Institute for Chemistry in Mainz, Germany, from 1980 to 2000. Together with Mario J. Molina and F. Sherwood Rowland he received the 1995 Nobel Prize for Chemistry",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:19.477Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Professor Paul Crutzen, Max-Planck-Institute for Chemistry, Mainz, Germany (Dutch citizen),",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paul Crutzen” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:19.477Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Paul Crutzen was born in Amsterdam, Netherlands, where he studied to become an engineer and later worked at the city’s Bridge Construction Bureau.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paul Crutzen” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:19.477Z",
+   "target": "f10968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "\"Paul Crutzen was a pioneer in many ways,\" says Martin Stratmann, President of the Max Planck Society.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:19.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paul Crutzen” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,205 @@
+{
+ "article": "a0004",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Babylon_Berlin",
+   "title": "Babylon Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:13:59.513Z",
+   "snapshot": "3cc6e7b972ab85dae2bceea1c3158c21d4d566c308698b248fd4d088f8a3934b",
+   "archiveUrl": "https://web.archive.org/web/20261023064942/https://en.wikipedia.org/wiki/Babylon_Berlin"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ku%E2%80%99damm_56",
+   "title": "Ku’damm 56 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:56.728Z",
+   "snapshot": "c099c023fd4448425598a2d7162bc93a85f5f0e8f78711cbf25a704e1daac8a9",
+   "archiveUrl": "https://web.archive.org/web/20261023065002/https://de.wikipedia.org/wiki/Ku%E2%80%99damm_56"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_Schwarm_(Fernsehserie)",
+   "title": "Der Schwarm (Fernsehserie) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:58.050Z",
+   "snapshot": "a7d0c51cec8a6ba4b9ab54c8b3c0e83f72928030a31a890d42a32b849bef6d75",
+   "archiveUrl": "https://web.archive.org/web/20261023065021/https://de.wikipedia.org/wiki/Der_Schwarm_(Fernsehserie)"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Heimat_%E2%80%93_Eine_deutsche_Chronik",
+   "title": "Heimat – Eine deutsche Chronik – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:13:58.681Z",
+   "snapshot": "65fbd0e5519d32f3dabc3e6ba6ea83470e3564062b100cdf6f209cfa30b261ee"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Heimat_(film_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:14:00.512Z",
+   "snapshot": "515c30c8092a6f37e83a85453bd0cf6d86d3055db58552869f0f7f148a70f1d3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00016",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Babylon Berlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00018",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ku'damm 56",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00019",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Schwarm",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00020",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heimat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:36.074Z",
+   "target": "f00016",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Babylon Berlin is a German neo-noir television series.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Babylon Berlin” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:36.074Z",
+   "target": "f00018",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ku’damm 56 ist ein dreiteiliger deutscher Fernsehfilm über den Aufbruch der Jugend in den 1950er Jahren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ku'damm 56” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:36.074Z",
+   "target": "f00019",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Schwarm ist eine vom ZDF produzierte internationale Fernsehserie, die auf dem von Frank Schätzing verfassten gleichnamigen Roman basiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Schwarm” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:36.074Z",
+   "target": "f00020",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heimat – Eine deutsche Chronik wurde 1981/1982 gedreht und ist der erste Teil der Heimat-Trilogie des Regisseurs Edgar Reitz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:36.074Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heimat” is on the snapshot of s4"
+  }
+ ]
+}

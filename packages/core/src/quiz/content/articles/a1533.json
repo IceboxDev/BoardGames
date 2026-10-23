@@ -1,0 +1,326 @@
+{
+ "id": "a1533",
+ "domain": "science",
+ "sub": "maths",
+ "titleEn": "Sine, Cosine and Their Four Relatives",
+ "titleDe": "Sinus, Cosinus und ihre vier Verwandten",
+ "titleRu": "Синус, косинус и четыре их родственника",
+ "bodyEn": "Trigonometry begins with a right-angled triangle. Pick one of its acute angles, call it θ, and the three sides acquire names relative to it: the hypotenuse (the longest side, opposite the right angle), the opposite side and the adjacent side. Every trigonometric function is simply a ratio of two of these sides, and because similar triangles have the same ratios, each function depends only on the angle, not on the size of the triangle.\n\nThe two fundamental functions are the sine, defined as the opposite side divided by the hypotenuse, and the cosine, the adjacent side divided by the hypotenuse. Both take values between −1 and 1, and they are linked by the Pythagorean identity sin²θ + cos²θ = 1 – a direct consequence of Pythagoras' theorem applied to the triangle. The word \"sine\" has a curious history: the Sanskrit jyā-ardha (\"half-chord\") became jiba in Arabic, was misread as jaib (\"bosom, fold\") and was translated into Latin as sinus by 12th-century translators such as Robert of Chester.\n\nThe remaining four functions are built from these two. Dividing the sine of an angle by its cosine gives the tangent, tan θ = sin θ / cos θ, which is also the opposite side over the adjacent side. The names \"tangent\" and \"secant\" were introduced by the Danish mathematician Thomas Fincke (1561–1656) in 1583, and the abbreviation \"tan\" was first printed by Albert Girard in 1626. Geometrically, the tangent of an angle is the length of the segment of the tangent line to the unit circle cut off by the angle's ray – hence the name. The tangent is undefined where the cosine is zero, at 90° and 270°, which is why its graph has vertical asymptotes. Its reciprocal, cosine over sine, is the cotangent – the \"co-\" names go back to Edmund Gunter's tables of 1620 – cot θ = cos θ / sin θ, or adjacent over opposite.\n\nThe last two are the reciprocals of the fundamental pair. The secant is 1 divided by the cosine (hypotenuse over adjacent), and the cosecant is 1 divided by the sine (hypotenuse over opposite). Georg Joachim Rheticus published the first tables of all six functions, secant and cosecant included, in 1551. They were indispensable in the days of navigation tables and logarithms but are rarely used on modern calculators, which is why many students never meet them. Two further identities follow at once from Pythagoras: 1 + tan²θ = sec²θ and 1 + cot²θ = csc²θ.\n\n| Function | Abbreviation | Ratio of sides | In terms of sin and cos |\n|---|---|---|---|\n| sine | sin | opposite / hypotenuse | – |\n| cosine | cos | adjacent / hypotenuse | – |\n| tangent | tan | opposite / adjacent | sin / cos |\n| cotangent | cot | adjacent / opposite | cos / sin |\n| secant | sec | hypotenuse / adjacent | 1 / cos |\n| cosecant | csc | hypotenuse / opposite | 1 / sin |\n\nA handy mnemonic for the first three is SOH-CAH-TOA: Sine = Opposite over Hypotenuse, Cosine = Adjacent over Hypotenuse, Tangent = Opposite over Adjacent. Beyond the triangle, all six functions extend to any angle via the unit circle, and the sine and cosine turn out to describe every periodic phenomenon from sound waves to alternating current – which is why a 2,000-year-old idea from Greek astronomy is still the first thing engineers reach for.",
+ "bodyDe": "Die Trigonometrie beginnt mit einem rechtwinkligen Dreieck. Man wähle einen seiner spitzen Winkel, nenne ihn θ, und die drei Seiten erhalten Namen relativ zu ihm: die Hypotenuse (die längste Seite, dem rechten Winkel gegenüber), die Gegenkathete und die Ankathete. Jede trigonometrische Funktion ist schlicht das Verhältnis zweier dieser Seiten, und weil ähnliche Dreiecke dieselben Verhältnisse haben, hängt jede Funktion nur vom Winkel ab, nicht von der Größe des Dreiecks.\n\nDie beiden Grundfunktionen sind der Sinus, definiert als Gegenkathete geteilt durch Hypotenuse, und der Cosinus, Ankathete geteilt durch Hypotenuse. Beide nehmen Werte zwischen −1 und 1 an und sind durch den trigonometrischen Pythagoras sin²θ + cos²θ = 1 verbunden – eine unmittelbare Folge des Satzes des Pythagoras im Dreieck. Das Wort „Sinus“ hat eine kuriose Geschichte: Das Sanskrit-Wort jyā-ardha („Halbsehne“) wurde im Arabischen zu jiba, als jaib („Busen, Falte“) verlesen und von Übersetzern des 12. Jahrhunderts wie Robert von Chester ins Lateinische als sinus übertragen.\n\nDie übrigen vier Funktionen werden aus diesen beiden gebildet. Teilt man den Sinus eines Winkels durch seinen Cosinus, erhält man den Tangens, tan θ = sin θ / cos θ, der zugleich Gegenkathete durch Ankathete ist. Die Namen „Tangens“ und „Sekans“ führte der dänische Mathematiker Thomas Fincke (1561–1656) 1583 ein, und die Abkürzung „tan“ druckte erstmals Albert Girard 1626. Geometrisch ist der Tangens eines Winkels die Länge des Abschnitts der Tangente an den Einheitskreis, den der Schenkel des Winkels abschneidet – daher der Name. Der Tangens ist dort nicht definiert, wo der Cosinus null ist, bei 90° und 270°, weshalb sein Graph senkrechte Asymptoten hat. Sein Kehrwert, Cosinus durch Sinus, ist der Kotangens – die Namen mit „Ko-“ gehen auf Edmund Gunters Tafeln von 1620 zurück – cot θ = cos θ / sin θ, also Ankathete durch Gegenkathete.\n\nDie letzten beiden sind die Kehrwerte des Grundpaares. Der Sekans ist 1 geteilt durch den Cosinus (Hypotenuse durch Ankathete), und der Kosekans ist 1 geteilt durch den Sinus (Hypotenuse durch Gegenkathete). Georg Joachim Rheticus veröffentlichte 1551 die ersten Tafeln aller sechs Funktionen, Sekans und Kosekans eingeschlossen. Sie waren in der Zeit der Navigationstafeln und Logarithmen unverzichtbar, werden auf modernen Taschenrechnern aber kaum noch gebraucht, weshalb viele Schüler ihnen nie begegnen. Zwei weitere Identitäten folgen unmittelbar aus Pythagoras: 1 + tan²θ = sec²θ und 1 + cot²θ = csc²θ.\n\n| Funktion | Abkürzung | Seitenverhältnis | Ausgedrückt durch sin und cos |\n|---|---|---|---|\n| Sinus | sin | Gegenkathete / Hypotenuse | – |\n| Cosinus | cos | Ankathete / Hypotenuse | – |\n| Tangens | tan | Gegenkathete / Ankathete | sin / cos |\n| Kotangens | cot | Ankathete / Gegenkathete | cos / sin |\n| Sekans | sec | Hypotenuse / Ankathete | 1 / cos |\n| Kosekans | csc | Hypotenuse / Gegenkathete | 1 / sin |\n\nEine bekannte deutsche Merkhilfe lautet „GAGA HühnerHof AG“: Die Zähler von Sinus, Cosinus, Tangens und Kotangens sind Gegenkathete, Ankathete, Gegenkathete, Ankathete, die Nenner Hypotenuse, Hypotenuse, Ankathete, Gegenkathete. Über das Dreieck hinaus lassen sich alle sechs Funktionen über den Einheitskreis auf beliebige Winkel ausdehnen, und Sinus und Cosinus erweisen sich als Beschreibung jedes periodischen Vorgangs von Schallwellen bis zum Wechselstrom – weshalb eine 2.000 Jahre alte Idee aus der griechischen Astronomie noch immer das Erste ist, wonach Ingenieure greifen.",
+ "bodyRu": "Тригонометрия начинается с прямоугольного треугольника. Выберите один из его острых углов, назовите его θ, и три стороны получат названия по отношению к нему: гипотенуза (самая длинная сторона, лежащая против прямого угла), противолежащий катет и прилежащий катет. Каждая тригонометрическая функция – просто отношение двух из этих сторон, а поскольку у подобных треугольников отношения одинаковы, каждая функция зависит только от угла, а не от размера треугольника.\n\nДве основные функции – это синус, определяемый как отношение противолежащего катета к гипотенузе, и косинус – отношение прилежащего катета к гипотенузе. Обе принимают значения от −1 до 1 и связаны основным тригонометрическим тождеством sin²θ + cos²θ = 1 – прямым следствием теоремы Пифагора для этого треугольника. У слова «синус» любопытная история: санскритское jyā-ardha («полухорда») превратилось в арабском в jiba, было ошибочно прочитано как jaib («пазуха, складка») и переведено на латынь как sinus переводчиками XII века, например Робертом Честерским.\n\nОстальные четыре функции строятся из этих двух. Разделив синус угла на его косинус, получаем тангенс, tg θ = sin θ / cos θ, – это также отношение противолежащего катета к прилежащему. Названия «тангенс» и «секанс» ввёл датский математик Томас Финке (1561–1656) в 1583 году, а сокращение «tan» впервые напечатал Альбер Жирар в 1626 году. Геометрически тангенс угла – это длина отрезка касательной к единичной окружности, который отсекает луч угла, – отсюда и название. Тангенс не определён там, где косинус равен нулю, – при 90° и 270°, поэтому у его графика есть вертикальные асимптоты. Обратная ему величина, косинус, делённый на синус, – это котангенс (названия с приставкой «ко-» восходят к таблицам Эдмунда Гантера 1620 года), ctg θ = cos θ / sin θ, то есть прилежащий катет, делённый на противолежащий.\n\nПоследние две функции – величины, обратные основной паре. Секанс равен единице, делённой на косинус (гипотенуза к прилежащему катету), а косеканс равен единице, делённой на синус (гипотенуза к противолежащему катету). Георг Иоахим Ретик опубликовал первые таблицы всех шести функций, включая секанс и косеканс, в 1551 году. Они были незаменимы во времена навигационных таблиц и логарифмов, но на современных калькуляторах почти не встречаются, поэтому многие школьники с ними так и не знакомятся. Ещё два тождества сразу следуют из теоремы Пифагора: 1 + tg²θ = sec²θ и 1 + ctg²θ = cosec²θ.\n\n| Функция | Сокращение | Отношение сторон | Через sin и cos |\n|---|---|---|---|\n| синус | sin | противолежащий катет / гипотенуза | – |\n| косинус | cos | прилежащий катет / гипотенуза | – |\n| тангенс | tg (tan) | противолежащий катет / прилежащий катет | sin / cos |\n| котангенс | ctg (cot) | прилежащий катет / противолежащий катет | cos / sin |\n| секанс | sec | гипотенуза / прилежащий катет | 1 / cos |\n| косеканс | cosec (csc) | гипотенуза / противолежащий катет | 1 / sin |\n\nАнглоязычные школьники запоминают первые три функции с помощью слова SOH-CAH-TOA: Sine = Opposite / Hypotenuse, Cosine = Adjacent / Hypotenuse, Tangent = Opposite / Adjacent. За пределами треугольника все шесть функций распространяются на любые углы через единичную окружность, а синус и косинус, как оказалось, описывают любые периодические явления – от звуковых волн до переменного тока; вот почему идея из греческой астрономии, которой две тысячи лет, по-прежнему первое, за что берутся инженеры.",
+ "notesEn": "German spells the cosine both „Cosinus“ and „Kosinus“, and the cotangent both „Kotangens“ and „Cotangens“; either form is correct.",
+ "notesDe": "Die Karte schreibt „Cosinus“; „Kosinus“ ist die andere gängige Schreibweise. Ebenso wird der Kotangens auch „Cotangens“ geschrieben.",
+ "notesRu": "По-немецки косинус пишут и «Cosinus», и «Kosinus», а котангенс – и «Kotangens», и «Cotangens»; верны оба варианта.",
+ "images": [
+  {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Academ_Base_of_trigonometry.svg/960px-Academ_Base_of_trigonometry.svg.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Trigonometric_functions",
+   "width": 600,
+   "height": 600,
+   "alt": {
+    "en": "Unit-circle diagram showing the sine, cosine, tangent, cotangent, secant and cosecant of an angle as line segments",
+    "de": "Diagramm am Einheitskreis, das Sinus, Kosinus, Tangens, Kotangens, Sekans und Kosekans eines Winkels als Strecken zeigt",
+    "ru": "Схема на единичной окружности: синус, косинус, тангенс, котангенс, секанс и косеканс угла в виде отрезков"
+   },
+   "caption": {
+    "en": "All six trigonometric functions of one angle drawn as segments on the unit circle – the tangent really lies on a tangent line, which is where its name comes from.",
+    "de": "Alle sechs Winkelfunktionen eines Winkels als Strecken am Einheitskreis – der Tangens liegt tatsächlich auf einer Tangente, daher sein Name.",
+    "ru": "Все шесть тригонометрических функций одного угла как отрезки на единичной окружности: тангенс действительно лежит на касательной, откуда и его название."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f07661",
+   "answerEn": "tangent",
+   "answerDe": "Tangens",
+   "answerRu": "тангенс",
+   "spans": {
+    "en": [
+     1113,
+     7
+    ],
+    "de": [
+     1195,
+     7
+    ],
+    "ru": [
+     1121,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1626",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Albert Girard first prints the abbreviations sin, cos and tan",
+    "labelDe": "Albert Girard verwendet erstmals gedruckt die Abkürzungen sin, cos und tan",
+    "labelRu": "Альбер Жирар впервые печатает сокращения sin, cos и tan"
+   },
+   "source": {
+    "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Girard_Albert/",
+    "title": "Albert Girard – MacTutor History of Mathematics",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07661",
+     "en": "What do you get by dividing the sine of an angle by its cosine?",
+     "de": "Was erhält man durch die Division des Sinus eines Winkels durch seinen Cosinus?",
+     "ru": "Что получится, если разделить синус угла на его косинус?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c128",
+      "category": 9
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q1129196",
+     "label": "tangent",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f07662",
+   "answerEn": "cotangent",
+   "answerDe": "Kotangens",
+   "answerRu": "котангенс",
+   "spans": {
+    "en": [
+     1693,
+     9
+    ],
+    "de": [
+     1769,
+     9
+    ],
+    "ru": [
+     1672,
+     9
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1620",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Edmund Gunter's tables introduce „cotangens“ and the other „co-“ names",
+    "labelDe": "Edmund Gunters Tafeln führen „Kotangens“ und die übrigen „Ko-“-Namen ein",
+    "labelRu": "Таблицы Эдмунда Гантера вводят «котангенс» и другие названия с «ко-»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Trigonometric_functions",
+    "title": "Trigonometric functions – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07662",
+     "en": "What do you get by dividing the cosine of an angle by its sine?",
+     "de": "Was erhält man durch die Division des Cosinus eines Winkels durch seinen Sinus?",
+     "ru": "Что получится, если разделить косинус угла на его синус?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q1264373",
+     "label": "cotangent",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f07663",
+   "answerEn": "secant",
+   "answerDe": "Sekans",
+   "answerRu": "секанс",
+   "spans": {
+    "en": [
+     1878,
+     6
+    ],
+    "de": [
+     1969,
+     6
+    ],
+    "ru": [
+     1895,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1561-01-06",
+    "end": "1656-04-24",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Thomas Fincke, mathematician",
+    "labelDe": "Thomas Fincke, Mathematiker",
+    "labelRu": "Томас Финке, математик"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Thomas_Fincke",
+    "title": "Thomas Fincke – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07663",
+     "en": "What do you get as the reciprocal of the cosine of an angle?",
+     "de": "Was erhält man als Kehrwert des Cosinus eines Winkels?",
+     "ru": "Какая функция угла обратна его косинусу?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q1467935",
+     "label": "secant",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f07664",
+   "answerEn": "cosecant",
+   "answerDe": "Kosekans",
+   "answerRu": "косеканс",
+   "spans": {
+    "en": [
+     1948,
+     8
+    ],
+    "de": [
+     2046,
+     8
+    ],
+    "ru": [
+     1974,
+     8
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1551",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Rheticus publishes the first tables of all six trigonometric functions",
+    "labelDe": "Rheticus veröffentlicht die ersten Tafeln aller sechs Winkelfunktionen",
+    "labelRu": "Ретик публикует первые таблицы всех шести тригонометрических функций"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Georg_Joachim_Rheticus",
+    "title": "Georg Joachim Rheticus – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07664",
+     "en": "What do you get as the reciprocal of the sine of an angle?",
+     "de": "Was erhält man als Kehrwert des Sinus eines Winkels?",
+     "ru": "Какая функция угла обратна его синусу?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q2631442",
+     "label": "cosecant",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f07665",
+   "answerEn": "sine",
+   "answerDe": "Sinus",
+   "answerRu": "синус",
+   "spans": {
+    "en": [
+     478,
+     4
+    ],
+    "de": [
+     513,
+     5
+    ],
+    "ru": [
+     494,
+     5
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1101",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Latin translators render the Arabic word for the half-chord as „sinus“ (12th century)",
+    "labelDe": "Lateinische Übersetzer geben das arabische Wort für die Halbsehne als „sinus“ wieder (12. Jahrhundert)",
+    "labelRu": "Латинские переводчики передают арабское слово для полухорды как «sinus» (XII век)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Trigonometric_functions",
+    "title": "Trigonometric functions – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w07665",
+     "en": "What do you get in a right-angled triangle by dividing the side opposite an angle by the hypotenuse?",
+     "de": "Was erhält man im rechtwinkligen Dreieck durch die Division der Gegenkathete eines Winkels durch die Hypotenuse?",
+     "ru": "Что получится в прямоугольном треугольнике, если разделить катет, противолежащий углу, на гипотенузу?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q152415",
+     "label": "sine",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "tags": [
+  "topic:mathematics/geometry/trigonometry",
+  "audience:international"
+ ],
+ "entities": [
+  {
+   "qid": "Q93344",
+   "label": "trigonometric function",
+   "role": "subject"
+  }
+ ]
+}

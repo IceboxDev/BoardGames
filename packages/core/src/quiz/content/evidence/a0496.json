@@ -1,0 +1,242 @@
+{
+ "article": "a0496",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Last_Crusade",
+   "title": "Indiana Jones and the Last Crusade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:14.238Z",
+   "snapshot": "b93a2e4a413957171f0961c5d15d04af0da9430acd297c8d1db5c5a394effd63"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Raiders_of_the_Lost_Ark",
+   "title": "Raiders of the Lost Ark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:15.245Z",
+   "snapshot": "93a5786f146ba5c0fa94c8e0d7f9df97ad807b7cea3f96fab28911f4a66cf4c8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Fugitive_(1993_film)",
+   "title": "The Fugitive (1993 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:16.011Z",
+   "snapshot": "53e9d1c013ec6b4c01e18c2398f29c02605c0a891ca0d9f8998e9f01b8377a02"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Air_Force_One_(film)",
+   "title": "Air Force One (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:16.984Z",
+   "snapshot": "0ded7f5819206531d3a43a12c092d3f7fa74ca786264f2bcbf5d042329cb03ef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Harrison_Ford_(silent_film_actor)",
+   "title": "Harrison Ford (silent film actor)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:18.437Z",
+   "snapshot": "d10a21e929fdaafa196a33b4cf4f1464c3be71dfe11fa1f35f22c0141a9df6bb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02476",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Indiana Jones and the Last Crusade",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02477",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raiders of the Lost Ark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02479",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Fugitive",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02480",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Air Force One",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harrison Ford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; history entry seq 38; transcript tp-210"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:58.068Z",
+   "target": "f02476",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Indiana Jones and the Last Crusade is a 1989 American action-adventure film directed by Steven Spielberg from a screenplay by Jeffrey Boam, based on a story by George Lucas and Menno Meyjes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Indiana Jones and the Last Crusade” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:58.068Z",
+   "target": "f02477",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raiders of the Lost Ark is a 1981 American action-adventure film directed by Steven Spielberg and written by Lawrence Kasdan, based on a story by George Lucas and Philip Kaufman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raiders of the Lost Ark” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:58.068Z",
+   "target": "f02479",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Fugitive is a 1993 American action thriller film, directed by Andrew Davis, with a script co-written by Jeb Stuart and David Twohy, from a previous story draft which Twohy had written.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Fugitive” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:58.068Z",
+   "target": "f02480",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Air Force One is a 1997 American political action thriller film directed and co-produced by Wolfgang Petersen and written by Andrew W.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Air Force One” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:58.068Z",
+   "target": "f11284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harrison Ford (March 16, 1884 – December 2, 1957) was an early 20th-century American actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.068Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harrison Ford” is on the snapshot of s5"
+  }
+ ]
+}

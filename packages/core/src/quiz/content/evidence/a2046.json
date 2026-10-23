@@ -1,0 +1,289 @@
+{
+ "article": "a2046",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Gender",
+   "title": "Gender – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:01.517Z",
+   "snapshot": "8340f3ec0b2f99c3c998207b7daa18863974b30c57293d7c54edb82b7381da17"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Intersectionality",
+   "title": "Intersectionality – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:02.312Z",
+   "snapshot": "0922fcc5aa8dc6132c6cd33da308cfaf4c8d6c02c7ab57f77a46506ab2fde159"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sexual_Politics",
+   "title": "Sexual Politics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:03.318Z",
+   "snapshot": "642eecf18a51cdd6b0e30f64ca35cc3fe3ee1249fb465de30a8395a612d19d50"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ethnocentrism",
+   "title": "Ethnocentrism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:04.293Z",
+   "snapshot": "24ea876f41e08b2eca4459f4d366876e2db7a8d64aa3f7a31e57b371af2f6b5a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gendered_associations_of_pink_and_blue",
+   "title": "Gendered associations of pink and blue",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:05.396Z",
+   "snapshot": "9cc41e8237492fc6b8512bdff93db3823bee4d055ceeebd5ecd5f0af574174f8"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Cultural_relativism",
+   "title": "Cultural relativism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:06.397Z",
+   "snapshot": "c59713b88f91d89d794941fff235f0faeed9ec74bae318a3199158ca3763e01e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gender",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Intersectionality",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Patriarchy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ethnocentrism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-132"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pink",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; history entry seq 40; transcript tp-338"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cultural relativism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-046"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:12.609Z",
+   "target": "f10226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gender is the range of social, psychological, cultural, and behavioral aspects of being a man (or boy), woman (or girl), or portraying a third gender.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:12.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gender” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:12.609Z",
+   "target": "f10227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Intersectionality is an analytical framework for understanding how groups' and individuals' social and political identities result in unique combinations of discrimination and privilege.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:12.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Intersectionality” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:12.609Z",
+   "target": "f10228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "By punishing women for their sexuality the male characters enforce the rules of patriarchy, which Millett defines as \"the birthright priority whereby males rule females.\" She feels these male characters are stand-ins for the authors themselves, whom she feels are mired in violent sexual myths",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:12.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Patriarchy” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:12.609Z",
+   "target": "f10230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ethnocentrism in social science and anthropology—as well as in colloquial English discourse—is the application of one's own culture or ethnicity as a frame of reference to judge other cultures, practices, behaviors, beliefs, and people, instead of using the standards of the particular culture",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:12.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ethnocentrism” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:12.609Z",
+   "target": "f13724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gendered associations of pink and blue",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:12.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pink” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:12.609Z",
+   "target": "f25933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cultural relativism is the view that the values (such as moral values) of a culture must be understood in their own cultural context and not judged according to the standards of a different culture.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:12.609Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cultural relativism” is on the snapshot of s6"
+  }
+ ]
+}

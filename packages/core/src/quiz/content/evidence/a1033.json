@@ -1,0 +1,242 @@
+{
+ "article": "a1033",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Prima_donna",
+   "title": "Prima donna – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:38.052Z",
+   "snapshot": "a0709d2e56fed730d39e34b16a8862c6141213a7f80cc082453240b898c80c23"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Overture",
+   "title": "Overture – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:39.079Z",
+   "snapshot": "3ba404383d11c89feda1e7c2715746d0f11c89aed6261ac2a7c7ad88b139dada"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nessun_dorma",
+   "title": "Nessun dorma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:40.065Z",
+   "snapshot": "e43e5ea0c9000525e053767e76ceee81af93debb2afc0651b1533240e551214e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aria",
+   "title": "Aria",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:41.062Z",
+   "snapshot": "26ae57942ee8664d92fc4298c743372a248bd9736ec9040efe10c3ee06a3770d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jacopo_Peri",
+   "title": "Jacopo Peri – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:42.042Z",
+   "snapshot": "e4f62dd596196a792b851b3617a47665e1ee8731c650f29a1934291edd06b121"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "prima donna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "overture",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-134"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "aria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "aria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-150"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "recitative",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:23.125Z",
+   "target": "f05161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In opera or commedia dell'arte, a prima donna (Italian: [ˈpriːma ˈdɔnna]; Italian for 'first woman'; pl.: prime donne) is the leading female singer in the company, the person to whom the prime roles would be given.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “prima donna” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:23.125Z",
+   "target": "f05162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An overture (from French ouverture, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “overture” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:23.125Z",
+   "target": "f05164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "'Let no one sleep') is an aria from the final act of Italian composer Giacomo Puccini's opera Turandot (text by Giuseppe Adami and Renato Simoni) and one of the best-known tenor arias in all opera.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aria” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:23.125Z",
+   "target": "f05164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In music, an aria ( , Italian: [ˈaːrja]; pl.: arie, Italian: [ˈaːrje]; arias in common usage; diminutive form: arietta, Italian: [aˈrjetta]; pl.: ariette; in English simply air) is a self-contained piece for one voice, with or without instrumental or orchestral accompaniment, normally part of a",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “aria” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:23.125Z",
+   "target": "f05165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Their work added to that of the Florentine Camerata of the previous decade, which produced the first experiments in monody, the solo song style over continuo bass which eventually developed into recitative and aria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.125Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “recitative” is on the snapshot of s5"
+  }
+ ]
+}

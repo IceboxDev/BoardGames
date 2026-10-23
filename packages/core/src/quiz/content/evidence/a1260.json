@@ -1,0 +1,562 @@
+{
+ "article": "a1260",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hexadecimal",
+   "title": "Hexadecimal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:37.568Z",
+   "snapshot": "cdc89cd1db15abb951f7a12bd309731bd6053fc659d152ad8e957eecd63f383e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Binary_number",
+   "title": "Binary number – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:38.692Z",
+   "snapshot": "5559d511ec91d0ea64cf4f08d267c06e1650cc47a234a0fdb61247d57249c988"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/PDP-8",
+   "title": "PDP-8 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:40.233Z",
+   "snapshot": "82c0861a7358dc217141cf2d2df598620694e996bc309343e30fd5f146315e92"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Two%27s_complement",
+   "title": "Two's complement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:40.564Z",
+   "snapshot": "9e290a4ec7b44da567800f5246513b39c00b5a78915f1fb73b499dbb6cefea3a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/MIME",
+   "title": "MIME – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:41.541Z",
+   "snapshot": "56149b3d2f3a6d5ea1f6141eb5a6aaf6ac94db2e158255f5a8323fc62ac88f93"
+  },
+  "s6": {
+   "url": "https://www.gnu.org/software/emacs/manual/html_node/emacs/Editing-Binary-Files.html",
+   "title": "Editing Binary Files (GNU Emacs Manual)",
+   "publisher": "GNU Project / Free Software Foundation",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:59.966Z",
+   "snapshot": "3f45ff3e7809f8e0d270caaa6cc9104c4c0aeb69b5ea84a244e662f425a2e6a6"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Hex-Editor",
+   "title": "Hex-Editor – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:59.892Z",
+   "snapshot": "bf441a71deeb2b25f51564bb7518d13829c3946b75f6c366c385244596ac1c7b"
+  },
+  "s8": {
+   "url": "https://man7.org/linux/man-pages/man1/hexdump.1.html",
+   "title": "hexdump(1) — Linux manual page",
+   "publisher": "man7.org (util-linux)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:00.019Z",
+   "snapshot": "0bff83cff57d9046fa7dc8933a48853f75ee8c05d857336ddcc216677b1547e8"
+  },
+  "s9": {
+   "url": "https://www.gnu.org/software/coreutils/manual/html_node/Numeric-Modes.html",
+   "title": "Numeric Modes (GNU Coreutils)",
+   "publisher": "GNU Project / Free Software Foundation",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:00.688Z",
+   "snapshot": "94601b554b00b0918f31cf3d179d5f3dd4199cba338d18396d9b1d13874e2eb4"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Octal",
+   "title": "Octal – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:00.323Z",
+   "snapshot": "dc551345ea48a4307d8ffcea87aa99d00ac5f834702cdca84a68359784beaa7a"
+  },
+  "s11": {
+   "url": "https://www.rfc-editor.org/rfc/rfc4648.html",
+   "title": "RFC 4648: The Base16, Base32, and Base64 Data Encodings",
+   "publisher": "IETF / RFC Editor",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:00.586Z",
+   "snapshot": "e815a4d753f88f3a08bcdeae0d1f2e2e58b2ec0ba5099e0c18b8b2dd9268eeb1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As hexadecimal numbers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the binary system",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the octal system",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In two's complement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With Base64",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:56.384Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "As hexadecimal numbers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“As hexadecimal numbers”, “Als Hexadezimalzahlen”, “в виде шестнадцатеричных чисел”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:56.384Z",
+   "target": "f06297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In the binary system, each bit represents an increasing power of 2, with the rightmost bit representing 20, the next representing 21, then 22, and so on.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “In the binary system” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:56.384Z",
+   "target": "f06298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In the octal system",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“In the octal system”, “Im Oktalsystem”, “в восьмеричной системе”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:56.384Z",
+   "target": "f06299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "as the sign to indicate positive (0) or negative (1) numbers, and nonnegative numbers are given their unsigned representation (6 is 0110, zero is 0000); however, in two's complement, negative numbers are represented by taking the bit complement of their magnitude and then adding one (−6 is 1010).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:56.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “In two's complement” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:56.384Z",
+   "target": "f06300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With Base64",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“With Base64”, “Mit Base64”, “с помощью Base64”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:41:55Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This command converts the file’s contents to hexadecimal and lets you edit the translation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23",
+   "note": "Emacs Hexl mode, a built-in hex editor"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:41:57Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Unter einem Hex-Editor (auch Hexeditor) versteht man ein Computerprogramm, mit dem sich die Bytes beliebiger Dateien als Folge von Hexadezimalzahlen darstellen und bearbeiten lassen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:41:58Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "hexdump - display file contents in hexadecimal, decimal, octal, or",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23",
+   "note": "hex viewer rather than editor; supports the display convention"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:00Z",
+   "target": "f06298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "As an alternative to giving a symbolic mode, you can give an octal (base 8) number that represents the mode.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:42:02Z",
+   "target": "f06298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Octal is sometimes used in computing instead of hexadecimal, perhaps most often in modern times in conjunction with file permissions under Unix systems (see chmod).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:42:04Z",
+   "target": "f06300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "A 65-character subset of US-ASCII is used, enabling 6 bits to be represented per printable character.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23",
+   "note": "64 characters plus '=' as padding"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:42:06Z",
+   "target": "f06300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "base64 – used to encode arbitrary octet sequences into a form that satisfies the rules of 7bit. Designed to be efficient for non-text 8 bit and binary data.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This command converts the file’s contents to hexadecimal and lets you edit the translation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Unter einem Hex-Editor (auch Hexeditor) versteht man ein Computerprogramm, mit dem sich die Bytes beliebiger Dateien als Folge von Hexadezimalzahlen darstellen und bearbeiten lassen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "hexdump - display file contents in hexadecimal, decimal, octal, or",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "As an alternative to giving a symbolic mode, you can give an octal (base 8) number that represents the mode.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Octal is sometimes used in computing instead of hexadecimal, perhaps most often in modern times in conjunction with file permissions under Unix systems (see chmod).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "A 65-character subset of US-ASCII is used, enabling 6 bits to be represented per printable character.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:38.962Z",
+   "target": "f06300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "base64 – used to encode arbitrary octet sequences into a form that satisfies the rules of 7bit. Designed to be efficient for non-text 8 bit and binary data.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:38.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  }
+ ]
+}

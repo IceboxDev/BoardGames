@@ -1,0 +1,514 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "earth-space/geology",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-052",
+    "category": 5
+   },
+   "factId": "f07067"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-283",
+    "category": 5
+   },
+   "factId": "f02990"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1930",
+   "baseHash": "d9c56b3abde0",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-019",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Blood, Fire and Corundum: the Great Gemstones",
+    "titleDe": "Blut, Feuer und Korund: die großen Edelsteine",
+    "bodyEn": "Gemstones are geology with a price tag, and the price has sometimes been paid in lives.\n\nDiamonds are the hardest natural material known, pure carbon crystallised under the pressure of the deep mantle and carried to the surface in volcanic pipes of kimberlite; they alone occupy the top mark, 10, on the Mohs scale of hardness. Their small size and enormous value make them the perfect currency for a warlord, and in the 1990s rough stones dug from alluvial gravels in Sierra Leone, Angola and the Democratic Republic of the Congo paid for the guns of the Revolutionary United Front, UNITA and a dozen militias. The stones became known as „blood diamonds“ or conflict diamonds. Under pressure from Global Witness and the United Nations, producing and trading countries met in Kimberley, South Africa, in 2000 and launched the Kimberley Process Certification Scheme in 2003, which requires every shipment of rough stones to carry a certificate of conflict-free origin. The Hollywood film „Blood Diamond“ (2006) fixed the phrase in the public mind. Today Russia and Botswana are the largest producers, and the trade in tainted stones has fallen from an estimated 15 percent of the market to well under one.\n\nTwo of the other great gems are the same mineral. Corundum, an aluminium oxide with hardness 9 whose name goes back through Tamil to the Sanskrit kuruvinda, is colourless when pure; a trace of chromium turns it into ruby, and iron with titanium into sapphire. The finest rubies, of the „pigeon's blood“ red, come from the Mogok valley in Myanmar, whose mines have been worked for at least eight centuries; the 25.59-carat Sunrise Ruby from Mogok sold for more than 30 million dollars at Sotheby's in Geneva in May 2015. Sapphire is usually blue but exists in every colour except red, and the velvety stones found in Kashmir in the 1880s remain the benchmark. The best-known sapphire of recent decades is the 12-carat oval in the engagement ring that passed from Diana, Princess of Wales, to the Duchess of Cambridge.\n\nEmerald is a variety of beryl coloured green by chromium or vanadium. It is softer than corundum, at 7.5 to 8, and almost always contains inclusions known as the „jardin“ – the garden – that gemmologists accept as a signature of authenticity. Cleopatra's mines in Egypt supplied the ancient world; since the 16th century the standard has been Colombia, where the mines of Muzo and Chivor in the eastern Andes still produce the most saturated stones.\n\nThe youngest of the great gems is tanzanite, the blue-violet form of the mineral zoisite. It was found in 1967 in the Merelani Hills near Arusha in northern Tanzania – the Tanzanian government credits the prospector Jumanne Ngoma, while a popular legend tells of a Maasai herder who noticed blue crystals after a grass fire – and was marketed the following year by Tiffany & Co., which named it after the only country in which it occurs. Almost every tanzanite is heat-treated to drive off a brownish tint, and because the deposit is a single strip a few kilometres long, it is often described as a thousand times rarer than diamond.\n\n| Gem | Mineral | Mohs hardness |\n|---|---|---|\n| diamonds | carbon | 10 |\n| ruby | corundum | 9 |\n| sapphire | corundum | 9 |\n| emerald | beryl | 7.5–8 |\n| tanzanite | zoisite | 6.5–7 |",
+    "bodyDe": "Edelsteine sind Geologie mit Preisschild, und der Preis wurde mitunter mit Menschenleben bezahlt.\n\nDiamanten sind das härteste bekannte natürliche Material, reiner Kohlenstoff, der unter dem Druck des tiefen Erdmantels kristallisierte und in vulkanischen Kimberlit-Schloten an die Oberfläche gelangte; sie allein besetzen die höchste Stufe, 10, der Mohs-Härteskala. Ihre geringe Größe und ihr enormer Wert machen sie zur perfekten Währung für einen Warlord, und in den 1990er Jahren bezahlten Rohsteine aus den Flussschottern von Sierra Leone, Angola und der Demokratischen Republik Kongo die Gewehre der Revolutionary United Front, der UNITA und eines Dutzends Milizen. Die Steine wurden als „Blutdiamanten“ oder Konfliktdiamanten bekannt. Unter dem Druck von Global Witness und den Vereinten Nationen trafen sich Förder- und Handelsländer im Jahr 2000 im südafrikanischen Kimberley und setzten 2003 das Kimberley-Zertifizierungssystem in Kraft, das für jede Lieferung von Rohsteinen ein Zertifikat konfliktfreier Herkunft verlangt. Der Hollywoodfilm „Blood Diamond“ (2006) verankerte den Begriff im öffentlichen Bewusstsein. Heute sind Russland und Botswana die größten Förderländer, und der Anteil belasteter Steine am Markt ist von geschätzten 15 Prozent auf deutlich unter eins gesunken.\n\nZwei der anderen großen Edelsteine sind dasselbe Mineral. Korund, ein Aluminiumoxid der Härte 9, dessen Name über das Tamil auf das Sanskritwort kuruvinda zurückgeht, ist in reiner Form farblos; eine Spur Chrom macht ihn zum Rubin, Eisen mit Titan zum Saphir. Die schönsten Rubine im Rot des „Taubenbluts“ stammen aus dem Mogok-Tal in Myanmar, dessen Minen seit mindestens acht Jahrhunderten ausgebeutet werden; der 25,59 Karat schwere Sunrise Ruby aus Mogok wurde im Mai 2015 bei Sotheby's in Genf für über 30 Millionen Dollar versteigert. Saphir ist meist blau, kommt aber in jeder Farbe außer Rot vor, und die samtigen Steine, die in den 1880er Jahren in Kaschmir gefunden wurden, sind bis heute der Maßstab. Der bekannteste Saphir der letzten Jahrzehnte ist das 12-karätige Oval im Verlobungsring, der von Diana, Prinzessin von Wales, an die Herzogin von Cambridge überging.\n\nDer Smaragd ist eine durch Chrom oder Vanadium grün gefärbte Varietät des Berylls. Er ist mit 7,5 bis 8 weicher als Korund und enthält fast immer Einschlüsse, die als „jardin“ – Garten – bekannt sind und von Gemmologen als Echtheitsmerkmal akzeptiert werden. Kleopatras Minen in Ägypten versorgten die antike Welt; seit dem 16. Jahrhundert ist Kolumbien der Maßstab, wo die Minen von Muzo und Chivor in den östlichen Anden noch immer die gesättigtsten Steine liefern.\n\nDer jüngste der großen Edelsteine ist der Tansanit, die blauviolette Form des Minerals Zoisit. Er wurde 1967 in den Merelani-Hügeln nahe Arusha im Norden Tansanias gefunden – die tansanische Regierung schreibt den Fund dem Prospektor Jumanne Ngoma zu, während eine populäre Legende von einem Massai-Hirten erzählt, dem nach einem Grasbrand blaue Kristalle auffielen –, und im Jahr darauf von Tiffany & Co. vermarktet, die ihn nach dem einzigen Land benannten, in dem er vorkommt. Fast jeder Tansanit wird erhitzt, um einen bräunlichen Stich auszutreiben, und weil die Lagerstätte ein einziger, wenige Kilometer langer Streifen ist, gilt er oft als tausendmal seltener als Diamant.\n\n| Edelstein | Mineral | Mohs-Härte |\n|---|---|---|\n| Diamanten | Kohlenstoff | 10 |\n| Rubin | Korund | 9 |\n| Saphir | Korund | 9 |\n| Smaragd | Beryll | 7,5–8 |\n| Tansanit | Zoisit | 6,5–7 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0730",
+   "baseHash": "0de6a07f981a",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-093",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Islands Built by Fire",
+    "titleDe": "Inseln aus Feuer",
+    "bodyEn": "Most of the world's islands owe their existence to volcanoes, and some of the most famous volcanoes are the islands they built.\n\nMauna Loa, \"Long Mountain\", is the largest volcano on Earth by volume. It makes up about half of the island of Hawaii, the youngest and biggest of the Hawaiian chain, which locals call the Big Island to distinguish it from the state that shares its name. The summit stands 4,169 metres above the sea, but the mountain's base lies 5,000 metres below the waves and has pressed the ocean floor down by a further 8 kilometres, so that measured from its true foot Mauna Loa rises some 17 kilometres, dwarfing Everest. It is a shield volcano, built of fluid basalt lava that spreads in thin sheets, and it has erupted 34 times since 1843, most recently from 27 November to 13 December 2022. Its neighbour Mauna Kea is slightly taller, and the smaller Kīlauea on its flank is the most active volcano in the world. All of them sit over a hot spot in the mantle; as the Pacific plate drifts north-west at about 10 centimetres a year, it carries old volcanoes away and new ones form, which is why the islands grow older from Hawaii to Kauai.\n\nEurope's giant is Mount Etna on Sicily. At around 3,350 metres – the height changes with each eruption – it is the highest active volcano on the continent, and it has been erupting almost continuously throughout recorded history; its most destructive eruption in modern times began on 11 March 1669 and sent lava into Catania. The Greeks placed the forge of Hephaestus beneath it; the philosopher Empedocles is said to have thrown himself into its crater. Etna is a UNESCO World Heritage Site and the reason the slopes around Catania are so fertile.\n\nIceland lies on the Mid-Atlantic Ridge, where the European and American plates are pulling apart, and has about 30 active volcanic systems. Eyjafjallajökull, whose name defeated newsreaders around the world, is a modest 1,651-metre volcano beneath a glacier. When its eruption turned explosive on 14 April 2010, meltwater turned its magma into fine ash that rose 9 kilometres and drifted over Europe; the airspace of more than twenty countries stayed closed for six days and about 100,000 flights were cancelled.\n\nSpain's highest mountain is not in the Pyrenees but in the Atlantic. Mount Teide on Tenerife, the largest of the Canary Islands, rises 3,715 metres from a vast caldera; measured from the seabed it is the third-tallest volcanic structure on Earth. Its last eruption began on 18 November 1909.\n\nAnd the most painted mountain in the world is a volcano too. Mount Fuji, 3,776 metres high, stands on Honshū, the main island of Japan, about 100 kilometres south-west of Tokyo. Its perfect cone has erupted at least sixteen times since 781; the last eruption, which began on 16 December 1707, covered Edo in ash. Thousands of pilgrims and hikers climb it every summer, and it has been a World Heritage Site since 2013.\n\nThe southernmost of them all stands on Ross Island, off the coast of Antarctica. Mount Erebus, 3,792 metres high, is the world's southernmost active volcano and one of the few on Earth with a lava lake, which has bubbled in its summit crater since at least the early 1970s. The British explorer James Clark Ross saw it erupting on 27 January 1841 and named it after his ship, HMS Erebus; a party from Ernest Shackleton's Nimrod expedition first reached its crater rim on 10 March 1908.\n\n| Volcano | Island | Height |\n|---|---|---|\n| Mauna Loa | Hawaii | 4,169 m |\n| Etna | Sicily | about 3,350 m |\n| Eyjafjallajökull | Iceland | 1,651 m |\n| Teide | Tenerife | 3,715 m |\n| Fuji | Honshū | 3,776 m |\n| Erebus | Ross Island (Antarctica) | 3,792 m |",
+    "bodyDe": "Die meisten Inseln der Welt verdanken ihre Existenz Vulkanen, und einige der berühmtesten Vulkane sind die Inseln, die sie aufgebaut haben.\n\nDer Mauna Loa, „Langer Berg“, ist dem Volumen nach der größte Vulkan der Erde. Er macht rund die Hälfte der Insel Hawaii aus, der jüngsten und größten der Hawaii-Kette, die Einheimische zur Unterscheidung vom gleichnamigen Bundesstaat Big Island nennen. Der Gipfel liegt 4.169 Meter über dem Meer, doch der Fuß des Berges liegt 5.000 Meter unter den Wellen und hat den Meeresboden um weitere 8 Kilometer eingedrückt, sodass sich der Mauna Loa von seinem wahren Fuß aus gemessen rund 17 Kilometer erhebt und den Everest zwergenhaft erscheinen lässt. Er ist ein Schildvulkan aus dünnflüssiger Basaltlava, die sich in dünnen Schichten ausbreitet, und ist seit 1843 34-mal ausgebrochen, zuletzt vom 27. November bis 13. Dezember 2022. Sein Nachbar Mauna Kea ist etwas höher, und der kleinere Kīlauea an seiner Flanke ist der aktivste Vulkan der Welt. Alle sitzen über einem Hotspot im Erdmantel; da die Pazifische Platte mit etwa 10 Zentimetern pro Jahr nach Nordwesten driftet, trägt sie alte Vulkane davon, und neue entstehen – deshalb werden die Inseln von Hawaii bis Kauai immer älter.\n\nEuropas Riese ist der Ätna auf Sizilien. Mit rund 3.350 Metern – die Höhe ändert sich mit jedem Ausbruch – ist er der höchste aktive Vulkan des Kontinents, und er bricht in der überlieferten Geschichte fast ununterbrochen aus; sein zerstörerischster Ausbruch der Neuzeit begann am 11. März 1669 und schickte Lava bis nach Catania. Die Griechen verlegten die Schmiede des Hephaistos unter ihn; der Philosoph Empedokles soll sich in seinen Krater gestürzt haben. Der Ätna ist UNESCO-Welterbe und der Grund, warum die Hänge um Catania so fruchtbar sind.\n\nIsland liegt auf dem Mittelatlantischen Rücken, wo die europäische und die amerikanische Platte auseinanderdriften, und besitzt rund 30 aktive Vulkansysteme. Der Eyjafjallajökull, an dessen Namen Nachrichtensprecher in aller Welt scheiterten, ist ein bescheidener, 1.651 Meter hoher Vulkan unter einem Gletscher. Als sein Ausbruch am 14. April 2010 in eine explosive Phase überging, verwandelte Schmelzwasser sein Magma in feine Asche, die 9 Kilometer hoch aufstieg und über Europa trieb; der Luftraum von mehr als zwanzig Ländern blieb sechs Tage lang gesperrt, rund 100.000 Flüge fielen aus.\n\nSpaniens höchster Berg steht nicht in den Pyrenäen, sondern im Atlantik. Der Teide auf Teneriffa, der größten der Kanarischen Inseln, erhebt sich 3.715 Meter hoch aus einer riesigen Caldera; vom Meeresboden aus gemessen ist er das dritthöchste Vulkangebäude der Erde. Sein letzter Ausbruch begann am 18. November 1909.\n\nUnd auch der meistgemalte Berg der Welt ist ein Vulkan. Der Fuji, 3.776 Meter hoch, steht auf Honshū, der Hauptinsel Japans, etwa 100 Kilometer südwestlich von Tokio. Sein vollkommener Kegel ist seit 781 mindestens sechzehnmal ausgebrochen; der letzte Ausbruch, der am 16. Dezember 1707 begann, bedeckte Edo mit Asche. Jeden Sommer besteigen ihn Tausende Pilger und Wanderer, und seit 2013 ist er Welterbe.\n\nDer südlichste von allen steht auf der Ross-Insel vor der Küste von Antarktika. Der 3.792 Meter hohe Mount Erebus ist der südlichste aktive Vulkan der Welt und einer der wenigen auf der Erde mit einem Lavasee, der seit mindestens Anfang der 1970er-Jahre in seinem Gipfelkrater brodelt. Der britische Entdecker James Clark Ross sah ihn am 27. Januar 1841 ausbrechen und benannte ihn nach seinem Schiff, der HMS Erebus; eine Gruppe von Ernest Shackletons Nimrod-Expedition erreichte am 10. März 1908 erstmals seinen Kraterrand.\n\n| Vulkan | Insel | Höhe |\n|---|---|---|\n| Mauna Loa | Hawaii | 4.169 m |\n| Ätna | Sizilien | etwa 3.350 m |\n| Eyjafjallajökull | Island | 1.651 m |\n| Teide | Teneriffa | 3.715 m |\n| Fuji | Honshū | 3.776 m |\n| Erebus | Ross-Insel (Antarktika) | 3.792 m |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0118",
+   "baseHash": "1511a814353c",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-173",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Plate Tectonics: How Colliding Plates Build Mountains",
+    "titleDe": "Plattentektonik: Wie kollidierende Platten Gebirge aufbauen",
+    "bodyEn": "The surface of the Earth is not a single shell but a mosaic of about fifteen large plates and dozens of smaller ones, each between 30 and 250 kilometres thick, drifting on the hot, slowly flowing rock of the mantle. They move at roughly the speed at which fingernails grow, a few centimetres a year, yet over millions of years those centimetres add up to oceans opening and mountain ranges rising. Almost every great feature of the planet's geography is a plate boundary in one of three forms: plates pulling apart, plates sliding past each other, or plates colliding.\n\nThe most dramatic collision on Earth is the one still under way in Asia. About 200 million years ago the Indian Plate broke away from the southern supercontinent of Gondwana and raced northwards across the Tethys Ocean at up to 20 centimetres a year, an extraordinary speed by geological standards. Some 50 million years ago it ran into the Eurasian Plate. Because both plates carry buoyant continental crust, neither could sink beneath the other; instead the crust crumpled and thickened, lifting the Himalayas and the Tibetan Plateau. The Indian Plate is still pushing north at about five centimetres a year, and Mount Everest continues to rise by a few millimetres annually.\n\nThe Alps are the product of a similar but slower squeeze. Since the Cretaceous, which began about 145 million years ago, the African Plate has been drifting north into Europe, closing the Tethys Ocean and folding its sediments into the arc that runs from Nice to Vienna. The Mediterranean is the shrinking remnant of that ocean, and the earthquakes of Italy, Greece and Turkey are the continuing symptoms of the collision.\n\nWhen an oceanic plate meets a continent the result is different. Oceanic crust is denser, so it dives beneath the continental plate in a process called subduction. Off the west coast of South America the Nazca Plate is sinking beneath the South American Plate along the Peru-Chile Trench; the melting of the descending slab feeds the volcanoes of the Andes, the longest mountain range on land, and the friction produces some of the most powerful earthquakes ever recorded, including the magnitude 9.5 Chilean earthquake of 22 May 1960.\n\nJapan sits at an even more crowded junction. The Pacific Plate, the largest plate on Earth, is sliding beneath the Okhotsk and Philippine Sea plates along the Japan Trench at about eight centimetres a year. The bending plate itself can break: on 3 March 1933 a magnitude 8.4 quake inside the Pacific Plate sent a tsunami onto the Sanriku coast. The sudden release of that strain caused the magnitude 9.0 Tōhoku earthquake and tsunami of 11 March 2011.\n\nWhere plates move apart, new crust forms. The Mid-Atlantic Ridge runs the length of the ocean between the North American Plate and the Eurasian Plate in the north, and between the South American and African plates further south; its full extent was confirmed by the British survey ship HMS Challenger in 1872. Iceland is the one place where the ridge rises above sea level, so a visitor can walk across the rift valley at Þingvellir, with North America on one side and Europe on the other, while the island grows wider by about two centimetres each year. The rift can even be dived: in Þingvellir, a national park since 1930, the Silfra fissure in Lake Þingvallavatn is filled with glacial meltwater filtered for decades through porous lava, so clear and only 2 to 4 °C cold that divers in dry suits float in the gap between the North American and the Eurasian plates – Iceland is the one country where that is possible.\n\n| Mountain range or feature | Plates involved | Boundary type |\n|---|---|---|\n| Himalayas | Indian Plate and Eurasian Plate | Continental collision |\n| Alps | African Plate and Eurasian Plate | Continental collision |\n| Andes | Nazca Plate and South American Plate | Subduction |\n| Japan Trench | Pacific Plate and Okhotsk Plate | Subduction |\n| Mid-Atlantic Ridge (Iceland) | North American Plate and Eurasian Plate | Divergent |",
+    "bodyDe": "Die Oberfläche der Erde ist keine einheitliche Schale, sondern ein Mosaik aus etwa fünfzehn großen und Dutzenden kleineren Platten, jede zwischen 30 und 250 Kilometer dick, die auf dem heißen, langsam fließenden Gestein des Erdmantels treiben. Sie bewegen sich ungefähr so schnell, wie Fingernägel wachsen, wenige Zentimeter im Jahr, doch über Jahrmillionen summieren sich diese Zentimeter zu sich öffnenden Ozeanen und aufsteigenden Gebirgen. Fast jedes große Merkmal der Erdgeographie ist eine Plattengrenze in einer von drei Formen: Platten, die auseinanderdriften, Platten, die aneinander vorbeigleiten, oder Platten, die zusammenstoßen.\n\nDie dramatischste Kollision der Erde ist die, die in Asien noch immer im Gange ist. Vor etwa 200 Millionen Jahren löste sich die Indische Platte vom südlichen Superkontinent Gondwana und raste mit bis zu 20 Zentimetern im Jahr, einem für geologische Verhältnisse außergewöhnlichen Tempo, nach Norden über den Tethys-Ozean. Vor rund 50 Millionen Jahren traf sie auf die Eurasische Platte. Da beide Platten leichte Kontinentalkruste tragen, konnte keine unter die andere absinken; stattdessen stauchte und verdickte sich die Kruste und hob den Himalaya und das Hochland von Tibet empor. Die Indische Platte drückt noch immer mit etwa fünf Zentimetern im Jahr nach Norden, und der Mount Everest wächst weiterhin um einige Millimeter jährlich.\n\nDie Alpen sind das Produkt einer ähnlichen, aber langsameren Pressung. Seit der Kreidezeit, die vor etwa 145 Millionen Jahren begann, driftet die Afrikanische Platte nach Norden gegen Europa, schließt den Tethys-Ozean und faltet dessen Sedimente zu dem Bogen, der von Nizza bis Wien reicht. Das Mittelmeer ist der schrumpfende Rest jenes Ozeans, und die Erdbeben in Italien, Griechenland und der Türkei sind die anhaltenden Symptome der Kollision.\n\nTrifft eine ozeanische Platte auf einen Kontinent, ist das Ergebnis ein anderes. Ozeanische Kruste ist dichter, also taucht sie in einem Vorgang namens Subduktion unter die kontinentale Platte ab. Vor der Westküste Südamerikas sinkt die Nazca-Platte entlang des Peru-Chile-Grabens unter die Südamerikanische Platte; das Aufschmelzen der abtauchenden Platte speist die Vulkane der Anden, des längsten Gebirges an Land, und die Reibung erzeugt einige der stärksten je gemessenen Erdbeben, darunter das chilenische Beben vom 22. Mai 1960 mit der Magnitude 9,5.\n\nJapan liegt an einer noch dichter gedrängten Nahtstelle. Die Pazifische Platte, die größte Platte der Erde, schiebt sich entlang des Japangrabens mit etwa acht Zentimetern im Jahr unter die Ochotsk- und die Philippinische Platte. Auch die sich biegende Platte selbst kann brechen: Am 3. März 1933 schickte ein Beben der Magnitude 8,4 im Inneren der Pazifischen Platte einen Tsunami an die Sanriku-Küste. Die plötzliche Entladung dieser Spannung verursachte am 11. März 2011 das Tōhoku-Erdbeben der Magnitude 9,0 und den Tsunami.\n\nWo Platten auseinanderweichen, entsteht neue Kruste. Der Mittelatlantische Rücken zieht sich der Länge nach durch den Ozean, im Norden zwischen der Nordamerikanischen und der Eurasischen Platte, weiter südlich zwischen der Südamerikanischen und der Afrikanischen Platte; seine volle Ausdehnung bestätigte 1872 das britische Vermessungsschiff HMS Challenger. Island ist der einzige Ort, an dem der Rücken über den Meeresspiegel ragt, sodass ein Besucher in Þingvellir durch das Grabental wandern kann, mit Nordamerika auf der einen und Europa auf der anderen Seite, während die Insel jedes Jahr um etwa zwei Zentimeter breiter wird. Man kann den Graben sogar betauchen: In Þingvellir, seit 1930 Nationalpark, ist die Silfra-Spalte im See Þingvallavatn mit Gletscherschmelzwasser gefüllt, das jahrzehntelang durch poröse Lava gefiltert wurde – so klar und nur 2 bis 4 °C kalt, dass Taucher in Trockenanzügen in der Lücke zwischen der Nordamerikanischen und der Eurasischen Platte schweben. Island ist das einzige Land, in dem das möglich ist.\n\n| Gebirge oder Struktur | Beteiligte Platten | Grenztyp |\n|---|---|---|\n| Himalaya | Indische Platte und Eurasische Platte | Kontinentalkollision |\n| Alpen | Afrikanische Platte und Eurasische Platte | Kontinentalkollision |\n| Anden | Nazca-Platte und Südamerikanische Platte | Subduktion |\n| Japangraben | Pazifische Platte und Ochotsk-Platte | Subduktion |\n| Mittelatlantischer Rücken (Island) | Nordamerikanische Platte und Eurasische Platte | Divergent |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1210",
+   "baseHash": "6468a0fee3f4",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-207",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Landscapes Carved by Ice",
+    "titleDe": "Von Eis geformte Landschaften",
+    "bodyEn": "During the ice ages of the past 2.58 million years, glaciers repeatedly advanced from Scandinavia across northern Germany and from the Alps into their foreland. When they melted back they left a whole vocabulary of landforms, most of which still shape how people farm, build and travel across northern Europe.\n\nThe most widespread of these is the moraine landscape: the rolling, hilly country of ridges, hollows and lakes built from the debris that a glacier carried and dumped. In northern Germany geographers speak of a \"glacial series\" that repeats from Schleswig-Holstein to Brandenburg – ground moraine plains, ridges of terminal moraine, outwash plains of sand and gravel, and the broad meltwater valleys that rivers such as the Elbe and the Oder still follow. The Mecklenburg Lake District and the hills of Holstein Switzerland are classic young moraine landscapes from the last, Weichselian glaciation.\n\nA terminal moraine is the specific ridge of rubble that marks the furthest point a glacier reached. Ice acts like a conveyor belt, carrying rock forward and dropping it at the snout; if the front stays in one position for a long time, the pile grows into a wall that may be tens of metres high. The ice sheets of the last glacial period reached their greatest extent during the Last Glacial Maximum, roughly between 24,000 and 16,000 BC. The Fläming ridge south of Berlin and the lake-fringing hills of the Alpine foreland are examples.\n\nNot every glacial landform is a heap. In high mountains, the ice begins its life in a cirque, an armchair-shaped hollow with steep back walls that the glacier gnaws into the mountainside by freezing onto and plucking at the rock. When the glacier is gone – as in countless mountain ranges after the last glacial period ended around 9700 BC – a small lake, a tarn, often fills the bowl. Downstream, the same ice broadens the valley into a U-shaped trough, and where such troughs run out to the sea and are drowned by it, they become a fjord – a word English borrowed from Norwegian in the 1670s: the long, deep, steep-walled inlets of Norway, Chile and New Zealand. Two Norwegian examples, the Geirangerfjord and the Nærøyfjord, were inscribed on the UNESCO World Heritage List in 2005.\n\nGlaciers are not always slow, either. Most creep forward by centimetres or a few metres a day, but some switch every few decades or centuries into a surge – the English technical term, used in German too, for a drastic, sporadic acceleration in which the ice flows ten to a thousand times faster than normal for one to fifteen years before falling quiet again. The Kutiah Glacier in the Karakoram is reported to have advanced about 12 kilometres between March and June 1953, some 113 metres a day; Svalbard and Alaska are home to many such surge-type glaciers.\n\nFinally, glaciers are the only agent of erosion that can carry a boulder the size of a house for hundreds of kilometres. A glacial erratic is a block of rock lying far from its geological home; the granite boulders scattered across northern Germany came from Sweden and Finland, and in the nineteenth century their origin was one of the key clues that convinced geologists of the reality of ice ages. On 24 July 1837 Louis Agassiz became the first to propose scientifically that the Earth had once been gripped by an ice age.\n\n| Landform | What it is | Formed by |\n|---|---|---|\n| moraine landscape | hilly country of glacial debris | deposition by the ice sheet |\n| terminal moraine | ridge marking the glacier's furthest advance | deposition at the ice front |\n| cirque | bowl-shaped hollow at a glacier's source | erosion in high mountains |\n| fjord | drowned glacial trough open to the sea | erosion, then sea-level rise |\n| glacial erratic | boulder carried far from its origin | transport in the ice |\n| surge | sudden, sporadic speed-up of a glacier | changes at the glacier bed |\n\nReading these forms, a geographer can trace the outline of ice sheets that vanished 12,000 years ago.",
+    "bodyDe": "Während der Eiszeiten der vergangenen 2,58 Millionen Jahre stießen Gletscher wiederholt von Skandinavien über Norddeutschland und von den Alpen in ihr Vorland vor. Als sie abschmolzen, hinterließen sie ein ganzes Vokabular von Landformen, von denen die meisten bis heute prägen, wie in Nordeuropa gewirtschaftet, gebaut und gereist wird.\n\nDie verbreitetste davon ist die Moränenlandschaft: das wellige, hügelige Land aus Rücken, Senken und Seen, aufgebaut aus dem Schutt, den ein Gletscher mitführte und ablud. In Norddeutschland sprechen Geographen von einer „glazialen Serie“, die sich von Schleswig-Holstein bis Brandenburg wiederholt – Grundmoränenplatten, Rücken der Endmoräne, Sanderflächen aus Sand und Kies und die breiten Urstromtäler, denen Flüsse wie Elbe und Oder noch heute folgen. Die Mecklenburgische Seenplatte und die Hügel der Holsteinischen Schweiz sind klassische Jungmoränenlandschaften aus der letzten, der Weichsel-Eiszeit.\n\nEine Endmoräne ist der konkrete Schuttwall, der den weitesten Punkt markiert, den ein Gletscher erreichte. Eis wirkt wie ein Förderband, das Gestein nach vorn trägt und an der Gletscherzunge fallen lässt; bleibt die Front lange an einer Stelle, wächst der Haufen zu einem Wall, der Dutzende Meter hoch sein kann. Ihre größte Ausdehnung erreichten die Eisschilde der letzten Kaltzeit im Letzteiszeitlichen Maximum, etwa zwischen 24.000 und 16.000 v. Chr. Der Fläming südlich von Berlin und die seeumsäumenden Hügel des Alpenvorlands sind Beispiele.\n\nNicht jede glaziale Landform ist ein Haufen. Im Hochgebirge beginnt das Eis sein Leben in einem Kar, einer sesselförmigen Hohlform mit steilen Rückwänden, die der Gletscher durch Anfrieren und Herausreißen von Gestein in den Berghang nagt. Ist der Gletscher verschwunden – wie in unzähligen Gebirgen nach dem Ende der letzten Kaltzeit um 9700 v. Chr. –, füllt oft ein kleiner See, ein Karsee, die Mulde. Talabwärts weitet dasselbe Eis das Tal zu einem U-förmigen Trog, und wo solche Tröge zum Meer hin auslaufen und von ihm überflutet werden, entsteht ein Fjord – ein norwegisches Wort, das das Englische in den 1670er-Jahren übernahm: die langen, tiefen, steilwandigen Meeresarme Norwegens, Chiles und Neuseelands. Zwei norwegische Beispiele, der Geirangerfjord und der Nærøyfjord, wurden 2005 in die Welterbeliste der UNESCO aufgenommen.\n\nGletscher sind auch nicht immer langsam. Die meisten kriechen Zentimeter oder wenige Meter am Tag voran, doch manche wechseln alle paar Jahrzehnte oder Jahrhunderte in einen Surge – den englischen Fachbegriff, der auch im Deutschen verwendet wird, für eine drastische, sporadische Beschleunigung, bei der das Eis ein bis fünfzehn Jahre lang zehn- bis tausendmal schneller fließt als sonst, ehe es wieder zur Ruhe kommt. Der Kutiah-Gletscher im Karakorum soll zwischen März und Juni 1953 rund 12 Kilometer vorgestoßen sein, etwa 113 Meter am Tag; auf Spitzbergen und in Alaska gibt es viele solcher Surge-Gletscher.\n\nSchließlich sind Gletscher die einzige Kraft der Erosion, die einen Felsblock von der Größe eines Hauses Hunderte von Kilometern weit tragen kann. Ein Findling ist ein Gesteinsblock, der weit von seiner geologischen Heimat entfernt liegt; die über Norddeutschland verstreuten Granitblöcke stammen aus Schweden und Finnland, und im 19. Jahrhundert war ihre Herkunft einer der entscheidenden Hinweise, die Geologen von der Realität der Eiszeiten überzeugten. Am 24. Juli 1837 schlug Louis Agassiz als Erster wissenschaftlich vor, dass die Erde einst eine Eiszeit erlebt hatte.\n\n| Landform | Was sie ist | Entstanden durch |\n|---|---|---|\n| Moränenlandschaft | hügeliges Land aus Gletscherschutt | Ablagerung durch das Inlandeis |\n| Endmoräne | Wall am weitesten Vorstoß des Gletschers | Ablagerung an der Eisfront |\n| Kar | schüsselförmige Hohlform am Ursprung eines Gletschers | Erosion im Hochgebirge |\n| Fjord | vom Meer überfluteter Gletschertrog | Erosion, dann Meeresspiegelanstieg |\n| Findling | weit von seinem Ursprung getragener Felsblock | Transport im Eis |\n| Surge | plötzliche, sporadische Beschleunigung eines Gletschers | Veränderungen am Gletscherbett |\n\nWer diese Formen lesen kann, zeichnet als Geograph die Umrisse von Eisschilden nach, die vor 12.000 Jahren verschwunden sind.",
+    "notesEn": "\"Moraine\", \"terminal moraine\" or \"young moraine landscape\" should also be accepted.",
+    "notesDe": "„Moräne“, „Endmoräne“ oder „Jungmoränenlandschaft“ sollten ebenfalls akzeptiert werden."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1414",
+   "baseHash": "1e7f8b7b6398",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-134",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-343",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-367",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Reading the Restless Earth: The Branches of the Geosciences",
+    "titleDe": "Die unruhige Erde lesen: Die Zweige der Geowissenschaften",
+    "bodyEn": "The Earth's crust looks solid and permanent, but it is in constant motion, and a whole family of sciences has grown up to describe it. Each has its own name, usually built from a Greek root and the ending „-logy“, and each answers a different question about the ground beneath our feet.\n\nThe broadest of them is tectonics, the study of the structure of the Earth's crust and the large-scale movements taking place within it: the folding and faulting of rock, the rise of mountain ranges and the opening of ocean basins. Its modern form is plate tectonics, the theory accepted since the 1960s that the rigid outer shell of the Earth is broken into about a dozen large plates that drift over the hotter, weaker mantle at a few centimetres per year. Where plates collide, mountains such as the Himalayas are pushed up; where they pull apart, new crust forms along mid-ocean ridges; where they grind past each other, as at the San Andreas Fault, earthquakes are the result. The German geophysicist Alfred Wegener first presented continental drift to the German Geological Society on 6 January 1912, but it took half a century and the mapping of the ocean floor before his idea was accepted.\n\nEarthquakes are the province of seismology. Seismologists record ground vibrations with seismographs, measure their strength on the moment magnitude scale that replaced the Richter scale, and use the way seismic waves bend and reflect to map the Earth's interior; it was seismology that revealed the liquid outer core and the solid inner core, the latter discovered by the Danish seismologist Inge Lehmann in 1936.\n\nVolcanology deals with volcanoes, magma and eruptions. Volcanologists monitor gas emissions, ground swelling and tremors to forecast eruptions, and classify volcanoes by their form and their explosiveness, from the gentle lava flows of Hawaii to the catastrophic explosion of Krakatoa on 27 August 1883.\n\nMineralogy is the study of minerals, the naturally occurring crystalline substances that make up rocks: their chemical composition, crystal structure and physical properties such as hardness, for which the Mohs scale, devised by the German mineralogist Friedrich Mohs in 1812, is still used. The discipline goes back to Georgius Agricola, whose „De Natura Fossilium“ of 1546 was the first scientific attempt to classify minerals. Petrology, the study of rocks as a whole, grew out of it: a petrologist studies rocks – how igneous, sedimentary and metamorphic rocks form and what they are made of – and the field gained its essential tool in 1828, when William Nicol's polarising prism made it possible to examine thin slices of rock under the microscope.\n\nPedology is another name for soil science. The word comes from the Greek pédon, „soil“ – it has nothing to do with paediatrics, the medicine of children – and the discipline was born in Russia, where Vasily Dokuchaev showed that soils form from parent rock, climate, living things and time, and where his pupil Nikolai Sibirtsev published the first textbook of soil science in 1899.\n\nSpeleology, from the Greek spélaion and Latin spelaeum, „cave“, takes the geosciences underground. Speleologists study caves – how they form, how they are mapped, their water, their climate and the creatures adapted to permanent darkness. The field's founder is the Frenchman Édouard-Alfred Martel (1859–1938), who explored hundreds of caves across Europe from the 1880s on.\n\nGlaciology is the science of ice: glaciers, ice sheets, sea ice and permafrost. Glaciologists drill ice cores – the first to reach the base of the Greenland ice sheet was completed at Camp Century in July 1966 – that preserve a record of past climate in trapped air bubbles, and their measurements of Greenland and Antarctica are central to forecasting sea-level rise.\n\n| Science | Studies |\n|---|---|\n| tectonics | structure and movements of the crust |\n| seismology | earthquakes and seismic waves |\n| volcanology | volcanoes and eruptions |\n| mineralogy | minerals and crystals |\n| glaciology | glaciers and ice |\n| petrology | rocks |\n| pedology | soils (soil science) |\n| speleology | caves (cave research) |\n\nTogether these disciplines make up the geosciences, and none of them works alone: an earthquake beneath a volcano on a plate boundary calls for all of them at once.",
+    "bodyDe": "Die Erdkruste wirkt fest und unveränderlich, doch sie ist ständig in Bewegung, und eine ganze Familie von Wissenschaften ist entstanden, um sie zu beschreiben. Jede hat ihren eigenen Namen, meist aus einer griechischen Wurzel und der Endung „-logie“ gebildet, und jede beantwortet eine andere Frage über den Boden unter unseren Füßen.\n\nDie umfassendste von ihnen ist die Tektonik, die Lehre vom Aufbau der Erdkruste und von den in ihr stattfindenden großräumigen Bewegungen: die Faltung und Verwerfung von Gestein, das Aufsteigen von Gebirgen und das Öffnen von Ozeanbecken. Ihre moderne Form ist die Plattentektonik, die seit den 1960er-Jahren anerkannte Theorie, dass die starre äußere Hülle der Erde in etwa ein Dutzend große Platten zerbrochen ist, die mit wenigen Zentimetern pro Jahr über den heißeren, weicheren Erdmantel driften. Wo Platten zusammenstoßen, werden Gebirge wie der Himalaya aufgetürmt; wo sie auseinanderweichen, entsteht an den mittelozeanischen Rücken neue Kruste; wo sie aneinander vorbeischrammen, wie an der San-Andreas-Verwerfung, sind Erdbeben die Folge. Der deutsche Geophysiker Alfred Wegener stellte die Kontinentalverschiebung am 6. Januar 1912 erstmals der Geologischen Vereinigung vor, doch es dauerte ein halbes Jahrhundert und die Kartierung des Meeresbodens, bis seine Idee anerkannt wurde.\n\nErdbeben sind das Gebiet der Seismologie. Seismologen zeichnen Bodenschwingungen mit Seismographen auf, messen ihre Stärke auf der Momenten-Magnituden-Skala, die die Richterskala abgelöst hat, und nutzen die Brechung und Reflexion seismischer Wellen, um das Erdinnere zu kartieren; die Seismologie war es, die den flüssigen äußeren und den festen inneren Erdkern enthüllte – Letzteren entdeckte die dänische Seismologin Inge Lehmann 1936.\n\nDie Vulkanologie befasst sich mit Vulkanen, Magma und Ausbrüchen. Vulkanologen überwachen Gasaustritte, Bodenhebungen und Beben, um Eruptionen vorherzusagen, und ordnen Vulkane nach Form und Explosivität, von den sanften Lavaströmen Hawaiis bis zur katastrophalen Explosion des Krakatau am 27. August 1883.\n\nDie Mineralogie ist die Wissenschaft von den Mineralen, den natürlich vorkommenden kristallinen Stoffen, aus denen Gesteine bestehen: ihrer chemischen Zusammensetzung, ihrem Kristallbau und ihren physikalischen Eigenschaften wie der Härte, für die noch immer die Mohs-Skala verwendet wird, die der deutsche Mineraloge Friedrich Mohs 1812 entwickelte. Die Disziplin geht auf Georgius Agricola zurück, dessen „De Natura Fossilium“ von 1546 der erste wissenschaftliche Versuch war, Minerale zu ordnen. Die Petrologie, die Lehre von den Gesteinen als Ganzem, ging aus ihr hervor: Ein Petrologe beschäftigt sich mit Gesteinen – damit, wie magmatische, Sediment- und metamorphe Gesteine entstehen und woraus sie bestehen –, und sein wichtigstes Werkzeug erhielt das Fach 1828, als William Nicols Polarisationsprisma es möglich machte, Dünnschliffe von Gestein unter dem Mikroskop zu untersuchen.\n\nPedologie ist ein anderer Name für die Bodenkunde. Das Wort kommt vom griechischen pédon, „Boden“ – mit der Pädiatrie, der Kinderheilkunde, hat es nichts zu tun –, und die Disziplin entstand in Russland, wo Wassili Dokutschajew zeigte, dass Böden aus Ausgangsgestein, Klima, Lebewesen und Zeit entstehen, und wo sein Schüler Nikolai Sibirzew 1899 das erste Lehrbuch der Bodenkunde veröffentlichte.\n\nDie Speläologie, vom griechischen spélaion und lateinischen spelaeum, „Höhle“, führt die Geowissenschaften unter die Erde. Speläologen erforschen Höhlen – wie sie entstehen, wie man sie vermisst, ihr Wasser, ihr Klima und die Tiere, die an ewige Dunkelheit angepasst sind. Als Begründer des Fachs gilt der Franzose Édouard-Alfred Martel (1859–1938), der ab den 1880er-Jahren Hunderte Höhlen in ganz Europa erkundete.\n\nDie Glaziologie ist die Wissenschaft vom Eis: Gletscher, Eisschilde, Meereis und Permafrost. Glaziologen bohren Eiskerne – der erste, der die Basis des grönländischen Eisschilds erreichte, wurde im Juli 1966 in Camp Century vollendet –, die in eingeschlossenen Luftblasen ein Archiv des vergangenen Klimas bewahren, und ihre Messungen in Grönland und der Antarktis sind für die Vorhersage des Meeresspiegelanstiegs von zentraler Bedeutung.\n\n| Wissenschaft | Untersucht |\n|---|---|\n| Tektonik | Aufbau und Bewegungen der Erdkruste |\n| Seismologie | Erdbeben und seismische Wellen |\n| Vulkanologie | Vulkane und Ausbrüche |\n| Mineralogie | Minerale und Kristalle |\n| Glaziologie | Gletscher und Eis |\n| Petrologie | Gesteine |\n| Pedologie | Böden (Bodenkunde) |\n| Speläologie | Höhlen (Höhlenforschung) |\n\nZusammen bilden diese Disziplinen die Geowissenschaften, und keine von ihnen arbeitet allein: Ein Erdbeben unter einem Vulkan an einer Plattengrenze ruft sie alle auf einmal auf den Plan.",
+    "notesEn": "„Plate tectonics“ is a common alternative answer for tectonics. Pedology (Greek pédon, soil) must not be confused with paediatrics.",
+    "notesDe": "Die Formulierung der Karte ist die Duden-Definition von „Tektonik“; „Plattentektonik“ gilt als gängige Alternativantwort. Pedologie (griechisch pédon, Boden) ist nicht mit Pädiatrie oder Pädologie (Kinder) zu verwechseln."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-026",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-179",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-204",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-176",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the large, cauldron-shaped hollow called that forms when the ground collapses into a volcano's emptied magma chamber?",
+      "de": "Wie heißt der große, kesselförmige Einsturzkrater, der entsteht, wenn der Boden in die geleerte Magmakammer eines Vulkans einbricht?",
+      "answerEn": "caldera",
+      "answerDe": "Caldera",
+      "timeline": {
+       "kind": "event",
+       "start": "1815",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Leopold von Buch visits the Canary Islands and brings the word caldera into geology",
+       "labelDe": "Leopold von Buch bereist die Kanarischen Inseln und führt das Wort Caldera in die Geologie ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Caldera",
+       "title": "Caldera – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the fast-moving, ground-hugging current of hot gas, ash and rock fragments from an explosive eruption called?",
+      "de": "Wie heißt die schnelle, bodennahe Lawine aus heißem Gas, Asche und Gesteinsbrocken, die bei einem explosiven Vulkanausbruch entsteht?",
+      "answerEn": "pyroclastic flow",
+      "answerDe": "pyroklastischer Strom",
+      "timeline": {
+       "kind": "event",
+       "start": "1902",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A pyroclastic flow from Mount Pelée destroys Saint-Pierre on Martinique, killing almost all its 30,000 people",
+       "labelDe": "Ein pyroklastischer Strom des Mont Pelée zerstört Saint-Pierre auf Martinique und tötet fast alle seiner 30.000 Einwohner"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pyroclastic_flow",
+       "title": "Pyroclastic flow – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Roman author described the eruption of Vesuvius in AD 79 in two letters to the historian Tacitus?",
+      "de": "Welcher römische Schriftsteller schilderte den Ausbruch des Vesuvs im Jahr 79 n. Chr. in zwei Briefen an den Historiker Tacitus?",
+      "answerEn": "Pliny the Younger",
+      "answerDe": "Plinius der Jüngere",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "61",
+       "end": "113",
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Life of Pliny the Younger, Roman author and eyewitness of the eruption of Vesuvius in AD 79",
+       "labelDe": "Leben von Plinius dem Jüngeren, römischer Autor und Augenzeuge des Vesuvausbruchs im Jahr 79"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pliny_the_Younger",
+       "title": "Pliny the Younger – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which volcano on the Indonesian island of Sumbawa erupted in April 1815 and caused the „Year Without a Summer“ in 1816?",
+      "de": "Welcher Vulkan auf der indonesischen Insel Sumbawa brach im April 1815 aus und verursachte 1816 das „Jahr ohne Sommer“?",
+      "answerEn": "Mount Tambora",
+      "answerDe": "Tambora",
+      "timeline": {
+       "kind": "event",
+       "start": "1815-04-10",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The eruption of Mount Tambora on Sumbawa reaches its violent climax",
+       "labelDe": "Der Ausbruch des Tambora auf Sumbawa erreicht seinen gewaltigen Höhepunkt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
+       "title": "1815 eruption of Mount Tambora – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Lava, Maars and the Ring of Fire: The Language of Volcanoes",
+    "titleDe": "Lava, Maare und der Feuerring: Die Sprache der Vulkane",
+    "bodyEn": "Deep beneath a volcano lies molten rock called magma, a mixture of melt, crystals and dissolved gas. As long as it stays underground it keeps that name; once it reaches the Earth's surface and pours out of a vent it is called lava. The word is Neapolitan – it once meant a stream of rainwater rushing through the streets – and the physician Francesco Serao applied it to the molten rock of Vesuvius in his account of the eruption of 1737. Fluid basalt lava can run for tens of kilometres; sticky, silica-rich lava piles up into domes or plugs the vent until the pressure blows it apart.\n\nThose explosions produce the deadliest of all volcanic phenomena, the pyroclastic flow: a fast-moving current of hot gas, ash and rock fragments that races along the ground at around 100 kilometres an hour, sometimes far faster, at temperatures of 200 to 700 °C. Nothing in its path survives. In 1902 a pyroclastic flow from Mount Pelée destroyed Saint-Pierre on Martinique and killed all but a handful of its roughly 30,000 inhabitants.\n\nThe volcano that gave lava its name is also the one most feared today. Mount Vesuvius, 1,281 metres high on the Bay of Naples, is often called the most dangerous volcano in the world – not because it is the largest, but because about three million people live close enough to be affected, some 600,000 of them in the red zone itself. Its eruption of AD 79 buried Pompeii and Herculaneum; the eruption of 1631 killed about 3,000 people; it last erupted in March 1944. The only eyewitness account of AD 79 that survives comes from Pliny the Younger, who watched from across the bay and described the eruption in two letters to the historian Tacitus; his uncle, Pliny the Elder, died trying to rescue people. The letters are so precise that volcanologists still call such towering, ash-spewing eruptions „Plinian“.\n\nWhen a great eruption empties a magma chamber, the ground above can collapse into the void and leave a vast cauldron-shaped hollow, a caldera, from the Spanish and Latin words for a cooking pot. The German geologist Leopold von Buch brought the word into geology after visiting the Canary Islands in 1815. That same year Mount Tambora on the Indonesian island of Sumbawa left a caldera about six kilometres wide when its eruption reached its climax on 10 April; the ash and gas it blasted into the stratosphere cooled the northern hemisphere and made 1816 the „Year Without a Summer“.\n\nVolcanoes need not be mountains at all. In the Eifel, west of the Rhine, rising magma met groundwater and exploded, blasting round craters into the flat land that filled with water and became lakes. The local dialect word for such a crater lake is Maar, first written down (as „Marh“) in Sebastian Münster's Cosmographia of 1544, and geologists around the world have adopted it. The Pulvermaar, 74 metres deep, is the largest maar lake in Germany.\n\nMost of the world's volcanoes, however, lie in one great horseshoe. The Ring of Fire is the belt of volcanoes and earthquakes, some 40,000 kilometres long, that follows the edges of the Pacific Ocean from the Andes through Alaska and Japan to New Zealand, wherever ocean plates sink beneath their neighbours. It holds about 750 to 915 active or dormant volcanoes, roughly two thirds of the world's total, and about 90 percent of all earthquakes happen within it; the geologist George Poulett Scrope described its chains of volcanoes as early as 1825.\n\n| Term | What it is | Example |\n|---|---|---|\n| lava | magma that has reached the surface | Vesuvius 1737 |\n| pyroclastic flow | ground-hugging current of hot gas and ash | Mount Pelée 1902 |\n| caldera | collapse hollow over an emptied magma chamber | Mount Tambora 1815 |\n| maar | explosion crater, often filled by a lake | Pulvermaar, Eifel |\n| Ring of Fire | belt of volcanoes around the Pacific | Andes to New Zealand |",
+    "bodyDe": "Tief unter einem Vulkan liegt geschmolzenes Gestein, das Magma, ein Gemisch aus Schmelze, Kristallen und gelösten Gasen. Solange es unter der Erde bleibt, behält es diesen Namen; erreicht es die Erdoberfläche und strömt aus einem Schlot, heißt es Lava. Das Wort stammt aus dem Neapolitanischen – ursprünglich bezeichnete es einen Regenwasserstrom, der durch die Gassen schießt –, und der Arzt Francesco Serao übertrug es in seinem Bericht über den Ausbruch von 1737 auf das geschmolzene Gestein des Vesuvs. Dünnflüssige Basaltlava kann Dutzende Kilometer weit fließen; zähe, kieselsäurereiche Lava türmt sich zu Domen auf oder verstopft den Schlot, bis der Druck ihn sprengt.\n\nSolche Explosionen erzeugen die tödlichste aller vulkanischen Erscheinungen: Ein pyroklastischer Strom ist eine schnelle Lawine aus heißem Gas, Asche und Gesteinsbrocken, die mit rund 100 Kilometern pro Stunde, mitunter weit schneller, und bei 200 bis 700 °C am Boden entlangrast. Nichts in seinem Weg überlebt. 1902 zerstörte ein pyroklastischer Strom des Mont Pelée die Stadt Saint-Pierre auf Martinique und tötete bis auf eine Handvoll alle ihre rund 30.000 Einwohner.\n\nDer Vulkan, dem die Lava ihren Namen verdankt, ist auch der heute am meisten gefürchtete. Der Vesuv, 1.281 Meter hoch am Golf von Neapel, gilt als der gefährlichste Vulkan der Welt – nicht weil er der größte wäre, sondern weil rund drei Millionen Menschen nah genug leben, um betroffen zu sein, etwa 600.000 davon in der roten Zone selbst. Sein Ausbruch im Jahr 79 n. Chr. begrub Pompeji und Herculaneum; der Ausbruch von 1631 tötete etwa 3.000 Menschen; zuletzt brach er im März 1944 aus. Der einzige Augenzeuge des Jahres 79, dessen Bericht erhalten ist, war Plinius der Jüngere, der das Geschehen von der anderen Seite der Bucht aus beobachtete und den Ausbruch in zwei Briefen an den Historiker Tacitus schilderte; sein Onkel, Plinius der Ältere, kam bei einem Rettungsversuch ums Leben. Die Briefe sind so genau, dass Vulkanologen solche turmhohen, Asche speienden Eruptionen bis heute „plinianisch“ nennen.\n\nLeert ein großer Ausbruch eine Magmakammer, kann der Boden darüber in den Hohlraum einbrechen und einen riesigen kesselförmigen Krater hinterlassen, eine Caldera – nach dem spanischen und lateinischen Wort für Kochtopf. Der deutsche Geologe Leopold von Buch führte das Wort in die Geologie ein, nachdem er 1815 die Kanarischen Inseln bereist hatte. Im selben Jahr hinterließ der Tambora auf der indonesischen Insel Sumbawa eine rund sechs Kilometer breite Caldera, als sein Ausbruch am 10. April seinen Höhepunkt erreichte; die Asche und das Gas, die er in die Stratosphäre schleuderte, kühlten die Nordhalbkugel ab und machten 1816 zum „Jahr ohne Sommer“.\n\nVulkane müssen keine Berge sein. In der Eifel, westlich des Rheins, traf aufsteigendes Magma auf Grundwasser und explodierte; die Explosionen sprengten runde Krater in das flache Land, die sich mit Wasser füllten und zu Seen wurden. Das Mundartwort der Gegend für einen solchen Kratersee ist Maar, erstmals (als „Marh“) in Sebastian Münsters Cosmographia von 1544 schriftlich belegt, und Geologen in aller Welt haben es übernommen. Das 74 Meter tiefe Pulvermaar ist der größte Maarsee Deutschlands.\n\nDie meisten Vulkane der Erde liegen jedoch in einem einzigen großen Hufeisen. Geologen nennen es Pazifischer Feuerring: den rund 40.000 Kilometer langen Gürtel aus Vulkanen und Erdbeben, der den Rändern des Pazifischen Ozeans folgt, von den Anden über Alaska und Japan bis Neuseeland, überall dort, wo ozeanische Platten unter ihre Nachbarn abtauchen. In ihm liegen rund 750 bis 915 aktive oder ruhende Vulkane, etwa zwei Drittel aller Vulkane der Erde, und rund 90 Prozent aller Erdbeben ereignen sich dort; der Geologe George Poulett Scrope beschrieb seine Vulkanketten bereits 1825.\n\n| Begriff | Was es ist | Beispiel |\n|---|---|---|\n| Lava | Magma, das die Oberfläche erreicht hat | Vesuv 1737 |\n| pyroklastischer Strom | bodennahe Lawine aus heißem Gas und Asche | Mont Pelée 1902 |\n| Caldera | Einsturzkessel über einer geleerten Magmakammer | Tambora 1815 |\n| Maar | Explosionskrater, oft mit einem See gefüllt | Pulvermaar, Eifel |\n| Pazifischer Feuerring | Vulkangürtel rund um den Pazifik | Anden bis Neuseeland |",
+    "notesEn": "The Campi Flegrei near Naples are sometimes given the same title as Vesuvius. Strictly, the water-filled form of a maar is a maar lake (Maarsee).",
+    "notesDe": "Auch die Phlegräischen Felder bei Neapel werden mitunter als gefährlichster Vulkan bezeichnet. Streng genommen heißt die wassergefüllte Form eines Maars Maarsee."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-063",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-199",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-087",
+      "category": 3
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the northern of the two great landmasses into which the last supercontinent split, carrying North America, Europe and most of Asia?",
+      "de": "Wie heißt die nördliche der beiden großen Landmassen, in die der letzte Superkontinent zerfiel und die Nordamerika, Europa und den größten Teil Asiens trug?",
+      "answerEn": "Laurasia",
+      "answerDe": "Laurasia",
+      "timeline": {
+       "kind": "event",
+       "start": "-215000000",
+       "end": null,
+       "precision": "megayear",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Laurasia begins to separate from Gondwana as Pangaea breaks up",
+       "labelDe": "Laurasia beginnt sich beim Zerfall Pangaeas von Gondwana zu trennen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Laurasia",
+       "title": "Laurasia – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the world ocean, Greek for „all sea“, that surrounded the last supercontinent?",
+      "de": "Wie heißt der Weltozean – griechisch für „Allmeer“ –, der den letzten Superkontinent umgab?",
+      "answerEn": "Panthalassa",
+      "answerDe": "Panthalassa",
+      "timeline": {
+       "kind": "era",
+       "start": "-250000000",
+       "end": null,
+       "precision": "megayear",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The superocean Panthalassa covers almost 70 % of the Earth's surface",
+       "labelDe": "Der Superozean Panthalassa bedeckt fast 70 % der Erdoberfläche"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Panthalassa",
+       "title": "Panthalassa – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the supercontinent, called after the Russian word for „motherland“, that existed about a billion years ago, long before the last supercontinent?",
+      "de": "Wie heißt der nach dem russischen Wort für „Heimat“ benannte Superkontinent, der vor rund einer Milliarde Jahren existierte, lange vor dem letzten Superkontinent?",
+      "answerEn": "Rodinia",
+      "answerDe": "Rodinia",
+      "timeline": {
+       "kind": "period",
+       "start": "-1260000000",
+       "end": "-750000000",
+       "precision": "megayear",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The supercontinent Rodinia assembles and, hundreds of millions of years later, breaks apart",
+       "labelDe": "Der Superkontinent Rodinia entsteht und zerbricht Hunderte Millionen Jahre später"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Rodinia",
+       "title": "Rodinia – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which vanished ocean, named after a Greek sea goddess, lay between Europe and Africa in the age of the dinosaurs and survives in the Mediterranean?",
+      "de": "Welcher verschwundene Ozean, benannt nach einer griechischen Meeresgöttin, lag im Zeitalter der Dinosaurier zwischen Europa und Afrika und lebt im Mittelmeer fort?",
+      "answerEn": "Tethys",
+      "answerDe": "Tethys",
+      "timeline": {
+       "kind": "event",
+       "start": "1893",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Eduard Suess names the vanished Tethys Ocean after a Greek sea goddess",
+       "labelDe": "Eduard Suess benennt den verschwundenen Tethys-Ozean nach einer griechischen Meeresgöttin"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Tethys_Ocean",
+       "title": "Tethys Ocean – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Pangaea, Gondwana and 4.54 Billion Years of Wandering Continents",
+    "titleDe": "Pangaea, Gondwana und 4,54 Milliarden Jahre wandernde Kontinente",
+    "bodyEn": "The Earth formed from the disc of gas and dust around the young Sun about 4.54 billion years ago, give or take some fifty million years. The figure comes from radiometric dating – the steady decay of uranium into lead – applied to the oldest meteorites and Moon rocks, and it fits the oldest minerals found on Earth itself, zircon crystals from Western Australia more than four billion years old. For most of that immense span the continents have been on the move, again and again gathering into a single landmass and breaking apart.\n\nThe most famous of these supercontinents is the last one. Pangaea, Greek for „all land“, began to assemble about 335 million years ago, in the Carboniferous, and in the Permian it united virtually every landmass on the planet, stretching from pole to pole. Alfred Wegener gave it its name when he argued for continental drift; the matching coastlines of South America and Africa and identical fossils on continents now separated by oceans were his evidence. Around Pangaea lay a single world ocean, Panthalassa – Greek for „all sea“ – which covered almost 70 percent of the Earth's surface some 250 million years ago and survives today, much shrunk, as the Pacific.\n\nPangaea was never uniform. From the late Triassic, about 215 million years ago, it began to split along an east-west seam into two halves. The northern one, Laurasia – a name blended from Laurentia and Eurasia and proposed by the South African geologist Alexander du Toit in 1937 – carried what are now North America, Europe and most of Asia. The southern one was Gondwana, which held South America, Africa, Arabia, India, Australia and Antarctica. Between them a wedge of sea reached in from the east: the Tethys, named in 1893 by the Austrian geologist Eduard Suess after a sea goddess of Greek myth. The Mediterranean is its last surviving remnant.\n\nGondwana itself began to break up in the early Jurassic, about 183 million years ago, and its pieces drifted towards their present places. Antarctica, which had once lain much closer to the equator, moved over the South Pole. Fossil leaves, tree trunks and coal seams show that it was then a land of lush vegetation; even in the Cretaceous, temperate rainforests grew there, and its ice sheet arrived only about 34 million years ago.\n\nPangaea was not the first supercontinent either. Long before it, about 1.26 to 0.9 billion years ago, the continents had gathered into Rodinia, named in 1990 after the Russian word rodina, „motherland“, because it was thought to be the ancestor of all later continents. It broke apart between about 750 and 633 million years ago. Geologists expect the cycle to go on: in some 200 to 250 million years the drifting plates are likely to assemble a new supercontinent.\n\n| Name | What it was | When |\n|---|---|---|\n| Rodinia | earlier supercontinent | about 1.26–0.75 billion years ago |\n| Pangaea | last supercontinent | about 335–175 million years ago |\n| Panthalassa | world ocean around Pangaea | about 250 million years ago |\n| Laurasia | northern half of Pangaea | from about 215 million years ago |\n| Gondwana | southern half of Pangaea | breaks up from about 183 million years ago |\n| Tethys | sea between the two halves | Mesozoic; remnant: the Mediterranean |",
+    "bodyDe": "Die Erde entstand vor etwa 4,54 Milliarden Jahren – plus oder minus rund fünfzig Millionen Jahre – aus der Scheibe aus Gas und Staub um die junge Sonne. Die Zahl stammt aus der radiometrischen Datierung, dem gleichmäßigen Zerfall von Uran zu Blei, angewandt auf die ältesten Meteoriten und Mondgesteine, und sie passt zu den ältesten Mineralen der Erde selbst, über vier Milliarden Jahre alten Zirkonkristallen aus Westaustralien. Fast während dieser ganzen ungeheuren Zeitspanne waren die Kontinente in Bewegung, haben sich immer wieder zu einer einzigen Landmasse zusammengefunden und sind wieder zerbrochen.\n\nDer berühmteste dieser Superkontinente ist der letzte. Pangaea (auch Pangäa), griechisch für „Ganzland“, begann sich vor etwa 335 Millionen Jahren im Karbon zu bilden und vereinte im Perm praktisch alle Landmassen des Planeten von Pol zu Pol. Alfred Wegener gab ihr den Namen, als er für die Kontinentalverschiebung eintrat; die zueinander passenden Küsten Südamerikas und Afrikas und gleiche Fossilien auf heute durch Ozeane getrennten Kontinenten waren seine Belege. Um Pangaea lag ein einziger Weltozean, Panthalassa – griechisch für „Allmeer“ –, der vor rund 250 Millionen Jahren fast 70 Prozent der Erdoberfläche bedeckte und heute, stark geschrumpft, als Pazifik fortbesteht.\n\nEinheitlich war Pangaea nie. Ab der späten Trias, vor etwa 215 Millionen Jahren, begann sie entlang einer Ost-West-Naht in zwei Hälften zu zerfallen. Die nördliche, Laurasia – ein Kunstwort aus Laurentia und Eurasien, 1937 vom südafrikanischen Geologen Alexander du Toit vorgeschlagen –, trug das heutige Nordamerika, Europa und den größten Teil Asiens. Die südliche war Gondwana mit Südamerika, Afrika, Arabien, Indien, Australien und der Antarktis. Zwischen beide schob sich von Osten ein Meereskeil: die Tethys, 1893 vom österreichischen Geologen Eduard Suess nach einer Meeresgöttin der griechischen Mythologie benannt. Das Mittelmeer ist ihr letzter erhaltener Rest.\n\nGondwana selbst begann im frühen Jura, vor etwa 183 Millionen Jahren, zu zerbrechen, und seine Teile drifteten ihren heutigen Positionen entgegen. Die Antarktis, die einst viel näher am Äquator gelegen hatte, wanderte über den Südpol. Fossile Blätter, Baumstämme und Kohleflöze zeigen, dass sie damals ein Land mit üppiger Vegetation war; selbst in der Kreidezeit wuchsen dort gemäßigte Regenwälder, und ihr Eisschild entstand erst vor etwa 34 Millionen Jahren.\n\nAuch Pangaea war nicht der erste Superkontinent. Lange vor ihr, vor etwa 1,26 bis 0,9 Milliarden Jahren, hatten sich die Kontinente zu Rodinia vereinigt, 1990 nach dem russischen Wort rodina, „Heimat“, benannt, weil man ihn für den Vorfahren aller späteren Kontinente hielt. Er zerbrach vor etwa 750 bis 633 Millionen Jahren. Geologen erwarten, dass der Kreislauf weitergeht: In etwa 200 bis 250 Millionen Jahren dürften die driftenden Platten einen neuen Superkontinent bilden.\n\n| Name | Was es war | Wann |\n|---|---|---|\n| Rodinia | früherer Superkontinent | vor etwa 1,26–0,75 Milliarden Jahren |\n| Pangaea | letzter Superkontinent | vor etwa 335–175 Millionen Jahren |\n| Panthalassa | Weltozean um Pangaea | vor etwa 250 Millionen Jahren |\n| Laurasia | Nordhälfte Pangaeas | ab etwa 215 Millionen Jahren vor heute |\n| Gondwana | Südhälfte Pangaeas | zerbricht ab etwa 183 Millionen Jahren vor heute |\n| Tethys | Meer zwischen beiden Hälften | Erdmittelalter; Rest: das Mittelmeer |",
+    "notesEn": "„About 4.5 billion years“ is also accepted for the age of the Earth. German also spells Pangaea „Pangäa“.",
+    "notesDe": "Für das Erdalter gilt auch „rund 4,5 Milliarden Jahre“. Pangaea wird im Deutschen auch „Pangäa“ geschrieben."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-317",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-380",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which layer of the Earth, about 2,900 kilometres thick, makes up some 84 percent of the planet's volume?",
+      "de": "Welche rund 2.900 Kilometer dicke Schicht der Erde macht etwa 84 Prozent ihres Volumens aus?",
+      "answerEn": "mantle",
+      "answerDe": "Erdmantel",
+      "timeline": {
+       "kind": "event",
+       "start": "2023",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The drill ship JOIDES Resolution recovers 886 metres of mostly mantle rock from the Atlantis Massif",
+       "labelDe": "Das Bohrschiff JOIDES Resolution holt am Atlantis-Massiv 886 Meter überwiegend Mantelgestein herauf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Earth%27s_mantle",
+       "title": "Earth's mantle – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the boundary between the Earth's crust and the mantle beneath it called, where earthquake waves suddenly speed up?",
+      "de": "Wie heißt die Grenze zwischen der Erdkruste und dem darunterliegenden Mantel, an der Erdbebenwellen plötzlich schneller werden?",
+      "answerEn": "Mohorovičić discontinuity",
+      "answerDe": "Mohorovičić-Diskontinuität",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1909",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Andrija Mohorovičić finds the boundary between crust and mantle in the seismograms of a Croatian earthquake",
+       "labelDe": "Andrija Mohorovičić entdeckt in den Seismogrammen eines kroatischen Erdbebens die Grenze zwischen Kruste und Mantel"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Mohorovi%C4%8Di%C4%87_discontinuity",
+       "title": "Mohorovičić discontinuity – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which German-American seismologist, who founded Caltech's Seismological Laboratory and worked with Charles Richter, gave his name to the boundary between the Earth's mantle and core?",
+      "de": "Welcher deutsch-amerikanische Seismologe, der das Seismologische Laboratorium des Caltech gründete und mit Charles Richter zusammenarbeitete, gab der Grenze zwischen Erdmantel und Erdkern seinen Namen?",
+      "answerEn": "Beno Gutenberg",
+      "answerDe": "Beno Gutenberg",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1889",
+       "end": "1960",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of Beno Gutenberg, seismologist of the Earth's core-mantle boundary",
+       "labelDe": "Leben von Beno Gutenberg, Seismologe der Kern-Mantel-Grenze der Erde"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Beno_Gutenberg",
+       "title": "Beno Gutenberg – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which layer of the Earth's interior is liquid, so that seismic shear waves cannot pass through it, and generates the Earth's magnetic field?",
+      "de": "Welche Schicht des Erdinneren ist flüssig, sodass seismische Scherwellen sie nicht durchqueren können, und erzeugt das Magnetfeld der Erde?",
+      "answerEn": "outer core",
+      "answerDe": "äußerer Erdkern",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1926",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Harold Jeffreys concludes from seismic waves that the Earth's outer core is liquid",
+       "labelDe": "Harold Jeffreys folgert aus Erdbebenwellen, dass der äußere Erdkern flüssig ist"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Earth%27s_outer_core",
+       "title": "Earth's outer core – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Journey to the Centre of the Earth: Crust, Mantle and an Iron Core",
+    "titleDe": "Reise zum Mittelpunkt der Erde: Kruste, Mantel und ein Kern aus Eisen",
+    "bodyEn": "No one has ever been more than about twelve kilometres into the Earth – the Kola Superdeep Borehole, the deepest hole ever drilled, stopped at 12,262 metres – yet geologists can describe the planet's interior layer by layer. Their evidence is its size and density and, above all, the way earthquake waves travel through it.\n\nThe Earth is not quite a sphere. Its rotation makes it bulge at the equator, a flattening that Pierre Louis Moreau de Maupertuis set out to prove in 1736, when he led an expedition to Lapland to measure the length of a degree of latitude near the Arctic Circle. Measured through the centre from the North Pole to the South Pole, the Earth is about 12,700 kilometres across; its equatorial diameter is some 43 kilometres larger.\n\nThe outermost layer, the crust, is a thin skin: only 5 to 10 kilometres thick beneath the oceans and around 35 on average beneath the continents. Its lower boundary is the Mohorovičić discontinuity, or Moho, where earthquake waves suddenly speed up. The Croatian seismologist Andrija Mohorovičić found it in 1909 while studying the seismograms of an earthquake near Zagreb.\n\nBeneath the crust lies the mantle, about 2,900 kilometres thick, which makes up about 84 percent of the Earth's volume. It is made of silicate rock, mostly peridotite in its upper part, and although it is solid, over millions of years it flows like an extremely viscous fluid; its slow convection drives the movement of the tectonic plates. In 2023 the drill ship JOIDES Resolution recovered 886 metres of rock, mostly peridotite, from the Atlantis Massif in the middle of the Atlantic, where mantle rock lies exposed on the sea floor.\n\nAt a depth of about 2,890 kilometres the mantle gives way to the core. The boundary is named after Beno Gutenberg (1889–1960), the German-American seismologist who calculated its depth and who later founded the Seismological Laboratory at Caltech and worked out the laws of earthquake magnitude with Charles Richter. The core is made mainly of iron, alloyed with about five percent nickel and lighter elements such as sulfur, oxygen and silicon. Its outer part, about 2,260 kilometres thick, is liquid – seismic shear waves cannot cross it, as Harold Jeffreys concluded in 1926 – and convection in this electrically conducting metal works as a dynamo that generates the Earth's magnetic field. Deeper still, under enormous pressure, the iron is solid again: in 1936 the Danish seismologist Inge Lehmann discovered the inner core from faint waves that bounced off it.\n\n| Layer | Depth | Made of | State |\n|---|---|---|---|\n| crust | 0 to 5–90 km | granite, basalt | solid |\n| mantle | to about 2,890 km | silicate rock | solid, slowly flowing |\n| outer core | 2,890–5,150 km | iron with nickel | liquid |\n| inner core | 5,150 km to the centre | iron with nickel | solid |\n\n| Diameter | Kilometres |\n|---|---|\n| pole to pole, through the centre | about 12,700 (12,713.5 km) |\n| at the equator | about 12,756 |",
+    "bodyDe": "Niemand ist je tiefer als etwa zwölf Kilometer in die Erde vorgedrungen – die Kola-Bohrung, das tiefste je gebohrte Loch, endete bei 12.262 Metern –, und doch können Geologen das Innere des Planeten Schicht für Schicht beschreiben. Ihre Belege sind seine Größe und Dichte und vor allem die Art, wie Erdbebenwellen ihn durchlaufen.\n\nDie Erde ist keine vollkommene Kugel. Ihre Drehung lässt sie am Äquator anschwellen – eine Abplattung, die Pierre Louis Moreau de Maupertuis 1736 nachweisen wollte, als er eine Expedition nach Lappland führte, um die Länge eines Breitengrads nahe dem Polarkreis zu messen. Durch die Erdmitte vom Nord- zum Südpol gemessen ist die Erde rund 12.700 Kilometer dick; ihr Äquatordurchmesser ist etwa 43 Kilometer größer.\n\nDie äußerste Schicht, die Erdkruste, ist eine dünne Haut: unter den Ozeanen nur 5 bis 10 Kilometer dick, unter den Kontinenten im Mittel rund 35. Ihre Untergrenze ist die Mohorovičić-Diskontinuität, kurz Moho, an der Erdbebenwellen plötzlich schneller werden. Der kroatische Seismologe Andrija Mohorovičić entdeckte sie 1909, als er die Seismogramme eines Erdbebens bei Zagreb auswertete.\n\nUnter der Kruste liegt der Erdmantel, rund 2.900 Kilometer dick, der etwa 84 Prozent des Erdvolumens ausmacht. Er besteht aus Silikatgestein, im oberen Teil überwiegend Peridotit, und obwohl er fest ist, fließt er über Jahrmillionen wie eine äußerst zähe Flüssigkeit; seine langsame Konvektion treibt die Bewegung der tektonischen Platten an. 2023 holte das Bohrschiff JOIDES Resolution am Atlantis-Massiv mitten im Atlantik, wo Mantelgestein am Meeresboden offenliegt, 886 Meter Gestein, überwiegend Peridotit, herauf.\n\nIn etwa 2.890 Kilometern Tiefe geht der Mantel in den Kern über. Die Grenze ist nach Beno Gutenberg (1889–1960) benannt, dem deutsch-amerikanischen Seismologen, der ihre Tiefe berechnete und später das Seismologische Laboratorium des Caltech gründete und mit Charles Richter die Gesetze der Erdbebenmagnitude ausarbeitete. Der Kern besteht hauptsächlich aus Eisen, legiert mit etwa fünf Prozent Nickel und leichteren Elementen wie Schwefel, Sauerstoff und Silizium. Sein äußerer Teil, rund 2.260 Kilometer dick, ist flüssig – seismische Scherwellen können ihn nicht durchqueren, wie Harold Jeffreys 1926 folgerte –, und die Konvektion in diesem elektrisch leitenden Metall wirkt als Dynamo, der das Magnetfeld der Erde erzeugt. Noch tiefer, unter ungeheurem Druck, ist das Eisen wieder fest: 1936 entdeckte die dänische Seismologin Inge Lehmann den inneren Kern anhand schwacher Wellen, die an ihm zurückgeworfen wurden.\n\n| Schicht | Tiefe | Besteht aus | Zustand |\n|---|---|---|---|\n| Erdkruste | 0 bis 5–90 km | Granit, Basalt | fest |\n| Erdmantel | bis etwa 2.890 km | Silikatgestein | fest, langsam fließend |\n| äußerer Erdkern | 2.890–5.150 km | Eisen mit Nickel | flüssig |\n| innerer Erdkern | 5.150 km bis zur Mitte | Eisen mit Nickel | fest |\n\n| Durchmesser | Kilometer |\n|---|---|\n| von Pol zu Pol, durch die Erdmitte | rund 12.700 (12.713,5 km) |\n| am Äquator | rund 12.756 |",
+    "notesEn": "„Iron and nickel“ is also accepted for the core. The pole-to-pole diameter is 12,713.5 km; accept about 12,700 km.",
+    "notesDe": "Für den Erdkern gilt auch „Eisen und Nickel“. Der Poldurchmesser beträgt 12.713,5 km; rund 12.700 km gilt."
+   }
+  }
+ ],
+ "handoff": []
+}

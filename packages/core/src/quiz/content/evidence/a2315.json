@@ -1,0 +1,288 @@
+{
+ "article": "a2315",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tenn%C5%8D",
+   "title": "Tennō",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:21.947Z",
+   "snapshot": "8e551f350ba377de0409f5a72a3bcf34d49c89a320694eca7730734968ad4bcf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Brunei",
+   "title": "Brunei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:25.699Z",
+   "snapshot": "811a51fabacb73c8185ca7ee4606e92490e37b952d1c824622fd7f78b5e17421"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/King_of_Malaysia",
+   "title": "King of Malaysia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:26.676Z",
+   "snapshot": "2aa0ddb0747840331272b5cd48b72557c690d6cae17804466bcf3025c23ee5b3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Conference_of_Rulers",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:27.588Z",
+   "snapshot": "cb6c4fa9e5bd54cc51149fd043b559ee6e0ea6019621f5cd44db1db98fbb58e6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/King_of_Nepal",
+   "title": "King of Nepal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:29.097Z",
+   "snapshot": "e165e48436d81d4b40088c79a45b56da7a37e00ecbc2d1a9246d04e85e22a06e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Monarchy_of_Cambodia",
+   "title": "Monarchy of Cambodia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:29.517Z",
+   "snapshot": "aea7a959c47b89c87b56fa09cff2ce29b1b7ba3f88d02115cefe3903064d1038"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11986",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brunei",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Malaysia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Malaysia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nepal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Cambodia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:55.090Z",
+   "target": "f11985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tennō (japanisch 天皇 „Himmlischer Herrscher“), eingedeutscht Tenno, ist ein japanischer Herrscher- und Adelstitel, der im Deutschen oft mit „Kaiser“ übersetzt wird, sowie in loserer Verwendung auch die Bezeichnung für das dynastische Geschlecht, das in Japan diesen Titel trägt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:55.090Z",
+   "target": "f11986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brunei, officially Brunei Darussalam, is a country in Southeast Asia, situated on the northern coast of the island of Borneo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brunei” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:55.090Z",
+   "target": "f11987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The King of Malaysia, officially Yang di-Pertuan Agong (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malaysia” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:55.090Z",
+   "target": "f11987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Conference of Rulers (also known as Council of Rulers or Durbar, Malay: Majlis Raja-Raja; Jawi: مجليس راج٢) is a council comprising the nine rulers of the Malay states, and the governors of the other four states in Malaysia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Malaysia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:55.090Z",
+   "target": "f11988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The king of Nepal (traditionally known as the mahārājādhirāja i.e.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nepal” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:55.090Z",
+   "target": "f11989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The monarchy of Cambodia is the constitutional monarchy of the Kingdom of Cambodia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.090Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cambodia” is on the snapshot of s6"
+  }
+ ]
+}

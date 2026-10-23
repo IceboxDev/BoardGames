@@ -1,0 +1,193 @@
+{
+ "article": "a2242",
+ "sources": {
+  "s1": {
+   "url": "https://www.upi.com/Colin-Farrell-offers-reward-for-lucky-belt/82701315754205/",
+   "title": "Colin Farrell offers reward for lucky belt",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-20"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Cillian_Murphy",
+   "title": "Cillian Murphy",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:15.282Z",
+   "snapshot": "50200ba3d6f30b3973cde291cf9bcdc5ba5607b528a261818bcd00b7c93012b8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Liam_Neeson",
+   "title": "Liam Neeson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:16.863Z",
+   "snapshot": "61236fbf7d721bbc08b45e2500d84757ee7c4586e989d696327c778a48d0734d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Brendan_Gleeson",
+   "title": "Brendan Gleeson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:17.719Z",
+   "snapshot": "8bb6d8a9d5930960e6563333dcda125eb742780a5bafc0fc86a9b73de2f74b69"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Colin Farrell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-183"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cillian Murphy",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-362"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liam Neeson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brendan Gleeson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:42.664Z",
+   "target": "f11487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cillian Murphy [ˈkɪliən ˈmɜː(r)fi] (* 25.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cillian Murphy” is on the snapshot of s2"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:42.664Z",
+   "target": "f11488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "gun manufacturer Para USA, which provided the prop weapons used by Neeson in the Taken film series, stated: \"We will no longer provide firearms for use in films starring Liam Neeson and ask that our friends and partners in Hollywood refrain from associating our brand and products with his projects.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liam Neeson” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:42.664Z",
+   "target": "f11490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brendan Gleeson (born 29 March 1955) is an Irish actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brendan Gleeson” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:43:15Z",
+   "target": "f11486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He claimed in 2004 to wear a specific pair of shamrock-decorated boxer shorts",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "same sentence: given to him by his brother, worn whenever he begins filming a new movie (UPI, 11 Sep 2011, citing The Sun); page is bot-protected, quote read via a browser fetch; no second independent source reachable without web search"
+  }
+ ]
+}

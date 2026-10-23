@@ -1,0 +1,209 @@
+{
+ "article": "a0119",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Herbarium",
+   "title": "Herbarium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:03.969Z",
+   "snapshot": "6d2239295b34f00111a896b69b848d61a42ae2e3c3eb4dd24f569b513a857e8b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Arnold_Arboretum",
+   "title": "Arnold Arboretum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:04.985Z",
+   "snapshot": "8088ca5a4890bd5e70df92f2a8b992b0f8d5b7a8a80e93767097a18243d3f529"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Pisa",
+   "title": "Orto botanico di Pisa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:05.935Z",
+   "snapshot": "9e74177c82b91f2af667152997f6299e9c7457f76c3f93ce61f792dc915cb2f1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault",
+   "title": "Svalbard Global Seed Vault – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:07.054Z",
+   "snapshot": "96805985dd5abdb90f708387a229ddc5f7639f8cbdc70365358347da24b69838"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mus%C3%A9um_national_d%27histoire_naturelle",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:08.081Z",
+   "snapshot": "dec59c32eedd37e583d18d34355fc5f10b2d634c541f8bfc785da06d5d1aeefe"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Royal_Botanic_Gardens,_Kew",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:08.950Z",
+   "snapshot": "3e9c9bc22654160550c203163ae41c40ab35c6bd1256c9e53326436f735fe4ee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00591",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "herbarium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00592",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "arboretum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00593",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "botanical garden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "seed bank",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:23:54.800Z",
+   "target": "f00591",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A herbarium (pl.: herbaria) is a collection of preserved plant specimens and associated data used for scientific study.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “herbarium” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:54.800Z",
+   "target": "f00592",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Arnold Arboretum is a botanical research institution and free public park affiliated with Harvard University and located in the Jamaica Plain and Roslindale neighborhoods of Boston.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “arboretum” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:54.800Z",
+   "target": "f00593",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Orto botanico di Pisa, also known as the Orto Botanico dell'Università di Pisa, is a botanical garden operated by the University of Pisa, and located at via Luca Ghini 5, Pisa, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “botanical garden” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:54.800Z",
+   "target": "f00594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The seed bank is 130 m (430 ft) inside a sandstone mountain on Spitsbergen Island, and employs robust security systems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:54.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “seed bank” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,387 @@
+{
+ "article": "a1180",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Academy_Awards",
+   "title": "Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:40.073Z",
+   "snapshot": "b1a4dbf63e4f46c7974b8fc30812ec1659e1204cffed940cb50fd74c755c9f6d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Palme_d'Or",
+   "title": "Palme d'Or – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:40.861Z",
+   "snapshot": "b4d2a9e2deb7e642b3b59112fc096b1e8be5bfe4131dca993f30c01f47f95ea1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1st_Berlin_International_Film_Festival",
+   "title": "1st Berlin International Film Festival – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:41.854Z",
+   "snapshot": "7f088e74c44a86a737d116f61b0114ec0bb23366b18b77b41c54639c1485eda1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Golden_Lion",
+   "title": "Golden Lion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:42.925Z",
+   "snapshot": "d7b30ada27bf92d1cc339b563f3f41d1c6163b90e3bf9857f870a127aae75f4b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1st_C%C3%A9sar_Awards",
+   "title": "1st César Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:43.865Z",
+   "snapshot": "a87e8ce89f6b9b36d5fd267693d1706c87a52b01030e04f9d927ee4ba599b38d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Margaret_Herrick",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:45.430Z",
+   "snapshot": "3e877a413962026c0aa37022279b32145e4db3a4df40120bdad0c4bdcf12664f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Palme_d%27Or",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:45.873Z",
+   "snapshot": "b4d2a9e2deb7e642b3b59112fc096b1e8be5bfe4131dca993f30c01f47f95ea1"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/C%C3%A9sar_Award",
+   "title": "César Award – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:29.847Z",
+   "snapshot": "be17cd69c2b77db50644ae423831927071acc72a6ccb0d9a0d07d3ae32c62c9f"
+  },
+  "s9": {
+   "url": "https://www.academie-cinema.org/lacademie/histoire/",
+   "title": "Histoire | Académie des César",
+   "publisher": "Académie des Arts et Techniques du Cinéma",
+   "kind": "official",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:38:30.248Z",
+   "snapshot": "57a1e4c5d44d239506e4b863026d3fdb5183ead234a87e832a6d35616c1aa0d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the Oscar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the Palme d'Or",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05898",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Golden Bear",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05899",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "the Golden Lion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the César",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:44.627Z",
+   "target": "f05896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Oscar statuette depicts a knight, rendered in the Art Deco style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Oscar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:44.627Z",
+   "target": "f05897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Palme d'Or (French pronunciation: [palm(ə) dɔʁ]; English: Golden Palm) is the highest prize awarded to the director of the Best Feature Film of the Official Competition at the Cannes Film Festival.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Palme d'Or” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:44.627Z",
+   "target": "f05898",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At this first Berlin Festival, the Golden Bear award was introduced, and it was awarded to the best film in each of five categories: drama, comedy, crime or adventure, music film, and documentary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Golden Bear” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:44.627Z",
+   "target": "f05899",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Golden Lion (Italian: Leone d'oro) is the highest prize given to a film at the Venice Film Festival.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:44.627Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the Golden Lion” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:44.627Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "the César",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the César”, “der César”, “Сезар”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:31:47Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The name of the award comes from the sculptor César Baldaccini (1921–1998) who designed it.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:31:53Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "le nom de mon ami César, sculpteur de génie, s’est imposé à moi et sa sculpture avec lui",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:31:59Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "l’œuvre créée spécialement par le sculpteur César à la demande de Georges Cravenne",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:26.006Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The name of the award comes from the sculptor César Baldaccini (1921–1998) who designed it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:26.006Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "l’œuvre créée spécialement par le sculpteur César à la demande de Georges Cravenne",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:26.006Z",
+   "target": "f05900",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The César Award (French: [sezaʁ]) is the national film award of France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:26.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the César” is on the snapshot of s8"
+  }
+ ]
+}

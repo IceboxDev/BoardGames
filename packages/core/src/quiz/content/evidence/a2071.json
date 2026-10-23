@@ -1,0 +1,195 @@
+{
+ "article": "a2071",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Duales_System_Deutschland",
+   "title": "Duales System Deutschland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:32.115Z",
+   "snapshot": "17abbcad52d4e3b3f34144c4932f1d8e755050f46c0ecff0b83cd20db7295612"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Blauer_Engel",
+   "title": "Blauer Engel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:46:34.065Z",
+   "snapshot": "0619e68c8215567da15e0494f3a69a7c23c472c9e8b31b9fedf12d32064da2ba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/CE_marking",
+   "title": "CE marking – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:35.848Z",
+   "snapshot": "ef324869d9f3db700f605baf2f751326bdb225b28fa3c2460608599cb3f5bc06"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Nutri-Score",
+   "title": "Nutri-Score – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:34.096Z",
+   "snapshot": "883c2dee0a015ad85193e0a028e2cd120a04982b047d0999d84de5984fa9f76b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10351",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Grüne Punkt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c173"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10352",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Blaue Engel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10353",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "CE marking",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10355",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nutri-Score",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:17.739Z",
+   "target": "f10351",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "KG (DSD) war ein Betreiber eines Dualen Systems unter dem Namen „Der Grüne Punkt“ zur Mülltrennung und Abfallvermeidung in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Grüne Punkt” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:17.739Z",
+   "target": "f10352",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Blaue Engel ist ein in Deutschland seit 1978 vergebenes Umweltzeichen für besonders umweltschonende Produkte und Dienstleistungen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Blaue Engel” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:17.739Z",
+   "target": "f10353",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "CE marking is a mark () that must be affixed to certain commercial products to indicate that the manufacturer or importer affirms the goods' conformity with European health, safety, and environmental protection standards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CE marking” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:17.739Z",
+   "target": "f10355",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Nutri-Score (von lateinisch nutrire  ‚nähren‘ und englisch score  ‚Auswertung‘, ‚Punktzahl‘) ist ein System zur Nährwertkennzeichnung auf der Verpackung von Lebensmitteln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nutri-Score” is on the snapshot of s4"
+  }
+ ]
+}

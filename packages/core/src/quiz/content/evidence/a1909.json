@@ -1,0 +1,249 @@
+{
+ "article": "a1909",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Working_Class_Hero",
+   "title": "Working Class Hero – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:40.751Z",
+   "snapshot": "0e122325e18ccbf38a7021866dc727a1e7d484dec7bcb1f186ebf55b638ca8c2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Blowin'_in_the_Wind",
+   "title": "Blowin' in the Wind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:41.660Z",
+   "snapshot": "6da874a12c8db5e9582235633cab0bd0709e12a2fa6978d69b8b4b7a145c6116"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ohio_(Crosby,_Stills,_Nash_&_Young_song)",
+   "title": "Ohio (Crosby, Stills, Nash & Young song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:42.488Z",
+   "snapshot": "4670d99429bc300bf8de3539f123ed6f4ed64dbf6c7072bf30408c98bfb49b4e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/My_Sweet_Lord",
+   "title": "My Sweet Lord – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:43.666Z",
+   "snapshot": "43103bffbc0b2d2a601211da9d97bbf60aa7761a20526c3c0445d6a208c991bd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Redemption_Song",
+   "title": "Redemption Song – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:44.541Z",
+   "snapshot": "aee046660884bab37f534fbb967826ce3c2c676cde628f33684b35a8f57692a5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/John_Lennon/Plastic_Ono_Band",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:45.669Z",
+   "snapshot": "5decd17d7bb5f9065056c5ee9c34c1d6eac548bafe85198bc60497a055ba4c4c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "John Lennon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c160"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bob Dylan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Neil Young",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "George Harrison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bob Marley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:43.237Z",
+   "target": "f09541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Working Class Hero\" is a song by John Lennon from his 1970 album John Lennon/Plastic Ono Band, his first album after the break-up of the Beatles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Lennon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:43.237Z",
+   "target": "f09542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Blowin' in the Wind\" is a song written by Bob Dylan in 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bob Dylan” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:43.237Z",
+   "target": "f09543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Ohio\" is a song written by Neil Young in reaction to the Kent State shootings of May 4, 1970, and performed by Crosby, Stills, Nash & Young.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neil Young” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:43.237Z",
+   "target": "f09544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"My Sweet Lord\" is a song by the English musician George Harrison, released in November 1970 on his triple album All Things Must Pass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Harrison” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:43.237Z",
+   "target": "f09545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Redemption Song\" is a song by Jamaican singer Bob Marley.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:43.237Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bob Marley” is on the snapshot of s5"
+  }
+ ]
+}

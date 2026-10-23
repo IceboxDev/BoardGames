@@ -1,0 +1,289 @@
+{
+ "article": "a2317",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ometepe",
+   "title": "Ometepe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:31.724Z",
+   "snapshot": "7bc02af0c61f5bb640265c937ed7ccd912fd77995e542ce998f51e98b3881bce"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Costa_Rica",
+   "title": "Costa Rica",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:33.061Z",
+   "snapshot": "af4476f5c2c4e7af34c3bb6857055ad847b169c8651a337e1bbd1ba3370cf62e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Streitkr%C3%A4fte_Boliviens",
+   "title": "Streitkräfte Boliviens",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:53:34.354Z",
+   "snapshot": "9d9587e369c98e4e5a034364ad5d47338a9f694e8d2495cdb40e38a8c0df601f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/%C3%93scar_Arias",
+   "title": "Óscar Arias – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:35.628Z",
+   "snapshot": "2d100e194287bcdc29649be639b6c305abdb53784ff9477f250e3c1f20ec19a1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sucre",
+   "title": "Sucre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:53:36.607Z",
+   "snapshot": "15d05c442a07d34c5958dce8656644ad4a1c0d4f65dc29cfcb18d42c42edcaa0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/War_of_the_Pacific",
+   "title": "War of the Pacific – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:01.396Z",
+   "snapshot": "92c009e2f9affe3f220f7ff5793e0af177ac44f7c9d239a5ad5a902cc77b5824"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nicaragua",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-217"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Costa Rica",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-245"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bolivien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-310"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Óscar Arias",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sucre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12001",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "War of the Pacific",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:55.428Z",
+   "target": "f11995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sie liegt im Departamento Rivas der Republik Nicaragua in Mittelamerika.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicaragua” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:55.428Z",
+   "target": "f11996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Costa Rica ([ˈkostɑ ˈrikɑ], spanisch für „reiche Küste“, deutsch früher auch Kostarika) ist ein Staat in Zentralamerika, der im Norden an Nicaragua und im Süden an Panama grenzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Costa Rica” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:55.428Z",
+   "target": "f11997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Obwohl Bolivien seit dem Verlust seines Pazifikzugangs im Salpeterkrieg (1879 bis 1884) ein Binnenstaat ist, unterhält das Land weiterhin eine 4.800 Mann (mit Marineinfanterie) starke Marine (Fuerza Naval Boliviana, auch „Armada“ genannt, abgekürzt FNB), deren Aufgabe sich allerdings auf die",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bolivien” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:55.428Z",
+   "target": "f11999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Óscar Arias Sánchez (Spanish pronunciation: [ˈoskaɾ ˈaɾjas]; born 13 September 1940) is a Costa Rican politician, activist and Nobel Peace Prize laureate who was the president of Costa Rica from 1986 to 1990 and from 2006 to 2010.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Óscar Arias” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:55.428Z",
+   "target": "f12000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sucre (Spanish pronunciation: [ˈsukɾe]; Quechua: Chuqichaka; Aymara: Sukri; Guarani: Sucre), officially La Ilustre y Heroica Sucre (\"The Illustrious and Heroic Sucre\") is the de jure capital city of Bolivia, the capital of the Chuquisaca Department and the sixth most populous city in Bolivia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sucre” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:55.428Z",
+   "target": "f12001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The War of the Pacific (Spanish: Guerra del Pacífico), also known by multiple other names, was a war between Chile and a Bolivian–Peruvian alliance from 1879 to 1884.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:55.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “War of the Pacific” is on the snapshot of s6"
+  }
+ ]
+}

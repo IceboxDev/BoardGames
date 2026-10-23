@@ -1,0 +1,587 @@
+{
+ "article": "a2325",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Official_languages_of_the_United_Nations",
+   "title": "Official languages of the United Nations",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:09.661Z",
+   "snapshot": "17e285e0ff5f433c9450f9e468ae36683ffae9ef78a1ca6275f3c55125173e96"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen",
+   "title": "Liste der meistgesprochenen Sprachen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:07.034Z",
+   "snapshot": "359819d99dee3b6f93fec0ba57e4a191178984d391eabef876db2ca6aea34fb5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_the_European_Union",
+   "title": "Languages of the European Union",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:10.990Z",
+   "snapshot": "5280e0cf992db7f57642baff6c521768a2c6a473d946865590f70c1dc40b6186"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Languages_of_Papua_New_Guinea",
+   "title": "Languages of Papua New Guinea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:11.529Z",
+   "snapshot": "b255906790f0edd89533afce7528c610d2499a50cefd6176811dcfb4e7e31877"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pirah%C3%A3_language",
+   "title": "Pirahã language",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:12.654Z",
+   "snapshot": "1cc21fdea887445f4ef9aebf6012fc6945a90a2ca93a1f1d43da73ada623f887"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pirah%C3%A3_people",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:13.550Z",
+   "snapshot": "f2cb0876654a29be77804bbb3c49e2480f68a94e8c576a4278b32c006a25e9e1"
+  },
+  "s7": {
+   "url": "https://www.un.org/en/our-work/official-languages",
+   "title": "Official Languages | United Nations",
+   "publisher": "United Nations",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:17.534Z",
+   "snapshot": "1d80f230b2b20106821b88710ae4229f5766316fe5f672370fd0ce33cf382dc2"
+  },
+  "s8": {
+   "url": "https://www.ethnologue.com/insights/most-spoken-language/",
+   "title": "What is the most spoken language? | Ethnologue",
+   "publisher": "SIL International (Ethnologue)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:50:56Z"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Spanish_language",
+   "title": "Spanish language",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:18.086Z",
+   "snapshot": "e7a6303d05585f2edf209b3f3ea9bb9f96c702ed5c20b946ecf56f6be4379d5e"
+  },
+  "s10": {
+   "url": "https://www.ethnologue.com/country/PG/",
+   "title": "Papua New Guinea Languages, Literacy, & Maps (PG) | Ethnologue",
+   "publisher": "SIL International (Ethnologue)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:51:07Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arabic, Chinese, English, French, Russian and Spanish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spanisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-390"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "German",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-102"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "about 800",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25; transcript tp-256"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arabic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pirahã",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-064"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:56.934Z",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Arabic, Chinese, English, French, Russian and Spanish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Arabic, Chinese, English, French, Russian and Spanish”, “Arabisch, Chinesisch, Englisch, Französisch, Russisch und Spanisch”, “арабский, китайский, английский, французский, русский и испанский”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:56.934Z",
+   "target": "f12055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spanisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Spanisch”, “Spanish”, “испанский”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:56.934Z",
+   "target": "f12056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The European Union (EU) has 24 official languages, of which the three most natively spoken ones are German, French and Italian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “German” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:56.934Z",
+   "target": "f12057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "about 800",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“about 800”, “rund 800”, “около 800”) on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:56.934Z",
+   "target": "f12059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1973, Arabic was voted to be an additional official language.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arabic” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:56.934Z",
+   "target": "f25279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pirahã (also spelled Pirahá, Pirahán), or Múra-Pirahã, is the indigenous language of the Pirahã people of Amazonas, Brazil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.934Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pirahã” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:50:50Z",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "There are six official languages of the UN. These are Arabic, Chinese, English, French, Russian and Spanish.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:50:53Z",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "There are six official languages used in United Nations (UN) meetings and in which the UN writes and publishes all its official documents.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:50:56Z",
+   "target": "f12055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mandarin Chinese is the largest language in the world when counting only first language (native) speakers. This is due to the significant population of China. Spanish is 2nd, English is 3rd and Hindi is 4th.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:50:59Z",
+   "target": "f12055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Spanish is the world's second-most spoken native language after Mandarin Chinese",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:51:03Z",
+   "target": "f12056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At 19% of the total number of speakers, German was the most widely spoken native language, followed by French (15%), Italian (13%) Polish (9%) and Spanish (9%).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Figures from Special Eurobarometer 540 (2023)."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:51:07Z",
+   "target": "f12057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "It is also home to 840 living indigenous languages.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Card options are 80, 400 or 800; Ethnologue counts 840 living indigenous languages, so \"about 800\" is the right option."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:51:11Z",
+   "target": "f12057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "state that there are 840 living languages spoken in the country, although estimates vary due to the distinction between a language and a dialect",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "There are six official languages of the UN. These are Arabic, Chinese, English, French, Russian and Spanish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "There are six official languages used in United Nations (UN) meetings and in which the UN writes and publishes all its official documents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Spanish is the world's second-most spoken native language after Mandarin Chinese",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "At 19% of the total number of speakers, German was the most widely spoken native language, followed by French (15%), Italian (13%) Polish (9%) and Spanish (9%).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "state that there are 840 living languages spoken in the country, although estimates vary due to the distinction between a language and a dialect",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12054",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "These are Arabic, Chinese, English, French, Russian and Spanish.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Arabic, Chinese, English, French, Russian and Spanish” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:42.059Z",
+   "target": "f12055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Spanish (español) or Castilian (castellano) is a Romance language of the Indo-European language family that evolved from the Vulgar Latin spoken on the Iberian Peninsula of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.059Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Spanish” is on the snapshot of s9"
+  }
+ ]
+}

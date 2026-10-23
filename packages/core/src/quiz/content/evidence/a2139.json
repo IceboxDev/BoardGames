@@ -1,0 +1,242 @@
+{
+ "article": "a2139",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Daguerreotypie",
+   "title": "Daguerreotypie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:43:45.223Z",
+   "snapshot": "f951c544f0ad2bcede3cfe52488f345f6de2e4f03bded4af210015fd8d20ed91"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Louis_Daguerre",
+   "title": "Louis Daguerre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:48.012Z",
+   "snapshot": "e1a85d7bdae6bd08575d465793b95b824fffc3194f23517b3ec5fb71523f889b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/View_from_the_Window_at_Le_Gras",
+   "title": "View from the Window at Le Gras – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:48.844Z",
+   "snapshot": "5c60aba64b92c195b6d04a2d43c0c81d0203f36e672ba87770afc338c5b60689"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Calotype",
+   "title": "Calotype – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:49.857Z",
+   "snapshot": "980f4184957f35763402dff26dc06c44add1bc46729841a57b1b4c29a561cda2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/John_Herschel",
+   "title": "John Herschel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:43:51.082Z",
+   "snapshot": "912ff86eb93e720dfe9f72d6d8c8875c13596ed1e831edac531cd6fb04484d91"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fotografie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-072"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis Daguerre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10766",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nicéphore Niépce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10767",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William Henry Fox Talbot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "sodium thiosulfate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:28.676Z",
+   "target": "f10764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Daguerreotypie war das erste kommerziell nutzbare Fotografie-Verfahren im 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.676Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fotografie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:28.676Z",
+   "target": "f10765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Louis Daguerre was born in Cormeilles-en-Parisis, Val-d'Oise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.676Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Daguerre” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:28.676Z",
+   "target": "f10766",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was created by French inventor Nicéphore Niépce between June 4 and July 18, 1827, in Saint-Loup-de-Varennes, France, and shows parts of the buildings and surrounding countryside of his estate, Le Gras, as seen from a high window.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.676Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicéphore Niépce” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:28.676Z",
+   "target": "f10767",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Calotype or talbotype is an early photographic process introduced in 1841 by William Henry Fox Talbot, using paper coated with silver iodide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.676Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Henry Fox Talbot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:28.676Z",
+   "target": "f10768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Herschel discovered sodium thiosulfate to be a solvent of silver halides in 1819, and informed Talbot and Daguerre of his discovery that this \"hyposulphite of soda\" (\"hypo\") could be used as a photographic fixer, to \"fix\" pictures and make them permanent, after experimentally applying it thus in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:28.676Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sodium thiosulfate” is on the snapshot of s5"
+  }
+ ]
+}

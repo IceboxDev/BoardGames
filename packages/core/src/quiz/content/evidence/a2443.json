@@ -1,0 +1,296 @@
+{
+ "article": "a2443",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Foundation_(novel_series)",
+   "title": "Foundation (novel series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:35.111Z",
+   "snapshot": "ca508333ca1ab8051055a74c45d549116147dea4e49dcc8099974ef584863596"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Isaac_Asimov",
+   "title": "Isaac Asimov",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:36.111Z",
+   "snapshot": "39770418552ffeb7012f2070db29d430fc7ed08324a10f69cdba74dd4d1cb44c"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Kampf_um_die_Erde",
+   "title": "Kampf um die Erde",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:33.381Z",
+   "snapshot": "d6a77803041580a87fef71a190324858d561c7e85e1a1a5b09a26520c45eb56a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Foundation_(book_series)",
+   "title": "Foundation (book series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:37.055Z",
+   "snapshot": "ca508333ca1ab8051055a74c45d549116147dea4e49dcc8099974ef584863596"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/I,_Robot",
+   "title": "I, Robot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:37.962Z",
+   "snapshot": "3f4822ee2edab4bd375c0b177bf5fe25274057911358d455caf627326e0319cf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/John_W._Campbell",
+   "title": "John W. Campbell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:39.107Z",
+   "snapshot": "71fb4b55e91eb2ec0566477e9cb72cbca335438ef6b7b6a31a093fe7e09c03c7"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/L._Ron_Hubbard",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:01.014Z",
+   "snapshot": "df76caf762568f3c3457d5e91d109fe0a02b6f7d55d58d204902a2912b8d3728"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Foundation trilogy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-383"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul McCartney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-275"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "L. Ron Hubbard",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-328"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12856",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hari Seldon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12857",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I, Robot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12858",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "John W. Campbell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:21.015Z",
+   "target": "f12853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Known as The Foundation Trilogy for nearly thirty years, it won the one-time Hugo Award for \"Best All-Time Series\" in 1966.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Foundation trilogy” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:21.015Z",
+   "target": "f12854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In December 1974, former Beatle Paul McCartney approached Asimov and asked him to write the screenplay for a science-fiction movie musical.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul McCartney” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:21.015Z",
+   "target": "f12855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kampf um die Erde (Originaltitel: Battlefield Earth, wörtlich: „Schlachtfeld Erde“) ist der Titel einer 1982 erschienenen Roman-Trilogie des Science-Fiction-Autors und Scientology-Gründers L. Ron Hubbard.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “L. Ron Hubbard” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:21.015Z",
+   "target": "f12856",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The premise of the stories is that in the waning days of a future Galactic Empire, the mathematician Hari Seldon devises the theory of psychohistory, a new and effective mathematics of sociology.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hari Seldon” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:21.015Z",
+   "target": "f12857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "I, Robot is a collection of science fiction short stories by American writer Isaac Asimov.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “I, Robot” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:21.015Z",
+   "target": "f12858",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Algis Budrys wrote that \"John W. Campbell was the greatest editor SF has seen or is likely to see, and is in fact one of the major editors in all English-language literature in the middle years of the twentieth century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John W. Campbell” is on the snapshot of s6"
+  }
+ ]
+}

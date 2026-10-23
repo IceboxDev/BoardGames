@@ -1,0 +1,37 @@
+{
+ "id": "rebalance-2026-10-22",
+ "title": "Regroup the bank into 14 categories of 199-200 articles",
+ "startedAt": "2026-10-22",
+ "endedAt": "2026-10-22",
+ "kind": "rebalance",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded) (10 recategorise units, then 6 grouping agents r1-r6)",
+  "Owner: Mantas Kandratavičius (decisions, pauses, rulings)"
+ ],
+ "brief": "GROUP.md",
+ "inputs": [
+  "pools/r*.tsv"
+ ],
+ "outputs": [
+  "final-taxonomy.json, placed.json, final.reasons.json (history 'rebalance-agents')"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/rebalance"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 36,
+  "bytes": 2645575,
+  "byExt": {
+   ".ids": 3,
+   ".json": 23,
+   ".md": 2,
+   ".py": 2,
+   ".tsv": 6
+  },
+  "articles": 2793,
+  "historyEntries": 1474
+ },
+ "notes": "Stage 0/2: RECATEGORISE.md briefs, units 1-10 -> merged.json, fine.json; stage r: GROUP.md briefs, r1-r6.json -> placed.json -> final-taxonomy.json. *.ids + *.reasons.json are the changelog inputs. scratch-*/ not archived."
+}

@@ -1,0 +1,421 @@
+{
+ "article": "a1481",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Touchdown",
+   "title": "Touchdown – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:01.874Z",
+   "snapshot": "315d917713e4dcb6d56935c13c5cc6e1dc1e54e41c60fbd7ef7db148d0d90733"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Field_goal",
+   "title": "Field goal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:03.011Z",
+   "snapshot": "f1a0635ca7068de2b2373885efed0408028d75fe22155522bcbfb355dccef6d1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/History_of_American_football",
+   "title": "History of American football – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:04.079Z",
+   "snapshot": "706ba0c1ce8099a23c75dc482f09307a6948f63eb36d45f191ea4b8e5e597896"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Super_Bowl_I",
+   "title": "Super Bowl I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:04.962Z",
+   "snapshot": "8d654ca5ae4966729b398f620870f4d460bfe5bc3b6f0375b4abbf115dcb6c70"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Super_Bowl",
+   "title": "Super Bowl",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:05.569Z",
+   "snapshot": "1116ae9bc975e211f5502157bdf1aa25065255a6ebf40e7e337bda56c2244978"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Quarterback",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:06.085Z",
+   "snapshot": "81e2710462cc62570e117ed614f0f46b27a034c78892189cf60ca62390878c74"
+  },
+  "s7": {
+   "url": "https://operations.nfl.com/rules-officiating/nfl-football-basics/football-terms",
+   "title": "Football Terms – NFL Football Operations",
+   "publisher": "National Football League",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:07.250Z",
+   "snapshot": "9eee294a5b67dcae3a37932ad308f6b28b3ea539fa43d6ad691ca153e73a099b"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Safety_(gridiron_football_score)",
+   "title": "Safety (gridiron football score) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:06.810Z",
+   "snapshot": "2a442616bbb1f3cda2714a18b1e490e2c36475adb4c52a41dcaaa30362a3fa1f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "touchdown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07403",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "field goal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "safety",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07405",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Super Bowl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13829",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "American Football",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-036"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:32.334Z",
+   "target": "f07401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A touchdown (abbreviated as TD) is a scoring play in gridiron football.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “touchdown” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:32.334Z",
+   "target": "f07403",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A field goal (FG) is a means of scoring in gridiron football.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “field goal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:32.334Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "safety",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“safety”, “Safety”, “сейфти”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:32.334Z",
+   "target": "f07405",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The first AFL–NFL World Championship Game (known retroactively as Super Bowl I and referred to in contemporaneous reports, including the game's radio broadcast, as the Super Bowl) was an American football game played on January 15, 1967, at the Los Angeles Memorial Coliseum in Los Angeles,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Super Bowl” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:32.334Z",
+   "target": "f13829",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der oder die Super Bowl ([ˈsuːpɚ ˈboʊ̯l], auch Superbowl) ist das Finale der US-amerikanischen American-Football-Profiliga National Football League (NFL).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:32.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “American Football” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:06:43Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Worth two points, NFL defenses can score a safety by tackling the offensive player who has the football behind his own goal line",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:06:46Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a scoring play that results in two points being awarded to the scoring team. Safeties can be scored in a number of ways, such as when a ball carrier is tackled in his own end zone",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:06:49Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "two points for safeties, and five for field goals",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r071",
+   "run": "provenance-research-2026-10-23",
+   "note": "body detail: Camp’s 1883 scoring rules gave safeties two points"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:18.193Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Worth two points, NFL defenses can score a safety by tackling the offensive player who has the football behind his own goal line",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:18.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:18.193Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a scoring play that results in two points being awarded to the scoring team. Safeties can be scored in a number of ways, such as when a ball carrier is tackled in his own end zone",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:18.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:18.193Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "two points for safeties, and five for field goals",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:18.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:18.193Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Most downs start with a snap from scrimmage, but kickoffs and safety kicks start when the ball is struck.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:18.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “safety” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:18.193Z",
+   "target": "f07404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Safety (gridiron football score)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:18.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “safety” is on the snapshot of s8"
+  }
+ ]
+}

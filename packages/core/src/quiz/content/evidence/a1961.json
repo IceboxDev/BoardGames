@@ -1,0 +1,374 @@
+{
+ "article": "a1961",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Crimson_Room",
+   "title": "Crimson Room – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:12.600Z",
+   "snapshot": "4d5153d3fab5748f2d24d8f531a7734ca2a030232e6ac062b287cd007b40ce95"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kennerspiel_des_Jahres",
+   "title": "Kennerspiel des Jahres – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:22:37.130Z",
+   "snapshot": "bf8af3e8343459119103397d6e2adef47b3311bb7a7f970e347d7fe56077cd5b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mafia_(party_game)",
+   "title": "Mafia (party game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:13.746Z",
+   "snapshot": "5edefd01ab1e9e1f7e3a6c821de71f8d72e81cdcd57b19dba17ae505973826c0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Escape_room",
+   "title": "Escape room – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:33:14.588Z",
+   "snapshot": "93d8cbab7f1ec67f9899eef93af525272f5930b4767c8149c303e3cb96a85a28"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tetris",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:07.254Z",
+   "snapshot": "b64ff36b3a4d1849a9b66015e57e05fa597e1db0c74de8cb8f63b9cfcbeaf2ae"
+  },
+  "s6": {
+   "url": "https://icv2.com/articles/news/view/37978/spiel-des-jahres-2017-winners-announced",
+   "title": "Spiel des Jahres 2017 Winners Announced",
+   "publisher": "ICv2",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:37.620Z",
+   "snapshot": "ac2309acd1e50e21b0b40341b0d33ce7bfa2d159c3ac83672ff8e2d814d7b518"
+  },
+  "s7": {
+   "url": "https://www.kosmos.de/en/products/exit%C2%AE-das-spiel-die-verlassene-hutte",
+   "title": "EXIT® - The Game: The Abandoned Cabin",
+   "publisher": "Kosmos",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:38.359Z",
+   "snapshot": "fd0ad25bf005b3332b58a2a7bcb1376433691a78c355244b8f3291d01a3ce82f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09801",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "escape rooms",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c164"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Exit – Das Spiel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09803",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mafia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f24143",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Werewolf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f24144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Real Escape Game",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:54.582Z",
+   "target": "f09801",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crimson Room has often been noted as influential on real-world escape rooms and an inspiration for their creation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “escape rooms” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:54.582Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Exit – Das Spiel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Exit – Das Spiel”, “Exit: The Game”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:54.582Z",
+   "target": "f09803",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mafia, also known as Werewolf, is a social deduction game created in 1986 by Dmitry Davidoff, then a psychology student at Moscow State University.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mafia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:54.582Z",
+   "target": "f24143",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mafia, also known as Werewolf, is a social deduction game created in 1986 by Dmitry Davidoff, then a psychology student at Moscow State University.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werewolf” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:54.582Z",
+   "target": "f24144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Four years later, Real Escape Game (REG) in Japan was developed by 35-year-old Takao Kato, of the Kyoto publishing company, SCRAP Co., in 2007.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:54.582Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Real Escape Game” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:34:11Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bruno Cathala’s Kingdomino will be the Spiel des Jahres, while Inka & Markus Brand’s Exit: Das Spiel takes home the Kennerspiel des Jahres.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:34:12Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Awarded \"Kennerspiel des Jahres 2017\" (Expert Game of the Year 2017)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23",
+   "note": "publisher's own product page"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:34:14Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gewinner",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r073",
+   "run": "provenance-research-2026-10-23",
+   "note": "answer only in the winners table: 2017 | Gewinner | Exit | Inka Brand, Markus Brand | Kosmos"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:44.048Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bruno Cathala’s Kingdomino will be the Spiel des Jahres, while Inka & Markus Brand’s Exit: Das Spiel takes home the Kennerspiel des Jahres.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:44.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:44.048Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Awarded \"Kennerspiel des Jahres 2017\" (Expert Game of the Year 2017)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:44.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:44.048Z",
+   "target": "f09802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mit der Reihe „EXIT – Das Spiel“ holt KOSMOS das Gefühl der Live-Escape-Rooms nach Hause.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:44.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Exit – Das Spiel” is on the snapshot of s7"
+  }
+ ]
+}

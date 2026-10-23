@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-162",
+ "image": "IMG20261007182726.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welches Land ist in Präfekturen gegliedert: Bulgarien, Mexiko oder Japan?",
+   "de": "Welches ostasiatische Inselland ist in 47 Präfekturen gegliedert?",
+   "en": "Which East Asian island country is divided into 47 prefectures?",
+   "reworked": true,
+   "answerDe": "Japan",
+   "answerEn": "Japan",
+   "timeline": {
+    "kind": "event",
+    "start": "1871",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Japan turns its remaining feudal domains into prefectures, which now cover the whole country",
+    "labelDe": "Japan wandelt die verbliebenen Feudalfürstentümer in Präfekturen um, die nun das ganze Land gliedern"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Prefectures_of_Japan",
+    "title": "Prefectures of Japan",
+    "lang": "en"
+   },
+   "notes": "Reworked from the multiple choice; '47' and 'Inselland' make it unique (China also has prefecture-level divisions).",
+   "domain": "geography",
+   "sub": "countries"
+  },
+  {
+   "category": 2,
+   "cardDe": "In welchem Land gab es in den 1990er-Jahren den Puppy Channel, einen Fernsehsender, der nur spielende Hundewelpen zeigte: USA, Japan oder Neuseeland?",
+   "de": "In welchem Land wurde in den 1990er-Jahren der Puppy Channel geplant, ein Fernsehsender, der nur spielende Hundewelpen zeigen sollte?",
+   "en": "In which country was the Puppy Channel planned in the 1990s, a TV channel that was to show nothing but puppies playing?",
+   "reworked": true,
+   "answerDe": "USA",
+   "answerEn": "USA",
+   "timeline": {
+    "kind": "event",
+    "start": "1996",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The planned US cable channel The Puppy Channel still has no cable system to carry it",
+    "labelDe": "Der geplante US-Kabelsender The Puppy Channel hat noch keinen Kabelnetzbetreiber, der ihn einspeist"
+   },
+   "source": {
+    "url": "https://www.nexttv.com/news/puppy-channel-dog-tired-106392",
+    "title": "Puppy Channel Is Dog Tired (Broadcasting & Cable, 2005)",
+    "lang": "en"
+   },
+   "notes": "The card says the channel existed; Broadcasting & Cable (2005) describes nearly a decade of announced-but-never-realised launches by Cleveland entrepreneur Daniel A. FitzSimons, so the question was reworded to 'geplant'. The answer USA is the same either way.",
+   "domain": "film-media",
+   "sub": "tv"
+  },
+  {
+   "category": 3,
+   "cardDe": "Im Jahre 1997 gab Großbritannien die Kontrolle über welche bedeutende Kolonie auf?",
+   "de": "Im Jahre 1997 gab Großbritannien die Kontrolle über welche bedeutende Kolonie auf?",
+   "en": "In 1997, Great Britain gave up control of which important colony?",
+   "reworked": false,
+   "answerDe": "Hongkong",
+   "answerEn": "Hong Kong",
+   "timeline": {
+    "kind": "event",
+    "start": "1997-07-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Handover of Hong Kong from the United Kingdom to the People's Republic of China",
+    "labelDe": "Übergabe Hongkongs vom Vereinigten Königreich an die Volksrepublik China"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong",
+    "title": "Handover of Hong Kong",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welches Haustier hielt sich Lord Byron während seines Studiums in Cambridge: einen Biber, Wolf oder Bären?",
+   "de": "Welches Tier hielt sich Lord Byron während seines Studiums in Cambridge als Haustier, weil Hunde dort verboten waren?",
+   "en": "What animal did Lord Byron keep as a pet while studying at Cambridge, because dogs were forbidden there?",
+   "reworked": true,
+   "answerDe": "Bär",
+   "answerEn": "Bear",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1788-01-22",
+    "end": "1824-04-19",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Lord Byron, English Romantic poet",
+    "labelDe": "Lord Byron, englischer Dichter der Romantik"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lord_Byron",
+    "title": "Lord Byron",
+    "lang": "en"
+   },
+   "notes": "Byron kept a tame bear at Trinity College out of resentment for rules forbidding pet dogs; the statutes did not mention bears.",
+   "domain": "literature",
+   "sub": "poetry"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welcher Körperteil wird klassisch in die ägyptische, griechische und römische Form unterteilt?",
+   "de": "Welcher Körperteil wird klassisch in die ägyptische, griechische und römische Form unterteilt?",
+   "en": "Which body part is classically divided into the Egyptian, Greek and Roman shape?",
+   "reworked": false,
+   "answerDe": "Fuß",
+   "answerEn": "Foot",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1651",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Venus of Arles, a classical statue showing the 'Greek foot', is found in Arles",
+    "labelDe": "Die Venus von Arles, eine antike Statue mit „griechischem Fuß“, wird in Arles gefunden"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Fu%C3%9F",
+    "title": "Fuß",
+    "lang": "de"
+   },
+   "notes": "The three foot shapes are told apart by the length of the big toe versus the second toe. Timeline: the Venus of Arles (illustrating the Greek foot on de.wikipedia) was found in 1651 (en.wikipedia 'Venus of Arles').",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Cassius Clay gewann als Erster dreimal den Weltmeistertitel im Schwergewichtsboxen. Wie nannte er sich später?",
+   "de": "Cassius Clay gewann als Erster dreimal den Weltmeistertitel im Schwergewichtsboxen. Wie nannte er sich später?",
+   "en": "Cassius Clay was the first to win the world heavyweight boxing title three times. What did he later call himself?",
+   "reworked": false,
+   "answerDe": "Muhammad Ali",
+   "answerEn": "Muhammad Ali",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1942-01-17",
+    "end": "2016-06-03",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Muhammad Ali, born Cassius Clay, American heavyweight boxing champion",
+    "labelDe": "Muhammad Ali, geboren als Cassius Clay, US-amerikanischer Schwergewichtsweltmeister im Boxen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Muhammad_Ali",
+    "title": "Muhammad Ali",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

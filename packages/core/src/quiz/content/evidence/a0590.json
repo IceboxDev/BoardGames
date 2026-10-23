@@ -1,0 +1,242 @@
+{
+ "article": "a0590",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Madame_Bovary",
+   "title": "Madame Bovary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:43.402Z",
+   "snapshot": "43f22f46ddbbc946b792827824b6744bf96575c3ebf07e87c8d5eac93cae3432"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Anna_Karenina",
+   "title": "Anna Karenina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:50.596Z",
+   "snapshot": "bfe8db7d92907f0988c58a03a910b2423a5e8e1db99a3db95fc6c7808ba42140"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Effi_Briest",
+   "title": "Effi Briest – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:40.800Z",
+   "snapshot": "93fa8047e5784cfbaafa177ab828488d2e3df968f117fcceecbfdc511c75d2ca"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Scarlet_Letter",
+   "title": "The Scarlet Letter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:44.417Z",
+   "snapshot": "6e7288151867f07443ae6e05ed9c423115daad608ced2d81e02d06421e8a4e89"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lady_Chatterley%27s_Lover",
+   "title": "Lady Chatterley's Lover – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:45.421Z",
+   "snapshot": "7ad50c6dde86422d82504fe61b885b208617ccedf0cefcefdf7ae446051e4a61"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emma Bovary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anna Karenina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Effi Briest",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hester Prynne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lady Chatterley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:11.031Z",
+   "target": "f02946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The eponymous character, Emma Bovary, lives beyond her means in order to escape the ennui of provincial life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emma Bovary” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:11.031Z",
+   "target": "f02947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anna Karenina (Russian: Анна Каренина, IPA: [ˈanːə kɐˈrʲenʲɪnə]) is a novel, first published in book form in 1878, by the Russian author Leo Tolstoy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anna Karenina” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:11.031Z",
+   "target": "f02948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Effi Briest ist ein Roman von Theodor Fontane, der von Oktober 1894 bis März 1895 in sechs Folgen in der Deutschen Rundschau abgedruckt wurde, bevor er Mitte Oktober 1895 (vordatiert auf 1896) als Buch erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Effi Briest” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:11.031Z",
+   "target": "f02949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Set in the Puritan Massachusetts Bay Colony during the years 1642 to 1649, the novel tells the story of Hester Prynne, who conceives a daughter with a man to whom she is not married and then struggles to lead a new life of repentance and dignity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hester Prynne” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:11.031Z",
+   "target": "f02950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lady Chatterley's Lover is the final novel by the English author D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.031Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lady Chatterley” is on the snapshot of s5"
+  }
+ ]
+}

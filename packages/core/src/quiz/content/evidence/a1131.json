@@ -1,0 +1,242 @@
+{
+ "article": "a1131",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hokusai_Manga",
+   "title": "Hokusai Manga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:41.152Z",
+   "snapshot": "0e0ed72df9993ed217dfa94fc8e7d72a82dbfbddd50dbcbdfec94e882207480e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
+   "title": "The Great Wave off Kanagawa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:42.254Z",
+   "snapshot": "896deeeafef5815bc8b484c6e7b250038e32eba021f894614d6e371f30d76aa4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Dream_of_the_Fisherman's_Wife",
+   "title": "The Dream of the Fisherman's Wife – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:43.216Z",
+   "snapshot": "d1871693cf5c78f9eeae3c9dfe33fbd30b88f4c4d505fa0b0fbb32f0d5ed0d72"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Japonisme",
+   "title": "Japonisme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:44.254Z",
+   "snapshot": "5cea03b50a78f4eeb75af79a6d77b396e1ab1af95c7abe46586d00855f997b7e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Anime",
+   "title": "Anime – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:45.403Z",
+   "snapshot": "df426c85ea9de58cbe8c63f76100023bd0559d72a911512579f5ce0aa55a78f9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Manga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ukiyo-e",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shunga",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Japonisme",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anime",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:37.239Z",
+   "target": "f05651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Hokusai Manga (北斎漫画; \"Hokusai's Sketches\") is a collection of sketches of various subjects by the Japanese artist Hokusai.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manga” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:37.239Z",
+   "target": "f05652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "'Under the Wave off Kanagawa') is a woodblock print by the Japanese ukiyo-e artist Hokusai (1760–1849), created in late 1831 during the Edo period of Japanese history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ukiyo-e” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:37.239Z",
+   "target": "f05653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is included in Kinoe no Komatsu ('Young Pines'), a three-volume book of shunga erotica first published in 1814, and has become Hokusai's most famous shunga design.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shunga” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:37.239Z",
+   "target": "f05654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Japonisme is a French term that refers to the popularity and influence of Japanese art and design among a number of Western European artists in the nineteenth century following the forced reopening of foreign trade with Japan in 1858.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japonisme” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:37.239Z",
+   "target": "f05655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anime (Japanese: アニメ; IPA: [aꜜɲime] ; derived from a shortening of the English word animation) is animation originating from Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:37.239Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anime” is on the snapshot of s5"
+  }
+ ]
+}

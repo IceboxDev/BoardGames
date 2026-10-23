@@ -1,0 +1,427 @@
+{
+ "article": "a2501",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Walhai",
+   "title": "Walhai",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:48.791Z",
+   "snapshot": "22880f17ca8c14b0009ed1dcc54675aaa951174c52353fc606e7e48a2bdfbd74"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Whale_shark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:52.634Z",
+   "snapshot": "6fb91ce3453b29999c76597f8e5aa2e2053cea726c5f708d801d3dc97e4898cd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Haie",
+   "title": "Haie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:02:50.009Z",
+   "snapshot": "28376ace8da57f7204ae6ce41427891e37303012b3cb81f86b0b67156bb08dfd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Shark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:53.831Z",
+   "snapshot": "bf5bb94a1677faa260049e4febc82e5cb8fe3e62252b74cf4dc5c496121b91b6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Apparent_death",
+   "title": "Apparent death",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:54.615Z",
+   "snapshot": "6ffdf739dbe7235fa5d30b37f1c5c81ec60ffa20dd01f7d1297d0c04017810ff"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Greenland_shark",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:55.753Z",
+   "snapshot": "fce768fb64b51b533fa3ea3585d1390a9518ff239864d13b00a9db4f9d115b83"
+  },
+  "s7": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:IND609308198%20AND%20SRC:AGR&resultType=core&format=json",
+   "title": "Tonic immobility in cartilaginous fishes (Chondrichthyes): function, evolutionary history, and future directions (Reviews in Fish Biology and Fisheries, 2025)",
+   "publisher": "Europe PMC (abstract)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:18:17Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Haie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-218"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sharks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Knorpel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-331"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cartilage",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 15"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "dermal denticles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25318",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "5",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 61; transcript pp-014"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f25742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "0",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 84; transcript ppm-139"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f25743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "upside down",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 87; transcript ppm-078"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f13270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Walhai hat als einziger Vertreter der Haie ein endständiges Maul.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haie” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f13270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Whale sharks inhabit the open waters of all tropical oceans, typically being found between 30°N and 35°S latitude, though occasionally as high as 41°N and 36.5°S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sharks” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f13271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das gesamte Skelett der Haie besteht aus hyalinem Knorpel, der nur bei größeren und älteren Tieren in einigen Bereichen der Kiefer und der Wirbelkörper Verkalkungen (Kalzifizierungen) aufweist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Knorpel” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f13271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sharks and other cartilaginous fish (skates and rays) have skeletons made of cartilage and connective tissue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cartilage” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f13275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sharks are a group of elasmobranch cartilaginous fishes characterized by a ribless endoskeleton, dermal denticles, five to seven gill slits on each side, and pectoral fins that are not fused to the head.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dermal denticles” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f25318",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fish, with the exception of the coelacanth, the blood and other tissue of sharks and Chondrichthyes is generally isotonic to their marine environments because of the high concentration of urea (up to 2.5%) and trimethylamine N-oxide (TMAO), allowing them to be in osmotic balance with the seawater.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “5” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f25742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In general, sharks swim (\"cruise\") at an average speed of 8 kilometres per hour (5.0 mph), but when feeding or attacking, the average shark can reach speeds upwards of 19 kilometres per hour (12 mph).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:30.213Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “0” is on the snapshot of s4"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:30.213Z",
+   "target": "f25743",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "upside down",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“upside down”, “auf den Rücken”, “на спину”) on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:18:17Z",
+   "target": "f25743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Here, we present data regarding tonic immobility induced by dorsoventral inversion across 13 chondrichthyan species.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:18:20Z",
+   "target": "f25743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Some sharks can be induced into tonic immobility by inverting them and restraining them by hand, e.g. dogfish sharks, lemon sharks, whitetip reef sharks.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:13.834Z",
+   "target": "f25743",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Some sharks can be induced into tonic immobility by inverting them and restraining them by hand, e.g. dogfish sharks, lemon sharks, whitetip reef sharks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.834Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  }
+ ]
+}

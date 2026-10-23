@@ -1,0 +1,393 @@
+{
+ "article": "a1215",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Son_of_Man",
+   "title": "The Son of Man – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:47.879Z",
+   "snapshot": "b4c711d6b61b3976d57547d588b31c3b35b5a24cf6807d2342e4966f624f1115"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Treachery_of_Images",
+   "title": "The Treachery of Images – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:48.886Z",
+   "snapshot": "18f4341ebe5480b6282493a820eeb4ad57b78a9b20745bc47dd743b0e2963914"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory",
+   "title": "The Persistence of Memory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:19.886Z",
+   "snapshot": "cdb5e632d89f269c2eda9f04a21d2a4cd547a708491095b599c4897002538ef9"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_Best%C3%A4ndigkeit_der_Erinnerung",
+   "title": "Die Beständigkeit der Erinnerung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:46.021Z",
+   "snapshot": "773fb5d3e28fe773c36a3fc3231bf7ddc63fdc76ef7803100d001cb1ec444588"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring",
+   "title": "Girl with a Pearl Earring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:58.176Z",
+   "snapshot": "3864a2497cba1828ed3dd99a9581e21d4d2c62be7df334f2ef251d8f890cba48"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine",
+   "title": "Lady with an Ermine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:49.908Z",
+   "snapshot": "1a70db1051ca3508dd007e62ae05868e45577af2b8929cfd6047a468fb7fcd4d"
+  },
+  "s7": {
+   "url": "https://www.wikiart.org/en/rene-magritte/son-of-man-1964",
+   "title": "The Son of Man, 1964 – Rene Magritte",
+   "publisher": "WikiArt",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:43.065Z",
+   "snapshot": "856129740df4c173e72f42171b5f67109e212bf5a3feacfb8b1690f788aa9dae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A green apple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c102"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A pipe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Clocks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Uhren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-083"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A turban",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An ermine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:49.455Z",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A green apple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“A green apple”, “Ein grüner Apfel”, “Зелёное яблоко”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:49.455Z",
+   "target": "f06072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is also known as This Is Not a Pipe, Ceci n'est pas une pipe and The Wind and the Song.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A pipe” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:49.455Z",
+   "target": "f06073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is widely recognized and frequently referred to in popular culture, and sometimes referred to by more descriptive titles, such as \"The Melting Clocks\", \"The Soft Watches\" or \"The Melting Watches\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Clocks” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:49.455Z",
+   "target": "f06073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Beständigkeit der Erinnerung (auf Spanisch La persistencia de la memoria), auch Die zerrinnende Zeit oder Die weichen Uhren genannt, ist das bekannteste Gemälde des surrealistischen Malers Salvador Dalí aus dem Jahr 1931.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uhren” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:49.455Z",
+   "target": "f06074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "After the bequest to the Mauritshuis, the painting became known as Girl with a Turban (Meisje met tulband) and it was noted of its original description in the 1675 inventory that the turban had become a fashion accessory of some fascination during the period of European wars against the Turks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A turban” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:49.455Z",
+   "target": "f06075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Lady with an Ermine is a portrait painting by the Italian Renaissance artist Leonardo da Vinci.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “An ermine” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:47:03Z",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The man's face is largely obscured by a hovering green apple.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:47:07Z",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the most famous of which is The Son of Man, depicting a man wearing a bowling hat, with a green apple covering his face",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r003",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:31.646Z",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The man's face is largely obscured by a hovering green apple.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:31.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:31.646Z",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the most famous of which is The Son of Man, depicting a man wearing a bowling hat, with a green apple covering his face",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:31.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:31.646Z",
+   "target": "f06071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first is the apple, which he uses to great lengths in many of his works, the most famous of which is The Son of Man, depicting a man wearing a bowling hat, with a green apple covering his face.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:31.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “A green apple” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "article": "a1446",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War",
+   "title": "Iran–Iraq War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:29:01.672Z",
+   "snapshot": "458e958ba0aa11bdf0b848a02236ac718374276a6cacb69d889d5904b4f2e78d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Football_War",
+   "title": "Football War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:57.469Z",
+   "snapshot": "0cae45afc4fdb08e86f30f93b2d1216486853c6011c3c258c01f3dd6f7716a2b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Simla_Agreement",
+   "title": "Simla Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:58.371Z",
+   "snapshot": "304319473607db521ede900309776e4537dfb651ced0657d74172d8f52fb100e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Algiers_Agreement_(2000)",
+   "title": "Algiers Agreement (2000) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:59.414Z",
+   "snapshot": "3397ed3d7ff8203fe9e0a2cfe5c82e80d158775acbf04d69ad5a4746b00e9b2a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eritrean%E2%80%93Ethiopian_War",
+   "title": "Eritrean–Ethiopian War – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:01.146Z",
+   "snapshot": "1e9f1a3ebd83b5d2a536a596c643fc0b3166f40f088430875b9e454951377769"
+  },
+  "s6": {
+   "url": "https://peacekeeping.un.org/en/mission/past/unmee/background.html",
+   "title": "UNMEE: United Nations Mission in Ethiopia and Eritrea – Background",
+   "publisher": "United Nations",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:00.082Z",
+   "snapshot": "6824eb1c7c23dcba510a65ca99403b6109df4627530028ba70fd354e3f66e8f8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iran and Iraq",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "El Salvador and Honduras",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "India and Pakistan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ethiopia and Eritrea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:27.467Z",
+   "target": "f07226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 1937, Iran and Iraq signed a treaty to settle their dispute over control of the Shatt al-Arab river; they agreed that Iranian ships had to pay tolls when they used the river.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iran and Iraq” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.467Z",
+   "target": "f07228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Football War (Spanish: guerra del fútbol), also known as the Soccer War or the 100 Hour War, was a brief military conflict fought between El Salvador and Honduras in 1969.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Salvador and Honduras” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.467Z",
+   "target": "f07229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Simla Agreement, also spelled Shimla Agreement, is a bilateral peace treaty and framework agreement signed between India and Pakistan on 2 July 1972 in Shimla, the capital of the Indian state of Himachal Pradesh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.467Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “India and Pakistan” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.467Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ethiopia and Eritrea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ethiopia and Eritrea”, “Äthiopien und Eritrea”, “Эфиопия и Эритрея”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:52:49Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was a major armed conflict between Ethiopia and Eritrea that took place from May 6, 1998 to June 18, 2000.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:52:52Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fighting between Eritrea and Ethiopia erupted in May 1998, as a result of a border dispute.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:13.005Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was a major armed conflict between Ethiopia and Eritrea that took place from May 6, 1998 to June 18, 2000.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:13.005Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fighting between Eritrea and Ethiopia erupted in May 1998, as a result of a border dispute.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:13.005Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Eritrean–Ethiopian War, also known as the Badme War, was a major armed conflict between Ethiopia and Eritrea that took place from May 6, 1998 to June 18, 2000.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ethiopia and Eritrea” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:13.005Z",
+   "target": "f07230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "UNMEE: United Nations Mission in Ethiopia and Eritrea - Background",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:13.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ethiopia and Eritrea” is on the snapshot of s6"
+  }
+ ]
+}

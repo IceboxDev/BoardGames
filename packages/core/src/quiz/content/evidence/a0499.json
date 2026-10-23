@@ -1,0 +1,423 @@
+{
+ "article": "a0499",
+ "sources": {
+  "s1": {
+   "url": "https://fr.wikipedia.org/wiki/Pr%C3%AAt-%C3%A0-porter",
+   "title": "Prêt-à-porter – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:00:25.028Z",
+   "snapshot": "e5dc76fbe6dc42731f55860366bdeea3d14357b82ceb7733d5310d2156df736e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Haute_couture",
+   "title": "Haute couture – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:28.094Z",
+   "snapshot": "39044d9acb81cccffc21b4d8962eeee56ba9262c6a796c0e5a51cb43bc2c04bd"
+  },
+  "s3": {
+   "url": "https://www.dictionary.com/browse/dernier-cri",
+   "title": "dernier cri – Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:25.271Z",
+   "snapshot": "1778ec6b2d22b312632fe8918eec18f2e00fbb706d0a293c352d3bea316acf5a"
+  },
+  "s4": {
+   "url": "https://fr.wiktionary.org/wiki/atelier",
+   "title": "atelier – Wiktionnaire",
+   "kind": "reference",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T04:00:25.849Z",
+   "snapshot": "85b31eec658ca90468938746c27d1900680300fbfb0fead80ba3fc9240201e8c"
+  },
+  "s5": {
+   "url": "https://www.linguee.com/german-english/translation/anschlussgr%C3%B6%C3%9Fe.html",
+   "title": "Anschlussgröße – English translation (Linguee)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:00:26.073Z",
+   "snapshot": "2f362be9021f856f10b4417de6e5967b8d7bc1a241c28e9b645513bf16c18498"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Berlin_Fashion_Week",
+   "title": "Berlin Fashion Week",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:00:26.318Z",
+   "snapshot": "585ecfe3842f9287802aa85f5333692a0c05eeb529a12c1996fb8fcce9f30d88"
+  },
+  "s7": {
+   "url": "https://www.spiegel.de/panorama/fashion-week-berlin-betritt-das-tor-zur-mode-welt-a-494251.html",
+   "title": "Fashion Week: Berlin betritt das Tor zur Mode-Welt",
+   "publisher": "Der Spiegel",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:37.948Z",
+   "snapshot": "549307246458f6ec39dc062424570841b58a464e4e752081db0d8a8eae6d2495"
+  },
+  "s8": {
+   "url": "https://fashionweek.berlin/en/",
+   "title": "Berlin Fashion Week – official website",
+   "publisher": "Berlin Fashion Week",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:38.160Z",
+   "snapshot": "18897280e9d9fc5488588108798773ad4fa0816d554d9906b74d0393444eb17e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Prêt-à-porter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c042"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Haute couture",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dernier cri",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Atelier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10644",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mode",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-112"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "zweimal",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; history entry seq 44; transcript tp-242"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:58.581Z",
+   "target": "f02491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Le prêt-à-porter est constitué de pièces vendues en tant que produit fini et non pas réalisées sur mesure.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prêt-à-porter” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:58.581Z",
+   "target": "f02492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Haute couture is the creation of exclusive custom-fitted high-end fashion design.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haute couture” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:58.581Z",
+   "target": "f02493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "DERNIER CRI Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dernier cri” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:58.581Z",
+   "target": "f02495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "atelier — Wiktionnaire, le dictionnaire libre",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atelier” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:58.581Z",
+   "target": "f10644",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SAMOON by GERRY WEBER steht für lässige, selbstbewusste Mode",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mode” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:58.581Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Berliner Modewoche ist eine seit 2007 zweimal jährlich stattfindende, rund eine Woche andauernde Veranstaltungsreihe in Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:58.581Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “zweimal” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:12:19Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zwei Mal jährlich sollen künftig in der Hauptstadt Designer-Kollektionen über den Laufsteg gehen.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "2007 launch report."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:12:21Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fashion for everyone: Berlin Fashion Week draws a positive conclusion from the SS27 season",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official site (2026) lists a spring/summer (SS27, July 2026) and an autumn/winter (AW27) edition — two seasons a year."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:12:23Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Berlin Fashion Week bzw. Berliner Modewoche ist eine seit 2007 zweimal jährlich stattfindende, rund eine Woche andauernde Veranstaltungsreihe in Berlin.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:21.082Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zwei Mal jährlich sollen künftig in der Hauptstadt Designer-Kollektionen über den Laufsteg gehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:21.082Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Fashion for everyone: Berlin Fashion Week draws a positive conclusion from the SS27 season",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:21.082Z",
+   "target": "f10645",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Berlin Fashion Week bzw. Berliner Modewoche ist eine seit 2007 zweimal jährlich stattfindende, rund eine Woche andauernde Veranstaltungsreihe in Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:21.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  }
+ ]
+}

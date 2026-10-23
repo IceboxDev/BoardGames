@@ -1,0 +1,242 @@
+{
+ "article": "a1387",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Audi",
+   "title": "Audi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:15.607Z",
+   "snapshot": "b5c00a70ceb30eb55d33f2754f22339eade01bebda5df3327db60c4e2c40fa53"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Horch",
+   "title": "Horch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:16.615Z",
+   "snapshot": "5a728c2ca385c91ee3cb0a24c606bb9001168f1217ac3c93ab8a839ca9e956af"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Audi",
+   "title": "Audi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:17.491Z",
+   "snapshot": "11a11b4f0bf718a1cbec01b5606639f7824a2ebb6fe72d1d66e09e81dd73e43c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Adidas",
+   "title": "Adidas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:16.800Z",
+   "snapshot": "4ea419a17de5b0b24e74ecdd7cfd91680e5e09c8d05ca26450a2a27abbbd889f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/IKEA",
+   "title": "IKEA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:18.943Z",
+   "snapshot": "58d88bbc29850d4097dee2d758b8ce0fa4ddc50fc017cebe584c0451bcaaeef7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Audi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116; transcript tp-001"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Horch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zwickau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23601",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Herzogenaurach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Älmhult",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:17.755Z",
+   "target": "f06931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Audi ist eine deutsche Automarke, die 1910 eingeführt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Audi” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:17.755Z",
+   "target": "f06932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Horch-Pkw waren im Deutschen Reich der 1930er Jahre die meistverkauften Wagen in der Oberklasse.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horch” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:17.755Z",
+   "target": "f23600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Motorwagenwerke AG, a joint-stock company in Zwickau (State of Saxony).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zwickau” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:17.755Z",
+   "target": "f23601",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adidas AG (German pronunciation: [ˈadiˌdas] ; styled as adidas since 1949) is a German multinational athletic apparel and footwear corporation headquartered in Herzogenaurach, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herzogenaurach” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:17.755Z",
+   "target": "f23602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "IKEA's operational hub is located in Älmhult, in Småland, Sweden, where much of its core operations are based, including product development, design, range management, and global supply chain and sourcing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.755Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Älmhult” is on the snapshot of s5"
+  }
+ ]
+}

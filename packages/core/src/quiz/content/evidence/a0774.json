@@ -1,0 +1,242 @@
+{
+ "article": "a0774",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Degania_Alef",
+   "title": "Degania Alef – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:22.308Z",
+   "snapshot": "11fcece4be88e8143cfe40e05b203cc4029d2543979c4ee8649fc24689cffaaf"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nahalal",
+   "title": "Nahalal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:23.300Z",
+   "snapshot": "8b69eb9aa0c755fefcdf80a9014c9c0163f6fa6d363c2ee3d658728d5fbbbc7c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Collectivization_in_the_Soviet_Union",
+   "title": "Collectivization in the Soviet Union – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:24.326Z",
+   "snapshot": "f0cd36cf0d3dc7203102342e2a3ce49f0a7d6874f932928281de06ed64858176"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sovkhoz",
+   "title": "Sovkhoz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:25.348Z",
+   "snapshot": "0f562bca4c406b661e8153235f90f5af562dfb18b6728fbdcbb62b3413d203ba"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Landwirtschaftliche_Produktionsgenossenschaft",
+   "title": "Landwirtschaftliche Produktionsgenossenschaft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:19:22.566Z",
+   "snapshot": "9d1ca890c8ff615d7d07e17b2fa99779fb51fe5d34c7e75950aaf2ac370a297d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "kibbutz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "moshav",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "kolkhoz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "sovkhoz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "LPG",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:43.244Z",
+   "target": "f03866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Degania Alef (Hebrew: דגניה א׳, Hebrew pronunciation: ['dɡanja 'alef]) is a kibbutz in northern Israel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kibbutz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:43.244Z",
+   "target": "f03867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nahalal (Hebrew: נַהֲלָל) is a moshav in northern Israel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “moshav” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:43.244Z",
+   "target": "f03868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "By no means was joining the collective farm (also known as the kolkhoz) voluntary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kolkhoz” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:43.244Z",
+   "target": "f03869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A sovkhoz was a form of state-owned farm or agricultural enterprise in the Soviet Union.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sovkhoz” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:43.244Z",
+   "target": "f03870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Landwirtschaftliche Produktionsgenossenschaft (LPG) wurde ab 1952 der freiwillige und später mit der Zwangskollektivierung vermehrt unfreiwillige genossenschaftliche Zusammenschluss von Bauern und deren Produktionsmitteln sowie anderer Beschäftigten zur gemeinschaftlichen Agrarproduktion in der",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:43.244Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LPG” is on the snapshot of s5"
+  }
+ ]
+}

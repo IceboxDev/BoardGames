@@ -1,0 +1,242 @@
+{
+ "article": "a1717",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Andorra_(Drama)",
+   "title": "Andorra (Drama) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:44.700Z",
+   "snapshot": "a4eb00bf16c84c8db64cf432ab9ea58962e6cca9f8a7385edbf9ec77e494e87f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Biedermann_und_die_Brandstifter",
+   "title": "Biedermann und die Brandstifter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:45.571Z",
+   "snapshot": "d68d3526f127788cfca17455f42cce656bc06bfc0c548b94cb6d7b2aa45ae645"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Der_Besuch_der_alten_Dame",
+   "title": "Der Besuch der alten Dame – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:46.655Z",
+   "snapshot": "2a055282bae3e605d2db74b5770913472acba3589b54a3032306ddb6abb6a8b4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_Physiker",
+   "title": "Die Physiker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:54:42.187Z",
+   "snapshot": "6b57f3933d69606177e4230a94ae950da1d3244b73eb0159ff816c391125f995"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Don_Juan_oder_Die_Liebe_zur_Geometrie",
+   "title": "Don Juan oder Die Liebe zur Geometrie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:17:47.946Z",
+   "snapshot": "e7fac66b644be3d74eb423cebd0e161e38369a321a5d89d9c312400710217313"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andorra",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c144"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08582",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Biedermann und die Brandstifter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Besuch der alten Dame",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08584",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Physiker",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Don Juan oder Die Liebe zur Geometrie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:10.939Z",
+   "target": "f08581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Vorbild für das von Frisch als „Modell“ bezeichnete Andorra, mit dem nicht der reale Kleinstaat Andorra gemeint sei, wurden oft die Schweiz oder Deutschland während der Zeit des Nationalsozialismus verstanden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andorra” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:10.939Z",
+   "target": "f08582",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Biedermann und die Brandstifter ist ein Drama des Schweizer Schriftstellers Max Frisch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biedermann und die Brandstifter” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:10.939Z",
+   "target": "f08583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Besuch der alten Dame ist eine „tragische Komödie“ in drei Akten des Schweizer Schriftstellers Friedrich Dürrenmatt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Besuch der alten Dame” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:10.939Z",
+   "target": "f08584",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Physiker ist ein Drama des Schweizer Schriftstellers Friedrich Dürrenmatt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Physiker” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:10.939Z",
+   "target": "f08585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Don Juan oder Die Liebe zur Geometrie, laut Untertitel eine Komödie in fünf Akten, ist ein Theaterstück des Schweizer Schriftstellers Max Frisch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.939Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Don Juan oder Die Liebe zur Geometrie” is on the snapshot of s5"
+  }
+ ]
+}

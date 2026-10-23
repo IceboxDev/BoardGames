@@ -1,0 +1,195 @@
+{
+ "article": "a0665",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Curling",
+   "title": "Curling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:04.652Z",
+   "snapshot": "5b596562b8c7623296f9c10d9b983910f883580dbaf7f9dfd4c103a17fdf1a14"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Royal_Game",
+   "title": "The Royal Game – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:52.125Z",
+   "snapshot": "2c9b8b8507fdf53024aca0e7e8275a2e5b1b73e30852548906bfc8327a87839f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Table_tennis",
+   "title": "Table tennis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:36:05.890Z",
+   "snapshot": "391c8b516255aba2f1ff38c2f4f33e1d744a99a27dca0b48c03ebe8a852d2d8f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jack_Broughton",
+   "title": "Jack Broughton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:53.150Z",
+   "snapshot": "fbce82b2510d2c2cb50f6745746d9ca7a7af905687c82feec6458fdda846dc37"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Curling",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c056; transcript tp-089"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chess",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Table tennis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Boxing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:23.160Z",
+   "target": "f03321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Curling is a sport in which players slide stones on a sheet of ice towards a target area that is segmented into four concentric circles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Curling” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:23.160Z",
+   "target": "f03322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Royal Game (also published as Chess and as Chess Story; in the original German Schachnovelle, \"Chess Novella\") is a novella by the Austrian author Stefan Zweig written in 1941, the year before the author's death by suicide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chess” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:23.160Z",
+   "target": "f03323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Table tennis (also known as ping-pong) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Table tennis” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:23.160Z",
+   "target": "f03324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He was the first person to codify a set of boxing rules; prior to this the \"rules\" that existed were very loosely defined and tended to vary from contest to contest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:23.160Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boxing” is on the snapshot of s4"
+  }
+ ]
+}

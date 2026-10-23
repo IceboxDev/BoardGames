@@ -1,0 +1,202 @@
+{
+ "article": "a0289",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Public_Enemy",
+   "title": "Public Enemy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:02.140Z",
+   "snapshot": "e90eda876ed4634642356ab2f79406e4dd10539ff176eaef84c279004544f77b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Low_End_Theory",
+   "title": "The Low End Theory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:03.090Z",
+   "snapshot": "53925245e7a5b4d5403da9ca6d4bf0789a8319d7766435b4aa37e0402b2063be"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/N.W.A",
+   "title": "N.W.A – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:06.100Z",
+   "snapshot": "7dfd7df27e422fd8d6f2919ed6359f744b1c1c5c3aa6a616c788f4fe018f8c12"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers)",
+   "title": "Enter the Wu-Tang (36 Chambers) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:07.118Z",
+   "snapshot": "5319c49878b85d8b898ccade8311c6aa42a92217c26871bb553e4073b100b227"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Straight_Outta_Compton",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:08.018Z",
+   "snapshot": "8f94335faa94b9aa19af8b6ad63c8301fd58959b26fe0bc02bfa1e82c749e746"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Public Enemy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c025"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A Tribe Called Quest",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "N.W.A",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wu-Tang Clan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:24.794Z",
+   "target": "f01441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Public Enemy is an American hip-hop group formed in Roosevelt, New York, in 1985 by Chuck D and Flavor Flav.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Public Enemy” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.794Z",
+   "target": "f01442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Low End Theory is the second studio album by American hip-hop group A Tribe Called Quest, released on September 24, 1991, by Jive Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Tribe Called Quest” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.794Z",
+   "target": "f01443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "N.W.A (an abbreviation for Niggaz Wit Attitudes) was an American hip-hop group formed in Compton, California, in 1987.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “N.W.A” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.794Z",
+   "target": "f01445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Enter the Wu-Tang (36 Chambers), often referred to as simply 36 Chambers, is the debut studio album by the American hip-hop collective Wu-Tang Clan, released on November 9, 1993, by Loud Records and RCA Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.794Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wu-Tang Clan” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,447 @@
+{
+ "article": "a2182",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Brezel",
+   "title": "Brezel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:37.535Z",
+   "snapshot": "6cf06dad982bb3e381548fa7f77f0e7fecd0246474d26ec3451a9dc7d2a9f742"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sachertorte",
+   "title": "Sachertorte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:36.862Z",
+   "snapshot": "dc0b9e8f4076ca8a2bcf28adfdb644932376cbadf89e4b902f4d9018a87b9f59"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Donut",
+   "title": "Donut",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:38.610Z",
+   "snapshot": "ccd053ac8fab3c6932900c93d23b93769efdf0f2a8f5a9b9250141924ad6aeab"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Krumkake",
+   "title": "Krumkake",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:38.157Z",
+   "snapshot": "8db1a0be87b20c320bc15b2ba47d61b6d6006f71e1a38864d714246d803f2c5c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Schwarzw%C3%A4lder_Kirschtorte",
+   "title": "Schwarzwälder Kirschtorte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:39.278Z",
+   "snapshot": "157e08d8ec6316c1224a6987aacac3414b53a7f7186e51b382367a30e23a13d1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Linzer_Torte",
+   "title": "Linzer Torte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:40.310Z",
+   "snapshot": "cc0b4742a94a5ed5c547babce4940646950fecde9a5654c0909e52e658446e4d"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Kouign-amann",
+   "title": "Kouign-amann",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:39.190Z",
+   "snapshot": "8c2c4b3321d81be37c91d86094187379c83f854cceb4adadce897030f5fec583"
+  },
+  "s8": {
+   "url": "https://www.bmluk.gv.at/themen/lebensmittel/trad-lebensmittel/backerzeugnisse/sachertorte.html",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:39.038Z",
+   "snapshot": "05c066795252e69308014d2f6a959e344e783045355480f6416adc4fe7ca8b7b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "drei Löcher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-374"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11068",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cronut",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-238"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11069",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Norway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-241"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11070",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kirschwasser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Linz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Brittany",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schokoladenglasur",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Schokoladenglasur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-007/6, u05: The Sachertorte is a chocolate cake with apricot jam and a chocolate glaze (de.wikipedia; Austrian ministry of agriculture's traditional-food register). Statement 'no glaze' false."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schokoladenglasur",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Schokoladenglasur",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11066",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "drei Löcher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“drei Löcher”, “three holes”, “три отверстия”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Sachertorte ist eine Schokoladentorte aus Sachermasse mit Marillenmarmelade und Schokoladenglasur.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schokoladenglasur” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11067",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Sachertorte ist eine Schokoladentorte aus Sachermasse (Mehl, Butter, Eier, Zucker und Schokolade) mit Marillenmarmelade bestrichen, gegebenenfalls gefüllt, überzogen mit einer speziellen Schokoladenglasur.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schokoladenglasur” is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11068",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Cronut wurde 2013 von dem Franzosen Dominique Ansel in New York entwickelt und im selben Jahr vom Time Magazine zu einer der „25 besten Erfindungen des Jahrs 2013“ gekürt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cronut” is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11069",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "These biscuits are popular not only in Norway but due to contributions of Norwegian immigrants and their descendants they are found in the cuisines of New England and the American Midwest.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norway” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11070",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die wesentlichen Komponenten sind mit Kirschwasser aromatisierte Schokoladenbiskuitböden, eine aromatisierte Kirschfüllung, Sahne, Kirschen sowie Schokoladenraspeln als Verzierung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kirschwasser” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Freund Polgars namens Jakob Frank noch ein Wiener Zuckerbäcker namens Linzer historisch nachweisbar sind und die historische Namensgebung von Speisen ursprünglich nach geographischen Gesichtspunkten erfolgte, ist es viel wahrscheinlicher, dass der Name Linzer Torte sich von der Stadt Linz ableitet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Linz” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:34.293Z",
+   "target": "f11072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A specialty of the town of Douarnenez in Finistère, Brittany where it originated around 1860, the kouign-amann is attributed to Yves-René Scordia (1828–1878).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brittany” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:32:37Z",
+   "target": "f11066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "„Back einen Kuchen lieber Freund, durch den die Sonne dreimal scheint, dann wirst du nicht gehenkt, dein Leben sei dir frei geschenkt.“",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "the Bad Urach legend: a bake the sun shines through three times = the three holes of the pretzel knot"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:21.290Z",
+   "target": "f11066",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "„Back einen Kuchen lieber Freund, durch den die Sonne dreimal scheint, dann wirst du nicht gehenkt, dein Leben sei dir frei geschenkt.“",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:21.290Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s1"
+  }
+ ]
+}

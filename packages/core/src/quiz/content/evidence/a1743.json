@@ -1,0 +1,320 @@
+{
+ "article": "a1743",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Johannes_Vermeer",
+   "title": "Johannes Vermeer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:30.520Z",
+   "snapshot": "457a4ae31f7b3bee648c9ef8fb949d1b9174d2de2e81d2ddd50a533263564796"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rembrandt",
+   "title": "Rembrandt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:31.599Z",
+   "snapshot": "d5d1942996b47023082b2bf5e6e121dcf1ce012f14dd90b783f8340775b9cd9b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Laughing_Cavalier",
+   "title": "Laughing Cavalier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:32.358Z",
+   "snapshot": "79b2ab7cd8fddd6f3fba9fba0075777e8d3e1116aa023efd6b61197d6af62609"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Carel_Fabritius",
+   "title": "Carel Fabritius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:33.410Z",
+   "snapshot": "834caf40fda88e623c0995d27114e3610e8843dd246776f66d5d079cbaa22da8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Windmill_at_Wijk_bij_Duurstede",
+   "title": "The Windmill at Wijk bij Duurstede – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Vanitas",
+   "title": "Vanitas",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:35.362Z",
+   "snapshot": "e6585b5f6604c70e27993cf91ff6b76d57a3792fe5c842efbd306044e7caa893"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pieter_Claesz",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:36.386Z",
+   "snapshot": "5e62c0c5d4f2133ebe20f2543e1851d208e84bc086ff011305ede05a4165221a"
+  },
+  "s8": {
+   "url": "https://www.rijksmuseum.nl/en/collection/SK-C-211",
+   "title": "The Windmill at Wijk bij Duurstede – Rijksmuseum",
+   "publisher": "Rijksmuseum",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:04.147Z",
+   "snapshot": "77f1b59ccfc98ded02941728dcb9cbc8b8bfd62c123852ac9df794848888358a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johannes Vermeer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08712",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rembrandt van Rijn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08713",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Frans Hals",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carel Fabritius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jacob van Ruisdael",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25527",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The transience of life",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 52; transcript ppm-124"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:15.548Z",
+   "target": "f08711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johannes Vermeer ( vər-MEER, vər-MAIR, Dutch: [joːˈɦɑnəs fərˈmeːr]; see below; also known as Jan Vermeer; October 1632 – 15 December 1675) was a Dutch painter who specialized in domestic interior scenes of middle-class life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johannes Vermeer” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:15.548Z",
+   "target": "f08712",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rembrandt van Rijn, General Resources",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rembrandt van Rijn” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:15.548Z",
+   "target": "f08713",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Laughing Cavalier (1624) is a portrait by the Dutch Golden Age painter Frans Hals in the Wallace Collection in London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frans Hals” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:15.548Z",
+   "target": "f08714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "4 artworks by or after Carel Fabritius at the Art UK site",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carel Fabritius” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:15.548Z",
+   "target": "f25527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Vanitas is a genre of memento mori symbolizing the transience of life, the uselessness of pleasure, and the certainty of death, and thus the vanity of ambition and all worldly desires.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.548Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The transience of life” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:09:59Z",
+   "target": "f08715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Jacob Isaacksz van Ruisdael, c. 1668 - c. 1670",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:03Z",
+   "target": "f08715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "This painting is world famous, and rightly so. In this impressive composition, Ruisdael united all the typical Dutch elements",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

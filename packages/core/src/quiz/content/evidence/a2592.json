@@ -1,0 +1,348 @@
+{
+ "article": "a2592",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Schachweltmeisterschaft_1972",
+   "title": "Schachweltmeisterschaft 1972",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:02.254Z",
+   "snapshot": "921f68a46eec53c9727614678e402eff998fabd9efeff31bddd576fc0fd3be26"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Contract_bridge",
+   "title": "Contract bridge",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:03.187Z",
+   "snapshot": "4ddc2d6068f5d16ea7378d2269ac1791d2522468df2fc0a558c6903863ea05b7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Backgammon",
+   "title": "Backgammon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:19.190Z",
+   "snapshot": "5213d156419e57dc7b07bd5a4179a2d7469fb1273cdf50979eb8482c6802f4a8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marion_Tinsley",
+   "title": "Marion Tinsley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:04.016Z",
+   "snapshot": "3db6ff24f16d813accc117b43e946a7b4c8886be6f29ec28cb061d03acbab3df"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Xiangqi",
+   "title": "Xiangqi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:05.267Z",
+   "snapshot": "2e2395f114e414719be4f52db6a0e2e75a53c6274628fe8abeb1fd4b4e76ea3d"
+  },
+  "s6": {
+   "url": "https://www.bkgm.com/rules.html",
+   "title": "Backgammon Rules",
+   "publisher": "bkgm.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:27.193Z",
+   "snapshot": "77d68bafd5722b38aad91c23b63f2bd4d809c179b619141622a8b0d9d5cd161f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13950",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schach",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "bridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; history entry seq 12; transcript tp-163"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Backgammon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-171"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "draughts",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Xiangqi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:44.856Z",
+   "target": "f13950",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Schachweltmeisterschaft 1972 war der als Match des Jahrhunderts geltende Zweikampf zwischen dem amtierenden, 35 Jahre alten Weltmeister Boris Spasski und seinem 29 Jahre alten Herausforderer Bobby Fischer um den Weltmeistertitel im Schach, der auch über die Schachwelt hinaus Aufsehen erregte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schach” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:44.856Z",
+   "target": "f13951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Contract bridge, or simply bridge, is a trick-taking card game using a standard 52-card deck.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bridge” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:44.856Z",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Backgammon is a two-player board game played with counters and dice on tables boards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Backgammon” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:44.856Z",
+   "target": "f13953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "However, the American Checkers Federation and the English Draughts Association refused to allow a computer to play for the title.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “draughts” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:44.856Z",
+   "target": "f13954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Xiangqi (; Chinese: 象棋; pinyin: xiàngqí), commonly known in the West as Chinese chess, is a strategy board game for two players.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:44.856Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xiangqi” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:45:35Z",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Backgammon is a two-player board game played with counters and dice on tables boards",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23",
+   "note": "modern backgammon is 17th-century English; it is the best-known member of the tables family whose ancestors are ancient (Roman tabula, Persian nard)"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:45:37Z",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Each player has fifteen checkers of his own color.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:29.443Z",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Backgammon is a two-player board game played with counters and dice on tables boards",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:29.443Z",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Each player has fifteen checkers of his own color.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:29.443Z",
+   "target": "f13952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Backgammon is a game for two players, played on a board consisting of twenty-four narrow triangles called points.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Backgammon” is on the snapshot of s6"
+  }
+ ]
+}

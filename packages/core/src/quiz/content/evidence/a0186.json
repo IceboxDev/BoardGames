@@ -1,0 +1,249 @@
+{
+ "article": "a0186",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Stammheim-Prozess",
+   "title": "Stammheim-Prozess – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:14.819Z",
+   "snapshot": "99cb450efab7e99a41857e3d576b5b02236274c010e75b4bf67d7d23025d9fae"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Horst_Mahler",
+   "title": "Horst Mahler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:15.766Z",
+   "snapshot": "65facc2f2d6288b631ad92a9db8a9d464fd68522aa0395bee8b52cb179e580a6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Revolution%C3%A4rer_Kampf",
+   "title": "Revolutionärer Kampf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:16.882Z",
+   "snapshot": "82c3697c366c7328f7f2063b412ad495aab38b0e814f50e3634c2ec60612870b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Munich_massacre",
+   "title": "Munich massacre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:32:17.618Z",
+   "snapshot": "9b31e11fbdca8f7be7dd59a2acafb75f2d478491e520d7ca24b68e600a414b7b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bundestagswahl_1976",
+   "title": "Bundestagswahl 1976 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:18.222Z",
+   "snapshot": "87021f98bd8dc01364daae4fd9d88a217a3c7dfbc317be8cc7e396fea1f4c3ec"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hanns_Martin_Schleyer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:29:11.252Z",
+   "snapshot": "d2a2eefd20a64278239aed39f4f46005bc9e543ba335214ade100f7ef6f28f2e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Otto Schily",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c016"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gerhard Schröder",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Joschka Fischer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hans-Dietrich Genscher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Helmut Kohl",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:06.607Z",
+   "target": "f00926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beispiele dafür sind die Äußerungen des Wortführers der Verteidigung Otto Schily zum Vorsitzenden Richter Theodor Prinzing am 37.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Schily” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:06.607Z",
+   "target": "f00927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1980 erreichte Mahlers Rechtsanwalt, der Bundesvorsitzende der Jungsozialisten Gerhard Schröder, nach Ablauf von zwei Dritteln der Freiheitsstrafe eine Strafaussetzung zur Bewährung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhard Schröder” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:06.607Z",
+   "target": "f00928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "brachte, der Gründer des Frankfurter Varieté-Theaters Tigerpalast Johnny Klinke, die Übersetzerin Eva Moldenhauer, der Psychoanalytiker und Sexualwissenschaftler Reimut Reiche, die späteren Politiker Tom Koenigs, Daniel Cohn-Bendit und Joschka Fischer sowie der Publizist Thomas Schmid.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Joschka Fischer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:06.607Z",
+   "target": "f00929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Under Chancellor Willy Brandt and Federal Interior Minister Hans-Dietrich Genscher, Zvi Zamir, the head of Israel's Mossad, later reported the German authorities had rejected his repeated offer to deploy the IDF's Sayeret Matkal, insisting instead the Bavarian State Police would handle the crisis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans-Dietrich Genscher” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:06.607Z",
+   "target": "f00930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Für die Unionsparteien trat der CDU-Vorsitzende und Ministerpräsident des Landes Rheinland-Pfalz, Helmut Kohl, an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:06.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s5"
+  }
+ ]
+}

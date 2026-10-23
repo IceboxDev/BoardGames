@@ -1,0 +1,289 @@
+{
+ "article": "a0219",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Black_Paintings",
+   "title": "Black Paintings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:16.906Z",
+   "snapshot": "e0d1e95257e5d4d0ee8789375965767bdf64cd64b8c840e1fffb2db1a9246167"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+   "title": "Guernica (Picasso) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:17.994Z",
+   "snapshot": "7bf071052fd019a2be92424df0f296ca7875ee22806f5115ea171f949eb9cb2b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dal%C3%AD_Theatre_and_Museum",
+   "title": "Dalí Theatre and Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:18.905Z",
+   "snapshot": "3785f9b990fb7bc7457d5e5cae2e607428237645d34cc5610e9303c16198310d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Persistence_of_Memory",
+   "title": "The Persistence of Memory",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:19.886Z",
+   "snapshot": "cdb5e632d89f269c2eda9f04a21d2a4cd547a708491095b599c4897002538ef9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Las_Meninas",
+   "title": "Las Meninas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:21.022Z",
+   "snapshot": "279480d4230e54077045c83fd1cfe7c8dd25514ffd487f65ae99826f3b300ecc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Burial_of_the_Count_of_Orgaz",
+   "title": "The Burial of the Count of Orgaz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:21.903Z",
+   "snapshot": "cbe32260acd683a037a406a7e7795d05f55ea82653beb66302ca8310234f6ba5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Francisco de Goya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pablo Picasso",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Salvador Dalí",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salvador Dalí",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-088"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diego Velázquez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "El Greco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:13.903Z",
+   "target": "f01091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2021, French artist Philippe Parreno was commissioned by the Beyeler Foundation to make a fictional film to accompany their Francisco de Goya exhibition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francisco de Goya” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:13.903Z",
+   "target": "f01092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guernica is a large 1937 oil painting by Spanish artist Pablo Picasso.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pablo Picasso” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:13.903Z",
+   "target": "f01093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Dalí Theatre and Museum (Catalan: Teatre-Museu Dalí, IPA: [teˈatɾə muˈzɛw ðəˈli]; Spanish: Teatro-Museo Dalí) is a museum dedicated to the artist Salvador Dalí in his home town of Figueres, in Catalonia, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salvador Dalí” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:13.903Z",
+   "target": "f01093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Persistence of Memory (Catalan: La persistència de la memòria, Spanish: La persistencia de la memoria) is a 1931 painting by artist Salvador Dalí and one of the most recognizable works of Surrealism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salvador Dalí” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:13.903Z",
+   "target": "f01094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Las Meninas (Spanish: [las meˈninas]; Spanish for 'The Ladies-in-waiting') is a 1656 oil painting in the Museo del Prado in Madrid, by Diego Velázquez, the leading artist in the court of King Philip IV of Spain and Portugal, and of the Spanish Golden Age.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diego Velázquez” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:13.903Z",
+   "target": "f01095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Burial of the Count of Orgaz (Spanish: El Entierro del Conde de Orgaz) is a 1586 painting by El Greco, a prominent Renaissance painter, sculptor, and architect of Greek origin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.903Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Greco” is on the snapshot of s6"
+  }
+ ]
+}

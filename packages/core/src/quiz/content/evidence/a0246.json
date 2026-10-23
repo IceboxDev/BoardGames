@@ -1,0 +1,249 @@
+{
+ "article": "a0246",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Paneurop%C3%A4isches_Picknick",
+   "title": "Paneuropäisches Picknick – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:40:28.716Z",
+   "snapshot": "e1bf8944d3fbd1ddb5a574d5bec62471fb119bb6a9a1fe80a3caad2bdf29e295"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1989_Polish_parliamentary_election",
+   "title": "1989 Polish parliamentary election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:32.466Z",
+   "snapshot": "7b8e66c4761434aca197c7cb73bcaa422e2dccd3db20c86b7c64e6fd8c08a045"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Velvet_Revolution",
+   "title": "Velvet Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:33.389Z",
+   "snapshot": "cfbf043fdcefcfaea0371d9c18735ae4b1ebd477051641c54ec7e811197c8da5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trial_and_execution_of_Nicolae_and_Elena_Ceau%C8%99escu",
+   "title": "Trial and execution of Nicolae and Elena Ceaușescu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:34.496Z",
+   "snapshot": "e67927ade9d1f879d2953e12e50ba246c27ed00b6327e05911d00bbed49d10db"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Samtene_Revolution",
+   "title": "Samtene Revolution",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:40:31.541Z",
+   "snapshot": "4f7b821b1c6f21ac7af2a51ea9d42d6e44765073f259cc8891620813089a4de2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Romanian_revolution",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:35.591Z",
+   "snapshot": "5e1cd7c570f0afa9f4ae81ba9866ac7374c4c4de3d01a121a9e9b5b2aee876ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ungarn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c021"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Czechoslovakia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Romania",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Samt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-168"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:18.662Z",
+   "target": "f01226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mai 1989 begonnenen Abbau der Überwachungsanlagen durch Ungarn zu unterstreichen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ungarn” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:18.662Z",
+   "target": "f01227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Parliamentary elections were held in Poland on 4 June 1989 to elect members of the Sejm and the recreated Senate, with a second round on 18 June.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poland” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:18.662Z",
+   "target": "f01228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Velvet Revolution (Czech: sametová revoluce) or Gentle Revolution (Slovak: nežná revolúcia) was a non-violent transition of power in what was then Czechoslovakia, occurring from 17 November to 28 November 1989.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Czechoslovakia” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:18.662Z",
+   "target": "f01229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nicolae Ceaușescu and his wife Elena were executed following trial on 25 December 1989 in Târgoviște, Romania.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Romania” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:18.662Z",
+   "target": "f14541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Miroslav Vanek, Pavel Mucke: Velvet Revolutions: An Oral History of Czech Society.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:18.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Velvet” is on the snapshot of s5"
+  }
+ ]
+}

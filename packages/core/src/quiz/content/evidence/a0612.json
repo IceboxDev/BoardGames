@@ -1,0 +1,289 @@
+{
+ "article": "a0612",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Phonograph_record",
+   "title": "Phonograph record – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:11.558Z",
+   "snapshot": "2a8978975918211d004fb81e73c777769a25cae10ad900509461b09e2deb9cba"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dolby",
+   "title": "Dolby – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:12.478Z",
+   "snapshot": "f4a99bbfe985490fb79031a06fffd13ff2981136b8fa31554e4778f7e5a36922"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dolby_noise-reduction_system",
+   "title": "Dolby noise-reduction system",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:13.463Z",
+   "snapshot": "5e9a9764b808ade88ceef5872f5c19ccaf1a1ea7090b676c7e09f4b1c8e39f61"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/MP3",
+   "title": "MP3 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:14.588Z",
+   "snapshot": "8f67cc26a049411715006a1c77bf7f324dbc9beeec6ba3db0923e7c296ce8f94"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Compact_disc",
+   "title": "Compact disc – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:15.376Z",
+   "snapshot": "d7b0c1ebcd829d0a667c31968675df3523a6683b41f277a8ccf1080f7ca6525d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bluetooth_Special_Interest_Group",
+   "title": "Bluetooth Special Interest Group – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:16.363Z",
+   "snapshot": "020501c4e43bd7656ecfbff445d9dee43fb423ba1970221b05923e320af39fee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hi-Fi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dolby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dolby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-166"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "MP3",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Compact Disc",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Bluetooth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:14.119Z",
+   "target": "f03056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "of improvements in recording and playback technologies, especially stereo recordings, which became widely available in 1958, gave a boost to the \"hi-fi\" classification of products, leading to sales of individual components for the home such as amplifiers, loudspeakers, phonographs, and tape",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hi-Fi” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:14.119Z",
+   "target": "f03057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "(Dolby Labs or simply Dolby) is an American technology corporation specializing in audio noise reduction, audio encoding/compression, spatial audio, and high-dynamic-range television (HDR) imaging.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dolby” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:14.119Z",
+   "target": "f03057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A Dolby noise-reduction system (Dolby NR) is one of a series of noise reduction systems developed by Dolby Laboratories for use in analog audio tape recording.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dolby” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:14.119Z",
+   "target": "f03058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "MP3 (formally MPEG-1 Audio Layer III or MPEG-2 Audio Layer III) is an audio coding format developed largely by the Fraunhofer Society in Germany under the lead of Karlheinz Brandenburg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MP3” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:14.119Z",
+   "target": "f03059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The compact disc (CD) is a digital optical disc data storage format co-developed by Philips and Sony to store and play digital audio recordings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Compact Disc” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:14.119Z",
+   "target": "f03060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Bluetooth Special Interest Group (Bluetooth SIG) is the standards organization that oversees the development of Bluetooth standards and the licensing of the Bluetooth technologies and trademarks to manufacturers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:14.119Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bluetooth” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "article": "a1621",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Isaac_Newton",
+   "title": "Isaac Newton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:15.971Z",
+   "snapshot": "de2a1fa21fe4c95392b80fe9225751d8dbda9c304af610e7b540a7ec1e22faea"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Physiker",
+   "title": "Die Physiker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:54:42.187Z",
+   "snapshot": "6b57f3933d69606177e4230a94ae950da1d3244b73eb0159ff816c391125f995"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Therese_Giehse",
+   "title": "Therese Giehse – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:16.745Z",
+   "snapshot": "28ade8021c1f68eb02698c7e863120dee8a17d893b8368119e790233ccfe6cbc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Max_Frisch",
+   "title": "Max Frisch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:18.545Z",
+   "snapshot": "c21d645c50ea00ee286ea57ceee3257fc749a4d40c80eea5ae54ed9e509251df"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Isaac Newton",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c136"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mathilde von Zahnd",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Claire Zachanassian",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Max Frisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:52.370Z",
+   "target": "f08101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sir Isaac Newton [ˌaɪzək ’njuːtən] (* 25.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isaac Newton” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:52.370Z",
+   "target": "f08102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mathilde von Zahnd, die missgestaltete Besitzerin und Chefärztin des Irrenhauses, hat bereits Möbius’ sämtliche Aufzeichnungen kopiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mathilde von Zahnd” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:52.370Z",
+   "target": "f08104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1956: Claire Zachanassian, Hauptrolle in Besuch der alten Dame von Friedrich Dürrenmatt, Uraufführung im Schauspielhaus Zürich, 29.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claire Zachanassian” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:52.370Z",
+   "target": "f08105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der junge Max Frisch empfand bürgerliche und künstlerische Existenz als unvereinbar und war lange Zeit unsicher, welchen Lebensentwurf er wählen sollte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:52.370Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Frisch” is on the snapshot of s4"
+  }
+ ]
+}

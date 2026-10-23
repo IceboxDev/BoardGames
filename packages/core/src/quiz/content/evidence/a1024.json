@@ -1,0 +1,202 @@
+{
+ "article": "a1024",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_(film)",
+   "title": "Buffy the Vampire Slayer (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:05.061Z",
+   "snapshot": "abc4de9a885166b278e5eecf2564b552a5aefcae32c22618138d7961036ee583"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Xena:_Warrior_Princess",
+   "title": "Xena: Warrior Princess – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:06.185Z",
+   "snapshot": "7056f262b04bec185bfc4d5ce9d7412427ad462710181de3feab89eb0a5a50e6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Angel_(1999_TV_series)",
+   "title": "Angel (1999 TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:07.184Z",
+   "snapshot": "8e72fac122f4c0e93f9df65bf35d619386fc37e81873ea3d708b7fc8c7423b4c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Veronica_Mars",
+   "title": "Veronica Mars – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:08.268Z",
+   "snapshot": "c1df97ec247769553822e369e4060ccdf0410d8151634fa71d737c7f56f7fcd7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Angel_(Buffy_the_Vampire_Slayer)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:09.077Z",
+   "snapshot": "8422ef652e41b964a13f26ba695b37552131b81223b470d34ac8d0f44f464f2a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05116",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Buffy Summers",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c086"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Xena",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-298"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Angel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Veronica Mars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:21.814Z",
+   "target": "f05116",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It stars Kristy Swanson as the eponymous Buffy Summers, a Valley Girl cheerleader who learns it is her fate to hunt vampires.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buffy Summers” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:21.814Z",
+   "target": "f05117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Xena: Warrior Princess is an American sword-and-sorcery television series filmed in New Zealand, which aired in first-run syndication from September 4, 1995, to June 18, 2001.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xena” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:21.814Z",
+   "target": "f05118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Angel is an American supernatural drama television series, a spinoff of Buffy the Vampire Slayer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angel” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:21.814Z",
+   "target": "f05120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Veronica Mars is an American teen neo-noir mystery drama television series created by screenwriter Rob Thomas.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:21.814Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Veronica Mars” is on the snapshot of s4"
+  }
+ ]
+}

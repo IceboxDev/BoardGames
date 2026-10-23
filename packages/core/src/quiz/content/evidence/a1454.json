@@ -1,0 +1,423 @@
+{
+ "article": "a1454",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_Tucholsky",
+   "title": "Kurt Tucholsky – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:19.485Z",
+   "snapshot": "c7525f0af60e3dfb7d3cd288ff90a32e93cd206df0231dbc88e5094c52f767b7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Erich_K%C3%A4stner",
+   "title": "Erich Kästner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:20.446Z",
+   "snapshot": "76ebe0f20a660f12b87cefda35aa12d8a3b516c0e3efad37506156e441a8ca9d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jean_Paul",
+   "title": "Jean Paul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:21.468Z",
+   "snapshot": "b53cefdcb7a0def52ce4a50632319f2a7f2abf3f1799237af66850712475a8a4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Novalis",
+   "title": "Novalis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:22.579Z",
+   "snapshot": "40d9b479efdb2eb4646ac965e471d041cbc69548250bd2d2410453cf47de8530"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Joachim_Ringelnatz",
+   "title": "Joachim Ringelnatz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:23.373Z",
+   "snapshot": "c2f45df247158b5abd50a0a08aef37b5c3264b6329433c8741128fa5374364a2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Hermann_Hesse",
+   "title": "Hermann Hesse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:20.896Z",
+   "snapshot": "97e7ea6e2f7fa03d9d33a08d0dc64a35c264182f1ad4ec03d87734c8a3fab76c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Kurt_Tucholsky",
+   "title": "Kurt Tucholsky",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:21.819Z",
+   "snapshot": "2acf840ffdfff5aec87d267da5ee0f86d33ff203754bd12248005a73283a4c7c"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Gorch_Fock_(Schriftsteller)",
+   "title": "Gorch Fock (Schriftsteller)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:22.615Z",
+   "snapshot": "cdbf178c178087fabdf7dcb866361e696e1ef73082266e0c2b5109a7eff49cdf"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Joachim_Ringelnatz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:24.561Z",
+   "snapshot": "0e8e30bba852f874f2bc2cf94fdb6e40faa9e04df8b111f56a5e2bc99e55e256"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Gorch_Fock",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:24.347Z",
+   "snapshot": "f50a6507f3779fa149cab0a5e91621880285bf8c9cbbfde298c1fa1092c667c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Tucholsky",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Erich Kästner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johann Paul Friedrich Richter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Friedrich von Hardenberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans Bötticher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12768",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hermann Hesse",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-276"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12769",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Theobald Tiger",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-400"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Schriftsteller",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s10",
+     "quote": "writer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-278/3, u01: Gorch Fock (Johann Kinau, 1880–1916) was a German writer killed at Jutland; he discovered nothing (Madagascar was known to Europeans since 1500). Statement false, answer right."
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f12770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Schriftsteller",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e8 is on the snapshot of s8"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f07266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Tucholsky (German: [kʊʁt tu.ˈxɔls.ki] ; 9 January 1890 – 21 December 1935) was a German journalist, satirist, and writer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Tucholsky” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f07267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Emil Erich Kästner (German: [ˈeːʁɪç ˈkɛstnɐ] ; 23 February 1899 – 29 July 1974) was a German writer, poet, screenwriter and satirist, known primarily for his humorous, socially astute poems and for children's books including Emil and the Detectives and Lisa and Lottie.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erich Kästner” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f07268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jean Paul (German: [ʒɑ̃ paʊl] ;  born Johann Paul Friedrich Richter, 21 March 1763 – 14 November 1825) was a German Romantic writer, best known for his humorous novels and stories.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Paul Friedrich Richter” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f07269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Georg Philipp Friedrich von Hardenberg (2 May 1772 – 25 March 1801), better known by his pen name Novalis (; German: [noˈvaːlɪs]), was a German aristocrat and polymath, who was a poet, novelist, philosopher and mystic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich von Hardenberg” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f07270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Joachim Ringelnatz is the pen name of  the German author and painter Hans Bötticher",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Bötticher” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f12768",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hermann Hesse stammte aus einer evangelischen Missionarsfamilie und wuchs in einer behüteten und intellektuellen Familienatmosphäre auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermann Hesse” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f12769",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Er veröffentlichte auch unter den Pseudonymen Kaspar Hauser, Peter Panter, Theobald Tiger und Ignaz Wrobel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theobald Tiger” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:27:28.518Z",
+   "target": "f12770",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Mai 1916 in der Seeschlacht am Skagerrak; eigentlich Johann Wilhelm Kinau) war ein deutscher Schriftsteller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:28.518Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schriftsteller” is on the snapshot of s8"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a2302",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/International_Friendship_Exhibition",
+   "title": "International Friendship Exhibition",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:33.462Z",
+   "snapshot": "db562d30a984100429aca56f0ba6267a5e04a2a8305fc9797bae0e2bbd8afaa7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Juche_Tower",
+   "title": "Juche Tower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:34.551Z",
+   "snapshot": "3898187b959f33f00e9896eedf173c43b993755d0bf5781fb193e327c94e0d86"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rungrado_1st_of_May_Stadium",
+   "title": "Rungrado 1st of May Stadium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:35.447Z",
+   "snapshot": "a2b67d1cceef62494444a849e1be305811a6c5013b7b7220d7ec88c248aeef74"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ryugyong_Hotel",
+   "title": "Ryugyong Hotel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:36.446Z",
+   "snapshot": "73bfd5bc7a84224569459cfa79dd16eb496109a66bad88b04a32af52a43232f9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kumsusan_Palace_of_the_Sun",
+   "title": "Kumsusan Palace of the Sun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:37.440Z",
+   "snapshot": "b889e84eff238a8527829f770ce571e70a3d5a94873841ffa809d5cec208389f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "International Friendship Exhibition",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-364"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Juche Tower",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rungrado 1st of May Stadium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11895",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ryugyong Hotel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11896",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kumsusan Palace of the Sun",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:51.411Z",
+   "target": "f11892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The International Friendship Exhibition is a large museum complex located at Myohyangsan, North Pyongan Province, North Korea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “International Friendship Exhibition” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:51.411Z",
+   "target": "f11893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Juche Tower (more formally, the Tower of the Juche Idea; Korean: 주체사상탑), completed in 1982, is a 170-metre (560 ft) monument in Pyongyang, the capital of North Korea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juche Tower” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:51.411Z",
+   "target": "f11894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rungrado 1st of May Stadium (Korean: 릉라도 5월1일 경기장) is a multi-purpose stadium occupying an area of 20.7 hectares (51 acres) on the island Rŭngrado, Pyongyang, North Korea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rungrado 1st of May Stadium” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:51.411Z",
+   "target": "f11895",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ryugyong Hotel (Korean: 류경호텔; Hanja: 柳京호텔; RR: Ryugyeong Hotel; MR: Ryugyŏng Hotel), sometimes spelled as Yu-Kyung Hotel, is a 330 m (1,080 ft) tall unfinished pyramid-shaped skyscraper in Pyongyang, North Korea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ryugyong Hotel” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:51.411Z",
+   "target": "f11896",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Kumsusan Palace of the Sun (Korean: 금수산태양궁전), formerly the Kumsusan Memorial Palace (금수산기념궁전), is the mausoleum where the preserved bodies of Kim Il Sung and Kim Jong Il, the eternal leaders of North Korea, are displayed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.411Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kumsusan Palace of the Sun” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,655 @@
+{
+ "article": "a1366",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/List_of_U.S._states_by_date_of_admission_to_the_Union",
+   "title": "List of U.S. states by date of admission to the Union – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:15.252Z",
+   "snapshot": "c536ffc04ec1301a326960bc9ec1a50c3b9565c561ff070af46750e138566099"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wyoming",
+   "title": "Wyoming – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:16.408Z",
+   "snapshot": "a88c099c553ca16e8be7802b28944cfc2f7acff8ab53c3b729169eb41162c7cb"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bundesstaat_der_Vereinigten_Staaten",
+   "title": "Bundesstaat der Vereinigten Staaten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:14.537Z",
+   "snapshot": "b0d64b27a503b43aeb18e939fb5beddb9d372d040c8d52f74882fbbed5748554"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/California",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:17.572Z",
+   "snapshot": "388d3ef73e9d69c2dc8e4ea331ebbe3500a27b85ab97afb217a813b2fa8f68e8"
+  },
+  "s5": {
+   "url": "https://www.census.gov/newsroom/press-releases/2021/2020-census-apportionment-results.html",
+   "title": "2020 Census Apportionment Results – U.S. Census Bureau",
+   "publisher": "U.S. Census Bureau",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:36.855Z",
+   "snapshot": "76634f2966cd2d001e3f5a236b714f34f04892a04446ad019d77be418f7ac7b6"
+  },
+  "s6": {
+   "url": "https://snl.no/California",
+   "title": "California – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:39:36.648Z",
+   "snapshot": "ddd0f4b7af292c6a9810b7f5ed8dd0dfece9da3a8b516f3a924c0234ec6ff2a6"
+  },
+  "s7": {
+   "url": "https://snl.no/Texas",
+   "title": "Texas – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:39:37.593Z",
+   "snapshot": "5e298578452d2375a217a4e01a2be3bc72dac1d4e84e7df0c00595d7e6d30d9f"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Texas",
+   "title": "Texas – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:16.477Z",
+   "snapshot": "1d39c2ea5e4e6e9f59726ddc982e6b8b9a5e52c766755409b3045b37a2a8c1d9"
+  },
+  "s9": {
+   "url": "https://snl.no/Wyoming",
+   "title": "Wyoming – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:39:38.734Z",
+   "snapshot": "fe57f7fb446e72aa2c40ddaeaea090bb55f84cdc78f46090bf4b431785586fba"
+  },
+  "s10": {
+   "url": "https://www.census.gov/programs-surveys/economic-census/guidance-geographies/levels.html",
+   "title": "Geographic Levels – U.S. Census Bureau",
+   "publisher": "U.S. Census Bureau",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:38.596Z",
+   "snapshot": "a3505d1dabdb5f11000949150220f06b5c3d0e1669ff74586aaf0656cc47c5ee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "California",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c114"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Texas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wyoming",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-064"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:14.922Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Compromise of 1850, a package of congressional acts, one of which provided for the admission of California to the Union",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “California” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:14.922Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Texas annexation, the 1845 incorporation of the Republic of Texas into the United States as a state in the Union",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Texas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:14.922Z",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wyoming (  wy-OH-ming) is a landlocked state in the Mountain West subregion of the Western United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wyoming” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:14.922Z",
+   "target": "f11931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vier Staaten – Kentucky, Massachusetts, Pennsylvania und Virginia – tragen die formelle Bezeichnung Commonwealth, ohne dass daraus weitere Rechte oder Pflichten entstünden – im Gegensatz zu den Commonwealth-Territorien Puerto Rico und Nördliche Marianen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:14.922Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vier” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:45:29Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The most populous state was California (39,538,223); the least populous was Wyoming (576,851).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "As of the 2020 census; still true in the 2025 estimates."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:45:31Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "California er den mest folkerike delstaten i USA",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:45:33Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Den er også den nest mest folkerike delstaten etter California.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:45:35Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it is the second-largest state by both area and population",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:45:37Z",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The most populous state was California (39,538,223); the least populous was Wyoming (576,851).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "As of the 2020 census."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:45:40Z",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wyoming regnes som en av fjellstatene og er USAs minst folkerike delstat.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:45:44Z",
+   "target": "f11931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Mountain Division: Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah and Wyoming",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "The page lists all 50 states by division; exactly four end in o: Colorado, Idaho, New Mexico (Mountain) and Ohio (East North Central)."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:45:47Z",
+   "target": "f11931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "East North Central Division: Illinois, Indiana, Michigan, Ohio and Wisconsin",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The most populous state was California (39,538,223); the least populous was Wyoming (576,851).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "California er den mest folkerike delstaten i USA",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Den er også den nest mest folkerike delstaten etter California.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it is the second-largest state by both area and population",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The most populous state was California (39,538,223); the least populous was Wyoming (576,851).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f11931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "East North Central Division: Illinois, Indiana, Michigan, Ohio and Wisconsin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The most populous state was California (39,538,223); the least populous was Wyoming (576,851).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “California” is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06826",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "California – delstat i USA – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “California” is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Texas – delstat i USA – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Texas” is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06827",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Texas (  TEK-səss) is a state in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Texas” is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The most populous state was California (39,538,223); the least populous was Wyoming (576,851).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Wyoming” is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f06828",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Wyoming – delstat i USA – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Wyoming” is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:59.839Z",
+   "target": "f11931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Each of the four census Regions is divided into two or more census Divisions:",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:59.839Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “four” is on the snapshot of s10"
+  }
+ ]
+}

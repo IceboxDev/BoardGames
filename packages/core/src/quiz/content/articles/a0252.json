@@ -1,0 +1,316 @@
+{
+ "id": "a0252",
+ "domain": "technology",
+ "sub": "internet",
+ "titleEn": "Decoding the Email Header",
+ "titleDe": "Der E-Mail-Kopf entschlüsselt",
+ "titleRu": "Расшифровка заголовка электронного письма",
+ "bodyEn": "Email is the oldest application on the internet still in daily use, and its vocabulary shows its age. The fields at the top of every message and the protocols that carry it were named in the 1970s and 1980s by engineers who borrowed freely from the office and the post room. Most of the abbreviations are typed millions of times a day by people who have never wondered what they stand for.\n\nThe two address lines beside \"To\" are the clearest example. CC stands for Carbon Copy, a term from the age of the typewriter and of carbon paper, first patented by Ralph Wedgwood in 1806: a sheet of carbon paper placed between two pages produced a duplicate of a letter, and secretaries noted \"cc:\" at the bottom together with the names of those who received one. In email the field has the same meaning. A recipient in the CC line gets the message for information, sees every other address, and is not normally expected to reply. Its discreet sibling is BCC, the Blind Carbon Copy, already part of the 1977 standard for ARPANET messages. Addresses entered there receive the message too, but they are invisible to everyone else, which makes the field the correct choice for a newsletter or any mailing in which the recipients should not see one another's addresses.\n\nBehind the address lines sit the protocols. When a message leaves the sender's program it travels by SMTP, the Simple Mail Transfer Protocol, defined by Jon Postel in August 1982 and still, with extensions, the only way mail moves between servers. The word \"simple\" was meant literally; the protocol was a set of plain-text commands such as HELO, MAIL FROM and RCPT TO, and its trusting design is the reason spam and forged sender addresses are so hard to stop.\n\nRetrieving mail is a separate job. The simpler method, POP3 (the Post Office Protocol, first defined in 1984), downloads messages to one device and usually deletes them from the server. The alternative, IMAP, the Internet Message Access Protocol, was designed by Mark Crispin at Stanford in 1986 and leaves the mailbox on the server so that a phone, a laptop and a webmail page all show the same folders and the same read and unread marks. Almost every modern account uses IMAP or a proprietary equivalent.\n\nFinally there is the file that most often rides along as an attachment. PDF stands for Portable Document Format, released by Adobe on 15 June 1993 to solve a problem that email had made acute: a document created on one computer looked different, or would not open at all, on another. A PDF embeds fonts, layout and images so that the page appears identical everywhere, and since 2008 the format has been an open ISO standard.\n\n| Abbreviation | Full form | Purpose |\n|---|---|---|\n| CC | Carbon Copy | visible copy for information |\n| BCC | Blind Carbon Copy | hidden copy |\n| SMTP | Simple Mail Transfer Protocol | sending mail between servers |\n| IMAP | Internet Message Access Protocol | reading mail kept on the server |\n| PDF | Portable Document Format | attachments that look the same everywhere |\n\nTogether the five terms describe a complete journey: a message addressed with CC and BCC, handed to SMTP, collected by IMAP and carrying a PDF, using words that would have been understood in a typing pool half a century ago.",
+ "bodyDe": "E-Mail ist die älteste Anwendung des Internets, die noch täglich genutzt wird, und ihr Vokabular zeigt ihr Alter. Die Felder am Kopf jeder Nachricht und die Protokolle, die sie befördern, wurden in den 1970er- und 1980er-Jahren von Ingenieuren benannt, die sich freimütig im Büro und in der Poststelle bedienten. Die meisten Abkürzungen werden millionenfach am Tag von Menschen getippt, die sich nie gefragt haben, wofür sie stehen.\n\nDie beiden Adresszeilen neben „An“ sind das deutlichste Beispiel. CC steht für Carbon Copy, ein Begriff aus dem Zeitalter der Schreibmaschine und des Kohlepapiers, das Ralph Wedgwood 1806 als Erster patentieren ließ: Ein Blatt Kohlepapier zwischen zwei Seiten erzeugte ein Duplikat eines Briefes, und Sekretärinnen vermerkten unten „cc:“ zusammen mit den Namen derer, die eines erhielten. In der E-Mail hat das Feld dieselbe Bedeutung. Ein Empfänger in der CC-Zeile bekommt die Nachricht zur Kenntnis, sieht jede andere Adresse und soll normalerweise nicht antworten. Sein diskretes Geschwister ist BCC, die Blind Carbon Copy, schon Teil des Standards für ARPANET-Nachrichten von 1977. Dort eingetragene Adressen erhalten die Nachricht ebenfalls, sind aber für alle anderen unsichtbar, was das Feld zur richtigen Wahl für einen Newsletter oder jede Aussendung macht, bei der die Empfänger einander nicht sehen sollen.\n\nHinter den Adresszeilen liegen die Protokolle. Wenn eine Nachricht das Programm des Absenders verlässt, reist sie per SMTP, dem Simple Mail Transfer Protocol, im August 1982 von Jon Postel definiert und mit Erweiterungen noch immer der einzige Weg, auf dem Post zwischen Servern bewegt wird. Das Wort „simple“ war wörtlich gemeint; das Protokoll bestand aus einer Reihe von Klartextbefehlen wie HELO, MAIL FROM und RCPT TO, und sein vertrauensseliger Aufbau ist der Grund, warum Spam und gefälschte Absenderadressen so schwer zu stoppen sind.\n\nDas Abrufen von Post ist eine eigene Aufgabe. Das einfachere Verfahren, POP3 (das Post Office Protocol, erstmals 1984 definiert), lädt Nachrichten auf ein Gerät herunter und löscht sie meist vom Server. Die Alternative IMAP, das Internet Message Access Protocol, wurde 1986 von Mark Crispin in Stanford entworfen und belässt das Postfach auf dem Server, sodass ein Telefon, ein Laptop und eine Webmail-Seite alle dieselben Ordner und dieselben Gelesen- und Ungelesen-Markierungen zeigen. Fast jedes moderne Konto nutzt IMAP oder ein proprietäres Gegenstück.\n\nSchließlich gibt es die Datei, die am häufigsten als Anhang mitreist. PDF steht für Portable Document Format, am 15. Juni 1993 von Adobe veröffentlicht, um ein Problem zu lösen, das die E-Mail akut gemacht hatte: Ein auf einem Computer erstelltes Dokument sah auf einem anderen anders aus oder ließ sich gar nicht öffnen. Ein PDF bettet Schriften, Layout und Bilder ein, sodass die Seite überall identisch erscheint, und seit 2008 ist das Format ein offener ISO-Standard.\n\n| Abkürzung | Ausgeschrieben | Zweck |\n|---|---|---|\n| CC | Carbon Copy | sichtbare Kopie zur Kenntnis |\n| BCC | Blind Carbon Copy | verborgene Kopie |\n| SMTP | Simple Mail Transfer Protocol | Versand zwischen Servern |\n| IMAP | Internet Message Access Protocol | Lesen der auf dem Server gehaltenen Post |\n| PDF | Portable Document Format | Anhänge, die überall gleich aussehen |\n\nZusammen beschreiben die fünf Begriffe eine vollständige Reise: eine Nachricht, adressiert mit CC und BCC, an SMTP übergeben, von IMAP abgeholt und mit einem PDF im Gepäck, in Wörtern, die man in einem Schreibbüro vor einem halben Jahrhundert verstanden hätte.",
+ "bodyRu": "Электронная почта — старейшее приложение интернета, которым до сих пор пользуются ежедневно, и её словарь выдаёт её возраст. Поля в верхней части каждого письма и протоколы, которые его доставляют, получили названия в 1970-х и 1980-х годах от инженеров, щедро заимствовавших слова из конторы и почтового отделения. Большинство этих сокращений миллионы раз в день набирают люди, которые никогда не задумывались, что они означают.\n\nДве адресные строки рядом с полем «Кому» — самый наглядный пример. CC означает Carbon Copy («копия под копирку») — термин из эпохи пишущей машинки и копировальной бумаги, впервые запатентованной Ральфом Веджвудом в 1806 году: лист копирки, вложенный между двумя страницами, давал дубликат письма, и секретари помечали внизу «cc:» вместе с именами тех, кто получал копию. В электронной почте это поле значит то же самое. Получатель в строке CC получает письмо для сведения, видит все остальные адреса, и ответа от него обычно не ждут. Его скромный собрат — BCC, Blind Carbon Copy («слепая копия»), входившая уже в стандарт сообщений ARPANET 1977 года. Указанные там адреса тоже получают письмо, но невидимы для всех остальных, поэтому это поле — правильный выбор для рассылки новостей или любого письма, получатели которого не должны видеть адреса друг друга.\n\nЗа адресными строками стоят протоколы. Покидая почтовую программу отправителя, письмо отправляется в путь по SMTP — Simple Mail Transfer Protocol (простому протоколу передачи почты), определённому Джоном Постелом в августе 1982 года и до сих пор, с расширениями, остающемуся единственным способом пересылки почты между серверами. Слово «простой» следовало понимать буквально: протокол состоял из набора текстовых команд вроде HELO, MAIL FROM и RCPT TO, и именно его доверчивое устройство — причина того, что спам и поддельные адреса отправителей так трудно остановить.\n\nПолучение почты — отдельная задача. Более простой способ, POP3 (Post Office Protocol, впервые определённый в 1984 году), загружает письма на одно устройство и обычно удаляет их с сервера. Альтернатива — IMAP, Internet Message Access Protocol (протокол доступа к интернет-сообщениям), — была разработана Марком Криспином в Стэнфорде в 1986 году и оставляет почтовый ящик на сервере, так что телефон, ноутбук и веб-почта показывают одни и те же папки и одни и те же отметки о прочтении. Почти каждый современный почтовый аккаунт использует IMAP или его фирменный аналог.\n\nНаконец, есть файл, который чаще всего путешествует во вложении. PDF означает Portable Document Format («переносимый формат документов»); его выпустила компания Adobe 15 июня 1993 года, чтобы решить проблему, которую электронная почта сделала острой: документ, созданный на одном компьютере, выглядел на другом иначе или вовсе не открывался. PDF встраивает шрифты, вёрстку и изображения, так что страница везде выглядит одинаково, а с 2008 года формат является открытым стандартом ISO.\n\n| Сокращение | Полная форма | Назначение |\n|---|---|---|\n| CC | Carbon Copy | видимая копия для сведения |\n| BCC | Blind Carbon Copy | скрытая копия |\n| SMTP | Simple Mail Transfer Protocol | пересылка почты между серверами |\n| IMAP | Internet Message Access Protocol | чтение почты, хранящейся на сервере |\n| PDF | Portable Document Format | вложения, которые везде выглядят одинаково |\n\nВместе эти пять терминов описывают полный путь письма: адресованное через CC и BCC, переданное SMTP, забранное по IMAP и несущее PDF-файл, — и всё это словами, которые поняли бы в машинописном бюро полвека назад.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Carbon_paper.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Carbon_paper",
+   "width": 476,
+   "height": 600,
+   "alt": {
+    "en": "A sheet of carbon paper",
+    "de": "Ein Blatt Kohlepapier",
+    "ru": "Лист копировальной бумаги"
+   },
+   "caption": {
+    "en": "Carbon paper, placed between two sheets to make a duplicate: the origin of the “carbon copy” and of the CC line in every email.",
+    "de": "Kohlepapier, zwischen zwei Blätter gelegt, um ein Duplikat zu erzeugen: der Ursprung der „Carbon Copy“ und der CC-Zeile jeder E-Mail.",
+    "ru": "Копировальная бумага, которую вкладывали между двумя листами, чтобы получить дубликат, — источник «carbon copy» и строки CC в каждом электронном письме."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Jon_Postel_sitting_in_office_%28cropped%29.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Jon_Postel",
+   "width": 648,
+   "height": 935,
+   "alt": {
+    "en": "Jon Postel in his office",
+    "de": "Jon Postel in seinem Büro",
+    "ru": "Джон Постел в своём кабинете"
+   },
+   "caption": {
+    "en": "Jon Postel, who defined SMTP, the protocol that still carries mail between servers, in 1982.",
+    "de": "Jon Postel, der 1982 SMTP definierte, das Protokoll, das bis heute Post zwischen Servern befördert.",
+    "ru": "Джон Постел, который в 1982 году определил SMTP — протокол, до сих пор переносящий почту между серверами."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f01256",
+   "answerEn": "Carbon Copy",
+   "answerDe": "Carbon Copy",
+   "answerRu": "Carbon Copy",
+   "spans": {
+    "en": [
+     465,
+     11
+    ],
+    "de": [
+     513,
+     11
+    ],
+    "ru": [
+     509,
+     11
+    ]
+   },
+   "timeline": {
+    "kind": "discovery",
+    "start": "1806",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ralph Wedgwood patents carbon paper, origin of the „carbon copy“",
+    "labelDe": "Ralph Wedgwood patentiert das Kohlepapier, Ursprung der „Carbon Copy“",
+    "labelRu": "Ральф Веджвуд патентует копировальную бумагу — источник «carbon copy»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Carbon_paper",
+    "title": "Carbon paper – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01256",
+     "en": "What does the abbreviation CC, used in email, stand for?",
+     "de": "Wofür steht die im E-Mail-Verkehr benutzte Abkürzung CC?",
+     "ru": "Что означает сокращение CC, используемое в электронной почте?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c021",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f01257",
+   "answerEn": "Blind Carbon Copy",
+   "answerDe": "Blind Carbon Copy",
+   "answerRu": "Blind Carbon Copy",
+   "spans": {
+    "en": [
+     955,
+     17
+    ],
+    "de": [
+     1042,
+     17
+    ],
+    "ru": [
+     991,
+     17
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1977",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "RFC 733 standardises ARPANET message headers, including Bcc",
+    "labelDe": "RFC 733 normiert die Kopfzeilen von ARPANET-Nachrichten, samt Bcc",
+    "labelRu": "RFC 733 стандартизирует заголовки сообщений ARPANET, включая Bcc"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Blind_carbon_copy",
+    "title": "Blind carbon copy – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01257",
+     "en": "What does the abbreviation BCC, used in email, stand for?",
+     "de": "Wofür steht die im E-Mail-Verkehr benutzte Abkürzung BCC?",
+     "ru": "Что означает сокращение BCC, используемое в электронной почте?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f01258",
+   "answerEn": "Simple Mail Transfer Protocol",
+   "answerDe": "Simple Mail Transfer Protocol",
+   "answerRu": "Simple Mail Transfer Protocol",
+   "spans": {
+    "en": [
+     1369,
+     29
+    ],
+    "de": [
+     1481,
+     29
+    ],
+    "ru": [
+     1406,
+     29
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1982-08",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Jon Postel defines SMTP (RFC 821)",
+    "labelDe": "Jon Postel definiert SMTP (RFC 821)",
+    "labelRu": "Джон Постел определяет SMTP (RFC 821)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol",
+    "title": "Simple Mail Transfer Protocol – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01258",
+     "en": "What does the abbreviation SMTP, the name of the protocol for sending email, stand for?",
+     "de": "Wofür steht die Abkürzung SMTP, die das Protokoll zum Versenden von E-Mails bezeichnet?",
+     "ru": "Что означает сокращение SMTP — название протокола для отправки электронной почты?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q160453",
+     "label": "Simple Mail Transfer Protocol",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f01259",
+   "answerEn": "Internet Message Access Protocol",
+   "answerDe": "Internet Message Access Protocol",
+   "answerRu": "Internet Message Access Protocol",
+   "spans": {
+    "en": [
+     1934,
+     32
+    ],
+    "de": [
+     2126,
+     32
+    ],
+    "ru": [
+     2069,
+     32
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1986",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Mark Crispin designs IMAP",
+    "labelDe": "Mark Crispin entwirft IMAP",
+    "labelRu": "Марк Криспин разрабатывает IMAP"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol",
+    "title": "Internet Message Access Protocol – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01259",
+     "en": "What does the abbreviation IMAP, the name of the protocol for retrieving email from a server, stand for?",
+     "de": "Wofür steht die Abkürzung IMAP, die das Protokoll zum Abrufen von E-Mails vom Server bezeichnet?",
+     "ru": "Что означает сокращение IMAP — название протокола для получения электронной почты с сервера?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ],
+   "entities": [
+    {
+     "qid": "Q166936",
+     "label": "Internet Message Access Protocol",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f01260",
+   "answerEn": "Portable Document Format",
+   "answerDe": "Portable Document Format",
+   "answerRu": "Portable Document Format",
+   "spans": {
+    "en": [
+     2316,
+     24
+    ],
+    "de": [
+     2540,
+     24
+    ],
+    "ru": [
+     2508,
+     24
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1993-06-15",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Adobe releases the Portable Document Format",
+    "labelDe": "Adobe veröffentlicht das Portable Document Format",
+    "labelRu": "Adobe выпускает формат Portable Document Format"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/PDF",
+    "title": "PDF – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w01260",
+     "en": "What does the abbreviation PDF, the most common file format for email attachments, stand for?",
+     "de": "Wofür steht die Abkürzung PDF, das gängigste Dateiformat für E-Mail-Anhänge?",
+     "ru": "Что означает сокращение PDF — название самого распространённого формата файлов для вложений в электронные письма?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/internet",
+  "topic:language/abbreviations",
+  "audience:international"
+ ]
+}

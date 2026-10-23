@@ -1,0 +1,195 @@
+{
+ "article": "a1124",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/J%C3%BCrgen_Habermas",
+   "title": "Jürgen Habermas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:11.294Z",
+   "snapshot": "00732b0b729b29d7aeb72b2fd7d5b42e2655c8621a32d6cc959f9e2f9f1a3b37"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Being_and_Time",
+   "title": "Being and Time – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:12.220Z",
+   "snapshot": "1bad6565e4f72cbe6519bcf8fd7793da0b940afa3ec4ef95fa8138970c3860e0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Eichmann_in_Jerusalem",
+   "title": "Eichmann in Jerusalem – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:13.136Z",
+   "snapshot": "2d40db6115af4cbed2fa31f340026ec2dd5bb7e03daf9ad39162d48d0d8edc5c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Truth_and_Method",
+   "title": "Truth and Method – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:14.130Z",
+   "snapshot": "f056972ae6abd67ed15cd4fba838060da8e29ad6b338cfa593a2dee5bba741d0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jürgen Habermas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c094"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Martin Heidegger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hannah Arendt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hans-Georg Gadamer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:36.356Z",
+   "target": "f05616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jürgen Habermas (18 June 1929 – 14 March 2026) was a German philosopher and social theorist in the tradition of critical theory and pragmatism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jürgen Habermas” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:36.356Z",
+   "target": "f05618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Being and Time (German: Sein und Zeit) is the 1927 magnum opus of German philosopher Martin Heidegger and a key document of existentialism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Heidegger” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:36.356Z",
+   "target": "f05619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eichmann in Jerusalem: A Report on the Banality of Evil is a 1963 book by the philosopher and political thinker Hannah Arendt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannah Arendt” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:36.356Z",
+   "target": "f05620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Truth and Method (German: Wahrheit und Methode) is a 1960 book by the philosopher Hans-Georg Gadamer, in which the author deploys the concept of \"philosophical hermeneutics\" as it is worked out in Martin Heidegger's Being and Time (1927).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans-Georg Gadamer” is on the snapshot of s4"
+  }
+ ]
+}

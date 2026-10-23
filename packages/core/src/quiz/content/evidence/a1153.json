@@ -1,0 +1,202 @@
+{
+ "article": "a1153",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Spring_Awakening_(musical)",
+   "title": "Spring Awakening (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:07.288Z",
+   "snapshot": "4fe8b55cdc75299dad86a36a536eac5390960dcc0b85f1f3af11416fb4bf542d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Reigen_(Drama)",
+   "title": "Reigen (Drama) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:05.446Z",
+   "snapshot": "b8034752327ff22ef85ea54b095b2a872a90b1bf674c8660638ea8c25c961d95"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Woyzeck",
+   "title": "Woyzeck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:44:05.645Z",
+   "snapshot": "87c43b8c94c80fe1140582fdf0dcea79b9dbd83ceca18e77b179ea40d92bb02e"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_R%C3%A4uber",
+   "title": "Die Räuber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:07.539Z",
+   "snapshot": "9e7bba9a16b87e778fc1573451e8a40346e23e3808dee6999ea198ad263911ec"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Weber",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:42.352Z",
+   "snapshot": "c0675802e0409c69f408befe37d2ade2a3baf3772005207b267467cdba7384b6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Spring Awakening",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reigen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Woyzeck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Räuber",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:40.526Z",
+   "target": "f05761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Spring Awakening is a coming-of-age rock musical with music by Duncan Sheik and a book and lyrics by Steven Sater.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spring Awakening” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:40.526Z",
+   "target": "f05763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Reigen ist das seit mehreren Jahrzehnten erfolgreichste Bühnenstück von Arthur Schnitzler, während es zu Lebzeiten des Autors und bis 1981 auf Wunsch des Verfassers nur in wenigen Fällen aufgeführt werden durfte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Reigen” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:40.526Z",
+   "target": "f05764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Woyzeck ist ein Dramenfragment des deutschen Dramatikers Georg Büchner, der mit der Niederschrift vermutlich zwischen etwa Ende Juli und Anfang Oktober 1836 begann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Woyzeck” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:40.526Z",
+   "target": "f05765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Räuber ist das erste veröffentlichte Drama von Friedrich Schiller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:40.526Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Räuber” is on the snapshot of s4"
+  }
+ ]
+}

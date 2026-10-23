@@ -1,0 +1,242 @@
+{
+ "article": "a1279",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Israeli_new_shekel",
+   "title": "Israeli new shekel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:40.063Z",
+   "snapshot": "e8a03746e262b04225259e3116d2b80cc5f4e746ab71536f59baebe151d214e0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hungarian_forint",
+   "title": "Hungarian forint – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:02.839Z",
+   "snapshot": "1054ae20903912ae5ad535b23aa94306d07dc7ba0b389647be2cd025dd095b04"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Polish_z%C5%82oty",
+   "title": "Polish złoty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:24.965Z",
+   "snapshot": "8d82e60c64330e41170d715c741498c7ea4406a2dfd8212b6176aa0b3e674462"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thai_baht",
+   "title": "Thai baht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:41.311Z",
+   "snapshot": "be3ccbcb79d33468efa2b71086e258d81f5e20417f228ce8d0345037eac6cee2"
+  },
+  "s5": {
+   "url": "https://scielo.org.za/scielo.php?script=sci_abstract&pid=S0041-47512020000300006",
+   "title": "Diamond jubilee of decimalisation: 60 years of South African rand and cent – SciELO South Africa",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:51:39.342Z",
+   "snapshot": "fe6820badc02c7b366583dc1b424478203a8e1adaaeb19b42d2425dbadf598dc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06391",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Israel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c107"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06392",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hungary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06393",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06394",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thailand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06395",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "South Africa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:59.514Z",
+   "target": "f06391",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The new Israeli shekel (sign: ₪; ISO code: ILS; unofficial abbreviation: NIS), also known as simply the Israeli shekel, is the currency of Israel and is also used as a de facto legal tender in the Palestinian territories of the West Bank and the Gaza Strip.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:59.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Israel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:59.514Z",
+   "target": "f06392",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The forint (sign Ft; code HUF) is the currency of Hungary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:59.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hungary” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:59.514Z",
+   "target": "f06393",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The złoty (alternative spelling: zloty; Polish: polski złoty, pronounced [ˈzwɔtɨ] ; abbreviation: zł; code: PLN,) is the official currency and legal tender of Poland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:59.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Poland” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:59.514Z",
+   "target": "f06394",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The baht (; Thai: บาท, pronounced [bàːt̚]; sign: ฿ or บ.; code: THB) is the official currency of Thailand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:59.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thailand” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:59.514Z",
+   "target": "f06395",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Union of South Africa, the precursor to the Republic of South Africa, introduced a decimal coinage system, comprising rand and cents, on 14 February 1961.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:59.514Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Africa” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,523 @@
+{
+ "article": "a2382",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Magnus_Hirschfeld",
+   "title": "Magnus Hirschfeld",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:02.845Z",
+   "snapshot": "a02392acfa08be202ae7c90063407c7c935292e2f8cecaefd947e4595e06fe5e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Magnus_Hirschfeld",
+   "title": "Magnus Hirschfeld – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:02.620Z",
+   "snapshot": "609f23a85dd5baca9510bdc0be79bd35aa460c658bbe9906443e31d478e1d12c"
+  },
+  "s3": {
+   "url": "https://encyclopedia.ushmm.org/content/en/article/magnus-hirschfeld-2",
+   "title": "Magnus Hirschfeld",
+   "publisher": "United States Holocaust Memorial Museum – Holocaust Encyclopedia",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:01.691Z",
+   "snapshot": "5376ea94211dba722b309f5e93497e42c8a066aec3af9459ca29d4b22db88ffc"
+  },
+  "s4": {
+   "url": "https://www.mh-stiftung.de/magnus-hirschfeld/",
+   "title": "Magnus Hirschfeld",
+   "publisher": "Bundesstiftung Magnus Hirschfeld",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:47:03.260Z",
+   "snapshot": "8dd8e339dfece7df8e7bb64bef051b33038484862e6eaa273ec2fc3e21f7c3c7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Magnus Hirschfeld",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paragraph 175",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scientific-Humanitarian Committee",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Different from the Others",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "6 May 1933",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:09.877Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Magnus Hirschfeld stammte aus einer jüdischen Familie und war der Sohn des Kolberger Arztes Hermann Hirschfeld (1825–1885), der für seine Verdienste im Sanitätsdienst während des Deutsch-Französischen Krieges zum Sanitätsrat ernannt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magnus Hirschfeld” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:09.877Z",
+   "target": "f12438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The group aimed to undertake research to defend the rights of homosexuals and to repeal Paragraph 175, the section of the German penal code that, since 1871, had criminalized homosexuality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paragraph 175” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:09.877Z",
+   "target": "f12439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An outspoken advocate for sexual minorities, he founded the Scientific-Humanitarian Committee and the World League for Sexual Reform.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scientific-Humanitarian Committee” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:09.877Z",
+   "target": "f12440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hirschfeld co-wrote and acted in the 1919 film Anders als die Andern ('Different From the Others'), in which Conrad Veidt played one of the first homosexual characters ever written for cinema.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:09.877Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Different from the Others” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:09.877Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "6 May 1933",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“6 May 1933”, “6. Mai 1933”, “6 мая 1933 года”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:42:51Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1919, he established the Institute for Sexual Science (Institut für Sexualwissenschaft).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:42:54Z",
+   "target": "f12437",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Institute for Sexual Science was the first facility of its kind.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:42:57Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Auch das von ihm 1919 eröffnete „Institut für Sexualwissenschaft“ sollte der Forschung einen festen Rahmen geben.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:43:00Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On May 6, 1933, a Nazi student group marched to the Institute for Sexual Science in Berlin. With members of the SA, they ransacked the institute and looted its library and archives.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:43:03Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Online-Dossier zum 80. Jahrestag der Plünderung des Instituts für Sexualwissenschaft am 6. Mai 1933.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:43:06Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On the morning of 6 May, a group of university students belonging to the National Socialist German Students' League stormed the institution",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1919, he established the Institute for Sexual Science (Institut für Sexualwissenschaft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12437",
+   "claim": "premise",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Institute for Sexual Science was the first facility of its kind.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Auch das von ihm 1919 eröffnete „Institut für Sexualwissenschaft“ sollte der Forschung einen festen Rahmen geben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On May 6, 1933, a Nazi student group marched to the Institute for Sexual Science in Berlin. With members of the SA, they ransacked the institute and looted its library and archives.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Online-Dossier zum 80. Jahrestag der Plünderung des Instituts für Sexualwissenschaft am 6. Mai 1933.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On the morning of 6 May, a group of university students belonging to the National Socialist German Students' League stormed the institution",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Magnus Hirschfeld | Holocaust Encyclopedia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Magnus Hirschfeld” is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12437",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Magnus Hirschfeld – BUNDESSTIFTUNG MAGNUS HIRSCHFELD",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Magnus Hirschfeld” is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:53.896Z",
+   "target": "f12441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jahrestag der Plünderung des Instituts für Sexualwissenschaft am 6. Mai 1933.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:53.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “6. Mai 1933” is on the snapshot of s4"
+  }
+ ]
+}

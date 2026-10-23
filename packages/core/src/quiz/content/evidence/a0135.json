@@ -1,0 +1,442 @@
+{
+ "article": "a0135",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo",
+   "title": "Castel Sant'Angelo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:08.210Z",
+   "snapshot": "a7af72e8e93d8dde07dcd2acf77402f5ebdaac28cd9e487545062531267ce547"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cathedral_of_Saint_Domnius",
+   "title": "Cathedral of Saint Domnius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:09.216Z",
+   "snapshot": "3781bb0d4856e515c6eaf4ecc661e1bd63a6afdabf11b7e07948894f18c62658"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mausoleum_of_Augustus",
+   "title": "Mausoleum of Augustus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:10.229Z",
+   "snapshot": "2481fc200e30c78f220bf017ea7ca0885f594ea8d5410784a0553c57b5626690"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Rotunde_(Thessaloniki)",
+   "title": "Rotunde (Thessaloniki) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:25:08.454Z",
+   "snapshot": "cdd9899e1840579292054c314ffb94e61670f5ee56d9dcd59603cbcbbb9e2018"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mausoleum_of_Constantina",
+   "title": "Mausoleum of Constantina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:11.291Z",
+   "snapshot": "84928351506c5003060d14b150a721edb54312c8662221c216e601c564537337"
+  },
+  "s6": {
+   "url": "https://audio.discovergreece.com/audio-tour/walking-tour-thessaloniki-culture/pois/the-rotunda",
+   "title": "The Rotunda – Discover Greece audio tour",
+   "publisher": "Discover Greece",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:06.983Z",
+   "snapshot": "43eba7ab90d4ecf179d3dc8062940e01dcaabb10a3facbd1d946eedd57fa167b"
+  },
+  "s7": {
+   "url": "https://www.thebyzantinelegacy.com/rotunda-thessaloniki",
+   "title": "Rotunda, Thessaloniki – The Byzantine Legacy",
+   "publisher": "The Byzantine Legacy",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:06.566Z",
+   "snapshot": "d3025776065d528739c3c4cedddbab32cc3ce24bded6d326e741ddf4d9e49841"
+  },
+  "s8": {
+   "url": "https://religiousgreece.gr/en/attractions/church-agios-georgios-rotunda",
+   "title": "Church of Agios Georgios (Rotunda) – Religious Greece",
+   "publisher": "Religious Greece (Church of Greece)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:07.349Z",
+   "snapshot": "d27a1eaba09cd93cec5491579adba867dd5407c6423752f6e8490a4729f9109b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Castel Sant'Angelo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cathedral of Saint Domnius",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mausoleum of Augustus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Galerius-Rotunde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Santa Costanza",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:57.843Z",
+   "target": "f00671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Castel Sant'Angelo (pronounced [kaˈstɛl sanˈtandʒelo] Italian for 'Castle of the Holy Angel'), also known as Mausoleum of Hadrian (Italian: Mausoleo di Adriano),  is a towering rotunda (cylindrical building) in Parco Adriano, Rome, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Castel Sant'Angelo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:57.843Z",
+   "target": "f00672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Cathedral of Saint Domnius (Croatian: Katedrala Svetog Duje), known locally as the Sveti Dujam or colloquially Sveti Duje, is the Catholic cathedral in  Split, Croatia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cathedral of Saint Domnius” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:57.843Z",
+   "target": "f00673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Mausoleum of Augustus (Latin: Mausoleum Augusti; Italian: Mausoleo di Augusto) is a large tomb built by the Roman emperor Augustus in 28 BC on the Campus Martius in Rome, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mausoleum of Augustus” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:57.843Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Galerius-Rotunde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Galerius-Rotunde”, “Rotunda of Galerius”, “ротонда Галерия”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:57.843Z",
+   "target": "f00675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Mausoleum of Constantina, also known as the Mausoleum of Santa Costanza, was built in the 4th century AD for  Constantina (also known as Constantia), the daughter of the emperor Constantine I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:57.843Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santa Costanza” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:01:09Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In around 1590 or 1591, it was converted into a mosque by Sheikh Suleyman Hortaji Effendi, at which time the minaret – the only one still standing in Thessaloniki – was added.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Also: the mausoleum purpose is only one theory (temple of Zeus/Kabeiros the other)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:01:12Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Although it is certain that the monument was erected by Galerius about AD 300, its purpose is less clear. Some scholars have asserted that it was built as a mausoleum for its founder, while others have suggested that it was a temple",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Wording premise 'originally constructed as a mausoleum' is contested; wording narrowed."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:01:15Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Then (1590-1591) it was converted into a mosque named Hortaci Süleyman Efendi Camii.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:01:18Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im Jahr 1590 wurde die Rotunde in eine Moschee (Hortaç Efendi Camii) umgewandelt und ein Minarett wurde dem Bau angefügt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:16.372Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In around 1590 or 1591, it was converted into a mosque by Sheikh Suleyman Hortaji Effendi, at which time the minaret – the only one still standing in Thessaloniki – was added.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:16.372Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Although it is certain that the monument was erected by Galerius about AD 300, its purpose is less clear. Some scholars have asserted that it was built as a mausoleum for its founder, while others have suggested that it was a temple",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:16.372Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Then (1590-1591) it was converted into a mosque named Hortaci Süleyman Efendi Camii.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:16.372Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im Jahr 1590 wurde die Rotunde in eine Moschee (Hortaç Efendi Camii) umgewandelt und ein Minarett wurde dem Bau angefügt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:16.372Z",
+   "target": "f00674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rotunda of Galerius",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.372Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rotunda of Galerius” is on the snapshot of s7"
+  }
+ ]
+}

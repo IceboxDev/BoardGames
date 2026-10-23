@@ -1,0 +1,289 @@
+{
+ "article": "a1254",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/White_Rose",
+   "title": "White Rose – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:10.609Z",
+   "snapshot": "5efdd3b64468c84002d5d8f44e12764c97cdbd5bafe7e378f65cad103930d978"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Christoph_Probst",
+   "title": "Christoph Probst – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:11.487Z",
+   "snapshot": "c5de661d4eb210d3fdd0427b705e51a8a744da389aa66ea6eee8c41bf2916133"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_Huber",
+   "title": "Kurt Huber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:12.436Z",
+   "snapshot": "4b1227e0ea921a7b3db5f9859c6820d7ecc1b12d4ba668f70d409dfb7cbe4f4a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/20_July_plot",
+   "title": "20 July plot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:07.219Z",
+   "snapshot": "11c49f562898e8c4ef516cf9b7e697e1231f94da7fe27f51b20463c1ba1f7283"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Elser",
+   "title": "Georg Elser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:50:15.091Z",
+   "snapshot": "bd9c1656b9cc73778dbde6f768ca2446f905f9f1cd6eff2d986392d323d67fb0"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wei%C3%9Fe_Rose",
+   "title": "Weiße Rose",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:50:10.908Z",
+   "snapshot": "7222c2a8a95a9516ba628061e2efe9b49dba25d81fd413f9b887fb784aab465e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hans and Sophie Scholl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06267",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christoph Probst",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06268",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kurt Huber",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06269",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Claus Schenk Graf von Stauffenberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06270",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Georg Elser",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Weiße Rose",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-245"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:55.387Z",
+   "target": "f06266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The White Rose (German: Weiße Rose, pronounced [ˈvaɪsə ˈʁoːzə] ) was a non-violent, intellectual resistance group in Nazi Germany which was led by five students and one LMU Munich professor: Willi Graf, Kurt Huber, Christoph Probst, Alexander Schmorell, and Hans and Sophie Scholl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans and Sophie Scholl” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:55.387Z",
+   "target": "f06267",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christoph Probst and Alexander Schmorell first met while attending the boarding school Landheim Schondorf, where they developed a close friendship grounded in shared intellectual interests and mutual respect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christoph Probst” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:55.387Z",
+   "target": "f06268",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kurt Huber (24 October 1893 – 13 July 1943) was a German university professor, philosopher, and resistance fighter with the anti-Nazi group White Rose.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Huber” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:55.387Z",
+   "target": "f06269",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nonetheless, a 1956 proposal to name a school after Claus Schenk Graf von Stauffenberg was opposed by a majority of citizens, and, according to Deutsche Welle (in 2014):",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claus Schenk Graf von Stauffenberg” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:55.387Z",
+   "target": "f06270",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Johann Georg Elser (German: [ˈɡeːɔʁk ˈɛlzɐ] ; 4 January 1903 – 9 April 1945) was a German carpenter who planned and carried out an elaborate assassination attempt on Adolf Hitler and other high-ranking Nazi leaders on 8 November 1939 at the Bürgerbräukeller in Munich (known as the Bürgerbräukeller",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Elser” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:55.387Z",
+   "target": "f12454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Weiße Rose nannte sich eine hauptsächlich von Studenten getragene, von München aus agierende deutsche Widerstandsgruppe gegen die nationalsozialistische Diktatur, die sich wesentlich auf christliche und humanistische Werte aus der Tradition der bündischen Jugend berief.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:55.387Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weiße Rose” is on the snapshot of s6"
+  }
+ ]
+}

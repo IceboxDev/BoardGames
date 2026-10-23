@@ -1,0 +1,306 @@
+{
+ "article": "a0111",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Nachtwache",
+   "title": "Die Nachtwache – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:19.960Z",
+   "snapshot": "18920ba002ca54356b81417261468ffcd48b5633e766884d0c98e664a0f3fa5e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+   "title": "The Anatomy Lesson of Dr. Nicolaes Tulp – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:22.929Z",
+   "snapshot": "9fd8a6f121360f634e00cc3d66a29dfc3137b1efbd51cac6b6d964a4ff00f4e0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Syndics_of_the_Drapers%27_Guild",
+   "title": "Syndics of the Drapers' Guild – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:23.942Z",
+   "snapshot": "fad8bee7e43184ad2c06820f01cace8ea97aeb023e4719f409310563b10b6c41"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Aristotle_with_a_Bust_of_Homer",
+   "title": "Aristotle with a Bust of Homer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:24.962Z",
+   "snapshot": "8307886491faf1b0a584c28180d648e7d97fd4521a489e90784a4608c9bfd365"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_R%C3%BCckkehr_des_verlorenen_Sohnes_(Rembrandt)",
+   "title": "Die Rückkehr des verlorenen Sohnes (Rembrandt) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:22.200Z",
+   "snapshot": "530df3c7727f98253c9895e888d9423b290c375c7ea24c7fd6a78207547daf89"
+  },
+  "s6": {
+   "url": "https://www.rijksmuseum.nl/en/collection/object/The-Sampling-Officials-of-the-Amsterdam-Drapers-Guild-Known-as-The-Syndics--575b43f479d021359fb5f63b32f7c234",
+   "title": "The Sampling Officials of the Amsterdam Drapers’ Guild, Known as ‘The Syndics’ – Rijksmuseum",
+   "publisher": "Rijksmuseum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:50.603Z",
+   "snapshot": "9dbc5765e48a93054095bbe4eb3e84a68241b4785cc2a4fd36ffd6a7ad16f60a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00551",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Nachtwache",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00552",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Syndics of the Drapers' Guild",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00554",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aristotle with a Bust of Homer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00555",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Rückkehr des verlorenen Sohnes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:53.136Z",
+   "target": "f00551",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Nachtwache (niederländisch De Nachtwacht), im Rijksmuseum Amsterdam als Dauerleihgabe der Stadt Amsterdam mit dem Untertitel Offiziere und andere Schützen des Bezirks II in Amsterdam, unter Führung von Hauptmann Frans Banninck Cocq und Leutnant Willem van Ruytenburch, bekannt als ‚Die",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Nachtwache” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:53.136Z",
+   "target": "f00552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Anatomy Lesson of Dr. Nicolaes Tulp is a 1632 oil painting on canvas by Rembrandt housed in the Mauritshuis museum in The Hague, Netherlands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Anatomy Lesson of Dr. Nicolaes Tulp” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:53.136Z",
+   "target": "f00553",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Syndics of the Drapers' Guild",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Syndics of the Drapers' Guild”, “Die Staalmeesters”, “Синдики гильдии суконщиков”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:53.136Z",
+   "target": "f00554",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aristotle with a Bust of Homer (Dutch: Aristoteles bij de buste van Homerus), also known as Aristotle Contemplating a Bust of Homer, is an oil-on-canvas painting by Rembrandt that depicts Aristotle wearing a gold chain and contemplating a sculpted bust of Homer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aristotle with a Bust of Homer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:53.136Z",
+   "target": "f00555",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Rückkehr des verlorenen Sohnes ist eines der bekanntesten Gemälde von Rembrandt van Rijn.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.136Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Rückkehr des verlorenen Sohnes” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:59:29Z",
+   "target": "f00553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "this important guild commissioned him to paint a group portrait. Rembrandt produced a lively scene by having the wardens look up from their work as if interrupted by our arrival.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:59:31Z",
+   "target": "f00553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "also called Syndics of the Drapers' Guild (Dutch: De waardijns van het Amsterdamse lakenbereidersgilde), is a 1662 oil painting by Rembrandt. It is now in the Rijksmuseum in Amsterdam.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:12.210Z",
+   "target": "f00553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "also called Syndics of the Drapers' Guild (Dutch: De waardijns van het Amsterdamse lakenbereidersgilde), is a 1662 oil painting by Rembrandt. It is now in the Rijksmuseum in Amsterdam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:12.210Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  }
+ ]
+}

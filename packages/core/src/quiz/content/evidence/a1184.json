@@ -1,0 +1,242 @@
+{
+ "article": "a1184",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Erasmus_Programme",
+   "title": "Erasmus Programme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:59.001Z",
+   "snapshot": "44aae3e17f59a6855515f2b83c901dfb073c4b8c2340ef8a939e05d534b7872d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Francis_of_Assisi",
+   "title": "Francis of Assisi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:52:00.636Z",
+   "snapshot": "569ccabfb553dff462b60cbe2d03abce683049ee1467a8d6542593720f4bccd5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nicholas_of_Cusa",
+   "title": "Nicholas of Cusa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:00.022Z",
+   "snapshot": "9d85c1932af6ed8f1ee2741682dc765204c390dc542f7568199d8849956f1439"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/William_of_Ockham",
+   "title": "William of Ockham – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:00.993Z",
+   "snapshot": "657ecb9fd006be159e966da7633e3f77922464c3e6b1b7160a5e08b0d671aed6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Duns_Scotus",
+   "title": "Duns Scotus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:02.252Z",
+   "snapshot": "d38eb78089460ca30e855c7b215158b1dcb33d5e418827c9ab5f673e9bfe7779"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05916",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rotterdam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c099"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05917",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Assisi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05918",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kues",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05919",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ockham",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05920",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Duns",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:45.060Z",
+   "target": "f05916",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Its name refers to Erasmus of Rotterdam, a leading scholar and inspiring lecturer during the Renaissance period who travelled extensively in Europe to teach and study at a number of universities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotterdam” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:45.060Z",
+   "target": "f05917",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "19 August 1181 – 3 October 1226), known as Saint Francis of Assisi, (Italian: Francesco d'Assisi) was an Italian mystic, poet and Catholic friar who founded the religious order of the Franciscans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Assisi” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:45.060Z",
+   "target": "f05918",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nicholas of Cusa (1401 – 11 August 1464), also referred to as Nicholas of Kues and Nicolaus Cusanus (), was a German Catholic bishop and polymath active as a philosopher, theologian, jurist, mathematician, and astronomer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kues” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:45.060Z",
+   "target": "f05919",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "William of Ockham or Occam ( OK-əm; Latin: Guillelmus de Ockham; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ockham” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:45.060Z",
+   "target": "f05920",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John Duns Scotus ( dunz SKOH-təs; Ecclesiastical Latin: [duns ˈskɔtus], 'Duns the Scot'; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:45.060Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Duns” is on the snapshot of s5"
+  }
+ ]
+}

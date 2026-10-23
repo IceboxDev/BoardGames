@@ -1,0 +1,249 @@
+{
+ "article": "a1946",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fall_of_Giants",
+   "title": "Fall of Giants – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:23.568Z",
+   "snapshot": "66bb1452b266dc130d6786fa8f5e382d67d569aaae214c2a56afcf25f57858be"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sh%C5%8Dgun_(novel)",
+   "title": "Shōgun (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:24.667Z",
+   "snapshot": "8ada0796bf94dc65352224f33dbaa8bbb263aeee372dbe62b42290fb7fd8f33f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Wolf_Hall",
+   "title": "Wolf Hall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:25.673Z",
+   "snapshot": "ca8671d3396d890cd6d96ab362b03f3ca5d10168d45937c9870a8700116db8c1"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_Medicus",
+   "title": "Der Medicus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:32:22.852Z",
+   "snapshot": "a189a15b4c957448af5def38348279b6026b4ac0cfc24c5a31cb85a8f3463ace"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Forsyte_Saga",
+   "title": "The Forsyte Saga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:32.680Z",
+   "snapshot": "2382ad882a4d700ab37cbda07d60a742907ae75b02909bc4a2df601f6e08a793"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/James_Clavell",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:26.589Z",
+   "snapshot": "05361ec09a0275f6242f8220542385aeb0732e2afb91e5613c58767b28b8b9c6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ken Follett",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "James Clavell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09728",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hilary Mantel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Noah Gordon",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "John Galsworthy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:51.455Z",
+   "target": "f09726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fall of Giants is a 2010 historical novel by Welsh author Ken Follett.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ken Follett” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:51.455Z",
+   "target": "f09727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Shōgun is a 1975 novel of historical fiction by author James Clavell that chronicles the end of Japan's Azuchi-Momoyama period (1568–1600) and the dawn of the Edo period (1603–1868).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Clavell” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:51.455Z",
+   "target": "f09728",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wolf Hall is a 2009 historical novel by English author Hilary Mantel, published by Fourth Estate, named after the Seymour family's seat of Wolfhall, or Wulfhall, in Wiltshire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hilary Mantel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:51.455Z",
+   "target": "f09729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Medicus (englischer Originaltitel: The Physician) ist ein historischer Roman des US-amerikanischen Schriftstellers Noah Gordon.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Noah Gordon” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:51.455Z",
+   "target": "f09730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Forsyte Saga, first published under that title in 1922, is a series of three novels and two interludes published between 1906 and 1921 by the English author John Galsworthy, who won the 1932 Nobel Prize in Literature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:51.455Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Galsworthy” is on the snapshot of s5"
+  }
+ ]
+}

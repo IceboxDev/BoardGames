@@ -1,0 +1,195 @@
+{
+ "article": "a0703",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kim_Jong_Un",
+   "title": "Kim Jong Un – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:17.396Z",
+   "snapshot": "0b292239a95af140412b320c801b560d33d9d53ea3569f5367bd0a2448023b2a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bashar_al-Assad",
+   "title": "Bashar al-Assad – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:18.422Z",
+   "snapshot": "0e352871739b9949b576ec3c17bc6f80addfac901d6bb8ad02fb77154abb0bb5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nicol%C3%A1s_Maduro",
+   "title": "Nicolás Maduro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:19.437Z",
+   "snapshot": "a689b77ef9bdedd284a2501d052a135ad13653af712d7ba8e3cbd1a60b6a1803"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Xi_Jinping",
+   "title": "Xi Jinping – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:20.545Z",
+   "snapshot": "51fd52b2c7e5e28a5007997454d184683a881eaf25a5579375629fb0777254b7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kim Jong-un",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c059"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03513",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bashar al-Assad",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03514",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nicolás Maduro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03515",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Xi Jinping",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:29.313Z",
+   "target": "f03511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Like his father and grandfather before him, Kim Jong Un rules North Korea as a repressive and totalitarian dictatorship, and his leadership has maintained the Kim family cult of personality.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kim Jong-un” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:29.313Z",
+   "target": "f03513",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ba'athist loyalists in the party, military and the Alawite sect were supportive of Bashar al-Assad, enabling him to become his father's successor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bashar al-Assad” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:29.313Z",
+   "target": "f03514",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nicolás Maduro Moros (born 23 November 1962) is a Venezuelan politician and former union leader who served as the 53rd president of Venezuela from 2013 until his capture in 2026 to face drug trafficking charges to which he pleaded not guilty.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nicolás Maduro” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:29.313Z",
+   "target": "f03515",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Xi Jinping (born 15 June 1953) is a Chinese politician who is the paramount leader of China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:29.313Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xi Jinping” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a1807",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Serval",
+   "title": "Operation Serval – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:49.733Z",
+   "snapshot": "4e9f2ae56d32ce1d4ef029c9727603318f3ab9c98f46154f8d1ed7dbb5b587a5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Sangaris",
+   "title": "Operation Sangaris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:50.685Z",
+   "snapshot": "8f9e0c04f4425ae02f6807892ca53d0d4e5687b1dcd678306edb02ed319fd98e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Second_Ivorian_Civil_War",
+   "title": "Second Ivorian Civil War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:51.650Z",
+   "snapshot": "6baea6c2d25c7891893ebe6426a531f74da1a637415c5e40e4149b22f0cc89d8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Unified_Protector",
+   "title": "Operation Unified Protector – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:52.594Z",
+   "snapshot": "62784613612f004769bbc5d2e376c16866ef3d3a996928a5ba1eb87830707e59"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Operation_Atalanta",
+   "title": "Operation Atalanta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:53.556Z",
+   "snapshot": "58dc428efbe2a83b7c58fb2d5c7d6ad053fda6ba855c2210618b9cdb64207895"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mali",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Central African Republic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ivory Coast",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Libya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09035",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Somalia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:25.444Z",
+   "target": "f09031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Operation Serval (French: Opération Serval) was a French military operation to oust Islamist militants from the north of Mali, who had begun a push into the center of the country.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mali” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:25.444Z",
+   "target": "f09032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Operation Sangaris was a French military intervention in the Central African Republic, from late 2013 till 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Central African Republic” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:25.444Z",
+   "target": "f09033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Second Ivorian Civil War broke out in March 2011 when the crisis in Ivory Coast escalated into full-scale military conflict between forces loyal to Laurent Gbagbo, the President of Ivory Coast since 2000, and supporters of the internationally recognised president-elect Alassane Ouattara.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ivory Coast” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:25.444Z",
+   "target": "f09034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "As of 31 March 2011 it encompassed all international operations in Libya.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Libya” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:25.444Z",
+   "target": "f09035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Launched on 8 December 2008 as the EU’s first naval operation, it was initially established to protect World Food Programme (WFP) vessels and other vulnerable shipping, and to deter, prevent and repress piracy and armed robbery off Somalia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:25.444Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Somalia” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,342 @@
+{
+ "article": "a0986",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/J%C3%A1nos_Sajnovics",
+   "title": "János Sajnovics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:37.994Z",
+   "snapshot": "fa2b185a72fad831acc095df367c620925bf322c26a90cfe6fdc58f59bfcf248"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jan_van_Riebeeck",
+   "title": "Jan van Riebeeck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:39.064Z",
+   "snapshot": "dfc1255b17542a54851cfdf2dfd5e2a239654a943cc10e61bef34512899a43df"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Faroese_language",
+   "title": "Faroese language – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:40.114Z",
+   "snapshot": "dc42d021bb562037e6a53f1647cfec60aff97bd2f388e4c5bdeece4a4fa1c6a9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Scottish_Gaelic",
+   "title": "Scottish Gaelic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:41.225Z",
+   "snapshot": "36b9873fdeee6c12c7433e4408f33ecda6928afd07f62e17e4d9808bee3e6013"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Uralic_languages",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:42.134Z",
+   "snapshot": "94f57740cac97b13086a2794b32e903e636ffaa2215502d3c58abf0b925438ce"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Finnish_language",
+   "title": "Finnish language – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:02.517Z",
+   "snapshot": "4345d5f1d5684a5a335daee09a4939af22d1f0d7325895441524e89a5a2192c4"
+  },
+  "s7": {
+   "url": "https://lex.dk/finsk",
+   "title": "finsk – Den Store Danske (lex.dk)",
+   "publisher": "Lex.dk / Den Store Danske",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:37:01.230Z",
+   "snapshot": "0b275a723a60e338f7ea02c03c28266693b9f0074ded91cc1e54b5759bd43a7a"
+  },
+  "s8": {
+   "url": "https://snl.no/finsk",
+   "title": "finsk – Store norske leksikon",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "nn",
+   "retrievedAt": "2026-10-23T12:37:01.704Z",
+   "snapshot": "8ed7266a52fa57c678e0436bdfa173a897c19c711fd4e38b8ea78a97ace70d95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Estonian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dutch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Faroese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Scottish Gaelic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:15.163Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Estonian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Estonian”, “Estnisch”, “эстонский”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:15.163Z",
+   "target": "f04927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johan Anthoniszoon van Riebeeck  (21 April 1619 – 18 January 1677) was a Dutch merchant and colonial administrator who served as the first Commander of the Cape from 1652 to 1662.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dutch” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:15.163Z",
+   "target": "f04928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Faroese (  FAIR-oh-EEZ, FARR-; endonym: føroyskt [ˈføːɹɪst]) is a North Germanic language spoken as a first language by about 69,000 Faroe Islanders, of whom 21,000 reside mainly in Denmark and elsewhere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Faroese” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:15.163Z",
+   "target": "f04929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Scottish Gaelic (  GAL-ik; endonym: Gàidhlig [ˈkaːlɪkʲ] ), also known as Scots Gaelic or simply Gaelic, is a Celtic language native to the Gaels of Scotland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scottish Gaelic” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:35:09Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Finnic branch also includes Estonian and a few minority languages spoken around the Baltic Sea and in Russia's Republic of Karelia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:35:12Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "finsk er et af de østersøfinske sprog og nært beslægtet med bl.a. estisk og karelsk",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:35:14Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "høyrer finsk til dei austersjøfinske språka, i lag med kvensk, tornedalsfinsk (meänkieli), ludisk, estisk",
+     "quoteLang": "nn",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r029",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:54:45.716Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Finnic branch also includes Estonian and a few minority languages spoken around the Baltic Sea and in Russia's Republic of Karelia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:45.716Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "høyrer finsk til dei austersjøfinske språka, i lag med kvensk, tornedalsfinsk (meänkieli), ludisk, estisk",
+     "quoteLang": "nn",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:45.716Z",
+   "target": "f04926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Finnic branch also includes Estonian and a few minority languages spoken around the Baltic Sea and in Russia's Republic of Karelia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.716Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Estonian” is on the snapshot of s6"
+  }
+ ]
+}

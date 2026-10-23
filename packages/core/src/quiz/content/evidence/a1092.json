@@ -1,0 +1,336 @@
+{
+ "article": "a1092",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/History_of_Twitter",
+   "title": "History of Twitter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:18.112Z",
+   "snapshot": "b31d80c699eeeb5e2909b1d9058fcf6be7be3cd88ead51e307b71f95efc4136b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/X_(soziales_Netzwerk)",
+   "title": "X (soziales Netzwerk)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:15.563Z",
+   "snapshot": "f67c90803721fafc5830d4cb0518ce4df01a3182df4e65fc3cf730999b51039e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Cameron_und_Tyler_Winklevoss",
+   "title": "Cameron und Tyler Winklevoss",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:16.334Z",
+   "snapshot": "cf0ef499fca99c0cc3ac97db1f9a0397ac8e2aab2f32d26bcad69b7f9a922ea5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/YouTube",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:10.642Z",
+   "snapshot": "230fff812266dd59a5ac05201a1a95496586a2b08198e7cd2c64d48459d6609e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Twitter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:19.303Z",
+   "snapshot": "cd3942699df24013b4d7f39a533762d4e7a70dd3da7673c1689b07d80c490d20"
+  },
+  "s6": {
+   "url": "https://docs.x.com/resources/fundamentals/counting-characters",
+   "title": "Counting Characters - X",
+   "publisher": "X Corp. (developer documentation)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:52.612Z",
+   "snapshot": "76daa40dae84a9ddd4c353e1d7ecd2a5c7dc025399c8f30a03f0ac46b35f1bdb"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/technology-41900880",
+   "title": "Twitter to expand 280-character tweets",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:52.849Z",
+   "snapshot": "4ac7d1328e7f86904e11de3cc7325ffb9d7a67580a8da80bb4453fff8349f521"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05456",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Twitter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tweet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-178"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "280",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-216"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mark Zuckerberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-227"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:31.630Z",
+   "target": "f05456",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "his early idea for the social media site Twitter in 2006 while working at early Internet tech company Odeo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twitter” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:31.630Z",
+   "target": "f14184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2006, Iconfactory was developing a twitter application called \"Twitterrific\" and developer Craig Hockenberry began a search for a shorter way to refer to \"Post a Twitter Update.\" In 2007 they began using \"twit\" before Twitter developer Blaine Cook suggested that \"tweet\" be used instead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tweet” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:31.630Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Angemeldete Nutzer können Texte mit bis zu 280 Zeichen (4000 Zeichen in der Bezahlversion) sowie Bilder und Videos verbreiten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “280” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:31.630Z",
+   "target": "f14186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "2004 verklagten beide ihren Kommilitonen Mark Zuckerberg unter dem Vorwurf, dieser habe die Idee zu Facebook von ConnectU gestohlen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.630Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Zuckerberg” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:18:27Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Posts on X can contain up to 280 characters.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "standard limit as of 2026; paying Premium subscribers may post longer texts"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:18:29Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Twitter plans to increase the number of characters in tweets from 140 to 280 for the majority of users.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:55:07.811Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Posts on X can contain up to 280 characters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:07.811Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Twitter plans to increase the number of characters in tweets from 140 to 280 for the majority of users.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:07.811Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Posts on X can contain up to 280 characters.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “280” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:07.811Z",
+   "target": "f14185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Twitter to expand 280-character tweets",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:07.811Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “280” is on the snapshot of s7"
+  }
+ ]
+}

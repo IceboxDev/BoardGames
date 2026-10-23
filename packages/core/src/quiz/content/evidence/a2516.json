@@ -1,0 +1,513 @@
+{
+ "article": "a2516",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Hexenring",
+   "title": "Hexenring",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:42.974Z",
+   "snapshot": "f2ddcd363cb6e91055acc5383d31ef3389194275240c877fb4141b40ad8a4e31"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Dunkler_Hallimasch",
+   "title": "Dunkler Hallimasch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:43.959Z",
+   "snapshot": "ea7d4c29d2767b999da23338d558b8a714abe66d530acdaacc655a4ce37b9d13"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Armillaria_ostoyae",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:42.671Z",
+   "snapshot": "1e9ca219da3f584ca8ea1af1c45af87c06d2457e2eddab199567e219b7fe52d7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Spitzgebuckelter_Raukopf",
+   "title": "Spitzgebuckelter Raukopf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:03:44.953Z",
+   "snapshot": "ecc5024b707fc870abe85b8c109ea00ea41a6095d11948be8770b13a6afb4e2f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cortinarius_rubellus",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:43.661Z",
+   "snapshot": "62b0b65336328107a652f2fe5f05e199160c96470aeb5868710e78495101d5e3"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Orellanine",
+   "title": "Orellanine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:44.650Z",
+   "snapshot": "40e661b8dd5f30bf7760e541b705696d51acec3e35a152ef270023f860e95c96"
+  },
+  "s7": {
+   "url": "https://www.scientificamerican.com/article/strange-but-true-largest-organism-is-fungus/",
+   "title": "Strange but True: The Largest Organism on Earth Is a Fungus",
+   "publisher": "Scientific American",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:53.848Z",
+   "snapshot": "cd72bcd037ef60ba55417d0fdd003af2b1b34d4e33a887812af61b6c19bdf75e"
+  },
+  "s8": {
+   "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php",
+   "title": "Cortinarius rubellus, Deadly Webcap mushroom",
+   "publisher": "First Nature (Pat O'Reilly)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:53.139Z",
+   "snapshot": "9e030f6d2c8c7842a8752eb0c558cb2586c4e1ce3764e37bcc2698028851c3ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hexenring",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-028"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dunkler Hallimasch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-076"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dark honey fungus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ein Giftpilz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-380"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "a poisonous mushroom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "orellanine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oregon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Da mit der Zeit die Nährstoffe im Boden im inneren Bereich der „kreisförmigen Pilzansammlung“ zur Neige gehen, stirbt das Myzel dort ab und übrig bleibt eine ringförmige Struktur, der sogenannte Hexenring.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hexenring” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dunkler Hallimasch",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dunkler Hallimasch” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dark honey fungus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dark honey fungus”, “Dunkler Hallimasch”, “опёнок тёмный”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "ein Giftpilz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“ein Giftpilz”, “a poisonous mushroom”, “ядовитый гриб”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "a poisonous mushroom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“a poisonous mushroom”, “ein Giftpilz”, “ядовитый гриб”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Orellanine or orellanin is a toxin found in a group of mushrooms known as the Orellani within the family Cortinariaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “orellanine” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:33.103Z",
+   "target": "f13386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is common on both hardwood and conifer wood in forests west of the Cascade Range in Oregon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:33.103Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oregon” is on the snapshot of s3"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:09:27Z",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it is one of the largest known organisms in the world by area",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Rivalled by a Posidonia australis seagrass clone (~200 km²), hence 'one of the largest'."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:09:32Z",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The discovery of this giant Armillaria ostoyae in 1998 heralded a new record holder for the title of the world's largest known organism",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:09:51Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Blätterpilz wächst in Fichtenwäldern auf sauren, feuchten und gerne mit Torfmoosen bewachsenen Böden.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: 'einer der giftigsten Pilze, die in Mitteleuropa vorkommen' (contains orellanine)."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:09:55Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a fairly rare but deadly poisonous mushroom. It is found from late summer to early winter in coniferous woodland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:10:03Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Spitzgebuckelte Raukopf ist einer der giftigsten Pilze",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:17.029Z",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "it is one of the largest known organisms in the world by area",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:17.029Z",
+   "target": "f13383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The discovery of this giant Armillaria ostoyae in 1998 heralded a new record holder for the title of the world's largest known organism",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:17.029Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a fairly rare but deadly poisonous mushroom. It is found from late summer to early winter in coniferous woodland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:17.029Z",
+   "target": "f13384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Spitzgebuckelte Raukopf ist einer der giftigsten Pilze",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:17.029Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s4"
+  }
+ ]
+}

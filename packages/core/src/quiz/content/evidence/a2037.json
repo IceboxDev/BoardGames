@@ -1,0 +1,295 @@
+{
+ "article": "a2037",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/John_Dalton",
+   "title": "John Dalton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:28.417Z",
+   "snapshot": "d51b710934013c37df7d1ba06095d38db6331921bce0e0e9a8a0bc8c83aa3888"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Color_blindness",
+   "title": "Color blindness",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:29.475Z",
+   "snapshot": "9c9e350d08d2d2d310391671df5f5a22f712cc74632cfcee1eb95c388d2146cc"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chromosome_21",
+   "title": "Chromosome 21 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:30.358Z",
+   "snapshot": "f84980b5d06bf2fa5dc6aa6aa9feb62649c11f9abd8299556ef90cbc4e1882f7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cystic_fibrosis_transmembrane_conductance_regulator",
+   "title": "Cystic fibrosis transmembrane conductance regulator – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:31.359Z",
+   "snapshot": "a47ac0f82a9f575bbd23972370538f1a3f7d38db15bc512073943c839f86b0d1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Huntingtin",
+   "title": "Huntingtin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:32.303Z",
+   "snapshot": "457b48000a3fda7a90482f0333b4576bc7f2c1f8808cc8ed1ba309c58a431672"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sex-determining_region_Y_protein",
+   "title": "Sex-determining region Y protein – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:33.383Z",
+   "snapshot": "8ce2ec6dda71dc21bd9d0c26511f2dc197fd28dc52482a69c1dd7ea2bb662ac4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Down_syndrome",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:35.474Z",
+   "snapshot": "6ca89964c77a1e457ec6be1f4630a3eec0017ff4e3e35d8cbaa67ce187feefee"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "X chromosome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "X chromosome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript pp-050"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10182",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "chromosome 21",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10183",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "chromosome 7",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10184",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "chromosome 4",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10185",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Y chromosome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:10.803Z",
+   "target": "f10181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "X chromosome",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“X chromosome”, “X-Chromosom”, “X-хромосома”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:10.803Z",
+   "target": "f10181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The condition is more prevalent in males because the opsin genes responsible are located on the X chromosome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “X chromosome” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:10.803Z",
+   "target": "f10182",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chromosome 21 is one of the 23 pairs of chromosomes in humans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chromosome 21” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:10.803Z",
+   "target": "f10183",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The gene that encodes the human CFTR protein is found on chromosome 7, on the long arm at position q31.2.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chromosome 7” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:10.803Z",
+   "target": "f10184",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The HTT gene is located on the short arm (p) of chromosome 4 at position 16.3, from base pair 3,074,510 to base pair 3,243,960.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chromosome 4” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:10.803Z",
+   "target": "f10185",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "SRY is an intronless sex-determining gene on the Y chromosome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:10.803Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Y chromosome” is on the snapshot of s6"
+  }
+ ]
+}

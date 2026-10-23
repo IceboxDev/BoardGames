@@ -1,0 +1,249 @@
+{
+ "article": "a1598",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Jugend_ohne_Gott",
+   "title": "Jugend ohne Gott – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:00.271Z",
+   "snapshot": "80fb50e39a7adcffc4faf666381e9ac58826a69990b8e0e750190d9e770f3695"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kasimir_und_Karoline",
+   "title": "Kasimir und Karoline – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:01.230Z",
+   "snapshot": "36b6dce86a03d783f911cbe54e092a302e715f9a247bb7a3d2e9638f4f267f73"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Geschichten_aus_dem_Wiener_Wald",
+   "title": "Geschichten aus dem Wiener Wald – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:02.355Z",
+   "snapshot": "a14757e21be86e3907c3e895af9c1251535e57c20f75896f96b26916a6ce7207"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_ewige_Spie%C3%9Fer",
+   "title": "Der ewige Spießer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:03.261Z",
+   "snapshot": "cba3e893ea654706e14d820019fb9976ae3eeaa9c956c9c3d039d35b19230ef1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ein_Kind_unserer_Zeit",
+   "title": "Ein Kind unserer Zeit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:04.285Z",
+   "snapshot": "396810deabd706e5bd932350c06df474c19acbcba7efcd4a17d5605538be66e5"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/%C3%96d%C3%B6n_von_Horv%C3%A1th",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:11:05.311Z",
+   "snapshot": "600ade77c6d1ea3df8db216f19e24819af1f1e38e2f9ce9e4df983691f7ee1f1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07986",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jugend ohne Gott",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c134"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kasimir und Karoline",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Geschichten aus dem Wiener Wald",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der ewige Spießer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ein Kind unserer Zeit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:49.049Z",
+   "target": "f07986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jugend ohne Gott ist der dritte Roman des österreich-ungarischen Schriftstellers Ödön von Horváth.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.049Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jugend ohne Gott” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:49.049Z",
+   "target": "f07987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kasimir und Karoline ist ein Theaterstück von Ödön von Horváth.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.049Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kasimir und Karoline” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:49.049Z",
+   "target": "f07988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Geschichten aus dem Wiener Wald ist das bekannteste Theaterstück des österreichisch-ungarischen Schriftstellers Ödön von Horváth (1901–1938).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.049Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geschichten aus dem Wiener Wald” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:49.049Z",
+   "target": "f07989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der ewige Spießer ist der erste Roman von Ödön von Horváth.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.049Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der ewige Spießer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:49.049Z",
+   "target": "f07990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ein Kind unserer Zeit ist ein Roman von Ödön von Horváth.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:49.049Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ein Kind unserer Zeit” is on the snapshot of s5"
+  }
+ ]
+}

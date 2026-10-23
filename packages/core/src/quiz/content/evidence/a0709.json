@@ -1,0 +1,352 @@
+{
+ "article": "a0709",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Ratten",
+   "title": "Die Ratten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:40.578Z",
+   "snapshot": "6769312c171b41390a9270b0888fa484636533cab1c3852e447e0ea55c5b207a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Vor_Sonnenaufgang",
+   "title": "Vor Sonnenaufgang – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:41.641Z",
+   "snapshot": "904cf22b382273c00fde688e23372f08a3f514d68fb6ba1676518e877829224e"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_Weber",
+   "title": "Die Weber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:42.352Z",
+   "snapshot": "c0675802e0409c69f408befe37d2ade2a3baf3772005207b267467cdba7384b6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Der_rote_Hahn_(Gerhart_Hauptmann)",
+   "title": "Der rote Hahn (Gerhart Hauptmann) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:43.356Z",
+   "snapshot": "4e1ea818dcaa31f6774dcd90c67411e24e280cdf2255391091e09cb90b76809d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_versunkene_Glocke",
+   "title": "Die versunkene Glocke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:14:45.190Z",
+   "snapshot": "e129dcd7f0fe690bedcb166b60d39b94253e54fd6cce0d9655c9072c4693cdc3"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/cache/epub/9971/pg9971-images.html",
+   "title": "The Dramatic Works of Gerhart Hauptmann, Volume I (1912) – Project Gutenberg",
+   "publisher": "Project Gutenberg (ed. Ludwig Lewisohn, 1912)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:12.459Z",
+   "snapshot": "af3a63f1b9402fa14806a1e6185e00e423e38855df31c8b2597c5ced0721399c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Der_Biberpelz",
+   "title": "Der Biberpelz – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:56:33Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Ratten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vor Sonnenaufgang",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Weber",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Biberpelz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die versunkene Glocke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:30.151Z",
+   "target": "f03541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Literaturhistoriker Hans Mayer nannte Die Ratten den vielleicht „wichtigsten Beitrag Gerhart Hauptmanns zum modernen Welttheater“, wobei es sich um „eine Großstadtdichtung ganz eigentümlicher Art [handele], die das Geschehen im Berliner Mietshaus stark in die Nähe expressionistischer",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Ratten” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:30.151Z",
+   "target": "f03542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vor Sonnenaufgang ist ein 1889 von Gerhart Hauptmann verfasstes Sozial-Drama.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vor Sonnenaufgang” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:30.151Z",
+   "target": "f03543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Weber (schlesisch: „De Waber“) ist ein 1892 erschienenes soziales Drama in fünf Akten von Gerhart Hauptmann.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Weber” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:30.151Z",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Biberpelz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Der Biberpelz”, “The Beaver Coat”, “Бобровая шуба”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:30.151Z",
+   "target": "f03545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die versunkene Glocke ist ein Drama des deutschen Schriftstellers Gerhart Hauptmann aus dem Jahre 1896.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die versunkene Glocke” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:56:26Z",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MRS. WOLFF, Washerwoman.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:56:29Z",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "THE BEAVER COAT (Der Biberpelz)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:56:33Z",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mutter Wolffen ist eine resolute Wäscherin, verheiratet mit dem schwerfälligen und ängstlichen Schiffszimmermann Julius Wolff.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:58.587Z",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "THE BEAVER COAT (Der Biberpelz)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:58.587Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:58.587Z",
+   "target": "f03544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In The Beaver\nCoat the various gradations of that dialect are scrupulously set down,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:58.587Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Beaver Coat” is on the snapshot of s6"
+  }
+ ]
+}

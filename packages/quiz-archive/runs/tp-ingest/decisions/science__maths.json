@@ -1,0 +1,473 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "science/maths",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-042",
+    "category": 5
+   },
+   "factId": "f03117"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-247",
+    "category": 5
+   },
+   "factId": "f10302"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0806",
+   "baseHash": "ac483634e756",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-229",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Seven Letters for Every Number: How Roman Numerals Work",
+    "titleDe": "Sieben Buchstaben für jede Zahl: So funktionieren römische Ziffern",
+    "bodyEn": "Long before Arabic digits reached Europe, the Romans wrote every number with just seven letters. I stands for 1, V for 5, X for 10, L for 50, C for 100, D for 500 and M for 1000. The letters are written from the largest value to the smallest and simply added together: VIII is 5 + 3 = 8, and MDC is 1000 + 500 + 100 = 1600. The system has no zero and no place value, which is why it is hopeless for arithmetic but perfectly readable on clock faces, monuments, book chapters and film credits.\n\nThe one refinement that trips people up is the subtractive rule. To avoid writing IIII, VIIII or LXXXX, a smaller letter placed in front of a larger one is subtracted from it. Only six such pairs are allowed: IV (4), IX (9), XL (40), XC (90), CD (400) and CM (900). A letter may only be subtracted from the next two larger values, so 99 is XCIX, never IC, and 1999 is MCMXCIX rather than MIM.\n\nThe easiest way to convert a year is to break it into thousands, hundreds, tens and units and translate each block separately:\n\n| Number | Thousands | Hundreds | Tens | Units | Roman numeral |\n|---|---|---|---|---|---|\n| 444 | – | CD | XL | IV | CDXLIV |\n| 1453 | M | CD | L | III | MCDLIII |\n| 1789 | M | DCC | LXXX | IX | MDCCLXXXIX |\n| 1984 | M | CM | LXXX | IV | MCMLXXXIV |\n| 1999 | M | CM | XC | IX | MCMXCIX |\n| 2024 | MM | – | XX | IV | MMXXIV |\n\nThe year 1984 is a good test case because it uses three of the four building blocks at once: M for the thousand, CM for the nine hundred, LXXX for the eighty and IV for the four. George Orwell's novel of that name, published in 1949, is often printed on its title page as „Nineteen Eighty-Four“, and some editions render the year as MCMLXXXIV in the Roman style favoured by publishers for copyright dates. The year of the French Revolution – the Bastille fell on 14 July 1789 – produces one of the longest numerals a modern reader is likely to meet, ten letters in MDCCLXXXIX, while 444 is a favourite of puzzle-setters because each of its three digits calls for a subtractive pair. The fall of Constantinople in 1453 shows how compact the system can be: M (1000) + CD (400) + L (50) + III (3) gives just seven letters, MCDLIII.\n\nPublishers and film studios traditionally date their works in Roman numerals, which is why the end credits of a film released in 2024 read MMXXIV and the Super Bowl played on 31 January 1999 was numbered XXXIII. The Romans themselves were less tidy than modern textbooks suggest: inscriptions show IIII for 4 and XIIX for 18, and the subtractive convention only became a strict rule in the Middle Ages. The one place where IIII survives to this day is on many clock faces, where four upright strokes are said to balance the VIII on the opposite side of the dial.",
+    "bodyDe": "Lange bevor die arabischen Ziffern Europa erreichten, schrieben die Römer jede Zahl mit nur sieben Buchstaben. I steht für 1, V für 5, X für 10, L für 50, C für 100, D für 500 und M für 1000. Die Buchstaben werden vom größten zum kleinsten Wert geschrieben und einfach addiert: VIII ist 5 + 3 = 8, und MDC ist 1000 + 500 + 100 = 1600. Das System kennt weder Null noch Stellenwert, weshalb es zum Rechnen hoffnungslos ist, aber auf Zifferblättern, Denkmälern, Buchkapiteln und im Filmabspann bestens lesbar bleibt.\n\nDie eine Verfeinerung, über die viele stolpern, ist die Subtraktionsregel. Um nicht IIII, VIIII oder LXXXX schreiben zu müssen, wird ein kleinerer Buchstabe, der vor einem größeren steht, von diesem abgezogen. Nur sechs solcher Paare sind erlaubt: IV (4), IX (9), XL (40), XC (90), CD (400) und CM (900). Ein Buchstabe darf nur von den nächsten beiden größeren Werten abgezogen werden, deshalb ist 99 XCIX und niemals IC, und 1999 lautet MCMXCIX und nicht MIM.\n\nAm einfachsten zerlegt man eine Jahreszahl in Tausender, Hunderter, Zehner und Einer und übersetzt jeden Block für sich:\n\n| Zahl | Tausender | Hunderter | Zehner | Einer | Römische Zahl |\n|---|---|---|---|---|---|\n| 444 | – | CD | XL | IV | CDXLIV |\n| 1453 | M | CD | L | III | MCDLIII |\n| 1789 | M | DCC | LXXX | IX | MDCCLXXXIX |\n| 1984 | M | CM | LXXX | IV | MCMLXXXIV |\n| 1999 | M | CM | XC | IX | MCMXCIX |\n| 2024 | MM | – | XX | IV | MMXXIV |\n\nDas Jahr 1984 ist ein guter Testfall, weil es drei der vier Bausteine auf einmal verwendet: M für das Tausend, CM für die Neunhundert, LXXX für die Achtzig und IV für die Vier. George Orwells gleichnamiger Roman, erschienen 1949, trägt auf der Titelseite oft die Schreibweise „Nineteen Eighty-Four“, und manche Ausgaben geben das Jahr als MCMLXXXIV in der römischen Form wieder, die Verlage für Copyright-Angaben bevorzugen. Das Jahr der Französischen Revolution – die Bastille fiel am 14. Juli 1789 – ergibt eine der längsten Zahlen, die einem heutigen Leser begegnen dürften, nämlich zehn Buchstaben in MDCCLXXXIX, während 444 ein Liebling der Rätselmacher ist, weil jede seiner drei Ziffern ein Subtraktionspaar verlangt. Der Fall Konstantinopels im Jahr 1453 zeigt, wie knapp das System sein kann: M (1000) + CD (400) + L (50) + III (3) ergibt nur sieben Buchstaben, MCDLIII.\n\nVerlage und Filmstudios datieren ihre Werke traditionell in römischen Ziffern; deshalb steht im Abspann eines Films aus dem Jahr 2024 MMXXIV, und der Super Bowl vom 31. Januar 1999 trug die Nummer XXXIII. Die Römer selbst waren weniger ordentlich, als moderne Lehrbücher vermuten lassen: Inschriften zeigen IIII für 4 und XIIX für 18, und die Subtraktionskonvention wurde erst im Mittelalter zur strengen Regel. Der eine Ort, an dem IIII bis heute überlebt, sind viele Zifferblätter, auf denen vier senkrechte Striche angeblich das VIII auf der gegenüberliegenden Seite ausgleichen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0876",
+   "baseHash": "ae8f3096b03e",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-288",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-321",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Before the Metre: Five Units That Measured the World",
+    "titleDe": "Vor dem Meter: fünf Einheiten, die die Welt vermaßen",
+    "bodyEn": "The metre was defined in revolutionary France in 1799 as one ten-millionth of the distance from the North Pole to the equator, but most of the world went on measuring with older, bodily units for another century and a half. Five of them are worth knowing, because they still turn up in novels, on road signs and in the cockpit of every aircraft – and a handful of old German measures still haunt fairy tales and grandmother's recipes.\n\nRussia's unit of distance was the Verst (Russian versta). Tolstoy's characters ride versts, Napoleon's army retreated across them, and the milestones along tsarist roads counted them. A verst was 500 sazhen, and after a decree of Tsar Nicholas I tied the sazhen to seven English feet on 11 October 1835 the verst came out at 1,066.78 metres – slightly more than a kilometre, which is why Russian distances in old books always look a little larger than the metric equivalent. Soviet Russia adopted the metric system by decree in 1918, and the verst disappeared from official use in the 1920s, surviving only in idioms such as \"to see a verst away\".\n\nThe English-speaking world kept its own family of units and eventually agreed to define them in metric terms. The basic unit is the Yard, historically the distance from the nose to the outstretched thumb of Henry I or, more prosaically, the length of a standard bar kept in London. Since the International Yard and Pound Agreement, signed on 1 July 1959, a yard has been exactly 0.9144 metres. Everything else follows from it: an Inch is a thirty-sixth of a yard, or exactly 2.54 centimetres – a value British industry had already adopted in 1930 as the \"industrial inch\" – and a Mile is 1,760 yards, or exactly 1,609.344 metres. The word \"mile\" itself is Roman – mille passus, a thousand double paces – but the Roman mile was shorter, about 1,480 metres, and the English statute mile was fixed by Parliament in 1593.\n\nSailors and pilots use a different mile altogether. The Nautical mile was originally one minute of latitude, a sixtieth of a degree, which made it convenient for reading distances straight off a chart. Because the Earth is not a perfect sphere the minute varies slightly, so the International Hydrographic Conference in Monaco in 1929 fixed the nautical mile at exactly 1,852 metres. A speed of one nautical mile per hour is a knot, still the standard unit of speed at sea and in the air. The name goes back to the log line, a rope with knots tied at regular intervals that sailors paid out behind the ship while a sandglass ran; the number of knots that slipped through their hands gave the speed, which is why a ship still makes \"20 knots\" and never \"20 knots per hour\".\n\n| Unit | Region | Metric value | Defined |\n|---|---|---|---|\n| Verst | tsarist Russia | 1,066.78 m | 1835 |\n| Mile | Anglo-American | 1,609.344 m | 1959 |\n| Nautical mile | shipping, aviation | 1,852 m | 1929 |\n| Yard | Anglo-American | 0.9144 m | 1959 |\n| Inch | Anglo-American | 2.54 cm | 1959 |\n\nThe German-speaking lands had their own bodily measures. The Elle (ell) was the length of a forearm, between roughly 55 and 80 centimetres depending on the town, which is why old town halls often have an iron ell bar set into the wall for market traders to check against. The Klafter (fathom) was the span of a man's outstretched arms, about 1.7 to 2 metres, and was used for depths, mine shafts and stacks of firewood. Both are measures of length. The Lot, which often turns up beside them in quiz books, was not: it was a unit of weight (mass), traditionally half an ounce or a thirty-second of a pound, roughly 14 to 17 grams depending on the region, used by apothecaries, silversmiths and coffee merchants. Between 1868 and 1872 the North German Confederation and then the new German Reich replaced all of them with the metric system.\n\nThe oddity of the table is that every entry except the verst is still legal. The United States never went metric for everyday use, Britain still signs its roads in miles, and the international agreements that fixed the yard, inch and nautical mile did not abolish them but simply expressed them in metres. Old units rarely die; they are just redefined.",
+    "bodyDe": "Der Meter wurde 1799 im revolutionären Frankreich als der zehnmillionste Teil der Entfernung vom Nordpol zum Äquator definiert, doch der größte Teil der Welt maß noch anderthalb Jahrhunderte lang mit älteren, körperbezogenen Einheiten weiter. Fünf davon lohnt es zu kennen, weil sie noch immer in Romanen, auf Straßenschildern und im Cockpit jedes Flugzeugs auftauchen – und eine Handvoll alter deutscher Maße geistert bis heute durch Märchen und Großmutters Rezepte.\n\nRusslands Entfernungsmaß war die Werst (russisch wersta). Tolstois Figuren reiten Werst um Werst, Napoleons Armee zog sich über sie zurück, und die Meilensteine an den zaristischen Straßen zählten sie. Eine Werst waren 500 Saschen, und nachdem ein Erlass Zar Nikolaus’ I. den Saschen am 11. Oktober 1835 an sieben englische Fuß gebunden hatte, ergab die Werst 1066,78 Meter – etwas mehr als ein Kilometer, weshalb russische Entfernungen in alten Büchern stets ein wenig größer wirken als das metrische Gegenstück. Sowjetrussland führte das metrische System 1918 per Dekret ein, und die Werst verschwand in den 1920er-Jahren aus dem amtlichen Gebrauch; sie überlebt nur in Redewendungen wie „auf eine Werst sehen“.\n\nDie englischsprachige Welt behielt ihre eigene Einheitenfamilie und einigte sich schließlich darauf, sie metrisch zu definieren. Die Grundeinheit ist das Yard, historisch die Entfernung von der Nase bis zum ausgestreckten Daumen Heinrichs I. oder, prosaischer, die Länge eines in London verwahrten Normalstabs. Seit dem am 1. Juli 1959 unterzeichneten Internationalen Yard-und-Pfund-Abkommen ist ein Yard exakt 0,9144 Meter. Alles Weitere folgt daraus: Ein Zoll ist ein Sechsunddreißigstel eines Yards, also exakt 2,54 Zentimeter – ein Wert, den die britische Industrie schon 1930 als „Industrie-Zoll“ übernommen hatte –, und eine Meile sind 1760 Yards, also exakt 1609,344 Meter. Das Wort „Meile“ selbst ist römisch – mille passus, tausend Doppelschritte –, doch die römische Meile war kürzer, rund 1480 Meter, und die englische Statute Mile wurde 1593 vom Parlament festgelegt.\n\nSeeleute und Piloten benutzen eine ganz andere Meile. Die Seemeile war ursprünglich eine Bogenminute der geografischen Breite, ein Sechzigstel Grad, was es bequem machte, Entfernungen direkt von der Seekarte abzulesen. Weil die Erde keine perfekte Kugel ist, schwankt die Minute leicht, und so legte die Internationale Hydrographische Konferenz in Monaco 1929 die Seemeile auf exakt 1852 Meter fest. Eine Geschwindigkeit von einer Seemeile pro Stunde ist ein Knoten, bis heute die Standardeinheit der Geschwindigkeit auf See und in der Luft. Der Name geht auf die Logleine zurück, ein Seil mit Knoten in regelmäßigen Abständen, das Seeleute hinter dem Schiff ablaufen ließen, während ein Sandglas lief; die Zahl der Knoten, die ihnen durch die Hände glitt, ergab die Fahrt – deshalb macht ein Schiff noch heute „20 Knoten“ und niemals „20 Knoten pro Stunde“.\n\n| Einheit | Region | Metrischer Wert | Festgelegt |\n|---|---|---|---|\n| Werst | zaristisches Russland | 1066,78 m | 1835 |\n| Meile | angloamerikanisch | 1609,344 m | 1959 |\n| Seemeile | Schifffahrt, Luftfahrt | 1852 m | 1929 |\n| Yard | angloamerikanisch | 0,9144 m | 1959 |\n| Zoll | angloamerikanisch | 2,54 cm | 1959 |\n\nDie deutschsprachigen Länder hatten ihre eigenen körperbezogenen Maße. Die Elle war die Länge eines Unterarms, je nach Stadt zwischen etwa 55 und 80 Zentimetern, weshalb an alten Rathäusern oft ein eiserner Ellenstab in die Wand eingelassen ist, an dem Markthändler nachmessen konnten. Das Klafter war die Spannweite der ausgebreiteten Arme eines Mannes, etwa 1,7 bis 2 Meter, und diente für Tiefen, Bergwerksschächte und Stapel von Brennholz. Beide sind Längenmaße. Das Lot, das in Quizbüchern oft neben ihnen auftaucht, war es nicht: Es war eine Gewichtseinheit, traditionell eine halbe Unze oder ein Zweiunddreißigstel Pfund, je nach Region rund 14 bis 17 Gramm, gebraucht von Apothekern, Silberschmieden und Kaffeehändlern. Zwischen 1868 und 1872 ersetzten der Norddeutsche Bund und dann das neue Deutsche Reich sie alle durch das metrische System.\n\nDas Kuriose an der Tabelle ist, dass jeder Eintrag außer der Werst noch immer gültig ist. Die Vereinigten Staaten sind im Alltag nie metrisch geworden, Großbritannien beschildert seine Straßen weiterhin in Meilen, und die internationalen Abkommen, die Yard, Zoll und Seemeile festlegten, schafften sie nicht ab, sondern drückten sie lediglich in Metern aus. Alte Einheiten sterben selten; sie werden nur neu definiert.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0429",
+   "baseHash": "0433f300be4b",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-033",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Small Units, Big Numbers: A Tour of Everyday Conversions",
+    "titleDe": "Kleine Einheiten, große Zahlen: Eine Tour durch alltägliche Umrechnungen",
+    "bodyEn": "Metric measurement owes its everyday convenience to a single, elegant rule: every unit is a clean power of ten away from its neighbours, so any conversion is really just a matter of counting zeroes. A kilometre, for instance, breaks down into 10,000 decimetres, since a metre already equals ten decimetres and a kilometre packs in a thousand metres; multiply ten by a thousand and the zeroes stack up quickly. The metre itself was first defined in 1791 by the French National Assembly as one ten-millionth of the distance from the equator to the North Pole.\n\nPush the same kilometre down to an even smaller unit and the number grows again. A centimetre is a hundredth of a metre, so a kilometre - a thousand metres - contains 100,000 of them, a useful fact for anyone trying to picture just how many small steps fit into a single long walk. From 1799 all these lengths were checked against a prototype metre bar kept in Paris.\n\nGo the other direction, from millimetres up to metres, and the ratio shrinks back to something manageable: exactly 1,000 millimetres make up a single metre, which is why a standard ruler marked in millimetres needs a thousand tick marks to span a metre-long stick, even though nobody actually counts that high by eye. Since 1983 the metre has been defined by the distance light travels in 1/299,792,458 of a second.\n\nMass follows the identical logic. A kilogram, the base unit most kitchen scales are calibrated around, breaks down into 1,000,000 milligrams, a scale so fine that it matters far more to a pharmacist measuring active ingredients than to a cook measuring flour. Since 20 May 2019 the kilogram itself has been defined by a constant of nature, the Planck constant, rather than by a metal cylinder near Paris.\n\nThe same powers of ten hide in the prefixes that the International System of Units adopted in 1960. Kilo means a thousand, mega a million (10^6) and giga a billion (10^9), so each step up the ladder multiplies by the same factor: a gigawatt is 1000 megawatts, a gigahertz 1000 megahertz, and a unit beginning with giga is always 1000 times larger than the corresponding unit beginning with mega.\n\nTime, unlike length or mass, is not decimal at all, yet it produces one of the most quoted numbers in everyday science trivia. A single day, divided into 24 hours, 60 minutes per hour, and 60 seconds per minute, comes to exactly 86,400 seconds - the number every programmer eventually memorises after being surprised by the calculation once. The second itself has been defined by caesium atomic clocks since 1967.\n\nFrom 10,000 decimetres in a kilometre to 86,400 seconds in a day, these conversions reveal the same underlying idea: define one solid reference unit, then let simple multiplication supply every number a scientist, athlete or programmer will ever need.",
+    "bodyDe": "Das metrische Maßsystem verdankt seine alltägliche Bequemlichkeit einer einzigen, eleganten Regel: Jede Einheit ist von ihren Nachbarn genau eine Zehnerpotenz entfernt, sodass jede Umrechnung im Grunde nur ein Zählen von Nullen ist. Ein Kilometer etwa zerlegt sich in 10.000 Dezimeter, denn ein Meter entspricht bereits zehn Dezimetern, und ein Kilometer enthält tausend Meter; multipliziert man zehn mit tausend, summieren sich die Nullen schnell. Der Meter selbst wurde 1791 von der französischen Nationalversammlung erstmals als ein Zehnmillionstel der Entfernung vom Äquator zum Nordpol definiert.\n\nSchiebt man denselben Kilometer auf eine noch kleinere Einheit hinunter, wächst die Zahl erneut. Ein Zentimeter ist ein Hundertstel eines Meters, sodass ein Kilometer – tausend Meter – genau 100.000 davon enthält, eine nützliche Tatsache für jeden, der sich vorstellen möchte, wie viele kleine Schritte in einen einzigen langen Spaziergang passen. Ab 1799 wurden all diese Längen an einem in Paris verwahrten Urmeter-Stab gemessen.\n\nGeht man die andere Richtung, von Millimetern hinauf zu Metern, schrumpft das Verhältnis wieder auf etwas Überschaubares: Genau 1.000 Millimeter ergeben einen einzigen Meter, weshalb ein Standardlineal mit Millimetereinteilung tausend Strichmarkierungen braucht, um einen meterlangen Stab abzudecken, auch wenn niemand tatsächlich so hoch mit bloßem Auge zählt. Seit 1983 ist der Meter über die Strecke definiert, die das Licht in 1/299.792.458 Sekunde zurücklegt.\n\nBei der Masse gilt dieselbe Logik. Ein Kilogramm, die Grundeinheit, auf die die meisten Küchenwaagen geeicht sind, zerlegt sich in 1.000.000 Milligramm, eine so feine Skala, dass sie für einen Apotheker, der Wirkstoffe abmisst, weit wichtiger ist als für einen Koch, der Mehl abwiegt. Seit dem 20. Mai 2019 ist das Kilogramm selbst über eine Naturkonstante, das Plancksche Wirkungsquantum, definiert statt über einen Metallzylinder bei Paris.\n\nDieselben Zehnerpotenzen stecken in den Vorsätzen, die das Internationale Einheitensystem 1960 übernahm. Kilo bedeutet tausend, Mega eine Million (10^6) und Giga eine Milliarde (10^9), sodass jede Stufe der Leiter mit demselben Faktor multipliziert: Ein Gigawatt sind 1000 Megawatt, ein Gigahertz 1000 Megahertz, und eine Einheit, die mit Giga beginnt, ist stets um den Faktor 1000 größer als die entsprechende Einheit mit Mega.\n\nDie Zeit ist, anders als Länge oder Masse, überhaupt nicht dezimal aufgebaut, liefert aber dennoch eine der meistzitierten Zahlen der alltäglichen Wissenschaftstrivia. Ein einzelner Tag, unterteilt in 24 Stunden, 60 Minuten pro Stunde und 60 Sekunden pro Minute, ergibt genau 86.400 Sekunden – die Zahl, die sich jeder Programmierer irgendwann einprägt, nachdem er einmal von der Berechnung überrascht wurde. Die Sekunde selbst ist seit 1967 über Cäsium-Atomuhren definiert.\n\nVon 10.000 Dezimetern in einem Kilometer bis zu 86.400 Sekunden in einem Tag zeigen diese Umrechnungen dieselbe zugrunde liegende Idee: eine solide Bezugseinheit festlegen und dann einfache Multiplikation jede Zahl liefern lassen, die ein Wissenschaftler, Sportler oder Programmierer je brauchen wird.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1521",
+   "baseHash": "8fa496c3bcba",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-073",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Why Bubbles Are Round: Solids, Surfaces and Volumes",
+    "titleDe": "Warum Seifenblasen rund sind: Körper, Oberflächen und Volumen",
+    "bodyEn": "Geometry in three dimensions begins with a handful of solids that everyone recognises, and each of them answers a question about the relationship between surface and volume.\n\nThe most economical shape of all is the sphere. Of all solids with a given volume, the sphere has the smallest surface area; equivalently, of all solids with a given surface, it encloses the most volume. This is the three-dimensional isoperimetric inequality, conjectured in antiquity and only proved rigorously by Hermann Schwarz in 1884. Nature exploits it constantly. A soap bubble minimises the energy of its surface and therefore becomes a sphere; raindrops, planets and stars are pulled into the same shape by surface tension or gravity; and a cat curls into a ball on a cold night to lose as little heat as possible. With radius r, the sphere's volume is 4/3 πr³ and its surface 4πr².\n\nTwo other familiar solids are generated by rotation. Rotate a rectangle about one of its sides and you sweep out a cylinder, the shape of a tin can, whose volume is πr²h. Rotate a right-angled triangle about one of its legs and you sweep out a cone, with exactly one third of the volume of the cylinder that surrounds it, πr²h/3 – a theorem first proved by Eudoxus of Cnidus (c. 390–340 BC). Archimedes proved the corresponding result for the sphere in his treatise \"On the Sphere and Cylinder\" (c. 225 BC): a sphere inscribed in a cylinder has two thirds of its volume and two thirds of its surface, a discovery he was so proud of that he asked for the figure to be carved on his tomb.\n\nThe Platonic solids are the five convex polyhedra whose faces are identical regular polygons meeting identically at every vertex. Euclid proved in the last book of the \"Elements\" that there can be no others. The tetrahedron has four triangular faces, the cube six squares, the octahedron eight triangles. The dodecahedron is bounded by twelve regular pentagons and was, for Plato in the \"Timaeus\" (c. 360 BC), the shape of the cosmos itself; the other four he assigned to the elements fire, earth, air and water. The icosahedron, with twenty equilateral triangles, is the roundest of the five and the one nature favours: many viruses, including the adenovirus and the polio virus, build their protein shells as icosahedra, and the geodesic domes of Buckminster Fuller, patented on 29 June 1954, subdivide its faces.\n\n| Solid | Faces | Vertices | Edges |\n|---|---|---|---|\n| tetrahedron | 4 triangles | 4 | 6 |\n| cube | 6 squares | 8 | 12 |\n| octahedron | 8 triangles | 6 | 12 |\n| dodecahedron | 12 pentagons | 20 | 30 |\n| icosahedron | 20 triangles | 12 | 30 |\n\nIn every row faces minus edges plus vertices equals 2, Euler's polyhedron formula. It works for solids that are not Platonic too: a square pyramid, the shape of Giza, has 5 faces (a square base and four triangles), 5 vertices and 8 edges – four around the base and four rising to the apex – and 5 − 8 + 5 is again 2. The sphere can be thought of as the limit of ever finer polyhedra, which is exactly how Archimedes approximated it, and why the surface-minimising shape is also the one with no faces at all.",
+    "bodyDe": "Die Geometrie in drei Dimensionen beginnt mit einer Handvoll Körper, die jeder kennt, und jeder von ihnen beantwortet eine Frage nach dem Verhältnis von Oberfläche und Volumen.\n\nDie sparsamste Form von allen ist die Kugel. Von allen Körpern mit gegebenem Volumen hat die Kugel die kleinste Oberfläche; umgekehrt umschließt sie von allen Körpern mit gegebener Oberfläche das größte Volumen. Das ist die dreidimensionale isoperimetrische Ungleichung, schon in der Antike vermutet und erst 1884 von Hermann Schwarz streng bewiesen. Die Natur nutzt sie ständig. Eine Seifenblase minimiert die Energie ihrer Oberfläche und wird deshalb zur Kugel; Regentropfen, Planeten und Sterne werden durch Oberflächenspannung oder Schwerkraft in dieselbe Form gezogen; und eine Katze rollt sich in einer kalten Nacht zusammen, um so wenig Wärme wie möglich zu verlieren. Bei Radius r beträgt das Volumen der Kugel 4/3 πr³ und ihre Oberfläche 4πr².\n\nZwei weitere vertraute Körper entstehen durch Rotation. Lässt man ein Rechteck um eine seiner Seiten rotieren, überstreicht es einen Zylinder, die Form einer Konservendose, mit dem Volumen πr²h. Lässt man ein rechtwinkliges Dreieck um eine seiner Katheten rotieren, überstreicht es einen Kegel mit genau einem Drittel des Volumens des umgebenden Zylinders, πr²h/3 – ein Satz, den als Erster Eudoxos von Knidos (um 390–340 v. Chr.) bewies. Archimedes bewies das entsprechende Ergebnis für die Kugel in seiner Schrift „Über Kugel und Zylinder“ (um 225 v. Chr.): Eine in einen Zylinder einbeschriebene Kugel hat zwei Drittel von dessen Volumen und zwei Drittel von dessen Oberfläche, eine Entdeckung, auf die er so stolz war, dass er die Figur auf seinem Grab eingemeißelt haben wollte.\n\nDie platonischen Körper sind die fünf konvexen Polyeder, deren Seitenflächen gleiche regelmäßige Vielecke sind, die an jeder Ecke auf dieselbe Weise zusammentreffen. Euklid bewies im letzten Buch der „Elemente“, dass es keine weiteren geben kann. Das Tetraeder hat vier Dreiecksflächen, der Würfel sechs Quadrate, das Oktaeder acht Dreiecke. Das Dodekaeder wird von zwölf regelmäßigen Fünfecken begrenzt und war für Platon im „Timaios“ (um 360 v. Chr.) die Gestalt des Kosmos selbst; die anderen vier ordnete er den Elementen Feuer, Erde, Luft und Wasser zu. Das Ikosaeder mit seinen zwanzig gleichseitigen Dreiecken ist das rundeste der fünf und dasjenige, das die Natur bevorzugt: Viele Viren, darunter das Adenovirus und das Poliovirus, bauen ihre Proteinhüllen als Ikosaeder, und die geodätischen Kuppeln von Buckminster Fuller, am 29. Juni 1954 patentiert, unterteilen seine Flächen.\n\n| Körper | Flächen | Ecken | Kanten |\n|---|---|---|---|\n| Tetraeder | 4 Dreiecke | 4 | 6 |\n| Würfel | 6 Quadrate | 8 | 12 |\n| Oktaeder | 8 Dreiecke | 6 | 12 |\n| Dodekaeder | 12 Fünfecke | 20 | 30 |\n| Ikosaeder | 20 Dreiecke | 12 | 30 |\n\nIn jeder Zeile ergibt Flächen minus Kanten plus Ecken den Wert 2, die Eulersche Polyederformel. Sie gilt auch für Körper, die nicht platonisch sind: Eine quadratische Pyramide, die Form von Gizeh, hat 5 Flächen (eine quadratische Grundfläche und vier Dreiecke), 5 Ecken und 8 Kanten – vier rund um die Grundfläche und vier, die zur Spitze aufsteigen –, und 5 − 8 + 5 ergibt wieder 2. Die Kugel lässt sich als Grenzfall immer feinerer Polyeder auffassen, genau so hat Archimedes sie angenähert, und genau deshalb ist die oberflächenminimierende Form zugleich diejenige ohne jede Fläche.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2025",
+   "baseHash": "78f1add45b58",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-111",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Circle and Its Lines",
+    "titleDe": "Der Kreis und seine Linien",
+    "bodyEn": "The circle is the simplest of curves, the set of all points at the same distance from a centre, and yet a whole vocabulary has grown up around the straight lines that meet it. Each word has a precise meaning, and each is a small lesson in Latin.\n\nA tangent is a straight line that touches the circle in exactly one point without crossing it; the name comes from tangere, “to touch”. The tangent is always perpendicular to the radius drawn to the point of contact, and from any point outside the circle exactly two tangents can be drawn, both of the same length. Strictly speaking a tangent touches rather than cuts the circle, which is why mathematicians speak of a point of contact rather than a point of intersection.\n\nA secant, from secare, “to cut”, is a straight line that passes through the circle and meets it in two points. If the two points are slid towards each other along the circle, the secant tilts until they coincide and it becomes the tangent. This limiting process is the origin of the derivative in calculus: Newton and Leibniz found the slope of a curve by turning secants into tangents, and Leibniz's “Nova Methodus pro Maximis et Minimis, itemque Tangentibus” of 1684 was the first publication of the differential calculus. The names tangent and secant for the matching trigonometric functions were introduced in 1583 by the Danish mathematician Thomas Fincke.\n\nThe part of a secant inside the circle is a chord, from the Greek chordē, a string of gut, because the line looks like the string of a bow beneath the arc it cuts off. The perpendicular bisector of any chord passes through the centre, which is how one finds the centre of a circle with ruler and compass. Chords were the first tool of trigonometry: Hipparchus compiled the first known table of chords in the 2nd century BC.\n\nThe longest possible chord passes through the centre and is called the diameter, Greek for “measure across”. Thales' theorem, credited to Thales of Miletus in the early 6th century BC, states that any angle inscribed in a semicircle, that is, any triangle whose longest side is a diameter, is a right angle. The diameter is twice the radius, Latin for a spoke or ray, the distance from the centre to any point on the circle. The radius is the single number that determines everything else: the circumference is 2πr and the area πr². Archimedes showed around 250 BC, in his “Measurement of a Circle”, that the area equals that of a right triangle whose legs are the radius and the circumference.\n\n| Line | Latin or Greek root | Points shared with the circle |\n|---|---|---|\n| Tangent | tangere, to touch | 1 |\n| Secant | secare, to cut | 2 |\n| Chord | chordē, string | 2 (segment) |\n| Diameter | dia-metron, measure across | 2 (through the centre) |\n| Radius | radius, spoke | 1 (from the centre) |\n\nA line that misses the circle altogether has no everyday English name, though German geometers call it a Passante, “the one that passes by”, completing a trio of tangent, secant and passing line.\n\nThe circle also earns its keep far from compass and ruler. When the English logician John Venn published his diagrams for sets and logical statements in 1880, he chose one shape for them: the circle (overlapping circles), one for each set, with the overlap showing what the sets share. A Venn diagram of mammals and swimmers puts whales in the lens where the two circles cross, and the shape has become the universal picture of \"what these things have in common\".",
+    "bodyDe": "Der Kreis ist die einfachste aller Kurven, die Menge aller Punkte mit demselben Abstand von einem Mittelpunkt – und doch ist um die Geraden, die ihm begegnen, ein ganzes Vokabular gewachsen. Jedes Wort hat eine genaue Bedeutung, und jedes ist eine kleine Lateinstunde.\n\nEine Tangente ist eine Gerade, die den Kreis in genau einem Punkt berührt, ohne ihn zu kreuzen; der Name kommt von tangere, „berühren“. Die Tangente steht immer senkrecht auf dem Radius zum Berührpunkt, und von jedem Punkt außerhalb des Kreises lassen sich genau zwei Tangenten ziehen, beide gleich lang. Streng genommen berührt eine Tangente den Kreis, statt ihn zu schneiden, weshalb Mathematiker von einem Berührpunkt und nicht von einem Schnittpunkt sprechen.\n\nEine Sekante, von secare, „schneiden“, ist eine Gerade, die durch den Kreis hindurchgeht und ihn in zwei Punkten trifft. Schiebt man die beiden Punkte auf dem Kreis aufeinander zu, kippt die Sekante, bis sie zusammenfallen und sie zur Tangente wird. Dieser Grenzprozess ist der Ursprung der Ableitung in der Differentialrechnung: Newton und Leibniz fanden die Steigung einer Kurve, indem sie Sekanten in Tangenten verwandelten, und Leibniz’ „Nova Methodus pro Maximis et Minimis, itemque Tangentibus“ von 1684 war die erste Veröffentlichung der Differentialrechnung. Die Namen Tangens und Sekans für die zugehörigen Winkelfunktionen führte 1583 der dänische Mathematiker Thomas Fincke ein.\n\nDer Teil einer Sekante im Inneren des Kreises ist eine Sehne (lateinisch chorda, vom griechischen chordē, einer Darmsaite), weil die Linie unter dem Bogen, den sie abschneidet, wie die Sehne eines Bogens aussieht. Die Mittelsenkrechte jeder Sehne geht durch den Mittelpunkt – so findet man den Mittelpunkt eines Kreises mit Lineal und Zirkel. Sehnen waren das erste Werkzeug der Trigonometrie: Hipparchos stellte im 2. Jahrhundert v. Chr. die erste bekannte Sehnentafel auf.\n\nDie längste mögliche Sehne geht durch den Mittelpunkt und heißt Durchmesser, griechisch „Maß hindurch“. Der Satz des Thales, der Thales von Milet im frühen 6. Jahrhundert v. Chr. zugeschrieben wird, besagt, dass jeder Winkel im Halbkreis – also jedes Dreieck, dessen längste Seite ein Durchmesser ist – ein rechter Winkel ist. Der Durchmesser ist das Doppelte des Radius, lateinisch für Speiche oder Strahl, des Abstands vom Mittelpunkt zu einem beliebigen Punkt auf der Kreislinie. Der Radius ist die eine Zahl, die alles Übrige bestimmt: Der Umfang ist 2πr und die Fläche πr². Archimedes zeigte um 250 v. Chr. in seiner „Kreismessung“, dass die Fläche der eines rechtwinkligen Dreiecks gleicht, dessen Katheten Radius und Umfang sind.\n\n| Linie | Lateinische oder griechische Wurzel | Gemeinsame Punkte mit dem Kreis |\n|---|---|---|\n| Tangente | tangere, berühren | 1 |\n| Sekante | secare, schneiden | 2 |\n| Sehne | chordē, Saite | 2 (Strecke) |\n| Durchmesser | dia-metron, Maß hindurch | 2 (durch den Mittelpunkt) |\n| Radius | radius, Speiche | 1 (vom Mittelpunkt aus) |\n\nEine Gerade, die den Kreis ganz verfehlt, hat im Englischen keinen Alltagsnamen, doch deutsche Geometer nennen sie Passante, „die Vorbeigehende“, und vervollständigen damit das Trio aus Tangente, Sekante und Passante.\n\nAuch fern von Zirkel und Lineal leistet der Kreis gute Dienste. Als der englische Logiker John Venn 1880 seine Diagramme für Mengen und logische Aussagen veröffentlichte, wählte er dafür eine einzige Figur: den Kreis (sich überschneidende Kreise), einen für jede Menge, wobei die Überschneidung zeigt, was die Mengen gemeinsam haben. Ein Venn-Diagramm aus Säugetieren und Schwimmern setzt die Wale in die Linse, in der sich die beiden Kreise kreuzen, und die Figur ist zum allgemeinen Bild für „was diese Dinge gemeinsam haben“ geworden.",
+    "notesEn": "Strictly a tangent touches the circle rather than cutting it; the card's wording is loose, and the intended answer is clearly „tangent“.",
+    "notesDe": "Streng genommen berührt eine Tangente den Kreis (sie schneidet ihn nicht); das „schneidet“ der Karte ist ungenau formuliert, gemeint ist eindeutig die Tangente."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-001",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-100",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the Greek-derived term for a twelve-sided polygon?",
+      "de": "Wie nennt man ein zwölfseitiges Polygon mit dem Fachwort aus dem Griechischen?",
+      "answerEn": "Dodecagon",
+      "answerDe": "Dodekagon",
+      "timeline": {
+       "kind": "era",
+       "start": "-300",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Euclid's Elements systematise the geometry of polygons and their angles",
+       "labelDe": "Euklids „Elemente“ fassen die Geometrie der Vielecke und ihrer Winkel zusammen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Polygon",
+       "title": "Polygon – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the Greek-derived term for a seven-sided polygon?",
+      "de": "Wie nennt man ein siebenseitiges Polygon mit dem Fachwort aus dem Griechischen?",
+      "answerEn": "Heptagon",
+      "answerDe": "Heptagon",
+      "timeline": {
+       "kind": "era",
+       "start": "-300",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Euclid's Elements systematise the geometry of polygons and their angles",
+       "labelDe": "Euklids „Elemente“ fassen die Geometrie der Vielecke und ihrer Winkel zusammen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Polygon",
+       "title": "Polygon – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the sum of the interior angles of a hexagon?",
+      "de": "Welche Winkelsumme hat ein Sechseck?",
+      "answerEn": "720°",
+      "answerDe": "720°",
+      "timeline": {
+       "kind": "era",
+       "start": "-300",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Euclid's Elements systematise the geometry of polygons and their angles",
+       "labelDe": "Euklids „Elemente“ fassen die Geometrie der Vielecke und ihrer Winkel zusammen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hexagon",
+       "title": "Hexagon – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How large is each interior angle of a regular hexagon?",
+      "de": "Wie groß ist jeder Innenwinkel eines regelmäßigen Sechsecks?",
+      "answerEn": "120°",
+      "answerDe": "120°",
+      "timeline": {
+       "kind": "era",
+       "start": "-300",
+       "end": null,
+       "precision": "century",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Euclid's Elements systematise the geometry of polygons and their angles",
+       "labelDe": "Euklids „Elemente“ fassen die Geometrie der Vielecke und ihrer Winkel zusammen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hexagon",
+       "title": "Hexagon – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Counting Corners: The Names and Angles of Polygons",
+    "titleDe": "Ecken zählen: Namen und Winkel der Vielecke",
+    "bodyEn": "A polygon is a closed figure bounded by straight sides, and mathematicians name each one after its number of corners, using Greek numerals followed by -gon, from gōnia, \"angle\". Three and four sides keep their everyday names, triangle and quadrilateral, but from five upwards the Greek takes over: pentagon, hexagon, heptagon, octagon, nonagon, decagon. A seven-sided figure is therefore a heptagon, the simplest regular polygon that cannot be constructed with compass and straightedge alone, and one that most people meet only on the British 20p and 50p coins.\n\nThe names grow longer as the corners multiply. An eleven-sided polygon is a hendecagon, from hendeka, \"eleven\" (some books prefer the half-Latin undecagon); Canada's dollar coin, the loonie, is one. A twelve-sided polygon is a dodecagon, from dōdeka, \"twelve\", the shape of the British one-pound coin introduced in 2017. In German the everyday words Siebeneck, Elfeck and Zwölfeck sit beside the Greek terms.\n\n| Sides | Name | Sum of interior angles | Each angle if regular |\n|---|---|---|---|\n| 3 | triangle | 180° | 60° |\n| 4 | quadrilateral | 360° | 90° |\n| 5 | pentagon | 540° | 108° |\n| 6 | hexagon | 720° | 120° |\n| 7 | heptagon | 900° | about 128.6° |\n\nThe angles follow a single rule that Euclid's Elements, written around 300 BC, already make possible. Pick one corner of a polygon with n sides and draw the diagonals to all the others: the figure falls apart into n − 2 triangles, each with angles adding up to 180°. The interior angles of any simple polygon therefore add up to (n − 2) × 180°. For a pentagon that is 3 × 180° = 540°, whether the pentagon is regular like the outline of the Pentagon building in Arlington or a lopsided one drawn by hand. For a hexagon the sum is 4 × 180° = 720°.\n\nIn a regular polygon all those degrees are shared out equally. Each corner of a regular hexagon therefore measures 720° ÷ 6 = 120°, which is exactly what makes the hexagon special: three of them meet at a point with 3 × 120° = 360° and no gap. That is why bees build hexagonal honeycomb cells, why basalt columns such as the Giant's Causeway crack into hexagons, and why board game designers love hexagonal tiles. Only three regular polygons tile a flat surface on their own – the equilateral triangle, the square and the hexagon – and of the three the hexagon encloses the most area for the least perimeter, the \"honeycomb conjecture\" that Thomas Hales finally proved in 1999.\n\nA useful check for any polygon is the exterior angle: walk once around its boundary and you turn through exactly 360° in total, however many sides it has.",
+    "bodyDe": "Ein Vieleck oder Polygon ist eine geschlossene Figur aus geraden Seiten, und Mathematiker benennen jedes nach der Zahl seiner Ecken – mit griechischen Zahlwörtern und der Endung -gon, von gōnia, „Winkel“. Drei und vier Seiten behalten ihre Alltagsnamen Dreieck und Viereck, doch ab fünf übernimmt das Griechische: Pentagon, Hexagon, Heptagon, Oktogon, Nonagon, Dekagon. Eine siebenseitige Figur ist also ein Heptagon, das einfachste regelmäßige Vieleck, das sich nicht allein mit Zirkel und Lineal konstruieren lässt, und eines, dem die meisten Menschen nur auf den britischen 20- und 50-Pence-Münzen begegnen.\n\nDie Namen werden länger, je mehr Ecken hinzukommen. Ein elfseitiges Polygon ist ein Hendekagon, von hendeka, „elf“ (manche Bücher bevorzugen das halb lateinische Undekagon); Kanadas Dollarmünze, der „Loonie“, ist eines. Ein zwölfseitiges Polygon ist ein Dodekagon, von dōdeka, „zwölf“, die Form der 2017 eingeführten britischen Ein-Pfund-Münze. Im Deutschen stehen die Alltagswörter Siebeneck, Elfeck und Zwölfeck neben den griechischen Fachwörtern.\n\n| Seiten | Name | Winkelsumme | Jeder Winkel, wenn regelmäßig |\n|---|---|---|---|\n| 3 | Dreieck | 180° | 60° |\n| 4 | Viereck | 360° | 90° |\n| 5 | Fünfeck (Pentagon) | 540° | 108° |\n| 6 | Sechseck (Hexagon) | 720° | 120° |\n| 7 | Siebeneck (Heptagon) | 900° | etwa 128,6° |\n\nDie Winkel folgen einer einzigen Regel, die schon Euklids um 300 v. Chr. verfasste „Elemente“ möglich machen. Man wählt eine Ecke eines Vielecks mit n Seiten und zieht die Diagonalen zu allen anderen: Die Figur zerfällt in n − 2 Dreiecke, deren Winkel jeweils 180° ergeben. Die Innenwinkel jedes einfachen Vielecks ergeben daher zusammen (n − 2) × 180°. Für ein Fünfeck sind das 3 × 180° = 540°, ob es nun regelmäßig ist wie der Grundriss des Pentagons in Arlington oder ein schiefes, von Hand gezeichnetes. Für ein Sechseck beträgt die Summe 4 × 180° = 720°.\n\nIn einem regelmäßigen Vieleck werden all diese Grade gleichmäßig verteilt. Jede Ecke eines regelmäßigen Sechsecks misst daher 720° ÷ 6 = 120°, und genau das macht das Sechseck besonders: Drei davon treffen sich in einem Punkt mit 3 × 120° = 360° und ohne Lücke. Deshalb bauen Bienen sechseckige Waben, deshalb zerspringen Basaltsäulen wie am Giant’s Causeway zu Sechsecken, und deshalb lieben Spieleautoren sechseckige Plättchen. Nur drei regelmäßige Vielecke parkettieren eine Ebene allein – das gleichseitige Dreieck, das Quadrat und das Sechseck –, und von den dreien umschließt das Sechseck bei kleinstem Umfang die größte Fläche, die „Bienenwaben-Vermutung“, die Thomas Hales 1999 endgültig bewies.\n\nEine nützliche Probe für jedes Vieleck ist der Außenwinkel: Wer einmal um seinen Rand herumgeht, dreht sich insgesamt um genau 360°, ganz gleich, wie viele Seiten es hat.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-150",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-325",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the base of the binary system?",
+      "de": "Welche Basis hat das Binärsystem?",
+      "answerEn": "2",
+      "answerDe": "2",
+      "timeline": {
+       "kind": "creation",
+       "start": "1703",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+       "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Binary_number",
+       "title": "Binary number – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How is the number 10 written in the binary system?",
+      "de": "Wie wird die Zahl 10 im Binärsystem dargestellt?",
+      "answerEn": "1010",
+      "answerDe": "1010",
+      "timeline": {
+       "kind": "creation",
+       "start": "1703",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+       "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Binary_number",
+       "title": "Binary number – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How is the number 8 written in the binary system?",
+      "de": "Wie wird die Zahl 8 im Binärsystem dargestellt?",
+      "answerEn": "1000",
+      "answerDe": "1000",
+      "timeline": {
+       "kind": "creation",
+       "start": "1703",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+       "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Binary_number",
+       "title": "Binary number – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which number is written as 1100 in the binary system?",
+      "de": "Welche Zahl wird im Binärsystem als 1100 dargestellt?",
+      "answerEn": "12",
+      "answerDe": "12",
+      "timeline": {
+       "kind": "creation",
+       "start": "1703",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+       "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Binary_number",
+       "title": "Binary number – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Counting in Twos: How the Binary System Works",
+    "titleDe": "Zählen in Zweierschritten: So funktioniert das Binärsystem",
+    "bodyEn": "Our everyday numbers are written in base ten: ten digits, and each place is worth ten times the one to its right. The binary system does the same job with the smallest possible base, 2. It needs only two digits, 0 and 1, and each place is worth twice the one to its right – ones, twos, fours, eights, sixteens and so on. Gottfried Wilhelm Leibniz set out its arithmetic in his \"Explication de l'Arithmétique Binaire\", published in 1703, and was delighted to find the same pattern in the hexagrams of the Chinese I Ching. Two and a half centuries later it became the native language of computers, because a switch, a transistor or a magnetised spot has exactly two states, off and on.\n\nReading a binary number means adding up the places that hold a 1. The number 1000 in binary has a single 1 in the eights place, so it stands for 8. The number 1010 has ones in the eights and twos places: 8 + 2 = 10, so ten is written 1010. The number 1100 has ones in the eights and fours places, 8 + 4 = 12. And 1111, with every place filled, is 8 + 4 + 2 + 1 = 15, the largest number four binary digits can hold – one less than 16, which needs a fifth digit and is written 10000.\n\n| Decimal | Eights | Fours | Twos | Ones | Binary |\n|---|---|---|---|---|---|\n| 8 | 1 | 0 | 0 | 0 | 1000 |\n| 10 | 1 | 0 | 1 | 0 | 1010 |\n| 12 | 1 | 1 | 0 | 0 | 1100 |\n| 15 | 1 | 1 | 1 | 1 | 1111 |\n\nGoing the other way is just as mechanical. Divide the number by two again and again and write down the remainders: 10 gives remainders 0, 1, 0, 1, which read from the last to the first spell 1010. Arithmetic is simpler than in any other base, because the multiplication table has only four entries; that simplicity is exactly what an electronic circuit needs.\n\nThe price is length. A number needs roughly three and a third times as many binary digits as decimal ones, which is why programmers group binary digits in fours and write each group as one hexadecimal digit: 1111 becomes F. A single binary digit is a bit, eight of them a byte, and a byte can hold 256 different values, from 0 to 255.\n\nBinary counting also hides in plain sight. Hold up fingers as ones and zeros and two hands can count to 1023; the old trick of weighing anything up to 15 grams with only 1, 2, 4 and 8 gram weights is binary in disguise.",
+    "bodyDe": "Unsere Alltagszahlen sind im Zehnersystem geschrieben: zehn Ziffern, und jede Stelle ist zehnmal so viel wert wie die rechts daneben. Das Binärsystem leistet dasselbe mit der kleinstmöglichen Basis, 2. Es braucht nur zwei Ziffern, 0 und 1, und jede Stelle ist doppelt so viel wert wie die rechts daneben – Einer, Zweier, Vierer, Achter, Sechzehner und so weiter. Gottfried Wilhelm Leibniz legte seine Arithmetik in der 1703 veröffentlichten „Explication de l’Arithmétique Binaire“ dar und freute sich, dasselbe Muster in den Hexagrammen des chinesischen I Ging wiederzufinden. Zweieinhalb Jahrhunderte später wurde es zur Muttersprache der Computer, denn ein Schalter, ein Transistor oder ein magnetisierter Fleck hat genau zwei Zustände, aus und an.\n\nEine Binärzahl zu lesen heißt, die Stellen zu addieren, an denen eine 1 steht. Die Zahl 1000 hat im Binärsystem eine einzige 1 an der Achterstelle und steht also für 8. Die Zahl 1010 hat Einsen an der Achter- und der Zweierstelle: 8 + 2 = 10, die Zehn schreibt man also 1010. Die Zahl 1100 hat Einsen an der Achter- und der Viererstelle, 8 + 4 = 12. Und 1111, bei der jede Stelle besetzt ist, ergibt 8 + 4 + 2 + 1 = 15, die größte Zahl, die vier Binärziffern fassen können – eins weniger als 16, die eine fünfte Ziffer braucht und 10000 geschrieben wird.\n\n| Dezimal | Achter | Vierer | Zweier | Einer | Binär |\n|---|---|---|---|---|---|\n| 8 | 1 | 0 | 0 | 0 | 1000 |\n| 10 | 1 | 0 | 1 | 0 | 1010 |\n| 12 | 1 | 1 | 0 | 0 | 1100 |\n| 15 | 1 | 1 | 1 | 1 | 1111 |\n\nDer umgekehrte Weg ist ebenso mechanisch. Man teilt die Zahl immer wieder durch zwei und notiert die Reste: 10 ergibt die Reste 0, 1, 0, 1, die vom letzten zum ersten gelesen 1010 ergeben. Das Rechnen ist einfacher als in jeder anderen Basis, denn das Einmaleins hat nur vier Einträge; genau diese Einfachheit braucht eine elektronische Schaltung.\n\nDer Preis ist die Länge. Eine Zahl braucht ungefähr dreieinhalbmal so viele Binärziffern wie Dezimalziffern, weshalb Programmierer Binärziffern in Vierergruppen bündeln und jede Gruppe als eine Hexadezimalziffer schreiben: Aus 1111 wird F. Eine einzelne Binärziffer ist ein Bit, acht davon ein Byte, und ein Byte kann 256 verschiedene Werte annehmen, von 0 bis 255.\n\nBinäres Zählen versteckt sich auch im Alltag. Wer Finger als Einsen und Nullen hebt, kann mit zwei Händen bis 1023 zählen; der alte Trick, alles bis 15 Gramm mit nur 1-, 2-, 4- und 8-Gramm-Gewichten abzuwiegen, ist verkleidetes Binärsystem.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-129",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-163",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-184",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the result of a multiplication called?",
+      "de": "Wie heißt das Ergebnis einer Multiplikation?",
+      "answerEn": "product",
+      "answerDe": "Produkt",
+      "timeline": {
+       "kind": "event",
+       "start": "1618",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The multiplication cross × first appears in print, in a book translated by Edward Wright",
+       "labelDe": "Das Malkreuz × erscheint erstmals gedruckt, in einem von Edward Wright übersetzten Buch"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Multiplication",
+       "title": "Multiplication – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the result of a division called?",
+      "de": "Wie heißt das Ergebnis einer Division?",
+      "answerEn": "quotient",
+      "answerDe": "Quotient",
+      "timeline": {
+       "kind": "event",
+       "start": "1659",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Johann Rahn introduces the division sign ÷ in his \"Teutsche Algebra\"",
+       "labelDe": "Johann Rahn führt in seiner „Teutschen Algebra“ das Divisionszeichen ÷ ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Obelus",
+       "title": "Obelus – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Under which name is Leonardo of Pisa better known, the mathematician who popularised the Hindu-Arabic numerals in Europe with his book \"Liber Abaci\" in 1202?",
+      "de": "Unter welchem Namen ist Leonardo von Pisa besser bekannt, der Mathematiker, der 1202 mit seinem Buch „Liber Abaci“ die indisch-arabischen Ziffern in Europa bekannt machte?",
+      "answerEn": "Fibonacci",
+      "answerDe": "Fibonacci",
+      "timeline": {
+       "kind": "creation",
+       "start": "1202",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Fibonacci completes \"Liber Abaci\", which brings the Hindu-Arabic numerals to Europe",
+       "labelDe": "Fibonacci vollendet den „Liber Abaci“, der die indisch-arabischen Ziffern nach Europa bringt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fibonacci",
+       "title": "Fibonacci – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Pebbles, Factors and Indian Digits: The Tools and Terms of Arithmetic",
+    "titleDe": "Steinchen, Faktoren und indische Ziffern: Werkzeuge und Begriffe des Rechnens",
+    "bodyEn": "Arithmetic is older than writing, and its tools and words carry that long history with them.\n\nThe oldest calculating machine still in use is the abacus. Its ancestors were counting boards on which pebbles were moved along ruled lines – the Latin word for pebble, calculus, gave us \"calculate\" – and the Romans already carried small bronze hand abaci with beads in grooves. The familiar frame with beads on rods spread through China, Japan and Russia, where it was used in shops until the end of the twentieth century. An abacus is not just an adding machine: trained users add, subtract, multiply and divide on it at astonishing speed, and with a few extra rules they can even take square roots and cube roots.\n\nThe digits we write today did not come from the Romans, nor really from the Arabs. Our \"Arabic numerals\" were developed in India, where mathematicians worked out a place-value system with nine digits and, crucially, a zero during the first centuries AD. Arab and Persian scholars such as al-Khwarizmi adopted it by the ninth century, and Europeans learned it from them – which is why the name sticks, wrongly, to the Arabs. The man who brought it to Europe was Leonardo of Pisa, better known as Fibonacci. Having learned the Indian digits as a boy in North Africa, he explained them and their use in trade in his \"Liber Abaci\", completed in 1202, and showed merchants how much easier they made bookkeeping than Roman numerals.\n\nThe four basic operations each have their own vocabulary, a good deal of it Latin. In an addition the numbers are summands and the result is the sum; in a subtraction the result is the difference. In a multiplication the numbers being multiplied are called factors and the result the product: in 3 × 4 = 12, the factors are 3 and 4 and the product is 12. In a division the dividend is divided by the divisor, and the result is the quotient, from the Latin quotiens, \"how many times\".\n\n| Operation | Inputs | Result | Sign first printed |\n|---|---|---|---|\n| addition | summands | sum | + (15th century) |\n| subtraction | minuend, subtrahend | difference | − (15th century) |\n| multiplication | factors | product | × (Edward Wright, 1618) |\n| division | dividend, divisor | quotient | ÷ (Johann Rahn, 1659) |\n\nThe signs themselves are surprisingly young. The cross for multiplication first appeared in print in 1618, in a book translated by the English mathematician Edward Wright, and the obelus ÷ for division was introduced by the Swiss mathematician Johann Rahn in his \"Teutsche Algebra\" of 1659. Before them, arithmetic was written out in words – and before that, done with pebbles on a board.",
+    "bodyDe": "Das Rechnen ist älter als die Schrift, und seine Werkzeuge und Wörter tragen diese lange Geschichte mit sich.\n\nDie älteste noch gebrauchte Rechenmaschine ist der Abakus. Seine Vorfahren waren Rechenbretter, auf denen Steinchen entlang gezogener Linien verschoben wurden – das lateinische Wort für Steinchen, calculus, gab uns „kalkulieren“ –, und schon die Römer trugen kleine bronzene Handabakusse mit Kugeln in Rillen bei sich. Der vertraute Rahmen mit Kugeln an Stangen verbreitete sich in China, Japan und Russland, wo er bis ans Ende des 20. Jahrhunderts in Geschäften benutzt wurde. Ein Abakus ist nicht bloß eine Addiermaschine: Geübte addieren, subtrahieren, multiplizieren und dividieren darauf in erstaunlichem Tempo, und mit ein paar zusätzlichen Regeln ziehen sie sogar Quadrat- und Kubikwurzeln.\n\nDie Ziffern, die wir heute schreiben, stammen nicht von den Römern und eigentlich auch nicht von den Arabern. Unsere „arabischen Ziffern“ wurden in Indien entwickelt, wo Mathematiker in den ersten Jahrhunderten n. Chr. ein Stellenwertsystem mit neun Ziffern und, entscheidend, einer Null ausarbeiteten. Arabische und persische Gelehrte wie al-Chwarizmi übernahmen es bis zum 9. Jahrhundert, und die Europäer lernten es von ihnen – deshalb haftet der Name zu Unrecht an den Arabern. Der Mann, der es nach Europa brachte, war Leonardo von Pisa, besser bekannt als Fibonacci. Er hatte die indischen Ziffern als Junge in Nordafrika kennengelernt, erklärte sie und ihren Gebrauch im Handel in seinem 1202 vollendeten „Liber Abaci“ und zeigte Kaufleuten, um wie viel leichter sie die Buchhaltung machten als römische Zahlen.\n\nDie vier Grundrechenarten haben jeweils ihr eigenes Vokabular, vieles davon lateinisch. Bei der Addition heißen die Zahlen Summanden und das Ergebnis Summe; bei der Subtraktion ist das Ergebnis die Differenz. Bei der Multiplikation heißen die Zahlen, die miteinander malgenommen werden, Faktoren und das Ergebnis Produkt: In 3 × 4 = 12 sind 3 und 4 die Faktoren und 12 das Produkt. Bei der Division wird der Dividend durch den Divisor geteilt, und das Ergebnis ist der Quotient, vom lateinischen quotiens, „wie oft“.\n\n| Rechenart | Eingaben | Ergebnis | Zeichen zuerst gedruckt |\n|---|---|---|---|\n| Addition | Summanden | Summe | + (15. Jahrhundert) |\n| Subtraktion | Minuend, Subtrahend | Differenz | − (15. Jahrhundert) |\n| Multiplikation | Faktoren | Produkt | × (Edward Wright, 1618) |\n| Division | Dividend, Divisor | Quotient | ÷ (Johann Rahn, 1659) |\n\nDie Zeichen selbst sind überraschend jung. Das Kreuz für die Multiplikation erschien 1618 erstmals gedruckt, in einem vom englischen Mathematiker Edward Wright übersetzten Buch, und den Obelus ÷ für die Division führte der Schweizer Mathematiker Johann Rahn 1659 in seiner „Teutschen Algebra“ ein. Davor wurde das Rechnen in Worten ausgeschrieben – und noch davor mit Steinchen auf einem Brett erledigt. Ihre Ziffern aber verdanken all diese Rechnungen Indien.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

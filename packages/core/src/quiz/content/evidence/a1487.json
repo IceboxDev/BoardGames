@@ -1,0 +1,468 @@
+{
+ "article": "a1487",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Iris_(plant)",
+   "title": "Iris (plant) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:30.972Z",
+   "snapshot": "2de7cc465fbd6ba2ffd1378eb85b2317c0eb89df622c5898b865951e98b9c4f8"
+  },
+  "s2": {
+   "url": "https://www.dwds.de/wb/L%C3%B6wenzahn",
+   "title": "Löwenzahn – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:28.419Z",
+   "snapshot": "cd8e57d0d8afa08061b6318873385a31021e99f5ba4d776d398f3de72b05cfa0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pelargonium",
+   "title": "Pelargonium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:26.619Z",
+   "snapshot": "acb2a56c59a805a8065875987d350c8a78da6c839ee95f87f462a43601e33d6b"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/buttercup",
+   "title": "buttercup – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Digitalis",
+   "title": "Digitalis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:31.966Z",
+   "snapshot": "265577d9001a31e14790de8b7c140ed944b23519cb797028604bf9768c6d2791"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Geranium",
+   "title": "Geranium - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:41.961Z",
+   "snapshot": "7bb96941a78a770a052a41374d164e6dc14a9cf4103009e8612285ce1330876f"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=geranium",
+   "title": "American Heritage Dictionary Entry: geranium",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:08.416Z",
+   "snapshot": "b75b9b83777cf470ebdb209a3078cf2511a3013b21a22c0d06cd17ad9ea875e9"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Hahnenfu%C3%9F",
+   "title": "Hahnenfuß – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:09.724Z",
+   "snapshot": "310d5440265e7d6580972f364672d1a0a0d63297dad8afb9614e77f933150eba"
+  },
+  "s9": {
+   "url": "https://ahdictionary.com/word/search.html?q=crowfoot",
+   "title": "American Heritage Dictionary Entry: crowfoot",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:09.245Z",
+   "snapshot": "48a9fbe289ae26fd90a9481c7efd12ff20d86be0cc15e3d8a8733747b19559d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "iris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Löwenzahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cranesbill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "buttercup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "foxglove",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:33.475Z",
+   "target": "f07431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iris is a flowering plant genus of 320 accepted species with showy flowers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “iris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:33.475Z",
+   "target": "f07432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Löwenzahn – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Löwenzahn” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:33.475Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "cranesbill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cranesbill”, “Storchschnabel”, “герань”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:33.475Z",
+   "target": "f07435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The best-known species is the common foxglove, Digitalis purpurea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:33.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “foxglove” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:11:45Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The English name 'cranesbill' derives from the resemblance of the fruit capsule of some of the species to a crane's head and bill.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:11:47Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Any of various plants of the genus Geranium, having palmately divided leaves and pink or purplish regular flowers. Also called cranesbill.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:11:50Z",
+   "target": "f07434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der deutschsprachige Trivialname Hahnenfuß bezieht sich auf die vogelfußähnlichen Laubblätter.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:11:54Z",
+   "target": "f07434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Any of numerous plants of the genus Ranunculus that have palmately cleft or divided leaves.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The English name 'cranesbill' derives from the resemblance of the fruit capsule of some of the species to a crane's head and bill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Any of various plants of the genus Geranium, having palmately divided leaves and pink or purplish regular flowers. Also called cranesbill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der deutschsprachige Trivialname Hahnenfuß bezieht sich auf die vogelfußähnlichen Laubblätter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Any of numerous plants of the genus Ranunculus that have palmately cleft or divided leaves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The English name 'cranesbill' derives from the resemblance of the fruit capsule of some of the species to a crane's head and bill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “cranesbill” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "tuberosum), cranesbill (from the appearance of its seed capsule ), from Greek geranion, diminutive of geranos, crane; see gerə-2 in the Appendix of Indo-European roots.]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “cranesbill” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:19.329Z",
+   "target": "f07434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die Pflanzengattung Hahnenfuß (Ranunculus), auch Ranunkel genannt, gehört zur Familie der Hahnenfußgewächse (Ranunculaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:19.329Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Hahnenfuß” is on the snapshot of s8"
+  }
+ ]
+}

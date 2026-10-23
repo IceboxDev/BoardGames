@@ -1,0 +1,717 @@
+{
+ "article": "a2292",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Bronx",
+   "title": "Bronx",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:52.585Z",
+   "snapshot": "72069b9bf69362c4b4075ccc468da697c1212de09c37d3daac5ba3c3df160a1e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Central_Park",
+   "title": "Central Park",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:29:55.769Z",
+   "snapshot": "470773c1a76c82189e028d65a5be4835eb97c08e1ad40a4bde2c380bd51e4d60"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Liberty_Island",
+   "title": "Liberty Island",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:53.484Z",
+   "snapshot": "1fd03262d86612dcb2c9b47b36ece37b607a73068fc2a6f7ad54f5783e32e832"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/New_York_City",
+   "title": "New York City",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:54.676Z",
+   "snapshot": "b623f796c97c0427a1b086f63a7a4abc0fb5eb826ae671d19decc0c5c735fe4c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Eastern_Time_Zone",
+   "title": "Eastern Time Zone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:52.491Z",
+   "snapshot": "ecf44e476f0489c4439921c283a2729cd6a81a700b3bf72380d52b50447a9faf"
+  },
+  "s6": {
+   "url": "https://www.centralparknyc.org/about",
+   "title": "About the Central Park Conservancy",
+   "publisher": "Central Park Conservancy",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:58.480Z",
+   "snapshot": "8bd80753100d9bee426d70568dd375534f5b6497b10b12d81915d787235803aa"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/The_Bronx",
+   "title": "The Bronx",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:58.851Z",
+   "snapshot": "4713b43361283179ba38b7e1de41d72865c3d71524effd1da797464d081c6b1e"
+  },
+  "s8": {
+   "url": "https://www.geonames.org/5128581",
+   "title": "New York City, United States",
+   "publisher": "GeoNames",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:58.812Z",
+   "snapshot": "ff9653d050a82223121615b61e2b805e11324021e24a3c6920c50da7d4ef3a17"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/New_York_City",
+   "title": "New York City",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:31:32Z"
+  },
+  "s10": {
+   "url": "https://www.law.cornell.edu/uscode/text/15/261",
+   "title": "15 U.S. Code § 261 - Zones for standard time",
+   "publisher": "Legal Information Institute (Cornell)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:11.122Z",
+   "snapshot": "ad6a91a013b3cc783eea610d07b211c8ba523bb2514c785ab891db21d2bed198"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Central_European_Time",
+   "title": "Central European Time",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:59.520Z",
+   "snapshot": "91086bd395e1a6f4fd038c2e06ac044b5a430774442fa2403f5c5a5dba308bd2"
+  },
+  "s12": {
+   "url": "https://snl.no/Bronx",
+   "title": "Bronx",
+   "publisher": "Store norske leksikon",
+   "kind": "encyclopedia",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:45:59.035Z",
+   "snapshot": "a7a242fc1fededc45c38e8a08e3ae8172f154e969c686c97d50d8be77eca4605"
+  },
+  "s13": {
+   "url": "https://lex.dk/Bronx",
+   "title": "Bronx",
+   "publisher": "Lex – Danmarks Nationalleksikon",
+   "kind": "encyclopedia",
+   "lang": "da",
+   "retrievedAt": "2026-10-23T12:45:59.316Z",
+   "snapshot": "9a86fe24a0d2972099d7a135847a701dd5d29d1ccb14cdcfc845bbe610236db8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "die Bronx",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "3.41 km²",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-174"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11838",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liberty Island",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-325"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "40,7° nördlicher Breite",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; transcript tp-124"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "6 p.m.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-270"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:49.580Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Bronx wird im Westen durch den Hudson River von Bergen County, New Jersey, und im Südwesten durch den Harlem River von der Insel Manhattan getrennt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “die Bronx” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:49.580Z",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Central Park is the sixth-largest park in New York City, behind Pelham Bay Park, the Staten Island Greenbelt, Freshkills Park, Van Cortlandt Park, and Flushing Meadows–Corona Park, with an area of 843 acres (341 ha; 1.317 mi2; 3.41 km2).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “3.41 km²” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:49.580Z",
+   "target": "f11838",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liberty Island (deutsch „Freiheitsinsel“, früher Bedloe’s Island) ist eine kleine unbewohnte Insel in der Upper New York Bay im New Yorker Hafen, die Standort der Freiheitsstatue ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:49.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Liberty Island” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:49.580Z",
+   "target": "f11839",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "40,7° nördlicher Breite",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“40,7° nördlicher Breite”, “40.7° north”, “40,7° северной широты”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:49.580Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "6 p.m.",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“6 p.m.”, “18 Uhr”, “18:00”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:28:03Z",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the sixth-largest park in the city , containing 843 acres (341 ha)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "843 acres = 341 ha = 3.41 km² (infobox gives 3.41 km² directly); Monaco is about 2.08 km²."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:28:18Z",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "carried out every day, across all 843 acres, by the people of the Conservancy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "843 acres × 0.004047 km²/acre = 3.41 km²."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:29:00Z",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the sixth-largest park in the city, containing 843 acres (341 ha)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supersedes e11 (its quote carried a stray space before the comma). 843 acres = 341 ha = 3.41 km²."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:30:31Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Bronx is the only borough located primarily on the U.S. mainland",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Manhattan includes tiny mainland Marble Hill, but the borough is an island; the Bronx is the only borough primarily on the mainland."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:31:24Z",
+   "target": "f11839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Coordinates 40.71427, -74.00597",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "40.714° N rounds to 40.7° north."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:31:32Z",
+   "target": "f11839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "40°42′46″N",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "40°42′46″ N = 40.71° N."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:32:55Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "that of the second zone retarded by 5 hours",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "The second zone is Eastern Time (UTC−5). Germany in winter is on CET = UTC+1, so 00:00 CET on 1 January = 23:00 UTC = 18:00 (6 p.m.) EST on 31 December."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:33:00Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eastern Standard Time (EST), which is five hours behind Coordinated Universal Time (UTC−05:00) and observed during late autumn and winter.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:33:05Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "which is one hour ahead of Coordinated Universal Time (UTC)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "CET = UTC+1 (Germany in winter): six hours ahead of EST."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T07:54:20Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Det er den eneste bydelen i New York som ligger på fastlandet.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T07:54:23Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Bronx er den eneste af New York Citys bydele, der ligger på det amerikanske fastland.",
+     "quoteLang": "da",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "carried out every day, across all 843 acres, by the people of the Conservancy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11837",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the sixth-largest park in the city, containing 843 acres (341 ha)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Bronx is the only borough located primarily on the U.S. mainland",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11839",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Coordinates 40.71427, -74.00597",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "that of the second zone retarded by 5 hours",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eastern Standard Time (EST), which is five hours behind Coordinated Universal Time (UTC−05:00) and observed during late autumn and winter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11840",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "which is one hour ahead of Coordinated Universal Time (UTC)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Det er den eneste bydelen i New York som ligger på fastlandet.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s12"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Bronx ( BRONKS) is the northernmost of the five boroughs of New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Bronx” is on the snapshot of s7"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:58:34.813Z",
+   "target": "f11836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The Bronx er en av de fem bydelene (boroughs) i New York i USA.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:34.813Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Bronx” is on the snapshot of s12"
+  }
+ ]
+}

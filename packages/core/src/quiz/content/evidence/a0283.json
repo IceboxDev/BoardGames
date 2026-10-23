@@ -1,0 +1,249 @@
+{
+ "article": "a0283",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kopeck",
+   "title": "Kopeck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:23.885Z",
+   "snapshot": "65c1355e76986842e82171ceab0e2e20c509cb92432a43d5014b7a5dabfa0246"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Polish_z%C5%82oty",
+   "title": "Polish złoty – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:24.965Z",
+   "snapshot": "8d82e60c64330e41170d715c741498c7ea4406a2dfd8212b6176aa0b3e674462"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/%C3%96re",
+   "title": "Öre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:25.900Z",
+   "snapshot": "e5818361c552e537885c2b1633e068c4d1592796e8d5db10bce19fe40feaf2a2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kuru%C5%9F",
+   "title": "Kuruş – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:26.964Z",
+   "snapshot": "27697545d9c008792d48d11dcb1894edc72183d070f9d46e7d5edab80b4a6cd4"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Rappenm%C3%BCnzbund",
+   "title": "Rappenmünzbund – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:24.419Z",
+   "snapshot": "5517ddf808851eccaa2408931055d68a3410c32c7c25ce7f983771fa41164cfe"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rappen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:27.921Z",
+   "snapshot": "54c1489f9a9e454107b0b97450351082a597e558d8343f6fe097d9cb6f2468fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "kopeck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "grosz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "öre",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "kuruş",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rappen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.205Z",
+   "target": "f01411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The kopeck, also spelled kopek, is a coin or unit of currency used in Russia and some post-Soviet states.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kopeck” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.205Z",
+   "target": "f01412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The word złoty is a masculine form of the Polish adjective 'golden', which closely relates with its name to the guilder, whereas the grosz subunit is based on the groschen, cognate to the English word groat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “grosz” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.205Z",
+   "target": "f01413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Öre (Swedish pronunciation: [ˈœ̂ːrɛ]) is the centesimal subdivision of the Swedish krona.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “öre” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:24.205Z",
+   "target": "f01414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kuruş ( kə-ROOSH; Turkish pronunciation: [kuˈɾuʃ]), also gurush, ersh, gersh, grush, grosha, and grosi, are all names for currency denominations in and around the territories formerly part of the Ottoman Empire.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kuruş” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:24.205Z",
+   "target": "f01415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Neben dem Pfennig, dem Groschen und anderen Münzsorten gehörte auch der Rappen zu den Münzen, der bis heute noch das Kleingeld der Schweiz bildet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.205Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rappen” is on the snapshot of s5"
+  }
+ ]
+}

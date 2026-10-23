@@ -1,0 +1,242 @@
+{
+ "article": "a2060",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Les_Temps_modernes",
+   "title": "Les Temps modernes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:46.715Z",
+   "snapshot": "f6243cc19bd15c925c43efcc38e544e795b468efd9df1c92e792a20e5152917a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Phenomenology_of_Perception",
+   "title": "Phenomenology of Perception – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:47.756Z",
+   "snapshot": "ee1585459257de1525a8cf24b81edab7d3efcecc95544781fc01a78279bc8c4c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/An_Introduction_to_the_Principles_of_Morals_and_Legislation",
+   "title": "An Introduction to the Principles of Morals and Legislation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:48.705Z",
+   "snapshot": "5df2b07a070df2aec36db639b4effe0bb1bf3f4d87704395cd70622ce65d686e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bad_faith_(existentialism)",
+   "title": "Bad faith (existentialism) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:49.824Z",
+   "snapshot": "89f518908b5a8bdd544282a6878918e8a42f2b5d0c43589dd4be0b8296771f3e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Second_Sex",
+   "title": "The Second Sex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:15.770Z",
+   "snapshot": "db5c490c94ea2f67a3d1ca5c6ffee009ee059d9ccdd4554608041258a92362de"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Existentialism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Phenomenology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10300",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Utilitarianism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bad faith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Second Sex",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:15.857Z",
+   "target": "f10296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This philosophy of literature expressed a basic tenet of existentialism—that an individual is responsible for making conscious decisions to commit socially useful acts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Existentialism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:15.857Z",
+   "target": "f10299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Phenomenology of Perception (French: Phénoménologie de la perception) is a 1945 book about perception by the French philosopher Maurice Merleau-Ponty, in which the author expounds his thesis of \"the primacy of perception\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phenomenology” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:15.857Z",
+   "target": "f10300",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Morals and Legislation is a book by the English philosopher and legal theorist Jeremy Bentham \"originally printed in 1780, and first published in 1789.\" Bentham's \"most important theoretical work,\" it is where Bentham develops his theory of utilitarianism and is the first major book on the topic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utilitarianism” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:15.857Z",
+   "target": "f20508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In existentialism, bad faith (French: mauvaise foi) is the psychological phenomenon whereby individuals act inauthentically, by yielding to the external pressures of society to adopt false values and disown their innate freedom as sentient human beings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bad faith” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:15.857Z",
+   "target": "f20509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Second Sex (French: Le Deuxième Sexe) is a 1949 book by the French existentialist philosopher Simone de Beauvoir, in which the author discusses the treatment of women in the present society as well as throughout all of history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:15.857Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Second Sex” is on the snapshot of s5"
+  }
+ ]
+}

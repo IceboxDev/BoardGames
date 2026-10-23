@@ -1,0 +1,249 @@
+{
+ "article": "a0676",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Harvey_Weinstein_sexual_abuse_cases",
+   "title": "Harvey Weinstein sexual abuse cases – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:29.196Z",
+   "snapshot": "b8fb5661d7fd94403a71c4f906b70653e045780707f09e6b604b4251aabb06da"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kevin_Spacey_sexual_misconduct_allegations",
+   "title": "Kevin Spacey sexual misconduct allegations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:30.104Z",
+   "snapshot": "c8b58ce5a83717a3dbb1d1fa58fbf259138f82e680454e23df5d737dd90124e5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bill_Cosby_sexual_assault_cases",
+   "title": "Bill Cosby sexual assault cases – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:31.332Z",
+   "snapshot": "157f9e37f4a0d714c178fcda0a6791aa3fc27315c95501561c0d3a38fc693a20"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/MeToo_movement",
+   "title": "MeToo movement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:32.329Z",
+   "snapshot": "dde4cd3180cc383447a5fb4422f6d0f5a3206ed9d7ce9bdbf5e3d13c85da68c8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tarana_Burke",
+   "title": "Tarana Burke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:33.117Z",
+   "snapshot": "e746bd860ae26de9e65c87f722f86796e72ff93f78e74c6c7252fbc538d20a29"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Harvey_Weinstein",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:34.128Z",
+   "snapshot": "0edcc5c99c3d0bb7ead5c2b0b72d4ed52c7adb2017d59a1ce740cf2b6108827d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03376",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Harvey Weinstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03377",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kevin Spacey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03378",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bill Cosby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03379",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alyssa Milano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tarana Burke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:24.664Z",
+   "target": "f03376",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In October 2017, The New York Times and The New Yorker reported that dozens of women had accused the American film producer Harvey Weinstein of rape, sexual assault and sexual abuse over a period of at least 30 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harvey Weinstein” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.664Z",
+   "target": "f03377",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kevin Spacey sexual misconduct allegations",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kevin Spacey” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.664Z",
+   "target": "f03378",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 2014, multiple allegations emerged that Bill Cosby, a film, television, and stand-up comedy star often cited as a trailblazer for African Americans in the entertainment industry, had sexually assaulted dozens of women throughout his career.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bill Cosby” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.664Z",
+   "target": "f03379",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On October 15, 2017, American actress Alyssa Milano posted on Twitter encouraging women to use the phrase \"Me Too\" in their social media posts to demonstrate the widespread prevalence of sexual harassment and assault, stating that the idea came from a friend.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alyssa Milano” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.664Z",
+   "target": "f03380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tarana Burke (born September 12, 1973) is an American activist from New York City who started the MeToo movement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.664Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tarana Burke” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a0944",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heraclitus",
+   "title": "Heraclitus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:49.153Z",
+   "snapshot": "553216ab67bb129929602ec682d8f89362dc392e544c8209bf8856d84bf029b3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Thales_of_Miletus",
+   "title": "Thales of Miletus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:46.037Z",
+   "snapshot": "82ac04260108134f5465636881c322f9ef9e35d626dc30187fcd162c8402aa7b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Parmenides",
+   "title": "Parmenides – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:50.048Z",
+   "snapshot": "5c44ec924c95865f15ea0358bdb14fece4c669e0ec9dc258fecf3fb2c3d70043"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Protagoras",
+   "title": "Protagoras – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:51.022Z",
+   "snapshot": "51a91df44c7bd4eeae80e1e25990d72fb576d5ff682734c8e54668259cfeb4b3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Socrates",
+   "title": "Socrates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:23.063Z",
+   "snapshot": "2d00fa6353bce0e4908b03af8e59bdd72baab7cc8cc8f47b6cac51e7589bc204"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/I_know_that_I_know_nothing",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:51.942Z",
+   "snapshot": "d0c25781ca766197166b3f6978ab8409462907064a9e39721cf229d98981aaf5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heraclitus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thales",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Parmenides",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Protagoras",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Socrates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:08.915Z",
+   "target": "f04716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heraclitus (; Ancient Greek: Ἡράκλειτος, romanized: Hērákleitos; fl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heraclitus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:08.915Z",
+   "target": "f04717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thales of Miletus ( THAY-leez; Ancient Greek: Θαλῆς; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thales” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:08.915Z",
+   "target": "f04718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Parmenides of Elea (; Ancient Greek: Παρμενίδης ὁ Ἐλεάτης; fl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parmenides” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:08.915Z",
+   "target": "f04719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Protagoras ( proh-TAG-ər-əs, -⁠ass; Greek: Πρωταγόρας; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Protagoras” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:08.915Z",
+   "target": "f04720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Socrates (; Ancient Greek: Σωκράτης, romanized: Sōkrátēs; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:08.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Socrates” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,353 @@
+{
+ "article": "a0531",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mount_Rushmore",
+   "title": "Mount Rushmore – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:56.067Z",
+   "snapshot": "8e8abc9e3b0c95734826a2e2712e9d79c42a5866d768b17ec8922012e066a7d1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gutzon_Borglum",
+   "title": "Gutzon Borglum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:57.147Z",
+   "snapshot": "ca163f8d7e9482b6d7097741e2f2d945d96959d95e823ac12c58fe42c828988a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/South_Dakota",
+   "title": "South Dakota – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:58.174Z",
+   "snapshot": "ad1c32bc67221d654e44ccdc5f2b2df892d27a35c5ec0fceee39efad1544bdff"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Fort_Laramie_(1868)",
+   "title": "Treaty of Fort Laramie (1868) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:01.692Z",
+   "snapshot": "b3c7c350762e52e9ba15e5bb1af05517945f5f565aab06042a40e42d126cc9d5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Stone_Mountain",
+   "title": "Stone Mountain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:00.251Z",
+   "snapshot": "30e7628f58c60ebd95059f23c21dcf437662e197c85da77d2856a2571ea8fb9e"
+  },
+  "s6": {
+   "url": "https://www.nps.gov/moru/index.htm",
+   "title": "Mount Rushmore National Memorial",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:52.345Z",
+   "snapshot": "5a7a709340543e52e5b4b58e1de5d246b33bd9ddf5e2ddc64c5a643e16929eb5"
+  },
+  "s7": {
+   "url": "https://www.nps.gov/moru/learn/historyculture/index.htm",
+   "title": "History & Culture – Mount Rushmore",
+   "publisher": "U.S. National Park Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:53.287Z",
+   "snapshot": "f66871d2b155528b9cca083e2572317681c19596043ff19724521b5c8b69f7b6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Washington, Thomas Jefferson, Theodore Roosevelt and Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c045"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02652",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gutzon Borglum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02653",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Dakota",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Black Hills",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stone Mountain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:03.234Z",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "George Washington, Thomas Jefferson, Theodore Roosevelt and Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“George Washington, Thomas Jefferson, Theodore Roosevelt and Abraham Lincoln”, “George Washington, Thomas Jefferson, Theodore Roosevelt und Abraham Lincoln”, “Джордж Вашингтон, Томас Джефферсон, Теодор Рузвельт и Авраам Линкольн”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:03.234Z",
+   "target": "f02652",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gutzon Borglum remained in Fremont until 1882, when his father enrolled him in St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gutzon Borglum” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:03.234Z",
+   "target": "f02653",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "South Dakota (  də-KOH-tə; Dakota: Dakȟóta itókaga, pronounced [daˈkˣota iˈtokaga]) is a landlocked state in the North Central region of the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “South Dakota” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:03.234Z",
+   "target": "f02654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It established the Great Sioux Reservation including ownership of the Black Hills, and set aside additional lands as \"unceded Indian territory\" in the areas of South Dakota, Wyoming, Nebraska, and possibly Montana.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Hills” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:03.234Z",
+   "target": "f02655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Stone Mountain is a quartz monzonite dome monadnock and the site of Stone Mountain Park, 15 miles (24 km) east of Atlanta, Georgia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stone Mountain” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:11:45Z",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:11:48Z",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "with colossal statues of Washington, Jefferson, Lincoln, and Theodore Roosevelt.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:11:50Z",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "depictions of the heads of four United States presidents: George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:27.296Z",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "with colossal statues of Washington, Jefferson, Lincoln, and Theodore Roosevelt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:27.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:27.296Z",
+   "target": "f02651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "depictions of the heads of four United States presidents: George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:27.296Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  }
+ ]
+}

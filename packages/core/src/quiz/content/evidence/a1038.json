@@ -1,0 +1,289 @@
+{
+ "article": "a1038",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Peace_of_Westphalia",
+   "title": "Peace of Westphalia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:50.638Z",
+   "snapshot": "ade13f2ba76e2845171bdc5a516607e30a0ca058d9d91a2382143ab736c5ff72"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Peace_of_M%C3%BCnster",
+   "title": "Peace of Münster – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:51.571Z",
+   "snapshot": "5d4b9e14a1d4e64794c94b33a380cc1bc15ce3268a2527c52da6f1e4605eb716"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Augsburger_Reichs-_und_Religionsfrieden",
+   "title": "Augsburger Reichs- und Religionsfrieden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:49.636Z",
+   "snapshot": "7e705d288691a3d2ff1c7e875def2bed5964844d5c5ec6fcd130a07ced87e86e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Hubertusburg",
+   "title": "Treaty of Hubertusburg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:52.557Z",
+   "snapshot": "3f303afd6e2aad25067479517fddbd45de68d041d6c141152b55cf4dc6b46cfa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Frankfurt_(1871)",
+   "title": "Treaty of Frankfurt (1871) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:53.620Z",
+   "snapshot": "9797d44443c3bde191ceaa63514c0791ba9fece85fe729606d52b8917480d408"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Versailles",
+   "title": "Treaty of Versailles – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:36:54.805Z",
+   "snapshot": "7bf15b9582033e036e425faa1d81b0810c1b36cad3cf5afbfae2ac7104777f0b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Peace of Westphalia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peace of Westphalia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript c087"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Augsburger Religionsfrieden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Treaty of Hubertusburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Treaty of Frankfurt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Treaty of Versailles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:23.619Z",
+   "target": "f05186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Peace of Westphalia (German: Westfälischer Friede, pronounced [vɛstˈfɛːlɪʃɐ ˈfʁiːdə] ) is the collective name for two peace treaties signed in October 1648 in the Westphalian cities of Osnabrück and Münster.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peace of Westphalia” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:23.619Z",
+   "target": "f05186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Negotiated in parallel to, but not part of, the Peace of Westphalia, under its terms Spain formally recognised the independent Dutch Republic, and ended the Eighty Years' War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peace of Westphalia” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:23.619Z",
+   "target": "f05187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Als Augsburger Reichs- und Religionsfrieden (oft kurz Augsburger Religionsfrieden) wird ein Reichsgesetz des Heiligen Römischen Reichs bezeichnet, das den Anhängern der Confessio Augustana (eines Bekenntnistextes der lutherischen Reichsstände) dauerhaft ihre Besitzstände und freie Religionsausübung",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Augsburger Religionsfrieden” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:23.619Z",
+   "target": "f05188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Treaty of Hubertusburg (German: Frieden von Hubertusburg) was signed on 15 February 1763 at Hubertusburg Castle by Prussia, Austria and Saxony to end the Third Silesian War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Hubertusburg” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:23.619Z",
+   "target": "f05189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Treaty of Frankfurt (French: Traité de Francfort; German: Friede von Frankfurt) was a peace treaty signed in Frankfurt on 10 May 1871 by the German Empire and the French Third Republic, at the end of the Franco-Prussian War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Frankfurt” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:23.619Z",
+   "target": "f05190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Treaty of Versailles was a peace treaty signed on 28 June 1919.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.619Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treaty of Versailles” is on the snapshot of s6"
+  }
+ ]
+}

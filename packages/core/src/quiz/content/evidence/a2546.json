@@ -1,0 +1,242 @@
+{
+ "article": "a2546",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Inditex",
+   "title": "Inditex",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:05:37.448Z",
+   "snapshot": "6493a63f187fac6d37a3f4cccd38219b22a9aaf1c6728f3d92a50ef68d2212f7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Zara_(retailer)",
+   "title": "Zara (retailer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:40.769Z",
+   "snapshot": "0185db809ecae0d68d6a146b7d48dc74580e1a0d1bfe5035e368bed68d7bd6b5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/H%26M",
+   "title": "H&M – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:41.782Z",
+   "snapshot": "1e148d59a79457dd199d22c5eeb2b385c0a76faa0c46b4b4403f350106bf5e87"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Primark",
+   "title": "Primark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:42.659Z",
+   "snapshot": "fc5f2c30d41c299a8e218132d3d5b973d3867b78b3bae093648c8b1972f2746d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Uniqlo",
+   "title": "Uniqlo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:05:43.757Z",
+   "snapshot": "c1bbc18863a5dc0d528df9710d17082717e981c9b6ab27083e4d6468df2ccc79"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Spanien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-352"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zorba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hennes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Penneys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:36.999Z",
+   "target": "f13615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Inditex (Industria de Diseño Textil, S.A.) ist eines der größten Textilunternehmen der Welt mit Sitz in Arteixo, einem Vorort von A Coruña in Galicien (Spanien).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.999Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spanien” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:36.999Z",
+   "target": "f13616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They initially called it 'Zorba' after the classic 1964 film Zorba the Greek, but after learning there was a bar with the same name two blocks away, rearranged the letters to read 'Zara'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.999Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zorba” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:36.999Z",
+   "target": "f13617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "H & M Hennes & Mauritz AB, commonly known by its brand name H&M, is a Swedish multinational clothing company headquartered in Stockholm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.999Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hennes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:36.999Z",
+   "target": "f13618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Primark Limited (; trading as Penneys in Ireland) is an Irish multinational retailer specialising in fast fashion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.999Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Penneys” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:36.999Z",
+   "target": "f13619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "As of 31 May 2026, Uniqlo operated 2,529 stores worldwide, including 785 in Japan and 1,744 outside Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:36.999Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s5"
+  }
+ ]
+}

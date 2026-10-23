@@ -1,0 +1,195 @@
+{
+ "article": "a1241",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Three-point_field_goal",
+   "title": "Three-point field goal – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:19.541Z",
+   "snapshot": "5ba9cbb5704a150cce9204696a56ef6bc4064b73a1a9f04fc10000daf03b1cd2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Shot_clock",
+   "title": "Shot clock – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:20.427Z",
+   "snapshot": "6ed1a0290dc12ca854ce09bc97ebfe8d0b24597291a8a8b00b34c47449c51f41"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Jimmy_Van_Alen",
+   "title": "Jimmy Van Alen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:21.424Z",
+   "snapshot": "0cc4b5579d608b3d9f19154c9c4374611d6231853b6334dfc693e9bcca9c9c44"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Offside_(association_football)",
+   "title": "Offside (association football) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:22.518Z",
+   "snapshot": "da67bb85537aeaac8639cc376a0b9a3c8338b48f6ecd525d805d5afd3c646b95"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "three-point line",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "24-second shot clock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "tiebreak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "offside rule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:53.442Z",
+   "target": "f06201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A three-point field goal (also 3-pointer, three, trey, or triple) is a field goal in a basketball game made from beyond the three-point line, a designated arc surrounding the basket.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:53.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “three-point line” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:53.442Z",
+   "target": "f06202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1954 in Syracuse, New York, Syracuse Nationals (now the Philadelphia 76ers) owner Danny Biasone and general manager Leo Ferris experimented with a 24-second shot clock during a scrimmage.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:53.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “24-second shot clock” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:53.442Z",
+   "target": "f06204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He was best known for his influence of tennis, especially for the tiebreak and for being the founder and primary benefactor of the International Tennis Hall of Fame at the Newport Casino, the largest tennis museum in the world, which he gave to the United States Tennis Association in 1954, saving",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:53.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tiebreak” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:53.442Z",
+   "target": "f06205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The offside rule limits attackers' ability to do this, requiring that they be onside when the ball is played forward.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:53.442Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “offside rule” is on the snapshot of s4"
+  }
+ ]
+}

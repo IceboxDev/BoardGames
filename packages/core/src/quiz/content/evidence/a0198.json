@@ -1,0 +1,249 @@
+{
+ "article": "a0198",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zapatista_Army_of_National_Liberation",
+   "title": "Zapatista Army of National Liberation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:14.318Z",
+   "snapshot": "43deeda6ad81eadbb859fd2c9ef4c1e9e4bb1c453e27f61f6f8926ec84c02ef1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia",
+   "title": "Revolutionary Armed Forces of Colombia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:15.503Z",
+   "snapshot": "836ebe9f797d4dd827de0328796f0f1252143f2115f318974ce96dd3c4cd650d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Shining_Path",
+   "title": "Shining Path – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:16.296Z",
+   "snapshot": "c98d38138fd52b642d3497f9c68461062c60c3fd00bcff902be00de3354d2a3e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Nicaraguan_Revolution",
+   "title": "Nicaraguan Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:17.539Z",
+   "snapshot": "2f084da8d43a2ef89934763b4cb93ed16450fe7f1d7a97fd1127594036b3d1fd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/26th_of_July_Movement",
+   "title": "26th of July Movement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:18.304Z",
+   "snapshot": "f3d160a4a9c02c4abe9dd0c30a06ea895411aa0a48d26063be463e09491d34ba"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Daniel_Ortega",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:23.539Z",
+   "snapshot": "b1315668ce634178a897484c4b9ffacd1afd52b31db7beb8f0719e0ad4a7f765"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00986",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zapatistas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "FARC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shining Path",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sandinistas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00990",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "26th of July Movement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:09.155Z",
+   "target": "f00986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Zapatista Army of National Liberation (Spanish: Ejército Zapatista de Liberación Nacional, EZLN), often referred to as the Zapatistas (Latin American Spanish pronunciation: [sapaˈtistas]), is a far-left political and militant organization that controls a substantial amount of territory in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.155Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zapatistas” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:09.155Z",
+   "target": "f00987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Revolutionary Armed Forces of Colombia – People's Army (Spanish: Fuerzas Armadas Revolucionarias de Colombia – Ejército del Pueblo, FARC–EP or FARC) was a far-left Marxist–Leninist guerrilla group involved in the continuing Colombian conflict starting in 1964.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.155Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “FARC” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:09.155Z",
+   "target": "f00988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Shining Path (Spanish: Sendero Luminoso, SL), officially the Communist Party of Peru (Partido Comunista del Perú, abbr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.155Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shining Path” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:09.155Z",
+   "target": "f00989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A second election in 1990 resulted in the election of the UNO, which the Sandinistas lost.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.155Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sandinistas” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:09.155Z",
+   "target": "f00990",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In July 1961, the 26th of July Movement was one of the parties that integrated into the Integrated Revolutionary Organizations (ORI) as well as the Popular Socialist Party (PSP) and the 13 March Revolutionary Directorate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.155Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “26th of July Movement” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,713 @@
+{
+ "article": "a1798",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Beaufort_scale",
+   "title": "Beaufort scale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:22.475Z",
+   "snapshot": "6828492f8ec1ee582c2a477e7fa2e8e8e2f69361b66ca3188e4d28a1e8516243"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Beaufortskala",
+   "title": "Beaufortskala – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:17.853Z",
+   "snapshot": "c34b07b66ffd3d2a337879a4d0bd53ce4e8f2422d61b33265016fcc424a3ba8f"
+  },
+  "s3": {
+   "url": "https://www.encyclopedia.com/earth-and-environment/atmosphere-and-weather/weather-and-climate-terms-and-concepts/beaufort-scale",
+   "title": "Beaufort Scale – Encyclopedia.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://www.spc.noaa.gov/faq/tornado/beaufort.html",
+   "title": "Beaufort Wind Scale",
+   "publisher": "NOAA Storm Prediction Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:33.719Z",
+   "snapshot": "8d14bb4e3bd27dad6b311cec9fddb473b7896a423a259a33d0b93ebd53cd0160"
+  },
+  "s5": {
+   "url": "https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale",
+   "title": "Beaufort wind force scale",
+   "publisher": "Met Office",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:48.479Z",
+   "snapshot": "78afe257987fd1887813d85b8791d8fc30179feed840b82791a3bd34653d68bb"
+  },
+  "s6": {
+   "url": "https://www.dwd.de/DE/service/lexikon/Functions/glossar.html?lv3=100390&lv2=100310",
+   "title": "Beaufort-Skala – Wetterlexikon",
+   "publisher": "Deutscher Wetterdienst",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:42:33.463Z",
+   "snapshot": "21ee366f2dfce049e60d89b6a9a3582cf90fad7987a1e98ab15a906310ab4638"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08986",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hurricane force",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frische Brise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Storm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:24.185Z",
+   "target": "f08986",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"Hurricane Force Warnings\" are issued if winds of greater than 64 knots are expected.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.185Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hurricane force” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:24.185Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Calm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Calm”, “Windstille”, “штиль”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:24.185Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frische Brise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Frische Brise”, “Fresh breeze”, “свежий ветер”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:05:37Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "0 Less than 1 Calm Sea surface smooth and mirror-like Calm, smoke rises vertically",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:05:38Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0 0 0 <1 <1 Calm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:05:40Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie reicht von Stärke 0 (Windstille) bis Stärke 12 (Orkan).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:05:41Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "5 17-21 Fresh Breeze Moderate waves 4-8 ft taking longer form, many whitecaps, some spray Small trees in leaf begin to sway",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:05:42Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "5 19 10 17-21 9-11 Fresh breeze",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:05:44Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "5 frische Brise frischer Wind",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:05:45Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "10 48-55 Storm Very high waves (29-41 ft) with overhanging crests",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:05:47Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "10 52 27 48-55 25-28 Storm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:05:48Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "10 schwerer Sturm 24,5 - 28,4 89 - 102 Wind bricht Bäume, größere Schäden an Häusern",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "0 Less than 1 Calm Sea surface smooth and mirror-like Calm, smoke rises vertically",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "0 0 0 <1 <1 Calm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie reicht von Stärke 0 (Windstille) bis Stärke 12 (Orkan).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "5 17-21 Fresh Breeze Moderate waves 4-8 ft taking longer form, many whitecaps, some spray Small trees in leaf begin to sway",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "5 19 10 17-21 9-11 Fresh breeze",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "5 frische Brise frischer Wind",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "10 48-55 Storm Very high waves (29-41 ft) with overhanging crests",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s4"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "10 52 27 48-55 25-28 Storm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "10 schwerer Sturm 24,5 - 28,4 89 - 102 Wind bricht Bäume, größere Schäden an Häusern",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Calm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Calm” is on the snapshot of s4"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Calm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Calm” is on the snapshot of s5"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08987",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sie reicht von Stärke 0 (Windstille) bis Stärke 12 (Orkan).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Windstille” is on the snapshot of s6"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fresh Breeze",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Fresh breeze” is on the snapshot of s4"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fresh breeze",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Fresh breeze” is on the snapshot of s5"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08988",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "5 frische Brise frischer Wind 8,0 - 10,7 29 - 38 kleine Laubbäume beginnen zu schwanken, Schaumkronen bilden sich auf Seen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Frische Brise” is on the snapshot of s6"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Storm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Storm” is on the snapshot of s4"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Storm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Storm” is on the snapshot of s5"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:57:12.293Z",
+   "target": "f08989",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "10 schwerer Sturm 24,5 - 28,4 89 - 102 Wind bricht Bäume, größere Schäden an Häusern",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:12.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Schwerer Sturm” is on the snapshot of s6"
+  }
+ ]
+}

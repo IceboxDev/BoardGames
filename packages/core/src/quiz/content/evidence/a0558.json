@@ -1,0 +1,249 @@
+{
+ "article": "a0558",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Irish_War_of_Independence",
+   "title": "Irish War of Independence – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:43.277Z",
+   "snapshot": "73eacce4dad79f89efce1a21c2ed332d1651fc3115f6aaf97dabe52664731339"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/ETA_(separatist_group)",
+   "title": "ETA (separatist group) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:44.193Z",
+   "snapshot": "845c6567dfb94340566d870ed5b1d6fd8b999f7e2a15b7bc85674d424164094a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/EOKA",
+   "title": "EOKA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:45.339Z",
+   "snapshot": "d67a54a1bcebdd9568c9f1c5ee6926eb19152320a8f83cb762fea567aa48eaa6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Liberation_Tigers_of_Tamil_Eelam",
+   "title": "Liberation Tigers of Tamil Eelam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:46.306Z",
+   "snapshot": "7ec158399095d25e34b0e24f1198572bfc0cec06a81094ce639efc19d638cc76"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ulster_Volunteer_Force",
+   "title": "Ulster Volunteer Force – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:47.280Z",
+   "snapshot": "57fa10eb7e7985f594a00217ba0e9dcf961c9bb86f80b15bcd00a88e23040e3e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rajiv_Gandhi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:48.196Z",
+   "snapshot": "a0ca09dc7026ce8866d3f37093aa13e94ee30d1265c1607a8f3ba90ec2bcdee2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "IRA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c047"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ETA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "EOKA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "LTTE",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "UVF",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:06.873Z",
+   "target": "f02786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "also known as the Anglo-Irish War or the Tan War,  was a guerrilla war fought in Ireland from 1919 to 1921 between the Irish Republican Army (IRA, the army of the Irish Republic) and British forces: the British Army, along with the quasi-military Royal Irish Constabulary (RIC) and its",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IRA” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:06.873Z",
+   "target": "f02787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "ETA, an acronym for Euskadi Ta Askatasuna ('Basque Homeland and Liberty' or 'Basque Country and Freedom' in Basque), was an armed Basque nationalist and separatist organization active in Spain and France between 1959 and 2018.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “ETA” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:06.873Z",
+   "target": "f02788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Ethniki Organosis Kyprion Agoniston (EOKA ; Greek: Εθνική Οργάνωσις Κυπρίων Αγωνιστών, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “EOKA” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:06.873Z",
+   "target": "f02789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Liberation Tigers of Tamil Eelam (LTTE; Tamil: தமிழீழ விடுதலைப் புலிகள், romanized: Tamiḻīḻa viṭutalaip pulikaḷ, Sinhala: දෙමළ ඊලාම් විමුක්ති කොටි සංවිධානය, romanized: Demaḷa īlām vimukti koṭi saṁvidhānaya; also known as the Tamil Tigers) was a Tamil militant organization, that was based in",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LTTE” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:06.873Z",
+   "target": "f02790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Ulster Volunteer Force (UVF) is an Ulster loyalist paramilitary group based in Northern Ireland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:06.873Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “UVF” is on the snapshot of s5"
+  }
+ ]
+}

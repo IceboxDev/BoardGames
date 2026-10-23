@@ -29,9 +29,10 @@ export default defineConfig({
   server: {
     host: true,
     allowedHosts: true,
+    // The local API server; `API_PORT` when 3001 is taken by something else.
     proxy: {
-      "/api": "http://localhost:3001",
-      "/ws": { target: "ws://localhost:3001", ws: true },
+      "/api": `http://localhost:${process.env.API_PORT ?? 3001}`,
+      "/ws": { target: `ws://localhost:${process.env.API_PORT ?? 3001}`, ws: true },
     },
   },
   build: {

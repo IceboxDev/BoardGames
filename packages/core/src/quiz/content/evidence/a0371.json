@@ -1,0 +1,289 @@
+{
+ "article": "a0371",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pi%C3%B1atex",
+   "title": "Piñatex – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:24.853Z",
+   "snapshot": "35a6303f198fe25efc30aef209f20e4b767674365fdc1c9f444b0bf7a63206c6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Flax",
+   "title": "Flax – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:25.884Z",
+   "snapshot": "05878031b8d6031d546e23f22a5772b62fcd592b2444069509b079b3f230a3fd"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Flachsfaser",
+   "title": "Flachsfaser",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:23.579Z",
+   "snapshot": "1d190c2dd84ee8f4a17bcd2140ba6e17c97d4dd68eb8dfb55a78532a9ec222b9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Quercus_suber",
+   "title": "Quercus suber – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:26.969Z",
+   "snapshot": "6dde0fa098cf07c92f66ea80cfe4827d479e11a83acd604cb4f8660a964a7ee1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tofu",
+   "title": "Tofu – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:51:28.226Z",
+   "snapshot": "339c60713328e654597b07bdd6e78d9815e22c730fca3fb5e5d48db536a5d9fd"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Abac%C3%A1",
+   "title": "Abacá",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:51:25.021Z",
+   "snapshot": "d46a1494d39686e8a4c0cbc6d16785a522d993e7911d250a29522610799b2b2f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pineapple",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c031"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "flax",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flachs",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-282"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cork oak",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "soybean",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13361",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Abacá",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-069"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:37.391Z",
+   "target": "f01851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Piñatex (Spanish pronunciation: [piɲaˈteks]) is the trade name for a non-biodegradable leather alternative made from cellulose fibres extracted from pineapple leaves, PLA (polylactic acid), and petroleum-based resin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pineapple” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:37.391Z",
+   "target": "f01852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Flax, also known as common flax or line, is a flowering plant, Linum usitatissimum, in the family Linaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “flax” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:37.391Z",
+   "target": "f01852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Als Leinen (wie mittelhochdeutsch līnīin, „linnen, aus Flachs, von Linum usitatissimum“, zu altgriechisch λίνον línon und lateinisch linum  ‚Lein‘) oder Flachs werden sowohl die Fasern aus den Stängeln des Gemeinen Leins als auch insbesondere das in der Leinenindustrie daraus gefertigte Gewebe",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flachs” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:37.391Z",
+   "target": "f01853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Quercus suber, commonly called the cork oak, is a medium-sized, evergreen oak tree in the section Quercus sect.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cork oak” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:37.391Z",
+   "target": "f01855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The pressing of the soybean curds to form tofu cakes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “soybean” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:37.391Z",
+   "target": "f13361",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Abacá (Musa textilis; philippinische Schreibweise Abaka), AB, auch Manilafaser, Manilahanf, Bananenhanf oder Musahanf genannt, ist eine in Ostasien heimische Pflanzenart aus der Gattung Bananen (Musa) in der Familie der Bananengewächse (Musaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:37.391Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abacá” is on the snapshot of s6"
+  }
+ ]
+}

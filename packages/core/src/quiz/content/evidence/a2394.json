@@ -1,0 +1,422 @@
+{
+ "article": "a2394",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Charles_Darwin",
+   "title": "Charles Darwin",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:36.622Z",
+   "snapshot": "3074c0800d42f295499575d210da6199db13d5d9d5ea8b6dd95060797b1fb108"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Kon-Tiki",
+   "title": "Kon-Tiki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:57:37.491Z",
+   "snapshot": "1c33bf26d2ca37b8fb74e469fc52f6b6294282c2c3229f0c79d10ebf8161ef19"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Second_voyage_of_HMS_Beagle",
+   "title": "Second voyage of HMS Beagle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:28.425Z",
+   "snapshot": "b207d184c37a6b176b33fddcaccccac34aa6a8fd7ca720eca8e87f2a878142f5"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Challenger_expedition",
+   "title": "Challenger expedition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:40.319Z",
+   "snapshot": "82ee1d552b00f5a6c748b9aaca262a88aa005a785aa43f3be462cea47e8b89d2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kon-Tiki_expedition",
+   "title": "Kon-Tiki expedition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:41.254Z",
+   "snapshot": "7cd4f8cfc973ef68f47467efa358a784606096548f88a0881bbef5188c992403"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tim_Severin",
+   "title": "Tim Severin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:57:42.167Z",
+   "snapshot": "6e7c4bcefd3f70adb864a17ba831d31c211821a2106b893bfad8c7adba874ddb"
+  },
+  "s7": {
+   "url": "https://www.kon-tiki.no/en/heyerdahls-expeditions/ra-1969-ra-ii-1970",
+   "title": "Ra, 1969 – Ra II 1970",
+   "publisher": "Kon-Tiki Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:04.892Z",
+   "snapshot": "99405130c277a12c60a420fe623e339ee727e38baa17cb57f43101928c64167c"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Thor_Heyerdahl",
+   "title": "Thor Heyerdahl",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:05.902Z",
+   "snapshot": "6a40b57253146a5547f357db61ec512ea2e4544a215d349da0581dea38fe70e5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12507",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charles Darwin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-316"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kon-Tiki",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-046"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert FitzRoy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "HMS Challenger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ra II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12512",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Brendan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:13.129Z",
+   "target": "f12507",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Außerdem tragen folgende Orte seinen Namen: Charles-Darwin-Nationalpark (Australien), Charles Darwin University (Australien), Darwin College in Cambridge (England), Darwin (Falklandinseln), Darwin (Australien), Darwin-Gletscher und Mount Darwin (Kalifornien), Isla Darwin, Darwin Island (Antarktis),",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Darwin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:13.129Z",
+   "target": "f12508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kon-Tiki ist ein Floß aus Balsaholz, mit dem der norwegische Ethnograf, Entdecker und Autor Thor Heyerdahl 1947 von Callao, Lima (Peru) aus über den Pazifik zum Tuamotu-Archipel, Französisch-Polynesien segelte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kon-Tiki” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:13.129Z",
+   "target": "f12509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert FitzRoy, the newest commander of Beagle, had thought of the advantages of having someone onboard who could investigate geology, and sought a naturalist to accompany them as a supernumerary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert FitzRoy” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:13.129Z",
+   "target": "f12510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The expedition was named after the naval vessel that undertook the trip, HMS Challenger.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “HMS Challenger” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:13.129Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ra II",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Ra II”, “Ра II”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:13.129Z",
+   "target": "f12512",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It is theorized by some scholars that the Latin texts of Navigatio Sancti Brendani Abbatis (The Voyage of St Brendan the Abbot) dating back to at least 800 AD tell the story of Brendan's (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:13.129Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brendan” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:52:49Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Ra II sailed the 6100 kilometers from Morocco to Barbados in 57 days.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:52:52Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "notably the Ra II expedition of 1970, when he sailed from the west coast of Africa to Barbados in a papyrus reed boat.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:56.537Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Ra II sailed the 6100 kilometers from Morocco to Barbados in 57 days.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:56.537Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "notably the Ra II expedition of 1970, when he sailed from the west coast of Africa to Barbados in a papyrus reed boat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:56.537Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Ra, 1969 - Ra II 1970 — Kon-Tiki museet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ra II” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:56.537Z",
+   "target": "f12511",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Heyerdahl made other voyages to demonstrate the possibility of contact between widely separated ancient peoples, notably the Ra II expedition of 1970, when he sailed from the west coast of Africa to Barbados in a papyrus reed boat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:56.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ra II” is on the snapshot of s8"
+  }
+ ]
+}

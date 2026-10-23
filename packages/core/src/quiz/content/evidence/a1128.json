@@ -1,0 +1,657 @@
+{
+ "article": "a1128",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/MP3",
+   "title": "MP3 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:14.588Z",
+   "snapshot": "8f67cc26a049411715006a1c77bf7f324dbc9beeec6ba3db0923e7c296ce8f94"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/World_Wide_Web",
+   "title": "World Wide Web – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:55.284Z",
+   "snapshot": "3ed83023d17bb32c4b1541ab761bba0d528f143493ed265649f8dc71f4839716"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Unix",
+   "title": "Unix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:30.226Z",
+   "snapshot": "c70b0cab5aa4edf856100963fae5411dab5bb1ae5895a20c205e65c09a058928"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Xerox_Alto",
+   "title": "Xerox Alto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:42:31.235Z",
+   "snapshot": "2388fbb4c7eed2b3c5c3a53e99acb4e8d2fd8b5af98095e0905fb9aa68bd7257"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Rotert",
+   "title": "Michael Rotert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:28.356Z",
+   "snapshot": "09e99afb4a5059ccff749fbea612ea2897099784a0521d3cab42dd45099b4198"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Computermaus",
+   "title": "Computermaus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:42:29.532Z",
+   "snapshot": "a16f5e8d36d1c0c05f2e380ef1259cc1b9ad5d856d57ad91ba25edb233aba46b"
+  },
+  "s7": {
+   "url": "https://www.computerhistory.org/timeline/computers/",
+   "title": "Computers | Timeline of Computer History",
+   "publisher": "Computer History Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:29.985Z",
+   "snapshot": "8eae898b903da7c259fee8ea5ef8c041b54d704227cd16454680301823485195"
+  },
+  "s8": {
+   "url": "https://www.kit.edu/kit/pi_2014_15510.php",
+   "title": "Erste E-Mail erreichte Deutschland vor 30 Jahren (Presseinformation 113/2014)",
+   "publisher": "Karlsruher Institut für Technologie (KIT)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:07.161Z",
+   "snapshot": "802b6de4054472b5710668a4dd75a5e685da0b35a4685b651f2668e25d32ff23"
+  },
+  "s9": {
+   "url": "https://www.internethalloffame.org/inductee/werner-zorn/",
+   "title": "Werner Zorn – Internet Hall of Fame",
+   "publisher": "Internet Hall of Fame (Internet Society)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:07.943Z",
+   "snapshot": "942cf3b05079d9179e01aa634c34a9835f493a623035ba9f4b69989805fa0bf5"
+  },
+  "s10": {
+   "url": "https://www.computerhistory.org/revolution/personal-computers/17/303",
+   "title": "Apple's Macintosh – CHM Revolution",
+   "publisher": "Computer History Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:07.910Z",
+   "snapshot": "86d1932c7af7cd8624b189c48882a83502ec683a824bf413d38ce5d76d671c8f"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Computer_mouse",
+   "title": "Computer mouse – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:36:48Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05636",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fraunhofer Institute for Integrated Circuits",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c094"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05637",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "CERN",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05638",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bell Labs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Xerox PARC",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Universität Karlsruhe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Apple",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-146"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:36.888Z",
+   "target": "f05636",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Johnston (\"JJ\") of AT&T-Bell Labs — with the Fraunhofer Institute for Integrated Circuits, Erlangen (where he worked with Bernhard Grill and four other researchers – \"The Original Six\"), with relatively minor contributions from the MP2 branch of psychoacoustic sub-band coders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.888Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fraunhofer Institute for Integrated Circuits” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:36.888Z",
+   "target": "f05637",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Web was invented by English computer scientist Tim Berners-Lee while at CERN in 1989 and opened to the public in 1993.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.888Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CERN” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:36.888Z",
+   "target": "f05638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unix ( , YOO-niks; trademarked as UNIX) is a family of multitasking, multi-user computer operating systems that derive from the original AT&T Unix, the development of which started in 1969 at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.888Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bell Labs” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:36.888Z",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Xerox Alto is a computer system developed at Xerox PARC (Palo Alto Research Center) in the 1970s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.888Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Xerox PARC” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:36.888Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Rotert studierte an der Universität Karlsruhe von Oktober 1971 bis September 1975 Informatik und von Oktober 1975 bis August 1979 Wirtschaftswissenschaften mit Schwerpunkt Operations Research/Informatik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.888Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Universität Karlsruhe” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:36.888Z",
+   "target": "f14162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Computerhersteller Apple lizenzierte diese Technik, als Steve Jobs die Rechte von Xerox für 1.000 $ erwarb und das kalifornische Design- und Ingenieurbüro Hovey-Kelley Design (heute IDEO) mit der Entwicklung einer verbesserten, industriell herzustellenden Maus für 25 US-Dollar beauftragte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:36.888Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apple” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:36:38Z",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Xerox PARC Alto introduced",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23",
+   "note": "CHM: 'It was based on a graphical user interface using windows, icons, and a mouse'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:36:39Z",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was based on a graphical user interface using windows, icons, and a mouse, and worked together with other Altos over a local area network.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:36:41Z",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Xerox Alto is a computer system developed at Xerox PARC (Palo Alto Research Center) in the 1970s.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:36:42Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die erste E-Mail erreichte Deutschland an der damaligen Universität Karlsruhe (TH), dem heutigen Karlsruher Institut für Technologie, vor 30 Jahren.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:36:43Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Am 3. August 1984 um 10:14 Uhr mitteleuropäischer Zeit landet die erste direkte E-Mail Deutschlands aus dem ARPANET",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:36:45Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the first email arrived in the Informatics computing center from the US Computer Science Network (CSNET) on August 3, 1984.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:36:46Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Am 3. August 1984 um 10:14 Uhr MESZ empfing Michael Rotert dort unter seiner Adresse die erste Internet-E-Mail in Deutschland",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:36:47Z",
+   "target": "f14162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Computer pioneers experimented with icons and pointing devices (like the mouse) decades before Apple unveiled its Macintosh in 1984. But it was the Mac that introduced the idea to the general public.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:36:48Z",
+   "target": "f14162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "However, none of these products achieved large-scale success. Only with the release of the Apple Macintosh in 1984 did the mouse see widespread use.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23",
+   "note": "Xerox Star (1981), Lisa (1983) and the 1983 Microsoft Mouse came earlier but did not reach the mass market"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It was based on a graphical user interface using windows, icons, and a mouse, and worked together with other Altos over a local area network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Am 3. August 1984 um 10:14 Uhr mitteleuropäischer Zeit landet die erste direkte E-Mail Deutschlands aus dem ARPANET",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the first email arrived in the Informatics computing center from the US Computer Science Network (CSNET) on August 3, 1984.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Am 3. August 1984 um 10:14 Uhr MESZ empfing Michael Rotert dort unter seiner Adresse die erste Internet-E-Mail in Deutschland",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s5"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f14162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Computer pioneers experimented with icons and pointing devices (like the mouse) decades before Apple unveiled its Macintosh in 1984. But it was the Mac that introduced the idea to the general public.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f05639",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Laser printer invented at Xerox PARC",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Xerox PARC” is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f05640",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Die erste E-Mail erreichte Deutschland an der damaligen Universität Karlsruhe (TH), dem heutigen Karlsruher Institut für Technologie, vor 30 Jahren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Universität Karlsruhe” is on the snapshot of s8"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:14.852Z",
+   "target": "f14162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The Apple Macintosh graphical user interface was based on WIMP: Windows, Icons, Menus and Pointing device.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:14.852Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Apple” is on the snapshot of s10"
+  }
+ ]
+}

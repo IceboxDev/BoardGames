@@ -1,0 +1,268 @@
+{
+ "article": "a2324",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Siebenb%C3%BCrgen",
+   "title": "Siebenbürgen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:03.008Z",
+   "snapshot": "4ffcb77322b243c48ecc9e57e2468ea1d029b076aa361953847a7d9f7bb07de3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bratislava",
+   "title": "Bratislava – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:05.921Z",
+   "snapshot": "b102090ea92e938061f192207c1d2d6c7fb732218739ae7923bbd0de19880805"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lviv",
+   "title": "Lviv – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:06.838Z",
+   "snapshot": "e56830e9bcb5b63c8549f190646691b044731b34f88327e22bb4f26c92e7d38a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Wroc%C5%82aw",
+   "title": "Wrocław – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:07.698Z",
+   "snapshot": "037ca2c46639aa8e1487cc0eedd1d0ac82fb1f983e5945bd1c80f4375dddab68"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Transylvania",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:08.808Z",
+   "snapshot": "2f1985f81854dd2b62c3b90f682a3ff0adc3cfb825c1782bc0e1c25928085ea1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12051",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pressburg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12052",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lemberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12053",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Breslau",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Siebenbürgen",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "Siebenbürgen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-293/1, u05: Siebenbürgen is simply the German name of Transylvania (one region); only the wider Romanian usage of 'Transilvania' sometimes adds Banat, Crișana and Maramureș. Statement false."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Siebenbürgen",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Siebenbürgen",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Siebenbürgen, Transsilvanien oder Transsylvanien (rumänisch Ardeal oder Transilvania, ungarisch Erdély, siebenbürgisch-sächsisch Siweberjen, griechisch Τρανσυλβανία, türkisch Erdel, slowakisch Sedmohradsko) ist ein historisches und geografisches Gebiet im südöstlichen Karpatenraum mit einer",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Siebenbürgen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The German name Siebenbürgen means \"seven castles\", after the seven (ethnic German) Transylvanian Saxons' cities in the region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Siebenbürgen” is on the snapshot of s5"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12051",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bratislava (Hungarian: Pozsony; German: Pressburg) is the capital and largest city of Slovakia and the fourth largest of all cities on the river Danube.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pressburg” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12052",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lviv (German: Lemberg; Polish: Lwów, Ukrainian: Львів) is the fifth-largest city in Ukraine, as well as the largest city in the western part of the country, with a population of 723,403 (2025 estimate).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lemberg” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:56.652Z",
+   "target": "f12053",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wrocław (Polish: [ˈvrɔt͡swaf] ; German: Breslau [ˈbʁɛslaʊ] ; also known by other names) is a city in southwestern Poland, and the capital of the Lower Silesian Voivodeship.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:56.652Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Breslau” is on the snapshot of s4"
+  }
+ ]
+}

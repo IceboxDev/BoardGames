@@ -1,0 +1,440 @@
+{
+ "article": "a2287",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Schloss_Kronborg",
+   "title": "Schloss Kronborg",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:33.495Z",
+   "snapshot": "f5ade695578558ddebbdd60a8ad03fe4a896bcbf3fc09b61a408c5e7d34dc22e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Monte-Carlo",
+   "title": "Monte-Carlo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:34.493Z",
+   "snapshot": "da02de20dae84d025e9a688a2ce6e199baa10a9e4a5697b6650d824271591802"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Blarney_Stone",
+   "title": "Blarney Stone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:35.159Z",
+   "snapshot": "d7acfca9d8c5cae5794b41d2ac7560a994a9fd18115fccddb4892fb2d4b354bd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn",
+   "title": "Tiergarten Schönbrunn",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:35.601Z",
+   "snapshot": "53466821e81d644b6a4aefb545ba62614c9951574be030f429b7d5f11b576d4d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Manneken_Pis",
+   "title": "Manneken Pis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:51:36.159Z",
+   "snapshot": "65840a0a9f641e0fb83517f91e44bd667fbcc07c85eade55ae10178d0507d833"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Charles_III,_Prince_of_Monaco",
+   "title": "Charles III of Monaco – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:52.589Z",
+   "snapshot": "b3bf993f05df50b8f14e424a6496e3ae32f75dde6685892e6a43b980625c7f36"
+  },
+  "s7": {
+   "url": "https://whc.unesco.org/en/list/786/",
+   "title": "Palace and Gardens of Schönbrunn – UNESCO World Heritage Centre",
+   "publisher": "UNESCO World Heritage Centre",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:48:12Z"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn",
+   "title": "Schönbrunn Zoo – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:53.719Z",
+   "snapshot": "b5848cbb4a8d3ff7310f065153a1fd0688e872817483a731f8668eb204506bc9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11797",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dänemark",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-009"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karlsberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-121"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11799",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Blarney Stone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-331"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11800",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; history entry seq 23; transcript tp-348"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11802",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Manneken Pis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:48.774Z",
+   "target": "f11797",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nach der Legende kehrte dieser unbesiegbare Krieger vom Heimweh geplagt von einem Feldzug nach Dänemark zurück und fiel dort in einen tiefen Schlaf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.774Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dänemark” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:48.774Z",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Karlsberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Karlsberg”, “Mount Charles”, “гора Шарля”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:48.774Z",
+   "target": "f11799",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Blarney Stone (Irish: Cloch na Blarnan) is a block of Carboniferous limestone built into the battlements of Blarney Castle, Blarney, about 8 kilometres (5 miles) from the centre of Cork City, Ireland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.774Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Blarney Stone” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:48.774Z",
+   "target": "f11800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die exotischen Tiere waren Publikumsmagnete – sie lockten Besucher aus Wien und Umgebung, aber auch viele ausländische Gäste in die kaiserliche Menagerie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.774Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wien” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:48.774Z",
+   "target": "f11802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Manneken Pis (pronounced [ˌmɑnəkə(m) ˈpɪs] ; Dutch for 'Little Pissing Man') is a landmark 55.5 cm (21.9 in) bronze fountain sculpture in central Brussels, Belgium, depicting a puer mingens: a nude boy urinating into the fountain's basin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:48.774Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manneken Pis” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:48:04Z",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Monte Carlo (in English, Mount Charles) itself takes its name from Charles, after all its founder.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "No non-Wikipedia page with the gloss could be fetched this run (web search unavailable); the Italian monte = mount, Carlo = Charles is transparent."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:48:08Z",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Seinen Namen verdankt Monte-Carlo dem Fürsten Charles III.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:48:12Z",
+   "target": "f11800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the site of the world’s first zoo in 1752",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:48:14Z",
+   "target": "f11800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it is the world's oldest zoo still in operation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:33.849Z",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Monte Carlo (in English, Mount Charles) itself takes its name from Charles, after all its founder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:33.849Z",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Seinen Namen verdankt Monte-Carlo dem Fürsten Charles III.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:33.849Z",
+   "target": "f11800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "it is the world's oldest zoo still in operation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:33.849Z",
+   "target": "f11798",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Monte Carlo (in English, Mount Charles) itself takes its name from Charles, after all its founder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Mount Charles” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:33.849Z",
+   "target": "f11800",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Schönbrunn Zoo (German: Tiergarten Schönbrunn; also simply called Vienna Zoo) is a 17-hectare (42-acre) zoo in the city of Vienna, Austria.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:33.849Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Vienna” is on the snapshot of s8"
+  }
+ ]
+}

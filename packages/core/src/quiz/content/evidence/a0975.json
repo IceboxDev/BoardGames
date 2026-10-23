@@ -1,0 +1,195 @@
+{
+ "article": "a0975",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Surrealist_Manifesto",
+   "title": "Surrealist Manifesto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:28:04.251Z",
+   "snapshot": "45c869674bc69e72308a9c5230a32db79a332f29f13ac8a4e762591ff0c7310f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Manifesto_of_Futurism",
+   "title": "Manifesto of Futurism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:51.031Z",
+   "snapshot": "7817f0147dba19ee68bbba0f7b6e1b6157c6105e33c538422071ee09ffdbfd14"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dada_Manifesto",
+   "title": "Dada Manifesto – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:13.035Z",
+   "snapshot": "5142a5ddc443f451950c26afac6de9d68fdc6035f856e9096ee93c1d819209e4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/0,10_Exhibition",
+   "title": "0,10 Exhibition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:51.969Z",
+   "snapshot": "3e70c2657fa14ffd9f52277e624505d51f55a7d23c6898d45b7d470664c7e736"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "André Breton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c082"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04872",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Filippo Tommaso Marinetti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tristan Tzara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kazimir Malevich",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:13.596Z",
+   "target": "f04871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Surrealist Manifesto refers to several publications by Yvan Goll and André Breton, leaders of rival surrealist groups.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “André Breton” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:13.596Z",
+   "target": "f04872",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Manifesto of Futurism (Italian: Manifesto del Futurismo) is a manifesto written by the Italian poet Filippo Tommaso Marinetti, published in 1909.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Filippo Tommaso Marinetti” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:13.596Z",
+   "target": "f04873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After writing his manifesto Ball stayed active in the Dada movement for another six months, but the manifesto created conflict with his fellow Dada artists, most notably Tristan Tzara.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tristan Tzara” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:13.596Z",
+   "target": "f04875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In March 1915, Puni had organized the Tramway V: First Futurist Exhibition in Petrograd, which included work by Kazimir Malevich, Vladimir Tatlin, Lyubov Popova, Olga Rozanova, Nadezhda Udaltsova, and Alexandra Ekster.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:13.596Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kazimir Malevich” is on the snapshot of s4"
+  }
+ ]
+}

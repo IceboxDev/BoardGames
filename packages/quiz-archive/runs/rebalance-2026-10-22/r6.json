@@ -1,0 +1,3107 @@
+{
+ "domains": {
+  "art": {
+   "en": "Art, Architecture & Design",
+   "de": "Kunst, Architektur & Design",
+   "ru": "Искусство, архитектура и дизайн",
+   "subs": [
+    {
+     "slug": "architecture",
+     "en": "Architectural Styles & Terms",
+     "de": "Baustile & Fachbegriffe",
+     "ru": "Архитектурные стили и термины"
+    },
+    {
+     "slug": "historic-buildings",
+     "en": "Historic Buildings & Monuments",
+     "de": "Historische Bauten & Monumente",
+     "ru": "Исторические здания и памятники"
+    },
+    {
+     "slug": "modern-arch",
+     "en": "Modern Architecture",
+     "de": "Moderne Architektur",
+     "ru": "Современная архитектура"
+    },
+    {
+     "slug": "painting",
+     "en": "Old Masters & Painting",
+     "de": "Alte Meister & Malerei",
+     "ru": "Старые мастера и живопись"
+    },
+    {
+     "slug": "modern-art",
+     "en": "Modern Art Movements",
+     "de": "Kunstrichtungen der Moderne",
+     "ru": "Течения модернизма"
+    },
+    {
+     "slug": "art-world",
+     "en": "Contemporary Art & Museums",
+     "de": "Gegenwartskunst & Museen",
+     "ru": "Современное искусство и музеи"
+    },
+    {
+     "slug": "r6-sculpt-photo",
+     "en": "Sculpture & Photography",
+     "de": "Skulptur & Fotografie",
+     "ru": "Скульптура и фотография"
+    },
+    {
+     "slug": "design",
+     "en": "Fashion & Design",
+     "de": "Mode & Design",
+     "ru": "Мода и дизайн"
+    }
+   ]
+  },
+  "belief": {
+   "en": "Religion, Myth & Philosophy",
+   "de": "Religion, Mythos & Philosophie",
+   "ru": "Религия, мифы и философия",
+   "subs": [
+    {
+     "slug": "christianity",
+     "en": "Christianity & the Bible",
+     "de": "Christentum & Bibel",
+     "ru": "Христианство и Библия"
+    },
+    {
+     "slug": "religion",
+     "en": "World Religions",
+     "de": "Weltreligionen",
+     "ru": "Мировые религии"
+    },
+    {
+     "slug": "mythology",
+     "en": "Gods & Heroes of Myth",
+     "de": "Götter & Helden der Mythen",
+     "ru": "Боги и герои мифов"
+    },
+    {
+     "slug": "r6-folklore",
+     "en": "Folklore, Symbols & Occult",
+     "de": "Volksglaube, Symbole & Okkultes",
+     "ru": "Фольклор, символы и оккультизм"
+    },
+    {
+     "slug": "philosophy",
+     "en": "Philosophy",
+     "de": "Philosophie",
+     "ru": "Философия"
+    }
+   ]
+  },
+  "geography": {
+   "en": "Countries, Peoples & Cultures",
+   "de": "Länder, Völker & Kulturen",
+   "ru": "Страны, народы и культуры",
+   "note": "Suggested name for r6's 144; coordinator adds the languages part (r6-lang-names can merge into it).",
+   "subs": [
+    {
+     "slug": "countries",
+     "en": "Countries & Borders",
+     "de": "Länder & Grenzen",
+     "ru": "Страны и границы"
+    },
+    {
+     "slug": "cities",
+     "en": "Cities & Sights",
+     "de": "Städte & Sehenswürdigkeiten",
+     "ru": "Города и достопримечательности"
+    },
+    {
+     "slug": "peoples",
+     "en": "Peoples, Flags & Emblems",
+     "de": "Völker, Flaggen & Wappen",
+     "ru": "Народы, флаги и гербы"
+    },
+    {
+     "slug": "r6-lang-names",
+     "en": "Languages & Names",
+     "de": "Sprachen & Namen",
+     "ru": "Языки и имена"
+    },
+    {
+     "slug": "r6-customs",
+     "en": "Customs, Cuisines & Festivals",
+     "de": "Bräuche, Küchen & Feste",
+     "ru": "Обычаи, кухни и праздники"
+    },
+    {
+     "slug": "r6-societies",
+     "en": "Societies & Social Science",
+     "de": "Gesellschaften & Sozialwissenschaft",
+     "ru": "Общества и социология"
+    }
+   ]
+  }
+ },
+ "place": {
+  "a0099": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0159": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0231": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0267": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0339": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0603": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0663": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0747": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0759": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0771": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0783": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0867": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a1527": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a1551": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a1563": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a1719": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a1767": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a1803": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "A glossary of mosque and temple architecture (minaret, mihrab, minbar, pagoda) — moved from Art to Religion, Myth & Philosophy, beside the world religions whose worship it serves."
+  },
+  "a1851": {
+   "domain": "art",
+   "sub": "architecture",
+   "reason": "Stays in Architectural styles and terms."
+  },
+  "a0195": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a0243": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a0255": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a0399": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a0459": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a0627": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1071": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1107": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1179": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1371": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1431": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1443": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1455": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1515": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1683": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1779": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1791": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a1827": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a2091": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a2136": {
+   "domain": "art",
+   "sub": "art-world",
+   "reason": "Same domain; grouped with contemporary art and museums."
+  },
+  "a0003": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0051": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0279": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0387": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0483": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0711": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1023": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1059": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1095": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1143": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1227": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1347": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1479": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1503": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1539": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1671": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1695": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1731": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1875": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1947": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a2103": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a2662": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0015": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a0147": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a0291": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a0411": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a0567": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a0579": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1083": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1191": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1263": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1287": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1311": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1575": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1611": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1647": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1659": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1815": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1899": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1959": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a1971": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a2067": {
+   "domain": "art",
+   "sub": "modern-arch",
+   "reason": "Same domain; grouped with modern architecture."
+  },
+  "a0027": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0075": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0123": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0183": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0207": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0219": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0327": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0423": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0543": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0591": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0675": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0687": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0819": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0831": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0879": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0903": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0915": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0951": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0975": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1215": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1251": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1359": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1407": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1491": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1623": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1635": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1839": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a1983": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a2043": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a2079": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a2137": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a2664": {
+   "domain": "art",
+   "sub": "modern-art",
+   "reason": "Same domain; grouped with modern art movements."
+  },
+  "a0039": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0063": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0111": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0315": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0435": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0507": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0519": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0735": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0855": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0927": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0987": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Same domain; grouped with old masters and painting."
+  },
+  "a1011": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1035": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1119": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1131": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1167": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1395": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1587": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1743": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1755": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1863": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1935": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a1995": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a2031": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a2135": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a2734": {
+   "domain": "art",
+   "sub": "painting",
+   "reason": "Stays in Old masters and painting."
+  },
+  "a0087": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0351": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0447": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0495": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0531": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0615": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0699": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0891": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0939": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1047": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1203": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1275": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1335": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1467": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1887": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a1923": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2055": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2115": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2138": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2139": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2140": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2665": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a2666": {
+   "domain": "art",
+   "sub": "r6-sculpt-photo",
+   "reason": "Same domain; grouped with sculpture and photography."
+  },
+  "a0135": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0171": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0555": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0651": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0723": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0807": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0963": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0999": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1155": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1239": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1299": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "The holy sites of Jerusalem, Mecca and Istanbul as places of worship (Western Wall, Holy Sepulchre, Tawaf) — moved from Art to Religion, Myth & Philosophy, beside the world religions."
+  },
+  "a1323": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1383": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1419": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1599": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a1707": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a2007": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a2019": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a2663": {
+   "domain": "art",
+   "sub": "historic-buildings",
+   "reason": "Same domain; grouped with historic buildings and monuments."
+  },
+  "a0234": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0247": {
+   "domain": "everyday",
+   "suggestedSub": "Clothing, textiles & everyday style",
+   "reason": "Trademark looks of famous people (Lagerfeld's ponytail, Jobs's turtleneck) — moved from Society to Everyday Life, beside clothing and everyday style."
+  },
+  "a0303": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0363": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0375": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0499": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0787": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0795": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0843": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a1296": {
+   "domain": "everyday",
+   "suggestedSub": "Clothing, textiles & everyday style",
+   "reason": "How to read the care symbols on a clothing label — stays in Everyday Life, with clothing and everyday style."
+  },
+  "a1368": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a1666": {
+   "domain": "everyday",
+   "suggestedSub": "Clothing, textiles & everyday style",
+   "reason": "Fabrics named after places (cashmere, jersey, denim) — stays in Everyday Life, with clothing and everyday style."
+  },
+  "a1911": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2125": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2126": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2127": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2128": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2129": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2130": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2131": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2132": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2133": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a2134": {
+   "domain": "art",
+   "sub": "design",
+   "reason": "Stays in Fashion and design."
+  },
+  "a0490": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a0968": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a1314": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a1388": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a1484": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a2148": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a2149": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a2150": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a2151": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a0116": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0188": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0200": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0332": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0404": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0452": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0536": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0548": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0572": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0596": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0608": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0728": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0740": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0776": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0884": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0932": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1088": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1160": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1232": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1244": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1304": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1364": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1472": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1508": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1556": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1592": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1724": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1736": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1784": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1796": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1830": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1904": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1916": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1964": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a1976": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a2000": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a2024": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a2072": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a2145": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a2146": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a2147": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Same domain; grouped with Christianity and the Bible."
+  },
+  "a0032": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0104": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0128": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0164": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0166": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0248": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0320": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0344": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0416": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0464": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0524": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0680": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0692": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0704": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0788": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0800": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0848": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0860": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0896": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0920": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0971": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a0980": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1016": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1040": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1136": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1148": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1172": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1196": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1316": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1328": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1496": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a1526": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1580": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1726": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a1844": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a1880": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a2036": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a2096": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a2141": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a2142": {
+   "domain": "belief",
+   "sub": "mythology",
+   "reason": "Stays in Gods and heroes of myth."
+  },
+  "a2143": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a2144": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a2735": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "Same domain; grouped with folklore, symbols and the occult."
+  },
+  "a0020": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0152": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0236": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0260": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0272": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0356": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0368": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0428": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0476": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0488": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0500": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0512": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0560": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0584": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0620": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0632": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0644": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0668": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0716": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0752": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0812": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0824": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0836": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0908": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0944": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0992": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1004": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1028": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1052": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1112": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1124": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1184": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1280": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1340": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1352": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1412": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1424": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1436": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1448": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1460": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1520": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1532": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1616": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1640": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1700": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1712": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1748": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1760": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1772": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1820": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1832": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1856": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1868": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1928": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a1952": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a2012": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a2048": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a2060": {
+   "domain": "belief",
+   "sub": "philosophy",
+   "reason": "Stays in Philosophy."
+  },
+  "a0008": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0044": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0056": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0068": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0080": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0092": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0140": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0176": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0212": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0224": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0284": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0380": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0392": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0440": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0764": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0872": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0956": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1076": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1100": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1208": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1220": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1256": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1268": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1292": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1376": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1400": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1568": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1604": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1628": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1652": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1664": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1676": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1688": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1808": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1892": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1940": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a1988": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2084": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2108": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2120": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2667": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2697": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2736": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a2737": {
+   "domain": "belief",
+   "sub": "religion",
+   "reason": "Stays in World religions."
+  },
+  "a0046": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0298": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0418": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0514": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0562": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0571": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0658": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0838": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0862": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0922": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0982": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1006": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1018": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1054": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1078": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1222": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1290": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1302": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1327": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1366": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1426": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1522": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1618": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1714": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a1846": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2303": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2304": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2305": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2306": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2307": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2308": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2309": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2310": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2311": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2312": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2313": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2314": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2315": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2316": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2317": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2675": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2676": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a2743": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "Stays in Countries and borders."
+  },
+  "a0034": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0202": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0226": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0478": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0550": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0639": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0886": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0954": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0966": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a1198": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a1378": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a1438": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a1738": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a1918": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2086": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2284": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2285": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2286": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2287": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2288": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2289": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2290": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2291": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2292": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2293": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2294": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2295": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2296": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2297": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2298": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2299": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2300": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2301": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2302": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2671": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2672": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a2673": {
+   "domain": "geography",
+   "sub": "cities",
+   "reason": "Stays in Cities and their sights."
+  },
+  "a0138": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0158": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a0274": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0382": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0439": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0454": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0526": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0631": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0686": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "A languages and names topic (Four Languages, One Country: Switzerland and Europe's Multilingual States) — moved from Literature to the regrouped Countries, Peoples & Cultures category, beside the articles on languages and names."
+  },
+  "a0858": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0994": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a1278": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "A peoples, flags or emblems topic (Moccasin, Anorak, Tipi: Everyday Objects of North America's First Peoples) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the peoples, flags and emblems."
+  },
+  "a1450": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a1762": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a1774": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a1902": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a2318": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a2319": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a2320": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a2321": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a2322": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a2323": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a2324": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a2325": {
+   "domain": "geography",
+   "sub": "r6-lang-names",
+   "reason": "Same domain; grouped with articles on languages and names."
+  },
+  "a2326": {
+   "domain": "geography",
+   "sub": "peoples",
+   "reason": "Stays in Peoples, flags and emblems."
+  },
+  "a0054": {
+   "domain": "geography",
+   "sub": "countries",
+   "reason": "A country topic (Countries of Superlatives: A Snapshot of 2018) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the countries and borders."
+  },
+  "a0521": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (The Three Acts of a Bullfight) — moved from Sport & Games to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a0798": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Who Rules Whom: Five Ways Societies Have Been Ordered) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a0823": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Polier, Kämmerer, Landrat: Five German Job Titles Explained) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a0906": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Imported Pleasures: How Foreign Habits Became German Youth Culture) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a1194": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (From the Blue Angel to the Bio-Siegel: A Short History of Eco-Labels) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a1374": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Homes That Move and Homes That Stay: Traditional Dwellings Around the World) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a1506": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (World Firsts: Six Institutions and Where They Began) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a1590": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Tribes of the Twentieth Century: Youth Subcultures from Mods to Grunge) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a1614": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (The Doctorate in Germany: Grades, Dissertations and Habilitation) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2010": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (The Indian Caste System) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2046": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Sex, Gender and the Vocabulary of Social Science) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2563": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Unspoken Codes: Gestures and Greetings Around the World) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2564": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Flash Mobs, Ice Buckets and Science Slams: New Ways to Gather a Crowd) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2565": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Pride: From the Stonewall Inn to Christopher Street Day) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2566": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Before the Crown: What Royal Brides Did for a Living) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2568": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Five Digits and a Deposit: Reforms That Changed Everyday Life in Germany) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2726": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Mirrors, Prophecies and Fieldwork: Classic Ideas of Sociology and Anthropology) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2727": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (One Year Old at Birth: Counting Age in East Asia) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2728": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (What a Signature Says: Size, Flourishes, Seals and Signing Machines) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a2785": {
+   "domain": "geography",
+   "sub": "r6-societies",
+   "reason": "A society and social-science topic (Iron Cages and Golden Arches: Sociology's Diagnoses of Modern Life) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the other articles on how societies are organised."
+  },
+  "a0354": {
+   "domain": "everyday",
+   "suggestedSub": "Holidays, festivals & special days",
+   "reason": "Stays in Everyday Life (holidays, festivals & special days)."
+  },
+  "a2195": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Beans, Colours, Tomatoes, Mud: Festivals Where Everyone Throws Something) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2196": {
+   "domain": "belief",
+   "sub": "christianity",
+   "reason": "Carnival as the feast before Lent, ending on Ash Wednesday — moved from Everyday Life to Religion, Myth & Philosophy, beside the Christian church year."
+  },
+  "a2197": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Who Brings the Presents? Christmas Gift-Bringers of Europe) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2198": {
+   "domain": "everyday",
+   "suggestedSub": "Holidays, festivals & special days",
+   "reason": "Stays in Everyday Life (holidays, festivals & special days)."
+  },
+  "a2199": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Cinnamon at 25, Pepper at 30: Customs of Love, Luck and Single Life) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2200": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Horses, Bulls, Cheese and a Burning Man: Festivals as Spectacle) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2670": {
+   "domain": "belief",
+   "sub": "r6-folklore",
+   "reason": "The four pagan festivals of the Gaelic year (Samhain, Beltane…) — moved from Everyday Life to Religion, Myth & Philosophy, beside the folklore and old beliefs."
+  },
+  "a2742": {
+   "domain": "everyday",
+   "suggestedSub": "Holidays, festivals & special days",
+   "reason": "Stays in Everyday Life (holidays, festivals & special days)."
+  },
+  "a2786": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Fantasy Coffins and Cemetery Picnics: How the World Lives with Its Dead) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2787": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Thirteen Months of Sunshine: Calendars That Count the Year Differently) — moved from Society to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a0213": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a0227": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0285": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0467": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0479": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a0494": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0586": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (A Map of Cheese: Five Regions That Gave Their Names to What We Eat) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a0599": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0743": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (One Vegetable, Many Names: What the Regions Call Their Greens) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a0791": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0802": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (A Taste of the Map: French Places That Became Names on the Label) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a1235": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1259": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1271": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1439": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1466": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1475": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1478": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Palatschinken and Paradeiser: The Austrian Kitchen Vocabulary) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a1535": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a1547": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (One Vegetable, Many Names) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a1775": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a2015": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2087": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a2174": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2175": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a2176": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a2177": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a2178": {
+   "domain": "everyday",
+   "suggestedSub": "Drinks: wine, spirits, coffee & tea",
+   "reason": "Stays in Everyday Life (drinks: wine, spirits, coffee & tea)."
+  },
+  "a2179": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Skål, Prost and Kanpai: How the World Raises a Glass) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2180": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Daizu: The Soybean in the Japanese Kitchen) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2181": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Sashimi, Tempura and Poke: Japanese Food at Home and Abroad) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2182": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2183": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2184": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2185": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2186": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2187": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2188": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2189": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Spit, Pot and Sesame: Classics of the Arab and North African Kitchen) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2190": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Plates of the Nations: Where Famous Dishes Are at Home) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2191": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Zuzeln, Charcuterie, Salumeria: The Language of Sausage and Ham) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2192": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2193": {
+   "domain": "geography",
+   "sub": "r6-customs",
+   "reason": "A look at food, festivals or customs around the world (Who Feeds the World: The Record Producers of Everyday Foods) — moved from Everyday Life to the regrouped Countries, Peoples & Cultures category, beside the customs, cuisines and festivals of the world's peoples."
+  },
+  "a2194": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a2669": {
+   "domain": "everyday",
+   "suggestedSub": "Food, cooking & ingredients",
+   "reason": "Stays in Everyday Life (food, cooking & ingredients)."
+  },
+  "a0725": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a0881": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a1325": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a1541": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "An everyday topic (Counting the Course: Numbers in Popular Pastimes) — moved from Sport & Games to Everyday Life, beside the other toys, hobbies & pastimes."
+  },
+  "a1577": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2201": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2202": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2203": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2204": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2205": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2206": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "Stays in Everyday Life (toys, hobbies & pastimes)."
+  },
+  "a2596": {
+   "domain": "everyday",
+   "suggestedSub": "Toys, hobbies & pastimes",
+   "reason": "An everyday topic (Cherry Stones, Handbags and Wives: The World's Oddest World Championships) — moved from Sport & Games to Everyday Life, beside the other toys, hobbies & pastimes."
+  }
+ }
+}

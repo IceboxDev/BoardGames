@@ -1,0 +1,478 @@
+{
+ "article": "a2716",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Big_Five_personality_traits",
+   "title": "Big Five personality traits",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:36.378Z",
+   "snapshot": "b098e97e39c935f8f1a78842379f90100aa59af4bd318ca0c91ed49838ad8254"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Francis_Galton",
+   "title": "Francis Galton",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:02.386Z",
+   "snapshot": "be468c0291461ad5c11a321eb62517e91b3827365fd1cef26c1c2458e4f7c537"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Twin",
+   "title": "Twin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:03.276Z",
+   "snapshot": "46cfc1705611ee746bd6d179ed09b411c24a4fcc6910465eb34ebabf4e0c804d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Minnesota_Twin_Family_Study",
+   "title": "Minnesota Twin Family Study",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:04.289Z",
+   "snapshot": "80b7ccedb854ea43bcc59092c286eaf4d9e3ae863e45b2765dd556559f06d420"
+  },
+  "s5": {
+   "url": "https://doi.org/10.1002/neu.10160",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s6": {
+   "url": "https://commons.wikimedia.org/wiki/File:Identical-fraternal-sperm-egg.svg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:02.023Z",
+   "snapshot": "eaf33ec964a195f975b9bda360dddd8cff1b283a3e2688f607560c197d51e425",
+   "cloneOf": "wikipedia.org"
+  },
+  "s7": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:8776880%20AND%20SRC:MED&resultType=core&format=xml",
+   "title": "Heritability of the big five personality dimensions and their facets: a twin study (Jang, Livesley & Vernon, J Pers 1996) – Europe PMC record",
+   "publisher": "Europe PMC (EMBL-EBI)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:45.681Z",
+   "snapshot": "5e7e9e78a5b589e38662d0e498c224c524755d52f4fbd25cf040d773fa80c2fc"
+  },
+  "s8": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:25961374%20AND%20SRC:MED&resultType=core&format=xml",
+   "title": "Heritability of personality: A meta-analysis of behavior genetic studies (Vukasović & Bratko, Psychol Bull 2015) – Europe PMC record",
+   "publisher": "Europe PMC (EMBL-EBI)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:46.551Z",
+   "snapshot": "4fdefa3486c1d5aa96b394cc1a4abbd61098d90b039cde868ed34b25c65c16af"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About 50%",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-067"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Francis Galton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monozygotic twins",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Minnesota Study of Twins Reared Apart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Openness to experience",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Openness to experience",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:02.414Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About 50%",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 50%”, “Etwa 50 %”, “Около 50 %”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:02.414Z",
+   "target": "f25385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sir Francis Galton (; 16 February 1822 – 17 January 1911) was an English polymath active as a statistician, anthropologist, psychologist, meteorologist, explorer, and geographer who was the originator of eugenics during the Victorian era, contributing extensively to the foundations of behavioural",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Francis Galton” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:02.414Z",
+   "target": "f25386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dizygotic twinning ranges from six per thousand births in Japan (similar to the rate of monozygotic twins) to 14 and more per thousand in some African countries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monozygotic twins” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:02.414Z",
+   "target": "f25387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Minnesota Study of Twins Reared Apart was a twin study conducted at the University of Minnesota, independent of the Minnesota Center for Twin and Family Research.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minnesota Study of Twins Reared Apart” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:02.414Z",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It adds a sixth factor, \"Honesty-Humility\" to the five (which it calls \"Emotionality\", \"Extraversion\", \"Agreeableness\", \"Conscientiousness\", and \"Openness to Experience\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Openness to experience” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:19:17Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Broad genetic influence on the five dimensions of Neuroticism, Extraversion, Openness, Agreeableness, and Conscientiousness was estimated at 41%, 53%, 61%, 41%, and 44%, respectively.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Twin study: 41–61% per dimension, i.e. roughly half."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:19:19Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The average effect size was .40, indicating that 40% of individual differences in personality were due to genetic, while 60% are due to environmental influences.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Meta-analysis of 62 samples gives 40%, the low end of the 40–60% range the notes accept; 'about 50%' is the usual twin-study round figure."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:19:21Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "openness to experience was estimated to have a 57% genetic influence, extraversion 54%, conscientiousness 49%, neuroticism 48%, and agreeableness 42%.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Bouchard & McGue 2003: 42–57% across the five, average ~50%."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:19:22Z",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "openness to experience was estimated to have a 57% genetic influence, extraversion 54%, conscientiousness 49%, neuroticism 48%, and agreeableness 42%.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:19:23Z",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Broad genetic influence on the five dimensions of Neuroticism, Extraversion, Openness, Agreeableness, and Conscientiousness was estimated at 41%, 53%, 61%, 41%, and 44%, respectively.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Independent twin study also finds openness the most heritable (61%)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:49.731Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Broad genetic influence on the five dimensions of Neuroticism, Extraversion, Openness, Agreeableness, and Conscientiousness was estimated at 41%, 53%, 61%, 41%, and 44%, respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:49.731Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The average effect size was .40, indicating that 40% of individual differences in personality were due to genetic, while 60% are due to environmental influences.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:49.731Z",
+   "target": "f25384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "openness to experience was estimated to have a 57% genetic influence, extraversion 54%, conscientiousness 49%, neuroticism 48%, and agreeableness 42%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:49.731Z",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "openness to experience was estimated to have a 57% genetic influence, extraversion 54%, conscientiousness 49%, neuroticism 48%, and agreeableness 42%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:49.731Z",
+   "target": "f25388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Broad genetic influence on the five dimensions of Neuroticism, Extraversion, Openness, Agreeableness, and Conscientiousness was estimated at 41%, 53%, 61%, 41%, and 44%, respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:49.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  }
+ ]
+}

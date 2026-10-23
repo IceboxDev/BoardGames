@@ -1,0 +1,248 @@
+{
+ "article": "a2042",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Parchment",
+   "title": "Parchment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:46.309Z",
+   "snapshot": "7adf29528a5ed56248d219e0adf4d94b4b9cef31fbc7164720294fdb450d6c6d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Diary_of_Merer",
+   "title": "Diary of Merer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:47.305Z",
+   "snapshot": "cb343769d42b5909a08daab9b00251087cce288b6cdd8c348671a67bb73459c4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carolingian_minuscule",
+   "title": "Carolingian minuscule – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:57:22.217Z",
+   "snapshot": "1dcff8619afa84a36bc0a1c83d41a0e136ee4e550365235fe89e35105186e12b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kylver_Stone",
+   "title": "Kylver Stone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:48.321Z",
+   "snapshot": "5f24268a2bba6c321c7dd90003b69f33e8ff7c555aedbf657ff91b9943e274bb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Pergament",
+   "title": "Pergament",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:37:45.606Z",
+   "snapshot": "5139d1022628912bcc70a4497e631c2947cd7c1b7b864925be9066e42dbf9592"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10206",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Parchment",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10207",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Papyrus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10208",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carolingian minuscule",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10209",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Futhark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "aus Tierhaut",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "Animal skin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-391/3, u01: Parchment is untanned animal skin (calf, goat, sheep), not plant fibre. Statement false, answer right."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:11.709Z",
+   "target": "f10206",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Parchment is a writing material made from specially prepared untanned skins of animals—primarily sheep, calves and goats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parchment” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:11.709Z",
+   "target": "f10207",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Diary of Merer (also known as the Wadi al-Jarf Papyri or Red Sea Scrolls) is the name for papyrus logbooks written over 4,500 years ago by Merer, a middle-ranking official with the title inspector (sḥḏ, sehedj).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Papyrus” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:11.709Z",
+   "target": "f10208",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carolingian minuscule or Caroline minuscule is a script which developed as a calligraphic standard in the medieval European period as part of an overall effort to create a clear, uniform, and consistent manner by which to copy books.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carolingian minuscule” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:11.709Z",
+   "target": "f10209",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is notable for its listing of each of the runes in the Elder Futhark.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Futhark” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:11.709Z",
+   "target": "f14553",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Today the term parchment is often used in non-technical contexts to refer to any animal skin, particularly goat, sheep or cow, that has been scraped or dried under tension.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:11.709Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Animal skin” is on the snapshot of s1"
+  }
+ ]
+}

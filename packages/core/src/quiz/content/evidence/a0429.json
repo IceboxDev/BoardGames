@@ -1,0 +1,870 @@
+{
+ "article": "a0429",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Metre",
+   "title": "Metre – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:22.611Z",
+   "snapshot": "2776123c0c81cb4724061c142af0d4a87755d4470e70e088db9c99d3ad2b1e6e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kilogram",
+   "title": "Kilogram – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:23.605Z",
+   "snapshot": "153d4b78f5c5a4372531d922ba72934745607f4536ebd3f86beef903a851b09d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Second",
+   "title": "Second – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:24.704Z",
+   "snapshot": "df564437838e942f959e5fe9c8a83414e6ec999a7e12f84dd1c8db1fa9966eeb"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Vors%C3%A4tze_f%C3%BCr_Ma%C3%9Feinheiten",
+   "title": "Vorsätze für Maßeinheiten",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:21.879Z",
+   "snapshot": "fc71c622f3a3afcc7d10a15efd8e30058a3acafdeeafde33a4df0af2cdcac955"
+  },
+  "s5": {
+   "url": "https://www.bipm.org/en/measurement-units/si-prefixes",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:22.099Z",
+   "snapshot": "2bd9e651e1a8a37f31ffb7926fb76ac154d94c5ad5273164770e4000e45fdb70"
+  },
+  "s6": {
+   "url": "https://www.unitconverters.net/length/kilometer-to-decimeter.htm",
+   "title": "Convert Kilometer to Decimeter",
+   "publisher": "UnitConverters.net",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:03.050Z",
+   "snapshot": "b6e89ff96a2bc8c9e9693f980ec662c9988ba139f367eb083cf7b91684a5f4be"
+  },
+  "s7": {
+   "url": "https://www.nist.gov/pml/owm/si-units-length",
+   "title": "SI Units – Length",
+   "publisher": "NIST Office of Weights and Measures",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:03.475Z",
+   "snapshot": "04697cdc5bae5da0fad3e4af53fee0c457b616cbaaa6ddbe61592daa73fa3367"
+  },
+  "s8": {
+   "url": "https://www.unitconverters.net/length/km-to-cm.htm",
+   "title": "Convert km to cm",
+   "publisher": "UnitConverters.net",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:03.747Z",
+   "snapshot": "6ef561af557b657b03db2293085205776696a80d9d420cad7eb48680776f6fea"
+  },
+  "s9": {
+   "url": "https://www.unitconverters.net/weight-and-mass/kilogram-to-milligram.htm",
+   "title": "Convert Kilogram to Milligram",
+   "publisher": "UnitConverters.net",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:04.745Z",
+   "snapshot": "43503c4b21514dd688951e2bbf338d6922a47d8bc260cd00b4cf06a864d64584"
+  },
+  "s10": {
+   "url": "https://www.nist.gov/pml/owm/si-units-mass",
+   "title": "SI Units – Mass",
+   "publisher": "NIST Office of Weights and Measures",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:04.232Z",
+   "snapshot": "4ea04dae6f9401db170dae312642eff7dd0bcb4c297f439b6628617b98a349c7"
+  },
+  "s11": {
+   "url": "https://www.unitconverters.net/time/days-to-seconds.htm",
+   "title": "Convert Days to Seconds",
+   "publisher": "UnitConverters.net",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:05.744Z",
+   "snapshot": "2e65722f3bc64a4c2aed92473f81ab4530ce35ffcda9695221f362162da9dd26"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Day",
+   "title": "Day – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:05.297Z",
+   "snapshot": "65e0ba1388483d181df8ee4ea2ac47ad9a533c66d4daba1d1dbbcbc88b69d525"
+  },
+  "s13": {
+   "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+   "title": "Metric (SI) Prefixes",
+   "publisher": "NIST Office of Weights and Measures",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:05.319Z",
+   "snapshot": "d313b6867ec60149a474c40e28a7b855602605485189f4187dd6b7965d8727f2"
+  },
+  "s14": {
+   "url": "https://www.unitconverters.net/power/gigawatt-to-megawatt.htm",
+   "title": "Convert Gigawatt to Megawatt",
+   "publisher": "UnitConverters.net",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:06.743Z",
+   "snapshot": "33c7bba03208cd1a67840f3340e232abdf1add46b7c9b1bbbc1d3dae0f29c7d8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "10,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "100,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1,000,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "86,400",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1000",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s4",
+     "quote": "1000",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-033/5, u04: Statement false: mega = 10^6, giga = 10^9 (BIPM), so giga is 1000 times mega."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:47.117Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1000",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:24:47.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s4"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:47.117Z",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The metre was originally defined in 1791 by the French National Assembly as one ten-millionth of the distance from the equator to the North Pole along a great circle through Paris, setting 10000 km as that quarter of the Earth's polar circumference.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “10,000” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:47.117Z",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "100,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“100,000”, “100.000”, “100 000”) on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:47.117Z",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1,000,000",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“1,000,000”, “1.000.000”, “1 000 000”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:47.117Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The second (symbol: s) is a unit of time derived from the division of the day, first into 24 hours, then into 60 minutes, and lastly into 60 seconds, for a total of 24 × 60 × 60 = 86400 seconds per day.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “86,400” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:47.117Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "B.: 5 km2 = 5 ⋅ (1000 m)2 = 5 000 000 m2.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “1000” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:09:21Z",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1 km = 10000 dm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:09:24Z",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "10 decimeters = 1 meter (m)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "with '10 hectometers = 1000 meters' on the same page: 1 km = 1000 m × 10 dm = 10,000 dm"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:09:29Z",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1 km 100000 cm",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:09:35Z",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "10 hectometers = 1 kilometer (km) 10 hectometers = 1000 meters",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "1 km = 1000 m and 1 m = 100 cm (10 cm = 1 dm, 10 dm = 1 m) → 100,000 cm"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:09:41Z",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "1 kg = 1000000 mg",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:09:46Z",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "10 decigrams = 1000 milligrams",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "1 g = 1000 mg and 10 hectograms = 1000 grams = 1 kg on the same page → 1,000,000 mg"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:09:50Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "1 d 86400 s",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:09:53Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "On average, this is 24 hours (86,400 seconds).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:09:57Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "giga Example: gigawatt G 109 billion mega M 106 million",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23",
+   "note": "10^9 / 10^6 = 1000 (superscripts flattened in the page text)"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:10:00Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "1 GW 1000 MW",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r055",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "1 km = 10000 dm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "10 decimeters = 1 meter (m)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "1 km 100000 cm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "10 hectometers = 1 kilometer (km) 10 hectometers = 1000 meters",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "1 kg = 1000000 mg",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "10 decigrams = 1000 milligrams",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "1 d 86400 s",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s11"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "On average, this is 24 hours (86,400 seconds).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s12"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "giga Example: gigawatt G 109 billion mega M 106 million",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s13"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "1 GW 1000 MW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s14"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "15 km = 15 × 10000 dm = 150000 dm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “10,000” is on the snapshot of s6"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "15 km = 15 × 100000 cm = 1500000 cm",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “100,000” is on the snapshot of s8"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "It is equal to 1/1,000 grams, or 1/1,000,000 kilograms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1,000,000” is on the snapshot of s9"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Definition: A day (symbol: d) is an accepted, non-SI unit of time that is defined based on the SI (International System of Units) unit of time, the second, and is equal to 86,400 seconds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “86,400” is on the snapshot of s11"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f02145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "On average, this is 24 hours (86,400 seconds).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “86,400” is on the snapshot of s12"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "In the SI, designations of multiples and subdivision of any unit may be arrived at by combining with the name of the unit the prefixes deka, hecto, and kilo meaning, respectively, 10, 100, and 1000, and deci, centi, and milli, meaning, respectively, one-tenth, one-hundredth, and one-thousandth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1000” is on the snapshot of s13"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:53:08.908Z",
+   "target": "f13497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "15 GW = 15 × 1000 MW = 15000 MW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “1000” is on the snapshot of s14"
+  }
+ ]
+}

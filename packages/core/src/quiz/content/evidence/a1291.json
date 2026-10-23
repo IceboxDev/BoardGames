@@ -1,0 +1,287 @@
+{
+ "article": "a1291",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Neues_Forum",
+   "title": "Neues Forum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:20:07.785Z",
+   "snapshot": "73b794d633aceba7e2ad213d9fa977a75ceddbef24452a76564efd65902ce696"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/B%C3%BCndnis_90",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:27.407Z",
+   "snapshot": "312b44d12ecb5201ed25c9d5f57452e9323aa94e5ab93e442682caeb49520268"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Zentraler_Runder_Tisch",
+   "title": "Zentraler Runder Tisch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:28.663Z",
+   "snapshot": "bdddaff7eff156b933098705c57c0fdb2f6fad40e665be3bb2a9400d1251e1c5"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Volkskammerwahl_1990",
+   "title": "Volkskammerwahl 1990 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:29.508Z",
+   "snapshot": "a79c90a6140c5603045c4cd45f023c014eb052acc21223c1eda1a68619d24429"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lothar_de_Maizi%C3%A8re",
+   "title": "Lothar de Maizière – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:31.066Z",
+   "snapshot": "338bddcde04b302f5fb3abd3832733cdea483ae1d2e46a3af0dd28acdce85a17"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Bundestagswahl_1990",
+   "title": "Bundestagswahl 1990 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:30.972Z",
+   "snapshot": "f67fc34cec8114f2c5a202cb482bfbb42152c173fcb4f9a217400c96ddc7d13a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neues Forum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript c108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neues Forum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 7"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Runder Tisch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Allianz für Deutschland",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lothar de Maizière",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Grünen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:01.242Z",
+   "target": "f06451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neues Forum: Die ersten Texte des NEUEN FORUM.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neues Forum” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:01.242Z",
+   "target": "f06451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Neues Forum",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Neues Forum”, “Новый форум”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:01.242Z",
+   "target": "f06452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ostdeutsche Frauenbewegung und Zentraler Runder Tisch in der DDR.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Runder Tisch” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:01.242Z",
+   "target": "f06453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sieger war das Wahlbündnis Allianz für Deutschland, bestehend aus der ehemaligen Blockpartei CDU mit dem Spitzenkandidaten Lothar de Maizière, der neu gegründeten Deutschen Sozialen Union (DSU, der CSU nahestehend) und dem Demokratischen Aufbruch (DA).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Allianz für Deutschland” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:01.242Z",
+   "target": "f06454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lothar de Maizière (German pronunciation: [də mɛˈzi̯ɛːɐ̯]; born 2 March 1940) is a German former politician of the Christian Democratic Union.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lothar de Maizière” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:01.242Z",
+   "target": "f06455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Grünen traten im Gegensatz zu den anderen Parteien nur im westdeutschen Wahlgebiet an.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.242Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Grünen” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "article": "a1833",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Berger",
+   "title": "Hans Berger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:45.165Z",
+   "snapshot": "54cf67e624302710113efecc5f689df6161074accfe3f410d30c58300cc088e6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Willem_Einthoven",
+   "title": "Willem Einthoven – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:50.257Z",
+   "snapshot": "913cd7a0ffda932623ef3742bf63569fdb6aaa3b8541d6d7d18ae8ef08557dcd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Paul_Lauterbur",
+   "title": "Paul Lauterbur – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:47.139Z",
+   "snapshot": "313b99168c6d8beb75487e1388ee94a98794ec4d2874098e9eb4b578502d6a34"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Spirometer",
+   "title": "Spirometer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:10.008Z",
+   "snapshot": "cc38e907a451ad664524238eb975617e7804ba03c0e5f9f2ac571daee6a46bb6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09161",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Electroencephalography",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c153"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Electrocardiography",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Magnetic resonance imaging",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Spirometry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:29.704Z",
+   "target": "f09161",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He is best known as the inventor of electroencephalography (EEG) in 1924, which is a method used for recording the electrical activity of the brain, commonly described in terms of brainwaves, and as the discoverer of the alpha wave rhythm which is a type of brainwave.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Electroencephalography” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:29.704Z",
+   "target": "f09162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1924, Einthoven was awarded the Nobel Prize in Physiology or Medicine for inventing the first practical system of electrocardiography used in medical diagnosis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Electrocardiography” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:29.704Z",
+   "target": "f09164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paul Christian Lauterbur (May 6, 1929 – March 27, 2007) was an American chemist who shared the Nobel Prize in Physiology or Medicine in 2003 with Peter Mansfield for his work which made the development of magnetic resonance imaging (MRI) possible.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magnetic resonance imaging” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:29.704Z",
+   "target": "f09165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1960, the European Community for Coal and Steel (ECCS) first recommended guidelines for spirometry.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:29.704Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spirometry” is on the snapshot of s4"
+  }
+ ]
+}

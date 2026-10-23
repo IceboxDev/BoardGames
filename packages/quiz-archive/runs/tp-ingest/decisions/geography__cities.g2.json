@@ -1,0 +1,535 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "geography/cities",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-015",
+    "category": 1
+   },
+   "factId": "f08653"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-091",
+    "category": 1
+   },
+   "factId": "f01010"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-227",
+    "category": 1
+   },
+   "factId": "f06374"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-228",
+    "category": 1
+   },
+   "factId": "f07694"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-383",
+    "category": 1
+   },
+   "factId": "f09586"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0202",
+   "baseHash": "8aee7b1755f7",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-053",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-213",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-167",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Skat, Puzzles, Porcelain: German Towns That Are Famous for One Thing",
+    "titleDe": "Skat, Puzzles, Porzellan: Deutsche Städte, die für eine Sache berühmt sind",
+    "bodyEn": "Germany is full of towns, most of them small, whose names travel further than the towns themselves, attached to a product that the rest of the world knows better than the place. Altenburg is a case in point. A town of about 30,000 people in the east of Thuringia, not far from Leipzig, it is the birthplace of Skat, the card game that Germans play in pubs, on trains and in more than a thousand registered clubs. Skat was developed between about 1810 and 1820 by a circle of notables who met at the Brommesche Tarockgesellschaft, a club for the older game of Tarock, and combined it with elements of Schafkopf and l'Hombre. The town has never let anyone forget it: a Skat fountain has stood in the market square since 1903, where new decks are ceremonially “baptised”, the German Skat Court, which settles disputes about the rules, has sat in Altenburg since 2001, and the town's playing-card factory, founded in 1832 and today trading as ASS Altenburger, is the largest in the country.\n\n| Town | Famous for | State |\n|---|---|---|\n| Altenburg | Skat | Thuringia |\n| Ravensburg | puzzles and board games | Baden-Württemberg |\n| Meissen | porcelain | Saxony |\n| Lübeck | marzipan | Schleswig-Holstein |\n| Solingen | knives and blades | North Rhine-Westphalia |\n| Karlsruhe | its fan-shaped street plan | Baden-Württemberg |\n| Braunschweig | the atomic clocks of the PTB | Lower Saxony |\n| Munich | the Oktoberfest | Bavaria |\n\nGames also made the name of Ravensburg, a medieval town in the far south of Baden-Württemberg, near Lake Constance. There the bookseller Otto Maier founded his publishing house on 7 May 1883 and that same year published his first board game, “Journey Around the World”, and the blue triangle of Ravensburger has since become the world's best-known brand of jigsaw puzzle.\n\nMeissen, on the Elbe in Saxony – an electorate, then a kingdom from 1806 to 1918 – owes its fame to an alchemist. Johann Friedrich Böttger, imprisoned by Augustus the Strong to make gold, instead discovered the secret of hard-paste porcelain, and in 1710 the elector founded Europe's first porcelain manufactory in the town's Albrechtsburg castle. The crossed blue swords of Meissen porcelain are among the oldest trademarks still in use.\n\nLübeck, the old capital of the Hanseatic League, lies in Schleswig-Holstein on the Baltic coast. Its marzipan, a paste of almonds and sugar, became famous through the confectioner Johann Georg Niederegger, who founded his business on 1 March 1806 and opened his shop opposite the town hall; legend has it that the sweet was invented during a famine when only almonds were left in the granaries.\n\nSolingen, in the hills of the Bergisches Land in North Rhine-Westphalia, has forged blades since the Middle Ages. The name is legally protected: only knives, scissors and razors finished in the city may carry it, a rule laid down in a decree of 1938, and companies such as Zwilling and Wüsthof still make their cutlery there.\n\nKarlsruhe, also in Baden-Württemberg, is famous for its shape. Margrave Charles III William of Baden-Durlach founded the city on 17 June 1715 around the tower of his new palace, and 32 streets radiate outwards from it like the ribs of an open fan – which is why Karlsruhe is known as the „Fächerstadt“, the Fan City. Today it is just as well known as the seat of the Federal Constitutional Court.\n\nBraunschweig, in Lower Saxony, is the city where Germany keeps its time. The Physikalisch-Technische Bundesanstalt (PTB), which grew out of an imperial institute founded in Berlin in 1887, runs four primary caesium atomic clocks there that measure time by the oscillations of atoms with extraordinary precision; the legal time they keep is broadcast by the DCF77 longwave transmitter and sets radio-controlled clocks in millions of homes.\n\nAnd Munich, the Bavarian capital, is famous worldwide for a little more than two weeks a year. The Oktoberfest began on 12 October 1810 with celebrations of the wedding of Crown Prince Ludwig and Princess Therese of Saxe-Hildburghausen, after whom the Theresienwiese is named; today about seven million visitors a year make it the largest folk festival in the world.",
+    "bodyDe": "Deutschland ist voller Städte, die meisten davon klein, deren Namen weiter reisen als die Städte selbst, gebunden an ein Produkt, das der Rest der Welt besser kennt als den Ort. Altenburg ist ein Paradebeispiel. Eine Stadt mit rund 30.000 Einwohnern im Osten von Thüringen, unweit von Leipzig, ist sie der Geburtsort des Skat, jenes Kartenspiels, das die Deutschen in Kneipen, in Zügen und in mehr als tausend eingetragenen Vereinen spielen. Skat wurde zwischen etwa 1810 und 1820 von einem Kreis von Honoratioren entwickelt, die sich in der Brommeschen Tarockgesellschaft trafen, einem Club für das ältere Spiel Tarock, und dieses mit Elementen von Schafkopf und L'Hombre verbanden. Die Stadt hat es niemanden vergessen lassen: Seit 1903 steht auf dem Marktplatz ein Skatbrunnen, an dem neue Kartenspiele feierlich „getauft“ werden, das Deutsche Skatgericht, das Streitfälle über die Regeln entscheidet, hat seit 2001 seinen Sitz in Altenburg, und die 1832 gegründete Spielkartenfabrik der Stadt, heute ASS Altenburger, ist die größte des Landes.\n\n| Stadt | Berühmt für | Bundesland |\n|---|---|---|\n| Altenburg | Skat | Thüringen |\n| Ravensburg | Puzzles und Gesellschaftsspiele | Baden-Württemberg |\n| Meißen | Porzellan | Sachsen |\n| Lübeck | Marzipan | Schleswig-Holstein |\n| Solingen | Messer und Klingen | Nordrhein-Westfalen |\n| Karlsruhe | ihren fächerförmigen Stadtgrundriss | Baden-Württemberg |\n| Braunschweig | die Atomuhren der PTB | Niedersachsen |\n| München | das Oktoberfest | Bayern |\n\nSpiele machten auch den Namen von Ravensburg bekannt, einer mittelalterlichen Stadt im äußersten Süden von Baden-Württemberg, nahe dem Bodensee. Dort gründete der Buchhändler Otto Maier am 7. Mai 1883 seinen Verlag und veröffentlichte im selben Jahr sein erstes Gesellschaftsspiel, „Reise um die Erde“, und das blaue Dreieck von Ravensburger ist seither zur weltweit bekanntesten Puzzlemarke geworden.\n\nMeißen an der Elbe in Sachsen – erst Kurfürstentum, von 1806 bis 1918 Königreich – verdankt seinen Ruhm einem Alchemisten. Johann Friedrich Böttger, von August dem Starken eingesperrt, um Gold zu machen, entdeckte stattdessen das Geheimnis des Hartporzellans, und 1710 gründete der Kurfürst in der Albrechtsburg der Stadt die erste Porzellanmanufaktur Europas. Die gekreuzten blauen Schwerter des Meißner Porzellans gehören zu den ältesten noch verwendeten Markenzeichen.\n\nLübeck, die alte Hauptstadt der Hanse, liegt in Schleswig-Holstein an der Ostseeküste. Sein Marzipan, eine Masse aus Mandeln und Zucker, wurde durch den Konditor Johann Georg Niederegger berühmt, der am 1. März 1806 sein Unternehmen gründete und sein Geschäft gegenüber dem Rathaus eröffnete; der Legende nach wurde die Süßigkeit während einer Hungersnot erfunden, als in den Kornspeichern nur noch Mandeln übrig waren.\n\nSolingen, in den Hügeln des Bergischen Landes in Nordrhein-Westfalen, schmiedet seit dem Mittelalter Klingen. Der Name ist gesetzlich geschützt: Nur Messer, Scheren und Rasiermesser, die in der Stadt fertiggestellt werden, dürfen ihn tragen – eine Regel, die in einer Verordnung von 1938 festgelegt wurde –, und Unternehmen wie Zwilling und Wüsthof stellen ihre Schneidwaren noch immer dort her.\n\nKarlsruhe, ebenfalls in Baden-Württemberg, ist für seine Form berühmt. Markgraf Karl III. Wilhelm von Baden-Durlach gründete die Stadt am 17. Juni 1715 rund um den Turm seines neuen Schlosses, und 32 Straßen strahlen von dort aus wie die Rippen eines geöffneten Fächers – deshalb heißt Karlsruhe die „Fächerstadt“. Heute ist es mindestens ebenso bekannt als Sitz des Bundesverfassungsgerichts.\n\nBraunschweig in Niedersachsen ist die Stadt, in der Deutschland seine Zeit macht. Die Physikalisch-Technische Bundesanstalt (PTB), hervorgegangen aus einer 1887 in Berlin gegründeten Reichsanstalt, betreibt dort vier primäre Caesium-Atomuhren, die die Zeit mithilfe von Atomschwingungen höchst genau messen; die gesetzliche Zeit, die sie halten, sendet der Langwellensender DCF77 aus, und nach ihm stellen sich Funkuhren in Millionen Haushalten.\n\nUnd München, die bayerische Landeshauptstadt, ist für gut zwei Wochen im Jahr weltberühmt. Das Oktoberfest begann am 12. Oktober 1810 mit den Feiern zur Hochzeit von Kronprinz Ludwig und Prinzessin Therese von Sachsen-Hildburghausen, nach der die Theresienwiese benannt ist; heute machen es rund sieben Millionen Besucher im Jahr zum größten Volksfest der Welt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0966",
+   "baseHash": "7081f5879cad",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-200",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The World Heritage List and Europe's Record Holders",
+    "titleDe": "Die Welterbeliste und Europas Rekordhalter",
+    "bodyEn": "In 1972 the General Conference of UNESCO, meeting in Paris, adopted the Convention Concerning the Protection of the World Cultural and Natural Heritage. Its idea was simple: some places are of “outstanding universal value” and belong, in a sense, to all of humanity, so the international community should share responsibility for them. The first twelve sites were inscribed in September 1978, and by the 43rd session of the World Heritage Committee in Baku in July 2019 the list had grown to 1,121 entries in 167 countries.\n\nEurope has always been over-represented on it, and the country at the top is Italy. With the five new inscriptions of 2019 – among them the Prosecco hills of Conegliano and Valdobbiadene – Italy reached 55 sites, level with China and ahead of every other nation. Its entries range from the historic centre of Rome and the archaeological areas of Pompeii to Venice and its lagoon, the Dolomites and the late-Baroque towns of the Val di Noto.\n\n| Rank 2019 | Country | Sites |\n|---|---|---|\n| 1 | Italy | 55 |\n| 1 | China | 55 |\n| 3 | Spain | 48 |\n| 4 | Germany | 46 |\n| 5 | France | 45 |\n\nSecond among European countries in 2019 was Spain with 48 sites, including the Alhambra (one of its first entries, inscribed in 1984), the works of Gaudí in Barcelona and the old towns of Toledo, Salamanca and Santiago de Compostela. Germany followed with 46 and France with 45. France also has a special role in the system: UNESCO's headquarters, inaugurated on 3 November 1958, stand on the Place de Fontenoy in Paris, where the World Heritage Centre administers the list and prepares the annual committee meetings.\n\nGermany's own entries show how wide the idea of heritage has become. Alongside cathedrals and palaces they include the Völklingen Ironworks in Saarland, founded in 1873 on the Saar and shut down in 1986. When it was inscribed in 1994 it became the first industrial monument from the age of industrialisation on the list – a complete ironworks with its blast furnaces, preserved as a monument to the era of coal and steel.\n\nTwo smaller countries hold records of their own. Poland was present at the very beginning: the Historic Centre of Kraków and the Wieliczka salt mine were among the twelve sites inscribed in 1978, alongside Aachen Cathedral, the Galápagos Islands and Yellowstone. And Vatican City is the only state in the world whose entire territory is a World Heritage Site, inscribed in 1984 with St Peter's Basilica, the Sistine Chapel and the Vatican Museums; the Holy See's extraterritorial properties in Rome are covered by a separate entry shared with Italy.\n\nThe ranking is more than a matter of prestige. Inscription brings tourists, funding and international attention, but also obligations: sites can be placed on the List of World Heritage in Danger, and Dresden's Elbe Valley was struck off entirely in 2009 after a road bridge was built through it.",
+    "bodyDe": "1972 verabschiedete die Generalkonferenz der UNESCO in Paris das Übereinkommen zum Schutz des Kultur- und Naturerbes der Welt. Die Idee war einfach: Manche Orte sind von „außergewöhnlichem universellem Wert“ und gehören gewissermaßen der ganzen Menschheit, weshalb die internationale Gemeinschaft die Verantwortung für sie teilen soll. Die ersten zwölf Stätten wurden im September 1978 eingetragen, und bis zur 43. Sitzung des Welterbekomitees in Baku im Juli 2019 war die Liste auf 1121 Einträge in 167 Ländern angewachsen.\n\nEuropa war auf ihr immer überrepräsentiert, und das Land an der Spitze ist Italien. Mit den fünf Neueinträgen des Jahres 2019 – darunter die Prosecco-Hügel von Conegliano und Valdobbiadene – kam Italien auf 55 Stätten, gleichauf mit China und vor jeder anderen Nation. Seine Einträge reichen von der Altstadt von Rom und den archäologischen Stätten von Pompeji über Venedig und seine Lagune bis zu den Dolomiten und den spätbarocken Städten des Val di Noto.\n\n| Rang 2019 | Land | Stätten |\n|---|---|---|\n| 1 | Italien | 55 |\n| 1 | China | 55 |\n| 3 | Spanien | 48 |\n| 4 | Deutschland | 46 |\n| 5 | Frankreich | 45 |\n\nZweites europäisches Land war 2019 Spanien mit 48 Stätten, darunter die Alhambra (einer seiner ersten, 1984 eingetragenen Einträge), die Werke Gaudís in Barcelona und die Altstädte von Toledo, Salamanca und Santiago de Compostela. Es folgten Deutschland mit 46 und Frankreich mit 45. Frankreich spielt im System zudem eine besondere Rolle: Der am 3. November 1958 eingeweihte Hauptsitz der UNESCO steht an der Place de Fontenoy in Paris, wo das Welterbezentrum die Liste verwaltet und die jährlichen Sitzungen des Komitees vorbereitet.\n\nDeutschlands eigene Einträge zeigen, wie weit der Begriff des Erbes inzwischen gefasst ist. Neben Domen und Schlössern gehört dazu die Völklinger Hütte im Saarland, 1873 an der Saar gegründet und 1986 stillgelegt. Mit ihrer Aufnahme 1994 wurde sie das erste Industriedenkmal aus dem Zeitalter der Industrialisierung auf der Liste – ein vollständiges Eisenwerk mit seinen Hochöfen, erhalten als Denkmal für das Zeitalter von Kohle und Stahl.\n\nZwei kleinere Länder halten eigene Rekorde. Polen war von Anfang an dabei: Die Altstadt von Krakau und das Salzbergwerk Wieliczka gehörten zu den zwölf Stätten, die 1978 eingetragen wurden, neben dem Aachener Dom, den Galápagos-Inseln und dem Yellowstone-Nationalpark. Und die Vatikanstadt ist der einzige Staat der Welt, dessen gesamtes Territorium Welterbe ist – eingetragen 1984 mit dem Petersdom, der Sixtinischen Kapelle und den Vatikanischen Museen; die exterritorialen Besitzungen des Heiligen Stuhls in Rom sind durch einen eigenen, mit Italien geteilten Eintrag abgedeckt.\n\nDie Rangliste ist mehr als eine Frage des Prestiges. Die Eintragung bringt Touristen, Fördermittel und internationale Aufmerksamkeit, aber auch Pflichten: Stätten können auf die Rote Liste des gefährdeten Welterbes gesetzt werden, und das Dresdner Elbtal wurde 2009 ganz gestrichen, nachdem eine Straßenbrücke hindurchgebaut worden war.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1438",
+   "baseHash": "09e5bf445082",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-205",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-385",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Cities That Changed Their Names",
+    "titleDe": "Städte, die ihren Namen wechselten",
+    "bodyEn": "A city's name is a record of who has ruled it. Conquests, revolutions, independence movements and the fall of regimes have all left their marks on the map, and some of the world's largest cities have carried three or more official names in their history.\n\nThe clearest example is the most populous city in Turkey, home to more than fifteen million people. It was founded around 660 BC by Greek colonists from Megara as Byzantion, in Latin Byzantium. On 11 May 330 AD the emperor Constantine made it the new capital of the Roman Empire and it was renamed after him: Constantinople, the “city of Constantine”, which it remained through the thousand years of the Byzantine Empire and, alongside other names, under the Ottomans after the conquest of 1453. Only in 1930 did the Turkish Republic make Istanbul, derived from the Greek phrase “eis tin polin” (“into the city”), the sole official name and ask foreign post offices to use it. The sequence Byzantium, Constantinople and Istanbul thus spans the Greek, Roman and Turkish periods of the same place on the Bosporus.\n\nRussia's second city has changed its name three times in a century. Founded by Peter the Great in 1703 as Sankt-Peterburg, it was Russified to Petrograd in 1914, during the First World War, because „Sankt-Peterburg“ sounded too German, renamed Leningrad on 26 January 1924 after Lenin's death, and returned to Saint Petersburg by referendum, effective 6 September 1991. The surrounding region is still called Leningrad Oblast.\n\nVietnam's largest city was Saigon under French colonial rule and as the capital of South Vietnam. After the North's victory in 1975 it was renamed Ho Chi Minh City in honour of the communist leader when the unified Socialist Republic of Vietnam was proclaimed on 2 July 1976, though the central district and most of its inhabitants continue to use the old name in everyday speech.\n\nIndia's financial capital was Bombay to the British, a name that derives from the Portuguese “Bom Bahia” (good bay) or, according to another view, from the local goddess Mumbadevi. In November 1995 the official name was changed to Mumbai, at the insistence of the Shiv Sena party that had just won Maharashtra's state election and as part of a wider move away from colonial names; Madras became Chennai in 1996 and Calcutta became Kolkata in 2001.\n\nJapan's capital was a small castle town called Edo when Tokugawa Ieyasu made it the seat of his shogunate in 1603. For 250 years, the Edo period, it was the political centre of Japan while the emperor stayed in Kyoto. When the Meiji Restoration ended the shogunate in 1868, the emperor moved his court there and the city was renamed Tokyo, “eastern capital”.\n\nGermany has a chapter of its own. In the GDR, places were renamed to honour the heroes of the new state: Chemnitz became Karl-Marx-Stadt in 1953, and on 1 May 1949 the Brandenburg village of Neuhardenberg – itself named in 1814 after the Prussian chancellor Karl August von Hardenberg – became Marxwalde. After reunification both returned to their old names, Chemnitz in 1990 and Neuhardenberg on 1 January 1991, the village council speaking of the “removal of an old injustice”.\n\n| City today | Earlier names |\n|---|---|\n| Istanbul | Byzantium, Constantinople |\n| Saint Petersburg | Petrograd, Leningrad |\n| Ho Chi Minh City | Saigon |\n| Mumbai | Bombay |\n| Tokyo | Edo |\n| Neuhardenberg | Marxwalde (1949–1990) |\n\nOld names rarely vanish completely. They survive in the names of regions, railway stations, football clubs and dishes, and in the speech of older inhabitants, so that most of these cities are still known by two names at once.",
+    "bodyDe": "Der Name einer Stadt ist ein Protokoll derer, die sie beherrscht haben. Eroberungen, Revolutionen, Unabhängigkeitsbewegungen und der Sturz von Regimen haben alle ihre Spuren auf der Landkarte hinterlassen, und einige der größten Städte der Welt trugen in ihrer Geschichte drei oder mehr offizielle Namen.\n\nDas klarste Beispiel ist die bevölkerungsreichste Stadt der Türkei, Heimat von mehr als fünfzehn Millionen Menschen. Sie wurde um 660 v. Chr. von griechischen Siedlern aus Megara als Byzantion gegründet, lateinisch Byzantium. Am 11. Mai 330 n. Chr. machte Kaiser Konstantin sie zur neuen Hauptstadt des Römischen Reiches, und sie wurde nach ihm umbenannt: Konstantinopel, die „Stadt Konstantins“, die sie durch die tausend Jahre des Byzantinischen Reiches hindurch blieb und, neben anderen Namen, auch unter den Osmanen nach der Eroberung von 1453. Erst 1930 machte die Türkische Republik Istanbul, abgeleitet von der griechischen Wendung „eis tin polin“ („in die Stadt“), zum alleinigen offiziellen Namen und bat ausländische Postämter, ihn zu verwenden. Die Abfolge Byzantion, Konstantinopel und Istanbul umspannt somit die griechische, römische und türkische Epoche desselben Ortes am Bosporus.\n\nRusslands zweite Stadt hat ihren Namen innerhalb eines Jahrhunderts dreimal gewechselt. 1703 von Peter dem Großen als Sankt-Peterburg gegründet, wurde sie 1914, während des Ersten Weltkriegs, zu Petrograd russifiziert, weil „Sankt-Peterburg“ zu deutsch klang, am 26. Januar 1924 nach Lenins Tod in Leningrad umbenannt und per Volksabstimmung mit Wirkung vom 6. September 1991 wieder zu Sankt Petersburg. Die umliegende Region heißt bis heute Oblast Leningrad.\n\nVietnams größte Stadt hieß unter französischer Kolonialherrschaft und als Hauptstadt Südvietnams Saigon. Nach dem Sieg des Nordens 1975 wurde sie zu Ehren des kommunistischen Führers in Ho-Chi-Minh-Stadt umbenannt, als am 2. Juli 1976 die vereinigte Sozialistische Republik Vietnam ausgerufen wurde, doch der zentrale Bezirk und die meisten Einwohner verwenden im Alltag weiterhin den alten Namen.\n\nIndiens Finanzmetropole hieß bei den Briten Bombay, ein Name, der vom portugiesischen „Bom Bahia“ (gute Bucht) abgeleitet ist oder, nach anderer Ansicht, von der lokalen Göttin Mumbadevi. Im November 1995 wurde der offizielle Name in Mumbai geändert, auf Betreiben der Partei Shiv Sena, die gerade die Wahl im Bundesstaat Maharashtra gewonnen hatte, und als Teil einer breiteren Abkehr von kolonialen Namen; Madras wurde 1996 zu Chennai und Kalkutta 2001 zu Kolkata.\n\nJapans Hauptstadt war eine kleine Burgstadt namens Edo, als Tokugawa Ieyasu sie 1603 zum Sitz seines Shogunats machte. 250 Jahre lang, die Edo-Zeit, war sie das politische Zentrum Japans, während der Kaiser in Kyoto blieb. Als die Meiji-Restauration 1868 das Shogunat beendete, verlegte der Kaiser seinen Hof dorthin, und die Stadt wurde in Tokio umbenannt, „östliche Hauptstadt“.\n\nAuch Deutschland hat sein eigenes Kapitel. In der DDR wurden Orte zu Ehren der Helden des neuen Staates umbenannt: Chemnitz hieß ab 1953 Karl-Marx-Stadt, und am 1. Mai 1949 wurde die brandenburgische Gemeinde Neuhardenberg – selbst 1814 nach dem preußischen Staatskanzler Karl August von Hardenberg benannt – zu Marxwalde. Nach der Wiedervereinigung kehrten beide zu ihren alten Namen zurück, Chemnitz 1990 und Neuhardenberg am 1. Januar 1991; der Gemeinderat sprach von der „Beseitigung alten Unrechts“.\n\n| Stadt heute | Frühere Namen |\n|---|---|\n| Istanbul | Byzantion, Konstantinopel |\n| Sankt Petersburg | Petrograd, Leningrad |\n| Ho-Chi-Minh-Stadt | Saigon |\n| Mumbai | Bombay |\n| Tokio | Edo |\n| Neuhardenberg | Marxwalde (1949–1990) |\n\nAlte Namen verschwinden selten ganz. Sie überleben in den Namen von Regionen, Bahnhöfen, Fußballvereinen und Gerichten und in der Sprache älterer Einwohner, sodass die meisten dieser Städte noch immer unter zwei Namen zugleich bekannt sind.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-134",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-190",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-314",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-087",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of Hamburg's red-brick warehouse district, the largest in the world, which was added to the World Heritage List in 2015?",
+      "de": "Wie heißt das Hamburger Lagerhausviertel aus rotem Backstein, das größte der Welt, das 2015 in die Welterbeliste aufgenommen wurde?",
+      "answerEn": "Speicherstadt",
+      "answerDe": "Speicherstadt",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-07-05",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Hamburg's Speicherstadt and Kontorhaus District are inscribed on the World Heritage List",
+       "labelDe": "Hamburgs Speicherstadt und Kontorhausviertel werden in die Welterbeliste aufgenommen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Speicherstadt",
+       "title": "Speicherstadt – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which river, dammed in the centre of Hamburg, forms an inner and an outer lake there?",
+      "de": "Welcher Fluss bildet, im Zentrum Hamburgs aufgestaut, dort einen inneren und einen äußeren See?",
+      "answerEn": "Alster",
+      "answerDe": "Alster",
+      "timeline": {
+       "kind": "event",
+       "start": "1190",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Alster is first dammed in Hamburg to drive a watermill",
+       "labelDe": "Die Alster wird in Hamburg erstmals aufgestaut, um eine Wassermühle anzutreiben"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Alster",
+       "title": "Alster – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Hamburg: Bridges, Ropes and a Funfair Called the Dom",
+    "titleDe": "Hamburg: Brücken, Taue und ein Volksfest namens Dom",
+    "bodyEn": "Hamburg, Germany's second-largest city, lives by and on the water. The Elbe brings ocean-going ships far inland to one of the largest ports in the world, and in the city centre a second river, the Alster, has been dammed since 1190 – first to drive a watermill – and today forms two lakes, the large Outer Alster and the smaller Inner Alster, lined with villas, rowing clubs and promenades.\n\nSo much water needs crossing. Hamburg counts about 2,500 bridges over its rivers, canals and fleets – far more than Venice, which has 472. Many of them lead into the Speicherstadt, the red-brick warehouse district built on oak piles from 1883 onwards for coffee, tea, spices and carpets. It is the largest warehouse district in the world, and on 5 July 2015 it was inscribed on the World Heritage List together with the neighbouring Kontorhaus District.\n\nThe harbour also gave the city its most famous street. The Reeperbahn in St. Pauli, 930 metres of clubs, theatres and neon, takes its name from the rope makers (Reepschläger) who once twisted ships' ropes there: „Reep“ is Low German for rope, and the „Bahn“ was the long, straight track the craftsmen needed. In the 1620s the ropewalks were moved outside the city walls, onto the road to Altona, and the street kept their name long after the last rope had been made.\n\nNext door, on the Heiligengeistfeld, the city holds its great funfair. Hamburgers call it simply the Dom (Hamburger Dom), after the old Mariendom, the cathedral around which traders and showmen gathered from the 14th century onwards. The cathedral was pulled down in the early 19th century, but the name stayed. Since 1893 the fair has been held on the Heiligengeistfeld, and today it takes place three times a year – the Frühlingsdom, the Sommerdom and the Winterdom, each lasting about a month.\n\nSome facts about Hamburg are simply numbers. Anyone calling the city from elsewhere in Germany dials the area code 040. And anyone flying in lands at the airport in Fuhlsbüttel, which opened in 1911. On 10 November 2016 it was renamed Hamburg Airport Helmut Schmidt in honour of the former chancellor and author, a native of the city, who had died the previous year.\n\n| Hamburg | Fact |\n|---|---|\n| Bridges | about 2,500 |\n| Area code | 040 |\n| Airport | named after Helmut Schmidt in 2016 |\n| Funfair | the Dom, three times a year |\n| World Heritage | Speicherstadt, since 2015 |",
+    "bodyDe": "Hamburg, Deutschlands zweitgrößte Stadt, lebt vom und am Wasser. Die Elbe trägt Hochseeschiffe weit ins Binnenland zu einem der größten Häfen der Welt, und im Stadtzentrum ist ein zweiter Fluss, die Alster, seit 1190 aufgestaut – zuerst, um eine Wassermühle anzutreiben – und bildet heute zwei Seen, die große Außenalster und die kleinere Binnenalster, gesäumt von Villen, Rudervereinen und Promenaden.\n\nSo viel Wasser will überquert werden. Hamburg zählt etwa 2500 Brücken über Flüsse, Kanäle und Fleete – weit mehr als Venedig mit seinen 472. Viele von ihnen führen in die Speicherstadt, das ab 1883 auf Eichenpfählen errichtete Lagerhausviertel aus rotem Backstein für Kaffee, Tee, Gewürze und Teppiche. Sie ist der größte Lagerhauskomplex der Welt und wurde am 5. Juli 2015 zusammen mit dem benachbarten Kontorhausviertel in die Welterbeliste aufgenommen.\n\nDer Hafen gab der Stadt auch ihre berühmteste Straße. Die Reeperbahn in St. Pauli, 930 Meter Clubs, Theater und Neonlicht, ist nach einem Handwerk benannt – dem der Reepschläger (Seiler), die dort einst Schiffstaue drehten: „Reep“ ist das niederdeutsche Wort für Seil, und die „Bahn“ war die lange, gerade Strecke, die die Handwerker brauchten. In den 1620er-Jahren wurden die Reeperbahnen vor die Stadtmauern verlegt, an den Weg nach Altona, und die Straße behielt ihren Namen, lange nachdem das letzte Tau gedreht worden war.\n\nGleich nebenan, auf dem Heiligengeistfeld, feiert die Stadt ihr großes Volksfest. Die Hamburger nennen es einfach den Dom – nach dem alten Mariendom, um den sich seit dem 14. Jahrhundert Händler und Schausteller versammelten. Der Dom wurde Anfang des 19. Jahrhunderts abgerissen, doch der Name blieb. Seit 1893 findet er auf dem Heiligengeistfeld statt, und heute gibt es ihn dreimal im Jahr – als Frühlingsdom, Sommerdom und Winterdom, jeweils rund einen Monat lang.\n\nManche Fakten über Hamburg sind einfach Zahlen. Wer die Stadt aus dem übrigen Deutschland anruft, wählt die Vorwahl 040. Und wer anreist, landet auf dem 1911 eröffneten Flughafen in Fuhlsbüttel. Am 10. November 2016 erhielt er den Namen Hamburg Airport Helmut Schmidt, zu Ehren des im Vorjahr verstorbenen Altkanzlers und Buchautors, eines gebürtigen Hamburgers.\n\n| Hamburg | Fakt |\n|---|---|\n| Brücken | etwa 2500 |\n| Vorwahl | 040 |\n| Flughafen | seit 2016 nach Helmut Schmidt benannt |\n| Volksfest | der Dom, dreimal im Jahr |\n| Welterbe | Speicherstadt, seit 2015 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-240",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-197",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Roman goddess drives the Quadriga on top of Berlin's Brandenburg Gate?",
+      "de": "Welche römische Göttin lenkt die Quadriga auf dem Berliner Brandenburger Tor?",
+      "answerEn": "Victoria",
+      "answerDe": "Victoria",
+      "timeline": {
+       "kind": "creation",
+       "start": "1788",
+       "end": "1791",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Brandenburg Gate is built in Berlin",
+       "labelDe": "Das Brandenburger Tor wird in Berlin errichtet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+       "title": "Brandenburg Gate – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which architect designed Berlin's Brandenburg Gate, completed in 1791?",
+      "de": "Welcher Baumeister entwarf das 1791 vollendete Brandenburger Tor in Berlin?",
+      "answerEn": "Carl Gotthard Langhans",
+      "answerDe": "Carl Gotthard Langhans",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1732",
+       "end": "1808",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of the architect Carl Gotthard Langhans",
+       "labelDe": "Lebenszeit des Baumeisters Carl Gotthard Langhans"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+       "title": "Brandenburg Gate – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What nickname do Berliners give the gilded figure on top of the Victory Column?",
+      "de": "Welchen Spitznamen geben die Berliner der vergoldeten Figur auf der Siegessäule?",
+      "answerEn": "Goldelse",
+      "answerDe": "Goldelse",
+      "timeline": {
+       "kind": "event",
+       "start": "1873-09-02",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Victory Column in Berlin is inaugurated",
+       "labelDe": "Die Berliner Siegessäule wird eingeweiht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Berlin_Victory_Column",
+       "title": "Berlin Victory Column – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How tall has the Berlin television tower on Alexanderplatz been since its new antenna was fitted in 1997?",
+      "de": "Wie hoch ist der Berliner Fernsehturm am Alexanderplatz seit dem Einbau seiner neuen Antenne 1997?",
+      "answerEn": "368 metres",
+      "answerDe": "368 Meter",
+      "timeline": {
+       "kind": "creation",
+       "start": "1969-10-03",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Fernsehturm on Berlin's Alexanderplatz is inaugurated",
+       "labelDe": "Der Fernsehturm am Berliner Alexanderplatz wird eingeweiht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fernsehturm_Berlin",
+       "title": "Fernsehturm Berlin – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Berlin's Landmarks by Numbers: Gate, Dome, Column and Tower",
+    "titleDe": "Berlins Wahrzeichen in Zahlen: Tor, Kuppel, Säule und Turm",
+    "bodyEn": "Few cities pack as much history into a short walk as Berlin. Between the Tiergarten and Alexanderplatz stand the landmarks that watched over the city's division and reunion, and several of them hide numbers and names that surprise even Berliners.\n\nThe oldest is the Brandenburg Gate, built from 1788 to 1791 for King Frederick William II by the royal architect Carl Gotthard Langhans, who took the gateway to the Acropolis in Athens as his model. Twelve Doric columns, six on each side, form 5 passageways; the middle one, wider than the rest, was once reserved for the royal carriages. On top, Johann Gottfried Schadow's Quadriga shows a four-horse chariot driven by Victoria, the Roman goddess of victory – originally planned as Eirene, the goddess of peace. For almost three decades the gate stood in the death strip of the Berlin Wall; since 1989 it has been the symbol of German unity.\n\nA few hundred metres away rises the Reichstag building, where the Bundestag has met since 19 April 1999. Its glass dome, with a spiral ramp winding up around a mirrored cone that sends daylight down into the plenary chamber, is one of the most visited sights in the city – and a visit costs nothing (free of charge): the Bundestag lets visitors onto the roof terrace and into the dome without an entrance fee, provided they register in advance.\n\nIn the Tiergarten, on the Großer Stern, stands the Victory Column, inaugurated on 2 September 1873 to celebrate Prussia's victories over Denmark, Austria and France. The gilded figure on top is a goddess of victory too, but Berliners call her Goldelse, „Golden Lizzy“, after the heroine of an 1866 novel by E. Marlitt.\n\nAnd in the east, above Alexanderplatz, towers the Fernsehturm, the television tower that the GDR inaugurated on 3 October 1969 as the showpiece of its capital. Originally 365 metres tall, it has measured 368 metres since a new antenna was fitted in 1997, which makes it the tallest structure in Germany. On sunny days the light reflected on its steel sphere forms a cross – Berliners nicknamed it the „Pope's revenge“.\n\n| Landmark | Number to know |\n|---|---|\n| Brandenburg Gate | five passageways, completed 1791 |\n| Reichstag dome | no entrance fee |\n| Victory Column | inaugurated 1873 |\n| Fernsehturm | 368 metres since 1997 |",
+    "bodyDe": "Kaum eine Stadt packt so viel Geschichte in einen kurzen Spaziergang wie Berlin. Zwischen Tiergarten und Alexanderplatz stehen die Wahrzeichen, die über Teilung und Wiedervereinigung der Stadt gewacht haben, und mehrere von ihnen verbergen Zahlen und Namen, die selbst Berliner überraschen.\n\nDas älteste ist das Brandenburger Tor, von 1788 bis 1791 für König Friedrich Wilhelm II. vom königlichen Baumeister Carl Gotthard Langhans errichtet, der sich die Propyläen der Akropolis in Athen zum Vorbild nahm. Zwölf dorische Säulen, sechs auf jeder Seite, bilden 5 Durchgänge; der mittlere, breiter als die übrigen, war einst den königlichen Kutschen vorbehalten. Obenauf zeigt Johann Gottfried Schadows Quadriga einen Vierspänner, den Victoria lenkt, die römische Siegesgöttin – ursprünglich war Eirene geplant, die Göttin des Friedens. Fast drei Jahrzehnte lang stand das Tor im Todesstreifen der Berliner Mauer; seit 1989 ist es das Symbol der deutschen Einheit.\n\nWenige hundert Meter entfernt erhebt sich das Reichstagsgebäude, in dem der Bundestag seit dem 19. April 1999 tagt. Seine gläserne Kuppel mit einer spiralförmigen Rampe um einen verspiegelten Kegel, der Tageslicht in den Plenarsaal lenkt, gehört zu den meistbesuchten Sehenswürdigkeiten der Stadt – und der Besuch kostet nichts (kostenlos): Der Bundestag lässt Besucher ohne Eintrittsgeld auf die Dachterrasse und in die Kuppel, sofern sie sich vorher anmelden.\n\nIm Tiergarten, auf dem Großen Stern, steht die Siegessäule, eingeweiht am 2. September 1873 zur Feier der preußischen Siege über Dänemark, Österreich und Frankreich. Auch die vergoldete Figur auf ihrer Spitze ist eine Siegesgöttin, doch die Berliner nennen sie Goldelse – nach der Titelheldin eines Romans von E. Marlitt aus dem Jahr 1866.\n\nUnd im Osten, über dem Alexanderplatz, ragt der Fernsehturm auf, den die DDR am 3. Oktober 1969 als Prestigebau ihrer Hauptstadt einweihte. Ursprünglich 365 Meter hoch, misst er seit dem Einbau einer neuen Antenne 1997 368 Meter und ist damit das höchste Bauwerk Deutschlands. An sonnigen Tagen bildet das auf seiner Stahlkugel gespiegelte Licht ein Kreuz – die Berliner tauften es „Rache des Papstes“.\n\n| Wahrzeichen | Zahl zum Merken |\n|---|---|\n| Brandenburger Tor | fünf Durchgänge, fertig 1791 |\n| Reichstagskuppel | kein Eintritt |\n| Siegessäule | eingeweiht 1873 |\n| Fernsehturm | 368 Meter seit 1997 |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-366",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-187",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-335",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-313",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What was the Brandenburg village of Philadelphia called before it was renamed after the American city in 1792?",
+      "de": "Wie hieß das brandenburgische Dorf Philadelphia, bevor es 1792 nach der amerikanischen Stadt umbenannt wurde?",
+      "answerEn": "Hammelstall",
+      "answerDe": "Hammelstall",
+      "timeline": {
+       "kind": "event",
+       "start": "1792",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Hammelstall near Storkow is renamed Philadelphia",
+       "labelDe": "Hammelstall bei Storkow wird in Philadelphia umbenannt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Philadelphia_(Storkow_(Mark))",
+       "title": "Philadelphia (Storkow (Mark)) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "To which municipality in North Rhine-Westphalia does the hamlet of Rom belong?",
+      "de": "Zu welcher Gemeinde in Nordrhein-Westfalen gehört der Weiler Rom?",
+      "answerEn": "Morsbach",
+      "answerDe": "Morsbach",
+      "timeline": {
+       "kind": "event",
+       "start": "1429",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Rom, today part of Morsbach, is first documented",
+       "labelDe": "Rom, heute ein Ortsteil von Morsbach, wird erstmals urkundlich erwähnt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Rom_(Morsbach)",
+       "title": "Rom (Morsbach) – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What has the Upper Austrian village formerly spelled Fucking officially been called since 1 January 2021?",
+      "de": "Wie heißt das oberösterreichische Dorf, das früher Fucking geschrieben wurde, seit dem 1. Januar 2021 offiziell?",
+      "answerEn": "Fugging",
+      "answerDe": "Fugging",
+      "timeline": {
+       "kind": "event",
+       "start": "2021-01-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Austrian village of Fucking officially becomes Fugging",
+       "labelDe": "Das österreichische Dorf Fucking heißt offiziell Fugging"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Fugging,_Upper_Austria",
+       "title": "Fugging, Upper Austria – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Place Names With a Story: From Y to Philadelphia",
+    "titleDe": "Ortsnamen mit Geschichte: Von Y bis Philadelphia",
+    "bodyEn": "Place names are usually taken for granted, but some of them raise a question the moment you read them on a road sign. Germany and its neighbours are full of such curiosities – names that are suspiciously short, far too exotic, embarrassingly memorable or simply missing something.\n\nThe shortest of all belongs to a village in the Somme department in the north of France. It is called Y – a single letter, the shortest place name in France and one of the shortest in the world – and has fewer than a hundred inhabitants.\n\nExotic names in Germany often go back to emigrants' dreams. Philadelphia, today a district of the town of Storkow (Mark) in Brandenburg, was first recorded in 1713 under the far less inviting name of Hammelstall, „mutton shed“. In 1792 it was renamed after the American city of Philadelphia, because the colonists settled there had originally wanted to emigrate to Pennsylvania. Rome has a German namesake too: Rom, a hamlet first documented in 1429, belongs to the municipality of Morsbach in the Oberbergisches Land in North Rhine-Westphalia.\n\nSometimes a name is too memorable for its own good. For decades the Upper Austrian village of Fucking, part of the municipality of Tarsdorf, lost its road signs to souvenir hunters; in November 2020 the council voted to change the spelling, and on 1 January 2021 the village officially became Fugging.\n\nSize can be a claim to fame as well. The smallest town in Germany, by population as well as by area, is Arnis, on a peninsula in the Schlei in Schleswig-Holstein: fewer than 300 people live on its 0.45 square kilometres, yet it has held the status of a town since 1934.\n\nAnd sometimes what matters is what a name lacks. Aachen has hot springs in which the Romans already bathed and is a state-recognised spa town, so it could call itself „Bad Aachen“. The city has never applied for the prefix Bad (spa), even if tourist advertising occasionally uses it – and the popular explanation is that Aachen prefers to stay at the very top of every alphabetical list of German towns.\n\n| Place | Curiosity |\n|---|---|\n| Y (France) | shortest place name |\n| Philadelphia (Storkow) | formerly Hammelstall |\n| Rom (Morsbach) | Germany's Rome |\n| Fugging (Austria) | renamed in 2021 |\n| Arnis | smallest town in Germany |\n| Aachen | a spa town without „Bad“ |",
+    "bodyDe": "Ortsnamen nimmt man meist als selbstverständlich hin, doch manche werfen eine Frage auf, sobald man sie auf einem Ortsschild liest. Deutschland und seine Nachbarn sind voller solcher Kuriositäten – Namen, die verdächtig kurz, viel zu exotisch, peinlich einprägsam sind oder denen einfach etwas fehlt.\n\nDer kürzeste von allen gehört einem Dorf im Département Somme im Norden von Frankreich. Es heißt Y – ein einziger Buchstabe, der kürzeste Ortsname Frankreichs und einer der kürzesten der Welt – und hat weniger als hundert Einwohner.\n\nExotische Namen in Deutschland gehen oft auf Auswandererträume zurück. Philadelphia, heute ein Ortsteil der Stadt Storkow (Mark) in Brandenburg, wurde 1713 unter dem weit weniger einladenden Namen Hammelstall erstmals erwähnt. 1792 wurde es nach der amerikanischen Stadt Philadelphia umbenannt, weil die dort angesiedelten Kolonisten ursprünglich nach Pennsylvania auswandern wollten. Auch Rom hat einen deutschen Namensvetter: Rom, ein 1429 erstmals urkundlich erwähnter Weiler, gehört zur Gemeinde Morsbach im Oberbergischen Land in Nordrhein-Westfalen.\n\nManchmal ist ein Name zu einprägsam. Jahrzehntelang verlor das oberösterreichische Dorf Fucking, ein Ortsteil der Gemeinde Tarsdorf, seine Ortsschilder an Souvenirjäger; im November 2020 beschloss der Gemeinderat eine neue Schreibweise, und seit dem 1. Januar 2021 heißt das Dorf offiziell Fugging.\n\nAuch Größe kann berühmt machen. Die kleinste Stadt Deutschlands, nach Einwohnern wie nach Fläche, ist Arnis auf einer Halbinsel in der Schlei in Schleswig-Holstein: Weniger als 300 Menschen leben auf ihren 0,45 Quadratkilometern, und doch ist sie seit 1934 eine Stadt.\n\nUnd manchmal kommt es darauf an, was einem Namen fehlt. Aachen hat heiße Quellen, in denen schon die Römer badeten, und ist ein staatlich anerkanntes Heilbad, könnte sich also „Bad Aachen“ nennen. Die Stadt hat den Namenszusatz Bad jedoch nie beantragt, auch wenn die Tourismuswerbung ihn gelegentlich verwendet – und die verbreitete Erklärung lautet, dass Aachen lieber ganz oben in jeder alphabetischen Liste deutscher Städte stehen bleibt.\n\n| Ort | Kuriosität |\n|---|---|\n| Y (Frankreich) | kürzester Ortsname |\n| Philadelphia (Storkow) | früher Hammelstall |\n| Rom (Morsbach) | Deutschlands Rom |\n| Fugging (Österreich) | 2021 umbenannt |\n| Arnis | kleinste Stadt Deutschlands |\n| Aachen | ein Kurort ohne „Bad“ |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-167",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-372",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-264",
+      "category": 4
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-358",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of the festival held every September beside the Giant Barrel in Bad Dürkheim, regarded as the largest wine festival in the world?",
+      "de": "Wie heißt das Fest, das jeden September neben dem Riesenfass in Bad Dürkheim stattfindet und als größtes Weinfest der Welt gilt?",
+      "answerEn": "Dürkheimer Wurstmarkt",
+      "answerDe": "Dürkheimer Wurstmarkt",
+      "timeline": {
+       "kind": "event",
+       "start": "1442",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Dürkheimer Wurstmarkt is first documented",
+       "labelDe": "Der Dürkheimer Wurstmarkt wird erstmals urkundlich erwähnt"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/D%C3%BCrkheimer_Wurstmarkt",
+       "title": "Dürkheimer Wurstmarkt – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year did the master cooper Fritz Keller build the Giant Barrel in Bad Dürkheim, the largest barrel in the world?",
+      "de": "In welchem Jahr baute der Küfermeister Fritz Keller das Riesenfass in Bad Dürkheim, das größte Fass der Welt?",
+      "answerEn": "1934",
+      "answerDe": "1934",
+      "timeline": {
+       "kind": "creation",
+       "start": "1934",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Fritz Keller builds the Dürkheim Giant Barrel",
+       "labelDe": "Fritz Keller baut das Dürkheimer Riesenfass"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/D%C3%BCrkheimer_Riesenfass",
+       "title": "Dürkheimer Riesenfass – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "A Giant Barrel, a Banana Museum and an Egg: Germany's Odd Sights",
+    "titleDe": "Ein Riesenfass, ein Bananenmuseum und ein Ei: Deutschlands kuriose Orte",
+    "bodyEn": "Not every German sight is a cathedral or a castle. Some of the places people talk about most are oddities – a barrel the size of a house, a traffic junction named after an egg, a museum devoted to a single fruit, or a smell that hung over a whole city.\n\nIn Bad Dürkheim, in the Palatinate wine country, stands the largest barrel in the world. The master cooper and winery owner Fritz Keller built the Dürkheim Giant Barrel in 1934 by traditional methods, only oversized: it is 13.5 metres across and would hold about 1.7 million litres. It has never held a drop of wine. Instead it houses a restaurant, furnished like a wine tavern, with room for some 430 guests on two floors. The barrel stands at the edge of the Brühlwiesen, where every September the Dürkheimer Wurstmarkt draws more than 600,000 visitors. Despite its name it is a wine festival, first documented in 1442 and regarded since 1966 as the largest wine festival in the world.\n\nDüsseldorf's oddity is made of asphalt. The „Mörsenbroicher Ei“, the Mörsenbroich Egg, is a road junction north of the city centre, about 12,000 square metres in size and one of the largest at-grade road junctions in Germany. It owes its name to a plan from 1955 for an oval flyover that would have carried cars above the trams, cyclists and pedestrians. The egg was never built, but the name stuck – although it appears on no street sign and in no land register.\n\nIn Sierksdorf, a seaside village in East Holstein known for the Hansa-Park, Bernhard Stellmacher – „Stelli Banana“ – opened the First German Banana Museum in 1991, a private collection of everything impressive and banal about the banana. It was the only museum in Germany devoted to the fruit until a fire destroyed it in November 2018.\n\nAnd on 11 June 2013 Cologne woke up smelling of soup. After a night-time fire at a flavouring producer on the border between Neuss and Dormagen, north of the city, the smell of Maggi seasoning hung over Cologne for hours.\n\n| Oddity | Where |\n|---|---|\n| Giant Barrel (a restaurant) | Bad Dürkheim |\n| Mörsenbroicher Ei (a road junction) | Düsseldorf |\n| First German Banana Museum (1991–2018) | Sierksdorf |\n| Maggi smell (2013) | Cologne |",
+    "bodyDe": "Nicht jede deutsche Sehenswürdigkeit ist ein Dom oder ein Schloss. Über manche Orte wird gerade deshalb gesprochen, weil sie kurios sind – ein Fass so groß wie ein Haus, eine Kreuzung, die nach einem Ei benannt ist, ein Museum für eine einzige Frucht oder ein Geruch, der über einer ganzen Stadt lag.\n\nIn Bad Dürkheim, im Weinland der Pfalz, steht das größte Fass der Welt. Der Küfermeister und Weingutsbesitzer Fritz Keller baute das Dürkheimer Riesenfass 1934 nach traditioneller Art, nur übergroß: Es misst 13,5 Meter im Durchmesser und würde rund 1,7 Millionen Liter fassen. Wein hat es nie enthalten. Stattdessen beherbergt es ein Restaurant, eingerichtet wie eine Weinstube, mit Platz für rund 430 Gäste auf zwei Ebenen. Das Fass steht am Rand der Brühlwiesen, wo jeden September der Dürkheimer Wurstmarkt mehr als 600.000 Besucher anzieht. Trotz seines Namens ist er ein Weinfest, 1442 erstmals urkundlich erwähnt und seit 1966 als größtes Weinfest der Welt geltend.\n\nDüsseldorfs Kuriosität besteht aus Asphalt. Das „Mörsenbroicher Ei“ ist eine Straßenkreuzung nördlich der Innenstadt, rund 12.000 Quadratmeter groß und eine der größten niveaugleichen Kreuzungen Deutschlands. Ihren Namen verdankt sie einem Plan von 1955 für eine ovale Hochbrücke, die die Autos über Straßenbahnen, Radfahrer und Fußgänger hinweggeführt hätte. Das Ei wurde nie gebaut, doch der Name blieb – obwohl er auf keinem Straßenschild und in keinem Kataster steht.\n\nIn Sierksdorf, einem Ostseeort in Ostholstein, bekannt durch den Hansa-Park, eröffnete Bernhard Stellmacher – „Stelli Banana“ – 1991 das Erste Deutsche Bananenmuseum, eine private Sammlung von Beeindruckendem und Banalem rund um die Banane. Es blieb das einzige Museum Deutschlands für diese Frucht, bis ein Feuer es im November 2018 zerstörte.\n\nUnd am 11. Juni 2013 wachte Köln mit Suppenduft auf. Nach einem nächtlichen Brand bei einem Aromenhersteller an der Grenze zwischen Neuss und Dormagen, nördlich der Stadt, lag stundenlang ein Maggiduft über Köln.\n\n| Kuriosität | Wo |\n|---|---|\n| Riesenfass (ein Restaurant) | Bad Dürkheim |\n| Mörsenbroicher Ei (eine Straßenkreuzung) | Düsseldorf |\n| Erstes Deutsches Bananenmuseum (1991–2018) | Sierksdorf |\n| Maggiduft (2013) | Köln |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-072",
+   "category": 1,
+   "domain": "art",
+   "sub": "sculpture",
+   "why": "Asks whose equestrian statue stands on the Deutsches Eck — a national monument; belongs with a0087 'Giants of Stone and Bronze: Germany's Great National Monuments' (art/sculpture), not a city topic."
+  },
+  {
+   "card": "tp-348",
+   "category": 4,
+   "domain": "geography",
+   "sub": "cities",
+   "why": "Its answer \"Hamburg\" repeats fact f11834 in a2288 (an article may not hold the same answer twice). Alias it to f11834 if it asks the same thing; otherwise place it in another or a new article."
+  }
+ ]
+}

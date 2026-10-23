@@ -1,0 +1,336 @@
+{
+ "article": "a2258",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Myspace",
+   "title": "Myspace",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:04.288Z",
+   "snapshot": "bee83f5e4a1f4eb76833a8261f7219d8556fe436f3abee8af6b07dfb6541e9b9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Werkenntwen",
+   "title": "Werkenntwen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:02.491Z",
+   "snapshot": "58921cb81dabc0e6d15bcfe8ea470eb044034c70dc5c266ee45a6ba43d7d8d2b"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/X_(soziales_Netzwerk)",
+   "title": "X (soziales Netzwerk)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:40:15.563Z",
+   "snapshot": "f67c90803721fafc5830d4cb0518ce4df01a3182df4e65fc3cf730999b51039e"
+  },
+  "s4": {
+   "url": "https://www.entrepreneur.com/article/276908",
+   "title": "Snapchat Tops Twitter in Daily Users",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:03.737Z",
+   "snapshot": "3db345c1c1d34e4c273e4843906b17f300b4f9155654743890a8265f9143a38c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Anderson",
+   "title": "Tom Anderson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:05.186Z",
+   "snapshot": "7f949c80d45127050c3439a566da5582c635560768297a06b33ef89f4298725b"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/StudiVZ",
+   "title": "StudiVZ – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:04.014Z",
+   "snapshot": "77df09d9c3952862a64a34f834f29f91cd6cdcea9565de7acf20095aafd00221"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Twitter",
+   "title": "Twitter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:19.303Z",
+   "snapshot": "cd3942699df24013b4d7f39a533762d4e7a70dd3da7673c1689b07d80c490d20"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Justin Timberlake",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-020"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11576",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "wer-kennt-wen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-270"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11577",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Twitter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-310"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11578",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Snapchat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-304"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11579",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tom Anderson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11580",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "StudiVZ",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Larry Bird",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In June 2011, Specific Media Group and Justin Timberlake jointly purchased the company for approximately $35 million.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Justin Timberlake” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11576",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Wer-kennt-wen (Kurzform: wkw) war ein soziales Netzwerk, das von der werkenntwen GmbH (ehemals wer-kennt-wen.de GmbH) mit Sitz in Köln betrieben wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “wer-kennt-wen” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11577",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "X (stilisierte Schreibweise 𝕏), bis Juli 2023 Twitter (englisch für „Gezwitscher“), ist ein soziales Netzwerk.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Twitter” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11578",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Snapchat Tops Twitter in Daily Users",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Snapchat” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11579",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tom Anderson's Guest DJ Project on KCRW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Anderson” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11580",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "studiVZ (kurz für Studiverzeichnis) war ein soziales Netzwerk für Studenten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “StudiVZ” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:44.345Z",
+   "target": "f11581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This version had been named \"Larry the Bird\" after Larry Bird of the NBA's Boston Celtics fame.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.345Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Larry Bird” is on the snapshot of s7"
+  }
+ ]
+}

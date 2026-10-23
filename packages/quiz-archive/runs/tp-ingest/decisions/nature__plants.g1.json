@@ -1,0 +1,379 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "nature/plants",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-015",
+    "category": 5
+   },
+   "factId": "f03714"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-041",
+    "category": 5
+   },
+   "factId": "f02634"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-303",
+    "category": 5
+   },
+   "factId": "f02091"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-345",
+    "category": 5
+   },
+   "factId": "f02095"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-235",
+    "category": 5
+   },
+   "factId": "f01372"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-077",
+    "category": 5
+   },
+   "factId": "f02991"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-133",
+    "category": 5
+   },
+   "factId": "f00351"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-282",
+    "category": 6
+   },
+   "factId": "f01852"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-364",
+    "category": 5
+   },
+   "factId": "f08215"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0527",
+   "baseHash": "2b7d69cd1088",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-354",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-233",
+      "category": 4
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Berries That Aren't and Nuts That Aren't: What Fruits Really Are",
+    "titleDe": "Beeren, die keine sind, und Nüsse, die keine sind: Was Früchte wirklich sind",
+    "bodyEn": "Ask a botanist what a fruit is and you will get an answer that has nothing to do with sweetness. A fruit is the ripened ovary of a flowering plant, together with the seeds it contains, and sometimes with other parts of the flower that grow along with it. Judged by that definition the fruit bowl is full of surprises: the strawberry is not a berry, the peanut is not a nut, the tomato is a vegetable in the kitchen but a berry in the laboratory, and rhubarb, which the kitchen treats as a fruit, is no fruit at all.\n\nStart with the strawberry, Fragaria × ananassa, a member of the rose family that was bred in Brittany in the 1750s from two American species. The red, juicy part that we eat is not the ovary at all. It is the receptacle, the swollen base of the flower, which turns fleshy and sweet as it ripens. The true fruits are the roughly 200 tiny yellow specks on its surface, each of them a dry, one-seeded nutlet called an achene. Because the edible part comes from tissue outside the ovary, and because each flower produces many small fruits at once, the strawberry is classed as an aggregate accessory fruit. German botanists call it a Sammelnussfrucht, a \"collective nut fruit\", which is a far more honest name than strawberry.\n\nThe raspberry, Rubus idaeus, is also an aggregate fruit, but of a different kind. Each of the little beads that make up a raspberry is a miniature stone fruit with its own soft flesh and a single hard seed, and the beads are grouped around a conical receptacle. The receptacle stays on the plant when the fruit is picked, which is why a raspberry is hollow while a blackberry, its close relative, is not. Botanically the raspberry is an aggregate drupe; its scientific name was given by Carl Linnaeus in 1753.\n\nA single drupe is what you get when you bite into a cherry. Prunus avium produces the classic stone fruit: a thin skin, a fleshy middle layer and a hard inner layer, the stone, which encloses the single seed. Peaches, plums, apricots, olives, mangoes and even almonds and coffee beans are drupes of the same construction. Pliny the Elder claimed that the general Lucullus brought the first cherry trees to Italy from Pontus in 74 BC, although wild cherries had grown there long before.\n\nThe tomato, Solanum lycopersicum, is a berry in the strict sense: a fleshy fruit that develops from a single ovary and has its seeds embedded in the pulp rather than enclosed in a stone. Grapes, bananas, blueberries, aubergines and chillies are berries too, and cucumbers, melons and citrus fruits are berries with specialised rinds. The United States Supreme Court nevertheless ruled on 10 May 1893, in Nix v. Hedden, that the tomato was a vegetable for customs purposes, because that is how it is served at dinner.\n\nThe peanut, finally, is not a nut but a legume, the pod-shaped fruit of the pea and bean family. After the flower of Arachis hypogaea has been fertilised, its stalk bends downwards and pushes the young pod into the soil, where it ripens underground. The oldest archaeological peanut pods, from South America, are about 7,600 years old, dating from the 6th millennium BC.\n\nThe same strict definition settles two arguments from the vegetable patch. The pumpkin, like its relatives the cucumber, the melon and the courgette, is botanically a berry with a tough skin: a fruit of the type called a Pepo (a hard-rinded berry), which develops from a single ovary of a flower of the genus Cucurbita, named by Linnaeus in 1753, and holds its many seeds in the soft flesh inside. Rhubarb works the other way round. Although it is baked into crumbles and cakes like a fruit, the part we eat is the leaf stalk (petiole), the long red or green stem that joins the poisonous leaf blade to the root. Because no ovary is involved, rhubarb is botanically not a fruit at all but a vegetable, and it has been grown as one in England and Scandinavia since the early 18th century.\n\n| Plant | Everyday name | Botanical fruit type |\n|---|---|---|\n| Strawberry | berry | aggregate accessory fruit |\n| Raspberry | berry | aggregate drupe |\n| Cherry | stone fruit | drupe |\n| Tomato | vegetable | berry |\n| Peanut | nut | legume |\n| Pumpkin | vegetable | pepo (hard-rinded berry) |\n| Rhubarb | fruit | not a fruit: leaf stalk |",
+    "bodyDe": "Fragt man einen Botaniker, was eine Frucht ist, bekommt man eine Antwort, die nichts mit Süße zu tun hat. Eine Frucht ist der gereifte Fruchtknoten einer Blütenpflanze samt den Samen, die er enthält, und manchmal samt weiteren Teilen der Blüte, die mit ihm heranwachsen. Nach dieser Definition steckt die Obstschale voller Überraschungen: Die Erdbeere ist keine Beere, die Erdnuss ist keine Nuss, die Tomate ist in der Küche ein Gemüse, im Labor aber eine Beere, und der Rhabarber, den die Küche wie Obst behandelt, ist überhaupt keine Frucht.\n\nBeginnen wir mit der Erdbeere, Fragaria × ananassa, einem Rosengewächs, das in den 1750er-Jahren in der Bretagne aus zwei amerikanischen Arten gezüchtet wurde. Der rote, saftige Teil, den wir essen, ist gar nicht der Fruchtknoten. Es ist der Blütenboden, die angeschwollene Basis der Blüte, die beim Reifen fleischig und süß wird. Die eigentlichen Früchte sind die rund 200 winzigen gelben Punkte auf der Oberfläche, jeder von ihnen ein trockenes, einsamiges Nüsschen. Weil der essbare Teil aus Gewebe außerhalb des Fruchtknotens entsteht und weil jede Blüte viele kleine Früchte auf einmal hervorbringt, gilt die Erdbeere als Sammelnussfrucht – eine Scheinfrucht, die viele Nüsschen trägt, und damit ein weit ehrlicherer Name als Erdbeere.\n\nDie Himbeere, Rubus idaeus, ist ebenfalls eine Sammelfrucht, aber von anderer Art. Jede der kleinen Perlen, aus denen eine Himbeere besteht, ist eine winzige Steinfrucht mit eigenem weichem Fruchtfleisch und einem einzigen harten Kern, und die Perlen sitzen gemeinsam auf einem kegelförmigen Blütenboden. Der Blütenboden bleibt beim Pflücken an der Pflanze, weshalb eine Himbeere hohl ist, eine Brombeere, ihre nahe Verwandte, dagegen nicht. Botanisch ist die Himbeere eine Sammelsteinfrucht; ihren wissenschaftlichen Namen gab ihr Carl von Linné 1753.\n\nEine einzelne Steinfrucht bekommt man, wenn man in eine Kirsche beißt. Prunus avium bringt das klassische Steinobst hervor: eine dünne Haut, eine fleischige Mittelschicht und eine harte Innenschicht, den Stein, der den einzigen Samen umschließt. Pfirsiche, Pflaumen, Aprikosen, Oliven, Mangos und sogar Mandeln und Kaffeebohnen sind Steinfrüchte derselben Bauart. Plinius der Ältere behauptete, der Feldherr Lucullus habe 74 v. Chr. die ersten Kirschbäume aus Pontos nach Italien gebracht, obwohl dort längst wilde Kirschen wuchsen.\n\nDie Tomate, Solanum lycopersicum, ist eine Beere im strengen Sinn: eine fleischige Frucht, die aus einem einzigen Fruchtknoten hervorgeht und deren Samen im Fruchtfleisch eingebettet sind, statt in einem Stein eingeschlossen zu sein. Weintrauben, Bananen, Heidelbeeren, Auberginen und Chilis sind ebenfalls Beeren, und Gurken, Melonen und Zitrusfrüchte sind Beeren mit besonders ausgebildeter Schale. Der Oberste Gerichtshof der Vereinigten Staaten entschied am 10. Mai 1893 im Fall Nix v. Hedden dennoch, die Tomate sei für Zollzwecke ein Gemüse, weil sie so zum Abendessen serviert wird.\n\nDie Erdnuss schließlich ist keine Nuss, sondern eine Hülsenfrucht, die schotenförmige Frucht der Erbsen- und Bohnenfamilie. Nachdem die Blüte von Arachis hypogaea befruchtet ist, biegt sich ihr Stiel nach unten und schiebt die junge Hülse in den Boden, wo sie unterirdisch reift. Die ältesten archäologischen Erdnusshülsen aus Südamerika sind rund 7600 Jahre alt und stammen aus dem 6. Jahrtausend v. Chr.\n\nDieselbe strenge Definition entscheidet zwei Streitfragen aus dem Gemüsebeet. Der Kürbis ist wie seine Verwandten Gurke, Melone und Zucchini botanisch eine Beere mit harter Schale: eine Panzerbeere, die aus einem einzigen Fruchtknoten einer Blüte der Gattung Cucurbita – 1753 von Linné benannt – hervorgeht und ihre vielen Samen im weichen Fruchtfleisch trägt. Beim Rhabarber ist es umgekehrt. Obwohl er wie Obst zu Kuchen und Kompott verbacken wird, isst man den Blattstiel, den langen roten oder grünen Stängel, der die giftige Blattspreite mit der Wurzel verbindet. Weil kein Fruchtknoten beteiligt ist, ist Rhabarber botanisch gar keine Frucht, sondern ein Gemüse, und als solches wird er in England und Skandinavien seit dem frühen 18. Jahrhundert angebaut.\n\n| Pflanze | Alltagsname | Botanischer Fruchttyp |\n|---|---|---|\n| Erdbeere | Beere | Sammelnussfrucht |\n| Himbeere | Beere | Sammelsteinfrucht |\n| Kirsche | Steinobst | Steinfrucht |\n| Tomate | Gemüse | Beere |\n| Erdnuss | Nuss | Hülsenfrucht |\n| Kürbis | Gemüse | Panzerbeere |\n| Rhabarber | Obst | keine Frucht: Blattstiel |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0371",
+   "baseHash": "65e32411dc7d",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-069",
+      "category": 3
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Materials That Grow on Plants",
+    "titleDe": "Werkstoffe, die auf Pflanzen wachsen",
+    "bodyEn": "Long before plastics, almost everything people wore, sat on, sealed a bottle with or ate for protein came from a plant, and a surprising amount still does. Six plants in particular have given their leaves, stems, bark, sap and seeds to industries that would not exist without them.\n\nThe newest of these industries is barely a decade old. Piñatex is a leather substitute developed by the Spanish designer Carmen Hijosa after she saw how much waste the Philippine fruit harvest left behind; it was introduced in 2015. The material is made from the leaf fibres of the pineapple, a bromeliad whose long, stiff leaves are normally cut off and burned after the fruit is picked. The fibres are extracted, washed, felted into a non-woven mat and coated, and the result is used for shoes, bags and car seats. Around 480 leaves, the waste from sixteen plants, go into one square metre.\n\nThe oldest textile fibre in Europe comes from a plant with blue flowers. Linen is woven from the bast fibres in the stem of flax, Linum usitatissimum, which was domesticated in the Near East by about 7000 BC and later wrapped Egyptian mummies. After harvest the stems are retted, left to rot in dew or water so that bacteria loosen the fibres, then broken, scutched and combed. The seeds of the same plant give linseed oil.\n\nBark supplies a material that nothing else has quite replaced. Cork is stripped from the trunk of the cork oak, Quercus suber, which grows around the western Mediterranean and above all in Portugal; Carl Linnaeus gave the species its scientific name in 1753. The tree survives the harvest: its outer bark is removed by hand with an axe every nine years or so, and a single cork oak can be stripped a dozen times over a life of two centuries. Wine stoppers, floor tiles and the insulation of spacecraft are all cut from it. In Portugal the tree is protected by law: since Decree-Law 169/2001 a cork oak may be felled only with special permission.\n\nA cousin of the banana makes the cup of tea possible. Abacá, Musa textilis, is a fibre banana from the Philippines whose leaf sheaths yield a long, strong and salt-resistant fibre, traded for centuries as Manila hemp for ships' ropes. Because it stays strong when wet, it is today the main raw material of tea-bag paper: when Teekanne launched Adolf Rambold's double-chamber tea bag in 1949, it was made largely of abacá fibre.\n\nSap gave the world tyres. Natural rubber is coagulated from latex, the milky fluid tapped from the trunk of the rubber tree, Hevea brasiliensis. Native to the Amazon, it was smuggled as seed to Kew Gardens by Henry Wickham in 1876 and planted across Malaya and Ceylon, and today Thailand, Indonesia and Vietnam produce most of the world's supply. Even in the age of synthetics, aircraft tyres and surgical gloves still depend on it.\n\nSeeds, finally, feed people directly. Tofu is made by soaking, grinding and boiling the seeds of the soybean, Glycine max, filtering the milk and curdling it with calcium sulphate or magnesium chloride, exactly as cheese is made from cow's milk. The technique is Chinese and at least a thousand years old: tofu first appears in the written record in AD 965.\n\n| Product | Plant part | Plant |\n|---|---|---|\n| Piñatex | leaves | pineapple |\n| linen | stem fibres | flax |\n| tea-bag paper | leaf-sheath fibres | abacá |\n| cork | bark | cork oak |\n| natural rubber | sap (latex) | rubber tree |\n| tofu | seeds | soybean |\n\nEvery one of these is renewable, and every one of them was in use before the word „sustainable“ was invented.",
+    "bodyDe": "Lange vor dem Kunststoff stammte fast alles, was Menschen trugen, worauf sie saßen, womit sie eine Flasche verschlossen oder was sie als Eiweiß aßen, von einer Pflanze, und erstaunlich viel davon tut es noch heute. Sechs Pflanzen im Besonderen haben ihre Blätter, Stängel, Rinde, Milchsaft und Samen Industrien gegeben, die es ohne sie nicht gäbe.\n\nDie jüngste dieser Industrien ist kaum ein Jahrzehnt alt. Piñatex ist ein Lederersatz, den die spanische Designerin Carmen Hijosa entwickelte, nachdem sie gesehen hatte, wie viel Abfall die philippinische Obsternte zurücklässt; auf den Markt kam es 2015. Das Material wird aus den Blattfasern der Ananas hergestellt, eines Bromeliengewächses, dessen lange, steife Blätter normalerweise nach der Ernte der Frucht abgeschnitten und verbrannt werden. Die Fasern werden herausgelöst, gewaschen, zu einem Vlies verfilzt und beschichtet, und das Ergebnis dient für Schuhe, Taschen und Autositze. Rund 480 Blätter, der Abfall von sechzehn Pflanzen, stecken in einem Quadratmeter.\n\nDie älteste Textilfaser Europas stammt von einer Pflanze mit blauen Blüten. Leinen wird aus den Bastfasern im Stängel des Flachses gewebt, Linum usitatissimum, der im Nahen Osten schon um 7000 v. Chr. kultiviert wurde und später ägyptische Mumien umhüllte. Nach der Ernte werden die Stängel geröstet, also im Tau oder Wasser liegen gelassen, damit Bakterien die Fasern lösen, dann gebrochen, geschwungen und gehechelt. Die Samen derselben Pflanze liefern das Leinöl.\n\nRinde liefert einen Werkstoff, den nichts anderes ganz ersetzt hat. Kork wird vom Stamm der Korkeiche geschält, Quercus suber, die rund um das westliche Mittelmeer und vor allem in Portugal wächst; Carl von Linné gab der Art 1753 ihren wissenschaftlichen Namen. Der Baum überlebt die Ernte: Seine äußere Rinde wird etwa alle neun Jahre von Hand mit der Axt abgenommen, und eine einzige Korkeiche kann in einem Leben von zwei Jahrhunderten ein Dutzend Mal geschält werden. Weinkorken, Bodenfliesen und die Isolierung von Raumfahrzeugen werden daraus geschnitten. In Portugal steht der Baum unter gesetzlichem Schutz: Seit dem Gesetzesdekret 169/2001 darf eine Korkeiche nur mit besonderer Genehmigung gefällt werden.\n\nEine Verwandte der Banane macht die Tasse Tee möglich. Abacá, Musa textilis, ist eine Faserbanane von den Philippinen, deren Blattscheiden eine lange, reißfeste und salzwasserbeständige Faser liefern, die jahrhundertelang als Manilahanf für Schiffstaue gehandelt wurde. Weil sie auch nass fest bleibt, ist sie heute der wichtigste Rohstoff für Teebeutelpapier: Als Teekanne 1949 Adolf Rambolds Doppelkammerbeutel auf den Markt brachte, bestand er großteils aus Abacá-Fasern.\n\nMilchsaft schenkte der Welt Reifen. Naturkautschuk wird aus Latex gewonnen, der milchigen Flüssigkeit, die vom Stamm des Kautschukbaums gezapft wird, Hevea brasiliensis. Ursprünglich im Amazonasgebiet heimisch, wurde er 1876 von Henry Wickham als Samen nach Kew Gardens geschmuggelt und in Malaya und Ceylon angepflanzt, und heute liefern Thailand, Indonesien und Vietnam den Großteil der Weltproduktion. Selbst im Zeitalter der Synthetik hängen Flugzeugreifen und OP-Handschuhe noch von ihm ab.\n\nSamen schließlich ernähren die Menschen direkt. Tofu entsteht, indem die Samen der Sojabohne, Glycine max, eingeweicht, gemahlen und gekocht werden, die Milch gefiltert und mit Calciumsulfat oder Magnesiumchlorid zum Gerinnen gebracht wird, genau wie Käse aus Kuhmilch entsteht. Die Technik ist chinesisch und mindestens tausend Jahre alt: Schriftlich belegt ist Tofu erstmals im Jahr 965.\n\n| Produkt | Pflanzenteil | Pflanze |\n|---|---|---|\n| Piñatex | Blätter | Ananas |\n| Leinen | Stängelfasern | Flachs |\n| Teebeutelpapier | Blattscheidenfasern | Abacá |\n| Kork | Rinde | Korkeiche |\n| Naturkautschuk | Milchsaft (Latex) | Kautschukbaum |\n| Tofu | Samen | Sojabohne |\n\nJedes davon ist nachwachsend, und jedes war schon in Gebrauch, bevor das Wort „nachhaltig“ erfunden wurde.",
+    "notesEn": "Also accepted: Manila hemp, fibre banana (Musa textilis).",
+    "notesDe": "Auch richtig: Manilahanf, Faserbanane (Musa textilis)."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0419",
+   "baseHash": "144f98f91162",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-155",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Five Plant Families That Feed the World",
+    "titleDe": "Fünf Pflanzenfamilien, die die Welt ernähren",
+    "bodyEn": "Botanists have described about 400 families of flowering plants, but a handful of them supply most of what humanity eats. Knowing which crops are relatives explains a great deal, from why wheat and rice look alike to why a tomato and a potato share the same pests.\n\n**Grasses (Poaceae)**, called Süßgräser in German, are the most important family of all. Every cereal grain is a grass: wheat, rice, maize, barley, rye, oats, millet and sorghum, as well as sugar cane and bamboo. Their hollow stems, narrow leaves and inconspicuous wind-pollinated flowers are unmistakable, and their fruit, the grain, is a single dry seed fused to its seed coat. So-called pseudocereals such as buckwheat, quinoa and amaranth are eaten like grain but belong to other families. About half of all calories consumed by humans come from three grasses: rice, wheat and maize. Wheat was first cultivated in the Fertile Crescent around 9600 BC.\n\n**Legumes (Fabaceae)** come second. Peas, beans, lentils, chickpeas, soybeans and peanuts are all members, as are clover, lupins and the acacia tree. Their fruit is the pod, and their roots carry nodules in which bacteria of the genus Rhizobium, named by the German botanist Albert Bernhard Frank in 1889, fix nitrogen from the air, which is why farmers have used them for millennia to restore exhausted fields. They are also the main source of plant protein in most diets. Many of them must be cooked first, however: raw beans, above all the common bean (Phaseolus vulgaris), first found in Peru's Guitarrero Cave around 6000 BC, contain the toxin Phasin (phytohaemagglutinin), a lectin that clumps red blood cells and causes violent stomach upsets, and that is destroyed only by thorough boiling.\n\n**Nightshades (Solanaceae)** gave the Old World some of its most successful imports from the Americas; the Spanish brought the potato to Europe in the second half of the 16th century. The potato, the tomato, the bell pepper and the chilli all belong to this family, and so do the aubergine and tobacco. The family also contains the deadly nightshade and henbane, and the green parts of potato and tomato plants contain the same class of poisonous alkaloids, which is why unripe green potatoes should not be eaten.\n\n**Crucifers (Brassicaceae)** are named after their four-petalled flowers arranged in a cross. Cabbage, cauliflower, broccoli, Brussels sprouts, kohlrabi and kale are all cultivated forms of a single species, Brassica oleracea, named by Carl Linnaeus in 1753; rapeseed, mustard, radish, horseradish, rocket and cress are their cousins, and the little thale cress, Arabidopsis, became in 2000 the first plant whose genome was sequenced. The sharp taste common to the whole family comes from mustard-oil glycosides, and rapeseed has become Europe's most important oil crop.\n\n**Rose family (Rosaceae)** plants provide most of the fruit of temperate orchards. Apple, pear and quince are pome fruits; cherry, plum, peach, apricot and almond are stone fruits of the genus Prunus; strawberries, raspberries and blackberries complete the list. The garden rose and the hawthorn are relatives. The family itself was first defined by the French botanist Antoine Laurent de Jussieu in his Genera plantarum of 1789.\n\n| Family | German name | Typical crops |\n|---|---|---|\n| Poaceae | Süßgräser | wheat, rice, maize, barley, rye, oats |\n| Fabaceae | Hülsenfrüchtler | pea, bean, lentil, soybean, peanut |\n| Solanaceae | Nachtschattengewächse | potato, tomato, pepper, aubergine |\n| Brassicaceae | Kreuzblütler | cabbage, rapeseed, mustard, radish |\n| Rosaceae | Rosengewächse | apple, pear, cherry, plum, strawberry |\n\nFive families, and between them a large part of every meal on the planet.",
+    "bodyDe": "Botaniker haben etwa 400 Familien von Blütenpflanzen beschrieben, doch eine Handvoll von ihnen liefert das meiste von dem, was die Menschheit isst. Zu wissen, welche Nutzpflanzen verwandt sind, erklärt eine Menge, von der Ähnlichkeit zwischen Weizen und Reis bis zu der Frage, warum Tomate und Kartoffel dieselben Schädlinge haben.\n\nDie **Süßgräser** (Poaceae) sind die wichtigste Familie von allen. Jede Getreideart ist ein Gras: Weizen, Reis, Mais, Gerste, Roggen, Hafer, Hirse und Sorghum, ebenso Zuckerrohr und Bambus. Ihre hohlen Halme, schmalen Blätter und unscheinbaren windbestäubten Blüten sind unverwechselbar, und ihre Frucht, das Korn, ist ein einzelner trockener Samen, der mit seiner Samenschale verwachsen ist. Sogenannte Pseudogetreide wie Buchweizen, Quinoa und Amarant werden wie Getreide gegessen, gehören aber anderen Familien an. Etwa die Hälfte aller vom Menschen verzehrten Kalorien stammt von drei Gräsern: Reis, Weizen und Mais. Weizen wurde um 9600 v. Chr. erstmals im Fruchtbaren Halbmond angebaut.\n\nDie **Hülsenfrüchtler** (Fabaceae) folgen an zweiter Stelle. Erbsen, Bohnen, Linsen, Kichererbsen, Sojabohnen und Erdnüsse gehören dazu, ebenso Klee, Lupinen und die Akazie. Ihre Frucht ist die Hülse, und an ihren Wurzeln sitzen Knöllchen, in denen Bakterien der 1889 von dem deutschen Botaniker Albert Bernhard Frank benannten Gattung Rhizobium Stickstoff aus der Luft binden, weshalb Bauern sie seit Jahrtausenden nutzen, um ausgelaugte Felder zu erholen. Sie sind zudem in den meisten Ernährungsweisen die wichtigste Quelle pflanzlichen Eiweißes. Viele von ihnen müssen allerdings erst gekocht werden: Rohe Bohnen, vor allem die Gartenbohne (Phaseolus vulgaris), deren älteste Funde um 6000 v. Chr. aus der Guitarrero-Höhle in Peru stammen, enthalten den Giftstoff Phasin (Phytohämagglutinin), ein Lektin, das rote Blutkörperchen verklumpt und heftige Magen-Darm-Beschwerden auslöst und erst durch gründliches Kochen zerstört wird.\n\nDie **Nachtschattengewächse** (Solanaceae) bescherten der Alten Welt einige ihrer erfolgreichsten Importe aus Amerika; die Spanier brachten die Kartoffel in der zweiten Hälfte des 16. Jahrhunderts nach Europa. Kartoffel, Tomate, Paprika und Chili gehören alle zu dieser Familie, ebenso Aubergine und Tabak. Die Familie umfasst aber auch Tollkirsche und Bilsenkraut, und die grünen Teile von Kartoffel- und Tomatenpflanzen enthalten dieselbe Klasse giftiger Alkaloide, weshalb unreife grüne Kartoffeln nicht gegessen werden sollten.\n\nDie **Kreuzblütler** (Brassicaceae) sind nach ihren vier kreuzförmig angeordneten Blütenblättern benannt. Weißkohl, Blumenkohl, Brokkoli, Rosenkohl, Kohlrabi und Grünkohl sind allesamt Kulturformen einer einzigen Art, Brassica oleracea, 1753 von Carl von Linné benannt; Raps, Senf, Rettich, Meerrettich, Rucola und Kresse sind ihre Vettern, und die kleine Ackerschmalwand, Arabidopsis, war 2000 die erste Pflanze, deren Genom entschlüsselt wurde. Der scharfe Geschmack, der der ganzen Familie gemein ist, stammt von Senfölglykosiden, und Raps ist Europas wichtigste Ölpflanze geworden.\n\nDie **Rosengewächse** (Rosaceae) liefern den größten Teil des Obstes der gemäßigten Zonen. Apfel, Birne und Quitte sind Kernobst; Kirsche, Pflaume, Pfirsich, Aprikose und Mandel sind Steinobst der Gattung Prunus; Erdbeeren, Himbeeren und Brombeeren vervollständigen die Liste. Die Gartenrose und der Weißdorn sind Verwandte. Als Familie definierte sie erstmals der französische Botaniker Antoine Laurent de Jussieu in seinen „Genera plantarum“ von 1789.\n\n| Familie | Deutscher Name | Typische Nutzpflanzen |\n|---|---|---|\n| Poaceae | Süßgräser | Weizen, Reis, Mais, Gerste, Roggen, Hafer |\n| Fabaceae | Hülsenfrüchtler | Erbse, Bohne, Linse, Sojabohne, Erdnuss |\n| Solanaceae | Nachtschattengewächse | Kartoffel, Tomate, Paprika, Aubergine |\n| Brassicaceae | Kreuzblütler | Kohl, Raps, Senf, Rettich |\n| Rosaceae | Rosengewächse | Apfel, Birne, Kirsche, Pflaume, Erdbeere |\n\nFünf Familien, und zusammen ein großer Teil jeder Mahlzeit auf dem Planeten.",
+    "notesEn": "Pseudocereals such as buckwheat and quinoa are not cereals in the botanical sense.",
+    "notesDe": "Auch richtig: Gräser (Poaceae). Pseudogetreide wie Buchweizen und Quinoa sind botanisch kein Getreide."
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1871",
+   "baseHash": "de3df778fe71",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-254",
+      "category": 5
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "The Nightshade Family: From the Potato to Deadly Nightshade",
+    "titleDe": "Die Nachtschattengewächse: Von der Kartoffel bis zur Tollkirsche",
+    "bodyEn": "The nightshade family, Solanaceae, is one of the strangest clans in the plant kingdom. It contains some of the most important food crops on Earth, the world's most widely used drug plant and several of Europe's deadliest poisons, and almost all of its members share the same chemical signature: alkaloids that act on the nervous system.\n\nThe family's most valuable member is the potato, Solanum tuberosum. It was domesticated in the Andes, on the high plateau around Lake Titicaca between Peru and Bolivia, at least seven thousand years ago; the oldest archaeologically verified tubers, from Ancón on the Peruvian coast, date to about 2500 BC. The Andean peoples bred it for every altitude and soil, which is why South America still holds an astonishing diversity: the International Potato Center in Lima conserves several thousand native varieties, in colours from white to deep purple, and the region is commonly said to grow around 3,000 kinds. The Spaniards brought the potato to Europe in the 1570s, where it was long grown as a curiosity before Frederick the Great and other rulers pushed it as a famine food in the eighteenth century.\n\nThe tomato, Solanum lycopersicum, took a similar route. Its wild ancestors grow along the Pacific coast of Peru and Ecuador, but it was domesticated in Mexico, where the Aztecs called it tomatl, the word that became tomato. The Italian physician Pietro Andrea Mattioli described it in 1544 as a new kind of aubergine. Sixteenth-century Europeans regarded the red fruit with suspicion, precisely because it resembled its poisonous relatives, and although a basket of tomatoes from Cosimo I de' Medici's estate is recorded in Florence as early as 1548, Italians grew it as an ornamental for a century before they put it on pasta.\n\nTobacco, Nicotiana tabacum, is the family's most consequential export. Native to tropical America and smoked, chewed and snuffed by its peoples for millennia, it reached Europe with the first Spanish expeditions. The stimulant in its leaves, nicotine, is named after Jean Nicot, the French ambassador who sent tobacco seeds to Paris in 1560; the German chemists Wilhelm Posselt and Karl Ludwig Reimann first isolated it in 1828.\n\nNot every nightshade came from the New World. The aubergine, Solanum melongena, known in American English as the eggplant after its white, egg-shaped early varieties, was domesticated in India and South-East Asia and carried westward by Arab traders, reaching Spain and Italy in the Middle Ages; its British name, borrowed from French, is first recorded in the late 18th century. Its purple, spongy fruit is a berry, as are the tomato and, botanically, the potato's poisonous green fruits.\n\nThe dark side of the family is Atropa belladonna, deadly nightshade, a woodland shrub with glossy black berries that can kill a child. Its alkaloid atropine paralyses the muscles of the eye, and Renaissance women in Venice used drops of it to enlarge their pupils, which was thought seductive; hence the name „bella donna“, beautiful lady. First isolated in pure form in 1833, atropine is today a standard drug in ophthalmology and emergency medicine.\n\n| Plant | Botanical name | Origin | Defining alkaloid or trait |\n|---|---|---|---|\n| potato | Solanum tuberosum | Andes | solanine in green parts |\n| tomato | Solanum lycopersicum | Andes, domesticated in Mexico | tomatine in leaves |\n| tobacco | Nicotiana tabacum | tropical America | nicotine |\n| aubergine | Solanum melongena | India, South-East Asia | purple berry |\n| deadly nightshade | Atropa belladonna | Europe, West Asia | atropine |\n\nNew members are still being found. In 2016 botanists described a bush tomato from the remote Northern Territory of Australia, a prickly sub-shrub with small yellow berries, and named it Solanum watneyi after Mark Watney, the stranded astronaut of the novel and film The Martian, who survives on Mars by growing potatoes – a fitting tribute for a relative of the potato, the tomato and the aubergine.\n\nPeppers and chillies, Physalis, mandrake, henbane and the petunia belong to the same family, which numbers about 2,700 species.",
+    "bodyDe": "Die Familie der Nachtschattengewächse, Solanaceae, ist eine der seltsamsten Sippen im Pflanzenreich. Sie enthält einige der wichtigsten Nahrungspflanzen der Erde, die meistgenutzte Drogenpflanze der Welt und mehrere der tödlichsten Gifte Europas, und fast alle ihre Mitglieder teilen dieselbe chemische Signatur: Alkaloide, die auf das Nervensystem wirken.\n\nDas wertvollste Mitglied der Familie ist die Kartoffel, Solanum tuberosum. Sie wurde in den Anden domestiziert, auf der Hochebene um den Titicacasee zwischen Peru und Bolivien, vor mindestens siebentausend Jahren; die ältesten archäologisch belegten Knollen, aus Ancón an der peruanischen Küste, stammen aus der Zeit um 2500 v. Chr. Die Andenvölker züchteten sie für jede Höhenlage und jeden Boden, weshalb Südamerika bis heute eine erstaunliche Vielfalt besitzt: Das Internationale Kartoffelzentrum in Lima bewahrt mehrere tausend einheimische Sorten in Farben von Weiß bis Tiefviolett, und in der Region werden gemeinhin rund 3.000 Sorten angebaut. Die Spanier brachten die Kartoffel in den 1570er Jahren nach Europa, wo sie lange als Kuriosität gezogen wurde, ehe Friedrich der Große und andere Herrscher sie im 18. Jahrhundert als Nahrung gegen Hungersnöte durchsetzten.\n\nDie Tomate, Solanum lycopersicum, nahm einen ähnlichen Weg. Ihre wilden Vorfahren wachsen an der Pazifikküste Perus und Ecuadors, domestiziert wurde sie aber in Mexiko, wo die Azteken sie tomatl nannten, das Wort, aus dem Tomate wurde. Der italienische Arzt Pietro Andrea Mattioli beschrieb sie 1544 als neue Art Aubergine. Die Europäer des 16. Jahrhunderts betrachteten die rote Frucht mit Argwohn, gerade weil sie ihren giftigen Verwandten ähnelte, und obwohl schon 1548 ein Korb Tomaten vom Gut Cosimos I. de' Medici in Florenz belegt ist, zogen die Italiener sie ein Jahrhundert lang als Zierpflanze, bevor sie sie auf die Pasta legten.\n\nDer Tabak, Nicotiana tabacum, ist der folgenreichste Export der Familie. Im tropischen Amerika beheimatet und von dessen Völkern seit Jahrtausenden geraucht, gekaut und geschnupft, gelangte er mit den ersten spanischen Expeditionen nach Europa. Das Aufputschmittel in seinen Blättern, das Nikotin, ist nach Jean Nicot benannt, dem französischen Gesandten, der 1560 Tabaksamen nach Paris schickte; die deutschen Chemiker Wilhelm Posselt und Karl Ludwig Reimann isolierten es 1828 erstmals.\n\nNicht jedes Nachtschattengewächs kam aus der Neuen Welt. Die Aubergine, Solanum melongena, im amerikanischen Englisch nach ihren weißen, eiförmigen frühen Sorten „eggplant“ genannt, wurde in Indien und Südostasien domestiziert und von arabischen Händlern nach Westen getragen, wo sie im Mittelalter Spanien und Italien erreichte; ihr aus dem Französischen entlehnter britischer Name aubergine ist seit dem späten 18. Jahrhundert belegt. Ihre violette, schwammige Frucht ist eine Beere, ebenso wie die Tomate und, botanisch gesehen, die giftigen grünen Früchte der Kartoffel.\n\nDie dunkle Seite der Familie ist Atropa belladonna, die Tollkirsche, ein Waldstrauch mit glänzend schwarzen Beeren, die ein Kind töten können. Ihr Alkaloid Atropin lähmt die Muskeln des Auges, und Frauen der Renaissance in Venedig träufelten es sich ein, um ihre Pupillen zu vergrößern, was als verführerisch galt; daher der Name „bella donna“, schöne Frau. 1833 erstmals rein dargestellt, ist Atropin heute ein Standardmedikament der Augenheilkunde und der Notfallmedizin.\n\n| Pflanze | Botanischer Name | Herkunft | Kennzeichnendes Alkaloid oder Merkmal |\n|---|---|---|---|\n| Kartoffel | Solanum tuberosum | Anden | Solanin in grünen Teilen |\n| Tomate | Solanum lycopersicum | Anden, domestiziert in Mexiko | Tomatin in den Blättern |\n| Tabak | Nicotiana tabacum | tropisches Amerika | Nikotin |\n| Aubergine | Solanum melongena | Indien, Südostasien | violette Beere |\n| Tollkirsche | Atropa belladonna | Europa, Westasien | Atropin |\n\nNoch immer werden neue Mitglieder entdeckt. 2016 beschrieben Botaniker eine Buschtomate aus dem abgelegenen Northern Territory Australiens, einen stacheligen Halbstrauch mit kleinen gelben Beeren, und benannten sie Solanum watneyi nach Mark Watney, dem gestrandeten Astronauten aus Roman und Film „Der Marsianer – Rettet Mark Watney“, der auf dem Mars überlebt, indem er Kartoffeln anbaut – eine passende Ehrung für eine Verwandte von Kartoffel, Tomate und Aubergine.\n\nPaprika und Chili, Physalis, Alraune, Bilsenkraut und die Petunie gehören zur selben Familie, die etwa 2.700 Arten zählt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-131",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-389",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-355",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-201",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher zwölfjährige versklavte Junge entdeckte 1841 auf Réunion, wie man Vanilleblüten von Hand bestäubt?",
+      "en": "Which 12-year-old enslaved boy discovered on Réunion in 1841 how to pollinate vanilla flowers by hand?",
+      "answerDe": "Edmond Albius",
+      "answerEn": "Edmond Albius",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1829",
+       "end": "1880-08-09",
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Edmond Albius, who invented the hand pollination of vanilla on Réunion",
+       "labelDe": "Edmond Albius, Erfinder der Handbestäubung der Vanille auf Réunion"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Edmond_Albius",
+       "title": "Edmond Albius – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Inselland erzeugt heute den größten Teil der Weltvanille?",
+      "en": "Which island country produces the largest share of the world's vanilla today?",
+      "answerDe": "Madagaskar",
+      "answerEn": "Madagascar",
+      "timeline": {
+       "kind": "event",
+       "start": "2023",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Madagascar produces 42% of the world's vanilla",
+       "labelDe": "Madagaskar erzeugt 42 % der Weltvanille"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Vanilla",
+       "title": "Vanilla – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Im Hochland welches Landes ist die Arabica-Kaffeepflanze ursprünglich heimisch?",
+      "en": "In the highlands of which country is the Arabica coffee plant native?",
+      "answerDe": "Äthiopien",
+      "answerEn": "Ethiopia",
+      "timeline": {
+       "kind": "era",
+       "start": "-1080000",
+       "end": "-543000",
+       "precision": "millennium",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Coffea arabica arises as a natural hybrid of two wild coffee species",
+       "labelDe": "Coffea arabica entsteht als natürliche Kreuzung zweier wilder Kaffeearten"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Coffea_arabica",
+       "title": "Coffea arabica – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Vanilla, Cacao and Coffee: The Botany of Tropical Luxuries",
+    "titleDe": "Vanille, Kakao und Kaffee: Die Botanik tropischer Genussmittel",
+    "bodyEn": "Three of the most valued flavours in the world come from tropical plants that are fussy about where they grow and who pollinates them. Vanilla, chocolate and coffee all began as local plants of the tropics, and all three now support millions of smallholders on the other side of the globe.\n\n**Vanilla.** The black pods in the spice jar are the fruit of a climbing plant from the Orchids, the largest family of flowering plants; the English gardener Philip Miller set up the orchid genus Vanilla in 1754. The spice orchid Vanilla planifolia is native to Mexico and Central America, where the Aztecs flavoured their cocoa drink with it and called it tlilxochitl, \"black flower\". Spanish conquerors brought it to Europe in the 16th century, but plants grown elsewhere refused to set fruit, because their natural pollinators stayed behind in Mexico. The problem was solved in 1841 on the French island of Réunion by Edmond Albius, a 12-year-old enslaved boy, who found a way to pollinate each flower by hand with a thin stick and his thumb. His method is still used today, and it made the islands of the Indian Ocean the centre of the trade: Madagascar now produces the largest share of the world's vanilla, about 42 per cent in 2023.\n\n**Cacao.** The cacao tree, which Carl Linnaeus named Theobroma cacao in 1753 – \"food of the gods\" – carries its flowers and pods directly on the trunk. The tiny white flowers are not visited by bees. They are pollinated almost entirely by biting midges (Ceratopogonidae), tiny flies of the genus Forcipomyia that breed in the rotting leaf litter of the shady plantation floor, and only a small fraction of flowers ever becomes a pod. Growers who keep the ground moist and covered get more midges and more cocoa beans.\n\n**Coffee.** Arabica and Robusta, the two names on every bag of beans, are not varieties of one plant but two species of the genus Coffea, which Linnaeus established in 1753 – Coffea arabica and Coffea canephora, the latter traded as Robusta. Both are coffee. Arabica arose as a natural hybrid of two wild coffee species hundreds of thousands of years ago and is native to the south-western highlands of Ethiopia, with wild stands also in South Sudan and Yemen. Robusta is hardier, richer in caffeine and grows lower down; Arabica is milder and makes up most of the world's quality coffee.\n\n| Crop | Plant | Home | Pollinated by |\n|---|---|---|---|\n| vanilla | Vanilla planifolia (orchid) | Mexico | hand pollination since 1841 |\n| cocoa | Theobroma cacao | tropical America | biting midges |\n| coffee | Coffea arabica, C. canephora | Ethiopia (Arabica) | mostly self-pollinating (Arabica) |",
+    "bodyDe": "Drei der begehrtesten Aromen der Welt stammen von tropischen Pflanzen, die wählerisch sind, wo sie wachsen und wer sie bestäubt. Vanille, Schokolade und Kaffee begannen als heimische Pflanzen der Tropen, und alle drei ernähren heute Millionen Kleinbauern auf der anderen Seite des Globus.\n\n**Vanille.** Die schwarzen Schoten im Gewürzglas sind die Früchte einer Kletterpflanze aus der Familie der Orchideen, der artenreichsten Familie der Blütenpflanzen; der englische Gärtner Philip Miller stellte die Orchideengattung Vanilla 1754 auf. Die Gewürzvanille, Vanilla planifolia, stammt aus Mexiko und Mittelamerika, wo die Azteken ihr Kakaogetränk damit würzten und sie tlilxochitl nannten, „schwarze Blume“. Spanische Eroberer brachten sie im 16. Jahrhundert nach Europa, doch anderswo gezogene Pflanzen setzten keine Früchte an, weil ihre natürlichen Bestäuber in Mexiko zurückgeblieben waren. Gelöst wurde das Problem 1841 auf der französischen Insel Réunion von Edmond Albius, einem zwölfjährigen versklavten Jungen, der einen Weg fand, jede Blüte mit einem dünnen Stäbchen und dem Daumen von Hand zu bestäuben. Seine Methode wird bis heute angewandt, und sie machte die Inseln des Indischen Ozeans zum Zentrum des Handels: Madagaskar erzeugt heute den größten Teil der Weltvanille, 2023 rund 42 Prozent.\n\n**Kakao.** Der Kakaobaum, den Carl von Linné 1753 Theobroma cacao nannte – „Speise der Götter“ –, trägt Blüten und Früchte direkt am Stamm. Die winzigen weißen Blüten werden nicht von Bienen besucht. Bestäubt werden sie fast ausschließlich von Gnitzen, winzigen Mücken der Gattung Forcipomyia, die sich in der verrottenden Laubstreu am schattigen Plantagenboden entwickeln, und nur ein kleiner Teil der Blüten wird je zur Frucht. Pflanzer, die den Boden feucht und bedeckt halten, bekommen mehr Gnitzen und mehr Kakaobohnen.\n\n**Kaffee.** Arabica und Robusta, die beiden Namen auf jeder Bohnenpackung, sind keine Sorten einer Pflanze, sondern zwei Arten der Gattung Coffea, die Linné 1753 aufstellte – Coffea arabica und Coffea canephora, die als Robusta gehandelt wird. Beide sind Kaffee. Arabica entstand vor Hunderttausenden von Jahren als natürliche Kreuzung zweier wilder Kaffeearten und ist im südwestlichen Hochland von Äthiopien heimisch, mit Wildbeständen auch im Südsudan und im Jemen. Robusta ist robuster, koffeinreicher und wächst tiefer; Arabica ist milder und macht den Großteil des Qualitätskaffees der Welt aus.\n\n| Nutzpflanze | Pflanze | Heimat | Bestäubt durch |\n|---|---|---|---|\n| Vanille | Vanilla planifolia (Orchidee) | Mexiko | Handbestäubung seit 1841 |\n| Kakao | Theobroma cacao | tropisches Amerika | Gnitzen |\n| Kaffee | Coffea arabica, C. canephora | Äthiopien (Arabica) | meist Selbstbestäubung (Arabica) |",
+    "notesEn": "Strictly, Arabica and Robusta are two species of Coffea (C. arabica and C. canephora), not varieties of one species. Cacao pollinators: mainly Forcipomyia midges.",
+    "notesDe": "Genau genommen sind Arabica und Robusta zwei Arten der Gattung Coffea (C. arabica und C. canephora), keine Sorten einer Art. Kakao-Bestäuber: vor allem Gnitzen der Gattung Forcipomyia."
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-109",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-069",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-321",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche grüne Apfelsorte entstand 1868 als Zufallssämling in Eastwood in New South Wales, Australien?",
+      "en": "Which green apple variety arose in 1868 as a chance seedling in Eastwood, New South Wales, Australia?",
+      "answerDe": "Granny Smith",
+      "answerEn": "Granny Smith",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1868",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Maria Ann Smith finds the seedling of the Granny Smith apple in Eastwood, New South Wales",
+       "labelDe": "Maria Ann Smith findet in Eastwood (New South Wales) den Sämling des Granny-Smith-Apfels"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Granny_Smith",
+       "title": "Granny Smith – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche englische Tafelapfelsorte zog der pensionierte Brauer Richard Cox um 1830 in Colnbrook?",
+      "en": "Which English dessert apple was raised around 1830 by the retired brewer Richard Cox at Colnbrook?",
+      "answerDe": "Cox Orange",
+      "answerEn": "Cox's Orange Pippin",
+      "timeline": {
+       "kind": "creation",
+       "start": "1830",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Richard Cox raises the apple Cox's Orange Pippin at Colnbrook, England",
+       "labelDe": "Richard Cox zieht in Colnbrook (England) den Apfel Cox Orange"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Cox%27s_Orange_Pippin",
+       "title": "Cox's Orange Pippin – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Birnensorte, vermutlich um 1765 in Aldermaston in England entstanden, wird in Nordamerika als Bartlett-Birne verkauft?",
+      "en": "Which pear variety, thought to have arisen around 1765 at Aldermaston in England, is sold in North America as the Bartlett pear?",
+      "answerDe": "Williams Christ",
+      "answerEn": "Williams",
+      "timeline": {
+       "kind": "creation",
+       "start": "1765",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "The Williams pear arises in the garden of schoolmaster John Stair at Aldermaston, England",
+       "labelDe": "Die Williams-Christ-Birne entsteht im Garten des Schulmeisters John Stair in Aldermaston (England)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Williams_pear",
+       "title": "Williams pear – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Granny Smith, Lambada and Chioggia: The Named Varieties of Fruit and Vegetables",
+    "titleDe": "Granny Smith, Lambada und Chioggia: Die Sortennamen von Obst und Gemüse",
+    "bodyEn": "Every apple, pear or strawberry in a shop belongs not only to a species but to a cultivar, a variety selected and propagated by people, and each cultivar has a name. Keeping track of them is a science of its own: pomology, the study of Fruit (fruit varieties and fruit growing). The word was coined by the Dutch-German gardener Johann Hermann Knoop, whose Pomologia of 1758 described and illustrated the apples and pears of his day. Pomologists identify old varieties by the shape of the fruit, its stalk, core and taste, and keep collections so that forgotten sorts do not disappear.\n\nSome of the most famous varieties began as accidents. In 1868 Maria Ann Smith, a grandmother in Eastwood, New South Wales, noticed a seedling sprouting where she had thrown out the remains of some apples; its green, tart fruit became the Granny Smith, now grown all over the world. In England, around 1830, the retired brewer Richard Cox raised a seedling at Colnbrook that became Cox's Orange Pippin, for many the finest English dessert apple. The most widely grown pear in the world, the Williams, is thought to come from the garden of the schoolmaster John Stair at Aldermaston around 1765; in North America it was introduced by Enoch Bartlett, who did not know its name, and it is still sold there as the Bartlett pear.\n\nStrawberry breeders like to name their varieties after dances: Polka is on the market, and so is Lambada, a very sweet variety bred from the cultivars Sivetta and Holiday. Lambada is often well tolerated by people who otherwise react to strawberries with allergic symptoms. The garden strawberry itself is a young plant: it arose in 18th-century Europe from a chance cross of two American wild species.\n\nVegetable cultivars carry names too. Beetroot is a good example: the classic Detroit Dark Red is deep red throughout, Touchstone Gold is a yellow beet, and Chioggia, named after the fishing town near Venice, shows concentric rings of red and white when it is cut. Beets have been grown for their roots since at least Roman times.\n\n| Fruit or vegetable | Cultivar | Origin |\n|---|---|---|\n| apple | Granny Smith | Eastwood, Australia, 1868 |\n| apple | Cox's Orange Pippin | Colnbrook, England, c. 1830 |\n| pear | Williams (Bartlett) | Aldermaston, England, c. 1765 |\n| strawberry | Lambada | cross of Sivetta and Holiday |\n| beetroot | Chioggia, Detroit Dark Red, Touchstone Gold | Italy, USA |",
+    "bodyDe": "Jeder Apfel, jede Birne und jede Erdbeere im Laden gehört nicht nur zu einer Art, sondern zu einer Sorte, einer vom Menschen ausgelesenen und vermehrten Form, und jede Sorte trägt einen Namen. Den Überblick darüber zu behalten, ist eine eigene Wissenschaft: die Pomologie, die Lehre vom Obst (Obstsorten und Obstbau). Den Begriff prägte der niederländisch-deutsche Gärtner Johann Hermann Knoop, dessen „Pomologia“ von 1758 die Äpfel und Birnen seiner Zeit beschrieb und abbildete. Pomologen bestimmen alte Sorten an Form, Stiel, Kerngehäuse und Geschmack der Frucht und unterhalten Sammlungen, damit vergessene Sorten nicht verschwinden.\n\nEinige der berühmtesten Sorten entstanden durch Zufall. 1868 bemerkte Maria Ann Smith, eine Großmutter in Eastwood in New South Wales, einen Sämling an der Stelle, wo sie Apfelreste weggeworfen hatte; aus seinen grünen, säuerlichen Früchten wurde der Granny Smith, der heute in aller Welt angebaut wird. In England zog um 1830 der pensionierte Brauer Richard Cox in Colnbrook einen Sämling, aus dem der Cox Orange wurde, für viele der feinste englische Tafelapfel. Die weltweit meistangebaute Birne, die Williams Christ, stammt vermutlich aus dem Garten des Schulmeisters John Stair in Aldermaston um 1765; in Nordamerika führte sie Enoch Bartlett ein, der ihren Namen nicht kannte, und dort wird sie bis heute als Bartlett-Birne verkauft.\n\nErdbeerzüchter benennen ihre Sorten gern nach Tänzen: Polka ist im Handel, ebenso Lambada, eine sehr süße Sorte, die aus den Sorten Sivetta und Holiday gezüchtet wurde. Lambada wird von Allergikern, die sonst auf Erdbeeren reagieren, häufig gut vertragen. Die Gartenerdbeere selbst ist eine junge Pflanze: Sie entstand im 18. Jahrhundert in Europa aus einer zufälligen Kreuzung zweier amerikanischer Wildarten.\n\nAuch Gemüsesorten tragen Namen. Die Rote Bete ist ein gutes Beispiel: Die klassische Detroit Dark Red ist durch und durch tiefrot, Touchstone Gold ist eine gelbe Bete, und Chioggia, benannt nach der Fischerstadt bei Venedig, zeigt im Anschnitt konzentrische rot-weiße Ringe. Beten werden spätestens seit der Römerzeit auch wegen ihrer Wurzel angebaut.\n\n| Obst oder Gemüse | Sorte | Herkunft |\n|---|---|---|\n| Apfel | Granny Smith | Eastwood, Australien, 1868 |\n| Apfel | Cox Orange | Colnbrook, England, um 1830 |\n| Birne | Williams Christ (Bartlett) | Aldermaston, England, um 1765 |\n| Erdbeere | Lambada | Kreuzung aus Sivetta und Holiday |\n| Rote Bete | Chioggia, Detroit Dark Red, Touchstone Gold | Italien, USA |",
+    "notesEn": "The printed card spells the beet variety „Chiogga“; the variety is 'Chioggia'.",
+    "notesDe": "Die Karte schreibt „Chiogga“; die Sorte heißt 'Chioggia'."
+   }
+  }
+ ],
+ "handoff": []
+}

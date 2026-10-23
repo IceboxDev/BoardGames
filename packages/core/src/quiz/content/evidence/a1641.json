@@ -1,0 +1,350 @@
+{
+ "article": "a1641",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Salmonella",
+   "title": "Salmonella – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:15.390Z",
+   "snapshot": "729449b9c5cd58f23679a1c5d87639bbc151c0d29ff12251daac1695fb052f86"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Escherichia_coli",
+   "title": "Escherichia coli – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:16.353Z",
+   "snapshot": "5e85aad18511f53c36af7956d109d634263306e3cf6aff25a6ca8e18ad11110a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Shigella",
+   "title": "Shigella – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:17.302Z",
+   "snapshot": "f7dcdc6d41952d09ed4262c67cc4bac042ddaa9838da424adac609b49d9e3457"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alexandre_Yersin",
+   "title": "Alexandre Yersin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:40.276Z",
+   "snapshot": "0ec991af69ea5fc4f78c2198d96fdb1da918c355774681eb6c69d51a69294a8e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Listeria",
+   "title": "Listeria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:18.350Z",
+   "snapshot": "0c96728bd095e118c4ede2a19f905765340f0620e360a0e8ac9789e8d60c3e70"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Petrischale",
+   "title": "Petrischale",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:15.560Z",
+   "snapshot": "8c05123b452563006274d716603b2ea6a4501c31ab35841d18c1630f54193c28"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Pasteurisierung",
+   "title": "Pasteurisierung",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:16.572Z",
+   "snapshot": "67c8eac029c9672887e502ce6c6678ee8f647fcd49010e7e6f5fb5071cc4ff17"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Kiyoshi_Shiga",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:19.246Z",
+   "snapshot": "48bd6db4aff6e6c6bb11327e4860a49416a5e7754e4d8670a3be008e54d46fc8"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Theodor_Escherich",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:20.258Z",
+   "snapshot": "dd42c7ec2c466344bd109cabad1c7818554b0cd7a2de136d5116daaa4153ce06"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Salmonella",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Escherichia coli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shigella",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Yersinia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Listeria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Petrischale",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33; transcript tp-398"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pasteurisierung",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-308"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f08201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Salmonella is a genus of rod-shaped (bacillus), gram-negative bacteria of the family Enterobacteriaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salmonella” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f08202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Escherichia coli ( ESH-ə-RIK-ee-ə KOH-lye) is a gram-negative, facultative anaerobic, rod-shaped, coliform bacterium of the genus Escherichia that is commonly found in the lower intestine of warm-blooded organisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Escherichia coli” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f08203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shigella is a genus of bacteria that is Gram negative, facultatively anaerobic, non–spore-forming, nonmotile, rod shaped, and is genetically nested within Escherichia coli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shigella” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f08204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The bacteria was later named in his honour: Yersinia pestis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yersinia” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f08205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Listeria is a genus of bacteria that acts as an intracellular parasite in mammals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Listeria” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f13438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine Petrischale ist eine flache, runde, durchsichtige Schale mit übergreifendem Deckel, die in der Regel in der Biologie, Medizin oder Chemie zum Einsatz kommt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Petrischale” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:27:56.943Z",
+   "target": "f13439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Pasteurisierung [ˌpʰa.stø.ʁiˈziː.ʁʊŋ] oder Pasteurisation bezeichnet die kurzzeitige Erwärmung von flüssigen oder pastösen Lebensmitteln auf Temperaturen von mindestens 72 °C (klassisches Verfahren von Pasteur) bis maximal 100 °C (Hochpasteurisieren) zur Abtötung der vegetativen Phasen von",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pasteurisierung” is on the snapshot of s7"
+  }
+ ]
+}

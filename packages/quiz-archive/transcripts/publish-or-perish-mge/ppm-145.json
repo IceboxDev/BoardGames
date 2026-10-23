@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-145",
+ "image": "IMG20261022154701.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Cultural Studies",
+   "cardText": "[Cultural Studies] Which of the following countries has a calendar with 13 months?\nA. Ethiopian\nB. Brunei\nC. Japan\nAnswer: A. This is because the Ethiopian calendar calculates the birth year of Jesus Christ differently. When the Catholic Church updated its calculation around 500 CE, the Ethiopian Orthodox Church did not.",
+   "de": "Der Kalender welches Landes hat 13 Monate – zwölf zu je 30 Tagen und einen kurzen dreizehnten Monat mit fünf oder sechs Tagen?",
+   "en": "Which country's calendar has 13 months – twelve of 30 days plus a short thirteenth month of five or six days?",
+   "reworked": true,
+   "answerDe": "Äthiopien",
+   "answerEn": "Ethiopia",
+   "timeline": {
+    "kind": "event",
+    "start": "2007-09-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Ethiopia celebrates the start of the year 2000 in its own calendar, the Ethiopian Millennium",
+    "labelDe": "Äthiopien feiert den Beginn des Jahres 2000 seines eigenen Kalenders, das äthiopische Millennium"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Ethiopian_calendar",
+    "title": "Ethiopian calendar",
+    "lang": "en"
+   },
+   "notes": "Card's option reads 'Ethiopian' (an adjective) for a country. Its explanation is wrong for the question: the different dating of Christ's incarnation (Annianus c. 400 vs Dionysius Exiguus 525) explains why Ethiopian years run 7–8 years behind, not why there are 13 months; the 13th month (Pagume) is the 5–6 epagomenal days after twelve 30-day months (Wikipedia).",
+   "domain": "society",
+   "sub": "society"
+  },
+  {
+   "category": 2,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] What is the “Panspermia theory”?\nA. It explains the movement of galaxies\nB. It suggests life on Earth came from outer space\nC. It describes the formation of stars\nAnswer: B. Panspermia hypothesizes that life on Earth may have originated from microorganisms or organic particles from space, possibly carried by cosmic bodies.",
+   "de": "Welche Hypothese besagt, dass das Leben auf der Erde aus dem Weltall stammt – als Mikroorganismen oder organische Teilchen, die von Himmelskörpern hergebracht wurden?",
+   "en": "Which hypothesis proposes that life on Earth came from outer space, as microorganisms or organic particles carried here by cosmic bodies?",
+   "reworked": true,
+   "answerDe": "Panspermie",
+   "answerEn": "Panspermia",
+   "timeline": {
+    "kind": "era",
+    "start": "-500",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The idea of panspermia is traced back to the Greek philosopher Anaxagoras in the 5th century BC",
+    "labelDe": "Die Idee der Panspermie geht auf den griechischen Philosophen Anaxagoras im 5. Jahrhundert v. Chr. zurück"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Panspermia",
+    "title": "Panspermia",
+    "lang": "en"
+   },
+   "notes": "Reversed from 'what is panspermia' to ask the name. Panspermia remains a fringe hypothesis, not established theory.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  }
+ ]
+}

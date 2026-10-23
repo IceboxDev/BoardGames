@@ -1,0 +1,202 @@
+{
+ "article": "a1803",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hassan_II_Mosque",
+   "title": "Hassan II Mosque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:30.579Z",
+   "snapshot": "c6054ee136c4cabcee9f5dc062bde6192d2db166567bb7a33853d1131f8bd80d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mosque%E2%80%93Cathedral_of_C%C3%B3rdoba",
+   "title": "Mosque–Cathedral of Córdoba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:34.358Z",
+   "snapshot": "584a4a9d0c4161959fe73145e16181382b85bdaa6a7dc55578c6931a419b389d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Minbar_of_the_Kutubiyya_Mosque",
+   "title": "Minbar of the Kutubiyya Mosque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:31.498Z",
+   "snapshot": "3c8c613e0ad55fc050401d85692c5b5bbdb98d3b88c2c09dc0d6c645d5f65541"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pagoda_of_Fogong_Temple",
+   "title": "Pagoda of Fogong Temple – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:32.413Z",
+   "snapshot": "51f269b246f76c15a721b06509ced39ff6c66f4b62eb2e177a9c91abd4e09809"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/H%C5%8Dry%C5%AB-ji",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:23:33.414Z",
+   "snapshot": "a89ee5239b23ebb3c82ea7bcab310114da7e2b94bd303f6c087d0c979a15b563"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09011",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Minaret",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c151"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mihrab",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09013",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Minbar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pagoda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:24.711Z",
+   "target": "f09011",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Its minaret is the world's second tallest minaret at 210 metres (689 ft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minaret” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:24.711Z",
+   "target": "f09012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Among the most notable additions, Abd al-Rahman III added a minaret (finished in 958), and his son al-Hakam II added a richly decorated new mihrab and maqsurah section (finished in 971).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mihrab” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:24.711Z",
+   "target": "f09013",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Minbar of the Kutubiyya Mosque is a minbar (Arabic: منبر; a mosque furnishing similar to a pulpit) produced in Cordoba, Spain (al-Andalus at the time), in the early 12th century by order of the Almoravid ruler Ali ibn Yusuf.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Minbar” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:24.711Z",
+   "target": "f09015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Sakyamuni Pagoda of Fogong Temple (simplified Chinese: 佛宫寺释迦塔; traditional Chinese: 佛宮寺釋迦塔; pinyin: Fógōng Sì Shìjiā Tǎ) of Ying County, Shanxi province, China, is a wooden Chinese pagoda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:24.711Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pagoda” is on the snapshot of s4"
+  }
+ ]
+}

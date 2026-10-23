@@ -1,0 +1,288 @@
+{
+ "article": "a2445",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice_and_Zombies",
+   "title": "Pride and Prejudice and Zombies",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:43.009Z",
+   "snapshot": "92b9b2c339def0a87517832ca992dbb904a414461b3dd8b29554757ec892bfc6"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Max_Brooks",
+   "title": "Max Brooks",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:59:40.157Z",
+   "snapshot": "4ae8a6c667eb4fd56971533c18dcf9cac2a24b1cf418c363c63078ffe24cc778"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/William_Shakespeare%27s_Star_Wars",
+   "title": "William Shakespeare's Star Wars",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:44.025Z",
+   "snapshot": "50c9f8eff084691cd72dcc981e60124629612c639306658dd45f41dd7b49ad77"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln:_Vampire_Hunter",
+   "title": "Abraham Lincoln: Vampire Hunter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:45.036Z",
+   "snapshot": "900355c772cb59108f6f0246636b8658cd189e0925b61e1ceb05ea684277a350"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/World_War_Z",
+   "title": "World War Z – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:46.075Z",
+   "snapshot": "bf4c37b252e0a329ad8390ee3831b204edd7af76389006d801816c489a8a864d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sense_and_Sensibility_and_Sea_Monsters",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:47.091Z",
+   "snapshot": "746299665b8e49e71468c2f5fc3ba3e2268fb5411ace4fc386c2c5d411c45a3f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12865",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pride and Prejudice and Zombies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-298"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12866",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Zombie Survival Guide",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-290"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12867",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Star Wars",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-394"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12868",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seth Grahame-Smith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12869",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abraham Lincoln",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "World War Z",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:21.303Z",
+   "target": "f12865",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pride and Prejudice and Zombies is a 2009 parody novel by Seth Grahame-Smith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pride and Prejudice and Zombies” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:21.303Z",
+   "target": "f12866",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brooks ist der Autor des 2003 veröffentlichten Buches Der Zombie Survival Guide.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Zombie Survival Guide” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:21.303Z",
+   "target": "f12867",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "William Shakespeare's Star Wars is a series of plays by Ian Doescher that parody the style of William Shakespeare, with nine instalments adapting the films of the Skywalker Saga.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Star Wars” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:21.303Z",
+   "target": "f12868",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pride and Prejudice and Zombies is a 2009 parody novel by Seth Grahame-Smith.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seth Grahame-Smith” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:21.303Z",
+   "target": "f12869",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Abraham Lincoln: Vampire Hunter is a 2012 American horror film directed by Timur Bekmambetov, produced by Bekmambetov, Tim Burton, and Jim Lemley, and written by Seth Grahame-Smith, who also serves as an executive producer alongside Simon Kinberg, Michele Wolkoff, and John J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abraham Lincoln” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:21.303Z",
+   "target": "f12870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "World War Z: An Oral History of the Zombie War is a 2006 zombie apocalyptic horror novel written by American author Max Brooks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “World War Z” is on the snapshot of s5"
+  }
+ ]
+}

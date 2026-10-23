@@ -1,0 +1,134 @@
+{
+ "source": "publish-or-perish",
+ "bucket": "history/medieval",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "pp-012",
+    "category": 1
+   },
+   "factId": "f02772"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "pp-030",
+    "category": 1
+   },
+   "factId": "f13722"
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "pp-076",
+      "category": 2
+     }
+    },
+    {
+     "generated": {
+      "en": "Which English king sealed Magna Carta in June 1215?",
+      "de": "Welcher englische König besiegelte im Juni 1215 die Magna Carta?",
+      "answerEn": "King John",
+      "answerDe": "Johann Ohneland",
+      "timeline": {
+       "kind": "reign",
+       "start": "1199",
+       "end": "1216",
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Reign of King John of England",
+       "labelDe": "Regierungszeit König Johanns von England"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+       "title": "Magna Carta – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which meadow beside the River Thames was Magna Carta sealed?",
+      "de": "Auf welcher Wiese an der Themse wurde die Magna Carta besiegelt?",
+      "answerEn": "Runnymede",
+      "answerDe": "Runnymede",
+      "timeline": {
+       "kind": "event",
+       "start": "1215-06-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "King John seals Magna Carta at Runnymede",
+       "labelDe": "König Johann besiegelt die Magna Carta in Runnymede"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+       "title": "Magna Carta – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which pope declared Magna Carta null and void only weeks after it was sealed in 1215?",
+      "de": "Welcher Papst erklärte die Magna Carta 1215 nur Wochen nach ihrer Besiegelung für nichtig?",
+      "answerEn": "Innocent III",
+      "answerDe": "Innozenz III.",
+      "timeline": {
+       "kind": "event",
+       "start": "1215",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Pope Innocent III annuls Magna Carta",
+       "labelDe": "Papst Innozenz III. erklärt die Magna Carta für nichtig"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+       "title": "Magna Carta – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How many barons were to sit on the council that clause 61 of Magna Carta set up to hold the king to his promises?",
+      "de": "Wie viele Barone sollten dem Rat angehören, den Klausel 61 der Magna Carta einsetzte, um den König an seine Zusagen zu binden?",
+      "answerEn": "25",
+      "answerDe": "25",
+      "timeline": {
+       "kind": "event",
+       "start": "1215-06-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Magna Carta's security clause creates a council of barons",
+       "labelDe": "Die Sicherheitsklausel der Magna Carta schafft einen Rat der Barone"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+       "title": "Magna Carta – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Magna Carta: The Charter of Runnymede",
+    "titleDe": "Magna Carta: Die Urkunde von Runnymede",
+    "bodyEn": "In the spring of 1215 England was on the brink of civil war. King John – nicknamed \"Lackland\" because, as a youngest son, he had at first been left without lands – had lost Normandy and most of his French possessions to Philip II of France, squeezed his barons with ever heavier taxes and fines to pay for his failed wars, and quarrelled with the Church. In May a group of rebel barons seized London.\n\nThe two sides met on neutral ground: Runnymede, a water meadow beside the River Thames between the royal castle of Windsor and the rebel camp at Staines. There, on 15 June 1215, King John set his seal to a charter of liberties, largely drafted by the Archbishop of Canterbury, Stephen Langton. It was not signed – medieval kings sealed documents – and it was only later called Magna Carta, the \"Great Charter\", to distinguish it from a smaller Forest Charter.\n\nMost of its 63 clauses dealt with the grievances of the moment: feudal payments, inheritance, the rights of widows, fish weirs on the Thames, the dismissal of the king's foreign mercenaries. But a few reached much further. The most famous promised that no free man would be seized, imprisoned or outlawed \"except by the lawful judgement of his peers or by the law of the land\", and that justice would be neither sold, denied nor delayed. Above all, Magna Carta is credited with establishing the principle that the king is subject to the law – that the crown, too, is bound by rules it cannot simply set aside.\n\nTo make the promises stick, clause 61, the \"security clause\", set up a council of 25 barons who could seize the king's castles and lands if he broke the charter. No king could accept such a check for long. John appealed to his overlord, Pope Innocent III, who in August 1215 declared the charter null and void as an affront to royal and papal authority. War broke out again, and only John's death in October 1216 ended it.\n\nYet the charter survived its author. The regents of the nine-year-old Henry III reissued it in 1216 and 1217, without the security clause, and in 1225 Henry reissued it again in exchange for a new tax. The 1297 version entered the statute book, and three of its clauses are still in force in England and Wales today. Four original copies of the 1215 charter survive – two in the British Library and one each in Lincoln and Salisbury Cathedrals.\n\nSeventeenth-century lawyers such as Edward Coke turned Magna Carta into a weapon against Stuart absolutism, and from there it shaped the English Bill of Rights, the constitutions of the American colonies and the US Bill of Rights. Lord Denning called it \"the greatest constitutional document of all times\".\n\n| Date | Event |\n|---|---|\n| 15 June 1215 | King John seals the charter at Runnymede |\n| August 1215 | Innocent III annuls it |\n| 1216 / 1217 / 1225 | Reissued under Henry III |\n| 1297 | Enters the statute book |",
+    "bodyDe": "Im Frühjahr 1215 stand England am Rand eines Bürgerkriegs. König Johann Ohneland – so genannt, weil er als jüngster Sohn zunächst kein eigenes Land erhalten hatte – hatte die Normandie und den Großteil seiner französischen Besitzungen an Philipp II. von Frankreich verloren, seine Barone mit immer höheren Steuern und Abgaben für die gescheiterten Kriege ausgepresst und sich mit der Kirche überworfen. Im Mai besetzte eine Gruppe aufständischer Barone London.\n\nDie beiden Seiten trafen sich auf neutralem Boden: in Runnymede, einer Flusswiese an der Themse zwischen der königlichen Burg Windsor und dem Lager der Rebellen bei Staines. Dort setzte König Johann am 15. Juni 1215 sein Siegel unter eine Freiheitsurkunde, die weitgehend der Erzbischof von Canterbury, Stephen Langton, entworfen hatte. Unterschrieben wurde sie nicht – mittelalterliche Könige siegelten –, und den Namen Magna Carta, „Große Urkunde“, erhielt sie erst später, zur Unterscheidung von einer kleineren Forsturkunde.\n\nDie meisten ihrer 63 Klauseln betrafen die Beschwerden des Augenblicks: Lehnsabgaben, Erbrecht, die Rechte von Witwen, Fischwehre in der Themse, die Entlassung der ausländischen Söldner des Königs. Einige aber reichten viel weiter. Die berühmteste versprach, dass kein freier Mann verhaftet, eingekerkert oder geächtet werden dürfe „außer durch das rechtmäßige Urteil seiner Standesgenossen oder durch das Gesetz des Landes“, und dass Recht weder verkauft noch verweigert noch verzögert werde. Vor allem aber wird der Magna Carta der Grundsatz zugeschrieben, dass auch der König dem Gesetz unterworfen ist – dass auch die Krone an Regeln gebunden ist, über die sie sich nicht einfach hinwegsetzen kann.\n\nDamit die Zusagen hielten, setzte Klausel 61, die „Sicherheitsklausel“, einen Rat von 25 Baronen ein, der die Burgen und Ländereien des Königs beschlagnahmen durfte, wenn er die Urkunde brach. Eine solche Kontrolle konnte kein König lange hinnehmen. Johann wandte sich an seinen Lehnsherrn, Papst Innozenz III., der die Urkunde im August 1215 als Angriff auf die königliche und päpstliche Autorität für nichtig erklärte. Der Krieg brach erneut aus, und erst Johanns Tod im Oktober 1216 beendete ihn.\n\nDoch die Urkunde überlebte ihren Urheber. Die Regenten des neunjährigen Heinrich III. erneuerten sie 1216 und 1217, ohne die Sicherheitsklausel, und 1225 bestätigte Heinrich sie erneut im Tausch gegen eine neue Steuer. Die Fassung von 1297 ging in die Gesetzessammlung ein, und drei ihrer Klauseln gelten in England und Wales bis heute. Vier Originalausfertigungen von 1215 sind erhalten – zwei in der British Library und je eine in den Kathedralen von Lincoln und Salisbury.\n\nJuristen des 17. Jahrhunderts wie Edward Coke machten die Magna Carta zur Waffe gegen den Absolutismus der Stuarts, und von dort prägte sie die englische Bill of Rights, die Verfassungen der amerikanischen Kolonien und die Bill of Rights der USA. Lord Denning nannte sie „das größte Verfassungsdokument aller Zeiten“.\n\n| Datum | Ereignis |\n|---|---|\n| 15. Juni 1215 | König Johann besiegelt die Urkunde in Runnymede |\n| August 1215 | Innozenz III. erklärt sie für nichtig |\n| 1216 / 1217 / 1225 | Neuausgaben unter Heinrich III. |\n| 1297 | Aufnahme in die Gesetzessammlung |",
+    "notesEn": "The 1215 charter was above all a peace treaty between the king and his barons; reading it as the founding statement of 'the king under the law' is largely the work of later lawyers, from Edward Coke onward.",
+    "notesDe": "Die Urkunde von 1215 war vor allem ein Friedensvertrag zwischen König und Baronen; dass sie als Gründungstext des „Königs unter dem Gesetz“ gelesen wird, ist großenteils das Werk späterer Juristen ab Edward Coke."
+   }
+  }
+ ],
+ "handoff": []
+}

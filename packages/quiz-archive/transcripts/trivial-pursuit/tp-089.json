@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-089",
+ "image": "IMG20261007182031.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Die Planer des Berliner Flughafens rechneten beim Spatenstich 2006 mit einer fünfjährigen Bauzeit bis zur Eröffnung. Richtig oder falsch?",
+   "de": "In welchem Jahr sollte der neue Berliner Flughafen BER nach der Planung beim ersten Spatenstich 2006 eröffnet werden?",
+   "en": "In which year was Berlin's new BER airport supposed to open, according to the plans at the groundbreaking in 2006?",
+   "reworked": true,
+   "answerDe": "2011",
+   "answerEn": "2011",
+   "timeline": {
+    "kind": "event",
+    "start": "2006-09-05",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Groundbreaking for Berlin Brandenburg Airport (BER)",
+    "labelDe": "Erster Spatenstich für den Flughafen Berlin Brandenburg (BER)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Flughafen_Berlin_Brandenburg",
+    "title": "Flughafen Berlin Brandenburg",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true: opening was expected in October 2011, five years after the groundbreaking. The airport actually opened on 31 October 2020.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Schauspieler, der Fredo in zwei Teilen von Der Pate war, spielte vor seinem Tod in fünf Filmen mit, die alle für den Oscar nominiert wurden?",
+   "de": "Welcher Schauspieler, der Fredo in zwei Teilen von Der Pate war, spielte vor seinem Tod in fünf Filmen mit, die alle für den Oscar nominiert wurden?",
+   "en": "Which actor, who played Fredo in two Godfather films, appeared in five films before his death, all of which were nominated for the Oscar?",
+   "reworked": false,
+   "answerDe": "John Cazale",
+   "answerEn": "John Cazale",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1935-08-12",
+    "end": "1978-03-13",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Life of John Cazale, Fredo Corleone in The Godfather films",
+    "labelDe": "Leben von John Cazale, Fredo Corleone in den Pate-Filmen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/John_Cazale",
+    "title": "John Cazale",
+    "lang": "de"
+   },
+   "notes": "All five films were nominated for Best Picture; three won (The Godfather, The Godfather Part II, The Deer Hunter).",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welche Verschwörungstheorie gibt es seit dem 20. Juli 1969?",
+   "de": "Welche Verschwörungstheorie gibt es seit dem 20. Juli 1969?",
+   "en": "Which conspiracy theory has existed since 20 July 1969?",
+   "reworked": false,
+   "answerDe": "Die Mondlandung sei gefälscht gewesen",
+   "answerEn": "That the Moon landing was faked",
+   "timeline": {
+    "kind": "event",
+    "start": "1969-07-20",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Apollo 11 lands on the Moon",
+    "labelDe": "Apollo 11 landet auf dem Mond"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Moon_landing_conspiracy_theories",
+    "title": "Moon landing conspiracy theories",
+    "lang": "en"
+   },
+   "notes": "The claims that the Apollo Moon landings were staged; 20 July 1969 is the Apollo 11 landing.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welcher berühmte Musiker wurde 1965 beim Newport Folk Festival dafür ausgebuht, weil er von einer akustischen Gitarre zu einer elektrischen wechselte?",
+   "de": "Welcher berühmte Musiker wurde 1965 beim Newport Folk Festival dafür ausgebuht, weil er von einer akustischen Gitarre zu einer elektrischen wechselte?",
+   "en": "Which famous musician was booed at the 1965 Newport Folk Festival for switching from an acoustic to an electric guitar?",
+   "reworked": false,
+   "answerDe": "Bob Dylan",
+   "answerEn": "Bob Dylan",
+   "timeline": {
+    "kind": "event",
+    "start": "1965-07-25",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bob Dylan plays an electric set at the Newport Folk Festival",
+    "labelDe": "Bob Dylan spielt beim Newport Folk Festival ein elektrisch verstärktes Set"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Electric_Dylan_controversy",
+    "title": "Electric Dylan controversy",
+    "lang": "en"
+   },
+   "notes": "Some witnesses attribute the boos to poor sound and the short set rather than the electric guitar.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 5,
+   "cardDe": "Es ist verboten, auf bundesdeutschen Brücken im Gleichschritt zu marschieren. Richtig oder falsch?",
+   "de": "Welche deutsche Verordnung verbietet es, auf Brücken im Gleichschritt zu marschieren?",
+   "en": "Which German regulation prohibits marching in step on bridges?",
+   "reworked": true,
+   "answerDe": "Die Straßenverkehrs-Ordnung (StVO)",
+   "answerEn": "The Road Traffic Regulations (StVO)",
+   "timeline": {
+    "kind": "event",
+    "start": "2013-04-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The revised German Road Traffic Regulations (StVO) come into force",
+    "labelDe": "Die Neufassung der deutschen Straßenverkehrs-Ordnung (StVO) tritt in Kraft"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gleichschritt",
+    "title": "Gleichschritt",
+    "lang": "de"
+   },
+   "notes": "Card's statement is true: § 27 Abs. 6 StVO, because rhythmic steps can excite a bridge's resonance. Timeline date from de.wikipedia 'Straßenverkehrs-Ordnung (Deutschland)'.",
+   "domain": "society",
+   "sub": "law"
+  },
+  {
+   "category": 6,
+   "cardDe": "Welche Sportart, bei der ein Besen zum Einsatz kommt, wird auch als „Schach auf dem Eis“ bezeichnet?",
+   "de": "Welche Sportart, bei der ein Besen zum Einsatz kommt, wird auch als „Schach auf dem Eis“ bezeichnet?",
+   "en": "Which sport, in which a broom is used, is also called \"chess on ice\"?",
+   "reworked": false,
+   "answerDe": "Curling",
+   "answerEn": "Curling",
+   "timeline": {
+    "kind": "event",
+    "start": "1998",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Curling becomes an official Olympic sport at the Nagano Winter Games",
+    "labelDe": "Curling wird bei den Winterspielen in Nagano offizielle olympische Sportart"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Curling",
+    "title": "Curling",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

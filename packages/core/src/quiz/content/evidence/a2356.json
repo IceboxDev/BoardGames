@@ -1,0 +1,442 @@
+{
+ "article": "a2356",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Galileo_Galilei",
+   "title": "Galileo Galilei",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:52.013Z",
+   "snapshot": "a060f6b2517bfc21c0af3b546206c5080bc6b91ae7e1e0a1a5cdf5859a33441e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tycho_Brahe",
+   "title": "Tycho Brahe",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:52.963Z",
+   "snapshot": "80ec01c2351c5302089cb2061ecca4c32e196691699c8d0a0725490cddab0b80"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+   "title": "Galileo Galilei – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:55.405Z",
+   "snapshot": "1421826a03edb09e50de5da9d96dc551bf89b82b4eea4f5fc00996b9ce97b25e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Uraniborg",
+   "title": "Uraniborg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:56.377Z",
+   "snapshot": "ec5147ce44a134c6d6e2db25731b9711f766aed64b12eb069f819527a3dea7e5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tycho_Brahe",
+   "title": "Tycho Brahe – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:12:07.806Z",
+   "snapshot": "ba886fd9d5cb08e2735ca198ee46aa6298601c3a8ad5206668b0845b5f5e529e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus",
+   "title": "Nicolaus Copernicus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:15.012Z",
+   "snapshot": "4a69077e894e76b18dabf866e4da8269a8a7748aae7228ba251f1bffeca1e088"
+  },
+  "s7": {
+   "url": "https://www.livescience.com/24835-astronomer-tycho-brahe-death.html",
+   "title": "Tycho Brahe Died From Pee, Not Poison",
+   "publisher": "Live Science",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:52.054Z",
+   "snapshot": "54c51c6124bc3a5e7c6b5aeac89c24ab3158665de2a3d9458f29fd1136207313"
+  },
+  "s8": {
+   "url": "https://sciencedaily.com/releases/2012/11/121115133420.htm",
+   "title": "Tycho Brahe was not poisoned, new analysis shows",
+   "publisher": "ScienceDaily (Aarhus University press release)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:52.756Z",
+   "snapshot": "75c408602c59617c5d40a02d787991982e71b9027ea539a7c61601975ccce2ec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Galileo Galilei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "die Nase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-027"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Santa Croce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prague",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Frombork",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:03.981Z",
+   "target": "f12278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Galileo Galilei stammte aus einer verarmten Florentiner Patrizierfamilie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galileo Galilei” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:03.981Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "die Nase",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“die Nase”, “His nose”, “нос”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:03.981Z",
+   "target": "f12280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She died on 2 April 1634, and is buried with Galileo at the Basilica of Santa Croce, Florence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santa Croce” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:03.981Z",
+   "target": "f12281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1580 on Ven, an island in the Öresund between Zealand and Scania, Sweden, which was part of Denmark at the time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ven” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:03.981Z",
+   "target": "f12282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He was invited to Prague, where he became the official imperial astronomer, and built an observatory at Benátky nad Jizerou.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prague” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:03.981Z",
+   "target": "f12283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "His brother Andreas (Andrew) became an Augustinian canon at Frauenburg (Frombork).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:03.981Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frombork” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:00:08Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im Alter von 20 Jahren verlor Brahe in Rostock bei einem Duell mit seinem Cousin Manderup Parsberg einen großen Teil seiner Nase",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:00:09Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Separately, tests revealed that Brahe's famously \"silver\" prosthetic nose was actually made out of brass.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Reports the Aarhus University (Jens Vellev) analysis after the 2010 exhumation."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:00:15Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tycho Brahe lost part of his nose in a duel in 1566.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Aarhus University release on the 2010 exhumation; the nose prosthesis was brass."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:48.537Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im Alter von 20 Jahren verlor Brahe in Rostock bei einem Duell mit seinem Cousin Manderup Parsberg einen großen Teil seiner Nase",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:48.537Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Separately, tests revealed that Brahe's famously \"silver\" prosthetic nose was actually made out of brass.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:48.537Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tycho Brahe lost part of his nose in a duel in 1566.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:48.537Z",
+   "target": "f12279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tycho Brahe lost part of his nose in a duel in 1566.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:48.537Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “His nose” is on the snapshot of s8"
+  }
+ ]
+}

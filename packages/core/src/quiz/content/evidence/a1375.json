@@ -1,0 +1,202 @@
+{
+ "article": "a1375",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Angela_Merkel",
+   "title": "Angela Merkel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:38.827Z",
+   "snapshot": "370f69cc0d8a9b9c1596bd0e3065ad7abf33d162ee4e95dcec5e13f214da844f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Helmut_Kohl",
+   "title": "Helmut Kohl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:42.535Z",
+   "snapshot": "8c3031d4af85e7fcec6696b2f36a15cf3502fe27195bf101ec330534a9f6d621"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Helmut_Schmidt",
+   "title": "Helmut Schmidt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:40:38.038Z",
+   "snapshot": "072c1a66922932e589c312709493424b854ca3f211ea4a02838d18a252712ba0"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ursula_von_der_Leyen",
+   "title": "Ursula von der Leyen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:57:40.708Z",
+   "snapshot": "93390c4d9a71a88ec3d049983e3160ea633a5981527492539fd419594825f4bd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:38.642Z",
+   "snapshot": "87a766ce9acd8a37fb03deca095a90df6251e5e97930d56895d7c467a043afb9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Physik",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c115"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Geschichte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06874",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Volkswirtschaftslehre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Medizin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:15.798Z",
+   "target": "f06871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kasner hatte sich bereits während ihrer Schulzeit für das Studium der Physik an der Karl-Marx-Universität Leipzig entschieden, das sie 1973 aufnahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Physik” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:15.798Z",
+   "target": "f06873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zum Wintersemester 1950/51 begann er, an der Johann Wolfgang Goethe-Universität Frankfurt am Main Rechtswissenschaft und Geschichte zu studieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Geschichte” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:15.798Z",
+   "target": "f06874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nach der Entlassung entschied er sich jedoch aus finanziellen und zeitlichen Gründen für ein möglichst schnell zu absolvierendes „Brotstudium“ und studierte ab dem Wintersemester 1945 an der Universität Hamburg Volkswirtschaftslehre sowie Staatswissenschaft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volkswirtschaftslehre” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:15.798Z",
+   "target": "f06875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Von der Leyen ist seit 1986 mit dem Medizin-Professor und Unternehmer Heiko von der Leyen verheiratet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:15.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Medizin” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,187 @@
+{
+ "article": "a2051",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Michel_Adanson",
+   "title": "Michel Adanson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:21.330Z",
+   "snapshot": "288deaca46a93e0ebeec92c14f8f37ccc46d5b628ce8be1ad4e63c333495e6a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cedar_Revolution",
+   "title": "Cedar Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:22.497Z",
+   "snapshot": "b6f3495d326ca4a715e71e83912b3331663a17312e3dd6db37812a56c51ff4b2"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Deutsche_Eurom%C3%BCnzen",
+   "title": "Deutsche Euromünzen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:35:58.916Z",
+   "snapshot": "a346ee99d596dbf77fbd924be3788849a5d79048cf53d3064b844fe12ebf670c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10251",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "baobab",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c171"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10252",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cedar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michel Adanson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rolf Lederbogen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:14.186Z",
+   "target": "f10251",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Besides the books already mentioned he published papers on the ship-worm, the baobab tree (whose generic name Adansonia commemorates Adanson), the origin of the varieties of cultivated plants, and gum-producing trees.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “baobab” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:14.186Z",
+   "target": "f10252",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Cedar Revolution (Arabic: ثورة الأرز, romanized: thawrat al-arz), known in Lebanon as the Independence intifada (انتفاضة الاستقلال, intifadat al-istiqlal), was a chain of demonstrations in Lebanon (especially in the capital Beirut) triggered by the assassination of former Lebanese Prime Minister",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cedar” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:14.186Z",
+   "target": "f23145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Michel Adanson (7 April 1727 – 3 August 1806) was an 18th-century French botanist and naturalist who travelled to Senegal to study flora and fauna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michel Adanson” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:14.186Z",
+   "target": "f23146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die kleinste Reihe der 1-, 2- und 5-Cent-Münzen wurde von Rolf Lederbogen entworfen und weist Eichenlaub auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rolf Lederbogen” is on the snapshot of s3"
+  }
+ ]
+}

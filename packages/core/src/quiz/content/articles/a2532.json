@@ -1,0 +1,352 @@
+{
+ "id": "a2532",
+ "domain": "science",
+ "sub": "maths",
+ "titleEn": "Counting in Twos: How the Binary System Works",
+ "titleDe": "Zählen in Zweierschritten: So funktioniert das Binärsystem",
+ "titleRu": "Счёт двойками: как устроена двоичная система",
+ "bodyEn": "Our everyday numbers are written in base ten: ten digits, and each place is worth ten times the one to its right. The binary system does the same job with the smallest possible base: it counts in base 2. It needs only two digits, 0 and 1, and each place is worth twice the one to its right – ones, twos, fours, eights, sixteens and so on. Gottfried Wilhelm Leibniz set out its arithmetic in his \"Explication de l'Arithmétique Binaire\", published in 1703, and was delighted to find the same pattern in the hexagrams of the Chinese I Ching. Two and a half centuries later it became the native language of computers, because a switch, a transistor or a magnetised spot has exactly two states, off and on.\n\nReading a binary number means adding up the places that hold a 1. The number 1000 in binary has a single 1 in the eights place, so it stands for 8. The number 1010 has ones in the eights and twos places: 8 + 2 = 10, so ten is written 1010. The number 1100 has ones in the eights and fours places, 8 + 4 = 12, so 1100 stands for twelve. And 1111, with every place filled, is 8 + 4 + 2 + 1 = 15, the largest number four binary digits can hold – one less than 16, which needs a fifth digit and is written 10000.\n\n| Decimal | Eights | Fours | Twos | Ones | Binary |\n|---|---|---|---|---|---|\n| 8 | 1 | 0 | 0 | 0 | 1000 |\n| 10 | 1 | 0 | 1 | 0 | 1010 |\n| 12 | 1 | 1 | 0 | 0 | 1100 |\n| 15 | 1 | 1 | 1 | 1 | 1111 |\n\nGoing the other way is just as mechanical. Divide the number by two again and again and write down the remainders: 10 gives remainders 0, 1, 0, 1, which read from the last to the first spell 1010. Arithmetic is simpler than in any other base, because the multiplication table has only four entries; that simplicity is exactly what an electronic circuit needs.\n\nThe price is length. A number needs roughly three and a third times as many binary digits as decimal ones, which is why programmers group binary digits in fours and write each group as one hexadecimal digit: 1111 becomes F. A single binary digit is a bit, eight of them a byte, and a byte can hold 256 different values, from 0 to 255.\n\nBinary counting also hides in plain sight. Hold up fingers as ones and zeros and two hands can count to 1023; the old trick of weighing anything up to 15 grams with only 1, 2, 4 and 8 gram weights is binary in disguise.",
+ "bodyDe": "Unsere Alltagszahlen sind im Zehnersystem geschrieben: zehn Ziffern, und jede Stelle ist zehnmal so viel wert wie die rechts daneben. Das Binärsystem leistet dasselbe mit der kleinstmöglichen Basis: Es zählt zur Basis 2. Es braucht nur zwei Ziffern, 0 und 1, und jede Stelle ist doppelt so viel wert wie die rechts daneben – Einer, Zweier, Vierer, Achter, Sechzehner und so weiter. Gottfried Wilhelm Leibniz legte seine Arithmetik in der 1703 veröffentlichten „Explication de l’Arithmétique Binaire“ dar und freute sich, dasselbe Muster in den Hexagrammen des chinesischen I Ging wiederzufinden. Zweieinhalb Jahrhunderte später wurde es zur Muttersprache der Computer, denn ein Schalter, ein Transistor oder ein magnetisierter Fleck hat genau zwei Zustände, aus und an.\n\nEine Binärzahl zu lesen heißt, die Stellen zu addieren, an denen eine 1 steht. Die Zahl 1000 hat im Binärsystem eine einzige 1 an der Achterstelle und steht also für 8. Die Zahl 1010 hat Einsen an der Achter- und der Zweierstelle: 8 + 2 = 10, die Zehn schreibt man also 1010. Die Zahl 1100 hat Einsen an der Achter- und der Viererstelle, 8 + 4 = 12, 1100 steht also für zwölf. Und 1111, bei der jede Stelle besetzt ist, ergibt 8 + 4 + 2 + 1 = 15, die größte Zahl, die vier Binärziffern fassen können – eins weniger als 16, die eine fünfte Ziffer braucht und 10000 geschrieben wird.\n\n| Dezimal | Achter | Vierer | Zweier | Einer | Binär |\n|---|---|---|---|---|---|\n| 8 | 1 | 0 | 0 | 0 | 1000 |\n| 10 | 1 | 0 | 1 | 0 | 1010 |\n| 12 | 1 | 1 | 0 | 0 | 1100 |\n| 15 | 1 | 1 | 1 | 1 | 1111 |\n\nDer umgekehrte Weg ist ebenso mechanisch. Man teilt die Zahl immer wieder durch zwei und notiert die Reste: 10 ergibt die Reste 0, 1, 0, 1, die vom letzten zum ersten gelesen 1010 ergeben. Das Rechnen ist einfacher als in jeder anderen Basis, denn das Einmaleins hat nur vier Einträge; genau diese Einfachheit braucht eine elektronische Schaltung.\n\nDer Preis ist die Länge. Eine Zahl braucht ungefähr 3,3-mal so viele Binärziffern wie Dezimalziffern, weshalb Programmierer Binärziffern in Vierergruppen bündeln und jede Gruppe als eine Hexadezimalziffer schreiben: Aus 1111 wird F. Eine einzelne Binärziffer ist ein Bit, acht davon ein Byte, und ein Byte kann 256 verschiedene Werte annehmen, von 0 bis 255.\n\nBinäres Zählen versteckt sich auch im Alltag. Wer Finger als Einsen und Nullen hebt, kann mit zwei Händen bis 1023 zählen; der alte Trick, alles bis 15 Gramm mit nur 1-, 2-, 4- und 8-Gramm-Gewichten abzuwiegen, ist verkleidetes Binärsystem.",
+ "bodyRu": "Наши повседневные числа записываются в десятичной системе: десять цифр, и каждый разряд стоит в десять раз больше соседнего справа. Двоичная система делает то же самое с наименьшим возможным основанием: её основание 2. Ей нужны всего две цифры, 0 и 1, и каждый разряд стоит вдвое больше соседнего справа – единицы, двойки, четвёрки, восьмёрки, шестнадцатки и так далее. Готфрид Вильгельм Лейбниц изложил её арифметику в «Объяснении двоичной арифметики» (Explication de l'Arithmétique Binaire), опубликованном в 1703 году, и с восторгом обнаружил тот же узор в гексаграммах китайской «Книги перемен». Два с половиной столетия спустя она стала родным языком компьютеров, потому что у выключателя, транзистора или намагниченной точки ровно два состояния – выключено и включено.\n\nПрочитать двоичное число – значит сложить разряды, в которых стоит 1. Число 1000 в двоичной записи имеет единственную 1 в разряде восьмёрок и потому означает 8. У числа 1010 единицы стоят в разрядах восьмёрок и двоек: 8 + 2 = 10, так что десять записывается как 1010. У числа 1100 единицы в разрядах восьмёрок и четвёрок, 8 + 4 = 12, так что 1100 означает двенадцать. А 1111, где заполнены все разряды, – это 8 + 4 + 2 + 1 = 15, наибольшее число, которое вмещают четыре двоичные цифры, на единицу меньше 16, которому нужна пятая цифра: 10000.\n\n| Десятичное | Восьмёрки | Четвёрки | Двойки | Единицы | Двоичное |\n|---|---|---|---|---|---|\n| 8 | 1 | 0 | 0 | 0 | 1000 |\n| 10 | 1 | 0 | 1 | 0 | 1010 |\n| 12 | 1 | 1 | 0 | 0 | 1100 |\n| 15 | 1 | 1 | 1 | 1 | 1111 |\n\nОбратный путь столь же механичен. Делите число на два снова и снова и записывайте остатки: 10 даёт остатки 0, 1, 0, 1, которые, прочитанные от последнего к первому, складываются в 1010. Арифметика здесь проще, чем в любой другой системе, ведь таблица умножения состоит всего из четырёх строк; именно такая простота и нужна электронной схеме.\n\nРасплата – длина. Числу требуется примерно в 3,3 раза больше двоичных цифр, чем десятичных, поэтому программисты группируют двоичные цифры по четыре и записывают каждую группу одной шестнадцатеричной цифрой: 1111 превращается в F. Одна двоичная цифра – это бит, восемь бит – байт, и байт может принимать 256 различных значений, от 0 до 255.\n\nДвоичный счёт прячется и у всех на виду. Если считать поднятые пальцы единицами, а загнутые – нулями, двумя руками можно досчитать до 1023; а старый фокус – взвесить что угодно до 15 граммов всего гирьками в 1, 2, 4 и 8 граммов – это замаскированная двоичная система.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Leibniz_binary_system_1703.png",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File:Leibniz_binary_system_1703.png",
+   "width": 727,
+   "height": 979,
+   "alt": {
+    "en": "A page of Leibniz's 1703 \"Explication de l'Arithmétique Binaire\" with tables of binary numbers",
+    "de": "Eine Seite aus Leibniz’ „Explication de l’Arithmétique Binaire“ von 1703 mit Tabellen von Binärzahlen",
+    "ru": "Страница из «Explication de l’Arithmétique Binaire» Лейбница 1703 года с таблицами двоичных чисел"
+   },
+   "caption": {
+    "en": "Leibniz's 1703 paper on binary arithmetic: the numbers written with only 0 and 1, and the addition and multiplication worked out in base 2.",
+    "de": "Leibniz’ Abhandlung zur Binärarithmetik von 1703: die Zahlen nur mit 0 und 1 geschrieben, Addition und Multiplikation zur Basis 2 vorgerechnet.",
+    "ru": "Работа Лейбница о двоичной арифметике 1703 года: числа, записанные только нулями и единицами, и примеры сложения и умножения по основанию 2."
+   },
+   "credit": "Gottfried Wilhelm Leibniz, via Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f13506",
+   "answerEn": "0 and 1",
+   "answerDe": "0 und 1",
+   "answerRu": "0 и 1",
+   "spans": {
+    "en": [
+     230,
+     7
+    ],
+    "de": [
+     250,
+     7
+    ],
+    "ru": [
+     245,
+     5
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1703",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Gottfried Wilhelm Leibniz publishes his account of binary arithmetic",
+    "labelDe": "Gottfried Wilhelm Leibniz veröffentlicht seine Darstellung des Dualsystems",
+    "labelRu": "Готфрид Вильгельм Лейбниц публикует своё изложение двоичной арифметики"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Dualsystem",
+    "title": "Dualsystem",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w13729",
+     "en": "Which two digits are used in the binary system?",
+     "de": "Welche beiden Ziffern werden im Binärsystem verwendet?",
+     "ru": "Какие две цифры используются в двоичной системе?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-150",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f13507",
+   "answerEn": "1111",
+   "answerDe": "1111",
+   "answerRu": "1111",
+   "spans": {
+    "en": [
+     1043,
+     4
+    ],
+    "de": [
+     1152,
+     4
+    ],
+    "ru": [
+     1146,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1697-01-02",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leibniz describes his binary (dyadic) number system in a letter to Duke Rudolf August of Brunswick",
+    "labelDe": "Leibniz beschreibt sein Dualsystem in einem Brief an Herzog Rudolf August von Braunschweig-Wolfenbüttel",
+    "labelRu": "Лейбниц описывает свою двоичную систему в письме герцогу Рудольфу Августу Брауншвейг-Вольфенбюттельскому"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Dualsystem",
+    "title": "Dualsystem",
+    "lang": "de"
+   },
+   "wordings": [
+    {
+     "id": "w13730",
+     "en": "How is the number 15 written in the binary system?",
+     "de": "Wie wird die Zahl 15 im Binärsystem dargestellt?",
+     "ru": "Как записывается число 15 в двоичной системе?",
+     "origin": "printed",
+     "printed": {
+      "source": "trivial-pursuit",
+      "card": "tp-325",
+      "category": 5
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f13508",
+   "answerEn": "base 2",
+   "answerDe": "Basis 2",
+   "answerRu": "основание 2",
+   "spans": {
+    "en": [
+     196,
+     6
+    ],
+    "de": [
+     212,
+     7
+    ],
+    "ru": [
+     206,
+     11
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1703",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+    "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“",
+    "labelRu": "Лейбниц публикует изложение двоичной арифметики «Explication de l’Arithmétique Binaire»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Binary_number",
+    "title": "Binary number – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w13731",
+     "en": "What is the base of the binary system?",
+     "de": "Welche Basis hat das Binärsystem?",
+     "ru": "Каково основание двоичной системы?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "risk:number",
+    "difficulty:easy",
+    "answer:number"
+   ]
+  },
+  {
+   "id": "f13509",
+   "answerEn": "1010",
+   "answerDe": "1010",
+   "answerRu": "1010",
+   "spans": {
+    "en": [
+     937,
+     4
+    ],
+    "de": [
+     1041,
+     4
+    ],
+    "ru": [
+     1038,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1703",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+    "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“",
+    "labelRu": "Лейбниц публикует изложение двоичной арифметики «Explication de l’Arithmétique Binaire»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Binary_number",
+    "title": "Binary number – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w13732",
+     "en": "How is the number 10 written in the binary system?",
+     "de": "Wie wird die Zahl 10 im Binärsystem dargestellt?",
+     "ru": "Как записывается число 10 в двоичной системе?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f13511",
+   "answerEn": "twelve",
+   "answerDe": "zwölf",
+   "answerRu": "двенадцать",
+   "spans": {
+    "en": [
+     1031,
+     6
+    ],
+    "de": [
+     1141,
+     5
+    ],
+    "ru": [
+     1132,
+     10
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1703",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+    "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“",
+    "labelRu": "Лейбниц публикует изложение двоичной арифметики «Explication de l’Arithmétique Binaire»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Binary_number",
+    "title": "Binary number – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w13734",
+     "en": "Which number is written as 1100 in the binary system?",
+     "de": "Welche Zahl wird im Binärsystem als 1100 dargestellt?",
+     "ru": "Какое число записывается в двоичной системе как 1100?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "risk:number",
+    "difficulty:medium",
+    "answer:number"
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f13510",
+   "answerEn": "1000",
+   "answerDe": "1000",
+   "answerRu": "1000",
+   "spans": {
+    "en": [
+     780,
+     4
+    ],
+    "de": [
+     859,
+     4
+    ],
+    "ru": [
+     852,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1703",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leibniz publishes his account of binary arithmetic, \"Explication de l'Arithmétique Binaire\"",
+    "labelDe": "Leibniz veröffentlicht seine Darstellung der Binärarithmetik, „Explication de l’Arithmétique Binaire“",
+    "labelRu": "Лейбниц публикует изложение двоичной арифметики «Explication de l’Arithmétique Binaire»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Binary_number",
+    "title": "Binary number – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w13733",
+     "en": "How is the number 8 written in the binary system?",
+     "de": "Wie wird die Zahl 8 im Binärsystem dargestellt?",
+     "ru": "Как записывается число 8 в двоичной системе?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-23",
+    "code": "duplicate",
+    "reason": "A near-duplicate conversion exercise (8 in binary) beside 10, 12 and 15 in the same article."
+   }
+  }
+ ],
+ "tags": [
+  "topic:mathematics/numerals",
+  "audience:international"
+ ],
+ "entities": [
+  {
+   "qid": "Q3913",
+   "label": "binary numeral system",
+   "role": "subject"
+  }
+ ]
+}

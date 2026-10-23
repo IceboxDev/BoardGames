@@ -1,0 +1,602 @@
+{
+ "article": "a2602",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Biellmann-Pirouette",
+   "title": "Biellmann-Pirouette",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:39.256Z",
+   "snapshot": "7a949ff9927dbb01cdef0ed5f11ac74538a70be601ec595cddd5358d9299712e"
+  },
+  "s2": {
+   "url": "https://news.cgtn.com/news/3d3d674d7763444d35457a6333566d54/share_amp.html",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:39.110Z",
+   "snapshot": "6c9f86a8af172b17f1d17aff297f49b538e24349d8c523a7b9445ff3cc7f14c2"
+  },
+  "s3": {
+   "url": "https://www.britannica.com/print/article/1013291",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Katarina_Witt",
+   "title": "Katarina Witt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:40.283Z",
+   "snapshot": "78c5cb289c8fd7204a74922db4f3c8762259d375844fdfc40052c713a37facff"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Tanja_Szewczenko",
+   "title": "Tanja Szewczenko",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:08:41.228Z",
+   "snapshot": "c02d6631996ee3c2b29d337f961be6ed61754d62d3fddd83e2ee514edf23c2a6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Denise_Biellmann",
+   "title": "Denise Biellmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:44.157Z",
+   "snapshot": "e817f13d3164226881032e692452c029f073b8b4578f75360529ec4c3f5820d3"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Katarina_Witt",
+   "title": "Katarina Witt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:43.151Z",
+   "snapshot": "7755f1cf1a96f3f991ae69effdf200ee6e6c3fb4484b2488ba18a2fc436a3d93"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_the_Carmens",
+   "title": "Battle of the Carmens – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:44.021Z",
+   "snapshot": "2f67b6a1bb94612f1da4f04b9aba8e3cf95b9526903b6ebb56329178164a70b8"
+  },
+  "s9": {
+   "url": "https://jurasynchro.ch/en/story/biellmann-40-years-of-history-1049",
+   "title": "Biellmann, 40 years of history",
+   "publisher": "Jura Synchro",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:32.032Z",
+   "snapshot": "7160225f0fd9ed8d8aed10f88c81e00691dc1f30efe6a05b5280540d482854f6"
+  },
+  "s10": {
+   "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8351730/pirouette-biellmann",
+   "title": "pirouette Biellmann",
+   "publisher": "Office québécois de la langue française",
+   "kind": "official",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T12:48:32.728Z",
+   "snapshot": "dec0403c3d938dadb95588828cf7ca1c4832503ce90ef228d181c71e96d4179f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Carmen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-232"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tanja Szewczenko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-261"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Denise Biellmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Katarina Witt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14026",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Debi Thomas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jewgeni Pljuschtschenko",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Evgeni Plushenko",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Evgeni Plushenko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-010/6, u04): Statement false: men do perform the Biellmann spin (Plushenko, later Hanyu, Weir). Whether Plushenko was the first man ever is not settled. De.wikipedia says he was the first to put it in his programme, CGTN says he was the first in senior competition, and Britannica only calls him one of the few. So the wording is narrowed to \"in senior competition\", which is what the body already says."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jewgeni Pljuschtschenko",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Evgeni Plushenko",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jewgeni Pljuschtschenko war der erste männliche Eiskunstläufer, der die Biellmann-Pirouette in sein Programm aufnahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jewgeni Pljuschtschenko” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For Russian legend Evgeni Plushenko, the passion for figure skating came to life and developed in the city of Saint Petersburg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Evgeni Plushenko” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Es kam zur „Battle of the Carmens“, wie die Presse das Duell nannte, da beide Eiskunstläuferinnen ihre Kür zu Musik aus Georges Bizets Oper Carmen liefen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carmen” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tanja Szewczenko startete im Eiskunstlauf für die Düsseldorfer EG, ihre Trainer waren Hugo Dümler, nach ihrem Wechsel ins Leistungszentrum Dortmund Peter Meyer (bis 1995) und Peter Jonas.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tanja Szewczenko” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Denise Biellmann (born 11 December 1962) is a Swiss professional figure skater.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Denise Biellmann” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Katarina Witt (German pronunciation: [kataˈʁiːna vɪt], ; born 3 December 1965) is a German former figure skater.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Katarina Witt” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:46.118Z",
+   "target": "f14026",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Battle of the Carmens is an informal name given to a figure skating rivalry and \"media-fed battle\" between East German Katarina Witt and American Debi Thomas during the 1988 Winter Olympics in Calgary.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:46.118Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Debi Thomas” is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:35:06Z",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He was able to perform a Biellmann spin, conventionally performed by female skaters, becoming the first male skater in senior competitions to execute the one-foot spin",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:35:09Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Biellmann is the only spin named after a person.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:35:11Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Forty years ago, Denise Biellmann was crowned World Figure Skating champion. It was on March 6, 1981, in Hartford, Connecticut (USA)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:35:14Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Depuis 1981, la pirouette Biellmann est nommée ainsi en hommage à la patineuse suisse Denise Biellmann",
+     "quoteLang": "fr",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:35:17Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It remains the only figure skating spin to be officially named after a person in ISU regulations.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r075",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:30.751Z",
+   "target": "f14021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He was able to perform a Biellmann spin, conventionally performed by female skaters, becoming the first male skater in senior competitions to execute the one-foot spin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:30.751Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Forty years ago, Denise Biellmann was crowned World Figure Skating champion. It was on March 6, 1981, in Hartford, Connecticut (USA)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:30.751Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Depuis 1981, la pirouette Biellmann est nommée ainsi en hommage à la patineuse suisse Denise Biellmann",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:30.751Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It remains the only figure skating spin to be officially named after a person in ISU regulations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s6"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:30.751Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Also used in synchronized skating, the Biellmann has been named after Denise Biellmann, who made it popular.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Denise Biellmann” is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:30.751Z",
+   "target": "f14024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Depuis 1981, la pirouette Biellmann est nommée ainsi en hommage à la patineuse suisse Denise Biellmann qui, sans avoir inventé la figure, l'a rendue célèbre à la fin des années 1970.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:30.751Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Denise Biellmann” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "article": "a1478",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Palatschinken",
+   "title": "Palatschinken – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:52.807Z",
+   "snapshot": "1cb95c97dcc9d61ec765f1139e4093128c24831de82d78ec2c06ceaa48056d87"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tomate",
+   "title": "Tomate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:43.633Z",
+   "snapshot": "45e251608b30ef24f114820e04f8741409c2bfe560530581a324ac3eea0c5abd"
+  },
+  "s3": {
+   "url": "https://www.dwds.de/wb/Marille",
+   "title": "Marille – DWDS",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:52.923Z",
+   "snapshot": "020a8c4499a5b93829817da256412d12463ed3004587e7c65d924b8865fd6a36"
+  },
+  "s4": {
+   "url": "https://www.ostarrichi.org/beitrag/11/protokoll_nr_10_ueber_oesterreichische_ausdruecke",
+   "title": "Protokoll Nr. 10 über österreichische Ausdrücke – ostarrichi.org",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:53.011Z",
+   "snapshot": "04cbeb4d656b1ae903a4d3fa7a1ad12523bdc419773125842145c65443d500e1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Pflaumenmus",
+   "title": "Pflaumenmus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:53.546Z",
+   "snapshot": "4d66739d6e122660e6e03729bcd6a3ca30052052984426a01cfd8bec5588a8d0"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Quark_(Milchprodukt)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:03:54.708Z",
+   "snapshot": "e49efff2132263ad02086ef63cf47071be61a70bda09790c1b951117ad4cce18"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Wachauer_Marille",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:34:52.317Z",
+   "snapshot": "7e6f03023342ef303e4d94d15d35d29e076d3315e6f459140163807278282fdc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07386",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Palatschinken",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c124"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07387",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paradeiser",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07388",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marillen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07389",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Topfen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pflaumenmus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-301"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:31.948Z",
+   "target": "f07386",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Palatschinken sind mit den französischen Crêpes vergleichbar und gehen auf einen Fladenteig zurück, der früher u.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palatschinken” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:31.948Z",
+   "target": "f07387",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Tomate (Solanum lycopersicum), in Österreich sowie in Südtirol auch der Paradeiser bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paradeiser” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:31.948Z",
+   "target": "f07388",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Form / GrammatikMarille · Substantiv (Femininum) · Genitiv Singular: Marille · Nominativ Plural: Marillen · Deklinationstabelle",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marillen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:31.948Z",
+   "target": "f07389",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Topfen (m) = Quark",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Topfen” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:31.948Z",
+   "target": "f11063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pflaumenmus ist ein dick eingekochter Brei aus Pflaumen oder Zwetschgen (Zwetsch[g/k]enmus), der als Brotaufstrich und Zutat für Süß- und Mehlspeisen dient.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.948Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pflaumenmus” is on the snapshot of s5"
+  }
+ ]
+}

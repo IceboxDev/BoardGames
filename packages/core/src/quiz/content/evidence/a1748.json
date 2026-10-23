@@ -1,0 +1,242 @@
+{
+ "article": "a1748",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Judith_Butler",
+   "title": "Judith Butler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:49.622Z",
+   "snapshot": "40b8e1c275bedc693d70f894b1e5e4f202c813a625f2477c064b027ad9a30a20"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Simone_de_Beauvoir",
+   "title": "Simone de Beauvoir – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:50.592Z",
+   "snapshot": "16b5ab23de89003f4c53d841b269ece23d309e250c077c57ae9152bfb51dcf50"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mary_Wollstonecraft",
+   "title": "Mary Wollstonecraft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:51.670Z",
+   "snapshot": "42cdadfc7a811687be9486ab78be78231e292e34c35c3d3a4bab95879087cba9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Feminine_Mystique",
+   "title": "The Feminine Mystique – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:52.503Z",
+   "snapshot": "1acf389e5486fca0ce969cf32d819f424d5cd71981252945c457c4cb23c185d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Kate_Millett",
+   "title": "Kate Millett – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:53.495Z",
+   "snapshot": "4d007679539aff90b77d5e574b7a7747359db1b762c58595dc1574a7645fffb1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Judith Butler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Simone de Beauvoir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mary Wollstonecraft",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Betty Friedan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kate Millett",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:16.233Z",
+   "target": "f08736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Judith Butler (born February 24, 1956) is an American feminist, queer philosopher, and gender studies scholar whose work has influenced political philosophy, ethics, psychoanalysis, and the fields of feminist and queer theory,   academic freedom, and literary theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Judith Butler” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:16.233Z",
+   "target": "f08737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sylvie Le Bon-de Beauvoir and Simone de Beauvoir met in the 1960s, when Beauvoir was in her fifties, and Sylvie was nineteen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Simone de Beauvoir” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:16.233Z",
+   "target": "f08738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mary Wollstonecraft (, also UK: ; 27 April 1759 – 10 September 1797) was an English writer and philosopher best known for her advocacy of women's rights.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mary Wollstonecraft” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:16.233Z",
+   "target": "f08739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Feminine Mystique is a book by American author Betty Friedan, widely credited with sparking second-wave feminism in the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Betty Friedan” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:16.233Z",
+   "target": "f08740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Of Irish Catholic heritage, Kate Millett attended parochial schools in Saint Paul throughout her childhood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:16.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kate Millett” is on the snapshot of s5"
+  }
+ ]
+}

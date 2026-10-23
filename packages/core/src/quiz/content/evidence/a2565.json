@@ -1,0 +1,551 @@
+{
+ "article": "a2565",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Christopher_Street_Day",
+   "title": "Christopher Street Day",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:30.982Z",
+   "snapshot": "fef5f40a59967808426e3b74e7abcf88349e8ed9340d273a52036aea5ea8650d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stonewall_Inn",
+   "title": "Stonewall Inn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:32.571Z",
+   "snapshot": "eefdaa760e9605c151bbf690001bdc6cb3c5f92f1113e0ce6249adf261073ee4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gilbert_Baker_(artist)",
+   "title": "Gilbert Baker (artist) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:33.151Z",
+   "snapshot": "8a3dbf04798fe36419a480b2fe37a6052088be07c5c8eaeeb5aa76f6bb18ff20"
+  },
+  "s4": {
+   "url": "https://www.muenster-1972.de/",
+   "title": "Münster 1972! Eine Dokumentation anlässlich des 50. Jahrestages der ersten Homosexuellen-Demonstration in Deutschland",
+   "publisher": "Arbeitsgruppe Münster 1972",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:13.899Z",
+   "snapshot": "bbca4a173165b2d7f59ca34fabbcdd300f89565482f5266330ee60aef3d695d7"
+  },
+  "s5": {
+   "url": "https://www.schwulengeschichte.ch/epochen/6-aufbruch/ha-gruppen/ueberblick/csd",
+   "title": "CSD - Schwulengeschichte",
+   "publisher": "Schwulenarchiv Schweiz / schwulengeschichte.ch",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:14.201Z",
+   "snapshot": "5c0cd27d01076377740644e58cc8710908854a5673d61634260449fdb2b68bd0"
+  },
+  "s6": {
+   "url": "https://www.nycpride.org/about",
+   "title": "About – NYC Pride",
+   "publisher": "Heritage of Pride (NYC Pride)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:15.926Z",
+   "snapshot": "61d2cf6a3e1a919f5cf3591afb8bc95561c58baf605e8f138f3424e65e16b967"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pride_parade",
+   "title": "Pride parade",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:14.706Z",
+   "snapshot": "f67b256f2f27cb5fb2a980430b8c31b90523d5d1be3280e2d999ff81eaebfc12"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New York",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-222"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13739",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stonewall Inn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13740",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gilbert Baker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Münster",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zürich",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:39.100Z",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Seitdem wird in New York am letzten Samstag des Juni, dem Christopher Street Liberation Day, mit einem Straßenumzug an dieses Ereignis erinnert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New York” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:39.100Z",
+   "target": "f13739",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Stonewall Inn (also known as Stonewall) is a gay bar and recreational tavern at 53 Christopher Street in the Greenwich Village neighborhood of Lower Manhattan in New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stonewall Inn” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:39.100Z",
+   "target": "f13740",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gilbert Baker (June 2, 1951 – March 31, 2017) was an American artist, designer, activist, and vexillographer, best known as the creator of the rainbow flag.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gilbert Baker” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:39.100Z",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "April 1972 in Münster – noch nicht unter dem Namen Christopher Street Day – stattfand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Münster” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:39.100Z",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Juni 1978 in Zürich unter dem Namen Christopher Street Day statt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.100Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zürich” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:58Z",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als erste CSD-artige Aktion in Deutschland gilt die Homosexuellen-Demonstration, die am 29. April 1972 in Münster – noch nicht unter dem Namen Christopher Street Day – stattfand.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:50:02Z",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Am 29. April 1972 gingen in Münster etwa 200 homosexuelle Menschen auf die Straße. Es war deutschlandweit die erste Homosexuellen-Demonstration überhaupt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:50:06Z",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in Zürich unter dem Namen Christopher Street Day statt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:50:09Z",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1978 kam es zum ersten Schweizer CSD in Zürich, organisiert als Unterschriftensammlung für die Petition zur Abschaffung der Homosexuellenregister.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:50:12Z",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One year later, the first NYC Pride March was organized by the Christopher Street Liberation Day Committee, and marches have continued every year since.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports New York for the narrowed wording (the 28 June 1970 Christopher Street Liberation Day march)."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:50:15Z",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first pride parade was the Chicago Pride Parade",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "Chicago (27 June 1970) has a competing claim to the first pride parade; the bare question \"first gay pride parade\" is contested, so the wording was narrowed to the 28 June 1970 Christopher Street Liberation Day march."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:54:51Z",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One year later, the first NYC Pride March was organized by the Christopher Street Liberation Day Committee, and marches have continued every year since.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "After w13989 was narrowed to the 28 June 1970 Christopher Street Liberation Day march, the answer New York is uncontested; the earlier contested assessment applies to the bare \"first gay pride parade\" claim (Chicago marched 27 June 1970)."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als erste CSD-artige Aktion in Deutschland gilt die Homosexuellen-Demonstration, die am 29. April 1972 in Münster – noch nicht unter dem Namen Christopher Street Day – stattfand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Am 29. April 1972 gingen in Münster etwa 200 homosexuelle Menschen auf die Straße. Es war deutschlandweit die erste Homosexuellen-Demonstration überhaupt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "in Zürich unter dem Namen Christopher Street Day statt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "1978 kam es zum ersten Schweizer CSD in Zürich, organisiert als Unterschriftensammlung für die Petition zur Abschaffung der Homosexuellenregister.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first pride parade was the Chicago Pride Parade",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13738",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "One year later, the first NYC Pride March was organized by the Christopher Street Liberation Day Committee, and marches have continued every year since.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fotos Stadtarchiv Münster, Rosa Geschichten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Münster” is on the snapshot of s4"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:23.576Z",
+   "target": "f13742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Besitzer: Schwulenarchiv Schweiz, Zürich",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Zürich” is on the snapshot of s5"
+  }
+ ]
+}

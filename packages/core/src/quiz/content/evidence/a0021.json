@@ -1,0 +1,500 @@
+{
+ "article": "a0021",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kernig's_sign",
+   "title": "Kernig's sign – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:20.428Z",
+   "snapshot": "4aa319dae0d3fd557fdb8a405544df98c168eab686c67ca0d196f3f5a0058d38"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Koplik's_spots",
+   "title": "Koplik's spots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:21.443Z",
+   "snapshot": "fc45a764d66005523f53a3693d15d45ae22497aeeda43baaad3c26a5fa37400b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hepatitis",
+   "title": "Hepatitis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:22.678Z",
+   "snapshot": "05e84edbe0fda6841c36218ef8e72db4afb0c4a3a34149a893ce3abe57b440d8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alim_Louis_Benabid",
+   "title": "Alim Louis Benabid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:23.437Z",
+   "snapshot": "364e56c599b9ec51d89ad2b5f6b2082086a54d9ade589c2a5d405ebc104df5fd"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Erythema_migrans",
+   "title": "Erythema migrans – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:24.422Z",
+   "snapshot": "6c14442448328c678820ce0bbc9a49c6d052401439ac31ced10bfd517884f5fd"
+  },
+  "s6": {
+   "url": "https://www.cdc.gov/meningitis/about/index.html",
+   "title": "About Meningitis",
+   "publisher": "U.S. Centers for Disease Control and Prevention",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.289Z",
+   "snapshot": "38439797e79262b3b57f12254dbe6e93dfa01ac165b4e26806e4757f647a72fc"
+  },
+  "s7": {
+   "url": "https://www.nhs.uk/conditions/meningitis/symptoms/",
+   "title": "Meningitis symptoms",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.524Z",
+   "snapshot": "b2987e0a17d0f1b9ec156d4d8088d887117f52422f64c056b91b2aa01e93976c"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Meningitis",
+   "title": "Meningitis – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:15:48Z"
+  },
+  "s9": {
+   "url": "https://www.parkinson.org/understanding-parkinsons/movement-symptoms/tremor",
+   "title": "Tremor",
+   "publisher": "Parkinson's Foundation",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:20.879Z",
+   "snapshot": "86500d4c783b6d98b9cdd7a125518d0f553d892170f08aa141eb77de7e5c233e"
+  },
+  "s10": {
+   "url": "https://www.nhs.uk/conditions/parkinsons-disease/symptoms/",
+   "title": "Parkinson's disease – Symptoms",
+   "publisher": "NHS",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:21.333Z",
+   "snapshot": "cfc8c47084ead32d474dcf611f376a31d7ec57bb78107711d31974e6574c3b2e"
+  },
+  "s11": {
+   "url": "https://en.wikipedia.org/wiki/Parkinson%27s_disease",
+   "title": "Parkinson's disease – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:16:02Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neck stiffness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00102",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Koplik spots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00103",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jaundice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Resting tremor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00105",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Erythema migrans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:38.234Z",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neck stiffness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Neck stiffness”, “Nackensteifigkeit”, “ригидность затылочных мышц”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:38.234Z",
+   "target": "f00102",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The textbook description of Koplik spots is ulcerated mucosal lesions marked by necrosis, neutrophilic exudate, and neovascularization.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Koplik spots” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:38.234Z",
+   "target": "f00103",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Some people or animals with hepatitis have no symptoms, whereas others develop yellow discoloration of the skin and whites of the eyes (jaundice), poor appetite, vomiting, tiredness, abdominal pain, and diarrhea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jaundice” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:38.234Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Resting tremor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Resting tremor”, “Ruhetremor”, “тремор покоя”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:38.234Z",
+   "target": "f00105",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Erythema migrans or erythema chronicum migrans is an expanding rash often seen in the early stage of Lyme disease, and can also (but less commonly) be caused by southern tick-associated rash illness (STARI).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.234Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Erythema migrans” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:15:35Z",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Common meningitis symptoms include Fever Headache Stiff neck",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:15:41Z",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "has a stiff neck and cannot look at bright lights",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:15:48Z",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The most common symptoms are fever, intense headache, vomiting, neck stiffness, and occasionally photophobia.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:53Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tremor is often the first movement symptom of Parkinson’s disease, typically appearing as a resting tremor that affects one side of the body.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:15:57Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "tremor – shaking, which usually begins in the hand or arm and is more likely to occur when the limb is relaxed and resting",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:16:02Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Resting tremor is the most common",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:53.810Z",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Common meningitis symptoms include Fever Headache Stiff neck",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:53.810Z",
+   "target": "f00101",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "has a stiff neck and cannot look at bright lights",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:51:53.810Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tremor is often the first movement symptom of Parkinson’s disease, typically appearing as a resting tremor that affects one side of the body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:51:53.810Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "tremor – shaking, which usually begins in the hand or arm and is more likely to occur when the limb is relaxed and resting",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:51:53.810Z",
+   "target": "f00104",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Tremor is often the first movement symptom of Parkinson’s disease, typically appearing as a resting tremor that affects one side of the body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:53.810Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Resting tremor” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "article": "a0578",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Schachnovelle",
+   "title": "Schachnovelle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:05:59.390Z",
+   "snapshot": "5b2dbdb9b20cab8d23c993e751c090f19261f562e65684d88428a301e5afc30b"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Die_Welt_von_Gestern",
+   "title": "Die Welt von Gestern – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:00.248Z",
+   "snapshot": "137f91b1bd3e092503dbc8d7fe7382be0b3773fed9adb6815927db29b20d6e8d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Brief_einer_Unbekannten",
+   "title": "Brief einer Unbekannten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:01.261Z",
+   "snapshot": "8f81a93927776c615080d82cf275b69be32b385abf3e9f5f816889910bc5cfd9"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Vierundzwanzig_Stunden_aus_dem_Leben_einer_Frau",
+   "title": "Vierundzwanzig Stunden aus dem Leben einer Frau – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:02.246Z",
+   "snapshot": "fd8b8c8e428a4a667f4f5ea4941853e6c042f14adeefaf79e5c39b63a8933721"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Ungeduld_des_Herzens_(Roman)",
+   "title": "Ungeduld des Herzens (Roman) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:03.264Z",
+   "snapshot": "fb1c569e9cd4b40a2b2f67971007aeda7ba8c984eeff203fcabf4ff355b7a0d6"
+  },
+  "s6": {
+   "url": "https://www.ebsco.com/research-starters/history/stefan-zweig",
+   "title": "Stefan Zweig – EBSCO Research Starters",
+   "publisher": "EBSCO",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:13.081Z",
+   "snapshot": "659857a914da5b5e3eec0fee9b0a4ce326f66372a152f1af2f0e1aa899daeadb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02886",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schachnovelle",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Welt von Gestern",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brief einer Unbekannten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02889",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vierundzwanzig Stunden aus dem Leben einer Frau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ungeduld des Herzens",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:09.749Z",
+   "target": "f02886",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schachnovelle ist eine Novelle von Stefan Zweig, die er 1941 und 1942 im brasilianischen Exil schrieb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.749Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schachnovelle” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:09.749Z",
+   "target": "f02887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Prater: Stefan Zweig und die Welt von gestern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.749Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Welt von Gestern” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:09.749Z",
+   "target": "f02888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Brief einer Unbekannten ist eine kurze Novelle in Briefform des österreichischen Schriftstellers Stefan Zweig, erstmals erschienen 1922.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.749Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brief einer Unbekannten” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:09.749Z",
+   "target": "f02889",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vierundzwanzig Stunden aus dem Leben einer Frau ist eine Novelle von Stefan Zweig aus dem Jahr 1927.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.749Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vierundzwanzig Stunden aus dem Leben einer Frau” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:09.749Z",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ungeduld des Herzens ist ein 1939 erschienener Roman des österreichischen Schriftstellers Stefan Zweig.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:09.749Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ungeduld des Herzens” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:54:46Z",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zweig’s only completed novel, Ungeduld des Herzens (1938; Beware of Pity, 1939), is a haunting portrayal of a crippled girl and her love.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:54:49Z",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Es handelt sich um den einzigen vollendeten Roman des Autors.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:35.322Z",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zweig’s only completed novel, Ungeduld des Herzens (1938; Beware of Pity, 1939), is a haunting portrayal of a crippled girl and her love.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:35.322Z",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Es handelt sich um den einzigen vollendeten Roman des Autors.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:35.322Z",
+   "target": "f02890",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "His notable works include the novellas \"Die Liebe der Erika Ewald\" and \"Schachnovelle\" (The Royal Game), as well as his only completed novel, \"Ungeduld des Herzens\" (Beware of Pity).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:35.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Beware of Pity” is on the snapshot of s6"
+  }
+ ]
+}

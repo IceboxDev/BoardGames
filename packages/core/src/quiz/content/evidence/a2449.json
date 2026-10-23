@@ -1,0 +1,234 @@
+{
+ "article": "a2449",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/This_Side_of_Paradise",
+   "title": "This Side of Paradise",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:55.293Z",
+   "snapshot": "3e6d28b29f29e8630674120ec8453f7d38ee10f2851cffae3dc16d231cf8471f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Fiesta_(Roman)",
+   "title": "Fiesta (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:39.331Z",
+   "snapshot": "8a17596bf1363d818058a712c375af0e614432fcfd84ba5e32c3e50abe780980"
+  },
+  "s3": {
+   "url": "https://en.wikiquote.org/wiki/The_Catcher_in_the_Rye",
+   "title": "The Catcher in the Rye – Wikiquote",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:52.433Z",
+   "snapshot": "f64e9fd2e20632946619cacd8885f81d7b844aebb9813eb7e61f9a44deff1e3f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Catcher_in_the_Rye",
+   "title": "The Catcher in the Rye – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:59:56.063Z",
+   "snapshot": "0bd966bddde5b2ad87634befe5f18ab604f3e1666272ce0f4ad87327d1bec22a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12891",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "F. Scott Fitzgerald",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-272"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12892",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ernest Hemingway",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-250"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12893",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Catcher in the Rye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-118"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12894",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Amory Blaine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12897",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Holden Caulfield",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:21.765Z",
+   "target": "f12891",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This Side of Paradise is the 1920 debut novel by American writer F. Scott Fitzgerald.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “F. Scott Fitzgerald” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:21.765Z",
+   "target": "f12892",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fiesta ist der erste größere Roman von Ernest Hemingway, der 1926 unter dem englischen Titel The Sun Also Rises erschien und ihn berühmt machte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernest Hemingway” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:21.765Z",
+   "target": "f12893",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Though movies (Taxi Driver for John Hinckley Jr., would-be assassin of Ronald Reagan), books (The Catcher in the Rye for Mark David Chapman, John Lennon’s murderer) and songs (Helter Skelter” for Tate-LaBianca murders mastermind Charles Manson) may articulate specific criminals acts, they don’t",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Catcher in the Rye” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:21.765Z",
+   "target": "f12894",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Its protagonist, Amory Blaine, is a handsome middle-class student at Princeton University who dabbles in literature and engages in a series of unfulfilling romances with young women.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amory Blaine” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:21.765Z",
+   "target": "f12897",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The main character, Holden Caulfield, has become an icon for teenage rebellion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:21.765Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Holden Caulfield” is on the snapshot of s4"
+  }
+ ]
+}

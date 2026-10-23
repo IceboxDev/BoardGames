@@ -1,0 +1,296 @@
+{
+ "article": "a0513",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+   "title": "Philosophiæ Naturalis Principia Mathematica – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:19.686Z",
+   "snapshot": "13e68e98920299a2af24aba8a15aa86fdf5e7795e40a92e377c9a529198e691e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/STS-132",
+   "title": "STS-132",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:30.296Z",
+   "snapshot": "8a5e6ff3eb67841be098c612982eaae346ba3cd717b0bded649abe65d0408236"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Astronomia_nova",
+   "title": "Astronomia nova – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:31.302Z",
+   "snapshot": "54368b11131f5c82dc5c63e1126098dc64d021becbecda6b6cc0ccddcff0e1a3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Two_New_Sciences",
+   "title": "Two New Sciences – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:32.015Z",
+   "snapshot": "e9d32a3b488bbd1dbdb44f0b9dd7f083a732c23bbbc13953c4f02e6e18ac2f33"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cavendish_experiment",
+   "title": "Cavendish experiment – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:33.095Z",
+   "snapshot": "070373819227c5e94b3711e9e87e0d3280e59763e78aab9ec63a2d18660efe90"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/General_relativity",
+   "title": "General relativity – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:13.040Z",
+   "snapshot": "588c4edf80a66beed240915eb02e9fdda6df8bf080cf300f9e000b3e1bd46965"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Cavendish",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:34.321Z",
+   "snapshot": "f54496d695d98703fba43338a1382b826adc1f048cf633b24efbf02be348da58"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Isaac Newton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Isaac Newton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-083"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johannes Kepler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Galileo Galilei",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Henry Cavendish",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Albert Einstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:00.082Z",
+   "target": "f02561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Philosophiæ Naturalis Principia Mathematica (English: The Mathematical Principles of Natural Philosophy), often called simply the Principia (), is a book by Sir Isaac Newton that expounds Newton's laws of motion and his law of universal gravitation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isaac Newton” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:00.082Z",
+   "target": "f02561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Also on board Atlantis was a 4-inch long wood sample of Sir Isaac Newton's apple tree.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Isaac Newton” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:00.082Z",
+   "target": "f02562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tychonis Brahe) is a book, published in 1609, that contains the results of the astronomer Johannes Kepler's ten-year-long investigation of the motion of Mars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johannes Kepler” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:00.082Z",
+   "target": "f02563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "e dimostrazioni matematiche intorno a due nuove scienze pronounced [diˈskorsi e ddimostratˈtsjoːni mateˈmaːtike inˈtorno a dˈduːe ˈnwɔːve ʃˈʃɛntse]) published in 1638 was Galileo Galilei's final book and a scientific testament covering much of his work in physics over the preceding thirty years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galileo Galilei” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:00.082Z",
+   "target": "f02564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Cavendish experiment, performed in 1797–1798 by English scientist Henry Cavendish, was the first experiment to measure the force of gravity between masses in the laboratory and the first to yield accurate values for the gravitational constant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Cavendish” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:00.082Z",
+   "target": "f02565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "General relativity, also known as the general theory of relativity, and as Einstein's theory of gravity, is the geometric theory of gravitation published by Albert Einstein in May 1916 and is the accepted description of the gravitation of macroscopic objects in modern physics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:00.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Einstein” is on the snapshot of s6"
+  }
+ ]
+}

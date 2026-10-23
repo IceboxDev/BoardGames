@@ -1,0 +1,242 @@
+{
+ "article": "a1173",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Archibald_Garrod",
+   "title": "Archibald Garrod – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:10.257Z",
+   "snapshot": "110ae25b3fdf81e7d69535586c1437c973bb878aa1b8834f0eb9616e9ccae491"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vitiligo",
+   "title": "Vitiligo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:10.852Z",
+   "snapshot": "2d8375994bff9caedd1b53ca0f65600f5193caa8f66803c00bc9ebba0c9ab25d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Melanoma",
+   "title": "Melanoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:11.975Z",
+   "snapshot": "b0e2e90df4d4af778962f90d76154950189aff74a10b4e5ef1476eb47b88e06d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ipilimumab",
+   "title": "Ipilimumab – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:12.839Z",
+   "snapshot": "f83259ede3473e5fb2b7bcec95fbd5144ea2c30ed8eb079268fd246add412cba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Blue_baby_syndrome",
+   "title": "Blue baby syndrome – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:45:13.940Z",
+   "snapshot": "da69492b3b0c839a3ab0b1ac9ecc5dd3adc6c6f3a5d7957be38dc58c2ffafbfd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05861",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "albinism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05862",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "vitiligo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05863",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "melanocytes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05864",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "melanoma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05865",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "cyanosis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:43.741Z",
+   "target": "f05861",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He cites various case studies and compares alkaptonuria to albinism in how it's inherited.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “albinism” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:43.741Z",
+   "target": "f05862",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vitiligo ( VIT-ih-LY-goh) is a chronic autoimmune disorder that causes skin to lose pigment in patches that vary in size and can appear anywhere on the body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitiligo” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:43.741Z",
+   "target": "f05863",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Melanoma is a type of cancer, typically skin cancer; it develops from the  melanin-producing cells known as melanocytes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “melanocytes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:43.741Z",
+   "target": "f05864",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ipilimumab was approved by the US Food and Drug Administration in March 2011, for the treatment of melanoma, renal cell carcinoma (RCC), colorectal cancer, hepatocellular carcinoma, non-small cell lung cancer (NSCLC), malignant pleural mesothelioma, and esophageal cancer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “melanoma” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:43.741Z",
+   "target": "f05865",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Blue baby syndrome can refer to conditions that cause cyanosis, or blueness of the skin, in babies as a result of low blood oxygen levels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:43.741Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cyanosis” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "tp-dedupe",
+ "title": "Trivial Pursuit: post-merge dedupe of the bank",
+ "startedAt": "2026-10-20",
+ "endedAt": "2026-10-20",
+ "kind": "dedupe",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded)"
+ ],
+ "brief": "DEDUPE.md",
+ "inputs": [
+  "bank after tp-ingest merge"
+ ],
+ "outputs": [
+  "bank: duplicate topics merged, wrong aliases split"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/trivial-pursuit"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 2,
+  "bytes": 12620,
+  "byExt": {
+   ".md": 2
+  },
+  "historyEntries": 863
+ },
+ "notes": "History ref 'dedupe-report.md' resolves here (854 retirements, 8 moves, 1 merge). Worker scripts stayed in trivial-pursuit/scratch/dedupe (not archived)."
+}

@@ -1,0 +1,343 @@
+{
+ "article": "a1095",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ivan_the_Great_Bell_Tower",
+   "title": "Ivan the Great Bell Tower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:26.098Z",
+   "snapshot": "d9c40eabe28441284ef25531a8f2d11f1ea8d146c6e18cc015330f0e9a7441ec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa",
+   "title": "Leaning Tower of Pisa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:27.124Z",
+   "snapshot": "7b58043453e2c1b2d2622ee291b90143acdc913983c54acadd4ebf785b7dce4a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/St_Mark%27s_Campanile",
+   "title": "St Mark's Campanile – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:00.160Z",
+   "snapshot": "acb1431f373dbc8bee998d4fdb0e172aab5e2b034f94788d550682eb2117f866"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Big_Ben",
+   "title": "Big Ben – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:28.180Z",
+   "snapshot": "56c68a69c9ddb129f456c6ca7fb18fed231cd7a6a736b58250725380f1b69865"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/St._Vitus_Cathedral",
+   "title": "St. Vitus Cathedral – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:29.173Z",
+   "snapshot": "5aff1d97c5c5e372100b818aa0c9f3349dbfb7539a2972c181ac2dd0bf913f39"
+  },
+  "s6": {
+   "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8F_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE",
+   "kind": "encyclopedia",
+   "lang": "ru",
+   "retrievedAt": "2026-10-23T04:40:28.035Z",
+   "snapshot": "481ac2da9395648a77f97aaa6e848da0800233d376f82107f285f7b6f56b927b"
+  },
+  "s7": {
+   "url": "https://www.basilicasanmarco.it/basilica/campanile/",
+   "title": "Campanile – Basilica di San Marco",
+   "publisher": "Procuratoria di San Marco",
+   "kind": "official",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:37:54.234Z",
+   "snapshot": "46103324db329deb7f1afc0f42960f15e66f2d15f05cbdd35d8e883c611140c2"
+  },
+  "s8": {
+   "url": "https://www.ansa.it/web/notizie/postit/consorziovenezianuova/2013/04/23/Venezia-campanile-San-Marco-guarito-il-titanio_8601952.html",
+   "title": "Venezia, campanile San Marco 'guarito' con il titanio - ANSA.it",
+   "publisher": "ANSA",
+   "kind": "press",
+   "lang": "it",
+   "retrievedAt": "2026-10-23T12:37:52.992Z",
+   "snapshot": "53cf8f24b73e3a24d813963ebbce2017d1ea8ba4d48cfcf59ca6b8f0fe4277d6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kremlin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pisa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "St Mark's Square",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Palace of Westminster",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Prague Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:32.193Z",
+   "target": "f05471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Ivan the Great Bell Tower (Russian: Колокольня Иван Великий, romanized: Kolokol'nya Ivan Velikiy) is a church tower inside the Moscow Kremlin complex.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kremlin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:32.193Z",
+   "target": "f05472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Leaning Tower of Pisa (Italian: torre pendente di Pisa [ˈtorre penˈdɛnte di ˈpiːza, - ˈpiːsa]), or simply the Tower of Pisa (torre di Pisa), is the campanile, or freestanding bell tower, of Pisa Cathedral.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pisa” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:32.193Z",
+   "target": "f05473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "St Mark's Square",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“St Mark's Square”, “Markusplatz”, “площадь Сан-Марко”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:32.193Z",
+   "target": "f05474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Big Ben is the nickname for the Great Bell of the Great Clock of Westminster, and, by extension, for the clock tower that stands at the north end of the Palace of Westminster in London, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palace of Westminster” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:32.193Z",
+   "target": "f05475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Located within Prague Castle and containing the tombs of many Bohemian kings and Holy Roman Emperors, the cathedral is under the ownership of the Czech government as part of the Prague Castle complex.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prague Castle” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:20:30Z",
+   "target": "f05473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Il Campanile di San Marco, alto 98,6 metri",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Official page of the bell tower (98.6 m), which stands in Piazza San Marco."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:20:33Z",
+   "target": "f05473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Svetta piu' sicuro di prima su Venezia e sulla laguna il Campanile di San Marco",
+     "quoteLang": "it",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:08.520Z",
+   "target": "f05473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Il Campanile di San Marco, alto 98,6 metri",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:08.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:08.520Z",
+   "target": "f05473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Svetta piu' sicuro di prima su Venezia e sulla laguna il Campanile di San Marco",
+     "quoteLang": "it",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:08.520Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  }
+ ]
+}

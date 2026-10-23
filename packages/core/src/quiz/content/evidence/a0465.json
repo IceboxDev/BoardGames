@@ -1,0 +1,314 @@
+{
+ "article": "a0465",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Zenith",
+   "title": "Zenith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:11.844Z",
+   "snapshot": "f2b99981fb77712fc22c991978421b015617ef3d5809c5c19c8cf71e42e09a6b"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/nadir",
+   "title": "nadir – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/General_relativity",
+   "title": "General relativity – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:13.040Z",
+   "snapshot": "588c4edf80a66beed240915eb02e9fdda6df8bf080cf300f9e000b3e1bd46965"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Apsis",
+   "title": "Apsis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:13.893Z",
+   "snapshot": "d4bdb385523ce19b823b141cc71525df9f411f6a9299de8df7cc14e98259345d"
+  },
+  "s5": {
+   "url": "https://pass.lawrencehallofscience.org/?p=94",
+   "title": "Seasons and Sunsets Above the Arctic Circle: Predicting Sunsets",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:11.282Z",
+   "snapshot": "4c3f122e5a7e8dd177f919a3d476795867afc6ac042c6a3ae310bf6f4cbc1cba"
+  },
+  "s6": {
+   "url": "https://glossary.ametsoc.org/wiki/Nadir",
+   "title": "nadir - Glossary of Meteorology",
+   "publisher": "American Meteorological Society",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:10:24Z"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Nadir",
+   "title": "Nadir – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:20.141Z",
+   "snapshot": "16e97512ffb92e4435273848a6de175a0fbc922ae1fe70d973ccf42595bc47f5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zenith",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c039"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nadir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Perihelion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Aphelion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "North",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-133"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:52.702Z",
+   "target": "f02321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The zenith (UK: , US: ) is the imaginary point on the celestial sphere directly \"above\" a particular location.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zenith” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:52.702Z",
+   "target": "f02323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Einstein showed in 1915 how his theory explained the anomalous perihelion advance of the planet Mercury without any arbitrary parameters (\"fudge factors\"), and in 1919 an expedition led by Eddington confirmed general relativity's prediction for the deflection of starlight by the Sun during the total",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Perihelion” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:52.702Z",
+   "target": "f02324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Apsides pertaining to orbits around the Sun are named aphelion for the farthest and perihelion for the nearest point in a heliocentric orbit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aphelion” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:52.702Z",
+   "target": "f25569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Before I take you north of the arctic circle, let us observe the sky as it appears here in [your city] in the middle of summer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:52.702Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “North” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:10:24Z",
+   "target": "f02322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The point on a given observer’s celestial sphere diametrically opposite his zenith, that is, directly below the observer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:10:27Z",
+   "target": "f02322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the direction pointing directly below a particular location;",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r011",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:53:15.168Z",
+   "target": "f02322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "is the direction pointing directly below a particular location;",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:15.168Z",
+   "target": "f02322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The nadir is the direction pointing directly below a particular location; that is, it is one of two vertical directions at a specified location, orthogonal to a horizontal flat surface.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:15.168Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Nadir” is on the snapshot of s7"
+  }
+ ]
+}

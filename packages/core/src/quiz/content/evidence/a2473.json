@@ -1,0 +1,336 @@
+{
+ "article": "a2473",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Silly_(Band)",
+   "title": "Silly (Band)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:11.571Z",
+   "snapshot": "6fd70066e370d0c0ee2ff2534399686d567363571a283079066621964ae01a95"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Farin_Urlaub",
+   "title": "Farin Urlaub",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:12.389Z",
+   "snapshot": "3701a7413928e26dd13cd0766bffbcffe912f2dab7578c184c6ead7e4d3da52a"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Rosenstolz",
+   "title": "Rosenstolz",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:13.508Z",
+   "snapshot": "e54d6f3292fbeb64384d14da1635e729016539c5f6db7a798482b3d33816dc13"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/City_(Band)",
+   "title": "City (Band)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:14.438Z",
+   "snapshot": "19a91dfc9c6ae30c7ee45096fd75052cc14895416af5c9d15da403d83e653a3b"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_%C3%84rzte",
+   "title": "Die Ärzte",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:15.475Z",
+   "snapshot": "d9aa89d761d34b062d11b3c85aad051163e1b5b5d4a82aa6f28116194b6e1865"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Element_of_Crime",
+   "title": "Element of Crime",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:01:12.649Z",
+   "snapshot": "a6d40fa20bfa10d3eb9bda3c1be0d94ca3dd3162bb3e0519a8c0a39e03775028"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Seeed",
+   "title": "Seeed",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:01:16.383Z",
+   "snapshot": "20b8bb014ef7b89b26bc14c108564c1d0ca3da43972f0ea662f26bd3d4a18e0d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13055",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anna Loos",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-034"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13056",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Farin Urlaub",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-300"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13057",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosenstolz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript tp-293"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13058",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "City",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13059",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Ärzte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13060",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Element of Crime",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seeed",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13055",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Gesangsrolle übernahm von 2006 bis Dezember 2018 Anna Loos und von 2019 bis 2022 AnNa R.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anna Loos” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13056",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bekannt wurde er als Gründungsmitglied der Rockband Die Ärzte, seit 2001 tritt er zudem solo sowie als Kopf der Gruppe Farin Urlaub Racing Team auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Farin Urlaub” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13057",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosenstolz war ein Musikduo aus Berlin, das aus der Sängerin AnNa R.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosenstolz” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13058",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "City ist eine deutsche Musikgruppe, die bislang über 15 Millionen Tonträger verkaufte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “City” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13059",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Ärzte ist eine deutschsprachige Band aus Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Ärzte” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13060",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Element of Crime is a German rock band that plays melancholic chanson, pop and rock music with guitar, bass guitar, drums and voice/trumpet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Element of Crime” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:25.270Z",
+   "target": "f13061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Seeed ist eine Berliner Band, die vor allem in den Genres Reggae und Dancehall tätig ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:25.270Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Seeed” is on the snapshot of s7"
+  }
+ ]
+}

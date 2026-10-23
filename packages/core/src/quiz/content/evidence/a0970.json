@@ -1,0 +1,394 @@
+{
+ "article": "a0970",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/IAU_definition_of_planet",
+   "title": "IAU definition of planet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:30.144Z",
+   "snapshot": "4180e8101b0382b9fd0a3e6374b9b30218844f6772b17f47ccf6b271fa83b0b1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eris_(dwarf_planet)",
+   "title": "Eris (dwarf planet) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:31.115Z",
+   "snapshot": "3966f5fb0d4755a8771ec71543ef981efdc8062d423a9a911811ea7c3175f368"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Charon_(moon)",
+   "title": "Charon (moon) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:31.971Z",
+   "snapshot": "e7015dd48af5e7cf78f650aa7dc6e91e375dc6fbcc75f11fb9e26ce887f5fcba"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/15760_Albion",
+   "title": "15760 Albion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:33.011Z",
+   "snapshot": "ea5c0c26d6c58e988f379505bc9cb06d9f9bcf68cc2343c80d19975c0a28abe1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Venetia_Burney",
+   "title": "Venetia Burney",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:20:27.311Z",
+   "snapshot": "aed15472f7c6f6edb26de9a0a04096bc33ea6a03e31e6d8c999284fdb616f161"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pluto",
+   "title": "Pluto",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:25.841Z",
+   "snapshot": "c3fef0d5675f337cfe57d98eee6f27bbb214ef960e9f28cc3a9c31a36f4a5566"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Kuiper_belt",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:34.210Z",
+   "snapshot": "a590134ed38b164f5fe13b49c092fdbe91226322515b3d467ba17916eddcebf4"
+  },
+  "s8": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:32:31.697Z",
+   "snapshot": "61463365d55de2a60854b46f31c02ec41cd65babbede67b146c22ba06f91c87d"
+  },
+  "s9": {
+   "url": "https://hub.jhu.edu/2015/07/13/how-big-is-pluto",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-22"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Russia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:11.707Z",
+   "snapshot": "2ddec00f1a3736437b8d6f951339f749de749d1a9557b91f07a7fe41cd466fd7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04846",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dwarf planet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c081"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04847",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04849",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04850",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kuiper belt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pluto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-369"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s10",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-245/5, u10): With New Horizons' radius of 1,188 km Pluto's surface is ~17.7 million km², a little more than Russia's 17.1 million km², so the card statement is false today; but before 2015 some estimates (~2,300 km diameter) made Pluto's surface smaller than Russia, which is why the card says otherwise. Answer kept; note added."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f10854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f10854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Russia",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s10"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f04846",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A non-satellite body fulfilling only the first two of these criteria (such as Pluto, which had hitherto been considered a planet) is classified as a dwarf planet and not a planet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dwarf planet” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f04847",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eris (minor-planet number 136199) is the most massive and second-largest-known dwarf planet in the Solar System.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eris” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f04849",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Charon ( KAIR-on, -⁠ən or  SHARR-ən), formal designation (134340) Pluto I, is the largest of the five known natural satellites of the dwarf planet Pluto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charon” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f04850",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is a \"cold\" classical Kuiper belt object and gave rise to the name cubewano for this kind of object, after the QB1 portion of its designation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kuiper belt” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f10853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She is remembered as the first person to suggest the name Pluto for the dwarf planet discovered by Clyde Tombaugh in 1930.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pluto” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f10854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Its surface area is 1.774443×107 km2, or slightly bigger than Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russia” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:26:12.988Z",
+   "target": "f10854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Russia, or the Russian Federation, is a country in Eastern Europe and North Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:12.988Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Russia” is on the snapshot of s10"
+  }
+ ]
+}

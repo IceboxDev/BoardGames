@@ -1,0 +1,342 @@
+{
+ "article": "a0216",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/5G",
+   "title": "5G – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:06.987Z",
+   "snapshot": "671b17f64404e35e0018b5b7eb35bbeca61d190d2cce2ccdbce658b37fc78d4c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Global_System_for_Mobile_Communications",
+   "title": "Global System for Mobile Communications – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:06.036Z",
+   "snapshot": "ff7e97fa59733cdbf0186587bbb12401c6a20fa3dde0acaf2c3a7d0fc857dbc6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Universal_Mobile_Telecommunications_System",
+   "title": "Universal Mobile Telecommunications System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:05.219Z",
+   "snapshot": "c779ac98f11a8f82c967ed4895988aa5e908ea4303f9d3c15dbac4b8e30950d7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/GPRS",
+   "title": "GPRS – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:07.921Z",
+   "snapshot": "56a5dc684208a4c37307ed8cb399260fb41c7608b33cc49895861bf6dbba38d1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bluetooth",
+   "title": "Bluetooth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:12.059Z",
+   "snapshot": "c44f2c501ad9c8fbde3509d547dc83d4317be5025df8a84ee1f128398f312759"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/LTE_(telecommunication)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:08.995Z",
+   "snapshot": "bddc31d0b0e2f65e0c22f11c6719bc56eeba51d6b3b2b51f4d92ffdc92d41a4e"
+  },
+  "s7": {
+   "url": "https://support.apple.com/guide/iphone/learn-the-meaning-of-iphone-status-icons-iphef7bb57dc/ios",
+   "title": "Learn the meaning of iPhone status icons – iPhone User Guide",
+   "publisher": "Apple",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:39.879Z",
+   "snapshot": "cef8a630df8111d77f4a721942baa87e6dbc7c31c51f1d769555f36cbc091b30"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Evolved_HSPA",
+   "title": "Evolved HSPA – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:38.857Z",
+   "snapshot": "4b33ee4e37e07a7e53e331a757d0d28983e6704c2692f093c3c984a7d020ca07"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01076",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "E, 3G, H+, LTE and 5G",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01077",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "GSM",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01078",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "UMTS",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01079",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "GPRS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01080",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bluetooth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:13.322Z",
+   "target": "f01076",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "E, 3G, H+, LTE and 5G",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“E, 3G, H+, LTE and 5G”, “E, 3G, H+, LTE und 5G”, “E, 3G, H+, LTE и 5G”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:13.322Z",
+   "target": "f01077",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Global System for Mobile Communications (früher Groupe Spécial Mobile, GSM) ist ein 1990 eingeführter Mobilfunkstandard für volldigitale Mobilfunknetze, der hauptsächlich für Telefonie, aber auch für leitungsvermittelte und paketvermittelte Datenübertragung sowie Kurzmitteilungen (Short",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “GSM” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:13.322Z",
+   "target": "f01078",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Das Universal Mobile Telecommunications System (UMTS) ist ein Mobilfunkstandard der dritten Generation (3G), mit dem deutlich höhere Datenübertragungsraten (bis zu 42 Mbit/s mit HSPA+, sonst max.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “UMTS” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:13.322Z",
+   "target": "f01079",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "General Packet Radio Service (GPRS), also called 2.5G, is a mobile data standard that is part of the 2G cellular communication network Global System for Mobile Communications (GSM).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “GPRS” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:13.322Z",
+   "target": "f01080",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bluetooth is a short-range Wireless technology standard that is used for exchanging data between fixed and mobile devices over short distances and building personal area networks (PANs).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.322Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bluetooth” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:44:54Z",
+   "target": "f01076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "LTE. Your carrier’s LTE network is available, and iPhone can connect to the internet over that network",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page lists the status-bar icons 5G, LTE, UMTS (3G/4G), EDGE and GPRS."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:44:56Z",
+   "target": "f01076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "EDGE. Your carrier’s EDGE (GSM) network is available, and iPhone can connect to the internet over that network.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:44:59Z",
+   "target": "f01076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "An HSPA+ indicator in the notification bar of an Android smartphone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23",
+   "note": "Android phones show HSPA+ as 'H+' in the status bar."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:32.190Z",
+   "target": "f01076",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "EDGE. Your carrier’s EDGE (GSM) network is available, and iPhone can connect to the internet over that network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:32.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,284 @@
+{
+ "id": "a1260",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "Reading Raw Bytes: Hex Editors and the Number Systems of Computing",
+ "titleDe": "Rohe Bytes lesen: Hex-Editoren und die Zahlensysteme der Informatik",
+ "titleRu": "Читая сырые байты: шестнадцатеричные редакторы и системы счисления в информатике",
+ "bodyEn": "Everything a computer stores – a photograph, a spreadsheet, a program – is ultimately a sequence of bytes, and a byte is eight bits, each of them a 0 or a 1. Humans are bad at reading long strings of bits, so programmers have invented several ways of writing the same data that are easier on the eye. A hex editor is the tool that shows them at their rawest.\n\nOpen any file in a hex editor and you will see three columns. On the left is the offset, the position of each row within the file. In the middle the bytes themselves appear as hexadecimal numbers: each byte becomes exactly two digits from 0 to F, so that the first eight bytes of a file may read \"89 50 4E 47 0D 0A 1A 0A\" – which happens to be the signature of a PNG image. On the right the same bytes are shown as text characters where they are printable. Because 16 is a power of 2, one hex digit corresponds exactly to four bits, which is why hexadecimal, not decimal, is the native dialect of low-level programming; it spread with IBM's System/360 family of 8-bit-byte computers, announced in 1964. Hex editors are used to patch executables, recover damaged files, inspect network packets and cheat at old video games.\n\nUnderneath the hex display everything is stored in the binary system, which uses only the digits 0 and 1. Gottfried Wilhelm Leibniz described binary arithmetic in 1703, but it became practical only when electronic switches could represent the two digits as \"off\" and \"on\". Eight bits give 256 possible values, from 00000000 to 11111111, which in hex is 00 to FF.\n\nBefore hexadecimal became standard, many machines were programmed in the octal system, with digits 0 to 7, each of which stands for exactly three bits. Octal suited computers such as the PDP-8, launched on 22 March 1965, whose 12-bit words split neatly into groups of three bits, and it lingered on the 16-bit PDP-11; and it survives today in Unix file permissions: \"chmod 755\" sets the bits rwxr-xr-x, one octal digit for the owner, the group and everyone else.\n\nNegative numbers pose a separate problem, since a bit has no minus sign. Almost every processor built since the 1960s stores signed integers in two's complement: to negate a number you invert every bit and add one. John von Neumann suggested the scheme in his First Draft of a Report on the EDVAC, distributed on 30 June 1945, and the EDSAC of 1949 already used it. An 8-bit byte then covers −128 to 127, and the same adder circuit handles addition and subtraction without special cases – which is exactly why the scheme won.\n\nFinally, there is the problem of sending bytes through channels designed for text. E-mail was built for 7-bit ASCII, so an attachment full of arbitrary bytes had to be re-encoded. The MIME standard, first published in June 1992, solved this with Base64: every three bytes become four characters drawn from an alphabet of 64 – the letters A to Z and a to z, the digits 0 to 9, plus \"+\" and \"/\" – with \"=\" as padding. The result is about a third longer than the original, but it passes safely through mail servers, JSON documents and \"data:\" URLs in web pages.\n\n| Representation | Digits or symbols | Typical use |\n|---|---|---|\n| Binary | 0, 1 | What the hardware actually stores |\n| Octal | 0–7 | Unix permissions, older minicomputers |\n| Hexadecimal | 0–9, A–F | Hex editors, memory addresses, colour codes |\n| Two's complement | binary with sign bit | Negative integers in CPUs |\n| Base64 | A–Z, a–z, 0–9, +, / | Binary data in e-mail and web text |\n\nEach of these is only a different way of writing the same bits; the hex editor simply makes that fact visible.",
+ "bodyDe": "Alles, was ein Computer speichert – ein Foto, eine Tabelle, ein Programm –, ist letztlich eine Folge von Bytes, und ein Byte besteht aus acht Bits, von denen jedes eine 0 oder eine 1 ist. Menschen können lange Bitfolgen schlecht lesen, deshalb haben Programmierer mehrere Schreibweisen für dieselben Daten erfunden, die das Auge weniger anstrengen. Ein Hex-Editor ist das Werkzeug, das sie in ihrer rohesten Form zeigt.\n\nÖffnet man eine beliebige Datei in einem Hex-Editor, sieht man drei Spalten. Links steht der Offset, die Position jeder Zeile innerhalb der Datei. In der Mitte erscheinen die Bytes selbst als Hexadezimalzahlen: Jedes Byte wird zu genau zwei Ziffern von 0 bis F, sodass die ersten acht Bytes einer Datei etwa so aussehen können wie „89 50 4E 47 0D 0A 1A 0A“ – was zufällig die Signatur eines PNG-Bildes ist. Rechts werden dieselben Bytes als Textzeichen angezeigt, soweit sie druckbar sind. Weil 16 eine Zweierpotenz ist, entspricht eine Hex-Ziffer genau vier Bits, und deshalb ist das Hexadezimalsystem, nicht das Dezimalsystem, der Heimatdialekt der systemnahen Programmierung; verbreitet hat es sich mit IBMs 1964 angekündigter Rechnerfamilie System/360 und ihren 8-Bit-Bytes. Hex-Editoren werden benutzt, um ausführbare Dateien zu patchen, beschädigte Dateien zu retten, Netzwerkpakete zu untersuchen und in alten Videospielen zu schummeln.\n\nUnter der Hex-Anzeige ist alles im Binärsystem gespeichert, das nur die Ziffern 0 und 1 benutzt. Gottfried Wilhelm Leibniz beschrieb die binäre Arithmetik 1703, doch praktisch wurde sie erst, als elektronische Schalter die beiden Ziffern als „aus“ und „an“ darstellen konnten. Acht Bits ergeben 256 mögliche Werte, von 00000000 bis 11111111, hexadezimal 00 bis FF.\n\nBevor sich das Hexadezimalsystem durchsetzte, wurden viele Maschinen im Oktalsystem programmiert, mit den Ziffern 0 bis 7, von denen jede für genau drei Bits steht. Das Oktalsystem passte zu Rechnern wie der am 22. März 1965 vorgestellten PDP-8, deren 12-Bit-Wörter sich sauber in Dreiergruppen teilen ließen, und hielt sich auch auf der 16-Bit-PDP-11; und es überlebt bis heute in den Unix-Dateirechten: „chmod 755“ setzt die Bits rwxr-xr-x, eine Oktalziffer für den Besitzer, die Gruppe und alle anderen.\n\nNegative Zahlen stellen ein eigenes Problem dar, denn ein Bit hat kein Minuszeichen. Fast jeder seit den 1960er Jahren gebaute Prozessor speichert vorzeichenbehaftete ganze Zahlen im Zweierkomplement: Um eine Zahl zu negieren, invertiert man jedes Bit und addiert eins. John von Neumann schlug das Verfahren in seinem am 30. Juni 1945 verteilten First Draft of a Report on the EDVAC vor, und der EDSAC von 1949 nutzte es bereits. Ein 8-Bit-Byte deckt dann den Bereich von −128 bis 127 ab, und dieselbe Addierschaltung erledigt Addition und Subtraktion ohne Sonderfälle – genau deshalb hat sich das Verfahren durchgesetzt.\n\nSchließlich gibt es das Problem, Bytes durch Kanäle zu schicken, die für Text gebaut wurden. E-Mail wurde für 7-Bit-ASCII entworfen, also musste ein Anhang voller beliebiger Bytes umkodiert werden. Der im Juni 1992 erstmals veröffentlichte MIME-Standard löste dies mit Base64: Je drei Bytes werden zu vier Zeichen aus einem Alphabet von 64 – die Buchstaben A bis Z und a bis z, die Ziffern 0 bis 9 sowie „+“ und „/“ – mit „=“ als Füllzeichen. Das Ergebnis ist etwa ein Drittel länger als das Original, passiert aber sicher Mailserver, JSON-Dokumente und „data:“-URLs in Webseiten.\n\n| Darstellung | Ziffern oder Zeichen | Typische Verwendung |\n|---|---|---|\n| Binär | 0, 1 | Was die Hardware tatsächlich speichert |\n| Oktal | 0–7 | Unix-Rechte, ältere Minicomputer |\n| Hexadezimal | 0–9, A–F | Hex-Editoren, Speicheradressen, Farbcodes |\n| Zweierkomplement | binär mit Vorzeichenbit | Negative ganze Zahlen in CPUs |\n| Base64 | A–Z, a–z, 0–9, +, / | Binärdaten in E-Mail und Webtext |\n\nJede dieser Darstellungen ist nur eine andere Schreibweise derselben Bits; der Hex-Editor macht diese Tatsache lediglich sichtbar.",
+ "bodyRu": "Всё, что хранит компьютер, — фотография, таблица, программа — в конечном счёте представляет собой последовательность байтов, а байт состоит из восьми битов, каждый из которых равен 0 или 1. Люди плохо читают длинные цепочки битов, поэтому программисты придумали несколько способов записи тех же данных, щадящих глаза. Шестнадцатеричный редактор (hex-редактор) — инструмент, показывающий их в самом сыром виде.\n\nОткройте любой файл в hex-редакторе, и вы увидите три столбца. Слева — смещение, позиция каждой строки внутри файла. В середине сами байты отображаются в виде шестнадцатеричных чисел: каждый байт превращается ровно в две цифры от 0 до F, так что первые восемь байтов файла могут выглядеть как «89 50 4E 47 0D 0A 1A 0A» — это, кстати, сигнатура изображения PNG. Справа те же байты показаны как текстовые символы, если они печатаемые. Поскольку 16 — степень двойки, одна шестнадцатеричная цифра соответствует ровно четырём битам, и потому именно шестнадцатеричная, а не десятичная система стала родным диалектом низкоуровневого программирования; она распространилась вместе с семейством компьютеров IBM System/360 с 8-битными байтами, анонсированным в 1964 году. Hex-редакторы используют, чтобы править исполняемые файлы, восстанавливать повреждённые файлы, изучать сетевые пакеты и жульничать в старых видеоиграх.\n\nПод шестнадцатеричным отображением всё хранится в двоичной системе, которая использует только цифры 0 и 1. Готфрид Вильгельм Лейбниц описал двоичную арифметику в 1703 году, но практичной она стала лишь тогда, когда электронные переключатели смогли представлять две цифры как «выключено» и «включено». Восемь битов дают 256 возможных значений, от 00000000 до 11111111, что в шестнадцатеричной записи соответствует 00–FF.\n\nДо того как шестнадцатеричная система стала стандартом, многие машины программировали в восьмеричной системе с цифрами от 0 до 7, каждая из которых обозначает ровно три бита. Восьмеричная запись подходила таким компьютерам, как PDP-8, представленный 22 марта 1965 года, чьи 12-битные слова аккуратно делились на группы по три бита, и задержалась на 16-битном PDP-11; она дожила до наших дней в правах доступа к файлам в Unix: «chmod 755» устанавливает биты rwxr-xr-x — по одной восьмеричной цифре для владельца, группы и всех остальных.\n\nОтрицательные числа — отдельная проблема, ведь у бита нет знака минус. Почти каждый процессор, построенный с 1960-х годов, хранит целые числа со знаком в дополнительном коде: чтобы сменить знак числа, нужно инвертировать каждый бит и прибавить единицу. Джон фон Нейман предложил эту схему в своём «Первом проекте отчёта об EDVAC», разосланном 30 июня 1945 года, а EDSAC 1949 года уже её использовал. 8-битный байт тогда охватывает диапазон от −128 до 127, а одна и та же схема сумматора выполняет сложение и вычитание без особых случаев — именно поэтому этот способ и победил.\n\nНаконец, есть задача передачи байтов по каналам, созданным для текста. Электронная почта была рассчитана на 7-битный ASCII, поэтому вложение из произвольных байтов приходилось перекодировать. Стандарт MIME, впервые опубликованный в июне 1992 года, решил это с помощью Base64: каждые три байта превращаются в четыре символа из алфавита в 64 знака — буквы от A до Z и от a до z, цифры от 0 до 9, а также «+» и «/», — со знаком «=» для дополнения. Результат примерно на треть длиннее оригинала, зато безопасно проходит через почтовые серверы, JSON-документы и URL вида «data:» на веб-страницах.\n\n| Представление | Цифры или символы | Типичное применение |\n|---|---|---|\n| Двоичное | 0, 1 | То, что на самом деле хранит аппаратура |\n| Восьмеричное | 0–7 | Права доступа в Unix, старые мини-компьютеры |\n| Шестнадцатеричное | 0–9, A–F | Hex-редакторы, адреса памяти, коды цветов |\n| Дополнительный код | двоичная запись со знаковым битом | Отрицательные целые числа в процессорах |\n| Base64 | A–Z, a–z, 0–9, +, / | Двоичные данные в электронной почте и веб-тексте |\n\nКаждый из этих способов — лишь иная запись тех же самых битов; hex-редактор просто делает этот факт видимым.",
+ "notesEn": "",
+ "notesDe": "",
+ "notesRu": "",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Hexedit-screenshot.png",
+   "pageUrl": "https://en.wikipedia.org/wiki/Hex_editor",
+   "width": 506,
+   "height": 297,
+   "alt": {
+    "en": "Screenshot of the hex editor hexedit",
+    "de": "Bildschirmfoto des Hex-Editors hexedit",
+    "ru": "Снимок экрана hex-редактора hexedit"
+   },
+   "caption": {
+    "en": "The hex editor hexedit: offsets on the left, each byte as two hexadecimal digits in the middle, and the printable characters on the right.",
+    "de": "Der Hex-Editor hexedit: links die Offsets, in der Mitte jedes Byte als zwei Hexadezimalziffern, rechts die druckbaren Zeichen.",
+    "ru": "Hex-редактор hexedit: слева смещения, в середине каждый байт в виде двух шестнадцатеричных цифр, справа печатаемые символы."
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "f06296",
+   "answerEn": "As hexadecimal numbers",
+   "answerDe": "Als Hexadezimalzahlen",
+   "answerRu": "в виде шестнадцатеричных чисел",
+   "spans": {
+    "en": [
+     533,
+     22
+    ],
+    "de": [
+     609,
+     21
+    ],
+    "ru": [
+     563,
+     30
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1964",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "IBM's System/360 spreads hexadecimal notation",
+    "labelDe": "IBMs System/360 verbreitet die Hexadezimalschreibweise",
+    "labelRu": "IBM System/360 распространяет шестнадцатеричную запись"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Hexadecimal",
+    "title": "Hexadecimal – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06296",
+     "en": "How can bytes be displayed with the help of a hex editor?",
+     "de": "Wie lassen sich Bytes mit Hilfe eines Hex-Editors darstellen?",
+     "ru": "Как можно отобразить байты с помощью hex-редактора?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c105",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f06297",
+   "answerEn": "In the binary system",
+   "answerDe": "Im Binärsystem",
+   "answerRu": "в двоичной системе",
+   "spans": {
+    "en": [
+     1232,
+     20
+    ],
+    "de": [
+     1398,
+     14
+    ],
+    "ru": [
+     1373,
+     18
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1703",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Leibniz publishes „Explication de l'Arithmétique Binaire“",
+    "labelDe": "Leibniz veröffentlicht die „Explication de l'Arithmétique Binaire“",
+    "labelRu": "Лейбниц публикует «Объяснение двоичной арифметики»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Binary_number",
+    "title": "Binary number – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06297",
+     "en": "How can numbers be represented using only the digits 0 and 1?",
+     "de": "Wie lassen sich Zahlen allein mit den Ziffern 0 und 1 darstellen?",
+     "ru": "Как можно представить числа, используя только цифры 0 и 1?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ]
+  },
+  {
+   "id": "f06298",
+   "answerEn": "In the octal system",
+   "answerDe": "Im Oktalsystem",
+   "answerRu": "в восьмеричной системе",
+   "spans": {
+    "en": [
+     1614,
+     19
+    ],
+    "de": [
+     1801,
+     14
+    ],
+    "ru": [
+     1832,
+     22
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1965-03-22",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "DEC launches the octal-programmed PDP-8 minicomputer",
+    "labelDe": "DEC stellt den oktal programmierten Minicomputer PDP-8 vor",
+    "labelRu": "DEC представляет мини-компьютер PDP-8, программируемый в восьмеричной системе"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/PDP-8",
+    "title": "PDP-8 – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06298",
+     "en": "How can numbers be represented with the digits 0 to 7, as is customary for Unix file permissions?",
+     "de": "Wie lassen sich Zahlen mit den Ziffern 0 bis 7 darstellen, wie es etwa bei Unix-Dateirechten üblich ist?",
+     "ru": "Как можно представить числа цифрами от 0 до 7, как это принято, например, в правах доступа к файлам в Unix?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ]
+  },
+  {
+   "id": "f06299",
+   "answerEn": "In two's complement",
+   "answerDe": "Im Zweierkomplement",
+   "answerRu": "в дополнительном коде",
+   "spans": {
+    "en": [
+     2153,
+     19
+    ],
+    "de": [
+     2420,
+     19
+    ],
+    "ru": [
+     2436,
+     21
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1949",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The EDSAC, inspired by the EDVAC report, stores negative numbers in two's complement",
+    "labelDe": "Der EDSAC, angeregt vom EDVAC-Bericht, speichert negative Zahlen im Zweierkomplement",
+    "labelRu": "EDSAC, созданный под влиянием отчёта об EDVAC, хранит отрицательные числа в дополнительном коде"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Two%27s_complement",
+    "title": "Two's complement – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06299",
+     "en": "How are negative integers usually represented in computers?",
+     "de": "Wie lassen sich negative ganze Zahlen in Computern üblicherweise darstellen?",
+     "ru": "Как обычно представляют отрицательные целые числа в компьютерах?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  },
+  {
+   "id": "f06300",
+   "answerEn": "With Base64",
+   "answerDe": "Mit Base64",
+   "answerRu": "с помощью Base64",
+   "spans": {
+    "en": [
+     2780,
+     11
+    ],
+    "de": [
+     3128,
+     10
+    ],
+    "ru": [
+     3120,
+     16
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1992-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The MIME standard (RFC 1341) defines Base64 for e-mail",
+    "labelDe": "Der MIME-Standard (RFC 1341) definiert Base64 für E-Mail",
+    "labelRu": "Стандарт MIME (RFC 1341) вводит Base64 для электронной почты"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/MIME",
+    "title": "MIME – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w06300",
+     "en": "How can binary data such as e-mail attachments be represented using only 64 printable ASCII characters?",
+     "de": "Wie lassen sich binäre Daten wie E-Mail-Anhänge nur mit 64 druckbaren ASCII-Zeichen darstellen?",
+     "ru": "Как можно представить двоичные данные, например вложения электронной почты, только 64 печатаемыми символами ASCII?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:hard"
+   ]
+  }
+ ],
+ "tags": [
+  "topic:technology/computing",
+  "topic:mathematics/number-systems",
+  "audience:international"
+ ]
+}

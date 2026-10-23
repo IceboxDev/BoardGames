@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-065",
+ "image": "IMG20261022011258.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] Where was the first and only successful slave revolt leading to the establishment of an independent nation?\nA. Jamaica B. Haiti C. South Africa\nAnswer: B. The Haitian Revolution, which took place from 1791 to 1804, ended French colonial rule. It led to the creation of Haiti, the world’s first black republic, and the first country in the Western Hemisphere to abolish slavery.",
+   "en": "Which country was founded through the only successful slave revolt that led to an independent nation?",
+   "de": "Welches Land entstand aus dem einzigen erfolgreichen Sklavenaufstand, der zur Gründung eines unabhängigen Staates führte?",
+   "reworked": true,
+   "answerEn": "Haiti",
+   "answerDe": "Haiti",
+   "timeline": {
+    "kind": "period",
+    "start": "1791-08-21",
+    "end": "1804-01-01",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Haitian Revolution, the slave uprising in French Saint-Domingue that ended in Haiti's independence",
+    "labelDe": "Die Haitianische Revolution, der Sklavenaufstand im französischen Saint-Domingue, der mit der Unabhängigkeit Haitis endete"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Haitian_Revolution",
+    "title": "Haitian Revolution",
+    "lang": "en"
+   },
+   "notes": "",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 2,
+   "discipline": "Cultural Studies",
+   "cardText": "[Cultural Studies] Which of the following animals is a part of the Chinese zodiac?\nA. Rabbit B. Panda C. Cat\nAnswer: A. In Chinese folklore, the cat was left out of the zodiac because it missed the great race that determined the zodiac animals’ order—often due to the rat forgetting to sign up for the cat. However, in the Vietnamese zodiac, the cat replaces the rabbit.",
+   "en": "Which animal of the Chinese zodiac is replaced by the cat in the Vietnamese zodiac?",
+   "de": "Welches Tier des chinesischen Tierkreises wird im vietnamesischen Tierkreis durch die Katze ersetzt?",
+   "reworked": true,
+   "answerEn": "Rabbit",
+   "answerDe": "Hase",
+   "timeline": {
+    "kind": "era",
+    "start": "-202",
+    "end": "220",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Han dynasty, when the Chinese zodiac's choice of animals was standardised",
+    "labelDe": "Han-Dynastie, in der die Auswahl der Tiere des chinesischen Tierkreises vereinheitlicht wurde"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Chinese_zodiac",
+    "title": "Chinese zodiac",
+    "lang": "en"
+   },
+   "notes": "The 'which of the following' only makes sense among the options, so the open question asks the fact the explanation gives (Vietnamese zodiac: cat instead of rabbit, also water buffalo instead of ox). German zodiac sign usually 'Hase'.",
+   "domain": "belief",
+   "sub": "symbols"
+  }
+ ]
+}

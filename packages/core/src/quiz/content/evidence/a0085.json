@@ -1,0 +1,599 @@
+{
+ "article": "a0085",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Der_Ring_des_Nibelungen",
+   "title": "Der Ring des Nibelungen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:33.511Z",
+   "snapshot": "396a651913cfa12e225812ef48f20428e7dd73ee0a90c851a32d001f337e7cc0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lorenzo_Da_Ponte",
+   "title": "Lorenzo Da Ponte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:34.600Z",
+   "snapshot": "7692f326fa4b4d8017e9bc2d0aa56cd901c3dcbd6546a638a3d13f13eac3430a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Il_trittico",
+   "title": "Il trittico – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:35.544Z",
+   "snapshot": "d8b68710b52fd55dcc883d16acb34e3e975d5dbc6009efe86f9c4b633b7d99af"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pagliacci",
+   "title": "Pagliacci – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:36.539Z",
+   "snapshot": "8c3b9c70a858f9f661c08db00d530345fcf481d285b9af8c01ed470e0e1bfef1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_drei_Ten%C3%B6re",
+   "title": "Die drei Tenöre",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:20:33.680Z",
+   "snapshot": "d2f2e160fd5ff493da5b80971b4a238cd9a005cce7adf001aa1a9bafb7df5776"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/ebooks/1487.txt.utf-8",
+   "title": "The Perfect Wagnerite (George Bernard Shaw)",
+   "publisher": "Project Gutenberg",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:43.278Z",
+   "snapshot": "f6955bae735166dab86ee46e610ae2aa56ce67c10be34b732112988839b888c8"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/ebooks/40540.txt.utf-8",
+   "title": "The Complete Opera Book (Gustav Kobbé, 1919)",
+   "publisher": "Project Gutenberg",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:44.063Z",
+   "snapshot": "6f536f2b6325885a45453c03b7a1868c66ba8ef8e8e70c5960c9b3e924513a13"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Rheingold, Die Walküre, Siegfried and Götterdämmerung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c008"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Le nozze di Figaro, Don Giovanni and Così fan tutte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Il tabarro, Suor Angelica and Gianni Schicchi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cavalleria rusticana and Pagliacci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die drei Tenöre",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; transcript tp-069"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:48.082Z",
+   "target": "f00421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Rheingold, Die Walküre, Siegfried and Götterdämmerung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Das Rheingold, Die Walküre, Siegfried and Götterdämmerung”, “Das Rheingold, Die Walküre, Siegfried und Götterdämmerung”, “Золото Рейна, Валькирия, Зигфрид и Гибель богов”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:48.082Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Le nozze di Figaro, Don Giovanni and Così fan tutte",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Le nozze di Figaro, Don Giovanni and Così fan tutte”, “Le nozze di Figaro, Don Giovanni und Così fan tutte”, “Свадьба Фигаро, Дон Жуан и Так поступают все”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:48.082Z",
+   "target": "f00423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Il tabarro, Suor Angelica and Gianni Schicchi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Il tabarro, Suor Angelica and Gianni Schicchi”, “Il tabarro, Suor Angelica und Gianni Schicchi”, “Плащ, Сестра Анджелика и Джанни Скикки”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:48.082Z",
+   "target": "f00424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cavalleria rusticana and Pagliacci",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Cavalleria rusticana and Pagliacci”, “Cavalleria rusticana und Pagliacci”, “Сельская честь и Паяцы”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:48.082Z",
+   "target": "f12985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die drei Tenöre (internationale Bezeichnung: The Three Tenors) waren ein Gesangstrio aus den drei Opernsängern Plácido Domingo (* 1941), Luciano Pavarotti (1935–2007) und José Carreras (* 1946), das ab 1990 bei mehreren Konzerten weltweit auftrat und eine Reihe von Schallplatten aufnahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:48.082Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die drei Tenöre” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:11:03Z",
+   "target": "f00421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the original German, Das Rheingold, Die Walkure, Siegfried, and Die Gotterdammerung.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:11:05Z",
+   "target": "f00421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The four parts that constitute the Ring cycle are, in sequence: Das Rheingold (The Rhinegold) Die Walküre (The Valkyrie) Siegfried Götterdämmerung (Twilight of the Gods)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:11:06Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Opera in four acts by Mozart; words by Lorenzo da Ponte, after Beaumarchais.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Le nozze di Figaro; same book: Don Giovanni 'text by Lorenzo da Ponte', Così fan tutte 'original libretto by da Ponte'"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:11:08Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Opera in two acts by Mozart; text by Lorenzo da Ponte.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Don Giovanni"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:11:10Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the handicap imposed by the banality of the original libretto by da Ponte.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Così fan tutte"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:11:12Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "including three of Mozart's most celebrated operas: The Marriage of Figaro (1786), Don Giovanni (1787), and Così fan tutte (1790).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:11:14Z",
+   "target": "f00423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Three one-act operas by Puccini have been composed for performance at one sitting. They are \"Suor Angelica\" (Sister Angelica), \"Il Tabarro\" (The Cloak), and \"Gianni Schicchi.\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:11:15Z",
+   "target": "f00423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the title of a collection of three one-act operas, Il tabarro, Suor Angelica, and Gianni Schicchi, by Giacomo Puccini.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:11:17Z",
+   "target": "f00424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of all these, \"Pagliacci,\" by Leoncavallo, is the only one that has shared the vogue of the Mascagni opera. The two make a remarkably effective double bill.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:11:20Z",
+   "target": "f00424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pagliacci is often staged with Cavalleria rusticana by Pietro Mascagni, a double bill known colloquially as \"Cav/Pag\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the original German, Das Rheingold, Die Walkure, Siegfried, and Die Gotterdammerung.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The four parts that constitute the Ring cycle are, in sequence: Das Rheingold (The Rhinegold) Die Walküre (The Valkyrie) Siegfried Götterdämmerung (Twilight of the Gods)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the handicap imposed by the banality of the original libretto by da Ponte.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "including three of Mozart's most celebrated operas: The Marriage of Figaro (1786), Don Giovanni (1787), and Così fan tutte (1790).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s2"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Three one-act operas by Puccini have been composed for performance at one sitting. They are \"Suor Angelica\" (Sister Angelica), \"Il Tabarro\" (The Cloak), and \"Gianni Schicchi.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the title of a collection of three one-act operas, Il tabarro, Suor Angelica, and Gianni Schicchi, by Giacomo Puccini.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of all these, \"Pagliacci,\" by Leoncavallo, is the only one that has shared the vogue of the Mascagni opera. The two make a remarkably effective double bill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:52:04.193Z",
+   "target": "f00424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pagliacci is often staged with Cavalleria rusticana by Pietro Mascagni, a double bill known colloquially as \"Cav/Pag\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:04.193Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s4"
+  }
+ ]
+}

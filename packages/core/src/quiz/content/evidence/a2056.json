@@ -1,0 +1,442 @@
+{
+ "article": "a2056",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Anke_Engelke",
+   "title": "Anke Engelke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:33.601Z",
+   "snapshot": "cfb449f2018a4fd20c12de1d2d1e788eab0a0b3b69da77421463e199aef1c137"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Elisabeth_Volkmann",
+   "title": "Elisabeth Volkmann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:34.561Z",
+   "snapshot": "0a333062e429de3de90d9e6c2785043a029bc77d6d0cc201bd719b1ea8e8bd2d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Norbert_Gastell",
+   "title": "Norbert Gastell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:38:32.514Z",
+   "snapshot": "0b496ee3a85d9fc5c050ca38eb292657634f56b80721aaf2cc8c65196ac03d8a"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_Simpsons",
+   "title": "Die Simpsons – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:38:35.710Z",
+   "snapshot": "e789e00f1abcc83af09b0b976039267b97304abaa315a80403bde76f1742867d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Otto_Waalkes",
+   "title": "Otto Waalkes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:08.627Z",
+   "snapshot": "9e87f5d1fc1ad2c9f1948ca27e2cf6cd8964cc3694a000b4625106a6b8dfb60c"
+  },
+  "s6": {
+   "url": "https://www.dwdl.de/story/9286/barts_stimme_sandra_schwittau_im_interview/",
+   "title": "Barts Stimme: Sandra Schwittau im Interview",
+   "publisher": "DWDL.de",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:15.481Z",
+   "snapshot": "4fba0e206da776e7c57a24afc02826d4029df0526746132acda90aba0b426862"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Sandra_Schwittau",
+   "title": "Sandra Schwittau – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:15.572Z",
+   "snapshot": "6abc36a53715109a0cb712c2abb84647a159c94ac1e6c6594c73de2b70209515"
+  },
+  "s8": {
+   "url": "https://www.synchronkartei.de/sprecher/631",
+   "title": "Deutsche Synchronkartei | Sprecher | Sandra Schwittau",
+   "publisher": "Deutsche Synchronkartei",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:15.942Z",
+   "snapshot": "651ad23dca171609d20f0522c4e28d4a4082bcf3f32d512a829ddf89158cd5e2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anke Engelke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c172"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10277",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elisabeth Volkmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Norbert Gastell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sandra Schwittau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Otto Waalkes",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:14.875Z",
+   "target": "f10276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anke Engelke (bürgerlich Anke Christina Fischer; * 21.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anke Engelke” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:14.875Z",
+   "target": "f10277",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1990 und 1991 spielte Elisabeth Volkmann in mehr als 20 Folgen der RTL-Erotik-Serie Schloß Pompon Rouge die Marquise Marie-Antoinette von Bommelroth.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elisabeth Volkmann” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:14.875Z",
+   "target": "f10278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Norbert Gastell (14 October 1929 – 26 November 2015) was a German actor who specialized in dubbing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norbert Gastell” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:14.875Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sandra Schwittau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sandra Schwittau”, “Сандра Швиттау”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:14.875Z",
+   "target": "f10280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Otto Waalkes wurde als zweiter Sohn des Malermeisters Karl Waalkes (1912–1993) und seiner Frau Adele, geborene Lüpkes (1910–1996), in Emden geboren und wuchs dort zusammen mit seinem älteren Bruder Karl-Heinz im Arbeiterstadtteil Transvaal auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:14.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otto Waalkes” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:19:03Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Frau Schwittau, seit dem Start der Serie in Deutschland 1991 sind Sie die Stimme von Bart Simpson.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:19:06Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sie ist die deutsche Stimme u. a. von Bart Simpson, Noomi Rapace, Hilary Swank und Eva Mendes.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:19:09Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nancy Cartwright (als 'Bart Simpson') in Die Simpsons feiern Plusiläum (2021)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:01.232Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Frau Schwittau, seit dem Start der Serie in Deutschland 1991 sind Sie die Stimme von Bart Simpson.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:01.232Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sie ist die deutsche Stimme u. a. von Bart Simpson, Noomi Rapace, Hilary Swank und Eva Mendes.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:01.232Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nancy Cartwright (als 'Bart Simpson') in Die Simpsons feiern Plusiläum (2021)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:01.232Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Barts Stimme: Sandra Schwittau im Interview - DWDL.de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sandra Schwittau” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:01.232Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Literatur von und über Sandra Schwittau im Katalog der Deutschen Nationalbibliothek",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sandra Schwittau” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:01.232Z",
+   "target": "f10279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Deutsche Synchronkartei | Sprecher | Sandra Schwittau",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sandra Schwittau” is on the snapshot of s8"
+  }
+ ]
+}

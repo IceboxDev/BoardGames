@@ -1,0 +1,249 @@
+{
+ "article": "a2106",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/DEFCON",
+   "title": "DEFCON – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:48.799Z",
+   "snapshot": "db86ff6ae59cfd34f07afaaaa74b62f1fc8ffbd88716fdcb95f600b7dfd25f70"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/NORAD",
+   "title": "NORAD – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:50.047Z",
+   "snapshot": "415dceca55ba56d47baa39d758d05603b4aff6e8e20dd3241d7f4ee009fe3c4a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Article_5_contingency_(2001)",
+   "title": "Article 5 contingency (2001) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:50.770Z",
+   "snapshot": "bc5d2f8b2f57b1f56360ba9219f18bf98a2e7d41145ebcb42f873f2b575761bc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation",
+   "title": "Federal Bureau of Investigation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:51.998Z",
+   "snapshot": "364a031b549ec1545d066b1ce2d68d44e905b20452904d3373ba4287187792f7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bin_Ladin_Determined_To_Strike_in_US",
+   "title": "Bin Ladin Determined To Strike in US – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:52.779Z",
+   "snapshot": "f09c05cbceac222b5ecef165ec666a3f55fe20f38165eb90510add2535c90ee2"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/PENTTBOM",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:41:53.781Z",
+   "snapshot": "71ef90d7d0e64b2e8784b6c662d62c322ad5484b13c6d062f47b6f6983a86145"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "DEFCON",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c176"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10527",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "NORAD",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10528",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "NATO",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "FBI",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "CIA",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:23.421Z",
+   "target": "f10526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The defense readiness condition (DEFCON) is an alert state used by the United States Armed Forces.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DEFCON” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:23.421Z",
+   "target": "f10527",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The North American Aerospace Defense Command (commonly abbreviated to NORAD  NΟR-ad; French: Commandement de la défense aérospatiale de l'Amérique du Nord; CDAAN) is a bi-national mutual defense organization in Canada and the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NORAD” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:23.421Z",
+   "target": "f10528",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "2001 NATO Article 5 contingency",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “NATO” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:23.421Z",
+   "target": "f10529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Federal Bureau of Investigation (FBI) is the domestic intelligence and security service of the United States and its principal federal law enforcement agency.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “FBI” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:23.421Z",
+   "target": "f10530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "During 2001, CIA analysts produced several reports warning of imminent attacks by Bin Laden and al-Qaeda.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:23.421Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “CIA” is on the snapshot of s5"
+  }
+ ]
+}

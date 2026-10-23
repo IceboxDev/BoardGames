@@ -1,0 +1,888 @@
+{
+ "article": "a0055",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2016_United_States_presidential_election",
+   "title": "2016 United States presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:15.723Z",
+   "snapshot": "046024645eb1769311651a831ad19f1e1bb74ac56e1bed083f7cc08b84a50c79"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/2020_United_States_presidential_election",
+   "title": "2020 United States presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:16.862Z",
+   "snapshot": "2ce2251025061de1ea6cfe97fd2adbfc91013cb6d3054874062d7abbad5f7629"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2012_United_States_presidential_election",
+   "title": "2012 United States presidential election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:17.661Z",
+   "snapshot": "abbb37a7a0c41ee449212f88bc2ff12741271f93af21123935c256c2253181c3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/United_States_Electoral_College",
+   "title": "United States Electoral College – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:18.869Z",
+   "snapshot": "e31b0e7bd1d52f93e8412d0f5a95424b136c08bfe4d9a033afc2cecbaa18334e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Twenty-third_Amendment_to_the_United_States_Constitution",
+   "title": "Twenty-third Amendment to the United States Constitution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:19.583Z",
+   "snapshot": "eee6aa54a14275ffa561820932d8ba1d192e630108454d0e5025386bf7344cf8"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Electoral_College",
+   "title": "Electoral College",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:18:18.455Z",
+   "snapshot": "874da1c0b1bb47243f4e028a487a3fcda8b1a4ada7df2b0c8abdf2d07a832c61"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:20.807Z",
+   "snapshot": "a125663aedc016e78943eaa7997b722e4184e14bf52a43b2a1cdca486ed199dc"
+  },
+  "s8": {
+   "url": "https://www.archives.gov/electoral-college/about",
+   "title": "About the Electoral College",
+   "publisher": "U.S. National Archives and Records Administration",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:32.587Z",
+   "snapshot": "465065a7e197e2c1e62d6f6a7600ffe379886dde76227a1c5cf642b0a7291f29"
+  },
+  "s9": {
+   "url": "https://www.usa.gov/electoral-college",
+   "title": "Presidential election process: Electoral College",
+   "publisher": "USAGov (U.S. General Services Administration)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:32.921Z",
+   "snapshot": "bf9ac68fb088c566089516e89138df6573844681f7e409c602166be7fd98a200"
+  },
+  "s10": {
+   "url": "https://www.270towin.com/2016-election/",
+   "title": "2016 Presidential Election – 270toWin",
+   "publisher": "270toWin",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:33.834Z",
+   "snapshot": "3c3c185f8657f5143be274ce3aa36431d48be0c2253042c3041b0e2fd19412a9"
+  },
+  "s11": {
+   "url": "https://www.presidency.ucsb.edu/statistics/elections/2016",
+   "title": "Election of 2016 – The American Presidency Project",
+   "publisher": "The American Presidency Project, UC Santa Barbara",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:33.602Z",
+   "snapshot": "e9921bf27d4971f8c3e78ac7d0fc0d1f10b80ecf2524bc1da1c8c24c1931563d"
+  },
+  "s12": {
+   "url": "https://www.presidency.ucsb.edu/statistics/elections/2020",
+   "title": "Election of 2020 – The American Presidency Project",
+   "publisher": "The American Presidency Project, UC Santa Barbara",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:34.500Z",
+   "snapshot": "5189a83f24198854136117153c702a40a64df1a58dd1bf114ec8e66b749a791b"
+  },
+  "s13": {
+   "url": "https://www.270towin.com/2020-election/",
+   "title": "2020 Presidential Election – 270toWin",
+   "publisher": "270toWin",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:34.603Z",
+   "snapshot": "f16275002f59d65d965ea335cae47126f51f864b8cb8c038c41eaf854346d13a"
+  },
+  "s14": {
+   "url": "https://www.presidency.ucsb.edu/statistics/elections/2012",
+   "title": "Election of 2012 – The American Presidency Project",
+   "publisher": "The American Presidency Project, UC Santa Barbara",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:35.226Z",
+   "snapshot": "90077ab9bf3b389fc419e777032b716c56766bb2801f408c49c93745ba63d6d2"
+  },
+  "s15": {
+   "url": "https://www.270towin.com/2012-election/",
+   "title": "2012 Presidential Election – 270toWin",
+   "publisher": "270toWin",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:35.644Z",
+   "snapshot": "c99dcbb2358c515753b04ea53ca6757f913f0331cdaf74bfbc27cc788c998be1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About 3 million fewer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "About 7 million more",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "About 5 million more",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "270",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "538",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Electoral College",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-304"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:43.621Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About 3 million fewer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 3 million fewer”, “Rund 3 Millionen weniger”, “Примерно на 3 миллиона меньше”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:43.621Z",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "About 7 million more",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 7 million more”, “Rund 7 Millionen mehr”, “Примерно на 7 миллионов больше”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:43.621Z",
+   "target": "f00273",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "About 5 million more",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About 5 million more”, “Rund 5 Millionen mehr”, “Примерно на 5 миллионов больше”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:43.621Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A simple majority of electoral votes (270 or more) is required to elect the president and vice president.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.621Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “270” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:43.621Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "538",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“538”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:43.621Z",
+   "target": "f13691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Electoral College (deutsch: Wahlmännerkollegium) ist das Organ in den Vereinigten Staaten, das alle vier Jahre den Präsidenten und den Vizepräsidenten wählt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:43.621Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Electoral College” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:14:18Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Electoral College consists of 538 electors. A majority of 270 electoral votes is required to elect the President.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:14:23Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Electoral College consists of 538 electors.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:14:27Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A candidate needs the vote of at least 270 electors—more than half of all electors—to win the presidential election.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:14:30Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "there are currently 538 electors in all",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:14:34Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "winning several key swing states to achieve a majority in the Electoral College while losing the nationwide popular vote by 2.87 million votes",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "2.87 million rounds to 3 million fewer"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:14:38Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Donald J. Trump Republican 304 62,984,828 Hillary R. Clinton Democratic 227 65,853,514",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "FEC totals: Clinton 65,853,514 − Trump 62,984,828 = 2,868,686, about 3 million fewer for Trump"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:14:41Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Hillary Clinton Tim Kaine 232 43.1% 65,788,564 48.2% Republican Donald Trump Mike Pence 306 56.9% 62,955,340 46.2%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "Dec 2016 count: gap 2.83 million (final FEC count 2.87 million); about 3 million either way"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T08:14:46Z",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Totals 158,376,434 81,268,773 51.31% 306 74,216,728 46.86% 232",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "81,268,773 − 74,216,728 = 7,052,045, about 7 million"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T08:14:50Z",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Total 81,283,501 51.31% 306 74,223,975 46.85% 232",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "results table margin 7,059,526 votes"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T08:14:54Z",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Joseph R. Biden Democratic 306 81,268,867 Donald J. Trump (I) Republican 232 74,216,747",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "gap 7,052,120, about 7 million"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T08:14:58Z",
+   "target": "f00273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Barack Obama Joseph Biden 332 61.7% 65,899,660 51.1% Republican Mitt Romney Paul Ryan 206 38.3% 60,932,152 47.2%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "65,899,660 − 60,932,152 = 4,967,508, about 5 million"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T08:15:04Z",
+   "target": "f00273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Barack H. Obama (I) Democratic 332 65,915,795 W. Mitt Romney Republican 206 60,933,504",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r061",
+   "run": "provenance-research-2026-10-23",
+   "note": "FEC totals: gap 4,982,291, about 5 million"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Electoral College consists of 538 electors. A majority of 270 electoral votes is required to elect the President.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Electoral College consists of 538 electors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A candidate needs the vote of at least 270 electors—more than half of all electors—to win the presidential election.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "there are currently 538 electors in all",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "winning several key swing states to achieve a majority in the Electoral College while losing the nationwide popular vote by 2.87 million votes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s1"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Donald J. Trump Republican 304 62,984,828 Hillary R. Clinton Democratic 227 65,853,514",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00271",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Hillary Clinton Tim Kaine 232 43.1% 65,788,564 48.2% Republican Donald Trump Mike Pence 306 56.9% 62,955,340 46.2%",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s11"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Totals 158,376,434 81,268,773 51.31% 306 74,216,728 46.86% 232",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s12"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00272",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "Joseph R. Biden Democratic 306 81,268,867 Donald J. Trump (I) Republican 232 74,216,747",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e22 is on the snapshot of s13"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s14",
+     "quote": "Barack Obama Joseph Biden 332 61.7% 65,899,660 51.1% Republican Mitt Romney Paul Ryan 206 38.3% 60,932,152 47.2%",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e23 is on the snapshot of s14"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00273",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s15",
+     "quote": "Barack H. Obama (I) Democratic 332 65,915,795 W. Mitt Romney Republican 206 60,933,504",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e24 is on the snapshot of s15"
+  },
+  {
+   "id": "e36",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "A majority of 270 electoral votes is required to elect the President.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “270” is on the snapshot of s8"
+  },
+  {
+   "id": "e37",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00274",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A candidate needs the vote of at least 270 electors—more than half of all electors—to win the presidential election.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “270” is on the snapshot of s9"
+  },
+  {
+   "id": "e38",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Electoral College consists of 538 electors.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “538” is on the snapshot of s8"
+  },
+  {
+   "id": "e39",
+   "at": "2026-10-23T12:51:59.260Z",
+   "target": "f00275",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Including Washington, D.C.’s three electors, there are currently 538 electors in all.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:59.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “538” is on the snapshot of s9"
+  }
+ ]
+}

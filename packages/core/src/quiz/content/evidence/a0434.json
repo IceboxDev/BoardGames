@@ -1,0 +1,287 @@
+{
+ "article": "a0434",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Chinese_Pidgin_English",
+   "title": "Chinese Pidgin English – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:42.666Z",
+   "snapshot": "c78e4f07d845f679faabc1f77689064074e48d43d6b4ff99d3520b6b708190e8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Pidgin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:43.631Z",
+   "snapshot": "e7d5e69195efe763d5c5ce18d71f152e66b37176f11b52ede44b660a022efa51"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Creole_language",
+   "title": "Creole language – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:44.752Z",
+   "snapshot": "43c285337a74b2fd3ee683d0ec6e0dab2e1e6f3780e7dce406dfcfccdb5b0a4e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mediterranean_Lingua_Franca",
+   "title": "Mediterranean Lingua Franca – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:45.617Z",
+   "snapshot": "f1ab3e8145c2304ffc469db4fe685f90f0add423a8a04f948049638cb3f1e757"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tok_Pisin",
+   "title": "Tok Pisin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:46.655Z",
+   "snapshot": "aa3f8951bdd2ef06403f14cf4f3033c9ac60e573eefd2cfa045ff356b4bc0377"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Code-switching",
+   "title": "Code-switching – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:47.819Z",
+   "snapshot": "7a39342064f34dc2da43728cd913628ad1630b0fa5e0b2bb7bc68b108e460a4c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "pidgin languages",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c037"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pidgin languages",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6; transcript ppm-038"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02167",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "creole language",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02168",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "lingua franca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02169",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tok Pisin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f02170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "code-switching",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:47.579Z",
+   "target": "f02166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Generally speaking, pidgin languages have isolating morphology and so do not inflect nouns and verbs; CPE is no exception.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “pidgin languages” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:47.579Z",
+   "target": "f02166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pidgin languages",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pidgin languages”, “Pidgin-Sprachen”, “пиджины”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:47.579Z",
+   "target": "f02167",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A creole language, or simply creole, is a stable form of contact language that develops from the process of different languages simplifying and mixing into a new form (often a pidgin), and then that form expanding and elaborating into a full-fledged language with native speakers, all within a fairly",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “creole language” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:47.579Z",
+   "target": "f02168",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Mediterranean Lingua Franca, or Sabir, was a contact language, or languages, that were used as a lingua franca in the Mediterranean basin from the 11th to the 19th centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lingua franca” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:47.579Z",
+   "target": "f02169",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tok Pisin (English:  TOK PISS-in,  tawk, -⁠zin; Tok Pisin: [tok pisin]) is an English creole language spoken throughout Papua New Guinea.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tok Pisin” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:47.579Z",
+   "target": "f02170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In linguistics, code-switching or language alternation is the process of shifting from one linguistic code (a language or dialect) to another, depending on the social context or conversational setting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:47.579Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “code-switching” is on the snapshot of s6"
+  }
+ ]
+}

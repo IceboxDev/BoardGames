@@ -1,0 +1,285 @@
+{
+ "article": "a1342",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/SN_1572",
+   "title": "SN 1572 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:55.176Z",
+   "snapshot": "e75e2566ea54c75360a9eb37f0cb3252fea343b741436333c46680988216cace"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ursa_Major",
+   "title": "Ursa Major – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:57.276Z",
+   "snapshot": "a8858c51a7d91bf4635dc6ba43f9a2c6e970fd6f41833e65961df34f51c6fa4a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/61_Cygni",
+   "title": "61 Cygni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:56.293Z",
+   "snapshot": "0b255a194ebea073e928d4998dd7ee64398ebbc3038bbe2ca714afcfa09645da"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Flag_of_Australia",
+   "title": "Flag of Australia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:57.330Z",
+   "snapshot": "e41c303bd00e9ff5f74c0ca2a21d636c339357e113cd58f47274d3cd4fe56c43"
+  },
+  "s5": {
+   "url": "https://www.constellation-guide.com/constellation-list/crux-constellation/",
+   "title": "Crux Constellation",
+   "publisher": "Constellation Guide",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:29.851Z",
+   "snapshot": "1590973c51ba73b349dc61f69c3074c0b59bc055a9a7e128c9af936b50fa7777"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Crux",
+   "title": "Crux – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:17:45Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cassiopeia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ursa Major",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cygnus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Crux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:10.896Z",
+   "target": "f06706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "SN 1572 (also Tycho's Star, Tycho's Nova, or Tycho's Supernova), or B Cassiopeiae (B Cas), was a supernova of Type Ia in the constellation Cassiopeia, one of eight supernovae visible to the naked eye according to historical records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cassiopeia” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:10.896Z",
+   "target": "f06707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ursa Major, also known as the Great Bear, is a constellation in the Northern Sky, whose associated mythology likely dates back into prehistory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ursa Major” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:10.896Z",
+   "target": "f06708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "61 Cygni  is a binary star system in the northern constellation Cygnus, consisting of a pair of K-type dwarf stars that orbit each other in a period of about 659 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.896Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cygnus” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:10.896Z",
+   "target": "f06710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Crux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Crux”, “Kreuz des Südens”, “Южный Крест”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:17:43Z",
+   "target": "f06710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Crux, or the Southern Cross, is a prominent constellation in the southern sky. It is the smallest of all 88 constellations",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:17:44Z",
+   "target": "f06710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is found on the flags of several countries – Australia, Papua New Guinea, New Zealand – along with the other four stars of the Southern Cross . It is also one of the 27 stars representing different states on the flag of Brazil.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:45Z",
+   "target": "f06710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Though it is the smallest of all 88 modern constellations , Crux is among the most easily distinguished",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r014",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:55:54.747Z",
+   "target": "f06710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Crux Constellation – Constellation Guide",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:54.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Crux” is on the snapshot of s5"
+  }
+ ]
+}

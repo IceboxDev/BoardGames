@@ -1,0 +1,388 @@
+{
+ "article": "a0425",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mikado_(game)",
+   "title": "Mikado (game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:06.606Z",
+   "snapshot": "99b67329ed37bffa62d6b169b414d42b22b7eea3bb700cd8544b0080dd61295e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Queen_(chess)",
+   "title": "Queen (chess) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:07.619Z",
+   "snapshot": "02538f719e9e1df4f702751b02ca08a0c0245f11539d680a0f7725ee5a0ca7e5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/French-suited_playing_cards",
+   "title": "French-suited playing cards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:08.612Z",
+   "snapshot": "4df965701e7d5fa35ccb621ab9d5b23f6a8a047ebedd18a5be2243b5a418e711"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dominoes",
+   "title": "Dominoes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:09.730Z",
+   "snapshot": "c739f955954a0a552703480b0224c94388257d40489d5d7ee1b181aa5c60a418"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Skat",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:09.202Z",
+   "snapshot": "5c562c051a84473cad566dde83a1628ddf13414de5166672a452f0e79cfc64a8"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Mikado_(Spiel)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:55:09.956Z",
+   "snapshot": "75f5530c4cccc006e47038d8e94f4bc299385cfce4af11ac64445fc016c446b8"
+  },
+  "s7": {
+   "url": "https://www.spielregeln.de/mikado.html",
+   "title": "Mikado Spielregeln",
+   "publisher": "spielregeln.de",
+   "kind": "other",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:33:02.375Z",
+   "snapshot": "7af902c458c245c61b9750ab25eee3a87c98bd4dbaa0412d7b91b94e0521f8cb"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Mikado_%28game%29",
+   "title": "Mikado (game) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:04.149Z",
+   "snapshot": "99b67329ed37bffa62d6b169b414d42b22b7eea3bb700cd8544b0080dd61295e"
+  },
+  "s9": {
+   "url": "https://www.pagat.com/domino/",
+   "title": "Domino games",
+   "publisher": "pagat.com (John McLeod)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:03.207Z",
+   "snapshot": "895ead1ea6d1899dfac96ae14fc9675cb7b7a433ce5cbe5b613dc18ee17bd0ef"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mikado and Mandarin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c036"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "King and Queen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02123",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hearts and Diamonds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Double-six and double-five",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:46.356Z",
+   "target": "f02121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mikado and Mandarin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mikado and Mandarin”, “Mikado und Mandarin”, “Микадо и мандарин”) on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:46.356Z",
+   "target": "f02122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Checkmate with a King and Queen · Interactive Chess Endgame Practice",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “King and Queen” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:46.356Z",
+   "target": "f02123",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "When it arrived in Portugal, the kings and jacks in hearts and diamonds swapped suits.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:46.356Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hearts and Diamonds” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:46.356Z",
+   "target": "f02125",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Double-six and double-five",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Double-six and double-five”, “Doppel-Sechs und Doppel-Fünf”, “Дубль-шесть и дубль-пять”) on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T12:08:04Z",
+   "target": "f02121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mandarin (gelbe Stäbchen)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23",
+   "note": "Listed with Mikado (20 points) and Mandarin (10 points)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:08:06Z",
+   "target": "f02121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "if one has already picked up a special stick (Mikado/Mandarin)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:08:07Z",
+   "target": "f02125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "most often in the form of a double-six set in which each end of each tile has from zero to six spots",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23",
+   "note": "The two highest doubles of 0–6 are 6-6 and 5-5 (6-5 outscores 5-5 in pips; body corrected)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:08:09Z",
+   "target": "f02125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "because the highest-value piece has six pips on each end",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:08.293Z",
+   "target": "f02121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mandarin (gelbe Stäbchen)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:08.293Z",
+   "target": "f02121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "if one has already picked up a special stick (Mikado/Mandarin)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:08.293Z",
+   "target": "f02125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "most often in the form of a double-six set in which each end of each tile has from zero to six spots",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s9"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:08.293Z",
+   "target": "f02125",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "because the highest-value piece has six pips on each end",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:08.293Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  }
+ ]
+}

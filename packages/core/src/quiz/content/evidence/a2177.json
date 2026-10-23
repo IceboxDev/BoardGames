@@ -1,0 +1,242 @@
+{
+ "article": "a2177",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Pi%C3%B1a_Colada",
+   "title": "Piña Colada",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:24.391Z",
+   "snapshot": "174c01874e4d7fd07c3f4c45b4776c88b1c7f37c01fb2484d0032f814ffe3489"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Moscow_Mule",
+   "title": "Moscow Mule",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:25.195Z",
+   "snapshot": "ef3592df96ae313f46f187358fb19000253e42ddd545f521c176348a39ede514"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Negroni",
+   "title": "Negroni – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:26.954Z",
+   "snapshot": "17839dd46da98830bcfdb55a4b978dfc83a2175f4c3066ea808e51e94300e4c2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Bellini_(cocktail)",
+   "title": "Bellini (cocktail) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:27.959Z",
+   "snapshot": "f079aa76f9b99a2d288cfc786e312ae125191aafa7e986843c595ebbb90b9ca5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Caipirinha",
+   "title": "Caipirinha – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:28.921Z",
+   "snapshot": "d4b971eb3959d033604f46726c8988f50b05e654617b08b72df641b2c35a6edd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11037",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Piña Colada",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11038",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Moscow Mule",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-328"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11039",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Negroni",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11040",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bellini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11041",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Caipirinha",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:33.916Z",
+   "target": "f11037",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Piña Colada [pɪnja koˈlada] (von spanisch piña  ‚Ananas‘ und colada ‚Guss‘) ist ein süßer, cremiger Cocktail aus Rum, Kokosnusscreme und Ananassaft.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Piña Colada” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.916Z",
+   "target": "f11038",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Moscow Mule ist ein Cocktail mit Ingwergeschmack und gehört zu den Highballs, enthält also neben einer Basisspirituose einen größeren Anteil an nicht-alkoholischen Zutaten (s.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moscow Mule” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.916Z",
+   "target": "f11039",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A Negroni is an Italian cocktail, made of equal parts gin, vermouth rosso (red, semi-sweet), and Campari, generally served with ice, and commonly garnished with an orange slice or orange peel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Negroni” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.916Z",
+   "target": "f11040",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Bellini is a cocktail made with Prosecco and peach purée or nectar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bellini” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.916Z",
+   "target": "f11041",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Caipirinha ( KY-pi-REEN-yə; Brazilian Portuguese pronunciation: [kajpiˈɾĩɲɐ]) is a Brazilian cocktail made with cachaça, sugar, lime, and ice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.916Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Caipirinha” is on the snapshot of s5"
+  }
+ ]
+}

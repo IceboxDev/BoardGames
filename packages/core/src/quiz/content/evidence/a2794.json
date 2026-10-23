@@ -1,0 +1,242 @@
+{
+ "article": "a2794",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/G_factor_(psychometrics)",
+   "title": "G factor (psychometrics)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:22.531Z",
+   "snapshot": "f45cfff51daf85dde778f4fda34cb16fda1b33626902e83ca06d0e37949aa1a8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Spearman",
+   "title": "Charles Spearman",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:23.156Z",
+   "snapshot": "2b91657d202eb2c1c2ce4a47a81d61cd6296154330e81e3f00cdbd2ff5f99b4a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence",
+   "title": "Fluid and crystallized intelligence",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:24.125Z",
+   "snapshot": "ad1caebf0421cbb0d2f579a2950d36349a65c28b23199e3156eab733001c559e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Flynn_effect",
+   "title": "Flynn effect",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:25.285Z",
+   "snapshot": "013e14d2eb38ff8983352768fc7462573a3eff54c03a34702dbb0dbb1bd86ea0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Theory_of_multiple_intelligences",
+   "title": "Theory of multiple intelligences",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:22:26.240Z",
+   "snapshot": "5ae2223e12a81fde378ded2500076610afd2ce07dc1b9cbc150d60f46e85b2fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "General intelligence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-043"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Spearman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fluid intelligence",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Flynn effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f26000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Theory of multiple intelligences",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:14.308Z",
+   "target": "f25996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The terms IQ, general intelligence, general cognitive ability, general mental ability, and simply intelligence are often used interchangeably to refer to this common core shared by cognitive tests.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.308Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “General intelligence” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:14.308Z",
+   "target": "f25997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Charles Spearman always insisted that his work be applied in psychiatry and urged so in his Maudsley lecture to the Royal Medico-Psychological Association.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.308Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Spearman” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:14.308Z",
+   "target": "f25998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The concepts of fluid intelligence (gf) and crystallized intelligence (gc) were introduced in 1943 by the psychologist Raymond Cattell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.308Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fluid intelligence” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:14.308Z",
+   "target": "f25999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Flynn effect is the substantial and long-sustained increase in both fluid and crystallized intelligence test scores that were measured in many parts of the world over the 20th century, named after researcher James Flynn (1934–2020).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.308Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flynn effect” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:14.308Z",
+   "target": "f26000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The theory of multiple intelligences (MI) posits that human intelligence is not a single general ability but comprises various distinct modalities, such as linguistic, logical-mathematical, musical, and spatial intelligences.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:14.308Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theory of multiple intelligences” is on the snapshot of s5"
+  }
+ ]
+}

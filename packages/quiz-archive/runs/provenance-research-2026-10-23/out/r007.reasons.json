@@ -1,0 +1,123 @@
+{
+ "a0992": {
+  "kind": "corrected",
+  "reason": "The body said the Fourth Republic wanted to decorate Sartre with the Legion of Honour in 1945 'for his role in the Resistance' and that he 'turned down a chair at the Collège de France'. In 1945 the Fourth Republic did not yet exist, and Sartre's own statement of 1964 says only that he was offered the Legion of Honor after the war and refused it although sympathetic to the government, and that he never sought to enter the Collège de France though friends suggested it. The sentence now says that; the 'only voluntary refusal of the literature prize' claim is dated 'as of 2026' (Pasternak was coerced in 1958, per NobelPrize.org; still true after the 2026 award).",
+  "sources": [
+   {
+    "url": "https://www.nybooks.com/articles/1964/12/17/sartre-on-the-nobel-prize/"
+   },
+   {
+    "url": "https://www.nobelprize.org/prizes/facts/nobel-prize-facts/"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f04956": {
+  "kind": "marked",
+  "reason": "Spans moved with the edited body; time-sensitive superlative ('only person to have voluntarily refused this prize') gets a review date after the 2027 award.",
+  "sources": [
+   {
+    "url": "https://www.nobelprize.org/prizes/facts/nobel-prize-facts/"
+   }
+  ],
+  "fields": [
+   "spans",
+   "reviewBy"
+  ]
+ },
+ "f04960": {
+  "kind": "marked",
+  "reason": "Answer span re-placed in the corrected Legion of Honour sentence.",
+  "sources": [
+   {
+    "url": "https://www.nybooks.com/articles/1964/12/17/sartre-on-the-nobel-prize/"
+   }
+  ],
+  "fields": [
+   "spans"
+  ]
+ },
+ "a1100": {
+  "kind": "corrected",
+  "reason": "The body called Ibadi Islam 'the majority faith of Oman'. Oman publishes no religious statistics; the Library of Congress country study (1993) calls Ibadis the majority, while recent estimates (cited on Wikipedia from the US State Department) put Ibadis and Sunnis at about 45 % each. The body now says Oman is Ibadism's main home, gives both views (as of 2026), and adds that elected Ibadi imams ruled Oman's interior until the 1950s; the notes explain the contested figure.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ibadism"
+   },
+   {
+    "url": "https://countrystudies.us/persian-gulf-states/46.htm"
+   },
+   {
+    "url": "https://countrystudies.us/persian-gulf-states/57.htm"
+   },
+   {
+    "url": "https://www.bbc.com/news/world-middle-east-14654150"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu",
+   "notesEn",
+   "notesDe",
+   "notesRu"
+  ]
+ },
+ "f05498": {
+  "kind": "marked",
+  "reason": "Spans re-placed in the rewritten Ibadi sentence; the share of Ibadis in Oman is an estimate that can change, so the fact gets a review date.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ibadism"
+   }
+  ],
+  "fields": [
+   "spans",
+   "reviewBy"
+  ]
+ },
+ "w05498": {
+  "kind": "reworded",
+  "reason": "The question asked which branch 'the majority of the population' of Oman belongs to — contested (recent estimates ~45 % Ibadi, ~45 % Sunni; with expatriates Ibadis are clearly not a majority of residents). It now asks which non-Sunni, non-Shia branch has its main home in Oman, whose interior was long ruled by its elected imams — same answer, no contested premise.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ibadism"
+   },
+   {
+    "url": "https://countrystudies.us/persian-gulf-states/57.htm"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "a1160": {
+  "kind": "corrected",
+  "reason": "The body said the Lutheran churches 'have held to these two [sacraments] ever since, while retaining confession as a non-sacramental practice'. The Apology of the Augsburg Confession (1531), itself a Lutheran confession, calls Baptism, the Lord's Supper and Absolution 'truly Sacraments', and Lutheranism has not been dogmatic about the number. The body now says Lutheran churches generally count two (as the EKD does) though some count three, and the notes accept 3 as an alternative answer.",
+  "sources": [
+   {
+    "url": "https://bookofconcord.org/defense/of-the-number-and-use-of-sacraments/"
+   },
+   {
+    "url": "https://www.ekd.de/Sakrament-Basiswissen-Glauben-11022.htm"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Lutheran_sacraments"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu",
+   "notesEn",
+   "notesDe",
+   "notesRu"
+  ]
+ }
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a1339",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Boeing_C-32",
+   "title": "Boeing C-32 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:43.304Z",
+   "snapshot": "bac4e1d3b3a92407ba41b9328ac4efe444c1b57bd84d9af1c1e7c385a343c051"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Boeing_VC-25",
+   "title": "Boeing VC-25 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:44.278Z",
+   "snapshot": "03f230953305c67521a91ac3a5e7cb6fb8de7e1a97a8bde31c8fb80457e09366"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Air_Force_One",
+   "title": "Air Force One – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:45.374Z",
+   "snapshot": "1cc9b3913f507ae0189a90150513d1157ce71f2b520d052131bf3016940674cf"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Air_Force_One",
+   "title": "Air Force One",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:43.002Z",
+   "snapshot": "58e3147079b3a9b89a6dd1f2c0434ab13d6f00cf0d393d90044cdc5686f001fe"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Marine_One",
+   "title": "Marine One – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:55:46.190Z",
+   "snapshot": "7ce068625c470c85efa18570eb139abde6cf4b138fb5cf3bb4dd95944c706d9c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Konrad_Adenauer_(Flugzeug)",
+   "title": "Konrad Adenauer (Flugzeug) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:55:43.951Z",
+   "snapshot": "b6a1d5cccd148ebe46f34693c2dc509f039bc493a7be04e7a29fec601f74d0f8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "C-32",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c112"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "VC-25",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Air Force One",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Air Force One",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-050"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Marine One",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Konrad Adenauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:10.179Z",
+   "target": "f06691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Boeing C-32 is the United States Air Force designation for variants of the Boeing 757 in military service.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “C-32” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:10.179Z",
+   "target": "f06692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Boeing VC-25 is a military version of the Boeing 747 airliner, modified for presidential transport and commonly operated by the United States Air Force (USAF) as Air Force One, the call sign of any US Air Force aircraft carrying the president of the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “VC-25” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:10.179Z",
+   "target": "f06693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Air Force One is the official air traffic control–designated call sign for a United States Air Force aircraft carrying the president of the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Air Force One” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:10.179Z",
+   "target": "f06693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Rufzeichen Air Force One (abgekürzt AFO oder AF-1) wird automatisch jedem Flugzeug oder Hubschrauber der US Air Force (USAF) zugeteilt, sobald es vom amtierenden Präsidenten der Vereinigten Staaten betreten wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Air Force One” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:10.179Z",
+   "target": "f06694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Marine One is the call sign of any United States Marine Corps aircraft carrying the president of the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marine One” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:10.179Z",
+   "target": "f06695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Konrad Adenauer ist der Taufname von bislang drei Flugzeugen der Flugbereitschaft des Bundesministeriums der Verteidigung, die dem Bundespräsidenten, dem Bundeskanzler, den Bundesministern sowie den Präsidenten des Bundestages, des Bundesrates und des Bundesverfassungsgerichts als Transportmittel",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:10.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad Adenauer” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0956",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kaftan",
+   "title": "Kaftan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:35.083Z",
+   "snapshot": "3224f8f9d4da50d857a3c54e0da95669fde3f3ebc88fbc1cba5714051c1e2d78"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kippah",
+   "title": "Kippah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:35.955Z",
+   "snapshot": "6f500d47c3257f97aaca8ac6aeee414d421ea31df7103e903c64b8e430eb9dae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Shtreimel",
+   "title": "Shtreimel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:36.997Z",
+   "snapshot": "58354a0831a3a51316a3600561083058a8a8d4e700ebd50116fd185214d5b6ec"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tzitzit",
+   "title": "Tzitzit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:38.055Z",
+   "snapshot": "8edb7d02cf3495a258d17c0a4c04beb002dc9af337c0e99328bcc9edcd75f4fc"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tefillin",
+   "title": "Tefillin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:39.078Z",
+   "snapshot": "81a9cab6740802b10290a50b0ba21c707fe42e43b527ec93b755e39ab0603548"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04776",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kaftan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c080"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04777",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kippah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04778",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shtreimel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04779",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tallit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04780",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tefillin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:11.212Z",
+   "target": "f04776",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "A kaftan or caftan (; Arabic: قفطان, qafṭān; Persian: خفتان, khaftān; Turkish: kaftan) is a variant of the robe or tunic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kaftan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:11.212Z",
+   "target": "f04777",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The term kippah (Hebrew: כיפה) literally means \"dome\" as the kippah is worn on the head like a dome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kippah” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:11.212Z",
+   "target": "f04778",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A shtreimel (Yiddish: שטרײַמל shtrayml, plural: שטרײַמלעך shtraymlekh or שטרײַמלען shtraymlen) is a fur hat worn by some Ashkenazi Jewish men, mainly members of Hasidic Judaism, on Shabbat and Jewish holidays and other festive occasions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shtreimel” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:11.212Z",
+   "target": "f04779",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tzitzit are usually attached to the four corners of the tallit gadol (prayer shawl), usually referred to simply as a tallit or tallis; and tallit katan (everyday undershirt).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tallit” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:11.212Z",
+   "target": "f04780",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tefillin (Hebrew: תְּפִלִּין or תְּפִילִּין; Ashkenazi and Modern Israeli Hebrew pronunciation: [tfiˈlin]), or phylacteries, are sets of small black leather boxes with leather straps containing scrolls of parchment inscribed with verses from the Torah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:11.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tefillin” is on the snapshot of s5"
+  }
+ ]
+}

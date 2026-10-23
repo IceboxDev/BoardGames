@@ -1,0 +1,331 @@
+{
+ "article": "a2261",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Throwback_Thursday",
+   "title": "Throwback Thursday",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:15.192Z",
+   "snapshot": "065106840c6d87f7d3cbb2999b90274c11e2a3a238392e11f0ea84ad57223333"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Fear_of_missing_out",
+   "title": "Fear of missing out – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:05.588Z",
+   "snapshot": "9ee3c91134bc8151c5a510aabcc396fae205e7d98e467ecf47c941a3a67e73b0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/R/IAmA",
+   "title": "r/IAmA – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:16.540Z",
+   "snapshot": "83bf7b68b6798c4cf4031aebdb69f42651107d0df4184d207832aa7e10cc2671"
+  },
+  "s4": {
+   "url": "https://www.bostonmagazine.com/news/2014/07/29/fomo-history/",
+   "title": "The History of FOMO",
+   "publisher": "Boston Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:43.727Z",
+   "snapshot": "74ee5bf536288229c6b56e4004fe56ed86e164abd2bb07ddfd9f5b5136edd991"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Throwback Thursday",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-233"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fear of missing out",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ask me anything",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Patrick McGinnis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Barack Obama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:44.668Z",
+   "target": "f11595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Throwback Thursday or #TBT is an internet trend used among social media platforms such as Instagram, Twitter and Facebook.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.668Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Throwback Thursday” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:44.668Z",
+   "target": "f11597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fear of missing out (FOMO) is the feeling of apprehension that one is either not in the know about or missing out on information, events, experiences, or life decisions that could make one's life better.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.668Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fear of missing out” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:44.668Z",
+   "target": "f11599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "r/IAmA is a subreddit for question-and-answer interactive interviews termed \"AMA\" (short for \"Ask Me Anything\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.668Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ask me anything” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:44.668Z",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Patrick McGinnis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Patrick McGinnis”, “Патрик Макгиннис”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:44.668Z",
+   "target": "f21241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Notable participants include then-United States President Barack Obama (while campaigning for the 2012 election), Bill Gates (multiple times), Bernie Sanders (amidst the 2018 midterm elections), and Holocaust survivor Alex Hershaft.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:44.668Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barack Obama” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:17:34Z",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Patrick J. McGinnis coined the term FOMO and popularized it in a 2004 op-ed titled \"Social Theory at HBS: McGinnis' Two FOs\" in The Harbus, the magazine of Harvard Business School",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:36Z",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He did, however, set down a nascent theory of FOBO, FOMO, and the ensuing panic in an op-ed for the HBS's student newspaper, the Harbus.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23",
+   "note": "Boston Magazine 2014 profile of McGinnis as originator"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:30.538Z",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Patrick J. McGinnis coined the term FOMO and popularized it in a 2004 op-ed titled \"Social Theory at HBS: McGinnis' Two FOs\" in The Harbus, the magazine of Harvard Business School",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.538Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:30.538Z",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He did, however, set down a nascent theory of FOBO, FOMO, and the ensuing panic in an op-ed for the HBS's student newspaper, the Harbus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.538Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:30.538Z",
+   "target": "f21240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Certainly Patrick McGinnis didn’t know.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:30.538Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Patrick McGinnis” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,336 @@
+{
+ "article": "a1475",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Orange_(fruit)",
+   "title": "Orange (fruit) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:44:00.243Z",
+   "snapshot": "d63d9e92d3e19312dd65931050c69bd5777eb5d151ac7fbd484522175067daca"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tomato",
+   "title": "Tomato – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:54.146Z",
+   "snapshot": "939e0d7d1bb533b4b3090c0bf630e7727df65f18d23a166b2eef64a1779ba848"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Grapefruit",
+   "title": "Grapefruit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:36.085Z",
+   "snapshot": "eeddcfd2b936187d0ba3b093d461f1cdcaac64ac9a1438bab8c73b704836e1ad"
+  },
+  "s4": {
+   "url": "https://www.fao.org/markets-and-trade/commodities-overview/bananas-tropical-fruits/bananas/5/es",
+   "title": "La fruta más popular (FAO)",
+   "kind": "official",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:03:45.509Z",
+   "snapshot": "0f014719cd22b9d02d10f45338ef9716d8adbc0ce4a2a68bac956c1b9c88b176"
+  },
+  "s5": {
+   "url": "https://oer.enviraj.com/?p=3491",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:46.626Z",
+   "snapshot": "137359c154528db0b3540507c0c8a40df477af0d494f52ba23f83b5d4cb642bc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_tomato_production",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:03:49.390Z",
+   "snapshot": "e56c18011b76de45ba99f3a7b02002f893e08f972cb4275363f61cba5979f0bb"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Kiwifruit",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:24.151Z",
+   "snapshot": "0ca58a6623b1eefd562708fcf335ae53f22383071679ec6aee6fd43154ec67e2"
+  },
+  "s8": {
+   "url": "https://www.fao.org/markets-and-trade/commodities-overview/bananas-tropical-fruits/bananas/5/en",
+   "title": "Bananas – Markets and Trade (FAO)",
+   "publisher": "Food and Agriculture Organization of the United Nations",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:40:06.133Z",
+   "snapshot": "70f782b4f3d30527d7b2203c50aa8627af3b05a0e800a55bd6e0c422c0b0b720"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07371",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c123"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07373",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tomato",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07374",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grapefruit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "banana",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "banana",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "banana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "after fix (tp-279/1, u01): By FAOSTAT 2022 the banana (135 Mt) is the most-produced fruit in the everyday sense, ahead of watermelon (100 Mt) and apple (96 Mt); mango is far behind (59 Mt). But the tomato, botanically a fruit, is harvested in larger amounts (186 Mt), and the card says \"Frucht\". The wording now asks for fruit in the everyday sense (\"Obst\"); tomato is accepted in the notes for the botanical reading."
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:31.477Z",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "banana",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:31.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s4"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:31.477Z",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "banana",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:31.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e4 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:31.477Z",
+   "target": "f07371",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The orange, also called sweet orange to distinguish it from the bitter orange (Citrus × aurantium), is the fruit of a tree in the family Rutaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Orange” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:31.477Z",
+   "target": "f07373",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The tomato (US: , UK: ; Solanum lycopersicum) is a plant whose fruit is an edible berry that is eaten as a vegetable.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tomato” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:31.477Z",
+   "target": "f07374",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The grapefruit (Citrus × paradisi) is a subtropical citrus tree known for its relatively large, sour to semi-sweet, somewhat bitter fruit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grapefruit” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:31.477Z",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Banana Market Review - Preliminary Results 2023",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:31.477Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “banana” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:14:29Z",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bananas, as the most consumed and traded fruit globally, heavily depend on plastic use at virtually every stage of the value chain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r020",
+   "run": "provenance-research-2026-10-23",
+   "note": "Culinary sense; botanically the tomato is produced in larger tonnage (see notes)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:17.380Z",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Bananas, as the most consumed and traded fruit globally, heavily depend on plastic use at virtually every stage of the value chain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:17.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:17.380Z",
+   "target": "f11065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The most traded variety is the Cavendish banana, which accounts for just under half of global production and has an estimated annual production volume of 50 million tonnes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:17.380Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “banana” is on the snapshot of s8"
+  }
+ ]
+}

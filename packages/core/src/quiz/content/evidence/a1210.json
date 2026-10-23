@@ -1,0 +1,341 @@
+{
+ "article": "a1210",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Quaternary_glaciation",
+   "title": "Quaternary glaciation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:34.894Z",
+   "snapshot": "f85f0caa9df0354dbddaf11a2fa63b0b722ec2356ebaa1f328f37d3c373dd880"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cirque",
+   "title": "Cirque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:35.975Z",
+   "snapshot": "c96fc181fd221960ace1657f98adaefb7247e06042dfc8d53a09fa22c11bd1f8"
+  },
+  "s3": {
+   "url": "https://www.etymonline.com/word/fjord",
+   "title": "fjord – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fjord",
+   "title": "Fjord",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:37.000Z",
+   "snapshot": "9a068c0b4a42a25600eadd047b6a732ba5332011382de042a7566a3eeef136d3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Glacial_erratic",
+   "title": "Glacial erratic – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:37.991Z",
+   "snapshot": "193090d9914bdef00f8e62deabedd9e19f692ef500225d53527d4ebfe241de9a"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Surge_(Glaziologie)",
+   "title": "Surge (Glaziologie)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:35.155Z",
+   "snapshot": "4a42f4c56cb958d62f0661385615a09f4fb8dbcda87230031c69410afd5886e6"
+  },
+  "s7": {
+   "url": "https://www.klett.de/alias/1014739",
+   "title": "Infoblatt Glaziale Serie (TERRASSE online)",
+   "publisher": "Ernst Klett Verlag",
+   "kind": "book",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T07:17:00Z"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Glaziale_Serie",
+   "title": "Glaziale Serie – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:39.821Z",
+   "snapshot": "58690b85248c45d58fdfa8f454aad3a8f9e366885568ab8cbb31dc98a0e0e89f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "moraine landscape",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c101"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06048",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "cirque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "fjord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06049",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fjord",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-075"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06050",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "glacial erratic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Surge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-207"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:48.776Z",
+   "target": "f06046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "moraine landscape",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“moraine landscape”, “Moränenlandschaft”, “моренный ландшафт”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:48.776Z",
+   "target": "f06048",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A cirque (French: [siʁk]; from the Latin word circus) is an amphitheatre-like valley formed by glacial erosion.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “cirque” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:48.776Z",
+   "target": "f06049",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In physical geography, a fjord (  FYORD, fee-ORD; also spelled fiord, a variant most common in New Zealand English) is a long, relatively narrow sea inlet with steep sides or cliffs in a valley created by a former glacier, which has since become inundated with water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fjord” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:48.776Z",
+   "target": "f06050",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A glacial erratic is a glacially deposited rock differing from the type of rock native to the area in which it rests.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “glacial erratic” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:48.776Z",
+   "target": "f10930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eine Surge (englisch [sɜːd͡ʒ] wörtlich für Welle, Woge) ist eine typischerweise periodisch auftretende deutliche Steigerung der Fließgeschwindigkeit eines Gletschers.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:48.776Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Surge” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:17:00Z",
+   "target": "f06046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Schematisch gliedert sich die glaziale Serie in eine Grundmoränenlandschaft, die sich unter dem Eis befand; eine hügelige Endmoränenkette",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23",
+   "note": "the glacial series of northern Germany is the type example of the moraine landscape the wording asks for"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:17:03Z",
+   "target": "f06046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "eine Grundmoräne mit einem Zungenbecken",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r013",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:30.831Z",
+   "target": "f06046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "eine Grundmoräne mit einem Zungenbecken",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:30.831Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  }
+ ]
+}

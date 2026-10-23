@@ -1,0 +1,249 @@
+{
+ "article": "a0199",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fall_of_Mosul",
+   "title": "Fall of Mosul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:20.261Z",
+   "snapshot": "db41f5ab6064cdd183cf1f54891f74ef4ae54c404990b7f97f5006ae72d2c4b9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Raqqa_(2017)",
+   "title": "Battle of Raqqa (2017) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:21.488Z",
+   "snapshot": "04173c957d2543d66fbcc92a29487757579ecdc0446ce42bf8480be30a40e74b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Palmyra_offensive_(May_2015)",
+   "title": "Palmyra offensive (May 2015) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:22.392Z",
+   "snapshot": "5eb671f69ef00f8b4a9b9fb3311226cf3fd3fc443b1012328c1b58a9c802f1b8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fall_of_Fallujah",
+   "title": "Fall of Fallujah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:23.311Z",
+   "snapshot": "b904285eed2609195a54bf8695bbc2b741fc24434fa71abe1bbfb49a298fc209"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Tikrit",
+   "title": "Second Battle of Tikrit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:24.554Z",
+   "snapshot": "1c323af772d61dade12c02e57067374a74e3b2483a9621df1f09fa034cd321df"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Abu_Bakr_al-Baghdadi",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:28.932Z",
+   "snapshot": "a6380fd16ee5663d2eecd3afe1771fe55c07c3c23b79ff636fc57350d90fe831"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00991",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mosul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00992",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Raqqa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00993",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Palmyra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00994",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fallujah",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00995",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tikrit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:09.414Z",
+   "target": "f00991",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The fall of Mosul refers to a historical event in Iraq, occurring between 4 and 10 June 2014, when Islamic State of Iraq and the Levant (ISIL) and allied insurgents captured the city of Mosul from the Iraqi Army.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mosul” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:09.414Z",
+   "target": "f00992",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The battle of Raqqa (2017), also known as the second battle of Raqqa, was the fifth and final phase of the Raqqa campaign (2016–2017) launched by the Syrian Democratic Forces (SDF) against the Islamic State (IS) with an aim to seize the city of Raqqa, the de facto capital of ISIL since 2014.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Raqqa” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:09.414Z",
+   "target": "f00993",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Palmyra offensive of May 2015 was a military operation launched during the Syrian Civil War by the Islamic State (IS) on May 13–26, 2015, in an attempt to capture the government-held Tadmur District of the Homs Governorate, including the administrative centre of Tadmur, known in English as",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Palmyra” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:09.414Z",
+   "target": "f00994",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The fall of Fallujah was a major battle in the city of Fallujah in western Iraq that took place from late 2013 to early 2014, in which Islamic State of Iraq and the Levant (ISIL) militants and other Sunni insurgents including Anbar tribal militias captured the city of Fallujah.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fallujah” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:09.414Z",
+   "target": "f00995",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Second Battle of Tikrit was a battle in which Iraqi Security Forces recaptured the city of Tikrit (the provincial capital of the Saladin Governorate) from the Islamic State of Iraq and the Levant (ISIL).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:09.414Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tikrit” is on the snapshot of s5"
+  }
+ ]
+}

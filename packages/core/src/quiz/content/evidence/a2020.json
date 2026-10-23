@@ -1,0 +1,289 @@
+{
+ "article": "a2020",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/This_Is_Spinal_Tap",
+   "title": "This Is Spinal Tap – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:25.437Z",
+   "snapshot": "8cbd31c4f1ecb6aed603d5383b56f220aa1d0e488c7f33d440b35bd273373fde"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Blair_Witch_Project",
+   "title": "The Blair Witch Project – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:26.377Z",
+   "snapshot": "bcbb3fb6f1fd02b05fd56aca8b3d30b5d354fee25c79155d9e9b67392b911902"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/United_93_(film)",
+   "title": "United 93 (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:27.360Z",
+   "snapshot": "96eb7e8b6135ad71fffe2b8371df18c61d569429d933b186fa8ec243de8a1fde"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Oppenheimer_(film)",
+   "title": "Oppenheimer (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:36:28.467Z",
+   "snapshot": "469c79b2c1f5ed778e63306fb18adfdc9d1f1ccd6e13b4bea9693f34a3d9c7f9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/This_Is_Spinal_Tap",
+   "title": "This Is Spinal Tap",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:25.744Z",
+   "snapshot": "22de0b61b9dfa1e4c796a61daf7e648b562885f1dfc5c7bcf8b3e4c0916fa686"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Die_Reise_des_jungen_Che",
+   "title": "Die Reise des jungen Che",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:36:26.623Z",
+   "snapshot": "6b82578abc9d07bc54fb854cdbf44ae669e3bccd216961e5e96524c955da10a1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mockumentary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10097",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "found footage film",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "docudrama",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "biopic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This Is Spinal Tap",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-091"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Reise des jungen Che",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; transcript tp-390"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:07.512Z",
+   "target": "f10096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This Is Spinal Tap is a 1984 American mockumentary comedy film directed by Rob Reiner in his feature directorial debut.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mockumentary” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:07.512Z",
+   "target": "f10097",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The found footage work is a pseudo-documentary in which three young students (Heather Donahue, Michael C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Found footage” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:07.512Z",
+   "target": "f10098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "United 93 is a 2006 docudrama action film produced, written, and directed by Paul Greengrass, that depicts the events around United Airlines Flight 93, one of four hijacked flights of the September 11 attacks.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “docudrama” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:07.512Z",
+   "target": "f10099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nolan had also penned a script for a biopic of Howard Hughes approximately during the time of production of Martin Scorsese's The Aviator (2004), which had given him insight on how to write a script regarding a person's life.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “biopic” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:07.512Z",
+   "target": "f11446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This Is Spinal Tap (Alternativtitel: Die Jungs von Spinal Tap) ist ein US-amerikanisches Mockumentary aus dem Jahr 1984, in der die fiktive Heavy-Metal-Band Spın̈al Tap auf einer Tournee begleitet wird.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “This Is Spinal Tap” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:07.512Z",
+   "target": "f11447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Reise des jungen Che (Originaltitel: Diarios de motocicleta) ist ein Spielfilm des brasilianischen Regisseurs Walter Salles aus dem Jahr 2004.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:07.512Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Reise des jungen Che” is on the snapshot of s6"
+  }
+ ]
+}

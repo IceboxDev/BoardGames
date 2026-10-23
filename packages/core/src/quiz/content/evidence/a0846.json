@@ -1,0 +1,557 @@
+{
+ "article": "a0846",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations",
+   "title": "Member states of the United Nations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:24:02.550Z",
+   "snapshot": "3adcd91fad2504e1437f15a24e2ba012814651b5144fcf5c174bb2b4d4a7d3c4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Switzerland_and_the_United_Nations",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  },
+  "s3": {
+   "url": "https://www.un.org/en/about-us/growth-in-un-membership",
+   "title": "Growth in United Nations membership",
+   "publisher": "United Nations",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:08.179Z",
+   "snapshot": "7e8f5f7c0c25ac175dfb18980e760b0c6116c5baf1cf0e2362f9ba93797bbb3b"
+  },
+  "s4": {
+   "url": "https://www.gesetze.li/konso/pdf/1990065000",
+   "title": "Charta der Vereinten Nationen (LGBl. 1990 Nr. 65)",
+   "publisher": "Liechtensteinisches Landesgesetzblatt",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T10:24:39Z"
+  },
+  "s5": {
+   "url": "https://www.rferl.org/a/south_sudan_becomes_193rd_un_member/24265934.html",
+   "title": "South Sudan Becomes 193rd UN Member",
+   "publisher": "Radio Free Europe/Radio Liberty",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:08.492Z",
+   "snapshot": "2a6b1e4909f5e5f2fb3f6508cebbb056ec7b3a0cac6ab166c96b9b5f5bd98495"
+  },
+  "s6": {
+   "url": "https://www.aljazeera.com/news/2011/7/14/south-sudan-gains-un-membership",
+   "title": "South Sudan gains UN membership",
+   "publisher": "Al Jazeera",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:08.393Z",
+   "snapshot": "140600ca4872b66fa4c9e3fe7212157cc228a32fd3cc599e106cfe548566e07a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04226",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Switzerland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c071"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Liechtenstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04228",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Japan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Montenegro",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "South Sudan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:54.004Z",
+   "target": "f04226",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The most recent case of an observer state becoming a member state was Switzerland, which was admitted in 2002.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.004Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Switzerland” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:54.004Z",
+   "target": "f04227",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Liechtenstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Liechtenstein”, “Лихтенштейн”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:54.004Z",
+   "target": "f04228",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The veto of Mongolia by the Republic of China delayed the proceedings by one day, with the Soviet Union offering to exclude Mongolia from the list of 18 if Japan were also excluded.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.004Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Japan” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:54.004Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Yugoslavia / Serbia and Montenegro (1945–2006)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:54.004Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Montenegro” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:54.004Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "South Sudan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“South Sudan”, “Südsudan”, “Южный Судан”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:24:37Z",
+   "target": "f04227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Added: Liechtenstein, Namibia",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:24:39Z",
+   "target": "f04227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Inkrafttreten für das Fürstentum Liechtenstein: 18. September 1990",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:24:40Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "192 Members (2006) Added: Montenegro",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:24:41Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The last country to achieve UN membership was Montenegro in 2006",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:24:42Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "193 Members (2011) Added: South Sudan",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:24:43Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The UN General Assembly has admitted South Sudan as the 193rd member of the United Nations.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r063",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Added: Liechtenstein, Namibia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "192 Members (2006) Added: Montenegro",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The last country to achieve UN membership was Montenegro in 2006",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "193 Members (2011) Added: South Sudan",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The UN General Assembly has admitted South Sudan as the 193rd member of the United Nations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04227",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Added: Liechtenstein, Namibia",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Liechtenstein” is on the snapshot of s3"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Added: Montenegro",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Montenegro” is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04229",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The last country to achieve UN membership was Montenegro in 2006 but veto-holding China and Russia have blocked Taiwan and Kosovo, respectively, from joining the world body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Montenegro” is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Added: South Sudan",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “South Sudan” is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:21.931Z",
+   "target": "f04230",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "South Sudan gains UN membership | News | Al Jazeera",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:21.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “South Sudan” is on the snapshot of s6"
+  }
+ ]
+}

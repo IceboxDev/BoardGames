@@ -1,0 +1,242 @@
+{
+ "article": "a1405",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/California_Girls",
+   "title": "California Girls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:22.370Z",
+   "snapshot": "73fde174ca011540ca9528bcccc3580264d809527f171fdad09685c3f5f309a6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/All_You_Need_Is_Cash",
+   "title": "All You Need Is Cash – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:23.310Z",
+   "snapshot": "e3a44148eca6599cfcca4b3fd05b5a1fc60ba3a831f39d6124711b0392612dc7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Smells_Like_Nirvana",
+   "title": "Smells Like Nirvana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:24.270Z",
+   "snapshot": "9072cf8c699815460c77901c86fc3135f38cce3312d9c88b07b803618f6fddc7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Sweet_Home_Alabama",
+   "title": "Sweet Home Alabama – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:25.301Z",
+   "snapshot": "a2ce56ab9fafe9af005e69a7aa1d9c37c84d89cb65ab8231800de7abb7fb49df"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Back_in_the_U.S.A.",
+   "title": "Back in the U.S.A. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:59:26.301Z",
+   "snapshot": "b7491bf5486d8fa4f29cb240b8d6503d5b14509382d72e23fbe07271cef9b7db"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Beach Boys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c118"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Beatles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nirvana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neil Young",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Chuck Berry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:20.383Z",
+   "target": "f07021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"California Girls\" is a song by the American rock band the Beach Boys from their 1965 album Summer Days (And Summer Nights!!).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beach Boys” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:20.383Z",
+   "target": "f07022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "As TV Guide described it, the group's resemblance to the Beatles is \"purely – and satirically – intentional\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beatles” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:20.383Z",
+   "target": "f07023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Smells Like Nirvana\" is a song written and performed by American musician \"Weird Al\" Yankovic as a parody of Nirvana's song \"Smells Like Teen Spirit\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nirvana” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:20.383Z",
+   "target": "f07024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It was written in response to Neil Young's songs \"Southern Man\" and \"Alabama\", which the band felt blamed the entire Southern United States for slavery; Young is name-checked and dissed in the lyrics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neil Young” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:20.383Z",
+   "target": "f07025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "\"Back in the U.S.A.\" is a song written by Chuck Berry that was released in 1959 and was a top 40 hit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:20.383Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chuck Berry” is on the snapshot of s5"
+  }
+ ]
+}

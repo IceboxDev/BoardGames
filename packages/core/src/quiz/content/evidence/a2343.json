@@ -1,0 +1,296 @@
+{
+ "article": "a2343",
+ "sources": {
+  "s1": {
+   "url": "https://www.bayerische-staatszeitung.de/staatszeitung/politik/detailansicht-politik/artikel/ex-aussenminister-genscher-ist-tot.html",
+   "title": "Ex-Außenminister Genscher ist tot",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:07.822Z",
+   "snapshot": "16ad094a7ee4d158ef2f9635fc883339a40ee75abb40e47d1dd20e597a3efd3d"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ulla_Schmidt",
+   "title": "Ulla Schmidt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:08.770Z",
+   "snapshot": "47142f0942ccbf41458446cf2c6ef4cc40cf45b698465566015e3242a3aa224b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Klaus_Kinkel",
+   "title": "Klaus Kinkel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:11.225Z",
+   "snapshot": "88881e990c549eff06defba560c2416806b4797d5c4c91137cab770fb8b00be1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Norbert_Bl%C3%BCm",
+   "title": "Norbert Blüm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:12.247Z",
+   "snapshot": "aa75cd8def5d9212a6c1f9215c0cb75e85d62d69d471c3a7730428e4384ed664"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jens_Spahn",
+   "title": "Jens Spahn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:13.227Z",
+   "snapshot": "052855cd0f4a20b1ff8a9d75dbd964f4189a33f4c6f5ec3b5b3301f27c67310f"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Peer_Steinbr%C3%BCck",
+   "title": "Peer Steinbrück – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:55:14.296Z",
+   "snapshot": "4619f41ddb8a74e26ae6b06d86246c1a14a6f69cc98e23cae0ff5012176b2a9c"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Hans-Dietrich_Genscher",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:55:11.550Z",
+   "snapshot": "0cfe5146ba5a787d7808fb6a231cb0dffe9b23b5f613f6647e73756e0a7ed44f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hans-Dietrich Genscher",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-253"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ulla Schmidt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-271"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Klaus Kinkel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Norbert Blüm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jens Spahn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Peer Steinbrück",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:01.612Z",
+   "target": "f12196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sein Markenzeichen war der gelbe Pullover: Hans-Dietrich Genscher ist im Alter von 89 Jahren gestorben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans-Dietrich Genscher” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:01.612Z",
+   "target": "f12197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nach dem Besuch der Realschule und des Aufbaugymnasiums am Städtischen Einhard-Gymnasium in Aachen begann Ulla Schmidt nach dem Abitur 1968 ein Psychologie-Studium an der Hochschule in Aachen und der Pädagogischen Hochschule der RWTH Aachen sowie an der Pädagogischen Hochschule in Aachen für das",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ulla Schmidt” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:01.612Z",
+   "target": "f12198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Klaus Kinkel (17 December 1936 – 4 March 2019) was a German statesman, civil servant, diplomat and lawyer who served as the minister of Foreign affairs (1992–1998) and the vice chancellor of Germany (1993–1998) in the government of Helmut Kohl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Klaus Kinkel” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:01.612Z",
+   "target": "f12199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Norbert Blüm (German: [ˈnɔʁbɛʁt ˈblyːm]; 21 July 1935 – 23 April 2020) was a German politician who served as a federal legislator from North Rhine-Westphalia, chairman of the CDU North Rhine-Westphalia (1987–1999), and Minister of Labour and Social Affairs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Norbert Blüm” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:01.612Z",
+   "target": "f12200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jens Spahn, Olaf Köhne, Peter Käfferlein: Wir werden einander viel verzeihen müssen: Wie die Pandemie uns verändert hat – und was sie uns für die Zukunft lehrt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jens Spahn” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:01.612Z",
+   "target": "f12201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Peer Steinbrück (born 10 January 1947) is a German politician who was the Chancellor-candidate of the Social Democratic Party (SPD) in the 2013 federal election.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:01.612Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peer Steinbrück” is on the snapshot of s6"
+  }
+ ]
+}

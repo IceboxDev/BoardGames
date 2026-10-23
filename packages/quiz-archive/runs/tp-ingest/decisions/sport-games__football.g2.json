@@ -1,0 +1,907 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "sport-games/football",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-340",
+    "category": 6
+   },
+   "factId": "f03145"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0593",
+   "baseHash": "83fd759f17a1",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-011",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-392",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Who Guards the Goal: The Defensive Positions in Football",
+    "titleDe": "Wer das Tor bewacht: Die Abwehrpositionen im Fußball",
+    "bodyEn": "Every football formation is written from the back. The numbers 4-4-2 or 3-5-2 begin with the defenders, and the names of those defenders tell the history of the game.\n\nThe one player every side must field is the goalkeeper. Since 1912 the Laws of the Game have allowed only the goalkeeper to handle the ball, and only inside their own penalty area; a keeper who picks up a deliberate back-pass from a teammate concedes an indirect free kick, a rule introduced in 1992 to stop time-wasting. Keepers wear a distinguishing shirt and are the only players who cannot be replaced by an outfield player without a change of kit.\n\nIn front of the keeper, modern teams line up a back four. The two central players are each a centre-back – tall, strong in the air, responsible for clearing crosses and organising the offside line. On either flank stands a full-back, historically a purely defensive role – the 2–3–5 „pyramid“, first recorded around 1880, fielded just two full-backs – but today expected to overlap into attack and deliver crosses; Cafu, Philipp Lahm and Trent Alexander-Arnold turned the position into a creative one.\n\nThe older German system looked different. Until the 1990s most Bundesliga teams played with man-marking. One central defender, the stopper (German: Vorstopper), was assigned to the opposing centre-forward and followed him everywhere. The idea goes back to Herbert Chapman's Arsenal, which after the offside law change of 1925 pulled the centre-half back into defence as a „stopper“. Behind him played the libero – Italian for ‘free man’ – the one defender with no direct opponent, free to sweep up behind the man-markers, read the game and, if he dared, carry the ball forward. In English the role is also called the sweeper.\n\nThe spare man behind the defence was not born in Italy, however. In the early 1930s the Austrian Karl Rappan, player-coach of Servette FC in Geneva from 1932, pulled one defender back behind the others and had his team defend deep and counter quickly. German-speaking Swiss called the system the Riegel, the French-speaking press the verrou; in English it became the Swiss bolt (Riegel / verrou). Rappan took it to the Swiss national team at the World Cups of 1938, 1954 and 1962, and Italian coaches refined it into catenaccio – still the most famous defensive word in football (soccer), and one that commentators use far beyond Italy for any side that parks the bus.\n\nThe libero's Italian pedigree runs through that system: the catenaccio (‘door bolt’) of Nereo Rocco's Padova and Helenio Herrera's Inter Milan in the early 1960s placed a spare man behind the defence; with Armando Picchi as libero, Inter won the European Cup in Vienna on 27 May 1964. But it was Franz Beckenbauer who made the position famous, converting it from a purely defensive post into a launching pad for attacks. He won the World Cup on 7 July 1974 and two Ballons d'Or as a libero, and the sweepers Klaus Augenthaler and Matthias Sammer anchored Germany's 1990 and 1996 triumphs. The rise of zonal defending and the flat back four, championed by Arrigo Sacchi's Milan between 1987 and 1991, made both the stopper and the libero obsolete in the top leagues by the end of the 1990s.\n\n| Position (EN) | Position (DE) | Direct opponent? | Era |\n|---|---|---|---|\n| goalkeeper | Torwart | no | always |\n| stopper | Vorstopper | yes – the centre-forward | man-marking era |\n| libero | Libero | no | 1960s–1990s |\n| centre-back | Innenverteidiger | zonal | back four |\n| full-back | Außenverteidiger | zonal / the winger | back four |\n\nFormations continue to evolve – three-man back lines have returned, and a ‘ball-playing centre-back’ now does much of what Beckenbauer once did – but the vocabulary of the defence still carries the fingerprints of the players who invented it.",
+    "bodyDe": "Jede Fußballformation wird von hinten geschrieben. Die Zahlen 4-4-2 oder 3-5-2 beginnen mit den Verteidigern, und die Namen dieser Verteidiger erzählen die Geschichte des Spiels.\n\nDer eine Spieler, den jede Mannschaft aufstellen muss, ist der Torwart. Seit 1912 erlauben die Spielregeln nur dem Torwart, den Ball mit den Händen zu spielen, und das nur im eigenen Strafraum; nimmt ein Torhüter einen absichtlichen Rückpass eines Mitspielers mit den Händen auf, gibt es einen indirekten Freistoß – eine Regel, die 1992 gegen das Zeitspiel eingeführt wurde. Torhüter tragen ein abweichendes Trikot und sind die einzigen Spieler, die nicht ohne Trikotwechsel durch einen Feldspieler ersetzt werden können.\n\nVor dem Torwart stellen moderne Mannschaften eine Viererkette auf. Die beiden zentralen Spieler sind jeweils ein Innenverteidiger – groß, kopfballstark, zuständig für das Klären von Flanken und das Organisieren der Abseitslinie. Auf jeder Seite steht ein Außenverteidiger, historisch eine rein defensive Rolle – die um 1880 erstmals belegte 2-3-5-„Pyramide“ kam mit nur zwei Außenverteidigern aus –, heute aber mit der Erwartung, in den Angriff hinterzulaufen und Flanken zu schlagen; Cafu, Philipp Lahm und Trent Alexander-Arnold machten die Position zu einer kreativen.\n\nDas ältere deutsche System sah anders aus. Bis in die 1990er-Jahre spielten die meisten Bundesligamannschaften mit Manndeckung. Ein zentraler Verteidiger, der Vorstopper, wurde dem gegnerischen Mittelstürmer zugeteilt und folgte ihm überallhin. Die Idee geht auf Herbert Chapmans Arsenal zurück, das nach der Abseitsregeländerung von 1925 den Mittelläufer als „Stopper“ in die Abwehr zurückzog. Hinter ihm spielte der Libero – italienisch für „freier Mann“ –, der eine Verteidiger ohne direkten Gegenspieler, frei, hinter den Manndeckern aufzuräumen, das Spiel zu lesen und, wenn er es wagte, den Ball nach vorn zu tragen. Im Englischen heißt die Rolle auch Sweeper.\n\nGeboren wurde der überzählige Mann hinter der Abwehr allerdings nicht in Italien. Anfang der 1930er-Jahre zog der Österreicher Karl Rappan, ab 1932 Spielertrainer von Servette FC in Genf, einen Verteidiger hinter die übrigen zurück und ließ seine Mannschaft tief verteidigen und schnell kontern. In der Deutschschweiz hieß das System Riegel, in der französischsprachigen Presse verrou; bekannt wurde es als Schweizer Riegel. Rappan brachte ihn als Nationaltrainer zu den Weltmeisterschaften 1938, 1954 und 1962, und italienische Trainer verfeinerten ihn zum Catenaccio – bis heute der berühmteste Defensivbegriff im Fußball, den Reporter weit über Italien hinaus für jede Mannschaft verwenden, die sich hinten einigelt.\n\nÜber dieses System läuft auch der italienische Stammbaum des Liberos: Der Catenaccio („Türriegel“) von Nereo Roccos Padova und Helenio Herreras Inter Mailand Anfang der 1960er-Jahre stellte einen überzähligen Mann hinter die Abwehr; mit Armando Picchi als Libero gewann Inter am 27. Mai 1964 in Wien den Europapokal der Landesmeister. Berühmt machte die Position aber Franz Beckenbauer, der sie von einem rein defensiven Posten in eine Abschussrampe für Angriffe verwandelte. Er gewann als Libero am 7. Juli 1974 die Weltmeisterschaft und zweimal den Ballon d'Or, und die Liberos Klaus Augenthaler und Matthias Sammer trugen Deutschlands Triumphe 1990 und 1996. Der Aufstieg der Raumdeckung und der flachen Viererkette, vorangetrieben von Arrigo Sacchis Milan zwischen 1987 und 1991, machte bis Ende der 1990er-Jahre in den Topligen sowohl den Vorstopper als auch den Libero überflüssig.\n\n| Position (EN) | Position (DE) | Direkter Gegenspieler? | Ära |\n|---|---|---|---|\n| goalkeeper | Torwart | nein | immer |\n| stopper | Vorstopper | ja – der Mittelstürmer | Ära der Manndeckung |\n| libero | Libero | nein | 1960er- bis 1990er-Jahre |\n| centre-back | Innenverteidiger | Raumdeckung | Viererkette |\n| full-back | Außenverteidiger | Raumdeckung / der Flügelspieler | Viererkette |\n\nFormationen entwickeln sich weiter – Dreierketten sind zurückgekehrt, und ein „spielstarker Innenverteidiger“ erledigt heute vieles von dem, was einst Beckenbauer tat –, doch das Vokabular der Abwehr trägt noch immer die Fingerabdrücke der Spieler, die es erfanden.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0629",
+   "baseHash": "87c5ef532145",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-341",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Kaiser, Bomber, Titan: The Nicknames of German Football",
+    "titleDe": "Kaiser, Bomber, Titan: Die Spitznamen des deutschen Fußballs",
+    "bodyEn": "German football has always been quick to hand out nicknames, and the best of them have outlived the careers they describe. Some praise, some tease, and one of the most famous started as a dressing-room joke. Together they form a small hall of fame of the national team – and one of them was even handed out by the English.\n\nThe earliest of the great ones belongs to Hamburg. Uwe Seeler (1936–2022), who spent his entire career at Hamburger SV from 1953 to 1972 and played for West Germany at four World Cups, captaining the side in 1966 and 1970, was simply \"Uns Uwe\" to the fans, Low German for \"our Uwe\": a stocky centre-forward with a famous back-header, and a man who turned down a fortune from Inter Milan to stay at home. In 2003 Hamburg made him the first sportsman among its honorary citizens; the city also gave him a bronze foot outside the stadium, and when he died in 2022 the tributes used the same two words.\n\nTwo Bayern Munich team-mates of the 1970s carry the two most imperial titles. Franz Beckenbauer (1945–2024), the elegant sweeper who lifted the World Cup as captain in 1974 and again as coach in 1990, was \"Der Kaiser\". The name is usually traced to a 1971 photograph of Beckenbauer beside a bust of the Austrian Emperor Franz Joseph in Vienna, but it stuck because it fitted – he won the Ballon d'Or in 1972 and again in 1976: nobody on a football pitch ever looked more in charge. Beside him played Gerd Müller (1945–2021), short, stocky and lethal in the six-yard box, whose 68 goals in 62 internationals and 365 in the Bundesliga earned him the title \"Bomber der Nation\"; he scored twice in the European Championship final in Brussels on 18 June 1972. His winning goal in the 1974 final against the Netherlands was the last of his international career.\n\nThe most affectionate insult came in the 1980s. Rudi Völler (born 13 April 1960), the Werder Bremen and later Roma striker who won the World Cup in the final against Argentina on 8 July 1990, wore a luxuriant curly perm throughout the decade. Team-mates decided it made him look like somebody's aunt, and \"Tante Käthe\" was born. Völler took it in good humour, kept the curls for years, and even as national coach at the 2002 World Cup, when Germany reached the final, the tabloids still called him Tante Käthe.\n\nThe turn of the millennium belonged to a goalkeeper. Oliver Kahn of Bayern Munich was a brooding, muscular presence who shouted at his defenders and once bit an opponent's neck in play; the press called him \"Der Titan\". On 23 May 2001 he saved three penalties in the shoot-out that won Bayern the Champions League final against Valencia in Milan. He was the outstanding player of the 2002 World Cup, winning the Golden Ball despite the error in the final of 30 June 2002 that gave Brazil its first goal.\n\nNot every famous nickname was coined at home. Robert Huth, born in Berlin on 18 August 1984, left the youth team of 1. FC Union Berlin for Chelsea at sixteen and spent his entire professional career in England, winning the league with Chelsea in 2005 and 2006 and, sensationally, with Leicester City in 2016. A towering, uncompromising centre-back who also won 19 caps for Germany, he was christened \"The Berlin Wall\" by English fans – a joke on his birthplace and on how hard he was to get past.\n\n| Nickname | Player | Club best known for |\n|---|---|---|\n| Uns Uwe | Uwe Seeler | Hamburger SV |\n| Der Kaiser | Franz Beckenbauer | Bayern Munich |\n| Bomber der Nation | Gerd Müller | Bayern Munich |\n| Tante Käthe | Rudi Völler | Werder Bremen |\n| Der Titan | Oliver Kahn | Bayern Munich |\n| The Berlin Wall | Robert Huth | Leicester City |",
+    "bodyDe": "Der deutsche Fußball war immer schnell dabei, Spitznamen zu vergeben, und die besten davon haben die Karrieren, die sie beschreiben, überdauert. Manche loben, manche necken, und einer der berühmtesten begann als Kabinenscherz. Zusammen bilden sie eine kleine Ruhmeshalle der Nationalmannschaft – und einen davon vergaben sogar die Engländer.\n\nDer älteste der großen gehört nach Hamburg. Uwe Seeler (1936–2022), der seine gesamte Karriere von 1953 bis 1972 beim Hamburger SV verbrachte und für Westdeutschland bei vier Weltmeisterschaften spielte, 1966 und 1970 als Kapitän, war für die Fans schlicht „Uns Uwe“, plattdeutsch für „unser Uwe“: ein stämmiger Mittelstürmer mit einem berühmten Hinterkopf-Tor, und ein Mann, der ein Vermögen von Inter Mailand ausschlug, um zu Hause zu bleiben. 2003 machte Hamburg ihn als ersten Sportler zum Ehrenbürger; die Stadt stellte ihm auch einen Bronzefuß vor das Stadion, und als er 2022 starb, verwendeten die Nachrufe dieselben zwei Wörter.\n\nZwei Mannschaftskameraden des FC Bayern München aus den 1970er Jahren tragen die beiden kaiserlichsten Titel. Franz Beckenbauer (1945–2024), der elegante Libero, der den Weltpokal 1974 als Kapitän und 1990 noch einmal als Trainer in die Höhe stemmte, war „Der Kaiser“. Der Name wird meist auf ein Foto von 1971 zurückgeführt, das Beckenbauer in Wien neben einer Büste des österreichischen Kaisers Franz Joseph zeigt, doch er blieb hängen, weil er passte – 1972 und erneut 1976 gewann er den Ballon d'Or: Niemand hat auf einem Fußballplatz je souveräner gewirkt. Neben ihm spielte Gerd Müller (1945–2021), klein, stämmig und tödlich im Fünfmeterraum, dessen 68 Tore in 62 Länderspielen und 365 in der Bundesliga ihm den Titel „Bomber der Nation“ einbrachten; im EM-Finale von Brüssel am 18. Juni 1972 traf er doppelt. Sein Siegtor im Finale 1974 gegen die Niederlande war das letzte seiner Länderspielkarriere.\n\nDie liebevollste Beleidigung kam in den 1980er Jahren. Rudi Völler (geboren am 13. April 1960), der Stürmer von Werder Bremen und später der AS Rom, der am 8. Juli 1990 im Finale gegen Argentinien Weltmeister wurde, trug das ganze Jahrzehnt hindurch eine üppige Dauerwelle. Die Mannschaftskameraden fanden, er sehe damit aus wie irgendjemandes Tante, und „Tante Käthe“ war geboren. Völler nahm es mit Humor, behielt die Locken jahrelang, und selbst als Bundestrainer bei der WM 2002, als Deutschland das Finale erreichte, nannte ihn die Boulevardpresse noch Tante Käthe.\n\nDie Jahrtausendwende gehörte einem Torwart. Oliver Kahn vom FC Bayern München war eine grüblerische, muskulöse Erscheinung, die ihre Verteidiger anbrüllte und einmal einen Gegenspieler im Spiel in den Hals biss; die Presse nannte ihn „Der Titan“. Am 23. Mai 2001 hielt er im Elfmeterschießen drei Strafstöße, mit denen Bayern in Mailand das Champions-League-Finale gegen Valencia gewann. Er war der herausragende Spieler der WM 2002 und gewann den Goldenen Ball trotz des Fehlers im Finale vom 30. Juni 2002, der Brasilien das erste Tor bescherte.\n\nNicht jeder berühmte Spitzname entstand in der Heimat. Robert Huth, geboren am 18. August 1984 in Berlin, wechselte mit sechzehn aus der Jugend des 1. FC Union Berlin zum FC Chelsea und verbrachte seine gesamte Profikarriere in England: Mit Chelsea wurde er 2005 und 2006 Meister, mit Leicester City 2016 sensationell ein drittes Mal. Der baumlange, kompromisslose Innenverteidiger, der auch 19 Länderspiele für Deutschland bestritt, wurde von den englischen Fans „The Berlin Wall“ getauft – ein Wortspiel mit seiner Geburtsstadt und damit, wie schwer an ihm vorbeizukommen war.\n\n| Spitzname | Spieler | Bekanntester Verein |\n|---|---|---|\n| Uns Uwe | Uwe Seeler | Hamburger SV |\n| Der Kaiser | Franz Beckenbauer | FC Bayern München |\n| Bomber der Nation | Gerd Müller | FC Bayern München |\n| Tante Käthe | Rudi Völler | Werder Bremen |\n| Der Titan | Oliver Kahn | FC Bayern München |\n| The Berlin Wall | Robert Huth | Leicester City |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0077",
+   "baseHash": "7447e57f9648",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-288",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Would Have, Would Have, Bicycle Chain: Germany's Football Quotes",
+    "titleDe": "Wäre, wäre, Fahrradkette: Deutschlands Fußballsprüche",
+    "bodyEn": "German football has produced a whole folklore of sentences that everybody knows and nobody can quite explain. Some were slips of the tongue, some were calculated, and a few have entered everyday speech far from any stadium. The six below are the ones most often quoted.\n\n**Lothar Matthäus** (born 1961), with 150 caps still Germany's record international, gave the language its favourite reply to hypothetical questions. Asked what would have happened if a penalty had gone in instead of being missed, he answered: “Wäre, wäre, Fahrradkette” – roughly “would have, would have, bicycle chain”. The phrase means nothing and everything: speculating about the past is pointless. It is now used whenever someone says “if only”.\n\n**Giovanni Trapattoni**, the Italian coach of FC Bayern Munich, delivered the most famous press conference in Bundesliga history on 10 March 1998. In furious, improvised German he attacked his players – “Was erlauben Strunz?”, “Flasche leer” – and closed with “Ich habe fertig”, an ungrammatical “I have finished”. The three-and-a-half-minute rant is still played on anniversaries and has been quoted by chancellors.\n\n**Andreas Möller** (born 1967), the elegant Dortmund and Juventus midfielder, is credited with “Mailand oder Madrid – Hauptsache Italien” (“Milan or Madrid – as long as it's Italy”), supposedly said when he was weighing a transfer abroad in the early 1990s. Möller has always denied it, but the attribution has stuck so firmly that it appears in every collection of football sayings.\n\n**Oliver Kahn**, the Bayern and national-team goalkeeper known as “the Titan”, was asked by a Premiere reporter after Bayern's 0–2 defeat at Schalke on 1 November 2003 what his team lacked and answered with a demand that has become a motivational cliché: “Eier, wir brauchen Eier!” – “Balls, we need balls!”\n\n**Franz Beckenbauer** (1945–2024), World Cup winner as a player in 1974 and as coach in 1990 (he had taken over the national team on 12 September 1984 and won the final on 8 July 1990), never needed to shout. His standard reply to every prognosis, in broad Bavarian, was “Schau'n mer mal”, “let's wait and see”, often followed by “dann seh'n mer scho”. It became his trademark and the title of several books about him.\n\n**Lukas Podolski** (born 1985), the Cologne striker and 2014 World Cup winner, has a gift for sentences that sound like accidents and turn out to be true. His verdict on the game's injustice – “So ist Fußball. Manchmal gewinnt der Bessere” (“That's football. Sometimes the better team wins”) – was voted football saying of the year at the German Football Culture Award in 2006, presented on 7 October. It turns the usual complaint upside down: in football, the surprise is when the better side actually wins.\n\n| Speaker | Quote | Situation |\n|---|---|---|\n| Lothar Matthäus | Wäre, wäre, Fahrradkette | asked about a missed penalty |\n| Giovanni Trapattoni | Ich habe fertig | press conference, 1998 |\n| Andreas Möller | Mailand oder Madrid – Hauptsache Italien | transfer rumours, 1990s |\n| Oliver Kahn | Eier, wir brauchen Eier! | interview after a defeat at Schalke, 2003 |\n| Franz Beckenbauer | Schau'n mer mal | any question about the future |\n| Lukas Podolski | So ist Fußball. Manchmal gewinnt der Bessere | German Football Culture Award, 2006 |\n\nTaken together they show why German fans treasure these lines: the game itself is serious, but the people who play it are not.",
+    "bodyDe": "Der deutsche Fußball hat eine ganze Folklore von Sätzen hervorgebracht, die jeder kennt und niemand so recht erklären kann. Manche waren Versprecher, manche waren kalkuliert, und einige sind weit entfernt von jedem Stadion in die Alltagssprache eingegangen. Die sechs unten sind die am häufigsten zitierten.\n\n**Lothar Matthäus** (geboren 1961), mit 150 Länderspielen bis heute Deutschlands Rekordnationalspieler, schenkte der Sprache ihre liebste Antwort auf hypothetische Fragen. Gefragt, was passiert wäre, wenn ein Elfmeter nicht verschossen worden wäre, antwortete er: „Wäre, wäre, Fahrradkette“. Die Wendung bedeutet nichts und alles: Über die Vergangenheit zu spekulieren ist sinnlos. Sie wird heute immer dann benutzt, wenn jemand „hätte ich doch“ sagt.\n\n**Giovanni Trapattoni**, der italienische Trainer des FC Bayern München, hielt am 10. März 1998 die berühmteste Pressekonferenz der Bundesliga-Geschichte. In wütendem, improvisiertem Deutsch griff er seine Spieler an – „Was erlauben Strunz?“, „Flasche leer“ – und schloss mit „Ich habe fertig“. Die dreieinhalbminütige Wutrede wird bis heute an Jahrestagen gespielt und wurde von Bundeskanzlern zitiert.\n\n**Andreas Möller** (geboren 1967), dem eleganten Mittelfeldspieler von Dortmund und Juventus, wird „Mailand oder Madrid – Hauptsache Italien“ zugeschrieben, angeblich gesagt, als er Anfang der 1990er Jahre einen Wechsel ins Ausland erwog. Möller hat es immer bestritten, doch die Zuschreibung hat sich so fest eingebrannt, dass sie in jeder Sammlung von Fußballsprüchen auftaucht.\n\n**Oliver Kahn**, der als „Titan“ bekannte Torhüter von Bayern und Nationalmannschaft, wurde nach der 0:2-Niederlage der Bayern auf Schalke am 1. November 2003 von einem Premiere-Reporter gefragt, was seiner Mannschaft fehle, und antwortete mit einer Forderung, die zur Motivationsfloskel geworden ist: „Eier, wir brauchen Eier!“\n\n**Franz Beckenbauer** (1945–2024), Weltmeister als Spieler 1974 und als Trainer 1990 (er hatte die Nationalelf am 12. September 1984 übernommen und gewann das Finale am 8. Juli 1990), musste nie schreien. Seine Standardantwort auf jede Prognose, in breitem Bairisch, lautete „Schau'n mer mal“, oft gefolgt von „dann seh'n mer scho“. Sie wurde zu seinem Markenzeichen und zum Titel mehrerer Bücher über ihn.\n\n**Lukas Podolski** (geboren 1985), der Kölner Stürmer und Weltmeister von 2014, hat ein Talent für Sätze, die wie Versehen klingen und sich als wahr herausstellen. Sein Urteil über die Ungerechtigkeit des Spiels – „So ist Fußball. Manchmal gewinnt der Bessere“ – wurde beim Deutschen Fußball-Kulturpreis 2006, verliehen am 7. Oktober, zum Fußballspruch des Jahres gewählt. Er dreht die übliche Klage um: Im Fußball ist es die Überraschung, wenn tatsächlich der Bessere gewinnt.\n\n| Sprecher | Zitat | Situation |\n|---|---|---|\n| Lothar Matthäus | Wäre, wäre, Fahrradkette | gefragt nach einem verschossenen Elfmeter |\n| Giovanni Trapattoni | Ich habe fertig | Pressekonferenz, 1998 |\n| Andreas Möller | Mailand oder Madrid – Hauptsache Italien | Wechselgerüchte, 1990er Jahre |\n| Oliver Kahn | Eier, wir brauchen Eier! | Interview nach der Niederlage auf Schalke, 2003 |\n| Franz Beckenbauer | Schau'n mer mal | jede Frage nach der Zukunft |\n| Lukas Podolski | So ist Fußball. Manchmal gewinnt der Bessere | Deutscher Fußball-Kulturpreis 2006 |\n\nZusammengenommen zeigen sie, warum deutsche Fans diese Sätze so schätzen: Das Spiel selbst ist ernst, aber die Menschen, die es spielen, sind es nicht.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a2117",
+   "baseHash": "e932e8bf00f0",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-347",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-377",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Football’s Most Famous Sentences",
+    "titleDe": "Die berühmtesten Sätze des Fußballs",
+    "bodyEn": "Football produces more memorable sentences than almost any other sport, partly because so many people are asked to talk about it within minutes of the final whistle. A handful of those sentences have outlived the matches that prompted them.\n\nThe most famous of all was spoken in Mexico City on 22 June 1986. In the World Cup quarter-final between Argentina and England, **Diego Maradona** rose with goalkeeper Peter Shilton and punched the ball into the net; the Tunisian referee gave the goal. Four minutes later he dribbled past five Englishmen for what FIFA later voted the “Goal of the Century”. Asked afterwards about the first goal, Maradona said it had been scored “a little with the head of Maradona and a little with the hand of God”. The phrase “hand of God” has been shorthand for a cheeky handball ever since, and Maradona only admitted the offence openly in 2005.\n\n**Gary Lineker**, the England striker who finished as top scorer at the same tournament, supplied the wittiest reply four years later. After England lost the 1990 semi-final to West Germany on penalties in Turin on 4 July 1990, he summed it up: “Football is a simple game: 22 men chase a ball for 90 minutes, and at the end the Germans always win.” The line became so proverbial that Lineker himself updated it in 2018, when Germany went out in the group stage: “and at the end the Germans no longer always win.”\n\nThe man in charge of that 1990 German side was **Franz Beckenbauer**, who as “Teamchef” had no coaching licence and famously kept his team talks short. The most quoted, in broad Bavarian, was “Geht’s raus und spielt’s Fußball”, roughly “get out there and play football”. It worked: Germany beat Argentina 1–0 in the final in Rome on 8 July 1990, and Beckenbauer became the first man to win the World Cup as captain and as coach. Between the two titles he had played in America, joining Pelé at the New York Cosmos in 1977.\n\n**Sepp Herberger**, coach of the side that won the 1954 final in Bern on 4 July – the “Miracle of Bern” – is the source of half of German football’s wisdom. “The ball is round and the game lasts 90 minutes” and “After the game is before the game” were his ways of warning players against complacency, and both are still repeated in dressing rooms and boardrooms alike.\n\n**Giovanni Trapattoni** (born 17 March 1939) gave the German language one of its favourite quotations without meaning to. On 10 March 1998, as coach of FC Bayern Munich, he delivered a three-and-a-half-minute press-conference tirade in broken German against his players, asking what Strunz was doing and saying that some were as weak as “a bottle empty”. He closed with “Ich habe fertig”, a grammatically wrong “I have finished”, which has been used ever since to end any argument with a shrug.\n\nSome sentences are rules of thumb. The one every coach knows, “Never change a winning team”, is most closely associated with **Alf Ramsey**, the England manager of 1966. Before the World Cup final at Wembley on 30 July 1966 the whole country wanted its star striker Jimmy Greaves back from injury, but Ramsey kept faith with Geoff Hurst and the side that had won the semi-final. Hurst scored a hat-trick in the 4–2 win over West Germany, and the English phrase later passed into German unchanged.\n\nOthers are self-portraits. On his first day at Chelsea in 2004 the Portuguese coach **José Mourinho**, fresh from winning the Champions League with Porto, told the press that he thought he was “a special one”; “The Special One” has been his nickname ever since. When Jürgen Klopp was presented as Liverpool manager in October 2015 he played on it with the opposite: “I am the Normal One.” The modest line won over English fans before he had coached a single match.\n\n| Speaker | Quotation | Occasion |\n|---|---|---|\n| Diego Maradona | “the hand of God” | World Cup quarter-final, 1986 |\n| Gary Lineker | “at the end the Germans always win” | World Cup semi-final, 1990 |\n| Franz Beckenbauer | “Geht’s raus und spielt’s Fußball” | World Cup, 1990 |\n| Sepp Herberger | “The ball is round…” | 1950s |\n| Giovanni Trapattoni | “Ich habe fertig” | Press conference, 1998 |\n| Alf Ramsey | “Never change a winning team” | World Cup final, 1966 |\n| José Mourinho | “The Special One” | Chelsea, 2004 |\n\nHardly any of these seven men set out to be quoted. That is precisely why the sentences stuck.",
+    "bodyDe": "Der Fußball bringt mehr denkwürdige Sätze hervor als fast jede andere Sportart, auch weil so viele Menschen wenige Minuten nach dem Schlusspfiff gebeten werden, darüber zu reden. Eine Handvoll dieser Sätze hat die Spiele, die sie auslösten, überdauert.\n\nDer berühmteste von allen fiel am 22. Juni 1986 in Mexiko-Stadt. Im WM-Viertelfinale zwischen Argentinien und England stieg **Diego Maradona** mit Torwart Peter Shilton hoch und faustete den Ball ins Netz; der tunesische Schiedsrichter gab das Tor. Vier Minuten später umdribbelte er fünf Engländer zu dem Treffer, den die FIFA später zum „Tor des Jahrhunderts“ wählte. Nach dem Spiel auf das erste Tor angesprochen, sagte Maradona, es sei „ein wenig mit dem Kopf Maradonas und ein wenig mit der Hand Gottes“ erzielt worden. Die „Hand Gottes“ ist seither das Kürzel für ein freches Handspiel, und Maradona gab das Vergehen erst 2005 offen zu.\n\n**Gary Lineker**, der englische Stürmer, der bei demselben Turnier Torschützenkönig wurde, lieferte vier Jahre später die geistreichste Antwort. Nachdem England das WM-Halbfinale am 4. Juli 1990 in Turin im Elfmeterschießen gegen die Bundesrepublik verloren hatte, fasste er zusammen: „Fußball ist ein einfaches Spiel: 22 Männer jagen 90 Minuten lang einem Ball nach, und am Ende gewinnen immer die Deutschen.“ Der Satz wurde so sprichwörtlich, dass Lineker ihn 2018, als Deutschland in der Vorrunde ausschied, selbst aktualisierte: „und am Ende gewinnen die Deutschen nicht mehr immer.“\n\nDer Mann, der diese deutsche Mannschaft von 1990 führte, war **Franz Beckenbauer**, der als „Teamchef“ keine Trainerlizenz besaß und seine Ansprachen bekanntlich kurz hielt. Die meistzitierte, in breitem Bairisch, lautete „Geht’s raus und spielt’s Fußball“. Es funktionierte: Deutschland schlug Argentinien am 8. Juli 1990 im Finale in Rom 1:0, und Beckenbauer wurde der erste Mann, der die WM als Kapitän und als Trainer gewann. Zwischen den beiden Titeln hatte er in Amerika gespielt, wo er 1977 an der Seite Pelés zu New York Cosmos wechselte.\n\n**Sepp Herberger**, Trainer der Mannschaft, die am 4. Juli 1954 das Finale in Bern gewann – das „Wunder von Bern“ –, ist die Quelle der halben deutschen Fußballweisheit. „Der Ball ist rund und das Spiel dauert 90 Minuten“ und „Nach dem Spiel ist vor dem Spiel“ waren seine Art, Spieler vor Selbstzufriedenheit zu warnen, und beide werden bis heute in Kabinen wie in Vorstandsetagen wiederholt.\n\n**Giovanni Trapattoni** (geboren am 17. März 1939) schenkte der deutschen Sprache eines ihrer liebsten Zitate, ohne es zu wollen. Am 10. März 1998 hielt er als Trainer des FC Bayern München auf einer Pressekonferenz eine dreieinhalbminütige Wutrede in gebrochenem Deutsch gegen seine Spieler, fragte, was Strunz mache, und erklärte, manche seien schwach wie „eine Flasche leer“. Er schloss mit „Ich habe fertig“, einem grammatisch falschen „Ich bin fertig“, mit dem seither jede Debatte achselzuckend beendet werden kann.\n\nManche Sätze sind Faustregeln. Der eine, den jeder Trainer kennt, „Never change a winning team“, wird vor allem mit **Alf Ramsey** verbunden, Englands Teammanager von 1966. Vor dem WM-Finale im Wembley-Stadion am 30. Juli 1966 wollte das ganze Land seinen Starstürmer Jimmy Greaves nach dessen Verletzung zurück, doch Ramsey hielt an Geoff Hurst und der Elf fest, die das Halbfinale gewonnen hatte. Hurst erzielte beim 4:2 gegen die Bundesrepublik drei Tore, und die englische Parole wanderte später unverändert ins Deutsche.\n\nAndere sind Selbstporträts. An seinem ersten Tag beim FC Chelsea 2004 erklärte der portugiesische Trainer **José Mourinho**, frisch Champions-League-Sieger mit dem FC Porto, der Presse, er halte sich für „a special one“; „The Special One“ ist seither sein Spitzname. Als Jürgen Klopp im Oktober 2015 als Trainer des FC Liverpool vorgestellt wurde, spielte er mit dem Gegenteil darauf an: „I am the Normal One.“ Der bescheidene Satz gewann die englischen Fans, bevor er ein einziges Spiel betreut hatte.\n\n| Sprecher | Zitat | Anlass |\n|---|---|---|\n| Diego Maradona | „die Hand Gottes“ | WM-Viertelfinale 1986 |\n| Gary Lineker | „am Ende gewinnen immer die Deutschen“ | WM-Halbfinale 1990 |\n| Franz Beckenbauer | „Geht’s raus und spielt’s Fußball“ | WM 1990 |\n| Sepp Herberger | „Der Ball ist rund …“ | 1950er-Jahre |\n| Giovanni Trapattoni | „Ich habe fertig“ | Pressekonferenz 1998 |\n| Alf Ramsey | „Never change a winning team“ | WM-Finale 1966 |\n| José Mourinho | „The Special One“ | FC Chelsea, 2004 |\n\nKaum einer dieser sieben Männer wollte zitiert werden. Genau deshalb blieben die Sätze hängen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0065",
+   "baseHash": "3d39e16c087c",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-169",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Rules with Names: Six Regulations That Changed How Matches End",
+    "titleDe": "Regeln mit Namen: Sechs Bestimmungen, die das Ende von Spielen veränderten",
+    "bodyEn": "Most of the rules of a sport are anonymous. Nobody talks about \"Law 11\" at the pub; they talk about offside. A few rules, however, have acquired names of their own, usually because they changed the drama of a match so much that fans and journalists needed a word for them. Six such rules, five from football and one from tennis, show how the search for a fair and exciting ending has kept the lawmakers busy.\n\nThe most famous is the **Golden Goal**. Introduced by FIFA in 1993 to encourage attacking play in extra time, it meant that the first goal scored after ninety minutes ended the match on the spot. Oliver Bierhoff won Euro 96 for Germany with the first golden goal in a major final, David Trezeguet did the same for France at Euro 2000, and Laurent Blanc's golden goal against Paraguay at the 1998 World Cup was the first in that tournament's history. Critics argued that the rule made teams more cautious, not less, since one mistake meant instant defeat.\n\nUEFA tried a softer version, the **Silver Goal**, from 2002 to 2004: if a team led after the first fifteen-minute half of extra time, the match ended there; otherwise the second half was played. Greece beat the Czech Republic with a silver goal in the semi-final of Euro 2004, and after that tournament both variants were abolished. Since then, extra time is played in full, followed if necessary by penalties.\n\nThat last resort has a father of its own. For decades drawn cup ties were replayed or even settled by lot – Italy reached the final of Euro 1968 on the toss of a coin. In 1970 the referee Karl Wald, a trained hairdresser from Penzberg in Upper Bavaria, persuaded the Bavarian football association to adopt the penalty shoot-out: five kicks for each side, then sudden death. Variants had been tried before, but Wald's form was taken up by UEFA and FIFA and is the one used worldwide today. The first major final decided this way was the Euro 1976 final, which West Germany lost to Czechoslovakia when Antonín Panenka chipped the deciding kick down the middle.\n\nA second tie-breaker survived much longer. The **away goals rule**, introduced in European club competitions in 1965, said that if two teams finished level on aggregate over two legs, the side that had scored more goals away from home went through. It was meant to reward adventurous visitors at a time when travel was hard and home advantage enormous. UEFA scrapped it in 2021, judging that modern pitches, travel and television had eroded the difference between home and away.\n\nThe **back-pass rule** attacked time-wasting rather than deadlock. After the sterile 1990 World Cup, in which keepers repeatedly picked up passes from defenders and held the ball, the International Football Association Board ruled in 1992 that a goalkeeper may not handle a ball deliberately kicked to him by a team-mate. Goalkeepers suddenly had to be able to play with their feet, and the tempo of the game rose markedly. In 1997 the rule was extended to throw-ins from a team-mate.\n\nTennis had faced the same problem of endless matches even earlier. Until the 1970s a set had to be won by two clear games, which could produce scores such as 22-24. James Van Alen's **tie-break**, adopted at the US Open in 1970 and at Wimbledon in 1971, today decides a set at 6-6 with a race to seven points. The Wimbledon final set held out until 2019, after Kevin Anderson and John Isner had needed a 26-24 fifth set and more than six and a half hours to decide their 2018 semi-final; since March 2022, when the ATP, WTA and ITF announced a common rule, all four Grand Slam tournaments end a deciding set at 6-6 with a ten-point tie-break.",
+    "bodyDe": "Die meisten Regeln einer Sportart sind namenlos. Niemand redet in der Kneipe von „Regel 11“; man redet vom Abseits. Einige wenige Regeln haben jedoch eigene Namen bekommen, meist weil sie die Dramatik eines Spiels so stark veränderten, dass Fans und Journalisten ein Wort dafür brauchten. Sechs solcher Regeln, fünf aus dem Fußball und eine aus dem Tennis, zeigen, wie die Suche nach einem gerechten und spannenden Schluss die Regelhüter beschäftigt hat.\n\nDie berühmteste ist das **Golden Goal**. 1993 von der FIFA eingeführt, um in der Verlängerung offensives Spiel zu fördern, bedeutete es, dass das erste Tor nach neunzig Minuten das Spiel auf der Stelle beendete. Oliver Bierhoff gewann mit dem ersten Golden Goal in einem großen Finale die EM 1996 für Deutschland, David Trezeguet tat dasselbe für Frankreich bei der EM 2000, und Laurent Blancs Golden Goal gegen Paraguay bei der WM 1998 war das erste in der Geschichte dieses Turniers. Kritiker wandten ein, die Regel mache die Mannschaften vorsichtiger statt mutiger, da ein einziger Fehler die sofortige Niederlage bedeutete.\n\nDie UEFA versuchte es von 2002 bis 2004 mit einer abgemilderten Variante, dem **Silver Goal**: Führte eine Mannschaft nach der ersten fünfzehnminütigen Halbzeit der Verlängerung, war das Spiel dort zu Ende; andernfalls wurde die zweite Halbzeit gespielt. Griechenland schlug Tschechien im Halbfinale der EM 2004 durch ein Silver Goal, und nach diesem Turnier wurden beide Varianten abgeschafft. Seither wird die Verlängerung komplett gespielt, gefolgt, wenn nötig, vom Elfmeterschießen.\n\nAuch dieser letzte Ausweg hat einen Vater. Jahrzehntelang wurden unentschiedene Pokalspiele wiederholt oder sogar ausgelost – Italien erreichte das EM-Finale 1968 per Münzwurf. 1970 überzeugte der Schiedsrichter Karl Wald, ein gelernter Friseur aus dem oberbayerischen Penzberg, den Bayerischen Fußball-Verband, das Elfmeterschießen einzuführen: fünf Schüsse pro Mannschaft, danach K.-o.-Modus. Varianten hatte es schon vorher gegeben, doch Walds Form übernahmen UEFA und FIFA, und sie gilt heute weltweit. Das erste große Finale, das so entschieden wurde, war das EM-Finale 1976, das die Bundesrepublik gegen die Tschechoslowakei verlor, als Antonín Panenka den entscheidenden Ball in die Mitte lupfte.\n\nEin zweiter Entscheidungsmechanismus hielt sich sehr viel länger. Die **Auswärtstorregel**, 1965 in den europäischen Vereinswettbewerben eingeführt, besagte: Stand es nach Hin- und Rückspiel in der Addition unentschieden, kam die Mannschaft weiter, die auswärts mehr Tore erzielt hatte. Sie sollte mutige Gäste belohnen in einer Zeit, in der Reisen beschwerlich und der Heimvorteil enorm war. Die UEFA strich sie 2021 mit der Begründung, moderne Plätze, Reisebedingungen und Fernsehen hätten den Unterschied zwischen Heim- und Auswärtsspiel eingeebnet.\n\nDie **Rückpassregel** bekämpfte Zeitspiel statt Patt. Nach der sterilen WM 1990, bei der Torhüter immer wieder Zuspiele ihrer Verteidiger aufnahmen und den Ball festhielten, bestimmte das International Football Association Board 1992, dass ein Torwart einen absichtlich vom Mitspieler zugespielten Ball nicht mit der Hand aufnehmen darf. Torhüter mussten plötzlich mit den Füßen spielen können, und das Tempo des Spiels stieg deutlich. 1997 wurde die Regel auf Einwürfe eines Mitspielers ausgedehnt.\n\nTennis hatte das Problem endloser Partien schon früher. Bis in die 1970er-Jahre musste ein Satz mit zwei Spielen Vorsprung gewonnen werden, was Ergebnisse wie 22:24 hervorbrachte. James Van Alens **Tie-Break**, 1970 bei den US Open und 1971 in Wimbledon eingeführt, entscheidet heute einen Satz beim Stand von 6:6 durch ein Rennen auf sieben Punkte. Der Wimbledon-Schlusssatz hielt bis 2019 durch, nachdem Kevin Anderson und John Isner für ihr Halbfinale 2018 einen fünften Satz von 26:24 und mehr als sechseinhalb Stunden gebraucht hatten; seit März 2022, als ATP, WTA und ITF eine gemeinsame Regel verkündeten, beenden alle vier Grand-Slam-Turniere einen Entscheidungssatz beim Stand von 6:6 mit einem Zehn-Punkte-Tie-Break.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a1048",
+   "baseHash": "1e370143d848",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-352",
+      "category": 6
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "When the Whistle Waits: Famous Football Delays",
+    "titleDe": "Wenn der Anpfiff wartet: Berühmte Verzögerungen im Fußball",
+    "bodyEn": "Live television loves football because nobody knows what will happen, and sometimes the unexpected happens before the first whistle. On 1 April 1998 Real Madrid hosted Borussia Dortmund in the first leg of the Champions League semi-final at the Bernabéu. Minutes before kick-off, Real supporters climbed the security fence behind one of the goals; it gave way and pulled the goal, which was fixed to it, down with it. The reason for what followed was as simple as it was absurd: A goal had collapsed. A replacement had to be fetched by truck from Real's training ground, and the game started 76 minutes late. For the German channel RTL, the presenting duo Günther Jauch and Marcel Reif – Jauch as host, Reif as commentator – filled the gap with an improvised, increasingly funny conversation (Jauch's line \"For everyone who didn't tune in on time: the first goal has already fallen!\" became famous), and the pair received the Bavarian Television Award that year for it. Real won 2–0 and went on to lift the trophy.\n\nOther delays had far more serious causes. At Euro 2020, played in June 2021, the group match Denmark vs. Finland in Copenhagen on 12 June 2021 was stopped shortly before half-time when a player went down: Christian Eriksen suffered a cardiac arrest on the pitch. Team-mates shielded him while medics resuscitated him; the match resumed after more than an hour and a half, and Finland won 1–0. Eriksen was fitted with a defibrillator and returned to international football the following year.\n\nOn 11 April 2017 three explosive devices detonated beside the Dortmund team coach as it left the hotel for the Champions League quarter-final against AS Monaco. A bomb attack on the BVB team bus injured defender Marc Bartra, and UEFA postponed the tie by one day; the perpetrator, who had speculated on falling Dortmund shares, was later sentenced to 14 years in prison.\n\nThe Champions League final at the Stade de France in Paris on 28 May 2022 kicked off 36 minutes late because of the chaos at the stadium entrances: thousands of Liverpool fans with valid tickets were held in crushes outside the turnstiles and tear-gassed by police. An independent report later blamed UEFA and the French authorities rather than the supporters. Real Madrid beat Liverpool 1–0.\n\nFinally, a match that never took place at all. On 17 November 2015, four days after the Paris attacks, Germany were due to play the Netherlands in a friendly in Hanover. About 90 minutes before kick-off the stadium was evacuated and the match cancelled because of a terror warning; Chancellor Angela Merkel had been expected in the stands.\n\n| Date | Match | Delay | Cause |\n|---|---|---|---|\n| 1 Apr 1998 | Real Madrid – Borussia Dortmund | 76 min | collapsed goal |\n| 12 Jun 2021 | Denmark – Finland | c. 100 min | Eriksen's cardiac arrest |\n| 11 Apr 2017 | Borussia Dortmund – AS Monaco | 1 day | bomb attack on the bus |\n| 28 May 2022 | Liverpool – Real Madrid | 36 min | entrance chaos |\n| 17 Nov 2015 | Germany – Netherlands | cancelled | terror warning |",
+    "bodyDe": "Das Live-Fernsehen liebt den Fußball, weil niemand weiß, was passieren wird, und manchmal passiert das Unerwartete schon vor dem ersten Pfiff. Am 1. April 1998 empfing Real Madrid Borussia Dortmund zum Hinspiel des Champions-League-Halbfinales im Bernabéu. Minuten vor dem Anpfiff kletterten Real-Anhänger auf den Sicherheitszaun hinter einem der Tore; er gab nach und riss das daran befestigte Tor mit sich. Der Grund für das, was folgte, war so einfach wie absurd: Ein Tor war umgestürzt. Ein Ersatztor musste per Lastwagen vom Trainingsgelände von Real herbeigeschafft werden, und das Spiel begann mit 76 Minuten Verspätung. Für den deutschen Sender RTL füllte das Moderatoren-Duo Günther Jauch und Marcel Reif – Jauch als Moderator, Reif als Kommentator – die Lücke mit einem improvisierten, immer komischeren Gespräch (berühmt wurde Jauchs Satz „Für alle die, die nicht rechtzeitig eingeschaltet haben: Das erste Tor ist schon gefallen!“), und das Duo erhielt dafür im selben Jahr den Bayerischen Fernsehpreis. Real gewann 2:0 und holte anschließend den Pokal.\n\nAndere Verzögerungen hatten weit ernstere Ursachen. Bei der EM 2020, die im Juni 2021 ausgetragen wurde, wurde das Gruppenspiel Dänemark gegen Finnland am 12. Juni 2021 in Kopenhagen kurz vor der Pause unterbrochen, denn ein Spieler brach zusammen: Christian Eriksen erlitt einen Herzstillstand auf dem Rasen. Mitspieler schirmten ihn ab, während Sanitäter ihn wiederbelebten; das Spiel wurde nach mehr als anderthalb Stunden fortgesetzt, und Finnland gewann 1:0. Eriksen bekam einen Defibrillator eingesetzt und kehrte im Jahr darauf in die Nationalmannschaft zurück.\n\nAm 11. April 2017 detonierten drei Sprengsätze neben dem Mannschaftsbus der Dortmunder, als dieser das Hotel in Richtung Champions-League-Viertelfinale gegen die AS Monaco verließ. Ein Bombenanschlag auf den Mannschaftsbus des BVB verletzte den Verteidiger Marc Bartra, und die UEFA verschob die Partie um einen Tag; der Täter, der auf fallende Dortmunder Aktienkurse spekuliert hatte, wurde später zu 14 Jahren Haft verurteilt.\n\nDas Champions-League-Finale am 28. Mai 2022 im Stade de France in Paris wurde 36 Minuten später angepfiffen, wegen des Chaos an den Stadioneingängen: Tausende Liverpool-Fans mit gültigen Tickets steckten im Gedränge vor den Drehkreuzen fest und wurden von der Polizei mit Tränengas beschossen. Ein unabhängiger Bericht machte später die UEFA und die französischen Behörden verantwortlich, nicht die Fans. Real Madrid schlug Liverpool 1:0.\n\nUnd schließlich ein Spiel, das gar nicht stattfand. Am 17. November 2015, vier Tage nach den Anschlägen von Paris, sollte Deutschland in Hannover ein Freundschaftsspiel gegen die Niederlande bestreiten. Rund 90 Minuten vor dem Anpfiff wurde das Stadion geräumt und die Partie abgesagt, wegen einer Terrorwarnung; Bundeskanzlerin Angela Merkel war auf der Tribüne erwartet worden.\n\n| Datum | Spiel | Verzögerung | Ursache |\n|---|---|---|---|\n| 1. April 1998 | Real Madrid – Borussia Dortmund | 76 Min. | umgestürztes Tor |\n| 12. Juni 2021 | Dänemark – Finnland | ca. 100 Min. | Eriksens Herzstillstand |\n| 11. April 2017 | Borussia Dortmund – AS Monaco | 1 Tag | Anschlag auf den Bus |\n| 28. Mai 2022 | Liverpool – Real Madrid | 36 Min. | Einlasschaos |\n| 17. November 2015 | Deutschland – Niederlande | abgesagt | Terrorwarnung |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-006",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-266",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Who was elected the first president of the German Football Association (DFB) at its founding in 1900?",
+      "de": "Wer wurde bei der Gründung des Deutschen Fußball-Bundes (DFB) im Jahr 1900 zu dessen erstem Präsidenten gewählt?",
+      "answerEn": "Ferdinand Hueppe",
+      "answerDe": "Ferdinand Hueppe",
+      "timeline": {
+       "kind": "founding",
+       "start": "1900-01-28",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The German Football Association (DFB) is founded in Leipzig and elects Ferdinand Hueppe its first president",
+       "labelDe": "Der Deutsche Fußball-Bund (DFB) wird in Leipzig gegründet und wählt Ferdinand Hueppe zu seinem ersten Präsidenten"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Deutscher_Fu%C3%9Fball-Bund",
+       "title": "Deutscher Fußball-Bund – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which club became the first German football champion in 1903?",
+      "de": "Welcher Verein wurde 1903 erster Deutscher Fußballmeister?",
+      "answerEn": "VfB Leipzig",
+      "answerDe": "VfB Leipzig",
+      "timeline": {
+       "kind": "event",
+       "start": "1903-05-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "VfB Leipzig beat DFC Prag 7–2 in Altona to become the first German football champions",
+       "labelDe": "Der VfB Leipzig schlägt den DFC Prag in Altona 7:2 und wird erster Deutscher Fußballmeister"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Deutsche_Fu%C3%9Fballmeisterschaft_1902/03",
+       "title": "Deutsche Fußballmeisterschaft 1902/03 – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year did the DFB join FIFA by telegram on the very day the world federation was founded?",
+      "de": "In welchem Jahr trat der DFB per Telegramm noch am Gründungstag des Weltverbands der FIFA bei?",
+      "answerEn": "1904",
+      "answerDe": "1904",
+      "timeline": {
+       "kind": "event",
+       "start": "1904-05-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "FIFA is founded in Paris; the DFB joins by telegram on the same day",
+       "labelDe": "Die FIFA wird in Paris gegründet; der DFB tritt noch am selben Tag per Telegramm bei"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Deutscher_Fu%C3%9Fball-Bund",
+       "title": "Deutscher Fußball-Bund – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city did the DFB's national German Football Museum open in 2015?",
+      "de": "In welcher Stadt wurde 2015 das nationale Deutsche Fußballmuseum des DFB eröffnet?",
+      "answerEn": "Dortmund",
+      "answerDe": "Dortmund",
+      "timeline": {
+       "kind": "founding",
+       "start": "2015-10-23",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The DFB's German Football Museum opens beside Dortmund's main station",
+       "labelDe": "Das Deutsche Fußballmuseum des DFB öffnet am Dortmunder Hauptbahnhof"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Deutsches_Fu%C3%9Fballmuseum",
+       "title": "Deutsches Fußballmuseum – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Founded Twice: A Short History of the DFB",
+    "titleDe": "Zweimal gegründet: Eine kurze Geschichte des DFB",
+    "bodyEn": "The German Football Association, the Deutscher Fußball-Bund or DFB, is today the largest national sports federation in the world, with around 24,000 clubs in its member associations and its seat in Frankfurt am Main. Its story, however, began in a pub, and it had to begin twice.\n\nOn 28 January 1900, 36 delegates of 86 clubs met at the inn \"Zum Mariengarten\" in Leipzig, a short walk from today's main station, and founded a national association to end the patchwork of regional federations and rule books. Among them were two German-speaking clubs from Prague, and it was a Prague man, the physician and sports pioneer Ferdinand Hueppe of DFC Prag, whom the assembly elected as the DFB's first president. A plaque near the founding site still recalls the evening.\n\nThe new body moved quickly. In the spring of 1903 it staged the first national championship, and on 31 May 1903 in Altona VfB Leipzig beat DFC Prag 7–2 in the final to become the first German football champions – a fitting result for the city where the association had been born. When FIFA was founded in Paris on 21 May 1904, the DFB was not among the seven founding members, but it joined by telegram on the very same day, as the world federation's eighth member, in 1904.\n\nThe second founding was the price of the Nazi years. After 1933 the DFB was brought into line with the regime, and in 1940 it dissolved itself into the state sports organisation. When the West German regional associations decided to restore it after the war, they did so in Stuttgart, where the DFB was formally re-founded on 21 January 1950. It was readmitted to FIFA in September 1950 and joined UEFA at its creation in 1954 – the year the national team won the World Cup in Bern. The Saarland association joined in 1957, and in 1990 the football association of the former GDR followed, uniting German football again under one roof.\n\nThe DFB also looks after its own memory. Its national German Football Museum opened in Dortmund on 23 October 2015, opposite the main station, with the World Cup trophies, a hall of fame and the boots and balls of famous matches.\n\n| Year | Event | City |\n|---|---|---|\n| 1900 | DFB founded, first president Ferdinand Hueppe | Leipzig |\n| 1903 | first German champion: VfB Leipzig | Altona |\n| 1904 | joins FIFA on its founding day | (by telegram) |\n| 1950 | re-founded after the war | Stuttgart |\n| 2015 | German Football Museum opens | Dortmund |",
+    "bodyDe": "Der Deutsche Fußball-Bund, kurz DFB, ist heute mit rund 24.000 Vereinen in seinen Mitgliedsverbänden der größte nationale Sportfachverband der Welt; sein Sitz ist Frankfurt am Main. Seine Geschichte begann jedoch in einer Gaststätte, und sie musste zweimal beginnen.\n\nAm 28. Januar 1900 trafen sich 36 Vertreter von 86 Vereinen in der Gaststätte „Zum Mariengarten“ in Leipzig, nicht weit vom heutigen Hauptbahnhof, und gründeten einen nationalen Verband, der den Flickenteppich aus Regionalverbänden und Regelwerken beenden sollte. Darunter waren zwei deutschsprachige Vereine aus Prag, und es war ein Prager, der Arzt und Sportpionier Ferdinand Hueppe vom DFC Prag, den die Versammlung zum ersten Präsidenten des DFB wählte. Eine Plakette nahe dem Gründungsort erinnert bis heute an den Abend.\n\nDer neue Verband legte schnell los. Im Frühjahr 1903 richtete er die erste nationale Meisterschaft aus, und am 31. Mai 1903 schlug der VfB Leipzig im Finale in Altona den DFC Prag mit 7:2 und wurde erster Deutscher Fußballmeister – ein passendes Ergebnis für die Stadt, in der der Verband geboren worden war. Als die FIFA am 21. Mai 1904 in Paris gegründet wurde, gehörte der DFB nicht zu den sieben Gründungsmitgliedern, trat aber noch am selben Tag per Telegramm als achtes Mitglied bei – im Jahr 1904.\n\nDie zweite Gründung war der Preis der NS-Zeit. Nach 1933 wurde der DFB gleichgeschaltet, und 1940 löste er sich in der staatlichen Sportorganisation auf. Als die westdeutschen Landesverbände ihn nach dem Krieg wiederherstellten, taten sie es in Stuttgart, wo der DFB am 21. Januar 1950 offiziell neu gegründet wurde. Im September 1950 nahm ihn die FIFA wieder auf, und 1954 trat er der neu gegründeten UEFA bei – im Jahr, in dem die Nationalmannschaft in Bern Weltmeister wurde. 1957 kam der Saarländische Fußballverband hinzu, 1990 folgte der Fußballverband der früheren DDR, und der deutsche Fußball war wieder unter einem Dach vereint.\n\nDer DFB pflegt auch sein eigenes Gedächtnis. Sein nationales Deutsches Fußballmuseum wurde am 23. Oktober 2015 in Dortmund eröffnet, gegenüber dem Hauptbahnhof, mit den WM-Pokalen, einer Ruhmeshalle und den Schuhen und Bällen berühmter Spiele.\n\n| Jahr | Ereignis | Stadt |\n|---|---|---|\n| 1900 | Gründung des DFB, erster Präsident Ferdinand Hueppe | Leipzig |\n| 1903 | erster Deutscher Meister: VfB Leipzig | Altona |\n| 1904 | Beitritt zur FIFA an deren Gründungstag | (per Telegramm) |\n| 1950 | Neugründung nach dem Krieg | Stuttgart |\n| 2015 | Eröffnung des Deutschen Fußballmuseums | Dortmund |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-133",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-258",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-391",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year did the DFB lift its ban on women's football?",
+      "de": "In welchem Jahr hob der DFB sein Verbot des Frauenfußballs auf?",
+      "answerEn": "1970",
+      "answerDe": "1970",
+      "timeline": {
+       "kind": "event",
+       "start": "1970-10-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "At its congress in Travemünde the DFB lifts its ban on women's football",
+       "labelDe": "Auf seinem Verbandstag in Travemünde hebt der DFB das Frauenfußballverbot auf"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Frauenfu%C3%9Fball_in_Deutschland",
+       "title": "Frauenfußball in Deutschland – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Who scored the golden goal that won Germany the 2003 Women's World Cup final against Sweden?",
+      "de": "Wer erzielte das Golden Goal, mit dem Deutschland 2003 das WM-Finale der Frauen gegen Schweden gewann?",
+      "answerEn": "Nia Künzer",
+      "answerDe": "Nia Künzer",
+      "timeline": {
+       "kind": "event",
+       "start": "2003-10-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Nia Künzer's golden goal beats Sweden and wins Germany its first Women's World Cup",
+       "labelDe": "Nia Künzers Golden Goal gegen Schweden beschert Deutschland den ersten WM-Titel der Frauen"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Nia_K%C3%BCnzer",
+       "title": "Nia Künzer – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which German striker was named FIFA World Player of the Year in 2003, 2004 and 2005?",
+      "de": "Welche deutsche Stürmerin wurde 2003, 2004 und 2005 zur FIFA-Weltfußballerin gewählt?",
+      "answerEn": "Birgit Prinz",
+      "answerDe": "Birgit Prinz",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1977-10-25",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Birgit Prinz, German striker, two-time world champion and three-time FIFA World Player of the Year (born 1977)",
+       "labelDe": "Birgit Prinz, deutsche Stürmerin, zweifache Weltmeisterin und dreifache FIFA-Weltfußballerin (geboren 1977)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Birgit_Prinz",
+       "title": "Birgit Prinz – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "From Ban to Gold: German Women's Football",
+    "titleDe": "Vom Verbot zum Gold: Der deutsche Frauenfußball",
+    "bodyEn": "For most of the twentieth century German women were not supposed to play football at all – at least not in the clubs of the national association. In 1955 the DFB forbade its clubs to field women's teams, arguing that the game harmed the \"female nature\". Women played anyway, in unofficial matches and tournaments, and the pressure grew. At its congress in Travemünde on 31 October 1970 the DFB finally lifted the ban, in 1970 – but with conditions. Women's teams had to take a six-month winter break, studded boots were forbidden, the balls were smaller and lighter, and a match lasted only 70 minutes, two halves of 35. Later the playing time was raised to 80 minutes. Only since 1993 has women's football in Germany been played over the full two halves of 45 minutes, like the men's game.\n\nFrom those grudging beginnings came one of the most successful national teams in the world. Germany won its first World Cup in the United States in 2003, and it did so in the most dramatic way possible: in the final against Sweden on 12 October 2003, Nia Künzer headed the golden goal in extra time – as it turned out, the last golden goal in FIFA history, since the rule was abolished the following year. The player of that era was Birgit Prinz of 1. FFC Frankfurt, a powerful striker who was named FIFA World Player of the Year three times in a row, in 2003, 2004 and 2005, and finished second behind Brazil's Marta four more times.\n\nFour years later, in China, Germany defended the title without conceding a single goal. The tournament began with a statement: in the opening match in Shanghai on 10 September 2007 Germany beat Argentina 11–0, at the time the biggest win in Women's World Cup history.\n\nThe coach of that second title was Silvia Neid, a former midfielder who had been assistant to her predecessor Tina Theune and took charge in 2005. Her last tournament was the 2016 Olympic Games in Rio de Janeiro, the one major prize the team had never won. On 19 August 2016, at the Maracanã, Germany beat Sweden 2–1 in the final, and Neid said goodbye with Olympic gold.\n\n| Year | Milestone |\n|---|---|\n| 1970 | DFB lifts its ban; 2 × 35 minutes |\n| 1993 | full 2 × 45 minutes |\n| 2003 | first world title, Künzer's golden goal |\n| 2007 | second title, opening win 11–0 over Argentina |\n| 2016 | Olympic gold in Rio, Neid's farewell |",
+    "bodyDe": "Den größten Teil des 20. Jahrhunderts sollten Frauen in Deutschland überhaupt nicht Fußball spielen – jedenfalls nicht in den Vereinen des nationalen Verbands. 1955 untersagte der DFB seinen Vereinen, Frauenmannschaften zu gründen, mit der Begründung, das Spiel schade der „weiblichen Natur“. Frauen spielten trotzdem, in inoffiziellen Spielen und Turnieren, und der Druck wuchs. Auf seinem Verbandstag in Travemünde am 31. Oktober 1970 hob der DFB das Verbot schließlich auf, im Jahr 1970 – allerdings mit Auflagen. Frauenteams mussten eine halbjährige Winterpause einhalten, Stollenschuhe waren verboten, die Bälle kleiner und leichter, und ein Spiel dauerte nur 70 Minuten, zwei Halbzeiten zu 35. Später wurde die Spieldauer auf 80 Minuten erhöht. Erst seit 1993 gilt im deutschen Frauenfußball wie bei den Männern eine Spieldauer von zweimal 45 Minuten.\n\nAus diesen widerwilligen Anfängen wurde eine der erfolgreichsten Nationalmannschaften der Welt. Ihren ersten WM-Titel gewann sie 2003 in den USA, und zwar auf die dramatischste Art: Im Finale gegen Schweden am 12. Oktober 2003 köpfte Nia Künzer in der Verlängerung das Golden Goal – wie sich zeigte, das letzte Golden Goal der FIFA-Geschichte, denn die Regel wurde im Jahr darauf abgeschafft. Die Spielerin dieser Ära war Birgit Prinz vom 1. FFC Frankfurt, eine wuchtige Stürmerin, die 2003, 2004 und 2005 dreimal in Folge zur FIFA-Weltfußballerin gewählt wurde und danach noch viermal hinter der Brasilianerin Marta Zweite wurde.\n\nVier Jahre später, in China, verteidigte Deutschland den Titel ohne ein einziges Gegentor. Das Turnier begann mit einem Ausrufezeichen: Im Eröffnungsspiel in Shanghai am 10. September 2007 schlug Deutschland Argentinien mit 11:0, damals der höchste Sieg der WM-Geschichte der Frauen.\n\nTrainerin dieses zweiten Titels war Silvia Neid, eine frühere Mittelfeldspielerin, die Assistentin ihrer Vorgängerin Tina Theune gewesen war und 2005 übernahm. Ihr letztes Turnier waren die Olympischen Spiele 2016 in Rio de Janeiro, der einzige große Titel, der der Mannschaft noch fehlte. Am 19. August 2016 schlug Deutschland im Maracanã im Finale Schweden mit 2:1, und Neid verabschiedete sich mit dem Olympiasieg.\n\n| Jahr | Meilenstein |\n|---|---|\n| 1970 | DFB hebt das Verbot auf; 2 × 35 Minuten |\n| 1993 | volle 2 × 45 Minuten |\n| 2003 | erster WM-Titel, Künzers Golden Goal |\n| 2007 | zweiter Titel, Auftaktsieg 11:0 gegen Argentinien |\n| 2016 | Olympiasieg in Rio, Neids Abschied |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-009",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-048",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-234",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-290",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-372",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-358",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Bundesliga club is nicknamed „die Knappen“ (the miners) because so many of its early players came from the mining community?",
+      "de": "Welcher Bundesligaverein trägt den Spitznamen „die Knappen“, weil viele seiner frühen Spieler aus dem Bergmannsmilieu stammten?",
+      "answerEn": "FC Schalke 04",
+      "answerDe": "FC Schalke 04",
+      "timeline": {
+       "kind": "founding",
+       "start": "1904-05-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "FC Schalke 04 is founded by young miners' apprentices in Gelsenkirchen-Schalke",
+       "labelDe": "Der FC Schalke 04 wird in Gelsenkirchen-Schalke von jungen Bergbaulehrlingen gegründet"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/FC_Schalke_04",
+       "title": "FC Schalke 04 – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Goats, Foals and Aspirins: Germany's Football Clubs and Their Identities",
+    "titleDe": "Geißböcke, Fohlen und Aspirin: Deutschlands Fußballvereine und ihre Identität",
+    "bodyEn": "A German football club is more than its league position. Each has its own animal, its own nickname, its own little legend – and fans learn them long before they learn the offside rule.\n\nSome identities come from the pit and the factory. FC Schalke 04 was founded in Gelsenkirchen in 1904 by teenagers who worked at the local colliery; so many of its players came from the mining community that the club is still called „die Knappen“, the miners. Bayer 04 Leverkusen was founded the same year by employees of the chemical company Bayer and still carries its name. In Spanish-speaking countries the club is therefore nicknamed „Las Aspirinas“, the Aspirin team, after Bayer's most famous product.\n\nOthers come from a single young team. In 1964/65 Hennes Weisweiler's Borussia Mönchengladbach won promotion to the Bundesliga with a side so young that a reporter of the Rheinische Post called it the Fohlenelf (the Foals) – literally the foals' eleven. The foals grew into the team that won five championships in the 1970s, and the club still has a foal in its crest.\n\nMascots are a story of their own. In 1950 the circus director Carola Williams presented 1. FC Köln with a billy goat, named Hennes after the coach Hennes Weisweiler; his successors have lived in Cologne Zoo, appear at every home game and gave the club its nickname „die Geißböcke“. Hennes VII even had a television career: in an episode of the comedy series „Pastewka“, Bastian Pastewka runs him over with his car. In the east of Berlin, 1. FC Union Berlin, founded in 1966, sends out a knight called „Keule“ – fitting for a club whose fans sing „Eisern Union“, Iron Union.\n\nMoney writes stories too. In October 2000 Borussia Dortmund became the first German football club to go public on the stock exchange, and it is still the only one listed on the German market. The share price has followed results ever since, from Champions League runs to near-bankruptcy in 2005.\n\nAnd some clubs are famous for what they finally achieved. For more than sixty years the state of Schleswig-Holstein never had a team in the Bundesliga. That ended in 2024, when Holstein Kiel won promotion for the 2024–25 season as the first club from the far north ever to play in the top flight.\n\n| Club | Identity |\n|---|---|\n| FC Schalke 04 | „die Knappen“ (the miners) |\n| Bayer 04 Leverkusen | „Las Aspirinas“ in Spain |\n| Borussia Mönchengladbach | „Fohlenelf“ (the foals) |\n| 1. FC Köln | billy goat Hennes |\n| 1. FC Union Berlin | knight „Keule“ |\n| Borussia Dortmund | first club on the stock exchange (2000) |\n| Holstein Kiel | Schleswig-Holstein's first Bundesliga club (2024) |",
+    "bodyDe": "Ein deutscher Fußballverein ist mehr als sein Tabellenplatz. Jeder hat sein eigenes Tier, seinen eigenen Spitznamen, seine eigene kleine Legende – und Fans lernen sie lange bevor sie die Abseitsregel lernen.\n\nManche Identitäten stammen aus Zeche und Fabrik. Der FC Schalke 04 wurde 1904 in Gelsenkirchen von Jugendlichen gegründet, die auf der örtlichen Zeche arbeiteten; so viele seiner Spieler kamen aus dem Bergmannsmilieu, dass der Verein bis heute „die Knappen“ heißt. Bayer 04 Leverkusen wurde im selben Jahr von Beschäftigten des Chemieunternehmens Bayer gegründet und trägt dessen Namen bis heute. In spanischsprachigen Ländern heißt der Klub deshalb sinngemäß „Aspirin-Team“, „Las Aspirinas“, nach Bayers berühmtestem Produkt.\n\nAndere stammen von einer einzigen jungen Mannschaft. 1964/65 stieg Hennes Weisweilers Borussia Mönchengladbach mit einer so jungen Elf in die Bundesliga auf, dass ein Reporter der Rheinischen Post sie „Fohlenelf“ nannte. Aus den Fohlen wurde die Mannschaft, die in den 1970er-Jahren fünf Meisterschaften gewann, und bis heute trägt der Verein ein Fohlen im Wappen.\n\nMaskottchen sind eine eigene Geschichte. 1950 schenkte die Zirkusdirektorin Carola Williams dem 1. FC Köln einen Geißbock, der nach Trainer Hennes Weisweiler Hennes getauft wurde; seine Nachfolger leben im Kölner Zoo, sind bei jedem Heimspiel dabei und gaben dem Verein seinen Spitznamen „die Geißböcke“. Hennes VII. hatte sogar eine Fernsehkarriere: In einer Folge der Comedyserie „Pastewka“ überfährt Bastian Pastewka ihn mit seinem Auto. Im Osten Berlins schickt der 1966 gegründete 1. FC Union Berlin einen Ritter namens „Keule“ aufs Feld – passend für einen Verein, dessen Fans „Eisern Union“ singen.\n\nAuch Geld schreibt Geschichten. Im Oktober 2000 ging Borussia Dortmund als erster deutscher Fußballverein an die Börse, und bis heute ist er der einzige am deutschen Markt notierte. Der Aktienkurs folgt seither den Ergebnissen, von Champions-League-Läufen bis zur Beinahe-Pleite 2005.\n\nUnd manche Vereine sind dafür berühmt, was sie endlich erreichten. Mehr als sechzig Jahre lang hatte Schleswig-Holstein nie einen Erstligisten. Das endete 2024, als Holstein Kiel zur Saison 2024/25 als erster Verein aus dem hohen Norden in die Bundesliga aufstieg.\n\n| Verein | Identität |\n|---|---|\n| FC Schalke 04 | „die Knappen“ |\n| Bayer 04 Leverkusen | „Las Aspirinas“ in Spanien |\n| Borussia Mönchengladbach | „Fohlenelf“ |\n| 1. FC Köln | Geißbock Hennes |\n| 1. FC Union Berlin | Ritter „Keule“ |\n| Borussia Dortmund | erster Verein an der Börse (2000) |\n| Holstein Kiel | erster Bundesligist aus Schleswig-Holstein (2024) |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-181",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-153",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "How far from the goal line is the penalty mark in football?",
+      "de": "Wie weit ist der Strafstoßpunkt im Fußball von der Torlinie entfernt?",
+      "answerEn": "11 metres",
+      "answerDe": "11 Meter",
+      "timeline": {
+       "kind": "event",
+       "start": "1902",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The penalty spot, 12 yards (11 m) from the goal, is added to the Laws of the Game",
+       "labelDe": "Der Strafstoßpunkt, 12 Yards (11 m) vor dem Tor, wird in die Fußballregeln aufgenommen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Penalty_kick_(association_football)",
+       "title": "Penalty kick (association football) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How far does the penalty area extend into the field of play from the goal line?",
+      "de": "Wie weit reicht der Strafraum von der Torlinie ins Spielfeld hinein?",
+      "answerEn": "16.5 metres",
+      "answerDe": "16,5 Meter",
+      "timeline": {
+       "kind": "event",
+       "start": "1902",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The penalty area is introduced with its current dimensions of 18 yards (16.5 m)",
+       "labelDe": "Der Strafraum wird mit seinen heutigen Maßen von 18 Yards (16,5 m) eingeführt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Penalty_area",
+       "title": "Penalty area – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "How high above the ground is the crossbar of a football goal?",
+      "de": "Wie hoch über dem Boden liegt die Querlatte eines Fußballtors?",
+      "answerEn": "2.44 metres",
+      "answerDe": "2,44 Meter",
+      "timeline": {
+       "kind": "event",
+       "start": "1883",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "A crossbar becomes compulsory for football goals; the option of a tape is removed",
+       "labelDe": "Die Querlatte wird für Fußballtore Pflicht; das Band als Alternative entfällt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Goal_(sports)",
+       "title": "Goal (sports) – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Lines, Arcs and Grass: The Measurements of a Football Pitch",
+    "titleDe": "Linien, Bögen und Rasen: Die Maße eines Fußballfelds",
+    "bodyEn": "Football is famous for being simple, but its pitch is a carefully measured thing. Most of its numbers look odd in metres because they were set in yards by Victorian Englishmen and only converted later.\n\nStart with the goal. Two posts 7.32 metres (8 yards) apart carry a crossbar 2.44 metres (8 feet) above the ground. In the first Laws of 1863 there was no bar at all, and a goal could be scored at any height; a tape was added later, and from 1883 a crossbar became compulsory.\n\nIn front of each goal lies the penalty area, introduced in 1902 with the dimensions it still has: it extends 16.5 metres (18 yards) to each side of the goalposts and 16.5 metres into the field of play. Inside it the goalkeeper may handle the ball, and a foul by a defender there means a penalty kick. The kick is taken from the penalty mark, also fixed in 1902, 11 metres (12 yards) from the goal line – which is why Germans simply call a penalty an „Elfmeter“, an eleven-metre kick.\n\nThe pitch's strangest marking is the curved line at the top of the box. When a penalty is taken, every player except the taker and the goalkeeper must stand outside the area and at least 9.15 metres (10 yards) from the penalty mark, so that the taker is not disturbed. The penalty area alone cannot guarantee that distance, so in 1937 the lawmakers added the penalty arc – the \"D\" – a segment of a circle around the mark. The same 9.15 metres is the radius of the centre circle and the distance opponents must keep at a free kick.\n\nThe surface matters as much as the lines. For most of the game's history a proper pitch meant natural grass, and that was a problem for Greenland: in its Arctic climate natural grass practically cannot be grown, so for decades the island had no pitches that met FIFA's standards. Its first artificial pitch opened in Qaqortoq in September 2009, and FIFA now allows artificial turf, yet Greenland is still not a member of the world federation; in 2024 it applied to join the North and Central American confederation CONCACAF instead.\n\n| Marking | Metric | Imperial |\n|---|---|---|\n| goal width | 7.32 m | 8 yd |\n| crossbar height | 2.44 m | 8 ft |\n| penalty area depth | 16.5 m | 18 yd |\n| penalty mark | 11 m | 12 yd |\n| penalty arc / centre circle | 9.15 m | 10 yd |",
+    "bodyDe": "Fußball ist berühmt für seine Einfachheit, doch sein Spielfeld ist sorgfältig vermessen. Die meisten seiner Zahlen wirken in Metern seltsam, weil viktorianische Engländer sie in Yards festlegten und sie erst später umgerechnet wurden.\n\nZuerst das Tor. Zwei Pfosten im Abstand von 7,32 Metern (8 Yards) tragen eine Querlatte 2,44 Meter (8 Fuß) über dem Boden. In den ersten Regeln von 1863 gab es überhaupt keine Latte, und ein Tor konnte in jeder Höhe erzielt werden; später kam ein Band hinzu, und ab 1883 wurde die Querlatte Pflicht.\n\nVor jedem Tor liegt der Strafraum, 1902 mit den Maßen eingeführt, die er bis heute hat: Er reicht 16,5 Meter (18 Yards) seitlich über die Torpfosten hinaus und 16,5 Meter ins Spielfeld hinein. In ihm darf der Torwart den Ball mit den Händen spielen, und ein Foul eines Verteidigers dort bedeutet Strafstoß. Geschossen wird vom Strafstoßpunkt, ebenfalls 1902 festgelegt, 11 Meter (12 Yards) von der Torlinie entfernt – deshalb heißt der Strafstoß auf Deutsch schlicht „Elfmeter“.\n\nDie merkwürdigste Markierung ist der Bogen oben am Strafraum. Bei einem Elfmeter müssen alle Spieler außer Schütze und Torwart außerhalb des Strafraums und mindestens 9,15 Meter (10 Yards) vom Strafstoßpunkt entfernt stehen, damit der Schütze nicht gestört wird. Der Strafraum allein garantiert diesen Abstand nicht, deshalb fügten die Regelhüter 1937 den Teilkreis hinzu – einen Kreisbogen um den Punkt. Dieselben 9,15 Meter sind der Radius des Mittelkreises und der Abstand, den Gegner bei einem Freistoß halten müssen.\n\nDer Belag zählt so viel wie die Linien. Den größten Teil der Fußballgeschichte bedeutete ein richtiges Spielfeld Naturrasen, und das war ein Problem für Grönland: In seinem arktischen Klima wächst Naturrasen praktisch nicht, weshalb die Insel jahrzehntelang keine FIFA-tauglichen Spielfelder hatte. Ihr erster Kunstrasenplatz wurde im September 2009 in Qaqortoq eröffnet, und inzwischen erlaubt die FIFA Kunstrasen, doch Grönland ist noch immer kein Mitglied des Weltverbands; 2024 beantragte es stattdessen die Aufnahme in den nord- und mittelamerikanischen Verband CONCACAF.\n\n| Markierung | Metrisch | Imperial |\n|---|---|---|\n| Torbreite | 7,32 m | 8 yd |\n| Lattenhöhe | 2,44 m | 8 ft |\n| Strafraumtiefe | 16,5 m | 18 yd |\n| Strafstoßpunkt | 11 m | 12 yd |\n| Teilkreis / Mittelkreis | 9,15 m | 10 yd |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-220",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-116",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which club did VfB Stuttgart beat 2–0 in the 1997 DFB-Pokal final in Berlin?",
+      "de": "Welchen Verein besiegte der VfB Stuttgart im DFB-Pokalfinale 1997 in Berlin mit 2:0?",
+      "answerEn": "Energie Cottbus",
+      "answerDe": "Energie Cottbus",
+      "timeline": {
+       "kind": "event",
+       "start": "1997-06-14",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "VfB Stuttgart beat third-tier Energie Cottbus 2–0 in the DFB-Pokal final in Berlin",
+       "labelDe": "Der VfB Stuttgart schlägt im DFB-Pokalfinale in Berlin den Regionalligisten Energie Cottbus 2:0"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/DFB-Pokal_1996/97",
+       "title": "DFB-Pokal 1996/97 – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Bulgarian midfielder formed VfB Stuttgart's „magic triangle“ with the strikers Fredi Bobic and Giovane Élber?",
+      "de": "Welcher bulgarische Mittelfeldspieler bildete mit den Stürmern Fredi Bobic und Giovane Élber das „magische Dreieck“ des VfB Stuttgart?",
+      "answerEn": "Krassimir Balakov",
+      "answerDe": "Krassimir Balakow",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1966-03-29",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": true,
+       "labelEn": "Krassimir Balakov, Bulgarian playmaker of VfB Stuttgart's magic triangle (born 1966)",
+       "labelDe": "Krassimir Balakow, bulgarischer Spielmacher im magischen Dreieck des VfB Stuttgart (geboren 1966)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Krasimir_Balakov",
+       "title": "Krasimir Balakov – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which coach led VfB Stuttgart to the German championship in 2007?",
+      "de": "Welcher Trainer führte den VfB Stuttgart 2007 zur deutschen Meisterschaft?",
+      "answerEn": "Armin Veh",
+      "answerDe": "Armin Veh",
+      "timeline": {
+       "kind": "event",
+       "start": "2007-05-19",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "VfB Stuttgart beat Energie Cottbus 2–1 on the final day to win the Bundesliga under Armin Veh",
+       "labelDe": "Der VfB Stuttgart schlägt am letzten Spieltag Energie Cottbus 2:1 und wird unter Armin Veh Meister"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/VfB_Stuttgart",
+       "title": "VfB Stuttgart – Wikipedia",
+       "lang": "de"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The Magic Triangle and After: VfB Stuttgart",
+    "titleDe": "Das magische Dreieck und danach: Der VfB Stuttgart",
+    "bodyEn": "VfB Stuttgart, one of the sixteen founding members of the Bundesliga, has been German champion five times (1950, 1952, 1984, 1992 and 2007) and has won the DFB-Pokal four times. Its most beloved team, though, won neither a championship nor a European trophy. It was the side of the mid-1990s built around three attacking players.\n\nIn 1996 a young coach called Joachim Löw, until then an assistant, took over the first team. He inherited the Bulgarian playmaker Krassimir Balakov and the strikers Fredi Bobic and Giovane Élber, whose understanding was so instinctive that Stuttgart christened them the „magic triangle“. Löw let them play. In his first season, VfB Stuttgart reached the cup final at Berlin's Olympiastadion and on 14 June 1997 beat Energie Cottbus, then a third-tier club, 2–0. A year later Löw's team reached the final of the European Cup Winners' Cup, losing 1–0 to Chelsea in Stockholm; Löw left soon afterwards, coached Fenerbahçe, Karlsruher SC and FC Tirol among others, and in 2006 became national coach – the cup of 1997 remains the only major trophy he won in German club football. Balakov stayed until 2003 and is still a club legend.\n\nAfter the turn of the millennium the club, short of money, turned to its own youth – the „Junge Wilde“, the young wild ones. Under Armin Veh, at first dismissed as a stopgap, a very young side caught Schalke on the final straight of the 2006–07 season and won the title on 19 May 2007 with a 2–1 home win over, of all teams, Energie Cottbus.\n\nStuttgart has also been a first stop in Germany for players from abroad. The Romanian playmaker Alexandru Maxim had moved to Spain at seventeen and come through the youth academy of Espanyol (RCD Espanyol, Barcelona) before playing for the club's reserves; after a spell back home with Pandurii Târgu Jiu, VfB signed him in January 2013 for €1.5 million. He later played for Mainz 05, and between them the two clubs gave him 140 Bundesliga games.\n\n| Year | Event |\n|---|---|\n| 1997 | Cup final win over Energie Cottbus under Löw |\n| 1998 | Cup Winners' Cup final, lost to Chelsea |\n| 2007 | fifth championship under Armin Veh |\n| 2013 | Alexandru Maxim arrives from Romania |",
+    "bodyDe": "Der VfB Stuttgart, einer der sechzehn Gründungsvereine der Bundesliga, wurde fünfmal Deutscher Meister (1950, 1952, 1984, 1992 und 2007) und gewann viermal den DFB-Pokal. Seine beliebteste Mannschaft gewann allerdings weder eine Meisterschaft noch einen Europapokal. Es war die Elf der Mitte der 1990er-Jahre, gebaut um drei Offensivspieler.\n\n1996 übernahm ein junger Trainer namens Joachim Löw, bis dahin Assistent, die erste Mannschaft. Er erbte den bulgarischen Spielmacher Krassimir Balakow und die Stürmer Fredi Bobic und Giovane Élber, deren Verständnis so instinktiv war, dass Stuttgart sie das „magische Dreieck“ taufte. Löw ließ sie spielen. In seiner ersten Saison erreichte der VfB Stuttgart das Pokalfinale im Berliner Olympiastadion und schlug am 14. Juni 1997 den damaligen Regionalligisten Energie Cottbus mit 2:0. Ein Jahr später stand Löws Mannschaft im Finale des Europapokals der Pokalsieger und verlor in Stockholm 0:1 gegen den FC Chelsea; Löw ging bald darauf, trainierte unter anderem Fenerbahçe, den Karlsruher SC und den FC Tirol und wurde 2006 Bundestrainer – der Pokal von 1997 blieb sein einziger großer Titel im deutschen Vereinsfußball. Balakow blieb bis 2003 und ist bis heute eine Vereinslegende.\n\nNach der Jahrtausendwende setzte der Verein mangels Geld auf die eigene Jugend – die „Jungen Wilden“. Unter Armin Veh, anfangs als Übergangslösung belächelt, fing eine sehr junge Mannschaft in der Saison 2006/07 auf der Zielgeraden Schalke ab und gewann den Titel am 19. Mai 2007 mit einem 2:1-Heimsieg ausgerechnet gegen Energie Cottbus.\n\nStuttgart war auch eine erste Station in Deutschland für Spieler aus dem Ausland. Der rumänische Spielmacher Alexandru Maxim war mit siebzehn nach Spanien gezogen und in der Jugend von Espanyol Barcelona ausgebildet worden, bevor er für die zweite Mannschaft des Klubs spielte; nach einer Station in der Heimat bei Pandurii Târgu Jiu holte ihn der VfB im Januar 2013 für 1,5 Millionen Euro. Später spielte er für Mainz 05, und zusammen brachten ihm die beiden Vereine 140 Bundesligaspiele.\n\n| Jahr | Ereignis |\n|---|---|\n| 1997 | Pokalsieg gegen Energie Cottbus unter Löw |\n| 1998 | Finale im Europapokal der Pokalsieger, verloren gegen Chelsea |\n| 2007 | fünfte Meisterschaft unter Armin Veh |\n| 2013 | Alexandru Maxim kommt aus Rumänien |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-059",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-130",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-227",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-366",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-388",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "In which country did the club SO l'Emyrne lose 149–0 in 2002 by deliberately scoring own goals in protest at the referee?",
+      "de": "In welchem Land verlor der Verein SO l'Emyrne 2002 mit 0:149, weil er aus Protest gegen den Schiedsrichter absichtlich Eigentore schoss?",
+      "answerEn": "Madagascar",
+      "answerDe": "Madagaskar",
+      "timeline": {
+       "kind": "event",
+       "start": "2002-10-31",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "AS Adema beat SO l'Emyrne 149–0 in Toamasina, Madagascar – all own goals, a world-record scoreline",
+       "labelDe": "AS Adema schlägt SO l'Emyrne in Toamasina, Madagaskar, mit 149:0 – lauter Eigentore, ein Weltrekordergebnis"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/AS_Adema_149%E2%80%930_SO_l%27Emyrne",
+       "title": "AS Adema 149–0 SO l'Emyrne – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Smallest, Biggest, Youngest: Football's Strangest Records",
+    "titleDe": "Am kleinsten, am größten, am jüngsten: Die seltsamsten Rekorde des Fußballs",
+    "bodyEn": "Football keeps records of everything, and not all of them are about goals and trophies. Some of the strangest describe the edges of the game – its tiniest league, its most travelled coach, its youngest signing.\n\nAt one end of the scale stands the Premier League. Founded in 1992, when England's top clubs broke away from the Football League, it is today the most-watched sports league in the world, broadcast in 212 territories to a potential audience of 4.7 billion people. If football is the world's most popular sport, the Premier League is its most popular league.\n\nAt the other end lies the Isles of Scilly, off the south-western tip of Cornwall. The islands' football league has exactly two clubs, the Garrison Gunners and the Woolpack Wanderers, who play each other up to twenty times a season, mostly on Sundays, as well as in cup competitions. Since 2016 Guinness World Records has recognised it as the smallest affiliated football league in the world.\n\nThe most restless career belongs to Rudi Gutendorf (1926–2019), a German coach nicknamed „Rudi Rastlos“, restless Rudi. Between 1946 and 2003 he took 55 coaching posts at clubs and national teams on five continents – from Schalke and Hamburg to Chile, Tonga, Rwanda and Samoa – and entered the Guinness Book of Records as the coach with the most international engagements; the figure rests largely on his own count, and some sources say 56.\n\nThe youngest \"signing\" is a curiosity of a different kind. In 2013 the Belgian amateur club FC Racing Boxberg gave a contract to Bryce Brites, a toddler whose ball skills had impressed the coaches. He was 20 months old, and joined the club's under-fives.\n\nFootballers' second careers can be just as surprising. Tim Wiese, Werder Bremen's goalkeeper and a member of Germany's squad at the 2010 World Cup, built himself up through bodybuilding after his football career ended and in November 2016, at the age of 34, stepped into a WWE ring on a tour of Germany under the ring name „The Machine“.\n\nAnd the most lopsided result in history was no contest at all. On 31 October 2002 in Toamasina, Madagascar, SO l'Emyrne lost 149–0 to AS Adema – every goal an own goal, scored on purpose in protest at refereeing decisions in a previous match. It is still the highest scoreline recognised by Guinness World Records.\n\n| Record | Holder |\n|---|---|\n| most-watched league | Premier League |\n| smallest league | Isles of Scilly (2 clubs) |\n| most coaching posts | Rudi Gutendorf, 55 |\n| youngest contract | Bryce Brites, 20 months |\n| highest score | AS Adema 149–0 SO l'Emyrne, Madagascar |",
+    "bodyDe": "Der Fußball führt über alles Buch, und nicht alle Rekorde handeln von Toren und Titeln. Einige der seltsamsten beschreiben die Ränder des Spiels – seine kleinste Liga, seinen reisefreudigsten Trainer, seinen jüngsten Neuzugang.\n\nAm einen Ende der Skala steht die Premier League. 1992 gegründet, als sich Englands Spitzenklubs von der Football League abspalteten, ist sie heute die meistgesehene Sportliga der Welt, übertragen in 212 Länder und Gebiete mit einem potenziellen Publikum von 4,7 Milliarden Menschen. Wenn Fußball die beliebteste Sportart der Welt ist, dann ist die Premier League ihre beliebteste Liga.\n\nAm anderen Ende liegen die Scilly-Inseln vor der Südwestspitze Cornwalls. Die Fußballliga der Inseln hat genau zwei Vereine, die Garrison Gunners und die Woolpack Wanderers, die pro Saison bis zu zwanzigmal gegeneinander spielen, meist sonntags, dazu in Pokalwettbewerben. Seit 2016 führt das Guinness-Buch der Rekorde sie als kleinste offizielle Fußballliga der Welt.\n\nDie rastloseste Karriere gehört Rudi Gutendorf (1926–2019), einem deutschen Trainer mit dem Spitznamen „Rudi Rastlos“. Zwischen 1946 und 2003 übernahm er 55 Trainerstationen bei Klubs und Nationalmannschaften auf fünf Kontinenten – von Schalke und dem HSV bis Chile, Tonga, Ruanda und Samoa – und kam als Trainer mit den meisten internationalen Engagements ins Guinness-Buch der Rekorde; die Zahl beruht weitgehend auf seiner eigenen Zählung, manche Quellen nennen 56.\n\nDer jüngste „Neuzugang“ ist eine Kuriosität anderer Art. 2013 gab der belgische Amateurverein FC Racing Boxberg Bryce Brites einen Vertrag, einem Kleinkind, dessen Ballgefühl die Trainer beeindruckt hatte. Er war 20 Monate alt und kam zu den Unter-Fünfjährigen des Vereins.\n\nAuch zweite Karrieren von Fußballern können überraschen. Tim Wiese, Torhüter von Werder Bremen und im deutschen Kader der WM 2010, baute sich nach dem Ende seiner Fußballlaufbahn mit Bodybuilding auf und stieg im November 2016 mit 34 Jahren bei einer Deutschland-Tour der WWE unter dem Kampfnamen „The Machine“ in den Ring.\n\nUnd das einseitigste Ergebnis der Geschichte war gar kein Wettkampf. Am 31. Oktober 2002 verlor SO l'Emyrne in Toamasina auf Madagaskar mit 0:149 gegen AS Adema – jedes Tor ein Eigentor, absichtlich geschossen aus Protest gegen Schiedsrichterentscheidungen in einem früheren Spiel. Es ist bis heute das höchste vom Guinness-Buch anerkannte Ergebnis.\n\n| Rekord | Inhaber |\n|---|---|\n| meistgesehene Liga | Premier League |\n| kleinste Liga | Scilly-Inseln (2 Vereine) |\n| meiste Trainerstationen | Rudi Gutendorf, 55 |\n| jüngster Vertrag | Bryce Brites, 20 Monate |\n| höchstes Ergebnis | AS Adema 149:0 SO l'Emyrne, Madagaskar |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-375",
+      "category": 6
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-367",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which literary critic and essayist coined the phrase „aus der Tiefe des Raumes“ for Günter Netzer's runs in 1972?",
+      "de": "Welcher Literaturkritiker und Essayist prägte 1972 die Wendung, Günter Netzer sei „aus der Tiefe des Raumes“ gekommen?",
+      "answerEn": "Karl Heinz Bohrer",
+      "answerDe": "Karl Heinz Bohrer",
+      "timeline": {
+       "kind": "event",
+       "start": "1972",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "West Germany win 3–1 at Wembley; Karl Heinz Bohrer writes of Netzer coming „aus der Tiefe des Raumes“",
+       "labelDe": "Die Bundesrepublik gewinnt in Wembley 3:1; Karl Heinz Bohrer schreibt, Netzer komme „aus der Tiefe des Raumes“"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Karl_Heinz_Bohrer",
+       "title": "Karl Heinz Bohrer – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "About which German national goalkeeper did Ronald Reng write the 2010 biography „A Life Too Short“?",
+      "de": "Über welchen deutschen Nationaltorwart schrieb Ronald Reng 2010 die Biografie „Ein allzu kurzes Leben“?",
+      "answerEn": "Robert Enke",
+      "answerDe": "Robert Enke",
+      "timeline": {
+       "kind": "creation",
+       "start": "2010",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Ronald Reng publishes his biography of the goalkeeper Robert Enke",
+       "labelDe": "Ronald Reng veröffentlicht seine Biografie über den Torwart Robert Enke"
+      },
+      "source": {
+       "url": "https://de.wikipedia.org/wiki/Ronald_Reng",
+       "title": "Ronald Reng – Wikipedia",
+       "lang": "de"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American author followed the tiny Italian club Castel di Sangro through its first Serie B season in a book published in 1999?",
+      "de": "Welcher amerikanische Autor begleitete den winzigen italienischen Klub Castel di Sangro durch seine erste Serie-B-Saison, in einem 1999 erschienenen Buch?",
+      "answerEn": "Joe McGinniss",
+      "answerDe": "Joe McGinniss",
+      "timeline": {
+       "kind": "creation",
+       "start": "1999",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Joe McGinniss publishes The Miracle of Castel di Sangro",
+       "labelDe": "Joe McGinniss veröffentlicht „The Miracle of Castel di Sangro“"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Joe_McGinniss",
+       "title": "Joe McGinniss – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Football on the Bookshelf",
+    "titleDe": "Fußball im Bücherregal",
+    "bodyEn": "For a long time football and literature kept their distance; writers looked down on the game, and footballers rarely wrote. That changed in the last decades of the twentieth century, and a handful of books now belong in any football library.\n\nThe most influential is Nick Hornby's first book, Fever Pitch (1992). It is not really a novel but a memoir: the story of a boy from the Home Counties who falls for Arsenal at his first match at Highbury in 1968 and arranges the next twenty years of his life around the club. Hornby wrote about obsession with humour and honesty, and the book made it respectable for educated English readers to admit they loved football; it was filmed twice, once in London and once, transplanted to baseball and the Boston Red Sox, in America.\n\nAn American came to football from the outside. Joe McGinniss, known for true-crime books, spent the 1996–97 season with Castel di Sangro, a club from an Abruzzo mountain town of a few thousand people that had just climbed into Serie B. The Miracle of Castel di Sangro (1999) is a love letter to Italian football that ends in disillusion, with match-fixing and tragedy.\n\nGerman football writing has its own classics. One phrase came from a literary critic: when West Germany beat England 3–1 at Wembley in the spring of 1972, the literary critic Karl Heinz Bohrer, later one of Germany's best-known essayists, wrote that Günter Netzer had launched his attacks „aus der Tiefe des Raumes“ – from the depths of space. The words became a proverb and gave titles to a film and, in 2004, to Netzer's own memoir, written with Helmut Schümann: Aus der Tiefe des Raumes (From the Depths of Space). Mein Leben.\n\nThe saddest is Ronald Reng's biography of Robert Enke, the Hanover and national-team goalkeeper who took his own life in November 2009 after years of hidden depression. Written in 2010 with the help of Enke's widow Teresa, „Robert Enke. Ein allzu kurzes Leben“ – in English A Life Too Short – won the William Hill Sports Book of the Year in 2011, the first time in 23 years the prize went to a book not written in English.\n\n| Book | Author | Subject |\n|---|---|---|\n| Fever Pitch (1992) | Nick Hornby | life as an Arsenal fan |\n| The Miracle of Castel di Sangro (1999) | Joe McGinniss | a Serie B season |\n| Aus der Tiefe des Raumes (2004) | Günter Netzer | his own life |\n| A Life Too Short (2010) | Ronald Reng | Robert Enke |",
+    "bodyDe": "Lange hielten Fußball und Literatur Abstand; Schriftsteller blickten auf das Spiel herab, und Fußballer schrieben selten. Das änderte sich in den letzten Jahrzehnten des 20. Jahrhunderts, und eine Handvoll Bücher gehört heute in jede Fußballbibliothek.\n\nDas einflussreichste ist Nick Hornbys Debüt Fever Pitch (1992). Es ist eigentlich kein Roman, sondern eine Autobiografie: die Geschichte eines Jungen aus dem Londoner Umland, der sich 1968 bei seinem ersten Spiel in Highbury in den FC Arsenal verliebt und die nächsten zwanzig Jahre seines Lebens um den Klub herum einrichtet. Hornby schrieb mit Humor und Ehrlichkeit über Besessenheit, und das Buch machte es für gebildete englische Leser salonfähig, ihre Liebe zum Fußball zuzugeben; es wurde zweimal verfilmt, einmal in London und einmal, verlegt in den Baseball zu den Boston Red Sox, in Amerika.\n\nEin Amerikaner kam von außen zum Fußball. Joe McGinniss, bekannt für True-Crime-Bücher, verbrachte die Saison 1996/97 bei Castel di Sangro, einem Klub aus einer Bergstadt in den Abruzzen mit wenigen tausend Einwohnern, der gerade in die Serie B aufgestiegen war. „The Miracle of Castel di Sangro“ (1999) ist ein Liebesbrief an den italienischen Fußball, der in Ernüchterung endet, mit Spielmanipulation und Tragödie.\n\nDas deutsche Fußballschreiben hat eigene Klassiker. Eine Wendung stammte von einem Literaturkritiker: Als die Bundesrepublik im Frühjahr 1972 in Wembley England 3:1 schlug, schrieb der Literaturkritiker Karl Heinz Bohrer, später einer der bekanntesten Essayisten Deutschlands, Günter Netzer habe seine Vorstöße „aus der Tiefe des Raumes“ vorgetragen. Die Worte wurden sprichwörtlich und gaben einem Kinofilm den Titel und 2004 Netzers eigener Lebensgeschichte, geschrieben mit Helmut Schümann: „Aus der Tiefe des Raumes. Mein Leben“.\n\nDas traurigste ist Ronald Rengs Biografie über Robert Enke, den Torwart von Hannover 96 und der Nationalmannschaft, der sich im November 2009 nach Jahren verborgener Depression das Leben nahm. 2010 mit Hilfe von Enkes Witwe Teresa geschrieben, gewann „Robert Enke. Ein allzu kurzes Leben“ 2011 als „A Life Too Short“ den William-Hill-Preis für das Sportbuch des Jahres – zum ersten Mal seit 23 Jahren für ein Buch, das nicht auf Englisch geschrieben war.\n\n| Buch | Autor | Thema |\n|---|---|---|\n| Fever Pitch (1992) | Nick Hornby | Leben als Arsenal-Fan |\n| The Miracle of Castel di Sangro (1999) | Joe McGinniss | eine Serie-B-Saison |\n| Aus der Tiefe des Raumes (2004) | Günter Netzer | sein eigenes Leben |\n| Ein allzu kurzes Leben (2010) | Ronald Reng | Robert Enke |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-240",
+      "category": 6
+     }
+    },
+    {
+     "generated": {
+      "en": "Which goalkeeper, hailed by radio reporter Herbert Zimmermann as a „Fußballgott“, kept goal for West Germany in the 1954 World Cup final in Bern?",
+      "de": "Welcher Torwart, den Radioreporter Herbert Zimmermann als „Fußballgott“ feierte, stand im WM-Finale 1954 in Bern im deutschen Tor?",
+      "answerEn": "Toni Turek",
+      "answerDe": "Toni Turek",
+      "timeline": {
+       "kind": "event",
+       "start": "1954-07-04",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "West Germany beat Hungary 3–2 in the World Cup final in Bern, with Toni Turek in goal",
+       "labelDe": "Die Bundesrepublik schlägt Ungarn im WM-Finale in Bern 3:2, mit Toni Turek im Tor"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Toni_Turek",
+       "title": "Toni Turek – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which West German goalkeeper collided with and seriously injured the French defender Patrick Battiston in the 1982 World Cup semi-final?",
+      "de": "Welcher deutsche Torwart prallte im WM-Halbfinale 1982 mit dem französischen Verteidiger Patrick Battiston zusammen und verletzte ihn schwer?",
+      "answerEn": "Harald „Toni“ Schumacher",
+      "answerDe": "Harald „Toni“ Schumacher",
+      "timeline": {
+       "kind": "event",
+       "start": "1982-07-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Toni Schumacher's collision with Patrick Battiston in the World Cup semi-final in Seville",
+       "labelDe": "Toni Schumachers Zusammenprall mit Patrick Battiston im WM-Halbfinale von Sevilla"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Toni_Schumacher",
+       "title": "Toni Schumacher – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which goalkeeper became the first to keep a clean sheet in a World Cup final, for West Germany in 1990?",
+      "de": "Welcher Torwart blieb 1990 für die Bundesrepublik als erster in einem WM-Finale ohne Gegentor?",
+      "answerEn": "Bodo Illgner",
+      "answerDe": "Bodo Illgner",
+      "timeline": {
+       "kind": "event",
+       "start": "1990-07-08",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "West Germany beat Argentina 1–0 in the World Cup final in Rome; Bodo Illgner keeps a clean sheet",
+       "labelDe": "Die Bundesrepublik schlägt Argentinien im WM-Finale in Rom 1:0; Bodo Illgner bleibt ohne Gegentor"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Bodo_Illgner",
+       "title": "Bodo Illgner – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which goalkeeper played in goal for Germany in the 2014 World Cup final against Argentina?",
+      "de": "Welcher Torwart stand im WM-Finale 2014 gegen Argentinien im deutschen Tor?",
+      "answerEn": "Manuel Neuer",
+      "answerDe": "Manuel Neuer",
+      "timeline": {
+       "kind": "event",
+       "start": "2014-07-13",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Germany beat Argentina 1–0 after extra time in the World Cup final in Rio de Janeiro",
+       "labelDe": "Deutschland schlägt Argentinien im WM-Finale in Rio de Janeiro 1:0 nach Verlängerung"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_final",
+       "title": "2014 FIFA World Cup final – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Between the Posts: Germany's World Cup Goalkeepers",
+    "titleDe": "Zwischen den Pfosten: Deutschlands WM-Torhüter",
+    "bodyEn": "Germany has won the World Cup four times, and each title had a goalkeeper at the back of it. The country's reputation for great keepers – from Turek to Neuer – was built at these tournaments.\n\nThe first was Toni Turek of Fortuna Düsseldorf. In the final in Bern on 4 July 1954 West Germany were 2–0 down to Hungary after eight minutes, then came back to win 3–2. Turek's saves kept them in the game, and after one of them the radio reporter Herbert Zimmermann shouted the words that made him immortal: „Toni, du bist ein Fußballgott!“ – Toni, you're a football god. Turek won only 20 caps, but no German keeper's name is better known.\n\nTwenty years later Bayern Munich's Sepp Maier, nicknamed „the Cat from Anzing“, was the undisputed number one at the home World Cup of 1974. He played every minute of all seven matches, conceded only four goals, and lifted the trophy after the 2–1 final win over the Netherlands in Munich. His reserve Wolfgang Kleff never got on the pitch.\n\nThe most controversial was Harald „Toni“ Schumacher of 1. FC Köln, who reached the finals of 1982 and 1986 and lost both. In the semi-final in Seville on 8 July 1982 he rushed out and crashed into the French defender Patrick Battiston, who lay unconscious with broken teeth and cracked ribs; no foul was given, Germany won on penalties, and Schumacher became the villain of France.\n\nIn 1990 Bodo Illgner, only 23 and also from Cologne, kept goal behind a back line led by Klaus Augenthaler. In the final in Rome against Argentina on 8 July 1990 Germany won 1–0, and Illgner became the first goalkeeper ever to keep a clean sheet in a World Cup final.\n\nThe fourth star came in Rio de Janeiro on 13 July 2014. Manuel Neuer of Bayern Munich, a goalkeeper who played so far off his line that he was called a \"sweeper-keeper\", stood firm when Lionel Messi and Gonzalo Higuaín ran through alone, both shooting wide; Mario Götze scored in extra time, and Neuer won the Golden Glove as the tournament's best keeper.\n\n| Year | Goalkeeper | Final |\n|---|---|---|\n| 1954 | Toni Turek | 3–2 v Hungary, Bern |\n| 1974 | Sepp Maier | 2–1 v Netherlands, Munich |\n| 1982 | Toni Schumacher | lost 1–3 to Italy, Madrid |\n| 1990 | Bodo Illgner | 1–0 v Argentina, Rome |\n| 2014 | Manuel Neuer | 1–0 a.e.t. v Argentina, Rio |",
+    "bodyDe": "Deutschland wurde viermal Weltmeister, und hinter jedem Titel stand ein Torwart. Der Ruf des Landes für große Torhüter – von Turek bis Neuer – entstand bei diesen Turnieren.\n\nDer erste war Toni Turek von Fortuna Düsseldorf. Im Finale von Bern am 4. Juli 1954 lag die Bundesrepublik nach acht Minuten 0:2 gegen Ungarn zurück und gewann noch 3:2. Tureks Paraden hielten sie im Spiel, und nach einer davon rief Radioreporter Herbert Zimmermann die Worte, die ihn unsterblich machten: „Toni, du bist ein Fußballgott!“ Turek bestritt nur 20 Länderspiele, doch kein Name eines deutschen Torwarts ist bekannter.\n\nZwanzig Jahre später war Sepp Maier vom FC Bayern, genannt „die Katze von Anzing“, bei der Heim-WM 1974 die unumstrittene Nummer eins. Er spielte in allen sieben Spielen jede Minute, kassierte nur vier Gegentore und stemmte nach dem 2:1 im Finale gegen die Niederlande in München den Pokal. Sein Ersatzmann Wolfgang Kleff kam nie zum Einsatz.\n\nDer umstrittenste war Harald „Toni“ Schumacher vom 1. FC Köln, der 1982 und 1986 ins Finale kam und beide verlor. Im Halbfinale von Sevilla am 8. Juli 1982 stürmte er heraus und prallte mit dem französischen Verteidiger Patrick Battiston zusammen, der bewusstlos mit ausgeschlagenen Zähnen und gebrochenen Rippen liegen blieb; es gab keinen Freistoß, Deutschland gewann im Elfmeterschießen, und Schumacher wurde in Frankreich zum Bösewicht.\n\n1990 stand Bodo Illgner, erst 23 und ebenfalls aus Köln, hinter einer von Klaus Augenthaler geführten Abwehr. Im Finale von Rom gegen Argentinien am 8. Juli 1990 gewann Deutschland 1:0, und Illgner blieb als erster Torwart überhaupt in einem WM-Finale ohne Gegentor.\n\nDer vierte Stern kam am 13. Juli 2014 in Rio de Janeiro. Manuel Neuer vom FC Bayern, ein Torwart, der so weit vor seinem Tor spielte, dass man ihn „mitspielenden Torwart“ nannte, hielt stand, als Lionel Messi und Gonzalo Higuaín allein auf ihn zuliefen und beide vorbeischossen; Mario Götze traf in der Verlängerung, und Neuer gewann den Goldenen Handschuh als bester Torhüter des Turniers.\n\n| Jahr | Torwart | Finale |\n|---|---|---|\n| 1954 | Toni Turek | 3:2 gegen Ungarn, Bern |\n| 1974 | Sepp Maier | 2:1 gegen die Niederlande, München |\n| 1982 | Toni Schumacher | 1:3 gegen Italien, Madrid |\n| 1990 | Bodo Illgner | 1:0 gegen Argentinien, Rom |\n| 2014 | Manuel Neuer | 1:0 n. V. gegen Argentinien, Rio |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": []
+}

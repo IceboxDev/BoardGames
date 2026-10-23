@@ -1,0 +1,336 @@
+{
+ "article": "a2189",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Schawarma",
+   "title": "Schawarma",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:58.340Z",
+   "snapshot": "c99ce2b2ec2e7b195d422a97b6a3d50287769e2a71a7780de904a46b35b6d16c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tahina",
+   "title": "Tahina",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:59.500Z",
+   "snapshot": "086536da3e88843f61ae021300273aeb5096fc6d903fa8a83757b6c73ae8af7f"
+  },
+  "s3": {
+   "url": "https://fr.wikipedia.org/wiki/Tajine",
+   "title": "Tajine",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:46:59.461Z",
+   "snapshot": "6e4b238dd097d5e9459be97fa30f89b45f9471d5203baf15da64fd6d9074f1f1"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Tajine",
+   "title": "Tajine",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:00.420Z",
+   "snapshot": "2010f8274d117f8ef38d0bcf46734cedeaa008f2819ff1cda9f27c9d19a14e49"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Falafel",
+   "title": "Falafel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:02.222Z",
+   "snapshot": "3841bc0724d1214db1d1a994740293e63d389b23a99ae6c064e2d7a525051b4d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Couscous",
+   "title": "Couscous – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:03.219Z",
+   "snapshot": "5f18409a576a9530ee1c92983968558e8259ecf4f659c776a53c6a583087c876"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tabbouleh",
+   "title": "Tabbouleh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:04.218Z",
+   "snapshot": "678984106f5b2f98ad19990165f1d8d94f1d5c305b6da4b927bab88a471f457d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11117",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schawarma",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-150"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11118",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tahina",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-238"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tagine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11119",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tajine",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17; transcript tp-284"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11120",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Falafel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11121",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Couscous",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11122",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tabbouleh",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11117",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schawarma (arabisch شاورما, DMG šāwarmā, hebräisch שווארמה, türkisch çevirme ‚umdrehen, wenden‘) ist ein Fleischgericht der orientalischen bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schawarma” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11118",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tahina [tˤɒˈħiːna] (arabisch طحينة, DMG ṭaḥīna, hebräisch טחינה t'china, techina), auch Tahin, Tahine oder Tahini, ist eine Paste aus feingemahlenen, meist gerösteten Sesamkörnern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tahina” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Un tajine ou tagine ou tadjine (en arabe : طاجين, au pluriel : طواجن) est tout autant un plat de cuisson et de service, en terre cuite, large et peu profond surmonté d'un couvercle parfois vernissé qui peut ou non être conique, qu'une préparation culinaire de type ragoût cuite dans cet ustensile.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tagine” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11119",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Tajine, auch Tagine (arabisch طاجن, DMG ṭāǧin, pl.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tajine” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11120",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Falafel ( fə-LAH-fəl; Arabic: فلافل, IPA: [fæˈlæːfɪl] ) is a deep-fried ball or patty-shaped fritter of Egyptian origin that features in Middle Eastern cuisine, particularly Levantine cuisines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Falafel” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11121",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Couscous is a traditional North African dish of small steamed granules of rolled semolina that is often served with a stew spooned on top.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Couscous” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:34.795Z",
+   "target": "f11122",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tabbouleh (Arabic: تبولة, romanized: tabbūla), also transcribed tabouleh, tabbouli, tabouli, or taboulah, is a Levantine salad of finely chopped parsley, soaked bulgur, tomatoes, mint, and onion, seasoned with olive oil, lemon juice, salt and sweet pepper.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:34.795Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tabbouleh” is on the snapshot of s7"
+  }
+ ]
+}

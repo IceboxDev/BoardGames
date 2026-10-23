@@ -1,0 +1,202 @@
+{
+ "article": "a1950",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion",
+   "title": "Bay of Pigs Invasion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:41.288Z",
+   "snapshot": "8857519a6d03e6365cb7b12bafee473d2b41bee26ac16b485a221d81e00a1734"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Vienna_Summit",
+   "title": "Vienna Summit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:41.667Z",
+   "snapshot": "a5da92e0e388944184c2fa2bdc5562d31ffaea65e0b1ceb04ef28900bbf02063"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Landing_of_the_Granma",
+   "title": "Landing of the Granma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:04.228Z",
+   "snapshot": "bdf39ca09e129f01b9be69b69c0ebd6ad14e3043b56692f9b0400cb7fe0709b8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Attack_on_the_Moncada_Barracks",
+   "title": "Attack on the Moncada Barracks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:42.602Z",
+   "snapshot": "6c88d255f89108bec5e421eba1cfb908b46e2f85cfbeec326e1f1f9db7dba00f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Vienna_summit",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:43.587Z",
+   "snapshot": "a5da92e0e388944184c2fa2bdc5562d31ffaea65e0b1ceb04ef28900bbf02063"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09746",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bay of Pigs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09747",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sierra Maestra",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moncada Barracks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:52.142Z",
+   "target": "f09746",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Bay of Pigs Invasion, also known as Playa Girón in Cuba, after the beach where the battle took place, was a failed military landing operation on the southwestern coast of Cuba in April 1961 by the United States and the Cuban Democratic Revolutionary Front (DRF), consisting of Cuban exiles who",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bay of Pigs” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:52.142Z",
+   "target": "f09747",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Vienna Summit was a summit meeting held on June 4, 1961, in Vienna, Austria, between President of the United States John F.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:52.142Z",
+   "target": "f09748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After this, the plan was that they would raid the towns of Niquero and Manzanillo together, after which they would escape into the Sierra Maestra to conduct guerilla warfare.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sierra Maestra” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:52.142Z",
+   "target": "f09749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Moncada Barracks were military barracks in Santiago de Cuba, Cuba named after General Guillermo Moncada, a hero of the Cuban War of Independence.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.142Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moncada Barracks” is on the snapshot of s4"
+  }
+ ]
+}

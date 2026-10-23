@@ -1,0 +1,355 @@
+{
+ "article": "a1977",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lysozyme",
+   "title": "Lysozyme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:14.693Z",
+   "snapshot": "035a2ebd6d15a8d09492dfaace607fcb546d8d18629fdba3c6ed6fea99a401c1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Parotid_duct",
+   "title": "Parotid duct – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:15.621Z",
+   "snapshot": "3423cdc461c84681f7516cb64bb74d9ecdd422ec447933fde21858f392b0ec6c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Isotretinoin",
+   "title": "Isotretinoin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:16.703Z",
+   "snapshot": "3a10c587a0db5793727d8f46611d0b84aaa7946af63ed222cf6c7c9bbe6cf7ce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Humorism",
+   "title": "Humorism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:02:23.128Z",
+   "snapshot": "ce4a3e3ffa25418bd63b68b2da4a1744ef009fbaf00223ceb16f34e8247775e8"
+  },
+  "s5": {
+   "url": "https://www.sciencefocus.com/the-human-body/why-do-football-players-spit-so-much/",
+   "title": "Why do football players spit so much?",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:13.861Z",
+   "snapshot": "17f18f38c88afdf35a5a85836522bd5751d1da61feae31c79724762690111a9e"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tears",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:17.643Z",
+   "snapshot": "3da6d5c0824e7eee44a0822f7fdd5dfcb81e1994fb5cb3be433c408983971bea"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Bile",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:18.607Z",
+   "snapshot": "225f0f51c569bbc4096d1e32191154f288f9dc37aba7f77bdbc9c40827f72e62"
+  },
+  "s8": {
+   "url": "https://dare.uva.nl/id/f3bbb94e-41c7-4b6f-b9a2-022458dd6e41",
+   "kind": "other",
+   "lang": "nl",
+   "retrievedAt": "2026-10-23T05:34:15.772Z",
+   "snapshot": "749bb9531921420c35a833364866d5e32aae0cbd6f5899dd13cd64a202c4882e"
+  },
+  "s9": {
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5192515/",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:15.997Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Lacrimal_gland",
+   "title": "Lacrimal gland – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:46.781Z",
+   "snapshot": "c1141fc3bc787066def9ef519ff880bdd05aa6ff5898219d376b1789d5e5f0c0"
+  },
+  "s11": {
+   "url": "https://www.aao.org/eye-health/anatomy/lacrimal-gland",
+   "title": "Lacrimal Gland",
+   "publisher": "American Academy of Ophthalmology",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:47.419Z",
+   "snapshot": "9f6b426f7356e113dc19927da2b6105f822bccb13ef17e5ee6a293b258e76466"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tear fluid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c165"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "saliva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09884",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "sebum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "bile",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mucus",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Mucus",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Mucus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-027/1, u05: BBC Science Focus: exercise raises salivary protein, 'especially a kind of mucus called MUC5B', making saliva thicker and harder to swallow, 'so we spit it out'; Ligtenberg et al. 2015 measured the MUC5B rise. What is spat is thick saliva; 'thick, protein-rich saliva' is already accepted in the notes."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:58.832Z",
+   "target": "f09881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "tear fluid",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“tear fluid”, “Tränenflüssigkeit”, “слёзная жидкость”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:58.832Z",
+   "target": "f09882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the route that saliva takes from the major salivary gland, the parotid gland, into the mouth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “saliva” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:58.832Z",
+   "target": "f09884",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "One study suggests the drug amplifies production of neutrophil gelatinase-associated lipocalin (NGAL) in the skin, which has been shown to reduce sebum production by inducing apoptosis in sebaceous gland cells, while exhibiting an antimicrobial effect on Cutibacterium acnes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sebum” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:58.832Z",
+   "target": "f09885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In contrast to Alcmaeon, Hippocrates suggested that humors are the vital bodily fluids: blood, phlegm, yellow bile, and black bile.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bile” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:58.832Z",
+   "target": "f25809",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Several studies have shown that exercise increases the amount of protein secreted into the saliva, especially a kind of mucus called MUC5B.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:58.832Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mucus” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:28:34Z",
+   "target": "f09881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The lacrimal gland produces tears which are secreted by the lacrimal ducts",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:28:37Z",
+   "target": "f09881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Located above the eye, this structure produces tears",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r059",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:47.594Z",
+   "target": "f09881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The lacrimal gland produces tears which are secreted by the lacrimal ducts",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:47.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s10"
+  }
+ ]
+}

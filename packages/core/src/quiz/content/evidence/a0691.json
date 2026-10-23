@@ -1,0 +1,375 @@
+{
+ "article": "a0691",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Euro",
+   "title": "Euro – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:24.290Z",
+   "snapshot": "ac2644df1e03b476846a5e6e5d9151f5c28560070b8e40a3b6336dddf4d0853a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Theo_Waigel",
+   "title": "Theo Waigel",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:24.969Z",
+   "snapshot": "63d75d58839ad595c9b7316c482fa3603270833dc09ac110061305c970e720ab"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Helmut_Kohl",
+   "title": "Helmut Kohl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:34.202Z",
+   "snapshot": "0f81dc8f3ddb164a87fcd625575eb18a73f4b0479c042201a42eff98ad38a1fd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Delors_Committee",
+   "title": "Delors Committee – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:27.232Z",
+   "snapshot": "2e60abca24cbc4ebf76abdd6d4797783ace76348ee928dde5d1b794646c9572a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wim_Duisenberg",
+   "title": "Wim Duisenberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:28.136Z",
+   "snapshot": "783e6ca9b30d142dec93e9ac669a0c7e6d95079b35efb4faa989503b5f89c639"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Claude_Trichet",
+   "title": "Jean-Claude Trichet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:29.202Z",
+   "snapshot": "6043a0f8cf01f01be805b7245594a29e63052439f97f3d04e97a765c33dca468"
+  },
+  "s7": {
+   "url": "https://www.ecb.europa.eu/press/pr/date/2005/html/pr050731.en.html",
+   "title": "Message from the President of the European Central Bank, Mr Jean-Claude Trichet",
+   "publisher": "European Central Bank",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:07.286Z",
+   "snapshot": "0380921aca58d257fdc1d48bef0c75dbc75af8edf95df8ded476c994e1ca5edd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Theo Waigel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c058"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03451",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Theo Waigel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-051"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03452",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Helmut Kohl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03453",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jacques Delors",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03454",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wim Duisenberg",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03455",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean-Claude Trichet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:27.404Z",
+   "target": "f03451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Auf Initiative des damaligen deutschen Finanzministers Theo Waigel wurde das erste dieser Kriterien auf dem Gipfel in Dublin 1996 auch über den Euro-Eintritt hinaus festgeschrieben.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theo Waigel” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:27.404Z",
+   "target": "f03451",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Theo Waigel wurde als Sohn des Maurerpoliers und Nebenerwerbslandwirtes August Waigel und dessen Frau Genoveva, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theo Waigel” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:27.404Z",
+   "target": "f03452",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As reported in the German press, he also gave his name to the Helmut Kohl Centre for European Studies (currently Centre for European Studies), which is the new political foundation of the European People's Party.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:27.404Z",
+   "target": "f03453",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Delors Committee, formally known as the Committee for the Study of Economic and Monetary Union, was an ad hoc committee chaired by European Commission President Jacques Delors in 1988–1989.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacques Delors” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:27.404Z",
+   "target": "f03454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Media related to Wim Duisenberg at Wikimedia Commons",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wim Duisenberg” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:27.404Z",
+   "target": "f03455",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean-Claude Trichet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:27.404Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Claude Trichet” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:19:30Z",
+   "target": "f03454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first President of the European Central Bank played a considerable role in the construction of Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23",
+   "note": "ECB statement of 31 July 2005 on the death of Willem F. Duisenberg."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:33Z",
+   "target": "f03454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was a Dutch politician, economist and senior official who served as the first President of the European Central Bank from 1998 to 2003",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r062",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:55.784Z",
+   "target": "f03454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The first President of the European Central Bank played a considerable role in the construction of Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.784Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:55.784Z",
+   "target": "f03454",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "was a Dutch politician, economist and senior official who served as the first President of the European Central Bank from 1998 to 2003",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:55.784Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  }
+ ]
+}

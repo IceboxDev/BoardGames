@@ -1,0 +1,353 @@
+{
+ "article": "a0351",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Neue_Wache",
+   "title": "Neue Wache – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:07.322Z",
+   "snapshot": "3bfcacfc53296c7c944e4f67c2d55848b739023580b35e0c8329c4c4121dc2c8"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor",
+   "title": "Brandenburger Tor – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:07.615Z",
+   "snapshot": "9b601a50cbe31d5abf3423276c3044336b6fa1093fb58c1150bd684573de9ad7"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Reiterstandbild_Friedrichs_des_Gro%C3%9Fen",
+   "title": "Reiterstandbild Friedrichs des Großen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:08.632Z",
+   "snapshot": "d3c77b25a7141b1038f74647de93bbc021da5d2d6aa3a4f82aef257e0071c3a3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Gerhard_Marcks",
+   "title": "Gerhard Marcks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:09.668Z",
+   "snapshot": "a16a98909a8589cc97dbc0a061343e448d7bf7072dfdb4167b083d7a265294f1"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Mozartbrunnen_(Dresden)",
+   "title": "Mozartbrunnen (Dresden)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:50:10.527Z",
+   "snapshot": "fa724b679102830cb2bae77a8c69c9c01e43da80272591c0d253c458da259326"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:28:25.084Z",
+   "snapshot": "331e14cc4219c4b4b95af17241329c6313c9bcf6435fe090e990667503236f3a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Käthe Kollwitz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c030"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christian Daniel Rauch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Gerhard Marcks",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anmut",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-227"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johann Gottfried Schadow",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Johann Gottfried Schadow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-242/3, u03: The Quadriga was designed by Schadow and put up in 1793, long before Napoleon, who only carried it off to Paris in 1806."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johann Gottfried Schadow",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Johann Gottfried Schadow",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anstelle des Eichenlaubkranzes ließ Bundeskanzler Helmut Kohl jedoch eine stark vergrößerte Kopie der Plastik Mutter mit totem Sohn von Käthe Kollwitz aufstellen, was für eine heftige öffentliche Kontroverse sorgte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Käthe Kollwitz” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die das Tor krönende Skulptur der Quadriga ist ein Werk nach dem Entwurf des Bildhauers Johann Gottfried Schadow.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Gottfried Schadow” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The bronze sculpture of the quadriga crowning the gate is a work by the sculptor Johann Gottfried Schadow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Gottfried Schadow” is on the snapshot of s6"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Geschaffen in den Jahren 1839–1851 von Christian Daniel Rauch, zählt es zu den bedeutendsten Werken der Berliner Bildhauerschule und markiert den Übergang vom Klassizismus zum Realismus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Christian Daniel Rauch” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f01755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "1971 wurde das Gerhard-Marcks-Haus in Bremen eröffnet, das seinen künstlerischen Nachlass verwaltet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:34.508Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhard Marcks” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:34.508Z",
+   "target": "f10754",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Anmut",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Anmut”, “Grace”, “Грация”) on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:07:59Z",
+   "target": "f10754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sie symbolisieren den tiefen, gläubig-frommen Ernst, die anmutvolle Grazie und die sonnig lachende Heiterkeit",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "Only Wikipedia (citing Dresden press) could be fetched; a second independent source was not reachable this run (web search budget exhausted). 'Grazie' = Grace/Anmut."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:55.048Z",
+   "target": "f10754",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sie symbolisieren den tiefen, gläubig-frommen Ernst, die anmutvolle Grazie und die sonnig lachende Heiterkeit",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:55.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  }
+ ]
+}

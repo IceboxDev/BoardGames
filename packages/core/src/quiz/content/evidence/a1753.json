@@ -1,0 +1,242 @@
+{
+ "article": "a1753",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Eva_Per%C3%B3n",
+   "title": "Eva Perón – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:12.631Z",
+   "snapshot": "d9c0930f1f6e8758d850c2ac1c04deec40eaa5770c600c223f91c6be6d204c24"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hamilton_(musical)",
+   "title": "Hamilton (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:13.636Z",
+   "snapshot": "f611979e89ce1531baa2971d89ec06bbf25ff87123109c1b9e67bbd1bee2db8e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Empress_Elisabeth_of_Austria",
+   "title": "Empress Elisabeth of Austria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:14.642Z",
+   "snapshot": "ea7392c87706bef893304454fbd6ccf77934f2b237bbd5678dc049d6f83d9f76"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jesus_Christ_Superstar_(album)",
+   "title": "Jesus Christ Superstar (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:15.401Z",
+   "snapshot": "192abb75c1a0b6ad24d08ad5a7163c9665d3899faf4d30c851c81b3cf799c96f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Funny_Girl_(musical)",
+   "title": "Funny Girl (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:20:16.565Z",
+   "snapshot": "dfdcbc75838df6839caee8a2b8e88abcf6dc34a27e776ab60fc937eff85d2a09"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Eva Perón",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c147"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08762",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alexander Hamilton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elisabeth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08764",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jesus Christ",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08765",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fanny Brice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:17.098Z",
+   "target": "f08761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She became a central figure of Peronism and Argentine culture because of the Eva Perón Foundation, a charitable organization perceived by many Argentinians as highly impactful.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eva Perón” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:17.098Z",
+   "target": "f08762",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Based on the 2004 biography Alexander Hamilton by Ron Chernow, the musical covers the life of  American Founding Father Alexander Hamilton and his involvement in the American Revolution and the political history of the early United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alexander Hamilton” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:17.098Z",
+   "target": "f08763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Elisabeth (Elisabeth Amalie Eugenie; German: [eˈliːzaˌbɛt aˈmaːliə ɔʏˈɡeːniə]; 24 December 1837 – 10 September 1898), nicknamed Sisi, was Empress of Austria and Queen of Hungary from her marriage to Franz Joseph I on 24 April 1854 until her assassination in 1898.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elisabeth” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:17.098Z",
+   "target": "f08764",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jesus Christ Superstar is a 1970 album musical written by Andrew Lloyd Webber and Tim Rice, and the debut of the rock opera of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jesus Christ” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:17.098Z",
+   "target": "f08765",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The semi-biographical plot is based on the life and career of comedian and Broadway star Fanny Brice, featuring her stormy relationship with entrepreneur and gambler Nicky Arnstein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:17.098Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fanny Brice” is on the snapshot of s5"
+  }
+ ]
+}

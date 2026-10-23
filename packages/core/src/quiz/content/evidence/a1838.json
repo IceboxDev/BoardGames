@@ -1,0 +1,288 @@
+{
+ "article": "a1838",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mark_Twain",
+   "title": "Mark Twain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:55.416Z",
+   "snapshot": "5cc6cfdbec2c3f7d0c3c45b1427c411dc6774205bbf70cf9afc568c47ac7b75d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Down_and_Out_in_Paris_and_London",
+   "title": "Down and Out in Paris and London – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:24.386Z",
+   "snapshot": "64d2f84b1d921c21cb6a26a04d841c23a4abda2e99fb7dac4b645b8fe8860fe7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/George_Orwell",
+   "title": "George Orwell",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:25.755Z",
+   "snapshot": "cff77f7c2ef13ffe5017a1b78f1954fd4573ddc73f1870b23666190399ed794e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alice's_Adventures_in_Wonderland",
+   "title": "Alice's Adventures in Wonderland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:26.532Z",
+   "snapshot": "9159bdb061786957e716158bedc157da27c08976c6eecf3fd84ed84b611eb10d"
+  },
+  "s5": {
+   "url": "https://fr.wikipedia.org/wiki/Moli%C3%A8re",
+   "title": "Molière – Wikipédia",
+   "kind": "encyclopedia",
+   "lang": "fr",
+   "retrievedAt": "2026-10-23T05:25:24.337Z",
+   "snapshot": "0ca2744b428ad65ecec05b7f18690b49e21692473b5d99914e0f5ac283d4f62c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moli%C3%A8re",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:27.517Z",
+   "snapshot": "2e6296864e9d51b4de2157aab233af5d4f4b4e953577a83289a97ada250072fb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mark Twain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c154"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Orwell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George Orwell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-067"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lewis Carroll",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Molière",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28902",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Molière",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 41"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:31.018Z",
+   "target": "f09186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Samuel Langhorne Clemens (November 30, 1835 – April 21, 1910), known by the pen name Mark Twain, was an American writer, humorist, and essayist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Twain” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:31.018Z",
+   "target": "f09188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Down and Out in Paris and London is the first full-length work by the English author George Orwell, published in 1933.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Orwell” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:31.018Z",
+   "target": "f09188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eric Arthur Blair (25 June 1903 – 21 January 1950) was an English novelist, poet, essayist, journalist, and critic who wrote under the pen name of George Orwell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Orwell” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:31.018Z",
+   "target": "f09189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alice's Adventures in Wonderland (also known as  Alice in Wonderland) is an 1865 English children's novel by Lewis Carroll.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lewis Carroll” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:31.018Z",
+   "target": "f28902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jean-Baptiste Poquelin, dit Molière, baptisé le 15 janvier 1622 à l'église Saint-Eustache de Paris et mort le 17 février 1673 à son domicile de la rue de Richelieu, est le plus célèbre auteur de comédies de la langue française.",
+     "quoteLang": "fr",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Molière” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:31.018Z",
+   "target": "f28902",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jean-Baptiste Poquelin (French pronunciation: [ʒɑ̃ batist pɔklɛ̃]; 15 January 1622 (baptised) – 17 February 1673), known by his stage name Molière (UK: , US: ; French: [mɔljɛʁ] ), was a French playwright, actor, and poet, widely regarded as one of the great writers in the French language and world",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:31.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Molière” is on the snapshot of s6"
+  }
+ ]
+}

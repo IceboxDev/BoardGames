@@ -1,0 +1,242 @@
+{
+ "article": "a0019",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Note_7",
+   "title": "Samsung Galaxy Note 7 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:11.578Z",
+   "snapshot": "ef6c729ba3e0d3ae66ecaf1f49275f4c60ed56b70a3cc0cd0243d7f7dfcf13ad"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Martin_Winterkorn",
+   "title": "Martin Winterkorn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:12.467Z",
+   "snapshot": "1d1b3724661991421881fa2583bf712bd2ad3d38534aa944540ccca0725aaa49"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings",
+   "title": "Boeing 737 MAX groundings – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:13.445Z",
+   "snapshot": "ff55819c3517833b19702add701b40fdf41fa1eb5dd0cb68104559dbc3648944"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Takata_Corporation",
+   "title": "Takata Corporation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:14.431Z",
+   "snapshot": "9ee8d73a4d45015f262fc42770fb73b450d6f80e16db66a0e08a3665914f2a07"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Chicago_Tylenol_murders",
+   "title": "Chicago Tylenol murders – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:15.555Z",
+   "snapshot": "6610635b09de3abe7310b79c6431f5e5b4de43411a93a4793b8c06a20be7084b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Samsung Galaxy Note 7",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c002"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Volkswagen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Boeing 737 MAX",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00094",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Takata",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00095",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Johnson & Johnson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:38.018Z",
+   "target": "f00091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Samsung Galaxy Note 7 is an Android-based phablet-sized smartphone developed, produced, and marketed by Samsung Electronics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samsung Galaxy Note 7” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:38.018Z",
+   "target": "f00092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "24 May 1947) is a German former business executive who served as chairman of the board of management (CEO, Vorstandsvorsitzender in German) of Volkswagen AG, the parent company of the Volkswagen Group, as well as chairman of the supervisory board of Audi, and chairman of the board of management of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volkswagen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:38.018Z",
+   "target": "f00093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Boeing 737 MAX passenger airliner was grounded worldwide between March 2019 and December 2020 after 346 people died in two similar crashes in less than five months, and briefly in January 2024 following a dangerous in-flight incident.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Boeing 737 MAX” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:38.018Z",
+   "target": "f00094",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Takata Corporation (タカタ株式会社, Takata Kabushiki Gaisha) was a Japanese automotive parts company.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Takata” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:38.018Z",
+   "target": "f00095",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lewis was convicted of extortion for sending a letter to Tylenol's then-manufacturer, Johnson & Johnson, that claimed responsibility for the deaths and demanded $1 million to stop them, but when he was discovered, he said the letter's claim was false, and further investigation failed to establish",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:38.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnson & Johnson” is on the snapshot of s5"
+  }
+ ]
+}

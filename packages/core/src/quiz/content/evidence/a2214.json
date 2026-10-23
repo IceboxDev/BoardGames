@@ -1,0 +1,360 @@
+{
+ "article": "a2214",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Alien_(film)",
+   "title": "Alien (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:49.467Z",
+   "snapshot": "5bfe2af8121b5e3eccde080d34be664bc376be34c0401c1e53aecfab10e33485"
+  },
+  "s2": {
+   "url": "https://www.hollywoodreporter.com/movies/movie-news/barbara-gips-alien-tagline-space-no-one-can-hear-you-scream-1236409235/",
+   "title": "Barbara Gips, Who Wrote the Iconic Tagline for 'Alien,' Dies at 89",
+   "publisher": "The Hollywood Reporter",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:22.643Z",
+   "snapshot": "7ffa8b54adf9a4dee2582420f2e7ebe8bbe4336a4cc94a2d9b71d487bf2a4551"
+  },
+  "s3": {
+   "url": "https://deadline.com/2025/10/barbara-gips-dead-alien-1236593467/",
+   "title": "Barbara Gips Dies: Tagline Writer Responsible For Iconic \"In Space No One Can Hear You Scream\" Was 89",
+   "publisher": "Deadline",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:22.182Z",
+   "snapshot": "e27ed0f9a6bd5cdf9c47f054dd04d70bb0d17267b1c1d54ebe4aa7edc6382600"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11286",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alien",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-122"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11287",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-130"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"In space no one can hear you scream.\"",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-217"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "H. R. Giger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "John Hurt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ellen Ripley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:37.472Z",
+   "target": "f11286",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Alien is a 1979 science fiction horror film directed by Ridley Scott and written by Dan O'Bannon, based on a story by O'Bannon and Ronald Shusett.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alien” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:37.472Z",
+   "target": "f11287",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The commercial space tug Nostromo is returning to Earth with a seven-member crew in stasis: captain Dallas, executive officer Kane, warrant officer Ripley, navigator Lambert, science officer Ash, and engineers Parker and Brett, along with the ship's cat, Jones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jones” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:37.472Z",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "\"In space no one can hear you scream.\"",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“\"In space no one can hear you scream.\"”, “„Im Weltraum hört dich niemand schreien.“”, “«В космосе никто не услышит твой крик»”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:37.472Z",
+   "target": "f11290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The alien creatures and environments were designed by the Swiss artist H. R. Giger, while the concept artists Ron Cobb and Chris Foss designed the other sets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “H. R. Giger” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:37.472Z",
+   "target": "f11291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The film stars Tom Skerritt, Sigourney Weaver, Veronica Cartwright, Harry Dean Stanton, John Hurt, Ian Holm, and Yaphet Kotto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Hurt” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:37.472Z",
+   "target": "f11292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It included the Xenomorph and Ellen Ripley as a playable Killer and Survivor, respectively.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:37.472Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ellen Ripley” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:21:18Z",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "was promoted with the tagline \"In space no one can hear you scream\"",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:21:20Z",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She came up with “In space no one can hear you scream” while washing dishes, and it was used on the film's poster co-designed by her husband.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:21:22Z",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is best known for the iconic Alien tagline, “In space no one can hear you scream,” for the 1979 sci-fi thriller.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:24.299Z",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "was promoted with the tagline \"In space no one can hear you scream\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:24.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:24.299Z",
+   "target": "f11288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is best known for the iconic Alien tagline, “In space no one can hear you scream,” for the 1979 sci-fi thriller.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:24.299Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  }
+ ]
+}

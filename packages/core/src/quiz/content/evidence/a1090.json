@@ -1,0 +1,216 @@
+{
+ "article": "a1090",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Roncevaux_Pass",
+   "title": "Battle of Roncevaux Pass – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:07.059Z",
+   "snapshot": "ccdc615db0e0d7a1ca9ec399d20bb50029a9ab1e9b88a0e5c0ac6f30257c5677"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Gotthard_Base_Tunnel",
+   "title": "Gotthard Base Tunnel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:08.165Z",
+   "snapshot": "68114f086e75dcd44b7e11caac34e914beafd220296003a7c36c40dbab195713"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_of_the_Andes",
+   "title": "Christ the Redeemer of the Andes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:09.204Z",
+   "snapshot": "8197b473ba41b3001f1a7a086d94ff24d1501ba139a6b49aa2460d8da2a02050"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Himalayas",
+   "title": "Himalayas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:10.274Z",
+   "snapshot": "0d5a8f89fe2c883bfeb1fe40777da48c32629cfa9b33d7c43d482bfd77c3fdb3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Mont_Blanc",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:11.182Z",
+   "snapshot": "2c55dce7856156a2d6823126e95ab2123e647a8e387b1e2bb902470842f47dbf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Aconcagua",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:46:49.172Z",
+   "snapshot": "af3417821d179d396e7f42c40bba1e6b43a97a8980eb6c9361fe33851f4ee6ea"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pyrenees",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:12.186Z",
+   "snapshot": "c1982b1d5ee98ecf8fda2165f37f1ed74f851cc6af2bd68d129b50e98d3e2808"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pyrenees",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c091"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alps",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Andes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05450",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Himalayas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:31.395Z",
+   "target": "f05446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pass (French and English spelling, Roncesvalles in Spanish, Orreaga in Basque) in 778 saw a large force of Basques ambush a part of Charlemagne's army in Roncevaux Pass, a high mountain pass in the Pyrenees on the present border between France and Spain, after his invasion of the Iberian Peninsula.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pyrenees” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:31.395Z",
+   "target": "f05447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Gotthard Base Tunnel (GBT; German: Gotthard-Basistunnel, Italian: Galleria di base del San Gottardo, Romansh: Tunnel da basa dal Sogn Gottard) is a railway tunnel through the Alps in Switzerland.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alps” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:31.395Z",
+   "target": "f05449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Christ the Redeemer of the Andes",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andes” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:31.395Z",
+   "target": "f05450",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Himalayas, or Himalaya, is a mountain range in Asia separating the plains of the Indian subcontinent from the Tibetan Plateau.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:31.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Himalayas” is on the snapshot of s4"
+  }
+ ]
+}

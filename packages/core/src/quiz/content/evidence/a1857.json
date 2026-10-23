@@ -1,0 +1,202 @@
+{
+ "article": "a1857",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Emil_Theodor_Kocher",
+   "title": "Emil Theodor Kocher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:24.659Z",
+   "snapshot": "902922b51dd99eb04e4075ffea61220885b437ea9dc5b49b8fbdd3f5a9ff175f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Belding_Hibbard_Scribner",
+   "title": "Belding Hibbard Scribner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:25.438Z",
+   "snapshot": "828a83b4beb8f06743d0e4c680b739f26207884899acc45948e17f224b32ecd9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Liver_transplantation",
+   "title": "Liver transplantation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:15.585Z",
+   "snapshot": "aedd53b07a9bc18aca5716e601b80bf7b283a907699c7a96c9b91d13f039a037"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Potassium_iodide",
+   "title": "Potassium iodide – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:26.601Z",
+   "snapshot": "8867d3ff7773b313a50e0b568e013bae954f7e710609ae510f914ce0f2f64e9b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Willem_Johan_Kolff",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:06.869Z",
+   "snapshot": "9bd62fb8d93baa7811e374f862722dbea71a19659e29c4fd46f2dc4cf66092ba"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "thyroid gland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09282",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "kidney",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "liver",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "potassium iodide",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:35.109Z",
+   "target": "f09281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kocher, neat and precise, operating in a relatively bloodless manner, scrupulously removed the entire thyroid gland doing little damage outside its capsule.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “thyroid gland” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:35.109Z",
+   "target": "f09282",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Belding Hibbard Scribner (January 18, 1921  – June 19, 2003) was an American physician and a pioneer in kidney dialysis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “kidney” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:35.109Z",
+   "target": "f09284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Liver transplantation or hepatic transplantation is the replacement of a diseased liver with the healthy liver from another person (allograft).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “liver” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:35.109Z",
+   "target": "f23441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Potassium iodide (KI) is a chemical compound, medication, and dietary supplement.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.109Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “potassium iodide” is on the snapshot of s4"
+  }
+ ]
+}

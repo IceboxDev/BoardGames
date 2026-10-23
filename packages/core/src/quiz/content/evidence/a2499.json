@@ -1,0 +1,299 @@
+{
+ "article": "a2499",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jersey_Giant",
+   "title": "Jersey Giant",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:48.634Z",
+   "snapshot": "a89c6b27f21dabdd341658d2ac57d83293fac91e85ce1f386942d4cbaadb8e27"
+  },
+  "s2": {
+   "url": "https://en.engormix.com/poultry-industry/poultry-egg-quality/effect-egg-size-shell_n13705/",
+   "title": "Effect of Egg Size on Shell Thickness",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:46.595Z",
+   "snapshot": "ed5e56aebc301418121551ecda7904ae616c288587e4051057a020f727c5159f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chicken",
+   "title": "Chicken – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:02:49.719Z",
+   "snapshot": "da9993bac006dc2798f1270330c4362a69d317e05c0f9ae87a0760b5614bd977"
+  },
+  "s4": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13444268/",
+   "title": "Effect of intermittent folic acid supplementation on production performance and hatchability of Ross 308 broiler breeder flocks (Poultry Science, 2026)",
+   "publisher": "Poultry Science / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:45.717Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s5": {
+   "url": "https://extension.illinois.edu/eggs/incubation",
+   "title": "Incubation and Embryology",
+   "publisher": "University of Illinois Extension",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:46.646Z",
+   "snapshot": "d0c8d068cc43834a3ee8bcb001d122b8c67e9684a3959b4dcf83176774b10ec0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13260",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chicken",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; history entry seq 7; transcript tp-259"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They get bigger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; history entry seq 13; transcript tp-095"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13263",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Southeast Asia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13264",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "21 days",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; history entry seq 30"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:29.943Z",
+   "target": "f13260",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Jersey Giant is an American breed of domestic chicken.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chicken” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:29.943Z",
+   "target": "f13261",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They get bigger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“They get bigger”, “Sie werden größer”, “они становятся крупнее”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:29.943Z",
+   "target": "f13263",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The chicken (Gallus gallus domesticus) is the domesticated form of the red junglefowl (Gallus gallus), originally native to Southeast Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Southeast Asia” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:29.943Z",
+   "target": "f13264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fertile chicken eggs hatch at the end of the incubation period, about 21 days; the chick uses its egg tooth to break out of the shell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:29.943Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “21 days” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:18:06Z",
+   "target": "f13261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For both breeds, average egg weight increased from 54 g at 26 weeks of age to 64 g at 66 weeks of age.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:18:10Z",
+   "target": "f13261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "accompanied by an increase in body weight of birds and egg weight in both groups",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23",
+   "note": "egg weight rises with hen age (24–56 weeks) in broiler breeders"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:18:14Z",
+   "target": "f13264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "During the 21-day incubation period, students learn to prepare eggs",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:59:13.646Z",
+   "target": "f13261",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "For both breeds, average egg weight increased from 54 g at 26 weeks of age to 64 g at 66 weeks of age.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s2"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:13.646Z",
+   "target": "f13264",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "During the 21-day incubation period, students learn to prepare eggs",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:13.646Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  }
+ ]
+}

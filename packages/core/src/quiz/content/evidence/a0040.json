@@ -1,0 +1,256 @@
+{
+ "article": "a0040",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Black_Mirror",
+   "title": "Black Mirror – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:50.648Z",
+   "snapshot": "ca0ac8a62c876bb262a75343680c170eb5ff272f917629958d371b61ce8dbbfd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rose_(Doctor_Who_episode)",
+   "title": "Rose (Doctor Who episode) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:51.498Z",
+   "snapshot": "3f14ee4bf673be30afb4a4d21314cb622caebbedc241a4c225d44bd2039de05b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_Dwarf:_Back_to_Earth",
+   "title": "Red Dwarf: Back to Earth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:53.483Z",
+   "snapshot": "cf7f4276f75b01196470649e2be6fed0e2a5b703d0435fee8603245b5db7091a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Humans_(TV_series)",
+   "title": "Humans (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:53.497Z",
+   "snapshot": "63e73c0b81eb14f0a11330a36f7ad5c9b4c957031e92204168cb3cdcb278ec3c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Years_and_Years_(TV_series)",
+   "title": "Years and Years (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:54.440Z",
+   "snapshot": "0f87ba471c6b1b4eab84b015dc9ede11185627d7daf1942dfd6120457cd55b5a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Doctor_Who",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:55.691Z",
+   "snapshot": "4fc8b0f68fe947e722840d5ab15811376277674d86caeb6cb27684e6c2a62677"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Red_Dwarf",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:56.664Z",
+   "snapshot": "a23b15120acf6f10cbcc2ac9f2b7e24aa3f2930185744282e692c283ebf1311c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00196",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Black Mirror",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00197",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Doctor Who",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00198",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Dwarf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00199",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00200",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Years and Years",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:40.781Z",
+   "target": "f00196",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Black Mirror is a British anthology television series created by Charlie Brooker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Mirror” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.781Z",
+   "target": "f00197",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Rose\" is the first episode of the first series of the revived British science fiction television programme Doctor Who.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doctor Who” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.781Z",
+   "target": "f00198",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Dwarf: Back to Earth (also referred to as Red Dwarf IX) is a three-part miniseries continuation of the British science fiction sitcom Red Dwarf, broadcast on UK television channel Dave between 10 and 12 April 2009 and subsequently released on DVD on 15 June 2009 and on Blu-ray on 31 August 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red Dwarf” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.781Z",
+   "target": "f00199",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Humans is a science fiction television series that debuted in June 2015 on Channel 4 and on AMC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Humans” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.781Z",
+   "target": "f00200",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Years and Years is a dystopian science fiction drama television miniseries written by Russell T Davies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.781Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Years and Years” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "article": "a0771",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Alte_Pinakothek",
+   "title": "Alte Pinakothek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:19:09.611Z",
+   "snapshot": "1c89502241323c5047586c025a616866f40bee26b4c2bdc03a44908818f4e24f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Glyptothek",
+   "title": "Glyptothek – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:12.264Z",
+   "snapshot": "a91d0bbae1356baa37bbe6279898e6049c3d04ef268c3dd962964f290bc91067"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Altes_Museum",
+   "title": "Altes Museum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:19:10.708Z",
+   "snapshot": "9e253ef1997f020ef74f0198cc16ba53ef8defb189c89bb1428e6b582a7c444b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/House_of_the_Faun",
+   "title": "House of the Faun – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:13.363Z",
+   "snapshot": "7958212e6bb4d0b646bf6cdead226276fddceb64b7d2f039098d0395cc467020"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Feldherrnhalle",
+   "title": "Feldherrnhalle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:19:11.639Z",
+   "snapshot": "00bf8fefd14f73cd29120f1f0d66b13f79cc45b68b78a9390ae4b28c9099c9d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03851",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pinakothek",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c065"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03852",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Glyptothek",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03853",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rotunde",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03854",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "atrium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03855",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Loggia",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:42.780Z",
+   "target": "f03851",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Alte Pinakothek (; von altgriechisch πινακοθήκη pinakothḗkē, deutsch ‚Saal, wo man Gemälde aufbewahrt‘) ist ein 1836 eröffnetes Kunstmuseum der Bayerischen Staatsgemäldesammlungen im Kunstareal München.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pinakothek” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:42.780Z",
+   "target": "f03852",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Glyptothek (German: [ɡlʏptʰoˈtʰeːk] ) is a museum in Munich, Germany, which was commissioned by the Bavarian King Ludwig I to house his collection of Greek and Roman sculptures (hence γλυπτο- glypto- \"sculpture\", from the Greek verb γλύφειν glyphein \"to carve\" and the noun θήκη \"container\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Glyptothek” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:42.780Z",
+   "target": "f03853",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Restaurierung der farbigen Ausmalung der Rotunde erfolgte 1982 nach den Entwürfen Schinkels.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotunde” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:42.780Z",
+   "target": "f03854",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "There is evidence, most notably in the eastern walls of the tetrastyle atrium, that after the AD 62 Pompeii earthquake, the House of the Faun was rebuilt and repaired, as revealed by excavation beneath the floor of the house; yet, the building was only used again until CE 79, when it was ultimately",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “atrium” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:42.780Z",
+   "target": "f03855",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Vorlage diente die Loggia dei Lanzi in Florenz.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.780Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Loggia” is on the snapshot of s5"
+  }
+ ]
+}

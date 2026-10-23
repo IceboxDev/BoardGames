@@ -1,0 +1,242 @@
+{
+ "article": "a2280",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Talkshow",
+   "title": "Talkshow",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:16.390Z",
+   "snapshot": "82122a2bdc1aadf2e71be9236539882abc7beaad76f64175ff76f7b41633b293"
+  },
+  "s2": {
+   "url": "https://www.fernsehserien.de/zimmer-frei/episodenguide",
+   "title": "Zimmer frei! – Episodenguide (fernsehserien.de)",
+   "kind": "fan",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:22.721Z",
+   "snapshot": "8fc1a61f62be2286158c247eb4816b2838fd3b5b7a99ea993ede01623dae5f95"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Jan_B%C3%B6hmermann",
+   "title": "Jan Böhmermann",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:16.466Z",
+   "snapshot": "119b056e7b1830284dbce93be19fb1a4d33dfea70389413c67a6e55f5e957971"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Internationaler_Fr%C3%BChschoppen",
+   "title": "Internationaler Frühschoppen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:18.059Z",
+   "snapshot": "c5cc11038c1ff4f98d5a4a07ba486cfe99c3238a0972e72d274e26840937dbbd"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Die_Harald_Schmidt_Show",
+   "title": "Die Harald Schmidt Show",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:51:18.666Z",
+   "snapshot": "cba65dbf2dd690465e8cd3916f53d67a18da63f5b67fef70ff061a0139e6aad9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11750",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Je später der Abend",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-394"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Gottschalk",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-344"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jan Böhmermann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-357"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11753",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Werner Höfer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11755",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Harald Schmidt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:47.729Z",
+   "target": "f11750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "März 1973 im Dritten Programm des WDR mit Dietmar Schönherr unter dem Titel Je später der Abend, wurde ab 31.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Je später der Abend” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:47.729Z",
+   "target": "f11751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thomas Gottschalk",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thomas Gottschalk” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:47.729Z",
+   "target": "f11752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jan Böhmermann wurde als Sohn eines Polizeibeamten im Bremer Stadtteil Gröpelingen geboren und wuchs im Stadtteil Vegesack auf.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jan Böhmermann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:47.729Z",
+   "target": "f11753",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die ursprünglich von Werner Höfer moderierte Sendung wurde vom 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Werner Höfer” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:47.729Z",
+   "target": "f11755",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Harald-Schmidt-Show war eine deutsche Late-Night-Show, die von Harald Schmidt moderiert wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:47.729Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harald Schmidt” is on the snapshot of s5"
+  }
+ ]
+}

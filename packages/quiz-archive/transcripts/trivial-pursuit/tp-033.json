@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-033",
+ "image": "IMG20261007174710.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Zu welchem Land gehört das größte Korallenriff der Welt?",
+   "de": "Zu welchem Land gehört das größte Korallenriff der Welt?",
+   "en": "Which country does the world's largest coral reef belong to?",
+   "reworked": false,
+   "answerDe": "Australien",
+   "answerEn": "Australia",
+   "timeline": {
+    "kind": "event",
+    "start": "1770-06-11",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "James Cook's Endeavour runs aground on the Great Barrier Reef off Cape Tribulation",
+    "labelDe": "James Cooks Endeavour läuft vor Cape Tribulation auf das Great Barrier Reef auf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Great_Barrier_Reef",
+    "title": "Great Barrier Reef",
+    "lang": "de"
+   },
+   "notes": "The Great Barrier Reef lies off the northeast coast of Australia.",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt der Komponist, der für Chris Norman die 1980er-Jahre-Hits Midnight Lady und Broken Heroes schrieb?",
+   "de": "Wie heißt der Komponist, der für Chris Norman die 1980er-Jahre-Hits Midnight Lady und Broken Heroes schrieb?",
+   "en": "What is the name of the composer who wrote the 1980s hits Midnight Lady and Broken Heroes for Chris Norman?",
+   "reworked": false,
+   "answerDe": "Dieter Bohlen",
+   "answerEn": "Dieter Bohlen",
+   "timeline": {
+    "kind": "event",
+    "start": "1986-04-14",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Chris Norman releases Midnight Lady, written by Dieter Bohlen",
+    "labelDe": "Chris Norman veröffentlicht Midnight Lady, geschrieben von Dieter Bohlen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Chris_Norman",
+    "title": "Chris Norman",
+    "lang": "de"
+   },
+   "notes": "Midnight Lady (1986) was written by Bohlen; Broken Heroes (1988) was another Bohlen production.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Angela Merkel ist gebürtige Leipzigerin. Richtig oder falsch?",
+   "de": "In welcher Stadt wurde Angela Merkel geboren?",
+   "en": "In which city was Angela Merkel born?",
+   "reworked": true,
+   "answerDe": "Hamburg",
+   "answerEn": "Hamburg",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1954-07-17",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Angela Merkel, German chancellor 2005–2021 (born 1954 in Hamburg)",
+    "labelDe": "Angela Merkel, Bundeskanzlerin 2005–2021 (geboren 1954 in Hamburg)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Angela_Merkel",
+    "title": "Angela Merkel",
+    "lang": "de"
+   },
+   "notes": "The card's statement is false: Merkel was born in Hamburg (Eimsbüttel) and grew up in the GDR; she studied in Leipzig.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wer wird in Fabeln Adelheid und Henning genannt: Gans und Hahn, Katze und Frosch oder Henne und Dachs?",
+   "de": "Welche beiden Tiere werden in Fabeln Adelheid und Henning genannt?",
+   "en": "Which two animals are called Adelheid and Henning in fables?",
+   "reworked": true,
+   "answerDe": "Gans und Hahn",
+   "answerEn": "goose and rooster",
+   "timeline": {
+    "kind": "creation",
+    "start": "1794-05",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First printing of Goethe's Reineke Fuchs, in which Henning the rooster appears",
+    "labelDe": "Erstdruck von Goethes „Reineke Fuchs“, in dem der Hahn Henning auftritt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Fabel",
+    "title": "Fabel",
+    "lang": "de"
+   },
+   "notes": "Adelheid (Alheid) = goose, Henning = rooster, as listed in the German Wikipedia's table of fable animal names.",
+   "domain": "literature",
+   "sub": "classics"
+  },
+  {
+   "category": 5,
+   "cardDe": "Eine Einheit, die mit „Mega“ beginnt, ist größer als eine Einheit, die mit „Giga“ beginnt. Richtig oder falsch?",
+   "de": "Um welchen Faktor ist eine Einheit, die mit „Giga“ beginnt, größer als die entsprechende Einheit, die mit „Mega“ beginnt?",
+   "en": "By what factor is a unit beginning with \"giga\" larger than the corresponding unit beginning with \"mega\"?",
+   "reworked": true,
+   "answerDe": "1000",
+   "answerEn": "1000",
+   "timeline": {
+    "kind": "creation",
+    "start": "1960",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The SI is created and adopts the prefixes from pico to tera, including mega and giga",
+    "labelDe": "Das SI wird geschaffen und übernimmt die Vorsätze von Piko bis Tera, darunter Mega und Giga"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Vorsätze_für_Maßeinheiten",
+    "title": "Vorsätze für Maßeinheiten",
+    "lang": "de"
+   },
+   "notes": "The card's statement is false: mega = 10^6, giga = 10^9, so giga is 1000 times larger.",
+   "domain": "science",
+   "sub": "maths"
+  },
+  {
+   "category": 6,
+   "cardDe": "Die Schelle in einem Kartenspiel mit deutschem Blatt entspricht welcher Farbe im französischen Blatt?",
+   "de": "Die Schelle in einem Kartenspiel mit deutschem Blatt entspricht welcher Farbe im französischen Blatt?",
+   "en": "The bells suit in a German-suited deck of cards corresponds to which suit in the French-suited deck?",
+   "reworked": false,
+   "answerDe": "Karo",
+   "answerEn": "diamonds",
+   "timeline": {
+    "kind": "era",
+    "start": "1501",
+    "end": "1600",
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Regional four-suit systems such as the German suits replace earlier card symbols in Europe",
+    "labelDe": "Regionale Farbzeichensysteme wie das deutsche Blatt lösen in Europa die älteren Kartenzeichen ab"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schellen_(Farbe)",
+    "title": "Schellen (Farbe)",
+    "lang": "de"
+   },
+   "notes": "Timeline from the Spielkarte article: regional four-suit systems arose in the 16th century.",
+   "domain": "sport-games",
+   "sub": "games"
+  }
+ ]
+}

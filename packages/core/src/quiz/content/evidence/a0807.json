@@ -1,0 +1,195 @@
+{
+ "article": "a0807",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hagia_Sophia",
+   "title": "Hagia Sophia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:38.579Z",
+   "snapshot": "905106db3b562669f84bdfd97b73e5c255d2d9d4407aded7a6ac91b2de4c387d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Blue_Mosque,_Istanbul",
+   "title": "Blue Mosque, Istanbul – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:39.433Z",
+   "snapshot": "0721d718b1f32cf00a1d16d5047db29232ad57852db1178c97ed277fb7b5f72e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Basilica_Cistern",
+   "title": "Basilica Cistern – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:40.327Z",
+   "snapshot": "65e8dc5e4f96634deebf47094d9af50515d1db76458e5a4a24d4b8732cbd2e2c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/S%C3%BCleymaniye_Mosque",
+   "title": "Süleymaniye Mosque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:21:41.434Z",
+   "snapshot": "931a650598f7f543013f3d87a398fedb3676526d46351540a4f9575ea7999719"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hagia Sophia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c068"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sultan Ahmed Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Basilica Cistern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04035",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Süleymaniye Mosque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:47.967Z",
+   "target": "f04031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hagia Sophia, officially the Hagia Sophia Grand Mosque, is a mosque and a major cultural and historical site in Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.967Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hagia Sophia” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:47.967Z",
+   "target": "f04032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sultan Ahmed Mosque (Turkish: Sultanahmet Camii), popularly known as the Blue Mosque, is an Ottoman-era historical imperial mosque located in Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.967Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sultan Ahmed Mosque” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:47.967Z",
+   "target": "f04034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Basilica Cistern, or Cisterna Basilica (Greek: Βασιλική Κινστέρνα, Turkish: Yerebatan Sarnıcı or Yerebatan Sarayı, \"Subterranean Cistern\" or \"Subterranean Palace\"), is the largest of several hundred ancient cisterns that lie beneath the city of Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.967Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basilica Cistern” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:47.967Z",
+   "target": "f04035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Süleymaniye Mosque (Turkish: Süleymaniye Camii, pronounced [sylejˈmaːnije]) is an Ottoman imperial mosque located on the Third Hill of Istanbul, Turkey.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:47.967Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Süleymaniye Mosque” is on the snapshot of s4"
+  }
+ ]
+}

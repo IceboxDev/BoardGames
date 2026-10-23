@@ -1,0 +1,687 @@
+{
+ "article": "a0945",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hydrogen",
+   "title": "Hydrogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:53.153Z",
+   "snapshot": "be881345345248f83c41d6326597c9832e9c7ed918e52cd9ccefd6dcb497ab0f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Helium",
+   "title": "Helium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:12.245Z",
+   "snapshot": "32a6e81d98a0a6e7a8128fcd35ea5604658f3924dccaf6da4ccf44b90270d983"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nitrogen",
+   "title": "Nitrogen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:50.354Z",
+   "snapshot": "66b15223c6d3162852778cb5631e02ab43066f2ec98fa307bcf00e4af666c1cd"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Erdatmosph%C3%A4re",
+   "title": "Erdatmosphäre",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:50.259Z",
+   "snapshot": "fc1fc26562a52c5b004a20d575996e19a7b2fdbf5c26d5dcf56896f001774cb2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Earth",
+   "title": "Earth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:54.179Z",
+   "snapshot": "d133355dd17111503c660ce30f8b52e39c4369a31d2b3b6cd19010da98a2f9d1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Abundance_of_the_chemical_elements",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:54.962Z",
+   "snapshot": "1535d9fa49b691dc7dde806e5f91c694cc2c88ae70bb2d634148bb4ac6f10200"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Oxygen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:56.422Z",
+   "snapshot": "f6dc865a0e3b10c2f582679d8377e3345c4bb67ce65b54c6c4200baeba2b46c2"
+  },
+  "s8": {
+   "url": "https://snl.no/hydrogen",
+   "title": "hydrogen",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "nn",
+   "retrievedAt": "2026-10-23T12:36:43.499Z",
+   "snapshot": "e462156d8ad47fb74ad0f60c54378845e2c5c1695491ec2cfcec6b018057ac89"
+  },
+  "s9": {
+   "url": "https://snl.no/helium",
+   "title": "helium",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:36:44.303Z",
+   "snapshot": "61e4d6d96b30be50e9768432e485f1932359470cf426f3558a02620b17ffc827"
+  },
+  "s10": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+   "title": "Earth Fact Sheet",
+   "publisher": "NASA NSSDCA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.376Z",
+   "snapshot": "97edc601d43f7cd9ab0826e96760dade7ff1826c84387655430da22533f32f0e"
+  },
+  "s11": {
+   "url": "https://snl.no/nitrogen",
+   "title": "nitrogen",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "nn",
+   "retrievedAt": "2026-10-23T12:36:45.312Z",
+   "snapshot": "0a27ced66212d8d3ec2e16b973beff5bd0751047b298193e28f3bf30f7fc87d6"
+  },
+  "s12": {
+   "url": "https://snl.no/jern",
+   "title": "jern",
+   "publisher": "Store norske leksikon",
+   "kind": "reference",
+   "lang": "no",
+   "retrievedAt": "2026-10-23T12:36:46.317Z",
+   "snapshot": "09abf11f8b3452a2de67a982b588496dfd18688e3d604f0fce35b0d3b7254d58"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hydrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079; transcript ppm-087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04722",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "helium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nitrogen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stickstoff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-232"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "iron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:09.147Z",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hydrogen is a chemical element; it has the symbol H and atomic number 1.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hydrogen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:09.147Z",
+   "target": "f04722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helium (from Ancient Greek: ἥλιος, romanized: helios, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “helium” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:09.147Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nitrogen is a chemical element; it has symbol N and atomic number 7.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nitrogen” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:09.147Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sie hat einen hohen Anteil an Stickstoff und Sauerstoff und somit oxidierende Verhältnisse.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stickstoff” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:09.147Z",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is composed mostly of iron (32.1% by mass), oxygen (30.1%), silicon (15.1%), magnesium (13.9%), sulfur (2.9%), nickel (1.8%), calcium (1.5%), and aluminum (1.4%), with the remaining 1.2% consisting of trace amounts of other elements.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:09.147Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “iron” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:18:36Z",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the lightest and most abundant chemical element in the universe",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:18:40Z",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "90 prosent av alle atom i universet er hydrogenatom.",
+     "quoteLang": "nn",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "SNL: hydrogen is the most common element."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:18:45Z",
+   "target": "f04722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the second-lightest and second-most abundant element in the observable universe, after hydrogen.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:18:50Z",
+   "target": "f04722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "I universet er helium det vanligste grunnstoffet etter hydrogen",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:18:59Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "78.08% Nitrogen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:19:05Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Lufta vi pustar inn inneheld om lag 78 prosent nitrogen og om lag 21 prosent oksygen.",
+     "quoteLang": "nn",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:19:11Z",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Jern antas å være det grunnstoffet som det er mest av på Jorden, cirka 37 vektprosent.",
+     "quoteLang": "no",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23",
+   "note": "Estimates of iron's mass share vary (≈32–37 %); iron is first either way."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:19:15Z",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is composed mostly of iron (32.1% by mass)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r056",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the lightest and most abundant chemical element in the universe",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "90 prosent av alle atom i universet er hydrogenatom.",
+     "quoteLang": "nn",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is the second-lightest and second-most abundant element in the observable universe, after hydrogen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "78.08% Nitrogen",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Lufta vi pustar inn inneheld om lag 78 prosent nitrogen og om lag 21 prosent oksygen.",
+     "quoteLang": "nn",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "Jern antas å være det grunnstoffet som det er mest av på Jorden, cirka 37 vektprosent.",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s12"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It is composed mostly of iron (32.1% by mass)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04721",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "hydrogen (H) – grunnstoff 1 – Store norske leksikon",
+     "quoteLang": "nn",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “hydrogen” is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04722",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "helium (He) – edelgass – Store norske leksikon",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “helium” is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Major : 78.08% Nitrogen (N2), 20.95% Oxygen (O2),",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “nitrogen” is on the snapshot of s10"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04724",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "nitrogen (N) – grunnstoff 7 – Store norske leksikon",
+     "quoteLang": "nn",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “nitrogen” is on the snapshot of s11"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:54:38.672Z",
+   "target": "f04725",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "I periodesystemet er de nummerert etter hverandre, og de danner en familie som kalles jerntriaden (engelsk The Iron Triad).",
+     "quoteLang": "no",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:38.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “iron” is on the snapshot of s12"
+  }
+ ]
+}

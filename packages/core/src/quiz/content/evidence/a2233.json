@@ -1,0 +1,596 @@
+{
+ "article": "a2233",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ben_Affleck",
+   "title": "Ben Affleck",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:59.956Z",
+   "snapshot": "4fcff7ae24ee37b1c3ba1825822fae08501343ac1bdd4a1041f7ca669b11bbfc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aaron_Sorkin",
+   "title": "Aaron Sorkin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:00.834Z",
+   "snapshot": "420092f5ab8cdfba54473a764f15df71cd2c9110b6ef330e6baa15613bce8fee"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Quentin_Tarantino",
+   "title": "Quentin Tarantino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:01.929Z",
+   "snapshot": "5ad0f9b0e902432666c937ae07adb28e2bd2cc1fe549f80967521415c0e56c3e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jordan_Peele",
+   "title": "Jordan Peele – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:04.111Z",
+   "snapshot": "b813d9aed8f9742ce0543e2e0cde01f9c0f0497f153a8aa7b61047992cb71314"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Emma_Thompson",
+   "title": "Emma Thompson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:02.923Z",
+   "snapshot": "390ab2fbe577a8eac62dc6c3e1945f35ac8f2bf29fb017078af2e2cead8d1dd7"
+  },
+  "s6": {
+   "url": "https://www.cnn.com/2018/03/04/entertainment/jordan-peele-original-screenplay-oscar/index.html",
+   "title": "Jordan Peele is first black screenwriter to win best original screenplay",
+   "publisher": "CNN",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:30.697Z",
+   "snapshot": "386b85d3f06788a60fb27e988215dbcce4c7d124d4e8ccaf8b057a081970c57e"
+  },
+  "s7": {
+   "url": "https://www.hollywoodreporter.com/news/jordan-peele-get-wins-best-original-screenplay-oscar-1090893",
+   "title": "Oscars: 'Get Out's' Jordan Peele Makes History as First African-American Original Screenplay Winner",
+   "publisher": "The Hollywood Reporter",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:31.319Z",
+   "snapshot": "644cad3c801c0cd2024431e34973b95198105cf6558cd810e17cf4d3c340c429"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Sense_and_Sensibility_(1995_film)",
+   "title": "Sense and Sensibility (1995 film) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:31.084Z",
+   "snapshot": "77468eacc4d3bb1d796c86277597ff1482ea8a39d205e69900bb36645d966e46"
+  },
+  "s9": {
+   "url": "https://www.independent.co.uk/news/people/news/emma-thompson-how-jane-austen-saved-me-from-going-under-1929510.html",
+   "title": "Emma Thompson: How Jane Austen saved me from going under",
+   "publisher": "The Independent",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:31.689Z",
+   "snapshot": "8f53effaeecb83bd91f6ec88d86e6d9b93fdec09bcef76cf95d65fb0ac43517f"
+  },
+  "s10": {
+   "url": "https://www.latimes.com/archives/la-xpm-1996-03-26-mn-51422-story.html",
+   "title": "'Braveheart' Is Top Film; Cage, Sarandon Win",
+   "publisher": "Los Angeles Times",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:31.895Z",
+   "snapshot": "cc321e859406d0a30526e918281495f334929e703436387a6268b0f670f79415"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ben Affleck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-294"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aaron Sorkin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-276"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11420",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Quentin Tarantino",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Jordan Peele",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Emma Thompson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:40.672Z",
+   "target": "f11417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Holden noted in The New York Times that the film \"found a clever way to use Ben Affleck's disagreeable qualities.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ben Affleck” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:40.672Z",
+   "target": "f11418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "From Stage to Screen with Aaron Sorkin and Rob Reiner, A Few Good Men (Special Edition DVD) (Documentary).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aaron Sorkin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:40.672Z",
+   "target": "f11420",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "These films are often labeled \"Presented by Quentin Tarantino\" or \"Quentin Tarantino Presents\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quentin Tarantino” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:40.672Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On November 3, 2015, it was reported that Henry Selick was developing Wendell & Wild, a new stop-motion feature with Jordan Peele and Keegan-Michael Key based on an original story by Selick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jordan Peele” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:40.672Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dame Emma Thompson (born 15 April 1959) is an English actress and screenwriter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.672Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emma Thompson” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:33:37Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "becoming the first African American screenwriter to win in this category.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:33:41Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jordan Peele is first black screenwriter to win best original screenplay",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:33:45Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Oscars: ‘Get Out’s’ Jordan Peele Makes History as First African-American Original Screenplay Winner",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:33:49Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Thompson received the award for Best Adapted Screenplay, becoming the only person to have won Academy Awards for both acting and screenwriting.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "still true after the 2026 ceremony to our knowledge; no other acting winner has a writing Oscar"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:33:53Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the first, and so far only, person to win an Oscar for both best actress (Howards End) and later best screenplay (Sense and Sensibility in 1995)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:33:57Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Emma Thompson made Academy history by winning for adapted screenplay--the first actress to accomplish that feat.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "becoming the first African American screenwriter to win in this category.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jordan Peele is first black screenwriter to win best original screenplay",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Thompson received the award for Best Adapted Screenplay, becoming the only person to have won Academy Awards for both acting and screenwriting.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the first, and so far only, person to win an Oscar for both best actress (Howards End) and later best screenplay (Sense and Sensibility in 1995)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Emma Thompson made Academy history by winning for adapted screenplay--the first actress to accomplish that feat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jordan Peele is first black screenwriter to win best original screenplay | CNN",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jordan Peele” is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jordan Peele ('Get Out') Becomes First African-American Original",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jordan Peele” is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Emma Thompson wrote the screenplay and stars as Elinor Dashwood, while Kate Winslet plays Elinor's younger sister Marianne.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Emma Thompson” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Emma Thompson: How Jane Austen saved me from going under | The Independent | The Independent",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Emma Thompson” is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:27.117Z",
+   "target": "f11422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Emma Thompson made Academy history by winning for adapted screenplay--the first actress to accomplish that feat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Emma Thompson” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-086",
+ "image": "IMG20261022011439.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] If you let hot liquid bismuth cool off, what will happen to its volume?\nA. It will expand\nB. It will expand and then contract\nC. It will contract\nAnswer: A. Unlike most metals, bismuth expands as it solidifies, similar to water expands when freezing. This unique property makes it useful in casting applications where precise molds are needed.",
+   "en": "Unlike most metals, what happens to the volume of liquid bismuth as it cools and solidifies?",
+   "de": "Was geschieht – anders als bei den meisten Metallen – mit dem Volumen von flüssigem Bismut, wenn es abkühlt und erstarrt?",
+   "reworked": true,
+   "answerEn": "It expands",
+   "answerDe": "Es dehnt sich aus",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1753",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Claude François Geoffroy shows that bismuth is a metal distinct from lead and tin",
+    "labelDe": "Claude François Geoffroy zeigt, dass Bismut ein eigenes Metall ist, verschieden von Blei und Zinn"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bismuth",
+    "title": "Bismuth",
+    "lang": "en"
+   },
+   "notes": "Card answer confirmed: bismuth expands by 3.32% on solidification (Wikipedia), which is why it was used in low-melting typesetting alloys.",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 2,
+   "discipline": "Engineering and Inventions",
+   "cardText": "[Engineering and Inventions] Which ancient civilization is known to first use concrete extensively in construction?\nA. Egyptians B. Greeks C. Romans\nAnswer: C. The Romans were the first to use concrete extensively, including the Pantheon and the Colosseum. They used a mixture of lime, volcanic ash, and seawater, which allowed the concrete to set underwater and self-heal over time.",
+   "en": "Which ancient civilization was the first to use concrete extensively in construction, for example in the Pantheon and the Colosseum?",
+   "de": "Welche antike Zivilisation setzte als erste Beton in großem Umfang im Bauwesen ein, etwa beim Pantheon und beim Kolosseum?",
+   "reworked": true,
+   "answerEn": "The Romans",
+   "answerDe": "Die Römer",
+   "timeline": {
+    "kind": "era",
+    "start": "-150",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Roman concrete (opus caementicium) comes into widespread use, about 150 BC",
+    "labelDe": "Römischer Beton (Opus caementicium) ist ab etwa 150 v. Chr. weit verbreitet"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Roman_concrete",
+    "title": "Roman concrete",
+    "lang": "en"
+   },
+   "notes": "Answer confirmed (Roman concrete in widespread use from about 150 BC; the Pantheon dome is the largest unreinforced concrete dome). The card's explanation oversimplifies: seawater was a factor only in Roman marine concrete, and 2023 research attributes the self-healing to lime clasts in the mix.",
+   "domain": "history",
+   "sub": "ancient"
+  }
+ ]
+}

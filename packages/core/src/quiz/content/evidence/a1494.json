@@ -1,0 +1,314 @@
+{
+ "article": "a1494",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Falklands_War",
+   "title": "Falklands War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:49.110Z",
+   "snapshot": "8844731350ff0c559054b774911159312187d7a046556f8a662e04af40fd3ade"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_598",
+   "title": "United Nations Security Council Resolution 598 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:49.872Z",
+   "snapshot": "bf39b33ccdaf45436ebff5df2fc67059f868e915b2fad2311231127e4a43ce9a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Football_War",
+   "title": "Football War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:01:57.469Z",
+   "snapshot": "0cae45afc4fdb08e86f30f93b2d1216486853c6011c3c258c01f3dd6f7716a2b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Falkland_Islands",
+   "title": "Falkland Islands – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:51.037Z",
+   "snapshot": "ace93f81712e4a1cb864c1d62618ea4c1a29667938328ffea9e412c0853025fa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/ARA_General_Belgrano",
+   "title": "ARA General Belgrano – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:51.974Z",
+   "snapshot": "b9542632e7f837819bd7e02f503d5a3459e6885a817093ab120825dd14cb41cc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War",
+   "title": "Iran–Iraq War – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:52:54Z"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/news/magazine-34353349",
+   "title": "Iran-Iraq war: Why Iranians remember it so differently – BBC News",
+   "publisher": "BBC",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:35.957Z",
+   "snapshot": "de96f86dcfa591fb7e8a47b6441c36289cedc38a58702b2f40c24cf3868fe9d3"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07466",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Argentina and the United Kingdom",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iraq and Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "El Salvador and Honduras",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Islas Malvinas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f21761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "General Belgrano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:34.403Z",
+   "target": "f07466",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Falklands War (Spanish: Guerra de las Malvinas) was a ten-week war in the South Atlantic in 1982 between Argentina and the United Kingdom over possession of the Falkland Islands (Spanish: Islas Malvinas) and its dependencies of South Georgia and the South Sandwich Islands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.403Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Argentina and the United Kingdom” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:34.403Z",
+   "target": "f07467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iraq and Iran",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Iraq and Iran”, “Irak und Iran”, “Ирак и Иран”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:34.403Z",
+   "target": "f07468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Football War (Spanish: guerra del fútbol), also known as the Soccer War or the 100 Hour War, was a brief military conflict fought between El Salvador and Honduras in 1969.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.403Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “El Salvador and Honduras” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:34.403Z",
+   "target": "f21760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Falkland Islands (; Spanish: Islas Malvinas [ˈislas malˈβinas]), commonly referred to as the Falklands, is an archipelago in the South Atlantic Ocean on the Patagonian Shelf.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.403Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Islas Malvinas” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:34.403Z",
+   "target": "f21761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "ARA General Belgrano (C-4) was an Argentine Navy light cruiser in service from 1951 until 1982.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.403Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “General Belgrano” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:54Z",
+   "target": "f07467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Iraq launched a full-scale invasion of Iran on 22 September 1980.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:56Z",
+   "target": "f07467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The attack, on 22 September 1980, sparked the Iran-Iraq War, which did not end for eight years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:20.287Z",
+   "target": "f07467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The attack, on 22 September 1980, sparked the Iran-Iraq War, which did not end for eight years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:20.287Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

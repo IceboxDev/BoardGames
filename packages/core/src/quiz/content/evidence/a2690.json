@@ -1,0 +1,256 @@
+{
+ "article": "a2690",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Joachim_Sauer",
+   "title": "Joachim Sauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:54.517Z",
+   "snapshot": "df897376bc11cfa2bfea1e965ba634b287ddf78cfe76f6ff0445c2b67f2b3dbd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Loki_Schmidt",
+   "title": "Loki Schmidt – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:57.775Z",
+   "snapshot": "a4ebaaadae4a3727d1fc173700542428bfdc8dd31568725e5b5458f60e886456"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hannelore_Kohl",
+   "title": "Hannelore Kohl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:58.151Z",
+   "snapshot": "f0859a1887995ffb2c2a7f8800dff8432d999b00b52168c00a3263fba27df305"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Denis_Thatcher",
+   "title": "Denis Thatcher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:59.340Z",
+   "snapshot": "45ef9563067131f9fac258d6dc0720fb0bead7229aa94d5f201e7dd234735531"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Doris_Schr%C3%B6der-K%C3%B6pf",
+   "title": "Doris Schröder-Köpf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:13:01.190Z",
+   "snapshot": "ac7d3bdc104b21a9429217ee8cf7f714f3bcc75bf4b3c4aa159355c899f9e34f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Loki_Schmidt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:58.458Z",
+   "snapshot": "c5b407371b0917f6601c5f57fcab42fe54e1ff2f0ddd30006f03e6c59045a099"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Doris_Schr%C3%B6der-K%C3%B6pf",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:59.316Z",
+   "snapshot": "700dd558ace82ee9d3e33e05383319dee2ad237b29125a8ee86c87ffb63eb549"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14647",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Angela Merkel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-098"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14648",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helmut Schmidt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14649",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Helmut Kohl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14650",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Margaret Thatcher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14651",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gerhard Schröder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:58.148Z",
+   "target": "f14647",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Er ist der Ehemann der ehemaligen deutschen Bundeskanzlerin Angela Merkel.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angela Merkel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:58.148Z",
+   "target": "f14648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "She was the wife of Helmut Schmidt, who was the Chancellor of Germany from 1974 to 1982.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Schmidt” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:58.148Z",
+   "target": "f14649",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johanna Klara Eleonore \"Hannelore\" Kohl (née Renner; 7 March 1933 – 5 July 2001) was the first wife of German Chancellor Helmut Kohl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helmut Kohl” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:58.148Z",
+   "target": "f14650",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sir Denis Thatcher, 1st Baronet,  (10 May 1915 – 26 June 2003) was an English businessman and the husband of Margaret Thatcher, who served as the first female British prime minister from 1979 to 1990; thus, he became the first male prime ministerial spouse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Margaret Thatcher” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:58.148Z",
+   "target": "f14651",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "She was the fourth wife of former German chancellor Gerhard Schröder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:58.148Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gerhard Schröder” is on the snapshot of s5"
+  }
+ ]
+}

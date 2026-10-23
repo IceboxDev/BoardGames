@@ -1,0 +1,202 @@
+{
+ "article": "a0343",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+   "title": "Margaret Thatcher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:38.642Z",
+   "snapshot": "87a766ce9acd8a37fb03deca095a90df6251e5e97930d56895d7c467a043afb9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ronald_Reagan",
+   "title": "Ronald Reagan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:26.386Z",
+   "snapshot": "a27b401bcea87c41bab53e1a4bb22585ebf3df62074827c019a19dafaa9d5f1f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gerhard_Schr%C3%B6der",
+   "title": "Gerhard Schröder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:04.230Z",
+   "snapshot": "cb32ecfb9d1b16582d3bb6f931b9628cb1ab0f541cb2c70fa0c36dcb48f0e055"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Boris_Johnson",
+   "title": "Boris Johnson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:27.643Z",
+   "snapshot": "c9d2e0ee29c6919dd6fc9d87168a26909eaa5264cc9f0c27eaaad8d174a3da9e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gerhard_Schr%C3%B6der",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:25.122Z",
+   "snapshot": "238c36863fff273a9a0e4e4e1dc30d2655f11b4caa3aa645fd3f55854dc62b0e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01711",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "chemist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01713",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "actor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01714",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "lawyer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01715",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "journalist",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:33.259Z",
+   "target": "f01711",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Thatcher studied chemistry at Somerville College, Oxford, and worked briefly as a research chemist before becoming a barrister.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “chemist” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:33.259Z",
+   "target": "f01713",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ronald Wilson Reagan (February 6, 1911 – June 5, 2004) was an American politician and actor who served as the 40th president of the United States from 1981 to 1989.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “actor” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:33.259Z",
+   "target": "f01714",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Schröder was a lawyer before becoming a full-time politician, and he was Minister President of Lower Saxony (1990–1998) before becoming chancellor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lawyer” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:33.259Z",
+   "target": "f01715",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In it, Guppy said that his criminal activities involving insurance fraud were being investigated by News of the World journalist Stuart Collier, and he asked Johnson to provide him with Collier's private address, seeking to have the latter beaten.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:33.259Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “journalist” is on the snapshot of s4"
+  }
+ ]
+}

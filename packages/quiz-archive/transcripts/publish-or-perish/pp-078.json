@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-078",
+ "image": "IMG20261022011356.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Medical Sciences",
+   "cardText": "[Medical Sciences] Which of the following is correct about first-degree burns?\nA. It affects only the outer layer of the skin\nB. It affects all layers of the skin and underlying tissues\nC. It affects muscles\nAnswer: A. In contrast, second-degree burns involve both the outer layer (epidermis) and the underlying layer (dermis). Option B describes third-degree burns, which extend through all layers of the skin. Option C describes fourth-degree burns, which go even deeper.",
+   "en": "Which layer of the skin does a first-degree burn affect?",
+   "de": "Welche Hautschicht betrifft eine Verbrennung ersten Grades?",
+   "reworked": true,
+   "answerEn": "Only the epidermis (the outer layer)",
+   "answerDe": "Nur die Epidermis (die Oberhaut)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1500",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ambroise Paré is the first to describe different degrees of burns",
+    "labelDe": "Ambroise Paré beschreibt als Erster verschiedene Grade von Verbrennungen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Burn",
+    "title": "Burn",
+    "lang": "en"
+   },
+   "notes": "Timeline from the Burn article's history section ('in the 1500s').",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] What was Earth’s supercontinent called?\nA. Gondwana B. Laurasia C. Pangaea\nAnswer: C.",
+   "en": "What is the name of Earth's most recent supercontinent, which assembled about 335 million years ago and began breaking apart about 175 million years ago?",
+   "de": "Wie heißt der jüngste Superkontinent der Erde, der sich vor etwa 335 Millionen Jahren bildete und vor etwa 175 Millionen Jahren zu zerfallen begann?",
+   "reworked": true,
+   "answerEn": "Pangaea",
+   "answerDe": "Pangaea",
+   "timeline": {
+    "kind": "era",
+    "start": "-335000000",
+    "end": "-175000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The supercontinent Pangaea exists, from its assembly to the start of its break-up",
+    "labelDe": "Der Superkontinent Pangaea besteht, von seiner Entstehung bis zum Beginn seines Zerfalls"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pangaea",
+    "title": "Pangaea",
+    "lang": "en"
+   },
+   "notes": "The card's 'Earth's supercontinent' is ambiguous (Earth had several; Gondwana was a supercontinent too), so the open question asks for the most recent one.",
+   "domain": "earth-space",
+   "sub": "geology"
+  }
+ ]
+}

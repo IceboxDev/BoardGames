@@ -1,0 +1,408 @@
+{
+ "article": "a2165",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Isobare",
+   "title": "Isobare",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:36.246Z",
+   "snapshot": "4b09e20d8a1000f41a5c4a19e37f05a8ffe8e2093c5682c248d05a158cc40319"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Tiefdruckgebiet",
+   "title": "Tiefdruckgebiet",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:45:37.306Z",
+   "snapshot": "cf4ba6b5cb5912124f9d2cf9c3239e72e95be44dcb2ba6517deccdfd364435b3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Coriolis_force",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:31.496Z",
+   "snapshot": "a43cbabdb64b022d430d303a2e14528ac37105f88998e6420bb2593d288f7e17"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Contour_line",
+   "title": "Contour line",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:40.030Z",
+   "snapshot": "a57003174b533905677c1bc7abccff9123cb662d045835552f5ecf1f18329f48"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/anticyclone",
+   "title": "anticyclone – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-20"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Anticyclone",
+   "title": "Anticyclone",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:40.905Z",
+   "snapshot": "1b8c644c598d274ba3546ce3d6d69fcf1656a411973d550111db498f76ab2763"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Pascal_(unit)",
+   "title": "Pascal (unit)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:41.893Z",
+   "snapshot": "397f912df457df3838df3f75f585b3aa45aa18fbf6ac6210221362c572518b4c"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/C._H._D._Buys_Ballot",
+   "title": "C. H. D. Buys Ballot",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:45:42.925Z",
+   "snapshot": "ab62b1da7ee5c5619f657017480f3b888640d540b8d6c0002b91d12e2b703c65"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Barometer",
+   "title": "Barometer",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:03.354Z",
+   "snapshot": "89615617c0e2bf9069dfc84cf7e5a334c8b6933ded1b055af299b355ebda12c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10959",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Luftdruck",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-056"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "gegen den Uhrzeigersinn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-390"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anticlockwise",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 14"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10961",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "isotherm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10962",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "anticyclone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10962",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "anticyclone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 26"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10963",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "hectopascal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f10964",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Buys Ballot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f25602",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Atmospheric pressure",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-018"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10959",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Insbesondere in der Meteorologie kennzeichnen die Isobaren auf meteorologischen Boden-Wetterkarten Orte mit gleichem Luftdruck.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luftdruck” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Diese Strömung wird auf der Nordhalbkugel durch die Corioliskraft nach rechts abgelenkt und es ergibt sich eine gegen den Uhrzeigersinn gerichtete Rotation.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gegen den Uhrzeigersinn” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In one with anticlockwise (or counterclockwise) rotation, the force acts to the right.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anticlockwise” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10961",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "An isotherm (from Ancient Greek  θέρμη (thermē) 'heat') is a line that connects points on a map that have the same temperature.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “isotherm” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10962",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "A high-pressure air system, high, or anticyclone, is an area near the surface of a planet where the atmospheric pressure is greater than the pressure in the surrounding regions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “anticyclone” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10963",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Common multiple units of the pascal are the hectopascal (1 hPa = 100 Pa), which is equal to one millibar, and the kilopascal (1 kPa = 1,000 Pa), which is equal to one centibar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hectopascal” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f10964",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Christophorus Henricus Diedericus Buys Ballot (Dutch pronunciation: [ˈbœyz bɑˈlɔt]; 10 October 1817 – 3 February 1890) was a Dutch chemist and meteorologist who is the namesake of Buys Ballot's law.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Buys Ballot” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:29:32.478Z",
+   "target": "f25602",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "used to estimate altitude by measuring the pressure of the atmosphere surrounding the altimeter and comparing the result to the expected atmospheric pressure at various altitudes, while a barometer is kept at a constant altitude and measures subtle pressure changes caused by weather and elements",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:32.478Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atmospheric pressure” is on the snapshot of s9"
+  }
+ ]
+}

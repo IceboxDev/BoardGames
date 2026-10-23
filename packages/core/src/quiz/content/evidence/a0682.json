@@ -1,0 +1,470 @@
+{
+ "article": "a0682",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Trieste_(bathyscaphe)",
+   "title": "Trieste (bathyscaphe) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:53.108Z",
+   "snapshot": "83412784bbf5bd5ef324cc21a3ffec03399e235e0d2076f4feb4c2e23bf177ec"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Auguste_Piccard",
+   "title": "Auguste Piccard – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:54.120Z",
+   "snapshot": "80f662091ff49dd8631d5b19bb956a8d6f862c38a2164db6993b88c4f63daec7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Breitling_Orbiter",
+   "title": "Breitling Orbiter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:55.130Z",
+   "snapshot": "9933c02dd16c67cfb8c432993ba93e8f2cc83144cf323d6ccc46df932a83116c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Deepsea_Challenger",
+   "title": "Deepsea Challenger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:56.106Z",
+   "snapshot": "2c7a0053f8895d8710a2a9d913b1462adcdb761e2cadd63e3d8d090fdca352bf"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Victor_Vescovo",
+   "title": "Victor Vescovo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:57.142Z",
+   "snapshot": "6eaeaede61f5bab67d31776cdc6a5e16b083907352887533bdb4cdd2a9e8c973"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Challengertief",
+   "title": "Challengertief",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:54.363Z",
+   "snapshot": "b8a82c29b4ab51e5ba15eadc991416e4f967fe40808c008bae2cc44f0b2d1d02"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Jacques-Yves_Cousteau",
+   "title": "Jacques-Yves Cousteau",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:55.274Z",
+   "snapshot": "d8e534570b6f543def8f3c8dea7201023108349ecd1bca51b92f9097c0e8c75f"
+  },
+  "s8": {
+   "url": "https://oceanservice.noaa.gov/facts/oceandepth.html",
+   "title": "How deep is the ocean?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.097Z",
+   "snapshot": "af9d3fd8143a4d90cae78f7c314cfc0e350a17e16ee542e190c2b57e9a28c915"
+  },
+  "s9": {
+   "url": "https://www.worldatlas.com/oceans/the-deepest-point-in-the-ocean.html",
+   "title": "The Deepest Point In The Ocean",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.129Z",
+   "snapshot": "3f12334980f7da991ac782b12532d7440bde8cf6062d6e1f81d04aa094b8583f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jacques Piccard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Auguste Piccard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bertrand Piccard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "James Cameron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-096"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Victor Vescovo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Challengertief",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-083"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jacques-Yves Cousteau",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 46; transcript tp-044"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f03406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The vessel was piloted by Swiss oceanographer Jacques Piccard and US Navy lieutenant Don Walsh.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacques Piccard” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f03407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 27 May 1931, Auguste Piccard and Paul Kipfer took off from Augsburg, Germany, in a hydrogen balloon, and reached a record altitude of 15,781 m (51,775 ft; 9.806 mi) (FAI Record File Number 10634).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auguste Piccard” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f03408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It was piloted by Bertrand Piccard and Brian Jones.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertrand Piccard” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f03409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On 26 March 2012, Canadian film director James Cameron piloted the craft to accomplish this goal in the second crewed dive reaching the Challenger Deep.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Cameron” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f03410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On January 10, 2025, Secretary of the Navy Carlos Del Toro announced the second ship of the Explorer class of ocean surveillance ships will be named the USNS Victor Vescovo (T-AGOS 26) after Vescovo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Victor Vescovo” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das Challengertief ist ein Meerestief im Marianengraben im Pazifischen Ozean, etwa 200 Seemeilen südwestlich der Insel Guam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Challengertief” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:26.175Z",
+   "target": "f10956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "1994 beanspruchte Hans Hass öffentlich die Priorität für die erste Verwendung eines solchen mobilen, autonomen Tauchgeräts und machte dies Jacques-Yves Cousteau gegenüber deutlich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.175Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jacques-Yves Cousteau” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:21:19Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The deepest part of the ocean is called the Challenger Deep and is located beneath the western Pacific Ocean in the southern end of the Mariana Trench",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:21:21Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The deepest section of the Mariana Trench, and therefore the deepest point in the ocean, is Challenger Deep",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:54.480Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The deepest part of the ocean is called the Challenger Deep and is located beneath the western Pacific Ocean in the southern end of the Mariana Trench",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:54.480Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The deepest section of the Mariana Trench, and therefore the deepest point in the ocean, is Challenger Deep",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:54.480Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The deepest part of the ocean is called the Challenger Deep and is located beneath the western Pacific Ocean in the southern end of the Mariana Trench, which runs several hundred kilometers southwest of the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Challenger Deep” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:54.480Z",
+   "target": "f10955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The deepest section of the Mariana Trench, and therefore the deepest point in the ocean, is Challenger Deep, itself located southwest of the US territory of Guam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.480Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Challenger Deep” is on the snapshot of s9"
+  }
+ ]
+}

@@ -1,0 +1,435 @@
+{
+ "article": "a2704",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+   "title": "Magna Carta",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:02.477Z",
+   "snapshot": "1ee8aeec8c0878724a28c0dc2cccc316f4b64f2e2daa954bccd544c934350041"
+  },
+  "s2": {
+   "url": "https://www.archives.gov/exhibits/featured-documents/magna-carta/legacy.html",
+   "title": "Magna Carta and Its American Legacy",
+   "publisher": "U.S. National Archives",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:39.986Z",
+   "snapshot": "24485a262593efdbc40a1e8edddd614e940f376f907550d195afafd8d668dbc6"
+  },
+  "s3": {
+   "url": "https://www.salisburycathedral.org.uk/magna-carta",
+   "title": "Magna Carta",
+   "publisher": "Salisbury Cathedral",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:40.683Z",
+   "snapshot": "777f09e4a644a5e6c8a38951e7ef18553b6a4cf07d8605614c217760aeabf9f5"
+  },
+  "s4": {
+   "url": "https://avalon.law.yale.edu/medieval/magna.asp",
+   "title": "Magna Carta 1215",
+   "publisher": "The Avalon Project, Yale Law School",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:40.557Z",
+   "snapshot": "9d5249a87678b78081d9502f069ab58031001f24720cdf128df5b49c1f98b5cb"
+  },
+  "s5": {
+   "url": "https://www.nationalarchives.gov.uk/education/resources/magna-carta/",
+   "title": "Magna Carta – The National Archives Education",
+   "publisher": "The National Archives (UK)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:41.468Z",
+   "snapshot": "185bff6196e7aa1314f96fc15008b63cbd685e226dcda7166f5abb7e483fc694"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "That the king is subject to the law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25289",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "King John",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25290",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Runnymede",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Innocent III",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "25",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:00.183Z",
+   "target": "f25288",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "That the king is subject to the law",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“That the king is subject to the law”, “Dass auch der König dem Gesetz unterworfen ist”, “король подчинён закону”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:00.183Z",
+   "target": "f25289",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Magna Carta (Medieval Latin for \"Great Charter\"), sometimes spelled Magna Charta, is a royal charter of rights sealed by King John of England at Runnymede, near Windsor, on 15 June 1215.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.183Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “King John” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:00.183Z",
+   "target": "f25290",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Magna Carta (Medieval Latin for \"Great Charter\"), sometimes spelled Magna Charta, is a royal charter of rights sealed by King John of England at Runnymede, near Windsor, on 15 June 1215.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.183Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Runnymede” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:00.183Z",
+   "target": "f25291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Neither side stood by their commitments, and the charter was annulled by Pope Innocent III, leading to the First Barons' War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.183Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Innocent III” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:00.183Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "who demanded that the King confirm the Charter of Liberties, it promised the protection of church rights, protection for the barons from illegal imprisonment, access to swift and impartial justice, and limitations on feudal payments to the Crown, to be implemented through a council of 25 barons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.183Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “25” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:57:16Z",
+   "target": "f25288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1215, when King John confirmed Magna Carta with his seal, he was acknowledging the now firmly embedded concept that no man--not even the king--is above the law.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:57:18Z",
+   "target": "f25288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It said that the King or Queen was subject to the law and could not exploit their position and power to rule just as they wanted to.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:57:20Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "namely, that the barons choose five and twenty barons of the kingdom, whomsoever they will, who shall be bound with all their might, to observe and hold, and cause to be observed, the peace and liberties",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:57:21Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "We strictly order that you make everyone under your jurisdiction swear an oath to the 25 barons mentioned in the charter",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:57:23Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Under what historians later labelled \"clause 61\", or the \"security clause\", a council of 25 barons would be created to monitor and ensure John's future adherence to the charter.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:47.644Z",
+   "target": "f25288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In 1215, when King John confirmed Magna Carta with his seal, he was acknowledging the now firmly embedded concept that no man--not even the king--is above the law.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:47.644Z",
+   "target": "f25288",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It said that the King or Queen was subject to the law and could not exploit their position and power to rule just as they wanted to.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:47.644Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "namely, that the barons choose five and twenty barons of the kingdom, whomsoever they will, who shall be bound with all their might, to observe and hold, and cause to be observed, the peace and liberties",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:47.644Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Under what historians later labelled \"clause 61\", or the \"security clause\", a council of 25 barons would be created to monitor and ensure John's future adherence to the charter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:47.644Z",
+   "target": "f25292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "25.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:47.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “25” is on the snapshot of s4"
+  }
+ ]
+}

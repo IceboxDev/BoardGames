@@ -1,0 +1,242 @@
+{
+ "article": "a2117",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Argentina_v_England_(1986_FIFA_World_Cup)",
+   "title": "Argentina v England (1986 FIFA World Cup) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:31.928Z",
+   "snapshot": "d7cc4d1fedcd30c6d4b5bc8efaf781ce992f5cdc024754387df8ca98c3702b41"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1990_FIFA_World_Cup_knockout_stage",
+   "title": "1990 FIFA World Cup knockout stage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:32.803Z",
+   "snapshot": "3046872208a3b6363bfc504dc20073ae1b036c148ee15fd9013221dd3ed908e4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Beckenbauer",
+   "title": "Franz Beckenbauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:55.585Z",
+   "snapshot": "b67246b1508aaf58ea35a2872b621a96d820bd54199168ed026eb5b6f9b12928"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/J%C3%BCrgen_Klopp",
+   "title": "Jürgen Klopp",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:33.992Z",
+   "snapshot": "f59274cc85039e450127a84ce45373aec8ed4a377ae01739dbfe9b53ced328a8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Alf_Ramsey",
+   "title": "Alf Ramsey",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:35.221Z",
+   "snapshot": "726c213d9b64ff4e6de7496ca9d0def28c3aa19e452b392e1acd0fd320cb49f6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10581",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Diego Maradona",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10583",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gary Lineker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10585",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13887",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "José Mourinho",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-347"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13888",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alf Ramsey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29; transcript tp-377"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:25.230Z",
+   "target": "f10581",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was also a match which included two of the most well-known goals in football history, both scored by Argentina captain Diego Maradona.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diego Maradona” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:25.230Z",
+   "target": "f10583",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The African team came within eight minutes of reaching the semi-finals, but then they conceded a penalty, which Gary Lineker gratefully converted.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gary Lineker” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:25.230Z",
+   "target": "f10585",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Anton Beckenbauer was born on 11 September 1945 at a clinic in the Maxvorstadt borough of Munich, the second son of postal-worker Franz Beckenbauer Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:25.230Z",
+   "target": "f13887",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dortmund faced José Mourinho's Real Madrid again, this time in the semi-finals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “José Mourinho” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:25.230Z",
+   "target": "f13888",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The young Alf Ramsey was described by his friend Fred Tibble as \"a very quiet boy who really loved sport\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:25.230Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alf Ramsey” is on the snapshot of s5"
+  }
+ ]
+}

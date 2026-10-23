@@ -1,0 +1,275 @@
+{
+ "article": "a1041",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Sickle_cell_disease",
+   "title": "Sickle cell disease – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:02.742Z",
+   "snapshot": "aa8526be4ec79718bdef9270272cae394a113cc28d02bb0bb7c081fc5867b43d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Myoglobin",
+   "title": "Myoglobin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:03.551Z",
+   "snapshot": "8d87cbc7d8d7d3fa661481530c32b18da7902024c02ac0531d9ea8372442d824"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bilirubin",
+   "title": "Bilirubin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:04.679Z",
+   "snapshot": "d8e2b7d2bad44a8511668673d65d238e3962c117b0b426aa7624a80d250b7e6b"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/melanin",
+   "title": "melanin – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Melanin",
+   "title": "Melanin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:05.704Z",
+   "snapshot": "b43229fce4a2959de2d1d94fb9859646d40734ee8e8d5f14aedc0b85536decaa"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hemocyanin",
+   "title": "Hemocyanin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:36.165Z",
+   "snapshot": "cf2e1c6fbca31922cfa18e0162fabfea1330c6f4cdbc4033aa8dc6494604105a"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Albinism_in_humans",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:37:06.726Z",
+   "snapshot": "5a434d8072add49f3a72a4eb1cd24940f52b0513b0045ca2101d611e00074891"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05201",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "hemoglobin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05202",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "myoglobin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05203",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "bilirubin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "melanin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05204",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "melanin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript ppm-016"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f05205",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "hemocyanin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:24.141Z",
+   "target": "f05201",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sickle cell disease (SCD), also simply called sickle cell, is a group of inherited hemoglobin-related blood disorders.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.141Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hemoglobin” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:24.141Z",
+   "target": "f05202",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Myoglobin (symbol Mb or MB) is an iron- and oxygen-binding protein found in the cardiac and skeletal muscle tissue of vertebrates in general and in almost all mammals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.141Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “myoglobin” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:24.141Z",
+   "target": "f05203",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bilirubin (BR) (adopted from German, originally bili, for bile, plus ruber, Latin for red) is a red-orange compound that occurs  as the reduction product of biliverdin, a breakdown product of heme.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.141Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “bilirubin” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:24.141Z",
+   "target": "f05204",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Melanin ( ; from Ancient Greek  μέλας (mélas) 'black, dark') is a family of biomolecules organized as oligomers or polymers, which among other functions provide the pigments of many organisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.141Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “melanin” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:24.141Z",
+   "target": "f05205",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hemocyanin was first discovered in Octopus vulgaris by Leon Fredericq in 1878.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:24.141Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “hemocyanin” is on the snapshot of s6"
+  }
+ ]
+}

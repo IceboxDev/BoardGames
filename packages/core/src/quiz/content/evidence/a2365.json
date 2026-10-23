@@ -1,0 +1,350 @@
+{
+ "article": "a2365",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tenochtitlan",
+   "title": "Tenochtitlan",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:04:29.378Z",
+   "snapshot": "91a093370bc689a724eff49383a6922403bb461da9d86ad8e10c448146c74f57"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tenochtitlan",
+   "title": "Tenochtitlan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:20.370Z",
+   "snapshot": "e1b4adff6471d6d9c081b6e726e553a9de790a839938fd2fd156c23027974a34"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Chinampa",
+   "title": "Chinampa",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:21.269Z",
+   "snapshot": "8c566d0e8f8498e0379fe20bd08f7700e8bece57e613ba82c741aafaf7b49760"
+  },
+  "s4": {
+   "url": "https://arqueologiamexicana.mx/mexico-antiguo/la-fundacion-de-mexico-tenochtitlan-consideraciones-crono-logicas",
+   "title": "La fundación de México-Tenochtitlan. Consideraciones \"crono-lógicas\" (Patrick Johansson K.)",
+   "publisher": "Arqueología Mexicana (Editorial Raíces / INAH)",
+   "kind": "scholarly",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T12:46:54.316Z",
+   "snapshot": "da6f340077c79f3f3320d8fb7b7c6a0be3ebbe6b54b81b031dc9eb2354251d2e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "14. Jahrhundert",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-191"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12332",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lake Texcoco",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12333",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hernán Cortés",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12335",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mexico City",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25646",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Aztecs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 46; history entry seq 48; transcript ppm-125"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:05.825Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "14. Jahrhundert",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“14. Jahrhundert”, “14th century”, “XIV век”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:05.825Z",
+   "target": "f12332",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The city was built on an island in what was then Lake Texcoco in the Valley of Mexico.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lake Texcoco” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:05.825Z",
+   "target": "f12333",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spanish conquistador Hernán Cortés estimated it was twice the size of the city of Salamanca with about 60,000 people trading daily.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hernán Cortés” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:05.825Z",
+   "target": "f12335",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tenochtitlan, also known as Mexico-Tenochtitlan, was a large Mexican altepetl in what is now the historic center of Mexico City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mexico City” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:05.825Z",
+   "target": "f25646",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Aztecs did not invent the chinampa technology but rather were the first to develop it to a large-scale cultivation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:05.825Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Aztecs” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:03:37Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The exact date of the founding of the city is unclear, but the date 13 March 1325 was chosen in 1925 to celebrate the 600th anniversary of the city.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:03:38Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Zeitpunkt der ersten aztekischen Besiedelung lässt sich auf die Zeit zwischen 1320 und 1350 datieren.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "1320–1350 = 14th century either way."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:03:40Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La fecha 2 casa, 1325 en la cronología cristiana, ha sido considerada como la fecha fundacional de México-Tenochtitlan en las fuentes del siglo XVI y nunca ha sido cuestionada.",
+     "quoteLang": "es",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "Johansson discusses 1324/1325 as a calendrical pair; either way the 14th century."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:50.076Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The exact date of the founding of the city is unclear, but the date 13 March 1325 was chosen in 1925 to celebrate the 600th anniversary of the city.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:50.076Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Zeitpunkt der ersten aztekischen Besiedelung lässt sich auf die Zeit zwischen 1320 und 1350 datieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:50.076Z",
+   "target": "f12331",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La fecha 2 casa, 1325 en la cronología cristiana, ha sido considerada como la fecha fundacional de México-Tenochtitlan en las fuentes del siglo XVI y nunca ha sido cuestionada.",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:50.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s4"
+  }
+ ]
+}

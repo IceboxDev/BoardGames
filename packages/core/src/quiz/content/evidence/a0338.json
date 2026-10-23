@@ -1,0 +1,366 @@
+{
+ "article": "a0338",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film)",
+   "title": "The NeverEnding Story (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:09.346Z",
+   "snapshot": "5865bf9ebf979628be04190c88afb1434c25071b3e79e57fc9039f57875e628e"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Neverending_Story",
+   "title": "The Neverending Story – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:10.411Z",
+   "snapshot": "97375312a7d28595b3c55e973203624faecaaa36ca7b9151f1927c022f81773d"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_unendliche_Geschichte_(Roman)",
+   "title": "Die unendliche Geschichte (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:09.489Z",
+   "snapshot": "87b7b79242cdbd0b1f04c217c8a4f2565f4f9ea6c493beb8abb189b9506e50ff"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Momo_(novel)",
+   "title": "Momo (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:11.339Z",
+   "snapshot": "f7c400f33a6cb04042a26949a0d10c230ad0aaddf3f745f7e507298ab2aca9e0"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Jim_Knopf_und_Lukas_der_Lokomotivf%C3%BChrer",
+   "title": "Jim Knopf und Lukas der Lokomotivführer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:43:10.871Z",
+   "snapshot": "0cefa63e3b001f88394c3503d9e82da8e2c1e72e8a884995f94143ea6a315d2e"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Momo_(Roman)",
+   "title": "Momo (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:49:09.643Z",
+   "snapshot": "c8a9a9258e3f037fcc3f6eff475e8d99a8b09069bbba8e56e910e9a86eec1191"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01686",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Falkor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c029"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bastian Balthasar Bux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bastian Balthasar Bux",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-292"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01688",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Atreyu",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01689",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Childlike Empress",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f01690",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cassiopeia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jim Knopf und Lukas der Lokomotivführer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-274"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f12564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Zeit",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; history entry seq 45; transcript tp-294"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f01686",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It was produced by Bernd Eichinger and Dieter Geissler, and stars Noah Hathaway, Barret Oliver, Tami Stronach, Patricia Hayes, Sydney Bromley, Gerald McRaney and Moses Gunn, with Alan Oppenheimer providing the voices of Falkor, Gmork, and others.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Falkor” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f01687",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bastian Balthasar Bux",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Bastian Balthasar Bux”, “Бастиан Бальтазар Букс”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f01687",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bastian Balthasar Bux ist ein Menschenjunge, der zunächst nur einen Roman über das Land Phantásien liest, doch die Geschichte wird für ihn mehr und mehr zur Wirklichkeit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bastian Balthasar Bux” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f01688",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The young warrior Atreyu is tasked with discovering a cure for her illness in order to save Fantasia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atreyu” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f01689",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A delegation seeks the aid of the realm's ruler, the Childlike Empress, but her physician reveals she is ill and has chosen a boy warrior named Atreyu to find a cure.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Childlike Empress” is on the snapshot of s2"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f01690",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "When everyone else has fallen under the influence of the Men in Grey in one way or another, Momo meets Cassiopeia, a tortoise who can communicate through writing on her shell and can see thirty minutes into the future.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cassiopeia” is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f12563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jim Knopf und Lukas der Lokomotivführer ist ein Kinderbuch des deutschen Schriftstellers Michael Ende aus dem Jahr 1960.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jim Knopf und Lukas der Lokomotivführer” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:24:32.099Z",
+   "target": "f12564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Titel bezeichnet die Hauptperson, der Untertitel lautet: Die seltsame Geschichte von den Zeit-Dieben und von dem Kind, das den Menschen die gestohlene Zeit zurückbrachte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:32.099Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zeit” is on the snapshot of s6"
+  }
+ ]
+}

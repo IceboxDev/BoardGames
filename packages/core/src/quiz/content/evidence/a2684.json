@@ -1,0 +1,473 @@
+{
+ "article": "a2684",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jane_Goodall",
+   "title": "Jane Goodall",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:03:09.723Z",
+   "snapshot": "2f29e1035ac0932a2fd10de6def1c28c872033d5b29547b317559336c8ed1e0c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Birut%C3%A9_Galdikas",
+   "title": "Biruté Galdikas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:42.164Z",
+   "snapshot": "0a06d98eec1ecd8badcd23dffd49d349cd7304dc6674cc3914ecf5cda97e7d1f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cynthia_Moss",
+   "title": "Cynthia Moss – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:43.138Z",
+   "snapshot": "c6f212c30276e6cda05e643ab30f2b2f1521fd9862c2f5298f79dc623c03ba6c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/George_Schaller",
+   "title": "George Schaller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:12:44.140Z",
+   "snapshot": "c55a7bfb7bbf103bc112040d5d6692b8a5e17518e4fa74832bc80bc4d4fa060a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Hundredth_monkey_effect",
+   "title": "Hundredth monkey effect",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:32.048Z",
+   "snapshot": "ad5ba9eac04450c5b58361e9c6b0824f1ddc1418235cdc26e17551f9a6e50786"
+  },
+  "s6": {
+   "url": "https://www.famousscientists.org/jane-goodall/",
+   "title": "Jane Goodall - Biography, Facts and Pictures",
+   "publisher": "Famous Scientists",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:32.557Z",
+   "snapshot": "58c0455856862d15a289056e2851f679193aeb773a6911f24edfdc19f0af538b"
+  },
+  "s7": {
+   "url": "https://www.biography.com/scientists/jane-goodall",
+   "title": "Jane Goodall",
+   "publisher": "Biography.com (A&E)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:32.800Z",
+   "snapshot": "44b22eb2408c0eff2c41d9259c1ffadb89ec943f4983f9a320013fcb141f599b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jane Goodall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14607",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Camp Leakey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14608",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Amboseli",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14609",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "George Schaller",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wolong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:57.560Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "She founded the Jane Goodall Institute in 1977 to promote wildlife conservation, followed by the Roots & Shoots youth programme in 1991, which grew into a global network.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jane Goodall” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:57.560Z",
+   "target": "f14607",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Leakey and the National Geographic Society helped Galdikas set up her research camp near the edge of the Java Sea, dubbed \"Camp Leakey\", to conduct field study on orangutans in Borneo.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Camp Leakey” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:57.560Z",
+   "target": "f14608",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Her studies have concentrated on the demography, behavior, social organization, and population dynamics of the African elephants of Amboseli.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amboseli” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:57.560Z",
+   "target": "f14609",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "WCS press release WCS biologist George Schaller reports surprising increase in Tibet's wildlife Archived March 9, 2021, at the Wayback Machine",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Schaller” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:57.560Z",
+   "target": "f14610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1980, as part of a cooperative project between the World Wildlife Fund (WWF) and China, Schaller carried out field research on the giant panda in the Wolong Nature Reserve in Sichuan Province.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:57.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wolong” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:13:30Z",
+   "target": "f14606",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "named \"Imo\" in 1953 by the researchers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23",
+   "note": "'The first' is not right: Japanese primatologists (Imanishi's group) identified and named individual macaques from the early 1950s, e.g. Imo at Koshima in 1953, years before Goodall reached Gombe in 1960. Wording reframed to 'broke with convention'."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:13:33Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Goodall set herself apart from convention by naming the animals in her studies of primates instead of assigning each a number.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:13:37Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first chimpanzee to accept Goodall she named David Greybeard. (Naming chimpanzees was an unusual practice for a scientific study.)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:13:42Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "her tendency to attribute human behaviors and names to chimpanzees struck some critics being as manipulative",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r053",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "premise",
+   "verdict": "refuted",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "named \"Imo\" in 1953 by the researchers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Goodall set herself apart from convention by naming the animals in her studies of primates instead of assigning each a number.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The first chimpanzee to accept Goodall she named David Greybeard. (Naming chimpanzees was an unusual practice for a scientific study.)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "her tendency to attribute human behaviors and names to chimpanzees struck some critics being as manipulative",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jane Goodall",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: no answer (“Jane Goodall”, “Джейн Гудолл”) on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jane Goodall - Biography, Facts and Pictures",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jane Goodall” is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:42.863Z",
+   "target": "f14606",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jane Goodall: Biography, Animal Scientist, Chimpanzee Expert",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.863Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jane Goodall” is on the snapshot of s7"
+  }
+ ]
+}

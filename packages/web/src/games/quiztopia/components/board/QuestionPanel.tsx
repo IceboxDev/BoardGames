@@ -1,16 +1,22 @@
-import { questionIdForRef } from "@boardgames/core/games/quiztopia/ids";
 import { CARDS_PER_GAME, type TurnView } from "@boardgames/core/games/quiztopia/types";
+import { FACT_ID_RE } from "@boardgames/core/quiz/ids";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
 import { Badge, Eyebrow, MicroLabel, Surface, TONE_TEXT } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
+import { AnswerMark } from "../../../../trainers/quiz/components/common/AnswerMark";
+import { ReportButton } from "../../../../trainers/quiz/components/report/ReportButton";
+import { EditorNote } from "../../../../trainers/quiz/components/wiki/EditorNote";
 import { districtByIndex, TONE_STRIP } from "../../bands";
-import { answerHints, type BoardLanguage, cardRefLabel, pickTexts } from "../../logic/copy";
-import { AnswerMark } from "../common/AnswerMark";
+import {
+  answerHints,
+  type BoardLanguage,
+  boardLanguages,
+  cardRefLabel,
+  pickTexts,
+} from "../../logic/copy";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
-import { ReportButton } from "../report/ReportButton";
-import { EditorNote } from "../wiki/EditorNote";
 import { useArticleSnippet } from "./use-article-snippet";
 
 // This turn's question card: band strip, category, card ref, the question in
@@ -44,15 +50,10 @@ export default function QuestionPanel({
   const headingId = useId();
   const q = turn.question;
   const primaryLang: "en" | "de" = lang === "de" ? "de" : "en";
-  const snippet = useArticleSnippet(
-    q?.cardRef ?? null,
-    q?.categoryIndex ?? null,
-    primaryLang,
-    revealed && !!q?.answerEn,
-  );
+  const snippet = useArticleSnippet(q?.questionId ?? null, primaryLang, revealed && !!q?.answerEn);
   if (!q) return null;
   const d = districtByIndex(q.categoryIndex);
-  const reportId = questionIdForRef(q.cardRef, d.n);
+  const reportId = FACT_ID_RE.test(q.questionId) ? q.questionId : null;
   const questions = pickTexts(lang, q.en, q.de);
   const answerEn = q.answerEn ?? "";
   const answerDe = q.answerDe ?? "";
@@ -88,7 +89,6 @@ export default function QuestionPanel({
                 context={{
                   target: { kind: "question", id: reportId },
                   title: questions[0] ?? q.en,
-                  category: d.n,
                   surface: "game",
                   language: lang,
                 }}
@@ -169,7 +169,12 @@ export default function QuestionPanel({
                   ))}
                 </ul>
               )}
-              <EditorNote language={lang} notesEn={q.notesEn} notesDe={q.notesDe} size="xs" />
+              <EditorNote
+                language={boardLanguages(lang)}
+                notesEn={q.notesEn}
+                notesDe={q.notesDe}
+                size="xs"
+              />
             </motion.div>
           )}
         </AnimatePresence>

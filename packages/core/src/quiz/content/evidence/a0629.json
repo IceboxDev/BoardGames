@@ -1,0 +1,427 @@
+{
+ "article": "a0629",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rudi_V%C3%B6ller",
+   "title": "Rudi Völler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:18.150Z",
+   "snapshot": "c04c04836d9f679bf81b5e0854d4c0ee882267b8d546ef89ae33f6e246b16ae6"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Rudi_V%C3%B6ller",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:15.930Z",
+   "snapshot": "10b53ae4b1b2e6243bf4fd4d41ee33242bd0823dd5785f6e19d7a05e6d84dd56"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Beckenbauer",
+   "title": "Franz Beckenbauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:55.585Z",
+   "snapshot": "b67246b1508aaf58ea35a2872b621a96d820bd54199168ed026eb5b6f9b12928"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Franz_Beckenbauer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:57.047Z",
+   "snapshot": "6d412fa41ba6079fa3e077af8fe1ca32ca7500576c635d0aa5046e90e83f542f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/2001_UEFA_Champions_League_final",
+   "title": "2001 UEFA Champions League final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:19.061Z",
+   "snapshot": "2641abd9461ae894b7656359738b4e1dbc15dd0afe4c62749b26522519ea7dc7"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Oliver_Kahn",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:52.847Z",
+   "snapshot": "e0db1a58c32f4770148d02522b67f9b4a75b41a16c589087d4aa5bb7e9753329"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Uwe_Seeler",
+   "title": "Uwe Seeler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:47.896Z",
+   "snapshot": "c7acc53f048364b1f9a28021ed3b3d99c42971260c22c202a9b0c78da6354ba2"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Uwe_Seeler",
+   "title": "Uwe Seeler",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:17.987Z",
+   "snapshot": "b8cb7ce3a82b1d7924368d56a2d8df3ed25a1c64b095552652dbc5f774fbcd14"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Robert_Huth",
+   "title": "Robert Huth",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:17.919Z",
+   "snapshot": "64d9b0e26b5152f3c3f4ea13a7985350fa6d373ca23c67cdff2f8280ff9f81f2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rudi Völler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c053"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rudi Völler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 9"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 16"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Oliver Kahn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oliver Kahn",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 29"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f03145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Uwe Seeler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f03145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Uwe Seeler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-340"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23",
+   "target": "f13885",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Robert Huth",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-341"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I always had much respect for Rudi Völler.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudi Völler” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rudi Völler wurde 1960 in Hanau (Hessen) als einer von zwei Söhnen von Kurt (1925–2016) und Ilse Völler (1928–2022) geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudi Völler” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Franz Anton Beckenbauer was born on 11 September 1945 at a clinic in the Maxvorstadt borough of Munich, the second son of postal-worker Franz Beckenbauer Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Franz Anton Beckenbauer wurde 1945 als zweiter Sohn des mittleren Postbeamten und gelernten Maschinenschlossers Franz Beckenbauer (1905–1977) und dessen Frau Antonie Hupfauf (* 23.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "This final would come to be known for the goalkeeping heroics of Bayern keeper Oliver Kahn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oliver Kahn” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Oliver Kahn ist der jüngere Sohn des in Lettland geborenen Deutsch-Balten und ehemaligen Karlsruher Bundesliga-Fußballspielers Rolf Kahn.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oliver Kahn” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Uwe Seeler (German pronunciation: [ˈuːvə ˈzeːlɐ]; 5 November 1936 – 21 July 2022) was a German footballer and football official.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uwe Seeler” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f03145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Uwe Seeler wurde in Hamburg als drittes Kind der beiden aus Hamburg-Rothenburgsort stammenden Eheleute Anny (1913–1994) und Erwin Seeler (1910–1997) geboren und war der jüngere Bruder von Dieter Seeler.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Uwe Seeler” is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:25:16.721Z",
+   "target": "f13885",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Robert Huth wurde 1984 im Ortsteil Biesdorf in Ost-Berlin in der DDR geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.721Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Huth” is on the snapshot of s9"
+  }
+ ]
+}

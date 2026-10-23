@@ -1,0 +1,493 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "earth-space/weather",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-224",
+    "category": 5
+   },
+   "factId": "f00342"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-232",
+    "category": 5
+   },
+   "factId": "f04724"
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-056",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-390",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie heißt eine Linie auf einer Wetterkarte, die Orte gleicher Temperatur verbindet?",
+      "en": "What is a line on a weather map called that joins places of equal temperature?",
+      "answerDe": "Isotherme",
+      "answerEn": "isotherm",
+      "timeline": {
+       "kind": "creation",
+       "start": "1817",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Alexander von Humboldt publishes the first map of isotherms in Paris",
+       "labelDe": "Alexander von Humboldt veröffentlicht in Paris die erste Isothermenkarte"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Contour_line",
+       "title": "Contour line",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie lautet der meteorologische Fachbegriff für ein Hochdruckgebiet, um das die Winde auf der Nordhalbkugel im Uhrzeigersinn drehen?",
+      "en": "What is the meteorological term for a high-pressure area, around which the winds turn clockwise in the Northern Hemisphere?",
+      "answerDe": "Antizyklone",
+      "answerEn": "anticyclone",
+      "timeline": {
+       "kind": "creation",
+       "start": "1877",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Francis Galton coins the term “anticyclone” for the weather around a high-pressure area",
+       "labelDe": "Francis Galton prägt den Begriff „Antizyklone“ für das Wetter um ein Hochdruckgebiet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Anticyclone",
+       "title": "Anticyclone",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welcher Einheit, die dem alten Millibar entspricht, geben Meteorologen den Luftdruck heute an?",
+      "en": "In which unit, equal to the old millibar, do meteorologists give air pressure today?",
+      "answerDe": "Hektopascal",
+      "answerEn": "hectopascal",
+      "timeline": {
+       "kind": "event",
+       "start": "1971",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The 14th General Conference on Weights and Measures adopts the pascal as the SI unit of pressure",
+       "labelDe": "Die 14. Generalkonferenz für Maß und Gewicht führt das Pascal als SI-Einheit des Drucks ein"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Pascal_(unit)",
+       "title": "Pascal (unit)",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Nach welchem niederländischen Meteorologen ist die Regel benannt, dass auf der Nordhalbkugel mit dem Rücken zum Wind das Tief links liegt?",
+      "en": "Which Dutch meteorologist gave his name to the rule that, with your back to the wind in the Northern Hemisphere, low pressure lies to your left?",
+      "answerDe": "Buys Ballot",
+      "answerEn": "Buys Ballot",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1817-10-10",
+       "end": "1890-02-03",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Christophorus Buys Ballot, Dutch meteorologist and founder of the Royal Netherlands Meteorological Institute",
+       "labelDe": "Christophorus Buys Ballot, niederländischer Meteorologe und Gründer des Königlich Niederländischen Meteorologischen Instituts"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/C._H._D._Buys_Ballot",
+       "title": "C. H. D. Buys Ballot",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Highs, Lows and Isobars: How to Read a Weather Map",
+    "titleDe": "Hochs, Tiefs und Isobaren: Wie man eine Wetterkarte liest",
+    "bodyEn": "A weather map looks like a tangle of curved lines, letters and symbols, but it follows a few simple rules. The thin closed lines that wind across it are isobars, and along each of them the air pressure is the same. Francis Galton, who drew one of the first weather maps from data of October 1861, helped turn such charts into a daily tool; since 1875 newspapers have printed them for their readers.\n\nAir pressure is the weight of the column of air above a place. At sea level it averages about 1,013 hectopascal. The hectopascal, equal to the old millibar, became the meteorologists' unit after the pascal itself was adopted as the SI unit of pressure in 1971. Isobars are usually drawn every 4 or 5 hectopascal: where they crowd together, pressure changes quickly over a short distance and the wind blows hard; where they lie far apart, the air is calm.\n\nThe isobars enclose highs and lows. A high-pressure area is called an anticyclone, a word Francis Galton coined in 1877. In it, air sinks, warms and dries out, which usually brings settled, sunny weather – and in winter clear, frosty nights. A low, or cyclone, is the opposite: air streams in and rises, cools, and its moisture condenses into clouds and rain.\n\nAir does not flow straight from high to low pressure. Because the Earth rotates, the Coriolis force deflects every moving air mass – to the right in the Northern Hemisphere, to the left in the Southern. The result is that a cyclone in the Northern Hemisphere rotates anticlockwise, while an anticyclone turns clockwise; south of the equator both directions are reversed. In 1857 the Dutch meteorologist Christophorus Buys Ballot, who had founded the Royal Netherlands Meteorological Institute in 1854, turned this into a rule anyone can use outdoors: stand with your back to the wind in the Northern Hemisphere, and low pressure lies to your left, high pressure to your right. Buys Ballot's law still serves sailors who have no instruments at hand.\n\nIsobars are not the only lines of equal value. A line joining places of the same temperature is an isotherm; Alexander von Humboldt published the first map of isotherms in Paris in 1817, revealing that places at the same latitude can have very different climates. Together, the two kinds of lines show at a glance where warm and cold air lie and where the next storm is brewing.\n\n| Line | joins places of equal … |\n|---|---|\n| isobar | air pressure |\n| isotherm | temperature |",
+    "bodyDe": "Eine Wetterkarte sieht aus wie ein Gewirr aus geschwungenen Linien, Buchstaben und Symbolen, doch sie folgt wenigen einfachen Regeln. Die dünnen geschlossenen Linien, die sich über sie ziehen, sind Isobaren, und entlang jeder von ihnen ist der Luftdruck gleich. Francis Galton, der aus Daten vom Oktober 1861 eine der ersten Wetterkarten zeichnete, half, solche Karten zu einem täglichen Werkzeug zu machen; seit 1875 drucken Zeitungen sie für ihre Leser.\n\nDer Luftdruck ist das Gewicht der Luftsäule über einem Ort. Auf Meereshöhe beträgt er im Mittel etwa 1013 Hektopascal. Das Hektopascal, gleich dem alten Millibar, wurde zur Einheit der Meteorologen, nachdem das Pascal selbst 1971 als SI-Einheit des Drucks eingeführt worden war. Isobaren werden meist im Abstand von 4 oder 5 Hektopascal gezeichnet: Wo sie sich drängen, ändert sich der Druck auf kurzer Strecke stark und der Wind weht heftig; wo sie weit auseinanderliegen, ist die Luft ruhig.\n\nDie Isobaren umschließen Hochs und Tiefs. Ein Hochdruckgebiet heißt Antizyklone, ein Wort, das Francis Galton 1877 prägte. In ihr sinkt die Luft ab, erwärmt sich und trocknet aus, was meist beständiges, sonniges Wetter bringt – und im Winter klare, frostige Nächte. Ein Tief, die Zyklone, ist das Gegenteil: Luft strömt ein und steigt auf, kühlt ab, und ihre Feuchtigkeit kondensiert zu Wolken und Regen.\n\nDie Luft strömt nicht geradewegs vom hohen zum tiefen Druck. Weil sich die Erde dreht, lenkt die Corioliskraft jede bewegte Luftmasse ab – auf der Nordhalbkugel nach rechts, auf der Südhalbkugel nach links. Deshalb rotiert ein Tiefdruckgebiet auf der Nordhalbkugel gegen den Uhrzeigersinn, ein Hoch dagegen im Uhrzeigersinn; südlich des Äquators sind beide Richtungen vertauscht. 1857 machte der niederländische Meteorologe Christophorus Buys Ballot, der 1854 das Königlich Niederländische Meteorologische Institut gegründet hatte, daraus eine Regel, die jeder im Freien anwenden kann: Wer auf der Nordhalbkugel mit dem Rücken zum Wind steht, hat das Tief zur Linken und das Hoch zur Rechten. Das Buys-Ballot-Gesetz hilft bis heute Seeleuten, die keine Instrumente zur Hand haben.\n\nIsobaren sind nicht die einzigen Linien gleicher Werte. Eine Linie, die Orte gleicher Temperatur verbindet, ist eine Isotherme; Alexander von Humboldt veröffentlichte 1817 in Paris die erste Isothermenkarte und zeigte damit, dass Orte auf derselben Breite ganz unterschiedliche Klimate haben können. Zusammen zeigen beide Linienarten auf einen Blick, wo warme und kalte Luft liegt und wo sich der nächste Sturm zusammenbraut.\n\n| Linie | verbindet Orte gleichen … |\n|---|---|\n| Isobare | Luftdrucks |\n| Isotherme | Temperatur |",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-347",
+      "category": 5
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-168",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Rahmenabkommen zum Schutz der Ozonschicht von 1985 ebnete den Weg für das Montreal-Protokoll?",
+      "en": "Which 1985 framework convention for the protection of the ozone layer paved the way for the Montreal Protocol?",
+      "answerDe": "Wiener Übereinkommen",
+      "answerEn": "Vienna Convention",
+      "timeline": {
+       "kind": "event",
+       "start": "1985",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Twenty nations sign the Vienna Convention for the Protection of the Ozone Layer",
+       "labelDe": "Zwanzig Staaten unterzeichnen das Wiener Übereinkommen zum Schutz der Ozonschicht"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+       "title": "Montreal Protocol",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher niederländische Atmosphärenchemiker teilte sich 1995 mit Mario Molina und Sherwood Rowland den Nobelpreis für Chemie für die Erklärung von Bildung und Abbau des Ozons?",
+      "en": "Which Dutch atmospheric chemist shared the 1995 Nobel Prize in Chemistry with Mario Molina and Sherwood Rowland for explaining how ozone forms and is broken down?",
+      "answerDe": "Paul Crutzen",
+      "answerEn": "Paul Crutzen",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1933-12-03",
+       "end": "2021-01-28",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Paul Crutzen, Dutch atmospheric chemist and 1995 Nobel laureate in chemistry for ozone research",
+       "labelDe": "Paul Crutzen, niederländischer Atmosphärenchemiker und Chemie-Nobelpreisträger 1995 für die Ozonforschung"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Paul_J._Crutzen",
+       "title": "Paul J. Crutzen",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Änderung des Montreal-Protokolls von 2016 regelt die schrittweise Reduzierung teilfluorierter Kohlenwasserstoffe (HFKW)?",
+      "en": "Which 2016 amendment to the Montreal Protocol phases down hydrofluorocarbons (HFCs)?",
+      "answerDe": "Kigali-Änderung",
+      "answerEn": "Kigali Amendment",
+      "timeline": {
+       "kind": "event",
+       "start": "2016-10",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Kigali Amendment, phasing down HFCs, is adopted at the 28th Meeting of the Parties in Kigali",
+       "labelDe": "Die Kigali-Änderung zur Reduzierung der HFKW wird auf dem 28. Vertragsstaatentreffen in Kigali beschlossen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+       "title": "Montreal Protocol",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "In welcher Einheit, benannt nach einem Oxforder Physiker, wird die Gesamtmenge des Ozons in einer Säule der Atmosphäre gemessen?",
+      "en": "In which unit, named after an Oxford physicist, is the total amount of ozone in a column of the atmosphere measured?",
+      "answerDe": "Dobson-Einheit",
+      "answerEn": "Dobson unit",
+      "timeline": {
+       "kind": "creation",
+       "start": "1920",
+       "end": null,
+       "precision": "decade",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Gordon Dobson builds the first ground-based instrument to measure total ozone",
+       "labelDe": "Gordon Dobson baut das erste bodengestützte Messgerät für das Gesamtozon"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Dobson_unit",
+       "title": "Dobson unit",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Saving the Ozone Layer: From CFCs to the Montreal Protocol",
+    "titleDe": "Die Rettung der Ozonschicht: Von den FCKW zum Montreal-Protokoll",
+    "bodyEn": "High above the weather, in the stratosphere, lies a thin veil of ozone, a molecule of three oxygen atoms. The ozone layer, discovered in 1913 by the French physicists Charles Fabry and Henri Buisson, is concentrated between about 15 and 35 kilometres and absorbs most of the Sun's ultraviolet radiation. Without it, the UV-B and UV-C light that reaches the ground would burn skin, damage eyes and harm plants and plankton.\n\nThe layer is astonishingly thin. Its thickness is measured in the Dobson unit, named after the Oxford physicist Gordon Dobson, who built the first ground-based instrument to measure total ozone in the 1920s. One Dobson unit corresponds to a layer of pure ozone 0.01 millimetres thick at standard pressure and temperature; a typical column of 300 Dobson units would make a layer of only 3 millimetres. Values below 220 units, never recorded before 1979, mark what is called an ozone hole.\n\nIn the 1970s chemists realised that the layer was in danger. Chlorofluorocarbons (CFCs), cheap and harmless-seeming gases used in spray cans, refrigerators and foam, drift up to the stratosphere, where UV light breaks them apart and releases chlorine that destroys ozone molecule by molecule. For explaining how ozone forms and is broken down, the Dutch atmospheric chemist Paul Crutzen, working at the Max Planck Institute in Mainz, shared the 1995 Nobel Prize in Chemistry with Mario Molina and Sherwood Rowland. The danger became visible in 1985, when British researchers reported a dramatic thinning of the ozone over Antarctica every southern spring.\n\nDiplomacy moved unusually fast. In 1985 twenty nations signed the Vienna Convention for the Protection of the Ozone Layer, a framework without binding cuts. Two years later, on 16 September 1987, it was followed by the Montreal Protocol on Substances that Deplete the Ozone Layer, which set a timetable for phasing out CFCs and related chemicals and entered into force on 1 January 1989. It became the first treaty in UN history to be ratified by every member state. The Kigali Amendment, adopted in October 2016, extended it to hydrofluorocarbons (HFCs), which spare the ozone layer but are powerful greenhouse gases.\n\nThe treaty worked. Chlorine in the stratosphere has been falling since the late 1990s, and scientists expect the ozone layer to recover to its 1980 state by around the middle of the century – the Antarctic ozone hole last of all.",
+    "bodyDe": "Hoch über dem Wetter, in der Stratosphäre, liegt ein dünner Schleier aus Ozon, einem Molekül aus drei Sauerstoffatomen. Die Ozonschicht, 1913 von den französischen Physikern Charles Fabry und Henri Buisson entdeckt, konzentriert sich zwischen etwa 15 und 35 Kilometern Höhe und absorbiert den größten Teil der ultravioletten Strahlung der Sonne. Ohne sie würde das UV-B- und UV-C-Licht am Boden die Haut verbrennen, die Augen schädigen und Pflanzen und Plankton schaden.\n\nDie Schicht ist erstaunlich dünn. Ihre Dicke wird in der Dobson-Einheit gemessen, benannt nach dem Oxforder Physiker Gordon Dobson, der in den 1920er-Jahren das erste bodengestützte Messgerät für das Gesamtozon baute. Eine Dobson-Einheit entspricht einer 0,01 Millimeter dicken Schicht reinen Ozons bei Normaldruck und Normaltemperatur; eine typische Säule von 300 Dobson-Einheiten ergäbe eine Schicht von nur 3 Millimetern. Werte unter 220 Einheiten, vor 1979 nie gemessen, kennzeichnen ein sogenanntes Ozonloch.\n\nIn den 1970er-Jahren erkannten Chemiker, dass die Schicht in Gefahr war. Fluorchlorkohlenwasserstoffe (FCKW), billige und harmlos scheinende Gase aus Spraydosen, Kühlschränken und Schaumstoffen, steigen bis in die Stratosphäre auf, wo UV-Licht sie zerlegt und Chlor freisetzt, das Ozon Molekül für Molekül zerstört. Für die Erklärung, wie Ozon entsteht und abgebaut wird, erhielt der niederländische Atmosphärenchemiker Paul Crutzen, der am Max-Planck-Institut in Mainz forschte, 1995 zusammen mit Mario Molina und Sherwood Rowland den Nobelpreis für Chemie. Sichtbar wurde die Gefahr 1985, als britische Forscher eine dramatische Ausdünnung des Ozons über der Antarktis in jedem Südfrühling meldeten.\n\nDie Diplomatie handelte ungewöhnlich schnell. 1985 unterzeichneten zwanzig Staaten das Wiener Übereinkommen zum Schutz der Ozonschicht, einen Rahmen ohne verbindliche Kürzungen. Zwei Jahre später, am 16. September 1987, folgte das Montreal-Protokoll über Stoffe, die zum Abbau der Ozonschicht führen; es legte einen Zeitplan für den Ausstieg aus FCKW und verwandten Chemikalien fest und trat am 1. Januar 1989 in Kraft. Es wurde der erste Vertrag in der Geschichte der UN, den alle Mitgliedstaaten ratifizierten. Die Kigali-Änderung, im Oktober 2016 beschlossen, dehnte es auf teilfluorierte Kohlenwasserstoffe (HFKW) aus, die die Ozonschicht schonen, aber starke Treibhausgase sind.\n\nDer Vertrag wirkt. Der Chlorgehalt der Stratosphäre sinkt seit den späten 1990er-Jahren, und Fachleute erwarten, dass sich die Ozonschicht bis etwa zur Mitte des Jahrhunderts auf den Stand von 1980 erholt – das antarktische Ozonloch als Letztes.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-249",
+      "category": 5
+     }
+    },
+    {
+     "generated": {
+      "de": "Welcher im Dezember 1997 in Japan beschlossene Klimavertrag legte erstmals verbindliche Ziele zur Senkung der Treibhausgase für Industrieländer fest?",
+      "en": "Which climate treaty, adopted in Japan in December 1997, first set binding greenhouse-gas reduction targets for industrialised countries?",
+      "answerDe": "Kyoto-Protokoll",
+      "answerEn": "Kyoto Protocol",
+      "timeline": {
+       "kind": "event",
+       "start": "1997-12-11",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Kyoto Protocol, with binding emission targets for industrialised countries, is adopted",
+       "labelDe": "Das Kyoto-Protokoll mit verbindlichen Emissionszielen für Industrieländer wird beschlossen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Kyoto_Protocol",
+       "title": "Kyoto Protocol",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches Klimaabkommen von 2015 soll die Erderwärmung deutlich unter 2 °C halten und eine Begrenzung auf 1,5 °C anstreben?",
+      "en": "Which climate agreement of 2015 aims to hold global warming well below 2 °C and to pursue a limit of 1.5 °C?",
+      "answerDe": "Pariser Klimaabkommen",
+      "answerEn": "Paris Agreement",
+      "timeline": {
+       "kind": "event",
+       "start": "2015-12-12",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Paris Agreement is adopted by consensus at the close of the COP21 climate conference",
+       "labelDe": "Das Pariser Klimaabkommen wird zum Abschluss der Klimakonferenz COP21 einvernehmlich beschlossen"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Paris_Agreement",
+       "title": "Paris Agreement",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Wie heißt die Kurve des seit 1958 am Mauna-Loa-Observatorium auf Hawaii gemessenen Kohlenstoffdioxids in der Atmosphäre?",
+      "en": "What is the graph of atmospheric carbon dioxide measured at the Mauna Loa Observatory in Hawaii since 1958 called?",
+      "answerDe": "Keeling-Kurve",
+      "answerEn": "Keeling Curve",
+      "timeline": {
+       "kind": "event",
+       "start": "1958",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Charles David Keeling begins continuous carbon dioxide measurements at Mauna Loa Observatory",
+       "labelDe": "Charles David Keeling beginnt fortlaufende Kohlenstoffdioxid-Messungen am Mauna-Loa-Observatorium"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Keeling_Curve",
+       "title": "Keeling Curve",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welches 1988 von WMO und UNEP gegründete UN-Gremium bewertet den Wissensstand zum Klimawandel und erhielt 2007 anteilig den Friedensnobelpreis?",
+      "en": "Which UN body, set up in 1988 by the WMO and UNEP, assesses the science of climate change and shared the 2007 Nobel Peace Prize?",
+      "answerDe": "Weltklimarat",
+      "answerEn": "IPCC",
+      "timeline": {
+       "kind": "founding",
+       "start": "1988",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The World Meteorological Organization and UNEP set up the Intergovernmental Panel on Climate Change",
+       "labelDe": "Die Weltorganisation für Meteorologie und das UNEP gründen den Weltklimarat (IPCC)"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change",
+       "title": "Intergovernmental Panel on Climate Change",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Counting Carbon: From the Keeling Curve to the Carbon Footprint",
+    "titleDe": "CO₂ zählen: Von der Keeling-Kurve zum CO₂-Fußabdruck",
+    "bodyEn": "Carbon dioxide is invisible and odourless, yet it is the gas that does most to warm the planet. That it is accumulating was first shown beyond doubt by the American chemist Charles David Keeling, who in 1958 began continuous measurements at the Mauna Loa Observatory in Hawaii. His readings, plotted year after year, form the Keeling Curve: a saw-tooth line that rises and falls with the seasons of the northern forests but climbs relentlessly, from about 315 parts per million at the start to more than 420 today. It was the first significant evidence of rapidly increasing carbon dioxide in the atmosphere.\n\nTo weigh the evidence for governments, the World Meteorological Organization and the UN Environment Programme set up the Intergovernmental Panel on Climate Change, the IPCC, in 1988. It does no research of its own; instead, thousands of scientists review the published studies and summarise them in assessment reports. In 2007 the IPCC shared the Nobel Peace Prize with the former US vice-president Al Gore.\n\nThe reports turned into treaties. The Kyoto Protocol, adopted on 11 December 1997 in Japan and in force from 2005, was the first to set binding targets for cutting greenhouse gases – but only for industrialised countries. Its successor, the Paris Agreement of 12 December 2015, binds almost every country in the world: global warming is to be held well below 2 °C above pre-industrial levels, with efforts to limit it to 1.5 °C. Each country sets and regularly tightens its own pledges.\n\nWhat the treaties count for nations, a newer idea counts for people, products and companies. The carbon footprint is the total amount of carbon dioxide (and, by extension, other greenhouse gases) that a person, an activity or a product causes directly and indirectly – from the petrol in the tank to the energy used in making the shirt one wears. The term arose around 2000, building on the older notion of the ecological footprint. An average person in Germany has a carbon footprint of around ten tonnes a year; a single long-haul return flight can add several tonnes more. Calculators on the internet let anyone estimate their own, and many firms now print the figure on their goods.",
+    "bodyDe": "Kohlenstoffdioxid ist unsichtbar und geruchlos und doch das Gas, das den Planeten am stärksten erwärmt. Dass es sich anreichert, wies als Erster zweifelsfrei der amerikanische Chemiker Charles David Keeling nach, der 1958 am Mauna-Loa-Observatorium auf Hawaii mit fortlaufenden Messungen begann. Seine Werte, Jahr für Jahr aufgetragen, bilden die Keeling-Kurve: eine Sägezahnlinie, die mit den Jahreszeiten der nördlichen Wälder steigt und fällt, aber unaufhaltsam klettert, von etwa 315 Teilen pro Million zu Beginn auf heute über 420. Sie war der erste bedeutende Beleg für den rasch steigenden Kohlenstoffdioxidgehalt der Atmosphäre.\n\nUm die Erkenntnisse für die Regierungen zu bewerten, gründeten die Weltorganisation für Meteorologie und das UN-Umweltprogramm 1988 den Zwischenstaatlichen Ausschuss für Klimaänderungen, kurz Weltklimarat (IPCC). Er forscht nicht selbst; vielmehr sichten Tausende Wissenschaftler die veröffentlichten Studien und fassen sie in Sachstandsberichten zusammen. 2007 erhielt der Weltklimarat gemeinsam mit dem früheren US-Vizepräsidenten Al Gore den Friedensnobelpreis.\n\nAus den Berichten wurden Verträge. Das Kyoto-Protokoll, am 11. Dezember 1997 in Japan beschlossen und ab 2005 in Kraft, legte als erstes verbindliche Ziele zur Senkung der Treibhausgase fest – allerdings nur für Industrieländer. Sein Nachfolger, das Pariser Klimaabkommen vom 12. Dezember 2015, verpflichtet fast alle Länder der Welt: Die Erderwärmung soll deutlich unter 2 °C über dem vorindustriellen Niveau gehalten werden, mit Anstrengungen, sie auf 1,5 °C zu begrenzen. Jedes Land legt eigene Zusagen fest und verschärft sie regelmäßig.\n\nWas die Verträge für Staaten zählen, zählt eine jüngere Idee für Menschen, Produkte und Unternehmen. Der CO₂-Fußabdruck, auch CO₂-Bilanz genannt, ist die Gesamtmenge an Kohlenstoffdioxid (und im weiteren Sinn anderer Treibhausgase), die eine Person, eine Tätigkeit oder ein Produkt direkt und indirekt verursacht – vom Benzin im Tank bis zur Energie für die Herstellung des Hemdes, das man trägt. Der Begriff entstand um 2000 in Anlehnung an den älteren ökologischen Fußabdruck. Ein Mensch in Deutschland hat im Schnitt einen CO₂-Fußabdruck von rund zehn Tonnen im Jahr; ein einziger Langstreckenflug hin und zurück kann mehrere Tonnen hinzufügen. Rechner im Internet lassen jeden den eigenen schätzen, und viele Firmen drucken den Wert inzwischen auf ihre Waren.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-261",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-318",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "de": "In welchem kalifornischen Tal wurde 1913 die offiziell anerkannte höchste Lufttemperatur der Welt, 56,7 °C, gemessen?",
+      "en": "In which Californian valley was the world's officially recognised highest air temperature, 56.7 °C, measured in 1913?",
+      "answerDe": "Death Valley",
+      "answerEn": "Death Valley",
+      "timeline": {
+       "kind": "event",
+       "start": "1913-07-10",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Furnace Creek in Death Valley records 56.7 °C, the official world heat record",
+       "labelDe": "Furnace Creek im Death Valley misst 56,7 °C, den offiziellen Welt-Hitzerekord"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Highest_temperature_recorded_on_Earth",
+       "title": "Highest temperature recorded on Earth",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "An welcher antarktischen Forschungsstation wurde die tiefste je direkt gemessene Temperatur der Erde, −89,2 °C, aufgezeichnet?",
+      "en": "At which Antarctic research station was the lowest temperature ever directly measured on Earth, −89.2 °C, recorded?",
+      "answerDe": "Wostok",
+      "answerEn": "Vostok Station",
+      "timeline": {
+       "kind": "event",
+       "start": "1983-07-21",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Vostok Station in Antarctica measures −89.2 °C, the lowest temperature directly recorded on Earth",
+       "labelDe": "Die Station Wostok in der Antarktis misst −89,2 °C, die tiefste direkt gemessene Temperatur der Erde"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth",
+       "title": "Lowest temperature recorded on Earth",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Auf welcher Insel vor Westaustralien wurde 1996 die höchste je außerhalb eines Tornados gemessene Windböe, 408 km/h, aufgezeichnet?",
+      "en": "On which island off Western Australia was the highest wind gust ever measured outside a tornado, 408 km/h, recorded in 1996?",
+      "answerDe": "Barrow Island",
+      "answerEn": "Barrow Island",
+      "timeline": {
+       "kind": "event",
+       "start": "1996-04-10",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Cyclone Olivia brings a 408 km/h gust to Barrow Island, the strongest non-tornado gust on record",
+       "labelDe": "Wirbelsturm Olivia bringt Barrow Island eine Böe von 408 km/h, die stärkste je gemessene außerhalb eines Tornados"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Barrow_Island_(Western_Australia)",
+       "title": "Barrow Island (Western Australia)",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "de": "Welche Bucht in der Ostantarktis, an der Douglas Mawsons Expedition 1912 ihr Lager aufschlug, gilt in Rekordbüchern als windigster Ort der Erde?",
+      "en": "Which bay in East Antarctica, where Douglas Mawson's expedition set up its base in 1912, is listed in record books as the windiest place on Earth?",
+      "answerDe": "Commonwealth Bay",
+      "answerEn": "Commonwealth Bay",
+      "timeline": {
+       "kind": "discovery",
+       "start": "1912",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Douglas Mawson's Australasian Antarctic Expedition discovers Commonwealth Bay and bases itself at Cape Denison",
+       "labelDe": "Douglas Mawsons Australasiatische Antarktisexpedition entdeckt die Commonwealth Bay und schlägt am Kap Denison ihr Lager auf"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Commonwealth_Bay",
+       "title": "Commonwealth Bay",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Weather Records: The Hottest, Coldest and Windiest Places on Earth",
+    "titleDe": "Wetterrekorde: Die heißesten, kältesten und windigsten Orte der Erde",
+    "bodyEn": "Weather records are measured with care: a reading only counts if the thermometer or anemometer stood in the right place, was properly maintained and has been checked by the national weather service or the World Meteorological Organization.\n\nGermany, cooled by the westerlies off the Atlantic, long seemed safe from extreme heat. The first official reading above 40 °C came in 1983, when the station at Gärmersdorf in Bavaria recorded 40.2 °C on 27 July. The mark has since been passed again and again: in 2015 at Kitzingen, in 2019 at several stations in the west, and in the heat wave of June 2026, when Drewitz in Saxony-Anhalt reached 41.8 °C, the current national record. A reading of 42.6 °C from Lingen in 2019 was later struck off as faulty.\n\nThe world's officially recognised heat record is far higher: 56.7 °C at Furnace Creek in Death Valley, California, on 10 July 1913. Some climatologists doubt the figure, but the WMO still lists it.\n\nThe opposite extreme belongs to Antarctica, on average the coldest, driest and windiest continent and mainly a polar desert. On 21 July 1983 the Soviet research station Vostok Station, high on the East Antarctic ice sheet, measured −89.2 °C, the lowest temperature ever directly recorded at ground level. Satellites have since detected surface readings of around −92 °C nearby, but those are not counted as air-temperature records.\n\nAntarctica's winds are driven by gravity. Air cooled over the high plateau grows dense and pours down towards the coast as katabatic winds, which in narrow valleys can exceed hurricane force. Their most famous victims were the men of Douglas Mawson's Australasian Antarctic Expedition, who in 1912 discovered and set up their base at Commonwealth Bay, at Cape Denison. Winds there regularly exceed 240 kilometres per hour and average around 80, which earned the bay a place in record books as the windiest place on Earth; Mawson called his account of the expedition “The Home of the Blizzard”.\n\nThe strongest single gust, however, was not measured in Antarctica. On 10 April 1996, as Severe Tropical Cyclone Olivia passed over Barrow Island off the coast of Western Australia, an anemometer there recorded 408 kilometres per hour – the highest wind gust ever measured outside a tornado. It beat the 372 kilometres per hour recorded on Mount Washington in New Hampshire in 1934.",
+    "bodyDe": "Wetterrekorde werden sorgfältig gemessen: Ein Wert zählt nur, wenn das Thermometer oder der Windmesser am richtigen Ort stand, ordentlich gewartet war und vom nationalen Wetterdienst oder der Weltorganisation für Meteorologie geprüft wurde.\n\nDeutschland, von den Westwinden vom Atlantik gekühlt, schien lange vor extremer Hitze sicher. Der erste offizielle Wert über 40 °C kam 1983, als die Station Gärmersdorf in Bayern am 27. Juli 40,2 °C maß. Seither wurde die Marke immer wieder überschritten: 2015 in Kitzingen, 2019 an mehreren Stationen im Westen und in der Hitzewelle im Juni 2026, als Drewitz in Sachsen-Anhalt 41,8 °C erreichte, den aktuellen deutschen Rekord. Ein Wert von 42,6 °C aus Lingen von 2019 wurde später als Fehlmessung gestrichen.\n\nDer offiziell anerkannte Hitzerekord der Welt liegt weit höher: 56,7 °C in Furnace Creek im Death Valley in Kalifornien am 10. Juli 1913. Manche Klimatologen bezweifeln den Wert, doch die WMO führt ihn weiterhin.\n\nDas andere Extrem gehört Antarktika, im Durchschnitt dem kältesten, trockensten und windigsten Kontinent und größtenteils einer Polarwüste. Am 21. Juli 1983 maß die sowjetische Forschungsstation Wostok hoch auf dem ostantarktischen Eisschild −89,2 °C, die tiefste je direkt am Boden gemessene Temperatur. Satelliten haben seither in der Nähe Oberflächenwerte um −92 °C erfasst, doch diese zählen nicht als Lufttemperaturrekorde.\n\nDie Winde Antarktikas werden von der Schwerkraft angetrieben. Über dem hohen Plateau abgekühlte Luft wird dicht und stürzt als Fallwind, als katabatischer Wind, zur Küste hinab, wo er in engen Tälern Orkanstärke übertreffen kann. Am bekanntesten bekamen das die Männer von Douglas Mawsons Australasiatischer Antarktisexpedition zu spüren, die 1912 die Commonwealth Bay entdeckten und am Kap Denison ihr Lager aufschlugen. Der Wind übersteigt dort regelmäßig 240 Kilometer pro Stunde und erreicht im Mittel rund 80, was der Bucht einen Platz in den Rekordbüchern als windigster Ort der Erde einbrachte; Mawson nannte seinen Expeditionsbericht „The Home of the Blizzard“.\n\nDie stärkste einzelne Böe wurde jedoch nicht in der Antarktis gemessen. Am 10. April 1996, als der schwere tropische Wirbelsturm Olivia über Barrow Island vor der Küste Westaustraliens zog, zeichnete ein Windmesser dort 408 Kilometer pro Stunde auf – die höchste je außerhalb eines Tornados gemessene Windböe. Sie übertraf die 372 Kilometer pro Stunde, die 1934 auf dem Mount Washington in New Hampshire gemessen worden waren.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-387",
+   "category": 5,
+   "domain": "earth-space",
+   "sub": "geology",
+   "why": "Antarctica as a polar desert: belongs with a0106 'The Largest Desert Is Made of Ice' (deserts). Its fact (Antarctica the coldest, driest, windiest continent) is the same as tp-318, which this bucket makes a new fact in the new 'Weather Records' article; alias it to that fact once merged."
+  }
+ ]
+}

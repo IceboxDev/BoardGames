@@ -1,0 +1,314 @@
+{
+ "article": "a0767",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Darwin%27s_finches",
+   "title": "Darwin's finches – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:58.290Z",
+   "snapshot": "da75454cb0e6083bc21b5990b08a2562ca7123272eb0ef5001bc6bf56174e249"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lonesome_George",
+   "title": "Lonesome George – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:59.272Z",
+   "snapshot": "40253b1aec79b209df2274e728564340f5f40f64a18c63c5e29498fbd6f175ff"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_mockingbird",
+   "title": "Galápagos mockingbird – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:00.276Z",
+   "snapshot": "c372434969dafc80b96ecdf1becd6237310cd31be4888e5a109196f48da887b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Galapagos_penguin",
+   "title": "Galapagos penguin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:01.360Z",
+   "snapshot": "3ef04b9cbd60ec9da32c12f61f85b97f4f5a4896a646017c0350f91d058ec0e2"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Darwinfinken",
+   "title": "Darwinfinken",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:18:58.726Z",
+   "snapshot": "f5bff9156bce3268f796b1190956bf18f887a2037670f0fbfd6af902fab7be0d"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_tortoise",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:02.504Z",
+   "snapshot": "52df11752690093a22632369a62eaa6dc4382f5c43b84855b3b98e4fde4c0410"
+  },
+  "s7": {
+   "url": "https://galapagosconservation.org.uk/wildlife/galapagos-penguin/",
+   "title": "Galapagos Penguin",
+   "publisher": "Galapagos Conservation Trust",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:31.582Z",
+   "snapshot": "f6791fcbd1133907336464f1e5bc344d63f5e24c9c1e4c45757d7b97f10e256c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03831",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Darwin's finches",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c064"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "giant tortoises",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "mockingbirds",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Galápagos penguin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13292",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles Darwin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-302"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:42.484Z",
+   "target": "f03831",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Darwin's finches (also known as the Galápagos finches) are a group of about 18 species of passerine birds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darwin's finches” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:42.484Z",
+   "target": "f03832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "abingdonii had been declining for the past one million years and identified lineage-specific variants affecting DNA repair genes, proteostasis, metabolism regulation and immune response as key processes during the evolution of giant tortoises via effects on longevity and resistance to infection.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “giant tortoises” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:42.484Z",
+   "target": "f03833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "However, because of the rules of binomial nomenclature, Orpheus was declared a junior synonym, and in 1841, George Robert Gray moved all of the Orpheus mockingbirds to the older genus Mimus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “mockingbirds” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:42.484Z",
+   "target": "f03835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Galápagos penguin (Spheniscus mendiculus) is a penguin endemic to the Galápagos Islands of Ecuador.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Galápagos penguin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:42.484Z",
+   "target": "f13292",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles Darwin, der als junger Mann an der Fahrt teilnahm, erkundete während dieser Zeit die Inseln San Cristóbal, Floreana, Isabela und San Salvador.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:42.484Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Darwin” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:11:26Z",
+   "target": "f03835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the only penguin found north of the equator .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:11:30Z",
+   "target": "f03835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "It is the most northerly occurring penguin species, nesting entirely in the tropics, with some colonies living on the northern tip of Isabela in the Northern Hemisphere.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r048",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:11.002Z",
+   "target": "f03835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Galapagos penguin - Galapagos Conservation Trust",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:11.002Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Galápagos penguin” is on the snapshot of s7"
+  }
+ ]
+}

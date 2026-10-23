@@ -1,0 +1,249 @@
+{
+ "article": "a1615",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Abgeordnetenhaus_von_Berlin",
+   "title": "Abgeordnetenhaus von Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:00.841Z",
+   "snapshot": "8c698bc0f813faf12ad94f43af46018db2e9563cec6426421a94288231d9bb16"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hamburgische_B%C3%BCrgerschaft",
+   "title": "Hamburgische Bürgerschaft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:01.731Z",
+   "snapshot": "8de014d4979f1bd9fe3745e3376903820e08b9a07e5255e3ec55f9c2e3092ff6"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bayerischer_Landtag",
+   "title": "Bayerischer Landtag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:03.362Z",
+   "snapshot": "050c5d5e56535fb02ec7e936f2a414787f66d4eaf26fe0ee5e65a6b36a83ad51"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Senat_von_Berlin",
+   "title": "Senat von Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:03.624Z",
+   "snapshot": "283b523fa9358a3d758d19a2d07b61af184a19687e95aa5642e428d496d89aaf"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bundesrat_(Deutschland)",
+   "title": "Bundesrat (Deutschland) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:05.588Z",
+   "snapshot": "f66fdc6f97561d36fdf67f628f16848f85bbb7747f4dee719951d0ebcfc57f7f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Maximilianeum",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:12:05.629Z",
+   "snapshot": "259b9936d3cb22340de81ec739e3b5e8ac04cee2e4626adbf8fcc9046a6d8b33"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08071",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Abgeordnetenhaus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c135"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08072",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hamburgische Bürgerschaft",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08073",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bayerischer Landtag",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08074",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Senat von Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08075",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bundesrat",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:51.592Z",
+   "target": "f08071",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Abgeordnetenhaus von Berlin (AGH Berlin) ist gemäß Artikel 38 Absatz 1 der Verfassung von Berlin (VvB) die Volksvertretung bzw.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Abgeordnetenhaus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:51.592Z",
+   "target": "f08072",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Bürgerschaft der Freien und Hansestadt Hamburg, kurz Hamburgische Bürgerschaft, ist gemäß Artikel 6 Absatz 1 Verfassung der Freien und Hansestadt Hamburg vom 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hamburgische Bürgerschaft” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:51.592Z",
+   "target": "f08073",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bayerischer Landtag bei der Europäischen Union",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bayerischer Landtag” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:51.592Z",
+   "target": "f08074",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Der Senat von Berlin ist ein Verfassungsorgan und übt als Landesregierung des Landes Berlin die Exekutivgewalt auf Landesebene aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Senat von Berlin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:51.592Z",
+   "target": "f08075",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Bundesrat (Abkürzung BR) ist ein Verfassungsorgan der Bundesrepublik Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:51.592Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bundesrat” is on the snapshot of s5"
+  }
+ ]
+}

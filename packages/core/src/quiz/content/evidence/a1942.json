@@ -1,0 +1,595 @@
+{
+ "article": "a1942",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Apollo_1",
+   "title": "Apollo 1 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:00.762Z",
+   "snapshot": "6891f4689e1c77390d2132bf96fd1606789beccf8349d5fdddd94a9989030eb1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mercury-Atlas_6",
+   "title": "Mercury-Atlas 6 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:01.669Z",
+   "snapshot": "5c3318f179077d1fb8b3942a594b1266b71a38781b6a925bf2117926ff537b93"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Project_Gemini",
+   "title": "Project Gemini – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:02.685Z",
+   "snapshot": "9cb358565758b48daa1e963f59d4f42fc98016803407cd1d8800c7f394dfdd08"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Artemis_I",
+   "title": "Artemis I – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:03.703Z",
+   "snapshot": "2cb92b61e4faa4c683dd40737ba098e77e1202907924d89dc0db52b3df3a0b89"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/STS-1",
+   "title": "STS-1",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:04.699Z",
+   "snapshot": "9eb7f5b65095e9899535b882c5cd5ded60df33b064e0cacdf2b0fa3ae589c53b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Moon_landing_conspiracy_theories",
+   "title": "Moon landing conspiracy theories",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:05.657Z",
+   "snapshot": "e3840f1f684a6be00cd8256682c0a26065bb2009af79ce7b77e6c706ad6f9223"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Artemis_II",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:06.692Z",
+   "snapshot": "0536b765886789a58f29be63580d6015101484bd11c86a8caa655917276c3ecc"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Artemis_III",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:07.593Z",
+   "snapshot": "61968fb3936be72b46785fd6b9fcc3d6c6437317357b6fcb90967c7bced81916"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Artemis_IV",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:08.559Z",
+   "snapshot": "3bf6d2f01c066add45aa107497873dcda52e548ee14de1e35a9ee8c55f55cd71"
+  },
+  "s10": {
+   "url": "https://www.nasa.gov/humans-in-space/artemis/",
+   "title": "Moon to Mars: NASA's Artemis Program",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:31.643Z",
+   "snapshot": "c0d324880db6c1ee2f048efd191d0943fa7935533afe8689da0c1b3db45d2b71"
+  },
+  "s11": {
+   "url": "https://www.nasa.gov/mission/artemis-iii/",
+   "title": "Artemis III",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:32.586Z",
+   "snapshot": "e341c3509a100274a4878a83c44b2aa06cf0ca2ba614f92874308abfa80f7c58"
+  },
+  "s12": {
+   "url": "https://en.wikipedia.org/wiki/Artemis_program",
+   "title": "Artemis program – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:31.902Z",
+   "snapshot": "3f46df97cb85400ab10bfa87538a531383ff7bf9950bda33711b49525eef1122"
+  },
+  "s13": {
+   "url": "https://www.rmg.co.uk/stories/topics/moon-landing-conspiracy-theories-debunked",
+   "title": "Moon landing conspiracy theories, debunked",
+   "publisher": "Royal Museums Greenwich",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:32.082Z",
+   "snapshot": "84d5dac517c65c188c5a34abfe7cb1dacb31dbd0f96f19e4eedd995c1c972570"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09706",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Apollo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c162"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09707",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mercury",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09708",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gemini",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Artemis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14467",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Columbia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 35; transcript tp-195"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "That the Moon landing was faked",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40; transcript tp-089"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:50.733Z",
+   "target": "f09706",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Apollo 1, initially designated AS-204, was planned to be the first crewed mission of the Apollo program, the American undertaking to land the first man on the Moon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Apollo” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:50.733Z",
+   "target": "f09707",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mercury-Atlas 6 (MA-6) was the first crewed American orbital spaceflight, which took place on February 20, 1962.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mercury” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:50.733Z",
+   "target": "f09708",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Project Gemini (IPA: ) was the second United States human spaceflight program to fly.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gemini” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:50.733Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Artemis I (November 16 – December 11, 2022), formerly Exploration Mission-1 (EM-1), was an uncrewed Moon-orbiting mission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Artemis” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:50.733Z",
+   "target": "f14467",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The first orbiter, Columbia, launched on April 12, 1981, and returned on April 14, 1981, 54.5 hours later, having orbited the Earth 37 times.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:50.733Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Columbia” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:50.733Z",
+   "target": "f14468",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "That the Moon landing was faked",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“That the Moon landing was faked”, “Die Mondlandung sei gefälscht gewesen”, “Высадка на Луну была фальсификацией”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:09:40Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "NASA’s first crewed Moon landing under the Artemis program will take place in 2028.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:09:43Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "helping NASA and its partners reduce risk before Americans return to the Moon on Artemis IV.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:09:46Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "aimed at returning humans to the Moon for the first time since the Apollo program and building a permanent lunar base.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:09:48Z",
+   "target": "f14468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The Moon landings were faked. Apollo 11 didn't happen. Humans never set foot on the Moon. Heard all this before?",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:09:51Z",
+   "target": "f14468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An early and influential book about the subject of a Moon-landing conspiracy, We Never Went to the Moon: America's Thirty Billion Dollar Swindle, was self-published in 1976 by Bill Kaysing",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r015",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "NASA’s first crewed Moon landing under the Artemis program will take place in 2028.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s10"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "helping NASA and its partners reduce risk before Americans return to the Moon on Artemis IV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s11"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "aimed at returning humans to the Moon for the first time since the Apollo program and building a permanent lunar base.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s12"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f14468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The Moon landings were faked. Apollo 11 didn't happen. Humans never set foot on the Moon. Heard all this before?",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s13"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f14468",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "An early and influential book about the subject of a Moon-landing conspiracy, We Never Went to the Moon: America's Thirty Billion Dollar Swindle, was self-published in 1976 by Bill Kaysing",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Moon to Mars | NASA's Artemis Program - NASA",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Artemis” is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Artemis III will carry out a series of objectives in low Earth orbit designed to demonstrate critical systems needed for future lunar landings, beginning with Artemis IV.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Artemis” is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:57:40.574Z",
+   "target": "f09710",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The Artemis program is a Moon exploration program led by the United States' National Aeronautics and Space Administration (NASA), aimed at returning humans to the Moon for the first time since the Apollo program and building a permanent lunar base.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:40.574Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Artemis” is on the snapshot of s12"
+  }
+ ]
+}

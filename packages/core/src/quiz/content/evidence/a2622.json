@@ -1,0 +1,611 @@
+{
+ "article": "a2622",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Telephone_keypad",
+   "title": "Telephone keypad",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:49.058Z",
+   "snapshot": "c022225b9945961f22bf6b900f5af9bcfa743837dd599ff93f7909240ff9f07c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/BlackBerry",
+   "title": "BlackBerry",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:50.273Z",
+   "snapshot": "14858a1a698078ac59ac4f6c7f610aa729c643cf315cfd461e09824b18a6093b"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_S7",
+   "title": "Samsung Galaxy S7",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:51.317Z",
+   "snapshot": "7602c476269b4885c40279b20861ad4dfff4e3f3e854a6883c5c136b5fea1a9a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Motorola_DynaTAC",
+   "title": "Motorola DynaTAC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:52.029Z",
+   "snapshot": "8706aa832625223b8d4a2ce1ab321389d884b767f73c28eeee7e674ac1800cd2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/T9_(predictive_text)",
+   "title": "T9 (predictive text) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:53.039Z",
+   "snapshot": "92b3d970d47ede8bb3eaa330eeb99f67a2f3d34b80dd2db1917c04a0ef1d1d33"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Nokia_3310",
+   "title": "Nokia 3310 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:54.059Z",
+   "snapshot": "5f366025725ece44b278f6b3c0e810bb3157f4cb696053cacdcd095b2b0e2787"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/IBM_Simon",
+   "title": "IBM Simon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:55.111Z",
+   "snapshot": "1e08f775e51d12e556f7544fd838fa3c4d91d47527ff083d1449130467dac7c0"
+  },
+  "s8": {
+   "url": "https://gigazine.net/gsc_news/en/20110503_first_touch_panel_smartphone_ibm_simon",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:09:54.423Z",
+   "snapshot": "d10cad706f235b19ec65945b271dfcbc4ac7c2e932c4d705e61f4a7581fb1376"
+  },
+  "s9": {
+   "url": "https://www.motorolasolutions.com/en_us/about/company-overview/history/explore-motorola-heritage/cell-phone-development.html",
+   "title": "Cell Phone Development – Motorola Heritage",
+   "publisher": "Motorola Solutions",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:54.225Z",
+   "snapshot": "9d49233803e678b2470577809a5c08ee2a2e5759a2a4da59d42ff5f103acbe1b"
+  },
+  "s10": {
+   "url": "https://www.bbc.com/news/technology-28802053",
+   "title": "World's first 'smartphone' celebrates 20 years",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:54.257Z",
+   "snapshot": "79471dfc07edffe9649d553081cefa99345d7905a8b7a62f5342970dbe33105f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MNO",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript tp-212"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14171",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "BlackBerry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-080"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14172",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Samsung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 19; transcript tp-225"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "DynaTAC 8000X",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14174",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Text on 9 keys",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14175",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nokia 3310",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "IBM Simon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42; history entry seq 43"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "IBM Simon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 42; history entry seq 43"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f14170",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MNO",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“MNO”) on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f14171",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "BlackBerry (BB) is a discontinued brand of mobile devices and related mobile services, originally developed and maintained by the Canadian company Research In Motion (RIM, later known as BlackBerry Limited) until 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “BlackBerry” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f14172",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Samsung Galaxy S7 and S7 Edge are Android-based smartphones manufactured, released and marketed by Samsung Electronics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Samsung” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Martin Cooper, a former general manager for the systems division at Motorola, led a team that produced the DynaTAC 8000X, the first commercially available cellular phone small enough to be easily carried, and made the first phone call from it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “DynaTAC 8000X” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f14174",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "T9, which stands for Text on 9 keys, is a predictive text software technology for mobile phones, specifically those that contain a 3×4 numeric keypad (which may be physical or virtual).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Text on 9 keys” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f14175",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Nokia 3310 is a discontinued GSM mobile phone by Nokia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nokia 3310” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The IBM Simon Personal Communicator (simply known as IBM Simon) is a cellular phone and personal digital assistant (PDA) designed by International Business Machines (IBM), released in 1992.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IBM Simon” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:48.209Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "BellSouth - IBM Simon PDA cellph",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:48.209Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “IBM Simon” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:11:49Z",
+   "target": "f14170",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MNO (on some older telephones, MN)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Table row for key 6 (ITU-T E.161 layout)."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:12:02Z",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Unveiled on March 6, 1983, the DynaTAC was the first commercially available handheld cellular phone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:12:03Z",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "On September 21, 1983, Motorola made history when the FCC approved the DynaTAC 8000X phone, the world's first commercial portable cell phone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "FCC approval 1983; retail sales began in 1984 (Wikipedia: wide availability 13 April 1984)."
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:12:30Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "it has retrospectively been referred to as the first true smartphone.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:12:31Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This chunky, black box was in fact the world's first 'smartphone'. The IBM Simon went on sale to the public on 16 August 1994",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:33.260Z",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Unveiled on March 6, 1983, the DynaTAC was the first commercially available handheld cellular phone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:33.260Z",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "On September 21, 1983, Motorola made history when the FCC approved the DynaTAC 8000X phone, the world's first commercial portable cell phone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:33.260Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "it has retrospectively been referred to as the first true smartphone.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:33.260Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "This chunky, black box was in fact the world's first 'smartphone'. The IBM Simon went on sale to the public on 16 August 1994",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s10"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:33.260Z",
+   "target": "f14173",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Motorola's DynaTAC 8000X phone and the cellular system behind it changed how the world communicates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “DynaTAC 8000X” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:33.260Z",
+   "target": "f28210",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "IBM Simon Personal Communicator was the forerunner of the modern smartphone",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:33.260Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “IBM Simon” is on the snapshot of s10"
+  }
+ ]
+}

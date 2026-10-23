@@ -1,0 +1,303 @@
+{
+ "article": "a1495",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Islamic_State",
+   "title": "Islamic State – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:53.119Z",
+   "snapshot": "075ae7abf4f47dc82ffaf7433e7c0f0c9b8579709384f8659899dce09d76c583"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Abu_Bakr_al-Baghdadi",
+   "title": "Abu Bakr al-Baghdadi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:34:28.932Z",
+   "snapshot": "a6380fd16ee5663d2eecd3afe1771fe55c07c3c23b79ff636fc57350d90fe831"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Siege_of_Koban%C3%AE",
+   "title": "Siege of Kobanî – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:54.135Z",
+   "snapshot": "0e0adc8f0b4dbc05062600a042aad55de7228f68e853fb4703492669e7b25ca3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tunisian_National_Dialogue_Quartet",
+   "title": "Tunisian National Dialogue Quartet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:55.030Z",
+   "snapshot": "63c2cbf2d6d85aff2ac8d0173ab5d2fae6541cf4d3d3dc683cbffcd5e8326b92"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Arabischer_Fr%C3%BChling",
+   "title": "Arabischer Frühling",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:53.545Z",
+   "snapshot": "baba8627de0d978c301d37a28fc00b04c631fe192fbaa0c00541c4fa1551b7a9"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Revolution_in_Tunesien_2010/2011",
+   "title": "Revolution in Tunesien 2010/2011",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:04:53.585Z",
+   "snapshot": "a8952219a56eea1c40eec1569317dadd9b20a09bdc582ba38bcbeeb607d2f7fd"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/American-led_intervention_in_Syria",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:56.299Z",
+   "snapshot": "f83d20b5136b70f8cfabba4bf799b3c1ccc9990277acabb3882c1601b740bb67"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Great_Mosque_of_al-Nuri,_Mosul",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:04:56.871Z",
+   "snapshot": "529c88d7944ae3c913808cbadabd4b80383662427f1fba87590df77b4e07949a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iraq and Syria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mosul",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kobani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tunisia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tunesien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-175"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Tunesien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-235"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:34.697Z",
+   "target": "f07471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Islamic State (IS), also known as the Islamic State of Iraq and the Levant (ISIL), the Islamic State of Iraq and Syria (ISIS), and by its Arabic acronym Da'esh,  is a transnational Salafi jihadist militant organisation and internationally unrecognised quasi-state.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iraq and Syria” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:34.697Z",
+   "target": "f07472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On 15 August 2011, a wave of ISI suicide attacks beginning in Mosul resulted in 70 deaths.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mosul” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:34.697Z",
+   "target": "f07474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The siege of Kobanî was launched by the Islamic State (IS) on 13 September 2014, in order to capture the Kobanî Canton and its main city of Kobanî (also known as Kobanê or Ayn al-Arab) in northern Syria, in the de facto autonomous region of Rojava.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kobani” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:34.697Z",
+   "target": "f07475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "French: Quartet du dialogue national) is a group of four civil society organizations that were central mediators in the effort to consolidate democratic gains and form a lasting constitutional settlement in Tunisia following the unrest and historic regime change of the 2011 Jasmine Revolution.[1]",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tunisia” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:34.697Z",
+   "target": "f07475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Diese richteten sich, beginnend mit der Revolution in Tunesien, in etlichen Staaten in Vorderasien (Maschrek/Arabische Halbinsel) und in Nordafrika (Maghreb und Ägypten) gegen die dort autoritär herrschenden Regime und die politischen und sozialen Strukturen dieser Länder.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tunesien” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:34.697Z",
+   "target": "f07475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Revolution in Tunesien 2010/2011 war die politische Umwälzung in Tunesien ab dem 17.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:34.697Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tunesien” is on the snapshot of s6"
+  }
+ ]
+}

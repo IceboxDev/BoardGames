@@ -1,0 +1,310 @@
+{
+ "article": "a1874",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Enid_Blyton",
+   "title": "Enid Blyton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:30.795Z",
+   "snapshot": "90bb9635dc37a3a5be69f464027ac3fa96d56f77efc646dd7e198da90dbc2474"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Astrid_Lindgren",
+   "title": "Astrid Lindgren – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:28.644Z",
+   "snapshot": "83c42a2367ed9589a3f813c79262ba28fcb2928281198c1db85544c281c868ff"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Otfried_Preu%C3%9Fler",
+   "title": "Otfried Preußler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:27.623Z",
+   "snapshot": "6f778a48aa650bd0cfd73a59d6e135e404d1974a4eed22f8f6799de494732221"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Michael_Ende",
+   "title": "Michael Ende – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:29.579Z",
+   "snapshot": "4127010632af186ccd43df7a918dfd05ec0424c7220fd044f12e39da567ee4e9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Matilda_(novel)",
+   "title": "Matilda (novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:30.602Z",
+   "snapshot": "2e583eb63a62bbba13138cd3d7c7784c922016cfc0a0406380926dcf256af6a2"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Wilhelm_Hauff",
+   "title": "Wilhelm Hauff",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:28.922Z",
+   "snapshot": "b4d0a2221fea357088b80e262e0d8c73b4a1db39892df8277e9eacb09ef39203"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Krabat_(Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:29.804Z",
+   "snapshot": "3e4730a9431e64f9def285793f39d9d97e2e4a77cee11287e7890f5f182e3098"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Harry_Potter",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:31.615Z",
+   "snapshot": "eadf708cdefb5ebea1566e9b39250ab3e77ce11e17eee29d0123be8d40e96783"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Ende",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:32.514Z",
+   "snapshot": "19be51a31e791dc3e8b25279b3f58fa192a9d2cef34a670797f7fb7b4f5d4279"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Enid Blyton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09367",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Astrid Lindgren",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09369",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Otfried Preußler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09370",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Michael Ende",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Roald Dahl",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 39; transcript tp-168"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wilhelm Hauff",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; transcript tp-269"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:37.859Z",
+   "target": "f09366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Enid Blyton was born on 11 August 1897 in East Dulwich, south London, United Kingdom, the only daughter and eldest of three children, to Thomas Carey Blyton, a cutlery salesman (recorded in the 1911 census with the occupation of \"Mantle Manufacturer dealer [in] women's suits, skirts, etc.\") and his",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enid Blyton” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:37.859Z",
+   "target": "f09367",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Astrid Lindgren was born on 14 November 1907.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Astrid Lindgren” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:37.859Z",
+   "target": "f09369",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Otfried Preußler wurde 1923 im tschechoslowakischen Reichenberg (Liberec) als Kind zweier Lehrer geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otfried Preußler” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:37.859Z",
+   "target": "f09370",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Three of Michael Ende's classmates were killed on their first day of combat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Ende” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:37.859Z",
+   "target": "f12561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Matilda is a 1988 children's novel by British author Roald Dahl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roald Dahl” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:37.859Z",
+   "target": "f12562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wilhelm Hauff wurde als Sohn des damaligen Regierungs-Registrators August Friedrich Hauff (1772–1809) und dessen Frau Wilhelmine Friederike Hedwig, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:37.859Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wilhelm Hauff” is on the snapshot of s6"
+  }
+ ]
+}

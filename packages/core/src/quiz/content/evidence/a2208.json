@@ -1,0 +1,375 @@
+{
+ "article": "a2208",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Simpsons_(Familie)",
+   "title": "Die Simpsons (Familie)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:56.518Z",
+   "snapshot": "d3ba9e201f4b8c70bf9f705f65c2be6656a47ad886d3a9a49252be06e750e7dc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Matt_Groening",
+   "title": "Matt Groening",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:00.312Z",
+   "snapshot": "92d347a7708ac3c1aece3b9c9655d98f97dd9d6923dfaf5bf36f6503b44ace8b"
+  },
+  "s3": {
+   "url": "https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=the-simpsons&episode=s03e11",
+   "title": "The Simpsons s03e11 Episode Script (Burns Verkaufen der Kraftwerk)",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:57.813Z",
+   "snapshot": "1cbf3dcd70046267f55c860b918c3acb46043f8e2030e90b0f7278d7840a2c14"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Springfield_(The_Simpsons)",
+   "title": "Springfield (The Simpsons) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:30.909Z",
+   "snapshot": "73cc1f738846981d400c74186115de42d3db49ec2ed55b0da309c224d7ebb3ae"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Santa%27s_Little_Helper",
+   "title": "Santa's Little Helper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:01.343Z",
+   "snapshot": "bed852c1a023478dbb8bb06071cf4cb3507ae1716425b8b517dd5caed8c743f1"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Mr._Burns",
+   "title": "Mr. Burns – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:02.219Z",
+   "snapshot": "f5403e759e36bc512ea6b083a79c5cb45492909297e1d619dc84a61da801ab32"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Burns_Verkaufen_der_Kraftwerk",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:03.218Z",
+   "snapshot": "92626f5ffac3fd22b01aebbbe0ef1b8022de1efa3de0ec6ae9e5e8339f9f8224"
+  },
+  "s8": {
+   "url": "https://simpsonspedia.net/index.php/Kraftwerk_zu_verkaufen",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:11.405Z",
+   "snapshot": "b4582ed0c9d0f3a1b51bf4a91ef790cebf6f36f16bbc9684ba48e8c6934096b9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11235",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bart, Lisa und Maggie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11236",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Members of his own family",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; history entry seq 11; transcript tp-250"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11238",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Oregon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 24; history entry seq 25; transcript tp-047"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11239",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Santa's Little Helper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11240",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Mr. Burns",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Homer Simpson",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Homer Simpson",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Homer Simpson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-059/2, u07: The line is Homer's in 'Burns Verkaufen der Kraftwerk' (S3E11): 'Yeah, those Germans aren't so bad. Sure, they've made mistakes in the past, but that's why pencils have erasers.' The card's German is a loose rendering (dub text not found online); neither Woody Allen nor Hasselhoff has such a line. Bank notes already explain the original wording."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Homer Simpson",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Homer Simpson",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s8"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11235",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Familie besteht aus den Eltern Homer und Marge Simpson sowie den drei Kindern Bart, Lisa und Maggie.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bart, Lisa und Maggie” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11236",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Groening famously named the main Simpson characters after members of his own family: his parents, Homer and Marge (for Groening's mother it was short for Margaret and the cartoon character Marge is short for Marjorie), and his younger sisters, Lisa and Margaret (Maggie).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Members of his own family” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Homer Simpson here.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Homer Simpson” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11237",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Nach einer Evaluation bleiben sämtliche Arbeitsplätze erhalten - bis auf den von Homer Simpson, der als das größte Sicherheitsrisiko des Kraftwerks identifiziert wurde.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Homer Simpson” is on the snapshot of s8"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11238",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Springfield was inspired by a number of real-life locations, including creator Matt Groening's hometown of Portland, Oregon, the nearby town of Springfield, Oregon, and producer Mike Scully's hometown of Springfield, Massachusetts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oregon” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11239",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Santa's Little Helper is a fictional dog in the American animated television series The Simpsons.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Santa's Little Helper” is on the snapshot of s5"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:36.613Z",
+   "target": "f11240",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Charles Montgomery Plantagenet Schicklgruber \"Monty\" Burns, usually referred to as Mr. Burns or C.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:36.613Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mr. Burns” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a2113",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Otis_Redding",
+   "title": "Otis Redding – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:41.671Z",
+   "snapshot": "9a84c43b89f5921c603297eab19bea553c4f0301989859cb2085b12828d1de1a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Let%27s_Get_It_On_(song)",
+   "title": "Let's Get It On (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:13.798Z",
+   "snapshot": "9df192622fd43c3220216cbaafb2e496007a45af56ac31a3a1592a20dec7c56a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Papa's_Got_a_Brand_New_Bag",
+   "title": "Papa's Got a Brand New Bag – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:14.793Z",
+   "snapshot": "69a39dd28e6e298494bb1b1a454e84a33bb9e53175b1cf2d5bce218e7df033fc"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Superstition_(song)",
+   "title": "Superstition (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:15.816Z",
+   "snapshot": "6a4ac826119e7a54994477480cb603dc93ad4c4265b1fe4de025461a93518397"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sam_Cooke",
+   "title": "Sam Cooke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:16.837Z",
+   "snapshot": "97f2a6a19299c7c9dd7ac2edfec1ad5e04a4261f38d76d5331241f07d637ab78"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/A_Change_Is_Gonna_Come",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:17.902Z",
+   "snapshot": "564d95df7683154ebd71e6f2be3dfa38714822febb0d3fb5b82212fee5188c54"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Otis Redding",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marvin Gaye",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "James Brown",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stevie Wonder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sam Cooke",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:24.660Z",
+   "target": "f10561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Redding was born in Dawson, Georgia, on September 9, 1941, the fourth of six children, and the first son of Otis Redding Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Otis Redding” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:24.660Z",
+   "target": "f10562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "\"Let's Get It On\" is a song by soul musician Marvin Gaye, released June 15, 1973, on Motown-subsidiary label Tamla Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marvin Gaye” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:24.660Z",
+   "target": "f10563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "\"Papa's Got a Brand New Bag\" is a song written and recorded by James Brown.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “James Brown” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:24.660Z",
+   "target": "f10564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Superstition\" is a song by American singer-songwriter Stevie Wonder.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stevie Wonder” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:24.660Z",
+   "target": "f10565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sam Cooke was born Samuel Cook in Clarksdale, Mississippi, in 1931 (he added the \"e\" to his last name in 1958 to signify a new start to his life).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:24.660Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sam Cooke” is on the snapshot of s5"
+  }
+ ]
+}

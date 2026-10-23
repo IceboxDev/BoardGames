@@ -1,0 +1,791 @@
+{
+ "article": "a1355",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ruminant",
+   "title": "Ruminant – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:31.327Z",
+   "snapshot": "0ad575421b4708ae7b8168b8e8da6f0d99e9fdd40c0252d2f0aad83458a93298"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/reticulum",
+   "title": "reticulum – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://classics.mit.edu/Aristotle/history_anim.2.ii.html",
+   "title": "The History of Animals by Aristotle, Book II – The Internet Classics Archive",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:30.145Z",
+   "snapshot": "3387d835f798ef63558d61c11cb939f4d8e6aa6ea1349026eba4bdb7bdde8dcb"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chr._Hansen",
+   "title": "Chr. Hansen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:32.188Z",
+   "snapshot": "d4e2691321fdf35636f07e1f39965857881757a2358e2e4b2f94fd749de30685"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lazzaro_Spallanzani",
+   "title": "Lazzaro Spallanzani – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:33.272Z",
+   "snapshot": "350d7f89af465766adfa64bf861f859730e2c4fe0c7977bb61ac4543c459df02"
+  },
+  "s6": {
+   "url": "https://en.wiktionary.org/wiki/gizzard",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:56:31.650Z",
+   "snapshot": "a0ec918508419a9ef6509a2fb1770841ab23b6daa0c90ef025aa5167c792f192"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=reticulum",
+   "title": "American Heritage Dictionary Entry: reticulum",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:34.100Z",
+   "snapshot": "42be72e079ad8c52913441882d0017ea486652b411197cd7b1469f3369ce8196"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Reticulum_(anatomy)",
+   "title": "Reticulum (anatomy) - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:34.181Z",
+   "snapshot": "1eeba69bf6f801c54be38e9bb33da08e20cba4812095de4d46686adbffadc591"
+  },
+  "s9": {
+   "url": "https://ahdictionary.com/word/search.html?q=omasum",
+   "title": "American Heritage Dictionary Entry: omasum",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:34.861Z",
+   "snapshot": "d20446a64ac1abbc11abc6ba1647edba2f5797aa5602cc0ade667d927cb7769d"
+  },
+  "s10": {
+   "url": "https://en.wikipedia.org/wiki/Omasum",
+   "title": "Omasum - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:35.060Z",
+   "snapshot": "e6dbd2497f00e82b19f6e2a962c9dbddb4107d7d33861b88dc0cb6d1e57986a2"
+  },
+  "s11": {
+   "url": "https://www.vocabulary.com/dictionary/omasum",
+   "title": "Omasum - Definition, Meaning & Synonyms | Vocabulary.com",
+   "publisher": "Vocabulary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:34.604Z",
+   "snapshot": "94cbe3832221567ed060b264d78156f5dea74de30afb46c6beccfa65a576533d"
+  },
+  "s12": {
+   "url": "https://ahdictionary.com/word/search.html?q=abomasum",
+   "title": "American Heritage Dictionary Entry: abomasum",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:35.860Z",
+   "snapshot": "a16ae1df6520816a1ba82a08cbd105feec48c10bf98d08540f0e82a5dce30ed8"
+  },
+  "s13": {
+   "url": "https://en.wikipedia.org/wiki/Abomasum",
+   "title": "Abomasum - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:36.043Z",
+   "snapshot": "3aced029484a83c9341cbddd03421935f0725190c26011d752aa14e1e552c4a5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "rumen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c113"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "reticulum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "omasum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "abomasum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "gizzard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "gizzard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:13.199Z",
+   "target": "f06771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The word ruminant comes from Latin rūminārī, \"to ruminate\", from rūmen, the first stomach.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rumen” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:13.199Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "omasum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“omasum”, “Blättermagen”, “книжка”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:13.199Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "abomasum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“abomasum”, “Labmagen”, “сычуг”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:13.199Z",
+   "target": "f06775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "gizzard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“gizzard”, “Muskelmagen”, “мускульный желудок”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:13.199Z",
+   "target": "f06775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "gizzard - Wiktionary, the free dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:13.199Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “gizzard” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:09:35Z",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zoology The second compartment of the stomach of ruminant mammals, lined with a membrane having honeycombed ridges.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:09:40Z",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The reticulum is the second chamber in the four-chamber alimentary canal of a ruminant mammal.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:09:45Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The third division of the stomach of a ruminant animal, located between the abomasum and the reticulum.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:09:50Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "is the third compartment of the stomach in ruminants.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:09:53Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "the third compartment of the stomach of a ruminant",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:09:56Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The fourth division of the stomach in ruminant animals, such as cows, sheep, and deer, in which digestion takes place.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:10:00Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "is the fourth and final stomach compartment in ruminants.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T08:10:03Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "abomasum—true stomach",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Zoology The second compartment of the stomach of ruminant mammals, lined with a membrane having honeycombed ridges.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The reticulum is the second chamber in the four-chamber alimentary canal of a ruminant mammal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The third division of the stomach of a ruminant animal, located between the abomasum and the reticulum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "is the third compartment of the stomach in ruminants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "the third compartment of the stomach of a ruminant",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s11"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "The fourth division of the stomach in ruminant animals, such as cows, sheep, and deer, in which digestion takes place.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s12"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "is the fourth and final stomach compartment in ruminants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s13"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "abomasum—true stomach",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s1"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "American Heritage Dictionary Entry: reticulum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “reticulum” is on the snapshot of s7"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06772",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The reticulum is the second chamber in the four-chamber alimentary canal of a ruminant mammal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “reticulum” is on the snapshot of s8"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "American Heritage Dictionary Entry: omasum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “omasum” is on the snapshot of s9"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The  omasum, also known as the green, the fardel, the manyplies and the psalterium, is the third compartment of the stomach in ruminants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “omasum” is on the snapshot of s10"
+  },
+  {
+   "id": "e32",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s11",
+     "quote": "Omasum - Definition, Meaning & Synonyms | Vocabulary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “omasum” is on the snapshot of s11"
+  },
+  {
+   "id": "e33",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This chamber controls what is able to pass into the abomasum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “abomasum” is on the snapshot of s1"
+  },
+  {
+   "id": "e34",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s12",
+     "quote": "American Heritage Dictionary Entry: abomasum",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “abomasum” is on the snapshot of s12"
+  },
+  {
+   "id": "e35",
+   "at": "2026-10-23T12:55:58.228Z",
+   "target": "f06774",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s13",
+     "quote": "The abomasum, also known as the maw, rennet-bag, or reed tripe, is the fourth and final stomach compartment in ruminants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:58.228Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “abomasum” is on the snapshot of s13"
+  }
+ ]
+}

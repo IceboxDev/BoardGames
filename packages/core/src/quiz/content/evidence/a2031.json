@@ -1,0 +1,195 @@
+{
+ "article": "a2031",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Venus_of_Urbino",
+   "title": "Venus of Urbino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:08.342Z",
+   "snapshot": "d9fee445766b85355a62d721860046e5cce4fd93178644adb219d75bee4f5cbd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sleeping_Venus_(Giorgione)",
+   "title": "Sleeping Venus (Giorgione) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:09.287Z",
+   "snapshot": "0362d1f69e8efd1b1c521d3eebd7e563c1e14ccbd62cdd065df4006890a35196"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Paolo_Veronese",
+   "title": "Paolo Veronese – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:10.392Z",
+   "snapshot": "019bd116369dd1483aa1596118767cc9fd90091dc31a6061d79469971bbcb1bd"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Last_Supper_(Tintoretto)",
+   "title": "Last Supper (Tintoretto) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:37:11.275Z",
+   "snapshot": "958fe5c3f4bb3ba3bbbf7e971a07d85ac43c00693878352e21f7d6e45380b082"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10151",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Titian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c170"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10152",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Giorgione",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10153",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paolo Veronese",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10154",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tintoretto",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:09.544Z",
+   "target": "f10151",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Venus of Urbino (also known as Reclining Venus) is an oil painting by Italian painter Titian, depicting a nude young woman, traditionally identified with the goddess Venus, reclining on a couch or bed in the sumptuous surroundings of a Renaissance palace.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Titian” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:09.544Z",
+   "target": "f10152",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sleeping Venus (Italian: Venere dormiente), also known as the Dresden Venus (Venere di Dresda), is a painting traditionally attributed to the Italian Renaissance painter Giorgione, although it has long been widely thought that Titian completed it after Giorgione's death in 1510.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giorgione” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:09.544Z",
+   "target": "f10153",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paolo Caliari (1528 – 19 April 1588), known as Paolo Veronese ( VERR-ə-NAY-zay, -⁠zee, US also  -⁠see; Italian: [ˈpaːolo veroˈneːze, -eːse]), was an Italian Renaissance painter based in Venice, known for extremely large history paintings of religion and mythology, such as The Wedding at Cana (1563)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paolo Veronese” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:09.544Z",
+   "target": "f10154",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The  Last Supper is a painting by the Italian Renaissance artist Jacopo Tintoretto.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:09.544Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tintoretto” is on the snapshot of s4"
+  }
+ ]
+}

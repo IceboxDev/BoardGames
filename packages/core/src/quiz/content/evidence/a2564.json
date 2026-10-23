@@ -1,0 +1,478 @@
+{
+ "article": "a2564",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Flashmob",
+   "title": "Flashmob",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:27.879Z",
+   "snapshot": "952ab82c43f6a196d7998ec746914b74b4fc09fbab0977090ce181269efa439d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Flash_mob",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:29.144Z",
+   "snapshot": "0bb2fde5ea3ab4d455985d6572447833688bfecf2448b276ac7862ecb9365889"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/ALS_Ice_Bucket_Challenge",
+   "title": "ALS Ice Bucket Challenge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:29.456Z",
+   "snapshot": "a993cd8353c4569b9136bd06dc9d7b158eae606f40fea41bdd8a5bea5a015c49"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ice_Bucket_Challenge",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:55.328Z",
+   "snapshot": "a54baa89f164b724eb794b25668b6f6f332a66749619f28dae4b4d1227306ab9"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Science-Slam",
+   "title": "Science-Slam",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:30.466Z",
+   "snapshot": "571dbf9945c5721a4b782fce6f4cd6d352b438ceeaea9a979c41af52a33c1fa0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pete_Frates",
+   "title": "Pete Frates – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:30.148Z",
+   "snapshot": "8d187807e9c6d0b9b5f6484d1803ec17555c7a7e67603af15864b9c6a4b96ba4"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mannequin_Challenge",
+   "title": "Mannequin Challenge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:31.157Z",
+   "snapshot": "7f8c7956a8d0b8b1f0e480633d656d71e47a258df79f40327971d7e33f7f1932"
+  },
+  "s8": {
+   "url": "https://www.deutschland.de/de/topic/wissen/science-slam-meister-benedikt-wiggering",
+   "title": "Science Slam in Deutschland",
+   "publisher": "deutschland.de (Fazit Communication on behalf of the German Federal Foreign Office)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:48:13.506Z",
+   "snapshot": "7831226ca511f496f129111ca13d9116e3855763fb773d204adf68ddb36af8ed"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Flashmob",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-305"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Flash mob",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 8"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ice Bucket Challenge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-137"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ice Bucket Challenge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 15"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13733",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Science-Slam",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21; transcript tp-287"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13735",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pete Frates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Darmstadt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f13737",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Mannequin Challenge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Flashmob (englisch flash mob; flash „Blitz“, mob [von lateinisch mobilis vulgus „reizbare Volksmenge“]) bezeichnet einen kurzen, scheinbar spontanen Menschenauflauf auf öffentlichen oder halböffentlichen Plätzen, bei dem die Teilnehmer einander nicht persönlich kennen und ungewöhnliche Dinge tun.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flashmob” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A flash mob (or flashmob) is a group of people that assembles suddenly in a public place, performs for a brief time, then quickly disperses, often for the purposes of entertainment, satire, and/or artistic expression.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flash mob” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die ALS Ice Bucket Challenge (deutsch ALS Eiskübelherausforderung) war eine Online-Aktion im Sommer 2014.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ice Bucket Challenge” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Ice Bucket Challenge, sometimes called the ALS Ice Bucket Challenge, is an activity involving the pouring of a bucket of ice water over a person's head, either by another person or self-administered, to promote awareness of the disease amyotrophic lateral sclerosis (ALS, also known as motor",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ice Bucket Challenge” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13733",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ein Science-Slam (englisch; im Deutschen auch Scienceslam; deutsch: Wissenschaftswettstreit, gebildet nach Poetry-Slam; auch Science Slam) ist ein wissenschaftliches Kurzvortragsturnier, bei dem Wissenschaftler (auch Science-Slammer) ihre Forschungsthemen innerhalb einer vorgegebenen Zeit vor",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Science-Slam” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13735",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "John Peter Frates III (December 28, 1984 – December 9, 2019) bka Pete Frates was an American college baseball player for the Boston College Eagles and an activist for amyotrophic lateral sclerosis (ALS) awareness.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pete Frates” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Format wurde Ende 2006 von dem Poetry-Slammer und Verständlichkeitsforscher Alex Dreppec in Darmstadt eingeführt, und ab 2008 von Markus Weißkopf (damals Haus der Wissenschaft Braunschweig) aufgenommen und verbreitet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darmstadt” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:30:39.005Z",
+   "target": "f13737",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Mannequin Challenge is a viral Internet video trend which became popular in November 2016.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.005Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mannequin Challenge” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:52:00Z",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der erste Science Slam fand 2006 in Darmstadt statt, von dort aus hat sich das Konzept mittlerweile in ganz Deutschland verbreitet.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:52:04Z",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Format wurde Ende 2006 von dem Poetry-Slammer und Verständlichkeitsforscher Alex Dreppec in Darmstadt eingeführt,",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:23.443Z",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der erste Science Slam fand 2006 in Darmstadt statt, von dort aus hat sich das Konzept mittlerweile in ganz Deutschland verbreitet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:23.443Z",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Das Format wurde Ende 2006 von dem Poetry-Slammer und Verständlichkeitsforscher Alex Dreppec in Darmstadt eingeführt,",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:23.443Z",
+   "target": "f13736",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der erste Science Slam fand 2006 in Darmstadt statt, von dort aus hat sich das Konzept mittlerweile in ganz Deutschland verbreitet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:23.443Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Darmstadt” is on the snapshot of s8"
+  }
+ ]
+}

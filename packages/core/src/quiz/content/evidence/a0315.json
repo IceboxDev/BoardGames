@@ -1,0 +1,431 @@
+{
+ "article": "a0315",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Marc_Chagall",
+   "title": "Marc Chagall – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:25.456Z",
+   "snapshot": "60b602b0e34e04fe665ce4267f9eb841ac54e7e7f4f871cd66964f3a469919fd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Old_Guitarist",
+   "title": "The Old Guitarist – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:26.256Z",
+   "snapshot": "08e31dd8a0c40c290945258d4dadbe91b78b9a2f9592a06c73b0749738a4a360"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Music_Lesson",
+   "title": "The Music Lesson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:27.288Z",
+   "snapshot": "d28c9cdf98ac7440931cd39b0e8c92027d8383519144cff01177d77e4098a380"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "title": "The Lute Player (Caravaggio) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:28.401Z",
+   "snapshot": "d96c0bd11a6a117a3ac8532cced3a779db705c10a7b7822511e3855bd7c99340"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Orchestra_at_the_Opera",
+   "title": "The Orchestra at the Opera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:29.271Z",
+   "snapshot": "971834f0b84c101f6de571495cd7a744ff269689ace8620ae0ff5e77b2cd1814"
+  },
+  "s6": {
+   "url": "https://borghese.gallery/exhibitions/caravaggio-the-lute-player.html",
+   "title": "The Lute Player by Caravaggio – exhibition",
+   "publisher": "borghese.gallery",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:16.585Z",
+   "snapshot": "bf93ef39ef6a5f94cb0627f867bb16b6957f9ec657a85bcebdaa0f599b7022ed"
+  },
+  "s7": {
+   "url": "https://artsandculture.google.com/asset/the-orchestra-at-the-opera/zgGLjRgFDFBXbA",
+   "title": "The Orchestra at the Opera – Edgar Degas (Musée d’Orsay)",
+   "publisher": "Google Arts & Culture / Musée d'Orsay",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:16.989Z",
+   "snapshot": "0610631c2cabd4d62268b8ba2ba23b99da2ab116ba11af950e36bde2a932d5ae"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01571",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "violin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01572",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "guitar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01573",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "virginal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "lute",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bassoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:28.798Z",
+   "target": "f01571",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2022 France restituted The Father (Le Père) to the heirs of David Cender, a Polish-Jewish violin maker and luthier who survived Auschwitz where his wife and daughter were killed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “violin” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:28.798Z",
+   "target": "f01572",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It depicts an elderly musician, a haggard man with threadbare clothing, who is hunched over his guitar while playing in the streets of Barcelona, Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “guitar” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:28.798Z",
+   "target": "f01573",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Music Lesson, Woman Seated at a Virginal or A Lady at the Virginals with a Gentleman by Johannes Vermeer is a painting of a young female pupil playing a virginal during a music lesson with a male teacher.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “virginal” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:28.798Z",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Lute Player is a composition by the Italian Baroque master Caravaggio.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.798Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “lute” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:28.798Z",
+   "target": "f01575",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "bassoon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“bassoon”, “Fagott”, “фагот”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:07:03Z",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the two versions of the Lute Player (Suonatore di liuto), one performed for Benedict and Vincenzo Giustiniani, from the Hermitage Museum in St. Petersburg (recently restored)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:07:06Z",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It exists in two official versions, one in the Wildenstein Collection and another in the Hermitage Museum, St. Petersburg.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:07:08Z",
+   "target": "f01575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Désiré Dihau, one of Degas' friends who played at the Paris Opera, is the bassoonist. Degas juggled with the traditional arrangement of the orchestra to place him in the centre of the composition.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:07:11Z",
+   "target": "f01575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Degas painted his bassoonist friend, Désiré Dihau, in The Orchestra at the Opera as one of fourteen musicians in an orchestra pit",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:49.186Z",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the two versions of the Lute Player (Suonatore di liuto), one performed for Benedict and Vincenzo Giustiniani, from the Hermitage Museum in St. Petersburg (recently restored)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:49.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:49.186Z",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It exists in two official versions, one in the Wildenstein Collection and another in the Hermitage Museum, St. Petersburg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:49.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:49.186Z",
+   "target": "f01575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Désiré Dihau, one of Degas' friends who played at the Paris Opera, is the bassoonist. Degas juggled with the traditional arrangement of the orchestra to place him in the centre of the composition.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:49.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:49.186Z",
+   "target": "f01575",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Degas painted his bassoonist friend, Désiré Dihau, in The Orchestra at the Opera as one of fourteen musicians in an orchestra pit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:49.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:49.186Z",
+   "target": "f01574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Lute Player by Caravaggio",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:49.186Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “lute” is on the snapshot of s6"
+  }
+ ]
+}

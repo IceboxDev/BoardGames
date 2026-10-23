@@ -1,0 +1,320 @@
+{
+ "id": "a0156",
+ "domain": "technology",
+ "sub": "computing",
+ "titleEn": "What's in a Name: How Programming Languages Got Called What They Are",
+ "titleDe": "Was ein Name verrät: Wie Programmiersprachen zu ihren Namen kamen",
+ "titleRu": "Что в имени тебе моём: как языки программирования получили свои названия",
+ "bodyEn": "Programming languages are named the way children and boats are named: after their parents, after heroes, after jokes, or simply after whatever came before. The stories behind the names are a short history of computing itself.\n\nThe oldest surviving high-level language wears its purpose in its name. Fortran, from \"Formula Translation\", was developed by John Backus and his team at IBM from 1954 and released in April 1957 for the IBM 704. Its goal was to let scientists write mathematical formulas instead of machine instructions, and its compiler produced code so efficient that sceptical assembly programmers were converted. Fortran is still used in weather models and supercomputing seven decades later.\n\nIn 1970 the Swiss computer scientist Niklaus Wirth published Pascal, a small, strictly structured language intended for teaching good programming habits. He named it after Blaise Pascal (1623–1662), the 17th-century French mathematician and philosopher who had built one of the first mechanical calculators in 1642. Pascal became the standard teaching language of the 1970s and 1980s, and its descendant Delphi is still alive.\n\nThe most famous name of all is the shortest. At Bell Labs in 1972, Dennis Ritchie created a language that followed an earlier one called B, so he called it C. From 1979 his colleague Bjarne Stroustrup extended it with classes and other object-oriented features. He first called the result \"C with Classes\", but in 1983 renamed it C++, a programmer's joke: in C, the expression \"++\" increments a variable by one, so C++ is \"C plus one\", the next step up from C. The language now runs everything from game engines to browsers and spacecraft.\n\nMicrosoft continued the joke in July 2000 when it introduced “C#”, pronounced \"C sharp\", as the flagship language of its new .NET platform. The hash symbol is meant to look like four plus signs stacked in a two-by-two grid, so C# is \"C++ ++\", one more increment; it also refers to the musical sharp sign, which raises a note by a semitone. Its lead designer, Anders Hejlsberg, had earlier created Turbo Pascal and Delphi.\n\nPython, by contrast, has nothing to do with snakes: Guido van Rossum named it after the British comedy troupe Monty Python. When the Dutch programmer began the language over the Christmas holidays of 1989 and released it in February 1991, he was reading the scripts of \"Monty Python's Flying Circus\" and wanted a name that was short, unique and slightly mysterious. The documentation is still full of spam, eggs and Monty Python references, and the language has become the most widely used in data science and machine learning.\n\n| Language | Year | Creator | Name comes from |\n|---|---|---|---|\n| Fortran | 1957 | John Backus (IBM) | \"Formula Translation\" |\n| Pascal | 1970 | Niklaus Wirth | Blaise Pascal |\n| C++ | 1983 | Bjarne Stroustrup | C incremented by one |\n| Python | 1991 | Guido van Rossum | Monty Python |\n| C# | 2000 | Anders Hejlsberg (Microsoft) | C++ incremented again, musical sharp |\n\nThe next time a compiler complains, remember that the language scolding you was probably named as a joke.",
+ "bodyDe": "Programmiersprachen werden benannt wie Kinder und Schiffe: nach ihren Eltern, nach Helden, nach Witzen oder einfach nach dem, was vorher da war. Die Geschichten hinter den Namen sind eine kurze Geschichte der Informatik selbst.\n\nDie älteste überlebende Hochsprache trägt ihren Zweck im Namen. Fortran, von „Formula Translation“, wurde ab 1954 von John Backus und seinem Team bei IBM entwickelt und im April 1957 für die IBM 704 veröffentlicht. Ihr Ziel war es, Wissenschaftlern zu ermöglichen, mathematische Formeln statt Maschinenbefehle zu schreiben, und ihr Compiler erzeugte so effizienten Code, dass skeptische Assemblerprogrammierer bekehrt wurden. Fortran wird sieben Jahrzehnte später noch immer in Wettermodellen und im Supercomputing eingesetzt.\n\n1970 veröffentlichte der Schweizer Informatiker Niklaus Wirth Pascal, eine kleine, streng strukturierte Sprache, die gute Programmiergewohnheiten lehren sollte. Er benannte sie nach Blaise Pascal (1623–1662), dem französischen Mathematiker und Philosophen des 17. Jahrhunderts, der 1642 eine der ersten mechanischen Rechenmaschinen gebaut hatte. Pascal wurde zur Standard-Lehrsprache der 1970er- und 1980er-Jahre, und ihr Nachfahre Delphi lebt noch heute.\n\nDer berühmteste Name von allen ist der kürzeste. In den Bell Labs schuf Dennis Ritchie 1972 eine Sprache, die auf eine frühere namens B folgte, also nannte er sie C. Ab 1979 erweiterte sein Kollege Bjarne Stroustrup sie um Klassen und andere objektorientierte Merkmale. Zunächst nannte er das Ergebnis „C with Classes“, benannte es aber 1983 in C++ um, ein Programmiererwitz: In C erhöht der Ausdruck „++“ eine Variable um eins, also ist C++ „C plus eins“, die nächste Stufe nach C. Die Sprache treibt heute alles an, von Spiele-Engines über Browser bis zu Raumfahrzeugen.\n\nMicrosoft setzte den Witz im Juli 2000 fort, als es „C#“, gesprochen „C sharp“, als Flaggschiffsprache seiner neuen .NET-Plattform vorstellte. Das Rautezeichen soll wie vier in einem Zwei-mal-zwei-Raster gestapelte Pluszeichen aussehen, sodass C# „C++ ++“ ist, noch ein Inkrement; zugleich verweist es auf das musikalische Kreuz, das eine Note um einen Halbton erhöht. Der leitende Entwickler Anders Hejlsberg hatte zuvor Turbo Pascal und Delphi geschaffen.\n\nPython dagegen hat nichts mit Schlangen zu tun: Guido van Rossum benannte die Sprache nach der britischen Komikertruppe Monty Python. Als der niederländische Programmierer sie über die Weihnachtsferien 1989 begann und sie im Februar 1991 veröffentlichte, las er gerade die Drehbücher von „Monty Python's Flying Circus“ und wollte einen Namen, der kurz, einzigartig und ein wenig geheimnisvoll war. Die Dokumentation ist noch heute voller Spam, Eier und Monty-Python-Anspielungen, und die Sprache ist zur meistgenutzten in Data Science und maschinellem Lernen geworden.\n\n| Sprache | Jahr | Schöpfer | Name stammt von |\n|---|---|---|---|\n| Fortran | 1957 | John Backus (IBM) | „Formula Translation“ |\n| Pascal | 1970 | Niklaus Wirth | Blaise Pascal |\n| C++ | 1983 | Bjarne Stroustrup | C um eins erhöht |\n| Python | 1991 | Guido van Rossum | Monty Python |\n| C# | 2000 | Anders Hejlsberg (Microsoft) | C++ noch einmal erhöht, musikalisches Kreuz |\n\nWenn sich das nächste Mal ein Compiler beschwert, denken Sie daran, dass die Sprache, die Sie schilt, wahrscheinlich als Witz benannt wurde.",
+ "bodyRu": "Языки программирования называют так же, как детей и корабли: в честь родителей, в честь героев, ради шутки или просто по тому, что было раньше. Истории, стоящие за этими названиями, – это краткая история самой информатики.\n\nСтарейший из сохранившихся языков высокого уровня носит своё назначение в названии. Fortran, от «Formula Translation» («перевод формул»), разрабатывался Джоном Бэкусом и его командой в IBM с 1954 года и был выпущен в апреле 1957 года для IBM 704. Его целью было позволить учёным записывать математические формулы вместо машинных команд, а его компилятор выдавал настолько эффективный код, что даже скептически настроенные программисты на ассемблере перешли на него. Fortran и семь десятилетий спустя используется в моделях погоды и на суперкомпьютерах.\n\nВ 1970 году швейцарский информатик Никлаус Вирт опубликовал Pascal – небольшой, строго структурированный язык, предназначенный для обучения правильным привычкам программирования. Он назвал его в честь Блеза Паскаля (1623–1662), французского математика и философа XVII века, который в 1642 году построил одну из первых механических вычислительных машин. Pascal стал стандартным учебным языком 1970-х и 1980-х годов, а его потомок Delphi жив до сих пор.\n\nСамое знаменитое название – самое короткое. В Bell Labs в 1972 году Деннис Ритчи создал язык, который пришёл на смену более раннему языку под названием B, поэтому он назвал его C. С 1979 года его коллега Бьёрн Страуструп расширял его классами и другими объектно-ориентированными возможностями. Сначала он назвал результат «C with Classes», но в 1983 году переименовал его в C++ – это программистская шутка: в C выражение «++» увеличивает переменную на единицу, так что C++ – это «C плюс один», следующая ступень после C. Сегодня на этом языке работает всё – от игровых движков до браузеров и космических аппаратов.\n\nMicrosoft продолжила шутку в июле 2000 года, представив «C#», произносимый «си шарп», как флагманский язык своей новой платформы .NET. Знак решётки должен напоминать четыре знака плюс, сложенные квадратом два на два, так что C# – это «C++ ++», ещё одно увеличение на единицу; кроме того, он отсылает к музыкальному диезу, который повышает ноту на полутон. Его ведущий разработчик Андерс Хейлсберг ранее создал Turbo Pascal и Delphi.\n\nPython, напротив, не имеет никакого отношения к змеям: Гвидо ван Россум назвал его в честь британской комик-группы «Монти Пайтон». Когда нидерландский программист начал работу над языком в рождественские каникулы 1989 года и выпустил его в феврале 1991 года, он читал сценарии «Летающего цирка Монти Пайтона» и хотел название короткое, уникальное и слегка загадочное. Документация до сих пор полна спама, яиц и отсылок к «Монти Пайтону», а сам язык стал самым распространённым в науке о данных и машинном обучении.\n\n| Язык | Год | Создатель | Откуда название |\n|---|---|---|---|\n| Fortran | 1957 | Джон Бэкус (IBM) | «Formula Translation» |\n| Pascal | 1970 | Никлаус Вирт | Блез Паскаль |\n| C++ | 1983 | Бьёрн Страуструп | C, увеличенный на единицу |\n| Python | 1991 | Гвидо ван Россум | «Монти Пайтон» |\n| C# | 2000 | Андерс Хейлсберг (Microsoft) | C++, увеличенный ещё раз; музыкальный диез |\n\nВ следующий раз, когда компилятор будет ворчать, вспомните, что язык, который вас отчитывает, скорее всего, был назван в шутку.",
+ "notesEn": "C# is pronounced „C sharp“.",
+ "notesDe": "C# wird „C sharp“ ausgesprochen.",
+ "notesRu": "C# произносится «си шарп».",
+ "images": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bjarne_Stroustrup_%282013%29.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Bjarne_Stroustrup",
+   "width": 917,
+   "height": 798,
+   "alt": {
+    "en": "Portrait of Bjarne Stroustrup",
+    "de": "Porträt von Bjarne Stroustrup",
+    "ru": "Портрет Бьёрна Страуструпа"
+   },
+   "caption": {
+    "en": "Bjarne Stroustrup, who extended C with classes at Bell Labs and in 1983 renamed his „C with Classes“ C++ – „C plus one“.",
+    "de": "Bjarne Stroustrup, der C bei Bell Labs um Klassen erweiterte und sein „C with Classes“ 1983 in C++ umbenannte – „C plus eins“.",
+    "ru": "Бьёрн Страуструп, который в Bell Labs дополнил C классами и в 1983 году переименовал свой «C with Classes» в C++ – «C плюс один»."
+   },
+   "credit": "Wikimedia Commons"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Guido_van_Rossum_in_PyConUS24_%28cropped%29.jpg",
+   "pageUrl": "https://en.wikipedia.org/wiki/Guido_van_Rossum",
+   "width": 1721,
+   "height": 2293,
+   "alt": {
+    "en": "Guido van Rossum at PyCon US 2024",
+    "de": "Guido van Rossum auf der PyCon US 2024",
+    "ru": "Гвидо ван Россум на PyCon US 2024"
+   },
+   "caption": {
+    "en": "Guido van Rossum, who released Python in 1991 and named it after the comedy troupe Monty Python, not the snake.",
+    "de": "Guido van Rossum, der Python 1991 veröffentlichte und nach der Komikertruppe Monty Python benannte, nicht nach der Schlange.",
+    "ru": "Гвидо ван Россум, выпустивший Python в 1991 году и назвавший его в честь комик-группы «Монти Пайтон», а не змеи."
+   },
+   "credit": "Wikimedia Commons"
+  }
+ ],
+ "facts": [
+  {
+   "id": "f00776",
+   "answerEn": "C++",
+   "answerDe": "C++",
+   "answerRu": "C++",
+   "spans": {
+    "en": [
+     1466,
+     3
+    ],
+    "de": [
+     1559,
+     3
+    ],
+    "ru": [
+     1605,
+     3
+    ]
+   },
+   "timeline": {
+    "kind": "event",
+    "start": "1983",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bjarne Stroustrup renames „C with Classes“ to C++",
+    "labelDe": "Bjarne Stroustrup benennt „C with Classes“ in C++ um",
+    "labelRu": "Бьёрн Страуструп переименовывает «C with Classes» в C++"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/C%2B%2B",
+    "title": "C++ – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00776",
+     "en": "Which programming language has just a single letter and two arithmetic signs as its name?",
+     "de": "Welche Programmiersprache trägt nur einen einzigen Buchstaben und zwei Rechenzeichen als Namen?",
+     "ru": "Какой язык программирования носит в качестве названия всего одну букву и два арифметических знака?",
+     "origin": "printed",
+     "printed": {
+      "source": "quiztopia",
+      "card": "c013",
+      "category": 12
+     }
+    }
+   ],
+   "tags": [
+    "difficulty:easy"
+   ],
+   "entities": [
+    {
+     "qid": "Q2407",
+     "label": "C++",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f00777",
+   "answerEn": "“C#”",
+   "answerDe": "„C#“",
+   "answerRu": "«C#»",
+   "spans": {
+    "en": [
+     1738,
+     4
+    ],
+    "de": [
+     1840,
+     4
+    ],
+    "ru": [
+     1903,
+     4
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "2000-07",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Microsoft presents C# with the .NET platform",
+    "labelDe": "Microsoft stellt C# mit der .NET-Plattform vor",
+    "labelRu": "Microsoft представляет C# вместе с платформой .NET"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+    "title": "C Sharp (programming language) – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00777",
+     "en": "Which programming language, named with one letter and a hash sign, did Microsoft introduce in 2000 together with the .NET platform?",
+     "de": "Welche Programmiersprache mit einem Buchstaben und einem Rautezeichen als Namen stellte Microsoft im Jahr 2000 zusammen mit der .NET-Plattform vor?",
+     "ru": "Какой язык программирования, название которого состоит из одной буквы и знака решётки, Microsoft представила в 2000 году вместе с платформой .NET?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q2370",
+     "label": "C#",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f00778",
+   "answerEn": "Python",
+   "answerDe": "Python",
+   "answerRu": "Python",
+   "spans": {
+    "en": [
+     2100,
+     6
+    ],
+    "de": [
+     2247,
+     6
+    ],
+    "ru": [
+     2281,
+     6
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1991-02",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Guido van Rossum releases Python, named after Monty Python",
+    "labelDe": "Guido van Rossum veröffentlicht Python, benannt nach Monty Python",
+    "labelRu": "Гвидо ван Россум выпускает Python, названный в честь «Монти Пайтона»"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/History_of_Python",
+    "title": "History of Python – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00778",
+     "en": "Which programming language did its inventor Guido van Rossum name after a British comedy troupe in 1991?",
+     "de": "Welche Programmiersprache benannte ihr Erfinder Guido van Rossum 1991 nach einer britischen Comedy-Truppe?",
+     "ru": "Какой язык программирования его создатель Гвидо ван Россум в 1991 году назвал в честь британской комик-группы?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q28865",
+     "label": "Python",
+     "role": "answer"
+    }
+   ]
+  },
+  {
+   "id": "f00780",
+   "answerEn": "Fortran",
+   "answerDe": "Fortran",
+   "answerRu": "Fortran",
+   "spans": {
+    "en": [
+     299,
+     7
+    ],
+    "de": [
+     293,
+     7
+    ],
+    "ru": [
+     308,
+     7
+    ]
+   },
+   "timeline": {
+    "kind": "creation",
+    "start": "1957-04",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "IBM delivers the first Fortran compiler",
+    "labelDe": "IBM liefert den ersten Fortran-Compiler aus",
+    "labelRu": "IBM поставляет первый компилятор Fortran"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fortran",
+    "title": "Fortran – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00780",
+     "en": "Which programming language, whose name stands for \"Formula Translation\", did John Backus develop at IBM from 1954 onwards?",
+     "de": "Welche Programmiersprache, deren Name für „Formula Translation“ steht, entwickelte John Backus ab 1954 bei IBM?",
+     "ru": "Какой язык программирования, название которого означает «Formula Translation», Джон Бэкус разрабатывал в IBM с 1954 года?",
+     "origin": "generated"
+    }
+   ],
+   "tags": [
+    "difficulty:medium"
+   ],
+   "entities": [
+    {
+     "qid": "Q83303",
+     "label": "Fortran",
+     "role": "answer"
+    }
+   ]
+  }
+ ],
+ "retired": [
+  {
+   "id": "f00779",
+   "answerEn": "Pascal",
+   "answerDe": "Pascal",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1623-06-19",
+    "end": "1662-08-19",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Blaise Pascal, mathematician and philosopher",
+    "labelDe": "Blaise Pascal, Mathematiker und Philosoph"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Blaise_Pascal",
+    "title": "Blaise Pascal – Wikipedia",
+    "lang": "en"
+   },
+   "wordings": [
+    {
+     "id": "w00779",
+     "en": "Which programming language did Niklaus Wirth name in 1970 after a 17th-century French mathematician and philosopher?",
+     "de": "Welche Programmiersprache benannte Niklaus Wirth 1970 nach einem französischen Mathematiker und Philosophen des 17. Jahrhunderts?",
+     "origin": "generated"
+    }
+   ],
+   "retired": {
+    "at": "2026-10-20",
+    "code": "duplicate",
+    "reason": "Removed by the post-merge dedupe as a generated duplicate of f04316; kept here as retired (nothing is deleted).",
+    "replacedBy": [
+     "f04316"
+    ]
+   }
+  }
+ ],
+ "tags": [
+  "topic:technology/computing/programming",
+  "topic:language/etymology",
+  "audience:international"
+ ]
+}

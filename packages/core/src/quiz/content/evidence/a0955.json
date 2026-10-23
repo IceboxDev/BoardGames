@@ -1,0 +1,281 @@
+{
+ "article": "a0955",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hugo_Ch%C3%A1vez",
+   "title": "Hugo Chávez – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:31.189Z",
+   "snapshot": "9c5d3088d41b7a15b46039806fd34f882d2b6925cddfe237d3b03a3a627cbaa7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hugo_Ch%C3%A1vez",
+   "title": "Hugo Chávez",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:31:30.480Z",
+   "snapshot": "29001e2658b84e94a6595d80abceac7dc6b68d14c935297881c23a5db39e0022"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/2002_Brazilian_general_election",
+   "title": "2002 Brazilian general election – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:31.993Z",
+   "snapshot": "c299eb41307fa019da6dc5c048b39e8d55ff12cd00d7f42f430afa24d1267775"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Rafael_Correa",
+   "title": "Rafael Correa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:33.189Z",
+   "snapshot": "7cd35ab703b82b2a322964807a32809796721e706d2d77cd7eb3d3b125c00a08"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia",
+   "title": "Bolsa Família – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:34.057Z",
+   "snapshot": "1c59ba8fc31d61f6eb23007d74e3d0d8521a0a4e1663cc573d74c18385f43aa4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hugo Chávez",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c080"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04771",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hugo Chávez",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-094"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04773",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luiz Inácio Lula da Silva",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04775",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rafael Correa",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bolsa Família",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f23761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Citizens' Revolution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:10.927Z",
+   "target": "f04771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2010, Hugo Chávez proclaimed support for the ideas of Marxist Leon Trotsky, saying \"When I called him (former Minister of Labour, José Ramón Rivero)\" Chávez explained, \"he said to me: 'President I want to tell you something before someone else tells you ...",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hugo Chávez” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:10.927Z",
+   "target": "f04771",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Drei Brüder von Hugo Chávez sind ebenfalls in der Politik tätig, siehe Abschnitt Vorwurf des Nepotismus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hugo Chávez” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:10.927Z",
+   "target": "f04773",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Luiz Inácio Lula da Silva of the Workers' Party (PT), a former labor leader and federal deputy for São Paulo, ran for president for a fourth time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luiz Inácio Lula da Silva” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:10.927Z",
+   "target": "f04775",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Correa's father was Rafael Correa Icaza, born in Los Ríos Province, Ecuador, while his mother is Norma Delgado Rendón (born 1 September 1939).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rafael Correa” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:10.927Z",
+   "target": "f23760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bolsa Família (Portuguese pronunciation: [ˈbowsɐ fɐˈmiʎɐ], Family Allowance) is the current social welfare program of the Government of Brazil, part of the Fome Zero network of federal assistance programs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bolsa Família” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:10.927Z",
+   "target": "f23761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "He claims that the continuation of his \"The Citizens' Revolution\" policy is intended to ensure all citizens are equal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Citizens' Revolution” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-031",
+ "image": "IMG20261022153433.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Geology",
+   "cardText": "[Geology] What causes the vibrant colors of hot springs in Yellowstone National Park?\nA. Microbes\nB. Mineral deposits\nC. Sunlight reflection on the changing density of water at different temperature\nAnswer: A. The striking colors of the hot springs are due to the presence of algae, bacteria, and archaea that thrive in hot water (as hot as 165 °F or about 73 °C). Their pigments create the vivid blues, greens, and yellows seen in the pool.",
+   "de": "Was verleiht Thermalquellen im Yellowstone wie der Grand Prismatic Spring ihre leuchtenden Farbringe?",
+   "en": "What gives Yellowstone hot springs such as the Grand Prismatic Spring their vivid rings of colour?",
+   "reworked": true,
+   "answerDe": "Mikrobenmatten aus wärmeliebenden Bakterien und Archaeen",
+   "answerEn": "Microbial mats of heat-loving bacteria and archaea",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1871",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Hayden Geological Survey sees the Grand Prismatic Spring and names it for its colours",
+    "labelDe": "Die Hayden-Expedition sichtet die Grand Prismatic Spring und benennt sie nach ihren Farben"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Grand_Prismatic_Spring",
+    "title": "Grand Prismatic Spring",
+    "lang": "en"
+   },
+   "notes": "Card slightly off: the colourful edges are microbial mats of thermophilic bacteria and archaea (green to red, by chlorophyll/carotenoid ratio); the deep blue centre is the water itself, too hot for mats, not microbial pigment. 'Algae' is loose wording for cyanobacteria.",
+   "domain": "earth-space",
+   "sub": "geology"
+  },
+  {
+   "category": 2,
+   "discipline": "Engineering and Inventions",
+   "cardText": "[Engineering and Inventions] What was the first product to have a barcode?\nA. A pack of gum\nB. A bottle of soda\nC. A book\nAnswer: A.",
+   "de": "Welches Produkt wurde 1974 in Troy (Ohio) als erstes überhaupt an einer Supermarktkasse per UPC-Strichcode gescannt?",
+   "en": "What was the first product ever scanned by a UPC barcode at a supermarket checkout, in Troy, Ohio, in 1974?",
+   "reworked": true,
+   "answerDe": "Eine Packung Wrigley's Juicy Fruit Kaugummi",
+   "answerEn": "A pack of Wrigley's Juicy Fruit chewing gum",
+   "timeline": {
+    "kind": "event",
+    "start": "1974-06-26",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "A pack of Juicy Fruit gum becomes the first UPC-scanned item, at a Marsh supermarket in Troy, Ohio",
+    "labelDe": "Eine Packung Juicy-Fruit-Kaugummi wird in einem Marsh-Supermarkt in Troy, Ohio, als erster Artikel per UPC gescannt"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Universal_Product_Code",
+    "title": "Universal Product Code",
+    "lang": "en"
+   },
+   "notes": "Card imprecise: the gum was the first item scanned with a UPC at a checkout, not the first product to carry a barcode (barcodes e.g. on railway cars predate it).",
+   "domain": "technology",
+   "sub": "inventions"
+  }
+ ]
+}

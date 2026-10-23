@@ -1,0 +1,441 @@
+{
+ "article": "a2234",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Casablanca_(film)",
+   "title": "Casablanca (film)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:16:45.308Z",
+   "snapshot": "0c5b97e05913b1426fee3fa9679465fc10664b4c188fd81c4facb850ae4f52c9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Liam_Hemsworth",
+   "title": "Liam Hemsworth",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:49:00.203Z",
+   "snapshot": "0d6c56353a98a2ca21ef546d45f800c3f31e9eaf6d2ecb5b0b994c5942d81176"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Raiders_of_the_Lost_Ark",
+   "title": "Raiders of the Lost Ark – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:00:15.245Z",
+   "snapshot": "93a5786f146ba5c0fa94c8e0d7f9df97ad807b7cea3f96fab28911f4a66cf4c8"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Back_to_the_Future",
+   "title": "Back to the Future – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:52.297Z",
+   "snapshot": "49b877d5ccb223c42d0264e50006d0755df418a315e418f6a0a71ac17ec301ae"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Matrix",
+   "title": "The Matrix – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:49:16.601Z",
+   "snapshot": "48cb3a3fa4bf5c31782845fd6a64a6e821aed4b099e04a854be716a1ebdbd145"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/X-Men_(film)",
+   "title": "X-Men (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:47.200Z",
+   "snapshot": "37e141c37752f150a3276fb558b347a430a7a37f285acb767f274f05cfcb81db"
+  },
+  "s7": {
+   "url": "https://www.vanityfair.com/hollywood/features/2010/01/hemsworth-brothers-201001",
+   "title": "The Brothers Hemsworth",
+   "publisher": "Vanity Fair",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:32.282Z",
+   "snapshot": "b3be30eb7375d72ef68a9b3f16fe254b9ebce25d3251eb7c86cfd3af83f2a722"
+  },
+  "s8": {
+   "url": "https://deadline.com/2009/05/exclusive-chris-hemsworth-is-thor/",
+   "title": "EXCLUSIVE: Chris Hemsworth Is 'Thor'",
+   "publisher": "Deadline",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:33.033Z",
+   "snapshot": "8cd776cb1cb7e4b8df30d5b52ae67a5aa75867f9f0cde2635418caf2ab0333a6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ronald Reagan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-130"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chris Hemsworth",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript tp-040"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tom Selleck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eric Stoltz",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Neo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dougray Scott",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:40.962Z",
+   "target": "f11423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Several unfounded rumors and misconceptions have grown around the film, one being that Ronald Reagan was originally chosen to play Rick.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ronald Reagan” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:40.962Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Chris Hemsworth",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Chris Hemsworth”, “Крис Хемсворт”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:40.962Z",
+   "target": "f11425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Casting director Mike Fenton favored Bridges but Lucas's wife and frequent collaborator Marcia Lucas preferred Tom Selleck.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Selleck” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:40.962Z",
+   "target": "f11426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fox was the first choice to portray Marty but was unavailable; Eric Stoltz was cast instead.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eric Stoltz” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:40.962Z",
+   "target": "f11427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The film follows a disillusioned computer hacker Neo (Reeves) who discovers that the life he knows is an elaborate deception created by intelligent machines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neo” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:40.962Z",
+   "target": "f11428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dougray Scott was cast as Wolverine in a multi-film deal but was forced to back out due to scheduling conflicts with Mission: Impossible 2 (2000) in early October 1999 and injuries he sustained in a motorbike accident.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:40.962Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dougray Scott” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:34:35Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Hauptrolle in Thor verlor er an seinen Bruder Chris.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:34:39Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "landed a screen test for the title role—complete with winged helmet—in Marvel Studios’ coming Thor franchise hopeful, to be directed by Kenneth Branagh for summer 2011. The part ultimately went to Chris.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:34:44Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "EXCLUSIVE: Chris Hemsworth Is 'Thor'",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms Chris got the part; Liam's screen test is in the Vanity Fair and Wikipedia quotes"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:27.428Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Hauptrolle in Thor verlor er an seinen Bruder Chris.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:27.428Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "landed a screen test for the title role—complete with winged helmet—in Marvel Studios’ coming Thor franchise hopeful, to be directed by Kenneth Branagh for summer 2011. The part ultimately went to Chris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:27.428Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "EXCLUSIVE: Chris Hemsworth Is 'Thor'",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:27.428Z",
+   "target": "f11424",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "I’ve just learned that Marvel Studios’ Kevin Feige and director Kenneth Branagh have chosen their THOR — and it’s Chris Hemsworth, who can currently be seen as “George Kirk” in J.J.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:27.428Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Chris Hemsworth” is on the snapshot of s8"
+  }
+ ]
+}

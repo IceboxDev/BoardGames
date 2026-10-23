@@ -1,0 +1,195 @@
+{
+ "article": "a1991",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Passiflora_edulis",
+   "title": "Passiflora edulis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:00.240Z",
+   "snapshot": "58b4c842c30dbc597426fdf23c5185b16e3250df2e24a6727835b38f7f15da54"
+  },
+  "s2": {
+   "url": "https://1940s-nostalgia.com/rosehip-syrup-a-1940s-vitamin-boost/",
+   "title": "Rosehip Syrup – A 1940s Vitamin Boost – 1940s Nostalgia",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:34:57.678Z",
+   "snapshot": "710a6942f40138faf854d96e162db18c64968fba85ece4ec778c5935582e3952"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pannage",
+   "title": "Pannage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:01.227Z",
+   "snapshot": "99712eeae27e76709d0094cf40958629595c23d8633867a40449e7635975db02"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Opuntia",
+   "title": "Opuntia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:02.303Z",
+   "snapshot": "6ae32a620db3f01fc90d9036d7aebb466f8ca72bbedcc28d2026c99d4c46b79f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "passion fruit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "rose hips",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "acorns",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09955",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "prickly pears",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:01.875Z",
+   "target": "f09951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Passiflora edulis, commonly known as passion fruit, is a vine species of passion flower native to southern Brazil, through Paraguay, and northern Argentina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “passion fruit” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:01.875Z",
+   "target": "f09952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schools, women’s institutes and both the Guides and Scouts movements became involved, collecting around 200 tons of rose hips – then converted into approximately 6000, 000 bottles of syrup.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rose hips” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:01.875Z",
+   "target": "f09953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pannage is the practice of releasing livestock-pigs in a forest, so that they can feed on fallen acorns, beechmast, chestnuts or other nuts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “acorns” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:01.875Z",
+   "target": "f09955",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Prickly pears typically grow with flat, rounded cladodes (also called platyclades) containing large, smooth, fixed spines and small, hairlike prickles called glochids that readily adhere to skin or hair, then detach from the plant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:01.875Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “prickly pears” is on the snapshot of s4"
+  }
+ ]
+}

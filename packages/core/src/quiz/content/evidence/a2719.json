@@ -1,0 +1,421 @@
+{
+ "article": "a2719",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Burn",
+   "title": "Burn",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:19.354Z",
+   "snapshot": "45a9e81aa54b03eb590a977ecde382127f33ee3f87301ae94809b09b7aab8f92"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wallace_rule_of_nines",
+   "title": "Wallace rule of nines – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:20.248Z",
+   "snapshot": "6130109b354d93f2b2ef5020dd7818581e27fa00fde432b0a25f79e3fc37f135"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lund_and_Browder_chart",
+   "title": "Lund and Browder chart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:21.288Z",
+   "snapshot": "4a0f1ee424f2d5e4ee31f0e7b469d92ae06e67fa76eff921578ff670f30b2918"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Parkland_formula",
+   "title": "Parkland formula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:15:22.256Z",
+   "snapshot": "b335794b94ff0bfb2e921c9dbd43a7355830b50cb723df23c90716ed88fd15db"
+  },
+  "s5": {
+   "url": "https://medlineplus.gov/ency/article/000030.htm",
+   "title": "Burns: MedlinePlus Medical Encyclopedia",
+   "publisher": "MedlinePlus (U.S. National Library of Medicine)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:46.881Z",
+   "snapshot": "2d7b2ec22e4f5e944b910cf5f92a69472fc47f00783215c65d30af3b483cccc0"
+  },
+  "s6": {
+   "url": "https://my.clevelandclinic.org/health/diseases/12063-burns",
+   "title": "Burns: Types, Treatments & Prevention",
+   "publisher": "Cleveland Clinic",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:48.062Z",
+   "snapshot": "8eb456e2d476fbd95e2e37cc673340482bb0bcc9c869fdf625cbbd5a4800c1c6"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4978094/",
+   "title": "History of burns: The past, present and the future (Burns & Trauma 2014)",
+   "publisher": "Burns & Trauma / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:48.172Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s8": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9959609/",
+   "title": "Burns: Classification, Pathophysiology, and Treatment: A Review (IJMS 2023)",
+   "publisher": "International Journal of Molecular Sciences / PMC",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:49.230Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the epidermis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15; transcript pp-078"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "rule of nines",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25416",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lund and Browder chart",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Parkland formula",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "six",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:02.993Z",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "the epidermis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the epidermis”, “die Epidermis”, “эпидермис”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:02.993Z",
+   "target": "f25415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Wallace rule of nines is a tool used in pre-hospital and emergency medicine to estimate the total body surface area (BSA) affected by a burn.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “rule of nines” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:02.993Z",
+   "target": "f25416",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Lund and Browder chart is a tool useful in the management of burns for estimating the total body surface area affected.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lund and Browder chart” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:02.993Z",
+   "target": "f25417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Parkland formula, also known as Baxter formula, is a burn formula developed by Charles R.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Parkland formula” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:02.993Z",
+   "target": "f25418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Guillaume Dupuytren expanded these degrees into six different severities in 1832.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:02.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “six” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:21:12Z",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Superficial burns (formerly known as first-degree burns) affect only the outer layer of the skin.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:21:13Z",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Superficial (similar to first-degree). These only damage the epidermis, the top layer of skin.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:21:14Z",
+   "target": "f25418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "This classification divided burns into the following six degrees",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Dates Dupuytren's classification to his clinical lessons (Leçons orales, published 1832–34; the cited edition is 1839)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:21:15Z",
+   "target": "f25418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Dupuytren reviewed more than 50 cases of burns and presented a classification with six degrees of burn depth.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23",
+   "note": "Gives 1839 (the edition year); the number of degrees, six, is the answer and agrees."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:21:16Z",
+   "target": "f25418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Guillaume Dupuytren expanded these degrees into six different severities in 1832.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:50.318Z",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Superficial burns (formerly known as first-degree burns) affect only the outer layer of the skin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:50.318Z",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Superficial (similar to first-degree). These only damage the epidermis, the top layer of skin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:50.318Z",
+   "target": "f25414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "These only damage the epidermis, the top layer of skin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:50.318Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “the epidermis” is on the snapshot of s6"
+  }
+ ]
+}

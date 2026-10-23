@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-050",
+ "image": "IMG20261022153930.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which of the following is something owls do NOT have?\nA. Spherical eyeballs\nB. Hearing\nC. A complete digestive tract\nAnswer: A. Unlike many other animals, owls have eye tubes that are fixed directly in their sockets, which allows for excellent depth perception and a wide field of view. However, as a result, they cannot move their eyes. To compensate, owls have incredibly flexible necks and can rotate their heads up to 270 degrees in either direction.",
+   "de": "Welche Form haben die Augen von Eulen statt kugelförmiger Augäpfel, sodass sie fest in den Höhlen sitzen und nicht bewegt werden können?",
+   "en": "Instead of spherical eyeballs, what shape are owls' eyes, fixed in their sockets so that the birds cannot move them?",
+   "reworked": true,
+   "answerDe": "Röhrenförmig",
+   "answerEn": "Tubular (tube-shaped)",
+   "timeline": {
+    "kind": "era",
+    "start": "-60000000",
+    "end": "-57000000",
+    "precision": "megayear",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Paleocene fossils show owls already existing as a distinct bird lineage",
+    "labelDe": "Fossilien aus dem Paläozän zeigen, dass Eulen bereits eine eigene Vogellinie bildeten"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Owl",
+    "title": "Owl",
+    "lang": "en"
+   },
+   "notes": "Card correct: an owl's large eye in a small skull has become tubular, fixed in sclerotic tubes, so owls cannot move their eyes and instead turn their heads up to 270° (Wikipedia: Owl). Asked as the positive fact behind the 'NOT' question. Timeline: Paleocene owl genera Berruornis and Ogygoptynx, 60–57 Mya (same page).",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 2,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] What is the largest desert in the world?\nA. Antarctica B. Siberia C. Sahara\nAnswer: A. Despite being a desert, Antarctica holds about 70% of the world’s freshwater locked up as ice.",
+   "de": "Welche Polarwüste, die rund 70 % des Süßwassers der Erde als Eis speichert, ist die größte Wüste der Welt?",
+   "en": "Which polar desert, holding about 70% of the world's fresh water as ice, is the largest desert in the world?",
+   "reworked": true,
+   "answerDe": "Die Antarktis",
+   "answerEn": "Antarctica",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1820-01",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Antarctica's ice shelf is first sighted, by Bellingshausen's Russian expedition and by Edward Bransfield",
+    "labelDe": "Das Schelfeis der Antarktis wird erstmals gesichtet – von Bellingshausens russischer Expedition und von Edward Bransfield"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Antarctica",
+    "title": "Antarctica",
+    "lang": "en"
+   },
+   "notes": "Card correct when polar deserts count: Antarctica is mainly a polar desert holding about 70% of the world's freshwater reserves (Wikipedia: Antarctica), and Wikipedia's Desert article calls it the world's largest cold desert; at ~14 million km² it is larger than the Sahara (~9 million km²), the largest hot desert.",
+   "domain": "geography",
+   "sub": "physical"
+  }
+ ]
+}

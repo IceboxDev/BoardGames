@@ -1,0 +1,327 @@
+{
+ "article": "a1036",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Loriot",
+   "title": "Loriot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:46:07.600Z",
+   "snapshot": "c2fff60d9990eb993272c3039ef3447ab794382c183b11194fc6206c4a0c945a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Hape_Kerkeling",
+   "title": "Hape Kerkeling – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:46.448Z",
+   "snapshot": "6c82e24932c0cbf660bbb94d86045dacc2e0abcec491f5e5936dc6b97a85d3eb"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Dieter_Hallervorden",
+   "title": "Dieter Hallervorden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:46.385Z",
+   "snapshot": "4baa7f2dbdf6efb44494975d477367e85a39d9f37eb77f4d910e24f2473c6378"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Karl_Valentin",
+   "title": "Karl Valentin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:47.385Z",
+   "snapshot": "fb23acfa344cb00388efd48adc2202b6b069059cba308536461b9c24bdb9148d"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Michael_Herbig",
+   "title": "Michael Herbig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:36:48.336Z",
+   "snapshot": "db30dcbc52684278129564dc68b01d1aad8f62bd323452ea75bca35eb5fa0d5a"
+  },
+  "s6": {
+   "url": "https://d-nb.info/gnd/119111071",
+   "title": "Kerkeling, Hape – GND authority record",
+   "publisher": "Deutsche Nationalbibliothek",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:22.577Z",
+   "snapshot": "31b2222b796bd25e3a3a6a82addc834f38a599c017453fe42a452c45442dbf0b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05176",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vicco von Bülow",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c087"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans Peter Kerkeling",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05178",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dieter Hallervorden",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05179",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Valentin Ludwig Fey",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Michael Herbig",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:23.392Z",
+   "target": "f05176",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Loriot [lo.ʀi̯ˈ.o], eigentlich Bernhard-Viktor Christoph-Carl von Bülow [ˈbyː.lo], genannt Vicco von Bülow  (* 12.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vicco von Bülow” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:23.392Z",
+   "target": "f05177",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans Peter Kerkeling",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Hans Peter Kerkeling”, “Ханс Петер Керкелинг”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:23.392Z",
+   "target": "f05178",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dieter Hallervorden wurde 1935 in Dessau als Sohn des Flugzeugkonstrukteurs Kurt Hallervorden und dessen Frau, der Arzthelferin Susanne Bergert, geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dieter Hallervorden” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:23.392Z",
+   "target": "f05179",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Februar 1948 in Planegg), mit bürgerlichem Namen Valentin Ludwig Fey, war ein deutscher Komiker, Volkssänger, Autor und Filmproduzent.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Valentin Ludwig Fey” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:23.392Z",
+   "target": "f05180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Michael Herbig im Munzinger-Archiv, abgerufen am 9.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:23.392Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Michael Herbig” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:23Z",
+   "target": "f05177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kerkeling, Hans-Peter Wilhelm (Vollständiger Name)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23",
+   "note": "full name Hans-Peter Wilhelm Kerkeling; the record also lists the variant Hans Peter Kerkeling"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:18:25Z",
+   "target": "f05177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans-Peter Wilhelm „Hape“ Kerkeling",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r019",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:57.997Z",
+   "target": "f05177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Kerkeling, Hans-Peter Wilhelm (Vollständiger Name)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:57.997Z",
+   "target": "f05177",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hans-Peter Wilhelm „Hape“ Kerkeling",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:57.997Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s2"
+  }
+ ]
+}

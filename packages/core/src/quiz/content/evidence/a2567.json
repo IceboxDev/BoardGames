@@ -1,0 +1,242 @@
+{
+ "article": "a2567",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Myers-Briggs-Typenindikator",
+   "title": "Myers-Briggs-Typenindikator",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:06:32.824Z",
+   "snapshot": "f7be9ae4335d0d9911e9f9a9c264c897535ea75b91a369c7b4ae32ea2e18ccf8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Carl_Jung",
+   "title": "Carl Jung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:11:14.365Z",
+   "snapshot": "60ad5a4c48e5c323249387cd62fcc450ad2b315f5316b29ac3ea426021591498"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Big_Five_personality_traits",
+   "title": "Big Five personality traits – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:36.378Z",
+   "snapshot": "b098e97e39c935f8f1a78842379f90100aa59af4bd318ca0c91ed49838ad8254"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hermann_Rorschach",
+   "title": "Hermann Rorschach – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:37.174Z",
+   "snapshot": "bd1262ea50b67622db250ce02813d625a3b00f0b46d91c5643c929d4d4269354"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Enneagram_of_Personality",
+   "title": "Enneagram of Personality – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:06:38.156Z",
+   "snapshot": "98c4cdc03351a9bbe64e9b2ddb537fb7f653f3279975516747169e51408216f4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13748",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Myers-Briggs-Typindikator",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13749",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Carl Jung",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13750",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Big Five",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13751",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hermann Rorschach",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13752",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Enneagram",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:39.425Z",
+   "target": "f13748",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Myers-Briggs-Typenindikator (kurz MBTI, von englisch Myers-Briggs type indicator) – nach Katherine Cook Briggs und Isabel Myers – ist ein alltagspsychologischer Test, mit dessen Hilfe die von Carl Gustav Jung entwickelten „psychologischen Typen“ erfasst werden sollen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Myers–Briggs Type Indicator” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:39.425Z",
+   "target": "f13749",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eight of Carl Jung's uncles were also clergymen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carl Jung” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:39.425Z",
+   "target": "f13750",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In psychology and psychometrics, the Big Five personality trait model or five-factor model (FFM), sometimes called by the mnemonic acronym OCEAN or CANOE, is a scientific model for measuring and describing human personality traits.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Big Five” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:39.425Z",
+   "target": "f13751",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hermann Rorschach (Swiss Standard German: [ˈhɛrman ˈroːrʃaχ]; 8 November 1884 – 2 April 1922) was a Swiss psychiatrist and psychoanalyst.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hermann Rorschach” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:39.425Z",
+   "target": "f13752",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Enneagram of Personality, or simply the Enneagram, is a pseudoscientific model of the human psyche primarily understood and taught as a typology of nine interconnected personality types.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:39.425Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Enneagram” is on the snapshot of s5"
+  }
+ ]
+}

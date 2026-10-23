@@ -1,0 +1,329 @@
+{
+ "article": "a1285",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lou_Reed",
+   "title": "Lou Reed – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:05.188Z",
+   "snapshot": "7e80dea387b27d065d71eb709e7066bb1800484db6833ef091baed46943cf1bc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/David_Byrne",
+   "title": "David Byrne – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:06.165Z",
+   "snapshot": "283084491eb3ce7413ca3060d9fafee3a038aa74b97693fd2d4a1a03e7a0986f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Verlaine",
+   "title": "Tom Verlaine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:07.084Z",
+   "snapshot": "26f720f49ffddd4058ca9a8efb06a8013c8d868a582f45d6d9685c64c6479c79"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_Cobain",
+   "title": "Kurt Cobain – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:08.276Z",
+   "snapshot": "b8e7c25a3099bda5fed0bb0060b25c7a10ae909fe690fc9f944d3bf23247284f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Lulu_(Album)",
+   "title": "Lulu (Album)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:52:05.389Z",
+   "snapshot": "4a9ad7fda7ac7c0cec0e56068d7108963424b16205ee086ec7c5897e7990d906"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/The_Velvet_Underground_%26_Nico",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:09.188Z",
+   "snapshot": "90d309a3deb321e93c6fbe960b2b5c8345bc3d151739c1ffbc009d1b7cc75fdc"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Aberdeen,_Washington",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:10.178Z",
+   "snapshot": "6e8a024f678da2e043569aca99f313650bedaf05a63f0a0bf7f875779ccf40ba"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Lulu_(Lou_Reed_and_Metallica_album)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:11.090Z",
+   "snapshot": "258d6fa3121c50c4a58a4aace04a4e949ce5d6a05faa1ed61644a0b2edf9e9a6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06421",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lou Reed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06422",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "David Byrne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06423",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tom Verlaine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06425",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Kurt Cobain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Metallica",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Metallica",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-393/2, u03: Lou Reed made Lulu (2011) with Metallica, not Lordi."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f14574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Metallica",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f14574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Metallica",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s8"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f06421",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He began writing poetry, which was published later in 2018 by Anthology Editions through the Lou Reed Estate.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lou Reed” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f06422",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "David Byrne (; born May 14, 1952) is an American musician, writer, visual artist, and filmmaker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Byrne” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f06423",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thomas Joseph Miller (December 13, 1949 – January 28, 2023), known professionally as Tom Verlaine, was an American singer, guitarist, and songwriter, most notable as the frontman of the New York City rock band Television.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Verlaine” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f06425",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lars Ulrich of Metallica reflected on Cobain's influence stating that \"with Kurt Cobain you felt you were connecting to the real person, not to a perception of who he was—you were not connecting to an image or a manufactured cut-out.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Cobain” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f14574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lulu ist ein Kollaborationsalbum zwischen dem US-amerikanischen Singer-Songwriter Lou Reed und der US-amerikanischen Metal-Band Metallica.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metallica” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:00.358Z",
+   "target": "f14574",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Lulu (Lou Reed and Metallica album)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metallica” is on the snapshot of s8"
+  }
+ ]
+}

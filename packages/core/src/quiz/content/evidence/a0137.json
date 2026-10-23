@@ -1,0 +1,335 @@
+{
+ "article": "a0137",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Basketball",
+   "title": "Basketball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:17.402Z",
+   "snapshot": "b3005ec46679c132f1baebfcf90dc325c7a55a045173e7209d7e7a050ef51912"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Volleyball",
+   "title": "Volleyball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:18.401Z",
+   "snapshot": "b5f2554946cd34305d0e469f94cb5a5ffeb20b95a558015f16220c76a033aa5e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/William_Webb_Ellis",
+   "title": "William Webb Ellis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:19.297Z",
+   "snapshot": "adf7155aab4936e7cfc6b46c4e947c27190503cbf1be5ce8b318fb87d6647a5a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Softball",
+   "title": "Softball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:20.405Z",
+   "snapshot": "06a85c591412690813fa8b138cd296b47f06d7c0a3c741870dea13b0f808fb54"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Water_polo",
+   "title": "Water polo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:21.284Z",
+   "snapshot": "e814015848961504be58ef614ce635df7d71f99cc8628bdc75b6052a56a06927"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/James_Naismith",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:25:22.277Z",
+   "snapshot": "7c531102663ebf05154dae958fc9549670d3acd528f27e7ea5137022f946c106"
+  },
+  "s7": {
+   "url": "https://www.rugbyschool.co.uk/about-us/our-history",
+   "title": "Our History",
+   "publisher": "Rugby School",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:07.556Z",
+   "snapshot": "d060ed5b6f8b7e6918ba1590fe668f69a63cd34bb7e2655bf460f1d8b95a2ef2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00681",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Basketball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00682",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Volleyball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00683",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rugby",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00684",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Softball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00685",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Water polo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:58.151Z",
+   "target": "f00681",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Basketball is a team sport in which two teams of five players each (excluding substitutes) oppose one another on a rectangular court.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Basketball” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:58.151Z",
+   "target": "f00682",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Volleyball is a team sport in which two teams of six players are separated by a net.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Volleyball” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:58.151Z",
+   "target": "f00683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "William Webb Ellis (24 November 1806 – 24 February 1872) was an English Anglican clergyman who has been credited as the inventor of rugby football while a pupil at Rugby School.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rugby” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:58.151Z",
+   "target": "f00684",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Softball is a bat-and-ball sport played between two teams on a diamond-shaped field, who take turns batting and fielding.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Softball” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:58.151Z",
+   "target": "f00685",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Water polo is a competitive team sport played in water between two teams of seven players each.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:58.151Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Water polo” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:43:54Z",
+   "target": "f00683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1823, a student and foundationer, William Webb Ellis (1816-1825), with a fine disregard for the rules of football, took the ball in his arms and ran with it, originating the game of rugby football.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23",
+   "note": "The school's own (traditional) account; historians regard the story as legend, which the wording states."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:43:56Z",
+   "target": "f00683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Webb-Ellis carries the ball during a school football match played in 1823. According to legend, this action created the rugby style of play",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r067",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:16.662Z",
+   "target": "f00683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In 1823, a student and foundationer, William Webb Ellis (1816-1825), with a fine disregard for the rules of football, took the ball in his arms and ran with it, originating the game of rugby football.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:16.662Z",
+   "target": "f00683",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Rugby was founded in 1567 by the will of Lawrence Sheriff, Grocer and Spice Merchant to Queen Elizabeth I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:16.662Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rugby” is on the snapshot of s7"
+  }
+ ]
+}

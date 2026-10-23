@@ -1,0 +1,364 @@
+{
+ "article": "a2271",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/MTV",
+   "title": "MTV",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:42.527Z",
+   "snapshot": "b27ffff26ad670477cfb7d32dc1005fd2f51febc1d59d690d21146466b924f4a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Punk%E2%80%99d",
+   "title": "Punk’d",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:43.407Z",
+   "snapshot": "dc508c01fe43c2686be268439c1b1c31544f55ba71cf7a47e667ac2c16955e14"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/MTV",
+   "title": "MTV – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:15:38.396Z",
+   "snapshot": "65039e3d8a80c007c0b7afff3b7417d09b4650383bb9a3217e905b95cfa40625"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Osbournes",
+   "title": "The Osbournes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:46.212Z",
+   "snapshot": "5c848e3d396233d46df0fe6e0a3f5d782023911048ce964e61add450e66f24c4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Jersey_Shore_(TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:47.324Z",
+   "snapshot": "2bdcf399c27f8a9c3124fe0176636512528985b8f509eb00ce347416905c73a5"
+  },
+  "s6": {
+   "url": "https://www.rollingstone.com/music/music-news/mtv-new-moon-person-statue-40th-anniversary-kehinde-wiley-1205741/",
+   "title": "MTV Unveils New Moon Person Statue for 40th Anniversary",
+   "publisher": "Rolling Stone",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:48.783Z",
+   "snapshot": "bdb6f532f100b14fc32724a4c4d023a3a990b02501e52562c3cddd706d3ee059"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MTV",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-321"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11671",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Punk’d",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-189"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11672",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Buggles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Moon landing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11674",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Osbournes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11675",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jersey Shore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:46.695Z",
+   "target": "f11670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "MTV (vormals Akronym für Music Television) ist ein US-amerikanischer Fernsehsender mit Firmensitz in New York City und internationalen Ablegern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “MTV” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:46.695Z",
+   "target": "f11671",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Punk’d (Aussprache wie punked) war eine ab 2003 auf MTV laufende US-Serie, in der bekannte Schauspieler und anderweitige Prominente von ihren Verwandten und/oder Freunden hinters Licht geführt werden.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Punk’d” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:46.695Z",
+   "target": "f11672",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first video played on MTV was \"Video Killed the Radio Star\" by the Buggles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Buggles” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:46.695Z",
+   "target": "f11673",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Moon landing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“the Moon landing”, “die Mondlandung”, “высадка на Луну”) on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:46.695Z",
+   "target": "f11674",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Osbournes is an American reality television series featuring the domestic life of English heavy metal singer Ozzy Osbourne and his family— his wife Sharon, their daughter Kelly, and their son Jack.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Osbournes” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:46.695Z",
+   "target": "f11675",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MTV received significant criticism from Italian American organizations for Jersey Shore, which premiered in 2009.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.695Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jersey Shore” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:24:51Z",
+   "target": "f11673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MTV launched on August 1, 1981, with an extended network ID featuring the first landing on the Moon (with still images acquired directly from NASA)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:24:52Z",
+   "target": "f11673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MTV premiered on this date 40 years ago - at 12:01 a.m. on August 1st, 1981 - with footage of NASA'S Apollo 11 mission.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r022",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:32.154Z",
+   "target": "f11673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "MTV launched on August 1, 1981, with an extended network ID featuring the first landing on the Moon (with still images acquired directly from NASA)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:32.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:32.154Z",
+   "target": "f11673",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MTV premiered on this date 40 years ago - at 12:01 a.m. on August 1st, 1981 - with footage of NASA'S Apollo 11 mission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:32.154Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  }
+ ]
+}

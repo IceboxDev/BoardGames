@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-015",
+ "image": "IMG20261022153258.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Economics",
+   "cardText": "[Economics] “Fiat money” is a type of currency that:\nA. Represents ownership in a company’s physical assets\nB. Is deemed to have value by government decree\nC. Correlates with the country’s export volumes\nAnswer: B. This type of currency is contrasted with commodity money, which is backed by a physical good, and representative money, which represents a claim on a commodity that can be redeemed.",
+   "de": "Wie heißt staatlich ausgegebenes Geld, das seinen Wert durch staatliche Anordnung erhält, statt durch eine Ware gedeckt zu sein?",
+   "en": "What is the name for government-issued currency that has value by government decree rather than being backed by a commodity?",
+   "reworked": true,
+   "answerDe": "Fiatgeld",
+   "answerEn": "Fiat money",
+   "timeline": {
+    "kind": "event",
+    "start": "1190",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Song China suspends the convertibility of its paper money, an early fiat currency",
+    "labelDe": "Das China der Song-Dynastie hebt die Einlösbarkeit seines Papiergeldes auf – ein frühes Fiatgeld"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Fiat_money",
+    "title": "Fiat money",
+    "lang": "en"
+   },
+   "notes": "Card correct. Timeline: Wikipedia says convertibility was suspended 'about the end of the 12th century'.",
+   "domain": "society",
+   "sub": "business"
+  },
+  {
+   "category": 2,
+   "discipline": "Physiology and Anatomy",
+   "cardText": "[Physiology and Anatomy] How many chambers does a human heart have?\nA. Four\nB. Two\nC. Three\nAnswer: A. Even at rest, the muscles of the heart work twice as hard as the leg muscles of a person sprinting.",
+   "de": "Wie viele Kammern (Herzhöhlen) hat das menschliche Herz?",
+   "en": "How many chambers does a human heart have?",
+   "reworked": true,
+   "answerDe": "4",
+   "answerEn": "4",
+   "timeline": {
+    "kind": "creation",
+    "start": "1628",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "William Harvey publishes De Motu Cordis, describing the circulation of the blood",
+    "labelDe": "William Harvey veröffentlicht De Motu Cordis und beschreibt den Blutkreislauf"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Heart",
+    "title": "Heart",
+    "lang": "en"
+   },
+   "notes": "Options removed. Card correct (two atria, two ventricles). The explanation's 'twice as hard as sprinting legs' is an unverified popular claim. German 'Kammern' can mean ventricles only, hence 'Herzhöhlen'. Timeline from the De Motu Cordis article.",
+   "domain": "science",
+   "sub": "biology"
+  }
+ ]
+}

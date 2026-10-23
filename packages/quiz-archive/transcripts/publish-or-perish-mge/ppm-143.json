@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-143",
+ "image": "IMG20261022154654.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Literature",
+   "cardText": "[Literature] A “sonnet” is a poem of:\nA. 10 lines\nB. 14 lines\nC. 20 lines\nAnswer: B. Traditionally, sonnets follow strict rhyme schemes and are often about love or other profound subjects.",
+   "de": "Aus wie vielen Zeilen besteht ein traditionelles Sonett?",
+   "en": "How many lines does a traditional sonnet have?",
+   "reworked": true,
+   "answerDe": "14",
+   "answerEn": "14",
+   "timeline": {
+    "kind": "creation",
+    "start": "1200",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Giacomo da Lentini invents the sonnet at the court of Frederick II in Sicily (13th century)",
+    "labelDe": "Giacomo da Lentini erfindet das Sonett am Hof Friedrichs II. auf Sizilien (13. Jahrhundert)"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Sonnet",
+    "title": "Sonnet",
+    "lang": "en"
+   },
+   "notes": "A sonnet traditionally consists of fourteen lines (Wikipedia).",
+   "domain": "literature",
+   "sub": "poetry"
+  },
+  {
+   "category": 2,
+   "discipline": "Medical Sciences",
+   "cardText": "[Medical Sciences] What is autoclaving?\nA. A sterilization method\nB. A surgical technique\nC. A type of cancerous growth\nAnswer: A. Autoclaving is a sterilization method that uses high-pressure steam at a temperature higher than boiling water to kill all forms of life, including spores, on the surface of the object being sterilized. This method is so effective that it can be used in scientific laboratories to decontaminate biological waste.",
+   "de": "Zu welchem Zweck werden medizinische Instrumente und Laborabfälle autoklaviert, also mit Hochdruckdampf behandelt, der heißer als kochendes Wasser ist?",
+   "en": "For what purpose are medical instruments and laboratory waste autoclaved, i.e. treated with high-pressure steam hotter than boiling water?",
+   "reworked": true,
+   "answerDe": "Sterilisation",
+   "answerEn": "Sterilization",
+   "timeline": {
+    "kind": "creation",
+    "start": "1879",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Charles Chamberland invents the autoclave",
+    "labelDe": "Charles Chamberland erfindet den Autoklaven"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Autoclave",
+    "title": "Autoclave",
+    "lang": "en"
+   },
+   "notes": "Card overstates 'kill all forms of life': prions and some bacterial toxins (e.g. cereulide) may survive a standard autoclave cycle (Wikipedia).",
+   "domain": "science",
+   "sub": "medicine"
+  }
+ ]
+}

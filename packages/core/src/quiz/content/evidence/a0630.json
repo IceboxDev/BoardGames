@@ -1,0 +1,336 @@
+{
+ "article": "a0630",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War",
+   "title": "Soviet–Afghan War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:20.077Z",
+   "snapshot": "308c5a03762a2b6cc524b6c4395c815c534842f9fbef179f1667c02e7788e589"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/People%27s_Volunteer_Army",
+   "title": "People's Volunteer Army – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:21.137Z",
+   "snapshot": "69324c36d6dc0526a10d022fe3eae3234b9571dbff2feab9a38b88587453aec5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Vietnam_War",
+   "title": "Vietnam War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:57.528Z",
+   "snapshot": "96ca93f8163ee05193228a629535bd33eb096ba06c883b9e1abee51fed6eeebf"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cambodian%E2%80%93Vietnamese_War",
+   "title": "Cambodian–Vietnamese War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:22.219Z",
+   "snapshot": "13c7f3259d8e59fb0bdc83eedc3239829de47cf17de00987c3575a701986168b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cuban_intervention_in_Angola",
+   "title": "Cuban intervention in Angola – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:23.533Z",
+   "snapshot": "da42a105381e705bc2a69a77b380d52959b633632e309f176e1a2ba306109bbb"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh",
+   "title": "Hồ Chí Minh",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:20.379Z",
+   "snapshot": "65ff70e93f6ac8c11bde5ecd81a7dba1b2e0690f308fa07d6c9e7d046fd0622d"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Krieg_in_Afghanistan_(1979%E2%80%931989)",
+   "title": "Krieg in Afghanistan (1979–1989)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:09:21.328Z",
+   "snapshot": "4c57ba8b83159b5f3958136b65e42445750474bca0b6b241abb1edc8edb4806d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Soviet Union",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c053"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "United States",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03149",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vietnam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03150",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Cuba",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12524",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hồ Chí Minh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-153"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f12525",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Afghanistan",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 41; transcript tp-193"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f03146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marking the beginning of the 47-year-long Afghan conflict, it saw the Soviet Union and the Communist-led Afghan military fight against the rebelling Afghan mujahideen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Soviet Union” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f03147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The People's Volunteer Army (PVA), officially the Chinese People's Volunteers (CPV), was the designation for the Chinese communist contingent of armed expeditionary forces deployed by the People's Republic of China during the Korean War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f03148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "North Vietnam was supported by the Soviet Union and China, while South Vietnam was supported by the United States and other anti-communist nations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “United States” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f03149",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Cambodian–Vietnamese War was an armed conflict from 1978 to 1989 between Democratic Kampuchea and the Socialist Republic of Vietnam, and their respective allies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vietnam” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f03150",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Cuban intervention in Angola (codenamed Operation Carlota) began on 5 November 1975, when Cuba sent combat troops in support of the communist-aligned People's Movement for the Liberation of Angola (MPLA) against the pro-western coalition of the National Union for the Total Independence of Angola",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cuba” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f12524",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hồ Chí Minh (Aussprache [hò̤wcǐmɪɲ]; ; Hán Nôm 胡志明; * 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hồ Chí Minh” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:25:17.038Z",
+   "target": "f12525",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Der Afghanistankrieg (russisch Афганская война Afganskaja woina, deutsch ‚Afghanischer Krieg‘) oder Sowjetischer Krieg in Afghanistan (paschtunisch په افغانستان کې شوروی جګړه, persisch جنگ شوروی در افغانستان Dschang-e Schurawi dar Afganestan, DMG Ğang-i Šuravī dar Afġānistān) fand zwischen 1979 und",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:17.038Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afghanistan” is on the snapshot of s7"
+  }
+ ]
+}

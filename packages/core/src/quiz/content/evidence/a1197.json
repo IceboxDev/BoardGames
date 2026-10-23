@@ -1,0 +1,242 @@
+{
+ "article": "a1197",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Phagocyte",
+   "title": "Phagocyte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:40.988Z",
+   "snapshot": "eb75d8bf64f72d1c129d951661fdca601b19bae7cbe66815f9e88394ff37b7a6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+   "title": "Red blood cell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:16.160Z",
+   "snapshot": "cc3488cf09dd2b650744371911f825e7ae1fcc2f7640fdf769bdf6637885101c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Platelet",
+   "title": "Platelet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:15.180Z",
+   "snapshot": "cb8e68915b05194d2cc39df2d67fd087108f26382ff52d4438aba36a34bca795"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Neuron",
+   "title": "Neuron – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:41.973Z",
+   "snapshot": "6c784f86e16f59c4e87d2315b27e12db96a2aa147018b2e350b3679db0010701"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Pancreatic_islets",
+   "title": "Pancreatic islets – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:46:42.895Z",
+   "snapshot": "c5b57ef0dfd8f6de1c85f6e126fa1d3cdae5cb2da6f34657a5891449288270d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "white blood cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c100"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "red blood cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05983",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "platelets",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05984",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "neurons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05985",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "beta cells",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:46.750Z",
+   "target": "f05981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The professional phagocytes include many types of white blood cells (such as neutrophils, monocytes, macrophages, mast cells, and dendritic cells).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “white blood cells” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:46.750Z",
+   "target": "f05982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Red blood cells (RBCs), referred to as erythrocytes (from Ancient Greek  erythros 'red' and  kytos 'hollow vessel', with -cyte translated as 'cell' in modern usage) in academia and medical publishing, also known as red cells, erythroid cells, and rarely haematids, are the most common type of blood",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “red blood cells” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:46.750Z",
+   "target": "f05983",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Platelets or thrombocytes (from Ancient Greek  θρόμβος (thrómbos) 'clot' and  κύτος (kútos) 'cell') are a part of blood whose function (along with the coagulation factors) is to react to bleeding from blood vessel injury by clumping to form a blood clot.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “platelets” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:46.750Z",
+   "target": "f05984",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neurons form neural networks in the nervous system, mainly in the central nervous system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “neurons” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:46.750Z",
+   "target": "f05985",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Beta cells producing insulin and amylin (≈70%)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:46.750Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “beta cells” is on the snapshot of s5"
+  }
+ ]
+}

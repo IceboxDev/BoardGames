@@ -1,0 +1,479 @@
+{
+ "article": "a0817",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Caffe_Cino",
+   "title": "Caffe Cino – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:21.494Z",
+   "snapshot": "b77d44d545cd0838086e602d2f17357cce23d47ecd09b6546de8e05a9fa2d6c0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Actors%27_Equity_Association",
+   "title": "Actors' Equity Association – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:22.388Z",
+   "snapshot": "e475fb054ba5cb54c84ee247b11f7470d66b3bb466d5af55059f8592b938490d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tony_Awards",
+   "title": "Tony Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:23.471Z",
+   "snapshot": "a63abe99bf172e6cc4d0744a40e0c23d4535bc1f6d7603c1ef21f6044f995209"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Obie_Award",
+   "title": "Obie Award – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:24.344Z",
+   "snapshot": "090b5610078e441011d9cbbce068830e21aa4c5b75135242b6c00dc7cfeef42c"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Amadeus_(play)",
+   "title": "Amadeus (play)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:22:25.458Z",
+   "snapshot": "3af2fe88d6e29847a22f65179654c9bd0023c6fa6f47b6e34d31b19469a69133"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Broadway_theatre",
+   "title": "Broadway theatre – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:56.647Z",
+   "snapshot": "37aef5ad5d69924816d9213513fe417eaca7a739cd10b82898423253ddcc8114"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Off-Off-Broadway",
+   "title": "Off-off-Broadway – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:57.507Z",
+   "snapshot": "f4b2eab653af2c7885b569426a6671b5977ee0cf0ce83c218d4a15b9fe9c8cac"
+  },
+  "s8": {
+   "url": "https://www.offbroadway.org/",
+   "title": "The Off-Broadway League",
+   "publisher": "The Off-Broadway League",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:57.248Z",
+   "snapshot": "3a754bc5dd837813b87381326084f8ab8630db2d7a909e8632a75a23e25ff195"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Broadway, Off-Broadway and Off-Off-Broadway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "500",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tony Award",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Obie Award",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Amadeus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; history entry seq 35; transcript tp-335"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:49.334Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Broadway, Off-Broadway and Off-Off-Broadway",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Broadway, Off-Broadway and Off-Off-Broadway”, “Broadway, Off-Broadway und Off-Off-Broadway”, “Бродвей, офф-Бродвей и офф-офф-Бродвей”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:49.334Z",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "500",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“500”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:49.334Z",
+   "target": "f04084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Antoinette Perry Award for Excellence in Broadway Theatre, more commonly known as a Tony Award, recognizes excellence in live Broadway theatre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tony Award” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:49.334Z",
+   "target": "f04085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Obie Award",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Obie Award” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:49.334Z",
+   "target": "f14594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Amadeus is a 1979 play by Peter Shaffer which gives a fictional account of the lives of composers Wolfgang Amadeus Mozart and Antonio Salieri, imagining a rivalry between the two at the court of Joseph II, Holy Roman Emperor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:49.334Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Amadeus” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:58:27Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Smaller theaters in New York City are referred to as off-Broadway, regardless of location, while very small venues with fewer than 100 seats are called off-off-Broadway",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:58:29Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Off-off-Broadway theaters are smaller New York City theaters than Broadway and off-Broadway theaters, and usually have fewer than 100 seats.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:58:31Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a production in an Off-Broadway theatre (76-499 seats)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Trade body defines the middle tier; Broadway is 500+ above it."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:58:33Z",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To be eligible for a Tony, a production must be in a house with 500 seats or more and in the Theater District, which are the criteria that define Broadway theatre.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:58:36Z",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a production in an Off-Broadway theatre (76-499 seats)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Off-Broadway tops out at 499 seats, so Broadway houses start at 500."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:17.594Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Smaller theaters in New York City are referred to as off-Broadway, regardless of location, while very small venues with fewer than 100 seats are called off-off-Broadway",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:17.594Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Off-off-Broadway theaters are smaller New York City theaters than Broadway and off-Broadway theaters, and usually have fewer than 100 seats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:17.594Z",
+   "target": "f04081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a production in an Off-Broadway theatre (76-499 seats)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:17.594Z",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "To be eligible for a Tony, a production must be in a house with 500 seats or more and in the Theater District, which are the criteria that define Broadway theatre.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:17.594Z",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "a production in an Off-Broadway theatre (76-499 seats)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:17.594Z",
+   "target": "f04082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Broadway theatre is a theatre genre that consists of the theatrical performances presented in 41 professional theaters, each with 500 or more seats, in the Theater District and Lincoln Center along Broadway, in Midtown Manhattan, New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:17.594Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “500” is on the snapshot of s6"
+  }
+ ]
+}

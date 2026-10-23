@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-223",
+ "image": "IMG20261007182830.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In Neuseeland gibt es keine Millionenstadt. Richtig oder falsch?",
+   "de": "Wie heißt die einzige Millionenstadt Neuseelands?",
+   "en": "What is the name of New Zealand's only city with more than a million inhabitants?",
+   "reworked": true,
+   "answerDe": "Auckland",
+   "answerEn": "Auckland",
+   "timeline": {
+    "kind": "founding",
+    "start": "1840",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Founding of Auckland, today New Zealand's largest city with over 1.4 million inhabitants",
+    "labelDe": "Gründung von Auckland, heute mit über 1,4 Millionen Einwohnern die größte Stadt Neuseelands"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Auckland",
+    "title": "Auckland",
+    "lang": "de"
+   },
+   "notes": "Card statement (bold 'keine') is false: Auckland has over 1.4 million inhabitants (1,571,718 in the 2018 census for the Auckland region).",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Für welchen Film gewann Leonardo DiCaprio seinen ersten Oscar als bester Hauptdarsteller?",
+   "de": "Für welchen Film gewann Leonardo DiCaprio seinen ersten Oscar als bester Hauptdarsteller?",
+   "en": "For which film did Leonardo DiCaprio win his first Oscar for Best Actor?",
+   "reworked": false,
+   "answerDe": "The Revenant – Der Rückkehrer",
+   "answerEn": "The Revenant",
+   "timeline": {
+    "kind": "event",
+    "start": "2016",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "At the 2016 Academy Awards Leonardo DiCaprio wins Best Actor for The Revenant",
+    "labelDe": "Bei der Oscarverleihung 2016 gewinnt Leonardo DiCaprio für The Revenant als bester Hauptdarsteller"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/The_Revenant_–_Der_Rückkehrer",
+    "title": "The Revenant – Der Rückkehrer",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "film-media",
+   "sub": "film"
+  },
+  {
+   "category": 3,
+   "cardDe": "Die Bundesrepublik Deutschland bot Albert Einstein 1952 das Amt des Bundespräsidenten an. Richtig oder falsch?",
+   "de": "Welcher Staat bot Albert Einstein 1952 das Amt des Staatspräsidenten an?",
+   "en": "Which country offered Albert Einstein the office of president in 1952?",
+   "reworked": true,
+   "answerDe": "Israel",
+   "answerEn": "Israel",
+   "timeline": {
+    "kind": "event",
+    "start": "1952",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "After Chaim Weizmann's death, Albert Einstein is offered the presidency of Israel and declines",
+    "labelDe": "Nach dem Tod Chaim Weizmanns wird Albert Einstein das Amt des israelischen Staatspräsidenten angeboten; er lehnt ab"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Albert_Einstein",
+    "title": "Albert Einstein",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: the 1952 offer came from Israel (to succeed Chaim Weizmann), not West Germany.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Welchem Getränk widmete Johann Sebastian Bach eine ganze Kantate: Bier, Tee oder Kaffee?",
+   "de": "Welchem Getränk widmete Johann Sebastian Bach eine ganze Kantate?",
+   "en": "To which drink did Johann Sebastian Bach dedicate an entire cantata?",
+   "reworked": true,
+   "answerDe": "Kaffee",
+   "answerEn": "Coffee",
+   "timeline": {
+    "kind": "creation",
+    "start": "1734",
+    "end": null,
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Bach's Coffee Cantata \"Schweigt stille, plaudert nicht\" (BWV 211) is composed in Leipzig",
+    "labelDe": "Bachs Kaffeekantate „Schweigt stille, plaudert nicht“ (BWV 211) entsteht in Leipzig"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Schweigt_stille,_plaudert_nicht",
+    "title": "Schweigt stille, plaudert nicht",
+    "lang": "de"
+   },
+   "notes": "Multiple choice removed. The Coffee Cantata, BWV 211; year of composition uncertain (c. 1734).",
+   "domain": "music-stage",
+   "sub": "classical"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche zwei Buchstaben stehen für eine moderne Brille, die 3D-Video-Feeds anzeigen kann?",
+   "de": "Welche zwei Buchstaben stehen für eine moderne Brille, die 3D-Video-Feeds anzeigen kann?",
+   "en": "Which two letters stand for modern goggles that can display 3D video feeds?",
+   "reworked": false,
+   "answerDe": "VR (Virtual Reality)",
+   "answerEn": "VR (virtual reality)",
+   "timeline": {
+    "kind": "creation",
+    "start": "2013",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Release of the Oculus Rift DK1 developer kit, which started the modern wave of VR headsets",
+    "labelDe": "Erscheinen des Entwicklerkits Oculus Rift DK1, mit dem die moderne Welle der VR-Brillen beginnt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Virtual-Reality-Headset",
+    "title": "Virtual-Reality-Headset",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "technology",
+   "sub": "computing"
+  },
+  {
+   "category": 6,
+   "cardDe": "Pilates-Erfinder Joseph Pilates stammt ursprünglich aus Polen. Richtig oder falsch?",
+   "de": "Aus welchem Land stammte Pilates-Erfinder Joseph Pilates ursprünglich?",
+   "en": "Which country did Pilates inventor Joseph Pilates originally come from?",
+   "reworked": true,
+   "answerDe": "Deutschland",
+   "answerEn": "Germany",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1883-12-09",
+    "end": "1967-10-09",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Joseph Pilates, German fitness trainer from Mönchengladbach who created the Pilates method",
+    "labelDe": "Joseph Pilates, deutscher Körpertrainer aus Mönchengladbach und Begründer der Pilates-Methode"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Joseph_H._Pilates",
+    "title": "Joseph H. Pilates",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: born in Mönchengladbach, Germany; died in New York.",
+   "domain": "everyday",
+   "sub": "leisure"
+  }
+ ]
+}

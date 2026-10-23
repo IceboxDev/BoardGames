@@ -1,0 +1,242 @@
+{
+ "article": "a0282",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
+   "title": "Mustafa Kemal Atatürk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:19.191Z",
+   "snapshot": "2ed69c1b92efcea55fde04ee98beb85b1e2f4ab8268621cb9d587392eb10e476"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Friedrich_Ebert",
+   "title": "Friedrich Ebert – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:20.055Z",
+   "snapshot": "b375d260c18ab2ba59ebdbce1e45f44fc0ed3c3edb39a0aaa9f829bcead131b9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Masaryk",
+   "title": "Tomáš Masaryk – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:21.044Z",
+   "snapshot": "2ae228aff907fb970c29eb7147211a10e34cde9742a437273a5f002dce6283d2"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Theodor_Heuss",
+   "title": "Theodor Heuss – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:24.267Z",
+   "snapshot": "1e8f2d648bced335aeff28ecd18b9d3d2e8ae3e878dfb6be7af49a0e77d7ff36"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charles_de_Gaulle",
+   "title": "Charles de Gaulle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:23.134Z",
+   "snapshot": "7e626cc36f1bd109d0ec8c481f0097cc705baa187b45e41cbf4ad7f8379bad17"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01406",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mustafa Kemal Atatürk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01407",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Friedrich Ebert",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01408",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tomáš Garrigue Masaryk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01409",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodor Heuss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01410",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles de Gaulle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:24.015Z",
+   "target": "f01406",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "According to information obtained from Mustafa Kemal Atatürk, Makbule Atadan, other family members, and childhood friends who knew Atatürk's family, Ali Rıza Efendi was originally from Salonica, and his wife, Zübeyde Hanım, was born to a farming family in Langaza, west of Salonica, in 1857.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mustafa Kemal Atatürk” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:24.015Z",
+   "target": "f01407",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Friedrich Ebert ([ˈfʁiːdʁɪç ˈeːbɐt] ; 4 February 1871 – 28 February 1925) was a German politician of the Social Democratic Party (SPD) who served as the first president of Germany from 1919 until his death in 1925.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Ebert” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:24.015Z",
+   "target": "f01408",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tomáš Garrigue Masaryk (7 March 1850 – 14 September 1937) was a Czechoslovak statesman, political activist and philosopher who served as the first president of Czechoslovakia from 1918 to 1935.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tomáš Garrigue Masaryk” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:24.015Z",
+   "target": "f01409",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Theodor Heuss (German: [ˈteːodoːɐ̯ ˈhɔʏs] ; 31 January 1884 – 12 December 1963) was a German politician who served as the first president of West Germany from 1949 to 1959.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Theodor Heuss” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:24.015Z",
+   "target": "f01410",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "French political parties and leaders claim a Gaullist legacy; streets and monuments in France and other parts of the world were dedicated in honour of him after his death, such as the Paris Charles de Gaulle Airport in Paris, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:24.015Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles de Gaulle” is on the snapshot of s5"
+  }
+ ]
+}

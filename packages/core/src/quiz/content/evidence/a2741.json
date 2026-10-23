@@ -1,0 +1,641 @@
+{
+ "article": "a2741",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ocean_acidification",
+   "title": "Ocean acidification",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:26.020Z",
+   "snapshot": "8c609abdb891e2fe24502049dbe26e4e51cb05fc1543d2738afe8839b30fca7a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Atlantic_Ocean",
+   "title": "Atlantic Ocean",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:11.371Z",
+   "snapshot": "6802ce411ae2e345d298e54c648bc10321bbca2b7af36fea335de3b9a98108a8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Seawater",
+   "title": "Seawater",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:57.483Z",
+   "snapshot": "65a214531bb9b3bc1e16538e1469b135e19f1424c597d68fde6498e2a57d32ce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+   "title": "Baltic Sea",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:18:27.214Z",
+   "snapshot": "b3b249a4ea58be9901d63e58df5b4cdd496303fbb529f484bbe0dc349e28bf45"
+  },
+  "s5": {
+   "url": "https://www2.whoi.edu/site/nhcsb/is-all-the-water-in-the-ocean-the-same-saltiness/",
+   "title": "Is all the water in the ocean the same saltiness? – Ask a Scientist",
+   "publisher": "Woods Hole Oceanographic Institution",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:07.468Z",
+   "snapshot": "63018733cc644e25934276aefdef7f439bb91de0c4899cee29469a9921cafa86"
+  },
+  "s6": {
+   "url": "https://geo.libretexts.org/Courses/Gettysburg_College/Oceans_of_Data_(Gownaris)/04%3A_Salinity_Temperature_and_Density_in_the_Ocean/4.02%3A_Ocean_Salinity",
+   "title": "4.2: Ocean Salinity – Oceans of Data (Gettysburg College)",
+   "publisher": "LibreTexts / Gettysburg College",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:08.473Z",
+   "snapshot": "b43adab5d1e9c10052d85698b9a83ecbb9f10ffe78aaee2f885e58138f336578"
+  },
+  "s7": {
+   "url": "https://stateofthebalticsea.helcom.fi/overview/about-the-baltic-sea/",
+   "title": "About the Baltic Sea – State of the Baltic Sea (HOLAS 3)",
+   "publisher": "HELCOM",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:08.256Z",
+   "snapshot": "2d6d574bfb6e31f9443ef051e95f1cf1be076cf33de7d1daee9f87cd6659a99f"
+  },
+  "s8": {
+   "url": "https://meriliitto.fi/en/the-baltic-sea-our-sea/",
+   "title": "The Baltic Sea – Our Sea",
+   "publisher": "Meriliitto (Finnish Maritime League)",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:09.344Z",
+   "snapshot": "2150c2a6914c4641e35931e35886978653d6bbd063a84e154c3dd61a926b29b1"
+  },
+  "s9": {
+   "url": "https://essd.copernicus.org/articles/15/5301/2023/essd-15-5301-2023.html",
+   "title": "Global Carbon Budget 2023",
+   "publisher": "Earth System Science Data (Copernicus)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:08.770Z",
+   "snapshot": "2762788733602db48cdc71656a0a9d6640992ba7be25ae702eabcaaa93a8d007"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ocean acidification",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Atlantic Ocean",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-038"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chloride",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Baltic Sea",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About a quarter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:06.363Z",
+   "target": "f25595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ocean acidification is the ongoing decrease in the pH of the Earth's ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ocean acidification” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:06.363Z",
+   "target": "f25596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Atlantic Ocean is the second largest of the world's five oceans, with an area of about 85,133,000 square kilometers (32,870,000 sq mi).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Atlantic Ocean” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:06.363Z",
+   "target": "f25598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This means that every kilogram (roughly one liter by volume) of seawater has approximately 35 grams (1.2 oz) of dissolved salts (predominantly sodium (Na+) and chloride (Cl−) ions).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chloride” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:06.363Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Baltic Sea is an arm of the Atlantic Ocean that is enclosed by the countries of Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Poland, Russia, and Sweden.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:06.363Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baltic Sea” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:06.363Z",
+   "target": "f25600",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "About a quarter",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“About a quarter”, “Etwa ein Viertel”, “около четверти”) on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:56:22Z",
+   "target": "f25596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On average, the Atlantic is the saltiest major ocean; surface water salinity in the open ocean ranges from 33 to 37 parts per thousand",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:56:25Z",
+   "target": "f25596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The saltiest ocean is the Atlantic Ocean. This is because it has minimal sources of freshwater flowing into it, and because it is very warm.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:56:37Z",
+   "target": "f25598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The composition of the total salt component is: Cl − 55%, Na + 30.6%",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:56:38Z",
+   "target": "f25598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "no matter the total salinity of a seawater sample, 55% of the total salinity will be due to chloride, 30% due to sodium",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:56:39Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the world's largest brackish water basin.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23",
+   "note": "Superlative contested: HELCOM says 'one of the largest'; the Black Sea is also brackish and larger. Wording softened to 'one of the world's largest'."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:56:40Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Baltic Sea is one of the largest brackish water areas in the world, with a surface area of 420,000 square kilometres.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:56:42Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Baltic Sea is the world’s largest brackish water basin.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:56:43Z",
+   "target": "f25600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Since 1850, the ocean has removed 26 % of total anthropogenic emissions.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:56:45Z",
+   "target": "f25600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "From 1850 until 2022, the ocean has absorbed 26% of total anthropogenic emissions.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "On average, the Atlantic is the saltiest major ocean; surface water salinity in the open ocean ranges from 33 to 37 parts per thousand",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "no matter the total salinity of a seawater sample, 55% of the total salinity will be due to chloride, 30% due to sodium",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It is the world's largest brackish water basin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The Baltic Sea is one of the largest brackish water areas in the world, with a surface area of 420,000 square kilometres.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Baltic Sea is the world’s largest brackish water basin.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Since 1850, the ocean has removed 26 % of total anthropogenic emissions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25600",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "From 1850 until 2022, the ocean has absorbed 26% of total anthropogenic emissions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s1"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Chloride and sodium, the components of table salt (sodium chloride NaCl), make up over 85% of the ions in the ocean, which is why seawater tastes salty (Figure \\(\\PageIndex{1}\\)).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Chloride” is on the snapshot of s6"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "About the Baltic Sea – State of the Baltic Sea – Third HELCOM holistic assessment",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baltic Sea” is on the snapshot of s7"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:59:53.775Z",
+   "target": "f25599",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Baltic Sea – Our Sea – Meriliitto",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:53.775Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Baltic Sea” is on the snapshot of s8"
+  }
+ ]
+}

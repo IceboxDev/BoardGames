@@ -1,0 +1,249 @@
+{
+ "article": "a0450",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Ausschreitungen_in_Rostock-Lichtenhagen",
+   "title": "Ausschreitungen in Rostock-Lichtenhagen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:02.033Z",
+   "snapshot": "669314a361f69f3feb2bb0ea3ce87d003b000889c34376c714e8420541ee6eb6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hoyerswerda_riots",
+   "title": "Hoyerswerda riots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:03.774Z",
+   "snapshot": "c9998a40db87749f62177b657c92acf76fe4af9085063c497e66ab5bb8bd9328"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Mordanschlag_von_M%C3%B6lln",
+   "title": "Mordanschlag von Mölln – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:02.143Z",
+   "snapshot": "5fdbfbc9b6fc4bc14265f1de2a854b24fd0fe805d4bff4d7e50a9041415cbb14"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Brandanschlag_von_Solingen_(1993)",
+   "title": "Brandanschlag von Solingen (1993) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:03.737Z",
+   "snapshot": "f2f4c088b6c01c013c2b75ede0403cb7948cc06482c10db6ac6e9dcc6db559d1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Amadeu_Antonio",
+   "title": "Amadeu Antonio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:05.238Z",
+   "snapshot": "e0a51fc6ebc1d6e30b8318d1551929a708f34b736f94e0da895d6ab4f01ee173"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/M%C3%BCnchner_Lichterkette",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:57:04.491Z",
+   "snapshot": "64230457f12cca4d311de93da681017cf6f0f9c46569d6a1ee8abd316bed3ea9"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02246",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Lichtenhagen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c038"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02247",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Hoyerswerda",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02248",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mölln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02249",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Solingen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02250",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eberswalde",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:49.842Z",
+   "target": "f02246",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ausschreitungen in Rostock-Lichtenhagen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.842Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lichtenhagen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:49.842Z",
+   "target": "f02247",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Hoyerswerda riots (German: Unruhen in Hoyerswerda) were xenophobic riots that lasted from 17 to 23 September 1991 in Hoyerswerda, a town in the north-east of Saxony, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.842Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hoyerswerda” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:49.842Z",
+   "target": "f02248",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Der Mordanschlag von Mölln war ein Brandanschlag in der Nacht auf den 23.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.842Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mölln” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:49.842Z",
+   "target": "f02249",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Brandanschlag von Solingen (1993)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.842Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Solingen” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:49.842Z",
+   "target": "f02250",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He had hoped to study aeronautic technology, but as with many Angolan foreign workers at that time, he became a butcher for EWG Eberswalder Wurst, part of the Schlacht- und Verarbeitungskombinat in Eberswalde, Brandenburg, where he met his girlfriend.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:49.842Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eberswalde” is on the snapshot of s5"
+  }
+ ]
+}

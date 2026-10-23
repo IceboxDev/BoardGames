@@ -1,0 +1,36 @@
+{
+ "id": "pop-ingest",
+ "title": "Publish or Perish: transcribe 100 cards and merge them",
+ "startedAt": "2026-10-22",
+ "endedAt": "2026-10-22",
+ "kind": "ingest",
+ "by": [
+  "Claude Code coordinator session (model not recorded in the work folder)",
+  "Claude Code subagents, parallel workers (model not recorded)"
+ ],
+ "brief": "repo scripts/quiz-ingest/TRANSCRIBE.md, MERGE.md",
+ "inputs": [
+  "photos/publish-or-perish"
+ ],
+ "outputs": [
+  "transcripts/publish-or-perish",
+  "bank (merge history 2026-10-22, refs 'publish-or-perish/pp-NNN')"
+ ],
+ "archivedFrom": [
+  "~/Downloads/quiz-cards/publish-or-perish"
+ ],
+ "archivedAt": "2026-10-23T04:42+02:00",
+ "counts": {
+  "files": 91,
+  "bytes": 1689922,
+  "byExt": {
+   ".json": 43,
+   ".md": 43,
+   ".tsv": 3,
+   ".txt": 2
+  },
+  "cards": 100,
+  "printedQuestions": 200
+ },
+ "notes": "Not archived: printed/ (= transcripts/), staged/ (65 MB), scratch/ (195 MB)."
+}

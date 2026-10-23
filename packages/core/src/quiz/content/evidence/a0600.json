@@ -1,0 +1,242 @@
+{
+ "article": "a0600",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/BTX-Hack",
+   "title": "BTX-Hack – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:21.537Z",
+   "snapshot": "1facff265d875a21d6f2c02e0c71071eb9da2cb1084a0672dc196db245a75deb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Project_Chanology",
+   "title": "Project Chanology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:26.008Z",
+   "snapshot": "db3ce80d84bb428878e542ec6fac5d28eb2014c45ca237ff5894e9e4db871a52"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/LulzSec",
+   "title": "LulzSec – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:27.874Z",
+   "snapshot": "2a00651441ad2d0f57c9ebd0845fc531f6791ca9373179cabae01a97e3122222"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Back_Orifice",
+   "title": "Back Orifice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:27.491Z",
+   "snapshot": "f651604e44bf3ea25b6043e116830c9b1dea8a69e4139afd15c07c288837de39"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/L0pht",
+   "title": "L0pht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:28.433Z",
+   "snapshot": "16a77623060304fff35a5386206b6bbd733e4315dca1480ff5df4bf81d82c689"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02996",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Chaos Computer Club",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02997",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Anonymous",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02998",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "LulzSec",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02999",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cult of the Dead Cow",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "L0pht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:12.539Z",
+   "target": "f02996",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die beiden Mitglieder des Chaos Computer Club (CCC) wollten damit beweisen, dass der damals seit einem Jahr bestehende Onlinedienst BTX entgegen den Aussagen des Betreibers, der Deutschen Bundespost, nicht ausreichend abgesichert war.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chaos Computer Club” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.539Z",
+   "target": "f02997",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Project Chanology (also called Operation Chanology) was a protest movement against the practices of the Church of Scientology by members of Anonymous, a leaderless Internet-based group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anonymous” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:12.539Z",
+   "target": "f02998",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "LulzSec (a contraction for Lulz Security) was a grey hat computer hacking group that claimed responsibility for several high profile attacks, including the compromise of user accounts from PlayStation Network in 2011.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “LulzSec” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:12.539Z",
+   "target": "f02999",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "hacker organization Cult of the Dead Cow.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cult of the Dead Cow” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:12.539Z",
+   "target": "f03000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "L0pht Heavy Industries (pronounced \"loft\") was a hacker collective active between 1992 and 2000 and located in the Boston, Massachusetts area.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.539Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “L0pht” is on the snapshot of s5"
+  }
+ ]
+}

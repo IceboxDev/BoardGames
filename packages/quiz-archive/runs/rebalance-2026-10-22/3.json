@@ -1,0 +1,557 @@
+{
+  "subs": {
+    "music-stage": [
+      {
+        "slug": "pop-rock",
+        "en": "Pop Stars & Hits",
+        "de": "Popstars & Hits",
+        "ru": "Поп-звёзды и хиты"
+      },
+      {
+        "slug": "rock-metal",
+        "en": "Rock, Punk & Metal",
+        "de": "Rock, Punk & Metal",
+        "ru": "Рок, панк и метал"
+      },
+      {
+        "slug": "jazz-soul-hiphop",
+        "en": "Jazz, Soul & Hip-Hop",
+        "de": "Jazz, Soul & Hip-Hop",
+        "ru": "Джаз, соул и хип-хоп"
+      },
+      {
+        "slug": "world-music",
+        "en": "German & World Music",
+        "de": "Deutsche & Weltmusik",
+        "ru": "Немецкая и мировая музыка"
+      },
+      {
+        "slug": "classical",
+        "en": "Classical & Opera",
+        "de": "Klassik & Oper",
+        "ru": "Классика и опера"
+      },
+      {
+        "slug": "instruments",
+        "en": "Instruments & Music Theory",
+        "de": "Instrumente & Musiktheorie",
+        "ru": "Инструменты и теория музыки"
+      }
+    ]
+  },
+  "assign": {
+    "a0001": {
+      "sub": "classical",
+      "reason": "A national-anthem history built on Haydn's melody (Two Germanys, Two Anthems, and a Children's Hymn) — moved from Pop, Rock & Jazz to Classical & Opera, beside 'Anthems Without Words'."
+    },
+    "a0013": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Colour Film Forgotten: Nina Hagen and the Neue Deutsche Welle) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a0025": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The Lead Guitarists Who Defined Hard Rock) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0037": {
+      "sub": "instruments"
+    },
+    "a0049": {
+      "sub": "pop-rock"
+    },
+    "a0061": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A jazz article (From Ragtime to Rock 'n' Roll: Five Styles and the Musicians Who Defined Them) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0073": {
+      "sub": "pop-rock"
+    },
+    "a0085": {
+      "sub": "classical"
+    },
+    "a0097": {
+      "sub": "instruments"
+    },
+    "a0109": {
+      "sub": "classical"
+    },
+    "a0133": {
+      "sub": "pop-rock"
+    },
+    "a0169": {
+      "sub": "classical"
+    },
+    "a0193": {
+      "sub": "rock-metal",
+      "reason": "A rock article (How Does It Feel? The Songs at the Top of Rolling Stone's List) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0205": {
+      "sub": "rock-metal",
+      "reason": "A rock article (From Hardcore to Emo: Punk's Family Tree) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0229": {
+      "sub": "classical"
+    },
+    "a0241": {
+      "sub": "pop-rock"
+    },
+    "a0253": {
+      "sub": "pop-rock"
+    },
+    "a0265": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Guitarists Who Bent the Instrument to Their Will) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0277": {
+      "sub": "pop-rock"
+    },
+    "a0289": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (The Crews That Built Hip-Hop's Golden Age) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0313": {
+      "sub": "pop-rock"
+    },
+    "a0337": {
+      "sub": "pop-rock"
+    },
+    "a0349": {
+      "sub": "instruments"
+    },
+    "a0361": {
+      "sub": "pop-rock"
+    },
+    "a0373": {
+      "sub": "instruments"
+    },
+    "a0385": {
+      "sub": "pop-rock"
+    },
+    "a0397": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Horses, Bollocks and Marquee Moon: The Debut Albums That Made Punk) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0409": {
+      "sub": "instruments"
+    },
+    "a0421": {
+      "sub": "pop-rock"
+    },
+    "a0433": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A jazz article (The Golden Decade of Modern Jazz) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0445": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Brothers in Harmony: Bands Built on Sibling Bonds) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0469": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The Night Paul Simonon Broke His Bass) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0481": {
+      "sub": "instruments"
+    },
+    "a0493": {
+      "sub": "classical"
+    },
+    "a0505": {
+      "sub": "instruments"
+    },
+    "a0529": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Four Names You Should Know: The Classic Line-ups of Rock and Pop) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0553": {
+      "sub": "instruments"
+    },
+    "a0577": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Dookie and the Year Punk Went Platinum) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0589": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A jazz article (Five Instruments, Five Giants of Modern Jazz) — moved from Instruments & Music Theory (it is about jazz musicians, not the instruments) to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0649": {
+      "sub": "classical"
+    },
+    "a0661": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Five Albums That Forged Heavy Metal) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0673": {
+      "sub": "pop-rock"
+    },
+    "a0685": {
+      "sub": "classical"
+    },
+    "a0721": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (MC, DJ, EP: The Alphabet of Popular Music) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0757": {
+      "sub": "classical"
+    },
+    "a0769": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (From the Booth to the Boardroom: Rappers as Entrepreneurs) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0781": {
+      "sub": "instruments"
+    },
+    "a0793": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (Five Albums That Defined 1990s Rap) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a0805": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Tax Exiles on the Riviera: The Rolling Stones' Golden Run) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0829": {
+      "sub": "classical"
+    },
+    "a0841": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Frontmen for the Long Haul: The Voices of British Hard Rock and Metal) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0877": {
+      "sub": "instruments"
+    },
+    "a0901": {
+      "sub": "pop-rock"
+    },
+    "a0913": {
+      "sub": "pop-rock"
+    },
+    "a0925": {
+      "sub": "pop-rock"
+    },
+    "a0937": {
+      "sub": "rock-metal",
+      "reason": "A rock article (California Dreamin’ and the Bands of the Flower Power Years) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a0949": {
+      "sub": "instruments"
+    },
+    "a0961": {
+      "sub": "classical"
+    },
+    "a0973": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Düsseldorf and the German Electronic Revolution) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a0997": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Where Germany Goes to Hear It Loud: Festival Towns from Wacken to Bayreuth) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a1009": {
+      "sub": "pop-rock"
+    },
+    "a1033": {
+      "sub": "classical"
+    },
+    "a1069": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Three Chords and the Truth: The Bands That Made Punk) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1081": {
+      "sub": "classical"
+    },
+    "a1093": {
+      "sub": "pop-rock"
+    },
+    "a1117": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Songs of the Mexican Revolution) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a1141": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The Fifth Beatle: The People Behind the Fab Four) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1165": {
+      "sub": "pop-rock"
+    },
+    "a1177": {
+      "sub": "instruments"
+    },
+    "a1201": {
+      "sub": "instruments"
+    },
+    "a1225": {
+      "sub": "instruments"
+    },
+    "a1249": {
+      "sub": "classical"
+    },
+    "a1273": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The Albums That Turned Pop into Art, 1966–1967) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1285": {
+      "sub": "rock-metal",
+      "reason": "A rock article (From the Velvet Underground to Nirvana: Singer-Guitarists of American Underground Rock) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1297": {
+      "sub": "pop-rock"
+    },
+    "a1309": {
+      "sub": "pop-rock"
+    },
+    "a1345": {
+      "sub": "classical"
+    },
+    "a1357": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Songs of Work, Water and Longing) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a1369": {
+      "sub": "instruments"
+    },
+    "a1393": {
+      "sub": "classical"
+    },
+    "a1405": {
+      "sub": "pop-rock"
+    },
+    "a1429": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A soul/disco article (Soul Royalty on the Blues Brothers Set) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a1453": {
+      "sub": "classical"
+    },
+    "a1465": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (From Block Party to Billboard: How Hip-Hop Went Mainstream) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a1477": {
+      "sub": "instruments"
+    },
+    "a1525": {
+      "sub": "pop-rock"
+    },
+    "a1537": {
+      "sub": "pop-rock"
+    },
+    "a1549": {
+      "sub": "classical"
+    },
+    "a1573": {
+      "sub": "instruments"
+    },
+    "a1585": {
+      "sub": "instruments"
+    },
+    "a1597": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Sitars, Tablas and the Sound of the Sixties) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1609": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Voices of German Song: From Rio Reiser to Udo Jürgens) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a1633": {
+      "sub": "classical"
+    },
+    "a1645": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (Crews That Built Hip-Hop: From the Bronx to Stuttgart) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a1657": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Borrowed Names: How Post-Punk Bands Christened Themselves) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1669": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Santana's Supernatural Comeback) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1693": {
+      "sub": "pop-rock"
+    },
+    "a1705": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Bill Ramsey and the Long Story of German Schlager) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a1729": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The Seattle Sound: Five Bands That Defined Grunge) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1741": {
+      "sub": "pop-rock"
+    },
+    "a1765": {
+      "sub": "pop-rock"
+    },
+    "a1777": {
+      "sub": "pop-rock"
+    },
+    "a1789": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Landmark Albums and the Bands Behind Them) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1801": {
+      "sub": "pop-rock"
+    },
+    "a1813": {
+      "sub": "classical"
+    },
+    "a1837": {
+      "sub": "pop-rock"
+    },
+    "a1849": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Masks, Make-up and Alter Egos: Bands That Hid Their Faces) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1861": {
+      "sub": "classical"
+    },
+    "a1909": {
+      "sub": "pop-rock"
+    },
+    "a1921": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A soul/disco article (Kings, Queens and a Godfather: the Nicknames of Soul) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a1933": {
+      "sub": "rock-metal",
+      "reason": "A rock article (What's in a Name? Band Abbreviations Explained) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a1945": {
+      "sub": "classical"
+    },
+    "a1969": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A soul/disco article (Disco Anthems That Outlived the Dance Floor) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a1981": {
+      "sub": "pop-rock"
+    },
+    "a1993": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Five Rock Anthems and the Bands Behind Them) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2053": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (The Humpe Sisters: From Neue Deutsche Welle to Electropop) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2065": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The 27 Club: Rock's Grim Coincidence) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2077": {
+      "sub": "pop-rock"
+    },
+    "a2101": {
+      "sub": "rock-metal",
+      "reason": "A rock article (The Lines That Started Rock and Roll) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2113": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A soul/disco article (The Singer-Songwriters of Classic Soul) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a2465": {
+      "sub": "classical"
+    },
+    "a2466": {
+      "sub": "classical"
+    },
+    "a2467": {
+      "sub": "classical"
+    },
+    "a2468": {
+      "sub": "classical"
+    },
+    "a2469": {
+      "sub": "instruments"
+    },
+    "a2470": {
+      "sub": "instruments"
+    },
+    "a2471": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Hit Makers: The Producers Behind German Pop) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2472": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Laughing in German: Parody and Satire in Pop) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2473": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Berlin Bands in Two Halves: From City to Seeed) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2474": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (From Lugano to Oslo: Germany and the Eurovision Song Contest) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2475": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Waterloo and After: How Sweden Became a Pop Superpower) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2476": {
+      "sub": "pop-rock"
+    },
+    "a2477": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Elvis Presley: The King's Songwriters, Manager and Army Years) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2478": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (The Sparrow, the High-Voltage Man and the Guitarist: Stars of French Song and Jazz) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2479": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (From Gangnam to the Hot 100: How K-pop Conquered the World) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2480": {
+      "sub": "world-music",
+      "reason": "A German / non-anglophone music article (Bossa Nova: The New Wave from Rio) — moved from Pop, Rock & Jazz to the new German & World Music sub."
+    },
+    "a2481": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Frank Zappa: Yellow Snow, Valley Girls and a Fire in Montreux) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2482": {
+      "sub": "pop-rock"
+    },
+    "a2483": {
+      "sub": "pop-rock"
+    },
+    "a2484": {
+      "sub": "pop-rock"
+    },
+    "a2485": {
+      "sub": "jazz-soul-hiphop",
+      "reason": "A hip-hop article (Beyoncé and Jay-Z: Pop's First Family) — moved from Pop, Rock & Jazz to the new Jazz, Soul & Hip-Hop sub."
+    },
+    "a2486": {
+      "sub": "pop-rock"
+    },
+    "a2487": {
+      "sub": "pop-rock"
+    },
+    "a2680": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Flying Pigs and Frozen Stages: Rock's Wildest Stunts) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2681": {
+      "sub": "rock-metal",
+      "reason": "A rock article (Napster, Spotify and a Word on the Cheek: Musicians Fight for Their Music) — moved from Pop, Rock & Jazz to the new Rock, Punk & Metal sub."
+    },
+    "a2682": {
+      "sub": "pop-rock"
+    },
+    "a2756": {
+      "sub": "classical"
+    },
+    "a2757": {
+      "sub": "instruments"
+    }
+  },
+  "outgoing": {
+    "a1284": {
+      "domain": "technology",
+      "suggestedSub": "inventions",
+      "reason": "Despite the title, every fact is about German technical inventions (echo sounder, Enigma, Telemobiloskop radar, electron microscope), not musical instruments — moved from Music to Technology & Transport › Inventions & Engineering."
+    }
+  }
+}

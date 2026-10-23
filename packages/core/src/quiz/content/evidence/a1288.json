@@ -1,0 +1,360 @@
+{
+ "article": "a1288",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aki_Kaurism%C3%A4ki",
+   "title": "Aki Kaurismäki – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:14.093Z",
+   "snapshot": "e8f060db4dc8da015053ed00037ae61e0716c645ae967c92f2016b00e9ad72d7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lars_von_Trier",
+   "title": "Lars von Trier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:15.186Z",
+   "snapshot": "601cb75398f3c985b33b0848024cb5ff4ebf1cc66d7b9d3baf1b426253ee24f8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pedro_Almod%C3%B3var",
+   "title": "Pedro Almodóvar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:16.085Z",
+   "snapshot": "7bcc341bfb118184cf222ec1e6b9f9aad725461bf60e8a0fb9799be701d91866"
+  },
+  "s4": {
+   "url": "https://pl.wikipedia.org/wiki/Krzysztof_Kie%C5%9Blowski",
+   "title": "Krzysztof Kieślowski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "pl",
+   "retrievedAt": "2026-10-23T04:52:14.076Z",
+   "snapshot": "5be4d34579cf2b63a6ee4b47b6ff7189c59c78c4dde6aaa6c1c9d21985016977"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Auteur",
+   "title": "Auteur",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:17.221Z",
+   "snapshot": "a1f59c38b4c4067b5146ad1d8a2aae05605e620eb206e796c1604af2be9c7c21"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Dogme_95",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:18.073Z",
+   "snapshot": "3a36f82c3b7a5e6b9d17225e68e8286af88f54e07455a264c35e6ecfdd312031"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Krzysztof_Kie%C5%9Blowski",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:19.181Z",
+   "snapshot": "8e75217f0ae6c662369c2bf085c082c577e52583602c06dc07f4103615a0236e"
+  },
+  "s8": {
+   "url": "https://www.theguardian.com/film/2006/apr/14/1",
+   "title": "The hell in our own heads",
+   "publisher": "The Guardian",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:14.212Z",
+   "snapshot": "bc6e28199c24922e732d420b56d9771de222f1abfb3e590caf8ca4d60ea34843"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06436",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Finland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06438",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Denmark",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06439",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25610",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Auteur theory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-147"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:00.674Z",
+   "target": "f06436",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He has been described as Finland's most famous film director.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Finland” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:00.674Z",
+   "target": "f06438",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Born Lars Trier in Kongens Lyngby, Denmark, north of Copenhagen, his parents are Inger Høst and Ulf Trier.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Denmark” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:00.674Z",
+   "target": "f06439",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Almodóvar's career developed during La Movida Madrileña, a cultural renaissance that followed the end of Francoist Spain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spain” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:00.674Z",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Poland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Poland”, “Polen”, “Польша”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:00.674Z",
+   "target": "f25610",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 1962, American film critic Andrew Sarris popularized the concept in the United States, calling it the auteur theory.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:00.674Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auteur theory” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:33:27Z",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "was a Polish film director and screenwriter",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:33:32Z",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "adapted from a screenplay in a trilogy by the late Polish director Krzysztof Kieslowski",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r024",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:55:43.908Z",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "was a Polish film director and screenwriter",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:43.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:43.908Z",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "adapted from a screenplay in a trilogy by the late Polish director Krzysztof Kieslowski",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:43.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:43.908Z",
+   "target": "f06440",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Kieślowski was born in Warsaw, Poland, the son of Barbara (née Szonert) and Roman Kieślowski.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:43.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Poland” is on the snapshot of s7"
+  }
+ ]
+}

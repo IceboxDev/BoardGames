@@ -1,0 +1,302 @@
+{
+ "article": "a2335",
+ "sources": {
+  "s1": {
+   "url": "https://www.foxnews.com/travel/greece-prepares-for-re-enactment-of-the-battle-of-marathon.amp",
+   "title": "Greece Prepares for Re-enactment of the Battle of Marathon",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:39.292Z",
+   "snapshot": "d248953f55103b925c249d8256212d57661ae76f89ee11771dac0917f32cc390"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Miltiades",
+   "title": "Miltiades – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:41.264Z",
+   "snapshot": "9416b586bdff5beacd078608eafc7f42c4c2ed070b1fbedbd61f822d02e49cb1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Marathon",
+   "title": "Battle of Marathon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:26.776Z",
+   "snapshot": "bdebd9d57878b4b31c32872f6443c6d47c6056fa429b0f33d956e38dfec1e949"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pheidippides",
+   "title": "Pheidippides – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:40:29.375Z",
+   "snapshot": "ef0bc637cb78afa5368889c9613748811664f61d765df20848a65162b4f7978c"
+  },
+  "s5": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126:book=6:chapter=117",
+   "title": "Herodotus, Histories 6.117 (trans. A. D. Godley)",
+   "publisher": "Perseus Digital Library, Tufts University",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:49.363Z",
+   "snapshot": "c62a2bd0aeabfebd3df891031c2c9dbd451c9921402e06c79d4861a44d2d7566"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12144",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Battle of Marathon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-105"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12145",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miltiades",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12146",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Darius I",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12147",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pheidippides",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12148",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "192",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:59.169Z",
+   "target": "f12144",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Greece Prepares for Re-enactment of the Battle of Marathon | Fox News",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:59.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Battle of Marathon” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:59.169Z",
+   "target": "f12145",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Miltiades (; Ancient Greek: Μιλτιάδης Κίμωνος; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:59.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Miltiades” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:59.169Z",
+   "target": "f12146",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The battle was the culmination of the first attempt by Persia under King Darius I to subjugate Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:59.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Darius I” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:59.169Z",
+   "target": "f12147",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pheidippides (; fy-DIP-ə-deez; Ancient Greek: Φειδιππίδης, Ancient Greek pronunciation: [pʰeː.dip.pí.dɛːs], Modern Greek: [fi.ðiˈpi.ðis] lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:59.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pheidippides” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:59.169Z",
+   "target": "f12148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "He also reported that the Athenians lost 192 men, but he doesn't state how many Plateans have been killed .",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:59.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “192” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:57:08Z",
+   "target": "f12148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the battle at Marathon about six thousand four hundred men of the foreigners were killed, and one hundred and ninety-two Athenians; that many fell on each side.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r036",
+   "run": "provenance-research-2026-10-23",
+   "note": "The primary source of the figure (192 = one hundred and ninety-two)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:58:44.608Z",
+   "target": "f12148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In the battle at Marathon about six thousand four hundred men of the foreigners were killed, and one hundred and ninety-two Athenians; that many fell on each side.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:44.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:44.608Z",
+   "target": "f12148",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "chapter 192",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:44.608Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “192” is on the snapshot of s5"
+  }
+ ]
+}

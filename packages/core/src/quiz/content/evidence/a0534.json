@@ -1,0 +1,242 @@
+{
+ "article": "a0534",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hitler_Diaries",
+   "title": "Hitler Diaries – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:10.196Z",
+   "snapshot": "be75cbde0091d2ee9e49c28949fa08e92524d299f7e352201c8eee6c458443f2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Claas_Relotius",
+   "title": "Claas Relotius – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:11.019Z",
+   "snapshot": "fe54f9169199132839f9e7c2a13b082e3a63741cc4b75042e28e44023158e725"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize_for_Public_Service",
+   "title": "Pulitzer Prize for Public Service – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:12.140Z",
+   "snapshot": "d2a8489d3a7576481d101eeac6633504b741e2819ca59ee3f19e13ed670fe97b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pentagon_Papers",
+   "title": "Pentagon Papers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:13.149Z",
+   "snapshot": "d271415b64512d500326af18fe65319fbaee67f1836506a1ae1155b8c72d621a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/News_of_the_World",
+   "title": "News of the World – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:14.178Z",
+   "snapshot": "e7534f9d982135675b08eeea6e7a68cf38f88c3e69193d72b4160d28680670d1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02666",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c045"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02667",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Spiegel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02668",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Washington Post",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02669",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "New York Times",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "News of the World",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:03.531Z",
+   "target": "f02666",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The diaries were purchased in 1983 for 9.3 million Deutsche Marks (£2.3 million or $3.7 million) by the West German news magazine Stern, which sold serialisation rights to several news organisations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stern” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:03.531Z",
+   "target": "f02667",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "He resigned from Der Spiegel in 2018 after admitting to numerous instances of journalistic fraud.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Spiegel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:03.531Z",
+   "target": "f02668",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "1973: The Washington Post, \"for its investigation of the Watergate case.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Washington Post” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:03.531Z",
+   "target": "f02669",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Released by Daniel Ellsberg, who had worked on the study, it was made public on the front page of The New York Times starting on June 13, 1971.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New York Times” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:03.531Z",
+   "target": "f02670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The News of the World was a weekly national \"red top\" tabloid newspaper published every Sunday in the United Kingdom from 1843 to 2011.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:03.531Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “News of the World” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,322 @@
+{
+ "article": "a1386",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Utopia_(book)",
+   "title": "Utopia (book) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:13.370Z",
+   "snapshot": "897cae1a7d0e6143d1f2b1d260a9dccb76dc2217bf4a318ede999ca90fd5f882"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Das_Kapital",
+   "title": "Das Kapital – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:55:15.888Z",
+   "snapshot": "49dfbb1aa934bc1b8b2eef802a07dd50b64dbcec2255be4b869c4be4a7dca9e7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Lost_Horizon",
+   "title": "Lost Horizon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:14.242Z",
+   "snapshot": "11bd60ca19bc2fb6ea295758cf159ad358ad5e94022c87c9859754fc171c320c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Big_Brother_(Dutch_TV_series)",
+   "title": "Big Brother (Dutch TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:15.259Z",
+   "snapshot": "67fbdae499c3e6259f3db7fb1e5056091621ab256299726d884149b66f40f01f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Otto_Normalverbraucher",
+   "title": "Otto Normalverbraucher",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:13.514Z",
+   "snapshot": "cb5a59efb0f7171c8f67546f49a537f6ef09b498f228c0ac0aa07f6407b11db7"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Dystopia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:58:16.354Z",
+   "snapshot": "865c341f58acc071c07f938f4b1e8fe3e553a7817e4eb22c3c273278585af9b7"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Berliner_Ballade",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:58:14.953Z",
+   "snapshot": "221316c623e338132e40f60156e587cc54de679c8f4aa9e7eb29df560771c686"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Utopia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c116"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marxism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Shangri-La",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Big Brother",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Berliner Ballade",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Berliner Ballade",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-258/2, u07: False: 'Otto Normalverbraucher' is Gert Fröbe's character in the 1948 film Berliner Ballade (script Günter Neumann), not a Schiller poem."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f12729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Berliner Ballade",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f12729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Berliner Ballade",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s7"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f06926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Utopia (Latin: Libellus vere aureus, nec minus salutaris quam festivus, de optimo rei publicae statu deque nova insula Utopia, \"A truly golden little book, not less beneficial than enjoyable, about how things should be in a state and about the new island Utopia\") is a work of fiction and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Utopia” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f06928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It remains central to Marxian economics and has been highly influential in Western Marxism, critical theory, and cultural studies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marxism” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f06929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It is the origin of Shangri-La, a fictional utopian lamasery located high in the mountains of Tibet.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shangri-La” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f06930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Big Brother is the original Dutch version of the international reality television franchise Big Brother.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Big Brother” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f12729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Populär wurde der Name durch den Spielfilm Berliner Ballade von 1948 – eines der ersten Filmprojekte der Nachkriegszeit.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berliner Ballade” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:17.569Z",
+   "target": "f12729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Berliner Ballade ist ein deutscher Spielfilm aus dem Jahre 1948.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:17.569Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Berliner Ballade” is on the snapshot of s7"
+  }
+ ]
+}

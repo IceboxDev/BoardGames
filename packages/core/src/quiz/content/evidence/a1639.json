@@ -1,0 +1,335 @@
+{
+ "article": "a1639",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/2014_Russian_annexation_of_Crimea",
+   "title": "2014 Russian annexation of Crimea – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:10.530Z",
+   "snapshot": "ce52a76ecef41d47447de6ca695095e5b75629c167ed58b410574546a4bf4980"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/%C3%96lpreiskrise",
+   "title": "Ölpreiskrise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:13:08.082Z",
+   "snapshot": "d19826f1edec11791dd8ce5213082e57057d660eff47f8682c1764b3f7333aa0"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Bankruptcy_of_Lehman_Brothers",
+   "title": "Bankruptcy of Lehman Brothers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:11.364Z",
+   "snapshot": "be877ea034c7bd4b646215b7d11887e246e4c6877434121f769c1c980626ee41"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cuban_Missile_Crisis",
+   "title": "Cuban Missile Crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:12.438Z",
+   "snapshot": "f7df478b8096830123ca17beacc9376f2e22286f645e92c4c30c7eaf1f86a73b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+   "title": "1997 Asian financial crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:13.431Z",
+   "snapshot": "eab1b0108eae6b22d75a5af77a64a08eeae13a6699aa0764d2f0846382bdb6b6"
+  },
+  "s6": {
+   "url": "https://www.bbc.com/news/world-europe-28400218",
+   "title": "How far do EU-US sanctions on Russia go?",
+   "publisher": "BBC News",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:15.651Z",
+   "snapshot": "ea4b5ce7dff26ae58664a7cdb6a7fa78fdb471b03b03a8f5f3504b212d6fe52f"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/International_sanctions_during_the_Russo-Ukrainian_War",
+   "title": "International sanctions during the Russo-Ukrainian War – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:16.086Z",
+   "snapshot": "b97380fe8c44583845f252a1385ca30361f39c4a7ae8cc3e2da8265993eed469"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crimean crisis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c137"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08192",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ölkrise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08193",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "financial crisis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08194",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cuban Missile Crisis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08195",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Asian financial crisis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:56.139Z",
+   "target": "f08191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Crimean crisis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Crimean crisis”, “Krimkrise”, “Крымский кризис”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:56.139Z",
+   "target": "f08192",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Als Ölpreiskrise (auch „Ölpreisschock“, kurz Ölkrise) bezeichnet man eine Phase starken Ölpreisanstiegs, die gravierende gesamtwirtschaftliche Auswirkungen hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ölkrise” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:56.139Z",
+   "target": "f08193",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "government did not announce any plans to assist with any possible financial crisis that emerged at Lehman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “financial crisis” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:56.139Z",
+   "target": "f08194",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Cuban Missile Crisis, also known as the October Crisis in Cuba (Spanish: Crisis de Octubre), or the Caribbean Crisis (Russian: Карибский кризис, romanized: Karibskiy krizis), was a 13-day confrontation between the governments of the United States and the Soviet Union, when American deployments",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cuban Missile Crisis” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:56.139Z",
+   "target": "f08195",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Due to IMF's involvement in the financial crisis, the term IMF Crisis became a way to refer to the Asian Financial Crisis in countries that were affected.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:56.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Asian financial crisis” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:20:08Z",
+   "target": "f08191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Since Russia's annexation of Crimea in March the EU and US have ratcheted up sanctions several times",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:20:09Z",
+   "target": "f08191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "following the Russian annexation of Crimea, which began in late February 2014.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r064",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:43.908Z",
+   "target": "f08191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Since Russia's annexation of Crimea in March the EU and US have ratcheted up sanctions several times",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:43.908Z",
+   "target": "f08191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "following the Russian annexation of Crimea, which began in late February 2014.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:43.908Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

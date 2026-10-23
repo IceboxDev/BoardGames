@@ -1,0 +1,373 @@
+{
+ "article": "a2762",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Biomagnification",
+   "title": "Biomagnification",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:49.031Z",
+   "snapshot": "4571d1386b16e4f10dc37735e43b1db5b9927a383e2845c3d2a7882d47a4380b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ecosystem_service",
+   "title": "Ecosystem service",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:50.136Z",
+   "snapshot": "114e35daf4160a7f0bc6577f8cb0e15cc8e7cd219b872e16b53ca41d4926d18c"
+  },
+  "s3": {
+   "url": "https://www.connexionfrance.com/magazine/how-will-climate-change-affect-wine/500867",
+   "title": "How will climate change affect wine?",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:48.933Z",
+   "snapshot": "3ba44b66b1eccd8545a2054290dc451936e9732662833c423d048fad39f7a8ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trophic_level",
+   "title": "Trophic level",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:51.127Z",
+   "snapshot": "a441d4d3278f08189070e8ed3028d2ef8bb4a4a97bca1bbafa863421a7fd814b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Peregrine_falcon",
+   "title": "Peregrine falcon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:52.258Z",
+   "snapshot": "f0cc7fcdcae3fc484901d860cff4dc0a867aed5276d533028ce2416a329ea22b"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Phenology",
+   "title": "Phenology",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:19:53.058Z",
+   "snapshot": "a3683ede1f019c6c8df18804767b44b6133c89b18f8b3c1774e60461dceb6425"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7893094/",
+   "title": "Adapting Wine Grape Ripening to Global Change Requires a Multi-Trait Approach",
+   "publisher": "Frontiers in Plant Science (via PMC)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:15.768Z",
+   "snapshot": "85f6c10505ec985bd7e7de76b31385bef56e1bc2ef2d63583ad96e1eff311437"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25757",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Biomagnification",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-013"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25758",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ecosystem services",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-035"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grapes ripen earlier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-017"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Trophic level",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Peregrine falcon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25763",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phenology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:09.426Z",
+   "target": "f25757",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Biomagnification, also known as bioamplification or biological magnification, is the increase in concentration of a substance in the tissues of organisms at successively higher levels in a food chain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Biomagnification” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:09.426Z",
+   "target": "f25758",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ecosystem services are the various benefits that humans derive from ecosystems.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ecosystem services” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:09.426Z",
+   "target": "f25759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Grapes ripen earlier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Grapes ripen earlier”, “Die Trauben reifen früher”, “виноград созревает раньше”) on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:09.426Z",
+   "target": "f25760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The trophic level of an organism is the position it occupies in a food web.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trophic level” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:31:09.426Z",
+   "target": "f25761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The peregrine falcon (Falco peregrinus), sometimes referred to simply as the peregrine, is a bird of prey (raptor) in the family Falconidae known for its speed.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peregrine falcon” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:31:09.426Z",
+   "target": "f25763",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Phenology is the study of periodic events in biological life cycles and how these are influenced by seasonal and interannual variations in climate, as well as habitat factors (such as elevation).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:09.426Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phenology” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:14Z",
+   "target": "f25759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harvest records show that since the 1980s, grapes have been ripening earlier in most wine regions of the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:19Z",
+   "target": "f25759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In winegrowing regions around the world increasing temperature associated with climate change is responsible for earlier harvests",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r054",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:58.568Z",
+   "target": "f25759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Harvest records show that since the 1980s, grapes have been ripening earlier in most wine regions of the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:58.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:58.568Z",
+   "target": "f25759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In winegrowing regions around the world increasing temperature associated with climate change is responsible for earlier harvests",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:58.568Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

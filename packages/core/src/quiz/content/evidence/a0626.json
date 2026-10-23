@@ -1,0 +1,400 @@
+{
+ "article": "a0626",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+   "title": "Pride and Prejudice – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:48.679Z",
+   "snapshot": "4529778512bd734e2e305c63474e5bf361fc83957465e9068fc6eb67ce87227a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Bridget_Jones%27s_Diary",
+   "title": "Bridget Jones's Diary",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:03.065Z",
+   "snapshot": "37f22bad79f0b33ba758074996d3a710542a68fd867627b1f1111a92610f29e7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sense_and_Sensibility",
+   "title": "Sense and Sensibility – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:04.192Z",
+   "snapshot": "098fac94f3ac43f3acdfb024ca0ed730eca4882ff3c8a56d2a986fe132c18277"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Emma_(novel)",
+   "title": "Emma (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:05.157Z",
+   "snapshot": "1aca54a9444da49af8880c92f13515d4d37cebf1a386495d2914bd8ff40f73e8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Persuasion_(novel)",
+   "title": "Persuasion (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:06.228Z",
+   "snapshot": "5afa77cae31de1b2a4d67091c9cdedf72a9e6f39ee1483223934f5e1a8862f9c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Northanger_Abbey",
+   "title": "Northanger Abbey – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:09:07.080Z",
+   "snapshot": "e3cfd4c992c8032c9702112575caf9ba6d9660553651b44c25f3fd65bf252b30"
+  },
+  "s7": {
+   "url": "https://janeaustens.house/jane-austen/novels/sense-and-sensibility/",
+   "title": "Sense and Sensibility – Jane Austen's House",
+   "publisher": "Jane Austen's House (museum)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:55:10Z"
+  },
+  "s8": {
+   "url": "https://jasna.org/austen/works/sense-sensibility/",
+   "title": "Sense and Sensibility – Jane Austen Society of North America",
+   "publisher": "Jane Austen Society of North America",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:42.161Z",
+   "snapshot": "896f02a9f4609511d9ad8924816a9b77d214fe280ae13cffa5a9b6ee1eb4f87b"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pride and Prejudice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c053"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03126",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pride and Prejudice",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-366"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sense and Sensibility",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03128",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Emma",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03129",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Persuasion",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f03130",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Northanger Abbey",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:16.371Z",
+   "target": "f03126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pride and Prejudice is a novel by English author Jane Austen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pride and Prejudice” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:16.371Z",
+   "target": "f03126",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "It is based on the 1996 novel of the same name by Fielding, which was itself a loose adaptation of Jane Austen's Pride and Prejudice.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pride and Prejudice” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:16.371Z",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sense and Sensibility (working title: Elinor and Marianne) is the debut novel by English author Jane Austen, appearing in 1811.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sense and Sensibility” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:16.371Z",
+   "target": "f03128",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Emma is a novel written by English author Jane Austen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emma” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:16.371Z",
+   "target": "f03129",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Persuasion is the last novel completed by the English author Jane Austen.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Persuasion” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:16.371Z",
+   "target": "f03130",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Northanger Abbey ( NOR-thang-ər), written by the English author Jane Austen, is a coming-of-age novel and a satire of Gothic novels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:16.371Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Northanger Abbey” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:45:03Z",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Sense and Sensibility (working title: Elinor and Marianne) is the debut novel by English author Jane Austen, appearing in 1811.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:55:10Z",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sense & Sensibility was Jane Austen’s first published novel.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:55:12Z",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Jane Austen made her debut on the literary scene—albeit anonymously—with the publication of Sense and Sensibility in late October 1811.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:43.806Z",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Jane Austen made her debut on the literary scene—albeit anonymously—with the publication of Sense and Sensibility in late October 1811.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:43.806Z",
+   "target": "f03127",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Written 1795 (Elinor and Marianne); reworked November 1797 (Sense and Sensibility)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:43.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sense and Sensibility” is on the snapshot of s8"
+  }
+ ]
+}

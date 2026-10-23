@@ -1,0 +1,242 @@
+{
+ "article": "a0140",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sch%C3%A4chten",
+   "title": "Schächten – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:25:30.608Z",
+   "snapshot": "11203b87646fba7d498ee729337cd4467ae7e9c6854f12f165c0da2fe1b6900c"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Brit_Mila",
+   "title": "Brit Mila – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:25:31.640Z",
+   "snapshot": "420ca29e7c06231bf5ffb8decadfb7ef7d70ef1c239b8ff4ca60cbd8a0573ea9"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Zakat",
+   "title": "Zakat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:03.433Z",
+   "snapshot": "42d68fab230c4be1c3fa681d2f5ac12ee2c8874fcb2b167dbe184d9e496cfc3c"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Islamisches_Bankwesen",
+   "title": "Islamisches Bankwesen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:26:01.415Z",
+   "snapshot": "bdaf0a8d4bda4763e8ad00687492791e4b4db60070e41de76cbbd4ddbaa1745f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Workweek_and_weekend",
+   "title": "Workweek and weekend",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:26:01.578Z",
+   "snapshot": "8c66d02ea1be5e3912c54d53989e5f6cc80bcf5a7dc8fbe198002cb7fcbe3f89"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schächten",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c012"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Brit Mila",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zakat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Riba",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Friday",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 44; transcript ppm-045"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:59.137Z",
+   "target": "f00696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Schächten oder Schechita auch Schochet (hebräisch שחט šacḥaṭ, deutsch ‚schlachten‘) ist das rituelle Schlachten von in der jeweiligen Religion zugelassenen Schlachttieren, insbesondere im Judentum und im Islam.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schächten” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:59.137Z",
+   "target": "f00698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Brit Mila (hebräisch בְּרִית מִילָה Brīt Mīlah, deutsch ‚Bund der Beschneidung‘, auch Bərit Mila; Plural בְּרִיתוֹת מִילָה Brītōt Mīlah; jiddische Aussprache Brismile, abgekürzt: die Bris/Brit) ist die Entfernung der Vorhaut des männlichen Gliedes (Zirkumzision) nach jüdischem Brauch.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brit Mila” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:59.137Z",
+   "target": "f00699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Zakat (or Zakāh) is one of the Five Pillars of Islam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zakat” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:59.137Z",
+   "target": "f00700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Diesen Prinzipien widersprechen alle Finanzkontrakte, die den islamischen Regeln des allgemeinen Zinsverbots (arabisch Ribā), des Verbots der Spekulation (Gharar) und des Verbots des Glücksspiels (maysir, qimār) unterliegen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Riba” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:59.137Z",
+   "target": "f25547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In most of the world, the workweek is from Monday to Friday and the weekend is Saturday and Sunday.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:59.137Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friday” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a0313",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Quincy_Jones",
+   "title": "Quincy Jones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:13.368Z",
+   "snapshot": "c6d5ebf84d91c8bd33bb911236576d4b87da8c502638e51fffeafe998041f97c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Let_It_Be_(album)",
+   "title": "Let It Be (album) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:14.392Z",
+   "snapshot": "86e8848c49433502b2271a8fe1c2448be2c9c69fab42c87003cf4ceea9ec4ed8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Butch_Vig",
+   "title": "Butch Vig – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:15.282Z",
+   "snapshot": "ab9c743ff94bebca9f80d1ed3791246288a9eba13326afd81af45527c15df3ce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/I_Feel_Love",
+   "title": "I Feel Love – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:16.347Z",
+   "snapshot": "f3027606649c276b3a2ce1d44e96d42437984ed70cbdf71dacbe9d00a15c2298"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/George_Martin",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:47:17.485Z",
+   "snapshot": "5237c529555666b6ee9f0e7881faed4db2a1137d94754f01ef38ea9cd8894a8c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Quincy Jones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Phil Spector",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Butch Vig",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Giorgio Moroder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:28.251Z",
+   "target": "f01561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Qwest Entertainment continued to operate their pre-existing subsidiaries like Qwest Records, Quincy Jones Productions and Qwest Music Publishing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.251Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Quincy Jones” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:28.251Z",
+   "target": "f01563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "When the documentary film was resurrected for a cinema release, as Let It Be, Lennon and Harrison asked American producer Phil Spector to assemble the accompanying album.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.251Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Phil Spector” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:28.251Z",
+   "target": "f01564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Cobain said in a 1993 MTV interview that \"Butch Vig...recorded the album perfectly\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.251Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Butch Vig” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:28.251Z",
+   "target": "f01565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Produced and co-written by Giorgio Moroder and Pete Bellotte, it was recorded for Summer's fifth studio album, I Remember Yesterday (1977).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:28.251Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Giorgio Moroder” is on the snapshot of s4"
+  }
+ ]
+}

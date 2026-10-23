@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-374",
+ "image": "IMG20261007174651.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Keine deutsche Stadt hat einen Karpfen im Wappen. Richtig oder falsch?",
+   "de": "Welchen Fisch zeigt die brandenburgische Stadt Nauen in ihrem Wappen?",
+   "en": "Which fish does the Brandenburg town of Nauen show in its coat of arms?",
+   "reworked": true,
+   "answerDe": "einen Karpfen",
+   "answerEn": "a carp",
+   "timeline": {
+    "kind": "event",
+    "start": "1720",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Nauen's coat of arms switches from a pike to a carp",
+    "labelDe": "Das Wappen der Stadt Nauen zeigt statt eines Hechts erstmals einen Karpfen"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Nauen",
+    "title": "Nauen",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the card's statement is false: Nauen's arms show a blue carp on silver (since 1720), and Teupitz's arms also show a carp.",
+   "domain": "geography",
+   "sub": "peoples"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt die Sängerin und Schauspielerin, die sowohl das Titelbild der ersten US-Ausgabe des Playboy als auch das der ersten Bravo kürte?",
+   "de": "Wie heißt die Sängerin und Schauspielerin, die sowohl das Titelbild der ersten US-Ausgabe des Playboy als auch das der ersten Bravo kürte?",
+   "en": "Which singer and actress graced the cover of both the first US issue of Playboy and the first issue of Bravo?",
+   "reworked": false,
+   "answerDe": "Marilyn Monroe",
+   "answerEn": "Marilyn Monroe",
+   "timeline": {
+    "kind": "event",
+    "start": "1956-08-26",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First issue of the German youth magazine Bravo, with Marilyn Monroe on the cover",
+    "labelDe": "Erste Ausgabe der Jugendzeitschrift Bravo mit Marilyn Monroe auf dem Titel"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bravo_(deutsche_Zeitschrift)",
+    "title": "Bravo (deutsche Zeitschrift)",
+    "lang": "de"
+   },
+   "notes": "The card's “kürte” is presumably meant as “zierte”. The Marilyn Monroe article confirms she appeared in the first Playboy (December 1953).",
+   "domain": "film-media",
+   "sub": "media"
+  },
+  {
+   "category": 3,
+   "cardDe": "Albert Einstein war ein schlechter Schüler. Richtig oder falsch?",
+   "de": "In welchem Fach hatte Albert Einstein in seinem Maturitätszeugnis von 1896 mit einer Drei seine schlechteste Note?",
+   "en": "In which subject did Albert Einstein get his worst mark, a 3, on his 1896 school-leaving certificate?",
+   "reworked": true,
+   "answerDe": "Französisch",
+   "answerEn": "French",
+   "timeline": {
+    "kind": "event",
+    "start": "1896",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Albert Einstein receives his Matura certificate in Aarau, Switzerland, with five top marks",
+    "labelDe": "Albert Einstein erhält in Aarau sein Maturitätszeugnis mit fünf Bestnoten"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Albert_Einstein",
+    "title": "Albert Einstein",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the card's statement is a myth (false): the certificate shows the top mark 6 five times; the rumour stems from a biographer misreading the Swiss grading scale.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Was schlugen die Uhren an einem „klaren, kalten Tag im April“, im ersten Satz von George Orwells Roman 1984?",
+   "de": "Was schlugen die Uhren an einem „klaren, kalten Tag im April“, im ersten Satz von George Orwells Roman 1984?",
+   "en": "What did the clocks strike on a “bright cold day in April” in the first sentence of George Orwell's novel Nineteen Eighty-Four?",
+   "reworked": false,
+   "answerDe": "13",
+   "answerEn": "13",
+   "timeline": {
+    "kind": "creation",
+    "start": "1949-06",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "George Orwell's dystopian novel “Nineteen Eighty-Four” is published",
+    "labelDe": "George Orwells dystopischer Roman „1984“ erscheint"
+   },
+   "source": {
+    "url": "https://en.wikiquote.org/wiki/Nineteen_Eighty-Four",
+    "title": "Nineteen Eighty-Four",
+    "lang": "en"
+   },
+   "notes": "“It was a bright cold day in April, and the clocks were striking thirteen.”",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 5,
+   "cardDe": "Der Emu ist der größte lebende Vogel der Erde. Richtig oder falsch?",
+   "de": "Welcher ist der größte lebende Vogel der Erde?",
+   "en": "What is the largest living bird on Earth?",
+   "reworked": true,
+   "answerDe": "der Strauß",
+   "answerEn": "the ostrich",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1758",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Carl Linnaeus scientifically describes the ostrich, Struthio camelus",
+    "labelDe": "Carl von Linné beschreibt den Strauß (Struthio camelus) wissenschaftlich"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Afrikanischer_Strauß",
+    "title": "Afrikanischer Strauß",
+    "lang": "de"
+   },
+   "notes": "True/false reworked; the card's statement is false: the ostrich (with the closely related Somali ostrich) is the largest living bird; the emu is second tallest.",
+   "domain": "nature",
+   "sub": "animals"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie viele Löcher hat eine Brezel?",
+   "de": "Wie viele Löcher hat eine Brezel?",
+   "en": "How many holes does a pretzel have?",
+   "reworked": false,
+   "answerDe": "3",
+   "answerEn": "3",
+   "timeline": {
+    "kind": "event",
+    "start": "2015-03",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Archaeologists in Regensburg present the oldest pretzel ever found, from the 18th century",
+    "labelDe": "Archäologen in Regensburg präsentieren die älteste gefundene Brezel aus dem 18. Jahrhundert"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Brezel",
+    "title": "Brezel",
+    "lang": "de"
+   },
+   "notes": "Per the Urach legend the baker had to bake a bread “through which the sun shines three times” – the pretzel's three openings.",
+   "domain": "everyday",
+   "sub": "food"
+  }
+ ]
+}

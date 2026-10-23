@@ -1,0 +1,300 @@
+{
+ "article": "a2467",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Anthem_of_Europe",
+   "title": "Anthem of Europe",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:47.097Z",
+   "snapshot": "b3aeaa3a906e6a76189cb5810d5857b9d30b11be4339fbac59dd8ce5d343e232"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Marcha_Real",
+   "title": "Marcha Real",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:44.295Z",
+   "snapshot": "69689dbaf6d2f39a8ba0992ff6e3adce28119568b0663653c8645c42539d83ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Marcha_Real",
+   "title": "Marcha Real – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:54:03.594Z",
+   "snapshot": "16d2ac2378201cc26f371c21b5747531351eacd7b5a9ee55e34687bf8cfc576b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/National_anthem_of_Bosnia_and_Herzegovina",
+   "title": "National anthem of Bosnia and Herzegovina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:48.018Z",
+   "snapshot": "8915f9ee4533e65b10000c840e2c61591dc8ec29c2c3bb78ea07f1887c7e2ff4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13000",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ludwig van Beethoven",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-097"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13002",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Herbert von Karajan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13003",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marcha Granadera",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13004",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bosnia and Herzegovina",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marcha Real",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s3",
+     "quote": "Marcha Real",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-203/4, u03: The Marcha Real officially has no lyrics, so it cannot begin with 'Down with the enemy!'."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marcha Real",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Marcha Real",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13000",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After Schiller's death, the poem provided the words for the choral movement of Ludwig van Beethoven's 9th Symphony.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ludwig van Beethoven” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marcha Real [ˈmaɾtʃa reˈal] („Königlicher Marsch“) ist die Nationalhymne von Spanien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marcha Real” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13001",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The \"Marcha Real\" (IPA: [ˈmaɾtʃa reˈal]; lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marcha Real” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13002",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Conductor Herbert von Karajan was asked to write three instrumental arrangements – for solo piano, for wind instruments and for symphony orchestra and he conducted the performance used to make the official recording.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herbert von Karajan” is on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13003",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "'Spanish Royal March') or the \"Marcha Granadera\" (lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marcha Granadera” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:30:24.747Z",
+   "target": "f13004",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The National Anthem of Bosnia and Herzegovina was composed in 1998 by Dušan Šestić and was adopted provisionally in 1999, before being made official in 2001.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:24.747Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bosnia and Herzegovina” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,333 @@
+{
+ "article": "a1856",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Meditations",
+   "title": "Meditations – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:20.453Z",
+   "snapshot": "94b0c1660ce8234089b024583360ecc54e5d8a48461065dbc7038f53cf173b6b"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Diogenes",
+   "title": "Diogenes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:08:38.088Z",
+   "snapshot": "38794d263f32ea90dd69d220ad430299f4b50dfa72abbc17505d0808d1892ec2"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Sextus_Empiricus",
+   "title": "Sextus Empiricus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:21.432Z",
+   "snapshot": "d31072a0ed52d1e9e873979694ca776240ac7e43284a244a58398cd99231431a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gorgias",
+   "title": "Gorgias – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:22.709Z",
+   "snapshot": "ccc21267d7e42a1e505c6ad6807d0b8248e5fa306e7c8473bf648190c133f56d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cynicism_(philosophy)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:23.632Z",
+   "snapshot": "1741c2d7002d85c60ff28f24dd2e5f9ef21c5a41d9b588c943af06489d039076"
+  },
+  "s6": {
+   "url": "https://iep.utm.edu/skepanci/",
+   "title": "Ancient Greek Skepticism – Internet Encyclopedia of Philosophy",
+   "publisher": "Internet Encyclopedia of Philosophy",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:54.973Z",
+   "snapshot": "d0d2c2ee0ac04f0fec295916f09e3a0864c6a127885b0792a973862c0893366f"
+  },
+  "s7": {
+   "url": "https://www.newadvent.org/cathen/13516b.htm",
+   "title": "Scepticism – Catholic Encyclopedia",
+   "publisher": "New Advent (Catholic Encyclopedia, 1912)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:42:54.373Z",
+   "snapshot": "9f526176d6447f18e58aa14703a3cd0759635316df4596a66f585f8299c2cf26"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09276",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stoics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09278",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cynics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Skeptics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09280",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sophists",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:35.009Z",
+   "target": "f09276",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Marcus Aurelius Antoninus to Himself: an English translation with introductory study on stoicism and the last of the Stoics, by G.H.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.009Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stoics” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:35.009Z",
+   "target": "f09278",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His perspective, as summarised by Teles, was shared by all the Cynics who followed him: \"What difference is there between being consumed by fire, devoured by a dog, left above ground to be preyed upon by vultures, or buried below ground to be eaten by worms?\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.009Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cynics” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:35.009Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Skeptics",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Skeptics”, “Skeptiker”, “Скептики”) on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:35.009Z",
+   "target": "f09280",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Guthrie writes that \"Like other Sophists, he was an itinerant that practiced in various cities and giving public exhibitions of his skill at the great pan-Hellenic centers of Olympia and Delphi, and charged fees for his instruction and performances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.009Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sophists” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:46:57Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "or to a follower of Pyrrho (c. 365 to 270 B.C.E.)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:47:00Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nearly every variety of ancient skepticism includes a thesis about our epistemic limitations and a thesis about suspending judgment.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:03Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "lived Pyrrho the Sceptic (d. about 270 B.C.), who, though he admitted that we can know \"appearance,\" denied that we can know anything of the reality that underlies it.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r009",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:57:24.188Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nearly every variety of ancient skepticism includes a thesis about our epistemic limitations and a thesis about suspending judgment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:57:24.188Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "lived Pyrrho the Sceptic (d. about 270 B.C.), who, though he admitted that we can know \"appearance,\" denied that we can know anything of the reality that underlies it.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:57:24.188Z",
+   "target": "f09279",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Although all skeptics in some way cast doubt on our ability to gain knowledge of the world, the term “skeptic” actually covers a wide range of attitudes and positions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:24.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Skeptics” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,396 @@
+{
+ "article": "a1547",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rucola",
+   "title": "Rucola – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:42.788Z",
+   "snapshot": "2ad4748102fb94cb78edfdf391ecdf434b030d5484a88ac2b253763b96f198af"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Rapunzel",
+   "title": "Rapunzel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:44.393Z",
+   "snapshot": "e696b86ea075b6def20eab68f0fa3ec23a83906a4a5e070ce86c9a416b6176df"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Meerrettich",
+   "title": "Meerrettich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:36.719Z",
+   "snapshot": "6b2dea18aca1af52d55ec2365f361f1c731bd2046e68befcadb7c97317c896c9"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Blumenkohl",
+   "title": "Blumenkohl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:07:37.127Z",
+   "snapshot": "c15991ab9960155c1c69bd9c4cdc2cb3d7a459068afafa168f2a3de6cd480eed"
+  },
+  "s5": {
+   "url": "https://www.dwds.de/wb/Rapunzel",
+   "title": "Rapunzel – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:31.915Z",
+   "snapshot": "1b0fcc336d04725335967ccc92ea4a988966eceba466b61775bac9afe145a5fc"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Nüsslisalat",
+   "title": "Nüsslisalat – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:32.921Z",
+   "snapshot": "c06f5be97e69e19299c3a40fdc84146557f5c97dab9d00f7d48ef8f8cb7c3306"
+  },
+  "s7": {
+   "url": "https://de.wiktionary.org/wiki/Feldsalat",
+   "title": "Feldsalat – Wiktionary",
+   "publisher": "Wiktionary",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:31.956Z",
+   "snapshot": "832b23915ab414b86d9876c0b2bc3f8f13e7c41c50098673fac3f8d9b4dd2770"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07731",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rucola",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c129"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lamb's lettuce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f20882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kren",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20883",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Karfiol",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:42.350Z",
+   "target": "f07731",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Als Rucola (auch Rukola, Rauke, Arugula) werden verschiedene Pflanzenarten aus der Familie der Kreuzblütengewächse gehandelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rucola” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:42.350Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "lamb's lettuce",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“lamb's lettuce”, “Feldsalat”, “валерианелла”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:42.350Z",
+   "target": "f20882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kren (in bairischen Sprachgebieten wie Bayern und Österreich), botanisch Armoracia rusticana, ist eine Pflanzenart aus der Gattung Armoracia innerhalb der Familie der Kreuzblütengewächse (Brassicaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kren” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:42.350Z",
+   "target": "f20883",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Karfiol (österreichisches Hochdeutsch) (Brassica oleracea var.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:42.350Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karfiol” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:47:07Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Synonym zu Feldsalat",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23",
+   "note": "DWDS also: Vogerlsalat (A) and Nüsslisalat (CH) = Synonym zu Feldsalat."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:47:11Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nüsslisalat nennen ihn unsere Schweizer Nachbarn.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:47:14Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nüsslisalat, Rapunzel, Vogerlsalat",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:28.680Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Synonym zu Feldsalat",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:28.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:28.680Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Nüsslisalat nennen ihn unsere Schweizer Nachbarn.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:28.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:28.680Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nüsslisalat, Rapunzel, Vogerlsalat",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:28.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:28.680Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "[besonders D-Südwest , D-Mittelwest , D-Mittelost ] Synonym zu Feldsalat",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:28.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Feldsalat” is on the snapshot of s5"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:28.680Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Gewöhnlicher Feldsalat fachspr., botanisch ·",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:28.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Feldsalat” is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:28.680Z",
+   "target": "f07732",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "[1] Feldsalat (Valerianella locusta)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:28.680Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Feldsalat” is on the snapshot of s7"
+  }
+ ]
+}

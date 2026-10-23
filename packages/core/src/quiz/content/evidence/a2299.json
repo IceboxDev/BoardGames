@@ -1,0 +1,280 @@
+{
+ "article": "a2299",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/China_National_Highway_110_traffic_jam",
+   "title": "China National Highway 110 traffic jam",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:21.435Z",
+   "snapshot": "f793368694d2aadc63e9b4cd59414a59b580e123a956555caeadd0b636948e82"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nationalstadion_Peking",
+   "title": "Nationalstadion Peking",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:18.783Z",
+   "snapshot": "63c6d96d792dc09c04cf478c3780660399971dd084656845255044b4757cc6f1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Beijing_National_Stadium",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:22.549Z",
+   "snapshot": "4d844284eef02f3b9640d49d8fc8e44d9cf435213e53f30d6f49bd3ad627e9c1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Thames_Town",
+   "title": "Thames Town – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:23.447Z",
+   "snapshot": "8303a7653d4e535a8d34ec5e87161b6db11463d3e4895e0f289a0eca789e206f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tianducheng",
+   "title": "Tianducheng – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:24.462Z",
+   "snapshot": "06fb193b3566986b0e71f0faeb10652998ff097cee4f7bed6cdaa34b8aff67b7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11876",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Beijing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-085"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "China",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-289"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 12"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11878",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Herzog & de Meuron",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shanghai",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11880",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hangzhou",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:51.156Z",
+   "target": "f11876",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The China National Highway 110 traffic jam was a recurring traffic jam that began to form on 14 August 2010 on China National Highway 110 (G110) and the Beijing–Tibet expressway (G6) in Hebei and Inner Mongolia, mostly between Jining District, Ulanqab and Dongsheng District, Ordos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Beijing” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:51.156Z",
+   "target": "f11877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "In Zusammenarbeit mit der China Architecture Design & Research Group, Arupsport und dem Künstler Ai Weiwei als künstlerischer Berater gingen sie im Jahr 2002 als Sieger aus einem internationalen Architekturwettbewerb hervor.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:51.156Z",
+   "target": "f11877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "the Bird's Nest (鸟巢), is a stadium at Olympic Green in Chaoyang, Beijing, China.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:51.156Z",
+   "target": "f11878",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The design was awarded to a submission from the Swiss architecture firm Herzog & de Meuron in April 2003 after a bidding process that included 13 final submissions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Herzog & de Meuron” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:51.156Z",
+   "target": "f11879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Thames Town (simplified Chinese: 泰晤士小镇; traditional Chinese: 泰晤士小鎮; pinyin: Tàiwùshì Xiǎozhèn) is a new town in Songjiang District, about 30 kilometres (19 mi) from central Shanghai.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shanghai” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:51.156Z",
+   "target": "f11880",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tianducheng (Chinese: 天都城; pinyin: Tiāndūchéng), officially Guangsha Tianducheng (Chinese: 广厦天都城; pinyin: Guǎngshà Tiāndūchéng), is a housing estate in Xingqiao Subdistrict, Linping District, Hangzhou, Zhejiang Province, China that is modeled after Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hangzhou” is on the snapshot of s5"
+  }
+ ]
+}

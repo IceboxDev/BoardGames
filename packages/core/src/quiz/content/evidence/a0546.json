@@ -1,0 +1,195 @@
+{
+ "article": "a0546",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Death_of_Diana,_Princess_of_Wales",
+   "title": "Death of Diana, Princess of Wales – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:58.306Z",
+   "snapshot": "c06976603302a956e48f7e377f1c71ccb85a1b836c133b8923b5fb85e1f380f2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/1984_Winter_Olympics",
+   "title": "1984 Winter Olympics – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:59.318Z",
+   "snapshot": "77b80c7483964e9b724801cf7781abb0d138c89e706f7734fa78b2d262f32038"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Memphis_sanitation_strike",
+   "title": "Memphis sanitation strike – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:00.213Z",
+   "snapshot": "bf38c742103184a8125351ca3e957e28164138eef669c5f88b4b93ffafaafd02"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Murder_of_John_Lennon",
+   "title": "Murder of John Lennon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:04:01.139Z",
+   "snapshot": "37cf2121d2a7bcf1e2c5b9ccabe6a10fa34b6ead825091d5467d3e021283e593"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02726",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c046"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02727",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sarajevo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02729",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Memphis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02730",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "New York",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:04.993Z",
+   "target": "f02726",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In the late hours of 31 August 1997, Diana, Princess of Wales, died from injuries sustained in a car crash in the Pont de l'Alma tunnel in Paris, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paris” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:04.993Z",
+   "target": "f02727",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The 1984 Winter Olympics, officially known as the XIV Olympic Winter Games, and commonly known as Sarajevo '84, were a winter multi-sport event held between 8 and 19 February 1984 in Sarajevo, Yugoslavia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sarajevo” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:04.993Z",
+   "target": "f02729",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Memphis sanitation strike began on February 12, 1968, in response to the deaths of sanitation workers Echol Cole and Robert Walker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Memphis” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:04.993Z",
+   "target": "f02730",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "On the night of 8 December 1980, English musician John Lennon, formerly of the Beatles, was fatally shot in the archway of The Dakota, his residence in Manhattan, New York City.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New York” is on the snapshot of s4"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "article": "a1112",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Aristippus",
+   "title": "Aristippus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:28.133Z",
+   "snapshot": "ae19c3bcb74f00dcb69a559a6f2f6a400a1b9ba1795900401260508bb76fd0e0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Stoicism",
+   "title": "Stoicism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:29.182Z",
+   "snapshot": "44a7666afa31ef2e532d966fd4f91a8bec6cd826f2a2b77abd74a23b22e2a8ba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Epicurus",
+   "title": "Epicurus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:30.359Z",
+   "snapshot": "d291e5de93dd151e9e6049628b020974cd46da7ee3ce123d517e913b2988f339"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Pyrrho",
+   "title": "Pyrrho – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:31.126Z",
+   "snapshot": "5ad42d910e33b3fc4502f391758c9e70f91eedab1df523fcde6ead3708fbd5f8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aristippus of Cyrene",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c093"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zeno of Citium",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Epicurus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05559",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pyrrho of Elis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:34.655Z",
+   "target": "f05556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Aristippus of Cyrene (; Ancient Greek: Ἀρίστιππος ὁ Κυρηναῖος; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aristippus of Cyrene” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:34.655Z",
+   "target": "f05557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Stoicism was founded in the ancient Agora of Athens by Zeno of Citium around 300 BCE, and flourished throughout the Greco-Roman world until the 3rd century CE.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zeno of Citium” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:34.655Z",
+   "target": "f05558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Epicurus (, EH-pih-KURE-əs; Ancient Greek: Ἐπίκουρος Epikouros; 341–270 BC) was an ancient Greek philosopher who founded the philosophical school of Epicureanism, which teaches that management of one's desires, removal of unnecessary fears, friendship, and virtuous living lead to a pleasant life and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Epicurus” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:34.655Z",
+   "target": "f05559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pyrrho of Elis (; Ancient Greek: Πύρρων ὁ Ἠλεῖος; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:34.655Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pyrrho of Elis” is on the snapshot of s4"
+  }
+ ]
+}

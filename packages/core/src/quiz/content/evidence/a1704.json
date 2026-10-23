@@ -1,0 +1,516 @@
+{
+ "article": "a1704",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/ATX",
+   "title": "ATX – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:58.425Z",
+   "snapshot": "158e926e49967f1346f1935ecc3dfae74a2ab729c86a7f67d12dce4cdf98a8d5"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Intel_8086",
+   "title": "Intel 8086 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:59.527Z",
+   "snapshot": "ca9dbad22afa254f0f417bd34c4bd0fb6264cb5e56283681fe4a8c90483a9d91"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Intel_1103",
+   "title": "Intel 1103 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:00.432Z",
+   "snapshot": "fae641759bf93da8a217ca2fd63e85e91ac97ceb646255fff4618091295e7d53"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/GeForce_256",
+   "title": "GeForce 256 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:01.353Z",
+   "snapshot": "0fa08f8f7fc1d45c9650b0055b7cc4b65422aed2d6be8ab24351aebf3c6e6ca0"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/80_Plus",
+   "title": "80 Plus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:02.390Z",
+   "snapshot": "318da1509a516109b70a7b846bfdb97de10e449488a41c6f87b5d14725d829bf"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Random-access_memory",
+   "title": "Random-access memory – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:32.944Z",
+   "snapshot": "aa140e2c3cfc40318b77b2a5d1ac5de6cdad26539787865a177700dc7a78f097"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Arbeitsspeicher",
+   "title": "Arbeitsspeicher – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:41.312Z",
+   "snapshot": "b531c725b7b69a8b34d929a49cb6771a584897987e91c006d0b3eea830445d94"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/ram",
+   "title": "RAM | English meaning – Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:41.532Z",
+   "snapshot": "315e7e99486f7eed0880a56a69870a8909880b1c152a8c866efa1b7a96185cbf"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)",
+   "title": "Power supply unit (computer) – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:43.236Z",
+   "snapshot": "567923bac984cfd1326137f2b2bcca053d897500b6cd846c3f24df61dc213d7d"
+  },
+  "s10": {
+   "url": "https://www.duden.de/rechtschreibung/Netzteil",
+   "title": "Netzteil – Duden",
+   "publisher": "Duden (Cornelsen)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:43.269Z",
+   "snapshot": "20045a2bac9d00e0cb5364c4cd240a9da44c1eb62af39d3d0fa8a56c825e6b82"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08516",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "motherboard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08517",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "processor",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "RAM",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08519",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "graphics card",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "power supply unit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:08.800Z",
+   "target": "f08516",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "ATX (Advanced Technology Extended) is a motherboard and power supply form factor and configuration specification developed by Intel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “motherboard” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:08.800Z",
+   "target": "f08517",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "An anniversary processor, the Core i7-8086K, is released on June 5, 2018, celebrating the 40th anniversary of 8086's release.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “processor” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:08.800Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Intel shipped the 250,000th 1103 RAM chip in June 1974.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “RAM” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:08.800Z",
+   "target": "f08519",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "3dfx and other competing graphics-card companies pointed out that a fast CPU could more than make up for the lack of a T&L unit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:08.800Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “graphics card” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:08.800Z",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "power supply unit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“power supply unit”, “Netzteil”, “блок питания”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:41:57Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is a form of electronic computer memory that can be read and changed in any order, typically used to store working data and machine code .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:41:58Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "der die Aufgabe hat, bestimmte Daten o. Ä. aufzunehmen und für die gerade ablaufende Verarbeitung verfügbar zu halten; Hauptspeicher, Zentralspeicher",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:00Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "abbreviation for random access memory : a type of computer memory that can be searched in any order and changed as necessary",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:02Z",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A power supply unit ( PSU ) converts mains AC to low-voltage regulated DC power for the internal components of a desktop computer .",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:42:04Z",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Netzgerät, das die Netzspannung auf die von einem Rechner (2) benötigte Spannungsstärke vermindert",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r080",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "der die Aufgabe hat, bestimmte Daten o. Ä. aufzunehmen und für die gerade ablaufende Verarbeitung verfügbar zu halten; Hauptspeicher, Zentralspeicher",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Netzgerät, das die Netzspannung auf die von einem Rechner (2) benötigte Spannungsstärke vermindert",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Random-access memory (RAM; ) is a form of electronic computer memory that can be read and changed in any order, typically used to store working data and machine code.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “RAM” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Arbeitsspeicher ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Arbeitsspeicher” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08518",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "RAM | English meaning - Cambridge Dictionary",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “RAM” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "A power supply unit (PSU) converts mains AC to low-voltage regulated DC power for the internal components of a desktop computer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “power supply unit” is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:55.396Z",
+   "target": "f08520",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Netzteil ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.396Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Netzteil” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "w09780": {
+  "kind": "reworded",
+  "reason": "The question said the term 'bug' became popular after Grace Hopper's team found the moth in 1947, but engineers used 'bug' for faults since Edison's day (1878) and the logbook joke played on the existing word; the question now says the term was famously illustrated by the moth.",
+  "sources": [
+   {
+    "url": "https://www.computerhistory.org/tdih/september/9/"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Bug_(engineering)"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "w14433": {
+  "kind": "reworded",
+  "reason": "The Xerox Alto was a TTL-built personal computer, not a microprocessor-based microcomputer; the question now asks for the first series of personal computers with a GUI (the card's words stay in cardText).",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Xerox_Alto"
+   },
+   {
+    "url": "https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru",
+   "cardText"
+  ]
+ },
+ "a2623": {
+  "kind": "corrected",
+  "reason": "The body said Habitat was the first virtual environment to call users' figures avatars; Richard Garriott had already used 'Avatar' for the player's on-screen character in Ultima IV (1985). Habitat is now 'one of the first online worlds' to do so, and Ultima IV is named.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Avatar_(computing)"
+   },
+   {
+    "url": "https://web.stanford.edu/class/history34q/readings/Virtual_Worlds/LucasfilmHabitat.html"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "w14464": {
+  "kind": "reworded",
+  "reason": "The question claimed Habitat FIRST called its users' figures avatars; Ultima IV (1985) used the term earlier for the player's character. The question now asks for the Lucasfilm C64 world in which users' figures were called avatars.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Avatar_(computing)"
+   },
+   {
+    "url": "https://web.stanford.edu/class/history34q/readings/Virtual_Worlds/LucasfilmHabitat.html"
+   }
+  ],
+  "fields": [
+   "en",
+   "de",
+   "ru"
+  ]
+ },
+ "a2625": {
+  "kind": "edited",
+  "reason": "Google's '15% of daily searches are new' figure is time-sensitive; the body now dates it (Google still repeated it in 2025).",
+  "sources": [
+   {
+    "url": "https://www.google.com/search/howsearchworks/how-search-works/"
+   },
+   {
+    "url": "https://www.searchenginejournal.com/google-revisits-15-unseen-queries-statistic-in-context-of-ai-search/512532/"
+   }
+  ],
+  "fields": [
+   "bodyEn",
+   "bodyDe",
+   "bodyRu"
+  ]
+ },
+ "f14201": {
+  "kind": "marked",
+  "reason": "Time-sensitive statistic: reviewBy set one year out so the 15% figure is rechecked against Google's current statement.",
+  "sources": [
+   {
+    "url": "https://www.google.com/search/howsearchworks/how-search-works/"
+   }
+  ],
+  "fields": [
+   "reviewBy",
+   "spans"
+  ]
+ }
+}

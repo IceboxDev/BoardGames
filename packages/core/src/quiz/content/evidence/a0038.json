@@ -1,0 +1,420 @@
+{
+ "article": "a0038",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Die_Geschichte_der_Bienen",
+   "title": "Die Geschichte der Bienen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:40.871Z",
+   "snapshot": "bef41db6a2abd4dde992b0d037dbe1c9987ee83cad7b11c594e42e69b21a7e1a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Maja_Lunde",
+   "title": "Maja Lunde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:41.835Z",
+   "snapshot": "1c5d2fd437168c60eb8e6070e55c26120a2b7888aee7d36cee8f678e7aa933bb"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Die_Letzten_ihrer_Art_(Maja_Lunde)",
+   "title": "Die Letzten ihrer Art (Maja Lunde) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:16:42.835Z",
+   "snapshot": "65f863c3802c5d06820c2c830bd2c1d5e725beb0ea3cfa25e7a8dc30617a6ed3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maja_Lunde",
+   "title": "Maja Lunde – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:45.074Z",
+   "snapshot": "a7111484ccaf8a8ec0bbee99211009f2b20a7b356c3f8e1a1c3e0fac11dd500f"
+  },
+  "s5": {
+   "url": "https://sf-encyclopedia.com/entry/lunde_maja",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:42.725Z",
+   "snapshot": "f693dafe6e13e92028710b17427ec643ca85e27cc257fd197d5926deb7a3b630"
+  },
+  "s6": {
+   "url": "https://www.simonandschuster.co.uk/books/The-End-of-the-Ocean/Maja-Lunde/9781471175541",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  },
+  "s7": {
+   "url": "https://www.perlentaucher.de/buch/maja-lunde/der-traum-von-einem-baum.html",
+   "title": "Maja Lunde: Der Traum von einem Baum",
+   "publisher": "Perlentaucher",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:30:26.387Z",
+   "snapshot": "dda8cbacab64bb947d637bd54c694cb0abe82e1fd3d816cfcb1a1c4fceee292c"
+  },
+  "s8": {
+   "url": "https://openlibrary.org/works/OL37826669W",
+   "title": "The Dream of a Tree by Maja Lunde",
+   "publisher": "Open Library (Internet Archive)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:28.211Z",
+   "snapshot": "00bfbbffaeb44198bbf1cc625b56876795f406b89e22c4772b6e136ffff09366"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00186",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Geschichte der Bienen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00187",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Geschichte des Wassers",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00188",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Letzten ihrer Art",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Dream of a Tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00190",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bienes historie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:40.663Z",
+   "target": "f00186",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Geschichte der Bienen (norwegisch Bienes historie) ist ein Roman der norwegischen Schriftstellerin Maja Lunde aus dem Jahr 2015, der im Jahr 2017 in deutscher Sprache bei der Verlagsgruppe Random House erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Geschichte der Bienen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:40.663Z",
+   "target": "f00187",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das zweite Buch der Reihe erschien 2017 unter dem Titel Blå (deutscher Titel: Die Geschichte des Wassers) in ihrem Heimatland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Geschichte des Wassers” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:40.663Z",
+   "target": "f00188",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Letzten ihrer Art (norwegisch Przewalskis hest) ist ein Roman der norwegischen Schriftstellerin Maja Lunde aus dem Jahr 2019, der im Jahr 2019 in deutscher Sprache bei der Verlagsgruppe Random House erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Die Letzten ihrer Art” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:40.663Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Dream of a Tree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The Dream of a Tree”, “Der Traum von einem Baum”, “Мечта о дереве”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:40.663Z",
+   "target": "f00190",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Geschichte der Bienen (norwegisch Bienes historie) ist ein Roman der norwegischen Schriftstellerin Maja Lunde aus dem Jahr 2015, der im Jahr 2017 in deutscher Sprache bei der Verlagsgruppe Random House erschien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:40.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bienes historie” is on the snapshot of s1"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:01:55Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Aus dem Norwegischen von Ursel Allenstein. Das Finale des Klimaquartetts: Eine Kammer hoch im Norden, gefüllt mit Pflanzensamen aus aller Welt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Page title: 'Der Traum von einem Baum', btb 2023 – the German title of the quartet's finale."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:01:58Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "An edition of Drømmen om et tre\n (2023)\nThe Dream of a Tree",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "Library catalogue record: the English edition of Drømmen om et tre is titled The Dream of a Tree."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:02:00Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Finale des Quartetts Drømmen om et tre (deutscher Titel: Der Traum von einem Baum) wurde 2022 veröffentlicht.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:51:56.276Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "An edition of Drømmen om et tre\n (2023)\nThe Dream of a Tree",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.276Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:51:56.276Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Finale des Quartetts Drømmen om et tre (deutscher Titel: Der Traum von einem Baum) wurde 2022 veröffentlicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.276Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:51:56.276Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Das Finale des Quartetts Drømmen om et tre (deutscher Titel: Der Traum von einem Baum) wurde 2022 veröffentlicht.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.276Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Der Traum von einem Baum” is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:51:56.276Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Maja Lunde: Der Traum von einem Baum.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.276Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Der Traum von einem Baum” is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:51:56.276Z",
+   "target": "f00189",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The Dream of a Tree by Maja Lunde | Open Library",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:51:56.276Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Dream of a Tree” is on the snapshot of s8"
+  }
+ ]
+}

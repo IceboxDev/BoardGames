@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-022",
+ "image": "IMG20261007181045.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Was ist der Hindukusch: ein Gebirge, See oder Fluss?",
+   "de": "Welches Gebirge in Zentralasien, größtenteils in Afghanistan gelegen, hat den Tirich Mir als höchsten Berg?",
+   "en": "Which Central Asian mountain range, mostly in Afghanistan, has Tirich Mir as its highest peak?",
+   "reworked": true,
+   "answerDe": "Hindukusch",
+   "answerEn": "Hindu Kush",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1301",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Ibn Battuta records the folk explanation of the name Hindu Kush (14th century)",
+    "labelDe": "Ibn Battuta überliefert die volkstümliche Deutung des Namens Hindukusch (14. Jahrhundert)"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hindukusch",
+    "title": "Hindukusch",
+    "lang": "de"
+   },
+   "notes": "Card answer: a mountain range (Gebirge). Reworked to ask for the range by its highest peak (Tirich Mir, 7708 m).",
+   "domain": "geography",
+   "sub": "physical"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Musikproduzent war vor seiner musikalischen Karriere Fußballprofi: Dieter Bohlen, Jack White oder Ralph Siegel?",
+   "de": "Welcher deutsche Musikproduzent spielte vor seiner musikalischen Karriere unter anderem für PSV Eindhoven Fußball?",
+   "en": "Which German music producer played football for clubs including PSV Eindhoven before his music career?",
+   "reworked": true,
+   "answerDe": "Jack White",
+   "answerEn": "Jack White",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1940-09-02",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": true,
+    "labelEn": "Jack White (Horst Nußbaum), German music producer and former footballer",
+    "labelDe": "Jack White (Horst Nußbaum), deutscher Musikproduzent und ehemaliger Fußballspieler"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Jack_White_(Musikproduzent)",
+    "title": "Jack White (Musikproduzent)",
+    "lang": "de"
+   },
+   "notes": "Real name Horst Nußbaum; played for Viktoria Köln, FK Pirmasens, PSV Eindhoven and Tennis Borussia Berlin.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Der wievielte Bundespräsident war Richard von Weizsäcker?",
+   "de": "Der wievielte Bundespräsident war Richard von Weizsäcker?",
+   "en": "Which number Federal President of Germany was Richard von Weizsäcker?",
+   "reworked": false,
+   "answerDe": "6.",
+   "answerEn": "6th",
+   "timeline": {
+    "kind": "reign",
+    "start": "1984",
+    "end": "1994",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Richard von Weizsäcker, sixth Federal President of Germany",
+    "labelDe": "Richard von Weizsäcker, sechster Bundespräsident der Bundesrepublik Deutschland"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Richard_von_Weizs%C3%A4cker",
+    "title": "Richard von Weizsäcker",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "society",
+   "sub": "politics"
+  },
+  {
+   "category": 4,
+   "cardDe": "In welcher Region Spaniens ist Salvador Dalí begraben: Katalonien, Andalusien oder Navarra?",
+   "de": "In welcher Region Spaniens ist Salvador Dalí begraben?",
+   "en": "In which region of Spain is Salvador Dalí buried?",
+   "reworked": true,
+   "answerDe": "Katalonien",
+   "answerEn": "Catalonia",
+   "timeline": {
+    "kind": "lifespan",
+    "start": "1904-05-11",
+    "end": "1989-01-23",
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Salvador Dalí, Spanish surrealist painter, born and buried in Figueres",
+    "labelDe": "Salvador Dalí, spanischer Surrealist, geboren und begraben in Figueres"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+    "title": "Salvador Dalí",
+    "lang": "de"
+   },
+   "notes": "Buried in the crypt of his Teatre-Museu in Figueres, Catalonia.",
+   "domain": "art",
+   "sub": "painting"
+  },
+  {
+   "category": 5,
+   "cardDe": "Welche Fischart hat der Angler in Ernest Hemingways Meisterwerk Der alte Mann und das Meer am Haken?",
+   "de": "Welche Fischart hat der Angler in Ernest Hemingways Meisterwerk Der alte Mann und das Meer am Haken?",
+   "en": "What kind of fish does the fisherman have on his hook in Ernest Hemingway's masterpiece The Old Man and the Sea?",
+   "reworked": false,
+   "answerDe": "Marlin",
+   "answerEn": "Marlin",
+   "timeline": {
+    "kind": "creation",
+    "start": "1952-09-01",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Hemingway's “The Old Man and the Sea” first published in Life magazine",
+    "labelDe": "Hemingways „Der alte Mann und das Meer“ erstmals in der Zeitschrift Life veröffentlicht"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Der_alte_Mann_und_das_Meer",
+    "title": "Der alte Mann und das Meer",
+    "lang": "de"
+   },
+   "notes": "",
+   "domain": "literature",
+   "sub": "modern-lit"
+  },
+  {
+   "category": 6,
+   "cardDe": "Glückskekse, die fast in jedem Chinarestaurant zu finden sind, stammen ursprünglich aus Japan. Richtig oder falsch?",
+   "de": "Aus welchem Land stammen Glückskekse, die fast in jedem Chinarestaurant zu finden sind, ursprünglich?",
+   "en": "Which country do fortune cookies, found in almost every Chinese restaurant, originally come from?",
+   "reworked": true,
+   "answerDe": "Japan",
+   "answerEn": "Japan",
+   "timeline": {
+    "kind": "event",
+    "start": "1900",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Fortune cookies in their modern form first appear on the US West Coast",
+    "labelDe": "Glückskekse in heutiger Form erscheinen erstmals an der US-Westküste"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Gl%C3%BCckskeks",
+    "title": "Glückskeks",
+    "lang": "de"
+   },
+   "notes": "Card statement is true: they derive from Japanese tsujiura senbei; the modern form appeared in California in the early 20th century.",
+   "domain": "everyday",
+   "sub": "food"
+  }
+ ]
+}

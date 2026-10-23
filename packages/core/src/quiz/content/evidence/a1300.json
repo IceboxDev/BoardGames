@@ -1,0 +1,242 @@
+{
+ "article": "a1300",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Saturday_Night_Fever",
+   "title": "Saturday Night Fever – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:18.181Z",
+   "snapshot": "69775e32ac4fc7178820686288c3fb4c7b6e483728ac4259cae0126d4035a059"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Dirty_Dancing",
+   "title": "Dirty Dancing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:19.118Z",
+   "snapshot": "4cfc1ba6a4a03bebe8f814aa92814295bbc2af8fb72056f3c0c7cb5d35fed87e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Flashdance",
+   "title": "Flashdance – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:20.212Z",
+   "snapshot": "14456878908c6eebe39a41229da02e0be059c5866006b1d73f4afcf07f923f73"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grease_(film)",
+   "title": "Grease (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:21.221Z",
+   "snapshot": "e23c0c8cfec79b7edf7ac6c6e61f3b587eafd0d8e099b2125e58389b2c975b65"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Footloose",
+   "title": "Footloose – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:22.134Z",
+   "snapshot": "5a9ad774075b0bd11a172a822fc228c834e614188e520bf5c0ce87e0a3e89338"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saturday Night Fever",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dirty Dancing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flashdance",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grease",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Footloose",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:02.628Z",
+   "target": "f06496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saturday Night Fever is a 1977 American dance drama film directed by John Badham and produced by Robert Stigwood.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Saturday Night Fever” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:02.628Z",
+   "target": "f06497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein, produced by Linda Gottlieb, and directed by Emile Ardolino.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dirty Dancing” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:02.628Z",
+   "target": "f06498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Flashdance is a 1983 American romantic drama dance film directed by Adrian Lyne and starring Jennifer Beals as a passionate young dancer, Alex Owens, who aspires to become a professional ballerina, alongside Michael Nouri, who plays her boyfriend and the owner of the steel mill where she works by",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Flashdance” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:02.628Z",
+   "target": "f06499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grease is a 1978 American musical romantic comedy film directed by Randal Kleiser (in his feature directorial debut) from a screenplay by Bronté Woodard and an adaptation by co-producer Allan Carr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grease” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:02.628Z",
+   "target": "f06500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Footloose is a 1984 American musical drama film directed by Herbert Ross and written by Dean Pitchford.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.628Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Footloose” is on the snapshot of s5"
+  }
+ ]
+}

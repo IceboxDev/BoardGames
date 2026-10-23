@@ -1,0 +1,495 @@
+{
+ "article": "a0060",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Lidar",
+   "title": "Lidar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:45.753Z",
+   "snapshot": "64b4f27019d32900aebaaed86789c2a9ae17c2c01cce69adecf26d12be488cd2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sonar",
+   "title": "Sonar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:46.747Z",
+   "snapshot": "c74091ffd9c849bb2d321b27b34427af46d14801d845cfc02a118fbe09c12444"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Infrared",
+   "title": "Infrared – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:47.643Z",
+   "snapshot": "6df37141cd76234167301f561dbd44c2e7c445af0e4423273bcd801f86a46609"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Laser",
+   "title": "Laser – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:48.549Z",
+   "snapshot": "2967398b135c00cdfadfc9958e6a313876ae6bbc0ce5769861b83826644db70d"
+  },
+  "s5": {
+   "url": "https://oceanservice.noaa.gov/facts/lidar.html",
+   "title": "What is lidar?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:36.168Z",
+   "snapshot": "ee31c790521e9fac77b31615bf179aee41df4aa0ad44707fbecbdcb303778ae0"
+  },
+  "s6": {
+   "url": "https://oceanservice.noaa.gov/facts/sonar.html",
+   "title": "What is sonar?",
+   "publisher": "NOAA National Ocean Service",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:36.814Z",
+   "snapshot": "e5feac7064744788b9f38fa08cc962c64aa2986ef5e021055f9a7ca7a5aca2f1"
+  },
+  "s7": {
+   "url": "https://science.nasa.gov/ems/07_infraredwaves/",
+   "title": "Infrared Waves",
+   "publisher": "NASA Science",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:39.568Z",
+   "snapshot": "50919512cb45ef5e3483289cd762282a194a1ff4b1feca5a3b35b065a8ef5fb2"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Thermography",
+   "title": "Thermography – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:37.110Z",
+   "snapshot": "812b6e15a401a4df2f80b7d8ce0a171fb23615dcb3796488e86b2e4bf4254c57"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "with laser light",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c005"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With sound waves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "With infrared radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Light Amplification by Stimulated Emission of Radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14700",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sound Navigation and Ranging",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-174"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:44.607Z",
+   "target": "f00296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "with laser light",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“with laser light”, “mit Laserlicht”, “лазерный свет”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:44.607Z",
+   "target": "f00297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "With sound waves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“With sound waves”, “Mit Schallwellen”, “звуковые волны”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:44.607Z",
+   "target": "f00298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "With infrared radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“With infrared radiation”, “Mit Infrarotstrahlung”, “инфракрасное излучение”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:44.607Z",
+   "target": "f00299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The word laser originated as an acronym for light amplification by stimulated emission of radiation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Light Amplification by Stimulated Emission of Radiation” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:44.607Z",
+   "target": "f14700",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sonar (sound navigation and ranging or sonic navigation and ranging) is a technique that uses sound propagation (usually underwater, as in submarine navigation) to navigate, measure distances (ranging), communicate with or detect objects on or under the surface of the water, such as other vessels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:44.607Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sound Navigation and Ranging” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:36:20Z",
+   "target": "f00296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:36:23Z",
+   "target": "f00296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a method for determining ranges by targeting an object or a surface with a laser and measuring the time for the reflected light to return to the optical receiver",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:36:26Z",
+   "target": "f00297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sonar uses sound waves to 'see' in the water.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:36:28Z",
+   "target": "f00297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a technique that uses sound propagation",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:36:29Z",
+   "target": "f00298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Our eyes cannot see these infrared waves but instruments that can sense infrared energy—such as night-vision goggles or infrared cameras–allow us to \"see\" the infrared waves emitting from warm objects such as humans and animals.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:36:31Z",
+   "target": "f00298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a measurement and imaging technique in which a thermal camera detects infrared radiation originating from the surface of objects",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r076",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:52:00.201Z",
+   "target": "f00296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:52:00.201Z",
+   "target": "f00296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a method for determining ranges by targeting an object or a surface with a laser and measuring the time for the reflected light to return to the optical receiver",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:52:00.201Z",
+   "target": "f00297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sonar uses sound waves to 'see' in the water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:52:00.201Z",
+   "target": "f00297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is a technique that uses sound propagation",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:52:00.201Z",
+   "target": "f00298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Our eyes cannot see these infrared waves but instruments that can sense infrared energy—such as night-vision goggles or infrared cameras–allow us to \"see\" the infrared waves emitting from warm objects such as humans and animals.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:52:00.201Z",
+   "target": "f00298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a measurement and imaging technique in which a thermal camera detects infrared radiation originating from the surface of objects",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:00.201Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  }
+ ]
+}

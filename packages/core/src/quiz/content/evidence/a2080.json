@@ -1,0 +1,242 @@
+{
+ "article": "a2080",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Omar_Sharif",
+   "title": "Omar Sharif – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:09.796Z",
+   "snapshot": "cd50817f489950ec360549120207bdd7705898e6467a6a212bdd80a1b39707f7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Lawrence_of_Arabia_(film)",
+   "title": "Lawrence of Arabia (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:10.887Z",
+   "snapshot": "bd8049121464dfc2ca8ac8945b9ab2af5a50fa353f4df2248e8eed3d80d4527e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Bridge_on_the_River_Kwai",
+   "title": "The Bridge on the River Kwai – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:11.846Z",
+   "snapshot": "fd87a26e11817208f255dc256f4388aea4a50d33eb66f64a327135f3594c62d3"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ben-Hur_(1959_film)",
+   "title": "Ben-Hur (1959 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:57:47.891Z",
+   "snapshot": "29206d97c1256463543b73fb12eb04ebd7a1ab2181445d7b72cc590a6592c59f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/68th_Academy_Awards",
+   "title": "68th Academy Awards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:10:04.067Z",
+   "snapshot": "542f707e9beadb599613d22d7c170141b470cebfd77370eb4dea519cd615e037"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Omar Sharif",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c174"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Peter O'Toole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Alec Guinness",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charlton Heston",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Kirk Douglas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:18.764Z",
+   "target": "f10396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Omar Sharif (born Michel Yusef Dimitri Chalhoub; 10 April 1932 – 10 July 2015) was an Egyptian actor, generally regarded as his country's greatest male film star.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Omar Sharif” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:18.764Z",
+   "target": "f10397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lawrence of Arabia introduces Peter O'Toole as Lawrence, with Alec Guinness playing Prince Faisal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Peter O'Toole” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:18.764Z",
+   "target": "f10398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It stars William Holden, Alec Guinness, and Jack Hawkins, with Sessue Hayakawa, James Donald, Ann Sears, and Geoffrey Horne in supporting roles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alec Guinness” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:18.764Z",
+   "target": "f10399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ben-Hur () is a 1959 American religious epic film directed by William Wyler, produced by Sam Zimbalist, and starring Charlton Heston as the title character.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charlton Heston” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:18.764Z",
+   "target": "f10400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "To Kirk Douglas, for fifty years as a creative and moral force in the motion picture community.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:18.764Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kirk Douglas” is on the snapshot of s5"
+  }
+ ]
+}

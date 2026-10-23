@@ -1,0 +1,578 @@
+{
+ "article": "a0869",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Vierschanzentournee_1953",
+   "title": "Vierschanzentournee 1953 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:39.785Z",
+   "snapshot": "ec37dced1d5c6828e52685455198272d7389aacc4e9ca55dd60a06aba8482fa9"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Janne_Ahonen",
+   "title": "Janne Ahonen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:25:45.103Z",
+   "snapshot": "485837f08b26ec6b74ce23c1959ff87b6f0f03177ddf180e20c715f6d4a19873"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bergiselschanze",
+   "title": "Bergiselschanze – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:40.365Z",
+   "snapshot": "9bebdcfeca795944e3444da014f55a578a469a78c9004656f4fc019eb1a70bf6"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Vierschanzentournee",
+   "title": "Vierschanzentournee",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:42.122Z",
+   "snapshot": "8c1ba9c9434d8d821e309fbfe1efaf0d6719b4b0d7be2f90e2115be57f652c88"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Four_Hills_Tournament",
+   "title": "Four Hills Tournament – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:10.003Z",
+   "snapshot": "37bbf6bf887474423de09044308876d0e215045bb13a08ae19dea62d70de3a60"
+  },
+  "s6": {
+   "url": "https://www.vierschanzentournee.com/en/history/",
+   "title": "History of the Four Hills Tournament",
+   "publisher": "Vierschanzentournee (official)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:09.815Z",
+   "snapshot": "4905241d86307871dd5b4c1ad4c70e49490eca120eaebbb4aa20abe3b6832a9d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oberstdorf und Garmisch-Partenkirchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c073"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Innsbruck und Bischofshofen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Janne Ahonen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bergiselschanze",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14017",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bischofshofen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31; transcript tp-080"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:57.223Z",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oberstdorf und Garmisch-Partenkirchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Oberstdorf und Garmisch-Partenkirchen”, “Oberstdorf and Garmisch-Partenkirchen”, “Оберстдорф и Гармиш-Партенкирхен”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:57.223Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Innsbruck und Bischofshofen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Innsbruck und Bischofshofen”, “Innsbruck and Bischofshofen”, “Инсбрук и Бишофсхофен”) on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:57.223Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Media related to Janne Ahonen at Wikimedia Commons",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Janne Ahonen” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:57.223Z",
+   "target": "f04345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Bergiselschanze ist eine Skisprungschanze auf dem Bergisel in Innsbruck, Österreich.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bergiselschanze” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:57.223Z",
+   "target": "f14017",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "auf der Seegrube oberhalb Innsbrucks die „Deutsch-Österreichische Springertournee“ begründet; Gründungsväter waren Toni Glos, Emmerich Pepeunig (Innsbruck), Beppi Hartl, Franz Rappenglück (Partenkirchen), Andi Mischitz, Fred Triebner (Bischofshofen) sowie Alfons Huber und Xaver Kaiser (Oberstdorf).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:57.223Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bischofshofen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:39:31Z",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With few exceptions, it has consisted of the ski jumping events held at Oberstdorf , Garmisch-Partenkirchen , Innsbruck and Bischofshofen , in this order.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:39:33Z",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the SCP was tasked with finding a second German partner due to the parity between the German and Austrian ski associations",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Partenkirchen plus Oberstdorf (Ski Club chosen as the second German partner) are the German venues."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:39:35Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The three venues Partenkirchen (with the New Year's ski jumping event), Innsbruck and Bischofshofen were clear from the outset as tour participants",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Innsbruck (Tyrol) and Bischofshofen (Salzburg) are the Austrian venues."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:39:38Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "has taken place in Germany and Austria each year since 1953",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:39:41Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is the first ski jumper to be the overall winner of the Tournament five times. Before him, Jens Weissflog managed to win the tour four times.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:39:44Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Most overall titles [ edit ] Titles Name Tournament(s) 5 Janne Ahonen",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "Winners list through 2025–26 (Kobayashi 3, Tschofenig 1, Prevc) — Ahonen's five still the record."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:47:51Z",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With few exceptions, it has consisted of the ski jumping events held at Oberstdorf, Garmisch-Partenkirchen, Innsbruck and Bischofshofen, in this order.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:47:53Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "5 Janne Ahonen 1998–99, 2002–03, 2004–05, 2005–06, 2007–08",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r069",
+   "run": "provenance-research-2026-10-23",
+   "note": "'Most overall titles' table, current through 2025–26."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "the SCP was tasked with finding a second German partner due to the parity between the German and Austrian ski associations",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The three venues Partenkirchen (with the New Year's ski jumping event), Innsbruck and Bischofshofen were clear from the outset as tour participants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "has taken place in Germany and Austria each year since 1953",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "is the first ski jumper to be the overall winner of the Tournament five times. Before him, Jens Weissflog managed to win the tour four times.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With few exceptions, it has consisted of the ski jumping events held at Oberstdorf, Garmisch-Partenkirchen, Innsbruck and Bischofshofen, in this order.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s5"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "With few exceptions, it has consisted of the ski jumping events held at Oberstdorf, Garmisch-Partenkirchen, Innsbruck and Bischofshofen, in this order.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Innsbruck and Bischofshofen” is on the snapshot of s5"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04342",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The three venues Partenkirchen (with the New Year's ski jumping event), Innsbruck and Bischofshofen were clear from the outset as tour participants, and the SCP was tasked with finding a second German partner due to the parity between the German and Austrian ski associations.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Innsbruck and Bischofshofen” is on the snapshot of s6"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2005–06, Janne Ahonen and Jakub Janda shared the overall victory after finishing with exactly the same points total after the four competitions.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Janne Ahonen” is on the snapshot of s5"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:54:26.190Z",
+   "target": "f04344",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "At the 54th Tournament, ski jumpers Janne Ahonen (Finland) and Jakub Janda (Czech Republic) achieved an ex aequo overall result, scoring 1,081.5 points each after eight rounds.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:26.190Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Janne Ahonen” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "article": "a1693",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Born_to_Run",
+   "title": "Born to Run – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:13.508Z",
+   "snapshot": "aa3dbca3b2e9a4ae3fd245004e682e2393dac553ea75ac04992de22a94bdaf7c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Elvis_Presley",
+   "title": "Elvis Presley – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:39:32.313Z",
+   "snapshot": "f02b7c9d67a096391ad7b7c5f815f5805bbb06e96d09e566cef976f7e597ac04"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Aretha_Franklin",
+   "title": "Aretha Franklin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:14.487Z",
+   "snapshot": "2f2dc6574cd5451e60661d60136ca85892e9cbd5e9ae31cc7a4fa7bdab18aa8c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Man_in_Black_(song)",
+   "title": "Man in Black (song) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:15.375Z",
+   "snapshot": "78fc441933b557730045204ff6007f27cbc41f098ddb28de657001cc784f0fb7"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08461",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bruce Springsteen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08462",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Elvis Presley",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08463",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Aretha Franklin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08465",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Johnny Cash",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:06.785Z",
+   "target": "f08461",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Born to Run is the third studio album by the American singer-songwriter Bruce Springsteen, released on August 25, 1975, through Columbia Records.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.785Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bruce Springsteen” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:06.785Z",
+   "target": "f08462",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "By August, Sun had released 10 sides credited to \"Elvis Presley, Scotty and Bill\"; the latest recordings included a drummer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.785Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Elvis Presley” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:06.785Z",
+   "target": "f08463",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 1962, Columbia issued two more albums, The Electrifying Aretha Franklin and The Tender, the Moving, the Swinging Aretha Franklin, the latter of which became her first charting album, reaching number 69 on the Billboard Top LPs – Monaural chart.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.785Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aretha Franklin” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:06.785Z",
+   "target": "f08465",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "\"Man in Black\" (or \"The Man in Black\") is a protest song written and recorded by singer-songwriter Johnny Cash, originally released on his 1971 album of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:06.785Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johnny Cash” is on the snapshot of s4"
+  }
+ ]
+}

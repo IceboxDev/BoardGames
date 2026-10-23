@@ -1,0 +1,308 @@
+{
+ "article": "a2245",
+ "sources": {
+  "s1": {
+   "url": "https://hollywoodlife.com/2013/04/02/rihanna-dies-this-is-the-end-trailer-video/",
+   "title": "Rihanna Dies — 'This Is The End' Trailer Reveals RiRi's Death",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-20"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Absolutely_Fabulous:_The_Movie",
+   "title": "Absolutely Fabulous: The Movie",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:20.812Z",
+   "snapshot": "f1900264ba032b6d333563d9880541c6a4b9b5be921ec56f9d09137f27edb346"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Hangover",
+   "title": "The Hangover – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:21.839Z",
+   "snapshot": "38c396be8e4b87c1f17a4a2872d6f77d6a6051b00a7fe088194d6331da159dce"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Zombieland",
+   "title": "Zombieland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:23.076Z",
+   "snapshot": "74ce0c593d8f785dbac31e6cf73c114cb17a05a58d4d1a8f2aae053e98425d3d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Home_Alone_2:_Lost_in_New_York",
+   "title": "Home Alone 2: Lost in New York – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:49:23.844Z",
+   "snapshot": "9df1b9442c09d1311d085695938855dbfc5d45f484697d32ff6f03f8746fc91e"
+  },
+  "s6": {
+   "url": "https://www.ign.com/articles/2013/05/31/this-is-the-end-review",
+   "title": "This is the End Review",
+   "publisher": "IGN",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:37.726Z",
+   "snapshot": "349019f3c52aed6cf2041d56d0c12638f90d95e353ac3a3754d6f185b42972c0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rihanna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-140"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11503",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kate Moss",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-148"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11504",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mike Tyson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11505",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bill Murray",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Donald Trump",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:42.855Z",
+   "target": "f11503",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The film finds the drug-addicted, alcoholic PR agent Edina Monsoon and her best friend/codependent Patsy Stone on the run from the authorities after it is suspected they killed supermodel Kate Moss.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kate Moss” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:42.855Z",
+   "target": "f11504",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "After Lucas and Moore sold it to the studio for $2 million, Phillips and Jeremy Garelick rewrote the script to include a tiger as well as a subplot involving a baby and a police cruiser, and also including boxer Mike Tyson.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mike Tyson” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:42.855Z",
+   "target": "f11505",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It stars Woody Harrelson, Jesse Eisenberg, Emma Stone, Abigail Breslin and Bill Murray.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bill Murray” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:42.855Z",
+   "target": "f11506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Angels with Even Filthier Souls (the sequel to Angels with Filthy Souls from the first film); Clare Hoak as Gangster – \"Dame\", Johnny's girlfriend from the fictional film Angels with Even Filthier Souls; and Donald Trump as himself, the then owner of the Plaza Hotel who directs Kevin to the lobby.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:42.855Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donald Trump” is on the snapshot of s5"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:44:04Z",
+   "target": "f11502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "an over-zealous Michael Cera slaps her on the butt",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "same article: she is 'sucked into a hole and killed' when the ground collapses; page bot-protected, quote read via a browser fetch"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:44:07Z",
+   "target": "f11502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The central team is supported by a host of cameos from celebrities including Michael Cera, Emma Watson, Rihanna",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r025",
+   "run": "provenance-research-2026-10-23",
+   "note": "confirms Rihanna's cameo only, not the slap"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:58:29.018Z",
+   "target": "f11502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The central team is supported by a host of cameos from celebrities including Michael Cera, Emma Watson, Rihanna",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:29.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:58:29.018Z",
+   "target": "f11502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The central team is supported by a host of cameos from celebrities including Michael Cera, Emma Watson, Rihanna, Kevin Hart, Jason Segal, Aziz Ansari, Mindy Kaling, Christopher Mintz-Plasse, Paul Rudd and a few treats that are just far too choice to spoil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:29.018Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rihanna” is on the snapshot of s6"
+  }
+ ]
+}

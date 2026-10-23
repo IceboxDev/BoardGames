@@ -1,0 +1,242 @@
+{
+ "article": "a2359",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Kaperei",
+   "title": "Kaperei",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:56:00.487Z",
+   "snapshot": "97cef07169c2a9a166f06d258e53037920701900210fea73ac5276aea9fca3be"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Letter_of_marque",
+   "title": "Letter of marque – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:04.372Z",
+   "snapshot": "1b8d9b740e45ddba57884c1c567c90858f7527a0131ed64c181d673880861f64"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Golden_Hind",
+   "title": "Golden Hind – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:54:36.176Z",
+   "snapshot": "037cd64376375c39bc9b307c72f917d59994bd97efc20aa48e74ed9ff801193e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Henry_Morgan",
+   "title": "Henry Morgan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:05.387Z",
+   "snapshot": "840ae3090362c16fd0c902bb5c1d00f1c4b551428f1e74da92bdd04e98db5dda"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Paris_Declaration_Respecting_Maritime_Law",
+   "title": "Paris Declaration Respecting Maritime Law – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:56:06.319Z",
+   "snapshot": "cc7419848963e8e95fc45f12bfe37c66f40e2dc47aec441abb91e0984bb79420"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12295",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Prise",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-359"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12296",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "letter of marque",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12297",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pelican",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12298",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Henry Morgan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12299",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Crimean War",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:04.659Z",
+   "target": "f12295",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Anstatt eines Solds erhielten diese Seefahrer das Recht, die Kriegsbeute (Prise) teilweise oder ganz einzubehalten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Prise” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:04.659Z",
+   "target": "f12296",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "A letter of marque and reprisal was a government license in the Age of Sail that authorized a private person, known as a privateer or corsair, to attack and capture vessels of a foreign state at war with the issuer, licensing international military operations against a specified enemy as reprisal",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “letter of marque” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:04.659Z",
+   "target": "f12297",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She was originally known as Pelican, but Drake renamed her mid-voyage in 1578, in honour of his patron, Sir Christopher Hatton, whose crest was a golden hind (a female red deer).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pelican” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:04.659Z",
+   "target": "f12298",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sir Henry Morgan (Welsh: Harri Morgan; c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Henry Morgan” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:04.659Z",
+   "target": "f12299",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Paris Declaration Respecting Maritime Law of 16 April 1856 was an international multilateral treaty agreed to by the warring parties in the Crimean War gathered at the Congress at Paris after the peace treaty of Paris had been signed in March 1856.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:04.659Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Crimean War” is on the snapshot of s5"
+  }
+ ]
+}

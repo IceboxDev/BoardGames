@@ -1,0 +1,383 @@
+{
+ "article": "a1245",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ultraviolet",
+   "title": "Ultraviolet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:34.619Z",
+   "snapshot": "eb3078c09e54b3a9a8922775e99988a1761d79b6fd10996fb708592e8dd4ac35"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Scurvy",
+   "title": "Scurvy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:35.533Z",
+   "snapshot": "5210ce7dc342a128c94fcf221846b8d402d5b8e9d2e68b22fed0ac98095649a7"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rickets",
+   "title": "Rickets – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:35.282Z",
+   "snapshot": "49a84574441a634548093f9748aeec242320eb1b6bbbf41ca1ff42f19b5fca25"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Rachitis",
+   "title": "Rachitis",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:49:32.995Z",
+   "snapshot": "1c1700ff052a4e7e23649ca8f13c0bb53bf4bceb6f86e79932a58e740ec47fc9"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Haldane%27s_decompression_model",
+   "title": "Haldane's decompression model – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:36.515Z",
+   "snapshot": "8ebb999c939040e94aa8a710312f55f4889250450fb11d981ae7e5884f9266dc"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Plasmodium",
+   "title": "Plasmodium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:37.518Z",
+   "snapshot": "c52e3752de8508be4c2f089893c9ef62d322df3421f4471e6acc4b0f606952cc"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6220018/",
+   "title": "Persistent foramen ovale closure in divers with a history of decompression sickness (Neth Heart J 2018)",
+   "publisher": "Netherlands Heart Journal / PubMed Central",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:56.044Z",
+   "snapshot": "f5023a1b9e654f955dc5e8230d62bb3d86af8f6bf89a7dad3cfae51929a12b7e"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Decompression_sickness",
+   "title": "Decompression sickness – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:56.633Z",
+   "snapshot": "3edf61b8819601a241f052f9a98c811675ed8265b9ca393d159b3a985093cb14"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06221",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "UV radiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06222",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "vitamin C deficiency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "vitamin D deficiency",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06223",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Vitamin-D-Mangel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-125"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "nitrogen bubbles in the blood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f06225",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Plasmodium parasites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:54.212Z",
+   "target": "f06221",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "UV radiation is present in sunlight and constitutes about 10% of the total electromagnetic radiation output from the Sun.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “UV radiation” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:54.212Z",
+   "target": "f06222",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vitamin C deficiency may cause pulmonary hypertension by several mechanisms.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin C deficiency” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:54.212Z",
+   "target": "f06223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The most common cause of rickets is a vitamin-D deficiency, although hereditary genetic forms also exist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “vitamin D deficiency” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:54.212Z",
+   "target": "f06223",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "genannt und Rhachitis geschrieben, von altgriechisch ῥαχῖτις [νόσος] rhachītis [nósos], deutsch ‚Rückgratskrankheit‘) ist eine meist mit Vitamin-D-Mangel verbundene Erkrankung des wachsenden Knochens mit gestörter Mineralisation der Knochen und Desorganisation der Wachstumsfugen bei Kindern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vitamin-D-Mangel” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:54.212Z",
+   "target": "f06224",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "nitrogen bubbles in the blood",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“nitrogen bubbles in the blood”, “Stickstoffbläschen im Blut”, “пузырьки азота в крови”) on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:54.212Z",
+   "target": "f06225",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Plasmodium parasites were first identified in the late 19th century by Charles Laveran.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.212Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Plasmodium parasites” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:10:14Z",
+   "target": "f06224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "DCS is caused by nitrogen bubbles. The nitrogen that has been stored in the tissues during the dive disappears by diffusion into the venous system.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:10:16Z",
+   "target": "f06224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a medical condition caused by dissolved gases emerging from solution as bubbles inside the body tissues during decompression",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r057",
+   "run": "provenance-research-2026-10-23",
+   "note": "bubbles form in tissues as well as blood; the bank's 'in the blood' is the popular short form"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:36.866Z",
+   "target": "f06224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "DCS is caused by nitrogen bubbles. The nitrogen that has been stored in the tissues during the dive disappears by diffusion into the venous system.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:36.866Z",
+   "target": "f06224",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is a medical condition caused by dissolved gases emerging from solution as bubbles inside the body tissues during decompression",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.866Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  }
+ ]
+}

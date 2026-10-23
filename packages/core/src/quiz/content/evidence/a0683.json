@@ -1,0 +1,576 @@
+{
+ "article": "a0683",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Capitulare_de_villis",
+   "title": "Capitulare de villis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:56.277Z",
+   "snapshot": "87e8aa4d4b2a25de454bac80baed97729682762305d8c2c85aa71e26e202afdd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Hamlet",
+   "title": "Hamlet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:58.367Z",
+   "snapshot": "73c276bbe0bccc2746d0e183a7b82d9f0d6af555ba54a3201e7b03a7c94b9ac3"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Hypericum_perforatum",
+   "title": "Hypericum perforatum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:59.232Z",
+   "snapshot": "12e58758b414af0258b07791d49957b51eb98fea28b8f54e58550d2941ec11ea"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Liber_de_cultura_hortorum",
+   "title": "Liber de cultura hortorum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:57.323Z",
+   "snapshot": "c04dcd655e553314bb5e62ed6212f86ab2e0fad6f46b5f396686f5134cebd870"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dracula",
+   "title": "Dracula – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:00.271Z",
+   "snapshot": "fffef36ee57bca9e899b486ee402de559f5a081a8f7fb94fd7ce01a44134ac38"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Dill_(Pflanze)",
+   "title": "Dill (Pflanze)",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:06.347Z",
+   "snapshot": "86edb01aba839c603fa4b9f22f9674cea816e7ddfe7cbb8a776466495d99c5d7"
+  },
+  "s7": {
+   "url": "https://botanical.com/botanical/mgmh/d/dill--13.html",
+   "title": "Dill – A Modern Herbal (M. Grieve, 1931)",
+   "publisher": "Botanical.com (Grieve, A Modern Herbal)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:06.787Z",
+   "snapshot": "dd47678bb84cd95c2cb1ea3acfa2a07f8d1fcb8ab848d1358f099d1bcd7696dc"
+  },
+  "s8": {
+   "url": "https://botanical.com/botanical/mgmh/r/rosema17.html",
+   "title": "Rosemary – A Modern Herbal (M. Grieve, 1931)",
+   "publisher": "Botanical.com (Grieve, A Modern Herbal)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:07.315Z",
+   "snapshot": "ff0dcef9525fc166e28ff204815a5c4e4e871d2661a57dff1cb3dd66233bc733"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Rosmarin",
+   "title": "Rosmarin",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:35:07.379Z",
+   "snapshot": "88a334e950db9e88f8b05e3b598fc3e01aca687260b9f52f0acf5971dcbcaf67"
+  },
+  "s10": {
+   "url": "https://www.gutenberg.org/files/1524/1524-h/1524-h.htm",
+   "title": "Hamlet (William Shakespeare)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:07.108Z",
+   "snapshot": "c08b18c80ceaf815e34eb8b9e5125caac5872bdd93397fd7e200175ac9951b81"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dill",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 8; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rosemary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "St John's wort",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salbei",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Garlic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:26.283Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dill",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Dill”, “укроп”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:26.283Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rosemary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Rosemary”, “Rosmarin”, “розмарин”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:26.283Z",
+   "target": "f03413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The common name St John's wort comes from the fact that its flowers and buds were commonly harvested at the time of the Midsummer festival, which was later Christianized as St John's Feast Day on 24 June.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “St John's wort” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:26.283Z",
+   "target": "f03414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Salbei / salvia (Salvia officinalis, auch Salvia tomentosa),",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Salbei” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:26.283Z",
+   "target": "f03415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lucy is given fresh blood and placed in a room filled with garlic flowers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:26.283Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Garlic” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:17:41Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im Volksglauben vertrieb er Dämonen und sollte der Braut zur Herrschaft in der Ehe verhelfen",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:17:45Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In the Middle Ages, Dill was also one of the herbs used by magicians in their spells, and charms against witchcraft.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23",
+   "note": "Dill as a protective herb against witchcraft and demons, and tied to brides in folk custom, is attested; the bridal-bouquet detail itself comes from the printed card and German folklore."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:17:49Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "At weddings, it was entwined in the wreath worn by the bride, being first dipped into scented water.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:17:52Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "in Deutschland trugen Bräute lange Zeit einen Rosmarinkranz",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:17:56Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "There’s rosemary, that’s for remembrance",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Im Volksglauben vertrieb er Dämonen und sollte der Braut zur Herrschaft in der Ehe verhelfen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In the Middle Ages, Dill was also one of the herbs used by magicians in their spells, and charms against witchcraft.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "At weddings, it was entwined in the wreath worn by the bride, being first dipped into scented water.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "in Deutschland trugen Bräute lange Zeit einen Rosmarinkranz",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "There’s rosemary, that’s for remembrance",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s10"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Dill, Dille oder Gurkenkraut, auch Dillkraut und Dillfenchel genannt (Anethum graveolens), ist eine Pflanzenart der Gattung Anethum innerhalb der Familie der Doldenblütler (Apiaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dill” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Dill is a hardy annual, a native of the Mediterranean region and Southern Russia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Dill” is on the snapshot of s7"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "---Cultivation---Rosemary is propagated by seeds, cuttings and layers, and division of roots.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rosemary” is on the snapshot of s8"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Der Rosmarin (Salvia rosmarinus; Synonym: Rosmarinus officinalis) ist eine Art der Gattung Salbei und ein immergrüner Halbstrauch aus der Familie der Lippenblütler (Lamiaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rosmarin” is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:53:54.686Z",
+   "target": "f03412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "There’s rosemary, that’s for remembrance; pray love, remember.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:54.686Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rosemary” is on the snapshot of s10"
+  }
+ ]
+}

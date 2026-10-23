@@ -1,0 +1,376 @@
+{
+ "article": "a0358",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Roald_Amundsen",
+   "title": "Roald Amundsen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:27.969Z",
+   "snapshot": "9b369b269f66ca3452574881e4a7a5dd18934091e09d33e6f454d320ec37b0bd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nansen's_Fram_expedition",
+   "title": "Nansen's Fram expedition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:29.215Z",
+   "snapshot": "c70b8ee67bc9377764a227a063a4d19da41a5715568f01ec102572109a8bd208"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Peary",
+   "title": "Robert Peary – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:29.946Z",
+   "snapshot": "57efc64d41ae49d4efdae7a845b948ecc0ba06dbcdc721198eaa96c1bdf10ab6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Imperial_Trans-Antarctic_Expedition",
+   "title": "Imperial Trans-Antarctic Expedition – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:31.039Z",
+   "snapshot": "e2ed115d9c8702a382ccf25e6e363ae2fc6e6242a049f7e5a753ab03c74d3205"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Alfred_Wegener",
+   "title": "Alfred Wegener – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:50:31.965Z",
+   "snapshot": "1c3cab6d190b7a9699d9cc7f460fd1dabfae035feb1bf2a08255ed78e1216fb7"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/cache/epub/18975/pg18975.txt",
+   "title": "The North Pole: Its Discovery in 1909 under the auspices of the Peary Arctic Club (Robert E. Peary, 1910)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:35.576Z",
+   "snapshot": "e3d50b275c3a749aea4152befcb84aab8c6bb70d35df9a47bc83dd7f85af5647"
+  },
+  "s7": {
+   "url": "https://www.gutenberg.org/cache/epub/20923/pg20923.txt",
+   "title": "A Negro Explorer at the North Pole (Matthew A. Henson, 1912)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:32:36.038Z",
+   "snapshot": "3168901f665fe6a1603ae4d9d16bac67854c2ff64ef78236173fa8a912bb7c3a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01786",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Roald Amundsen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c030"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01787",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fridtjof Nansen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert Peary",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01789",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ernest Shackleton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01790",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alfred Wegener",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:35.532Z",
+   "target": "f01786",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He said he hoped to do more and signed it \"Your loyal subject, Roald Amundsen\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Roald Amundsen” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:35.532Z",
+   "target": "f01787",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nansen's Fram expedition of 1893–1896 was an attempt by the Norwegian explorer Fridtjof Nansen to reach the geographical North Pole by harnessing the natural east–west current of the Arctic Ocean.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fridtjof Nansen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:35.532Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "They had three children together, Marie Ahnighito (1893-1978), Francine Peary (1899-1899) and Robert Peary Jr (1903-1994).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Peary” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:35.532Z",
+   "target": "f01789",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Conceived by Sir Ernest Shackleton, the expedition was an attempt to make the first land crossing of the Antarctic continent.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ernest Shackleton” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:35.532Z",
+   "target": "f01790",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Alfred Wegener was born in Berlin on 1 November 1880, the youngest of five children, to Richard Wegener and his wife Anna.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:35.532Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alfred Wegener” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:36:51Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Title: The North Pole: Its Discovery in 1909 under the auspices of the Peary Arctic Club",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "Peary's own account of his claim. Whether he truly reached the pole is doubted; the fact asks only who made the 6 April 1909 claim. Frederick Cook's rival claim (1908, announced 1909) is why the wording now names the date and Henson."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:37:02Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On April 6, 1909, Peary established Camp Jesup within 3 mi (5 km) of the pole, according to his own readings.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:37:11Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Title: A Negro Explorer at the North Pole",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r034",
+   "run": "provenance-research-2026-10-23",
+   "note": "Henson's own memoir of the 1909 Peary expedition (its text describes the halt of April 6, 1909)."
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:56.667Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Title: The North Pole: Its Discovery in 1909 under the auspices of the Peary Arctic Club",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:56.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:56.667Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On April 6, 1909, Peary established Camp Jesup within 3 mi (5 km) of the pole, according to his own readings.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:56.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:56.667Z",
+   "target": "f01788",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Title: A Negro Explorer at the North Pole",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:56.667Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  }
+ ]
+}

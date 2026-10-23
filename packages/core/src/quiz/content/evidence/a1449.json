@@ -1,0 +1,202 @@
+{
+ "article": "a1449",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Galileo_affair",
+   "title": "Galileo affair – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:05.457Z",
+   "snapshot": "a31887f4d235fc5b0ecce44861144943244aedde496151285897cc6546474799"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gott_w%C3%BCrfelt_nicht",
+   "title": "Gott würfelt nicht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:02:02.738Z",
+   "snapshot": "99f0853e9f5c9062e23d0c8d6290ace2c0c1ffe025e2fead2dcebb3b537be8bb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants",
+   "title": "Standing on the shoulders of giants – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:06.341Z",
+   "snapshot": "d9e9e6b0a2c0ae6b7d6d85f2d634bf4371a624e4b85f858ec3f17970ea06199f"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Cogito,_ergo_sum",
+   "title": "Cogito, ergo sum – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:14.400Z",
+   "snapshot": "27d12c78d29bd2d056a5044f598aaf4e241dcfe0dc8c028ec17b50f79b600796"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Seal_of_California",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:02:07.502Z",
+   "snapshot": "bbb5646829b9dbcc170a502c29e24ff7580a4722c80497ff43ff83935a287f78"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07241",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "And yet it moves",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c121"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07243",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gott würfelt nicht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07244",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "on the shoulders of giants",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07245",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Cogito, ergo sum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:27:27.831Z",
+   "target": "f07241",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "According to popular legend, after his abjuration Galileo allegedly muttered the rebellious phrase \"and yet it moves\" (Eppur si muove), but there is no evidence that he actually said this or anything similar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.831Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “And yet it moves” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:27.831Z",
+   "target": "f07243",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Begriff der Quantenverschränkung), sind seine Folgerungen aufgrund der in der Arbeit genannten philosophischen Voraussetzungen (die auf „Gott würfelt nicht“ hinauslaufen) inzwischen durch sorgfältige Experimente, basierend auf der Bellschen Ungleichung, explizit falsifiziert worden, was ein",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.831Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gott würfelt nicht” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:27.831Z",
+   "target": "f07244",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The phrase \"standing on the shoulders of giants\" is a metaphor which means \"using the understanding gained by major thinkers who have gone before in order to make intellectual progress\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.831Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “on the shoulders of giants” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:27.831Z",
+   "target": "f07245",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Latin cogito, ergo sum, usually translated into English as \"I think, therefore I am\", is the \"first principle\" of the philosophy of the French scientist and philosopher René Descartes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:27.831Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Cogito, ergo sum” is on the snapshot of s4"
+  }
+ ]
+}

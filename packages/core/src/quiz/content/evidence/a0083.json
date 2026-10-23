@@ -1,0 +1,382 @@
+{
+ "article": "a0083",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Cenchrus_purpureus",
+   "title": "Cenchrus purpureus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:22.531Z",
+   "snapshot": "0e4dc10a5625aed06b43533bb6fc834550dc1079864912d6011a2b8d672fbec7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nepetalactone",
+   "title": "Nepetalactone – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:23.508Z",
+   "snapshot": "9ffbcdb28c90240354b3210a0856452b3e795227b3aed88e8679af6ea6e06411"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rosa_canina",
+   "title": "Rosa canina – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:24.485Z",
+   "snapshot": "95e311cc16da61c8dffa67103b3b3e8bd4d1319f6b084be714c094a1c25d5f22"
+  },
+  "s4": {
+   "url": "https://www.greenhousegrower.com/crops/geranium-rozanne-named-plant-of-the-centenary/",
+   "title": "Geranium 'Rozanne' Named Plant Of The Centenary – Greenhouse Grower",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:24.697Z",
+   "snapshot": "5c363d438458e113bf4799e1d6c368617ff2100bf87583d007edbff846d73fe3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lemna",
+   "title": "Lemna – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:25.506Z",
+   "snapshot": "350b1e8ae145dc44951af3d9529145a620598598ddfad7e3f988c2581e91fcb6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pelargonium",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:26.619Z",
+   "snapshot": "acb2a56c59a805a8065875987d350c8a78da6c839ee95f87f462a43601e33d6b"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/cranesbill",
+   "title": "cranesbill",
+   "publisher": "Dictionary.com (Collins English Dictionary)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:42.435Z",
+   "snapshot": "eb979e93431f9ff79ad6039b971d393b1561ccc95ec23274b71869507140e1be"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Geranium",
+   "title": "Geranium",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:41.961Z",
+   "snapshot": "7bb96941a78a770a052a41374d164e6dc14a9cf4103009e8612285ce1330876f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00411",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "elephant grass",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c007"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00412",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "catnip",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00413",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "dog rose",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cranesbill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00415",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "duckweed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:47.703Z",
+   "target": "f00411",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Cenchrus purpureus, synonym Pennisetum purpureum, also known as Napier grass, elephant grass or Uganda grass, is a species of perennial tropical grass native to African grasslands.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “elephant grass” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:47.703Z",
+   "target": "f00412",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nepetalactones are a group of iridoid analog stereoisomers produced by Nepeta cataria (catnip) and certain other plants in the genus Nepeta in order to repel insects.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “catnip” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:47.703Z",
+   "target": "f00413",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rosa canina, the dog rose, is a variable climbing, wild rose species native to Europe, northwest Africa, and western Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dog rose” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:47.703Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "cranesbill",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“cranesbill”, “Storchschnabel”, “журавельник”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:47.703Z",
+   "target": "f00415",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lemna is a genus of free-floating aquatic plants referred to by the common name \"duckweed\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:47.703Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “duckweed” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:10:31Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "any of various plants of the genus Geranium, having pink or purple flowers and long slender beaked fruits",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:10:37Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The English name 'cranesbill' derives from the resemblance of the fruit capsule of some of the species to a crane's head and bill.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r045",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:03.179Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "any of various plants of the genus Geranium, having pink or purple flowers and long slender beaked fruits",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:03.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:03.179Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The English name 'cranesbill' derives from the resemblance of the fruit capsule of some of the species to a crane's head and bill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:03.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:03.179Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "CRANESBILL Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:03.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “cranesbill” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:03.179Z",
+   "target": "f00414",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The English name 'cranesbill' derives from the resemblance of the fruit capsule of some of the species to a crane's head and bill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:03.179Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “cranesbill” is on the snapshot of s8"
+  }
+ ]
+}

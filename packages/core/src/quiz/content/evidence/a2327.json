@@ -1,0 +1,499 @@
+{
+ "article": "a2327",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Rennsteig",
+   "title": "Rennsteig",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:13.717Z",
+   "snapshot": "830c504b0b494ec7c49245a337271c99c34dc42d94340babdcca24d8b9f6f8fb"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Spreewald",
+   "title": "Spreewald",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:14.803Z",
+   "snapshot": "4e5b29c0ae367600895b04281a3efd4bb3b8a43d1deefb168c20bb1dda120c14"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Bleilochtalsperre",
+   "title": "Bleilochtalsperre",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:15.751Z",
+   "snapshot": "ba8ba70788f601704efbb9adbca37d1d843f7515d4bb2ecb76227f41fb0ee374"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Sachsen_(Weinanbaugebiet)",
+   "title": "Sachsen (Weinanbaugebiet)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:16.726Z",
+   "snapshot": "215cd81e16ed542fd6dc61e18c5415831ab49d5beb74c37224c78093724f4f90"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/S%C3%A4chsische_Schweiz",
+   "title": "Sächsische Schweiz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:17.709Z",
+   "snapshot": "f71e69e57e40d79cab38d3501348b041c5463bb5bacf88aa23116f41198ae143"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/M%C3%BCritz",
+   "title": "Müritz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:54:18.795Z",
+   "snapshot": "1cbc57b3dea559f867e3318ecb4b9d3d13b2c1ade39e5115266aafcd79b92a12"
+  },
+  "s7": {
+   "url": "https://powerplants.vattenfall.com/bleiloch",
+   "title": "Power plants: Bleiloch",
+   "publisher": "Vattenfall (operator)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:19.306Z",
+   "snapshot": "80095e2382af9aa1c720bdbe8f3515d9d404cf70e49441ec493a5c4106cf34a1"
+  },
+  "s8": {
+   "url": "https://powerplants.vattenfall.com/de/bleiloch",
+   "title": "Kraftwerke: Bleiloch",
+   "publisher": "Vattenfall (operator)",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:19.973Z",
+   "snapshot": "654d15f72954aaeb7c858edad19821902c87163c91d192661c0b643dae3c0f34"
+  },
+  "s9": {
+   "url": "https://www.waren-tourismus.de/",
+   "title": "Heilbad Waren (Müritz)",
+   "publisher": "Waren (Müritz)-Information (town tourist office)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:20.103Z",
+   "snapshot": "02f6634e558111cc377d1ee6b5e9902e0be44e4014467fd17b86db0f9186126d"
+  },
+  "s10": {
+   "url": "https://www.auf-nach-mv.de/mecklenburgische-seenplatte",
+   "title": "Mecklenburgische Seenplatte",
+   "publisher": "Tourismusverband Mecklenburg-Vorpommern",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:46:20.715Z",
+   "snapshot": "efa533b4f7d7ee00e6e67e466a02da15e0993ab578b7c5a07fca77061f200a86"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Frankenwald",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12089",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Spreewald",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-099"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Thüringen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-193"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12091",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sachsen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-207"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12092",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Sächsische Schweiz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Müritz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 33"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:57.176Z",
+   "target": "f12088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Rennsteig ist ein etwa 170 km langer Kammweg sowie ein historischer Grenzweg im Thüringer Wald, Thüringer Schiefergebirge und Frankenwald.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Frankenwald” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:57.176Z",
+   "target": "f12089",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Spreewald (niedersorbisch Błota, „die Sümpfe“) ist ein ausgedehntes Niederungsgebiet und eine historische Kulturlandschaft im Südosten Brandenburgs.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spreewald” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:57.176Z",
+   "target": "f12090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die Bleilochtalsperre ist eine Talsperre in Thüringen, die seit 1932 das Wasser der Saale mit einer Gewichtsstaumauer anstaut.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thüringen” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:57.176Z",
+   "target": "f12091",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Das Weinbaugebiet Sachsen ist eines der kleinsten und das östlichste Weinbaugebiet Deutschlands, festgelegt in § 3 Abs.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sachsen” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:57.176Z",
+   "target": "f12092",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Als Sächsische Schweiz wird der deutsche Teil des Elbsandsteingebirges in Sachsen bezeichnet.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sächsische Schweiz” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:57.176Z",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Müritz [ˈmyːʁɪts] (wohl von slawisch „kleines Meer“, vgl.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:57.176Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Müritz” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:05:57Z",
+   "target": "f12090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "With a capacity of around 213 million cubic metres, it is Germany's largest dam.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "operator gives ~213 million m³ (Wikipedia 215 million); largest by volume"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:05:59Z",
+   "target": "f12090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "die wasserreichste Talsperre Deutschlands",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:06:18Z",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Die Müritz ist der größte innerhalb Deutschlands gelegene See.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:06:19Z",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "darunter auch der größte See Deutschlands, die Müritz",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r017",
+   "run": "provenance-research-2026-10-23",
+   "note": "Lake Constance is larger but shared with Austria and Switzerland; Müritz is the largest lake wholly within Germany"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:42.358Z",
+   "target": "f12090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "With a capacity of around 213 million cubic metres, it is Germany's largest dam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:42.358Z",
+   "target": "f12090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "die wasserreichste Talsperre Deutschlands",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:42.358Z",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Die Müritz ist der größte innerhalb Deutschlands gelegene See.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s9"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:42.358Z",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Heilbad Waren (Müritz) - Ferienunterkünfte, Urlaubsinformationen",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Müritz” is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:42.358Z",
+   "target": "f12093",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Ganz besonders gilt dies natürlich für den „Müritz-Nationalpark“ sowie die Naturparke „Nossentiner / Schwinzer Heide“ und „Feldberger Seenlandschaft“.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:42.358Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Müritz” is on the snapshot of s10"
+  }
+ ]
+}

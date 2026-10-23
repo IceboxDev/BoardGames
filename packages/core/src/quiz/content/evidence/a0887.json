@@ -1,0 +1,296 @@
+{
+ "article": "a0887",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Ginkgo_biloba",
+   "title": "Ginkgo biloba – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:57.445Z",
+   "snapshot": "43249e92ae378180989e3a61442f0ea25a11e5fcc318e0c1a2e305f9b37bf25f"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Ginkgo",
+   "title": "Ginkgo",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:26:54.766Z",
+   "snapshot": "93b54b80fa5f89a7d815c8fd934baa10b535ef9570febcc8f9bc6e821e3af2fe"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Coelacanth",
+   "title": "Coelacanth – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:58.356Z",
+   "snapshot": "fc860c4c2eff05886281064ad4494d4428825f9f331b864d8368190e1b2e9c59"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Tuatara",
+   "title": "Tuatara – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:26:59.362Z",
+   "snapshot": "d70a21c570fae963f184a314cafeaef11b8c29aa3546d0ee0a02f18ac8fdbfee"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Limulus_amebocyte_lysate",
+   "title": "Limulus amebocyte lysate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:24:27.106Z",
+   "snapshot": "29244e9f0defdf7d9eeb04e1bac8fc2f99fe65c46913041db0a23cbae96b3206"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Wollemia",
+   "title": "Wollemia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:00.377Z",
+   "snapshot": "c6dde47cf7ca473c6d902910e82a7a2922156a673b8b169446e9aeeaaf5a5be5"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Horseshoe_crab",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:01.388Z",
+   "snapshot": "87c092bed73d12b159519ef00bd581ddae1d84536e0cfecb31462d783bfe88b2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ginkgo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c074"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ginkgo",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-258"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Coelacanth",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tuatara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Horseshoe crab",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wollemi pine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:00.368Z",
+   "target": "f04431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ginkgo biloba, commonly known as ginkgo ( GINK-oh, -⁠goh), also known as the maidenhair tree, and often misspelled \"gingko\" (see Taxonomy below) is a species of gymnosperm tree native to East Asia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.368Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ginkgo” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:00.368Z",
+   "target": "f04431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Ginkgo oder Ginko [ˈɡɪŋko] (Ginkgo biloba) ist eine in China heimische, heute weltweit angepflanzte Baumart.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.368Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ginkgo” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:00.368Z",
+   "target": "f04432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The name coelacanth originates from the Permian genus Coelacanthus, which was the first scientifically named genus of coelacanths (in 1839), becoming the type genus of Coelacanthiformes as other species were discovered and named.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.368Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Coelacanth” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:00.368Z",
+   "target": "f04433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tuatara (, Māori: [ˈtʉ.a.ta.ɾa]; Sphenodon punctatus) is a species of reptile endemic to New Zealand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.368Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tuatara” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:00.368Z",
+   "target": "f04434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Limulus amebocyte lysate (LAL) is an aqueous extract of motile blood cells (amebocytes) from the Atlantic horseshoe crab Limulus polyphemus.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.368Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Horseshoe crab” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:00.368Z",
+   "target": "f04435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Wollemi pine is classified as critically endangered (CR) on the IUCN's Red List, and is legally protected in Australia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:00.368Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wollemi pine” is on the snapshot of s6"
+  }
+ ]
+}

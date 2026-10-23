@@ -1,0 +1,242 @@
+{
+ "article": "a1213",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Helene_Weigel",
+   "title": "Helene Weigel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:42.895Z",
+   "snapshot": "f7dd9d5087f68f12b0a89c78f850d49a647eacaeb25384bc645293381636d37a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Bertolt_Brecht",
+   "title": "Bertolt Brecht – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:40.613Z",
+   "snapshot": "e11d643f7ba8c236d286c8ed3ca632c025cf3368efe583c987802ed879301a7d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Threepenny_Opera",
+   "title": "The Threepenny Opera – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:44.002Z",
+   "snapshot": "bcdd7fafd77c6c1ac33b3b47d2eec618ccce58f2c08bcdd6d072c336d03eb416"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ruth_Berghaus",
+   "title": "Ruth Berghaus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:41.653Z",
+   "snapshot": "6a337937ea93bc1e22cf8024fa92c39cf01589a68c9860386e247398b2ad668c"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Claus_Peymann",
+   "title": "Claus Peymann – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:47:42.463Z",
+   "snapshot": "fc54070fbd0758512f12a28d7a11a5430a9e1f6445505c2cd3765d2f5c3231b8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06061",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Helene Weigel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c102"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06062",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06063",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lotte Lenya",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06064",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ruth Berghaus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06065",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Claus Peymann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:49.272Z",
+   "target": "f06061",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Helene Weigel (German: [heˈleːnə ˈvaɪɡl̩] ; 12 May 1900 – 6 May 1971) was an Austrian actress and artistic director.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helene Weigel” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:49.272Z",
+   "target": "f06062",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Bertolt Brecht (Künstlername seit Juli 1916; auch Bert Brecht), eigentlich Eugen Berthold Friedrich Brecht (* 10.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:49.272Z",
+   "target": "f06063",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The performance was a springboard for one of the best known interpreters of Brecht and Weill's work, Lotte Lenya, who was married to Weill.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lotte Lenya” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:49.272Z",
+   "target": "f06064",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nach der konzertierten Absetzung von Ruth Berghaus durch die Brecht-Erben, das ZK der SED und einzelne Mitarbeiter des Ensembles versank dieses in der musealen Ausgestaltung des Brechtschen Werks.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ruth Berghaus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:49.272Z",
+   "target": "f06065",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Claus Peymann war der Sohn des 1896 in Bremen geborenen Lehrers Karl Peymann und dessen Ehefrau Käthe, geb.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:49.272Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Claus Peymann” is on the snapshot of s5"
+  }
+ ]
+}

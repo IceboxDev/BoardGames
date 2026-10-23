@@ -1,0 +1,289 @@
+{
+ "article": "a1587",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Descent_from_the_Cross_(Rubens,_1612%E2%80%931614)",
+   "title": "The Descent from the Cross (Rubens, 1612–1614) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:13.953Z",
+   "snapshot": "992ba761e74ea076ed4bb96749e5e7e7cb53cef92af8029571d6a24808cbc6c3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Wilton_Diptych",
+   "title": "Wilton Diptych – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:15.051Z",
+   "snapshot": "a77ef3159cd868a67290d742ec0e11646938a59dde021f151e536f989dbe9193"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ghent_Altarpiece",
+   "title": "Ghent Altarpiece – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:01:07.178Z",
+   "snapshot": "55415dccf65ad54573ad9683ddf113c39851ffc24464689dcd02ffaeeecb4525"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Maest%C3%A0_(Duccio)",
+   "title": "Maestà (Duccio) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:15.980Z",
+   "snapshot": "213fffe7eb0b4a30779ef1d80b4fd06a4f5893bdbff3a14244110e5e8ecdfe2f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Deckenfresko_im_Treppenhaus_der_W%C3%BCrzburger_Residenz",
+   "title": "Deckenfresko im Treppenhaus der Würzburger Residenz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:10:13.400Z",
+   "snapshot": "5a9eebae29428404936315b26a4e57cef22a419859ef909a362e29d45da758b1"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Fresko",
+   "title": "Freskomalerei",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:10:14.110Z",
+   "snapshot": "5d27d6811256b458050eb9478d5785eed4723d47489361b098321849e849a13f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07931",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Triptych",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07932",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Diptych",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07933",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Polyptych",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07934",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Predella",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fresko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f07935",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Fresko",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-388"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.395Z",
+   "target": "f07931",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Descent from the Cross is the central panel of a triptych painting by the Baroque artist Peter Paul Rubens in 1612–1614.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Triptych” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.395Z",
+   "target": "f07932",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1395–1399) is a small portable diptych of two hinged panels, painted on both sides, now in the National Gallery, London.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Diptych” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:47.395Z",
+   "target": "f07933",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Ghent Altarpiece, also called the Adoration of the Mystic Lamb (Dutch: De aanbidding van het Lam Gods), is a very large and complex 15th-century polyptych altarpiece in St Bavo's Cathedral, Ghent, Belgium.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Polyptych” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:47.395Z",
+   "target": "f07934",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The front panels make up a large enthroned Madonna and Child with saints and angels, and a predella of the Childhood of Christ with prophets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Predella” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:47.395Z",
+   "target": "f07935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Zu keiner Zeit bestand ein größeres einteiliges Fresko.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fresko” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:47.395Z",
+   "target": "f07935",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Das vom Freskenmaler oder dem Freskant ausgeführten Wand- oder Deckenbild wird das Fresko (oder seltener die Freske, Mehrzahl Fresken) genannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.395Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fresko” is on the snapshot of s6"
+  }
+ ]
+}

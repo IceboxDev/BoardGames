@@ -1,0 +1,202 @@
+{
+ "article": "a1949",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Andreas_M%C3%B6ller",
+   "title": "Andreas Möller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:51.947Z",
+   "snapshot": "ba2e6ae1629bd2aebc5989f1fce0701f126515764023d2981f6feea323873d28"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sepp_Herberger",
+   "title": "Sepp Herberger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:32:39.655Z",
+   "snapshot": "f42c1843e3aef9f1cf19e282923be2260f1b3116767ad28fb5af5be0b8e2def5"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Lukas_Podolski",
+   "title": "Lukas Podolski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:32:37.010Z",
+   "snapshot": "c7d789dd6fb6cb788be7914220216f5f3ec77adf9cae911ae922ed49f872aad8"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Alfred_Prei%C3%9Fler",
+   "title": "Alfred Preißler – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:32:37.876Z",
+   "snapshot": "955cc82a8f6f351b2eb15a1e1aff88ef1506e2dd3332230927a95caf802aa084"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Giovanni_Trapattoni",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:19:51.425Z",
+   "snapshot": "0929faeb5e450fd36f9d11e27ac3b2a2b53df2b2f001bd19f57d718ff3a74cdb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09741",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Andreas Möller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c163"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09742",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sepp Herberger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09744",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lukas Podolski",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09745",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Adi Preißler",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:52.006Z",
+   "target": "f09741",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Dirk Graalmann: Das ungerechte Leben des Andreas Möller.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andreas Möller” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:52.006Z",
+   "target": "f09742",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sepp Herberger at the Germany's Sports Hall of Fame (in German)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sepp Herberger” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:52.006Z",
+   "target": "f09744",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lukas Podolski wurde als Sohn des deutschstämmigen ehemaligen Fußballspielers Waldemar Podolski und der ehemaligen Handballspielerin Krystyna Podolska, die für die polnische Nationalmannschaft aktiv war, in eine katholische Mittelschichtsfamilie im polnischen Gliwice geboren und wohnte im Stadtteil",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lukas Podolski” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:52.006Z",
+   "target": "f09745",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Bis heute ist Adi Preißler mit 168 Toren Rekordtorschütze des BVB, allerdings erzielte beispielsweise Manfred Burgsmüller mehr Bundesligatore als er für den Verein.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:52.006Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Adi Preißler” is on the snapshot of s4"
+  }
+ ]
+}

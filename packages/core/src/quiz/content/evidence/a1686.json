@@ -1,0 +1,202 @@
+{
+ "article": "a1686",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Benno_Ohnesorg",
+   "title": "Benno Ohnesorg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:49.604Z",
+   "snapshot": "efaf1fccacfe8067c7d279aab3f74634cd119e67aa4ee6fc8129d05c048f124a"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Internationaler_Vietnamkongress",
+   "title": "Internationaler Vietnamkongress – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:50.595Z",
+   "snapshot": "afdb93940986e48403356d203529fa3cc6e5aee2f29c209614c377090a72f890"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Karl-Heinz_Kurras",
+   "title": "Karl-Heinz Kurras – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:52.029Z",
+   "snapshot": "e912a872fdef8cdf78d04b2c68d8a6c19dc6d6d81daa1da57a7c2745173a7bf1"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Ulrike_Meinhof",
+   "title": "Ulrike Meinhof – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:15:53.453Z",
+   "snapshot": "dfa054fc0d7c6dcc7542c7a82ae0f1d54dd435a285efa2574d11db126b8fac02"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hanns_Martin_Schleyer",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:29:11.252Z",
+   "snapshot": "d2a2eefd20a64278239aed39f4f46005bc9e543ba335214ade100f7ef6f28f2e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08426",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benno Ohnesorg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c141"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08427",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Rudi Dutschke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08428",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl-Heinz Kurras",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08429",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ulrike Meinhof",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:05.812Z",
+   "target": "f08426",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Benno Ohnesorg war der zweite von drei Söhnen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.812Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Benno Ohnesorg” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:05.812Z",
+   "target": "f08427",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Organisatoren der Veranstaltung waren der Sozialistische Deutsche Studentenbund (SDS) von West-Berlin sowie die Brüsseler Konferenz, ein lockerer Zusammenschluss verschiedener linker Jugendorganisationen aus Westeuropa; als Hauptakteure gelten Rudi Dutschke und Karl Dietrich Wolff.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.812Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rudi Dutschke” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:05.812Z",
+   "target": "f08428",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Karl-Heinz Kurras, Pseudonym Otto Bohl (* 1.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.812Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Karl-Heinz Kurras” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:05.812Z",
+   "target": "f08429",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In this regard Ulrike Meinhof ably constructed a remarkable statement about the failure of the Baader-Meinhof Group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:05.812Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ulrike Meinhof” is on the snapshot of s4"
+  }
+ ]
+}

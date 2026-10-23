@@ -1,0 +1,336 @@
+{
+ "article": "a1744",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Kurt_Wallander",
+   "title": "Kurt Wallander – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:37.411Z",
+   "snapshot": "559338693ed79074daab5f37609917340081d34864a1cf74c8b183a1d90c18b7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Girl_with_the_Dragon_Tattoo",
+   "title": "The Girl with the Dragon Tattoo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:38.463Z",
+   "snapshot": "dcae969a98d8a6e32cb742239c6aa9ef35309f194096e1f88757bc9decb33979"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Verblendung_(Roman)",
+   "title": "Verblendung (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:35.561Z",
+   "snapshot": "b6d51f1f0ef92cb95a813490e5457c3dd4bcefeb19953efa0cf8a478aa4b564c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Snowman_(2017_film)",
+   "title": "The Snowman (2017 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:39.371Z",
+   "snapshot": "040333a62503ccb1116c1d6de43a27e48d45a9757ab472a4bca15fed78e3b39f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Martin_Beck",
+   "title": "Martin Beck – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:19:40.484Z",
+   "snapshot": "52930179821791bd8a1c3de77f42d93e0e6016042c74a140aa67a49ee4fe9944"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Donna_Leon_(Fernsehreihe)",
+   "title": "Donna Leon (Fernsehreihe) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:37.571Z",
+   "snapshot": "33c7c56af26525ce5f554a99547ea30ff64c94bc6e780e9922ab957f5ab54d21"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Butler_Parker_(Fernsehserie)",
+   "title": "Butler Parker (Fernsehserie)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:19:38.611Z",
+   "snapshot": "d05cbdafb586c95a0961708728d2ae8b06fc0a478863acea8bed80fa94658ee6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08716",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Wallander",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c146"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Lisbeth Salander",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08717",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lisbeth Salander",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-228"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08718",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Harry Hole",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08719",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Martin Beck",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f08720",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Guido Brunetti",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11654",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Hobbydetektiv",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 34; history entry seq 39; transcript tp-389"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f08716",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Kurt Wallander (Swedish pronunciation: [vaˈlǎnːdɛr]) is a fictional Swedish police inspector created by Swedish crime writer Henning Mankell (1948 – 2015).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kurt Wallander” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f08717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Blomkvist accepts the assignment, unaware that Vanger commissioned gifted private investigator Lisbeth Salander to comprehensively investigate Blomkvist's personal and professional history.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lisbeth Salander” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f08717",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dies geschah durch eine freie Mitarbeiterin, die hochintelligente, aber wegen einer komplizierten Vorgeschichte (die in den beiden Folgeromanen aufgedeckt wird) unter Vormundschaft stehende Lisbeth Salander.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lisbeth Salander” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f08718",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Simmons, and follows inspector Harry Hole as he tracks a serial killer who builds snowmen at his crime scenes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harry Hole” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f08719",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Martin Beck is a fictional Swedish police detective, the main character in the series of ten novels by Maj Sjöwall and Per Wahlöö, collectively titled The Story of a Crime.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Martin Beck” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f08720",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In den ersten vier Episoden verkörperte Joachim Król die Rolle des im Mittelpunkt der Reihe stehenden Commissario Guido Brunetti, die von der fünften Folge an Uwe Kockisch übernahm.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guido Brunetti” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:15.644Z",
+   "target": "f11654",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Im Mittelpunkt der Serie steht der Hobbydetektiv Josuah Parker, der zusammen mit seinem Freund,  Rechtsanwalt Mike Rander, Kriminalfälle in ganz Europa löst und immer wieder mit zwei Gangstern kollidiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:15.644Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hobbydetektiv” is on the snapshot of s7"
+  }
+ ]
+}

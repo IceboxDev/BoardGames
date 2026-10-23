@@ -1,0 +1,242 @@
+{
+ "article": "a1924",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Doctor_Who",
+   "title": "Doctor Who – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:55.691Z",
+   "snapshot": "4fc8b0f68fe947e722840d5ab15811376277674d86caeb6cb27684e6c2a62677"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Prisoner",
+   "title": "The Prisoner – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:50.551Z",
+   "snapshot": "61c695585e8de854a81a96ded9410ba900e025e48b5bf8401e36ae3c36a81724"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Red_Dwarf",
+   "title": "Red Dwarf – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:56.664Z",
+   "snapshot": "a23b15120acf6f10cbcc2ac9f2b7e24aa3f2930185744282e692c283ebf1311c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Monty_Python's_Flying_Circus",
+   "title": "Monty Python's Flying Circus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:30:51.733Z",
+   "snapshot": "964fc4ee04906336a04a017bb9103ac51fafd6b79bad65a6e6aef820ecd99cae"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Black_Mirror",
+   "title": "Black Mirror – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:16:50.648Z",
+   "snapshot": "ca0ac8a62c876bb262a75343680c170eb5ff272f917629958d371b61ce8dbbfd"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09616",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Doctor Who",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c161"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09617",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Prisoner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09618",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Dwarf",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09619",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monty Python's Flying Circus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09620",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Black Mirror",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:46.167Z",
+   "target": "f09616",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Doctor Who is a British science fiction television series first broadcast by the BBC in 1963.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Doctor Who” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:46.167Z",
+   "target": "f09617",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Prisoner is a British television series created by Patrick McGoohan, who stars as Number Six, a nameless British intelligence agent who is abducted and imprisoned in a mysterious coastal village after resigning from his position.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Prisoner” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:46.167Z",
+   "target": "f09618",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Red Dwarf is a British science fiction comedy programme created by Rob Grant and Doug Naylor that originally aired on BBC Two from 1988 to 1999, and was revived by Dave airing from 2009 to 2020.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Red Dwarf” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:46.167Z",
+   "target": "f09619",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Monty Python's Flying Circus (also known as simply Monty Python) is a British surreal sketch comedy series created by and starring Graham Chapman, John Cleese, Eric Idle, Terry Jones, Michael Palin, and Terry Gilliam, who became known collectively as \"Monty Python\", or the \"Pythons\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monty Python's Flying Circus” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:46.167Z",
+   "target": "f09620",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Black Mirror is a British anthology television series created by Charlie Brooker.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:46.167Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Black Mirror” is on the snapshot of s5"
+  }
+ ]
+}

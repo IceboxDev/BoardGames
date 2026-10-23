@@ -1,0 +1,401 @@
+{
+ "article": "a1713",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Theobald_Smith",
+   "title": "Theobald Smith – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:30.332Z",
+   "snapshot": "51cf3be9800d96c49d0ba75d6749aa182452e8f45662ba71b267de5cf4ddc91f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Scabies",
+   "title": "Scabies – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:31.356Z",
+   "snapshot": "a2e2ad02c48c4eafd6b6499f00db612140adbcd0928a2daccd6066fb93627a90"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ronald_Ross",
+   "title": "Ronald Ross – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:56:24.792Z",
+   "snapshot": "ef9d129f1fd506143526e7964f2a87c9c658a2a81583ffb6544f51c83cf41011"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Trypanosoma",
+   "title": "Trypanosoma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:32.385Z",
+   "snapshot": "ae3747f165d52505731491271557b591de31520684f7ebfa71d570dc3e3b4ec1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Black_Death",
+   "title": "Black Death – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:18:37.505Z",
+   "snapshot": "156fe1c5a611ef14f57f723ce157f411e075cf4dac91adb38b2009d25445f2cf"
+  },
+  "s6": {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+   "title": "Malaria – WHO fact sheet",
+   "publisher": "World Health Organization",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:29:07Z"
+  },
+  "s7": {
+   "url": "https://www.cdc.gov/malaria/about/index.html",
+   "title": "About Malaria | CDC",
+   "publisher": "Centers for Disease Control and Prevention",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:50.643Z",
+   "snapshot": "e8894ceaa71e166e5931d4881d7a238bce71e6a20452d89bfc3b2812a40c288a"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Malaria",
+   "title": "Malaria – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:09.879Z",
+   "snapshot": "7be1380639b6174b6bff3afbd438f4b97e322ee6dcf43654954f473425f3f0bc"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08561",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ticks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08562",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Scabies mites",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anopheles mosquitoes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Trypanosomes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Fleas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:10.194Z",
+   "target": "f08561",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "This marked the first time that an arthropod had been definitively linked with the transmission of an infectious disease and presaged the eventual discovery of insects such as ticks and mosquitoes as important vectors in a number of diseases.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ticks” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:10.194Z",
+   "target": "f08562",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "People with crusted scabies exhibit scaly rashes, slight itching, and thick crusts of skin that contain large numbers of scabies mites.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scabies mites” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:10.194Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anopheles mosquitoes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Anopheles mosquitoes”, “Anophelesmücken”, “малярийные комары”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:10.194Z",
+   "target": "f08564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Most trypanosomes are heteroxenous (requiring more than one obligatory host to complete life cycle) and most are transmitted via a vector.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trypanosomes” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:10.194Z",
+   "target": "f08565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "pestis may have been different from more modern types, with bubonic plague transmissible by fleas first known from Bronze Age remains near Samara.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:10.194Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fleas” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:29:07Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Malaria mostly spreads to people through the bites of some infected female Anopheles mosquitoes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:29:10Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Anopheles mosquitoes are the type of mosquito that transmit malaria from one person to another.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:29:11Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "generally spread through the bites of an infected female Anopheles mosquito",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r058",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:57.134Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Anopheles mosquitoes are the type of mosquito that transmit malaria from one person to another.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:57.134Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "generally spread through the bites of an infected female Anopheles mosquito",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:57.134Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Anopheles mosquitoes are the type of mosquito that transmit malaria from one person to another.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Anopheles mosquitoes” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:57.134Z",
+   "target": "f08563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Malaria is a mosquito-borne infectious disease that is transmitted by the bite of Anopheles mosquitoes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:57.134Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Anopheles mosquitoes” is on the snapshot of s8"
+  }
+ ]
+}

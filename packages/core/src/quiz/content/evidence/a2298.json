@@ -1,0 +1,614 @@
+{
+ "article": "a2298",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Tokio",
+   "title": "Tokio",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:52:11.876Z",
+   "snapshot": "a86d2fcba1619d559d88d2bb4f1f91bed010be6c751cec1fd53f6ce2e6e5b5bd"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Jakarta",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:15.529Z",
+   "snapshot": "25de6bd1565d7869aa5672258bfba9c01b27651c06169e50e2fcaa94405defd8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Greater_Tokyo_Area",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:16.530Z",
+   "snapshot": "bc150a8afae90cdc22a543c080f57c453132fd0835f683d4452a69bb1c34ac50"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Akihabara",
+   "title": "Akihabara",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:17.443Z",
+   "snapshot": "4d7692c2acaef344d2f7ab48215c4602d2b09ad1878bd21ed6c71c4ca2e9d4aa"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Toyosu_Market",
+   "title": "Toyosu Market – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:18.475Z",
+   "snapshot": "a0ba925ba0583b25ca05a9e4230e7458bf205dfdaf0a979b6d6265c17a1b5df0"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Shibuya_Crossing",
+   "title": "Shibuya Crossing – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:19.445Z",
+   "snapshot": "4819e8117ca912e6e41e4006a306a9cc93acd86103dcb6da873738b5d9cac816"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tokyo_Skytree",
+   "title": "Tokyo Skytree – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:52:20.433Z",
+   "snapshot": "85f119d97d1cc2418144096cd35b3ba3ca745b3e6b55b38f8028f431aeb53bb8"
+  },
+  "s8": {
+   "url": "https://www.un.org/development/desa/en/news/population/2018-revision-of-world-urbanization-prospects.html",
+   "title": "68% of the world population projected to live in urban areas by 2050, says UN",
+   "publisher": "UN DESA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:59.812Z",
+   "snapshot": "24f5ec97c5d906fa89f9fe207684f855b0dc69bbffdaddb003528e8aef296653"
+  },
+  "s9": {
+   "url": "https://www.guinnessworldrecords.com/world-records/448095-busiest-pedestrian-crossing",
+   "title": "Busiest pedestrian crossing",
+   "publisher": "Guinness World Records",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:00.091Z",
+   "snapshot": "ec9d64cf7e9f5e39ec69bbdb0e4062ee71b3ab4030d63dd53dc782de02295a1d"
+  },
+  "s10": {
+   "url": "https://www.worldatlas.com/articles/what-is-the-world-s-busiest-pedestrian-crossing.html",
+   "title": "The World's Busiest Pedestrian Crossing",
+   "publisher": "WorldAtlas",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:46:00.430Z",
+   "snapshot": "dc6bff7e9ea4d3fb1ca26e65b175872b3669c24f6433aff50e32b02427fe4125"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tokio",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-319"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tokyo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tokyo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Akihabara",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-302"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11873",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Toyosu Market",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Shibuya Crossing",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11875",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tokyo Skytree",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Tokio (auch Tokyo, japanisch  Tōkyō [to̞ːkjo̞ː], deutsch ‚östliche Hauptstadt‘) ist die Hauptstadt von Japan.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tokio” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tokyo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Tokyo”, “Tokio”, “Токио”) on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Greater Tokyo Area is the third most populous metropolitan area in the world, consisting of the Kantō region of Japan (including Tokyo Metropolis and the prefectures of Chiba, Gunma, Ibaraki, Kanagawa, Saitama, and Tochigi) as well as the prefecture of Yamanashi of the neighboring Chūbu region.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tokyo” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Akihabara (Japanese: 秋葉原) is a neighborhood in the Chiyoda ward of Tokyo, Japan, generally considered to be the area surrounding Akihabara Station (nicknamed Akihabara Electric Town).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Akihabara” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11873",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Toyosu Market (豊洲市場, Toyosu Shijō) is a wholesale market in Tokyo, located in the Toyosu area of the Kōtō ward.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Toyosu Market” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Shibuya Scramble Crossing (渋谷スクランブル交差点, Shibuya sukuranburu kōsaten), commonly known as Shibuya Crossing, is a scramble crossing in Shibuya, Tokyo, Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Shibuya Crossing” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:51.057Z",
+   "target": "f11875",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tokyo Skytree (東京スカイツリー, Tōkyō Sukaitsurī; [tò̞ó̞.kʲjó̞ó̞ (|) sɯ̥̈.kä́í.t͡sɯ̈́.ɾʲíì, tó̞ó̞.-] ), a.k.a Tokyo Sky Tree, is a broadcasting and observation tower, located in Sumida, Tokyo, Japan.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:51.057Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tokyo Skytree” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:33:59Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tokyo is the world’s largest city with an agglomeration of 37 million inhabitants",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "UN World Urbanization Prospects 2018; Tokyo led the UN ranking for decades. The 2025 revision (new city definition) puts Jakarta and Dhaka ahead — the wording says \"was for decades\"."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:34:03Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As of 2026, the United Nations estimates the total population at 36,954,512, making it the third-most populous urban area in the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Confirms the >35 million figure and that Tokyo is no longer first, matching the bank body (past tense wording)."
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:34:43Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been described as the world's busiest pedestrian crossing, with 1,000–2,000 people crossing during a single green light cycle.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "The superlative is a common description, not a measured ranking; the wording says \"often called\"."
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:53:00Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "With an estimated one million pedestrians each day, the Shibuya Crossing in Tokyo, Japan, is the world's busiest pedestrian crossing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23",
+   "note": "Record holders registry; figures are estimates."
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:53:03Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The world-famous Shibuya Crossing in Tokyo is often called the world's busiest pedestrian crossing.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r032",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tokyo is the world’s largest city with an agglomeration of 37 million inhabitants",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As of 2026, the United Nations estimates the total population at 36,954,512, making it the third-most populous urban area in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "It has been described as the world's busiest pedestrian crossing, with 1,000–2,000 people crossing during a single green light cycle.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "With an estimated one million pedestrians each day, the Shibuya Crossing in Tokyo, Japan, is the world's busiest pedestrian crossing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The world-famous Shibuya Crossing in Tokyo is often called the world's busiest pedestrian crossing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Tokyo is the world’s largest city with an agglomeration of 37 million inhabitants, followed by New Delhi with 29 million, Shanghai with 26 million, and Mexico City and São Paulo, each with around 22 million inhabitants.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Tokyo” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "With an estimated one million pedestrians each day, the Shibuya Crossing in Tokyo, Japan, is the world's busiest pedestrian crossing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Shibuya Crossing” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:36.188Z",
+   "target": "f11874",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The world-famous Shibuya Crossing in Tokyo is often called the world's busiest pedestrian crossing.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:36.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Shibuya Crossing” is on the snapshot of s10"
+  }
+ ]
+}

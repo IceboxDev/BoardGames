@@ -1,0 +1,242 @@
+{
+ "article": "a2220",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Jessica_Chastain",
+   "title": "Jessica Chastain",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:25.580Z",
+   "snapshot": "bd19d3c16e407e772d424a64f920a8f643ef29ad88f32629b2368887e6e884b8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Martian_(film)",
+   "title": "The Martian (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:26.828Z",
+   "snapshot": "235358ddf23cb6ab808081548f6cb852b6c83f7caa2a393c2de5028bdc8d3d25"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Interstellar_(film)",
+   "title": "Interstellar (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:27.808Z",
+   "snapshot": "09e9b630672ee57cf1e13fe58c5090170e15e82b238201482798644e85857de6"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Gravity_(2013_film)",
+   "title": "Gravity (2013 film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:48:28.794Z",
+   "snapshot": "a7da832e0fde1425e9905cecea76f2db25ec2e993c630108cea1195e85ed7ccb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Der_Marsianer_%E2%80%93_Rettet_Mark_Watney",
+   "title": "Der Marsianer – Rettet Mark Watney",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:48:27.942Z",
+   "snapshot": "6e0ba156cd66cadad9f55c79d6ace855aee3dffb89cb5a5ec153757be34d8f35"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11321",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jessica Chastain",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11322",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Andy Weir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11323",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kip Thorne",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11324",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sandra Bullock",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Jordanien",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 30; transcript tp-291"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:38.602Z",
+   "target": "f11321",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Später begann sie mit dem Theaterspiel, wobei sie den Geburtsnamen ihrer Mutter als Künstlernamen verwendete und fortan als Jessica Chastain auftrat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jessica Chastain” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:38.602Z",
+   "target": "f11322",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Based on Andy Weir's 2011 novel, and distributed by 20th Century Fox, the film stars Matt Damon, alongside an ensemble cast featuring Jessica Chastain, Jeff Daniels, Kristen Wiig, Chiwetel Ejiofor, Sean Bean, Michael Peña, Kate Mara, Sebastian Stan, and Mackenzie Davis.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Andy Weir” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:38.602Z",
+   "target": "f11323",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The film began development in 2006 from a treatment by producer Lynda Obst and theoretical physicist Kip Thorne, and was originally set to be directed by Steven Spielberg.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kip Thorne” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:38.602Z",
+   "target": "f11324",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "It stars Sandra Bullock and George Clooney as American astronauts who attempt to return to Earth after the destruction of their Space Shuttle in orbit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sandra Bullock” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:38.602Z",
+   "target": "f14491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Einige Außenaufnahmen entstanden im Wadi Rum in Jordanien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:38.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jordanien” is on the snapshot of s5"
+  }
+ ]
+}

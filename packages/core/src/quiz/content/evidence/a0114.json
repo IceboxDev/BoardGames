@@ -1,0 +1,241 @@
+{
+ "article": "a0114",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Suez_Crisis",
+   "title": "Suez Crisis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:34.989Z",
+   "snapshot": "0e9261d5355c4ac2ef438a780ec4efddeff7d86aecf6e64fb554f4cec187958c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Aswan_High_Dam",
+   "title": "Aswan High Dam – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:36.070Z",
+   "snapshot": "2d9668a72a07c52ad0550ace9fa703ab3836824ae30e973835f71dedcc237fd4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Anthony_Eden",
+   "title": "Anthony Eden – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:37.143Z",
+   "snapshot": "e9465c739eee4a9a241df3c1532c05a0ff0595d3182aaa145fd8a36c341f844f"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Mohammad_Mossadegh",
+   "title": "Mohammad Mossadegh – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:22:34.659Z",
+   "snapshot": "11d2b04925ff84129d0dacb7dff453c71e08181475659430a67b19fa930733eb"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Suez_Canal",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:38.179Z",
+   "snapshot": "ffa3b15c5e1c638333917b1b8f70d1c496b42c6efc67263408927bcf047d6a52"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Suez Canal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Aswan High Dam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00568",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Anthony Eden",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00569",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sinai Peninsula",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00570",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mohammad Mossadegh",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:53.806Z",
+   "target": "f00566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "After issuing a joint ultimatum for a ceasefire, the United Kingdom and France joined the Israelis on 31 October in an attempt to depose Egyptian president Gamal Abdel Nasser and regain control of the Suez Canal (which Nasser had nationalised earlier that year).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Suez Canal” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:53.806Z",
+   "target": "f00567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Aswan High Dam, often called simply Aswan Dam, was built between 1960 and 1970 across the Nile in Aswan, Egypt.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Aswan High Dam” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:53.806Z",
+   "target": "f00568",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robert Anthony Eden, 1st Earl of Avon (12 June 1897 – 14 January 1977), was a British statesman, diplomat and military officer who served as Prime Minister of the United Kingdom and Leader of the Conservative Party from 1955 to 1957.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Anthony Eden” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:53.806Z",
+   "target": "f00569",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Israel's four-month-long occupation of the Egyptian-occupied Gaza Strip and Egypt's Sinai Peninsula enabled it to freely navigate the Straits of Tiran, but the Suez Canal was closed from October 1956 to March 1957.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sinai Peninsula” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:53.806Z",
+   "target": "f00570",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mohammad Mossadegh (persisch محمد مصدق, DMG Moḥammad-e Moṣaddeq [mohæˈmːæd-e mosæˈdːeɣ]; * 1880 oder * 16.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:53.806Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mohammad Mossadegh” is on the snapshot of s4"
+  }
+ ]
+}

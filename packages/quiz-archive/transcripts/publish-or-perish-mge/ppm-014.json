@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-014",
+ "image": "IMG20261022153253.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] What color does blue litmus paper turn when it comes into contact with an acid?\nA. Red\nB. Purple\nC. It stays blue\nAnswer: A. Litmus paper was first used in the 1300s, making it one of the oldest forms of pH indicators used to test acidity and alkalinity.",
+   "de": "Welche Farbe nimmt blaues Lackmuspapier an, wenn es mit einer Säure in Berührung kommt?",
+   "en": "What colour does blue litmus paper turn when it comes into contact with an acid?",
+   "reworked": true,
+   "answerDe": "Rot",
+   "answerEn": "Red",
+   "timeline": {
+    "kind": "event",
+    "start": "1300",
+    "end": null,
+    "precision": "decade",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Catalan physician Arnaldus de Villa Nova begins using litmus to study acids and bases",
+    "labelDe": "Der katalanische Arzt Arnaldus de Villa Nova verwendet Lackmus zur Untersuchung von Säuren und Basen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Litmus",
+    "title": "Litmus",
+    "lang": "en"
+   },
+   "notes": "Card correct; Wikipedia dates first use of litmus to circa 1300 (Arnaldus de Villa Nova).",
+   "domain": "science",
+   "sub": "chemistry"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which one of the following species does NOT pair-bond?\nA. Prairie vole\nB. Bald eagle\nC. Grizzly bear\nAnswer: C. Unlike bald eagles and prairie voles, which are known for forming long-term monogamous pair bonds, grizzly bears typically have solitary lives outside of the mating season.",
+   "de": "Anders als Weißkopfseeadler und Präriewühlmäuse gehen Grizzlybären keine dauerhaften Paarbindungen ein – wie leben sie außerhalb der Paarungszeit typischerweise?",
+   "en": "Unlike bald eagles and prairie voles, grizzly bears form no lasting pair bonds – how do they typically live outside the mating season?",
+   "reworked": true,
+   "answerDe": "Als Einzelgänger",
+   "answerEn": "Solitary (alone)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1815",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "George Ord describes the grizzly bear as Ursus horribilis",
+    "labelDe": "George Ord beschreibt den Grizzlybären als Ursus horribilis"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Grizzly_bear",
+    "title": "Grizzly bear",
+    "lang": "en"
+   },
+   "notes": "'Which does NOT' reworked to the positive fact: Wikipedia says grizzlies are normally solitary (gathering only at salmon runs).",
+   "domain": "nature",
+   "sub": "mammals"
+  }
+ ]
+}

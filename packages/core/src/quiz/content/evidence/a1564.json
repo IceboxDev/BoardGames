@@ -1,0 +1,296 @@
+{
+ "article": "a1564",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Robert_Redford",
+   "title": "Robert Redford – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:42.064Z",
+   "snapshot": "ff2449dcf028110cd328adae1a4d4cd632302b8b44e9a7c07eec8f1b35351f88"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Sundance_Film_Festival",
+   "title": "Sundance Film Festival",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:08:39.490Z",
+   "snapshot": "a67cc56ef3a52dd54531c15e929c28cfd96f846f56fde32aa428f678ef7f2fd8"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Butch_Cassidy_and_the_Sundance_Kid",
+   "title": "Butch Cassidy and the Sundance Kid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:43.043Z",
+   "snapshot": "6f54536cf41e331d02b60f2155464df0bde22f0fea8eef65e255994515f58c9c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/All_the_President%27s_Men_(film)",
+   "title": "All the President's Men (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:44.043Z",
+   "snapshot": "09f08f2f125209fa01a55a11d5ea42de0f53cea25f839626083f76e10b133a43"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ordinary_People",
+   "title": "Ordinary People – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:44.908Z",
+   "snapshot": "f49a7384c2441285e9de11b390764bdea6f8505f2dccabb2772cb815a153cf8d"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Sieben_Jahre_in_Tibet_(1997)",
+   "title": "Sieben Jahre in Tibet (1997)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:08:42.340Z",
+   "snapshot": "194e8ded21c3d64f07782cc2fc9cc41ee226e883a9a88eb4a207d8fec8bb6e95"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Sundance_Resort",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:45.932Z",
+   "snapshot": "0e5113ad3945e4f52d0ec110c87250d8fe393054bcd9aa89df1494328fa1b5e4"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Robert Redford",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c131"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07816",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Robert Redford",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-050"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07817",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Paul Newman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07818",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dustin Hoffman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07820",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Donald Sutherland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11404",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Brad Pitt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-283"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:44.555Z",
+   "target": "f07816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "was born on August 18, 1936, in Santa Monica, California, to Martha Woodruff Redford (née Hart; 1914–1955), who was from Austin, Texas, and Charles Robert Redford Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Redford” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:44.555Z",
+   "target": "f07816",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Zum ersten war dies ab 1981 Robert Redford.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robert Redford” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:44.555Z",
+   "target": "f07817",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Based loosely on fact, the film tells the story of Wild West outlaws Robert LeRoy Parker, known as Butch Cassidy (Paul Newman), and his partner Harry Longabaugh, the \"Sundance Kid\" (Robert Redford), who are on the run from a crack US posse after a string of train robberies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Newman” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:44.555Z",
+   "target": "f07818",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Based on the 1974 non-fiction book by journalists Carl Bernstein and Bob Woodward, it stars Robert Redford and Dustin Hoffman as Woodward and Bernstein, respectively, as they investigate the scandal for The Washington Post.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dustin Hoffman” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:44.555Z",
+   "target": "f07820",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It stars Donald Sutherland, Mary Tyler Moore, Judd Hirsch, and Timothy Hutton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Donald Sutherland” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:44.555Z",
+   "target": "f11404",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Der Film mit Brad Pitt in der Hauptrolle startete am 8.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:44.555Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brad Pitt” is on the snapshot of s6"
+  }
+ ]
+}

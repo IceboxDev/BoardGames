@@ -1,0 +1,361 @@
+{
+ "article": "a0710",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Poems_by_Currer,_Ellis,_and_Acton_Bell",
+   "title": "Poems by Currer, Ellis, and Acton Bell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:44.162Z",
+   "snapshot": "03dd7cd3752793e18cb62d5bee352905854801e4080884f2d490ed925eb7d292"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/George_Eliot",
+   "title": "George Eliot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:45.281Z",
+   "snapshot": "d251ebda815551a74dcf989929f655d0df737bdb7673d86612b799755c058c47"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Indiana_(novel)",
+   "title": "Indiana (novel) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:46.205Z",
+   "snapshot": "ae39d9e36fa7e6806281155712ff60b8ea2810e86fe053b35b478ea28e7eedb0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland",
+   "title": "Alice's Adventures in Wonderland – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:47.219Z",
+   "snapshot": "9159bdb061786957e716158bedc157da27c08976c6eecf3fd84ed84b611eb10d"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/The_Adventures_of_Tom_Sawyer",
+   "title": "The Adventures of Tom Sawyer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:48.257Z",
+   "snapshot": "50d65a313e85020ee49c905c57586d3cff3722761bd18851fd6ca678d11494f5"
+  },
+  "s6": {
+   "url": "https://marktwainhouse.org/about/mark-twain/biography/",
+   "title": "Mark Twain biography – The Mark Twain House & Museum",
+   "publisher": "The Mark Twain House & Museum",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:12.275Z",
+   "snapshot": "ee55c848188065b84c0cb64fce6f6122d7e44e410c3b5d3fd197ee25053fe16c"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Mark_Twain",
+   "title": "Mark Twain – Wikipedia",
+   "publisher": "Wikimedia Foundation",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:55:37Z"
+  },
+  "s8": {
+   "url": "https://www.gutenberg.org/ebooks/author/53",
+   "title": "Mark Twain – Project Gutenberg author page",
+   "publisher": "Project Gutenberg",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:35:12.689Z",
+   "snapshot": "3560b7f75b4525798f46306404f2c1b8ec4de9342e321af5c34ec0ae04cb9d66"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03546",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brontë",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03547",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "George Eliot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03548",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George Sand",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03549",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Charles Lutwidge Dodgson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Samuel Langhorne Clemens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:30.279Z",
+   "target": "f03546",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Poems by Currer, Ellis, and Acton Bell is a book of poetry published by Aylott and Jones of London featuring the work of the three Brontë sisters, Charlotte, Emily, and Anne in 1846 (see 1846 in poetry), and their first work in print.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brontë” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:30.279Z",
+   "target": "f03547",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mary Ann Evans (22 November 1819 – 22 December 1880; alternatively Mary Anne or Marian), known by her pen name George Eliot, was an English novelist, poet, journalist, translator, and one of the leading writers of the Victorian era.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Eliot” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:30.279Z",
+   "target": "f03548",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Indiana is a novel about love and marriage written by Amantine Aurore Dupin; it was the first work she published under her pseudonym George Sand.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Sand” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:30.279Z",
+   "target": "f03549",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Alice Liddell is there, while Carroll is caricatured as the Dodo (Lewis Carroll was a pen name for Charles Lutwidge Dodgson; because he stuttered when he spoke, he sometimes pronounced his last name as \"Dodo-Dodgson\").",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.279Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Lutwidge Dodgson” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:30.279Z",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Samuel Langhorne Clemens",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Samuel Langhorne Clemens”, “Сэмюэл Ленгхорн Клеменс”) on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:55:35Z",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "After failing as a silver prospector‚ Sam began writing for the Territorial Enterprise‚ a Virginia City‚ Nevada newspaper where he used‚ for the first time‚ his pen name‚ Mark Twain.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:55:37Z",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Samuel Langhorne Clemens (November 30, 1835 – April 21, 1910), known by the pen name Mark Twain, was an American writer, humorist, and essayist.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:55:51Z",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Alias Clemens, Samuel Langhorne",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r038",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:59.076Z",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "After failing as a silver prospector‚ Sam began writing for the Territorial Enterprise‚ a Virginia City‚ Nevada newspaper where he used‚ for the first time‚ his pen name‚ Mark Twain.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:59.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:59.076Z",
+   "target": "f03550",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Alias Clemens, Samuel Langhorne",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:59.076Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  }
+ ]
+}

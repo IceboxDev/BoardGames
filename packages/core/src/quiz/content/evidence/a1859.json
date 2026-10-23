@@ -1,0 +1,249 @@
+{
+ "article": "a1859",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Robinia_pseudoacacia",
+   "title": "Robinia pseudoacacia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:32.645Z",
+   "snapshot": "4c5dba44d4bc0713d2110cbe82818d39f233afa463c1c635e6f2eac3697cfcc1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Camellia",
+   "title": "Camellia – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:33.566Z",
+   "snapshot": "fd3316bea5312305aab608ef4f0f71abc7bb8b49f621b442ae7c1034d1ca2f05"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Square_Ren%C3%A9_Viviani",
+   "title": "Square René Viviani – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:34.476Z",
+   "snapshot": "c13a0fa4815651cb9cdc977aabe3247e29838735d121982f3e27f81a264cc090"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Georg_Joseph_Kamel",
+   "title": "Georg Joseph Kamel – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:35.510Z",
+   "snapshot": "90dfcf521b50ef675eca5c67e83f2cb3436c46bfb618ce2233acd032efa30f3e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Leonhart_Fuchs",
+   "title": "Leonhart Fuchs – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:41.392Z",
+   "snapshot": "a0f5cceec3aabc76399bf31158da7ac138eafde0b1f83130b4096c4202fee3c4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Antonio_Jos%C3%A9_Cavanilles",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:26:36.464Z",
+   "snapshot": "6b661cc37b2d6c72086a72519a0442b4f5b597de45f77be7ed9bf1aae71a7824"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09291",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "black locust",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c155"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09294",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "camellia",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Square René Viviani",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Manila",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f23142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leonhart Fuchs",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:35.309Z",
+   "target": "f09291",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Robinia pseudoacacia, commonly known as black locust, is a medium-sized hardwood deciduous tree, belonging to the tribe Robinieae of the legume family.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.309Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “black locust” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:35.309Z",
+   "target": "f09294",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Camellia ( or ) is a genus of flowering plants in the family Theaceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.309Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “camellia” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:35.309Z",
+   "target": "f23140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Square René Viviani (Official French name: Square René Viviani-Montebello) is a public square adjacent to the Church of Saint-Julien-le-Pauvre in the 5th arrondissement of Paris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.309Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Square René Viviani” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:35.309Z",
+   "target": "f23141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "From there he traveled overland to Acapulco where he boarded a galleon and arrived in Manila sometime in 1688.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.309Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Manila” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:35.309Z",
+   "target": "f23142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Leonhart Fuchs (German: [ˈleːɔnhaʁt ˈfʊks]; 17 January 1501 – 10 May 1566), sometimes spelled Leonhard Fuchs and cited in Latin as Leonhartus Fuchsius, was a German physician and botanist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:35.309Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Leonhart Fuchs” is on the snapshot of s5"
+  }
+ ]
+}

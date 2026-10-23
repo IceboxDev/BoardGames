@@ -1,0 +1,249 @@
+{
+ "article": "a0228",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Habitat_(video_game)",
+   "title": "Habitat (video game) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:25.026Z",
+   "snapshot": "76243e9cb0730efa7becd659fed610d79b8a758f8baa4b3c8088983d6e7e6e2f"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Al-Khwarizmi",
+   "title": "Al-Khwarizmi – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:26.211Z",
+   "snapshot": "c5a3d3466b4b4023175ca6b31fc25b80e1b338dde852dea2b018512e280c00e6"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/R.U.R.",
+   "title": "R.U.R. – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:27.133Z",
+   "snapshot": "3bc235af869807f6de348bfc9e97f43ad077217089172deb461baf9364cc5f89"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/WikiWikiWeb",
+   "title": "WikiWikiWeb – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:28.150Z",
+   "snapshot": "814a8616e12acdf68e1bf844d48bf6e8c6efc3d744090f413c4fa61e9e55fcc2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Aeneid",
+   "title": "Aeneid – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:38:29.167Z",
+   "snapshot": "6648dc9d7bbe5ce9010f8b62c47d2fe445a76c5fd73e253393f5abc15b9529b6"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Trojan_Horse",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:21:52.930Z",
+   "snapshot": "f391dd1119a5f79ad6d031e1877b4249cd57bd0813f17790365262de48ee4a43"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01136",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Avatar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01137",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Algorithm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01138",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Robot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01139",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Wiki",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Trojan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:15.576Z",
+   "target": "f01136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "An example of this approach was when Wilmunder, the programmer responsible for developing both backgrounds for the Habitat World and Avatar animations noted how the original specification only included a single generic male and female character.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Avatar” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:15.576Z",
+   "target": "f01137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "His name gave rise to the English terms algorism and algorithm; the Spanish, Italian, and Portuguese terms algoritmo; and the Spanish term guarismo and Portuguese term algarismo, all meaning 'digit'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Algorithm” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:15.576Z",
+   "target": "f01138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "It introduced the word \"robot\" to the English language and to science fiction as a whole.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Robot” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:15.576Z",
+   "target": "f01139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The WikiWikiWeb is the first wiki, or user-editable website.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wiki” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:15.576Z",
+   "target": "f01140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Aeneid (, ih-NEE-id; Latin: Aeneis [ae̯ˈneːɪs]) is a Latin epic poem that tells the legendary story of Aeneas, a Trojan who fled the fall of Troy and travelled to Italy, where he became the ancestor of the Romans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:15.576Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trojan” is on the snapshot of s5"
+  }
+ ]
+}

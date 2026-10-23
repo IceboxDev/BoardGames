@@ -1,0 +1,482 @@
+{
+ "article": "a2269",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Maggie_Smith",
+   "title": "Maggie Smith",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:40.178Z",
+   "snapshot": "71374d432073b0e3c3362119dda43372aaf6640ceff6e050638fb80fd60eedf7"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Downton_Abbey",
+   "title": "Downton Abbey",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:19:14.425Z",
+   "snapshot": "6027ba11355af50f661fb0904a645b7ec13e68919734b507848d77e6c0bc53cc"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Downton_Abbey",
+   "title": "Downton Abbey",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:50:40.684Z",
+   "snapshot": "5c848e9aec197db32f86ec0dcf2e4a31ba75c0e8c583dd8840b787b6c883b7ad"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Julian_Fellowes",
+   "title": "Julian Fellowes – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:50:43.307Z",
+   "snapshot": "c0a02494cf4ebca4f455fa8bb9f55dfe5b20daba9454d21f5712453833637084"
+  },
+  "s5": {
+   "url": "https://m.csmonitor.com/The-Culture/2012/0106/What-you-need-to-know-before-the-Downton-Abbey-season-2-premiere/The-family",
+   "title": "What you need to know before the Downton Abbey season 2 premiere: The family",
+   "publisher": "The Christian Science Monitor",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:48.018Z",
+   "snapshot": "7d8c9f7777442c4022f50c7a317d4bb9cc1b0426c985c957c5df5d3196f231e8"
+  },
+  "s6": {
+   "url": "https://www.wgbh.org/news/2014-02-23/oh-lady-edith",
+   "title": "Oh, Lady Edith",
+   "publisher": "GBH News (WGBH)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:48.472Z",
+   "snapshot": "55038dceec2f8e7918fde969b26096a37437557378967df77541a2149ec166f0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11656",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maggie Smith",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-027"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mary, Edith and Sybil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11; transcript tp-197"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11658",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Yorkshire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16; transcript tp-280"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11659",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Chauffeur",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-360"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11660",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Julian Fellowes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11661",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Highclere Castle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11662",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "the sinking of the Titanic",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f11663",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mr Carson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 42"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11656",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Maggie Smith wurde 1934 in der englischen Grafschaft Essex nordöstlich von London geboren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maggie Smith” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mary, Edith and Sybil",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Mary, Edith and Sybil”, “Mary, Edith und Sybil”, “Мэри, Эдит и Сибил”) on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11658",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Set on the fictional Yorkshire country estate of Downton Abbey between 16 April 1912 and New Year's Eve 1925, the series depicts the lives of the aristocratic Crawley family and their domestic servants in the post-Edwardian era, navigating their lives amidst the British social hierarchy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Yorkshire” is on the snapshot of s2"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11659",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lady Sybil verliebt sich in den Chauffeur Branson und plant mit ihm, Downton nach Kriegsende zu verlassen und mit ihm ein bürgerliches Leben zu beginnen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chauffeur” is on the snapshot of s3"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11660",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Julian Alexander Kitchener-Fellowes, Baron Fellowes of West Stafford  (born 17 August 1949), known professionally as Julian Fellowes, is an English actor, novelist, writer, producer, film director, and Conservative peer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Julian Fellowes” is on the snapshot of s4"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11661",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The filming location, Highclere Castle, in reality served as a convalescent home during World War I.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Highclere Castle” is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11662",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Plot events include news of the sinking of the Titanic (first series); the outbreak of the First World War, the Spanish influenza pandemic and the Marconi scandal (second series); the Irish War of Independence leading to the formation of the Irish Free State (third series); the Teapot Dome scandal",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “the sinking of the Titanic” is on the snapshot of s2"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:46.163Z",
+   "target": "f11663",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mrs Patmore's decision to invest her inheritance in real estate inspires Mr Carson, Downton's butler, to do likewise.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:46.163Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mr Carson” is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:17:37Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their three daughters are depicted by Michelle Dockery as Lady Mary Crawley (Talbot), Laura Carmichael as Lady Edith Crawley (Pelham) and Jessica Brown Findlay as Lady Sybil Crawley (Branson).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:17:38Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with his wife, Cora, an American heiress, and their three daughters, Mary, Edith, and Sybil.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T07:17:40Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trapped between beautiful Mary and adventurous Sybil, Edith was the sad one.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r026",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:31.663Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Their three daughters are depicted by Michelle Dockery as Lady Mary Crawley (Talbot), Laura Carmichael as Lady Edith Crawley (Pelham) and Jessica Brown Findlay as Lady Sybil Crawley (Branson).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:31.663Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "with his wife, Cora, an American heiress, and their three daughters, Mary, Edith, and Sybil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s5"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:31.663Z",
+   "target": "f11657",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Trapped between beautiful Mary and adventurous Sybil, Edith was the sad one.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:31.663Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s6"
+  }
+ ]
+}

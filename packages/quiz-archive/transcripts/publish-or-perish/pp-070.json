@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish",
+ "card": "pp-070",
+ "image": "IMG20261022011321.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Astronomy",
+   "cardText": "[Astronomy] What happens to the Moon’s distance from Earth each year?\nA. It changes seasonally\nB. It moves closer\nC. It moves farther away\nAnswer: C. The Moon is gradually moving away from Earth because of the tidal interactions between the Earth and the Moon. Earth’s rotation creates tidal bulges, and the gravitational interaction between these bulges and the Moon causes the Moon to slowly drift away. This process also results in the gradual slowing of Earth’s rotation, making days slightly longer over time.",
+   "en": "Because of tidal interactions, the Moon is slowly drifting away from Earth. By about how many centimetres per year?",
+   "de": "Wegen der Gezeitenwechselwirkung entfernt sich der Mond langsam von der Erde. Um etwa wie viele Zentimeter pro Jahr?",
+   "reworked": true,
+   "answerEn": "3.8 cm",
+   "answerDe": "3,8 cm",
+   "timeline": {
+    "kind": "event",
+    "start": "1969-07-21",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Apollo 11 astronauts place the first laser-ranging retroreflector on the Moon, enabling precise Earth–Moon distance measurements",
+    "labelDe": "Die Apollo-11-Astronauten stellen den ersten Laser-Retroreflektor auf dem Mond auf, der genaue Messungen der Entfernung Erde–Mond ermöglicht"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiments",
+    "title": "Lunar Laser Ranging experiments",
+    "lang": "en"
+   },
+   "notes": "Open form asks the rate (3.8 cm/year, measured by lunar laser ranging) rather than the direction.",
+   "domain": "earth-space",
+   "sub": "astronomy"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] Which fish is known for changing its sex?\nA. Goldfish  B. Salmon  C. Clownfish\nAnswer: C. Clownfish can change from male to female to become the dominant female of a group.",
+   "en": "Which reef fish, living among sea anemones, can change from male to female to become the dominant breeding female of its group?",
+   "de": "Welcher Rifffisch, der zwischen Seeanemonen lebt, kann vom Männchen zum Weibchen werden, um das dominante, fortpflanzende Weibchen seiner Gruppe zu werden?",
+   "reworked": true,
+   "answerEn": "Clownfish",
+   "answerDe": "Clownfisch",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1801",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Bloch and Schneider describe the clownfish genus Amphiprion",
+    "labelDe": "Bloch und Schneider beschreiben die Clownfisch-Gattung Amphiprion"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Clownfish",
+    "title": "Clownfish",
+    "lang": "en"
+   },
+   "notes": "Many fish change sex (wrasses, parrotfish, groupers); the anemone detail and male-to-female direction (protandry) pin it to the clownfish.",
+   "domain": "nature",
+   "sub": "animals"
+  }
+ ]
+}

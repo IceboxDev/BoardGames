@@ -1,0 +1,468 @@
+{
+ "article": "a1427",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Guano_Islands_Act",
+   "title": "Guano Islands Act – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:41.308Z",
+   "snapshot": "714b669dd493046d884c52bd0b988b525a1475484abdd5f602a721c497fa5175"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Guano",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:42.416Z",
+   "snapshot": "d76e5d474c16192d44630baecf618ee0846e57c7392657a8abdda3d937878caa"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Propolis",
+   "title": "Propolis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:43.292Z",
+   "snapshot": "023c0a2ef3d13f1690264d7f156e92b7474d68e609793b734818b17f9306d730"
+  },
+  "s4": {
+   "url": "https://www.etymonline.com/word/ambergris",
+   "title": "ambergris – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Gel%C3%A9e_royale",
+   "title": "Gelée royale – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:41.111Z",
+   "snapshot": "25e8cf79d4418c5a7f88965cc25c1a0e0651ddad26da74f6a338b8bef18b11bb"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Eulachon",
+   "title": "Eulachon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:00:44.305Z",
+   "snapshot": "b2da237c574a2dc877e03a15f29fca0f5008e74248a051527acaef3def55c88c"
+  },
+  "s7": {
+   "url": "https://ahdictionary.com/word/search.html?q=ambergris",
+   "title": "American Heritage Dictionary Entry: ambergris",
+   "publisher": "American Heritage Dictionary of the English Language",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:51.621Z",
+   "snapshot": "33bd5fe27cb5a18cae993569411ecaabe2de4e876fcebf04c29eceaf4de6186d"
+  },
+  "s8": {
+   "url": "https://www.nhm.ac.uk/discover/what-is-ambergris.html",
+   "title": "What is ambergris? | Natural History Museum",
+   "publisher": "Natural History Museum, London",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:51.764Z",
+   "snapshot": "bb4d02a3256df4ef41982357adf6c21bcc002a4435ab9bd92a94b0b569cf9498"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Ambergris",
+   "title": "Ambergris - Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:53.009Z",
+   "snapshot": "f58055f0b7d0eb852991023b297f446b166a8522cbbb97a4cdd8acb0bbab7001"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Guano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07131",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guano",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07132",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Propolis",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ambergris",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07135",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gelée royale",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25329",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eulachon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-047"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:24.265Z",
+   "target": "f07131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Guano Islands Act (11 Stat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guano” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:24.265Z",
+   "target": "f07131",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Guano (Spanish from Quechua: wanu) is the accumulated excrement of seabirds or bats.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Guano” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:24.265Z",
+   "target": "f07132",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Propolis or bee glue is a resinous mixture that honey bees produce by mixing saliva and beeswax with exudate gathered from tree buds, sap flows, or other botanical sources.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Propolis” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:24.265Z",
+   "target": "f07135",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gelée royale [französisch: gelée = eingedickter Fruchtsaft, royal = königlich], Weiselfuttersaft oder Bienenköniginnenfuttersaft ist der Futtersaft, mit dem die Honigbienen ihre Königinnen aufziehen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gelée royale” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:24.265Z",
+   "target": "f25329",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The eulachon (; Thaleichthys pacificus), or the candlefish, is a small anadromous species of smelt that spawns in some of the major river systems along the Pacific coast of North America from northern California to Alaska.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:24.265Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eulachon” is on the snapshot of s6"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:11:08Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A waxy grayish substance from the intestines of sperm whales that was used as a fixative and a fragrance in the manufacture of perfumes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:11:11Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ambrein, an odourless alcohol, is extracted from ambergris and used to make a perfume’s scent last longer.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:11:15Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ambergris has been highly valued by perfume makers as a fixative that allows the scent to last much longer",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:09.310Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "A waxy grayish substance from the intestines of sperm whales that was used as a fixative and a fragrance in the manufacture of perfumes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:56:09.310Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ambrein, an odourless alcohol, is extracted from ambergris and used to make a perfume’s scent last longer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:56:09.310Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ambergris has been highly valued by perfume makers as a fixative that allows the scent to last much longer",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:09.310Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "American Heritage Dictionary Entry: ambergris",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ambergris” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:09.310Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Ambergris is often described as one of the world’s strangest natural occurrences.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ambergris” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:09.310Z",
+   "target": "f07133",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Ambergris ( or ; Latin: ambra grisea; Old French: ambre gris), ambergrease, or grey amber is a solid, waxy, flammable substance of a dull grey or blackish colour produced in the digestive system of sperm whales.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:09.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ambergris” is on the snapshot of s9"
+  }
+ ]
+}

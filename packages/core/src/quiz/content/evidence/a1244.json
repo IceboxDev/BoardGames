@@ -1,0 +1,443 @@
+{
+ "article": "a1244",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Tertullian",
+   "title": "Tertullian – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:30.450Z",
+   "snapshot": "8f6a264bb91711dde5fe3630673e2fc36984c24013058c73dc37bbd6fd31d2f3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Council_of_Chalcedon",
+   "title": "Council of Chalcedon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:31.547Z",
+   "snapshot": "f537035ad602b9a52f6ecd62ea7c292a65140e5051edc38fe8d9cc58e4487db5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Fourth_Council_of_the_Lateran",
+   "title": "Fourth Council of the Lateran – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:08.376Z",
+   "snapshot": "0529cb5ee26d0ad518f4aa2ae72b9ab076de12e5c9b83dfbde45caddab7d86a0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Eschatology",
+   "title": "Eschatology – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:32.651Z",
+   "snapshot": "f97911cbfe4919f65cdb12748d5f4669e19bc2e16ca551ea4cdf93b7716612f1"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Theodicy",
+   "title": "Theodicy – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:49:33.613Z",
+   "snapshot": "9a90c7f68817e7ef163144c60036818da92c6f416ce9c058c92d85d390dbc819"
+  },
+  "s6": {
+   "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM",
+   "title": "Catechism of the Catholic Church, 1373-1381",
+   "publisher": "Holy See (vatican.va)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:55.236Z",
+   "snapshot": "da3dd204be9e6f82b5acd608007afcf53d53fa4cc34a53dfa52674714adeaaf1"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/transubstantiation",
+   "title": "TRANSUBSTANTIATION Definition & Meaning – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:55.781Z",
+   "snapshot": "ae811e9d701afe2ae9faaf921d3a09afa955955331de5a987de86cbbce19b84d"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Transubstantiation",
+   "title": "Transubstantiation – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:55.691Z",
+   "snapshot": "5faca7ee56a827c5adb2480225cf6d9f5cbd9bb66a7d693a84c9a452e02b7857"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Trinity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c104"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Incarnation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "transubstantiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "eschatology",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-089"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "theodicy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:54.037Z",
+   "target": "f06216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "He is perhaps most famous for being the first writer in Latin known to use the term trinity (Latin: trinitas).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.037Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Trinity” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:54.037Z",
+   "target": "f06217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cyril had taught that \"There is only one physis, since it is the Incarnation, of God the Word.\" It was argued by Pope Leo I that due to potential ambiguity between the various Greek terms and their Latin equivalents, in addition to the energy and imprudence with which he asserted his opinions,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.037Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Incarnation” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:54.037Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "transubstantiation",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“transubstantiation”, “Transsubstantiation”, “пресуществление”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:54.037Z",
+   "target": "f06219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eschatology ( ; from Ancient Greek  ἔσχατος (éskhatos) 'last' and  -logy) concerns expectations of the end of the present age, human history, or the world itself.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.037Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “eschatology” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:54.037Z",
+   "target": "f06220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "A theodicy (from Ancient Greek θεός theos, \"god\" and δίκη dikē, \"justice\"), meaning 'vindication of God', is an argument in the philosophy of religion that attempts to resolve the problem of evil, which arises when all power (omnipotence) and all goodness (omnibenevolence) are attributed to God",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:54.037Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “theodicy” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:00:42Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This change the holy Catholic Church has fittingly and properly called transubstantiation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23",
+   "note": "CCC 1376, quoting the Council of Trent"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:00:44Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the changing of the elements of the bread and wine, when they are consecrated in the Eucharist, into the body and blood of Christ (a doctrine of the Roman Catholic Church)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:00:45Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Transubstantiation is a Eucharistic doctrine that explains the change of the bread and wine into the body and blood of the risen Christ",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r008",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:55:36.580Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "This change the holy Catholic Church has fittingly and properly called transubstantiation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:55:36.580Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the changing of the elements of the bread and wine, when they are consecrated in the Eucharist, into the body and blood of Christ (a doctrine of the Roman Catholic Church)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:36.580Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Transubstantiation is a Eucharistic doctrine that explains the change of the bread and wine into the body and blood of the risen Christ",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:36.580Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "fittingly and properly called transubstantiation.\"204",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “transubstantiation” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:36.580Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "TRANSUBSTANTIATION Definition & Meaning | Dictionary.com",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “transubstantiation” is on the snapshot of s7"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:36.580Z",
+   "target": "f06218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Transubstantiation (Latin: transsubstantiatio, Greek: μετουσίωσις, romanized: metousiosis) is, according to the teaching of the Catholic Church, \"the change of the whole substance of bread into the substance of the Body of Christ and of the whole substance of wine into the substance of the Blood of",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:36.580Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “transubstantiation” is on the snapshot of s8"
+  }
+ ]
+}

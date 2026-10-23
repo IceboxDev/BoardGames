@@ -1,0 +1,217 @@
+{
+ "article": "a2405",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Struwwelpeter",
+   "title": "Struwwelpeter",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:08.728Z",
+   "snapshot": "4fa2ff6e46e101f61686e96c97076d79f4062dee944e4efa35fc00a4ce3938f3"
+  },
+  "s2": {
+   "url": "https://de.wikisource.org/wiki/Der_Struwwelpeter/Die_Geschichte_vom_Hanns_Guck-in-die-Luft",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:09.181Z",
+   "snapshot": "13bf407c5b925f544011522e8f6f3065c5ab9e2c43a5e74e7fb0dac1c63907c5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12594",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Struwwelpeter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-288"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12595",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Heinrich Hoffmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12596",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Konrad",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12597",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paulinchen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12598",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Zappel-Philipp",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:15.025Z",
+   "target": "f12594",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Struwwelpeter (auch Der Struwwelpeter) ist der Titel eines Werkes des Frankfurter Arztes und Psychiaters Heinrich Hoffmann aus dem Jahr 1844 und zugleich die Titelfigur des Buches.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Struwwelpeter” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:15.025Z",
+   "target": "f12595",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Struwwelpeter (auch Der Struwwelpeter) ist der Titel eines Werkes des Frankfurter Arztes und Psychiaters Heinrich Hoffmann aus dem Jahr 1844 und zugleich die Titelfigur des Buches.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Heinrich Hoffmann” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:15.025Z",
+   "target": "f12596",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "riesiges Tintenfass gesteckt und noch viel schwärzer eingefärbt; der fliegende Robert wird mit seinem Regenschirm vom Wind auf Nimmerwiedersehen fortgetragen, weil er bei Sturm trotz Verbots aus dem Haus geht; dem Konrad werden vom Schneider die Daumen abgeschnitten, weil er heimlich daran nuckelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konrad” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:15.025Z",
+   "target": "f12597",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "der „bitterböse Friederich“, der Tiere quält, entsprechend bestraft („Da biß der Hund ihn in das Bein, recht tief bis in das Blut hinein“); Paulinchen verbrennt, weil es mit Streichhölzern spielt; die Kinder, die einen Schwarzen wegen seiner Hautfarbe verspotten, werden in ein riesiges",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paulinchen” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:15.025Z",
+   "target": "f12598",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Januar 1911 verstorbene Arzt Philipp Julius von Fabricius (ein guter Bekannter Hoffmanns) sich selbst als Urbild des Zappel-Philipp geoutet hatte.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:15.025Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zappel-Philipp” is on the snapshot of s1"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-056",
+ "image": "IMG20261007173329.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Welcher New Yorker Stadtbezirk liegt nicht auf einer Insel?",
+   "de": "Welcher New Yorker Stadtbezirk liegt nicht auf einer Insel?",
+   "en": "Which New York City borough is not on an island?",
+   "reworked": false,
+   "answerDe": "die Bronx",
+   "answerEn": "The Bronx",
+   "timeline": {
+    "kind": "founding",
+    "start": "1874-01-10",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Bronx (western part) becomes part of New York City",
+    "labelDe": "Die Bronx (westlicher Teil) wird Teil von New York City"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bronx",
+    "title": "Bronx",
+    "lang": "de"
+   },
+   "notes": "Only borough on the mainland (Marble Hill, also on the mainland, belongs to Manhattan).",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Wie heißt das schleswig-holsteinische Dorf, in dem alljährlich das größte Heavy-Metal-Musikfestival der Welt stattfindet?",
+   "de": "Wie heißt das schleswig-holsteinische Dorf, in dem alljährlich das größte Heavy-Metal-Musikfestival der Welt stattfindet?",
+   "en": "What is the name of the Schleswig-Holstein village where the world's largest heavy metal festival takes place every year?",
+   "reworked": false,
+   "answerDe": "Wacken",
+   "answerEn": "Wacken",
+   "timeline": {
+    "kind": "founding",
+    "start": "1990",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "First Wacken Open Air heavy metal festival",
+    "labelDe": "Erstes Wacken Open Air"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Wacken_Open_Air",
+    "title": "Wacken Open Air",
+    "lang": "de"
+   },
+   "notes": "de.wikipedia calls it one of the largest heavy metal festivals in the world (85,000 paying visitors in 2024); the card says the largest.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Wie viele Emirate schlossen sich 1971 zu den Vereinigten Arabischen Emiraten zusammen?",
+   "de": "Wie viele Emirate schlossen sich 1971 zu den Vereinigten Arabischen Emiraten zusammen?",
+   "en": "How many emirates united in 1971 to form the United Arab Emirates?",
+   "reworked": false,
+   "answerDe": "6",
+   "answerEn": "6",
+   "timeline": {
+    "kind": "founding",
+    "start": "1971-12-02",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The United Arab Emirates are founded; Ras al-Khaimah joins as the seventh emirate in February 1972",
+    "labelDe": "Gründung der Vereinigten Arabischen Emirate; Ra’s al-Chaima tritt im Februar 1972 als siebtes Emirat bei"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Vereinigte_Arabische_Emirate",
+    "title": "Vereinigte Arabische Emirate",
+    "lang": "de"
+   },
+   "notes": "Six in 1971; Ras al-Khaimah joined on 11 Feb 1972, making seven today.",
+   "domain": "history",
+   "sub": "contemporary"
+  },
+  {
+   "category": 4,
+   "cardDe": "Für welche populäre Cartoonserie entwarf der japanische Künstler Ken Sugimori die 151 Originalfiguren?",
+   "de": "Für welche populäre Cartoonserie entwarf der japanische Künstler Ken Sugimori die 151 Originalfiguren?",
+   "en": "For which popular cartoon series did the Japanese artist Ken Sugimori design the 151 original characters?",
+   "reworked": false,
+   "answerDe": "Pokémon",
+   "answerEn": "Pokémon",
+   "timeline": {
+    "kind": "creation",
+    "start": "1996-02-27",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Pocket Monsters Red and Green, the first Pokémon games, are released in Japan",
+    "labelDe": "Pocket Monsters Rot und Grün, die ersten Pokémon-Spiele, erscheinen in Japan"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Ken_Sugimori",
+    "title": "Ken Sugimori",
+    "lang": "de"
+   },
+   "notes": "The 151 originals were designed for the 1996 video games; the anime followed.",
+   "domain": "film-media",
+   "sub": "animation"
+  },
+  {
+   "category": 5,
+   "cardDe": "Wer arbeitet mit Isobarenkarten: der Wetterdienst, der Kartenleger oder die Autoreparaturwerkstatt?",
+   "de": "Welche Größe ist entlang jeder Linie auf einer Isobarenkarte gleich?",
+   "en": "Which quantity is the same along each line of an isobar map?",
+   "reworked": true,
+   "answerDe": "Luftdruck",
+   "answerEn": "Air pressure",
+   "timeline": {
+    "kind": "creation",
+    "start": "1861-10",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Francis Galton plots data from October 1861 on the first weather map",
+    "labelDe": "Francis Galton trägt Daten vom Oktober 1861 in die erste Wetterkarte ein"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Isobare",
+    "title": "Isobare",
+    "lang": "de"
+   },
+   "notes": "Card answer: der Wetterdienst (weather service).",
+   "domain": "earth-space",
+   "sub": "weather"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie heißt die Wassersportart, die ein Paddel, ein Surfbrett und eine aufrecht stehende Position erfordert?",
+   "de": "Wie heißt die Wassersportart, die ein Paddel, ein Surfbrett und eine aufrecht stehende Position erfordert?",
+   "en": "What is the name of the water sport that requires a paddle, a surfboard and an upright standing position?",
+   "reworked": false,
+   "answerDe": "Stand-up-Paddling",
+   "answerEn": "Stand-up paddleboarding",
+   "timeline": {
+    "kind": "period",
+    "start": "1900",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Surf instructors on Hawaii paddle standing on their boards, a root of modern SUP",
+    "labelDe": "Surflehrer auf Hawaii paddeln stehend auf ihren Brettern – ein Ursprung des modernen SUP"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Stand-up-Paddling",
+    "title": "Stand-up-Paddling",
+    "lang": "de"
+   },
+   "notes": "Also called Stehpaddeln / SUP.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "article": "a0939",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Niki_de_Saint_Phalle",
+   "title": "Niki de Saint Phalle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:31.452Z",
+   "snapshot": "e581f0b5ca6e7176a8bf2ceee14f7d4c05af2240e12ed10951f76f28096883c9"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Nana_(Plastik)",
+   "title": "Nana (Plastik)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:30:28.676Z",
+   "snapshot": "a2b9452886958c8baeee7f8c39ee8f601a85e1e07597df1686685c8763dde3eb"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Mobile_(sculpture)",
+   "title": "Mobile (sculpture) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:32.344Z",
+   "snapshot": "499222a045c09b0c542f24327f168a3c289bff522373c4e28101f28ca6e50261"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Marcel_Duchamp",
+   "title": "Marcel Duchamp – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:33.443Z",
+   "snapshot": "d28b86e21261e36fc01358bcd04b2b0a13de2f00cdfa6cf2af128f960ebc9964"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Maman_(sculpture)",
+   "title": "Maman (sculpture) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:34.319Z",
+   "snapshot": "bf134716b2f39c87a0bf95778fa17c2ffc34587b96e5ad5f1b01d8271becd4e5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Angel_of_the_North",
+   "title": "Angel of the North – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:30:35.444Z",
+   "snapshot": "5457e96b717a3da43033c8e263ae13b92172f3fd75a2558fd7110cf7a932ba88"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Nanas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c079"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nanas",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-003"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mobiles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Readymades",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Maman",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-042"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f04695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Angel of the North",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:07.927Z",
+   "target": "f04691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "These evolved into Nanas, light-hearted, whimsical, colorful, large-scale sculptures of animals, monsters, and female figures.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nanas” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:07.927Z",
+   "target": "f04691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Nanas sind Plastiken der französischen Künstlerin Niki de Saint Phalle (1930–2002), die im Stil der Pop Art vielfarbig gestaltete voluminöse weibliche Körper mit überdimensionierten Geschlechtsmerkmalen darstellen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nanas” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:07.927Z",
+   "target": "f04692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mobiles are popular in the nursery, where they hang over cribs to give infants entertainment and visual stimulation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mobiles” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:07.927Z",
+   "target": "f04693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Although it is often assumed that the Bicycle Wheel represents the first of Duchamp's \"Readymades\", this particular installation was never submitted for any art exhibition, and it was eventually lost.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Readymades” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:07.927Z",
+   "target": "f04694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Maman (1999) is a bronze, stainless steel, and marble sculpture in several locations by the artist Louise Bourgeois.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Maman” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:26:07.927Z",
+   "target": "f04695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Angel of the North is a contemporary sculpture by Antony Gormley, located in Gateshead, Tyne and Wear, England.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:07.927Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Angel of the North” is on the snapshot of s6"
+  }
+ ]
+}

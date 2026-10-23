@@ -1,0 +1,242 @@
+{
+ "article": "a1586",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Three_Musketeers",
+   "title": "The Three Musketeers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:10.073Z",
+   "snapshot": "00c3143447cc27c6ea681f126088a396bbf0cdba1d8131ad842cad5d3ca63988"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Fellowship_of_the_Ring",
+   "title": "The Fellowship of the Ring – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:11.035Z",
+   "snapshot": "f2880d9e24a887285920fbc694ae6fc8bbd038e74f5e8be917883daecadb6b04"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Huckleberry_Finn",
+   "title": "Huckleberry Finn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:11.958Z",
+   "snapshot": "ef508d7f9ab33524298f91cd4ea580a57756103c62f9741170325da9b215e774"
+  },
+  "s4": {
+   "url": "https://es.wikipedia.org/wiki/%C3%8Dnsula_Barataria",
+   "title": "Ínsula Barataria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "es",
+   "retrievedAt": "2026-10-23T05:10:10.288Z",
+   "snapshot": "6815c07deb10b765478de6db0ed268fbc324f00082ed62a968f4dcaf60c819ba"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Charles_de_Batz_de_Castelmore_d%27Artagnan",
+   "title": "Charles de Batz de Castelmore d'Artagnan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:10:12.925Z",
+   "snapshot": "525906f24846bcdfc3f31ff5df818ebe8cb353cf3728c4a03beaf0770dc3d16a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "d'Artagnan",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Pippin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Huckleberry Finn",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22380",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Barataria",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f22381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles de Batz de Castelmore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:47.303Z",
+   "target": "f07926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the first of the author's three d'Artagnan Romances.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “d'Artagnan” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:47.303Z",
+   "target": "f07928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Frodo sets out on foot, offering a cover story of moving to a little house in the village of Crickhollow, accompanied by his gardener Sam Gamgee and Frodo's cousin Pippin Took.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pippin” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:47.303Z",
+   "target": "f07930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Huckleberry \"Huck\" Finn is a fictional character created by Mark Twain who first appeared in the book The Adventures of Tom Sawyer (1876) and is the protagonist and narrator of its sequel, Adventures of Huckleberry Finn (1884).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Huckleberry Finn” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:47.303Z",
+   "target": "f22380",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "La ínsula Barataria es uno de los lugares imaginarios que aparecen en el libro Don Quijote de la Mancha, de Miguel de Cervantes, y de la que Sancho Panza fue nombrado gobernador (Capítulos 45, 47, 49, 51 y 53 de la 2.ª parte del Quijote).",
+     "quoteLang": "es",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Barataria” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:47.303Z",
+   "target": "f22381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Charles de Batz de Castelmore (French pronunciation: [ʃaʁl də bats də kastɛlmɔʁ]), also known as d'Artagnan and later Count d'Artagnan (c.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:47.303Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles de Batz de Castelmore” is on the snapshot of s5"
+  }
+ ]
+}

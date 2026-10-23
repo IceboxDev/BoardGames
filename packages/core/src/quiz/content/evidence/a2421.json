@@ -1,0 +1,349 @@
+{
+ "article": "a2421",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Great_Gatsby",
+   "title": "The Great Gatsby",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:51.663Z",
+   "snapshot": "30ebdd6a7603f3b7a1bfd386ed38b993e866960d2e491f606cc99cc7f31b7726"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Fiesta_(Roman)",
+   "title": "Fiesta (Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:58:39.331Z",
+   "snapshot": "8a17596bf1363d818058a712c375af0e614432fcfd84ba5e32c3e50abe780980"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Sun_Also_Rises",
+   "title": "The Sun Also Rises – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:42.346Z",
+   "snapshot": "d40f7a3ea092971e606a3059ca0f6a960d397659d39c221800bd37decf01b924"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/A_Moveable_Feast",
+   "title": "A Moveable Feast – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:58:43.286Z",
+   "snapshot": "b8f04b6f0c5d6be18c55f5706acb2d7e71f255dadd360ba444807f0da9c8adac"
+  },
+  "s5": {
+   "url": "https://www.gutenberg.org/cache/epub/67138/pg67138.txt",
+   "title": "The Sun Also Rises by Ernest Hemingway (Project Gutenberg)",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:12.242Z",
+   "snapshot": "acd435334c0c7afdbc90c05d78beb343962fa3136e73959f911131d1af41cf2a"
+  },
+  "s6": {
+   "url": "https://www.sanfermin.com/en/hemingway/",
+   "title": "Hemingway and San Fermín – sanfermin.com",
+   "publisher": "sanfermin.com",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:47:28.828Z",
+   "snapshot": "6f99aab039c52684c15c9e9e0844aaf2182194687d2752d1aec6af9d7735b170"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "France",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-169"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sanfermines",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; history entry seq 11; transcript tp-315"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jake Barnes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gertrude Stein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Moveable Feast",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 29"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:17.993Z",
+   "target": "f12695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Upon viewing Cugat's drafts before sailing for France in April–May 1924, Fitzgerald was so enamored that he later told editor Max Perkins that he had incorporated Cugat's imagery into the novel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “France” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:17.993Z",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sanfermines",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sanfermines”, “San Fermín festival”, “праздник Сан-Фермин”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:17.993Z",
+   "target": "f12697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hemingway converted to Catholicism as he wrote the novel, and Jeffrey Herlihy-Mera notes that protagonist Jake Barnes, a Catholic, was \"a vehicle for Hemingway to rehearse his own conversion, testing the emotions that would accompany one of the most important acts of his life.\"",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jake Barnes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:17.993Z",
+   "target": "f12698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The first is an allusion to the \"Lost Generation\", a term coined by Gertrude Stein referring to the post-war generation; the other epigraph is a long quotation from Ecclesiastes: \"One generation passeth away, and another generation cometh: but the earth abideth for ever.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gertrude Stein” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:17.993Z",
+   "target": "f12699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "A Moveable Feast is a memoir by Ernest Hemingway about his years as a struggling expatriate journalist and writer in Paris during the 1920s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:17.993Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “A Moveable Feast” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:06:47Z",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He came all the way from New York to see the San Fermines.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "The novel's own text: the fiesta at Pamplona = the San Fermines."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:06:49Z",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1925 he comes to Sanfermin fiestas with the idea of gathering material for a novel, encouraged by his friend in Paris, Gertrude Stein.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r040",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same page: the novel 'opened the fiestas to a world-wide public' (it swaps the UK/US titles, though)."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:01.232Z",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He came all the way from New York to see the San Fermines.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:01.232Z",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In 1925 he comes to Sanfermin fiestas with the idea of gathering material for a novel, encouraged by his friend in Paris, Gertrude Stein.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:01.232Z",
+   "target": "f12696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "From the book “Historia de los Sanfermines” by José María Iribarren as well as from statements made by people who knew Hemingway, we know that he did not like to take any risks in the running of the bulls.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:01.232Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sanfermines” is on the snapshot of s6"
+  }
+ ]
+}

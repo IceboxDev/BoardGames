@@ -1,0 +1,242 @@
+{
+ "article": "a0109",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Rent_(musical)",
+   "title": "Rent (musical) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:12.969Z",
+   "snapshot": "c2d8c5735c08754a0e6834d828ad4085ba4482f0a853ffcc6ba2bb919e78108d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tosca",
+   "title": "Tosca – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:14.159Z",
+   "snapshot": "0f41845f1145e2328b7ae1e17faf2beea92bb8039717f55b0e592abc9875f693"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Madama_Butterfly",
+   "title": "Madama Butterfly – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:15.044Z",
+   "snapshot": "6dea7c1f1bde64da0c5c17e3203e44088ce234768f63ac91440710ab2455c71c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Turandot",
+   "title": "Turandot – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:22:16.055Z",
+   "snapshot": "032e6381dcae66598da94957dc29182cf20fd839af6678ceda129720053845d8"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Il_trittico",
+   "title": "Il trittico – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:20:35.544Z",
+   "snapshot": "d8b68710b52fd55dcc883d16acb34e3e975d5dbc6009efe86f9c4b633b7d99af"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00541",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "La Bohème",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c010"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00542",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tosca",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00543",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madama Butterfly",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00544",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Turandot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00545",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gianni Schicchi",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:52.633Z",
+   "target": "f00541",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Loosely based on the 1896 opera La bohème by Giacomo Puccini, Luigi Illica, and Giuseppe Giacosa, it tells the story of a group of impoverished young artists struggling to survive and create a life in Lower Manhattan's East Village, in the thriving days of the bohemian culture of Alphabet City,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “La Bohème” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:52.633Z",
+   "target": "f00542",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tosca is an opera in three acts by Giacomo Puccini to an Italian libretto by Luigi Illica and Giuseppe Giacosa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tosca” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:52.633Z",
+   "target": "f00543",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Madama Butterfly (Italian pronunciation: [maˈdaːma ˈbatterflai]; Madame Butterfly) is an opera in three acts (originally two) by Giacomo Puccini, with an Italian libretto by Luigi Illica and Giuseppe Giacosa.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Madama Butterfly” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:52.633Z",
+   "target": "f00544",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Turandot (Italian pronunciation: [turanˈdo] or [turanˈdɔt] ; see below) is an opera in three acts by Giacomo Puccini to a libretto in Italian by Giuseppe Adami and Renato Simoni.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Turandot” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:52.633Z",
+   "target": "f00545",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Il trittico (The Triptych) is the title of a collection of three one-act operas, Il tabarro, Suor Angelica, and Gianni Schicchi, by Giacomo Puccini.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:52.633Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gianni Schicchi” is on the snapshot of s5"
+  }
+ ]
+}

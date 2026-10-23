@@ -1,0 +1,567 @@
+{
+ "article": "a2595",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Beatles:_Rock_Band",
+   "title": "The Beatles: Rock Band",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:18.189Z",
+   "snapshot": "07556e3011f3da238ddb480fe092b59e0244a3a892f7b544d56d3bd82e9f3bce"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/PaRappa_the_Rapper",
+   "title": "PaRappa the Rapper – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:19.015Z",
+   "snapshot": "f2933f4a3178b1c0fdf65c4224e3be6513b7ee1387f5bcc7dc95b08c4f60d81a"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dance_Dance_Revolution",
+   "title": "Dance Dance Revolution – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:20.117Z",
+   "snapshot": "4ce4dc8736602f3286f6248dab4e5c1ef36b90149580037530351ec221fafe37"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Dance_Dance_Revolution_(1998_video_game)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:21.079Z",
+   "snapshot": "e0f206f1ef0de36a3e36a3e94841755b44319df47ed863cd199ea3557a1cd788"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/SingStar",
+   "title": "SingStar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:22.113Z",
+   "snapshot": "802d510636058d5ec046a8e4a47d3a0b5aa8c6b3c18358d7ed8ef0652298f198"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Rock_Band",
+   "title": "Rock Band – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:08:23.175Z",
+   "snapshot": "c6efd282a0115580b78bc0a2b7cdf19d7ad2186091c36ec9691aa3ce1dccaddf"
+  },
+  "s7": {
+   "url": "https://www.hollywoodreporter.com/news/meet-d-beatles-rock-band-80293",
+   "title": "Meet the Beatles: Rock Band (AP)",
+   "publisher": "The Hollywood Reporter (Associated Press)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:29.207Z",
+   "snapshot": "1178082c28db2f3718666f8ee4d57cb47d3dcf12c20ac462e3f1023989540962"
+  },
+  "s8": {
+   "url": "https://www.worthplaying.com/article/2007/5/2/news/41726-parappa-the-rapper-psp-8-new-screens/",
+   "title": "PSP Preview – 'PaRappa the Rapper'",
+   "publisher": "Worthplaying (SCEA press text)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:28.308Z",
+   "snapshot": "a30da204338a2b47d09b64b94dacf8bd3b6e86c999a8512c1c6a85fc1478169e"
+  },
+  "s9": {
+   "url": "https://www.mentalfloss.com/article/654377/you-gotta-believe-how-parappa-rapper-took-music-video-games-another-level",
+   "title": "You Gotta Believe: How PaRappa the Rapper Took Music Video Games to Another Level",
+   "publisher": "Mental Floss",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:28.778Z",
+   "snapshot": "e94b1ed8793e35012ddae9682327d8c0357af3d1e0f4df5293fe268a227bac1a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Beatles",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-398"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "PaRappa the Rapper",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dance Dance Revolution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13970",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dance Dance Revolution",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 17"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13971",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SingStar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f13972",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Harmonix",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 28"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:45.339Z",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Beatles: Rock Band is a 2009 rhythm game developed by Harmonix, published by MTV Games, and distributed by Electronic Arts.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Beatles” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:45.339Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "PaRappa the Rapper  is a rhythm video game developed by NanaOn-Sha and published by Sony Computer Entertainment for the PlayStation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “PaRappa the Rapper” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:45.339Z",
+   "target": "f13970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dance Dance Revolution (Japanese: ダンスダンスレボリューション, Hepburn: Dansu Dansu Reboryūshon) (abbreviated DDR; also called DanRevo, Dance Revo, or DanceRevo; stylized as DanceDanceRevolution since SuperNOVA) is a music video game series produced by Konami.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dance Dance Revolution” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:45.339Z",
+   "target": "f13970",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Dance Dance Revolution (DDR) is a music video game developed by Konami.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dance Dance Revolution” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:30:45.339Z",
+   "target": "f13971",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "SingStar is a competitive karaoke music video game series developed by London Studio and published by Sony Interactive Entertainment.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “SingStar” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:30:45.339Z",
+   "target": "f13972",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Rock Band is a series of rhythm games first released in 2007 and developed by Harmonix.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:45.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Harmonix” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:06:58Z",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the fourth installment in the Rock Band series and the first band-centric game.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:07:05Z",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the first in the “Rock Band” franchise based on a single band",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Guitar Hero: Aerosmith (2008) was earlier but in the Guitar Hero series."
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:07:50Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is considered to be the first true rhythm game.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Soft superlative ('regarded as'); earlier music-timing games existed, the wording asks what is regarded as first."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:07:52Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the Parappa The Rapper franchise is widely regarded as establishing the rhythm action videogame genre",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:07:55Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "helped usher in the music gaming genre, paving the way for franchises like Guitar Hero and Rock Band.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is the fourth installment in the Rock Band series and the first band-centric game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the first in the “Rock Band” franchise based on a single band",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "is considered to be the first true rhythm game.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "the Parappa The Rapper franchise is widely regarded as establishing the rhythm action videogame genre",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "helped usher in the music gaming genre, paving the way for franchises like Guitar Hero and Rock Band.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13968",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "9 with the long-anticipated release of “The Beatles: Rock Band.” It will mark the first time any Beatles music will be available in the d-realm.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “The Beatles” is on the snapshot of s7"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Worthplaying | 'PaRappa The Rapper' (PSP) - 8 New Screens",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “PaRappa the Rapper” is on the snapshot of s8"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:59:29.924Z",
+   "target": "f13969",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "You Gotta Believe: How PaRappa the Rapper Took Music Video Games to Another Level",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:29.924Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “PaRappa the Rapper” is on the snapshot of s9"
+  }
+ ]
+}

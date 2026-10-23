@@ -1,0 +1,249 @@
+{
+ "article": "a2089",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Resistible_Rise_of_Arturo_Ui",
+   "title": "The Resistible Rise of Arturo Ui – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:42.769Z",
+   "snapshot": "cf013479b530b7e55f50b17c5da4a74c5ccfd3d222bdfcc7a73617cacc90c9b7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Mutter_Courage_und_ihre_Kinder",
+   "title": "Mutter Courage und ihre Kinder – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:15:40.683Z",
+   "snapshot": "ec9f9c0a831f24afa34c5cb60658ca595a538bb8d93474d45ac15fb036085bba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Salzburg_Festival",
+   "title": "Salzburg Festival – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:43.752Z",
+   "snapshot": "e6a57a4f198ba79caeaa63b2cd7e3fd7616e2563f23aec0971c33dd8d431f122"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Konstantin_Stanislavski",
+   "title": "Konstantin Stanislavski – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:45.003Z",
+   "snapshot": "2a370eb31ebaf6378a81ba5b29741eccdbce54b823c2655c1f3843bee50e266f"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bayreuther_Festspiele",
+   "title": "Bayreuther Festspiele – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:42.867Z",
+   "snapshot": "1d69d9e83b2721e19c93df997648d16ad8b7acaa6d59dc50588a4d3d7f0712f5"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Bayreuth_Festival",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:34:21.155Z",
+   "snapshot": "f1b05db040d5353c0bd460cb30cf5312f9803fd88bc31348b4677e56cf4cf05c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10441",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bertolt Brecht",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10442",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helene Weigel",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10443",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Max Reinhardt",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10444",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Konstantin Stanislavski",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10445",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Richard Wagner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:20.184Z",
+   "target": "f10441",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Resistible Rise of Arturo Ui (German: Der aufhaltsame Aufstieg des Arturo Ui), subtitled \"A parable play\", is a 1941 play by the German playwright Bertolt Brecht.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.184Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bertolt Brecht” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:20.184Z",
+   "target": "f10442",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Helene Weigel schickte ein Lebensmittelpaket, aber eine Antwort von Brecht blieb aus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.184Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helene Weigel” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:20.184Z",
+   "target": "f10443",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Hugo von Hofmannsthal, the composer Richard Strauss, the scenic designer Alfred Roller, the conductor Franz Schalk, and the director Max Reinhardt, then intendant of the Deutsches Theater in Berlin, who had produced the first performance of Hofmannsthal's play Jedermann at the Berlin",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.184Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Max Reinhardt” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:20.184Z",
+   "target": "f10444",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Newspaper clippings about Konstantin Stanislavski in the 20th Century Press Archives of the ZBW",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.184Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Konstantin Stanislavski” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:20.184Z",
+   "target": "f10445",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Bayreuther Festspiele oder Richard-Wagner-Festspiele sind ein Musiktheaterfestival, das den zehn letzten Opern Richard Wagners (1813–1883) gewidmet ist.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.184Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Richard Wagner” is on the snapshot of s5"
+  }
+ ]
+}

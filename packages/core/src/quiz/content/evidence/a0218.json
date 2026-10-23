@@ -1,0 +1,322 @@
+{
+ "article": "a0218",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Hessische_Landbote",
+   "title": "Der Hessische Landbote – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:12.584Z",
+   "snapshot": "bd380f58f8e97a6a82b4f5d8c8bea4d1e7cb9462220ccbe40590d1954d2dd424"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
+   "title": "The Sorrows of Young Werther – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:16.065Z",
+   "snapshot": "5c3f78321559330836e1819388a715cac20377b637e88472e5607f08f62fd894"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/%C3%9Cber_die_%C3%A4sthetische_Erziehung_des_Menschen",
+   "title": "Über die ästhetische Erziehung des Menschen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:13.766Z",
+   "snapshot": "62d28bfe0154f9f76f8fd2df620bf93bce7358e5ec6b99b9e0b511dac87eb3b4"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Die_Verwandlung",
+   "title": "Die Verwandlung – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:14.649Z",
+   "snapshot": "0366ed471d99401b705610f46ebdd0c0bf8dad922bf01ad8a71ff43b0cca664e"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Dantons_Tod",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:37:15.629Z",
+   "snapshot": "f1d4889e87585426690c9bdc4cf98b9c12117bf2d8a7b73910f463e4bbdc0ea8"
+  },
+  "s6": {
+   "url": "https://www.gutenberg.org/cache/epub/2229/pg2229-images.html",
+   "title": "Faust: Der Tragödie erster Teil by Johann Wolfgang von Goethe",
+   "publisher": "Project Gutenberg",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:24.791Z",
+   "snapshot": "809b125546e3f221ba49c16544d860aaff282861230120426b7ef5922966ef46"
+  },
+  "s7": {
+   "url": "https://www.duden.de/rechtschreibung/Gretchenfrage",
+   "title": "Gretchenfrage – Rechtschreibung, Bedeutung, Definition, Herkunft",
+   "publisher": "Duden",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:31:24.672Z",
+   "snapshot": "a928dbe8585cb1f60d85dcee0c1e69e2cf7fd52c720efcabf0a93430e667ef00"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Gretchenfrage",
+   "title": "Gretchenfrage",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:05:07Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01086",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Georg Büchner",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johann Wolfgang von Goethe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01088",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Friedrich Schiller",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript tp-377"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01090",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Franz Kafka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:13.801Z",
+   "target": "f01086",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Hessische Landbote ist ein ursprünglich von dem Medizinstudenten Georg Büchner im Jahr 1834 verfasstes achtseitiges Pamphlet, das von dem Theologen Friedrich Ludwig Weidig ergänzt, überarbeitet und herausgegeben wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georg Büchner” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:13.801Z",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Johann Wolfgang von Goethe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Johann Wolfgang von Goethe”, “Иоганн Вольфганг фон Гёте”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:13.801Z",
+   "target": "f01088",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Berghahn (Hrsg.): Friedrich Schiller: Über die ästhetische Erziehung des Menschen in einer Reihe von Briefen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Friedrich Schiller” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:13.801Z",
+   "target": "f01090",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Die Verwandlung ist eine im Jahr 1912 entstandene Erzählung von Franz Kafka.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:13.801Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Kafka” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:05:03Z",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Title: Faust: Der Tragödie erster Teil\nAuthor: Johann Wolfgang von Goethe",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23",
+   "note": "The same edition contains the line 'Nun sag, wie hast du’s mit der Religion?' in the scene Marthens Garten."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:05:05Z",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "nach der von Gretchen an Faust gerichteten Frage „Nun sag, wie hast du 's mit der Religion?“, Goethe, Faust I, 3415",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:05:07Z",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Der Ursprung des Konzeptes und Begriffes liegt in Johann Wolfgang von Goethes Tragödie Faust I.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r037",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:52:32.693Z",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "nach der von Gretchen an Faust gerichteten Frage „Nun sag, wie hast du 's mit der Religion?“, Goethe, Faust I, 3415",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:32.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:32.693Z",
+   "target": "f01087",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "by Johann Wolfgang von Goethe",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:32.693Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Johann Wolfgang von Goethe” is on the snapshot of s6"
+  }
+ ]
+}

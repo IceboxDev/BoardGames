@@ -1,0 +1,275 @@
+{
+ "article": "a0902",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Saint_Walpurga",
+   "title": "Saint Walpurga – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:56.273Z",
+   "snapshot": "6b0062454373232b736c844ed8618e70d24dcc31a178a5e7ea72ce39b0ed0d30"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gretchenfrage",
+   "title": "Gretchenfrage – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:27:53.566Z",
+   "snapshot": "b8c72572aef9e669ca2d65cb5e9cb744baaedc50d9ef3c2ebf01e1dbfa9fad13"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Auerbachs_Keller",
+   "title": "Auerbachs Keller – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:57.263Z",
+   "snapshot": "720b4590d97a5905665922827e0731249eb0cecca0437196002b860e137627a4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Faust,_Part_Two",
+   "title": "Faust, Part Two – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:58.260Z",
+   "snapshot": "a5c6bf3fc4a99e1316f0917b8c329747a0f112343557dcd7df7428cdabc96059"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Urfaust",
+   "title": "Urfaust",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:32:02.660Z",
+   "snapshot": "a8658c4606939c10233fc0996d36a169cb4e2dd283585b5ed8378bd7544cd9ee"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Luise_von_G%C3%B6chhausen",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:27:59.263Z",
+   "snapshot": "cdc24287137014d4e8a6e5d600c8a386fbbb9a9f35056662d374f0572abf1fec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04506",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Walpurgis Night",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10; transcript c076"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04508",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gretchenfrage",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04509",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Auerbach’s Cellar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04510",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Homunculus",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Johann Wolfgang von Goethe",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s6",
+     "quote": "Johann Wolfgang von Goethe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-011/4, u05: Goethe himself wrote the Urfaust (c. 1772-1775, Frankfurt); it survives in Luise von Göchhausen's copy, published by Erich Schmidt 1887. Herder had nothing to do with it; statement false."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:02.377Z",
+   "target": "f14552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Johann Wolfgang von Goethe",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:26:02.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s6"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:02.377Z",
+   "target": "f04506",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Saint Walpurgis Night (or \"Sankt Walpurgisnacht\") is the name for the eve of her feast day in the Medieval period, which coincided with May Day; her feast is no longer celebrated on that day (even though the celebration of Valborg, is on the last of April) but the name is still used for May Eve.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walpurgis Night” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:02.377Z",
+   "target": "f04508",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gretchenfrage bezeichnet als Gattungsbegriff eine direkte, an den Kern eines Problems gehende Frage, die die Absichten und die Gesinnung des Gefragten aufdecken soll.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gretchenfrage” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:02.377Z",
+   "target": "f04509",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Auerbachs Keller (German pronunciation: [ˌaʊɐbaχs ˈkɛlɐ], Auerbach's Cellar in English) is the second oldest restaurant in Leipzig, Germany.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Auerbach’s Cellar” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:02.377Z",
+   "target": "f04510",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Homunculus, an artificial human being created by Wagner, Faust's former famulus, by means of an alchemical process, leads Faust and Mephistopheles to the \"Classical Walpurgisnacht\", where they encounter gods and monsters from Greek antiquity.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Homunculus” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:26:02.377Z",
+   "target": "f14552",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Known for her sharp wit, she became a close friend of Johann Wolfgang von Goethe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:02.377Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johann Wolfgang von Goethe” is on the snapshot of s6"
+  }
+ ]
+}

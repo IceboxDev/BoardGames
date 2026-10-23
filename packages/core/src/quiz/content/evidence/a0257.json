@@ -1,0 +1,317 @@
+{
+ "article": "a0257",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Carom_billiards",
+   "title": "Carom billiards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:44.326Z",
+   "snapshot": "0d4d4e45a64c4f8ab361be5519ea509e15a42bc946289d8609918d771bf16dd0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eight-ball",
+   "title": "Eight-ball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:41:44.552Z",
+   "snapshot": "2ca0dcaf45ed0875b09f733ddded2836791e6949db77732684b03d4484a2561f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Nine-ball",
+   "title": "Nine-ball – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:03.688Z",
+   "snapshot": "c30dbf9791da7a8ddba064ed4677794286cfcb6611af8b39798779dd35db1b23"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Three-cushion_billiards",
+   "title": "Three-cushion billiards – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:42:05.108Z",
+   "snapshot": "50e84d040d84599b6034ae5174a0a74ba3efa6057b79f03399113e0ec30abaeb"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Karambolage_(Billard)",
+   "title": "Karambolage (Billard)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:41:44.626Z",
+   "snapshot": "93bb039476a47b2bd7f61e138262e536f220818824dc3d6609de9102ee99268a"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "carom billiards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c022"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01283",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "eight-ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01284",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "nine-ball",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01285",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "three-cushion billiards",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "drei Kugeln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 36; transcript tp-008"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "three balls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 37"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:20.188Z",
+   "target": "f01281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Carom billiards, also called French billiards and sometimes carambole billiards, is the overarching title of a family of cue sports generally played on cloth-covered, pocketless billiard tables.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “carom billiards” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:20.188Z",
+   "target": "f01283",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eight-ball (also spelled 8-ball or eightball, and sometimes called solids and stripes, spots and stripes, bigs and smalls, big ones and little ones, or rarely highs and lows) is a discipline of pool played on a billiard table with six pockets, cue sticks, and sixteen billiard balls (a cue ball and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “eight-ball” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:20.188Z",
+   "target": "f01284",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Nine-ball (sometimes written 9-ball) is a discipline of the cue sport pool.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “nine-ball” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:20.188Z",
+   "target": "f01285",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Three-cushion billiards, also called three-cushion carom, is a form of carom billiards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:20.188Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “three-cushion billiards” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:24:20.188Z",
+   "target": "f14670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "three balls",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“three balls”, “drei Kugeln”, “три шара”) on the snapshot of s1"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:24:20.188Z",
+   "target": "f14670",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "drei Kugeln",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“drei Kugeln”, “three balls”, “три шара”) on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:07:24Z",
+   "target": "f14670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In most carom billiards games, the set of three standard balls includes a white cue ball for the first player",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r068",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:39.778Z",
+   "target": "f14670",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In most carom billiards games, the set of three standard balls includes a white cue ball for the first player",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:39.778Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  }
+ ]
+}

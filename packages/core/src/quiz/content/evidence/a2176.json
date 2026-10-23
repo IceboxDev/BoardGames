@@ -1,0 +1,449 @@
+{
+ "article": "a2176",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gamay",
+   "title": "Gamay",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:19.387Z",
+   "snapshot": "d642ff089471167583b1fb71bdea48839f926d97cd9b26700d90d7ff3f74ebc8"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Beaujolais",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:22.022Z",
+   "snapshot": "24fd518be8457d7e7ed2155f7a9eb7839dfc22c39c43b0cc9b7d74f890988fdf"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Cork_(material)",
+   "title": "Cork (material)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:22.930Z",
+   "snapshot": "667ebea85bec926e061b5721cc42eaedf52d0c112428859d91e3743853dbd9dc"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Weinflasche",
+   "title": "Weinflasche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:20.588Z",
+   "snapshot": "f8f11fea4714a08bd7d660d1930f1245e1f7d6215b04c1250d8548d3cd70048e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Dom_P%C3%A9rignon_(monk)",
+   "title": "Dom Pérignon (monk) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:23.956Z",
+   "snapshot": "c5f94e12e9f655b18a69de6a8779c2159fd5809492ff17d61b4944a42ddc82af"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Wine_bottle",
+   "title": "Wine bottle – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:24.953Z",
+   "snapshot": "d98a2c354320d707e71b51579bbcf9d9ff03f05e0dca56f3392ea5fc61def733"
+  },
+  "s7": {
+   "url": "https://en.wikipedia.org/wiki/Tokaji",
+   "title": "Tokaji – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:46:26.118Z",
+   "snapshot": "ccd59745ea751c2f2b7178cb41840b8ad91cf6212a614e26d9cd66846c96ebd8"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Stellenbosch",
+   "title": "Stellenbosch",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:23.147Z",
+   "snapshot": "fd193ed51efce123a58590f201f6c54d174944933ae7c344d001281184747a50"
+  },
+  "s9": {
+   "url": "https://de.wikipedia.org/wiki/Korken",
+   "title": "Korken",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:45:12.054Z",
+   "snapshot": "160fc05f0763d350f68d514d2f4c9e57452824575ba8e82c6d4e6831b624c4a2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gamay",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; history entry seq 6; transcript tp-017"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11031",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gamay",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 6"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11032",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oil-soaked rags",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-099"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11033",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Nebukadnezar",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; transcript tp-244"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11034",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Dom Pérignon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f11035",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Magnum",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f11036",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tokaji",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; history entry seq 38"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23",
+   "target": "f14483",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Südafrika",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-051"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Gamay noir ist eine Rotweinsorte, die vor allem im Beaujolais (90 % der Rebfläche) angepflanzt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gamay” is on the snapshot of s1"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11031",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Red Beaujolais wines are generally made of the Gamay grape, which has a thin skin and is low in tannin, but like most AOC wines they are not labeled varietally.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gamay” is on the snapshot of s2"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As late as the mid-17th century, French vintners did not use cork stoppers, using instead oil-soaked rags stuffed into the necks of bottles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Oil-soaked rags” is on the snapshot of s3"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11033",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "15 Liter: Nebukadnezar (i.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nebukadnezar” is on the snapshot of s4"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11034",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The famous champagne Dom Pérignon, the prestige cuvée of winery Moët & Chandon, is named after him.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dom Pérignon” is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11035",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Most champagne houses are unable to carry out secondary fermentation in bottles larger than a magnum due to the difficulty in riddling large, heavy bottles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magnum” is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f11036",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Tokaji (Hungarian: of Tokaj Hungarian pronunciation: [ˈtokɒji]) or Tokay is a rich, sweet wine originating in the Tokaj wine region (also Tokaj-Hegyalja wine region or Tokaj-Hegyalja) in Hungary and in Slovakia.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tokaji” is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:29:33.823Z",
+   "target": "f14483",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Stellenbosch (afrikaans: [stɛləmˈbos], [ˈstɛləmbos]) ist eine Stadt in der Provinz Westkap der Republik Südafrika.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.823Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Südafrika” is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:32:23Z",
+   "target": "f11032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bis ins späte 17. Jahrhundert wurden jedoch mehrheitlich in Öl getauchte und mit Hanf umwickelte Holzstopfen sowie Tonstopfen genutzt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "agrees on oil-soaked fibre stoppers before cork; describes them as oil-dipped hemp-wrapped wooden plugs rather than rags"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:32:34Z",
+   "target": "f11032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "As late as the mid-17th century, French vintners did not use cork stoppers, using instead oil-soaked rags stuffed into the necks of bottles.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r021",
+   "run": "provenance-research-2026-10-23",
+   "note": "cited there to Priewe, Wine From Grape to Glass (1999), p. 110"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:20.835Z",
+   "target": "f11032",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Bis ins späte 17. Jahrhundert wurden jedoch mehrheitlich in Öl getauchte und mit Hanf umwickelte Holzstopfen sowie Tonstopfen genutzt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:20.835Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  }
+ ]
+}

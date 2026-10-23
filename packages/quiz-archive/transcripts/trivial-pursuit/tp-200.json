@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-200",
+ "image": "IMG20261007180555.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "In welchem deutschen Bundesland befindet sich die 1994 in die Welterbeliste aufgenommene Völklinger Hütte?",
+   "de": "In welchem deutschen Bundesland befindet sich die 1994 in die Welterbeliste aufgenommene Völklinger Hütte?",
+   "en": "In which German federal state is the Völklingen Ironworks, added to the World Heritage List in 1994?",
+   "reworked": false,
+   "answerDe": "Saarland",
+   "answerEn": "Saarland",
+   "timeline": {
+    "kind": "event",
+    "start": "1994",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "UNESCO inscribes the Völklingen Ironworks as a World Heritage Site, the first industrial monument of its era",
+    "labelDe": "Die UNESCO nimmt die Völklinger Hütte als erstes Industriedenkmal ihrer Epoche in die Welterbeliste auf"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Völklinger_Hütte",
+    "title": "Völklinger Hütte",
+    "lang": "de"
+   },
+   "notes": "Former ironworks founded 1873 in Völklingen, Saarland; shut down 1986.",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welche Tiere können in Japan und Korea in speziellen Cafés gestreichelt werden, während man seinen Kaffee trinkt: Katzen, Affen oder Schweine?",
+   "de": "Welche Tiere kann man in den Cafés streicheln, deren erstes 1998 in Taipeh eröffnete und die sich ab 2004 in Japan und später in Korea verbreiteten?",
+   "en": "Which animals can you stroke in the cafés whose first opened in Taipei in 1998 and which spread to Japan from 2004 and later to Korea?",
+   "reworked": true,
+   "answerDe": "Katzen",
+   "answerEn": "Cats",
+   "timeline": {
+    "kind": "founding",
+    "start": "1998",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The world's first cat café, Cat Flower Garden, opens in Taipei",
+    "labelDe": "Das weltweit erste Katzencafé, „Cat Flower Garden“, eröffnet in Taipeh"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Cat_café",
+    "title": "Cat café",
+    "lang": "en"
+   },
+   "notes": "Reworked from a multiple-choice question; anchored on the cat-café history because Japan and Korea also have other animal cafés. Japan's first cat café, Neko no Jikan, opened in Osaka in 2004.",
+   "domain": "everyday",
+   "sub": "leisure"
+  },
+  {
+   "category": 3,
+   "cardDe": "Was verbindet in der nordischen Mythologie die Erde mit dem Himmel: der Schlaf, eine Regenbogenbrücke oder ein goldener Fluss?",
+   "de": "Wie heißt in der nordischen Mythologie die Regenbogenbrücke, die die Erde mit dem Himmel verbindet?",
+   "en": "In Norse mythology, what is the name of the rainbow bridge that connects the earth with the sky?",
+   "reworked": true,
+   "answerDe": "Bifröst",
+   "answerEn": "Bifröst",
+   "timeline": {
+    "kind": "creation",
+    "start": "1220",
+    "end": "1225",
+    "precision": "year",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "Snorri Sturluson compiles the Prose Edda, a key source on Norse myths such as the rainbow bridge Bifröst",
+    "labelDe": "Snorri Sturluson verfasst die Snorra-Edda, eine Hauptquelle nordischer Mythen wie der Regenbogenbrücke Bifröst"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Bifröst_(Mythologie)",
+    "title": "Bifröst (Mythologie)",
+    "lang": "de"
+   },
+   "notes": "Reworked from multiple choice (card answer: eine Regenbogenbrücke). Bifröst links Midgard and Asgard, guarded by Heimdall; also called Bilröst or Asbrú. Prose Edda dated 1220–1225 per de.wikipedia 'Snorra-Edda'.",
+   "domain": "belief",
+   "sub": "mythology"
+  },
+  {
+   "category": 4,
+   "cardDe": "In der indischen Stadt Agra erinnert welches bekannte Bauwerk an die Frau von Shah Jahan?",
+   "de": "In der indischen Stadt Agra erinnert welches bekannte Bauwerk an die Frau von Shah Jahan?",
+   "en": "In the Indian city of Agra, which famous building commemorates the wife of Shah Jahan?",
+   "reworked": false,
+   "answerDe": "Taj Mahal",
+   "answerEn": "Taj Mahal",
+   "timeline": {
+    "kind": "creation",
+    "start": "1632",
+    "end": "1648",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Construction of the Taj Mahal in Agra, mausoleum for Mumtaz Mahal",
+    "labelDe": "Bau des Taj Mahal in Agra, Mausoleum für Mumtaz Mahal"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Taj_Mahal",
+    "title": "Taj Mahal",
+    "lang": "de"
+   },
+   "notes": "Shah Jahan built it in memory of his wife Mumtaz Mahal (died 1631). The completion date is disputed (1644 by the court chronicle; 1648 per the entrance inscription).",
+   "domain": "art",
+   "sub": "architecture"
+  },
+  {
+   "category": 5,
+   "cardDe": "An welchen zwei Punkten des menschlichen Körpers wird am häufigsten der Puls gemessen?",
+   "de": "An welchen zwei Punkten des menschlichen Körpers wird am häufigsten der Puls gemessen?",
+   "en": "At which two points on the human body is the pulse most commonly measured?",
+   "reworked": false,
+   "answerDe": "Handgelenk und Hals",
+   "answerEn": "Wrist and neck",
+   "timeline": {
+    "kind": "discovery",
+    "start": "-300",
+    "end": null,
+    "precision": "century",
+    "approx": true,
+    "ongoing": false,
+    "labelEn": "The Alexandrian physician Herophilos describes the pulse",
+    "labelDe": "Der alexandrinische Arzt Herophilos beschreibt den Puls"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Pulse",
+    "title": "Pulse",
+    "lang": "en"
+   },
+   "notes": "Radial artery at the wrist and carotid artery at the neck, for adults; in infants the brachial artery is used. Herophilos date (c. 300 BC) from de.wikipedia 'Puls'.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wie wird ein Lauf genannt, dessen Rennstrecke länger als 42,195 Kilometer ist?",
+   "de": "Wie wird ein Lauf genannt, dessen Rennstrecke länger als 42,195 Kilometer ist?",
+   "en": "What is a race called whose course is longer than 42.195 kilometres?",
+   "reworked": false,
+   "answerDe": "Ultramarathon",
+   "answerEn": "Ultramarathon",
+   "timeline": {
+    "kind": "event",
+    "start": "1921",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The IAAF fixes the official marathon distance at 42.195 km",
+    "labelDe": "Der Leichtathletikverband IAAF legt die offizielle Marathondistanz auf 42,195 km fest"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Ultramarathon",
+    "title": "Ultramarathon",
+    "lang": "de"
+   },
+   "notes": "42.195 km is the marathon distance (first run at the 1908 London Olympics, fixed by the IAAF in 1921, per de.wikipedia 'Marathonlauf'). Ultra = 'beyond'.",
+   "domain": "sport-games",
+   "sub": "olympics"
+  }
+ ]
+}

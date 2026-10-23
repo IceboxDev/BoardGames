@@ -1,0 +1,169 @@
+{
+ "source": "trivial-pursuit",
+ "card": "tp-190",
+ "image": "IMG20261007182632.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "cardDe": "Hamburg hat mehr Brücken als Venedig. Richtig oder falsch?",
+   "de": "Wie viele Brücken hat Hamburg ungefähr – und damit weit mehr als Venedig?",
+   "en": "Roughly how many bridges does Hamburg have – far more than Venice?",
+   "reworked": true,
+   "answerDe": "etwa 2500",
+   "answerEn": "About 2,500",
+   "timeline": {
+    "kind": "event",
+    "start": "2004",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "An official count lists 2,496 bridges in the city of Hamburg",
+    "labelDe": "Eine offizielle Statistik zählt 2496 Brücken in der Stadt Hamburg"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Hamburg",
+    "title": "Hamburg",
+    "lang": "de"
+   },
+   "notes": "Card statement is true; reworked into an open question. de.wikipedia: about 2,500 bridges (2,496 in the official 2004 count); Venice has 472 (https://en.wikipedia.org/wiki/Venice).",
+   "domain": "geography",
+   "sub": "cities"
+  },
+  {
+   "category": 2,
+   "cardDe": "Welcher Song war beim Publikum so beliebt, dass Led Zeppelins Robert Plant sagte: „Ich bekomme Hautausschlag, wenn ich dieses Lied in jeder Show singen muss.”?",
+   "de": "Welcher Song war beim Publikum so beliebt, dass Led Zeppelins Robert Plant sagte: „Ich bekomme Hautausschlag, wenn ich dieses Lied in jeder Show singen muss.”?",
+   "en": "Which song was so popular with audiences that Led Zeppelin's Robert Plant said: \"I'd break out in hives if I had to sing this song every show\"?",
+   "reworked": false,
+   "answerDe": "Stairway to Heaven",
+   "answerEn": "Stairway to Heaven",
+   "timeline": {
+    "kind": "creation",
+    "start": "1971-11-08",
+    "end": null,
+    "precision": "day",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Led Zeppelin release Stairway to Heaven on the album Led Zeppelin IV",
+    "labelDe": "Led Zeppelin veröffentlichen Stairway to Heaven auf dem Album Led Zeppelin IV"
+   },
+   "source": {
+    "url": "https://www.needsomefun.net/?p=51763",
+    "title": "Robert Plant on Stairway to Heaven (needsomefun.net)",
+    "lang": "en"
+   },
+   "notes": "Plant to the Los Angeles Times in 1988: \"I'd break out in hives if I had to sing it every show.\" Release date from https://en.wikipedia.org/wiki/Stairway_to_Heaven.",
+   "domain": "music-stage",
+   "sub": "pop-rock"
+  },
+  {
+   "category": 3,
+   "cardDe": "Welches Jahrzehnt des 20. Jahrhunderts wird oft als ein „goldenes” bezeichnet?",
+   "de": "Welches Jahrzehnt des 20. Jahrhunderts wird oft als ein „goldenes” bezeichnet?",
+   "en": "Which decade of the 20th century is often called a \"golden\" one?",
+   "reworked": false,
+   "answerDe": "die 1920er Jahre",
+   "answerEn": "The 1920s",
+   "timeline": {
+    "kind": "period",
+    "start": "1924",
+    "end": "1929",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The \"Golden Twenties\" in Germany, the Weimar Republic's phase of relative stability",
+    "labelDe": "Die „Goldenen Zwanziger“ in Deutschland, die Phase relativer Stabilität der Weimarer Republik"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Goldene_Zwanziger",
+    "title": "Goldene Zwanziger",
+    "lang": "de"
+   },
+   "notes": "The 'Goldene Zwanziger' (Roaring Twenties); in Germany the term covers roughly 1924–1929.",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 4,
+   "cardDe": "Wer unter dem Stendhal-Syndrom leidet, ist von kulturellen und ästhetischen Reizen überfordert. Richtig oder falsch?",
+   "de": "In welcher Stadt erlebte Stendhal jene Überforderung durch kulturelle und ästhetische Reize, nach der das Stendhal-Syndrom benannt ist?",
+   "en": "In which city did Stendhal experience the overload from cultural and aesthetic stimuli after which Stendhal syndrome is named?",
+   "reworked": true,
+   "answerDe": "Florenz",
+   "answerEn": "Florence",
+   "timeline": {
+    "kind": "event",
+    "start": "1817",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Stendhal is overwhelmed by the art of Santa Croce in Florence, the origin of the Stendhal syndrome",
+    "labelDe": "Stendhal wird in Florenz von der Kunst in Santa Croce überwältigt – der Ursprung des Stendhal-Syndroms"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Stendhal_syndrome",
+    "title": "Stendhal syndrome",
+    "lang": "en"
+   },
+   "notes": "Card statement is true; reworked into an open question on the same syndrome. It is also called Florence syndrome.",
+   "domain": "science",
+   "sub": "medicine"
+  },
+  {
+   "category": 5,
+   "cardDe": "Eineiige Zwillinge haben identische Fingerabdrücke. Richtig oder falsch?",
+   "de": "Welche Abdrücke, mit denen die Polizei Menschen identifiziert, unterscheiden sich selbst bei eineiigen Zwillingen?",
+   "en": "Which prints, used by police to identify people, differ even between identical twins?",
+   "reworked": true,
+   "answerDe": "Fingerabdrücke",
+   "answerEn": "Fingerprints",
+   "timeline": {
+    "kind": "event",
+    "start": "1892",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "In Argentina a murder is solved by a fingerprint alone for the first time",
+    "labelDe": "In Argentinien wird erstmals ein Mord allein durch einen Fingerabdruck aufgeklärt"
+   },
+   "source": {
+    "url": "https://de.wikipedia.org/wiki/Fingerabdruck",
+    "title": "Fingerabdruck",
+    "lang": "de"
+   },
+   "notes": "Card statement is false: identical twins have different fingerprints because the papillary ridges form in a variable embryonic process. Reworked into an open question.",
+   "domain": "science",
+   "sub": "biology"
+  },
+  {
+   "category": 6,
+   "cardDe": "Wofür stoppte der Australier Bobby Pearce 1928 während eines olympischen Ruderrennens: eine Entenfamilie, ein Blauwaljunges oder einen Hund?",
+   "de": "Wofür stoppte der Australier Bobby Pearce 1928 während eines olympischen Ruderrennens?",
+   "en": "What did the Australian Bobby Pearce stop for during an Olympic rowing race in 1928?",
+   "reworked": true,
+   "answerDe": "eine Entenfamilie",
+   "answerEn": "A family of ducks",
+   "timeline": {
+    "kind": "event",
+    "start": "1928",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "At the Amsterdam Olympics, Bobby Pearce stops rowing to let ducks pass and still wins the single sculls",
+    "labelDe": "Bei den Olympischen Spielen in Amsterdam lässt Bobby Pearce Enten passieren und gewinnt trotzdem im Einer"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bobby_Pearce_(rower)",
+    "title": "Bobby Pearce (rower)",
+    "lang": "en"
+   },
+   "notes": "It happened in the quarter-final against Frenchman Saurin; Pearce still won with the fastest time of the round and went on to Olympic gold.",
+   "domain": "sport-games",
+   "sub": "motor-winter"
+  }
+ ]
+}

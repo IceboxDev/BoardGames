@@ -1,0 +1,413 @@
+{
+ "article": "a2123",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Rosskastanie",
+   "title": "Gewöhnliche Rosskastanie – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:13:42.412Z",
+   "snapshot": "e127065ac17ef494dfdb978cab7e229c0b55cfe850b16cb6637255056bfed973"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Tulip_mania",
+   "title": "Tulip mania – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:42:49.962Z",
+   "snapshot": "48b995c1592c902f1f3d4434a8a396f16206a2ff91cc83ac083340a4364ea167"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Tulpen",
+   "title": "Tulpen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:42:49.290Z",
+   "snapshot": "01a66db239dcfb637b1f9cb130ff487d1b60a023d161a0ae9892a690d902f481"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Capitulare_de_villis",
+   "title": "Capitulare de villis – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:12:56.277Z",
+   "snapshot": "87e8aa4d4b2a25de454bac80baed97729682762305d8c2c85aa71e26e202afdd"
+  },
+  "s5": {
+   "url": "https://www.etymonline.com/word/peanut",
+   "title": "Peanut – Etymology, Origin & Meaning – Etymonline",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Tulip",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:39.614Z",
+   "snapshot": "b9c1c4bdfb18f0caa154e9710e6ba88365ef39ffd49e425e2ad3e487fbaa14c4"
+  },
+  "s7": {
+   "url": "https://www.dwds.de/wb/Walnuss",
+   "title": "Walnuss – DWDS (Etymologisches Wörterbuch nach Pfeifer)",
+   "publisher": "Digitales Wörterbuch der deutschen Sprache (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:44:48.438Z",
+   "snapshot": "0f6650cf02d3ad064dc40c9a4b61501535becb89d5d785c6a885471abe48e307"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Juglans_regia",
+   "title": "Juglans regia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:16:02Z"
+  },
+  "s9": {
+   "url": "https://en.wikipedia.org/wiki/Peanut",
+   "title": "Peanut",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:16:06Z"
+  },
+  "s10": {
+   "url": "https://peanut-institute.com/peanut-facts/",
+   "title": "Peanut Facts",
+   "publisher": "The Peanut Institute",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:44:50.510Z",
+   "snapshot": "5ab96bc6f20e84ce07999c3d8e7eb14a0553a44c3ffa83b2dba8fe8aa8706c94"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rosskastanie",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c177"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "tulip",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10612",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Tulpe",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by transcript tp-167"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f10613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walnuss",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10614",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "peanut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:26.931Z",
+   "target": "f10611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Gewöhnliche Rosskastanie (Aesculus hippocastanum), auch Gemeine Rosskastanie oder Weiße Rosskastanie genannt, ist eine Pflanzenart aus der Gattung Rosskastanien (Aesculus) innerhalb der Familie Seifenbaumgewächse (Sapindaceae).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rosskastanie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:26.931Z",
+   "target": "f10612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Tulip mania (Dutch: tulpenmanie) was a period during the Dutch Golden Age when contract prices for some bulbs of the recently introduced and fashionable tulip reached extraordinarily high levels.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “tulip” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:26.931Z",
+   "target": "f10612",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Bei der biblischen „Rose von Scharon“ könnte es sich um eine Tulpe (Tulipa montana oder Tulipa agenensis) handeln.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:26.931Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tulpe” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:26.931Z",
+   "target": "f10613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Walnuss",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Walnuss”, “walnut”, “грецкий орех”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:15:57Z",
+   "target": "f10613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "im Unterschied zur einheimischen Haselnuß",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:16:02Z",
+   "target": "f10613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Old English: walhhnutu is wealh (foreign) + hnutu (nut).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:16:06Z",
+   "target": "f10614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "is a legume crop grown mainly for its edible seeds, contained in underground pods.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:16:09Z",
+   "target": "f10614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "peanuts, as legumes, naturally add nitrogen back into the soil.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r052",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:58:13.384Z",
+   "target": "f10613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "im Unterschied zur einheimischen Haselnuß",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:58:13.384Z",
+   "target": "f10614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "peanuts, as legumes, naturally add nitrogen back into the soil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s10"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:58:13.384Z",
+   "target": "f10613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Walnuss – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Walnuss” is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:13.384Z",
+   "target": "f10614",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Peanut History, Consumption and Affordability | The Peanut Institute",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:13.384Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “peanut” is on the snapshot of s10"
+  }
+ ]
+}

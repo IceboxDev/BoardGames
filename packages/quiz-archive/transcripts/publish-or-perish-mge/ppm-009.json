@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-009",
+ "image": "IMG20261022153234.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "Earth Science",
+   "cardText": "[Earth Science] What inorganic molecule is produced by lightning?\nA. Ozone (O₃)\nB. Methane (CH₄)\nC. Carbon Dioxide (CO₂)\nAnswer: A. Known to be “good up high, but bad nearby,” ozone in the stratosphere is beneficial, protecting life on Earth from excessive UV radiation, but at ground level, it is a harmful air pollutant.",
+   "de": "Welche Form des Sauerstoffs – „oben gut, unten schlecht“ – entsteht durch Blitze und verleiht der Luft nach einem Einschlag ihren stechenden Geruch?",
+   "en": "Which form of oxygen – “good up high, but bad nearby” – is produced by lightning and gives the air its sharp smell after a strike?",
+   "reworked": true,
+   "answerDe": "Ozon (O₃)",
+   "answerEn": "Ozone (O₃)",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1839",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Christian Friedrich Schönbein isolates the gas he smelled after lightning and names it ozone",
+    "labelDe": "Christian Friedrich Schönbein isoliert das nach Blitzen gerochene Gas und nennt es Ozon"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Lightning",
+    "title": "Lightning",
+    "lang": "en"
+   },
+   "notes": "Card correct. Lightning also produces large amounts of nitrogen oxides (NOx, ~7 kg per flash), so the question is anchored on the oxygen form/smell to keep one answer. Timeline from the Ozone article (named 1839).",
+   "domain": "earth-space",
+   "sub": "weather"
+  },
+  {
+   "category": 2,
+   "discipline": "Zoology",
+   "cardText": "[Zoology] What is the shape of the African lungfish?\nA. Streamlined and elongated\nB. Round and flat\nC. Short and stubby\nAnswer: A. Despite being a fish, the African lungfish can drown if it does not have access to air, as it primarily relies on its lungs to breathe atmospheric oxygen.",
+   "de": "Welche Körperform hat der Afrikanische Lungenfisch – ein Fisch, der ohne Zugang zur Luft ertrinken kann?",
+   "en": "What body shape does the African lungfish – a fish that can drown without access to air – have?",
+   "reworked": true,
+   "answerDe": "Langgestreckt, aalartig",
+   "answerEn": "Elongated, eel-like",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1839",
+    "end": null,
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Richard Owen describes Protopterus, the genus of the African lungfishes",
+    "labelDe": "Richard Owen beschreibt Protopterus, die Gattung der Afrikanischen Lungenfische"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Protopterus",
+    "title": "Protopterus",
+    "lang": "en"
+   },
+   "notes": "Card correct: Wikipedia says African lungfish are elongated, eel-like, and obligate air breathers.",
+   "domain": "nature",
+   "sub": "animals"
+  }
+ ]
+}

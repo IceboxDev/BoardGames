@@ -1,0 +1,242 @@
+{
+ "article": "a2178",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Fanta",
+   "title": "Fanta",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:26.794Z",
+   "snapshot": "fc8a9d6188da9fb8cda5c3047197ec047697e8e675c3cd7f1249960af86b18ce"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Afri-Cola",
+   "title": "Afri-Cola – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:27.652Z",
+   "snapshot": "2fbe4545d7f59350b587d89eece8175ee5619d098b8dbc78bd3c1526b1bdbfc0"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Spezi_(Getr%C3%A4nk)",
+   "title": "Spezi (Getränk) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:28.281Z",
+   "snapshot": "36f627a1ab763253bbd8c4b5bc932cbb8d9b9be76fc9879844d7ab603ab35eef"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Club-Mate",
+   "title": "Club-Mate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:29.278Z",
+   "snapshot": "3d3d15a9eae624ec2abb293d41979253347d170201c426c8d452ab4b8e5951ad"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Bionade",
+   "title": "Bionade – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:46:30.989Z",
+   "snapshot": "8bb538c6bb53cd1b3c4706746576be966352f45280bd943829fb1a3f6733be52"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11042",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fanta",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-133"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11043",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Afri-Cola",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11044",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spezi",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11045",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Club-Mate",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11046",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bionade",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 25"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:33.963Z",
+   "target": "f11042",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Fanta (in Deutschland überwiegend „die Fanta“, in Österreich und der Schweiz „das Fanta“) ist ein geschütztes Warenzeichen für ein kohlensäurehaltiges Erfrischungsgetränk der The Coca-Cola Company aus Atlanta in den USA.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fanta” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:33.963Z",
+   "target": "f11043",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Afri-Cola (von „Afrikanische Cola-Nuss“, Markenschreibweise „afri cola“) ist eine aus Deutschland stammende Cola-Marke, die am 26.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Afri-Cola” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:33.963Z",
+   "target": "f11044",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Spezi ist der Markenname eines koffeinhaltigen Erfrischungsgetränks, eines Mischgetränks aus Cola und Orangenlimonade, auch als Cola-Mix und unter anderen Bezeichnungen bekannt (siehe unten).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spezi” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:33.963Z",
+   "target": "f11045",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Club-Mate [ˈklʊp ˌmaːtə] () ist ein koffein- und kohlensäurehaltiges, alkoholfreies Erfrischungsgetränk der Brauerei Loscher aus Münchsteinach in der Metropolregion Nürnberg.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Club-Mate” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:33.963Z",
+   "target": "f11046",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bionade ist ein alkoholfreies Erfrischungsgetränk der zur Hassia Mineralquellen gehörenden Bionade GmbH aus Ostheim vor der Rhön in Unterfranken.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:33.963Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bionade” is on the snapshot of s5"
+  }
+ ]
+}

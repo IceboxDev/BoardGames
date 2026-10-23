@@ -1,0 +1,293 @@
+{
+ "article": "a0712",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Friends:_The_Reunion",
+   "title": "Friends: The Reunion – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:52.248Z",
+   "snapshot": "8922180d16bdb5e1b86fa394ebb6d326ae312c8aaa701149623bdb3f0f681fcc"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/How_I_Met_Your_Father",
+   "title": "How I Met Your Father – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:53.178Z",
+   "snapshot": "70643733e1564aa935166bfeebb8159aef9284099aa2668319ef231285f87dce"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_Finale_(Seinfeld)",
+   "title": "The Finale (Seinfeld) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:54.194Z",
+   "snapshot": "4c6d313846206478eae7f8cbb90dfab090b5bed9f5d389689eeff91b2175bae0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Flaming_Moe%27s",
+   "title": "Flaming Moe's – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:55.363Z",
+   "snapshot": "b969d17bf1ddfe8de4fd2cf1510a5d7a488f5851d3f801da34d846c5b244b386"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Gilmore_Girls",
+   "title": "Gilmore Girls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:14:56.303Z",
+   "snapshot": "1c9cd6ac8a34cbc0ec74c41bec2593fbbbae62f1b7a4255b2692b97b2e040d43"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/How_I_Met_Your_Mother",
+   "title": "How I Met Your Mother",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:18:11Z"
+  },
+  "s7": {
+   "url": "https://tvtropes.org/pmwiki/pmwiki.php/Series/HowIMetYourMother",
+   "title": "How I Met Your Mother (Series) – TV Tropes",
+   "publisher": "TV Tropes",
+   "kind": "fan",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T07:18:13Z"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03556",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Central Perk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c060"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "MacLaren’s Pub",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03558",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Monk’s Café",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03559",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Moe’s Tavern",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03560",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Luke’s Diner",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:30.513Z",
+   "target": "f03556",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The special sees the main cast revisit the sets of the original show (such as the Friends' apartments, the Central Perk coffee shop, and the signature water fountain), meet with guests who appeared on the show as well as celebrity guests, do table reads and re-enactments of Friends episodes, and",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.513Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Central Perk” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:30.513Z",
+   "target": "f03557",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "MacLaren’s Pub",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“MacLaren’s Pub”, “Макларенс”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:30.513Z",
+   "target": "f03558",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "This version cut several scenes from the original episode and rearranged some parts, including the testimonies of Donald Sanger and George Steinbrenner, the scene between Jerry and Elaine before the jury re-enters the courtroom, Jerry's opening stand-up comedy act, and the scene in Monk's Cafe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.513Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Monk’s Café” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:30.513Z",
+   "target": "f03559",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The main plot of the episode in which Moe's Tavern becomes famous because of a drink is loosely based on the Los Angeles establishment Coconut Teaszer.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.513Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Moe’s Tavern” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:30.513Z",
+   "target": "f03560",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Also central to Gilmore Girls is Luke Danes (Scott Patterson), owner of Luke's Diner, where Lorelai and Rory frequently dine.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:30.513Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Luke’s Diner” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:18:11Z",
+   "target": "f03557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "MacLaren's, an Irish bar in the middle of New York City, in which a lot of the show is set",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:18:13Z",
+   "target": "f03557",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the fact they regularly rotated to different spots in MacLarens instead of being bound and determined at their favorite booth",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r018",
+   "run": "provenance-research-2026-10-23"
+  }
+ ]
+}

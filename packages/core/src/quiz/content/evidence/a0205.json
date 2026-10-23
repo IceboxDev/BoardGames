@@ -1,0 +1,375 @@
+{
+ "article": "a0205",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Emo",
+   "title": "Emo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:19.887Z",
+   "snapshot": "a96449d09e1c567e364dfd662066149451ed1222eed777011e7159d2a7d3ae67"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Kill_'Em_All",
+   "title": "Kill 'Em All – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:20.670Z",
+   "snapshot": "c079b235936a253aa54bdc4be423d2e40c966a0ae1d3ef1e2c9d09f3b727e7de"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ever_Fallen_in_Love_(With_Someone_You_Shouldn%27t%27ve)",
+   "title": "Ever Fallen in Love (With Someone You Shouldn't've) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:21.570Z",
+   "snapshot": "af94bf4e14645fcb34a8e0c8742004dd48bf2f2384e4a1665d6f05200ea1355c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Grunge",
+   "title": "Grunge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:22.793Z",
+   "snapshot": "740e39fd21ce70527b4aa8258bca14e2cec1eb740ac1a854610177142b53bde6"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Metalcore",
+   "title": "Metalcore – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:35:24.012Z",
+   "snapshot": "e62b881519b9a48728b63419b8349f3c20b0f6268b9c3a8e209266ba7a94cb0a"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Pop-punk",
+   "title": "Pop-punk – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:36.136Z",
+   "snapshot": "11d042b9301a48e8330f8f88bee44cde2179a72385abb4738aa774269b964802"
+  },
+  "s7": {
+   "url": "https://www.rollingstone.com/music/music-lists/50-greatest-pop-punk-albums-122677/",
+   "title": "The 50 Greatest Pop-Punk Albums",
+   "publisher": "Rolling Stone",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:31:36.564Z",
+   "snapshot": "b2ffa41212716a66118f7d112b7cade33a8dd143e376ac9030d36b5e535c5d02"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01021",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01022",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Thrash Metal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pop-Punk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01024",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grunge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01025",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Metalcore",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:10.894Z",
+   "target": "f01021",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Emo ( EE-moh) is a genre of rock music that combines musical characteristics of hardcore punk with emotional, often confessional lyrics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emo” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:10.894Z",
+   "target": "f01022",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Kill 'Em All was critically praised at the time of its release and has since been regarded as a groundbreaking album for thrash metal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Thrash Metal” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:10.894Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pop-Punk",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Pop-Punk”, “поп-панк”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:10.894Z",
+   "target": "f01024",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Grunge (originally known as the Seattle Sound) is an alternative rock genre and subculture that emerged during the mid-1980s in the U.S.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Grunge” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:10.894Z",
+   "target": "f01025",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Metalcore is a broadly defined music genre combining elements of heavy metal and hardcore punk, originating in the 1990s United States and becoming popular in the 2000s.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:10.894Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Metalcore” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:52:25Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "entered the mainstream with bands like Green Day and the Offspring, and by late 1990s through early 2000s, it experienced a second wave led by Blink-182",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:52:27Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nineties hitmakers (Green Day, Blink-182)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r042",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:52:29.808Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "entered the mainstream with bands like Green Day and the Offspring, and by late 1990s through early 2000s, it experienced a second wave led by Blink-182",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:29.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:52:29.808Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Nineties hitmakers (Green Day, Blink-182)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:29.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:29.808Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Pop-punk (also punk pop, and alternatively spelled without the hyphen) is a rock music genre that combines elements of punk rock and pop.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:29.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pop-Punk” is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:29.808Z",
+   "target": "f01023",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "In a 2016 tweet, Green Day’s Billie Joe Armstrong declared war on pop-punk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:29.808Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Pop-Punk” is on the snapshot of s7"
+  }
+ ]
+}

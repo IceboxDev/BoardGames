@@ -1,0 +1,249 @@
+{
+ "article": "a1298",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/First_Indochina_War",
+   "title": "First Indochina War – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:10.293Z",
+   "snapshot": "e8193b4e08639e3e48d4bd9c54b830f88cb8de3fe35e513b919eeb80058d32a6"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Allied-occupied_Austria",
+   "title": "Allied-occupied Austria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:11.329Z",
+   "snapshot": "4655446f9bdfd8ba5144a9b7b5b65148b77f44c1bfe64a3b7b64ae4c203833ac"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Graham_Greene",
+   "title": "Graham Greene – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:12.194Z",
+   "snapshot": "a147e670a50e57e2bdd23f0f0a6ecec9f92f72f55c8de701f8c8ee9a276181f4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/The_Heart_of_the_Matter",
+   "title": "The Heart of the Matter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:13.813Z",
+   "snapshot": "c957eb37fbd434abbb2f2d0ed147171391cbfe6e15d2f3cde0c739cd6b75001b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Duvalier",
+   "title": "François Duvalier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:14.194Z",
+   "snapshot": "65558c49100c6c686255abc294eff338e047bc223171aaa90b7df0036779c510"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Der_dritte_Mann_(Roman)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:53:11.548Z",
+   "snapshot": "183d1bacda45b99ed4f53795f79561c8ecdf83d42f78fb10693209000841721d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06486",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Vietnam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c109"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06487",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vienna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06488",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Mexico",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06489",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sierra Leone",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f06490",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Haiti",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:02.156Z",
+   "target": "f06486",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Most of the engagements of this conflict occurred in Vietnam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vietnam” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:02.156Z",
+   "target": "f06487",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "At the end of World War II in Europe, Austria was occupied by the Allies and declared independence from Nazi Germany on 27 April 1945 (confirmed by the Berlin Declaration for Germany on 5 June 1945), as a result of the Vienna offensive.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Vienna” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:02.156Z",
+   "target": "f06488",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Night and Day—which said that the nine-year-old star, Shirley Temple, displayed \"a dubious coquetry\" which appealed to \"middle-aged men and clergymen\"—provoked Twentieth Century Fox successfully to sue for £3,500 plus costs, and Greene left the UK to live in Mexico until after the trial was over.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mexico” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:02.156Z",
+   "target": "f06489",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Greene, a former British intelligence officer in Freetown, British Sierra Leone, drew on his experience there.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sierra Leone” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:02.156Z",
+   "target": "f06490",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "François Duvalier (14 April 1907 – 21 April 1971), also known as Papa Doc, was a Haitian politician, dictator and physician who served as president of Haiti from 1957 until his death in 1971.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:02.156Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Haiti” is on the snapshot of s5"
+  }
+ ]
+}

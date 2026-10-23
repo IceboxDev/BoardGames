@@ -1,0 +1,315 @@
+{
+ "article": "a1706",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/St._Peter's_Baldachin",
+   "title": "St. Peter's Baldachin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:05.078Z",
+   "snapshot": "a7df3137c8791468d76ef18ab7f61ade2cfd8b2be5e3384de49c00ed8f6d914c"
+  },
+  "s2": {
+   "url": "https://www.etymonline.com/word/jean",
+   "title": "jean – Online Etymology Dictionary",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-09-17"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Magenta",
+   "title": "Magenta – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:08:33.961Z",
+   "snapshot": "bdb6a32b806444c95519762f137fdd60b7d86d236ca67885bde2962f98621aab"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Fuchsine",
+   "title": "Fuchsine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:05.299Z",
+   "snapshot": "83eb014d1caab459cad0b336306a9a6f7f896dca25ea07a68ca686bd70d5c643"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Toponymy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:17:06.376Z",
+   "snapshot": "f0eae3950a998ed0d3f6bb5350bce4c8ca7a21d3a7f911a1f9fea0e187011836"
+  },
+  "s6": {
+   "url": "https://www.dwds.de/wb/Jeans",
+   "title": "Jeans – DWDS",
+   "publisher": "DWDS (BBAW)",
+   "kind": "reference",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:41:43.395Z",
+   "snapshot": "fe94c49f9923888b71991e5c8a5e409a31ad76991549670aeccb3a06b963a483"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/jean",
+   "title": "jean – Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:43.511Z",
+   "snapshot": "768783ba85e1d24a3cd697c5e92fce3d624d4068314716cff079d7a7ffb8adec"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08526",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Baldachin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c143"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jeans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08530",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Magenta",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22281",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "fuchsine",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:28:09.117Z",
+   "target": "f08526",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Peter's Baldachin (Italian: Baldacchino di San Pietro, L'Altare di Bernini) is a large Baroque sculpted bronze canopy, technically called a ciborium or baldachin, over the high altar of St.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Baldachin” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:28:09.117Z",
+   "target": "f08530",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Magenta is a purplish-pink color.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Magenta” is on the snapshot of s3"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:09.117Z",
+   "target": "f22281",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Fuchsine (sometimes spelled fuchsin) or rosaniline hydrochloride is a magenta dye with chemical formula C20H19N3·HCl.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:09.117Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “fuchsine” is on the snapshot of s4"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T07:48:44Z",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "das vielleicht über frz. Gênes auf ital. Genova, dt. Genua, den Namen des einst wichtigen norditalienischen Umschlaghafens für Baumwolle, zurückzuführen ist",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:48:47Z",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "short for jean fustian, earlier Gene(s) fustian Genoese or Genoa fustian",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r030",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T12:56:55.796Z",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "das vielleicht über frz. Gênes auf ital. Genova, dt. Genua, den Namen des einst wichtigen norditalienischen Umschlaghafens für Baumwolle, zurückzuführen ist",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e8 is on the snapshot of s6"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T12:56:55.796Z",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "short for jean fustian, earlier Gene(s) fustian Genoese or Genoa fustian",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s7"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:56:55.796Z",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Jeans – Schreibung, Definition, Bedeutung, Etymologie, Synonyme, Beispiele | DWDS",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jeans” is on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:55.796Z",
+   "target": "f08529",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sometimes jeans a sturdy twilled fabric, usually of cotton.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:55.796Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jeans” is on the snapshot of s7"
+  }
+ ]
+}

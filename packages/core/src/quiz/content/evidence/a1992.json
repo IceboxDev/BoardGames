@@ -1,0 +1,491 @@
+{
+ "article": "a1992",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires",
+   "title": "The World's Billionaires – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:03.291Z",
+   "snapshot": "b95d72fb4d9a14c6e608e9cc87875180fa1ba172104987c82c4ab71fc2da9b78"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Microsoft",
+   "title": "Microsoft – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:54:52.714Z",
+   "snapshot": "955f38b2d14e840b8e1ac6c497d87c186dc27f37e847d8e8dc8f128b0a299e0e"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Oracle_Corporation",
+   "title": "Oracle Corporation – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:35:04.378Z",
+   "snapshot": "684a09d294fca745afcffab4043988580197612d7193f46b32976f61730a60e2"
+  },
+  "s4": {
+   "url": "https://www.geekwire.com/2017/bills-gates-tops-worlds-richest-list-jeff-bezos-no-3-adding-27-6b-fortune/",
+   "title": "Bill Gates tops world's richest list; Jeff Bezos No. 3",
+   "publisher": "GeekWire",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T10:42:22Z"
+  },
+  "s5": {
+   "url": "https://bangkokpost.com/thailand/general/1218205/billionaires-row-gates-still-worlds-richest-man",
+   "title": "Billionaires Row: Gates still world's richest man",
+   "publisher": "Bangkok Post",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:55.143Z",
+   "snapshot": "ccf1bd7af44055628b6c54c09a2b1d3cd400470f5be2c32304174ceea3013a67"
+  },
+  "s6": {
+   "url": "https://abc7news.com/billionaires-rich-people-bill-gates/3181860/",
+   "title": "Bezos, Gates and Buffett top Forbes billionaires list",
+   "publisher": "ABC7 News (AP)",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:53.158Z",
+   "snapshot": "5ea6916ad2cbb1caa2e182e1ca50848e7a6daeaa3b3a8cc4ecd7b9df5d47b23d"
+  },
+  "s7": {
+   "url": "https://learningenglish.voanews.com/amp/jeff-bezos-first-100-billion-dollar-man/4284705.html",
+   "title": "Jeff Bezos: the World's First 100-Billion-Dollar-Man",
+   "publisher": "VOA Learning English",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:43:53.484Z",
+   "snapshot": "d8d4682aab04a5f5984f982af778690a64ba8ec7bfbe2d666ba62e0003a01484"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Bill Gates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c166"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jeff Bezos",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09958",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Paul Allen",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09960",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Larry Ellison",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:02.020Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2018, Amazon founder Jeff Bezos was first ranked at the top and became the first centibillionaire included in the ranking, surpassing Microsoft founder Bill Gates, who had topped the list 18 of the previous 24 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Bill Gates” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:02.020Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2018, Amazon founder Jeff Bezos was first ranked at the top and became the first centibillionaire included in the ranking, surpassing Microsoft founder Bill Gates, who had topped the list 18 of the previous 24 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jeff Bezos” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:02.020Z",
+   "target": "f09958",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Founded in 1975 by Bill Gates and Paul Allen to market BASIC interpreters for the Altair 8800, Microsoft rose to dominate the PC operating system market with MS-DOS in the mid-1980s, followed by Windows.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paul Allen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:02.020Z",
+   "target": "f09960",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Co-founded in Santa Clara, California, in 1977 by Bob Miner, Ed Oates, and current chairman of the board and chief technology officer Larry Ellison, Oracle is among the 50 largest companies in the world by market cap, and ranked 52nd on the Forbes Global 2000 as of 2026.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:02.020Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Larry Ellison” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:42:19Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "surpassing Microsoft founder Bill Gates, who had topped the list 18 of the previous 24 years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23",
+   "note": "Not every year 1995–2017: Buffett led 2008, Slim 2010–2013 (see notes)."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:42:22Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Microsoft co-founder and philanthropist has been the richest person in the world 18 out of the past 23 years, Forbes reported.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:42:24Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "According to Forbes, Bill Gates is the number one richest for the fourth year in a row, and the richest person in the world for 18 out of the past 23 years.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:42:26Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2018, Amazon founder Jeff Bezos was first ranked at the top and became the first centibillionaire included in the ranking,",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:42:28Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Amazon CEO Jeff Bezos is the richest man in the world with an estimated net worth of $112 billion. He is the first person to top the $100 billion mark, according to Forbes.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:42:31Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The increase was enough to overtake American Bill Gates, who helped to set up Microsoft Corporation.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r081",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "surpassing Microsoft founder Bill Gates, who had topped the list 18 of the previous 24 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "According to Forbes, Bill Gates is the number one richest for the fourth year in a row, and the richest person in the world for 18 out of the past 23 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In 2018, Amazon founder Jeff Bezos was first ranked at the top and became the first centibillionaire included in the ranking,",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Amazon CEO Jeff Bezos is the richest man in the world with an estimated net worth of $112 billion. He is the first person to top the $100 billion mark, according to Forbes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "The increase was enough to overtake American Bill Gates, who helped to set up Microsoft Corporation.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09956",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "According to Forbes, Bill Gates is the number one richest for the fourth year in a row, and the richest person in the world for 18 out of the past 23 years.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Bill Gates” is on the snapshot of s5"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Amazon CEO Jeff Bezos, Microsoft founder Bill Gates and Berkshire Hathaway CEO Warren Buffett top Forbes annual list of billionaires.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jeff Bezos” is on the snapshot of s6"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:57:49.990Z",
+   "target": "f09957",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Jeff Bezos: the World's First 100-Billion-Dollar-Man",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:57:49.990Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Jeff Bezos” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,508 @@
+{
+ "article": "a1822",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Edwin_Hubble",
+   "title": "Edwin Hubble – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:27.537Z",
+   "snapshot": "129354ded3a0fe33dc177e94ac95b2468c21f7d78c8412d52110c2858fbdb0a5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Andromedagalaxie",
+   "title": "Andromedagalaxie",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:51:48.506Z",
+   "snapshot": "d6cc5e1c2685137ab5e7a7428cc660049ab101fdea7f59d555a7868f478a98cd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Kepler_space_telescope",
+   "title": "Kepler space telescope – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:05:46.049Z",
+   "snapshot": "aa49d445cd3d49fbc74db03f72d28111c25a361427da21f62f07e088ddfb1619"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Chandra_X-ray_Observatory",
+   "title": "Chandra X-ray Observatory – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:31.525Z",
+   "snapshot": "3b53f549682b8ebc59c2b18272b65cf43d1ba6ab3f850f54bbe044df0914c007"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lyman_Spitzer",
+   "title": "Lyman Spitzer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:32.543Z",
+   "snapshot": "ff80b2d68c3d72c4f2e3f790f326da76f34bdfe62e834a842660652dfc7d7b80"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Uranus",
+   "title": "Uranus – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:30:10.379Z",
+   "snapshot": "f106d685cb71e13e95e9ea03286a5a393403545d65271f41d5e953449f4f2b59"
+  },
+  "s7": {
+   "url": "https://www.scientificamerican.com/article/a-new-black-hole/",
+   "title": "A New Black Hole",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:30.481Z",
+   "snapshot": "840ad1c5bec8e31ec09191aad960a018323266ec0ff39ac2c4e21ef1c72837d8"
+  },
+  "s8": {
+   "url": "https://chandra.harvard.edu/photo/2000/m82bh/m82bh_hand.html",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:30.986Z",
+   "snapshot": "d2a6b3d3aa30967c36c5360839d651633a4741f1a595573ecbc0b8d7ec3a3192"
+  },
+  "s9": {
+   "url": "https://spaceflightnow.com/news/n0009/12chandra/",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:24:31.198Z",
+   "snapshot": "64c54dd6cf91d42b89534b6cdddb942cbdc013a5b87116d33a07616afe334b00"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09106",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edwin Hubble",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c152"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f09107",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Johannes Kepler",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f09108",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Subrahmanyan Chandrasekhar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f09109",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Lyman Spitzer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f09110",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "William Herschel",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edwin Hubble",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s2",
+     "quote": "Edwin Hubble",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-119/5, u08: The statement 'Andromeda lies in the Milky Way' is false; Hubble's Cepheid observations of 1923–24 put it far outside, as a separate galaxy."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f10857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Chandra X-ray Observatory",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Chandra X-ray Observatory",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s9",
+     "quote": "Chandra X-ray Observatory",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-291/5, u08: In September 2000 NASA announced that Chandra had 'clinched the case for a new type of black hole', an intermediate-mass black hole in M82. Hubble's intermediate-mass candidates came later (2002 onwards)."
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f25108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edwin Hubble",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f25108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Edwin Hubble",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f10857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Chandra X-ray Observatory",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s8"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f10857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Chandra X-ray Observatory",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e7 is on the snapshot of s9"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f09106",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edwin Hubble Highway, the stretch of Interstate 44 passing through his birthplace of Marshfield, Missouri;",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edwin Hubble” is on the snapshot of s1"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f25108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Edwin Hubble Highway, the stretch of Interstate 44 passing through his birthplace of Marshfield, Missouri;",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edwin Hubble” is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f25108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Im Jahr 1923 gelang es Edwin Hubble mithilfe des kurz zuvor erbauten, mit 2,5 Meter Durchmesser weltweit größten Teleskops veränderliche Sterne der Cepheiden-Klasse im Andromedanebel zu entdecken, deren Entfernung auf 900.000 Lichtjahre zu berechnen und Shapley zu überzeugen, dass der Andromedanebel",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Edwin Hubble” is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f09107",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Named after astronomer Johannes Kepler (who, ironically, was convinced that planetary systems did not exist around any of the stars) the spacecraft was launched into an Earth-trailing heliocentric orbit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Johannes Kepler” is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f09108",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The telescope is named after the Nobel Prize-winning Indian-American astrophysicist Subrahmanyan Chandrasekhar.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Subrahmanyan Chandrasekhar” is on the snapshot of s4"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f09109",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spitzer was born to a Presbyterian family in Toledo, Ohio, the son of Lyman Spitzer Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lyman Spitzer” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f09110",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uranus is visible to the naked eye, but it is very dim and moves very slowly relative to the background stars and was not classified as a planet until 1781, when it was first observed by William Herschel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Herschel” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f10857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Data from NASA&iquest;s Chandra X-Ray Observatory revealed a hole (right) some 600 light-years from the center of the starburst galaxy M82.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chandra X-ray Observatory” is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f10857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Chandra X-ray\nObservatory Center",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chandra X-ray Observatory” is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T06:28:28.007Z",
+   "target": "f10857",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Using NASA's Chandra X-ray Observatory, scientists have zeroed in on an off-center, mid-mass black hole in the galaxy M82.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:28.007Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Chandra X-ray Observatory” is on the snapshot of s9"
+  }
+ ]
+}

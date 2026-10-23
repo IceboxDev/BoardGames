@@ -1,0 +1,593 @@
+{
+ "article": "a1100",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Hezbollah",
+   "title": "Hezbollah – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:49.382Z",
+   "snapshot": "51adbc620304a103081014da33170c093692e6999ca0ee4267b15794546d2467"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Abu_Bakr",
+   "title": "Abu Bakr – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:49.167Z",
+   "snapshot": "bd253ddcb643977067ee70c8a2cd4916e187821a53cb69795f257e754bd885ee"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Ibadism",
+   "title": "Ibadism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:50.176Z",
+   "snapshot": "479195269017ef9093af6411387a2cd2fd32730b8319d12fa0517fef3e99b8fe"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mevlevi_Order",
+   "title": "Mevlevi Order – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:18:22.575Z",
+   "snapshot": "183911fd4425ae3580af622745eeec24075513914fff99aada1641194824aca3"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Wahhabism",
+   "title": "Wahhabism – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:51.232Z",
+   "snapshot": "c8ef34c5e2c4676218010eac1e77db64bb9c2caa47a981bc34bd06587812c86c"
+  },
+  "s6": {
+   "url": "https://www.cfr.org/backgrounder/what-hezbollah",
+   "title": "What Is Hezbollah? – Council on Foreign Relations",
+   "publisher": "Council on Foreign Relations",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:53.703Z",
+   "snapshot": "7dc8f04d9fcfe233a522b25a0d8ae9981a997445f33c67ee2e11a9c72963f5ea"
+  },
+  "s7": {
+   "url": "https://www.pewresearch.org/religion/2009/10/07/mapping-the-global-muslim-population/",
+   "title": "Mapping the Global Muslim Population – Pew Research Center (2009)",
+   "publisher": "Pew Research Center",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:53.222Z",
+   "snapshot": "c80f11049ae3f2727d6395cfb2d775620f936b749b53abf211cdf3b5eb726f97"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Sunni_Islam",
+   "title": "Sunni Islam – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:54.079Z",
+   "snapshot": "8a2a998969685471de9c47ad395adefd69817535ca4cb8fb0602ccc950fdab93"
+  },
+  "s9": {
+   "url": "https://countrystudies.us/persian-gulf-states/57.htm",
+   "title": "Oman – Government and Politics (Persian Gulf States: A Country Study, Library of Congress, 1993)",
+   "publisher": "Library of Congress Federal Research Division",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:53.788Z",
+   "snapshot": "d756955cafb4760fa946fe7b94761a223837bacf6aa3976ab3f758d67fc89623"
+  },
+  "s10": {
+   "url": "https://countrystudies.us/persian-gulf-states/46.htm",
+   "title": "Oman – Society (Persian Gulf States: A Country Study, Library of Congress, 1993)",
+   "publisher": "Library of Congress Federal Research Division",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:37:54.376Z",
+   "snapshot": "a470cb415bb50c6d7aba5478894816de5ac972048860f33c2b8073005f4df8d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shia Islam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript c092"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sunni Islam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Ibadi Islam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05499",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Sufism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f05500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wahhabism",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:32.901Z",
+   "target": "f05496",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Shia Islam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Shia Islam”, “Schiiten”, “шиитский ислам”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:32.901Z",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sunni Islam",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Sunni Islam”, “Sunniten”, “суннитский ислам”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:32.901Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Unlike the Sunni theory of the caliphate of the Rashidun, and the Shi'i notion of divinely appointed Imamate, the leaders of Ibadi Islam—called Imams—do not need to rule the entire Muslim world; Muslim communities are considered capable of ruling themselves.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ibadi Islam” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:32.901Z",
+   "target": "f05499",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Rumi's friend and mentor, Shams of Tabriz, is also revered within the order and within Sufism.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sufism” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:32.901Z",
+   "target": "f05500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Wahhabism is a Salafi revivalist movement within Sunni Islam named after the 18th-century Hanbali scholar Muhammad ibn Abd al-Wahhab.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:32.901Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wahhabism” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:09:59Z",
+   "target": "f05496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hezbollah is a Lebanese Shia Islamist political party with an active paramilitary wing",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:10:05Z",
+   "target": "f05496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hezbollah wields significant power in Lebanon, where it operates as both a Shiite Muslim political party and militant group.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:10:10Z",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of the total Muslim population, 10-13% are Shia Muslims and 87-90% are Sunni Muslims.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:10:15Z",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "found that there are 1.62 billion Muslims around the world, and it is estimated over 85–90% are Sunni",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:10:21Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oman is the country with the most Ibadis; Ibadis and Sunnis make up equal numbers of Muslims (45% each), while Shia about 5%, in the population in Oman.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the reworded question (Oman = main home of Ibadism); also shows the old 'majority' premise is contested"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:10:25Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the interior tradition of insularity, tribal in origin and ruled by an imam according to the ideological tenets of Ibadism",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Supports the reworded premise (Ibadi imams ruled Oman's interior)"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T07:10:29Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The majority of Omanis are Ibadi Muslims, followers of Abd Allah ibn Ibad. Approximately 25 percent are Sunni Muslims",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "1993 study calls Ibadis the majority; recent estimates (cited on Wikipedia, US State Dept) put Ibadis and Sunnis at ~45% each — the old 'majority of the population' wording was dropped"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T07:10:45Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oman is the country with the most Ibadis",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r007",
+   "run": "provenance-research-2026-10-23",
+   "note": "Final assessment for the reworded question (main home of Ibadism = Oman, answer Ibadi Islam): confirmed; the contested e-entry concerns only the dropped 'majority of the population' premise"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Hezbollah is a Lebanese Shia Islamist political party with an active paramilitary wing",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05496",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hezbollah wields significant power in Lebanon, where it operates as both a Shiite Muslim political party and militant group.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Of the total Muslim population, 10-13% are Shia Muslims and 87-90% are Sunni Muslims.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s7"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "found that there are 1.62 billion Muslims around the world, and it is estimated over 85–90% are Sunni",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s8"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "the interior tradition of insularity, tribal in origin and ruled by an imam according to the ideological tenets of Ibadism",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s9"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "The majority of Omanis are Ibadi Muslims, followers of Abd Allah ibn Ibad. Approximately 25 percent are Sunni Muslims",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s10"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05498",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Oman is the country with the most Ibadis",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:09.355Z",
+   "target": "f05497",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Sunni Islam is the largest branch of Islam and the largest religious denomination in the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:09.355Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sunni Islam” is on the snapshot of s8"
+  }
+ ]
+}

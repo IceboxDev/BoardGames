@@ -1,0 +1,289 @@
+{
+ "article": "a1881",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Annus_mirabilis_papers",
+   "title": "Annus mirabilis papers – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:47:30.882Z",
+   "snapshot": "9f27ec6fef42158b5fcaf644e3dd8c3cc002c0a319d84b5e72decff8bbbde609"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Albert_Einstein",
+   "title": "Albert Einstein",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:27:46.962Z",
+   "snapshot": "be2e8046c62b4fd92fa1d47337e508ae516e149ee826a8a2f0715aeb023c130d"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Werner_Heisenberg",
+   "title": "Werner Heisenberg – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:41:35.343Z",
+   "snapshot": "27db766f05bbd3645d297b6e79efdcb6fcb23e85dbd34300c2d815e232c18a26"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Photon",
+   "title": "Photon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:50.496Z",
+   "snapshot": "37b3712b35746fca11154cc742e98b19005685733da9857964c3004d45a3488f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+   "title": "Albert Einstein",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:51.891Z",
+   "snapshot": "a6f2048f2fd48427b0b0ee1924ffbf08c6f3c0380b7465159b29c00c191d8a45"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Special_relativity",
+   "title": "Special relativity",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:27:52.822Z",
+   "snapshot": "e41b2172d41328fdaa076bef03c9b7d86c30bb7670de79fed00019ad148dc4d5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f09401",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Albert Einstein",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c157"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13565",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Schweiz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 14; transcript tp-349"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f23500",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Heligoland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f23502",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "photons",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25870",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The photoelectric effect",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-004"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25871",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Special relativity",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-148"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:28:38.640Z",
+   "target": "f09401",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "'miraculous year') are four papers that Albert Einstein published in the scientific journal Annalen der Physik (Annals of Physics) in 1905.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Albert Einstein” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:38.640Z",
+   "target": "f13565",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Auf Vermittlung seines Mentors Gustav Maier und des ebenfalls von ihm überzeugten Maschinenbauprofessors Albin Herzog besuchte er anschließend die Gewerbeschule an der liberal geführten aargauischen Kantonsschule in der Schweiz, um dort die Matura nachzuholen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Schweiz” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:38.640Z",
+   "target": "f23500",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "On 7 June, after weeks of failing to alleviate a severe bout of hay fever with aspirin and cocaine, Heisenberg retreated to the pollen-free North Sea island of Helgoland to focus on quantum mechanics.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Helgoland” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:38.640Z",
+   "target": "f23502",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Photons are massless particles that can only move at one speed, the speed of light measured in a vacuum.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “photons” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:38.640Z",
+   "target": "f25870",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He received the 1921 Nobel Prize in Physics for \"his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The photoelectric effect” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:38.640Z",
+   "target": "f25871",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "In physics, the special theory of relativity, or simply special relativity, is a scientific theory of the relationship between space and time.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:38.640Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Special relativity” is on the snapshot of s6"
+  }
+ ]
+}

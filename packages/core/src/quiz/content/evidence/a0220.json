@@ -1,0 +1,202 @@
+{
+ "article": "a0220",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Walking_Dead_(TV_series)",
+   "title": "The Walking Dead (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:23.079Z",
+   "snapshot": "d50708d77ea802a1302625f4333ab99b06bbda5175fa93e6190ae90c92ef8fb0"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Game_of_Thrones",
+   "title": "Game of Thrones – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:50.673Z",
+   "snapshot": "59680a6a47d0ae69a8afb360a07538bb64b6b5b91bae49380589c36c3e7e9cba"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/The_X-Files_(film)",
+   "title": "The X-Files (film) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:24.000Z",
+   "snapshot": "e518a603add2e1be9a2de64325dee39fa7c549b226937435aee2d20a551e4ba7"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_4",
+   "title": "Stranger Things season 4 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:24.994Z",
+   "snapshot": "3aef6f1a4736dec923f1d9afe138da064e6273080da5af13b03503747092d410"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Stranger_Things",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:37:26.103Z",
+   "snapshot": "e010438a399e2d53ca00455b32de2331b946ecbf13a5b97d21b605641efcbe9d"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01096",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Walking Dead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c019"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01098",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Game of Thrones",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01099",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The X-Files",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01100",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stranger Things",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:24:14.047Z",
+   "target": "f01096",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Walking Dead (TWD) is an American post-apocalyptic horror drama television series developed by Frank Darabont, based on the comic book series of the same name by Robert Kirkman, Tony Moore, and Charlie Adlard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Walking Dead” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:14.047Z",
+   "target": "f01098",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Game of Thrones is an American fantasy drama television series created by David Benioff and D.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Game of Thrones” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:14.047Z",
+   "target": "f01099",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The X-Files (also known as The X-Files: Fight the Future) is a 1998 American science fiction thriller film based on Chris Carter's television series of the same name, which revolves around fictional unsolved cases called the X-Files and the characters solving them.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The X-Files” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:14.047Z",
+   "target": "f01100",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The fourth season of the American science fiction horror drama television series Stranger Things, marketed as Stranger Things 4, was released worldwide on the streaming service Netflix in two volumes.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:14.047Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stranger Things” is on the snapshot of s4"
+  }
+ ]
+}

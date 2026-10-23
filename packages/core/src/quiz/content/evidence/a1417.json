@@ -1,0 +1,242 @@
+{
+ "article": "a1417",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Iphigenie_auf_Tauris",
+   "title": "Iphigenie auf Tauris – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:01.759Z",
+   "snapshot": "f23850ca3624857ad01a7264ec5b54ff8ee702687be26147660fdfb5e12f4ae5"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/G%C3%B6tz_von_Berlichingen_(Goethe)",
+   "title": "Götz von Berlichingen (Goethe) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:02.608Z",
+   "snapshot": "ef6773073abeb480345a134c0e8052883810ac565e0e71ef088e89f6865d9f07"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Egmont_(Goethe)",
+   "title": "Egmont (Goethe) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:03.799Z",
+   "snapshot": "7159fc8b8653068aed971570a807c3f69b202b311467ab5e43883c5e2a56aeee"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Torquato_Tasso_(Goethe)",
+   "title": "Torquato Tasso (Goethe) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:05.033Z",
+   "snapshot": "577fd84c1b05b802194829bea10b00982646863d7543ab253f95df92cc273a7a"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Faust._Der_Trag%C3%B6die_zweiter_Teil",
+   "title": "Faust. Der Tragödie zweiter Teil – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:00:05.856Z",
+   "snapshot": "0e3daf017522058b7b2ae7d0f4ecddf619a9c4a02e4056dd4fc3cd2a355297d2"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07081",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iphigenie auf Tauris",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c119"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07082",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Götz von Berlichingen",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07083",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Egmont",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07084",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Torquato Tasso",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07085",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Faust",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:22.310Z",
+   "target": "f07081",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Iphigenie auf Tauris ist ein Schauspiel von Johann Wolfgang von Goethe nach  Euripides’ Iphigenie bei den Taurern.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iphigenie auf Tauris” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:22.310Z",
+   "target": "f07082",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Götz von Berlichingen mit der eisernen Hand ist ein 1773 anonym gedrucktes, 1774 uraufgeführtes Geschichts- und Charakterdrama in fünf Aufzügen von Johann Wolfgang von Goethe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Götz von Berlichingen” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:22.310Z",
+   "target": "f07083",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Egmont ist ein Trauerspiel von Johann Wolfgang von Goethe.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Egmont” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:22.310Z",
+   "target": "f07084",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Torquato Tasso ist ein Schauspiel in fünf Aufzügen von Johann Wolfgang von Goethe, das den italienischen Dichter Torquato Tasso (1544–1595) in den Mittelpunkt der Handlung stellt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Torquato Tasso” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:22.310Z",
+   "target": "f07085",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Der Tragödie zweiter Teil (auch Faust.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:22.310Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Faust” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "article": "a2197",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Krampus",
+   "title": "Krampus",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:25.564Z",
+   "snapshot": "8dda235f3e5523129abf0687ec0b12fd83f9ba1face9264dcdef80249c088deb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Christmas_in_Italy",
+   "title": "Christmas in Italy",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:28.444Z",
+   "snapshot": "8c4be26b18ae094185759d8447b75a1994f17c0c4e5ea7254e19050f9ed0e8ba"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Weihnachtspostamt",
+   "title": "Weihnachtspostamt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:26.444Z",
+   "snapshot": "b25d1335d911493db06ae04f12656d790bd8e62e31c7bdea739a3bf7d23e7661"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Befana",
+   "title": "Befana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:29.311Z",
+   "snapshot": "84adddbeabe0ed0679a3678af7339b8ce832ae808d79c7c56ee48cf15e8d6aef"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Sinterklaas",
+   "title": "Sinterklaas – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:30.334Z",
+   "snapshot": "95f43149d6d9efc0b4ef19bebc537e78f081272da8839c3e5c7a7b5749e2a8bc"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Weihnachtspostfiliale",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:27.506Z",
+   "snapshot": "b25d1335d911493db06ae04f12656d790bd8e62e31c7bdea739a3bf7d23e7661"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11162",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Krampus",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-178"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11163",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Italy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13; transcript tp-143"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11164",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Weihnachtsmann",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18; transcript tp-336"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11165",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Befana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f11166",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Spain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 31"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:35.492Z",
+   "target": "f11162",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Krampus, auch Kramperl oder Bartl, ist im Adventsbrauchtum eine Schreckgestalt in Begleitung des heiligen Nikolaus.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Krampus” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.492Z",
+   "target": "f11163",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Christmas in Italy (Italian: Natale, pronounced [naˈtaːle]) begins on 8 December, with the Feast of the Immaculate Conception, the day on which traditionally the Christmas tree is mounted and ends on 6 January, of the following year with the Epiphany (Italian: Epifania [epifaˈniːa]), and in some",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Italy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.492Z",
+   "target": "f11164",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Durch Briefe an Weihnachtspostämter entsteht bei den Kindern der Eindruck, sie könnten tatsächlich mit dem Weihnachtsmann, dem Nikolaus, dem Christkind oder einer ähnlichen mythischen Symbolfigur des weihnachtlichen Schenkens kommunizieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Weihnachtsmann” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:35.492Z",
+   "target": "f11165",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In Italian folklore and folk customs, the Befana (Italian: [beˈfaːna]) is a witch-like old woman who delivers gifts to children throughout Italy on Epiphany Eve (the night of January 5) in a similar way to Santa Claus or the Three Magi.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Befana” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:35.492Z",
+   "target": "f11166",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "He traditionally arrives in a steamboat from Spain and rides a white horse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.492Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Spain” is on the snapshot of s5"
+  }
+ ]
+}

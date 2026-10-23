@@ -1,0 +1,640 @@
+{
+ "article": "a1499",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Nationalpark_Hainich",
+   "title": "Nationalpark Hainich – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:09.239Z",
+   "snapshot": "8c242fbaa34549819d63eddcdeb344d25db5f022d04ec80d671985a8f67002bb"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gemeine_Fichte",
+   "title": "Gemeine Fichte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:25:17.740Z",
+   "snapshot": "65e078f26e74b6c44cc2f1fbc252b793a6eefd315c26651f8f42fc1222a492ff"
+  },
+  "s3": {
+   "url": "https://www.bundeswaldinventur.de/vierte-bundeswaldinventur-2022/zusammenfassung",
+   "title": "Bundeswaldinventur: Zusammenfassung",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:09.675Z",
+   "snapshot": "6f20e084c83087207e30d8af8d01a2a1e4d4691165784556a941c61fd517c0c7"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Ivenacker_Eichen",
+   "title": "Ivenacker Eichen – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:10.286Z",
+   "snapshot": "7b8a79dc67a7e7bedcb62b82e9d8d08c71dfdad9fda758f0af2f311ba8952108"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/H%C3%A4nge-Birke",
+   "title": "Hänge-Birke – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:11.413Z",
+   "snapshot": "242e84aa561e194c89e42c2e650ae5f29d772d62f71d770dcac48e9f762f8dc6"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Femeiche",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:05:12.347Z",
+   "snapshot": "dd4a1ded93f7445607bce9388d1d1787ba6ebfd4deff31122959b71550399238"
+  },
+  "s7": {
+   "url": "https://www.bmel.de/DE/themen/wald/wald-in-deutschland/bundeswaldinventur.html",
+   "title": "BMLEH  -  Wald in Deutschland - Ergebnisse der vierten Bundeswaldinventur",
+   "publisher": "Bundesministerium für Landwirtschaft, Ernährung und Heimat",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:36:17.465Z",
+   "snapshot": "7c3590b83d15b2d87c9ef035dab64834852c673b47f25a8927f0e922e32fda51"
+  },
+  "s8": {
+   "url": "https://de.wikipedia.org/wiki/Wald_in_Deutschland",
+   "title": "Wald in Deutschland – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T08:12:03Z"
+  },
+  "s9": {
+   "url": "https://www.bundeswaldinventur.de/dritte-bundeswaldinventur-2012",
+   "title": "Bundeswaldinventur: Dritte Bundeswaldinventur 2012",
+   "publisher": "Bundeswaldinventur (Thünen-Institut / BMLEH)",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:40:13.162Z",
+   "snapshot": "7698ac83d82b4a076aa46fa5f7457b0916c84e911038ab88bf3e03b02870e02c"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Rotbuche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c125"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Fichte",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Kiefer",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f07494",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Eiche",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f07495",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Birke",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:35.386Z",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Hainich verfügt über ein breites Spektrum von Buchenwaldgesellschaften, in denen neben der Rotbuche auch zahlreiche andere Laubbaumarten wie Eschen, Ahorne, Linden und die seltene Elsbeere vorkommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rotbuche” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:35.386Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Gemeine Fichte (Picea abies), auch Gewöhnliche Fichte, Rotfichte oder Rottanne, früher auch Schwarztanne oder Pechtanne genannt, ist eine Pflanzenart in der Gattung der Fichten (Picea).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Fichte” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:35.386Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die häufigsten Baumarten sind Kiefer (22 % des Holzbodens), Fichte (21 %), Buche (17 %) und Eiche (12 %).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Kiefer” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:35.386Z",
+   "target": "f07494",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Im Jahr 1995 wurden bei den ältesten Eichen mit einem Zuwachsbohrer Proben entnommen, um Jahresringe auszählen und den Gesundheitszustand beurteilen zu können; an der stärksten Eiche wurden in Brusthöhe drei Bohrkerne entnommen.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eiche” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:35.386Z",
+   "target": "f07495",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Die Hänge-Birke (Betula pendula) (Synonyme: Betula alba, Betula verrucosa), auch Gemeine Birke, Sandbirke, Weißbirke oder Warzenbirke genannt, ist eine sommergrüne Laubbaumart aus der Gattung der Birken (Betula).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:35.386Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Birke” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:11:57Z",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23",
+   "note": "2022 inventory: beech 17 %, still the most common broadleaf species (oak 12 %)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:00Z",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die häufigsten Baumarten sind Kiefer (22 % des Holzbodens), Fichte (21 %), Buche (17 %) und Eiche (12 %).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:03Z",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Den größten Flächenanteil am Holzboden nehmen die Kiefern mit 21,8 Prozent ein, gefolgt von den Fichten mit 20,9 Prozent, den Buchen mit 16,6 Prozent und den Eichen mit 11,5 Prozent.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:06Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fichte, Kiefer, Buche und Eiche sind die häufigsten Baumarten in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:12:09Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jahrzehntelang war die Fichte die häufigste Baumart Deutschlands nach Waldflächenanteil.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:12:12Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vor allem die Fichte hat gelitten, deren Fläche um 17 % abgenommen hat.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T08:12:17Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fichte, Kiefer, Buche und Eiche sind die häufigsten Baumarten in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T08:12:22Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r050",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07491",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die häufigsten Baumarten sind Kiefer (22 % des Holzbodens), Fichte (21 %), Buche (17 %) und Eiche (12 %).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fichte, Kiefer, Buche und Eiche sind die häufigsten Baumarten in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Jahrzehntelang war die Fichte die häufigste Baumart Deutschlands nach Waldflächenanteil.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Vor allem die Fichte hat gelitten, deren Fläche um 17 % abgenommen hat.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fichte, Kiefer, Buche und Eiche sind die häufigsten Baumarten in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s7"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Die häufigsten Baumarten sind Kiefer (22 % des Holzbodens), Fichte (21 %), Buche (17 %) und Eiche (12 %).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Fichte” is on the snapshot of s3"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07492",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fichte, Kiefer, Buche und Eiche sind die häufigsten Baumarten in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Fichte” is on the snapshot of s9"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die häufigsten Baumarten im deutschen Wald sind Kiefer (22 Prozent ), Fichte (21 Prozent ), Buche (17 Prozent ) und Eiche (12 Prozent ).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kiefer” is on the snapshot of s7"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:56:21.104Z",
+   "target": "f07493",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Fichte, Kiefer, Buche und Eiche sind die häufigsten Baumarten in Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:21.104Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Kiefer” is on the snapshot of s9"
+  }
+ ]
+}

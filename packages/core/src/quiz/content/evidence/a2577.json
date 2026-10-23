@@ -1,0 +1,242 @@
+{
+ "article": "a2577",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/New_Zealand_national_rugby_union_team",
+   "title": "New Zealand national rugby union team",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:02.375Z",
+   "snapshot": "4ede5febea75579689f7816958d8c877b5bdfd264703f8fbec3b442e2bdf5475"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/South_Africa_national_rugby_union_team",
+   "title": "South Africa national rugby union team – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:03.742Z",
+   "snapshot": "892b3cc7c3a6f9a615f791b80106154bb40a424877c27533759f42b68dfe13ab"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Australia_national_rugby_union_team",
+   "title": "Australia national rugby union team – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:04.349Z",
+   "snapshot": "6fa64608819da9db3e114c2001e9da25def79604b0bba04f07d2d099d636ac92"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Argentina_national_rugby_union_team",
+   "title": "Argentina national rugby union team – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:05.171Z",
+   "snapshot": "c20d388173904ac70b330ae38a61af03ab59a92e1299e807115adc76124d4064"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ka_Mate",
+   "title": "Ka Mate – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:06.180Z",
+   "snapshot": "beb8103b5f10752ea053d9aee423c93793224f0fbf4355397c26b20eb15ba52f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13832",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "All Blacks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 4; transcript tp-218"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13833",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Springboks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 11"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13834",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wallabies",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 16"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13835",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Pumas",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13836",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ka Mate",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 26"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:41.602Z",
+   "target": "f13832",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The New Zealand national rugby union team, known as the All Blacks (Māori: Ōpango [ɔːpaŋɔ]), represents New Zealand in men's rugby union, which is considered the country's national sport.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “All Blacks” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:41.602Z",
+   "target": "f13833",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The South Africa national rugby union team, commonly known as the Springboks (colloquially the Boks, Bokke or Amabhokobhoko), is the country's national team, governed by the South African Rugby Union.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Springboks” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:41.602Z",
+   "target": "f13834",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Australia national rugby union team, nicknamed the Wallabies, represents Australia in men's international rugby union.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wallabies” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:41.602Z",
+   "target": "f13835",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Officially nicknamed Los Pumas, they play in sky blue and white jerseys.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pumas” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:41.602Z",
+   "target": "f13836",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Ka Mate ([ˈkaˌmatɛ]) is a Māori haka composed by Te Rauparaha, the historic leader of the iwi of Ngāti Toa of the North Island of New Zealand during the Musket Wars.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:41.602Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ka Mate” is on the snapshot of s5"
+  }
+ ]
+}

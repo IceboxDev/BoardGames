@@ -1,0 +1,242 @@
+{
+ "article": "a0487",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Transatlantic_Trade_and_Investment_Partnership",
+   "title": "Transatlantic Trade and Investment Partnership – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:38.060Z",
+   "snapshot": "c4b8975092410944e37e8d62f0e072a1c59a89b814cbcc86bb958ad264fd3832"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Comprehensive_Economic_and_Trade_Agreement",
+   "title": "Comprehensive Economic and Trade Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:39.051Z",
+   "snapshot": "fa822347e5745efd86e863d5a92216185d84bd223e19afab3871911c5690ade5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement",
+   "title": "North American Free Trade Agreement – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:40.172Z",
+   "snapshot": "7c6a7c7362878f751951bff3958c677e5cc6b6580a8e60d8f4bf1db484686521"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/World_Trade_Organization",
+   "title": "World Trade Organization – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:59:41.066Z",
+   "snapshot": "488458c9b99ce1cd69df292c6bdcf470ea5a1f994d3a06ae9fe3902e9892bfb5"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/OPEC",
+   "title": "OPEC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:58:04.817Z",
+   "snapshot": "e1873c892bc0d4c68d72aab818c31ba4a0c88cc8970e2ffdb4afd8ea02832774"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02431",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Transatlantic Trade and Investment Partnership",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c041"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02432",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Comprehensive Economic and Trade Agreement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02433",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "North American Free Trade Agreement",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02434",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "World Trade Organization",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02435",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Organization of the Petroleum Exporting Countries",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:56.624Z",
+   "target": "f02431",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Transatlantic Trade and Investment Partnership (TTIP) was a proposed trade agreement between the European Union (EU) and the United States, with the aim of promoting trade and multilateral economic growth.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Transatlantic Trade and Investment Partnership” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:56.624Z",
+   "target": "f02432",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Comprehensive Economic and Trade Agreement (CETA; French: accord économique et commercial global, AECG; German: Umfassendes Wirtschafts- und Handelsabkommen) is a free-trade agreement between Canada and the European Union and its member states.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Comprehensive Economic and Trade Agreement” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:56.624Z",
+   "target": "f02433",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The North American Free Trade Agreement (Spanish: Tratado de Libre Comercio de América del Norte, TLCAN; French: Accord de libre-échange nord-américain, ALÉNA), referred to colloquially in the Anglosphere as NAFTA ( NAF-tə), was an agreement signed by Canada, Mexico, and the United States that",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “North American Free Trade Agreement” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:56.624Z",
+   "target": "f02434",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The World Trade Organization (WTO) is an intergovernmental organization that regulates and facilitates international trade.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “World Trade Organization” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:56.624Z",
+   "target": "f02435",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Organization of the Petroleum Exporting Countries (OPEC  OH-pek) is an intergovernmental cartel enabling the co-operation of leading oil-producing and oil-dependent countries in order to collectively influence the global oil market and maximize profit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:56.624Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Organization of the Petroleum Exporting Countries” is on the snapshot of s5"
+  }
+ ]
+}

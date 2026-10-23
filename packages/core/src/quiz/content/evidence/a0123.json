@@ -1,0 +1,373 @@
+{
+ "article": "a0123",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
+   "title": "Pierre-Auguste Renoir – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:18.107Z",
+   "snapshot": "ef5088ee3f8168a17b170199318a5932fa415d89a85bd05ecd62e12870d39116"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/%C3%89douard_Manet",
+   "title": "Édouard Manet – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:19.114Z",
+   "snapshot": "45fbc94edd1a004c20d4232c32b629404f66a54a80534715f94b4f5a4604c199"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/A_Sunday_Afternoon_on_the_Island_of_La_Grande_Jatte",
+   "title": "A Sunday Afternoon on the Island of La Grande Jatte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:20.034Z",
+   "snapshot": "e8ecd0942fb38ff84253d54a7a20606f5c26a21b5c36a994914e305876c0c609"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+   "title": "Impression, Sunrise – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:21.186Z",
+   "snapshot": "7d2ef4568af08ad1040a3dd729b5c35c960dbb089cf1d872cf343bd3344f6c3f"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Nadar",
+   "title": "Nadar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:21.991Z",
+   "snapshot": "dd0522e96d69ec7b2efe842b7409fd4aacf3e49340114ba1f29d6e68e6ca0330"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Impressionism",
+   "title": "Impressionism",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:23:23.079Z",
+   "snapshot": "66bfdf9fe79837d5799a8f630a5644624b8ff39440848e7bc5a5bf69ff2d1754"
+  },
+  "s7": {
+   "url": "https://art.scholastic.com/pages/topics/art-on-demand/periods-and-styles-in-western-art/impressionism.html",
+   "title": "Impressionism – Periods and Styles in Western Art",
+   "publisher": "Scholastic Art",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:30:58.576Z",
+   "snapshot": "61fb11feb753c8ba65bf7a4f52dc67aea3749c711b27bf6ca532d624ca3b6de0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00611",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pierre-Auguste Renoir",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c011"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00613",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Édouard Manet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00615",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Georges Seurat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f20180",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Louis Leroy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f20181",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Nadar",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The changing qualities of light",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-010"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:55.483Z",
+   "target": "f00611",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pierre-Auguste Renoir (; French: [pjɛʁ oɡyst ʁənwaʁ]; 25 February 1841 – 3 December 1919) was a leading French Impressionist artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:55.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pierre-Auguste Renoir” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:55.483Z",
+   "target": "f00613",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Édouard Manet (UK: , US: ; French: [edwaʁ manɛ]; 23 January 1832 – 30 April 1883) was a French modernist painter.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:55.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Édouard Manet” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:55.483Z",
+   "target": "f00615",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "A Sunday Afternoon on the Island of La Grande Jatte (French: Un dimanche après-midi à l'Île de la Grande Jatte) was painted from 1884 to 1886 and is Georges Seurat's most famous work.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:55.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Georges Seurat” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:55.483Z",
+   "target": "f20180",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In the critic Louis Leroy's review of the 1874 exhibition, \"The Exhibition of the Impressionists\" for the newspaper Le Charivari, he used \"Impressionism\" to describe the new style of work displayed, which he said was typified by Monet's painting of the same name.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:55.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louis Leroy” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:23:55.483Z",
+   "target": "f20181",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Gaspard-Félix Tournachon (French: [ɡaspaʁ feliks tuʁnaʃɔ̃]; 5 April 1820 – 20 March 1910), known by the pseudonym Nadar (French: [nadaʁ]) or Félix Nadar, was a French photographer, caricaturist, journalist, novelist and balloonist who was a proponent of heavier-than-air flight.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:55.483Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Nadar” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:23:55.483Z",
+   "target": "f25219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The changing qualities of light",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The changing qualities of light”, “Das Licht in seinen wechselnden Qualitäten”, “Меняющиеся качества света”) on the snapshot of s6"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:59:36Z",
+   "target": "f25219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "emphasis on accurate depiction of light in its changing qualities (often accentuating the effects of the passage of time)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:00:24Z",
+   "target": "f25219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "they preferred to work outdoors, painting quickly to capture rapidly changing qualities of light and atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:52:14.096Z",
+   "target": "f25219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "emphasis on accurate depiction of light in its changing qualities (often accentuating the effects of the passage of time)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:14.096Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:52:14.096Z",
+   "target": "f25219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "they preferred to work outdoors, painting quickly to capture rapidly changing qualities of light and atmosphere.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:52:14.096Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  }
+ ]
+}

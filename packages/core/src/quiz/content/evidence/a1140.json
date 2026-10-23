@@ -1,0 +1,681 @@
+{
+ "article": "a1140",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/DENIC",
+   "title": "DENIC – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:43:10.199Z",
+   "snapshot": "7f1ebfb2de39bf5444186e1d2f54a9289ae5c2b73749fc7d73978ef85297d796"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/ICANN",
+   "title": "ICANN – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:13.217Z",
+   "snapshot": "4d662f8edfc581b67747afd1ede490bd5db22542b7a32def4d7d76efb9c7fb91"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Domain_Name_System",
+   "title": "Domain Name System – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:14.202Z",
+   "snapshot": "031e77b8fad2cbf47a23399a410258292e766d54bf307b4bf1ab0aec18ca3399"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/World_Wide_Web_Consortium",
+   "title": "World Wide Web Consortium – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:43:15.162Z",
+   "snapshot": "5fe68be872f21fa76f2d4a871a799adf00fda43011258306d34145d3992d6cb7"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/.dd",
+   "title": ".dd",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:43:12.358Z",
+   "snapshot": "c9aa6a7dd68de38618aae19926ac4ef2e814ea5ed948ad7fea97cb886c65d715"
+  },
+  "s6": {
+   "url": "https://www.denic.de/ueber-uns/wer-wir-sind/",
+   "title": "DENIC eG – Wer wir sind",
+   "publisher": "DENIC eG",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:38:09.115Z",
+   "snapshot": "4879e328910f5e2a929b0375df0828e4adb1ccf864732a47b95f77866da4fa0b"
+  },
+  "s7": {
+   "url": "https://www.icann.org/resources/pages/what-2012-02-25-en",
+   "title": "What Does ICANN Do?",
+   "publisher": "ICANN",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:09.797Z",
+   "snapshot": "91d561970aae0bb9edc5efa57061fb2a019f50ed723ee15d1b1d48f558f55f64"
+  },
+  "s8": {
+   "url": "https://developer.mozilla.org/en-US/docs/Glossary/DNS",
+   "title": "DNS – MDN Web Docs Glossary",
+   "publisher": "Mozilla (MDN Web Docs)",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:09.911Z",
+   "snapshot": "9048a7c8c7513943b123a87dc14ab2af5115304aeac118976d5ab9d38bdb86fa"
+  },
+  "s9": {
+   "url": "https://www.w3.org/about/",
+   "title": "About us | W3C",
+   "publisher": "World Wide Web Consortium (W3C)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:10.057Z",
+   "snapshot": "ca73b1c1107fd162313fc30839481a0fc40ef1d2d6bfb661e192cb2929e0b8ac"
+  },
+  "s10": {
+   "url": "https://www.w3.org/standards/",
+   "title": "Standards | W3C",
+   "publisher": "World Wide Web Consortium (W3C)",
+   "kind": "primary",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:38:10.994Z",
+   "snapshot": "038194de79d757d68cff776ebc51aa5eb2945c4b0b1912ad99ef92ab06727303"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Verwaltung der .de-Domains",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c095"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f05697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The global coordination of domain names and IP addresses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The translation of domain names into IP addresses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The standardisation of web technologies such as HTML and CSS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f14191",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": ".dd",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 37; transcript tp-271"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:38.731Z",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die Verwaltung der .de-Domains",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Die Verwaltung der .de-Domains”, “The administration of .de domains”, “Управление доменами .de”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:38.731Z",
+   "target": "f05697",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The global coordination of domain names and IP addresses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The global coordination of domain names and IP addresses”, “Die weltweite Koordination von Domainnamen und IP-Adressen”, “Глобальная координация доменных имён и IP-адресов”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:38.731Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The translation of domain names into IP addresses",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The translation of domain names into IP addresses”, “Die Übersetzung von Domainnamen in IP-Adressen”, “Преобразование доменных имён в IP-адреса”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:38.731Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The standardisation of web technologies such as HTML and CSS",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“The standardisation of web technologies such as HTML and CSS”, “Die Standardisierung von Webtechnologien wie HTML und CSS”, “Стандартизация веб-технологий, таких как HTML и CSS”) on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:38.731Z",
+   "target": "f14191",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": ".dd war die länderspezifische Top-Level-Domain (ccTLD) der Deutschen Demokratischen Republik.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:38.731Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “.dd” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:37:38Z",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die DENIC eG ist die zentrale Registrierungsstelle für alle .de-Domains.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:37:41Z",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wir führen das zentrale Register aller .de-Domains.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:37:43Z",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ihre Aufgaben sind der Betrieb und die Verwaltung der Top-Level-Domain .de",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T10:37:45Z",
+   "target": "f05697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "To reach another person on the Internet you have to type an address into your computer - a name or a number. That address has to be unique so computers know where to find each other. ICANN coordinates these unique identifiers across the world.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T10:37:46Z",
+   "target": "f05697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "responsible for coordinating the maintenance and procedures of several databases related to the namespaces and numerical spaces of the Internet",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T10:37:48Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The most prominent function of DNS is the translation of human-friendly domain names (such as mozilla.org) to a numeric IP address",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T10:37:49Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the DNS uses letters rather than numbers, and then links a precise series of letters with a precise series of numbers",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T10:37:51Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Most prominently, it translates readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T10:37:53Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The World Wide Web Consortium (W3C) is an international public-interest non-profit organization where Member organizations, a full-time staff, and the public work together to develop web standards.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T10:37:54Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Many more technologies that W3C and its partners are creating extend the web and give it full strength, including CSS, SVG, WOFF, WebRTC, XML, and a growing variety of APIs.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T10:37:57Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The World Wide Web Consortium (W3C) is the main international standards organization for the World Wide Web.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r079",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Wir führen das zentrale Register aller .de-Domains.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05696",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ihre Aufgaben sind der Betrieb und die Verwaltung der Top-Level-Domain .de",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s1"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "To reach another person on the Internet you have to type an address into your computer - a name or a number. That address has to be unique so computers know where to find each other. ICANN coordinates these unique identifiers across the world.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05697",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "responsible for coordinating the maintenance and procedures of several databases related to the namespaces and numerical spaces of the Internet",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s2"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "The most prominent function of DNS is the translation of human-friendly domain names (such as mozilla.org) to a numeric IP address",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the DNS uses letters rather than numbers, and then links a precise series of letters with a precise series of numbers",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s7"
+  },
+  {
+   "id": "e28",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05698",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Most prominently, it translates readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e18 is on the snapshot of s3"
+  },
+  {
+   "id": "e29",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The World Wide Web Consortium (W3C) is an international public-interest non-profit organization where Member organizations, a full-time staff, and the public work together to develop web standards.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e19 is on the snapshot of s9"
+  },
+  {
+   "id": "e30",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "Many more technologies that W3C and its partners are creating extend the web and give it full strength, including CSS, SVG, WOFF, WebRTC, XML, and a growing variety of APIs.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e20 is on the snapshot of s10"
+  },
+  {
+   "id": "e31",
+   "at": "2026-10-23T12:55:16.758Z",
+   "target": "f05699",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The World Wide Web Consortium (W3C) is the main international standards organization for the World Wide Web.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:16.758Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e21 is on the snapshot of s4"
+  }
+ ]
+}

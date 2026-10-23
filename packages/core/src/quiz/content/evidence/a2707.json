@@ -1,0 +1,334 @@
+{
+ "article": "a2707",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Namaste",
+   "title": "Namaste",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:11.179Z",
+   "snapshot": "3bf135b889ef05e8107b3332f6465c019a47ba6259ad37accadc173a9d53fc58"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Nirvana",
+   "title": "Nirvana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:12.388Z",
+   "snapshot": "85b53da9ecfd62c5a2938fa60085ff1b131d7b841deaa057affb6b3f00a09973"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Avatar",
+   "title": "Avatar – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:13.224Z",
+   "snapshot": "64e6dcc2f62a8bb4416fcd0ae5cd941088a05c3fc830d0d320ba1b6ae20142a4"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Karma",
+   "title": "Karma – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:14.406Z",
+   "snapshot": "de3a687bbb0e341032cd74f76735783f47e38fce1efb56203c719bdc7e0168e4"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Shampoo",
+   "title": "Shampoo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:15.324Z",
+   "snapshot": "3877aed27a9a41ff6437d56eeb03b7681f7ce5f66d5c4dc0b6d89e050288d97c"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Sake_Dean_Mahomed",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:14:16.183Z",
+   "snapshot": "91735a096fb7c29fe9f6c77fe97819a64a96ef241220a059debb2d85c205ca3c"
+  },
+  "s7": {
+   "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/csl-apidev/getword.php?dict=mw&key=namas&input=slp1&output=iast",
+   "title": "Monier-Williams Sanskrit-English Dictionary: namas",
+   "publisher": "Cologne Digital Sanskrit Dictionaries, University of Cologne",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:49:41.143Z",
+   "snapshot": "aeb17e81297cefb135f98130faecb5138554bebb77f598d6766363f77abad751"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I bow to you",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript pp-018"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25307",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "blown out",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25308",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "descent",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25309",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "deed",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25310",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "knead",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:00.980Z",
+   "target": "f25306",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "I bow to you",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“I bow to you”, “Ich verneige mich vor dir”, “я кланяюсь тебе”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:00.980Z",
+   "target": "f25307",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The term nirvana in the soteriological sense of \"blown out, extinguished\" state of liberation appears at many places in the Vedas and even more in the post-Buddhist Bhagavata Purana, however populist opinion does not give credit to either the Vedas or the Upanishads.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “blown out” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:00.980Z",
+   "target": "f25308",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Avatar (Sanskrit: अवतार, IAST: Avatāra; pronounced [ɐʋɐt̪aːɾɐ]) is a concept within Hinduism that in Sanskrit literally means 'descent'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “descent” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:31:00.980Z",
+   "target": "f25309",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Karma (, from Sanskrit: कर्म, IPA: [ˈkɐɾmɐ] ; Pali: kamma) is an ancient Indian concept that refers to an action, work, or deed, and its effect or consequences.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “deed” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:31:00.980Z",
+   "target": "f25310",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It dates to 1762 and derives from the Hindi word cā̃pō (चाँपो, pronounced [tʃãːpoː]) or shampoo, itself derived from the Sanskrit root chapati (चपति), which means 'to press, knead, or soothe'.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:00.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “knead” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:53:19Z",
+   "target": "f25306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Therefore, namastē literally means \"bowing to you\".",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:53:21Z",
+   "target": "f25306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "namas n. bow, obeisance, reverential salutation, adoration (by gesture or word; often with dat.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r033",
+   "run": "provenance-research-2026-10-23",
+   "note": "namas = bow, used with the dative; te is the dative of tvam (\"to you\"), so namas-te = \"bow to you\"."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:48.475Z",
+   "target": "f25306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Therefore, namastē literally means \"bowing to you\".",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:48.475Z",
+   "target": "f25306",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "namas n. bow, obeisance, reverential salutation, adoration (by gesture or word; often with dat.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:48.475Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s7"
+  }
+ ]
+}

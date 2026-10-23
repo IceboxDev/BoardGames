@@ -1,0 +1,249 @@
+{
+ "article": "a0586",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Brie_de_Meaux",
+   "title": "Brie de Meaux – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:24.343Z",
+   "snapshot": "844ecad30754d6fdcfd8e88292a1e3cde883aec66f9cfb7ca54fa864321bb0a4"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Treaty_of_Saint-Clair-sur-Epte",
+   "title": "Treaty of Saint-Clair-sur-Epte – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:25.330Z",
+   "snapshot": "774c129140238bfaa1cddcb98e25b6e29a54aa710a64d5e70f3ae40b14433855"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Parmesan",
+   "title": "Parmesan – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:26.363Z",
+   "snapshot": "c083d116c9fb638e5c8b17ba69dc67e1003561e9b0c0ead408b5b251d36423db"
+  },
+  "s4": {
+   "url": "https://www.cheddargorgecheese.com/the-history-of-cheddar-cheese/",
+   "title": "The History of Cheddar Cheese – Cheddar Gorge Cheese Company",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:24.992Z",
+   "snapshot": "b7fe72af2c717700be72499f664da3df00b4bd5bdf26643d074348d9ce23c001"
+  },
+  "s5": {
+   "url": "https://www.emmentaler.ch/en/our-history",
+   "title": "Our history – Emmentaler AOP Switzerland",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:24.872Z",
+   "snapshot": "b74714f8479b0c476318780bf1da9c8dbe436b01cf80e6adb29a1d69733de77c"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Emmentaler",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:25.042Z",
+   "snapshot": "4562e7e8e35efb2f4918720a803df180b89666b490267cd4b23872b76e2d8193"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02926",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brie",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c049"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02927",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Normandy",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02928",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Emilia-Romagna",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02929",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Somerset",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02930",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Emmental",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:10.281Z",
+   "target": "f02926",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Brie de Meaux (French pronunciation: [bʁi də mo] ) is a French brie cheese of the Brie region and a designated AOC product since 1980.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Brie” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:10.281Z",
+   "target": "f02927",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The treaty of Saint-Clair-sur-Epte (911) is the foundational treaty of the Duchy of Normandy, establishing Rollo, a Norse warlord and Viking leader, as the first Duke of Normandy in exchange for his loyalty to Charles III, the king of West Francia, following the Siege of Chartres.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Normandy” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:10.281Z",
+   "target": "f02928",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "of Parma and Reggiano is the adjective for the province of Reggio Emilia); it is also produced in the part of Bologna west of the River Reno and in Modena (all of the above being located in the Emilia-Romagna region), as well as in the part of Mantua (Lombardy) on the south bank of the River Po.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emilia-Romagna” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:10.281Z",
+   "target": "f02929",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Made from unpasteurised milk taken from cows grazing in the lush pastures surrounding Cheddar in Somerset.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Somerset” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:10.281Z",
+   "target": "f02930",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Emmental cloth and linen merchants begin selling cheese on a large scale.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:10.281Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Emmental” is on the snapshot of s5"
+  }
+ ]
+}

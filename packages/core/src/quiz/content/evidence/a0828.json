@@ -1,0 +1,466 @@
+{
+ "article": "a0828",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Juri_Alexejewitsch_Gagarin",
+   "title": "Juri Alexejewitsch Gagarin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:00.919Z",
+   "snapshot": "651c3af3116df3482497b3fc8784fdff03c448db7077abd918500bdcf365f1df"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mercury-Redstone_3",
+   "title": "Mercury-Redstone 3 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:04.487Z",
+   "snapshot": "a481c3aa83ecd06e75a04b2bb43cf9163e1df0a7107b9df6bf2358dffce2d7f5"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Walentina_Wladimirowna_Tereschkowa",
+   "title": "Walentina Wladimirowna Tereschkowa – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:23:01.825Z",
+   "snapshot": "54c55c9215e2fad785e0d5b3b3d6eda0fd8345855c40bbe3751dc937907ba052"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+   "title": "Neil Armstrong – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:23:05.561Z",
+   "snapshot": "87ad772bd947ab14960bfd70ef4a81107944da620d03b7ffe09077bcee24d4c7"
+  },
+  "s5": {
+   "url": "https://www.esa.int/About_Us/ESA_history/50_years_of_humans_in_space/The_flight_of_Vostok_1",
+   "title": "The flight of Vostok 1",
+   "publisher": "European Space Agency",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:00.690Z",
+   "snapshot": "d6a0e306d788a74109f885f9b63cbf622ff5492f22bcb288ffbc265cf29461c2"
+  },
+  "s6": {
+   "url": "https://www.nasa.gov/mission/mercury-redstone-3-freedom-7/",
+   "title": "Mercury-Redstone 3: Freedom 7",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:01.583Z",
+   "snapshot": "0527c2a56bc2b07c13843b810fc4673f9d0b582cc37e5d014e48e34013c4f777"
+  },
+  "s7": {
+   "url": "https://www.nasa.gov/mission/apollo-11/",
+   "title": "Apollo 11",
+   "publisher": "NASA",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:01.790Z",
+   "snapshot": "925bf7a21d47de6e983ee93bac6d3f94766d5183f78895ddf208989f2d3b7262"
+  },
+  "s8": {
+   "url": "https://www.space.com/21571-valentina-tereshkova.html",
+   "title": "Valentina Tereshkova: First woman in space",
+   "publisher": "Space.com",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:36:01.762Z",
+   "snapshot": "2ab1f52fea090ae387f1669fda37cb558b94a5ee6e169ee6ad10264e027884f8"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04136",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Juri Gagarin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c069"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04137",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alan Shepard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04138",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Walentina Tereschkowa",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04139",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Neil Armstrong",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:51.189Z",
+   "target": "f04136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Es gibt unterschiedliche Angaben, weshalb von den ursprünglich 20 Kandidaten schlussendlich Juri Gagarin ausgewählt wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Juri Gagarin” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:51.189Z",
+   "target": "f04137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mercury-Redstone 3, or Freedom 7, was the first United States human spaceflight, on May 5, 1961, piloted by astronaut Alan Shepard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Alan Shepard” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:51.189Z",
+   "target": "f04138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Walentina Wladimirowna Tereschkowa (russisch Валентина Владимировна Терешкова, wissenschaftliche Transliteration Valentina Vladimirovna Tereškova , verheiratet Walentina Tereschkowa-Nikolajewa; * 6.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Walentina Tereschkowa” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:51.189Z",
+   "target": "f04139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Between 1991 and 1993, he hosted First Flights with Neil Armstrong, an aviation history documentary series on A&E.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:51.189Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Neil Armstrong” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:22:22Z",
+   "target": "f04136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On the morning of 12 April 1961, at 5:30 a.m. Moscow time (2:30 UTC), cosmonauts Yuri Gagarin and his back-up Gherman Titov were woken in their hut at the Baikonur Cosmodrome.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "ESA account of Vostok 1, the first human spaceflight."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:22:23Z",
+   "target": "f04137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Read more about America’s first astronaut to travel to space and the first person to golf on the Moon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Refers to Alan B. Shepard, Jr."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:22:25Z",
+   "target": "f04139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First human to set foot on the Moon.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23",
+   "note": "Caption for Neil Armstrong."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:22:41Z",
+   "target": "f04138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Valentina Tereshkova became the first woman to travel to space on June 16, 1963, when she orbited Earth as part of the Vostok 6 mission.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r012",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "On the morning of 12 April 1961, at 5:30 a.m. Moscow time (2:30 UTC), cosmonauts Yuri Gagarin and his back-up Gherman Titov were woken in their hut at the Baikonur Cosmodrome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Read more about America’s first astronaut to travel to space and the first person to golf on the Moon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "First human to set foot on the Moon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Valentina Tereshkova became the first woman to travel to space on June 16, 1963, when she orbited Earth as part of the Vostok 6 mission.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04136",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Moscow time (2:30 UTC), cosmonauts Yuri Gagarin and his back-up Gherman Titov were woken in their hut at the Baikonur Cosmodrome.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Yuri Gagarin” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04137",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "human spaceflight on May 5, 1961, Mercury Redstone 3 was piloted by astronaut Alan Shepard.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Alan Shepard” is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04138",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Valentina Tereshkova: First woman in space | Space",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Valentina Tereshkova” is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:54:19.123Z",
+   "target": "f04139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Neil Armstrong, Buzz Aldrin, Michael Collins",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:19.123Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Neil Armstrong” is on the snapshot of s7"
+  }
+ ]
+}

@@ -1,0 +1,429 @@
+{
+ "article": "a0603",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Mansart",
+   "title": "François Mansart – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:34.385Z",
+   "snapshot": "3767050c388fce79e01a7cffc9cf0286ac35a5ce579ee0dccfb91191234c5143"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+   "title": "Eiffel Tower – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:35.581Z",
+   "snapshot": "63abb8494f55b99433bf6fd2c59a8117771db29ada5a006fee3415ec86671aa1"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rococo",
+   "title": "Rococo – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:36.548Z",
+   "snapshot": "5d8bf38a400a5dd5cab5ddb459fdc80197be0ba1a8d579f0e0169b3e8b5594a9"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Queen_Victoria",
+   "title": "Queen Victoria – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:07:37.623Z",
+   "snapshot": "80a5aeea7b1db73730cc96c65df5b10ebab5f91bdc9a9f771d7661ef095d9087"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Langer_Eugen",
+   "title": "Langer Eugen",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:34.533Z",
+   "snapshot": "d86142e713f2e945563660a04dbdb3eaa24dafa6a571461d199e4b6d9005e541"
+  },
+  "s6": {
+   "url": "https://www.bundestag.de/dokumente/textarchiv/03-eugen-gerstenmaier-405194",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:07:34.965Z",
+   "snapshot": "f01f1894e54a190a912061f428416b9c1ddd6adf2e4c4a4998f007b2ed79b710"
+  },
+  "s7": {
+   "url": "https://www.dictionary.com/browse/victorian",
+   "title": "Victorian Definition & Meaning | Dictionary.com",
+   "publisher": "Dictionary.com",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:26.368Z",
+   "snapshot": "9d516500476bad92c2b175545aa486f1352c68945acb1c191597995e175ef915"
+  },
+  "s8": {
+   "url": "https://dictionary.cambridge.org/dictionary/english/victorian",
+   "title": "VICTORIAN | English meaning - Cambridge Dictionary",
+   "publisher": "Cambridge University Press",
+   "kind": "reference",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:34:27.711Z",
+   "snapshot": "33ce30b91460b5c3a9d6e2b909220307070fc613f76cfdb4a33d2803712f9df0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03011",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mansard",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c051"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03012",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Eiffel Tower",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03014",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rococo",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Victorian style",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f10638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugen Gerstenmaier",
+     "quoteLang": "de",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "Eugen Gerstenmaier",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "tp-356/4, u04: Statement false: the Bundestag's own archive says the Langer Eugen is named after Bundestag President Eugen Gerstenmaier, not Eugen Roth."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f10638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugen Gerstenmaier",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s6"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f10638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Eugen Gerstenmaier",
+     "quoteLang": "de",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e5 is on the snapshot of s5"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f03011",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Mansart, as he is generally known, popularized the mansard roof, a four-sided, double slope gambrel roof punctuated with windows on the steeper lower slope, which created additional habitable space in the garrets.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mansard” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f03012",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Eiffel Tower (  EYE-fəl; French: Tour Eiffel [tuʁ ɛfɛl] ) is a lattice tower on the Champ de Mars in Paris, France.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eiffel Tower” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f03014",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rococo, less commonly Roccoco (  rə-KOH-koh, US also  ROH-kə-KOH; French: [ʁɔkɔko] , also [ʁokoko]), is a Western style of architecture, art, and decoration that emerged in France in the 1730s as a reaction against the Louis XIV style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rococo” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Victorian style",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Victorian style”, “Viktorianischer Stil”, “Викторианский стиль”) on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f10638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Seinen Namen bekam der Lange Eugen als ironisch-augenzwinkernde Anspielung auf die geringe Körpergröße des ehemaligen Bundestagspräsidenten Eugen Gerstenmaier, aufgrund dessen persönlicher Initiative – während seiner Amtszeit – das Gebäude entstand.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eugen Gerstenmaier” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:25:12.837Z",
+   "target": "f10638",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Eugen Gerstenmaier: Dem Parlament Respekt verschafft - Deutscher Bundestag",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:12.837Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Eugen Gerstenmaier” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:59:02Z",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "denoting, relating to, or having the style of architecture used in Britain during the reign of Queen Victoria",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:59:05Z",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "from or relating to the period of British history during the rule of Queen Victoria (1837-1901)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r002",
+   "run": "provenance-research-2026-10-23",
+   "note": "Defines Victorian as the period of Queen Victoria's rule (1837-1901); the style is named after the period."
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:39.233Z",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "denoting, relating to, or having the style of architecture used in Britain during the reign of Queen Victoria",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s7"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:39.233Z",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "from or relating to the period of British history during the rule of Queen Victoria (1837-1901)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:39.233Z",
+   "target": "f03015",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "a house in or imitative of the Victorian style.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:39.233Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Victorian style” is on the snapshot of s7"
+  }
+ ]
+}

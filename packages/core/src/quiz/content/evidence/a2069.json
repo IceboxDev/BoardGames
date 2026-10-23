@@ -1,0 +1,202 @@
+{
+ "article": "a2069",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Badminton",
+   "title": "Badminton – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:02.641Z",
+   "snapshot": "b97ed445f5be5d3e6d66dc60a00e913632ce1eea3412c426de2bd195d0da7a4d"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Marathon",
+   "title": "Battle of Marathon – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:26.776Z",
+   "snapshot": "bdebd9d57878b4b31c32872f6443c6d47c6056fa429b0f33d956e38dfec1e949"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/1900_International_Lawn_Tennis_Challenge",
+   "title": "1900 International Lawn Tennis Challenge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:27.752Z",
+   "snapshot": "91c1e6425095e7661e4ce3fdef92e51610f422856f94f258bf59ac6c529214f8"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Davis_Cup",
+   "title": "Davis Cup",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:39:24.932Z",
+   "snapshot": "e4cf190cc9567d3717e013fa631db4ef63aa55d95de3b476d6e18b98dbbc9125"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Marathon",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:39:28.792Z",
+   "snapshot": "2de898f69a8617769f5c3b89147998157dd1435f5e3e970cc4d7c2847a676400"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10341",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Badminton",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c173"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10343",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Marathon",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10345",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Davis Cup",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13761",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Tennis",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23; transcript tp-053"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:17.262Z",
+   "target": "f10341",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Badminton is a racquet sport played using racquets to hit a shuttlecock across a net.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Badminton” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:17.262Z",
+   "target": "f10343",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Battle of Marathon took place in 490 BCE during the first Persian invasion of Greece.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Marathon” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:17.262Z",
+   "target": "f10345",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The 1900 International Lawn Tennis Challenge was the first edition of what is now known as the Davis Cup.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Davis Cup” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:17.262Z",
+   "target": "f13761",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Veranstalter ist die International Tennis Federation (ITF).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:17.262Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tennis” is on the snapshot of s4"
+  }
+ ]
+}

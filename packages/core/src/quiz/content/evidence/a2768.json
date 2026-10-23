@@ -1,0 +1,347 @@
+{
+ "article": "a2768",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Heart",
+   "title": "Heart",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:13.303Z",
+   "snapshot": "0b66272210747395698fb443b745aeee2939f14787f890848dbfd532d5317f33"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sinoatrial_node",
+   "title": "Sinoatrial node",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:14.140Z",
+   "snapshot": "bab7836eac3e17958634e8f7d6168b0a94b5493b8bc3a79a096e02fd91d75e5c"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Stethoscope",
+   "title": "Stethoscope",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:15.061Z",
+   "snapshot": "a16cf5523a3a88bdf343463681a76599956d923b20743ad459ff67d50c26c5c8"
+  },
+  "s4": {
+   "url": "https://commons.wikimedia.org/wiki/File:Diagram_of_the_human_heart_(cropped).svg",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:20:12.281Z",
+   "snapshot": "6a3a377148c240a86ed073b4c4663a9ea650e35e176f86ae524ed25f34909aba",
+   "cloneOf": "wikipedia.org"
+  },
+  "s5": {
+   "url": "https://www.nhlbi.nih.gov/health/heart/anatomy",
+   "title": "How the Heart Works – What the Heart Looks Like",
+   "publisher": "National Heart, Lung, and Blood Institute (NIH)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:19.132Z",
+   "snapshot": "75e33f88bbfbbae83036b8f9de11d9ec07ad355575908a3194360748b8036769"
+  },
+  "s6": {
+   "url": "https://my.clevelandclinic.org/health/body/21704-heart",
+   "title": "Heart: Anatomy & Function",
+   "publisher": "Cleveland Clinic",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:50:19.529Z",
+   "snapshot": "7bcb8ba9b90fe9d26838777f651d0abc68f94cda8f136ccc70bf4dfd7e15b56e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "4",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript ppm-015"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f25811",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "left ventricle",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f25812",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "sinoatrial node",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f25814",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "stethoscope",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:31:10.543Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The average cardiac output, using an average stroke volume of about 70mL, is 5.25 L/min, with a normal range of 4.0–8.0 L/min.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “4” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:31:10.543Z",
+   "target": "f25811",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Oxygenated blood then returns to the left atrium, passes through the left ventricle and is pumped out through the aorta into systemic circulation, traveling through arteries, arterioles, and capillaries—where nutrients and other substances are exchanged between blood vessels and cells, losing oxygen",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “left ventricle” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:31:10.543Z",
+   "target": "f25812",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The sinoatrial node (also known as the sinuatrial node, SA node, sinus node or Keith–Flack node) is an oval shaped region of special cardiac muscle in the upper back wall of the right atrium made of pacemaker cells.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “sinoatrial node” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:31:10.543Z",
+   "target": "f25814",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The stethoscope (from Ancient Greek στῆθος (stêthos) 'breast' and σκοπέω (skopéō) 'to look') is a medical device for auscultation, or listening to internal sounds of an animal or human body.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:31:10.543Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “stethoscope” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T10:23:10Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It has four hollow chambers surrounded by muscle and other heart tissue.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T10:23:12Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Your heart has four separate chambers.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:23:13Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In humans, the heart is divided into four chambers: upper left and right atria and lower left and right ventricles.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r060",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T12:59:59.742Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "It has four hollow chambers surrounded by muscle and other heart tissue.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.742Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:59:59.742Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Your heart has four separate chambers.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.742Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:59.742Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "In humans, the heart is divided into four chambers: upper left and right atria and lower left and right ventricles.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.742Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:59.742Z",
+   "target": "f25810",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Last updated 4/11/2023.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:59.742Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “4” is on the snapshot of s6"
+  }
+ ]
+}

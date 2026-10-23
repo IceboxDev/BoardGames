@@ -1,0 +1,453 @@
+{
+ "article": "a0539",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Clementine",
+   "title": "Clementine – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:35.036Z",
+   "snapshot": "99478277d73ea63d7324310c5dc543bbcba2f6bc6a35c1833e9de16018a4594c"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Grapefruit",
+   "title": "Grapefruit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:36.085Z",
+   "snapshot": "eeddcfd2b936187d0ba3b093d461f1cdcaac64ac9a1438bab8c73b704836e1ad"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Limequat",
+   "title": "Limequat – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:37.029Z",
+   "snapshot": "e44cf33633fccfe4bd1426b531aabb73a80bd458aeb95479ad0a8a6e35561d89"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Loganberry",
+   "title": "Loganberry – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:38.064Z",
+   "snapshot": "25c86951da477b104e27516d4c0cd2282ec5fd32dce9b16916aa1a3b4859e87b"
+  },
+  "s5": {
+   "url": "https://www.wheretobuy.davewilson.com/product-information-commercial/product/pluot-interspecific-plums",
+   "title": "Pluot® Interspecific Plums – Dave Wilson Nursery",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:03:35.850Z",
+   "snapshot": "0c43b93e3942b6705a7da33dcf2083a50c0ce0a7cccab7611282fba06be73309"
+  },
+  "s6": {
+   "url": "https://www.smithsonianmag.com/arts-culture/winter-citrus-clementines-180958196",
+   "title": "The Clementine’s Family Tree",
+   "publisher": "Smithsonian Magazine",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T08:14:51Z"
+  },
+  "s7": {
+   "url": "https://www.nature.com/articles/nature25447",
+   "title": "Genomics of the origin and evolution of Citrus",
+   "publisher": "Nature (Wu et al. 2018)",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:57.384Z",
+   "snapshot": "76e63d2e194b7d890c6b52dc937fe6ca0e7287d4eee81af86b1383048b32d2ac"
+  },
+  "s8": {
+   "url": "https://www.specialtyproduce.com/produce/Limequats_9062.php",
+   "title": "Limequats",
+   "publisher": "Specialty Produce",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:33:58.813Z",
+   "snapshot": "3fcddc58fc51256bd348ee09b103f84befdbaddbf1608c5fb4876aa92efcb9e1"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mandarin and orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c045"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pomelo and orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "lime and kumquat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02694",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "raspberry and blackberry",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f02695",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "plum and apricot",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:04.284Z",
+   "target": "f02691",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "mandarin and orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“mandarin and orange”, “Mandarine und Orange”, “мандарин и апельсин”) on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:04.284Z",
+   "target": "f02692",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "pomelo and orange",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“pomelo and orange”, “Pampelmuse und Orange”, “помело и апельсин”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:04.284Z",
+   "target": "f02693",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "lime and kumquat",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“lime and kumquat”, “Limette und Kumquat”, “лайм и кумкват”) on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:04.284Z",
+   "target": "f02694",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Since Logan's time, crosses between the cultivars of raspberry and blackberry have confirmed the loganberry's parentage, with an earlier theory that the loganberry originated as a red-fruiting form of the common Californian blackberry Rubus ursinus now disproved.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.284Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “raspberry and blackberry” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:04.284Z",
+   "target": "f02695",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pluot® interspecific plum hybrids, the most famous of the new Zaiger Interspecifics, are complex Prunus crosses, primarily of plum and apricot (P.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:04.284Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “plum and apricot” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:14:51Z",
+   "target": "f02691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "one of its parents is a sweet orange (a very ancient cross between a mandarin and a pomelo)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:14:55Z",
+   "target": "f02691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a tangor, a citrus fruit hybrid between a willowleaf mandarin orange",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:15:00Z",
+   "target": "f02692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "the origins of grapefruit (a pummelo–sweet orange hybrid)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:15:06Z",
+   "target": "f02692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are a citrus hybrid that was created through an accidental cross between the sweet orange (C. × sinensis) and the pomelo (C. maxima)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:15:14Z",
+   "target": "f02693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Created from crossbreeding West Indian Limes with Kumquats, they were part of a project to develop cold-hardy citrus",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T08:15:20Z",
+   "target": "f02693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a citrus hybrid that is the result of a cross between the Key lime and the kumquat, hybridized by Walter Tennyson Swingle in 1909.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r047",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:28.424Z",
+   "target": "f02691",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "is a tangor, a citrus fruit hybrid between a willowleaf mandarin orange",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:28.424Z",
+   "target": "f02692",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "They are a citrus hybrid that was created through an accidental cross between the sweet orange (C. × sinensis) and the pomelo (C. maxima)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:53:28.424Z",
+   "target": "f02693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Created from crossbreeding West Indian Limes with Kumquats, they were part of a project to develop cold-hardy citrus",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:53:28.424Z",
+   "target": "f02693",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is a citrus hybrid that is the result of a cross between the Key lime and the kumquat, hybridized by Walter Tennyson Swingle in 1909.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:28.424Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s3"
+  }
+ ]
+}

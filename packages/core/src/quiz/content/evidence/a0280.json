@@ -1,0 +1,249 @@
+{
+ "article": "a0280",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Stromberg_%E2%80%93_Der_Film",
+   "title": "Stromberg – Der Film – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:14.244Z",
+   "snapshot": "40a3cf7c28701fdb60e1d3478b784598688ab2f10255bcefe887047ebc04f062"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Heinz_Schubert_(Schauspieler)",
+   "title": "Heinz Schubert (Schauspieler) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:15.195Z",
+   "snapshot": "06f750ecc59c6ad042e5172fde31a3ded78fc7123fa6d9c75972f1cc54c7f5ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Coronation_Street",
+   "title": "Coronation Street – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:44:15.992Z",
+   "snapshot": "0619030c476fbc6b6708a7f6d5b0b06b1d5fa45a542c34ff6b2ee2391546dfd3"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Verliebt_in_Berlin",
+   "title": "Verliebt in Berlin – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:17.297Z",
+   "snapshot": "81d15f35ff2ef7ee82b13d097a96ae90f71fa89b6ed34016bee25115a52886db"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Pastewka_(Fernsehserie)",
+   "title": "Pastewka (Fernsehserie) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:17.632Z",
+   "snapshot": "1b0dcc765536679df00a3594d9f5846e97fc4ccfb47093c04f1812d038b21f1f"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Ein_Herz_und_eine_Seele",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T03:44:18.732Z",
+   "snapshot": "3e1799032adac390e7b892cd641b1b2524382d1b471dc241e385aef389581f33"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f01396",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stromberg",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c024"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f01397",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ein Herz und eine Seele",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f01398",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Lindenstraße",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f01399",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Verliebt in Berlin",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f01400",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pastewka",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:24:23.739Z",
+   "target": "f01396",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stromberg – Der Film ist eine deutsche Filmkomödie von Arne Feldhusen aus dem Jahr 2014.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stromberg” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:24:23.739Z",
+   "target": "f01397",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Besondere Bekanntheit erlangte er durch die Figur des „Ekel“ Alfred Tetzlaff in der Fernsehserie Ein Herz und eine Seele.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ein Herz und eine Seele” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:24:23.739Z",
+   "target": "f01398",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The German TV series Lindenstraße took Coronation Street as the model.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lindenstraße” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:24:23.739Z",
+   "target": "f01399",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Verliebt in Berlin (kurz: „ViB“) ist eine deutsche Telenovela, die vom 28.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Verliebt in Berlin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:24:23.739Z",
+   "target": "f01400",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Pastewka ist eine deutsche Fernsehserie mit Bastian Pastewka, in der er eine fiktive Version seiner selbst spielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:24:23.739Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pastewka” is on the snapshot of s5"
+  }
+ ]
+}

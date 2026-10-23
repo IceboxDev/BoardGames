@@ -1,0 +1,63 @@
+{
+ "source": "publish-or-perish-mge",
+ "card": "ppm-032",
+ "image": "IMG20261022153444.jpg",
+ "questions": [
+  {
+   "category": 1,
+   "discipline": "History",
+   "cardText": "[History] What is the song “Bella Ciao” about?\nA. It is an anti-fascist resistance song\nB. It is an Italian love ballad\nC. It is a celebration song for harvest\nAnswer: A. “Bella Ciao” was one of the songs sung by the Italian anti-fascist resistance movement during WWII. It likely emerged from a blend and reworking of various traditional songs from central and northern Italy and southern France.",
+   "de": "Zur Hymne welcher antifaschistischen Bewegung wurde das italienische Volkslied „Bella ciao“?",
+   "en": "The Italian folk song “Bella ciao” became the anthem of which anti-fascist movement?",
+   "reworked": true,
+   "answerDe": "Die italienische Resistenza (die Partisanen)",
+   "answerEn": "The Italian resistance (the partisans)",
+   "timeline": {
+    "kind": "period",
+    "start": "1943",
+    "end": "1945",
+    "precision": "year",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "The Italian resistance fights German occupiers and fascist forces",
+    "labelDe": "Die italienische Resistenza kämpft gegen deutsche Besatzer und faschistische Truppen"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Bella_ciao",
+    "title": "Bella ciao",
+    "lang": "en"
+   },
+   "notes": "Card overstates: Wikipedia notes little evidence the song was sung during WWII; the partisan version became widespread only after the war. Its origins are unclear (one theory: a late-19th-century song of Po Valley rice weeders).",
+   "domain": "history",
+   "sub": "modern-history"
+  },
+  {
+   "category": 2,
+   "discipline": "Chemistry",
+   "cardText": "[Chemistry] Which one of the following is organic?\nA. Nitrate B. Methane C. Iron oxide\nAnswer: B. Organic compounds are primarily made of carbon atoms bonded with hydrogen, oxygen, nitrogen, or other elements. Methane is a simple organic molecule consisting of one carbon atom bonded to four hydrogen atoms.",
+   "de": "Wie heißt die einfache organische Verbindung aus einem Kohlenstoffatom, an das vier Wasserstoffatome gebunden sind (CH4)?",
+   "en": "What is the name of the simple organic compound made of one carbon atom bonded to four hydrogen atoms (CH4)?",
+   "reworked": true,
+   "answerDe": "Methan",
+   "answerEn": "Methane",
+   "timeline": {
+    "kind": "discovery",
+    "start": "1776-11",
+    "end": null,
+    "precision": "month",
+    "approx": false,
+    "ongoing": false,
+    "labelEn": "Alessandro Volta collects marsh gas at Lake Maggiore and identifies methane as a flammable gas",
+    "labelDe": "Alessandro Volta sammelt am Lago Maggiore Sumpfgas und erkennt Methan als brennbares Gas"
+   },
+   "source": {
+    "url": "https://en.wikipedia.org/wiki/Methane",
+    "title": "Methane",
+    "lang": "en"
+   },
+   "notes": "'Which of the following is organic' only works among the options; asked the underlying fact from the explanation. Card correct.",
+   "domain": "science",
+   "sub": "chemistry"
+  }
+ ]
+}

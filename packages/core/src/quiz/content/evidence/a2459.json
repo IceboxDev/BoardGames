@@ -1,0 +1,242 @@
+{
+ "article": "a2459",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Holy_Cow_(novel)",
+   "title": "Holy Cow (novel)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:24.023Z",
+   "snapshot": "39c6c7740843ee42bb6b16a84e949a69b9d3679fa7f3f07bf5972b6566eb070e"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Gillian_Anderson",
+   "title": "Gillian Anderson",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:00:21.394Z",
+   "snapshot": "ff2aeae2efb18a38f9e6109a350ca955a0d8e49c335b74cd1205584a492e0f88"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Carrie_Fisher",
+   "title": "Carrie Fisher – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:13:18.256Z",
+   "snapshot": "3c09c973c558ba279d8deccf6f6257d0f996f65a6fe3d30971b725cb151df7b0"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Shopgirl",
+   "title": "Shopgirl – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:00:25.027Z",
+   "snapshot": "94c0c6d2ed7077b2df84150ce6bfc287e6ec8b4668d25fd0994554498be53707"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tom_Hanks",
+   "title": "Tom Hanks – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:16.092Z",
+   "snapshot": "57c46152cff047dc6e8f2697f5d829a6685853cdb8250e20df671b3ad44a9442"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f12945",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "David Duchovny",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-173"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f12946",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Gillian Anderson",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-189"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f12947",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Carrie Fisher",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f12948",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Steve Martin",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f12949",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tom Hanks",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:22.915Z",
+   "target": "f12945",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Holy Cow: A Modern-Day Dairy Tale is the 2015 debut novel by American actor and author David Duchovny.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “David Duchovny” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:22.915Z",
+   "target": "f12946",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Vor ihrer Karriere als Serienschauspielerin kellnerte Gillian Anderson und spielte eine Rolle in dem Theaterstück Absent Friends, für das sie den jährlichen Theatre World Award für die beste Nachwuchsschauspielerin erhielt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gillian Anderson” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:22.915Z",
+   "target": "f12947",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "She and her mother appear together in Bright Lights: Starring Carrie Fisher and Debbie Reynolds, a documentary about their relationship.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Carrie Fisher” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:22.915Z",
+   "target": "f12948",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Shopgirl is a 2005 American romantic comedy-drama film directed by Anand Tucker and starring Steve Martin, Claire Danes, and Jason Schwartzman.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Steve Martin” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:22.915Z",
+   "target": "f12949",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tom Hanks was born at the Mount Diablo Hospital in Concord, California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:22.915Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tom Hanks” is on the snapshot of s5"
+  }
+ ]
+}

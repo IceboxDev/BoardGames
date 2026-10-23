@@ -1,0 +1,348 @@
+{
+ "article": "a0985",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Sasha_Waltz",
+   "title": "Sasha Waltz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:33:30.713Z",
+   "snapshot": "8c5f2c31e06c252fa569f92f96c2862f1dfc2eba2ad0e1e03b53cde3632c4d76"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/John_Neumeier",
+   "title": "John Neumeier – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:34.000Z",
+   "snapshot": "622618ebc31c18b5d17be2b7fee68b0075f701b0457fbb80839e1c65b75caa5f"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Pina_Bausch",
+   "title": "Pina Bausch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:35.044Z",
+   "snapshot": "fa10a88499d00f6954d9e97fa38ececcd29ff3cd3aa2f806a509881639dc0a1c"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/John_Cranko",
+   "title": "John Cranko – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:37.113Z",
+   "snapshot": "89670f965014ac8a25bba19a90d44aa4c0418bfc508a494daa5ef146ae4a441a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/William_Forsythe_(choreographer)",
+   "title": "William Forsythe (choreographer) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:33:37.126Z",
+   "snapshot": "94669e6b9c70840ab2828ab66072557658dad3cb645a6677f8f009e8a83af43e"
+  },
+  "s6": {
+   "url": "https://www.staatsballett-berlin.de/kompanie/ballett-in-berlin/chronik.html",
+   "title": "Chronik – Staatsballett Berlin",
+   "publisher": "Staatsballett Berlin",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:37:01.079Z",
+   "snapshot": "22592ee4c4d3c00f95217da0beddb1473e469c3a81ee029cf628de4e647ffb5f"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Sasha Waltz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c083"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04922",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Neumeier",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04923",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Pina Bausch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f04924",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "John Cranko",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f04925",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Forsythe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:15.071Z",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "1993 gründete sie mit Jochen Sandig in Berlin die Tanzkompanie Sasha Waltz & Guests.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.071Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sasha Waltz” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:15.071Z",
+   "target": "f04922",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "John Neumeier (born February 24, 1939) is an American ballet dancer, choreographer, and director.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.071Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Neumeier” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:15.071Z",
+   "target": "f04923",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Tanztheater Wuppertal Pina Bausch made its American debut in Los Angeles as the opening performance of the 1984 Olympic Arts Festival.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.071Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pina Bausch” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:26:15.071Z",
+   "target": "f04924",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "At Cranko's instigation the company established its own ballet school in 1971; it was renamed the John Cranko Schule in his honour in 1974.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.071Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “John Cranko” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:26:15.071Z",
+   "target": "f04925",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "William Forsythe (born December 30, 1949) is an American dancer and choreographer formerly resident in Frankfurt am Main, Germany, and now based in Vermont.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:15.071Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William Forsythe” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:02:18Z",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "wird das Staatsballett Berlin in Ko-Intendanz geleitet von Johannes Öhman (von 2018 bis 2020) und Sasha Waltz (von 2019 bis 2020)",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23",
+   "note": "Historical fact (2019 appointment); not time-sensitive. Öhman ran the company alone from August 2018, the Waltz–Öhman duo from the 2019/20 season."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:02:20Z",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ab der Spielzeit 2019/20 bis August 2020 leiteten Waltz und Johannes Öhmann gemeinsam das Staatsballett Berlin.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r043",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:54:45.560Z",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "wird das Staatsballett Berlin in Ko-Intendanz geleitet von Johannes Öhman (von 2018 bis 2020) und Sasha Waltz (von 2019 bis 2020)",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:54:45.560Z",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Ab der Spielzeit 2019/20 bis August 2020 leiteten Waltz und Johannes Öhmann gemeinsam das Staatsballett Berlin.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:54:45.560Z",
+   "target": "f04921",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Sasha Waltz und Johannes Öhman, Foto: André Rival",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:54:45.560Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Sasha Waltz” is on the snapshot of s6"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "article": "a0952",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Wire",
+   "title": "The Wire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:15:59.569Z",
+   "snapshot": "8c674078b79919b18153407cf61e495c0997a1c4c10e5b981513373cd7f0e0c3"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Mad_Men",
+   "title": "Mad Men – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:17.061Z",
+   "snapshot": "7e4a8fa7d1533bab954703b443f062bee3a7af1052bfb9c9a156d0e1a3fff438"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Treme_(TV_series)",
+   "title": "Treme (TV series) – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:18.029Z",
+   "snapshot": "4b6e043133e70b576b6535a0492d29e8f1ec0d2c9008fa07d6113023e0b49f73"
+  },
+  "s4": {
+   "url": "https://de.wikipedia.org/wiki/Lost_(Fernsehserie)",
+   "title": "Lost (Fernsehserie)",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:31:15.839Z",
+   "snapshot": "0d1e6852bf11ca86c4d9813525066c1faf291a809d3c0a5304fd23b7b3fce15b"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Lost_(TV_series)",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:31:19.153Z",
+   "snapshot": "592ae24e70f4e375ef1da27784a3dd391f58189025de46995a86009539bb38ff"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f04756",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Wire",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c080"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f04759",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mad Men",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f04760",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Treme",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11655",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lost",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 22; transcript tp-193"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:26:10.139Z",
+   "target": "f04756",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Wire is an American crime drama television series created and primarily written by American author and former police reporter David Simon for the cable network HBO.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “The Wire” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:26:10.139Z",
+   "target": "f04759",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mad Men is an American period drama television series created by Matthew Weiner for AMC.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mad Men” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:26:10.139Z",
+   "target": "f04760",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Treme ( trə-MAY) is an American drama television series created by David Simon and Eric Overmyer that aired on HBO.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Treme” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:26:10.139Z",
+   "target": "f11655",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Lost ist eine US-amerikanische Fernsehserie, die von den Überlebenden eines Passagierflugzeugabsturzes und dessen Folgen auf einer Insel im Pazifik handelt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:26:10.139Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Lost” is on the snapshot of s4"
+  }
+ ]
+}

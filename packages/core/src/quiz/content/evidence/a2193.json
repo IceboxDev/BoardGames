@@ -1,0 +1,616 @@
+{
+ "article": "a2193",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%A4se",
+   "title": "Käse",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:47:11.588Z",
+   "snapshot": "77f2f441ed55de7166ac3867f4b64fafe6a044bfae58609b1ce5db569897d0d1"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_milk_production",
+   "title": "List of countries by milk production – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:15.179Z",
+   "snapshot": "4c7567da797997257b698b9c3de4db5785fe451a58126eef8ea86eea7449a6c5"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_potato_production",
+   "title": "List of countries by potato production – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:16.188Z",
+   "snapshot": "ad28b76c046e616ac49b7754010d193e1050fb4d985e4cb1a488fae39f83070a"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/List_of_countries_by_cocoa_production",
+   "title": "List of countries by cocoa production – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:47:17.726Z",
+   "snapshot": "8e0c210e9a5a4ed14560c731fe48d963fc25d9b03d6f57ae8ed98defdab1183e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Cheese",
+   "title": "Cheese – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:15.888Z",
+   "snapshot": "28e9929df67fb1bf9911fbe969a19f90306438804e7a63f5d87091d9d1fc57e0"
+  },
+  "s6": {
+   "url": "https://www.statista.com/statistics/195809/cheese-production-in-the-us-since-2001/",
+   "title": "Leading countries in cheese production 2025/2026",
+   "publisher": "Statista",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:15.386Z",
+   "snapshot": "eb942bd3841e5a9545518a70d6ecb7375b423aa46d98603d96d5d2b9b6c048e6"
+  },
+  "s7": {
+   "url": "https://www.fao.org/dairy-production-products/production/en",
+   "title": "Milk production | Gateway to dairy production and products",
+   "publisher": "Food and Agriculture Organization of the United Nations",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:15.500Z",
+   "snapshot": "e39465f5dc6ee835062338f8cfb3415bfb9048956436d489039f89c6aab0dce3"
+  },
+  "s8": {
+   "url": "https://en.wikipedia.org/wiki/Dairy_in_India",
+   "title": "Dairy in India – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:16.879Z",
+   "snapshot": "c58e3efb5814f49c8cde72dfef074e6fc30ee6b01b3e30d9b675e7ebb9b0cdea"
+  },
+  "s9": {
+   "url": "https://www.statista.com/statistics/382174/global-potato-production-by-country/",
+   "title": "Potato production worldwide 2024",
+   "publisher": "Statista",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:16.274Z",
+   "snapshot": "ebe6e7c652627da7e46bdc3c16313ffa56dff4fd1221676f3b3739f4a8c4fbd5"
+  },
+  "s10": {
+   "url": "https://www.statista.com/statistics/263855/cocoa-bean-production-worldwide-by-region/",
+   "title": "Largest cocoa producing countries worldwide 2024",
+   "publisher": "Statista",
+   "kind": "other",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:45:17.222Z",
+   "snapshot": "8b9264e7eb1c023c08ae9271de55c9e178da770c9f50e812d925d8cbaab76e94"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f11139",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "USA",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 5; transcript tp-158"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 10"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f11141",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "China",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 15"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ivory Coast",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 20; history entry seq 21"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:29:35.114Z",
+   "target": "f11139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Das Land mit der größten Käseproduktion weltweit sind die USA, gefolgt von Deutschland.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “USA” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:29:35.114Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "India",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“India”, “Indien”, “Индия”) on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:35.114Z",
+   "target": "f11141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "China was the largest producer, accounting for 25.5% of world production, followed by India at 15.0%.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “China” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:35.114Z",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ivory Coast was the largest producer of cocoa by a significant margin, with 1,890,442 tonnes produced that year.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:35.114Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ivory Coast” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:48:58Z",
+   "target": "f11139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2022, world production of cheese from whole cow milk was 22.6 million tonnes, with the United States accounting for 28% of the total, followed by Germany, France, Italy and the Netherlands",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "FAO data. The EU as a bloc produces more cheese than the US (Statista/USDA), but no single country does. No non-Wikipedia page with a quotable ranking could be fetched this run."
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:49:01Z",
+   "target": "f11139",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The European Union is by far the top producer of cheese worldwide.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Not a refutation: the EU is a union of 27 countries; among single countries the US leads. Recorded so the bloc caveat is on file; the notes now say so."
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:49:04Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "India is the world’s largest milk producer, with 22 percent of global production, followed by the United States of America, Pakistan, China and Brazil.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:49:08Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "India is first among all countries in both production and consumption of milk.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "FAOSTAT 2022 as tabulated in en.wikipedia 'List of countries by milk production': India 213,779,230 t."
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T07:49:12Z",
+   "target": "f11141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "China was the largest producer, accounting for 25.5% of world production, followed by India at 15.0%.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T07:49:16Z",
+   "target": "f11141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "China is the biggest producer of potatoes worldwide",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T07:49:21Z",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ivory Coast was the largest producer of cocoa by a significant margin, with 1,890,442 tonnes produced that year. This represented 36% of the global cocoa supply",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T07:49:24Z",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "making it the biggest cocoa producing country globally.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r031",
+   "run": "provenance-research-2026-10-23",
+   "note": "Full sentence: 'About one-third of cocoa beans were produced in Côte d'Ivoire in 2024, making it the biggest cocoa producing country globally.'"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11139",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "In 2022, world production of cheese from whole cow milk was 22.6 million tonnes, with the United States accounting for 28% of the total, followed by Germany, France, Italy and the Netherlands",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11139",
+   "claim": "answer",
+   "verdict": "contested",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The European Union is by far the top producer of cheese worldwide.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "India is the world’s largest milk producer, with 22 percent of global production, followed by the United States of America, Pakistan, China and Brazil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s7"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "India is first among all countries in both production and consumption of milk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s8"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "China is the biggest producer of potatoes worldwide",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Ivory Coast was the largest producer of cocoa by a significant margin, with 1,890,442 tonnes produced that year. This represented 36% of the global cocoa supply",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e23",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "making it the biggest cocoa producing country globally.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s10"
+  },
+  {
+   "id": "e24",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "India is the world’s largest milk producer, with 22 percent of global production, followed by the United States of America, Pakistan, China and Brazil.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “India” is on the snapshot of s7"
+  },
+  {
+   "id": "e25",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11140",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "India has the world's largest dairy herd with over 300 million bovines, producing over 190 million tonnes of milk.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “India” is on the snapshot of s8"
+  },
+  {
+   "id": "e26",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11141",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "China is the biggest producer of potatoes worldwide, with about one-third of the world’s potatoes produced.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “China” is on the snapshot of s9"
+  },
+  {
+   "id": "e27",
+   "at": "2026-10-23T12:58:22.208Z",
+   "target": "f11142",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s10",
+     "quote": "About percent of the world’s cocoa beans come from four West African countries: Ivory Coast, Ghana, Nigeria and Cameroon.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:58:22.208Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Ivory Coast” is on the snapshot of s10"
+  }
+ ]
+}

@@ -1,0 +1,453 @@
+{
+ "article": "a2679",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Der_Butt",
+   "title": "Der Butt",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:23.952Z",
+   "snapshot": "6f874494f1383969098bdf6ecb68e6a9db230a60b1e662f0be31959974cb5ce7"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/Der_sch%C3%B6nste_erste_Satz",
+   "title": "Der schönste erste Satz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:12:24.913Z",
+   "snapshot": "3b2b07bc45e80fee4e7b92a6fa50fa32ff70966a572e32160737168d22306cb9"
+  },
+  "s3": {
+   "url": "https://web.archive.org/web/20071206060031/http://www.der-schoenste-erste-satz.de/06_presse/2007/11/07/381.php",
+   "title": "Pressemitteilung 6.11.2007 – Der schönste erste Satz (archived)",
+   "publisher": "Initiative Deutsche Sprache / Stiftung Lesen (organisers), via Internet Archive",
+   "kind": "primary",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:34.739Z",
+   "snapshot": "7388cae060df18c209d5399fb4b84e81f3003714e685000c93148f48ed1c2e40"
+  },
+  "s4": {
+   "url": "https://www.literaturcafe.de/schonester-satz-ist-von-guenter-grass/",
+   "title": "Der schönste erste Satz lautet: »Ilsebill salzte nach.«",
+   "publisher": "literaturcafe.de",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:30.718Z",
+   "snapshot": "9ccea990f346ca20ec6ee643fec8a00065b5ce82b8647438e350b8da042cc59d"
+  },
+  "s5": {
+   "url": "https://www.spiegel.de/kultur/literatur/0,1518,515792,00.html",
+   "title": "Schönster Romananfang gekürt: Der erste Satz geht an Grass",
+   "publisher": "Der Spiegel",
+   "kind": "press",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:49:30.223Z",
+   "snapshot": "c9f177076061aafe6554ff0de7b35e15a9bf8c99df1ce5194ce63332dbfb2bd0"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f14563",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Günter Grass",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 7; transcript tp-398"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f14564",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Der Butt",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 13"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Janosch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 18"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alte Oper",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 23"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:30:56.911Z",
+   "target": "f14563",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Butt ist ein 1977 erschienener Roman des Schriftstellers Günter Grass.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Günter Grass” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:56.911Z",
+   "target": "f14564",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Den Hauptpreis gewann der Anfang des Romans Der Butt von Günter Grass: Ilsebill salzte nach.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:56.911Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Der Butt” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:56.911Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Janosch",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Janosch”, “Янош”) on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:56.911Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Alte Oper",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: no answer (“Alte Oper”, “Альте Опер”) on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T08:12:11Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jetzt wurden im Rahmen einer Gala mit vielen Prominenten in der Frankfurter Alten Oper die Gewinner präsentiert.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T08:12:16Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Gewinner des Wettbewerbs wurden am 6. November 2007 in der Alten Oper in Frankfurt am Main gekürt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T08:12:23Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heute Abend (06.11.2007) wurden in der Frankfurter Oper die Gewinner des Wettbewerbs »Der schönste erste Satz«",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23",
+   "note": "Same-day report; says only 'Frankfurter Oper' (the organisers' release names the Alte Oper)"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T08:12:31Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "wurde der Beginn aus Janoschs Erzählung „Lari Fari Mogelzahn“ gekürt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T08:12:38Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bei den Kindern und Jugendlichen gewann Janosch mit dem ersten Satz aus seiner Erzählung \"Lari Fari Mogelzahn\".",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:12:45Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Als schönster erster Satz wurde der Beginn aus Janoschs Erzählung Lari Fari Mogelzahn gekürt",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r041",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Jetzt wurden im Rahmen einer Gala mit vielen Prominenten in der Frankfurter Alten Oper die Gewinner präsentiert.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s3"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Die Gewinner des Wettbewerbs wurden am 6. November 2007 in der Alten Oper in Frankfurt am Main gekürt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s2"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14567",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Heute Abend (06.11.2007) wurden in der Frankfurter Oper die Gewinner des Wettbewerbs »Der schönste erste Satz«",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "wurde der Beginn aus Janoschs Erzählung „Lari Fari Mogelzahn“ gekürt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bei den Kindern und Jugendlichen gewann Janosch mit dem ersten Satz aus seiner Erzählung \"Lari Fari Mogelzahn\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Als schönster erster Satz wurde der Beginn aus Janoschs Erzählung Lari Fari Mogelzahn gekürt",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s2"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:59:42.301Z",
+   "target": "f14566",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Bei den Kindern und Jugendlichen gewann Janosch mit dem ersten Satz aus seiner Erzählung \"Lari Fari Mogelzahn\".",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:42.301Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Janosch” is on the snapshot of s5"
+  }
+ ]
+}

@@ -1,0 +1,406 @@
+{
+ "article": "a0591",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Paula_Modersohn-Becker",
+   "title": "Paula Modersohn-Becker – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:46.414Z",
+   "snapshot": "34217de990bc6a10910d585c89e56f5bb508f3ca7f86e7b56a4632aa932adafc"
+  },
+  "s2": {
+   "url": "https://de.wikipedia.org/wiki/K%C3%A4the_Kollwitz",
+   "title": "Käthe Kollwitz – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:44.181Z",
+   "snapshot": "c1eeb4dbc58f4ae5f0a28663984a92b47704ae53337a99bde8b8b8ca39032ae7"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Gabriele_M%C3%BCnter",
+   "title": "Gabriele Münter – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T04:06:46.468Z",
+   "snapshot": "35fd7be3883ec86c21f568d0c0ad63dc69d8404d4c43f82e274b0ecc1e30417d"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Hannah_H%C3%B6ch",
+   "title": "Hannah Höch – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:06:47.436Z",
+   "snapshot": "a90683c58992bd521470990a3fd9b5ce5b8be6b9b01b6e78f1d9b5e708ae9253"
+  },
+  "s5": {
+   "url": "https://www.kollwitz.de/biografie",
+   "title": "Biografie – Käthe Kollwitz Museum Köln",
+   "publisher": "Käthe Kollwitz Museum Köln",
+   "kind": "official",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:20.192Z",
+   "snapshot": "4443c61d95263bff8bf637a6ed9c751194cf9e47650bf6208b00ecefed1d15f9"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Paula_Modersohn-Becker",
+   "title": "Paula Modersohn-Becker – Wikipedia",
+   "publisher": "Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T12:34:20.634Z",
+   "snapshot": "f1b0c6809a793f67dd0121d2c8784cb43952aae145cca2b7d38c78882eebe79e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paula Modersohn-Becker",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c050"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Käthe Kollwitz",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f02953",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gabriele Münter",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f02954",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hannah Höch",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23T06:25:11.206Z",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Paula Modersohn-Becker (8 February 1876 – 20 November 1907) was a German Expressionist painter and draftswoman of the late 19th and early 20th centuries.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Paula Modersohn-Becker” is on the snapshot of s1"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:11.206Z",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Käthe Kollwitz war das fünfte Kind von Katharina Schmidt, geborene Rupp (1837–1925), und Karl Schmidt (1825–1898).",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Käthe Kollwitz” is on the snapshot of s2"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:11.206Z",
+   "target": "f02953",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Gabriele Münter war Mitglied der Neuen Künstlervereinigung München (N.K.V.M.) und Mitbegründerin der Malergemeinschaft Der Blaue Reiter.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Gabriele Münter” is on the snapshot of s3"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:11.206Z",
+   "target": "f02954",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Hannah Höch (German: [hœç]; 1 November 1889 – 31 May 1978) was a German Dada artist.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:11.206Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hannah Höch” is on the snapshot of s4"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T07:14:43Z",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Käthe Kollwitz wird als erste Frau ordentliches Mitglied der Preußischen Akademie der Künste und gleichzeitig zur Professorin ernannt.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:14:45Z",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1919: Professorin der Preußischen Akademie der Künste. Sie war die erste Frau, die je zur Mitgliedschaft aufgefordert wurde.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:14:46Z",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Becker is generally accepted as the first known woman painter to paint nude self-portraits, and the first woman painter known to have painted herself pregnant and pregnant and nude.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23",
+   "note": "'First' is the art-historical consensus ('generally accepted'); a non-Wikipedia source could not be fetched this run (Die Zeit 2014, cited by de.wikipedia, blocks crawlers)."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:14:48Z",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Während dieser Zeit entstanden auch ihre Akt-Selbstbildnisse, die in der Kunstgeschichte als die ersten Aktselbstdarstellungen einer Frau gelten.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r001",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:53:37.497Z",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Käthe Kollwitz wird als erste Frau ordentliches Mitglied der Preußischen Akademie der Künste und gleichzeitig zur Professorin ernannt.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:37.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e9 is on the snapshot of s5"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:53:37.497Z",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "1919: Professorin der Preußischen Akademie der Künste. Sie war die erste Frau, die je zur Mitgliedschaft aufgefordert wurde.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:37.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s2"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:53:37.497Z",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Becker is generally accepted as the first known woman painter to paint nude self-portraits, and the first woman painter known to have painted herself pregnant and pregnant and nude.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:37.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:53:37.497Z",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Während dieser Zeit entstanden auch ihre Akt-Selbstbildnisse, die in der Kunstgeschichte als die ersten Aktselbstdarstellungen einer Frau gelten.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:37.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:53:37.497Z",
+   "target": "f02951",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Paula Modersohn-Becker, geborene Paula Hermina Becker (* 8.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:37.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Paula Modersohn-Becker” is on the snapshot of s6"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:53:37.497Z",
+   "target": "f02952",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Für das Werk von Käthe Kollwitz sind Klingers Zyklen »Ein Leben« und »Eine Liebe« von besonderer Bedeutung.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:53:37.497Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Käthe Kollwitz” is on the snapshot of s5"
+  }
+ ]
+}

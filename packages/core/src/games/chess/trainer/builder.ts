@@ -14,8 +14,11 @@
  *   engine's top three — so a played reply that is its best can be marked —
  *   without the build waiting for it.
  * - **How far:** a game *follows* the tree from the start until its own move
- *   differs from the tree's. A position is expanded while some following game
- *   reaches it. An opponent move no following game took (padding, or a move
+ *   differs from the tree's. A game that left it follows again from the first
+ *   tree position it reaches later by another move order (a transposition):
+ *   a position you meet is worth knowing however you got there, and its
+ *   analysis is shared (positions are keyed by position, not by line). A
+ *   position is expanded while some following game reaches it. An opponent move no following game took (padding, or a move
  *   only seen in games that had already left the tree) gets your reply and
  *   the opponent's replies to it (`extension` 3: those are leaves). A game
  *   that never leaves keeps its line growing to its last move.
@@ -38,7 +41,7 @@ import type { Color, Move, Position } from "../engine/types";
 import { moveToUci } from "../engine/uci";
 import { BEST_MOVE_SPEC, finalDepth } from "./eval-policy";
 import { padReplies } from "./padding";
-import { MAX_PLIES, type PositionIndex } from "./position-index";
+import { hashKey, MAX_PLIES, type PositionIndex } from "./position-index";
 import type {
   EngineLine,
   Lc0Stat,
@@ -146,6 +149,11 @@ export async function buildTree(
   let ended = 0;
   let settledPlies = 0;
   const cache = previous && previous.color === color ? previous.nodes : {};
+  // Transpositions: the tree's positions by hash, the games that left the tree
+  // (game → the ply where they left), and the later positions they wait at.
+  const workByHash = new Map<number, Work>();
+  const left = new Map<number, number>();
+  const waitingAt = new Map<number, number[]>();
 
   const enqueue = (w: Work) => {
     if (w.queued) return;
@@ -187,7 +195,51 @@ export async function buildTree(
       ext: 0,
     };
     works.set(key, w);
+    const hash = hashKey(key);
+    workByHash.set(hash, w);
+    const waiters = waitingAt.get(hash);
+    if (waiters) {
+      waitingAt.delete(hash);
+      for (const ref of waiters) {
+        const gi = ref >>> PLY_BITS;
+        const from = left.get(gi);
+        if (from !== undefined && (ref & PLY_MASK) > from) rejoin(w, gi, ref & PLY_MASK);
+      }
+    }
     return w;
+  };
+
+  /** A game that left the tree follows it again from `w`, which it reaches at `ply`. */
+  const rejoin = (w: Work, gi: number, ply: number) => {
+    left.delete(gi);
+    // On a game line again: whatever extension step it was, it grows like one.
+    w.ext = 0;
+    w.inbox.push(((gi << PLY_BITS) | ply) >>> 0);
+    enqueue(w);
+  };
+
+  /**
+   * A game just left the tree at `ply`: it rejoins at the first later position
+   * of its own that is already in the tree, else waits at each of them for the
+   * tree to reach one.
+   */
+  const leave = (gi: number, ply: number) => {
+    const hashes = index.hashesOf(gi);
+    for (let q = ply + 1; q < hashes.length; q++) {
+      const at = workByHash.get(hashes[q] ?? 0);
+      if (at) {
+        rejoin(at, gi, q);
+        return;
+      }
+    }
+    left.set(gi, ply);
+    for (let q = ply + 1; q < hashes.length; q++) {
+      const h = hashes[q] ?? 0;
+      const list = waitingAt.get(h);
+      const ref = ((gi << PLY_BITS) | q) >>> 0;
+      if (list) list.push(ref);
+      else waitingAt.set(h, [ref]);
+    }
   };
 
   const childOf = (w: Work, uci: string): Work | null => {
@@ -381,6 +433,7 @@ export async function buildTree(
         w.deviations.set(uci, (w.deviations.get(uci) ?? 0) + 1);
         deviated++;
         settle(ply);
+        leave(gi, ply);
         continue;
       }
       if (!move) {

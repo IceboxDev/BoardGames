@@ -1,0 +1,354 @@
+{
+ "article": "a1654",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Louisiana_Purchase",
+   "title": "Louisiana Purchase – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:14:01.334Z",
+   "snapshot": "06dffb56c05f1e52474e8211f990b0b04b5ddfda603aeae75195e2200098a9bb"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Alaska_Purchase",
+   "title": "Alaska Purchase – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:39.155Z",
+   "snapshot": "1d8ee07dbebf8aaf7adbe37c525ff6135445337ad8df4f94ce5d3e759a74ec79"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Adams%E2%80%93On%C3%ADs_Treaty",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:40:40.077Z",
+   "snapshot": "d3205d9bb8b4a015acc008115ab436cc4815e39297e4bb98c2859532f0f5b469"
+  },
+  "s4": {
+   "url": "https://history.state.gov/milestones/1801-1829/louisiana-purchase",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:13:58.780Z",
+   "snapshot": "bed6c10b41bd4603032b023fe860ddc6693ec35645d60093f94baa453b64f05f"
+  },
+  "s5": {
+   "url": "https://www.let.rug.nl/usa/outlines/history-2005/the-formation-of-a-national-government/louisiana-and-britain.php",
+   "kind": "other",
+   "lang": "nl",
+   "retrievedAt": "2026-10-23"
+  },
+  "s6": {
+   "url": "https://constitutioncenter.org/blog/the-louisiana-purchase-jeffersons-constitutional-gamble",
+   "title": "The Louisiana Purchase: Jefferson's constitutional gamble",
+   "publisher": "National Constitution Center",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:19.893Z",
+   "snapshot": "83b7faafc2401a496915925e2debdf71d6b96d976cf45f42a2768729d6e87b17"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08266",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Louisiana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c138"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f21980",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "William H. Seward",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f21981",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "New Orleans",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f21982",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sitka",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "His wars in Europe",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s5",
+     "quote": "His wars in Europe",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s1",
+     "quote": "His wars in Europe",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-051/1, u02: Napoleon sold Louisiana after the Haiti disaster with war with Britain imminent; he needed funds for it and wanted the territory out of British reach. The bank's answer and notes (alternatives accepted) are right."
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:27:59.304Z",
+   "target": "f08266",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Louisiana Purchase (French: Vente de la Louisiane, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Louisiana” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:59.304Z",
+   "target": "f21980",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Following the Union victory in the Civil War in 1865, the Tsar instructed Stoeckl to re-enter into negotiations with William H. Seward in the beginning of March 1867.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “William H. Seward” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:59.304Z",
+   "target": "f21981",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Acquisition of Louisiana was a long-term goal of President Thomas Jefferson, who was especially eager to gain control of the crucial Mississippi River port of New Orleans.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “New Orleans” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:59.304Z",
+   "target": "f21982",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "One was New Archangel (now named Sitka), established in 1804 to handle the valuable trade in the skins of sea otters; in 1867, it had 116 small log cabins and 968 residents.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:59.304Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sitka” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T07:53:23Z",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Napoleon had already made a decision to sell the territory to the United States, in order to protect other French territories in the Caribbean and to finance his military efforts in Europe.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T07:53:25Z",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "war between France and England still threatened. Napoleon decided to give up his plans for Louisiana",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23",
+   "note": "Context: imminent war with Britain led Napoleon to sell."
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T07:53:27Z",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "coupled with the prospect of renewed warfare with the United Kingdom, prompted Napoleon to consider selling Louisiana to the United States.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r035",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T12:56:46.586Z",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Napoleon had already made a decision to sell the territory to the United States, in order to protect other French territories in the Caribbean and to finance his military efforts in Europe.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:46.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e10 is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:56:46.586Z",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "war between France and England still threatened. Napoleon decided to give up his plans for Louisiana",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:46.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s4"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:56:46.586Z",
+   "target": "f25648",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "coupled with the prospect of renewed warfare with the United Kingdom, prompted Napoleon to consider selling Louisiana to the United States.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:46.586Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s1"
+  }
+ ]
+}

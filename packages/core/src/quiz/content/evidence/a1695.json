@@ -1,0 +1,508 @@
+{
+ "article": "a1695",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Charles_Bridge",
+   "title": "Charles Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:18.315Z",
+   "snapshot": "fef3d7d6884349ef1664b2eec50383f4028a1177d81d69ec519b2afe8b1f73be"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Ponte_Vecchio",
+   "title": "Ponte Vecchio – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:19.343Z",
+   "snapshot": "f24579dae6eac4df76778c56f025208ccf81b18fd3c72d5bb6b526f971afbebd"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Rialto_Bridge",
+   "title": "Rialto Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:20.394Z",
+   "snapshot": "d42eaa966cfdd5a9bcb509b9b682bb140bbfa147c6aaa5fbc9643143bea20f69"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Stari_Most",
+   "title": "Stari Most – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:17:45.233Z",
+   "snapshot": "f35fcd37f362f93905bb1eba2dc423e7e5fb93c6b8d9f63b6ed5de9acaffd69e"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Tower_Bridge",
+   "title": "Tower Bridge – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:16:21.504Z",
+   "snapshot": "fa6a1bf722559691cb7fcead6cb4616230dbca87a39ea7cbc8b4e84588a7f3ad"
+  },
+  "s6": {
+   "url": "https://de.wikipedia.org/wiki/Golden_Gate_Bridge",
+   "title": "Golden Gate Bridge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:16:18.629Z",
+   "snapshot": "ed20cb6e5374e91ffaaad752c8ac01c9b0823740dc58c61bee9b2f186516b9b5"
+  },
+  "s7": {
+   "url": "https://de.wikipedia.org/wiki/Sydney_Harbour_Bridge",
+   "title": "Sydney Harbour Bridge",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:16:19.478Z",
+   "snapshot": "e62af128f247fad0eeccf216e9ec39abef030d083c759c1a0eb71b57d7cc2da4"
+  },
+  "s8": {
+   "url": "https://www.italia.it/en/veneto/venice/rialto-bridge",
+   "title": "Rialto Bridge",
+   "publisher": "Italia.it (ENIT, Italian National Tourist Board)",
+   "kind": "official",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:39.457Z",
+   "snapshot": "398ade07bd3494b3ba8289501b6ff8a8463799e4e2d1d1cf7b89d7e87ae495fc"
+  },
+  "s9": {
+   "url": "https://www.historyhit.com/locations/the-rialto-bridge/",
+   "title": "The Rialto Bridge - History and Facts",
+   "publisher": "History Hit",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:41:33.973Z",
+   "snapshot": "11178581f6591ef272a48392d9a27fbff831ed22421015b9e44ff1e4b97256e5"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f08471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charles Bridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c142"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f08472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Ponte Vecchio",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Rialto Bridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f08474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Stari Most",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f08475",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tower Bridge",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f14417",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Golden Gate Bridge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 38; transcript tp-003"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23",
+   "target": "f14418",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Sydney Harbour Bridge",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 43; transcript tp-145"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f08471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Charles Bridge (Czech: Karlův most [ˈkarluːf ˈmost] , German: Karlsbrücke [kaʁlsˌbʁʏkə] ) is a medieval stone arch bridge that crosses the Vltava river in Prague, Czech Republic.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Charles Bridge” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f08472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Ponte Vecchio (Italian pronunciation: [ˈponte ˈvɛkkjo]; \"Old Bridge\") is a medieval stone closed-spandrel segmental arch bridge over the Arno, in Florence, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Ponte Vecchio” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The Rialto Bridge (Italian: Ponte di Rialto; Venetian: Ponte de Rialto) is the oldest of the four bridges spanning the Grand Canal in Venice, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Rialto Bridge” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f08474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Old Bridge (Serbo-Croatian: Stari most), also known as the Mostar Bridge, is a rebuilt 16th-century Ottoman bridge in the city of Mostar in Bosnia and Herzegovina.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stari Most” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f08475",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Tower Bridge is a Grade I listed combined bascule, suspension, and, until 1960, cantilever bridge in London, built between 1886 and 1894, designed by Horace Jones and engineered by John Wolfe Barry with the help of Henry Marc Brunel.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Tower Bridge” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f14417",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Die Golden Gate Bridge (englisch für Brücke über das goldene Tor) ist eine Hängebrücke am Eingang zur Bucht von San Francisco über das Golden Gate in Kalifornien.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Golden Gate Bridge” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T06:28:07.048Z",
+   "target": "f14418",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s7",
+     "quote": "Die Sydney Harbour Bridge (deutsch Sydneyer Hafenbrücke) wurde am 19.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:28:07.048Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sydney Harbour Bridge” is on the snapshot of s7"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T06:58:59Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the oldest of the four bridges spanning the Grand Canal in Venice, Italy.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T06:59:01Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is the oldest and most famous of the four bridges that cross the Grand Canal.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T06:59:04Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Rialto Bridge is the oldest of the four bridges that cross Venice’s Grand Canal (the city’s main waterway), connecting the districts of San Polo and San Marco.",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r004",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:56:53.162Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "is the oldest of the four bridges spanning the Grand Canal in Venice, Italy.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:53.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s3"
+  },
+  {
+   "id": "e19",
+   "at": "2026-10-23T12:56:53.162Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "is the oldest and most famous of the four bridges that cross the Grand Canal.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:53.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e16 is on the snapshot of s8"
+  },
+  {
+   "id": "e20",
+   "at": "2026-10-23T12:56:53.162Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Rialto Bridge is the oldest of the four bridges that cross Venice’s Grand Canal (the city’s main waterway), connecting the districts of San Polo and San Marco.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:53.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e17 is on the snapshot of s9"
+  },
+  {
+   "id": "e21",
+   "at": "2026-10-23T12:56:53.162Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s8",
+     "quote": "Must-see in Venice: Rialto Bridge - Italia.it",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:53.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rialto Bridge” is on the snapshot of s8"
+  },
+  {
+   "id": "e22",
+   "at": "2026-10-23T12:56:53.162Z",
+   "target": "f08473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The Rialto Bridge - History and Facts | History Hit",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:56:53.162Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “Rialto Bridge” is on the snapshot of s9"
+  }
+ ]
+}

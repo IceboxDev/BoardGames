@@ -1,0 +1,242 @@
+{
+ "article": "a0044",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Pharisees",
+   "title": "Pharisees – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:13.786Z",
+   "snapshot": "659e36fee2dc07bf344170eeffbcb1a978726b5d0ab1000ea0a81ed776439e6a"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Sadducees",
+   "title": "Sadducees – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:14.546Z",
+   "snapshot": "40f44a3e6618ef33739accf237ec08cf74ba8f3963396ef3f4fdc581b9620209"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dead_Sea_Scrolls",
+   "title": "Dead Sea Scrolls – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:15.661Z",
+   "snapshot": "90fe3e6e86a16acea1dc9daac69846ce2d56e84dddaf8030b80033f18e897a90"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Zealots",
+   "title": "Zealots – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:16.557Z",
+   "snapshot": "3c781dc1165433ca9d697258d12b1d2ecfd9bbed17a0672fd1991461f98dd75a"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Ezra",
+   "title": "Ezra – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:17:17.490Z",
+   "snapshot": "d0dfc1729c6747f52d52cf5eb188845fbe9a083a5e07051eba8a783be78d661e"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f00216",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Pharisees",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c004"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f00217",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Sadducees",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f00218",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Essenes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f00219",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Zealots",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f00220",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Scribes",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:23:41.525Z",
+   "target": "f00216",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "The Pharisees (; Hebrew: פְּרוּשִׁים, romanized: Pərūšīm, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Pharisees” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:23:41.525Z",
+   "target": "f00217",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The Sadducees (; Hebrew: צְדוּקִים, romanized: Ṣəḏūqīm, lit.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Sadducees” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:23:41.525Z",
+   "target": "f00218",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Archaeologists have long associated the scrolls with the ancient Jewish sect known as the Essenes, although some recent interpretations have challenged this connection and argue that priests in Jerusalem or other unknown Jewish groups wrote the scrolls.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Essenes” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:23:41.525Z",
+   "target": "f00219",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The Zealots were members of a Jewish political movement during the Second Temple period who sought to incite the people of Judaea to rebel against the Roman Empire and expel it from the Land of Israel by force of arms, most notably during the First Jewish–Roman War.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Zealots” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:23:41.525Z",
+   "target": "f00220",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Biblical scholar Tova Ganzel has recently argued that Ezra's status as both priest and scribe fits well in its fifth century BCE historical context in light of parallels with the Babylonian temple scribes of the Neo-Babylonian and Persian Periods.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:23:41.525Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Scribes” is on the snapshot of s5"
+  }
+ ]
+}

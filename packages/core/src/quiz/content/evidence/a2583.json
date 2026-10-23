@@ -1,0 +1,406 @@
+{
+ "article": "a2583",
+ "sources": {
+  "s1": {
+   "url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Europameisterschaft",
+   "title": "Fußball-Europameisterschaft",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:07:18.274Z",
+   "snapshot": "5987c8878c51835f98bf0ba194caca6adac68407b5d7ae040ab511947f529959"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Viking_Thunder_Clap",
+   "title": "Viking Thunder Clap",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:20.190Z",
+   "snapshot": "7bc4826e74c17df98b75ccc8714c0c9cf2eb6d429c1f9817647a74a1154528a1"
+  },
+  "s3": {
+   "url": "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Europameisterschaft_2016/Wales",
+   "title": "Fußball-Europameisterschaft 2016/Wales",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T06:07:19.339Z",
+   "snapshot": "b3a26d48f9af71b9dec3505ab36e6e64d7b0cae059317b6c0eec6d466778a436"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/UEFA_Euro_2016_final",
+   "title": "UEFA Euro 2016 final – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:21.302Z",
+   "snapshot": "2cf7928deda31b4ebd945ee4eff60d2ba858c7bf74177d8421953f3972ae43b7"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/UEFA_Euro_2016",
+   "title": "UEFA Euro 2016 – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T06:07:22.439Z",
+   "snapshot": "e3d987b784444eef3cb5a959d5812f54498c3c9f793b1d8e7d8851465405bd2f"
+  },
+  "s6": {
+   "url": "https://www.independent.co.uk/sport/football/international/uefa-admit-expansion-of-european-championships-to-24-teams-not-ideal-7594801.html",
+   "title": "Uefa admit expansion of European Championships to 24 teams 'not ideal'",
+   "publisher": "The Independent",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:48:23.026Z",
+   "snapshot": "9d725066aa43fb980f7c5900d4246013985045050a7777e24e449286852ee7f6"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "2016",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 6; transcript tp-321"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f13878",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Iceland",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 12; transcript tp-084"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f13879",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Wales",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 17; transcript tp-316"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f13881",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Éder",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 27"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f13882",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Antoine Griezmann",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 32"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:30:42.994Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Der Europameister qualifizierte sich bis zur EM 2016 jeweils für den FIFA-Konföderationen-Pokal.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:42.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “2016” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:30:42.994Z",
+   "target": "f13878",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "The chant has been performed by fans of a number of clubs, but came to prominence during the UEFA Euro 2016, when fans of Iceland national team introduced their 'viking clap' or 'volcano clap' with a 'huh' chant.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:42.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Iceland” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:30:42.994Z",
+   "target": "f13879",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Fußball-Europameisterschaft 2016/Wales",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:42.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Wales” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:30:42.994Z",
+   "target": "f13881",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Following a goalless 90 minutes which saw Portugal captain Cristiano Ronaldo depart the match through injury, Portugal then took the lead in the 108th minute through substitute Eder, after his low shot from 25 yards (23 m) beat France goalkeeper Hugo Lloris.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:42.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Éder” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:30:42.994Z",
+   "target": "f13882",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The Player of the Tournament award was given to Antoine Griezmann, who was chosen by UEFA's technical observers, led by UEFA chief technical officer Ioan Lupescu and including Sir Alex Ferguson and Alain Giresse.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:30:42.994Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Antoine Griezmann” is on the snapshot of s5"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T10:43:01Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die zweite Runde ist das neu geschaffene Achtelfinale, für das sich neben den Gruppenersten und -zweiten aus jeder Gruppe (12 Mannschaften) auch die vier besten Gruppendritten qualifizieren.",
+     "quoteLang": "de",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T10:43:03Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uefa are struggling to devise a format for the 24 teams in the finals of Euro 2016, it was conceded today. The final tournament has been expanded from 16 teams",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23",
+   "note": "supports the 2016 expansion from 16 to 24 teams that created the round of 16"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T10:43:04Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "leaving 16 teams going into the new round of 16 knockout stage (ahead of the usual quarter-finals, semi-finals and final)",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r074",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T12:59:27.339Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Die zweite Runde ist das neu geschaffene Achtelfinale, für das sich neben den Gruppenersten und -zweiten aus jeder Gruppe (12 Mannschaften) auch die vier besten Gruppendritten qualifizieren.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:27.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e11 is on the snapshot of s1"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T12:59:27.339Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uefa are struggling to devise a format for the 24 teams in the finals of Euro 2016, it was conceded today. The final tournament has been expanded from 16 teams",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:27.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e12 is on the snapshot of s6"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:59:27.339Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "leaving 16 teams going into the new round of 16 knockout stage (ahead of the usual quarter-finals, semi-finals and final)",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:27.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e13 is on the snapshot of s5"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:59:27.339Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The 2016 UEFA European Football Championship, commonly referred to as UEFA Euro 2016 or simply Euro 2016, was the 15th UEFA European Championship, the quadrennial international men's football championship of Europe organised by UEFA.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:27.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “2016” is on the snapshot of s5"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:59:27.339Z",
+   "target": "f13877",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Uefa are struggling to devise a format for the 24 teams in the finals of Euro 2016, it was conceded today.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:59:27.339Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “2016” is on the snapshot of s6"
+  }
+ ]
+}

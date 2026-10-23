@@ -1,0 +1,242 @@
+{
+ "article": "a0677",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Jean-Claude_Van_Damme",
+   "title": "Jean-Claude Van Damme – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:35.190Z",
+   "snapshot": "9047dfa87e47f48e7587a08d2083dc99ce73fd46162d4fd2b325c73dc34495b2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Arnold_Schwarzenegger",
+   "title": "Arnold Schwarzenegger – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:36.338Z",
+   "snapshot": "2dbbf724eba0c32f71421fe957a1422afd4fbb3addc1e85c0a1a864e18a254e4"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Dwayne_Johnson",
+   "title": "Dwayne Johnson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:37.162Z",
+   "snapshot": "d6c75f8e5452e195b1e030ba7282c0d87c51542668d7c917938f791c9a652e3b"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+   "title": "Mike Tyson – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:12:38.331Z",
+   "snapshot": "81f87e2954fccf743c97939cfdcb0bffbd466729582744cc9d122b90f9c66cf2"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Franz_Beckenbauer",
+   "title": "Franz Beckenbauer – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:19:55.585Z",
+   "snapshot": "b67246b1508aaf58ea35a2872b621a96d820bd54199168ed026eb5b6f9b12928"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f03381",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean-Claude Van Damme",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c057"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f03382",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Arnold Schwarzenegger",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f03383",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Dwayne Johnson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f03384",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "Mike Tyson",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f03385",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franz Beckenbauer",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23T06:25:24.980Z",
+   "target": "f03381",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Jean-Claude Camille François Van Varenberg (born 18 October 1960), known professionally as Jean-Claude Van Damme, is a Belgian martial artist and actor.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Jean-Claude Van Damme” is on the snapshot of s1"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:25:24.980Z",
+   "target": "f03382",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "As of 2026, Schwarzenegger and insurance commissioner Steve Poizner are the last Republicans to win or hold statewide office in California, having both won their respective elections in 2006, with Arnold Schwarzenegger being the last Republican to serve as Governor of California.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Arnold Schwarzenegger” is on the snapshot of s2"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:25:24.980Z",
+   "target": "f03383",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "In 2006, Johnson founded the Dwayne Johnson Rock Foundation, a charity working with at-risk and terminally ill children.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Dwayne Johnson” is on the snapshot of s3"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:25:24.980Z",
+   "target": "f03384",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "In 1987, Nintendo released Mike Tyson's Punch-Out!!, which was well received and sold more than a million copies.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mike Tyson” is on the snapshot of s4"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:25:24.980Z",
+   "target": "f03385",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Franz Anton Beckenbauer was born on 11 September 1945 at a clinic in the Maxvorstadt borough of Munich, the second son of postal-worker Franz Beckenbauer Sr.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:25:24.980Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Franz Beckenbauer” is on the snapshot of s5"
+  }
+ ]
+}

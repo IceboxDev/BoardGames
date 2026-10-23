@@ -1,0 +1,622 @@
+{
+ "source": "trivial-pursuit",
+ "bucket": "geography/cities",
+ "operations": [
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-063",
+    "category": 1
+   },
+   "factId": "f02233"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-189",
+    "category": 1
+   },
+   "factId": "f02772"
+  },
+  {
+   "op": "alias",
+   "printed": {
+    "card": "tp-089",
+    "category": 1
+   },
+   "factId": "f00071"
+  },
+  {
+   "op": "add-facts",
+   "articleId": "a0550",
+   "baseHash": "1e4abc5f1a3c",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-160",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-223",
+      "category": 1
+     }
+    }
+   ],
+   "drop": [],
+   "article": {
+    "titleEn": "Cities at the Edges of the Map",
+    "titleDe": "Städte am Rand der Landkarte",
+    "bodyEn": "Geography sets limits on where people can live in large numbers, and the cities that press against those limits, the farthest north, the farthest south, the farthest from the sea, tell you a good deal about climate, history and stubbornness.\n\nThe northernmost city with more than a million inhabitants is Saint Petersburg, at almost 60 degrees north, roughly the latitude of southern Alaska. Peter the Great founded it on 27 May 1703 on marshland at the mouth of the Neva to give Russia a “window to Europe”, and it served as the imperial capital for two centuries; from 1914 to 1924 it bore the name Petrograd. Its five million people endure dark winters and are rewarded with the White Nights of June, when the sun barely sets. Helsinki, the nearest capital, lies a little farther north, but with about 680,000 inhabitants it falls well short of a million.\n\nFarther north still, the ranking passes to smaller places. The northernmost capital of a sovereign state is Reykjavík, Iceland, at 64 degrees north, settled, according to tradition, by Ingólfr Arnarson in 874 and a town since its market charter of 18 August 1786 and today a city of about 140,000 warmed by geothermal water piped from the volcanic ground. Beyond the Arctic Circle, at 69 degrees, lies Murmansk on the Kola Peninsula, founded on 4 October 1916 as Russia's ice-free Arctic port thanks to the tail of the Gulf Stream. With roughly 270,000 people it is the largest city north of the Arctic Circle, and during the Second World War it was the destination of the Allied convoys that supplied the Soviet Union. Its rival Norilsk, the nickel-mining city in Siberia, is slightly farther north but smaller, and is the northernmost city with more than 100,000 inhabitants.\n\nAt the other end of the world, the southernmost national capital is Wellington, New Zealand, at 41 degrees south. Set on a harbour at the foot of the North Island and named in November 1840 after the Duke of Wellington, it is famous for its wind and for having replaced Auckland as capital in 1865 because it was closer to the country's centre. Auckland, the country's only city with more than a million inhabitants, lies farther north on the same island. Christchurch and Dunedin lie farther south, but they are not capitals.\n\nThe southernmost cities of all lie in South America, on the shores of the Strait of Magellan and the Beagle Channel. Punta Arenas in Chile, at 53 degrees south, was settled by Chile in 1848 as a colony on the strait and grew rich as a coaling station for ships rounding the continent before the Panama Canal opened. With more than 100,000 inhabitants it is the largest city south of the 46th parallel and today a gateway for Antarctic expeditions. Ushuaia in Argentina lies farther south still but is somewhat smaller, so the two towns have argued for decades over which deserves the title of southernmost city in the world.\n\nThe third extreme has nothing to do with latitude. The city with more than a million inhabitants that lies farthest from any sea is Ürümqi, capital of the Xinjiang region in western China. About 2,500 kilometres separate it from the nearest coastline, whichever direction you choose. Founded as the Tang garrison town of Luntai in 648, it grew as a station on the Silk Road and today has some four million inhabitants, a continental climate of scorching summers and bitter winters, and a monument outside the city marking what Chinese geographers call the geographical centre of Asia.\n\n| Record | City | Country | Latitude |\n|---|---|---|---|\n| northernmost city over 1 million | Saint Petersburg | Russia | 59.9° N |\n| northernmost sovereign capital | Reykjavík | Iceland | 64.1° N |\n| largest city north of the Arctic Circle | Murmansk | Russia | 69.0° N |\n| southernmost sovereign capital | Wellington | New Zealand | 41.3° S |\n| million-city farthest from the sea | Ürümqi | China | 43.8° N |\n| largest city south of 46° S | Punta Arenas | Chile | 53.2° S |\n\nEach of these cities exists because something, a river mouth, a warm current, a hot spring, a caravan route, made an unlikely spot worth the trouble.",
+    "bodyDe": "Die Geografie setzt Grenzen, wo Menschen in großer Zahl leben können, und die Städte, die sich an diese Grenzen drängen, die nördlichsten, die südlichsten, die am weitesten vom Meer entfernten, verraten viel über Klima, Geschichte und Sturheit.\n\nDie nördlichste Stadt mit mehr als einer Million Einwohnern ist Sankt Petersburg, auf fast 60 Grad nördlicher Breite, etwa der Breite des südlichen Alaska. Peter der Große gründete sie am 27. Mai 1703 auf Sumpfland an der Mündung der Newa, um Russland ein „Fenster nach Europa“ zu verschaffen, und zwei Jahrhunderte lang war sie Hauptstadt des Zarenreichs; von 1914 bis 1924 hieß sie Petrograd. Ihre fünf Millionen Menschen ertragen dunkle Winter und werden mit den Weißen Nächten im Juni belohnt, wenn die Sonne kaum untergeht. Das nahe Helsinki liegt ein wenig weiter nördlich, doch mit etwa 680.000 Einwohnern bleibt es deutlich unter einer Million.\n\nNoch weiter im Norden geht die Rangliste an kleinere Orte über. Die nördlichste Hauptstadt eines souveränen Staates ist Reykjavik in Island auf 64 Grad Nord, der Überlieferung nach 874 von Ingólfur Arnarson besiedelt, seit dem 18. August 1786 mit Marktrecht ausgestattet und heute eine Stadt mit rund 140.000 Einwohnern, die mit geothermischem Wasser aus dem vulkanischen Boden beheizt wird. Jenseits des Polarkreises, auf 69 Grad, liegt Murmansk auf der Halbinsel Kola, gegründet am 4. Oktober 1916 als Russlands eisfreier Arktishafen dank eines Ausläufers des Golfstroms. Mit rund 270.000 Menschen ist es die größte Stadt nördlich des Polarkreises, und im Zweiten Weltkrieg war es das Ziel der alliierten Geleitzüge, die die Sowjetunion versorgten. Sein Rivale Norilsk, die Nickelbergbaustadt in Sibirien, liegt etwas nördlicher, ist aber kleiner und die nördlichste Stadt mit mehr als 100.000 Einwohnern.\n\nAm anderen Ende der Welt ist die südlichste Hauptstadt eines Staates Wellington in Neuseeland auf 41 Grad Süd. An einem Naturhafen am Fuß der Nordinsel gelegen und im November 1840 nach dem Herzog von Wellington benannt, ist es berühmt für seinen Wind und dafür, 1865 Auckland als Hauptstadt abgelöst zu haben, weil es näher an der Mitte des Landes lag. Auckland, die einzige Millionenstadt des Landes, liegt weiter nördlich auf derselben Insel. Christchurch und Dunedin liegen weiter südlich, sind aber keine Hauptstädte.\n\nDie südlichsten Städte überhaupt liegen in Südamerika, an der Magellanstraße und am Beagle-Kanal. Punta Arenas in Chile, auf 53 Grad Süd, wurde 1848 von Chile als Kolonie an der Meerenge besiedelt und wurde als Kohlestation für Schiffe reich, die den Kontinent umrundeten, bevor der Panamakanal eröffnet wurde. Mit mehr als 100.000 Einwohnern ist es die größte Stadt südlich des 46. Breitengrads und heute ein Ausgangspunkt für Antarktis-Expeditionen. Ushuaia in Argentinien liegt noch weiter südlich, ist aber etwas kleiner, und so streiten beide Orte seit Jahrzehnten darüber, wem der Titel der südlichsten Stadt der Welt gebührt.\n\nDas dritte Extrem hat nichts mit dem Breitengrad zu tun. Die Millionenstadt, die am weitesten von jedem Meer entfernt liegt, ist Ürümqi, Hauptstadt der Region Xinjiang im Westen Chinas. Rund 2.500 Kilometer trennen sie von der nächsten Küste, in welche Richtung man auch wählt. 648 von der Tang-Dynastie als Garnisonsstadt Luntai gegründet, wuchs sie als Station der Seidenstraße und hat heute etwa vier Millionen Einwohner, ein Kontinentalklima mit glühenden Sommern und bitteren Wintern und vor der Stadt ein Denkmal, das den Punkt markiert, den chinesische Geografen als geografischen Mittelpunkt Asiens bezeichnen.\n\n| Rekord | Stadt | Land | Breite |\n|---|---|---|---|\n| nördlichste Millionenstadt | Sankt Petersburg | Russland | 59,9° N |\n| nördlichste Hauptstadt eines Staates | Reykjavik | Island | 64,1° N |\n| größte Stadt nördlich des Polarkreises | Murmansk | Russland | 69,0° N |\n| südlichste Hauptstadt eines Staates | Wellington | Neuseeland | 41,3° S |\n| meerfernste Millionenstadt | Ürümqi | China | 43,8° N |\n| größte Stadt südlich von 46° S | Punta Arenas | Chile | 53,2° S |\n\nJede dieser Städte existiert, weil etwas, eine Flussmündung, eine warme Strömung, eine heiße Quelle, eine Karawanenroute, einen unwahrscheinlichen Ort die Mühe wert machte.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-056",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-174",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-325",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-124",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-270",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "In which year were Manhattan, Brooklyn, Queens, Staten Island and the Bronx consolidated into one City of New York?",
+      "de": "In welchem Jahr wurden Manhattan, Brooklyn, Queens, Staten Island und die Bronx zu einer Stadt New York vereinigt?",
+      "answerEn": "1898",
+      "answerDe": "1898",
+      "timeline": {
+       "kind": "event",
+       "start": "1898-01-01",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The five boroughs are consolidated into Greater New York",
+       "labelDe": "Die fünf Bezirke werden zu Greater New York vereinigt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/City_of_Greater_New_York",
+       "title": "City of Greater New York – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "New York on the Map: Islands, a Park and a Time Zone",
+    "titleDe": "New York auf der Karte: Inseln, ein Park und eine Zeitzone",
+    "bodyEn": "New York City is so familiar from films and photographs that its basic geography often surprises people when they look at a map. The city is a federation of five boroughs, Manhattan, Brooklyn, Queens, Staten Island and the Bronx, and four of them sit on islands: Manhattan and Staten Island are islands of their own, while Brooklyn and Queens occupy the western end of Long Island. Only one borough lies on the North American mainland, and that is The Bronx, north of the Harlem River. Its western part was annexed from Westchester County in 1874 and its eastern part in 1895.\n\nThe five boroughs became one city on 1 January 1898, when Manhattan was joined by the independent city of Brooklyn, then the third-largest in the United States, together with western Queens, Staten Island and the Bronx. The consolidation created Greater New York, at once the second-largest city in the world after London.\n\nAt the heart of Manhattan lies Central Park, laid out from 1858 to the plans of Frederick Law Olmsted and Calvert Vaux. It covers 3.41 km² (843 acres), which makes it larger than the entire Principality of Monaco, whose territory measures only about 2.08 square kilometres. With some 42 million visitors a year it is the most visited urban park in the United States.\n\nIn the harbour stands the city's most famous monument. The Statue of Liberty, a gift from France dedicated in 1886, was erected on a small island that had long been called Bedloe's Island. To honour the statue, Congress renamed it Liberty Island in 1956, and President Eisenhower signed the change on 3 August of that year.\n\nNew York also lies much farther south than many Europeans imagine. At about 40.7° north it is level with Naples and Madrid rather than with London or Paris, which explains its hot, humid summers, although Arctic air from Canada gives it much harsher winters than the Mediterranean.\n\nTime is the other thing that separates it from Europe. Eastern Standard Time, one of the four zones the American railways introduced on 18 November 1883, runs five hours behind Greenwich and six hours behind Central European Time. When the new year begins at midnight in Germany, it is only 6 p.m. (on 31 December) in New York, and Times Square still has six hours to wait before the ball drops.\n\n| Borough | Location |\n|---|---|\n| Manhattan | its own island |\n| Brooklyn | western Long Island |\n| Queens | western Long Island |\n| Staten Island | its own island |\n| The Bronx | mainland |\n\nThe city that seems to be the centre of the world is, on the map, a cluster of islands at the latitude of southern Italy.",
+    "bodyDe": "New York City ist aus Filmen und Fotos so vertraut, dass seine Geografie viele überrascht, wenn sie auf die Karte schauen. Die Stadt ist ein Verbund aus fünf Bezirken, Manhattan, Brooklyn, Queens, Staten Island und die Bronx, und vier von ihnen liegen auf Inseln: Manhattan und Staten Island sind eigene Inseln, Brooklyn und Queens nehmen das westliche Ende von Long Island ein. Nur ein Bezirk liegt auf dem nordamerikanischen Festland, und das ist die Bronx nördlich des Harlem River. Ihr westlicher Teil wurde 1874 aus dem Westchester County eingemeindet, ihr östlicher 1895.\n\nZu einer Stadt wurden die fünf Bezirke am 1. Januar 1898, als sich Manhattan mit der bis dahin selbstständigen Stadt Brooklyn, damals der drittgrößten der Vereinigten Staaten, sowie dem westlichen Queens, Staten Island und der Bronx vereinigte. Die Zusammenlegung schuf Greater New York, auf einen Schlag die zweitgrößte Stadt der Welt nach London.\n\nIm Herzen Manhattans liegt der Central Park, ab 1858 nach Plänen von Frederick Law Olmsted und Calvert Vaux angelegt. Er misst 3,41 km² (843 Acres) und ist damit größer als das ganze Fürstentum Monaco, dessen Staatsgebiet nur etwa 2,08 Quadratkilometer umfasst. Mit rund 42 Millionen Besuchern im Jahr ist er der meistbesuchte Stadtpark der Vereinigten Staaten.\n\nIm Hafen steht das berühmteste Wahrzeichen der Stadt. Die Freiheitsstatue, ein Geschenk Frankreichs, 1886 eingeweiht, wurde auf einer kleinen Insel errichtet, die lange Bedloe's Island hieß. Zu Ehren der Statue benannte der Kongress sie 1956 in Liberty Island um, und Präsident Eisenhower unterzeichnete die Änderung am 3. August jenes Jahres.\n\nNew York liegt außerdem viel weiter südlich, als viele Europäer denken. Auf 40,7° nördlicher Breite liegt es auf einer Höhe mit Neapel und Madrid statt mit London oder Paris, was seine heißen, schwülen Sommer erklärt, auch wenn arktische Luft aus Kanada ihm viel härtere Winter beschert als dem Mittelmeer.\n\nAuch die Zeit trennt es von Europa. Die Eastern Standard Time, eine der vier Zonen, die die amerikanischen Eisenbahnen am 18. November 1883 einführten, liegt fünf Stunden hinter Greenwich und sechs Stunden hinter der Mitteleuropäischen Zeit. Wenn bei uns um Mitternacht das neue Jahr beginnt, ist es in New York erst 18 Uhr (am 31. Dezember), und am Times Square muss man noch sechs Stunden warten, bis die Kugel fällt.\n\n| Bezirk | Lage |\n|---|---|\n| Manhattan | eigene Insel |\n| Brooklyn | westliches Long Island |\n| Queens | westliches Long Island |\n| Staten Island | eigene Insel |\n| die Bronx | Festland |\n\nDie Stadt, die sich für den Mittelpunkt der Welt hält, ist auf der Karte eine Gruppe von Inseln auf der Breite Süditaliens.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-225",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-277",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-116",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-026",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which European capital lies at about 40.4 degrees north, slightly south of New York City?",
+      "de": "Welche europäische Hauptstadt liegt auf etwa 40,4 Grad nördlicher Breite, etwas südlich von New York City?",
+      "answerEn": "Madrid",
+      "answerDe": "Madrid",
+      "timeline": {
+       "kind": "event",
+       "start": "1561-06",
+       "end": null,
+       "precision": "month",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Philip II makes Madrid the permanent seat of the Spanish court",
+       "labelDe": "Philipp II. macht Madrid zum ständigen Sitz des spanischen Hofes"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Madrid",
+       "title": "Madrid – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which Canadian city, founded as Ville-Marie, lies at about 45.5 degrees north and thus farther south than Paris?",
+      "de": "Welche kanadische Stadt, als Ville-Marie gegründet, liegt auf etwa 45,5 Grad nördlicher Breite und damit südlicher als Paris?",
+      "answerEn": "Montreal",
+      "answerDe": "Montreal",
+      "timeline": {
+       "kind": "founding",
+       "start": "1642",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "French settlers found Ville-Marie, today's Montreal",
+       "labelDe": "Französische Siedler gründen Ville-Marie, das heutige Montreal"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Montreal",
+       "title": "Montreal – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which European capital lies at almost 56 degrees north, about level with Moscow?",
+      "de": "Welche europäische Hauptstadt liegt auf fast 56 Grad nördlicher Breite, etwa auf der Höhe von Moskau?",
+      "answerEn": "Edinburgh",
+      "answerDe": "Edinburgh",
+      "timeline": {
+       "kind": "event",
+       "start": "1995",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Edinburgh's Old and New Towns are inscribed as a UNESCO World Heritage Site",
+       "labelDe": "Die Alt- und Neustadt von Edinburgh werden UNESCO-Welterbe"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Edinburgh",
+       "title": "Edinburgh – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Farther North Than You Think: Cities and Their Latitudes",
+    "titleDe": "Nördlicher als gedacht: Städte und ihre Breitengrade",
+    "bodyEn": "Ask Europeans to place their own cities beside those of other continents and most will get it wrong. The Gulf Stream and the North Atlantic Drift keep western Europe so mild that its cities feel far more southerly than they are, while North America, chilled by Arctic air, feels colder than its latitude suggests.\n\nRome is a good example. The Italian capital lies at about 41.9 degrees north, farther north than Barcelona at 41.4 degrees and farther north than New York City at 40.7 degrees. Naples, the great port of southern Italy, sits at 40.8 degrees, so New York and Naples lie almost exactly level with each other, on about 41 degrees north, although one is known for snowstorms and the other for lemon groves. Madrid, on the Manzanares in the centre of the Iberian Peninsula, lies at about 40.4 degrees north, a little south of New York; it became the permanent seat of the Spanish court in 1561.\n\nThe comparison becomes more striking farther north. Paris, at 48.9 degrees, lies north of every large city in the lower 48 states of the USA and farther north than Montreal, which was founded in 1642 as Ville-Marie and sits at about 45.5 degrees north, roughly level with Bordeaux and Turin. Amsterdam lies at 52° north, beyond Vancouver at 49 degrees and far beyond Boston at 42 degrees, and even north of Calgary at 51 degrees. Edinburgh, at almost 56 degrees north, is level with Moscow; its Old and New Towns were inscribed as a World Heritage Site in 1995.\n\nAt the other extreme, few capitals lie as close to the equator as Nairobi. The Kenyan capital, which grew from a railway camp and supply depot of the Uganda Railway in the 1890s, lies at 1° 17′ south, yet at an altitude of about 1,800 metres it enjoys a mild climate rather than tropical heat. Cairo, at about 30 degrees north, and Rio de Janeiro, just north of the Tropic of Capricorn at about 23 degrees south, are both much farther from the equator.\n\n| City | Latitude |\n|---|---|\n| Edinburgh | 55.9° N |\n| Amsterdam | 52.4° N |\n| Paris | 48.9° N |\n| Montreal | 45.5° N |\n| Rome | 41.9° N |\n| Barcelona | 41.4° N |\n| Naples | 40.8° N |\n| New York City | 40.7° N |\n| Madrid | 40.4° N |\n| Nairobi | 1.3° S |\n\nA map with lines of latitude drawn across the Atlantic is one of the quickest ways to unlearn what the weather has taught you.",
+    "bodyDe": "Bittet man Europäer, ihre eigenen Städte neben die anderer Kontinente zu setzen, liegen die meisten daneben. Golfstrom und Nordatlantikstrom halten Westeuropa so mild, dass seine Städte sich viel südlicher anfühlen, als sie liegen, während Nordamerika, von arktischer Luft gekühlt, kälter wirkt, als seine Breite vermuten lässt.\n\nRom ist ein gutes Beispiel. Die italienische Hauptstadt liegt auf rund 41,9 Grad nördlicher Breite, nördlicher als Barcelona auf 41,4 Grad und nördlicher als New York City auf 40,7 Grad. Neapel, der große Hafen Süditaliens, liegt auf 40,8 Grad, sodass New York und Neapel fast exakt auf gleicher Höhe liegen, auf rund 41 Grad nördlicher Breite, obwohl die eine Stadt für Schneestürme und die andere für Zitronenhaine bekannt ist. Madrid, am Manzanares im Zentrum der Iberischen Halbinsel, liegt auf etwa 40,4 Grad nördlicher Breite, ein wenig südlich von New York; 1561 wurde es ständiger Sitz des spanischen Hofes.\n\nWeiter nördlich wird der Vergleich noch erstaunlicher. Paris auf 48,9 Grad liegt nördlicher als jede Großstadt der 48 zusammenhängenden US-Bundesstaaten und nördlicher als Montreal, das 1642 als Ville-Marie gegründet wurde und auf etwa 45,5 Grad nördlicher Breite liegt, ungefähr auf der Höhe von Bordeaux und Turin. Amsterdam liegt auf 52° nördlicher Breite, jenseits von Vancouver auf 49 Grad und weit jenseits von Boston auf 42 Grad, und sogar nördlich von Calgary auf 51 Grad. Edinburgh, auf fast 56 Grad Nord, liegt auf der Höhe von Moskau; seine Alt- und Neustadt wurden 1995 zum Welterbe erklärt.\n\nAm anderen Extrem liegen nur wenige Hauptstädte so nah am Äquator wie Nairobi. Die kenianische Hauptstadt, die in den 1890er-Jahren aus einem Lager und Versorgungsdepot der Uganda-Bahn entstand, liegt auf 1° 17′ südlicher Breite, genießt aber auf rund 1.800 Metern Höhe ein mildes Klima statt tropischer Hitze. Kairo auf etwa 30 Grad Nord und Rio de Janeiro, knapp nördlich des südlichen Wendekreises auf etwa 23 Grad Süd, liegen beide viel weiter vom Äquator entfernt.\n\n| Stadt | Breite |\n|---|---|\n| Edinburgh | 55,9° N |\n| Amsterdam | 52,4° N |\n| Paris | 48,9° N |\n| Montreal | 45,5° N |\n| Rom | 41,9° N |\n| Barcelona | 41,4° N |\n| Neapel | 40,8° N |\n| New York City | 40,7° N |\n| Madrid | 40,4° N |\n| Nairobi | 1,3° S |\n\nEine Karte, auf der die Breitengrade über den Atlantik gezogen sind, ist einer der schnellsten Wege, zu verlernen, was einem das Wetter beigebracht hat.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-161",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-326",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "In which English city is the airport named after John Lennon?",
+      "de": "In welcher englischen Stadt ist der Flughafen nach John Lennon benannt?",
+      "answerEn": "Liverpool",
+      "answerDe": "Liverpool",
+      "timeline": {
+       "kind": "event",
+       "start": "2001",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Liverpool's airport is renamed Liverpool John Lennon Airport",
+       "labelDe": "Der Flughafen von Liverpool wird in Liverpool John Lennon Airport umbenannt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Liverpool_John_Lennon_Airport",
+       "title": "Liverpool John Lennon Airport – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city is the airport named after Charles de Gaulle?",
+      "de": "In welcher Stadt ist der Flughafen nach Charles de Gaulle benannt?",
+      "answerEn": "Paris",
+      "answerDe": "Paris",
+      "timeline": {
+       "kind": "founding",
+       "start": "1974",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Paris Charles de Gaulle Airport opens at Roissy",
+       "labelDe": "Der Flughafen Paris-Charles-de-Gaulle wird in Roissy eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Charles_de_Gaulle_Airport",
+       "title": "Charles de Gaulle Airport – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city is the main airport, at Fiumicino, named after Leonardo da Vinci?",
+      "de": "In welcher Stadt ist der Hauptflughafen in Fiumicino nach Leonardo da Vinci benannt?",
+      "answerEn": "Rome",
+      "answerDe": "Rom",
+      "timeline": {
+       "kind": "founding",
+       "start": "1961-01-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Leonardo da Vinci–Fiumicino Airport is officially opened",
+       "labelDe": "Der Flughafen Leonardo da Vinci–Fiumicino wird offiziell eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Rome_Fiumicino_Airport",
+       "title": "Rome Fiumicino Airport – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city is the airport named after the naval aviator Edward \"Butch\" O'Hare?",
+      "de": "In welcher Stadt ist der Flughafen nach dem Marineflieger Edward „Butch“ O'Hare benannt?",
+      "answerEn": "Chicago",
+      "answerDe": "Chicago",
+      "timeline": {
+       "kind": "event",
+       "start": "1949",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Chicago's Orchard Field is renamed O'Hare after Edward O'Hare",
+       "labelDe": "Chicagos Orchard Field wird nach Edward O'Hare umbenannt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/O%27Hare_International_Airport",
+       "title": "O%27Hare International Airport – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Airports That Carry a Name",
+    "titleDe": "Flughäfen, die einen Namen tragen",
+    "bodyEn": "An airport is often the first thing a visitor learns about a city, and many cities use the name of their airport to say who they are proud of. Presidents, generals and pilots dominate the list, but musicians and artists have joined them in recent decades.\n\nThe most musical example lies in Louisiana. In 2001, the centenary of Louis Armstrong's birth, the airport of New Orleans was renamed Louis Armstrong New Orleans International Airport after the trumpeter and singer who grew up in the city and took its jazz to the world. The airport is owned by the city but actually stands in neighbouring Kenner, about 18 kilometres west of downtown.\n\nIn Arkansas, the airport of Little Rock honours a couple. Adams Field, the capital's airport, was renamed Bill and Hillary Clinton National Airport after the airport commission voted for the change in March 2012. Bill Clinton had been governor of Arkansas before he became president in 1993, and Hillary Clinton later served as Secretary of State.\n\nEurope followed the same path. In 2001, 21 years after his death, the airport of Liverpool was renamed Liverpool John Lennon Airport, with the motto \"above us only sky\" taken from his song \"Imagine\". Paris named its great airport at Roissy, opened in 1974, after Charles de Gaulle, wartime leader of Free France and first president of the Fifth Republic; his initials form part of its code, CDG. Rome's main airport at Fiumicino, officially opened on 15 January 1961, carries the name of Leonardo da Vinci, the Renaissance polymath who sketched flying machines centuries before anyone flew.\n\nChicago chose a pilot. Orchard Field, built during the Second World War beside an aircraft factory, was renamed in 1949 after Edward \"Butch\" O'Hare, a naval aviator and Medal of Honor recipient who was shot down over the Pacific in 1943. It kept its old code ORD, a reminder of the orchard that once stood there.\n\n| Airport | Named after | City |\n|---|---|---|\n| Louis Armstrong New Orleans International | Louis Armstrong | New Orleans |\n| Bill and Hillary Clinton National | Bill and Hillary Clinton | Little Rock |\n| Liverpool John Lennon | John Lennon | Liverpool |\n| Charles de Gaulle | Charles de Gaulle | Paris |\n| Leonardo da Vinci–Fiumicino | Leonardo da Vinci | Rome |\n| O'Hare International | Edward O'Hare | Chicago |\n\nEvery boarding pass printed in these cities carries a small tribute to someone the city wants the world to remember.",
+    "bodyDe": "Ein Flughafen ist oft das Erste, was ein Besucher von einer Stadt kennenlernt, und viele Städte sagen mit dem Namen ihres Flughafens, auf wen sie stolz sind. Präsidenten, Generäle und Piloten beherrschen die Liste, doch in den letzten Jahrzehnten sind Musiker und Künstler hinzugekommen.\n\nDas musikalischste Beispiel liegt in Louisiana. 2001, zum hundertsten Geburtstag Louis Armstrongs, wurde der Flughafen von New Orleans in Louis Armstrong New Orleans International Airport umbenannt, nach dem Trompeter und Sänger, der in der Stadt aufwuchs und ihren Jazz in die Welt trug. Der Flughafen gehört der Stadt, liegt aber eigentlich im benachbarten Kenner, etwa 18 Kilometer westlich der Innenstadt.\n\nIn Arkansas ehrt der Flughafen von Little Rock ein Ehepaar. Adams Field, der Flughafen der Hauptstadt, wurde in Bill and Hillary Clinton National Airport umbenannt, nachdem die Flughafenkommission im März 2012 dafür gestimmt hatte. Bill Clinton war Gouverneur von Arkansas gewesen, bevor er 1993 Präsident wurde, und Hillary Clinton wurde später Außenministerin.\n\nEuropa ging denselben Weg. 2001, 21 Jahre nach seinem Tod, wurde der Flughafen von Liverpool in Liverpool John Lennon Airport umbenannt, mit dem Motto „above us only sky“ aus seinem Lied „Imagine“. Paris benannte seinen großen Flughafen in Roissy, 1974 eröffnet, nach Charles de Gaulle, dem Anführer des Freien Frankreich im Krieg und ersten Präsidenten der Fünften Republik; seine Initialen bilden den Code CDG. Roms Hauptflughafen in Fiumicino, offiziell am 15. Januar 1961 eröffnet, trägt den Namen Leonardo da Vincis, des Universalgelehrten der Renaissance, der Jahrhunderte vor dem ersten Flug Flugmaschinen skizzierte.\n\nChicago wählte einen Piloten. Orchard Field, im Zweiten Weltkrieg neben einer Flugzeugfabrik angelegt, wurde 1949 nach Edward „Butch“ O'Hare umbenannt, einem Marineflieger und Träger der Medal of Honor, der 1943 über dem Pazifik abgeschossen wurde. Er behielt seinen alten Code ORD, eine Erinnerung an den Obstgarten, der dort einst stand.\n\n| Flughafen | Benannt nach | Stadt |\n|---|---|---|\n| Louis Armstrong New Orleans International | Louis Armstrong | New Orleans |\n| Bill and Hillary Clinton National | Bill und Hillary Clinton | Little Rock |\n| Liverpool John Lennon | John Lennon | Liverpool |\n| Charles de Gaulle | Charles de Gaulle | Paris |\n| Leonardo da Vinci–Fiumicino | Leonardo da Vinci | Rom |\n| O'Hare International | Edward O'Hare | Chicago |\n\nJede Bordkarte, die in diesen Städten gedruckt wird, trägt eine kleine Ehrung für jemanden, an den die Stadt die Welt erinnern will.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-110",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-242",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city is the Acropolis Museum, opened in 2009?",
+      "de": "In welcher Stadt befindet sich das 2009 eröffnete Akropolismuseum?",
+      "answerEn": "Athens",
+      "answerDe": "Athen",
+      "timeline": {
+       "kind": "founding",
+       "start": "2009-06-20",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Acropolis Museum opens to the public",
+       "labelDe": "Das Akropolismuseum öffnet für das Publikum"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Acropolis_Museum",
+       "title": "Acropolis Museum – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which city is the Kunsthistorisches Museum, opened by Emperor Franz Joseph I?",
+      "de": "In welcher Stadt befindet sich das von Kaiser Franz Joseph I. eröffnete Kunsthistorische Museum?",
+      "answerEn": "Vienna",
+      "answerDe": "Wien",
+      "timeline": {
+       "kind": "founding",
+       "start": "1891",
+       "end": null,
+       "precision": "year",
+       "approx": true,
+       "ongoing": false,
+       "labelEn": "Emperor Franz Joseph I opens the Kunsthistorisches Museum on the Ring Road",
+       "labelDe": "Kaiser Franz Joseph I. eröffnet das Kunsthistorische Museum an der Ringstraße"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Kunsthistorisches_Museum",
+       "title": "Kunsthistorisches Museum – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Museums Worth the Journey",
+    "titleDe": "Museen, die eine Reise wert sind",
+    "bodyEn": "Some museums are so famous that travellers plan a whole trip around them, and the city becomes almost a frame for the collection.\n\nAmsterdam has two such places within walking distance of each other. The Anne Frank House on the Prinsengracht preserves the secret annex where Anne Frank, her family and four others hid from the Nazi occupiers from 1942 until they were discovered and arrested in August 1944. It opened as a museum on 3 May 1960 and now receives well over a million visitors a year. A short walk south, on the Museum Square beside the Rijksmuseum and the Concertgebouw, stands the Van Gogh Museum, opened on 2 June 1973 in a building designed by Gerrit Rietveld, with the largest collection of Vincent van Gogh's paintings and letters in the world.\n\nLos Angeles owes its great art museum to an oil magnate. J. Paul Getty opened the J. Paul Getty Museum in his ranch house in 1954; later he built a copy of a Roman villa for it, today the Getty Villa in Pacific Palisades. The Getty Center, a $1.3 billion hilltop campus in Brentwood designed by Richard Meier, opened on 16 December 1997, and visitors reach it from the parking garage below by a cable-pulled hovertrain.\n\nIn Athens, the Acropolis Museum stands at the foot of the rock whose finds it displays, from the Bronze Age to Byzantine times. It opened to the public on 20 June 2009, and its glass floors look down onto the excavated streets of an ancient Athenian neighbourhood beneath it.\n\nVienna's Kunsthistorisches Museum, the largest art museum in Austria, grew out of the Habsburg collections. Emperor Franz Joseph I opened it around 1891 in a domed palace on the Ring Road designed by Gottfried Semper and Karl von Hasenauer, directly facing its twin, the Natural History Museum, across Maria-Theresien-Platz.\n\n| Museum | City | Opened |\n|---|---|---|\n| J. Paul Getty Museum | Los Angeles | 1954 |\n| Anne Frank House | Amsterdam | 1960 |\n| Van Gogh Museum | Amsterdam | 1973 |\n| Acropolis Museum | Athens | 2009 |\n| Kunsthistorisches Museum | Vienna | c. 1891 |\n\nEach of these houses tells you something about its city: a diary, a painter, a fortune, a rock, an empire.",
+    "bodyDe": "Manche Museen sind so berühmt, dass Reisende eine ganze Reise um sie herum planen und die Stadt fast zum Rahmen der Sammlung wird.\n\nAmsterdam hat zwei solche Orte, zu Fuß nur wenige Minuten voneinander entfernt. Das Anne-Frank-Haus an der Prinsengracht bewahrt das Hinterhaus, in dem sich Anne Frank, ihre Familie und vier weitere Menschen von 1942 an vor den nationalsozialistischen Besatzern versteckten, bis sie im August 1944 entdeckt und verhaftet wurden. Es wurde am 3. Mai 1960 als Museum eröffnet und empfängt heute weit über eine Million Besucher im Jahr. Ein kurzes Stück südlich, am Museumplein neben dem Rijksmuseum und dem Concertgebouw, steht das Van-Gogh-Museum, eröffnet am 2. Juni 1973 in einem Gebäude von Gerrit Rietveld, mit der größten Sammlung von Gemälden und Briefen Vincent van Goghs weltweit.\n\nLos Angeles verdankt sein großes Kunstmuseum einem Ölmagnaten. J. Paul Getty eröffnete das J. Paul Getty Museum 1954 in seinem Ranchhaus; später ließ er dafür die Kopie einer römischen Villa bauen, die heutige Getty Villa in Pacific Palisades. Das Getty Center, ein 1,3 Milliarden Dollar teurer Campus auf einem Hügel in Brentwood nach Entwürfen von Richard Meier, wurde am 16. Dezember 1997 eröffnet, und Besucher erreichen es vom Parkhaus am Fuß des Hügels mit einer seilgezogenen Luftkissenbahn.\n\nIn Athen steht das Akropolismuseum am Fuß des Felsens, dessen Funde es zeigt, von der Bronzezeit bis in byzantinische Zeit. Es wurde am 20. Juni 2009 eröffnet, und seine Glasböden geben den Blick frei auf die ausgegrabenen Straßen eines antiken Athener Wohnviertels darunter.\n\nDas Kunsthistorische Museum in Wien, das größte Kunstmuseum Österreichs, ging aus den Sammlungen der Habsburger hervor. Kaiser Franz Joseph I. eröffnete es um 1891 in einem Kuppelpalast an der Ringstraße nach Plänen von Gottfried Semper und Karl von Hasenauer, direkt gegenüber seinem Zwilling, dem Naturhistorischen Museum, auf der anderen Seite des Maria-Theresien-Platzes.\n\n| Museum | Stadt | Eröffnet |\n|---|---|---|\n| J. Paul Getty Museum | Los Angeles | 1954 |\n| Anne-Frank-Haus | Amsterdam | 1960 |\n| Van-Gogh-Museum | Amsterdam | 1973 |\n| Akropolismuseum | Athen | 2009 |\n| Kunsthistorisches Museum | Wien | um 1891 |\n\nJedes dieser Häuser erzählt etwas über seine Stadt: ein Tagebuch, ein Maler, ein Vermögen, ein Felsen, ein Weltreich.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-199",
+      "category": 3
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-105",
+      "category": 1
+     }
+    },
+    {
+     "printed": {
+      "card": "tp-307",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "Which capital lies on the northeastern bank of the Río de la Plata, opposite Buenos Aires?",
+      "de": "Welche Hauptstadt liegt am nordöstlichen Ufer des Río de la Plata, gegenüber von Buenos Aires?",
+      "answerEn": "Montevideo",
+      "answerDe": "Montevideo",
+      "timeline": {
+       "kind": "founding",
+       "start": "1726-12-24",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Bruno Mauricio de Zabala records the foundation of Montevideo",
+       "labelDe": "Bruno Mauricio de Zabala verzeichnet die Gründung Montevideos"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Montevideo",
+       "title": "Montevideo – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "What is the name of Havana's eight-kilometre seafront esplanade and seawall?",
+      "de": "Wie heißt Havannas acht Kilometer lange Uferpromenade mit Ufermauer?",
+      "answerEn": "Malecón",
+      "answerDe": "Malecón",
+      "timeline": {
+       "kind": "event",
+       "start": "1901",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Construction of Havana's Malecón begins",
+       "labelDe": "Der Bau des Malecón in Havanna beginnt"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Malec%C3%B3n,_Havana",
+       "title": "Malec%C3%B3n, Havana – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "Which American academic publicised the Inca citadel of Machu Picchu to the world in 1911?",
+      "de": "Welcher amerikanische Akademiker machte die Inka-Zitadelle Machu Picchu 1911 weltweit bekannt?",
+      "answerEn": "Hiram Bingham",
+      "answerDe": "Hiram Bingham",
+      "timeline": {
+       "kind": "lifespan",
+       "start": "1875-11-19",
+       "end": "1956-06-06",
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "Life of the explorer and politician Hiram Bingham III",
+       "labelDe": "Leben des Forschers und Politikers Hiram Bingham III"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Hiram_Bingham_III",
+       "title": "Hiram Bingham III – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "Latin America's Cities and Their Stories",
+    "titleDe": "Lateinamerikas Städte und ihre Geschichten",
+    "bodyEn": "Latin America's cities and sites carry stories that reach far beyond the continent, from the papacy to the Beatles.\n\nOn 13 March 2013 the cardinals in Rome elected the first pope from the Americas. Jorge Mario Bergoglio was born on 17 December 1936 in Flores, a neighbourhood of Buenos Aires, the eldest of five children of an Italian immigrant accountant from Piedmont. He worked as a chemical technician before joining the Jesuits, became archbishop of his home city in 1998 and took the name Francis after Francis of Assisi. He died on 21 April 2025 in Vatican City.\n\nAcross the Río de la Plata from Buenos Aires lies Montevideo, the capital of Uruguay, on the northeastern bank of the estuary. The Spanish soldier Bruno Mauricio de Zabala expelled a Portuguese garrison in 1724, and his diary records 24 December 1726 as the city's foundation. The two cities share the tango, which grew up in their port districts at the end of the nineteenth century.\n\nIn Havana, the Cold War produced an unlikely monument. The Beatles had once been frowned upon in Cuba, but on 8 December 2000, the 20th anniversary of his murder, a bronze statue of John Lennon seated on a bench was unveiled in a park in the Vedado district, with Fidel Castro attending the ceremony. Not far away runs the Malecón, Havana's eight-kilometre esplanade and seawall along the coast, begun in 1901 to protect the city from the waves of winter storms.\n\nHigh in the Andes stands the continent's most famous ruin. Machu Picchu, the Inca citadel on a mountain ridge above the Urubamba valley, lies in Peru and was inscribed as a UNESCO World Heritage Site in 1983. It was publicised to the world in 1911 by the American academic Hiram Bingham, who reached it with the guidance of local farmers on the Yale Peruvian Expedition; Bingham later served as governor of Connecticut for a single day.\n\n| Place | Country | Story |\n|---|---|---|\n| Buenos Aires | Argentina | birthplace of Pope Francis |\n| Montevideo | Uruguay | founded 1726 on the Río de la Plata |\n| Havana | Cuba | John Lennon statue, Malecón |\n| Machu Picchu | Peru | Inca citadel, made famous by Hiram Bingham |\n\nFrom a pope's birthplace to a Beatle on a park bench, the region keeps surprising those who think they know its map.",
+    "bodyDe": "Lateinamerikas Städte und Stätten tragen Geschichten, die weit über den Kontinent hinausreichen, vom Papsttum bis zu den Beatles.\n\nAm 13. März 2013 wählten die Kardinäle in Rom den ersten Papst aus Amerika. Jorge Mario Bergoglio wurde am 17. Dezember 1936 in Flores geboren, einem Viertel von Buenos Aires, als ältestes von fünf Kindern eines italienischen Buchhalters aus dem Piemont. Er arbeitete als Chemietechniker, bevor er den Jesuiten beitrat, wurde 1998 Erzbischof seiner Heimatstadt und wählte den Namen Franziskus nach Franz von Assisi. Er starb am 21. April 2025 in der Vatikanstadt.\n\nGegenüber von Buenos Aires, auf der anderen Seite des Río de la Plata, liegt Montevideo, die Hauptstadt Uruguays, am nordöstlichen Ufer der Mündung. Der spanische Soldat Bruno Mauricio de Zabala vertrieb 1724 eine portugiesische Garnison, und sein Tagebuch nennt den 24. Dezember 1726 als Gründungstag der Stadt. Beide Städte teilen den Tango, der Ende des 19. Jahrhunderts in ihren Hafenvierteln entstand.\n\nIn Havanna brachte der Kalte Krieg ein unwahrscheinliches Denkmal hervor. Die Beatles waren in Kuba einst verpönt, doch am 8. Dezember 2000, dem 20. Jahrestag seiner Ermordung, wurde in einem Park im Viertel Vedado eine Bronzestatue von John Lennon auf einer Bank enthüllt, und Fidel Castro nahm an der Zeremonie teil. Nicht weit davon verläuft der Malecón, Havannas acht Kilometer lange Uferpromenade und Ufermauer entlang der Küste, 1901 begonnen, um die Stadt vor den Wellen der Winterstürme zu schützen.\n\nHoch in den Anden steht die berühmteste Ruine des Kontinents. Machu Picchu, die Inka-Zitadelle auf einem Bergrücken über dem Urubamba-Tal, liegt in Peru und wurde 1983 in die Welterbeliste der UNESCO aufgenommen. Bekannt gemacht wurde sie 1911 von dem amerikanischen Akademiker Hiram Bingham, der sie auf der Peru-Expedition der Universität Yale mit Hilfe einheimischer Bauern erreichte; Bingham war später einen einzigen Tag lang Gouverneur von Connecticut.\n\n| Ort | Land | Geschichte |\n|---|---|---|\n| Buenos Aires | Argentinien | Geburtsort von Papst Franziskus |\n| Montevideo | Uruguay | 1726 am Río de la Plata gegründet |\n| Havanna | Kuba | John-Lennon-Statue, Malecón |\n| Machu Picchu | Peru | Inka-Zitadelle, bekannt gemacht von Hiram Bingham |\n\nVom Geburtsort eines Papstes bis zu einem Beatle auf einer Parkbank überrascht die Region alle, die glauben, ihre Karte zu kennen.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  },
+  {
+   "op": "new-article",
+   "facts": [
+    {
+     "printed": {
+      "card": "tp-035",
+      "category": 1
+     }
+    },
+    {
+     "generated": {
+      "en": "In which town in New South Wales stands the Big Banana, built in 1964?",
+      "de": "In welcher Stadt in New South Wales steht die 1964 gebaute Big Banana?",
+      "answerEn": "Coffs Harbour",
+      "answerDe": "Coffs Harbour",
+      "timeline": {
+       "kind": "creation",
+       "start": "1964",
+       "end": null,
+       "precision": "year",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Big Banana is built in Coffs Harbour",
+       "labelDe": "Die Big Banana wird in Coffs Harbour gebaut"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Big_Banana",
+       "title": "Big Banana – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which town on Queensland's Sunshine Coast stands the 16-metre Big Pineapple?",
+      "de": "In welchem Ort an Queenslands Sunshine Coast steht die 16 Meter hohe Big Pineapple?",
+      "answerEn": "Woombye",
+      "answerDe": "Woombye",
+      "timeline": {
+       "kind": "creation",
+       "start": "1971-08-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Big Pineapple opens at Woombye, Queensland",
+       "labelDe": "Die Big Pineapple wird in Woombye, Queensland, eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Big_Pineapple",
+       "title": "Big Pineapple – Wikipedia",
+       "lang": "en"
+      }
+     }
+    },
+    {
+     "generated": {
+      "en": "In which South Australian town stands the Big Lobster, known locally as Larry the Lobster?",
+      "de": "In welcher südaustralischen Stadt steht der Big Lobster, vor Ort „Larry the Lobster“ genannt?",
+      "answerEn": "Kingston SE",
+      "answerDe": "Kingston SE",
+      "timeline": {
+       "kind": "creation",
+       "start": "1979-12-15",
+       "end": null,
+       "precision": "day",
+       "approx": false,
+       "ongoing": false,
+       "labelEn": "The Big Lobster opens in Kingston SE, South Australia",
+       "labelDe": "Der Big Lobster wird in Kingston SE, Südaustralien, eröffnet"
+      },
+      "source": {
+       "url": "https://en.wikipedia.org/wiki/Big_Lobster",
+       "title": "Big Lobster – Wikipedia",
+       "lang": "en"
+      }
+     }
+    }
+   ],
+   "article": {
+    "titleEn": "The World's Largest: Giant Roadside Monuments",
+    "titleDe": "Die größten der Welt: Riesendenkmäler am Straßenrand",
+    "bodyEn": "Small towns far from any famous sight have long found a cheap way onto the tourist map: build something enormous beside the highway and call it the world's largest. Two countries in particular have turned this into a tradition.\n\nCanada's maritime province of New Brunswick has two of the best-known examples. Nackawic, a town built in the late 1960s for families displaced by the Mactaquac Dam, is home to the World's Largest Axe, completed on 11 May 1991 as a tribute to the forestry industry that sustains the town. Shediac, which calls itself the \"Lobster Capital of the World\" and holds a lobster festival every July, greets drivers at its western entrance with a 90-ton sculpture called The World's Largest Lobster. Both monuments stand in Canada, a country whose roadsides are dotted with giant geese, apples and even a giant nickel.\n\nAustralia calls such monuments its Big Things, and it has more than a hundred of them. The first to become famous was the Big Banana in Coffs Harbour, New South Wales, a walk-through banana built in 1964 on a plantation by Betty and John Landi and Stella and John Enveoldson to sell fruit to passing motorists; it has since grown into an amusement park. The Big Pineapple, 16 metres tall, opened on 15 August 1971 at Woombye on Queensland's Sunshine Coast, and visitors can climb inside it.\n\nSouth Australia answered with a crustacean of its own. The Big Lobster, known locally as Larry the Lobster, stands 17 metres tall in the town of Kingston SE. Built of steel and fibreglass by Paul Kelly to draw travellers to a restaurant and visitor centre, it opened on 15 December 1979 after six months of construction.\n\n| Monument | Town | Country |\n|---|---|---|\n| World's Largest Axe | Nackawic | Canada |\n| World's Largest Lobster | Shediac | Canada |\n| Big Banana | Coffs Harbour | Australia |\n| Big Pineapple | Woombye | Australia |\n| Big Lobster | Kingston SE | Australia |\n\nKitsch to some and beloved to others, these giants have done exactly what their builders wanted: people stop, take a photo and remember the name of the town.",
+    "bodyDe": "Kleinstädte fern jeder berühmten Sehenswürdigkeit haben schon lange einen billigen Weg auf die Touristenkarte gefunden: etwas Riesiges an den Highway bauen und es zum größten der Welt erklären. Vor allem zwei Länder haben daraus eine Tradition gemacht.\n\nKanadas Seeprovinz New Brunswick besitzt zwei der bekanntesten Beispiele. Nackawic, eine Stadt, die Ende der 1960er-Jahre für die durch den Mactaquac-Staudamm umgesiedelten Familien gebaut wurde, ist die Heimat der größten Axt der Welt, fertiggestellt am 11. Mai 1991 als Hommage an die Forstwirtschaft, von der die Stadt lebt. Shediac, das sich „Hummerhauptstadt der Welt“ nennt und jeden Juli ein Hummerfest feiert, empfängt Autofahrer an seiner westlichen Einfahrt mit einer 90 Tonnen schweren Skulptur namens „The World's Largest Lobster“, dem größten Hummer der Welt. Beide Denkmäler stehen in Kanada, einem Land, dessen Straßenränder von riesigen Gänsen, Äpfeln und sogar einer riesigen Münze gesäumt sind.\n\nAustralien nennt solche Denkmäler seine „Big Things“, und es besitzt mehr als hundert davon. Als erstes berühmt wurde die Big Banana in Coffs Harbour in New South Wales, eine begehbare Banane, 1964 auf einer Plantage von Betty und John Landi sowie Stella und John Enveoldson gebaut, um vorbeifahrenden Autofahrern Obst zu verkaufen; inzwischen ist daraus ein Freizeitpark geworden. Die 16 Meter hohe Big Pineapple wurde am 15. August 1971 in Woombye an Queenslands Sunshine Coast eröffnet, und Besucher können in sie hineinsteigen.\n\nSüdaustralien antwortete mit einem eigenen Krustentier. Der Big Lobster, vor Ort als „Larry the Lobster“ bekannt, steht 17 Meter hoch in der Stadt Kingston SE. Von Paul Kelly aus Stahl und Glasfaser gebaut, um Reisende zu einem Restaurant und Besucherzentrum zu locken, wurde er am 15. Dezember 1979 nach sechs Monaten Bauzeit eröffnet.\n\n| Denkmal | Ort | Land |\n|---|---|---|\n| größte Axt der Welt | Nackawic | Kanada |\n| größter Hummer der Welt | Shediac | Kanada |\n| Big Banana | Coffs Harbour | Australien |\n| Big Pineapple | Woombye | Australien |\n| Big Lobster | Kingston SE | Australien |\n\nFür die einen Kitsch, für die anderen heiß geliebt, haben diese Riesen genau das erreicht, was ihre Erbauer wollten: Die Leute halten an, machen ein Foto und merken sich den Namen der Stadt.",
+    "notesEn": "",
+    "notesDe": ""
+   }
+  }
+ ],
+ "handoff": [
+  {
+   "card": "tp-003",
+   "category": 1,
+   "domain": "art",
+   "sub": "architecture",
+   "why": "Asks about a bridge (Golden Gate's 'International Orange' paint); bridges live in art/architecture (a1971 'The Bridges That Held the World Span Record' already holds the Golden Gate). Not an alias: f09851 asks the 1937 span record, not the colour."
+  },
+  {
+   "card": "tp-145",
+   "category": 1,
+   "domain": "art",
+   "sub": "architecture",
+   "why": "Asks for a bridge by its nickname (Sydney Harbour Bridge, 'the Coathanger'); belongs with the bridge articles in art/architecture (a1971)."
+  }
+ ]
+}

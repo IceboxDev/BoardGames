@@ -1,0 +1,294 @@
+{
+ "article": "a2090",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/The_Red_and_the_Black",
+   "title": "The Red and the Black – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:45.784Z",
+   "snapshot": "19b9df258b979475f0e04d4e877397dabb8eea43e0a056f270333b7cec36dfb2"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn",
+   "title": "Adventures of Huckleberry Finn – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:46.887Z",
+   "snapshot": "f54334e42220584fda739f7755e8ba97f781f3dd649aeaf264d1c3b04991f1ae"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/George_Orwell",
+   "title": "George Orwell – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:25:25.755Z",
+   "snapshot": "cff77f7c2ef13ffe5017a1b78f1954fd4573ddc73f1870b23666190399ed794e"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Voltaire",
+   "title": "Voltaire – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T03:45:33.243Z",
+   "snapshot": "ac972b369667f26d0484f79c8596a1cda89472bcb3f5165f73248b0780374441"
+  },
+  "s5": {
+   "url": "https://de.wikipedia.org/wiki/Hans_Fallada",
+   "title": "Hans Fallada – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "de",
+   "retrievedAt": "2026-10-23T05:40:44.960Z",
+   "snapshot": "af17a878db6507adb34acddd16605b0aa2683bded3227b9142d9735acae254a4"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Hans_Fallada",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T05:40:48.609Z",
+   "snapshot": "afc3c0d400df4bd57e3ae2e408c7babf42eaa1b16b2abaf3e3d745a27628f2ab"
+  },
+  "s7": {
+   "url": "https://www.bbc.com/culture/article/20151204-the-greatest-british-novel",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-21"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f10446",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Stendhal",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c175"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f10447",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Mark Twain",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f10449",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "George Orwell",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f22301",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "François-Marie Arouet",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f28901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Hans Fallada",
+     "quoteLang": "de",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 40"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f28901",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hans Fallada",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by history entry seq 40"
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:29:20.515Z",
+   "target": "f10446",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "Le Rouge et le Noir (French pronunciation: [lə ʁuʒ e l(ə) nwaʁ]; meaning The Red and the Black) is a psychological novel in two volumes by Stendhal, published in 1830.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.515Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Stendhal” is on the snapshot of s1"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:29:20.515Z",
+   "target": "f10447",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Adventures of Huckleberry Finn is a picaresque novel by American author Mark Twain that was first published in the United Kingdom in December 1884 and in the United States in February 1885.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.515Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Mark Twain” is on the snapshot of s2"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:29:20.515Z",
+   "target": "f10449",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "Eric Arthur Blair (25 June 1903 – 21 January 1950) was an English novelist, poet, essayist, journalist, and critic who wrote under the pen name of George Orwell.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.515Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “George Orwell” is on the snapshot of s3"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:29:20.515Z",
+   "target": "f22301",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "François-Marie Arouet (French: [fʁɑ̃swa maʁi aʁwɛ]; 21 November 1694 – 30 May 1778), known by his pen name Voltaire (, US also ; French: [vɔltɛːʁ]), was a French Enlightenment writer, philosopher (philosophe), satirist, and historian.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.515Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “François-Marie Arouet” is on the snapshot of s4"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:29:20.515Z",
+   "target": "f28901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Mit Erscheinen seines ersten Romans Der junge Goedeschal (1920) verwendete Rudolf Ditzen als Buchautor erstmals das Pseudonym Hans Fallada.",
+     "quoteLang": "de",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.515Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Fallada” is on the snapshot of s5"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:29:20.515Z",
+   "target": "f28901",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Hans Fallada (German: [hans ˈfa.la.da] ; born Rudolf Wilhelm Friedrich Ditzen; 21 July 1893 – 5 February 1947) was a German writer of the first half of the 20th century.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:29:20.515Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Hans Fallada” is on the snapshot of s6"
+  }
+ ]
+}

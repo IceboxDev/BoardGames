@@ -1,0 +1,440 @@
+{
+ "article": "a1295",
+ "sources": {
+  "s1": {
+   "url": "https://en.wikipedia.org/wiki/Date_palm",
+   "title": "Date palm – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:55.109Z",
+   "snapshot": "57b4efc459dca7914b3b73c814eb2d178cae1b4ef429bd6a5d2cbc83ccbc5e70"
+  },
+  "s2": {
+   "url": "https://en.wikipedia.org/wiki/Cavendish_banana",
+   "title": "Cavendish banana – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:56.093Z",
+   "snapshot": "1c1934607928d38946933ba473258dea71f3d1cacc68e5763acdb7041873f551"
+  },
+  "s3": {
+   "url": "https://en.wikipedia.org/wiki/Coconut",
+   "title": "Coconut – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:57.103Z",
+   "snapshot": "c0d92b4136ecda0623cf99521eced62d29c813431db48617fcb8f27dbfe77a85"
+  },
+  "s4": {
+   "url": "https://en.wikipedia.org/wiki/Jackfruit",
+   "title": "Jackfruit – Wikipedia",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:58.188Z",
+   "snapshot": "74becdbc9cd5fd73e6e00565683d2f03367e0dd305a70720287379ad203180ea"
+  },
+  "s5": {
+   "url": "https://en.wikipedia.org/wiki/Durian",
+   "title": "Durian",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:59.205Z",
+   "snapshot": "880d582ed2a9fe40a25842370cbc400ff54be2a04435d47089d0fdf01f214e20"
+  },
+  "s6": {
+   "url": "https://en.wikipedia.org/wiki/Judean_date_palm",
+   "title": "Judean date palm",
+   "kind": "encyclopedia",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:53:00.090Z",
+   "snapshot": "2a6b5afae2c10db41311c185b25a17e1d139745d7cf232eaa4bf7dd98a8e7e31"
+  },
+  "s7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3309767",
+   "kind": "scholarly",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:57.318Z",
+   "snapshot": "51a6ce81003da3129192a725af4f936d35bdbcbb4ccfa06d0d236dbd8f95f534"
+  },
+  "s8": {
+   "url": "https://www.nationalgeographic.com/science/article/2000-year-old-phoenix-seed-rises-from-the-ashes",
+   "kind": "press",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T04:52:58.334Z",
+   "snapshot": "e7a1452fe1335eac5afe5b5af4286e84ff32c96f46b2139da1968503caea2e94"
+  },
+  "s9": {
+   "url": "https://hort.purdue.edu/newcrop/morton/jackfruit_ars.html",
+   "title": "Jackfruit – J. Morton, Fruits of Warm Climates (1987), Purdue NewCROP",
+   "publisher": "Purdue University Center for New Crops (Julia F. Morton)",
+   "kind": "book",
+   "lang": "en",
+   "retrievedAt": "2026-10-23T12:39:18.032Z",
+   "snapshot": "b905866aa50bae31b8453e315963c4c6f8faf13b1c837619c92290cab38d8fcb"
+  }
+ },
+ "assessments": [
+  {
+   "id": "e1",
+   "at": "2026-10-23",
+   "target": "f06471",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "dates",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; transcript c108"
+  },
+  {
+   "id": "e2",
+   "at": "2026-10-23",
+   "target": "f06472",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "banana",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e3",
+   "at": "2026-10-23",
+   "target": "f06473",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "coconut",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e4",
+   "at": "2026-10-23",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "jackfruit",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source"
+  },
+  {
+   "id": "e5",
+   "at": "2026-10-23",
+   "target": "f25366",
+   "claim": "answer",
+   "verdict": "unverified",
+   "confidence": "low",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "Durian",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "backfill",
+   "run": "evidence-backfill-2026-10-23",
+   "note": "backfill: cited by fact source; history entry seq 46; transcript pp-008"
+  },
+  {
+   "id": "e6",
+   "at": "2026-10-23",
+   "target": "f25802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Judean date palm",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s8",
+     "quote": "Judean date palm",
+     "quoteLang": "en",
+     "verbatim": false
+    },
+    {
+     "source": "s7",
+     "quote": "Judean date palm",
+     "quoteLang": "en",
+     "verbatim": false
+    }
+   ],
+   "by": "handcheck-research",
+   "run": "handcheck-2026-10-23",
+   "note": "ppm-098/1, u08: The Masada date seed is the oldest seed germinated with human help (it beat a ~1,300-year-old lotus seed). Older Silene stenophylla plants (2012) were regenerated from fruit tissue, not grown from a seed, so the card's answer holds."
+  },
+  {
+   "id": "e7",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f25802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "Judean date palm",
+     "quoteLang": "en",
+     "verbatim": false,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "quote check: the quote of e6 is on the snapshot of s6"
+  },
+  {
+   "id": "e8",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f06471",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s1",
+     "quote": "It is cultivated for its edible sweet fruit called dates.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “dates” is on the snapshot of s1"
+  },
+  {
+   "id": "e9",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f06472",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s2",
+     "quote": "Cavendish bananas are the fruits of one of a number of banana cultivars belonging to the Cavendish subgroup of the AAA banana cultivar group (triploid cultivars of Musa acuminata).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “banana” is on the snapshot of s2"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f06473",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s3",
+     "quote": "The coconut (Cocos nucifera) is a member of the palm family (Arecaceae) and the only living species of the genus Cocos.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “coconut” is on the snapshot of s3"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The jackfruit or jakfruit (Artocarpus heterophyllus) is a fruit tree in the mulberry family of Moraceae.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “jackfruit” is on the snapshot of s4"
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f25366",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s5",
+     "quote": "The durian ( ) is the edible fruit of trees in the genus Durio, most often applying to those of Durio zibethinus, the only species available on the international market.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Durian” is on the snapshot of s5"
+  },
+  {
+   "id": "e13",
+   "at": "2026-10-23T06:27:01.883Z",
+   "target": "f25802",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s6",
+     "quote": "The Judean date palm is a date palm (Phoenix dactylifera) grown in the Southern Levant, in the historical region known as Judea, today part of the State of Israel and the West Bank.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T06:27:01.883Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-crawl-2026-10-23",
+   "note": "answer check: “Judean date palm” is on the snapshot of s6"
+  },
+  {
+   "id": "e14",
+   "at": "2026-10-23T08:19:05Z",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Largest of all tree-borne fruits, the jackfruit may be 8 in to 3 ft (20-90 cm) long",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e15",
+   "at": "2026-10-23T08:19:11Z",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tree produces the largest of all tree-borne fruits, measuring up to 90 cm (35 in) in length and 50 cm (20 in) in width and weighing up to 50 kg (110 lb).",
+     "quoteLang": "en",
+     "verbatim": true
+    }
+   ],
+   "by": "research-r049",
+   "run": "provenance-research-2026-10-23"
+  },
+  {
+   "id": "e16",
+   "at": "2026-10-23T12:55:45.169Z",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "Largest of all tree-borne fruits, the jackfruit may be 8 in to 3 ft (20-90 cm) long",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e14 is on the snapshot of s9"
+  },
+  {
+   "id": "e17",
+   "at": "2026-10-23T12:55:45.169Z",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "high",
+   "support": [
+    {
+     "source": "s4",
+     "quote": "The tree produces the largest of all tree-borne fruits, measuring up to 90 cm (35 in) in length and 50 cm (20 in) in width and weighing up to 50 kg (110 lb).",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "quote check: the quote of e15 is on the snapshot of s4"
+  },
+  {
+   "id": "e18",
+   "at": "2026-10-23T12:55:45.169Z",
+   "target": "f06474",
+   "claim": "answer",
+   "verdict": "confirmed",
+   "confidence": "medium",
+   "support": [
+    {
+     "source": "s9",
+     "quote": "The jackfruit, Artocarpus heterophyllus Lam.",
+     "quoteLang": "en",
+     "verbatim": true,
+     "verifiedAt": "2026-10-23T12:55:45.169Z"
+    }
+   ],
+   "by": "crawler",
+   "run": "evidence-verify-2026-10-24",
+   "note": "answer check: “jackfruit” is on the snapshot of s9"
+  }
+ ]
+}
